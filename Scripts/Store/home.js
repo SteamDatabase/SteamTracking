@@ -74,7 +74,7 @@ GHomepage = {
 					// this is the link, which also allocates the space for the takeover to be visible above the cluster rotation.
 					//	we scale it based on the viewport width, assuming the initial width was 940px
 					if ( nInitialTakeoverLinkHeight )
-						$TakeoverLink.css( 'height', Math.floor( nInitialTakeoverLinkHeight / k_nContentWidth * 100 ) + 'vw' );
+						$TakeoverLink.css( 'height', Math.floor( nInitialTakeoverLinkHeight / k_nContentWidth * 100 ) + '%' );
 
 				}
 				else
