@@ -59,6 +59,19 @@
             ]
         },
         {
+            "name": "GetItemCreators",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "itemdef",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The item definition to get creator information for."
+                }
+            ]
+        },
+        {
             "name": "GetRarities",
             "version": 1,
             "httpmethod": "GET",
