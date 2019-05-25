@@ -780,6 +780,27 @@ enum ELibraryAssetType {
 	Icon = 4;
 }
 
+enum ERecommendationIgnoreReason {
+	NotInterested = 0;
+	Blocked = 1;
+	OwnedElsewhere = 2;
+}
+
+enum EContentDescriptorID {
+	FrequentNudityOrSexualContent = 1;
+	FrequentViolenceOrGore = 2;
+	StrongSexualContent = 3;
+	NonConsensualSex = 4;
+	AnyMatureContent = 5;
+}
+
+enum EStoreCuratorRecommendationState {
+	Recommended = 0;
+	NotRecommended = 1;
+	Informative = 2;
+	CreatedApp = 3;
+}
+
 enum EMsg {
 	Invalid = 0;
 	Multi = 1;
