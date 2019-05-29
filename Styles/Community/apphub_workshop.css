@@ -182,7 +182,9 @@
 .section_contents.with_background.voting_queue
 {
 	padding: 10px;
-	background: -webkit-linear-gradient( top, #0e141e 0%, #030407 100%);background: linear-gradient( to bottom, #0e141e 0%, #030407 100%);}
+	background: -webkit-linear-gradient( top, #0e141e 0%, #030407 100%);
+	background: linear-gradient( to bottom, #0e141e 0%, #030407 100%);
+}
 .voting_queue_item
 {
 	float: left;
@@ -294,7 +296,9 @@
 }
 
 .voting_queue_border {
-	background: -webkit-linear-gradient( top, #223249 0%, #000000 100%);background: linear-gradient( to bottom, #223249 0%, #000000 100%);	padding: 1px;
+	background: -webkit-linear-gradient( top, #223249 0%, #000000 100%);
+	background: linear-gradient( to bottom, #223249 0%, #000000 100%);
+	padding: 1px;
 	box-shadow: 0 0 5px 0 #000000;
 }
 .section_contents.with_background
@@ -695,7 +699,9 @@ a.queue_area:hover .voting_queue_link {
 	 left: -1px;
 	 padding: 3px;
 	 pointer-events: none;
-	background: -webkit-linear-gradient( top, #769605 0%, #566c04 100%);background: linear-gradient( to bottom, #769605 0%, #566c04 100%); }
+	background: -webkit-linear-gradient( top, #769605 0%, #566c04 100%);
+	background: linear-gradient( to bottom, #769605 0%, #566c04 100%);
+ }
 .accepted_voted
 {
 	position: absolute;

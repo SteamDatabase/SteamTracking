@@ -200,7 +200,9 @@ a.trigger, a.activetrigger {
 }
 
 .dropcontainer ul {
-background: -webkit-linear-gradient( top, #8f98a0 5%, #b1bcc4 95%);background: linear-gradient( to bottom, #8f98a0 5%, #b1bcc4 95%);	border-radius: 3px;
+background: -webkit-linear-gradient( top, #8f98a0 5%, #b1bcc4 95%);
+	background: linear-gradient( to bottom, #8f98a0 5%, #b1bcc4 95%);
+	border-radius: 3px;
 	border-top-right-radius: 0;
 	border-top-left-radius: 0;
 	list-style-type:none;

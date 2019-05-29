@@ -41,7 +41,9 @@
 	padding: 8px 7px 5px;
 	position: relative;
 	height: 20px;
-	background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);background: linear-gradient( to right, #223b4f 5%,#25435b 95%);}
+	background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
+	background: linear-gradient( to right, #223b4f 5%,#25435b 95%);
+}
 
 .recommended_creators_ctn .recommended_creators_container .avatars {
 	position: relative;

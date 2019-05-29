@@ -423,7 +423,9 @@ html.responsive.touch .steamaward_nomination_row {
 	position: relative;
 	color: #ffffff;
 	margin-bottom: 16px;
-background: -webkit-linear-gradient( 124deg, rgb(52,51,74) 0%,rgb(72,55,86) 100%););background: linear-gradient( 124deg, rgb(52,51,74) 0%,rgb(72,55,86) 100%););}
+background: -webkit-linear-gradient( 326deg, rgb(52,51,74) 0%,rgb(72,55,86) 100%);
+	background: linear-gradient( 124deg, rgb(52,51,74) 0%,rgb(72,55,86) 100%);
+}
 
 .steamaward_nominate_award {
 	position: relative;
@@ -724,13 +726,19 @@ img.faq_section_title {
 }
 
 .faq_section.purple {
-background: -webkit-linear-gradient( 130deg, #3b3040 0%,#1a2737 100%););background: linear-gradient( 130deg, #3b3040 0%,#1a2737 100%););}
+background: -webkit-linear-gradient( 320deg, #3b3040 0%,#1a2737 100%);
+	background: linear-gradient( 130deg, #3b3040 0%,#1a2737 100%);
+}
 
 .faq_section.blue {
-background: -webkit-linear-gradient( 130deg, #203f54 0%,#1a2737 100%););background: linear-gradient( 130deg, #203f54 0%,#1a2737 100%););}
+background: -webkit-linear-gradient( 320deg, #203f54 0%,#1a2737 100%);
+	background: linear-gradient( 130deg, #203f54 0%,#1a2737 100%);
+}
 
 .faq_section.yellow {
-background: -webkit-linear-gradient( 130deg, #323834 0%,#1a2737 100%););background: linear-gradient( 130deg, #323834 0%,#1a2737 100%););}
+background: -webkit-linear-gradient( 320deg, #323834 0%,#1a2737 100%);
+	background: linear-gradient( 130deg, #323834 0%,#1a2737 100%);
+}
 
 .nomination_row:not(:last-child) {
 	margin-bottom: 9px;
@@ -1633,7 +1641,9 @@ a.votenow_btn:hover {
 	text-align: center;
 	line-height: 18px;
 	padding: 5px 12px;
-	background: -webkit-linear-gradient( left, rgba( 216, 147, 146, 0.4 ) 5%,rgba( 205, 118, 117, 0.4 ) 95%);background: linear-gradient( to right, rgba( 216, 147, 146, 0.4 ) 5%,rgba( 205, 118, 117, 0.4 ) 95%);}
+	background: -webkit-linear-gradient( left, rgba( 216, 147, 146, 0.4 ) 5%,rgba( 205, 118, 117, 0.4 ) 95%);
+	background: linear-gradient( to right, rgba( 216, 147, 146, 0.4 ) 5%,rgba( 205, 118, 117, 0.4 ) 95%);
+}
 
 .steamaward_finalday {
 	color: #cd7675;
@@ -1888,7 +1898,9 @@ body.resultsday .home_page_takeover_link {
 }
 
 body.resultsday .home_ctn.FeaturedCtn {
-	background: -webkit-linear-gradient( 124deg, #3d7190 0%,#29495f 100%););background: linear-gradient( 124deg, #3d7190 0%,#29495f 100%););;
+	background: -webkit-linear-gradient( 326deg, #3d7190 0%,#29495f 100%);
+	background: linear-gradient( 124deg, #3d7190 0%,#29495f 100%);
+;
 }
 
 .finalday_block {

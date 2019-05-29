@@ -143,14 +143,18 @@ a.ws_about_big_button {
 		font-weight: 300; /* light */
 
 		
-	background: -webkit-linear-gradient( top, #294767 5%, #1f3449 95%);background: linear-gradient( to bottom, #294767 5%, #1f3449 95%);
+	background: -webkit-linear-gradient( top, #294767 5%, #1f3449 95%);
+	background: linear-gradient( to bottom, #294767 5%, #1f3449 95%);
+
 }
 a.ws_about_big_button.one,
 a.ws_about_big_button.two {
 	margin-right: 12px;
 }
 a.ws_about_big_button:hover {
-	background: -webkit-linear-gradient( top, #316cab 5%, #1e4265 95%);background: linear-gradient( to bottom, #316cab 5%, #1e4265 95%);}
+	background: -webkit-linear-gradient( top, #316cab 5%, #1e4265 95%);
+	background: linear-gradient( to bottom, #316cab 5%, #1e4265 95%);
+}
 a.ws_about_big_button:hover span,
 #profileBlock a.ws_about_big_button:hover p {
 	color: #fff;

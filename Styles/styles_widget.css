@@ -100,7 +100,9 @@ a, a:hover {
 	padding: 5px 10px;
 	color: #8bc53f;
 	border: 1px solid #576922;
-background: -webkit-linear-gradient( top, #384416 5%, #272f0f 95%);background: linear-gradient( to bottom, #384416 5%, #272f0f 95%);	height: auto;
+background: -webkit-linear-gradient( top, #384416 5%, #272f0f 95%);
+	background: linear-gradient( to bottom, #384416 5%, #272f0f 95%);
+	height: auto;
 }
 
 #widget .game_purchase_action_bg.coming_soon  h1 {

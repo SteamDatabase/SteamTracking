@@ -207,7 +207,9 @@ a.group_tab:hover {
 	border: none;
 
 	background: #57749e; /* Old browsers */
-	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);
+	background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);
+}
 	.group_tab.active > span {
 		height: 35px;
 		line-height: 36px;
@@ -219,7 +221,9 @@ a.group_tab:hover {
 
 		display: block;
 		background: #417B9C; /* Old browsers */
-		background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);	}
+		background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
+	background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);
+	}
 
 .grouppage_content_area {
 
@@ -1743,7 +1747,9 @@ div.rule {
 .grouppage_resp_header {
 	padding: 8px 1% 0 1%;
 	/* background: url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/content_footer_fade.png?v=1') bottom left no-repeat, url( 'https://steamcommunity-a.akamaihd.net/public/images/groups/group_content_topbackground.png?v=1' ) top left no-repeat; */
-	background: -webkit-linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););background: linear-gradient( 160deg, #2b3b4c 5%,#111923 95%););}
+	background: -webkit-linear-gradient( 290deg, #2b3b4c 5%,#111923 95%);
+	background: linear-gradient( 160deg, #2b3b4c 5%,#111923 95%);
+}
 
 .grouppage_resp_logo {
 	float: left;

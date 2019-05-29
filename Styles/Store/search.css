@@ -135,7 +135,9 @@
 
 .dropdown_container {
 
-	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	padding: 0px 0px 0px 0px;
+	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
+	background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+	padding: 0px 0px 0px 0px;
 
 	transition: opacity 300ms;
 	opacity: 0;

@@ -819,7 +819,9 @@ div.youraccount_history_home>div.account_wallet {
 	text-decoration: none;
 	color: #ffffff;
 	background: #67c1f5; /* Old browsers */
-	background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););}
+	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
+	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+}
 
 
 #usercountrycurrency_dselect_container {

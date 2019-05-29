@@ -68,7 +68,9 @@
 	border-top-color: #818181;
 	border-left-color: #5e5e61;
 	border-right-color: #5e5e61;
-	background: -webkit-linear-gradient( top, #636366 5%, #4a4a4c 95%);background: linear-gradient( to bottom, #636366 5%, #4a4a4c 95%);}
+	background: -webkit-linear-gradient( top, #636366 5%, #4a4a4c 95%);
+	background: linear-gradient( to bottom, #636366 5%, #4a4a4c 95%);
+}
 
 .tradeoffer_items_ctn.inactive .tradeoffer_items {
 	opacity: 0.3;

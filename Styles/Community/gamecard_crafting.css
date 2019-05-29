@@ -193,7 +193,9 @@
 	text-align: left;
 
 	background-color: #3d3d3b;
-	background: -webkit-linear-gradient( top, #474745 5%, #2b2b2a 95%);background: linear-gradient( to bottom, #474745 5%, #2b2b2a 95%);}
+	background: -webkit-linear-gradient( top, #474745 5%, #2b2b2a 95%);
+	background: linear-gradient( to bottom, #474745 5%, #2b2b2a 95%);
+}
 
 .completed_badge_inner {
 	position: relative;
@@ -553,11 +555,15 @@
 }
 
 .booster_unpack_card .booster_unpack_card_image_flip_gradient {
-	background: -webkit-linear-gradient( left, #666666 5%,#000000 95%);background: linear-gradient( to right, #666666 5%,#000000 95%);	z-index: 2;
+	background: -webkit-linear-gradient( left, #666666 5%,#000000 95%);
+	background: linear-gradient( to right, #666666 5%,#000000 95%);
+	z-index: 2;
 }
 
 .booster_unpack_card.card_back .booster_unpack_card_image_flip_gradient {
-	background: -webkit-linear-gradient( left, #000000 5%,#666666 95%);background: linear-gradient( to right, #000000 5%,#666666 95%);	z-index: 2;
+	background: -webkit-linear-gradient( left, #000000 5%,#666666 95%);
+	background: linear-gradient( to right, #000000 5%,#666666 95%);
+	z-index: 2;
 }
 
 

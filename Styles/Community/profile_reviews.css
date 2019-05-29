@@ -23,7 +23,9 @@
 .review_box {
 	position: relative;
 	border-top: 1px solid #425a76;
-background: -webkit-linear-gradient( 60deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: linear-gradient( 60deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););
+background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%);
+	background: linear-gradient( 60deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%);
+
 	margin-bottom: 26px;
 }
 

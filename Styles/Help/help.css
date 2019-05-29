@@ -289,7 +289,9 @@ input.custom_form_text.right_hint
 {
 	color: #ffffff;
 	background-color: #67c1f5; /* Old browsers */
-	background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););}
+	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
+	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+}
 
 
 body.v6 {
@@ -552,7 +554,9 @@ body.v6 .page_content_ctn.dark:last-child {
 	display: block;
 	height: 1px;
 	margin-top: 5px;
-	background: -webkit-linear-gradient( left, #3b6e8c 5%,#000000 95%);background: linear-gradient( to right, #3b6e8c 5%,#000000 95%);}
+	background: -webkit-linear-gradient( left, #3b6e8c 5%,#000000 95%);
+	background: linear-gradient( to right, #3b6e8c 5%,#000000 95%);
+}
 
 
 #page_background_holder {
@@ -3303,7 +3307,9 @@ input.unlockcode_entry_input
 	border: 1px solid #000000;
 	border-radius: 4px;
 	height: 8px;
-	background: -webkit-linear-gradient( top, #6a7787 5%, #182636 95%);background: linear-gradient( to bottom, #6a7787 5%, #182636 95%);}
+	background: -webkit-linear-gradient( top, #6a7787 5%, #182636 95%);
+	background: linear-gradient( to bottom, #6a7787 5%, #182636 95%);
+}
 
 .help_login_nag {
 	margin-top: 20px;

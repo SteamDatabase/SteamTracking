@@ -38,7 +38,9 @@
 	border-bottom: 1px solid transparent;
 	border-left: 1px solid transparent;
 	background-color: #212222;
-	background: -webkit-linear-gradient( top, #383939 5%, #000000 95%);background: linear-gradient( to bottom, #383939 5%, #000000 95%);}
+	background: -webkit-linear-gradient( top, #383939 5%, #000000 95%);
+	background: linear-gradient( to bottom, #383939 5%, #000000 95%);
+}
 
 .badge_row_overlay {
 
@@ -76,7 +78,9 @@ a.badge_row {
 .badge_row_inner {
 	background-color: #212222;
 	border-radius: 5px;
-	background: -webkit-linear-gradient( top, #232424 5%, #141414 95%);background: linear-gradient( to bottom, #232424 5%, #141414 95%);}
+	background: -webkit-linear-gradient( top, #232424 5%, #141414 95%);
+	background: linear-gradient( to bottom, #232424 5%, #141414 95%);
+}
 
 .badge_title_row {
 	padding: 8px 12px 0 12px;
@@ -254,7 +258,9 @@ a.badge_row:hover .badge_view_details {
 	border: 1px solid #000000;
 	border-radius: 4px;
 	height: 8px;
-	background: -webkit-linear-gradient( top, #182432 5%, #5491cf 95%);background: linear-gradient( to bottom, #182432 5%, #5491cf 95%);}
+	background: -webkit-linear-gradient( top, #182432 5%, #5491cf 95%);
+	background: linear-gradient( to bottom, #182432 5%, #5491cf 95%);
+}
 
 .salespend_card_drop_info .card_drop_info_header, .salespend_card_drop_info .card_drop_info_progress {
 	color: #b6b2a3;
@@ -267,7 +273,9 @@ a.badge_row:hover .badge_view_details {
 
 .salespend_card_drop_info .card_drop_info_progress_bar {
 	border-color: #27282b;
-	background: -webkit-linear-gradient( top, #182432 5%, #5491cf 95%);background: linear-gradient( to bottom, #182432 5%, #5491cf 95%);}
+	background: -webkit-linear-gradient( top, #182432 5%, #5491cf 95%);
+	background: linear-gradient( to bottom, #182432 5%, #5491cf 95%);
+}
 
 .salespend_card_drop_info .card_drop_info_totalspending {
 	color: #5491cf;
@@ -292,7 +300,9 @@ a.badge_row:hover .badge_view_details {
 	border-radius: 3px;
 	padding: 5px;
 	max-width: 292px;
-	background: -webkit-linear-gradient( top, #33425A 5%, #282F3D 95%);background: linear-gradient( to bottom, #33425A 5%, #282F3D 95%);}
+	background: -webkit-linear-gradient( top, #33425A 5%, #282F3D 95%);
+	background: linear-gradient( to bottom, #33425A 5%, #282F3D 95%);
+}
 
 .badge_task_tooltip a:hover {
 	text-decoration: underline;
@@ -552,7 +562,9 @@ a.badge_row:hover .badge_view_details {
 .badge_card_set_section {
 	padding: 2px;
 	border-top: solid 1px #33485d;
-	background: -webkit-linear-gradient( top, #282c2f 5%, #1d1e20 95%);background: linear-gradient( to bottom, #282c2f 5%, #1d1e20 95%);}
+	background: -webkit-linear-gradient( top, #282c2f 5%, #1d1e20 95%);
+	background: linear-gradient( to bottom, #282c2f 5%, #1d1e20 95%);
+}
 
 .game_card_unowned_border {
 	position: absolute;

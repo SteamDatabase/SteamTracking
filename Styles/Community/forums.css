@@ -29,7 +29,9 @@ input {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			background: -webkit-linear-gradient( 135deg, rgba(255,255,255,0.4) 5%,rgba(255,255,255,0.2) 95%););background: linear-gradient( 135deg, rgba(255,255,255,0.4) 5%,rgba(255,255,255,0.2) 95%););}
+			background: -webkit-linear-gradient( 315deg, rgba(255,255,255,0.4) 5%,rgba(255,255,255,0.2) 95%);
+	background: linear-gradient( 135deg, rgba(255,255,255,0.4) 5%,rgba(255,255,255,0.2) 95%);
+}
 .forum_newtopic_steamworks_notice .notice {
 	padding: 16px;
 }
@@ -1581,7 +1583,9 @@ a.view_messages:hover {
 	line-height: 24px;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
-	background: -webkit-linear-gradient( top, rgba( 0, 0, 0, 0.2 ) 5%, rgba( 0, 0, 0, 0 ) 95%);background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.2 ) 5%, rgba( 0, 0, 0, 0 ) 95%);}
+	background: -webkit-linear-gradient( top, rgba( 0, 0, 0, 0.2 ) 5%, rgba( 0, 0, 0, 0 ) 95%);
+	background: linear-gradient( to bottom, rgba( 0, 0, 0, 0.2 ) 5%, rgba( 0, 0, 0, 0 ) 95%);
+}
 
 .searchresult_author {
 	position: relative;

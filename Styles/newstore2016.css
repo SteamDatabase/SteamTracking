@@ -5,7 +5,9 @@ body.v6.promoannounce {
 
 body.v6.promoannounce .page_content_container {
 	background-image: none;
-	background: -webkit-linear-gradient( top, rgba( 0, 0, 0, 1 ) 555px, rgba( 27, 40, 56, 1 ) 1317px);background: linear-gradient( to bottom, rgba( 0, 0, 0, 1 ) 555px, rgba( 27, 40, 56, 1 ) 1317px);	background-repeat: no-repeat;
+	background: -webkit-linear-gradient( top, rgba( 0, 0, 0, 1 ) 555px, rgba( 27, 40, 56, 1 ) 1317px);
+	background: linear-gradient( to bottom, rgba( 0, 0, 0, 1 ) 555px, rgba( 27, 40, 56, 1 ) 1317px);
+	background-repeat: no-repeat;
 	background-color: rgba( 27, 40, 56, 1 );
 
 }
@@ -50,7 +52,9 @@ body.v6.promoannounce .page_content_container {
 
 .callout {
     position: absolute;
-	background: -webkit-linear-gradient( 100deg, #c6d4df 5%,#e2f4ff 95%););background: linear-gradient( 100deg, #c6d4df 5%,#e2f4ff 95%););    padding: 16px;
+	background: -webkit-linear-gradient( 100deg, #c6d4df 5%,#e2f4ff 95%);
+	background: linear-gradient( 100deg, #c6d4df 5%,#e2f4ff 95%);
+    padding: 16px;
     border-radius: 3px;
     color: black;
 	box-shadow: 0 0 8px #000;
@@ -150,7 +154,9 @@ body.v6.promoannounce .page_content_container {
 .recent_updates_header_bg {
     position: absolute;
     background-color: #66c0f4;
-    background: -webkit-linear-gradient( 160deg, #66c0f4 5%,#111923 95%););background: linear-gradient( 160deg, #66c0f4 5%,#111923 95%););    height: 350px;
+    background: -webkit-linear-gradient( 290deg, #66c0f4 5%,#111923 95%);
+	background: linear-gradient( 160deg, #66c0f4 5%,#111923 95%);
+    height: 350px;
     width: 100%;
 }
 
@@ -172,7 +178,9 @@ body.v6.promoannounce .page_content_container {
 #recent_updates {
     position: relative;
     padding: 15px;
-    background: -webkit-linear-gradient( top, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 50%);background: linear-gradient( to bottom, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 50%);}
+    background: -webkit-linear-gradient( top, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 50%);
+	background: linear-gradient( to bottom, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 50%);
+}
 
 #recent_updates:before {
     left: 25%;

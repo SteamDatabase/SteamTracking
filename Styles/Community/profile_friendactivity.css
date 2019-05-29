@@ -450,7 +450,9 @@ a.nohover, a.nohover:hover
 	min-width: 196px;
 	margin-right: 18px;
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_tagstatus.gif' );
-	/*background: -webkit-linear-gradient( top, #7095ca 5%, #4c6488 95%);background: linear-gradient( to bottom, #7095ca 5%, #4c6488 95%);*/
+	/*background: -webkit-linear-gradient( top, #7095ca 5%, #4c6488 95%);
+	background: linear-gradient( to bottom, #7095ca 5%, #4c6488 95%);
+*/
 	background-repeat:repeat-x;
 }
 

@@ -539,7 +539,9 @@ pre.results {
 {
 	padding: 15px;
 	letter-spacing: 1px;
-	background: -webkit-linear-gradient( top, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);background: linear-gradient( to bottom, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);	width: 910px
+	background: -webkit-linear-gradient( top, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);
+	background: linear-gradient( to bottom, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);
+	width: 910px
 }
 
 .partner_broadcast_table {
@@ -2260,7 +2262,9 @@ html, body { height:100%; }
 
 .instructions {
 	padding: 16px;
-	background: -webkit-linear-gradient( 135deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%););background: linear-gradient( 135deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%););}
+	background: -webkit-linear-gradient( 315deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%);
+	background: linear-gradient( 135deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%);
+}
 .instructions_table {
 	display: table;
 	width: 100%;

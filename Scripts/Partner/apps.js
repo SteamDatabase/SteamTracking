@@ -3418,7 +3418,7 @@ function UpdateReleaseRequest( nAppId, rgChanges, bReload )
 					location.reload();
 				}
 			} else {
-				alert("Update failed (Error code: " + response.success);
+				alert("Update failed (Error code: " + response.error_message);
 			}
 		}
 	});

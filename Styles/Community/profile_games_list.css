@@ -454,7 +454,9 @@ div.hover {
 }
 
 .popup_block2 .popup_body2 {
-	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	box-shadow: 0 0 5px #000;
+	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
+	background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+	box-shadow: 0 0 5px #000;
 	position: relative;
 	z-index:900;
 }
@@ -883,7 +885,9 @@ body.migrated_profile_page #wishlist_comic {
 	padding: 8px 12px;
 
 	background: #5e5c5c;
-	background: -webkit-linear-gradient( top, #374858 5%, #263646 95%);background: linear-gradient( to bottom, #374858 5%, #263646 95%);}
+	background: -webkit-linear-gradient( top, #374858 5%, #263646 95%);
+	background: linear-gradient( to bottom, #374858 5%, #263646 95%);
+}
 
 .clientConnArea #fullstretch {
     width: 100%;

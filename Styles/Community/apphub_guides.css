@@ -286,14 +286,18 @@
 	margin-bottom: 8px;
 	float: left;
 	background: #464646; /* Old browsers */
-	background: -webkit-linear-gradient( top, #17435c 5%, #21658a 95%);background: linear-gradient( to bottom, #17435c 5%, #21658a 95%);	border: 1px solid #1C1D1D;
+	background: -webkit-linear-gradient( top, #17435c 5%, #21658a 95%);
+	background: linear-gradient( to bottom, #17435c 5%, #21658a 95%);
+	border: 1px solid #1C1D1D;
 	cursor: pointer;;
 }
 
 .guide_home_category_selection:hover
 {
 	background: #464646; /* Old browsers */
-	background: -webkit-linear-gradient( top, #2f89bc 5%, #66c0f4 95%);background: linear-gradient( to bottom, #2f89bc 5%, #66c0f4 95%);	border: 1px solid #5a5a5a;
+	background: -webkit-linear-gradient( top, #2f89bc 5%, #66c0f4 95%);
+	background: linear-gradient( to bottom, #2f89bc 5%, #66c0f4 95%);
+	border: 1px solid #5a5a5a;
 }
 
 .guide_home_category_selection .guide_category_icon

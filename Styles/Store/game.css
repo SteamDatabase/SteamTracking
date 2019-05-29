@@ -275,7 +275,9 @@ body.v6 #game_area_purchase h2.package_group {
 }
 
 .glance_ctn .more_btn:hover {
-	background: -webkit-linear-gradient( -60deg, #67c1f5 5%,#417a9b 95%););background: linear-gradient( -60deg, #67c1f5 5%,#417a9b 95%););}
+	background: -webkit-linear-gradient( 150deg, #67c1f5 5%,#417a9b 95%);
+	background: linear-gradient( -60deg, #67c1f5 5%,#417a9b 95%);
+}
 
 .glace_ctn .user_reviews {
 
@@ -632,7 +634,9 @@ img.game_header_image_full {
 .game_area_purchase_game.demo_above_purchase {
 	margin-bottom: 50px;
 
-background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,255,255,0.5) 95%););background: linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,255,255,0.5) 95%););	border-top: 1px solid rgba(255,255,255,0.2);
+background: -webkit-linear-gradient( 30deg, rgba(217, 245, 173,0.5) 5%,rgba(255,255,255,0.5) 95%);
+	background: linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,255,255,0.5) 95%);
+	border-top: 1px solid rgba(255,255,255,0.2);
 	border-left: 1px solid rgba(255,255,255,0.2);
 }
 
@@ -983,7 +987,9 @@ background: -webkit-linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 	font-family: Arial, Helvetica, sans-serif;
 	color: #acb5be;
 	text-align: right;
-	background: -webkit-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););background: linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%););}
+	background: -webkit-linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%);
+	background: linear-gradient( -60deg, rgba(226,244,255,0.2) 0%,rgba(97,100,101,0.2) 100%);
+}
 
 .game_area_purchase_custom_cart_credit {
 	height: 40px;
@@ -1767,7 +1773,9 @@ a.friend_block_holder:hover {
 }
 
 .got_steam_ctn {
-	background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);	padding: 3px;
+	background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);
+	background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);
+	padding: 3px;
 	width:650px;
 }
 .got_steam_box {
@@ -1811,13 +1819,17 @@ a.friend_block_holder:hover {
 
 	.gotsteam_buttons a.btn_blue {
 		float: left;
-		background: -webkit-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);background: linear-gradient( to bottom, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);		width: 271px;
+		background: -webkit-linear-gradient( top, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);
+	background: linear-gradient( to bottom, rgba(102,192,244,0.2) 5%, rgba(47,137,188,0.2) 95%);
+		width: 271px;
 		padding: 12px 12px 15px 12px;
 		border-radius: 2px;
 	}
 
 	.gotsteam_buttons a.btn_blue:hover {
-		background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);	}
+		background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);
+	background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);
+	}
 
 	.gotsteam_buttons a.btn_blue.leftbtn {
 		margin-right: 16px;
@@ -2382,7 +2394,9 @@ img.package_header {
 		font-weight: 300; /* light */
 
 			width: 940px;
-	background: -webkit-linear-gradient( 70deg, rgba(152,128,60,0.3) 5%,rgba(226,244,255,0.3) 95%););background: linear-gradient( 70deg, rgba(152,128,60,0.3) 5%,rgba(226,244,255,0.3) 95%););	color: #fff;
+	background: -webkit-linear-gradient( 20deg, rgba(152,128,60,0.3) 5%,rgba(226,244,255,0.3) 95%);
+	background: linear-gradient( 70deg, rgba(152,128,60,0.3) 5%,rgba(226,244,255,0.3) 95%);
+	color: #fff;
 	padding: 16px;
 	margin: 0px auto 16px auto;
 	font-size: 14px;
@@ -2477,7 +2491,9 @@ img.package_header {
 	color: #ffcc6a;
 	font-size: 12px;
 	padding: 6px; 16px;
-	background: -webkit-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);background: linear-gradient( to right, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);}
+	background: -webkit-linear-gradient( left, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);
+	background: linear-gradient( to right, rgba( 196, 158, 82, 0.6 ) 0%,rgba( 196, 158, 82, 0.0 ) 60%);
+}
 
 .queue_control_button {
 	display: inline-block;
@@ -4053,7 +4069,9 @@ select.gray_bevel {
 	padding: 10px;
 	border-radius: 3px;
 
-background: -webkit-linear-gradient( 135deg, #356480 5%,#1a303d 95%););background: linear-gradient( 135deg, #356480 5%,#1a303d 95%););}
+background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
+	background: linear-gradient( 135deg, #356480 5%,#1a303d 95%);
+}
 
 .screenshot_popup_modal_title {
 	height: 20px;
@@ -5118,7 +5136,9 @@ p.reason.info:before {
 }
 
 .referring_curator {
-	background: -webkit-linear-gradient( 60deg, #576674 5%,#313b46 95%););background: linear-gradient( 60deg, #576674 5%,#313b46 95%););	padding: 16px;
+	background: -webkit-linear-gradient( 30deg, #576674 5%,#313b46 95%);
+	background: linear-gradient( 60deg, #576674 5%,#313b46 95%);
+	padding: 16px;
 	margin: 0px 0px 8px 0px;
 
 	display: flex;

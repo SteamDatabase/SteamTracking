@@ -75,7 +75,9 @@
 	padding-top: 8px;
 	padding-left: 5px;
 	margin-bottom: 15px;
-background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);background: linear-gradient( to right, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);}
+background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);
+	background: linear-gradient( to right, rgba(58,110,139,0.2) 0%,rgba(58,110,139,0) 100%);
+}
 
 
 .sysreq_tab {

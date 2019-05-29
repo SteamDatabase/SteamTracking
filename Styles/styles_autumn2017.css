@@ -762,7 +762,9 @@ html.responsive.touch .steamaward_nomination_row {
 	position: relative;
 	color: #ffffff;
 	margin-bottom: 16px;
-background: -webkit-linear-gradient( 124deg, rgb(52,51,74) 0%,rgb(72,55,86) 100%););background: linear-gradient( 124deg, rgb(52,51,74) 0%,rgb(72,55,86) 100%););}
+background: -webkit-linear-gradient( 326deg, rgb(52,51,74) 0%,rgb(72,55,86) 100%);
+	background: linear-gradient( 124deg, rgb(52,51,74) 0%,rgb(72,55,86) 100%);
+}
 
 .steamaward_nominate_award {
 	position: relative;
@@ -1243,13 +1245,19 @@ img.faq_section_title {
 }
 
 .faq_section.purple {
-background: -webkit-linear-gradient( 130deg, #3b3040 0%,#1a2737 100%););background: linear-gradient( 130deg, #3b3040 0%,#1a2737 100%););}
+background: -webkit-linear-gradient( 320deg, #3b3040 0%,#1a2737 100%);
+	background: linear-gradient( 130deg, #3b3040 0%,#1a2737 100%);
+}
 
 .faq_section.blue {
-background: -webkit-linear-gradient( 130deg, #203f54 0%,#1a2737 100%););background: linear-gradient( 130deg, #203f54 0%,#1a2737 100%););}
+background: -webkit-linear-gradient( 320deg, #203f54 0%,#1a2737 100%);
+	background: linear-gradient( 130deg, #203f54 0%,#1a2737 100%);
+}
 
 .faq_section.yellow {
-background: -webkit-linear-gradient( 130deg, #323834 0%,#1a2737 100%););background: linear-gradient( 130deg, #323834 0%,#1a2737 100%););}
+background: -webkit-linear-gradient( 320deg, #323834 0%,#1a2737 100%);
+	background: linear-gradient( 130deg, #323834 0%,#1a2737 100%);
+}
 
 .nomination_row:not(:last-child) {
 	margin-bottom: 9px;
@@ -1644,7 +1652,9 @@ body.v6.winter2017_home h2.winter {
 	position: relative;
 	overflow: visible;
 	margin-top: 40px;
-	background: -webkit-linear-gradient( 90deg, rgba(24, 31, 39, 0) 0%,rgba(24, 31, 39, 1) 40%,rgba(24, 31, 39, 1) 60%,rgba(24, 31, 39, 0) 100%);background: linear-gradient( 90deg, rgba(24, 31, 39, 0) 0%,rgba(24, 31, 39, 1) 40%,rgba(24, 31, 39, 1) 60%,rgba(24, 31, 39, 0) 100%);
+	background: -webkit-linear-gradient( 0deg, rgba(24, 31, 39, 0) 0%,rgba(24, 31, 39, 1) 40%,rgba(24, 31, 39, 1) 60%,rgba(24, 31, 39, 0) 100%);
+	background: linear-gradient( 90deg, rgba(24, 31, 39, 0) 0%,rgba(24, 31, 39, 1) 40%,rgba(24, 31, 39, 1) 60%,rgba(24, 31, 39, 0) 100%);
+
 }
 
 .category_caps_vr .arrow,
@@ -2237,7 +2247,9 @@ a.votenow_btn:hover {
 }
 
 .FeaturedCtn {
-	background: -webkit-linear-gradient( top, rgba( 30, 34, 40, 1 ) 230px, rgba( 30, 34, 40, 0 ) 100%);background: linear-gradient( to bottom, rgba( 30, 34, 40, 1 ) 230px, rgba( 30, 34, 40, 0 ) 100%);	/*margin-bottom: 32px;*/
+	background: -webkit-linear-gradient( top, rgba( 30, 34, 40, 1 ) 230px, rgba( 30, 34, 40, 0 ) 100%);
+	background: linear-gradient( to bottom, rgba( 30, 34, 40, 1 ) 230px, rgba( 30, 34, 40, 0 ) 100%);
+	/*margin-bottom: 32px;*/
 	margin-top: 14px;
 	padding-bottom: 16px;
 }
@@ -2258,7 +2270,9 @@ a.votenow_btn:hover {
 	text-align: center;
 	line-height: 18px;
 	padding: 5px 12px;
-	background: -webkit-linear-gradient( left, rgba( 216, 147, 146, 0.4 ) 5%,rgba( 205, 118, 117, 0.4 ) 95%);background: linear-gradient( to right, rgba( 216, 147, 146, 0.4 ) 5%,rgba( 205, 118, 117, 0.4 ) 95%);}
+	background: -webkit-linear-gradient( left, rgba( 216, 147, 146, 0.4 ) 5%,rgba( 205, 118, 117, 0.4 ) 95%);
+	background: linear-gradient( to right, rgba( 216, 147, 146, 0.4 ) 5%,rgba( 205, 118, 117, 0.4 ) 95%);
+}
 
 .steamaward_finalday {
 	color: #cd7675;
@@ -2334,7 +2348,9 @@ body.resultsday .steamaward_header_background {
 	max-width: 943px;
 	padding: 12px 2%;
 	margin: 48px auto 96px auto;
-	background: -webkit-linear-gradient( top, rgba( 61, 112, 144, 0.5 ) 0%, rgba( 255, 255, 255, 0.1 ) 100%);background: linear-gradient( to bottom, rgba( 61, 112, 144, 0.5 ) 0%, rgba( 255, 255, 255, 0.1 ) 100%);	box-shadow: inset 0 0 40px rgba(255,255,255,0.1);
+	background: -webkit-linear-gradient( top, rgba( 61, 112, 144, 0.5 ) 0%, rgba( 255, 255, 255, 0.1 ) 100%);
+	background: linear-gradient( to bottom, rgba( 61, 112, 144, 0.5 ) 0%, rgba( 255, 255, 255, 0.1 ) 100%);
+	box-shadow: inset 0 0 40px rgba(255,255,255,0.1);
 
 	text-align: center;
 
@@ -2513,7 +2529,9 @@ body.resultsday .home_page_takeover_link {
 }
 
 body.resultsday .home_ctn.FeaturedCtn {
-	background: -webkit-linear-gradient( 124deg, #3d7190 0%,#29495f 100%););background: linear-gradient( 124deg, #3d7190 0%,#29495f 100%););;
+	background: -webkit-linear-gradient( 326deg, #3d7190 0%,#29495f 100%);
+	background: linear-gradient( 124deg, #3d7190 0%,#29495f 100%);
+;
 }
 
 .finalday_block {
@@ -2740,7 +2758,9 @@ a.steamaward_nominate_gamepage_ctn.gamewinner:hover .see_all_categories {
 }
 
 .lists_more_container .item .overlay {
-background: -webkit-linear-gradient( 160deg, rgba(102, 192, 244, 1.0) 5%,rgba( 266, 244, 255, 1.0) 95%););background: linear-gradient( 160deg, rgba(102, 192, 244, 1.0) 5%,rgba( 266, 244, 255, 1.0) 95%););
+background: -webkit-linear-gradient( 290deg, rgba(102, 192, 244, 1.0) 5%,rgba( 266, 244, 255, 1.0) 95%);
+	background: linear-gradient( 160deg, rgba(102, 192, 244, 1.0) 5%,rgba( 266, 244, 255, 1.0) 95%);
+
 	opacity: 0.6;
 	border-top: 1px solid rgba(255,255,255,0.3);
 	border-left: 1px solid rgba(255,255,255,0.3);

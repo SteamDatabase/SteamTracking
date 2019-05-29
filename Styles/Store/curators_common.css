@@ -106,7 +106,9 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 
 /* lists background */
 .curator_list_ctn {
-background: -webkit-linear-gradient( top, rgba( 102, 192, 244, 0.2) 0px, rgba( 102, 192, 244, 0) 200px);background: linear-gradient( to bottom, rgba( 102, 192, 244, 0.2) 0px, rgba( 102, 192, 244, 0) 200px);	margin-left: -13px;
+background: -webkit-linear-gradient( top, rgba( 102, 192, 244, 0.2) 0px, rgba( 102, 192, 244, 0) 200px);
+	background: linear-gradient( to bottom, rgba( 102, 192, 244, 0.2) 0px, rgba( 102, 192, 244, 0) 200px);
+	margin-left: -13px;
 	margin-right: -13px;
 	padding: 14px;
 }
@@ -122,10 +124,14 @@ background: -webkit-linear-gradient( top, rgba( 102, 192, 244, 0.2) 0px, rgba( 1
 	padding: 10px;
 	width: 209px;
 	margin-top: 1px;
-	background: -webkit-linear-gradient( left, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);background: linear-gradient( to right, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);}
+	background: -webkit-linear-gradient( left, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);
+	background: linear-gradient( to right, rgba(35,61,79,1) 5%,rgba(42,72,94,1) 95%);
+}
 .steam_curator_recommendation:hover .steam_curators_for_app,
 .steam_curator_recommendation:hover .store_capsule {
-	background: -webkit-linear-gradient( left, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);background: linear-gradient( to right, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);}
+	background: -webkit-linear-gradient( left, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);
+	background: linear-gradient( to right, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);
+}
 
 .steam_curator_for_app
 {
@@ -250,7 +256,9 @@ background: -webkit-linear-gradient( top, rgba( 102, 192, 244, 0.2) 0px, rgba( 1
 
 /* highlighted recommendation */
 .store_capsule_frame.initial_recommendation {
-	background: -webkit-linear-gradient( top, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);background: linear-gradient( to bottom, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);	margin-top: 50px;
+	background: -webkit-linear-gradient( top, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);
+	background: linear-gradient( to bottom, rgba(0,0,0,1) 5%, rgba(27,40,56,1) 50%);
+	margin-top: 50px;
 }
 
 

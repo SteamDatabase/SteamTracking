@@ -674,7 +674,9 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 	outline: none;
 	font-style: italic;
 	background-color: #1b2838;
-	background: -webkit-linear-gradient( top, #1b2838 5%, #203342 95%);background: linear-gradient( to bottom, #1b2838 5%, #203342 95%);	border: 1px solid #56707f;
+	background: -webkit-linear-gradient( top, #1b2838 5%, #203342 95%);
+	background: linear-gradient( to bottom, #1b2838 5%, #203342 95%);
+	border: 1px solid #56707f;
 	border-radius: 3px;
 	box-shadow: 0 0 50px rgba(103,193,245,0.3);
 	color: #abdaf4;

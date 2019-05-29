@@ -2472,7 +2472,9 @@ a.commentsTab:hover {
 
 
 	background: #417B9C; /* Old browsers */
-	background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);
+	background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
+	background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);
+
 }
 
 #commentsTabsFade {
@@ -2887,7 +2889,9 @@ input.inputTagsFilter:checked + label
 
 .filterOption.checked
 {
-	background: -webkit-linear-gradient( left, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);background: linear-gradient( to right, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);}
+	background: -webkit-linear-gradient( left, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);
+	background: linear-gradient( to right, rgba( 87, 110, 4, 0 ) 0%,rgba( 87, 110, 4, 1 ) 100%);
+}
 input.inputTagsFilter:hover + label,
 input.inputTagsFilter:checked + label:hover
 {
@@ -3625,7 +3629,9 @@ div.hover {
 	color: #ffffff;
 
 	background: #57749e; /* Old browsers */
-	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);
+	background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);
+}
 
 .sectionTabs
 {
@@ -3664,7 +3670,9 @@ div.hover {
 		border: none;
 
 		background: #57749e; /* Old browsers */
-		background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);	}
+		background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);
+	background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);
+	}
 		.sectionTab.active > span
 		{
 			height: 35px;
@@ -3677,7 +3685,9 @@ div.hover {
 
 			display: block;
 			background: #417B9C; /* Old browsers */
-			background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);		}
+			background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
+	background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);
+		}
 
 
 	.sectionTab.stats {
@@ -3687,12 +3697,16 @@ div.hover {
 
 		.sectionTab.stats.active {
 			background: #445b7c; /* Old browsers */
-			background: -webkit-linear-gradient( top, #e2c58b 5%, #ac966a 95%);background: linear-gradient( to bottom, #e2c58b 5%, #ac966a 95%);		}
+			background: -webkit-linear-gradient( top, #e2c58b 5%, #ac966a 95%);
+	background: linear-gradient( to bottom, #e2c58b 5%, #ac966a 95%);
+		}
 
 			.sectionTab.stats.active > span {
 				color: #000;
 				background: #445b7c; /* Old browsers */
-			background: -webkit-linear-gradient( top, #c9af7c 5%, #ac966a 95%);background: linear-gradient( to bottom, #c9af7c 5%, #ac966a 95%);			}
+			background: -webkit-linear-gradient( top, #c9af7c 5%, #ac966a 95%);
+	background: linear-gradient( to bottom, #c9af7c 5%, #ac966a 95%);
+			}
 
 
 .sectionTab:hover
@@ -4997,12 +5011,16 @@ a.readmore_link
 }
 #greenlight_retired_modal .greenlight_home_vote_box {
 	margin: 0;
-	background: -webkit-linear-gradient( 160deg, #5b6713 5%,#24281c 95%););background: linear-gradient( 160deg, #5b6713 5%,#24281c 95%););}
+	background: -webkit-linear-gradient( 290deg, #5b6713 5%,#24281c 95%);
+	background: linear-gradient( 160deg, #5b6713 5%,#24281c 95%);
+}
 #greenlight_retired_modal .button_container {
 	text-align: center;
 }
 #greenlight_retired_modal .mainblock {
-	background: -webkit-linear-gradient( top, #5b6813 5%, #25291c 95%);background: linear-gradient( to bottom, #5b6813 5%, #25291c 95%);	color: #e7e7e7;
+	background: -webkit-linear-gradient( top, #5b6813 5%, #25291c 95%);
+	background: linear-gradient( to bottom, #5b6813 5%, #25291c 95%);
+	color: #e7e7e7;
 	padding: 25px 45px;
 	width: 550px;
 	font-size: 16px;

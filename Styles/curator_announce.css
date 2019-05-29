@@ -24,7 +24,9 @@ body.v6 .suggested_curators h2 {
 }
 
 body.v6.curatorsannounce .page_content_container.background_grad {
-background: -webkit-linear-gradient( 180deg, #1b2838 75%,#111821 98%,#000000 100%);background: linear-gradient( 180deg, #1b2838 75%,#111821 98%,#000000 100%);	border-bottom: 1px solid #495360;
+background: -webkit-linear-gradient( 270deg, #1b2838 75%,#111821 98%,#000000 100%);
+	background: linear-gradient( 180deg, #1b2838 75%,#111821 98%,#000000 100%);
+	border-bottom: 1px solid #495360;
 }
 body.v6.curatorsannounce .page_content_container.background_solid {
 	background: #1b2838;
@@ -46,7 +48,9 @@ body.v6.curatorsannounce .page_content_container.background_img {
 	background-repeat: no-repeat;
 }
 body.v6.curatorsannounce .page_content_container.curator_pick {
-background: -webkit-linear-gradient( 180deg, rgba(0, 0, 0, 0.7) 0%,rgba(17, 24, 33, 0.5) 2%,rgba(17, 24, 33, 0) 25%,rgba(17, 24, 33, 0) 25%,rgba(17, 24, 33, 1) 98%,rgba(0, 0, 0, 1) 100%);background: linear-gradient( 180deg, rgba(0, 0, 0, 0.7) 0%,rgba(17, 24, 33, 0.5) 2%,rgba(17, 24, 33, 0) 25%,rgba(17, 24, 33, 0) 25%,rgba(17, 24, 33, 1) 98%,rgba(0, 0, 0, 1) 100%);	border-top: 1px solid #495360;
+background: -webkit-linear-gradient( 270deg, rgba(0, 0, 0, 0.7) 0%,rgba(17, 24, 33, 0.5) 2%,rgba(17, 24, 33, 0) 25%,rgba(17, 24, 33, 0) 25%,rgba(17, 24, 33, 1) 98%,rgba(0, 0, 0, 1) 100%);
+	background: linear-gradient( 180deg, rgba(0, 0, 0, 0.7) 0%,rgba(17, 24, 33, 0.5) 2%,rgba(17, 24, 33, 0) 25%,rgba(17, 24, 33, 0) 25%,rgba(17, 24, 33, 1) 98%,rgba(0, 0, 0, 1) 100%);
+	border-top: 1px solid #495360;
 	border-bottom: 1px solid #495360;
 	padding-bottom: 100px;
 }
@@ -126,7 +130,9 @@ background: -webkit-linear-gradient( 180deg, rgba(0, 0, 0, 0.7) 0%,rgba(17, 24, 
 }
 
 body.v6.curatorsannounce .page_content_container.top_section {
-background: -webkit-linear-gradient( 180deg, rgba(17, 24, 33, 0) 95%,rgba(17, 24, 33, 0.6) 100%);background: linear-gradient( 180deg, rgba(17, 24, 33, 0) 95%,rgba(17, 24, 33, 0.6) 100%);	padding-bottom: 90px;
+background: -webkit-linear-gradient( 270deg, rgba(17, 24, 33, 0) 95%,rgba(17, 24, 33, 0.6) 100%);
+	background: linear-gradient( 180deg, rgba(17, 24, 33, 0) 95%,rgba(17, 24, 33, 0.6) 100%);
+	padding-bottom: 90px;
 	border-bottom: 1px solid #495360;
 }
 .curator_link_ctn {

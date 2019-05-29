@@ -1149,7 +1149,9 @@ div + #landingFooter.nonconfidential {
 	display: block;
 	padding: 5px !important;
 	color: #e1e1e1 !important;
-	background: -webkit-linear-gradient( top, #82a6d7 5%, #3c6091 95%);background: linear-gradient( to bottom, #82a6d7 5%, #3c6091 95%);}
+	background: -webkit-linear-gradient( top, #82a6d7 5%, #3c6091 95%);
+	background: linear-gradient( to bottom, #82a6d7 5%, #3c6091 95%);
+}
 
 	.fancySelect > span {
 		color: #e1e1e1 !important;
@@ -1159,7 +1161,9 @@ div + #landingFooter.nonconfidential {
 	display: block;
 	padding: 5px !important;
 	color: #e1e1e1 !important;
-	background: -webkit-linear-gradient( top, #82a6d7 5%, #3c6091 95%);background: linear-gradient( to bottom, #82a6d7 5%, #3c6091 95%);}
+	background: -webkit-linear-gradient( top, #82a6d7 5%, #3c6091 95%);
+	background: linear-gradient( to bottom, #82a6d7 5%, #3c6091 95%);
+}
 
 .fancyLink > span {
 	color: #e1e1e1 !important;
@@ -1524,7 +1528,9 @@ a.btn_download:hover {
 	width: 45%;
 	padding: 12px;
 	margin-top: 16px;
-	background: -webkit-linear-gradient( top, #AACEFF 5%, #ffffff 95%);background: linear-gradient( to bottom, #AACEFF 5%, #ffffff 95%);}
+	background: -webkit-linear-gradient( top, #AACEFF 5%, #ffffff 95%);
+	background: linear-gradient( to bottom, #AACEFF 5%, #ffffff 95%);
+}
 	.newDevActionSection>img {
 		margin-right: 6px;
 	}
@@ -1548,7 +1554,9 @@ a.btn_download:hover {
 .nonDevActionSection {
     margin-right: 10px;
     padding: 12px;
-	background: -webkit-linear-gradient( 125deg, #407999 5%,#2f4d69 95%););background: linear-gradient( 125deg, #407999 5%,#2f4d69 95%););			font-family: "Motiva Sans", Sans-serif;
+	background: -webkit-linear-gradient( 325deg, #407999 5%,#2f4d69 95%);
+	background: linear-gradient( 125deg, #407999 5%,#2f4d69 95%);
+			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
 			border-radius: 3px;
@@ -2258,7 +2266,9 @@ a.pagelink:hover {
 
 .pagebtn:hover, a.pagebtn:hover {
 	background-color: #97C0E3;
-background: -webkit-linear-gradient( left, #417a9b 5%,#67c1f5 95%);background: linear-gradient( to right, #417a9b 5%,#67c1f5 95%);	color: #ffffff;
+background: -webkit-linear-gradient( left, #417a9b 5%,#67c1f5 95%);
+	background: linear-gradient( to right, #417a9b 5%,#67c1f5 95%);
+	color: #ffffff;
 	text-decoration: none;
 }
 

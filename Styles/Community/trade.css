@@ -45,10 +45,14 @@ body.tutorial_mode .pagecontent {
 	right: 1px;
 	height: 34px;
 	
-	background: -webkit-linear-gradient( top, #4E4E4E 5%, #1D1D1D 95%);background: linear-gradient( to bottom, #4E4E4E 5%, #1D1D1D 95%);}
+	background: -webkit-linear-gradient( top, #4E4E4E 5%, #1D1D1D 95%);
+	background: linear-gradient( to bottom, #4E4E4E 5%, #1D1D1D 95%);
+}
 
 .trade_box_bgheader.active {
-	background: -webkit-linear-gradient( top, #34445D 5%, #1D1D1D 95%);background: linear-gradient( to bottom, #34445D 5%, #1D1D1D 95%);}
+	background: -webkit-linear-gradient( top, #34445D 5%, #1D1D1D 95%);
+	background: linear-gradient( to bottom, #34445D 5%, #1D1D1D 95%);
+}
 
 .trade_box#inventory_box.ready > .trade_box_contents {
 	background-image: none;
@@ -1382,7 +1386,9 @@ div#chat_send_btn.active {
 	border-bottom: none;
 
 	background-color: #1D1D1D;
-	background: -webkit-linear-gradient( top, #4E4E4E 5%, #1D1D1D 95%);background: linear-gradient( to bottom, #4E4E4E 5%, #1D1D1D 95%);
+	background: -webkit-linear-gradient( top, #4E4E4E 5%, #1D1D1D 95%);
+	background: linear-gradient( to bottom, #4E4E4E 5%, #1D1D1D 95%);
+
 	text-decoration: none;
 	border-radius: 2px;
 	border-bottom-left-radius: 0;
@@ -1400,7 +1406,9 @@ div#chat_send_btn.active {
 }
 
 .inventory_user_tab.active {
-	background: -webkit-linear-gradient( top, #34445D 5%, #1D1D1D 95%);background: linear-gradient( to bottom, #34445D 5%, #1D1D1D 95%);}
+	background: -webkit-linear-gradient( top, #34445D 5%, #1D1D1D 95%);
+	background: linear-gradient( to bottom, #34445D 5%, #1D1D1D 95%);
+}
 
 .inventory_user_tab.active > div {
 	border-bottom: none;

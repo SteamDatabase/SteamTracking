@@ -402,7 +402,9 @@ html.responsive body {
 	padding: 24px 20px 12px 20px;
 	box-shadow: inset 0 -4px 8px 0 #000000;
 
-	background: -webkit-linear-gradient( 107deg, #24313f 0%,#171a21 33%););background: linear-gradient( 107deg, #24313f 0%,#171a21 33%););}
+	background: -webkit-linear-gradient( 343deg, #24313f 0%,#171a21 33%);
+	background: linear-gradient( 107deg, #24313f 0%,#171a21 33%);
+}
 
 .responsive_menu_user_persona {
 	line-height: 36px;

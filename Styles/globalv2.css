@@ -796,7 +796,9 @@ a.commentthread_allcommentslink:hover {
 }
 
 .modal_box {
-	background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);	padding: 3px;
+	background: -webkit-linear-gradient( top, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);
+	background: linear-gradient( to bottom, rgba(102,192,244,1) 5%, rgba(47,137,188,1) 95%);
+	padding: 3px;
 	width:542px;
 
 	font-size: 12px;
@@ -1400,7 +1402,9 @@ img.emoticon {
 	color: #ffffff;
 
 	background: #57749e; /* Old browsers */
-	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);
+	background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);
+}
 
 @media screen and (max-width: 480px)
 {

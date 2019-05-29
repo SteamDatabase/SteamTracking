@@ -166,7 +166,9 @@ body.iframe .responsive_page_content
 body.flat_page:not(.iframe) .pagecontent
 {
 	padding: 20px 0 0 0;
-	background: -webkit-linear-gradient( left, #192533 5%,#213148 40%,#213148 60%,#192533 95%);background: linear-gradient( to right, #192533 5%,#213148 40%,#213148 60%,#192533 95%);}
+	background: -webkit-linear-gradient( left, #192533 5%,#213148 40%,#213148 60%,#192533 95%);
+	background: linear-gradient( to right, #192533 5%,#213148 40%,#213148 60%,#192533 95%);
+}
 
 body.flat_page.iframe .pagecontent
 {
@@ -282,7 +284,9 @@ body.iframe #PageContents
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	background: -webkit-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);background: linear-gradient( to bottom, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);
+	background: -webkit-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);
+	background: linear-gradient( to bottom, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);
+
 	height: 100px;
 }
 
@@ -439,7 +443,9 @@ body.iframe #video_content
 	padding-left: 20px;
 	overflow: hidden;
 	min-height: 143px;
-	background: -webkit-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);background: linear-gradient( to bottom, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);}
+	background: -webkit-linear-gradient( top, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);
+	background: linear-gradient( to bottom, rgba( 25, 37, 51, 0.4 ) 10%, black 95%);
+}
 
 .BroadcastPlayer
 {
@@ -506,7 +512,9 @@ body.iframe #ChatWindow
 	width: auto;
 	margin-right: 0;
 	left: 0;
-background: -webkit-linear-gradient( 0deg, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);background: linear-gradient( 0deg, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);}
+background: -webkit-linear-gradient( top, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);
+	background: linear-gradient( 0, #000000 0px,#000000 50px,#1e2025 60px,#1e2025 100%);
+}
 
 #ChatViewerModalBackdrop
 {
@@ -903,7 +911,9 @@ body.iframe #ChatDragHandle
     line-height: 40px;
     display: block;
     float: left;
-    background: -webkit-linear-gradient( top, #696969 5%, #3b3b3b 95%);background: linear-gradient( to bottom, #696969 5%, #3b3b3b 95%);}
+    background: -webkit-linear-gradient( top, #696969 5%, #3b3b3b 95%);
+	background: linear-gradient( to bottom, #696969 5%, #3b3b3b 95%);
+}
 
 .EmoticonContainer
 {
@@ -1454,7 +1464,9 @@ body:not(.iframe) .BroadcastRowShadow
 {
 	padding: 15px;
 	letter-spacing: 1px;
-	background: -webkit-linear-gradient( top, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);background: linear-gradient( to bottom, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);}
+	background: -webkit-linear-gradient( top, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);
+	background: linear-gradient( to bottom, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);
+}
 
 .store_broadcast_title
 {
@@ -1607,7 +1619,9 @@ body.v6 .store_broadcast_title .broadcast_live_stream_icon {
 	justify-content: space-between;
 	height: 30px; /* If you change this, also update broadcast_floating height */
 
-	background: -webkit-linear-gradient( top, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);background: linear-gradient( to bottom, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);}
+	background: -webkit-linear-gradient( top, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);
+	background: linear-gradient( to bottom, rgba( 87, 100, 114, 1 ) 5%, rgba( 146, 160, 172, 1) 95%);
+}
 
 .PopOutVideoTitleText {
 	width: 280px;

@@ -11484,6 +11484,10 @@
         return (
           i.d(e, o),
           (e.prototype.ParseBBCode = function(e, t) {
+            if (e.startsWith("[pre]"))
+              return d.createElement(this.dictComponents().pre, null, g(e));
+            if (e.startsWith("[code]"))
+              return d.createElement(this.dictComponents().code, null, g(e));
             var n = a(e);
             return this.Parse_BuildReactComponents(n, t);
           }),
@@ -11568,6 +11572,13 @@
       })();
     function _(e) {
       return e.replace(/[\[\\]/g, "\\$&");
+    }
+    function g(e) {
+      for (var t = "", n = 0, o = a(e.trim()); n < o.length; n++) {
+        var i = o[n];
+        1 == i.type && (t += i.text);
+      }
+      return t;
     }
   },
   "8AUz": function(e, t, n) {
@@ -23855,17 +23866,17 @@
   },
   NB6M: function(e, t, n) {
     "use strict";
-    var a = n("mrSG"),
+    var i = n("mrSG"),
       O = n("q1tI"),
       E = n("e2SU"),
       M = n("/7KC"),
       o = n("ljid"),
-      s = (n("FuJV"), n("2vnA")),
-      i = n("okNM"),
-      r = n("1VtQ"),
-      c = n("1n9R"),
+      r = (n("FuJV"), n("2vnA")),
+      a = n("okNM"),
+      s = n("1VtQ"),
+      l = n("1n9R"),
       w = n("D3Kh"),
-      l = n("E7zH"),
+      c = n("E7zH"),
       D = n("Y3w+"),
       T = n("oh5H"),
       m = (function(t) {
@@ -23873,7 +23884,7 @@
           return t.call(this, e) || this;
         }
         return (
-          a.d(e, t),
+          i.d(e, t),
           (e.prototype.HideStats = function() {
             this.props.closeStats && this.props.closeStats();
           }),
@@ -23981,8 +23992,8 @@
               O.createElement(p, { stats: e })
             );
           }),
-          a.c([r.a], e.prototype, "HideStats", null),
-          (e = a.c([i.a], e))
+          i.c([s.a], e.prototype, "HideStats", null),
+          (e = i.c([a.a], e))
         );
       })(O.Component),
       p = (function(t) {
@@ -23990,7 +24001,7 @@
           return t.call(this, e) || this;
         }
         return (
-          a.d(e, t),
+          i.d(e, t),
           (e.prototype.createBufferedRange = function(e) {
             var t = this.props.stats,
               n = [],
@@ -24173,7 +24184,7 @@
               )
             );
           }),
-          (e = a.c([i.a], e))
+          (e = i.c([a.a], e))
         );
       })(O.Component),
       u = n("/IDK"),
@@ -24206,22 +24217,42 @@
               title: "",
               screenshot: "",
               age_safe_screenshot: !1,
-              capsule_link: c.b.STORE_BASE_URL + "app/" + e
+              capsule_link: l.b.STORE_BASE_URL + "app/" + e,
+              creator_list: new Array()
             });
         }
         return (
+          (e.prototype.BIsLoaded = function() {
+            return this.m_bLoaded;
+          }),
           (e.prototype.GetAppStoreData = function() {
             return this.m_appStoreData;
           }),
-          (e.prototype.HintLoadBroadcastAppData = function(r) {
+          (e.prototype.HintLoadBroadcastAppData = function(t) {
             return (
-              void 0 === r && (r = "steamtv"),
-              a.b(this, void 0, void 0, function() {
+              void 0 === t && (t = "steamtv"),
+              i.b(this, void 0, void 0, function() {
+                return i.e(this, function(e) {
+                  return (
+                    this.m_loadingPromise ||
+                      (this.m_loadingPromise = this.InternalLoadBroadcastAppData(
+                        t
+                      )),
+                    [2, this.m_loadingPromise]
+                  );
+                });
+              })
+            );
+          }),
+          (e.prototype.InternalLoadBroadcastAppData = function(o) {
+            return (
+              void 0 === o && (o = "steamtv"),
+              i.b(this, void 0, void 0, function() {
                 var t,
-                  o,
+                  s,
                   n,
-                  i = this;
-                return a.e(this, function(e) {
+                  c = this;
+                return i.e(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return this.m_bLoaded
@@ -24230,73 +24261,82 @@
                             "appid",
                             "" + this.m_appid
                           ),
-                          t.append("feature", r),
-                          (o = null),
+                          t.append("feature", o),
+                          t.append("l", l.b.LANGUAGE),
+                          (s = null),
                           (n =
-                            c.b.STORE_BASE_URL +
+                            l.b.STORE_BASE_URL +
                             "broadcast/ajaxgetappinfoforcap"),
                           [4, v.a.post(n, t)]);
                     case 1:
                       return (
-                        (o = e.sent()),
+                        (s = e.sent()),
                         [
                           4,
-                          Object(s.A)(function() {
-                            if (!o.data || 1 != o.data.success)
+                          Object(r.A)(function() {
+                            if (!s.data || 1 != s.data.success)
                               return (
                                 console.log(
                                   "AMS - failed to load store info about appid: " +
-                                    i.m_appid
+                                    c.m_appid
                                 ),
-                                void (i.m_appStoreData.success = o.data
-                                  ? o.data.success
+                                void (c.m_appStoreData.success = s.data
+                                  ? s.data.success
                                   : 2)
                               );
-                            (i.m_appStoreData.success = 1),
-                              (i.m_appStoreData.capsule_link =
-                                o.data.capsule_link),
-                              (i.m_appStoreData.price = o.data.price),
-                              (i.m_appStoreData.subid = o.data.subid),
-                              (i.m_appStoreData.button_action =
-                                o.data.button_action),
-                              (i.m_appStoreData.cart_url = o.data.cart_url),
-                              (i.m_appStoreData.add_to_cart_url =
-                                o.data.add_to_cart_url),
-                              (i.m_appStoreData.title = o.data.title),
-                              (i.m_appStoreData.release = o.data.release),
-                              (i.m_appStoreData.short_desc = o.data.short_desc),
-                              (i.m_appStoreData.capsule = o.data.capsule),
-                              (i.m_appStoreData.tiny_capsule =
-                                o.data.tiny_capsule),
-                              (i.m_appStoreData.screenshot = o.data.screenshot),
-                              (i.m_appStoreData.screenshot_list =
-                                o.data.screenshot_list),
-                              (i.m_appStoreData.age_safe_screenshot =
-                                o.data.age_safe_screenshot),
-                              (i.m_appStoreData.social = new Array());
+                            (c.m_appStoreData.success = 1),
+                              (c.m_appStoreData.capsule_link =
+                                s.data.capsule_link),
+                              (c.m_appStoreData.price = s.data.price),
+                              (c.m_appStoreData.subid = s.data.subid),
+                              (c.m_appStoreData.button_action =
+                                s.data.button_action),
+                              (c.m_appStoreData.cart_url = s.data.cart_url),
+                              (c.m_appStoreData.add_to_cart_url =
+                                s.data.add_to_cart_url),
+                              (c.m_appStoreData.app_to_run = s.data.app_to_run),
+                              (c.m_appStoreData.title = s.data.title),
+                              (c.m_appStoreData.release = s.data.release),
+                              (c.m_appStoreData.short_desc = s.data.short_desc),
+                              (c.m_appStoreData.capsule = s.data.capsule),
+                              (c.m_appStoreData.tiny_capsule =
+                                s.data.tiny_capsule),
+                              (c.m_appStoreData.screenshot = s.data.screenshot),
+                              (c.m_appStoreData.screenshot_list =
+                                s.data.screenshot_list),
+                              (c.m_appStoreData.age_safe_screenshot =
+                                s.data.age_safe_screenshot),
+                              (c.m_appStoreData.creator_list = new Array());
+                            var e = s.data.creator_list;
+                            if (e)
+                              for (var t = 0, n = e; t < n.length; t++) {
+                                var o = n[t];
+                                c.m_appStoreData.creator_list.push(o);
+                              }
+                            c.m_appStoreData.social = new Array();
                             for (
-                              var e = 0, t = o.data.social;
-                              e < t.length;
-                              e++
+                              var i = 0, r = s.data.social;
+                              i < r.length;
+                              i++
                             ) {
-                              var n = t[e];
-                              i.m_appStoreData.social.push(n);
+                              var a = r[i];
+                              c.m_appStoreData.social.push(a);
                             }
-                            i.m_bLoaded = !0;
+                            c.m_bLoaded = !0;
                           })
                         ]
                       );
                     case 2:
                       e.sent(), (e.label = 3);
                     case 3:
-                      return [2];
+                      return [2, this];
                   }
                 });
               })
             );
           }),
-          a.c([s.x], e.prototype, "m_appStoreData", void 0),
-          a.c([s.g], e.prototype, "HintLoadBroadcastAppData", null),
+          i.c([r.x], e.prototype, "m_appStoreData", void 0),
+          i.c([r.g], e.prototype, "HintLoadBroadcastAppData", null),
           e
         );
       })(),
@@ -24307,7 +24347,7 @@
           return (t.state = { appInfo: new S(e.appid) }), t;
         }
         return (
-          a.d(e, n),
+          i.d(e, n),
           (e.prototype.componentDidMount = function() {
             this.state.appInfo.HintLoadBroadcastAppData().catch(function(e) {
               console.log("AppInfo Failed to Load", Object(y.a)(e).strErrorMsg);
@@ -24402,7 +24442,7 @@
                   })
             );
           }),
-          (e = a.c([i.a], e))
+          (e = i.c([a.a], e))
         );
       })(O.Component);
     var I = (function(e) {
@@ -24410,13 +24450,13 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          a.d(t, e),
+          i.d(t, e),
           (t.prototype.handleOnClick = function(e) {
             !(function(e, t) {
               var n = new FormData();
               n.append("action", "add_to_cart"),
                 n.append("subid", "" + t.subid);
-              var o = c.f.authwgtoken;
+              var o = l.f.authwgtoken;
               n.append("authwgtoken", o), n.append("quantity", "1");
               var i = t.add_to_cart_url;
               try {
@@ -24452,17 +24492,17 @@
               )
             );
           }),
-          a.c([r.a], t.prototype, "handleOnClick", null),
-          (t = a.c([i.a], t))
+          i.c([s.a], t.prototype, "handleOnClick", null),
+          (t = i.c([a.a], t))
         );
       })(O.Component),
       G = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
-          return (e.m_schUpdate = new l.b()), (e.m_bSetupComplete = !1), e;
+          return (e.m_schUpdate = new c.b()), (e.m_bSetupComplete = !1), e;
         }
         return (
-          a.d(e, t),
+          i.d(e, t),
           (e.prototype.componentWillUnmount = function() {
             this.m_schUpdate.Cancel();
           }),
@@ -24509,8 +24549,8 @@
               height: this.props.height
             });
           }),
-          a.c([r.a], e.prototype, "BindCanvasRef", null),
-          a.c([r.a], e.prototype, "updateCanvas", null),
+          i.c([s.a], e.prototype, "BindCanvasRef", null),
+          i.c([s.a], e.prototype, "updateCanvas", null),
           e
         );
       })(O.Component),
@@ -24527,7 +24567,7 @@
         return (null !== e && e.apply(this, arguments)) || this;
       }
       return (
-        a.d(t, e),
+        i.d(t, e),
         (t.prototype.render = function() {
           var e = this.props.video,
             t = w.b.Loading,
@@ -24552,7 +24592,7 @@
               )
           );
         }),
-        (t = a.c([i.a], t))
+        (t = i.c([a.a], t))
       );
     })(O.Component);
     n.d(t, "b", function() {
@@ -24566,12 +24606,12 @@
         function e(e) {
           var t = n.call(this, e) || this;
           return (
-            (t.m_schHideControls = new l.b()),
-            (t.m_schUnmountControls = new l.b()),
+            (t.m_schHideControls = new c.b()),
+            (t.m_schUnmountControls = new c.b()),
             (t.m_elBroadcastPlayer = null),
             (t.m_bMouseDown = !1),
             (t.m_elMouseDown = null),
-            (t.m_listeners = new l.c()),
+            (t.m_listeners = new c.c()),
             (t.m_strContextMenuLeft = "0px"),
             (t.m_strContextMenuTop = "0px"),
             (t.state = {
@@ -24587,7 +24627,7 @@
           );
         }
         return (
-          a.d(e, n),
+          i.d(e, n),
           (e.prototype.StopVideo = function() {
             var e = this.state.video;
             e && (w.a.StopVideo(e), this.setState({ video: null }));
@@ -24732,7 +24772,7 @@
             if (t && this.props.onOpenLinkInNewWindow) {
               var n = t.GetBroadcastInfo();
               if (n) {
-                var o = c.b.STORE_BASE_URL + "app/" + n.m_strAppId;
+                var o = l.b.STORE_BASE_URL + "app/" + n.m_strAppId;
                 this.props.onOpenLinkInNewWindow(e, o), e.stopPropagation();
               }
             }
@@ -24911,22 +24951,22 @@
                 )
             );
           }),
-          a.c([r.a], e.prototype, "BindBroadcastPlayerRef", null),
-          a.c([r.a], e.prototype, "BindVideoRef", null),
-          a.c([r.a], e.prototype, "OnMouseDown", null),
-          a.c([r.a], e.prototype, "OnMouseUp", null),
-          a.c([r.a], e.prototype, "OnMouseMove", null),
-          a.c([r.a], e.prototype, "OnMouseLeave", null),
-          a.c([r.a], e.prototype, "HideControls", null),
-          a.c([r.a], e.prototype, "UmountControls", null),
-          a.c([r.a], e.prototype, "ShowStatsView", null),
-          a.c([r.a], e.prototype, "OnContextMenu", null),
-          a.c([r.a], e.prototype, "ToggleStatsView", null),
-          a.c([r.a], e.prototype, "ShowStorePage", null),
-          a.c([r.a], e.prototype, "CloseStats", null),
-          a.c([r.a], e.prototype, "OnToggleFullscreen", null),
-          a.c([r.a], e.prototype, "OnFullscreenChange", null),
-          (e = a.c([i.a], e))
+          i.c([s.a], e.prototype, "BindBroadcastPlayerRef", null),
+          i.c([s.a], e.prototype, "BindVideoRef", null),
+          i.c([s.a], e.prototype, "OnMouseDown", null),
+          i.c([s.a], e.prototype, "OnMouseUp", null),
+          i.c([s.a], e.prototype, "OnMouseMove", null),
+          i.c([s.a], e.prototype, "OnMouseLeave", null),
+          i.c([s.a], e.prototype, "HideControls", null),
+          i.c([s.a], e.prototype, "UmountControls", null),
+          i.c([s.a], e.prototype, "ShowStatsView", null),
+          i.c([s.a], e.prototype, "OnContextMenu", null),
+          i.c([s.a], e.prototype, "ToggleStatsView", null),
+          i.c([s.a], e.prototype, "ShowStorePage", null),
+          i.c([s.a], e.prototype, "CloseStats", null),
+          i.c([s.a], e.prototype, "OnToggleFullscreen", null),
+          i.c([s.a], e.prototype, "OnFullscreenChange", null),
+          (e = i.c([a.a], e))
         );
       })(O.Component),
       B = (function(e) {
@@ -24934,7 +24974,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          a.d(t, e),
+          i.d(t, e),
           (t.prototype.OnClick = function() {
             w.a.UserInputClickVideo(this.props.video);
           }),
@@ -24953,7 +24993,7 @@
               )
             );
           }),
-          a.c([r.a], t.prototype, "OnClick", null),
+          i.c([s.a], t.prototype, "OnClick", null),
           t
         );
       })(O.Component),
@@ -24962,7 +25002,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          a.d(t, e),
+          i.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.video;
             if (!e) return null;
@@ -25000,7 +25040,7 @@
               )
             );
           }),
-          (t = a.c([i.a], t))
+          (t = i.c([a.a], t))
         );
       })(O.Component),
       F = (function(e) {
@@ -25008,7 +25048,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          a.d(t, e),
+          i.d(t, e),
           (t.prototype.render = function() {
             return this.props.onClick
               ? O.createElement(
@@ -25029,7 +25069,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          a.d(t, e),
+          i.d(t, e),
           (t.prototype.OnJumpBackward = function() {
             this.props.video.JumpTime(-15);
           }),
@@ -25078,8 +25118,8 @@
               t && O.createElement(H, { video: e })
             );
           }),
-          a.c([r.a], t.prototype, "OnJumpBackward", null),
-          a.c([r.a], t.prototype, "OnJumpForward", null),
+          i.c([s.a], t.prototype, "OnJumpBackward", null),
+          i.c([s.a], t.prototype, "OnJumpForward", null),
           t
         );
       })(O.Component),
@@ -25088,7 +25128,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          a.d(t, e),
+          i.d(t, e),
           (t.prototype.OnGoLiveClicked = function(e) {
             this.props.video.JumpToLiveEdge();
           }),
@@ -25120,8 +25160,8 @@
               )
             );
           }),
-          a.c([r.a], t.prototype, "OnGoLiveClicked", null),
-          (t = a.c([i.a], t))
+          i.c([s.a], t.prototype, "OnGoLiveClicked", null),
+          (t = i.c([a.a], t))
         );
       })(O.Component),
       U = (function(e) {
@@ -25129,7 +25169,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          a.d(t, e),
+          i.d(t, e),
           (t.prototype.OnTogglePlayPause = function() {
             this.props.video.TogglePlayPause();
           }),
@@ -25144,8 +25184,8 @@
               e ? O.createElement(E.M, null) : O.createElement(E.K, null)
             );
           }),
-          a.c([r.a], t.prototype, "OnTogglePlayPause", null),
-          (t = a.c([i.a], t))
+          i.c([s.a], t.prototype, "OnTogglePlayPause", null),
+          (t = i.c([a.a], t))
         );
       })(O.Component),
       j = (function(e) {
@@ -25153,7 +25193,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          a.d(t, e),
+          i.d(t, e),
           Object.defineProperty(t.prototype, "has_previous_marker", {
             get: function() {
               return void 0 !== this.GetPreviousMarkerTime();
@@ -25190,9 +25230,9 @@
               O.createElement(E.E, { bHidePostArrow: !0, bFlipHorizontal: !0 })
             );
           }),
-          a.c([s.i], t.prototype, "has_previous_marker", null),
-          a.c([r.a], t.prototype, "OnJumpToPreviousMarkerClicked", null),
-          (t = a.c([i.a], t))
+          i.c([r.i], t.prototype, "has_previous_marker", null),
+          i.c([s.a], t.prototype, "OnJumpToPreviousMarkerClicked", null),
+          (t = i.c([a.a], t))
         );
       })(O.Component),
       H = (function(e) {
@@ -25200,7 +25240,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          a.d(t, e),
+          i.d(t, e),
           Object.defineProperty(t.prototype, "has_next_marker", {
             get: function() {
               return void 0 !== this.GetNextMarkerTime();
@@ -25237,9 +25277,9 @@
               O.createElement(E.E, { bHidePostArrow: !0, bFlipHorizontal: !1 })
             );
           }),
-          a.c([s.i], t.prototype, "has_next_marker", null),
-          a.c([r.a], t.prototype, "OnJumpToNextMarkerClicked", null),
-          (t = a.c([i.a], t))
+          i.c([r.i], t.prototype, "has_next_marker", null),
+          i.c([s.a], t.prototype, "OnJumpToNextMarkerClicked", null),
+          (t = i.c([a.a], t))
         );
       })(O.Component),
       W = (function(n) {
@@ -25253,7 +25293,7 @@
           );
         }
         return (
-          a.d(e, n),
+          i.d(e, n),
           (e.prototype.OnVideoControlClick = function(e) {
             this.setState({ bSettingsOpen: !this.state.bSettingsOpen }),
               (this.m_SettingsButtonPos = [
@@ -25467,12 +25507,12 @@
                 )
             );
           }),
-          a.c([r.a], e.prototype, "OnVideoControlClick", null),
-          a.c([r.a], e.prototype, "OnSubtitlesClick", null),
-          a.c([r.a], e.prototype, "OnMouseUp", null),
-          a.c([r.a], e.prototype, "bindSettingsButton", null),
-          a.c([r.a], e.prototype, "BindSettingsPanel", null),
-          a.c([r.a], e.prototype, "OnShowStats", null),
+          i.c([s.a], e.prototype, "OnVideoControlClick", null),
+          i.c([s.a], e.prototype, "OnSubtitlesClick", null),
+          i.c([s.a], e.prototype, "OnMouseUp", null),
+          i.c([s.a], e.prototype, "bindSettingsButton", null),
+          i.c([s.a], e.prototype, "BindSettingsPanel", null),
+          i.c([s.a], e.prototype, "OnShowStats", null),
           e
         );
       })(O.Component),
@@ -25482,14 +25522,14 @@
           return (
             (e.k_nHideSliderTimeout = 1500),
             (e.m_bShowSlider = !0),
-            (e.m_schHideSlider = new l.b()),
+            (e.m_schHideSlider = new c.b()),
             (e.m_bChildDragging = !1),
             (e.m_bMouseOver = !1),
             e
           );
         }
         return (
-          a.d(e, t),
+          i.d(e, t),
           (e.prototype.componentWillUnmount = function() {
             this.m_schHideSlider.Cancel();
           }),
@@ -25556,12 +25596,12 @@
               )
             );
           }),
-          a.c([s.x], e.prototype, "m_bShowSlider", void 0),
-          a.c([r.a], e.prototype, "ToggleMute", null),
-          a.c([r.a], e.prototype, "OnMouseEnter", null),
-          a.c([r.a], e.prototype, "OnMouseLeave", null),
-          a.c([r.a], e.prototype, "OnChildDrag", null),
-          (e = a.c([i.a], e))
+          i.c([r.x], e.prototype, "m_bShowSlider", void 0),
+          i.c([s.a], e.prototype, "ToggleMute", null),
+          i.c([s.a], e.prototype, "OnMouseEnter", null),
+          i.c([s.a], e.prototype, "OnMouseLeave", null),
+          i.c([s.a], e.prototype, "OnChildDrag", null),
+          (e = i.c([a.a], e))
         );
       })(O.Component),
       q = (function(t) {
@@ -25570,7 +25610,7 @@
           return (e.m_elSlider = null), (e.m_nVolumeStartOfDrag = 0), e;
         }
         return (
-          a.d(e, t),
+          i.d(e, t),
           (e.prototype.OnMouseDown = function(e) {
             var t = e.currentTarget;
             (this.m_elSlider = t),
@@ -25640,11 +25680,11 @@
               })
             );
           }),
-          a.c([r.a], e.prototype, "OnMouseDown", null),
-          a.c([r.a], e.prototype, "OnMouseMove", null),
-          a.c([r.a], e.prototype, "OnMouseUp", null),
-          a.c([s.g], e.prototype, "SetVolumeWithCoord", null),
-          (e = a.c([i.a], e))
+          i.c([s.a], e.prototype, "OnMouseDown", null),
+          i.c([s.a], e.prototype, "OnMouseMove", null),
+          i.c([s.a], e.prototype, "OnMouseUp", null),
+          i.c([r.g], e.prototype, "SetVolumeWithCoord", null),
+          (e = i.c([a.a], e))
         );
       })(O.Component),
       K = function(e) {
@@ -25716,7 +25756,7 @@
         );
       }
       return (
-        a.d(e, n),
+        i.d(e, n),
         (e.prototype.OnMouseDown = function(e, t) {
           var n = this;
           if (this.m_elSlider) {
@@ -25958,14 +25998,14 @@
             )
           );
         }),
-        a.c([r.a], e.prototype, "OnMouseDown", null),
-        a.c([r.a], e.prototype, "OnMouseMove", null),
-        a.c([r.a], e.prototype, "OnMouseUp", null),
-        a.c([r.a], e.prototype, "OnKeyDown", null),
-        a.c([r.a], e.prototype, "OnSegmentClick", null),
-        a.c([r.a], e.prototype, "OnMarkerMouseEnter", null),
-        a.c([r.a], e.prototype, "OnMarkerMouseLeave", null),
-        (e = a.c([i.a], e))
+        i.c([s.a], e.prototype, "OnMouseDown", null),
+        i.c([s.a], e.prototype, "OnMouseMove", null),
+        i.c([s.a], e.prototype, "OnMouseUp", null),
+        i.c([s.a], e.prototype, "OnKeyDown", null),
+        i.c([s.a], e.prototype, "OnSegmentClick", null),
+        i.c([s.a], e.prototype, "OnMarkerMouseEnter", null),
+        i.c([s.a], e.prototype, "OnMarkerMouseLeave", null),
+        (e = i.c([a.a], e))
       );
     })(O.Component);
     var X,
@@ -25976,7 +26016,7 @@
           return (e.state = { info: null }), e;
         }
         return (
-          a.d(e, t),
+          i.d(e, t),
           (e.getDerivedStateFromProps = function(e, t) {
             if (
               (!t.info || t.info.m_steamIDBroadcast !== e.steamID) &&
@@ -25990,7 +26030,7 @@
           }),
           (e.prototype.RenderStreamSwitcher = function() {
             var e = this.props.steamID;
-            return "public" != c.b.WEB_UNIVERSE || f.b.stream[e]
+            return "public" != l.b.WEB_UNIVERSE || f.b.stream[e]
               ? O.createElement($, {
                   value: e,
                   options: f.b.stream,
@@ -26077,7 +26117,7 @@
                 })
             );
           }),
-          (e = a.c([i.a], e))
+          (e = i.c([a.a], e))
         );
       })(O.Component),
       $ = (function(e) {
@@ -26085,7 +26125,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          a.d(t, e),
+          i.d(t, e),
           (t.prototype.showContextMenu = function(e) {
             var t = this.props,
               n = t.options,
@@ -26121,7 +26161,7 @@
               )
             );
           }),
-          a.c([r.a], t.prototype, "showContextMenu", null),
+          i.c([s.a], t.prototype, "showContextMenu", null),
           t
         );
       })(O.Component),
@@ -26131,12 +26171,12 @@
           return (t.state = { sizableRegion: [] }), t;
         }
         return (
-          a.d(e, n),
+          i.d(e, n),
           (e.prototype.AddLinkRegion = function() {
-            return a.b(this, void 0, void 0, function() {
+            return i.b(this, void 0, void 0, function() {
               var t,
                 n = this;
-              return a.e(this, function(e) {
+              return i.e(this, function(e) {
                 return (
                   (t = this.state.sizableRegion.length),
                   this.state.sizableRegion.push({
@@ -26164,8 +26204,8 @@
               });
           }),
           (e.prototype.LoadLinkRegion = function(t, e) {
-            return a.b(this, void 0, void 0, function() {
-              return a.e(this, function(e) {
+            return i.b(this, void 0, void 0, function() {
+              return i.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return (
@@ -26211,9 +26251,9 @@
             this.props.onSaveLinkRegions(e);
           }),
           (e.prototype.DeleteRegion = function(n) {
-            return a.b(this, void 0, void 0, function() {
+            return i.b(this, void 0, void 0, function() {
               var t = this;
-              return a.e(this, function(e) {
+              return i.e(this, function(e) {
                 return (
                   this.state.sizableRegion.splice(n, 1),
                   console.log("keys: ", this.state.sizableRegion.keys),
@@ -26229,9 +26269,9 @@
             });
           }),
           (e.prototype.UpdatePanel = function(n, o) {
-            return a.b(this, void 0, void 0, function() {
+            return i.b(this, void 0, void 0, function() {
               var t = this;
-              return a.e(this, function(e) {
+              return i.e(this, function(e) {
                 return (
                   (this.state.sizableRegion[n] = o),
                   this.setState(
@@ -26259,7 +26299,7 @@
                         "a",
                         {
                           key: e.link_index,
-                          href: c.b.STEAMTV_BASE_URL + "linkfilter/" + e.url,
+                          href: l.b.STEAMTV_BASE_URL + "linkfilter/" + e.url,
                           target: "_blank",
                           rel: "noopener noreferrer"
                         },
@@ -26317,12 +26357,12 @@
               )
             );
           }),
-          a.c([r.a], e.prototype, "AddLinkRegion", null),
-          a.c([r.a], e.prototype, "LoadLinkRegion", null),
-          a.c([r.a], e.prototype, "OnSaveRegions", null),
-          a.c([r.a], e.prototype, "DeleteRegion", null),
-          a.c([r.a], e.prototype, "UpdatePanel", null),
-          (e = a.c([i.a], e))
+          i.c([s.a], e.prototype, "AddLinkRegion", null),
+          i.c([s.a], e.prototype, "LoadLinkRegion", null),
+          i.c([s.a], e.prototype, "OnSaveRegions", null),
+          i.c([s.a], e.prototype, "DeleteRegion", null),
+          i.c([s.a], e.prototype, "UpdatePanel", null),
+          (e = i.c([a.a], e))
         );
       })(O.Component);
     ((Q = X || (X = {})).topleft = "topleft"),
@@ -26340,7 +26380,7 @@
         return (
           (t.m_fnMouseUp = null),
           (t.m_fnMouseMove = null),
-          (t.m_listeners = new l.c()),
+          (t.m_listeners = new c.c()),
           (t.m_strDescription = ""),
           (t.state = {
             curLeftPosPct: t.props.xPosPct,
@@ -26360,7 +26400,7 @@
         );
       }
       return (
-        a.d(e, n),
+        i.d(e, n),
         (e.prototype.componentWillUnmount = function() {
           this.m_listeners.Unregister();
         }),
@@ -26558,8 +26598,8 @@
             this.m_listeners.Unregister();
         }),
         (e.prototype.HandleDelete = function() {
-          return a.b(this, void 0, void 0, function() {
-            return a.e(this, function(e) {
+          return i.b(this, void 0, void 0, function() {
+            return i.e(this, function(e) {
               return this.props.deleteFn(this.props.index), [2];
             });
           });
@@ -26754,24 +26794,24 @@
             )
           );
         }),
-        a.c([r.a], e.prototype, "LinkRegionBoxRef", null),
-        a.c([r.a], e.prototype, "OnMouseDown", null),
-        a.c([r.a], e.prototype, "OnMouseMove", null),
-        a.c([r.a], e.prototype, "CheckBottomEdge", null),
-        a.c([r.a], e.prototype, "CheckRightEdge", null),
-        a.c([r.a], e.prototype, "CheckTopEdge", null),
-        a.c([r.a], e.prototype, "CheckLeftEdge", null),
-        a.c([r.a], e.prototype, "CalcLeftEdge", null),
-        a.c([r.a], e.prototype, "CalcRightEdge", null),
-        a.c([r.a], e.prototype, "CalcTopEdge", null),
-        a.c([r.a], e.prototype, "CalcBottomEdge", null),
-        a.c([r.a], e.prototype, "OnMouseUp", null),
-        a.c([r.a], e.prototype, "HandleDelete", null),
-        a.c([r.a], e.prototype, "OnSetLinkURLChange", null),
-        a.c([r.a], e.prototype, "OnSetLinkDescriptionChange", null),
-        a.c([r.a], e.prototype, "OnSaveLink", null),
-        a.c([r.a], e.prototype, "OnEditLink", null),
-        (e = a.c([i.a], e))
+        i.c([s.a], e.prototype, "LinkRegionBoxRef", null),
+        i.c([s.a], e.prototype, "OnMouseDown", null),
+        i.c([s.a], e.prototype, "OnMouseMove", null),
+        i.c([s.a], e.prototype, "CheckBottomEdge", null),
+        i.c([s.a], e.prototype, "CheckRightEdge", null),
+        i.c([s.a], e.prototype, "CheckTopEdge", null),
+        i.c([s.a], e.prototype, "CheckLeftEdge", null),
+        i.c([s.a], e.prototype, "CalcLeftEdge", null),
+        i.c([s.a], e.prototype, "CalcRightEdge", null),
+        i.c([s.a], e.prototype, "CalcTopEdge", null),
+        i.c([s.a], e.prototype, "CalcBottomEdge", null),
+        i.c([s.a], e.prototype, "OnMouseUp", null),
+        i.c([s.a], e.prototype, "HandleDelete", null),
+        i.c([s.a], e.prototype, "OnSetLinkURLChange", null),
+        i.c([s.a], e.prototype, "OnSetLinkDescriptionChange", null),
+        i.c([s.a], e.prototype, "OnSaveLink", null),
+        i.c([s.a], e.prototype, "OnEditLink", null),
+        (e = i.c([a.a], e))
       );
     })(O.Component);
   },
@@ -67714,23 +67754,25 @@ and limitations under the License.
   oh5H: function(e, t, n) {
     "use strict";
     n.d(t, "b", function() {
-      return r;
+      return s;
     }),
       n.d(t, "d", function() {
-        return a;
-      }),
-      n.d(t, "c", function() {
-        return s;
-      }),
-      n.d(t, "e", function() {
         return c;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "c", function() {
         return p;
+      }),
+      n.d(t, "e", function() {
+        return u;
+      }),
+      n.d(t, "a", function() {
+        return m;
       });
     var l = n("q1tI"),
       o = (n("Gp1o"), n("XaMz"), n("ujHl")),
-      i = (function() {
+      i = n("0N1H"),
+      r = n("1n9R"),
+      a = (function() {
         function e() {
           (this.m_mapTokens = new Map()),
             (this.m_mapFallbackTokens = new Map());
@@ -67777,6 +67819,16 @@ and limitations under the License.
               ? navigator.languages
               : ["en-US"];
           }),
+          (e.prototype.GetELanguageFallbackOrder = function() {
+            var t = new Array();
+            return (
+              t.push(Object(i.c)(r.b.LANGUAGE)),
+              (r.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+                e.value != r.b.LANGUAGE && t.push(Object(i.c)(e.value));
+              }),
+              t
+            );
+          }),
           (e.prototype.SetPreferredLocales = function(e) {
             this.m_rgLocalesToUse = e;
           }),
@@ -67793,10 +67845,10 @@ and limitations under the License.
           e
         );
       })();
-    function r(e) {
+    function s(e) {
       for (var o = [], t = 1; t < arguments.length; t++)
         o[t - 1] = arguments[t];
-      var n = p.LocalizeString(e);
+      var n = m.LocalizeString(e);
       return n
         ? (0 < o.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -67809,10 +67861,10 @@ and limitations under the License.
           n)
         : e;
     }
-    function a(e) {
+    function c(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var o = p.LocalizeString(e);
+      var o = m.LocalizeString(e);
       if (!o) return e;
       for (var i, r = [], a = /(.*?)%(\d+)\$s/g, s = 0; (i = a.exec(o)); ) {
         (s += i[0].length), r.push(i[1]);
@@ -67824,51 +67876,51 @@ and limitations under the License.
         l.createElement.apply(l, [l.Fragment, null].concat(r))
       );
     }
-    function s(e, t) {
+    function p(e, t) {
       for (var n = [], o = 2; o < arguments.length; o++)
         n[o - 2] = arguments[o];
-      return r.apply(
+      return s.apply(
         void 0,
         1 === t || "1" === t ? [e, t].concat(n) : [e + "_Plural", t].concat(n)
       );
     }
-    function c(e, t) {
+    function u(e, t) {
       void 0 === t && (t = !1);
       var n = t ? "#TimeInterval_" : "#TimeSince_";
       return e >= 2 * o.a.PerYear
-        ? r(n + "XYears", Math.floor(e / o.a.PerYear))
+        ? s(n + "XYears", Math.floor(e / o.a.PerYear))
         : e >= o.a.PerYear
         ? (e -= o.a.PerYear) >= 2 * o.a.PerMonth
-          ? r(n + "1YearXMonths", Math.floor(e / o.a.PerMonth))
-          : r(n + "1Year")
+          ? s(n + "1YearXMonths", Math.floor(e / o.a.PerMonth))
+          : s(n + "1Year")
         : e >= 2 * o.a.PerMonth
-        ? r(n + "XMonths", Math.floor(e / o.a.PerMonth))
+        ? s(n + "XMonths", Math.floor(e / o.a.PerMonth))
         : e >= 2 * o.a.PerWeek
-        ? r(n + "XWeeks", Math.floor(e / o.a.PerWeek))
+        ? s(n + "XWeeks", Math.floor(e / o.a.PerWeek))
         : e >= o.a.PerWeek
-        ? r(n + "1Week", Math.floor(e / o.a.PerWeek))
+        ? s(n + "1Week", Math.floor(e / o.a.PerWeek))
         : e >= 2 * o.a.PerDay
-        ? r(n + "XDays", Math.floor(e / o.a.PerDay))
+        ? s(n + "XDays", Math.floor(e / o.a.PerDay))
         : e >= o.a.PerDay
         ? (e -= o.a.PerDay) >= 2 * o.a.PerHour
-          ? r(n + "1DayXHours", Math.floor(e / o.a.PerHour))
-          : r(n + "1Day")
+          ? s(n + "1DayXHours", Math.floor(e / o.a.PerHour))
+          : s(n + "1Day")
         : e >= 2 * o.a.PerHour
-        ? r(n + "XHours", Math.floor(e / o.a.PerHour))
+        ? s(n + "XHours", Math.floor(e / o.a.PerHour))
         : e >= o.a.PerHour
         ? (e -= o.a.PerHour) >= 2 * o.a.PerMinute
-          ? r(n + "1HourXMinutes", Math.floor(e / o.a.PerMinute))
-          : r(n + "1Hour")
+          ? s(n + "1HourXMinutes", Math.floor(e / o.a.PerMinute))
+          : s(n + "1Hour")
         : e >= 2 * o.a.PerMinute
-        ? r(n + "XMinutes", Math.floor(e / o.a.PerMinute))
+        ? s(n + "XMinutes", Math.floor(e / o.a.PerMinute))
         : e >= o.a.PerMinute
-        ? r(n + "1Minute")
-        : r(n + "LessThanAMinute");
+        ? s(n + "1Minute")
+        : s(n + "LessThanAMinute");
     }
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
-    var p = new i();
-    window.LocalizationManager = p;
+    var m = new a();
+    window.LocalizationManager = m;
   },
   qa7T: function(e, t, n) {
     "use strict";

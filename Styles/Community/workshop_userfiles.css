@@ -1496,7 +1496,7 @@ textarea {
 {
 	display: block;
 	position: relative;
-	background-color: rgba( 84, 133, 183, 0.2);
+	background-color: #273b52;
 	margin-bottom: 4px;
 	padding: 10px;
 	cursor: pointer;
@@ -1505,7 +1505,7 @@ textarea {
 
 .workshopItemCollection:hover
 {
-	background-color: rgba( 117, 204, 255, 0.3);
+    background-color: rgba(190, 209, 228, 0.2);
 }
 
 .workshopItemCollection .workshopItem
@@ -1530,8 +1530,9 @@ textarea {
 
 .workshopItemCollection .workshopItemTitle
 {
-	font-size: 14px;
-	font-weight: bold;
+	font-size: 17px;
+    line-height: 19px;
+	font-weight: 400;
 }
 
 .workshopItemCollection .workshopItemDetails
@@ -1551,16 +1552,19 @@ textarea {
 	padding-top: 10px;
 	overflow: hidden;
 	text-overflow: ellipsis;
+    color: #8F98A0;
 }
 
 .workshopItemCollection .workshopItemAuthorLine
 {
 	padding-top: 5px;
+    font-size: 12px;
+    color: #8F98A0;
 }
 
 .workshopItemCollection .workshopItemAuthorName
 {
-	color: #ffffff;
+	color: #8F98A0;
 }
 
 .workshopItemCollectionContainer {
@@ -3058,7 +3062,9 @@ div.hover {
 	color: #ffffff;
 
 	background: #57749e; /* Old browsers */
-	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+	background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);
+	background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);
+}
 
 .sectionTabs
 {

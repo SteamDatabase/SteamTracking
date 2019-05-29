@@ -171,7 +171,9 @@ body.chat_body
 	overflow-y: auto;
 
 	background-color: #171614;
-	background: -webkit-linear-gradient( top, #383635 0%, #171614 21%);background: linear-gradient( to bottom, #383635 0%, #171614 21%);	border: 1px solid #000000;
+	background: -webkit-linear-gradient( top, #383635 0%, #171614 21%);
+	background: linear-gradient( to bottom, #383635 0%, #171614 21%);
+	border: 1px solid #000000;
 	box-shadow: 1px 1px 0px 0px #373b42;
 }
 #chat_friendslist 
@@ -319,7 +321,9 @@ body.chat_body
 	border: 1px solid #4d4d48;
 	border-top: none;
 	background-color: #1c1b19;
-	background: -webkit-linear-gradient( top, #383635 5%, #1c1b19 95%);background: linear-gradient( to bottom, #383635 5%, #1c1b19 95%);}
+	background: -webkit-linear-gradient( top, #383635 5%, #1c1b19 95%);
+	background: linear-gradient( to bottom, #383635 5%, #1c1b19 95%);
+}
 
 .chat_dialog_scroll 
 {

@@ -17,7 +17,9 @@ body.sale_page_background {
 	padding: 15px;
 	position: relative;
 
-	background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););}
+	background: -webkit-linear-gradient( 315deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%);
+	background: linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%);
+}
 
 .sale_page_block {
 	margin-bottom: 28px;
@@ -299,10 +301,14 @@ body.sale_page_background {
 .sale_page_package_contents .tab_item {
 	margin-bottom: 2px;
 	padding-left: 213px;
-	background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%););}
+	background: -webkit-linear-gradient( 315deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%);
+	background: linear-gradient( 135deg, rgba(97,100,101,0.3) 5%,rgba(226,244,255,0.3) 95%);
+}
 
 .sale_page_package_contents .tab_item:hover {
-	background: -webkit-linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););background: linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%););}
+	background: -webkit-linear-gradient( 315deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%);
+	background: linear-gradient( 135deg, rgba(97,100,101,0.5) 5%,rgba(226,244,255,0.5) 95%);
+}
 
 .sale_page_package_contents .tab_item .tab_item_cap {
 	padding-left: 15px;

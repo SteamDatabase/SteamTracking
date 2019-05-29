@@ -1678,7 +1678,9 @@ a#store_search_link img {
 }
 
 .spotlight_scroll_ctn {
-    background: -webkit-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);background: linear-gradient( to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);	margin-bottom: 4px;
+    background: -webkit-linear-gradient( left, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);
+	background: linear-gradient( to right, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0.4) 95%);
+	margin-bottom: 4px;
     height: 395px;
 }
 
@@ -1994,7 +1996,9 @@ a#store_search_link img {
 
 .dailydeal_ctn {
 	padding: 16px;
-	background: -webkit-linear-gradient( top, #ffffff 5%, #abdaf4 95%);background: linear-gradient( to bottom, #ffffff 5%, #abdaf4 95%);	position: relative;
+	background: -webkit-linear-gradient( top, #ffffff 5%, #abdaf4 95%);
+	background: linear-gradient( to bottom, #ffffff 5%, #abdaf4 95%);
+	position: relative;
 
 	margin-bottom: 2px;
 }
@@ -2622,7 +2626,9 @@ body.v6 .page_content_ctn.dark:last-child {
 	display: block;
 	height: 1px;
 	margin-top: 5px;
-	background: -webkit-linear-gradient( left, #3b6e8c 5%,#000000 95%);background: linear-gradient( to right, #3b6e8c 5%,#000000 95%);}
+	background: -webkit-linear-gradient( left, #3b6e8c 5%,#000000 95%);
+	background: linear-gradient( to right, #3b6e8c 5%,#000000 95%);
+}
 
 
 /* common discovery queue styles */
@@ -2822,7 +2828,9 @@ body.v6 .discover_queue_empty>h3 {
 #v6takeover {
 	padding: 0 15px 15px 15px;
 	border-bottom: 1px solid #305d7d;
-	background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, rgba(102,192,244,0.2) 95%);background: linear-gradient( to bottom, rgba(0,0,0,0) 5%, rgba(102,192,244,0.2) 95%);	margin-bottom: 15px;
+	background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, rgba(102,192,244,0.2) 95%);
+	background: linear-gradient( to bottom, rgba(0,0,0,0) 5%, rgba(102,192,244,0.2) 95%);
+	margin-bottom: 15px;
 	position: relative;
 }
 #v6takeover.closed {
@@ -2930,7 +2938,9 @@ body.v6 .discover_queue_empty>h3 {
 {
 	color: #ffffff;
 	background-color: #67c1f5; /* Old browsers */
-	background: -webkit-linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%););}
+	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
+	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+}
 
 .promo_leftcol {
 	margin-right: 5px;
@@ -3340,14 +3350,18 @@ a.cluster_capsule:hover {
 	vertical-align: top; /* Because browsers cannot be trusted to align things. */
 
 	width: 229px; /* Base width. Override with your own selector later. 229 * 4 + 8 * 3 = 940 */
-	background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%););background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%););}
+	background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
+	background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
+}
 
 .store_capsule:not(:last-child) {
 	margin-right: 8px; /* Again, a default. Adjust to fit your container. */
 }
 
 .store_capsule:hover {
-	background: -webkit-linear-gradient( left, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);background: linear-gradient( to right, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);
+	background: -webkit-linear-gradient( left, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);
+	background: linear-gradient( to right, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);
+
 	text-decoration: none;
 }
 
@@ -3430,7 +3444,9 @@ a.cluster_capsule:hover {
 .store_capsule_frame {
 	padding: 11px 16px;
 	margin: 20px -17px;
-	background: -webkit-linear-gradient( top, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);background: linear-gradient( to bottom, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);	border: 1px solid transparent;
+	background: -webkit-linear-gradient( top, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);
+	background: linear-gradient( to bottom, rgba(22,33,46,1.0) 5%, rgba(22,33,46,0) 95%);
+	border: 1px solid transparent;
 	border-bottom: none; /* Fixes a weird artifact where the bottom border is 0,0,0,0.1 or something? */
 	border-image: linear-gradient(to bottom, rgba(46,57,70,1) 5%, rgba(46,57,70,0) 95% ) 1;
 }
@@ -3569,7 +3585,9 @@ a.cluster_capsule:hover {
 }
 
 .ds_options_tooltip {
-	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	padding: 2px 8px;
+	background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
+	background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+	padding: 2px 8px;
 	color: #fff;
 	border-radius: 3px;
 	box-shadow: 0 0 3px #000;
@@ -3793,7 +3811,9 @@ div.store_header_btn {
 .store_nav .tab:hover,
 .store_nav .tab.focus > span,
 .store_nav .tab.focus {
-background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	color: #000;
+background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
+	background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+	color: #000;
 	text-shadow: 1px 1px 0px rgba( 255, 255, 255, 0.25 );
 	height: 33px;
 }
@@ -3894,7 +3914,9 @@ body.v6 .sale_capsule:hover .broadcast_live_stream_icon {
 /* ===== from shared_global.css ====== */
 body.v6 .store_nav .popup_block_new .popup_body,
 body.v6 #footer_nav .popup_block_new .popup_body {
-background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	padding: 8px 5px 8px 5px;
+background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
+	background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+	padding: 8px 5px 8px 5px;
 
 }
 
@@ -4403,15 +4425,23 @@ body.v6 .quadscreenshot_carousel h2 {
 
 .carousel_container .arrow.left {
 	left: -46px;
-background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);}
+background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+	background: linear-gradient( to right, rgba( 0, 0, 0, 0.3) 5%,rgba( 0, 0, 0, 0) 95%);
+}
 .carousel_container .arrow.left:hover {
-background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);background: linear-gradient( to right, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);}
+background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
+	background: linear-gradient( to right, rgba( 171, 218, 244, 0.3) 5%,rgba( 171, 218, 244, 0) 95%);
+}
 
 .carousel_container .arrow.right {
 	right: -46px;
-background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);background: linear-gradient( to right, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);}
+background: -webkit-linear-gradient( left, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
+	background: linear-gradient( to right, rgba( 0, 0, 0, 0) 5%,rgba( 0, 0, 0, 0.3) 95%);
+}
 .carousel_container .arrow.right:hover {
-background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);background: linear-gradient( to right, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);}
+background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);
+	background: linear-gradient( to right, rgba( 171, 218, 244, 0) 5%,rgba( 171, 218, 244, 0.3) 95%);
+}
 
 .carousel_container .arrow.left > div {
 	background-position-x: 23px;
@@ -4438,7 +4468,9 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 }
 
 .curator_page {
-background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 255, 255, 255, 0.1) 95%););background: linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 255, 255, 255, 0.1) 95%););	box-shadow: inset 0 0 160px rgba(255, 255, 255, 0.2);
+background: -webkit-linear-gradient( 297deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 255, 255, 255, 0.1) 95%);
+	background: linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 255, 255, 255, 0.1) 95%);
+	box-shadow: inset 0 0 160px rgba(255, 255, 255, 0.2);
 	padding: 16px 13px;
 	display: flex;
 	flex-direction: column;
@@ -4496,7 +4528,9 @@ background: -webkit-linear-gradient( 153deg, rgba( 255, 255, 255, 0.2) 5%,rgba( 
 	line-height: 16px;
 }
 .curator_recommendation_capsule .carousel_container.paging_capsules .curator_page .profile {
-	background: -webkit-linear-gradient( 0deg, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0) 20%););background: linear-gradient( 0deg, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0) 20%););	margin-left: -13px;
+	background: -webkit-linear-gradient( 90deg, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0) 20%);
+	background: linear-gradient( 0deg, rgba(0,0,0,0.2) 5%,rgba(0,0,0,0) 20%);
+	margin-left: -13px;
 	padding-left: 13px;
 	margin-right: -13px;
 	padding-right: 13px;

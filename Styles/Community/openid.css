@@ -248,7 +248,9 @@ body.openid_blacklisted_domain div#blacklist_takeover {
 	padding: 10vh 15%;
 	margin: 60px auto 8px auto;
 	width: 60%;
-	background: -webkit-linear-gradient( top, #820200 5%, #602020 95%);background: linear-gradient( to bottom, #820200 5%, #602020 95%);	box-shadow: 1px 1px 0px rgba(65,30,30,1), 0px 0px 15px rgba(0,0,0,0.4);
+	background: -webkit-linear-gradient( top, #820200 5%, #602020 95%);
+	background: linear-gradient( to bottom, #820200 5%, #602020 95%);
+	box-shadow: 1px 1px 0px rgba(65,30,30,1), 0px 0px 15px rgba(0,0,0,0.4);
 }
 
 .blacklist_takeover_title {

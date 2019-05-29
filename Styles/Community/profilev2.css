@@ -329,21 +329,29 @@ body.profile_page.flat_page #footer_spacer {
 	border: 1px solid #212121;
 
 	background: #373f4f; /* Old browsers */
-	background: -webkit-linear-gradient( top, #7a8494 5%, #282f3d 95%);background: linear-gradient( to bottom, #7a8494 5%, #282f3d 95%);}
+	background: -webkit-linear-gradient( top, #7a8494 5%, #282f3d 95%);
+	background: linear-gradient( to bottom, #7a8494 5%, #282f3d 95%);
+}
 .btn_profile_action > span {
 
 	border-radius: 2px;
 	display: block;
 	background: #2e394c; /* Old browsers */
-	background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);background: linear-gradient( to bottom, #33425a 5%, #282f3d 95%);}
+	background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);
+	background: linear-gradient( to bottom, #33425a 5%, #282f3d 95%);
+}
 .btn_profile_action:hover, .btn_profile_action.focus {
 	text-decoration: none;
 
 	background: #688bb1 ; /* Old browsers */
-background: -webkit-linear-gradient( top, #9ba9bf 5%, #282f3d 95%);background: linear-gradient( to bottom, #9ba9bf 5%, #282f3d 95%);}
+background: -webkit-linear-gradient( top, #9ba9bf 5%, #282f3d 95%);
+	background: linear-gradient( to bottom, #9ba9bf 5%, #282f3d 95%);
+}
 .btn_profile_action:hover > span, .btn_profile_action.focus > span {
 	background: #526d95; /* Old browsers */
-background: -webkit-linear-gradient( top, #3c597b 5%, #282f3d 95%);background: linear-gradient( to bottom, #3c597b 5%, #282f3d 95%);}
+background: -webkit-linear-gradient( top, #3c597b 5%, #282f3d 95%);
+	background: linear-gradient( to bottom, #3c597b 5%, #282f3d 95%);
+}
 .btn_profile_action_disabled {
 	opacity: 0.5;
 	cursor: default;
@@ -1180,7 +1188,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	background-image: none;
 	background-color: #000000;
 
-	background: -webkit-linear-gradient( left, #000000 5%,#282828 95%);background: linear-gradient( to right, #000000 5%,#282828 95%);}
+	background: -webkit-linear-gradient( left, #000000 5%,#282828 95%);
+	background: linear-gradient( to right, #000000 5%,#282828 95%);
+}
 
 .myguide_showcase_item_ctn {
 	width: 48%;
@@ -1262,7 +1272,6 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .screenshot_showcase_primary {
 	width: 508px;
-    min-height: 358px;
 	max-width: 83%;
 	float: left;
 }
@@ -1371,7 +1380,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	border-radius: 3px;
 
 	background-color: #88c743;
-	background: -webkit-linear-gradient( top, #b0f951 5%, #88c743 95%);background: linear-gradient( to bottom, #b0f951 5%, #88c743 95%);
+	background: -webkit-linear-gradient( top, #b0f951 5%, #88c743 95%);
+	background: linear-gradient( to bottom, #b0f951 5%, #88c743 95%);
+
 }
 
 .recent_game_now_playing .content {
@@ -1467,7 +1478,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 	background-color: #364359;
 	height: 8px;
 	border-radius: 4px;
-	background: -webkit-linear-gradient( top, #516179 5%, #2a3547 95%);background: linear-gradient( to bottom, #516179 5%, #2a3547 95%);}
+	background: -webkit-linear-gradient( top, #516179 5%, #2a3547 95%);
+	background: linear-gradient( to bottom, #516179 5%, #2a3547 95%);
+}
 
 .achievement_icons {
 	white-space: nowrap;
@@ -2509,7 +2522,9 @@ body.profile_page #footer {
 	border: none;
 
 	background: #57749e; /* Old browsers */
-background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);}
+background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);
+	background: linear-gradient( to bottom, #66C0F4 5%, #417B9C 95%);
+}
 
 .sectionTab.active > span
 {
@@ -2523,7 +2538,9 @@ background: -webkit-linear-gradient( top, #66C0F4 5%, #417B9C 95%);background: l
 
 	display: block;
 	background: #417B9C; /* Old browsers */
-background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);}
+background: -webkit-linear-gradient( top, #5AA9D6 5%, #417B9C 95%);
+	background: linear-gradient( to bottom, #5AA9D6 5%, #417B9C 95%);
+}
 
 
 .profile_paging {

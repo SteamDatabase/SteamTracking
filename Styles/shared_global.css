@@ -21,14 +21,18 @@
 .avatar_block_status_offline,
 .appHubIconHolder.ignored {
 
-	background: -webkit-linear-gradient( top, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);background: linear-gradient( to bottom, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	background: -webkit-linear-gradient( top, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);
+	background: linear-gradient( to bottom, rgba(106,106,106,1) 5%, rgba(85,85,85,1) 95%);
+	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
 	filter: none;
 }
 .playerAvatar.offline img,
 .friend_status_offline .friend_block_avatar img,
 .appHubIconHolder.offline img,
 .avatar_block_status_offline img {
-	background: -webkit-linear-gradient( top, #515151 5%, #474747 95%);background: linear-gradient( to bottom, #515151 5%, #474747 95%);}
+	background: -webkit-linear-gradient( top, #515151 5%, #474747 95%);
+	background: linear-gradient( to bottom, #515151 5%, #474747 95%);
+}
 
 /* Online State */
 .playerAvatar.online,
@@ -38,14 +42,18 @@
 .avatar_block_status_online {
 	background-color: #57cbde;
 
-	background: -webkit-linear-gradient( top, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);background: linear-gradient( to bottom, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	background: -webkit-linear-gradient( top, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);
+	background: linear-gradient( to bottom, rgba(83,164,196,1) 5%, rgba(69,128,151,1) 95%);
+	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
 	filter: none;
 }
 .playerAvatar.online img,
 .friend_status_online .friend_block_avatar img,
 .appHubIconHolder.online img,
 .avatar_block_status_online img {
-	background: -webkit-linear-gradient( top, #41778f 5%, #3d697b 95%);background: linear-gradient( to bottom, #41778f 5%, #3d697b 95%);}
+	background: -webkit-linear-gradient( top, #41778f 5%, #3d697b 95%);
+	background: linear-gradient( to bottom, #41778f 5%, #3d697b 95%);
+}
 
 /* In-Game State */
 .playerAvatar.in-game,
@@ -55,14 +63,18 @@
 .avatar_block_status_in-game {
 	background-color: #90ba3c;
 
-	background: -webkit-linear-gradient( top, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);background: linear-gradient( to bottom, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
+	background: -webkit-linear-gradient( top, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);
+	background: linear-gradient( to bottom, rgba(143,185,59,1) 5%, rgba(110,140,49,1) 95%);
+	/* IE <= 9 doesn't support rounded corners and gradient.  The gradient isn't too noticable so just disable the filter in IE9 */
 	filter: none;
 }
 .playerAvatar.in-game img,
 .friend_status_in-game .friend_block_avatar img,
 .appHubIconHolder.in-game img,
 .avatar_block_status_in-game img {
-	background: -webkit-linear-gradient( top, #66812e 5%, #59702b 95%);background: linear-gradient( to bottom, #66812e 5%, #59702b 95%);}
+	background: -webkit-linear-gradient( top, #66812e 5%, #59702b 95%);
+	background: linear-gradient( to bottom, #66812e 5%, #59702b 95%);
+}
 
 
 /* Golden State */
@@ -73,7 +85,9 @@
 .avatar_block_status_golden {
 	background-color: #e4ca63;
 
-	background: -webkit-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);}
+	background: -webkit-linear-gradient( 305deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);
+	background: linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);
+}
 
 /*
 .playerAvatar.golden img,
@@ -81,7 +95,9 @@
 .appHubIconHolder.golden img,
 .avatar_block_status_golden img {
 	background-color: #e4ca63
-	background: -webkit-linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);background: linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);}
+	background: -webkit-linear-gradient( 305deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);
+	background: linear-gradient( 145deg, #d5bf6a 10%,#ffe2a9 40%,#ba995c 52%,#ba995c 61%,#d5bf6a 85%);
+}
 */
 
 .playerAvatar.ignored {
@@ -181,7 +197,9 @@
 .miniprofile_top {
 	border: 1px solid #333538;
 	padding: 7px 8px;
-background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);background: linear-gradient( to bottom, #33425a 5%, #282f3d 95%);;
+background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);
+	background: linear-gradient( to bottom, #33425a 5%, #282f3d 95%);
+;
 }
 
 .miniprofile_player {
@@ -248,7 +266,9 @@ background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);background: l
 	min-height: 45px;
 	position: relative;
 
-background: -webkit-linear-gradient( top, #525151 5%, #292827 95%);background: linear-gradient( to bottom, #525151 5%, #292827 95%);}
+background: -webkit-linear-gradient( top, #525151 5%, #292827 95%);
+	background: linear-gradient( to bottom, #525151 5%, #292827 95%);
+}
 
 .miniprofile_ingame .game_logo {
 	position: absolute;
@@ -1461,7 +1481,9 @@ a.pagelink:hover {
 .dynamiclink_box {
 	position: relative;
 	font-family: Helvetica, Arial, sans-serif;
-background: -webkit-linear-gradient( 60deg, rgba(87, 92, 104, 0.3) 5%,rgba(255,255,255,0.05) 95%););background: linear-gradient( 60deg, rgba(87, 92, 104, 0.3) 5%,rgba(255,255,255,0.05) 95%););	border-radius: 6px;
+background: -webkit-linear-gradient( 30deg, rgba(87, 92, 104, 0.3) 5%,rgba(255,255,255,0.05) 95%);
+	background: linear-gradient( 60deg, rgba(87, 92, 104, 0.3) 5%,rgba(255,255,255,0.05) 95%);
+	border-radius: 6px;
 	padding: 8px;
 	margin: 10px 0px 10px 0px;
 
@@ -1750,7 +1772,9 @@ a.ugc.has_adult_content .ugc_warning .ugc_warning_image
 }
 
 .ugc_options_tooltip {
-background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);	padding: 2px 8px;
+background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
+	background: linear-gradient( to bottom, #e3eaef 5%, #c7d5e0 95%);
+	padding: 2px 8px;
 	color: #fff;
 	border-radius: 3px;
 	box-shadow: 0 0 3px #000;

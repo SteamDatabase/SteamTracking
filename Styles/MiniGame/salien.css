@@ -267,7 +267,9 @@ body.flat_page {
 .salien_section {
 	max-width: 940px;
 	width: 100%;
-	background: -webkit-linear-gradient( top, rgba(0,0,0,0.9) 5%, rgba(0,0,0,0.5) 95%);background: linear-gradient( to bottom, rgba(0,0,0,0.9) 5%, rgba(0,0,0,0.5) 95%);	color: #dddddd;
+	background: -webkit-linear-gradient( top, rgba(0,0,0,0.9) 5%, rgba(0,0,0,0.5) 95%);
+	background: linear-gradient( to bottom, rgba(0,0,0,0.9) 5%, rgba(0,0,0,0.5) 95%);
+	color: #dddddd;
 	margin: 0 auto 30px auto;
 }
 .salien_section.wide {
