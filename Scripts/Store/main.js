@@ -2380,7 +2380,7 @@ function FollowCuratorWithCallback( clanID, bFollow, onComplete )
 		'json'
 	).fail( function()
 		{
-			ShowAlertDialog( 'Error', 'There was a problem trying to follow the Steam Curator.<br>Note: You cannot follow a curator you already ignore.' );
+			ShowAlertDialog( 'Error', 'There was a problem trying to follow the Steam Curator. Possible issues:<ul><li>You cannot follow a curator you already ignore.</li><li>You can only follow upto 100 curators at a time</li><li>Limited accounts cannot follow a curator</li></ul>' );
 		}
 	);
 	return false;
