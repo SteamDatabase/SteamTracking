@@ -4,6 +4,7 @@ Steam = {
 	sm_bUserInClient: false,
 	sm_bUserInGameOverlay: false,
 	sm_bUserInTenfootBrowser: false,
+	sm_bUserInMobileChat: false,
 
 	BIsUserInSteamClient: function()
 	{
@@ -37,6 +38,14 @@ Steam = {
 		return Steam.sm_bUserInClient || Steam.sm_bUserInGameOverlay;
 	},
 
+	BIsUserInSteamMobileChat: function()
+	{
+		if ( !Steam.sm_bInitialized )
+			Steam.Init();
+
+		return Steam.sm_bUserInMobileChat;
+	},
+
 	GetClientPackageVersion: function()
 	{
 		if ( !Steam.BIsUserInClientOrOverlay() )
@@ -68,6 +77,7 @@ Steam = {
 		Steam.sm_bUserInTenfootBrowser = fnCheckAgent( 'Valve Steam Tenfoot', 'force_tenfoot_client_view' );
 		Steam.sm_bUserInGameOverlay = fnCheckAgent( 'Valve Steam GameOverlay', 'force_overlay_view' );
 		Steam.sm_bUserInClient = Steam.sm_bUserInTenfootBrowser || fnCheckAgent( 'Valve Steam Client', 'force_client_view' );
+		Steam.sm_bUserInMobileChat = fnCheckAgent( 'Valve Steam Mobile Chat', 'force_mobile_chat_view' );
 
 		Steam.sm_bInitialized = true;
 	},
@@ -86,6 +96,10 @@ function OpenFriendChat( steamid, accountid )
 	if ( Steam.BIsUserInClientOrOverlay() )
 	{
 		window.location = 'steam://friends/message/' + steamid;
+	}
+	else if ( Steam.BIsUserInSteamMobileChat() )
+	{
+		window.location = 'steamchatmobile://friend/' + steamid;
 	}
 	else if ( typeof ClientConnectionAPI !== 'undefined' )
 	{
@@ -111,7 +125,11 @@ function OpenFriendChatInWebChat( steamid, accountid )
 
 function OpenGroupChat( steamid )
 {
-	if ( !Steam.BIsUserInClientOrOverlay() && typeof ClientConnectionAPI !== 'undefined' )
+	if ( Steam.BIsUserInSteamMobileChat() )
+	{
+		window.location = 'steamchatmobile://group/' + steamid;
+	}
+	else if ( !Steam.BIsUserInClientOrOverlay() && typeof ClientConnectionAPI !== 'undefined' )
 	{
 		ClientConnectionAPI.OpenFriendChatDialog( steamid ).then( function( result ) {
 			if ( !result.success )
