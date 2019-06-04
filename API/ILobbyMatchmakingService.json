@@ -1,0 +1,78 @@
+{
+    "name": "ILobbyMatchmakingService",
+    "methods": [
+        {
+            "name": "CreateLobby",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "CreateLobby",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "max_members",
+                    "type": "int32",
+                    "optional": false
+                },
+                {
+                    "name": "lobby_type",
+                    "type": "int32",
+                    "optional": false
+                },
+                {
+                    "name": "lobby_name",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "steamid_invited_members",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "lobby_metadata",
+                    "type": "{message}",
+                    "optional": false
+                }
+            ]
+        },
+        {
+            "name": "RemoveUserFromLobby",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "RemoveUserFromLobby",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "steamid_lobby",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "steamid_to_remove",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}
