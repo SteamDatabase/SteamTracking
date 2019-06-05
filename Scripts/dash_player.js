@@ -3755,6 +3755,7 @@ CDASHPlayerUI.BACK = 81;
 CDASHPlayerUI.START = 32;
 CDASHPlayerUI.RIGHT_BUMPER = 75;
 CDASHPlayerUI.RIGHT_GRIP = 76;
+CDASHPlayerUI.ENTER = 13;
 
 // UI data-index elements
 CDASHPlayerUI.NO_ELEMENT_INDEX = 0;
@@ -5316,6 +5317,7 @@ CDASHPlayerUI.prototype.OnKeyDownTenFoot = function( e )
 			break;
 
 		case CDASHPlayerUI.BUTTON_A:
+		case CDASHPlayerUI.ENTER:
 			this.OnPressButtonA();
 			break;
 		case CDASHPlayerUI.BUTTON_B:

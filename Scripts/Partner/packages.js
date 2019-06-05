@@ -614,7 +614,8 @@ function CreateDiscount( target, id, discount, packageid )
 									"#discount_desc_preset_flash_8",
 									"#discount_desc_preset_flash_10",
 									"#discount_desc_preset_flash_12",
-									"#discount_desc_preset_weeklong"];
+									"#discount_desc_preset_weeklong",
+                                    "#discount_desc_preset_prepurchase"];
 	
 	var descriptionPresetText = [ "SPECIAL PROMOTION! Offer ends in #",
 	                              "WEEKEND DEAL! Offer ends in #",
@@ -631,7 +632,8 @@ function CreateDiscount( target, id, discount, packageid )
 								  "FLASH SALE 8H! Offer ends in #",
 								  "FLASH SALE 10H! Offer ends in #",
 								  "FLASH SALE 12H! Offer ends in #",
-								  "WEEK LONG DEAL! Offer ends in #"];
+								  "WEEK LONG DEAL! Offer ends in #",
+                                    "SPECIAL PRE-PURCHASE OFFER! Ends in #"];
 	
 	var selectDescPreset = $( id + '_desc_preset' );
 	var inputDescCustom = $( id + '_desc_custom' );

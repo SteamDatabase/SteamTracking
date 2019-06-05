@@ -8166,7 +8166,7 @@
                             n = c.a.InitHeaderFromPacket(t);
                           1 == n.GetEMsg()
                             ? s.DecodeAndDispatchMultiMsg(
-                                c.b.InitFromMsg(u.d, n)
+                                c.b.InitFromMsg(u.e, n)
                               )
                             : s.DispatchMessage(n);
                         }),
@@ -8751,7 +8751,7 @@
                 (this.m_header = o.m_header),
                 this.InitForType(n));
           else {
-            if (((this.m_header = new s.e(null)), (this.m_bValid = !0), t))
+            if (((this.m_header = new s.f(null)), (this.m_bValid = !0), t))
               if (
                 ((this.m_netPacket = t),
                 this.m_netPacket.SeekGetHead(),
@@ -8761,7 +8761,7 @@
                 (this.m_eMsg = 2147483647 & this.m_eMsg),
                   (this.m_cubHeader = this.m_netPacket.GetUint32());
                 try {
-                  s.e.deserializeBinaryFromReader(
+                  s.f.deserializeBinaryFromReader(
                     this.m_header,
                     new a.BinaryReader(
                       this.m_netPacket.GetPacket(),
@@ -14504,6 +14504,7 @@
         (e.prototype.OnVideoWaiting = function(e) {
           if (
             !this.IsLiveContent() &&
+            this.m_mpd &&
             this.m_mpd.GetEndTime() - this.GetCurrentPlayTime() < 1
           )
             this.Pause();
@@ -14671,6 +14672,7 @@
         (e.prototype.Play = function() {
           (this.m_bUserPlayChoice = !0),
             !this.IsLiveContent() &&
+            this.m_mpd &&
             this.m_mpd.GetEndTime() - this.GetCurrentPlayTime() < 1
               ? this.Seek(this.m_mpd.GetStartTime())
               : this.Seek(this.m_elVideo.currentTime);
@@ -16470,15 +16472,15 @@
           (e.prototype.Play = function() {
             console.log("Play ", this.m_steamIDBroadcast);
             var e = this.GetBroadcastState();
-            e != J.None
-              ? e == J.Ready &&
+            e == J.None || this.IsBroadcastClip()
+              ? ie.StartVideo(this)
+              : e == J.Ready &&
                 (ie.SetActiveVideo(this),
                 this.m_player
                   ? this.m_player.Play()
                   : this.StartBroadcast(
                       ie.GetBroadcast(this.m_steamIDBroadcast)
-                    ))
-              : ie.StartVideo(this);
+                    ));
           }),
           (e.prototype.Pause = function() {
             console.log("Pause ", this.m_steamIDBroadcast),
@@ -17521,16 +17523,238 @@
         (e = i.c([r.a], e))
       );
     })(E.Component);
-    E.Component;
-    var c = n("y4mg"),
+    var c = (function(n) {
+        function e(e) {
+          var t = n.call(this, e) || this;
+          return (
+            (t.state = {
+              bKeyboardEnabled: !1,
+              bMouseEnabled: !1,
+              bControllerEnabled: !0
+            }),
+            t
+          );
+        }
+        return (
+          i.d(e, n),
+          (e.prototype.TogglePlayerKeyboard = function(e) {
+            this.setState({ bKeyboardEnabled: !this.state.bKeyboardEnabled });
+          }),
+          (e.prototype.TogglePlayerMouse = function(e) {
+            this.setState({ bMouseEnabled: !this.state.bMouseEnabled });
+          }),
+          (e.prototype.TogglePlayerController = function(e) {
+            this.setState({
+              bControllerEnabled: !this.state.bControllerEnabled
+            });
+          }),
+          (e.prototype.EditPlayerSettings = function(e) {
+            this.props.closeModal && this.props.closeModal();
+          }),
+          (e.prototype.InviteFriend = function(e) {
+            this.props.closeModal && this.props.closeModal();
+          }),
+          (e.prototype.KickFriend = function(e) {
+            this.props.closeModal && this.props.closeModal();
+          }),
+          (e.prototype.HandleSubmit = function(e) {
+            this.props.closeModal && this.props.closeModal();
+          }),
+          (e.prototype.componentWillReceiveProps = function(e) {
+            e.player, this.props.player;
+          }),
+          (e.prototype.render = function() {
+            var e = "friend editNickname",
+              t = this.props.player.has_nickname;
+            this.props.player.persona.is_ingame
+              ? (e += " ingame")
+              : this.props.player.persona.is_online && (e += " online"),
+              t && (e += " nickNamed");
+            var n = "remotePlayIcon remotePlayIcon_Keyboard",
+              o = "remotePlayIcon remotePlayIcon_Mouse",
+              i = "remotePlayIcon remotePlayIcon_Controller";
+            return (
+              this.state.bKeyboardEnabled && (n += " accessGranted"),
+              this.state.bMouseEnabled && (o += " accessGranted"),
+              this.state.bControllerEnabled && (i += " accessGranted"),
+              E.createElement(
+                O.a,
+                {
+                  className: "Dialog_RemotePlay",
+                  onEscKeypress: this.props.closeModal
+                },
+                E.createElement(
+                  s.h,
+                  {
+                    classNameContent: "RemotePlayDialog",
+                    onSubmit: this.HandleSubmit
+                  },
+                  E.createElement(
+                    s.m,
+                    null,
+                    Object(M.b)("#Friend_Menu_RemotePlay")
+                  ),
+                  E.createElement(
+                    s.b,
+                    null,
+                    E.createElement(s.c, null, Object(M.b)("#RemotePlay_Host")),
+                    E.createElement(
+                      "div",
+                      { className: "remotePlaySeparator" },
+                      Object(M.b)("#RemotePlay_Players")
+                    ),
+                    E.createElement(
+                      s.c,
+                      null,
+                      E.createElement(
+                        "div",
+                        { className: e },
+                        E.createElement("img", {
+                          className: "avatarMedium",
+                          src: this.props.player.persona.avatar_url_full
+                        }),
+                        E.createElement(
+                          "div",
+                          { className: "labelHolder" },
+                          E.createElement(
+                            "div",
+                            { className: "mediumName" },
+                            this.props.player.secondary_display_name
+                          ),
+                          E.createElement(
+                            "div",
+                            { className: "nickNamedAs" },
+                            Object(M.b)("#PersonaStateOnline"),
+                            Object(M.b)("#PersonaStateOnline")
+                          )
+                        ),
+                        E.createElement(
+                          s.d,
+                          {
+                            onClick: this.KickFriend,
+                            title: Object(M.b)("#Tooltip_RemotePlayKick")
+                          },
+                          E.createElement("img", {
+                            className: "remotePlayIcon remotePlayIcon_Exit"
+                          })
+                        )
+                      ),
+                      E.createElement(
+                        "div",
+                        { className: "remotePlayPlayerOptionsContainer" },
+                        E.createElement(
+                          "div",
+                          { className: "labelHolder" },
+                          Object(M.b)("#RemotePlay_SharedInput"),
+                          E.createElement(
+                            "div",
+                            { className: "remotePlayToggleButtonContainer" },
+                            E.createElement(
+                              s.d,
+                              {
+                                onClick: this.TogglePlayerKeyboard,
+                                title: Object(M.b)(
+                                  "#Tooltip_RemotePlayToggleKeyboard"
+                                )
+                              },
+                              E.createElement("img", { className: n })
+                            ),
+                            E.createElement(
+                              s.d,
+                              {
+                                onClick: this.TogglePlayerMouse,
+                                title: Object(M.b)(
+                                  "#Tooltip_RemotePlayToggleMouse"
+                                )
+                              },
+                              E.createElement("img", { className: o })
+                            ),
+                            E.createElement(
+                              s.d,
+                              {
+                                onClick: this.TogglePlayerController,
+                                title: Object(M.b)(
+                                  "#Tooltip_RemotePlayToggleController"
+                                )
+                              },
+                              E.createElement("img", { className: i })
+                            ),
+                            E.createElement(
+                              s.d,
+                              {
+                                onClick: this.EditPlayerSettings,
+                                title: Object(M.b)(
+                                  "#Tooltip_RemotePlayEditSettings"
+                                )
+                              },
+                              E.createElement("img", {
+                                className:
+                                  "remotePlayIcon remotePlayIcon_Settings"
+                              })
+                            )
+                          )
+                        ),
+                        E.createElement(
+                          "div",
+                          { className: "labelHolder" },
+                          Object(M.b)("#VoiceVolume"),
+                          E.createElement(s.B, {
+                            min: 0,
+                            max: 100,
+                            value: 100
+                          }),
+                          Object(M.b)("#RemotePlay_DisableIncomingAudio"),
+                          E.createElement(s.e, null)
+                        )
+                      )
+                    ),
+                    E.createElement(s.c, null),
+                    E.createElement(s.c, null),
+                    E.createElement(s.c, null),
+                    E.createElement(s.c, null),
+                    E.createElement(
+                      "div",
+                      { className: "remotePlaySeparator" },
+                      E.createElement(
+                        s.d,
+                        {
+                          className: "remotePlayAddFriendButton",
+                          onClick: this.InviteFriend,
+                          title: Object(M.b)("#Tooltip_RemotePlayInvite")
+                        },
+                        E.createElement(
+                          "div",
+                          { className: "remotePlayAddFriendText" },
+                          Object(M.b)("#Menu_AddAFriend_Capital"),
+                          Object(M.b)(" +")
+                        )
+                      )
+                    )
+                  ),
+                  E.createElement(s.j, null)
+                )
+              )
+            );
+          }),
+          i.c([a.a], e.prototype, "TogglePlayerKeyboard", null),
+          i.c([a.a], e.prototype, "TogglePlayerMouse", null),
+          i.c([a.a], e.prototype, "TogglePlayerController", null),
+          i.c([a.a], e.prototype, "EditPlayerSettings", null),
+          i.c([a.a], e.prototype, "InviteFriend", null),
+          i.c([a.a], e.prototype, "KickFriend", null),
+          i.c([a.a], e.prototype, "HandleSubmit", null),
+          (e = i.c([r.a], e))
+        );
+      })(E.Component),
+      l = n("y4mg"),
       u = n("s+DT"),
-      l = n("/IDK"),
-      p = n("bbBM"),
-      m = n("2vnA");
+      p = n("/IDK"),
+      m = n("bbBM"),
+      d = n("2vnA");
     function D(e, t, n) {
       var o = n ? [n.accountid] : [];
       Object(O.b)(
-        E.createElement(d, { browserContext: e, rgPreSelectedFriends: o }),
+        E.createElement(h, { browserContext: e, rgPreSelectedFriends: o }),
         t,
         "CreateFriendCategoryDialog",
         {
@@ -17541,7 +17765,7 @@
         Object(I.e)(t)
       );
     }
-    var d = (function(n) {
+    var h = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -17653,7 +17877,7 @@
                     onChange: this.HandleTextEntry,
                     autoFocus: !0
                   }),
-                  E.createElement(c.a, {
+                  E.createElement(l.a, {
                     ref: this.OnFriendPickerRef,
                     label: Object(M.b)("#FriendGroup_CategoryMembers"),
                     eSort: 1,
@@ -17678,7 +17902,7 @@
         function e(e) {
           var t = n.call(this, e) || this;
           return (
-            (t.m_mapCategoryChecks = m.x.map()),
+            (t.m_mapCategoryChecks = d.x.map()),
             (t.state = { strError: null }),
             t
           );
@@ -17720,7 +17944,7 @@
               });
           }),
           (e.prototype.CreateNew = function(e) {
-            D(Object(I.c)(this, e), Object(l.n)(e), this.props.friend);
+            D(Object(I.c)(this, e), Object(p.n)(e), this.props.friend);
           }),
           (e.prototype.render = function() {
             return E.createElement(
@@ -17752,7 +17976,7 @@
                     E.createElement(
                       s.f,
                       null,
-                      E.createElement(p.c, {
+                      E.createElement(m.c, {
                         friend: this.props.friend,
                         className: "AssignCategoriesDialog_Friend",
                         noActions: !0,
@@ -17760,7 +17984,7 @@
                       })
                     )
                   ),
-                  E.createElement(h, {
+                  E.createElement(f, {
                     friend: this.props.friend,
                     mapChecks: this.m_mapCategoryChecks
                   }),
@@ -17787,7 +18011,7 @@
           e
         );
       })(E.Component),
-      h = (function(e) {
+      f = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -17796,7 +18020,7 @@
           (t.prototype.render = function() {
             var t = this,
               e = C.f.FriendStore.FriendGroupStore.user_groups.map(function(e) {
-                return E.createElement(f, {
+                return E.createElement(_, {
                   friend: t.props.friend,
                   group: e,
                   key: e.unique_id,
@@ -17821,7 +18045,7 @@
           (t = i.c([r.a], t))
         );
       })(E.Component),
-      f = (function(e) {
+      _ = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -17833,7 +18057,7 @@
               : this.props.mapChecks.delete(this.props.group.unique_id);
           }),
           (t.prototype.OnContextMenu = function(e) {
-            te(Object(I.c)(this, e), this.props.group, e);
+            ne(Object(I.c)(this, e), this.props.group, e);
           }),
           (t.prototype.render = function() {
             var e,
@@ -17859,19 +18083,19 @@
           (t = i.c([r.a], t))
         );
       })(E.Component),
-      _ = n("8o0Y"),
+      g = n("8o0Y"),
       G = n("EGkk"),
       R = n("geE1"),
       k = n("rsEv"),
       L = n("tkkQ"),
-      g = n("uWOQ"),
-      b = n("+mma"),
+      b = n("uWOQ"),
+      v = n("+mma"),
       N = n("e2SU"),
-      v = n("VZeO"),
-      S = n("fGPn"),
-      y = n("vDqi"),
-      P = n.n(y);
-    var B = (function(o) {
+      S = n("VZeO"),
+      y = n("fGPn"),
+      P = n("vDqi"),
+      B = n.n(P);
+    var A = (function(o) {
         function e(e) {
           var t = o.call(this, e) || this,
             n = C.f.FriendStore.self;
@@ -17919,7 +18143,7 @@
                   "profiles/" +
                   n.steamid64 +
                   "/ajaxsetpersonaname/";
-              P.a
+              B.a
                 .post(i, t)
                 .then(function(e) {
                   var t = e.data;
@@ -18027,12 +18251,12 @@
           (e = i.c([r.a], e))
         );
       })(E.Component),
-      A = n("dpJ7"),
-      F = n("hEDq"),
-      x = n("+M9t"),
-      V = n("lqmi"),
-      U = n("uw3m");
-    var j = (function(n) {
+      F = n("dpJ7"),
+      x = n("hEDq"),
+      V = n("+M9t"),
+      U = n("lqmi"),
+      j = n("uw3m");
+    var H = (function(n) {
       function e(e) {
         var t = n.call(this, e) || this;
         return (
@@ -18059,7 +18283,7 @@
           }
           return (
             o
-              ? (((t = F.c()).bNotifications_ShowIngame = this.ConvertENotificationSettingToBoolean(
+              ? (((t = x.c()).bNotifications_ShowIngame = this.ConvertENotificationSettingToBoolean(
                   e.Notifications_ShowInGame
                 )),
                 (t.bNotifications_ShowMessage = this.ConvertENotificationSettingToBoolean(
@@ -18085,7 +18309,7 @@
           return e ? 1 : 2;
         }),
         (e.prototype.FriendSettingsToNotificationSettings = function(e) {
-          var t = new x.c();
+          var t = new V.c();
           return (
             (t.Notifications_SendMobile = this.props.player.notification_settings.Notifications_SendMobile),
             this.state.bUseDefaults ||
@@ -18184,7 +18408,7 @@
             n = this.state.bUseDefaults,
             o = "friend editFriendNotifications";
           return (
-            (o += Object(V.d)(this.props.player.persona)),
+            (o += Object(U.d)(this.props.player.persona)),
             E.createElement(
               O.a,
               {
@@ -18219,7 +18443,7 @@
                     E.createElement(
                       "div",
                       { className: o },
-                      E.createElement(U.b, {
+                      E.createElement(j.b, {
                         persona: this.props.player.persona,
                         size: "Large"
                       }),
@@ -18325,9 +18549,9 @@
         (e = i.c([r.a], e))
       );
     })(E.Component);
-    function H(e, t, n, o) {
-      return Object(_.a)(
-        E.createElement(K, {
+    function W(e, t, n, o) {
+      return Object(g.a)(
+        E.createElement(Y, {
           browserContext: e,
           context: t,
           friend: n,
@@ -18336,8 +18560,8 @@
         o
       );
     }
-    function W(e, t, n, o) {
-      return E.createElement(K, {
+    function z(e, t, n, o) {
+      return E.createElement(Y, {
         browserContext: e,
         context: t,
         friend: n,
@@ -18345,21 +18569,21 @@
       });
     }
     n.d(t, "b", function() {
-      return H;
+      return W;
     }),
       n.d(t, "e", function() {
-        return W;
+        return z;
       }),
       n.d(t, "d", function() {
-        return $;
+        return ee;
       }),
       n.d(t, "c", function() {
-        return te;
+        return ne;
       }),
       n.d(t, "a", function() {
-        return oe;
+        return ie;
       });
-    var z = Object(r.a)(function(e) {
+    var q = Object(r.a)(function(e) {
         var t = e.friend,
           n = [],
           o = t.persona_name_history,
@@ -18402,7 +18626,7 @@
           )
         );
       }),
-      q = (function(e) {
+      K = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -18447,7 +18671,7 @@
                     t.role_id == r
                       ? (n = Object(M.b)("#ChatRoomRole_Member"))
                       : n.startsWith("#ChatRoomRole_") && (n = Object(M.b)(n)),
-                    E.createElement(J, {
+                    E.createElement(X, {
                       key: t.role_id,
                       friend: i.props.friend,
                       group: i.props.group,
@@ -18488,7 +18712,7 @@
           (t = i.c([r.a], t))
         );
       })(E.Component),
-      K = (function(e) {
+      Y = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -18496,7 +18720,7 @@
           i.d(t, e),
           (t.prototype.ShowFriendProfile = function(e) {
             var t = this.props.friend.GetCommunityProfileURL();
-            Object(g.e)(e, t), e.stopPropagation();
+            Object(b.e)(e, t), e.stopPropagation();
           }),
           (t.prototype.InviteFriend = function() {
             var t = this;
@@ -18504,13 +18728,13 @@
               e
             ) {
               4 == e
-                ? Object(b.c)(
+                ? Object(v.c)(
                     t.props.ownerWindow,
                     Object(M.b)("#Friend_Menu_AddToFriendsList"),
                     Object(M.b)("#Friend_InviteSent")
                   )
                 : 3 == e
-                ? Object(b.c)(
+                ? Object(v.c)(
                     t.props.ownerWindow,
                     Object(M.b)("#Friend_Menu_AddToFriendsList"),
                     Object(M.b)(
@@ -18518,7 +18742,7 @@
                       t.props.friend.display_name
                     )
                   )
-                : Object(b.c)(
+                : Object(v.c)(
                     t.props.ownerWindow,
                     Object(M.b)("#Friend_Menu_AddToFriendsList"),
                     Object(M.b)(
@@ -18534,7 +18758,7 @@
               e
             ) {
               3 == e
-                ? Object(b.c)(
+                ? Object(v.c)(
                     t.props.ownerWindow,
                     Object(M.b)("#Friend_Menu_AddToFriendsList"),
                     Object(M.b)(
@@ -18542,7 +18766,7 @@
                       t.props.friend.display_name
                     )
                   )
-                : Object(b.c)(
+                : Object(v.c)(
                     t.props.ownerWindow,
                     Object(M.b)("#Friend_Menu_AddToFriendsList"),
                     Object(M.b)(
@@ -18556,7 +18780,7 @@
             var t = this;
             C.f.FriendStore.RemoveFriend(this.props.friend).then(function(e) {
               1 == e
-                ? Object(b.c)(
+                ? Object(v.c)(
                     t.props.ownerWindow,
                     Object(M.b)("#Friend_Menu_IgnoreIncomingInvite"),
                     Object(M.b)(
@@ -18564,7 +18788,7 @@
                       t.props.friend.display_name
                     )
                   )
-                : Object(b.c)(
+                : Object(v.c)(
                     t.props.ownerWindow,
                     Object(M.b)("#Friend_Menu_IgnoreIncomingInvite"),
                     Object(M.b)(
@@ -18596,7 +18820,7 @@
                   ? "#Friend_CancelInvitation_Error"
                   : "#Friend_RemoveFromFriendsList_Error"
               );
-            Object(b.d)(
+            Object(v.d)(
               this.props.ownerWindow,
               n,
               o,
@@ -18606,14 +18830,14 @@
             )
               .then(function() {
                 C.f.FriendStore.RemoveFriend(t.props.friend).then(function(e) {
-                  (3 != e && 6 != e) || Object(b.c)(t.props.ownerWindow, n, r);
+                  (3 != e && 6 != e) || Object(v.c)(t.props.ownerWindow, n, r);
                 });
               })
               .catch(function() {});
           }),
           (t.prototype.BlockFriend = function() {
             var e = this;
-            Object(b.d)(
+            Object(v.d)(
               this.props.ownerWindow,
               Object(M.b)("#Friend_Menu_BlockAllCommunication"),
               Object(M.b)(
@@ -18629,7 +18853,7 @@
           }),
           (t.prototype.UnblockFriend = function() {
             var e = this;
-            Object(b.d)(
+            Object(v.d)(
               this.props.ownerWindow,
               Object(M.b)("#Friend_Menu_UnblockAllCommunication"),
               Object(M.b)(
@@ -18653,18 +18877,38 @@
             C.f.FriendStore.InviteToWatch(this.props.friend);
           }),
           (t.prototype.InviteToRemotePlay = function() {
-            var e = this.props.friend;
+            var e,
+              t,
+              n = this.props.friend;
             C.f.UIStore.ShowFriendChatDialogAndStartVoice(
               C.f.GetDefaultBrowserContext(),
-              e.accountid
+              n.accountid
             ),
               C.f.RemotePlayStore.CreateInviteAndSession(
-                e.accountid,
+                n.accountid,
                 C.f.FriendStore.self.persona.m_unGamePlayedAppID
+              ),
+              this.props.browserContext,
+              (e = n),
+              (t = this.props.ownerWindow),
+              Object(O.b)(
+                E.createElement(c, { player: e }),
+                t,
+                "RemotePlayDialog",
+                {
+                  strTitle: Object(M.b)("#Friend_Menu_RemotePlay"),
+                  popupWidth: 640,
+                  popupHeight: 640
+                },
+                Object(I.e)(t)
               );
           }),
+          (t.prototype.CancelRemotePlay = function() {
+            var e = this.props.friend;
+            C.f.RemotePlayStore.CancelInviteAndSession(e.accountid);
+          }),
           (t.prototype.InviteToVoice = function(e, t) {
-            Object(A.k)(
+            Object(F.k)(
               { invitee: this.props.friend, invitedto: e },
               null,
               this.props.ownerWindow
@@ -18709,7 +18953,7 @@
                 ),
               u &&
                 !c &&
-                i.push(E.createElement(Y, { friend: this.props.friend })),
+                i.push(E.createElement(J, { friend: this.props.friend })),
               n.tab &&
                 i.push(
                   E.createElement(
@@ -18799,7 +19043,7 @@
               ),
               p &&
                 i.push(
-                  E.createElement(Z, {
+                  E.createElement($, {
                     key: "moderationoptions",
                     friend: a,
                     bIsSelf: c,
@@ -18904,7 +19148,7 @@
                             (e = o.friend),
                             (t = o.ownerWindow),
                             void Object(O.b)(
-                              E.createElement(j, { player: e }),
+                              E.createElement(H, { player: e }),
                               t,
                               "FriendNotificationsDialog",
                               {
@@ -18931,7 +19175,7 @@
                         Object(M.b)("#Friend_Menu_RemoveFromFriendsList")
                       )
                     ),
-                  r.push(E.createElement(z, { key: "aliases", friend: a })),
+                  r.push(E.createElement(q, { key: "aliases", friend: a })),
                   C.f.FriendStore.self.persona.is_ingame &&
                     C.f.BroadcastStore.is_broadcast_capable &&
                     i.push(
@@ -19014,7 +19258,7 @@
                     )
                   );
                 }
-                i.push(E.createElement(X, { key: "trading", friend: a }));
+                i.push(E.createElement(Q, { key: "trading", friend: a }));
               } else
                 d
                   ? (i.push(
@@ -19037,7 +19281,7 @@
                         Object(M.b)("#Friend_Menu_IgnoreIncomingInvite")
                       )
                     ),
-                    i.push(E.createElement(z, { key: "aliases", friend: a })))
+                    i.push(E.createElement(q, { key: "aliases", friend: a })))
                   : h
                   ? i.push(
                       E.createElement(
@@ -19109,14 +19353,14 @@
                   ),
                 !!a.persona.m_broadcastAccountId &&
                   !c &&
-                  E.createElement(ee, {
+                  E.createElement(te, {
                     friend: a,
                     ownerWindow: o.ownerWindow,
                     browserContext: o.browserContext
                   }),
                 !!a.persona.m_unGamePlayedAppID &&
                   !c &&
-                  E.createElement($, {
+                  E.createElement(ee, {
                     unAppID: a.persona.m_unGamePlayedAppID,
                     strGameName: a.current_game_name,
                     ulGameID: a.persona.m_gameid,
@@ -19137,16 +19381,17 @@
           i.c([a.a], t.prototype, "InviteToLobby", null),
           i.c([a.a], t.prototype, "InviteToWatch", null),
           i.c([a.a], t.prototype, "InviteToRemotePlay", null),
+          i.c([a.a], t.prototype, "CancelRemotePlay", null),
           i.c([a.a], t.prototype, "InviteToVoice", null),
           t
         );
       })(E.PureComponent),
-      Y = (function(o) {
+      J = (function(o) {
         function e(e) {
           var t = o.call(this, e) || this,
             n = C.f.VoiceStore.ConvertGainValueToSliderValue(
               C.f.VoiceStore.GetPerUserGainLevel(t.props.friend.accountid),
-              v.a.k_MaxPerUserGainMultiplier
+              S.a.k_MaxPerUserGainMultiplier
             );
           return (t.state = { volumeNumber: n }), t;
         }
@@ -19157,7 +19402,7 @@
               this.props.friend.accountid,
               C.f.VoiceStore.ConvertSliderToGainValue(
                 e,
-                v.a.k_MaxPerUserGainMultiplier
+                S.a.k_MaxPerUserGainMultiplier
               )
             ),
               this.setState({ volumeNumber: e });
@@ -19225,7 +19470,7 @@
           (e = i.c([r.a], e))
         );
       })(E.Component),
-      J = (function(e) {
+      X = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -19261,7 +19506,7 @@
           (t = i.c([r.a], t))
         );
       })(E.Component),
-      X = (function(e) {
+      Q = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -19269,7 +19514,7 @@
           i.d(t, e),
           (t.prototype.SendTradeOffer = function(e) {
             var t = "NewTradeOffer" + this.props.friend.accountid;
-            Object(l.n)(e)
+            Object(p.n)(e)
               .open(
                 C.f.EconomyStore.GetDefaultTradeOfferURLForFriend(
                   this.props.friend.accountid
@@ -19284,7 +19529,7 @@
             return E.createElement(
               G.e,
               { label: Object(M.b)("#FriendMenu_Trading") },
-              E.createElement(Q, { friend: e }),
+              E.createElement(Z, { friend: e }),
               E.createElement(
                 G.d,
                 { onSelected: this.SendTradeOffer },
@@ -19296,18 +19541,18 @@
           t
         );
       })(E.Component);
-    function Q(t) {
+    function Z(t) {
       return E.createElement(
         G.d,
         {
           onSelected: function(e) {
-            Object(g.e)(e, t.friend.GetCommunityProfileURL() + "inventory/");
+            Object(b.e)(e, t.friend.GetCommunityProfileURL() + "inventory/");
           }
         },
         Object(M.b)("#FriendMenu_ViewInventory")
       );
     }
-    var Z = (function(e) {
+    var $ = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -19320,7 +19565,7 @@
                   case 0:
                     return [
                       4,
-                      Object(b.a)(
+                      Object(v.a)(
                         this.props.ownerWindow,
                         Object(M.b)("#Friend_Ban"),
                         Object(M.b)(
@@ -19348,15 +19593,15 @@
           (t.prototype.OnKickFriend = function() {
             var o = this,
               e = this.props.group,
-              i = re,
+              i = ae,
               r = this.props.ownerWindow;
             new Promise(function(e, t) {
-              var n = Object(b.b)(
+              var n = Object(v.b)(
                 r,
                 Object(M.b)("#Friend_Kick", o.props.friend.display_name)
               );
               Object(O.b)(
-                E.createElement(ae, {
+                E.createElement(se, {
                   OnOK: e,
                   OnCancel: t,
                   OnSet: function(e) {
@@ -19411,7 +19656,7 @@
                     ),
                   n &&
                     e.push(
-                      E.createElement(q, {
+                      E.createElement(K, {
                         key: "editroles",
                         friend: t,
                         group: n,
@@ -19433,7 +19678,7 @@
           t
         );
       })(E.Component),
-      $ = (function(n) {
+      ee = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -19441,9 +19686,9 @@
               bShowViewGameInfo: void 0,
               bIsSubscribedToApp: void 0
             }),
-            S.b.BIsSubscribedApp(t.props.unAppID).then(function(e) {
+            y.b.BIsSubscribedApp(t.props.unAppID).then(function(e) {
               t.setState({
-                bShowViewGameInfo: S.b.BClientSupportsMessage(
+                bShowViewGameInfo: y.b.BClientSupportsMessage(
                   "ViewGameInfoForSteamID"
                 ),
                 bIsSubscribedToApp: e
@@ -19456,17 +19701,17 @@
           i.d(e, n),
           (e.prototype.ShowStorePage = function(e) {
             var t = L.a.STORE_BASE_URL + "app/" + this.props.unAppID;
-            Object(g.e)(e, t), e.stopPropagation();
+            Object(b.e)(e, t), e.stopPropagation();
           }),
           (e.prototype.ShowCommunityHub = function(e) {
             var t = L.a.COMMUNITY_BASE_URL + "app/" + this.props.unAppID;
-            Object(g.e)(e, t), e.stopPropagation();
+            Object(b.e)(e, t), e.stopPropagation();
           }),
           (e.prototype.LaunchGame = function(e) {
             var t =
               "steam://rungameid/" +
               (this.props.ulGameID || this.props.unAppID);
-            Object(g.e)(e, t), e.stopPropagation();
+            Object(b.e)(e, t), e.stopPropagation();
           }),
           (e.prototype.WatchGame = function(e) {
             C.f.UIStore.SetFriendBroadcastVisible(
@@ -19479,7 +19724,7 @@
             var n = this,
               o = this.props.friend;
             o.persona.has_joinable_game_flag || o.persona.has_server_ip
-              ? S.b
+              ? y.b
                   .OpenJoinGameDialog(o.steamid64)
                   .then(function(e) {
                     e.success || n.JoinLobby(o, t);
@@ -19491,7 +19736,7 @@
           }),
           (e.prototype.ViewGameInfo = function(e) {
             var t = this.props.friend;
-            S.b.ViewGameInfoForSteamID(t.steamid64);
+            y.b.ViewGameInfoForSteamID(t.steamid64);
           }),
           (e.prototype.JoinLobby = function(e, t) {
             if (e.persona.is_in_valid_lobby) {
@@ -19502,12 +19747,12 @@
                 e.persona.m_game_lobby_id +
                 "/" +
                 e.steamid64;
-              Object(g.e)(t, n);
+              Object(b.e)(t, n);
             } else this.LaunchGame(t);
           }),
           (e.prototype.ShowInSteam = function(e) {
             var t = "steam://store/" + this.props.unAppID;
-            Object(g.e)(e, t), e.stopPropagation();
+            Object(b.e)(e, t), e.stopPropagation();
           }),
           (e.prototype.JoinPartyBeacon = function(e) {
             var t =
@@ -19515,7 +19760,7 @@
               this.props.unAppID +
               "/" +
               this.props.partyBeacon.beacon_id;
-            Object(g.e)(e, t), e.stopPropagation();
+            Object(b.e)(e, t), e.stopPropagation();
           }),
           (e.prototype.render = function() {
             if (!this.props.unAppID) return null;
@@ -19693,7 +19938,7 @@
           (e = i.c([r.a], e))
         );
       })(E.Component),
-      ee = (function(e) {
+      te = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -19747,9 +19992,9 @@
           (t = i.c([r.a], t))
         );
       })(E.Component);
-    function te(e, t, n) {
-      return Object(_.a)(
-        E.createElement(ne, {
+    function ne(e, t, n) {
+      return Object(g.a)(
+        E.createElement(oe, {
           browserContext: e,
           group: t,
           ownerWindow: n.currentTarget.ownerDocument.defaultView
@@ -19757,7 +20002,7 @@
         n
       );
     }
-    function ne(o) {
+    function oe(o) {
       var e = [];
       return (
         o.group &&
@@ -19773,7 +20018,7 @@
                     (t = o.group),
                     (n = o.ownerWindow),
                     Object(O.b)(
-                      E.createElement(d, {
+                      E.createElement(h, {
                         browserContext: e,
                         group: t,
                         rgPreSelectedFriends: t.member_accountid_list
@@ -19821,16 +20066,16 @@
         )
       );
     }
-    function oe(e, t) {
-      return Object(_.a)(
-        E.createElement(ie, {
+    function ie(e, t) {
+      return Object(g.a)(
+        E.createElement(re, {
           browserContext: e,
           ownerWindow: t.currentTarget.ownerDocument.defaultView
         }),
         t
       );
     }
-    var ie = (function(t) {
+    var re = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -19855,18 +20100,18 @@
           }),
           (e.prototype.ShowUserProfile = function(e) {
             var t = C.f.FriendStore.self.GetCommunityProfileURL();
-            Object(g.e)(e, t), e.stopPropagation();
+            Object(b.e)(e, t), e.stopPropagation();
           }),
           (e.prototype.EditProfile = function(e) {
             var t = C.f.FriendStore.self.GetCommunityProfileURL() + "edit";
-            Object(g.e)(e, t), e.stopPropagation();
+            Object(b.e)(e, t), e.stopPropagation();
           }),
           (e.prototype.EditName = function(e) {
             var t;
             this.props.browserContext,
               (t = this.props.ownerWindow),
               Object(O.b)(
-                E.createElement(B, null),
+                E.createElement(A, null),
                 t,
                 "ChangePersonaDialog",
                 {
@@ -20003,8 +20248,8 @@
           e
         );
       })(E.PureComponent),
-      re = 3600,
-      ae = (function(e) {
+      ae = 3600,
+      se = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -20021,7 +20266,7 @@
           }),
           (t.prototype.render = function() {
             var e = [
-              { label: Object(M.b)("#Friend_Kick_Hour"), data: re },
+              { label: Object(M.b)("#Friend_Kick_Hour"), data: ae },
               { label: Object(M.b)("#Friend_Kick_Day"), data: 86400 },
               { label: Object(M.b)("#Friend_Kick_Week"), data: 604800 }
             ];
@@ -23036,10 +23281,25 @@
       w = n("cLtS"),
       D = n("s+DT"),
       T = (function() {
-        function e() {}
+        function e() {
+          this.m_sessions = p.x.map();
+        }
         return (
           (e.prototype.Init = function(e) {
-            this.m_CMInterface = e;
+            var t = this;
+            (this.m_CMInterface = e),
+              m.a.IN_CLIENT &&
+                Object(g.a)("RemotePlay.RegisterForSessionStarted") &&
+                (SteamClient.RemotePlay.RegisterForSessionStarted(function(e) {
+                  return t.m_sessions.set(e, !0);
+                }),
+                SteamClient.RemotePlay.RegisterForSessionStopped(function(e) {
+                  return t.m_sessions.set(e, !1);
+                }));
+          }),
+          (e.prototype.HasInviteAndSession = function(e) {
+            var t = D.a.InitFromAccountID(e).ConvertTo64BitString();
+            return this.m_sessions.has(t) && this.m_sessions.get(t);
           }),
           (e.prototype.CreateInviteAndSession = function(e, t) {
             var n = D.a.InitFromAccountID(e);
@@ -23054,6 +23314,7 @@
               t.ConvertTo64BitString()
             );
           }),
+          i.c([p.g], e.prototype, "HasInviteAndSession", null),
           i.c([p.g], e.prototype, "CreateInviteAndSession", null),
           i.c([p.g], e.prototype, "CancelInviteAndSession", null),
           e
@@ -24218,7 +24479,10 @@
               screenshot: "",
               age_safe_screenshot: !1,
               capsule_link: l.b.STORE_BASE_URL + "app/" + e,
-              creator_list: new Array()
+              creator_list: new Array(),
+              is_free: !1,
+              required_age: !1,
+              coming_soon: !1
             });
         }
         return (
@@ -24295,6 +24559,11 @@
                               (c.m_appStoreData.add_to_cart_url =
                                 s.data.add_to_cart_url),
                               (c.m_appStoreData.app_to_run = s.data.app_to_run),
+                              (c.m_appStoreData.is_free = s.data.is_free),
+                              (c.m_appStoreData.required_age =
+                                s.data.required_age),
+                              (c.m_appStoreData.coming_soon =
+                                s.data.coming_soon),
                               (c.m_appStoreData.title = s.data.title),
                               (c.m_appStoreData.release = s.data.release),
                               (c.m_appStoreData.short_desc = s.data.short_desc),
@@ -24420,6 +24689,7 @@
                         O.createElement(I, {
                           price: t.price,
                           subid: t.subid,
+                          is_free: t.is_free,
                           button_action: t.button_action,
                           cart_url: t.cart_url,
                           add_to_cart_url: t.add_to_cart_url,
@@ -24472,14 +24742,21 @@
             })(e, this.props);
           }),
           (t.prototype.render = function() {
+            var e = this.props,
+              t = e.price,
+              n = e.is_free,
+              o = e.button_action;
             return O.createElement(
               "div",
               { className: "StoreSalePriceActionWidgetContainer" },
-              this.props.price
+              !n && t
+                ? O.createElement("div", { className: "StoreSalePriceBox" }, t)
+                : null,
+              n && "0" == t
                 ? O.createElement(
                     "div",
                     { className: "StoreSalePriceBox" },
-                    this.props.price
+                    Object(T.b)("#Broadcast_Store_FreeToPlay")
                   )
                 : null,
               O.createElement(
@@ -24488,7 +24765,7 @@
                   className: "StoreSalePriceButton",
                   onClick: this.handleOnClick
                 },
-                this.props.button_action
+                o
               )
             );
           }),
@@ -24563,46 +24840,75 @@
       );
     }
     var L = (function(e) {
-      function t() {
-        return (null !== e && e.apply(this, arguments)) || this;
-      }
-      return (
-        i.d(t, e),
-        (t.prototype.render = function() {
-          var e = this.props.video,
-            t = w.b.Loading,
-            n = "";
-          if (e) {
-            (t = e.GetBroadcastState()), (n = e.GetBroadcastStateDescription());
-            var o = e.IsBuffering();
-            t == w.b.Ready && o && ((t = w.b.Loading), (n = ""));
-          }
-          if (e && t != w.b.Error && e.GetUserInputNeeded()) return null;
-          if (t == w.b.Ready) return null;
-          var i = t == w.b.Loading;
-          return O.createElement(
-            "div",
-            { className: "BroadcastVideoWatchState" },
-            i && O.createElement(R.a, null),
-            !i &&
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          i.d(t, e),
+          (t.prototype.render = function() {
+            var e = this.props.video,
+              t = w.b.Loading,
+              n = "";
+            if (e) {
+              (t = e.GetBroadcastState()),
+                (n = e.GetBroadcastStateDescription());
+              var o = e.IsBuffering();
+              t == w.b.Ready && o && ((t = w.b.Loading), (n = ""));
+            }
+            if (e && t != w.b.Error && e.GetUserInputNeeded()) return null;
+            if (t == w.b.Ready) return null;
+            var i = t == w.b.Loading;
+            return O.createElement(
+              "div",
+              { className: "BroadcastVideoWatchState" },
+              i && O.createElement(R.a, null),
+              !i &&
+                O.createElement(
+                  "div",
+                  { className: "BroadcastVideoWatchState_Text" },
+                  n
+                )
+            );
+          }),
+          (t = i.c([a.a], t))
+        );
+      })(O.Component),
+      N = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          i.d(t, e),
+          (t.prototype.OnClick = function() {
+            w.a.UserInputClickVideo(this.props.video);
+          }),
+          (t.prototype.render = function() {
+            return O.createElement(
+              "div",
+              {
+                className: "BroadcastVideoUserInputNeeded",
+                onClick: this.OnClick
+              },
+              O.createElement(E.M, null),
               O.createElement(
-                "div",
-                { className: "BroadcastVideoWatchState_Text" },
-                n
+                "span",
+                null,
+                Object(T.b)("#DASHPlayerControls_ClickToPlay")
               )
-          );
-        }),
-        (t = i.c([a.a], t))
-      );
-    })(O.Component);
+            );
+          }),
+          i.c([s.a], t.prototype, "OnClick", null),
+          t
+        );
+      })(O.Component);
     n.d(t, "b", function() {
-      return P;
+      return B;
     }),
       n.d(t, "a", function() {
         return Z;
       });
-    var N = "broadcastplayercontextmenu",
-      P = (function(n) {
+    var P = "broadcastplayercontextmenu",
+      B = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -24703,7 +25009,7 @@
               !this.state.bShowContextMenu ||
                 (e.srcElement &&
                   e.srcElement.parentElement &&
-                  e.srcElement.parentElement.id == N) ||
+                  e.srcElement.parentElement.id == P) ||
                 this.setState({ bShowContextMenu: !1 });
           }),
           (e.prototype.OnMouseMove = function(e) {
@@ -24932,7 +25238,7 @@
                   closeStats: this.CloseStats
                 }),
               O.createElement(L, { video: e }),
-              a && O.createElement(B, { video: e }),
+              a && O.createElement(N, { video: e }),
               l &&
                 O.createElement(
                   "div",
@@ -24945,7 +25251,7 @@
                   },
                   O.createElement(
                     "div",
-                    { id: N, className: "STV_BroadcastSettingsMenuItems" },
+                    { id: P, className: "STV_BroadcastSettingsMenuItems" },
                     this.GetContextMenuItems()
                   )
                 )
@@ -24967,34 +25273,6 @@
           i.c([s.a], e.prototype, "OnToggleFullscreen", null),
           i.c([s.a], e.prototype, "OnFullscreenChange", null),
           (e = i.c([a.a], e))
-        );
-      })(O.Component),
-      B = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
-        }
-        return (
-          i.d(t, e),
-          (t.prototype.OnClick = function() {
-            w.a.UserInputClickVideo(this.props.video);
-          }),
-          (t.prototype.render = function() {
-            return O.createElement(
-              "div",
-              {
-                className: "BroadcastVideoUserInputNeeded",
-                onClick: this.OnClick
-              },
-              O.createElement(E.M, null),
-              O.createElement(
-                "span",
-                null,
-                Object(T.b)("#DASHPlayerControls_ClickToPlay")
-              )
-            );
-          }),
-          i.c([s.a], t.prototype, "OnClick", null),
-          t
         );
       })(O.Component),
       A = (function(e) {
@@ -31938,16 +32216,16 @@
   },
   VZeO: function(e, t, n) {
     "use strict";
-    var p,
+    var d,
       o,
       i = n("mrSG"),
-      u = n("tkkQ"),
-      m = n("4HGb"),
+      p = n("tkkQ"),
+      h = n("4HGb"),
       l = n("fGPn"),
-      d = n("RBVV"),
-      h = n("7t13"),
+      f = n("RBVV"),
+      _ = n("7t13"),
       r = n("48Gm"),
-      f = n("LAqV"),
+      g = n("LAqV"),
       a = (function() {
         function r(e, t) {
           if (!(e instanceof BaseAudioContext))
@@ -32049,7 +32327,7 @@
         );
       })(),
       s = n("2vnA"),
-      _ = (function() {
+      u = (function() {
         function e(e, t) {
           (this.m_Analyser = void 0),
             (this.m_rgInputNode = []),
@@ -32128,10 +32406,10 @@
           e
         );
       })(),
-      g = n("s+DT"),
+      b = n("s+DT"),
       c = n("WpBz"),
-      b = n("oh5H"),
-      v = n("K4CH"),
+      v = n("oh5H"),
+      m = n("K4CH"),
       S = n("OJz+"),
       y = n("XaMz");
     n.d(t, "b", function() {
@@ -32140,7 +32418,7 @@
       n.d(t, "a", function() {
         return P;
       }),
-      ((o = p || (p = {}))[(o.k_EAudioStreamType_Microphone = 1)] =
+      ((o = d || (d = {}))[(o.k_EAudioStreamType_Microphone = 1)] =
         "k_EAudioStreamType_Microphone"),
       (o[(o.k_EAudioStreamType_IncomingStream = 2)] =
         "k_EAudioStreamType_IncomingStream");
@@ -32488,7 +32766,7 @@
               }
             )),
             (this.m_OnVoiceAllUsersStatusUpdate = Object(S.c)(
-              h.h.NotifyAllUsersVoiceStatusHandler,
+              _.h.NotifyAllUsersVoiceStatusHandler,
               function(e) {
                 if (l.m_VoiceCallState.m_voiceChatID != e.Body().voice_chatid())
                   return 1;
@@ -32500,19 +32778,19 @@
               }
             )),
             (this.m_OnVoiceStatusUpdate = Object(S.c)(
-              h.h.NotifyUserVoiceStatusHandler,
+              _.h.NotifyUserVoiceStatusHandler,
               function(e) {
                 return l.UpdateUserVoiceStatus(e.Body()), 1;
               }
             )),
             (this.m_VoiceChatResponseHandler = Object(S.c)(
-              h.h.NotifyOneOnOneChatResponseHandler,
+              _.h.NotifyOneOnOneChatResponseHandler,
               function(e) {
                 if (
                   l.m_VoiceCallState.m_eState >=
                   O.k_EVoiceCallState_RequestedPermission
                 ) {
-                  var t = new g.a(e.Body().steamid_partner());
+                  var t = new b.a(e.Body().steamid_partner());
                   if (
                     e.Body().voicechat_id() != l.m_VoiceCallState.m_voiceChatID
                   )
@@ -32531,29 +32809,29 @@
                         " " +
                         e.Hdr().steamid()
                     ),
-                      f.f.AudioPlaybackManager.PlayAudioURL(
-                        u.a.COMMUNITY_CDN_URL +
+                      g.f.AudioPlaybackManager.PlayAudioURL(
+                        p.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_enter.m4a?v=1"
                       ),
                       l.OnVoiceChatAccepted(!0);
                   else {
                     l.LogMsg("(VoiceChat) Rejected by " + t.GetAccountID());
-                    var n = f.f.ChatStore.GetFriendChat(t.GetAccountID(), !1),
-                      o = f.f.FriendStore.GetFriend(t.GetAccountID());
+                    var n = g.f.ChatStore.GetFriendChat(t.GetAccountID(), !1),
+                      o = g.f.FriendStore.GetFriend(t.GetAccountID());
                     null != n &&
                       null != o &&
                       ((l.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                       n.AddVoiceChannelInviteMsg(
                         t.GetAccountID(),
-                        f.f.GetServerRTime32(),
-                        Object(b.b)(
+                        g.f.GetServerRTime32(),
+                        Object(v.b)(
                           "#FriendMsg_VoiceChannelEndedExplicit",
                           o.display_name
                         )
                       )),
                       l.DeleteOneOnOneCallWaitingJoinOrAccept(t.GetAccountID()),
-                      f.f.AudioPlaybackManager.PlayAudioURL(
-                        u.a.COMMUNITY_CDN_URL +
+                      g.f.AudioPlaybackManager.PlayAudioURL(
+                        p.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                       ),
                       l.OnVoiceChatAccepted(!1);
@@ -32563,16 +32841,16 @@
               }
             )),
             (this.m_IncomingVoiceChatRequestHandler = Object(S.c)(
-              h.h.NotifyOneOnOneChatRequestedHandler,
+              _.h.NotifyOneOnOneChatRequestedHandler,
               function(e) {
-                var t = new g.a(e.Body().steamid_partner()),
+                var t = new b.a(e.Body().steamid_partner()),
                   n = e.Body().voice_chatid(),
-                  o = f.f.FriendStore.GetFriend(t.GetAccountID());
+                  o = g.f.FriendStore.GetFriend(t.GetAccountID());
                 if (
                   null == o ||
                   o.is_blocked ||
-                  f.f.FriendStore.BIsInvisibleMode() ||
-                  f.f.FriendStore.GetUserDoNotDisturb()
+                  g.f.FriendStore.BIsInvisibleMode() ||
+                  g.f.FriendStore.GetUserDoNotDisturb()
                 )
                   return (
                     l.LogMsg(
@@ -32609,29 +32887,29 @@
                     l.OnAcceptOneOnOneVoiceChat(t, n),
                     1
                   );
-                f.f.NotificationManager.DisplayNotificationFromFriend(o, {
+                g.f.NotificationManager.DisplayNotificationFromFriend(o, {
                   title: o.display_name,
-                  body: Object(b.b)(
+                  body: Object(v.b)(
                     "#Friend_RequestingOneOnOneChat",
                     o.display_name
                   ),
                   tag: "state_" + o.accountid,
                   steamid: o.persona.m_steamid.ConvertTo64BitString()
                 });
-                var a = f.f.ChatStore.GetFriendChat(t.GetAccountID(), !0);
+                var a = g.f.ChatStore.GetFriendChat(t.GetAccountID(), !0);
                 return (
                   null != a &&
                     (a.AddVoiceChannelInviteMsg(
                       t.GetAccountID(),
-                      f.f.GetServerRTime32(),
-                      Object(b.b)(
+                      g.f.GetServerRTime32(),
+                      Object(v.b)(
                         "#FriendMsg_VoiceChannelInvite",
                         o.display_name,
                         a.self.display_name
                       )
                     ),
-                    f.f.UIStore.ShowAndOrActivateChat(
-                      f.f.GetDefaultBrowserContext(),
+                    g.f.UIStore.ShowAndOrActivateChat(
+                      g.f.GetDefaultBrowserContext(),
                       a,
                       !1
                     )),
@@ -32641,7 +32919,7 @@
               }
             )),
             (this.m_VoiceChatEndedHandler = Object(S.c)(
-              h.h.NotifyVoiceChatEndedHandler,
+              _.h.NotifyVoiceChatEndedHandler,
               function(e) {
                 for (
                   var t = e.Body().voice_chatid(),
@@ -32660,28 +32938,28 @@
                         i +
                         " has ended and is no longer joinable."
                     ),
-                      f.f.AudioPlaybackManager.PlayAudioURL(
-                        u.a.COMMUNITY_CDN_URL +
+                      g.f.AudioPlaybackManager.PlayAudioURL(
+                        p.a.COMMUNITY_CDN_URL +
                           "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                       );
                     var a = Number(i);
                     l.DeleteOneOnOneCallWaitingJoinOrAccept(a);
-                    var s = f.f.ChatStore.GetFriendChat(a, !1),
-                      c = f.f.FriendStore.GetFriend(a);
+                    var s = g.f.ChatStore.GetFriendChat(a, !1),
+                      c = g.f.FriendStore.GetFriend(a);
                     null != s &&
                       (c
                         ? s.AddVoiceChannelInviteMsg(
                             c.accountid,
-                            f.f.GetServerRTime32(),
-                            Object(b.b)(
+                            g.f.GetServerRTime32(),
+                            Object(v.b)(
                               "#FriendMsg_VoiceChannelEndedExplicit",
                               c.display_name
                             )
                           )
                         : s.AddVoiceChannelInviteMsg(
                             l.m_CMInterface.steamid.GetAccountID(),
-                            f.f.GetServerRTime32(),
-                            Object(b.b)("#FriendMsg_VoiceChannelEnded")
+                            g.f.GetServerRTime32(),
+                            Object(v.b)("#FriendMsg_VoiceChannelEnded")
                           ),
                       l.m_VoiceCallState.m_targetAccountID == Number(i) &&
                         (l.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0));
@@ -32690,7 +32968,7 @@
                 if (t == l.m_VoiceCallState.m_voiceChatID) {
                   if (0 != l.m_VoiceCallState.m_targetAccountID)
                     null ==
-                      (s = f.f.ChatStore.GetFriendChat(
+                      (s = g.f.ChatStore.GetFriendChat(
                         l.m_VoiceCallState.m_targetAccountID,
                         !1
                       )) ||
@@ -32698,14 +32976,14 @@
                       ((l.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                       s.AddVoiceChannelInviteMsg(
                         l.m_CMInterface.steamid.GetAccountID(),
-                        f.f.GetServerRTime32(),
-                        Object(b.b)("#FriendMsg_VoiceChannelEnded")
+                        g.f.GetServerRTime32(),
+                        Object(v.b)("#FriendMsg_VoiceChannelEnded")
                       ));
                   0 != l.m_VoiceCallState.m_targetAccountID &&
                     l.m_VoiceCallState.m_eState >
                       O.k_EVoiceCallState_RequestedPermission &&
-                    f.f.AudioPlaybackManager.PlayAudioURL(
-                      u.a.COMMUNITY_CDN_URL +
+                    g.f.AudioPlaybackManager.PlayAudioURL(
+                      p.a.COMMUNITY_CDN_URL +
                         "public/sounds/webui/steam_voice_channel_exit.m4a?v=1"
                     ),
                     l.LogMsg(
@@ -32717,12 +32995,12 @@
               }
             )),
             (this.m_VoiceChatEnteredNotification = Object(S.c)(
-              h.h.NotifyUserJoinedVoiceChatHandler,
+              _.h.NotifyUserJoinedVoiceChatHandler,
               function(e) {
                 if (
                   e.Body().voice_chatid() == l.m_VoiceCallState.m_voiceChatID
                 ) {
-                  var t = new g.a(e.Body().user_steamid());
+                  var t = new b.a(e.Body().user_steamid());
                   l.LogMsg(
                     "(VoiceChat) User " +
                       t.Render() +
@@ -32737,12 +33015,12 @@
               }
             )),
             (this.m_VoiceChatLeftNotification = Object(S.c)(
-              h.h.NotifyUserLeftVoiceChatHandler,
+              _.h.NotifyUserLeftVoiceChatHandler,
               function(e) {
                 if (
                   e.Body().voice_chatid() == l.m_VoiceCallState.m_voiceChatID
                 ) {
-                  var t = new g.a(e.Body().user_steamid());
+                  var t = new b.a(e.Body().user_steamid());
                   l.LogMsg(
                     "(VoiceChat) User " +
                       t.Render() +
@@ -32757,7 +33035,7 @@
               }
             )),
             (this.m_ShouldRejoinChatRoomVoiceChatHandler = Object(S.c)(
-              d.U.NotifyShouldRejoinChatRoomVoiceChatHandler,
+              f.U.NotifyShouldRejoinChatRoomVoiceChatHandler,
               function(e) {
                 var t = {
                   groupID: e.Body().chat_group_id(),
@@ -32833,8 +33111,8 @@
             this.BPartnerHasRequestedAndIsInOneOnOneChat(e)
               ? this.AcceptPartnersOneOnOneChatRequest(e)
               : (this.InitiateVoiceChat(e, null),
-                f.f.AudioPlaybackManager.PlayAudioURL(
-                  u.a.COMMUNITY_CDN_URL +
+                g.f.AudioPlaybackManager.PlayAudioURL(
+                  p.a.COMMUNITY_CDN_URL +
                     "public/sounds/webui/steam_phonecall.m4a?v=1"
                 ));
           }),
@@ -32862,18 +33140,18 @@
             var t = this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(e);
             if (null == t) return !1;
             t.ClearAudioRepeats();
-            var n = g.a.InitFromAccountID(e);
+            var n = b.a.InitFromAccountID(e);
             return this.OnAcceptOneOnOneVoiceChat(n, t.voice_chatid), !0;
           }),
           (o.prototype.OnRejectOneOnOneVoiceChatForPartner = function(e) {
             var t = this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(e);
             if (null == t) return !1;
             t.ClearAudioRepeats();
-            var n = g.a.InitFromAccountID(e);
+            var n = b.a.InitFromAccountID(e);
             this.OnRejectOneOnOneVoiceChat(n, t.voice_chatid),
               this.m_mapOneOnOneCallsWaitingJoinOrAccept.delete(e);
-            var o = f.f.ChatStore.GetFriendChat(e, !1),
-              i = f.f.FriendStore.self;
+            var o = g.f.ChatStore.GetFriendChat(e, !1),
+              i = g.f.FriendStore.self;
             return (
               null != o &&
                 null != i &&
@@ -32881,8 +33159,8 @@
                   this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg) ||
                   o.AddVoiceChannelInviteMsg(
                     i.accountid,
-                    f.f.GetServerRTime32(),
-                    Object(b.b)(
+                    g.f.GetServerRTime32(),
+                    Object(v.b)(
                       "#FriendMsg_VoiceChannelEndedExplicit",
                       i.display_name
                     )
@@ -32911,18 +33189,18 @@
               0 != this.m_VoiceCallState.m_targetAccountID
             ) {
               if (!this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg) {
-                var e = f.f.ChatStore.GetFriendChat(
+                var e = g.f.ChatStore.GetFriendChat(
                     this.m_VoiceCallState.m_targetAccountID,
                     !1
                   ),
-                  n = f.f.FriendStore.self;
+                  n = g.f.FriendStore.self;
                 null != e &&
                   null != n &&
                   ((this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !0),
                   e.AddVoiceChannelInviteMsg(
-                    f.f.CMInterface.steamid.GetAccountID(),
-                    f.f.GetServerRTime32(),
-                    Object(b.b)(
+                    g.f.CMInterface.steamid.GetAccountID(),
+                    g.f.GetServerRTime32(),
+                    Object(v.b)(
                       "#FriendMsg_VoiceChannelEndedExplicit",
                       n.display_name
                     )
@@ -32930,14 +33208,14 @@
               }
               var o = this.m_VoiceCallState.m_targetAccountID;
               this.m_VoiceCallState.m_targetAccountID = 0;
-              var i = m.b.Init(h.b);
+              var i = h.b.Init(_.b);
               i
                 .Body()
                 .set_steamid_partner(
-                  g.a.InitFromAccountID(o).ConvertTo64BitString()
+                  b.a.InitFromAccountID(o).ConvertTo64BitString()
                 ),
                 this.DeleteOneOnOneCallWaitingJoinOrAccept(o),
-                h.i
+                _.i
                   .EndOneOnOneChat(this.m_CMInterface.GetServiceTransport(), i)
                   .then(function(e) {
                     1 == e.GetEResult()
@@ -32968,7 +33246,7 @@
               this.RestartVoiceChatIfConnected());
           }),
           (o.prototype.GetAudioWorkletSupport = function() {
-            return f.f.AudioPlaybackManager.supports_audio_worklets;
+            return g.f.AudioPlaybackManager.supports_audio_worklets;
           }),
           (o.prototype.GetUserDeniedMicAccess = function() {
             return this.m_bUserHasDeniedMicPermissions;
@@ -33091,7 +33369,7 @@
               for (var t = 0; t < this.m_rgAudioStreams.length; ++t) {
                 var n = this.m_rgAudioStreams[t];
                 n.output_gain_node &&
-                  (n.type == p.k_EAudioStreamType_Microphone
+                  (n.type == d.k_EAudioStreamType_Microphone
                     ? n.output_gain_node.gain.setValueAtTime(
                         this.m_Settings.m_VoiceOutputGain,
                         this.m_AudioContext.currentTime
@@ -33164,7 +33442,7 @@
           (o.prototype.ToggleMicMuting = function() {
             for (var e = 0; e < this.m_rgAudioStreams.length; ++e) {
               var t = this.m_rgAudioStreams[e];
-              if (t.type == p.k_EAudioStreamType_Microphone) {
+              if (t.type == d.k_EAudioStreamType_Microphone) {
                 t.muted = !t.muted;
                 for (var n = t.stream.getTracks(), o = 0; o < n.length; o++)
                   n[o].enabled = !t.muted;
@@ -33183,8 +33461,8 @@
           }),
           (o.prototype.BHasSampleRateTooHighInBrowser = function() {
             return (
-              !u.a.IN_CLIENT &&
-              48e3 < f.f.AudioPlaybackManager.GetLastObservedSampleRate()
+              !p.a.IN_CLIENT &&
+              48e3 < g.f.AudioPlaybackManager.GetLastObservedSampleRate()
             );
           }),
           (o.prototype.BNoMicAvailableForSession = function() {
@@ -33196,7 +33474,7 @@
             if (this.BHasSampleRateTooHighInBrowser()) return !0;
             for (var e = 0; e < this.m_rgAudioStreams.length; ++e)
               if (
-                this.m_rgAudioStreams[e].type == p.k_EAudioStreamType_Microphone
+                this.m_rgAudioStreams[e].type == d.k_EAudioStreamType_Microphone
               )
                 return !1;
             return !0;
@@ -33204,7 +33482,7 @@
           (o.prototype.IsMicMuted = function() {
             for (var e = 0; e < this.m_rgAudioStreams.length; ++e)
               if (
-                this.m_rgAudioStreams[e].type == p.k_EAudioStreamType_Microphone
+                this.m_rgAudioStreams[e].type == d.k_EAudioStreamType_Microphone
               )
                 return this.m_rgAudioStreams[e].muted;
             return !1;
@@ -33213,7 +33491,7 @@
             this.m_bOutputMuted = !this.m_bOutputMuted;
             for (var e = 0; e < this.m_rgAudioStreams.length; ++e) {
               var t = this.m_rgAudioStreams[e];
-              if (t.type == p.k_EAudioStreamType_IncomingStream) {
+              if (t.type == d.k_EAudioStreamType_IncomingStream) {
                 t.muted =
                   this.m_bOutputMuted || this.GetPerUserMuting(t.accountid);
                 for (var n = t.stream.getTracks(), o = 0; o < n.length; o++)
@@ -33450,19 +33728,19 @@
             this.ToggleMicMuting(),
               this.GetPushToTalkOrMuteSoundsEnabled() &&
                 (this.IsMicMuted()
-                  ? f.f.AudioPlaybackManager.PlayAudioURL(
-                      u.a.COMMUNITY_CDN_URL +
+                  ? g.f.AudioPlaybackManager.PlayAudioURL(
+                      p.a.COMMUNITY_CDN_URL +
                         "public/sounds/webui/steam_ui_ptt_short_02_quiet.m4a"
                     )
-                  : f.f.AudioPlaybackManager.PlayAudioURL(
-                      u.a.COMMUNITY_CDN_URL +
+                  : g.f.AudioPlaybackManager.PlayAudioURL(
+                      p.a.COMMUNITY_CDN_URL +
                         "public/sounds/webui/steam_ui_ptt_short_01_quiet.m4a"
                     ));
           }),
           (o.prototype.OnPushToTalkStateChange = function(e) {
             var t = e,
               n = !1;
-            f.f.SettingsStore.BClientHasFeatureOrOnWeb("NewVoiceHotKeyState") &&
+            g.f.SettingsStore.BClientHasFeatureOrOnWeb("NewVoiceHotKeyState") &&
               ((n = !0), this.m_bPushToMuteEnabled && (t = !e)),
               !n || this.m_bPushToTalkEnabled || this.m_bPushToMuteEnabled
                 ? t != this.m_bVoicePTTStateEnabled &&
@@ -33471,8 +33749,8 @@
                     null != this.m_MicInputGainNode &&
                     (this.m_bVoicePTTStateEnabled
                       ? (this.GetPushToTalkOrMuteSoundsEnabled() &&
-                          f.f.AudioPlaybackManager.PlayAudioURL(
-                            u.a.COMMUNITY_CDN_URL +
+                          g.f.AudioPlaybackManager.PlayAudioURL(
+                            p.a.COMMUNITY_CDN_URL +
                               "public/sounds/webui/steam_ui_ptt_short_01_quiet.m4a"
                           ),
                         this.m_bPushToMuteEnabled
@@ -33489,8 +33767,8 @@
                                 this.m_hPushToTalkReleaseTimeout
                               )))
                       : (this.GetPushToTalkOrMuteSoundsEnabled() &&
-                          f.f.AudioPlaybackManager.PlayAudioURL(
-                            u.a.COMMUNITY_CDN_URL +
+                          g.f.AudioPlaybackManager.PlayAudioURL(
+                            p.a.COMMUNITY_CDN_URL +
                               "public/sounds/webui/steam_ui_ptt_short_02_quiet.m4a"
                           ),
                         this.m_bPushToMuteEnabled
@@ -33581,7 +33859,7 @@
                 ++t
               ) {
                 var n = this.m_rgAudioStreams[t];
-                if (n.type == p.k_EAudioStreamType_Microphone) {
+                if (n.type == d.k_EAudioStreamType_Microphone) {
                   e = n;
                   break;
                 }
@@ -33613,7 +33891,7 @@
                   (o = this.m_MicNoiseGate.output
                     ? this.m_MicNoiseGate.output
                     : this.m_MicNoiseGate),
-                  (this.m_MicVolumeMeter = new _(o, this.m_AudioContext)),
+                  (this.m_MicVolumeMeter = new u(o, this.m_AudioContext)),
                   (e.volume_meter = this.m_MicVolumeMeter),
                   this.m_VoiceEchoLocalMic && null == this.m_MicNoiseGate
                     ? this.m_MicInputGainNode.connect(e.output_gain_node)
@@ -33728,7 +34006,7 @@
             this.SetupAudioStreamElementAndCreateSourceNode(t, e),
               (t.unique_id = e.id),
               (t.stream = e),
-              (t.type = p.k_EAudioStreamType_IncomingStream);
+              (t.type = d.k_EAudioStreamType_IncomingStream);
             var n = e.id.match(/Peer-(\d+)-(\d+)-/);
             if (
               (n && 3 == n.length
@@ -33754,10 +34032,10 @@
                 this.m_AudioContext.currentTime
               ),
               t.output_gain_node.connect(
-                f.f.AudioPlaybackManager.GetActiveDestination()
+                g.f.AudioPlaybackManager.GetActiveDestination()
               ),
               t.source_node.connect(t.output_gain_node),
-              (t.volume_meter = new _(t.source_node, this.m_AudioContext)),
+              (t.volume_meter = new u(t.source_node, this.m_AudioContext)),
               t.volume_meter.Connect(t.source_node);
           }),
           (o.prototype.OnAddTrack = function(e, t) {
@@ -33858,7 +34136,7 @@
                 e
                   .setLocalDescription(t)
                   .then(function() {
-                    var e = m.b.Init(r.b);
+                    var e = h.b.Init(r.b);
                     e.Body().set_sdp(JSON.stringify(t)),
                       n.LogMsg(
                         "(WebRTC) Offer (Local Description): " + e.Body().sdp()
@@ -33973,7 +34251,7 @@
           }),
           (o.prototype.SetupNoiseGateOnMic = function(e) {
             var t = this.GetNoiseGateOptions();
-            if (f.f.AudioPlaybackManager.supports_audio_worklets) {
+            if (g.f.AudioPlaybackManager.supports_audio_worklets) {
               this.LogMsg(
                 "(VoiceChat) Audio Worklets supported - high performance mic noisegate in use!"
               );
@@ -34043,7 +34321,7 @@
                   (i.destination_node = o),
                   (i.stream = e),
                   (i.source_node = t),
-                  (i.type = p.k_EAudioStreamType_Microphone),
+                  (i.type = d.k_EAudioStreamType_Microphone),
                   (i.accountid = this.m_CMInterface.steamid.GetAccountID()),
                   (i.muted = !1),
                   (i.elem = void 0),
@@ -34053,7 +34331,7 @@
                     this.m_AudioContext.currentTime
                   ),
                   i.output_gain_node.connect(
-                    f.f.AudioPlaybackManager.GetActiveDestination()
+                    g.f.AudioPlaybackManager.GetActiveDestination()
                   ),
                   this.m_rgAudioStreams.push(i);
                 var r = t;
@@ -34063,7 +34341,7 @@
                       ? this.m_MicNoiseGate.output
                       : this.m_MicNoiseGate),
                   (this.m_MicVolumeMeter = void 0),
-                  (this.m_MicVolumeMeter = new _(r, this.m_AudioContext)),
+                  (this.m_MicVolumeMeter = new u(r, this.m_AudioContext)),
                   (i.volume_meter = this.m_MicVolumeMeter),
                   this.m_VoiceEchoLocalMic && null == this.m_MicNoiseGate
                     ? this.m_MicInputGainNode.connect(i.output_gain_node)
@@ -34133,7 +34411,7 @@
                   "(VoiceChat) Hit InitiateChatRoomVoice in wrong state " +
                     this.m_VoiceCallState.m_eState
                 )
-              : f.f.AudioPlaybackManager.SetVoiceActive(
+              : g.f.AudioPlaybackManager.SetVoiceActive(
                   this.OnRequestMicrophoneAccess
                 );
           }),
@@ -34143,7 +34421,7 @@
             0 == this.m_VoiceCallState.m_targetAccountID
               ? ((this.m_VoiceCallState.m_eState =
                   O.k_EVoiceCallState_RequestedPermission),
-                (e = m.b.Init(d.w))
+                (e = h.b.Init(f.w))
                   .Body()
                   .set_chat_group_id(this.m_VoiceCallState.m_chatRoom.groupID),
                 e.Body().set_chat_id(this.m_VoiceCallState.m_chatRoom.chatID),
@@ -34153,7 +34431,7 @@
                     ", room: " +
                     this.m_VoiceCallState.m_chatRoom.chatID
                 ),
-                d.V.JoinVoiceChat(this.m_CMInterface.GetServiceTransport(), e)
+                f.V.JoinVoiceChat(this.m_CMInterface.GetServiceTransport(), e)
                   .then(function(e) {
                     1 == e.GetEResult()
                       ? ((o.m_VoiceCallState.m_voiceChatID = e
@@ -34170,10 +34448,10 @@
               : ((this.m_VoiceCallState.m_eState =
                   O.k_EVoiceCallState_RequestedPermission),
                 "" == this.m_VoiceCallState.m_voiceChatID
-                  ? ((e = m.b.Init(h.d))
+                  ? ((e = h.b.Init(_.d))
                       .Body()
                       .set_steamid_partner(
-                        g.a
+                        b.a
                           .InitFromAccountID(
                             this.m_VoiceCallState.m_targetAccountID
                           )
@@ -34183,7 +34461,7 @@
                       "(VoiceChat) InitiateOneOnOneVoiceChat request to " +
                         this.m_VoiceCallState.m_targetAccountID
                     ),
-                    h.i
+                    _.i
                       .RequestOneOnOneChat(
                         this.m_CMInterface.GetServiceTransport(),
                         e
@@ -34197,8 +34475,8 @@
                             (o.m_VoiceCallState.m_voiceChatID = e
                               .Body()
                               .voice_chatid());
-                          var t = f.f.FriendStore.self,
-                            n = f.f.ChatStore.GetFriendChat(
+                          var t = g.f.FriendStore.self,
+                            n = g.f.ChatStore.GetFriendChat(
                               o.m_VoiceCallState.m_targetAccountID,
                               !1
                             );
@@ -34206,8 +34484,8 @@
                             null != n &&
                             n.AddVoiceChannelInviteMsg(
                               o.m_CMInterface.steamid.GetAccountID(),
-                              f.f.GetServerRTime32(),
-                              Object(b.b)(
+                              g.f.GetServerRTime32(),
+                              Object(v.b)(
                                 "#FriendMsg_VoiceChannelInvite",
                                 t.display_name,
                                 n.chat_partner.display_name
@@ -34262,7 +34540,7 @@
                   "(VoiceChat) Hit InitiateOneOnOneVoiceChat in wrong state " +
                     this.m_VoiceCallState.m_eState
                 )
-              : f.f.AudioPlaybackManager.SetVoiceActive(
+              : g.f.AudioPlaybackManager.SetVoiceActive(
                   this.OnRequestMicrophoneAccess
                 );
           }),
@@ -34279,7 +34557,7 @@
           }),
           (o.prototype.OnSetUpdatedLocalDescriptionSuccess = function() {
             this.LogMsg("(WebRTC) OnSetUpdatedLocalDescriptionSuccess");
-            var e = m.b.Init(r.a);
+            var e = h.b.Init(r.a);
             e
               .Body()
               .set_ip_webrtc_server(this.m_VoiceCallState.m_webRTCServerIP),
@@ -34378,7 +34656,7 @@
             );
           }),
           (o.prototype.SendVoiceStatusUpdate = function() {
-            var e = m.b.Init(h.g);
+            var e = h.b.Init(_.g);
             e
               .Body()
               .set_user_steamid(
@@ -34395,22 +34673,22 @@
               e
                 .Body()
                 .set_user_webaudio_sample_rate(
-                  f.f.AudioPlaybackManager.GetLastObservedSampleRate()
+                  g.f.AudioPlaybackManager.GetLastObservedSampleRate()
                 ),
-              h.i.NotifyUserVoiceStatus(
+              _.i.NotifyUserVoiceStatus(
                 this.m_CMInterface.GetServiceTransport(),
                 e
               );
           }),
           (o.prototype.UpdateUserVoiceStatus = function(e) {
             if (this.m_VoiceCallState.m_voiceChatID == e.voice_chatid()) {
-              var t = new g.a(e.user_steamid()),
+              var t = new b.a(e.user_steamid()),
                 n = this.m_mapUserVoiceStatus.get(t.GetAccountID());
               null == n && (n = new L()),
                 (n.mic_muted_locally = e.user_muted_mic_locally()),
                 (n.output_muted_locally = e.user_muted_output_locally()),
                 (n.has_no_mic_for_session = e.user_has_no_mic_for_session());
-              var o = f.f.FriendStore.GetPlayerIfCached(t.GetAccountID()),
+              var o = g.f.FriendStore.GetPlayerIfCached(t.GetAccountID()),
                 i = "[U:1:" + t.GetAccountID() + "]",
                 r = "";
               null != o && (r = o.display_name + " ");
@@ -34453,7 +34731,7 @@
                   "(VoiceChat) Reached OnWebRTCConnectedAndVoiceChatConnected without voice chat id? Failing."
                 ),
                 this.EndVoiceChatInternal(!1));
-            var n = m.b.Init(h.e);
+            var n = h.b.Init(_.e);
             n.Body().set_voice_chatid(this.m_VoiceCallState.m_voiceChatID),
               n.Body().set_ssrc_my_sending_stream(e.ssrc()),
               n.Body().set_ip_webrtc_client(e.client_ip()),
@@ -34463,10 +34741,10 @@
               n
                 .Body()
                 .set_has_audio_worklets_support(
-                  f.f.AudioPlaybackManager.supports_audio_worklets
+                  g.f.AudioPlaybackManager.supports_audio_worklets
                 ),
               n.Body().set_user_agent(navigator.userAgent),
-              h.i
+              _.i
                 .UpdateVoiceChatWebRTCData(
                   this.m_CMInterface.GetServiceTransport(),
                   n
@@ -34509,11 +34787,11 @@
               (this.m_VoiceCallState.m_bPostedOneOnOneEndedMsg = !1),
               (this.m_VoiceCallState.m_chatRoom = null),
               (this.m_VoiceCallState.m_voiceChatID = e);
-            var o = m.b.Init(h.a);
+            var o = h.b.Init(_.a);
             o.Body().set_steamid_partner(t.ConvertTo64BitString()),
               o.Body().set_accepted_request(!0),
               o.Body().set_voice_chatid(e),
-              h.i
+              _.i
                 .AnswerOneOnOneChat(this.m_CMInterface.GetServiceTransport(), o)
                 .then(function(e) {
                   1 == e.GetEResult()
@@ -34527,11 +34805,11 @@
           }),
           (o.prototype.OnRejectOneOnOneVoiceChat = function(t, e) {
             var n = this,
-              o = m.b.Init(h.a);
+              o = h.b.Init(_.a);
             o.Body().set_steamid_partner(t.ConvertTo64BitString()),
               o.Body().set_accepted_request(!1),
               o.Body().set_voice_chatid(e),
-              h.i
+              _.i
                 .AnswerOneOnOneChat(this.m_CMInterface.GetServiceTransport(), o)
                 .then(function(e) {
                   1 == e.GetEResult() ||
@@ -34544,8 +34822,8 @@
           (o.prototype.PlayRingSound = function(e) {
             this.m_mapOneOnOneCallsWaitingJoinOrAccept.get(
               e
-            ).audio_buffer = f.f.AudioPlaybackManager.PlayAudioURLWithRepeats(
-              u.a.COMMUNITY_CDN_URL +
+            ).audio_buffer = g.f.AudioPlaybackManager.PlayAudioURLWithRepeats(
+              p.a.COMMUNITY_CDN_URL +
                 "public/sounds/webui/steam_phonecall.m4a?v=1",
               1
             );
@@ -34557,15 +34835,15 @@
             );
           }),
           (o.prototype.CheckVoiceSnoozeTiemout = function() {
-            if (3600 < f.f.IdleTracker.GetUserIdleTime()) {
+            if (3600 < g.f.IdleTracker.GetUserIdleTime()) {
               var e = this.m_MicVolumeMeter.GetLastTimeNonZero();
               36e5 < performance.now() - e &&
                 (this.OnUserEndVoiceChat(),
-                f.f
+                g.f
                   .ShowAlert(
-                    Object(b.b)("#Voice_LeftIdleVoiceChat_Title"),
-                    Object(b.b)("#Voice_LeftIdleVoiceChat_Body"),
-                    Object(b.b)("#Voice_LeftIdleVoiceChat_OK")
+                    Object(v.b)("#Voice_LeftIdleVoiceChat_Title"),
+                    Object(v.b)("#Voice_LeftIdleVoiceChat_Body"),
+                    Object(v.b)("#Voice_LeftIdleVoiceChat_OK")
                   )
                   .then(function() {})
                   .catch(function() {
@@ -34580,7 +34858,7 @@
                 this.ProcessStatsReport,
                 1e4
               )),
-              u.a.IN_CLIENT && l.b.BClientConnected().then(function() {}),
+              p.a.IN_CLIENT && l.b.BClientConnected().then(function() {}),
               !(
                 -1 !=
                 this.m_PeerConnection.localDescription.sdp.indexOf("mozilla...")
@@ -34769,7 +35047,7 @@
                       r.PadOutput("Decoding Errors", 20)
                   ),
                   r.m_mapAccountIDToStats.forEach(function(e, t) {
-                    var n = f.f.FriendStore.GetPlayerIfCached(t),
+                    var n = g.f.FriendStore.GetPlayerIfCached(t),
                       o = "[unknown]";
                     null != n && (o = n.display_name),
                       r.LogMsg(
@@ -34921,7 +35199,7 @@
           (o.prototype.InitiateVoiceChat = function(e, t) {
             var n = this;
             l.b.BClientConnected().then(function() {});
-            var o = new v.UAParser(navigator.userAgent).getResult();
+            var o = new m.UAParser(navigator.userAgent).getResult();
             if ("Chrome" == o.browser.name)
               if (0 != e && t)
                 this.LogMsg("Cant initiate voice chat for both friend & group");
@@ -35020,22 +35298,22 @@
                 "(VoiceChat) Voice chat not supported in browser: " +
                   o.browser.name
               );
-              var s = Object(b.b)(
-                  u.a.IN_MOBILE
+              var s = Object(v.b)(
+                  p.a.IN_MOBILE
                     ? "#VoiceChat_Unavailable_NotSupported"
                     : "#Voice_VoiceUnavailableInBrowser_Title"
                 ),
-                c = u.a.IN_MOBILE
-                  ? Object(b.b)("#VoiceChat_Unavailable_MobileChat")
-                  : Object(b.b)(
+                c = p.a.IN_MOBILE
+                  ? Object(v.b)("#VoiceChat_Unavailable_MobileChat")
+                  : Object(v.b)(
                       "#Voice_VoiceUnavailableInBrowser_Body",
                       o.browser.name
                     );
-              f.f
+              g.f
                 .ShowAlert(
                   s,
                   c,
-                  Object(b.b)("#Voice_VoiceUnavailableInBrowser_OK")
+                  Object(v.b)("#Voice_VoiceUnavailableInBrowser_OK")
                 )
                 .then(function() {})
                 .catch(function() {
@@ -35057,7 +35335,7 @@
                 void this.EndVoiceChatInternal(!1)
               );
             null == this.m_AudioContext &&
-              (this.m_AudioContext = f.f.AudioPlaybackManager.context);
+              (this.m_AudioContext = g.f.AudioPlaybackManager.context);
             var e = {
               optional: [
                 {
@@ -35150,12 +35428,12 @@
                 this.ScheduleClientVoiceLogsUpload(2);
               else {
                 this.m_bClientSideLogsUploadInProgress = !0;
-                var e = m.b.Init(h.f);
+                var e = h.b.Init(_.f);
                 e.Body().set_voice_chatid(this.m_VoiceCallState.m_voiceChatID);
                 var n = this.m_rgLogLines.slice(this.m_nLastLogLineUploaded);
                 e.Body().set_client_voice_logs_new_lines(n.join("\r\n"));
                 var o = n.length;
-                h.i
+                _.i
                   .UploadClientVoiceChatLogs(
                     this.m_CMInterface.GetServiceTransport(),
                     e
@@ -35210,16 +35488,16 @@
                   var r = this.m_VoiceCallState.m_targetAccountID;
                   this.m_VoiceCallState.m_targetAccountID = 0;
                   var a = this.m_VoiceCallState.m_voiceChatID;
-                  (t = m.b.Init(h.c))
+                  (t = h.b.Init(_.c))
                     .Body()
                     .set_steamid_partner(
-                      g.a.InitFromAccountID(r).ConvertTo64BitString()
+                      b.a.InitFromAccountID(r).ConvertTo64BitString()
                     ),
                     t
                       .Body()
                       .set_voice_chatid(this.m_VoiceCallState.m_voiceChatID);
                   var s = this.m_VoiceCallState.m_eState;
-                  h.i
+                  _.i
                     .LeaveOneOnOneChat(
                       this.m_CMInterface.GetServiceTransport(),
                       t
@@ -35236,14 +35514,14 @@
                             (t.previously_joined = !0),
                             i.m_mapOneOnOneCallsWaitingJoinOrAccept.set(r, t);
                         } else {
-                          var n = f.f.FriendStore.self,
-                            o = f.f.ChatStore.GetFriendChat(r, !1);
+                          var n = g.f.FriendStore.self,
+                            o = g.f.ChatStore.GetFriendChat(r, !1);
                           o &&
                             n &&
                             o.AddVoiceChannelInviteMsg(
-                              f.f.CMInterface.steamid.GetAccountID(),
-                              f.f.GetServerRTime32(),
-                              Object(b.b)(
+                              g.f.CMInterface.steamid.GetAccountID(),
+                              g.f.GetServerRTime32(),
+                              Object(v.b)(
                                 "#FriendMsg_VoiceChannelEndedExplicit",
                                 n.display_name
                               )
@@ -35256,7 +35534,7 @@
                     });
                 } else if (this.m_VoiceCallState.m_chatRoom) {
                   var t;
-                  (t = m.b.Init(d.z))
+                  (t = h.b.Init(f.z))
                     .Body()
                     .set_chat_group_id(
                       this.m_VoiceCallState.m_chatRoom.groupID
@@ -35265,7 +35543,7 @@
                       .Body()
                       .set_chat_id(this.m_VoiceCallState.m_chatRoom.chatID);
                   var n = this.m_VoiceCallState.m_chatRoom.chatID;
-                  d.V.LeaveVoiceChat(
+                  f.V.LeaveVoiceChat(
                     this.m_CMInterface.GetServiceTransport(),
                     t
                   ).then(function(e) {
@@ -35318,7 +35596,18 @@
                 }
                 if (null != this.m_AudioContext && c.source_node)
                   try {
-                    c.source_node.disconnect();
+                    if (
+                      (c.source_node.disconnect(),
+                      c.type == d.k_EAudioStreamType_Microphone &&
+                        c.source_node instanceof MediaStreamAudioSourceNode)
+                    )
+                      for (
+                        var u = 0, m = c.source_node.mediaStream.getTracks();
+                        u < m.length;
+                        u++
+                      ) {
+                        m[u].stop();
+                      }
                   } catch (e) {}
                 c.output_gain_node &&
                   (c.output_gain_node.disconnect(),
@@ -35339,7 +35628,7 @@
                   (this.m_MicInputGainNode.disconnect(),
                   (this.m_MicInputGainNode = void 0)),
                 null != this.m_AudioContext &&
-                  (f.f.AudioPlaybackManager.SetVoiceNotActive(),
+                  (g.f.AudioPlaybackManager.SetVoiceNotActive(),
                   (this.m_AudioContext = void 0)),
                 this.m_PeerConnection &&
                   ((this.m_PeerConnection.oniceconnectionstatechange = void 0),
@@ -60196,7 +60485,8 @@
                             n +
                             "&language=" +
                             f.a.LANGUAGE +
-                            "&filters=basic,price_overview,developers,screenshots,movies,release_date,content_descriptors"
+                            "&filters=basic,price_overview,developers,screenshots,movies,release_date,content_descriptors&client=" +
+                            f.a.IN_CLIENT
                         )
                       ]
                     );
@@ -62879,24 +63169,24 @@
               return m.e(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    (n = {}),
-                      (o = this.m_strChatURL.replace(
+                    (t = {}),
+                      (n = this.m_strChatURL.replace(
                         "{0}",
                         this.m_nNextChatTS.toString()
                       )) == this.m_strChatURL &&
                         0 < this.m_nNextChatTS &&
-                        (n.t = this.m_nNextChatTS),
+                        (t.t = this.m_nNextChatTS),
                       (e.label = 1);
                   case 1:
                     return (
-                      e.trys.push([1, 3, , 4]), [4, d.a.get(o, { params: n })]
+                      e.trys.push([1, 3, , 4]), [4, d.a.get(n, { params: t })]
                     );
                   case 2:
                     if (
-                      ((i = e.sent()),
-                      (r = i.data),
+                      ((o = e.sent()),
+                      (i = o.data),
                       (this.m_cConsecutiveErrors = 0),
-                      (a = r.messages
+                      (r = i.messages
                         .map(function(e) {
                           return m.a({}, e, {
                             type: f.a.Chat,
@@ -62906,45 +63196,45 @@
                         .filter(function(e) {
                           return !u.IsUserMutedLocally(e.steamid);
                         })),
-                      (t = this.m_rgChatMessages).push.apply(t, a),
-                      (s = this.m_bAutoScroll ? 150 : 300),
-                      this.m_rgChatMessages.length > s &&
+                      (p = this.m_rgChatMessages).push.apply(p, r),
+                      (a = this.m_bAutoScroll ? 150 : 300),
+                      this.m_rgChatMessages.length > a &&
                         this.m_rgChatMessages.splice(
                           0,
-                          this.m_rgChatMessages.length - s
+                          this.m_rgChatMessages.length - a
                         ),
-                      r.muted)
+                      i.muted)
                     )
-                      for (l = 0; l < r.muted.length; l++)
-                        (c =
-                          r.muted[l].muted == this.m_strUserSteamID
+                      for (c = 0; c < i.muted.length; c++)
+                        (s =
+                          i.muted[c].muted == this.m_strUserSteamID
                             ? Object(h.b)(
                                 "#BroadcastChat_YouMuted",
-                                r.muted[l].persona_name
+                                i.muted[c].persona_name
                               )
                             : Object(h.b)(
                                 "#BroadcastChat_UserMuted",
-                                r.muted[l].persona_name
+                                i.muted[c].persona_name
                               )),
                           this.m_rgChatMessages.push({
                             type: f.a.Notification,
-                            msg: c,
+                            msg: s,
                             client_ts: Number(new Date()),
                             instance_id: this.m_unInstanceID,
                             in_game: !1,
                             persona_name: "",
                             steamid: ""
                           });
-                    if (r.remove_msgs)
-                      for (l = 0; l < r.remove_msgs.length; l++)
-                        this.RemoveUserMessagesLocal(r.remove_msgs[l].steamid);
+                    if (i.remove_msgs)
+                      for (c = 0; c < i.remove_msgs.length; c++)
+                        this.RemoveUserMessagesLocal(i.remove_msgs[c].steamid);
                     if (
-                      ((p = 0),
+                      ((l = 0),
                       null == this.m_tsFirstRequest ||
                         0 == this.m_nNextChatTS ||
-                        r.initial_delay)
+                        i.initial_delay)
                     ) {
-                      if ("undefined" === r.initial_delay)
+                      if ("undefined" === i.initial_delay)
                         return (
                           console.log(
                             "Need initial_delay to know when to request first chat message"
@@ -62952,17 +63242,17 @@
                           [2]
                         );
                       (this.m_tsFirstRequest =
-                        performance.now() + r.initial_delay),
+                        performance.now() + i.initial_delay),
                         (this.m_nFromFirstRequestMS = 0),
-                        (this.m_nNextChatTS = r.next_request),
-                        (p = r.initial_delay);
+                        (this.m_nNextChatTS = i.next_request),
+                        (l = i.initial_delay);
                     } else {
-                      if (r.next_request < this.m_nNextChatTS)
+                      if (i.next_request < this.m_nNextChatTS)
                         return console.log("Next request in past"), [2];
                       (this.m_nFromFirstRequestMS +=
-                        r.next_request - this.m_nNextChatTS),
-                        (this.m_nNextChatTS = r.next_request),
-                        (p =
+                        i.next_request - this.m_nNextChatTS),
+                        (this.m_nNextChatTS = i.next_request),
+                        (l =
                           this.m_tsFirstRequest +
                           this.m_nFromFirstRequestMS -
                           performance.now() +
@@ -62970,8 +63260,8 @@
                     }
                     return (
                       this.m_bReconnecting && (this.m_bReconnecting = !1),
-                      (this.m_nLastSleepMS = p) < 0 && (p = 0),
-                      this.m_chatScheduledFunc.Schedule(p, this.RequestLoop),
+                      (this.m_nLastSleepMS = l) < 0 && (l = 0),
+                      this.m_chatScheduledFunc.Schedule(l, this.RequestLoop),
                       [3, 4]
                     );
                   case 3:

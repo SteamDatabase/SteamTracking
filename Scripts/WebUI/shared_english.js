@@ -212,6 +212,27 @@ LocalizationReady("shared", "english", {
   EventEditor_Edit: "Edit Event",
   EventDisplay_DeleteEvent: "Delete Event",
 
+  EventReminder_InProgress:
+    "(note that notification options shown here are representitive and not yet functional)",
+  EventReminder_NotifyByEmail: "Notify me by Email",
+  EventReminder_NotifyByEmail_ttip:
+    "Steam will send an email notification to your account when the event starts.",
+  EventReminder_NotifyByMobile: "Notify me on my Mobile device",
+  EventReminder_NotifyByMobile_ttip:
+    "Steam will send a push notification to all mobiles you have an install and logged in Steam mobile app when the event starts.",
+  EventReminder_NotifyByEmail_Missing: "No verified email available.",
+  EventReminder_NotifyByEmail_Missing_Add: "Add one here.",
+  EventReminder_NotifyByMobile_Missing: "No mobile app installed.",
+  EventReminder_NotifyByMobile_Install: "View available apps here.",
+
+  AddToWishlist: "Add to your Wishlist",
+  Wishlisted: "In your Wishlist",
+  AddToWishlist_ttip:
+    "Get notified by email when your wishlisted items get released on are on sale",
+  Wishlist_Error: "Update Wishlist Error",
+  Wishlist_Error_Desc:
+    "We encountered an error adding to your wishlist. Please try again later:",
+
   WindowTitle_FriendsList: "Friends List",
   FriendsList_OfflineTitle: "ERROR",
   FriendsList_OfflineOrFailure: "Friends Network Unreachable",
@@ -429,6 +450,13 @@ LocalizationReady("shared", "english", {
   EventEditor_InsertYouTube_Placholder: "Enter YouTube™ URL",
   EventEditor_InsertYouTube_NoURL: "Please enter a valid YouTube™ URL.",
   EventEditor_InsertYouTube_Summary: "Descriptive summary version",
+  EventEditor_InsertImage: "Insert an image from the web",
+  EventEditor_InsertImage_Title: "Insert Image",
+  EventEditor_InsertImage_Desc:
+    "Enter an URL for an image (such as .jpg .gif or .png) to include that image in your post.",
+  EventEditor_InsertImage_URL: "Image URL",
+  EventEditor_InsertImage_Placeholder: "Enter a valid URL",
+  EventEditor_InsertImage_Anchor: "Optional: URL to open when image clicked",
   EventEditor_LinkDescription: "Text To Display",
   EventEditor_LinkURL: "URL",
   EventEditor_YouTubeVideoTitle: "YouTube™ Video: %1$s",
@@ -544,6 +572,7 @@ LocalizationReady("shared", "english", {
   Broadcast_View_ShowBothChats: "Show Both Chats",
   Broadcast_View_ShowSingleChats: "Show Single Chat",
   Broadcast_View_ShowChat: "Show Chat",
+  Broadcast_Store_FreeToPlay: "Free to Play",
 
   PartnerEvent_1: "Other Event",
   PartnerEvent_4: "Meeting Event",

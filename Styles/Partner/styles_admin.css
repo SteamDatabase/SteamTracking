@@ -254,7 +254,7 @@ textarea.gray {
 }
 
 .formlabelwide {
-	width: 22em;
+	width: 24em;
 	float: left;
 }
 
@@ -2260,6 +2260,21 @@ html, body { height:100%; }
 	background-color: #666666;
 }
 
+.drag_and_drop_instructions
+{
+	margin-top: 8px;
+}
+
+.drag_and_drop.has_files .drag_and_drop_instructions
+{
+	display: none;
+}
+
+.drag_and_drop:not(.has_files) .drag_and_drop_upload_button
+{
+	display: none;
+}
+
 .instructions {
 	padding: 16px;
 	background: -webkit-linear-gradient( 315deg, rgba( 114, 118, 133, 0.1) 5%,rgba( 114, 118, 133, 0.3) 95%);
@@ -3160,3 +3175,102 @@ span.new {
 	padding-top: 8px;
 	text-align: right;
 }
+
+.graphical_assets_guidelines_title {
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 24px;
+	}
+
+.graphical_assets_override_ctn {
+	padding: 20px 12px;
+	border: 1px solid #7A7A7A;
+}
+
+.graphical_assets_tab_content:not(.active)
+{
+	display: none;
+}
+
+.graphical_assets_tabs
+{
+	display: flex;
+	margin-bottom: 16px;
+	border-bottom: 1px solid #67c1f5;
+	align-items: flex-end;
+	text-align: center;
+}
+
+.graphical_assets_tab
+{
+	margin: 0 16px;
+	padding: 4px 12px;
+	cursor: pointer;
+	border-bottom: 4px solid transparent;
+
+	transition: all 0.25s;
+
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.graphical_assets_tab.active,
+.graphical_assets_tab:hover
+{
+	border-bottom-color: #67c1f5;
+}
+
+.graphical_assets_tab.active
+{
+	cursor: default;
+}
+
+.graphical_assets_tab:first-child
+{
+	margin-left: 0;
+}
+
+.graphical_asset_status
+{
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.graphical_asset_desc_label
+{
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.checklist_incomplete
+{
+	color: #e24044;
+}
+
+.checklist_suggested
+{
+	color: #e76e34;
+}
+
+.checklist_complete
+{
+	color: #a4d007;
+}
+
+.launch_library_placement_tool
+{
+	text-align: center;
+	padding: 12px 0;
+}
+
+.launch_library_placement_tool .btn_medium > span
+{
+	min-width: 280px;
+	padding: 6px 15px;
+}
+
+/*
+incomplete #e24044
+suggested #e76e34
+complete #A4D007
+ */

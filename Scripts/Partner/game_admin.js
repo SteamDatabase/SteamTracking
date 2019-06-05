@@ -463,7 +463,7 @@ function OnImagesLoadComplete( images )
 			continue;
 
 		// make sure the upload button is enabled
-		$J( '#image_upload_btn' ).show();
+		$J( '#game_image_drop' ).addClass( 'has_files' );
 
 		var filename = images[i].filename;
 		var image = images[i]['image'];

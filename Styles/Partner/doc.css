@@ -474,7 +474,8 @@ h2.editorOnly {
 	transition-timing-function: ease-in-out;
 	position: sticky;
 	top: 0;
-	padding-top: 20px;
+	max-height: calc(100vh - 250px);
+	overflow-y: auto;
 }
 
 .docScrollColumn {

@@ -262,7 +262,7 @@ LocalizationReady("friendsui", "english", {
   PersonaStateInvisibleNote: "Chat and notifications are still on.",
 
   Menu_Help_Capital: "HELP",
-  Menu_LogOut: "Log Out",
+  Menu_LogOut: "Sign Out",
   Menu_AddAFriend_Capital: "ADD A FRIEND",
   Menu_PendingInvites_Capital: "PENDING INVITES (%1$s)",
   Menu_InviteLink_Capital: "INVITE LINK",
@@ -273,7 +273,7 @@ LocalizationReady("friendsui", "english", {
   Menu_FriendInvite: "Friend Invite",
   Menu_FriendInvitesCount: "%1$s Friend Invite",
   Menu_FriendInvitesCount_Plural: "%1$s Friend Invites",
-  Menu_LogOut_Prompt: "Are you sure you want to log out?",
+  Menu_LogOut_Prompt: "Are you sure you want to sign out?",
 
   ConnectionTrouble_Connecting: "Connecting to Steam...",
   ConnectionTrouble_LoggingIn: "Logging in to Steam...",
@@ -769,6 +769,7 @@ LocalizationReady("friendsui", "english", {
   Friend_Menu_InviteToLobby: "Invite to Lobby",
   Friend_Menu_InviteToWatch: "Invite to Watch",
   Friend_Menu_InviteToRemotePlay: "Invite for Remote Play",
+  Friend_Menu_CancelRemotePlay: "Cancel Remote Play",
   Friend_Menu_KickFromChatRoom: "Kick",
   Friend_Menu_LaunchGame: "Launch ",
   Friend_Menu_HasLeftChat: "No Longer in Chat",

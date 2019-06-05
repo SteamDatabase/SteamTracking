@@ -535,6 +535,15 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 
 function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref, divToHide2 )
 {
+	if ( !g_AccountID )
+	{
+		ShowAlertDialog( "Please login...", "You must log into Steam to add an item to your wishlist." )
+		.done( function() {
+			window.location.href = 'https://store.steampowered.com//login?redir=app/' + appid;
+		} );
+		return;
+	}
+
 	var url = 'https://store.steampowered.com/api/addtowishlist';
 	if ( navref )
 	{

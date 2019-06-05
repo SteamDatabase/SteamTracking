@@ -6438,7 +6438,7 @@ button.DialogButton::-moz-focus-inner {
 .FullModalOverlay .ModalPosition_Content {
   height: initial;
   width: initial;
-  max-width: 80vw;
+  max-width: 88vw;
   max-height: 90vh; }
 
 .ModalOverlayContent {
