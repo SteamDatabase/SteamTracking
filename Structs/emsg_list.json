@@ -2184,6 +2184,18 @@
         "server_type": 42
     },
     {
+        "emsg": 6626,
+        "name": "k_EMsgClientMMSGetLobbyStatus",
+        "flags": 6,
+        "server_type": 42
+    },
+    {
+        "emsg": 6627,
+        "name": "k_EMsgClientMMSGetLobbyStatusResponse",
+        "flags": 6,
+        "server_type": 42
+    },
+    {
         "emsg": 6801,
         "name": "k_EMsgNonStdMsgMemcached",
         "flags": 0,

@@ -87,6 +87,7 @@ enum EStreamControlMessage {
 	k_EStreamControlInputTouchFingerDown = 117;
 	k_EStreamControlInputTouchFingerMotion = 118;
 	k_EStreamControlInputTouchFingerUp = 119;
+	k_EStreamControlSetCaptureSize = 120;
 }
 
 enum EStreamVersion {
@@ -495,6 +496,11 @@ message CInputTextMsg {
 
 message CSetTitleMsg {
 	optional string text = 1;
+}
+
+message CSetCaptureSizeMsg {
+	optional int32 width = 1;
+	optional int32 height = 2;
 }
 
 message CSetIconMsg {

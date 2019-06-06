@@ -1856,7 +1856,7 @@
 	"Library_ControllerBindingErrorTitle"		"Error"
 	"Library_ControllerBindingWarningTitle"		"Warning"
 	"Library_ControllerSaveDefaultTitle"	  "Official Configuration for {s:title}"
-	"Library_ControllerSaveDefaultDescription"	  "Configuration created by {s:bindingcreator} for use with the Steam Controller."
+	"Library_ControllerSaveDefaultDescription"	  "Configuration created by {s:bindingcreator} for use with the {s:controllertype}."
 	"Library_ControllerSaveCommunity" "Save new community binding"
 	"Library_ControllerSaveCommunityDescription" "Can't be undone"
 	"Library_ControllerSaveTemplate" "Save new template binding"

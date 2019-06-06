@@ -4,6 +4,13 @@ import "encrypted_app_ticket.proto";
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
+enum EMMSLobbyStatus {
+	k_EMMSLobbyStatusInvalid = 0;
+	k_EMMSLobbyStatusExists = 1;
+	k_EMMSLobbyStatusDoesNotExist = 2;
+	k_EMMSLobbyStatusNotAMember = 3;
+}
+
 message CMsgClientUDSP2PSessionStarted {
 	optional fixed64 steamid_remote = 1;
 	optional int32 appid = 2;
@@ -526,6 +533,19 @@ message CMsgClientMMSInviteToLobby {
 	optional uint32 app_id = 1;
 	optional fixed64 steam_id_lobby = 2;
 	optional fixed64 steam_id_user_invited = 3;
+}
+
+message CMsgClientMMSGetLobbyStatus {
+	optional uint32 app_id = 1;
+	optional fixed64 steam_id_lobby = 2;
+	optional bool claim_membership = 3;
+	optional bool claim_ownership = 4;
+}
+
+message CMsgClientMMSGetLobbyStatusResponse {
+	optional uint32 app_id = 1;
+	optional fixed64 steam_id_lobby = 2;
+	optional .EMMSLobbyStatus lobby_status = 3 [default = k_EMMSLobbyStatusInvalid];
 }
 
 message CMsgClientInviteToGame {
