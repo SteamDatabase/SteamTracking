@@ -12,12 +12,13 @@ Protobufs/google/
 *.webm
 *.swp
 
+ClientExtracted/steamcmd
 ClientExtracted/steam_osx
 ClientExtracted/ubuntu12_32/steam
 ClientExtracted/ubuntu12_64/steam
 ClientExtracted/steam/drivercheck/
 ClientExtracted/ThirdPartyLegalNotices.doc
-ClientExtracted/Frameworks/
+ClientExtracted/Frameworks*
 
 # Ignore all translations
 ClientExtracted/**/*_arabic*.[ht]*

@@ -8,7 +8,7 @@ export LC_ALL=C
 
 DIR="$(dirname "$(readlink -f "$0")")"
 
-cd "$DIR/.support"
+cd "$DIR/.support" || exit 1
 
 echo Deleting existing files
 
@@ -58,44 +58,51 @@ echo Dumping buildbot paths
 
 #find ubuntu/ | sort > "$DIR/BuildbotPaths/ubuntu_binaries.txt"
 
-for i in $(find bins/ -name '*.dylib');
+while IFS= read -r -d '' file
 do
-	echo "Dumping $i"
-	
-	name=$(basename "$i" .dylib);
-	
-	strings "$i" | grep "/buildbot/" | sed "s/^[^\/]*\//\//" | sed "s/\:[0-9]*$//" | sort -u > "$DIR/BuildbotPaths/$name.txt"
-	
-	./nm-with-macho -C -p "$i" | grep -Evi "GCC_except_table|google::protobuf|steam_rel_osx_builder" | awk '{$1=""; print $0}' | sort -u > "$DIR/Symbols/$name.txt"
-done
+	echo "Dumping $file"
+
+	name=$(basename "$file" .dylib);
+
+	strings "$file" | grep "/buildbot/" | sed "s/^[^\/]*\//\//" | sed "s/\:[0-9]*$//" | sort -u > "$DIR/BuildbotPaths/$name.txt"
+
+	./nm-with-macho -C -p "$file" | grep -Evi "GCC_except_table|google::protobuf|steam_rel_osx_builder" | awk '{$1=""; print $0}' | sort -u > "$DIR/Symbols/$name.txt"
+done <   <(find bins/ -name '*.dylib' -print0)
 
 strings bins/steamui.dylib | grep "/api/" | sort > "$DIR/API/Storefront.txt"
+
+#
+# Jump to extracted folder
+#
+
+cd "$DIR/ClientExtracted/" || exit 1
+
+#
+# PRETTIFY JAVASCRIPT
+#
+
+echo Prettifying javascript
+
+while IFS= read -r -d '' file
+do
+	echo "Prettifying $file"
+
+	prettier --write "$file"
+done <   <(find steamui/ -maxdepth 1 -name '*.js' -print0)
 
 #
 # CHANGE CRAPPY ENCODINGS TO UTF-8
 #
 
-cd "$DIR/ClientExtracted/"
-
 echo Fixing encodings
 
-for i in $(find -name '*.txt' -o -name '*.xml' -o -name '*.cfg' -o -name '*.res');
+while IFS= read -r -d '' file
 do
-	encoding=$(file -bi "$i" | sed -e 's/.*[ ]charset=//');
-	
+	encoding=$(file -bi "$file" | sed -e 's/.*[ ]charset=//');
+
 	if [ "$encoding" != "utf-8" ] && [ "$encoding" != "binary" ];
 	then
-		iconv -f "$encoding" -t UTF-8 "$i" -o "$i.tmp" && mv "$i.tmp" "$i"
+		iconv -f "$encoding" -t UTF-8 "$file" -o "$file.tmp" && mv "$file.tmp" "$file"
 	fi
-done
+done <   <(find . \( -name '*.txt' -o -name '*.xml' -o -name '*.cfg' -o -name '*.res' \) -print0)
 
-#
-# CONVERT .TGA AND .ICO TO .PNG
-#
-
-#echo Converting images to pngs
-
-#for i in $(find -name '*.tga');
-#do
-#	convert -strip "$i" "$i.png"
-#done
