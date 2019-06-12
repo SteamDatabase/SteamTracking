@@ -385,7 +385,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   cursor: default;
   position: relative;
   min-width: 120px;
-  /* Separate menu sections with extra space and different header text style. */ }
+  /* Separate menu sections with extra space and different header text style. */
+  /* Brighten the top border to separate out some menu items */ }
   .contextmenu_contextMenuItem_CBC-y:first-child {
     border-top: 0.5px solid rgba(80, 87, 94, 0); }
   .contextmenu_contextMenuItem_CBC-y:hover, .contextmenu_contextMenuItem_CBC-y.contextmenu_active_3vYUp {
@@ -408,6 +409,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
     padding-top: 8px;
     font-size: 12px;
     text-transform: uppercase; }
+  .contextmenu_contextMenuItem_CBC-y.contextmenu_StrongerSeparation_31Tii {
+    border-top-color: dimgray; }
   .contextmenu_contextMenuItem_CBC-y .SVGIcon_Button {
     height: 10px;
     width: 10px;
@@ -420,6 +423,17 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
     right: 2px;
     top: 6px;
     fill: #9ca4a7; }
+  .contextmenu_contextMenuItem_CBC-y .SVGIcon_PlusCircle {
+    height: 16px;
+    width: 16px;
+    margin-left: -3px;
+    margin-bottom: -3px; }
+    .contextmenu_contextMenuItem_CBC-y .SVGIcon_PlusCircle line {
+      stroke: gray;
+      shape-rendering: crispEdges;
+      stroke-width: 20px; }
+    .contextmenu_contextMenuItem_CBC-y .SVGIcon_PlusCircle circle {
+      opacity: 0; }
 
 .contextMenuCheckMark {
   width: 4px;
@@ -8022,7 +8036,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%; }
+  height: 100%;
+  min-height: 420px; }
 
 .shared_common_MarkdownLink_KOE6T {
   text-decoration: underline;
@@ -15464,6 +15479,17 @@ span.mention.me {
   flex-direction: row;
   width: auto;
   height: auto; }
+
+.remotePlayPlayerVoiceContainer {
+  padding-left: 50px; }
+
+.remotePlayPlayerMuteContainer {
+  display: flex;
+  flex-direction: row;
+  width: 210px; }
+
+.remotePlayPlayerMuteContainer .DialogCheckbox {
+  margin-left: 10px; }
 
 .Dialog_RemotePlay .DialogButton {
   width: auto;

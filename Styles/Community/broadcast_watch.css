@@ -1076,7 +1076,7 @@ body:not(.iframe) .BroadcastRowShadow
 {
 }
 
-#ReportBroadcast
+.ReportBroadcast
 {
 	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_report.png' );
 	background-position: 6px center;
@@ -1084,13 +1084,13 @@ body:not(.iframe) .BroadcastRowShadow
 	padding-left: 28px;
 }
 
-#ReportBroadcast:hover
+.ReportBroadcast:hover
 {
 	background-image: url(' https://steamcommunity-a.akamaihd.net/public/shared/images/broadcast/icon_report_white.png' );
 }
 
-#ReportBroadcast.Reported,
-#ReportBroadcast.Reported:hover
+.ReportBroadcast.Reported,
+.ReportBroadcast.Reported:hover
 {
 	color: #35d340;
 	cursor: default;

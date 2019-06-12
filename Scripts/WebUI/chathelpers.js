@@ -257,7 +257,6 @@
       (a[(a.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
       (a[(a.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
       (a[(a.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
-      (a[(a.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
       (a[(a.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
       (a[(a.k_EESportTournamentStreamEvent = 17)] =
         "k_EESportTournamentStreamEvent"),
@@ -273,11 +272,8 @@
       (a[(a.k_EIRLEvent = 27)] = "k_EIRLEvent"),
       (a[(a.k_ENewsEvent = 28)] = "k_ENewsEvent"),
       (a[(a.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
-      (a[(a.k_EInGameContentReleaseEvent = 30)] =
-        "k_EInGameContentReleaseEvent"),
       (a[(a.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (a[(a.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-      (a[(a.k_ESeasonUpdate = 33)] = "k_ESeasonUpdate"),
       ((u = s || (s = {}))[(u.k_ELaunchSource_None = 0)] =
         "k_ELaunchSource_None"),
       (u[(u.k_ELaunchSource_2ftLibraryDetails = 100)] =

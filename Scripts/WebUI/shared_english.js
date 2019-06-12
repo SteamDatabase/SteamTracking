@@ -660,5 +660,9 @@ LocalizationReady("shared", "english", {
     "Cannot upload %1$s.  Only jpg, png, gif, webm, mpg, and ogv file types are supported.",
   ConnectionTrouble_FailedToConnect: "Failed to connect to Steam",
   Chat_Upload_ErrorCloud: "Failed to upload image data to cloud server.",
-  Chat_Settings_Error_ServerError: "A server error occurred"
+  Chat_Settings_Error_ServerError: "A server error occurred",
+  Broadcast_ViewerCount: "%1$s viewers",
+  Broadcast_VideoContext_ToggleStats: "Toggle technical stats",
+  Broadcast_VideoContext_OpenStore: "Visit Store",
+  Broadcast_None: "None"
 });
