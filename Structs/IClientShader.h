@@ -9,4 +9,5 @@ public:
     virtual unknown_ret ProcessShaderCache(unsigned int) = 0;
     virtual unknown_ret SetupShaderCacheEnvironment(char*, unsigned int) = 0;
     virtual unknown_ret BAppHasPendingShaderContentDownload(unsigned int) = 0;
+    virtual unknown_ret GetAppPendingShaderDownloadSize(unsigned int) = 0;
 };
