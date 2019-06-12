@@ -4,13 +4,6 @@ var g_sBaseURL = "";
 var g_emailVerificationDialog = null;
 var g_parentalConsentDialog = null;
 
-function ResetReCaptcha()
-{
-	if (typeof grecaptcha !== 'undefined') {
-		grecaptcha.reset();
-	}
-}
-
 function CaptchaText()
 {
 	return $J('#captcha_text').val() || $J('#g-recaptcha-response').val();
@@ -562,7 +555,7 @@ function ShowError( strError )
 	Effect.ScrollTo( error_div );
 	new Effect.Highlight( error_div, { endcolor : '#000000', startcolor : '#f4b786' } );
 
-	ResetReCaptcha();
+	RefreshCaptcha();
 }
 
 
@@ -797,6 +790,35 @@ function CheckPasswordStrength()
 	g_timerPasswordAvail = window.setTimeout( CheckPasswordAvail, 250 ); // milliseconds to wait
 }
 
+var g_recaptchaInstance = null;
+function UpdateCaptcha(data)
+{
+	$J( '#captcha_text' ).val('');
+	if ( data.gid != -1 ) {
+		$J( '#captcha_entry' ).show();
+		$J( '#captchagid' ).val(data.gid);
+		if ( data.type == 1 ) {
+			$J( '#captcha_entry_recaptcha' ).hide();
+			$J( '#captcha_entry_text' ).show();
+			$J( '#captchaImg' ).attr( 'src', g_sBaseURL + 'login/rendercaptcha?gid=' + data.gid );
+		} else if ( data.type == 2 ) {
+			$J( '#captcha_entry_recaptcha' ).show();
+			$J( '#captcha_entry_text' ).hide();
+			if ( g_recaptchaInstance !== null ) {
+				grecaptcha.reset( g_recaptchaInstance );
+			} else {
+				g_recaptchaInstance = grecaptcha.render( 'captcha_entry_recaptcha', {
+					'sitekey': data.sitekey,
+					'theme': 'dark'
+				});
+			}
+		}
+	} else {
+		$J( '#captcha_entry' ).hide();
+		$J( '#captchagid' ).val('-1');
+	}
+}
+
  
 function RefreshCaptcha()
 {
@@ -816,13 +838,7 @@ function RefreshCaptcha()
 	      	  return;
 	      	}
 	      	
-	      	var gid = result.gid;
-			if ( gid != -1 ) 
-			{
-				$('captchaImg').src = g_sBaseURL + 'login/rendercaptcha?gid='+gid;
-			}
-			document.getElementById('captchagid').value = gid;
-			$J('#captcha_text').val( '' );
+			UpdateCaptcha(result);
 		  }
 	    }
 	  });

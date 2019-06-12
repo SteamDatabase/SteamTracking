@@ -430,6 +430,40 @@
                     "optional": true
                 }
             ]
+        },
+        {
+            "name": "GetAddItemHistory",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Gets a list of items that have been added to accounts",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "max_results",
+                    "type": "uint32",
+                    "optional": true
+                },
+                {
+                    "name": "start_highwater",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "start_timestamp",
+                    "type": "uint32",
+                    "optional": false
+                }
+            ]
         }
     ]
 }

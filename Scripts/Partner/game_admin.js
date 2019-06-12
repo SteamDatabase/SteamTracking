@@ -407,14 +407,19 @@ function DetermineImageType( image )
 {
 	for ( var iImageType = 0; iImageType < g_ImageTypes.length; iImageType++ )
 	{
+		var bSupports2X = g_ImageTypes.supports2x;
+
 		if ( g_ImageTypes[iImageType].width == 0 )
 			continue;
 
-		if ( g_ImageTypes[iImageType].width != image.width )
+		if ( g_ImageTypes[iImageType].width != image.width &&
+			( !bSupports2X || g_ImageTypes[iImageType].width * 2 != image.width ) )
 			continue;
 
 		// some image types don't have a set height (background)
-		if ( g_ImageTypes[iImageType].height != 0 && g_ImageTypes[iImageType].height != image.height )
+		if ( g_ImageTypes[iImageType].height != 0 &&
+			g_ImageTypes[iImageType].height != image.height &&
+			( !bSupports2X || g_ImageTypes[iImageType].height * 2 != image.height ) )
 			continue;
 
 		return g_ImageTypes[iImageType].name;

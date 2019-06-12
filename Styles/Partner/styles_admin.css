@@ -3269,6 +3269,44 @@ span.new {
 	padding: 6px 15px;
 }
 
+.tabbubble
+{
+	border: 1px solid #a4d007;
+	background: #2a2b2e;
+	padding: 12px;
+	position: relative;
+	margin-bottom: 18px;
+}
+
+.tabbubble_arrow
+{
+	position: absolute;
+	bottom: -20px;
+	left: 286px;
+
+	border-top: 20px solid #a4d007;
+	border-left: 21px solid transparent;
+	border-right: 21px solid transparent;
+	width: 0;
+	height: 0;
+}
+
+.tabbubble_arrow_inner
+{
+	position: absolute;
+	left: -19px;
+	top: -20px;
+	border-top: 18px solid #2a2b2e;
+	border-left: 19px solid transparent;
+	border-right: 19px solid transparent;
+}
+
+.tabbubble_content
+{
+	text-align: center;
+	color: #ffffff;
+}
+
 /*
 incomplete #e24044
 suggested #e76e34
