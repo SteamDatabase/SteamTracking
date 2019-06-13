@@ -294,7 +294,7 @@
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
- R typeinfo name for CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >
  R typeinfo name for CWorkshopItemBuilder::CCallback_OnAppInfoUpdate
@@ -497,7 +497,6 @@
  T CControllerConfigUploader::OnSendQueryUGCRequestResult(SteamUGCQueryCompleted_t*, bool)
  T CControllerConfigUploader::Upload(unsigned int, char const*)
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
- T CDefOps<unsigned long long>::LessFunc(unsigned long long const&, unsigned long long const&)
  T CDirIterator::BNextFile()
  T CDirIterator::CDirIterator(char const*)
  T CDirIterator::CurrentFileName()
@@ -563,37 +562,31 @@
  T CLogger::_EmitEvent(ESpewGroup, int, int, CLogWatchParam&, char const*, __va_list_tag*, bool)
  T CMsgSpewThrottle::CMsgSpewThrottle()
  T CMsgSpewThrottle::~CMsgSpewThrottle()
- T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::CMultipleCallResults(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStoragePublishFileResult_t*, bool))
  T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::Run(void*)
  T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CControllerConfigUploader, RemoteStoragePublishFileResult_t>::~CMultipleCallResults()
- T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::CMultipleCallResults(CControllerConfigUploader*, void (CControllerConfigUploader::*)(RemoteStorageUpdatePublishedFileResult_t*, bool))
  T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::Run(void*)
  T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CControllerConfigUploader, RemoteStorageUpdatePublishedFileResult_t>::~CMultipleCallResults()
- T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::CMultipleCallResults(CControllerConfigUploader*, void (CControllerConfigUploader::*)(SteamUGCQueryCompleted_t*, bool))
  T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::Run(void*)
  T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CControllerConfigUploader, SteamUGCQueryCompleted_t>::~CMultipleCallResults()
- T CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>::CMultipleCallResults(CPreDepotOperations*, void (CPreDepotOperations::*)(CEGWrapResponse_t*, bool))
  T CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>::Run(void*)
  T CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CPreDepotOperations, CEGWrapResponse_t>::~CMultipleCallResults()
- T CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>::CMultipleCallResults(CPreDepotOperations*, void (CPreDepotOperations::*)(DRMWrapResponse_t*, bool))
  T CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>::Run(void*)
  T CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CPreDepotOperations, DRMWrapResponse_t>::~CMultipleCallResults()
- T CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>::CMultipleCallResults(CPreDepotOperations*, void (CPreDepotOperations::*)(InstallScriptSignResponse_t*, bool))
  T CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>::Run(void*)
  T CMultipleCallResults<CPreDepotOperations, InstallScriptSignResponse_t>::Run(void*, bool, unsigned long long)
@@ -804,7 +797,7 @@
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
- T CUtlRBTree<CUtlMap<int, CUtlStringList*, int, bool (*)(int const&, int const&)>::Node_t, int, CUtlMap<int, CUtlStringList*, int, bool (*)(int const&, int const&)>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<int, CUtlStringList*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CUtlStringList*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::Find(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&) const
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&, bool, int&, bool&, bool&)
@@ -814,19 +807,19 @@
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
- T CUtlRBTree<CachedVPKRead_t, int, bool (*)(CachedVPKRead_t const&, CachedVPKRead_t const&), CDefRBTreeBalanceListener<int> >::Find(CachedVPKRead_t const&) const
- T CUtlRBTree<CachedVPKRead_t, int, bool (*)(CachedVPKRead_t const&, CachedVPKRead_t const&), CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CachedVPKRead_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CachedVPKRead_t, int, bool (*)(CachedVPKRead_t const&, CachedVPKRead_t const&), CDefRBTreeBalanceListener<int> >::Insert(CachedVPKRead_t const&, bool)
- T CUtlRBTree<CachedVPKRead_t, int, bool (*)(CachedVPKRead_t const&, CachedVPKRead_t const&), CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CachedVPKRead_t, int, bool (*)(CachedVPKRead_t const&, CachedVPKRead_t const&), CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >::Find(unsigned long long const&) const
- T CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >::FindInsertionPosition(unsigned long long const&, bool, int&, bool&, bool&)
- T CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >::Insert(unsigned long long const&, bool)
- T CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >::Remove(unsigned long long const&)
- T CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<unsigned long long, int, bool (*)(unsigned long long const&, unsigned long long const&), CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CachedVPKRead_t, int, CDefLess<CachedVPKRead_t>, CDefRBTreeBalanceListener<int> >::Find(CachedVPKRead_t const&) const
+ T CUtlRBTree<CachedVPKRead_t, int, CDefLess<CachedVPKRead_t>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CachedVPKRead_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CachedVPKRead_t, int, CDefLess<CachedVPKRead_t>, CDefRBTreeBalanceListener<int> >::Insert(CachedVPKRead_t const&, bool)
+ T CUtlRBTree<CachedVPKRead_t, int, CDefLess<CachedVPKRead_t>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CachedVPKRead_t, int, CDefLess<CachedVPKRead_t>, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::Find(unsigned long long const&) const
+ T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(unsigned long long const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::Insert(unsigned long long const&, bool)
+ T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::Remove(unsigned long long const&)
+ T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_NextInorder(int, unsigned long, void*) const
@@ -857,9 +850,9 @@
  T CUtlThreadSafeQueue<CLogEvent*>::~CUtlThreadSafeQueue()
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::~CUtlThreadSafeQueue()
+ T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::AddToTail(CFileWriter const* const&)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::FindAndRemove(CFileWriter const* const&)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::GrowVector(int)
- T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::InsertBefore(int, CFileWriter const* const&)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Remove(int)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::Validate(CValidator&, char const*)
  T CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >::~CUtlVector()
@@ -874,47 +867,47 @@
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString const&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::InsertBefore(int, CUtlString const&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<ChunkHashFraction_t, CUtlMemory<ChunkHashFraction_t> >::GrowVector(int)
  T CUtlVector<ChunkHashFraction_t, CUtlMemory<ChunkHashFraction_t> >::InsertMultipleBefore(int, int, ChunkHashFraction_t const*)
  T CUtlVector<ChunkHashFraction_t, CUtlMemory<ChunkHashFraction_t> >::~CUtlVector()
+ T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::AddToTail()
  T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::GrowVector(int)
- T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::InsertBefore(int)
  T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::RemoveAll()
  T CUtlVector<ConParams::Entry_t, CUtlMemory<ConParams::Entry_t> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
- T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::InsertBefore(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
+ T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::AddToTail(KeyValues* const&)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
- T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::InsertBefore(int, KeyValues* const&)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::AddMultipleToTail(int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::~CUtlVector()
+ T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::AddToTail(ModuleCount_t const&)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::InsertBefore(int, ModuleCount_t const&)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Remove(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
+ T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char* const&)
  T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
  T CUtlVector<char*, CUtlMemory<char*> >::GrowVector(int)
- T CUtlVector<char*, CUtlMemory<char*> >::InsertBefore(int, char* const&)
  T CUtlVector<char*, CUtlMemory<char*> >::PurgeAndDeleteElements()
  T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
+ T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::AddToTail(unsigned char const&)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::AddToTail(unsigned char&&)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::GrowVector(int)
- T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::InsertBefore(int, unsigned char const&)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::SetCount(int)
  T CUtlVector<unsigned char, CUtlMemory<unsigned char> >::~CUtlVector()
+ T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::~CUtlVector()
+ T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::AddToTail(unsigned long long const&)
  T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::GrowVector(int)
- T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::InsertBefore(int, unsigned long long const&)
  T CUtlVector<unsigned long long, CUtlMemory<unsigned long long> >::~CUtlVector()
  T CUtlVectorAutoPurge<char*>::~CUtlVectorAutoPurge()
  T CValidateAutoPushPop::~CValidateAutoPushPop()
@@ -943,7 +936,6 @@
  T CWorkshopItemDownloader::CWorkshopItemDownloader()
  T CWorkshopItemDownloader::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemDownloader::OnDownloadItemResult(DownloadItemResult_t*)
- T CachedVPKRead_t::Less(CachedVPKRead_t const&, CachedVPKRead_t const&)
  T CallbackMgr_RegisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_RegisterCallback(CCallbackBase*, int)
  T CallbackMgr_RegisterInterfaceFuncs(void*)
@@ -1153,6 +1145,9 @@
  T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
+ T SteamVProf::CVProfManager::DumpAllThreadProfiles()
+ T SteamVProf::CVProfManager::StartProfilingAllThreads()
+ T SteamVProf::CVProfManager::StopProfilingAllThreads()
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
@@ -1329,6 +1324,7 @@
  b g_BreakSet
  b g_BreakSetIncludingColons
  b g_CleanupSymbolTable
+ b g_bRunProfile
  b g_hSteamPipe
  b g_hSteamUser
  b g_pClientAppManager
@@ -1374,6 +1370,7 @@
  b g_pClientVideo
  b g_pGetSymbolProc
  b g_pSysModuleSteam
+ b g_rtime32EndProfile
  b guard variable for CPackedStore::GetFileHandle(int)::invalid
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetNetAdrResolveCacheMutex()::mutex
@@ -1394,6 +1391,7 @@
  b mExprTree
  b mExpression
  b mIdentifier
+ b profile_command
  b quit_command
  b run_app_build_command
  b run_app_build_http_command
@@ -1569,6 +1567,7 @@
  t logoff(void*, ConParams&, ConCommand&)
  t logon(void*, ConParams&, ConCommand&)
  t logout(void*, ConParams&, ConCommand&)
+ t profile(void*, ConParams&, ConCommand&)
  t quit(void*, ConParams&, ConCommand&)
  t run_app_build(void*, ConParams&, ConCommand&)
  t run_app_build_http(void*, ConParams&, ConCommand&)

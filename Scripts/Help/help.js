@@ -1351,9 +1351,9 @@ HelpWizard = {
 					elError.text( data.errorMsg ).slideDown();
 
 				if ( data.needCaptcha )
-					HelpWizard.RefreshCaptcha();
+					HelpWizard.RefreshCaptcha( 1 );
 				else
-					HelpWizard.UpdateCaptcha( -1 );
+					HelpWizard.UpdateCaptcha( { 'gid': -1 } );
 			}
 		}).always( function() {
 			form.removeClass( 'loading' );
@@ -1496,26 +1496,43 @@ HelpWizard = {
 		});
 	},
 
-	RefreshCaptcha: function()
+	m_reCaptchaInstance: null,
+
+	RefreshCaptcha: function( nUsage )
 	{
 		var _wizard = this;
 		$J.ajax({
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/RefreshCaptcha",
-			data: g_rgDefaultWizardPageParams
+			data: $J.extend( {}, g_rgDefaultWizardPageParams, { usage: nUsage } )
 		}).done( function( data ) {
-			_wizard.UpdateCaptcha( data.gid );
+			_wizard.UpdateCaptcha( data );
 		});
 	},
 
-	UpdateCaptcha: function( gid )
+	UpdateCaptcha: function( data )
 	{
-		if ( gid != -1 )
+		if ( data.gid != -1 )
 		{
 			$J( '#captcha_entry' ).show();
-			$J( '#captchaImg' ).attr( 'src', 'https://help.steampowered.com/login/rendercaptcha/?gid='+gid );
 			$J( '#input_captcha' ).val( '' );
-			$J( '#input_captcha_gid' ).val( gid );
+			if ( data.type == 1 ) {
+				$J( '#captcha_entry_text' ).show();
+				$J( '#captcha_entry_recaptcha' ).hide();
+				$J( '#captchaImg' ).attr( 'src', 'https://help.steampowered.com/login/rendercaptcha/?gid=' + data.gid );
+			} else if ( data.type == 2 ) {
+				$J( '#captcha_entry_text' ).hide();
+				$J( '#captcha_entry_recaptcha' ).show();
+				if ( this.m_reCaptchaInstance !== null ) {
+					grecaptcha.reset( this.m_reCaptchaInstance );
+				} else {
+					this.m_reCaptchaInstance = grecaptcha.render( 'captcha_entry_recaptcha', {
+						'sitekey': data.sitekey,
+						'theme': 'dark'
+					});
+				}
+			}
+			$J( '#input_captcha_gid' ).val( data.gid );
 		}
 		else
 		{
@@ -2350,6 +2367,8 @@ HelpRequestPage = {
 			return;
 		}
 
+		HelpWizard.RefreshCaptcha(3);
+
 		HelpRequestPage.InitHelpRequestAttachmentUpload( $J('#create_help_request_form') );
 
 		$J('#wizard_contents > .wizard_content_wrapper').addClass('show_create_help_request_form');
@@ -2472,6 +2491,7 @@ HelpRequestPage = {
 			}
 			else if ( data.error )
 			{
+				HelpWizard.RefreshCaptcha(3);
 				if ( data.next_page )
 				{
 					var Modal = ShowAlertDialog( 'Contact Steam Support', data.error ).done( function() { HelpWizard.LoadPageFromHash( false, data.next_page, true ); } );
