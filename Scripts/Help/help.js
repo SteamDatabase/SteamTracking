@@ -1501,6 +1501,8 @@ HelpWizard = {
 	RefreshCaptcha: function( nUsage )
 	{
 		var _wizard = this;
+		if ( typeof nUsage === 'undefined' )
+			nUsage = 1;
 		$J.ajax({
 			type: "POST",
 			url: "https://help.steampowered.com/wizard/RefreshCaptcha",
