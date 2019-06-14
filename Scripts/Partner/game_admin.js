@@ -407,36 +407,37 @@ function DetermineImageType( image )
 {
 	for ( var iImageType = 0; iImageType < g_ImageTypes.length; iImageType++ )
 	{
-		var bSupports2X = g_ImageTypes.supports2x;
+		var ImageType = g_ImageTypes[iImageType];
 
-		if ( g_ImageTypes[iImageType].width == 0 )
+		if ( ImageType.width == 0 )
 			continue;
 
-		if ( g_ImageTypes[iImageType].width != image.width &&
-			( !bSupports2X || g_ImageTypes[iImageType].width * 2 != image.width ) )
+		if ( !IsImageTypeValid( image, ImageType ) )
 			continue;
 
-		// some image types don't have a set height (background)
-		if ( g_ImageTypes[iImageType].height != 0 &&
-			g_ImageTypes[iImageType].height != image.height &&
-			( !bSupports2X || g_ImageTypes[iImageType].height * 2 != image.height ) )
-			continue;
-
-		return g_ImageTypes[iImageType].name;
+		return ImageType.name;
 	}
 
 	// default to screenshot if not found
 	return 'Screenshot';
 }
 
-function IsImageTypeValid( image, type )
+
+function IsImageTypeValid( image, ImageType )
 {
-	if ( type.width && type.width != image.width  )
+	var bSupports2X = ImageType.supports2x;
+
+	if ( ImageType.width != 0 &&
+		ImageType.width != image.width &&
+		( !bSupports2X || ImageType.width * 2 != image.width ) )
 		return false;
 
-	if ( type.height && type.height != image.height )
+	// some image types don't have a set height (background)
+	if ( ImageType.height != 0 &&
+		ImageType.height != image.height &&
+		( !bSupports2X || ImageType.height * 2 != image.height ) )
 		return false;
-
+	
 	return true
 }
 
