@@ -491,7 +491,9 @@ function ReallyCreateAccount()
 	    			  password : $('password').value,
 	    			  count : iAjaxCalls,
 	    			  lt : $('lt').value,
-					  creation_sessionid : g_creationSessionID },
+	    			  creation_sessionid : g_creationSessionID,
+	    			  embedded_appid : g_embeddedAppID,
+	    	},
 		onSuccess: function( transport ) {
 			var bSuccess = false;
 			if ( transport.responseText ) {
