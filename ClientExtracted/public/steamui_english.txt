@@ -4400,7 +4400,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_SettingsControllerBigPictureConfig"	"Big Picture Configuration"
 "Steam_SettingsControllerDesktopConfig"		"Desktop Configuration"
 "Steam_SettingsControllerGuideConfig"		"Guide Button Chord Configuration"
-"Steam_SteamInputDisableNotifications"		"Disable Controller Connected notifications in the the desktop client."
+"Steam_SteamInputDisableNotifications"		"Disable Controller Connected notifications in the desktop client."
 
 "Steam_Settings_ShaderCache"			"Shader Pre-Caching"
 "Steam_Settings_ShaderCache_Info"		"Shader Pre-Caching allows Steam to download pre-compiled GPU shaders matching your system configuration. This allows Vulkan and OpenGL games to load faster and improves framerate stability during gameplay.\n\nIf enabled, Steam will collect shaders from your system when needed. Enabling this feature may slightly increase disk and bandwidth usage."
