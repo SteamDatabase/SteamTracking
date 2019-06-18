@@ -1389,6 +1389,139 @@ a#store_search_link img {
 	overflow: visible;
 }
 
+.summerSale2019_giftActiveBar {
+	width: 100%;
+	height: 45px;
+	z-index: 400;
+
+	position: sticky;
+	top: 0;
+
+	background: rgb(71, 116, 145);
+}
+
+.summerSale2019_contentContainer {
+	max-width: 940px;
+	height: 100%;
+
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	justify-content: space-between;
+
+	background: -moz-linear-gradient(left, rgb(207, 58, 34) 0%, rgb(207, 58, 34) 70%, rgb(71, 116, 145) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left rgb(207, 58, 34) 0%,rgb(207, 58, 34) 70%,rgb(71, 116, 145) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgb(207, 58, 34) 0%,rgb(207, 58, 34), 70%,rgb(71, 116, 145) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#181C24', endColorstr='#597390',GradientType=1 ); /* IE6-9 */
+
+}
+
+.summerSale2019_title {
+	font-family: politica-expanded, sans-serif;
+	font-size: 16px;
+	font-weight: 900;
+	font-style: italic;
+	text-transform: uppercase;
+	color: rgb(24, 28, 36);
+	height: 36px;
+	position: absolute;
+	top: 4px;
+  left: -14px;
+	pointer-events: none;
+	user-select: none;
+	margin-left: 32px;
+}
+
+.summerSale2019_title div
+{
+}
+
+.summerSale2019_title .subtitle
+{
+	font-size: 10px;
+	padding-top: 2px;
+	padding-left: 0px;
+}
+
+.summerSale2019_savings
+{
+	font-size: 10px;	
+	text-align: right;
+	padding-right: 25px;
+	font-family: politica-expanded, sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	padding-top: 10px;
+	text-transform: uppercase;
+	color: rgb(24, 28, 36);
+	height: 45px;
+	width: 250px;
+	pointer-events: none;
+	user-select: none;	
+}
+
+.summerSale2019_icon01
+{
+	width: 76px;
+	height: 45px;
+	position: absolute;
+	left: -70px;
+	background-image: url( '/public/images/v6/events/summersale_2019/flaming_discount.png?v=1' );
+	background-size: contain;
+	background-repeat: no-repeat;
+	pointer-events: none;
+	user-select: none;
+}
+
+.summerSale2019_ember
+{
+	width: 5px;
+	height: 5px;
+	position: absolute;
+	border-radius: 50%;
+	
+	background: -moz-radial-gradient(rgb(255,80,0) 20%,rgba(255,80,0,0) 70%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(rgb(255,80,0) 20%,rgba(255,80,0,0) 70%); /* Chrome10-25,Safari5.1-6 */	
+	background: radial-gradient(rgb(255,80,0) 20%,rgba(255,80,0,0) 70%)
+	pointer-events: none;
+	user-select: none;
+
+	animation-name: fan_the_flames;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
+	animation-fill-mode: both;
+}
+
+@keyframes fan_the_flames {
+	from {
+		opacity: 0;
+		transform: translateX(0) scale(1);
+	}
+	25% {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		transform: translateX(-10em) scale(0);
+	}
+}
+
+.summerSale2019_icon02
+{
+	width: 91px;
+  height: 70px;
+  position: absolute;
+  top: 0px;
+	left: 97%;
+	background-image: url( '/public/images/v6/events/summersale_2019/coin_discount.png?v=1' );
+	background-size: contain;
+	background-repeat: no-repeat;
+	pointer-events: none;
+	user-select: none;
+}
 
 .placeHolder_lunarSale2019_giftActiveBar {
 	background-color: rgb(146, 31, 30);
@@ -2166,6 +2299,32 @@ span.platform_img.razerosvr {
 span.platform_img.windowsmr {
 	background-image: url( '/public/images/v6/icon_platform_windowsmr.png' );
 }
+span.platform_img.valveindex {
+	background-image: url( '/public/images/v6/icon_platform_valveindex.png' );
+	width: 26px;
+}
+
+.hover_release span.platform_img.valveindex {
+	background-image: url( '/public/images/v6/icon_platform_valveindex_dark.png' );
+	width: 26px;
+}
+
+.hover_release span.platform_img.htcvive {
+	background-image: url( '/public/images/v6/icon_platform_htcvive_dark.png' );
+}
+
+.hover_release span.platform_img.oculusrift {
+	background-image: url( '/public/images/v6/icon_platform_oculusrift_dark.png' );
+}
+
+.hover_release span.platform_img.razerosvr {
+	background-image: url( '/public/images/v6/icon_platform_razerosvr_dark.png' );
+}
+
+.hover_release span.platform_img.windowsmr {
+	background-image: url( '/public/images/v6/icon_platform_windowsmr_dark.png' );
+}
+
 
 span.platform_img.hmd_separator {
 	border-left: 1px solid #CCC;
@@ -2316,6 +2475,9 @@ div.game_hover {
 
 .game_hover_box .hover_release {
 	font-size: 10px;
+
+	display: flex;
+	justify-content: space-between;
 }
 
 .game_hover_box p, .game_hover_box {

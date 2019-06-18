@@ -2707,6 +2707,10 @@ ul.transfer_rights li {
 	background-color: #600000;
 }
 
+.cdkey_request.claimed {
+	background-color: #47218a;
+}
+
 .cdkey_request:hover {
 	background-color: #4d4d4d;
 }
@@ -2717,6 +2721,10 @@ ul.transfer_rights li {
 
 .cdkey_request.dev_comp:hover {
 	background-color: #730000;
+}
+
+.cdkey_request.claimed:hover {
+	background-color: #553393;
 }
 
 .cdkey_request.app_credit_partner {
@@ -2746,7 +2754,7 @@ ul.transfer_rights li {
 
 .cdkey_request_checkbox {
 	display: inline-block;
-	padding: 0px 20px 0px 20px;
+	padding: 0px 20px 0px 10px;
 }
 
 .cdkey_request_details_data
@@ -2948,6 +2956,10 @@ div .cdkey_request_details_row
 #requestkeys_table tr.checkerboard1,
 #legend_table tr.checkerboard1{
 	background: #385a88;
+}
+
+#requestkeys_table tr.claimed{
+	background-color: #f11f25c9;
 }
 
 #legend_table td {

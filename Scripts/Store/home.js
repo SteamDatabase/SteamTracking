@@ -597,6 +597,7 @@ GHomepage = {
 
 		var unAppID = rgItem.appid;
 		var unPackageID = rgItem.packageid;
+		var unBundleID = rgItem.bundleid;
 
 		var params = { 'class': rgOptions.class + ' broadcast_capsule', 'data-manual-tracking': 1 };
 		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, rgItem, params );
@@ -632,8 +633,12 @@ GHomepage = {
 			}
 		}
 
+		var rgAppInfo = {};
+		if ( unAppID )
+		{
+			rgAppInfo =  GStoreItemData.rgAppData[ unAppID ];
+		}
 
-		var rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
 		if ( rgAppInfo && rgAppInfo.live_broadcast )
 		{		
 			$ImgCtn.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
@@ -699,8 +704,18 @@ GHomepage = {
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain )
 
-			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_byfriends' ));
-
+			if ( unAppID )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_byfriends' ));
+			}
+			else if ( unPackageID )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recommended_byfriends' ));
+			}
+			else if ( unBundleID )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recommended_byfriends' ));
+			}
 		}
 		else if( rgRecommendationReasons.recent_release_by_creator )
 		{
@@ -726,7 +741,20 @@ GHomepage = {
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain );
-			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_bycurators', null, curator.accountid ));
+
+			if ( unAppID )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_bycurators', null, curator.accountid ));
+			}
+			else if ( unPackageID )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recommended_bycurators', null, curator.accountid ));
+			}
+			else if ( unBundleID )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recommended_bycurators', null, curator.accountid ));
+			}
+
 		}
 		else if( rgRecommendationReasons.recommended && GDynamicStore.s_rgRecommendedTags )
 		{
@@ -749,8 +777,18 @@ GHomepage = {
 			$ReasonMain.append( $J('<div>').addClass('tags').html( rgMatchedTags.join('') ) );
 			$RecommendedReason.append( $ReasonMain );
 
-			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended' ));
-
+			if ( unAppID )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended' ));
+			}
+			else if ( unPackageID )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recommended' ));
+			}
+			else if ( unBundleID )
+			{
+				$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recommended' ));
+			}
 		}
 		else
 		{
@@ -760,11 +798,33 @@ GHomepage = {
 			{
 				if ( rgRecommendationReasons.new_release )
 				{
-					$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recenttopseller' ));
+					if ( unAppID )
+					{
+						$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recenttopseller' ));
+					}
+					else if ( unPackageID )
+					{
+						$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recenttopseller' ));
+					}
+					else if ( unBundleID )
+					{
+						$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recenttopseller' ));
+					}
 				}
 				else if ( rgRecommendationReasons.top_seller )
 				{
-					$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
+					if ( unAppID )
+					{
+						$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
+					}
+					else if ( unPackageID )
+					{
+						$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_topseller' ));
+					}
+					else if ( unBundleID )
+					{
+						$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_topseller' ));
+					}
 				}
 			}
 

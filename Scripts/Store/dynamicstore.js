@@ -206,6 +206,7 @@ GDynamicStore = {
 				}
 
 				GDynamicStore.s_nRemainingCartDiscount = data.nRemainingCartDiscount ? data.nRemainingCartDiscount : 0;
+				GDynamicStore.s_nTotalCartDiscount = data.nTotalCartDiscount ? data.nTotalCartDiscount : 0;
 
 			}).always( function() { $J(fnRunOnLoadCallbacks); } );
 		}
@@ -447,7 +448,11 @@ GDynamicStore = {
 		if ( GDynamicStore.s_nRemainingCartDiscount != 'undefined ')
 		{
 			UpdatePricesForAdditionalCartDiscount($Selector, GDynamicStore.s_nRemainingCartDiscount);
-			UpdateStoreBannerForAdditionalCartDiscount( GDynamicStore.s_nRemainingCartDiscount );
+		}
+		
+		if ( GDynamicStore.s_nTotalCartDiscount != 'undefined ')
+		{
+			UpdateStoreBannerForAdditionalCartDiscount( GDynamicStore.s_nTotalCartDiscount );
 		}
 
 		var $DynamicElements;
@@ -2105,6 +2110,9 @@ function GetScreenshotURL( appid, filename, sizeStr )
 
 function UpdatePricesForAdditionalCartDiscount( $Selector, nCartDiscount )
 {
+	// we don't want to mark down prices
+	return;
+	
 	if ( !nCartDiscount )
 		return;
 
@@ -2151,37 +2159,45 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 		return;
 
 	var strTemplate = ' \
-	<div class="placeHolder_lunarSale2019_giftActiveBar">	\
-		<div class="lunarSale2019_contentContainer"> \
-		<div class="lunar_sale_poinks01"> \
-		<div class="lunar_sale_sparkle sparkle01"> \
-			<div class="sparkleStar star1"></div> \
-			<div class="sparkleStar star2"></div> \
-			<div class="sparkleStar star3"></div> \
-		</div> \
-		</div> \
-		<div class="lunar_sale_title"><img src="https://steamstore-a.akamaihd.net/public/images/promo/lunar2019/lny2019_title_en.png"/></div> \
-		<div class="lunar_sale_spacer lunar_leftspacer"></div> \
-		<div class="lunar_sale_supersavings_label"><div class="highlight">%header%</div><div class="subtitle">%discount%</div></div> \
-		<div class="lunar_sale_spacer lunar_rightspacer">\
-		<div class="lunar_sale_poinks02"> \
-			<div class="lunar_sale_sparkle sparkle02"> \
-				<div class="sparkleStar star1"></div> \
-				<div class="sparkleStar star2"></div> \
-				<div class="sparkleStar star3"></div> \
+	<div class="summerSale2019_giftActiveBar">	\
+		<div class="summerSale2019_contentContainer"> \
+			<div class="summerSale2019_leftContent"> \
+				<div class="summerSale2019_icon01"> \
+					%embers% \
+				</div> \
+				<div class="summerSale2019_title"> \
+					<div class="title">%title%</div> \
+					<div class="subtitle">%header%</div> \
+				</div> \
 			</div> \
-		</div> \
-		</div> \
+			<div class="summerSale2019_rightContent"> \
+					<div class="summerSale2019_savings">%discount%</div> \
+					<div class="summerSale2019_icon02"> \
+					</div> \
+				</div> \
+			</div> \
 		</div> \
 	</div> \
 	';
-
-
+	
+	var strEmbers = '';
+	var nNumberEmbers = parseInt( Math.random() * 10 ) + 15;
+	for ( var i = 0; i < nNumberEmbers; i++ )
+	{
+		var nDelay = parseFloat( Math.random() * 3 ).toFixed(1);
+		var nTop = parseInt( Math.random() * 40 );
+		var nLeft = parseInt( ( Math.random() * 30 ) + 50 );
+		strEmbers += '<div class="summerSale2019_ember" style="animation-delay: %delay%s; top: %top%px; left: %left%px;"></div>'.replace( '%delay%', nDelay ).replace( '%top%', nTop ).replace( '%left%', nLeft );
+	}
+	
 	var strAmount = GStoreItemData.fnFormatCurrency( nCartDiscount );
+	var strTitle = 'Steam Grand Prix Summer Sale';
 	var strHeader = 'Bonus Savings Mode Active';
-	var strDiscount = '%amount% will be taken off your cart!'.replace( '%amount%', strAmount );
+	var strDiscount = 'Save up to %amount% off from your next purchase'.replace( '%amount%', strAmount );
+	strTemplate = strTemplate.replace( '%title%', strTitle );
 	strTemplate = strTemplate.replace( '%header%', strHeader );
 	strTemplate = strTemplate.replace( '%discount%', strDiscount );
+	strTemplate = strTemplate.replace( '%embers%', strEmbers );
 
 	$Elements = $J( '[data-cart-banner-spot]' );
 	for ( var i = 0; i < $Elements.length; i++ )

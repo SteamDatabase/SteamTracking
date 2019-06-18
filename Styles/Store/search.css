@@ -193,6 +193,13 @@
 	display: none;
 }
 
+.search_result_row .vr_required, .search_result_row .vr_supported {
+	color: #62696e;
+	position: relative;
+	top: -6px;
+	left: 2px;
+}
+
 #search_result_container {
 	max-width: 686px;
 }

@@ -20,9 +20,15 @@ function CDiscoveryQueue( eQueueType, rgDiscoveryQueue, Settings, params )
 	this.m_strNavFeature = params.nav_feature || 'discovery_queue';
 
 	this.m_bStatic = params.static || false;
+	this.m_bImageOnly = params.image_only || false;
+	this.m_flClickHandler = params.click_handler || false;
 	this.m_$Overlay = this.m_$Queue.siblings('.discovery_queue_overlay');
 
 	this.m_strPosClassPrefix = ( this.m_bStatic ? 'dq_static_pos_' : 'dq_pos_' );
+
+	this.m_bInTouch = false;
+	this.m_bDidTransitionsInTouch = false;
+	this.m_dateNoClickTransitionsUntil = null;
 
 	// actually render the queue
 	this.BuildQueue( rgDiscoveryQueue );
@@ -50,8 +56,16 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 		var $Item = $J('<div/>', {'class': 'dq_item', 'data-ds-options': 0} );
 		var $ColorOverlay = $J('<div/>', {'class': 'dq_item_overlay'} );
 		var $Img = $J('<img/>', {'class': 'dq_item_cap', 'src': rgApp.header });
-		var $Reason = $J('<div/>', {'class': 'dq_item_reason' } ).text( this.GetStatusString( rgDiscoveryQueue[i], rgApp ) );
-		var $Price = $J(rgApp.discount_block).addClass( 'dq_item_price discount_block_large' );
+		if ( this.m_bImageOnly )
+		{
+			$Item.addClass( 'ds_no_flags' );
+		}
+		else
+		{
+			var $Reason = $J( '<div/>', { 'class': 'dq_item_reason' } ).text( this.GetStatusString( rgDiscoveryQueue[i], rgApp ) );
+			var $Price = $J( rgApp.discount_block ).addClass( 'dq_item_price discount_block_large' );
+		}
+
 		$Item.append( $ColorOverlay, $Img, $Reason );
 
 		if ( !this.m_bStatic )
@@ -94,22 +108,100 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 		GDynamicStore.AddImpression( activeItem, activeItem.data('appid'), activeItem.data('href') );
 
 		var _this = this;
-		this.m_$ActiveLink.mouseenter( function( event ) {
-			if ( _this.m_iActiveItem < 0 || _this.m_iActiveItem >= _this.m_rgItems.length )
-				return;
 
-			var $Item = _this.m_rgItems[ _this.m_iActiveItem ];
+		if ( !this.m_bImageOnly )
+		{
+			this.m_$ActiveLink.mouseenter( function( event ) {
+				if ( _this.m_iActiveItem < 0 || _this.m_iActiveItem >= _this.m_rgItems.length )
+					return;
 
-			var unAppID = $Item.data('appid');
-			if ( unAppID )
-				GameHover( this, event, $J('#global_hover'), GStoreItemData.GetHoverParams( unAppID ) );
-		});
-		this.m_$ActiveLink.mouseleave( function( event ) {
-			HideGameHover( this, event, $J('#global_hover') );
-		});
+				var $Item = _this.m_rgItems[ _this.m_iActiveItem ];
+
+				var unAppID = $Item.data('appid');
+				if ( unAppID )
+					GameHover( this, event, $J('#global_hover'), GStoreItemData.GetHoverParams( unAppID ) );
+			});
+			this.m_$ActiveLink.mouseleave( function( event ) {
+				HideGameHover( this, event, $J('#global_hover') );
+			});
+		}
 		this.m_$ActiveLink.click( function( event ) { InstrumentedLinkOnClick( event, this ); } );
 
-		this.m_$Queue.prepend( $J('<div/>', {'class': this.m_strPosClassPrefix + '2 dq_active_link dq_item'} ).append(this.m_$ActiveLink) );	// this got erased by the empty() above
+		var strClasses = 'dq_active_link dq_item';
+		if ( this.m_bImageOnly )
+		{
+			strClasses += ' ds_no_flags';
+		}
+
+		this.m_$Queue.prepend( $J('<div/>', {'class': this.m_strPosClassPrefix + '2 ' + strClasses} ).append(this.m_$ActiveLink) );	// this got erased by the empty() above
+
+		var fnGetSingleTouch = function(e) {
+			var TouchEvent = e.originalEvent;
+
+			if ( typeof TouchEvent.touches == 'undefined' )
+			{
+				return TouchEvent;
+			}
+
+			var rgTouches = TouchEvent ? TouchEvent.touches : null;
+			if ( !rgTouches || rgTouches.length != 1 )
+				return null;
+			return rgTouches[0];
+		};
+
+		var cQueue = this;
+		var nTouchStartPageX = 0;
+		this.m_$Queue.on( 'touchstart mousedown', function( e ) {
+			var Touch = fnGetSingleTouch(e);
+			if ( !Touch )
+				return;
+
+			e.stopPropagation();
+			cQueue.m_bInTouch = true;
+			cQueue.m_bDidTransitionsInTouch = false;
+
+			nTouchStartPageX = Touch.pageX;
+		} );
+
+		this.m_$Queue.on( 'touchmove mousemove', function( e ) {
+			if ( !cQueue.m_bInTouch )
+				return;
+
+			var Touch = fnGetSingleTouch(e);
+			if ( !Touch )
+				return;
+
+			e.stopPropagation();
+
+			var nTouchDiff = nTouchStartPageX - Touch.pageX;
+			if ( nTouchDiff > 200 )
+			{
+				cQueue.m_bDidTransitionsInTouch = true;
+				cQueue.Transition( 1 );
+				nTouchStartPageX -= 200;
+			}
+			else if ( nTouchDiff < -200 )
+			{
+				cQueue.m_bDidTransitionsInTouch = true;
+				cQueue.Transition( -1 );
+				nTouchStartPageX += 200;
+			}
+		} );
+
+		this.m_$Queue.on( 'touchend touchcancel mouseup mouseleave', function( e ) {
+			if ( cQueue.m_bInTouch )
+			{
+				cQueue.m_bInTouch = false;
+
+				if ( cQueue.m_bDidTransitionsInTouch )
+				{
+					// Don't turn this into a click if we already changed the selection
+					e.stopPropagation();
+					cQueue.m_dateNoClickTransitionsUntil = Date.now() + 10;
+					cQueue.m_bDidTransitionsInTouch = false;
+				}
+			}
+		} );
 	}
 	else
 	{
@@ -127,6 +219,14 @@ CDiscoveryQueue.prototype.BuildQueue = function( rgDiscoveryQueue )
 
 CDiscoveryQueue.prototype.OnItemClick = function( $Item )
 {
+	// Block the click if we were told to
+	if ( this.m_dateNoClickTransitionsUntil && Date.now() < this.m_dateNoClickTransitionsUntil )
+	{
+		return;
+	}
+
+	this.m_dateNoClickTransitionsUntil = null;
+
 	var rgPosClass = $Item.attr('class').match( /dq_pos_(\w)*/ );
 	if ( rgPosClass.length == 2 && rgPosClass[1] )
 	{
@@ -175,6 +275,11 @@ CDiscoveryQueue.prototype.Transition = function( delta )
 	var activeItem = this.m_rgItems[ this.m_iActiveItem ];
 	this.m_$ActiveLink.attr( 'href', activeItem.data('href') );
 	GDynamicStore.AddImpression( activeItem, activeItem.data('appid'), activeItem.data('href') );
+
+	if ( this.m_flClickHandler )
+	{
+		this.m_flClickHandler( activeItem );
+	}
 };
 
 CDiscoveryQueue.prototype.HandleSettingsChanged = function( data )
