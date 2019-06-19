@@ -1171,6 +1171,7 @@
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T netadr_t::CompareAdr(netadr_t const&, bool) const
+ T netadr_t::GetIP() const
  T netadr_t::HasIP() const
  T netadr_t::ToString(char*, unsigned int, bool) const
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)

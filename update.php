@@ -237,6 +237,8 @@
 					return false;
 				}
 
+				$Data = preg_replace( '/[&\?]v=[a-zA-Z0-9\.\-\_]{3,}/', '?v=valveisgoodatcaching', $Data );
+
 				if( $File === 'Random/About.html' )
 				{
 					$Data = preg_replace( '/<section>\s+<div class="steam_section">.+?<\/section>\r\n/s', '', $Data );
