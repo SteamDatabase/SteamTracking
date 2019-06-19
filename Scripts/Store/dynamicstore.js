@@ -2192,8 +2192,8 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 	
 	var strAmount = GStoreItemData.fnFormatCurrency( nCartDiscount );
 	var strTitle = 'Steam Grand Prix Summer Sale';
-	var strHeader = 'Bonus Savings Mode Active';
-	var strDiscount = 'Save up to %amount% off from your next purchase'.replace( '%amount%', strAmount );
+	var strHeader = 'Savings Boost Activated!';
+	var strDiscount = 'Save up to %amount% on your next purchase'.replace( '%amount%', strAmount );
 	strTemplate = strTemplate.replace( '%title%', strTitle );
 	strTemplate = strTemplate.replace( '%header%', strHeader );
 	strTemplate = strTemplate.replace( '%discount%', strDiscount );
