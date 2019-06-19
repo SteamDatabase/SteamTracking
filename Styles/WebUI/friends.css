@@ -7097,6 +7097,10 @@ button.TextButton:focus {
   color: #dfe3e6;
   background: #2d73ff; }
 
+.DialogOnOffToggle_Option.Off.Active {
+  color: #dfe3e6;
+  background: #5f6875; }
+
 .DialogOnOffToggle_Option:hover {
   color: white; }
 

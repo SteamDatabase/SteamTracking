@@ -815,9 +815,9 @@ LocalizationReady("friendsui", "english", {
   Friend_MutualInviteSent: "%1$s has been added to your friends list.",
   Friend_InviteError: "There was an error adding %1$s to your friends list.",
   Friend_Block_Confirm:
-    "Are you sure you want to block all communcation with %1$s?  You won't be able to send or receive direct messages, won't receive notifications about incoming messages or calls from them, and won't be able to see their messages in chat rooms.",
+    "Are you sure you want to block all communication with %1$s?  You won't be able to send or receive direct messages, won't receive notifications about incoming messages or calls from them, and won't be able to see their messages in chat rooms.",
   Friend_Unblock_Confirm:
-    "Are you sure you want to allow communcation with %1$s again?",
+    "Are you sure you want to allow communication with %1$s again?",
   Friend_RemoveFromFriendsList_Confirm:
     "Are you sure you want to remove %1$s from your friends list?",
   Friend_CancelInvitation_Confirm:

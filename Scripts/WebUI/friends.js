@@ -16297,7 +16297,7 @@
       E = n("q1tI"),
       a = n("1VtQ"),
       M = n("oh5H"),
-      s = n("ljid");
+      l = n("ljid");
     function w(e, t, n) {
       Object(O.b)(
         E.createElement(o, { player: t }),
@@ -16352,30 +16352,30 @@
                   onEscKeypress: this.props.closeModal
                 },
                 E.createElement(
-                  s.h,
+                  l.h,
                   {
                     classNameContent: "NicknameDialog",
                     onSubmit: this.HandleSubmit
                   },
                   E.createElement(
-                    s.m,
+                    l.m,
                     null,
                     t
                       ? Object(M.b)("#Friend_Menu_ChangeNickname")
                       : Object(M.b)("#Friend_Menu_AddNickname")
                   ),
                   E.createElement(
-                    s.b,
+                    l.b,
                     null,
                     E.createElement(
-                      s.c,
+                      l.c,
                       null,
                       t
                         ? Object(M.b)("#Nickname_EditNickname")
                         : Object(M.b)("#Nickname_AddANickname")
                     ),
                     E.createElement(
-                      s.c,
+                      l.c,
                       null,
                       E.createElement(
                         "div",
@@ -16400,7 +16400,7 @@
                           E.createElement(
                             "div",
                             { className: "mediumName asNickName" },
-                            E.createElement(s.o, {
+                            E.createElement(l.o, {
                               placeholder: t
                                 ? Object(M.b)("#Nickname_PlaceHolderNickName")
                                 : Object(M.b)(
@@ -16418,9 +16418,9 @@
                     )
                   ),
                   E.createElement(
-                    s.j,
+                    l.j,
                     null,
-                    E.createElement(s.t, { onCancel: this.props.closeModal })
+                    E.createElement(l.t, { onCancel: this.props.closeModal })
                   )
                 )
               )
@@ -16431,22 +16431,28 @@
           (e = i.c([r.a], e))
         );
       })(E.Component),
-      c = n("VZeO");
-    var l = (function(n) {
+      s = n("VZeO");
+    var c = (function(o) {
         function e(e) {
-          var t = n.call(this, e) || this;
+          var t = o.call(this, e) || this,
+            n = t.props.player;
           return (
             (t.state = {
               bKeyboardEnabled: !1,
               bMouseEnabled: !1,
               bControllerEnabled: !0,
-              gameVolumeNumber: 75
+              gameVolumeNumber: 75,
+              friendVolumeNumber: C.f.VoiceStore.ConvertGainValueToSliderValue(
+                C.f.VoiceStore.GetPerUserGainLevel(n.accountid),
+                s.a.k_MaxPerUserGainMultiplier
+              ),
+              bFriendMuted: C.f.VoiceStore.GetPerUserMuting(n.accountid)
             }),
             t
           );
         }
         return (
-          i.d(e, n),
+          i.d(e, o),
           (e.prototype.HandleExit = function(e) {
             var t = this.props.player;
             C.f.RemotePlayStore.CancelInviteAndSession(t.accountid),
@@ -16481,32 +16487,39 @@
               t.accountid,
               C.f.VoiceStore.ConvertSliderToGainValue(
                 e,
-                c.a.k_MaxPerUserGainMultiplier
+                s.a.k_MaxPerUserGainMultiplier
               )
-            );
+            ),
+              this.setState({ friendVolumeNumber: e }),
+              this.forceUpdate();
           }),
           (e.prototype.OnMutingClick = function(e) {
             var t = this.props.player;
-            C.f.VoiceStore.SetPerUserMuting(t.accountid, e), this.forceUpdate();
+            C.f.VoiceStore.SetPerUserMuting(t.accountid, e),
+              this.setState({ bFriendMuted: e }),
+              this.forceUpdate();
           }),
           (e.prototype.componentWillReceiveProps = function(e) {
             e.player, this.props.player;
           }),
           (e.prototype.render = function() {
-            var e = this.state.gameVolumeNumber,
-              t = "friend editNickname",
-              n = this.props.player.has_nickname;
-            this.props.player.persona.is_ingame
-              ? (t += " ingame")
-              : this.props.player.persona.is_online && (t += " online"),
-              n && (t += " nickNamed");
-            var o = "remotePlayIcon remotePlayIcon_Keyboard",
-              i = "remotePlayIcon remotePlayIcon_Mouse",
-              r = "remotePlayIcon remotePlayIcon_Controller";
+            var e = this.props.player,
+              t = this.state.gameVolumeNumber,
+              n = this.state.friendVolumeNumber,
+              o = this.state.bFriendMuted,
+              i = "friend editNickname",
+              r = e.has_nickname;
+            e.persona.is_ingame
+              ? (i += " ingame")
+              : e.persona.is_online && (i += " online"),
+              r && (i += " nickNamed");
+            var a = "remotePlayIcon remotePlayIcon_Keyboard",
+              s = "remotePlayIcon remotePlayIcon_Mouse",
+              c = "remotePlayIcon remotePlayIcon_Controller";
             return (
-              this.state.bKeyboardEnabled && (o += " accessGranted"),
-              this.state.bMouseEnabled && (i += " accessGranted"),
-              this.state.bControllerEnabled && (r += " accessGranted"),
+              this.state.bKeyboardEnabled && (a += " accessGranted"),
+              this.state.bMouseEnabled && (s += " accessGranted"),
+              this.state.bControllerEnabled && (c += " accessGranted"),
               E.createElement(
                 O.a,
                 {
@@ -16514,24 +16527,24 @@
                   onEscKeypress: this.props.closeModal
                 },
                 E.createElement(
-                  s.h,
+                  l.h,
                   { classNameContent: "RemotePlayDialog" },
                   E.createElement(
-                    s.m,
+                    l.m,
                     null,
                     Object(M.b)("#Friend_Menu_RemotePlay")
                   ),
                   E.createElement(
-                    s.b,
+                    l.b,
                     null,
                     E.createElement(
-                      s.c,
+                      l.c,
                       null,
                       Object(M.b)("#RemotePlay_Host"),
-                      E.createElement(s.B, {
+                      E.createElement(l.B, {
                         min: 0,
                         max: 100,
-                        value: e,
+                        value: t,
                         onChange: this.OnGameVolumeChanged,
                         label: Object(M.b)("#GameMasterVolume")
                       })
@@ -16542,14 +16555,14 @@
                       Object(M.b)("#RemotePlay_Players")
                     ),
                     E.createElement(
-                      s.c,
+                      l.c,
                       null,
                       E.createElement(
                         "div",
-                        { className: t },
+                        { className: i },
                         E.createElement("img", {
                           className: "avatarMedium",
-                          src: this.props.player.persona.avatar_url_full
+                          src: e.persona.avatar_url_full
                         }),
                         E.createElement(
                           "div",
@@ -16557,7 +16570,7 @@
                           E.createElement(
                             "div",
                             { className: "mediumName" },
-                            this.props.player.secondary_display_name
+                            e.secondary_display_name
                           ),
                           E.createElement(
                             "div",
@@ -16566,7 +16579,7 @@
                           )
                         ),
                         E.createElement(
-                          s.d,
+                          l.d,
                           {
                             onClick: this.KickFriend,
                             title: Object(M.b)("#Tooltip_RemotePlayKick")
@@ -16587,37 +16600,37 @@
                             "div",
                             { className: "remotePlayToggleButtonContainer" },
                             E.createElement(
-                              s.d,
+                              l.d,
                               {
                                 onClick: this.TogglePlayerKeyboard,
                                 title: Object(M.b)(
                                   "#Tooltip_RemotePlayToggleKeyboard"
                                 )
                               },
-                              E.createElement("img", { className: o })
+                              E.createElement("img", { className: a })
                             ),
                             E.createElement(
-                              s.d,
+                              l.d,
                               {
                                 onClick: this.TogglePlayerMouse,
                                 title: Object(M.b)(
                                   "#Tooltip_RemotePlayToggleMouse"
                                 )
                               },
-                              E.createElement("img", { className: i })
+                              E.createElement("img", { className: s })
                             ),
                             E.createElement(
-                              s.d,
+                              l.d,
                               {
                                 onClick: this.TogglePlayerController,
                                 title: Object(M.b)(
                                   "#Tooltip_RemotePlayToggleController"
                                 )
                               },
-                              E.createElement("img", { className: r })
+                              E.createElement("img", { className: c })
                             ),
                             E.createElement(
-                              s.d,
+                              l.d,
                               {
                                 onClick: this.EditPlayerSettings,
                                 title: Object(M.b)(
@@ -16637,10 +16650,10 @@
                             className:
                               "labelHolder remotePlayPlayerVoiceContainer"
                           },
-                          E.createElement(s.B, {
+                          E.createElement(l.B, {
                             min: 0,
                             max: 100,
-                            value: 100,
+                            value: n,
                             onChange: this.OnFriendVolumeChanged,
                             label: Object(M.b)("#VoiceVolume")
                           }),
@@ -16648,7 +16661,8 @@
                             "div",
                             { className: "remotePlayPlayerMuteContainer" },
                             Object(M.b)("#RemotePlay_DisableIncomingAudio"),
-                            E.createElement(s.e, {
+                            E.createElement(l.e, {
+                              checked: o,
                               onChange: this.OnMutingClick
                             })
                           )
@@ -16659,7 +16673,7 @@
                       "div",
                       { className: "remotePlaySeparator" },
                       E.createElement(
-                        s.d,
+                        l.d,
                         {
                           className: "remotePlayAddFriendButton",
                           onClick: this.InviteFriend,
@@ -16674,7 +16688,7 @@
                       )
                     )
                   ),
-                  E.createElement(s.j, null)
+                  E.createElement(l.j, null)
                 )
               )
             );
@@ -16794,28 +16808,28 @@
               O.a,
               { onEscKeypress: this.props.closeModal },
               E.createElement(
-                s.h,
+                l.h,
                 {
                   classNameContent: "ManageGroupDialog",
                   onSubmit: this.HandleSubmit
                 },
                 E.createElement(
-                  s.m,
+                  l.m,
                   null,
                   this.props.group
                     ? Object(M.b)("#FriendGroup_Menu_Manage")
                     : Object(M.b)("#FriendGroup_Menu_CreateGroup")
                 ),
                 E.createElement(
-                  s.b,
+                  l.b,
                   null,
                   this.state.strError &&
                     E.createElement(
-                      s.c,
+                      l.c,
                       { className: "nicknameError" },
                       this.state.strError
                     ),
-                  E.createElement(s.o, {
+                  E.createElement(l.o, {
                     type: "text",
                     label: Object(M.b)("#FriendGroup_CategoryName"),
                     className: "nicknameInput",
@@ -16831,9 +16845,9 @@
                   })
                 ),
                 E.createElement(
-                  s.j,
+                  l.j,
                   null,
-                  E.createElement(s.t, { onCancel: this.props.closeModal })
+                  E.createElement(l.t, { onCancel: this.props.closeModal })
                 )
               )
             );
@@ -16897,30 +16911,30 @@
               O.a,
               { onEscKeypress: this.props.closeModal },
               E.createElement(
-                s.h,
+                l.h,
                 {
                   classNameContent: "AssignCategoriesDialog",
                   onSubmit: this.HandleSubmit
                 },
                 E.createElement(
-                  s.m,
+                  l.m,
                   null,
                   Object(M.b)("#FriendGroup_Categorize_Title")
                 ),
                 E.createElement(
-                  s.b,
+                  l.b,
                   null,
                   this.state.strError &&
                     E.createElement(
-                      s.c,
+                      l.c,
                       { className: "nicknameError" },
                       this.state.strError
                     ),
                   E.createElement(
-                    s.E,
+                    l.E,
                     null,
                     E.createElement(
-                      s.f,
+                      l.f,
                       null,
                       E.createElement(d.c, {
                         friend: this.props.friend,
@@ -16935,19 +16949,19 @@
                     mapChecks: this.m_mapCategoryChecks
                   }),
                   E.createElement(
-                    s.E,
+                    l.E,
                     { className: "AssignCategoriesDialog_AddNewButton" },
                     E.createElement(
-                      s.d,
+                      l.d,
                       { onClick: this.CreateNew },
                       Object(M.b)("#FriendGroup_Categorize_AddNew")
                     )
                   )
                 ),
                 E.createElement(
-                  s.j,
+                  l.j,
                   null,
-                  E.createElement(s.t, { onCancel: this.props.closeModal })
+                  E.createElement(l.t, { onCancel: this.props.closeModal })
                 )
               )
             );
@@ -16977,7 +16991,7 @@
               E.Fragment,
               null,
               E.createElement(
-                s.p,
+                l.p,
                 null,
                 Object(M.b)("#FriendGroup_Categorize_Categories")
               ),
@@ -17016,7 +17030,7 @@
               E.createElement(
                 "div",
                 { onContextMenu: this.OnContextMenu },
-                E.createElement(s.e, {
+                E.createElement(l.e, {
                   label: t.name,
                   checked: e,
                   onChange: this.OnToggle
@@ -17119,26 +17133,26 @@
                   onEscKeypress: this.props.closeModal
                 },
                 E.createElement(
-                  s.h,
+                  l.h,
                   {
                     classNameContent: "ChangePersonaNameDialog",
                     onSubmit: this.HandleSubmit
                   },
                   E.createElement(
-                    s.m,
+                    l.m,
                     null,
                     Object(M.b)("#ChangePersona_Title")
                   ),
                   E.createElement(
-                    s.b,
+                    l.b,
                     null,
                     E.createElement(
-                      s.c,
+                      l.c,
                       null,
                       Object(M.b)("#ChangePersona_Description")
                     ),
                     E.createElement(
-                      s.c,
+                      l.c,
                       null,
                       E.createElement(
                         "div",
@@ -17167,7 +17181,7 @@
                             E.createElement(
                               "div",
                               { className: "mediumName" },
-                              E.createElement(s.o, {
+                              E.createElement(l.o, {
                                 placeholder: Object(M.b)(
                                   "#ChangePersona_PlaceHolder"
                                 ),
@@ -17183,9 +17197,9 @@
                     )
                   ),
                   E.createElement(
-                    s.j,
+                    l.j,
                     null,
-                    E.createElement(s.t, { onCancel: this.props.closeModal })
+                    E.createElement(l.t, { onCancel: this.props.closeModal })
                   )
                 )
               )
@@ -17304,7 +17318,7 @@
         }),
         (e.prototype.FriendsSettingsCheckbox = function(t) {
           var n = this;
-          return E.createElement(s.e, {
+          return E.createElement(l.e, {
             key: t.strName,
             disabled: this.state.bUseDefaults,
             onChange: function(e) {
@@ -17361,21 +17375,21 @@
                 onEscKeypress: this.props.closeModal
               },
               E.createElement(
-                s.h,
+                l.h,
                 {
                   classNameContent: "FriendNotificationsDialog",
                   onSubmit: this.HandleSubmit
                 },
                 E.createElement(
-                  s.m,
+                  l.m,
                   null,
                   Object(M.b)("#Friend_Menu_NotificationsTitle")
                 ),
                 E.createElement(
-                  s.b,
+                  l.b,
                   { className: n ? "useDefaults" : "" },
                   E.createElement(
-                    s.c,
+                    l.c,
                     null,
                     Object(M.b)(
                       "#FriendNotifications_Instructions",
@@ -17383,7 +17397,7 @@
                     )
                   ),
                   E.createElement(
-                    s.c,
+                    l.c,
                     null,
                     E.createElement(
                       "div",
@@ -17417,7 +17431,7 @@
                       )
                     )
                   ),
-                  E.createElement(s.e, {
+                  E.createElement(l.e, {
                     classname: "useDefaultsCheckBox",
                     label: Object(M.b)("#FriendNotifications_UseDefaults"),
                     onChange: function(e) {
@@ -17478,9 +17492,9 @@
                   )
                 ),
                 E.createElement(
-                  s.j,
+                  l.j,
                   null,
-                  E.createElement(s.t, { onCancel: this.props.closeModal })
+                  E.createElement(l.t, { onCancel: this.props.closeModal })
                 )
               )
             )
@@ -17837,7 +17851,7 @@
               (e = n),
               (t = this.props.ownerWindow),
               Object(O.b)(
-                E.createElement(l, { player: e }),
+                E.createElement(c, { player: e }),
                 t,
                 "RemotePlayDialog",
                 {
@@ -18336,7 +18350,7 @@
           var t = o.call(this, e) || this,
             n = C.f.VoiceStore.ConvertGainValueToSliderValue(
               C.f.VoiceStore.GetPerUserGainLevel(t.props.friend.accountid),
-              c.a.k_MaxPerUserGainMultiplier
+              s.a.k_MaxPerUserGainMultiplier
             );
           return (t.state = { volumeNumber: n }), t;
         }
@@ -18347,7 +18361,7 @@
               this.props.friend.accountid,
               C.f.VoiceStore.ConvertSliderToGainValue(
                 e,
-                c.a.k_MaxPerUserGainMultiplier
+                s.a.k_MaxPerUserGainMultiplier
               )
             ),
               this.setState({ volumeNumber: e });
@@ -18392,7 +18406,7 @@
                     { className: t, onClick: this.OnMutingClick },
                     E.createElement(N.kb, null)
                   ),
-                  E.createElement(s.B, {
+                  E.createElement(l.B, {
                     min: 0,
                     max: 100,
                     label: "",
@@ -18439,7 +18453,7 @@
                 onSelected: function() {},
                 bInteractableItem: !0
               },
-              E.createElement(s.e, {
+              E.createElement(l.e, {
                 label: this.props.roleName,
                 checked: this.props.bHasRole,
                 onChange: this.OnChange,
@@ -19146,7 +19160,7 @@
                     bChecked: !1,
                     onSelected: this.ToggleUserDND
                   },
-                  E.createElement(s.e, {
+                  E.createElement(l.e, {
                     key: "dnd_checkbox",
                     classname: "DNDCheckBox",
                     checked: a,
@@ -19219,28 +19233,28 @@
               O.a,
               { onEscKeypress: this.OnCancel },
               E.createElement(
-                s.h,
+                l.h,
                 {
                   classNameContent: "KickUserDialog",
                   onSubmit: this.OnOK,
                   bCenterVertically: !0
                 },
                 E.createElement(
-                  s.m,
+                  l.m,
                   null,
                   " ",
                   Object(M.b)("#Friend_Kick"),
                   " "
                 ),
                 E.createElement(
-                  s.b,
+                  l.b,
                   null,
                   E.createElement(
-                    s.c,
+                    l.c,
                     null,
                     Object(M.b)("#Friend_Kick_How_Long")
                   ),
-                  E.createElement(s.i, {
+                  E.createElement(l.i, {
                     strDefaultLabel: Object(M.b)("#Friend_Kick_Hour"),
                     rgOptions: e,
                     onChange: this.OnDropDownChange,
@@ -19248,9 +19262,9 @@
                   })
                 ),
                 E.createElement(
-                  s.j,
+                  l.j,
                   null,
-                  E.createElement(s.t, {
+                  E.createElement(l.t, {
                     onCancel: this.OnCancel,
                     strOKText: Object(M.b)("#Friend_Kick_Button"),
                     strCancelText: Object(M.b)("#Button_Cancel")
@@ -23431,13 +23445,19 @@
               void 0 === t && (t = "steamtv"),
               i.b(this, void 0, void 0, function() {
                 return i.e(this, function(e) {
-                  return (
-                    this.m_loadingPromise ||
-                      (this.m_loadingPromise = this.InternalLoadBroadcastAppData(
-                        t
-                      )),
-                    [2, this.m_loadingPromise]
-                  );
+                  switch (e.label) {
+                    case 0:
+                      return this.m_loadingPromise
+                        ? [3, 2]
+                        : ((this.m_loadingPromise = this.InternalLoadBroadcastAppData(
+                            t
+                          )),
+                          [4, this.m_loadingPromise]);
+                    case 1:
+                      e.sent(), (e.label = 2);
+                    case 2:
+                      return [2, this.m_loadingPromise];
+                  }
                 });
               })
             );
@@ -23543,9 +23563,13 @@
         return (
           i.d(e, n),
           (e.prototype.componentDidMount = function() {
-            this.state.appInfo.HintLoadBroadcastAppData().catch(function(e) {
-              console.log("AppInfo Failed to Load", Object(y.a)(e).strErrorMsg);
-            });
+            this.state.appInfo.BIsLoaded() ||
+              this.state.appInfo.HintLoadBroadcastAppData().catch(function(e) {
+                console.log(
+                  "AppInfo Failed to Load",
+                  Object(y.a)(e).strErrorMsg
+                );
+              });
           }),
           (e.prototype.render = function() {
             var t = this.state.appInfo.GetAppStoreData(),
@@ -23858,6 +23882,10 @@
           (e.prototype.StopVideo = function() {
             var e = this.state.video;
             e && (w.a.StopVideo(e), this.setState({ video: null }));
+          }),
+          (e.prototype.IsMuted = function() {
+            var e = this.state.video;
+            return !e || e.IsMuted();
           }),
           (e.prototype.StopPlaybackTillUserInput = function() {
             var e = this.state.video;
@@ -69783,81 +69811,97 @@ and limitations under the License.
   uw3m: function(e, t, n) {
     "use strict";
     n.d(t, "b", function() {
-      return c;
+      return m;
     }),
       n.d(t, "a", function() {
-        return r;
+        return a;
       });
-    var l = n("mrSG"),
-      p = n("q1tI"),
+    var c = n("mrSG"),
+      l = n("q1tI"),
       o = n("okNM"),
       s = n("lqmi"),
-      u = n("QHER"),
+      p = n("QHER"),
       i = n("ugMY"),
-      m = n.n(i),
-      c = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
-        }
-        return (
-          l.d(t, e),
-          (t.prototype.render = function() {
-            var e = this.props,
-              t = e.persona,
-              n = e.size,
-              o = e.className,
-              i = e.statusStyle,
-              r = e.statusPosition,
-              a = e.children,
-              s = l.f(e, [
-                "persona",
-                "size",
-                "className",
-                "statusStyle",
-                "statusPosition",
-                "children"
-              ]),
-              c = t.avatar_url_medium;
-            return (
-              "Small" == n
-                ? (c = t.avatar_url)
-                : ("Large" != n && "X-Large" != n) || (c = t.avatar_url_full),
-              p.createElement(
-                "div",
-                l.a(
-                  {
-                    className: Object(u.a)(
-                      m.a.avatarHolder,
-                      "avatarHolder",
-                      "no-drag",
-                      n || "Medium",
-                      o
-                    )
-                  },
-                  s
-                ),
-                p.createElement("div", {
-                  className: Object(u.a)(m.a.avatarStatus, "avatarStatus", r),
-                  style: i
-                }),
-                p.createElement("img", {
-                  className: Object(u.a)(m.a.avatar, "avatar"),
-                  src: c,
-                  draggable: !1
-                }),
-                a
-              )
-            );
-          }),
-          (t = l.c([o.a], t))
-        );
-      })(p.Component),
+      u = n.n(i),
       r = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          l.d(t, e),
+          c.d(t, e),
+          (t.prototype.render = function() {
+            var e = this.props,
+              t = e.strAvatarURL,
+              n = e.size,
+              o = e.className,
+              i = e.statusStyle,
+              r = e.statusPosition,
+              a = e.children,
+              s = c.f(e, [
+                "strAvatarURL",
+                "size",
+                "className",
+                "statusStyle",
+                "statusPosition",
+                "children"
+              ]);
+            return l.createElement(
+              "div",
+              c.a(
+                {
+                  className: Object(p.a)(
+                    u.a.avatarHolder,
+                    "avatarHolder",
+                    "no-drag",
+                    n || "Medium",
+                    o
+                  )
+                },
+                s
+              ),
+              l.createElement("div", {
+                className: Object(p.a)(u.a.avatarStatus, "avatarStatus", r),
+                style: i
+              }),
+              l.createElement("img", {
+                className: Object(p.a)(u.a.avatar, "avatar"),
+                src: t,
+                draggable: !1
+              }),
+              a
+            );
+          }),
+          t
+        );
+      })(l.Component),
+      m = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          c.d(t, e),
+          (t.prototype.render = function() {
+            var e = this.props,
+              t = e.persona,
+              n = e.size,
+              o = c.f(e, ["persona", "size"]),
+              i = t.avatar_url_medium;
+            return (
+              "Small" == n
+                ? (i = t.avatar_url)
+                : ("Large" != n && "X-Large" != n) || (i = t.avatar_url_full),
+              l.createElement(r, c.a({ strAvatarURL: i, size: n }, o))
+            );
+          }),
+          (t = c.c([o.a], t))
+        );
+      })(l.Component),
+      a = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          c.d(t, e),
           (t.prototype.render = function() {
             var e = this.props,
               t = e.persona,
@@ -69865,7 +69909,7 @@ and limitations under the License.
               o = e.className,
               i = (e.statusStyle, e.statusPosition),
               r = e.children,
-              a = l.f(e, [
+              a = c.f(e, [
                 "persona",
                 "size",
                 "className",
@@ -69873,12 +69917,12 @@ and limitations under the License.
                 "statusPosition",
                 "children"
               ]);
-            return p.createElement(
+            return l.createElement(
               "div",
-              l.a(
+              c.a(
                 {
-                  className: Object(u.a)(
-                    m.a.friendavatar,
+                  className: Object(p.a)(
+                    u.a.friendavatar,
                     "friend",
                     "FriendAvatar",
                     Object(s.d)(t),
@@ -69888,12 +69932,12 @@ and limitations under the License.
                 a
               ),
               r,
-              p.createElement(c, { persona: t, size: n, statusPosition: i })
+              l.createElement(m, { persona: t, size: n, statusPosition: i })
             );
           }),
-          (t = l.c([o.a], t))
+          (t = c.c([o.a], t))
         );
-      })(p.Component);
+      })(l.Component);
   },
   v5rQ: function(e, t, n) {
     e.exports = {

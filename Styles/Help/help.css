@@ -2448,6 +2448,16 @@ a.guide_row {
 	color: #5eafde;
 }
 
+.help_section_small_header_lowercase {
+	margin-top: 12px;
+	font-size:14px;
+	color: #5eafde;
+}
+
+.help_email_accent {
+	font-weight: bold;
+}
+
 .help_section_smallbody_header {
 	margin-top: 16px;
 	text-transform: uppercase;

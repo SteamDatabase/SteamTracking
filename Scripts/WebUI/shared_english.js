@@ -133,7 +133,7 @@ LocalizationReady("shared", "english", {
   EventDisplay_CallToAction_InLibrary: "In Library",
   EventDisplay_CallToAction_PlayNow: "Play Now",
 
-  EventDisplay_Events: "Event Admin Dashboard",
+  EventDisplay_Events: "Admin Dashboard",
   EventDisplay_SeeOldVersion: "View Current Customer Version",
 
   EventDisplay_RightColumnTitle_Game: "Game",
@@ -469,6 +469,13 @@ LocalizationReady("shared", "english", {
   Error_Description: "Error (code: %1$s) occured with details: (%2$s)",
   Error_FailureNotice: "Failure",
   Error_GenericFailureDescription: "Sorry, that didn't work.",
+
+  Image_ErrorTitle: "Failed to Load Image '%1$s', possible issues include:",
+  Image_Error_msg1: "Check that the path to the image is correct.",
+  Image_Error_msg2:
+    "Check if server hosting the iamge support anonymous access. The browser console may indicate an error related Access-Control-Allow-Origin if it doesn't.",
+  Image_Error_suggestion:
+    "You can always upload the image to Steam to host the content for free.",
 
   Platform_Hint_Mobile: "on Mobile Device",
   Platform_Hint_BigPicture: "in Big Picture",
