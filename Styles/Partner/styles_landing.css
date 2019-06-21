@@ -2662,9 +2662,11 @@ ul.transfer_rights li {
 }
 
 .cdkey_request_territory_name {
-	width: 45px;
-	padding: 4px 0px 0px 8px;
+	width: 53px;
+	padding: 4px 0px 0px 0px;
 	display: inline-block;
+    overflow-wrap: break-word;
+	hyphens: auto;
 }
 
 .cdkey_request_numreq {
@@ -2780,7 +2782,7 @@ div .cdkey_request_details_row
 	clear: both;
 	padding: 0 30px;
 
-	height: 60px;
+	min-height: 60px;
 	background-color: #2c3849;
 }
 
