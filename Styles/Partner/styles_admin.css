@@ -3312,3 +3312,14 @@ incomplete #e24044
 suggested #e76e34
 complete #A4D007
  */
+
+.franchise_twocol
+{
+	display: flex;
+}
+
+.franchise_col
+{
+	flex: 1;
+	min-width: 0;
+}
