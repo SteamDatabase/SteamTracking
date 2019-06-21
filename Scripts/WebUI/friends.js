@@ -25254,10 +25254,11 @@
             var n = "";
             e.m_nViewerCount && (n = e.m_nViewerCount.toLocaleString());
             var o =
-              !this.props.bHideThumbnail &&
-              this.props.bVerticalBroadcastChat &&
-              (0 < parseInt(e.m_strAppId) ||
-                (f.b.bValid && f.b.stream && f.b.stream[e.m_steamIDBroadcast]));
+                f.b.bValid && f.b.stream && f.b.stream[e.m_steamIDBroadcast],
+              i =
+                !this.props.bHideThumbnail &&
+                this.props.bVerticalBroadcastChat &&
+                (0 < parseInt(e.m_strAppId) || o);
             return O.createElement(
               "div",
               { className: "BroadcastDetails" },
@@ -25271,36 +25272,38 @@
               O.createElement(
                 "div",
                 { className: "BroadcastDetailsHeader" },
-                O.createElement(
-                  "div",
-                  { className: "displayColumn" },
+                e &&
+                  e.m_strAppTitle &&
                   O.createElement(
                     "div",
-                    { className: "Info" },
-                    O.createElement(
-                      "span",
-                      { className: "AppTitle" },
-                      e.m_strAppTitle
-                    ),
-                    e.m_strTitle &&
-                      O.createElement(
-                        "span",
-                        { className: "BroadcastTitle" },
-                        " - ",
-                        e.m_strTitle
-                      ),
-                    this.props.onLocalStreamChange &&
-                      this.RenderStreamSwitcher()
-                  ),
-                  n &&
+                    { className: "displayColumn" },
                     O.createElement(
                       "div",
-                      { className: "BroadcastDetailsHeader_ViewerCount" },
-                      O.createElement(E.ib, null),
-                      Object(T.b)("#Broadcast_ViewerCount", n)
-                    )
-                ),
-                f.b.bValid &&
+                      { className: "Info" },
+                      O.createElement(
+                        "span",
+                        { className: "AppTitle" },
+                        e.m_strAppTitle
+                      ),
+                      e.m_strTitle &&
+                        O.createElement(
+                          "span",
+                          { className: "BroadcastTitle" },
+                          " - ",
+                          e.m_strTitle
+                        ),
+                      this.props.onLocalStreamChange &&
+                        this.RenderStreamSwitcher()
+                    ),
+                    n &&
+                      O.createElement(
+                        "div",
+                        { className: "BroadcastDetailsHeader_ViewerCount" },
+                        O.createElement(E.ib, null),
+                        Object(T.b)("#Broadcast_ViewerCount", n)
+                      )
+                  ),
+                o &&
                   this.props.onOpenLinkInNewWindow &&
                   O.createElement(
                     "div",
@@ -25317,7 +25320,7 @@
                     )
                   )
               ),
-              o &&
+              i &&
                 O.createElement(C, {
                   appid:
                     f.b.bValid && f.b.stream && f.b.stream[e.m_steamIDBroadcast]
@@ -45701,7 +45704,7 @@
                     R.createElement("div", { className: "disconnectBlocker" })
                   )
                 ),
-                R.createElement(dt, { chatView: t }),
+                R.createElement(ft, { chatView: t }),
                 R.createElement(Se, {
                   chatView: t,
                   action: this.ScrollToBottom
@@ -47293,7 +47296,7 @@
                   A.f.DragDropManager.SetDropConsumed();
                 var i = t.currentTarget.ownerDocument.defaultView;
                 o.sourceContext.group != this.props.groupView.GetGroup() &&
-                  ot(
+                  rt(
                     {
                       invitee: o.friend,
                       chatview: null,
@@ -47563,7 +47566,7 @@
                   classNames: "inviteDrop-anim",
                   timeout: 300
                 },
-                R.createElement(ut, {
+                R.createElement(dt, {
                   chatView: n,
                   friend: this.state.dropToInviteFriend
                 })
@@ -47584,7 +47587,7 @@
               (u = R.createElement(
                 R.Fragment,
                 null,
-                R.createElement(st, {
+                R.createElement(lt, {
                   ref: this.m_refBroadcastContainer,
                   steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                   localSteamID: t.m_strLocalBroadcastId,
@@ -47617,7 +47620,7 @@
                     onMouseDown: this.OnGrabberMouseDown
                   }),
                 d &&
-                  R.createElement(at, {
+                  R.createElement(ct, {
                     onClick: this.ShowChat,
                     edge: m ? "bottom" : "right"
                   })
@@ -47685,7 +47688,7 @@
                       R.createElement(
                         k.TransitionGroup,
                         null,
-                        R.createElement(lt, { groupView: t })
+                        R.createElement(ut, { groupView: t })
                       )
                     ),
                     R.createElement("div", { className: "dropTargetBox" }),
@@ -47945,7 +47948,7 @@
                   (this.m_fnUnregisterDropComplete = void 0),
                   this.setState({ dropToInviteFriend: void 0 })),
                   A.f.DragDropManager.SetDropConsumed(),
-                  ot(
+                  rt(
                     { invitee: r, chatview: n, invitedto: i },
                     Object(A.c)(this, t),
                     o
@@ -47965,7 +47968,7 @@
                     (a = P.f.ChatStore.GetChatRoomGroup(
                       s.GetChatGroupIDIfLoaded()
                     )),
-                  ot({ invitee: i, invitedto: a }, Object(A.c)(this, t), o));
+                  rt({ invitee: i, invitedto: a }, Object(A.c)(this, t), o));
             } else if (0 != t.dataTransfer.files.length) {
               var c = t.dataTransfer.files[0];
               n.SetFileToUpload(c);
@@ -48108,7 +48111,7 @@
                 },
                 R.createElement(L.x, { showChat: !1 })
               ),
-              R.createElement(rt, {
+              R.createElement(st, {
                 chatView: this.props.chatView,
                 additionalClasses: "broadcastVisible"
               })
@@ -48132,7 +48135,7 @@
                     classNames: "inviteDrop-anim",
                     timeout: 300
                   },
-                  R.createElement(ut, {
+                  R.createElement(dt, {
                     chatView: this.props.chatView,
                     friend: this.state.dropToInviteFriend
                   })
@@ -48146,7 +48149,7 @@
                     classNames: "inviteDrop-anim",
                     timeout: 300
                   },
-                  R.createElement(mt, {
+                  R.createElement(ht, {
                     chatView: this.props.chatView,
                     group: this.state.dropGroupToInviteFriend,
                     clan: this.state.dropClanToInvite
@@ -48164,7 +48167,7 @@
               (s = R.createElement(
                 R.Fragment,
                 null,
-                R.createElement(st, {
+                R.createElement(tt, {
                   ref: this.m_refBroadcastContainer,
                   steamID: U.a
                     .InitFromAccountID(t.accountid_partner)
@@ -48173,7 +48176,6 @@
                   watchLocation: 12,
                   bWebRTC: !0,
                   onRequestClose: this.HideBroadcast,
-                  onLocalStreamChange: this.SetLocalBroadcastId,
                   actions: [
                     R.createElement("div", {
                       key: "ChatPosToggle",
@@ -48189,8 +48191,7 @@
                     })
                   ],
                   style: u,
-                  onTheaterMode: this.ToggleTheaterModeBroadcastChat,
-                  bVerticalBroadcastChat: !c
+                  onTheaterMode: this.ToggleTheaterModeBroadcastChat
                 }),
                 !l &&
                   R.createElement("div", {
@@ -48199,7 +48200,7 @@
                     onMouseDown: this.OnGrabberMouseDown
                   }),
                 l &&
-                  R.createElement(at, {
+                  R.createElement(ct, {
                     onClick: this.ShowChat,
                     edge: c ? "bottom" : "right"
                   })
@@ -48245,7 +48246,7 @@
                     "div",
                     { className: "displayRow minHeightZero" },
                     r &&
-                      R.createElement(pt, {
+                      R.createElement(mt, {
                         chatView: this.props.chatView,
                         friend: t.chat_partner
                       }),
@@ -48260,7 +48261,7 @@
                       })
                     ),
                     !i &&
-                      R.createElement(rt, {
+                      R.createElement(st, {
                         chatView: this.props.chatView,
                         additionalClasses: void 0
                       }),
@@ -48303,7 +48304,7 @@
                     R.createElement(
                       "div",
                       null,
-                      R.createElement(nt, { chatView: this.props.chatView })
+                      R.createElement(it, { chatView: this.props.chatView })
                     )
                   )
               ),
@@ -48407,41 +48408,123 @@
           G.c([o.a], t.prototype, "SpeakerLabel", null),
           (t = G.c([c.a], t))
         );
+      })(R.Component),
+      tt = R.forwardRef(function(e, t) {
+        var n = e.steamID,
+          o = e.localSteamID,
+          i = e.watchLocation,
+          r = e.bWebRTC,
+          a = e.style,
+          s = e.onRequestClose,
+          c = e.actions,
+          l = e.onTheaterMode,
+          p = o || n;
+        return R.createElement(
+          "div",
+          {
+            ref: t,
+            style: G.a({ display: "flex", flexDirection: "column" }, a)
+          },
+          R.createElement(
+            "div",
+            { className: "BroadcastSection" },
+            R.createElement(y.b, {
+              key: p,
+              steamIDBroadcast: p,
+              watchLocation: i,
+              bWebRTC: r,
+              onRequestClose: s,
+              actions: c,
+              onTheaterMode: l,
+              onOpenLinkInNewWindow: v.e
+            }),
+            R.createElement("div", { className: "videoContainerSizer" })
+          ),
+          R.createElement(nt, { steamID: n })
+        );
+      }),
+      nt = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          G.d(t, e),
+          (t.prototype.OnClick = function(e, t) {
+            var n = N.a.STORE_BASE_URL + "app/" + t;
+            Object(v.e)(e, n), e.stopPropagation();
+          }),
+          (t.prototype.render = function() {
+            var t = this,
+              e = new U.a(this.props.steamID),
+              n = P.f.FriendStore.GetPlayer(e.GetAccountID()),
+              o = n.persona.GetCurrentGameIconURL(),
+              i = n.persona.GetCurrentGameName(),
+              r = n.persona.m_unGamePlayedAppID;
+            return i || o
+              ? R.createElement(
+                  "div",
+                  { className: "FriendChatBroadcastDetails" },
+                  R.createElement(
+                    "div",
+                    { className: "FriendChatBroadcastDetails_PlayingText" },
+                    Object(x.b)("#broadcastDetails_Playing")
+                  ),
+                  o &&
+                    R.createElement("img", {
+                      className: "FriendChatBroadcastDetails_Icon",
+                      src: o
+                    }),
+                  R.createElement(
+                    "div",
+                    {
+                      className: "FriendChatBroadcastDetails_GameName",
+                      onClick: function(e) {
+                        return t.OnClick(e, r);
+                      }
+                    },
+                    i
+                  )
+                )
+              : null;
+          }),
+          G.c([o.a], t.prototype, "OnClick", null),
+          (t = G.c([c.a], t))
+        );
       })(R.Component);
     n.d(t, "g", function() {
-      return tt;
+      return ot;
     }),
       n.d(t, "i", function() {
-        return nt;
+        return it;
       }),
       n.d(t, "k", function() {
-        return ot;
-      }),
-      n.d(t, "f", function() {
         return rt;
       }),
-      n.d(t, "b", function() {
-        return at;
-      }),
-      n.d(t, "a", function() {
+      n.d(t, "f", function() {
         return st;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "b", function() {
+        return ct;
+      }),
+      n.d(t, "a", function() {
         return lt;
       }),
-      n.d(t, "h", function() {
-        return pt;
-      }),
-      n.d(t, "d", function() {
+      n.d(t, "j", function() {
         return ut;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "h", function() {
         return mt;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "d", function() {
         return dt;
+      }),
+      n.d(t, "c", function() {
+        return ht;
+      }),
+      n.d(t, "e", function() {
+        return ft;
       });
-    var tt = (function(n) {
+    var ot = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -48602,7 +48685,7 @@
                       popup: i.props.popup
                     })
                   : o
-                  ? R.createElement(ct, {
+                  ? R.createElement(pt, {
                       broadcastView: e,
                       isActive: e == r,
                       popup: i.props.popup
@@ -48659,7 +48742,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      nt = (function(t) {
+      it = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -48876,7 +48959,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component);
-    function ot(e, t, n) {
+    function rt(e, t, n) {
       var o,
         i = !1,
         r = !0;
@@ -48896,7 +48979,7 @@
       }
       r
         ? Object(b.b)(
-            R.createElement(it, G.a({}, e)),
+            R.createElement(at, G.a({}, e)),
             n,
             "InviteDialog",
             {
@@ -48914,7 +48997,7 @@
             Object(x.b)("#Chat_Actions_DropGroupInvite_Denied_Description")
           );
     }
-    var it = (function(n) {
+    var at = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.invitee = t.props.invitee), t;
@@ -49201,7 +49284,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      rt = (function(e) {
+      st = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -49279,7 +49362,7 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      at = function(e) {
+      ct = function(e) {
         var t = e.onClick,
           n = e.edge;
         return R.createElement(
@@ -49292,7 +49375,7 @@
           R.createElement(L.x, { showChat: !0 })
         );
       },
-      st = R.forwardRef(function(e, t) {
+      lt = R.forwardRef(function(e, t) {
         var n = e.steamID,
           o = e.localSteamID,
           i = e.watchLocation,
@@ -49336,7 +49419,7 @@
           )
         );
       }),
-      ct = (function(e) {
+      pt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -49358,7 +49441,7 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      lt = (function(e) {
+      ut = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -49427,7 +49510,7 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      pt = (function(t) {
+      mt = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -49505,7 +49588,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      ut = (function(t) {
+      dt = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -49548,7 +49631,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      mt = (function(t) {
+      ht = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -49598,7 +49681,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      dt = (function(e) {
+      ft = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }

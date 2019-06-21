@@ -20138,3 +20138,18 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 .avoidEvents {
   pointer-events: none; }
 
+.FriendChatBroadcastDetails {
+  display: flex;
+  padding: 4px;
+  font-size: 14px;
+  color: #c1c6cf; }
+
+.FriendChatBroadcastDetails_Icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 4px; }
+
+.FriendChatBroadcastDetails_GameName {
+  margin-left: 4px;
+  cursor: pointer; }
+

@@ -1556,5 +1556,7 @@ LocalizationReady("friendsui", "english", {
   changeLog_GenericUpdateTitle: "Steam Friends and Chat Update",
 
   BBCode_Loading: "Loading",
-  BBCode_Failed: "Failed to load"
+  BBCode_Failed: "Failed to load",
+
+  broadcastDetails_Playing: "Playing"
 });
