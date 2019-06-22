@@ -3045,6 +3045,7 @@
  T lh_strhash
  T md5_block_asm_data_order
  T netadr_t::CompareAdr(netadr_t const&, bool) const
+ T netadr_t::GetIP() const
  T netadr_t::HasIP() const
  T netadr_t::IsValid() const
  T netadr_t::SetFromSockadr(void const*, unsigned long)

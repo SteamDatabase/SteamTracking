@@ -11901,6 +11901,7 @@
  T lh_retrieve
  T lh_strhash
  T md5_block_asm_data_order
+ T netadr_t::GetIP() const
  T netadr_t::HasIP() const
  T netadr_t::IsLoopback() const
  T netadr_t::IsValid() const

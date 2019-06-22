@@ -5864,6 +5864,7 @@
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
  T netadr_t::BlockingResolveAndSetFromString(char const*, bool)
+ T netadr_t::GetIP() const
  T netadr_t::HasIP() const
  T netadr_t::IsValid() const
  T netadr_t::SetFromSockadr(void const*, unsigned long)

@@ -10347,6 +10347,7 @@
  T jround_up
  T jzero_far
  T netadr_t::CompareAdr(netadr_t const&, bool) const
+ T netadr_t::GetIP() const
  T netadr_t::HasIP() const
  T netadr_t::ToString(char*, unsigned int, bool) const
  T new_JSON_parser

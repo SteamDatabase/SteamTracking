@@ -10810,6 +10810,7 @@
  T md5_block_asm_data_order
  T netadr_t::BlockingResolveAndSetFromString(char const*, bool)
  T netadr_t::CompareAdr(netadr_t const&, bool) const
+ T netadr_t::GetIP() const
  T netadr_t::HasIP() const
  T netadr_t::SetFromSockadr(void const*, unsigned long)
  T netadr_t::SetFromString(char const*)

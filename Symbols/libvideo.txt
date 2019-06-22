@@ -5400,6 +5400,7 @@
  T netadr_t::BConvertMappedToIPv4()
  T netadr_t::BlockingResolveAndSetFromString(char const*, bool)
  T netadr_t::CompareAdr(netadr_t const&, bool) const
+ T netadr_t::GetIP() const
  T netadr_t::HasIP() const
  T netadr_t::IsLoopback() const
  T netadr_t::IsMappedIPv4() const
