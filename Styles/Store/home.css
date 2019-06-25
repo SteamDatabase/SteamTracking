@@ -1518,6 +1518,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	width: 100%;
 	background-repeat: no-repeat;
 	background-position: left;
+	display: block;
 }
 
 @media screen and (max-width: 910px)

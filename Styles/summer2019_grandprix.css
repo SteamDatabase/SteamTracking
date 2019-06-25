@@ -1,0 +1,1819 @@
+
+body.v6.grandprix {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/tread2.png' );
+	background-repeat: repeat-y;
+	background-color: #343f4a;
+	background-position: center;
+}
+
+body.v6.grandprix .prix_page_content {
+	font-family: eurostile-extended, sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	color: #A7A9AC;
+	flex-wrap: wrap;
+}
+
+body.v6.grandprix #store_header {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-style: initial;
+	font-weight: normal;
+}
+
+.skew_right {
+	transform: skewX( -10deg );
+}
+
+.unskew_right {
+	transform: skewX( 10deg );
+}
+
+a {
+	color: #0a98c4;
+	}
+
+.prix_header_ctn {
+	height: 447px;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.prix_header_video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.prix_header_logo_ctn {
+	width: 1200px;
+	margin: -30px auto 0 auto;
+}
+
+.prix_header_logo_img {
+	z-index: 100;
+	position: relative;
+	height: 220px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: left;
+}
+
+.prix_results_ticker_ctn {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 30px;
+	padding-top: 10px;
+	overflow: hidden;
+	background-color: rgba( 0, 0, 0, 0.5 );
+	max-width: 1950px;
+	margin: 0 auto;
+}
+.prix_results_ticker_ctn > .prix_results_ticker {
+	height: 100%;
+	width: 200%;
+	position: absolute;
+	overflow: hidden;
+	animation: marquee 30s linear infinite;
+}
+.prix_results_ticker_ctn > .prix_results_ticker > div {
+	float: left;
+	margin-left: 40px;
+	text-transform: uppercase;
+	font-family: eurostile, sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	font-size: 13px;
+}
+.prix_results_ticker_ctn > .prix_results_ticker > .congrats {
+	color: #e47301;
+}
+.prix_results_ticker_ctn > .prix_results_ticker > .team_1 {
+	color: #ddddda;
+}
+.prix_results_ticker_ctn > .prix_results_ticker > .team_2 {
+	color: #448e64;
+}
+.prix_results_ticker_ctn > .prix_results_ticker > .team_3 {
+	color: #edbb31;
+}
+.prix_results_ticker_ctn > .prix_results_ticker > .team_4 {
+	color: #49a2da;
+}
+.prix_results_ticker_ctn > .prix_results_ticker > .team_5 {
+	color: #cf3a22;
+}
+
+@keyframes marquee {
+	0% { left: 0; }
+	100% { left: -100%; }
+}
+
+.prix_header_teams_ctn {
+	display: flex;
+	justify-content: center;
+	text-transform: uppercase;
+	font-size: 16px;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	max-width: 1950px;
+	background: #0c0e0f;
+	position: relative;
+	font-family: politica, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	letter-spacing: 0.05em;
+}
+
+.prix_course_img {
+	z-index: 10;
+	position: absolute;
+	right: -18%;
+	top: -15%;
+}
+
+.prix_current_standings {
+	flex-grow: 1;
+	max-width: 200px;
+}
+
+.prix_current_standings > div {
+	margin-left: auto;
+}
+
+.prix_header_teams_ctn .prix_standing.prix_winning_standing {
+	width: 14%;
+	margin-right: 10%;
+	padding-right: 5%;
+}
+
+.prix_header_teams_ctn .prix_standing {
+	margin-right: 15px;
+	padding: 5px 20px;
+	width: 8%;
+	display: flex;
+	justify-content: space-between;
+	color: #FFF;
+	position: relative;
+	transform: skewX(-10deg);
+}
+
+.prix_header_teams_ctn .prix_standing img {
+	transform: skewX( 10deg );
+	position: absolute;
+	bottom: 20px;
+	left: -6%;
+}
+
+.prix_header_teams_ctn .prix_standing > div {
+	transform: skewX( 10deg );
+	font-family: eurostile, sans-serif;
+  font-weight: 700;
+}
+
+.prix_standing_bar_ctn {
+	display: flex;
+	z-index: 10;
+}
+
+.prix_standing.pig, .prix_standing_bar.pig, .prix_playerboost_team_logo.pig {
+	background: #cf3a22;
+}
+
+.prix_standing.cockatiel, .prix_standing_bar.cockatiel, .prix_playerboost_team_logo.cockatiel {
+	background: #447491;
+}
+
+.prix_standing.corgi, .prix_standing_bar.corgi, .prix_playerboost_team_logo.corgi {
+	background: #d7a318;
+}
+
+.prix_standing.tortoise, .prix_standing_bar.tortoise, .prix_playerboost_team_logo.tortoise {
+	background: #448e64;
+}
+
+.prix_standing.hare, .prix_standing_bar.hare, .prix_playerboost_team_logo.hare {
+	background: #d0d3cf ;
+	color: #000000;
+}
+
+.prix_standing_bar.corgi img {
+	right: -169px;
+}
+
+.prix_standing_bar.tortoise img {
+	right: -168px;
+}
+
+.prix_standing_bar.pig img {
+	right: -169px;
+}
+
+.prix_standing_bar.cockatiel img {
+	right: -157px;
+}
+
+.prix_standing_bar.hare img {
+	right: -100px;
+}
+
+.prix_standing_bar_score {
+	text-align: right;
+	margin: 18px 20px 0 0;
+	font-size: 20px;
+	color: #00000066;
+	
+}
+
+.prix_raceboard_ctn {
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.prix_raceboard_teams_ctn {
+	display: flex;
+	height: 410px;
+	position: relative;
+	flex-direction: column;
+	border-right: 44px solid transparent;
+	margin-top: 1px;
+	border-image-source: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/finishline_checks.png' );
+	border-image-slice: 0 100%;
+	border-image-repeat: repeat;
+}
+
+.prix_team_standings_img {
+	width: 374px;
+	position: absolute;
+	left: -374px;
+}
+
+.prix_standing_bar_ctn:first-of-type {
+	margin-top: 58px;
+}
+
+.prix_standing_bar {
+	height: 68px;
+	position: relative;
+	z-index: 10;
+	min-width: 7%;
+}
+
+.prix_standing_bar img {
+	position: absolute;
+	right: -131px;
+	bottom: 0;
+	width: 181px;
+}
+
+.prix_standing_currentteam {
+	font-size: 16px;
+	background: linear-gradient( to left, rgba( 53,57,66, 0 ) 0%, rgba( 39,50,57, 1 ) 100% );
+	flex-grow: 1;
+	padding-top: 23px;
+	padding-left: 120px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #D0D3CF66;
+	line-height: 1.0;
+}
+
+.prix_raceboard_teams_ctn .prix_finishline_img {
+	position: absolute;
+	right: 20px;
+	top: 45px;
+	z-index: -1;
+}
+
+.prix_playerinfo_ctn {
+	display: flex;
+	margin: 0px 50px;
+	margin-left: 150px;
+	font-size: 14px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background: linear-gradient( to bottom, rgba( 53,57,66, 0 ) 50%, rgba( 39,50,57, 1 ) 100%, rgba( 39,50,57, 0 ) 100%  );
+	transform: skewX( -9deg );	
+	border-radius: 6px;
+	padding-bottom: 20px;
+}
+
+.prix_playerinfo_ctn .prix_boost_ctn, .prix_playerinfo_ctn .prix_attack_ctn {
+	width: calc( 50% - 10px );
+	transform: skewX( 9deg);
+}
+
+.prix_header_text {
+	font-size: 24px;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: #D0D3CF;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-weight: 700;
+}
+
+.prix_quest_info .prix_header_text,
+.prix_faq_ctn .prix_header_text,
+.prix_friends_progress_ctn .prix_header_text,
+.prix_extended_stats .prix_header_text {
+	font-size: 36px;
+	color: #D0D3CF;
+	font-weight: 700;
+}
+
+.prix_playerinfo_ctn .prix_header_text {
+	font-family: politica, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	margin-bottom: 2px;
+	}
+
+.prix_header_text2 {
+	font-size: 36px;
+	margin-left: 100px;
+	margin-top: 50px;
+	color: #D0D3CF;
+	font-weight: 700;
+}
+
+.prix_playerinfo_ctn .prix_playerinfo_header {
+	font-size: 28px;
+	text-transform: uppercase;
+}
+
+.prix_starsection_ctn {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.prix_action_ctn.disabled, prix_action_ctn.disabled .prix_action_details_ctn {
+	opacity: .2;
+	cursor: default;
+}
+
+.prix_action_ctn {
+	display: flex;
+	margin-top: auto;
+	text-transform: uppercase;
+	transform: skewX( -10deg );
+	background-color: #273239;
+	margin-left: 8px;
+	border-radius: 6px;
+	max-width: 440px;
+	height: 100px;
+	box-shadow: 4px 4px 1px #1f2225cc;
+}
+
+.prix_action_ctn.enabled:hover
+{
+	cursor: pointer;
+	background-color: #37474f;
+	transition: none;
+}
+
+.prix_action_details_ctn {
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+	margin-left: -10px;
+	transform: skewX( 10deg );
+}
+
+.prix_action_btn {
+	width: 160px;
+	height: 100px;
+	cursor: pointer;
+	padding-left: 0px;
+}
+
+.prix_action_ctn.disabled .prix_action_btn {
+	cursor: default;
+}
+
+.prix_action_text {
+	font-size: 16px;
+	margin-top: 20px;
+	padding-left: 10px;
+	font-family: eurostile-extended,sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  line-height: 1.0;
+	
+}
+
+.prix_action_subtext {
+	font-size: 15px;
+	text-transform: none;
+	font-family: politica, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	padding-left: 10px;
+	color: #ec4227;
+	letter-spacing: 0.03em;
+}
+
+.prix_action_subtext2, .prix_attack_ctn .prix_action_subtext2 {
+	color: #526a79;
+	font-size: 15px;
+	font-family: politica, sans-serif;
+	font-weight: 800;
+	font-style: italic;
+	letter-spacing: 0.05em;
+	padding-left: 10px;
+	margin-left: -4px;
+}
+
+.prix_attack_ctn .prix_action_subtext {
+	color: #E8AC25;
+}
+
+
+.prix_action_capacity_remaining {
+	font-size: 14px;
+}
+
+.prix_action_text.boost {
+	color: #cf3a22;
+}
+
+.prix_action_text.attack {
+	color: #E8AC25;
+}
+
+.prix_action_desc {
+	margin: 10px 0;
+	font-weight: 700;
+	padding-right: 25px;
+	line-height: 1.5;
+	color: #929396;
+}
+
+.prix_action_ctn.enabled:hover .prix_action_subtext2
+{
+	color: #cdd0cc;
+	transition: none;
+}
+
+.prix_action_subtext3 {
+	margin-top: 10px;
+	color: #0a98c4
+}
+
+.prix_action_btn.boost {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_boost_default.png' ) no-repeat center;
+	transition: all .1s ease-out;
+}
+
+.prix_action_ctn:hover .prix_action_btn.enabled {
+	transform: translateX( 10px ) translateY( -12px );
+	transition: .1s ease-out;
+}
+
+.prix_action_ctn:active .prix_action_btn.enabled {
+	transform: translateX( 0px ) translateY( 0px );
+	transition: all .1s ease-out;
+	opacity: 0.8;
+}
+
+.prix_action_btn.attack {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_attack_default.png' ) no-repeat center;
+}
+
+.prix_action_ctn.attack:active {
+	background-color: #d6a21799;
+}
+
+.prix_jointeam_teams_ctn {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	margin-top: 80px;
+}
+
+.prix_jointeam_dialog_ctn {
+	min-width: 900px;
+	font-family: politica-expanded, sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	overflow-x: hidden;
+}
+
+.prix_jointeam_select_ctn {
+	min-height: 480px;
+}
+
+.prix_teamcard_ctn {
+	margin-right: 10px;
+	transform: skewX(-10deg);
+	position: relative;
+	width: 150px;
+	text-transform: uppercase;
+}
+
+.prix_jointeam_select_header {
+	font-size: 20px;
+	color: #FFF;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.prix_team_selection {
+	background: #273239;
+	position: relative;
+	cursor: pointer;
+	transition: all .3s ease-out;
+	width: 150px;
+	height: 120px;
+}
+
+.prix_team_selection.selected {
+	transform: translateY( -30px );
+}
+
+.prix_teamcard_ctn > div:not( .prix_team_selection, .prix_boostmeter_ctn ) {
+	transform: skewX( 10deg );
+}
+
+.prix_team_selection img {
+	transform: skewX( 10deg );
+	left: -13px;
+	width: 200px;
+	bottom: 0;
+	position: absolute;
+}
+
+.prix_teamcard_ctn .prix_jointeam_friends_title {
+	color: #FFF;
+	font-size: 12px;
+}
+
+.prix_teamcard_ctn .prix_jointeam_teamname {
+	font-size: 14px;
+	margin: 5px 0;
+	transform: skewX( 10deg );
+}
+
+.prix_teamcard_ctn .prix_jointeam_friends_ctn {
+	padding-right: 5px;
+	border-right: 3px solid #FFF;
+	border-image-source: linear-gradient( to top, rgba( 53,57,66, 0 ) 0%, rgba( 53,57,66, 1 ) 100% );
+	border-image-slice: 1;
+}
+
+.prix_join_friends_max {
+	background: rgba( 0, 0, 0, .3 );
+	vertical-align: top;
+	line-height: 30px;
+	font-size: 11px;
+	text-align: center;
+	cursor: default;
+}
+
+.prix_jointeam_friend_avatar, .prix_join_friends_max {
+	width: 28px;
+	height: 28px;
+	margin: 5px 5px 0 0;
+	display: inline-block;
+}
+
+.prix_jointeam_ctn {
+	width: 100%;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/vehicles.png' ) no-repeat;
+	background-position: right bottom;
+	transform: skewX( 9deg ) translateX( -50px );
+}
+
+.prix_jointeam_header {
+	font-size: 36px;
+	text-transform: uppercase;
+	line-height: 0.9;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	color: #D0D3CF;
+}
+
+#welcome_joined_team div {
+	margin-left: 25px;
+	font-size: 36px;
+}
+
+.prix_jointeam_subheader {
+	color: #0A98C4;
+	font-size: 18px;
+}
+
+.prix_jointeam_desc {
+  font-weight: 700;
+  padding-right: 25px;
+  line-height: 1.5;
+ 	font-size: 16px;
+  color: #b1b3b8;
+  max-width: 50%;
+  font-family: politica-expanded, sans-serif;
+  letter-spacing: 0.0em;
+}
+
+.prix_jointeam_details_col1 {
+	max-width: 100%;
+	padding-bottom: 30px;
+}
+
+.prix_jointeam_btn_ctn {
+	display: flex;
+	flex-wrap: wrap;
+	text-transform: uppercase;
+	transform: skewX( -10deg );
+	background-color: #37474f;
+	margin-left: 8px;
+	border-radius: 6px;
+	margin-top: 40px;
+	cursor: pointer;
+	width: 460px;
+}
+
+#jointeam_throbber {
+	margin-top: 50px;
+	width: 4%;
+}
+
+.prix_jointeam_error{
+	margin-top: 50px;
+	color: #cf3a22;
+}
+
+.prix_jointeam_btn {
+	width: 160px;
+	height: 100px;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_signup_default.png' ) no-repeat center;
+	transform: translateX( 0px ) translateY( 0px );
+	transition: all .1s ease-out;
+}
+
+.prix_viewquests_btn {
+	width: 160px;
+	height: 100px;
+	cursor: pointer;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_confirm_default.png' ) no-repeat center;
+	transform: translateX( 0px ) translateY( 0px );
+	transition: all .1s ease-out;
+}
+
+.prix_jointeam_confirm_img {
+	width: 160px;
+	height: 100px;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_join_default.png' ) no-repeat center;
+	transform: translateX( 0px ) translateY( 0px );
+	transition: all .1s ease-out;
+}
+
+.prix_jointeam_btn_ctn.disabled {
+	opacity: .3;
+	cursor: default;
+}
+
+.prix_jointeam_btn_ctn:hover:not( .disabled ), .prix_jointeam_btn_ctn:active:not( .disabled ) {
+	transition: all .1s ease-out;
+	background-color: #385e48;
+	transition: all .1s ease-out;
+}
+
+.prix_jointeam_btn_ctn:hover:not( .disabled ) .prix_jointeam_btn, .prix_jointeam_btn_ctn:hover:not( .disabled ) .prix_jointeam_confirm_img, .prix_jointeam_btn_ctn:hover .prix_viewquests_btn {
+	transform: translateX( 10px ) translateY( -12px );
+	transition: all .1s ease-out;
+}
+
+.prix_jointeam_btn_txt {
+	text-transform: uppercase;
+	font-size: 20px;
+	margin-top: 30px;
+	color: #448e63;
+}
+
+.prix_jointeam_joined_ctn {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/helmet_hare.png' ) no-repeat right;
+}
+
+.prix_jointeam_joined_desc {
+	max-width: 40%;
+}
+
+.prix_points_dial {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/dial.png' ) no-repeat center;
+	background-position: 5px;
+	height: 286px;
+	width: 286px;
+	position: absolute;
+	margin-top: -30px;
+	z-index: 10;
+}
+
+.prix_playerinfo_stats_ctn .prix_playerboost_attacks {
+	transform: skewX( -10deg );
+	text-align: right;
+	text-transform: uppercase;
+	border-right: 1px solid #425561;
+	padding-right: 10px;
+	font-style: normal;
+	font-size: 12px;
+	padding-bottom: 5px;
+}
+
+.prix_playerinfo_stats_ctn .prix_playerboost_attacks span {
+		transform: skewX( 10deg );
+	}
+
+.prix_playerboost_info_ctn {
+	padding-left: 33%;
+	width: 100%;
+	padding-top: 20px;
+}
+
+.prix_playerinfo_stats_ctn .prix_playerboost_team {
+	transform: skewX( -10deg );
+	background: #273239;
+	position: relative;
+	border-radius: 6px;
+	padding: 50px 10px 0 0;
+	height: 114px;
+}
+
+.prix_playerinfo_stats_ctn .prix_playerboost_team * {
+	transform: skewX( 10deg );
+}
+
+.prix_playerboost_team_logo {
+	position: relative;
+	width: 185px;
+	height: 114px;
+}
+
+.prix_playerboost_team_logo img {
+	padding-left: 110px;
+	width: 305px;
+	position: absolute;
+	bottom: 0;
+}
+
+.prix_playerboost_team_attack {
+	text-align: right;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 16px;
+}
+
+.prix_boostmeter_ctn {
+	transform: skewX( -10deg );
+	background: #425561;
+	margin: 5px 0 5px auto;
+	height: auto;
+	border-radius: 6px;
+	max-width: 95%;
+	font-style: normal;
+}
+
+.prix_boostmeter_value {
+	background: #A7A9AC;
+	color: #000000;
+	border-radius: 6px;
+	padding-left: 10px;
+	font-size: 28px;
+	text-transform: none;
+	font-style: normal;
+}
+
+.prix_boostmeter_value span {
+	transform: skewX( -10deg );
+}
+
+.prix_playerinfo_top_ctn {
+	display: flex;
+	position: relative;
+	margin-top: 0px;
+}
+
+.prix_playerinfo_bottom_ctn {
+	display: flex;
+	text-transform: uppercase;
+}
+
+.prix_currentpoints_point {
+	display: inline-block;
+	border-radius: 6px;
+	background:hsla(203, 19%, 26%, 1);
+	color: #cbcdd1;
+	font-size: 28px;
+	transform: skewX( -10deg );
+	min-width: 34px;
+	padding-left: 5px;
+	padding-bottom: 18px;
+	max-height: 24px;
+}
+
+.prix_currentpoints_point span {
+	transform: skewX( 10deg );
+	display: inline-block;
+}
+
+.prix_currentpoints_ctn {
+	margin: -15px 0 40px 0;
+	margin-left: -12px;
+}
+
+.prix_currentpoints_capacty {
+	display: inline-block;
+	padding-top: 2px;
+	font-size: 11px;
+	font-weight: 800;
+	line-height: 1.0;
+	color: #526a79;
+}
+
+.prix_currentpoints_capacty span, .prix_player_capacity_bank span {
+	color: #cf3a22;
+	padding-left: 2px;
+}
+
+.prix_currentboost_ctn {
+	margin-left: auto;
+	flex-grow: 1;
+	padding: 0 15px 0 0;
+	max-width: 215px;
+}
+
+.prix_boostmeter_nitro_ctn {
+	transform: skewX( -10deg );
+	margin-right: 10px;
+	padding: 0 10px 0 15px;
+}
+
+.prix_boostmeter_nitro_val {
+	font-size: 24px;
+	text-align: right;
+}
+
+.prix_boostmeter_nitro_label {
+	font-size: 12px;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+.prix_boostmeter_nitro_ctn div {
+	transform: skewX( 10deg );
+	text-transform: uppercase;
+}
+
+.prix_attack_teams_ctn {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px 0 52px 0px;
+
+}
+
+.prix_driver_dash_header {
+
+	font-size: 36px;
+  color: #D0D3CF;
+  font-weight: 700;
+  text-align: right;
+  padding-top: 105px;
+}
+
+.prix_attackcard_ctn {
+	margin-right: 10px;
+	transform: skewX(-10deg);
+	transition: all .3s ease-out;
+}
+
+.prix_attackcard_ctn.enabled {
+	cursor: pointer;
+}
+
+.prix_attack_controls {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -40px;
+	padding-top: 2px;
+}
+
+.prix_attackteam_selection {
+	width: 100px;
+	position: relative;
+	background: #273239;
+	height: 120px;
+	border-radius: 6px;
+	padding: 5px;
+}
+
+.prix_attackteam_selection img {
+	width: 158px;
+	left: -9px;
+	position: absolute;
+	transform: skewX(10deg);
+	bottom: 0;
+}
+
+.prix_attackteam_boost_ctn {
+	height: 24px;
+	background: #425561;
+	width: 110px;
+	transform: skewX( 0deg );
+	font-style: normal;
+}
+
+.prix_attackcard_ctn.enabled:hover, .prix_attackcard_ctn.selected, .prix_attackcard_ctn.selected .prix_attackteam_boost_ctn  {
+	transform: translateY( -10px ) skewX(-10deg);
+	transition: 0.1s ease-out;
+}
+
+.prix_attackcard_ctn.selected .prix_attackteam_selection, .prix_team_selection.selected, .prix_team_selection:hover {
+	background: linear-gradient( to top, #273239 40%, #E8AC25 100% );
+	transform: translateY( -10px );
+	transition: all 0.2s ease-out;
+	border-radius: 6px;
+}
+
+.prix_attackcard_ctn.selected .prix_attackteam_deboost {
+	color: #000000;
+}
+
+.prix_attackcard_ctn .prix_attackteam_header {
+	visibility: hidden;
+	color: #E8AC25;
+}
+
+.prix_attackcard_ctn.enabled.selected .prix_attackteam_selection_ctn .prix_attackteam_header {
+	visibility: visible;
+	transform: translateY( -10px ) skew( 10deg );
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.prix_attackteam_deboost {
+	text-align: right;
+	font-style: normal;
+	font-size: 14px;
+}
+
+.prix_attackteam_boost_ctn .prix_boostmeter_value {
+	font-size: 18px;
+	font-style: normal;
+	height: 24px;
+}
+
+.prix_attackteam_boost_ctn .prix_boostmeter_value span {
+	transform: skewX( -10deg );
+	transition: none;
+}
+
+.prix_attackcard_ctn.selected .prix_boostmeter_value, .prix_attackcard_ctn.selected .prix_boostmeter_value span  {
+		transform: skewX( 10deg );
+}
+
+
+.prix_boostmeter_label {
+	margin-left: 10px;
+	font-size: 12px;
+	}
+
+.prix_currentnitro_label {
+	margin-top: 5px;
+	text-transform: uppercase;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 800;
+	line-height: 1.0;
+	color: #526a79;
+}
+
+.prix_currentpoints_row {
+	margin-left: 30px;
+}
+
+.prix_currentpoints_row.nitro {
+	margin: 4px 0 0 86px;
+}
+
+.prix_points_dial img {
+	position: absolute;
+	transform-origin: 50% 63%;
+}
+
+.points_dial_needle {
+	z-index: 10;
+	-webkit-transition: 2s linear;
+	transition: 2s linear;
+	transform: rotate( 240deg );
+}
+
+.points_dial_max_needle {
+	-webkit-transition: 1.5s linear;
+	transition: 1.5s linear;
+	transform: rotate( 240deg );
+	z-index: 5;
+}
+
+.prix_howto {
+	max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: -10px;
+  margin-top: 40px;
+  color: #cf3a22;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.prix_quest_info {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 70px;
+    position: relative;
+ }
+
+.prix_quest_info_header {
+	font-size: 28px;
+	text-transform: uppercase;
+}
+
+.prix_quest_info_text, .prix_dash_info_text {
+	max-width: 900px;
+  font-family: eurostile, sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: #A7A9AC;
+  font-size: 16px;
+}
+
+.prix_dash_info_text {
+	margin-left: 100px;
+	}
+
+.prix_quest_ctn {
+	position: relative;;
+	max-width: 1014px;
+	margin: 0 auto;
+}
+
+.prix_quest_ctn .dq_item {
+	cursor: pointer;
+}
+
+.prix_quest_redbar {
+	height: 10px;
+	width: 1208px;
+	background-color: #CF3A22;
+	margin-bottom: 70px;
+	margin-left: -100px;
+}
+
+.prix_quest_info.prix_quest_redbar {
+	max-width: 1200px;
+	margin: 0 auto;
+	color: #ffffff;
+	}
+
+.prix_quest_belowborder {
+	position: absolute;
+	color: #CF3A22;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.prix_quest_playgames {
+	left: 15px;
+	top: 230px;
+	font-size: 21px;
+	padding-top: 12px;
+}
+
+.prix_quest_plusfreegames, .prix_quest_numgames {
+	font-size: 14px;
+}
+
+.prix_quest_plusfreegames {
+	left: 480px;
+	top: 230px;
+}
+
+.prix_quest_numgames {
+	right: 0;
+	top: 230px;
+}
+
+.prix_quest_appheader {
+	font-size: 28px;
+	letter-spacing: 0.03em;
+	padding-top: 5px;
+	margin-left: 15px;
+	margin-bottom: 5px;
+	color: #D0D3CF;
+	font-weight: 800;
+	font-family: eurostile, sans-serif;
+	font-weight: 900;
+	font-style: italic;
+}
+
+.prix_quest_questlist {
+	margin-bottom: 60px;
+	width: 950px;
+}
+
+.prix_quest {
+	display: inline-block;
+	width: 440px;
+	background-color: #2e3640;
+	padding: 10px;
+	margin: 5px 0 5px 10px;
+}
+
+.prix_quest_completed {
+	color:#696f7c;	
+	font-family: eurostile, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.prix_quest_points {
+	float: right;
+	margin: 0.8em 0 0 1em;
+	margin-top: 1.9em;
+	color:#696f7c;	
+	font-family: eurostile, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.prix_quest_name {
+	color:#D0D3CF;
+	margin-bottom: 0.25em;
+	font-size: 16px;
+	height: 40px;
+	font-family: eurostile, sans-serif;
+	font-weight: 900;
+	font-style: italic;
+}
+
+.prix_quest_illo {
+    right: -300px;
+    bottom: -260px;
+    position: absolute;
+    max-height: 500px;
+	}
+
+.prix_player_capacity_bank {
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.prix_friends_progress_ctn {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+	padding-top: 50px;
+}
+
+.prix_friends_progress_ctn .prix_header_text {
+	width: 100%;
+	margin-bottom: 20px;
+	line-height: 1.0;
+}
+
+.prix_friends_progress_ctn .prix_friends_sub_desc {
+	max-width: 450px;
+	margin-top: 10px;
+	font-family: politica-expanded, sans-serif;
+	font-size: 16px;
+  font-weight: 700;
+  padding-right: 25px;
+  margin: 20px 0;
+  line-height: 1.5;
+  color: #A7A9AC;
+	letter-spacing: 0.0em;
+}
+
+.prix_friends_progress {
+	position: relative;
+	padding-top: 20px;
+	height: 175px;
+}
+
+.prix_friends_progress_wrapper {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	padding: 0 25px;
+	max-width: 1150px;
+}
+
+.prix_friends_progress_txtwrapper {
+	max-width: 1000px;
+	margin: 0 auto 35px auto;
+}
+
+.prix_friend {
+	position: absolute;
+	bottom: 15px;
+	margin: 0 auto;
+	margin-left: -16px;
+	width: 32px;
+}
+.prix_friend_inner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.prix_friend.leader {
+	right: 0px;
+}
+.prix_friend.you {
+	width: 64px;
+	height: 100%;
+	margin-left: -32px;
+	margin-top: 10px;
+	bottom: unset;
+}
+.prix_friend .prix_friend_image {
+	width: 32px;
+	height: 32px;
+}
+.prix_friend.you .prix_friend_image,
+.prix_friend.you .prix_friend_image img {
+	width: 64px;
+	height: 64px;
+}
+.prix_friend .prix_friend_name {
+	flex-shrink: 0;
+	max-width: 150px;
+	min-width: 100%;
+	height: 16px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+	white-space: nowrap;
+	background: rgba(0,0,0,1);
+	padding: 2px;
+	box-shadow: 0px 0px 8px 2px #000000;
+	margin: 5px auto 5px auto;
+}
+
+.prix_friend_arrow_down {
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #CF3A22;
+	margin: 0px auto;
+}
+
+.prix_friend_arrow_down.team_1 {
+	border-top: 10px solid #d0d3cf;
+}
+.prix_friend_arrow_down.team_2 {
+	border-top: 10px solid #448e64;
+}
+.prix_friend_arrow_down.team_3 {
+	border-top: 10px solid #d7a318;
+}
+.prix_friend_arrow_down.team_4 {
+	border-top: 10px solid #447491;
+}
+.prix_friend_arrow_down.team_5 {
+	border-top: 10px solid #cf3a22;
+}
+
+.prix_friend.you .prix_friend_arrow_down {
+	bottom: 35px;
+}
+
+.prix_friend_line_down {
+	height: 55px;
+	width: 3px;
+	background-color: #cf3a22;
+}
+
+.prix_friends_track {
+	width: 100%;
+	height: 10px;
+	background-color: #CF3A22;
+}
+
+.prix_faq_ctn {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 40px;
+	padding-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.prix_faq_ctn .prix_header_text {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.prix_faq_question_ctn {
+	max-width: calc( 50% - 40px );
+	margin: 10px 20px 10px 0px;
+}
+
+.prix_faq_question {
+	font-family: eurostile, sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	color: #0a98c4;
+	margin-bottom: 10px;
+	font-size: 16px;
+}
+
+.prix_faq_answer {
+	font-family: politica-expanded, sans-serif;
+  font-weight: 700;
+  padding-right: 25px;
+  margin: 20px 0;
+	line-height: 1.5;
+	color: #A7A9AC;
+ }
+
+.prix_racing_faq_ctn {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.prix_faq_redbar {
+	width: 100%;
+	background: #090d11;
+	height: 3px;
+}
+
+.prix_achievement {
+	display: block;
+	width: 440px;
+	background-color: rgb( 59, 71, 83 );
+	padding: 10px;
+	margin: 5px 0 5px 10px;
+	margin-top: 35px;
+}
+
+.prix_achievement_detail {
+	display: block;
+	width: 440px;
+	padding-left: 10px;
+	
+}
+
+.prix_achievement_name {
+	color: #D0D3CF;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 0.25em;
+	font-size: 14px;
+}
+
+.prix_achievement_name_warning {
+	color: #D0D3CF;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin-bottom: 0.25em;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.prix_achievement_points {
+	float: right;
+	margin: 0.8em 0 0 1em;
+	margin-top: 0.25em;
+	margin-right: 4em;
+	color:#D0D3CF;	
+	font-weight: 700;
+}
+
+.prix_achievements_completed {
+	font-weight: 700;
+	color: rgb( 125, 132, 140);	
+}
+
+.prix_claim_achievement_points {
+	position: absolute;
+	left: 385px;
+	top: 349px;
+	width: 160px;
+	height: 100px;
+	cursor: pointer;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_claim_default.png' ) no-repeat center;
+}
+
+.prix_claim_achievement_points:hover {
+	transform: translateX( 10px ) translateY( -12px );
+	transition: all .1s ease-out;
+}
+
+.prix_claim_achievement_points:active {
+	transform: translateX( 0px ) translateY( -0px );
+	transition: all .1s ease-out;
+}
+
+
+.prix_achievements_overflow {
+	color: #CF3A22;
+}
+
+.prix_achievements_overflow_description {
+	font-family: politica-expanded, sans-serif;
+	font-weight: 900;
+	color: #CF3A22;
+}
+.prix_achievements_overflow_description.info {
+	color: #A7A9AC;
+}
+
+.prix_no_achievements_to_claim {
+	max-width: 900px;
+	margin-left: 10px;
+	font-family: eurostile, sans-serif;
+	font-weight: 900;
+	font-style: italic;
+	color: #A7A9AC;
+	font-size: 16px;
+}
+
+.prix_racing_header {
+	color: #cf3a22;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 10px 0;
+	font-weight: 700;
+}
+
+.prix_arrow_down {
+	width: 0;
+	height: 0;
+	padding-bottom: 1px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 8px solid #cf3a22;
+	display: inline-block;
+	transition: all .3s ease-out;
+}
+
+.prix_arrow_up {
+	width: 0;
+	height: 0;
+	padding-bottom: 2px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 8px solid #cf3a22;
+	display: inline-block;
+	transform: rotateZ( 90deg);
+	transition: all .3s ease-out;
+}
+
+.prix_racing_questions_ctn {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	max-height: 650px;
+}
+
+img.prix_consumable_drop {
+	margin: 0 auto;
+	width: 160px;
+}
+
+div.prix_consumable_drop {
+	max-width: 500px;
+	margin-left: 20px;
+}
+
+.prix_shake_animation {
+	/* Start the shake animation and make the animation last for 0.5 seconds */
+	animation: shake 0.5s;
+	animation-iteration-count: 10;
+	transform: translateY( -30px );
+}
+
+@keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(0deg) skew( -9deg ) }
+	10% { transform: translate(-1px, -1px) rotate(-1deg) skew( -9deg ) ; }
+	20% { transform: translate(-1px, 0px) rotate(1deg) skew( -9deg ) ; }
+	30% { transform: translate(1px, 1px) rotate(0deg) skew( -9deg ); }
+	40% { transform: translate(1px, -1px) rotate(1deg) skew( -9deg ); }
+	50% { transform: translate(-1px, 1px) rotate(-1deg) skew( -9deg ); }
+	60% { transform: translate(-1px, 1px) rotate(0deg) skew( -9deg ); }
+	70% { transform: translate(1px, 1px) rotate(-1deg) skew( -9deg ); }
+	80% { transform: translate(-1px, -1px) rotate(1deg) skew( -9deg ); }
+	90% { transform: translate(1px, 1px) rotate(0deg) skew( -9deg ); }
+	100% { transform: translate(1px, -1px) rotate(-1deg) skew( -9deg ); }
+}
+
+.prix_needle_animation {
+	/* Start the shake animation and make the animation last for 0.5 seconds */
+	animation: needle 0.3s;
+	animation-iteration-count: infinite;
+	transition: none;
+}
+
+@keyframes needle {
+	0% { transform: rotate( 478deg ) }
+	25% { transform: rotate( 486deg )}
+	50% { transform: rotate( 482deg ) }
+	100% { transform: rotate( 480deg ) }
+}
+
+.prix_action_pitstop {
+	padding-left: 50px;
+}
+
+.prix_infographic_ctn {
+	margin: 50px auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	max-width: 950px;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #273239;
+	padding: 25px;
+	border-radius: 6px;
+}
+
+.prix_infostep_ctn {
+	flex-direction: column;
+	display: flex;
+	text-align: center;
+	width: 25%;
+}
+
+.prix_infostep_ctn img {
+	width: 115px;
+	margin: 0 auto;
+	display: block;
+}
+
+.prix_infostep_line {
+	height: 5px;
+	background: #993526;
+	margin: 10px 0;
+}
+
+.prix_infostep_num {
+	background: #273239;
+	width: 45px;
+	text-align: center;
+	display: inline-block;
+	font-size: 24px;
+	margin-top: -18px;
+	color: #e3e6e2;
+}
+
+.prix_infostep_ctn > * {
+	padding: 0 20px;
+}
+
+.prix_infostep_header {
+	max-height: 80px;
+	min-height: 60px;
+	color: #0a98c4;
+	font-weight: 800;
+	font-size: 16px;
+	overflow-wrap: break-word;
+	font-family: eurostile, sans-serif;
+}
+
+.prix_infostep_desc {
+	margin-top: 20px;
+	font-weight: 700;
+	overflow-wrap: break-word;
+   font-family: politica-expanded, sans-serif;
+}
+
+.prix_dialog_ctn {
+	max-width: 700px;
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.prix_grant {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+.prix_extended_stats {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 40px;
+	padding-top: 50px
+}
+.prix_extended_stats .prix_header_text {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.prix_extended_stats_ctn {
+	max-width: 1000px;
+}
+
+.prix_extended_stats_table {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 3em 0;
+	padding: 0;
+}
+.prix_extended_stats_table > .cell,
+.prix_extended_stats_table > .cell {
+	box-sizing: border-box;
+	flex-grow: 1;
+	width: 100%;
+	height: 220px;
+	padding: 0.8em 1.2em;
+	overflow: hidden;
+	list-style: none;
+	border-right: 3px solid rgba( 0, 0, 0, 0.5 );
+	border-top: 3px solid rgba( 0, 0, 0, 0.5 );
+	text-transform: uppercase;
+}
+
+.prix_extended_stats_table--2cols > .cell  { width: 50%; }
+.prix_extended_stats_table--3cols > .cell  { width: 33.33%; }
+.prix_extended_stats_table--4cols > .cell  { width: 25%; }
+.prix_extended_stats_table--5cols > .cell  { width: 20%; }
+.prix_extended_stats_table--5cols > .cell:nth-child(5n)  { border-right: unset; }
+.prix_extended_stats_table--6cols > .cell  { width: 16.6%; }
+
+
+.cell .prix_race_day {
+	vertical-align: middle;
+}
+	
+.special_discount, .disscount_original_price .discount_final_price, .discount_original_price, .discount_final_price {
+	font-family: eurostile, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+}
+
+.prix_extended_stats_table > .th {
+	color: #0a98c4;
+	font-weight: 900;
+	vertical-align: text-bottom;
+	border-right: 3px solid #1f2225;
+	background-color: #0c0e0f;
+	text-align: left;
+	height: 75px;
+}
+
+.prix_extended_stats_table > .td {
+	font-size: 16px;
+}
+
+.prix_extended_stats_table > .prix_team_standing,
+.prix_extended_stats_table > .prix_race_day {
+	font-size: 32px;
+	color: #fff;
+	font-weight: 900;
+	text-align: right;
+}
+
+.prix_extended_stats_table > .cell.prix_team_standing_logo {
+	text-align: left;
+}
+.prix_team_standing_logo > img {
+	width: 130px;
+}
+
+.tabbar {
+	display: flex;
+}
+.tabbar > .tab {
+	background-color: rgba(255,255,255,0.05);
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+.tabbar > * {
+	padding: 8px 20px;
+	color: #fff;
+	margin: 4px 0 4px 4px;
+	letter-spacing: 1px;
+	white-space: nowrap;
+}
+
+.tabbar > .tab:hover {
+	background-color: rgba(255,255,255,0.5);
+	color: #fff;
+}
+
+.tabbar > .tab.active {
+	background-color: #CF3A22;
+}
+
+.tabbar > .tab:first-child {
+	margin-left: 0;
+}
+
+@media screen and ( max-width: 910px )
+{
+	html.responsive .prix_boost_ctn, html.responsive .prix_attack_ctn, html.responsive .prix_playerinfo_ctn {
+		width: 100%;
+		transform: none;
+	}
+
+	html.responsive .prix_header_teams_ctn .prix_standing .team_name {
+		flex-grow: 1;
+		display: none;
+	}
+
+	html.responsive .prix_header_teams_ctn .prix_standing {
+		width: 10px;
+	}
+
+	html.responsive .prix_playerinfo_ctn {
+		padding: 40px 10px;
+		transform: none;
+		margin: 0;
+	}
+
+	html.responsive .prix_jointeam_ctn {
+		transform: none;
+		background: none;
+	}
+
+	html.responsive .prix_jointeam_desc {
+		max-width: 100%;
+	}
+
+	html.responsive .prix_attack_teams_ctn {
+		justify-content: space-evenly;
+		margin: 0 0 00px 0;
+	}
+
+	html.responsive .prix_attackcard_ctn {
+		margin-top: 60px;
+	}
+
+	html.responsive .prix_standing img, html.responsive .prix_course_img  {
+		display: none;
+	}
+
+	html.responsive .prix_current_standings {
+		display: none;
+	}
+
+	html.responsive .prix_infostep_ctn {
+		width: 100%;
+		padding: 30px 0;
+	}
+
+	html.responsive .prix_racing_questions_ctn {
+		max-height: 100%;
+	}
+
+	html.responsive .prix_faq_question_ctn {
+		max-width: 100%;
+		margin: 15px auto;
+	}
+
+	html.responsive .prix_header_logo_img {
+
+	}
+
+	html.responsive .prix_currentboost_ctn {
+		max-width: 150px;
+	}
+
+	html.responsive .prix_standing_currentteam {
+		display: none;
+	}
+
+	html.responsive .prix_friends_progress_wrapper {
+		padding: 0;
+	}
+
+	html.responsive .prix_results_ticker_ctn {
+		padding-bottom: 10px;
+	}
+
+	html.responsive .prix_quest_illo {
+		display: none;
+	}
+
+	html.responsive .prix_attack_controls {
+		margin-left: 0;
+	}
+
+}
