@@ -199,3 +199,13 @@ color: white;
     flex-grow: 1;
     margin-right: 10px;
 }
+.top_warning {
+	padding: 20px;
+	background-color: #ffcb0c;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #bf9600;
+	color: black;
+
+	margin-bottom: 20px;
+}

@@ -126,6 +126,7 @@
         IMG_URL: "",
         STEAMTV_BASE_URL: "",
         HELP_BASE_URL: "",
+        PARTNER_BASE_URL: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,

@@ -811,7 +811,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 /* These are styles yanked out of friends.global.css that should probably be fixed up to be more moduly */
 .currentUserContainer .personanameandstatus_playerName_1uxaf {
   font-size: 15px;
-  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
   transition: color .94s ease-in-out;
   text-shadow: 1px 1px 4px #000;
   white-space: nowrap;
@@ -1085,7 +1086,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   text-shadow: 1px 1px 4px #000;
   font-size: 20px;
   letter-spacing: 1px;
-  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
   display: flex; }
 
 .miniprofile_miniProfileContent_25Sge .miniprofile_miniProfilePlayer_3cN6K.in-game .miniprofile_personaName_W3QjS:not(.miniprofile_hasNickname_dgG-l) .miniprofile_personaNameLabel_390p4,
@@ -1125,7 +1127,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   text-shadow: 1px 1px 4px #000;
   font-size: 14px;
   letter-spacing: 1px;
-  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif; }
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300; }
 
 .miniprofile_miniProfileContent_25Sge .miniprofile_playerContent_PV11V .miniprofile_personaName_W3QjS.miniprofile_nickName_2E8Iz .miniprofile_personaNameLabel_390p4,
 .miniprofile_miniProfileContent_25Sge .miniprofile_playerContent_PV11V .miniprofile_personaName_W3QjS:not(.miniprofile_hasNickname_dgG-l) .miniprofile_personaNameLabel_390p4 {
@@ -3082,7 +3085,8 @@ iframe.steamTVLogin {
   user-select: none; }
 
 .STV_Logo_TV {
-  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
   margin-top: 1px; }
 
 .STV_Logo_STEAM {
@@ -6037,7 +6041,8 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
   text-transform: uppercase;
   color: white;
   text-align: left;
-  font-family: 'Motiva Sans Light';
+  font-family: 'Motiva Sans';
+  font-weight: 300;
   letter-spacing: 4px;
   min-width: 300px;
   margin-bottom: 16px;
@@ -6124,7 +6129,8 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
   white-space: pre;
   color: #dfe3e6;
   font-size: 16px;
-  font-family: 'Motiva Sans Light';
+  font-family: 'Motiva Sans';
+  font-weight: 300;
   line-height: 32px;
   overflow: hidden;
   padding: 12px 10px;
@@ -6155,7 +6161,8 @@ a.bbcode_ChatMessageTweet_Body_2mh_n {
   font-size: 16px;
   text-align: center;
   font-weight: 200;
-  font-family: 'Motiva Sans Light';
+  font-family: 'Motiva Sans';
+  font-weight: 300;
   line-height: 32px;
   display: block;
   white-space: pre;
@@ -6815,7 +6822,8 @@ button.DialogButton::-moz-focus-inner {
   background: rgba(59, 63, 72, 0.5);
   color: #dfe3e6;
   font-size: 14px;
-  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   border: none;
@@ -8054,7 +8062,8 @@ img {
   background: rgba(59, 63, 72, 0.5);
   color: #dfe3e6;
   font-size: 14px;
-  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
   margin: 0;
   padding: 4px;
   border: none;
@@ -15471,6 +15480,9 @@ span.mention.me {
   width: 100%;
   height: 32px;
   background: linear-gradient(to right, #007896, #1f3d96); }
+
+.Dialog_RemotePlay .gameVolumeUnavailable .DialogSlider_Container {
+  visibility: collapse; }
 
 .remotePlayPlayerOptionsContainer {
   display: flex;

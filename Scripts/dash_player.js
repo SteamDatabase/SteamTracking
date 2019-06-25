@@ -2558,12 +2558,14 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 				{
 					var responseData = xhr.response;
 					var rgFrames = responseData.frames;
-					var cFrames = rgFrames.length;
-					for ( var i = 0; i < cFrames; i++ )
+					if( rgFrames )
 					{
-						_loader.m_rgGameDataFrames.push( rgFrames[i] );
+						var cFrames = rgFrames.length;
+						for ( var i = 0; i < cFrames; i++ )
+						{
+							_loader.m_rgGameDataFrames.push( rgFrames[i] );
+						}
 					}
-
 					var gameData = {appid: responseData.appid, broadcastrelayid: responseData.broadcastrelayid, segmentid: responseData.segmentid };
 					_loader.m_statsGameData = gameData;
 				}

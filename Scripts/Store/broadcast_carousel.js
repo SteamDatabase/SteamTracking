@@ -1,23 +1,85 @@
 
 
 GSteamBroadcasts = {
-		Init: function( fnFilterFunction, tagid, genreid, maxBroadcasts )
+		Init: function( fnFilterFunction, tagid, genreid, maxBroadcasts, bAutoPlayingFeaturedBroadcast )
 	{
-		if ( tagid === undefined )
+		if ( tagid === undefined ) {
 			tagid = 0;
+		}
 
-		if ( genreid === undefined )
+		if ( genreid === undefined ) {
 			genreid = 0;
+		}
 
-		if ( maxBroadcasts === undefined )
+		if ( maxBroadcasts === undefined ) {
 			maxBroadcasts = 6;
+		}
 
+		if( bAutoPlayingFeaturedBroadcast === undefined ) {
+			bAutoPlayingFeaturedBroadcast = false;
+		}
 
 		GSteamBroadcasts.m_fnFilterItemToDisplayFunction = fnFilterFunction;
 		GSteamBroadcasts.m_tagid = tagid;
 		GSteamBroadcasts.m_genreid = genreid;
 		GSteamBroadcasts.m_nMaxBroadcasts = maxBroadcasts;
+		GSteamBroadcasts.m_bAutoPlayingFeaturedBroadcast = bAutoPlayingFeaturedBroadcast;
 		GSteamBroadcasts.Render();
+	},
+
+
+	CreateBroadcastCapsule: function( oItem, bAddTitleBar )
+	{
+		var params = { 'class': 'store_capsule broadcast_capsule', 'href': oItem.app_link };
+
+		var rgItemData = GStoreItemData.GetCapParams( 'live_broadcast', oItem.appid, 0, null, params );
+		var $CapCtn = $J('<a/>', params );
+
+		var $ImgCtn = $J('<div class="capsule headerv5" id="broadcast_capsule_appid_' + oItem.appid +  '"/>');
+
+		var rgImageProperties = { src: oItem.thumbnail_http_address };
+		var rgDefaultImageProperties = { src: oItem.app_capsule_image };
+
+		$ImgCtn.append( $J('<img/>', rgDefaultImageProperties ) );
+		$ImgCtn.append( $J('<img/>', rgImageProperties ) );
+		$CapCtn.append( $ImgCtn );
+
+		var rgPlayIconProperties = { src: 'https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png', class: "live_stream_play_icon" };
+		$ImgCtn.append( $J('<img/>', rgPlayIconProperties ) );
+
+		if( bAddTitleBar )
+		{
+			$CapCtn.append( GSteamBroadcasts.CreateBroadcastGameTitleAndViewer( oItem, false ) );
+		}
+
+		$CapCtn.append(
+			$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
+		);
+
+		GDynamicStore.DecorateDynamicItems( $CapCtn );
+		GStoreItemData.BindHoverEvents( $CapCtn,  oItem.appid  );
+
+		return $CapCtn;
+	},
+
+	CreateBroadcastGameTitleAndViewer: function( oItem, bSurroundWithAnchor )
+	{
+		$Contents = $J('<div/>', {'class': 'title' } );
+		$Contents.append( $J('<span/>', {'class': 'live_stream_app' } ).html( oItem.app_name ) );
+		$Contents.append( $J('<span/>', {'class': 'live_steam_viewers' } ).html( Number( oItem.viewer_count ).toLocaleString() ) );
+
+		if( bSurroundWithAnchor )
+		{
+			var params = { 'class': 'broadcast_footer', 'href': oItem.app_link };
+
+			var rgItemData = GStoreItemData.GetCapParams( 'live_broadcast', oItem.appid, 0, null, params );
+			var $CapCtn = $J('<a/>', params );
+			$CapCtn.append( $Contents );
+
+			return $CapCtn;
+		}
+		else
+			return $Contents;
 	},
 
 	Render: function()
@@ -26,107 +88,126 @@ GSteamBroadcasts = {
 			return;
 		}
 
-		$J('.live_streams_ctn').hide();
-
 		// do an ajax call to get the broadcasters
 		$J.ajax( {
 			url: "https:\/\/store.steampowered.com\/broadcast\/ajaxgetpopularpartnerbroadcasts\/",
-		data: {
-			'minviews' : 1,
-			'tagid' : GSteamBroadcasts.m_tagid,
-			'genreid' : GSteamBroadcasts.m_genreid,
-		},
-		dataType: 'json',
-		type: 'GET'
-	}).done(function( data ) {
+			data: {
+				'minviews' : 1, // We ask for all streams with a viewer so we can decorate the 'live' tags on all of the capsules on the page.
+				'tagid' : GSteamBroadcasts.m_tagid,
+				'genreid' : GSteamBroadcasts.m_genreid,
+			},
+			dataType: 'json',
+			type: 'GET'
+		}).done(function( data ) {
 
-		if ( data.success == 1 && data.filtered.length > 0 )
-		{
-			for( var i = 0; i < data.filtered.length; i++ )
+			if ( data.success == 1 && data.filtered.length > 0 )
 			{
-				var rgAppInfo = GStoreItemData.rgAppData[ data.filtered[i].appid ];
-				if ( rgAppInfo )
+				for( var i = 0; i < data.filtered.length; i++ )
 				{
-					rgAppInfo.live_broadcast = true;
-
-					// update all broadcast capsules to have live tag
-					var $Capsules = $J('.broadcast_capsule[data-ds-appid=' + data.filtered[i].appid + ']' ).each( function()
+					var rgAppInfo = GStoreItemData.rgAppData[ data.filtered[i].appid ];
+					if ( rgAppInfo )
 					{
-						$Icon = $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live');
-						$J(this).append( $Icon );
-					});
+						rgAppInfo.live_broadcast = true;
+
+						// update all broadcast capsules to have live tag
+						var $Capsules = $J('.broadcast_capsule[data-ds-appid=' + data.filtered[i].appid + ']' ).each( function()
+						{
+							$Icon = $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live');
+							$J(this).append( $Icon );
+						});
+					}
 				}
-			}
 
-			GStoreItemData.AddStoreItemData( data.rgAppData );
+				GStoreItemData.AddStoreItemData( data.rgAppData );
 
-			// This is defined by the caller for my object.
-			var rgFiltered = data.filtered;
-			if( GSteamBroadcasts.m_fnFilterItemToDisplayFunction )
-			{
-				rgFiltered = GSteamBroadcasts.m_fnFilterItemToDisplayFunction(
-					data.filtered, 'home', 1, GSteamBroadcasts.m_nMaxBroadcasts, { displayed_elsewhere: true }
-				);
-			}
-
-			var rgFiltered2 = [];
-			for ( var i = 0; i < rgFiltered.length; i++ )
-			{
-								if ( rgFiltered[i].popular ||
-					( ( GSteamBroadcasts.m_genreid > 0 || GSteamBroadcasts.m_tagid > 0 ) && rgFiltered[i].hub_popular ) )
+				// Filter the apps based on the users preference. Do not reduce the full list size, as we need to
+				// pull the random stream from the entire set of possible 'popular/hub-popular streams'
+				var rgFiltered = data.filtered;
+				if( GSteamBroadcasts.m_fnFilterItemToDisplayFunction )
 				{
-					rgFiltered2.push( rgFiltered[i] );
+					rgFiltered = GSteamBroadcasts.m_fnFilterItemToDisplayFunction(
+						data.filtered, 'home', 1, data.filtered.length, { displayed_elsewhere: true }
+					);
 				}
-			}
 
-			if ( rgFiltered2.length > 0 )
-			{
-				$elTarget = $J('#live_streams_carousel');
-				var $elCapsuleTarget = $J('.carousel_items', $elTarget);
-
-				var $elPageContainer = $J('<div>', { 'class': 'focus' } );
-
-				for ( var i = 0; i < rgFiltered2.length && i < GSteamBroadcasts.m_nMaxBroadcasts; i++ )
+				var rgFiltered2 = [];
+				for ( var i = 0; i < rgFiltered.length; i++ )
 				{
-					var oItem = rgFiltered2[i];
-
-					var params = { 'class': 'store_capsule broadcast_capsule', 'href': oItem.app_link };
-
-					var rgItemData = GStoreItemData.GetCapParams( 'live_broadcast', oItem.appid, 0, null, params );
-					var $CapCtn = $J('<a/>', params );
-
-					var $ImgCtn = $J('<div class="capsule headerv5"/>');
-
-					var rgImageProperties = { src: oItem.thumbnail_http_address };
-					var rgDefaultImageProperties = { src: oItem.app_capsule_image };
-
-					$ImgCtn.append( $J('<img/>', rgDefaultImageProperties ) );
-					$ImgCtn.append( $J('<img/>', rgImageProperties ) );
-					$CapCtn.append( $ImgCtn );
-
-					var rgPlayIconProperties = { src: 'https://steamstore-a.akamaihd.net/public/shared/images/apphubs/play_icon80.png', class: "live_stream_play_icon" };
-					$ImgCtn.append( $J('<img/>', rgPlayIconProperties ) );
-
-					$Contents = $J('<div/>', {'class': 'title' } );
-					$Contents.append( $J('<span/>', {'class': 'live_stream_app' } ).html( oItem.app_name ) );
-					$Contents.append( $J('<span/>', {'class': 'live_steam_viewers' } ).html( Number( oItem.viewer_count ).toLocaleString() ) );
-
-					$CapCtn.append( $Contents );
-					$CapCtn.append(
-						$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
-				);
-
-
-					$elPageContainer.append( $CapCtn );
+										if ( rgFiltered[i].popular ||
+						( ( GSteamBroadcasts.m_genreid > 0 || GSteamBroadcasts.m_tagid > 0 ) && rgFiltered[i].hub_popular ) )
+					{
+						rgFiltered2.push( rgFiltered[i] );
+					}
 				}
 
-				$elCapsuleTarget.append($elPageContainer);
+				var nNumToShowInCarousel = GSteamBroadcasts.m_nMaxBroadcasts;
 
-				$J('.live_streams_ctn').show();
+								var bShow = false;
+				if( $J('#live_stream_featured').length == 1 && rgFiltered2.length > 0 )
+				{
+					var nFeatured = Math.floor( Math.random( ) *  rgFiltered2.length );
+					var oItem = rgFiltered2[nFeatured];
+					var strBroadcastSteamID = oItem.broadcaststeamid;
+					var $CapCtn = GSteamBroadcasts.CreateBroadcastCapsule( oItem, false );
+					var $elFeaturedContainer = $J('<div>', { 'class': 'focus carousel_broadcast_featured' } );
+					$elFeaturedContainer.append( $CapCtn );
+					var $elContainerForScreenshotAndAutoPlay = $J('<div>', { 'class': 'broadcast_screenshot_and_autoplay' } );
+					$elContainerForScreenshotAndAutoPlay.append( $elFeaturedContainer );
+					$J('#live_stream_featured').append( $elContainerForScreenshotAndAutoPlay );
+					var $elTitleAndViewer = GSteamBroadcasts.CreateBroadcastGameTitleAndViewer( oItem, true );
+
+										if( GSteamBroadcasts.m_bAutoPlayingFeaturedBroadcast &&
+						( GDynamicStore.s_preferences['hide_store_broadcast'] === undefined || !GDynamicStore.s_preferences['hide_store_broadcast'] ) )
+					{
+						// Since the user cannot see the screenshot, then markup the title bar with the interactivity.
+						GDynamicStore.DecorateDynamicItems( $elTitleAndViewer );
+						GStoreItemData.BindHoverEvents( $elTitleAndViewer, oItem.appid );
+
+						$elContainerForScreenshotAndAutoPlay.append(
+							"<div class='broadcast_iframe_ctn'>"  +
+								"<iframe class='broadcast_iframe' src='https://steamcommunity.com/broadcast/watch/" + strBroadcastSteamID + "?iframe=1&muted=1&enablevideo=1&origin=https://store.steampowered.com/' allowfullscreen frameborder='0' data-allow='autoplay'>" +
+								"</iframe>" +
+							"</div>" );
+					}
+
+					$J('#live_stream_featured').append( $elTitleAndViewer );
+					bShow = true;
+
+					// We stole one of the broadcast, so show one less on the capsule
+					nNumToShowInCarousel -= 1;
+
+					// Remove the item we featured from the rest of the list if the list is too long
+					if( rgFiltered2.length > GSteamBroadcasts.m_nMaxBroadcasts )
+					{
+						rgFiltered2.splice( nFeatured, 1 );
+					}
+				}
+
+				if ( rgFiltered2.length > 0 )
+				{
+					$elTarget = $J('#live_streams_carousel');
+					var $elCapsuleTarget = $J('.carousel_items', $elTarget);
+
+					var $elPageContainer = $J('<div>', { 'class': 'focus' } );
+
+					for ( var i = 0; i < rgFiltered2.length && i < nNumToShowInCarousel; i++ )
+					{
+						var oItem = rgFiltered2[i];
+						var $CapCtn = GSteamBroadcasts.CreateBroadcastCapsule( oItem, true );
+						$elPageContainer.append( $CapCtn );
+					}
+
+					$elCapsuleTarget.append($elPageContainer);
+					bShow = true;
+				}
+
+				if( bShow )
+				{
+					$J('.live_streams_ctn').show();
+				}
 			}
-		}
 
-	});
+		});
 
 		return;
 	}

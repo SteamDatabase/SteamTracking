@@ -402,6 +402,7 @@
         IMG_URL: "",
         STEAMTV_BASE_URL: "",
         HELP_BASE_URL: "",
+        PARTNER_BASE_URL: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
@@ -2304,8 +2305,8 @@ and limitations under the License.
     var y,
       I,
       L,
-      k = new a.a();
-    function C(e) {
+      C = new a.a();
+    function k(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
@@ -2314,7 +2315,7 @@ and limitations under the License.
       var n = new v(t);
       r.render(o.createElement(E, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = k),
+    (window.ClientConnectionAPI = C),
       document.addEventListener("DOMContentLoaded", function() {
         Object(i.c)(),
           (function() {
@@ -2327,7 +2328,7 @@ and limitations under the License.
                 r = n.getAttribute("data-component");
               switch (r) {
                 case "ChatInvite":
-                  C(n);
+                  k(n);
                   break;
                 default:
                   Object(u.a)(!1, 'unknown component: "' + r + '"');
@@ -2360,20 +2361,13 @@ and limitations under the License.
       a = n.n(r),
       i = n("0N1H"),
       s = n("1n9R"),
-      u = n("XaMz"),
       o = (function() {
         function o(e, t, n, r) {
           void 0 === e && (e = 0),
             e instanceof o
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-              ? ((this.m_ulSteamID = a.a.fromString(e, !0)),
-                Object(u.a)(
-                  0 != this.m_ulSteamID.getHighBits(),
-                  "String " +
-                    e +
-                    " was provided as a steam ID as a string, but had no high bits set. This is likely actually an account ID or was meant to be passed as a number"
-                ))
+              ? (this.m_ulSteamID = a.a.fromString(e, !0))
               : t && n && void 0 !== r
               ? this.SetFromComponents(e, r, n, t)
               : (this.m_ulSteamID = e ? a.a.fromNumber(e, !0) : a.a.UZERO);

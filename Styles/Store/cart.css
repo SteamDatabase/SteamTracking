@@ -2373,6 +2373,8 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 	line-height: 16px;
 	color: #f8bc5e;
 	font-size: 14px;
+	margin-left: 10px;
+	margin-right: 10px;
 	padding: 0px 0 0 0;
 	overflow: hidden;
 			font-family: "Motiva Sans", Sans-serif;

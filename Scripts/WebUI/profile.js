@@ -11,7 +11,7 @@
     )
       (n = r[c]), u[n] && a.push(u[n][0]), (u[n] = 0);
     for (t in o) Object.prototype.hasOwnProperty.call(o, t) && (s[t] = o[t]);
-    for (h && h(e); a.length; ) a.shift()();
+    for (p && p(e); a.length; ) a.shift()();
     return m.push.apply(m, i || []), l();
   }
   function l() {
@@ -81,7 +81,7 @@
     r = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var o = 0; o < t.length; o++) e(t[o]);
-  var h = r;
+  var p = r;
   m.push(["WC1h", 0]), l();
 })({
   "/7KC": function(e, t, n) {
@@ -136,10 +136,10 @@
         return m;
       }),
       n.d(t, "m", function() {
-        return h;
+        return p;
       }),
       n.d(t, "i", function() {
-        return p;
+        return h;
       }),
       n.d(t, "j", function() {
         return d;
@@ -249,11 +249,11 @@
         t
       );
     }
-    function h(e) {
+    function p(e) {
       var t = void 0;
       return e && (t = e.ownerDocument.defaultView), t;
     }
-    function p(e) {
+    function h(e) {
       var t = document.createElement("textarea");
       (t.textContent = e),
         (t.style.position = "fixed"),
@@ -269,7 +269,7 @@
     }
     function d(e) {
       var t = "steam://openurl/";
-      e.startsWith(t) && (e = e.slice(t.length)), p(e);
+      e.startsWith(t) && (e = e.slice(t.length)), h(e);
     }
     function f(e) {
       return e
@@ -414,10 +414,10 @@
         return m;
       }),
       n.d(t, "h", function() {
-        return h;
+        return p;
       }),
       n.d(t, "m", function() {
-        return p;
+        return h;
       }),
       n.d(t, "i", function() {
         return d;
@@ -450,8 +450,8 @@
       l = 1,
       u = 4,
       m = 750,
-      h = 799,
-      p = 7,
+      p = 799,
+      h = 7,
       d = 250820,
       f = 330050,
       v = 358510,
@@ -661,7 +661,7 @@
         return m;
       }),
       n.d(t, "d", function() {
-        return h;
+        return p;
       });
     var o,
       i = {
@@ -683,6 +683,7 @@
         IMG_URL: "",
         STEAMTV_BASE_URL: "",
         HELP_BASE_URL: "",
+        PARTNER_BASE_URL: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
@@ -751,12 +752,12 @@
     }
     function m(e) {
       void 0 === e && (e = l);
-      var t = h("config", e);
+      var t = p("config", e);
       t && (delete t.SESSIONID, Object.assign(i, t));
-      var n = h("userinfo", e);
+      var n = p("userinfo", e);
       n && Object.assign(a, n);
     }
-    function h(e, t) {
+    function p(e, t) {
       var n;
       if (
         (void 0 === t && (t = l),
@@ -827,14 +828,14 @@
           (o = c.clientX),
           (i = c.clientY);
       } else r = t;
-      var a = new p(e, r, o, i, n);
+      var a = new h(e, r, o, i, n);
       return a.Show(), a;
     }
     function m(e, t, n, r) {
-      var o = new p(e, t, n, r, { bForcePopup: !0, bScreenCoordinates: !0 });
+      var o = new h(e, t, n, r, { bForcePopup: !0, bScreenCoordinates: !0 });
       return o.Show(), o;
     }
-    var h = (function(n) {
+    var p = (function(n) {
         function e(e) {
           var t = n.call(this) || this;
           return (
@@ -928,7 +929,7 @@
               if (!(0 < this.m_timerHideSubMenu)) {
                 this.m_timerHideSubMenu = window.setTimeout(function() {
                   e.InternalHideSubMenu(), (e.m_timerHideSubMenu = 0);
-                }, 500);
+                }, 150);
               }
             } else this.CancelHideSubMenuTimer();
           }),
@@ -990,7 +991,7 @@
           e
         );
       })(s),
-      p = (function(a) {
+      h = (function(a) {
         function s(e, t, n, r, o) {
           var i = a.call(this, t.ownerDocument.defaultView) || this;
           s.sm_iActiveContextMenuInstance &&
@@ -1028,14 +1029,17 @@
           (s.sm_mapEmbeddedMouseOverlays = new l.a("ContextMenuMouseOverlay")),
           s
         );
-      })(h),
+      })(p),
       d = (function(i) {
         function e(e, t, n) {
           var r = i.call(this, n.ownerDocument.defaultView) || this;
           (r.m_parentInstance = e),
             (r.m_options = {
               bOverlapVertical: !0,
-              bUseWebStyles: e.options.bUseWebStyles
+              bUseWebStyles: e.options.bUseWebStyles,
+              strClassName: e.options.strClassName,
+              bFitToWindow: e.options.bFitToWindow,
+              bShiftToFitWindow: e.options.bShiftToFitWindow
             });
           var o = {
             element: n,
@@ -1062,7 +1066,7 @@
           }),
           e
         );
-      })(h);
+      })(p);
   },
   EGkk: function(e, t, n) {
     "use strict";
@@ -1102,12 +1106,12 @@
       s = n("i8i4"),
       l = n("8o0Y"),
       u = n("JtU4"),
-      O = n("/IDK"),
+      N = n("/IDK"),
       o = n("1VtQ"),
       i = n("e2SU"),
       m = n("WpBz"),
-      h = n("oh5H"),
-      p = n("1n9R"),
+      p = n("oh5H"),
+      h = n("1n9R"),
       d = n("7Vyq"),
       f = n.n(d),
       v = n("QHER"),
@@ -1337,7 +1341,7 @@
             this.PositionMenu();
           }),
           (e.prototype.OnBlur = function(e) {
-            (e.relatedTarget && O.e(e.currentTarget, e.relatedTarget)) ||
+            (e.relatedTarget && N.e(e.currentTarget, e.relatedTarget)) ||
               (e.relatedTarget &&
                 this.props.instance.BIsElementInMenuHierarchy(
                   e.relatedTarget
@@ -1368,7 +1372,7 @@
               this.state.ready &&
               this.props.instance.visible &&
               (this.props.popup ||
-                !O.e(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
+                !N.e(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
             ) {
               var e = this.m_elMenu.querySelector(".ContextMenuAutoFocus");
               e && e.focus ? e.focus() : this.m_elMenu.focus();
@@ -1401,14 +1405,14 @@
               if (i) {
                 this.props.options.bScreenCoordinates ||
                   ((s += n.screenLeft), (l += n.screenTop)),
-                  (r = O.h(n, r));
-                var h = n.screen,
-                  p = 0,
+                  (r = N.h(n, r));
+                var p = n.screen,
+                  h = 0,
                   d = 0;
-                h.availLeft && (p = h.availLeft),
-                  h.availTop && (d = h.availTop),
-                  (u = p + h.availWidth),
-                  (m = d + h.availHeight);
+                p.availLeft && (h = p.availLeft),
+                  p.availTop && (d = p.availTop),
+                  (u = h + p.availWidth),
+                  (m = d + p.availHeight);
               }
               (c.bOverlapHorizontal || c.bOverlapVertical) && (s = l = void 0);
               var f = s || r.left,
@@ -1436,13 +1440,22 @@
                 C = m - (c.bOverlapVertical ? x : S) - k,
                 L = 0 < C,
                 I = (c.bPreferPopTop || !L) && P;
-              P ||
-                L ||
-                ((I = C < M),
-                c.bFitToWindow && ((k += (I ? M : C) - 8), (a.menuHeight = k))),
-                I
+              if (!P && !L) {
+                var O =
+                  void 0 !== c.bShiftToFitWindow
+                    ? c.bShiftToFitWindow
+                    : c.bFitToWindow && !c.bOverlapHorizontal;
+                (I = C < M),
+                  O && (I ? (a.menuTop = 4) : (a.menuBottom = 4)),
+                  c.bFitToWindow &&
+                    (O ? (k = Math.min(k, m - 8)) : (k += I ? M : C),
+                    (a.menuHeight = k - 8));
+              }
+              void 0 === a.menuBottom &&
+                void 0 === a.menuTop &&
+                (I
                   ? (a.menuBottom = m - (c.bOverlapVertical ? S : x))
-                  : (a.menuTop = c.bOverlapVertical ? x : S),
+                  : (a.menuTop = c.bOverlapVertical ? x : S)),
                 i
                   ? (a.menuHeight || (a.menuHeight = o.height),
                     a.menuWidth || (a.menuWidth = o.width),
@@ -1577,7 +1590,7 @@
                 height: 1
               };
             else {
-              var t = O.h(
+              var t = N.h(
                 this.m_menuProps.element.ownerDocument.defaultView,
                 this.m_menuProps.element.getBoundingClientRect()
               );
@@ -1618,7 +1631,7 @@
     }
     function S(e) {
       var t = [],
-        n = O.n(e),
+        n = N.n(e),
         r = n.getSelection(),
         o = r && 0 < r.rangeCount && 0 < r.toString().length,
         i = e.target,
@@ -1637,7 +1650,7 @@
                   n.document.execCommand("cut");
                 }
               },
-              Object(h.b)("#ContextMenu_Cut")
+              Object(p.b)("#ContextMenu_Cut")
             )
           ),
         (document.queryCommandEnabled("copy") || o) &&
@@ -1650,10 +1663,10 @@
                   n.document.execCommand("copy");
                 }
               },
-              Object(h.b)("#ContextMenu_Copy")
+              Object(p.b)("#ContextMenu_Copy")
             )
           ),
-        p.b.IN_CLIENT &&
+        h.b.IN_CLIENT &&
           c &&
           t.push(
             a.createElement(
@@ -1664,7 +1677,7 @@
                   i.focus(), n.SteamClient._internal.Paste();
                 }
               },
-              Object(h.b)("#ContextMenu_Paste")
+              Object(p.b)("#ContextMenu_Paste")
             )
           ),
         t.length)
@@ -1799,10 +1812,10 @@
       return s;
     }),
       n.d(t, "a", function() {
-        return h;
+        return p;
       }),
       n.d(t, "b", function() {
-        return p;
+        return h;
       }),
       n.d(t, "d", function() {
         return f;
@@ -1849,7 +1862,7 @@
           e
         );
       })(),
-      h = (function() {
+      p = (function() {
         function e(e, t) {
           (this.m_bFocused = !1),
             (this.m_strName = e),
@@ -2087,7 +2100,7 @@
           e
         );
       })(),
-      p = (function(i) {
+      h = (function(i) {
         function e(e, t, n, r) {
           var o = i.call(this, e, n) || this;
           return o.SetSavedDimensionsKey(t), (o.m_bExpires = r), o;
@@ -2165,7 +2178,7 @@
           o.c([u.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
-      })(h),
+      })(p),
       d = (function() {
         function e() {
           var c = this;
@@ -2276,15 +2289,15 @@
             t.html_class && (u = 'class="' + t.html_class + '"');
             var m = "";
             t.body_class && (m = 'class="' + t.body_class + '"');
-            var h =
+            var p =
               "<!DOCTYPE html><html " +
               u +
               "><head><title></title></head><body " +
               m +
               '><div id="popup_target"></div></body></html>';
-            l.document.write(h), (l.document.title = i);
+            l.document.write(p), (l.document.title = i);
             for (
-              var p = l.document.getElementsByTagName("head")[0],
+              var h = l.document.getElementsByTagName("head")[0],
                 d = document.getElementsByTagName("link"),
                 f = 0;
               f < d.length;
@@ -2300,7 +2313,7 @@
                   var b = v.attributes.item(y);
                   _.setAttribute(b.name, b.value);
                 }
-                p.appendChild(_);
+                h.appendChild(_);
               }
             }
             return {
@@ -2505,8 +2518,8 @@
       l = n("2vnA"),
       u = n("vDqi"),
       m = n.n(u),
-      h = { ProfileURL: "" };
-    function p(e) {
+      p = { ProfileURL: "" };
+    function h(e) {
       switch (e) {
         case 1:
           return Object(a.b)("#Privacy_Private");
@@ -2610,7 +2623,7 @@
                 JSON.stringify(this.m_eCommentPermission)
               ),
               m.a
-                .post(h.ProfileURL + "ajaxsetprivacy/", e)
+                .post(p.ProfileURL + "ajaxsetprivacy/", e)
                 .then(function(e) {
                   var t = e.data;
                   if (1 != t.success)
@@ -2671,7 +2684,7 @@
                 {
                   PrivacyStore: e,
                   strLabel: Object(a.b)("#ProfilePrivacy_BasicDetails"),
-                  strReadOnlySetting: p(3)
+                  strReadOnlySetting: h(3)
                 },
                 Object(a.b)("#ProfilePrivacy_BasicDetails_Desc")
               ),
@@ -2741,12 +2754,12 @@
                     "#ProfilePrivacy_Inventory_Desc",
                     i.createElement(
                       "a",
-                      { href: h.ProfileURL + "inventory/" },
+                      { href: p.ProfileURL + "inventory/" },
                       Object(a.b)("#ProfilePrivacy_Inventory_Inventory")
                     ),
                     i.createElement(
                       "a",
-                      { href: h.ProfileURL + "inventory/#753_6" },
+                      { href: p.ProfileURL + "inventory/#753_6" },
                       Object(a.b)("#ProfilePrivacy_Inventory_TradingCards")
                     )
                   ),
@@ -2781,12 +2794,12 @@
                     "#ProfilePrivacy_UGC_Desc",
                     i.createElement(
                       "a",
-                      { href: h.ProfileURL + "screenshots/" },
+                      { href: p.ProfileURL + "screenshots/" },
                       Object(a.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
                     ),
                     i.createElement(
                       "a",
-                      { href: h.ProfileURL + "myworkshopfiles/" },
+                      { href: p.ProfileURL + "myworkshopfiles/" },
                       Object(a.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
                     )
                   )
@@ -2862,7 +2875,7 @@
             );
         }),
         (t.prototype.render = function() {
-          var e = p(
+          var e = h(
             this.props.PrivacyStore.GetPrivacySetting(this.props.PrivacyKey)
           );
           return i.createElement(
@@ -3140,7 +3153,7 @@
       document.addEventListener("DOMContentLoaded", function() {
         var e;
         Object(c.c)(),
-          (e = Object(c.b)("config", "profile_config")) && Object.assign(h, e),
+          (e = Object(c.b)("config", "profile_config")) && Object.assign(p, e),
           (function() {
             for (
               var e = document.querySelectorAll(".ProfileReactRoot"), t = 0;
@@ -3230,10 +3243,10 @@
         return m;
       }),
       n.d(t, "C", function() {
-        return h;
+        return p;
       }),
       n.d(t, "F", function() {
-        return p;
+        return h;
       }),
       n.d(t, "p", function() {
         return d;
@@ -3296,10 +3309,10 @@
         return B;
       }),
       n.d(t, "K", function() {
-        return G;
+        return T;
       }),
       n.d(t, "Y", function() {
-        return T;
+        return G;
       }),
       n.d(t, "h", function() {
         return V;
@@ -3317,10 +3330,10 @@
         return W;
       }),
       n.d(t, "hb", function() {
-        return H;
+        return F;
       }),
       n.d(t, "z", function() {
-        return F;
+        return H;
       }),
       n.d(t, "c", function() {
         return j;
@@ -3392,10 +3405,10 @@
         return me;
       }),
       n.d(t, "d", function() {
-        return he;
+        return pe;
       }),
       n.d(t, "H", function() {
-        return pe;
+        return he;
       }),
       n.d(t, "gb", function() {
         return de;
@@ -3416,7 +3429,7 @@
       o = n("q1tI"),
       i = n("twdX"),
       c = n.n(i);
-    n("QHER");
+    n("QHER"), n("/7KC");
     function a() {
       return o.createElement(
         "svg",
@@ -3562,7 +3575,7 @@
         })
       );
     }
-    function h() {
+    function p() {
       return o.createElement(
         "svg",
         {
@@ -3590,7 +3603,7 @@
         )
       );
     }
-    function p(e) {
+    function h(e) {
       var t = "SVGIcon_Button SVGIcon_Microphone";
       return (
         e.className && (t += " " + e.className),
@@ -4588,7 +4601,7 @@
         })
       );
     }
-    function G() {
+    function T() {
       return o.createElement(
         "svg",
         {
@@ -4612,7 +4625,7 @@
         })
       );
     }
-    function T(e) {
+    function G(e) {
       return o.createElement(
         "svg",
         {
@@ -4680,7 +4693,7 @@
             ),
         o.createElement(
           "g",
-          { className: "arrow" },
+          { className: "Arrow" },
           o.createElement("polyline", {
             fill: "none",
             strokeWidth: "10",
@@ -5137,7 +5150,7 @@
         )
       );
     }
-    function H() {
+    function F() {
       return o.createElement(
         "svg",
         {
@@ -5162,7 +5175,7 @@
         })
       );
     }
-    function F() {
+    function H() {
       return o.createElement(
         "svg",
         {
@@ -6196,7 +6209,7 @@
         })
       );
     }
-    function he() {
+    function pe() {
       return o.createElement(
         "svg",
         {
@@ -6217,7 +6230,7 @@
         })
       );
     }
-    function pe() {
+    function he() {
       return o.createElement(
         "svg",
         {
@@ -6633,7 +6646,7 @@ and limitations under the License.
         return m;
       }),
       n.d(t, "a", function() {
-        return h;
+        return p;
       });
     var l = n("q1tI"),
       r = (n("Gp1o"), n("XaMz"), n("ujHl")),
@@ -6715,7 +6728,7 @@ and limitations under the License.
     function a(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = h.LocalizeString(e);
+      var n = p.LocalizeString(e);
       return n
         ? (0 < r.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -6731,7 +6744,7 @@ and limitations under the License.
     function s(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = h.LocalizeString(e);
+      var r = p.LocalizeString(e);
       if (!r) return e;
       for (var o, i = [], c = /(.*?)%(\d+)\$s/g, a = 0; (o = c.exec(r)); ) {
         (a += o[0].length), i.push(o[1]);
@@ -6786,8 +6799,8 @@ and limitations under the License.
     }
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
-    var h = new c();
-    window.LocalizationManager = h;
+    var p = new c();
+    window.LocalizationManager = p;
   },
   "s4p+": function(e, t, n) {
     "use strict";

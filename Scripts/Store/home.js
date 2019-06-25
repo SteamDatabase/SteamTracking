@@ -182,6 +182,7 @@ GHomepage = {
 			GHomepage.bAutumnSaleMainCap = rgParams.bAutumnSaleMainCap;
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
 			GHomepage.nMaxBroadcasts = rgParams.nMaxBroadcasts;
+			GHomepage.bAutoPlayingFeaturedBroadcast = rgParams.bAutoPlayingFeaturedBroadcast || false;
 		} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bStaticDataReady = true;
@@ -348,7 +349,9 @@ GHomepage = {
 		// Broadcast section goes on the end, as it decorates the storeitems with the live icon after the fact.
 		if( window.hasOwnProperty('GSteamBroadcasts')) {
 			try {
-				GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay, 0, 0, GHomepage.nMaxBroadcasts );
+				new CScrollOffsetWatcher( '#home_broadcast_scroll_target', function() {
+					GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay, 0, 0, GHomepage.nMaxBroadcasts, GHomepage.bAutoPlayingFeaturedBroadcast );
+				} );
 			} catch (e) { OnHomepageException(e); }
 		}
 
@@ -422,9 +425,11 @@ GHomepage = {
 
 	RenderMainClusterV2: function()
 	{
-		var rgDisplayListCombined = false;
-		GDynamicStore.s_rgDisplayedApps = [];
+		if ( !$J('.home_cluster_ctn').length )
+			return;
 
+		var rgDisplayListCombined = false;
+		GDynamicStore.s_rgDisplayedApps = [];	
 		if ( GHomepage.bAutumnSaleMainCap && GHomepage.bMergeRecommendationsToHighlights )
 		{
 			$J('.home_cluster_ctn').hide();

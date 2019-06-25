@@ -1408,15 +1408,23 @@ function addToCart( subid, dedupe )
 
 		// Check for quantity
 		var idx = ( dedupe !== undefined ) ? dedupe : 0;
+		var filterStringForm = 'form[name=add_to_cart_'+subid+']';
+		var $Form = jQuery( filterStringForm );
+
+		if ( !$Form.length )
+		{
+			$Form= $J('<form/>', { name: 'add_to_cart_' + subid, action: 'https://store.steampowered.com/cart/', method: 'POST', style: 'display: none;' } );
+			$Form.append( $J('<input/>', { type: 'hidden', name: 'action', value: 'add_to_cart' } ) );
+			$Form.append( $J('<input/>', { type: 'hidden', name: 'subid', value: subid } ) );
+			$Form.append( $J('<input/>', { type: 'hidden', name: 'sessionid', value: g_sessionID } ) );
+
+			$J(document.body).append( $Form );
+		}
+
 		var quantity = jQuery( '#quantity_update_'+subid+'_'+idx ).val();
 		if ( quantity !== undefined )
 		{
-			var filterStringForm = 'form[name=add_to_cart_'+subid+']';
-			var formSelector = jQuery( filterStringForm );
-			if ( formSelector.length === 1 )
-			{
-				jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo(formSelector);
-			}
+			jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo($Form);
 		}
 
 		// do we have anything to examine?
@@ -1457,8 +1465,7 @@ function addToCart( subid, dedupe )
 				//  We have all the components we want the standard button to submit to the server!
 				//  we will now add input fields to the form we intend to submit.
 				//
-				var filterStringForm = 'form[name=add_to_cart_'+subid+']';
-				var formSelector = jQuery( filterStringForm );
+
 				var begintime = jQuery.data(document, 'x_readytime');
 
 				var selecttime = 0.0;
@@ -1466,21 +1473,21 @@ function addToCart( subid, dedupe )
 				{
 					selecttime = new Date().getTime() - begintime;
 				}
-				if ( formSelector.length === 1 )
+				if ( $Form.length === 1 )
 				{
 					//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( formSelector  );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( formSelector );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( formSelector  );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( formSelector );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( formSelector );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( formSelector );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( $Form  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( $Form );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( $Form  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( $Form );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( $Form );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( $Form );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( $Form );
 					if ( navData )
 					{
 						var pipeSplit = new RegExp( /\|/ );
 						var resultString = navData.split( pipeSplit )[0];
-						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( formSelector );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( $Form );
 					}
 				}
 			}
@@ -1493,7 +1500,7 @@ function addToCart( subid, dedupe )
 	// Regardless of instrumentation failures, try to submit the form for the user.
 	try
 	{
-		document.forms['add_to_cart_'+subid].submit();
+		$Form.submit();
 	}
 	catch( e )
 	{
@@ -1592,16 +1599,28 @@ function addBundleToCart( bundleid, dedupe )
 		// To do that, we find the anchor that invoked us within the larger set of add to cart buttons!
 		var allButtons = jQuery( filterAllButtons );
 
+
+		var filterStringForm = 'form[name=add_bundle_to_cart_'+bundleid+']';
+		var $Form = jQuery( filterStringForm );
+
+		if ( !$Form.length )
+		{
+			$Form= $J('<form/>', { name: 'add_bundle_to_cart_' + bundleid, action: 'https://store.steampowered.com/cart/', method: 'POST', style: 'display: none;' } );
+			$Form.append( $J('<input/>', { type: 'hidden', name: 'action', value: 'add_to_cart' } ) );
+			$Form.append( $J('<input/>', { type: 'hidden', name: 'bundleid', value: bundleid } ) );
+			$Form.append( $J('<input/>', { type: 'hidden', name: 'sessionid', value: g_sessionID } ) );
+
+			$J(document.body).append( $Form );
+		}
+
 		// Check for quantity
 		var idx = ( dedupe !== undefined ) ? dedupe : 0;
 		var quantity = jQuery( '#quantity_update_'+bundleid+'_'+idx ).val();
 		if ( quantity !== undefined )
 		{
-			var filterStringForm = 'form[name=add_bundle_to_cart_'+bundleid+']';
-			var formSelector = jQuery( filterStringForm );
-			if ( formSelector.length === 1 )
+			if ( $Form.length === 1 )
 			{
-				jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo(formSelector);
+				jQuery('<input type="hidden">').attr({name: 'quantity', 'value': quantity}).appendTo($Form);
 			}
 		}
 
@@ -1643,29 +1662,27 @@ function addBundleToCart( bundleid, dedupe )
 				//  We have all the components we want the standard button to submit to the server!
 				//  we will now add input fields to the form we intend to submit.
 				//
-				var filterStringForm = 'form[name=add_to_cart_'+bundleid+']';
-				var formSelector = jQuery( filterStringForm );
 				var begintime = jQuery.data(document, 'x_readytime');
 				var selecttime = 0.0;
 				if ( begintime !== undefined )
 				{
 					selecttime = new Date().getTime() - begintime;
 				}
-				if ( formSelector.length === 1 )
+				if ( $Form.length === 1 )
 				{
 					//  We include the 'hidden' attribute at this point, because of a believe compatibility issue with Internet Explorer!
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( formSelector  );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( formSelector );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( formSelector  );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( formSelector );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( formSelector );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( formSelector );
-					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( formSelector );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_selection', 'value' : buttonIndex } ).appendTo( $Form  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_choices', 'value' : allButtons.length } ).appendTo( $Form );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_top', 'value' : buttonOffset.top } ).appendTo( $Form  );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_left', 'value' : buttonOffset.left } ).appendTo( $Form );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_height', 'value' : height } ).appendTo( $Form );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_window_width', 'value' : width } ).appendTo( $Form );
+					jQuery( '<input type="hidden">' ).attr( { name: 'x_select_time', 'value' : selecttime } ).appendTo( $Form );
 					if ( navData )
 					{
 						var pipeSplit = new RegExp( /\|/ );
 						var resultString = navData.split( pipeSplit )[0];
-						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( formSelector );
+						jQuery( '<input type="hidden">' ).attr( { name: 'x_oldnav', 'value' : resultString } ).appendTo( $Form );
 					}
 				}
 			}
@@ -1678,7 +1695,7 @@ function addBundleToCart( bundleid, dedupe )
 	// Regardless of instrumentation failures, try to submit the form for the user.
 	try
 	{
-		document.forms['add_bundle_to_cart_'+bundleid].submit();
+		$Form.submit();
 	}
 	catch( e )
 	{
