@@ -1,6 +1,6 @@
 
 body.v6.grandprix {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/tread2.png' );
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/tread2.png?v2' );
 	background-repeat: repeat-y;
 	background-color: #343f4a;
 	background-position: center;
@@ -243,7 +243,7 @@ a {
 	flex-direction: column;
 	border-right: 44px solid transparent;
 	margin-top: 1px;
-	border-image-source: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/finishline_checks.png' );
+	border-image-source: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/finishline_checks.png?v2' );
 	border-image-slice: 0 100%;
 	border-image-repeat: repeat;
 }
@@ -467,7 +467,7 @@ a {
 }
 
 .prix_action_btn.boost {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_boost_default.png' ) no-repeat center;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_boost_default.png?v2' ) no-repeat center;
 	transition: all .1s ease-out;
 }
 
@@ -483,7 +483,7 @@ a {
 }
 
 .prix_action_btn.attack {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_attack_default.png' ) no-repeat center;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_attack_default.png?v2' ) no-repeat center;
 }
 
 .prix_action_ctn.attack:active {
@@ -585,7 +585,7 @@ a {
 
 .prix_jointeam_ctn {
 	width: 100%;
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/vehicles.png' ) no-repeat;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/vehicles.png?v2' ) no-repeat;
 	background-position: right bottom;
 	transform: skewX( 9deg ) translateX( -50px );
 }
@@ -651,7 +651,7 @@ a {
 .prix_jointeam_btn {
 	width: 160px;
 	height: 100px;
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_signup_default.png' ) no-repeat center;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_signup_default.png?v2' ) no-repeat center;
 	transform: translateX( 0px ) translateY( 0px );
 	transition: all .1s ease-out;
 }
@@ -660,7 +660,7 @@ a {
 	width: 160px;
 	height: 100px;
 	cursor: pointer;
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_confirm_default.png' ) no-repeat center;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_confirm_default.png?v2' ) no-repeat center;
 	transform: translateX( 0px ) translateY( 0px );
 	transition: all .1s ease-out;
 }
@@ -668,7 +668,7 @@ a {
 .prix_jointeam_confirm_img {
 	width: 160px;
 	height: 100px;
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_join_default.png' ) no-repeat center;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_join_default.png?v2' ) no-repeat center;
 	transform: translateX( 0px ) translateY( 0px );
 	transition: all .1s ease-out;
 }
@@ -697,7 +697,9 @@ a {
 }
 
 .prix_jointeam_joined_ctn {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/helmet_hare.png' ) no-repeat right;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .prix_jointeam_joined_desc {
@@ -705,7 +707,7 @@ a {
 }
 
 .prix_points_dial {
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/dial.png' ) no-repeat center;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/dial.png?v2' ) no-repeat center;
 	background-position: 5px;
 	height: 286px;
 	width: 286px;
@@ -1417,7 +1419,7 @@ a {
 	width: 160px;
 	height: 100px;
 	cursor: pointer;
-	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_claim_default.png' ) no-repeat center;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_claim_default.png?v2' ) no-repeat center;
 }
 
 .prix_claim_achievement_points:hover {

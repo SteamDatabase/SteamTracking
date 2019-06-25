@@ -165,10 +165,10 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	// process tag sections first, pulling in featured items into the tag blocks we display
 	var rgPersonalizedTagData = GenerateTagBlocks( rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
 
-	var k_nTier1ItemsMin = 3;
+	var k_nTier1ItemsMin = 7;
 	var k_nTier1ItemsMax = 7;
 
-	var k_nTier2ItemsMin = 3;
+	var k_nTier2ItemsMin = 7;
 	var k_nTier2ItemsMax = 7;
 
 	var rgTier1 = GHomepage.FilterItemsForDisplay(
@@ -339,7 +339,7 @@ function SaleRow( rgItems, $Parent, nItems, strFeatureContext )
 	return rgItems.slice( rgItemsThisRow.length );
 }
 
-function SaleCap( item, strFeatureContext, strDiscountClass )
+function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
 {
 	var params = { 'class': 'sale_capsule' };
 	
@@ -352,9 +352,18 @@ function SaleCap( item, strFeatureContext, strDiscountClass )
 	var $CapCtn = $J('<a/>', params );
 	GStoreItemData.BindHoverEventsForItem( $CapCtn, item );
 
-	var $Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } );
-	$Img.data('src-maincap', rgItemData['main_capsule'] );
-	$Img.data('src-smallcap', rgItemData['small_capsule'] );
+	var $Img;
+
+	if ( bUseSmallCap )
+	{
+		$Img = $J( '<img/>', {'class': 'sale_capsule_image', 'src':  rgItemData['small_capsule'] } );
+	}
+	else
+	{
+		$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://steamstore-a.akamaihd.net/public/images/v6/home/maincap_placeholder_616x353.gif' } );
+		$Img.data('src-maincap', rgItemData['main_capsule'] );
+		$Img.data('src-smallcap', rgItemData['small_capsule'] );
+	}
 
 	$CapCtn.append( $J('<div/>', {'class': 'sale_capsule_image_ctn' } ).append( $J('<div/>', {'class': 'sale_capsule_image_hover'} ), $Img ) );
 	$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( strDiscountClass ) : '' );
@@ -559,14 +568,14 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 				if ( rgItems.length > 2 || rgItems.length == 1 )
 				{
 					var $Row = $J('<div/>', {'class': 'franchise_game single' } );
-					$Row.append( SaleCap( rgItems.shift(), 'sale_franchises', 'discount_block_inline' ) );
+					$Row.append( SaleCap( rgItems.shift(), 'sale_franchises', 'discount_block_inline', true ) );
 					$Games.append( $Row );
 				}
 				if ( rgItems.length == 2 )
 				{
 					var $Row = $J('<div/>', {'class': 'franchise_game double' } );
-					$Row.append( SaleCap( rgItems.shift(), 'sale_franchises', 'discount_block_inline' ) );
-					$Row.append( SaleCap( rgItems.shift(), 'sale_franchises', 'discount_block_inline' ) );
+					$Row.append( SaleCap( rgItems.shift(), 'sale_franchises', 'discount_block_inline', true ) );
+					$Row.append( SaleCap( rgItems.shift(), 'sale_franchises', 'discount_block_inline', true ) );
 					$Games.append( $Row );
 				}
 

@@ -34,6 +34,7 @@ function JoinTeam()
 
 	var eTeamID = $J( '.prix_team_selection.join_team.selected' ).data( 'teamid' );
 	var strTeamName= $J( '.prix_team_selection.join_team.selected' ).data( 'name' );
+	var strRawName = $J( '.prix_team_selection.join_team.selected' ).data( 'raw_name' );
 	var elThrobber = $J( '#jointeam_throbber' );
 	var elJoinButton = $J( '#jointeam_button' );
 	var elError = $J( '#prix_jointeam_error' );
@@ -57,6 +58,7 @@ function JoinTeam()
 			$J( '#welcome_joined_team' ).html( strWelcome );
 			$J( '.prix_jointeam_select_ctn' ).hide();
 			$J( '.prix_jointeam_joined_ctn' ).show();
+			$J( '.prix_jointeam_joined_ctn' ).css( 'background-image', 'url( "https://steamcdn-a.akamaihd.net/store/promo/summer2019/helmet_' + strRawName + '.png?v2" )' );
 		}
 	}).fail( function()
 	{

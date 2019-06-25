@@ -115,6 +115,9 @@ body.v6 .sale_capsule {
 	width: 330px;
 	max-width: 28%;
 	flex-shrink: 0;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */
 
@@ -145,10 +148,11 @@ body.v6 .sale_capsule {
 
 .home_category_title {
 	text-transform: uppercase;
-	font-size: 45px;
+	font-size: 32px;
 	color: #FFFFFF;
-	padding: 15% 14%;
 	word-wrap: break-word;
+	min-width: 70%;
+	max-width: 95%;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
@@ -925,7 +929,8 @@ img.franchise_background
 
 .franchise_game.single
 {
-	padding: 0 25%;
+	justify-content: space-around;
+	margin-bottom: 18px;
 }
 
 .franchise_game.double
@@ -938,6 +943,11 @@ img.franchise_background
 	margin: 10px;
 	flex: 1;
 	min-width: 0;
+}
+
+.franchise_game .sale_capsule_image
+{
+	width: 100%;
 }
 
 .franchise_capsule:hover .franchise_logo_ctn
