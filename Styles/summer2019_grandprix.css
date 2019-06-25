@@ -1589,8 +1589,7 @@ div.prix_consumable_drop {
 }
 
 .prix_infostep_header {
-	max-height: 80px;
-	min-height: 60px;
+	height: 80px;
 	color: #0a98c4;
 	font-weight: 800;
 	font-size: 16px;

@@ -471,11 +471,27 @@ function UpdateTeamScoresWithData( data )
 		var $elStandingBar = $J( '.prix_standing_bar.team_' + oTeamScore.teamid );
 		$elStandingBar.css( 'width', flAdjustedScorePercent.toFixed( 2 ) + '%' );
 
-		$elStandingBar.find( '.prix_standing_bar_score' ).text( flMult.toFixed( 1 ) + 'x' );
+		if ( flMult >= 100 )
+		{
+			$elStandingBar.find( '.prix_standing_bar_score' ).text( parseInt( flMult ).toLocaleString() + 'x' );
+		}
+		else
+		{
+			$elStandingBar.find( '.prix_standing_bar_score' ).text( flMult.toFixed( 1 ) + 'x' );
+		}
 
 		var strDeboostsFormatted = '';
 		if ( oTeamScore.current_active_deboosts )
-			strDeboostsFormatted ='-' + ( oTeamScore.current_active_deboosts / 100 ).toFixed( 2 ).replace(/^0+/, '') + 'x';
+		{
+			if ( oTeamScore.current_active_deboosts >= 10000 )
+			{
+				strDeboostsFormatted = '-' + parseInt( oTeamScore.current_active_deboosts / 100 ).toLocaleString() + 'x';
+			}
+			else
+			{
+				strDeboostsFormatted = '-' + ( oTeamScore.current_active_deboosts / 100 ).toFixed( 2 ).replace( /^0+/, '' ) + 'x';
+			}
+		}
 
 		var $elAttackCard = $J( '.prix_attackcard_ctn.team_' + oTeamScore.teamid );
 		$elAttackCard.find( '.prix_attackteam_deboost' ).text( strDeboostsFormatted );
@@ -490,7 +506,19 @@ function UpdateTeamScoresWithData( data )
 			$elMeter = $elAttackCard.find( '.prix_boostmeter_value' );
 		}
 		$elMeter.css( 'width', ((flMult % 1) * 100).toFixed( 2 ) + '%' );
-		$elMeter.text( flMult.toFixed( 1 ) + 'x' );
+
+		if ( flMult >= 10000 )
+		{
+			$elMeter.text( parseInt( flMult ).toLocaleString() );
+		}
+		else if ( flMult >= 1000 )
+		{
+			$elMeter.text( parseInt( flMult ).toLocaleString() + 'x' );
+		}
+		else
+		{
+			$elMeter.text( flMult.toFixed( 1 ) + 'x' );
+		}
 
 		if ( g_nCurrentTeam == oTeamScore.teamid )
 		{

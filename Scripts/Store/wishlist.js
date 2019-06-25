@@ -413,7 +413,7 @@ CWishlistController.prototype.LoadSettings = function()
 		for ( var i = 0; i < rgPairs.length; i++ )
 		{
 			var rgKV = rgPairs[ i ].split ( '=' );
-			this.rgFilterSettings[ rgKV[ 0 ] ] = rgKV[ 1 ] ;
+			this.rgFilterSettings[ rgKV[ 0 ] ] = decodeURIComponent( rgKV[ 1 ] ) ;
 
 			$J('input[name=\''+V_EscapeHTML( rgKV[ 0 ] )+'\']').attr('checked',true);
 		}
