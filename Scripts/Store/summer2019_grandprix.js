@@ -422,10 +422,15 @@ function UpdateTeamScoresWithData( data )
 	var cminDayStart = ((data.current_time - g_rtSaleStart) / 60) % 1440;
 
 	var rgScoresByTeamId = [];
+	var flMaxMult = 1;
 	for ( var i = 0; i < data.scores.length; i++ )
 	{
 		var oTeamScore = data.scores[i];
 		rgScoresByTeamId[oTeamScore.teamid] = oTeamScore.score_pct;
+
+		var flMult = parseFloat( oTeamScore.current_multiplier_boosts || 1 );
+		if ( flMult > flMaxMult )
+			flMaxMult = flMult;
 	}
 
 	// Update leaderboard (prix_header_teams_ctn)
@@ -505,7 +510,8 @@ function UpdateTeamScoresWithData( data )
 		{
 			$elMeter = $elAttackCard.find( '.prix_boostmeter_value' );
 		}
-		$elMeter.css( 'width', ((flMult % 1) * 100).toFixed( 2 ) + '%' );
+
+		$elMeter.css( 'width', ((Math.sqrt( flMult ) / Math.sqrt( flMaxMult )) * 100).toFixed( 2 ) + '%' );
 
 		if ( flMult >= 10000 )
 		{

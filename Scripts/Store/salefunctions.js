@@ -166,10 +166,10 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	var rgPersonalizedTagData = GenerateTagBlocks( rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
 
 	var k_nTier1ItemsMin = 7;
-	var k_nTier1ItemsMax = 7;
+	var k_nTier1ItemsMax = 11;
 
 	var k_nTier2ItemsMin = 7;
-	var k_nTier2ItemsMax = 7;
+	var k_nTier2ItemsMax = 11;
 
 	var rgTier1 = GHomepage.FilterItemsForDisplay(
 		rgDisplayLists.sale_tier1, 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
@@ -263,9 +263,15 @@ function HomeSaleBlock( rgItems, $Parent )
 {
 	var rgRemainingItems = rgItems;
 
+	var bFourRow = true;
 	while( rgRemainingItems.length )
 	{
-		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, rgRemainingItems.length >= 7 ? 4 : 3, 'sale_dailydeals' );
+		if ( rgRemainingItems.length < 4 || rgRemainingItems.length == 6 || rgRemainingItems.length == 9 )
+			bFourRow = false;
+		else if ( rgRemainingItems.length == 4 )
+			bFourRow = true;
+		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, bFourRow ? 4 : 3, 'sale_dailydeals' );
+		bFourRow = !bFourRow;
 	}
 	BindSaleCapAutoSizeEvents( $Parent );
 	GDynamicStore.DecorateDynamicItems( $Parent );

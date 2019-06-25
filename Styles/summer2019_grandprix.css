@@ -366,7 +366,7 @@ a {
 	background-color: #273239;
 	margin-left: 8px;
 	border-radius: 6px;
-	max-width: 440px;
+	width: 440px;
 	height: 100px;
 	box-shadow: 4px 4px 1px #1f2225cc;
 }
@@ -401,7 +401,7 @@ a {
 	font-size: 16px;
 	margin-top: 20px;
 	padding-left: 10px;
-	font-family: eurostile-extended,sans-serif;
+	font-family: eurostile-extended, sans-serif;
   font-weight: 900;
   font-style: italic;
   line-height: 1.0;
@@ -635,7 +635,8 @@ a {
 	border-radius: 6px;
 	margin-top: 40px;
 	cursor: pointer;
-	width: 460px;
+	min-width: 460px;
+	max-width: 540px;
 }
 
 #jointeam_throbber {
@@ -768,7 +769,7 @@ a {
 	position: absolute;
 	right: 10px;
 	top: 10px;
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .prix_boostmeter_ctn {
@@ -786,7 +787,7 @@ a {
 	color: #000000;
 	border-radius: 6px;
 	padding-left: 10px;
-	font-size: 28px;
+	font-size: 24px;
 	text-transform: none;
 	font-style: normal;
 }
@@ -961,13 +962,16 @@ a {
 .prix_attackteam_deboost {
 	text-align: right;
 	font-style: normal;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 .prix_attackteam_boost_ctn .prix_boostmeter_value {
-	font-size: 18px;
+	font-size: 14px;
 	font-style: normal;
-	height: 24px;
+	text-align: left;
+	padding-top: 2px;
+	height: 22px;
+	width: 100%;
 }
 
 .prix_attackteam_boost_ctn .prix_boostmeter_value span {
@@ -1595,6 +1599,7 @@ div.prix_consumable_drop {
 	font-size: 16px;
 	overflow-wrap: break-word;
 	font-family: eurostile, sans-serif;
+	line-height: 1.1;
 }
 
 .prix_infostep_desc {

@@ -363,10 +363,16 @@ body.v6 .sale_capsule {
 	text-align: right;
 }
 
+.home_topsellers_ctn, .home_newupcoming_ctn
+{
+	max-width: 1070px;
+}
+
 .home_topsellers_ctn .home_topsellers_games_ctn {
 	display: flex;
 	flex-wrap: wrap;
-	max-width: 90%;
+	justify-content: space-between;
+	padding-bottom: 24px;
 }
 
 .home_topsellers_ctn .home_topsellers_games_ctn .TopSellerCapsule {
@@ -377,18 +383,51 @@ body.v6 .sale_capsule {
 	transform: translateY( 25% );
 }
 
+.TopSellerCapsule .ds_flag {
+	top: 15%;
+}
+
 .home_broadcast_ctn {
 	margin-top: 200px;
 	margin-bottom: 200px;
 }
 
+.home_broadcast_section_ctn {
+	display: flex;
+}
+
 .home_broadcast_ctn .home_broadcast_sections {
 	display: flex;
+	max-width: 1200px;
+	min-width: 0;
+	flex-basis: 1200px;
 }
 
 .home_broadcast_ctn .home_broadcast_sections .home_broadcast_featured_ctn {
 	background: #000000;
 	width: 500px;
+}
+
+.home_broadcast_featured_ctn_stretch {
+	background: #1E1E1E;
+	flex:1;
+}
+
+.home_broadcast_more_ctn_stretch.home_broadcast_more_ctn {
+	flex:1;
+	width: auto;
+
+	display: flex;
+	flex-direction: column;
+
+	padding-top: 54px;
+	padding-bottom: 33px;
+}
+
+.home_broadcast_more_ctn_stretch_bg
+{
+	background: #000000;
+	flex:1;
 }
 
 .home_broadcast_ctn .home_broadcast_sections .home_broadcast_more_ctn {
@@ -649,6 +688,11 @@ body.v6 .sale_capsule .discount_block_inline
 	margin-left: 2.5%;
 	max-width: 45%;
 	margin-bottom: 12px;
+}
+
+.hero_capsule .ds_flag
+{
+	top: 3%;
 }
 
 @media screen and (max-width: 900px )
