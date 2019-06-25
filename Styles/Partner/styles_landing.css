@@ -2864,6 +2864,14 @@ div .cdkey_request_details_row
 	color: #A4D007;
 }
 
+.cdkey_request_audit_details
+{
+	float: left;
+	font-weight: bold;
+	font-size: x-small;
+	padding: 5px 0px 0px 5px;
+}
+
 #login_btn_signin {
 	white-space: nowrap;
 }
@@ -2961,7 +2969,7 @@ div .cdkey_request_details_row
 }
 
 #requestkeys_table tr.claimed{
-	background-color: #f11f25c9;
+	background-color: #47218a;
 }
 
 #legend_table td {
