@@ -270,7 +270,7 @@ function HomeSaleBlock( rgItems, $Parent )
 			bFourRow = false;
 		else if ( rgRemainingItems.length == 4 )
 			bFourRow = true;
-		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, bFourRow ? 4 : 3, 'sale_dailydeals' );
+		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, bFourRow ? 4 : 3, 'sale_dailydeals', SaleCapWithMicroTrailer );
 		bFourRow = !bFourRow;
 	}
 	BindSaleCapAutoSizeEvents( $Parent );
@@ -312,18 +312,20 @@ function HomeSaleCapsuleCategory( rgItems, $Parent, strFeatureContext )
 	}
 }
 
-function SaleRow( rgItems, $Parent, nItems, strFeatureContext )
+function SaleRow( rgItems, $Parent, nItems, strFeatureContext, fnRenderFunc )
 {
 	var rgItemsThisRow = rgItems.slice( 0, nItems );
+	if ( !fnRenderFunc )
+		fnRenderFunc = SaleCap;
 
 	if ( rgItemsThisRow.length <= 3 )
 	{
 		var $Row = $J('<div/>', {'class': 'salerow salerow3' } );
 
 		$Row.append(
-			rgItemsThisRow[0] && SaleCap( rgItemsThisRow[0], strFeatureContext, 'discount_block_inline' ),
-			rgItemsThisRow[1] && SaleCap( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
-			rgItemsThisRow[2] && SaleCap( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' )
+			rgItemsThisRow[0] && fnRenderFunc( rgItemsThisRow[0], strFeatureContext, 'discount_block_inline' ),
+			rgItemsThisRow[1] && fnRenderFunc( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
+			rgItemsThisRow[2] && fnRenderFunc( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' )
 		);
 
 		$Parent.append( $Row );
@@ -333,16 +335,58 @@ function SaleRow( rgItems, $Parent, nItems, strFeatureContext )
 		var $Row = $J('<div/>', {'class': 'salerow salerow4' } );
 
 		$Row.append(
-			SaleCap( rgItemsThisRow[0], strFeatureContext, 'discount_block_inline' ),
-			SaleCap( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
-			SaleCap( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' ),
-			SaleCap( rgItemsThisRow[3], strFeatureContext, 'discount_block_inline' )
+			fnRenderFunc( rgItemsThisRow[0], strFeatureContext, 'discount_block_inline' ),
+			fnRenderFunc( rgItemsThisRow[1], strFeatureContext, 'discount_block_inline' ),
+			fnRenderFunc( rgItemsThisRow[2], strFeatureContext, 'discount_block_inline' ),
+			fnRenderFunc( rgItemsThisRow[3], strFeatureContext, 'discount_block_inline' )
 		);
 
 		$Parent.append( $Row );
 	}
 
 	return rgItems.slice( rgItemsThisRow.length );
+}
+
+function SaleCapWithMicroTrailer( item, strFeatureContext, strDiscountClass )
+{
+	var $Cap = SaleCap( item, strFeatureContext, strDiscountClass );
+
+	if ( item.appid && g_rgAppsWithMicroTrailers[ item.appid ] )
+	{
+		$Cap.addClass( 'with_microtrailer' );
+		$Cap.data('hoverDisableScreenshots', true );
+		var $ImgCtn = $Cap.children('.sale_capsule_image_ctn');
+		$Cap.one( 'mouseenter', function()
+		{
+			var $Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none', muted: 'muted'})
+				.append( $J('<source/>', { src: 'https://steamcdn-a.akamaihd.net/store/labs/microtrailers/video/summer_sale_2019/single_summer_' + item.appid + '.webm' }));
+			$ImgCtn.append( $Video );
+
+			var playPromise;
+			var fnPlay = function() {
+				$Cap.addClass( 'with_microtrailer' );
+				playPromise = $Video[0].play();
+				if ( playPromise )
+				{
+					playPromise.catch( function( e ) {
+						$Cap.removeClass( 'with_microtrailer' );
+					} );
+				}
+			};
+			var fnPause = function() {
+				if ( playPromise )
+					playPromise.then( function() {$Video[0].pause() } );
+				else
+					$Video[0].pause();
+			};
+
+			$Cap.hover( fnPlay, fnPause );
+
+			window.setTimeout( fnPlay, 1 );
+		});
+	}
+
+	return $Cap;
 }
 
 function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
@@ -428,7 +472,7 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	var $Row = $J('<div/>', {'class': 'salerow salerow3 multiline' } );
 
 	for ( var iItem = 0; iItem < rgItemsPassingFilter.length; iItem++ )
-		$Row.append( SaleCap( rgItemsPassingFilter[iItem], 'sale_tag_bucket', 'discount_block_inline' ) );
+		$Row.append( SaleCapWithMicroTrailer( rgItemsPassingFilter[iItem], 'sale_tag_bucket', 'discount_block_inline' ) );
 
 	$Games.append( $Row );
 
@@ -734,5 +778,70 @@ CVideoScrollController.prototype.update = function()
 			this.rgVideos[ i ].pause ();
 		}
 	}
+};
+
+var g_rgAppsWithMicroTrailers =
+	{784150:1, 553310:1, 606230:1, 244450:1, 487000:1, 8870:1, 49520:1, 220200:1,
+	360430:1, 841370:1, 289070:1, 695290:1, 817130:1, 268500:1, 323190:1,
+	606150:1, 282070:1, 384190:1, 374040:1, 239030:1, 653530:1, 386940:1,
+	531510:1, 476600:1, 731490:1, 814380:1, 761620:1, 774351:1, 966330:1,
+	501300:1, 801630:1, 544390:1, 718560:1, 515180:1, 597220:1, 648800:1,
+	387990:1, 313120:1, 381210:1, 555440:1, 994280:1, 240720:1, 286160:1,
+	403640:1, 379720:1, 377160:1, 480490:1, 548570:1, 306130:1, 489830:1,
+	612880:1, 350640:1, 621830:1, 840010:1, 578080:1, 107410:1, 221100:1,
+	285900:1, 616560:1, 1032430:1, 424030:1, 367500:1, 761600:1, 787480:1,
+	310950:1, 601150:1, 742300:1, 582010:1, 587620:1, 883710:1, 250680:1,
+	292030:1, 211820:1, 607050:1, 368070:1, 505460:1, 451340:1, 656240:1,
+	690790:1, 737800:1, 548430:1, 605740:1, 677120:1, 219990:1, 525510:1,
+	777770:1, 815370:1, 594650:1, 352720:1, 934780:1, 527230:1, 477160:1,
+	638000:1, 410320:1, 418240:1, 559650:1, 629730:1, 368340:1, 456670:1,
+	744060:1, 363890:1, 447150:1, 311690:1, 578620:1, 683320:1, 460950:1,
+	513710:1, 764790:1, 622720:1, 32470:1, 376210:1, 682530:1, 718590:1, 367450:1,
+	410900:1, 715560:1, 962730:1, 392160:1, 337000:1, 517630:1, 532210:1,
+	750920:1, 307690:1, 239160:1, 242760:1, 299740:1, 413150:1, 860890:1,
+	1029630:1, 518790:1, 596970:1, 704270:1, 552500:1, 752590:1, 573100:1,
+	399810:1, 787860:1, 819500:1, 581320:1, 675010:1, 298900:1, 287630:1,
+	378540:1, 427290:1, 251060:1, 282140:1, 359320:1, 648350:1, 493340:1,
+	613100:1, 440900:1, 760060:1, 223850:1, 559100:1, 446800:1, 503560:1, 4000:1,
+	252490:1, 632360:1, 320240:1, 230290:1, 453090:1, 573090:1, 239820:1,
+	1046030:1, 586140:1, 434650:1, 275850:1, 736260:1, 688130:1, 510500:1,
+	305620:1, 516110:1, 253230:1, 718670:1, 751780:1, 405710:1, 445980:1,
+	632350:1, 228280:1, 704450:1, 108600:1, 774201:1, 774461:1, 595690:1,
+	644930:1, 582660:1, 493900:1, 503940:1, 671440:1, 373930:1, 492720:1,
+	673880:1, 326460:1, 244850:1, 736850:1, 322330:1, 457140:1, 383150:1,
+	287390:1, 794260:1, 640820:1, 206420:1, 838380:1, 886820:1, 485510:1,
+	628890:1, 363150:1, 831560:1, 939700:1, 287700:1, 770240:1, 838350:1,
+	805550:1, 824270:1, 269950:1, 435150:1, 481510:1, 290340:1, 690830:1,
+	991780:1, 569480:1, 914260:1, 233860:1, 555160:1, 552100:1, 598330:1,
+	633460:1, 858810:1, 552620:1, 504230:1, 432350:1, 646570:1, 758190:1,
+	221380:1, 266840:1, 847370:1, 613880:1, 882020:1, 759740:1, 673950:1,
+	609320:1, 433340:1, 588650:1, 502500:1, 374320:1, 678950:1, 899440:1,
+	816020:1, 848350:1, 424840:1, 349040:1, 589360:1, 755500:1, 544750:1,
+	798510:1, 626690:1, 738540:1, 389730:1, 246620:1, 400940:1, 519860:1,
+	250900:1, 960090:1, 414340:1, 803600:1, 889600:1, 619150:1, 494430:1,
+	844590:1, 736220:1, 774861:1, 790740:1, 831980:1, 365360:1, 1055090:1,
+	448280:1, 868360:1, 637090:1, 255710:1, 203770:1, 236850:1, 394360:1,
+	859580:1, 233450:1, 281990:1, 464920:1, 362960:1, 571740:1, 394690:1,
+	645630:1, 704850:1, 494840:1, 269190:1, 846470:1, 591370:1, 568220:1,
+	252950:1, 599080:1, 253250:1, 314160:1, 530070:1, 24010:1, 701160:1, 105600:1,
+	312660:1, 312670:1, 301640:1, 880940:1, 414700:1, 555220:1, 262060:1,
+	499660:1, 656700:1, 546430:1, 396750:1, 271590:1, 391540:1, 450540:1,
+	594330:1, 949290:1, 270880:1, 227300:1, 460790:1, 893180:1, 231430:1,
+	289130:1, 392110:1, 872790:1, 415200:1, 546050:1, 809890:1, 584400:1,
+	594570:1, 535930:1, 790820:1, 834530:1, 736190:1, 967050:1, 242920:1,
+	466560:1, 980300:1, 998940:1, 544610:1, 489630:1, 346110:1, 834910:1,
+	840800:1, 334540:1, 567640:1, 564230:1, 819030:1, 819020:1, 613830:1,
+	637650:1, 714370:1, 552700:1, 718650:1, 218620:1, 226860:1, 204880:1,
+	271260:1, 341800:1, 636480:1, 527430:1, 382310:1, 383840:1, 212680:1,
+	590380:1, 490920:1, 617830:1, 813630:1, 361420:1, 48700:1, 942970:1, 367520:1,
+	431240:1, 666140:1, 728880:1, 641990:1, 327030:1, 239140:1, 439340:1,
+	285920:1, 674020:1, 251570:1, 621060:1, 541210:1, 378360:1, 449960:1,
+	853550:1, 743450:1, 606280:1, 411300:1, 311290:1, 311260:1, 228380:1,
+	599140:1, 572430:1, 929010:1, 232090:1, 418460:1, 629760:1, 812140:1,
+	939960:1, 304390:1, 221680:1, 647590:1, 460920:1, 646910:1, 359550:1,
+	641080:1, 447040:1, 264710:1, 851100:1, 550:1, 620:1, 560130:1, 342180:1,
+	951440:1, 992640:1, 379430:1, 208650:1, 863550:1, 627270:1, 647830:1,
+	356190:1, 976310:1, 963930:1, 674940:1, 508440:1, 396900:1, 877200:1,
+	622220:1, 955050:1
 };
 

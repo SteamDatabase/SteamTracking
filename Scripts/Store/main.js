@@ -383,6 +383,10 @@ function GameHover( elem, event, divHover, rgHoverData )
 			{
 				rgAjaxParams['pagev6'] = true;
 			}
+			if ( $Elem.data('hoverDisableScreenshots') )
+			{
+				rgAjaxParams['disableScreenshots'] = true;
+			}
 
 			window.setTimeout( function() {
 				if ( oElemState.bWantsHover && !oElemState.bAjaxRequestMade ) {

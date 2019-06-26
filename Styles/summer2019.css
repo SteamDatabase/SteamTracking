@@ -66,6 +66,37 @@ body.v6 .sale_capsule {
 	display: block;
 }
 
+.sale_capsule.with_microtrailer .sale_capsule_image
+{
+
+	transition: opacity 0.6s;
+
+	position: relative;
+	z-index: 2;
+}
+
+.sale_capsule_video {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 1;
+
+	transition: opacity 0.6s;
+}
+
+.sale_capsule.with_microtrailer:hover .sale_capsule_image {
+	opacity: 0;
+}
+
+.sale_capsule.with_microtrailer:hover .sale_capsule_video {
+	opacity: 1;
+}
+
 .home_featured_ctn .three_row {
 	display: flex;
 	justify-content: space-between;
@@ -638,6 +669,7 @@ body.v6 .sale_capsule .discount_block_inline
 	border: 1px solid #67c1f5;
 
 	transition: opacity 0.4s;
+	z-index: 3;
 }
 
 .sale_capsule:hover .sale_capsule_image_hover
@@ -784,16 +816,22 @@ body.v6 .sale_capsule .discount_block_inline
 	top: 100%;
 	right: 0;
 	width: 100%;
-	height: 44%;
+	height: 46.5%;
 	opacity: 0;
 	pointer-events: none;
 	background: #000000;
 
 	transition: top 0.6s, opacity 0.5s;
 }
+
+.hero_capsule .hero_video
+{
+	width: 100%;
+}
+
 .hero_capsule:hover .hero_data
 {
-	top: 44%;
+	top: 46.5%;
 	opacity: 1.0;
 }
 
