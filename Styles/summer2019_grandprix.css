@@ -166,7 +166,7 @@ a {
 .prix_header_teams_ctn .prix_standing img {
 	transform: skewX( 10deg );
 	position: absolute;
-	bottom: 20px;
+	bottom: 25px;
 	left: -6%;
 }
 
@@ -828,6 +828,7 @@ a {
 .prix_currentpoints_ctn {
 	margin: -15px 0 40px 0;
 	margin-left: -12px;
+	z-index: 15;
 }
 
 .prix_currentpoints_capacty {
@@ -1333,7 +1334,7 @@ a {
 }
 
 .prix_faq_question_ctn {
-	max-width: calc( 50% - 40px );
+	max-width: 450px;
 	margin: 10px 20px 10px 0px;
 }
 
