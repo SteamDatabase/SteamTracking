@@ -34,6 +34,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_appoverview.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_base.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_clientserver_login.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_hiddevices.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamservice.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/FriendsImageManager.cpp
@@ -223,6 +224,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostageyv12.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/vrstreamthread.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/x264wrapper.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/libraryassetcache.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/modmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/musicpage_details_content.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/overlay/overlaymanager.cpp
@@ -240,6 +242,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuiappcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuiappiconcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuibetacontroller.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuibrowsercontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuicontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuicurrentusercontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/steamuisurveycontroller.cpp

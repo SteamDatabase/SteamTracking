@@ -10,4 +10,6 @@ public:
     virtual unknown_ret DecompressVoice(void const*, unsigned int, void*, unsigned int, unsigned int*, unsigned int) = 0;
     virtual unknown_ret GetVoiceOptimalSampleRate() = 0;
     virtual unknown_ret BAppUsesVoice(unsigned int) = 0;
+    virtual unknown_ret GetGameSystemVolume() = 0;
+    virtual unknown_ret SetGameSystemVolume(float) = 0;
 };

@@ -585,6 +585,7 @@
  T V_Windows1252CharsToUTF8
  T V_atof
  T V_atoi
+ T V_atoui128(char const*)
  T V_atoui64
  T V_binarytohex
  T V_hextobinary
@@ -651,6 +652,7 @@
  T int CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<wchar_t, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess>(wchar_t const&, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess const&) const
  T int SplitNumbers<CUtlVector<int, CUtlMemory<int> > >(char const*, char, CUtlVector<int, CUtlMemory<int> >&)
  T int SplitNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char const*, char, CUtlVector<unsigned int, CUtlMemory<unsigned int> >&)
+ T uint128::operator*(uint128)
  T void Destruct<CUtlString>(CUtlString*)
  T void JoinNumbers<CUtlVector<int, CUtlMemory<int> > >(char, CUtlVector<int, CUtlMemory<int> > const&, CUtlString&)
  T void JoinNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char, CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, CUtlString&)

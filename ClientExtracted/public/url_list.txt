@@ -1205,3 +1205,15 @@ AppHoverPublic
 	method		"internal"
 	filter		"store"
 }
+AppHoverPublicFull
+{
+	url			"%store%/apphoverpublic/%p1%/?l=%language%&json=1&full=1"
+	method		"internal"
+	filter		"store"
+}
+LibraryAppDetails
+{
+	url			"%store%/api/libraryappdetails/?appid=%p1%&l=%language%"
+	method		"internal"
+	filter		"store"
+}

@@ -65,7 +65,7 @@ public:
     virtual unknown_ret BNeedsFile(unsigned int, char const*, unsigned long long, unsigned int) = 0;
     virtual unknown_ret BAddFileOnDisk(unsigned int, char const*, unsigned long long, unsigned int, SHADigestWrapper_t) = 0;
     virtual unknown_ret FinishAddingFiles(unsigned int) = 0;
-    virtual unknown_ret GetAppStateInfo(unsigned int, EAppReleaseState*, unsigned int*, unsigned int*, CSteamID*, unsigned int*, unsigned int*) = 0;
+    virtual unknown_ret GetAppStateInfo(unsigned int, AppStateInfo_s*) = 0;
     virtual unknown_ret BIsAvailableOnPlatform(unsigned int, char const*) = 0;
     virtual unknown_ret GetNumInstallBaseFolders() = 0;
     virtual unknown_ret GetInstallBaseFolder(int, char*, int) = 0;

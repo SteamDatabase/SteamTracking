@@ -1,18 +1,13 @@
 /* Style scrollbar elements */
 
-::-webkit-scrollbar,
-.iScrollHorizontalScrollbar,
-.iScrollVerticalScrollbar
-{
+::-webkit-scrollbar {
 	height: 12px;
 	width: 12px;
 	background: transparent;
 	overflow: visible;
 }
 
-
-::selection
-{
+::selection {
 	background: rgb(84, 165, 212);
 	text-shadow: 1px 1px 2px #000000aa;
 	color: #fff;
@@ -23,103 +18,61 @@
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }*/
 
-.iScrollHorizontalScrollbar
-{
-	position: absolute;
-	left: 2px;
-	right: 2px;
-	bottom: 2px;
-	width: 100%;
-}
-
-.iScrollVerticalScrollbar
-{
-	position: absolute;
-	bottom: 2px;
-	top: 2px;
-	right: 2px;
-	height: 100%;
-}
-
-::-webkit-scrollbar-thumb,
-.iScrollIndicator
-{
+::-webkit-scrollbar-thumb {
 
 	border-radius: 2px;
 	margin: 4px;
 
 	/*box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, .25);*/
-}
 
-::-webkit-scrollbar-thumb
-{
 	min-height: 32px;
 	min-width: 32px;
 }
 
-.iScrollIndicator
-{
-	width: 8px;
-	margin: 1px;
-	position: absolute;
-}
-
-::-webkit-scrollbar-thumb:hover,
-.iScrollIndicator:hover
-{
+::-webkit-scrollbar-thumb:hover {
 	background: #4E5157;
 }
 
-::-webkit-scrollbar-corner
-{
+::-webkit-scrollbar-corner {
 	background: #202020;
 }
 
-.ChatRoomContextNoPermission
-{
+.ChatRoomContextNoPermission {
 	opacity: .4;
 	cursor: default;
 	pointer-events: none;
 	user-select: none;
 }
 
-.ChatRoomContextNoPermission .SVGIcon_Lock
-{
+.ChatRoomContextNoPermission .SVGIcon_Lock {
 	width: 12px;
 	height: 12px;
 	margin-right: 4px;
 	margin-bottom: -1px;
 }
 
-.flexRow
-{
+.flexRow {
 	display: flex;
 	flex-direction: row;
 }
 
-.flexRowCentered
-{
+.flexRowCentered {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
 
-
-
-.flexColumn
-{
+.flexColumn {
 	display: flex;
 	flex-direction: column;
 }
 
-.scrollMaskVertical
-{
+.scrollMaskVertical {
 	-webkit-mask: linear-gradient( 0deg, rgba( 0, 0, 0, 0 ) 0px, rgba( 0, 0, 0, 1 ) 16px, rgba( 0, 0, 0, 1 ) calc( 100% - 8px), rgba( 0, 0, 0, 0 ) 100% );
 	mask: linear-gradient( 0deg, rgba( 0, 0, 0, 0 ) 0px, rgba( 0, 0, 0, 1 ) 16px, rgba( 0, 0, 0, 1 ) calc( 100% - 8px), rgba( 0, 0, 0, 0 ) 100% );
 }
 
-.SVGIcon_Button
-{
+.SVGIcon_Button {
 	fill: #ffffff;
 	overflow: visible;
 	width: 100%;
@@ -128,26 +81,22 @@
 	max-height: 320px;
 }
 
-.crossfade
-{
+.crossfade {
 	position: relative;
 	overflow: hidden;
 }
 
-.crossfade-anim-exit
-{
+.crossfade-anim-exit {
 	opacity: 1;
 	transition-timing-function: linear;
 	transition-property: opacity;
 }
 
-.crossfade-anim-exit-active
-{
+.crossfade-anim-exit-active {
 	opacity: 0.01;
 }
 
-.crossfade-img
-{
+.crossfade-img {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -156,4 +105,3 @@
 
 	background-size: cover;
 }
-

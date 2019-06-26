@@ -70,6 +70,7 @@
  B CMsgFinishedRequest::default_instance_
  B CMsgFocusedNodeText::default_instance_
  B CMsgFocusedNodeTextResponse::default_instance_
+ B CMsgForcePopupsToDirectHWND::default_instance_
  B CMsgFullRepaint::default_instance_
  B CMsgGameOverlayTargetTextureID::default_instance_
  B CMsgGameOverlayTexturePaint::default_instance_
@@ -194,6 +195,7 @@
  B OPENSSL_ia32cap_P
  B __g_CreateCRunGameEngineIRunGameEngine_reg
  B __g_CreateCVGUIApplicationOverlayIVGUIHostApplication_reg
+ B gConVarEnableLogTearOff
  B gConVarEnableSpewThrottle
  B gConVarSpewThrottleNagFrequencyMs
  B gConVarSpewThrottlePeriodMs
@@ -433,6 +435,12 @@
  D CDialogParentalUnlock::GetKBMap()::s_pMap
  D CDialogParentalUnlock::GetMessageMap()::s_pMap
  D CDialogParentalUnlock::KB_ChainToMap()::chained
+ D CDurationControlNotification::ChainToAnimationMap()::chained
+ D CDurationControlNotification::ChainToMap()::chained
+ D CDurationControlNotification::GetKBMap()::s_pMap
+ D CDurationControlNotification::GetMessageMap()::s_pMap
+ D CDurationControlNotification::KB_ChainToMap()::chained
+ D CDurationControlNotification::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()::bAdded
  D CEmoticonButton::ChainToAnimationMap()::chained
  D CEmoticonButton::ChainToMap()::chained
  D CEmoticonButton::GetKBMap()::s_pMap
@@ -915,6 +923,7 @@
  D VTT for CBroadcastLiveBanner
  D VTT for CBroadcastUploadErrorNotification
  D VTT for CDialogParentalUnlock
+ D VTT for CDurationControlNotification
  D VTT for CEmoticonButton
  D VTT for CGuideItemPanel
  D VTT for CHintLabel
@@ -1146,6 +1155,7 @@
  D construction vtable for vgui::EditablePanel-in-CBroadcastLiveBanner
  D construction vtable for vgui::EditablePanel-in-CBroadcastUploadErrorNotification
  D construction vtable for vgui::EditablePanel-in-CDialogParentalUnlock
+ D construction vtable for vgui::EditablePanel-in-CDurationControlNotification
  D construction vtable for vgui::EditablePanel-in-CGuideItemPanel
  D construction vtable for vgui::EditablePanel-in-CIngameFPSBanner
  D construction vtable for vgui::EditablePanel-in-CMicroTxnAuthorizeDialog
@@ -1314,6 +1324,7 @@
  D construction vtable for vgui::MessageBox-in-vgui::QueryBox
  D construction vtable for vgui::NotificationFrame-in-CBroadcastAvailableToWatch
  D construction vtable for vgui::NotificationFrame-in-CBroadcastUploadErrorNotification
+ D construction vtable for vgui::NotificationFrame-in-CDurationControlNotification
  D construction vtable for vgui::NotificationFrame-in-COverlayCDKeyNotification
  D construction vtable for vgui::NotificationFrame-in-COverlayLoggedInElsewhereNotification
  D construction vtable for vgui::NotificationFrame-in-COverlayLowBattery
@@ -1333,6 +1344,7 @@
  D construction vtable for vgui::Panel-in-CBroadcastLiveBanner
  D construction vtable for vgui::Panel-in-CBroadcastUploadErrorNotification
  D construction vtable for vgui::Panel-in-CDialogParentalUnlock
+ D construction vtable for vgui::Panel-in-CDurationControlNotification
  D construction vtable for vgui::Panel-in-CEmoticonButton
  D construction vtable for vgui::Panel-in-CGuideItemPanel
  D construction vtable for vgui::Panel-in-CHintLabel
@@ -1557,6 +1569,8 @@
  D guard variable for CBroadcastUploadErrorNotification::GetMessageMap()::s_pMap
  D guard variable for CDialogParentalUnlock::GetKBMap()::s_pMap
  D guard variable for CDialogParentalUnlock::GetMessageMap()::s_pMap
+ D guard variable for CDurationControlNotification::GetKBMap()::s_pMap
+ D guard variable for CDurationControlNotification::GetMessageMap()::s_pMap
  D guard variable for CEmoticonButton::GetKBMap()::s_pMap
  D guard variable for CEmoticonButton::GetMessageMap()::s_pMap
  D guard variable for CGuideItemPanel::GetKBMap()::s_pMap
@@ -1885,6 +1899,7 @@
  D typeinfo for CBasePanel::CCallback_OnBroadcastShowFirstTimeDlg
  D typeinfo for CBasePanel::CCallback_OnBroadcastStatus
  D typeinfo for CBasePanel::CCallback_OnBroadcastUploadsDisabled
+ D typeinfo for CBasePanel::CCallback_OnDurationControl
  D typeinfo for CBasePanel::CCallback_OnFilePublished
  D typeinfo for CBasePanel::CCallback_OnGameOverlayActivateRequested
  D typeinfo for CBasePanel::CCallback_OnLegacyCDKeyRegistered
@@ -1921,6 +1936,7 @@
  D typeinfo for CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>
  D typeinfo for CCallback<CBasePanel, BroadcastStatus_t, false>
  D typeinfo for CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>
+ D typeinfo for CCallback<CBasePanel, DurationControl_t, false>
  D typeinfo for CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>
  D typeinfo for CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>
  D typeinfo for CCallback<CBasePanel, LowBatteryPower_t, false>
@@ -2034,6 +2050,7 @@
  D typeinfo for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
  D typeinfo for CDirContentsWatcher
  D typeinfo for CDirWatcher
+ D typeinfo for CDurationControlNotification
  D typeinfo for CEmoticonButton
  D typeinfo for CFloatProperty
  D typeinfo for CFriendsImageManager
@@ -2051,6 +2068,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D typeinfo for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgFind>
+ D typeinfo for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  D typeinfo for CHTMLProtoBufMsg<CMsgFullRepaint>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoBack>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoForward>
@@ -2096,6 +2114,7 @@
  D typeinfo for CItemImageManager
  D typeinfo for CJSCallbackFunc
  D typeinfo for CJSMethodArgument
+ D typeinfo for CLambdaCallResult<DurationControl_t>
  D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CMainOverlay
  D typeinfo for CMicroTxnAuthorizeDialog
@@ -2135,6 +2154,7 @@
  D typeinfo for CMsgFinishedRequest
  D typeinfo for CMsgFocusedNodeText
  D typeinfo for CMsgFocusedNodeTextResponse
+ D typeinfo for CMsgForcePopupsToDirectHWND
  D typeinfo for CMsgFullRepaint
  D typeinfo for CMsgGameOverlayTargetTextureID
  D typeinfo for CMsgGameOverlayTexturePaint
@@ -2424,6 +2444,7 @@
  D typeinfo for ZooDialog
  D typeinfo for ZooDialog::ZooPropertyPage
  D typeinfo for std::__1::__function::__base<void ()>
+ D typeinfo for std::__1::__function::__base<void (DurationControl_t*, bool)>
  D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D typeinfo for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
@@ -3167,6 +3188,7 @@
  D vtable for CBasePanel::CCallback_OnBroadcastShowFirstTimeDlg
  D vtable for CBasePanel::CCallback_OnBroadcastStatus
  D vtable for CBasePanel::CCallback_OnBroadcastUploadsDisabled
+ D vtable for CBasePanel::CCallback_OnDurationControl
  D vtable for CBasePanel::CCallback_OnFilePublished
  D vtable for CBasePanel::CCallback_OnGameOverlayActivateRequested
  D vtable for CBasePanel::CCallback_OnLegacyCDKeyRegistered
@@ -3203,6 +3225,7 @@
  D vtable for CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>
  D vtable for CCallback<CBasePanel, BroadcastStatus_t, false>
  D vtable for CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>
+ D vtable for CCallback<CBasePanel, DurationControl_t, false>
  D vtable for CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>
  D vtable for CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>
  D vtable for CCallback<CBasePanel, LowBatteryPower_t, false>
@@ -3315,6 +3338,7 @@
  D vtable for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
  D vtable for CDirContentsWatcher
  D vtable for CDirWatcher
+ D vtable for CDurationControlNotification
  D vtable for CEmoticonButton
  D vtable for CFloatProperty
  D vtable for CFriendsImageManager
@@ -3331,6 +3355,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D vtable for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D vtable for CHTMLProtoBufMsg<CMsgFind>
+ D vtable for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  D vtable for CHTMLProtoBufMsg<CMsgFullRepaint>
  D vtable for CHTMLProtoBufMsg<CMsgGoBack>
  D vtable for CHTMLProtoBufMsg<CMsgGoForward>
@@ -3376,6 +3401,7 @@
  D vtable for CItemImageManager
  D vtable for CJSCallbackFunc
  D vtable for CJSMethodArgument
+ D vtable for CLambdaCallResult<DurationControl_t>
  D vtable for CMSgJumpListMRUApp
  D vtable for CMainOverlay
  D vtable for CMicroTxnAuthorizeDialog
@@ -3415,6 +3441,7 @@
  D vtable for CMsgFinishedRequest
  D vtable for CMsgFocusedNodeText
  D vtable for CMsgFocusedNodeTextResponse
+ D vtable for CMsgForcePopupsToDirectHWND
  D vtable for CMsgFullRepaint
  D vtable for CMsgGameOverlayTargetTextureID
  D vtable for CMsgGameOverlayTexturePaint
@@ -3873,6 +3900,7 @@
  R typeinfo name for CBasePanel::CCallback_OnBroadcastShowFirstTimeDlg
  R typeinfo name for CBasePanel::CCallback_OnBroadcastStatus
  R typeinfo name for CBasePanel::CCallback_OnBroadcastUploadsDisabled
+ R typeinfo name for CBasePanel::CCallback_OnDurationControl
  R typeinfo name for CBasePanel::CCallback_OnFilePublished
  R typeinfo name for CBasePanel::CCallback_OnGameOverlayActivateRequested
  R typeinfo name for CBasePanel::CCallback_OnLegacyCDKeyRegistered
@@ -3909,6 +3937,7 @@
  R typeinfo name for CCallback<CBasePanel, BroadcastShowFirstTimeDlg_t, false>
  R typeinfo name for CCallback<CBasePanel, BroadcastStatus_t, false>
  R typeinfo name for CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>
+ R typeinfo name for CCallback<CBasePanel, DurationControl_t, false>
  R typeinfo name for CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>
  R typeinfo name for CCallback<CBasePanel, LegacyCDKeyRegistered_t, false>
  R typeinfo name for CCallback<CBasePanel, LowBatteryPower_t, false>
@@ -4022,6 +4051,7 @@
  R typeinfo name for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
  R typeinfo name for CDirContentsWatcher
  R typeinfo name for CDirWatcher
+ R typeinfo name for CDurationControlNotification
  R typeinfo name for CEmoticonButton
  R typeinfo name for CFloatProperty
  R typeinfo name for CFriendsImageManager
@@ -4039,6 +4069,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgExitFullScreen>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFind>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFullRepaint>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoBack>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoForward>
@@ -4084,6 +4115,7 @@
  R typeinfo name for CItemImageManager
  R typeinfo name for CJSCallbackFunc
  R typeinfo name for CJSMethodArgument
+ R typeinfo name for CLambdaCallResult<DurationControl_t>
  R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CMainOverlay
  R typeinfo name for CMicroTxnAuthorizeDialog
@@ -4123,6 +4155,7 @@
  R typeinfo name for CMsgFinishedRequest
  R typeinfo name for CMsgFocusedNodeText
  R typeinfo name for CMsgFocusedNodeTextResponse
+ R typeinfo name for CMsgForcePopupsToDirectHWND
  R typeinfo name for CMsgFullRepaint
  R typeinfo name for CMsgGameOverlayTargetTextureID
  R typeinfo name for CMsgGameOverlayTexturePaint
@@ -4497,6 +4530,7 @@
  R typeinfo name for ZooDialog
  R typeinfo name for ZooDialog::ZooPropertyPage
  R typeinfo name for std::__1::__function::__base<void ()>
+ R typeinfo name for std::__1::__function::__base<void (DurationControl_t*, bool)>
  R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
@@ -4773,6 +4807,8 @@
  T CBasePanel::CCallback_OnBroadcastStatus::~CCallback_OnBroadcastStatus()
  T CBasePanel::CCallback_OnBroadcastUploadsDisabled::Run(void*)
  T CBasePanel::CCallback_OnBroadcastUploadsDisabled::~CCallback_OnBroadcastUploadsDisabled()
+ T CBasePanel::CCallback_OnDurationControl::Run(void*)
+ T CBasePanel::CCallback_OnDurationControl::~CCallback_OnDurationControl()
  T CBasePanel::CCallback_OnFilePublished::Run(void*)
  T CBasePanel::CCallback_OnFilePublished::~CCallback_OnFilePublished()
  T CBasePanel::CCallback_OnGameOverlayActivateRequested::Run(void*)
@@ -4825,6 +4861,7 @@
  T CBasePanel::OnBroadcastStatus(BroadcastStatus_t*)
  T CBasePanel::OnBroadcastUploadsDisabled(BroadcastUploadsDisabled_t*)
  T CBasePanel::OnCancelMicroTxn()
+ T CBasePanel::OnDurationControl(DurationControl_t*)
  T CBasePanel::OnFilePublished(RemoteStoragePublishFileResult_t*)
  T CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)
  T CBasePanel::OnGameOverlaySettingsChanged()
@@ -4884,18 +4921,19 @@
  T CBasePanel::RequestLegacyCDKey(unsigned int)
  T CBasePanel::RequestScreenshotFromGame()
  T CBasePanel::RunFrame()
+ T CBasePanel::RunNotifications()
  T CBasePanel::SetDesktopVisible(bool)
  T CBasePanel::SetGameID(unsigned long long)
  T CBasePanel::SetIngameFPS(unsigned int)
  T CBasePanel::ShellExecuteHook(char const*, char const*)
  T CBasePanel::ShowBroadcastAvailableNotification()
  T CBasePanel::ShowControllerConfigNotification()
+ T CBasePanel::ShowDurationControl(float)
  T CBasePanel::ShowLegacyCDKey()
- T CBasePanel::ShowLegacyCDKeyDataOnce()
  T CBasePanel::ShowLegacyCDKeyIfNotIgnored()
  T CBasePanel::ShowMinimalModePanel(vgui::Panel*)
  T CBasePanel::ShowParentalUnlockDialog(std::__1::function<void ()>, std::__1::function<void ()>)
- T CBasePanel::TriggerSplashOnce()
+ T CBasePanel::ShowSplash()
  T CBasePanel::UpdatePlaytimeStats()
  T CBasePanel::ViewAchievements()
  T CBasePanel::ViewNews()
@@ -5070,6 +5108,10 @@
  T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::Register(CBasePanel*, void (CBasePanel::*)(BroadcastUploadsDisabled_t*))
  T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::Run(void*)
  T CCallback<CBasePanel, BroadcastUploadsDisabled_t, false>::~CCallback()
+ T CCallback<CBasePanel, DurationControl_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(DurationControl_t*))
+ T CCallback<CBasePanel, DurationControl_t, false>::Register(CBasePanel*, void (CBasePanel::*)(DurationControl_t*))
+ T CCallback<CBasePanel, DurationControl_t, false>::Run(void*)
+ T CCallback<CBasePanel, DurationControl_t, false>::~CCallback()
  T CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>::CCallback(CBasePanel*, void (CBasePanel::*)(GameOverlayActivateRequested_t const*))
  T CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>::Register(CBasePanel*, void (CBasePanel::*)(GameOverlayActivateRequested_t const*))
  T CCallback<CBasePanel, GameOverlayActivateRequested_t const, false>::Run(void*)
@@ -5561,6 +5603,20 @@
  T CDirWatcher::SetDirToWatch(char const*)
  T CDirWatcher::Validate(CValidator&, char const*)
  T CDirWatcher::~CDirWatcher()
+ T CDurationControlNotification::CDurationControlNotification(vgui::Panel*, char const*, float)
+ T CDurationControlNotification::ChainToAnimationMap()
+ T CDurationControlNotification::ChainToMap()
+ T CDurationControlNotification::GetAnimMap()
+ T CDurationControlNotification::GetClassSize() const
+ T CDurationControlNotification::GetKBMap()
+ T CDurationControlNotification::GetMessageMap()
+ T CDurationControlNotification::GetPanelClassName()
+ T CDurationControlNotification::GetPanelTopClassName() const
+ T CDurationControlNotification::KB_ChainToMap()
+ T CDurationControlNotification::OnNotificationClickPanelClicked()
+ T CDurationControlNotification::OnThink()
+ T CDurationControlNotification::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()
+ T CDurationControlNotification::~CDurationControlNotification()
  T CEmoticonButton::CEmoticonButton(vgui::Panel*, char const*)
  T CEmoticonButton::ChainToAnimationMap()
  T CEmoticonButton::ChainToMap()
@@ -5671,6 +5727,8 @@
  T CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFind>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFind>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFullRepaint>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFullRepaint>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgGoBack>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -5754,6 +5812,14 @@
  T CHintLabel::PerformLayout()
  T CHintLabel::~CHintLabel()
  T CHostOfflineMode::IsOfflineMode()
+ T CIPAddress::BlockingResolveAndSetFromString(char const*, bool, unsigned short*)
+ T CIPAddress::HasIP() const
+ T CIPAddress::SetFromSockadr(void const*, unsigned long, unsigned short*)
+ T CIPAddress::SetFromString(char const*, unsigned short*)
+ T CIPAddress::ToString(char*, unsigned int, unsigned short const*) const
+ T CIPAddress::operator==(CIPAddress const&) const
+ T CIPAndPort::CompareAdr(CIPAndPort const&, bool) const
+ T CIPAndPort::ToString(char*, unsigned int, bool) const
  T CIPCToolMachClient::DoBasicCommand(int, char const*, char const*, int)
  T CIPCToolMachClient::DoKillCommand(char const*)
  T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
@@ -5833,6 +5899,12 @@
  T CKeyBindingsMgr::~CKeyBindingsMgr()
  T CKeyErrorContext::~CKeyErrorContext()
  T CKeySymbol::CKeySymbol(char const*)
+ T CLambdaCallResult<DurationControl_t>::Cancel()
+ T CLambdaCallResult<DurationControl_t>::GetCallbackSizeBytes()
+ T CLambdaCallResult<DurationControl_t>::Run(void*)
+ T CLambdaCallResult<DurationControl_t>::Run(void*, bool, unsigned long long)
+ T CLambdaCallResult<DurationControl_t>::Set(unsigned long long, std::__1::function<void (DurationControl_t*, bool)>)
+ T CLambdaCallResult<DurationControl_t>::~CLambdaCallResult()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()
@@ -6391,6 +6463,17 @@
  T CMsgFocusedNodeTextResponse::mutable_value()
  T CMsgFocusedNodeTextResponse::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFocusedNodeTextResponse::~CMsgFocusedNodeTextResponse()
+ T CMsgForcePopupsToDirectHWND::ByteSize() const
+ T CMsgForcePopupsToDirectHWND::CMsgForcePopupsToDirectHWND()
+ T CMsgForcePopupsToDirectHWND::Clear()
+ T CMsgForcePopupsToDirectHWND::GetCachedSize() const
+ T CMsgForcePopupsToDirectHWND::GetMetadata() const
+ T CMsgForcePopupsToDirectHWND::IsInitialized() const
+ T CMsgForcePopupsToDirectHWND::MergeFrom(CMsgForcePopupsToDirectHWND const&)
+ T CMsgForcePopupsToDirectHWND::New() const
+ T CMsgForcePopupsToDirectHWND::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgForcePopupsToDirectHWND::SetCachedSize(int) const
+ T CMsgForcePopupsToDirectHWND::~CMsgForcePopupsToDirectHWND()
  T CMsgFullRepaint::ByteSize() const
  T CMsgFullRepaint::CMsgFullRepaint()
  T CMsgFullRepaint::Clear()
@@ -9731,6 +9814,7 @@
  T CUtlSortVector<vgui::EditablePanel::LayoutPanel_t>::Insert(vgui::EditablePanel::LayoutPanel_t const&)
  T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
+ T CUtlString::BStartsWithCaseless(char const*) const
  T CUtlString::CUtlString(CUtlString const&)
  T CUtlString::Format(char const*, ...)
  T CUtlString::Replace(char const*, char const*)
@@ -10205,6 +10289,7 @@
  T ConVar::IsRegistered() const
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
+ T ConVar::SetFromConVarsVDF(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
@@ -10252,7 +10337,7 @@
  T EAppReleaseStateFromName(char const*)
  T EParentalFeatureFromName(char const*)
  T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, char const*, ...)
- T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, netadr_t const&, unsigned long long const&, char const*, __va_list_tag*)
+ T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, __va_list_tag*)
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T FillDataStruct(_finddata_t*)
  T FindOrAddPanelAnimationMap(char const*)
@@ -10808,13 +10893,6 @@
  T jround_up
  T jzero_far
  T md5_block_asm_data_order
- T netadr_t::BlockingResolveAndSetFromString(char const*, bool)
- T netadr_t::CompareAdr(netadr_t const&, bool) const
- T netadr_t::GetIP() const
- T netadr_t::HasIP() const
- T netadr_t::SetFromSockadr(void const*, unsigned long)
- T netadr_t::SetFromString(char const*)
- T netadr_t::ToString(char*, unsigned int, bool) const
  T new_JSON_parser
  T non-virtual thunk to COverlayWebBrowserHTML::~COverlayWebBrowserHTML()
  T non-virtual thunk to CSteamAuthedHTML::~CSteamAuthedHTML()
@@ -10863,7 +10941,7 @@
  T non-virtual thunk to vgui::HTML::BrowserOpenNewTab(CMsgOpenNewTab const*)
  T non-virtual thunk to vgui::HTML::BrowserOpenSteamURL(CMsgOpenSteamURL const*)
  T non-virtual thunk to vgui::HTML::BrowserPageSecurity(CMsgPageSecurity const*)
- T non-virtual thunk to vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
+ T non-virtual thunk to vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*, bool*)
  T non-virtual thunk to vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T non-virtual thunk to vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
  T non-virtual thunk to vgui::HTML::BrowserResizeGripChanged(CMsgResizeGripChanged const*)
@@ -11195,6 +11273,10 @@
  T std::__1::function<void ()>::operator()() const
  T std::__1::function<void ()>::operator=(std::__1::function<void ()> const&)
  T std::__1::function<void ()>::swap(std::__1::function<void ()>&)
+ T std::__1::function<void (DurationControl_t*, bool)>::function(std::__1::function<void (DurationControl_t*, bool)> const&)
+ T std::__1::function<void (DurationControl_t*, bool)>::operator()(DurationControl_t*, bool) const
+ T std::__1::function<void (DurationControl_t*, bool)>::operator=(std::__1::function<void (DurationControl_t*, bool)> const&)
+ T std::__1::function<void (DurationControl_t*, bool)>::swap(std::__1::function<void (DurationControl_t*, bool)>&)
  T std::__1::pair<int*, long> std::__1::get_temporary_buffer<int>(long)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, long>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__emplace_unique_key_args<int, int const&>(int const&, int const&)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, long>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__emplace_unique_key_args<int, int>(int const&, int&&)
@@ -12157,7 +12239,7 @@
  T vgui::HTML::BrowserOpenNewTab(CMsgOpenNewTab const*)
  T vgui::HTML::BrowserOpenSteamURL(CMsgOpenSteamURL const*)
  T vgui::HTML::BrowserPageSecurity(CMsgPageSecurity const*)
- T vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
+ T vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*, bool*)
  T vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
  T vgui::HTML::BrowserResizeGripChanged(CMsgResizeGripChanged const*)
@@ -12295,6 +12377,7 @@
  T vgui::HTML::SendScreenDimensionsToCEF()
  T vgui::HTML::SetBrowserHidden(bool)
  T vgui::HTML::SetContextMenuEnabled(bool)
+ T vgui::HTML::SetForceChildHWNDPopupsToDirectHWND(bool)
  T vgui::HTML::SetViewSourceEnabled(bool)
  T vgui::HTML::ShowFindDialog()
  T vgui::HTML::StopFind()
@@ -14753,6 +14836,8 @@
  b (anonymous namespace)::CMsgFocusedNodeTextResponse_reflection_
  b (anonymous namespace)::CMsgFocusedNodeText_descriptor_
  b (anonymous namespace)::CMsgFocusedNodeText_reflection_
+ b (anonymous namespace)::CMsgForcePopupsToDirectHWND_descriptor_
+ b (anonymous namespace)::CMsgForcePopupsToDirectHWND_reflection_
  b (anonymous namespace)::CMsgFullRepaint_descriptor_
  b (anonymous namespace)::CMsgFullRepaint_reflection_
  b (anonymous namespace)::CMsgGameOverlayTargetTextureID_descriptor_
@@ -15265,20 +15350,23 @@
  d stringconverter
  d textureidconverter
  d typeinfo for (anonymous namespace)::ScrollBarButton
- d typeinfo for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0
- d typeinfo for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1
+ d typeinfo for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1
  d typeinfo for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2
- d typeinfo for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>
- d typeinfo for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>
+ d typeinfo for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3
+ d typeinfo for CBasePanel::ShowDurationControl(float)::$_0
+ d typeinfo for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>
  d typeinfo for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
+ d typeinfo for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>
+ d typeinfo for std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
  d vgui::Panel::OnOldMessage(KeyValues*, unsigned long long)::s_bDebugMessages
  d vgui::RichText::GetAppearanceForLocalStyle(int, int)::styleNameList3
  d vgui::RichText::InsertStringWithHTML(wchar_t const*)::rgTagToStyles
  d vgui::ScrollBarSlider::Paint()::styleNameList
  d vtable for (anonymous namespace)::ScrollBarButton
- d vtable for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>
- d vtable for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>
+ d vtable for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>
  d vtable for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
+ d vtable for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>
+ d vtable for std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
  dlclose
  dlopen
  dlsym
@@ -15468,6 +15556,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFinishedRequest_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeTextResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeText_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgForcePopupsToDirectHWND_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFullRepaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTargetTextureID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTexturePaint_offsets_
@@ -15587,12 +15676,14 @@
  r sub_start_of_word
  r twobppswaptable
  r typeinfo name for (anonymous namespace)::ScrollBarButton
- r typeinfo name for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0
- r typeinfo name for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1
+ r typeinfo name for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1
  r typeinfo name for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2
- r typeinfo name for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>
- r typeinfo name for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>
+ r typeinfo name for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3
+ r typeinfo name for CBasePanel::ShowDurationControl(float)::$_0
+ r typeinfo name for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>
  r typeinfo name for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
+ r typeinfo name for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>
+ r typeinfo name for std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
  r utf8_lead_bits
  r verbnames
  r verbs
@@ -15715,6 +15806,7 @@
  t BBeginsWithProtocol(char const*)
  t BContainsUnsafeCSS(char const*)
  t BIsMatchMore(char const*, char const*, int)
+ t BStartsWith(char const*, char const*, bool)
  t BlockingWait(int*, unsigned int, int*)
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_0>::~CScopeGuardLambdaImpl()
  t CScopeGuardLambdaImpl<OSX_GetTitleBarDblClickAction()::$_1>::~CScopeGuardLambdaImpl()
@@ -16118,22 +16210,14 @@
  t start_pass_main
  t start_pass_merged_upsample
  t start_pass_upsample
- t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::__clone() const
- t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::__clone(std::__1::__function::__base<void ()>*) const
- t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::destroy()
- t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::destroy_deallocate()
- t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::operator()()
- t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::target(std::type_info const&) const
- t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::target_type() const
- t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_0>, void ()>::~__func()
- t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::__clone() const
- t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::__clone(std::__1::__function::__base<void ()>*) const
- t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::destroy()
- t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::destroy_deallocate()
- t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::operator()()
- t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::target(std::type_info const&) const
- t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::target_type() const
- t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_1>, void ()>::~__func()
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>::__clone() const
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>::__clone(std::__1::__function::__base<void ()>*) const
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>::destroy()
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>::destroy_deallocate()
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>::operator()()
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>::target(std::type_info const&) const
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>::target_type() const
+ t std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>::~__func()
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::__clone() const
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::__clone(std::__1::__function::__base<void ()>*) const
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::destroy()
@@ -16142,6 +16226,22 @@
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::target(std::type_info const&) const
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::target_type() const
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>::~__func()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::__clone() const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::__clone(std::__1::__function::__base<void ()>*) const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::destroy()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::destroy_deallocate()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::operator()()
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::target(std::type_info const&) const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::target_type() const
+ t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::~__func()
+ t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::__clone() const
+ t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::__clone(std::__1::__function::__base<void (DurationControl_t*, bool)>*) const
+ t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::destroy()
+ t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::destroy_deallocate()
+ t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::operator()(DurationControl_t*&&, bool&&)
+ t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::target(std::type_info const&) const
+ t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::target_type() const
+ t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::~__func()
  t update_box
  t use_merged_upsample
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)

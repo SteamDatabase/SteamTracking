@@ -127,7 +127,7 @@
 	"Panorama_Lang_Arabic"			"Arabic"
 	"Panorama_Lang_Ukrainian"			"Ukrainian"
 	"Panorama_Lang_Latam_Spanish"			"Latam"
-	"Panorama_Lang_Latam_Vietnamese"		"Vietnamese"
+	"Panorama_Lang_Vietnamese"		"Vietnamese"
 
 
 	"Panorama_Lang_Footer_English"			"ENGLISH"
@@ -157,7 +157,7 @@
 	"Panorama_Lang_Footer_Turkish"			"TURKISH"
 	"Panorama_Lang_Footer_Ukrainian"			"UKRAINIAN"
 	"Panorama_Lang_Footer_Latam_Spanish"			"LATAM"
-	"Panorama_Lang_Footer_Latam_Vietnamese"			"VIETNAMESE"
+	"Panorama_Lang_Footer_Vietnamese"			"VIETNAMESE"
 
 
 	// selection strings, pre-localized
@@ -6099,7 +6099,7 @@
 	"ControllerBinding_AdaptiveThreshold_HairTrigger" "Threshold Hair Trigger"
 	"ControllerBinding_AdaptiveThreshold_HairTrigger_Description" "With the Hair Trigger setting, the threshold will adapt to the user.  Once the initial threshold has been passed, letting off the trigger by any degree will reset the trigger, allowing it to be pressed again, even if the trigger hasn't been released to the point of the initial threshold.  This is often desirable for situations like rapid firing a weapon where you want a small amount of throw to fire the first shot, but you don't want to have to let it return to full unpressed to fire again.  For actions that require holding the trigger continually, it may be less desirable, as any lessing of the trigger will cause the selected binding to release."
 	"ControllerBinding_AdaptiveThreshold_Simple" "Simple Threshold"
-	"ControllerBinding_AdaptiveThreshold_Simple_Description" "Basic Threshold, the threshold is at a fixed throw specified by the selected value.  Once the speficied threshold has been passed, letting off the trigger will not release the button until the trigger has been released to the point of the specified threshold.  For actions that require holding the trigger continually, where accidental button release is undesirable, this may be the preferred setting."
+	"ControllerBinding_AdaptiveThreshold_Simple_Description" "Basic Threshold, the threshold is at a fixed throw specified by the selected value.  Once the specified threshold has been passed, letting off the trigger will not release the button until the trigger has been released to the point of the specified threshold.  For actions that require holding the trigger continually, where accidental button release is undesirable, this may be the preferred setting."
 	"ControllerBinding_AdaptiveThreshold_LongPressShort" "Hip Fire Aggressive"
 	"ControllerBinding_AdaptiveThreshold_LongPressShort_Description" "Intended to be used with a dual-stage trigger setup, Hip Fire allows a quick pull of the trigger to engage the click without engaging the threshold.  A slower pull or hover will engage the threshold action.  This allows for actions such as iron-sights to be set on the threshold and fire on the click, while still allowing a quick pull to click to fire without entering iron-sights.  Additionally, once the click has been hit, the threshold won't be engaged until the trigger has been released outside of the threshold range, allowing it to be primed for additional clicks.  Aggressive Hip Fire mode is a very small window before engaging the threshold, requiring a very fast pull of the trigger to skip it.  The Threshold action will engage fastest here when intentionally enaging it."
 	"ControllerBinding_AdaptiveThreshold_LongPressMedium" "Hip Fire Normal"

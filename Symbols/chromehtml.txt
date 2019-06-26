@@ -39,6 +39,7 @@
  B CMsgFinishedRequest::default_instance_
  B CMsgFocusedNodeText::default_instance_
  B CMsgFocusedNodeTextResponse::default_instance_
+ B CMsgForcePopupsToDirectHWND::default_instance_
  B CMsgFullRepaint::default_instance_
  B CMsgGameOverlayTargetTextureID::default_instance_
  B CMsgGameOverlayTexturePaint::default_instance_
@@ -277,6 +278,7 @@
  D typeinfo for CMsgFinishedRequest
  D typeinfo for CMsgFocusedNodeText
  D typeinfo for CMsgFocusedNodeTextResponse
+ D typeinfo for CMsgForcePopupsToDirectHWND
  D typeinfo for CMsgFullRepaint
  D typeinfo for CMsgGameOverlayTargetTextureID
  D typeinfo for CMsgGameOverlayTexturePaint
@@ -516,6 +518,7 @@
  D vtable for CMsgFinishedRequest
  D vtable for CMsgFocusedNodeText
  D vtable for CMsgFocusedNodeTextResponse
+ D vtable for CMsgForcePopupsToDirectHWND
  D vtable for CMsgFullRepaint
  D vtable for CMsgGameOverlayTargetTextureID
  D vtable for CMsgGameOverlayTexturePaint
@@ -767,6 +770,7 @@
  R typeinfo name for CMsgFinishedRequest
  R typeinfo name for CMsgFocusedNodeText
  R typeinfo name for CMsgFocusedNodeTextResponse
+ R typeinfo name for CMsgForcePopupsToDirectHWND
  R typeinfo name for CMsgFullRepaint
  R typeinfo name for CMsgGameOverlayTargetTextureID
  R typeinfo name for CMsgGameOverlayTexturePaint
@@ -1697,6 +1701,17 @@
  T CMsgFocusedNodeTextResponse::mutable_value()
  T CMsgFocusedNodeTextResponse::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFocusedNodeTextResponse::~CMsgFocusedNodeTextResponse()
+ T CMsgForcePopupsToDirectHWND::ByteSize() const
+ T CMsgForcePopupsToDirectHWND::CMsgForcePopupsToDirectHWND()
+ T CMsgForcePopupsToDirectHWND::Clear()
+ T CMsgForcePopupsToDirectHWND::GetCachedSize() const
+ T CMsgForcePopupsToDirectHWND::GetMetadata() const
+ T CMsgForcePopupsToDirectHWND::IsInitialized() const
+ T CMsgForcePopupsToDirectHWND::MergeFrom(CMsgForcePopupsToDirectHWND const&)
+ T CMsgForcePopupsToDirectHWND::New() const
+ T CMsgForcePopupsToDirectHWND::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgForcePopupsToDirectHWND::SetCachedSize(int) const
+ T CMsgForcePopupsToDirectHWND::~CMsgForcePopupsToDirectHWND()
  T CMsgFullRepaint::ByteSize() const
  T CMsgFullRepaint::CMsgFullRepaint()
  T CMsgFullRepaint::Clear()
@@ -3451,6 +3466,8 @@
  b (anonymous namespace)::CMsgFocusedNodeTextResponse_reflection_
  b (anonymous namespace)::CMsgFocusedNodeText_descriptor_
  b (anonymous namespace)::CMsgFocusedNodeText_reflection_
+ b (anonymous namespace)::CMsgForcePopupsToDirectHWND_descriptor_
+ b (anonymous namespace)::CMsgForcePopupsToDirectHWND_reflection_
  b (anonymous namespace)::CMsgFullRepaint_descriptor_
  b (anonymous namespace)::CMsgFullRepaint_reflection_
  b (anonymous namespace)::CMsgGameOverlayTargetTextureID_descriptor_
@@ -3779,6 +3796,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFinishedRequest_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeTextResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeText_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgForcePopupsToDirectHWND_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFullRepaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTargetTextureID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTexturePaint_offsets_

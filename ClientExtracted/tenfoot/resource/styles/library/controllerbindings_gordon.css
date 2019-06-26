@@ -1924,6 +1924,7 @@ ControllerBindingButton.BindingButton Label.MacroID
 
 .BindingSlotStrip
 {
+	visibility: visible;
 	transition-property: transform, opacity;
 	transition-duration: 0.2s;
 	transition-timing-function: bigpicture-ease-in-out;
@@ -1939,6 +1940,7 @@ ControllerBindingButton.BindingButton Label.MacroID
 {
 	transform: translatex( negbindingbuttonwidth );
 	opacity: 0.0;
+	visibility: collapse;
 }
 
 .BottomPanelVisible .BackgroundLines

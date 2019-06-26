@@ -75,4 +75,7 @@ public:
     virtual unknown_ret DispatchClearAllBrowsingData() = 0;
     virtual unknown_ret DispatchClientSettingsChanged() = 0;
     virtual unknown_ret DispatchClientPostMessage(char const*, char const*, char const*) = 0;
+    virtual unknown_ret IsSteamChinaLauncher() = 0;
+    virtual unknown_ret InitializeFilterText(unsigned int) = 0;
+    virtual unknown_ret FilterText(unsigned int, char*, unsigned int, char const*, bool) = 0;
 };

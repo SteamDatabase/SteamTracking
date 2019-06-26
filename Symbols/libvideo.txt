@@ -1,7 +1,9 @@
 
  B CCDDBAppDetailCommon::default_instance_
+ B CClanEventData::default_instance_
  B CClanEventUserNewsTuple::default_instance_
  B CClanMatchEventByRange::default_instance_
+ B CCommunity_ClanAnnouncementInfo::default_instance_
  B CCuratorPreferences::default_instance_
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
  B CLocalizationToken::default_instance_
@@ -38,6 +40,21 @@
  B CMemoryPool::g_ReportFunc
  B CMsgAppRights::default_instance_
  B CMsgAuthTicket::default_instance_
+ B CMsgClientAccountInfo::default_instance_
+ B CMsgClientChallengeRequest::default_instance_
+ B CMsgClientChallengeResponse::default_instance_
+ B CMsgClientHeartBeat::default_instance_
+ B CMsgClientLogOff::default_instance_
+ B CMsgClientLoggedOff::default_instance_
+ B CMsgClientLogon::default_instance_
+ B CMsgClientLogonResponse::default_instance_
+ B CMsgClientNewLoginKey::default_instance_
+ B CMsgClientNewLoginKeyAccepted::default_instance_
+ B CMsgClientRequestWebAPIAuthenticateUserNonce::default_instance_
+ B CMsgClientRequestWebAPIAuthenticateUserNonceResponse::default_instance_
+ B CMsgClientSecret::default_instance_
+ B CMsgClientServerTimestampRequest::default_instance_
+ B CMsgClientServerTimestampResponse::default_instance_
  B CMsgIPAddress::default_instance_
  B CMsgMulti::default_instance_
  B CMsgProtoBufHeader::default_instance_
@@ -120,6 +137,7 @@
  B SteamVProf::g_mutexProfileDump
  B app_pkey_methods
  B force_php_generation
+ B gConVarEnableLogTearOff
  B gConVarEnableSpewThrottle
  B gConVarSpewThrottleNagFrequencyMs
  B gConVarSpewThrottlePeriodMs
@@ -169,6 +187,8 @@
  B g_pThreadLocalHashMapTxnIDWatches
  B g_rgunIPThisBox
  B g_rgunIPThisBoxV6
+ B g_unPrivateIPThisBox
+ B g_unPublicIPThisBox
  B g_vecTempTextBuffer
  B k_SysIDNil
  B k_netadrNull
@@ -248,6 +268,8 @@
  D CTHash<IUDPSocketCallback*, unsigned int>::PvRecordInsertInternal(CTHash<IUDPSocketCallback*, unsigned int>::RecHdr_t*, unsigned int)::s_bPerfWarning
  D CUDPConnection::sm_hSocketSharedClient
  D CUDPConnection::sm_hSocketSharedClientIOCP
+ D CUDPConnection::sm_hSocketSharedClientIOCPv6
+ D CUDPConnection::sm_hSocketSharedClientv6
  D DHparams_it
  D DHvparams_it
  D DHxparams_it
@@ -374,7 +396,6 @@
  D kShufAc3
  D kShuffleMaskARGBToRGB24
  D kYuvConstants
- D pModuleExtension
  D rand_ssleay_meth
  D rsa_asn1_meths
  D rsa_pkey_meth
@@ -387,9 +408,11 @@
  D typeinfo for CBaseFrameFunction
  D typeinfo for CBaseScheduledFunction
  D typeinfo for CCDDBAppDetailCommon
+ D typeinfo for CClanEventData
  D typeinfo for CClanEventUserNewsTuple
  D typeinfo for CClanMatchEventByRange
  D typeinfo for CClientStructNetPacket
+ D typeinfo for CCommunity_ClanAnnouncementInfo
  D typeinfo for CCuratorPreferences
  D typeinfo for CDebugStatsSystem
  D typeinfo for CDummyCnxCallback
@@ -416,6 +439,21 @@
  D typeinfo for CLocalizationToken
  D typeinfo for CMsgAppRights
  D typeinfo for CMsgAuthTicket
+ D typeinfo for CMsgClientAccountInfo
+ D typeinfo for CMsgClientChallengeRequest
+ D typeinfo for CMsgClientChallengeResponse
+ D typeinfo for CMsgClientHeartBeat
+ D typeinfo for CMsgClientLogOff
+ D typeinfo for CMsgClientLoggedOff
+ D typeinfo for CMsgClientLogon
+ D typeinfo for CMsgClientLogonResponse
+ D typeinfo for CMsgClientNewLoginKey
+ D typeinfo for CMsgClientNewLoginKeyAccepted
+ D typeinfo for CMsgClientRequestWebAPIAuthenticateUserNonce
+ D typeinfo for CMsgClientRequestWebAPIAuthenticateUserNonceResponse
+ D typeinfo for CMsgClientSecret
+ D typeinfo for CMsgClientServerTimestampRequest
+ D typeinfo for CMsgClientServerTimestampResponse
  D typeinfo for CMsgIPAddress
  D typeinfo for CMsgMulti
  D typeinfo for CMsgProtoBufHeader
@@ -464,12 +502,7 @@
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
- D typeinfo for CVideoDecoderFFmpeg
- D typeinfo for CVideoDecoderFFmpeg::CQueuedOutput
- D typeinfo for CVideoDecoderFFmpeg::CQueuedOutputNV12
- D typeinfo for CVideoDecoderFFmpeg::CQueuedOutputYUV
  D typeinfo for CVideoDecoderLibav
- D typeinfo for CVideoEncoderX264
  D typeinfo for CVideoFileStream
  D typeinfo for CVideoMPDParser
  D typeinfo for CVideoManifest
@@ -498,7 +531,6 @@
  D typeinfo for IAudioResampler
  D typeinfo for IConnectionCallback
  D typeinfo for IDebugStatsSystem
- D typeinfo for IDecodedVideoFrame
  D typeinfo for IHTTPRedirectHandler
  D typeinfo for IHTTPStreamingResponseHandler
  D typeinfo for IKeyValuesSystem
@@ -513,16 +545,12 @@
  D typeinfo for IStreamParserMessageCallback
  D typeinfo for IUDPSocketCallback
  D typeinfo for IUniformRandomStream
- D typeinfo for IVideoDecoder
- D typeinfo for IVideoEncoder
- D typeinfo for IVideoNV12Frame
  D typeinfo for IVideoPlayer
  D typeinfo for IVideoYUVFrame
  D typeinfo for IWorkThreadFactory
  D typeinfo for OSXHelpers::CCompatThread
  D typeinfo for OSXHelpers::CIOPollingHelper::IHelperCallback
  D typeinfo for SteamThreadTools::CThread
- D typeinfo for VideoEncodedFrame_t
  D typeinfo for std::__1::bad_function_call
  D v3_akey_id
  D v3_alt
@@ -563,9 +591,11 @@
  D vtable for CBaseFrameFunction
  D vtable for CBaseScheduledFunction
  D vtable for CCDDBAppDetailCommon
+ D vtable for CClanEventData
  D vtable for CClanEventUserNewsTuple
  D vtable for CClanMatchEventByRange
  D vtable for CClientStructNetPacket
+ D vtable for CCommunity_ClanAnnouncementInfo
  D vtable for CCuratorPreferences
  D vtable for CDebugStatsSystem
  D vtable for CDummyCnxCallback
@@ -592,6 +622,21 @@
  D vtable for CLocalizationToken
  D vtable for CMsgAppRights
  D vtable for CMsgAuthTicket
+ D vtable for CMsgClientAccountInfo
+ D vtable for CMsgClientChallengeRequest
+ D vtable for CMsgClientChallengeResponse
+ D vtable for CMsgClientHeartBeat
+ D vtable for CMsgClientLogOff
+ D vtable for CMsgClientLoggedOff
+ D vtable for CMsgClientLogon
+ D vtable for CMsgClientLogonResponse
+ D vtable for CMsgClientNewLoginKey
+ D vtable for CMsgClientNewLoginKeyAccepted
+ D vtable for CMsgClientRequestWebAPIAuthenticateUserNonce
+ D vtable for CMsgClientRequestWebAPIAuthenticateUserNonceResponse
+ D vtable for CMsgClientSecret
+ D vtable for CMsgClientServerTimestampRequest
+ D vtable for CMsgClientServerTimestampResponse
  D vtable for CMsgIPAddress
  D vtable for CMsgMulti
  D vtable for CMsgProtoBufHeader
@@ -635,12 +680,7 @@
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
- D vtable for CVideoDecoderFFmpeg
- D vtable for CVideoDecoderFFmpeg::CQueuedOutput
- D vtable for CVideoDecoderFFmpeg::CQueuedOutputNV12
- D vtable for CVideoDecoderFFmpeg::CQueuedOutputYUV
  D vtable for CVideoDecoderLibav
- D vtable for CVideoEncoderX264
  D vtable for CVideoFileStream
  D vtable for CVideoMPDParser
  D vtable for CVideoManifest
@@ -667,7 +707,6 @@
  D vtable for IVideoYUVFrame
  D vtable for OSXHelpers::CCompatThread
  D vtable for SteamThreadTools::CThread
- D vtable for VideoEncodedFrame_t
  D vtable for std::__1::bad_function_call
  D x509_dir_lookup
  D x509_file_lookup
@@ -690,9 +729,11 @@
  R typeinfo name for CBaseFrameFunction
  R typeinfo name for CBaseScheduledFunction
  R typeinfo name for CCDDBAppDetailCommon
+ R typeinfo name for CClanEventData
  R typeinfo name for CClanEventUserNewsTuple
  R typeinfo name for CClanMatchEventByRange
  R typeinfo name for CClientStructNetPacket
+ R typeinfo name for CCommunity_ClanAnnouncementInfo
  R typeinfo name for CCompletionPortManager
  R typeinfo name for CCookieContainer::CCookieInfo
  R typeinfo name for CCuratorPreferences
@@ -727,6 +768,21 @@
  R typeinfo name for CLocalizationToken
  R typeinfo name for CMsgAppRights
  R typeinfo name for CMsgAuthTicket
+ R typeinfo name for CMsgClientAccountInfo
+ R typeinfo name for CMsgClientChallengeRequest
+ R typeinfo name for CMsgClientChallengeResponse
+ R typeinfo name for CMsgClientHeartBeat
+ R typeinfo name for CMsgClientLogOff
+ R typeinfo name for CMsgClientLoggedOff
+ R typeinfo name for CMsgClientLogon
+ R typeinfo name for CMsgClientLogonResponse
+ R typeinfo name for CMsgClientNewLoginKey
+ R typeinfo name for CMsgClientNewLoginKeyAccepted
+ R typeinfo name for CMsgClientRequestWebAPIAuthenticateUserNonce
+ R typeinfo name for CMsgClientRequestWebAPIAuthenticateUserNonceResponse
+ R typeinfo name for CMsgClientSecret
+ R typeinfo name for CMsgClientServerTimestampRequest
+ R typeinfo name for CMsgClientServerTimestampResponse
  R typeinfo name for CMsgIPAddress
  R typeinfo name for CMsgMulti
  R typeinfo name for CMsgProtoBufHeader
@@ -778,12 +834,12 @@
  R typeinfo name for CUniformRandomStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
+ R typeinfo name for CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >
+ R typeinfo name for CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >
  R typeinfo name for CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >
- R typeinfo name for CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
- R typeinfo name for CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
- R typeinfo name for CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
- R typeinfo name for CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t
- R typeinfo name for CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >
+ R typeinfo name for CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >
+ R typeinfo name for CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t
+ R typeinfo name for CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >
  R typeinfo name for CUtlLinkedList<AVPacket, int>
  R typeinfo name for CUtlLinkedList<CBaseScheduledFunction*, int>
  R typeinfo name for CUtlLinkedList<CCoroutine, int>
@@ -799,7 +855,6 @@
  R typeinfo name for CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>
  R typeinfo name for CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>
  R typeinfo name for CUtlLinkedList<NetPacketToDelete_t, int>
- R typeinfo name for CUtlLinkedList<VideoEncodedFrame_t*, int>
  R typeinfo name for CUtlLinkedList<int, int>
  R typeinfo name for CUtlLinkedList<unsigned int, int>
  R typeinfo name for CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >
@@ -829,9 +884,9 @@
  R typeinfo name for CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >
  R typeinfo name for CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >
  R typeinfo name for CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >
+ R typeinfo name for CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >
- R typeinfo name for CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >
- R typeinfo name for CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
  R typeinfo name for CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >
  R typeinfo name for CUtlVector<CVideoFileStream::AvailableByteRange_t, CUtlMemory<CVideoFileStream::AvailableByteRange_t> >
@@ -848,12 +903,7 @@
  R typeinfo name for CUtlVector<VideoSegmentTemplate_t::TimelineSegment_t, CUtlMemory<VideoSegmentTemplate_t::TimelineSegment_t> >
  R typeinfo name for CUtlVector<VideoSegment_t*, CUtlMemory<VideoSegment_t*> >
  R typeinfo name for CVideoDecodedFrame
- R typeinfo name for CVideoDecoderFFmpeg
- R typeinfo name for CVideoDecoderFFmpeg::CQueuedOutput
- R typeinfo name for CVideoDecoderFFmpeg::CQueuedOutputNV12
- R typeinfo name for CVideoDecoderFFmpeg::CQueuedOutputYUV
  R typeinfo name for CVideoDecoderLibav
- R typeinfo name for CVideoEncoderX264
  R typeinfo name for CVideoFileStream
  R typeinfo name for CVideoMPDParser
  R typeinfo name for CVideoManifest
@@ -883,7 +933,6 @@
  R typeinfo name for IAudioResampler
  R typeinfo name for IConnectionCallback
  R typeinfo name for IDebugStatsSystem
- R typeinfo name for IDecodedVideoFrame
  R typeinfo name for IHTTPRedirectHandler
  R typeinfo name for IHTTPStreamingResponseHandler
  R typeinfo name for IKeyValuesSystem
@@ -898,9 +947,6 @@
  R typeinfo name for IStreamParserMessageCallback
  R typeinfo name for IUDPSocketCallback
  R typeinfo name for IUniformRandomStream
- R typeinfo name for IVideoDecoder
- R typeinfo name for IVideoEncoder
- R typeinfo name for IVideoNV12Frame
  R typeinfo name for IVideoPlayer
  R typeinfo name for IVideoYUVFrame
  R typeinfo name for IWorkThreadFactory
@@ -908,7 +954,6 @@
  R typeinfo name for OSXHelpers::CIOPollingHelper::IHelperCallback
  R typeinfo name for SteamThreadTools::CThread
  R typeinfo name for VideoAdaptationSet_t
- R typeinfo name for VideoEncodedFrame_t
  R typeinfo name for VideoRepresentation_t
  R typeinfo name for VideoSegmentTemplate_t
  R typeinfo name for VideoSegment_t
@@ -1048,7 +1093,7 @@
  T BF_ofb64_encrypt
  T BF_set_key
  T BFileExists(char const*)
- T BGetBoundAddr(int, netadr_t*)
+ T BGetBoundAddr(int, CIPAndPort*)
  T BGetMiniDumpLock
  T BHandleTCPMessageData(unsigned char*, unsigned int, CUtlBuffer&, IStreamParser*, IStreamParserMessageCallback*, unsigned int)
  T BIO_callback_ctrl
@@ -1079,7 +1124,7 @@
  T BIO_test_flags
  T BIO_vprintf
  T BIO_write
- T BIPMatchThisBox(netadr_t const&)
+ T BIPMatchThisBox(CIPAddress const&)
  T BIsFatalSocketError(unsigned int)
  T BIsHTTPUrl(char const*)
  T BIsMPD(CVideoFileStream*)
@@ -1211,7 +1256,6 @@
  T BUF_strlcat
  T BUF_strlcpy
  T BUF_strndup
- T BVideoLibLoadX264()
  T BWritingMiniDump
  T BufferedIStream_AppendBytes
  T BufferedIStream_EncodeBuffer
@@ -1328,6 +1372,30 @@
  T CCircularBuffer::Peek(char*, int)
  T CCircularBuffer::Read(void*, int)
  T CCircularBuffer::Write(void const*, int)
+ T CClanEventData::ByteSize() const
+ T CClanEventData::CClanEventData()
+ T CClanEventData::Clear()
+ T CClanEventData::GetCachedSize() const
+ T CClanEventData::GetMetadata() const
+ T CClanEventData::IsInitialized() const
+ T CClanEventData::MergeFrom(CClanEventData const&)
+ T CClanEventData::New() const
+ T CClanEventData::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CClanEventData::SetCachedSize(int) const
+ T CClanEventData::SharedCtor()
+ T CClanEventData::SharedDtor()
+ T CClanEventData::mutable_announcement_body()
+ T CClanEventData::mutable_event_name()
+ T CClanEventData::mutable_event_notes()
+ T CClanEventData::mutable_jsondata()
+ T CClanEventData::mutable_server_address()
+ T CClanEventData::mutable_server_password()
+ T CClanEventData::set_event_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CClanEventData::set_event_notes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CClanEventData::set_jsondata(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CClanEventData::set_server_address(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CClanEventData::set_server_password(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CClanEventData::~CClanEventData()
  T CClanEventUserNewsTuple::ByteSize() const
  T CClanEventUserNewsTuple::CClanEventUserNewsTuple()
  T CClanEventUserNewsTuple::Clear()
@@ -1377,13 +1445,30 @@
  T CClientStructNetPacket::GetTargetJobName() const
  T CClientStructNetPacket::PubData() const
  T CClientStructNetPacket::SetHConnection(unsigned int)
- T CClientStructNetPacket::SetHdrIP(netadr_t const&)
+ T CClientStructNetPacket::SetHdrIP(CIPAddress const&)
  T CClientStructNetPacket::SetMsgTraceTag(unsigned long long)
  T CClientStructNetPacket::SetSessionID(int)
  T CClientStructNetPacket::SetSourceJobID(unsigned long long)
  T CClientStructNetPacket::SetSteamID(CSteamID)
  T CClientStructNetPacket::SetTargetJobID(unsigned long long)
  T CClientStructNetPacket::~CClientStructNetPacket()
+ T CCommunity_ClanAnnouncementInfo::ByteSize() const
+ T CCommunity_ClanAnnouncementInfo::CCommunity_ClanAnnouncementInfo()
+ T CCommunity_ClanAnnouncementInfo::Clear()
+ T CCommunity_ClanAnnouncementInfo::GetCachedSize() const
+ T CCommunity_ClanAnnouncementInfo::GetMetadata() const
+ T CCommunity_ClanAnnouncementInfo::IsInitialized() const
+ T CCommunity_ClanAnnouncementInfo::MergeFrom(CCommunity_ClanAnnouncementInfo const&)
+ T CCommunity_ClanAnnouncementInfo::New() const
+ T CCommunity_ClanAnnouncementInfo::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CCommunity_ClanAnnouncementInfo::SetCachedSize(int) const
+ T CCommunity_ClanAnnouncementInfo::SharedCtor()
+ T CCommunity_ClanAnnouncementInfo::SharedDtor()
+ T CCommunity_ClanAnnouncementInfo::mutable_body()
+ T CCommunity_ClanAnnouncementInfo::mutable_headline()
+ T CCommunity_ClanAnnouncementInfo::set_body(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCommunity_ClanAnnouncementInfo::set_headline(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCommunity_ClanAnnouncementInfo::~CCommunity_ClanAnnouncementInfo()
  T CCompletionPortManager::AllocCompletionData(EIOType, void (*)(CompletionData_t*), int, unsigned int, unsigned long long, void*, void*, void*)
  T CCompletionPortManager::AssociateHandleWithIOCP(int, bool, bool)
  T CCompletionPortManager::AsyncDispatchHandler(void*)
@@ -1477,10 +1562,10 @@
  T CDownloadRate::Stop()
  T CDownloadRate::UpdateSampleTime()
  T CDownloadRate::~CDownloadRate()
- T CDummyCnxCallback::BAcceptConnection(netadr_t const&, netadr_t const&)
+ T CDummyCnxCallback::BAcceptConnection(CIPAndPort const&, CIPAndPort const&)
  T CDummyCnxCallback::ConnectCompleted(unsigned int)
  T CDummyCnxCallback::ConnectFailed(unsigned int, EResult, unsigned long long)
- T CDummyCnxCallback::ConnectionAccepted(unsigned int, netadr_t const&, netadr_t const&)
+ T CDummyCnxCallback::ConnectionAccepted(unsigned int, CIPAndPort const&, CIPAndPort const&)
  T CDummyCnxCallback::ConnectionDisconnected(unsigned int, EResult)
  T CDummyCnxCallback::RecvPkt(CNetPacket*)
  T CFStringCreate_GuessEncoding(void const*, long)
@@ -1560,17 +1645,17 @@
  T CHTTPClientConnection::AbortStaleConnection()
  T CHTTPClientConnection::AsyncPerformDisconnect()
  T CHTTPClientConnection::AsyncSendCurrentRequest()
- T CHTTPClientConnection::BAcceptConnection(netadr_t const&, netadr_t const&)
+ T CHTTPClientConnection::BAcceptConnection(CIPAndPort const&, CIPAndPort const&)
  T CHTTPClientConnection::BAsyncSendHeaders(CUtlBuffer*, CHTTPClientRequest*)
  T CHTTPClientConnection::BAsyncSendPartialBody(CHTTPClientRequest*, unsigned int, bool*)
  T CHTTPClientConnection::BAsyncSendRequest(CHTTPRequestHandle*)
  T CHTTPClientConnection::BAsyncSendToConnection(unsigned char const*, unsigned int)
  T CHTTPClientConnection::BIsConnected() const
  T CHTTPClientConnection::BVerifyCertificate(COpenSSLConnection*, COpenSSLCertificate const&)
- T CHTTPClientConnection::CHTTPClientConnection(CHTTPClient*, netadr_t, netadr_t, bool, COpenSSLContext*)
+ T CHTTPClientConnection::CHTTPClientConnection(CHTTPClient*, CIPAndPort, CIPAndPort, bool, COpenSSLContext*)
  T CHTTPClientConnection::ConnectCompleted(unsigned int)
  T CHTTPClientConnection::ConnectFailed(unsigned int, EResult, unsigned long long)
- T CHTTPClientConnection::ConnectionAccepted(unsigned int, netadr_t const&, netadr_t const&)
+ T CHTTPClientConnection::ConnectionAccepted(unsigned int, CIPAndPort const&, CIPAndPort const&)
  T CHTTPClientConnection::ConnectionDataSent(unsigned int, unsigned int)
  T CHTTPClientConnection::ConnectionDisconnected(unsigned int, EResult)
  T CHTTPClientConnection::DelayedAbortConnection()
@@ -1610,9 +1695,9 @@
  T CHTTPClientResponse::Clear()
  T CHTTPClientResponse::Validate(CValidator&, char const*)
  T CHTTPClientResponse::~CHTTPClientResponse()
- T CHTTPClientWorkThread::BInternalShouldRequestUseProxy(CHTTPClientRequest*, netadr_t&, bool*)
+ T CHTTPClientWorkThread::BInternalShouldRequestUseProxy(CHTTPClientRequest*, CIPAndPort&, bool*)
  T CHTTPClientWorkThread::BIsRequestHostInExclusionVector(CHTTPClientRequest*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*)
- T CHTTPClientWorkThread::BShouldRequestUseProxy(CHTTPClientRequest*, netadr_t*, bool*)
+ T CHTTPClientWorkThread::BShouldRequestUseProxy(CHTTPClientRequest*, CIPAndPort*, bool*)
  T CHTTPClientWorkThread::CHTTPClientWorkThread(CWorkThreadPool*, CHTTPClient*)
  T CHTTPClientWorkThread::DoPlatformProxyConfigAutodetection()
  T CHTTPClientWorkThread::Validate(CValidator&, char const*)
@@ -1670,6 +1755,23 @@
  T CHTTPUtil::FindStringUntilCRLFStripLWS(unsigned char*, int, int, int*, int*)
  T CHTTPUtil::ResolveRelativeURL(char const*, char const*, char const*, bool)
  T CIMsgNetPacketAutoRelease::~CIMsgNetPacketAutoRelease()
+ T CIPAddress::BConvertIPv4ToMapped()
+ T CIPAddress::BConvertMappedToIPv4()
+ T CIPAddress::BlockingResolveAndSetFromString(char const*, bool, unsigned short*)
+ T CIPAddress::HasIP() const
+ T CIPAddress::IsLoopback() const
+ T CIPAddress::IsMappedIPv4() const
+ T CIPAddress::IsReservedAdr() const
+ T CIPAddress::SetFromSockadr(void const*, unsigned long, unsigned short*)
+ T CIPAddress::SetFromString(char const*, unsigned short*)
+ T CIPAddress::ToString(char*, unsigned int, unsigned short const*) const
+ T CIPAddress::operator<(CIPAddress const&) const
+ T CIPAddress::operator==(CIPAddress const&) const
+ T CIPAndPort::CompareAdr(CIPAndPort const&, bool) const
+ T CIPAndPort::IsValid() const
+ T CIPAndPort::ToSockadr(void*, unsigned long) const
+ T CIPAndPort::ToString(char*, unsigned int, bool) const
+ T CIPAndPort::operator<(CIPAndPort const&) const
  T CJob::BYieldingWaitForWorkItem(char const*, char const*)
  T CJob::Continue()
  T CJob::Pause(EJobPauseReason)
@@ -1766,11 +1868,11 @@
  T CMemoryPool::Free(void*)
  T CMemoryPool::Validate(CValidator&, char const*)
  T CMemoryPool::~CMemoryPool()
- T CMessageList::AddMsgInfo(MsgInfo_t*)
- T CMessageList::CMessageList(MsgInfo_t*, int)
- T CMessageList::GetMessage(EMsg, char const**, int, EServerType*)
+ T CMessageList::CMessageList(OldMsgInfo_t*, int)
+ T CMessageList::FindMessageInfoForEMsg(EMsg) const
  T CMessageList::GetMessageFlags(EMsg, char const**, EServerType*)
- T CMessageList::TallySendmessage(EMsg, unsigned int)
+ T CMessageList::TallySendMessage(EMsg, unsigned int)
+ T CMessageList::TallySendMessage(MessageInfo_t*, unsigned int)
  T CMessageList::~CMessageList()
  T CMsg<MsgChannelEncryptRequest_t>::CMsg(CIMsgNetPacketAutoRelease&)
  T CMsg<MsgChannelEncryptResult_t>::CMsg(CIMsgNetPacketAutoRelease&)
@@ -1806,6 +1908,257 @@
  T CMsgBase_t<MsgHdr_t>::~CMsgBase_t()
  T CMsgBase_t<UDPPktHdr_t>::CMsgBase_t(unsigned int, unsigned int, unsigned char*, unsigned int, unsigned int)
  T CMsgBase_t<UDPPktHdr_t>::~CMsgBase_t()
+ T CMsgClientAccountInfo::ByteSize() const
+ T CMsgClientAccountInfo::CMsgClientAccountInfo()
+ T CMsgClientAccountInfo::Clear()
+ T CMsgClientAccountInfo::GetCachedSize() const
+ T CMsgClientAccountInfo::GetMetadata() const
+ T CMsgClientAccountInfo::IsInitialized() const
+ T CMsgClientAccountInfo::MergeFrom(CMsgClientAccountInfo const&)
+ T CMsgClientAccountInfo::New() const
+ T CMsgClientAccountInfo::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientAccountInfo::SetCachedSize(int) const
+ T CMsgClientAccountInfo::SharedCtor()
+ T CMsgClientAccountInfo::SharedDtor()
+ T CMsgClientAccountInfo::mutable_facebook_name()
+ T CMsgClientAccountInfo::mutable_ip_country()
+ T CMsgClientAccountInfo::mutable_persona_name()
+ T CMsgClientAccountInfo::mutable_steamguard_machine_name_user_chosen()
+ T CMsgClientAccountInfo::set_facebook_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientAccountInfo::set_ip_country(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientAccountInfo::set_persona_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientAccountInfo::set_steamguard_machine_name_user_chosen(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientAccountInfo::~CMsgClientAccountInfo()
+ T CMsgClientChallengeRequest::ByteSize() const
+ T CMsgClientChallengeRequest::CMsgClientChallengeRequest()
+ T CMsgClientChallengeRequest::Clear()
+ T CMsgClientChallengeRequest::GetCachedSize() const
+ T CMsgClientChallengeRequest::GetMetadata() const
+ T CMsgClientChallengeRequest::IsInitialized() const
+ T CMsgClientChallengeRequest::MergeFrom(CMsgClientChallengeRequest const&)
+ T CMsgClientChallengeRequest::New() const
+ T CMsgClientChallengeRequest::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientChallengeRequest::SetCachedSize(int) const
+ T CMsgClientChallengeRequest::~CMsgClientChallengeRequest()
+ T CMsgClientChallengeResponse::ByteSize() const
+ T CMsgClientChallengeResponse::CMsgClientChallengeResponse()
+ T CMsgClientChallengeResponse::Clear()
+ T CMsgClientChallengeResponse::GetCachedSize() const
+ T CMsgClientChallengeResponse::GetMetadata() const
+ T CMsgClientChallengeResponse::IsInitialized() const
+ T CMsgClientChallengeResponse::MergeFrom(CMsgClientChallengeResponse const&)
+ T CMsgClientChallengeResponse::New() const
+ T CMsgClientChallengeResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientChallengeResponse::SetCachedSize(int) const
+ T CMsgClientChallengeResponse::~CMsgClientChallengeResponse()
+ T CMsgClientHeartBeat::ByteSize() const
+ T CMsgClientHeartBeat::CMsgClientHeartBeat()
+ T CMsgClientHeartBeat::Clear()
+ T CMsgClientHeartBeat::GetCachedSize() const
+ T CMsgClientHeartBeat::GetMetadata() const
+ T CMsgClientHeartBeat::IsInitialized() const
+ T CMsgClientHeartBeat::MergeFrom(CMsgClientHeartBeat const&)
+ T CMsgClientHeartBeat::New() const
+ T CMsgClientHeartBeat::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientHeartBeat::SetCachedSize(int) const
+ T CMsgClientHeartBeat::~CMsgClientHeartBeat()
+ T CMsgClientLogOff::ByteSize() const
+ T CMsgClientLogOff::CMsgClientLogOff()
+ T CMsgClientLogOff::Clear()
+ T CMsgClientLogOff::GetCachedSize() const
+ T CMsgClientLogOff::GetMetadata() const
+ T CMsgClientLogOff::IsInitialized() const
+ T CMsgClientLogOff::MergeFrom(CMsgClientLogOff const&)
+ T CMsgClientLogOff::New() const
+ T CMsgClientLogOff::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientLogOff::SetCachedSize(int) const
+ T CMsgClientLogOff::~CMsgClientLogOff()
+ T CMsgClientLoggedOff::ByteSize() const
+ T CMsgClientLoggedOff::CMsgClientLoggedOff()
+ T CMsgClientLoggedOff::Clear()
+ T CMsgClientLoggedOff::GetCachedSize() const
+ T CMsgClientLoggedOff::GetMetadata() const
+ T CMsgClientLoggedOff::IsInitialized() const
+ T CMsgClientLoggedOff::MergeFrom(CMsgClientLoggedOff const&)
+ T CMsgClientLoggedOff::New() const
+ T CMsgClientLoggedOff::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientLoggedOff::SetCachedSize(int) const
+ T CMsgClientLoggedOff::~CMsgClientLoggedOff()
+ T CMsgClientLogon::ByteSize() const
+ T CMsgClientLogon::CMsgClientLogon()
+ T CMsgClientLogon::Clear()
+ T CMsgClientLogon::GetCachedSize() const
+ T CMsgClientLogon::GetMetadata() const
+ T CMsgClientLogon::IsInitialized() const
+ T CMsgClientLogon::MergeFrom(CMsgClientLogon const&)
+ T CMsgClientLogon::New() const
+ T CMsgClientLogon::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientLogon::SetCachedSize(int) const
+ T CMsgClientLogon::SharedCtor()
+ T CMsgClientLogon::SharedDtor()
+ T CMsgClientLogon::mutable_account_name()
+ T CMsgClientLogon::mutable_anon_user_target_account_name()
+ T CMsgClientLogon::mutable_auth_code()
+ T CMsgClientLogon::mutable_client_language()
+ T CMsgClientLogon::mutable_country_override()
+ T CMsgClientLogon::mutable_email_address()
+ T CMsgClientLogon::mutable_embedded_client_secret()
+ T CMsgClientLogon::mutable_game_server_token()
+ T CMsgClientLogon::mutable_login_key()
+ T CMsgClientLogon::mutable_machine_id()
+ T CMsgClientLogon::mutable_machine_name()
+ T CMsgClientLogon::mutable_machine_name_userchosen()
+ T CMsgClientLogon::mutable_obfuscated_private_ip()
+ T CMsgClientLogon::mutable_otp_identifier()
+ T CMsgClientLogon::mutable_password()
+ T CMsgClientLogon::mutable_public_ip()
+ T CMsgClientLogon::mutable_sha_sentryfile()
+ T CMsgClientLogon::mutable_sony_psn_name()
+ T CMsgClientLogon::mutable_sony_psn_service_id()
+ T CMsgClientLogon::mutable_sony_psn_ticket()
+ T CMsgClientLogon::mutable_steam2_auth_ticket()
+ T CMsgClientLogon::mutable_two_factor_code()
+ T CMsgClientLogon::mutable_web_logon_nonce()
+ T CMsgClientLogon::mutable_wine_version()
+ T CMsgClientLogon::set_account_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_anon_user_target_account_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_auth_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_client_language(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_country_override(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_email_address(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_game_server_token(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_login_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_machine_id(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_machine_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_machine_name_userchosen(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_otp_identifier(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_password(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_sha_sentryfile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_sony_psn_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_sony_psn_service_id(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_sony_psn_ticket(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_steam2_auth_ticket(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_two_factor_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_web_logon_nonce(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_wine_version(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::~CMsgClientLogon()
+ T CMsgClientLogonResponse::ByteSize() const
+ T CMsgClientLogonResponse::CMsgClientLogonResponse()
+ T CMsgClientLogonResponse::Clear()
+ T CMsgClientLogonResponse::GetCachedSize() const
+ T CMsgClientLogonResponse::GetMetadata() const
+ T CMsgClientLogonResponse::IsInitialized() const
+ T CMsgClientLogonResponse::MergeFrom(CMsgClientLogonResponse const&)
+ T CMsgClientLogonResponse::New() const
+ T CMsgClientLogonResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientLogonResponse::SetCachedSize(int) const
+ T CMsgClientLogonResponse::SharedCtor()
+ T CMsgClientLogonResponse::SharedDtor()
+ T CMsgClientLogonResponse::mutable_email_domain()
+ T CMsgClientLogonResponse::mutable_ip_country_code()
+ T CMsgClientLogonResponse::mutable_parental_setting_signature()
+ T CMsgClientLogonResponse::mutable_parental_settings()
+ T CMsgClientLogonResponse::mutable_public_ip()
+ T CMsgClientLogonResponse::mutable_steam2_ticket()
+ T CMsgClientLogonResponse::mutable_vanity_url()
+ T CMsgClientLogonResponse::mutable_webapi_authenticate_user_nonce()
+ T CMsgClientLogonResponse::set_email_domain(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_ip_country_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_parental_setting_signature(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_parental_settings(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_steam2_ticket(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_vanity_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_webapi_authenticate_user_nonce(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::~CMsgClientLogonResponse()
+ T CMsgClientNewLoginKey::ByteSize() const
+ T CMsgClientNewLoginKey::CMsgClientNewLoginKey()
+ T CMsgClientNewLoginKey::Clear()
+ T CMsgClientNewLoginKey::GetCachedSize() const
+ T CMsgClientNewLoginKey::GetMetadata() const
+ T CMsgClientNewLoginKey::IsInitialized() const
+ T CMsgClientNewLoginKey::MergeFrom(CMsgClientNewLoginKey const&)
+ T CMsgClientNewLoginKey::New() const
+ T CMsgClientNewLoginKey::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientNewLoginKey::SetCachedSize(int) const
+ T CMsgClientNewLoginKey::SharedCtor()
+ T CMsgClientNewLoginKey::SharedDtor()
+ T CMsgClientNewLoginKey::mutable_login_key()
+ T CMsgClientNewLoginKey::set_login_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientNewLoginKey::~CMsgClientNewLoginKey()
+ T CMsgClientNewLoginKeyAccepted::ByteSize() const
+ T CMsgClientNewLoginKeyAccepted::CMsgClientNewLoginKeyAccepted()
+ T CMsgClientNewLoginKeyAccepted::Clear()
+ T CMsgClientNewLoginKeyAccepted::GetCachedSize() const
+ T CMsgClientNewLoginKeyAccepted::GetMetadata() const
+ T CMsgClientNewLoginKeyAccepted::IsInitialized() const
+ T CMsgClientNewLoginKeyAccepted::MergeFrom(CMsgClientNewLoginKeyAccepted const&)
+ T CMsgClientNewLoginKeyAccepted::New() const
+ T CMsgClientNewLoginKeyAccepted::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientNewLoginKeyAccepted::SetCachedSize(int) const
+ T CMsgClientNewLoginKeyAccepted::~CMsgClientNewLoginKeyAccepted()
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::ByteSize() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::CMsgClientRequestWebAPIAuthenticateUserNonce()
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::Clear()
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::GetCachedSize() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::GetMetadata() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::IsInitialized() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::MergeFrom(CMsgClientRequestWebAPIAuthenticateUserNonce const&)
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::New() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::SetCachedSize(int) const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::~CMsgClientRequestWebAPIAuthenticateUserNonce()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::ByteSize() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::CMsgClientRequestWebAPIAuthenticateUserNonceResponse()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::Clear()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::GetCachedSize() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::GetMetadata() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::IsInitialized() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::MergeFrom(CMsgClientRequestWebAPIAuthenticateUserNonceResponse const&)
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::New() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::SetCachedSize(int) const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::SharedCtor()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::SharedDtor()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::mutable_webapi_authenticate_user_nonce()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::set_webapi_authenticate_user_nonce(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::~CMsgClientRequestWebAPIAuthenticateUserNonceResponse()
+ T CMsgClientSecret::ByteSize() const
+ T CMsgClientSecret::CMsgClientSecret()
+ T CMsgClientSecret::Clear()
+ T CMsgClientSecret::GetCachedSize() const
+ T CMsgClientSecret::GetMetadata() const
+ T CMsgClientSecret::IsInitialized() const
+ T CMsgClientSecret::MergeFrom(CMsgClientSecret const&)
+ T CMsgClientSecret::New() const
+ T CMsgClientSecret::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientSecret::SetCachedSize(int) const
+ T CMsgClientSecret::SharedCtor()
+ T CMsgClientSecret::SharedDtor()
+ T CMsgClientSecret::mutable_hmac()
+ T CMsgClientSecret::set_hmac(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientSecret::~CMsgClientSecret()
+ T CMsgClientServerTimestampRequest::ByteSize() const
+ T CMsgClientServerTimestampRequest::CMsgClientServerTimestampRequest()
+ T CMsgClientServerTimestampRequest::Clear()
+ T CMsgClientServerTimestampRequest::GetCachedSize() const
+ T CMsgClientServerTimestampRequest::GetMetadata() const
+ T CMsgClientServerTimestampRequest::IsInitialized() const
+ T CMsgClientServerTimestampRequest::MergeFrom(CMsgClientServerTimestampRequest const&)
+ T CMsgClientServerTimestampRequest::New() const
+ T CMsgClientServerTimestampRequest::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientServerTimestampRequest::SetCachedSize(int) const
+ T CMsgClientServerTimestampRequest::~CMsgClientServerTimestampRequest()
+ T CMsgClientServerTimestampResponse::ByteSize() const
+ T CMsgClientServerTimestampResponse::CMsgClientServerTimestampResponse()
+ T CMsgClientServerTimestampResponse::Clear()
+ T CMsgClientServerTimestampResponse::GetCachedSize() const
+ T CMsgClientServerTimestampResponse::GetMetadata() const
+ T CMsgClientServerTimestampResponse::IsInitialized() const
+ T CMsgClientServerTimestampResponse::MergeFrom(CMsgClientServerTimestampResponse const&)
+ T CMsgClientServerTimestampResponse::New() const
+ T CMsgClientServerTimestampResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientServerTimestampResponse::SetCachedSize(int) const
+ T CMsgClientServerTimestampResponse::~CMsgClientServerTimestampResponse()
  T CMsgIPAddress::ByteSize() const
  T CMsgIPAddress::CMsgIPAddress()
  T CMsgIPAddress::Clear()
@@ -1818,6 +2171,7 @@
  T CMsgIPAddress::SetCachedSize(int) const
  T CMsgIPAddress::SharedCtor()
  T CMsgIPAddress::clear_ip()
+ T CMsgIPAddress::default_instance()
  T CMsgIPAddress::mutable_v6()
  T CMsgIPAddress::set_v6(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgIPAddress::~CMsgIPAddress()
@@ -1879,7 +2233,7 @@
  T CNet::AddToPollingList(unsigned int)
  T CNet::AllocHandle(EConnectionType)
  T CNet::AllocNetPacket()
- T CNet::AsyncConnect(EConnectionType, IConnectionCallback*, netadr_t const&, unsigned int, INetFilterKeyCallback*, INetSSLConnectionCallback*, netadr_t const&, ENetQOSLevel)
+ T CNet::AsyncConnect(EConnectionType, IConnectionCallback*, CIPAndPort const&, unsigned int, INetFilterKeyCallback*, INetSSLConnectionCallback*, CIPAndPort const&, ENetQOSLevel)
  T CNet::BAsyncDisconnect(unsigned int)
  T CNet::BAsyncSend(EMsg, unsigned int, CUtlBuffer&)
  T CNet::BAsyncSend(EMsg, unsigned int, unsigned char const*, int)
@@ -1898,7 +2252,7 @@
  T CNet::BRemoveConnectionCallback(unsigned int, IConnectionCallback*)
  T CNet::CancelWakeup(unsigned int)
  T CNet::CreateNetConnection(EConnectionType, EConnectionMode, IConnectionCallback*, unsigned int, INetFilterKeyCallback*, IStreamParser*, INetSSLConnectionCallback*)
- T CNet::CreateSocket(EConnectionType, netadr_t const&, unsigned int, netadr_t*, bool)
+ T CNet::CreateSocket(EConnectionType, CIPAndPort const&, unsigned int, CIPAndPort*, bool)
  T CNet::DestroyNetConnection(CNetConnection*)
  T CNet::DestroyRecvThrottleGroup(int)
  T CNet::FreeGlobals()
@@ -1910,7 +2264,7 @@
  T CNet::GetTCPSocketOwnerCallback(unsigned int)
  T CNet::GetUDPSocketOwnerCallback(unsigned int)
  T CNet::GlobalInit(EScale, CFrameFunctionMgr*)
- T CNet::InternalAsyncConnect(EConnectionType, IConnectionCallback*, netadr_t const&, unsigned int, INetFilterKeyCallback*, INetSSLConnectionCallback*, netadr_t const&, IStreamParser*, ENetQOSLevel)
+ T CNet::InternalAsyncConnect(EConnectionType, IConnectionCallback*, CIPAndPort const&, unsigned int, INetFilterKeyCallback*, INetSSLConnectionCallback*, CIPAndPort const&, IStreamParser*, ENetQOSLevel)
  T CNet::InternalGetNetConnection(unsigned int)
  T CNet::IsValidHSocketOwner(unsigned int)
  T CNet::RemoveFromPollingList(unsigned int, int)
@@ -1961,7 +2315,7 @@
  T CNetConnection::SendEncryptedData(unsigned char*, unsigned int)
  T CNetConnection::SetConnectionBlackHoled()
  T CNetConnection::SetConnectionPostedBufferSize(int)
- T CNetConnection::SetIncoming(int, netadr_t const&)
+ T CNetConnection::SetIncoming(int, CIPAndPort const&)
  T CNetConnection::SetNetQOSLevel(ENetQOSLevel)
  T CNetConnection::SetRecvThrottleGroup(int)
  T CNetConnection::SetSocketToAbortWhenClosed()
@@ -1987,12 +2341,12 @@
  T CNetConnectionOnDisconnectWorkItem::GetWorkItemName() const
  T CNetConnectionOnDisconnectWorkItem::ThreadProcess(CWorkThread*)
  T CNetConnectionOnDisconnectWorkItem::~CNetConnectionOnDisconnectWorkItem()
- T CNetFilter::BAcceptConnection(netadr_t const&, netadr_t const&)
+ T CNetFilter::BAcceptConnection(CIPAndPort const&, CIPAndPort const&)
  T CNetFilter::BPollConnection()
  T CNetFilter::CancelWakeup()
  T CNetFilter::ConnectCompleted(unsigned int)
  T CNetFilter::ConnectFailed(unsigned int, EResult, unsigned long long)
- T CNetFilter::ConnectionAccepted(unsigned int, netadr_t const&, netadr_t const&)
+ T CNetFilter::ConnectionAccepted(unsigned int, CIPAndPort const&, CIPAndPort const&)
  T CNetFilter::ConnectionDisconnected(unsigned int, EResult)
  T CNetFilter::HookCallback()
  T CNetFilter::Init(CNetConnection*)
@@ -2020,6 +2374,8 @@
  T CNetFilterWorkItem::BCheckFilterIsValid()
  T CNetIOHelperCallback::OnDataStateChanged(int, int, bool, bool)
  T CNetIOHelperCallback::~CNetIOHelperCallback()
+ T CNetMask::SetFromString(char const*)
+ T CNetMask::SetIPAndBits(CIPAddress const&, unsigned int)
  T CNetPacket::AddRef()
  T CNetPacket::CNetPacket()
  T CNetPacket::Init(unsigned int, unsigned char*, int, unsigned char*, bool)
@@ -2046,7 +2402,7 @@
  T COpenSSLCertificate::BGetSubject(CUtlString&) const
  T COpenSSLCertificate::BGetSubjectDNSNames(CUtlVector<CUtlString, CUtlMemory<CUtlString> >&) const
  T COpenSSLCertificate::BGetSubjectProperty(char const*, CUtlString&) const
- T COpenSSLCertificate::BMatchesIP(netadr_t) const
+ T COpenSSLCertificate::BMatchesIP(CIPAndPort) const
  T COpenSSLCertificate::GetIssuerHash() const
  T COpenSSLCertificate::~COpenSSLCertificate()
  T COpenSSLConnection::BAsyncSend(CUtlBuffer&)
@@ -2080,10 +2436,10 @@
  T COpenSSLContext::BGetSRTPKeyAndSaltLengths(char const*, int*, int*)
  T COpenSSLContext::COpenSSLContext(ESSLConnectionType, ESSLCipherSuite, int, char const*, char const*, char const*, char const*)
  T COpenSSLContext::EnablePlatformCertificateVerification()
- T COpenSSLContext::FindClientSession(netadr_t, char const*)
+ T COpenSSLContext::FindClientSession(CIPAndPort, char const*)
  T COpenSSLContext::PostInit(int)
  T COpenSSLContext::PreInit(ESSLConnectionType, ESSLCipherSuite, int, char const*)
- T COpenSSLContext::RegisterClientSession(netadr_t, COpenSSLCachedSession*)
+ T COpenSSLContext::RegisterClientSession(CIPAndPort, COpenSSLCachedSession*)
  T COpenSSLContext::Validate(CValidator&, char const*)
  T COpenSSLContext::~COpenSSLContext()
  T COpenSSLTicketKeyMgr::COpenSSLTicketKeyMgr(int)
@@ -2130,7 +2486,7 @@
  T CProtoBufNetPacket::PubData() const
  T CProtoBufNetPacket::RebuildPacket()
  T CProtoBufNetPacket::SetHConnection(unsigned int)
- T CProtoBufNetPacket::SetHdrIP(netadr_t const&)
+ T CProtoBufNetPacket::SetHdrIP(CIPAddress const&)
  T CProtoBufNetPacket::SetMsgTraceTag(unsigned long long)
  T CProtoBufNetPacket::SetSessionID(int)
  T CProtoBufNetPacket::SetSourceJobID(unsigned long long)
@@ -2216,7 +2572,7 @@
  T CRYPTO_set_mem_ex_functions
  T CRYPTO_strdup
  T CRYPTO_xts128_encrypt
- T CReceivedPkt::Init(int, netadr_t const&, unsigned char*, int, void*, unsigned int)
+ T CReceivedPkt::Init(int, CIPAndPort const&, unsigned char*, int, void*, unsigned int)
  T CRefCountServiceBase<true, CRefMT>::DoAddRef() const
  T CRefCountServiceBase<true, CRefMT>::DoRelease() const
  T CRefCountServiceBase<true, CRefMT>::OnFinalRelease()
@@ -2396,7 +2752,7 @@
  T CStructNetPacket::GetTargetJobName() const
  T CStructNetPacket::PubData() const
  T CStructNetPacket::SetHConnection(unsigned int)
- T CStructNetPacket::SetHdrIP(netadr_t const&)
+ T CStructNetPacket::SetHdrIP(CIPAddress const&)
  T CStructNetPacket::SetMsgTraceTag(unsigned long long)
  T CStructNetPacket::SetSessionID(int)
  T CStructNetPacket::SetSourceJobID(unsigned long long)
@@ -2408,7 +2764,7 @@
  T CTCPConnection::AppendToIncomingMessage(int, bool&)
  T CTCPConnection::BAsyncUnbufferedSend(unsigned char const*, int, IUnbufferedSendCallback*)
  T CTCPConnection::BFrameFuncRunConnections(CReliableTimer&)
- T CTCPConnection::BInternalAsyncConnect(netadr_t const*, int, netadr_t const&, unsigned int)
+ T CTCPConnection::BInternalAsyncConnect(CIPAndPort const*, int, CIPAndPort const&, unsigned int)
  T CTCPConnection::BInternalAsyncDisconnect()
  T CTCPConnection::BInternalAsyncSend(unsigned char const*, int, bool, bool)
  T CTCPConnection::BIsSendBlocked(int)
@@ -2423,7 +2779,7 @@
  T CTCPConnection::DecrementOutstandingSends(CTCPConnection*, int)
  T CTCPConnection::Destroy()
  T CTCPConnection::DispatchWorkItemToJob(CWorkItem*)
- T CTCPConnection::EmitSpewOnDisconnect(CTCPConnection*, int, char const*, char const*, netadr_t const&)
+ T CTCPConnection::EmitSpewOnDisconnect(CTCPConnection*, int, char const*, char const*, CIPAndPort const&)
  T CTCPConnection::FreeGlobals()
  T CTCPConnection::GetConnectionPostedBufferSize()
  T CTCPConnection::GetConnectionType()
@@ -2447,7 +2803,7 @@
  T CTCPConnection::ReleaseIOCPRecvState(CTCPConnection::RecvState_t*)
  T CTCPConnection::SetConnectionBlackHoled()
  T CTCPConnection::SetConnectionPostedBufferSize(int)
- T CTCPConnection::SetIncoming(int, netadr_t const&)
+ T CTCPConnection::SetIncoming(int, CIPAndPort const&)
  T CTCPConnection::ThreadedCompletionFunc(CompletionData_t*)
  T CTCPConnection::ThreadedDataArrived(CompletionData_t*)
  T CTCPConnection::ThreadedPostAsyncRecv(CompletionData_t*)
@@ -2564,13 +2920,13 @@
  T CThreadSafeMemoryPool::~CThreadSafeMemoryPool()
  T CUDPConnection::AddPendingMsgToList(CPendingMsg*)
  T CUDPConnection::BAddReceivedPktToList(CReceivedPkt*)
- T CUDPConnection::BInternalAsyncConnect(netadr_t const*, int, netadr_t const&, unsigned int)
+ T CUDPConnection::BInternalAsyncConnect(CIPAndPort const*, int, CIPAndPort const&, unsigned int)
  T CUDPConnection::BInternalAsyncDisconnect()
  T CUDPConnection::BInternalAsyncSend(unsigned char const*, int, bool, bool)
  T CUDPConnection::BIsSendBlocked(int)
  T CUDPConnection::BPktValidForConnectionState(EUDPPktType)
  T CUDPConnection::BPollConnection()
- T CUDPConnection::BStatefulValidatePacket(netadr_t const&, unsigned char*, int)
+ T CUDPConnection::BStatefulValidatePacket(CIPAndPort const&, unsigned char*, int)
  T CUDPConnection::BStatelessValidateAndEndianCorrectPacket(unsigned char*, int)
  T CUDPConnection::CUDPConnection()
  T CUDPConnection::CloseSocket()
@@ -2587,7 +2943,7 @@
  T CUDPConnection::InternalGetUDPConnection(unsigned int)
  T CUDPConnection::IsIntraProcessConnection()
  T CUDPConnection::OnAckReceived(unsigned int, bool)
- T CUDPConnection::OnChallengeReceived(netadr_t const&, unsigned char*, int)
+ T CUDPConnection::OnChallengeReceived(CIPAndPort const&, unsigned char*, int)
  T CUDPConnection::OnConnectAccept(unsigned int)
  T CUDPConnection::OnDisconnectACK()
  T CUDPConnection::OnFailedSend()
@@ -2609,15 +2965,15 @@
  T CUDPConnection::SendNackIfCurSeqUnNacked()
  T CUDPConnection::SetConnectionBlackHoled()
  T CUDPConnection::SetConnectionPostedBufferSize(int)
- T CUDPConnection::UDPRecvPkt(int, netadr_t const&, unsigned char*, int, void*)
+ T CUDPConnection::UDPRecvPkt(int, CIPAndPort const&, unsigned char*, int, void*)
  T CUDPConnection::UpdateQOSLevel(UDPPktHdr_t const*)
  T CUDPConnection::Validate(CValidator&, char const*)
  T CUDPConnection::ValidateGlobals(CValidator&, char const*)
  T CUDPConnection::~CUDPConnection()
  T CUDPConnectionRouter::OnUDPFatalError(int, unsigned int)
- T CUDPConnectionRouter::UDPRecvPkt(int, netadr_t const&, unsigned char*, int, void*)
+ T CUDPConnectionRouter::UDPRecvPkt(int, CIPAndPort const&, unsigned char*, int, void*)
  T CUDPHost::ValidateGlobals(CValidator&)
- T CUDPSocket::BSendAndFreeMsgBuf(int, bool, netadr_t const&, unsigned char*, int)
+ T CUDPSocket::BSendAndFreeMsgBuf(int, bool, CIPAndPort const&, unsigned char*, int)
  T CUDPSocket::BeginRecv(int, unsigned int, bool, void*)
  T CUDPSocket::ContinueRecv(int, unsigned int, void*)
  T CUDPSocket::ThreadedFunc_RecvUDP(CompletionData_t*)
@@ -2628,9 +2984,6 @@
  T CUniformRandomStream::RandomFloat(float, float)
  T CUniformRandomStream::RandomInt(int, int)
  T CUniformRandomStream::SetSeed(int)
- T CUtlAllocation::Copy(void const*, int)
- T CUtlAllocation::Validate(CValidator&, char const*)
- T CUtlAllocation::~CUtlAllocation()
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
  T CUtlBuffer::CUtlBuffer(void const*, int, int)
@@ -2676,9 +3029,42 @@
  T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCharConversion::FindConversion(char const*, int*)
  T CUtlFmtString::CUtlFmtString(char const*, ...)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::AllocNode()
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::CUtlHashMap(int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::EnsureCapacity(int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::Find(CIPAndPort const&) const
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::FindInBucket(int, CIPAndPort const&) const
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::IncrementalRehash()
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::Purge()
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::RemoveAll()
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::RemoveAt(int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::RemoveNodeFromBucket(int, int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::~CUtlHashMap()
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::AllocNode()
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::CUtlHashMap()
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::EnsureCapacity(int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::Find(CIPAndPort const&) const
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::FindInBucket(int, CIPAndPort const&) const
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::IncrementalRehash()
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::InsertWithDupes(CIPAndPort const&, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t const&)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::NextSameKey(int) const
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::Purge()
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::RemoveAll()
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::RemoveAt(int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::RemoveNodeFromBucket(int, int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::Validate(CValidator&, char const*)
+ T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::~CUtlHashMap()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::CUtlHashMap()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::Purge()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::~CUtlHashMap()
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::CUtlHashMap()
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::Purge()
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::~CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::Purge()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::~CUtlHashMap()
@@ -2693,46 +3079,17 @@
  T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::Validate(CValidator&, char const*)
  T CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::~CUtlHashMap()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::AllocNode()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMap(int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::EnsureCapacity(int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Find(netadr_t const&) const
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::FindInBucket(int, netadr_t const&) const
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::IncrementalRehash()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Purge()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RecursiveValidate(CValidator&, char const*)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RehashNodesInBucket(int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveAll()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveAt(int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveNodeFromBucket(int, int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMap()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::AllocNode()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMap()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::EnsureCapacity(int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Find(netadr_t const&) const
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::FindInBucket(int, netadr_t const&) const
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::IncrementalRehash()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t const&)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::NextSameKey(int) const
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Purge()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RehashNodesInBucket(int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveAll()
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveAt(int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RemoveNodeFromBucket(int, int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Validate(CValidator&, char const*)
- T CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMap()
- T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::AllocNode()
- T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap()
- T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::EnsureCapacity(int)
- T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
- T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::IncrementalRehash()
- T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertOrReplace(unsigned int const&, MsgInfo_t* const&)
- T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
- T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
- T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::~CUtlHashMap()
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::AllocNode()
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap()
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::EnsureCapacity(int)
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::IncrementalRehash()
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertOrReplace(unsigned int const&, MessageInfo_t* const&)
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::PurgeAndDeleteElements()
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::~CUtlHashMap()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::AllocNode()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap()
  T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CopyFullHashMap(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >&) const
@@ -2783,18 +3140,18 @@
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RemoveAll()
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::~CUtlHashMap()
- T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMapLRU(int)
- T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Element(int)
- T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertOrReplace(netadr_t const&, CHTTPClient::ProxyCacheEntry_t const&)
- T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CHTTPClient::ProxyCacheEntry_t const&)
- T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::RecursiveValidate(CValidator&, char const*)
- T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Remove(netadr_t const&)
- T CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMapLRU()
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::CUtlHashMapLRU()
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Element(int)
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertWithDupes(netadr_t const&, CSmartPtr<COpenSSLCachedSession> const&)
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::Validate(CValidator&, char const*)
- T CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::~CUtlHashMapLRU()
+ T CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::CUtlHashMapLRU(int)
+ T CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::Element(int)
+ T CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::InsertOrReplace(CIPAndPort const&, CHTTPClient::ProxyCacheEntry_t const&)
+ T CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::InsertWithDupes(CIPAndPort const&, CHTTPClient::ProxyCacheEntry_t const&)
+ T CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::Remove(CIPAndPort const&)
+ T CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::~CUtlHashMapLRU()
+ T CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::CUtlHashMapLRU()
+ T CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::Element(int)
+ T CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::InsertWithDupes(CIPAndPort const&, CSmartPtr<COpenSSLCachedSession> const&)
+ T CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::Validate(CValidator&, char const*)
+ T CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::~CUtlHashMapLRU()
  T CUtlLinkedList<AVPacket, int>::AllocInternal(bool)
  T CUtlLinkedList<AVPacket, int>::Free(int)
  T CUtlLinkedList<AVPacket, int>::InsertBefore(int, AVPacket const&)
@@ -2900,13 +3257,6 @@
  T CUtlLinkedList<NetPacketToDelete_t, int>::RemoveAll()
  T CUtlLinkedList<NetPacketToDelete_t, int>::Unlink(int)
  T CUtlLinkedList<NetPacketToDelete_t, int>::Validate(CValidator&, char const*)
- T CUtlLinkedList<VideoEncodedFrame_t*, int>::AllocInternal(bool)
- T CUtlLinkedList<VideoEncodedFrame_t*, int>::Free(int)
- T CUtlLinkedList<VideoEncodedFrame_t*, int>::InsertBefore(int, VideoEncodedFrame_t* const&)
- T CUtlLinkedList<VideoEncodedFrame_t*, int>::LinkBefore(int, int)
- T CUtlLinkedList<VideoEncodedFrame_t*, int>::RemoveAll()
- T CUtlLinkedList<VideoEncodedFrame_t*, int>::Unlink(int)
- T CUtlLinkedList<VideoEncodedFrame_t*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
  T CUtlLinkedList<int, int>::InsertAfter(int, int const&)
@@ -3185,23 +3535,24 @@
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::GrowVector(int)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::~CUtlVector()
@@ -3225,11 +3576,6 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::SetCount(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
- T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::AddToTail(CVideoDecoderFFmpeg::CQueuedOutput* const&)
- T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::GrowVector(int)
- T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::PurgeAndDeleteElements()
- T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::Remove(int)
- T CUtlVector<CVideoDecoderFFmpeg::CQueuedOutput*, CUtlMemory<CVideoDecoderFFmpeg::CQueuedOutput*> >::~CUtlVector()
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::AddToTail(CVideoFileStream* const&)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FastRemove(int)
  T CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >::FindAndFastRemove(CVideoFileStream* const&)
@@ -3275,8 +3621,6 @@
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::GrowVector(int)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::InsertMultipleBefore(int, int, ModuleAddressRange_t const*)
  T CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >::~CUtlVector()
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::AddToTail(ModuleCount_t const&)
- T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::~CUtlVector()
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::AddToTail(NetConnectPingResults_t const&)
  T CUtlVector<NetConnectPingResults_t, CUtlMemory<NetConnectPingResults_t> >::GrowVector(int)
@@ -3338,43 +3682,6 @@
  T CVariableBitStringBase::Validate(CValidator&, char const*)
  T CVideoDecodedFrame::Validate(CValidator&, char const*)
  T CVideoDecodedFrame::~CVideoDecodedFrame()
- T CVideoDecoderFFmpeg::BDecodeFrame(unsigned char const*, int, long long, long long)
- T CVideoDecoderFFmpeg::BDecodeFrameInternal(AVPacket const*, bool*)
- T CVideoDecoderFFmpeg::BFixupDecodedPTS(long long, long long)
- T CVideoDecoderFFmpeg::BInitH264AVCC(unsigned char const*, int)
- T CVideoDecoderFFmpeg::CQueuedOutput::~CQueuedOutput()
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::CQueuedOutputNV12(AVFrame*)
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::GetNV12Frame() const
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::GetPTS() const
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::GetPixelFormat() const
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::GetYUV420Frame() const
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::Height() const
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::UVPlane() const
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::UVStride() const
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::Width() const
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::YPlane() const
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::YStride() const
- T CVideoDecoderFFmpeg::CQueuedOutputNV12::~CQueuedOutputNV12()
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::CQueuedOutputYUV(AVFrame*)
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::GetNV12Frame() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::GetPTS() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::GetPixelFormat() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::GetYUV420Frame() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::Height() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::UPlane() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::UStride() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::VPlane() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::VStride() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::Width() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::YPlane() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::YStride() const
- T CVideoDecoderFFmpeg::CQueuedOutputYUV::~CQueuedOutputYUV()
- T CVideoDecoderFFmpeg::CVideoDecoderFFmpeg()
- T CVideoDecoderFFmpeg::FlushDecoder()
- T CVideoDecoderFFmpeg::FreeDecodedFrame(IDecodedVideoFrame const*)
- T CVideoDecoderFFmpeg::GetDecodedFrame()
- T CVideoDecoderFFmpeg::Shutdown()
- T CVideoDecoderFFmpeg::~CVideoDecoderFFmpeg()
  T CVideoDecoderLibav::BAtEndOfStream()
  T CVideoDecoderLibav::BDecodeAudio(CUtlBuffer*, long long*, AVPacket&)
  T CVideoDecoderLibav::BDecodeAudioQueueVideo(CUtlBuffer*, long long*, long long*, bool*)
@@ -3407,21 +3714,6 @@
  T CVideoDecoderLibav::SetStartTime()
  T CVideoDecoderLibav::Validate(CValidator&, char const*)
  T CVideoDecoderLibav::~CVideoDecoderLibav()
- T CVideoEncoderX264::BEncodeFrame(IDecodedVideoFrame const*, bool)
- T CVideoEncoderX264::BEncodeFrameInternal(x264_picture_t*)
- T CVideoEncoderX264::BInit(int, int, int, int, char const*)
- T CVideoEncoderX264::CVideoEncoderX264()
- T CVideoEncoderX264::Flush()
- T CVideoEncoderX264::FreeEncodedFrame(VideoEncodedFrame_t const*)
- T CVideoEncoderX264::GetEncodedFrame()
- T CVideoEncoderX264::GetHeight()
- T CVideoEncoderX264::GetPPS(unsigned char**, int*)
- T CVideoEncoderX264::GetSPS(unsigned char**, int*)
- T CVideoEncoderX264::GetWidth()
- T CVideoEncoderX264::Shutdown()
- T CVideoEncoderX264::Validate(CValidator&, char const*)
- T CVideoEncoderX264::ValidateFrame(CValidator&, VideoEncodedFrame_t const*)
- T CVideoEncoderX264::~CVideoEncoderX264()
  T CVideoFileStream::BHTTPDownloadFailed()
  T CVideoFileStream::BLoad(char const*, VideoByteRange_t*)
  T CVideoFileStream::BLoadFromExternalBuffer(CUtlBuffer*)
@@ -3575,7 +3867,7 @@
  T CVideoWebMCuesParser::GetCuePointsForFirstTrack()
  T CVideoWebMCuesParser::~CVideoWebMCuesParser()
  T CWSASendThread::AddCloseSocket(int)
- T CWSASendThread::AddItem(int, unsigned int, void*, int, int, netadr_t, unsigned int, bool, IUnbufferedSendCallback*)
+ T CWSASendThread::AddItem(int, unsigned int, void*, int, int, CIPAndPort, unsigned int, bool, IUnbufferedSendCallback*)
  T CWSASendThread::AddShutdownSocket(int)
  T CWSASendThread::CWSASendThread()
  T CWSASendThread::Run()
@@ -3584,11 +3876,11 @@
  T CWatchingLog::BMeetsMyCriteria(CLogWatchParam const&) const
  T CWatchingLog::~CWatchingLog()
  T CWebSocketConnection::AddToConnectionTable(CWebSocketConnection*)
- T CWebSocketConnection::BAcceptConnection(netadr_t const&, netadr_t const&)
+ T CWebSocketConnection::BAcceptConnection(CIPAndPort const&, CIPAndPort const&)
  T CWebSocketConnection::BAsyncDisconnect()
  T CWebSocketConnection::BBuildAndAsyncSendFrame(EWebSocketOpCode, unsigned char const*, int)
  T CWebSocketConnection::BCloseConnection(EWebSocketStatusCode, char const*)
- T CWebSocketConnection::BInternalAsyncConnect(netadr_t const*, int, netadr_t const&, unsigned int)
+ T CWebSocketConnection::BInternalAsyncConnect(CIPAndPort const*, int, CIPAndPort const&, unsigned int)
  T CWebSocketConnection::BInternalAsyncDisconnect()
  T CWebSocketConnection::BInternalAsyncSend(unsigned char const*, int, bool, bool)
  T CWebSocketConnection::BInternalAsyncSendEncodedFrame(CUtlBuffer&)
@@ -3599,7 +3891,7 @@
  T CWebSocketConnection::CloseSocket()
  T CWebSocketConnection::ConnectCompleted(unsigned int)
  T CWebSocketConnection::ConnectFailed(unsigned int, EResult, unsigned long long)
- T CWebSocketConnection::ConnectionAccepted(unsigned int, netadr_t const&, netadr_t const&)
+ T CWebSocketConnection::ConnectionAccepted(unsigned int, CIPAndPort const&, CIPAndPort const&)
  T CWebSocketConnection::ConnectionDisconnected(unsigned int, EResult)
  T CWebSocketConnection::DecodePktAndDispatch(unsigned char*, unsigned int)
  T CWebSocketConnection::Destroy()
@@ -3618,7 +3910,7 @@
  T CWebSocketConnection::SendEncryptedData(unsigned char*, unsigned int)
  T CWebSocketConnection::SetConnectionBlackHoled()
  T CWebSocketConnection::SetConnectionPostedBufferSize(int)
- T CWebSocketConnection::SetIncoming(int, netadr_t const&)
+ T CWebSocketConnection::SetIncoming(int, CIPAndPort const&)
  T CWebSocketConnection::UpgradeTCPConnectionToWebSocket(unsigned int, IConnectionCallback*, COpenSSLConnection*, unsigned int)
  T CWebSocketConnection::Validate(CValidator&, char const*)
  T CWebSocketConnection::ValidateGlobals(CValidator&)
@@ -3775,6 +4067,7 @@
  T ConVar::IsRegistered() const
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
+ T ConVar::SetFromConVarsVDF(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
@@ -3804,8 +4097,6 @@
  T CreateTempFileName(CUtlString*)
  T CreateThreadMutex()
  T CreateVProfile
- T CreateVideoDecoderFFmpeg
- T CreateVideoEncoderX264
  T CreateVideoPlayer
  T DES_SPtrans
  T DES_cfb64_encrypt
@@ -4225,10 +4516,10 @@
  T EVP_sha256
  T EVP_sha384
  T EVP_sha512
+ T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, CIPAndPort const&, char const*, ...)
  T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, char const*, ...)
- T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, netadr_t const&, char const*, ...)
- T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, netadr_t const&, unsigned long long const&, char const*, __va_list_tag*)
- T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, netadr_t const&, unsigned long long const&, char const*, char*)
+ T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, __va_list_tag*)
+ T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, char*)
  T Error
  T FillDataStruct(_finddata_t*)
  T FindSpewGroup(char const*, int*)
@@ -4279,7 +4570,7 @@
  T HMAC_Init_ex
  T HMAC_Update
  T HasWrittenMinidumpForFileLine(char const*, unsigned int)
- T HashItem(netadr_t const&)
+ T HashItem(CIPAndPort const&)
  T HashStringCaseless(char const*, unsigned long)
  T I420Scale
  T I420ToARGB
@@ -4440,6 +4731,7 @@
  T PROXY_CERT_INFO_EXTENSION_new
  T ParseBaseURL(CUtlString*, char const*)
  T ParseIPv6Addr
+ T PchMsgNameFromEMsg(EMsg)
  T PchNameFromEHTTPMethod(int)
  T PchNameFromEHTTPStatusCode(int)
  T PchNameFromEResult(int)
@@ -4717,8 +5009,6 @@
  T StringAfterPrefix
  T StringFindSuffix
  T SysID_t::SysID_t(unsigned int)
- T Sys_GetProcAddress(CSysModule*, char const*)
- T Sys_LoadModule(char const*, Sys_Flags)
  T TLSv1_1_client_method
  T TLSv1_1_method
  T TLSv1_1_server_method
@@ -4835,9 +5125,7 @@
  T VideoAdaptationSet_t::Validate(CValidator&, char const*)
  T VideoAdaptationSet_t::VideoAdaptationSet_t()
  T VideoAdaptationSet_t::~VideoAdaptationSet_t()
- T VideoEncodedFrame_t::~VideoEncodedFrame_t()
  T VideoLibData_t::~VideoLibData_t()
- T VideoLibGetInitMutex()
  T VideoLibInit()
  T VideoLibValidateStatics(CValidator&)
  T VideoPauseForValidation
@@ -5365,10 +5653,10 @@
  T i2v_ASN1_BIT_STRING
  T i2v_GENERAL_NAME
  T i2v_GENERAL_NAMES
+ T int CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::InsertUnconstructed<CIPAndPort const&>(CIPAndPort const&, int*, bool)
+ T int CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::InsertUnconstructed<CIPAndPort const&>(CIPAndPort const&, int*, bool)
  T int CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::InsertUnconstructed<int const&>(int const&, int*, bool)
- T int CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CHTTPClient::ProxyCacheEntry_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertUnconstructed<netadr_t const&>(netadr_t const&, int*, bool)
- T int CUtlHashMap<netadr_t, CUtlHashMapLRU<netadr_t, CSmartPtr<COpenSSLCachedSession>, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::ElementBucket_t, CDefEquals<netadr_t>, HashFunctor<netadr_t> >::InsertUnconstructed<netadr_t const&>(netadr_t const&, int*, bool)
- T int CUtlHashMap<unsigned int, MsgInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
+ T int CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
  T int CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
  T int CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
  T int CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::InsertUnconstructed<unsigned long const&>(unsigned long const&, int*, bool)
@@ -5397,21 +5685,6 @@
  T md5_block_asm_data_order
  T n_ssl3_mac
  T name_cmp
- T netadr_t::BConvertMappedToIPv4()
- T netadr_t::BlockingResolveAndSetFromString(char const*, bool)
- T netadr_t::CompareAdr(netadr_t const&, bool) const
- T netadr_t::GetIP() const
- T netadr_t::HasIP() const
- T netadr_t::IsLoopback() const
- T netadr_t::IsMappedIPv4() const
- T netadr_t::IsReservedAdr() const
- T netadr_t::IsValid() const
- T netadr_t::SetFromSockadr(void const*, unsigned long)
- T netadr_t::SetFromString(char const*)
- T netadr_t::ToSockadr(void*, unsigned long) const
- T netadr_t::ToString(char*, unsigned int, bool) const
- T netadr_t::operator<(netadr_t const&) const
- T netmask_t::SetFromString(char const*, bool)
  T non-virtual thunk to CHTTPClientConnection::BVerifyCertificate(COpenSSLConnection*, COpenSSLCertificate const&)
  T non-virtual thunk to CHTTPClientConnection::HandleSSLFailure(EResult)
  T non-virtual thunk to CHTTPClientConnection::RecvPlaintext(unsigned char*, unsigned int)
@@ -5431,28 +5704,12 @@
  T non-virtual thunk to COpenSSLConnection::SetSSLConnectionCallback(ISSLConnectionCallback*)
  T non-virtual thunk to COpenSSLConnection::ShutdownConnection()
  T non-virtual thunk to CUDPConnection::OnUDPFatalError(int, unsigned int)
- T non-virtual thunk to CUDPConnection::UDPRecvPkt(int, netadr_t const&, unsigned char*, int, void*)
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputNV12::Height() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputNV12::UVPlane() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputNV12::UVStride() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputNV12::Width() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputNV12::YPlane() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputNV12::YStride() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputNV12::~CQueuedOutputNV12()
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputYUV::Height() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputYUV::UPlane() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputYUV::UStride() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputYUV::VPlane() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputYUV::VStride() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputYUV::Width() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputYUV::YPlane() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputYUV::YStride() const
- T non-virtual thunk to CVideoDecoderFFmpeg::CQueuedOutputYUV::~CQueuedOutputYUV()
+ T non-virtual thunk to CUDPConnection::UDPRecvPkt(int, CIPAndPort const&, unsigned char*, int, void*)
  T non-virtual thunk to CVideoFileStream::~CVideoFileStream()
- T non-virtual thunk to CWebSocketConnection::BAcceptConnection(netadr_t const&, netadr_t const&)
+ T non-virtual thunk to CWebSocketConnection::BAcceptConnection(CIPAndPort const&, CIPAndPort const&)
  T non-virtual thunk to CWebSocketConnection::ConnectCompleted(unsigned int)
  T non-virtual thunk to CWebSocketConnection::ConnectFailed(unsigned int, EResult, unsigned long long)
- T non-virtual thunk to CWebSocketConnection::ConnectionAccepted(unsigned int, netadr_t const&, netadr_t const&)
+ T non-virtual thunk to CWebSocketConnection::ConnectionAccepted(unsigned int, CIPAndPort const&, CIPAndPort const&)
  T non-virtual thunk to CWebSocketConnection::ConnectionDisconnected(unsigned int, EResult)
  T non-virtual thunk to CWebSocketConnection::RecvPkt(CNetPacket*)
  T o2i_ECPublicKey
@@ -5482,8 +5739,11 @@
  T private_Camellia_set_key
  T private_RC4_set_key
  T protobuf_AddDesc_steammessages_5fbase_2eproto()
+ T protobuf_AddDesc_steammessages_5fclientserver_5flogin_2eproto()
  T protobuf_AssignDesc_steammessages_5fbase_2eproto()
+ T protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()
  T protobuf_ShutdownFile_steammessages_5fbase_2eproto()
+ T protobuf_ShutdownFile_steammessages_5fclientserver_5flogin_2eproto()
  T rsaz_1024_gather5_avx2
  T rsaz_1024_mul_avx2
  T rsaz_1024_norm2red_avx2
@@ -5989,12 +6249,10 @@
  atexit
  atoi
  atoll
- av_dict_set
  av_find_best_stream
  av_frame_alloc
  av_frame_free
  av_frame_get_buffer
- av_frame_unref
  av_free
  av_get_bytes_per_sample
  av_get_channel_layout_nb_channels
@@ -6026,9 +6284,7 @@
  avcodec_free_context
  avcodec_open2
  avcodec_parameters_to_context
- avcodec_receive_frame
  avcodec_register_all
- avcodec_send_packet
  avformat_alloc_context
  avformat_alloc_output_context2
  avformat_close_input
@@ -6049,10 +6305,14 @@
  avresample_open
  b (anonymous namespace)::CCDDBAppDetailCommon_descriptor_
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
+ b (anonymous namespace)::CClanEventData_descriptor_
+ b (anonymous namespace)::CClanEventData_reflection_
  b (anonymous namespace)::CClanEventUserNewsTuple_descriptor_
  b (anonymous namespace)::CClanEventUserNewsTuple_reflection_
  b (anonymous namespace)::CClanMatchEventByRange_descriptor_
  b (anonymous namespace)::CClanMatchEventByRange_reflection_
+ b (anonymous namespace)::CCommunity_ClanAnnouncementInfo_descriptor_
+ b (anonymous namespace)::CCommunity_ClanAnnouncementInfo_reflection_
  b (anonymous namespace)::CCuratorPreferences_descriptor_
  b (anonymous namespace)::CCuratorPreferences_reflection_
  b (anonymous namespace)::CLocalizationToken_descriptor_
@@ -6061,6 +6321,36 @@
  b (anonymous namespace)::CMsgAppRights_reflection_
  b (anonymous namespace)::CMsgAuthTicket_descriptor_
  b (anonymous namespace)::CMsgAuthTicket_reflection_
+ b (anonymous namespace)::CMsgClientAccountInfo_descriptor_
+ b (anonymous namespace)::CMsgClientAccountInfo_reflection_
+ b (anonymous namespace)::CMsgClientChallengeRequest_descriptor_
+ b (anonymous namespace)::CMsgClientChallengeRequest_reflection_
+ b (anonymous namespace)::CMsgClientChallengeResponse_descriptor_
+ b (anonymous namespace)::CMsgClientChallengeResponse_reflection_
+ b (anonymous namespace)::CMsgClientHeartBeat_descriptor_
+ b (anonymous namespace)::CMsgClientHeartBeat_reflection_
+ b (anonymous namespace)::CMsgClientLogOff_descriptor_
+ b (anonymous namespace)::CMsgClientLogOff_reflection_
+ b (anonymous namespace)::CMsgClientLoggedOff_descriptor_
+ b (anonymous namespace)::CMsgClientLoggedOff_reflection_
+ b (anonymous namespace)::CMsgClientLogonResponse_descriptor_
+ b (anonymous namespace)::CMsgClientLogonResponse_reflection_
+ b (anonymous namespace)::CMsgClientLogon_descriptor_
+ b (anonymous namespace)::CMsgClientLogon_reflection_
+ b (anonymous namespace)::CMsgClientNewLoginKeyAccepted_descriptor_
+ b (anonymous namespace)::CMsgClientNewLoginKeyAccepted_reflection_
+ b (anonymous namespace)::CMsgClientNewLoginKey_descriptor_
+ b (anonymous namespace)::CMsgClientNewLoginKey_reflection_
+ b (anonymous namespace)::CMsgClientRequestWebAPIAuthenticateUserNonceResponse_descriptor_
+ b (anonymous namespace)::CMsgClientRequestWebAPIAuthenticateUserNonceResponse_reflection_
+ b (anonymous namespace)::CMsgClientRequestWebAPIAuthenticateUserNonce_descriptor_
+ b (anonymous namespace)::CMsgClientRequestWebAPIAuthenticateUserNonce_reflection_
+ b (anonymous namespace)::CMsgClientSecret_descriptor_
+ b (anonymous namespace)::CMsgClientSecret_reflection_
+ b (anonymous namespace)::CMsgClientServerTimestampRequest_descriptor_
+ b (anonymous namespace)::CMsgClientServerTimestampRequest_reflection_
+ b (anonymous namespace)::CMsgClientServerTimestampResponse_descriptor_
+ b (anonymous namespace)::CMsgClientServerTimestampResponse_reflection_
  b (anonymous namespace)::CMsgIPAddress_default_oneof_instance_
  b (anonymous namespace)::CMsgIPAddress_descriptor_
  b (anonymous namespace)::CMsgIPAddress_reflection_
@@ -6071,13 +6361,13 @@
  b (anonymous namespace)::CMsgProtoBufHeader_reflection_
  b (anonymous namespace)::CMsgProtobufWrapped_descriptor_
  b (anonymous namespace)::CMsgProtobufWrapped_reflection_
+ b (anonymous namespace)::EProtoClanEventType_descriptor_
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
  b AssertMsgImplementation::s_bDisableDebuggerBreak
  b BExtractAESRoundKeys(aes_key_st const*, bool, unsigned int (&) [60], int*)::s_nDetectPlatformKeyFormat
  b BUF_str_reasons
- b BVideoLibLoadX264()::s_bLoaded
  b CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)::fAsserted
  b CCrypto::GenerateRandomBlock(void*, int)::s_dev_urandom_fd
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
@@ -6256,12 +6546,12 @@
  b mh_mode
  b name_funcs_stack
  b names_lh
- b netadrNone
  b num_disable
  b param_table
  b pbe_algs
  b prompt_string
  b protobuf_AddDesc_steammessages_5fbase_2eproto()::already_here
+ b protobuf_AddDesc_steammessages_5fclientserver_5flogin_2eproto()::already_here
  b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
  b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  b read_string_inner.ps
@@ -6307,7 +6597,6 @@
  b tty_new
  b tty_orig
  b tty_out
- b x264()::s_x264
  b xptable
  backtrace
  backtrace_symbols
@@ -6989,14 +7278,31 @@
  r one
  r primes
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanEventData_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanEventUserNewsTuple_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanMatchEventByRange_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCommunity_ClanAnnouncementInfo_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCuratorPreferences_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CLocalizationToken_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientAccountInfo_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientChallengeRequest_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientChallengeResponse_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientHeartBeat_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientLogOff_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientLoggedOff_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientLogonResponse_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientLogon_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientNewLoginKeyAccepted_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientNewLoginKey_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientRequestWebAPIAuthenticateUserNonceResponse_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientRequestWebAPIAuthenticateUserNonce_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientSecret_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientServerTimestampRequest_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientServerTimestampResponse_offsets_
  r rand8
  r s_rgCRCTable_Standard
  r s_tdefl_packed_code_size_syms_swizzle
@@ -7266,6 +7572,7 @@
  t _GLOBAL__sub_I_stat.cpp
  t _GLOBAL__sub_I_steamid.cpp
  t _GLOBAL__sub_I_steammessages_base.pb.cc
+ t _GLOBAL__sub_I_steammessages_clientserver_login.pb.cc
  t _GLOBAL__sub_I_stime.cpp
  t _GLOBAL__sub_I_string_misc.cpp
  t _GLOBAL__sub_I_strtools.cpp
@@ -8072,8 +8379,6 @@
  t vpaes_schedule_round
  t vpaes_schedule_transform
  t write_string
- t x264_log(void*, int, char const*, __va_list_tag*)
- t x264_log(void*, int, char const*, char*)
  t x509_cb
  t x509_name_canon
  t x509_name_ex_d2i

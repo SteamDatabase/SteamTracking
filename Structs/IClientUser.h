@@ -55,7 +55,11 @@ public:
     virtual unknown_ret SetLoginInformation(char const*, char const*, bool) = 0;
     virtual unknown_ret SetTwoFactorCode(char const*) = 0;
     virtual unknown_ret ClearAllLoginInformation() = 0;
-    virtual unknown_ret SetEmbeddedClientInfo(unsigned int, char const*, char const*) = 0;
+    virtual unknown_ret BEnableEmbeddedClient(unsigned int) = 0;
+    virtual unknown_ret ResetEmbeddedClient(unsigned int) = 0;
+    virtual unknown_ret BHasEmbeddedClientToken(unsigned int) = 0;
+    virtual unknown_ret RequestEmbeddedClientToken(unsigned int) = 0;
+    virtual unknown_ret AuthorizeNewDevice(unsigned int, unsigned int, char const*) = 0;
     virtual unknown_ret GetLanguage(char*, int) = 0;
     virtual unknown_ret BIsCyberCafe() = 0;
     virtual unknown_ret BIsAcademicAccount() = 0;
@@ -170,7 +174,8 @@ public:
     virtual unknown_ret SetUserMachineName(char const*) = 0;
     virtual unknown_ret GetUserMachineName(char*, int) = 0;
     virtual unknown_ret GetEmailDomainFromLogonFailure(char*, int) = 0;
-    virtual unknown_ret GetDurationControl(unsigned int) = 0;
+    virtual unknown_ret GetDurationControl() = 0;
+    virtual unknown_ret GetDurationControlForApp(unsigned int) = 0;
     virtual unknown_ret BIsSubscribedApp(unsigned int) = 0;
     virtual unknown_ret GetSubscribedApps(unsigned int*, unsigned int, bool) = 0;
     virtual unknown_ret RegisterActivationCode(char const*) = 0;
@@ -224,4 +229,5 @@ public:
     virtual unknown_ret RequestNewSteamAnnouncementState() = 0;
     virtual unknown_ret UpdateSteamAnnouncementLastRead(unsigned long long, unsigned int) = 0;
     virtual unknown_ret GetMarketEligibility() = 0;
+    virtual unknown_ret UpdateGameVrDllState(CGameID, bool, bool) = 0;
 };

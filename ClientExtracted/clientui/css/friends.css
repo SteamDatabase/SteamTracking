@@ -1,7 +1,3 @@
-/*!
- * (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/. 
- * 
- */
 .throbber_LoadingWrapper_9UFR8 {
   display: flex;
   flex-direction: column;
@@ -381,7 +377,7 @@ button.DialogButton::-moz-focus-inner {
 .FullModalOverlay .ModalPosition_Content {
   height: initial;
   width: initial;
-  max-width: 80vw;
+  max-width: 88vw;
   max-height: 90vh; }
 
 .ModalOverlayContent {
@@ -443,6 +439,9 @@ button.DialogButton::-moz-focus-inner {
 
 .ModalPosition:focus {
   outline: none; }
+
+.ModalPosition.Hidden .ModalPosition_Content {
+  visibility: hidden; }
 
 .ModalDialogPopup .ModalPosition_Dismiss {
   display: none; }
@@ -1022,6 +1021,10 @@ button.TextButton:focus {
 .DialogOnOffToggle_Option.Active {
   color: #dfe3e6;
   background: #2d73ff; }
+
+.DialogOnOffToggle_Option.Off.Active {
+  color: #dfe3e6;
+  background: #5f6875; }
 
 .DialogOnOffToggle_Option:hover {
   color: white; }

@@ -629,6 +629,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voiceclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voiceencoder_opus.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voiceencoder_silk.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrcommon.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrpathregistry.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vthumbstick.o
@@ -844,6 +845,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../public/tier1/utlvector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../steamexe/osx/ipctool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/RateLimiter.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/accountutils.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/appownershipticket.cpp
@@ -940,6 +942,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logger.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logger.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/mach_helpers.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/message_type_info.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/messageobjects.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msg.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msg.h
@@ -948,6 +951,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msgprotobuf.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/net.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/net.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/net_misc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/netconnection.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/netconnection.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/netconnectionbuffer.cpp
@@ -1181,6 +1185,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/bin/osx32/libc++/libprotobuf.a(zero_copy_stream_impl_lite.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/descriptor.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/extension_set.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/generated_enum_reflection.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/generated_message_reflection.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/generated_message_util.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/io/coded_stream.h

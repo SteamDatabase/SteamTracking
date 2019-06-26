@@ -31,6 +31,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledfunction.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_base.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_clientserver_login.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/tcpconnection.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/tcphost.cpp
@@ -39,9 +40,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/udpsocket.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/audiodecoder.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecoderlibav.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videofilestream.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videomanifest.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoplayer.cpp
@@ -81,7 +80,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/circularbuffer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/mempool.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/tsmempool.cpp

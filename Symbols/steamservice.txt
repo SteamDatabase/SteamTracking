@@ -1,6 +1,8 @@
  B CCDDBAppDetailCommon::default_instance_
+ B CClanEventData::default_instance_
  B CClanEventUserNewsTuple::default_instance_
  B CClanMatchEventByRange::default_instance_
+ B CCommunity_ClanAnnouncementInfo::default_instance_
  B CCuratorPreferences::default_instance_
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
  B CLocalizationToken::default_instance_
@@ -37,6 +39,21 @@
  B CMemoryPool::g_ReportFunc
  B CMsgAppRights::default_instance_
  B CMsgAuthTicket::default_instance_
+ B CMsgClientAccountInfo::default_instance_
+ B CMsgClientChallengeRequest::default_instance_
+ B CMsgClientChallengeResponse::default_instance_
+ B CMsgClientHeartBeat::default_instance_
+ B CMsgClientLogOff::default_instance_
+ B CMsgClientLoggedOff::default_instance_
+ B CMsgClientLogon::default_instance_
+ B CMsgClientLogonResponse::default_instance_
+ B CMsgClientNewLoginKey::default_instance_
+ B CMsgClientNewLoginKeyAccepted::default_instance_
+ B CMsgClientRequestWebAPIAuthenticateUserNonce::default_instance_
+ B CMsgClientRequestWebAPIAuthenticateUserNonceResponse::default_instance_
+ B CMsgClientSecret::default_instance_
+ B CMsgClientServerTimestampRequest::default_instance_
+ B CMsgClientServerTimestampResponse::default_instance_
  B CMsgIPAddress::default_instance_
  B CMsgMulti::default_instance_
  B CMsgProtoBufHeader::default_instance_
@@ -89,6 +106,7 @@
  B SteamVProf::g_mutexProfileDump
  B app_pkey_methods
  B force_php_generation
+ B gConVarEnableLogTearOff
  B gConVarEnableSpewThrottle
  B gConVarSpewThrottleNagFrequencyMs
  B gConVarSpewThrottlePeriodMs
@@ -136,6 +154,8 @@
  B g_pThreadLocalHashMapSteamIDWatches
  B g_pThreadLocalHashMapTxnIDWatches
  B g_rgunIPThisBoxV6
+ B g_unPrivateIPThisBox
+ B g_unPublicIPThisBox
  B g_vecTempTextBuffer
  B k_SysIDNil
  B k_netadrNull
@@ -221,6 +241,7 @@
  D typeinfo for CBaseFrameFunction
  D typeinfo for CBaseScheduledFunction
  D typeinfo for CCDDBAppDetailCommon
+ D typeinfo for CClanEventData
  D typeinfo for CClanEventUserNewsTuple
  D typeinfo for CClanMatchEventByRange
  D typeinfo for CClientInstallUtils
@@ -228,6 +249,7 @@
  D typeinfo for CClientModuleManagerAsync
  D typeinfo for CClientModuleManagerBase
  D typeinfo for CClientSecureDesktop
+ D typeinfo for CCommunity_ClanAnnouncementInfo
  D typeinfo for CCrossProcessPipe
  D typeinfo for CCryptoKeyBase
  D typeinfo for CCryptoKeyBase_RawBuffer
@@ -242,6 +264,21 @@
  D typeinfo for CLocalizationToken
  D typeinfo for CMsgAppRights
  D typeinfo for CMsgAuthTicket
+ D typeinfo for CMsgClientAccountInfo
+ D typeinfo for CMsgClientChallengeRequest
+ D typeinfo for CMsgClientChallengeResponse
+ D typeinfo for CMsgClientHeartBeat
+ D typeinfo for CMsgClientLogOff
+ D typeinfo for CMsgClientLoggedOff
+ D typeinfo for CMsgClientLogon
+ D typeinfo for CMsgClientLogonResponse
+ D typeinfo for CMsgClientNewLoginKey
+ D typeinfo for CMsgClientNewLoginKeyAccepted
+ D typeinfo for CMsgClientRequestWebAPIAuthenticateUserNonce
+ D typeinfo for CMsgClientRequestWebAPIAuthenticateUserNonceResponse
+ D typeinfo for CMsgClientSecret
+ D typeinfo for CMsgClientServerTimestampRequest
+ D typeinfo for CMsgClientServerTimestampResponse
  D typeinfo for CMsgIPAddress
  D typeinfo for CMsgMulti
  D typeinfo for CMsgProtoBufHeader
@@ -305,6 +342,7 @@
  D vtable for CBaseFrameFunction
  D vtable for CBaseScheduledFunction
  D vtable for CCDDBAppDetailCommon
+ D vtable for CClanEventData
  D vtable for CClanEventUserNewsTuple
  D vtable for CClanMatchEventByRange
  D vtable for CClientInstallUtils
@@ -312,6 +350,7 @@
  D vtable for CClientModuleManagerAsync
  D vtable for CClientModuleManagerBase
  D vtable for CClientSecureDesktop
+ D vtable for CCommunity_ClanAnnouncementInfo
  D vtable for CCrossProcessPipe
  D vtable for CCryptoKeyBase_RawBuffer
  D vtable for CCuratorPreferences
@@ -325,6 +364,21 @@
  D vtable for CLocalizationToken
  D vtable for CMsgAppRights
  D vtable for CMsgAuthTicket
+ D vtable for CMsgClientAccountInfo
+ D vtable for CMsgClientChallengeRequest
+ D vtable for CMsgClientChallengeResponse
+ D vtable for CMsgClientHeartBeat
+ D vtable for CMsgClientLogOff
+ D vtable for CMsgClientLoggedOff
+ D vtable for CMsgClientLogon
+ D vtable for CMsgClientLogonResponse
+ D vtable for CMsgClientNewLoginKey
+ D vtable for CMsgClientNewLoginKeyAccepted
+ D vtable for CMsgClientRequestWebAPIAuthenticateUserNonce
+ D vtable for CMsgClientRequestWebAPIAuthenticateUserNonceResponse
+ D vtable for CMsgClientSecret
+ D vtable for CMsgClientServerTimestampRequest
+ D vtable for CMsgClientServerTimestampResponse
  D vtable for CMsgIPAddress
  D vtable for CMsgMulti
  D vtable for CMsgProtoBufHeader
@@ -378,6 +432,7 @@
  R typeinfo name for CBaseFrameFunction
  R typeinfo name for CBaseScheduledFunction
  R typeinfo name for CCDDBAppDetailCommon
+ R typeinfo name for CClanEventData
  R typeinfo name for CClanEventUserNewsTuple
  R typeinfo name for CClanMatchEventByRange
  R typeinfo name for CClientInstallUtils
@@ -385,6 +440,7 @@
  R typeinfo name for CClientModuleManagerAsync
  R typeinfo name for CClientModuleManagerBase
  R typeinfo name for CClientSecureDesktop
+ R typeinfo name for CCommunity_ClanAnnouncementInfo
  R typeinfo name for CCrossProcessPipe
  R typeinfo name for CCryptoKeyBase
  R typeinfo name for CCryptoKeyBase_RawBuffer
@@ -399,6 +455,21 @@
  R typeinfo name for CLocalizationToken
  R typeinfo name for CMsgAppRights
  R typeinfo name for CMsgAuthTicket
+ R typeinfo name for CMsgClientAccountInfo
+ R typeinfo name for CMsgClientChallengeRequest
+ R typeinfo name for CMsgClientChallengeResponse
+ R typeinfo name for CMsgClientHeartBeat
+ R typeinfo name for CMsgClientLogOff
+ R typeinfo name for CMsgClientLoggedOff
+ R typeinfo name for CMsgClientLogon
+ R typeinfo name for CMsgClientLogonResponse
+ R typeinfo name for CMsgClientNewLoginKey
+ R typeinfo name for CMsgClientNewLoginKeyAccepted
+ R typeinfo name for CMsgClientRequestWebAPIAuthenticateUserNonce
+ R typeinfo name for CMsgClientRequestWebAPIAuthenticateUserNonceResponse
+ R typeinfo name for CMsgClientSecret
+ R typeinfo name for CMsgClientServerTimestampRequest
+ R typeinfo name for CMsgClientServerTimestampResponse
  R typeinfo name for CMsgIPAddress
  R typeinfo name for CMsgMulti
  R typeinfo name for CMsgProtoBufHeader
@@ -706,6 +777,30 @@
  T CCDDBAppDetailCommon::set_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCDDBAppDetailCommon::set_propagation(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCDDBAppDetailCommon::~CCDDBAppDetailCommon()
+ T CClanEventData::ByteSize() const
+ T CClanEventData::CClanEventData()
+ T CClanEventData::Clear()
+ T CClanEventData::GetCachedSize() const
+ T CClanEventData::GetMetadata() const
+ T CClanEventData::IsInitialized() const
+ T CClanEventData::MergeFrom(CClanEventData const&)
+ T CClanEventData::New() const
+ T CClanEventData::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CClanEventData::SetCachedSize(int) const
+ T CClanEventData::SharedCtor()
+ T CClanEventData::SharedDtor()
+ T CClanEventData::mutable_announcement_body()
+ T CClanEventData::mutable_event_name()
+ T CClanEventData::mutable_event_notes()
+ T CClanEventData::mutable_jsondata()
+ T CClanEventData::mutable_server_address()
+ T CClanEventData::mutable_server_password()
+ T CClanEventData::set_event_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CClanEventData::set_event_notes(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CClanEventData::set_jsondata(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CClanEventData::set_server_address(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CClanEventData::set_server_password(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CClanEventData::~CClanEventData()
  T CClanEventUserNewsTuple::ByteSize() const
  T CClanEventUserNewsTuple::CClanEventUserNewsTuple()
  T CClanEventUserNewsTuple::Clear()
@@ -768,6 +863,23 @@
  T CClientSecureDesktop::SendSAS()
  T CClientSecureDesktop::StopStreaming()
  T CClientSecureDesktop::~CClientSecureDesktop()
+ T CCommunity_ClanAnnouncementInfo::ByteSize() const
+ T CCommunity_ClanAnnouncementInfo::CCommunity_ClanAnnouncementInfo()
+ T CCommunity_ClanAnnouncementInfo::Clear()
+ T CCommunity_ClanAnnouncementInfo::GetCachedSize() const
+ T CCommunity_ClanAnnouncementInfo::GetMetadata() const
+ T CCommunity_ClanAnnouncementInfo::IsInitialized() const
+ T CCommunity_ClanAnnouncementInfo::MergeFrom(CCommunity_ClanAnnouncementInfo const&)
+ T CCommunity_ClanAnnouncementInfo::New() const
+ T CCommunity_ClanAnnouncementInfo::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CCommunity_ClanAnnouncementInfo::SetCachedSize(int) const
+ T CCommunity_ClanAnnouncementInfo::SharedCtor()
+ T CCommunity_ClanAnnouncementInfo::SharedDtor()
+ T CCommunity_ClanAnnouncementInfo::mutable_body()
+ T CCommunity_ClanAnnouncementInfo::mutable_headline()
+ T CCommunity_ClanAnnouncementInfo::set_body(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCommunity_ClanAnnouncementInfo::set_headline(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CCommunity_ClanAnnouncementInfo::~CCommunity_ClanAnnouncementInfo()
  T CCompletionPortManager::AllocCompletionData(EIOType, void (*)(CompletionData_t*), int, unsigned int, unsigned long long, void*, void*, void*)
  T CCompletionPortManager::CCompletionPortManager()
  T CCompletionPortManager::DispatchCompletedItem(CompletionData_t*, unsigned int, unsigned int, int*)
@@ -876,6 +988,16 @@
  T CFrameFunctionMgr::Shutdown()
  T CFrameFunctionMgr::~CFrameFunctionMgr()
  T CHTTPClientMgr::Validate(CValidator&, char const*)
+ T CIPAddress::HasIP() const
+ T CIPAddress::SetFromSockadr(void const*, unsigned long, unsigned short*)
+ T CIPAddress::SetFromString(char const*, unsigned short*)
+ T CIPAddress::ToString(char*, unsigned int, unsigned short const*) const
+ T CIPAddress::operator==(CIPAddress const&) const
+ T CIPAndPort::CompareAdr(CIPAndPort const&, bool) const
+ T CIPAndPort::IsValid() const
+ T CIPAndPort::SetFromSocket(int)
+ T CIPAndPort::ToSockadr(void*, unsigned long) const
+ T CIPAndPort::ToString(char*, unsigned int, bool) const
  T CIPCLogCounts::AddIPCLogCount(char const*, char const*, char const*)
  T CIPCLogCounts::IPCLogCounts_t::IPCLogCounts_t(CIPCLogCounts::IPCLogCounts_t const&)
  T CIPCLogCounts::SpewIPCLogCount()
@@ -1028,6 +1150,257 @@
  T CMsgAuthTicket::mutable_ticket()
  T CMsgAuthTicket::set_ticket(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgAuthTicket::~CMsgAuthTicket()
+ T CMsgClientAccountInfo::ByteSize() const
+ T CMsgClientAccountInfo::CMsgClientAccountInfo()
+ T CMsgClientAccountInfo::Clear()
+ T CMsgClientAccountInfo::GetCachedSize() const
+ T CMsgClientAccountInfo::GetMetadata() const
+ T CMsgClientAccountInfo::IsInitialized() const
+ T CMsgClientAccountInfo::MergeFrom(CMsgClientAccountInfo const&)
+ T CMsgClientAccountInfo::New() const
+ T CMsgClientAccountInfo::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientAccountInfo::SetCachedSize(int) const
+ T CMsgClientAccountInfo::SharedCtor()
+ T CMsgClientAccountInfo::SharedDtor()
+ T CMsgClientAccountInfo::mutable_facebook_name()
+ T CMsgClientAccountInfo::mutable_ip_country()
+ T CMsgClientAccountInfo::mutable_persona_name()
+ T CMsgClientAccountInfo::mutable_steamguard_machine_name_user_chosen()
+ T CMsgClientAccountInfo::set_facebook_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientAccountInfo::set_ip_country(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientAccountInfo::set_persona_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientAccountInfo::set_steamguard_machine_name_user_chosen(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientAccountInfo::~CMsgClientAccountInfo()
+ T CMsgClientChallengeRequest::ByteSize() const
+ T CMsgClientChallengeRequest::CMsgClientChallengeRequest()
+ T CMsgClientChallengeRequest::Clear()
+ T CMsgClientChallengeRequest::GetCachedSize() const
+ T CMsgClientChallengeRequest::GetMetadata() const
+ T CMsgClientChallengeRequest::IsInitialized() const
+ T CMsgClientChallengeRequest::MergeFrom(CMsgClientChallengeRequest const&)
+ T CMsgClientChallengeRequest::New() const
+ T CMsgClientChallengeRequest::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientChallengeRequest::SetCachedSize(int) const
+ T CMsgClientChallengeRequest::~CMsgClientChallengeRequest()
+ T CMsgClientChallengeResponse::ByteSize() const
+ T CMsgClientChallengeResponse::CMsgClientChallengeResponse()
+ T CMsgClientChallengeResponse::Clear()
+ T CMsgClientChallengeResponse::GetCachedSize() const
+ T CMsgClientChallengeResponse::GetMetadata() const
+ T CMsgClientChallengeResponse::IsInitialized() const
+ T CMsgClientChallengeResponse::MergeFrom(CMsgClientChallengeResponse const&)
+ T CMsgClientChallengeResponse::New() const
+ T CMsgClientChallengeResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientChallengeResponse::SetCachedSize(int) const
+ T CMsgClientChallengeResponse::~CMsgClientChallengeResponse()
+ T CMsgClientHeartBeat::ByteSize() const
+ T CMsgClientHeartBeat::CMsgClientHeartBeat()
+ T CMsgClientHeartBeat::Clear()
+ T CMsgClientHeartBeat::GetCachedSize() const
+ T CMsgClientHeartBeat::GetMetadata() const
+ T CMsgClientHeartBeat::IsInitialized() const
+ T CMsgClientHeartBeat::MergeFrom(CMsgClientHeartBeat const&)
+ T CMsgClientHeartBeat::New() const
+ T CMsgClientHeartBeat::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientHeartBeat::SetCachedSize(int) const
+ T CMsgClientHeartBeat::~CMsgClientHeartBeat()
+ T CMsgClientLogOff::ByteSize() const
+ T CMsgClientLogOff::CMsgClientLogOff()
+ T CMsgClientLogOff::Clear()
+ T CMsgClientLogOff::GetCachedSize() const
+ T CMsgClientLogOff::GetMetadata() const
+ T CMsgClientLogOff::IsInitialized() const
+ T CMsgClientLogOff::MergeFrom(CMsgClientLogOff const&)
+ T CMsgClientLogOff::New() const
+ T CMsgClientLogOff::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientLogOff::SetCachedSize(int) const
+ T CMsgClientLogOff::~CMsgClientLogOff()
+ T CMsgClientLoggedOff::ByteSize() const
+ T CMsgClientLoggedOff::CMsgClientLoggedOff()
+ T CMsgClientLoggedOff::Clear()
+ T CMsgClientLoggedOff::GetCachedSize() const
+ T CMsgClientLoggedOff::GetMetadata() const
+ T CMsgClientLoggedOff::IsInitialized() const
+ T CMsgClientLoggedOff::MergeFrom(CMsgClientLoggedOff const&)
+ T CMsgClientLoggedOff::New() const
+ T CMsgClientLoggedOff::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientLoggedOff::SetCachedSize(int) const
+ T CMsgClientLoggedOff::~CMsgClientLoggedOff()
+ T CMsgClientLogon::ByteSize() const
+ T CMsgClientLogon::CMsgClientLogon()
+ T CMsgClientLogon::Clear()
+ T CMsgClientLogon::GetCachedSize() const
+ T CMsgClientLogon::GetMetadata() const
+ T CMsgClientLogon::IsInitialized() const
+ T CMsgClientLogon::MergeFrom(CMsgClientLogon const&)
+ T CMsgClientLogon::New() const
+ T CMsgClientLogon::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientLogon::SetCachedSize(int) const
+ T CMsgClientLogon::SharedCtor()
+ T CMsgClientLogon::SharedDtor()
+ T CMsgClientLogon::mutable_account_name()
+ T CMsgClientLogon::mutable_anon_user_target_account_name()
+ T CMsgClientLogon::mutable_auth_code()
+ T CMsgClientLogon::mutable_client_language()
+ T CMsgClientLogon::mutable_country_override()
+ T CMsgClientLogon::mutable_email_address()
+ T CMsgClientLogon::mutable_embedded_client_secret()
+ T CMsgClientLogon::mutable_game_server_token()
+ T CMsgClientLogon::mutable_login_key()
+ T CMsgClientLogon::mutable_machine_id()
+ T CMsgClientLogon::mutable_machine_name()
+ T CMsgClientLogon::mutable_machine_name_userchosen()
+ T CMsgClientLogon::mutable_obfuscated_private_ip()
+ T CMsgClientLogon::mutable_otp_identifier()
+ T CMsgClientLogon::mutable_password()
+ T CMsgClientLogon::mutable_public_ip()
+ T CMsgClientLogon::mutable_sha_sentryfile()
+ T CMsgClientLogon::mutable_sony_psn_name()
+ T CMsgClientLogon::mutable_sony_psn_service_id()
+ T CMsgClientLogon::mutable_sony_psn_ticket()
+ T CMsgClientLogon::mutable_steam2_auth_ticket()
+ T CMsgClientLogon::mutable_two_factor_code()
+ T CMsgClientLogon::mutable_web_logon_nonce()
+ T CMsgClientLogon::mutable_wine_version()
+ T CMsgClientLogon::set_account_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_anon_user_target_account_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_auth_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_client_language(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_country_override(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_email_address(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_game_server_token(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_login_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_machine_id(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_machine_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_machine_name_userchosen(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_otp_identifier(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_password(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_sha_sentryfile(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_sony_psn_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_sony_psn_service_id(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_sony_psn_ticket(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_steam2_auth_ticket(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_two_factor_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_web_logon_nonce(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::set_wine_version(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogon::~CMsgClientLogon()
+ T CMsgClientLogonResponse::ByteSize() const
+ T CMsgClientLogonResponse::CMsgClientLogonResponse()
+ T CMsgClientLogonResponse::Clear()
+ T CMsgClientLogonResponse::GetCachedSize() const
+ T CMsgClientLogonResponse::GetMetadata() const
+ T CMsgClientLogonResponse::IsInitialized() const
+ T CMsgClientLogonResponse::MergeFrom(CMsgClientLogonResponse const&)
+ T CMsgClientLogonResponse::New() const
+ T CMsgClientLogonResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientLogonResponse::SetCachedSize(int) const
+ T CMsgClientLogonResponse::SharedCtor()
+ T CMsgClientLogonResponse::SharedDtor()
+ T CMsgClientLogonResponse::mutable_email_domain()
+ T CMsgClientLogonResponse::mutable_ip_country_code()
+ T CMsgClientLogonResponse::mutable_parental_setting_signature()
+ T CMsgClientLogonResponse::mutable_parental_settings()
+ T CMsgClientLogonResponse::mutable_public_ip()
+ T CMsgClientLogonResponse::mutable_steam2_ticket()
+ T CMsgClientLogonResponse::mutable_vanity_url()
+ T CMsgClientLogonResponse::mutable_webapi_authenticate_user_nonce()
+ T CMsgClientLogonResponse::set_email_domain(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_ip_country_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_parental_setting_signature(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_parental_settings(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_steam2_ticket(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_vanity_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::set_webapi_authenticate_user_nonce(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientLogonResponse::~CMsgClientLogonResponse()
+ T CMsgClientNewLoginKey::ByteSize() const
+ T CMsgClientNewLoginKey::CMsgClientNewLoginKey()
+ T CMsgClientNewLoginKey::Clear()
+ T CMsgClientNewLoginKey::GetCachedSize() const
+ T CMsgClientNewLoginKey::GetMetadata() const
+ T CMsgClientNewLoginKey::IsInitialized() const
+ T CMsgClientNewLoginKey::MergeFrom(CMsgClientNewLoginKey const&)
+ T CMsgClientNewLoginKey::New() const
+ T CMsgClientNewLoginKey::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientNewLoginKey::SetCachedSize(int) const
+ T CMsgClientNewLoginKey::SharedCtor()
+ T CMsgClientNewLoginKey::SharedDtor()
+ T CMsgClientNewLoginKey::mutable_login_key()
+ T CMsgClientNewLoginKey::set_login_key(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientNewLoginKey::~CMsgClientNewLoginKey()
+ T CMsgClientNewLoginKeyAccepted::ByteSize() const
+ T CMsgClientNewLoginKeyAccepted::CMsgClientNewLoginKeyAccepted()
+ T CMsgClientNewLoginKeyAccepted::Clear()
+ T CMsgClientNewLoginKeyAccepted::GetCachedSize() const
+ T CMsgClientNewLoginKeyAccepted::GetMetadata() const
+ T CMsgClientNewLoginKeyAccepted::IsInitialized() const
+ T CMsgClientNewLoginKeyAccepted::MergeFrom(CMsgClientNewLoginKeyAccepted const&)
+ T CMsgClientNewLoginKeyAccepted::New() const
+ T CMsgClientNewLoginKeyAccepted::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientNewLoginKeyAccepted::SetCachedSize(int) const
+ T CMsgClientNewLoginKeyAccepted::~CMsgClientNewLoginKeyAccepted()
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::ByteSize() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::CMsgClientRequestWebAPIAuthenticateUserNonce()
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::Clear()
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::GetCachedSize() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::GetMetadata() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::IsInitialized() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::MergeFrom(CMsgClientRequestWebAPIAuthenticateUserNonce const&)
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::New() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::SetCachedSize(int) const
+ T CMsgClientRequestWebAPIAuthenticateUserNonce::~CMsgClientRequestWebAPIAuthenticateUserNonce()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::ByteSize() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::CMsgClientRequestWebAPIAuthenticateUserNonceResponse()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::Clear()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::GetCachedSize() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::GetMetadata() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::IsInitialized() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::MergeFrom(CMsgClientRequestWebAPIAuthenticateUserNonceResponse const&)
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::New() const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::SetCachedSize(int) const
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::SharedCtor()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::SharedDtor()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::mutable_webapi_authenticate_user_nonce()
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::set_webapi_authenticate_user_nonce(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientRequestWebAPIAuthenticateUserNonceResponse::~CMsgClientRequestWebAPIAuthenticateUserNonceResponse()
+ T CMsgClientSecret::ByteSize() const
+ T CMsgClientSecret::CMsgClientSecret()
+ T CMsgClientSecret::Clear()
+ T CMsgClientSecret::GetCachedSize() const
+ T CMsgClientSecret::GetMetadata() const
+ T CMsgClientSecret::IsInitialized() const
+ T CMsgClientSecret::MergeFrom(CMsgClientSecret const&)
+ T CMsgClientSecret::New() const
+ T CMsgClientSecret::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientSecret::SetCachedSize(int) const
+ T CMsgClientSecret::SharedCtor()
+ T CMsgClientSecret::SharedDtor()
+ T CMsgClientSecret::mutable_hmac()
+ T CMsgClientSecret::set_hmac(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgClientSecret::~CMsgClientSecret()
+ T CMsgClientServerTimestampRequest::ByteSize() const
+ T CMsgClientServerTimestampRequest::CMsgClientServerTimestampRequest()
+ T CMsgClientServerTimestampRequest::Clear()
+ T CMsgClientServerTimestampRequest::GetCachedSize() const
+ T CMsgClientServerTimestampRequest::GetMetadata() const
+ T CMsgClientServerTimestampRequest::IsInitialized() const
+ T CMsgClientServerTimestampRequest::MergeFrom(CMsgClientServerTimestampRequest const&)
+ T CMsgClientServerTimestampRequest::New() const
+ T CMsgClientServerTimestampRequest::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientServerTimestampRequest::SetCachedSize(int) const
+ T CMsgClientServerTimestampRequest::~CMsgClientServerTimestampRequest()
+ T CMsgClientServerTimestampResponse::ByteSize() const
+ T CMsgClientServerTimestampResponse::CMsgClientServerTimestampResponse()
+ T CMsgClientServerTimestampResponse::Clear()
+ T CMsgClientServerTimestampResponse::GetCachedSize() const
+ T CMsgClientServerTimestampResponse::GetMetadata() const
+ T CMsgClientServerTimestampResponse::IsInitialized() const
+ T CMsgClientServerTimestampResponse::MergeFrom(CMsgClientServerTimestampResponse const&)
+ T CMsgClientServerTimestampResponse::New() const
+ T CMsgClientServerTimestampResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgClientServerTimestampResponse::SetCachedSize(int) const
+ T CMsgClientServerTimestampResponse::~CMsgClientServerTimestampResponse()
  T CMsgIPAddress::ByteSize() const
  T CMsgIPAddress::CMsgIPAddress()
  T CMsgIPAddress::Clear()
@@ -1040,6 +1413,7 @@
  T CMsgIPAddress::SetCachedSize(int) const
  T CMsgIPAddress::SharedCtor()
  T CMsgIPAddress::clear_ip()
+ T CMsgIPAddress::default_instance()
  T CMsgIPAddress::mutable_v6()
  T CMsgIPAddress::set_v6(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgIPAddress::~CMsgIPAddress()
@@ -1958,6 +2332,7 @@
  T ConVar::IsRegistered() const
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
+ T ConVar::SetFromConVarsVDF(char const*)
  T ConVar::SetReplicated()
  T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
@@ -2334,7 +2709,7 @@
  T EVP_sha384
  T EVP_sha512
  T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, char const*, ...)
- T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, netadr_t const&, unsigned long long const&, char const*, __va_list_tag*)
+ T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, __va_list_tag*)
  T Error
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T FillDataStruct(_finddata_t*)
@@ -3044,15 +3419,6 @@
  T lh_retrieve
  T lh_strhash
  T md5_block_asm_data_order
- T netadr_t::CompareAdr(netadr_t const&, bool) const
- T netadr_t::GetIP() const
- T netadr_t::HasIP() const
- T netadr_t::IsValid() const
- T netadr_t::SetFromSockadr(void const*, unsigned long)
- T netadr_t::SetFromSocket(int)
- T netadr_t::SetFromString(char const*)
- T netadr_t::ToSockadr(void*, unsigned long) const
- T netadr_t::ToString(char*, unsigned int, bool) const
  T non-virtual thunk to ClientProcessMonitor::CClientProcessMonitor::BGetCachedProcessData(unsigned int, VacProcessMonitor::ActiveProcessData_t const**) const
  T non-virtual thunk to ClientProcessMonitor::CClientProcessMonitor::NGetNewEvents(unsigned int, EventHeader_t const* const**, unsigned int, void*, unsigned long) const
  T non-virtual thunk to ClientProcessMonitor::CClientProcessMonitor::NGetProcessCount() const
@@ -3065,8 +3431,11 @@
  T private_Camellia_set_key
  T private_RC4_set_key
  T protobuf_AddDesc_steammessages_5fbase_2eproto()
+ T protobuf_AddDesc_steammessages_5fclientserver_5flogin_2eproto()
  T protobuf_AssignDesc_steammessages_5fbase_2eproto()
+ T protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()
  T protobuf_ShutdownFile_steammessages_5fbase_2eproto()
+ T protobuf_ShutdownFile_steammessages_5fclientserver_5flogin_2eproto()
  T rsaz_1024_gather5_avx2
  T rsaz_1024_mul_avx2
  T rsaz_1024_norm2red_avx2
@@ -3293,10 +3662,14 @@
  atoll
  b (anonymous namespace)::CCDDBAppDetailCommon_descriptor_
  b (anonymous namespace)::CCDDBAppDetailCommon_reflection_
+ b (anonymous namespace)::CClanEventData_descriptor_
+ b (anonymous namespace)::CClanEventData_reflection_
  b (anonymous namespace)::CClanEventUserNewsTuple_descriptor_
  b (anonymous namespace)::CClanEventUserNewsTuple_reflection_
  b (anonymous namespace)::CClanMatchEventByRange_descriptor_
  b (anonymous namespace)::CClanMatchEventByRange_reflection_
+ b (anonymous namespace)::CCommunity_ClanAnnouncementInfo_descriptor_
+ b (anonymous namespace)::CCommunity_ClanAnnouncementInfo_reflection_
  b (anonymous namespace)::CCuratorPreferences_descriptor_
  b (anonymous namespace)::CCuratorPreferences_reflection_
  b (anonymous namespace)::CLocalizationToken_descriptor_
@@ -3305,6 +3678,36 @@
  b (anonymous namespace)::CMsgAppRights_reflection_
  b (anonymous namespace)::CMsgAuthTicket_descriptor_
  b (anonymous namespace)::CMsgAuthTicket_reflection_
+ b (anonymous namespace)::CMsgClientAccountInfo_descriptor_
+ b (anonymous namespace)::CMsgClientAccountInfo_reflection_
+ b (anonymous namespace)::CMsgClientChallengeRequest_descriptor_
+ b (anonymous namespace)::CMsgClientChallengeRequest_reflection_
+ b (anonymous namespace)::CMsgClientChallengeResponse_descriptor_
+ b (anonymous namespace)::CMsgClientChallengeResponse_reflection_
+ b (anonymous namespace)::CMsgClientHeartBeat_descriptor_
+ b (anonymous namespace)::CMsgClientHeartBeat_reflection_
+ b (anonymous namespace)::CMsgClientLogOff_descriptor_
+ b (anonymous namespace)::CMsgClientLogOff_reflection_
+ b (anonymous namespace)::CMsgClientLoggedOff_descriptor_
+ b (anonymous namespace)::CMsgClientLoggedOff_reflection_
+ b (anonymous namespace)::CMsgClientLogonResponse_descriptor_
+ b (anonymous namespace)::CMsgClientLogonResponse_reflection_
+ b (anonymous namespace)::CMsgClientLogon_descriptor_
+ b (anonymous namespace)::CMsgClientLogon_reflection_
+ b (anonymous namespace)::CMsgClientNewLoginKeyAccepted_descriptor_
+ b (anonymous namespace)::CMsgClientNewLoginKeyAccepted_reflection_
+ b (anonymous namespace)::CMsgClientNewLoginKey_descriptor_
+ b (anonymous namespace)::CMsgClientNewLoginKey_reflection_
+ b (anonymous namespace)::CMsgClientRequestWebAPIAuthenticateUserNonceResponse_descriptor_
+ b (anonymous namespace)::CMsgClientRequestWebAPIAuthenticateUserNonceResponse_reflection_
+ b (anonymous namespace)::CMsgClientRequestWebAPIAuthenticateUserNonce_descriptor_
+ b (anonymous namespace)::CMsgClientRequestWebAPIAuthenticateUserNonce_reflection_
+ b (anonymous namespace)::CMsgClientSecret_descriptor_
+ b (anonymous namespace)::CMsgClientSecret_reflection_
+ b (anonymous namespace)::CMsgClientServerTimestampRequest_descriptor_
+ b (anonymous namespace)::CMsgClientServerTimestampRequest_reflection_
+ b (anonymous namespace)::CMsgClientServerTimestampResponse_descriptor_
+ b (anonymous namespace)::CMsgClientServerTimestampResponse_reflection_
  b (anonymous namespace)::CMsgIPAddress_default_oneof_instance_
  b (anonymous namespace)::CMsgIPAddress_descriptor_
  b (anonymous namespace)::CMsgIPAddress_reflection_
@@ -3315,6 +3718,7 @@
  b (anonymous namespace)::CMsgProtoBufHeader_reflection_
  b (anonymous namespace)::CMsgProtobufWrapped_descriptor_
  b (anonymous namespace)::CMsgProtobufWrapped_reflection_
+ b (anonymous namespace)::EProtoClanEventType_descriptor_
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
@@ -3489,10 +3893,10 @@
  b mh_mode
  b name_funcs_stack
  b names_lh
- b netadrNone
  b num_disable
  b pbe_algs
  b protobuf_AddDesc_steammessages_5fbase_2eproto()::already_here
+ b protobuf_AddDesc_steammessages_5fclientserver_5flogin_2eproto()::already_here
  b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
  b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtoBufHeader_offsets_
  b realloc_debug_func
@@ -4009,14 +4413,31 @@
  r one
  r primes
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanEventData_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanEventUserNewsTuple_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanMatchEventByRange_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCommunity_ClanAnnouncementInfo_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCuratorPreferences_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CLocalizationToken_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientAccountInfo_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientChallengeRequest_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientChallengeResponse_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientHeartBeat_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientLogOff_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientLoggedOff_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientLogonResponse_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientLogon_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientNewLoginKeyAccepted_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientNewLoginKey_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientRequestWebAPIAuthenticateUserNonceResponse_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientRequestWebAPIAuthenticateUserNonce_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientSecret_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientServerTimestampRequest_offsets_
+ r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientServerTimestampResponse_offsets_
  r s_rgCRCTable_Standard
  r s_szSignature2Name
  r s_szSignatureName
@@ -4216,6 +4637,7 @@
  t _GLOBAL__sub_I_stdafx.cpp
  t _GLOBAL__sub_I_steamid.cpp
  t _GLOBAL__sub_I_steammessages_base.pb.cc
+ t _GLOBAL__sub_I_steammessages_clientserver_login.pb.cc
  t _GLOBAL__sub_I_stime.cpp
  t _GLOBAL__sub_I_string_misc.cpp
  t _GLOBAL__sub_I_strtools.cpp

@@ -284,6 +284,26 @@
 	visibility: visible;
 }
 
+.RestrictedStreamingActive .RestrictedStreamingVisible
+{
+	visibility: visible;
+}
+
+.RestrictedStreamingActive .RestrictedStreamingHidden
+{
+	visibility: collapse;
+}
+
+.RestrictedStreamingVisible
+{
+	visibility: collapse;
+}
+
+.RestrictedStreamingHidden
+{
+	visibility: visible;
+}
+
 #MusicControllerPanel:descendantfocus .SystemButton:hover
 {
 	transition-duration: 0.25s !immediate;

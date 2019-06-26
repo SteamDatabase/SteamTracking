@@ -40,6 +40,7 @@
  B CMsgFinishedRequest::default_instance_
  B CMsgFocusedNodeText::default_instance_
  B CMsgFocusedNodeTextResponse::default_instance_
+ B CMsgForcePopupsToDirectHWND::default_instance_
  B CMsgFullRepaint::default_instance_
  B CMsgGameOverlayTargetTextureID::default_instance_
  B CMsgGameOverlayTexturePaint::default_instance_
@@ -876,6 +877,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D typeinfo for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgFind>
+ D typeinfo for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  D typeinfo for CHTMLProtoBufMsg<CMsgFullRepaint>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoBack>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoForward>
@@ -955,6 +957,7 @@
  D typeinfo for CMsgFinishedRequest
  D typeinfo for CMsgFocusedNodeText
  D typeinfo for CMsgFocusedNodeTextResponse
+ D typeinfo for CMsgForcePopupsToDirectHWND
  D typeinfo for CMsgFullRepaint
  D typeinfo for CMsgGameOverlayTargetTextureID
  D typeinfo for CMsgGameOverlayTexturePaint
@@ -1746,6 +1749,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D vtable for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D vtable for CHTMLProtoBufMsg<CMsgFind>
+ D vtable for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  D vtable for CHTMLProtoBufMsg<CMsgFullRepaint>
  D vtable for CHTMLProtoBufMsg<CMsgGoBack>
  D vtable for CHTMLProtoBufMsg<CMsgGoForward>
@@ -1825,6 +1829,7 @@
  D vtable for CMsgFinishedRequest
  D vtable for CMsgFocusedNodeText
  D vtable for CMsgFocusedNodeTextResponse
+ D vtable for CMsgForcePopupsToDirectHWND
  D vtable for CMsgFullRepaint
  D vtable for CMsgGameOverlayTargetTextureID
  D vtable for CMsgGameOverlayTexturePaint
@@ -2099,6 +2104,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgExitFullScreen>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFind>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFullRepaint>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoBack>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoForward>
@@ -2178,6 +2184,7 @@
  R typeinfo name for CMsgFinishedRequest
  R typeinfo name for CMsgFocusedNodeText
  R typeinfo name for CMsgFocusedNodeTextResponse
+ R typeinfo name for CMsgForcePopupsToDirectHWND
  R typeinfo name for CMsgFullRepaint
  R typeinfo name for CMsgGameOverlayTargetTextureID
  R typeinfo name for CMsgGameOverlayTexturePaint
@@ -2311,6 +2318,7 @@
  R typeinfo name for CUtlLinkedList<vgui::ListViewItem*, int>
  R typeinfo name for CUtlLinkedList<vgui::MenuItem*, int>
  R typeinfo name for CUtlLinkedList<vgui::TreeNode*, int>
+ R typeinfo name for CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >
  R typeinfo name for CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >
  R typeinfo name for CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>
@@ -2322,13 +2330,13 @@
  R typeinfo name for CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>
  R typeinfo name for CUtlMap<int, bool, int, CDefLess<int> >
  R typeinfo name for CUtlMap<int, serverdisplay_t, int, CDefLess<int> >
- R typeinfo name for CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >
  R typeinfo name for CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >
  R typeinfo name for CUtlMap<unsigned long long, int, int, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for CUtlQueueDeprecated<CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >*>
  R typeinfo name for CUtlQueueDeprecated<int>
+ R typeinfo name for CUtlRBTree<CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t, int, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -2340,7 +2348,6 @@
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<int, bool, int, CDefLess<int> >::Node_t, int, CUtlMap<int, bool, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Node_t, int, CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, int, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, int, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
@@ -2904,6 +2911,8 @@
  T CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFind>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFind>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFullRepaint>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFullRepaint>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgGoBack>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -2998,6 +3007,14 @@
  T CHistoryGames::ServerResponded(void*, int)
  T CHistoryGames::SupportsItem(IGameList::InterfaceItem_e)
  T CHistoryGames::~CHistoryGames()
+ T CIPAddress::BlockingResolveAndSetFromString(char const*, bool, unsigned short*)
+ T CIPAddress::HasIP() const
+ T CIPAddress::SetFromSockadr(void const*, unsigned long, unsigned short*)
+ T CIPAddress::SetFromString(char const*, unsigned short*)
+ T CIPAddress::ToString(char*, unsigned int, unsigned short const*) const
+ T CIPAndPort::IsValid() const
+ T CIPAndPort::ToString(char*, unsigned int, bool) const
+ T CIPAndPort::operator<(CIPAndPort const&) const
  T CIPCToolMachClient::DoKillCommand(char const*)
  T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
  T CIPCToolMachClient::Init()
@@ -3579,6 +3596,17 @@
  T CMsgFocusedNodeTextResponse::mutable_value()
  T CMsgFocusedNodeTextResponse::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgFocusedNodeTextResponse::~CMsgFocusedNodeTextResponse()
+ T CMsgForcePopupsToDirectHWND::ByteSize() const
+ T CMsgForcePopupsToDirectHWND::CMsgForcePopupsToDirectHWND()
+ T CMsgForcePopupsToDirectHWND::Clear()
+ T CMsgForcePopupsToDirectHWND::GetCachedSize() const
+ T CMsgForcePopupsToDirectHWND::GetMetadata() const
+ T CMsgForcePopupsToDirectHWND::IsInitialized() const
+ T CMsgForcePopupsToDirectHWND::MergeFrom(CMsgForcePopupsToDirectHWND const&)
+ T CMsgForcePopupsToDirectHWND::New() const
+ T CMsgForcePopupsToDirectHWND::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgForcePopupsToDirectHWND::SetCachedSize(int) const
+ T CMsgForcePopupsToDirectHWND::~CMsgForcePopupsToDirectHWND()
  T CMsgFullRepaint::ByteSize() const
  T CMsgFullRepaint::CMsgFullRepaint()
  T CMsgFullRepaint::Clear()
@@ -5221,6 +5249,7 @@
  T CUtlLinkedList<vgui::TreeNode*, int>::RemoveAll()
  T CUtlLinkedList<vgui::TreeNode*, int>::Unlink(int)
  T CUtlLinkedList<vgui::TreeNode*, int>::Validate(CValidator&, char const*)
+ T CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Validate(CValidator&, char const*)
  T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Insert(CUtlString const&, CDirContentsWatcher::FileWatchData const&)
  T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Insert(CUtlString const&, CUtlString&&)
@@ -5234,7 +5263,6 @@
  T CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
  T CUtlMap<int, bool, int, CDefLess<int> >::Validate(CValidator&, char const*)
  T CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::Validate(CValidator&, char const*)
- T CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned long long, int, int, CDefLess<unsigned long long> >::Validate(CValidator&, char const*)
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
@@ -5256,6 +5284,12 @@
  T CUtlRBTree<BestMatch_t, int, CDefLess<BestMatch_t>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, CDefLess<CKeyBindingsMgr::KBContext_t>, CDefRBTreeBalanceListener<int> >::Find(CKeyBindingsMgr::KBContext_t const&) const
  T CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, CDefLess<CKeyBindingsMgr::KBContext_t>, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t, int, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t const&, bool, int&, bool&, bool&)
+ T CUtlRBTree<CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t, int, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t, int, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t, int, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t, int, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t, int, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
  T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t&&, bool)
@@ -5317,12 +5351,6 @@
  T CUtlRBTree<CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
  T CUtlRBTree<CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Node_t, int, CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Node_t, int, CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Node_t, int, CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Node_t, int, CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Node_t, int, CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Node_t, int, CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::FindInsertionPosition(CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t const&, bool, short&, bool&, bool&)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::Insert(CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >::NewNode(bool)
@@ -5382,6 +5410,9 @@
  T CUtlSymbolTable::Validate(CValidator&, char const*)
  T CUtlSymbolTable::~CUtlSymbolTable()
  T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
+ T CUtlVector<CIPAndPort, CUtlMemory<CIPAndPort> >::AddToTail(CIPAndPort const&)
+ T CUtlVector<CIPAndPort, CUtlMemory<CIPAndPort> >::GrowVector(int)
+ T CUtlVector<CIPAndPort, CUtlMemory<CIPAndPort> >::~CUtlVector()
  T CUtlVector<CInternetGames::regions_s, CUtlMemory<CInternetGames::regions_s> >::Validate(CValidator&, char const*)
  T CUtlVector<CInternetGames::regions_s, CUtlMemory<CInternetGames::regions_s> >::~CUtlVector()
  T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::~CUtlVector()
@@ -5451,9 +5482,6 @@
  T CUtlVector<int, CUtlMemory<int> >::Remove(int)
  T CUtlVector<int, CUtlMemory<int> >::Validate(CValidator&, char const*)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
- T CUtlVector<netadr_t, CUtlMemory<netadr_t> >::AddToTail(netadr_t const&)
- T CUtlVector<netadr_t, CUtlMemory<netadr_t> >::GrowVector(int)
- T CUtlVector<netadr_t, CUtlMemory<netadr_t> >::~CUtlVector()
  T CUtlVector<short, CUtlMemory<short> >::AddToTail(short&&)
  T CUtlVector<short, CUtlMemory<short> >::GrowVector(int)
  T CUtlVector<short, CUtlMemory<short> >::Validate(CValidator&, char const*)
@@ -5849,6 +5877,7 @@
  T _findnext(long long, _finddata_t*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
  T int CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertUnconstructed<vgui::CFontWidthCache::key_t const&>(vgui::CFontWidthCache::key_t const&, int*, bool)
+ T int CUtlRBTree<CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t, int, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CIPAndPort, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess>(CIPAndPort const&, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CUtlString, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess>(CUtlString const&, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CUtlSymbol, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess>(CUtlSymbol const&, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess>(char const* const&, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess const&) const
@@ -5859,18 +5888,9 @@
  T int CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::CKeyLess>(char const* const&, CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<int, bool, int, CDefLess<int> >::Node_t, int, CUtlMap<int, bool, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<int, CUtlMap<int, bool, int, CDefLess<int> >::CKeyLess>(int const&, CUtlMap<int, bool, int, CDefLess<int> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::Node_t, int, CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<int, CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::CKeyLess>(int const&, CUtlMap<int, serverdisplay_t, int, CDefLess<int> >::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::Node_t, int, CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<netadr_t, CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::CKeyLess>(netadr_t const&, CUtlMap<netadr_t, int, int, CDefLess<netadr_t> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<unsigned long long, int, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, int, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned long long, CUtlMap<unsigned long long, int, int, CDefLess<unsigned long long> >::CKeyLess>(unsigned long long const&, CUtlMap<unsigned long long, int, int, CDefLess<unsigned long long> >::CKeyLess const&) const
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int* std::__1::__rotate_gcd<int*>(int*, int*, int*)
- T netadr_t::BlockingResolveAndSetFromString(char const*, bool)
- T netadr_t::GetIP() const
- T netadr_t::HasIP() const
- T netadr_t::IsValid() const
- T netadr_t::SetFromSockadr(void const*, unsigned long)
- T netadr_t::SetFromString(char const*)
- T netadr_t::ToString(char*, unsigned int, bool) const
- T netadr_t::operator<(netadr_t const&) const
  T non-virtual thunk to CBaseGamesPage::GetInvalidServerListID()
  T non-virtual thunk to CBaseGamesPage::GetNewServerList()
  T non-virtual thunk to CBaseGamesPage::GetServer(unsigned int)
@@ -5954,7 +5974,7 @@
  T non-virtual thunk to vgui::HTML::BrowserOpenNewTab(CMsgOpenNewTab const*)
  T non-virtual thunk to vgui::HTML::BrowserOpenSteamURL(CMsgOpenSteamURL const*)
  T non-virtual thunk to vgui::HTML::BrowserPageSecurity(CMsgPageSecurity const*)
- T non-virtual thunk to vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
+ T non-virtual thunk to vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*, bool*)
  T non-virtual thunk to vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T non-virtual thunk to vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
  T non-virtual thunk to vgui::HTML::BrowserResizeGripChanged(CMsgResizeGripChanged const*)
@@ -6889,7 +6909,7 @@
  T vgui::HTML::BrowserOpenNewTab(CMsgOpenNewTab const*)
  T vgui::HTML::BrowserOpenSteamURL(CMsgOpenSteamURL const*)
  T vgui::HTML::BrowserPageSecurity(CMsgPageSecurity const*)
- T vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*)
+ T vgui::HTML::BrowserPopupHTMLWindow(CMsgPopupHTMLWindow const*, bool*)
  T vgui::HTML::BrowserReady(CMsgBrowserReady const*)
  T vgui::HTML::BrowserRequestFullScreen(CMsgRequestFullScreen const*)
  T vgui::HTML::BrowserResizeGripChanged(CMsgResizeGripChanged const*)
@@ -7023,6 +7043,7 @@
  T vgui::HTML::SendPendingHTMLMessages()
  T vgui::HTML::SendScreenDimensionsToCEF()
  T vgui::HTML::SetBrowserHidden(bool)
+ T vgui::HTML::SetForceChildHWNDPopupsToDirectHWND(bool)
  T vgui::HTML::ShowFindDialog()
  T vgui::HTML::StopFind()
  T vgui::HTML::StopLoading()
@@ -9139,6 +9160,8 @@
  b (anonymous namespace)::CMsgFocusedNodeTextResponse_reflection_
  b (anonymous namespace)::CMsgFocusedNodeText_descriptor_
  b (anonymous namespace)::CMsgFocusedNodeText_reflection_
+ b (anonymous namespace)::CMsgForcePopupsToDirectHWND_descriptor_
+ b (anonymous namespace)::CMsgForcePopupsToDirectHWND_reflection_
  b (anonymous namespace)::CMsgFullRepaint_descriptor_
  b (anonymous namespace)::CMsgFullRepaint_reflection_
  b (anonymous namespace)::CMsgGameOverlayTargetTextureID_descriptor_
@@ -9693,6 +9716,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFinishedRequest_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeTextResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFocusedNodeText_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgForcePopupsToDirectHWND_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgFullRepaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTargetTextureID_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgGameOverlayTexturePaint_offsets_

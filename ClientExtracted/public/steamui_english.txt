@@ -1143,6 +1143,7 @@ This should take less than a minute."
 
 "Steam_SubscriptionCancelled_InvalidCDKey_Headline" "Invalid Product Code"
 "Steam_SubscriptionCancelled_InvalidCDKey" "The product code you've entered is not valid. \n\nPlease double check to see if you've mistyped your key. I, L, and 1 can look alike, as can V and Y, and 0 and O."
+"Steam_SubscriptionCancelled_InvalidCDKey2" "If you are redeeming a Steam wallet code or gift card, click here to redeem it on the Steam store."
 
 "Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp_Headline" "Please first activate the original game"
 "Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp" "The product code you've entered requires ownership of another product before activation.\n\nIf you are trying to activate an expansion pack or downloadable content, please first activate the original game, then activate this additional content."
@@ -2012,6 +2013,11 @@ You'll need to log out of OS X for the change to take effect."
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Forced Off"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_Global"	"Use your global Steam Input settings"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOn" "Forced On"
+
+"Steam_GameProperties_BPMOverlay_PerGameOptIn" "Use BPM Overlay when Steam Input is Active Per-Game Setting (Requires restart of game)"
+"Steam_GameProperties_BPMOverlay_PerGameOptIn_ForcedOff" "Forced Off"
+"Steam_GameProperties_BPMOverlay_PerGameOptIn_Global"	"Use your global settings or developer preference"
+"Steam_GameProperties_BPMOverlay_PerGameOptIn_ForcedOn" "Forced On"
 
 "Steam_GameProperties_SteamPlaySettings_Override" "Force the use of a specific Steam Play compatibility tool"
 
@@ -4056,7 +4062,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_39"		"content file locked"
 "Steam_AppUpdateError_40"		"content unavailable"
 "Steam_AppUpdateError_41"		"the executable requires a 64bit operating system"
-"Steam_AppUpdateError_42"		"missing update files"
+"Steam_AppUpdateError_42"		"missing downloaded files"
 "Steam_AppUpdateError_43"		"not enough disk space free for user - check OS disk quota settings"
 "Steam_AppUpdateError_44"		"site license locked"
 "Steam_AppUpdateError_45"		"parental control blocked"

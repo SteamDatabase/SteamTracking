@@ -58,6 +58,9 @@
 		"SteamInputPerGameLabel" { controlname=label labeltext="#Steam_GameProperties_SteamInputSettings_PerGameOptIn" style="Highlight" }
 		"SteamInputPerGameCombo" { controlname=combobox }
 
+		"BPMOverlayPerGameLabel" { controlname=label labeltext="#Steam_GameProperties_BPMOverlay_PerGameOptIn" style="Highlight" }
+		"BPMOverlayPerGameCombo" { controlname=combobox }
+
 		"LaunchOptionsButton"
 		{
 			"ControlName"		"Button"
@@ -146,7 +149,8 @@
 		place {controls=LaunchOptionsButton,CreateDesktopShortcutButton start=EnableDesktopGameTheater dir=down margin-top=15 spacing=10 width=240 height=24 region=main }
 		place {control=Divider2 start=CreateDesktopShortcutButton dir=down margin-top=20 region=main width=max }
 		place {controls=SteamInputPerGameLabel,SteamInputPerGameCombo start=Divider2 dir=down margin-top=20 spacing=10 width=max region=main }
-		place [$LINUX] {control=Divider3 start=SteamInputPerGameCombo dir=down margin-top=20 region=main width=max }
+		place {controls=BPMOverlayPerGameLabel,BPMOverlayPerGameCombo start=SteamInputPerGameCombo dir=down margin-top=20 spacing=10 width=max region=main }
+		place [$LINUX] {control=Divider3 start=BPMOverlayPerGameLabel dir=down margin-top=20 region=main width=max }
 		place [$LINUX] {controls=SteamPlayOverrideCheck,SteamPlayOverrideCombo start=Divider3 dir=down margin-top=20 spacing=10 width=max region=main }
 		place {controls=FamilySharingUnsupportedLabel margin-top=493 margin-left=20 }
 
