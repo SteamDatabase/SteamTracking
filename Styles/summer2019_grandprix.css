@@ -935,6 +935,7 @@ a {
 }
 
 .prix_boosts_nopoints {
+    font-style: normal; 
     position: absolute;
     right: 15%;
     bottom: -10%;
@@ -947,6 +948,7 @@ a {
     transform: skewX( -10deg );
     padding: 10px;
 }
+
 
 .prix_driver_dash_header {
 
