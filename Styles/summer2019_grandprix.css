@@ -519,11 +519,11 @@ a {
 	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_setback_attack.png?' ) no-repeat center;
 }
 
-.prix_action_ctn.attack:active {
+.prix_action_ctn.attack.enabled:active {
 	background-color: #d6a21799;
 }
 
-.prix_action_ctn.steal:active {
+.prix_action_ctn.steal.enabled:active {
 	background-color: #7a3624;
 }
 
@@ -882,6 +882,13 @@ a {
 	padding-left: 2px;
 }
 
+.prix_max_points {
+	font-size: 11px;
+	color: #526a79;
+	vertical-align: text-top;
+	cursor: default;
+}
+
 .prix_currentboost_ctn {
 	margin-left: auto;
 	flex-grow: 1;
@@ -925,6 +932,20 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin: 9px 0 158px 0px;
+}
+
+.prix_boosts_nopoints {
+    position: absolute;
+    right: 15%;
+    bottom: -10%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    background-color: #273239;
+    box-shadow: 4px 4px 1px #1f2225cc;
+    border-radius: 6px;
+    transform: skewX( -10deg );
+    padding: 10px;
 }
 
 .prix_driver_dash_header {
