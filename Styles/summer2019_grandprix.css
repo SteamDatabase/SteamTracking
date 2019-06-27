@@ -298,7 +298,6 @@ a {
 .prix_playerinfo_ctn {
 	display: flex;
 	margin: 0px 50px;
-	margin-left: 150px;
 	font-size: 14px;
 	justify-content: space-between;
 	flex-wrap: wrap;
@@ -337,7 +336,8 @@ a {
 	font-weight: 700;
 	font-style: italic;
 	margin-bottom: 2px;
-	}
+	width: 100%;
+}
 
 .prix_header_text2 {
 	font-size: 36px;
@@ -375,11 +375,31 @@ a {
 	box-shadow: 4px 4px 1px #1f2225cc;
 }
 
-.prix_action_ctn.enabled:hover
-{
+.prix_action_ctn.enabled:hover {
 	cursor: pointer;
 	background-color: #37474f;
 	transition: none;
+}
+
+.prix_attack_controls .prix_action_ctn {
+	max-width: 40%;
+	overflow: visible;
+	border-radius: 15px;
+	position: relative;
+}
+
+.prix_action_ctn.attack {
+	margin-right: 60px;
+}
+
+.prix_attack_controls .prix_action_btn {
+	left: -60px;
+	top: 0;
+	position: absolute;
+}
+
+.prix_attack_controls .prix_action_details_ctn {
+	padding-left: 100px;
 }
 
 .prix_action_details_ctn {
@@ -425,7 +445,7 @@ a {
 
 .prix_action_subtext2, .prix_attack_ctn .prix_action_subtext2 {
 	color: #526a79;
-	font-size: 15px;
+	font-size: 12px;
 	font-family: politica, sans-serif;
 	font-weight: 800;
 	font-style: italic;
@@ -449,6 +469,10 @@ a {
 
 .prix_action_text.attack {
 	color: #E8AC25;
+}
+
+.prix_action_text.steal {
+	color: #d1512a;
 }
 
 .prix_action_desc {
@@ -490,8 +514,17 @@ a {
 	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_attack_default.png?v2' ) no-repeat center;
 }
 
+
+.prix_action_btn.steal {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_setback_attack.png?' ) no-repeat center;
+}
+
 .prix_action_ctn.attack:active {
 	background-color: #d6a21799;
+}
+
+.prix_action_ctn.steal:active {
+	background-color: #7a3624;
 }
 
 .prix_jointeam_teams_ctn {
@@ -830,7 +863,7 @@ a {
 }
 
 .prix_currentpoints_ctn {
-	margin: -15px 0 40px 0;
+	margin: 0 0 40px 0;
 	margin-left: -12px;
 	z-index: 15;
 }
@@ -852,9 +885,10 @@ a {
 .prix_currentboost_ctn {
 	margin-left: auto;
 	flex-grow: 1;
-	padding: 0 15px 0 0;
-	max-width: 215px;
+	padding: 0 18px 0 0;
+	max-width: 270px;
 }
+
 .prix_dial_header{
 	font-size: 12px;
 	position: absolute;
@@ -890,7 +924,7 @@ a {
 .prix_attack_teams_ctn {
   display: flex;
   flex-wrap: wrap;
-  margin: 9px 0 83px 0px;
+  margin: 9px 0 158px 0px;
 }
 
 .prix_driver_dash_header {
@@ -1518,7 +1552,7 @@ img.prix_consumable_drop {
 
 div.prix_consumable_drop {
 	max-width: 500px;
-	margin-left: 20px;
+	margin: 5px 0 5px 30px;
 }
 
 .prix_shake_animation {

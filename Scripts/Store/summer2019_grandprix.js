@@ -98,15 +98,13 @@ function ToggleHowTo()
 	}
 }
 
-function AttackTeam()
+function AttackTeam( eTeamEventConsumable )
 {
-	if ( !g_nCurrentAttacks )
+	if ( !eTeamEventConsumable || !g_mapConsumables[eTeamEventConsumable] )
 		return;
 
 	if ( !$J( '.prix_attackcard_ctn.selected' ).length )
-	{
 		return;
-	}
 
 	$J( '.prix_attackcard_ctn' ).removeClass( 'prix_shake_animation' );
 	var eTeamID = $J( '.prix_attackcard_ctn.selected' ).data( 'teamid' );
@@ -114,7 +112,7 @@ function AttackTeam()
 	g_bAjaxinFlight = true;
 	$J.post(
 		'https://store.steampowered.com/grandprix/ajaxattackteam/',
-		{ sessionid: g_sessionID, teamid: eTeamID }
+		{ sessionid: g_sessionID, teamid: eTeamID, consumable: eTeamEventConsumable }
 	).done( function ( data )
 	{
 		if ( data.success != 1 )
@@ -123,20 +121,29 @@ function AttackTeam()
 		}
 		else
 		{
-			g_nCurrentAttacks--;
+			g_mapConsumables[eTeamEventConsumable]--;
+
+			var strClassType ='attack';
+			if ( eTeamEventConsumable == 4 )
+			{
+				strClassType = 'steal';
+			}
+
+			var elAttackContainer = $J( '.prix_action_ctn.' + strClassType );
+			var elBtnContainer = $J( '.prix_action_btn .' + strClassType );
 			$J( '.prix_attackcard_ctn.selected' ).addClass( 'prix_shake_animation' );
-			$J( '#prix_attacks_remaining span' ).text( g_nCurrentAttacks );
+			elAttackContainer.find( '.prix_action_subtext2 span'  ).text( g_mapConsumables[eTeamEventConsumable] );
 
 			setTimeout(function() {
 				$J( '.prix_attackcard_ctn' ).removeClass( 'selected' );
 				$J( '.prix_attackcard_ctn' ).removeClass( 'prix_shake_animation' );
 
-				if ( !g_nCurrentAttacks )
+				if ( g_mapConsumables[eTeamEventConsumable] == 0 )
 				{
-					$J( '.prix_attackcard_ctn' ).removeClass( 'enabled' );
-					$J( '.prix_action_btn.attack' ).removeClass( 'enabled' );
-					$J( '.prix_attackcard_ctn' ).addClass( 'disabled' );
-					$J( '.prix_action_ctn.attack' ).addClass( 'disabled' );
+					elAttackContainer.removeClass( 'enabled' );
+					elBtnContainer.removeClass( 'enabled' );
+					elAttackContainer.addClass( 'disabled' );;
+					elBtnContainer.addClass( 'disabled' );;
 				}
 			}, 5000);
 
@@ -167,20 +174,44 @@ function BoostTeam()
 		}
 		else
 		{
-			var strDialogDesc = '<div class="prix_dialog_ctn">';
+			var strImageSrc = 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_boost_default.png';
+			var strDialog = '<div class="prix_dialog_ctn">';
+			var strDialogDesc = '<div class="prix_dialog_content">';
+			strDialogDesc += '<div class="prix_consumable_drop" >' + 'Nice work, ace. You\'ve boosted your team\'s distance and speed in the race.' + '</div>';
 			if ( data.granted_consumables.length > 0 )
 			{
-				strDialogDesc += '<img class="prix_consumable_drop" src="https://steamcdn-a.akamaihd.net/store/promo/summer2019/random_drop_attack.png" >';
-				strDialogDesc += '<div class="prix_consumable_drop" >' + 'Nice work, ace. You\'ve boosted team\'s distance and speed in the race.<br><br>Luck is on your side--You\'ve also been randomly awarded a Slow Down Attack! You can use this to slow down another team of your choice.<br><br>Head to the Pit Stop to redeem your shiny new Grand Prix tokens for rewards, or return to the race to complete Quests and continue to boost and attack your way to the finish.' + '</div>';
+				if ( data.granted_consumables.length == 2 )
+				{
+					strImageSrc = "https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_attack_both_granted.png";
+					strDialogDesc += '<div class="prix_consumable_drop" >' + 'You\'ve also been randomly awarded a Steal Progress Attack! You can use this to steal boost progress from another team and apply it to your team' + '</div>';
+					strDialogDesc += '<div class="prix_consumable_drop" >' + 'You\'ve also been randomly awarded a Slow Down Attack! You can use this to slow down another team of your choice.' + '</div>';
+				}
+				else
+				{
+					for (var i = 0; i < data.granted_consumables.length; i++)
+					{
+						if (data.granted_consumables[i].type == 4 )
+						{
+							strImageSrc = 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_setback_attack.png';
+							strDialogDesc += '<div class="prix_consumable_drop" >' + 'You\'ve also been randomly awarded a Steal Progress Attack! You can use this to steal boost progress from another team and apply it to your team' + '</div>';
+
+						}
+						else if (data.granted_consumables[i].type == 1 )
+						{
+							strImageSrc = 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/random_drop_attack.png';
+							strDialogDesc += '<div class="prix_consumable_drop" >' + 'You\'ve also been randomly awarded a Slow Down Attack! You can use this to slow down another team of your choice.' + '</div>';
+						}
+					}
+				}
 			}
-			else
-			{
-				strDialogDesc += 'Nice work, ace. You\'ve boosted team\'s distance and speed in the race.<br><br>Head to the Pit Stop to redeem your shiny new Grand Prix tokens for rewards, or return to the race to complete Quests and continue to boost your way to the finish.';
-			}
-			strDialogDesc += '</div>';
+			strDialogDesc += '<div class="prix_consumable_drop" >' + 'Head to the Pit Stop to redeem your shiny new Grand Prix tokens for rewards, or return to the race to complete Quests and continue to boost your way to the finish.' + '</div>';
+			strDialogDesc += '</div>'
+			strDialog += '<img src="' + strImageSrc +'">';
+			strDialog += strDialogDesc;
+			strDialog += '</div>';
 
 			ShowConfirmDialog( 'BOOOOOOST!',
-				strDialogDesc,
+				strDialog,
 				'Make a Pit Stop...',
 				'Return to Race'  )
 			.done( function() {
