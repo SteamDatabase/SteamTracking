@@ -488,10 +488,16 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 
 function SaleFranchiseBlock( $Parent, rgFranchiseData )
 {
+	// slice off extras to make it an even multiple of 3
+	rgFranchiseData.splice( rgFranchiseData.length - ( rgFranchiseData.length % 3 ) );
+
 	var $PrevTarget = $Parent.find( '.franchise_previous' );
 	var $ContentTarget = $Parent.find( '.franchise_flex' );
 	var $NextTarget = $Parent.find( '.franchise_next' );
 
+
+	var $Thumbs = $Parent.children('.carousel_thumbs');
+	var rg$Thumbs = [];
 
 	var fnGetFranchise = function( i )
 	{
@@ -515,10 +521,19 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 
 		if ( !bSkipNext )
 			$NextTarget.empty().append( BuildFranchiseCap( fnGetFranchise( iPageStart + 3 ), true ) );
+
+		if ( iPageStart < 0 )
+			iPageStart += rgFranchiseData.length;
+		var $Thumb = rg$Thumbs[ iPageStart / 3 ];
+		if ( $Thumb )
+		{
+			$Thumb.siblings().removeClass( 'focus' );
+			$Thumb.addClass( 'focus' );
+		}
 	}
 
 	var bInTransition = false;
-	$PrevTarget.click( function() {
+	$PrevTarget.add( $Parent.children('.arrow.left') ).click( function() {
 		if ( bInTransition )
 			return;
 
@@ -526,6 +541,7 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 
 		var nHeight = $ContentTarget.height();
 		$ContentTarget.addClass( 'transition' ).css('height', nHeight + 'px');
+		$Thumbs.children().removeClass('focus');
 		for ( var i = iPageStart - 1; i > iPageStart - 4; i-- )
 		{
 			$ContentTarget.prepend( BuildFranchiseCap( fnGetFranchise( i ) ) );
@@ -549,7 +565,7 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 			bInTransition = false;
 		} );
 	});
-	$NextTarget.click( function() {
+	$NextTarget.add( $Parent.children('.arrow.right') ).click( function() {
 		if ( bInTransition )
 			return;
 
@@ -557,6 +573,7 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 
 		var nHeight = $ContentTarget.height();
 		$ContentTarget.addClass( 'transition' ).css('height', nHeight + 'px');
+		$Thumbs.children().removeClass('focus');
 		var bClicked = true;
 		for ( var i = iPageStart + 3; i < iPageStart + 6; i++ )
 		{
@@ -590,6 +607,31 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 			bInTransition = false;
 		} );
 	});
+
+	var fnMakeThumb = function( index )
+	{
+		return $J('<div/>').click( function() {
+			if ( !bInTransition )
+			{
+				bInTransition = true;
+				var nHeight = $ContentTarget.height();
+				$ContentTarget.css('height', nHeight + 'px');
+				iPageStart = index * 3;
+				SaleFranchisePageTo();
+				window.setTimeout( function() {
+					bInTransition = false;
+					$ContentTarget.css('height','');
+				}, 45 );
+			}
+		});
+	};
+
+	for ( var i = 0; i < rgFranchiseData.length / 3; i++ )
+	{
+		var $Thumb = fnMakeThumb( i );
+		rg$Thumbs.push( $Thumb );
+		$Thumbs.append( $Thumb );
+	}
 
 	SaleFranchisePageTo();
 }

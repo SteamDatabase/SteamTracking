@@ -1507,17 +1507,21 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 }
 
 .home_header_textimage_ctn {
-	width: 1200px;
+	width: 100%;
+	max-width:1200px;
+	height:auto;
 	margin: 80px auto 0 auto;
 }
 
 .home_header_textimage {
 	z-index: 100;
 	position: relative;
-	height: 220px;
+	min-height: 220px;
 	width: 100%;
+
 	background-repeat: no-repeat;
 	background-position: left;
+	background-size: contain;
 	display: block;
 }
 

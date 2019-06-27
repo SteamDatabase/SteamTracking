@@ -163,6 +163,10 @@ a {
 	transform: skewX(-10deg);
 }
 
+.grand_prix_app {
+	padding: 10px 0 10px 0;
+}
+
 .prix_header_teams_ctn .prix_standing img {
 	transform: skewX( 10deg );
 	position: absolute;
@@ -851,6 +855,15 @@ a {
 	padding: 0 15px 0 0;
 	max-width: 215px;
 }
+.prix_dial_header{
+	font-size: 12px;
+	position: absolute;
+	transform: translateY( -60px );
+	text-align: center;
+	width: 250px;
+	padding-left: 15px;
+}
+
 
 .prix_boostmeter_nitro_ctn {
 	transform: skewX( -10deg );
@@ -875,10 +888,9 @@ a {
 }
 
 .prix_attack_teams_ctn {
-	display: flex;
-	flex-wrap: wrap;
-	margin: 10px 0 52px 0px;
-
+  display: flex;
+  flex-wrap: wrap;
+  margin: 9px 0 83px 0px;
 }
 
 .prix_driver_dash_header {
@@ -887,7 +899,7 @@ a {
   color: #D0D3CF;
   font-weight: 700;
   text-align: right;
-  padding-top: 105px;
+  padding-top: 21px;
 }
 
 .prix_attackcard_ctn {
@@ -1495,7 +1507,7 @@ a {
 .prix_racing_questions_ctn {
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: column;
+	flex-direction: row;
 	max-height: 650px;
 }
 
@@ -1647,7 +1659,7 @@ div.prix_consumable_drop {
 	box-sizing: border-box;
 	flex-grow: 1;
 	width: 100%;
-	height: 220px;
+	min-height: 220px;
 	padding: 0.8em 1.2em;
 	overflow: hidden;
 	list-style: none;
@@ -1681,7 +1693,7 @@ div.prix_consumable_drop {
 	border-right: 3px solid #1f2225;
 	background-color: #0c0e0f;
 	text-align: left;
-	height: 75px;
+	min-height: 75px;
 }
 
 .prix_extended_stats_table > .td {

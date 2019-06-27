@@ -171,7 +171,7 @@ function BoostTeam()
 			if ( data.granted_consumables.length > 0 )
 			{
 				strDialogDesc += '<img class="prix_consumable_drop" src="https://steamcdn-a.akamaihd.net/store/promo/summer2019/random_drop_attack.png" >';
-				strDialogDesc += '<div class="prix_consumable_drop" >' + 'Nice work, ace. You\'ve boosted team\'s distance and speed in the race.<br><br>Luck is on your side--You\'ve also been randomly awarded a Team Attack! You can use attacks to slow down another team of your choice.<br><br>Head to the Pit Stop to redeem your shiny new Grand Prix tokens for rewards, or return to the race to complete Quests and continue to boost and attack your way to the finish.' + '</div>';
+				strDialogDesc += '<div class="prix_consumable_drop" >' + 'Nice work, ace. You\'ve boosted team\'s distance and speed in the race.<br><br>Luck is on your side--You\'ve also been randomly awarded a Slow Down Attack! You can use this to slow down another team of your choice.<br><br>Head to the Pit Stop to redeem your shiny new Grand Prix tokens for rewards, or return to the race to complete Quests and continue to boost and attack your way to the finish.' + '</div>';
 			}
 			else
 			{
