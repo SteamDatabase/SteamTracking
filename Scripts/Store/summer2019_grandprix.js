@@ -130,21 +130,31 @@ function AttackTeam( eTeamEventConsumable )
 			}
 
 			var elAttackContainer = $J( '.prix_action_ctn.' + strClassType );
-			var elBtnContainer = $J( '.prix_action_btn .' + strClassType );
+			var elBtnContainer = $J( '.prix_action_btn.' + strClassType );
+			if ( g_mapConsumables[eTeamEventConsumable] == 0 )
+			{
+				elAttackContainer.removeClass( 'enabled' );
+				elBtnContainer.removeClass( 'enabled' );
+				elAttackContainer.addClass( 'disabled' );
+				elBtnContainer.addClass( 'disabled' );
+
+				delete g_mapConsumables[eTeamEventConsumable];
+			}
+
+			if ( $J.isEmptyObject( g_mapConsumables ) )
+			{
+				$J( '.prix_attackteam_selection' ).removeClass( 'enabled' );
+				$J( '.prix_attackcard_ctn ' ).removeClass( 'enabled' );
+				$J( '.prix_attackteam_selection' ).addClass( 'disabled' );
+				$J( '.prix_attackcard_ctn ' ).addClass( 'disabled' );
+			}
+
 			$J( '.prix_attackcard_ctn.selected' ).addClass( 'prix_shake_animation' );
-			elAttackContainer.find( '.prix_action_subtext2 span'  ).text( g_mapConsumables[eTeamEventConsumable] );
+			elAttackContainer.find( '.prix_action_subtext2 span'  ).text( g_mapConsumables[eTeamEventConsumable] || 0 );
 
 			setTimeout(function() {
 				$J( '.prix_attackcard_ctn' ).removeClass( 'selected' );
 				$J( '.prix_attackcard_ctn' ).removeClass( 'prix_shake_animation' );
-
-				if ( g_mapConsumables[eTeamEventConsumable] == 0 )
-				{
-					elAttackContainer.removeClass( 'enabled' );
-					elBtnContainer.removeClass( 'enabled' );
-					elAttackContainer.addClass( 'disabled' );;
-					elBtnContainer.addClass( 'disabled' );;
-				}
 			}, 5000);
 
 		}
