@@ -32,6 +32,6 @@ public:
     virtual unknown_ret IsVRHeadsetStreamingEnabled() = 0;
     virtual unknown_ret SetVRHeadsetStreamingEnabled(bool) = 0;
     virtual unknown_ret IsSteamChinaLauncher() = 0;
-    virtual unknown_ret InitializeFilterText() = 0;
+    virtual unknown_ret InitFilterText() = 0;
     virtual unknown_ret FilterText(char*, unsigned int, char const*, bool) = 0;
 };
