@@ -401,8 +401,8 @@ function UpdatePastAchievementWithData( $elQuestCtn, unAppId, data )
 			{
 				var $elQuest = $J('<div class="prix_achievement_detail"><div class="prix_achievement_points">&nbsp;</div><div class="prix_achievement_name"></div><div class="prix_achievements_overflow_description prix_overflow_1"></div><div class="prix_achievements_overflow_description prix_overflow_2"></div></div>');
 				$elQuest.find('.prix_achievement_name').text( 'Claim %1$s/%2$s Points Now'.replace( /%1\$s/g, nMeterPointsAvailable ).replace( /%2\$s/g, achievementData.total_points ) );
-				$elQuest.find('.prix_overflow_1').text( 'You only have claim %1$s points more points before reaching your max'.replace( /%1\$s/g, nMeterPointsAvailable ) );
-				$elQuest.find('.prix_overflow_2').text( 'Upgrade your maximum points or throw away the extra %1$s'.replace( /%1\$s/g, achievementData.total_points - nMeterPointsAvailable ) );
+				$elQuest.find('.prix_overflow_1').text( 'You can only claim %1$s points more before reaching your max'.replace( /%1\$s/g, nMeterPointsAvailable ) );
+				$elQuest.find('.prix_overflow_2').text( 'Any extra achievements will still be available to redeem later, you won\'t lose any points!.'.replace( /%1\$s/g, achievementData.total_points - nMeterPointsAvailable ) );
 					
 				$elQuestList.append( $elQuest );		
 			}
