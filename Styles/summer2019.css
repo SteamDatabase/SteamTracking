@@ -62,11 +62,6 @@ body.v6 .sale_capsule {
 	margin-top: 32px;
 }
 
-.home_featured_ctn .sale_capsule_image {
-	height: 450px;
-	max-width: 360px;
-}
-
 .sale_capsule_image {
 	display: block;
 	max-width: 100%;
@@ -814,7 +809,7 @@ body.v6 .sale_capsule .discount_block_inline
 		font-weight: normal; /* normal */
 
 			color: #ffffff;
-	height: 57%;
+	height: 53.5%;
 	opacity: 0.5;
 
 	transition: top 0.6s, opacity 0.5s;
@@ -839,6 +834,22 @@ body.v6 .sale_capsule .discount_block_inline
 {
 	width: 100%;
 }
+
+.hero_capsule.valveindex .franchise_game.single
+{
+	padding: 0 20%;
+}
+
+.hero_capsule.valveindex .hero_data
+{
+	height: 58.5%
+}
+
+.hero_capsule.valveindex:hover .hero_data
+{
+	top: 41.5%
+}
+
 
 .hero_capsule:hover .hero_data
 {

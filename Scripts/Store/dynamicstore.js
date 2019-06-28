@@ -85,7 +85,15 @@ GDynamicStore = {
 			GDynamicStore.InitAppearHandler();
 
 			for ( var i = 0; i < GDynamicStore.s_rgfnOnReadyCallbacks.length; i++ )
-				GDynamicStore.s_rgfnOnReadyCallbacks[i]();
+			{
+				try {
+					GDynamicStore.s_rgfnOnReadyCallbacks[i]();
+				}
+				catch ( e )
+				{
+					console.error( e );
+				}
+			}
 			GDynamicStore.s_rgfnOnReadyCallbacks = null;
 
 			GDynamicStore.DecorateDynamicItems();

@@ -399,6 +399,9 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
 	}
 	var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, item, params );
 
+	if ( !rgItemData )
+		return;
+
 	var $CapCtn = $J('<a/>', params );
 	GStoreItemData.BindHoverEventsForItem( $CapCtn, item );
 
@@ -884,6 +887,8 @@ var g_rgAppsWithMicroTrailers =
 	641080:1, 447040:1, 264710:1, 851100:1, 550:1, 620:1, 560130:1, 342180:1,
 	951440:1, 992640:1, 379430:1, 208650:1, 863550:1, 627270:1, 647830:1,
 	356190:1, 976310:1, 963930:1, 674940:1, 508440:1, 396900:1, 877200:1,
-	622220:1, 955050:1
-};
+	622220:1, 955050:1, 230410:1, 790850:1, 779340:1, 475150:1, 512900:1,
+	572410:1, 690530:1, 637670:1, 383980:1, 593600:1, 557340:1, 394510:1,
+	438740:1, 501080:1, 829590:1, 346010:1, 825630:1, 459220:1, 460810:1
+	};
 
