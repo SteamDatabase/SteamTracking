@@ -408,12 +408,17 @@ CWishlistController.prototype.LoadSettings = function()
 
 
 	var rgPairs = location.hash.substring(1).split('&');
+	var strDefaultSort = 'order';
 	if( rgPairs.length > 0 && rgPairs[0] )
 	{
 		for ( var i = 0; i < rgPairs.length; i++ )
 		{
 			var rgKV = rgPairs[ i ].split ( '=' );
-			this.rgFilterSettings[ rgKV[ 0 ] ] = decodeURIComponent( rgKV[ 1 ] ) ;
+			var strValue = decodeURIComponent( rgKV[ 1 ] );
+			this.rgFilterSettings[ rgKV[ 0 ] ] = strValue;
+
+			if (  rgKV[ 0 ] == 'sort' )
+				strDefaultSort = strValue;
 
 			$J('input[name=\''+V_EscapeHTML( rgKV[ 0 ] )+'\']').attr('checked',true);
 		}
@@ -427,8 +432,16 @@ CWishlistController.prototype.LoadSettings = function()
 		this.rgFilterSettings.view = lsValue.view;
 	}
 
+	/*
 	if( this.rgFilterSettings.sort )
 		this.SetDropdownLabel('sort', this.rgFilterSettings.sort );
+	 */
+
+
+	var elSwitchToOrder = $J( '.switch_btn' );
+	strDefaultSort == 'order' ? elSwitchToOrder.hide() : elSwitchToOrder.show();
+
+	this.SetDropdownLabel('sort', strDefaultSort );
 	if( this.rgFilterSettings.type )
 		this.SetDropdownLabel('type', this.rgFilterSettings.type );
 	if( this.rgFilterSettings.term )
@@ -654,7 +667,19 @@ CWishlistController.prototype.SetFilterFromDropdown = function( strFilter, elSou
 	$J('#label_' + strFilter).text( elSource.textContent );
 	this.Update();
 	this.SaveSettings();
+
+	var elSwitchToOrder = $J( '.switch_btn' );
+	if ( strFilter == 'sort' && $J(elSource).data('dropdownValue') == 'order' )
+	{
+		elSwitchToOrder.hide();
+	}
+	else
+	{
+		elSwitchToOrder.show();
+	}
+
 }
+
 CWishlistController.prototype.SetViewMode = function( strMode, elSource )
 {
 	if( elSource && !elSource.checked )
@@ -672,6 +697,7 @@ CWishlistController.prototype.SetViewMode = function( strMode, elSource )
 	this.OnResize();
 
 }
+
 CWishlistController.prototype.SetSection = function( strSection )
 {
 	$J('.filter_tab').removeClass('selected');
@@ -679,6 +705,53 @@ CWishlistController.prototype.SetSection = function( strSection )
 	$J('#tab_'+strSection).addClass('selected');
 	$J('#section_'+strSection).addClass('selected');
 
+}
+
+CWishlistController.prototype.GetAppInfoAtPriority = function( priority ) {
+	for (var i = 0; i < this.rgAllApps.length; i++) {
+		if( g_rgAppInfo[ this.rgAllApps[i] ].priority == priority )
+		{
+			return g_rgAppInfo[this.rgAllApps[i]];
+		}
+	}
+	return false;
+}
+
+CWishlistController.prototype.SummerSale2019UpdatePodium = function( )
+{
+	if( $J( '.grandprix_ctn') )
+	{
+		var bShowFreeGameWarning = false;
+		var bShowNotPurchaseableWarning = false;
+		for( var i = 1; i <= 3; ++i )
+		{
+			var appInfo = this.GetAppInfoAtPriority( i );
+			if( appInfo )
+			{
+				if( appInfo.is_free_game )
+				{
+					bShowFreeGameWarning = true;
+				}
+				else if( !appInfo.subs || appInfo.subs.length == 0 )
+				{
+					bShowNotPurchaseableWarning = true;
+				}
+			}
+			$J( '.img_spot_' + i ).attr( { "src": appInfo ? appInfo.capsule : 'https://steamcdn-a.akamaihd.net/steamcommunity/public//images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg' });
+		}
+
+		$J( '.warning_free_game').hide();
+		$J( '.warning_not_purchaseable').hide();
+
+		if( bShowFreeGameWarning )
+		{
+			$J( '.warning_free_game').show();
+		}
+		if( bShowNotPurchaseableWarning )
+		{
+			$J( '.warning_not_purchaseable').show();
+		}
+	}
 }
 
 CWishlistController.prototype.Update = function( bForceSort )
@@ -798,8 +871,9 @@ CWishlistController.prototype.Update = function( bForceSort )
 		$J('#nothing_to_see_here').show();
 	} else {
 		$J('#nothing_to_see_here').hide();
-		console.log(this.rgVisibleApps.length)
 	}
+
+	this.SummerSale2019UpdatePodium();
 }
 
 CWishlistController.prototype.UpdateFilterDisplay = function()
