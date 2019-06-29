@@ -534,7 +534,7 @@ function UpdateTeamScoresWithData( data )
 	var flZoomMax = bFinishLineInSight ? 1 : flMaxAdjScorePercent;
 
 	var flDisplayMin = 15;
-	var flDisplayMax = bFinishLineInSight ? 100 : 85;
+	var flDisplayMax = bFinishLineInSight ? 96.5 : 85;
 	var flDisplayRange = flDisplayMax - flDisplayMin;
 
 	
@@ -567,7 +567,7 @@ function UpdateTeamScoresWithData( data )
 		
 		if ( oTeamScore.score_dist )
 		{
-			$elStandingBar.find( '.prix_standing_bar_score' ).text( (parseFloat( oTeamScore.score_dist) ).toFixed( 2 ) + 'km' );
+			$elStandingBar.find( '.prix_standing_bar_score' ).text( parseFloat(oTeamScore.score_dist).toFixed( 2 ) + 'km' );
 		}
 
 
