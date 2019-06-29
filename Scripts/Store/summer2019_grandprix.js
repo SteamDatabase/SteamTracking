@@ -567,7 +567,7 @@ function UpdateTeamScoresWithData( data )
 		
 		if ( oTeamScore.score_dist )
 		{
-			$elStandingBar.find( '.prix_standing_bar_score' ).text( (oTeamScore.score_dist).toFixed( 2 ) + 'km' );
+			$elStandingBar.find( '.prix_standing_bar_score' ).text( (parseFloat( oTeamScore.score_dist) ).toFixed( 2 ) + 'km' );
 		}
 
 
@@ -580,7 +580,7 @@ function UpdateTeamScoresWithData( data )
 			}
 			else
 			{
-				strDeboostsFormatted = '-' + ( oTeamScore.current_active_deboosts / 100 ).toFixed( 2 ).replace( /^0+/, '' ) + 'x';
+				strDeboostsFormatted = '-' + ( parseFloat( oTeamScore.current_active_deboosts ) / 100 ).toFixed( 2 ).replace( /^0+/, '' ) + 'x';
 			}
 		}
 
