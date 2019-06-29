@@ -22,6 +22,10 @@ body.v6.grandprix #store_header {
 	font-weight: normal;
 }
 
+body.v6.grandprix div#global_header .content {
+	background: none;
+}
+
 .skew_right {
 	transform: skewX( -10deg );
 }
@@ -185,6 +189,11 @@ a {
 	z-index: 10;
 }
 
+.prix_standing_bar {
+	direction: rtl;
+	transition: width 0.8s ease-in-out;
+}
+
 .prix_standing.pig, .prix_standing_bar.pig, .prix_playerboost_team_logo.pig {
 	background: #cf3a22;
 }
@@ -231,7 +240,6 @@ a {
 	margin: 18px 20px 0 0;
 	font-size: 20px;
 	color: #00000066;
-	
 }
 
 .prix_raceboard_ctn {
@@ -293,6 +301,14 @@ a {
 	right: 20px;
 	top: 45px;
 	z-index: -1;
+}
+
+.prix_raceboard_teams_ctn .prix_checkpoint {
+	position: absolute;
+	z-index: -1;
+	width: 2px;
+	height: 410px;
+	background-color: #425561;
 }
 
 .prix_playerinfo_ctn {
@@ -379,6 +395,33 @@ a {
 	cursor: pointer;
 	background-color: #37474f;
 	transition: none;
+}
+
+@keyframes pulse_steal {
+	0%   { box-shadow: 0 5px 30px 5px rgba(122,54,36,0); }
+	50%  { box-shadow: 0 5px 30px 5px  rgba(122,54,36,1); }
+	100% { box-shadow: 0 5px 30px 5px  rgba(122,54,36,0); }
+}
+
+.prix_action_ctn.steal.enabled {
+	box-shadow: 0 5px 30px 5px rgba(122,54,36,1);
+	animation: pulse_steal 2s infinite;
+}
+
+@keyframes pulse_attack {
+	0%   { box-shadow: 0 5px 30px 5px rgba(171,130,18,0); }
+	50%  { box-shadow: 0 5px 30px 5px  rgba(171,130,18,1); }
+	100% { box-shadow: 0 5px 30px 5px rgba(171,130,18,0); }
+}
+
+.prix_action_ctn.attack.enabled {
+	box-shadow: 0 5px 30px 5px rgba(171,130,18,1);
+	animation: pulse_attack 2s infinite;
+}
+
+.prix_action_ctn.boost.enabled.maxed {
+	box-shadow: 0 5px 30px 5px rgba(122,54,36,1);
+	animation: pulse_steal 2s infinite;
 }
 
 .prix_attack_controls .prix_action_ctn {
@@ -1099,7 +1142,7 @@ a {
 .prix_howto {
 	max-width: 1000px;
   margin: 0 auto;
-  margin-bottom: -10px;
+  margin-bottom: 32px;
   margin-top: 40px;
   color: #cf3a22;
 	font-size: 16px;
@@ -1621,12 +1664,158 @@ div.prix_consumable_drop {
 	margin: 50px auto;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	max-width: 950px;
+	max-width: 1000px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.prix_infosteps_ctn, .prix_clipboard_ctn {
+	background-color: #273239;
+	border-radius: 6px;
+}
+
+.prix_infosteps_ctn {
 	display: flex;
 	flex-wrap: wrap;
-	background-color: #273239;
 	padding: 25px;
-	border-radius: 6px;
+	flex: 1;
+}
+
+.prix_clipboard_ctn {
+	flex-basis: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin-right: 15px;
+	min-width: 190px;
+	padding: 15px;
+
+	position: relative;
+}
+
+.prix_clipboard_inner_ctn {
+	padding: 15px;
+	background-color: rgb(43, 59, 61);
+	flex: 1;
+
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.prix_clipboard_clip_img {
+	position: absolute;
+	top: -30px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+
+	width: 120px;
+}
+
+.prix_clipboard_badge_ctn {
+	position: absolute;
+	top: -32px;
+	right: -25px;
+	transform: rotate(-15deg);
+	width: 100px;
+	height: 100px;
+
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/qualifiers_badge.png' ) no-repeat;
+	background-size: contain;
+	/*background-repeat: no-repeat;*/
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+}
+
+.prix_clipboard_badge_title, .prix_clipboard_badge_info {
+	font-weight: 900;
+	font-family: politica-expanded, sans-serif;
+}
+
+.prix_clipboard_badge_info {
+	color: #273239;
+	padding: 0 10px;
+}
+
+
+.prix_clipboard_badge_img {
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.prix_clipboard_badge_title, .prix_clipboard_badge_info {
+	z-index: 1;
+	font-size: 10px;
+}
+
+.prix_clipboard_title {
+	font-size: 13px;
+	margin-right: 10px;
+	margin-top: 8px;
+}
+
+.prix_clipboard_title_green {
+	color: #448e63;
+}
+
+.prix_clipboard_info {
+	font-size: 8px;
+}
+
+.prix_clipboard_title, .prix_clipboard_info, .prix_clipboard_field_label {
+	font-weight: 700;
+	font-family: politica-expanded, sans-serif;
+}
+
+.prix_clipboard_title, .prix_clipboard_info {
+	margin-bottom: 12px;
+}
+
+.prix_clipboard_field {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.prix_clipboard_field_box {
+	width: 20px;
+	min-width: 20px;
+	height: 20px;
+	background-color: #1f2225;
+	margin-right: 8px;
+	position: relative;
+}
+
+.prix_clipboard_field_check {
+	width: 100%;
+	height: 100%;
+}
+
+.prix_clipboard_field_label {
+	color: #448e63;
+	font-size: 11px;
+}
+
+.prix_clipboard_field_label:hover {
+	cursor: pointer;
+	color: #52a574;
 }
 
 .prix_infostep_ctn {
@@ -1634,6 +1823,10 @@ div.prix_consumable_drop {
 	display: flex;
 	text-align: center;
 	width: 25%;
+}
+
+.prix_infostep_ctn > * {
+	padding: 0 10px;
 }
 
 .prix_infostep_ctn img {
@@ -1656,10 +1849,6 @@ div.prix_consumable_drop {
 	font-size: 24px;
 	margin-top: -18px;
 	color: #e3e6e2;
-}
-
-.prix_infostep_ctn > * {
-	padding: 0 20px;
 }
 
 .prix_infostep_header {

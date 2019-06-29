@@ -404,11 +404,11 @@ CWishlistController.prototype.SetFilterString = function()
 
 CWishlistController.prototype.LoadSettings = function()
 {
-	var lsValue = WebStorage.GetLocal('wishlistSettings');
+	// WebStorage.GetLocal('wishlistSettings');
+	var lsValue = null;
 
 
 	var rgPairs = location.hash.substring(1).split('&');
-	var strDefaultSort = 'order';
 	if( rgPairs.length > 0 && rgPairs[0] )
 	{
 		for ( var i = 0; i < rgPairs.length; i++ )
@@ -416,10 +416,6 @@ CWishlistController.prototype.LoadSettings = function()
 			var rgKV = rgPairs[ i ].split ( '=' );
 			var strValue = decodeURIComponent( rgKV[ 1 ] );
 			this.rgFilterSettings[ rgKV[ 0 ] ] = strValue;
-
-			if (  rgKV[ 0 ] == 'sort' )
-				strDefaultSort = strValue;
-
 			$J('input[name=\''+V_EscapeHTML( rgKV[ 0 ] )+'\']').attr('checked',true);
 		}
 	} else if( lsValue != null )
@@ -432,16 +428,13 @@ CWishlistController.prototype.LoadSettings = function()
 		this.rgFilterSettings.view = lsValue.view;
 	}
 
-	/*
-	if( this.rgFilterSettings.sort )
-		this.SetDropdownLabel('sort', this.rgFilterSettings.sort );
-	 */
-
 
 	var elSwitchToOrder = $J( '.switch_btn' );
-	strDefaultSort == 'order' ? elSwitchToOrder.hide() : elSwitchToOrder.show();
-
-	this.SetDropdownLabel('sort', strDefaultSort );
+	if( this.rgFilterSettings.sort )
+	{
+		this.rgFilterSettings.sort == 'order' ? elSwitchToOrder.hide() : elSwitchToOrder.show();
+		this.SetDropdownLabel('sort', this.rgFilterSettings.sort);
+	}
 	if( this.rgFilterSettings.type )
 		this.SetDropdownLabel('type', this.rgFilterSettings.type );
 	if( this.rgFilterSettings.term )

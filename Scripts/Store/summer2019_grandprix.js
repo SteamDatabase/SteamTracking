@@ -462,8 +462,12 @@ function UpdateTeamScoresWithData( data )
 
 	var cminDayStart = ((data.current_time - g_rtSaleStart) / 60) % 1440;
 
+	
 	var rgScoresByTeamId = [];
 	var flMaxMult = 1;
+	var flMinAdjScorePercent = 1;
+	var flMaxAdjScorePercent = 0;
+	var flAvgScorePercent = 0;
 	for ( var i = 0; i < data.scores.length; i++ )
 	{
 		var oTeamScore = data.scores[i];
@@ -472,7 +476,25 @@ function UpdateTeamScoresWithData( data )
 		var flMult = parseFloat( oTeamScore.current_multiplier_boosts || 1 );
 		if ( flMult > flMaxMult )
 			flMaxMult = flMult;
+
+		var flScorePercent = parseFloat( oTeamScore.score_pct );
+		flAvgScorePercent += flScorePercent;
+
+		var flAdjustedScorePercent = (cminDayStart/1440) * (flScorePercent);
+		data.scores[i].score_pct_adj = flAdjustedScorePercent;
+
+		if ( flAdjustedScorePercent < flMinAdjScorePercent )
+		{
+			flMinAdjScorePercent = flAdjustedScorePercent;
+		}
+
+		if ( flAdjustedScorePercent > flMaxAdjScorePercent )
+		{
+			flMaxAdjScorePercent = flAdjustedScorePercent;
+		}
 	}
+
+	flAvgScorePercent /= data.scores.length;
 
 	// Update leaderboard (prix_header_teams_ctn)
 	var $elStandings = $J( '.prix_header_teams_ctn .prix_standing ' );
@@ -506,25 +528,48 @@ function UpdateTeamScoresWithData( data )
 		nRank--;
 	} );
 
+	var bFinishLineInSight = cminDayStart > 1380;
+	//bFinishLineInSight = true;
+	var flZoomMin = flMinAdjScorePercent;
+	var flZoomMax = bFinishLineInSight ? 1 : flMaxAdjScorePercent;
+
+	var flDisplayMin = 15;
+	var flDisplayMax = bFinishLineInSight ? 100 : 85;
+	var flDisplayRange = flDisplayMax - flDisplayMin;
+
+	
+	// Place the checkpoints, two per hour
+	
+	if ( bFinishLineInSight )
+	{
+		$J( '.prix_finishline_img' ).show();
+		$J( '.prix_raceboard_teams_ctn' ).css( 'border-image-slice', '0 100%' );
+	}
+	else
+	{
+		$J( '.prix_finishline_img' ).hide();
+		$J( '.prix_raceboard_teams_ctn' ).css( 'border-image-slice', '0' );
+	}
+
 	for ( var i = 0; i < data.scores.length; i++ )
 	{
 		var oTeamScore = data.scores[i];
 		var flScorePercent = parseFloat( oTeamScore.score_pct );
 		var flAdjustedScorePercent = (cminDayStart/1440) * (flScorePercent);
-		flAdjustedScorePercent = (flAdjustedScorePercent * 92) + 8; // min of 8%
+
+
+		var flZoomedScorePercent = (((flAdjustedScorePercent-flZoomMin)/(flZoomMax-flZoomMin)) * flDisplayRange) + flDisplayMin;
 		var flMult = parseFloat( oTeamScore.current_multiplier_boosts || 1 );
 
 		var $elStandingBar = $J( '.prix_standing_bar.team_' + oTeamScore.teamid );
-		$elStandingBar.css( 'width', flAdjustedScorePercent.toFixed( 2 ) + '%' );
+		$elStandingBar.css( 'width', flZoomedScorePercent.toFixed( 2 ) + '%' );
 
-		if ( flMult >= 100 )
+		
+		if ( oTeamScore.score_dist )
 		{
-			$elStandingBar.find( '.prix_standing_bar_score' ).text( parseInt( flMult ).toLocaleString() + 'x' );
+			$elStandingBar.find( '.prix_standing_bar_score' ).text( (oTeamScore.score_dist).toFixed( 2 ) + 'km' );
 		}
-		else
-		{
-			$elStandingBar.find( '.prix_standing_bar_score' ).text( flMult.toFixed( 1 ) + 'x' );
-		}
+
 
 		var strDeboostsFormatted = '';
 		if ( oTeamScore.current_active_deboosts )
@@ -575,7 +620,7 @@ function UpdateTeamScoresWithData( data )
 			var nNextTier = ( 100 * ( ( nActiveBoosts / 100 ) + 1 ) );
 
 			var $elCurrentTeam = $J( '.prix_standing_currentteam' );
-			if ( flAdjustedScorePercent >= 80 )
+			if ( flZoomedScorePercent >= 80 )
 			{
 				$elCurrentTeam.hide();
 			}
