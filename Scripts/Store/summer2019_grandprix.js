@@ -98,6 +98,48 @@ function ToggleHowTo()
 	}
 }
 
+function SwitchTeam()
+{
+	if ( !g_mapConsumables[5] )
+	{
+		return;
+	}
+
+	if ( g_mapConsumables[5].timestamp_expiration < ( Math.floor(Date.now() / 1000) ) )
+	{
+		return;
+	}
+
+	var $dialog = ShowConfirmDialog(  'Confirm Random Team Change',
+			'Are you sure you want to randomly change teams and earn %1$s max points? This can only be used once and cannot be undone.'.replace( /%1\$s/g, v_numberformat( 1000 ) ),
+			'Change Teams' );
+
+	$dialog.done( function() {
+		g_bAjaxinFlight = true;
+		$J.post(
+			'https://store.steampowered.com/grandprix/ajaxuseconsumable/',
+			{ sessionid: g_sessionID, teamid: g_nCurrentTeam, consumable: 5 }
+		).done( function ( data )
+		{
+			if ( data.success != 1 )
+			{
+				ShowAlertDialog( 'Error', 'We encountered an error when trying to change your team. Please try again.' );
+			}
+			else
+			{
+				location.reload();
+			}
+		}).fail( function()
+		{
+			ShowAlertDialog( 'Error', 'We encountered an error when trying to change your team. Please try again.' );
+		}).always( function()
+		{
+			g_bAjaxinFlight = false;
+		});
+	} );
+
+}
+
 function AttackTeam( eTeamEventConsumable )
 {
 	if ( !eTeamEventConsumable || !g_mapConsumables[eTeamEventConsumable] )
@@ -111,7 +153,7 @@ function AttackTeam( eTeamEventConsumable )
 
 	g_bAjaxinFlight = true;
 	$J.post(
-		'https://store.steampowered.com/grandprix/ajaxattackteam/',
+		'https://store.steampowered.com/grandprix/ajaxuseconsumable/',
 		{ sessionid: g_sessionID, teamid: eTeamID, consumable: eTeamEventConsumable }
 	).done( function ( data )
 	{
@@ -121,7 +163,7 @@ function AttackTeam( eTeamEventConsumable )
 		}
 		else
 		{
-			g_mapConsumables[eTeamEventConsumable]--;
+			g_mapConsumables[eTeamEventConsumable].quantity--;
 
 			var strClassType ='attack';
 			if ( eTeamEventConsumable == 4 )
@@ -131,7 +173,7 @@ function AttackTeam( eTeamEventConsumable )
 
 			var elAttackContainer = $J( '.prix_action_ctn.' + strClassType );
 			var elBtnContainer = $J( '.prix_action_btn.' + strClassType );
-			if ( g_mapConsumables[eTeamEventConsumable] == 0 )
+			if ( g_mapConsumables[eTeamEventConsumable].quantity == 0 )
 			{
 				elAttackContainer.removeClass( 'enabled' );
 				elBtnContainer.removeClass( 'enabled' );
@@ -141,7 +183,7 @@ function AttackTeam( eTeamEventConsumable )
 				delete g_mapConsumables[eTeamEventConsumable];
 			}
 
-			if ( $J.isEmptyObject( g_mapConsumables ) )
+			if ( $J.isEmptyObject( g_mapConsumables[ 4 ] ) &&  $J.isEmptyObject( g_mapConsumables[ 1 ] ) )
 			{
 				$J( '.prix_attackteam_selection' ).removeClass( 'enabled' );
 				$J( '.prix_attackcard_ctn ' ).removeClass( 'enabled' );
@@ -150,7 +192,7 @@ function AttackTeam( eTeamEventConsumable )
 			}
 
 			$J( '.prix_attackcard_ctn.selected' ).addClass( 'prix_shake_animation' );
-			elAttackContainer.find( '.prix_action_subtext2 span'  ).text( g_mapConsumables[eTeamEventConsumable] || 0 );
+			elAttackContainer.find( '.prix_action_subtext2 span'  ).text( !g_mapConsumables[eTeamEventConsumable] ? 0 : g_mapConsumables[eTeamEventConsumable].quantity );
 
 			setTimeout(function() {
 				$J( '.prix_attackcard_ctn' ).removeClass( 'selected' );

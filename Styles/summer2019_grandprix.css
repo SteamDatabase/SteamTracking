@@ -391,6 +391,10 @@ a {
 	box-shadow: 4px 4px 1px #1f2225cc;
 }
 
+.prix_attack_controls .prix_action_ctn.change {
+	max-width: 100%;
+}
+
 .prix_action_ctn.enabled:hover {
 	cursor: pointer;
 	background-color: #37474f;
@@ -445,6 +449,11 @@ a {
 	padding-left: 100px;
 }
 
+.prix_attack_controls.change {
+	margin-top: 10px;
+	justify-content: center;
+}
+
 .prix_action_details_ctn {
 	display: flex;
 	flex-direction: column;
@@ -497,10 +506,13 @@ a {
 	margin-left: -4px;
 }
 
+.prix_attack_ctn .prix_action_subtext.change {
+	color: #448e63;
+}
+
 .prix_attack_ctn .prix_action_subtext {
 	color: #E8AC25;
 }
-
 
 .prix_action_capacity_remaining {
 	font-size: 14px;
@@ -516,6 +528,10 @@ a {
 
 .prix_action_text.steal {
 	color: #d1512a;
+}
+
+.prix_action_text.change {
+	color: #448e63;
 }
 
 .prix_action_desc {
@@ -562,12 +578,20 @@ a {
 	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_setback_attack.png?' ) no-repeat center;
 }
 
+.prix_action_btn.change {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/summer2019/button_switch.png?v2?' ) no-repeat center;
+}
+
 .prix_action_ctn.attack.enabled:active {
 	background-color: #d6a21799;
 }
 
 .prix_action_ctn.steal.enabled:active {
 	background-color: #7a3624;
+}
+
+.prix_action_ctn.change.enabled:active, .prix_action_ctn.change.enabled:hover {
+	background-color: #385e48;
 }
 
 .prix_jointeam_teams_ctn {
@@ -762,7 +786,6 @@ a {
 .prix_jointeam_btn_ctn:hover:not( .disabled ), .prix_jointeam_btn_ctn:active:not( .disabled ) {
 	transition: all .1s ease-out;
 	background-color: #385e48;
-	transition: all .1s ease-out;
 }
 
 .prix_jointeam_btn_ctn:hover:not( .disabled ) .prix_jointeam_btn, .prix_jointeam_btn_ctn:hover:not( .disabled ) .prix_jointeam_confirm_img, .prix_jointeam_btn_ctn:hover .prix_viewquests_btn {
@@ -974,7 +997,7 @@ a {
 .prix_attack_teams_ctn {
   display: flex;
   flex-wrap: wrap;
-  margin: 9px 0 158px 0px;
+  margin: 9px 0 15px 0px;
 }
 
 .prix_boosts_nopoints {
@@ -1017,6 +1040,10 @@ a {
 	flex-wrap: wrap;
 	margin-left: -40px;
 	padding-top: 2px;
+}
+
+.prix_attack_controls.extra_margin {
+	margin-top: 158px;
 }
 
 .prix_attackteam_selection {
