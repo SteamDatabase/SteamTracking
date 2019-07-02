@@ -201,11 +201,13 @@ a#store_search_link img:hover {
 .item_store_home .item_def_grid_item
 {
 	margin-right: 10px;
+    margin-left: unset;
 }
 .item_store_home .item_def_grid_item .item_def_icon
 {
 	width: 184px;
 	height: 184px;
+    display: block;
 }
 
 .item_def_row_item.small .item_def_icon
