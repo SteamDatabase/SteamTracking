@@ -51,6 +51,11 @@ TextInputFullscreen.MinimalKeyboard
 	height: 200px;
 }
 
+.HidePassword #FullscreenColumnRight
+{
+    visibility: collapse;
+}
+
 #WheelWrapper
 {
 	width: 100%;
