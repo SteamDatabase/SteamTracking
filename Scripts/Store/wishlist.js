@@ -143,7 +143,6 @@ CWishlistController.prototype.OnPageLoaded = function( data )
 {
 	g_rgAppInfo = Object.assign(data, g_rgAppInfo);
 	this.nPagesLoaded++;
-	console.log(this.nPagesLoaded);
 	if( this.nPagesLoaded == this.nPagesToLoad )
 		this.BuildElements();
 }
@@ -415,7 +414,7 @@ CWishlistController.prototype.LoadSettings = function()
 		{
 			var rgKV = rgPairs[ i ].split ( '=' );
 			var strValue = decodeURIComponent( rgKV[ 1 ] );
-			this.rgFilterSettings[ rgKV[ 0 ] ] = strValue;
+			this.rgFilterSettings[ rgKV[ 0 ] ] = strValue.toLowerCase();
 			$J('input[name=\''+V_EscapeHTML( rgKV[ 0 ] )+'\']').attr('checked',true);
 		}
 	} else if( lsValue != null )
