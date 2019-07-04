@@ -671,5 +671,64 @@ LocalizationReady("shared", "english", {
   Broadcast_ViewerCount: "%1$s viewers",
   Broadcast_VideoContext_ToggleStats: "Toggle technical stats",
   Broadcast_VideoContext_OpenStore: "Visit Store",
-  Broadcast_None: "None"
+  Broadcast_None: "None",
+
+  BroadcastChat_Reconnected: "Reconnected to chat",
+  BroadcastChat_UnableToJoinChat: "Unable to join chat",
+  BroadcastChat_NeverTell: "Never tell your password to anyone",
+  BroadcastChat_EnterResponse: "Type to chat",
+  BroadcastChat_InsertEmoticon: "Insert Emoticon",
+  BroadcastChat_Send: "Send",
+  BroadcastChat_UserJoined: "%1$s joined the chat",
+  BroadcastChat_UserLeft: "%1$s left the chat",
+  BroadcastChat_UserMuted: "%1$s has been muted in this chatroom",
+  BroadcastChat_UserMutedLocal: "%1$s has been muted",
+  BroadcastChat_UserUnmutedLocal: "%1$s has been unmuted",
+  BroadcastChat_UserMuteFailed: "Failed to mute %1$s. Please try again.",
+  BroadcastChat_RemoveMessagesFailed:
+    "Failed to remove messages for %1$s. Please try again.",
+  BroadcastChat_UserUnmuteFailed: "Failed to unmute %1$s. Please try again.",
+  BroadcastChat_YouMuted:
+    "You have been muted and cannot post messages to this chat",
+  BroadcastChat_FailedToSendMsg: "Failed to send chat message: %1$s",
+  BroadcastChat_Cooldown:
+    "You are sending messages too fast, try again in %1$s seconds.",
+  BroadcastChat_Mute: "Mute",
+  BroadcastChat_Unmute: "Unmute",
+  BroadcastChat_MuteLocal: "Mute Locally",
+  BroadcastChat_UnmuteLocal: "Unmute Locally",
+  BroadcastChat_Login: "Login to join chat",
+  BroadcastChat_LimitedUser: "Limited chat access",
+  BroadcastChat_RemoveMessages: "Remove this user's messages",
+  BroadcastChat_Blocked:
+    "Only game owners are allowed to send chat messages during this broadcast.",
+  BroadcastChat_half_Mute: "Mute user for 12 hours",
+  BroadcastChat_day_Mute: "Mute user for a day",
+  BroadcastChat_week_Mute: "Mute user for a week",
+  BroadcastChat_perm_Mute: "Mute user permanently",
+  BroadcastChat_half_Shadow: "Shadow-Mute user for 12 hours",
+  BroadcastChat_day_Shadow: "Shadow-Mute user for a day",
+  BroadcastChat_week_Shadow: "Shadow-Mute user for a week",
+  BroadcastChat_perm_Shadow: "Shadow-Mute user for permanently",
+  BroadcastChat_Add_Moderator: "Make this user a Moderator",
+  BroadcastChat_Remove_Moderator: "Remove Moderator status for user",
+  BroadcastChat_Change_Moderator_Title: "Change Moderator status for user",
+  BroadcastChat_Change_Add_Confirm:
+    "Are you sure you want to add the following user as a moderator? They will be able to mute other users on the broadcast chat.",
+  BroadcastChat_Change_Remove_Confirm:
+    "Are you sure you want to remove the following user as a moderator?",
+  BroadcastChat_Tooltip_Show_Chat_Viewers:
+    "Show a list of people who are currently in the chat window.",
+  BroadcastChat_Tooltip_Minimize_Chat: "Minimize the chat window",
+  BroadcastChat_Tooltip_Maximize_Chat: "Maximize the chat window",
+  BroadcastChat_Tooltip_Popout_Chat: "Pop-out the chat into a new window",
+  BroadcastChat_ChatOnly_Title: "Broadcast Chat Only",
+  BroadcastChat_DefaultMessage: "Welcome to the chat!",
+  BroadcastChat_Moderator: "Moderator",
+  BroadcastChat_Broadcaster: "Broadcaster",
+
+  ChatEntryButton_Submit: "Submit",
+  ChatEntryButton_Emoticon: "Emoticon Picker",
+  ChatEntryButton_Flair: "Flair Picker",
+  ChatEntryButton_SendEmbed: "Send Special"
 });

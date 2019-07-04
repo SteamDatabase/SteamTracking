@@ -14484,6 +14484,7 @@
               (this.m_strStateDescription = t),
               e == J.Error && console.log(this.m_strStateDescription);
           }),
+          S.c([i.x], e.prototype, "m_ulBroadcastID", void 0),
           S.c([i.x], e.prototype, "m_eWatchState", void 0),
           S.c([i.x], e.prototype, "m_strStateDescription", void 0),
           S.c([i.g], e.prototype, "SetState", null),
@@ -15101,6 +15102,7 @@
               (this.m_broadcastSettings.bMuted = t),
               this.SaveBroadcastSettings());
           }),
+          S.c([i.x], e.prototype, "m_mapBroadcasts", void 0),
           e
         );
       })();
@@ -15566,6 +15568,14 @@
       })(),
       ie = new ne();
     window.uiBroadcastWatchStore = ie;
+  },
+  DMSt: function(e, t, n) {
+    e.exports = {
+      FriendsListInsetShadowCtn: "insetshadow_FriendsListInsetShadowCtn_1S167",
+      FriendListInsetShadowTop: "insetshadow_FriendListInsetShadowTop_1mEmL",
+      FriendListInsetShadowBottom:
+        "insetshadow_FriendListInsetShadowBottom_3cl4u"
+    };
   },
   E7zH: function(e, t, n) {
     "use strict";
@@ -25205,14 +25215,10 @@
               ),
               O.createElement(
                 "div",
-                {
-                  className: "DialogSlider_SliderContainer",
-                  onMouseDown: this.OnMouseDown,
-                  ref: this.m_elSlider
-                },
+                { onMouseDown: this.OnMouseDown, ref: this.m_elSlider },
                 O.createElement(
                   "div",
-                  { className: "DialogSlider_Slider" },
+                  { className: "VideoTimelineSlider" },
                   O.createElement("div", {
                     className: "STV_timelineValue",
                     style: p
@@ -26502,7 +26508,7 @@
                 ((this.m_PendingAppInfoPromise = new Promise(function(e) {
                   return (t.m_PendingAppInfoResolve = e);
                 })),
-                SetBackgroundTimeout(function() {
+                window.setTimeout(function() {
                   return t.FlushPendingAppInfo();
                 }, 25)),
               this.m_setPendingAppInfo.add(e),
@@ -27904,9 +27910,9 @@
       l = n("tY0L"),
       p = n("e2SU"),
       u = n("oh5H"),
-      m = n("bf/M"),
-      d = n.n(m),
-      h = n("QHER"),
+      m = n("QHER"),
+      d = n("UDpV"),
+      h = n.n(d),
       f = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -27941,17 +27947,14 @@
           (t.prototype.render = function() {
             var e = this.props,
               t = e.disabled,
-              n = [e.className, "chatSubmitButton", "EmoticonPickerButton"],
+              n = [e.className, h.a.chatSubmitButton, h.a.EmoticonPickerButton],
               o = !1;
             return (
-              t
-                ? n.push("disabled")
-                : this.BHaveUnseenEmoticons() &&
-                  (n.push(d.a.EmoticonButton_NewEmoticons), (o = !0)),
+              t ? n.push("disabled") : this.BHaveUnseenEmoticons() && (o = !0),
               this.props.useImg
                 ? r.a.createElement("img", {
                     src: this.props.useImg,
-                    className: h.a.apply(void 0, n),
+                    className: m.a.apply(void 0, n),
                     onClick: this.OnEmoticonClick,
                     title:
                       this.props.title ||
@@ -27960,7 +27963,7 @@
                 : r.a.createElement(
                     "button",
                     {
-                      className: h.a.apply(void 0, n),
+                      className: m.a.apply(void 0, n),
                       type: "button",
                       onClick: this.OnEmoticonClick,
                       title:
@@ -28763,7 +28766,14 @@
       chatTextarea: "chatentry_chatTextarea_3e__5",
       chatEntryActionsGroup: "chatentry_chatEntryActionsGroup_15mWd",
       chatEntryActionsContainer: "chatentry_chatEntryActionsContainer_WZNUD",
-      minHeightZero: "chatentry_minHeightZero_NcZQ_"
+      minHeightZero: "chatentry_minHeightZero_NcZQ_",
+      chatSubmitButton: "chatentry_chatSubmitButton_3VRfL",
+      EmbedButton: "chatentry_EmbedButton_1vvRh",
+      EmoticonPickerButton: "chatentry_EmoticonPickerButton_3fgX0",
+      disabled: "chatentry_disabled_2p2vW",
+      Inactive: "chatentry_Inactive_gFWg4",
+      AudioLines: "chatentry_AudioLines_3fUht",
+      Active: "chatentry_Active_224Fj"
     };
   },
   UMCL: function(e, t, n) {
@@ -38648,7 +38658,7 @@
             );
             return o.friend
               ? k.createElement(
-                  De,
+                  Te,
                   { friend: o.friend, context: this.props.friendRenderContext },
                   i
                 )
@@ -38705,7 +38715,7 @@
               k.createElement("div", { className: "chatUnreadCircle" })
             )),
           k.createElement(
-            Te,
+            Ge,
             {
               friend: t,
               key: t.accountid,
@@ -39254,7 +39264,7 @@
                     { className: "fakeMiniProfile" },
                     k.createElement(K.c, { hoverInstance: t })
                   ),
-                  k.createElement(Te, {
+                  k.createElement(Ge, {
                     friend: G.f.FriendStore.GetPlayer(+e),
                     context: null
                   })
@@ -39930,36 +39940,37 @@
       })(k.Component),
       re = n("XaMz"),
       ae = n("az2Z"),
-      se = n("QHER");
+      se = n("QHER"),
+      ce = n("syWt");
     n("dBNU");
     n.d(t, "a", function() {
-      return pe;
+      return ue;
     }),
       n.d(t, "h", function() {
-        return ue;
-      }),
-      n.d(t, "i", function() {
         return me;
       }),
+      n.d(t, "i", function() {
+        return de;
+      }),
       n.d(t, "g", function() {
-        return he;
+        return fe;
       }),
       n.d(t, "e", function() {
-        return Ie;
-      }),
-      n.d(t, "b", function() {
         return Oe;
       }),
-      n.d(t, "f", function() {
-        return De;
+      n.d(t, "b", function() {
+        return Ee;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "f", function() {
         return Te;
       }),
+      n.d(t, "c", function() {
+        return Ge;
+      }),
       n.d(t, "d", function() {
-        return Re;
+        return ke;
       });
-    var ce = (function(t) {
+    var le = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -40007,7 +40018,7 @@
           (e = D.c([u.a], e))
         );
       })(k.Component),
-      le = (function(e) {
+      pe = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -40016,7 +40027,7 @@
           (t.prototype.render = function() {
             var e = this.props.chats.GetActiveVoiceChat();
             return this.props.chats.VoiceChat.IsAnyVoiceActive() && e
-              ? k.createElement(pe, {
+              ? k.createElement(ue, {
                   chat: e,
                   name: this.props.chats.GetActiveVoiceChannelName(),
                   nostatus: !1
@@ -40043,12 +40054,12 @@
                       k.createElement(
                         "div",
                         { className: "activeVoiceButtons" },
-                        k.createElement(ue, null),
                         k.createElement(me, null),
+                        k.createElement(de, null),
                         k.createElement("div", {
                           className: "activeVoiceButtonsSpacer"
                         }),
-                        k.createElement(de, null),
+                        k.createElement(he, null),
                         k.createElement("div", {
                           className: "activeVoiceButtonsSpacerAfter"
                         })
@@ -40060,7 +40071,7 @@
           (t = D.c([u.a], t))
         );
       })(k.Component),
-      pe = (function(t) {
+      ue = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -40122,19 +40133,19 @@
                     k.createElement(
                       "div",
                       { className: "activeVoiceButtons" },
-                      k.createElement(ue, null),
                       k.createElement(me, null),
+                      k.createElement(de, null),
                       k.createElement("div", {
                         className: "activeVoiceButtonsSpacer"
                       }),
-                      k.createElement(de, null),
+                      k.createElement(he, null),
                       k.createElement("div", {
                         className: "activeVoiceButtonsSpacerAfter"
                       })
                     )
                   ),
                   !this.props.nostatus &&
-                    k.createElement(ce, { chat: this.props.chat })
+                    k.createElement(le, { chat: this.props.chat })
                 ),
                 (e || t) &&
                   k.createElement(
@@ -40152,7 +40163,7 @@
           (e = D.c([u.a], e))
         );
       })(k.Component),
-      ue = (function(e) {
+      me = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -40195,7 +40206,7 @@
           (t = D.c([u.a], t))
         );
       })(k.Component),
-      me = (function(e) {
+      de = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -40228,7 +40239,7 @@
           (t = D.c([u.a], t))
         );
       })(k.Component),
-      de = (function(e) {
+      he = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -40252,7 +40263,7 @@
           (t = D.c([u.a], t))
         );
       })(k.Component),
-      he = (function(n) {
+      fe = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -40509,7 +40520,7 @@
                         k.createElement(A.n, null)
                       )
                     ),
-                  k.createElement(be, {
+                  k.createElement(ve, {
                     popup: this.props.popup && this.props.popup,
                     currentUser: e
                   }),
@@ -40550,7 +40561,7 @@
                           classNames: "activevoice-anim",
                           timeout: 500
                         },
-                        k.createElement(le, { chats: this.props.chats })
+                        k.createElement(pe, { chats: this.props.chats })
                       )
                   ),
                   k.createElement(I, {
@@ -40683,7 +40694,7 @@
                   ),
                   k.createElement("div", { className: "disconnectBlocker" })
                 ),
-                k.createElement(ve, {
+                k.createElement(Se, {
                   friends: this.props.friends,
                   chats: this.props.chats,
                   searchString: t,
@@ -40696,7 +40707,7 @@
                 k.createElement(
                   "div",
                   { className: "friendListFooter" },
-                  k.createElement(ge, null)
+                  k.createElement(be, null)
                 )
               )
             );
@@ -40718,7 +40729,7 @@
           (e = D.c([u.a], e))
         );
       })(k.Component),
-      fe = (function(e) {
+      _e = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -40747,7 +40758,7 @@
           t
         );
       })(k.Component),
-      _e = (function(n) {
+      ge = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -40804,7 +40815,7 @@
           e
         );
       })(k.Component),
-      ge = (function(t) {
+      be = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -40821,8 +40832,8 @@
                 "div",
                 { className: "flexRowCentered" },
                 !1,
-                k.createElement(fe, null),
-                k.createElement(_e, null)
+                k.createElement(_e, null),
+                k.createElement(ge, null)
               )
             );
           }),
@@ -40830,7 +40841,7 @@
           (e = D.c([u.a], e))
         );
       })(k.Component),
-      be = (function(e) {
+      ve = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -40918,7 +40929,7 @@
                   onContextMenu: this.OnShowContextMenu
                 },
                 k.createElement(
-                  De,
+                  Te,
                   {
                     friend: e,
                     context: { chatContext: "friendslist" },
@@ -40972,7 +40983,7 @@
           (t = D.c([u.a], t))
         );
       })(k.Component),
-      ve = (function(n) {
+      Se = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { bScrolledFromTop: !1 }), t;
@@ -41206,7 +41217,7 @@
                       )
                     ),
                   k.createElement(
-                    Ie,
+                    Oe,
                     D.a(
                       {
                         group: this.props.friends.FriendGroupStore
@@ -41218,7 +41229,7 @@
                     )
                   ),
                   k.createElement(
-                    Ie,
+                    Oe,
                     D.a(
                       {
                         group: this.props.friends.FriendGroupStore
@@ -41232,7 +41243,7 @@
                 );
               } else if (t)
                 e = k.createElement(
-                  Ie,
+                  Oe,
                   D.a(
                     {
                       group: this.props.friends.FriendGroupStore.all_friends,
@@ -41245,7 +41256,7 @@
                 var p = this.props.friends.FriendGroupStore.user_groups.map(
                     function(e) {
                       return k.createElement(
-                        Ie,
+                        Oe,
                         D.a(
                           {
                             group: e,
@@ -41261,7 +41272,7 @@
                   u = this.props.friends.FriendGroupStore.default_groups.map(
                     function(e) {
                       return k.createElement(
-                        Ie,
+                        Oe,
                         D.a(
                           {
                             group: e,
@@ -41285,13 +41296,13 @@
                       k.createElement(
                         "div",
                         { className: "recentChatsGroup unreadChatsGroup" },
-                        k.createElement(Le, {
+                        k.createElement(Ne, {
                           friendChatStore: this.props.chats.FriendChatStore,
                           browserContext: this.props.browserContext
                         }),
                         !1
                       ),
-                    k.createElement(Ce, null),
+                    k.createElement(Ie, null),
                     p,
                     u
                   ));
@@ -41305,14 +41316,8 @@
                   "FriendsListContent" + (d ? " CompactFriendsList" : ""),
                 ref: this.BindFriendsListContent
               },
-              k.createElement(
-                "div",
-                { className: "friendsListInsetShadowCtn" },
-                k.createElement("div", {
-                  className: "friendListInsetShadowTop"
-                })
-              ),
-              k.createElement(ke, {
+              k.createElement(ce.b, null),
+              k.createElement(Le, {
                 browserContext: this.props.browserContext,
                 bScrolledFromTop: this.state.bScrolledFromTop && !t,
                 onClick: this.ScrollToTop
@@ -41334,14 +41339,8 @@
                   k.createElement("div", { className: "disconnectBlocker" })
                 )
               ),
-              k.createElement(
-                "div",
-                { className: "friendsListInsetShadowCtn" },
-                k.createElement("div", {
-                  className: "friendListInsetShadowBottom"
-                })
-              ),
-              k.createElement(Se, {
+              k.createElement(ce.a, null),
+              k.createElement(ye, {
                 friends: this.props.friends,
                 chats: this.props.chats,
                 parent: this
@@ -41357,7 +41356,7 @@
           (e = D.c([u.a], e))
         );
       })(k.Component),
-      Se = (function(n) {
+      ye = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -41651,13 +41650,7 @@
                   ),
                   k.createElement("div", { className: "disconnectBlocker" })
                 ),
-                k.createElement(
-                  "div",
-                  { className: "friendsListInsetShadowCtn" },
-                  k.createElement("div", {
-                    className: "friendListInsetShadowTop"
-                  })
-                ),
+                k.createElement(ce.b, null),
                 k.createElement(
                   "div",
                   {
@@ -41671,13 +41664,7 @@
                     ref: this.BindChatSection
                   })
                 ),
-                k.createElement(
-                  "div",
-                  { className: "friendsListInsetShadowCtn" },
-                  k.createElement("div", {
-                    className: "friendListInsetShadowBottom"
-                  })
-                )
+                k.createElement(ce.a, null)
               )
             );
           }),
@@ -41698,7 +41685,7 @@
           (e = D.c([u.a], e))
         );
       })(k.Component),
-      ye = (function(e) {
+      Ce = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -41786,12 +41773,12 @@
           t
         );
       })(k.Component),
-      Ce = Object(u.a)(function(e) {
+      Ie = Object(u.a)(function(e) {
         if (!G.f.SettingsStore.FriendsSettings.bCategorizeInGameFriendsByGame)
           return null;
         var t = G.f.FriendStore.FriendGroupStore.game_groups,
           n = t.map(function(e) {
-            return k.createElement(Me, {
+            return k.createElement(we, {
               key: e.id,
               group: e,
               bSingletonGroup: !1,
@@ -41804,7 +41791,7 @@
         return (
           o &&
             n.push(
-              k.createElement(Me, {
+              k.createElement(we, {
                 key: "singleton",
                 group: o,
                 bSingletonGroup: !0,
@@ -41816,7 +41803,7 @@
           k.createElement(k.Fragment, null, n)
         );
       }),
-      Ie = (function(n) {
+      Oe = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -42112,7 +42099,7 @@
                           "div",
                           null,
                           k.createElement(
-                            Te,
+                            Ge,
                             D.a(
                               {
                                 friend: t,
@@ -42374,10 +42361,10 @@
           D.c([h.a], e.prototype, "ToggleOfflineSortMethod", null),
           (e = D.c([u.a], e))
         );
-      })(ye);
-    function Oe(e, t, n) {
+      })(Ce);
+    function Ee(e, t, n) {
       return Object(M.a)(
-        k.createElement(Ee, {
+        k.createElement(Me, {
           browserContext: e,
           appid: t,
           ownerWindow: n.currentTarget.ownerDocument.defaultView
@@ -42385,7 +42372,7 @@
         n
       );
     }
-    var Ee = (function(e) {
+    var Me = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -42404,7 +42391,7 @@
           t
         );
       })(k.PureComponent),
-      Me = (function(n) {
+      we = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { bLocalCollapsed: t.props.collapsed }), t;
@@ -42446,7 +42433,7 @@
             var t = this.props.group.id;
             t &&
               (G.f.AppInfoStore.GetAppInfo(t).is_valid &&
-                Oe(Object(S.c)(this, e), t, e));
+                Ee(Object(S.c)(this, e), t, e));
           }),
           (e.prototype.render = function() {
             if (
@@ -42568,7 +42555,7 @@
                 }
                 var O = void 0;
                 this.props.bSingletonGroup &&
-                  (O = k.createElement(we, {
+                  (O = k.createElement(De, {
                     appid: l.persona.m_unGamePlayedAppID
                   })),
                   (h += " " + N.a.hoverClass),
@@ -42580,7 +42567,7 @@
                         classNames: "friend-anim",
                         timeout: 320
                       },
-                      k.createElement(Te, {
+                      k.createElement(Ge, {
                         friend: l,
                         key: l.accountid,
                         bHideGameName: p,
@@ -42666,15 +42653,15 @@
           D.c([h.a], e.prototype, "OnShowHeaderContextMenu", null),
           (e = D.c([u.a], e))
         );
-      })(ye),
-      we = (function(e) {
+      })(Ce),
+      De = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           D.d(t, e),
           (t.prototype.OnShowGameIconContextMenu = function(e) {
-            Oe(Object(S.c)(this, e), this.props.appid, e);
+            Ee(Object(S.c)(this, e), this.props.appid, e);
           }),
           (t.prototype.render = function() {
             var e = G.f.AppInfoStore.GetAppInfo(this.props.appid);
@@ -42705,7 +42692,7 @@
           (t = D.c([u.a], t))
         );
       })(k.Component),
-      De = (function(e) {
+      Te = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -42748,7 +42735,7 @@
           t
         );
       })(k.Component),
-      Te = (function(n) {
+      Ge = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { bActive: !1 }), t;
@@ -42909,7 +42896,7 @@
                 );
               this.props.noActions ||
                 (g = k.createElement(
-                  De,
+                  Te,
                   {
                     friend: e,
                     context: this.props.context,
@@ -42963,7 +42950,7 @@
                     k.createElement("div", {
                       className: "SteamPlayerGroupLines"
                     }),
-                  this.props.bInVoiceList && k.createElement(Ge, { friend: e }),
+                  this.props.bInVoiceList && k.createElement(Re, { friend: e }),
                   this.props.listStatusIndicatorLeft,
                   g,
                   k.createElement(ae.a, {
@@ -43004,7 +42991,7 @@
           (e = D.c([u.a], e))
         );
       })(k.Component),
-      Ge = (function(e) {
+      Re = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -43067,7 +43054,7 @@
           (t = D.c([u.a], t))
         );
       })(k.Component),
-      Re = (function(e) {
+      ke = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -43085,7 +43072,7 @@
                 this.props.children
               );
             return k.createElement(
-              De,
+              Te,
               { friend: e, context: this.props.context },
               t
             );
@@ -43093,7 +43080,7 @@
           (t = D.c([u.a], t))
         );
       })(k.Component),
-      ke = (function(e) {
+      Le = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -43131,7 +43118,7 @@
           (t = D.c([u.a], t))
         );
       })(k.Component),
-      Le = (function(n) {
+      Ne = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { collapsed: !1 }), t;
@@ -43167,7 +43154,7 @@
                       k.createElement(
                         "div",
                         { className: "unreadFriend" },
-                        k.createElement(Te, {
+                        k.createElement(Ge, {
                           friend: n,
                           key: n.accountid,
                           context: { chat: e },
@@ -43210,7 +43197,6 @@
       })(k.Component);
     k.Component;
   },
-  "bf/M": function(e, t, n) {},
   "bs+5": function(e, t, n) {
     "use strict";
     n.d(t, "a", function() {
@@ -45353,7 +45339,8 @@
         R.createElement(R.Fragment, null, n)
       );
     }
-    var be = (function(n) {
+    var be = n("syWt"),
+      ve = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -45722,14 +45709,8 @@
                     onClick: this.Swallow
                   }),
                 s,
-                R.createElement(
-                  "div",
-                  { className: "friendsListInsetShadowCtn" },
-                  R.createElement("div", {
-                    className: "friendListInsetShadowTop"
-                  })
-                ),
-                R.createElement(ve, { chatHistory: this, chatView: t }),
+                R.createElement(be.b, null),
+                R.createElement(Se, { chatHistory: this, chatView: t }),
                 R.createElement(
                   "div",
                   {
@@ -45750,18 +45731,12 @@
                     R.createElement("div", { className: "disconnectBlocker" })
                   )
                 ),
-                R.createElement(ft, { chatView: t }),
-                R.createElement(Se, {
+                R.createElement(_t, { chatView: t }),
+                R.createElement(ye, {
                   chatView: t,
                   action: this.ScrollToBottom
                 }),
-                R.createElement(
-                  "div",
-                  { className: "friendsListInsetShadowCtn" },
-                  R.createElement("div", {
-                    className: "friendListInsetShadowBottom"
-                  })
-                )
+                R.createElement(be.a, null)
               )
             );
           }),
@@ -45779,7 +45754,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      ve = (function(e) {
+      Se = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -45800,7 +45775,7 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      Se = (function(e) {
+      ye = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -45830,11 +45805,11 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      ye = n("QxgC"),
-      Ce = n("tY0L"),
-      Ie = n("3/mw"),
-      Oe = n.n(Ie),
-      Ee = (function(n) {
+      Ce = n("QxgC"),
+      Ie = n("tY0L"),
+      Oe = n("3/mw"),
+      Ee = n.n(Oe),
+      Me = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -46031,7 +46006,7 @@
                   r = n === this.state.selectedIndex;
                 e.push(
                   s.a.createElement(
-                    Me,
+                    we,
                     {
                       key: i,
                       matchKey: i,
@@ -46057,11 +46032,11 @@
             }
             return s.a.createElement(
               "div",
-              { className: Oe.a.mentionDialogPosition },
+              { className: Ee.a.mentionDialogPosition },
               s.a.createElement(
                 "div",
                 {
-                  className: Oe.a.mentionDialog,
+                  className: Ee.a.mentionDialog,
                   tabIndex: 0,
                   onKeyDown: this.OnKeyDown
                 },
@@ -46077,7 +46052,7 @@
           e
         );
       })(s.a.Component),
-      Me = (function(e) {
+      we = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -46094,9 +46069,9 @@
               "div",
               {
                 className: Object(q.a)(
-                  Oe.a.suggestOption,
-                  Oe.a.mentionSearchOption,
-                  this.props.bIsSelected ? Oe.a.selected : ""
+                  Ee.a.suggestOption,
+                  Ee.a.mentionSearchOption,
+                  this.props.bIsSelected ? Ee.a.selected : ""
                 ),
                 onMouseEnter: this.OnMouseOver,
                 onClick: this.OnClick
@@ -46109,10 +46084,10 @@
           t
         );
       })(s.a.PureComponent),
-      we = Ee,
-      De = n("dXEH"),
-      Te = n.n(De),
-      Ge = (function(e) {
+      De = Me,
+      Te = n("dXEH"),
+      Ge = n.n(Te),
+      Re = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -46132,18 +46107,18 @@
               "div",
               {
                 className: Object(q.a)(
-                  Te.a.EmoticonSuggestion,
+                  Ge.a.EmoticonSuggestion,
                   e.recent ? "Recent" : ""
                 )
               },
               s.a.createElement(
                 "div",
-                { className: Te.a.Emoticon },
-                s.a.createElement(Ce.a, {
+                { className: Ge.a.Emoticon },
+                s.a.createElement(Ie.a, {
                   emoticon: e.name,
                   emoticonHoverStore: this.props.emoticonHoverStore
                 }),
-                e.new && s.a.createElement(Ce.c, null)
+                e.new && s.a.createElement(Ie.c, null)
               ),
               ":",
               e.name,
@@ -46164,10 +46139,10 @@
           }),
           t
         );
-      })(we),
-      Re = n("UDpV"),
-      ke = n.n(Re),
-      Le = (function(e) {
+      })(De),
+      ke = n("UDpV"),
+      Le = n.n(ke),
+      Ne = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -46177,17 +46152,17 @@
             var e = this.props.fileUploadManager,
               t = e.file_upload_props.eUploadState;
             return 1 == t
-              ? R.createElement(Ne, { fileUploadManager: e })
-              : 3 == t || 5 == t || 4 == t
-              ? R.createElement(Ae, { fileUploadManager: e })
-              : 0 != t
               ? R.createElement(Pe, { fileUploadManager: e })
+              : 3 == t || 5 == t || 4 == t
+              ? R.createElement(Be, { fileUploadManager: e })
+              : 0 != t
+              ? R.createElement(Ae, { fileUploadManager: e })
               : null;
           }),
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      Ne = (function(n) {
+      Pe = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { bSpoilerChecked: !1 }), t;
@@ -46271,7 +46246,7 @@
           e
         );
       })(R.Component),
-      Pe = (function(e) {
+      Ae = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -46307,7 +46282,7 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      Ae = (function(e) {
+      Be = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -46379,10 +46354,10 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      Be = n("Jdiq"),
-      Fe = n("vDqi"),
-      xe = n.n(Fe),
-      Ve = (function(n) {
+      Fe = n("Jdiq"),
+      xe = n("vDqi"),
+      Ve = n.n(xe),
+      Ue = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -46474,7 +46449,7 @@
           }),
           (e.prototype.OnEmbedClick = function(e) {
             Object(ce.a)(
-              R.createElement(ze, {
+              R.createElement(qe, {
                 chatView: this.props.chatView,
                 refFileInput: this.m_refFileInput.current,
                 fnInsertText: this.InsertAtCursor.bind(this)
@@ -46685,7 +46660,7 @@
               i = void 0;
             switch (this.state.activeSuggestSearchType) {
               case "Mention":
-                i = R.createElement(je, {
+                i = R.createElement(He, {
                   chat: o,
                   strSearch: this.state.mentionSearch,
                   onSuggestionSelected: this.OnMentionSuggestionSelected,
@@ -46693,9 +46668,9 @@
                 });
                 break;
               case "Emoticon":
-                i = R.createElement(Ge, {
+                i = R.createElement(Re, {
                   emoticonStore: P.f.ChatStore.EmoticonStore,
-                  emoticonHoverStore: Be.b,
+                  emoticonHoverStore: Fe.b,
                   strSearch: this.state.mentionSearch,
                   nMinimumSearchLengthBeforeAutoSelection: 2,
                   onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -46703,14 +46678,14 @@
                 });
                 break;
               case "SlashCommand":
-                i = R.createElement(He, {
+                i = R.createElement(We, {
                   strSearch: this.state.mentionSearch,
                   onSuggestionSelected: this.OnSlashCommandSuggestionSelected,
                   ref: this.BindMentionDialog
                 });
                 break;
               case "Store":
-                i = R.createElement(We, {
+                i = R.createElement(ze, {
                   strSearch: this.state.mentionSearch,
                   onSuggestionSelected: this.OnStoreSuggestionSelected,
                   ref: this.BindMentionDialog
@@ -46726,19 +46701,19 @@
               R.createElement(
                 "div",
                 { className: "chatEntry" + (r ? " compactView" : "") + s },
-                R.createElement(Le, {
+                R.createElement(Ne, {
                   fileUploadManager: t.file_upload_manager
                 }),
                 R.createElement(
                   "form",
                   {
-                    className: ke.a.chatEntryControls + " compactableHeight",
+                    className: Le.a.chatEntryControls + " compactableHeight",
                     onSubmit: this.OnSubmit,
                     onBlur: this.OnBlur
                   },
                   i,
                   R.createElement("textarea", {
-                    className: ke.a.chatTextarea,
+                    className: Le.a.chatTextarea,
                     value: this.state.messageInput,
                     onPaste: this.OnPaste,
                     onContextMenu: this.OnContextMenu,
@@ -46757,8 +46732,8 @@
                     "button",
                     {
                       className:
-                        "chatSubmitButton" +
-                        (this.state.submitEnabled ? "" : " disabled"),
+                        Le.a.chatSubmitButton +
+                        (this.state.submitEnabled ? "" : " " + Le.a.disabled),
                       type: "submit",
                       disabled: !this.state.submitEnabled,
                       title: Object(x.b)("#ChatEntryButton_Submit")
@@ -46777,26 +46752,28 @@
                   "div",
                   {
                     className:
-                      ke.a.chatEntryActionsContainer + " compactableHeight"
+                      Le.a.chatEntryActionsContainer + " compactableHeight"
                   },
                   R.createElement(
                     "div",
-                    { className: ke.a.chatEntryActionsGroup },
-                    R.createElement(ye.a, {
+                    { className: Le.a.chatEntryActionsGroup },
+                    R.createElement(Ce.a, {
                       disabled: n,
                       OnEmoticonSelected: this.OnEmoticonSelected,
                       rtLastAckedNewEmoticons:
                         A.f.UIDisplayPrefs.rtLastAckedNewEmoticons,
                       SetUIDisplayPref: A.f.SetUIDisplayPref.bind(A.f),
-                      emoticonHoverStore: Be.b,
+                      emoticonHoverStore: Fe.b,
                       emoticonStore: P.f.ChatStore.EmoticonStore
                     }),
                     R.createElement(
                       "button",
                       {
                         className:
-                          "chatSubmitButton EmbedButton" +
-                          (n ? " disabled" : ""),
+                          Le.a.chatSubmitButton +
+                          " " +
+                          Le.a.EmbedButton +
+                          (n ? " " + Le.a.disabled : ""),
                         type: "button",
                         onClick: this.OnEmbedClick,
                         title: Object(x.b)("#ChatEntryButton_SendEmbed"),
@@ -46805,7 +46782,7 @@
                       R.createElement(L.J, null)
                     )
                   ),
-                  R.createElement(Ue, { chat: o })
+                  R.createElement(je, { chat: o })
                 ),
                 R.createElement("div", {
                   className: "disconnectBlocker compactableHeight"
@@ -46834,7 +46811,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      Ue = (function(e) {
+      je = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -46851,7 +46828,7 @@
                 var o = n.voiceRoomList;
                 if (0 != o.length)
                   if (1 != o.length) {
-                    var i = R.createElement(qe, { group: n });
+                    var i = R.createElement(Ke, { group: n });
                     Object(ce.a)(i, e.currentTarget, {
                       bOverlapHorizontal: !0,
                       bPreferPopLeft: !0,
@@ -46975,7 +46952,7 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      je = (function(t) {
+      He = (function(t) {
         function e() {
           return (null !== t && t.apply(this, arguments)) || this;
         }
@@ -47109,8 +47086,8 @@
           (e.nMaxMatches = 12),
           e
         );
-      })(we),
-      He = (function(e) {
+      })(De),
+      We = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -47162,8 +47139,8 @@
           }),
           t
         );
-      })(we),
-      We = (function(e) {
+      })(De),
+      ze = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -47177,7 +47154,7 @@
                   case 0:
                     return [
                       4,
-                      xe.a.get(
+                      Ve.a.get(
                         N.a.STORE_BASE_URL +
                           "search/suggest?term=" +
                           n +
@@ -47232,8 +47209,8 @@
           }),
           t
         );
-      })(we);
-    function ze(t) {
+      })(De);
+    function qe(t) {
       var e = [];
       t.refFileInput &&
         e.push(
@@ -47266,7 +47243,7 @@
         R.createElement(le.c, null, e)
       );
     }
-    function qe(e) {
+    function Ke(e) {
       var t = e.group.GetGroupID(),
         n = e.group.voiceRoomList.map(function(e) {
           return R.createElement(
@@ -47282,12 +47259,12 @@
         });
       return R.createElement(le.c, null, n);
     }
-    var Ke = n("ieu3"),
-      Ye = n("hx5d"),
-      Je = n("GxRc"),
-      Xe = n("/7KC"),
-      Qe = n("/ZM5"),
-      Ze = (function(n) {
+    var Ye = n("ieu3"),
+      Je = n("hx5d"),
+      Xe = n("GxRc"),
+      Qe = n("/7KC"),
+      Ze = n("/ZM5"),
+      $e = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -47342,7 +47319,7 @@
                   A.f.DragDropManager.SetDropConsumed();
                 var i = t.currentTarget.ownerDocument.defaultView;
                 o.sourceContext.group != this.props.groupView.GetGroup() &&
-                  rt(
+                  at(
                     {
                       invitee: o.friend,
                       chatview: null,
@@ -47444,7 +47421,7 @@
                   s = a.clientWidth,
                   c = a.clientHeight,
                   l = (9 / 16) * s + 50,
-                  p = Object(Xe.a)(r, 1, (l / c) * 100);
+                  p = Object(Qe.a)(r, 1, (l / c) * 100);
                 i.height = p + "%";
               }
             } else (i.width = o ? o + "%" : "66%"), (i.overflowY = "auto");
@@ -47475,7 +47452,7 @@
               i = o ? t.top : t.left,
               r = o ? e.clientY : e.clientX,
               a = o ? n.height : n.width,
-              s = Object(Xe.a)(((r - i) / a) * 100, 1, 100),
+              s = Object(Qe.a)(((r - i) / a) * 100, 1, 100),
               c = o
                 ? "nWatchPartyBroadcastHeightPercentage"
                 : "nWatchPartyBroadcastWidthPercentage";
@@ -47546,7 +47523,7 @@
                       return e.SetGlobalBroadcastChatShown(!1);
                     }
                   },
-                  R.createElement(Ke.b, { group: t }),
+                  R.createElement(Ye.b, { group: t }),
                   R.createElement(F.a, { group: t, micro: !0 }),
                   R.createElement(
                     "span",
@@ -47612,7 +47589,7 @@
                   classNames: "inviteDrop-anim",
                   timeout: 300
                 },
-                R.createElement(dt, {
+                R.createElement(ht, {
                   chatView: n,
                   friend: this.state.dropToInviteFriend
                 })
@@ -47633,7 +47610,7 @@
               (u = R.createElement(
                 R.Fragment,
                 null,
-                R.createElement(lt, {
+                R.createElement(pt, {
                   ref: this.m_refBroadcastContainer,
                   steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                   localSteamID: t.m_strLocalBroadcastId,
@@ -47666,7 +47643,7 @@
                     onMouseDown: this.OnGrabberMouseDown
                   }),
                 d &&
-                  R.createElement(ct, {
+                  R.createElement(lt, {
                     onClick: this.ShowChat,
                     edge: m ? "bottom" : "right"
                   })
@@ -47696,7 +47673,7 @@
               p && (y += " broadcastVisible");
             var O = null;
             this.props.bHideMemberList ||
-              (O = R.createElement(Qe.b, {
+              (O = R.createElement(Ze.b, {
                 groupView: this.props.groupView,
                 inactive: g
               }));
@@ -47705,7 +47682,7 @@
                 this.props.bHideMessageInput ||
                 (t.isBroadcastShown && ((!r && t.m_bShowGlobalChat) || d))
                   ? null
-                  : R.createElement(Ve, {
+                  : R.createElement(Ue, {
                       key: i.unique_id,
                       chatView: t.GetActiveChatView(),
                       isActive: this.props.isActive,
@@ -47727,14 +47704,14 @@
                     R.createElement(
                       "div",
                       { className: "ChatRoomGroupDialog_history" },
-                      R.createElement(be, {
+                      R.createElement(ve, {
                         chatView: n,
                         isActive: this.props.isActive
                       }),
                       R.createElement(
                         k.TransitionGroup,
                         null,
-                        R.createElement(ut, { groupView: t })
+                        R.createElement(mt, { groupView: t })
                       )
                     ),
                     R.createElement("div", { className: "dropTargetBox" }),
@@ -47744,7 +47721,7 @@
                 )
               );
             if (e.watching_broadcast_steamid && t.isBroadcastShown) {
-              var D = R.createElement(Ye.a, {
+              var D = R.createElement(Je.a, {
                 emoticonStore: P.f.ChatStore.EmoticonStore,
                 steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                 watchLocation: h,
@@ -47786,7 +47763,7 @@
                   R.createElement(
                     "div",
                     { className: C },
-                    R.createElement(Qe.a, { groupView: t, inactive: g }),
+                    R.createElement(Ze.a, { groupView: t, inactive: g }),
                     R.createElement(
                       "div",
                       {
@@ -47857,7 +47834,7 @@
                   R.createElement(
                     "div",
                     { className: C },
-                    R.createElement(Je.a, {
+                    R.createElement(Xe.a, {
                       position: "center",
                       string: Object(x.b)("#Chat_ChatRoomGroup_Requesting")
                     })
@@ -47885,7 +47862,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      $e = (function(n) {
+      et = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -47994,7 +47971,7 @@
                   (this.m_fnUnregisterDropComplete = void 0),
                   this.setState({ dropToInviteFriend: void 0 })),
                   A.f.DragDropManager.SetDropConsumed(),
-                  rt(
+                  at(
                     { invitee: r, chatview: n, invitedto: i },
                     Object(A.c)(this, t),
                     o
@@ -48014,7 +47991,7 @@
                     (a = P.f.ChatStore.GetChatRoomGroup(
                       s.GetChatGroupIDIfLoaded()
                     )),
-                  rt({ invitee: i, invitedto: a }, Object(A.c)(this, t), o));
+                  at({ invitee: i, invitedto: a }, Object(A.c)(this, t), o));
             } else if (0 != t.dataTransfer.files.length) {
               var c = t.dataTransfer.files[0];
               n.SetFileToUpload(c);
@@ -48048,7 +48025,7 @@
                   s = a.clientWidth,
                   c = a.clientHeight,
                   l = (9 / 16) * s + 50,
-                  p = Object(Xe.a)(r, 1, (l / c) * 100);
+                  p = Object(Qe.a)(r, 1, (l / c) * 100);
                 i.height = p + "%";
               }
             } else (i.width = o ? o + "%" : "66%"), (i.overflowY = "auto");
@@ -48078,7 +48055,7 @@
               i = o ? t.top : t.left,
               r = o ? e.clientY : e.clientX,
               a = o ? n.height : n.width,
-              s = Object(Xe.a)(((r - i) / a) * 100, 1, 100),
+              s = Object(Qe.a)(((r - i) / a) * 100, 1, 100),
               c = o
                 ? "nWatchPartyBroadcastHeightPercentage"
                 : "nWatchPartyBroadcastWidthPercentage";
@@ -48157,7 +48134,7 @@
                 },
                 R.createElement(L.x, { showChat: !1 })
               ),
-              R.createElement(st, {
+              R.createElement(ct, {
                 chatView: this.props.chatView,
                 additionalClasses: "broadcastVisible"
               })
@@ -48181,7 +48158,7 @@
                     classNames: "inviteDrop-anim",
                     timeout: 300
                   },
-                  R.createElement(dt, {
+                  R.createElement(ht, {
                     chatView: this.props.chatView,
                     friend: this.state.dropToInviteFriend
                   })
@@ -48195,7 +48172,7 @@
                     classNames: "inviteDrop-anim",
                     timeout: 300
                   },
-                  R.createElement(ht, {
+                  R.createElement(ft, {
                     chatView: this.props.chatView,
                     group: this.state.dropGroupToInviteFriend,
                     clan: this.state.dropClanToInvite
@@ -48213,7 +48190,7 @@
               (s = R.createElement(
                 R.Fragment,
                 null,
-                R.createElement(tt, {
+                R.createElement(nt, {
                   ref: this.m_refBroadcastContainer,
                   steamID: U.a
                     .InitFromAccountID(t.accountid_partner)
@@ -48246,7 +48223,7 @@
                     onMouseDown: this.OnGrabberMouseDown
                   }),
                 l &&
-                  R.createElement(ct, {
+                  R.createElement(lt, {
                     onClick: this.ShowChat,
                     edge: c ? "bottom" : "right"
                   })
@@ -48272,7 +48249,7 @@
             var f =
                 this.m_bChatHidden && i
                   ? null
-                  : R.createElement(Ve, {
+                  : R.createElement(Ue, {
                       key: t.unique_id,
                       chatView: this.props.chatView,
                       isActive: this.props.isActive,
@@ -48292,14 +48269,14 @@
                     "div",
                     { className: "displayRow minHeightZero" },
                     r &&
-                      R.createElement(mt, {
+                      R.createElement(dt, {
                         chatView: this.props.chatView,
                         friend: t.chat_partner
                       }),
                     R.createElement(
                       "div",
                       { className: "ChatRoomGroupDialog_history" },
-                      R.createElement(be, {
+                      R.createElement(ve, {
                         chatView: this.props.chatView,
                         isActive: this.props.isActive,
                         speakerLabelWidth: this.state.speakerLabelWidth,
@@ -48307,7 +48284,7 @@
                       })
                     ),
                     !i &&
-                      R.createElement(st, {
+                      R.createElement(ct, {
                         chatView: this.props.chatView,
                         additionalClasses: void 0
                       }),
@@ -48332,7 +48309,7 @@
               ),
               R.createElement("div", { className: "chatHeader" }),
               this.props.isActive &&
-                R.createElement(et, {
+                R.createElement(tt, {
                   chatView: this.props.chatView,
                   onNameWidthChanged: this.OnNameWidthChanged
                 }),
@@ -48350,7 +48327,7 @@
                     R.createElement(
                       "div",
                       null,
-                      R.createElement(it, { chatView: this.props.chatView })
+                      R.createElement(rt, { chatView: this.props.chatView })
                     )
                   )
               ),
@@ -48416,7 +48393,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      et = (function(e) {
+      tt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -48455,7 +48432,7 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      tt = R.forwardRef(function(e, t) {
+      nt = R.forwardRef(function(e, t) {
         var n = e.steamID,
           o = e.localSteamID,
           i = e.watchLocation,
@@ -48486,10 +48463,10 @@
             }),
             R.createElement("div", { className: "videoContainerSizer" })
           ),
-          R.createElement(nt, { steamID: n })
+          R.createElement(ot, { steamID: n })
         );
       }),
-      nt = (function(e) {
+      ot = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -48538,39 +48515,39 @@
         );
       })(R.Component);
     n.d(t, "g", function() {
-      return ot;
+      return it;
     }),
       n.d(t, "i", function() {
-        return it;
-      }),
-      n.d(t, "k", function() {
         return rt;
       }),
-      n.d(t, "f", function() {
-        return st;
+      n.d(t, "k", function() {
+        return at;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "f", function() {
         return ct;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "b", function() {
         return lt;
       }),
-      n.d(t, "j", function() {
-        return ut;
+      n.d(t, "a", function() {
+        return pt;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "j", function() {
         return mt;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "h", function() {
         return dt;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return ht;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "c", function() {
         return ft;
+      }),
+      n.d(t, "e", function() {
+        return _t;
       });
-    var ot = (function(n) {
+    var it = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -48725,18 +48702,18 @@
                 o = e instanceof C.b;
               return (
                 (t = n
-                  ? R.createElement(Ze, {
+                  ? R.createElement($e, {
                       groupView: n,
                       isActive: e == r,
                       popup: i.props.popup
                     })
                   : o
-                  ? R.createElement(pt, {
+                  ? R.createElement(ut, {
                       broadcastView: e,
                       isActive: e == r,
                       popup: i.props.popup
                     })
-                  : R.createElement($e, {
+                  : R.createElement(et, {
                       chatView: e.GetChatView(),
                       isActive: e == r
                     })),
@@ -48788,7 +48765,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      it = (function(t) {
+      rt = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -49005,7 +48982,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component);
-    function rt(e, t, n) {
+    function at(e, t, n) {
       var o,
         i = !1,
         r = !0;
@@ -49025,7 +49002,7 @@
       }
       r
         ? Object(b.b)(
-            R.createElement(at, G.a({}, e)),
+            R.createElement(st, G.a({}, e)),
             n,
             "InviteDialog",
             {
@@ -49043,7 +49020,7 @@
             Object(x.b)("#Chat_Actions_DropGroupInvite_Denied_Description")
           );
     }
-    var at = (function(n) {
+    var st = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.invitee = t.props.invitee), t;
@@ -49330,7 +49307,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      st = (function(e) {
+      ct = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -49408,7 +49385,7 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      ct = function(e) {
+      lt = function(e) {
         var t = e.onClick,
           n = e.edge;
         return R.createElement(
@@ -49421,7 +49398,7 @@
           R.createElement(L.x, { showChat: !0 })
         );
       },
-      lt = R.forwardRef(function(e, t) {
+      pt = R.forwardRef(function(e, t) {
         var n = e.steamID,
           o = e.localSteamID,
           i = e.watchLocation,
@@ -49465,7 +49442,7 @@
           )
         );
       }),
-      pt = (function(e) {
+      ut = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -49487,7 +49464,7 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      ut = (function(e) {
+      mt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -49541,7 +49518,7 @@
                         { className: "VoiceChatTextChannelDesc" },
                         Object(x.b)("#Chat_Scratch_Pad_Desc")
                       ),
-                      R.createElement(be, {
+                      R.createElement(ve, {
                         chatView: e,
                         isActive: !0,
                         ref: this.OnChatHistoryRef
@@ -49556,7 +49533,7 @@
           (t = G.c([c.a], t))
         );
       })(R.Component),
-      mt = (function(t) {
+      dt = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -49634,7 +49611,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      dt = (function(t) {
+      ht = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -49677,7 +49654,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      ht = (function(t) {
+      ft = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -49727,7 +49704,7 @@
           (e = G.c([c.a], e))
         );
       })(R.Component),
-      ft = (function(e) {
+      _t = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -61948,12 +61925,13 @@
           (e.prototype.GetUserSteamID = function() {
             return this.m_strUserSteamID;
           }),
-          (e.prototype.StartForSteamID = function(e) {
+          (e.prototype.StartForSteamID = function(e, t) {
             (this.m_webAPIInterface = new y(
               u.b.WEBAPI_BASE_URL,
               u.f.webapi_token
             )),
               (this.m_ulBroadcastSteamID = e),
+              (this.m_ulBroadcastID = t),
               this.RequestChatInfo();
           }),
           (e.prototype.StartForChannel = function(e) {
@@ -62120,7 +62098,6 @@
                       n.steamid && (this.m_strUserSteamID = n.steamid),
                       n.token && (this.m_webApiToken = n.token),
                       n.emoticons && this.SetOwnedEmoticons(n.emoticons),
-                      (this.m_rgChatMessages = []),
                       this.m_rgChatMessages.push({
                         type: f.a.Notification,
                         msg: Object(h.b)("#BroadcastChat_DefaultMessage"),
@@ -62923,17 +62900,18 @@
       R = n("QxgC"),
       k = n("e2SU"),
       L = n("tY0L"),
-      N = n("Jdiq");
+      N = n("Jdiq"),
+      P = n("syWt");
     n.d(t, "a", function() {
-      return B;
+      return F;
     });
-    var P = new RegExp("ː([^ː]*)ː", "g"),
-      A = (new RegExp("(https?://[^ '\"<>]*)", "gi"),
+    var A = new RegExp("ː([^ː]*)ː", "g"),
+      B = (new RegExp("(https?://[^ '\"<>]*)", "gi"),
       new RegExp(
         "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
         "i"
       )),
-      B = (function(n) {
+      F = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -62952,20 +62930,27 @@
           (e.prototype.componentDidUpdate = function(e) {
             this.m_chat && this.m_chat.m_bAutoScroll && this.ScrollToBottom(),
               (this.props.steamID === e.steamID &&
+                this.props.broadcastID === e.broadcastID &&
                 this.props.broadcastChannelID === e.broadcastChannelID) ||
-                (this.m_chat && this.m_chat.Stop(), this.StartChat());
+                this.StartChat();
           }),
           (e.prototype.componentWillUnmount = function() {
-            this.m_chat.Stop();
+            this.m_chat && this.m_chat.Stop();
           }),
           (e.prototype.StartChat = function() {
-            (this.m_chat = O.GetOrCreateChat(
-              this.props.broadcastChannelID,
-              this.props.steamID
-            )),
+            this.m_chat && this.m_chat.Stop(),
+              (this.m_chat = O.GetOrCreateChat(
+                this.props.broadcastChannelID,
+                this.props.steamID
+              )),
               this.props.broadcastChannelID
                 ? this.m_chat.StartForChannel(this.props.broadcastChannelID)
-                : (this.m_chat.StartForSteamID(this.props.steamID),
+                : this.props.steamID &&
+                  this.props.broadcastID &&
+                  (this.m_chat.StartForSteamID(
+                    this.props.steamID,
+                    this.props.broadcastID
+                  ),
                   this.ScrollToBottom());
           }),
           (e.prototype.ChatBoxChange = function(e) {
@@ -62983,11 +62968,11 @@
               e && e.preventDefault());
           }),
           (e.prototype.IsTrustedDomain = function(e) {
-            return !!e.match(A);
+            return !!e.match(B);
           }),
           (e.prototype.AddLinksEmoticons = function(e, t) {
             t && this.m_chat.GetUserEmoticons();
-            for (var n = e.split(P), o = [], i = 0; i < n.length; i += 1)
+            for (var n = e.split(A), o = [], i = 0; i < n.length; i += 1)
               i % 2 == 1
                 ? o.push(
                     r.createElement(L.a, {
@@ -63210,13 +63195,7 @@
                 className: D.a.ChatPanel,
                 style: this.props.hidden ? { display: "none" } : void 0
               },
-              r.createElement(
-                "div",
-                { className: "friendsListInsetShadowCtn" },
-                r.createElement("div", {
-                  className: "friendListInsetShadowTop"
-                })
-              ),
+              r.createElement(P.b, null),
               r.createElement(
                 "div",
                 {
@@ -63288,13 +63267,7 @@
                   );
                 })
               ),
-              r.createElement(
-                "div",
-                { className: "friendsListInsetShadowCtn" },
-                r.createElement("div", {
-                  className: "friendListInsetShadowBottom"
-                })
-              ),
+              r.createElement(P.a, null),
               u.f && u.f.logged_in && this.m_chat
                 ? r.createElement(
                     "div",
@@ -63316,14 +63289,17 @@
                           ref: this.textInput
                         }),
                         this.m_chat.m_bRateLimited &&
-                          r.createElement(F, {
+                          r.createElement(x, {
                             nSeconds: this.m_chat.m_nRateLimitSeconds,
                             bRateLimited: this.m_chat.m_bRateLimited
                           }),
                         r.createElement(
                           "button",
                           {
-                            className: "chatSubmitButton EmbedButton",
+                            className:
+                              G.a.chatSubmitButton +
+                              " " +
+                              (this.state.message ? "" : G.a.disabled),
                             title: Object(h.b)("#ChatEntryButton_Submit"),
                             onClick: this.SendMessage
                           },
@@ -63383,7 +63359,7 @@
           (e = m.c([i.a], e))
         );
       })(r.Component),
-      F = (function(e) {
+      x = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -67334,7 +67310,7 @@ and limitations under the License.
               a.createElement(s.b, { app: this }),
               document.getElementById("friendslist-container")
             ),
-            (this.m_iTimeoutLogin = SetBackgroundTimeout(function() {
+            (this.m_iTimeoutLogin = window.setTimeout(function() {
               0 == t.m_eLogonState && (t.m_eLogonState = 1);
             }, 2500));
         }),
@@ -68933,6 +68909,35 @@ and limitations under the License.
       ModalPosition_TopBar: "personanameandstatus_ModalPosition_TopBar_1Y6m1",
       gameIsPrivateIcon: "personanameandstatus_gameIsPrivateIcon_1cu1a"
     };
+  },
+  syWt: function(e, t, n) {
+    "use strict";
+    n.d(t, "b", function() {
+      return s;
+    }),
+      n.d(t, "a", function() {
+        return c;
+      });
+    var o = n("q1tI"),
+      i = n.n(o),
+      r = n("DMSt"),
+      a = n.n(r),
+      s = function() {
+        return i.a.createElement(
+          "div",
+          { className: a.a.FriendsListInsetShadowCtn },
+          i.a.createElement("div", { className: a.a.FriendListInsetShadowTop })
+        );
+      },
+      c = function() {
+        return i.a.createElement(
+          "div",
+          { className: a.a.FriendsListInsetShadowCtn },
+          i.a.createElement("div", {
+            className: a.a.FriendListInsetShadowBottom
+          })
+        );
+      };
   },
   tY0L: function(e, t, n) {
     "use strict";

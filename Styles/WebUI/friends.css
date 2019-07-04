@@ -1585,6 +1585,34 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
     width: 100%;
     height: 100%; }
 
+.insetshadow_FriendsListInsetShadowCtn_1S167 {
+  position: relative;
+  height: 0;
+  width: auto;
+  flex-grow: 0;
+  flex-shrink: 0; }
+
+.insetshadow_FriendListInsetShadowTop_1mEmL {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0) 100%);
+  height: 26px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  flex-shrink: 0;
+  z-index: 2;
+  pointer-events: none; }
+
+.insetshadow_FriendListInsetShadowBottom_3cl4u {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0) 100%);
+  height: 16px;
+  position: absolute;
+  flex-shrink: 0;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  pointer-events: none; }
+
 @charset "UTF-8";
 .changeLog,
 .betaFeedbackLabel {
@@ -1892,19 +1920,22 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   margin: 0;
   margin-bottom: 16px; }
 
-.DialogSlider_SliderContainer {
+.SliderContainer {
   height: 22px;
   padding-top: 6px;
   cursor: pointer; }
 
-.videoTimelineMain .DialogSlider_Slider {
+.VideoTimelineSlider {
   border: none;
   height: 6px;
   margin-top: 4px;
   margin-bottom: 4px;
   border-radius: 2px;
   background-color: #405358;
-  box-shadow: 0px 1px 8px 2px black, 1px 2px 28px black; }
+  box-shadow: 0px 1px 8px 2px black, 1px 2px 28px black;
+  position: relative;
+  cursor: pointer;
+  user-select: none; }
 
 .videoTimelineMain .STV_timelineGhostValue,
 .videoTimelineMain .STV_timelineValue,
@@ -3737,10 +3768,6 @@ iframe.steamTVLogin {
   transition: all .21s ease-in-out;
   flex-wrap: wrap;
   justify-content: center; }
-  .broadcastchat_ChatEntry_3hSYv .chatSubmitButton.EmbedButton {
-    margin-top: 2px;
-    max-width: 46px;
-    max-height: 46px; }
 
 .broadcastchat_ChatPanel_3jc_d {
   display: flex;
@@ -3773,7 +3800,8 @@ iframe.steamTVLogin {
 
 .broadcastchat_MessageChat_3eku_ {
   padding: 4px;
-  color: #c1c6cf; }
+  color: #c1c6cf;
+  word-break: break-word; }
 
 .broadcastchat_MessageName_2P_MO {
   color: #6dcff6;
@@ -3976,10 +4004,152 @@ iframe.steamTVLogin {
 .compactView .chatentry_chatTextarea_3e__5 {
   height: initial; }
 
-.BroadcastContainer .chatentry_chatEntryControls_2O_X7 .chatSubmitButton.EmbedButton {
+.chatentry_chatSubmitButton_3VRfL {
+  position: relative;
+  background-color: #3d424b;
+  border: 1px solid #1b1c20;
+  color: #c9c9c9;
+  margin: 0px;
   margin-top: 2px;
+  min-width: 16px;
+  max-width: 46px;
+  max-height: 46px;
+  padding: 0;
+  background-image: none;
+  background-size: 22px 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 46px;
+  cursor: pointer; }
+
+.chatentry_chatSubmitButton_3VRfL.chatentry_EmbedButton_1vvRh,
+.chatentry_chatSubmitButton_3VRfL.chatentry_EmoticonPickerButton_3fgX0 {
+  flex: 0;
+  min-width: 46px;
+  position: relative;
+  color: #c9c9c9;
+  margin: 0px;
+  margin-top: 0px;
+  max-width: 46px;
+  max-height: 50px; }
+
+.chatentry_chatSubmitButton_3VRfL.chatentry_EmbedButton_1vvRh {
   max-width: 46px;
   max-height: 46px; }
+
+.chatentry_chatSubmitButton_3VRfL:focus {
+  outline: none; }
+
+.chatentry_chatSubmitButton_3VRfL.chatentry_EmbedButton_1vvRh:hover {
+  background-color: #3d424b; }
+
+.chatentry_chatSubmitButton_3VRfL:not(.chatentry_disabled_2p2vW):hover .SVGIcon_Button.SVGIcon_Submit path {
+  fill: white;
+  stroke: white; }
+
+.chatentry_chatSubmitButton_3VRfL:not(.chatentry_disabled_2p2vW):hover .SVGIcon_Button {
+  fill: #f5ffd7; }
+
+.chatentry_chatSubmitButton_3VRfL.chatentry_Inactive_gFWg4 .SVGIcon_Microphone_Off {
+  opacity: 1; }
+
+.chatentry_chatSubmitButton_3VRfL.chatentry_disabled_2p2vW {
+  color: #898989;
+  cursor: default;
+  background-color: #2c3036; }
+
+.chatentry_chatSubmitButton_3VRfL.chatentry_EmoticonPickerButton_3fgX0,
+.chatentry_chatSubmitButton_3VRfL.chatentry_EmbedButton_1vvRh {
+  color: #898989;
+  background-color: #2c3036; }
+
+.chatentry_chatSubmitButton_3VRfL:not(.chatentry_disabled_2p2vW):hover .SVGIcon_VoiceRoom {
+  fill: rgba(0, 0, 0, 0);
+  stroke: #f5ffd7; }
+
+.chatentry_chatSubmitButton_3VRfL:not(.chatentry_disabled_2p2vW):hover .SVGIcon_VoiceRoom .chatentry_AudioLines_3fUht {
+  fill: #f5ffd7; }
+
+.chatentry_Active_224Fj.chatentry_chatSubmitButton_3VRfL:not(.chatentry_disabled_2p2vW):hover .SVGIcon_VoiceRoom {
+  fill: white;
+  stroke: black; }
+
+.chatentry_Active_224Fj.chatentry_chatSubmitButton_3VRfL:not(.chatentry_disabled_2p2vW):hover .SVGIcon_VoiceRoom .chatentry_AudioLines_3fUht {
+  fill: black; }
+
+.chatentry_chatSubmitButton_3VRfL .SVGIcon_Submit {
+  width: 24px;
+  height: 24px;
+  margin-top: 3px; }
+
+.chatentry_chatSubmitButton_3VRfL .SVGIcon_Submit path {
+  fill: #8592a5;
+  stroke-width: 2px; }
+
+.chatentry_EmbedButton_1vvRh {
+  background-image: none;
+  margin-right: 2px;
+  font-size: 28px;
+  text-align: center;
+  color: #8492a4;
+  padding: 0px; }
+
+.chatentry_EmbedButton_1vvRh .SVGIcon_Paperclip {
+  width: 26px;
+  height: 26px; }
+
+.chatentry_EmbedButton_1vvRh .SVGIcon_Paperclip path {
+  stroke: #8492a4;
+  stroke-width: 12px; }
+
+.chatentry_EmbedButton_1vvRh:hover .SVGIcon_Paperclip path,
+.SVGIcon_Paperclip {
+  stroke: #fff; }
+
+.chatentry_EmoticonPickerButton_3fgX0 {
+  margin-right: 1px;
+  overflow: hidden; }
+
+.chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon {
+  width: 26px;
+  height: 26px; }
+
+.chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_CSGO {
+  width: 32px;
+  height: 32px;
+  fill: #dfc408;
+  margin-left: 1px;
+  margin-top: 4px; }
+
+.chatentry_EmoticonPickerButton_3fgX0:hover {
+  background-color: #3d424b; }
+
+.chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon path {
+  stroke: #8492a4;
+  stroke-width: 10px; }
+
+.chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon line {
+  stroke-width: 16px; }
+
+.chatentry_EmoticonPickerButton_3fgX0:hover .SVGIcon_Emoticon line,
+.chatentry_EmoticonPickerButton_3fgX0:hover .SVGIcon_Emoticon circle,
+.chatentry_EmoticonPickerButton_3fgX0:hover .SVGIcon_Emoticon path {
+  stroke: white; }
+
+.compactView .chatentry_chatEntryControls_2O_X7 .chatentry_chatSubmitButton_3VRfL {
+  margin-bottom: 2px; }
+
+.compactView .chatentry_chatSubmitButton_3VRfL {
+  min-width: 32px; }
+
+.chatEntry.compactView .chatentry_chatSubmitButton_3VRfL svg {
+  width: 20px;
+  height: 20px; }
+
+.compactView .chatentry_chatSubmitButton_3VRfL .SVGIcon_Paperclip {
+  margin-bottom: 8px; }
 
 .emoticon_NewEmoticonIndicator_3NVON {
   background: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(255, 153, 0, 0.8) 0%, rgba(233, 154, 35, 0.2) 45%, rgba(233, 154, 35, 0) 85%);
@@ -4105,7 +4275,6 @@ img.emoticon_emoticon_9hYGN {
 
 .emoticon_hover_desc {
   color: #686868; }
-
 
 .messages_SpeakerName_InGame_1vaKy {
   color: #e3ffc2; }
@@ -11721,76 +11890,6 @@ input.InviteFriendToChatDialog_LinkInput {
   outline-offset: -2px;
   outline: -webkit-focus-ring-color auto 5px; }
 
-.chatSubmitButton {
-  position: relative;
-  background-color: #3d424b;
-  border: 1px solid #1b1c20;
-  color: #c9c9c9;
-  margin: 0px;
-  margin-top: 2px;
-  min-width: 16px;
-  max-width: 46px;
-  max-height: 46px;
-  padding: 0;
-  background-image: none;
-  background-size: 22px 22px;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-width: 46px;
-  cursor: pointer; }
-
-.chatSubmitButton:focus {
-  outline: none; }
-
-.chatSubmitButton.EmoticonPickerButton,
-.chatSubmitButton.EmbedButton {
-  flex: 0;
-  min-width: 46px;
-  position: relative;
-  color: #c9c9c9;
-  margin: 0px;
-  margin-top: 0px;
-  max-width: 46px;
-  max-height: 50px; }
-
-.chatSubmitButton.EmoticonPickerButton {
-  margin-right: 1px;
-  overflow: hidden; }
-
-.chatSubmitButton.EmoticonPickerButton .SVGIcon_CSGO {
-  width: 32px;
-  height: 32px;
-  fill: #dfc408;
-  margin-left: 1px;
-  margin-top: 4px; }
-
-.chatEntry.compactView .chatEntryControls .chatSubmitButton {
-  margin-bottom: 2px; }
-
-.chatEntry.compactView .chatSubmitButton {
-  min-width: 32px; }
-
-.chatEntry.compactView .chatSubmitButton .SVGIcon_Submit,
-.chatEntry.compactView .chatSubmitButton.EmoticonPickerButton .SVGIcon_Emoticon {
-  width: 20px;
-  height: 20px;
-  margin-top: 2px; }
-
-.chatEntry.compactView .chatSubmitButton .SVGIcon_Paperclip {
-  width: 20px;
-  height: 20px;
-  margin-top: 3px;
-  margin-bottom: 4px; }
-
-.chatEntry.compactView .chatSubmitButton .SVGIcon_Submit path {
-  stroke-width: 2px;
-  stroke: #8592a5; }
-
-.chatEntry.compactView .chatSubmitButton.EmoticonPickerButton .SVGIcon_Emoticon line,
-.chatEntry.compactView .chatSubmitButton.EmoticonPickerButton .SVGIcon_Emoticon circle,
-.chatEntry.compactView .chatSubmitButton.EmoticonPickerButton .SVGIcon_Emoticon path {
-  stroke-width: 12px; }
-
 .chatEntry.compactView .VoiceToggle {
   height: 28px; }
 
@@ -11851,19 +11950,8 @@ input.InviteFriendToChatDialog_LinkInput {
   color: #74c069;
   background-color: #0000; }
 
-.chatSubmitButton.disabled,
-.chatSubmitButton.EmbedButton,
-.chatSubmitButton.EmoticonPickerButton {
-  background-color: #2c3036; }
-
-.VoiceToggle.Inactive:hover,
-.chatSubmitButton.EmbedButton:hover,
-.chatSubmitButton.EmoticonPickerButton:hover {
+.VoiceToggle.Inactive:hover {
   background-color: #3d424b; }
-
-.chatSubmitButton:not(.disabled):hover .SVGIcon_Button.SVGIcon_Submit path {
-  fill: white;
-  stroke: white; }
 
 .ChatMessageEntryVoice {
   /* our layout */
@@ -11944,15 +12032,6 @@ input.InviteFriendToChatDialog_LinkInput {
 
 .activeVoicePushToTalk.pushToTalkKeyDown {
   color: #c8f1c2; }
-
-.chatSubmitButton .SVGIcon_Submit {
-  width: 24px;
-  height: 24px;
-  margin-top: 3px; }
-
-.chatSubmitButton .SVGIcon_Submit path {
-  fill: #8592a5;
-  stroke-width: 2px; }
 
 .VoiceToggleIconCtn .SVGIcon_VoiceRoom .Microphone {
   fill: #8492a4;
@@ -12159,12 +12238,6 @@ input.InviteFriendToChatDialog_LinkInput {
   position: absolute;
   top: 11px; }
 
-.chatSubmitButton:not(.disabled):hover .SVGIcon_Button {
-  fill: #f5ffd7; }
-
-.chatSubmitButton.Inactive .SVGIcon_Microphone_Off {
-  opacity: 1; }
-
 button.DialogButton.copyVoiceLogsButton {
   margin-top: 12px;
   margin-bottom: 12px;
@@ -12201,53 +12274,6 @@ button.DialogButton.copyVoiceLogsButton {
 
 .VoiceToggle.Active:hover {
   background-color: rgba(97, 253, 151, 0.3); }
-
-.chatSubmitButton.EmoticonPickerButton .SVGIcon_Emoticon {
-  width: 26px;
-  height: 26px; }
-
-.EmoticonPickerButton .SVGIcon_Emoticon line,
-.EmoticonPickerButton .SVGIcon_Emoticon circle,
-.EmoticonPickerButton .SVGIcon_Emoticon path {
-  stroke: #8492a4;
-  stroke-width: 10px; }
-
-.EmoticonPickerButton .SVGIcon_Emoticon line {
-  stroke-width: 16px; }
-
-.EmoticonPickerButton:hover .SVGIcon_Emoticon line,
-.EmoticonPickerButton:hover .SVGIcon_Emoticon circle,
-.EmoticonPickerButton:hover .SVGIcon_Emoticon path {
-  stroke: white; }
-
-.EmbedButton {
-  background-image: none;
-  margin-right: 2px;
-  font-size: 28px;
-  text-align: center;
-  color: #8492a4;
-  padding: 0px; }
-
-.EmbedButton .SVGIcon_Paperclip {
-  width: 60%;
-  height: 60%;
-  margin-top: 6px; }
-
-.EmbedButton .SVGIcon_Paperclip path {
-  stroke: #8492a4;
-  stroke-width: 12px; }
-
-.EmbedButton:hover .SVGIcon_Paperclip path,
-.SVGIcon_Paperclip {
-  stroke: #fff; }
-
-.SVGIcon_Button.SVGIcon_Emoticon {
-  width: 100%;
-  height: 100%; }
-
-.chatSubmitButton.disabled {
-  color: #898989;
-  cursor: default; }
 
 .chatWindow .chatHeader {
   flex-shrink: 0;
@@ -14520,34 +14546,6 @@ html.web_chat_frame .perf_timing_area {
   right: 0;
   bottom: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 8px, rgba(0, 0, 0, 0) calc( 100% - 8px), rgba(0, 0, 0, 0.2) 100%); }
-
-.friendsListInsetShadowCtn {
-  position: relative;
-  height: 0;
-  width: auto;
-  flex-grow: 0;
-  flex-shrink: 0; }
-
-.friendListInsetShadowTop {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0) 100%);
-  height: 26px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  flex-shrink: 0;
-  z-index: 2;
-  pointer-events: none; }
-
-.friendListInsetShadowBottom {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 25%, rgba(0, 0, 0, 0) 100%);
-  height: 16px;
-  position: absolute;
-  flex-shrink: 0;
-  bottom: 0px;
-  left: 0;
-  right: 0;
-  pointer-events: none; }
 
 .friendListCreateChatTestButton {
   background: blue;
@@ -18392,30 +18390,16 @@ img.ChatRoomGroupAvatar_Avatar {
 .VoiceToggleIconCtn .SVGIcon_VoiceRoom .AudioLines {
   fill: #8492a4; }
 
-.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom {
-  fill: rgba(0, 0, 0, 0);
-  stroke: #f5ffd7; }
-
 .VoiceToggleIconCtn .SVGIcon_VoiceRoom .AudioLines {
   width: 100%;
   height: 100%;
   margin: 0px; }
-
-.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom .AudioLines {
-  fill: #f5ffd7; }
 
 .Active .VoiceToggleIconCtn .SVGIcon_VoiceRoom {
   fill: #c8f1c2;
   stroke: black; }
 
 .Active .VoiceToggleIconCtn .SVGIcon_VoiceRoom .AudioLines {
-  fill: black; }
-
-.Active.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom {
-  fill: white;
-  stroke: black; }
-
-.Active.chatSubmitButton:not(.disabled):hover .SVGIcon_VoiceRoom .AudioLines {
   fill: black; }
 
 .SVGIcon_TextRoom .TextLines {
