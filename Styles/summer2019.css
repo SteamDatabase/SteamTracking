@@ -1146,3 +1146,7 @@ img.tag_square_img
 	width: 100%;
 	display: block;
 }
+
+.carousel_container .carousel_items:not(.no_paging) > .hero_row {
+	width: 70%;
+}

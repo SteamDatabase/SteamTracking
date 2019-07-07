@@ -94,9 +94,12 @@ function GenerateTagBlocks( rgTagData, rgTier1, rgTier2 )
 		rgPersonalizedTagData.sort( TagBlockComparator );
 
 		var TagBlock = rgPersonalizedTagData.shift();
-		rgTagBlocks.push( TagBlock );
-		rgTagDataShown.push( TagBlock.TagData );
-		GDynamicStore.MarkAppDisplayed( TagBlock.rgItemsPassingFilter );
+		if ( typeof TagBlock !== 'undefined' )
+		{
+			rgTagBlocks.push( TagBlock );
+			rgTagDataShown.push( TagBlock.TagData );
+			GDynamicStore.MarkAppDisplayed( TagBlock.rgItemsPassingFilter );
+		}
 	}
 
 	return rgTagBlocks;
