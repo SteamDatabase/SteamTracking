@@ -2182,6 +2182,7 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 			</div> \
 			<div class="summerSale2019_rightContent"> \
 					<div class="summerSale2019_savings">%discount%</div> \
+					<div class="summerSale2019_savings_expiration summerSale2019_savings">%expiration%</div> \
 					<div class="summerSale2019_icon02"> \
 					</div> \
 				</div> \
@@ -2203,10 +2204,12 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 	var strAmount = GStoreItemData.fnFormatCurrency( nCartDiscount );
 	var strTitle = 'Steam Grand Prix Summer Sale';
 	var strHeader = 'Savings Boost Activated!';
+	var strExpiration = 'Good until July 9th @ 10AM PDT';
 	var strDiscount = 'Save up to %amount% on your next purchase'.replace( '%amount%', strAmount );
 	strTemplate = strTemplate.replace( '%title%', strTitle );
 	strTemplate = strTemplate.replace( '%header%', strHeader );
 	strTemplate = strTemplate.replace( '%discount%', strDiscount );
+	strTemplate = strTemplate.replace( '%expiration%', strExpiration );
 	strTemplate = strTemplate.replace( '%embers%', strEmbers );
 
 	$Elements = $J( '[data-cart-banner-spot]' );

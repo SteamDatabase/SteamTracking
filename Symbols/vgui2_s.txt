@@ -460,13 +460,17 @@
  T AdvanceOverWhitespace(unsigned short const*)
  T ApplyBlurAndTransparencyToTextBitmap(int, int, int, unsigned char*, unsigned char*, Color, Color)
  T BCreateDirectory(char const*)
+ T BDeleteFileIfExists(char const*)
  T BDeleteRegistryKey(ERegKeyRoot, char const*)
  T BExtractRegParts(char const*, ERegKeyRoot*, char*, int, char*, int)
  T BFileExists(char const*)
  T BGetRegistryValueStr(ERegKeyRoot, char const*, char const*, char*, int)
  T BGetRegistryValueUint(ERegKeyRoot, char const*, char const*, unsigned int*)
+ T BRenameFile(char const*, char const*)
+ T BSaveBufferToFileWithTemporary(CUtlBuffer const&, char const*, char const*, EFileIOFlags)
  T BSetRegistryValueStr(ERegKeyRoot, char const*, char const*, char const*)
  T BSetRegistryValueUint(ERegKeyRoot, char const*, char const*, unsigned int)
+ T BSwapFiles(char const*, char const*)
  T CBaseSurface::AccessChromeHTMLController()
  T CBaseSurface::AddPanel(unsigned long long)
  T CBaseSurface::AddTrackedMenu(unsigned long long)
@@ -1812,6 +1816,7 @@
  T CreateDirRecursive(char const*)
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
+ T CreateTempFileName(CUtlString*)
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T FioClose(int)
  T FioCreateFile(char const*, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
@@ -1907,6 +1912,7 @@
  T LoadFileIntoBuffer(IBaseFileSystem*, char const*, CUtlBuffer&, bool, char const*)
  T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool, EFioModifiers)
  T LoadTGA(int, char*, unsigned char**, int*, int*, int*)
+ T MakeFileWriteable(char const*)
  T MouseCode_VGUIToVirtualKey(vgui::MouseCode)
  T MouseCode_VirtualKeyToVGUI(int)
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
@@ -1935,6 +1941,7 @@
  T Sys_GetFactoryThis()
  T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_ValidateModules(CValidator*, bool)
+ T UnlinkFile(char const*)
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T VPanelWrapper::AdditionalWindowHandle(unsigned long long, void*)
  T VPanelWrapper::Client(unsigned long long)
@@ -2525,6 +2532,7 @@
  b vgui::COSXSurface::DrawPrintText(wchar_t const*, int, vgui::FontDrawType_t)::fAsserted
  b vgui::InitKeyTranslation()::threadonce_587_17
  ceilf
+ chmod
  close
  closedir
  crc32
@@ -2584,6 +2592,7 @@
  kCFAllocatorNull
  kCFRunLoopDefaultMode
  localtime
+ localtime_r
  longjmp
  lseek
  lstat$INODE64
@@ -2593,6 +2602,7 @@
  memmove
  memset
  mkdir
+ mktemp
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
  objc_enumerationMutation
@@ -2629,6 +2639,7 @@
  read
  readdir$INODE64
  realpath$DARWIN_EXTSN
+ rename
  rindex
  round
  setjmp
@@ -2640,6 +2651,7 @@
  strchr
  strcmp
  strcpy
+ strftime
  strlen
  strncpy
  strrchr
@@ -2717,6 +2729,7 @@
  t BuildCGImageFromBits(bool, unsigned char const*, int, int, int, vgui::ISurface::ETextureFormat, bool*)::$_0::__invoke(void*, void const*, unsigned long)
  t CBaseSurface::RecomputeTraversalOrder(CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >&, unsigned long long, int, bool)::LocalZSort::Fn(CBaseSurface::TraversalEntry_t const* const*, CBaseSurface::TraversalEntry_t const* const*)
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
+ t CScopeGuardLambdaImpl<BSaveBufferToFileWithTemporary(CUtlBuffer const&, char const*, char const*, EFileIOFlags)::$_0>::~CScopeGuardLambdaImpl()
  t CUtlVector<(anonymous namespace)::BadTextureData_t, CUtlMemory<(anonymous namespace)::BadTextureData_t> >::AddToTail((anonymous namespace)::BadTextureData_t const&)
  t CUtlVector<(anonymous namespace)::BadTextureData_t, CUtlMemory<(anonymous namespace)::BadTextureData_t> >::~CUtlVector()
  t CreateCGColor(Color const&, float)

@@ -2169,6 +2169,8 @@
 	"Library_Details_ControllerAction_Toggle_Lizard"		"TOGGLE LIZARD MODE"
 	"Library_Details_ControllerAction_Empty_Binding"		"EMPTY"
 	"Library_Details_ControllerAction_Quit_Application"		"EXIT APPLICATION"
+	"Library_Details_ControllerAction_Change_Player_Number"	"CHANGE PLAYER NUMBER"
+	"Library_Details_ControllerAction_Change_Player_Number_To"	"CHANGE PLAYER NUMBER TO"
 
 	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
 	"Library_Details_FieldLabel_ModeShifting"		"Mode Shifting"
@@ -2860,6 +2862,10 @@
 
 	"Notification_VirtualHere"			"VirtualHere"
 	"Notification_PurchaseVirtualHere"	"Available in the Steam Store for USB sharing"
+	
+	"Notification_Controller_Player_Number_Title"	"Controller Switched Slots"
+	"Notification_Controller_Player_Number_Changed1"	"{s:controller}"
+	"Notification_Controller_Player_Number_Changed2"    "is Now Player {d:player_number}"
 
 	"Friends_GroupEvent_NowStarting"		"has event starting"
 
@@ -4005,6 +4011,10 @@
 
 	"Library_SelectActionSet_Title"	"Select Action Set"
 	"Library_SelectActionSet_CodeLabel" "Change to this action set when you press the button."
+
+	"Library_SelectPlayerNumber_Title" "Change Controller Player Number"
+	"Library_SelectPlayerNumber_Description" "Select the player number you'd like to change to.  Any controller currently in this slot will be swapped with this controller."
+	"Controller_Player_Number_Setting" "Player Number"
 
 	"Library_SelectMousePosition_Title"	"Select Cursor Position"
 	"Library_SelectMousePosition_CodeLabel"	"Move Cursor to the desired position and press the A button to confirm.  It is recommended that you bind this action from within game for easiest positioning.  While the position will remain proportional, different aspect ratios and resolutions may change in-game layouts, causing variation in precise positioning."

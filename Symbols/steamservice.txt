@@ -730,9 +730,12 @@
  T BN_value_one
  T BParsePEMHeaderOrFooter(char const*&, char const*, char const*, char const*)
  T BRegistryKeyExists(ERegKeyRoot, char const*)
+ T BRenameFile(char const*, char const*)
+ T BSaveBufferToFileWithTemporary(CUtlBuffer const&, char const*, char const*, EFileIOFlags)
  T BSetRegistryValueBin(ERegKeyRoot, char const*, char const*, unsigned char const*, unsigned int)
  T BSetRegistryValueStr(ERegKeyRoot, char const*, char const*, char const*)
  T BSetRegistryValueUint(ERegKeyRoot, char const*, char const*, unsigned int)
+ T BSwapFiles(char const*, char const*)
  T BUF_MEM_grow_clean
  T BUF_memdup
  T BUF_reverse
@@ -4503,6 +4506,7 @@
  strcmp
  strcpy
  strerror
+ strftime
  strlen
  strncasecmp
  strncat
@@ -4525,6 +4529,7 @@
  t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::__invoke(void*)
  t CCompletionPortManager::PostIOCPMessage(CompletionData_t*)::$_2::operator()(void*) const::{lambda(void*)#1}::__invoke(void*)
  t CRC32_ProcessBuffer_Internal_SliceBy4(unsigned int*, void const*, int, unsigned int const (&) [4][256])
+ t CScopeGuardLambdaImpl<BSaveBufferToFileWithTemporary(CUtlBuffer const&, char const*, char const*, EFileIOFlags)::$_0>::~CScopeGuardLambdaImpl()
  t DecodeBase64ToBuf(char const*, unsigned int, CAutoWipeBuffer&)
  t DecodePEMBody(char const*, unsigned long, CAutoWipeBuffer&, char const*)
  t FileSelect(dirent const*)

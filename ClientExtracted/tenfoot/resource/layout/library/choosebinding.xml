@@ -48,11 +48,14 @@
       <Button id="steammusic_options" selectionpos="0,-7" onactivate="ShowControllerActionExtendedSelector( controller_action, steammusic_options );" onmoveright="SetInputFocus( empty_binding );" onmoveleft="SetInputFocus( set_led );" onmovedown="SetInputFocus( kb_key_previous );" >
         <Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_music.png" />
       </Button>
-      <Button id="empty_binding" selectionpos="0,-8" onactivate="SetBinding( controller_action, empty_binding );" onmoveright="SetInputFocus( IconPreview );" onmoveleft="SetInputFocus( steammusic_options );" onmovedown="SetInputFocus( kb_key_previous );" >
+      <Button id="empty_binding" selectionpos="0,-8" onactivate="SetBinding( controller_action, empty_binding );" onmoveright="SetInputFocus( change_player_number );" onmoveleft="SetInputFocus( steammusic_options );" onmovedown="SetInputFocus( kb_key_previous );" >
         <Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_empty_binding.png" />
       </Button>
+      <Button id="change_player_number" selectionpos="0,-9" onactivate="ShowControllerActionChangePlayerNumber( controller_action, change_player_number );" onmoveright="SetInputFocus( IconPreview );" onmoveleft="SetInputFocus( empty_binding );" onmovedown="SetInputFocus( kb_key_mute );" >
+        <Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_playernumber.png" />
+      </Button>      
       <Label id="SelectBindingIconHeader" text="#Library_Details_SelectIcon" class="SelectBindingIconHeader" />
-      <Button id="IconPreview" class="IconPreview" selectionpos="0,-9" onactivate="AddBindingIcon();" onmoveleft="SetInputFocus( empty_binding );" onmoveright="SetInputFocus( left_trigger );">
+      <Button id="IconPreview" class="IconPreview" selectionpos="0,-10" onactivate="AddBindingIcon();" onmoveleft="SetInputFocus( empty_binding );" onmoveright="SetInputFocus( left_trigger );">
         <Image id="BindingIcon" src="file://{images}/library/icon_choosebinding_none.png" defaultsrc="file://{images}/library/icon_choosebinding_none.png" />
       </Button>
     </Panel>

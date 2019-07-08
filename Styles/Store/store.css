@@ -1445,6 +1445,12 @@ a#store_search_link img {
 	padding-left: 0px;
 }
 
+.summerSale2019_rightContent .summerSale2019_savings_expiration {
+	color: #d0d3cf;
+	font-size: 12px;
+	padding: 3px 0 0 0;
+}
+
 .summerSale2019_savings
 {
 	font-size: 10px;	
@@ -1456,7 +1462,6 @@ a#store_search_link img {
 	padding-top: 10px;
 	text-transform: uppercase;
 	color: rgb(24, 28, 36);
-	height: 45px;
 	width: 250px;
 	pointer-events: none;
 	user-select: none;	

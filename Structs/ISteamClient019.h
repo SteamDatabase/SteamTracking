@@ -41,4 +41,5 @@ public:
     virtual unknown_ret GetISteamParentalSettings(int, int, char const*) = 0;
     virtual unknown_ret GetISteamInput(int, int, char const*) = 0;
     virtual unknown_ret GetISteamParties(int, int, char const*) = 0;
+    virtual unknown_ret GetISteamRemotePlay(int, int, char const*) = 0;
 };

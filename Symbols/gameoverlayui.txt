@@ -15168,6 +15168,7 @@
  b g_pClientParentalSettings
  b g_pClientParties
  b g_pClientRemoteClientManager
+ b g_pClientRemotePlay
  b g_pClientRemoteStorage
  b g_pClientSTARInternal
  b g_pClientScreenshots

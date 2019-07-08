@@ -36,6 +36,14 @@ enum ERemoteDeviceAuthorizationResult {
 	k_ERemoteDeviceAuthorizationCanceled = 8;
 }
 
+enum EStreamDeviceFormFactor {
+	k_EStreamDeviceFormFactorUnknown = 0;
+	k_EStreamDeviceFormFactorPhone = 1;
+	k_EStreamDeviceFormFactorTablet = 2;
+	k_EStreamDeviceFormFactorComputer = 3;
+	k_EStreamDeviceFormFactorTV = 4;
+}
+
 enum EStreamTransport {
 	k_EStreamTransportNone = 0;
 	k_EStreamTransportUDP = 1;
@@ -149,6 +157,7 @@ message CMsgRemoteDeviceStreamingRequest {
 	optional uint64 client_id = 13;
 	repeated .EStreamTransport supported_transport = 14;
 	optional bool restricted = 15;
+	optional .EStreamDeviceFormFactor form_factor = 16 [default = k_EStreamDeviceFormFactorUnknown];
 }
 
 message CMsgRemoteDeviceStreamingCancelRequest {
