@@ -2262,7 +2262,9 @@ function CreateFadingCarousel( $elContainer, nSpeed, bNoWrap, fnOnBlur )
 
 		$J( this.$elThumbs[nIndex] ).addClass('focus');
 		$J( this.$elItems[nIndex] ).addClass('focus');
-		GDynamicStore.s_ImpressionTracker.TrackAppearanceIfVisible( this.$elItems[ nIndex ] );
+		if ( typeof GDynamicStore != 'undefined' && GDynamicStore.m_bLoadComplete ) {
+			GDynamicStore.s_ImpressionTracker.TrackAppearanceIfVisible(this.$elItems[nIndex]);
+		}
 	}
 
 	var fnMouseOverThumb = function( index, element )

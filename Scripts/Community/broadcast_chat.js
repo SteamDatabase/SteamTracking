@@ -746,13 +746,7 @@ CBroadcastChat.prototype.IsUserChannelModerator = function( steamID )
 
 CBroadcastChat.prototype.GetMutedUsers = function()
 {
-	var rgSteamID = [];
-	jQuery.each( this.m_mapMutedUsers, function( i, val )
-	{
-		rgSteamID.push( i );
-	});
-
-	return rgSteamID;
+	return this.m_mapMutedUsers;
 };
 
 CBroadcastChat.prototype.RemoveUserMessages = function( steamID )

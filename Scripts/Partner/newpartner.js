@@ -468,7 +468,7 @@ function SignCyberCafeAgreement()
 	var agreedToSDA1 = $J( "#agree_to_sda_checkbox1" );
 	if ( !agreedToSDA1.prop( "checked" ) )
 	{
-		ShowAlertDialog( 'Warning',  'You must agree to the terms in the Steam Site License Program before continuing.'  );
+		ShowAlertDialog( 'Warning',  'You must agree to the terms in the Steam PC Café Agreement before continuing.'  );
 		return;
 	}
 
@@ -786,7 +786,7 @@ function SignLatestCafeAgreement( returnURL )
 
 	var agreedToSDA1 = $J("#agree_to_sda_checkbox1");
 	if ( !agreedToSDA1.prop("checked") ) {
-		ShowAlertDialog('Warning', 'You must agree to the terms in the Steam Site License Program before continuing.');
+		ShowAlertDialog('Warning', 'You must agree to the terms in the Steam PC Café Agreement before continuing.');
 		return;
 	}
 
@@ -800,7 +800,7 @@ function SignLatestCafeAgreement( returnURL )
 				waitingDialog.Dismiss();
 				if ( response.success == 1 )
 				{
-					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Steam Site License Agreement. Click OK to continue.' );
+					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Steam PC Café Agreement. Click OK to continue.' );
 					dialog.done( function() {
 						top.location.href = returnURL;
 					} );
@@ -808,7 +808,7 @@ function SignLatestCafeAgreement( returnURL )
 				else
 				{
 					if( response.success == 15)
-						ShowAlertDialog( 'Error', 'You must have Actual Authority on your partner account to sign the Steam Site License Agreement');
+						ShowAlertDialog( 'Error', 'You must have Actual Authority on your partner account to sign the Steam PC Café Agreement');
 					else
 						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
 				}
@@ -865,6 +865,58 @@ function SignLatestCafeWalletFundingAgreement( returnURL )
 						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
 				}
 			},
+			failure: function( response ) {
+				waitingDialog.Dismiss();
+			}
+		}
+	);
+}
+
+function SignLatestCafeDistributionAddendum( returnURL )
+{
+	var bHasRequiredFields = true;
+	// signee info
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[full_name]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[title]']", gValidFieldAlphaNumericRegex );
+	bHasRequiredFields &= IsValidRequiredField( "[name='signee_info[phone]']", gValidFieldAlphaNumericRegex );
+
+	if ( !bHasRequiredFields )
+	{
+		ShowAlertDialog( 'Error', 'Please fill in the highlighted fields and make sure they only contain valid characters: alpha, numeric, blank, ampersand (&amp;), hyphen(-), comma (,), apostrophe(’), forward slash (/), pound sign (#), and period (.) Do not use special characters that are unique to a language other than English.' );
+		return false;
+	}
+
+	var agreedToSDA1 = $J("#agree_to_sda_checkbox1");
+	if ( !agreedToSDA1.prop("checked") ) {
+		ShowAlertDialog('Warning', 'You must agree to the terms in the Steam Cafe Distribution Addendum before continuing.');
+		return;
+	}
+
+	var inviteID = $J("#inviteID");
+
+	var waitingDialog = ShowBlockingWaitDialog( 'Saving',  'Saving your information...'  );
+	$J.ajax(
+		{
+			type: "POST",
+			url: 'https://partner.steamgames.com/newpartner/ajaxsignlatestsda/?agreement_type=' + 12,
+			data: $J('#SteamworksAccessForm').serialize(),
+			success: function ( response ) {
+				waitingDialog.Dismiss();
+				if ( response.success == 1 )
+				{
+					var dialog = ShowAlertDialog( 'Thanks!', 'Thank you for signing the latest Steam Cafe Distribution Addendum. Click OK to continue.' );
+					dialog.done( function() {
+						top.location.href = returnURL;
+					} );
+				}
+				else
+				{
+					if( response.success == 15)
+						ShowAlertDialog( 'Error', 'You must have Actual Authority on your partner account to sign this agreement.');
+					else
+						ShowAlertDialog( 'Error', 'An error was encountered while processing your request: ' + response.success );
+					}
+				},
 			failure: function( response ) {
 				waitingDialog.Dismiss();
 			}

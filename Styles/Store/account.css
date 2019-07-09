@@ -1374,3 +1374,14 @@ td.wht_total {
 	margin-top: 16px;
 	margin-right: 16px;
 }
+span.disown_button {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	color: #ff0000;
+	min-width: 22px;
+	min-height: 22px;
+	background-image: url('/public/images/v6/close_btn.png');
+	background-repeat: no-repeat;
+	background-origin: content-box;
+}

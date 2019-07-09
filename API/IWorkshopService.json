@@ -162,13 +162,13 @@
                     "name": "payment_us_usd",
                     "type": "uint64",
                     "optional": false,
-                    "description": "US Payment portion in USDx100"
+                    "description": "US Payment portion in USD Cents"
                 },
                 {
                     "name": "payment_row_usd",
                     "type": "uint64",
                     "optional": false,
-                    "description": "ROW Payment portion in USDx100"
+                    "description": "ROW Payment portion in USD Cents"
                 }
             ]
         }

@@ -699,53 +699,6 @@ CWishlistController.prototype.SetSection = function( strSection )
 
 }
 
-CWishlistController.prototype.GetAppInfoAtPriority = function( priority ) {
-	for (var i = 0; i < this.rgAllApps.length; i++) {
-		if( g_rgAppInfo[ this.rgAllApps[i] ].priority == priority )
-		{
-			return g_rgAppInfo[this.rgAllApps[i]];
-		}
-	}
-	return false;
-}
-
-CWishlistController.prototype.SummerSale2019UpdatePodium = function( )
-{
-	if( $J( '.grandprix_ctn') )
-	{
-		var bShowFreeGameWarning = false;
-		var bShowNotPurchaseableWarning = false;
-		for( var i = 1; i <= 3; ++i )
-		{
-			var appInfo = this.GetAppInfoAtPriority( i );
-			if( appInfo )
-			{
-				if( appInfo.is_free_game )
-				{
-					bShowFreeGameWarning = true;
-				}
-				else if( !appInfo.subs || appInfo.subs.length == 0 )
-				{
-					bShowNotPurchaseableWarning = true;
-				}
-			}
-			$J( '.img_spot_' + i ).attr( { "src": appInfo ? appInfo.capsule : 'https://steamcdn-a.akamaihd.net/steamcommunity/public//images/avatars/fe/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg' });
-		}
-
-		$J( '.warning_free_game').hide();
-		$J( '.warning_not_purchaseable').hide();
-
-		if( bShowFreeGameWarning )
-		{
-			$J( '.warning_free_game').show();
-		}
-		if( bShowNotPurchaseableWarning )
-		{
-			$J( '.warning_not_purchaseable').show();
-		}
-	}
-}
-
 CWishlistController.prototype.Update = function( bForceSort )
 {
 	var $root = $J('#wishlist_ctn');
@@ -865,7 +818,6 @@ CWishlistController.prototype.Update = function( bForceSort )
 		$J('#nothing_to_see_here').hide();
 	}
 
-	this.SummerSale2019UpdatePodium();
 }
 
 CWishlistController.prototype.UpdateFilterDisplay = function()

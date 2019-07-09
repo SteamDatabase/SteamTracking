@@ -315,7 +315,7 @@ function DisplayFullscreenImage( parentpanelid, url )
 			'<styles>' +
 			'<include src="file://{resources}/styles/steamstyles.css" />' +
 			'<include src="file://{resources}/styles/msgbox.css" />' +
-			'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching" />' +
+			'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english" />' +
 '</styles>' +
 '<scripts>' +
 '<include src="https://steamcommunity-a.akamaihd.net/public/shared/javascript/bigpicture/base.js?v=valveisgoodatcaching&amp;l=english" />' +
@@ -424,7 +424,7 @@ function DisplayCustomTextPopup()
 						<include src="file://{resources}/styles/community/community.css" /> \
 						<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/apphub.css?v=valveisgoodatcaching" /> \
 						<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/community.css?v=valveisgoodatcaching" /> \
-						<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching" /> \
+						<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english" /> \
 					</styles> \
 					<script>' +
 		CloseCustomTextPopup.toString() +

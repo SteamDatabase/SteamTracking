@@ -19,7 +19,7 @@ var CCountSelectorSlider = (function()
 				'<styles>' +
 					'<include src="file://{resources}/styles/steamstyles.css" />' +
 					'<include src="file://{resources}/styles/msgbox.css" />' +
-					'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching" />' +
+					'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english" />' +
 					'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/tradeoffer.css?v=valveisgoodatcaching" />' +
 				'</styles>' +
 				'<scripts>' +
@@ -760,7 +760,7 @@ function DisplayReceipt( tradeid )
 			'<styles>' +
 				'<include src="file://{resources}/styles/steamstyles.css" />' +
 				'<include src="file://{resources}/styles/msgbox.css" />' +
-				'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching" />' +
+				'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/profile.css?v=valveisgoodatcaching&amp;l=english" />' +
 				'<include src="https://steamcommunity-a.akamaihd.net/public/css/bigpicture/tradeoffer.css?v=valveisgoodatcaching" />' +
 			'</styles>' +
 			'<scripts>' +

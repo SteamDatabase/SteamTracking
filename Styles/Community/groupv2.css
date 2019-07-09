@@ -2008,6 +2008,12 @@ div.rule {
 	position: relative;
 }
 
+#clan_images_container .image_note {
+    font-size: 12px;
+    color: #cea167;
+    margin-top: 8px;
+}
+
 .clan_image_list_container {
 	max-height: 500px;
 	margin-bottom: 15px;

@@ -623,9 +623,9 @@ CBroadcastWatch.prototype.FocusChatTextArea = function()
 	$J( chatmessage ).attr( 'placeholder', '' );
 };
 
-function CreateUnmuteFunc( chat, viewer, elMute )
+function CreateUnmuteFunc( chat, steamid, name, elMute )
 {
-	return function() { chat.UnmuteUser( viewer.id, viewer.name ); elMute.hide(); };
+	return function() { chat.UnmuteUserForSession( steamid, name ); elMute.hide(); };
 }
 
 CBroadcastWatch.prototype.ShowViewers = function()
@@ -678,7 +678,6 @@ CBroadcastWatch.prototype.UpdateBroadcastViewerUI = function()
 		url: 'https://steamcommunity.com/broadcast/getbroadcastviewers/',
 		data: {
 			chatid: _watch.m_chat.GetChatID(),
-			muted: _watch.m_chat.GetMutedUsers(),
 			sessionid: g_sessionID
 		},
 		type: 'GET'
@@ -692,19 +691,38 @@ CBroadcastWatch.prototype.UpdateBroadcastViewerUI = function()
 
 		$J( '#ViewerModalViewers' ).text( LocalizeCount( '1 viewer', '%s viewers', data.viewer_count ) );
 
+		// first locally muted users
+		for ( var id in _watch.m_chat.m_mapMutedUsers )
+		{
+			var name = _watch.m_chat.m_mapMutedUsers[id];
+
+			var elUser = $J( '<div class="UserRow"><a href="https://steamcommunity.com/profiles/' + id + '" target="_blank">' + name + '</a></div>' );
+			var elMute = $J( '<div class="Muted"></div>' );
+			elMute.addClass( 'CanUnmute' );
+			elMute.on( 'click', CreateUnmuteFunc( _watch.m_chat, id, name, elMute ) );
+			elUser.append( elMute );
+
+			$J( '#ViewerModalUsers' ).append( elUser );
+		}
+
+		// globally muted users
 		if ( data.viewers.length > 0 )
 		{
 			for ( var i = 0; i < data.viewers.length; i++ )
 			{
 				var viewer = data.viewers[i];
+
+				if ( _watch.m_chat.IsUserMutedLocally( viewer.id ) )
+					continue; // already added before
+
 				var elUser = $J( '<div class="UserRow"><a href="https://steamcommunity.com/profiles/' + viewer.id + '" target="_blank">' + viewer.name + '</a></div>' );
-				if ( viewer.muted || _watch.m_chat.IsUserMutedLocally( viewer.id ) )
+				if ( viewer.muted  )
 				{
 					var elMute = $J( '<div class="Muted"></div>' );
 					if ( !viewer.muted || _watch.IsBroadcaster() )
 					{
 						elMute.addClass( 'CanUnmute' );
-						elMute.on( 'click', CreateUnmuteFunc( _watch.m_chat, viewer, elMute ) );
+						elMute.on( 'click', CreateUnmuteFunc( _watch.m_chat, viewer.id, viewer.name, elMute ) );
 					}
 
 					elUser.append( elMute );

@@ -101,10 +101,12 @@ LocalizationReady("shared", "english", {
   BreadCrumbs_AllEvents: "All Events",
   BreadCrumbs_GameEvents: "%1$s Events",
 
+  CreatorHome_ThisGame: "About This Game:",
   CreatorHome_DevelopedBy: "Developed By:",
   CreatorHome_PublishedBy: "Published By:",
   CreatorHome_InFranchise: "In Franchise:",
-  CreatorHome_Followers: "%1$s followers",
+  CreatorHome_Followers: "%1$s<br>followers",
+  CreatorHome_JustFollowers: "followers",
   CreatorHome_Follow_tooltip:
     "Follow this creator to to be notified via e-mail and in your Steam store when they release a new game. Email notifications can be turned off at any time.",
 
@@ -225,6 +227,14 @@ LocalizationReady("shared", "english", {
   EventReminder_NotifyByMobile_Missing: "No mobile app installed.",
   EventReminder_NotifyByMobile_Install: "View available apps here.",
 
+  EventEmail_Subject_NewUpdate: "%1$s, New Update",
+  EventEmail_Subject_UpcomingLaunch: "%1$s, Upcoming Launch",
+  EventEmail_Button_ClickForMoreDetails: "Click for more details",
+  EventEmail_Button_PrepurchaseNow: "Prepurchase now!",
+  EventEmail_Button_BuyNow: "Buy now!",
+  EventEmail_Destination_Store: "Steam Store Page",
+  EventEmail_Destination_Event: "Event Detail Page",
+
   AddToWishlist: "Add to your Wishlist",
   Wishlisted: "In your Wishlist",
   AddToWishlist_ttip:
@@ -344,6 +354,8 @@ LocalizationReady("shared", "english", {
   Tooltip_VoiceControlButton_group_joinsingle: "Join voice channel",
   Tooltip_VoiceControlButton_group_joinmultiple:
     "Select a voice channel to join",
+
+  LanguageTitle: "Language",
 
   Language_english: "English",
   Language_german: "German",

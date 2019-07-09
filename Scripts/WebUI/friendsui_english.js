@@ -927,6 +927,7 @@ LocalizationReady("friendsui", "english", {
   RemotePlay_Players: "Players",
   RemotePlay_SharedInput: "Shared Input",
   RemotePlay_DisableIncomingAudio: "Disable Incoming Audio",
+  RemotePlay_GameMasterVolume: "Game Volume",
 
   FriendNotifications_Instructions: "Notification options for %1$s",
   FriendNotifications_UseDefaults: "Use my default notifications settings",
