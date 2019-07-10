@@ -1001,7 +1001,7 @@ GHomepage = {
 
 						for( var i=0; i < 4; i++ )
 						{
-							if ( i < rgScreenshots.length )
+							if ( rgScreenshots && i < rgScreenshots.length )
 							{
 								var screenshot = rgScreenshots[i];
 								var unAppId = screenshot.appid || rgLookup.appid;
