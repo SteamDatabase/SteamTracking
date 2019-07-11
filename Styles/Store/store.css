@@ -654,12 +654,13 @@ a#store_search_link img {
 
 .store_nav .tab > span.pulldown {
 	padding-right: 7px;
+    margin-right: 3px;
 	background: none;
 }
 
 .store_nav .tab > span.pulldown > span {
 	width: 19px;
-	height: 12px;
+	height: 16px;
 	padding: 0;
 	display: inline-block;
 	background-image: url( '/public/images/v6/btn_arrow_down_padded.png' );
