@@ -1,5 +1,7 @@
+node_modules/
 Protobufs/google/
 .support/
+yarn.lock
 
 *.asi
 *.flt

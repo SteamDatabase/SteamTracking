@@ -65,6 +65,8 @@
 "Styles/Store/tags.css"                          : "https://store.steampowered.com/public/css/v6/tags.css?__TIME__",
 "Styles/Store/updated_apps.css"                  : "https://store.steampowered.com/public/css/v6/updated_apps.css?__TIME__",
 "Styles/Store/wishlist.css"                      : "https://store.steampowered.com/public/css/v6/wishlist.css?__TIME__",
+"Styles/Store/labs.css"                          : "https://store.steampowered.com/public/css/labs.css?__TIME__",
+"Styles/Store/applications/interactive_recommender/main.css" : "https://store.steampowered.com/public/css/applications/interactive_recommender/main.css?__TIME__",
 
 //
 // Store CSS (v5, current)
@@ -212,6 +214,7 @@
 "Scripts/WebUI/friendsui_english.js"             : "https://steamcommunity.com/public/javascript/webui/localization/friendsui_english.js?__TIME__",
 "Scripts/WebUI/profile_manifest.js"              : "https://steamcommunity.com/public/javascript/webui/localization/profile_manifest.js?__TIME__&l=english",
 "Scripts/WebUI/shared_english.js"                : "https://steamcommunity.com/public/javascript/webui/localization/shared_english.js?__TIME__",
+"Scripts/WebUI/applications/interactive_recommender/main.js" : "https://store.steampowered.com/public/javascript/applications/interactive_recommender/main.js?__TIME__&l=english",
 
 //
 // Holiday CSS
