@@ -302,6 +302,11 @@ a#store_search_link img:hover {
 .item_def_rows
 {
 	min-height: 735px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	margin-right: -14px;
+	padding: 0;
 }
 
 .item_def_row_item
@@ -320,14 +325,10 @@ a#store_search_link img:hover {
 
 .item_def_grid_item
 {
-	display: inline-block;
 	margin-right: 14px;
 	margin-bottom: 20px;
 }
-.item_def_rows .item_def_grid_item:nth-child(4n)
-{
-	margin-right: 0px;
-}
+
 .item_def_icon_container
 {
 	position: relative;
@@ -340,10 +341,11 @@ a#store_search_link img:hover {
 	height: 202px;
 	padding: 10px;
 	border: 1px solid rgba(0,0,0,0);
+    display: block;
 }
 .item_def_grid_item .item_def_icon:hover
 {
-	border: 1px solid #66c0f4;
+	border: 1px solid #e5e5e5;
 }
 .item_def_row_item .item_def_icon_container
 {
