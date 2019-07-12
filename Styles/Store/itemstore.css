@@ -28,12 +28,17 @@ body.v6 .page_title_area
 	background-color: rgba(0,0,0,0.3);
 	padding: 12px;
 }
-div.rightcol
-{
+div.rightcol {
 	width: 286px;
 }
-.item_store_home div.leftcol
-{
+.game.item .columns .rightcol {
+    width: unset;
+}
+.game.item .columns .leftcol {
+    width: 512px;
+}
+
+.item_store_home div.leftcol {
 	width: 640px;
 }
 
@@ -51,6 +56,10 @@ div.rightcol
 body.v6 .item .page_content_ctn .page_content
 {
 	width: 916px;
+}
+body.v6 .game.item .columns {
+    display: flex;
+    flex-direction: row-reverse;
 }
 body.v6 .page_title_area.browse h2.pageheader,
 body.v6 h2.pageheader
@@ -205,8 +214,8 @@ a#store_search_link img:hover {
 }
 .item_store_home .item_def_grid_item .item_def_icon
 {
-	width: 184px;
-	height: 184px;
+	width: 202px;
+	height: 202px;
     display: block;
 }
 
@@ -317,6 +326,12 @@ a#store_search_link img:hover {
 	border: 1px solid rgba(0,0,0,0);
 	padding: 5px;
 }
+.item_def_row_item:hover {
+    border: 1px solid #e5e5e5;
+}
+.item_def_row_item:hover .item_def_price {
+    color: white;
+}
 
 .item_def_row .item_def_details
 {
@@ -337,9 +352,9 @@ a#store_search_link img:hover {
 
 .item_def_icon
 {
-	width: 202px;
-	height: 202px;
-	padding: 10px;
+	width: 222px;
+	height: 222px;
+	padding: 0px;
 	border: 1px solid rgba(0,0,0,0);
     display: block;
 }
@@ -443,7 +458,9 @@ a#store_search_link img:hover {
 	background: linear-gradient( -25deg, rgba(0,0,0,1) 0%,rgba(4,31,45,1) 100%);
 	text-align: center;
 	box-shadow: 0 0 5px 0 #000000;
-	height: 515px;
+	height: 512px;
+    width: 512px;
+    margin-bottom: 10px;
 }
 .item_def_image_helper {
 	display: inline-block;

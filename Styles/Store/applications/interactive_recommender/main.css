@@ -264,27 +264,38 @@ a:link {
   .app_RecommendationList_2UkLX .app_List_115iv {
     position: relative; }
 
-.app_RecommendationOptions_2jiHP {
-  margin-bottom: 10px;
+.app_RecommendationOptions_2jiHP .app_Row_O0NAA {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-bottom: 10px;
   margin-left: -10px;
   margin-right: -10px; }
+
+.app_RecommendationOptions_2jiHP .app_SecondRow_6FjGe {
+  margin-bottom: 20px; }
   @media screen and (max-width: 777px) {
-    .app_RecommendationOptions_2jiHP {
+    .app_RecommendationOptions_2jiHP .app_SecondRow_6FjGe {
       margin-bottom: 40px; } }
-  .app_RecommendationOptions_2jiHP .app_TagFilters_3gGVr {
-    display: flex;
-    flex-direction: column;
-    min-height: 0px; }
+
+.app_OptionCheckbox_3coaI {
+  color: #CCC;
+  margin-top: 10px;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  .app_OptionCheckbox_3coaI .app_Checkbox_3hRS3 {
+    margin-right: 4px;
+    margin-top: 2px; }
 
 .app_OptionSlider_sLHtG {
   display: flex;
   flex-direction: column;
   min-height: 0px;
-  width: 200px;
+  width: 300px;
   margin-left: 10px;
   margin-right: 10px; }
   @media screen and (max-width: 777px) {
