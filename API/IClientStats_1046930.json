@@ -1,0 +1,11 @@
+{
+    "name": "IClientStats_1046930",
+    "methods": [
+        {
+            "name": "ReportEvent",
+            "version": 1,
+            "httpmethod": "POST",
+            "parameters": []
+        }
+    ]
+}

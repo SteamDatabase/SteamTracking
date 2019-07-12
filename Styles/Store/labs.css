@@ -197,10 +197,18 @@ span.experiment-name {
 	color: #fff;
 }
 .experiment-title-area {
-	float: left;
+	padding: 0;
 	padding-bottom: 0px;
-	padding-top: 8px;
+	padding-top: 0px;
+	width: 1026px;
+	justify-content: center;
+	margin: 0 auto;
+	position: relative;
+	pointer-events: none;
 }
+.ultracast_content .experiment-page-title {
+	padding-top: 30px;
+	}
 
 .experiment-page-title {
     font-size: 40px;
@@ -209,7 +217,7 @@ span.experiment-name {
     letter-spacing: 2px;
     margin-bottom: 0px;
     color: #00cbd4;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.03em;
     padding-left: 10px;
 }
 
@@ -220,7 +228,7 @@ span.experiment-name {
   font-weight: normal;
   font-size: 15px;
   text-transform: uppercase;
-  color: #276ee0;
+  color: #00b8c0;
   margin: 0px 0 -12px;
   letter-spacing: 2px;
   font-weight: 400;
@@ -245,6 +253,15 @@ span.experiment-name {
 	padding-top: 10px;
 }
 
+#recommender_root .app_PlayedGame_1RMe- {
+	background-color: #00000000;
+}
+
+#recommender_root .app_RecommendationEntry_18wXZ {
+	background-image: radial-gradient(ellipse at top left, #2f374d, #18264a);
+	border-radius: 4px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);;
+}
 
 #microtrailer_flavor {
 		font-family: "Motiva Sans", Sans-serif;
@@ -456,12 +473,13 @@ span.experiment-name {
 	font-size: 15px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	color: #686ad9;
+	color: #276ee0;
 	font-family: "Motiva Sans", Sans-serif;
+	font-weight: 400;
 }
 
 .labs_top_menu_item a:hover {
-	color: #999bff;
+	color: #4b90ff;
 }
 
 
