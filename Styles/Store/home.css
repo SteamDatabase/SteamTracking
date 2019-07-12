@@ -3709,3 +3709,50 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		background-color: inherit;
 	}
 }
+
+.labs_banner
+{
+	position: relative;
+	display: block;
+	height: 148px;
+}
+
+.labs_banner img.banner
+{
+	max-width: 100%;
+	display: block;
+}
+
+.labs_banner img.hover
+{
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	transition: opacity 0.25s;
+
+	width: 100%;
+	height: 100%;
+}
+
+.labs_banner:hover img.hover
+{
+	opacity: 1.0;
+	display: block;
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 910px)
+{
+
+	html.responsive .labs_banner
+	{
+		min-height: 0;
+		margin: 0 2%;
+		height: auto;
+	}
+}

@@ -356,7 +356,7 @@ GDynamicStore = {
 		}
 		$Elem.addClass( 'app_impression_tracked' );
 
-		var strImpressions = V_GetCookie( "app_impressions" );
+		var strImpressions = decodeURIComponent(V_GetCookie( "app_impressions" ));
 		var rgImpressions = strImpressions && strImpressions.length != 0 ? strImpressions.split( "|" ) : [];
 
 		// commas not allowed in cookie value

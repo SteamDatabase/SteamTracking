@@ -115,6 +115,7 @@ a:link {
 .app_App_1VNi1 {
   font-family: "motiva sans regular", "Motiva Sans", arial, tahoma;
   margin: 0px auto;
+  height: 3840px;
   background-image: linear-gradient(#2A465D, #1B2838 400px, #1B2838 100%);
   color: white;
   padding: 40px;
@@ -366,6 +367,7 @@ a:link {
         width: 200px;
         height: 100px;
         position: absolute;
+        background: black;
         transition: opacity 0.2s ease-in-out, width 0.1s ease-in-out, height 0.1s ease-in-out;
         opacity: 0; }
         @media screen and (max-width: 777px) {
