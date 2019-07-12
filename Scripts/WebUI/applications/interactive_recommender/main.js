@@ -1491,6 +1491,7 @@
                       !D[b] ||
                       D[b].o ||
                       D[b].i ||
+                      D[b].ti ||
                       (D[b].w && ue.m_bExcludeWishlisted)
                     )
                   ) {
