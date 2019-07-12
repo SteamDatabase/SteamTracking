@@ -51,7 +51,7 @@
       <Button id="empty_binding" selectionpos="0,-8" onactivate="SetBinding( controller_action, empty_binding );" onmoveright="SetInputFocus( change_player_number );" onmoveleft="SetInputFocus( steammusic_options );" onmovedown="SetInputFocus( kb_key_previous );" >
         <Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_empty_binding.png" />
       </Button>
-      <Button id="change_player_number" selectionpos="0,-9" onactivate="ShowControllerActionChangePlayerNumber( controller_action, change_player_number );" onmoveright="SetInputFocus( IconPreview );" onmoveleft="SetInputFocus( empty_binding );" onmovedown="SetInputFocus( kb_key_mute );" >
+      <Button id="change_player_number" selectionpos="0,-9" onactivate="ShowControllerActionChangePlayerNumber( controller_action, change_player_number );" onmoveright="SetInputFocus( IconPreview );" onmoveleft="SetInputFocus( empty_binding );" onmovedown="SetInputFocus( left_trigger );" >
         <Image class="ChooseBindingIconImage" src="file://{images}/library/icon_choosebinding_playernumber.png" />
       </Button>      
       <Label id="SelectBindingIconHeader" text="#Library_Details_SelectIcon" class="SelectBindingIconHeader" />
@@ -493,7 +493,7 @@
         <Panel id="GamepadRowWrapper">
           <Panel id="GamepadTopRow" selectionpos="0,0">
             <Panel id="LeftTriggerShoulderWrapper" selectionpos="15,0">
-              <Button class="GamepadButton" id="left_trigger" selectionpos="-1,0" onmoveleft="SetInputFocus( kb_key_previous );" onmovedown="SetInputFocus( left_shoulder );" onmoveup="SetInputFocus( empty_binding );" onactivate="SetBinding( gamepad, trigger_left );" />
+              <Button class="GamepadButton" id="left_trigger" selectionpos="-1,0" onmoveleft="SetInputFocus( kb_key_previous );" onmovedown="SetInputFocus( left_shoulder );" onmoveup="SetInputFocus( change_player_number );" onactivate="SetBinding( gamepad, trigger_left );" />
               <Button class="GamepadButton" id="left_shoulder" selectionpos="-1,1" onmoveleft="SetInputFocus( kb_key_pad_dash );" onmovedown="SetInputFocus( lstick_up );" onactivate="SetBinding( gamepad, shoulder_left );" />
             </Panel>
             <Panel id="RightTriggerShoulderWrapper" selectionpos="75,0">

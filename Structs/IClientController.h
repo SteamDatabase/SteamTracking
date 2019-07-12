@@ -54,6 +54,7 @@ public:
     virtual unknown_ret GetStickExtents(unsigned int, int, short*, short*, short*, short*) = 0;
     virtual unknown_ret GetControllerBindingRevision(unsigned int, unsigned long long, int*, int*) = 0;
     virtual unknown_ret GetRemotePlaySessionID(unsigned long long) = 0;
+    virtual unknown_ret CursorVisibilityChanged(bool) = 0;
     virtual unknown_ret Validate(CValidator&, char const*) = 0;
     virtual unknown_ret GetNumConnectedControllers() = 0;
     virtual unknown_ret GetControllerDetails(unsigned int) = 0;

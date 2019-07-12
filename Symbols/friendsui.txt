@@ -724,6 +724,8 @@
  D CSteamInputControllerConnectedNotification::KB_ChainToMap()::chained
  D CSteamInputControllerConnectedNotification::PanelMessageFunc_OnGuideButtonPressed::InitVar()::bAdded
  D CSteamInputControllerConnectedNotification::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()::bAdded
+ D CSteamInputPlayerNumberChangedNotification::GetKBMap()::s_pMap
+ D CSteamInputPlayerNumberChangedNotification::GetMessageMap()::s_pMap
  D CTradeInviteBar::ChainToAnimationMap()::chained
  D CTradeInviteBar::ChainToMap()::chained
  D CTradeInviteBar::GetKBMap()::s_pMap
@@ -850,6 +852,7 @@
  D VTT for CPlayersSubRecentPlayers
  D VTT for CSetNicknameDialog
  D VTT for CSteamInputControllerConnectedNotification
+ D VTT for CSteamInputPlayerNumberChangedNotification
  D VTT for CTradeInviteBar
  D VTT for CVoiceBar
  D VTT for CVoiceChatInviteNotification
@@ -1069,6 +1072,7 @@
  D construction vtable for vgui::EditablePanel-in-CPlayersSubRecentPlayers
  D construction vtable for vgui::EditablePanel-in-CSetNicknameDialog
  D construction vtable for vgui::EditablePanel-in-CSteamInputControllerConnectedNotification
+ D construction vtable for vgui::EditablePanel-in-CSteamInputPlayerNumberChangedNotification
  D construction vtable for vgui::EditablePanel-in-CTradeInviteBar
  D construction vtable for vgui::EditablePanel-in-CVoiceBar
  D construction vtable for vgui::EditablePanel-in-CVoiceChatInviteNotification
@@ -1202,6 +1206,7 @@
  D construction vtable for vgui::NotificationFrame-in-CItemReceivedNotification
  D construction vtable for vgui::NotificationFrame-in-CNewTurnsNotification
  D construction vtable for vgui::NotificationFrame-in-CSteamInputControllerConnectedNotification
+ D construction vtable for vgui::NotificationFrame-in-CSteamInputPlayerNumberChangedNotification
  D construction vtable for vgui::NotificationFrame-in-CVoiceChatInviteNotification
  D construction vtable for vgui::NotificationFrame-in-SharedLibraryNotification
  D construction vtable for vgui::NotificationFrame-in-vgui::EasyNotification
@@ -1268,6 +1273,7 @@
  D construction vtable for vgui::Panel-in-CPlayersSubRecentPlayers
  D construction vtable for vgui::Panel-in-CSetNicknameDialog
  D construction vtable for vgui::Panel-in-CSteamInputControllerConnectedNotification
+ D construction vtable for vgui::Panel-in-CSteamInputPlayerNumberChangedNotification
  D construction vtable for vgui::Panel-in-CTradeInviteBar
  D construction vtable for vgui::Panel-in-CVoiceBar
  D construction vtable for vgui::Panel-in-CVoiceChatInviteNotification
@@ -1528,6 +1534,8 @@
  D guard variable for CSetNicknameDialog::GetMessageMap()::s_pMap
  D guard variable for CSteamInputControllerConnectedNotification::GetKBMap()::s_pMap
  D guard variable for CSteamInputControllerConnectedNotification::GetMessageMap()::s_pMap
+ D guard variable for CSteamInputPlayerNumberChangedNotification::GetKBMap()::s_pMap
+ D guard variable for CSteamInputPlayerNumberChangedNotification::GetMessageMap()::s_pMap
  D guard variable for CTradeInviteBar::GetKBMap()::s_pMap
  D guard variable for CTradeInviteBar::GetMessageMap()::s_pMap
  D guard variable for CVoiceBar::GetKBMap()::s_pMap
@@ -1841,6 +1849,7 @@
  D typeinfo for CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>
  D typeinfo for CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>
  D typeinfo for CCallback<CSteamInputNotificationManager, ControllerPersonalizationUpdated_t, false>
+ D typeinfo for CCallback<CSteamInputNotificationManager, ControllerPlayerNumberChanged_t, false>
  D typeinfo for CCallback<CSteamParentalController, ParentalLockChangeAttemptComplete_t, false>
  D typeinfo for CCallback<CSteamParentalController, ParentalLockChangeBegin_t, false>
  D typeinfo for CCallback<CSteamParentalController, ParentalWebTokenChanged_t, false>
@@ -2294,6 +2303,8 @@
  D typeinfo for CSteamInputControllerConnectedNotification
  D typeinfo for CSteamInputNotificationManager
  D typeinfo for CSteamInputNotificationManager::CCallback_OnReceivedControllerPersonalization
+ D typeinfo for CSteamInputNotificationManager::CCallback_OnReceivedControllerPlayerNumberChanged
+ D typeinfo for CSteamInputPlayerNumberChangedNotification
  D typeinfo for CSteamParentalController
  D typeinfo for CSteamParentalController::CCallback_OnParentalLockChangeBegin
  D typeinfo for CSteamParentalController::CCallback_OnParentalLockChangeComplete
@@ -3221,6 +3232,7 @@
  D vtable for CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>
  D vtable for CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>
  D vtable for CCallback<CSteamInputNotificationManager, ControllerPersonalizationUpdated_t, false>
+ D vtable for CCallback<CSteamInputNotificationManager, ControllerPlayerNumberChanged_t, false>
  D vtable for CCallback<CSteamParentalController, ParentalLockChangeAttemptComplete_t, false>
  D vtable for CCallback<CSteamParentalController, ParentalLockChangeBegin_t, false>
  D vtable for CCallback<CSteamParentalController, ParentalWebTokenChanged_t, false>
@@ -3668,6 +3680,8 @@
  D vtable for CSteamInputControllerConnectedNotification
  D vtable for CSteamInputNotificationManager
  D vtable for CSteamInputNotificationManager::CCallback_OnReceivedControllerPersonalization
+ D vtable for CSteamInputNotificationManager::CCallback_OnReceivedControllerPlayerNumberChanged
+ D vtable for CSteamInputPlayerNumberChangedNotification
  D vtable for CSteamParentalController
  D vtable for CSteamParentalController::CCallback_OnParentalLockChangeBegin
  D vtable for CSteamParentalController::CCallback_OnParentalLockChangeComplete
@@ -3983,6 +3997,7 @@
  R typeinfo name for CCallback<CSharedLibraryNotifications, SharedLibraryLockChanged_t, false>
  R typeinfo name for CCallback<CSharedLibraryNotifications, StopPlayingBorrowedApp_t, false>
  R typeinfo name for CCallback<CSteamInputNotificationManager, ControllerPersonalizationUpdated_t, false>
+ R typeinfo name for CCallback<CSteamInputNotificationManager, ControllerPlayerNumberChanged_t, false>
  R typeinfo name for CCallback<CSteamParentalController, ParentalLockChangeAttemptComplete_t, false>
  R typeinfo name for CCallback<CSteamParentalController, ParentalLockChangeBegin_t, false>
  R typeinfo name for CCallback<CSteamParentalController, ParentalWebTokenChanged_t, false>
@@ -4436,6 +4451,8 @@
  R typeinfo name for CSteamInputControllerConnectedNotification
  R typeinfo name for CSteamInputNotificationManager
  R typeinfo name for CSteamInputNotificationManager::CCallback_OnReceivedControllerPersonalization
+ R typeinfo name for CSteamInputNotificationManager::CCallback_OnReceivedControllerPlayerNumberChanged
+ R typeinfo name for CSteamInputPlayerNumberChangedNotification
  R typeinfo name for CSteamParentalController
  R typeinfo name for CSteamParentalController::CCallback_OnParentalLockChangeBegin
  R typeinfo name for CSteamParentalController::CCallback_OnParentalLockChangeComplete
@@ -5521,6 +5538,10 @@
  T CCallback<CSteamInputNotificationManager, ControllerPersonalizationUpdated_t, false>::Register(CSteamInputNotificationManager*, void (CSteamInputNotificationManager::*)(ControllerPersonalizationUpdated_t*))
  T CCallback<CSteamInputNotificationManager, ControllerPersonalizationUpdated_t, false>::Run(void*)
  T CCallback<CSteamInputNotificationManager, ControllerPersonalizationUpdated_t, false>::~CCallback()
+ T CCallback<CSteamInputNotificationManager, ControllerPlayerNumberChanged_t, false>::CCallback(CSteamInputNotificationManager*, void (CSteamInputNotificationManager::*)(ControllerPlayerNumberChanged_t*))
+ T CCallback<CSteamInputNotificationManager, ControllerPlayerNumberChanged_t, false>::Register(CSteamInputNotificationManager*, void (CSteamInputNotificationManager::*)(ControllerPlayerNumberChanged_t*))
+ T CCallback<CSteamInputNotificationManager, ControllerPlayerNumberChanged_t, false>::Run(void*)
+ T CCallback<CSteamInputNotificationManager, ControllerPlayerNumberChanged_t, false>::~CCallback()
  T CCallback<CSteamParentalController, ParentalLockChangeAttemptComplete_t, false>::CCallback(CSteamParentalController*, void (CSteamParentalController::*)(ParentalLockChangeAttemptComplete_t*))
  T CCallback<CSteamParentalController, ParentalLockChangeAttemptComplete_t, false>::Register(CSteamParentalController*, void (CSteamParentalController::*)(ParentalLockChangeAttemptComplete_t*))
  T CCallback<CSteamParentalController, ParentalLockChangeAttemptComplete_t, false>::Run(void*)
@@ -9721,9 +9742,20 @@
  T CSteamInputControllerConnectedNotification::~CSteamInputControllerConnectedNotification()
  T CSteamInputNotificationManager::CCallback_OnReceivedControllerPersonalization::Run(void*)
  T CSteamInputNotificationManager::CCallback_OnReceivedControllerPersonalization::~CCallback_OnReceivedControllerPersonalization()
+ T CSteamInputNotificationManager::CCallback_OnReceivedControllerPlayerNumberChanged::Run(void*)
+ T CSteamInputNotificationManager::CCallback_OnReceivedControllerPlayerNumberChanged::~CCallback_OnReceivedControllerPlayerNumberChanged()
  T CSteamInputNotificationManager::CSteamInputNotificationManager()
  T CSteamInputNotificationManager::OnReceivedControllerPersonalization(ControllerPersonalizationUpdated_t*)
+ T CSteamInputNotificationManager::OnReceivedControllerPlayerNumberChanged(ControllerPlayerNumberChanged_t*)
  T CSteamInputNotificationManager::Validate(CValidator&, char const*)
+ T CSteamInputPlayerNumberChangedNotification::CSteamInputPlayerNumberChangedNotification(ControllerPlayerNumberChanged_t*)
+ T CSteamInputPlayerNumberChangedNotification::GetAnimMap()
+ T CSteamInputPlayerNumberChangedNotification::GetClassSize() const
+ T CSteamInputPlayerNumberChangedNotification::GetKBMap()
+ T CSteamInputPlayerNumberChangedNotification::GetMessageMap()
+ T CSteamInputPlayerNumberChangedNotification::GetPanelTopClassName() const
+ T CSteamInputPlayerNumberChangedNotification::PerformLayout()
+ T CSteamInputPlayerNumberChangedNotification::~CSteamInputPlayerNumberChangedNotification()
  T CSteamParentalController::CCallback_OnParentalLockChangeBegin::Run(void*)
  T CSteamParentalController::CCallback_OnParentalLockChangeBegin::~CCallback_OnParentalLockChangeBegin()
  T CSteamParentalController::CCallback_OnParentalLockChangeComplete::Run(void*)

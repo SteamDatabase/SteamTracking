@@ -524,6 +524,8 @@
 "Friends_DownloadNotification_Steam" "Steam"
 "Friends_DownloadNotification_Info" "has finished downloading"
 
+"Friends_SteamInputControllerPlayerNumberTitle"	"Controller Switched Slots"
+"Friends_SteamInputControllerPlayerNumberChanged"	"is Now Player %player_number%"
 "Friends_SteamInputControllerConnectedNotification_Info" "Using configs from"
 "Friends_SteamInputControllerConfigNotification_Info" "CONFIG LOADED:"
 "Friends_SteamInputControllerConfigNotification_Info2" "%config_name%"
