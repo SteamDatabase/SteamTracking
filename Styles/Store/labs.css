@@ -1,8 +1,12 @@
 
 
+body.v6 .page_content {
+    display: flex;
+    flex-direction: column;
+}
 /* Contain all Labs main page. */
 body.v6.labs {
-    background: #2a2b2f;
+    background: #181d3a;
     color: #adb4c4;
     font-family: Motiva Sans, Arial, Helvetica, sans-serif; 
 }
@@ -10,10 +14,6 @@ body .responsive_page_content {
     /* background: #292a2e; */
     background: url( 'https://steamcdn-a.akamaihd.net/store/labs/background.jpg' );
     background-size: 1920px 1080px;
-}
-
-body.v6 .page_content {
-	width: 1026px;
 }
 
 a, a:visited {
@@ -73,6 +73,11 @@ color: #fff;
 }
 
 .single-main-column {
+}
+.flex_colum {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 /* Main page has main and secondary columns. */
@@ -197,18 +202,11 @@ span.experiment-name {
 	color: #fff;
 }
 .experiment-title-area {
-	padding: 0;
+	float: left;
 	padding-bottom: 0px;
-	padding-top: 0px;
-	width: 1026px;
-	justify-content: center;
-	margin: 0 auto;
-	position: relative;
-	pointer-events: none;
+	padding-top: 16px;
+    margin-left: -30px;
 }
-.ultracast_content .experiment-page-title {
-	padding-top: 30px;
-	}
 
 .experiment-page-title {
     font-size: 40px;
@@ -237,9 +235,19 @@ span.experiment-name {
 
 
 .microtrailers_content {
-	width: 940px;
+	width: 100%;
 	margin: auto;
 	overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.microtrailers_content h3 {
+    margin-top: 50px;
+    font-size: 38px;
+}
+.microtrailers_content a {
+    position: relative;
 }
 
 .microtrailers_content h1, .ultracast_page_content_section h1 {
@@ -288,10 +296,12 @@ span.experiment-name {
 			font-size: 14px;
 	line-height: 1.5em;
 	margin: 0px 0px 10px 0px;
+    width: 100%;
 }
 
 .microtrailers_flavor_container {
-	width: 900px;
+	width: 100%;
+    box-sizing: border-box;
 	background-image: radial-gradient(ellipse at top left, hsla(215, 48%, 19%, 1), hsla(235, 51%, 16%, 1));
 	border-radius: 4px;
 	margin: 20px 0px 20px 0px;
@@ -301,8 +311,9 @@ span.experiment-name {
 }
 
 .microtrailers_grid {
-	display: inline-block;
-
+	display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .microtrailers_grid_item {
@@ -386,8 +397,8 @@ span.experiment-name {
 }
 
 .video_container_single_column {
-	width: 900px;
-	height: 506px;
+	width: 100%;
+	height: auto;
 	margin-bottom: 1px;
 	overflow: hidden;
 }
@@ -400,13 +411,13 @@ span.experiment-name {
 .video_single_column {
 	opacity: 100.0;
 	margin: 0px;
-	width: 900px;
+	width: 100%;
 	float: left;
 }
 
 .single_o_single_column {
-	width: 900px;
-	height: 558px;
+	max-width: 900px;
+    width: 100%;
 	margin: 6px;
 	margin-bottom: 10px;
 	box-shadow: 0 0 5px #000000;
@@ -420,11 +431,11 @@ span.experiment-name {
 
 .ultracast_page_content_section {
 	width: 940px;
-	padding-left: 46px;
 }
 
 .ultracast_content {
-	overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .ultracast_content h1 {
@@ -465,10 +476,22 @@ span.experiment-name {
 	width: 285px;
 }
 
+a.ultracast_now_playing_link {
+	display: block;
+	position: relative;
+}
+
+a.ultracast_now_playing_link:hover .ds_options {
+	display: none;
+}
+
+.labs_nav_ctn {
+
+}
 .labs_top_menu_item a, .labs_top_menu_item a:visited {
 	float: left;
 	padding: 5px;
-	margin: 5px 5px 0px 5px;
+	margin: 5px 5px 0px 0px;
 	padding-left: 40px;
 	font-size: 15px;
 	text-transform: uppercase;
@@ -477,9 +500,62 @@ span.experiment-name {
 	font-family: "Motiva Sans", Sans-serif;
 	font-weight: 400;
 }
+.labs_top_menu_item:first-child a {
+    padding-left: 0px;
+}
 
 .labs_top_menu_item a:hover {
 	color: #4b90ff;
 }
-
-
+@media screen and (max-width: 990px)
+{
+    html.responsive .labs-content {
+        margin: 0px 10px;
+    }
+    html.responsive .right-column {
+        width: 35%;
+    }
+    .experiment-title-area {
+        margin-left: -11px;
+    }
+}
+@media screen and (max-width: 910px)
+{
+    html.responsive .about_active,
+    html.responsive .about_more {
+        display: none;
+    }
+    html.responsive .labs-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+    html.responsive .right-column {
+        width: 100%;
+    }
+    html.responsive .right-column-box {
+        padding-left: 0px;
+    }
+    html.responsive .left-column {
+        width: 100%;
+    }
+    html.responsive .capsule {
+        display: flex;
+    }
+    html.responsive .capsule-banner {
+        overflow: hidden;
+        width: 30%;
+        flex-shrink: 0;
+    }
+}
+@media screen and (max-width: 600px)
+{
+    html.responsive .capsule {
+        display: flex;
+        flex-direction: column;
+    }
+    html.responsive .capsule-banner {
+        width: 100%;
+    }
+}
