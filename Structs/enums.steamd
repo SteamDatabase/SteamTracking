@@ -1,16 +1,5 @@
-enum Result {
-	NoData = 1;
-	NewData = 2;
-	Failed = 3;
-}
-
-enum Status {
-	Denied = 1;
-	Restricted = 2;
-	Available = 3;
-}
-
-enum Accuracy {
+enum Accuracy
+{
 	Lowest = 1;
 	Low = 2;
 	Balanced = 3;
@@ -19,260 +8,159 @@ enum Accuracy {
 	BestForNavigation = 6;
 }
 
-enum GeofencingEventType {
-	Enter = 1;
-	Exit = 2;
+enum ActivityType
+{
+	Other = 1;
+	AutomotiveNavigation = 2;
+	Fitness = 3;
+	OtherNavigation = 4;
+	Airborne = 5;
 }
 
-enum GeofencingRegionState {
+enum AuthenticationType
+{
+	FINGERPRINT = 1;
+	FACIAL_RECOGNITION = 2;
+}
+
+enum BrightnessMode
+{
+	UNKNOWN = 0;
+	AUTOMATIC = 1;
+	MANUAL = 2;
+}
+
+enum CBroadcast_BroadcastViewerState_Notification_EViewerState
+{
+	NeedsApproval = 1;
+	Watching = 2;
+	Left = 3;
+}
+
+enum CBroadcast_WatchBroadcast_Response_EWatchResponse
+{
+	Ready = 1;
+	NotAvailable = 2;
+	WaitingForApproval = 3;
+	WaitingForStart = 4;
+	InvalidSession = 5;
+	TooManyBroadcasts = 6;
+	WaitingForReconnect = 7;
+	SystemNotSupported = 8;
+	UserRestricted = 9;
+	ClientOutOfDate = 10;
+	PoorUploadQuality = 11;
+	MissingSubscription = 12;
+}
+
+enum ChatMessageTypeEnum
+{
+	Chat = 0;
+	Notification = 1;
+	Error = 2;
+}
+
+enum EAbuseNotificationType
+{
+	Invalid = 0;
+	TradeBan = 1;
+	Profile = 2;
+	Group = 3;
+	Comment = 4;
+	Forum = 5;
+}
+
+enum EAccountType
+{
+	Invalid = 0;
+	Individual = 1;
+	Multiseat = 2;
+	GameServer = 3;
+	AnonGameServer = 4;
+	Pending = 5;
+	ContentServer = 6;
+	Clan = 7;
+	Chat = 8;
+	ConsoleUser = 9;
+	AnonUser = 10;
+	Max = 11;
+}
+
+enum EActorAffiliation
+{
 	Unknown = 0;
-	Inside = 1;
-	Outside = 2;
+	Valve = 1;
+	Keywords = 2;
+	TaskUs = 3;
+	Volunteer = 4;
 }
 
-enum EValidationPhase {
-	Idle = 0;
-	WaitingForAppInfo = 1;
-	StartInstallScript = 2;
-	WaitingForInstallScript = 3;
-	Validating = 4;
+enum EAnnouncementPlacement
+{
+	Invalid = 0;
+	FrontPage = 1;
+	TicketDetails = 2;
 }
 
-enum EAppAutoUpdateBehavior {
-	Default = 0;
-	DoNotUpdate = 1;
-	HighPriority = 2;
+enum EAnswerActorRank
+{
+	None = 0;
+	Valve = 1;
+	GlobalMod = 2;
+	Developer = 3;
+	Moderator = 4;
+	OP = 5;
 }
 
-enum EAppAllowDownloadsWhileRunningBehavior {
+enum EAppAllowDownloadsWhileRunningBehavior
+{
 	UseGlobal = 0;
 	AlwaysAllow = 1;
 	NeverAllow = 2;
 }
 
-enum EControllerRumbleSetting {
-	ControllerPreference = 0;
-	Off = 1;
-	On = 2;
+enum EAppAssociationType
+{
+	Invalid = 0;
+	Publisher = 1;
+	Developer = 2;
+	Franchise = 3;
 }
 
-enum EControllerEnableSupport {
-	ForceOff = 0;
-	GlobalSetting = 1;
-	ForceOn = 2;
+enum EAppAutoUpdateBehavior
+{
+	Default = 0;
+	DoNotUpdate = 1;
+	HighPriority = 2;
 }
 
-enum EConfiguratorSupportTypes {
-	PS4 = 1;
-	XBox = 2;
-	Generic = 4;
-}
-
-enum EControllerAttribCapabilityBits {
-	ATTRIBCAP_DIAMOND_BUTTONS = 1;
-	ATTRIBCAP_DPAD_BUTTONS = 2;
-	ATTRIBCAP_LEFTSTICK = 4;
-	ATTRIBCAP_RIGHTSTICK = 8;
-	ATTRIBCAP_THUMBSTICK_BUTTONS = 16;
-	ATTRIBCAP_SHOULDER_BUTTONS = 32;
-	ATTRIBCAP_ANALOG_TRIGGERS = 64;
-	ATTRIBCAP_BACK_BUTTON = 128;
-	ATTRIBCAP_START_BUTTON = 256;
-	ATTRIBCAP_GUIDE_BUTTON = 512;
-	ATTRIBCAP_GRIPS = 1024;
-	ATTRIBCAP_GYRO = 2048;
-	ATTRIBCAP_TRACKPAD = 4096;
-	ATTRIBCAP_HAPTICS = 8192;
-	ATTRIBCAP_RUMBLE = 16384;
-	ATTRIBCAP_PRESSURE = 32768;
-	ATTRIBCAP_LED = 65536;
-	ATTRIBCAP_LEDCOLOR = 131072;
-	ATTRIBCAP_UNCALIBRATED_IMU = 262144;
-}
-
-enum EClientBetaState {
+enum EAppControllerSupportLevel
+{
 	None = 0;
-	NoneChosen = 1;
-	NoneChosenNonAdmin = 2;
-	InBeta = 3;
-	InBetaNonAdmin = 4;
+	Partial = 1;
+	Full = 2;
 }
 
-enum EMusicPlayingRepeatStatus {
-	PlayingRepeat_None = 0;
-	PlayingRepeat_All = 1;
-	PlayingRepeat_Once = 2;
-	PlayingRepeat_Max = 3;
-}
-
-enum EParentalFeature {
+enum EAppReportType
+{
 	Invalid = 0;
-	Store = 1;
-	Community = 2;
-	Profile = 3;
-	Friends = 4;
-	News = 5;
-	Trading = 6;
-	Settings = 7;
-	Console = 8;
-	Browser = 9;
-	ParentalSetup = 10;
-	Library = 11;
-	Test = 12;
-	Max = 13;
+	Scam = 1;
+	Malware = 2;
+	HateSpeech = 3;
+	Pornography = 4;
+	NonLabeledAdultContent = 5;
+	Libelous = 6;
+	Offensive = 7;
+	ExploitsChildren = 8;
+	MtxWithNonSteamWalletPaymentMethods = 9;
+	CopyrightViolation = 10;
+	ViolatesLaws = 11;
+	Other = 12;
+	Broken = 13;
 }
 
-enum EChatFlashMode {
-	Always = 0;
-	Minimized = 1;
-	Never = 2;
-}
-
-enum EClientUINotificationType {
-	GroupChatMessage = 1;
-	FriendChatMessage = 2;
-	FriendPersonaState = 3;
-}
-
-enum EComputerActiveState {
-	Invalid = 0;
-	Active = 1;
-	Idle = 2;
-}
-
-enum EBroadcastViewRequestState {
-	Pending = 0;
-	Accepted = 1;
-	Rejected = 2;
-}
-
-enum EResult {
-	OK = 1;
-	Fail = 2;
-	NoConnection = 3;
-	InvalidPassword = 5;
-	LoggedInElsewhere = 6;
-	InvalidProtocolVer = 7;
-	InvalidParam = 8;
-	FileNotFound = 9;
-	Busy = 10;
-	InvalidState = 11;
-	InvalidName = 12;
-	InvalidEmail = 13;
-	DuplicateName = 14;
-	AccessDenied = 15;
-	Timeout = 16;
-	Banned = 17;
-	AccountNotFound = 18;
-	InvalidSteamID = 19;
-	ServiceUnavailable = 20;
-	NotLoggedOn = 21;
-	Pending = 22;
-	EncryptionFailure = 23;
-	InsufficientPrivilege = 24;
-	LimitExceeded = 25;
-	Revoked = 26;
-	Expired = 27;
-	AlreadyRedeemed = 28;
-	DuplicateRequest = 29;
-	AlreadyOwned = 30;
-	IPNotFound = 31;
-	PersistFailed = 32;
-	LockingFailed = 33;
-	LogonSessionReplaced = 34;
-	ConnectFailed = 35;
-	HandshakeFailed = 36;
-	IOFailure = 37;
-	RemoteDisconnect = 38;
-	ShoppingCartNotFound = 39;
-	Blocked = 40;
-	Ignored = 41;
-	NoMatch = 42;
-	AccountDisabled = 43;
-	ServiceReadOnly = 44;
-	AccountNotFeatured = 45;
-	AdministratorOK = 46;
-	ContentVersion = 47;
-	TryAnotherCM = 48;
-	PasswordRequiredToKickSession = 49;
-	AlreadyLoggedInElsewhere = 50;
-	Suspended = 51;
-	Cancelled = 52;
-	DataCorruption = 53;
-	DiskFull = 54;
-	RemoteCallFailed = 55;
-	PasswordUnset = 56;
-	ExternalAccountUnlinked = 57;
-	PSNTicketInvalid = 58;
-	ExternalAccountAlreadyLinked = 59;
-	RemoteFileConflict = 60;
-	IllegalPassword = 61;
-	SameAsPreviousValue = 62;
-	AccountLogonDenied = 63;
-	CannotUseOldPassword = 64;
-	InvalidLoginAuthCode = 65;
-	AccountLogonDeniedNoMail = 66;
-	HardwareNotCapableOfIPT = 67;
-	IPTInitError = 68;
-	ParentalControlRestricted = 69;
-	FacebookQueryError = 70;
-	ExpiredLoginAuthCode = 71;
-	IPLoginRestrictionFailed = 72;
-	AccountLockedDown = 73;
-	AccountLogonDeniedVerifiedEmailRequired = 74;
-	NoMatchingURL = 75;
-	BadResponse = 76;
-	RequirePasswordReEntry = 77;
-	ValueOutOfRange = 78;
-	UnexpectedError = 79;
-	Disabled = 80;
-	InvalidCEGSubmission = 81;
-	RestrictedDevice = 82;
-	RegionLocked = 83;
-	RateLimitExceeded = 84;
-	AccountLoginDeniedNeedTwoFactor = 85;
-	ItemDeleted = 86;
-	AccountLoginDeniedThrottle = 87;
-	TwoFactorCodeMismatch = 88;
-	TwoFactorActivationCodeMismatch = 89;
-	AccountAssociatedToMultiplePartners = 90;
-	NotModified = 91;
-	NoMobileDevice = 92;
-	TimeNotSynced = 93;
-	SmsCodeFailed = 94;
-	AccountLimitExceeded = 95;
-	AccountActivityLimitExceeded = 96;
-	PhoneActivityLimitExceeded = 97;
-	RefundToWallet = 98;
-	EmailSendFailure = 99;
-	NotSettled = 100;
-	NeedCaptcha = 101;
-	GSLTDenied = 102;
-	GSOwnerDenied = 103;
-	InvalidItemType = 104;
-	IPBanned = 105;
-	GSLTExpired = 106;
-	InsufficientFunds = 107;
-	TooManyPending = 108;
-	NoSiteLicensesFound = 109;
-	WGNetworkSendExceeded = 110;
-	AccountNotFriends = 111;
-	LimitedUserAccount = 112;
-}
-
-enum ETransportError {
-	OK = 1;
-	RequestNotSent = 2;
-	ResponseNotReceived = 3;
-	IncorrectParameter = 4;
-	MethodNotFound = 100;
-	CallMismatch = 101;
-	SetupError = 102;
-	InternalError = 103;
-	NotSupported = 104;
-}
-
-enum EAppUpdateError {
+enum EAppUpdateError
+{
 	None = 0;
 	Unspecified = 1;
 	Paused = 2;
@@ -321,156 +209,94 @@ enum EAppUpdateError {
 	Max = 45;
 }
 
-enum EAvatarFriendState {
+enum EAuctionBadgeLevel
+{
+	Invalid = 0;
+	MadeGoo = 1;
+	BidInAuction = 2;
+	WonInAuction = 3;
+}
+
+enum EAudioStreamType
+{
+	Microphone = 1;
+	IncomingStream = 2;
+}
+
+enum EAvatarFriendState
+{
 	Offline = 0;
 	Online = 1;
 	InGame = 2;
 }
 
-enum EPersonaState {
-	Offline = 0;
-	Online = 1;
-	Busy = 2;
-	Away = 3;
-	Snooze = 4;
-	LookingToTrade = 5;
-	LookingToPlay = 6;
-	Invisible = 7;
-	Max = 8;
+enum EAvatarState
+{
+	Unknown = 0;
+	Approved = 1;
+	Denied = 2;
 }
 
-enum ELaunchAppTask {
-	None = 0;
-	Completed = 1;
-	Cancelled = 2;
-	Failed = 3;
-	Starting = 4;
-	UpdatingAppInfo = 5;
-	ShowingEula = 6;
-	WaitingPrevProcess = 7;
-	DownloadingDepots = 8;
-	DownloadingWorkshop = 9;
-	UpdatingDRM = 10;
-	GettingLegacyKey = 11;
-	RunningInstallScript = 12;
-	SynchronizingCloud = 13;
-	CheckingOverlayRights = 14;
-	VerifyingFiles = 15;
-	KickingOtherSession = 16;
-	WaitingOpenVRAppQuit = 17;
-	CreatingProcess = 18;
-	WaitingGameWindow = 19;
+enum EBackpackContext
+{
+	EconContextRoot = 0;
+	GiftPasses = 1;
+	Profile = 2;
+	Coupons = 3;
+	Wallet = 4;
+	Community = 6;
+	ItemRewards = 7;
+	EConContextMax = 999;
 }
 
-enum EWorkshopFileType {
-	Invalid = -1;
-	Community = 0;
-	Microtransaction = 1;
-	Collection = 2;
-	Art = 3;
-	Video = 4;
-	Screenshot = 5;
-	Game = 6;
-	Software = 7;
-	Concept = 8;
-	WebGuide = 9;
-	IntegratedGuide = 10;
-	Merch = 11;
-	ControllerBinding = 12;
-	SteamworksAccessInvite = 13;
-	SteamVideo = 14;
-	GameManagedItem = 15;
-	First = 0;
-	Max = 16;
+enum EBroadcastChatBan
+{
+	Clear = 0;
+	Mute = 1;
+	Shadow = 2;
 }
 
-enum ELoginState {
-	None = 0;
-	WaitingForCreateUser = 1;
-	WaitingForCredentials = 2;
-	WaitingForNetwork = 3;
-	WaitingForServerResponse = 4;
-	WaitingForLibraryReady = 5;
-	Success = 6;
-	WaitingForSteamGuard = 7;
-	WaitingForTwoFactor = 8;
-	WaitingForOfflineAck = 9;
-	Quit = 10;
+enum EBroadcastChatPermission
+{
+	Public = 0;
+	OwnsApp = 1;
 }
 
-enum ELoginProgressType {
-	None = 0;
-	UpdatingSteamInformation = 1;
-	UpdatingUserConfiguration = 2;
-	LoggingIn = 3;
+enum EBroadcastViewRequestState
+{
+	Pending = 0;
+	Accepted = 1;
+	Rejected = 2;
 }
 
-enum EShutdownStep {
-	None = 0;
-	Start = 1;
-	WaitForGames = 2;
-	WaitForCloud = 3;
-	WaitForDownload = 4;
-	WaitForServiceApps = 5;
-	WaitForLogOff = 6;
-	Done = 7;
-}
-
-enum EFileIteratorType {
-	None = 0;
-	Folder = 1;
-	Executables = 2;
-	Images = 3;
-}
-
-enum EUniverse {
+enum EBroadcastWatchLocation
+{
 	Invalid = 0;
-	Public = 1;
-	Beta = 2;
-	Internal = 3;
-	Dev = 4;
-	Max = 5;
+	SteamTV_Tab = 1;
+	SteamTV_WatchParty = 2;
+	Chat_Tab = 3;
+	Chat_WatchParty = 4;
+	CommunityPage = 5;
+	StoreAppPage = 6;
+	InGame = 7;
+	BigPicture = 8;
+	SalesPage = 9;
+	CuratorPage = 10;
+	DeveloperPage = 11;
+	Chat_Friends = 12;
+	SteamTV_Web = 13;
 }
 
-enum EAccountType {
-	Invalid = 0;
-	Individual = 1;
-	Multiseat = 2;
-	GameServer = 3;
-	AnonGameServer = 4;
-	Pending = 5;
-	ContentServer = 6;
-	Clan = 7;
-	Chat = 8;
-	ConsoleUser = 9;
-	AnonUser = 10;
-	Max = 11;
-}
-
-enum EFriendRelationship {
+enum EBroadcastWatchState
+{
 	None = 0;
-	Blocked = 1;
-	RequestRecipient = 2;
-	Friend = 3;
-	RequestInitiator = 4;
-	Ignored = 5;
-	IgnoredFriend = 6;
-	Suggested_DEPRECATED = 7;
-	Max = 8;
+	Loading = 1;
+	Ready = 2;
+	Error = 3;
 }
 
-enum EClanRelationship {
-	None = 0;
-	Blocked = 1;
-	Invited = 2;
-	Member = 3;
-	Kicked = 4;
-	KickAcknowledged = 5;
-	PendingApproval = 6;
-	RequestDenied = 7;
-}
-
-enum EChatEntryType {
+enum EChatEntryType
+{
 	Invalid = 0;
 	ChatMsg = 1;
 	Typing = 2;
@@ -485,7 +311,396 @@ enum EChatEntryType {
 	LinkBlocked = 14;
 }
 
-enum EEconTradeResponse {
+enum EChatFlashMode
+{
+	Always = 0;
+	Minimized = 1;
+	Never = 2;
+}
+
+enum EChatMsgDeleteState
+{
+	None = 0;
+	Deleting = 1;
+	Deleted = 2;
+}
+
+enum EChatMsgSendError
+{
+	None = 0;
+	Generic = 1;
+	NotFriends = 2;
+	NoChatPermissionInGroup = 3;
+	RateLimitExceeded = 4;
+}
+
+enum EChatRoomGroupAction
+{
+	Default = 0;
+	CreateRenameDeleteChannel = 1;
+	Kick = 2;
+	Ban = 3;
+	Invite = 4;
+	ChangeTaglineAvatarName = 5;
+	Chat = 6;
+	ViewHistory = 7;
+	ChangeGroupRoles = 8;
+	ChangeUserRoles = 9;
+	MentionAll = 10;
+	SetWatchingBroadcast = 11;
+	Max = 12;
+}
+
+enum EChatRoomGroupPermissions
+{
+	Default = 0;
+	Valid = 1;
+	CanInvite = 2;
+	CanKick = 4;
+	CanBan = 8;
+	CanAdminChannel = 16;
+}
+
+enum EChatRoomGroupRank
+{
+	Default = 0;
+	Viewer = 10;
+	Guest = 15;
+	Member = 20;
+	Moderator = 30;
+	Officer = 40;
+	Owner = 50;
+	TestInvalid = 99;
+}
+
+enum EChatRoomGroupType
+{
+	Default = 0;
+	Unmoderated = 1;
+}
+
+enum EChatRoomJoinState
+{
+	Default = 0;
+	None = 1;
+	Joined = 2;
+	TestInvalid = 99;
+}
+
+enum EChatRoomMemberStateChange
+{
+	Invalid = 0;
+	Joined = 1;
+	Parted = 2;
+	Kicked = 3;
+	Invited = 4;
+	RankChanged = 7;
+	InviteDismissed = 8;
+	Muted = 9;
+	Banned = 10;
+	RolesChanged = 12;
+}
+
+enum EChatRoomNotificationLevel
+{
+	Invalid = 0;
+	None = 1;
+	MentionMe = 2;
+	MentionAll = 3;
+	AllMessages = 4;
+}
+
+enum EChatRoomServerMessage
+{
+	Invalid = 0;
+	RenameChatRoom = 1;
+	Joined = 2;
+	Parted = 3;
+	Kicked = 4;
+	Invited = 5;
+	InviteDismissed = 8;
+	ChatRoomTaglineChanged = 9;
+	ChatRoomAvatarChanged = 10;
+	AppCustom = 11;
+}
+
+enum EChatWindowState
+{
+	Unopened = 0;
+	Hidden = 1;
+	Visible = 2;
+	FocusedIdle = 3;
+	FocusedActive = 4;
+}
+
+enum EClanChatChangeType
+{
+	Created = 1;
+	Closing = 2;
+	MemberStatus = 4;
+	PermissionGroups = 8;
+	NameOrAvatar = 16;
+}
+
+enum EClanEventType
+{
+	OtherEvent = 1;
+	GameEvent = 2;
+	PartyEvent = 3;
+	MeetingEvent = 4;
+	SpecialCauseEvent = 5;
+	MusicAndArtsEvent = 6;
+	SportsEvent = 7;
+	TripEvent = 8;
+	ChatEvent = 9;
+	GameReleaseEvent = 10;
+	BroadcastEvent = 11;
+	SmallUpdateEvent = 12;
+	RegularUpdateEvent = 13;
+	MajorUpdateEvent = 14;
+	FutureReleaseEvent = 16;
+	ESportTournamentStreamEvent = 17;
+	DevStreamEvent = 18;
+	FamousStreamEvent = 19;
+	GameSalesEvent = 20;
+	GameItemSalesEvent = 21;
+	InGameBonusXPEvent = 22;
+	InGameLootEvent = 23;
+	InGamePerksEvent = 24;
+	InGameChallengeEvent = 25;
+	InGameContestEvent = 26;
+	IRLEvent = 27;
+	NewsEvent = 28;
+	BetaReleaseEvent = 29;
+	FreeTrial = 31;
+	SeasonRelease = 32;
+}
+
+enum EClanImageFileType
+{
+	Unknown = 0;
+	JPEG = 1;
+	GIF = 2;
+	PNG = 3;
+}
+
+enum EClanImageGroup
+{
+	None = 0;
+	Announcement = 1;
+	Curator = 2;
+}
+
+enum EClanRelationship
+{
+	None = 0;
+	Blocked = 1;
+	Invited = 2;
+	Member = 3;
+	Kicked = 4;
+	KickAcknowledged = 5;
+	PendingApproval = 6;
+	RequestDenied = 7;
+}
+
+enum EClientBetaState
+{
+	None = 0;
+	NoneChosen = 1;
+	NoneChosenNonAdmin = 2;
+	InBeta = 3;
+	InBetaNonAdmin = 4;
+}
+
+enum EClientPersonaStateFlag
+{
+	Status = 1;
+	PlayerName = 2;
+	QueryPort = 4;
+	SourceID = 8;
+	Presence = 16;
+	LastSeen = 64;
+	UserClanRank = 128;
+	GameExtraInfo = 256;
+	GameDataBlob = 512;
+	ClanData = 1024;
+	Facebook = 2048;
+	RichPresence = 4096;
+	Broadcast = 8192;
+	Watching = 16384;
+}
+
+enum EClientUINotificationType
+{
+	GroupChatMessage = 1;
+	FriendChatMessage = 2;
+	FriendPersonaState = 3;
+}
+
+enum ECommentDeleteReason
+{
+	Invalid = 0;
+	User = 1;
+	ThreadOwner = 2;
+	Moderator = 3;
+	Support = 4;
+	Spam = 5;
+	AccountDeletion = 6;
+}
+
+enum ECommentReportAction
+{
+	Invalid = 0;
+	NoAction = 1;
+	Deleted = 2;
+	Hidden = 3;
+	ExternalDelete = 4;
+	ThreadDeleted = 5;
+}
+
+enum ECommunityPrivacyState
+{
+	Invalid = 0;
+	Private = 1;
+	FriendsOnly = 2;
+	Public = 3;
+	UsersOnly_DEPRECATED = 4;
+	FriendsFriendsOnly_DEPRECATED = 5;
+}
+
+enum ECommunityWordFilterReason
+{
+	Invalid = 0;
+	Phishing = 1;
+	Spam = 2;
+	AdultContent = 3;
+	Cheat = 4;
+	Referral = 5;
+	InappropriateLanguage = 6;
+	Piracy = 7;
+	Scam = 8;
+	Malware = 9;
+	FreeTLD = 10;
+	Harassment = 11;
+	URLShortener = 12;
+	Max = 13;
+}
+
+enum ECommunityWordFilterType
+{
+	Invalid = 0;
+	BadWords = 1;
+	BlacklistedURLs = 2;
+	WhitelistedGreenlightURLs = 3;
+	BlacklistOverrideDomains = 4;
+	BadWordsInChina = 5;
+}
+
+enum EComputerActiveState
+{
+	Invalid = 0;
+	Active = 1;
+	Idle = 2;
+}
+
+enum EConfiguratorSupportTypes
+{
+	PS4 = 1;
+	XBox = 2;
+	Generic = 4;
+}
+
+enum EContentDescriptorID
+{
+	FrequentNudityOrSexualContent = 1;
+	FrequentViolenceOrGore = 2;
+	StrongSexualContent = 3;
+	NonConsensualSex = 4;
+	AnyMatureContent = 5;
+}
+
+enum EControllerAttribCapabilityBits
+{
+	ATTRIBCAP_DIAMOND_BUTTONS = 1;
+	ATTRIBCAP_DPAD_BUTTONS = 2;
+	ATTRIBCAP_LEFTSTICK = 4;
+	ATTRIBCAP_RIGHTSTICK = 8;
+	ATTRIBCAP_THUMBSTICK_BUTTONS = 16;
+	ATTRIBCAP_SHOULDER_BUTTONS = 32;
+	ATTRIBCAP_ANALOG_TRIGGERS = 64;
+	ATTRIBCAP_BACK_BUTTON = 128;
+	ATTRIBCAP_START_BUTTON = 256;
+	ATTRIBCAP_GUIDE_BUTTON = 512;
+	ATTRIBCAP_GRIPS = 1024;
+	ATTRIBCAP_GYRO = 2048;
+	ATTRIBCAP_TRACKPAD = 4096;
+	ATTRIBCAP_HAPTICS = 8192;
+	ATTRIBCAP_RUMBLE = 16384;
+	ATTRIBCAP_PRESSURE = 32768;
+	ATTRIBCAP_LED = 65536;
+	ATTRIBCAP_LEDCOLOR = 131072;
+	ATTRIBCAP_UNCALIBRATED_IMU = 262144;
+}
+
+enum EControllerEnableSupport
+{
+	ForceOff = 0;
+	GlobalSetting = 1;
+	ForceOn = 2;
+}
+
+enum EControllerRumbleSetting
+{
+	ControllerPreference = 0;
+	Off = 1;
+	On = 2;
+}
+
+enum EDiscoveryQueueExperimentalCohort
+{
+	None = 0;
+	RecommendedForYouMay2019 = 1;
+	ExperimentalRecommenderMarch2019 = 2;
+}
+
+enum EDisplayStatus
+{
+	Invalid = 0;
+	Launching = 1;
+	Uninstalling = 2;
+	Installing = 3;
+	Running = 4;
+	Validating = 5;
+	Updating = 6;
+	Downloading = 7;
+	Synchronizing = 8;
+	ReadyToInstall = 9;
+	ReadyToPreload = 10;
+	ReadyToLaunch = 11;
+	RegionRestricted = 12;
+	PresaleOnly = 13;
+	InvalidPlatform = 14;
+	ParentalBlocked = 15;
+	PreloadComplete = 16;
+	BorrowerLocked = 17;
+	UpdatePaused = 18;
+	UpdateQueued = 19;
+	UpdateRequired = 20;
+	UpdateDisabled = 21;
+	DownloadPaused = 22;
+	DownloadQueued = 23;
+	DownloadRequired = 24;
+	DownloadDisabled = 25;
+	LicensePending = 26;
+	LicenseExpired = 27;
+	AvailForFree = 28;
+	AvailToBorrow = 29;
+	AvailGuestPass = 30;
+	Purchase = 31;
+}
+
+enum EEconTradeResponse
+{
 	Accepted = 0;
 	Declined = 1;
 	TradeBanned_Initiator = 2;
@@ -522,125 +737,480 @@ enum EEconTradeResponse {
 	OKToDeliver = 50;
 }
 
-enum EServerType {
-	Other_Util = -2;
-	Other_Client = -3;
-	Other_CServer = -4;
-	Other_CEconBase = -5;
-	Invalid = -1;
-	Shell = 0;
-	GM = 1;
-	AM = 3;
-	BS = 4;
-	VS = 5;
-	ATS = 6;
-	CM = 7;
-	FBS = 8;
-	BoxMonitor = 9;
-	SS = 10;
-	DRMS = 11;
-	Console = 13;
-	PICS = 14;
-	ContentStats = 16;
-	DP = 17;
-	WG = 18;
-	SM = 19;
-	SLC = 20;
-	UFS = 21;
-	Community = 24;
-	P2PRelayOBSOLETE = 25;
-	AppInformation = 26;
-	Spare = 27;
-	FTS = 28;
-	SiteLicense = 29;
-	PS = 30;
-	IS = 31;
-	CCS = 32;
-	DFS = 33;
-	LBS = 34;
-	MDS = 35;
-	CS = 36;
-	GC = 37;
-	NS = 38;
-	OGS = 39;
-	WebAPI = 40;
-	UDS = 41;
-	MMS = 42;
-	GMS = 43;
-	KGS = 44;
-	UCM = 45;
-	RM = 46;
-	FS = 47;
-	Econ = 48;
-	Backpack = 49;
-	UGS = 50;
-	StoreFeature = 51;
-	MoneyStats = 52;
-	CRE = 53;
-	UMQ = 54;
-	Workshop = 55;
-	BRP = 56;
-	GCH = 57;
-	MPAS = 58;
-	Trade = 59;
-	Secrets = 60;
-	Logsink = 61;
-	Market = 62;
-	Quest = 63;
-	WDS = 64;
-	ACS = 65;
-	PNP = 66;
-	TaxForm = 67;
-	ExternalMonitor = 68;
-	Parental = 69;
-	PartnerUpload = 70;
-	Partner = 71;
-	ES = 72;
-	DepotWebContent = 73;
-	ExternalConfig = 74;
-	GameNotifications = 75;
-	MarketRepl = 76;
-	MarketSearch = 77;
-	Localization = 78;
-	Steam2Emulator = 79;
-	PublicTest = 80;
-	SolrMgr = 81;
-	BroadcastRelay = 82;
-	BroadcastDirectory = 83;
-	VideoManager = 84;
-	TradeOffer = 85;
-	BroadcastChat = 86;
-	Phone = 87;
-	AccountScore = 88;
-	Support = 89;
-	LogRequest = 90;
-	LogWorker = 91;
-	EmailDelivery = 92;
-	InventoryManagement = 93;
-	Auth = 94;
-	StoreCatalog = 95;
-	HLTVRelay = 96;
-	IDLS = 97;
-	Perf = 98;
-	ItemInventory = 99;
-	Watchdog = 100;
-	AccountHistory = 101;
-	Chat = 102;
-	Shader = 103;
-	AccountHardware = 104;
-	WebRTC = 105;
-	Giveaway = 106;
-	ChatRoom = 107;
-	VoiceChat = 108;
-	QMS = 109;
-	Trust = 110;
-	TimeMachine = 111;
-	VACDBMaster = 112;
-	ContentServerConfig = 113;
-	Max = 114;
+enum EExternalAccountType
+{
+	None = 0;
+	SteamAccount = 1;
+	GoogleAccount = 2;
+	FacebookAccount = 3;
+	TwitterAccount = 4;
+	TwitchAccount = 5;
+	YouTubeChannelAccount = 6;
+	FacebookPage = 7;
 }
 
-enum ELanguage {
+enum EFadePhase
+{
+	OUT = 0;
+	FADING_IN = 1;
+	IN = 2;
+	FADING_OUT = 3;
+}
+
+enum EFeaturedAppBonusRoundGrantReason
+{
+	ValveDiscretion = 0;
+	ReachedTopSellers = 1;
+}
+
+enum EFeaturedAppType
+{
+	UpdateRound = 0;
+	LaunchRound = 1;
+	MAX = 2;
+}
+
+enum EFeedbackState
+{
+	New = 0;
+	WaitingForApproval = 1;
+	Rejected = 2;
+	RejectionAcknowledged = 3;
+	Approved = 4;
+	Viewed = 5;
+	ApprovedForCoaching = 6;
+}
+
+enum EFileIteratorType
+{
+	None = 0;
+	Folder = 1;
+	Executables = 2;
+	Images = 3;
+}
+
+enum EFileUploadState
+{
+	None = 0;
+	FileReady = 1;
+	InProgress = 2;
+	Error = 3;
+	Error_ImageTooLarge = 4;
+	Error_FileTypeNotSupported = 5;
+	Completed = 6;
+}
+
+enum EForceFeatureNotificationTargetSelection
+{
+	Invalid = 0;
+	AppOwners = 1;
+	MinPlayTime = 2;
+	AppFollower = 4;
+	CreatorFollower = 8;
+	OwnSomeCreatorApp = 16;
+	EarlierLastPlayedApp = 32;
+	LaterLastPlayedApp = 64;
+	FollowSomeCreatorApp = 128;
+	PlaySomeCreatorApp = 256;
+}
+
+enum EFraudReviewReason
+{
+	Invalid = 0;
+	PayPalCountryMismatch = 1;
+	LargeWalletCreditTotal = 2;
+	WalletCountryMismatch = 3;
+	LargePackagePurchases = 4;
+	Whitelist = 5;
+	MAX = 6;
+}
+
+enum EFriendRelationship
+{
+	None = 0;
+	Blocked = 1;
+	RequestRecipient = 2;
+	Friend = 3;
+	RequestInitiator = 4;
+	Ignored = 5;
+	IgnoredFriend = 6;
+	Suggested_DEPRECATED = 7;
+	Max = 8;
+}
+
+enum EHelpIssue
+{
+	Invalid = 0;
+	Game_CannotFindInLibrary = 101;
+	Game_WrongOS = 102;
+	Game_PurchasedTwice = 103;
+	Game_MissingExtraCopy = 104;
+	Game_Payment = 105;
+	Game_GameplayOrTechnicalProblem = 106;
+	Game_InGamePurchase = 107;
+	Game_NotWhatExpected = 108;
+	Game_PurchasedByAccident = 109;
+	Game_Gameplay = 110;
+	Game_Technical = 111;
+	Game_Other = 112;
+	Game_Crashes = 113;
+	Game_SystemRequirementsNotMet = 114;
+	Game_NotFun = 115;
+	Game_WillNotStart = 116;
+	Game_NowAvailableCheaper = 117;
+	Game_FrameRateTooLow = 118;
+	Game_GameplayDidNotMatchTrailer = 119;
+	Game_GameplayTooDifficult = 120;
+	Game_MultiplayerDoesNotWork = 121;
+	Game_VACOrInGameBan = 122;
+	Game_PermanentlyRemove = 123;
+	Game_RetryFailedPurchase = 124;
+	Game_MissingDLCOrBonusContent = 125;
+	Game_RevokedCDKey = 126;
+	Game_RevokedGift = 127;
+	Game_ManageAuthKeys = 128;
+	Game_TroubleWithCDKey = 129;
+	Game_InGameItems = 130;
+	Game_Cooldown = 131;
+	Game_FamilySharingIssues = 132;
+	Purchase_ChargedWrongAmount = 201;
+	Purchase_DoubleCharged = 202;
+	Purchase_Failed = 203;
+	Purchase_Pending = 204;
+	Purchase_Missing_Refund = 205;
+	Purchase_CantFindMicrotransaction = 206;
+	Purchase_ChargebackLock = 207;
+	Purchase_PurchasingRestricted = 208;
+	Purchase_UnknownCharges = 209;
+	Purchase_CannotCompleteMicrotransaction = 210;
+	Purchase_CannotAddFundsToWallet = 211;
+	Purchase_CannotCompleteGamePurchase = 212;
+	Purchase_OtherQuestionAboutPurchase = 213;
+	Purchase_ParentContact = 214;
+	Purchase_StoreCountryIncorrect = 215;
+	Purchase_ValveStoreMerch = 216;
+	Purchase_TaxQuestions = 217;
+	Hardware_MissingComponents = 301;
+	Hardware_Technical = 302;
+	Hardware_Broken = 303;
+	Hardware_Controller_Technical = 304;
+	Hardware_DoNotWant = 305;
+	Hardware_Other = 306;
+	Hardware_Purchase = 307;
+	SteamLink_Network = 350;
+	SteamLink_Display = 351;
+	SteamLink_Sound = 352;
+	SteamLink_Input = 353;
+	SteamLink_Other = 354;
+	SteamLink_Generic = 355;
+	SteamLink_App = 356;
+	SteamController_Power = 360;
+	SteamController_Input = 361;
+	SteamController_Configurations = 362;
+	SteamController_MissingParts = 363;
+	SteamController_Other = 364;
+	SteamController_Generic = 365;
+	VR_Display = 370;
+	VR_DevicePairing = 371;
+	VR_Sound = 372;
+	VR_Tracking = 373;
+	VR_ErrorMessages = 374;
+	VR_Other = 375;
+	VR_Generic = 376;
+	SteamHardwareAccessory_Damaged = 380;
+	SteamHardwareAccessory_Other = 381;
+	Account_Lost2FARecoveryCode = 401;
+	Account_LostOrBroken2FADevice = 402;
+	Account_MobileNumberOutOfDate = 403;
+	Account_FraudLock = 404;
+	Account_FamilyView = 405;
+	Account_ForgotPassword = 406;
+	Account_SteamGuard_NotReceivingCode = 407;
+	Account_Hijacked = 408;
+	Account_ChangeEmail = 409;
+	Account_MobileNumber = 410;
+	Account_Locked_SelfLocked = 411;
+	Account_Locked_SuspectedHijack = 412;
+	Account_DeleteMyAccount = 413;
+	Account_ContentCountryRestriction = 414;
+	Account_BannedContentAppeal = 415;
+	Account_BannedForumAppeal = 416;
+	Account_AccountDataQuestion = 417;
+	Wallet_DamagedWalletCode = 501;
+	CDKey_DuplicateKey = 601;
+	CDKey_InvalidKey = 602;
+	CDKey_DamagedKey = 603;
+	Technical_Install = 701;
+	Technical_GameLaunch = 702;
+	Technical_GameplayCrash = 703;
+	Technical_Performance = 704;
+	Technical_Other = 705;
+	Technical_Steam_CannotSignInToClient = 706;
+	Technical_Steam_ClientCrash = 707;
+	Technical_Generic = 708;
+	Technical_SteamPlay = 709;
+	SteamFeature_Community = 801;
+	SteamFeature_BigPicture = 802;
+	SteamFeature_FamilySharing = 803;
+	SteamFeature_FamilyView = 804;
+	SteamFeature_OfflineMode = 805;
+	SteamFeature_Broadcasting = 806;
+	SteamFeature_Workshop = 807;
+	SteamFeature_SteamGuard = 808;
+	SteamFeature_MobileAuthenticator = 809;
+	SteamFeature_CannotTrade = 810;
+	SteamFeature_Market_TaxForm = 811;
+	SteamFeature_Cloud = 812;
+	Publishing_ManagingMyApp = 901;
+	Publishing_ReleasingMyApp = 902;
+	Publishing_ManagingMySteamworksAccount = 903;
+	Publishing_PaymentsAndTaxes = 904;
+	Publishing_ManagingMyStorePage = 905;
+	Publishing_SteamworksSDK = 906;
+	Publishing_AppReview = 907;
+	Publishing_GameLauncherFailure = 908;
+	Publishing_MissingLanguageDepot = 909;
+	Publishing_DepotBuildFailure = 910;
+	Publishing_CustomerTax = 911;
+	Publishing_IdentityVerificationWait = 912;
+	Publishing_MissingPayment = 913;
+	Publishing_RemoveAppFromStore = 914;
+	Publishing_AppPaidToFree = 915;
+	Publishing_TransferApp = 916;
+	Publishing_ChangeAppType = 917;
+	Publishing_AddActualAuthority = 918;
+	Publishing_DiscountError = 919;
+	Publishing_RaisingMyPrice = 920;
+	Publishing_AppComingSoonToEarlyAccess = 921;
+	Publishing_StoreVisibility = 922;
+	Publishing_NotAffiliated = 923;
+	Publishing_StreamingVideo = 924;
+	Publishing_NonGameSoftware = 925;
+	Publishing_SteamKeys = 926;
+	Publishing_SteamSales = 927;
+	Publishing_SiteLicense = 928;
+	Publishing_ModerationAssistance = 929;
+	Publishing_ReviewMyApp = 930;
+	SteamCommunity_Group = 1001;
+	SteamCommunity_Profile = 1002;
+	SteamCommunity_Discussions = 1003;
+	SteamCommunity_Chat = 1004;
+	SteamCommunity_MobileChat = 1005;
+}
+
+enum EHelpRequestAction
+{
+	Invalid = 0;
+	ChangeSupportAgent = 1;
+	ChangeState = 2;
+	ChangeHelpRequestType = 3;
+	ChangeHelpIssue = 4;
+	ElevatedTicket = 5;
+	EditedMessage = 6;
+	ClaimedByAgent = 7;
+	MarkedAsHeld = 8;
+	ChangeApp = 9;
+	UnassignedBySystem = 10;
+	ChangedRelatedAccount = 11;
+	ChangeLanguage = 12;
+	IssueHelpRequestCooldown = 13;
+}
+
+enum EHelpRequestEscalationLevel
+{
+	NotEscalated = 0;
+	Experienced = 1;
+	Expert = 2;
+	Valve = 3;
+}
+
+enum EHelpRequestFeedbackCategory
+{
+	POP = 0;
+	QT = 1;
+	TicketComprehension = 2;
+	Escalation = 3;
+	IncorrectData = 4;
+	IncorrectProcedure = 5;
+	Research = 6;
+	Language = 7;
+	NaturalLanguage = 8;
+	Contextualization = 9;
+	Tone = 10;
+	Semantics = 11;
+	Max = 12;
+}
+
+enum EHelpRequestFeedbackTargetType
+{
+	Message = 0;
+	Action = 1;
+}
+
+enum EHelpRequestMsgType
+{
+	Invalid = 0;
+	MsgFromUser = 1;
+	MsgFromSteam = 2;
+	Note = 3;
+}
+
+enum EHelpRequestPOPType
+{
+	Invalid = 0;
+	Email = 1;
+	CreditCard = 2;
+	PayPal = 3;
+	CDKey = 4;
+	Sofort = 5;
+	Webmoney = 6;
+	Paysafe = 7;
+	PerfectWorld = 8;
+	Gift = 9;
+	WalletCode = 10;
+	Giropay = 11;
+	Ideal = 12;
+	Alipay = 13;
+	Yandex = 14;
+	QIWI = 15;
+	Kiosk = 16;
+	BoaCompra = 17;
+	MoneyBookers = 18;
+	Phone = 19;
+	AccountName = 20;
+	WeChat = 21;
+}
+
+enum EHelpRequestReviewState
+{
+	Assigned = 0;
+	OK = 1;
+	Mishandled = 2;
+	Released = 3;
+	Expired = 4;
+}
+
+enum EHelpRequestSortOrder
+{
+	CreatedAsc = 0;
+	CreatedDesc = 1;
+	FirstResponseAsc = 2;
+	FirstResponseDesc = 3;
+}
+
+enum EHelpRequestState
+{
+	Invalid = 0;
+	WaitingForAgent = 1;
+	WaitingForUser = 2;
+	CanceledByUser = 3;
+	Closed = 4;
+	WaitingForBatchProcessor = 5;
+}
+
+enum EHelpRequestStatsResponderType
+{
+	Valve = 0;
+	Blueprint = 1;
+	Bot = 2;
+	TaskUs = 3;
+	Interaction = 4;
+}
+
+enum EHelpRequestStatsRollupInterval
+{
+	Hour = 0;
+	DayUTC = 1;
+	DayLocal = 2;
+}
+
+enum EHelpRequestType
+{
+	Invalid = 0;
+	RefundRequest = 1;
+	HelpMeFindMyGame = 3;
+	HelpMeFindDLCOrBonusContent = 4;
+	Remove2FA = 5;
+	RemoveMobileNumber = 6;
+	RedeemWalletCode = 7;
+	HelpFixChargeback = 8;
+	TroubleshootSteamController = 9;
+	TroubleshootSteamLink = 10;
+	TroubleshootSteamVR = 11;
+	LockedForFraud = 12;
+	RemoveFamilyPIN = 13;
+	HelpResetPassword = 14;
+	HelpRedeemCDKey = 15;
+	HelpGameCannotInstall = 16;
+	HelpGameCannotStart = 17;
+	HelpGameInGameProblem = 18;
+	FixUnknownCharge = 19;
+	PurchasingRestricted = 20;
+	CannotSignInClient = 21;
+	ClientCrash = 22;
+	SteamFeature_Community = 23;
+	SteamFeature_BigPicture = 24;
+	SteamFeature_FamilySharing = 25;
+	SteamFeature_FamilyView = 26;
+	SteamFeature_OfflineMode = 27;
+	SteamFeature_Broadcasting = 28;
+	SteamFeature_Workshop = 29;
+	SteamFeature_SteamGuard = 30;
+	SteamFeature_MobileAuthenticator = 31;
+	Account_SteamGuard_NotReceivingCode = 32;
+	SteamFeature_HelpWithTrading = 33;
+	SteamFeature_HelpWithItem = 34;
+	StolenAccount = 35;
+	SteamFeature_Market_TaxForm = 36;
+	HelpResolvePurchaseIssue = 37;
+	HelpChangeEmail = 38;
+	HelpCompletePurchase = 39;
+	AccountLock_SelfLocked = 40;
+	AccountLock_SuspectedHijack = 41;
+	HardwareAccessory = 42;
+	ParentContactForm = 43;
+	StoreCountryIncorrect = 44;
+	DeleteMyAccount = 45;
+	ValveStoreMerchandise = 46;
+	HardwarePurchase = 47;
+	VacOrInGameBan = 48;
+	ContentCountryRestriction = 49;
+	GameCooldown = 50;
+	Publishing_ManagingMyApp = 51;
+	Publishing_ReleasingMyApp = 52;
+	Publishing_ManagingMySteamworksAccount = 53;
+	Publishing_PaymentsAndTaxes = 54;
+	Publishing_ManagingMyStorePage = 55;
+	Publishing_NotAffiliated = 56;
+	Publishing_StreamingVideo = 57;
+	Publishing_SteamKeys = 58;
+	Publishing_SteamSales = 59;
+	ReviewMyContent = 60;
+	ReviewMyForumBan = 61;
+	AccountDataQuestion = 62;
+	Publishing_SiteLicense = 63;
+	SteamCommunity_Group = 64;
+	SteamCommunity_Profile = 65;
+	SteamCommunity_Discussions = 66;
+	SteamCommunity_Chat = 67;
+	SteamFeature_Cloud = 68;
+	Publishing_Moderation = 69;
+	Publishing_BuildReview = 70;
+	Publishing_StorePageReview = 71;
+	SteamCommunity_MobileChat = 72;
+	Max = 73;
+}
+
+enum EInternalAccountType
+{
+	SteamAccountType = 1;
+	ClanType = 2;
+	AppType = 3;
+	BroadcastChannelType = 4;
+}
+
+enum ELanguage
+{
 	None = -1;
 	English = 0;
 	German = 1;
@@ -674,43 +1244,32 @@ enum ELanguage {
 	MAX = 29;
 }
 
-enum EClanEventType {
-	OtherEvent = 1;
-	GameEvent = 2;
-	PartyEvent = 3;
-	MeetingEvent = 4;
-	SpecialCauseEvent = 5;
-	MusicAndArtsEvent = 6;
-	SportsEvent = 7;
-	TripEvent = 8;
-	ChatEvent = 9;
-	GameReleaseEvent = 10;
-	BroadcastEvent = 11;
-	SmallUpdateEvent = 12;
-	RegularUpdateEvent = 13;
-	MajorUpdateEvent = 14;
-	DLCReleaseEvent = 15;
-	FutureReleaseEvent = 16;
-	ESportTournamentStreamEvent = 17;
-	DevStreamEvent = 18;
-	FamousStreamEvent = 19;
-	GameSalesEvent = 20;
-	GameItemSalesEvent = 21;
-	InGameBonusXPEvent = 22;
-	InGameLootEvent = 23;
-	InGamePerksEvent = 24;
-	InGameChallengeEvent = 25;
-	InGameContestEvent = 26;
-	IRLEvent = 27;
-	NewsEvent = 28;
-	BetaReleaseEvent = 29;
-	InGameContentReleaseEvent = 30;
-	FreeTrial = 31;
-	SeasonRelease = 32;
-	SeasonUpdate = 33;
+enum ELaunchAppTask
+{
+	None = 0;
+	Completed = 1;
+	Cancelled = 2;
+	Failed = 3;
+	Starting = 4;
+	UpdatingAppInfo = 5;
+	ShowingEula = 6;
+	WaitingPrevProcess = 7;
+	DownloadingDepots = 8;
+	DownloadingWorkshop = 9;
+	UpdatingDRM = 10;
+	GettingLegacyKey = 11;
+	RunningInstallScript = 12;
+	SynchronizingCloud = 13;
+	CheckingOverlayRights = 14;
+	VerifyingFiles = 15;
+	KickingOtherSession = 16;
+	WaitingOpenVRAppQuit = 17;
+	CreatingProcess = 18;
+	WaitingGameWindow = 19;
 }
 
-enum ELaunchSource {
+enum ELaunchSource
+{
 	None = 0;
 	_2ftLibraryDetails = 100;
 	_2ftLibraryListView = 101;
@@ -743,36 +1302,8 @@ enum ELaunchSource {
 	AppPortraitContextMenu = 1000;
 }
 
-enum ECommunityPrivacyState {
-	Invalid = 0;
-	Private = 1;
-	FriendsOnly = 2;
-	Public = 3;
-	UsersOnly_DEPRECATED = 4;
-	FriendsFriendsOnly_DEPRECATED = 5;
-}
-
-enum EBackpackContext {
-	EconContextRoot = 0;
-	GiftPasses = 1;
-	Profile = 2;
-	Coupons = 3;
-	Wallet = 4;
-	Community = 6;
-	ItemRewards = 7;
-	EConContextMax = 999;
-}
-
-enum EUCMListType {
-	Subscribed = 1;
-	Favorites = 2;
-	Played = 3;
-	Completed = 4;
-	ShortcutFavorites = 5;
-	Followed = 6;
-}
-
-enum ELibraryAssetType {
+enum ELibraryAssetType
+{
 	Capsule = 0;
 	Hero = 1;
 	Logo = 2;
@@ -780,28 +1311,112 @@ enum ELibraryAssetType {
 	Icon = 4;
 }
 
-enum ERecommendationIgnoreReason {
-	NotInterested = 0;
-	Blocked = 1;
-	OwnedElsewhere = 2;
+enum ELoginManagerStep
+{
+	Invalid = 0;
+	AccountName = 1;
+	EmailCode = 2;
+	TwoFactorCode = 3;
+	Complete = 4;
 }
 
-enum EContentDescriptorID {
-	FrequentNudityOrSexualContent = 1;
-	FrequentViolenceOrGore = 2;
-	StrongSexualContent = 3;
-	NonConsensualSex = 4;
-	AnyMatureContent = 5;
+enum ELoginProgressType
+{
+	None = 0;
+	UpdatingSteamInformation = 1;
+	UpdatingUserConfiguration = 2;
+	LoggingIn = 3;
 }
 
-enum EStoreCuratorRecommendationState {
-	Recommended = 0;
-	NotRecommended = 1;
-	Informative = 2;
-	CreatedApp = 3;
+enum ELoginState
+{
+	None = 0;
+	WaitingForCreateUser = 1;
+	WaitingForCredentials = 2;
+	WaitingForNetwork = 3;
+	WaitingForServerResponse = 4;
+	WaitingForLibraryReady = 5;
+	Success = 6;
+	WaitingForSteamGuard = 7;
+	WaitingForTwoFactor = 8;
+	WaitingForOfflineAck = 9;
+	Quit = 10;
 }
 
-enum EMsg {
+enum EMMSLobbyStatus
+{
+	Invalid = 0;
+	Exists = 1;
+	DoesNotExist = 2;
+	NotAMember = 3;
+}
+
+enum EMobileApp
+{
+	Community = 0;
+	FriendsUI = 1;
+}
+
+enum EMobileConfirmationType
+{
+	Invalid = 0;
+	Test = 1;
+	Trade = 2;
+	MarketListing = 3;
+	FeatureOptOut = 4;
+	PhoneNumberChange = 5;
+}
+
+enum EMobileLogonState
+{
+	Unknown = 0;
+	Starting = 1;
+	NeedCredentials = 2;
+	InitialConnect = 3;
+	InitialConnectFailed = 4;
+	Connect = 5;
+	ConnectFailed = 6;
+	InitialLogon = 7;
+	InitialLogonFailed = 8;
+	Logon = 9;
+	LogonFailed = 10;
+	OK = 11;
+	Disconnected = 12;
+	InitialRequestLogonNonce = 13;
+	RequestLogonNonce = 14;
+	RequestLogonNonceFailed = 15;
+	NeedFullLogon = 16;
+}
+
+enum EMobilePermission
+{
+	NeverAsked = 1;
+	Granted = 2;
+	Denied = 3;
+	Unknown = 4;
+}
+
+enum EModeratorAction
+{
+	Resolve = 0;
+	Ban = 1;
+	Unban = 2;
+	Hide = 3;
+	Unhide = 4;
+	Lock = 5;
+	Delete = 6;
+	Undelete = 7;
+	MassReset = 8;
+	Unlock = 9;
+	Warn = 10;
+	Move = 11;
+	Classify = 12;
+	Blur = 13;
+	Unblur = 14;
+}
+
+enum EMsg
+{
 	Invalid = 0;
 	Multi = 1;
 	ProtobufWrapped = 2;
@@ -1934,6 +2549,8 @@ enum EMsg {
 	DFSRouteFileResponse = 5620;
 	ClientNetworkingCertRequest = 5621;
 	ClientNetworkingCertRequestResponse = 5622;
+	ClientChallengeRequest = 5623;
+	ClientChallengeResponse = 5624;
 	BaseMDS = 5800;
 	AMToMDSGetDepotDecryptionKey = 5812;
 	MDSToAMGetDepotDecryptionKeyResponse = 5813;
@@ -1945,8 +2562,6 @@ enum EMsg {
 	MDSGetDepotChunk = 5832;
 	MDSGetDepotChunkResponse = 5833;
 	MDSGetDepotChunkChunk = 5834;
-	MDSGetServerListForUser = 5836;
-	MDSGetServerListForUserResponse = 5837;
 	MDSToCSFlushChunk = 5844;
 	MDSMigrateChunk = 5847;
 	MDSMigrateChunkResponse = 5848;
@@ -1996,6 +2611,9 @@ enum EMsg {
 	ClientMMSFlushFrenemyListCache = 6622;
 	ClientMMSFlushFrenemyListCacheResponse = 6623;
 	ClientMMSSetLobbyLinked = 6624;
+	ClientMMSSetRatelimitPolicyOnClient = 6625;
+	ClientMMSGetLobbyStatus = 6626;
+	ClientMMSGetLobbyStatusResponse = 6627;
 	NonStdMsgBase = 6800;
 	NonStdMsgMemcached = 6801;
 	NonStdMsgHTTPServer = 6802;
@@ -2006,7 +2624,7 @@ enum EMsg {
 	NonStdMsgDFSTransfer = 6807;
 	NonStdMsgTests = 6808;
 	NonStdMsgUMQpipeAAPL = 6809;
-	SgNonStdMsgSyslog = 6810;
+	NonStdMsgSyslog = 6810;
 	NonStdMsgLogsink = 6811;
 	NonStdMsgSteam2Emulator = 6812;
 	NonStdMsgRTMPServer = 6813;
@@ -2298,24 +2916,14 @@ enum EMsg {
 	ServerSecretChanged = 12100;
 }
 
-enum EClientPersonaStateFlag {
-	Status = 1;
-	PlayerName = 2;
-	QueryPort = 4;
-	SourceID = 8;
-	Presence = 16;
-	LastSeen = 64;
-	UserClanRank = 128;
-	GameExtraInfo = 256;
-	GameDataBlob = 512;
-	ClanData = 1024;
-	Facebook = 2048;
-	RichPresence = 4096;
-	Broadcast = 8192;
-	Watching = 16384;
+enum EMsgAnimationState
+{
+	None = 0;
+	Animating = 1;
 }
 
-enum EMsgClanAccountFlags {
+enum EMsgClanAccountFlags
+{
 	Public = 1;
 	Large = 2;
 	Locked = 4;
@@ -2323,415 +2931,47 @@ enum EMsgClanAccountFlags {
 	OGG = 16;
 }
 
-enum EHelpRequestType {
-	Invalid = 0;
-	RefundRequest = 1;
-	HelpMeFindMyGame = 3;
-	HelpMeFindDLCOrBonusContent = 4;
-	Remove2FA = 5;
-	RemoveMobileNumber = 6;
-	RedeemWalletCode = 7;
-	HelpFixChargeback = 8;
-	TroubleshootSteamController = 9;
-	TroubleshootSteamLink = 10;
-	TroubleshootSteamVR = 11;
-	LockedForFraud = 12;
-	RemoveFamilyPIN = 13;
-	HelpResetPassword = 14;
-	HelpRedeemCDKey = 15;
-	HelpGameCannotInstall = 16;
-	HelpGameCannotStart = 17;
-	HelpGameInGameProblem = 18;
-	FixUnknownCharge = 19;
-	PurchasingRestricted = 20;
-	CannotSignInClient = 21;
-	ClientCrash = 22;
-	SteamFeature_Community = 23;
-	SteamFeature_BigPicture = 24;
-	SteamFeature_FamilySharing = 25;
-	SteamFeature_FamilyView = 26;
-	SteamFeature_OfflineMode = 27;
-	SteamFeature_Broadcasting = 28;
-	SteamFeature_Workshop = 29;
-	SteamFeature_SteamGuard = 30;
-	SteamFeature_MobileAuthenticator = 31;
-	Account_SteamGuard_NotReceivingCode = 32;
-	SteamFeature_HelpWithTrading = 33;
-	SteamFeature_HelpWithItem = 34;
-	StolenAccount = 35;
-	SteamFeature_Market_TaxForm = 36;
-	HelpResolvePurchaseIssue = 37;
-	HelpChangeEmail = 38;
-	HelpCompletePurchase = 39;
-	AccountLock_SelfLocked = 40;
-	AccountLock_SuspectedHijack = 41;
-	HardwareAccessory = 42;
-	ParentContactForm = 43;
-	StoreCountryIncorrect = 44;
-	DeleteMyAccount = 45;
-	ValveStoreMerchandise = 46;
-	HardwarePurchase = 47;
-	VacOrInGameBan = 48;
-	ContentCountryRestriction = 49;
-	GameCooldown = 50;
-	Publishing_ManagingMyApp = 51;
-	Publishing_ReleasingMyApp = 52;
-	Publishing_ManagingMySteamworksAccount = 53;
-	Publishing_PaymentsAndTaxes = 54;
-	Publishing_ManagingMyStorePage = 55;
-	Publishing_NotAffiliated = 56;
-	Publishing_StreamingVideo = 57;
-	Publishing_SteamKeys = 58;
-	Publishing_SteamSales = 59;
-	ReviewMyContent = 60;
-	ReviewMyForumBan = 61;
-	AccountDataQuestion = 62;
-	Publishing_SiteLicense = 63;
-	SteamCommunity_Group = 64;
-	SteamCommunity_Profile = 65;
-	SteamCommunity_Discussions = 66;
-	SteamCommunity_Chat = 67;
-	SteamFeature_Cloud = 68;
-	Publishing_Moderation = 69;
-	Publishing_BuildReview = 70;
-	Publishing_StorePageReview = 71;
-	SteamCommunity_MobileChat = 72;
-	Max = 73;
+enum EMusicPlayingRepeatStatus
+{
+	PlayingRepeat_None = 0;
+	PlayingRepeat_All = 1;
+	PlayingRepeat_Once = 2;
+	PlayingRepeat_Max = 3;
 }
 
-enum EHelpRequestState {
-	Invalid = 0;
-	WaitingForAgent = 1;
-	WaitingForUser = 2;
-	CanceledByUser = 3;
-	Closed = 4;
-	WaitingForBatchProcessor = 5;
+enum ENewReleaseNotificationState
+{
+	Initial = 0;
+	Approved = 1;
+	InProgress = 2;
+	Completed = 3;
+	Canceled = 4;
 }
 
-enum EHelpRequestReviewState {
-	Assigned = 0;
-	OK = 1;
-	Mishandled = 2;
-	Released = 3;
-	Expired = 4;
+enum ENewReleaseNotificationType
+{
+	Released = 0;
+	ReleasedFromEarlyAccess = 1;
+	ReleasedAsEarlyAccess = 2;
 }
 
-enum EHelpRequestStatsRollupInterval {
-	Hour = 0;
-	DayUTC = 1;
-	DayLocal = 2;
+enum ENoiseGateLevel
+{
+	Off = 0;
+	Low = 1;
+	Medium = 2;
+	High = 3;
 }
 
-enum EHelpRequestStatsResponderType {
-	Valve = 0;
-	Blueprint = 1;
-	Bot = 2;
-	TaskUs = 3;
-	Interaction = 4;
+enum ENotificationSetting
+{
+	NotifyUseDefault = 0;
+	Always = 1;
+	Never = 2;
 }
 
-enum EHelpIssue {
-	Invalid = 0;
-	Game_CannotFindInLibrary = 101;
-	Game_WrongOS = 102;
-	Game_PurchasedTwice = 103;
-	Game_MissingExtraCopy = 104;
-	Game_Payment = 105;
-	Game_GameplayOrTechnicalProblem = 106;
-	Game_InGamePurchase = 107;
-	Game_NotWhatExpected = 108;
-	Game_PurchasedByAccident = 109;
-	Game_Gameplay = 110;
-	Game_Technical = 111;
-	Game_Other = 112;
-	Game_Crashes = 113;
-	Game_SystemRequirementsNotMet = 114;
-	Game_NotFun = 115;
-	Game_WillNotStart = 116;
-	Game_NowAvailableCheaper = 117;
-	Game_FrameRateTooLow = 118;
-	Game_GameplayDidNotMatchTrailer = 119;
-	Game_GameplayTooDifficult = 120;
-	Game_MultiplayerDoesNotWork = 121;
-	Game_VACOrInGameBan = 122;
-	Game_PermanentlyRemove = 123;
-	Game_RetryFailedPurchase = 124;
-	Game_MissingDLCOrBonusContent = 125;
-	Game_RevokedCDKey = 126;
-	Game_RevokedGift = 127;
-	Game_ManageAuthKeys = 128;
-	Game_TroubleWithCDKey = 129;
-	Game_InGameItems = 130;
-	Game_Cooldown = 131;
-	Game_FamilySharingIssues = 132;
-	Purchase_ChargedWrongAmount = 201;
-	Purchase_DoubleCharged = 202;
-	Purchase_Failed = 203;
-	Purchase_Pending = 204;
-	Purchase_Missing_Refund = 205;
-	Purchase_CantFindMicrotransaction = 206;
-	Purchase_ChargebackLock = 207;
-	Purchase_PurchasingRestricted = 208;
-	Purchase_UnknownCharges = 209;
-	Purchase_CannotCompleteMicrotransaction = 210;
-	Purchase_CannotAddFundsToWallet = 211;
-	Purchase_CannotCompleteGamePurchase = 212;
-	Purchase_OtherQuestionAboutPurchase = 213;
-	Purchase_ParentContact = 214;
-	Purchase_StoreCountryIncorrect = 215;
-	Purchase_ValveStoreMerch = 216;
-	Purchase_TaxQuestions = 217;
-	Hardware_MissingComponents = 301;
-	Hardware_Technical = 302;
-	Hardware_Broken = 303;
-	Hardware_Controller_Technical = 304;
-	Hardware_DoNotWant = 305;
-	Hardware_Other = 306;
-	Hardware_Purchase = 307;
-	SteamLink_Network = 350;
-	SteamLink_Display = 351;
-	SteamLink_Sound = 352;
-	SteamLink_Input = 353;
-	SteamLink_Other = 354;
-	SteamLink_Generic = 355;
-	SteamLink_App = 356;
-	SteamController_Power = 360;
-	SteamController_Input = 361;
-	SteamController_Configurations = 362;
-	SteamController_MissingParts = 363;
-	SteamController_Other = 364;
-	SteamController_Generic = 365;
-	VR_Display = 370;
-	VR_DevicePairing = 371;
-	VR_Sound = 372;
-	VR_Tracking = 373;
-	VR_ErrorMessages = 374;
-	VR_Other = 375;
-	VR_Generic = 376;
-	SteamHardwareAccessory_Damaged = 380;
-	SteamHardwareAccessory_Other = 381;
-	Account_Lost2FARecoveryCode = 401;
-	Account_LostOrBroken2FADevice = 402;
-	Account_MobileNumberOutOfDate = 403;
-	Account_FraudLock = 404;
-	Account_FamilyView = 405;
-	Account_ForgotPassword = 406;
-	Account_SteamGuard_NotReceivingCode = 407;
-	Account_Hijacked = 408;
-	Account_ChangeEmail = 409;
-	Account_MobileNumber = 410;
-	Account_Locked_SelfLocked = 411;
-	Account_Locked_SuspectedHijack = 412;
-	Account_DeleteMyAccount = 413;
-	Account_ContentCountryRestriction = 414;
-	Account_BannedContentAppeal = 415;
-	Account_BannedForumAppeal = 416;
-	Account_AccountDataQuestion = 417;
-	Wallet_DamagedWalletCode = 501;
-	CDKey_DuplicateKey = 601;
-	CDKey_InvalidKey = 602;
-	CDKey_DamagedKey = 603;
-	Technical_Install = 701;
-	Technical_GameLaunch = 702;
-	Technical_GameplayCrash = 703;
-	Technical_Performance = 704;
-	Technical_Other = 705;
-	Technical_Steam_CannotSignInToClient = 706;
-	Technical_Steam_ClientCrash = 707;
-	Technical_Generic = 708;
-	Technical_SteamPlay = 709;
-	SteamFeature_Community = 801;
-	SteamFeature_BigPicture = 802;
-	SteamFeature_FamilySharing = 803;
-	SteamFeature_FamilyView = 804;
-	SteamFeature_OfflineMode = 805;
-	SteamFeature_Broadcasting = 806;
-	SteamFeature_Workshop = 807;
-	SteamFeature_SteamGuard = 808;
-	SteamFeature_MobileAuthenticator = 809;
-	SteamFeature_CannotTrade = 810;
-	SteamFeature_Market_TaxForm = 811;
-	SteamFeature_Cloud = 812;
-	Publishing_ManagingMyApp = 901;
-	Publishing_ReleasingMyApp = 902;
-	Publishing_ManagingMySteamworksAccount = 903;
-	Publishing_PaymentsAndTaxes = 904;
-	Publishing_ManagingMyStorePage = 905;
-	Publishing_SteamworksSDK = 906;
-	Publishing_AppReview = 907;
-	Publishing_GameLauncherFailure = 908;
-	Publishing_MissingLanguageDepot = 909;
-	Publishing_DepotBuildFailure = 910;
-	Publishing_CustomerTax = 911;
-	Publishing_IdentityVerificationWait = 912;
-	Publishing_MissingPayment = 913;
-	Publishing_RemoveAppFromStore = 914;
-	Publishing_AppPaidToFree = 915;
-	Publishing_TransferApp = 916;
-	Publishing_ChangeAppType = 917;
-	Publishing_AddActualAuthority = 918;
-	Publishing_DiscountError = 919;
-	Publishing_RaisingMyPrice = 920;
-	Publishing_AppComingSoonToEarlyAccess = 921;
-	Publishing_StoreVisibility = 922;
-	Publishing_NotAffiliated = 923;
-	Publishing_StreamingVideo = 924;
-	Publishing_NonGameSoftware = 925;
-	Publishing_SteamKeys = 926;
-	Publishing_SteamSales = 927;
-	Publishing_SiteLicense = 928;
-	Publishing_ModerationAssistance = 929;
-	Publishing_ReviewMyApp = 930;
-	SteamCommunity_Group = 1001;
-	SteamCommunity_Profile = 1002;
-	SteamCommunity_Discussions = 1003;
-	SteamCommunity_Chat = 1004;
-	SteamCommunity_MobileChat = 1005;
-}
-
-enum EHelpRequestEscalationLevel {
-	NotEscalated = 0;
-	Experienced = 1;
-	Expert = 2;
-	Valve = 3;
-}
-
-enum EHelpRequestMsgType {
-	Invalid = 0;
-	MsgFromUser = 1;
-	MsgFromSteam = 2;
-	Note = 3;
-}
-
-enum EHelpRequestAction {
-	Invalid = 0;
-	ChangeSupportAgent = 1;
-	ChangeState = 2;
-	ChangeHelpRequestType = 3;
-	ChangeHelpIssue = 4;
-	ElevatedTicket = 5;
-	EditedMessage = 6;
-	ClaimedByAgent = 7;
-	MarkedAsHeld = 8;
-	ChangeApp = 9;
-	UnassignedBySystem = 10;
-	ChangedRelatedAccount = 11;
-	ChangeLanguage = 12;
-	IssueHelpRequestCooldown = 13;
-}
-
-enum EHelpRequestSortOrder {
-	CreatedAsc = 0;
-	CreatedDesc = 1;
-	FirstResponseAsc = 2;
-	FirstResponseDesc = 3;
-}
-
-enum EHelpRequestPOPType {
-	Invalid = 0;
-	Email = 1;
-	CreditCard = 2;
-	PayPal = 3;
-	CDKey = 4;
-	Sofort = 5;
-	Webmoney = 6;
-	Paysafe = 7;
-	PerfectWorld = 8;
-	Gift = 9;
-	WalletCode = 10;
-	Giropay = 11;
-	Ideal = 12;
-	Alipay = 13;
-	Yandex = 14;
-	QIWI = 15;
-	Kiosk = 16;
-	BoaCompra = 17;
-	MoneyBookers = 18;
-	Phone = 19;
-	AccountName = 20;
-	WeChat = 21;
-}
-
-enum EAnnouncementPlacement {
-	Invalid = 0;
-	FrontPage = 1;
-	TicketDetails = 2;
-}
-
-enum ETickerCategoryLanguageRule {
-	Invalid = 0;
-	Normal = 1;
-	NoDelay = 2;
-	Escalate = 3;
-}
-
-enum EHelpRequestFeedbackCategory {
-	POP = 0;
-	QT = 1;
-	TicketComprehension = 2;
-	Escalation = 3;
-	IncorrectData = 4;
-	IncorrectProcedure = 5;
-	Research = 6;
-	Language = 7;
-	NaturalLanguage = 8;
-	Contextualization = 9;
-	Tone = 10;
-	Semantics = 11;
-	Max = 12;
-}
-
-enum EHelpRequestFeedbackTargetType {
-	Message = 0;
-	Action = 1;
-}
-
-enum EFeedbackState {
-	New = 0;
-	WaitingForApproval = 1;
-	Rejected = 2;
-	RejectionAcknowledged = 3;
-	Approved = 4;
-	Viewed = 5;
-	ApprovedForCoaching = 6;
-}
-
-enum ESupportActionSource {
-	System = 0;
-	Agent = 1;
-}
-
-enum ERefundSupportAction {
-	Invalid = 0;
-	IssuedRefund = 1;
-	DeclineRefund_Playtime = 2;
-	DeclineRefund_PurchaseDate = 3;
-	DeclineRefund_MustUseWallet = 4;
-	DeclineRefund_Misuse = 5;
-	DeclineRefund_WalletCreditUsed = 6;
-	DeclineRefund_ItemsConsumed = 7;
-	DeclineRefund_GiftRedeemed = 8;
-	DeclineRefund_AccountLocked = 9;
-	DeclineRefund_VACBan = 10;
-	DeclineRefund_RefundAlreadyIssued = 11;
-	DeclineRefund_AlreadyChargedback = 12;
-	DeclineRefund_Overuse = 13;
-	DeclineRefund_GameBan = 14;
-	DeclineRefund_NoDefectAU = 15;
-	DeclineRefund_NeedMoreInfo = 16;
-}
-
-enum EFraudReviewReason {
-	Invalid = 0;
-	PayPalCountryMismatch = 1;
-	LargeWalletCreditTotal = 2;
-	WalletCountryMismatch = 3;
-	LargePackagePurchases = 4;
-	Whitelist = 5;
-	MAX = 6;
-}
-
-enum EOSType {
+enum EOSType
+{
 	OSWebClient = -700;
 	IOSUnknown = -600;
 	IOS1 = -599;
@@ -2770,44 +3010,46 @@ enum EOSType {
 	Android9 = -496;
 }
 
-enum EPublishedFileQueryType {
-	RankedByVote = 0;
-	RankedByPublicationDate = 1;
-	AcceptedForGameRankedByAcceptanceDate = 2;
-	RankedByTrend = 3;
-	FavoritedByFriendsRankedByPublicationDate = 4;
-	CreatedByFriendsRankedByPublicationDate = 5;
-	RankedByNumTimesReported = 6;
-	CreatedByFollowedUsersRankedByPublicationDate = 7;
-	NotYetRated = 8;
-	RankedByTotalUniqueSubscriptions = 9;
-	RankedByTotalVotesAsc = 10;
-	RankedByVotesUp = 11;
-	RankedByTextSearch = 12;
-	RankedByPlaytimeTrend = 13;
-	RankedByTotalPlaytime = 14;
-	RankedByAveragePlaytimeTrend = 15;
-	RankedByLifetimeAveragePlaytime = 16;
-	RankedByPlaytimeSessionsTrend = 17;
-	RankedByLifetimePlaytimeSessions = 18;
-	RankedByInappropriateContentRating = 19;
-}
-
-enum EPublishedFileInappropriateProvider {
+enum EParentalFeature
+{
 	Invalid = 0;
-	Google = 1;
-	Amazon = 2;
+	Store = 1;
+	Community = 2;
+	Profile = 3;
+	Friends = 4;
+	News = 5;
+	Trading = 6;
+	Settings = 7;
+	Console = 8;
+	Browser = 9;
+	ParentalSetup = 10;
+	Library = 11;
+	Test = 12;
+	Max = 13;
 }
 
-enum EPublishedFileInappropriateResult {
-	NotScanned = 0;
-	VeryUnlikely = 1;
-	Possible = 50;
-	Likely = 75;
-	VeryLikely = 100;
+enum EPartnerEventDisplayLocation
+{
+	Invalid = 0;
+	AppDetailsSpotlight = 1;
+	LibraryOverview = 2;
 }
 
-enum EPersonaStateFlag {
+enum EPersonaState
+{
+	Offline = 0;
+	Online = 1;
+	Busy = 2;
+	Away = 3;
+	Snooze = 4;
+	LookingToTrade = 5;
+	LookingToPlay = 6;
+	Invisible = 7;
+	Max = 8;
+}
+
+enum EPersonaStateFlag
+{
 	HasRichPresence = 1;
 	InJoinableGame = 2;
 	Golden = 4;
@@ -2819,42 +3061,93 @@ enum EPersonaStateFlag {
 	LaunchTypeCompatTool = 8192;
 }
 
-enum EDisplayStatus {
+enum EPlaytestingQuestionType
+{
 	Invalid = 0;
-	Launching = 1;
-	Uninstalling = 2;
-	Installing = 3;
-	Running = 4;
-	Validating = 5;
-	Updating = 6;
-	Downloading = 7;
-	Synchronizing = 8;
-	ReadyToInstall = 9;
-	ReadyToPreload = 10;
-	ReadyToLaunch = 11;
-	RegionRestricted = 12;
-	PresaleOnly = 13;
-	InvalidPlatform = 14;
-	ParentalBlocked = 15;
-	PreloadOnly = 16;
-	BorrowerLocked = 17;
-	UpdatePaused = 18;
-	UpdateQueued = 19;
-	UpdateRequired = 20;
-	UpdateDisabled = 21;
-	DownloadPaused = 22;
-	DownloadQueued = 23;
-	DownloadRequired = 24;
-	DownloadDisabled = 25;
-	LicensePending = 26;
-	LicenseExpired = 27;
-	AvailForFree = 28;
-	AvailToBorrow = 29;
-	AvailGuestPass = 30;
-	Purchase = 31;
+	YesNo = 1;
+	Scale = 2;
+	MultipleChoice = 3;
+	Language = 4;
+	AgreeScale = 5;
+	Platform = 6;
+	Playtime = 7;
 }
 
-enum EProtoAppType {
+enum EPlaytestingState
+{
+	Inactive = 0;
+	Active = 1;
+	Full = 2;
+	Ended = 3;
+}
+
+enum EProductImpressionFromClientType
+{
+	FriendInGameNotification = 1;
+	FriendInGameNotification_FirstTimeSession = 2;
+}
+
+enum EProductPageAction
+{
+	NoAction = 0;
+	WatchBroadcast = 1;
+	HideBroadcast = 2;
+	ShowBroadcast = 3;
+	ShowBroadcastChat = 4;
+	HideBroadcastChat = 5;
+	PopoutChat = 6;
+	CloseBroadcastSmallPopup = 7;
+	UnmuteBroadcast = 8;
+	OpenBroadcastWatchPage = 9;
+	SendChat = 10;
+	AddsAnEmoticonToChat = 11;
+}
+
+enum EProfileCustomizationStyle
+{
+	Default = 0;
+	Selected = 1;
+	Rarest = 2;
+	MostRecent = 3;
+	Random = 4;
+	HighestRated = 5;
+}
+
+enum EProfileCustomizationType
+{
+	Invalid = 0;
+	RareAchievementShowcase = 1;
+	GameCollector = 2;
+	ItemShowcase = 3;
+	TradeShowcase = 4;
+	Badges = 5;
+	FavoriteGame = 6;
+	ScreenshotShowcase = 7;
+	CustomText = 8;
+	FavoriteGroup = 9;
+	Recommendation = 10;
+	WorkshopItem = 11;
+	MyWorkshop = 12;
+	ArtworkShowcase = 13;
+	VideoShowcase = 14;
+	Guides = 15;
+	MyGuides = 16;
+	Achievements = 17;
+	Greenlight = 18;
+	MyGreenlight = 19;
+	Salien = 20;
+}
+
+enum EProfileModerationState
+{
+	Unassigned = 0;
+	Assigned = 1;
+	Escalated = 2;
+	Resolved = 3;
+}
+
+enum EProtoAppType
+{
 	Invalid = 0;
 	Game = 1;
 	Application = 2;
@@ -2877,119 +3170,8 @@ enum EProtoAppType {
 	DepotOnly = -2147483648;
 }
 
-enum EAppAssociationType {
-	Invalid = 0;
-	Publisher = 1;
-	Developer = 2;
-	Franchise = 3;
-}
-
-enum EAppControllerSupportLevel {
-	None = 0;
-	Partial = 1;
-	Full = 2;
-}
-
-enum ECommentDeleteReason {
-	Invalid = 0;
-	User = 1;
-	ThreadOwner = 2;
-	Moderator = 3;
-	Support = 4;
-	Spam = 5;
-	AccountDeletion = 6;
-}
-
-enum ECommunityWordFilterType {
-	Invalid = 0;
-	BadWords = 1;
-	BlacklistedURLs = 2;
-	WhitelistedGreenlightURLs = 3;
-	BlacklistOverrideDomains = 4;
-	BadWordsInChina = 5;
-}
-
-enum ECommunityWordFilterReason {
-	Invalid = 0;
-	Phishing = 1;
-	Spam = 2;
-	AdultContent = 3;
-	Cheat = 4;
-	Referral = 5;
-	InappropriateLanguage = 6;
-	Piracy = 7;
-	Scam = 8;
-	Malware = 9;
-	FreeTLD = 10;
-	Harassment = 11;
-	URLShortener = 12;
-	Max = 13;
-}
-
-enum EClanImageFileType {
-	Unknown = 0;
-	JPEG = 1;
-	GIF = 2;
-	PNG = 3;
-}
-
-enum EClanImageGroup {
-	None = 0;
-	Announcement = 1;
-	Curator = 2;
-}
-
-enum EAvatarState {
-	Unknown = 0;
-	Approved = 1;
-	Denied = 2;
-}
-
-enum EAbuseNotificationType {
-	Invalid = 0;
-	TradeBan = 1;
-	Profile = 2;
-	Group = 3;
-	Comment = 4;
-	Forum = 5;
-}
-
-enum EModeratorAction {
-	Resolve = 0;
-	Ban = 1;
-	Unban = 2;
-	Hide = 3;
-	Unhide = 4;
-	Lock = 5;
-	Delete = 6;
-	Undelete = 7;
-	MassReset = 8;
-	Unlock = 9;
-	Warn = 10;
-	Move = 11;
-	Classify = 12;
-	Blur = 13;
-	Unblur = 14;
-}
-
-enum EActorAffiliation {
-	Unknown = 0;
-	Valve = 1;
-	Keywords = 2;
-	TaskUs = 3;
-	Volunteer = 4;
-}
-
-enum EAnswerActorRank {
-	None = 0;
-	Valve = 1;
-	GlobalMod = 2;
-	Developer = 3;
-	Moderator = 4;
-	OP = 5;
-}
-
-enum EProtoClanEventType {
+enum EProtoClanEventType
+{
 	OtherEvent = 1;
 	GameEvent = 2;
 	PartyEvent = 3;
@@ -3020,149 +3202,480 @@ enum EProtoClanEventType {
 	NewsEvent = 28;
 	BetaReleaseEvent = 29;
 	InGameContentReleaseEvent = 30;
+	FreeTrial = 31;
+	SeasonRelease = 32;
+	SeasonUpdate = 33;
 }
 
-enum EProfileModerationState {
-	Unassigned = 0;
-	Assigned = 1;
-	Escalated = 2;
-	Resolved = 3;
-}
-
-enum ECommentReportAction {
+enum EPublishedFileInappropriateProvider
+{
 	Invalid = 0;
-	NoAction = 1;
-	Deleted = 2;
-	Hidden = 3;
-	ExternalDelete = 4;
-	ThreadDeleted = 5;
+	Google = 1;
+	Amazon = 2;
 }
 
-enum EChatWindowState {
-	Unopened = 0;
-	Hidden = 1;
-	Visible = 2;
-	FocusedIdle = 3;
-	FocusedActive = 4;
+enum EPublishedFileInappropriateResult
+{
+	NotScanned = 0;
+	VeryUnlikely = 1;
+	Possible = 50;
+	Likely = 75;
+	VeryLikely = 100;
 }
 
-enum EChatRoomGroupType {
-	Default = 0;
-	Unmoderated = 1;
+enum EPublishedFileQueryType
+{
+	RankedByVote = 0;
+	RankedByPublicationDate = 1;
+	AcceptedForGameRankedByAcceptanceDate = 2;
+	RankedByTrend = 3;
+	FavoritedByFriendsRankedByPublicationDate = 4;
+	CreatedByFriendsRankedByPublicationDate = 5;
+	RankedByNumTimesReported = 6;
+	CreatedByFollowedUsersRankedByPublicationDate = 7;
+	NotYetRated = 8;
+	RankedByTotalUniqueSubscriptions = 9;
+	RankedByTotalVotesAsc = 10;
+	RankedByVotesUp = 11;
+	RankedByTextSearch = 12;
+	RankedByPlaytimeTrend = 13;
+	RankedByTotalPlaytime = 14;
+	RankedByAveragePlaytimeTrend = 15;
+	RankedByLifetimeAveragePlaytime = 16;
+	RankedByPlaytimeSessionsTrend = 17;
+	RankedByLifetimePlaytimeSessions = 18;
+	RankedByInappropriateContentRating = 19;
 }
 
-enum EChatRoomNotificationLevel {
+enum ERecommendationIgnoreReason
+{
+	NotInterested = 0;
+	Blocked = 1;
+	OwnedElsewhere = 2;
+}
+
+enum ERefundSupportAction
+{
 	Invalid = 0;
-	None = 1;
-	MentionMe = 2;
-	MentionAll = 3;
-	AllMessages = 4;
+	IssuedRefund = 1;
+	DeclineRefund_Playtime = 2;
+	DeclineRefund_PurchaseDate = 3;
+	DeclineRefund_MustUseWallet = 4;
+	DeclineRefund_Misuse = 5;
+	DeclineRefund_WalletCreditUsed = 6;
+	DeclineRefund_ItemsConsumed = 7;
+	DeclineRefund_GiftRedeemed = 8;
+	DeclineRefund_AccountLocked = 9;
+	DeclineRefund_VACBan = 10;
+	DeclineRefund_RefundAlreadyIssued = 11;
+	DeclineRefund_AlreadyChargedback = 12;
+	DeclineRefund_Overuse = 13;
+	DeclineRefund_GameBan = 14;
+	DeclineRefund_NoDefectAU = 15;
+	DeclineRefund_NeedMoreInfo = 16;
 }
 
-enum EChatRoomMemberStateChange {
-	Invalid = 0;
-	Joined = 1;
-	Parted = 2;
-	Kicked = 3;
-	Invited = 4;
-	RankChanged = 7;
-	InviteDismissed = 8;
-	Muted = 9;
-	Banned = 10;
-	RolesChanged = 12;
+enum EResult
+{
+	OK = 1;
+	Fail = 2;
+	NoConnection = 3;
+	InvalidPassword = 5;
+	LoggedInElsewhere = 6;
+	InvalidProtocolVer = 7;
+	InvalidParam = 8;
+	FileNotFound = 9;
+	Busy = 10;
+	InvalidState = 11;
+	InvalidName = 12;
+	InvalidEmail = 13;
+	DuplicateName = 14;
+	AccessDenied = 15;
+	Timeout = 16;
+	Banned = 17;
+	AccountNotFound = 18;
+	InvalidSteamID = 19;
+	ServiceUnavailable = 20;
+	NotLoggedOn = 21;
+	Pending = 22;
+	EncryptionFailure = 23;
+	InsufficientPrivilege = 24;
+	LimitExceeded = 25;
+	Revoked = 26;
+	Expired = 27;
+	AlreadyRedeemed = 28;
+	DuplicateRequest = 29;
+	AlreadyOwned = 30;
+	IPNotFound = 31;
+	PersistFailed = 32;
+	LockingFailed = 33;
+	LogonSessionReplaced = 34;
+	ConnectFailed = 35;
+	HandshakeFailed = 36;
+	IOFailure = 37;
+	RemoteDisconnect = 38;
+	ShoppingCartNotFound = 39;
+	Blocked = 40;
+	Ignored = 41;
+	NoMatch = 42;
+	AccountDisabled = 43;
+	ServiceReadOnly = 44;
+	AccountNotFeatured = 45;
+	AdministratorOK = 46;
+	ContentVersion = 47;
+	TryAnotherCM = 48;
+	PasswordRequiredToKickSession = 49;
+	AlreadyLoggedInElsewhere = 50;
+	Suspended = 51;
+	Cancelled = 52;
+	DataCorruption = 53;
+	DiskFull = 54;
+	RemoteCallFailed = 55;
+	PasswordUnset = 56;
+	ExternalAccountUnlinked = 57;
+	PSNTicketInvalid = 58;
+	ExternalAccountAlreadyLinked = 59;
+	RemoteFileConflict = 60;
+	IllegalPassword = 61;
+	SameAsPreviousValue = 62;
+	AccountLogonDenied = 63;
+	CannotUseOldPassword = 64;
+	InvalidLoginAuthCode = 65;
+	AccountLogonDeniedNoMail = 66;
+	HardwareNotCapableOfIPT = 67;
+	IPTInitError = 68;
+	ParentalControlRestricted = 69;
+	FacebookQueryError = 70;
+	ExpiredLoginAuthCode = 71;
+	IPLoginRestrictionFailed = 72;
+	AccountLockedDown = 73;
+	AccountLogonDeniedVerifiedEmailRequired = 74;
+	NoMatchingURL = 75;
+	BadResponse = 76;
+	RequirePasswordReEntry = 77;
+	ValueOutOfRange = 78;
+	UnexpectedError = 79;
+	Disabled = 80;
+	InvalidCEGSubmission = 81;
+	RestrictedDevice = 82;
+	RegionLocked = 83;
+	RateLimitExceeded = 84;
+	AccountLoginDeniedNeedTwoFactor = 85;
+	ItemDeleted = 86;
+	AccountLoginDeniedThrottle = 87;
+	TwoFactorCodeMismatch = 88;
+	TwoFactorActivationCodeMismatch = 89;
+	AccountAssociatedToMultiplePartners = 90;
+	NotModified = 91;
+	NoMobileDevice = 92;
+	TimeNotSynced = 93;
+	SmsCodeFailed = 94;
+	AccountLimitExceeded = 95;
+	AccountActivityLimitExceeded = 96;
+	PhoneActivityLimitExceeded = 97;
+	RefundToWallet = 98;
+	EmailSendFailure = 99;
+	NotSettled = 100;
+	NeedCaptcha = 101;
+	GSLTDenied = 102;
+	GSOwnerDenied = 103;
+	InvalidItemType = 104;
+	IPBanned = 105;
+	GSLTExpired = 106;
+	InsufficientFunds = 107;
+	TooManyPending = 108;
+	NoSiteLicensesFound = 109;
+	WGNetworkSendExceeded = 110;
+	AccountNotFriends = 111;
+	LimitedUserAccount = 112;
 }
 
-enum EChatRoomServerMessage {
-	Invalid = 0;
-	RenameChatRoom = 1;
-	Joined = 2;
-	Parted = 3;
-	Kicked = 4;
-	Invited = 5;
-	InviteDismissed = 8;
-	ChatRoomTaglineChanged = 9;
-	ChatRoomAvatarChanged = 10;
-	AppCustom = 11;
-}
-
-enum EChatRoomGroupRank {
-	Default = 0;
-	Viewer = 10;
-	Guest = 15;
-	Member = 20;
-	Moderator = 30;
-	Officer = 40;
-	Owner = 50;
-	TestInvalid = 99;
-}
-
-enum EChatRoomGroupPermissions {
-	Default = 0;
-	Valid = 1;
-	CanInvite = 2;
-	CanKick = 4;
-	CanBan = 8;
-	CanAdminChannel = 16;
-}
-
-enum EChatRoomGroupAction {
-	Default = 0;
-	CreateRenameDeleteChannel = 1;
-	Kick = 2;
-	Ban = 3;
-	Invite = 4;
-	ChangeTaglineAvatarName = 5;
-	Chat = 6;
-	ViewHistory = 7;
-	ChangeGroupRoles = 8;
-	ChangeUserRoles = 9;
-	MentionAll = 10;
-	SetWatchingBroadcast = 11;
-	Max = 12;
-}
-
-enum EChatRoomJoinState {
-	Default = 0;
-	None = 1;
-	Joined = 2;
-	TestInvalid = 99;
-}
-
-enum EClanChatChangeType {
-	Created = 1;
-	Closing = 2;
-	MemberStatus = 4;
-	PermissionGroups = 8;
-	NameOrAvatar = 16;
-}
-
-enum ESearchMatchType {
+enum ESearchMatchType
+{
 	None = 0;
 	PersonaName = 1;
 	Nickname = 2;
 }
 
-enum EProductPageAction {
-	NoAction = 0;
-	WatchBroadcast = 1;
-	HideBroadcast = 2;
-	ShowBroadcast = 3;
-	ShowBroadcastChat = 4;
-	HideBroadcastChat = 5;
-	PopoutChat = 6;
-	CloseBroadcastSmallPopup = 7;
-	UnmuteBroadcast = 8;
-	OpenBroadcastWatchPage = 9;
-	SendChat = 10;
-	AddsAnEmoticonToChat = 11;
+enum EServerType
+{
+	Other_Util = -2;
+	Other_Client = -3;
+	Other_CServer = -4;
+	Other_CEconBase = -5;
+	Invalid = -1;
+	Shell = 0;
+	GM = 1;
+	AM = 3;
+	BS = 4;
+	VS = 5;
+	ATS = 6;
+	CM = 7;
+	FBS = 8;
+	BoxMonitor = 9;
+	SS = 10;
+	DRMS = 11;
+	Console = 13;
+	PICS = 14;
+	ContentStats = 16;
+	DP = 17;
+	WG = 18;
+	SM = 19;
+	SLC = 20;
+	UFS = 21;
+	Community = 24;
+	P2PRelayOBSOLETE = 25;
+	AppInformation = 26;
+	Spare = 27;
+	FTS = 28;
+	SiteLicense = 29;
+	PS = 30;
+	IS = 31;
+	CCS = 32;
+	DFS = 33;
+	LBS = 34;
+	MDS = 35;
+	CS = 36;
+	GC = 37;
+	NS = 38;
+	OGS = 39;
+	WebAPI = 40;
+	UDS = 41;
+	MMS = 42;
+	GMS = 43;
+	KGS = 44;
+	UCM = 45;
+	RM = 46;
+	FS = 47;
+	Econ = 48;
+	Backpack = 49;
+	UGS = 50;
+	StoreFeature = 51;
+	MoneyStats = 52;
+	CRE = 53;
+	UMQ = 54;
+	Workshop = 55;
+	BRP = 56;
+	GCH = 57;
+	MPAS = 58;
+	Trade = 59;
+	Secrets = 60;
+	Logsink = 61;
+	Market = 62;
+	Quest = 63;
+	WDS = 64;
+	ACS = 65;
+	PNP = 66;
+	TaxForm = 67;
+	ExternalMonitor = 68;
+	Parental = 69;
+	PartnerUpload = 70;
+	Partner = 71;
+	ES = 72;
+	DepotWebContent = 73;
+	ExternalConfig = 74;
+	GameNotifications = 75;
+	MarketRepl = 76;
+	MarketSearch = 77;
+	Localization = 78;
+	Steam2Emulator = 79;
+	PublicTest = 80;
+	SolrMgr = 81;
+	BroadcastRelay = 82;
+	BroadcastDirectory = 83;
+	VideoManager = 84;
+	TradeOffer = 85;
+	BroadcastChat = 86;
+	Phone = 87;
+	AccountScore = 88;
+	Support = 89;
+	LogRequest = 90;
+	LogWorker = 91;
+	EmailDelivery = 92;
+	InventoryManagement = 93;
+	Auth = 94;
+	StoreCatalog = 95;
+	HLTVRelay = 96;
+	IDLS = 97;
+	Perf = 98;
+	ItemInventory = 99;
+	Watchdog = 100;
+	AccountHistory = 101;
+	Chat = 102;
+	Shader = 103;
+	AccountHardware = 104;
+	WebRTC = 105;
+	Giveaway = 106;
+	ChatRoom = 107;
+	VoiceChat = 108;
+	QMS = 109;
+	Trust = 110;
+	TimeMachine = 111;
+	VACDBMaster = 112;
+	ContentServerConfig = 113;
+	Max = 114;
 }
 
-enum EProductImpressionFromClientType {
-	FriendInGameNotification = 1;
-	FriendInGameNotification_FirstTimeSession = 2;
+enum ESetUserCountryError
+{
+	None = 0;
+	NewCountryMustMatchWebIP = 1;
+	NewCountryMustMatchClientIP = 2;
+	MilitaryCountryMustBeUSA = 3;
+	NoUSMilitaryBaseInIPCountry = 4;
+	InvalidMilitaryAddress = 5;
+	HasPendingPurchase = 6;
+	HasRecentPurchase = 7;
+	HasRecentCountryChange = 8;
+	WalletConversionFailed = 9;
 }
 
-enum EUserBadge {
+enum EShutdownStep
+{
+	None = 0;
+	Start = 1;
+	WaitForGames = 2;
+	WaitForCloud = 3;
+	WaitForDownload = 4;
+	WaitForServiceApps = 5;
+	WaitForLogOff = 6;
+	Done = 7;
+}
+
+enum ESteamGuardCodeError
+{
+	None = 0;
+	InvalidCode = 1;
+}
+
+enum EStoreCuratorRecommendationState
+{
+	Recommended = 0;
+	NotRecommended = 1;
+	Informative = 2;
+	CreatedApp = 3;
+}
+
+enum EStoreDiscoveryQueueType
+{
+	New = 0;
+	ComingSoon = 1;
+	Recommended = 2;
+	EveryNewRelease = 3;
+	RecommendedNeuralNet = 4;
+	MLRecommender = 5;
+	MAX = 6;
+}
+
+enum EStoreUsabilityEvent
+{
+	MainCapNav = 1;
+	SpecialOffersNav = 2;
+	TrendingFriendsNav = 3;
+	RecentlyUpdatedNav = 4;
+	PopularNewReleaseTab = 5;
+	TopSellersTab = 6;
+	UpcomingTab = 7;
+	SpecialsTab = 8;
+	UnderTenNav = 9;
+}
+
+enum EStoreUsabilityFrontPageScroll
+{
+	Invalid = 0;
+	TrendingFriends = 1;
+	DiscoveryQueue = 20;
+	Curators = 40;
+	RecentUpdated = 60;
+	TabGroup = 80;
+	UnderTen = 100;
+	KeepScrolling = 120;
+	NoMoreContent = 1000;
+}
+
+enum ESupportActionSource
+{
+	System = 0;
+	Agent = 1;
+}
+
+enum ETickerCategoryLanguageRule
+{
+	Invalid = 0;
+	Normal = 1;
+	NoDelay = 2;
+	Escalate = 3;
+}
+
+enum ETimelineRange
+{
+	Timeline = 1;
+	Minimap = 2;
+}
+
+enum ETradeOfferConfirmationMethod
+{
+	Invalid = 0;
+	Email = 1;
+	MobileApp = 2;
+}
+
+enum ETradeOfferState
+{
+	Invalid = 1;
+	Active = 2;
+	Accepted = 3;
+	Countered = 4;
+	Expired = 5;
+	Canceled = 6;
+	Declined = 7;
+	InvalidItems = 8;
+	CreatedNeedsConfirmation = 9;
+	CanceledBySecondFactor = 10;
+	InEscrow = 11;
+}
+
+enum ETransportError
+{
+	OK = 1;
+	RequestNotSent = 2;
+	ResponseNotReceived = 3;
+	IncorrectParameter = 4;
+	MethodNotFound = 100;
+	CallMismatch = 101;
+	SetupError = 102;
+	InternalError = 103;
+	NotSupported = 104;
+}
+
+enum EUCMListType
+{
+	Subscribed = 1;
+	Favorites = 2;
+	Played = 3;
+	Completed = 4;
+	ShortcutFavorites = 5;
+	Followed = 6;
+}
+
+enum EUniverse
+{
+	Invalid = 0;
+	Public = 1;
+	Beta = 2;
+	Internal = 3;
+	Dev = 4;
+	Max = 5;
+}
+
+enum EUserAccountHistoryCategory
+{
+	Invalid = 0;
+	Inventory = 1;
+}
+
+enum EUserBadge
+{
 	Invalid = 0;
 	YearsOfService = 1;
 	Community = 2;
@@ -3200,197 +3713,31 @@ enum EUserBadge {
 	LunarNewYearSale2019 = 34;
 	LunarNewYearSale2019GoldenProfile = 35;
 	SpringCleaning2019 = 36;
+	SummerSale2019 = 37;
+	SummerSale2019_TeamHare = 38;
+	SummerSale2019_TeamTortoise = 39;
+	SummerSale2019_TeamCorgi = 40;
+	SummerSale2019_TeamCockatiel = 41;
+	SummerSale2019_TeamPig = 42;
 }
 
-enum EAuctionBadgeLevel {
+enum EUserLastReadFeedType
+{
 	Invalid = 0;
-	MadeGoo = 1;
-	BidInAuction = 2;
-	WonInAuction = 3;
+	TradeOffers = 1;
+	AuctionWins = 2;
+	SteamAnnouncement = 3;
 }
 
-enum EProfileCustomizationType {
-	Invalid = 0;
-	RareAchievementShowcase = 1;
-	GameCollector = 2;
-	ItemShowcase = 3;
-	TradeShowcase = 4;
-	Badges = 5;
-	FavoriteGame = 6;
-	ScreenshotShowcase = 7;
-	CustomText = 8;
-	FavoriteGroup = 9;
-	Recommendation = 10;
-	WorkshopItem = 11;
-	MyWorkshop = 12;
-	ArtworkShowcase = 13;
-	VideoShowcase = 14;
-	Guides = 15;
-	MyGuides = 16;
-	Achievements = 17;
-	Greenlight = 18;
-	MyGreenlight = 19;
-	Salien = 20;
+enum EUserReviewScorePreference
+{
+	Unset = 0;
+	IncludeAll = 1;
+	ExcludeBombs = 2;
 }
 
-enum EProfileCustomizationStyle {
-	Default = 0;
-	Selected = 1;
-	Rarest = 2;
-	MostRecent = 3;
-	Random = 4;
-	HighestRated = 5;
-}
-
-enum ENotificationSetting {
-	NotifyUseDefault = 0;
-	Always = 1;
-	Never = 2;
-}
-
-enum ETradeOfferState {
-	Invalid = 1;
-	Active = 2;
-	Accepted = 3;
-	Countered = 4;
-	Expired = 5;
-	Canceled = 6;
-	Declined = 7;
-	InvalidItems = 8;
-	CreatedNeedsConfirmation = 9;
-	CanceledBySecondFactor = 10;
-	InEscrow = 11;
-}
-
-enum ETradeOfferConfirmationMethod {
-	Invalid = 0;
-	Email = 1;
-	MobileApp = 2;
-}
-
-enum FriendGroupDisplayType {
-	eOnlineOnly = 0;
-	eOnlineOnlyNotInGame = 1;
-	eOfflineOnly = 2;
-	eIncomingInvites = 3;
-	eAll = 4;
-}
-
-enum bbNodeType {
-	UNKNOWN = 0;
-	TEXT = 1;
-	OPENTAG = 2;
-	CLOSETAG = 3;
-}
-
-enum EChatMsgDeleteState {
-	None = 0;
-	Deleting = 1;
-	Deleted = 2;
-}
-
-enum EMsgAnimationState {
-	None = 0;
-	Animating = 1;
-}
-
-enum EChatMsgSendError {
-	None = 0;
-	Generic = 1;
-	NotFriends = 2;
-	NoChatPermissionInGroup = 3;
-	RateLimitExceeded = 4;
-}
-
-enum EFileUploadState {
-	None = 0;
-	FileReady = 1;
-	InProgress = 2;
-	Error = 3;
-	Error_ImageTooLarge = 4;
-	Error_FileTypeNotSupported = 5;
-	Completed = 6;
-}
-
-enum ResponsiveWindowActiveView {
-	FriendsList = 0;
-	Chat = 1;
-}
-
-enum EBroadcastWatchState {
-	None = 0;
-	Loading = 1;
-	Ready = 2;
-	Error = 3;
-}
-
-enum ETimelineRange {
-	Timeline = 1;
-	Minimap = 2;
-}
-
-enum EBroadcastChatPermission {
-	Public = 0;
-	OwnsApp = 1;
-}
-
-enum EBroadcastWatchLocation {
-	Invalid = 0;
-	SteamTV_Tab = 1;
-	SteamTV_WatchParty = 2;
-	Chat_Tab = 3;
-	Chat_WatchParty = 4;
-	CommunityPage = 5;
-	StoreAppPage = 6;
-	InGame = 7;
-	BigPicture = 8;
-	SalesPage = 9;
-	CuratorPage = 10;
-	DeveloperPage = 11;
-	Chat_Friends = 12;
-	SteamTV_Web = 13;
-}
-
-enum EBroadcastChatBan {
-	Clear = 0;
-	Mute = 1;
-	Shadow = 2;
-}
-
-enum CBroadcast_WatchBroadcast_Response_EWatchResponse {
-	Ready = 1;
-	NotAvailable = 2;
-	WaitingForApproval = 3;
-	WaitingForStart = 4;
-	InvalidSession = 5;
-	TooManyBroadcasts = 6;
-	WaitingForReconnect = 7;
-	SystemNotSupported = 8;
-	UserRestricted = 9;
-	ClientOutOfDate = 10;
-	PoorUploadQuality = 11;
-	MissingSubscription = 12;
-}
-
-enum CBroadcast_BroadcastViewerState_Notification_EViewerState {
-	NeedsApproval = 1;
-	Watching = 2;
-	Left = 3;
-}
-
-enum GameDataRegionBehavior {
-	Hover = 0;
-	ClickPopup = 1;
-	ClickSurroundingRegion = 2;
-}
-
-enum ChatMessageTypeEnum {
-	Chat = 0;
-	Notification = 1;
-	Error = 2;
-}
-
-enum EUserTagReportType {
+enum EUserTagReportType
+{
 	None = 0;
 	Offensive = 1;
 	Misapplied = 2;
@@ -3399,135 +3746,17 @@ enum EUserTagReportType {
 	MAX = 5;
 }
 
-enum EPlaytestingQuestionType {
-	Invalid = 0;
-	YesNo = 1;
-	Scale = 2;
-	MultipleChoice = 3;
-	Language = 4;
-	AgreeScale = 5;
-	Platform = 6;
-	Playtime = 7;
+enum EValidationPhase
+{
+	Idle = 0;
+	WaitingForAppInfo = 1;
+	StartInstallScript = 2;
+	WaitingForInstallScript = 3;
+	Validating = 4;
 }
 
-enum EPlaytestingState {
-	Inactive = 0;
-	Active = 1;
-	Full = 2;
-	Ended = 3;
-}
-
-enum EStoreDiscoveryQueueType {
-	New = 0;
-	ComingSoon = 1;
-	Recommended = 2;
-	EveryNewRelease = 3;
-	RecommendedNeuralNet = 4;
-	MLRecommender = 5;
-	MAX = 6;
-}
-
-enum ENewReleaseNotificationState {
-	Initial = 0;
-	Approved = 1;
-	InProgress = 2;
-	Completed = 3;
-	Canceled = 4;
-}
-
-enum ENewReleaseNotificationType {
-	Released = 0;
-	ReleasedFromEarlyAccess = 1;
-	ReleasedAsEarlyAccess = 2;
-}
-
-enum EForceFeatureNotificationTargetSelection {
-	AppOwners = 1;
-	MinPlayTime = 2;
-	AppFollower = 4;
-	CreatorFollower = 8;
-	OwnSomeCreatorApp = 16;
-	EarlierLastPlayedApp = 32;
-	LaterLastPlayedApp = 64;
-}
-
-enum EDiscoveryQueueExperimentalCohort {
-	None = 0;
-	RecommendedForYouMay2019 = 1;
-	ExperimentalRecommenderMarch2019 = 2;
-}
-
-enum EFeaturedAppType {
-	UpdateRound = 0;
-	LaunchRound = 1;
-	MAX = 2;
-}
-
-enum EFeaturedAppBonusRoundGrantReason {
-	ValveDiscretion = 0;
-	ReachedTopSellers = 1;
-}
-
-enum EAppReportType {
-	Invalid = 0;
-	Scam = 1;
-	Malware = 2;
-	HateSpeech = 3;
-	Pornography = 4;
-	NonLabeledAdultContent = 5;
-	Libelous = 6;
-	Offensive = 7;
-	ExploitsChildren = 8;
-	MtxWithNonSteamWalletPaymentMethods = 9;
-	CopyrightViolation = 10;
-	ViolatesLaws = 11;
-	Other = 12;
-	Broken = 13;
-}
-
-enum EUserReviewScorePreference {
-	Unset = 0;
-	IncludeAll = 1;
-	ExcludeBombs = 2;
-}
-
-enum EStoreUsabilityEvent {
-	MainCapNav = 1;
-	SpecialOffersNav = 2;
-	TrendingFriendsNav = 3;
-	RecentlyUpdatedNav = 4;
-	PopularNewReleaseTab = 5;
-	TopSellersTab = 6;
-	UpcomingTab = 7;
-	SpecialsTab = 8;
-	UnderTenNav = 9;
-}
-
-enum EStoreUsabilityFrontPageScroll {
-	Invalid = 0;
-	TrendingFriends = 1;
-	DiscoveryQueue = 20;
-	Curators = 40;
-	RecentUpdated = 60;
-	TabGroup = 80;
-	UnderTen = 100;
-	KeepScrolling = 120;
-	NoMoreContent = 1000;
-}
-
-enum EAudioStreamType {
-	Microphone = 1;
-	IncomingStream = 2;
-}
-
-enum ENoiseGateLevel {
-	Off = 0;
-	Low = 1;
-	Medium = 2;
-	High = 3;
-}
-
-enum EVoiceCallState {
+enum EVoiceCallState
+{
 	None = 0;
 	ScheduledInitiate = 1;
 	RequestedMicAccess = 2;
@@ -3540,113 +3769,104 @@ enum EVoiceCallState {
 	Connected = 9;
 }
 
-enum EMobileLogonState {
-	Unknown = 0;
-	Starting = 1;
-	NeedCredentials = 2;
-	InitialConnect = 3;
-	InitialConnectFailed = 4;
-	Connect = 5;
-	ConnectFailed = 6;
-	InitialLogon = 7;
-	InitialLogonFailed = 8;
-	Logon = 9;
-	LogonFailed = 10;
-	OK = 11;
-	Disconnected = 12;
-	InitialRequestLogonNonce = 13;
-	RequestLogonNonce = 14;
-	RequestLogonNonceFailed = 15;
-	NeedFullLogon = 16;
-}
-
-enum EWebAPIError {
+enum EWebAPIError
+{
 	Unknown = 0;
 	AccessDenied = 1;
 }
 
-enum EMobileConfirmationType {
-	Invalid = 0;
-	Test = 1;
-	Trade = 2;
-	MarketListing = 3;
-	FeatureOptOut = 4;
-	PhoneNumberChange = 5;
-}
-
-enum EMobileApp {
+enum EWorkshopFileType
+{
+	Invalid = -1;
 	Community = 0;
-	FriendsUI = 1;
+	Microtransaction = 1;
+	Collection = 2;
+	Art = 3;
+	Video = 4;
+	Screenshot = 5;
+	Game = 6;
+	Software = 7;
+	Concept = 8;
+	WebGuide = 9;
+	IntegratedGuide = 10;
+	Merch = 11;
+	ControllerBinding = 12;
+	SteamworksAccessInvite = 13;
+	SteamVideo = 14;
+	GameManagedItem = 15;
+	First = 0;
+	Max = 16;
 }
 
-enum EMobilePermission {
-	NeverAsked = 1;
-	Granted = 2;
-	Denied = 3;
-	Unknown = 4;
+enum FriendGroupDisplayType
+{
+	eOnlineOnly = 0;
+	eOnlineOnlyNotInGame = 1;
+	eOfflineOnly = 2;
+	eIncomingInvites = 3;
+	eAll = 4;
 }
 
-enum EUserLastReadFeedType {
-	Invalid = 0;
-	TradeOffers = 1;
-	AuctionWins = 2;
-	SteamAnnouncement = 3;
+enum GameDataRegionBehavior
+{
+	Hover = 0;
+	ClickPopup = 1;
+	ClickSurroundingRegion = 2;
 }
 
-enum ESetUserCountryError {
-	None = 0;
-	NewCountryMustMatchWebIP = 1;
-	NewCountryMustMatchClientIP = 2;
-	MilitaryCountryMustBeUSA = 3;
-	NoUSMilitaryBaseInIPCountry = 4;
-	InvalidMilitaryAddress = 5;
-	HasPendingPurchase = 6;
-	HasRecentPurchase = 7;
-	HasRecentCountryChange = 8;
-	WalletConversionFailed = 9;
+enum GeofencingEventType
+{
+	Enter = 1;
+	Exit = 2;
 }
 
-enum EUserAccountHistoryCategory {
-	Invalid = 0;
-	Inventory = 1;
+enum GeofencingRegionState
+{
+	Unknown = 0;
+	Inside = 1;
+	Outside = 2;
 }
 
-enum EInternalAccountType {
-	SteamAccountType = 1;
-	ClanType = 2;
-	AppType = 3;
-	BroadcastChannelType = 4;
+enum IDerivationState
+{
+	NOT_TRACKING = -1;
+	UP_TO_DATE = 0;
+	POSSIBLY_STALE = 1;
+	STALE = 2;
 }
 
-enum EExternalAccountType {
-	None = 0;
-	SteamAccount = 1;
-	GoogleAccount = 2;
-	FacebookAccount = 3;
-	TwitterAccount = 4;
-	TwitchAccount = 5;
-	YouTubeChannelAccount = 6;
-	FacebookPage = 7;
+enum ResponsiveWindowActiveView
+{
+	FriendsList = 0;
+	Chat = 1;
 }
 
-enum EFadePhase {
-	OUT = 0;
-	FADING_IN = 1;
-	IN = 2;
-	FADING_OUT = 3;
+enum Result
+{
+	NoData = 1;
+	NewData = 2;
+	Failed = 3;
 }
 
-enum ELoginManagerStep {
-	Invalid = 0;
-	AccountName = 1;
-	EmailCode = 2;
-	TwoFactorCode = 3;
-	Complete = 4;
+enum ResultCode
+{
+	Success = -1;
+	Canceled = 0;
+	FirstUser = 1;
 }
 
-enum ESteamGuardCodeError {
-	None = 0;
-	InvalidCode = 1;
+enum Status
+{
+	Denied = 1;
+	Restricted = 2;
+	Available = 3;
 }
 
+enum bbNodeType
+{
+	UNKNOWN = 0;
+	TEXT = 1;
+	OPENTAG = 2;
+	CLOSETAG = 3;
+}
 

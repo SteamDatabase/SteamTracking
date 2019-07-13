@@ -14,7 +14,7 @@
 
 		private $Options = Array(
 			CURLOPT_USERAGENT      => 'SteamDB',
-			CURLOPT_ENCODING       => 'gzip',
+			CURLOPT_ENCODING       => '',
 			CURLOPT_HEADER         => 1,
 			CURLOPT_AUTOREFERER    => 0,
 			CURLOPT_RETURNTRANSFER => 1,
@@ -330,12 +330,15 @@
 
 				if( $OriginalFile === 'Scripts/WebUI/steammessages.js' )
 				{
-					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > ../ValveProtobufs/webui/friends.proto' );
-					system( '../ValveProtobufs/update.sh' );
+					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > ../ValveProtobufs/webui/friends.proto && ../ValveProtobufs/update.sh' );
 				}
 				else if( $OriginalFile === 'Scripts/WebUI/steammobile_android.js' )
 				{
-					system( 'node enumdumper.js ' . escapeshellarg( $OriginalFile ) . ' > Structs/enums.steamd' );
+					system(
+						'node friendsuiprotodumper.js ' . escapeshellarg( $OriginalFile ) .
+						' --Oenum=Structs/enums.steamd --Oproto=../ValveProtobufs/webui/friends_mobile.proto' .
+						' --filter-known-protos && ../ValveProtobufs/update.sh'
+					);
 				}
 
 				system( 'prettier --write ' . escapeshellarg( $File ) );
@@ -428,7 +431,7 @@
 						$LengthExpected = cURL_GetInfo( $Slave, CURLINFO_CONTENT_LENGTH_DOWNLOAD );
 						$LengthDownload = cURL_GetInfo( $Slave, CURLINFO_SIZE_DOWNLOAD );
 
-						if( $LengthExpected !== $LengthDownload )
+						if( $LengthExpected !== $LengthDownload && $Request !== 'Scripts/WebUI/steammobile_android.js' )
 						{
 							$this->Log( '{lightred}Wrong Length {normal}(' . $LengthDownload . ' != ' . $LengthExpected . '){normal} - ' . $URL );
 
