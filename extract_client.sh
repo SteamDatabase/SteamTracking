@@ -24,7 +24,7 @@ rm -rf "$DIR"/Protobufs/*
 
 echo Extracting archives
 
-for z in *.zip;
+for z in archives/*.zip;
 do
 	if [[ "$z" == *"bins"* ]];
 	then

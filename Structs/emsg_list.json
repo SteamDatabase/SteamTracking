@@ -1909,13 +1909,13 @@
     },
     {
         "emsg": 5594,
-        "name": "k_EMsgClientServiceMethod",
+        "name": "k_EMsgClientServiceMethodLegacy",
         "flags": 6,
         "server_type": 41
     },
     {
         "emsg": 5595,
-        "name": "k_EMsgClientServiceMethodResponse",
+        "name": "k_EMsgClientServiceMethodLegacyResponse",
         "flags": 6,
         "server_type": 41
     },
@@ -1976,6 +1976,18 @@
     {
         "emsg": 5622,
         "name": "k_EMsgClientNetworkingCertRequestResponse",
+        "flags": 2,
+        "server_type": -1
+    },
+    {
+        "emsg": 5623,
+        "name": "k_EMsgClientChallengeRequest",
+        "flags": 2,
+        "server_type": -1
+    },
+    {
+        "emsg": 5624,
+        "name": "k_EMsgClientChallengeResponse",
         "flags": 2,
         "server_type": -1
     },

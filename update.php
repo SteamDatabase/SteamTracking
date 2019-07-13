@@ -157,7 +157,7 @@
 
 							$this->URLsToFetch[ ] = Array(
 								'URL'  => 'https://steamcdn-a.akamaihd.net/client/' . $Archive . '.' . $Hash,
-								'File' => '.support/' . $Archive
+								'File' => '.support/archives/' . $Archive
 							);
 						}
 						else
