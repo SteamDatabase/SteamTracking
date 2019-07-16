@@ -27,6 +27,53 @@ function OnLocationChange ( elIgnored, hash )
 	}
 }
 
+g_TagMap = null;
+function PopulateTagFacetData( rgTagFacetData )
+{
+	// tab_filter_control_count
+	var $Container = $J('#TagFilter_Container');
+	var $Tags = $Container.children('div').detach();
+
+	if ( !g_TagMap )
+	{
+		g_TagMap = {};
+		$Tags.each( function() {
+			var $Tag = $J(this);
+			g_TagMap[$Tag.data('value')] = $Tag;
+		} );
+	}
+
+	var nIndex = 0;
+	var rgDisplayedTags = {};
+	for ( var i = 0; i < rgTagFacetData.length; i++ )
+	{
+		var tagid = rgTagFacetData[i][0];
+		var count = rgTagFacetData[i][1];
+
+		rgDisplayedTags[ tagid ] = true;
+		var $Tag = g_TagMap[tagid];
+		$Tag.children('.tab_filter_control_count').text( v_numberformat( count ) ).css( {display: '' });
+		$Container.append( $Tag );
+		if ( nIndex++ > 15 )
+			$Tag.hide();
+		else
+			$Tag.show();
+	}
+	for ( var tagid in g_TagMap )
+	{
+		if ( rgDisplayedTags[tagid] )
+			continue;	//handled above
+
+		var $Tag = g_TagMap[tagid];
+		$Tag.children('.tab_filter_control_count').css( {display: 'none' });
+		$Container.append( $Tag );
+		if ( nIndex++ > 15 )
+			$Tag.hide();
+		else
+			$Tag.show();
+	}
+}
+
 function FillFormFromNavigation( querystring, link_click, initial_load )
 {
 	var rgLocationParams = querystring.toQueryParams();
@@ -336,7 +383,7 @@ function UpdateTags()
 {
 	$J('.tag_dynamic').remove();
 	$J('#termsnone').show();
-	var rgActiveTags = $J('.tab_filter_control.checked');
+	var rgActiveTags = $J('#TagFilter_Container .tab_filter_control.checked');
 
 	// Search term
 	var strTerm = $J("#realterm").val();
@@ -362,17 +409,23 @@ function UpdateTags()
 		$J('#termsnone').hide();
 	}
 
-	for( var i=0; i < rgActiveTags.length; i++)
+	if ( rgActiveTags.length )
 	{
-		var Tag = $J(rgActiveTags[i]);
-		AddSearchTag( Tag.data('param'), Tag.data('value'), $J('.tab_filter_control_label', Tag).text(), function(tag) { return function() { tag.click(); return false; } }(Tag) );
-		if ( !Tag.is(':visible') )
+		for( var i=0; i < rgActiveTags.length; i++)
 		{
-			Tag.parent().prepend(Tag.show());
-			Tag.trigger( 'tablefilter_update' );
+			var Tag = $J(rgActiveTags[i]);
+			AddSearchTag( Tag.data('param'), Tag.data('value'), $J('.tab_filter_control_label', Tag).text(), function(tag) { return function() { tag.click(); return false; } }(Tag) );
+			if ( !Tag.is(':visible') )
+			{
+				Tag.parent().prepend(Tag.show());
+				Tag.trigger( 'tablefilter_update' );
+			}
 		}
+
+		$J('#TagFilter_Container').css( {maxHeight: ''} );
 		$J('#termsnone').hide();
 	}
+
 }
 
 function OnSelectFilteredContentSettingsMenu( elSource )

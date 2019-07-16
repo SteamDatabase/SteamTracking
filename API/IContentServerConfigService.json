@@ -118,6 +118,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "Number of unique connected IP addresses"
+                },
+                {
+                    "name": "upstream_egress_utilization",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "What is the percent utilization of the busiest datacenter egress link?"
                 }
             ]
         }

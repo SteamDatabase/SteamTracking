@@ -206,6 +206,7 @@ LocalizationReady("shared", "english", {
   EventDisplay_DeleteEvent_Success: "The event was successfully deleted.",
   EventDisplay_DeleteEvent_Comment:
     "Also delete the discussion forum comment thread for this event?",
+  EventDisplay_SocialTitle: "More About This Game",
 
   EventEditor_Publish_VisibleNow: "Make Visible Now",
   EventEditor_Publish_VisibleNow_ttip:
@@ -573,7 +574,7 @@ LocalizationReady("shared", "english", {
   WriteReview_Dialog_AddReview_Header: "Would you like to post a review?",
   WriteReview_Dialog_ReviewInstructions_Link: "Rules and Guidelines",
   WriteReview_Dialog_ReviewInstructions:
-    "Please describe what you liked or disliked about this product and whether you recommend it to others. Please remember to be polite and follow the %1$s.",
+    "Please describe what you liked or disliked about this product and whether you recommend it to others. Please remember to be polite and follow the %1$s. A description is required to post your recommendation.",
   WriteReview_Dialog_AllowComments: "Allow comments",
   WriteReview_Dialog_FreeDisclaimer:
     "Check this box if you received this product for free",
@@ -582,6 +583,8 @@ LocalizationReady("shared", "english", {
   WriteReview_Dialog_FormattingHelp: "Formatting Help",
   WriteReview_Dialog_GenericError:
     "We encountered a problem while posting your review. Please try again later.",
+  WriteReview_Dialog_NoTextError:
+    "Please describe what you liked or disliked about this product.",
 
   Broadcast_View_Stack_H: "Horizontal View",
   Broadcast_View_Stack_V: "Vertical View",

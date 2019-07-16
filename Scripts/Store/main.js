@@ -724,6 +724,33 @@ $J( function() {
 	};
 } );
 
+function ExtractSNR( href )
+{
+	var match = href.match( /[\?&]snr=([^&]*)/ );
+	return match && match[1];
+}
+
+function ReplaceSNR( href, snr )
+{
+	return href.replace( /([\?&]snr=)[^&]*/, '$1' + snr );
+}
+
+/**
+ *
+ * @param $Link
+ * @param fnCallback	takes an SNR code, should return the new SNR code
+ * @constructor
+ */
+function ModifyLinkSNR( $Link, fnCallback )
+{
+	var href = $Link.attr('href');
+	var snr = href && ExtractSNR( href );
+	if ( snr )
+	{
+		$Link.attr( 'href', ReplaceSNR( href, fnCallback( snr ) ) );
+	}
+}
+
 function InstrumentLinks()
 {
 	$J('A').each( function() { InstrumentLink( this ); } );

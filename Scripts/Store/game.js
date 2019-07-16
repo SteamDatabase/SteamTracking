@@ -223,22 +223,26 @@ function InitAutocollapse()
 	});
 }
 
-function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget )
+function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, bExtendedDisplay )
 {
 	var rgRecommendationsToShow = [];
 	var nCurScore = 0;
+	var nOwnedPenalty = bExtendedDisplay ? 15 : 3;
 	for ( var i = 0; i < rgRecommendedAppIDs.length; i++ )
 	{
 		var unAppID = rgRecommendedAppIDs[i];
 		if ( GDynamicStore.BIsAppIgnored( unAppID ) )
 			continue;
 		else if ( GDynamicStore.BIsAppOwned( unAppID, false ) )
-			rgRecommendationsToShow.push( { score: 3 + nCurScore++, appid: unAppID } );
+			rgRecommendationsToShow.push( { score: nOwnedPenalty + nCurScore++, appid: unAppID } );
 		else
 			rgRecommendationsToShow.push( { score: nCurScore++, appid: unAppID } );
 	}
 
 	rgRecommendationsToShow.sort( function( a, b ) { return a.score - b.score; } );
+
+	if ( bExtendedDisplay )
+		rgRecommendationsToShow = rgRecommendationsToShow.slice( 0, 15 );
 
 	for ( var i = 0; i < rgRecommendationsToShow.length; i++ )
 	{
@@ -261,12 +265,13 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget )
 
 		elTarget.append( $CapCtn );
 	}
+	GDynamicStoreHelpers.AddSNRDepthParamsToCapsuleList( elTarget.children() );
 	GDynamicStore.DecorateDynamicItems( elTarget );
 	elTarget.append( $J('<div/>', { style: 'clear: left;' } ) );
 	elTarget.trigger('v_contentschanged');
 }
 
-function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
+function RenderMoreLikeThisBlock( rgRecommendedAppIDs, bExtendedDisplay )
 {
 	if ( !rgRecommendedAppIDs || !rgRecommendedAppIDs.length > 0 || !$J('#recommended_block_content').length )
 	{
@@ -274,7 +279,7 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs )
 		return;
 	}
 
-	RenderRecommendBlock( rgRecommendedAppIDs, 'recommended', $J('#recommended_block_content') );
+	RenderRecommendBlock( rgRecommendedAppIDs, 'recommended', $J('#recommended_block_content'), bExtendedDisplay );
 }
 
 function RenderSuccessorRankedAppsBlock( rgSuccessorAppIDs )

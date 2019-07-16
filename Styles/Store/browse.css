@@ -247,6 +247,15 @@ a.linkbar .rightblock {
     display: inline-block;
 }
 
+.tab_filter_control_count {
+	font-style: italic;
+	color: rgba( 255, 255, 255, 0.5);
+}
+
+.tab_filter_control.checked .tab_filter_control_count {
+	/* display: none; */
+}
+
 .discovery_queue_ctn {
     margin-top: 25px;
 }

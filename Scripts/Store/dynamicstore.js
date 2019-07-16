@@ -356,7 +356,7 @@ GDynamicStore = {
 		}
 		$Elem.addClass( 'app_impression_tracked' );
 
-		var strImpressions = decodeURIComponent(V_GetCookie( "app_impressions" ));
+		var strImpressions = V_GetDecodedCookie( "app_impressions" );
 		var rgImpressions = strImpressions && strImpressions.length != 0 ? strImpressions.split( "|" ) : [];
 
 		// commas not allowed in cookie value
@@ -1071,8 +1071,9 @@ GDynamicStore = {
 		for( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && i < 5; i++ )
 		{
 			var tag = GDynamicStore.s_rgRecommendedTags[i];
-							var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': 'https://store.steampowered.com/tags/en/' + encodeURIComponent( tag.name ) });
-						$Link.text( tag.name );
+			var url = 'https://store.steampowered.com/tags/en/' + encodeURIComponent( tag.name );
+			var $Link = $J('<a/>', {'class': 'popup_menu_item', 'href': GStoreItemData.AddNavEventParamsToURL( url, 'storemenu_recommendedtags' ) });
+			$Link.text( tag.name );
 			$Element.append( $Link );
 		}
 	},
@@ -1482,15 +1483,24 @@ GStoreItemData = {
 	AddNavEventParamsToURL: function( strURL, strFeatureContext, nDepth, nCuratorClanID )
 	{
 		var strClanParam = nCuratorClanID ? 'curator_clanid=' + nCuratorClanID : '';
-		if ( strFeatureContext && GStoreItemData.rgNavParams[strFeatureContext] )
+		if ( strFeatureContext )
 		{
-			var strNavParam = GStoreItemData.rgNavParams[strFeatureContext];
-			if ( nDepth )
-				strNavParam += '_' + parseInt( nDepth );
+			if ( !GStoreItemData.rgNavParams[strFeatureContext] )
+			{
+				
+								strFeatureContext = '__page_default';
+			}
 
-			strURL += ( strURL.indexOf( '?' ) != -1 ? '&' : '?' ) + 'snr=' + strNavParam;
-			if( strClanParam )
-				strURL += '&' + strClanParam;
+			if ( GStoreItemData.rgNavParams[strFeatureContext] )
+			{
+				var strNavParam = GStoreItemData.rgNavParams[strFeatureContext];
+				if ( nDepth )
+					strNavParam += '_' + parseInt( nDepth );
+
+				strURL += ( strURL.indexOf( '?' ) != -1 ? '&' : '?' ) + 'snr=' + strNavParam;
+				if( strClanParam )
+					strURL += '&' + strClanParam;
+			}
 		}
 		else if( strClanParam )
 		{
@@ -1960,6 +1970,18 @@ var GDynamicStoreHelpers = {
 		if ( bPaginated )
 			CreateFadingCarousel( $elTarget, 0 );
 	},
+
+	AddSNRDepthParamsToCapsuleList( $Capsules )
+	{
+		var nDepth = 0;
+		$Capsules.filter('a:visible').each( function() {
+			ModifyLinkSNR( $J(this), function( snr ) {
+				var rgParts = snr.split('_');
+				rgParts[5] = nDepth++;
+				return rgParts.join('_');
+			});
+		});
+	}
 };
 
 function OnDynamicStorePageException(e)
@@ -1979,77 +2001,86 @@ GDynamicStorePage = {
 
 	FilterCapsules: function( nMin, nMax, $elElements, $elContainer, rgFilterParams)
 	{
-		var nCapsules = $elElements.length;
-
 		// Get a list of appids to filter
-		var rgApps = [];
-		var rgAllAppIds = [];
+		var rgItems = [];
 		var rgAppIds = [];
+
+		var fnItemFromCapsule = function( $capsule )
+		{
+			var unAppId = $capsule.data('ds-appid');
+			if ( unAppId )
+				return { appid: unAppId };
+
+			var unPackageId = $capsule.data('ds-packageid');
+			var unBundleId = $capsule.data('ds-bundleid');
+			if ( unPackageId)
+				return { packageid: unPackageId };
+			else if ( unBundleId )
+				return { bundleid: unBundleId };
+
+			return null;
+		}
 
 		// Remove duplicates or DLC from the list
 		for( var i = 0; i < $elElements.length; i++ )
 		{
 			var $capsule = $J( $elElements[i] );
-			var unAppId = $capsule.data('ds-appid');
-
-			if( !unAppId )
+			var item = fnItemFromCapsule( $capsule );
+			if ( !item )
 				continue;
 
-			if( unAppId.toString().indexOf(',') !== -1 )
-				unAppId = unAppId.toString().split(',')[0];
+			var unAppId = item.appid;
 
-			if( rgAppIds.indexOf( unAppId ) !== -1 )
+			if( unAppId )
 			{
-				$capsule.remove();
-				continue;
-			}
+				if( unAppId.toString().indexOf(',') !== -1 )
+					unAppId = unAppId.toString().split(',')[0];
 
-			var rgAppData = GStoreItemData.rgAppData[unAppId];
-
-			// Treat DLC as the base app; so we either show the DLC or the base game; but only one (and whichever is in top position).
-			// If the user owns the base game already, only show the DLC
-			if( rgAppData && rgAppData.dlc_for_app )
-			{
-				if( !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) && rgAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
+				if( rgAppIds.indexOf( unAppId ) !== -1 )
 				{
 					$capsule.remove();
 					continue;
 				}
 
-				rgAppIds.push( rgAppData.dlc_for_app );
+				var rgAppData = GStoreItemData.rgAppData[unAppId];
+
+				// Treat DLC as the base app; so we either show the DLC or the base game; but only one (and whichever is in top position).
+				// If the user owns the base game already, only show the DLC
+				if( rgAppData && rgAppData.dlc_for_app )
+				{
+					if( !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) && rgAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
+					{
+						$capsule.remove();
+						continue;
+					}
+
+					rgAppIds.push( rgAppData.dlc_for_app );
+				}
+
+
+				rgAppIds.push( unAppId );
 			}
 
-
-			rgAppIds.push( unAppId );
-			rgApps.push( { appid: unAppId } );
+			rgItems.push( item );
 		}
 
 		// Filter
-		var rgFilteredApps = this.FilterItemsForDisplay(
-			rgApps, 'home', nMin, nMax, rgFilterParams
+		var rgFilteredItems = this.FilterItemsForDisplay(
+			rgItems, 'home', nMin, nMax, rgFilterParams
 		);
 
 		// Now follow filters as long we we can keep 4 items in the capsule
 		for( var i = 0; i < $elElements.length; i++ )
 		{
 			var $capsule = $J( $elElements[i] );
-			var nAppId = $capsule.data('ds-appid');
-			if( !nAppId )
+			var item = fnItemFromCapsule( $capsule );
+			if ( !item )
 				continue;
-
-			if( nAppId.toString().indexOf(',') !== -1 )
-				nAppId = nAppId.toString().split(',')[0];
 
 			// Test our filtered list
 			var bVisible = false;
-			for( var j=0; j<rgFilteredApps.length; j++)
-			{
-				if( rgFilteredApps[j].appid == nAppId )
-				{
-					bVisible = true;
-					break;
-				}
-			}
+			if ( this.GetItemFromList( item, rgFilteredItems ) )
+				bVisible = true;
 
 			if( bVisible )
 				$capsule.removeClass('hidden');
@@ -2057,11 +2088,36 @@ GDynamicStorePage = {
 				$capsule.remove();
 		}
 
+		GDynamicStoreHelpers.AddSNRDepthParamsToCapsuleList( $elElements );
 
 		$elElements.parent().trigger('v_contentschanged');
 
 		//if( nCapsules < nMin && $elContainer )
 		//	$elContainer.hide();
+	},
+
+	GetItemFromList: function( oItem, rgList )
+	{
+		if( rgList )
+		{
+
+			for ( var i = 0; i < rgList.length; i++ )
+			{
+				if ( oItem.bundleid && rgList[i].bundleid == oItem.bundleid )
+				{
+					return rgList[i];
+				}
+				else if ( oItem.packageid && rgList[i].packageid == oItem.packageid )
+				{
+					return rgList[i];
+				}
+				else if ( oItem.appid && rgList[i].appid == oItem.appid )
+				{
+					return rgList[i];
+				}
+			}
+		}
+		return null;
 	},
 
 	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay, rgAdditionalSettings )
@@ -2088,6 +2144,7 @@ GDynamicStorePage = {
 
 		return GStoreItemData.FilterItemsForDisplay( rgItems, Settings, ApplicableSettings, cMaxItemsToDisplay, cMinItemsToDisplay )
 	},
+
 };
 
 function ShowHowDoDiscoveryQueuesWorkDialog()

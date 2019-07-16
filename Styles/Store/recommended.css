@@ -1297,10 +1297,11 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 
 .recommendation_area_ctn.similar_grid_ctn {
 	padding-right: 0px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .similar_grid_item {
-	float: left;
 	padding: 12px 8px;
     background: rgba( 0, 0, 0, 0.2 );
     margin-right: 2px;

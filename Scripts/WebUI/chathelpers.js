@@ -439,7 +439,7 @@
         authwgtoken: "",
         is_support: !1
       },
-      u = { steamid: "" },
+      u = { steamid: "", clanid: "", listid: 0 },
       c = "webui_config";
     function p() {
       var e = (function() {
@@ -475,6 +475,8 @@
       t && (delete t.SESSIONID, Object.assign(i, t));
       var n = m("userinfo", e);
       n && Object.assign(s, n);
+      var r = m("broadcast", e);
+      r && Object.assign(u, r);
     }
     function m(e, t) {
       var n;
@@ -483,7 +485,9 @@
         (n = "string" == typeof t ? document.getElementById(t) : t))
       )
         try {
-          return JSON.parse(n.getAttribute("data-" + e) || "");
+          return n.hasAttribute("data-" + e)
+            ? JSON.parse(n.getAttribute("data-" + e))
+            : null;
         } catch (e) {
           console.error("Failed to parse config", e);
         }

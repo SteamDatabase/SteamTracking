@@ -77,9 +77,7 @@ function HighlightPlayer( args )
 	this.m_elemPlayerArea = $JFromIDOrElement(args.elemPlayerArea);
 	this.m_elemStrip = $JFromIDOrElement(args.elemStrip);
 	this.m_elemStripScroll = $JFromIDOrElement(args.elemStripScroll);
-	this.m_rgMovieFlashvars = args.rgMovieFlashvars || new Array();
 	this.m_rgScreenshotURLs = args.rgScreenshotURLs || new Array();
-	this.m_rgDefaultMovieFlashvars = args.rgDefaultMovieFlashvars || {};
 	this.m_bVideoOnlyMode = args.bVideoOnlyMode;
 
 	// sniff support

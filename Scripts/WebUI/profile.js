@@ -11,7 +11,7 @@
     )
       (n = r[c]), u[n] && a.push(u[n][0]), (u[n] = 0);
     for (t in o) Object.prototype.hasOwnProperty.call(o, t) && (s[t] = o[t]);
-    for (p && p(e); a.length; ) a.shift()();
+    for (h && h(e); a.length; ) a.shift()();
     return m.push.apply(m, i || []), l();
   }
   function l() {
@@ -81,7 +81,7 @@
     r = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var o = 0; o < t.length; o++) e(t[o]);
-  var p = r;
+  var h = r;
   m.push(["WC1h", 0]), l();
 })({
   "/7KC": function(e, t, n) {
@@ -136,10 +136,10 @@
         return m;
       }),
       n.d(t, "m", function() {
-        return p;
+        return h;
       }),
       n.d(t, "i", function() {
-        return h;
+        return p;
       }),
       n.d(t, "j", function() {
         return d;
@@ -249,11 +249,11 @@
         t
       );
     }
-    function p(e) {
+    function h(e) {
       var t = void 0;
       return e && (t = e.ownerDocument.defaultView), t;
     }
-    function h(e) {
+    function p(e) {
       var t = document.createElement("textarea");
       (t.textContent = e),
         (t.style.position = "fixed"),
@@ -269,7 +269,7 @@
     }
     function d(e) {
       var t = "steam://openurl/";
-      e.startsWith(t) && (e = e.slice(t.length)), h(e);
+      e.startsWith(t) && (e = e.slice(t.length)), p(e);
     }
     function f(e) {
       return e
@@ -414,10 +414,10 @@
         return m;
       }),
       n.d(t, "h", function() {
-        return p;
+        return h;
       }),
       n.d(t, "m", function() {
-        return h;
+        return p;
       }),
       n.d(t, "i", function() {
         return d;
@@ -450,8 +450,8 @@
       l = 1,
       u = 4,
       m = 750,
-      p = 799,
-      h = 7,
+      h = 799,
+      p = 7,
       d = 250820,
       f = 330050,
       v = 358510,
@@ -661,7 +661,7 @@
         return m;
       }),
       n.d(t, "d", function() {
-        return p;
+        return h;
       });
     var o,
       i = {
@@ -720,7 +720,7 @@
         authwgtoken: "",
         is_support: !1
       },
-      s = { steamid: "" },
+      s = { steamid: "", clanid: "", listid: 0 },
       l = "webui_config";
     function u() {
       var e = (function() {
@@ -752,19 +752,23 @@
     }
     function m(e) {
       void 0 === e && (e = l);
-      var t = p("config", e);
+      var t = h("config", e);
       t && (delete t.SESSIONID, Object.assign(i, t));
-      var n = p("userinfo", e);
+      var n = h("userinfo", e);
       n && Object.assign(a, n);
+      var r = h("broadcast", e);
+      r && Object.assign(s, r);
     }
-    function p(e, t) {
+    function h(e, t) {
       var n;
       if (
         (void 0 === t && (t = l),
         (n = "string" == typeof t ? document.getElementById(t) : t))
       )
         try {
-          return JSON.parse(n.getAttribute("data-" + e) || "");
+          return n.hasAttribute("data-" + e)
+            ? JSON.parse(n.getAttribute("data-" + e))
+            : null;
         } catch (e) {
           console.error("Failed to parse config", e);
         }
@@ -828,14 +832,14 @@
           (o = c.clientX),
           (i = c.clientY);
       } else r = t;
-      var a = new h(e, r, o, i, n);
+      var a = new p(e, r, o, i, n);
       return a.Show(), a;
     }
     function m(e, t, n, r) {
-      var o = new h(e, t, n, r, { bForcePopup: !0, bScreenCoordinates: !0 });
+      var o = new p(e, t, n, r, { bForcePopup: !0, bScreenCoordinates: !0 });
       return o.Show(), o;
     }
-    var p = (function(n) {
+    var h = (function(n) {
         function e(e) {
           var t = n.call(this) || this;
           return (
@@ -991,7 +995,7 @@
           e
         );
       })(s),
-      h = (function(a) {
+      p = (function(a) {
         function s(e, t, n, r, o) {
           var i = a.call(this, t.ownerDocument.defaultView) || this;
           s.sm_iActiveContextMenuInstance &&
@@ -1029,7 +1033,7 @@
           (s.sm_mapEmbeddedMouseOverlays = new l.a("ContextMenuMouseOverlay")),
           s
         );
-      })(p),
+      })(h),
       d = (function(i) {
         function e(e, t, n) {
           var r = i.call(this, n.ownerDocument.defaultView) || this;
@@ -1066,7 +1070,7 @@
           }),
           e
         );
-      })(p);
+      })(h);
   },
   EGkk: function(e, t, n) {
     "use strict";
@@ -1110,8 +1114,8 @@
       o = n("1VtQ"),
       i = n("e2SU"),
       m = n("WpBz"),
-      p = n("oh5H"),
-      h = n("1n9R"),
+      h = n("oh5H"),
+      p = n("1n9R"),
       d = n("7Vyq"),
       f = n.n(d),
       v = n("QHER"),
@@ -1406,13 +1410,13 @@
                 this.props.options.bScreenCoordinates ||
                   ((s += n.screenLeft), (l += n.screenTop)),
                   (r = N.h(n, r));
-                var p = n.screen,
-                  h = 0,
+                var h = n.screen,
+                  p = 0,
                   d = 0;
-                p.availLeft && (h = p.availLeft),
-                  p.availTop && (d = p.availTop),
-                  (u = h + p.availWidth),
-                  (m = d + p.availHeight);
+                h.availLeft && (p = h.availLeft),
+                  h.availTop && (d = h.availTop),
+                  (u = p + h.availWidth),
+                  (m = d + h.availHeight);
               }
               (c.bOverlapHorizontal || c.bOverlapVertical) && (s = l = void 0);
               var f = s || r.left,
@@ -1650,7 +1654,7 @@
                   n.document.execCommand("cut");
                 }
               },
-              Object(p.b)("#ContextMenu_Cut")
+              Object(h.b)("#ContextMenu_Cut")
             )
           ),
         (document.queryCommandEnabled("copy") || o) &&
@@ -1663,10 +1667,10 @@
                   n.document.execCommand("copy");
                 }
               },
-              Object(p.b)("#ContextMenu_Copy")
+              Object(h.b)("#ContextMenu_Copy")
             )
           ),
-        h.b.IN_CLIENT &&
+        p.b.IN_CLIENT &&
           c &&
           t.push(
             a.createElement(
@@ -1677,7 +1681,7 @@
                   i.focus(), n.SteamClient._internal.Paste();
                 }
               },
-              Object(p.b)("#ContextMenu_Paste")
+              Object(h.b)("#ContextMenu_Paste")
             )
           ),
         t.length)
@@ -1812,10 +1816,10 @@
       return s;
     }),
       n.d(t, "a", function() {
-        return p;
+        return h;
       }),
       n.d(t, "b", function() {
-        return h;
+        return p;
       }),
       n.d(t, "d", function() {
         return f;
@@ -1862,7 +1866,7 @@
           e
         );
       })(),
-      p = (function() {
+      h = (function() {
         function e(e, t) {
           (this.m_bFocused = !1),
             (this.m_strName = e),
@@ -2100,7 +2104,7 @@
           e
         );
       })(),
-      h = (function(i) {
+      p = (function(i) {
         function e(e, t, n, r) {
           var o = i.call(this, e, n) || this;
           return o.SetSavedDimensionsKey(t), (o.m_bExpires = r), o;
@@ -2178,7 +2182,7 @@
           o.c([u.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
-      })(p),
+      })(h),
       d = (function() {
         function e() {
           var c = this;
@@ -2289,15 +2293,15 @@
             t.html_class && (u = 'class="' + t.html_class + '"');
             var m = "";
             t.body_class && (m = 'class="' + t.body_class + '"');
-            var p =
+            var h =
               "<!DOCTYPE html><html " +
               u +
               "><head><title></title></head><body " +
               m +
               '><div id="popup_target"></div></body></html>';
-            l.document.write(p), (l.document.title = i);
+            l.document.write(h), (l.document.title = i);
             for (
-              var h = l.document.getElementsByTagName("head")[0],
+              var p = l.document.getElementsByTagName("head")[0],
                 d = document.getElementsByTagName("link"),
                 f = 0;
               f < d.length;
@@ -2313,7 +2317,7 @@
                   var b = v.attributes.item(y);
                   _.setAttribute(b.name, b.value);
                 }
-                h.appendChild(_);
+                p.appendChild(_);
               }
             }
             return {
@@ -2518,8 +2522,8 @@
       l = n("2vnA"),
       u = n("vDqi"),
       m = n.n(u),
-      p = { ProfileURL: "" };
-    function h(e) {
+      h = { ProfileURL: "" };
+    function p(e) {
       switch (e) {
         case 1:
           return Object(a.b)("#Privacy_Private");
@@ -2623,7 +2627,7 @@
                 JSON.stringify(this.m_eCommentPermission)
               ),
               m.a
-                .post(p.ProfileURL + "ajaxsetprivacy/", e)
+                .post(h.ProfileURL + "ajaxsetprivacy/", e)
                 .then(function(e) {
                   var t = e.data;
                   if (1 != t.success)
@@ -2684,7 +2688,7 @@
                 {
                   PrivacyStore: e,
                   strLabel: Object(a.b)("#ProfilePrivacy_BasicDetails"),
-                  strReadOnlySetting: h(3)
+                  strReadOnlySetting: p(3)
                 },
                 Object(a.b)("#ProfilePrivacy_BasicDetails_Desc")
               ),
@@ -2754,12 +2758,12 @@
                     "#ProfilePrivacy_Inventory_Desc",
                     i.createElement(
                       "a",
-                      { href: p.ProfileURL + "inventory/" },
+                      { href: h.ProfileURL + "inventory/" },
                       Object(a.b)("#ProfilePrivacy_Inventory_Inventory")
                     ),
                     i.createElement(
                       "a",
-                      { href: p.ProfileURL + "inventory/#753_6" },
+                      { href: h.ProfileURL + "inventory/#753_6" },
                       Object(a.b)("#ProfilePrivacy_Inventory_TradingCards")
                     )
                   ),
@@ -2794,12 +2798,12 @@
                     "#ProfilePrivacy_UGC_Desc",
                     i.createElement(
                       "a",
-                      { href: p.ProfileURL + "screenshots/" },
+                      { href: h.ProfileURL + "screenshots/" },
                       Object(a.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
                     ),
                     i.createElement(
                       "a",
-                      { href: p.ProfileURL + "myworkshopfiles/" },
+                      { href: h.ProfileURL + "myworkshopfiles/" },
                       Object(a.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
                     )
                   )
@@ -2875,7 +2879,7 @@
             );
         }),
         (t.prototype.render = function() {
-          var e = h(
+          var e = p(
             this.props.PrivacyStore.GetPrivacySetting(this.props.PrivacyKey)
           );
           return i.createElement(
@@ -3153,7 +3157,7 @@
       document.addEventListener("DOMContentLoaded", function() {
         var e;
         Object(c.c)(),
-          (e = Object(c.b)("config", "profile_config")) && Object.assign(p, e),
+          (e = Object(c.b)("config", "profile_config")) && Object.assign(h, e),
           (function() {
             for (
               var e = document.querySelectorAll(".ProfileReactRoot"), t = 0;
@@ -3243,10 +3247,10 @@
         return m;
       }),
       n.d(t, "C", function() {
-        return p;
+        return h;
       }),
       n.d(t, "F", function() {
-        return h;
+        return p;
       }),
       n.d(t, "p", function() {
         return d;
@@ -3405,10 +3409,10 @@
         return me;
       }),
       n.d(t, "d", function() {
-        return pe;
+        return he;
       }),
       n.d(t, "H", function() {
-        return he;
+        return pe;
       }),
       n.d(t, "gb", function() {
         return de;
@@ -3575,7 +3579,7 @@
         })
       );
     }
-    function p() {
+    function h() {
       return o.createElement(
         "svg",
         {
@@ -3603,7 +3607,7 @@
         )
       );
     }
-    function h(e) {
+    function p(e) {
       var t = "SVGIcon_Button SVGIcon_Microphone";
       return (
         e.className && (t += " " + e.className),
@@ -5286,15 +5290,16 @@
             strokeMiterlimit: "10",
             points: "135.65,21.667 30.081,127.235 137.18,234.333 "
           }),
-          o.createElement("polyline", {
-            className: "Arrow2",
-            fill: "none",
-            stroke: "#ffffff",
-            strokeWidth: "23",
-            strokeLinecap: "round",
-            strokeMiterlimit: "10",
-            points: "224.389,21.667 118.821,127.235 225.92,234.333 "
-          })
+          !e.singlearrow &&
+            o.createElement("polyline", {
+              className: "Arrow2",
+              fill: "none",
+              stroke: "#ffffff",
+              strokeWidth: "23",
+              strokeLinecap: "round",
+              strokeMiterlimit: "10",
+              points: "224.389,21.667 118.821,127.235 225.92,234.333 "
+            })
         )
       );
     }
@@ -6212,7 +6217,7 @@
         })
       );
     }
-    function pe() {
+    function he() {
       return o.createElement(
         "svg",
         {
@@ -6233,7 +6238,7 @@
         })
       );
     }
-    function he() {
+    function pe() {
       return o.createElement(
         "svg",
         {
@@ -6649,7 +6654,7 @@ and limitations under the License.
         return m;
       }),
       n.d(t, "a", function() {
-        return p;
+        return h;
       });
     var l = n("q1tI"),
       r = (n("Gp1o"), n("XaMz"), n("ujHl")),
@@ -6731,7 +6736,7 @@ and limitations under the License.
     function a(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = p.LocalizeString(e);
+      var n = h.LocalizeString(e);
       return n
         ? (0 < r.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -6747,7 +6752,7 @@ and limitations under the License.
     function s(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = p.LocalizeString(e);
+      var r = h.LocalizeString(e);
       if (!r) return e;
       for (var o, i = [], c = /(.*?)%(\d+)\$s/g, a = 0; (o = c.exec(r)); ) {
         (a += o[0].length), i.push(o[1]);
@@ -6802,8 +6807,8 @@ and limitations under the License.
     }
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
-    var p = new c();
-    window.LocalizationManager = p;
+    var h = new c();
+    window.LocalizationManager = h;
   },
   "s4p+": function(e, t, n) {
     "use strict";

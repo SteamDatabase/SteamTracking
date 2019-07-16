@@ -1294,6 +1294,13 @@ function V_GetCookie( strCookieName )
 		return null;
 }
 
+
+function V_GetDecodedCookie( strCookieName )
+{
+	var value = V_GetCookie( strCookieName );
+	return value && decodeURIComponent( value );
+}
+
 function V_SetCookie( strCookieName, strValue, expiryInDays, path )
 {
 	if ( !path )

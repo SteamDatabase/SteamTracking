@@ -403,8 +403,7 @@ CWishlistController.prototype.SetFilterString = function()
 
 CWishlistController.prototype.LoadSettings = function()
 {
-	// WebStorage.GetLocal('wishlistSettings');
-	var lsValue = null;
+	var lsValue = WebStorage.GetLocal('wishlistSettings');
 
 
 	var rgPairs = location.hash.substring(1).split('&');
@@ -413,8 +412,8 @@ CWishlistController.prototype.LoadSettings = function()
 		for ( var i = 0; i < rgPairs.length; i++ )
 		{
 			var rgKV = rgPairs[ i ].split ( '=' );
-			var strValue = decodeURIComponent( rgKV[ 1 ] );
-			this.rgFilterSettings[ rgKV[ 0 ] ] = strValue.toLowerCase();
+			this.rgFilterSettings[ rgKV[ 0 ] ] = decodeURIComponent( rgKV[ 1 ] ) ;
+
 			$J('input[name=\''+V_EscapeHTML( rgKV[ 0 ] )+'\']').attr('checked',true);
 		}
 	} else if( lsValue != null )
@@ -427,13 +426,8 @@ CWishlistController.prototype.LoadSettings = function()
 		this.rgFilterSettings.view = lsValue.view;
 	}
 
-
-	var elSwitchToOrder = $J( '.switch_btn' );
 	if( this.rgFilterSettings.sort )
-	{
-		this.rgFilterSettings.sort == 'order' ? elSwitchToOrder.hide() : elSwitchToOrder.show();
-		this.SetDropdownLabel('sort', this.rgFilterSettings.sort);
-	}
+		this.SetDropdownLabel('sort', this.rgFilterSettings.sort );
 	if( this.rgFilterSettings.type )
 		this.SetDropdownLabel('type', this.rgFilterSettings.type );
 	if( this.rgFilterSettings.term )
@@ -659,17 +653,6 @@ CWishlistController.prototype.SetFilterFromDropdown = function( strFilter, elSou
 	$J('#label_' + strFilter).text( elSource.textContent );
 	this.Update();
 	this.SaveSettings();
-
-	var elSwitchToOrder = $J( '.switch_btn' );
-	if ( strFilter == 'sort' && $J(elSource).data('dropdownValue') == 'order' )
-	{
-		elSwitchToOrder.hide();
-	}
-	else
-	{
-		elSwitchToOrder.show();
-	}
-
 }
 
 CWishlistController.prototype.SetViewMode = function( strMode, elSource )

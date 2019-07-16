@@ -402,7 +402,7 @@ GHomepage = {
 				var unAppID = rgApps[i];
 
 				var params = {'class': 'gutter_item ds_no_flags'};
-				var rgItemData = GStoreItemData.GetCapParams( 'gutter_recent', unAppID, 0, null, params );
+				var rgItemData = GStoreItemData.GetCapParams( 'gutter', unAppID, 0, null, params );
 
 				if( !rgItemData || !rgItemData.name )
 					continue;
@@ -531,7 +531,7 @@ GHomepage = {
 			else
 			{
 
-				var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster' );
+				var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster', i );
 				if( !$MainCap )
 					continue;
 
@@ -552,49 +552,25 @@ GHomepage = {
 		GHomepage.MainCapCarousel = CreateFadingCarousel( $J('#home_maincap_v7'), GHomepage.bAutumnSaleMainCap ? 0 : 5 );
 	},
 
-	GetItemFromList: function( oItem, rgList )
-	{
-		if( rgList )
-		{
-
-			for ( var i = 0; i < rgList.length; i++ )
-			{
-				if ( oItem.bundleid && rgList[i].bundleid == oItem.bundleid )
-				{
-					return rgList[i];
-				}
-				else if ( oItem.packageid && rgList[i].packageid == oItem.packageid )
-				{
-					return rgList[i];
-				}
-				else if ( oItem.appid && rgList[i].appid == oItem.appid )
-				{
-					return rgList[i];
-				}
-			}
-		}
-		return null;
-	},
-
 	GetRecommendationReasons: function( oItem )
 	{
 		if( !oItem )
 			return {};
 
 		return {
-			recommended: GHomepage.GetItemFromList( oItem, GHomepage.rgRecommendedGames ),
-			recommended_by_curator: GHomepage.GetItemFromList( oItem, GSteamCurators.rgAppsRecommendedByCurators.apps ),
-			recent_release_by_creator: GHomepage.GetItemFromList( oItem, GHomepage.rgRecentAppsByCreator ),
-			recommended_by_friend: GHomepage.GetItemFromList( oItem, GHomepage.rgFriendRecommendations ),
-			top_seller: GHomepage.GetItemFromList( oItem, GHomepage.oDisplayLists.top_sellers ),
-			new_release: GHomepage.GetItemFromList( oItem, GHomepage.oDisplayLists.popular_new ),
-			featured: GHomepage.GetItemFromList( oItem, GHomepage.oDisplayLists.main_cluster ) ||
-						GHomepage.GetItemFromList( oItem, GHomepage.oDisplayLists.main_cluster_legacy ),
+			recommended: GDynamicStorePage.GetItemFromList( oItem, GHomepage.rgRecommendedGames ),
+			recommended_by_curator: GDynamicStorePage.GetItemFromList( oItem, GSteamCurators.rgAppsRecommendedByCurators.apps ),
+			recent_release_by_creator: GDynamicStorePage.GetItemFromList( oItem, GHomepage.rgRecentAppsByCreator ),
+			recommended_by_friend: GDynamicStorePage.GetItemFromList( oItem, GHomepage.rgFriendRecommendations ),
+			top_seller: GDynamicStorePage.GetItemFromList( oItem, GHomepage.oDisplayLists.top_sellers ),
+			new_release: GDynamicStorePage.GetItemFromList( oItem, GHomepage.oDisplayLists.popular_new ),
+			featured: GDynamicStorePage.GetItemFromList( oItem, GHomepage.oDisplayLists.main_cluster ) ||
+						GDynamicStorePage.GetItemFromList( oItem, GHomepage.oDisplayLists.main_cluster_legacy ),
 		};
 
 	},
 
-	BuildMainCapsuleItem: function( rgItem, strFeatureContext )
+	BuildMainCapsuleItem: function( rgItem, strFeatureContext, nDepth )
 	{
 		var rgOptions = $J.extend({
 			'class': 'store_main_capsule',
@@ -605,7 +581,7 @@ GHomepage = {
 		var unBundleID = rgItem.bundleid;
 
 		var params = { 'class': rgOptions.class + ' broadcast_capsule', 'data-manual-tracking': 1 };
-		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, rgItem, params );
+		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, rgItem, params, nDepth );
 		if ( !rgItemData )
 			return null;
 
@@ -711,15 +687,15 @@ GHomepage = {
 
 			if ( unAppID )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_byfriends' ));
+				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_byfriends', nDepth ));
 			}
 			else if ( unPackageID )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recommended_byfriends' ));
+				$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recommended_byfriends', nDepth ));
 			}
 			else if ( unBundleID )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recommended_byfriends' ));
+				$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recommended_byfriends', nDepth ));
 			}
 		}
 		else if( rgRecommendationReasons.recent_release_by_creator )
@@ -733,7 +709,7 @@ GHomepage = {
 
 			$RecommendedReason.append( $ReasonAvatar );
 			$RecommendedReason.append( $ReasonMain );
-			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_followed_creator' ));
+			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_followed_creator', nDepth ));
 		}
 		else if( rgRecommendationReasons.recommended_by_curator )
 		{
@@ -749,15 +725,15 @@ GHomepage = {
 
 			if ( unAppID )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_bycurators', null, curator.accountid ));
+				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended_bycurators', nDepth, curator.accountid ));
 			}
 			else if ( unPackageID )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recommended_bycurators', null, curator.accountid ));
+				$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recommended_bycurators', nDepth, curator.accountid ));
 			}
 			else if ( unBundleID )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recommended_bycurators', null, curator.accountid ));
+				$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recommended_bycurators', nDepth, curator.accountid ));
 			}
 
 		}
@@ -784,15 +760,15 @@ GHomepage = {
 
 			if ( unAppID )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended' ));
+				$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recommended', nDepth ));
 			}
 			else if ( unPackageID )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recommended' ));
+				$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recommended', nDepth ));
 			}
 			else if ( unBundleID )
 			{
-				$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recommended' ));
+				$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recommended', nDepth ));
 			}
 		}
 		else
@@ -805,30 +781,30 @@ GHomepage = {
 				{
 					if ( unAppID )
 					{
-						$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recenttopseller' ));
+						$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_recenttopseller', nDepth ));
 					}
 					else if ( unPackageID )
 					{
-						$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recenttopseller' ));
+						$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_recenttopseller', nDepth ));
 					}
 					else if ( unBundleID )
 					{
-						$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recenttopseller' ));
+						$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recenttopseller', nDepth ));
 					}
 				}
 				else if ( rgRecommendationReasons.top_seller )
 				{
 					if ( unAppID )
 					{
-						$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller' ));
+						$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_topseller', nDepth ));
 					}
 					else if ( unPackageID )
 					{
-						$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_topseller' ));
+						$CapCtn.attr('href', GStoreItemData.GetPackageURL( unPackageID, 'main_cluster_topseller', nDepth ));
 					}
 					else if ( unBundleID )
 					{
-						$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_topseller' ));
+						$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_topseller', nDepth ));
 					}
 				}
 			}
@@ -985,7 +961,7 @@ GHomepage = {
 
 							for( var i=0; i<rgData.tags.length; i++)
 							{
-								var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab-preview' );
+								var url = GStoreItemData.AddNavEventParamsToURL( 'https://store.steampowered.com/tags/en/TAGNAME/'.replace( /TAGNAME/, encodeURIComponent( rgData.tags[i] ) ), 'tab_preview' );
 								$elTagContainer.append($J('<a>').attr('href',url).text( rgData.tags[i] ));
 							}
 							$elInfoDiv.append($elTagContainer);
@@ -1048,10 +1024,10 @@ GHomepage = {
 
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecentlyUpdated,
-			function( oItem, strFeature, rgOptions )
+			function( oItem, strFeature, rgOptions, nDepth )
 			{
 				var nAppId = oItem.appid;
-				var $CapCtn = GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions );
+				var $CapCtn = GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions, nDepth );
 				var $FriendsCtn = $J('<div class="friends_container" />');
 				$CapCtn.append($FriendsCtn);
 
@@ -1126,10 +1102,10 @@ GHomepage = {
 			return;
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsulesToRender, $RecommendedCreators,
-			function( oItem, strFeature, rgOptions )
+			function( oItem, strFeature, rgOptions, nDepth )
 			{
 				var nAppId = oItem.appid;
-				var $CapCtn = GHomepage.BuildHomePageGenericCap( 'creator_recommendations', nAppId, null, null, rgOptions );
+				var $CapCtn = GHomepage.BuildHomePageGenericCap( 'creator_recommendations', nAppId, null, null, rgOptions, nDepth );
 				$CapCtn.append( BuildCreatorCapsuleToAppend( oItem ) );
 
 				return $CapCtn;
@@ -1153,9 +1129,9 @@ GHomepage = {
 			return;
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $TopVRTitles,
-			function( oItem, strFeature, rgOptions )
+			function( oItem, strFeature, rgOptions, nDepth )
 			{
-				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions);
+				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
 			},	'best_selling_vr', 4
 		);
 	},		
@@ -1240,7 +1216,6 @@ GHomepage = {
 
 
 		$J('.specials_target').each(function(i,j){
-
 			var idx = i % nSpecials;
 			if ( i >= rgCapsules.length )
 				return;
@@ -1248,11 +1223,11 @@ GHomepage = {
 			oItem = rgCapsules[ idx ];
 			var strHTMLID = ( oItem.appid || oItem.packageid || oItem.bundleid ) + '_special_timer';
 
-			$J ( j ).append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
+			var $Target = $J(j);
+			$Target.append ( GHomepage.BuildHomePageGenericCap ( 'spotlight_specials', oItem.appid, oItem.packageid, oItem.bundleid, {
 					'discount_class': 'daily_deal_discount discount_block_large',
 					'capsule_size': 'header'
-
-			} ) );
+			}, $Target.data('depth') ) );
 
 			$J( function() {
 				InitDailyDealTimer( $J('#'+strHTMLID),oItem.discount_end);
@@ -1275,9 +1250,9 @@ GHomepage = {
 
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecentlyUpdated,
-			function( oItem, strFeature, rgOptions )
+			function( oItem, strFeature, rgOptions, nDepth )
 			{
-				var $CapCtn = GHomepage.BuildHomePageGenericCap ( strFeature, oItem.appid, null, null, rgOptions );
+				var $CapCtn = GHomepage.BuildHomePageGenericCap ( strFeature, oItem.appid, null, null, rgOptions, nDepth );
 				$CapCtn.append ( $J ( '<div/>', { 'class': 'recently_updated_desc' } ).text ( oItem.description ) );
 				if ( oItem.announcementid.length != 0 )
 				{
@@ -1301,94 +1276,6 @@ GHomepage = {
 
 	},
 
-
-	FilterCapsules: function( nMin, nMax, $elElements, $elContainer, rgFilterParams)
-	{
-		var nCapsules = $elElements.length;
-
-		// Get a list of appids to filter
-		var rgApps = [];
-		var rgAllAppIds = [];
-		var rgAppIds = [];
-
-		// Remove duplicates or DLC from the list
-		for( var i = 0; i < $elElements.length; i++ )
-		{
-			var $capsule = $J( $elElements[i] );
-			var unAppId = $capsule.data('ds-appid');
-
-			if( !unAppId )
-				continue;
-
-			if( unAppId.toString().indexOf(',') !== -1 )
-				unAppId = unAppId.toString().split(',')[0];
-
-			if( rgAppIds.indexOf( unAppId ) !== -1 )
-			{
-				$capsule.remove();
-				continue;
-			}
-
-			var rgAppData = GStoreItemData.rgAppData[unAppId];
-
-			// Treat DLC as the base app; so we either show the DLC or the base game; but only one (and whichever is in top position).
-			// If the user owns the base game already, only show the DLC
-			if( rgAppData && rgAppData.dlc_for_app )
-			{
-				if( !GDynamicStore.BIsAppOwned( rgAppData.dlc_for_app, false ) && rgAppIds.indexOf( parseInt( rgAppData.dlc_for_app ) ) !== -1 )
-				{
-					$capsule.remove();
-					continue;
-				}
-
-				rgAppIds.push( rgAppData.dlc_for_app );
-			}
-
-
-			rgAppIds.push( unAppId );
-			rgApps.push( { appid: unAppId } );
-		}
-
-		// Filter
-		var rgFilteredApps = GHomepage.FilterItemsForDisplay(
-			rgApps, 'home', nMin, nMax, rgFilterParams
-		);
-
-		// Now follow filters as long we we can keep 4 items in the capsule
-		for( var i = 0; i < $elElements.length; i++ )
-		{
-			var $capsule = $J( $elElements[i] );
-			var nAppId = $capsule.data('ds-appid');
-			if( !nAppId )
-				continue;
-
-			if( nAppId.toString().indexOf(',') !== -1 )
-				nAppId = nAppId.toString().split(',')[0];
-
-			// Test our filtered list
-			var bVisible = false;
-			for( var j=0; j<rgFilteredApps.length; j++)
-			{
-				if( rgFilteredApps[j].appid == nAppId )
-				{
-					bVisible = true;
-					break;
-				}
-			}
-
-			if( bVisible )
-				$capsule.removeClass('hidden');
-			else
-				$capsule.remove();
-		}
-
-
-		$elElements.parent().trigger('v_contentschanged');
-
-		//if( nCapsules < nMin && $elContainer )
-		//	$elContainer.hide();
-	},
-
 	FilterTabs: function()
 	{
 		var rgTabSections =  ['#tab_newreleases_content', '#tab_topsellers_content', '#tab_specials_content'];
@@ -1397,11 +1284,11 @@ GHomepage = {
 		{
 			var $elTabSection = $J( rgTabSections[i] );
 
-			this.FilterCapsules( 10, 10, $elTabSection.children(), $elTabSection, { games_already_in_library: false, only_current_platform: true } )
+			GDynamicStorePage.FilterCapsules( 10, 10, $elTabSection.children('.tab_item'), $elTabSection, { games_already_in_library: false, only_current_platform: true } )
 		}
 
 		var $elTabSection = $J( '#tab_upcoming_content' );
-		this.FilterCapsules( 10, 10, $elTabSection.children(), $elTabSection, { games_already_in_library: false, only_current_platform: true, prepurchase: true } )
+		GDynamicStorePage.FilterCapsules( 10, 10, $elTabSection.children('.tab_item'), $elTabSection, { games_already_in_library: false, only_current_platform: true, prepurchase: true } )
 
 	},
 
@@ -1418,6 +1305,8 @@ GHomepage = {
 				if( rgCapsules.length < nCapsules )
 			return;
 
+		var nPage = 0;
+
 		for( var j=0; j<rgCapsules.length; j+=nCapsules )
 		{
 			// Try to avoid half-filling a page
@@ -1431,7 +1320,7 @@ GHomepage = {
 				var rgOptions = {};
 				if( j > 0 )
 					rgOptions.lazy = true;
-				var $CapCtn = fnCapsule( oItem, strNavContext, rgOptions );
+				var $CapCtn = fnCapsule( oItem, strNavContext, rgOptions, nPage );
 				if( !$CapCtn )
 					continue;
 
@@ -1444,6 +1333,7 @@ GHomepage = {
 			}
 
 			$elCapsuleTarget.append($elPageContainer);
+			nPage++;
 
 			if ( bPaginated )
 			{
@@ -1476,8 +1366,8 @@ GHomepage = {
 			);
 		}
 
-		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $J('.specials_under10'), function( oItem, strFeature, rgOptions ) {
-			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions);
+		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $J('.specials_under10'), function( oItem, strFeature, rgOptions, nDepth ) {
+			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
 		} , 'under10', 4 );
 	},
 
@@ -1486,8 +1376,8 @@ GHomepage = {
 				if ( !rgItems || !rgItems.length )
 			return;
 
-		GHomepage.FillPagedCapsuleCarousel( rgItems, $J('.wishlist_on_sale'), function( oItem, strFeature, rgOptions ) {
-			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions);
+		GHomepage.FillPagedCapsuleCarousel( rgItems, $J('.wishlist_on_sale'), function( oItem, strFeature, rgOptions, nDepth ) {
+			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth);
 		} , 'sale_fromyourwishlist', 4 );
 
 		GDynamicStore.MarkAppDisplayed ( rgItems.slice( 0, 4 ) );
@@ -1584,7 +1474,7 @@ GHomepage = {
 		return $CapCtn;
 	},
 
-	BuildHomePageGenericCap: function( strFeatureContext, unAppID, unPackageID, unBundleID, rgOptions )
+	BuildHomePageGenericCap: function( strFeatureContext, unAppID, unPackageID, unBundleID, rgOptions, nDepth )
 	{
 		var rgOptions = $J.extend({
 			'class': 'store_capsule',
@@ -1596,7 +1486,7 @@ GHomepage = {
 		}, rgOptions ? rgOptions : {} );
 
 		var params = { 'class': rgOptions.class + ' broadcast_capsule' };
-		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, unBundleID, params );
+		var rgItemData = GStoreItemData.GetCapParams( strFeatureContext, unAppID, unPackageID, unBundleID, params, nDepth );
 		if ( !rgItemData )
 			return null;
 
@@ -1886,7 +1776,7 @@ GHomepage = {
 		{
 			var params = {};
 
-			var rgItemData = GStoreItemData.GetCapParams ( 'marketingmessage', message.appid, message.packageid, null, params );
+			var rgItemData = GStoreItemData.GetCapParams ( 'marketing_message', message.appid, message.packageid, null, params );
 
 			var strUrl = GStoreItemData.AddNavEventParamsToURL( message.url, 'marketing_message' )
 
@@ -2923,7 +2813,9 @@ function ScrollToDynamicContent()
 function HomeTabSelect( elem, target )
 {
 	TabSelect( elem, target );
-	$J('#' + target + ' .tab_item').first().trigger('mouseenter');
+	var $List = $J('#' + target);
+	$List.children('.tab_item:first-child').trigger('mouseenter');
+	GDynamicStoreHelpers.AddSNRDepthParamsToCapsuleList( $List.children('.tab_item') );
 }
 
 function TabSelectLast()

@@ -733,6 +733,23 @@ h3 {
 	margin-right: 17px;
 }
 
+.inappropriateNotification
+{
+	text-align: left;
+	margin: 0px auto;
+	margin-bottom: 8px;
+	padding: 18px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	color: #ffffff;
+	font-size: 14px;
+	background-color: #ca5029;
+	border-color: #534436;;
+	border-style: solid;
+	border-width: 2px;
+	margin-right: 17px;
+}
+
 .incompatibleNotification a
 {
 	text-decoration: underline;

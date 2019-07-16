@@ -4185,10 +4185,10 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 .item_store_items_game_page_container
 {
 	margin-top: 2px;
-	margin-right: -4px;
 	position: relative;
 	padding: 10px;
 	display: flex;
+    justify-content: space-between;
 
 	background: -moz-linear-gradient(-60deg,  rgba(97,100,101,0.3) 0%, rgba(226,244,255,0.3) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(97,100,101,0.3)), color-stop(100%,rgba(226,244,255,0.3))); /* Chrome,Safari4+ */
@@ -4228,10 +4228,10 @@ background: -webkit-linear-gradient( 315deg, #356480 5%,#1a303d 95%);
 
 .item_def_icon
 {
-	width: 94px;
-	height: 94px;
-	padding: 10px;
+	width: 114px;
+	height: 114px;
 	border: 1px solid rgba(0,0,0,0);
+    display: block;
 }
 
 .item_def_grid_item .item_def_price
