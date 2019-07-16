@@ -40,6 +40,7 @@
  B ConCommandBaseMgr::g_bReplicatedReadOnly
  B InterfaceReg::s_pInterfaceRegs
  B KeyValues::sm_pchKeyNameBase
+ B gConVarEnableLogTearOff
  B gConVarEnableSpewThrottle
  B gConVarSpewThrottleNagFrequencyMs
  B gConVarSpewThrottlePeriodMs
@@ -529,6 +530,11 @@
  T CFmtStrN<32, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<4096, true, false>::Append(char const*)
  T CFmtStrN<4096, true, false>::CFmtStrN(char const*, ...)
+ T CIPAddress::HasIP() const
+ T CIPAddress::ToString(char*, unsigned int, unsigned short const*) const
+ T CIPAddress::operator==(CIPAddress const&) const
+ T CIPAndPort::CompareAdr(CIPAndPort const&, bool) const
+ T CIPAndPort::ToString(char*, unsigned int, bool) const
  T CIPCToolMachClient::DoKillCommand(char const*)
  T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
  T CIPCToolMachClient::Init()
@@ -1008,6 +1014,7 @@
  T ConVar::IsRegistered() const
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
  T ConVar::OverrideValue(char const*)
+ T ConVar::SetFromConVarsVDF(char const*)
  T ConVar::SetLock(bool)
  T ConVar::SetReplicated()
  T ConVar::SetSendDiscardLocalOverride()
@@ -1025,7 +1032,7 @@
  T ECommitAppBuild(unsigned int, unsigned int, unsigned int const*, unsigned long long const*, char const*, char const*, unsigned int&)
  T EWaitForDepotBuild(unsigned long long, unsigned long long&)
  T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, char const*, ...)
- T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, netadr_t const&, unsigned long long const&, char const*, __va_list_tag*)
+ T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, __va_list_tag*)
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T ExecCommandLine(int, char**)
  T ExecConsoleCommand(char const*)
@@ -1170,10 +1177,6 @@
  T int CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertUnconstructed<unsigned short const&>(unsigned short const&, int*, bool)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
- T netadr_t::CompareAdr(netadr_t const&, bool) const
- T netadr_t::GetIP() const
- T netadr_t::HasIP() const
- T netadr_t::ToString(char*, unsigned int, bool) const
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::destroy(std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::erase(std::__1::__tree_const_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, long>)
@@ -1355,6 +1358,7 @@
  b g_pClientParties
  b g_pClientProductBuilder
  b g_pClientRemoteClientManager
+ b g_pClientRemotePlay
  b g_pClientRemoteStorage
  b g_pClientSTARInternal
  b g_pClientScreenshots
