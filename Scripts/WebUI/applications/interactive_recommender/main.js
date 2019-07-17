@@ -1008,7 +1008,7 @@
       },
       Z = Object(n.a)(function(e) {
         var t = [
-            { value: 0, display: "No Filter " },
+            { value: 0, display: B("#NoFilter") },
             { value: 19, display: U[19] },
             { value: 21, display: U[21] },
             { value: 4166, display: U[4166] },
@@ -1101,11 +1101,15 @@
             this.m_videoRef.current.defaultMuted = !0;
           }),
           (e.prototype.componentDidUpdate = function() {
-            this.state.hovered &&
+            if (
+              this.state.hovered &&
               this.m_videoRef &&
               this.m_videoRef.current &&
-              0 == this.m_videoRef.current.currentTime &&
-              this.m_videoRef.current.play().then(function() {}, function() {});
+              0 == this.m_videoRef.current.currentTime
+            ) {
+              var e = this.m_videoRef.current.play();
+              e && e.then(function() {}, function() {});
+            }
           }),
           (e.prototype.OnHover = function() {
             this.setState({ hovered: !0 });

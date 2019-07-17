@@ -108,6 +108,7 @@ GHomepage = {
 	{
 		try {
 			GHomepage.oSettings = rgParams.oSettings;
+			GDynamicStorePage.oSettings = rgParams.oSettings;	// GDynamicStorePage is used to filter capsule lists, so make sure that has the settings too.
 			GHomepage.CheckLocalStorageSettings();
 
 			if ( rgParams.rgRecommendedGames && rgParams.rgRecommendedGames.length )
