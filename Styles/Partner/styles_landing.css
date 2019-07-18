@@ -2873,6 +2873,13 @@ div .cdkey_request_details_row
 	font-size: x-small;
 	padding: 5px 0px 0px 5px;
 }
+.cdkey_request_support
+{
+	float: left;
+	clear: both;
+	font-size: small;
+	padding: 5px 0px 0px 12px;
+}
 
 #login_btn_signin {
 	white-space: nowrap;
