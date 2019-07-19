@@ -63430,7 +63430,6 @@
               this.props.broadcastChannelID
                 ? this.m_chat.StartForChannel(this.props.broadcastChannelID)
                 : this.props.steamID &&
-                  this.props.broadcastID &&
                   (this.m_chat.StartForSteamID(
                     this.props.steamID,
                     this.props.broadcastID
