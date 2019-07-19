@@ -6100,9 +6100,9 @@
           (e = i.c([r.a], e))
         );
       })(u.a.Component);
-    function F(e) {
+    function F() {
       return u.a.createElement("div", {
-        className: "BroadcastCSGOFaceitOffline"
+        className: "BroadcastCSGOStarLadderOffline"
       });
     }
     function x(e) {
@@ -14900,6 +14900,7 @@
                         steamid: c.m_steamIDBroadcast,
                         broadcastid: t,
                         location:
+                          n &&
                           n.m_rgVideos &&
                           n.m_rgVideos[0] &&
                           n.m_rgVideos[0].GetWatchLocation()
@@ -23941,154 +23942,130 @@
           if (void 0 !== this.state.EdgeDown) {
             switch ((e.shiftKey && this.m_fnMouseUp(), t)) {
               case k.left:
-                this.setState({ curLeftPosPct: this.CalcLeftEdge(e.clientX) }),
-                  this.CheckLeftEdge();
-                break;
-              case k.right:
-                this.setState({
-                  curRightPosPct: this.CalcRightEdge(e.clientX)
-                }),
-                  this.CheckRightEdge();
-                break;
-              case k.top:
-                this.setState({ curTopPosPct: this.CalcTopEdge(e.clientY) }),
-                  this.CheckTopEdge();
-                break;
-              case k.bottom:
-                this.setState({
-                  curBottomPosPct: this.CalcBottomEdge(e.clientY)
-                }),
-                  this.CheckBottomEdge();
-                break;
-              case k.topleft:
-                this.setState({ curTopPosPct: this.CalcTopEdge(e.clientY) }),
-                  this.setState({
-                    curLeftPosPct: this.CalcLeftEdge(e.clientX)
-                  }),
-                  this.CheckTopEdge(),
-                  this.CheckLeftEdge();
-                break;
-              case k.topright:
-                this.setState({ curTopPosPct: this.CalcTopEdge(e.clientY) }),
-                  this.setState({
-                    curRightPosPct: this.CalcRightEdge(e.clientX)
-                  }),
-                  this.CheckTopEdge(),
-                  this.CheckRightEdge();
-                break;
-              case k.bottomleft:
-                this.setState({
-                  curBottomPosPct: this.CalcBottomEdge(e.clientY)
-                }),
-                  this.setState({
-                    curLeftPosPct: this.CalcLeftEdge(e.clientX)
-                  }),
-                  this.CheckBottomEdge(),
-                  this.CheckLeftEdge();
-                break;
-              case k.bottomright:
-                this.setState({
-                  curBottomPosPct: this.CalcBottomEdge(e.clientY)
-                }),
-                  this.setState({
-                    curRightPosPct: this.CalcRightEdge(e.clientX)
-                  }),
-                  this.CheckBottomEdge(),
-                  this.CheckRightEdge();
-                break;
-              case k.middle:
                 var n = {
                   curLeftPosPct: this.CalcLeftEdge(e.clientX),
+                  curBottomPosPct: this.state.curBottomPosPct
+                };
+                this.props.bLockAspectRatio &&
+                  (n.curBottomPosPct =
+                    100 -
+                    (this.state.curTopPosPct +
+                      (100 - this.state.curRightPosPct - n.curLeftPosPct))),
+                  0 < n.curLeftPosPct &&
+                    0 < n.curBottomPosPct &&
+                    this.setState(n);
+                break;
+              case k.right:
+                n = {
+                  curRightPosPct: this.CalcRightEdge(e.clientX),
+                  curBottomPosPct: this.state.curBottomPosPct
+                };
+                this.props.bLockAspectRatio &&
+                  (n.curBottomPosPct =
+                    100 -
+                    (this.state.curTopPosPct +
+                      (100 - n.curRightPosPct - this.state.curLeftPosPct))),
+                  0 < n.curRightPosPct &&
+                    0 < n.curBottomPosPct &&
+                    this.setState(n);
+                break;
+              case k.top:
+                n = {
                   curTopPosPct: this.CalcTopEdge(e.clientY),
+                  curRightPosPct: this.state.curRightPosPct
+                };
+                this.props.bLockAspectRatio &&
+                  (n.curRightPosPct =
+                    100 -
+                    (this.state.curLeftPosPct +
+                      (100 - this.state.curBottomPosPct - n.curTopPosPct))),
+                  0 < n.curTopPosPct &&
+                    0 < n.curRightPosPct &&
+                    this.setState(n);
+                break;
+              case k.bottom:
+                n = {
+                  curBottomPosPct: this.CalcBottomEdge(e.clientY),
+                  curRightPosPct: this.state.curRightPosPct
+                };
+                this.props.bLockAspectRatio &&
+                  (n.curRightPosPct =
+                    100 -
+                    (this.state.curLeftPosPct +
+                      (100 - n.curBottomPosPct - this.state.curTopPosPct))),
+                  0 < n.curBottomPosPct &&
+                    0 < n.curRightPosPct &&
+                    this.setState(n);
+                break;
+              case k.topleft:
+                n = {
+                  curTopPosPct: this.CalcBottomEdge(e.clientY),
+                  curLeftPosPct: this.CalcLeftEdge(e.clientX)
+                };
+                this.props.bLockAspectRatio &&
+                  (n.curTopPosPct =
+                    100 -
+                    this.state.curBottomPosPct -
+                    (100 - this.state.curRightPosPct - n.curLeftPosPct)),
+                  0 < n.curTopPosPct && 0 < n.curLeftPosPct && this.setState(n);
+                break;
+              case k.topright:
+                n = {
+                  curTopPosPct: this.CalcTopEdge(e.clientY),
+                  curRightPosPct: this.CalcRightEdge(e.clientX)
+                };
+                this.props.bLockAspectRatio &&
+                  (n.curTopPosPct =
+                    100 -
+                    this.state.curBottomPosPct -
+                    (100 - n.curRightPosPct - this.state.curLeftPosPct)),
+                  0 < n.curTopPosPct &&
+                    0 < n.curRightPosPct &&
+                    this.setState(n);
+                break;
+              case k.bottomleft:
+                n = {
+                  curLeftPosPct: this.CalcLeftEdge(e.clientX),
+                  curBottomPosPct: this.CalcBottomEdge(e.clientY)
+                };
+                this.props.bLockAspectRatio &&
+                  (n.curBottomPosPct =
+                    100 -
+                    (this.state.curTopPosPct +
+                      (100 - this.state.curRightPosPct - n.curLeftPosPct))),
+                  0 < n.curLeftPosPct &&
+                    0 < n.curBottomPosPct &&
+                    this.setState(n);
+                break;
+              case k.bottomright:
+                n = {
                   curRightPosPct: this.CalcRightEdge(e.clientX),
                   curBottomPosPct: this.CalcBottomEdge(e.clientY)
                 };
-                0 < n.curLeftPosPct &&
+                this.props.bLockAspectRatio &&
+                  (n.curBottomPosPct =
+                    100 -
+                    (this.state.curTopPosPct +
+                      (100 - n.curRightPosPct - this.state.curLeftPosPct))),
+                  0 < n.curRightPosPct &&
+                    0 < n.curBottomPosPct &&
+                    this.setState(n);
+                break;
+              case k.middle:
+                0 <
+                  (n = {
+                    curLeftPosPct: this.CalcLeftEdge(e.clientX),
+                    curTopPosPct: this.CalcTopEdge(e.clientY),
+                    curRightPosPct: this.CalcRightEdge(e.clientX),
+                    curBottomPosPct: this.CalcBottomEdge(e.clientY)
+                  }).curLeftPosPct &&
                   0 < n.curTopPosPct &&
                   0 < n.curRightPosPct &&
                   0 < n.curBottomPosPct &&
                   this.setState(n);
             }
-            if (this.props.bLockAspectRatio)
-              switch (t) {
-                case k.left:
-                case k.bottomleft:
-                  var o = this.CalcLeftEdge(e.clientX),
-                    i =
-                      100 -
-                      (this.state.curTopPosPct +
-                        (100 - this.state.curRightPosPct - o));
-                  this.setState({ curBottomPosPct: i });
-                  break;
-                case k.right:
-                case k.bottomright:
-                  var r = this.CalcRightEdge(e.clientX);
-                  i =
-                    100 -
-                    (this.state.curTopPosPct +
-                      (100 - r - this.state.curLeftPosPct));
-                  this.setState({ curBottomPosPct: i });
-                  break;
-                case k.top:
-                case k.topright:
-                  var a = this.CalcTopEdge(e.clientY);
-                  r =
-                    100 -
-                    (this.state.curLeftPosPct +
-                      (100 - this.state.curBottomPosPct - a));
-                  this.setState({ curRightPosPct: r });
-                  break;
-                case k.bottom:
-                  (i = this.CalcBottomEdge(e.clientY)),
-                    (r =
-                      100 -
-                      (this.state.curLeftPosPct +
-                        (100 - i - this.state.curTopPosPct)));
-                  this.setState({ curRightPosPct: r });
-                  break;
-                case k.topleft:
-                  (o = this.CalcLeftEdge(e.clientX)),
-                    (a =
-                      100 -
-                      this.state.curBottomPosPct -
-                      (100 - this.state.curRightPosPct - o));
-                  this.setState({ curTopPosPct: a });
-              }
-            98 < this.state.curTopPosPct
-              ? this.setState({ curTopPosPct: 98 })
-              : 98 < this.state.curBottomPosPct &&
-                this.setState({ curBottomPosPct: 98 }),
-              99 < this.state.curLeftPosPct
-                ? this.setState({ curLeftPosPct: 99 })
-                : 99 < this.state.curRightPosPct &&
-                  this.setState({ curRightPosPct: 99 }),
-              this.state.curRightPosPct < 0
-                ? this.setState({ curRightPosPct: 0 })
-                : this.state.curLeftPosPct < 0 &&
-                  this.setState({ curLeftPosPct: 0 }),
-              this.state.curBottomPosPct < 0
-                ? this.setState({ curBottomPosPct: 0 })
-                : this.state.curTopPosPct < 0 &&
-                  this.setState({ curTopPosPct: 0 }),
-              e.preventDefault(),
-              e.stopPropagation();
+            e.preventDefault(), e.stopPropagation();
           }
-        }),
-        (e.prototype.CheckBottomEdge = function() {
-          this.state.curBottomPosPct > 98 - this.state.curTopPosPct &&
-            this.setState({ curBottomPosPct: 98 - this.state.curTopPosPct });
-        }),
-        (e.prototype.CheckRightEdge = function() {
-          this.state.curRightPosPct > 99 - this.state.curLeftPosPct &&
-            this.setState({ curRightPosPct: 99 - this.state.curLeftPosPct });
-        }),
-        (e.prototype.CheckTopEdge = function() {
-          this.state.curTopPosPct > 98 - this.state.curBottomPosPct &&
-            this.setState({ curTopPosPct: 98 - this.state.curBottomPosPct });
-        }),
-        (e.prototype.CheckLeftEdge = function() {
-          this.state.curLeftPosPct > 99 - this.state.curRightPosPct &&
-            this.setState({ curLeftPosPct: 99 - this.state.curRightPosPct });
         }),
         (e.prototype.CalcLeftEdge = function(e) {
           return (
@@ -24349,10 +24326,6 @@
         i.c([a.a], e.prototype, "LinkRegionBoxRef", null),
         i.c([a.a], e.prototype, "OnMouseDown", null),
         i.c([a.a], e.prototype, "OnMouseMove", null),
-        i.c([a.a], e.prototype, "CheckBottomEdge", null),
-        i.c([a.a], e.prototype, "CheckRightEdge", null),
-        i.c([a.a], e.prototype, "CheckTopEdge", null),
-        i.c([a.a], e.prototype, "CheckLeftEdge", null),
         i.c([a.a], e.prototype, "CalcLeftEdge", null),
         i.c([a.a], e.prototype, "CalcRightEdge", null),
         i.c([a.a], e.prototype, "CalcTopEdge", null),
@@ -35030,7 +35003,18 @@
             tabIcon: "public/images/webui/broadcast/artifact_icon.png",
             offlineClassName: "BroadcastArtifactOffline"
           })
-        : "76561198846304683" == e || "148618792083695635" == e
+        : "76561198871875463" == e || "148618792083695635" == e
+        ? r.init({
+            bValid: !0,
+            stream: { "76561198871875463": "#Broadcast_Stream1" },
+            name: "CSGO: StarLadder",
+            appID: 730,
+            link: "https://store.steampowered.com/app/730",
+            linkName: "CSGO on Steam",
+            tabIcon: "public/images/webui/broadcast/csgo_esl_2019_icon.png",
+            offlineClassName: "BroadcastCSGOStarLadderOffline"
+          })
+        : "76561198846304683" == e
         ? r.init({
             bValid: !0,
             stream: { "76561198846304683": "#Broadcast_Stream1" },
@@ -35062,17 +35046,6 @@
             linkName: "steam.tv/steamawards",
             tabIcon: "public/images/webui/broadcast/awards_icon.png",
             offlineClassName: "BroadcastSteamAwardsOffline"
-          })
-        : "76561198871875463" == e
-        ? r.init({
-            bValid: !0,
-            stream: { "76561198871875463": "#Broadcast_EnglishMain" },
-            name: "The Chongqing Major",
-            appID: 570,
-            link: "https://store.steampowered.com/app/570/Dota_2/",
-            linkName: "steam.tv/dota",
-            tabIcon: "public/images/webui/broadcast/chongqing_icon.png",
-            offlineClassName: "BroadcastDOTAChongqingOffline"
           })
         : "76561198198486997" == e
         ? r.init({

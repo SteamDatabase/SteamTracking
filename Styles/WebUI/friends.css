@@ -3155,7 +3155,8 @@ iframe.steamTVLogin {
 .BroadcastDOTATrueSight,
 .BroadcastSteamAwardsOffline,
 .BroadcastCSGOKatowiceOffline,
-.BroadcastCSGOFaceitOffline {
+.BroadcastCSGOFaceitOffline,
+.BroadcastCSGOStarLadderOffline {
   position: absolute;
   top: 0;
   right: 0;
@@ -3188,6 +3189,9 @@ iframe.steamTVLogin {
 
 .BroadcastCSGOFaceitOffline {
   background-image: url(../../images/webui/49518cb5b18bbb99097de1c97c8ca3ad.png); }
+
+.BroadcastCSGOStarLadderOffline {
+  background-image: url(../../images/webui/d9278ace8edb6bcc0445b7c78793936f.png); }
 
 .BroadcastDOTATrueSight {
   background-image: url(../../images/webui/76fe7e99122605af14a8d80fe6be5692.png); }
