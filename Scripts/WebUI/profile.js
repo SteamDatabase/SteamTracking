@@ -5778,7 +5778,7 @@
           version: "1.1",
           id: "Layer_1",
           xmlns: "http://www.w3.org/2000/svg",
-          transform: e.bFlipHorizontal ? "scale(-1 1)" : "scale(1 1)",
+          style: { transform: "scaleX(" + (e.bFlipHorizontal ? -1 : 1) + ")" },
           className: "SVGIcon_Button SVGIcon_MediaControls",
           x: "0px",
           y: "0px",

@@ -348,6 +348,7 @@ GDynamicStore = {
 
 	},
 
+	s_oImpressionsTracked: {},
 	AddImpressionFromDynamicItem: function( $Elem )
 	{
 		if ( $Elem.hasClass( 'app_impression_tracked' ) )
@@ -365,21 +366,43 @@ GDynamicStore = {
 		{
 			return;
 		}
-		if ( typeof strAppIDs == 'string' && strAppIDs.indexOf( ',' ) >= 0 )
+
+		var rgAppIds;
+		if ( typeof strAppIDs == 'string' && ( strAppIDs.indexOf( ',' ) >= 0 || strAppIDs.indexOf( ':' ) >= 0 ))
 		{
-			strAppIDs = strAppIDs.replace(/,/g , ":");
+			rgAppIds = strAppIDs.split( /[,:]/ );
 		}
+		else
+		{
+			rgAppIds = [ parseInt( strAppIDs ) ];
+		}
+
 		var snr = GetElemSNR( $Elem );
 		if ( !snr )
 		{
 			return;
 		}
 
-		
+		var rgAppIDsToReport = [];
+		for ( var i = 0; i < rgAppIds.length; i++ )
+		{
+			var nAppID = rgAppIds[i];
+			var strImpressionData = nAppID + '@' + snr;
 
-		var strImpressionData = strAppIDs + '@' + snr;
-		rgImpressions.push( strImpressionData );
+			if ( !GDynamicStore.s_oImpressionsTracked[ strImpressionData ] )
+			{
+				GDynamicStore.s_oImpressionsTracked[ strImpressionData ] = true;
 
+				
+
+				rgAppIDsToReport.push( nAppID );
+			}
+		}
+
+		if ( !rgAppIDsToReport.length )
+			return;
+
+		rgImpressions.push( rgAppIDsToReport.join( ':' ) + '@' + snr );
 		V_SetCookie( "app_impressions", rgImpressions.join( '|' ) );
 	},
 
@@ -1973,7 +1996,7 @@ var GDynamicStoreHelpers = {
 
 	AddSNRDepthParamsToCapsuleList( $Capsules )
 	{
-		var nDepth = 0;
+		var nDepth = 1;
 		$Capsules.filter('a:visible').each( function() {
 			ModifyLinkSNR( $J(this), function( snr ) {
 				var rgParts = snr.split('_');

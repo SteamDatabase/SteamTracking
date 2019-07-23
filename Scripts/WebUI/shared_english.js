@@ -617,7 +617,7 @@ LocalizationReady("shared", "english", {
   PartnerEvent_25: "Challenge Event",
   PartnerEvent_26: "Contest Event",
   PartnerEvent_27: "IRL Event",
-  PartnerEvent_28: "News Event",
+  PartnerEvent_28: "News",
   PartnerEvent_29: "Beta Release",
   PartnerEvent_30: "In-Game Content Updated",
   PartnerEvent_31: "Free Trial",

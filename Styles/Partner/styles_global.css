@@ -522,7 +522,9 @@ input[type="radio"] {
 
 input[type=submit]:not(.btn_green_white_innerfade),
 input[type=reset]:not(.btn_green_white_innerfade),
-button {
+button,
+button[type=submit].btn_darkblue_white_innerfade,
+button[type=button].btn_darkblue_white_innerfade {
 	border-radius: 2px;
 	border: none;
 	padding: 3px 5px;

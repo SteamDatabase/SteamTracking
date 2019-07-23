@@ -1831,6 +1831,12 @@ tr .faded, .tr.faded {
 .tr.checkerboard2 .td{
 	background-color: #000000 !important;
 }
+.isa_warning {
+	color: #9F6000;
+	background-color: #FEEFB3;
+	margin: 10px 0px;
+	padding:12px;
+}
 
 .pricing_was, .oldPrice {
 	font-size: 10px;

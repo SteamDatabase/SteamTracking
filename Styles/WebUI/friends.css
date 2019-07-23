@@ -2078,6 +2078,10 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 .videoControlButton.controlFlip .SVGIcon_Button {
   margin-left: -6px; }
 
+.videoControlButton.videoControlJump {
+  display: flex;
+  align-items: center; }
+
 .videoControlButton .SVGIcon_Button polyline,
 .videoControlButton .SVGIcon_Button path {
   fill: #7e7e7e;
@@ -2158,7 +2162,6 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 
 .videoControlButton .jumpAheadValue {
   position: absolute;
-  top: 7px;
   left: 9px;
   color: #141823;
   font-size: 12px; }
@@ -3239,113 +3242,6 @@ iframe.steamTVLogin {
   color: #d3d3d3;
   line-height: 18px; }
 
-.StoreSaleWidgetContainer {
-  display: flex;
-  flex-direction: row;
-  max-width: 780px;
-  overflow: hidden;
-  max-height: 200px;
-  z-index: 1; }
-
-.StoreSaleWidgetContainer_mini,
-.StoreSaleWidgetContainer_column {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  max-height: 337px; }
-
-.StoreSaleWidgetContainer_mini {
-  max-width: 155px;
-  background: #000; }
-
-.StoreSaleWidgetContainer_column {
-  max-width: 310px;
-  padding: 8px; }
-
-.StoreSaleWidgetImage {
-  padding-right: 16px;
-  cursor: pointer; }
-
-.StoreSaleWidgetImage_mini {
-  cursor: pointer;
-  max-width: 155px; }
-
-.StoreSaleWidgetImage_column {
-  cursor: pointer;
-  max-width: 310px; }
-
-.StoreSaleImage {
-  cursor: pointer; }
-
-.StoreSaleImage_mini {
-  cursor: pointer;
-  width: 155px; }
-
-.StoreSaleImage_column {
-  cursor: pointer;
-  width: 294px; }
-
-.StoreSaleWidgetTitle {
-  cursor: pointer;
-  font-size: 19px;
-  width: fit-content;
-  color: #c1c6cf;
-  flex-shrink: 0; }
-
-.StoreSaleWidgetTitle:hover {
-  color: #AAA; }
-
-.StoreSaleWidgetRelease {
-  font-size: 10px;
-  color: #919fb1;
-  margin-bottom: 8px; }
-
-.StoreSaleWidgetShortDesc {
-  font-size: 12px; }
-
-.StoreSaleWidgetShortDesc_column,
-.StoreSaleWidgetShortDesc_mini {
-  max-height: 160px;
-  overflow-y: scroll;
-  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
-  padding-bottom: 8px;
-  overflow: hidden;
-  letter-spacing: 0px;
-  line-height: 15px; }
-
-.StoreSalePriceActionWidgetContainer {
-  display: flex;
-  flex-direction: row;
-  padding: 1px;
-  justify-content: flex-end; }
-
-.StoreSalePriceBox {
-  padding: 5px;
-  background-color: black; }
-
-.StoreSalePriceButton {
-  border-radius: 2px;
-  border: none;
-  padding: 1px;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none !important;
-  color: #D2E885 !important;
-  background: #799905;
-  background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
-  background: linear-gradient(to bottom, #799905 5%, #536904 95%);
-  padding: 0 15px;
-  font-size: 15px;
-  line-height: 30px; }
-
-.StoreSalePriceButton:hover {
-  text-decoration: none !important;
-  color: #ffffff !important;
-  background: #a4d007;
-  background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
-  background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%); }
-
 .LinkOverlayContainer {
   position: absolute;
   top: 0;
@@ -3594,6 +3490,113 @@ iframe.steamTVLogin {
     .BroadcastDetailsSection {
       flex-basis: auto;
       max-height: 32px; } }
+
+.StoreSaleWidgetContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 780px;
+  overflow: hidden;
+  max-height: 200px;
+  z-index: 1; }
+
+.StoreSaleWidgetContainer_mini,
+.StoreSaleWidgetContainer_column {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-height: 337px; }
+
+.StoreSaleWidgetContainer_mini {
+  max-width: 155px;
+  background: #000; }
+
+.StoreSaleWidgetContainer_column {
+  max-width: 310px;
+  padding: 8px; }
+
+.StoreSaleWidgetImage {
+  padding-right: 16px;
+  cursor: pointer; }
+
+.StoreSaleWidgetImage_mini {
+  cursor: pointer;
+  max-width: 155px; }
+
+.StoreSaleWidgetImage_column {
+  cursor: pointer;
+  max-width: 310px; }
+
+.StoreSaleImage {
+  cursor: pointer; }
+
+.StoreSaleImage_mini {
+  cursor: pointer;
+  width: 155px; }
+
+.StoreSaleImage_column {
+  cursor: pointer;
+  width: 294px; }
+
+.StoreSaleWidgetTitle {
+  cursor: pointer;
+  font-size: 19px;
+  width: fit-content;
+  color: #c1c6cf;
+  flex-shrink: 0; }
+
+.StoreSaleWidgetTitle:hover {
+  color: #AAA; }
+
+.StoreSaleWidgetRelease {
+  font-size: 10px;
+  color: #919fb1;
+  margin-bottom: 8px; }
+
+.StoreSaleWidgetShortDesc {
+  font-size: 12px; }
+
+.StoreSaleWidgetShortDesc_column,
+.StoreSaleWidgetShortDesc_mini {
+  max-height: 160px;
+  overflow-y: scroll;
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  padding-bottom: 8px;
+  overflow: hidden;
+  letter-spacing: 0px;
+  line-height: 15px; }
+
+.StoreSalePriceActionWidgetContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 1px;
+  justify-content: flex-end; }
+
+.StoreSalePriceBox {
+  padding: 5px;
+  background-color: black; }
+
+.StoreSalePriceButton {
+  border-radius: 2px;
+  border: none;
+  padding: 1px;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: #D2E885 !important;
+  background: #799905;
+  background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
+  background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+  padding: 0 15px;
+  font-size: 15px;
+  line-height: 30px; }
+
+.StoreSalePriceButton:hover {
+  text-decoration: none !important;
+  color: #ffffff !important;
+  background: #a4d007;
+  background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
+  background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%); }
 
 .linkregionbox_LinkRegionDragBox_30gow {
   position: absolute;
@@ -4032,7 +4035,9 @@ iframe.steamTVLogin {
   margin: 0px;
   margin-top: 0px;
   max-width: 46px;
-  max-height: 50px; }
+  max-height: 50px;
+  display: inline-flex;
+  justify-content: center; }
 
 .chatentry_chatSubmitButton_3VRfL.chatentry_EmbedButton_1vvRh {
   max-width: 46px;
@@ -6927,8 +6932,6 @@ button.DialogButton::-moz-focus-inner {
   background: rgba(0, 0, 0, 0.9); }
 
 .DialogBody {
-  padding-top: 4px;
-  padding-right: 12px;
   /*border: 2px dotted #f005;*/
   display: flex;
   flex-direction: column;
@@ -7041,7 +7044,7 @@ button.DialogButton::-moz-focus-inner {
   position: absolute; }
 
 .DialogContent {
-  padding: 32px;
+  padding: 24px;
   display: flex;
   overflow: visible;
   position: relative; }
@@ -7351,6 +7354,13 @@ button.DialogButton.DialogInput_CopyAction {
   bottom: 0;
   width: 24px;
   cursor: pointer; }
+
+.DialogInput_ClearAction .SVGIcon_X_Line line {
+  stroke-width: 22px;
+  stroke: #aaa; }
+
+.DialogInput_ClearAction:hover .SVGIcon_X_Line line {
+  stroke: #fff; }
 
 .DialogInput {
   display: block;
@@ -8137,10 +8147,6 @@ body.in_global_drag .title-area {
 
 .GenericConfirmDialog .DialogButton {
   min-width: 120px; }
-
-.GenericConfirmDialog.LeftImageLayout form {
-  display: flex;
-  flex-direction: row; }
 
 .displayColumn {
   display: flex;

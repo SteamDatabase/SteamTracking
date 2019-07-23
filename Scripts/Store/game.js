@@ -446,7 +446,7 @@ function UserReviewShowMore( id, context )
 	$J('#ReviewContent'+context+id).parent().addClass('expanded');
 }
 
-function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, context )
+function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 {
 	$J( "#ViewAllReviews" + context ).remove();
 	$J( "#LoadMoreReviews" + context ).remove();
@@ -466,7 +466,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 	filteredReviewScore.removeClass( "visible" );
 
 	$J.get( 'https://store.steampowered.com/appreviews/' + appid,{
-		'start_offset' : startOffset,
+		'cursor' : cursor,
 		'day_range' : dayRange,
 		'start_date' : startDate,
 		'end_date' : endDate,
@@ -488,7 +488,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 			$J( "#Reviews_loading" ).hide();
 			$J( "#Reviews_" + context ).show();
 
-			if ( startOffset == 0 )
+			if ( cursor == "" || cursor == "*" )
 			{
 				var filteredReviewScore = $J( "#user_reviews_filter_score" );
 				if ( data.review_score )
@@ -533,7 +533,7 @@ function LoadMoreReviews( appid, startOffset, dayRange, startDate, endDate, cont
 			// all dupes, request more
 			if ( data.recommendationids.length != 0 && recommendationIDs.length == 0 )
 			{
-				LoadMoreReviews(appid, startOffset + data.recommendationids.length, data.dayrange, data.start_date, data.end_date, context );
+				LoadMoreReviews(appid, data.cursor, data.dayrange, data.start_date, data.end_date, context );
 			}
 			else
 			{
@@ -569,7 +569,7 @@ function SelectReviews( appid, context, reviewDayRange, startDate, endDate, forc
 	}
 	if ( container.children().length == 0 )
 	{
-		LoadMoreReviews( appid, 0, reviewDayRange, startDate, endDate, context );
+		LoadMoreReviews( appid, "*", reviewDayRange, startDate, endDate, context );
 	}
 }
 

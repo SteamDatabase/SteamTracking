@@ -523,6 +523,7 @@ function InitHubTabControls( rgPagingData, cc, tag, default_tab_override )
 		Tab.m_$Select.click( function() {
 			UpdateTabDisplay( Tab.m_strName );
 			UpdateQueryString();
+			GDynamicStore.s_ImpressionTracker.CheckVisibility();
 		} );
 	};
 

@@ -59,7 +59,7 @@
 	box-shadow: none;
 }
 
-body.v6 .popup_block_new .popup_body.popup_menu {
+body.v6 #curator_popup_body .popup_body.popup_menu {
 	background: #fdfdfc;
 }
 

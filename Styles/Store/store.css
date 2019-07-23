@@ -2313,6 +2313,7 @@ span.platform_img.valveindex {
 .hover_release span.platform_img.valveindex {
 	background-image: url( '/public/images/v6/icon_platform_valveindex_dark.png' );
 	width: 26px;
+	height: 19px;
 }
 
 .hover_release span.platform_img.htcvive {

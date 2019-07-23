@@ -532,7 +532,7 @@ GHomepage = {
 			else
 			{
 
-				var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster', i );
+				var $MainCap =  GHomepage.BuildMainCapsuleItem( oItem, 'main_cluster', i + 1 );
 				if( !$MainCap )
 					continue;
 
@@ -1321,7 +1321,7 @@ GHomepage = {
 				var rgOptions = {};
 				if( j > 0 )
 					rgOptions.lazy = true;
-				var $CapCtn = fnCapsule( oItem, strNavContext, rgOptions, nPage );
+				var $CapCtn = fnCapsule( oItem, strNavContext, rgOptions, nPage + 1 );
 				if( !$CapCtn )
 					continue;
 
@@ -2349,7 +2349,7 @@ GSteamCurators = {
 			for ( var i = 0; i < GSteamCurators.rgSteamCurators.length; i++ )
 			{
 				var curator = GSteamCurators.rgSteamCurators[i];
-				var $Item = GSteamCurators.BuildCuratorItem( curator, i );
+				var $Item = GSteamCurators.BuildCuratorItem( curator, i + 1 );
 				$Curators.append( $Item );
 			}
 		}
@@ -2419,6 +2419,7 @@ var g_bDisableAutoloader = false;
 			ele.tagIndex = 0;
 			ele.nRecommendedDataIndex = 0;
 			ele.rgSeenApps = [];
+			ele.index = 0;
 
 
 			var loadFunc = function() {
@@ -2558,7 +2559,8 @@ var g_bDisableAutoloader = false;
 						data: {
 							main: rgMainCap,
 							sub: rgSubCap,
-							similar: rgSimilarItems
+							similar: rgSimilarItems,
+							depth: ele.index || 0
 						},
 						//dataType: 'json',
 						type: 'GET'
