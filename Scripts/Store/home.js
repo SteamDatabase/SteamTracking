@@ -30,6 +30,8 @@ GHomepage = {
 	bStaticDataReady: false,
 	bLoadedActiveData: false,
 
+	bAddTopSellersToMainCap: false,
+
 	MainCapCluster: null,
 	usabilityTracker: null,
 
@@ -123,6 +125,7 @@ GHomepage = {
 			GHomepage.bMergeRecommendationsToHighlights = rgParams.bMergeRecommendationsToHighlights || false;
 			GHomepage.bNewRecommendations = rgParams.bNewRecommendations || false;
 			GHomepage.bIsLimitedUser = rgParams.bIsLimitedUser || false;
+			GHomepage.bAddTopSellersToMainCap = rgParams.bAddTopSellersToMainCap || false;
 
 			if ( g_AccountID == 0 )
 			{
@@ -465,9 +468,16 @@ GHomepage = {
 			}
 			else
 			{
+				var rgFeatured = GHomepage.oDisplayLists.main_cluster;
+
+				if ( GHomepage.bAddTopSellersToMainCap )
+				{
+					rgFeatured = rgFeatured.concat( v_shuffle( GHomepage.oDisplayLists.top_sellers.slice() ) );
+				}
+
 				rgDisplayListCombined = GHomepage.ZipLists(
 					GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
-					GHomepage.oDisplayLists.main_cluster, false, // Legacy
+					rgFeatured, false,
 					GHomepage.rgRecentAppsByCreator, true,
 					GHomepage.rgRecommendedGames, true,
 					GHomepage.rgCuratedAppsData.apps, true,
