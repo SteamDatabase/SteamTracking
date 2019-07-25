@@ -13,6 +13,23 @@
 	overflow: hidden;
 }
 
+@media all and (max-width: 1224px) {
+    body.responsive_page .home_page_body_ctn.has_takeover .fullscreen-bg__video {
+        width: 150vw;
+    }
+    body.responsive_page .page_background_holder {
+        height: 29vw !important;
+        background-size: cover !important;
+    }
+    body.responsive_page .home_page_body_ctn.has_takeover .home_page_takeover_sizer {
+        height: 29vw !important;
+    }
+    body.responsive_page .home_page_body_ctn.has_takeover .home_page_takeover_sizer img {
+        height: 29vw !important;
+    }
+}
+
+
 .page_background_holder {
 	position: absolute;
 	top: 0;
