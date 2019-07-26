@@ -225,6 +225,11 @@ a:link {
   background-color: #151f2b;
   margin-right: 20px;
   margin-bottom: 4px; }
+  .app_PlayedGame_1RMe-.app_Ignored_S05G_ {
+    filter: saturate(10%) brightness(60%); }
+    .app_PlayedGame_1RMe-.app_Ignored_S05G_ .app_PlaytimeInfo_26XnS .app_IgnoreToggle_32kxi {
+      margin-top: 2px;
+      height: 15px; }
   .app_PlayedGame_1RMe- .app_Logo_3yA86 {
     width: 100px;
     height: 48px;
@@ -246,6 +251,47 @@ a:link {
       font-size: 10px;
       padding-right: 4px;
       color: #999; }
+    .app_PlayedGame_1RMe- .app_PlaytimeInfo_26XnS .app_IgnoreToggle_32kxi {
+      background-color: #355D79;
+      height: 15px;
+      width: 80px;
+      border-radius: 2px;
+      overflow: hidden;
+      font-size: 10px;
+      text-align: center;
+      height: 0px;
+      transition-property: height, margin;
+      transition-duration: 0.1s;
+      transition-timing-function: ease-in-out;
+      cursor: pointer; }
+      .app_PlayedGame_1RMe- .app_PlaytimeInfo_26XnS .app_IgnoreToggle_32kxi:hover {
+        background-color: #406f91;
+        color: #FFF; }
+  .app_PlayedGame_1RMe-:hover .app_PlaytimeInfo_26XnS .app_IgnoreToggle_32kxi {
+    margin-top: 2px;
+    height: 15px; }
+
+.app_UpdateSaveBlock_31ynD .app_UpdateButton_1_Ap6 {
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  cursor: default;
+  border-radius: 3px;
+  text-align: center;
+  margin-left: 6px;
+  margin-bottom: 15px;
+  background-color: #353535;
+  color: #AAA;
+  transition-property: background-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out; }
+  .app_UpdateSaveBlock_31ynD .app_UpdateButton_1_Ap6.app_Enabled_2gzL9 {
+    background-color: #355D79;
+    color: #FFF;
+    cursor: pointer; }
+    .app_UpdateSaveBlock_31ynD .app_UpdateButton_1_Ap6.app_Enabled_2gzL9:hover {
+      background-color: #406f91; }
 
 .app_RecommendationList_2UkLX {
   flex-grow: 1;
@@ -267,7 +313,12 @@ a:link {
       .app_RecommendationList_2UkLX .app_Header_2Dmjt {
         text-align: center; } }
   .app_RecommendationList_2UkLX .app_List_115iv {
+    transition-property: filter;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
     position: relative; }
+    .app_RecommendationList_2UkLX .app_List_115iv.app_Updating_W60ex {
+      filter: saturate(50%) brightness(90%); }
 
 .app_RecommendationOptions_2jiHP .app_Row_O0NAA {
   display: flex;
