@@ -230,6 +230,7 @@ LocalizationReady("shared", "english", {
 
   EventEmail_Subject_NewUpdate: "%1$s, New Update",
   EventEmail_Subject_UpcomingLaunch: "%1$s, Upcoming Launch",
+  EventEmail_Subject_NowAvailable: "%1$s Now Available",
   EventEmail_Button_ClickForMoreDetails: "Click for more details",
   EventEmail_Button_PrepurchaseNow: "Prepurchase now!",
   EventEmail_Button_BuyNow: "Buy now!",
