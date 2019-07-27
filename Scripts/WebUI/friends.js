@@ -74627,11 +74627,11 @@ and limitations under the License.
           this.m_Socket && this.m_Socket.close();
         }),
         (e.prototype.OnDisconnect = function() {
-          o.prototype.OnDisconnect.call(this),
-            (this.m_Socket = void 0),
+          (this.m_Socket = void 0),
             (this.m_SocketCMHost = void 0),
             (this.m_onConnect = void 0),
-            this.ClearHeartbeatInterval();
+            this.ClearHeartbeatInterval(),
+            o.prototype.OnDisconnect.call(this);
         }),
         (e.prototype.SendMsgAndAwaitResponse = function(o, i) {
           var r = this;
