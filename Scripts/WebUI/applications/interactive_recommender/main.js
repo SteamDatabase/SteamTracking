@@ -184,6 +184,7 @@
       IgnoreToggle: "app_IgnoreToggle_32kxi",
       Logo: "app_Logo_3yA86",
       HoursPlayed: "app_HoursPlayed_YzQV_",
+      Title: "app_Title_1C2xv",
       LastPlayed: "app_LastPlayed_1kbFb",
       UpdateSaveBlock: "app_UpdateSaveBlock_31ynD",
       UpdateButton: "app_UpdateButton_1_Ap6",
@@ -197,7 +198,6 @@
       OptionCheckbox: "app_OptionCheckbox_3coaI",
       Checkbox: "app_Checkbox_3hRS3",
       OptionSlider: "app_OptionSlider_sLHtG",
-      Title: "app_Title_1C2xv",
       Labels: "app_Labels_vq2C2",
       Min: "app_Min_2zfSC",
       Max: "app_Max_4ugol",
@@ -304,7 +304,8 @@
         ALGORITHM: 0,
         REINFERENCE: !1,
         MODEL_VERSION: 0,
-        IMMEDIATE_IGNORE_UPDATE: !1
+        IMMEDIATE_IGNORE_UPDATE: !1,
+        PERSISTENT_IGNORE: !1
       },
       c = "application_config";
     function u() {
@@ -399,12 +400,12 @@
       }
     }
     function b(e) {
-      if (!y() || !window.document.cookie) return null;
+      if (!S() || !window.document.cookie) return null;
       var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
       return t && t[2] ? decodeURIComponent(t[2]) : null;
     }
     function f(e, t, a, n) {
-      if (y()) {
+      if (S()) {
         n || (n = "/");
         var r = "";
         if (void 0 !== a && a) {
@@ -421,7 +422,7 @@
           n;
       }
     }
-    function y() {
+    function S() {
       return !!window.document;
     }
     ((m = h || (h = {}))[(m.k_EOtherEvent = 1)] = "k_EOtherEvent"),
@@ -511,7 +512,7 @@
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
       (g[(g.k_ELaunchSource_GameActionJoinParty = 900)] =
         "k_ELaunchSource_GameActionJoinParty");
-    var S,
+    var y,
       T = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
@@ -543,9 +544,9 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!y()) return S || (S = k()), S;
+            if (!S()) return y || (y = L()), y;
             var e = b("sessionid");
-            e || (e = k());
+            e || (e = L());
             return e;
           })();
         },
@@ -554,7 +555,7 @@
         DEV_MODE: !1,
         OFFLINE_MODE: !1
       };
-    function k() {
+    function L() {
       var e = (function() {
         for (var e, t, a = "", n = 0; n < 24; n++)
           a += ((e = 0),
@@ -566,7 +567,7 @@
       })();
       return f("sessionid", e, 0), e;
     }
-    var L = (function() {
+    var k = (function() {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
@@ -672,7 +673,7 @@
     var R = new Map();
     new Map();
     new Map(), new Map(), new Map(), new Map();
-    var C = new L();
+    var C = new k();
     window.LocalizationManager = C;
     a("2i24");
     function B(e) {
@@ -833,20 +834,21 @@
       },
       W = function(e) {
         var t = e.appID,
-          a = e.hours,
-          n = e.lastPlayed,
-          r = e.ignored,
-          o = O.CDN_URL + "apps/" + t + "/header.jpg",
-          i = Date.now() / 1e3 - n,
-          s = "";
+          a = e.name,
+          n = e.hours,
+          r = e.lastPlayed,
+          o = e.ignored,
+          i = O.CDN_URL + "apps/" + t + "/header.jpg",
+          s = Date.now() / 1e3 - r,
+          c = "";
         return (
-          (s =
-            n <= 86400
+          (c =
+            r <= 86400
               ? U("#PlaytimeList_LastPlayedMax")
               : U(
                   "#PlaytimeList_LastPlayed",
-                  31449600 < i
-                    ? w(n)
+                  31449600 < s
+                    ? w(r)
                     : (function(e, t) {
                         void 0 === t && (t = !1);
                         var a = t ? "#TimeInterval_" : "#TimeSince_";
@@ -882,21 +884,26 @@
                           : e >= p.PerMinute
                           ? U(a + "1Minute")
                           : U(a + "LessThanAMinute");
-                      })(i)
+                      })(s)
                 )),
           P.a.createElement(
             "div",
-            { className: D(M.a.PlayedGame, r && M.a.Ignored) },
-            P.a.createElement("img", { className: M.a.Logo, src: o }),
+            { className: D(M.a.PlayedGame, o && M.a.Ignored) },
+            P.a.createElement(
+              "a",
+              { href: O.BASE_URL + "app/" + t },
+              P.a.createElement("img", { className: M.a.Logo, src: i })
+            ),
             P.a.createElement(
               "div",
               { className: M.a.PlaytimeInfo },
               P.a.createElement(
                 "div",
                 { className: M.a.HoursPlayed },
-                U("#PlaytimeList_Hours", a)
+                U("#PlaytimeList_Hours", n)
               ),
-              P.a.createElement("div", { className: M.a.LastPlayed }, s),
+              P.a.createElement("div", { className: M.a.Title }, a),
+              P.a.createElement("div", { className: M.a.LastPlayed }, c),
               P.a.createElement(
                 "div",
                 {
@@ -905,7 +912,7 @@
                     return se.onToggleIgnore(t);
                   }
                 },
-                U(r ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
+                U(o ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
               )
             )
           )
@@ -965,6 +972,7 @@
                 ),
                 P.a.createElement("div", { className: M.a.Loading })
               );
+            se.getAppInfo();
             var n = e.slice().sort(function(e, t) {
               return t.l - e.l;
             });
@@ -975,6 +983,7 @@
                   P.a.createElement(W, {
                     key: "PlayedGame_" + t.a,
                     appID: t.a,
+                    name: t.t,
                     hours: t.p,
                     lastPlayed: t.l,
                     ignored: t.i
@@ -1259,19 +1268,19 @@
             o < m ? (v = !(g = 66)) : o < E && (v = !(g = 87));
             var b = v && this.state.hovered,
               f = Math.min(Number(n) / 10, 1e3),
-              y = (Math.max(1, n), !1),
-              S = !1,
+              S = (Math.max(1, n), !1),
+              y = !1,
               T = !0,
-              k = "",
               L = "",
+              k = "",
               R = "",
               C = "",
               I = "";
             if (b) {
               var N = se.getDetails(this.props.appID);
               N &&
-                ((y = !0),
-                (S = 0 < N.discount_pct),
+                ((S = !0),
+                (y = 0 < N.discount_pct),
                 (T = "0" == N.discount_price),
                 (I =
                   "probably" ==
@@ -1280,8 +1289,8 @@
                     .canPlayType('video/webm; codecs="vp8, vorbis"')
                     ? N.video_webm
                     : N.video_mp4),
-                (k = "-" + N.discount_pct + "%"),
-                (L = N.base_price),
+                (L = "-" + N.discount_pct + "%"),
+                (k = N.base_price),
                 (R = T ? U("#FreeToPlay") : N.discount_price),
                 (C = N.description));
             }
@@ -1396,7 +1405,7 @@
                         C
                       )
                     ),
-                    y &&
+                    S &&
                       P.a.createElement(
                         "div",
                         { className: M.a.BottomEntrySection },
@@ -1416,7 +1425,7 @@
                                 M.a.PurchaseBG
                               )
                             },
-                            S &&
+                            y &&
                               P.a.createElement(
                                 "div",
                                 {
@@ -1426,7 +1435,7 @@
                                 P.a.createElement(
                                   "div",
                                   { className: "discount_pct" },
-                                  k
+                                  L
                                 ),
                                 P.a.createElement(
                                   "div",
@@ -1434,7 +1443,7 @@
                                   P.a.createElement(
                                     "div",
                                     { className: "discount_original_price" },
-                                    L
+                                    k
                                   ),
                                   P.a.createElement(
                                     "div",
@@ -1443,7 +1452,7 @@
                                   )
                                 )
                               ),
-                            !S &&
+                            !y &&
                               P.a.createElement(
                                 "div",
                                 { className: "game_purchase_price price" },
@@ -1568,20 +1577,20 @@
                   b = d[v.index];
                 if (((_ = Math.max(_, b.score_scale)), b))
                   for (var f = 0; f < b.app_ids.length; f++) {
-                    var y = b.app_ids[f];
+                    var S = b.app_ids[f];
                     if (
                       !(
-                        !h[y] ||
-                        h[y].o ||
-                        h[y].i ||
-                        h[y].ti ||
-                        (h[y].w && se.m_bExcludeWishlisted)
+                        !h[S] ||
+                        h[S].o ||
+                        h[S].i ||
+                        h[S].ti ||
+                        (h[S].w && se.m_bExcludeWishlisted)
                       )
                     ) {
-                      var S =
-                        (p.get(y) || 0) +
+                      var y =
+                        (p.get(S) || 0) +
                         b.scores[f] * v.weight * b.score_scale;
-                      p.set(y, S);
+                      p.set(S, y);
                     }
                   }
               }
@@ -1607,22 +1616,22 @@
                     );
                   }));
               for (
-                var k = (T = T.filter(function(e) {
+                var L = (T = T.filter(function(e) {
                     return 0 < e.score;
                   })).sort(function(e, t) {
                     return t.score - e.score;
                   }),
-                  L = 0,
+                  k = 0,
                   R = 0,
-                  C = (k = k.slice(0, 30));
+                  C = (L = L.slice(0, 30));
                 R < C.length;
                 R++
               ) {
-                (C[R].rank = L), L++;
+                (C[R].rank = k), k++;
               }
               for (
                 var I = 0,
-                  N = k.sort(function(e, t) {
+                  N = L.sort(function(e, t) {
                     return t.appid - e.appid;
                   });
                 I < N.length;
@@ -1953,49 +1962,51 @@
             u = this.getInputApps();
           if (u) {
             var p = [];
-            Object.keys(u).map(function(e) {
-              u[e].i && p.push(u[e].a);
-            }),
-              0 < p.length && (l = "&ignored=" + p.join());
+            return (
+              Object.keys(u).map(function(e) {
+                u[e].i && p.push(u[e].a);
+              }),
+              0 < p.length && (l = "&ignored=" + p.join()),
+              this.m_ResultDataCache.getData(
+                9999999,
+                function() {
+                  return _.b(r, void 0, void 0, function() {
+                    return _.e(this, function(e) {
+                      switch (e.label) {
+                        case 0:
+                          return [
+                            4,
+                            d.a.get(
+                              O.BASE_URL +
+                                "recommender/" +
+                                O.STEAM_ID +
+                                "/results?sessionid=" +
+                                O.SESSION_ID +
+                                "&steamid=" +
+                                O.STEAM_ID +
+                                "&include_played=" +
+                                o +
+                                "&algorithm=" +
+                                i +
+                                "&reinference=" +
+                                s +
+                                "&model_version=" +
+                                c +
+                                l
+                            )
+                          ];
+                        case 1:
+                          return [2, e.sent()];
+                      }
+                    });
+                  });
+                },
+                function(e) {
+                  return e.data;
+                }
+              )
+            );
           }
-          return this.m_ResultDataCache.getData(
-            9999999,
-            function() {
-              return _.b(r, void 0, void 0, function() {
-                return _.e(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      return [
-                        4,
-                        d.a.get(
-                          O.BASE_URL +
-                            "recommender/" +
-                            O.STEAM_ID +
-                            "/results?sessionid=" +
-                            O.SESSION_ID +
-                            "&steamid=" +
-                            O.STEAM_ID +
-                            "&include_played=" +
-                            o +
-                            "&algorithm=" +
-                            i +
-                            "&reinference=" +
-                            s +
-                            "&model_version=" +
-                            c +
-                            l
-                        )
-                      ];
-                    case 1:
-                      return [2, e.sent()];
-                  }
-                });
-              });
-            },
-            function(e) {
-              return e.data;
-            }
-          );
         }),
         (e.prototype.areResultsExpired = function() {
           return this.m_ResultDataCache.isExpired();
@@ -2096,21 +2107,26 @@
                     O.IMMEDIATE_IGNORE_UPDATE &&
                       this.m_ResultDataCache.expireData(),
                     (this.m_bIgnoredEdited = !0),
-                    (i = {
-                      sessionid: O.SESSION_ID,
-                      appid: s,
-                      remove: a ? 1 : 0
-                    }),
-                    [
-                      4,
-                      d.a.post(
-                        O.BASE_URL + "recommended/ignorerecommendation/",
-                        i
-                      )
-                    ]
+                    O.PERSISTENT_IGNORE
+                      ? ((i = {
+                          sessionid: O.SESSION_ID,
+                          appid: s,
+                          remove: a ? 1 : 0,
+                          ignore_reason: 3
+                        }),
+                        [
+                          4,
+                          d.a.post(
+                            O.BASE_URL + "recommended/ignorerecommendation/",
+                            i
+                          )
+                        ])
+                      : [3, 2]
                   );
                 case 1:
-                  return e.sent(), [2];
+                  e.sent(), (e.label = 2);
+                case 2:
+                  return [2];
               }
             });
           });

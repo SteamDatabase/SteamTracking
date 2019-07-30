@@ -247,6 +247,9 @@ a:link {
     color: #DDD; }
     .app_PlayedGame_1RMe- .app_PlaytimeInfo_26XnS .app_HoursPlayed_YzQV_ {
       font-size: 10px; }
+    .app_PlayedGame_1RMe- .app_PlaytimeInfo_26XnS .app_Title_1C2xv {
+      font-size: 10px;
+      display: none; }
     .app_PlayedGame_1RMe- .app_PlaytimeInfo_26XnS .app_LastPlayed_1kbFb {
       font-size: 10px;
       padding-right: 4px;
@@ -267,6 +270,10 @@ a:link {
       .app_PlayedGame_1RMe- .app_PlaytimeInfo_26XnS .app_IgnoreToggle_32kxi:hover {
         background-color: #406f91;
         color: #FFF; }
+  .app_PlayedGame_1RMe-:hover .app_PlaytimeInfo_26XnS .app_Title_1C2xv {
+    display: block; }
+  .app_PlayedGame_1RMe-:hover .app_PlaytimeInfo_26XnS .app_HoursPlayed_YzQV_ {
+    display: none; }
   .app_PlayedGame_1RMe-:hover .app_PlaytimeInfo_26XnS .app_IgnoreToggle_32kxi {
     margin-top: 2px;
     height: 15px; }
