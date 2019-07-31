@@ -261,16 +261,6 @@ span.experiment-name {
 	padding-top: 10px;
 }
 
-#recommender_root .app_PlayedGame_1RMe- {
-	background-color: #00000000;
-}
-
-#recommender_root .app_RecommendationEntry_18wXZ {
-	background-image: radial-gradient(ellipse at top left, #2f374d, #18264a);
-	border-radius: 4px;
-  box-shadow: 2px 2px 10px rgba(0,0,0,0.5);;
-}
-
 #microtrailer_flavor {
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */

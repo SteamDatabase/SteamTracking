@@ -1037,6 +1037,10 @@ LocalizationReady("friendsui", "english", {
   FriendSettings_Mobile_UploadCurrentLogs: "Upload Current Session Logs",
   FriendSettings_Mobile_UploadPreviousLogs: "Upload Previous Session Logs",
 
+  AboutSettings_Title: "About",
+  InfoSettings_Title: "Information",
+  PushSettings_Title: "Push Notifications",
+
   InterfaceSettings_Title: "Interface",
   LanguageSettings_SystemDefault: "System Default",
   LanguageSettings_Label: "Language",
@@ -1283,6 +1287,7 @@ LocalizationReady("friendsui", "english", {
     "We've attempted to open the invite link in the Steam Client.  You may be prompted by your browser to allow the Steam Client to launch.",
 
   MobileDisconnect_Reconnecting: "Reconnecting",
+  MobileDisconnect_Loading: "Friends Network Loading",
 
   Friends_Empty01: "Your friends will show up here.",
   Friends_Empty02: "You can easily add friends by using an %1$s.",
@@ -1313,6 +1318,9 @@ LocalizationReady("friendsui", "english", {
   GiveFeedback_URL: "BETA",
 
   GiveFeedback: "Give Feedback",
+  OpenSourceLicenses_Title: "Open Source Licenses",
+  OpenSourceLicenses_Label: "Licenses",
+  OpenSourceLicense_FieldLabel: "License:",
 
   changeLog_Button: "Change Log",
   changeLog_Value_Button: "New Change Log updates: %1$s",

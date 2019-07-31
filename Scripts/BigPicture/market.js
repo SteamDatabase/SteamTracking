@@ -162,11 +162,11 @@ function DelayAddListing( nLoadNumber, listing, oGrid, bWaitingForConfirmation )
 			var oPrice = $.CreatePanel( 'Label', oPriceInfo, '' );
 			oPrice.AddClass( 'SellingFor' );
 			oPrice.text = 'Selling for %1$s'
-				.replace( '%1$s', v_currencyformat(listing.price + listing.fee, GetCurrencyCode( listing.currencyid - 2000 ) ) );
+				.replace( '%1$s', v_currencyformat(listing.price + listing.fee, GetCurrencyCode( listing.currencyid % 1000 ) ) );
 
 			var oPrice = $.CreatePanel( 'Label', oPriceInfo, '' );
 			oPrice.text = '(%1$s)'
-				.replace( '%1$s', v_currencyformat(listing.price, GetCurrencyCode( listing.currencyid - 2000 ) ) );
+				.replace( '%1$s', v_currencyformat(listing.price, GetCurrencyCode( listing.currencyid % 1000 ) ) );
 
 			if ( bWaitingForConfirmation )
 			{
@@ -322,13 +322,13 @@ function DelayAddNewListing( nLoadNumber, listing, oGrid )
 			{
 				oPrice.html = true;
 				oPrice.text = 'Selling for %1$s %2$s'
-					.replace( '%1$s', '<span class="StrikethroughText"/>' + v_currencyformat(price + fee, GetCurrencyCode( currencyid - 2000 ) ) + '</span>' )
-					.replace( '%2$s', v_currencyformat(price, GetCurrencyCode( currencyid - 2000 ) ) );
+					.replace( '%1$s', '<span class="StrikethroughText"/>' + v_currencyformat(price + fee, GetCurrencyCode( currencyid % 1000 ) ) + '</span>' )
+					.replace( '%2$s', v_currencyformat(price, GetCurrencyCode( currencyid % 1000 ) ) );
 			}
 			else
 			{
 				oPrice.text = 'Selling for %1$s'
-					.replace( '%1$s', v_currencyformat(price + fee, GetCurrencyCode( currencyid - 2000 ) ) );
+					.replace( '%1$s', v_currencyformat(price + fee, GetCurrencyCode( currencyid % 1000 ) ) );
 			}
 
 			oItem.SetPanelEvent( 'onactivate', function()
@@ -403,7 +403,7 @@ function DelayAddHistoryEvent( nLoadNumber, event, oGrid )
 				oPrice.text = 'Selling for %1$s'
 					.replace( '%1$s',
 					v_currencyformat( event.listing.original_price,
-						GetCurrencyCode( event.listing.currencyid - 2000 )
+						GetCurrencyCode( event.listing.currencyid % 1000 )
 					)
 				);
 			}
@@ -414,7 +414,7 @@ function DelayAddHistoryEvent( nLoadNumber, event, oGrid )
 				oPrice.text = 'Sold for %1$s'
 					.replace( '%1$s',
 					v_currencyformat( event.purchase.received_amount,
-						GetCurrencyCode( event.purchase.received_currencyid - 2000 )
+						GetCurrencyCode( event.purchase.received_currencyid % 1000 )
 					)
 				);
 			}
@@ -425,7 +425,7 @@ function DelayAddHistoryEvent( nLoadNumber, event, oGrid )
 				oPrice.text = 'Purchased for %1$s'
 					.replace( '%1$s',
 					v_currencyformat( event.purchase.paid_amount + event.purchase.paid_fee,
-						GetCurrencyCode( event.purchase.currencyid - 2000 )
+						GetCurrencyCode( event.purchase.currencyid % 1000 )
 					)
 				);
 			}

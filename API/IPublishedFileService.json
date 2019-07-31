@@ -47,6 +47,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "Desired number of items in the voting queue.  May be clamped by the server"
+                },
+                {
+                    "name": "desired_revision",
+                    "type": "{enum}",
+                    "optional": true,
+                    "description": "Filter to items that have data for the specified revision."
                 }
             ]
         },
@@ -253,6 +259,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "Strips BBCode from descriptions."
+                },
+                {
+                    "name": "desired_revision",
+                    "type": "{enum}",
+                    "optional": true,
+                    "description": "Return the data for the specified revision."
                 }
             ]
         },
@@ -451,6 +463,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "Strips BBCode from descriptions."
+                },
+                {
+                    "name": "desired_revision",
+                    "type": "{enum}",
+                    "optional": true,
+                    "description": "Return the data for the specified revision."
                 }
             ]
         },
@@ -627,6 +645,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "Strips BBCode from descriptions."
+                },
+                {
+                    "name": "desired_revision",
+                    "type": "{enum}",
+                    "optional": true,
+                    "description": "Return the data for the specified revision."
                 }
             ]
         },

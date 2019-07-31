@@ -2780,19 +2780,22 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 }
 
 .store_main_capsule .app_name > div {
-	max-height: 52px;
+	max-height: 62px;
 	overflow: hidden;
 	font-size: 24px;
+    padding-bottom: 4px;
+    padding-top: 4px;
 	line-height: 26px;
 }
 
 .store_main_capsule .app_name {
-	padding-top: 10px;
+	padding-top: 0px;
 
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			height: 59px;
+			height: 69px;
+
 	padding-left: 6px;
 	padding-right: 6px;
 }

@@ -538,6 +538,7 @@
         USE_POPUPS: !1,
         IN_MOBILE: !1,
         IN_TENFOOT: !1,
+        LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
         BUILD_TIMESTAMP: 0,

@@ -293,15 +293,17 @@
         t.msFullscreenElement
       );
     }
-    function _(e) {
-      var t = e;
-      t.requestFullscreen
-        ? t.requestFullscreen()
-        : t.webkitRequestFullScreen
-        ? t.webkitRequestFullScreen()
-        : t.mozRequestFullScreen
-        ? t.mozRequestFullScreen()
-        : t.msRequestFullscreen && t.msRequestFullscreen();
+    function _(e, t) {
+      var n = e;
+      n.requestFullscreen
+        ? n.requestFullscreen()
+        : n.webkitRequestFullscreen
+        ? n.webkitRequestFullscreen()
+        : t && t.webkitSetPresentationMode
+        ? t.webkitSetPresentationMode("fullscreen")
+        : n.mozRequestFullScreen
+        ? n.mozRequestFullScreen()
+        : n.msRequestFullscreen && n.msRequestFullscreen();
     }
     function y(e) {
       var t = e.ownerDocument;
@@ -688,6 +690,7 @@
         USE_POPUPS: !1,
         IN_MOBILE: !1,
         IN_TENFOOT: !1,
+        LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
         BUILD_TIMESTAMP: 0,
@@ -1016,18 +1019,20 @@
         return (
           r.d(s, a),
           (s.prototype.Show = function() {
-            s.sm_mapEmbeddedMouseOverlays.ShowElement(
-              this.m_ownerWindow.document,
-              o.createElement(c.f),
-              this
-            ),
+            this.m_options.bDisableMouseOverlay ||
+              s.sm_mapEmbeddedMouseOverlays.ShowElement(
+                this.m_ownerWindow.document,
+                o.createElement(c.f),
+                this
+              ),
               a.prototype.Show.call(this);
           }),
           (s.prototype.Hide = function() {
-            s.sm_mapEmbeddedMouseOverlays.HideElement(
-              this.m_ownerWindow.document,
-              this
-            ),
+            this.m_options.bDisableMouseOverlay ||
+              s.sm_mapEmbeddedMouseOverlays.HideElement(
+                this.m_ownerWindow.document,
+                this
+              ),
               a.prototype.Hide.call(this);
           }),
           (s.sm_mapEmbeddedMouseOverlays = new l.a("ContextMenuMouseOverlay")),
@@ -5689,7 +5694,7 @@
         },
         o.createElement(
           "g",
-          { className: "outline" },
+          { className: "Outline" },
           o.createElement(
             "g",
             { transform: "matrix(1.34048,0,0,1.34048,-10.0942,-5.50445)" },

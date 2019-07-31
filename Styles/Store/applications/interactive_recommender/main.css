@@ -222,7 +222,7 @@ a:link {
 .app_PlayedGame_1RMe- {
   display: flex;
   flex-direction: row;
-  background-color: #151f2b;
+  background-color: #00000000;
   margin-right: 20px;
   margin-bottom: 4px; }
   .app_PlayedGame_1RMe-.app_Ignored_S05G_ {
@@ -409,6 +409,9 @@ a:link {
   background-color: #151f2b;
   overflow: hidden;
   cursor: pointer;
+  background-image: radial-gradient(ellipse at top left, #2f374d, #18264a);
+  border-radius: 4px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   padding: 4px;
   padding-bottom: 0px;
   margin-bottom: 4px;

@@ -4109,7 +4109,9 @@ background: -webkit-linear-gradient( top, #e3eaef 5%, #c7d5e0 95%);
 .footer_content .popup_menu .popup_menu_item:hover,
 .footer_content .popup_menu .popup_menu_item.focus,
 .search_area .popup_body .match:hover,
-.search_area .popup_body .match:hover .match_name {
+.search_area .popup_body .match:hover .match_name,
+.search_area .popup_body .match.focus,
+.search_area .popup_body .match.focus .match_name {
 	color: #fff;
 	background-color: #212d3d;
 }
