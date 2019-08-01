@@ -1856,6 +1856,9 @@ GStoreItemData = {
 			}
 		}
 
+		if ( rgAppData.no_main_cap )
+			return false;
+
 		return true;
 	},
 
