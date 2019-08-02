@@ -437,16 +437,6 @@
 						}
 					}
 				}
-				"activators"
-				{
-					"double_press"
-					{
-						"bindings"
-						{
-							"binding"		"xinput_button start"
-						}
-					}
-				}				
 			}
 			"left_bumper"
 			{

@@ -580,13 +580,6 @@
 							"binding"		"key_press TAB, Map"
 						}
 					}
-					"double_press"
-					{
-						"bindings"
-						{
-							"binding"		"key_press ESCAPE, Menu"
-						}
-					}					
 				}
 			}
 			"left_bumper"

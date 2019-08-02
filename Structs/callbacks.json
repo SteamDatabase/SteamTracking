@@ -1292,7 +1292,7 @@
     {
         "id": 1319,
         "size": 620,
-        "posted_in": "void CBaseAPIJob::PostAPIResult<RemoteStorageEnumerateWorkshopFilesResult_t>(RemoteStorageEnumerateWorkshopFilesResult_t*)"
+        "posted_in": "CAPIJobEnumeratePublishedWorkshopFiles::BYieldingRunAPIJob()"
     },
     {
         "id": 1320,

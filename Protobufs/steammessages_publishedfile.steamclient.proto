@@ -2,6 +2,13 @@ import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
+enum EPublishedFileRevision {
+	k_EPublishedFileRevision_Default = 0;
+	k_EPublishedFileRevision_Latest = 1;
+	k_EPublishedFileRevision_ApprovedSnapshot = 2;
+	k_EPublishedFileRevision_ApprovedSnapshot_China = 3;
+}
+
 enum EPublishedFileForSaleStatus {
 	k_PFFSS_NotForSale = 0;
 	k_PFFSS_PendingApproval = 1;
@@ -77,6 +84,7 @@ message CPublishedFile_GetDetails_Request {
 	optional uint32 return_playtime_stats = 13 [(description) = "Return playtime stats for the specified number of days before today."];
 	optional uint32 appid = 14;
 	optional bool strip_description_bbcode = 15 [(description) = "Strips BBCode from descriptions."];
+	optional .EPublishedFileRevision desired_revision = 16 [default = k_EPublishedFileRevision_Default, (description) = "Return the data for the specified revision."];
 }
 
 message PublishedFileDetails {
@@ -191,6 +199,8 @@ message PublishedFileDetails {
 	optional int32 language = 61 [default = 0, (description) = "The language of the title and description."];
 	optional bool maybe_inappropriate_sex = 65;
 	optional bool maybe_inappropriate_violence = 66;
+	optional uint64 revision_change_number = 67 [(description) = "The change number for the specified revision."];
+	optional .EPublishedFileRevision revision = 68 [default = k_EPublishedFileRevision_Default, (description) = "The revision of the data returned, usually k_EPublishedFileRevision_Latest, but can be another revision/snapshot depending on the caller."];
 }
 
 message CPublishedFile_GetDetails_Response {
@@ -201,6 +211,7 @@ message CPublishedFile_GetItemInfo_Request {
 	message WorkshopItem {
 		optional fixed64 published_file_id = 1;
 		optional uint32 time_updated = 2;
+		optional .EPublishedFileRevision desired_revision = 3 [default = k_EPublishedFileRevision_Default, (description) = "Return the data for the specified revision."];
 	}
 
 	optional uint32 app_id = 1;
@@ -218,6 +229,7 @@ message CPublishedFile_GetItemInfo_Response {
 
 	optional uint32 update_time = 1;
 	repeated .CPublishedFile_GetItemInfo_Response.WorkshopItemInfo workshop_items = 2;
+	repeated fixed64 private_items = 3;
 }
 
 message CPublishedFile_GetUserFiles_Request {
@@ -253,6 +265,7 @@ message CPublishedFile_GetUserFiles_Request {
 	optional bool return_metadata = 28 [default = false, (description) = "Populate the metadata field"];
 	optional uint32 return_playtime_stats = 31 [(description) = "Return playtime stats for the specified number of days before today."];
 	optional bool strip_description_bbcode = 32 [(description) = "Strips BBCode from descriptions."];
+	optional .EPublishedFileRevision desired_revision = 33 [default = k_EPublishedFileRevision_Default, (description) = "Return the data for the specified revision."];
 }
 
 message CPublishedFile_GetUserFiles_Response {
@@ -339,6 +352,7 @@ message CPublishedFile_RefreshVotingQueue_Request {
 	optional bool match_all_tags = 4 [default = true, (description) = "If true, then files must have all the tags specified.  If false, then must have at least one of the tags specified."];
 	repeated string excluded_tags = 5 [(description) = "Exclude any files that have any of these tags."];
 	optional uint32 desired_queue_size = 6 [(description) = "Desired number of items in the voting queue.  May be clamped by the server"];
+	optional .EPublishedFileRevision desired_revision = 8 [default = k_EPublishedFileRevision_Default, (description) = "Filter to items that have data for the specified revision."];
 }
 
 message CPublishedFile_RefreshVotingQueue_Response {
@@ -382,6 +396,7 @@ message CPublishedFile_QueryFiles_Request {
 	optional uint32 return_playtime_stats = 36 [(description) = "Return playtime stats for the specified number of days before today."];
 	optional bool return_details = 37 [(description) = "By default, if none of the other 'return_*' fields are set, only some voting details are returned. Set this to true to return the default set of details."];
 	optional bool strip_description_bbcode = 38 [(description) = "Strips BBCode from descriptions."];
+	optional .EPublishedFileRevision desired_revision = 40 [default = k_EPublishedFileRevision_Default, (description) = "Return the data for the specified revision."];
 }
 
 message CPublishedFile_QueryFiles_Response {
@@ -474,6 +489,12 @@ message CPublishedFile_RemoveChild_Response {
 }
 
 message CPublishedFile_FileSubscribed_Notification {
+	message RevisionData {
+		optional .EPublishedFileRevision revision = 1 [default = k_EPublishedFileRevision_Default];
+		optional fixed64 file_hcontent = 2 [(description) = "Manifest GID"];
+		optional uint32 rtime_updated = 3 [(description) = "Last time content updated"];
+	}
+
 	optional fixed64 published_file_id = 1 [(description) = "PublishedFileID_t for the content"];
 	optional uint32 app_id = 2;
 	optional fixed64 file_hcontent = 3 [(description) = "UGC file handle or manifest GID"];
@@ -481,6 +502,7 @@ message CPublishedFile_FileSubscribed_Notification {
 	optional uint32 rtime_subscribed = 5;
 	optional bool is_depot_content = 6 [(description) = "True if workshop item is delivered via Steampipe"];
 	optional uint32 rtime_updated = 7 [(description) = "Last time content updated"];
+	repeated .CPublishedFile_FileSubscribed_Notification.RevisionData revisions = 8 [(description) = "Data for each of the revisions that this item has"];
 }
 
 message CPublishedFile_FileUnsubscribed_Notification {

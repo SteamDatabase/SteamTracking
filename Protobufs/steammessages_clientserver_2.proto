@@ -159,6 +159,7 @@ message CMsgClientUCMEnumerateUserSubscribedFilesWithUpdates {
 	optional uint32 app_id = 1;
 	optional uint32 start_index = 2;
 	optional fixed32 start_time = 3;
+	optional uint32 desired_revision = 4 [default = 0];
 }
 
 message CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse {
@@ -177,21 +178,6 @@ message CMsgClientUCMEnumerateUserSubscribedFilesWithUpdatesResponse {
 	optional uint32 total_results = 3;
 }
 
-message CMsgClientUCMPublishedFileSubscribed {
-	optional fixed64 published_file_id = 1;
-	optional uint32 app_id = 2;
-	optional fixed64 file_hcontent = 3;
-	optional uint32 file_size = 4;
-	optional uint32 rtime_subscribed = 5;
-	optional bool is_depot_content = 6;
-	optional uint32 rtime_updated = 7;
-}
-
-message CMsgClientUCMPublishedFileUnsubscribed {
-	optional fixed64 published_file_id = 1;
-	optional uint32 app_id = 2;
-}
-
 message CMsgClientUCMPublishedFileDeleted {
 	optional fixed64 published_file_id = 1;
 	optional uint32 app_id = 2;
@@ -204,6 +190,7 @@ message CMsgClientUCMPublishedFileUpdated {
 	optional fixed64 hcontent = 4;
 	optional fixed32 file_size = 5;
 	optional bool is_depot_content = 6;
+	optional uint32 revision = 7;
 }
 
 message CMsgClientWorkshopItemChangesRequest {

@@ -1,4 +1,4 @@
-"controller_mappings"
+﻿"controller_mappings"
 {
 	"version"		"3"
 	"game" "Standard Gamepad"
@@ -272,6 +272,26 @@
 		"mode"		"joystick_move"
 		"inputs"
 		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_RIGHT"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+		"gameactions"
+		{
 		}
 	}
 	"group"
@@ -280,6 +300,23 @@
 		"mode"		"joystick_move"
 		"inputs"
 		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button JOYSTICK_LEFT"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -375,6 +412,32 @@
 		"mode"		"switches"
 		"inputs"
 		{
+			"button_escape"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button start"
+						}
+					}
+				}
+			}
+			"button_menu"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"xinput_button select"
+						}
+					}
+				}
+			}
 			"left_bumper"
 			{
 				"activators"

@@ -1,4 +1,4 @@
-"controller_mappings"
+﻿"controller_mappings"
 {
 	"version"		"3"
 	"game" "WASD with Mouse"
@@ -137,6 +137,10 @@
 						{
 							"binding"		"key_press SPACE, Jump"
 						}
+						"settings"
+						{
+							"repeat_rate"		"99"
+						}
 					}
 				}
 			}
@@ -149,6 +153,10 @@
 						"bindings"
 						{
 							"binding"		"key_press E, Use"
+						}
+						"settings"
+						{
+							"repeat_rate"		"99"
 						}
 					}
 				}
@@ -163,6 +171,10 @@
 						{
 							"binding"		"key_press R, Reload"
 						}
+						"settings"
+						{
+							"repeat_rate"		"99"
+						}
 					}
 				}
 			}
@@ -174,7 +186,11 @@
 					{
 						"bindings"
 						{
-							"binding"		"key_press ESCAPE, Menu"
+							"binding"		"key_press F, Flashlight"
+						}
+						"settings"
+						{
+							"repeat_rate"		"99"
 						}
 					}
 				}
@@ -381,6 +397,24 @@
 					}
 				}
 			}
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_SHIFT, Sprint"
+						}
+						"settings"
+						{
+							"repeat_rate"		"99"
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
 		}
 		"settings"
 		{
@@ -522,6 +556,32 @@
 		"mode"		"switches"
 		"inputs"
 		{
+			"button_escape"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press ESCAPE, Menu"
+						}
+					}
+				}
+			}
+			"button_menu"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press TAB, Map"
+						}
+					}
+				}
+			}
 			"left_bumper"
 			{
 				"activators"
@@ -530,7 +590,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"mouse_wheel SCROLL_DOWN, Previous Weapon"						
+							"binding"		"mouse_wheel SCROLL_DOWN, Previous Weapon"
 						}
 					}
 				}
@@ -548,6 +608,32 @@
 					}
 				}
 			}
+			"button_back_left"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press C, Crouch"
+						}
+					}
+				}
+			}
+			"button_back_right"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press R, Reload"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -555,6 +641,26 @@
 		"id"		"9"
 		"mode"		"joystick_mouse"
 		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+		}
+		"gameactions"
 		{
 		}
 	}
