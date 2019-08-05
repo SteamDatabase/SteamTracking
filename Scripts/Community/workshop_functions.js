@@ -1040,7 +1040,7 @@ function ShowExternalTagSelectorDialog( url, formID, submitFuncCB )
 
 	ListenToIFrameMessage(
 		function( event ) {
-			var allowedHostName = 'http://' + getHostname( url );
+			var allowedHostName = 'https://' + getHostname( url );
 			if ( event.origin !== allowedHostName )
 				return;
 
