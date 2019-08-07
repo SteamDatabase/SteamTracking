@@ -318,6 +318,7 @@ LocalizationReady("shared", "english", {
   ContextMenu_OpenImageInNewWindow: "Open Image in New Window",
 
   Tooltip_Settings: "Manage friends list settings",
+  Tooltip_VoiceSettings: "Manage voice settings",
   Tooltip_SearchFriends: "Search my friends list",
   Tooltip_AddFriend: "Add a friend",
   Tooltip_FriendRequest: "%1$s incoming request",
@@ -746,5 +747,21 @@ LocalizationReady("shared", "english", {
   ChatEntryButton_Submit: "Submit",
   ChatEntryButton_Emoticon: "Emoticon Picker",
   ChatEntryButton_Flair: "Flair Picker",
-  ChatEntryButton_SendEmbed: "Send Special"
+  ChatEntryButton_SendEmbed: "Send Special",
+
+  home_page_live_broadcast: "Live",
+  StoreBroadcast_Hide_Tooltip: "Show/hide the live broadcast",
+  StoreBroadcast_Detault_popout_Title: "Now Broadcasting",
+  StoreBroadcast_close_broadcast_popup:
+    "Closes broadcast popup. The pop-up will not re-open during this session.",
+  StoreBroadcast_Change_store_Broadcast_settings: "Change broadcast settings",
+  Broadcast_Embedded_viewer: "%1$s Viewer",
+  Broadcast_Embedded_viewer_Plural: "%1$s Viewers",
+  BroadcastWatch_View_Broadcast_Page: "View broadcast page",
+  Broadcast_Embed_Watch_SteamTV: "Watch on Steam.tv",
+  Broadcast_Embed_Watch_With_Frieds_SteamTV:
+    "Watch and chat with Friends on Steam.tv",
+  sale_three_section_hide_chat: "Hide Chat",
+  sale_three_section_show_chat: "Show Chat",
+  btn_live_streams_all: "View all"
 });

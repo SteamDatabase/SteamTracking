@@ -98,13 +98,13 @@
         return s;
       }),
       n.d(t, "c", function() {
-        return f;
-      }),
-      n.d(t, "e", function() {
         return l;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return p;
+      }),
+      n.d(t, "d", function() {
+        return d;
       });
     var r,
       i = {
@@ -138,13 +138,13 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!c()) return r || (r = f()), r;
+            if (!c()) return r || (r = l()), r;
             var e = (function(e) {
               if (!c() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
-            e || (e = f());
+            e || (e = l());
             return e;
           })();
         },
@@ -164,9 +164,16 @@
         authwgtoken: "",
         is_support: !1
       },
-      s = { steamid: "", clanid: "", listid: 0 },
-      a = "webui_config";
-    function f() {
+      s = { steamid: "", clanid: 0, listid: 0 },
+      a = {
+        CLANSTEAMID: "",
+        CLANACCOUNTID: 0,
+        IMG_URL: "",
+        CLANURLNAME: "",
+        APPID: 0
+      },
+      f = "webui_config";
+    function l() {
       var e = (function() {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(o.b)(0, 35).toString(36);
@@ -194,19 +201,21 @@
         e
       );
     }
-    function l(e) {
-      void 0 === e && (e = a);
-      var t = p("config", e);
+    function p(e) {
+      void 0 === e && (e = f);
+      var t = d("config", e);
       t && (delete t.SESSIONID, Object.assign(i, t));
-      var n = p("userinfo", e);
+      var n = d("userinfo", e);
       n && Object.assign(u, n);
-      var o = p("broadcast", e);
+      var o = d("broadcast", e);
       o && Object.assign(s, o);
+      var r = d("community", e);
+      r && Object.assign(a, r);
     }
-    function p(e, t) {
+    function d(e, t) {
       var n;
       if (
-        (void 0 === t && (t = a),
+        (void 0 === t && (t = f),
         (n = "string" == typeof t ? document.getElementById(t) : t))
       )
         try {

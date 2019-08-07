@@ -9,7 +9,7 @@
     max-width: 916px;
 }
 .workshop_verify_item_submission_title {
-		font-family: "Motiva Sans", Sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
 		    font-size: 24px;
@@ -18,7 +18,7 @@
 	padding-bottom: 5px;
 }
 .workshop_verify_item_submission_desc {
-		font-family: "Motiva Sans", Sans-serif;
+			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
 		    font-size: 15px;
@@ -28,6 +28,47 @@
 .workshop_verify_item_submission_desc a {
     text-decoration: underline;
     color: #333333;
+}
+
+.workshop_require_submission_approval {
+	text-align: left;
+	margin: 10px 0px 5px 0px;
+	padding: 16px;
+	color: #ffffff;
+	background-color: #bfcfd9;
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+	max-width: 916px;
+}
+.workshop_require_submission_approval_title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-size: 24px;
+	line-height: 31px;
+	color: #333333;
+	padding-bottom: 5px;
+}
+.workshop_require_submission_approval_desc {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 15px;
+	color: #333333;
+	line-height: 22px;
+}
+.workshop_require_submission_approval_desc a {
+	text-decoration: underline;
+	color: #333333;
+}
+.workshop_require_submission_approval_desc a:hover {
+	color: #ffffff;
+}
+
+.workshop_view_revisions {
+	margin-top: 10px;
+}
+.workshop_view_revisions ul {
+	margin: 0px;
 }
 
 .inappropriateBanner

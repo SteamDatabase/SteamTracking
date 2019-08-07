@@ -244,6 +244,7 @@ GContentHub = {
 		// Build a pool of things to show
 		var rgDisplayListCombined = GContentHub.ZipLists(
 			//this.FilterSeenCapsules( GContentHub.oDisplayLists.popular_new_releases ), true,
+			this.FilterSeenCapsules( GContentHub.oDisplayLists.featured_recommended || [] ), true,
 			this.FilterSeenCapsules( GContentHub.oDisplayLists.top_sellers ), true, // Top new releases
 			this.FilterSeenCapsules( GContentHub.oDisplayLists.specials ) , true,
 			this.FilterSeenCapsules( GContentHub.oDisplayLists.concurrent ), true
@@ -261,16 +262,39 @@ GContentHub = {
 		);
 		rgDisplayListCombined = v_shuffle( rgDisplayListCombined );
 
-				populate_genre_large_cluster( rgDisplayListCombined, this.GetRecommendationReason.bind(this) );
+				var rgCreatorsShown = {};
+		var rgCuratorsShown = {};
+		populate_genre_large_cluster( rgDisplayListCombined, this.GetRecommendationReason.bind( this, rgCreatorsShown, rgCuratorsShown ) );
 	},
 
-	GetRecommendationReason: function( oItem )
+	GetRecommendationReason: function( rgCreatorsShown, rgCuratorsShown, oItem )
 	{
+
+		var rgItemData = GStoreItemData.GetCapParams( '', oItem.appid, oItem.packageid, oItem.bundleid, {});
+
+		// See if we have a high tag overlap first
+		var rgMatchedTags = [];
+		if ( rgItemData && rgItemData.tagids )
+		{
+			for ( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && rgMatchedTags.length < 4; i++ )
+			{
+				// if this is the content hub for a particular tag, don't use that as a reason
+				if ( GContentHub.unTagID && GDynamicStore.s_rgRecommendedTags[ i ].tagid == GContentHub.unTagID )
+					continue;
+
+				var iTagIndex = rgItemData.tagids.indexOf ( GDynamicStore.s_rgRecommendedTags[ i ].tagid );
+				if ( iTagIndex !== -1  && iTagIndex < 10 )
+					rgMatchedTags.push ( '<span>' + GDynamicStore.s_rgRecommendedTags[ i ].name + '</span>' );
+			}
+		}
+
+
 				if( oItem.creator_relationship )
 		{
 			var creatorRelationship = GDynamicStore.GetMatchingCreatorFollowed( oItem.creator_relationship );
-			if( creatorRelationship )
+			if( creatorRelationship && ( !rgCreatorsShown[ creatorRelationship.clanid ] || rgMatchedTags.length < 4 ) )
 			{
+				rgCreatorsShown[ creatorRelationship.clanid ] = true;
 				var curator = GDynamicStore.GetCurator( creatorRelationship.clanid );
 				if( curator )
 				{
@@ -286,8 +310,9 @@ GContentHub = {
 		if( oItem.appid )
 		{
 			var curator = GDynamicStore.GetCuratorForApp( oItem.appid, true );
-			if( curator )
+			if( curator && ( !rgCuratorsShown[ curator.clanid ] || rgMatchedTags.length < 4 ) )
 			{
+				rgCuratorsShown[ curator.clanid ] = true;
 				return {
 					reason: 'curator',
 					curator: curator
@@ -295,26 +320,12 @@ GContentHub = {
 			}
 		}
 
-		var rgItemData = GStoreItemData.GetCapParams( '', oItem.appid, oItem.packageid, oItem.bundleid, {});
 
-		// See if we have a high tag overlap
-		var rgMatchedTags = [];
-
-
-		if ( rgItemData && rgItemData.tags )
+		if( rgMatchedTags.length >= 4 )
 		{
-			for ( var i = 0; i < GDynamicStore.s_rgRecommendedTags.length && rgMatchedTags.length <= 3; i++ )
-			{
-				if ( rgItemData.tags.indexOf ( GDynamicStore.s_rgRecommendedTags[ i ].name ) !== -1 )
-					rgMatchedTags.push ( '<span>' + GDynamicStore.s_rgRecommendedTags[ i ].name + '</span>' );
-			}
-
-			if( rgMatchedTags.length >= 3 )
-			{
-				return {
-					reason: 'tags',
-					tags: rgMatchedTags
-				}
+			return {
+				reason: 'tags',
+				tags: rgMatchedTags
 			}
 		}
 

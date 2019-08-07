@@ -1871,6 +1871,12 @@ GStoreItemData = {
 		if ( !GStoreItemData.BItemPassesFilters( rgPackageData, Settings, ApplicableSettings, bStrict ) )
 			return false;
 
+		if ( !GStoreItemData.BAppIDSetPassesFilters( rgPackageData.appids, Settings, ApplicableSettings, bStrict ) )
+			return false;
+
+		if ( ApplicableSettings.games_already_in_library && !Settings.games_already_in_library && GDynamicStore.BIsPackageOwned( packageid ) )
+			return false;
+
 		if ( GDynamicStore.BIsPackageIgnored( packageid ) )
 			return false;
 
@@ -1887,9 +1893,44 @@ GStoreItemData = {
 		if( !GStoreItemData.BItemPassesFilters( rgBundleData, Settings, ApplicableSettings, bStrict ) )
 			return false;
 
+		if ( !GStoreItemData.BAppIDSetPassesFilters( rgBundleData.appids, Settings, ApplicableSettings, bStrict ) )
+			return false;
+
 
 		return true;
-	}
+	},
+
+	BAppIDSetPassesFilters: function( appids, Settings, ApplicableSettings, bStrict )
+	{
+		// figure out state of apps
+		var bAnyAppsOwned = false;
+		for ( var i = 0; i < appids.length; i++ )
+		{
+			if ( GDynamicStore.BIsAppIgnored( appids[i] ) )
+				return false;
+
+			if ( GDynamicStore.BIsAppOwned( appids[i] ) )
+			{
+				bAnyAppsOwned = true;
+			}
+		}
+
+		if ( ApplicableSettings.games_already_in_library && !Settings.games_already_in_library )
+		{
+			// any app being owned excludes the package; packages don't grant extra copies (usually)
+			if ( bAnyAppsOwned )
+				return false;
+
+		}
+
+		if ( ApplicableSettings.games_not_in_library && !Settings.games_not_in_library )
+		{
+			if ( !bAnyAppsOwned )
+				return false;
+		}
+
+		return true;
+	},
 
 };
 
@@ -2033,16 +2074,17 @@ GDynamicStorePage = {
 
 		var fnItemFromCapsule = function( $capsule )
 		{
-			var unAppId = $capsule.data('ds-appid');
-			if ( unAppId )
-				return { appid: unAppId };
-
 			var unPackageId = $capsule.data('ds-packageid');
 			var unBundleId = $capsule.data('ds-bundleid');
-			if ( unPackageId)
-				return { packageid: unPackageId };
-			else if ( unBundleId )
+			var unAppId = $capsule.data('ds-appid');
+
+			// bundles set package and appids, packages set appids, so start from the outside and work down.
+			if ( unBundleId )
 				return { bundleid: unBundleId };
+			else if ( unPackageId)
+				return { packageid: unPackageId };
+			else if ( unAppId )
+				return { appid: unAppId };
 
 			return null;
 		}

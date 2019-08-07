@@ -1,7 +1,7 @@
 
-function DownloadFile( publishFileID )
+function DownloadFile( publishFileID, revision )
 {
-    $J.post( "https://steamcommunity.com/sharedfiles/downloadfile/?id=" + publishFileID )
+    $J.post( "https://steamcommunity.com/sharedfiles/downloadfile/?id=" + publishFileID + "&revision=" + revision )
 
     .done( function(response) {
         if ( response.success == 1 )

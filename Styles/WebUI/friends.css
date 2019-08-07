@@ -411,6 +411,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
     text-transform: uppercase; }
   .contextmenu_contextMenuItem_CBC-y.contextmenu_StrongerSeparation_31Tii {
     border-top-color: dimgray; }
+  .contextmenu_contextMenuItem_CBC-y.contextmenu_UpperCase_2T9by {
+    text-transform: uppercase; }
   .contextmenu_contextMenuItem_CBC-y .SVGIcon_Button {
     height: 10px;
     width: 10px;
@@ -3690,13 +3692,22 @@ iframe.steamTVLogin {
   letter-spacing: 0px;
   line-height: 15px; }
 
+.StoreSaleWidgetRight {
+  padding: 4px; }
+
 .StoreSalePriceActionWidgetContainer {
   display: flex;
   flex-direction: row;
-  padding: 1px;
-  justify-content: flex-end; }
+  padding: 1px; }
+
+.StoreSaleDiscountBox {
+  font-size: 14px;
+  padding: 5px;
+  background-color: #4C6B22;
+  color: #A4D007; }
 
 .StoreSalePriceBox {
+  font-size: 14px;
   padding: 5px;
   background-color: black; }
 
@@ -8623,7 +8634,9 @@ img {
 .shared_common_FlexCenter_2xt9g {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; }
+
+.shared_common_ThrobberCtn_10smC {
   height: 100%;
   min-height: 420px; }
 
@@ -14069,28 +14082,6 @@ html.web_chat_frame .perf_timing_area {
   height: 64px;
   width: 64px; }
 
-.msg.tradeRequest {
-  max-width: 656px;
-  background: radial-gradient(256px 256px at 20% 20%, #3d444e 0%, #292c33 50%, #24272e 100%);
-  color: #b5bec8;
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 6px 14px 1px #00000063;
-  border-radius: 8px;
-  position: relative;
-  text-align: left;
-  display: flex;
-  flex-direction: row;
-  user-select: none;
-  margin-bottom: 8px;
-  height: 108px;
-  outline: 1px solid #63487b;
-  padding: 3px;
-  background-image: url(../../images/webui/b701d3f5319cdc51ff86c20d88f07c67.png);
-  background-repeat: no-repeat;
-  background-size: 100px 100px;
-  background-position: 4px 4px; }
-
 .tradeInviteDismissed {
   font-style: italic;
   color: #c1c6cf; }
@@ -14103,34 +14094,6 @@ html.web_chat_frame .perf_timing_area {
   height: 16px;
   margin-right: 4px;
   margin-bottom: -2px; }
-
-.msg.tradeRequest.tradeRequestCancelled {
-  background-size: 48px;
-  height: 56px; }
-
-.msg.tradeRequest.tradeRequestCancelled .centerBlock {
-  margin-left: 60px; }
-
-.tradeRequest .centerBlock {
-  display: flex;
-  flex-direction: column;
-  margin-top: 10px;
-  margin-left: 112px; }
-
-.tradeRequestButtonContainer {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  right: 0px;
-  bottom: 0px; }
-
-.tradeRequestButton {
-  background-color: #63487b;
-  color: white;
-  text-transform: uppercase;
-  height: 18px;
-  padding: 6px;
-  margin-left: 12px; }
 
 /*.msg.FriendChatSlashEmote:hover .SpeakerLineBreak,
 .msg.ChatRoomSlashEmote:hover .SpeakerLineBreak
@@ -19381,9 +19344,6 @@ a.general_btn:hover {
 .GameIcon {
   width: 100%;
   height: 100%; }
-
-.BroadcastVideoWatchState .SteamLogoThrobber {
-  filter: hue-rotate(40deg); }
 
 .ChatRoomGroupOGGAvatar {
   flex-shrink: 0;

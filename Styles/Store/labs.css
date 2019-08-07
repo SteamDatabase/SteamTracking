@@ -305,6 +305,11 @@ span.experiment-name {
     justify-content: center;
     flex-wrap: wrap;
 }
+.options_row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 .microtrailers_grid_item {
     		font-family: "Motiva Sans", Sans-serif;
@@ -548,4 +553,9 @@ a.ultracast_now_playing_link:hover .ds_options {
     html.responsive .capsule-banner {
         width: 100%;
     }
+}
+
+#LabsHeaderContainer {
+    width: 1000px;
+    margin: 0px auto;
 }

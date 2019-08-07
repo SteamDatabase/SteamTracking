@@ -472,7 +472,7 @@ GHomepage = {
 
 				if ( GHomepage.bAddTopSellersToMainCap )
 				{
-					rgFeatured = rgFeatured.concat( v_shuffle( GHomepage.oDisplayLists.top_sellers.slice() ) );
+					rgFeatured = GHomepage.MergeLists( GHomepage.oDisplayLists.main_cluster, false, GHomepage.oDisplayLists.top_sellers, true );
 				}
 
 				rgDisplayListCombined = GHomepage.ZipLists(
@@ -1412,7 +1412,7 @@ GHomepage = {
 		{
 			var rgList = args[iArg] || [];
 			if ( iArg + 1 < args.length && args[++iArg] )
-				rgList = v_shuffle( rgList );
+				rgList = v_shuffle( rgList.slice() );
 			rgLists.push( rgList );
 		}
 

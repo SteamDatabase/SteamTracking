@@ -1132,17 +1132,6 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_BroadcastInvite_Watch: "Watch",
   ChatRoom_BroadcastInvite_WatchGame: "Watch %1$s's broadcast",
 
-  ChatRoom_TradeRequest_Accept: "Begin Trade",
-  ChatRoom_TradeRequest_Sender_Pending: "You have sent %1$s a trade request",
-  ChatRoom_TradeRequest_Recipient_Pending: "%1$s would like to start a",
-  ChatRoom_TradeRequest_Recipient_Declined: "%1$s declined your trade request",
-  ChatRoom_TradeRequest_Self_Declined:
-    "%1$s sent you a trade request. You declined.",
-  ChatRoom_TradeRequest_Accepted: "Trade Request Accepted",
-  ChatRoom_TradeRequest_Popup_Blocked:
-    "Trade Popup blocked by the browser, Click to Accept",
-  ChatRoom_TradeRequest_ViewTrade: "View Trade",
-
   Chat_BroadcastViewRequest_Notification: "would like to watch your broadcast",
   ChatRoom_BroadcastViewRequest_Dismissed:
     "You declined %1$s's request to watch your broadcast of %2$s",
@@ -1153,72 +1142,6 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_BroadcastViewRequest_Invite:
     "%1$s would like permission to view your broadcast of %2$s",
   ChatRoom_BroadcastViewRequest_Accept: "Accept",
-
-  friends_trade_generic_failure: "You cannot trade with %1$s.",
-
-  friends_trade_declined: "%1$s has declined your trade request.",
-  friends_trade_you_are_banned:
-    "You cannot trade with %1$s because you have a trade ban.",
-  friends_trade_they_are_banned:
-    "You cannot trade with %1$s because they have a trade ban.",
-  friends_trade_you_are_cafe:
-    "You cannot trade with %1$s because you are on a Cyber Cafe account.",
-  friends_trade_they_are_cafe:
-    "You cannot trade with %1$s because they are on a Cyber Cafe account.",
-  friends_trade_you_are_school:
-    "You cannot trade with %1$s because you are on a School Lab account.",
-  friends_trade_they_are_school:
-    "You cannot trade with %1$s because they are on a School Lab account.",
-  friends_trade_they_are_blocked:
-    "You cannot trade with %1$s because you have blocked them.",
-  friends_trade_you_need_verified_email:
-    "You must verify your email address before you can participate in a trade. Verify your email address from the Settings window.",
-  friends_trade_you_have_steam_guard_disabled:
-    "You must enable Steam Guard before you can participate in a trade. Enable Steam Guard from the Settings window.",
-  friends_trade_you_havent_had_steam_guard_enabled_long_enough:
-    "You must have had Steam Guard enabled for at least %1$s days before you can participate in a trade.",
-  friends_trade_you_are_using_new_device:
-    "You have logged in from a new device. In order to protect the items in your inventory, you will be unable to trade from this device for %1$s days.",
-  friends_trade_you_recently_reset_password:
-    "You recently forgot and then reset your Steam account's password. You will not be able to trade until about five days after the most recent password reset.",
-  friends_trade_you_recently_reset_password_long:
-    "You recently forgot and then reset your Steam account's password after multiple months of account inactivity. In order to protect the items in your inventory, you will be unable to trade for %1$s more days.",
-  friends_trade_you_recently_reset_password_short:
-    "You recently forgot and then reset your Steam account's password. In order to protect the items in your inventory, you will be unable to trade for %1$s more days.",
-  friends_trade_you_recently_reset_password_oneday:
-    "You recently forgot and then reset your Steam account's password. In order to protect the items in your inventory, you will be unable to trade for one more day.",
-  friends_trade_you_recently_changed_email:
-    "You recently changed the email address associated with your Steam account. You will not be able to trade until five days after changing your email address.",
-  friends_trade_you_recently_changed_email_days:
-    "You recently changed the email address associated with your Steam account. In order to protect the items in your inventory, you will be unable to trade for %1$s more days.",
-  friends_trade_you_recently_changed_email_oneday:
-    "You recently changed the email address associated with your Steam account. In order to protect the items in your inventory, you will be unable to trade for one more day.",
-  friends_trade_their_account_cannot_trade:
-    "%1$s is not available to trade. More information will be shown to %1$s if they invite you to trade.",
-  friends_trade_trade_hold_for_cleared_trades_initiator:
-    "You cannot trade with %1$s because you recently had all your trade offers canceled.",
-  friends_trade_would_exceed_max_asset_count:
-    "This trade cannot be completed because it would exceed the maximum number of items allowed in your inventory.",
-
-  friends_trade_cancelled: "The trade request was cancelled.",
-  friends_trade_they_are_trading:
-    "You cannot trade with %1$s because they are currently trading with someone else.",
-  friends_trade_disabled: "Trading is currently disabled on the server.",
-  friends_trade_not_logged_in:
-    "You cannot trade with %1$s because they are not logged in.",
-  friends_trade_too_soon:
-    "You cannot trade with %1$s because it is too soon to ask them again.",
-  friends_trade_too_soon_penalty:
-    "You cannot trade with %1$s because you have been asking too frequently - you can try again in a few minutes.",
-  friends_trade_connection_failed:
-    "%1$s has not responded to your trade request.",
-  friends_trade_you_are_already_trading:
-    "You cannot request a new trade while you are still in another trade session.",
-  friends_trade_you_are_already_requesting_trade:
-    "You can only have one outstanding trade request.",
-  friends_trade_no_respond: "%1$s did not respond to the trade request.",
-  friends_trade_you_didnt_respond:
-    "%1$s sent you a trade request, you did not respond in time.",
 
   ChatRoom_OneFriend: "%1$s",
   ChatRoom_OneFriendPlusMore: "%1$s and %2$s more",

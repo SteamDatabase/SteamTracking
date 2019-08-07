@@ -1425,6 +1425,10 @@ a.btn_download:hover {
 	
 }
 
+.invite_user_ctn {
+    float: right;
+}
+
 #addPartnerOptions
 {
 	float: right;
@@ -1805,6 +1809,10 @@ a.btn_download:hover {
 }
 .text_orange a:hover {
 	color: #ffffff !important;
+}
+
+.text_red {
+	color: #e24044 !important;
 }
 
 .ttip {
@@ -2659,6 +2667,9 @@ ul.transfer_rights li {
 	color: #808285;
 	text-decoration: none;
 	width: 100%;
+    position: sticky;
+    top: 0px;
+    box-shadow: 0 0 10px #000000;
 }
 
 .cdkey_request_packageid {
