@@ -3763,6 +3763,30 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	display: block;
 }
 
+.valveindex_banner
+{
+	display: block;
+	margin-top: 12px;
+	overflow: hidden;
+	position: relative;
+}
+
+.valveindex_banner img.banner.hover
+{
+	display: block;
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	transition: opacity 0.25s;
+}
+
+
+.valveindex_banner:hover img.banner.hover
+{
+	opacity: 1.0;
+}
 
 
 /* Responsive */
@@ -3774,5 +3798,10 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		min-height: 0;
 		margin: 0 2%;
 		height: auto;
+	}
+
+	html.responsive .valveindex_banner img.banner
+	{
+		max-width: 200%;
 	}
 }
