@@ -1830,7 +1830,10 @@
                 )
               : M.a.createElement(
                   "div",
-                  { className: F.a.App },
+                  {
+                    className: F.a.App,
+                    style: { height: 3840 + 26 * le.getTagHeight() }
+                  },
                   M.a.createElement(
                     "div",
                     { className: F.a.Container },
@@ -2206,6 +2209,12 @@
         (e.prototype.getTagName = function(e) {
           return this.getTags(), this.m_TagNameMap.get(e);
         }),
+        (e.prototype.getTagHeight = function() {
+          return Math.max(
+            this.m_rgFilterTags.length,
+            this.m_rgExcludeTags.length
+          );
+        }),
         (e.prototype.onPopularityChanged = function(e) {
           this.m_fQueuedPopularityValue = Number(e.target.value);
         }),
@@ -2442,6 +2451,7 @@
         d.c([ee.v], e.prototype, "m_bExcludeWishlisted", void 0),
         d.c([ee.v], e.prototype, "m_bShouldMute", void 0),
         d.c([ee.v], e.prototype, "m_bIgnoredEdited", void 0),
+        d.c([g], e.prototype, "getTagHeight", null),
         d.c([g], e.prototype, "onPopularityChanged", null),
         d.c([g], e.prototype, "onRecencyChanged", null),
         d.c([g], e.prototype, "onTagFilterAdd", null),
