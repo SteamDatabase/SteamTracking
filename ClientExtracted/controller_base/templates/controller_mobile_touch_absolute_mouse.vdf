@@ -1,0 +1,165 @@
+"controller_mappings"
+{
+	"version"		"3"
+	"revision"		"1"
+	"title"		"#Title"
+	"description"		"#Description"
+	"creator"		"76561197998511283"
+	"controller_type"		"controller_mobile_touch"
+	"Timestamp"		"67806209"
+	"touch_layout"		"10011802"
+	"localization"
+	{
+		"english"
+		{
+			"title"		"Mouse point and click"
+			"description"		"This template works great for the games on Steam that were designed for point and click interaction"
+		}
+		"koreana"
+		{
+			"title"		"마우스 포인트 및 클릭"
+			"description"		"이 템플릿은 Steam에 있는 게임 중 특정 지점을 마우스로 가리키고 클릭하는 동작을 위해 설계된 게임에서 유용합니다."
+		}
+		"tchinese"
+		{
+			"title"		"滑鼠瞄準點擊"
+			"description"		"此模板適用於 Steam 上的滑鼠點擊類遊戲"
+		}
+		"schinese"
+		{
+			"title"		"鼠标指向与点击"
+			"description"		"此模板适用于 Steam 上指向与点击互动类游戏。"
+		}
+		"czech"
+		{
+			"title"		"Myš s přesným zaměřováním"
+			"description"		"Tato šablona je pro hry ve službě Steam, které byly vytvořeny pro ovládání myší (např. hry žánru „Point and Click“)."
+		}
+		"bulgarian"
+		{
+			"title"		"Посочване и кликване с мишка"
+			"description"		"Този шаблон върши добра работа при игри в Steam, които са били проектирани за взаимодействие с посочване и кликване."
+		}
+		"greek"
+		{
+			"title"		"Ποντίκι - κατάδειξη και πάτημα"
+			"description"		"Αυτό το πρότυπο λειτουργεί υπέροχα για τα παιχνίδια στο Steam που σχεδιάστηκαν για αλληλεπίδραση με κατάδειξη και πάτημα ποντικιού"
+		}
+		"german"
+		{
+			"title"		"Maus – Zielen und Klicken"
+			"description"		"Diese Vorlage eignet sich gut für Spiele auf Steam, die für Interaktionen per Mausklick entworfen wurden"
+		}
+		"hungarian"
+		{
+			"title"		"Egérrel mutatás és kattintás"
+			"description"		"Ez a sablon remekül működik azokkal a Steames játékokkal, amelyek egérrel mutatás és kattintás vezérléshez készültek."
+		}
+		"french"
+		{
+			"title"		"Souris : jeux pointer et cliquer"
+			"description"		"Ce modèle fonctionne très bien pour les jeux sur Steam qui ont été conçus pour pointer et cliquer."
+		}
+		"polish"
+		{
+			"title"		"Wskazanie myszą i kliknięcie"
+			"description"		"Ten szablon świetnie działa dla gier na Steam, które zostały zaprojektowane z myślą o rozgrywce na zasadzie „wskaż i kliknij”."
+		}
+		"turkish"
+		{
+			"title"		"Fare (Point and Click)"
+			"description"		"Bu şablon, üzerinde dur ve tıkla (Point and Click) etkileşimi düşünülerek tasarlanan Steam oyunları için oldukça iyi işler."
+		}
+		"swedish"
+		{
+			"title"		"Peka och klicka med mus"
+			"description"		"Denna mall fungerar utmärkt för spel på Steam som har designats för peka-och-klicka"
+		}
+		"thai"
+		{
+			"title"		"ชี้และคลิกด้วยเมาส์"
+			"description"		"แม่แบบนี้ทำงานได้ดีสำหรับเกมบน Steam ที่ถูกออกแบบมาสำหรับการโต้ตอบแบบชี้และคลิก"
+		}
+		"spanish"
+		{
+			"title"		"Ratón - Apuntar y hacer clic"
+			"description"		"Esta plantilla funciona muy bien con los juegos de Steam que fueron diseñados para la interacción de apuntar y hacer clic."
+		}
+		"latam"
+		{
+			"title"		"Mouse: apuntar y hacer clic"
+			"description"		"Esta plantilla funciona muy bien con los juegos de Steam que fueron diseñados para la interacción de apuntar y hacer clic."
+		}
+		"romanian"
+		{
+			"title"		"Mouse: indică și apasă"
+			"description"		"Acest șablon funcționează excelent pentru jocurile de pe Steam care au fost concepute pentru interacțiunile de tip „indică și apasă”"
+		}
+		"russian"
+		{
+			"title"		"Управление мышью"
+			"description"		"Этот шаблон подходит для игр в Steam, которые разрабатывались для управления мышью"
+		}
+		"finnish"
+		{
+			"title"		"Osoita ja klikkaa hiirellä"
+			"description"		"Malli sopii erityisesti osoita ja klikkaa -tyyppisiin Steam-peleihin"
+		}
+		"ukrainian"
+		{
+			"title"		"Взаємодія мишкою"
+			"description"		"Цей шаблон чудово працює з іграми у Steam, які розроблені для взаємодії мишкою"
+		}
+		"norwegian"
+		{
+			"title"		"Mus – pek og klikk"
+			"description"		"Denne malen fungerer bra for spillene på Steam, som ble utformet for interaksjon med pek og klikk."
+		}
+		"japanese"
+		{
+			"title"		"マウスでポイント＆クリック"
+			"description"		"このテンプレートはマウスを合わせてクリックする動作を想定してデザインされたSteamのゲームに最適です"
+		}
+		"vietnamese"
+		{
+			"title"		"Di và nhấp chuột"
+			"description"		"Bản đồ phím mẫu này rất phù hợp với các trò chơi trên Steam được thiết kế dành cho tương tác di và nhấp chuột"
+		}
+		"brazilian"
+		{
+			"title"		"\"Apontar e clicar\" com mouse"
+			"description"		"Este modelo é ótimo para jogos no Steam que se baseiam em interações no estilo apontar e clicar."
+		}
+		"danish"
+		{
+			"title"		"Peg og klik med mus"
+			"description"		"Denne skabelon er god til spil på Steam, som er designet til pege-og-klikke-interaktioner"
+		}
+		"italian"
+		{
+			"title"		"Punta e clicca con il mouse"
+			"description"		"Questo template è ideale per i giochi su Steam che sono stati progettati per l'interazione punta e clicca"
+		}
+		"dutch"
+		{
+			"title"		"Muis - aanwijzen en klikken"
+			"description"		"Dit sjabloon werkt goed voor spellen op Steam die ontworpen zijn voor aanwijzen en klikken-interactie"
+		}
+		"portuguese"
+		{
+			"title"		"Rato (Point & Click)"
+			"description"		"Este modelo é indicado para jogos no Steam concebidos para interação de apontar e clicar (Point & Click)."
+		}
+	}
+	"preset"
+	{
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+		}
+	}
+	"settings"
+	{
+	}
+}

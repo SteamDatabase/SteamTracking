@@ -7,6 +7,8 @@ enum EPublishedFileRevision {
 	k_EPublishedFileRevision_Latest = 1;
 	k_EPublishedFileRevision_ApprovedSnapshot = 2;
 	k_EPublishedFileRevision_ApprovedSnapshot_China = 3;
+	k_EPublishedFileRevision_RejectedSnapshot = 4;
+	k_EPublishedFileRevision_RejectedSnapshot_China = 5;
 }
 
 enum EPublishedFileForSaleStatus {
@@ -201,6 +203,7 @@ message PublishedFileDetails {
 	optional bool maybe_inappropriate_violence = 66;
 	optional uint64 revision_change_number = 67 [(description) = "The change number for the specified revision."];
 	optional .EPublishedFileRevision revision = 68 [default = k_EPublishedFileRevision_Default, (description) = "The revision of the data returned, usually k_EPublishedFileRevision_Latest, but can be another revision/snapshot depending on the caller."];
+	repeated .EPublishedFileRevision available_revisions = 69 [(description) = "Available revisions"];
 }
 
 message CPublishedFile_GetDetails_Response {

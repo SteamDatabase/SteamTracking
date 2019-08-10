@@ -1,0 +1,30 @@
+"controller_mappings"
+{
+	"version"		"3"
+	"revision"		"2"
+	"title"		"#Title"
+	"description"		"#Description"
+	"creator"		"76561197998511283"
+	"controller_type"		"controller_mobile_touch"
+	"Timestamp"		"67806209"
+	"touch_layout"		"10011801"
+	"localization"
+	{
+		"english"
+		{
+			"title"		"Mouse trackpad"
+			"description"		"This template works great for the games on Steam that were designed for trackpad interaction"
+		}
+	}
+	"preset"
+	{
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+		}
+	}
+	"settings"
+	{
+	}
+}
