@@ -25,7 +25,7 @@ public:
     virtual unknown_ret InitiateGameConnection(void*, int, CSteamID, CGameID, unsigned int, unsigned short, bool) = 0;
     virtual unknown_ret InitiateGameConnectionOld(void*, int, CSteamID, CGameID, unsigned int, unsigned short, bool, void*, int) = 0;
     virtual unknown_ret TerminateGameConnection(unsigned int, unsigned short) = 0;
-    virtual unknown_ret TerminateAppMultiStep(unsigned int, unsigned int) = 0;
+    virtual unknown_ret TerminateAppMultiStep(CGameID, unsigned int) = 0;
     virtual unknown_ret SetSelfAsChatDestination(bool) = 0;
     virtual unknown_ret IsPrimaryChatDestination() = 0;
     virtual unknown_ret RequestLegacyCDKey(unsigned int) = 0;

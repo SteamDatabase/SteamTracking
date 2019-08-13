@@ -2683,6 +2683,7 @@
 	"Library_VRFilter" "Supports VR"
 	"Library_ReadyToPlay" "Ready to Play"
 	"Library_LocalMultiplayer" "Local Multiplayer"
+	"Library_RemotePlayOptimized" "Remote Play Optimized"
 	"Library_Unplayed" "Unplayed"
 	"Library_PlatformFilter" "{s:platformname} Games"
 	"Library_ControllerSupported" "Controller Supported"

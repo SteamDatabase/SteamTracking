@@ -996,6 +996,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientMatchmaking.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/IClientRemoteStorage.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientcontroller.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientremoteclientmanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/iclientvr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamdatagram_messages_auth.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamdatagram_messages_auth.pb.h

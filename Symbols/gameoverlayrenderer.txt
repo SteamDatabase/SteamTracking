@@ -745,6 +745,7 @@
  b s_bExternalLeftDragActive
  b s_bFirstLogEntry
  b s_bIsVideoRecording
+ b s_bIsVideoRecordingDisablingVSync
  b s_bMousePositionLocked
  b s_bStreamForOpenVR
  b s_eCursorForced

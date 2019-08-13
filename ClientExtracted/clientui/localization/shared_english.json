@@ -277,6 +277,7 @@
 	"ContextMenu_OpenImageInNewWindow": "Open Image in New Window",
 
 	"Tooltip_Settings": "Manage friends list settings",
+	"Tooltip_VoiceSettings": "Manage voice settings",
 	"Tooltip_SearchFriends": "Search my friends list",
 	"Tooltip_AddFriend": "Add a friend",
 	"Tooltip_FriendRequest": "%1$s incoming request",

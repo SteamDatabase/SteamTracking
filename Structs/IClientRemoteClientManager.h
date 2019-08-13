@@ -50,6 +50,7 @@ public:
     virtual unknown_ret GetRemoteClientPlatformName(unsigned long long, bool*) = 0;
     virtual unknown_ret BIsStreamClientRunning() = 0;
     virtual unknown_ret BIsStreamClientRunning(CGameID) = 0;
+    virtual unknown_ret BIsStreamClientRunningConnectedToClient(CGameID, unsigned long long) = 0;
     virtual unknown_ret RequestControllerConfig(unsigned long long, unsigned int, unsigned int) = 0;
     virtual unknown_ret PostControllerConfig(unsigned long long, unsigned char const*, unsigned int) = 0;
     virtual unknown_ret GetControllerConfig(unsigned long long, unsigned char*, unsigned int) = 0;
@@ -62,4 +63,11 @@ public:
     virtual unknown_ret CreateRemotePlayInviteAndSession(CSteamID, unsigned int) = 0;
     virtual unknown_ret CancelRemotePlayInviteAndSession(CSteamID) = 0;
     virtual unknown_ret JoinRemotePlaySession(CSteamID, char const*) = 0;
+    virtual unknown_ret BStreamingDesktopToRemotePlayTogetherEnabled() = 0;
+    virtual unknown_ret SetStreamingDesktopToRemotePlayTogetherEnabled(bool) = 0;
+    virtual unknown_ret SetPerUserKeyboardInputEnabled(CSteamID, bool) = 0;
+    virtual unknown_ret SetPerUserMouseInputEnabled(CSteamID, bool) = 0;
+    virtual unknown_ret SetPerUserControllerInputEnabled(CSteamID, bool) = 0;
+    virtual unknown_ret GetPerUserInputSettings(CSteamID, RemoteClientInputSettings_t*) = 0;
+    virtual unknown_ret OnClientUsedInput(CSteamID, EClientUsedInputType) = 0;
 };

@@ -6423,4 +6423,12 @@ Label.NotEnoughRoom
 	visibility: visible;
 }
 
+.StreamingActive .StreamingVisible
+{
+    visibility: visible;
+}
 
+.StreamingVisible
+{
+    visibility: collapse;
+}

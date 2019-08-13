@@ -307,7 +307,7 @@
     {
         "id": 704,
         "size": 1,
-        "posted_in": "CUser::SignalAppsToShutDown(unsigned int)"
+        "posted_in": "CUser::SignalAppsToShutDown(CGameID)"
     },
     {
         "id": 705,
@@ -1906,7 +1906,7 @@
     },
     {
         "id": 3308,
-        "size": 1,
+        "size": 9,
         "posted_in": "void CRemoteClientStream::PostCallbackToUI<RemoteClientStreamLifetime_t>(RemoteClientStreamLifetime_t*)"
     },
     {
@@ -1921,7 +1921,7 @@
     },
     {
         "id": 3311,
-        "size": 524,
+        "size": 528,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStreamSession_t>(RemoteClientStartStreamSession_t*)"
     },
     {
@@ -1946,7 +1946,7 @@
     },
     {
         "id": 3317,
-        "size": 128,
+        "size": 136,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<StreamingClientConnected_t>(StreamingClientConnected_t*)"
     },
     {
@@ -2003,6 +2003,21 @@
         "id": 3328,
         "size": 12,
         "posted_in": "CRemoteClientJobRemotePlayInvite::BYieldingRunClientJob()"
+    },
+    {
+        "id": 3329,
+        "size": 11,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientInputSettingsChange_t>(RemoteClientInputSettingsChange_t*)"
+    },
+    {
+        "id": 3330,
+        "size": 12,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<StreamingClientUsedInput_t>(StreamingClientUsedInput_t*)"
+    },
+    {
+        "id": 3331,
+        "size": 1,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStreamingDesktopToRemotePlayTogetherChange_t>(RemoteClientStreamingDesktopToRemotePlayTogetherChange_t*)"
     },
     {
         "id": 3401,

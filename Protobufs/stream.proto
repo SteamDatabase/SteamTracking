@@ -369,6 +369,7 @@ message CStreamingClientConfig {
 	optional bool enable_input_streaming = 11 [default = true];
 	optional int32 audio_channels = 12 [default = 2];
 	optional bool enable_video_hevc = 13 [default = false];
+	optional bool enable_performance_icons = 14 [default = true];
 }
 
 message CStreamingServerConfig {
