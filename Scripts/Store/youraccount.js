@@ -272,9 +272,23 @@ function UnIgnoreApp( element, unAppId, snr )
 		snr: snr,
 		remove: 1
 	}).done( function() {
-		$J(element.parentNode).hide();
+		$J('#ignored_app_' + unAppId).slideUp();
 		GDynamicStore.InvalidateCache();
 	}).fail( function() {
+		ShowAlertDialog( 'Ignore App', 'There was a problem saving your changes.  Please try again later.' );
+	});
+}
+
+function ChangeIgnoreAppReason( element, unAppId, snr )
+{
+	var ignore_reason = $J( element ).val();
+	$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
+		sessionid: g_sessionID,
+		appid: unAppId,
+		snr: snr,
+		ignore_reason: ignore_reason
+	}).done( function( data ) {
+	}).fail( function( jqXHR ) {
 		ShowAlertDialog( 'Ignore App', 'There was a problem saving your changes.  Please try again later.' );
 	});
 }
