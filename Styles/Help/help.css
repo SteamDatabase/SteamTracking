@@ -4402,3 +4402,65 @@ table {
 	padding-right: 1em;
 	padding-bottom: 1em;
 }
+
+.help_itembug_item > div,
+.help_itembug_item > img
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.help_itembug_item_childitem > div
+{
+	max-width: 370px;
+}
+
+.help_itembug_checkbox
+{
+	display: inline-block;
+	margin: 32px 5px 0 0;
+}
+
+.help_itembug_check_disabled
+{
+	visibility: hidden;
+}
+
+.help_itembug_group
+{
+	display: inline-block;
+	max-width: 500px;
+	vertical-align: top;
+}
+
+.help_itembug_item
+{
+	display: inline-block;
+}
+
+.help_itembug_item_childitem
+{
+	display: block;
+	margin-left: 40px;
+	border-left: 2px solid #5eafde
+}
+
+.help_itembug_itemexplanation
+{
+	margin-left: 1em;
+}
+
+#help_itembug_summary > div
+{
+	margin-bottom: 1em;
+}
+
+.help_itembug_list
+{
+	margin-left: 2em;
+}
+
+.help_itembug_currency
+{
+	color: #5eafde;
+}

@@ -3060,3 +3060,215 @@ function IsDigitOrEditKeypress( e )
 	return false;
 }
 
+function ItemBugRefundChange()
+{
+	var rgReturned = {};
+	var cReturned = 0;
+	var rgRemoved = {};
+	var cRemoved = 0;
+	var nWalletAmount = 0;
+	var nWalletCurrency = -1;
+
+	// Recalculate summary effects
+	$J('input[type=checkbox]').not(':disabled').each( function() {
+		var nRefundID = $J( this ).data( 'refundid' );
+		var $elItemGroup = $J('#group_' + nRefundID);
+
+		if ( $J(this).prop('checked') )
+		{
+			$elItemGroup.css('opacity', '1.0');
+
+			var rgThisRefund = g_Refunds[nRefundID];
+			for ( var i = 0; i < rgThisRefund.length; i++ )
+			{
+				if ( !rgThisRefund[i].allow_refund )
+					continue;
+
+				if ( rgThisRefund[i].refund_returns_item_to_inventory )
+				{
+					cReturned++;
+					if ( rgThisRefund[i].item_name in rgReturned )
+					{
+						rgReturned[rgThisRefund[i].item_name]++;
+					}
+					else
+					{
+						rgReturned[rgThisRefund[i].item_name] = 1;
+					}
+				}
+
+				if ( rgThisRefund[i].refund_removes_item_from_inventory )
+				{
+					cRemoved++;
+					if ( rgThisRefund[i].item_name in rgReturned )
+					{
+						rgRemoved[rgThisRefund[i].item_name]++;
+					}
+					else
+					{
+						rgRemoved[rgThisRefund[i].item_name] = 1;
+					}
+				}
+
+				if ( rgThisRefund[i].refund_amount )
+				{
+					if ( nWalletCurrency == -1 && nWalletAmount == 0 )
+					{
+						nWalletCurrency = rgThisRefund[i].refund_ecurrencycode;
+					}
+					else if ( nWalletCurrency != rgThisRefund[i].refund_ecurrencycode )
+					{
+						// Mix of wallet currencies
+						nWalletCurrency = -1;
+					}
+
+					nWalletAmount += parseInt( rgThisRefund[i].refund_amount );
+				}
+			}
+		}
+		else
+		{
+			$elItemGroup.css('opacity', '0.5');
+		}
+	});
+
+	if ( cReturned == 0 && cRemoved == 0 && nWalletAmount == 0 )
+	{
+		$J('#help_itembug_summaryarea').hide();
+	}
+	else
+	{
+		$J('#help_itembug_summaryarea').show();
+		$J('#help_itembug_summary').empty();
+
+		if ( cReturned )
+		{
+			var $elDiv = $J('<div></div>');
+			var $elReturned = $J('<div></div>');
+			$elReturned.text( 'The following items will be returned to your inventory:' );
+			$elDiv.append( $elReturned );
+			var $elList = $J('<ul class="help_itembug_list"></ul>')
+
+			for ( var key in rgReturned )
+			{
+				if ( rgReturned.hasOwnProperty( key ) )
+				{
+					var $elListItem = $J( '<li></li>' );
+					$elListItem.text( '%1$sx of %2$s'.replace( '%1$s', rgReturned[key] ).replace( '%2$s', key ) );
+					$elList.append( $elListItem );
+				}
+			}
+
+			$elDiv.append( $elList );
+
+			$J('#help_itembug_summary').append( $elDiv );
+		}
+
+		if ( cRemoved )
+		{
+			var $elDiv = $J('<div></div>');
+			var $elReturned = $J('<div></div>');
+			$elReturned.text( 'The following items will be removed from your inventory:' );
+			$elDiv.append( $elReturned );
+			var $elList = $J('<ul class="help_itembug_list"></ul>')
+
+			for ( var key in rgRemoved )
+			{
+				if ( rgRemoved.hasOwnProperty( key ) )
+				{
+					var $elListItem = $J( '<li></li>' );
+					$elListItem.text( '%1$sx of %2$s'.replace( '%1$s', rgRemoved[key] ).replace( '%2$s', key ) );
+					$elList.append( $elListItem );
+				}
+			}
+
+			$elDiv.append( $elList );
+
+			$J('#help_itembug_summary').append( $elDiv );
+		}
+
+		if ( nWalletAmount && nWalletCurrency >= 0 )
+		{
+			var sWalletCurrencyCode = GetCurrencyCode( nWalletCurrency );
+			var sWalletAmount = v_currencyformat( nWalletAmount, sWalletCurrencyCode )
+
+			var $elDiv = $J('<div></div>');
+			var $elReturned = $J('<div></div>');
+			$elReturned.html( 'Your Steam Wallet will be credited %1$s.'.replace( '%1$s', '<span class="help_itembug_currency">' + sWalletAmount + '</span>' ) );
+			$elDiv.append( $elReturned );
+
+			$J('#help_itembug_summary').append( $elDiv );
+		}
+	}
+}
+
+// included data: strCode, eCurrencyCode, strSymbol, bSymbolIsPrefix, bWholeUnitsOnly
+var g_rgCurrencyData = {"USD":{"strCode":"USD","eCurrencyCode":1,"strSymbol":"$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":""},"GBP":{"strCode":"GBP","eCurrencyCode":2,"strSymbol":"\u00a3","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":""},"EUR":{"strCode":"EUR","eCurrencyCode":3,"strSymbol":"\u20ac","bSymbolIsPrefix":false,"bWholeUnitsOnly":false,"strDecimalSymbol":",","strThousandsSeparator":" ","strSymbolAndNumberSeparator":""},"CHF":{"strCode":"CHF","eCurrencyCode":4,"strSymbol":"CHF","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":" ","strSymbolAndNumberSeparator":" "},"RUB":{"strCode":"RUB","eCurrencyCode":5,"strSymbol":"p\u0443\u0431.","bSymbolIsPrefix":false,"bWholeUnitsOnly":true,"strDecimalSymbol":",","strThousandsSeparator":"","strSymbolAndNumberSeparator":" "},"BRL":{"strCode":"BRL","eCurrencyCode":7,"strSymbol":"R$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":",","strThousandsSeparator":".","strSymbolAndNumberSeparator":" "},"JPY":{"strCode":"JPY","eCurrencyCode":8,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"NOK":{"strCode":"NOK","eCurrencyCode":9,"strSymbol":"kr","bSymbolIsPrefix":false,"bWholeUnitsOnly":false,"strDecimalSymbol":",","strThousandsSeparator":".","strSymbolAndNumberSeparator":" "},"IDR":{"strCode":"IDR","eCurrencyCode":10,"strSymbol":"Rp","bSymbolIsPrefix":true,"bWholeUnitsOnly":true,"strDecimalSymbol":".","strThousandsSeparator":" ","strSymbolAndNumberSeparator":" "},"MYR":{"strCode":"MYR","eCurrencyCode":11,"strSymbol":"RM","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":""},"PHP":{"strCode":"PHP","eCurrencyCode":12,"strSymbol":"P","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":""},"SGD":{"strCode":"SGD","eCurrencyCode":13,"strSymbol":"S$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":""},"THB":{"strCode":"THB","eCurrencyCode":14,"strSymbol":"\u0e3f","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":""},"VND":{"strCode":"VND","eCurrencyCode":15,"strSymbol":"\u20ab","bSymbolIsPrefix":false,"bWholeUnitsOnly":true,"strDecimalSymbol":",","strThousandsSeparator":".","strSymbolAndNumberSeparator":""},"KRW":{"strCode":"KRW","eCurrencyCode":16,"strSymbol":"\u20a9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"TRY":{"strCode":"TRY","eCurrencyCode":17,"strSymbol":"TL","bSymbolIsPrefix":false,"bWholeUnitsOnly":false,"strDecimalSymbol":",","strThousandsSeparator":".","strSymbolAndNumberSeparator":" "},"UAH":{"strCode":"UAH","eCurrencyCode":18,"strSymbol":"\u20b4","bSymbolIsPrefix":false,"bWholeUnitsOnly":true,"strDecimalSymbol":",","strThousandsSeparator":" ","strSymbolAndNumberSeparator":""},"MXN":{"strCode":"MXN","eCurrencyCode":19,"strSymbol":"Mex$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"CAD":{"strCode":"CAD","eCurrencyCode":20,"strSymbol":"CDN$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"AUD":{"strCode":"AUD","eCurrencyCode":21,"strSymbol":"A$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"NZD":{"strCode":"NZD","eCurrencyCode":22,"strSymbol":"NZ$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"PLN":{"strCode":"PLN","eCurrencyCode":6,"strSymbol":"z\u0142","bSymbolIsPrefix":false,"bWholeUnitsOnly":false,"strDecimalSymbol":",","strThousandsSeparator":" ","strSymbolAndNumberSeparator":""},"CNY":{"strCode":"CNY","eCurrencyCode":23,"strSymbol":"\u00a5","bSymbolIsPrefix":true,"bWholeUnitsOnly":true,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"INR":{"strCode":"INR","eCurrencyCode":24,"strSymbol":"\u20b9","bSymbolIsPrefix":true,"bWholeUnitsOnly":true,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"CLP":{"strCode":"CLP","eCurrencyCode":25,"strSymbol":"CLP$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true,"strDecimalSymbol":",","strThousandsSeparator":".","strSymbolAndNumberSeparator":" "},"PEN":{"strCode":"PEN","eCurrencyCode":26,"strSymbol":"S\/.","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":""},"COP":{"strCode":"COP","eCurrencyCode":27,"strSymbol":"COL$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true,"strDecimalSymbol":",","strThousandsSeparator":".","strSymbolAndNumberSeparator":" "},"ZAR":{"strCode":"ZAR","eCurrencyCode":28,"strSymbol":"R","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":" ","strSymbolAndNumberSeparator":" "},"HKD":{"strCode":"HKD","eCurrencyCode":29,"strSymbol":"HK$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"TWD":{"strCode":"TWD","eCurrencyCode":30,"strSymbol":"NT$","bSymbolIsPrefix":true,"bWholeUnitsOnly":true,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"SAR":{"strCode":"SAR","eCurrencyCode":31,"strSymbol":"SR","bSymbolIsPrefix":false,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"AED":{"strCode":"AED","eCurrencyCode":32,"strSymbol":"AED","bSymbolIsPrefix":false,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"ARS":{"strCode":"ARS","eCurrencyCode":34,"strSymbol":"ARS$","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":",","strThousandsSeparator":".","strSymbolAndNumberSeparator":" "},"ILS":{"strCode":"ILS","eCurrencyCode":35,"strSymbol":"\u20aa","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":""},"BYN":{"strCode":"BYN","eCurrencyCode":36,"strSymbol":"Br","bSymbolIsPrefix":true,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":""},"KZT":{"strCode":"KZT","eCurrencyCode":37,"strSymbol":"\u20b8","bSymbolIsPrefix":false,"bWholeUnitsOnly":true,"strDecimalSymbol":",","strThousandsSeparator":" ","strSymbolAndNumberSeparator":""},"KWD":{"strCode":"KWD","eCurrencyCode":38,"strSymbol":"KD","bSymbolIsPrefix":false,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"QAR":{"strCode":"QAR","eCurrencyCode":39,"strSymbol":"QR","bSymbolIsPrefix":false,"bWholeUnitsOnly":false,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":" "},"CRC":{"strCode":"CRC","eCurrencyCode":40,"strSymbol":"\u20a1","bSymbolIsPrefix":true,"bWholeUnitsOnly":true,"strDecimalSymbol":",","strThousandsSeparator":".","strSymbolAndNumberSeparator":""},"UYU":{"strCode":"UYU","eCurrencyCode":41,"strSymbol":"$U","bSymbolIsPrefix":true,"bWholeUnitsOnly":true,"strDecimalSymbol":",","strThousandsSeparator":".","strSymbolAndNumberSeparator":""},"RMB":{"strCode":"RMB","eCurrencyCode":9000,"strSymbol":"\u5200\u5e01","bSymbolIsPrefix":false,"bWholeUnitsOnly":true,"strDecimalSymbol":".","strThousandsSeparator":"","strSymbolAndNumberSeparator":" "},"NXP":{"strCode":"NXP","eCurrencyCode":9001,"strSymbol":"\uc6d0","bSymbolIsPrefix":false,"bWholeUnitsOnly":true,"strDecimalSymbol":".","strThousandsSeparator":",","strSymbolAndNumberSeparator":""}};
+
+// takes an integer
+function v_currencyformat( valueInCents, currencyCode, countryCode )
+{
+	var currencyFormat = (valueInCents / 100).toFixed(2);
+
+	if ( g_rgCurrencyData[currencyCode] )
+	{
+		var currencyData = g_rgCurrencyData[currencyCode];
+		if ( IsCurrencyWholeUnits( currencyCode ) )
+		{
+			currencyFormat = currencyFormat.replace( '.00', '' );
+		}
+		
+		if ( currencyData.strDecimalSymbol != '.' )
+		{
+			currencyFormat = currencyFormat.replace( '.', currencyData.strDecimalSymbol );
+		}
+		
+		var currencyReturn = IsCurrencySymbolBeforeValue( currencyCode ) ?
+			 GetCurrencySymbol( currencyCode ) + currencyData.strSymbolAndNumberSeparator + currencyFormat 
+			 : currencyFormat + currencyData.strSymbolAndNumberSeparator + GetCurrencySymbol( currencyCode );
+		
+		if ( currencyCode == 'USD' && typeof(countryCode) != 'undefined' && countryCode != 'US' )
+		{
+			return currencyReturn + ' USD';
+		}
+		else if ( currencyCode == 'EUR' )
+		{
+			return currencyReturn.replace( ',00', ',--' );
+		}
+		else
+		{
+			return currencyReturn;
+		}
+	}
+	else
+	{
+		return currencyFormat + ' ' + currencyCode;
+	}
+}
+
+
+function IsCurrencySymbolBeforeValue( currencyCode )
+{
+	return g_rgCurrencyData[currencyCode] && g_rgCurrencyData[currencyCode].bSymbolIsPrefix;
+}
+
+function IsCurrencyWholeUnits( currencyCode )
+{
+		return g_rgCurrencyData[currencyCode] && g_rgCurrencyData[currencyCode].bWholeUnitsOnly && currencyCode != 'RUB';
+}
+
+// Return the symbol to use for a currency
+function GetCurrencySymbol( currencyCode )
+{
+	return g_rgCurrencyData[currencyCode] ? g_rgCurrencyData[currencyCode].strSymbol : currencyCode + ' ';
+}
+
+function GetCurrencyCode( currencyId )
+{
+	for ( var code in g_rgCurrencyData )
+	{
+		if ( g_rgCurrencyData[code].eCurrencyCode == currencyId )
+			return code;
+	}
+	return 'Unknown';
+}
