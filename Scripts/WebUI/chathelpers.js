@@ -394,6 +394,7 @@
         MEDIA_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
+        STORE_CDN_URL: "",
         PUBLIC_SHARED_URL: "",
         COMMUNITY_BASE_URL: "",
         CHAT_BASE_URL: "",
@@ -438,7 +439,8 @@
         token_use_id: void 0,
         webapi_token: "",
         authwgtoken: "",
-        is_support: !1
+        is_support: !1,
+        short_url: ""
       },
       u = { steamid: "", clanid: 0, listid: 0 },
       c = {
@@ -1053,6 +1055,7 @@
               t.target_browser &&
                 (u.push("pid=" + t.target_browser.m_unPID),
                 u.push("browser=" + t.target_browser.m_nBrowserID),
+                u.push("browserType=" + t.target_browser.m_eBrowserType),
                 t.availscreenwidth &&
                   t.availscreenheight &&
                   (u.push("screenavailwidth=" + t.availscreenwidth),

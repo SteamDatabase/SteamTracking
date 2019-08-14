@@ -52,6 +52,28 @@ function OpenUrlInNewBlankWindow( newURL )
 	return window.open( newURL, "_blank" );
 }
 
+function PostUrlInNewBlankWindow( newUrl, postData )
+{
+	var form = document.createElement( "form" );
+	form.setAttribute( "method", "post" );
+	form.setAttribute( "action", newUrl );
+	form.setAttribute( "target", "_blank" );
+	
+	for( var i = 0; i < postData.length; i++ )
+	{
+		var param = postData[i];
+		var input = document.createElement( "input" );
+		input.type = "hidden";
+		input.name = param.name;
+		input.value = param.value;
+		form.appendChild( input );
+	}
+	
+	document.body.appendChild( form );
+	form.submit();
+	document.body.removeChild( form );
+}
+
 function GetAdditionalParametersForExternalPaymentProcessor( extProcessor )
 {
 	return "";
@@ -1019,6 +1041,22 @@ function OnInitializeTransactionFailure( detail, result )
 	{
 		ReportCheckoutJSError( 'Failed handling InitializeTransaction failure', e );
 	}
+}
+
+
+ 
+function OnAuthenticationComplete( gidTransID )
+{
+		if ( gidTransID && g_LastFinalizedTransactionID != gidTransID )
+		return;
+
+	if ( g_timeoutPoll )
+	{
+		clearTimeout( g_timeoutPoll );
+	}
+	
+	g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, 120, 15 ), 1*1000 );
+	return true;
 }
 
 
@@ -5099,6 +5137,76 @@ function DisplayPendingReceiptPage()
 	}
 }
 
+function DisplayCreditCardAuthentication( txnid, retries )
+{
+	try 
+	{
+		new Ajax.Request('https://store.steampowered.com/checkout/authenticationdetails/',
+		{
+		    method:'get',
+		    parameters: { 
+				'transid' : txnid
+			},
+		    onSuccess: function(transport)
+		    {
+			if ( transport.responseText )
+			{
+				try {
+					var result = transport.responseText.evalJSON(true);
+
+					if ( result.eresult != 1 )
+					{
+						var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
+						DisplayErrorMessage( error_text );
+						return;					
+					}
+
+					switch ( result.data.threed_secure_step )
+					{
+						case 1:
+						case 5:
+											      			g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, retries, 5 ), 2*1000 );
+				      			return;							
+							
+						case 2:
+														var params = [];
+							params.push( { name: "MD", value: result.data.md } );
+							params.push( { name: "PaReq", value: result.data.pa_request } );
+							params.push( { name: "TermUrl", value: result.data.term_url } );
+						
+							PostUrlInNewBlankWindow( result.data.issuer_url, params );
+							return;
+							
+						case 3:
+														
+						case 4:
+														
+						default:
+							var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
+							DisplayErrorMessage( error_text );
+							return;						
+					}
+		      		} catch ( e ) {
+					var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
+					DisplayErrorMessage( error_text );
+					return;
+	      			}		    
+			}
+		    },
+		    onFailure: function()
+		    {
+			var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
+			DisplayErrorMessage( error_text );
+			return;
+		    }
+		});
+	}
+	catch( e ) 
+	{
+		ReportCheckoutJSError( 'Error handling authentication request', e );
+	}
+}
+
 var g_nFinalizeWorkingButtonState = 1;
 function AnimateFinalizeWorkingButton()
 {
@@ -5222,7 +5330,8 @@ function PollForTransactionStatus( txnid, retries, timeout )
 		      		
 			      					      		var bNeedsApproval = (result.success == 22 && result.purchaseresultdetail == 29);
 			      		var bPurchaseResultDelayed = (result.success == 22 && result.purchaseresultdetail == 66);
-			      		if ( result.success == 22 && !bNeedsApproval && !bPurchaseResultDelayed )
+			      		var bNeedsAuthentication = (result.success == 22 && result.purchaseresultdetail == 86);
+			      		if ( result.success == 22 && !bNeedsApproval && !bPurchaseResultDelayed && !bNeedsAuthentication )
 		      			{
 		      						      				g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( txnid, retries-1, timeout ), timeout*1000 );
 			      			return;
@@ -5241,6 +5350,11 @@ function PollForTransactionStatus( txnid, retries, timeout )
 			      	   	{
 			      	   		DisplayPendingReceiptPage();
 			      	   	}
+					else if ( bNeedsAuthentication )
+					{
+						DisplayCreditCardAuthentication( txnid, retries-1 );
+						return;
+					}
 			      	   	else
 			      	   	{
 		      		   		var ePaymentMethod = 2;
@@ -5366,7 +5480,8 @@ function FinalizeTransaction()
 		      		}
 		      		
 		      				      		var bNeedsApproval = (result.success == 22 && result.purchaseresultdetail == 29);
-		      		if ( result.success == 22 && !bNeedsApproval )
+			      	var bNeedsAuthentication = (result.success == 22 && result.purchaseresultdetail == 86);
+		      		if ( result.success == 22 && !bNeedsApproval && !bNeedsAuthentication )
 		      		{
 		      					      			g_timeoutPoll = setTimeout( StatusPollFunc, 2*1000 );
 		      			return;
@@ -5379,6 +5494,11 @@ function FinalizeTransaction()
 		      	   		OnPurchaseSuccess( result );
 		      	   		return;
 		      	   	}
+				else if ( bNeedsAuthentication )
+				{
+					DisplayCreditCardAuthentication(g_LastFinalizedTransactionID, 60);
+					return;
+				}
 		      	   	else
 		      	   	{
 		      	   		var ePaymentMethod = 2;

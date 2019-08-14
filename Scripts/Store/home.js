@@ -1128,16 +1128,16 @@ GHomepage = {
 	RenderTopVRApps: function()
 	{
 		var $TopVRTitles =  $J('.best_selling_vr_ctn' );
-		$TopVRTitles.hide();
 
 		var rgCapsules = GHomepage.FilterItemsForDisplay(
 			GHomepage.oDisplayLists.top_vr, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 		
-		if ( rgCapsules.length >= 4 )
-			$TopVRTitles.show();
-		else
+		if ( rgCapsules.length < 4 )
+		{
+			$TopVRTitles.hide();
 			return;
+		}
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $TopVRTitles,
 			function( oItem, strFeature, rgOptions, nDepth )

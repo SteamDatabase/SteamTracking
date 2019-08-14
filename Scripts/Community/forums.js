@@ -1590,6 +1590,7 @@ function InitializeForumBulkActions( strName )
 
 	var $BtnDelete = $J('#forum_' + strName + '_bulk_delete');
 	var $BtnUnDelete = $J('#forum_' + strName + '_bulk_undelete');
+	var $BtnMarkSpam = $J('#forum_' + strName + '_bulk_markspam');
 
 	var $BtnLock = $J('#forum_' + strName + '_bulk_lock');
 	var $BtnUnLock = $J('#forum_' + strName + '_bulk_unlock');
@@ -1610,7 +1611,7 @@ function InitializeForumBulkActions( strName )
 	var rgAllSelectedTopics = {};
 	var cTopicsCheckedOnOtherPages = 0;
 
-	var $BtnShowDefault = $J().add( $BtnDelete ).add( $BtnLock ).add( $BtnMove ).add( $BtnMerge );
+	var $BtnShowDefault = $J().add( $BtnDelete ).add( $BtnLock ).add( $BtnMove ).add( $BtnMerge ).add( $BtnMarkSpam );
 	var $BtnHideDefault = $J().add( $BtnUnDelete ).add( $BtnUnLock ).add( $BtnPurge );
 
 	var fnShowControlsIfCheckboxChecked = function ()
@@ -1672,6 +1673,7 @@ function InitializeForumBulkActions( strName )
 				{
 					$BtnUnDelete.show();
 					$BtnDelete.hide();
+					$BtnMarkSpam.hide();
 				}
 
 				if ( cDeletedTopics > 0 )
@@ -1799,6 +1801,7 @@ function InitializeForumBulkActions( strName )
 
 	$BtnDelete.click( function() { ForumBulkDelete( strName, V_Keys( rgAllSelectedTopics ) ); } );
 	$BtnUnDelete.click( function() { ForumBulkDelete( strName, V_Keys( rgAllSelectedTopics ), true ); } );
+	$BtnMarkSpam.click( function() { ForumBulkSpam( strName, V_Keys( rgAllSelectedTopics ) ); } );
 
 	$BtnLock.click( function() { ForumBulkLock( strName, V_Keys( rgAllSelectedTopics ) ); } );
 	$BtnUnLock.click( function() { ForumBulkLock( strName, V_Keys( rgAllSelectedTopics ), true ); } );
@@ -1886,6 +1889,19 @@ function ForumBulkPurge( strName, rgForumTopicGIDs, fnOnComplete )
 	});
 }
 
+function ForumBulkSpam( strName, rgForumTopicGIDs )
+{
+	ShowConfirmDialog('Mark Spam ',
+		'This will delete the selected threads and ban the authors from the forum.  Are you sure this is what you want to do?',
+		'Delete Spam'
+	).done ( function() {
+	BulkModerate( strName, rgForumTopicGIDs, 'markspam', true )
+		.done( function( data ) {
+			ShowAlertDialog( 'Mark Spam', 'The selected topics have been deleted and the creators banned.' );
+		});
+});
+}
+
 
 function BulkModerate( strName, rgForumTopicGIDs, flag, value )
 {
@@ -1917,7 +1933,7 @@ function BulkModerate( strName, rgForumTopicGIDs, flag, value )
 			value: value,
 			gidforumtopic_list: V_ToJSON( rgForumTopicGIDs ),
 			resolve_reports: (bResolveReports ? '1' : '')
-		}
+		};
 		var deferred =  $J.ajax( strURL, {
 			data: rgParams,
 			type: 'POST'

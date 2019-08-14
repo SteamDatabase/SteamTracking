@@ -1568,18 +1568,18 @@ GStoreItemData = {
 		return hoverparams;
 	},
 
-	BindHoverEvents: function( $Element, unAppID, unPackageID, unBundleID )
+	BindHoverEvents: function( $Element, unAppID, unPackageID, unBundleID, rgAdditionalParams )
 	{
 		$Element.mouseenter( function( event ) {
-					GameHover( this, event, $J('#global_hover'), GStoreItemData.GetHoverParams( unAppID, unPackageID, unBundleID ) );
+					GameHover( this, event, $J('#global_hover'), $J.extend( GStoreItemData.GetHoverParams( unAppID, unPackageID, unBundleID ), rgAdditionalParams || {}) );
 				}).mouseleave( function( event ) {
 					HideGameHover( this, event, $J('#global_hover') );
 				});
 	},
 
-	BindHoverEventsForItem: function( $Element, oItem )
+	BindHoverEventsForItem: function( $Element, oItem, rgAdditionalParams )
 	{
-		return GStoreItemData.BindHoverEvents( $Element, oItem.appid, oItem.packageid, oItem.bundleid );
+		return GStoreItemData.BindHoverEvents( $Element, oItem.appid, oItem.packageid, oItem.bundleid, rgAdditionalParams );
 	},
 
 	GetCapParamsForItem: function( strFeatureContext, rgItem, params, nDepth )
@@ -1794,6 +1794,7 @@ GStoreItemData = {
 	BAppPassesFilters: function( appid, Settings, ApplicableSettings, bStrict )
 	{
 		var rgAppData = GStoreItemData.rgAppData[appid];
+
 		if ( !rgAppData )
 			return false;
 		// TODO: score based on filter misses and sort by score?

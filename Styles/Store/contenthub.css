@@ -369,3 +369,19 @@ div#page_section_container,
 		display: none;
 	}
 }
+
+.tag_count_button {
+	display: flex;
+	justify-content: center;
+}
+
+.tag_count_button .tag_name {
+	min-width: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.tag_count_button .tag_count {
+	margin-left: 4px;
+}

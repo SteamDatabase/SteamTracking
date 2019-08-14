@@ -305,6 +305,7 @@ LocalizationReady("shared", "english", {
   TimeSince_XMinutes: "%1$s minutes ago",
   TimeSince_1Minute: "1 minute ago",
   TimeSince_LessThanAMinute: "less than a minute ago",
+  TimeSince_ThisWeek: "This week",
 
   Time_Today: "Today",
   Time_Yesterday: "Yesterday",

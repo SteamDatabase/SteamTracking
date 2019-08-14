@@ -200,18 +200,23 @@ a.linkbar .rightblock {
 
 .tab_filter_control {
     margin-bottom: 2px;
-    line-height: 28px;
-    padding: 0 8px;
-    font-size: 13px;
+    cursor: pointer;
+}
+
+.tab_filter_control,
+.range_display {
+	line-height: 28px;
+	padding: 0 8px;
+	font-size: 13px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-		    color: #9fbbcb;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    cursor: pointer;
+			color: #9fbbcb;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
+
 .tab_filter_control:hover {
     color: #ffffff;
     background: rgba( 255, 255, 255, 0.1);
@@ -395,4 +400,10 @@ body.v6 .header_early_access h2 a {
 }
 body.v6 .header_early_access h2 a:hover {
     color: #ffffff;
+}
+
+.block_rule {
+	background: rgba( 255, 255, 255, 0.1);
+	height: 1px;
+	margin: 8px;
 }

@@ -83,7 +83,7 @@ function FillFormFromNavigation( querystring, link_click, initial_load )
 	if ( rgLocationParams['term'] )
 		rgLocationParams['displayterm'] = rgLocationParams['term'];
 	else
-		rgLocationParams['displayterm'] = 'enter search term or tag'
+		rgLocationParams['displayterm'] = 'enter search term or tag';
 
 	$J( "#hide_filtered_results_warning" ).val( link_click ? 1 : "" );
 
@@ -130,10 +130,14 @@ function FillFormFromNavigation( querystring, link_click, initial_load )
 					{
 						$J('div[data-param=\''+jqEscapeSelectorAttribute(name)+'\'][data-value=\''+jqEscapeSelectorAttribute(rgSplitValues[i])+'\']').addClass('checked');
 					}
+					$J('div[data-param=\''+jqEscapeSelectorAttribute(name)+'\'][data-value=__toggle]').addClass('checked');
 				}
 			}
 		}
 	});
+
+	if ( typeof UpdatePriceRangeControl !== 'undefined' )
+		UpdatePriceRangeControl( rgLocationParams['maxprice'] );
 
 	g_bPopulatingSearchControls = false;
 

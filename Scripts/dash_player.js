@@ -306,12 +306,28 @@ CDASHPlayer.prototype.PlayMPD = function( strURL, bUseMpdRelativePathForSegments
 			_player.InitVideoControl();
 		}
 	})
-	.fail( function()
+	.fail( function( jqXHR, textStatus, errorThrown )
 	{
+		//	We abort xhr requests when stopping downloads.  If this is the case,
+		//	do not attempt the update
+		if ( _player.m_bExiting )
+		{
+			PlayerLog( 'Aborting: ' + _player.m_strMPD );
+			return;
+		}
+
 		_player.m_xhrUpdateMPD = null;
 		if ( performance.now() - tsFirstAttempt > CDASHPlayer.MANIFEST_MAX_RETRY_MS )
 		{
 			PlayerLog( 'Failed to download: ' + _player.m_strMPD );
+			return;
+		}
+
+		//	if the error is 410, then the manifest will never reappear. There is
+		//	no point in retrying
+		if ( jqXHR.status == 410 )
+		{
+			PlayerLog( 'Manifest is 410 gone' + _player.m_strMPD );
 			return;
 		}
 
@@ -2525,6 +2541,14 @@ CSegmentLoader.prototype.DownloadSegment = function( url, nSegmentDuration, tsAt
 					if ( now - tsAttemptStarted > nTimeToRetry )
 					{
 						_loader.DownloadFailed( 'Timeout' );
+						return;
+					}
+
+					if ( xhr.status == 410 )
+					{
+						//	The segment is gone and will not reappear. There is no sense
+						//	in retrying the download
+						_loader.DownloadFailed( 'Segment gone' );
 						return;
 					}
 

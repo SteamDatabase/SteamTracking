@@ -570,3 +570,111 @@ div.autocomplete ul li {
 		clear: left;
 	}
 }
+
+.range_container
+{
+	padding: 0 12px;
+	text-align: center;
+}
+
+.range_container_inner
+{
+	display: flex;
+}
+
+.range_input {
+	-webkit-appearance: none;
+	flex: 1;
+	margin: 4.45px 0;
+	background-color: rgba(0, 0, 0, 0);
+	max-height: 5px;
+}
+
+.range_input {
+	-webkit-appearance: none;
+	width: 100%;
+	margin: 4.45px 0;
+	background-color: rgba(0, 0, 0, 0);
+	max-height: 5px; }
+
+.range_input:focus {
+	outline: none; 
+}
+
+.range_input::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 3.1px;
+	cursor: pointer;
+	box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+	background: #67c1f5;
+	border-radius: 1.5px;
+	border: 0 solid #67c1f5; 
+}
+
+.range_input::-webkit-slider-thumb {
+	box-shadow: 0 0 8px #000000, 0 0 3px #0d0d0d;
+	border: 0 solid #ffffff;
+	height: 12px;
+	width: 12px;
+	border-radius: 6px;
+	background: #ffffff;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -4.45px; 
+}
+
+.range_input:focus::-webkit-slider-runnable-track {
+	background: #7fcbf7; }
+
+.range_input::-moz-range-track {
+	width: 100%;
+	height: 3.1px;
+	cursor: pointer;
+	box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
+	background: #67c1f5;
+	border-radius: 1.5px;
+	border: 0 solid #67c1f5; }
+
+.range_input::-moz-range-thumb {
+	box-shadow: 0 0 8px #000000, 0 0 3px #0d0d0d;
+	border: 0 solid #ffffff;
+	height: 12px;
+	width: 12px;
+	border-radius: 6px;
+	background: #ffffff;
+	cursor: pointer; }
+
+.range_input::-ms-track {
+	width: 100%;
+	height: 3.1px;
+	cursor: pointer;
+	background: transparent;
+	border-color: transparent;
+	color: transparent; }
+
+.range_input::-ms-fill-lower {
+	background: #4fb7f3;
+	border: 0 solid #67c1f5;
+	border-radius: 3px;
+	box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d; }
+
+.range_input::-ms-fill-upper {
+	background: #67c1f5;
+	border: 0 solid #67c1f5;
+	border-radius: 3px;
+	box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d; }
+
+.range_input::-ms-thumb {
+	box-shadow: 0 0 8px #000000, 0 0 3px #0d0d0d;
+	border: 0 solid #ffffff;
+	height: 12px;
+	width: 12px;
+	border-radius: 6px;
+	background: #ffffff;
+	cursor: pointer; }
+
+.range_input:focus::-ms-fill-lower {
+	background: #67c1f5; }
+
+.range_input:focus::-ms-fill-upper {
+	background: #7fcbf7; }

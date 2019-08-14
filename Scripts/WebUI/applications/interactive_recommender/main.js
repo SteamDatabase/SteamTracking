@@ -240,6 +240,7 @@
       OptionSuggestion: "app_OptionSuggestion_3GG0D"
     };
   },
+  Z7Ow: function(e, t, a) {},
   gfbn: function(e, t, a) {
     "use strict";
     a.r(t);
@@ -401,7 +402,8 @@
         return a[t] ? (e ? e + " " + t : t) : e;
       }, "");
     }
-    function U(e) {
+    a("Z7Ow");
+    function w(e) {
       return l.createElement(
         "svg",
         {
@@ -647,6 +649,7 @@
         MEDIA_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
+        STORE_CDN_URL: "",
         PUBLIC_SHARED_URL: "",
         COMMUNITY_BASE_URL: "",
         CHAT_BASE_URL: "",
@@ -763,7 +766,7 @@
         e
       );
     })();
-    function w(e) {
+    function U(e) {
       for (var n = [], t = 1; t < arguments.length; t++)
         n[t - 1] = arguments[t];
       var a = N.LocalizeString(e);
@@ -832,12 +835,12 @@
               M.a.createElement(
                 "div",
                 { className: F.a.GameCount },
-                w("#PlaytimeList_RecentGames", a)
+                U("#PlaytimeList_RecentGames", a)
               ),
               M.a.createElement(
                 "div",
                 { className: F.a.TotalTime },
-                w("#PlaytimeList_HoursTotal", n)
+                U("#PlaytimeList_HoursTotal", n)
               )
             )
           )
@@ -855,8 +858,8 @@
         return (
           (c =
             r <= 86400
-              ? w("#PlaytimeList_LastPlayedMax")
-              : w(
+              ? U("#PlaytimeList_LastPlayedMax")
+              : U(
                   "#PlaytimeList_LastPlayed",
                   31449600 < s
                     ? B(r)
@@ -864,37 +867,37 @@
                         void 0 === t && (t = !1);
                         var a = t ? "#TimeInterval_" : "#TimeSince_";
                         return e >= 2 * v.PerYear
-                          ? w(a + "XYears", Math.floor(e / v.PerYear))
+                          ? U(a + "XYears", Math.floor(e / v.PerYear))
                           : e >= v.PerYear
                           ? (e -= v.PerYear) >= 2 * v.PerMonth
-                            ? w(a + "1YearXMonths", Math.floor(e / v.PerMonth))
-                            : w(a + "1Year")
+                            ? U(a + "1YearXMonths", Math.floor(e / v.PerMonth))
+                            : U(a + "1Year")
                           : e >= 2 * v.PerMonth
-                          ? w(a + "XMonths", Math.floor(e / v.PerMonth))
+                          ? U(a + "XMonths", Math.floor(e / v.PerMonth))
                           : e >= 2 * v.PerWeek
-                          ? w(a + "XWeeks", Math.floor(e / v.PerWeek))
+                          ? U(a + "XWeeks", Math.floor(e / v.PerWeek))
                           : e >= v.PerWeek
-                          ? w(a + "1Week", Math.floor(e / v.PerWeek))
+                          ? U(a + "1Week", Math.floor(e / v.PerWeek))
                           : e >= 2 * v.PerDay
-                          ? w(a + "XDays", Math.floor(e / v.PerDay))
+                          ? U(a + "XDays", Math.floor(e / v.PerDay))
                           : e >= v.PerDay
                           ? (e -= v.PerDay) >= 2 * v.PerHour
-                            ? w(a + "1DayXHours", Math.floor(e / v.PerHour))
-                            : w(a + "1Day")
+                            ? U(a + "1DayXHours", Math.floor(e / v.PerHour))
+                            : U(a + "1Day")
                           : e >= 2 * v.PerHour
-                          ? w(a + "XHours", Math.floor(e / v.PerHour))
+                          ? U(a + "XHours", Math.floor(e / v.PerHour))
                           : e >= v.PerHour
                           ? (e -= v.PerHour) >= 2 * v.PerMinute
-                            ? w(
+                            ? U(
                                 a + "1HourXMinutes",
                                 Math.floor(e / v.PerMinute)
                               )
-                            : w(a + "1Hour")
+                            : U(a + "1Hour")
                           : e >= 2 * v.PerMinute
-                          ? w(a + "XMinutes", Math.floor(e / v.PerMinute))
+                          ? U(a + "XMinutes", Math.floor(e / v.PerMinute))
                           : e >= v.PerMinute
-                          ? w(a + "1Minute")
-                          : w(a + "LessThanAMinute");
+                          ? U(a + "1Minute")
+                          : U(a + "LessThanAMinute");
                       })(s)
                 )),
           M.a.createElement(
@@ -911,7 +914,7 @@
               M.a.createElement(
                 "div",
                 { className: F.a.HoursPlayed },
-                w("#PlaytimeList_Hours", n)
+                U("#PlaytimeList_Hours", n)
               ),
               M.a.createElement("div", { className: F.a.Title }, a),
               M.a.createElement("div", { className: F.a.LastPlayed }, c),
@@ -923,7 +926,7 @@
                     return le.onToggleIgnore(t);
                   }
                 },
-                w(o ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
+                U(o ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
               )
             )
           )
@@ -954,7 +957,7 @@
                       ),
                       onClick: this.onUpdate
                     },
-                    w("#UpdateSaveBlock_Update")
+                    U("#UpdateSaveBlock_Update")
                   )
                 );
           }),
@@ -979,7 +982,7 @@
                 M.a.createElement(
                   "div",
                   { className: F.a.Header },
-                  w("#PlaytimeList_Header")
+                  U("#PlaytimeList_Header")
                 ),
                 M.a.createElement("div", { className: F.a.Loading })
               );
@@ -1007,7 +1010,7 @@
                 M.a.createElement(
                   "div",
                   { className: F.a.Header },
-                  w("#PlaytimeList_Header")
+                  U("#PlaytimeList_Header")
                 ),
                 M.a.createElement(H, { accountID: this.props.accountID }),
                 M.a.createElement(j, null),
@@ -1150,7 +1153,7 @@
             for (
               var a = this,
                 e = {
-                  placeholder: w("#TagSelect"),
+                  placeholder: U("#TagSelect"),
                   value: this.state.value,
                   onChange: this.onChange,
                   onKeyDown: this.onKeyDown
@@ -1230,12 +1233,12 @@
             a.push({ id: parseInt(i.tagid), name: i.name });
           }
         var s = [
-          w("#FilterAge_120"),
-          w("#FilterAge_60"),
-          w("#FilterAge_36"),
-          w("#FilterAge_24"),
-          w("#FilterAge_12"),
-          w("#FilterAge_6")
+          U("#FilterAge_120"),
+          U("#FilterAge_60"),
+          U("#FilterAge_36"),
+          U("#FilterAge_24"),
+          U("#FilterAge_12"),
+          U("#FilterAge_6")
         ];
         return M.a.createElement(
           "div",
@@ -1244,18 +1247,18 @@
             "div",
             { className: O(F.a.Row, F.a.FirstRow) },
             M.a.createElement(X, {
-              minLabel: w("#Popularity_Popular"),
-              titleLabel: w("#Popularity_Title"),
-              maxLabel: w("#Popularity_Niche"),
+              minLabel: U("#Popularity_Popular"),
+              titleLabel: U("#Popularity_Title"),
+              maxLabel: U("#Popularity_Niche"),
               minValue: 0,
               maxValue: 1,
               value: le.m_fQueuedPopularityValue,
               onChange: le.onPopularityChanged
             }),
             M.a.createElement(X, {
-              minLabel: w("#Recency_Older"),
-              titleLabel: w("#Recency_Title"),
-              maxLabel: w("#Recency_Newer"),
+              minLabel: U("#Recency_Older"),
+              titleLabel: U("#Recency_Title"),
+              maxLabel: U("#Recency_Newer"),
               minValue: 0,
               maxValue: 1,
               value: le.m_fQueuedRecencyValue,
@@ -1267,14 +1270,14 @@
             "div",
             { className: O(F.a.Row, F.a.SecondRow) },
             M.a.createElement(z, {
-              title: w("#TagFilterMultiple_Title"),
+              title: U("#TagFilterMultiple_Title"),
               tagoptions: a,
               selectedtags: n,
               onAddTag: le.onTagFilterAdd,
               onRemoveTag: le.onTagFilterRemove
             }),
             M.a.createElement(z, {
-              title: w("#TagExcludeMultiple_Title"),
+              title: U("#TagExcludeMultiple_Title"),
               tagoptions: a,
               selectedtags: n,
               onAddTag: le.onTagExcludeAdd,
@@ -1282,14 +1285,14 @@
             }),
             M.a.createElement(Q, {
               className: F.a.WishlistCheckbox,
-              titleLabel: w("#ExcludeWishlisted"),
+              titleLabel: U("#ExcludeWishlisted"),
               checked: le.m_bExcludeWishlisted,
               onChange: le.onExcludeWishlistedToggled
             })
           )
         );
       }),
-      J = (function(a) {
+      Z = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (
@@ -1365,7 +1368,7 @@
               s = le.getAppInfo()[a];
             if (!s) return M.a.createElement("div", null);
             var c = s.n,
-              l = 0 < s.r ? w("#Recommendation_ReleasedOn", B(s.r)) : "",
+              l = 0 < s.r ? U("#Recommendation_ReleasedOn", B(s.r)) : "",
               u = [];
             if (s.t)
               for (var p = 0, d = 0, _ = s.t; d < _.length; d++) {
@@ -1412,7 +1415,7 @@
                     : N.video_mp4),
                 (L = "-" + N.discount_pct + "%"),
                 (k = N.base_price),
-                (R = T ? w("#FreeToPlay") : N.discount_price),
+                (R = T ? U("#FreeToPlay") : N.discount_price),
                 (C = N.description));
             }
             var A = I && 0 < I.length;
@@ -1468,7 +1471,7 @@
                           return t.onMuteToggle(e);
                         }
                       },
-                      M.a.createElement(U, { muted: le.shouldMute() })
+                      M.a.createElement(w, { muted: le.shouldMute() })
                     ),
                     this.state.wishlisted &&
                       M.a.createElement(
@@ -1480,7 +1483,7 @@
                             F.a.WishlistFlag
                           )
                         },
-                        w("#Recommendation_OnWishlist") + "  "
+                        U("#Recommendation_OnWishlist") + "  "
                       )
                   ),
                   M.a.createElement(
@@ -1597,7 +1600,7 @@
                                   M.a.createElement(
                                     "span",
                                     null,
-                                    w("#btn_add_to_cart")
+                                    U("#btn_add_to_cart")
                                   )
                                 )
                               )
@@ -1620,7 +1623,7 @@
                               M.a.createElement(
                                 "span",
                                 null,
-                                w("#wishlist_add_to_wishlist")
+                                U("#wishlist_add_to_wishlist")
                               )
                             )
                           ),
@@ -1635,7 +1638,7 @@
                                 F.a.Wishlisted,
                                 F.a.WishlistSection
                               ),
-                              "data-tooltip-text": w("#OnWishlistTooltip"),
+                              "data-tooltip-text": U("#OnWishlistTooltip"),
                               onClick: function(e) {
                                 return t.onGoToWishlist(e);
                               }
@@ -1646,7 +1649,7 @@
                               M.a.createElement("img", {
                                 src: P.IMG_URL_BASE + "/v6/ico/ico_selected.png"
                               }),
-                              "  " + w("#OnWishlist")
+                              "  " + U("#OnWishlist")
                             )
                           )
                       )
@@ -1664,7 +1667,7 @@
           (e = d.c([i.a], e))
         );
       })(M.a.Component),
-      Z = (function(a) {
+      J = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (t.state = { sortedRecommendedApps: [] }), t;
@@ -1752,7 +1755,7 @@
               ) {
                 var A = N[I];
                 m.push(
-                  M.a.createElement(J, {
+                  M.a.createElement(Z, {
                     key: A.appid,
                     appID: A.appid,
                     score: A.score,
@@ -1774,7 +1777,7 @@
               M.a.createElement(
                 "div",
                 { className: F.a.Header },
-                w("#Recommendations_Header")
+                U("#Recommendations_Header")
               ),
               M.a.createElement(K, null),
               M.a.createElement(
@@ -1813,7 +1816,7 @@
                     M.a.createElement(
                       "div",
                       { className: F.a.Text },
-                      w("#LoginText")
+                      U("#LoginText")
                     ),
                     M.a.createElement(
                       "a",
@@ -1824,7 +1827,7 @@
                         ),
                         href: P.LOGIN_REDIRECT
                       },
-                      M.a.createElement("span", null, w("#LoginButton"))
+                      M.a.createElement("span", null, U("#LoginButton"))
                     )
                   )
                 )
@@ -1843,18 +1846,18 @@
                       M.a.createElement(
                         "div",
                         { className: F.a.Header },
-                        w("#HeaderTitle")
+                        U("#HeaderTitle")
                       ),
                       M.a.createElement(
                         "div",
                         { className: F.a.Body },
-                        w("#HeaderBody1")
+                        U("#HeaderBody1")
                       ),
                       M.a.createElement("div", { className: F.a.Spacer }),
                       M.a.createElement(
                         "div",
                         { className: F.a.Body },
-                        w("#HeaderBody2")
+                        U("#HeaderBody2")
                       ),
                       M.a.createElement("div", { className: F.a.Spacer }),
                       M.a.createElement(
@@ -1889,7 +1892,7 @@
                               href:
                                 "https://steamcommunity.com/games/593110/announcements/detail/1612767708821405787"
                             },
-                            w("#HeaderBody3a")
+                            U("#HeaderBody3a")
                           )
                         )
                       )
@@ -1899,7 +1902,7 @@
                       { className: F.a.BottomSection },
                       M.a.createElement(q, { accountID: P.ACCOUNT_ID }),
                       M.a.createElement("div", { className: F.a.VerticalBar }),
-                      M.a.createElement(Z, { width: this.state.width })
+                      M.a.createElement(J, { width: this.state.width })
                     )
                   )
                 );

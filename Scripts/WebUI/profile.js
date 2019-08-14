@@ -677,6 +677,7 @@
         MEDIA_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
+        STORE_CDN_URL: "",
         PUBLIC_SHARED_URL: "",
         COMMUNITY_BASE_URL: "",
         CHAT_BASE_URL: "",
@@ -721,7 +722,8 @@
         token_use_id: void 0,
         webapi_token: "",
         authwgtoken: "",
-        is_support: !1
+        is_support: !1,
+        short_url: ""
       },
       s = { steamid: "", clanid: 0, listid: 0 },
       l = {
@@ -1108,10 +1110,10 @@
         return w;
       }),
       n.d(t, "f", function() {
-        return x;
+        return S;
       }),
       n.d(t, "i", function() {
-        return S;
+        return x;
       }),
       n.d(t, "h", function() {
         return M;
@@ -1450,13 +1452,13 @@
                 (!c.bPreferPopLeft && E) || !b
                   ? (a.menuLeft = c.bOverlapHorizontal ? f : v)
                   : (a.menuRight = u - (c.bOverlapHorizontal ? v : f));
-              var x = l || r.top,
-                S = l || r.bottom,
+              var S = l || r.top,
+                x = l || r.bottom,
                 k = o.height;
-              c.bMatchHeight && ((k = S - x), (a.menuHeight = k));
-              var M = (c.bOverlapVertical ? S : x) - k,
+              c.bMatchHeight && ((k = x - S), (a.menuHeight = k));
+              var M = (c.bOverlapVertical ? x : S) - k,
                 P = 0 < M,
-                C = m - (c.bOverlapVertical ? x : S) - k,
+                C = m - (c.bOverlapVertical ? S : x) - k,
                 L = 0 < C,
                 I = (c.bPreferPopTop || !L) && P;
               if (!P && !L) {
@@ -1473,8 +1475,8 @@
               void 0 === a.menuBottom &&
                 void 0 === a.menuTop &&
                 (I
-                  ? (a.menuBottom = m - (c.bOverlapVertical ? S : x))
-                  : (a.menuTop = c.bOverlapVertical ? x : S)),
+                  ? (a.menuBottom = m - (c.bOverlapVertical ? x : S))
+                  : (a.menuTop = c.bOverlapVertical ? S : x)),
                 i
                   ? (a.menuHeight || (a.menuHeight = o.height),
                     a.menuWidth || (a.menuWidth = o.width),
@@ -1645,10 +1647,10 @@
           i
         );
       })(u.a);
-    function x(e) {
+    function S(e) {
       return a.createElement("div", { className: f.a.ContextMenuMouseOverlay });
     }
-    function S(e) {
+    function x(e) {
       var t = [],
         n = N.n(e),
         r = n.getSelection(),
@@ -2289,6 +2291,7 @@
               t.target_browser &&
                 (s.push("pid=" + t.target_browser.m_unPID),
                 s.push("browser=" + t.target_browser.m_nBrowserID),
+                s.push("browserType=" + t.target_browser.m_eBrowserType),
                 t.availscreenwidth &&
                   t.availscreenheight &&
                   (s.push("screenavailwidth=" + t.availscreenwidth),
@@ -2834,7 +2837,7 @@
       return (
         (t = e.strReadOnlySetting
           ? i.createElement(C, { strLabel: e.strReadOnlySetting })
-          : i.createElement(S, {
+          : i.createElement(x, {
               PrivacyStore: e.PrivacyStore,
               PrivacyKey: e.PrivacyKey,
               LimitPrivacyKey: e.LimitPrivacyKey
@@ -2843,7 +2846,7 @@
           i.Fragment,
           null,
           i.createElement(w, null, e.strLabel, ":", t),
-          i.createElement(x, null, e.children)
+          i.createElement(S, null, e.children)
         )
       );
     }
@@ -2854,14 +2857,14 @@
         e.children
       );
     }
-    function x(e) {
+    function S(e) {
       return i.createElement(
         "div",
         { className: "ProfilePrivacyDesc" },
         e.children
       );
     }
-    var S = (function(e) {
+    var x = (function(e) {
       function t() {
         return (null !== e && e.apply(this, arguments)) || this;
       }
@@ -2989,7 +2992,7 @@
           s.c([v.a], t.prototype, "OnCheckboxChecked", null),
           (t = s.c([b.a], t))
         );
-      })(S),
+      })(x),
       P = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -3295,10 +3298,10 @@
         return w;
       }),
       n.d(t, "u", function() {
-        return x;
+        return S;
       }),
       n.d(t, "L", function() {
-        return S;
+        return x;
       }),
       n.d(t, "N", function() {
         return k;
@@ -3448,7 +3451,7 @@
       o = n("q1tI"),
       i = n("twdX"),
       c = n.n(i);
-    n("QHER"), n("/7KC");
+    n("QHER"), n("/7KC"), n("vvG3");
     function a() {
       return o.createElement(
         "svg",
@@ -4205,7 +4208,7 @@
         )
       );
     }
-    function x() {
+    function S() {
       return o.createElement(
         "svg",
         {
@@ -4229,7 +4232,7 @@
         )
       );
     }
-    function S(e) {
+    function x(e) {
       var t = "SVGIcon_Button SVGIcon_Pin";
       return (
         e.bPinned && (t += " Pinned"),
@@ -6905,5 +6908,6 @@ and limitations under the License.
         return setTimeout(e, t);
       });
     }
-  }
+  },
+  vvG3: function(e, t, n) {}
 });

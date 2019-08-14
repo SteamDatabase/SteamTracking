@@ -1540,6 +1540,10 @@ body.v6 .game_area_description h2.bb_tag strong {
 	padding: 8px;
 }
 
+.descriptorText {
+	font-size: 11px !important;
+	color: #c6d4df !important;
+}
 
 .details_block {
 
@@ -2146,6 +2150,116 @@ a.game_area_demo_btn:hover, a.game_area_wishlist_btn:hover {
 	color: #8bb9e0;
 }
 
+/* queue flyout menu */
+.queue_btn_ignore > .btnv6_blue_hoverfade {
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.queue_btn_ignore_menu {
+	margin-left: -2px;
+}
+.queue_btn_ignore_menu .btn_medium > span {
+	padding: 0px;
+}
+.queue_btn_ignore_menu:hover {
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 0px;
+}
+.queue_btn_ignore_menu > .queue_ignore_menu_arrow {
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	border: none;
+	padding: 1px;
+	display: inline-block;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: #67c1f5 !important;
+	background: rgba(103, 193, 245, 0.2);
+}
+
+.queue_btn_ignore_menu > .queue_ignore_menu_arrow.queue_btn_active {
+	background: rgba( 103, 193, 245, 0.2 );
+	background-color: rgba( 103, 193, 245, 0.6 );
+}
+.queue_btn_ignore_menu:hover > .queue_ignore_menu_arrow,
+.queue_btn_ignore_menu > .queue_ignore_menu_arrow:hover {
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 0px;
+	background-color: #2e323a;
+}
+.queue_ignore_menu_flyout {
+	position: absolute;
+	display: none;
+	width: 300px;
+	padding: 0px;
+	color: #556772;
+	line-height: 18px;
+	z-index: 10;
+	left: 0px;
+	margin-top: -4px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.75);
+}
+.queue_btn_ignore_menu:hover .queue_ignore_menu_flyout,
+.queue_ignore_menu_flyout:hover {
+	display: block;
+    background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+}
+.queue_ignore_menu_flyout_content {
+	position: relative;
+}
+
+.queue_ignore_menu_option {
+	display: flex;
+	cursor: pointer;
+    padding: 12px;
+}
+.queue_ignore_menu_option:first-child {
+
+}
+.queue_ignore_menu_option:hover {
+    background: #3b404a;
+}
+
+.queue_ignore_menu_option_label {
+	margin-left: 5px;
+}
+.queue_ignore_menu_option_label > .option_title {
+	color: #fff;
+	font-size: 14px;
+    line-height: 17px;
+    padding-bottom: 4px;
+}
+.queue_ignore_menu_option_label > .option_subtitle {
+    line-height: 14px;
+    color: #687882;
+}
+.queue_ignore_menu_option:hover .queue_ignore_menu_option_label > .option_subtitle {
+    color: #85949d;
+}
+
+.queue_btn_ignore_menu .btnv6_blue_hoverfade img {
+	vertical-align: middle;
+	margin: 0px;
+}
+
+.queue_ignore_menu_option_image.selected {
+	display: none;
+}
+.queue_ignore_menu_option_image.unselected {
+}
+
+.queue_btn_ignore_menu.not_interested #queue_ignore_menu_option_not_interested .queue_ignore_menu_option_image.selected {
+	display: inline-block;
+}
+.queue_btn_ignore_menu.not_interested #queue_ignore_menu_option_not_interested .queue_ignore_menu_option_image.unselected {
+	display: none;
+}
+.queue_btn_ignore_menu.owned_elsewhere #queue_ignore_menu_option_owned_elsewhere .queue_ignore_menu_option_image.selected {
+	display: inline-block;
+}
+.queue_btn_ignore_menu.owned_elsewhere #queue_ignore_menu_option_owned_elsewhere .queue_ignore_menu_option_image.unselected {
+	display: none;
+}
 
 /* DLC list page */
 

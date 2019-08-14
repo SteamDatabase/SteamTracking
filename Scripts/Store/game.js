@@ -82,20 +82,60 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 	var $IgnoreBtn = $J('.queue_control_button.queue_btn_ignore .queue_btn_inactive');
 	var $UnIgnoreBtn = $J('.queue_control_button.queue_btn_ignore .queue_btn_active');
 
-	$IgnoreBtn.click( function() {
+	var $IgnoreMenuBtn = $J('.queue_control_button.queue_btn_ignore_menu .queue_ignore_menu_arrow');
+	var $IgnoreMenu = $J('.queue_control_button.queue_btn_ignore_menu');
+	var $IgnoreMenuOption_NotInterested = $J('#queue_ignore_menu_option_not_interested' );
+	var $IgnoreMenuOption_OwnedElsewhere = $J('#queue_ignore_menu_option_owned_elsewhere' );
+
+	var funcUpdateIgnoredReasonClasses = function() {
+		$IgnoreMenu.removeClass( "not_interested owned_elsewhere" );
+		var curIgnoredReason = $IgnoreMenu.data( "ignoredreason" );
+		if ( curIgnoredReason !== undefined )
+		{
+			$IgnoreMenuBtn.removeClass( "queue_btn_inactive" );
+			$IgnoreMenuBtn.addClass( "queue_btn_active" );
+			switch( curIgnoredReason )
+			{
+				case 0:
+					$IgnoreMenu.addClass( "not_interested" );
+					break;
+				case 2:
+					$IgnoreMenu.addClass( "owned_elsewhere" );
+					break;
+			}
+		}
+	};
+	funcUpdateIgnoredReasonClasses();
+
+	var funcIgnoreGame = function( ignore_reason ) {
 		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 			sessionid: g_sessionID,
 			appid: store_appid,
-			snr: snr
+			snr: snr,
+			ignore_reason: ignore_reason
 		}).done( function( data ) {
 			$IgnoreBtn.hide();
 			$UnIgnoreBtn.show();
+
+			$IgnoreMenu.data( "ignoredreason", ignore_reason );
+			funcUpdateIgnoredReasonClasses();
+
 			GDynamicStore.InvalidateCache();
 			if ( data && data.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark something Not Interested' ); } // SummerSale2017
 		}).fail( function( jqXHR ) {
 			ShowAlertDialog( 'Ignore App', 'There was a problem saving your changes.  Please try again later.' );
 		});
-	});
+	};
+
+	$IgnoreBtn.click( function() {
+		funcIgnoreGame( 0 );
+	} );
+	$IgnoreMenuOption_NotInterested.click( function() {
+		funcIgnoreGame( 0 );
+	} );
+	$IgnoreMenuOption_OwnedElsewhere.click( function() {
+		funcIgnoreGame( 2 );
+	} );
 
 	$UnIgnoreBtn.click( function() {
 		$J.post( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
@@ -106,6 +146,9 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 		}).done( function() {
 			$IgnoreBtn.show();
 			$UnIgnoreBtn.hide();
+			$IgnoreMenu.removeClass( "not_interested owned_elsewhere" );
+			$IgnoreMenuBtn.removeClass( "queue_btn_active" );
+			$IgnoreMenuBtn.addClass( "queue_btn_inactive" );
 			GDynamicStore.InvalidateCache();
 		}).fail( function() {
 			ShowAlertDialog( 'Ignore App', 'There was a problem saving your changes.  Please try again later.' );

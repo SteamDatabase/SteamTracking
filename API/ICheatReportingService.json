@@ -404,6 +404,12 @@
                     "type": "uint64",
                     "optional": false,
                     "description": "cheat param 2"
+                },
+                {
+                    "name": "cheat_data_dump",
+                    "type": "string",
+                    "optional": false,
+                    "description": "data collection in json format"
                 }
             ]
         }
