@@ -7,7 +7,8 @@
     "IkgIARIg1Dgd2R8FszAqcaMuEmzMoli/lZC8dEqopsWXmQRE8dlFRtsHXU1GQspgULoEULAGUICKD1DexwxQosI+UJLzP1CavkMpPq18ki+K3PwyQJDC1dxZbmnudqcOfqfILC1HLkEYGmaXVZK9zDSeHZiVqL+ZALWgQYTLbTlhkjj7WKnA6HRHr4hKqQiSC7WnDAo=",
     "IjcIARIgIlvA41Mpb2Ja+PfJVrFEYx90ECXf55F5FxI1Pk79iY5FntSnXE2eO2pgULgDUIgEUKoGKT6tfJIvitz8MkAuOrorOGIPqdD2xKjuWiIeFkPZVWslG1+WKC5aFgdv2bf+7AGUZcbFseDDMwKn8ulFOHTUPgzZRU68XEtw7r4G",
     "IjYIARIgW0/njCUOhyUxNFu2OH4blGOOymFUKvVUuitYBC2WL7VFiFbsXE2Iva5gUJrWE1CK+BQpPq18ki+K3PwyQBMkaNnsfX6AQRoNZvOdAyIdP9ZqQMaL8uWA0y6ecDTgIbcqdVGUjElPPe9SugBd3TGgHGPOwAWr0tDgjDlYqQI=",
-    "IjoIARIg8+9JL2vE+dNmhBPauZ/QZg7uQfZxiNCseZkk4XzGPlJFRtsHXU1GQspgUKLCPlCS8z9Qmr5DKT6tfJIvitz8MkCpvPfaZPVmH6qW2PxXFJlgDPwFOdpPafOfUQX3Bt2xVm0DBLwCPUQtU37+Mj+5VezvmcozArsgg/XgnPhCIVAD"
+    "IjoIARIg8+9JL2vE+dNmhBPauZ/QZg7uQfZxiNCseZkk4XzGPlJFRtsHXU1GQspgUKLCPlCS8z9Qmr5DKT6tfJIvitz8MkCpvPfaZPVmH6qW2PxXFJlgDPwFOdpPafOfUQX3Bt2xVm0DBLwCPUQtU37+Mj+5VezvmcozArsgg/XgnPhCIVAD",
+    "IjIIARIgaMVHur3UExsppAQNmlq0lEm4VJJ2R+HAu3V2JFKxV8FFCNowXU0IQfNgULLKNCk+rXySL4rc/DJAmgQFVISfdgdrAQj9FywVTHjuLz5Qk9iwvFy6FKpW8OZe+ltrACHtUhtB70kmyJFQsHF0SOrBJYE64Fu/NMTCAA=="
   ],
   "pops": {
     "aae1": {
@@ -583,7 +584,7 @@
       "geo": [ -118.25, 34.05 ],
       "relay_addresses": [
         "162.254.195.70:27015-27052",
-        "162.254.195.71:27015-27052"
+        "162.254.195.86:27015-27052"
       ],
       "relays": [
         {
@@ -591,7 +592,7 @@
           "port_range": [ 27015, 27052 ]
         },
         {
-          "ipv4": "162.254.195.71",
+          "ipv4": "162.254.195.86",
           "port_range": [ 27015, 27052 ]
         }
       ],
@@ -1656,7 +1657,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 233,
+  "revision": 234,
   "revoked_keys": [
     "123456789"
   ]
