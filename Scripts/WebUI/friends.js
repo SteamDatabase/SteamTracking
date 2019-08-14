@@ -14520,10 +14520,13 @@
         e
       );
     })();
-    n.d(t, "b", function() {
+    n.d(t, "c", function() {
       return J;
     }),
-      n.d(t, "c", function() {
+      n.d(t, "b", function() {
+        return ee;
+      }),
+      n.d(t, "d", function() {
         return Q;
       }),
       n.d(t, "a", function() {
@@ -23945,17 +23948,17 @@
           i.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.video,
-              t = w.b.Loading,
+              t = w.c.Loading,
               n = "";
             if (e) {
               (t = e.GetBroadcastState()),
                 (n = e.GetBroadcastStateDescription());
               var o = e.IsBuffering();
-              t == w.b.Ready && o && ((t = w.b.Loading), (n = ""));
+              t == w.c.Ready && o && ((t = w.c.Loading), (n = ""));
             }
-            if (e && t != w.b.Error && e.GetUserInputNeeded()) return null;
-            if (t == w.b.Ready) return null;
-            var i = t == w.b.Loading;
+            if (e && t != w.c.Error && e.GetUserInputNeeded()) return null;
+            if (t == w.c.Ready) return null;
+            var i = t == w.c.Loading;
             return O.createElement(
               "div",
               {
@@ -24743,7 +24746,7 @@
             return (
               !e ||
               (!!e.GetUserInputNeeded() ||
-                w.a.GetBroadcastState(e) == w.b.Error)
+                w.a.GetBroadcastState(e) == w.c.Error)
             );
           }),
           (e.prototype.render = function() {
@@ -25698,12 +25701,12 @@
               t = void 0 !== this.state.nHoverValue,
               n = r.GetPercentOffsetFromTime(
                 this.state.nGrabberMouseDownTime,
-                w.c.Timeline
+                w.d.Timeline
               ),
-              o = r.GetPercentOffsetFromTime(r.GetPlaybackTime(), w.c.Timeline),
+              o = r.GetPercentOffsetFromTime(r.GetPlaybackTime(), w.d.Timeline),
               a = r.GetPercentOffsetFromTime(
                 r.GetVideoAvailableStartTime(),
-                w.c.Timeline
+                w.d.Timeline
               );
             a < 0.05 && (a = 0);
             var s = M.a(n, 0, 100).toFixed(1) + "%",
@@ -25736,7 +25739,7 @@
               : n < 0 && (b = " grabberOffScreenLeft grabberOffscreen");
             var v = [];
             r.GetTimelineMarkers().forEach(function(e, t) {
-              var n = r.GetPercentOffsetFromTime(e.nTime, w.c.Timeline);
+              var n = r.GetPercentOffsetFromTime(e.nTime, w.d.Timeline);
               n < 0 ||
                 100 < n ||
                 v.push(
@@ -25751,9 +25754,9 @@
             });
             var S = [];
             r.GetTimelineSegments().forEach(function(t, e) {
-              var n = r.GetPercentOffsetFromTime(t.nTimeStart, w.c.Timeline);
+              var n = r.GetPercentOffsetFromTime(t.nTimeStart, w.d.Timeline);
               if (!(100 < n)) {
-                var o = r.GetPercentOffsetFromTime(t.nTimeEnd, w.c.Timeline);
+                var o = r.GetPercentOffsetFromTime(t.nTimeEnd, w.d.Timeline);
                 o < 0 ||
                   S.push(
                     O.createElement(Z, {
@@ -25771,9 +25774,9 @@
             });
             var y = r.GetPercentOffsetFromTime(
                 r.m_editorStartTime,
-                w.c.Timeline
+                w.d.Timeline
               ),
-              C = r.GetPercentOffsetFromTime(r.m_editorEndTime, w.c.Timeline),
+              C = r.GetPercentOffsetFromTime(r.m_editorEndTime, w.d.Timeline),
               I = this.props.bIncludeClipEditor
                 ? [
                     O.createElement(Q, {
@@ -25897,7 +25900,15 @@
           (e.prototype.render = function() {
             var t = this,
               e = this.state.info;
-            if (!e) return null;
+            if (
+              (e &&
+                !e.m_strTitle &&
+                d.b &&
+                (((e = new w.b(this.props.steamID)).m_strTitle = d.b.name),
+                (e.m_strAppTitle = d.b.name)),
+              !e)
+            )
+              return null;
             var n = "";
             e.m_nViewerCount && (n = e.m_nViewerCount.toLocaleString());
             var o =
@@ -35173,7 +35184,10 @@
       else if ("76561198871875463" == e)
         r.init({
           bValid: !0,
-          stream: { "76561198871875463": "#Broadcast_Stream1" },
+          stream: {
+            "76561198871875463": "#Broadcast_Stream1",
+            76561198871884930: "#Broadcast_Stream2"
+          },
           name: "CSGO: StarLadder",
           appID: 730,
           link: "https://store.steampowered.com/app/730",
@@ -62509,6 +62523,8 @@
                       (n = t.data),
                       (this.m_strChatURL = n.view_url_template),
                       (this.m_ulChatID = n.chat_id),
+                      (this.m_strFlairGroupID =
+                        n.flair_group_ids && n.flair_group_ids[0]),
                       n.blocked && console.log("User is blocked from chat"),
                       n.steamid && (this.m_strUserSteamID = n.steamid),
                       n.token && (this.m_webApiToken = n.token),
