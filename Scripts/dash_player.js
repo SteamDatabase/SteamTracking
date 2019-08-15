@@ -3387,7 +3387,7 @@ CMPDParser.prototype.BParse = function( xmlDoc, bUseMpdRelativePathForSegments, 
 					if (!representation.audioChannels)
 						representation.audioChannels = 2;
 
-					if ( !representation.id || !representation.mimeType || !representation.codecs || !representation.bandwidth || !representation.audioSamplingRate || !representation.audioChannels)
+					if ( !representation.id || !representation.mimeType || !representation.codecs || !representation.audioSamplingRate || !representation.audioChannels)
 					{
 						bError = true;
 						PlayerLog("MPD - Representation Audio Data Missing");

@@ -11470,7 +11470,6 @@
                   o.strID &&
                   o.strMimeType &&
                   o.strCodecs &&
-                  o.nBandwidth &&
                   o.nAudioSamplingRate &&
                   o.nAudioChannels
                 ))
@@ -13223,7 +13222,7 @@
                 this.OnVisibilityChange
               ),
             this.StopDownloads(),
-            this.m_elVideo.pause(),
+            this.m_elVideo && this.m_elVideo.pause(),
             this.m_mediaSource)
           ) {
             try {
@@ -13259,7 +13258,8 @@
             this.m_schReportPlayerTrigger.Cancel(),
             this.m_schCaptureDisplayStatsTrigger.Cancel(),
             this.m_schFirstFrameThrottler.Cancel(),
-            1 != this.m_elVideo.playbackRate &&
+            this.m_elVideo &&
+              1 != this.m_elVideo.playbackRate &&
               (this.m_elVideo.playbackRate = 1);
           for (var e = 0, t = this.m_rgLoaders; e < t.length; e++) {
             t[e].Close();
