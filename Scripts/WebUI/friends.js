@@ -25904,7 +25904,7 @@
                 !e.m_strTitle &&
                 d.b &&
                 (((e = new w.b(this.props.steamID)).m_strTitle = d.b.name),
-                (e.m_strAppTitle = d.b.name)),
+                (e.m_strAppTitle = d.b.appName || d.b.name)),
               !e)
             )
               return null;
@@ -25995,6 +25995,14 @@
         }
         return (
           i.d(t, e),
+          (t.prototype.componentDidMount = function() {
+            Object.keys(this.props.options).indexOf("76561198208088121") &&
+            "chinese" === l.b.LANGUAGE
+              ? this.props.onChange("76561198208088121")
+              : Object.keys(this.props.options).indexOf("76561198207552741") &&
+                "russian" === l.b.LANGUAGE &&
+                this.props.onChange("76561198207552741");
+          }),
           (t.prototype.showContextMenu = function(e) {
             var t = this.props,
               n = t.options,
@@ -35146,6 +35154,7 @@
             (this.bValid = e.bValid),
               (this.stream = e.stream),
               (this.name = e.name),
+              (this.appName = e.appName),
               (this.appID = e.appID),
               (this.link = e.link),
               (this.linkName = e.linkName),
@@ -35155,6 +35164,7 @@
           o.c([i.x], e.prototype, "bValid", void 0),
           o.c([i.x], e.prototype, "stream", void 0),
           o.c([i.x], e.prototype, "name", void 0),
+          o.c([i.x], e.prototype, "appName", void 0),
           o.c([i.x], e.prototype, "appID", void 0),
           o.c([i.x], e.prototype, "link", void 0),
           o.c([i.x], e.prototype, "linkName", void 0),
@@ -35166,6 +35176,7 @@
         bValid: !1,
         stream: { 0: "#Broadcast_EnglishMain" },
         name: "",
+        appName: "",
         appID: 0,
         link: "",
         linkName: "",
@@ -35259,6 +35270,7 @@
             bValid: !0,
             stream: t,
             name: "Dota 2: The International",
+            appName: "Dota 2",
             appID: 570,
             link: "https://store.steampowered.com/app/570",
             linkName: "Dota 2 on Steam",
@@ -63308,7 +63320,8 @@
           (e.prototype.SyncChat = function() {
             (this.m_tsFirstRequest = null),
               (this.m_nFromFirstRequestMS = 0),
-              (this.m_nNextChatTS = 0);
+              (this.m_nNextChatTS = 0),
+              (this.m_rgChatMessages = []);
           }),
           m.c([o.x], e.prototype, "m_mapChannelModeratorUsers", void 0),
           m.c([o.x], e.prototype, "m_nRateLimitSeconds", void 0),
