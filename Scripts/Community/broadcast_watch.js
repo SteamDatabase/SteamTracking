@@ -37,7 +37,6 @@ var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eCli
 	this.m_timeoutHeartbeat = null;
 	this.m_elVideoPlayer = document.getElementById( 'videoplayer' );
 	this.m_xhrViewUsers = null;
-	this.m_bUnlockingH264 = false;
 	this.m_DASHPlayerStats = null;
 	this.m_bChatEnabled = null;
 	this.m_bVideoEnabled = null;
@@ -601,12 +600,20 @@ function OpenBroadcastLink()
 CBroadcastWatch.prototype.ScheduleBroadcastInfoUpdate = function()
 {
 	var _watch = this;
+
+	// clear preview timer
+	clearTimeout( this.m_timeoutUpdate );
+
 	this.m_timeoutUpdate = setTimeout( function() { _watch.UpdateBroadcastInfo() }, _watch.m_nUpdateStatusInterval * 1000 );
 };
 
 CBroadcastWatch.prototype.ScheduleBroadcastHeartbeat = function()
 {
 	var _watch = this;
+
+	// clear preview timer
+	clearTimeout( this.m_timeoutHeartbeat );
+
 	this.m_timeoutHeartbeat = setTimeout( function() { _watch.BroadcastHeartbeat() }, _watch.m_nHeartbeatInterval * 1000 );
 };
 
