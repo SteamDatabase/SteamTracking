@@ -25,8 +25,9 @@ function SteamClientShowPopOut()
 }
 
 
-var CBroadcastWatch = function( broadcastAccountID, steamIDBroadcast, name, eClientType, steamIDViewer, IFrameHelper, nVideoLimitFPS, eWatchLocation )
+var CBroadcastWatch = function( strBaseURL, broadcastAccountID, steamIDBroadcast, name, eClientType, steamIDViewer, IFrameHelper, nVideoLimitFPS, eWatchLocation )
 {
+	this.m_strBaseURL = strBaseURL;
 	this.m_broadcastAccountID = broadcastAccountID;
 	this.m_ulBroadcastSteamID = steamIDBroadcast;
 	this.m_ulViewerSteamID = steamIDViewer;
@@ -175,7 +176,7 @@ CBroadcastWatch.prototype.BCanPlayMedia = function() {
 	return this.BCanPlayDashMpeg() || this.BCanPlayPlayHLS();
 };
 
-CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat, strBaseURL )
+CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat )
 {
 	var _watch = this;
 
@@ -196,7 +197,7 @@ CBroadcastWatch.prototype.Start = function( bEnableVideo, bEnableChat, strBaseUR
 
 	if ( bEnableChat )
 	{
-		this.m_chat = new CBroadcastChat( this.m_ulBroadcastSteamID, strBaseURL );
+		this.m_chat = new CBroadcastChat( this.m_ulBroadcastSteamID, this.m_strBaseURL );
 		this.m_chat.SetIFrameHelper( this.m_IFrameHelper );
 	}
 
@@ -295,7 +296,7 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 		rtStartRequest = Date.now();
 
 	$J.ajax( {
-		url: 'https://steamcommunity.com/broadcast/getbroadcastmpd/',
+		url: this.m_strBaseURL + '/broadcast/getbroadcastmpd/',
 		data: {
 			steamid: _watch.m_ulBroadcastSteamID,
 			broadcastid: _watch.m_ulBroadcastID,
@@ -461,7 +462,7 @@ CBroadcastWatch.prototype.BroadcastHeartbeat= function()
 {
 	var _watch = this;
 	$J.ajax( {
-		url: 'https://steamcommunity.com/broadcast/heartbeat/',
+		url: this.m_strBaseURL + '/broadcast/heartbeat/',
 		type: 'POST',
 		data:
 			{
@@ -484,7 +485,7 @@ CBroadcastWatch.prototype.UpdateBroadcastInfo = function()
 {
 	var _watch = this;
 	$J.ajax( {
-		url: 'https://steamcommunity.com/broadcast/getbroadcastinfo/',
+		url: this.m_strBaseURL + '/broadcast/getbroadcastinfo/',
 		data:
 		{
 			steamid: _watch.m_ulBroadcastSteamID,
@@ -515,9 +516,9 @@ CBroadcastWatch.prototype.SetBroadcastInfo = function( data )
 	var strTitle = data.title ? data.title : '';
 	var strGameName = data.app_title ? data.app_title : '';
 
-	var strBroadcastURL = 'https://steamcommunity.com/app/' + data.appid + '/broadcasts';
+	var strBroadcastURL = this.m_strBaseURL + '/app/' + data.appid + '/broadcasts';
 	if ( data.appid == 0 )
-		strBroadcastURL = 'https://steamcommunity.com?subsection=broadcasts';
+		strBroadcastURL = this.m_strBaseURL + '?subsection=broadcasts';
 
 	var strStoreURL = 'https://store.steampowered.com/app/' + data.appid + '?snr=' + g_SNR;
 	var target = "_blank";
@@ -682,7 +683,7 @@ CBroadcastWatch.prototype.UpdateBroadcastViewerUI = function()
 
 	this.m_xhrViewers = $J.ajax(
 	{
-		url: 'https://steamcommunity.com/broadcast/getbroadcastviewers/',
+		url: this.m_strBaseURL + '/broadcast/getbroadcastviewers/',
 		data: {
 			chatid: _watch.m_chat.GetChatID(),
 			sessionid: g_sessionID
@@ -807,7 +808,7 @@ CBroadcastWatch.prototype.ReportBroadcast = function()
 			return;
 		}
 
-		$J.post( 'https://steamcommunity.com/broadcast/report',
+		$J.post( this.m_strBaseURL + '/broadcast/report',
 		{
 			steamid: _watch.m_ulBroadcastSteamID,
 			broadcastid: _watch.m_ulBroadcastID,
@@ -834,7 +835,7 @@ CBroadcastWatch.prototype.UpdateBroadcast = function()
 
 	var _watch = this;
 
-	$J.post( 'https://steamcommunity.com/broadcast/updatebroadcastsettings',
+	$J.post( this.m_strBaseURL + '/broadcast/updatebroadcastsettings',
 	{
 		steamid: _watch.m_ulBroadcastSteamID,
 		title: $J( '#BroadcastAdminTitleInput' ).val(),
@@ -868,7 +869,7 @@ CBroadcastWatch.prototype.StopBroadcast = function()
 
 	var _watch = this;
 
-	$J.post( 'https://steamcommunity.com/broadcast/stopbroadcast',
+	$J.post( this.m_strBaseURL + '/broadcast/stopbroadcast',
 	{
 		steamid: _watch.m_ulBroadcastSteamID,
 		broadcastid : this.m_ulBroadcastID,
