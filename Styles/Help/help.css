@@ -4431,6 +4431,7 @@ table {
 	display: inline-block;
 	max-width: 500px;
 	vertical-align: top;
+	margin-bottom: 2em;
 }
 
 .help_itembug_item
@@ -4448,6 +4449,7 @@ table {
 .help_itembug_itemexplanation
 {
 	margin-left: 1em;
+	max-width: 400px;
 }
 
 #help_itembug_summary > div
