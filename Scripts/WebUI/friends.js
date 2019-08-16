@@ -14127,425 +14127,425 @@
       return e < 360 ? 480 : e < 480 ? 720 : 4320;
     }
     var Y = (function() {
-      function e(e) {
-        (this.m_elVideo = null),
-          (this.m_peerConnection = null),
-          (this.m_schCandidateTimer = new a.b()),
-          (this.m_listeners = new a.c()),
-          (this.m_bFirstPlay = !0),
-          (this.m_bStatsViewVisible = !1),
-          (this.m_schCaptureDisplayStatsTrigger = new a.b()),
-          (this.m_stats = new P()),
-          (this.m_elVideo = e);
-      }
-      return (
-        (e.prototype.PlayMPD = function(e) {}),
-        (e.prototype.PlayWebRTC = function(o, i, r, a, s) {
-          return S.b(this, void 0, void 0, function() {
-            var t,
-              n = this;
-            return S.e(this, function(e) {
-              return (
-                (this.m_strBroadcastSteamID = o),
-                (this.m_ulWebRTCSessionID = r),
-                (this.m_nHostCandidateGeneration = 0),
-                this.m_listeners.AddEventListener(
-                  this.m_elVideo,
-                  "pause",
-                  this.OnVideoPause
-                ),
-                this.m_listeners.AddEventListener(
-                  this.m_elVideo,
-                  "resize",
-                  this.OnVideoResize
-                ),
-                (t = {
-                  iceServers: [
-                    { urls: ["stun:" + a] },
-                    { urls: ["turn:" + a], username: i, credential: r }
-                  ],
-                  iceTransportPolicy: "relay"
-                }),
-                (this.m_peerConnection = new RTCPeerConnection(t)),
-                (this.m_peerConnection.oniceconnectionstatechange = function(
-                  e
-                ) {
-                  n.m_peerConnection &&
-                    (console.log(
-                      "BroadcastWebRTC: ICE connection state changed to " +
-                        n.m_peerConnection.iceConnectionState
-                    ),
-                    "failed" === n.m_peerConnection.iceConnectionState
-                      ? n.OnWebRTCConnectionFailed()
-                      : "disconnected" ===
-                          n.m_peerConnection.iceConnectionState &&
-                        n.OnWebRTCConnectionRetry());
-                }.bind(this)),
-                (this.m_peerConnection.onicecandidate = function(e) {
-                  if (e.candidate) {
-                    var t = new FormData();
-                    t.append("broadcaststeamid", n.m_strBroadcastSteamID),
-                      t.append("webrtc_session_id", n.m_ulWebRTCSessionID),
-                      t.append("sdp_mid", e.candidate.sdpMid),
-                      t.append(
-                        "sdp_mline_index",
-                        String(e.candidate.sdpMLineIndex)
-                      ),
-                      t.append("candidate", e.candidate.candidate),
-                      y.a
-                        .post(
-                          d.b.CHAT_BASE_URL +
-                            "broadcast/addbroadcastwebrtccandidate",
-                          t
-                        )
-                        .then(function(e) {
-                          var t = e.data;
-                          (t.success && 1 == t.success) ||
-                            console.log(
-                              "Failed to add a WebRTC session ICE candidate: " +
-                                String(t.success)
-                            );
-                        })
-                        .catch(function(e) {
-                          return console.log(
-                            "Failed to add a WebRTC session ICE candidate" + e
-                          );
-                        });
-                  }
-                }.bind(this)),
-                (this.m_peerConnection.ontrack = function(e) {
-                  "video" === e.track.kind &&
-                    ((n.m_elVideo.src = null),
-                    (n.m_elVideo.srcObject = e.streams[0]),
-                    n.Play());
-                }.bind(this)),
-                this.m_peerConnection
-                  .setRemoteDescription({ type: "offer", sdp: s })
-                  .then(function() {
-                    return S.b(n, void 0, void 0, function() {
-                      var t,
-                        n,
-                        o,
-                        i,
-                        r = this;
-                      return S.e(this, function(e) {
-                        switch (e.label) {
-                          case 0:
-                            return (
-                              (n = (t = this.m_peerConnection)
-                                .setLocalDescription),
-                              [4, this.m_peerConnection.createAnswer()]
-                            );
-                          case 1:
-                            return [4, n.apply(t, [e.sent()])];
-                          case 2:
-                            e.sent(),
-                              (o = new FormData()).append(
-                                "broadcaststeamid",
-                                this.m_strBroadcastSteamID
-                              ),
-                              o.append(
-                                "webrtc_session_id",
-                                this.m_ulWebRTCSessionID
-                              ),
-                              o.append(
-                                "answer",
-                                this.m_peerConnection.localDescription.sdp
-                              ),
-                              (e.label = 3);
-                          case 3:
-                            return (
-                              e.trys.push([3, 5, , 6]),
-                              [
-                                4,
-                                y.a
-                                  .post(
-                                    d.b.CHAT_BASE_URL +
-                                      "broadcast/setbroadcastwebrtcanswer",
-                                    o
-                                  )
-                                  .then(function(e) {
-                                    var t = e.data;
-                                    if (!t.success || 1 != t.success)
-                                      throw new Error(String(t.success));
-                                  })
-                              ]
-                            );
-                          case 4:
-                            return e.sent(), [3, 6];
-                          case 5:
-                            return (
-                              (i = e.sent()),
-                              console.log(
-                                "Failed to set the WebRTC session answer: " + i
-                              ),
-                              this.OnWebRTCConnectionRetry(),
-                              [2]
-                            );
-                          case 6:
-                            return (
-                              (this.m_nCandidateUpdateIntervalMS = 250),
-                              this.m_schCandidateTimer.Schedule(
-                                this.m_nCandidateUpdateIntervalMS,
-                                function() {
-                                  return r.GetHostCandidates();
-                                }
-                              ),
-                              [2]
-                            );
-                        }
-                      });
-                    });
-                  }),
-                [2]
-              );
-            });
-          });
-        }),
-        (e.prototype.GetHostCandidates = function() {
-          return S.b(this, void 0, void 0, function() {
-            var t,
-              n,
-              o = this;
-            return S.e(this, function(e) {
-              switch (e.label) {
-                case 0:
-                  (t = new FormData()).append(
-                    "broadcaststeamid",
-                    this.m_strBroadcastSteamID
+        function e(e) {
+          (this.m_elVideo = null),
+            (this.m_peerConnection = null),
+            (this.m_schCandidateTimer = new a.b()),
+            (this.m_listeners = new a.c()),
+            (this.m_bFirstPlay = !0),
+            (this.m_bStatsViewVisible = !1),
+            (this.m_schCaptureDisplayStatsTrigger = new a.b()),
+            (this.m_stats = new P()),
+            (this.m_elVideo = e);
+        }
+        return (
+          (e.prototype.PlayMPD = function(e) {}),
+          (e.prototype.PlayWebRTC = function(o, i, r, a, s) {
+            return S.b(this, void 0, void 0, function() {
+              var t,
+                n = this;
+              return S.e(this, function(e) {
+                return (
+                  (this.m_strBroadcastSteamID = o),
+                  (this.m_ulWebRTCSessionID = r),
+                  (this.m_nHostCandidateGeneration = 0),
+                  this.m_listeners.AddEventListener(
+                    this.m_elVideo,
+                    "pause",
+                    this.OnVideoPause
                   ),
-                    t.append("webrtc_session_id", this.m_ulWebRTCSessionID),
-                    t.append(
-                      "candidate_generation",
-                      String(this.m_nHostCandidateGeneration)
-                    ),
-                    (e.label = 1);
-                case 1:
-                  return (
-                    e.trys.push([1, 3, , 4]),
-                    [
-                      4,
-                      y.a
-                        .post(
-                          d.b.CHAT_BASE_URL +
-                            "broadcast/getbroadcastwebrtccandidates",
-                          t
-                        )
-                        .then(function(e) {
-                          var t = e.data,
-                            n = t.data;
-                          if (!t.success || 1 != t.success)
-                            throw new Error(String(t.success));
-                          n.candidate_generation > o.m_nHostCandidateGeneration
-                            ? (n.candidates.forEach(function(e) {
-                                var t = new RTCIceCandidate({
-                                  sdpMid: e.sdp_mid,
-                                  sdpMLineIndex: e.sdp_mline_index,
-                                  candidate: e.candidate
-                                });
-                                o.m_peerConnection
-                                  .addIceCandidate(t)
-                                  .catch(function(e) {
-                                    return console.error(e);
-                                  });
-                              }),
-                              (o.m_nHostCandidateGeneration =
-                                n.candidate_generation))
-                            : 0 < o.m_nHostCandidateGeneration &&
-                              (o.m_nCandidateUpdateIntervalMS *= 2);
-                        })
-                    ]
-                  );
-                case 2:
-                  return e.sent(), [3, 4];
-                case 3:
-                  return (
-                    (n = e.sent()),
-                    console.log(
-                      "Failed to get WebRTC session ICE candidates" + n
-                    ),
-                    this.OnWebRTCConnectionRetry(),
-                    [2]
-                  );
-                case 4:
-                  return (
-                    this.m_schCandidateTimer.Schedule(
-                      this.m_nCandidateUpdateIntervalMS,
-                      function() {
-                        return o.GetHostCandidates();
-                      }
-                    ),
-                    [2]
-                  );
-              }
-            });
-          });
-        }),
-        (e.prototype.DispatchEvent = function(e, t) {
-          void 0 === t && (t = null);
-          var n = new CustomEvent(e, {
-            cancelable: !0,
-            bubbles: !0,
-            detail: t
-          });
-          this.m_elVideo.dispatchEvent(n);
-        }),
-        (e.prototype.OnWebRTCConnectionRetry = function() {
-          this.DispatchEvent("valve-webrtcretry");
-        }),
-        (e.prototype.OnWebRTCConnectionFailed = function() {
-          this.DispatchEvent("valve-webrtcfailed");
-        }),
-        (e.prototype.Close = function() {
-          this.m_listeners.Unregister(),
-            this.m_schCandidateTimer.Cancel(),
-            this.m_schCaptureDisplayStatsTrigger.Cancel(),
-            this.m_peerConnection &&
-              (this.m_peerConnection.close(), (this.m_peerConnection = null)),
-            this.m_elVideo.pause(),
-            (this.m_elVideo.srcObject = null),
-            this.m_stats &&
-              (this.m_stats.GetFPSMonitor().Close(), (this.m_stats = null)),
-            (this.m_bFirstPlay = !0);
-        }),
-        (e.prototype.IsBuffering = function() {
-          return !1;
-        }),
-        (e.prototype.GetCurrentPlayTime = function() {
-          return 0;
-        }),
-        (e.prototype.GetLiveContentStartTime = function() {
-          return null;
-        }),
-        (e.prototype.GetAvailableVideoStartTime = function() {
-          return 0;
-        }),
-        (e.prototype.GetBufferedLiveEdgeTime = function() {
-          return 0;
-        }),
-        (e.prototype.IsPaused = function() {
-          return this.m_elVideo.paused;
-        }),
-        (e.prototype.Play = function() {
-          var t = this,
-            n = this.m_bFirstPlay;
-          this.m_bFirstPlay = !1;
-          var e = this.m_elVideo.play();
-          e
-            ? e
-                .then(function() {
-                  t.m_stats.GetFPSMonitor().StartTracking(function() {
-                    return t.m_stats.ExtractFrameInfo(t.m_elVideo);
-                  });
-                })
-                .catch(function(e) {
-                  n && t.DispatchEvent("valve-userinputneeded");
-                })
-            : this.m_stats.GetFPSMonitor().StartTracking(function() {
-                return t.m_stats.ExtractFrameInfo(t.m_elVideo);
+                  this.m_listeners.AddEventListener(
+                    this.m_elVideo,
+                    "resize",
+                    this.OnVideoResize
+                  ),
+                  (t = {
+                    iceServers: [
+                      { urls: ["stun:" + a] },
+                      { urls: ["turn:" + a], username: i, credential: r }
+                    ],
+                    iceTransportPolicy: "relay"
+                  }),
+                  (this.m_peerConnection = new RTCPeerConnection(t)),
+                  (this.m_peerConnection.oniceconnectionstatechange = function(
+                    e
+                  ) {
+                    n.m_peerConnection &&
+                      (console.log(
+                        "BroadcastWebRTC: ICE connection state changed to " +
+                          n.m_peerConnection.iceConnectionState
+                      ),
+                      "failed" === n.m_peerConnection.iceConnectionState
+                        ? n.OnWebRTCConnectionFailed()
+                        : "disconnected" ===
+                            n.m_peerConnection.iceConnectionState &&
+                          n.OnWebRTCConnectionRetry());
+                  }.bind(this)),
+                  (this.m_peerConnection.onicecandidate = function(e) {
+                    if (e.candidate) {
+                      var t = new FormData();
+                      t.append("broadcaststeamid", n.m_strBroadcastSteamID),
+                        t.append("webrtc_session_id", n.m_ulWebRTCSessionID),
+                        t.append("sdp_mid", e.candidate.sdpMid),
+                        t.append(
+                          "sdp_mline_index",
+                          String(e.candidate.sdpMLineIndex)
+                        ),
+                        t.append("candidate", e.candidate.candidate),
+                        y.a
+                          .post(
+                            d.b.CHAT_BASE_URL +
+                              "broadcast/addbroadcastwebrtccandidate",
+                            t
+                          )
+                          .then(function(e) {
+                            var t = e.data;
+                            (t.success && 1 == t.success) ||
+                              console.log(
+                                "Failed to add a WebRTC session ICE candidate: " +
+                                  String(t.success)
+                              );
+                          })
+                          .catch(function(e) {
+                            return console.log(
+                              "Failed to add a WebRTC session ICE candidate" + e
+                            );
+                          });
+                    }
+                  }.bind(this)),
+                  (this.m_peerConnection.ontrack = function(e) {
+                    "video" === e.track.kind &&
+                      ((n.m_elVideo.src = null),
+                      (n.m_elVideo.srcObject = e.streams[0]),
+                      n.Play());
+                  }.bind(this)),
+                  this.m_peerConnection
+                    .setRemoteDescription({ type: "offer", sdp: s })
+                    .then(function() {
+                      return S.b(n, void 0, void 0, function() {
+                        var t,
+                          n,
+                          o,
+                          i,
+                          r = this;
+                        return S.e(this, function(e) {
+                          switch (e.label) {
+                            case 0:
+                              return (
+                                (n = (t = this.m_peerConnection)
+                                  .setLocalDescription),
+                                [4, this.m_peerConnection.createAnswer()]
+                              );
+                            case 1:
+                              return [4, n.apply(t, [e.sent()])];
+                            case 2:
+                              e.sent(),
+                                (o = new FormData()).append(
+                                  "broadcaststeamid",
+                                  this.m_strBroadcastSteamID
+                                ),
+                                o.append(
+                                  "webrtc_session_id",
+                                  this.m_ulWebRTCSessionID
+                                ),
+                                o.append(
+                                  "answer",
+                                  this.m_peerConnection.localDescription.sdp
+                                ),
+                                (e.label = 3);
+                            case 3:
+                              return (
+                                e.trys.push([3, 5, , 6]),
+                                [
+                                  4,
+                                  y.a
+                                    .post(
+                                      d.b.CHAT_BASE_URL +
+                                        "broadcast/setbroadcastwebrtcanswer",
+                                      o
+                                    )
+                                    .then(function(e) {
+                                      var t = e.data;
+                                      if (!t.success || 1 != t.success)
+                                        throw new Error(String(t.success));
+                                    })
+                                ]
+                              );
+                            case 4:
+                              return e.sent(), [3, 6];
+                            case 5:
+                              return (
+                                (i = e.sent()),
+                                console.log(
+                                  "Failed to set the WebRTC session answer: " +
+                                    i
+                                ),
+                                this.OnWebRTCConnectionRetry(),
+                                [2]
+                              );
+                            case 6:
+                              return (
+                                (this.m_nCandidateUpdateIntervalMS = 250),
+                                this.m_schCandidateTimer.Schedule(
+                                  this.m_nCandidateUpdateIntervalMS,
+                                  function() {
+                                    return r.GetHostCandidates();
+                                  }
+                                ),
+                                [2]
+                              );
+                          }
+                        });
+                      });
+                    }),
+                  [2]
+                );
               });
-        }),
-        (e.prototype.Pause = function() {
-          this.m_elVideo.pause();
-        }),
-        (e.prototype.CanSeek = function() {
-          return !1;
-        }),
-        (e.prototype.SeekAndPlay = function(e) {
-          return this.Play(), 0;
-        }),
-        (e.prototype.Seek = function(e) {
-          return 0;
-        }),
-        (e.prototype.JumpTime = function(e) {
-          return 0;
-        }),
-        (e.prototype.IsMuted = function() {
-          return this.m_elVideo.muted;
-        }),
-        (e.prototype.SetMuted = function(e) {
-          this.m_elVideo.muted = e;
-        }),
-        (e.prototype.SetVolume = function(e) {
-          (e = s.a(e, 0, 1)), (this.m_elVideo.volume = e);
-        }),
-        (e.prototype.GetVolume = function() {
-          return this.m_elVideo.volume;
-        }),
-        (e.prototype.GetDASHPlayerStats = function() {
-          return this.m_stats;
-        }),
-        (e.prototype.SetStatsViewIsVisible = function(e) {
-          e && !this.m_bStatsViewVisible
-            ? (this.CaptureStatsForDisplay(),
+            });
+          }),
+          (e.prototype.GetHostCandidates = function() {
+            return S.b(this, void 0, void 0, function() {
+              var t,
+                n,
+                o = this;
+              return S.e(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    (t = new FormData()).append(
+                      "broadcaststeamid",
+                      this.m_strBroadcastSteamID
+                    ),
+                      t.append("webrtc_session_id", this.m_ulWebRTCSessionID),
+                      t.append(
+                        "candidate_generation",
+                        String(this.m_nHostCandidateGeneration)
+                      ),
+                      (e.label = 1);
+                  case 1:
+                    return (
+                      e.trys.push([1, 3, , 4]),
+                      [
+                        4,
+                        y.a
+                          .post(
+                            d.b.CHAT_BASE_URL +
+                              "broadcast/getbroadcastwebrtccandidates",
+                            t
+                          )
+                          .then(function(e) {
+                            var t = e.data,
+                              n = t.data;
+                            if (!t.success || 1 != t.success)
+                              throw new Error(String(t.success));
+                            n.candidate_generation >
+                            o.m_nHostCandidateGeneration
+                              ? (n.candidates.forEach(function(e) {
+                                  var t = new RTCIceCandidate({
+                                    sdpMid: e.sdp_mid,
+                                    sdpMLineIndex: e.sdp_mline_index,
+                                    candidate: e.candidate
+                                  });
+                                  o.m_peerConnection
+                                    .addIceCandidate(t)
+                                    .catch(function(e) {
+                                      return console.error(e);
+                                    });
+                                }),
+                                (o.m_nHostCandidateGeneration =
+                                  n.candidate_generation))
+                              : 0 < o.m_nHostCandidateGeneration &&
+                                (o.m_nCandidateUpdateIntervalMS *= 2);
+                          })
+                      ]
+                    );
+                  case 2:
+                    return e.sent(), [3, 4];
+                  case 3:
+                    return (
+                      (n = e.sent()),
+                      console.log(
+                        "Failed to get WebRTC session ICE candidates" + n
+                      ),
+                      this.OnWebRTCConnectionRetry(),
+                      [2]
+                    );
+                  case 4:
+                    return (
+                      this.m_schCandidateTimer.Schedule(
+                        this.m_nCandidateUpdateIntervalMS,
+                        function() {
+                          return o.GetHostCandidates();
+                        }
+                      ),
+                      [2]
+                    );
+                }
+              });
+            });
+          }),
+          (e.prototype.DispatchEvent = function(e, t) {
+            void 0 === t && (t = null);
+            var n = new CustomEvent(e, {
+              cancelable: !0,
+              bubbles: !0,
+              detail: t
+            });
+            this.m_elVideo.dispatchEvent(n);
+          }),
+          (e.prototype.OnWebRTCConnectionRetry = function() {
+            this.DispatchEvent("valve-webrtcretry");
+          }),
+          (e.prototype.OnWebRTCConnectionFailed = function() {
+            this.DispatchEvent("valve-webrtcfailed");
+          }),
+          (e.prototype.Close = function() {
+            this.m_listeners.Unregister(),
+              this.m_schCandidateTimer.Cancel(),
+              this.m_schCaptureDisplayStatsTrigger.Cancel(),
+              this.m_peerConnection &&
+                (this.m_peerConnection.close(), (this.m_peerConnection = null)),
+              this.m_elVideo.pause(),
+              (this.m_elVideo.srcObject = null),
+              this.m_stats &&
+                (this.m_stats.GetFPSMonitor().Close(), (this.m_stats = null)),
+              (this.m_bFirstPlay = !0);
+          }),
+          (e.prototype.IsBuffering = function() {
+            return !1;
+          }),
+          (e.prototype.GetCurrentPlayTime = function() {
+            return 0;
+          }),
+          (e.prototype.GetLiveContentStartTime = function() {
+            return null;
+          }),
+          (e.prototype.GetAvailableVideoStartTime = function() {
+            return 0;
+          }),
+          (e.prototype.GetBufferedLiveEdgeTime = function() {
+            return 0;
+          }),
+          (e.prototype.IsPaused = function() {
+            return this.m_elVideo.paused;
+          }),
+          (e.prototype.Play = function() {
+            var t = this,
+              n = this.m_bFirstPlay;
+            this.m_bFirstPlay = !1;
+            var e = this.m_elVideo.play();
+            e
+              ? e
+                  .then(function() {
+                    t.m_stats.GetFPSMonitor().StartTracking(function() {
+                      return t.m_stats.ExtractFrameInfo(t.m_elVideo);
+                    });
+                  })
+                  .catch(function(e) {
+                    n && t.DispatchEvent("valve-userinputneeded");
+                  })
+              : this.m_stats.GetFPSMonitor().StartTracking(function() {
+                  return t.m_stats.ExtractFrameInfo(t.m_elVideo);
+                });
+          }),
+          (e.prototype.Pause = function() {
+            this.m_elVideo.pause();
+          }),
+          (e.prototype.CanSeek = function() {
+            return !1;
+          }),
+          (e.prototype.SeekAndPlay = function(e) {
+            return this.Play(), 0;
+          }),
+          (e.prototype.Seek = function(e) {
+            return 0;
+          }),
+          (e.prototype.JumpTime = function(e) {
+            return 0;
+          }),
+          (e.prototype.IsMuted = function() {
+            return this.m_elVideo.muted;
+          }),
+          (e.prototype.SetMuted = function(e) {
+            this.m_elVideo.muted = e;
+          }),
+          (e.prototype.SetVolume = function(e) {
+            (e = s.a(e, 0, 1)), (this.m_elVideo.volume = e);
+          }),
+          (e.prototype.GetVolume = function() {
+            return this.m_elVideo.volume;
+          }),
+          (e.prototype.GetDASHPlayerStats = function() {
+            return this.m_stats;
+          }),
+          (e.prototype.SetStatsViewIsVisible = function(e) {
+            e && !this.m_bStatsViewVisible
+              ? (this.CaptureStatsForDisplay(),
+                this.m_schCaptureDisplayStatsTrigger.Schedule(
+                  250,
+                  this.CaptureStatsForDisplay
+                ))
+              : !e &&
+                this.m_bStatsViewVisible &&
+                this.m_schCaptureDisplayStatsTrigger.Cancel(),
+              (this.m_bStatsViewVisible = e);
+          }),
+          (e.prototype.CaptureStatsForDisplay = function() {
+            this.m_stats.SetHTMLVideoPlayerDisplay(
+              this.m_elVideo.videoWidth,
+              this.m_elVideo.videoHeight,
+              this.m_elVideo.clientWidth,
+              this.m_elVideo.clientHeight
+            ),
               this.m_schCaptureDisplayStatsTrigger.Schedule(
                 250,
                 this.CaptureStatsForDisplay
-              ))
-            : !e &&
-              this.m_bStatsViewVisible &&
-              this.m_schCaptureDisplayStatsTrigger.Cancel(),
-            (this.m_bStatsViewVisible = e);
-        }),
-        (e.prototype.CaptureStatsForDisplay = function() {
-          this.m_stats.SetHTMLVideoPlayerDisplay(
-            this.m_elVideo.videoWidth,
-            this.m_elVideo.videoHeight,
-            this.m_elVideo.clientWidth,
-            this.m_elVideo.clientHeight
-          ),
-            this.m_schCaptureDisplayStatsTrigger.Schedule(
-              250,
-              this.CaptureStatsForDisplay
-            );
-        }),
-        (e.prototype.OnVideoPause = function(e) {
-          this.m_stats.GetFPSMonitor().Close();
-        }),
-        (e.prototype.OnVideoResize = function(e) {
-          this.m_stats.GetFPSMonitor().SetWindowResized();
-        }),
-        (e.prototype.GetVideoRepresentations = function() {
-          var e = [];
-          return e.push({ id: "auto", displayName: "Auto", selected: !0 }), e;
-        }),
-        (e.prototype.SetVideoRepresentation = function(e) {}),
-        (e.prototype.IsLiveContent = function() {
-          return !0;
-        }),
-        S.c([c.a], e.prototype, "PlayWebRTC", null),
-        S.c([i.g.bound], e.prototype, "CaptureStatsForDisplay", null),
-        S.c([c.a], e.prototype, "OnVideoPause", null),
-        S.c([c.a], e.prototype, "OnVideoResize", null),
-        e
-      );
-    })();
-    n.d(t, "c", function() {
-      return J;
+              );
+          }),
+          (e.prototype.OnVideoPause = function(e) {
+            this.m_stats.GetFPSMonitor().Close();
+          }),
+          (e.prototype.OnVideoResize = function(e) {
+            this.m_stats.GetFPSMonitor().SetWindowResized();
+          }),
+          (e.prototype.GetVideoRepresentations = function() {
+            var e = [];
+            return e.push({ id: "auto", displayName: "Auto", selected: !0 }), e;
+          }),
+          (e.prototype.SetVideoRepresentation = function(e) {}),
+          (e.prototype.IsLiveContent = function() {
+            return !0;
+          }),
+          S.c([c.a], e.prototype, "PlayWebRTC", null),
+          S.c([i.g.bound], e.prototype, "CaptureStatsForDisplay", null),
+          S.c([c.a], e.prototype, "OnVideoPause", null),
+          S.c([c.a], e.prototype, "OnVideoResize", null),
+          e
+        );
+      })(),
+      J = n("XCHq");
+    n.d(t, "b", function() {
+      return Q;
     }),
-      n.d(t, "b", function() {
-        return ee;
-      }),
-      n.d(t, "d", function() {
-        return X;
+      n.d(t, "c", function() {
+        return Z;
       }),
       n.d(t, "a", function() {
-        return ie;
+        return re;
       });
-    var J, Q;
-    ((Q = J || (J = {}))[(Q.None = 0)] = "None"),
-      (Q[(Q.Loading = 1)] = "Loading"),
-      (Q[(Q.Ready = 2)] = "Ready"),
-      (Q[(Q.Error = 3)] = "Error");
-    var X,
-      Z,
-      $ = (function() {
+    var Q, X;
+    ((X = Q || (Q = {}))[(X.None = 0)] = "None"),
+      (X[(X.Loading = 1)] = "Loading"),
+      (X[(X.Ready = 2)] = "Ready"),
+      (X[(X.Error = 3)] = "Error");
+    var Z,
+      $,
+      ee = (function() {
         function e() {
           (this.m_steamIDBroadcast = ""),
             (this.m_ulBroadcastID = ""),
             (this.m_ulViewerToken = ""),
             (this.m_bWebRTC = !1),
-            (this.m_eWatchState = J.None),
+            (this.m_eWatchState = Q.None),
             (this.m_strStateDescription = ""),
             (this.m_rgVideos = []),
             (this.m_schManifestTimeout = new a.b()),
@@ -14556,7 +14556,7 @@
             void 0 === t && (t = ""),
               (this.m_eWatchState = e),
               (this.m_strStateDescription = t),
-              e == J.Error && console.log(this.m_strStateDescription);
+              e == Q.Error && console.log(this.m_strStateDescription);
           }),
           S.c([i.x], e.prototype, "m_ulBroadcastID", void 0),
           S.c([i.x], e.prototype, "m_eWatchState", void 0),
@@ -14565,7 +14565,7 @@
           e
         );
       })(),
-      ee = (function() {
+      te = (function() {
         function e(e) {
           (this.m_steamIDBroadcast = ""),
             (this.m_strTitle = ""),
@@ -14588,9 +14588,9 @@
           e
         );
       })(),
-      te = (function() {
+      ne = (function() {
         function e() {
-          (this.m_eWatchState = J.None),
+          (this.m_eWatchState = Q.None),
             (this.m_strStateDescription = ""),
             (this.m_rgVideos = []);
         }
@@ -14599,7 +14599,7 @@
             void 0 === t && (t = ""),
               (this.m_eWatchState = e),
               (this.m_strStateDescription = t),
-              e == J.Error && console.log(this.m_strStateDescription);
+              e == Q.Error && console.log(this.m_strStateDescription);
           }),
           S.c([i.x], e.prototype, "m_eWatchState", void 0),
           S.c([i.x], e.prototype, "m_strStateDescription", void 0),
@@ -14607,7 +14607,7 @@
           e
         );
       })(),
-      ne = (function() {
+      oe = (function() {
         function e() {
           (this.m_mapBroadcasts = new Map()),
             (this.m_mapClips = new Map()),
@@ -14625,10 +14625,10 @@
           (e.prototype.GetBroadcastState = function(e) {
             if (e.IsBroadcastClip()) {
               var t = this.m_mapClips.get(e.GetBroadcastClipID());
-              return t ? t.m_eWatchState : J.None;
+              return t ? t.m_eWatchState : Q.None;
             }
             var n = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
-            return n ? n.m_eWatchState : J.None;
+            return n ? n.m_eWatchState : Q.None;
           }),
           (e.prototype.GetBroadcastStateDescription = function(e) {
             if (e.IsBroadcastClip()) {
@@ -14643,14 +14643,14 @@
               r = this.m_broadcastSettings,
               a = r.nVolume,
               s = r.bMuted,
-              c = new oe(e, a, s, n);
+              c = new ie(e, a, s, n);
             return (
               c.SetBroadcastSteamID(t),
               i.m_rgVideos.push(c),
               (i.m_bWebRTC = o),
               Object(F.a)() ||
                 Object(F.b)() ||
-                i.SetState(J.Error, Object(m.b)("#BroadcastWatch_MinBrowser")),
+                i.SetState(Q.Error, Object(m.b)("#BroadcastWatch_MinBrowser")),
               c
             );
           }),
@@ -14659,13 +14659,13 @@
               i = this.m_broadcastSettings,
               r = i.nVolume,
               a = i.bMuted,
-              s = new oe(e, r, a, n);
+              s = new ie(e, r, a, n);
             return (
               s.SetBroadcastClipID(t),
               o.m_rgVideos.push(s),
               Object(F.a)() ||
                 Object(F.b)() ||
-                o.SetState(J.Error, Object(m.b)("#BroadcastWatch_MinBrowser")),
+                o.SetState(Q.Error, Object(m.b)("#BroadcastWatch_MinBrowser")),
               s
             );
           }),
@@ -14675,17 +14675,17 @@
               var t = this.m_mapClips.get(e.GetBroadcastClipID());
               if (!t) return;
               this.SetActiveVideo(e),
-                t.m_eWatchState == J.None
+                t.m_eWatchState == Q.None
                   ? this.GetClipManifest(t, e.GetWatchLocation())
-                  : t.m_eWatchState == J.Ready && e.StartClip(t);
+                  : t.m_eWatchState == Q.Ready && e.StartClip(t);
             } else {
               console.log("Starting broadcast for " + e.GetBroadcastSteamID());
               var n = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
               if (!n) return;
               this.SetActiveVideo(e),
-                n.m_eWatchState == J.None
+                n.m_eWatchState == Q.None
                   ? this.GetBroadcastManifest(n, e.GetWatchLocation())
-                  : n.m_eWatchState == J.Ready && e.StartBroadcast(n);
+                  : n.m_eWatchState == Q.Ready && e.StartBroadcast(n);
             }
           }),
           (e.prototype.SetActiveVideo = function(i) {
@@ -14781,7 +14781,7 @@
           }),
           (e.prototype.GetOrCreateBroadcastInfo = function(e) {
             if (!this.m_broadcastInfos[e]) {
-              var t = new ee(e);
+              var t = new te(e);
               this.m_broadcastInfos[e] = t;
             }
             return this.m_broadcastInfos[e];
@@ -14790,8 +14790,8 @@
             var t = this.m_mapBroadcasts.get(e);
             return (
               t ||
-              (((t = new $()).m_steamIDBroadcast = e),
-              (t.m_eWatchState = J.None),
+              (((t = new ee()).m_steamIDBroadcast = e),
+              (t.m_eWatchState = Q.None),
               this.m_mapBroadcasts.set(e, t),
               t)
             );
@@ -14812,13 +14812,13 @@
             var t = this.m_mapClips.get(e);
             return (
               t ||
-              (((t = new te()).m_clipID = e),
-              (t.m_eWatchState = J.None),
+              (((t = new ne()).m_clipID = e),
+              (t.m_eWatchState = Q.None),
               this.m_mapClips.set(e, t),
               t)
             );
           }),
-          (e.prototype.LoadBroadcastInfo = function(c) {
+          (e.prototype.LoadBroadcastInfo = function(l) {
             return S.b(this, void 0, void 0, function() {
               var t,
                 n,
@@ -14826,15 +14826,16 @@
                 i,
                 r,
                 a,
-                s = this;
+                s,
+                c = this;
               return S.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     (t = "0"),
-                      (n = this.m_mapBroadcasts.get(c.m_steamIDBroadcast)) &&
+                      (n = this.m_mapBroadcasts.get(l.m_steamIDBroadcast)) &&
                         (t = n.m_ulBroadcastID),
                       (o = {
-                        steamid: c.m_steamIDBroadcast,
+                        steamid: l.m_steamIDBroadcast,
                         broadcastid: t,
                         location:
                           n &&
@@ -14857,21 +14858,25 @@
                   case 2:
                     return (i = e.sent()) && i.data
                       ? ((r = i.data),
-                        (c.m_strTitle = r.title),
-                        (c.m_strAppId = r.appid),
-                        (c.m_strAppTitle = r.app_title),
-                        (c.m_strThumbnailUrl = r.thumbnail_url),
-                        (c.m_nViewerCount = r.viewer_count),
-                        (c.m_bIsOnline = r.is_online),
+                        (l.m_strTitle = r.title),
+                        (l.m_strAppId = r.appid),
+                        (l.m_strAppTitle = r.app_title),
+                        (l.m_strThumbnailUrl = r.thumbnail_url),
+                        (l.m_nViewerCount = r.viewer_count),
+                        (l.m_bIsOnline = r.is_online),
+                        !l.m_strTitle &&
+                          J.b &&
+                          ((l.m_strTitle = J.b.name),
+                          (l.m_strAppTitle = J.b.appName || J.b.name)),
                         (a = r.update_interval) &&
                           "number" == typeof a &&
-                          c.m_schUpdateTimeout.Schedule(1e3 * a, function() {
-                            return s.LoadBroadcastInfo(c);
+                          l.m_schUpdateTimeout.Schedule(1e3 * a, function() {
+                            return c.LoadBroadcastInfo(l);
                           }),
                         [3, 4])
                       : [2];
                   case 3:
-                    return e.sent(), [3, 4];
+                    return (s = e.sent()), console.error(s), [3, 4];
                   case 4:
                     return [2];
                 }
@@ -14893,7 +14898,7 @@
                 return S.e(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      l.SetState(J.Loading, ""),
+                      l.SetState(Q.Loading, ""),
                         (t = {
                           steamid: l.m_steamIDBroadcast,
                           broadcastid: 0,
@@ -14928,7 +14933,7 @@
                       if (!n || 200 != n.status)
                         return (
                           l.SetState(
-                            J.Error,
+                            Q.Error,
                             Object(m.b)("#BroadcastWatch_RequestFailed")
                           ),
                           [2]
@@ -14938,7 +14943,7 @@
                           this.SetViewerToken(i.viewertoken),
                         "ready" == (r = i.success))
                       )
-                        l.SetState(J.Ready),
+                        l.SetState(Q.Ready),
                           (l.m_ulBroadcastID = i.broadcastid),
                           (l.m_ulViewerToken = this.m_broadcastSettings.ulViewerToken),
                           (l.m_bWebRTC = i.is_webrtc),
@@ -14953,14 +14958,14 @@
                       else if ("waiting" == r) {
                         if (
                           (l.SetState(
-                            J.Loading,
+                            Q.Loading,
                             Object(m.b)("#BroadcastWatch_WaitingForResponse")
                           ),
                           6e4 < (a = Date.now() - u))
                         )
                           return (
                             l.SetState(
-                              J.Error,
+                              Q.Error,
                               Object(m.b)("#BroadcastWatch_NotAvailable")
                             ),
                             [2]
@@ -14972,7 +14977,7 @@
                       } else
                         "waiting_for_start" == r
                           ? (l.SetState(
-                              J.Loading,
+                              Q.Loading,
                               Object(m.b)("#BroadcastWatch_WaitingForStart")
                             ),
                             l.m_schManifestTimeout.Schedule(
@@ -14983,7 +14988,7 @@
                             ))
                           : "waiting_for_reconnect" == r
                           ? (l.SetState(
-                              J.Loading,
+                              Q.Loading,
                               Object(m.b)("#BroadcastWatch_WaitingForReconnect")
                             ),
                             l.m_schManifestTimeout.Schedule(
@@ -14994,36 +14999,36 @@
                             ))
                           : "end" == r
                           ? l.SetState(
-                              J.Error,
+                              Q.Error,
                               Object(m.b)("#BroadcastWatch_NotAvailable")
                             )
                           : "noservers" == r
                           ? l.SetState(
-                              J.Error,
+                              Q.Error,
                               Object(m.b)("#BroadcastWatch_ServerLoad")
                             )
                           : "system_not_supported" == r
                           ? l.SetState(
-                              J.Error,
+                              Q.Error,
                               Object(m.b)("#BroadcastWatch_SystemNotSupported")
                             )
                           : "user_restricted" == r
                           ? l.SetState(
-                              J.Error,
+                              Q.Error,
                               Object(m.b)("#BroadcastWatch_UserRestricted")
                             )
                           : "poor_upload_quality" == r
                           ? l.SetState(
-                              J.Error,
+                              Q.Error,
                               Object(m.b)("#BroadcastWatch_PoorUploadQuality")
                             )
                           : "request_failed" == r
                           ? l.SetState(
-                              J.Error,
+                              Q.Error,
                               Object(m.b)("#BroadcastWatch_RequestFailed")
                             )
                           : l.SetState(
-                              J.Error,
+                              Q.Error,
                               Object(m.b)("#BroadcastWatch_NotAvailable")
                             );
                       return [2];
@@ -15038,7 +15043,7 @@
               return S.e(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    r.SetState(J.Loading, ""),
+                    r.SetState(Q.Loading, ""),
                       (t = {
                         clipid: r.m_clipID,
                         watchlocation: a,
@@ -15070,15 +15075,15 @@
                     return (
                       n && 200 == n.status
                         ? 1 == (i = n.data).success
-                          ? (r.SetState(J.Ready),
+                          ? (r.SetState(Q.Ready),
                             (r.m_data = i),
                             this.LoadClip(r))
                           : r.SetState(
-                              J.Error,
+                              Q.Error,
                               Object(m.b)("#BroadcastWatch_RequestFailed")
                             )
                         : r.SetState(
-                            J.Error,
+                            Q.Error,
                             Object(m.b)("#BroadcastWatch_RequestFailed")
                           ),
                       [2]
@@ -15129,7 +15134,7 @@
             void 0 === t && (t = !0), e.Stop();
             var n = this.m_mapBroadcasts.get(e.GetBroadcastSteamID());
             n &&
-              n.m_eWatchState != J.Loading &&
+              n.m_eWatchState != Q.Loading &&
               (n.m_bWebRTC && t && (n.m_bWebRTC = !1),
               this.GetBroadcastManifest(n, e.GetWatchLocation()));
           }),
@@ -15188,9 +15193,9 @@
           e
         );
       })();
-    ((Z = X || (X = {}))[(Z.Timeline = 1)] = "Timeline"),
-      (Z[(Z.Minimap = 2)] = "Minimap");
-    var oe = (function() {
+    (($ = Z || (Z = {}))[($.Timeline = 1)] = "Timeline"),
+      ($[($.Minimap = 2)] = "Minimap");
+    var ie = (function() {
         function e(e, t, n, o) {
           (this.m_elVideo = null),
             (this.m_player = null),
@@ -15306,10 +15311,10 @@
             }
           }),
           (e.prototype.GetBroadcastState = function() {
-            return ie.GetBroadcastState(this);
+            return re.GetBroadcastState(this);
           }),
           (e.prototype.GetBroadcastStateDescription = function() {
-            return ie.GetBroadcastStateDescription(this);
+            return re.GetBroadcastStateDescription(this);
           }),
           (e.prototype.InitPlayer = function() {
             Object(C.a)(!this.m_player, "Initialized twice?"),
@@ -15396,7 +15401,7 @@
                 e.m_ulViewerToken
               ),
               Object(F.c)("DASH Stat Object", t)),
-              (this.m_BroadcastInfo = ie.StartInfo(this.m_steamIDBroadcast));
+              (this.m_BroadcastInfo = re.StartInfo(this.m_steamIDBroadcast));
           }),
           (e.prototype.StartClip = function(e) {
             this.InitPlayer(),
@@ -15456,7 +15461,7 @@
           (e.prototype.Stop = function() {
             this.m_listeners.Unregister(),
               this.m_BroadcastInfo &&
-                (ie.StopInfo(this.m_BroadcastInfo),
+                (re.StopInfo(this.m_BroadcastInfo),
                 (this.m_BroadcastInfo = null)),
               (this.m_gameDataParser = null),
               this.m_player && (this.m_player.Close(), (this.m_player = null));
@@ -15469,14 +15474,14 @@
           (e.prototype.Play = function() {
             console.log("Play ", this.m_steamIDBroadcast);
             var e = this.GetBroadcastState();
-            e == J.None || this.IsBroadcastClip()
-              ? ie.StartVideo(this)
-              : e == J.Ready &&
-                (ie.SetActiveVideo(this),
+            e == Q.None || this.IsBroadcastClip()
+              ? re.StartVideo(this)
+              : e == Q.Ready &&
+                (re.SetActiveVideo(this),
                 this.m_player
                   ? this.m_player.Play()
                   : this.StartBroadcast(
-                      ie.GetBroadcast(this.m_steamIDBroadcast)
+                      re.GetBroadcast(this.m_steamIDBroadcast)
                     ));
           }),
           (e.prototype.Pause = function() {
@@ -15500,12 +15505,12 @@
           (e.prototype.SetVolume = function(e) {
             this.m_player && this.m_player.SetVolume(e),
               (this.m_nVolume = this.m_player.GetVolume()),
-              ie.SaveVolumeChange(e, this.m_bMuted);
+              re.SaveVolumeChange(e, this.m_bMuted);
           }),
           (e.prototype.SetMute = function(e) {
             this.m_player && this.m_player.SetMuted(e),
               (this.m_bMuted = e),
-              ie.SaveVolumeChange(this.m_nVolume, e);
+              re.SaveVolumeChange(this.m_nVolume, e);
           }),
           (e.prototype.IsMuted = function() {
             return this.m_bMuted;
@@ -15561,13 +15566,13 @@
             }
           }),
           (e.prototype.OnDownloadFailed = function() {
-            ie.BroadcastDownloadFailed(this);
+            re.BroadcastDownloadFailed(this);
           }),
           (e.prototype.OnWebRTCRetry = function() {
-            ie.BroadcastDownloadFailed(this, !1);
+            re.BroadcastDownloadFailed(this, !1);
           }),
           (e.prototype.OnWebRTCFailed = function() {
-            ie.BroadcastDownloadFailed(this, !0);
+            re.BroadcastDownloadFailed(this, !0);
           }),
           (e.prototype.OnUserInputNeeded = function() {
             this.m_bUserInputNeeded = !0;
@@ -15593,7 +15598,7 @@
             var n = 0,
               o = 0;
             return (
-              t == X.Timeline
+              t == Z.Timeline
                 ? (n = (o = this.m_nVideoEndPos) - this.m_nTimelineDuration)
                 : (o = n = 0),
               s.c(e, n, o, 0, 100)
@@ -15651,8 +15656,8 @@
           e
         );
       })(),
-      ie = new ne();
-    window.uiBroadcastWatchStore = ie;
+      re = new oe();
+    window.uiBroadcastWatchStore = re;
   },
   DMSt: function(e, t, n) {
     e.exports = {
@@ -23947,17 +23952,17 @@
           i.d(t, e),
           (t.prototype.render = function() {
             var e = this.props.video,
-              t = w.c.Loading,
+              t = w.b.Loading,
               n = "";
             if (e) {
               (t = e.GetBroadcastState()),
                 (n = e.GetBroadcastStateDescription());
               var o = e.IsBuffering();
-              t == w.c.Ready && o && ((t = w.c.Loading), (n = ""));
+              t == w.b.Ready && o && ((t = w.b.Loading), (n = ""));
             }
-            if (e && t != w.c.Error && e.GetUserInputNeeded()) return null;
-            if (t == w.c.Ready) return null;
-            var i = t == w.c.Loading;
+            if (e && t != w.b.Error && e.GetUserInputNeeded()) return null;
+            if (t == w.b.Ready) return null;
+            var i = t == w.b.Loading;
             return O.createElement(
               "div",
               {
@@ -24745,7 +24750,7 @@
             return (
               !e ||
               (!!e.GetUserInputNeeded() ||
-                w.a.GetBroadcastState(e) == w.c.Error)
+                w.a.GetBroadcastState(e) == w.b.Error)
             );
           }),
           (e.prototype.render = function() {
@@ -25700,12 +25705,12 @@
               t = void 0 !== this.state.nHoverValue,
               n = r.GetPercentOffsetFromTime(
                 this.state.nGrabberMouseDownTime,
-                w.d.Timeline
+                w.c.Timeline
               ),
-              o = r.GetPercentOffsetFromTime(r.GetPlaybackTime(), w.d.Timeline),
+              o = r.GetPercentOffsetFromTime(r.GetPlaybackTime(), w.c.Timeline),
               a = r.GetPercentOffsetFromTime(
                 r.GetVideoAvailableStartTime(),
-                w.d.Timeline
+                w.c.Timeline
               );
             a < 0.05 && (a = 0);
             var s = M.a(n, 0, 100).toFixed(1) + "%",
@@ -25738,7 +25743,7 @@
               : n < 0 && (b = " grabberOffScreenLeft grabberOffscreen");
             var v = [];
             r.GetTimelineMarkers().forEach(function(e, t) {
-              var n = r.GetPercentOffsetFromTime(e.nTime, w.d.Timeline);
+              var n = r.GetPercentOffsetFromTime(e.nTime, w.c.Timeline);
               n < 0 ||
                 100 < n ||
                 v.push(
@@ -25753,9 +25758,9 @@
             });
             var S = [];
             r.GetTimelineSegments().forEach(function(t, e) {
-              var n = r.GetPercentOffsetFromTime(t.nTimeStart, w.d.Timeline);
+              var n = r.GetPercentOffsetFromTime(t.nTimeStart, w.c.Timeline);
               if (!(100 < n)) {
-                var o = r.GetPercentOffsetFromTime(t.nTimeEnd, w.d.Timeline);
+                var o = r.GetPercentOffsetFromTime(t.nTimeEnd, w.c.Timeline);
                 o < 0 ||
                   S.push(
                     O.createElement(Z, {
@@ -25773,9 +25778,9 @@
             });
             var y = r.GetPercentOffsetFromTime(
                 r.m_editorStartTime,
-                w.d.Timeline
+                w.c.Timeline
               ),
-              C = r.GetPercentOffsetFromTime(r.m_editorEndTime, w.d.Timeline),
+              C = r.GetPercentOffsetFromTime(r.m_editorEndTime, w.c.Timeline),
               I = this.props.bIncludeClipEditor
                 ? [
                     O.createElement(X, {
@@ -25899,15 +25904,7 @@
           (e.prototype.render = function() {
             var t = this,
               e = this.state.info;
-            if (
-              (e &&
-                !e.m_strTitle &&
-                d.b &&
-                (((e = new w.b(this.props.steamID)).m_strTitle = d.b.name),
-                (e.m_strAppTitle = d.b.appName || d.b.name)),
-              !e)
-            )
-              return null;
+            if (!e) return null;
             var n = "";
             e.m_nViewerCount && (n = e.m_nViewerCount.toLocaleString());
             var o =
