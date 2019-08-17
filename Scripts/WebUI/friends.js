@@ -62515,14 +62515,17 @@
                       e.trys.push([1, 3, , 4]),
                       [
                         4,
-                        d.a.get(u.b.CHAT_BASE_URL + "broadcast/getchatinfo", {
-                          params: {
-                            steamid: this.m_ulBroadcastSteamID,
-                            broadcastid: this.m_ulBroadcastID,
-                            sessionid: u.b.SESSIONID
-                          },
-                          withCredentials: !0
-                        })
+                        d.a.get(
+                          u.b.COMMUNITY_BASE_URL + "broadcast/getchatinfo",
+                          {
+                            params: {
+                              steamid: this.m_ulBroadcastSteamID,
+                              broadcastid: this.m_ulBroadcastID,
+                              sessionid: u.b.SESSIONID
+                            },
+                            withCredentials: !0
+                          }
+                        )
                       ]
                     );
                   case 2:
