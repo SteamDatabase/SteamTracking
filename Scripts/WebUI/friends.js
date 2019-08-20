@@ -35262,8 +35262,8 @@
         Date.now() > Number(new Date("2019-08-19")) &&
           (t = {
             "76561198198486997": "#Broadcast_EnglishMain",
-            "76561198208088121": "#Broadcast_ChineseMain",
-            "76561198207552741": "#Broadcast_RussianMain"
+            "76561198208088121": "#Broadcast_RussianMain",
+            "76561198207552741": "#Broadcast_ChineseMain"
           }),
           l.init({
             bValid: !0,
