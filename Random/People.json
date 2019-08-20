@@ -33,10 +33,6 @@
         ]
     },
     {
-        "name": "Alex Vlachos",
-        "bio": "Alex has focused on graphics programming and shader development at Valve since 2006 contributing to Half-Life 2: Episode 2, Team Fortress 2, Portal 1 & 2, Left4Dead 1 & 2, Counter-Strike: Global Offensive, Dota 2, The Lab, and currently virtual reality rendering. Previously he was Lead Visual Effects Programmer at Naughty Dog during development of Uncharted: Drake's Fortune, Lead Programmer on ATI's Demo Team for over 5 years, and he was a software developer for the SpaceOrb 360. Alex is a graduate of Boston University."
-    },
-    {
         "name": "Alexander Mark",
         "bio": "Prior to joining Valve, Alex animated in Film and FX for a decade."
     },
@@ -127,7 +123,7 @@
     },
     {
         "name": "Cassie Murphy",
-        "bio": "Cassie worked on government IT projects and infographics before coming to Valve, but her real claim to fame is illustrating TV and movie casts as cute felines. Cassie is working on Steam sale art, among other art and design work."
+        "bio": "Cassie worked on government IT projects and infographics before coming to Valve, but her real claim to fame is illustrating TV and movie casts as cute felines. Cassie is working on Underlords as a designer."
     },
     {
         "name": "Charlie Brown",
@@ -343,7 +339,7 @@
     },
     {
         "name": "Greg Cherlin",
-        "bio": "Hail and well met, adventurer.  Would you like to purchase the [a piece of paper]?"
+        "bio": "I do level design, game design, and gameplay programming.  At Valve I've worked on Team Fortress 2, Left 4 Dead, Portal 2, and Dota 2.Favorite games: Descent, Everquest, StarCraft 1Currently playing: Apex Legends, Slay the Spire"
     },
     {
         "name": "Greg Coomer",
@@ -391,10 +387,7 @@
     },
     {
         "name": "Jason Brashill",
-        "bio": "Jason worked on British comics 2000ad and Judge Dredd Megazine as well as concept art for many games. His free time was spent mostly \u201cenhancing\u201d (other people\u2019s) property with spray paint. Jason eventually skipped town and now resides near Seattle where he does all manner of arting at Valve and no longer pursues his extra-curricular activities in any way shape or form. Honest.",
-        "links": [
-            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jason Brashill"
-        ]
+        "bio": "Jason worked on British comics 2000ad and Judge Dredd Megazine as well as concept art for many games. His free time was spent mostly \u00e2\u0080\u009cenhancing\u00e2\u0080\u009d (other people\u2019s) property with spray paint. Jason eventually skipped town and now resides near Seattle where he does all manner of arting at Valve and no longer pursues his extra-curricular activities in any way shape or form. Honest."
     },
     {
         "name": "Jason Mitchell",
@@ -500,6 +493,14 @@
         "bio": "John is an animator most of the time. He\u2019s been a gamer since his parents bought their Commodore 64. As a high-schooler he made small Quake mods and became addicted to Team Fortress. After graduating, his brother introduced him to the guys on the Day of Defeat team. They wanted to ship their mod, but they needed animation help. John jumped in. Valve eventually invited John and the rest of the team to continue DoD development at Valve\u2019s offices. At this point, John has worked on nearly every product we've shipped. His TF obsession is over - replaced by an addiction to DotA, and lapping his Ducati at local road courses."
     },
     {
+        "name": "John Schoenick",
+        "bio": "John makes software work maybe more than it did previously, with varying degrees of success.  Since joining Valve in 2014, he has focused on improving virtual hats, the Linux gaming ecosystem, and intersections thereof.  Prior to Valve, John was last seen making attempts at improving the free and open web at Mozilla.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=John Schoenick",
+            "https:\/\/steamcommunity.com\/id\/tehjill\/"
+        ]
+    },
+    {
         "name": "Johnny Deng",
         "bio": "Electrical Engineer with experience in Signal Integrity and Semiconductor product development. I work a lot in the lab.",
         "links": [
@@ -527,6 +528,13 @@
         "bio": "Before joining Valve in 2010 as a Level Designer and Artist, Ken Banks previously worked on titles including Doom 3, Quake 4, and Borderlands.  His career was inspired by his first real gaming experience on the PC, Valve's Half-Life, in 1998.  He became established in Half-Life's flourishing mod community as a contributor to the successful Natural-Selection, which helped launch his career into game development at the age of 18."
     },
     {
+        "name": "Kenny Chamberlin",
+        "bio": "I joined Valve in 2018 to work on Steam.  I am passionate about web services, video games and hardware.  When I am not at work I am programming engine computers for old cars or doing needlessly complex microcontroller projects.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Kenny Chamberlin"
+        ]
+    },
+    {
         "name": "Kristian Miller",
         "bio": "Kristian studied Economics and Finance at Montana State University before arriving at Valve in 2012. He started on Team Fortress 2, where he worked to better understand player interactions with crates, name tags, and Hats of Undeniable Wealth and Respect.  Kristian currently works with the Steam team, where he focuses on platform growth, virtual reality, and development of partners' in-game economies.",
         "links": [
@@ -536,10 +544,6 @@
     {
         "name": "Kyle Sommer",
         "bio": "Kyle likes making and playing games."
-    },
-    {
-        "name": "Laure Lacascade",
-        "bio": "Laure joined Valve in 2010 where she shares her passion for languages and cultures. Her goal is to offer Steam and Valve products all across the world, in the native language of all our users."
     },
     {
         "name": "Lawrence Yang",
@@ -724,6 +728,13 @@
         "bio": "Shreya graduated with a degree in Electrical Engineering from the University of Illinois at Urbana Champaign but got working on strategic business partnerships for Surface while at Microsoft. She used to dream about lightsabers but now she's working on making them a [virtual] reality."
     },
     {
+        "name": "Simonne Brown",
+        "bio": "Simonne loved pushing buttons as a child, so she decided to push buttons as a career. Designer currently working on Dota and Underlords.",
+        "links": [
+            "https:\/\/steamcommunity.com\/id\/simonnnnne\/"
+        ]
+    },
+    {
         "name": "Steve Jaros",
         "bio": "Writer of things. Lover of pro wrestling.",
         "links": [
@@ -770,7 +781,7 @@
     },
     {
         "name": "Tony Cox",
-        "bio": "Tony got his start at Bullfrog Productions, including work on the PC classic Dungeon Keeper. An extended stint at Microsoft followed, in a variety of roles from DirectX engineer to game studio manager. He joined Valve in 2015, and currently works on applying machine learning technology to busting people who cheat at CS:GO. His hobbies include photography and turning dead dinosaurs into airplane noises.",
+        "bio": "Tony got his start at Bullfrog Productions, including work on the PC classic Dungeon Keeper. An extended stint at Microsoft followed, in a variety of roles from DirectX engineer to game studio manager. He joined Valve in 2015, and currently works on applying machine learning technology improving game recommendations on Steam. His hobbies include photography and turning dead dinosaurs into airplane noises.",
         "links": [
             "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Tony Cox"
         ]
