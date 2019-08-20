@@ -2392,6 +2392,7 @@ srand.prototype.nextFloat = function()
 {
 	return this.nextInt() / (this.nModulus - 1);
 };
+// inclusive of nStart, exclusive of nEnd
 srand.prototype.nextIntBetween = function(nStart, nEnd)
 {
 	var nRangeSize = nEnd - nStart;
@@ -2676,6 +2677,7 @@ var g_bDisableAutoloader = false;
 						{
 							data['wishlist'].push({appid: unAppID});
 						}
+						v_shuffle( data['wishlist'] );
 
 						ele.rgRecommendedData = data;
 						ele.nSeed = data.seed;

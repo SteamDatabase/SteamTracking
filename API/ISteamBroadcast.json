@@ -1,0 +1,36 @@
+{
+    "name": "ISteamBroadcast",
+    "methods": [
+        {
+            "name": "ViewerHeartbeat",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Steam ID of the broadcaster"
+                },
+                {
+                    "name": "sessionid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Broadcast Session ID"
+                },
+                {
+                    "name": "token",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Viewer token"
+                },
+                {
+                    "name": "stream",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "video stream representation watching"
+                }
+            ]
+        }
+    ]
+}

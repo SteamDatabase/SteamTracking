@@ -429,7 +429,7 @@
             r
           );
         })(n.Message),
-        f = (n.Message,
+        _ = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -607,7 +607,7 @@
             r
           );
         })(n.Message)),
-        _ = (function(i) {
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -616,22 +616,22 @@
           return (
             s.d(r, i),
             (r.prototype.comments = function() {
-              return n.Message.getRepeatedWrapperField(this, f, 1);
+              return n.Message.getRepeatedWrapperField(this, _, 1);
             }),
             (r.prototype.set_comments = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_comments = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, f, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, _, t);
             }),
             (r.prototype.deleted_comments = function() {
-              return n.Message.getRepeatedWrapperField(this, f, 2);
+              return n.Message.getRepeatedWrapperField(this, _, 2);
             }),
             (r.prototype.set_deleted_comments = function(e) {
               n.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_deleted_comments = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 2, e, f, t);
+              return n.Message.addToRepeatedWrapperField(this, 2, e, _, t);
             }),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 3);
@@ -719,10 +719,10 @@
             }),
             (r.toObject = function(e, t) {
               var i = {
-                comments: n.Message.toObjectList(t.comments(), f.toObject, e),
+                comments: n.Message.toObjectList(t.comments(), _.toObject, e),
                 deleted_comments: n.Message.toObjectList(
                   t.deleted_comments(),
-                  f.toObject,
+                  _.toObject,
                   e
                 ),
                 steamid: n.Message.getField(t, 3),
@@ -750,13 +750,13 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new f();
-                    t.readMessage(i, f.deserializeBinaryFromReader),
+                    var i = new _();
+                    t.readMessage(i, _.deserializeBinaryFromReader),
                       e.add_comments(i);
                     break;
                   case 2:
-                    i = new f();
-                    t.readMessage(i, f.deserializeBinaryFromReader),
+                    i = new _();
+                    t.readMessage(i, _.deserializeBinaryFromReader),
                       e.add_deleted_comments(i);
                     break;
                   case 3:
@@ -811,9 +811,9 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.comments()).length &&
-                t.writeRepeatedMessage(1, i, f.serializeBinaryToWriter),
+                t.writeRepeatedMessage(1, i, _.serializeBinaryToWriter),
                 0 < (i = e.deleted_comments()).length &&
-                  t.writeRepeatedMessage(2, i, f.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(2, i, _.serializeBinaryToWriter),
                 void 0 !== (i = n.Message.getField(e, 3)) &&
                   t.writeFixed64String(3, i),
                 void 0 !== (i = n.Message.getField(e, 4)) &&
@@ -1674,7 +1674,7 @@
           );
         }),
         (o.GetCommentThread = function(e, t) {
-          return e.SendMsg("Community.GetCommentThread#1", t, _, {});
+          return e.SendMsg("Community.GetCommentThread#1", t, f, {});
         }),
         (o.PostCommentToThread = function(e, t) {
           return e.SendMsg("Community.PostCommentToThread#1", t, y, {});
@@ -3367,7 +3367,7 @@
             r
           );
         })(n.Message),
-        f = (n.Message,
+        _ = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -3383,13 +3383,13 @@
               n.Message.setField(this, 1, e);
             }),
             (r.prototype.badges = function() {
-              return n.Message.getRepeatedWrapperField(this, _, 2);
+              return n.Message.getRepeatedWrapperField(this, f, 2);
             }),
             (r.prototype.set_badges = function(e) {
               n.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_badges = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 2, e, _, t);
+              return n.Message.addToRepeatedWrapperField(this, 2, e, f, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -3397,7 +3397,7 @@
             (r.toObject = function(e, t) {
               var i = {
                 player_level: n.Message.getField(t, 1),
-                badges: n.Message.toObjectList(t.badges(), _.toObject, e)
+                badges: n.Message.toObjectList(t.badges(), f.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -3413,8 +3413,8 @@
                     e.set_player_level(t.readUint32());
                     break;
                   case 2:
-                    var i = new _();
-                    t.readMessage(i, _.deserializeBinaryFromReader),
+                    var i = new f();
+                    t.readMessage(i, f.deserializeBinaryFromReader),
                       e.add_badges(i);
                     break;
                   default:
@@ -3431,7 +3431,7 @@
               var i;
               void 0 !== (i = n.Message.getField(e, 1)) && t.writeUint32(1, i),
                 0 < (i = e.badges()).length &&
-                  t.writeRepeatedMessage(2, i, _.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, i, f.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetGameBadgeLevels_Response";
@@ -3439,7 +3439,7 @@
             r
           );
         })(n.Message)),
-        _ = (function(i) {
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -4203,7 +4203,8 @@
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return (
-              n.Message.initialize(t, e, 0, -1, [1, 2, 3, 4, 5, 6], null), t
+              n.Message.initialize(t, e, 0, -1, [1, 2, 3, 4, 5, 6, 7, 8], null),
+              t
             );
           }
           return (
@@ -4262,6 +4263,24 @@
             (r.prototype.add_being_discussed = function(e, t) {
               return n.Message.addToRepeatedWrapperField(this, 6, e, R, t);
             }),
+            (r.prototype.new_to_group = function() {
+              return n.Message.getRepeatedWrapperField(this, R, 7);
+            }),
+            (r.prototype.set_new_to_group = function(e) {
+              n.Message.setRepeatedWrapperField(this, 7, e);
+            }),
+            (r.prototype.add_new_to_group = function(e, t) {
+              return n.Message.addToRepeatedWrapperField(this, 7, e, R, t);
+            }),
+            (r.prototype.returned_to_group = function() {
+              return n.Message.getRepeatedWrapperField(this, R, 8);
+            }),
+            (r.prototype.set_returned_to_group = function(e) {
+              n.Message.setRepeatedWrapperField(this, 8, e);
+            }),
+            (r.prototype.add_returned_to_group = function(e, t) {
+              return n.Message.addToRepeatedWrapperField(this, 8, e, R, t);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -4282,6 +4301,16 @@
                 ),
                 being_discussed: n.Message.toObjectList(
                   t.being_discussed(),
+                  R.toObject,
+                  e
+                ),
+                new_to_group: n.Message.toObjectList(
+                  t.new_to_group(),
+                  R.toObject,
+                  e
+                ),
+                returned_to_group: n.Message.toObjectList(
+                  t.returned_to_group(),
                   R.toObject,
                   e
                 )
@@ -4326,6 +4355,16 @@
                     t.readMessage(i, R.deserializeBinaryFromReader),
                       e.add_being_discussed(i);
                     break;
+                  case 7:
+                    i = new R();
+                    t.readMessage(i, R.deserializeBinaryFromReader),
+                      e.add_new_to_group(i);
+                    break;
+                  case 8:
+                    i = new R();
+                    t.readMessage(i, R.deserializeBinaryFromReader),
+                      e.add_returned_to_group(i);
+                    break;
                   default:
                     t.skipField();
                 }
@@ -4349,7 +4388,11 @@
                 0 < (i = e.dont_forget()).length &&
                   t.writeRepeatedMessage(5, i, R.serializeBinaryToWriter),
                 0 < (i = e.being_discussed()).length &&
-                  t.writeRepeatedMessage(6, i, R.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(6, i, R.serializeBinaryToWriter),
+                0 < (i = e.new_to_group()).length &&
+                  t.writeRepeatedMessage(7, i, R.serializeBinaryToWriter),
+                0 < (i = e.returned_to_group()).length &&
+                  t.writeRepeatedMessage(8, i, R.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetFriendsAppsActivity_Response";
@@ -6540,7 +6583,7 @@
           });
         }),
         (a.GetGameBadgeLevels = function(e, t) {
-          return e.SendMsg("Player.GetGameBadgeLevels#1", t, f, {
+          return e.SendMsg("Player.GetGameBadgeLevels#1", t, _, {
             bConstMethod: !0
           });
         }),
@@ -6646,7 +6689,7 @@
         return u;
       }),
         i.d(t, "a", function() {
-          return f;
+          return _;
         }),
         i.d(t, "d", function() {
           return r;
@@ -7019,7 +7062,7 @@
             r
           );
         })(d.Message),
-        f = (function(i) {
+        _ = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7121,7 +7164,7 @@
             r
           );
         })(d.Message),
-        _ = (function(i) {
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7166,7 +7209,7 @@
           return e.SendMsg(
             "WebRTCClient.AcknowledgeUpdatedRemoteDescription#1",
             t,
-            _,
+            f,
             {}
           );
         }),
@@ -7189,7 +7232,7 @@
           return c;
         }),
         i.d(t, "b", function() {
-          return _;
+          return f;
         }),
         i.d(t, "c", function() {
           return F;
@@ -7504,7 +7547,7 @@
             r
           );
         })(d.Message),
-        f = (function(i) {
+        _ = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -7582,7 +7625,7 @@
             r
           );
         })(d.Message),
-        _ = (function(i) {
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8702,7 +8745,7 @@
         }),
         (a.NotifyOneOnOneChatResponseHandler = {
           name: "VoiceChatClient.NotifyOneOnOneChatResponse#1",
-          request: f
+          request: _
         });
     },
     BpBa: function(e, t, i) {
@@ -9893,7 +9936,7 @@
             r
           );
         })(n.Message)),
-        f = (n.Message,
+        _ = (n.Message,
         n.Message,
         n.Message,
         n.Message,
@@ -9976,7 +10019,7 @@
             r
           );
         })(n.Message)),
-        _ = (n.Message,
+        f = (n.Message,
         n.Message,
         n.Message,
         (function(i) {
@@ -14539,7 +14582,7 @@
             r
           );
         })(n.Message),
-        f = (n.Message,
+        _ = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -14549,20 +14592,20 @@
           return (
             s.d(r, i),
             (r.prototype.links = function() {
-              return n.Message.getRepeatedWrapperField(this, _, 1);
+              return n.Message.getRepeatedWrapperField(this, f, 1);
             }),
             (r.prototype.set_links = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_links = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, _, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, f, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                links: n.Message.toObjectList(t.links(), _.toObject, e)
+                links: n.Message.toObjectList(t.links(), f.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -14575,8 +14618,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new _();
-                    t.readMessage(i, _.deserializeBinaryFromReader),
+                    var i = new f();
+                    t.readMessage(i, f.deserializeBinaryFromReader),
                       e.add_links(i);
                     break;
                   default:
@@ -14592,7 +14635,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.links()).length &&
-                t.writeRepeatedMessage(1, i, _.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, f.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetBroadcastChannelLinks_Response";
@@ -14600,7 +14643,7 @@
             r
           );
         })(n.Message)),
-        _ = (function(i) {
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -18313,7 +18356,7 @@
           );
         }),
         (a.GetBroadcastChannelLinks = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelLinks#1", t, f, {
+          return e.SendMsg("SteamTV.GetBroadcastChannelLinks#1", t, _, {
             bConstMethod: !0
           });
         }),
@@ -18416,7 +18459,7 @@
           return p;
         }),
         i.d(t, "d", function() {
-          return _;
+          return f;
         }),
         i.d(t, "c", function() {
           return M;
@@ -18732,7 +18775,7 @@
             r
           );
         })(o.Message),
-        f = (function(i) {
+        _ = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -18792,7 +18835,7 @@
             r
           );
         })(o.Message),
-        _ = (function(i) {
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -19060,7 +19103,7 @@
           });
         }),
         (s.GetFavorites = function(e, t) {
-          return e.SendMsg("FriendsList.GetFavorites#1", t, f, {
+          return e.SendMsg("FriendsList.GetFavorites#1", t, _, {
             bConstMethod: !0
           });
         }),
@@ -19738,7 +19781,7 @@
             r
           );
         })(n.Message)),
-        f = (n.Message,
+        _ = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -19829,7 +19872,7 @@
             r
           );
         })(n.Message)),
-        _ = (n.Message,
+        f = (n.Message,
         n.Message,
         (function(i) {
           function r(e) {
@@ -22851,7 +22894,7 @@
             (r.prototype.clan_data = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, f, 64, e ? 1 : 0)
+                n.Message.getWrapperField(this, _, 64, e ? 1 : 0)
               );
             }),
             (r.prototype.set_clan_data = function(e) {
@@ -22864,13 +22907,13 @@
               n.Message.setField(this, 65, e);
             }),
             (r.prototype.rich_presence = function() {
-              return n.Message.getRepeatedWrapperField(this, _, 71);
+              return n.Message.getRepeatedWrapperField(this, f, 71);
             }),
             (r.prototype.set_rich_presence = function(e) {
               n.Message.setRepeatedWrapperField(this, 71, e);
             }),
             (r.prototype.add_rich_presence = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 71, e, _, t);
+              return n.Message.addToRepeatedWrapperField(this, 71, e, f, t);
             }),
             (r.prototype.broadcast_id = function() {
               return n.Message.getField(this, 72);
@@ -22934,11 +22977,11 @@
                   game_name: n.Message.getField(t, 55),
                   gameid: n.Message.getField(t, 56),
                   game_data_blob: n.Message.getField(t, 60),
-                  clan_data: (i = t.clan_data(!1)) && f.toObject(e, i),
+                  clan_data: (i = t.clan_data(!1)) && _.toObject(e, i),
                   clan_tag: n.Message.getField(t, 65),
                   rich_presence: n.Message.toObjectList(
                     t.rich_presence(),
-                    _.toObject,
+                    f.toObject,
                     e
                   ),
                   broadcast_id: n.Message.getField(t, 72),
@@ -23019,16 +23062,16 @@
                     e.set_game_data_blob(t.readBytes());
                     break;
                   case 64:
-                    var i = new f();
-                    t.readMessage(i, f.deserializeBinaryFromReader),
+                    var i = new _();
+                    t.readMessage(i, _.deserializeBinaryFromReader),
                       e.set_clan_data(i);
                     break;
                   case 65:
                     e.set_clan_tag(t.readString());
                     break;
                   case 71:
-                    i = new _();
-                    t.readMessage(i, _.deserializeBinaryFromReader),
+                    i = new f();
+                    t.readMessage(i, f.deserializeBinaryFromReader),
                       e.add_rich_presence(i);
                     break;
                   case 72:
@@ -23102,11 +23145,11 @@
                 void 0 !== (i = n.Message.getField(e, 60)) &&
                   t.writeBytes(60, i),
                 null != (i = e.clan_data(!1)) &&
-                  t.writeMessage(64, i, f.serializeBinaryToWriter),
+                  t.writeMessage(64, i, _.serializeBinaryToWriter),
                 void 0 !== (i = n.Message.getField(e, 65)) &&
                   t.writeString(65, i),
                 0 < (i = e.rich_presence()).length &&
-                  t.writeRepeatedMessage(71, i, _.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(71, i, f.serializeBinaryToWriter),
                 void 0 !== (i = n.Message.getField(e, 72)) &&
                   t.writeFixed64String(72, i),
                 void 0 !== (i = n.Message.getField(e, 73)) &&
@@ -23126,7 +23169,7 @@
             r
           );
         })(n.Message),
-        f = (function(i) {
+        _ = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -23192,7 +23235,7 @@
             r
           );
         })(n.Message),
-        _ = (function(i) {
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -24115,7 +24158,7 @@
         return r;
       }),
         i.d(t, "R", function() {
-          return _;
+          return f;
         }),
         i.d(t, "e", function() {
           return M;
@@ -24181,7 +24224,7 @@
           return pe;
         }),
         i.d(t, "j", function() {
-          return _e;
+          return fe;
         }),
         i.d(t, "C", function() {
           return Fe;
@@ -24268,7 +24311,7 @@
           return p;
         }),
         i.d(t, "X", function() {
-          return f;
+          return _;
         });
       var s = i("mrSG"),
         n = i("hRO2");
@@ -24283,8 +24326,8 @@
         g,
         c,
         p,
-        f,
-        _ = (function(i) {
+        _,
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -28403,7 +28446,7 @@
             r
           );
         })(n.Message),
-        fe = (function(i) {
+        _e = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -28462,7 +28505,7 @@
             r
           );
         })(n.Message),
-        _e = (function(i) {
+        fe = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -32176,13 +32219,13 @@
               n.Message.setWrapperField(this, 2, e);
             }),
             (r.prototype.chat_room_preferences = function() {
-              return n.Message.getRepeatedWrapperField(this, ft, 3);
+              return n.Message.getRepeatedWrapperField(this, _t, 3);
             }),
             (r.prototype.set_chat_room_preferences = function(e) {
               n.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (r.prototype.add_chat_room_preferences = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 3, e, ft, t);
+              return n.Message.addToRepeatedWrapperField(this, 3, e, _t, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -32195,7 +32238,7 @@
                     (i = t.chat_group_preferences(!1)) && pt.toObject(e, i),
                   chat_room_preferences: n.Message.toObjectList(
                     t.chat_room_preferences(),
-                    ft.toObject,
+                    _t.toObject,
                     e
                   )
                 };
@@ -32218,8 +32261,8 @@
                       e.set_chat_group_preferences(i);
                     break;
                   case 3:
-                    i = new ft();
-                    t.readMessage(i, ft.deserializeBinaryFromReader),
+                    i = new _t();
+                    t.readMessage(i, _t.deserializeBinaryFromReader),
                       e.add_chat_room_preferences(i);
                     break;
                   default:
@@ -32239,7 +32282,7 @@
                 null != (i = e.chat_group_preferences(!1)) &&
                   t.writeMessage(2, i, pt.serializeBinaryToWriter),
                 0 < (i = e.chat_room_preferences()).length &&
-                  t.writeRepeatedMessage(3, i, ft.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(3, i, _t.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CChatRoom_SetUserChatGroupPreferences_Request";
@@ -32323,7 +32366,7 @@
             r
           );
         })(n.Message),
-        ft = (function(i) {
+        _t = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -32411,7 +32454,7 @@
             r
           );
         })(n.Message),
-        _t = (function(i) {
+        ft = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -34194,7 +34237,7 @@
           return e.SendMsg("ChatRoom.LeaveChatRoomGroup#1", t, Ce, {});
         }),
         (d.CreateChatRoom = function(e, t) {
-          return e.SendMsg("ChatRoom.CreateChatRoom#1", t, fe, {});
+          return e.SendMsg("ChatRoom.CreateChatRoom#1", t, _e, {});
         }),
         (d.DeleteChatRoom = function(e, t) {
           return e.SendMsg("ChatRoom.DeleteChatRoom#1", t, ye, {});
@@ -34259,7 +34302,7 @@
           );
         }),
         (d.SetUserChatGroupPreferences = function(e, t) {
-          return e.SendMsg("ChatRoom.SetUserChatGroupPreferences#1", t, _t, {});
+          return e.SendMsg("ChatRoom.SetUserChatGroupPreferences#1", t, ft, {});
         }),
         (d.DeleteChatMessages = function(e, t) {
           return e.SendMsg("ChatRoom.DeleteChatMessages#1", t, Mt, {});
@@ -34308,7 +34351,7 @@
             t
           );
         }),
-        ((f || (f = {})).NotifyRequestClientUsabilityMetricsHandler = {
+        ((_ || (_ = {})).NotifyRequestClientUsabilityMetricsHandler = {
           name: "ChatUsabilityClient.NotifyRequestClientUsabilityMetrics#1",
           request: Bt
         });
@@ -36040,6 +36083,12 @@
             (r.prototype.set_recovery_email = function(e) {
               d.Message.setField(this, 11, e);
             }),
+            (r.prototype.is_site_license_lock = function() {
+              return d.Message.getField(this, 12);
+            }),
+            (r.prototype.set_is_site_license_lock = function(e) {
+              d.Message.setField(this, 12, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -36063,7 +36112,8 @@
                 passwordhash: d.Message.getField(t, 8),
                 is_enabled: d.Message.getField(t, 9),
                 enabled_features: d.Message.getField(t, 10),
-                recovery_email: d.Message.getField(t, 11)
+                recovery_email: d.Message.getField(t, 11),
+                is_site_license_lock: d.Message.getField(t, 12)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -36112,6 +36162,9 @@
                   case 11:
                     e.set_recovery_email(t.readString());
                     break;
+                  case 12:
+                    e.set_is_site_license_lock(t.readBool());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -36142,7 +36195,9 @@
                 void 0 !== (i = d.Message.getField(e, 10)) &&
                   t.writeUint32(10, i),
                 void 0 !== (i = d.Message.getField(e, 11)) &&
-                  t.writeString(11, i);
+                  t.writeString(11, i),
+                void 0 !== (i = d.Message.getField(e, 12)) &&
+                  t.writeBool(12, i);
             }),
             (r.prototype.getClassName = function() {
               return "ParentalSettings";
@@ -36281,7 +36336,7 @@
             r
           );
         })(d.Message),
-        f = (function(i) {
+        _ = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -36340,7 +36395,7 @@
             r
           );
         })(d.Message),
-        _ = (d.Message,
+        f = (d.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -36995,12 +37050,12 @@
           return e.SendMsg("Parental.DisableParentalSettings#1", t, c, {});
         }),
         (s.GetParentalSettings = function(e, t) {
-          return e.SendMsg("Parental.GetParentalSettings#1", t, f, {
+          return e.SendMsg("Parental.GetParentalSettings#1", t, _, {
             bConstMethod: !0
           });
         }),
         (s.GetSignedParentalSettings = function(e, t) {
-          return e.SendMsg("Parental.GetSignedParentalSettings#1", t, _, {
+          return e.SendMsg("Parental.GetSignedParentalSettings#1", t, f, {
             bConstMethod: !0
           });
         }),
@@ -37038,7 +37093,7 @@
     jELD: function(e, t, i) {
       "use strict";
       i.d(t, "a", function() {
-        return f;
+        return _;
       }),
         i.d(t, "b", function() {
           return r;
@@ -37631,7 +37686,7 @@
             r
           );
         })(n.Message),
-        f = (function(i) {
+        _ = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -37669,7 +37724,7 @@
             r
           );
         })(n.Message),
-        _ = (function(i) {
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -37771,7 +37826,7 @@
         return e.SendMsg("Store.GetLocalizedNameForTags#1", t, o, {});
       }),
         (a.GetStorePreferences = function(e, t) {
-          return e.SendMsg("Store.GetStorePreferences#1", t, _, {});
+          return e.SendMsg("Store.GetStorePreferences#1", t, f, {});
         });
     },
     lgHT: function(e, t, i) {
@@ -38985,7 +39040,7 @@
           );
         })(n.Message));
       n.Message, n.Message, n.Message;
-      var f = (function(i) {
+      var _ = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -39037,7 +39092,7 @@
             r
           );
         })(n.Message),
-        _ = (n.Message,
+        f = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -42188,10 +42243,10 @@
           return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, c, {});
         }),
         (M.InviteToBroadcast = function(e, t) {
-          return e.SendMsg("Broadcast.InviteToBroadcast#1", t, f, {});
+          return e.SendMsg("Broadcast.InviteToBroadcast#1", t, _, {});
         }),
         (M.SendBroadcastStateToServer = function(e, t) {
-          return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, _, {});
+          return e.SendMsg("Broadcast.SendBroadcastStateToServer#1", t, f, {});
         }),
         (M.NotifyBroadcastSessionHeartbeat = function(e, t) {
           return e.SendNotification(
@@ -42340,7 +42395,7 @@
           return c;
         }),
         i.d(t, "d", function() {
-          return _;
+          return f;
         }),
         i.d(t, "a", function() {
           return M;
@@ -42744,13 +42799,13 @@
           return (
             o.d(r, i),
             (r.prototype.message_sessions = function() {
-              return d.Message.getRepeatedWrapperField(this, f, 1);
+              return d.Message.getRepeatedWrapperField(this, _, 1);
             }),
             (r.prototype.set_message_sessions = function(e) {
               d.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_message_sessions = function(e, t) {
-              return d.Message.addToRepeatedWrapperField(this, 1, e, f, t);
+              return d.Message.addToRepeatedWrapperField(this, 1, e, _, t);
             }),
             (r.prototype.timestamp = function() {
               return d.Message.getField(this, 2);
@@ -42765,7 +42820,7 @@
               var i = {
                 message_sessions: d.Message.toObjectList(
                   t.message_sessions(),
-                  f.toObject,
+                  _.toObject,
                   e
                 ),
                 timestamp: d.Message.getField(t, 2)
@@ -42781,8 +42836,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new f();
-                    t.readMessage(i, f.deserializeBinaryFromReader),
+                    var i = new _();
+                    t.readMessage(i, _.deserializeBinaryFromReader),
                       e.add_message_sessions(i);
                     break;
                   case 2:
@@ -42801,7 +42856,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.message_sessions()).length &&
-                t.writeRepeatedMessage(1, i, f.serializeBinaryToWriter),
+                t.writeRepeatedMessage(1, i, _.serializeBinaryToWriter),
                 void 0 !== (i = d.Message.getField(e, 2)) &&
                   t.writeUint32(2, i);
             }),
@@ -42811,7 +42866,7 @@
             r
           );
         })(d.Message),
-        f = (function(i) {
+        _ = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -42901,7 +42956,7 @@
             r
           );
         })(d.Message),
-        _ = (function(i) {
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -43625,7 +43680,7 @@
         return g;
       }),
         i.d(t, "a", function() {
-          return f;
+          return _;
         }),
         i.d(t, "c", function() {
           return r;
@@ -44503,7 +44558,7 @@
             r
           );
         })(a.Message)),
-        f = (function(i) {
+        _ = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -44524,13 +44579,13 @@
               a.Message.setField(this, 2, e);
             }),
             (r.prototype.classes = function() {
-              return a.Message.getRepeatedWrapperField(this, _, 3);
+              return a.Message.getRepeatedWrapperField(this, f, 3);
             }),
             (r.prototype.set_classes = function(e) {
               a.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (r.prototype.add_classes = function(e, t) {
-              return a.Message.addToRepeatedWrapperField(this, 3, e, _, t);
+              return a.Message.addToRepeatedWrapperField(this, 3, e, f, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -44539,7 +44594,7 @@
               var i = {
                 language: a.Message.getField(t, 1),
                 appid: a.Message.getField(t, 2),
-                classes: a.Message.toObjectList(t.classes(), _.toObject, e)
+                classes: a.Message.toObjectList(t.classes(), f.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -44558,8 +44613,8 @@
                     e.set_appid(t.readUint32());
                     break;
                   case 3:
-                    var i = new _();
-                    t.readMessage(i, _.deserializeBinaryFromReader),
+                    var i = new f();
+                    t.readMessage(i, f.deserializeBinaryFromReader),
                       e.add_classes(i);
                     break;
                   default:
@@ -44578,7 +44633,7 @@
                 void 0 !== (i = a.Message.getField(e, 2)) &&
                   t.writeUint32(2, i),
                 0 < (i = e.classes()).length &&
-                  t.writeRepeatedMessage(3, i, _.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(3, i, f.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CEcon_GetAssetClassInfo_Request";
@@ -44586,7 +44641,7 @@
             r
           );
         })(a.Message),
-        _ = (function(i) {
+        f = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;

@@ -3599,7 +3599,7 @@ a.cluster_capsule:hover {
 	left: 0px;
 }
 
-.store_capsule.ds_flagged:not(.ds_wishlist) .capsule > img {
+.store_capsule.ds_flagged:not(.ds_wishlist):not(.broadcast_capsule) .capsule > img {
 	opacity: 0.3;
 }
 

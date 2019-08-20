@@ -216,7 +216,7 @@
             get: function() {
               return this.BIsOGG()
                 ? this.avatar_url
-                : Object(s.a)(this.m_strAvatarHash, "_medium");
+                : Object(s.a)(this.m_strAvatarHash, "medium");
             },
             enumerable: !0,
             configurable: !0
@@ -225,7 +225,7 @@
             get: function() {
               return this.BIsOGG()
                 ? this.avatar_url
-                : Object(s.a)(this.m_strAvatarHash, "_full");
+                : Object(s.a)(this.m_strAvatarHash, "full");
             },
             enumerable: !0,
             configurable: !0
@@ -17689,20 +17689,32 @@
           }),
           (t.prototype.InviteToRemotePlay = function() {
             var e = this.props.friend;
-            I.f.UIStore.ShowFriendChatDialogAndStartVoice(
-              I.f.GetDefaultBrowserContext(),
-              e.accountid
-            ),
-              I.f.RemotePlayStore.CreateInviteAndSession(
-                e.accountid,
-                I.f.FriendStore.self.persona.m_unGamePlayedAppID
-              ),
-              Object(c.a)(
-                this.props.browserContext,
-                I.f.FriendStore.self,
-                this.props.ownerWindow,
-                !0
-              );
+            if (I.f.FriendStore.self != e) {
+              var t = 2 == e.efriendrelationship,
+                n = 4 == e.efriendrelationship,
+                o = e.persona.is_online && !t && !n && !e.is_blocked;
+              !I.f.VoiceStore.IsAnyVoiceActive() && o
+                ? I.f.UIStore.ShowFriendChatDialogAndStartVoice(
+                    I.f.GetDefaultBrowserContext(),
+                    e.accountid
+                  )
+                : I.f.UIStore.ShowFriendChatDialog(
+                    I.f.GetDefaultBrowserContext(),
+                    e.accountid,
+                    !0,
+                    !1
+                  ),
+                I.f.RemotePlayStore.CreateInviteAndSession(
+                  e.accountid,
+                  I.f.FriendStore.self.persona.m_unGamePlayedAppID
+                ),
+                Object(c.a)(
+                  this.props.browserContext,
+                  I.f.FriendStore.self,
+                  this.props.ownerWindow,
+                  !0
+                );
+            }
           }),
           (t.prototype.CancelRemotePlay = function() {
             var e = this.props.friend;
@@ -22206,7 +22218,9 @@
       G = n("s+DT"),
       R = (function() {
         function e() {
-          (this.m_bEnabled = !1), (this.m_sessions = m.x.map());
+          (this.m_bEnabled = !1),
+            (this.m_sessions = m.x.map()),
+            (this.m_bIsShowingPlaceholder = !1);
         }
         return (
           (e.prototype.Init = function(e) {
@@ -22234,6 +22248,12 @@
                     n.PlayerInputSettingsChanged(e, t);
                   }
                 ),
+              Object(b.a)("RemotePlay.RegisterForPlaceholderStateChanged") &&
+                SteamClient.RemotePlay.RegisterForPlaceholderStateChanged(
+                  function(e) {
+                    n.m_bIsShowingPlaceholder = e;
+                  }
+                ),
               Object(b.a)("RemotePlay.BEnabled") &&
                 SteamClient.RemotePlay.BEnabled()
                   .then(function(e) {
@@ -22258,6 +22278,13 @@
           Object.defineProperty(e.prototype, "player_props_count", {
             get: function() {
               return this.m_sessions.size;
+            },
+            enumerable: !0,
+            configurable: !0
+          }),
+          Object.defineProperty(e.prototype, "bIsShowingPlaceholder", {
+            get: function() {
+              return this.m_bIsShowingPlaceholder;
             },
             enumerable: !0,
             configurable: !0
@@ -22331,12 +22358,13 @@
               });
             });
           }),
-          (e.prototype.SessionStarted = function(e) {
-            var t = this.m_sessions.get(e);
-            if (void 0 === t) {
-              var n = new G.a(e).GetAccountID();
-              (t = {
-                friend: V.FriendStore.GetPlayer(n),
+          (e.prototype.SessionStarted = function(t) {
+            var n = this,
+              e = this.m_sessions.get(t);
+            if (void 0 === e) {
+              var o = new G.a(t).GetAccountID();
+              (e = {
+                friend: V.FriendStore.GetPlayer(o),
                 bSession: !0,
                 bJoined: !1,
                 bKeyboardEnabled: !0,
@@ -22346,16 +22374,14 @@
                 nMouseUsedTime: 0,
                 nControllerUsedTime: 0
               }),
-                this.GetPerUserInputSettings(n)
+                this.GetPerUserInputSettings(o)
                   .then(function(e) {
-                    (t.bKeyboardEnabled = e.bKeyboardEnabled),
-                      (t.bMouseEnabled = e.bMouseEnabled),
-                      (t.bControllerEnabled = e.bControllerEnabled);
+                    n.PlayerInputSettingsChanged(t, e);
                   })
                   .catch(),
-                t.friend.LoadIfNecessary(),
-                this.m_sessions.set(e, t);
-            } else t.bSession = !0;
+                e.friend.LoadIfNecessary(),
+                this.m_sessions.set(t, e);
+            } else e.bSession = !0;
           }),
           (e.prototype.SessionStopped = function(e) {
             var t = this.m_sessions.get(e);
@@ -22412,8 +22438,10 @@
               (n.bMouseEnabled = t.bMouseEnabled),
               (n.bControllerEnabled = t.bControllerEnabled));
           }),
+          i.c([m.x], e.prototype, "m_bIsShowingPlaceholder", void 0),
           i.c([m.g], e.prototype, "Init", null),
           i.c([m.i], e.prototype, "player_props_count", null),
+          i.c([m.i], e.prototype, "bIsShowingPlaceholder", null),
           e
         );
       })(),
@@ -22954,10 +22982,15 @@
             return this.Hide(t), n;
           }),
           (p.prototype.HideAllInstances = function() {
-            for (var e = 0, t = this.m_rgInstances.slice(); e < t.length; e++) {
-              var n = t[e];
-              this.HideByElement(n.m_OwningElement);
-            }
+            if (this.m_rgInstances)
+              for (
+                var e = 0, t = this.m_rgInstances.slice();
+                e < t.length;
+                e++
+              ) {
+                var n = t[e];
+                this.HideByElement(n.m_OwningElement);
+              }
           }),
           (p.m_embeddedElements = new r.a("CFriendHoverContainer")),
           o.c([a.a], p.prototype, "Show", null),
@@ -42848,8 +42881,11 @@
             Ee(Object(S.e)(this, e), this.props.appid, e);
           }),
           (t.prototype.render = function() {
-            var e = G.f.AppInfoStore.GetAppInfo(this.props.appid);
-            return e.is_valid
+            var e =
+              0 != this.props.appid
+                ? G.f.AppInfoStore.GetAppInfo(this.props.appid)
+                : null;
+            return e && e.is_valid
               ? k.createElement(
                   "div",
                   {
@@ -43137,29 +43173,30 @@
                   this.props.bInVoiceList && k.createElement(Re, { friend: e }),
                   this.props.listStatusIndicatorLeft,
                   g,
-                  k.createElement(ae.a, {
-                    className: Object(se.a)("labelHolder", v),
-                    persona: e.persona,
-                    eFriendRelationship: e.efriendrelationship,
-                    bIsSelf: G.f.FriendStore.self == e,
-                    strNickname: e.nickname,
-                    bParenthesizeNicknames:
-                      G.f.SettingsStore.CommunityPreferences
-                        .bParenthesizeNicknames,
-                    renderStatus: n,
-                    renderRichPresence: I,
-                    bHideGameName: this.props.bHideGameName,
-                    bHideEnhancedRichPresenceLabel: this.props
-                      .bHideEnhancedRichPresenceLabel,
-                    bHidePersona: this.props.bHidePersona,
-                    bCompactView:
-                      G.f.SettingsStore.FriendsSettings.bCompactFriendsList,
-                    onContextMenu:
-                      this.props.noActions || this.props.disableContextMenu
-                        ? void 0
-                        : this.OnShowContextMenu,
-                    bHasPartyBeacon: void 0 !== f
-                  }),
+                  !this.props.bHideStatusInfo &&
+                    k.createElement(ae.a, {
+                      className: Object(se.a)("labelHolder", v),
+                      persona: e.persona,
+                      eFriendRelationship: e.efriendrelationship,
+                      bIsSelf: G.f.FriendStore.self == e,
+                      strNickname: e.nickname,
+                      bParenthesizeNicknames:
+                        G.f.SettingsStore.CommunityPreferences
+                          .bParenthesizeNicknames,
+                      renderStatus: n,
+                      renderRichPresence: I,
+                      bHideGameName: this.props.bHideGameName,
+                      bHideEnhancedRichPresenceLabel: this.props
+                        .bHideEnhancedRichPresenceLabel,
+                      bHidePersona: this.props.bHidePersona,
+                      bCompactView:
+                        G.f.SettingsStore.FriendsSettings.bCompactFriendsList,
+                      onContextMenu:
+                        this.props.noActions || this.props.disableContextMenu
+                          ? void 0
+                          : this.OnShowContextMenu,
+                      bHasPartyBeacon: void 0 !== f
+                    }),
                   null,
                   this.props.listStatusIndicator
                 ));
@@ -53189,9 +53226,9 @@
     });
     var o = n("mrSG"),
       l = n("LAqV"),
-      i = n("hReu"),
+      r = n("hReu"),
       p = n("VZeO"),
-      r = n("okNM"),
+      i = n("okNM"),
       u = n("Hi0u"),
       m = n("q1tI"),
       a = n("1VtQ"),
@@ -53208,6 +53245,7 @@
       y = n("y4mg"),
       C = n("yIxU");
     function I(e, t, n, o) {
+      var i = o ? 758 : 842;
       Object(u.b)(
         m.createElement(O, { streamHost: t, bIsHost: o }),
         n,
@@ -53215,9 +53253,9 @@
         {
           strTitle: Object(d.b)("#Friend_Menu_RemotePlay"),
           popupWidth: 512,
-          popupHeight: 758
+          popupHeight: i
         },
-        Object(i.g)(n)
+        Object(r.g)(n)
       );
     }
     var O = (function(t) {
@@ -53288,7 +53326,7 @@
           }),
           (e.prototype.OnSettingsClick = function(e) {
             Object(S.a)(
-              Object(i.e)(this, e),
+              Object(r.e)(this, e),
               e.currentTarget.ownerDocument.defaultView,
               "voice"
             );
@@ -53342,7 +53380,9 @@
                         {
                           className: Object(b.a)(
                             C.EndStreamContainer,
-                            t && C.EndStreamContainerHost
+                            t && C.EndStreamContainerHost,
+                            !l.f.RemotePlayStore.bIsShowingPlaceholder &&
+                              C.EndStreamContainerUnpaused
                           )
                         },
                         m.createElement(
@@ -53365,6 +53405,7 @@
                         )
                       ),
                       t &&
+                        l.f.RemotePlayStore.bIsShowingPlaceholder &&
                         m.createElement(
                           "div",
                           { className: C.StreamPausedContainer },
@@ -53396,19 +53437,44 @@
                         !!a &&
                           m.createElement(
                             "div",
-                            {
-                              className: Object(b.a)(
-                                C.TextButton,
-                                C.AlignRight
-                              ),
-                              onClick: this.OnSettingsClick
-                            },
-                            Object(d.b)("#Tooltip_VoiceSettings")
+                            { className: C.VoiceSettingsButtonContainer },
+                            m.createElement(
+                              "div",
+                              {
+                                className: Object(b.a)(
+                                  C.TextButton,
+                                  C.FitContent,
+                                  C.AlignRight
+                                ),
+                                onClick: this.OnSettingsClick
+                              },
+                              Object(d.b)("#Tooltip_VoiceSettings")
+                            )
                           ),
                         !!a &&
                           m.createElement(
                             "div",
                             { className: C.HorizontalContainer },
+                            m.createElement(
+                              "div",
+                              {
+                                className: Object(b.a)(
+                                  C.SmallAvatarContainer,
+                                  C.HorizontalContainer,
+                                  "OneOnOneVoiceMembers"
+                                )
+                              },
+                              m.createElement(v.c, {
+                                friend: l.f.FriendStore.self,
+                                key: l.f.FriendStore.self.accountid,
+                                showVoiceLevel: !0,
+                                avatarQualityFull: !1,
+                                noActions: !0,
+                                notDraggable: !0,
+                                bHideStatusInfo: !0,
+                                context: void 0
+                              })
+                            ),
                             m.createElement(
                               "div",
                               { className: C.MicContainer },
@@ -53452,7 +53518,7 @@
           o.c([a.a], e.prototype, "OnGameVolumeChanged", null),
           o.c([a.a], e.prototype, "OnInputGainChanged", null),
           o.c([a.a], e.prototype, "OnSettingsClick", null),
-          (e = o.c([r.a], e))
+          (e = o.c([i.a], e))
         );
       })(m.Component),
       E = (function(e) {
@@ -53470,19 +53536,19 @@
             var e = l.f.AppInfoStore.GetAppInfo(this.props.currentAppID);
             return m.createElement(
               "div",
-              { className: C.ActiveGameButton },
-              m.createElement(
-                h.d,
-                { onClick: this.OnGameImageClick, title: Object(d.b)(e.name) },
-                m.createElement("img", {
-                  src: e.header_image_url,
-                  className: C.ProductImage
-                })
-              )
+              {
+                className: C.ActiveGameButton,
+                onClick: this.OnGameImageClick,
+                title: Object(d.b)(e.name)
+              },
+              m.createElement("img", {
+                src: e.header_image_url,
+                className: C.ProductImage
+              })
             );
           }),
           o.c([a.a], t.prototype, "OnGameImageClick", null),
-          (t = o.c([r.a], t))
+          (t = o.c([i.a], t))
         );
       })(m.Component),
       M = (function(e) {
@@ -53519,7 +53585,7 @@
               }
             return m.createElement("div", null, e);
           }),
-          (t = o.c([r.a], t))
+          (t = o.c([i.a], t))
         );
       })(m.Component),
       w = (function(e) {
@@ -53578,7 +53644,7 @@
                 this.props.isHost &&
                   m.createElement(
                     "div",
-                    { className: Object(b.a)(C.KickPlayerContainer) },
+                    { className: C.KickPlayerContainer },
                     m.createElement(
                       "div",
                       {
@@ -53600,6 +53666,8 @@
                       )
                     )
                   ),
+                !this.props.isHost &&
+                  m.createElement("div", { className: C.NegativeSpacer }),
                 m.createElement(D, {
                   player: n,
                   joined: e.bJoined,
@@ -53688,7 +53756,7 @@
           o.c([a.a], t.prototype, "OnMicVolumeChanged", null),
           o.c([a.a], t.prototype, "OnMutingToggleClick", null),
           o.c([a.a], t.prototype, "OnMutingClick", null),
-          (t = o.c([r.a], t))
+          (t = o.c([i.a], t))
         );
       })(m.Component),
       D = (function(t) {
@@ -53705,9 +53773,8 @@
               {
                 className: Object(b.a)(
                   C.HorizontalContainer,
-                  "labelHolder friend",
                   "OneOnOneVoiceMembers",
-                  C.avatarContainer
+                  C.AvatarContainer
                 )
               },
               m.createElement(v.c, {
@@ -53715,14 +53782,11 @@
                 key: this.props.player.accountid,
                 showVoiceLevel: !0,
                 avatarQualityFull: !0,
-                context: void 0,
-                listStatusIndicator: m.createElement("div", {
-                  className: "connectionSpinner"
-                })
+                context: void 0
               })
             );
           }),
-          (e = o.c([r.a], e))
+          (e = o.c([i.a], e))
         );
       })(m.Component),
       T = (function(t) {
@@ -58508,11 +58572,23 @@
                 R.createElement("div", { className: "oembedTitle" }, t)
               );
             else {
-              var c = this.GetArgument("iframe_attrs");
+              var c = JSON.parse(this.GetArgument("iframe_attrs")),
+                l = c.src,
+                p = c.width,
+                u = c.height;
               a = R.createElement(
                 N.b,
-                { className: "OpenGraphImgContainer", href: e },
-                R.createElement(Re, { strIFrameJSON: c, strProviderName: o }),
+                {
+                  className: "OpenGraphImgContainer",
+                  href: e,
+                  style: { display: "flex", flexDirection: "column" }
+                },
+                R.createElement(Re, {
+                  width: p,
+                  height: u,
+                  src: l,
+                  strProviderName: o
+                }),
                 o &&
                   o.length &&
                   R.createElement("div", { className: "oembedProvider" }, o),
@@ -58545,22 +58621,24 @@
       })(U.b);
     function Re(e) {
       var t = e.strProviderName,
-        n = JSON.parse(e.strIFrameJSON),
-        o = { width: n.width, height: n.height },
-        i = n.src;
-      return i && i.startsWith("http")
-        ? ("SoundCloud" == t && (i = i.replace("visual=true", "visual=false")),
-          "Vimeo" == t && (o.allowFullScreen = !0),
-          R.createElement(
-            "iframe",
-            l.a({}, o, {
-              src: i,
-              scrolling: "no",
-              frameBorder: 0,
-              sandbox: "allow-scripts allow-same-origin"
-            })
-          ))
-        : null;
+        n = e.src,
+        o = e.width,
+        i = e.height;
+      if (!n || !n.startsWith("http")) return null;
+      "SoundCloud" == t && (n = n.replace("visual=true", "visual=false"));
+      var r = "number" == typeof o ? o : parseInt(o),
+        a = "number" == typeof i ? i : parseInt(i);
+      !isNaN(r) && !isNaN(a) && 640 < r && ((a *= 640 / r), (r = 640));
+      var s = { flex: isNaN(a) ? void 0 : "1 1 " + a + "px", maxWidth: 640 };
+      return R.createElement("iframe", {
+        height: isNaN(a) ? void 0 : a + "px",
+        style: s,
+        src: n,
+        scrolling: "no",
+        frameBorder: 0,
+        sandbox: "allow-scripts allow-same-origin",
+        allowFullScreen: "Vimeo" === t || void 0
+      });
     }
     var ke = (function(e) {
         function t() {
@@ -66639,7 +66717,7 @@
       "0000000000000000000000000000000000000000" === e && (e = m),
         44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
       var o = i.b.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
-      return (o += e.substr(0, 2) + "/" + e), t && (o += t), (o += n);
+      return (o += e.substr(0, 2) + "/" + e), t && (o += "_" + t), (o += n);
     }
     function h(e) {
       var t = "offline";
@@ -66975,14 +67053,14 @@
         }),
         Object.defineProperty(e.prototype, "avatar_url_medium", {
           get: function() {
-            return d(this.m_strAvatarHash, "_medium");
+            return d(this.m_strAvatarHash, "medium");
           },
           enumerable: !0,
           configurable: !0
         }),
         Object.defineProperty(e.prototype, "avatar_url_full", {
           get: function() {
-            return d(this.m_strAvatarHash, "_full");
+            return d(this.m_strAvatarHash, "full");
           },
           enumerable: !0,
           configurable: !0
@@ -71289,11 +71367,13 @@ and limitations under the License.
       Separator: "remoteplay_Separator_HudB6",
       FriendPickerSeparator: "remoteplay_FriendPickerSeparator_1tFSY",
       Spacer: "remoteplay_Spacer_2CNje",
+      NegativeSpacer: "remoteplay_NegativeSpacer_k4oQ6",
       Dialog_RemotePlay: "remoteplay_Dialog_RemotePlay_KxSGW",
       NoRightMargin: "remoteplay_NoRightMargin_2lF51",
       BottomMargin: "remoteplay_BottomMargin_10Hm5",
-      avatarContainer: "remoteplay_avatarContainer_12tZm",
       HorizontalContainer: "remoteplay_HorizontalContainer_2Hgly",
+      SmallAvatarContainer: "remoteplay_SmallAvatarContainer_XZwtu",
+      AvatarContainer: "remoteplay_AvatarContainer_1GpXq",
       playerVoiceContainer: "remoteplay_playerVoiceContainer_RACvk",
       StreamPauseOptionContainer: "remoteplay_StreamPauseOptionContainer_3rtYF",
       SharedInputContainer: "remoteplay_SharedInputContainer_3mLvF",
@@ -71304,6 +71384,7 @@ and limitations under the License.
       GroupingBox: "remoteplay_GroupingBox_3RQlG",
       EndStreamContainer: "remoteplay_EndStreamContainer_2wVqS",
       EndStreamContainerHost: "remoteplay_EndStreamContainerHost_2Bp5D",
+      EndStreamContainerUnpaused: "remoteplay_EndStreamContainerUnpaused_2OyOp",
       StreamPausedContainer: "remoteplay_StreamPausedContainer_1qgCi",
       InviteSentContainer: "remoteplay_InviteSentContainer_1ZcDv",
       inviteGlow: "remoteplay_inviteGlow_3Rj5v",
@@ -71315,6 +71396,8 @@ and limitations under the License.
       FitButton: "remoteplay_FitButton_3Hql6",
       FitContent: "remoteplay_FitContent_1CSne",
       TextButton: "remoteplay_TextButton_1ppit",
+      VoiceSettingsButtonContainer:
+        "remoteplay_VoiceSettingsButtonContainer_2UFte",
       KickPlayerContainer: "remoteplay_KickPlayerContainer_3VGUM",
       VolumeSlider: "remoteplay_VolumeSlider_2TzD0",
       AutoSizeButton: "remoteplay_AutoSizeButton_2wzm1",
@@ -71467,15 +71550,15 @@ and limitations under the License.
       s = n("okNM"),
       c = n("i8i4"),
       y = n("1w3K"),
-      p = n("JtU4"),
-      C = n("vJVb"),
+      C = n("JtU4"),
+      I = n("vJVb"),
       o = n("0wLp"),
-      I = n("EGkk"),
+      O = n("EGkk"),
       l = n("/7KC"),
-      O = n("GxRc"),
-      E = n("29iz"),
-      M = n("ZsEe"),
-      w = n.n(M),
+      E = n("GxRc"),
+      M = n("29iz"),
+      p = n("ZsEe"),
+      w = n.n(p),
       D = n("XaMz"),
       T = n("kQil"),
       G = n("hEDq");
@@ -71581,11 +71664,11 @@ and limitations under the License.
                   g.createElement(
                     "div",
                     { className: "WaitingForInterFaceReadyThrobber" },
-                    g.createElement(O.a, {
+                    g.createElement(E.a, {
                       className: "Throbber_Blur",
                       size: "xlarge"
                     }),
-                    g.createElement(O.a, { size: "xlarge" })
+                    g.createElement(E.a, { size: "xlarge" })
                   )
                 )
               )
@@ -71618,17 +71701,18 @@ and limitations under the License.
           }),
           e
         );
-      })(p.b),
-      N = (function(l) {
+      })(C.b),
+      N = (function(p) {
         function e(e, t, n, o) {
           var i = this,
-            r = p.c.Resizable;
-          o && (r |= p.c.Minimized);
+            r = C.c.Resizable;
+          o && (r |= C.c.Minimized);
           var a = 300,
-            s = 650;
+            s = 650,
+            c = "PopupFriendsListDimensions";
           n.m_eBrowserType == G.f.EBrowserType_OpenVROverlay_Dashboard &&
-            ((a = 1920), (s = 1080), (r &= ~p.c.Resizable));
-          var c = {
+            ((a = 1440), (s = 810), (r &= ~C.c.Resizable), (c = null));
+          var l = {
             dimensions: { width: a, height: s },
             minWidth: 226,
             minHeight: 400,
@@ -71639,14 +71723,7 @@ and limitations under the License.
             eCreationFlags: r
           };
           return (
-            ((i =
-              l.call(
-                this,
-                "friendslist",
-                "PopupFriendsListDimensions",
-                c,
-                !1
-              ) || this).m_friends = e),
+            ((i = p.call(this, "friendslist", c, l, !1) || this).m_friends = e),
             (i.m_chats = t),
             m.h.m_strLoaderWindowRestoreDetails &&
               (i.SaveWindowPosition(m.h.m_strLoaderWindowRestoreDetails),
@@ -71655,7 +71732,7 @@ and limitations under the License.
           );
         }
         return (
-          r.d(e, l),
+          r.d(e, p),
           (e.prototype.Render = function(e, t) {
             t.setAttribute("class", "fullheight popup_chat_frame");
             var n = new m.b(e),
@@ -71674,14 +71751,14 @@ and limitations under the License.
               );
           }),
           (e.prototype.OnResizeComplete = function(e) {
-            l.prototype.OnResizeComplete.call(this, e),
+            p.prototype.OnResizeComplete.call(this, e),
               window.parent.postMessage(
                 { message: "FriendsListRestoreDetailsChanged", data: e },
                 "https://steamloopback.host"
               );
           }),
           (e.prototype.OnClose = function() {
-            l.prototype.OnClose.call(this),
+            p.prototype.OnClose.call(this),
               window.parent.postMessage(
                 {
                   message: "FriendsListRestoreDetailsChanged",
@@ -71699,7 +71776,9 @@ and limitations under the License.
           var t = o.call(this, e) || this;
           (t.m_bUsePopups = !1),
             (t.m_nWindowTitleUnreadCycleCount = 0),
-            (t.m_refChatDialog = g.createRef());
+            (t.m_refChatDialog = g.createRef()),
+            (t.m_refRoot = g.createRef()),
+            (t.m_lastFocusElement = null);
           t.m_browserContext =
             t.props.popup && t.props.popup.browser_info
               ? t.props.popup.browser_info
@@ -71808,6 +71887,41 @@ and limitations under the License.
             var e = this.props.popup ? this.props.popup.window : window;
             e && e.removeEventListener("resize", this.OnWindowResizeEvent),
               this.UnbindWindowHandlers();
+          }),
+          (e.prototype.componentDidMount = function() {
+            (this.m_browserContext.m_eBrowserType !=
+              G.f.EBrowserType_OpenVROverlay &&
+              this.m_browserContext.m_eBrowserType !=
+                G.f.EBrowserType_OpenVROverlay_Dashboard) ||
+              (this.m_refRoot.current.addEventListener(
+                "focusin",
+                this.OnFocusIn
+              ),
+              this.m_refRoot.current.addEventListener(
+                "focusout",
+                this.OnFocusOut
+              ));
+          }),
+          (e.prototype.OnFocusIn = function(e) {
+            var t = !1;
+            switch (e.target.tagName) {
+              case "TEXTAREA":
+                t = !0;
+                break;
+              case "INPUT":
+                t = "text" == e.target.type;
+            }
+            t &&
+              e.target != this.m_lastFocusElement &&
+              (e.currentTarget.ownerDocument.defaultView.SteamClient.OpenVR.ShowKeyboard(),
+              console.log("Showing VR Keyboard"),
+              (this.m_lastFocusElement = e.target));
+          }),
+          (e.prototype.OnFocusOut = function(e) {
+            e.target == this.m_lastFocusElement &&
+              (e.currentTarget.ownerDocument.defaultView.SteamClient.OpenVR.HideKeyboard(),
+              (this.m_lastFocusElement = null),
+              console.log("Hiding VR Keyboard"));
           }),
           (e.prototype.BindFriendsListContainer = function(e) {
             this.m_elFriendsListContainer = e && e.div;
@@ -71925,9 +72039,9 @@ and limitations under the License.
                 : (location.reload(), g.createElement("div", null))
               : g.createElement(
                   "div",
-                  { className: s, onContextMenu: I.i },
+                  { className: s, onContextMenu: O.i, ref: this.m_refRoot },
                   g.createElement(
-                    C.a,
+                    I.a,
                     null,
                     g.createElement(U, {
                       popup: this.props.popup ? this.props.popup.window : void 0
@@ -71943,14 +72057,14 @@ and limitations under the License.
                     !1,
                     d.f.ready_to_render &&
                       g.createElement(
-                        C.a,
+                        I.a,
                         null,
                         g.createElement(T.a, {
                           ModalManager: Object(T.b)(l || window)
                         }),
                         e &&
                           g.createElement(
-                            E.a,
+                            M.a,
                             {
                               className:
                                 "friendsListContainer fullheight " +
@@ -71993,6 +72107,8 @@ and limitations under the License.
           r.c([a.x], e.prototype, "m_nWindowTitleUnreadCycleCount", void 0),
           r.c([i.a], e.prototype, "OnCopy", null),
           r.c([i.a], e.prototype, "OnWindowResizeEvent", null),
+          r.c([i.a], e.prototype, "OnFocusIn", null),
+          r.c([i.a], e.prototype, "OnFocusOut", null),
           r.c([i.a], e.prototype, "BindFriendsListContainer", null),
           r.c([i.a], e.prototype, "OnGrabberMouseDown", null),
           r.c([i.a], e.prototype, "OnGrabberTouchStart", null),
@@ -72060,10 +72176,10 @@ and limitations under the License.
               strRestoreDetails: i,
               dimensions: { width: 740, height: 650 },
               target_browser: 0 < e.m_unPID ? e : void 0,
-              eCreationFlags: p.c.Resizable
+              eCreationFlags: C.c.Resizable
             };
           return (
-            a && (c.eCreationFlags |= p.c.Minimized),
+            a && (c.eCreationFlags |= C.c.Minimized),
             r &&
               (Object.assign(c.dimensions, r), (c.bIgnoreSavedDimensions = !0)),
             ((s =
@@ -72154,7 +72270,7 @@ and limitations under the License.
               d.f.CMInterface.BDisconnected() && (n += " errorDisconnected"),
               g.createElement(
                 "div",
-                { className: n, onContextMenu: I.i },
+                { className: n, onContextMenu: O.i },
                 g.createElement(U, { popup: this.props.popup.window }),
                 !1,
                 g.createElement(T.a, { ModalManager: Object(T.b)(e) }),
@@ -72393,7 +72509,7 @@ and limitations under the License.
                                   "connectionThrobber" +
                                   (c ? " showThrobber" : "")
                               },
-                              g.createElement(O.a, { size: "small" }),
+                              g.createElement(E.a, { size: "small" }),
                               " "
                             ),
                             g.createElement(

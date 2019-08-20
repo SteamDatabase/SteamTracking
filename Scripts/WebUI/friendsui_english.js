@@ -947,6 +947,7 @@ LocalizationReady("friendsui", "english", {
   RemotePlay_LeaveStream: "Leave Stream",
   RemotePlay_ToggleDesktopAllowed: "Pause Stream When Viewing Desktop",
   RemotePlay_Invited: "Invite Sent",
+  RemotePlay_FriendJoinedSession: "Joined Remote Play Session",
   Tooltip_RemotePlayEnableKeyboard: "Enable Keyboard",
   Tooltip_RemotePlayDisableKeyboard: "Disable Keyboard",
   Tooltip_RemotePlayEnableMouse: "Enable Mouse",
