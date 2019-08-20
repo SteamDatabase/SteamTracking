@@ -5327,14 +5327,14 @@
       u = n.n(o),
       r = n("okNM"),
       c = n("2vnA"),
-      l = n("NB6M"),
-      p = n("hx5d"),
-      m = n("Hi0u"),
-      d = n("oh5H"),
-      h = n("LAqV"),
-      f = n("hReu"),
-      _ = n("Z578"),
-      g = n("1VtQ"),
+      p = n("NB6M"),
+      m = n("hx5d"),
+      d = n("Hi0u"),
+      h = n("oh5H"),
+      f = n("LAqV"),
+      _ = n("hReu"),
+      g = n("Z578"),
+      l = n("1VtQ"),
       b = n("YZlK"),
       v = n("bbBM"),
       S = (n("cTkQ"),
@@ -5361,7 +5361,7 @@
                 u.a.createElement(
                   "div",
                   { className: "chatRoomDetails" },
-                  Object(d.b)("#Broadcast_WatchParty_Viewers_NoneActive")
+                  Object(h.b)("#Broadcast_WatchParty_Viewers_NoneActive")
                 )
             )
           )
@@ -5390,23 +5390,23 @@
               (s = o || window),
               (c = i),
               (l = p),
-              Object(m.b)(
-                u.a.createElement(_.a, {
+              Object(d.b)(
+                u.a.createElement(g.a, {
                   browserContext: a,
                   bHideChatNameEntry: !1,
                   vecInvitePlayers: l,
                   chatViewToReplace: void 0,
                   creationOptions: { unBroadcastAccountId: c },
-                  strTitle: Object(d.b)("#Broadcast_CreateWatchParty")
+                  strTitle: Object(h.b)("#Broadcast_CreateWatchParty")
                 }),
                 s,
                 "CreateChatDialog",
                 {
-                  strTitle: Object(d.b)("#Broadcast_CreateWatchParty"),
+                  strTitle: Object(h.b)("#Broadcast_CreateWatchParty"),
                   popupWidth: 450,
                   popupHeight: 600
                 },
-                Object(f.g)(s)
+                Object(_.g)(s)
               );
           }),
           (t.prototype.WatchAlone = function() {
@@ -5422,8 +5422,8 @@
               i
                 ? e.SetChatRoomGroupWatchingBroadcast(void 0, i)
                 : e.SetChatRoomGroupWatchingBroadcast(n);
-            var a = h.f.UIStore.ShowAndOrActivateChatRoomGroup(o, e, !0);
-            r && h.f.UIStore.CloseTabByID(r),
+            var a = f.f.UIStore.ShowAndOrActivateChatRoomGroup(o, e, !0);
+            r && f.f.UIStore.CloseTabByID(r),
               this.props.bIsNewSteamTVDialog || a.ShowBroadcast();
           }),
           (t.prototype.Close = function() {
@@ -5435,7 +5435,7 @@
               e = this.props,
               n = e.closeModal,
               o = e.initialFriend,
-              i = h.f.ChatStore.currentChatRoomGroups.filter(function(e) {
+              i = f.f.ChatStore.currentChatRoomGroups.filter(function(e) {
                 return e.BCanIAssociateBroadcast();
               }),
               r = o;
@@ -5443,7 +5443,7 @@
               "div",
               { className: "chatModalCover" },
               u.a.createElement(
-                m.a,
+                d.a,
                 { onEscKeypress: n },
                 u.a.createElement(
                   a.g,
@@ -5454,7 +5454,7 @@
                     u.a.createElement(
                       "div",
                       { className: "watchPartyPrompt" },
-                      Object(d.b)("#Broadcast_WatchPrompt")
+                      Object(h.b)("#Broadcast_WatchPrompt")
                     ),
                     u.a.createElement(
                       a.n,
@@ -5467,7 +5467,7 @@
                             className: "watchHowButton",
                             onClick: this.WatchAlone
                           },
-                          Object(d.b)("#Broadcast_WatchAlone")
+                          Object(h.b)("#Broadcast_WatchAlone")
                         ),
                       r &&
                         u.a.createElement(
@@ -5483,7 +5483,7 @@
                             context: null,
                             bLarge: !1
                           }),
-                          Object(d.d)(
+                          Object(h.d)(
                             "#Broadcast_WatchWith",
                             u.a.createElement(
                               "span",
@@ -5500,7 +5500,7 @@
                           u.a.createElement(
                             a.p,
                             null,
-                            Object(d.b)(
+                            Object(h.b)(
                               "#Broadcast_WatchWithExistingWatchParty"
                             )
                           ),
@@ -5523,7 +5523,7 @@
                             return t.CreateWatchParty(!1);
                           }
                         },
-                        Object(d.b)("#Broadcast_LinkBroadcastToGroup_New")
+                        Object(h.b)("#Broadcast_LinkBroadcastToGroup_New")
                       )
                     )
                   ),
@@ -5532,8 +5532,8 @@
               )
             );
           }),
-          i.c([g.a], t.prototype, "WatchAlone", null),
-          i.c([g.a], t.prototype, "Close", null),
+          i.c([l.a], t.prototype, "WatchAlone", null),
+          i.c([l.a], t.prototype, "Close", null),
           t
         );
       })(u.a.Component);
@@ -5580,7 +5580,7 @@
             this.setState({ bChatCollapsed: !this.state.bChatCollapsed });
           }),
           (e.prototype.ToggleTheaterMode = function() {
-            h.f.UIStore.SetTheaterMode(!h.f.UIStore.GetTheaterMode());
+            f.f.UIStore.SetTheaterMode(!f.f.UIStore.GetTheaterMode());
           }),
           (e.prototype.render = function() {
             var e = this.props,
@@ -5597,7 +5597,7 @@
                     broadcastAccountId: t.GetSteamID().GetAccountID(),
                     broadcastTabId: t.GetUniqueID(),
                     initialFriend: t.m_watchPromptInitialFriend,
-                    browserContext: h.a,
+                    browserContext: f.a,
                     ownerWindow: n
                   })
                 : null;
@@ -5643,9 +5643,9 @@
               )
             );
           }),
-          i.c([g.a], e.prototype, "OnWatchWithFriends", null),
-          i.c([g.a], e.prototype, "ToggleChat", null),
-          i.c([g.a], e.prototype, "ToggleTheaterMode", null),
+          i.c([l.a], e.prototype, "OnWatchWithFriends", null),
+          i.c([l.a], e.prototype, "ToggleChat", null),
+          i.c([l.a], e.prototype, "ToggleTheaterMode", null),
           (e = i.c([r.a], e))
         );
       })(u.a.Component),
@@ -5738,9 +5738,9 @@
               u.a.createElement(A, { app: e })
             );
           }),
-          i.c([g.a], e.prototype, "OnShowLogin", null),
-          i.c([g.a], e.prototype, "ToggleChat", null),
-          i.c([g.a], e.prototype, "ToggleTheaterMode", null),
+          i.c([l.a], e.prototype, "OnShowLogin", null),
+          i.c([l.a], e.prototype, "ToggleChat", null),
+          i.c([l.a], e.prototype, "ToggleTheaterMode", null),
           (e = i.c([r.a], e))
         );
       })(u.a.Component);
@@ -5749,7 +5749,7 @@
         "div",
         { className: "BroadcastButton WatchWithFriends", onClick: e.onClick },
         u.a.createElement(s.ib, null),
-        Object(d.b)("#Broadcast_WatchWithFriends")
+        Object(h.b)("#Broadcast_WatchWithFriends")
       );
     }
     function N(e) {
@@ -5757,7 +5757,7 @@
         "div",
         {
           className: "ToggleBroadcastChat",
-          title: Object(d.b)("#Broadcast_ToggleChat"),
+          title: Object(h.b)("#Broadcast_ToggleChat"),
           onClick: e.onClick
         },
         u.a.createElement(s.x, { showChat: e.hideIcon })
@@ -5788,6 +5788,13 @@
         }
         return (
           i.d(e, n),
+          (e.prototype.componentDidMount = function() {
+            w.b.stream["76561198208088121"] && "chinese" === M.b.LANGUAGE
+              ? this.OnLocalStreamChange("76561198208088121")
+              : w.b.stream["76561198207552741"] &&
+                "russian" === M.b.LANGUAGE &&
+                this.OnLocalStreamChange("76561198207552741");
+          }),
           (e.getDerivedStateFromProps = function(e, t) {
             return t.info && t.info.m_steamIDBroadcast === e.steamID
               ? null
@@ -5806,9 +5813,9 @@
           (e.prototype.CalculateBroadcastSectionStyles = function(e) {
             if (this.props.bHideChat) return { width: "100%", height: "100%" };
             var t, n;
-            f.h &&
-              ((t = f.h.UIDisplayPrefs.nWatchPartyBroadcastHeightPercentage),
-              (n = f.h.UIDisplayPrefs.nWatchPartyBroadcastWidthPercentage));
+            _.h &&
+              ((t = _.h.UIDisplayPrefs.nWatchPartyBroadcastHeightPercentage),
+              (n = _.h.UIDisplayPrefs.nWatchPartyBroadcastWidthPercentage));
             var o = {};
             if (e) {
               var i = t || 66;
@@ -5821,7 +5828,8 @@
                 o.height = l + "%";
               }
             } else
-              (o.minWidth = n ? n + "%" : "66%"),
+              (o.width = n ? n + "%" : "66%"),
+                (o.minWidth = n ? n + "%" : "66%"),
                 (o.maxWidth = "calc( 100% - 316px )"),
                 (o.overflowY = "auto");
             return o;
@@ -5840,7 +5848,7 @@
               i = e.clientX,
               r = n.width,
               a = Object(D.a)(((i - o) / r) * 100, 1, 100);
-            f.h.SetUIDisplayPref("nWatchPartyBroadcastWidthPercentage", a);
+            _.h.SetUIDisplayPref("nWatchPartyBroadcastWidthPercentage", a);
           }),
           (e.prototype.UnregisterDragEvents = function(e) {
             e.view.removeEventListener("mousemove", this.HandleMouseMove),
@@ -5881,10 +5889,13 @@
                     className: G.a.ChatLoginButton,
                     href: "javascript:void(0);"
                   },
-                  Object(d.b)("#BroadcastChat_Login")
+                  Object(h.b)("#BroadcastChat_Login")
                 ),
                 u.a.createElement(U, { app: s })
-              );
+              ),
+              l = C.a.GetBroadcast(o)
+                ? C.a.GetBroadcast(o).m_ulBroadcastID
+                : "0";
             return u.a.createElement(
               "div",
               { className: "BroadcastContainer" },
@@ -5899,7 +5910,7 @@
                   "div",
                   { className: "BroadcastContainerSectionVideoContainer" },
                   i &&
-                    u.a.createElement(l.b, {
+                    u.a.createElement(p.b, {
                       key: o,
                       steamIDBroadcast: o,
                       watchLocation: this.props.watchLocation,
@@ -5912,7 +5923,7 @@
                 u.a.createElement(
                   "div",
                   { className: "BroadcastDetailsSection" },
-                  u.a.createElement(l.a, {
+                  u.a.createElement(p.a, {
                     steamID: o,
                     onLocalStreamChange: this.OnLocalStreamChange,
                     bVerticalBroadcastChat: !0
@@ -5935,8 +5946,9 @@
                     minWidth: "300px"
                   }
                 },
-                u.a.createElement(p.a, {
-                  emoticonStore: h.f ? h.f.ChatStore.EmoticonStore : null,
+                u.a.createElement(m.a, {
+                  emoticonStore: f.f ? f.f.ChatStore.EmoticonStore : null,
+                  broadcastID: l,
                   steamID: o,
                   watchLocation: this.props.watchLocation,
                   hidden: this.props.bHideChat
@@ -5946,11 +5958,11 @@
             );
           }),
           i.c([c.x], e.prototype, "m_strLocalSteamID", void 0),
-          i.c([g.a], e.prototype, "OnLocalStreamChange", null),
-          i.c([g.a], e.prototype, "SetMainContentRef", null),
-          i.c([g.a], e.prototype, "OnGrabberMouseDown", null),
-          i.c([g.a], e.prototype, "HandleMouseMove", null),
-          i.c([g.a], e.prototype, "UnregisterDragEvents", null),
+          i.c([l.a], e.prototype, "OnLocalStreamChange", null),
+          i.c([l.a], e.prototype, "SetMainContentRef", null),
+          i.c([l.a], e.prototype, "OnGrabberMouseDown", null),
+          i.c([l.a], e.prototype, "HandleMouseMove", null),
+          i.c([l.a], e.prototype, "UnregisterDragEvents", null),
           (e = i.c([r.a], e))
         );
       })(u.a.Component);
@@ -5991,7 +6003,7 @@
               )
             );
           }),
-          i.c([g.a], t.prototype, "Dismiss", null),
+          i.c([l.a], t.prototype, "Dismiss", null),
           t
         );
       })(u.a.Component),
@@ -25992,14 +26004,6 @@
         }
         return (
           i.d(t, e),
-          (t.prototype.componentDidMount = function() {
-            Object.keys(this.props.options).indexOf("76561198208088121") &&
-            "chinese" === l.b.LANGUAGE
-              ? this.props.onChange("76561198208088121")
-              : Object.keys(this.props.options).indexOf("76561198207552741") &&
-                "russian" === l.b.LANGUAGE &&
-                this.props.onChange("76561198207552741");
-          }),
           (t.prototype.showContextMenu = function(e) {
             var t = this.props,
               n = t.options,
@@ -35258,9 +35262,7 @@
         Date.now() > Number(new Date("2019-08-19")) &&
           (t = {
             "76561198198486997": "#Broadcast_EnglishMain",
-            "76561198239691668": "#Broadcast_EnglishNewbie",
             "76561198208088121": "#Broadcast_ChineseMain",
-            "76561198208089225": "#Broadcast_ChineseNewbie",
             "76561198207552741": "#Broadcast_RussianMain"
           }),
           l.init({
@@ -47466,6 +47468,7 @@
               var D = R.createElement(Ke.a, {
                 emoticonStore: N.f.ChatStore.EmoticonStore,
                 steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
+                broadcastID: "0",
                 watchLocation: h,
                 hidden: !t.m_bShowGlobalChat,
                 className: this.state.bDraggingChatGrabber
@@ -63389,6 +63392,8 @@
               this.props.broadcastChannelID
                 ? this.m_chat.StartForChannel(this.props.broadcastChannelID)
                 : this.props.steamID &&
+                  this.props.steamID &&
+                  this.props.broadcastID &&
                   (this.m_chat.StartForSteamID(
                     this.props.steamID,
                     this.props.broadcastID
