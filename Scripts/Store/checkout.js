@@ -3239,6 +3239,12 @@ function UpdatePaymentInfoForm()
 			bDisabledPaymentMethod = true;
 			$('payment_method_specific_note').innerHTML = 'This payment method cannot be used for purchasing wallet credit.';
 		}
+		
+		if ( $('billing_country').value == 'AR' )
+		{
+			$('error_display').innerHTML = 'Due to recent changes to government laws in your region, we are unable to offer local payment methods for checkout at the current time.';
+			$('error_display').style.display = 'block';			
+		}
 	
 
 		$J('#submit_payment_info_btn').show();
