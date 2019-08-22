@@ -15,6 +15,141 @@
 			"title"		"Mouse trackpad"
 			"description"		"This template works great for the games on Steam that were designed for trackpad interaction"
 		}
+		"korean"
+		{
+			"title"		"마우스 트랙패드"
+			"description"		"이 템플릿은 Steam에 있는 게임 중 트랙패드 조작을 위해 설계된 게임에서 유용합니다."
+		}
+		"chinese traditional"
+		{
+			"title"		"滑鼠觸控板"
+			"description"		"此模板適用於 Steam 上設計來利用觸控板互動的遊戲"
+		}
+		"chinese simplified"
+		{
+			"title"		"鼠标触控板"
+			"description"		"此模板适用于 Steam 上触控板互动类游戏。"
+		}
+		"czeh"
+		{
+			"title"		"Trackpad"
+			"description"		"Tato šablona je pro hry ve službě Steam, které byly vytvořeny pro ovládání trackpadem."
+		}
+		"bulgarian"
+		{
+			"title"		"Мишка тракпад"
+			"description"		"Този шаблон върши добра работа при игри в Steam, които са били проектирани за взаимодействие с тракпад."
+		}
+		"greek"
+		{
+			"title"		"Επι. αφής ποντικού"
+			"description"		"Αυτό το πρότυπο λειτουργεί υπέροχα για τα παιχνίδια στο Steam που σχεδιάστηκαν για αλληλεπίδραση επιφάνειας αφής"
+		}
+		"german"
+		{
+			"title"		"Maus-Trackpad"
+			"description"		"Diese Vorlage eignet sich besonders gut für Spiele auf Steam, die für Interaktionen per Trackpad entworfen wurden"
+		}
+		"hungarian"
+		{
+			"title"		"Egér-trackpad"
+			"description"		"Ez a sablon remekül működik azokkal a Steames játékokkal, amelyek trackpades vezérléshez készültek."
+		}
+		"french"
+		{
+			"title"		"Pavé tactile (souris)"
+			"description"		"Ce modèle fonctionne très bien pour les jeux sur Steam qui ont été conçus pour les pavés tactiles."
+		}
+		"polish"
+		{
+			"title"		"Panel dotykowy jako mysz"
+			"description"		"Ten szablon świetnie działa dla gier na Steam, które zostały zaprojektowane z myślą o panelu dotykowym."
+		}
+		"turkish"
+		{
+			"title"		"Fare yön kumandası"
+			"description"		"Bu şablon, yön kumandası etkileşimi için tasarlanan Steam oyunlarında çok işe yarar."
+		}
+		"swedish"
+		{
+			"title"		"Trackpad för mus"
+			"description"		"Denna mall fungerar utmärkt för spel på Steam som har designats för trackpad-interaktion"
+		}
+		"thai"
+		{
+			"title"		"แทร็คแพดเมาส์"
+			"description"		"แม่แบบนี้ทำงานได้ดีสำหรับเกมบน Steam ที่ถูกออกแบบมาสำหรับการโต้ตอบแบบแทร็คแพด"
+		}
+		"spanish"
+		{
+			"title"		"Panel táctil (trackpad)"
+			"description"		"Esta plantilla funciona muy bien con los juegos de Steam que han sido diseñados para la interacción con un panel táctil (trackpad)"
+		}
+		"spanish, mexico"
+		{
+			"title"		"Trackpad del mouse"
+			"description"		"Esta plantilla funciona muy bien con los juegos de Steam que fueron diseñados para la interacción con el trackpad"
+		}
+		"romanian"
+		{
+			"title"		"Trackpad de mouse"
+			"description"		"Șablonul acesta funcționează minunat cu jocurile de pe Steam care au fost create pentru interacțiuni în care trebuie folosești un trackpad"
+		}
+		"russian"
+		{
+			"title"		"Управление мышью-трекпадом"
+			"description"		"Этот шаблон подходит для игр в Steam, которые разрабатывались для управления трекпадом"
+		}
+		"finnish"
+		{
+			"title"		"Hiiren kosketuslevy"
+			"description"		"Malli sopii erityisesti kosketuslevyllä käytettäviksi suunniteltuihin Steam-peleihin"
+		}
+		"ukranian"
+		{
+			"title"		"Сенсорна панель"
+			"description"		"Цей шаблон чудово працює з іграми у Steam, які розроблені для взаємодії із сенсорною панеллю"
+		}
+		"norwegian"
+		{
+			"title"		"Mus – styreplate"
+			"description"		"Denne malen fungerer bra for spillene på Steam, som ble utformet for interaksjoner med styreplate."
+		}
+		"japanese"
+		{
+			"title"		"マウストラックパッド"
+			"description"		"このテンプレートはトラックパッドを想定してデザインされたSteamのゲームに最適です"
+		}
+		"vietnamese"
+		{
+			"title"		"Bàn cảm ứng chuột"
+			"description"		"Bản đồ phím mẫu này rất phù hợp với các trò chơi trên Steam được thiết kế dành cho tương tác cảm ứng"
+		}
+		"portuguese, brazilian"
+		{
+			"title"		"Trackpad"
+			"description"		"Este modelo é ótimo para jogos no Steam que se baseiam em interações com o trackpad"
+		}
+		"danish"
+		{
+			"title"		"Musetrackpad"
+			"description"		"Denne skabelon er god til spil på Steam, som er designet til trackpad-interaktioner"
+		}
+		"italian"
+		{
+			"title"		"Trackpad del mouse"
+			"description"		"Questo template è ideale per i giochi su Steam che sono stati progettati per l'interazione tramite trackpad"
+		}
+		"dutch"
+		{
+			"title"		"Muis – trackpad"
+			"description"		"Dit sjabloon werkt goed bij spellen op Steam die ontworpen zijn voor interacties met een trackpad"
+		}
+		"portuguese"
+		{
+			"title"		"Rato - Trackpad"
+			"description"		"Este modelo é indicado para jogos no Steam concebidos para interações com o trackpad."
+		}		
 	}
 	"preset"
 	{
