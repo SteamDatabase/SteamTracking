@@ -360,7 +360,12 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 
 			// start the watching heartbeat
 			_watch.m_nHeartbeatInterval = data.heartbeat_interval;
-			_watch.ScheduleBroadcastHeartbeat();
+
+			// Add a random delay before we start heartbeating. This prevents the thundering herd problem when a broadcast starts up again after a failure
+			setTimeout( () =>
+			{
+				_watch.ScheduleBroadcastHeartbeat();
+			}, Math.random() * 30000 );
 
 			if ( _watch.m_chat && _watch.m_bChatEnabled )
 			{

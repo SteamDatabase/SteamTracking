@@ -234,6 +234,7 @@ LocalizationReady("shared", "english", {
   EventEmail_Button_ClickForMoreDetails: "Click for more details",
   EventEmail_Button_PrepurchaseNow: "Prepurchase now!",
   EventEmail_Button_BuyNow: "Buy now!",
+  EventEmail_Button_WishlistNow: "Wishlist now!",
   EventEmail_Destination_Store: "Steam Store Page",
   EventEmail_Destination_Event: "Event Detail Page",
 

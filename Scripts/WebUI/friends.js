@@ -14961,12 +14961,14 @@
                           (l.m_bWebRTC = i.is_webrtc),
                           (l.m_data = i),
                           this.LoadBroadcast(l),
-                          l.m_schHeartbeatTimeout.Schedule(
-                            1e3 * l.m_data.heartbeat_interval,
-                            function() {
-                              return c.HeartbeatBroadcast(l);
-                            }
-                          );
+                          setTimeout(function() {
+                            l.m_schHeartbeatTimeout.Schedule(
+                              1e3 * l.m_data.heartbeat_interval,
+                              function() {
+                                return c.HeartbeatBroadcast(l);
+                              }
+                            );
+                          }, 3e4 * Math.random());
                       else if ("waiting" == r) {
                         if (
                           (l.SetState(
