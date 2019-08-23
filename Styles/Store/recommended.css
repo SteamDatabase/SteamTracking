@@ -2874,18 +2874,30 @@ div.graph_toggle_icon.down {
 
 }
 
-.user_reviews_date_range_explanation {
+.user_reviews_date_range_explanation,
+.user_reviews_offtopic_activity_explanation,
+.user_reviews_playtime_filter_explanation {
 	white-space: normal;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid #4582a5;
 }
 
-.user_reviews_offtopic_activity_explanation {
-	white-space: normal;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	border-bottom: 1px solid #4582a5;
+.user_reviews_playtime_filter_explanation {
+	min-width: 300px;
+}
+
+#app_reviews_playtime_slider .ui-slider-range,
+#app_reviews_playtime_slider .ui-slider-handle {
+	/*transition: all 0.1s; */
+}
+
+#app_reviews_playtime_range_text_min, #app_reviews_playtime_range_text_max {
+	font-weight: bold;
+}
+
+#app_reviews_playtime_slider .ui-widget-header {
+	background: #4582a5;
 }
 
 #app_reviews_hash.graph_hidden #reviews_date_range_menu {

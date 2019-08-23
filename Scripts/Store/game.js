@@ -504,6 +504,8 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 	var dateRangeType = $J('input[name="review_date_range"]:checked').val();
 	var summaryNumPositiveReviews = $J( "#review_summary_num_positive_reviews" ).val();
 	var summaryNumReviews = $J( "#review_summary_num_reviews" ).val();
+	var playtimeFilterMin = $J( "#app_reviews_playtime_range_min" ).val();
+	var playtimeFilterMax = $J( "#app_reviews_playtime_range_max" ).val();
 
 	var filteredReviewScore = $J( "#user_reviews_filter_score" );
 	filteredReviewScore.removeClass( "visible" );
@@ -519,6 +521,8 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 		'l' : 'english',
 		'review_type' : reviewType,
 		'purchase_type' : purchaseType,
+		'playtime_filter_min' : playtimeFilterMin,
+		'playtime_filter_max' : playtimeFilterMax,
 		'filter_offtopic_activity' : filterOfftopicActivity,
 		'summary_num_positive_reviews' : summaryNumPositiveReviews,
 		'summary_num_reviews' : summaryNumReviews
@@ -1420,6 +1424,11 @@ function ChangeReviewPurchaseTypeFilter()
 	ShowFilteredReviews();
 }
 
+function ChangeReviewPlaytimeFilter()
+{
+	ShowFilteredReviews();
+}
+
 function ChangedOfftopicReviewActivityFilter()
 {
 	ShowFilteredReviews();
@@ -1440,6 +1449,38 @@ function CollapseLongReviews()
 			{
 				$J(i).addClass('partial')
 			}
+		}
+	});
+}
+
+function InitPlaytimeFilterSlider()
+{
+	var maxHours = 100;
+	var maxSeconds = maxHours * 60 * 60;
+	$J( "#app_reviews_playtime_slider" ).slider({
+		range: true,
+		min: 0,
+		max: maxSeconds,
+		values: [0, maxSeconds],
+		step: 3600,
+		slide: function (event, ui) {
+			var minSecs = ui.values[0];
+			var maxSecs = ui.values[1];
+
+			var hourMin = parseInt( minSecs / ( 60 * 60 ), 10 );
+			var hourMax = parseInt( maxSecs / ( 60 * 60 ), 10 );
+
+			$J( "#app_reviews_playtime_range_min" ).val( hourMin );
+			$J( "#app_reviews_playtime_range_max" ).val( hourMax == maxHours ? 0 : hourMax );
+
+			var strHourMin = hourMin > 0 ? 'Minimum of %1$s hour(s)'.replace( /%1\$s/g, hourMin ) : 'No Minimum';
+			$J( "#app_reviews_playtime_range_text_min" ).text( strHourMin );
+
+			var strHourMax = hourMax > 0 && hourMax != maxHours ? 'Maximum of %1$s hour(s)'.replace( /%1\$s/g, hourMax ) : 'No Maximum';
+			$J( "#app_reviews_playtime_range_text_max" ).text( strHourMax );
+		},
+		change: function( event, ui ) {
+			ChangeReviewPlaytimeFilter();
 		}
 	});
 }
