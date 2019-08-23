@@ -654,7 +654,7 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 .personanameandstatus_richPresenceContainer_21cNf {
   display: flex;
   flex-direction: column;
-  width: calc(100% - 40px); }
+  width: calc(100% - 30px); }
 
 .personanameandstatus_richPresenceLabel_3Q6g1 {
   display: flex;
@@ -908,7 +908,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 
 .singlewindow .currentUserContainer .personanameandstatus_twoLine_2wZNn .personanameandstatus_statusAndName_9U-hi,
 .singlewindow .currentUserContainer .personanameandstatus_twoLine_2wZNn {
-  margin-right: 10px; }
+  margin-right: 10px;
+  width: 100%; }
 
 .needsUpdate .currentUserContainer .personanameandstatus_twoLine_2wZNn .personanameandstatus_statusAndName_9U-hi {
   margin-right: 48px; }

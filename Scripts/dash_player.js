@@ -2630,6 +2630,11 @@ CSegmentLoader.prototype.DownloadNextSegment = function()
 	}
 	else
 	{
+		if ( this.m_nNextSegment < 0 )
+		{
+			console.error( 'Attempting to download negative segment:', this.m_nNextSegment );
+			return;
+		}
 		url = CMPDParser.GetSegmentURL( this.m_adaptation, this.m_representation, this.m_nNextSegment );
 		nSegmentDuration = CMPDParser.GetSegmentDuration( this.m_adaptation );
 		this.m_nNextSegment++;

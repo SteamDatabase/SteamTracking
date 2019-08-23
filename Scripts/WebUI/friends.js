@@ -937,17 +937,16 @@
                 t = this.persona.m_broadcastAppId
                   ? T.f.AppInfoStore.GetAppInfo(this.persona.m_broadcastAppId)
                   : null;
-              if (e.is_ready)
-                return t && t.is_valid
-                  ? Object(M.b)(
-                      "#PersonaStateWatchingBroadcast_PlayerGame",
-                      e.display_name,
-                      t.name
-                    )
-                  : Object(M.b)(
-                      "#PersonaStateWatchingBroadcast_Player",
-                      e.display_name
-                    );
+              return t && t.is_valid
+                ? Object(M.b)(
+                    "#PersonaStateWatchingBroadcast_PlayerGame",
+                    e.display_name,
+                    t.name
+                  )
+                : Object(M.b)(
+                    "#PersonaStateWatchingBroadcast_Player",
+                    e.display_name
+                  );
             }
             return null;
           }),
@@ -12031,21 +12030,28 @@
               a,
               s = "",
               c = 0;
-            this.m_bNeedInitSegment
-              ? ((this.m_bNeedInitSegment = !1),
+            if (this.m_bNeedInitSegment)
+              (this.m_bNeedInitSegment = !1),
                 (i = this.m_mpd.GetBaseURL()),
                 (r = this.m_adaptation),
                 (a = this.m_representation),
                 (s = z(i + r.segmentTemplate.strInitialization, a.strID, 0)),
-                (c = 0))
-              : ((e = this.m_mpd.GetBaseURL()),
+                (c = 0);
+            else {
+              if (this.m_nNextSegment < 0)
+                return void console.error(
+                  "Attempting to download negative segment:",
+                  this.m_nNextSegment
+                );
+              (e = this.m_mpd.GetBaseURL()),
                 (t = this.m_adaptation),
                 (n = this.m_representation),
                 (o = this.m_nNextSegment),
                 (s = z(e + t.segmentTemplate.strMedia, n.strID, o)),
                 (c = _(this.m_adaptation)),
-                this.m_nNextSegment++),
-              this.DownloadSegment(this.m_representation.strID, s, c);
+                this.m_nNextSegment++;
+            }
+            this.DownloadSegment(this.m_representation.strID, s, c);
           }),
           (e.prototype.DownloadSegment = function(_, g, b, v) {
             return (
@@ -66693,35 +66699,34 @@
   lqmi: function(e, t, n) {
     "use strict";
     n.d(t, "c", function() {
-      return m;
+      return u;
     }),
       n.d(t, "a", function() {
-        return d;
+        return m;
       }),
       n.d(t, "d", function() {
-        return h;
+        return d;
       }),
       n.d(t, "b", function() {
-        return f;
+        return h;
       });
     var o = n("mrSG"),
       i = n("1n9R"),
       l = n("s+DT"),
       r = n("2vnA"),
       p = n("Kqva"),
-      u = n("XCHq"),
       a = n("OTLo"),
       s = n("Gp1o"),
       c = n("oh5H"),
-      m = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-    function d(e, t) {
+      u = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+    function m(e, t) {
       var n = ".jpg";
-      "0000000000000000000000000000000000000000" === e && (e = m),
+      "0000000000000000000000000000000000000000" === e && (e = u),
         44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
       var o = i.b.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
       return (o += e.substr(0, 2) + "/" + e), t && (o += "_" + t), (o += n);
     }
-    function h(e) {
+    function d(e) {
       var t = "offline";
       return (
         e.is_golden && e.is_online
@@ -66735,7 +66740,7 @@
         t
       );
     }
-    var f = (function() {
+    var h = (function() {
       function e(e) {
         (this.m_bInitialized = !1),
           (this.m_ePersonaState = 0),
@@ -66743,7 +66748,7 @@
           (this.m_gameid = "0"),
           (this.m_unPersonaStateFlags = 0),
           (this.m_strPlayerName = ""),
-          (this.m_strAvatarHash = m),
+          (this.m_strAvatarHash = u),
           (this.m_rtLastSeenOnline = 0),
           (this.m_strGameExtraInfo = ""),
           (this.m_unGameServerIP = 0),
@@ -66795,7 +66800,7 @@
               o = !0;
             if (n) {
               for (var i = 0; i < n.length && o; i++) o = !n[i];
-              this.m_strAvatarHash = o ? m : Object(p.a)(n);
+              this.m_strAvatarHash = o ? u : Object(p.a)(n);
             }
           }
           if (
@@ -66816,15 +66821,15 @@
             var c = l.a
               .InitFromAccountID(t.watching_broadcast_accountid())
               .ConvertTo64BitString();
-            u.b.stream[c]
+            this.m_strBroadcastTitle = c
               ? ((this.m_broadcastAccountId = t.watching_broadcast_accountid()),
                 (this.m_broadcastAppId = t.watching_broadcast_appid()),
                 (this.m_broadcastViewerCount = t.watching_broadcast_viewers()),
-                (this.m_strBroadcastTitle = t.watching_broadcast_title()))
+                t.watching_broadcast_title())
               : ((this.m_broadcastAccountId = 0),
                 (this.m_broadcastAppId = 0),
                 (this.m_broadcastViewerCount = 0),
-                (this.m_strBroadcastTitle = ""));
+                "");
           }
           this.m_bNameInitialized &&
             this.m_bStatusInitialized &&
@@ -67044,25 +67049,25 @@
           configurable: !0
         }),
         (e.prototype.BHasAvatarSet = function() {
-          return this.m_strAvatarHash != m;
+          return this.m_strAvatarHash != u;
         }),
         Object.defineProperty(e.prototype, "avatar_url", {
           get: function() {
-            return d(this.m_strAvatarHash);
+            return m(this.m_strAvatarHash);
           },
           enumerable: !0,
           configurable: !0
         }),
         Object.defineProperty(e.prototype, "avatar_url_medium", {
           get: function() {
-            return d(this.m_strAvatarHash, "medium");
+            return m(this.m_strAvatarHash, "medium");
           },
           enumerable: !0,
           configurable: !0
         }),
         Object.defineProperty(e.prototype, "avatar_url_full", {
           get: function() {
-            return d(this.m_strAvatarHash, "full");
+            return m(this.m_strAvatarHash, "full");
           },
           enumerable: !0,
           configurable: !0
