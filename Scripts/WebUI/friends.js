@@ -5862,7 +5862,7 @@
               i = this.state.info.m_bIsOnline,
               r = null,
               a = this.CalculateBroadcastSectionStyles(!1);
-            if (w.b.bValid)
+            if (((a.flexGrow = this.props.bHideChat ? 1 : null), w.b.bValid))
               switch (w.b.appID) {
                 case 730:
                   r = u.a.createElement(F, null);
@@ -5939,7 +5939,7 @@
                 {
                   className: "BroadcastChatDiv",
                   style: {
-                    display: "flex",
+                    display: this.props.bHideChat ? "none" : "flex",
                     flexDirection: "column",
                     width: "100%",
                     minWidth: "300px"
