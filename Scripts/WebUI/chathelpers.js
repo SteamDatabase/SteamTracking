@@ -154,13 +154,13 @@
         return E;
       }),
       n.d(t, "f", function() {
-        return S;
-      }),
-      n.d(t, "e", function() {
         return b;
       }),
+      n.d(t, "e", function() {
+        return y;
+      }),
       n.d(t, "c", function() {
-        return g;
+        return S;
       });
     var i,
       a,
@@ -176,9 +176,9 @@
       f = 358510,
       v = 366490,
       E = "18446744073709551615",
-      S = 0,
-      b = 2147483647;
-    function g(e, t) {
+      b = 0,
+      y = 2147483647;
+    function S(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -597,13 +597,13 @@
       return u;
     }),
       n.d(t, "a", function() {
-        return m;
-      }),
-      n.d(t, "b", function() {
         return h;
       }),
+      n.d(t, "b", function() {
+        return d;
+      }),
       n.d(t, "d", function() {
-        return _;
+        return f;
       });
     var u,
       r,
@@ -612,13 +612,14 @@
       a = n("i8i4"),
       s = n("UqDm"),
       c = n("WpBz"),
-      p = n("1VtQ");
+      p = n("1VtQ"),
+      l = n("hEDq");
     ((r = u || (u = {}))[(r.Minimized = 1)] = "Minimized"),
       (r[(r.Hidden = 2)] = "Hidden"),
       (r[(r.Tooltip = 4)] = "Tooltip"),
       (r[(r.ContextMenu = 8)] = "ContextMenu"),
       (r[(r.Resizable = 16)] = "Resizable");
-    var l = (function() {
+    var m = (function() {
         function e(e, t) {
           (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
           for (
@@ -647,7 +648,7 @@
           e
         );
       })(),
-      m = (function() {
+      h = (function() {
         function e(e, t) {
           (this.m_bFocused = !1),
             (this.m_strName = e),
@@ -690,7 +691,7 @@
             var o,
               i,
               a,
-              s = _.GetExistingPopup(this.m_strName);
+              s = f.GetExistingPopup(this.m_strName);
             (s && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
               s
@@ -698,7 +699,7 @@
                   (o = s.m_popup),
                   s.ReleasePopup(),
                   (a = s.m_renderWhenReady),
-                  _.RemoveTrackedPopup(s),
+                  f.RemoveTrackedPopup(s),
                   o.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
                   o.removeEventListener("unload", s.OnUnload),
                   o.removeEventListener("resize", s.OnResizeEvent),
@@ -707,10 +708,10 @@
                   o.removeEventListener("drop", s.OnDrop),
                   o.removeEventListener("dragover", s.OnDragOver),
                   o.removeEventListener("message", this.OnMessage))
-                : ((o = (n = d.CreatePopup(this.m_strName, this.m_rgParams))
+                : ((o = (n = _.CreatePopup(this.m_strName, this.m_rgParams))
                     .popup),
                   (i = n.element),
-                  (a = new l(o, i))),
+                  (a = new m(o, i))),
               o &&
                 i &&
                 ((o.document.title = this.m_strTitle),
@@ -728,7 +729,7 @@
                 this.m_renderWhenReady.SetTarget(function() {
                   return r.RenderInternal(r.m_popup, r.m_element, e);
                 })),
-              _.AddTrackedPopup(this),
+              f.AddTrackedPopup(this),
               s && e && this.Focus());
           }),
           (e.prototype.RemoveEventListeners = function() {
@@ -745,7 +746,13 @@
               this.window.removeEventListener("message", this.OnMessage);
           }),
           (e.prototype.RenderInternal = function(e, t, n) {
-            this.Render(e, t),
+            var r;
+            this.browser_info &&
+              ((r = this.browser_info).m_eBrowserType ==
+                l.f.EBrowserType_OpenVROverlay ||
+                r.m_eBrowserType == l.f.EBrowserType_OpenVROverlay_Dashboard) &&
+              (t.ownerDocument.body.className += " VR"),
+              this.Render(e, t),
               this.OnLoad(),
               e.SteamClient &&
                 (n
@@ -760,7 +767,7 @@
           }),
           (e.prototype.OnUnload = function() {
             this.RemoveEventListeners(),
-              _.RemoveTrackedPopup(this),
+              f.RemoveTrackedPopup(this),
               this.OnClose(),
               a.unmountComponentAtNode(this.m_element);
           }),
@@ -885,7 +892,7 @@
           e
         );
       })(),
-      h = (function(i) {
+      d = (function(i) {
         function e(e, t, n, r) {
           var o = i.call(this, e, n) || this;
           return o.SetSavedDimensionsKey(t), (o.m_bExpires = r), o;
@@ -908,13 +915,13 @@
               e.strRestoreDetails
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  _.SetRestoreDetails(
+                  f.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = _.GetRestoreDetails(
+                  (e.strRestoreDetails = f.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -943,7 +950,7 @@
                     n.m_strSavedDimensionsKey &&
                     e &&
                     !t &&
-                    (_.SetRestoreDetails(r, e, n.m_bExpires),
+                    (f.SetRestoreDetails(r, e, n.m_bExpires),
                     (n.m_rgParams.strRestoreDetails = e),
                     (n.m_strInitialSavedDimensionsKey = r),
                     n.OnResizeComplete(e));
@@ -957,14 +964,14 @@
           }),
           (e.prototype.OnClose = function() {}),
           (e.prototype.SaveWindowPosition = function(e) {
-            _.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            f.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }),
           o.c([p.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
-      })(m),
-      d = (function() {
+      })(h),
+      _ = (function() {
         function e() {
           var a = this;
           (this.m_bShuttingDown = !1),
@@ -1096,8 +1103,8 @@
                   E < f.attributes.length;
                   E++
                 ) {
-                  var S = f.attributes.item(E);
-                  v.setAttribute(S.name, S.value);
+                  var b = f.attributes.item(E);
+                  v.setAttribute(b.name, b.value);
                 }
                 h.appendChild(v);
               }
@@ -1191,7 +1198,7 @@
           e
         );
       })(),
-      _ = new d();
+      f = new _();
   },
   UqDm: function(e, t, n) {
     "use strict";
@@ -1564,6 +1571,161 @@
       })(),
       s = new i();
     window.ClientConnectionAPI = s;
+  },
+  hEDq: function(e, t, n) {
+    "use strict";
+    n.d(t, "j", function() {
+      return a;
+    }),
+      n.d(t, "b", function() {
+        return s;
+      }),
+      n.d(t, "d", function() {
+        return u;
+      }),
+      n.d(t, "f", function() {
+        return c;
+      }),
+      n.d(t, "a", function() {
+        return l;
+      }),
+      n.d(t, "g", function() {
+        return m;
+      }),
+      n.d(t, "i", function() {
+        return d;
+      }),
+      n.d(t, "c", function() {
+        return E;
+      }),
+      n.d(t, "e", function() {
+        return f;
+      }),
+      n.d(t, "h", function() {
+        return b;
+      });
+    var r = n("mrSG"),
+      o = n("0N1H");
+    n.d(t, "k", function() {
+      return o.c;
+    });
+    var i = n("2vnA"),
+      a = (function() {
+        function e() {
+          (this.enabled = !1),
+            (this.locked = !1),
+            (this.features = 0),
+            (this.allowallapps = !1),
+            (this.baselist = void 0),
+            (this.customlist = void 0);
+        }
+        return (
+          r.c([i.x], e.prototype, "enabled", void 0),
+          r.c([i.x], e.prototype, "locked", void 0),
+          r.c([i.x], e.prototype, "features", void 0),
+          r.c([i.x], e.prototype, "allowallapps", void 0),
+          r.c([i.x], e.prototype, "baselist", void 0),
+          r.c([i.x], e.prototype, "customlist", void 0),
+          e
+        );
+      })(),
+      s = (function() {
+        return function() {
+          (this.broadcastid = "0"),
+            (this.nViewers = 0),
+            (this.nRequests = 0),
+            (this.bIsBroadcasting = !1),
+            (this.bIsRecordingDesktop = !1),
+            (this.bBroadcastCapable = !1);
+        };
+      })();
+    function u() {
+      return {
+        bNotifications_ShowIngame: !0,
+        bNotifications_ShowOnline: !1,
+        bNotifications_ShowMessage: !0,
+        bNotifications_EventsAndAnnouncements: !0,
+        bSounds_PlayIngame: !1,
+        bSounds_PlayOnline: !1,
+        bSounds_PlayMessage: !0,
+        bSounds_EventsAndAnnouncements: !1,
+        bAlwaysNewChatWindow: !1,
+        bForceAlphabeticFriendSorting: !1,
+        nChatFlashMode: 0,
+        bRememberOpenChats: !0,
+        bCompactQuickAccess: !1,
+        bCompactFriendsList: !1,
+        bNotifications_ShowChatRoomNotification: !0,
+        bSounds_PlayChatRoomNotification: !0,
+        bHideOfflineFriendsInTagGroups: !1,
+        bHideCategorizedFriends: !1,
+        bCategorizeInGameFriendsByGame: !0,
+        nChatFontSize: 2,
+        b24HourClock: !1,
+        bDoNotDisturbMode: !1,
+        bDisableEmbedInlining: !1,
+        bSignIntoFriends: !0,
+        bDisableSpellcheck: !1,
+        featuresEnabled: {}
+      };
+    }
+    var c, p;
+    function l(e) {
+      return (
+        e == c.EBrowserType_OpenVROverlay ||
+        e == c.EBrowserType_OpenVROverlay_Dashboard
+      );
+    }
+    ((p = c || (c = {}))[(p.EBrowserType_OffScreen = 0)] =
+      "EBrowserType_OffScreen"),
+      (p[(p.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
+      (p[(p.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+        "EBrowserType_OpenVROverlay_Dashboard"),
+      (p[(p.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+      (p[(p.EBrowserType_DirectHWND_Borderless = 4)] =
+        "EBrowserType_DirectHWND_Borderless"),
+      (p[(p.EBrowserType_DirectHWND_Hidden = 5)] =
+        "EBrowserType_DirectHWND_Hidden"),
+      (p[(p.EBrowserType_ChildHWNDNative = 6)] =
+        "EBrowserType_ChildHWNDNative"),
+      (p[(p.EBrowserType_Transparent_Toplevel = 7)] =
+        "EBrowserType_Transparent_Toplevel"),
+      (p[(p.EBrowserType_OffScreen_SharedTexture = 8)] =
+        "EBrowserType_OffScreen_SharedTexture"),
+      (p[(p.EBrowserType_OffScreen_GameOverlay = 9)] =
+        "EBrowserType_OffScreen_GameOverlay"),
+      (p[(p.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
+        "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
+      (p[(p.EBrowserType_Offscreen_FriendsUI = 11)] =
+        "EBrowserType_Offscreen_FriendsUI"),
+      (p[(p.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+    var m, h, d, _;
+    ((h = m || (m = {}))[(h.k_EClientUINotificationGroupChatMessage = 1)] =
+      "k_EClientUINotificationGroupChatMessage"),
+      (h[(h.k_EClientUINotificationFriendChatMessage = 2)] =
+        "k_EClientUINotificationFriendChatMessage"),
+      (h[(h.k_EClientUINotificationFriendPersonaState = 3)] =
+        "k_EClientUINotificationFriendPersonaState"),
+      ((_ = d || (d = {}))[(_.k_EComputerActiveStateInvalid = 0)] =
+        "k_EComputerActiveStateInvalid"),
+      (_[(_.k_EComputerActiveStateActive = 1)] =
+        "k_EComputerActiveStateActive"),
+      (_[(_.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
+    var f,
+      v,
+      E = (function() {
+        return function() {};
+      })();
+    ((v = f || (f = {}))[(v.k_EPending = 0)] = "k_EPending"),
+      (v[(v.k_EAccepted = 1)] = "k_EAccepted"),
+      (v[(v.k_ERejected = 2)] = "k_ERejected");
+    var b, y;
+    ((y = b || (b = {}))[(y.k_EClientUsedInputTypeKeyboard = 0)] =
+      "k_EClientUsedInputTypeKeyboard"),
+      (y[(y.k_EClientUsedInputTypeMouse = 1)] = "k_EClientUsedInputTypeMouse"),
+      (y[(y.k_EClientUsedInputTypeController = 2)] =
+        "k_EClientUsedInputTypeController"),
+      (y[(y.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
   },
   mrSG: function(e, t, n) {
     "use strict";
@@ -2085,14 +2247,14 @@ and limitations under the License.
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? o.createElement(S, { controller: this.props.controller })
-                : o.createElement(b, { controller: this.props.controller })
+                ? o.createElement(b, { controller: this.props.controller })
+                : o.createElement(y, { controller: this.props.controller })
             );
           }),
           (t = c.c([l.a], t))
         );
       })(o.Component),
-      S = (function(t) {
+      b = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_bTriedToLaunchSteam = !1), e;
@@ -2167,7 +2329,7 @@ and limitations under the License.
                   )
                 : e.account_mismatch
                 ? o.createElement(
-                    g,
+                    S,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     o.createElement(
                       "div",
@@ -2225,7 +2387,7 @@ and limitations under the License.
                     )
                   )
                 : o.createElement(
-                    g,
+                    S,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     o.createElement(
                       "div",
@@ -2266,7 +2428,7 @@ and limitations under the License.
           (e = c.c([l.a], e))
         );
       })(o.Component),
-      b = (function(e) {
+      y = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -2286,7 +2448,7 @@ and limitations under the License.
           t
         );
       })(o.Component);
-    function g(e) {
+    function S(e) {
       return o.createElement(
         "div",
         { className: "ChatMessageInvite" },
@@ -2319,11 +2481,11 @@ and limitations under the License.
       );
     }
     window.AssertMsg = u.a;
-    var y,
+    var g,
       I,
-      L,
-      C = new a.a();
-    function k(e) {
+      C,
+      k = new a.a();
+    function L(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-inviteinfo"));
@@ -2332,7 +2494,7 @@ and limitations under the License.
       var n = new v(t);
       r.render(o.createElement(E, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = C),
+    (window.ClientConnectionAPI = k),
       document.addEventListener("DOMContentLoaded", function() {
         Object(i.c)(),
           (function() {
@@ -2345,7 +2507,7 @@ and limitations under the License.
                 r = n.getAttribute("data-component");
               switch (r) {
                 case "ChatInvite":
-                  k(n);
+                  L(n);
                   break;
                 default:
                   Object(u.a)(!1, 'unknown component: "' + r + '"');
@@ -2355,17 +2517,17 @@ and limitations under the License.
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (y = n) : "shared" == e && (I = n);
-        else if ("shared" == e) L = n;
+          "friendsui" == e ? (g = n) : "shared" == e && (I = n);
+        else if ("shared" == e) C = n;
         else {
           var r = void 0,
             o = null,
             i = void 0,
             a = null;
-          void 0 !== y ? ((r = y), (o = n)) : (r = n),
-            void 0 !== I ? ((i = I), (a = L)) : (i = L),
+          void 0 !== g ? ((r = g), (o = n)) : (r = n),
+            void 0 !== I ? ((i = I), (a = C)) : (i = C),
             s.a.InitFromObjects(r, o, i, a),
-            (L = I = y = void 0);
+            (C = I = g = void 0);
         }
       });
   },

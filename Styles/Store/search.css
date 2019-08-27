@@ -204,6 +204,12 @@
 	max-width: 686px;
 }
 
+.search_results.hide_owned    .ds_owned,
+.search_results.hide_ignored  .ds_ignored,
+.search_results.hide_wishlist .ds_wishlist {
+    display: none;
+}
+
 .search_results_filtered_warning {
 	display: flex;
 }
@@ -229,9 +235,12 @@
 	font-weight: bold;
 }
 
-
-
-
+#search_results_loading {
+	text-align: center;
+	font-size: 20px;
+	padding-top: 20px;
+	color: #c6d4df;
+}
 
 .search_result_row .ds_flag {
 	top: 12px;

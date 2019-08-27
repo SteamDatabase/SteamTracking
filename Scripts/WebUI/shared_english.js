@@ -142,6 +142,8 @@ LocalizationReady("shared", "english", {
   EventDisplay_RightColumnTitle_DateAndTime: "Date and Time",
   EventDisplay_RightColumnTitle_EventType: "Type",
 
+  EventDisplay_PostedBy: "by ",
+
   EventDisplay_Reminder_SetReminder: "Set a reminder",
   EventDisplay_Reminder_FollowEvent: "Follow Event",
   EventDisplay_Reminder_FollowEvent_ttip:

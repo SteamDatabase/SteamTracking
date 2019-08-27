@@ -666,6 +666,9 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   margin-top: -1px;
   -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0.15) 100%); }
 
+.personanameandstatus_NoMask_1Wsqc .personanameandstatus_richPresenceLabel_3Q6g1 {
+  -webkit-mask-image: none; }
+
 .personanameandstatus_twoLine_2wZNn .personanameandstatus_richPresenceLabel_3Q6g1 {
   line-height: 18px;
   font-size: 12px; }
@@ -760,17 +763,14 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   stroke: #a0545a; }
 
 .offline .personanameandstatus_playerName_1uxaf {
-  color: #7a7a7a; }
-
-.offline .personanameandstatus_statusAndName_9U-hi {
-  filter: saturate(0); }
+  color: #a0a0a0; }
 
 .offline .personanameandstatus_richPresenceLabel_3Q6g1,
 .offline .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a,
 .offline .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:hover,
 .offline .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:active,
 .offline .personanameandstatus_gameName_qvibF.personanameandstatus_richPresenceLabel_3Q6g1 a:visited {
-  color: #555; }
+  color: #6e6e6e; }
 
 .offline .SVGIcon_DoNotDisturb circle,
 .offline .SVGIcon_DoNotDisturb line {
@@ -1771,16 +1771,16 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   align-items: center; }
 
 .remoteplay_Separator_HudB6 {
-  width: 555px;
+  width: 444px;
   height: 32px;
-  background: linear-gradient(to right, #007896, #1f3d96);
+  background: #4b4d51;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 8px; }
 
 .remoteplay_FriendPickerSeparator_1tFSY {
-  height: 500px;
+  height: 350px;
   padding-bottom: 0px; }
 
 .remoteplay_Spacer_2CNje {
@@ -1876,7 +1876,7 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
 .remoteplay_StreamPausedContainer_1qgCi {
   width: 100%;
   text-align: center;
-  background: linear-gradient(to right, #11111125 0%, #11111175 40%, #11111175 60%, #11111125 100%);
+  background: linear-gradient(to right, #111111 0%, #111111 40%, #111111 60%, #111111 100%);
   position: absolute;
   margin-top: 60px;
   padding-top: 14px;
@@ -1894,7 +1894,7 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   width: 100%;
   height: 48px;
   text-align: center;
-  background: linear-gradient(to right, #11111100 0%, #11111140 20%, #11111140 80%, #11111100 100%);
+  background: linear-gradient(to right, rgba(17, 17, 17, 0) 0%, #111111 20%, #111111 80%, rgba(17, 17, 17, 0) 100%);
   text-transform: uppercase;
   flex-direction: column;
   justify-content: center;
@@ -2250,7 +2250,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   width: calc( 100% - 8%);
   margin-left: 4%;
   margin-top: 48px;
-  position: relative; }
+  position: relative;
+  outline: none; }
 
 .videoTimelineMain .STV_timelineContainer {
   padding-top: 0px;
@@ -2635,7 +2636,9 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   height: 54px;
   width: 24px;
   z-index: 6;
-  margin-left: -14px; }
+  margin-left: -14px;
+  display: flex;
+  align-items: center; }
 
 .videoTimelineMain .STV_timelineGrabber {
   /* shouldn't this be 50%? */
@@ -2708,17 +2711,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   color: white;
   flex: 0 1;
   z-index: 2;
-  margin-bottom: -2px;
   border-radius: 2px;
-  opacity: 0;
-  transition: all .2s ease-in-out;
-  margin-left: 24px;
-  margin-top: -4px;
-  margin-bottom: 2px; }
-
-.STV_timelineContainer.grabberDown .STV_timelineGrabberValue,
-.STV_timelineGrabber:not(.grabberOffscreen):hover .STV_timelineGrabberValue {
-  opacity: 1; }
+  margin-left: -12px; }
 
 .timelineMarker {
   width: 8px;
@@ -3493,61 +3487,13 @@ iframe.steamTVLogin {
   fill: #4367f0;
   stroke-width: 0px; }
 
-.BroadcastDotaKualaLumpurMajorOffline,
-.BroadcastQuakeLiveOffline,
-.BroadcastCSGOLondonOffline,
-.BroadcastArtifactOffline,
-.BroadcastInjustice2Offline,
-.BroadcastSmiteOffline,
-.BroadcastPaladinsOffline,
-.BroadcastRealmRoyaleOffline,
-.BroadcastDOTATrueSight,
-.BroadcastSteamAwardsOffline,
-.BroadcastCSGOKatowiceOffline,
-.BroadcastCSGOFaceitOffline,
-.BroadcastCSGOStarLadderOffline,
-.BroadcastDOTAOffline {
+.BroadcastOffline {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   background-size: cover; }
-
-.BroadcastSteamAwardsOffline {
-  background-image: url(../../images/webui/d8f6e641a4d528af95d5f484c054877d.png); }
-
-.BroadcastSmiteOffline,
-.BroadcastPaladinsOffline,
-.BroadcastRealmRoyaleOffline {
-  background-image: url(../../images/webui/5229da64847e0c4028be9f84ecb8a1e5.jpg); }
-
-.BroadcastInjustice2Offline {
-  background-image: url(../../images/webui/341f703df70e04f20bc253c10ad2ab7d.jpg); }
-
-.BroadcastDotaKualaLumpurMajorOffline {
-  background-image: url(../../images/webui/85f4a9ff090cfdaa0d9c98295c6cf469.jpg); }
-
-.BroadcastQuakeLiveOffline {
-  background-image: url(../../images/webui/68b8df8cde8052128c454aa9990e6df5.jpg); }
-
-.BroadcastCSGOLondonOffline {
-  background-image: url(../../images/webui/a13df28a36f95353a3a047cb3d25cd47.jpg); }
-
-.BroadcastCSGOKatowiceOffline {
-  background-image: url(../../images/webui/e1100fcded3481df1a2bfc376204f761.jpg); }
-
-.BroadcastCSGOFaceitOffline {
-  background-image: url(../../images/webui/49518cb5b18bbb99097de1c97c8ca3ad.png); }
-
-.BroadcastCSGOStarLadderOffline {
-  background-image: url(../../images/webui/72ae895965311253fdd6c658ef5758ab.png); }
-
-.BroadcastDOTATrueSight {
-  background-image: url(../../images/webui/76fe7e99122605af14a8d80fe6be5692.png); }
-
-.BroadcastDOTAOffline {
-  background-image: url(../../images/webui/c8338f3fad391767fe6195a27fa217bb.png); }
 
 .LinkOverlayContainer {
   position: absolute;
@@ -3756,7 +3702,7 @@ iframe.steamTVLogin {
   display: flex;
   flex-direction: row;
   max-width: 780px;
-  max-height: 200px;
+  max-height: 250px;
   z-index: 1; }
 
 .StoreSaleWidgetContainer_mini,
@@ -3787,6 +3733,7 @@ iframe.steamTVLogin {
   max-width: 310px; }
 
 .StoreSaleImage {
+  width: 200px;
   cursor: pointer; }
 
 .StoreSaleImage_mini {
@@ -3813,7 +3760,9 @@ iframe.steamTVLogin {
   margin-bottom: 8px; }
 
 .StoreSaleWidgetShortDesc {
-  font-size: 12px; }
+  font-size: 12px;
+  max-height: 120px;
+  overflow: hidden; }
 
 .StoreSaleWidgetShortDesc_column,
 .StoreSaleWidgetShortDesc_mini {
@@ -4006,9 +3955,6 @@ iframe.steamTVLogin {
 .linkregionbox_EdgeDown_2KJWP.linkregionbox_middle_2mmT4 .linkregionbox_LinkRegionEdge_16X85.linkregionbox_Top_3RaBH,
 .linkregionbox_EdgeDown_2KJWP.linkregionbox_middle_2mmT4 .linkregionbox_LinkRegionEdge_16X85.linkregionbox_Left_1iu6o {
   border-color: white; }
-
-.linkregionbox_LinkRegionEdge_16X85.linkregionbox_Middle_2MnJB {
-  display: table; }
 
 .linkregionbox_LinkRegionButtonContainer_sVjOG .linkregionbox_DialogButton_22RKk {
   display: inline-block;
@@ -4258,7 +4204,8 @@ iframe.steamTVLogin {
   padding: 4px 4px 4px 8px;
   /*flex: 6;*/
   flex-shrink: 1;
-  width: 100%; }
+  width: 100%;
+  transition: all .2s ease-in-out; }
 
 .chatentry_chatEntryActionsGroup_15mWd {
   padding: 2px;
@@ -4271,11 +4218,16 @@ iframe.steamTVLogin {
   display: flex;
   flex-direction: row; }
 
+.chatentry_chatEntryActionsContainer_WZNUD {
+  max-height: 50px;
+  align-self: flex-end; }
+
 .chatentry_minHeightZero_NcZQ_ {
   min-height: 0; }
 
 .compactView .chatentry_chatTextarea_3e__5 {
-  height: initial; }
+  height: 24px;
+  line-height: 18px; }
 
 .chatentry_chatSubmitButton_3VRfL {
   position: relative;
@@ -4413,7 +4365,14 @@ iframe.steamTVLogin {
 .chatentry_EmoticonPickerButton_3fgX0:hover .SVGIcon_Emoticon path {
   stroke: white; }
 
+.chatentry_chatEntryControls_2O_X7 .chatentry_chatSubmitButton_3VRfL {
+  align-self: flex-end;
+  min-height: 46px;
+  margin-bottom: 2px; }
+
 .compactView .chatentry_chatEntryControls_2O_X7 .chatentry_chatSubmitButton_3VRfL {
+  height: 28px;
+  min-height: 28px;
   margin-bottom: 2px; }
 
 .compactView .chatentry_chatSubmitButton_3VRfL {
@@ -13634,6 +13593,9 @@ a.connectionStatus:visited {
 
 .Dialog_RemotePlay .VoiceControlPanelButton:hover {
   background-color: #00000000; }
+
+.Dialog_RemotePlay .FriendPicker_Suggestions {
+  height: 215px; }
 
 .Dialog_RemotePlay .DialogButton {
   background-color: #00000000; }

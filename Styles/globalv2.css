@@ -1441,3 +1441,9 @@ img.badge_icon.small {
 	width: 54px;
 	height: 54px;
 }
+
+.player_nickname_hint {
+	color: #61696d;
+	font-size: 18px;
+	line-height: 16px;
+}

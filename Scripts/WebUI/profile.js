@@ -440,10 +440,10 @@
         return b;
       }),
       n.d(t, "e", function() {
-        return g;
+        return E;
       }),
       n.d(t, "c", function() {
-        return E;
+        return g;
       });
     var i,
       c,
@@ -460,8 +460,8 @@
       _ = 366490,
       y = "18446744073709551615",
       b = 0,
-      g = 2147483647;
-    function E(e, t) {
+      E = 2147483647;
+    function g(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -1101,10 +1101,10 @@
         return b;
       }),
       n.d(t, "e", function() {
-        return g;
+        return E;
       }),
       n.d(t, "g", function() {
-        return E;
+        return g;
       }),
       n.d(t, "a", function() {
         return w;
@@ -1113,13 +1113,13 @@
         return S;
       }),
       n.d(t, "i", function() {
-        return x;
+        return k;
       }),
       n.d(t, "h", function() {
         return M;
       }),
       n.d(t, "j", function() {
-        return P;
+        return C;
       });
     var c = n("mrSG"),
       r = n("okNM"),
@@ -1239,7 +1239,7 @@
           t
         );
       })(a.PureComponent),
-      g = (function(n) {
+      E = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { bActive: !1 }), t;
@@ -1307,7 +1307,7 @@
           e
         );
       })(a.PureComponent),
-      E = (function(n) {
+      g = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -1442,41 +1442,41 @@
               c.bMatchWidth && ((_ = v - f), (a.menuWidth = _));
               var y = (c.bOverlapHorizontal ? v : f) - _,
                 b = 0 < y,
-                g = u - (c.bOverlapHorizontal ? f : v) - _,
-                E = 0 < g,
-                w = (c.bPreferPopLeft || !E) && b;
+                E = u - (c.bOverlapHorizontal ? f : v) - _,
+                g = 0 < E,
+                w = (c.bPreferPopLeft || !g) && b;
               b ||
-                E ||
-                ((w = E < b),
-                c.bFitToWindow && ((_ += (w ? y : g) - 8), (a.menuWidth = _))),
-                (!c.bPreferPopLeft && E) || !b
+                g ||
+                ((w = g < b),
+                c.bFitToWindow && ((_ += (w ? y : E) - 8), (a.menuWidth = _))),
+                (!c.bPreferPopLeft && g) || !b
                   ? (a.menuLeft = c.bOverlapHorizontal ? f : v)
                   : (a.menuRight = u - (c.bOverlapHorizontal ? v : f));
               var S = l || r.top,
-                x = l || r.bottom,
-                k = o.height;
-              c.bMatchHeight && ((k = x - S), (a.menuHeight = k));
-              var M = (c.bOverlapVertical ? x : S) - k,
-                P = 0 < M,
-                C = m - (c.bOverlapVertical ? S : x) - k,
-                L = 0 < C,
-                I = (c.bPreferPopTop || !L) && P;
-              if (!P && !L) {
+                k = l || r.bottom,
+                x = o.height;
+              c.bMatchHeight && ((x = k - S), (a.menuHeight = x));
+              var M = (c.bOverlapVertical ? k : S) - x,
+                C = 0 < M,
+                P = m - (c.bOverlapVertical ? S : k) - x,
+                L = 0 < P,
+                I = (c.bPreferPopTop || !L) && C;
+              if (!C && !L) {
                 var O =
                   void 0 !== c.bShiftToFitWindow
                     ? c.bShiftToFitWindow
                     : c.bFitToWindow && !c.bOverlapHorizontal;
-                (I = C < M),
+                (I = P < M),
                   O && (I ? (a.menuTop = 4) : (a.menuBottom = 4)),
                   c.bFitToWindow &&
-                    (O ? (k = Math.min(k, m - 8)) : (k += I ? M : C),
-                    (a.menuHeight = k - 8));
+                    (O ? (x = Math.min(x, m - 8)) : (x += I ? M : P),
+                    (a.menuHeight = x - 8));
               }
               void 0 === a.menuBottom &&
                 void 0 === a.menuTop &&
                 (I
-                  ? (a.menuBottom = m - (c.bOverlapVertical ? x : S))
-                  : (a.menuTop = c.bOverlapVertical ? S : x)),
+                  ? (a.menuBottom = m - (c.bOverlapVertical ? k : S))
+                  : (a.menuTop = c.bOverlapVertical ? S : k)),
                 i
                   ? (a.menuHeight || (a.menuHeight = o.height),
                     a.menuWidth || (a.menuWidth = o.width),
@@ -1631,7 +1631,7 @@
           (i.prototype.Render = function(e, t) {
             s.render(
               a.createElement(
-                E,
+                g,
                 c.a({}, this.m_menuProps, { popup: this }),
                 this.m_children
               ),
@@ -1650,7 +1650,7 @@
     function S(e) {
       return a.createElement("div", { className: f.a.ContextMenuMouseOverlay });
     }
-    function x(e) {
+    function k(e) {
       var t = [],
         n = N.n(e),
         r = n.getSelection(),
@@ -1709,16 +1709,16 @@
         e.preventDefault(), e.stopPropagation();
       }
     }
-    var k = "DEBUG_StickyContextMenus";
+    var x = "DEBUG_StickyContextMenus";
     function M() {
       return (
-        window.sessionStorage && "true" == window.sessionStorage.getItem(k)
+        window.sessionStorage && "true" == window.sessionStorage.getItem(x)
       );
     }
-    function P(e) {
+    function C(e) {
       e
-        ? window.sessionStorage.setItem(k, "true")
-        : window.sessionStorage.removeItem(k);
+        ? window.sessionStorage.setItem(x, "true")
+        : window.sessionStorage.removeItem(x);
     }
   },
   "G+3Z": function(e, t, n) {
@@ -1833,13 +1833,13 @@
       return s;
     }),
       n.d(t, "a", function() {
-        return p;
-      }),
-      n.d(t, "b", function() {
         return h;
       }),
+      n.d(t, "b", function() {
+        return d;
+      }),
       n.d(t, "d", function() {
-        return f;
+        return v;
       });
     var s,
       r,
@@ -1848,13 +1848,14 @@
       c = n("i8i4"),
       a = n("UqDm"),
       l = n("WpBz"),
-      u = n("1VtQ");
+      u = n("1VtQ"),
+      m = n("hEDq");
     ((r = s || (s = {}))[(r.Minimized = 1)] = "Minimized"),
       (r[(r.Hidden = 2)] = "Hidden"),
       (r[(r.Tooltip = 4)] = "Tooltip"),
       (r[(r.ContextMenu = 8)] = "ContextMenu"),
       (r[(r.Resizable = 16)] = "Resizable");
-    var m = (function() {
+    var p = (function() {
         function e(e, t) {
           (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
           for (
@@ -1883,7 +1884,7 @@
           e
         );
       })(),
-      p = (function() {
+      h = (function() {
         function e(e, t) {
           (this.m_bFocused = !1),
             (this.m_strName = e),
@@ -1926,7 +1927,7 @@
             var o,
               i,
               c,
-              a = f.GetExistingPopup(this.m_strName);
+              a = v.GetExistingPopup(this.m_strName);
             (a && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
               a
@@ -1934,7 +1935,7 @@
                   (o = a.m_popup),
                   a.ReleasePopup(),
                   (c = a.m_renderWhenReady),
-                  f.RemoveTrackedPopup(a),
+                  v.RemoveTrackedPopup(a),
                   o.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
                   o.removeEventListener("unload", a.OnUnload),
                   o.removeEventListener("resize", a.OnResizeEvent),
@@ -1943,10 +1944,10 @@
                   o.removeEventListener("drop", a.OnDrop),
                   o.removeEventListener("dragover", a.OnDragOver),
                   o.removeEventListener("message", this.OnMessage))
-                : ((o = (n = d.CreatePopup(this.m_strName, this.m_rgParams))
+                : ((o = (n = f.CreatePopup(this.m_strName, this.m_rgParams))
                     .popup),
                   (i = n.element),
-                  (c = new m(o, i))),
+                  (c = new p(o, i))),
               o &&
                 i &&
                 ((o.document.title = this.m_strTitle),
@@ -1964,7 +1965,7 @@
                 this.m_renderWhenReady.SetTarget(function() {
                   return r.RenderInternal(r.m_popup, r.m_element, e);
                 })),
-              f.AddTrackedPopup(this),
+              v.AddTrackedPopup(this),
               a && e && this.Focus());
           }),
           (e.prototype.RemoveEventListeners = function() {
@@ -1981,7 +1982,13 @@
               this.window.removeEventListener("message", this.OnMessage);
           }),
           (e.prototype.RenderInternal = function(e, t, n) {
-            this.Render(e, t),
+            var r;
+            this.browser_info &&
+              ((r = this.browser_info).m_eBrowserType ==
+                m.f.EBrowserType_OpenVROverlay ||
+                r.m_eBrowserType == m.f.EBrowserType_OpenVROverlay_Dashboard) &&
+              (t.ownerDocument.body.className += " VR"),
+              this.Render(e, t),
               this.OnLoad(),
               e.SteamClient &&
                 (n
@@ -1996,7 +2003,7 @@
           }),
           (e.prototype.OnUnload = function() {
             this.RemoveEventListeners(),
-              f.RemoveTrackedPopup(this),
+              v.RemoveTrackedPopup(this),
               this.OnClose(),
               c.unmountComponentAtNode(this.m_element);
           }),
@@ -2121,7 +2128,7 @@
           e
         );
       })(),
-      h = (function(i) {
+      d = (function(i) {
         function e(e, t, n, r) {
           var o = i.call(this, e, n) || this;
           return o.SetSavedDimensionsKey(t), (o.m_bExpires = r), o;
@@ -2144,13 +2151,13 @@
               e.strRestoreDetails
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  f.SetRestoreDetails(
+                  v.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = f.GetRestoreDetails(
+                  (e.strRestoreDetails = v.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -2179,7 +2186,7 @@
                     n.m_strSavedDimensionsKey &&
                     e &&
                     !t &&
-                    (f.SetRestoreDetails(r, e, n.m_bExpires),
+                    (v.SetRestoreDetails(r, e, n.m_bExpires),
                     (n.m_rgParams.strRestoreDetails = e),
                     (n.m_strInitialSavedDimensionsKey = r),
                     n.OnResizeComplete(e));
@@ -2193,14 +2200,14 @@
           }),
           (e.prototype.OnClose = function() {}),
           (e.prototype.SaveWindowPosition = function(e) {
-            f.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            v.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }),
           o.c([u.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
-      })(p),
-      d = (function() {
+      })(h),
+      f = (function() {
         function e() {
           var c = this;
           (this.m_bShuttingDown = !1),
@@ -2427,7 +2434,7 @@
           e
         );
       })(),
-      f = new d();
+      v = new f();
   },
   QHER: function(e, t, n) {
     "use strict";
@@ -2690,7 +2697,7 @@
       _ = n("8o0Y"),
       y = n("EGkk"),
       b = n("okNM"),
-      g = (function(e) {
+      E = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -2702,7 +2709,7 @@
               "div",
               { className: "ProfilePrivacyRoot" },
               i.createElement(
-                E,
+                g,
                 {
                   PrivacyStore: e,
                   strLabel: Object(a.b)("#ProfilePrivacy_BasicDetails"),
@@ -2712,7 +2719,7 @@
               ),
               i.createElement("div", { className: "ProfilePrivacyHR" }),
               i.createElement(
-                E,
+                g,
                 {
                   PrivacyStore: e,
                   strLabel: Object(a.b)("#ProfilePrivacy_Profile"),
@@ -2733,7 +2740,7 @@
                 "div",
                 { className: "ProfilePrivacyRoot_Indent" },
                 i.createElement(
-                  E,
+                  g,
                   {
                     PrivacyStore: e,
                     strLabel: Object(a.b)("#ProfilePrivacy_GameLibrary"),
@@ -2754,7 +2761,7 @@
                 ),
                 i.createElement("div", { className: "ProfilePrivacyHR" }),
                 i.createElement(
-                  E,
+                  g,
                   {
                     PrivacyStore: e,
                     strLabel: Object(a.b)("#ProfilePrivacy_FriendsList"),
@@ -2765,7 +2772,7 @@
                 ),
                 i.createElement("div", { className: "ProfilePrivacyHR" }),
                 i.createElement(
-                  E,
+                  g,
                   {
                     PrivacyStore: e,
                     strLabel: Object(a.b)("#ProfilePrivacy_Inventory"),
@@ -2802,11 +2809,11 @@
                   null,
                   Object(a.b)("#ProfilePrivacy_Comments"),
                   ":",
-                  i.createElement(P, { PrivacyStore: e })
+                  i.createElement(C, { PrivacyStore: e })
                 ),
                 i.createElement("div", { className: "ProfilePrivacyHR" }),
                 i.createElement(
-                  E,
+                  g,
                   {
                     PrivacyStore: e,
                     strLabel: Object(a.b)("#ProfilePrivacy_UGC"),
@@ -2832,12 +2839,12 @@
           (t = s.c([b.a], t))
         );
       })(i.Component);
-    function E(e) {
+    function g(e) {
       var t;
       return (
         (t = e.strReadOnlySetting
-          ? i.createElement(C, { strLabel: e.strReadOnlySetting })
-          : i.createElement(x, {
+          ? i.createElement(P, { strLabel: e.strReadOnlySetting })
+          : i.createElement(k, {
               PrivacyStore: e.PrivacyStore,
               PrivacyKey: e.PrivacyKey,
               LimitPrivacyKey: e.LimitPrivacyKey
@@ -2864,7 +2871,7 @@
         e.children
       );
     }
-    var x = (function(e) {
+    var k = (function(e) {
       function t() {
         return (null !== e && e.apply(this, arguments)) || this;
       }
@@ -2914,7 +2921,7 @@
                   "public/images/skin_1/actionArrowDnWhite.gif"
               })
             ),
-            i.createElement(k, {
+            i.createElement(x, {
               eSaveState: this.props.PrivacyStore.GetSaveState(
                 this.props.PrivacyKey
               )
@@ -2926,7 +2933,7 @@
         (t = s.c([b.a], t))
       );
     })(i.Component);
-    function k(e) {
+    function x(e) {
       switch (e.eSaveState) {
         case 1:
           return i.createElement(
@@ -2992,8 +2999,8 @@
           s.c([v.a], t.prototype, "OnCheckboxChecked", null),
           (t = s.c([b.a], t))
         );
-      })(x),
-      P = (function(n) {
+      })(k),
+      C = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { eSaveState: 0 }), t;
@@ -3048,7 +3055,7 @@
                     "public/images/skin_1/actionArrowDnWhite.gif"
                 })
               ),
-              i.createElement(k, {
+              i.createElement(x, {
                 eSaveState: this.props.PrivacyStore.GetCommentSaveState()
               })
             );
@@ -3058,7 +3065,7 @@
           (e = s.c([b.a], e))
         );
       })(i.Component);
-    function C(e) {
+    function P(e) {
       return i.createElement(
         "div",
         { className: "ProfilePrivacyDropDown readonly" },
@@ -3169,7 +3176,7 @@
         t = JSON.parse(e.getAttribute("data-privacysettings"));
       } catch (e) {}
       var n = new f(t.PrivacySettings, t.eCommentPermission);
-      r.render(i.createElement(g, { PrivacyStore: n }), e);
+      r.render(i.createElement(E, { PrivacyStore: n }), e);
     }
     (window.AssertMsg = o.a),
       document.addEventListener("DOMContentLoaded", function() {
@@ -3289,10 +3296,10 @@
         return b;
       }),
       n.d(t, "jb", function() {
-        return g;
+        return E;
       }),
       n.d(t, "cb", function() {
-        return E;
+        return g;
       }),
       n.d(t, "v", function() {
         return w;
@@ -3301,19 +3308,19 @@
         return S;
       }),
       n.d(t, "L", function() {
-        return x;
+        return k;
       }),
       n.d(t, "N", function() {
-        return k;
+        return x;
       }),
       n.d(t, "a", function() {
         return M;
       }),
       n.d(t, "s", function() {
-        return P;
+        return C;
       }),
       n.d(t, "A", function() {
-        return C;
+        return P;
       }),
       n.d(t, "J", function() {
         return L;
@@ -3334,10 +3341,10 @@
         return T;
       }),
       n.d(t, "Y", function() {
-        return G;
+        return D;
       }),
       n.d(t, "h", function() {
-        return D;
+        return G;
       }),
       n.d(t, "l", function() {
         return V;
@@ -3346,22 +3353,22 @@
         return R;
       }),
       n.d(t, "B", function() {
-        return z;
+        return F;
       }),
       n.d(t, "db", function() {
         return W;
       }),
       n.d(t, "hb", function() {
-        return F;
-      }),
-      n.d(t, "z", function() {
         return H;
       }),
+      n.d(t, "z", function() {
+        return z;
+      }),
       n.d(t, "c", function() {
-        return j;
+        return A;
       }),
       n.d(t, "b", function() {
-        return A;
+        return j;
       }),
       n.d(t, "n", function() {
         return U;
@@ -3966,7 +3973,7 @@
         })
       );
     }
-    function g(e) {
+    function E(e) {
       return o.createElement(
         "svg",
         {
@@ -4058,7 +4065,7 @@
           )
       );
     }
-    function E() {
+    function g() {
       return o.createElement(
         "svg",
         {
@@ -4232,7 +4239,7 @@
         )
       );
     }
-    function x(e) {
+    function k(e) {
       var t = "SVGIcon_Button SVGIcon_Pin";
       return (
         e.bPinned && (t += " Pinned"),
@@ -4274,7 +4281,7 @@
         )
       );
     }
-    function k(e) {
+    function x(e) {
       return o.createElement(
         "svg",
         {
@@ -4355,7 +4362,7 @@
         })
       );
     }
-    function P() {
+    function C() {
       return o.createElement(
         "svg",
         {
@@ -4399,7 +4406,7 @@
         })
       );
     }
-    function C() {
+    function P() {
       return o.createElement(
         "svg",
         {
@@ -4650,7 +4657,7 @@
         })
       );
     }
-    function G(e) {
+    function D(e) {
       return o.createElement(
         "svg",
         {
@@ -4738,7 +4745,7 @@
         )
       );
     }
-    function D() {
+    function G() {
       return o.createElement(
         "svg",
         {
@@ -4901,7 +4908,7 @@
         )
       );
     }
-    function z() {
+    function F() {
       return o.createElement(
         "svg",
         {
@@ -5175,7 +5182,7 @@
         )
       );
     }
-    function F() {
+    function H() {
       return o.createElement(
         "svg",
         {
@@ -5200,7 +5207,7 @@
         })
       );
     }
-    function H() {
+    function z() {
       return o.createElement(
         "svg",
         {
@@ -5226,7 +5233,7 @@
         })
       );
     }
-    function j() {
+    function A() {
       return o.createElement(
         "svg",
         {
@@ -5246,7 +5253,7 @@
         })
       );
     }
-    function A(e) {
+    function j(e) {
       return o.createElement(
         "svg",
         {
@@ -6446,6 +6453,161 @@
         })
       );
     }
+  },
+  hEDq: function(e, t, n) {
+    "use strict";
+    n.d(t, "j", function() {
+      return c;
+    }),
+      n.d(t, "b", function() {
+        return a;
+      }),
+      n.d(t, "d", function() {
+        return s;
+      }),
+      n.d(t, "f", function() {
+        return l;
+      }),
+      n.d(t, "a", function() {
+        return m;
+      }),
+      n.d(t, "g", function() {
+        return p;
+      }),
+      n.d(t, "i", function() {
+        return d;
+      }),
+      n.d(t, "c", function() {
+        return y;
+      }),
+      n.d(t, "e", function() {
+        return v;
+      }),
+      n.d(t, "h", function() {
+        return b;
+      });
+    var r = n("mrSG"),
+      o = n("0N1H");
+    n.d(t, "k", function() {
+      return o.c;
+    });
+    var i = n("2vnA"),
+      c = (function() {
+        function e() {
+          (this.enabled = !1),
+            (this.locked = !1),
+            (this.features = 0),
+            (this.allowallapps = !1),
+            (this.baselist = void 0),
+            (this.customlist = void 0);
+        }
+        return (
+          r.c([i.x], e.prototype, "enabled", void 0),
+          r.c([i.x], e.prototype, "locked", void 0),
+          r.c([i.x], e.prototype, "features", void 0),
+          r.c([i.x], e.prototype, "allowallapps", void 0),
+          r.c([i.x], e.prototype, "baselist", void 0),
+          r.c([i.x], e.prototype, "customlist", void 0),
+          e
+        );
+      })(),
+      a = (function() {
+        return function() {
+          (this.broadcastid = "0"),
+            (this.nViewers = 0),
+            (this.nRequests = 0),
+            (this.bIsBroadcasting = !1),
+            (this.bIsRecordingDesktop = !1),
+            (this.bBroadcastCapable = !1);
+        };
+      })();
+    function s() {
+      return {
+        bNotifications_ShowIngame: !0,
+        bNotifications_ShowOnline: !1,
+        bNotifications_ShowMessage: !0,
+        bNotifications_EventsAndAnnouncements: !0,
+        bSounds_PlayIngame: !1,
+        bSounds_PlayOnline: !1,
+        bSounds_PlayMessage: !0,
+        bSounds_EventsAndAnnouncements: !1,
+        bAlwaysNewChatWindow: !1,
+        bForceAlphabeticFriendSorting: !1,
+        nChatFlashMode: 0,
+        bRememberOpenChats: !0,
+        bCompactQuickAccess: !1,
+        bCompactFriendsList: !1,
+        bNotifications_ShowChatRoomNotification: !0,
+        bSounds_PlayChatRoomNotification: !0,
+        bHideOfflineFriendsInTagGroups: !1,
+        bHideCategorizedFriends: !1,
+        bCategorizeInGameFriendsByGame: !0,
+        nChatFontSize: 2,
+        b24HourClock: !1,
+        bDoNotDisturbMode: !1,
+        bDisableEmbedInlining: !1,
+        bSignIntoFriends: !0,
+        bDisableSpellcheck: !1,
+        featuresEnabled: {}
+      };
+    }
+    var l, u;
+    function m(e) {
+      return (
+        e == l.EBrowserType_OpenVROverlay ||
+        e == l.EBrowserType_OpenVROverlay_Dashboard
+      );
+    }
+    ((u = l || (l = {}))[(u.EBrowserType_OffScreen = 0)] =
+      "EBrowserType_OffScreen"),
+      (u[(u.EBrowserType_OpenVROverlay = 1)] = "EBrowserType_OpenVROverlay"),
+      (u[(u.EBrowserType_OpenVROverlay_Dashboard = 2)] =
+        "EBrowserType_OpenVROverlay_Dashboard"),
+      (u[(u.EBrowserType_DirectHWND = 3)] = "EBrowserType_DirectHWND"),
+      (u[(u.EBrowserType_DirectHWND_Borderless = 4)] =
+        "EBrowserType_DirectHWND_Borderless"),
+      (u[(u.EBrowserType_DirectHWND_Hidden = 5)] =
+        "EBrowserType_DirectHWND_Hidden"),
+      (u[(u.EBrowserType_ChildHWNDNative = 6)] =
+        "EBrowserType_ChildHWNDNative"),
+      (u[(u.EBrowserType_Transparent_Toplevel = 7)] =
+        "EBrowserType_Transparent_Toplevel"),
+      (u[(u.EBrowserType_OffScreen_SharedTexture = 8)] =
+        "EBrowserType_OffScreen_SharedTexture"),
+      (u[(u.EBrowserType_OffScreen_GameOverlay = 9)] =
+        "EBrowserType_OffScreen_GameOverlay"),
+      (u[(u.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
+        "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
+      (u[(u.EBrowserType_Offscreen_FriendsUI = 11)] =
+        "EBrowserType_Offscreen_FriendsUI"),
+      (u[(u.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
+    var p, h, d, f;
+    ((h = p || (p = {}))[(h.k_EClientUINotificationGroupChatMessage = 1)] =
+      "k_EClientUINotificationGroupChatMessage"),
+      (h[(h.k_EClientUINotificationFriendChatMessage = 2)] =
+        "k_EClientUINotificationFriendChatMessage"),
+      (h[(h.k_EClientUINotificationFriendPersonaState = 3)] =
+        "k_EClientUINotificationFriendPersonaState"),
+      ((f = d || (d = {}))[(f.k_EComputerActiveStateInvalid = 0)] =
+        "k_EComputerActiveStateInvalid"),
+      (f[(f.k_EComputerActiveStateActive = 1)] =
+        "k_EComputerActiveStateActive"),
+      (f[(f.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
+    var v,
+      _,
+      y = (function() {
+        return function() {};
+      })();
+    ((_ = v || (v = {}))[(_.k_EPending = 0)] = "k_EPending"),
+      (_[(_.k_EAccepted = 1)] = "k_EAccepted"),
+      (_[(_.k_ERejected = 2)] = "k_ERejected");
+    var b, E;
+    ((E = b || (b = {}))[(E.k_EClientUsedInputTypeKeyboard = 0)] =
+      "k_EClientUsedInputTypeKeyboard"),
+      (E[(E.k_EClientUsedInputTypeMouse = 1)] = "k_EClientUsedInputTypeMouse"),
+      (E[(E.k_EClientUsedInputTypeController = 2)] =
+        "k_EClientUsedInputTypeController"),
+      (E[(E.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
   },
   mrSG: function(e, t, n) {
     "use strict";

@@ -191,7 +191,6 @@ function AjaxSearchResults()
 
 function AjaxSearchResultsInternal( bOnLocationChange, bInitialLoad )
 {
-
 	// we're in the middle of filling in all the controls from the hash parameter
 	if ( g_bPopulatingSearchControls )
 		return;
@@ -293,6 +292,8 @@ function SearchCompleted( parameters, transport )
 
 	if (typeof(GDynamicStore) !== 'undefined')
 		GDynamicStore.DecorateDynamicItems();
+
+	InitInfiniteScroll( parameters );
 }
 
 function SearchLinkClick( elem )
@@ -351,6 +352,105 @@ function InitSearchPage()
 	}
 
 	HandleFilteredResultsWarning();
+
+	InitInfiniteScroll(g_rgCurrentParameters);
+}
+
+// Infinite scroll state is kept on the function itself.
+InitInfiniteScroll.oController = null;
+InitInfiniteScroll.bEnabled = false;
+
+function InitInfiniteScroll( rgParameters )
+{
+    // Copy our params so we don't surprise our caller by changing theirs.
+    rgParameters = Object.assign({}, rgParameters);
+
+	// Is there a better way to find our current function?
+	let self = InitInfiniteScroll;
+
+	// Clear any existing infinite scroll so we don't mix search results.
+	if (typeof( self.oController ) != "undefined" && self.oController !== null )
+		self.oController.Stop();
+
+	// If we're not enabled, or see a page parameter, then we don't want to use infiniscroll.
+	if ( ! self.bEnabled || new URL( window.location.href ).searchParams.get('page') )
+	{
+		return null;
+	}
+
+	const oScrollOptions = {
+		"pagesize": 25,
+		"total_count": 1000, // Gets filled with real value after our first load.
+		"prefix": "search_results"
+	};
+
+	self.oController = new CAjaxInfiniteScrollingControls( oScrollOptions, 'https://store.steampowered.com/search/results' );
+
+	// Make sure our backend knows we're infinite scrolling, and don't need a whole page.
+	rgParameters['infinite'] = "1";
+
+	// Infinite scroll handler populates our pagination controls, so we don't have to.
+	delete rgParameters['start'];
+	delete rgParameters['count'];
+	delete rgParameters['page'];
+
+	self.oController.SetStaticParameters(rgParameters);
+
+	// Disable regular pagination, enable results-loading section.
+	$J('.search_pagination').hide();
+
+	// Set handler to trim duplicates. Right now this re-checks every time, so there's potential for saving
+	// cycles by calculating what's newly loaded and just checking those.
+	self.oController.SetPageChangedHandler(function( iPageNo, oUpdatedDom )
+	{
+
+		if ( GDynamicStore != null )
+		{
+			GDynamicStore.DecorateDynamicItems($J(oUpdatedDom));
+		}
+		// We need to check if something is a bundle or package first as they may also set data-ds-appid with
+		// the apps they contain.
+		const arrayAttrs = [ "data-ds-bundleid", "data-ds-packageid", "data-ds-appid" ];
+
+		let mapDuplicates = {};
+
+		// Javascript doesn't auto-create ("autovivify") map keys more than one layer deep, so set them up.
+		for (let i=0; i < arrayAttrs.length; i++ )
+		{
+			mapDuplicates[ arrayAttrs[i] ] = {};
+		}
+
+		oUpdatedDom.childNodes.forEach( function ( item )
+		{
+
+			// Some nodes will be text or otherwise attributeless.
+			if ( ! item["attributes"] ) return;
+
+			//  Check our duplicate params.
+			for (let i = 0; i < arrayAttrs.length; i++)
+			{
+				const strAttr = arrayAttrs[i];
+				let node = null;
+				if ( node = item.attributes[ strAttr ] )
+				{
+					const id = node['nodeValue'];
+
+					if ( mapDuplicates[strAttr][ id ] )
+					{
+						// Duplicate! Hide it.
+						item.hide();
+					}
+					else
+					{
+						mapDuplicates[ strAttr ][ id ] = true;
+					}
+					break;
+				}
+			}
+		});
+	});
+
+	return self.oController;
 }
 
 function AddSearchTag( strParam, strValue, strLabel, fnOnClick )
@@ -432,6 +532,61 @@ function UpdateTags()
 
 }
 
+function EnableClientSideFilters()
+{
+	const oFilters = {
+		'hide_owned':    { 'default': true },
+		'hide_ignored':  { 'default': true },
+		'hide_wishlist': { 'default': false },
+	};
+
+	let results_container = $J("#search_results");
+
+	for (const strFilter of Object.keys(oFilters))
+	{
+		// Find our control widget for this filter.
+		const $Control = $J("div[data-param='hide'][data-value='" + strFilter + "']");
+
+		if ($Control.length < 1)
+		{
+			console.log("Could not find clientside control for", strFilter );
+			continue;
+		}
+
+		// If it's a default filter, set it on the widget and our results container.
+		if (oFilters[strFilter].default)
+		{
+			results_container.addClass(strFilter);
+			$Control.addClass("checked");
+		}
+
+		// Click handler to toggle this filter.
+		$Control.click( OnClickClientFilter($Control, strFilter, results_container) );
+	}
+}
+
+// This exists to ensure that we've got function-scope for our closures because *some* browsers
+// don't properly do block-scope.
+function OnClickClientFilter( $Control, strFilter, results_container )
+{
+    return function() {
+        const $document = $J(document);
+        nSavedOffset = $Control[0].getBoundingClientRect().top;
+
+        $Control.toggleClass('checked');
+
+        if ($Control.hasClass('checked')) {
+            results_container.addClass(strFilter);
+        } else {
+            results_container.removeClass(strFilter);
+        }
+
+        // Our viewport will "jump" with the results list changing in length, so we calculate where we
+        // need to be to be to keep the side-menu in the same location, and "scroll" to there.
+        const nFixScrollOffset = $document.scrollTop() - nSavedOffset + $Control[0].getBoundingClientRect().top;
+        $document.scrollTop(nFixScrollOffset);
+    };
+}
 function OnSelectFilteredContentSettingsMenu( elSource )
 {
 	var d = $J(elSource).data('dropdownValue');

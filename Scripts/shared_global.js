@@ -1876,12 +1876,14 @@ function ScrollToIfNotInView( elem, nRequiredPixelsToShow, nSpacingBefore, nAnim
 	}
 }
 
+
 function CAjaxInfiniteScrollingControls( rgSearchData, url )
 {
 	this.m_strActionURL = null;
 	this.m_cPageSize = null;
 	this.m_strElementPrefix = "";
 	this.m_strClassPrefix = "";
+	this.m_StrRowsId = "";
 	this.m_rgStaticParams = null;
 
 	this.m_strQuery = null;
@@ -1894,6 +1896,7 @@ function CAjaxInfiniteScrollingControls( rgSearchData, url )
 	this.m_fnResponseHandler = null;
 	this.m_fnPageChangingHandler = null;
 	this.m_fnPageChangedHandler = null;
+	this.m_fnRawScrollHandler = null;
 
 	this.m_LoadingDialog = null;
 	this.m_bRestoringScrollTop = false;
@@ -1906,31 +1909,64 @@ function CAjaxInfiniteScrollingControls( rgSearchData, url )
 	this.m_cPageSize = rgSearchData['pagesize'];
 	this.m_cMaxPages = Math.ceil( this.m_cTotalCount / this.m_cPageSize );
 
+	this.m_iCooldownTime = 0;       // ms from the epoch when we can next update.
+	this.m_iCooldownInterval = 200; // Minimum time (in ms) between updates
+
 	if ( rgSearchData['prefix'] )
 		this.m_strElementPrefix = rgSearchData['prefix'];
+
+	// Rows element name that's updated when we scroll.
+	this.m_StrRowsId = this.m_strElementPrefix + 'Rows';
 
 	if ( rgSearchData['class_prefix'] )
 		this.m_strClassPrefix = rgSearchData['class_prefix'];
 
-	var thisControl = this;
-	var scrollFunc = function( event ) {
-		this.OnScroll( event );
-	};
-	$J(document).scroll( function() { return scrollFunc.apply( thisControl ) } );
+	// We want our handlers to get a copy of our infiniteScroll object when they're called, so we save it
+	// into a var and build a closure around it.
+	let thisControl = this;
 
-	window.addEventListener('beforeunload', function( event ) { thisControl.OnUnload( event ); } );
+	// By saving the bound scroll-handler to a variable, we can then unload it when our search
+	// options are upadated.
+	this.m_fnRawScrollHandler = function() { thisControl.OnScroll() };
+	$J(document).scroll( this.m_fnRawScrollHandler );
+
+	// If we have a _scroll_top element, then set our OnUnload handler.
+	if ( $J( "#" + this.m_strElementPrefix + '_scroll_top').length )
+		window.addEventListener('beforeunload', function() { thisControl.OnUnload() } );
 
 	this.RestoreScrollTop( true );
 }
 
 CAjaxInfiniteScrollingControls.prototype.DoneRestoreScrollTop = function()
 {
+	this.ClearLoadingDialog();
+	this.m_bRestoringScrollTop = false;
+};
+
+CAjaxInfiniteScrollingControls.prototype.ClearLoadingDialog = function()
+{
 	if ( this.m_LoadingDialog )
 	{
 		this.m_LoadingDialog.Dismiss();
 		this.m_LoadingDialog = null;
 	}
-	this.m_bRestoringScrollTop = false;
+};
+
+// Stops this infinite scroll handler.
+CAjaxInfiniteScrollingControls.prototype.Stop = function()
+{
+	// Clear loading notifiers.
+	this.ClearLoadingDialog();
+	this.HideThrobber();
+
+	// Clear scheduled scroll, if there is one.
+	if ( this.m_oScheduledScroll )
+		clearTimeout( this.m_oScheduledScroll );
+
+	// Unhook scroll handler.
+	$J(document).off( "scroll", this.m_fnRawScrollHandler );
+
+	// TODO: Do we need to call or clear BeforeUnload?
 };
 
 CAjaxInfiniteScrollingControls.prototype.RestoreScrollTop = function( bForce )
@@ -1964,26 +2000,51 @@ CAjaxInfiniteScrollingControls.prototype.RestoreScrollTop = function( bForce )
 	}
 };
 
-CAjaxInfiniteScrollingControls.prototype.OnUnload = function( event )
+CAjaxInfiniteScrollingControls.prototype.OnUnload = function()
 {
 	var scrollOffset = document.viewport.getScrollOffsets();
 	var scrollTop = scrollOffset.top;
 	$J( "#" + this.m_strElementPrefix + '_scroll_top').val( scrollTop );
 };
 
-CAjaxInfiniteScrollingControls.prototype.OnScroll = function( event )
+CAjaxInfiniteScrollingControls.prototype.OnScroll = function()
 {
 	if ( this.m_bLoading )
 		return;
 
+	const iNow = new Date().getTime();
+
+	// How soon can we scroll?
+	const iScrollWait = this.m_iCooldownTime - iNow;
+
+	// If we haven't reached our cooldown, do nothing.
+	if ( iScrollWait > 0 )
+	{
+		// console.log("InfiniScrolling too fast; engaging throttle");
+
+		// Schedule a scroll event for when they would be allowed to scroll. Without this, the
+		// user needs to jiggle their scrollbar.
+		if ( this.m_oScheduledScroll == null )
+		{
+			this.m_oScheduledScroll = setTimeout( this.m_fnRawScrollHandler, iScrollWait );
+			this.ShowThrobber(); // Show throbber while waiting to begin load.
+		}
+
+		return;
+	}
+
+	this.m_oScheduledScroll = null;
+
 	var nCurrentScroll = $J(window).scrollTop() + $J(window).height();
 
-	var rows = $J('#' + this.m_strElementPrefix + 'Rows');
+	var rows = $J('#' + this.m_StrRowsId);
 	var offset = rows.offset();
 	var nTriggerPoint = rows.height() + offset.top - 750;
 
 	if ( nCurrentScroll >  nTriggerPoint )
 	{
+		this.m_iCooldownTime = iNow + this.m_iCooldownInterval;
+
 		this.NextPage();
 	}
 };
@@ -2026,8 +2087,15 @@ CAjaxInfiniteScrollingControls.prototype.OnAJAXComplete = function()
 
 CAjaxInfiniteScrollingControls.prototype.NextPage = function()
 {
-	if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
+	if ( this.m_iCurrentPage < this.m_cMaxPages - 1 ) {
 		this.LoadPage( this.m_iCurrentPage + 1 );
+	}
+	else
+	{
+		// We're reached the end of our results!
+		this.Stop();
+	}
+
 };
 
 CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
@@ -2054,10 +2122,12 @@ CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
 	{
 		for ( var sParamName in this.m_rgStaticParams )
 		{
+
 			if ( typeof sParamName != "string" )
 				continue;
 
 			var typeOfParam = typeof this.m_rgStaticParams[sParamName];
+
 			if ( typeOfParam != "string" && typeOfParam != "number" && typeOfParam != "boolean" )
 				continue;
 
@@ -2071,13 +2141,10 @@ CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
 	if ( this.m_fnPreRequestHandler != null )
 		this.m_fnPreRequestHandler( params );
 
-	var elLoading = $(this.m_strElementPrefix + '_loading');
-	if ( elLoading )
-	{
-		elLoading.show();
-	}
+	this.ShowThrobber();
 
 	this.m_bLoading = true;
+
 	new Ajax.Request( this.GetActionURL( '' ), {
 		method: 'get',
 		parameters: params,
@@ -2088,15 +2155,30 @@ CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
 	return true;
 };
 
+CAjaxInfiniteScrollingControls.prototype.GetThrobber = function() {
+	return $(this.m_strElementPrefix + '_loading');
+};
+
+CAjaxInfiniteScrollingControls.prototype.HideThrobber = function() {
+	const throbber = this.GetThrobber();
+
+	if (throbber)
+		throbber.hide();
+};
+
+CAjaxInfiniteScrollingControls.prototype.ShowThrobber = function() {
+	const throbber = this.GetThrobber();
+
+	if (throbber)
+		throbber.show();
+};
+
 CAjaxInfiniteScrollingControls.prototype.OnResponseRenderResults = function( transport )
 {
+
 	if ( transport.responseJSON && transport.responseJSON.success )
 	{
-		var elLoading = $(this.m_strElementPrefix + '_loading');
-		if ( elLoading )
-		{
-			elLoading.hide();
-		}
+		this.HideThrobber();
 
 		if ( typeof RecordAJAXPageView !== "undefined" )
 		{
@@ -2115,7 +2197,7 @@ CAjaxInfiniteScrollingControls.prototype.OnResponseRenderResults = function( tra
 			return;
 		}
 
-		var elResults = $(this.m_strElementPrefix + 'Rows');
+		var elResults = $(this.m_StrRowsId);
 
 		elResults.insert( response.results_html );
 
@@ -2125,7 +2207,7 @@ CAjaxInfiniteScrollingControls.prototype.OnResponseRenderResults = function( tra
 		}
 
 		if ( this.m_fnPageChangedHandler != null )
-			this.m_fnPageChangedHandler( this.m_iCurrentPage );
+			this.m_fnPageChangedHandler( this.m_iCurrentPage, elResults );
 
 		this.m_bLoading = false;
 		if ( this.m_iCurrentPage < this.m_cMaxPages - 1 )
@@ -2315,8 +2397,6 @@ CAjaxPagingControls.prototype.OnResponseRenderResults = function( transport )
 
 			return;
 		}
-
-
 
 		var elResults = $(this.m_strElementPrefix + 'Rows');
 

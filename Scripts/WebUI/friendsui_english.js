@@ -580,6 +580,7 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_Timestamp_InvalidDate: "Invalid date",
   ChatRoom_Timestamp_Yesterday: "Yesterday, %1$s",
 
+  Chat_ErrorSending_Title: "Failed to send message",
   Chat_ErrorSending: "Failed to send message.  Please try again later.",
   Chat_VideoLoadError: "Failed to load video. URL: %1$s",
   Chat_ErrorSending_NotFriends:
@@ -594,6 +595,9 @@ LocalizationReady("friendsui", "english", {
   Chat_UnreadMessages_Plural: "%1$s new messages",
   Chat_MessageDeleted: "Message Deleted",
   Chat_MessageRenderError: "There was a problem displaying this message.",
+  Chat_ErrorSending_Action_Retry: "Retry",
+  Chat_ErrorSending_Action_Remove: "Remove",
+  Chat_ErrorSending_Action_Cancel: "Cancel",
 
   Chat_Members: "1 member",
   Chat_Members_Plural: "%1$s members",
@@ -748,6 +752,8 @@ LocalizationReady("friendsui", "english", {
   Friend_Menu_AcceptIncomingInvite: "Accept Friend Request",
   Friend_Menu_IgnoreIncomingInvite: "Ignore Friend Request",
   Friend_Menu_BlockIncomingInvite: "Block Friend Request",
+  Friend_Menu_AcceptAll: "Accept All",
+  Friend_Menu_DeclineAll: "Decline All",
 
   Friend_Menu_AddToFriendsList: "Add Friend",
   Friend_Menu_RemoveFromFriendsList: "Remove as Friend",
@@ -948,6 +954,7 @@ LocalizationReady("friendsui", "english", {
   RemotePlay_ToggleDesktopAllowed: "Pause Stream When Viewing Desktop",
   RemotePlay_Invited: "Invite Sent",
   RemotePlay_FriendJoinedSession: "Joined Remote Play Session",
+  RemotePlay_InviteFriend: "Invite Friend",
   Tooltip_RemotePlayEnableKeyboard: "Enable Keyboard",
   Tooltip_RemotePlayDisableKeyboard: "Disable Keyboard",
   Tooltip_RemotePlayEnableMouse: "Enable Mouse",
@@ -1145,6 +1152,8 @@ LocalizationReady("friendsui", "english", {
     "You invited %1$s to play %2$s%3$s via Steam Remote Play",
   ChatRoom_GameInviteRemotePlay_Accepted:
     "You accepted an invitation to play %1$s%2$s via Steam Remote Play",
+  ChatRoom_GameInviteRemotePlay_CantAccept:
+    "%1$s invited you to play %2$s%3$s via Steam Remote Play, but it is not available in your country",
 
   ChatRoom_BroadcastInvite_YouInvited:
     "You invited %1$s to watch your broadcast of %2$s",

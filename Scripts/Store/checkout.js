@@ -5143,21 +5143,21 @@ function DisplayPendingReceiptPage()
 	}
 }
 
-function DisplayCreditCardAuthentication( txnid, retries )
+var g_eLastAuthenticationStep = false;
+function DisplayCreditCardAuthentication( authentication_data, txnid, retries )
 {
-	try 
+	if ( !authentication_data )
 	{
-		new Ajax.Request('https://store.steampowered.com/checkout/authenticationdetails/',
+		try
 		{
-		    method:'get',
-		    parameters: { 
-				'transid' : txnid
-			},
-		    onSuccess: function(transport)
-		    {
-			if ( transport.responseText )
+			new Ajax.Request('https://store.steampowered.com/checkout/authenticationdetails/',
 			{
-				try {
+			    method:'get',
+			    parameters: { 
+					'transid' : txnid
+				},
+			    onSuccess: function(transport)
+			    {
 					var result = transport.responseText.evalJSON(true);
 
 					if ( result.eresult != 1 )
@@ -5165,51 +5165,61 @@ function DisplayCreditCardAuthentication( txnid, retries )
 						var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
 						DisplayErrorMessage( error_text );
 						return;					
-					}
+					}		    	
 
-					switch ( result.data.threed_secure_step )
-					{
-						case 1:
-						case 5:
-											      			g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, retries, 5 ), 2*1000 );
-				      			return;							
-							
-						case 2:
-														var params = [];
-							params.push( { name: "MD", value: result.data.md } );
-							params.push( { name: "PaReq", value: result.data.pa_request } );
-							params.push( { name: "TermUrl", value: result.data.term_url } );
-						
-							PostUrlInNewBlankWindow( result.data.issuer_url, params );
-							return;
-							
-						case 3:
-														
-						case 4:
-														
-						default:
-							var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
-							DisplayErrorMessage( error_text );
-							return;						
-					}
-		      		} catch ( e ) {
+					authentication_data = result.data;
+			    },
+			    onFailure: function()
+			    {
+
 					var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
 					DisplayErrorMessage( error_text );
 					return;
-	      			}		    
-			}
-		    },
-		    onFailure: function()
-		    {
+			    }
+		    } );
+		}
+		catch( e )
+		{
+			var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
+			DisplayErrorMessage( error_text );			
+			ReportCheckoutJSError( 'Failed showing error after DisplayCreditCardAuthentication failure', e );
+		}
+	}
+
+	if ( authentication_data.threed_secure_step == g_eLastAuthenticationStep )
+	{
+		// no change, so keep polling
+		g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, retries, 5 ), 15*1000 );
+		return;
+	}
+
+	g_eLastAuthenticationStep = authentication_data.threed_secure_step;
+
+	switch ( authentication_data.threed_secure_step )
+	{
+		case 1:
+		case 5:
+			  		g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, retries, 5 ), 2*1000 );
+  		return;							
+			
+		case 2:
+									var params = [];
+			params.push( { name: "MD", value: authentication_data.md } );
+			params.push( { name: "PaReq", value: authentication_data.pa_request } );
+			params.push( { name: "TermUrl", value: authentication_data.term_url } );
+						
+			PostUrlInNewBlankWindow( authentication_data.issuer_url, params );
+						g_timeoutPoll = setTimeout( NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, retries, 5 ), 15*1000 );
+			return;
+			
+		case 3:
+						
+		case 4:
+						
+		default:
 			var error_text = 'There seems to have been an error initializing or updating your transaction.  Please wait a minute and try again or contact support for assistance.';
 			DisplayErrorMessage( error_text );
-			return;
-		    }
-		});
-	}
-	catch( e ) 
-	{
-		ReportCheckoutJSError( 'Error handling authentication request', e );
+			return;						
 	}
 }
 
@@ -5356,11 +5366,11 @@ function PollForTransactionStatus( txnid, retries, timeout )
 			      	   	{
 			      	   		DisplayPendingReceiptPage();
 			      	   	}
-					else if ( bNeedsAuthentication )
-					{
-						DisplayCreditCardAuthentication( txnid, retries-1 );
-						return;
-					}
+			      	   	else if ( bNeedsAuthentication )
+			      	   	{
+			      	   		DisplayCreditCardAuthentication( result.authenticationdetails, txnid, retries-1 );
+			      	   		return;
+			      	   	}
 			      	   	else
 			      	   	{
 		      		   		var ePaymentMethod = 2;
@@ -5500,11 +5510,11 @@ function FinalizeTransaction()
 		      	   		OnPurchaseSuccess( result );
 		      	   		return;
 		      	   	}
-				else if ( bNeedsAuthentication )
-				{
-					DisplayCreditCardAuthentication(g_LastFinalizedTransactionID, 60);
-					return;
-				}
+		      	   	else if ( bNeedsAuthentication )
+		      	   	{
+		      	   		DisplayCreditCardAuthentication(false, g_LastFinalizedTransactionID, 60);
+		      	   		return;
+		      	   	}
 		      	   	else
 		      	   	{
 		      	   		var ePaymentMethod = 2;

@@ -125,6 +125,37 @@ function IgnoreCurator( clanID, bIgnore )
 	HideMenu( )
 }
 
+InitInfiniteScroll.bEnabled = false;
+
+// Returns the infinite scroll object.
+// The CAjaxInfiniteScrollingControls will automatically unhook the old scroll handler when we make a new one.
+function InitInfiniteScroll()
+{
+	if (! InitInfiniteScroll.bEnabled)
+		return;
+
+    const oScrollOptions = {
+        "pagesize":    g_pagingData['pagesize'],
+        "total_count": g_pagingData['total_count'],
+        "prefix":      g_pagingData['prefix'],
+    };
+
+    const endpoint = g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations';
+    const infinite_scroller = new CAjaxInfiniteScrollingControls( oScrollOptions, endpoint );
+
+    infinite_scroller.SetStaticParameters( GetRecommendationFilterData() );
+
+    if ( GDynamicStore !== null ) {
+        infinite_scroller.SetPageChangedHandler(function( iPageNo, oUpdatedDom ) {
+            GDynamicStore.DecorateDynamicItems( $J(oUpdatedDom) );
+        });
+    }
+
+    // Hide the static pager control.
+    $J("#pager").hide();
+
+    return infinite_scroller;
+}
 
 function InitSearchFilters()
 {
@@ -154,6 +185,8 @@ function InitSearchFilters()
 
 		g_oRecommendations.m_rgStaticParams = rgParams;
 		g_oRecommendations.LoadPage( 0, true );
+
+		InitInfiniteScroll();
 	};
 
 	var fnAddFilter = function( strParam, value, $Checkbox )
@@ -356,12 +389,23 @@ function UpdateFilterTagCounts( rgFacets, strFacet, strElementIDPrefix, nCountOv
 
 function UpdateRecommendationFilterData( refresh = false, bForceReset = false )
 {
+    g_oPagingControls.SetStaticParameters( GetRecommendationFilterData( bForceReset ) );
+
+    if( refresh )
+    {
+        g_oPagingControls.GoToPage(0,true);
+    }
+
+    InitInfiniteScroll();
+}
+
+function GetRecommendationFilterData( bForceReset = false )
+{
 	var elForm = document.getElementById('filter_box');
 	var elTarget = document.getElementById('RecommendationsTable');
 
 	var rgTags = elForm.querySelectorAll('*[name="tagids"]');
 	var rgAppTypes = elForm.querySelectorAll('*[name="app_types"]');     	var rgCurations = elForm.querySelectorAll('*[name="curations"]'); 	var rgSorts = elForm.querySelectorAll('*[name="sort"]');
-
 
 	var rgValues = [];
 	for( var j=0; j<rgTags.length; j++ )
@@ -397,18 +441,13 @@ function UpdateRecommendationFilterData( refresh = false, bForceReset = false )
 			strSort = rgSorts[j].value;
 	}
 
-	g_oPagingControls.SetStaticParameters({
+	return {
 		"tagids": rgValues.join(','),
 		"sort": strSort,
 		"app_types": rgAppTypeValues.join(','),
 		"curations": rgCurationValues.join(','),
 		"reset": bForceReset.toString(),
-	});
-
-	if( refresh )
-	{
-		g_oPagingControls.GoToPage(0,true);
-	}
+	};
 }
 
 function GetPresentationStyle( rgNodeData, sectionType )
@@ -1157,6 +1196,7 @@ function ShowHeaderImageHandle( )
 
 
 $J(function() {
+
 	if( location.hash == "#edit" && g_bCanCurateApps)
 	{
 		ShowEditHandles ( g_bIsCreatorHome, g_bIsDLCPage );
