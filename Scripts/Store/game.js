@@ -1424,8 +1424,22 @@ function ChangeReviewPurchaseTypeFilter()
 	ShowFilteredReviews();
 }
 
-function ChangeReviewPlaytimeFilter()
+function OnReviewPlaytimeFilterSliderChanged()
 {
+	$J('input[name="review_playtime_preset"]').attr( 'checked', false );
+	ShowFilteredReviews();
+}
+
+function SelectPlaytimeFilterPreset( playtimeMinHours )
+{
+	var maxHours = 100;
+	var maxSeconds = maxHours * 60 * 60;
+
+	$J("#app_reviews_playtime_slider").slider('values', 0, playtimeMinHours * 60 * 60 );
+	$J("#app_reviews_playtime_slider").slider('values', 1, maxSeconds );
+
+	UpdatePlaytimeFilterValues( playtimeMinHours, maxHours );
+
 	ShowFilteredReviews();
 }
 
@@ -1453,6 +1467,21 @@ function CollapseLongReviews()
 	});
 }
 
+function UpdatePlaytimeFilterValues( hourMin, hourMax )
+{
+	var maxHours = 100;
+	$J( "#app_reviews_playtime_range_min" ).val( hourMin );
+	$J( "#app_reviews_playtime_range_max" ).val( hourMax == maxHours ? 0 : hourMax );
+
+	var strHoursMinNumber = v_numberformat( hourMin, 0 );
+	var strHourMin = hourMin > 0 ? 'Minimum of %1$s hour(s)'.replace( /%1\$s/g, strHoursMinNumber ) : 'No Minimum';
+	$J( "#app_reviews_playtime_range_text_min" ).text( strHourMin );
+
+	var strHoursMaxNumber = v_numberformat( hourMax, 0 );
+	var strHourMax = hourMax > 0 && hourMax != maxHours ? 'Maximum of %1$s hour(s)'.replace( /%1\$s/g, strHoursMaxNumber ) : 'No Maximum';
+	$J( "#app_reviews_playtime_range_text_max" ).text( strHourMax );
+}
+
 function InitPlaytimeFilterSlider()
 {
 	var maxHours = 100;
@@ -1470,17 +1499,13 @@ function InitPlaytimeFilterSlider()
 			var hourMin = parseInt( minSecs / ( 60 * 60 ), 10 );
 			var hourMax = parseInt( maxSecs / ( 60 * 60 ), 10 );
 
-			$J( "#app_reviews_playtime_range_min" ).val( hourMin );
-			$J( "#app_reviews_playtime_range_max" ).val( hourMax == maxHours ? 0 : hourMax );
-
-			var strHourMin = hourMin > 0 ? 'Minimum of %1$s hour(s)'.replace( /%1\$s/g, hourMin ) : 'No Minimum';
-			$J( "#app_reviews_playtime_range_text_min" ).text( strHourMin );
-
-			var strHourMax = hourMax > 0 && hourMax != maxHours ? 'Maximum of %1$s hour(s)'.replace( /%1\$s/g, hourMax ) : 'No Maximum';
-			$J( "#app_reviews_playtime_range_text_max" ).text( strHourMax );
+			UpdatePlaytimeFilterValues( hourMin, hourMax );
 		},
 		change: function( event, ui ) {
-			ChangeReviewPlaytimeFilter();
+			if ( event.originalEvent )
+			{
+				OnReviewPlaytimeFilterSliderChanged();
+			}
 		}
 	});
 }
