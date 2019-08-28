@@ -35465,9 +35465,7 @@
     var o = n("mrSG"),
       i = n("2vnA"),
       r = n("1n9R"),
-      a =
-        r.b.CHAT_BASE_URL +
-        "public/images/webui/broadcast/csgo_esl_2019_icon.png",
+      a = r.b.CHAT_BASE_URL + "public/images/broadcast/csgo_esl_2019_icon.png",
       s = (r.b.CHAT_BASE_URL,
       new ((function() {
         function e(e) {
@@ -35520,8 +35518,7 @@
           link: "https://store.steampowered.com/app/730",
           linkName: "CSGO on Steam",
           tabIcon: a,
-          offlineImage:
-            "public/images/webui/broadcast/csgo_major_berlin2019.png"
+          offlineImage: "public/images/broadcast/csgo_major_berlin2019.png"
         });
     }
   },
