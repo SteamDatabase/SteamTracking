@@ -95,14 +95,14 @@ function ShowAvatarDialog( rgData )
 		{
 			//$.Msg(avatar.ordinal);
 			//$.Msg(game.appid);
-			//$.Msg('https://steamcommunity.com/games/' + game.appid + '/selectAvatar/');
+			//$.Msg('https://steamcommunity.com/ogg/' + game.appid + '/selectAvatar/');
 
 			$('#AvatarFull').SetImage(GetImageLinkFromHash(baseURL, avatar.avatar_hash, 'full'));
 			$('#AvatarMedium').SetImage(GetImageLinkFromHash(baseURL, avatar.avatar_hash, 'medium'));
 			$('#AvatarSmall').SetImage(GetImageLinkFromHash(baseURL, avatar.avatar_hash));
 			CloseBigPicturePopup();
 
-			$.AsyncWebRequest( 'https://steamcommunity.com/games/' + game.appid + '/selectAvatar/',
+			$.AsyncWebRequest( 'https://steamcommunity.com/ogg/' + game.appid + '/selectAvatar/',
 				{
 					type: 'POST',
 					data: {
