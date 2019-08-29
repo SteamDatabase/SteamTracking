@@ -366,7 +366,7 @@ function InitInfiniteScroll( rgParameters )
     rgParameters = Object.assign({}, rgParameters);
 
 	// Is there a better way to find our current function?
-	let self = InitInfiniteScroll;
+	var self = InitInfiniteScroll;
 
 	// Clear any existing infinite scroll so we don't mix search results.
 	if (typeof( self.oController ) != "undefined" && self.oController !== null )
@@ -378,7 +378,7 @@ function InitInfiniteScroll( rgParameters )
 		return null;
 	}
 
-	const oScrollOptions = {
+	var oScrollOptions = {
 		"pagesize": 25,
 		"total_count": 1000, // Gets filled with real value after our first load.
 		"prefix": "search_results"
@@ -410,12 +410,12 @@ function InitInfiniteScroll( rgParameters )
 		}
 		// We need to check if something is a bundle or package first as they may also set data-ds-appid with
 		// the apps they contain.
-		const arrayAttrs = [ "data-ds-bundleid", "data-ds-packageid", "data-ds-appid" ];
+		var arrayAttrs = [ "data-ds-bundleid", "data-ds-packageid", "data-ds-appid" ];
 
-		let mapDuplicates = {};
+		var mapDuplicates = {};
 
 		// Javascript doesn't auto-create ("autovivify") map keys more than one layer deep, so set them up.
-		for (let i=0; i < arrayAttrs.length; i++ )
+		for (var i=0; i < arrayAttrs.length; i++ )
 		{
 			mapDuplicates[ arrayAttrs[i] ] = {};
 		}
@@ -427,13 +427,13 @@ function InitInfiniteScroll( rgParameters )
 			if ( ! item["attributes"] ) return;
 
 			//  Check our duplicate params.
-			for (let i = 0; i < arrayAttrs.length; i++)
+			for (var i = 0; i < arrayAttrs.length; i++)
 			{
-				const strAttr = arrayAttrs[i];
-				let node = null;
+				var strAttr = arrayAttrs[i];
+				var node = null;
 				if ( node = item.attributes[ strAttr ] )
 				{
-					const id = node['nodeValue'];
+					var id = node['nodeValue'];
 
 					if ( mapDuplicates[strAttr][ id ] )
 					{
@@ -534,18 +534,18 @@ function UpdateTags()
 
 function EnableClientSideFilters()
 {
-	const oFilters = {
+	var oFilters = {
 		'hide_owned':    { 'default': true },
 		'hide_ignored':  { 'default': true },
 		'hide_wishlist': { 'default': false },
 	};
 
-	let results_container = $J("#search_results");
+	var results_container = $J("#search_results");
 
-	for (const strFilter of Object.keys(oFilters))
+	for (var strFilter of Object.keys(oFilters))
 	{
 		// Find our control widget for this filter.
-		const $Control = $J("div[data-param='hide'][data-value='" + strFilter + "']");
+		var $Control = $J("div[data-param='hide'][data-value='" + strFilter + "']");
 
 		if ($Control.length < 1)
 		{
@@ -570,7 +570,7 @@ function EnableClientSideFilters()
 function OnClickClientFilter( $Control, strFilter, results_container )
 {
     return function() {
-        const $document = $J(document);
+        var $document = $J(document);
         nSavedOffset = $Control[0].getBoundingClientRect().top;
 
         $Control.toggleClass('checked');
@@ -583,7 +583,7 @@ function OnClickClientFilter( $Control, strFilter, results_container )
 
         // Our viewport will "jump" with the results list changing in length, so we calculate where we
         // need to be to be to keep the side-menu in the same location, and "scroll" to there.
-        const nFixScrollOffset = $document.scrollTop() - nSavedOffset + $Control[0].getBoundingClientRect().top;
+        var nFixScrollOffset = $document.scrollTop() - nSavedOffset + $Control[0].getBoundingClientRect().top;
         $document.scrollTop(nFixScrollOffset);
     };
 }

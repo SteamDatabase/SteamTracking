@@ -134,13 +134,13 @@ function InitInfiniteScroll()
 	if (! InitInfiniteScroll.bEnabled)
 		return;
 
-    const oScrollOptions = {
+    var oScrollOptions = {
         "pagesize":    g_pagingData['pagesize'],
         "total_count": g_pagingData['total_count'],
         "prefix":      g_pagingData['prefix'],
     };
 
-    const endpoint = g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations';
+    var endpoint = g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations';
     const infinite_scroller = new CAjaxInfiniteScrollingControls( oScrollOptions, endpoint );
 
     infinite_scroller.SetStaticParameters( GetRecommendationFilterData() );

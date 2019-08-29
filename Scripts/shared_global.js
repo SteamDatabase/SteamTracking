@@ -1923,7 +1923,7 @@ function CAjaxInfiniteScrollingControls( rgSearchData, url )
 
 	// We want our handlers to get a copy of our infiniteScroll object when they're called, so we save it
 	// into a var and build a closure around it.
-	let thisControl = this;
+	var thisControl = this;
 
 	// By saving the bound scroll-handler to a variable, we can then unload it when our search
 	// options are upadated.
@@ -2012,10 +2012,10 @@ CAjaxInfiniteScrollingControls.prototype.OnScroll = function()
 	if ( this.m_bLoading )
 		return;
 
-	const iNow = new Date().getTime();
+	var iNow = new Date().getTime();
 
 	// How soon can we scroll?
-	const iScrollWait = this.m_iCooldownTime - iNow;
+	var iScrollWait = this.m_iCooldownTime - iNow;
 
 	// If we haven't reached our cooldown, do nothing.
 	if ( iScrollWait > 0 )
@@ -2160,14 +2160,14 @@ CAjaxInfiniteScrollingControls.prototype.GetThrobber = function() {
 };
 
 CAjaxInfiniteScrollingControls.prototype.HideThrobber = function() {
-	const throbber = this.GetThrobber();
+	var throbber = this.GetThrobber();
 
 	if (throbber)
 		throbber.hide();
 };
 
 CAjaxInfiniteScrollingControls.prototype.ShowThrobber = function() {
-	const throbber = this.GetThrobber();
+	var throbber = this.GetThrobber();
 
 	if (throbber)
 		throbber.show();
