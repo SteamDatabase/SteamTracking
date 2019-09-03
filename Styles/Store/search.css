@@ -204,6 +204,11 @@
 	max-width: 686px;
 }
 
+/* wait until dynamicstore is ready to show results */
+.search_results.results_loading {
+	display: none;
+}
+
 .search_results.hide_owned    .ds_owned,
 .search_results.hide_ignored  .ds_ignored,
 .search_results.hide_wishlist .ds_wishlist {

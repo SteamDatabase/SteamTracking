@@ -6137,13 +6137,7 @@
         short_url: ""
       },
       c = { steamid: "", clanid: 0, listid: 0 },
-      l = {
-        CLANSTEAMID: "",
-        CLANACCOUNTID: 0,
-        IMG_URL: "",
-        CLANURLNAME: "",
-        APPID: 0
-      },
+      l = { CLANSTEAMID: "", CLANACCOUNTID: 0, IMG_URL: "", APPID: 0 },
       p = "webui_config";
     function u() {
       var e = (function() {
@@ -26974,7 +26968,7 @@
     });
     var g = new ((function() {
       function e() {
-        (this.m_mapAppInfo = new Map()),
+        (this.m_mapAppInfo = o.x.map()),
           (this.m_mapRichPresenceLoc = o.x.map()),
           (this.m_cAppInfoRequestsInFlight = 0),
           (this.m_setPendingAppInfo = new Set()),
@@ -27010,19 +27004,18 @@
           this.m_fnCallbackOnAppInfoLoaded.Register(e);
         }),
         (e.prototype.GetAppInfo = function(e) {
-          Object(l.a)(
-            this.m_CMInterface,
-            "CAppInfoStore.GetAppInfo called before Init"
-          ),
-            Object(l.a)(e, "Requesting App ID 0, which won't ever exist");
-          var t = this.m_mapAppInfo.get(e);
-          return (
-            t ||
-              ((t = new p(e)),
-              this.m_mapAppInfo.set(e, t),
-              this.QueueAppInfoRequest(e)),
-            t
-          );
+          if (
+            (Object(l.a)(
+              this.m_CMInterface,
+              "CAppInfoStore.GetAppInfo called before Init"
+            ),
+            Object(l.a)(e, "Requesting App ID 0, which won't ever exist"),
+            !this.m_mapAppInfo.has(e))
+          ) {
+            var t = new p(e);
+            this.m_mapAppInfo.set(e, t), this.QueueAppInfoRequest(e);
+          }
+          return this.m_mapAppInfo.get(e);
         }),
         (e.prototype.QueueAppInfoRequest = function(e) {
           var t = this;
@@ -27338,7 +27331,6 @@
             t.m_fetching
           );
         }),
-        s.c([o.x.shallow], e.prototype, "m_mapAppInfo", void 0),
         s.c([o.g], e.prototype, "OnGetAppsResponse", null),
         s.c([o.g], e.prototype, "OnRichPresenceLocUpdate", null),
         e
@@ -68113,12 +68105,13 @@ and limitations under the License.
             (this.m_mapFallbackTokens = new Map());
         }
         return (
-          (e.prototype.InitFromObjects = function(n, o, i, r) {
+          (e.prototype.InitFromObjects = function(n, o, i, r, e) {
             var a = this;
-            this.m_mapTokens.clear(),
-              Object.keys(i).forEach(function(e, t) {
-                a.m_mapTokens.set(e, i[e]);
-              }),
+            e || this.m_mapTokens.clear(),
+              i &&
+                Object.keys(i).forEach(function(e, t) {
+                  a.m_mapTokens.set(e, i[e]);
+                }),
               Object.keys(n).forEach(function(e, t) {
                 a.m_mapTokens.set(e, n[e]);
               }),
@@ -70245,7 +70238,7 @@ and limitations under the License.
       r = n("XaMz"),
       o = n("tkkQ"),
       a = n("ujHl"),
-      d = 2 * a.a.PerMinute,
+      d = a.a.PerMinute,
       h = 6 * a.a.PerHour,
       s = (function() {
         function a(e, t, n) {
@@ -70347,18 +70340,18 @@ and limitations under the License.
           }),
           (a.prototype.SendWithRetries = function(a, s) {
             return c.b(this, void 0, void 0, function() {
-              var o,
+              var i,
                 t,
                 n,
-                i,
+                o,
                 r = this;
               return c.e(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    (o = 1),
+                    (i = 1),
                       (t = Date.now()),
                       (n = function() {
-                        var t, n;
+                        var t, n, o;
                         return c.e(this, function(e) {
                           switch (e.label) {
                             case 0:
@@ -70406,9 +70399,14 @@ and limitations under the License.
                                     [2, { value: a.eErrorSending }]
                                   );
                                 default:
+                                  if (3 === t.Hdr().transport_error())
+                                    return (
+                                      (a.eErrorSending = u.f.Generic),
+                                      [2, { value: a.eErrorSending }]
+                                    );
                                   console.warn(
                                     "Error sending message (Attempt #" +
-                                      o +
+                                      i +
                                       "). Got EResult " +
                                       t.GetEResult()
                                   );
@@ -70419,21 +70417,24 @@ and limitations under the License.
                                 (n = e.sent()),
                                 console.warn(
                                   "Error sending message (Attempt #" +
-                                    o +
+                                    i +
                                     "). Got error " +
                                     n
                                 ),
                                 [3, 3]
                               );
                             case 3:
-                              return [
-                                4,
-                                new Promise(function(e) {
-                                  return setTimeout(e, 500);
-                                })
-                              ];
+                              return (
+                                (o = 1 * Math.pow(2, i - 1)),
+                                [
+                                  4,
+                                  new Promise(function(e) {
+                                    return setTimeout(e, 1e3 * o);
+                                  })
+                                ]
+                              );
                             case 4:
-                              return e.sent(), o++, [2];
+                              return e.sent(), i++, [2];
                           }
                         });
                       }),
@@ -70441,8 +70442,8 @@ and limitations under the License.
                   case 1:
                     return Date.now() - 1e3 * d < t ? [5, n()] : [3, 3];
                   case 2:
-                    return "object" == typeof (i = e.sent())
-                      ? [2, i.value]
+                    return "object" == typeof (o = e.sent())
+                      ? [2, o.value]
                       : [3, 1];
                   case 3:
                     return (

@@ -563,6 +563,10 @@ function EnableClientSideFilters()
 		// Click handler to toggle this filter.
 		$Control.click( OnClickClientFilter($Control, strFilter, results_container) );
 	}
+
+	GDynamicStore.OnReady( function() {
+		results_container.removeClass( 'results_loading' );
+	} );
 }
 
 // This exists to ensure that we've got function-scope for our closures because *some* browsers

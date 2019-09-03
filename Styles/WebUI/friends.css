@@ -664,7 +664,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   text-overflow: ellipsis;
   font-size: 10px;
   margin-top: -1px;
-  -webkit-mask: linear-gradient(to right, black 85%, rgba(0, 0, 0, 0.15) 100%); }
+  -webkit-mask: linear-gradient(to right, black calc( 100% - 8px), rgba(0, 0, 0, 0.15) 100%);
+  margin-right: -24px; }
 
 .personanameandstatus_NoMask_1Wsqc .personanameandstatus_richPresenceLabel_3Q6g1 {
   -webkit-mask-image: none; }
@@ -840,7 +841,8 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
   -webkit-app-region: no-drag; }
 
 .currentUserContainer .personanameandstatus_richPresenceContainer_21cNf {
-  margin-top: 2px; }
+  margin-top: 2px;
+  align-self: stretch; }
 
 .currentUserContainer .personanameandstatus_compactView_2PCWF .personanameandstatus_playerName_1uxaf {
   font-size: 14px;
@@ -10674,7 +10676,6 @@ body.in_global_drag .friendlist_titlebar {
   min-width: 0;
   display: flex;
   flex-shrink: 1;
-  margin-right: 84px;
   flex-direction: column;
   justify-content: flex-end;
   margin-bottom: -4px; }

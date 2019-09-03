@@ -443,13 +443,7 @@
         short_url: ""
       },
       u = { steamid: "", clanid: 0, listid: 0 },
-      c = {
-        CLANSTEAMID: "",
-        CLANACCOUNTID: 0,
-        IMG_URL: "",
-        CLANURLNAME: "",
-        APPID: 0
-      },
+      c = { CLANSTEAMID: "", CLANACCOUNTID: 0, IMG_URL: "", APPID: 0 },
       p = "webui_config";
     function l() {
       var e = (function() {
@@ -1964,12 +1958,13 @@ and limitations under the License.
             (this.m_mapFallbackTokens = new Map());
         }
         return (
-          (e.prototype.InitFromObjects = function(n, r, o, i) {
+          (e.prototype.InitFromObjects = function(n, r, o, i, e) {
             var a = this;
-            this.m_mapTokens.clear(),
-              Object.keys(o).forEach(function(e, t) {
-                a.m_mapTokens.set(e, o[e]);
-              }),
+            e || this.m_mapTokens.clear(),
+              o &&
+                Object.keys(o).forEach(function(e, t) {
+                  a.m_mapTokens.set(e, o[e]);
+                }),
               Object.keys(n).forEach(function(e, t) {
                 a.m_mapTokens.set(e, n[e]);
               }),

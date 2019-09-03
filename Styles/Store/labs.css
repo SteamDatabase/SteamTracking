@@ -4,6 +4,14 @@ body.v6 .page_content {
     display: flex;
     flex-direction: column;
 }
+
+body.v6 .page_content_1024 {
+    display: flex;
+    flex-direction: column;
+    width: 1024px;
+    margin: 0 auto;
+}
+
 /* Contain all Labs main page. */
 body.v6.labs {
     background: #181d3a;
@@ -559,3 +567,25 @@ a.ultracast_now_playing_link:hover .ds_options {
     width: 1000px;
     margin: 0px auto;
 }
+
+/* Micro Trailer Tag Test */
+.microtrailers_tag_capsule
+{
+	transition: transform 0.1s;
+}
+
+.microtrailers_tag_capsule:hover
+{
+	transform: scale(1.03);
+}
+
+.microtrailers_grid_item_september
+{
+	transition: transform 0.1s;
+}
+
+.microtrailers_grid_item_september:hover
+{
+	transform: scale(1.03);
+}
+

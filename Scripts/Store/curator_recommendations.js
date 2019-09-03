@@ -125,7 +125,8 @@ function IgnoreCurator( clanID, bIgnore )
 	HideMenu( )
 }
 
-InitInfiniteScroll.bEnabled = false;
+var g_oInfiniteScrollController = null;
+InitInfiniteScroll.bEnabled = true;
 
 // Returns the infinite scroll object.
 // The CAjaxInfiniteScrollingControls will automatically unhook the old scroll handler when we make a new one.
@@ -134,6 +135,9 @@ function InitInfiniteScroll()
 	if (! InitInfiniteScroll.bEnabled)
 		return;
 
+	// Stop old scroller; this is a no-op if we weren't InfiniScrolling.
+	StopInfiniteScroll();
+
     var oScrollOptions = {
         "pagesize":    g_pagingData['pagesize'],
         "total_count": g_pagingData['total_count'],
@@ -141,12 +145,12 @@ function InitInfiniteScroll()
     };
 
     var endpoint = g_strCuratorBaseURL + 'ajaxgetfilteredrecommendations';
-    const infinite_scroller = new CAjaxInfiniteScrollingControls( oScrollOptions, endpoint );
+    g_oInfiniteScrollController = new CAjaxInfiniteScrollingControls( oScrollOptions, endpoint );
 
-    infinite_scroller.SetStaticParameters( GetRecommendationFilterData() );
+    g_oInfiniteScrollController.SetStaticParameters( GetRecommendationFilterData() );
 
     if ( GDynamicStore !== null ) {
-        infinite_scroller.SetPageChangedHandler(function( iPageNo, oUpdatedDom ) {
+        g_oInfiniteScrollController.SetPageChangedHandler(function( iPageNo, oUpdatedDom ) {
             GDynamicStore.DecorateDynamicItems( $J(oUpdatedDom) );
         });
     }
@@ -154,7 +158,15 @@ function InitInfiniteScroll()
     // Hide the static pager control.
     $J("#pager").hide();
 
-    return infinite_scroller;
+}
+
+function StopInfiniteScroll()
+{
+	if ( g_oInfiniteScrollController !== null )
+	{
+		g_oInfiniteScrollController.Stop();
+		g_oInfiniteScrollController = null;
+	}
 }
 
 function InitSearchFilters()
@@ -1211,14 +1223,19 @@ $J(function() {
 
 		g_oPagingControls.SetPageChangingHandler ( function ( nPage )
 		{
+			StopInfiniteScroll();
 			$J ( '#RecommendationsTable' ).addClass ( 'loading' );
 		} );
+
 		g_oPagingControls.SetPageChangedHandler ( function ( nPage )
 		{
 			$J ( '#RecommendationsTable' ).removeClass ( 'loading' );
+			InitInfiniteScroll();
 		} );
 
 		g_oPagingControls.SetResponseHandler( function( response ) {
+			g_pagingData.total_count = response.total_count;
+		
 			GDynamicStore.DecorateDynamicItems();
 
 						if( ('bFiltering' in response) && !response.bFiltering && ('rgFacets' in response) ) {

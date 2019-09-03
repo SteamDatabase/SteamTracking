@@ -1479,4 +1479,10 @@ function ChangePrimaryPublisher()
 	} );
 }
 
+function CloseEmailReminder()
+{
+	$J( '.address_reminder_ctn' ).slideUp();
+	V_SetCookie( "hideEmailAddressReminder", 1, 30 );
+}
+
 

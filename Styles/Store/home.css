@@ -70,18 +70,8 @@
 	margin-top: 20px;
 }
 
-.has_takeover >
-
 .home_page_gutter_block {
-	width: 176px;
-	border: 1px solid rgba( 46, 62, 76, 0.5 );
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-	border-right: none;
-
-	background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALkAAAABCAYAAACCNA9EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACdJREFUeNpiVDd3q2dgYPgPxQxIbHQ+qexR/aP6B1z/jRM7/wMEGAArNIH//s8wcwAAAABJRU5ErkJggg==' ) repeat-y left;
-
-	padding: 7px 0 7px 16px;
+	width: 210px;
 	margin-bottom: 20px;
 }
 
@@ -120,7 +110,7 @@ a.gutter_giftcard.gutter_item {
 }
 
 .home_page_gutter_giftcard {
-	max-width: 210px;
+	max-width: 100%;
 }
 
 body:not(.no_home_gutter) .home_page_content {

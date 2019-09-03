@@ -825,6 +825,25 @@ GDynamicStore = {
 		});
 	},
 
+
+	
+	ToggleClientsideFilter: function( elControl, strToggleClass, elResults, strFilterClass )
+	{
+		$Control = $J(elControl);
+		$Results = $J(elResults);
+
+		$Control.toggleClass( strToggleClass );
+
+		if ( $Control.hasClass( strToggleClass ) )
+		{
+			$Results.addClass( strFilterClass );
+		}
+		else
+		{
+			$Results.removeClass( strFilterClass );
+		}
+	},
+
 	ModifyIgnoredApp: function( $elSource, appid, bRemove, fnOnSuccess, fnOnFail )
 	{
 		if ( bRemove )

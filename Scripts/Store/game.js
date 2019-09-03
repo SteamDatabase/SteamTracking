@@ -1129,7 +1129,7 @@ function BuildReviewHistogram()
 
 				var dateOptions = { day: 'numeric', month: 'long', year: 'numeric', timeZone: "UTC" };
 				var strDate = date.toLocaleDateString( undefined, dateOptions );
-				tooltip.html( numReviews + " " + item.series.label + " (" + strDate + ")" );
+				tooltip.html( v_numberformat( numReviews, 0 ) + " " + item.series.label + " (" + strDate + ")" );
 				tooltip.css( {top: item.pageY+yDelta, left: item.pageX+xDelta} );
 				tooltip.fadeIn( 10 );
 
@@ -1185,8 +1185,8 @@ function BuildReviewHistogram()
 		var funcSelected = function( plot ) {
 			return function (event, ranges) {
 
-				var startDate = ranges.xaxis.from.toFixed(1) / 1000;
-				var endDate = ranges.xaxis.to.toFixed(1) / 1000;
+				var startDate = Math.floor( ranges.xaxis.from.toFixed(1) / ( 86400 * 1000 ) ) * 86400;
+				var endDate = Math.ceil( ranges.xaxis.to.toFixed(1) / ( 86400 * 1000 ) ) * 86400;
 
 				$J( '#review_type_all' ).attr( 'checked', true );
 				FilterReviewsToGraph( bCountAllReviews, startDate, endDate );

@@ -9,7 +9,9 @@
       i < n.length;
       i++
     )
-      (a = n[i]), u[a] && s.push(u[a][0]), (u[a] = 0);
+      (a = n[i]),
+        Object.prototype.hasOwnProperty.call(u, a) && u[a] && s.push(u[a][0]),
+        (u[a] = 0);
     for (t in r) Object.prototype.hasOwnProperty.call(r, t) && (c[t] = r[t]);
     for (d && d(e); s.length; ) s.shift()();
     return p.push.apply(p, o || []), l();
@@ -86,158 +88,158 @@
 })({
   "2i24": function(e, t, a) {
     e.exports = {
-      LoadingWrapper: "throbber_LoadingWrapper_msgsp",
-      noString: "throbber_noString_39a5G",
-      Throbber: "throbber_Throbber_28HA5",
-      throbber_small: "throbber_throbber_small_R8kRv",
-      throbber_medium: "throbber_throbber_medium_21Bdq",
-      throbber_large: "throbber_throbber_large_14FA2",
-      throbber_center_wrapper: "throbber_throbber_center_wrapper_28-k6",
-      ThrobberText: "throbber_ThrobberText_2rdZW",
-      blur: "throbber_blur_2Shbh",
-      ThrobberRoundLoop: "throbber_ThrobberRoundLoop_3BTwy",
-      roundOuterOutline: "throbber_roundOuterOutline_2kKMJ",
-      roundOuter: "throbber_roundOuter_1ZHiy",
-      roundFill: "throbber_roundFill_rXZXF",
-      ThrobberFillLoop: "throbber_ThrobberFillLoop_3rz-K",
-      topCircle: "throbber_topCircle_2L17u",
-      circlePulse: "throbber_circlePulse_2MIt-",
-      ThrobberTopCircleLoop: "throbber_ThrobberTopCircleLoop_1hZ4k",
-      ThrobberBottomCircleLoop: "throbber_ThrobberBottomCircleLoop_1E-wE",
-      bottomCircle: "throbber_bottomCircle_3s6LC",
-      roundThrobber15: "throbber_roundThrobber15_AyryQ",
-      roundThrobber14: "throbber_roundThrobber14_1TsML",
-      roundThrobber13: "throbber_roundThrobber13_JWnec",
-      roundThrobber12: "throbber_roundThrobber12_wRh21",
-      roundThrobber11: "throbber_roundThrobber11_1ES7b",
-      roundThrobber10: "throbber_roundThrobber10_vxvy5",
-      roundThrobber09: "throbber_roundThrobber09_2evaC",
-      roundThrobber08: "throbber_roundThrobber08_uKLR6",
-      roundThrobber07: "throbber_roundThrobber07_13XYp",
-      roundThrobber06: "throbber_roundThrobber06_2TT3G",
-      roundThrobber05: "throbber_roundThrobber05_2feUK",
-      roundThrobber04: "throbber_roundThrobber04_1FkuU",
-      roundThrobber03: "throbber_roundThrobber03_mns2g",
-      roundThrobber02: "throbber_roundThrobber02_3TmHL",
-      roundThrobber01: "throbber_roundThrobber01_EpAIO",
-      ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_2r0qo",
-      throbber_xlarge: "throbber_throbber_xlarge_GYXOA"
+      LoadingWrapper: "throbber_LoadingWrapper_2wAKy",
+      noString: "throbber_noString_1Sy0p",
+      Throbber: "throbber_Throbber_lYUEj",
+      throbber_small: "throbber_throbber_small_2zbyh",
+      throbber_medium: "throbber_throbber_medium_2CphU",
+      throbber_large: "throbber_throbber_large_1x18v",
+      throbber_center_wrapper: "throbber_throbber_center_wrapper_3IYPz",
+      ThrobberText: "throbber_ThrobberText_21nVi",
+      blur: "throbber_blur_1ctjA",
+      ThrobberRoundLoop: "throbber_ThrobberRoundLoop_1O-cW",
+      roundOuterOutline: "throbber_roundOuterOutline_1Vv--",
+      roundOuter: "throbber_roundOuter_2K0Lz",
+      roundFill: "throbber_roundFill_3sQFk",
+      ThrobberFillLoop: "throbber_ThrobberFillLoop_ofdi9",
+      topCircle: "throbber_topCircle_1LZff",
+      circlePulse: "throbber_circlePulse_1XN6Z",
+      ThrobberTopCircleLoop: "throbber_ThrobberTopCircleLoop_1jALk",
+      ThrobberBottomCircleLoop: "throbber_ThrobberBottomCircleLoop_1KvOg",
+      bottomCircle: "throbber_bottomCircle_2qjZm",
+      roundThrobber15: "throbber_roundThrobber15_2LGHp",
+      roundThrobber14: "throbber_roundThrobber14_2FGCn",
+      roundThrobber13: "throbber_roundThrobber13_1X-5j",
+      roundThrobber12: "throbber_roundThrobber12_1pj1Q",
+      roundThrobber11: "throbber_roundThrobber11_xFmZa",
+      roundThrobber10: "throbber_roundThrobber10_3MGYo",
+      roundThrobber09: "throbber_roundThrobber09_ktVJ4",
+      roundThrobber08: "throbber_roundThrobber08_3s_7m",
+      roundThrobber07: "throbber_roundThrobber07_11MVp",
+      roundThrobber06: "throbber_roundThrobber06_2cl-m",
+      roundThrobber05: "throbber_roundThrobber05_3-JE0",
+      roundThrobber04: "throbber_roundThrobber04_1xNIK",
+      roundThrobber03: "throbber_roundThrobber03_1S17y",
+      roundThrobber02: "throbber_roundThrobber02_1-oUJ",
+      roundThrobber01: "throbber_roundThrobber01_2tXge",
+      ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_1fs4R",
+      throbber_xlarge: "throbber_throbber_xlarge_1gYeZ"
     };
   },
   "6TF7": function(e, t, a) {
     e.exports = {
       nSmallEntryWidth: "600px",
       nOptionsWrapWidth: "777px",
-      colorBlack: "app_colorBlack_1JVex",
-      colorWhite: "app_colorWhite_ba6mN",
-      colorDarkGrey: "app_colorDarkGrey_K5t9u",
-      colorGrey: "app_colorGrey_1PZmt",
-      colorLightGrey: "app_colorLightGrey_19yhK",
-      colorOrange: "app_colorOrange_1tk7k",
-      colorRed: "app_colorRed_37FCd",
-      colorAqua: "app_colorAqua_1DOz3",
-      colorBlue: "app_colorBlue_1se7o",
-      colorBrightRed: "app_colorBrightRed_3O2fx",
-      colorBrightBlue: "app_colorBrightBlue_1xOyr",
-      colorBrightOrange: "app_colorBrightOrange_2R6Qb",
-      colorBrightPurple: "app_colorBrightPurple_2SDQh",
-      colorBrightYellow: "app_colorBrightYellow_13nGn",
-      colorBrightGreen: "app_colorBrightGreen_ceFjl",
-      colorBrightGrey: "app_colorBrightGrey_ZXwW0",
-      backgroundColorBlack: "app_backgroundColorBlack_381-u",
-      backgroundColorDarkGrey: "app_backgroundColorDarkGrey_1QuV8",
-      backgroundColorLightGrey: "app_backgroundColorLightGrey_1wPTr",
-      backgroundColorWhite: "app_backgroundColorWhite_3U5De",
-      backgroundColorOrange: "app_backgroundColorOrange_3H9sg",
-      backgroundColorRed: "app_backgroundColorRed_FS2au",
-      backgroundColorAqua: "app_backgroundColorAqua_1KCds",
-      backgroundColorBlue: "app_backgroundColorBlue_3YGac",
-      backgroundColorGrey: "app_backgroundColorGrey_3uAoa",
-      backgroundColorBrightRed: "app_backgroundColorBrightRed_1yF9P",
-      backgroundColorBrightBlue: "app_backgroundColorBrightBlue_Nt9zr",
-      backgroundColorBrightOrange: "app_backgroundColorBrightOrange_OQidQ",
-      backgroundColorBrightPurple: "app_backgroundColorBrightPurple_1LdlS",
-      backgroundColorBrightYellow: "app_backgroundColorBrightYellow_1E3sP",
-      backgroundColorBrightGreen: "app_backgroundColorBrightGreen_2ZgTD",
-      backgroundColorBrightGrey: "app_backgroundColorBrightGrey_3F-Sx",
-      App: "app_App_1VNi1",
-      Login: "app_Login_cZni8",
-      Text: "app_Text_QPHkp",
-      Container: "app_Container_XIPhA",
-      TopSection: "app_TopSection_3ZdF_",
-      Header: "app_Header_2Dmjt",
-      Body: "app_Body_rkIdN",
-      Spacer: "app_Spacer_Syr2l",
-      BottomSection: "app_BottomSection_3EvEA",
-      VerticalBar: "app_VerticalBar_3_V_e",
-      PlaytimeList: "app_PlaytimeList_1W_id",
-      Loading: "app_Loading_3EKSZ",
-      IdentityBlock: "app_IdentityBlock_19Bi9",
-      Avatar: "app_Avatar_2tHL1",
-      PersonalInfo: "app_PersonalInfo_2UOnR",
-      Persona: "app_Persona_QQZQk",
-      GameCount: "app_GameCount_2F2Pu",
-      TotalTime: "app_TotalTime_2f_II",
-      PlayedGame: "app_PlayedGame_1RMe-",
-      Ignored: "app_Ignored_S05G_",
-      PlaytimeInfo: "app_PlaytimeInfo_26XnS",
-      IgnoreToggle: "app_IgnoreToggle_32kxi",
-      Logo: "app_Logo_3yA86",
-      HoursPlayed: "app_HoursPlayed_YzQV_",
-      Title: "app_Title_1C2xv",
-      LastPlayed: "app_LastPlayed_1kbFb",
-      UpdateSaveBlock: "app_UpdateSaveBlock_31ynD",
-      UpdateButton: "app_UpdateButton_1_Ap6",
-      Enabled: "app_Enabled_2gzL9",
-      RecommendationList: "app_RecommendationList_2UkLX",
-      List: "app_List_115iv",
-      Updating: "app_Updating_W60ex",
-      RecommendationOptions: "app_RecommendationOptions_2jiHP",
-      Row: "app_Row_O0NAA",
-      SecondRow: "app_SecondRow_6FjGe",
-      OptionCheckbox: "app_OptionCheckbox_3coaI",
-      Checkbox: "app_Checkbox_3hRS3",
-      WishlistCheckbox: "app_WishlistCheckbox_3awsX",
-      OptionSlider: "app_OptionSlider_sLHtG",
-      Labels: "app_Labels_vq2C2",
-      Min: "app_Min_2zfSC",
-      Max: "app_Max_4ugol",
-      OptionalLabel: "app_OptionalLabel_x7Ol7",
-      OptionDropdown: "app_OptionDropdown_OpsgV",
-      Label: "app_Label_2-25b",
-      OptionTagList: "app_OptionTagList_1ion4",
-      SelectedTag: "app_SelectedTag_37dZL",
-      Close: "app_Close_3dhm3",
-      game_purchase_action: "app_game_purchase_action_2fgLt",
-      RecommendationEntry: "app_RecommendationEntry_18wXZ",
-      BottomEntrySection: "app_BottomEntrySection_1_mTs",
-      WishlistSection: "app_WishlistSection_3gCwT",
-      Hidden: "app_Hidden_2fA6b",
-      TopEntrySection: "app_TopEntrySection_38Oo-",
-      LeftSection: "app_LeftSection_85OOv",
-      Video: "app_Video_bQLsR",
-      Revealed: "app_Revealed_1k4IQ",
-      UnMute: "app_UnMute_YNcsz",
-      RightSection: "app_RightSection_wpedx",
-      CenterSection: "app_CenterSection_2cG4b",
-      CenterOption: "app_CenterOption_1Ob_g",
-      Name: "app_Name_2TXc4",
-      Released: "app_Released_2vUYQ",
-      BarContainer: "app_BarContainer_3x-Ph",
-      Bar: "app_Bar_1Jqtf",
-      Score: "app_Score_gYJC1",
-      Tags: "app_Tags_1I0B5",
-      Tag: "app_Tag_2Hhn2",
-      Hovered: "app_Hovered_2llCE",
-      Wishlisted: "app_Wishlisted_3-h1I",
-      PurchaseSection: "app_PurchaseSection_3gZMG",
-      PurchaseBG: "app_PurchaseBG_1z4lO",
-      WishlistFlag: "app_WishlistFlag_1fBvX",
-      SelectionBox: "app_SelectionBox_1ydvC",
-      SuggestionInput: "app_SuggestionInput_17Ifb",
-      SuggestionContainerOpen: "app_SuggestionContainerOpen_3pqlK",
-      SuggestionsList: "app_SuggestionsList_2CJTF",
-      OptionSuggestion: "app_OptionSuggestion_3GG0D"
+      colorBlack: "app_colorBlack_1Twg4",
+      colorWhite: "app_colorWhite_3oE_S",
+      colorDarkGrey: "app_colorDarkGrey_3tphA",
+      colorGrey: "app_colorGrey_3YqsH",
+      colorLightGrey: "app_colorLightGrey_3pfPS",
+      colorOrange: "app_colorOrange_1nodv",
+      colorRed: "app_colorRed_29wGe",
+      colorAqua: "app_colorAqua_2RcNN",
+      colorBlue: "app_colorBlue_sqTzm",
+      colorBrightRed: "app_colorBrightRed_1CXAL",
+      colorBrightBlue: "app_colorBrightBlue_23fbL",
+      colorBrightOrange: "app_colorBrightOrange_UdbrM",
+      colorBrightPurple: "app_colorBrightPurple_WGNlF",
+      colorBrightYellow: "app_colorBrightYellow_3K2vU",
+      colorBrightGreen: "app_colorBrightGreen_3MZzT",
+      colorBrightGrey: "app_colorBrightGrey_2T-cX",
+      backgroundColorBlack: "app_backgroundColorBlack_3yP6s",
+      backgroundColorDarkGrey: "app_backgroundColorDarkGrey_1OTAH",
+      backgroundColorLightGrey: "app_backgroundColorLightGrey_1HbN4",
+      backgroundColorWhite: "app_backgroundColorWhite_2uSHp",
+      backgroundColorOrange: "app_backgroundColorOrange_1NKxH",
+      backgroundColorRed: "app_backgroundColorRed_3nJpq",
+      backgroundColorAqua: "app_backgroundColorAqua_2bjla",
+      backgroundColorBlue: "app_backgroundColorBlue_1SlKy",
+      backgroundColorGrey: "app_backgroundColorGrey_29zST",
+      backgroundColorBrightRed: "app_backgroundColorBrightRed_2NRUx",
+      backgroundColorBrightBlue: "app_backgroundColorBrightBlue_Y9AeT",
+      backgroundColorBrightOrange: "app_backgroundColorBrightOrange_3-mT9",
+      backgroundColorBrightPurple: "app_backgroundColorBrightPurple_3BbJw",
+      backgroundColorBrightYellow: "app_backgroundColorBrightYellow_14P9t",
+      backgroundColorBrightGreen: "app_backgroundColorBrightGreen_25ip8",
+      backgroundColorBrightGrey: "app_backgroundColorBrightGrey_139am",
+      App: "app_App_2uHYt",
+      Login: "app_Login_MXvwu",
+      Text: "app_Text_2FJKS",
+      Container: "app_Container_3wbt9",
+      TopSection: "app_TopSection_2GV0T",
+      Header: "app_Header_2QbCs",
+      Body: "app_Body_3BvIC",
+      Spacer: "app_Spacer_dwZt2",
+      BottomSection: "app_BottomSection_2FQVm",
+      VerticalBar: "app_VerticalBar_1yt5e",
+      PlaytimeList: "app_PlaytimeList_2o6_s",
+      Loading: "app_Loading_1Vl4Z",
+      IdentityBlock: "app_IdentityBlock_1lwF7",
+      Avatar: "app_Avatar_2712Z",
+      PersonalInfo: "app_PersonalInfo_1GKsY",
+      Persona: "app_Persona_3uCFL",
+      GameCount: "app_GameCount_2y5Fe",
+      TotalTime: "app_TotalTime_2m3kE",
+      PlayedGame: "app_PlayedGame_1IBXS",
+      Ignored: "app_Ignored_3CDMe",
+      PlaytimeInfo: "app_PlaytimeInfo_3xnmm",
+      IgnoreToggle: "app_IgnoreToggle_32-2N",
+      Logo: "app_Logo_yICkU",
+      HoursPlayed: "app_HoursPlayed_3pRyO",
+      Title: "app_Title_1egiL",
+      LastPlayed: "app_LastPlayed_1xaO0",
+      UpdateSaveBlock: "app_UpdateSaveBlock_3shyy",
+      UpdateButton: "app_UpdateButton_1anQK",
+      Enabled: "app_Enabled_24sJk",
+      RecommendationList: "app_RecommendationList_3Hxm8",
+      List: "app_List_2SIHd",
+      Updating: "app_Updating_2ZpO2",
+      RecommendationOptions: "app_RecommendationOptions_XB2CT",
+      Row: "app_Row_2M7kD",
+      SecondRow: "app_SecondRow_1s_bp",
+      OptionCheckbox: "app_OptionCheckbox_3ONXD",
+      Checkbox: "app_Checkbox_10M0W",
+      WishlistCheckbox: "app_WishlistCheckbox_3Yttg",
+      OptionSlider: "app_OptionSlider_2w3dR",
+      Labels: "app_Labels_2gaDw",
+      Min: "app_Min_2uKTb",
+      Max: "app_Max_MzFCE",
+      OptionalLabel: "app_OptionalLabel_WcOux",
+      OptionDropdown: "app_OptionDropdown_3ZjDD",
+      Label: "app_Label_2PLXD",
+      OptionTagList: "app_OptionTagList_1vk97",
+      SelectedTag: "app_SelectedTag_2X7U3",
+      Close: "app_Close_24vX6",
+      game_purchase_action: "app_game_purchase_action_13R4k",
+      RecommendationEntry: "app_RecommendationEntry_2B7qq",
+      BottomEntrySection: "app_BottomEntrySection_E5OsK",
+      WishlistSection: "app_WishlistSection_2Q9UW",
+      Hidden: "app_Hidden_1c-uY",
+      TopEntrySection: "app_TopEntrySection_2n9PA",
+      LeftSection: "app_LeftSection_11vww",
+      Video: "app_Video_3XA5i",
+      Revealed: "app_Revealed_291AN",
+      UnMute: "app_UnMute_1m5xm",
+      RightSection: "app_RightSection_1fjc9",
+      CenterSection: "app_CenterSection_18LwU",
+      CenterOption: "app_CenterOption_zD5a8",
+      Name: "app_Name_1v_L9",
+      Released: "app_Released_16PWF",
+      BarContainer: "app_BarContainer_3JLfj",
+      Bar: "app_Bar_2egwT",
+      Score: "app_Score_2m_gH",
+      Tags: "app_Tags_jv3eX",
+      Tag: "app_Tag_3YuBE",
+      Hovered: "app_Hovered_1qERs",
+      Wishlisted: "app_Wishlisted_2dizG",
+      PurchaseSection: "app_PurchaseSection_10cot",
+      PurchaseBG: "app_PurchaseBG_36CAa",
+      WishlistFlag: "app_WishlistFlag_2yNvy",
+      SelectionBox: "app_SelectionBox_Hwrdc",
+      SuggestionInput: "app_SuggestionInput_2-k0l",
+      SuggestionContainerOpen: "app_SuggestionContainerOpen_IuSJu",
+      SuggestionsList: "app_SuggestionsList_kDB4t",
+      OptionSuggestion: "app_OptionSuggestion_n-65v"
     };
   },
   Z7Ow: function(e, t, a) {},
@@ -247,7 +249,7 @@
     var d = a("mrSG"),
       n = a("vDqi"),
       _ = a.n(n),
-      P = {
+      A = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -293,7 +295,7 @@
         else console.error("Missing config element #" + t);
         return;
       })("config");
-      e && Object.assign(P, e);
+      e && Object.assign(A, e);
     }
     var i = a("okNM"),
       l = a("q1tI"),
@@ -360,12 +362,12 @@
         }
       };
     }
-    var D = (function(e) {
+    var P = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          d.d(t, e),
+          Object(d.d)(t, e),
           (t.prototype.onVisibilityChanged = function(e) {
             e && p.AddImpression(this.props.appID, this.props.snr);
           }),
@@ -376,11 +378,11 @@
               this.props.children
             );
           }),
-          d.c([g], t.prototype, "onVisibilityChanged", null),
+          Object(d.c)([g], t.prototype, "onVisibilityChanged", null),
           t
         );
       })(M.a.Component),
-      O = (a("2i24"),
+      D = (a("2i24"),
       function() {
         for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
         return e.reduce(function(e, t) {
@@ -476,7 +478,7 @@
       );
     }
     a("Gp1o");
-    var v = {
+    var b = {
       PerYear: 31536e3,
       PerMonth: 2628e3,
       PerWeek: 604800,
@@ -484,7 +486,7 @@
       PerHour: 3600,
       PerMinute: 60
     };
-    var f, b, S, y;
+    var v, f, S, y;
     function T(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
@@ -550,37 +552,37 @@
           return t;
       }
     }
-    ((b = f || (f = {}))[(b.k_EOtherEvent = 1)] = "k_EOtherEvent"),
-      (b[(b.k_EGameEvent = 2)] = "k_EGameEvent"),
-      (b[(b.k_EPartyEvent = 3)] = "k_EPartyEvent"),
-      (b[(b.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
-      (b[(b.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
-      (b[(b.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
-      (b[(b.k_ESportsEvent = 7)] = "k_ESportsEvent"),
-      (b[(b.k_ETripEvent = 8)] = "k_ETripEvent"),
-      (b[(b.k_EChatEvent = 9)] = "k_EChatEvent"),
-      (b[(b.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
-      (b[(b.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent"),
-      (b[(b.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
-      (b[(b.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
-      (b[(b.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
-      (b[(b.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
-      (b[(b.k_EESportTournamentStreamEvent = 17)] =
+    ((f = v || (v = {}))[(f.k_EOtherEvent = 1)] = "k_EOtherEvent"),
+      (f[(f.k_EGameEvent = 2)] = "k_EGameEvent"),
+      (f[(f.k_EPartyEvent = 3)] = "k_EPartyEvent"),
+      (f[(f.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
+      (f[(f.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
+      (f[(f.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
+      (f[(f.k_ESportsEvent = 7)] = "k_ESportsEvent"),
+      (f[(f.k_ETripEvent = 8)] = "k_ETripEvent"),
+      (f[(f.k_EChatEvent = 9)] = "k_EChatEvent"),
+      (f[(f.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
+      (f[(f.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent"),
+      (f[(f.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
+      (f[(f.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
+      (f[(f.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
+      (f[(f.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
+      (f[(f.k_EESportTournamentStreamEvent = 17)] =
         "k_EESportTournamentStreamEvent"),
-      (b[(b.k_EDevStreamEvent = 18)] = "k_EDevStreamEvent"),
-      (b[(b.k_EFamousStreamEvent = 19)] = "k_EFamousStreamEvent"),
-      (b[(b.k_EGameSalesEvent = 20)] = "k_EGameSalesEvent"),
-      (b[(b.k_EGameItemSalesEvent = 21)] = "k_EGameItemSalesEvent"),
-      (b[(b.k_EInGameBonusXPEvent = 22)] = "k_EInGameBonusXPEvent"),
-      (b[(b.k_EInGameLootEvent = 23)] = "k_EInGameLootEvent"),
-      (b[(b.k_EInGamePerksEvent = 24)] = "k_EInGamePerksEvent"),
-      (b[(b.k_EInGameChallengeEvent = 25)] = "k_EInGameChallengeEvent"),
-      (b[(b.k_EInGameContestEvent = 26)] = "k_EInGameContestEvent"),
-      (b[(b.k_EIRLEvent = 27)] = "k_EIRLEvent"),
-      (b[(b.k_ENewsEvent = 28)] = "k_ENewsEvent"),
-      (b[(b.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
-      (b[(b.k_EFreeTrial = 31)] = "k_EFreeTrial"),
-      (b[(b.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
+      (f[(f.k_EDevStreamEvent = 18)] = "k_EDevStreamEvent"),
+      (f[(f.k_EFamousStreamEvent = 19)] = "k_EFamousStreamEvent"),
+      (f[(f.k_EGameSalesEvent = 20)] = "k_EGameSalesEvent"),
+      (f[(f.k_EGameItemSalesEvent = 21)] = "k_EGameItemSalesEvent"),
+      (f[(f.k_EInGameBonusXPEvent = 22)] = "k_EInGameBonusXPEvent"),
+      (f[(f.k_EInGameLootEvent = 23)] = "k_EInGameLootEvent"),
+      (f[(f.k_EInGamePerksEvent = 24)] = "k_EInGamePerksEvent"),
+      (f[(f.k_EInGameChallengeEvent = 25)] = "k_EInGameChallengeEvent"),
+      (f[(f.k_EInGameContestEvent = 26)] = "k_EInGameContestEvent"),
+      (f[(f.k_EIRLEvent = 27)] = "k_EIRLEvent"),
+      (f[(f.k_ENewsEvent = 28)] = "k_ENewsEvent"),
+      (f[(f.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
+      (f[(f.k_EFreeTrial = 31)] = "k_EFreeTrial"),
+      (f[(f.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
       ((y = S || (S = {}))[(y.k_ELaunchSource_None = 0)] =
         "k_ELaunchSource_None"),
       (y[(y.k_ELaunchSource_2ftLibraryDetails = 100)] =
@@ -699,12 +701,13 @@
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
       return (
-        (e.prototype.InitFromObjects = function(a, n, r, o) {
+        (e.prototype.InitFromObjects = function(a, n, r, o, e) {
           var i = this;
-          this.m_mapTokens.clear(),
-            Object.keys(r).forEach(function(e, t) {
-              i.m_mapTokens.set(e, r[e]);
-            }),
+          e || this.m_mapTokens.clear(),
+            r &&
+              Object.keys(r).forEach(function(e, t) {
+                i.m_mapTokens.set(e, r[e]);
+              }),
             Object.keys(a).forEach(function(e, t) {
               i.m_mapTokens.set(e, a[e]);
             }),
@@ -785,7 +788,7 @@
     function B(e) {
       var t = new Date(1e3 * e),
         a = t.setHours(0, 0, 0, 0),
-        n = I.get(a);
+        n = O.get(a);
       if (n) return n;
       return (
         (n = t.toLocaleDateString(N.GetPreferredLocales(), {
@@ -793,22 +796,22 @@
           month: "short",
           day: "numeric"
         })),
-        I.set(a, n),
+        O.set(a, n),
         n
       );
     }
-    var I = new Map();
+    var O = new Map();
     new Map();
     new Map(), new Map(), new Map(), new Map();
     var N = new C();
     window.LocalizationManager = N;
-    var A,
+    var I,
       x,
-      G = a("6TF7"),
-      F = a.n(G),
-      V = a("1h/R"),
-      W = a.n(V),
-      H = function(e) {
+      j = a("6TF7"),
+      G = a.n(j),
+      F = a("1h/R"),
+      V = a.n(F),
+      W = function(e) {
         e.accountID;
         var t = le.getInputApps(),
           a = Object.keys(t).length,
@@ -819,40 +822,40 @@
           }),
           M.a.createElement(
             "div",
-            { className: F.a.IdentityBlock },
+            { className: G.a.IdentityBlock },
             M.a.createElement("img", {
-              className: F.a.Avatar,
-              src: P.AVATAR_URL
+              className: G.a.Avatar,
+              src: A.AVATAR_URL
             }),
             M.a.createElement(
               "div",
-              { className: F.a.PersonalInfo },
+              { className: G.a.PersonalInfo },
               M.a.createElement(
                 "div",
-                { className: F.a.Persona },
-                P.PERSONA_NAME
+                { className: G.a.Persona },
+                A.PERSONA_NAME
               ),
               M.a.createElement(
                 "div",
-                { className: F.a.GameCount },
+                { className: G.a.GameCount },
                 U("#PlaytimeList_RecentGames", a)
               ),
               M.a.createElement(
                 "div",
-                { className: F.a.TotalTime },
+                { className: G.a.TotalTime },
                 U("#PlaytimeList_HoursTotal", n)
               )
             )
           )
         );
       },
-      Y = function(e) {
+      H = function(e) {
         var t = e.appID,
           a = e.name,
           n = e.hours,
           r = e.lastPlayed,
           o = e.ignored,
-          i = P.CDN_URL + "apps/" + t + "/header.jpg",
+          i = A.CDN_URL + "apps/" + t + "/header.jpg",
           s = Date.now() / 1e3 - r,
           c = "";
         return (
@@ -866,62 +869,62 @@
                     : (function(e, t) {
                         void 0 === t && (t = !1);
                         var a = t ? "#TimeInterval_" : "#TimeSince_";
-                        return e >= 2 * v.PerYear
-                          ? U(a + "XYears", Math.floor(e / v.PerYear))
-                          : e >= v.PerYear
-                          ? (e -= v.PerYear) >= 2 * v.PerMonth
-                            ? U(a + "1YearXMonths", Math.floor(e / v.PerMonth))
+                        return e >= 2 * b.PerYear
+                          ? U(a + "XYears", Math.floor(e / b.PerYear))
+                          : e >= b.PerYear
+                          ? (e -= b.PerYear) >= 2 * b.PerMonth
+                            ? U(a + "1YearXMonths", Math.floor(e / b.PerMonth))
                             : U(a + "1Year")
-                          : e >= 2 * v.PerMonth
-                          ? U(a + "XMonths", Math.floor(e / v.PerMonth))
-                          : e >= 2 * v.PerWeek
-                          ? U(a + "XWeeks", Math.floor(e / v.PerWeek))
-                          : e >= v.PerWeek
-                          ? U(a + "1Week", Math.floor(e / v.PerWeek))
-                          : e >= 2 * v.PerDay
-                          ? U(a + "XDays", Math.floor(e / v.PerDay))
-                          : e >= v.PerDay
-                          ? (e -= v.PerDay) >= 2 * v.PerHour
-                            ? U(a + "1DayXHours", Math.floor(e / v.PerHour))
+                          : e >= 2 * b.PerMonth
+                          ? U(a + "XMonths", Math.floor(e / b.PerMonth))
+                          : e >= 2 * b.PerWeek
+                          ? U(a + "XWeeks", Math.floor(e / b.PerWeek))
+                          : e >= b.PerWeek
+                          ? U(a + "1Week", Math.floor(e / b.PerWeek))
+                          : e >= 2 * b.PerDay
+                          ? U(a + "XDays", Math.floor(e / b.PerDay))
+                          : e >= b.PerDay
+                          ? (e -= b.PerDay) >= 2 * b.PerHour
+                            ? U(a + "1DayXHours", Math.floor(e / b.PerHour))
                             : U(a + "1Day")
-                          : e >= 2 * v.PerHour
-                          ? U(a + "XHours", Math.floor(e / v.PerHour))
-                          : e >= v.PerHour
-                          ? (e -= v.PerHour) >= 2 * v.PerMinute
+                          : e >= 2 * b.PerHour
+                          ? U(a + "XHours", Math.floor(e / b.PerHour))
+                          : e >= b.PerHour
+                          ? (e -= b.PerHour) >= 2 * b.PerMinute
                             ? U(
                                 a + "1HourXMinutes",
-                                Math.floor(e / v.PerMinute)
+                                Math.floor(e / b.PerMinute)
                               )
                             : U(a + "1Hour")
-                          : e >= 2 * v.PerMinute
-                          ? U(a + "XMinutes", Math.floor(e / v.PerMinute))
-                          : e >= v.PerMinute
+                          : e >= 2 * b.PerMinute
+                          ? U(a + "XMinutes", Math.floor(e / b.PerMinute))
+                          : e >= b.PerMinute
                           ? U(a + "1Minute")
                           : U(a + "LessThanAMinute");
                       })(s)
                 )),
           M.a.createElement(
             "div",
-            { className: O(F.a.PlayedGame, o && F.a.Ignored) },
+            { className: D(G.a.PlayedGame, o && G.a.Ignored) },
             M.a.createElement(
               "a",
-              { href: P.BASE_URL + "app/" + t },
-              M.a.createElement("img", { className: F.a.Logo, src: i })
+              { href: A.BASE_URL + "app/" + t },
+              M.a.createElement("img", { className: G.a.Logo, src: i })
             ),
             M.a.createElement(
               "div",
-              { className: F.a.PlaytimeInfo },
+              { className: G.a.PlaytimeInfo },
               M.a.createElement(
                 "div",
-                { className: F.a.HoursPlayed },
+                { className: G.a.HoursPlayed },
                 U("#PlaytimeList_Hours", n)
               ),
-              M.a.createElement("div", { className: F.a.Title }, a),
-              M.a.createElement("div", { className: F.a.LastPlayed }, c),
+              M.a.createElement("div", { className: G.a.Title }, a),
+              M.a.createElement("div", { className: G.a.LastPlayed }, c),
               M.a.createElement(
                 "div",
                 {
-                  className: F.a.IgnoreToggle,
+                  className: G.a.IgnoreToggle,
                   onClick: function() {
                     return le.onToggleIgnore(t);
                   }
@@ -932,28 +935,28 @@
           )
         );
       },
-      j = (function(a) {
+      Y = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (t.state = {}), t;
         }
         return (
-          d.d(e, a),
+          Object(d.d)(e, a),
           (e.prototype.onUpdate = function() {
             le.m_bIgnoredEdited && le.onUpdateWithIgnored();
           }),
           (e.prototype.render = function() {
-            return P.IMMEDIATE_IGNORE_UPDATE
+            return A.IMMEDIATE_IGNORE_UPDATE
               ? M.a.createElement("div", null)
               : M.a.createElement(
                   "div",
-                  { className: F.a.UpdateSaveBlock },
+                  { className: G.a.UpdateSaveBlock },
                   M.a.createElement(
                     "div",
                     {
-                      className: O(
-                        F.a.UpdateButton,
-                        le.m_bIgnoredEdited && F.a.Enabled
+                      className: D(
+                        G.a.UpdateButton,
+                        le.m_bIgnoredEdited && G.a.Enabled
                       ),
                       onClick: this.onUpdate
                     },
@@ -961,8 +964,8 @@
                   )
                 );
           }),
-          d.c([g], e.prototype, "onUpdate", null),
-          (e = d.c([i.a], e))
+          Object(d.c)([g], e.prototype, "onUpdate", null),
+          (e = Object(d.c)([i.a], e))
         );
       })(M.a.Component),
       q = (function(a) {
@@ -971,20 +974,20 @@
           return (t.state = {}), t;
         }
         return (
-          d.d(e, a),
+          Object(d.d)(e, a),
           (e.prototype.render = function() {
             var e = le.getInputApps(),
               a = [];
             if (!e)
               return M.a.createElement(
                 "div",
-                { className: F.a.PlaytimeList },
+                { className: G.a.PlaytimeList },
                 M.a.createElement(
                   "div",
-                  { className: F.a.Header },
+                  { className: G.a.Header },
                   U("#PlaytimeList_Header")
                 ),
-                M.a.createElement("div", { className: F.a.Loading })
+                M.a.createElement("div", { className: G.a.Loading })
               );
             le.getAppInfo();
             var n = e.slice().sort(function(e, t) {
@@ -994,7 +997,7 @@
               Object.keys(n).map(function(e) {
                 var t = n[e];
                 a.push(
-                  M.a.createElement(Y, {
+                  M.a.createElement(H, {
                     key: "PlayedGame_" + t.a,
                     appID: t.a,
                     name: t.t,
@@ -1006,19 +1009,19 @@
               }),
               M.a.createElement(
                 "div",
-                { className: F.a.PlaytimeList },
+                { className: G.a.PlaytimeList },
                 M.a.createElement(
                   "div",
-                  { className: F.a.Header },
+                  { className: G.a.Header },
                   U("#PlaytimeList_Header")
                 ),
-                M.a.createElement(H, { accountID: this.props.accountID }),
-                M.a.createElement(j, null),
-                M.a.createElement("div", { className: F.a.List }, a)
+                M.a.createElement(W, { accountID: this.props.accountID }),
+                M.a.createElement(Y, null),
+                M.a.createElement("div", { className: G.a.List }, a)
               )
             );
           }),
-          (e = d.c([i.a], e))
+          (e = Object(d.c)([i.a], e))
         );
       })(M.a.Component),
       X = function(e) {
@@ -1034,13 +1037,13 @@
           u = c ? c[l] : "";
         return M.a.createElement(
           "div",
-          { className: F.a.OptionSlider },
-          M.a.createElement("div", { className: F.a.Title }, t),
+          { className: G.a.OptionSlider },
+          M.a.createElement("div", { className: G.a.Title }, t),
           M.a.createElement(
             "div",
-            { className: F.a.Labels },
-            M.a.createElement("div", { className: F.a.Min }, a),
-            M.a.createElement("div", { className: F.a.Max }, n)
+            { className: G.a.Labels },
+            M.a.createElement("div", { className: G.a.Min }, a),
+            M.a.createElement("div", { className: G.a.Max }, n)
           ),
           M.a.createElement("input", {
             type: "range",
@@ -1050,27 +1053,27 @@
             value: i,
             onChange: s
           }),
-          M.a.createElement("div", { className: F.a.OptionalLabel }, u)
+          M.a.createElement("div", { className: G.a.OptionalLabel }, u)
         );
       },
-      Q = function(e) {
+      z = function(e) {
         var t = e.className,
           a = e.titleLabel,
           n = e.checked,
           r = e.onChange;
         return M.a.createElement(
           "label",
-          { className: O(F.a.OptionCheckbox, t && t) },
+          { className: D(G.a.OptionCheckbox, t && t) },
           M.a.createElement("input", {
             type: "checkbox",
-            className: F.a.Checkbox,
+            className: G.a.Checkbox,
             checked: n,
             onChange: r
           }),
           a
         );
       },
-      z = (function(a) {
+      K = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (
@@ -1080,7 +1083,7 @@
           );
         }
         return (
-          d.d(e, a),
+          Object(d.d)(e, a),
           (e.prototype.componentDidMount = function() {
             var e = le.getTags();
             if (e)
@@ -1165,13 +1168,13 @@
                       "div",
                       {
                         key: t.id,
-                        className: F.a.SelectedTag,
+                        className: G.a.SelectedTag,
                         onClick: function(e) {
                           return a.onRemoveSelectedTag(t.id);
                         }
                       },
                       M.a.createElement("div", null, t.name),
-                      M.a.createElement("div", { className: F.a.Close }, "X")
+                      M.a.createElement("div", { className: G.a.Close }, "X")
                     )
                   );
                 },
@@ -1184,13 +1187,13 @@
             }
             return M.a.createElement(
               "div",
-              { className: F.a.OptionTagList },
+              { className: G.a.OptionTagList },
               M.a.createElement(
                 "div",
-                { className: F.a.Label },
+                { className: G.a.Label },
                 this.props.title
               ),
-              M.a.createElement(W.a, {
+              M.a.createElement(V.a, {
                 suggestions: this.state.suggestions,
                 onSuggestionsFetchRequested: this.onFetchRequested,
                 onSuggestionsClearRequested: this.onClearRequested,
@@ -1204,26 +1207,26 @@
                 },
                 inputProps: e,
                 theme: {
-                  input: F.a.SuggestionInput,
-                  suggestion: F.a.OptionSuggestion,
-                  suggestionsList: F.a.SuggestionsList,
-                  suggestionsContainerOpen: F.a.SuggestionContainerOpen
+                  input: G.a.SuggestionInput,
+                  suggestion: G.a.OptionSuggestion,
+                  suggestionsList: G.a.SuggestionsList,
+                  suggestionsContainerOpen: G.a.SuggestionContainerOpen
                 }
               }),
               n
             );
           }),
-          d.c([g], e.prototype, "onFetchRequested", null),
-          d.c([g], e.prototype, "onClearRequested", null),
-          d.c([g], e.prototype, "onChange", null),
-          d.c([g], e.prototype, "onKeyDown", null),
-          d.c([g], e.prototype, "shouldRenderSuggestions", null),
-          d.c([g], e.prototype, "onSuggestionSelected", null),
-          d.c([g], e.prototype, "onRemoveSelectedTag", null),
+          Object(d.c)([g], e.prototype, "onFetchRequested", null),
+          Object(d.c)([g], e.prototype, "onClearRequested", null),
+          Object(d.c)([g], e.prototype, "onChange", null),
+          Object(d.c)([g], e.prototype, "onKeyDown", null),
+          Object(d.c)([g], e.prototype, "shouldRenderSuggestions", null),
+          Object(d.c)([g], e.prototype, "onSuggestionSelected", null),
+          Object(d.c)([g], e.prototype, "onRemoveSelectedTag", null),
           e
         );
       })(M.a.Component),
-      K = Object(i.a)(function(e) {
+      J = Object(i.a)(function(e) {
         var t = le.getTags(),
           a = [],
           n = [];
@@ -1242,10 +1245,10 @@
         ];
         return M.a.createElement(
           "div",
-          { className: F.a.RecommendationOptions },
+          { className: G.a.RecommendationOptions },
           M.a.createElement(
             "div",
-            { className: O(F.a.Row, F.a.FirstRow) },
+            { className: D(G.a.Row, G.a.FirstRow) },
             M.a.createElement(X, {
               minLabel: U("#Popularity_Popular"),
               titleLabel: U("#Popularity_Title"),
@@ -1268,23 +1271,23 @@
           ),
           M.a.createElement(
             "div",
-            { className: O(F.a.Row, F.a.SecondRow) },
-            M.a.createElement(z, {
+            { className: D(G.a.Row, G.a.SecondRow) },
+            M.a.createElement(K, {
               title: U("#TagFilterMultiple_Title"),
               tagoptions: a,
               selectedtags: n,
               onAddTag: le.onTagFilterAdd,
               onRemoveTag: le.onTagFilterRemove
             }),
-            M.a.createElement(z, {
+            M.a.createElement(K, {
               title: U("#TagExcludeMultiple_Title"),
               tagoptions: a,
               selectedtags: n,
               onAddTag: le.onTagExcludeAdd,
               onRemoveTag: le.onTagExcludeRemove
             }),
-            M.a.createElement(Q, {
-              className: F.a.WishlistCheckbox,
+            M.a.createElement(z, {
+              className: G.a.WishlistCheckbox,
               titleLabel: U("#ExcludeWishlisted"),
               checked: le.m_bExcludeWishlisted,
               onChange: le.onExcludeWishlistedToggled
@@ -1292,7 +1295,7 @@
           )
         );
       }),
-      Z = (function(a) {
+      Q = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (
@@ -1302,7 +1305,7 @@
           );
         }
         return (
-          d.d(e, a),
+          Object(d.d)(e, a),
           (e.prototype.componentDidMount = function() {
             this.m_videoRef.current.defaultMuted = !0;
           }),
@@ -1377,7 +1380,7 @@
                   (u.push(
                     M.a.createElement(
                       "div",
-                      { key: a + "_" + h, className: F.a.Tag },
+                      { key: a + "_" + h, className: G.a.Tag },
                       le.getTagName(h)
                     )
                   ),
@@ -1385,13 +1388,13 @@
                 )
                   break;
               }
-            var m = parseInt(F.a.nSmallEntryWidth),
-              g = parseInt(F.a.nOptionsWrapWidth),
+            var m = parseInt(G.a.nSmallEntryWidth),
+              g = parseInt(G.a.nOptionsWrapWidth),
               E = 112,
-              v = !0;
-            o < m ? (v = !(E = 66)) : o < g && (v = !(E = 87));
-            var f = v && this.state.hovered,
-              b = Math.min(Number(n) / 10, 1e3),
+              b = !0;
+            o < m ? (b = !(E = 66)) : o < g && (b = !(E = 87));
+            var v = b && this.state.hovered,
+              f = Math.min(Number(n) / 10, 1e3),
               S = (Math.max(1, n), !1),
               y = !1,
               T = !0,
@@ -1399,14 +1402,14 @@
               k = "",
               R = "",
               C = "",
-              I = "";
-            if (f) {
+              O = "";
+            if (v) {
               var N = le.getDetails(this.props.appID);
               N &&
                 ((S = !0),
                 (y = 0 < N.discount_pct),
                 (T = "0" == N.discount_price),
-                (I =
+                (O =
                   "probably" ==
                   document
                     .createElement("video")
@@ -1418,23 +1421,23 @@
                 (R = T ? U("#FreeToPlay") : N.discount_price),
                 (C = N.description));
             }
-            var A = I && 0 < I.length;
+            var I = O && 0 < O.length;
             return M.a.createElement(
-              D,
-              { appID: a, snr: P.LINK_PARAM },
+              P,
+              { appID: a, snr: A.LINK_PARAM },
               M.a.createElement(
                 "a",
                 {
-                  href: P.BASE_URL + "app/" + a + "?snr=" + P.LINK_PARAM,
+                  href: A.BASE_URL + "app/" + a + "?snr=" + A.LINK_PARAM,
                   onClick: function() {
                     return le.onAppClicked(a, r);
                   },
-                  className: O(
-                    F.a.RecommendationEntry,
+                  className: D(
+                    G.a.RecommendationEntry,
                     "ds_flagged",
                     "ds_wishlist",
-                    30 < r && F.a.Hidden,
-                    f && F.a.Hovered
+                    30 < r && G.a.Hidden,
+                    v && G.a.Hovered
                   ),
                   style: { top: Math.min(31, r) * E },
                   onMouseEnter: this.OnHover,
@@ -1442,31 +1445,31 @@
                 },
                 M.a.createElement(
                   "div",
-                  { className: F.a.TopEntrySection },
+                  { className: G.a.TopEntrySection },
                   M.a.createElement(
                     "div",
-                    { className: F.a.LeftSection },
+                    { className: G.a.LeftSection },
                     M.a.createElement("img", {
-                      className: O(F.a.Logo, (!A || !f) && F.a.Revealed),
+                      className: D(G.a.Logo, (!I || !v) && G.a.Revealed),
                       src: i
                     }),
                     M.a.createElement("video", {
                       ref: this.m_videoRef,
-                      className: O(
+                      className: D(
                         "highlight_player_item",
                         "highlight_movie",
-                        F.a.Video,
-                        A && f && F.a.Revealed
+                        G.a.Video,
+                        I && v && G.a.Revealed
                       ),
                       playsInline: !0,
                       autoPlay: !0,
                       muted: le.shouldMute(),
-                      src: I
+                      src: O
                     }),
                     M.a.createElement(
                       "div",
                       {
-                        className: O(F.a.UnMute, A && F.a.Revealed),
+                        className: D(G.a.UnMute, I && G.a.Revealed),
                         onClick: function(e) {
                           return t.onMuteToggle(e);
                         }
@@ -1477,10 +1480,10 @@
                       M.a.createElement(
                         "div",
                         {
-                          className: O(
+                          className: D(
                             "ds_flag",
                             "ds_wishlist_flag",
-                            F.a.WishlistFlag
+                            G.a.WishlistFlag
                           )
                         },
                         U("#Recommendation_OnWishlist") + "  "
@@ -1488,42 +1491,42 @@
                   ),
                   M.a.createElement(
                     "div",
-                    { className: F.a.RightSection },
-                    M.a.createElement("div", { className: F.a.Name }, c),
+                    { className: G.a.RightSection },
+                    M.a.createElement("div", { className: G.a.Name }, c),
                     M.a.createElement(
                       "div",
-                      { className: F.a.CenterSection },
+                      { className: G.a.CenterSection },
                       M.a.createElement(
                         "div",
                         {
-                          className: O(
-                            F.a.CenterOption,
-                            F.a.CenterDefault,
-                            f && F.a.Hidden
+                          className: D(
+                            G.a.CenterOption,
+                            G.a.CenterDefault,
+                            v && G.a.Hidden
                           )
                         },
                         M.a.createElement(
                           "div",
-                          { className: F.a.Released },
+                          { className: G.a.Released },
                           l
                         ),
                         M.a.createElement(
                           "div",
-                          { className: F.a.BarContainer },
+                          { className: G.a.BarContainer },
                           M.a.createElement("div", {
-                            className: F.a.Bar,
-                            style: { width: b + "%" }
+                            className: G.a.Bar,
+                            style: { width: f + "%" }
                           })
                         ),
-                        M.a.createElement("div", { className: F.a.Tags }, u)
+                        M.a.createElement("div", { className: G.a.Tags }, u)
                       ),
                       M.a.createElement(
                         "div",
                         {
-                          className: O(
-                            F.a.CenterOption,
-                            F.a.CenterHovered,
-                            !f && F.a.Hidden
+                          className: D(
+                            G.a.CenterOption,
+                            G.a.CenterHovered,
+                            !v && G.a.Hidden
                           )
                         },
                         C
@@ -1532,21 +1535,21 @@
                     S &&
                       M.a.createElement(
                         "div",
-                        { className: F.a.BottomEntrySection },
+                        { className: G.a.BottomEntrySection },
                         M.a.createElement(
                           "div",
                           {
-                            className: O(
+                            className: D(
                               "game_purchase_action",
-                              F.a.PurchaseSection
+                              G.a.PurchaseSection
                             )
                           },
                           M.a.createElement(
                             "div",
                             {
-                              className: O(
+                              className: D(
                                 "game_purchase_action_bg",
-                                F.a.PurchaseBG
+                                G.a.PurchaseBG
                               )
                             },
                             y &&
@@ -1612,7 +1615,7 @@
                             "div",
                             {
                               id: "add_to_wishlist_area",
-                              className: F.a.WishlistSection,
+                              className: G.a.WishlistSection,
                               onClick: function(e) {
                                 return t.onAddToWishlist(e);
                               }
@@ -1632,11 +1635,11 @@
                           M.a.createElement(
                             "div",
                             {
-                              className: O(
+                              className: D(
                                 "btnv6_blue_hoverfade btn_medium",
                                 "queue_btn_active",
-                                F.a.Wishlisted,
-                                F.a.WishlistSection
+                                G.a.Wishlisted,
+                                G.a.WishlistSection
                               ),
                               "data-tooltip-text": U("#OnWishlistTooltip"),
                               onClick: function(e) {
@@ -1647,7 +1650,7 @@
                               "span",
                               null,
                               M.a.createElement("img", {
-                                src: P.IMG_URL_BASE + "/v6/ico/ico_selected.png"
+                                src: A.IMG_URL_BASE + "/v6/ico/ico_selected.png"
                               }),
                               "  " + U("#OnWishlist")
                             )
@@ -1658,38 +1661,38 @@
               )
             );
           }),
-          d.c([g], e.prototype, "OnHover", null),
-          d.c([g], e.prototype, "OnUnHover", null),
-          d.c([g], e.prototype, "onMuteToggle", null),
-          d.c([g], e.prototype, "onAddToWishlist", null),
-          d.c([g], e.prototype, "onGoToWishlist", null),
-          d.c([g], e.prototype, "onAddToCart", null),
-          (e = d.c([i.a], e))
+          Object(d.c)([g], e.prototype, "OnHover", null),
+          Object(d.c)([g], e.prototype, "OnUnHover", null),
+          Object(d.c)([g], e.prototype, "onMuteToggle", null),
+          Object(d.c)([g], e.prototype, "onAddToWishlist", null),
+          Object(d.c)([g], e.prototype, "onGoToWishlist", null),
+          Object(d.c)([g], e.prototype, "onAddToCart", null),
+          (e = Object(d.c)([i.a], e))
         );
       })(M.a.Component),
-      J = (function(a) {
+      Z = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (t.state = { sortedRecommendedApps: [] }), t;
         }
         return (
-          d.d(e, a),
+          Object(d.d)(e, a),
           (e.prototype.render = function() {
-            var e = le.m_fRecencyValue * (P.NUM_RECENCY_STEPS - 1 - 0.001),
+            var e = le.m_fRecencyValue * (A.NUM_RECENCY_STEPS - 1 - 0.001),
               t = Math.floor(e),
               a = t + 1,
               n = 1 - (e - t),
               r = 1 - n,
-              o = le.m_fPopularityValue * (P.NUM_POPULARITY_STEPS - 1 - 0.001),
+              o = le.m_fPopularityValue * (A.NUM_POPULARITY_STEPS - 1 - 0.001),
               i = Math.floor(o),
               s = i + 1,
               c = 1 - (o - i),
               l = 1 - c,
               u = [];
-            u.push({ index: i * P.NUM_RECENCY_STEPS + t, weight: c * n }),
-              u.push({ index: s * P.NUM_RECENCY_STEPS + t, weight: l * n }),
-              u.push({ index: i * P.NUM_RECENCY_STEPS + a, weight: c * r }),
-              u.push({ index: s * P.NUM_RECENCY_STEPS + a, weight: l * r });
+            u.push({ index: i * A.NUM_RECENCY_STEPS + t, weight: c * n }),
+              u.push({ index: s * A.NUM_RECENCY_STEPS + t, weight: l * n }),
+              u.push({ index: i * A.NUM_RECENCY_STEPS + a, weight: c * r }),
+              u.push({ index: s * A.NUM_RECENCY_STEPS + a, weight: l * r });
             var p = new Map(),
               d = 0,
               _ = le.getRecommendations(),
@@ -1697,11 +1700,11 @@
               m = [];
             if (_) {
               for (var g = 0, E = u; g < E.length; g++) {
-                var v = E[g],
-                  f = _[v.index];
-                if (((d = Math.max(d, f.score_scale)), f))
-                  for (var b = 0; b < f.app_ids.length; b++) {
-                    var S = f.app_ids[b];
+                var b = E[g],
+                  v = _[b.index];
+                if (((d = Math.max(d, v.score_scale)), v))
+                  for (var f = 0; f < v.app_ids.length; f++) {
+                    var S = v.app_ids[f];
                     if (
                       !(
                         !h[S] ||
@@ -1713,7 +1716,7 @@
                     ) {
                       var y =
                         (p.get(S) || 0) +
-                        f.scores[b] * v.weight * f.score_scale;
+                        v.scores[f] * b.weight * v.score_scale;
                       p.set(S, y);
                     }
                   }
@@ -1746,20 +1749,20 @@
                 (C[R].rank = k), k++;
               }
               for (
-                var I = 0,
+                var O = 0,
                   N = L.sort(function(e, t) {
                     return t.appid - e.appid;
                   });
-                I < N.length;
-                I++
+                O < N.length;
+                O++
               ) {
-                var A = N[I];
+                var I = N[O];
                 m.push(
-                  M.a.createElement(Z, {
-                    key: A.appid,
-                    appID: A.appid,
-                    score: A.score,
-                    rank: A.rank,
+                  M.a.createElement(Q, {
+                    key: I.appid,
+                    appID: I.appid,
+                    score: I.score,
+                    rank: I.rank,
                     width: this.props.width
                   })
                 );
@@ -1768,28 +1771,28 @@
               m.push(
                 M.a.createElement("div", {
                   key: "recommendations_loading",
-                  className: F.a.RecommendationsLoading
+                  className: G.a.RecommendationsLoading
                 })
               );
             return M.a.createElement(
               "div",
-              { className: F.a.RecommendationList },
+              { className: G.a.RecommendationList },
               M.a.createElement(
                 "div",
-                { className: F.a.Header },
+                { className: G.a.Header },
                 U("#Recommendations_Header")
               ),
-              M.a.createElement(K, null),
+              M.a.createElement(J, null),
               M.a.createElement(
                 "div",
                 {
-                  className: O(F.a.List, le.areResultsExpired() && F.a.Updating)
+                  className: D(G.a.List, le.areResultsExpired() && G.a.Updating)
                 },
                 m
               )
             );
           }),
-          (e = d.c([i.a], e))
+          (e = Object(d.c)([i.a], e))
         );
       })(M.a.Component),
       $ = (function(a) {
@@ -1798,7 +1801,7 @@
           return (t.state = { width: window.innerWidth }), t;
         }
         return (
-          d.d(e, a),
+          Object(d.d)(e, a),
           (e.prototype.updateDimensions = function() {
             this.setState({ width: window.innerWidth });
           }),
@@ -1806,26 +1809,26 @@
             window.addEventListener("resize", this.updateDimensions);
           }),
           (e.prototype.render = function() {
-            return 0 == P.ACCOUNT_ID
+            return 0 == A.ACCOUNT_ID
               ? M.a.createElement(
                   "div",
-                  { className: F.a.App },
+                  { className: G.a.App },
                   M.a.createElement(
                     "div",
-                    { className: F.a.Login },
+                    { className: G.a.Login },
                     M.a.createElement(
                       "div",
-                      { className: F.a.Text },
+                      { className: G.a.Text },
                       U("#LoginText")
                     ),
                     M.a.createElement(
                       "a",
                       {
-                        className: O(
+                        className: D(
                           "btn_green_white_innerfade",
                           " btn_medium"
                         ),
-                        href: P.LOGIN_REDIRECT
+                        href: A.LOGIN_REDIRECT
                       },
                       M.a.createElement("span", null, U("#LoginButton"))
                     )
@@ -1834,35 +1837,35 @@
               : M.a.createElement(
                   "div",
                   {
-                    className: F.a.App,
+                    className: G.a.App,
                     style: { height: 3840 + 26 * le.getTagHeight() }
                   },
                   M.a.createElement(
                     "div",
-                    { className: F.a.Container },
+                    { className: G.a.Container },
                     M.a.createElement(
                       "div",
-                      { className: F.a.TopSection },
+                      { className: G.a.TopSection },
                       M.a.createElement(
                         "div",
-                        { className: F.a.Header },
+                        { className: G.a.Header },
                         U("#HeaderTitle")
                       ),
                       M.a.createElement(
                         "div",
-                        { className: F.a.Body },
+                        { className: G.a.Body },
                         U("#HeaderBody1")
                       ),
-                      M.a.createElement("div", { className: F.a.Spacer }),
+                      M.a.createElement("div", { className: G.a.Spacer }),
                       M.a.createElement(
                         "div",
-                        { className: F.a.Body },
+                        { className: G.a.Body },
                         U("#HeaderBody2")
                       ),
-                      M.a.createElement("div", { className: F.a.Spacer }),
+                      M.a.createElement("div", { className: G.a.Spacer }),
                       M.a.createElement(
                         "div",
-                        { className: F.a.Body },
+                        { className: G.a.Body },
                         (function(e) {
                           for (var t = [], a = 1; a < arguments.length; a++)
                             t[a - 1] = arguments[a];
@@ -1881,7 +1884,7 @@
                             o.push(n.substr(s)),
                             l.createElement.apply(
                               l,
-                              [l.Fragment, null].concat(o)
+                              Object(d.f)([l.Fragment, null], o)
                             )
                           );
                         })(
@@ -1899,21 +1902,21 @@
                     ),
                     M.a.createElement(
                       "div",
-                      { className: F.a.BottomSection },
-                      M.a.createElement(q, { accountID: P.ACCOUNT_ID }),
-                      M.a.createElement("div", { className: F.a.VerticalBar }),
-                      M.a.createElement(J, { width: this.state.width })
+                      { className: G.a.BottomSection },
+                      M.a.createElement(q, { accountID: A.ACCOUNT_ID }),
+                      M.a.createElement("div", { className: G.a.VerticalBar }),
+                      M.a.createElement(Z, { width: this.state.width })
                     )
                   )
                 );
           }),
-          d.c([g], e.prototype, "updateDimensions", null),
-          (e = d.c([i.a], e))
+          Object(d.c)([g], e.prototype, "updateDimensions", null),
+          (e = Object(d.c)([i.a], e))
         );
       })(M.a.Component),
       ee = a("2vnA"),
       te = a("i8i4");
-    ((x = A || (A = {}))[(x.Unrequested = 0)] = "Unrequested"),
+    ((x = I || (I = {}))[(x.Unrequested = 0)] = "Unrequested"),
       (x[(x.Pending = 1)] = "Pending"),
       (x[(x.Valid = 2)] = "Valid"),
       (x[(x.Failed = 3)] = "Failed"),
@@ -1922,32 +1925,32 @@
       ne,
       re = (function() {
         function e() {
-          (this.eState = A.Unrequested), (this.nExpirationTime = 0);
+          (this.eState = I.Unrequested), (this.nExpirationTime = 0);
         }
         return (
           (e.prototype.getData = function(t, a, n) {
             var r = this,
               o = Date.now() / 1e3,
-              e = this.eState == A.Pending || this.eState == A.Rerequest;
+              e = this.eState == I.Pending || this.eState == I.Rerequest;
             return (
               o >= this.nExpirationTime &&
                 !e &&
-                ((this.eState = A.Pending),
+                ((this.eState = I.Pending),
                 a().then(function(e) {
-                  if (r.eState == A.Rerequest)
+                  if (r.eState == I.Rerequest)
                     return r.expireData(), void r.getData(t, a, n);
                   r.eState = e
                     ? ((r.data = n ? n(e) : e),
                       (r.nExpirationTime = o + t),
-                      A.Valid)
-                    : A.Failed;
+                      I.Valid)
+                    : I.Failed;
                 })),
               this.data
             );
           }),
           (e.prototype.clearData = function() {
             var e = Date.now() / 1e3;
-            (this.eState = A.Unrequested),
+            (this.eState = I.Unrequested),
               (this.data = null),
               (this.nExpirationTime = e);
           }),
@@ -1964,10 +1967,10 @@
             this.nExpirationTime = t + e;
           }),
           (e.prototype.rerequestDataIfPending = function() {
-            this.eState == A.Pending && (this.eState = A.Rerequest);
+            this.eState == I.Pending && (this.eState = I.Rerequest);
           }),
-          d.c([ee.v], e.prototype, "data", void 0),
-          d.c([ee.v], e.prototype, "nExpirationTime", void 0),
+          Object(d.c)([ee.v], e.prototype, "data", void 0),
+          Object(d.c)([ee.v], e.prototype, "nExpirationTime", void 0),
           e
         );
       })();
@@ -2023,8 +2026,8 @@
             l.createElement($, { app: this }),
             document.getElementById("recommender_root")
           ),
-            P.RESET_OPTIONS &&
-              ((this.m_fPopularityValue = 1 / (P.NUM_POPULARITY_STEPS - 1)),
+            A.RESET_OPTIONS &&
+              ((this.m_fPopularityValue = 1 / (A.NUM_POPULARITY_STEPS - 1)),
               (this.m_fRecencyValue = 0),
               (this.m_bExcludeWishlisted = !1),
               (this.m_bStateUpdated = !0));
@@ -2037,20 +2040,20 @@
             this.m_mapAppDetailsCache.get(t).getData(
               60,
               function() {
-                return d.b(e, void 0, void 0, function() {
-                  return d.e(this, function(e) {
+                return Object(d.b)(e, void 0, void 0, function() {
+                  return Object(d.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
                         return [
                           4,
                           _.a.get(
-                            P.BASE_URL +
+                            A.BASE_URL +
                               "recommender/" +
-                              P.STEAM_ID +
+                              A.STEAM_ID +
                               "/details?appid=" +
                               t +
                               "&sessionid=" +
-                              P.SESSION_ID
+                              A.SESSION_ID
                           )
                         ];
                       case 1:
@@ -2083,20 +2086,20 @@
               this.m_ResultDataCache.getData(
                 9999999,
                 function() {
-                  return d.b(r, void 0, void 0, function() {
-                    return d.e(this, function(e) {
+                  return Object(d.b)(r, void 0, void 0, function() {
+                    return Object(d.e)(this, function(e) {
                       switch (e.label) {
                         case 0:
                           return [
                             4,
                             _.a.get(
-                              P.BASE_URL +
+                              A.BASE_URL +
                                 "recommender/" +
-                                P.STEAM_ID +
+                                A.STEAM_ID +
                                 "/results?sessionid=" +
-                                P.SESSION_ID +
+                                A.SESSION_ID +
                                 "&steamid=" +
-                                P.STEAM_ID +
+                                A.STEAM_ID +
                                 "&include_played=" +
                                 o +
                                 "&algorithm=" +
@@ -2126,10 +2129,10 @@
         }),
         (e.prototype.getRecommendations = function() {
           var e = le.getResults(
-            P.INCLUDE_PLAYED,
-            P.ALGORITHM,
-            P.REINFERENCE,
-            P.MODEL_VERSION
+            A.INCLUDE_PLAYED,
+            A.ALGORITHM,
+            A.REINFERENCE,
+            A.MODEL_VERSION
           );
           return e ? e.recommendations : void 0;
         }),
@@ -2138,20 +2141,20 @@
           return this.m_InputAppsCache.getData(
             9999999,
             function() {
-              return d.b(e, void 0, void 0, function() {
-                return d.e(this, function(e) {
+              return Object(d.b)(e, void 0, void 0, function() {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return [
                         4,
                         _.a.get(
-                          P.BASE_URL +
+                          A.BASE_URL +
                             "recommender/" +
-                            P.STEAM_ID +
+                            A.STEAM_ID +
                             "/inputs?sessionid=" +
-                            P.SESSION_ID +
+                            A.SESSION_ID +
                             "&steamid=" +
-                            P.STEAM_ID
+                            A.STEAM_ID
                         )
                       ];
                     case 1:
@@ -2167,10 +2170,10 @@
         }),
         (e.prototype.getAppInfo = function() {
           var e = le.getResults(
-            P.INCLUDE_PLAYED,
-            P.ALGORITHM,
-            P.REINFERENCE,
-            P.MODEL_VERSION
+            A.INCLUDE_PLAYED,
+            A.ALGORITHM,
+            A.REINFERENCE,
+            A.MODEL_VERSION
           );
           return e ? e.app_info : void 0;
         }),
@@ -2179,18 +2182,18 @@
           return this.m_TagsCache.getData(
             9999999,
             function() {
-              return d.b(r, void 0, void 0, function() {
-                return d.e(this, function(e) {
+              return Object(d.b)(r, void 0, void 0, function() {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return [
                         4,
                         _.a.get(
-                          P.BASE_URL +
+                          A.BASE_URL +
                             "recommender/" +
-                            P.STEAM_ID +
+                            A.STEAM_ID +
                             "/tags?sessionid=" +
-                            P.SESSION_ID
+                            A.SESSION_ID
                         )
                       ];
                     case 1:
@@ -2265,9 +2268,9 @@
             (this.m_bStateUpdated = !0);
         }),
         (e.prototype.onToggleIgnore = function(s) {
-          return d.b(this, void 0, void 0, function() {
+          return Object(d.b)(this, void 0, void 0, function() {
             var t, a, n, r, o, i;
-            return d.e(this, function(e) {
+            return Object(d.e)(this, function(e) {
               switch (e.label) {
                 case 0:
                   for (
@@ -2280,12 +2283,12 @@
                       break;
                     }
                   return (
-                    P.IMMEDIATE_IGNORE_UPDATE &&
+                    A.IMMEDIATE_IGNORE_UPDATE &&
                       this.m_ResultDataCache.expireData(),
                     (this.m_bIgnoredEdited = !0),
-                    P.PERSISTENT_IGNORE
+                    A.PERSISTENT_IGNORE
                       ? ((i = {
-                          sessionid: P.SESSION_ID,
+                          sessionid: A.SESSION_ID,
                           appid: s,
                           remove: a ? 1 : 0,
                           ignore_reason: 3
@@ -2293,7 +2296,7 @@
                         [
                           4,
                           _.a.post(
-                            P.BASE_URL + "recommended/ignorerecommendation/",
+                            A.BASE_URL + "recommended/ignorerecommendation/",
                             i
                           )
                         ])
@@ -2311,15 +2314,15 @@
           this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
         }),
         (e.prototype.onAppClicked = function(a, n) {
-          return d.b(this, void 0, void 0, function() {
+          return Object(d.b)(this, void 0, void 0, function() {
             var t;
-            return d.e(this, function(e) {
+            return Object(d.e)(this, function(e) {
               switch (e.label) {
                 case 0:
                   return (
                     (t = {
-                      account_id: P.ACCOUNT_ID,
-                      session_id: P.SESSION_ID,
+                      account_id: A.ACCOUNT_ID,
+                      session_id: A.SESSION_ID,
                       app_id: a,
                       app_rank: n,
                       action: ae.ClickThrough,
@@ -2330,7 +2333,7 @@
                     [
                       4,
                       _.a.post(
-                        P.BASE_URL + "recommender/" + P.STEAM_ID + "/stats",
+                        A.BASE_URL + "recommender/" + A.STEAM_ID + "/stats",
                         t
                       )
                     ]
@@ -2342,18 +2345,18 @@
           });
         }),
         (e.prototype.onAddToWishlist = function(r, o) {
-          return d.b(this, void 0, void 0, function() {
+          return Object(d.b)(this, void 0, void 0, function() {
             var t, a, n;
-            return d.e(this, function(e) {
+            return Object(d.e)(this, function(e) {
               switch (e.label) {
                 case 0:
                   return (
                     (le.getAppInfo()[r].w = !0),
-                    (t = { sessionid: P.SESSION_ID, appid: r }),
+                    (t = { sessionid: A.SESSION_ID, appid: r }),
                     [
                       4,
                       _.a.post(
-                        P.BASE_URL + "recommender/" + P.STEAM_ID + "/wishlist",
+                        A.BASE_URL + "recommender/" + A.STEAM_ID + "/wishlist",
                         t
                       )
                     ]
@@ -2362,8 +2365,8 @@
                   return (
                     (a = e.sent()),
                     (n = {
-                      account_id: P.ACCOUNT_ID,
-                      session_id: P.SESSION_ID,
+                      account_id: A.ACCOUNT_ID,
+                      session_id: A.SESSION_ID,
                       app_id: r,
                       app_rank: o,
                       action: ae.AddToWishlist,
@@ -2374,7 +2377,7 @@
                     [
                       4,
                       _.a.post(
-                        P.BASE_URL + "recommender/" + P.STEAM_ID + "/stats",
+                        A.BASE_URL + "recommender/" + A.STEAM_ID + "/stats",
                         n
                       )
                     ]
@@ -2387,20 +2390,20 @@
         }),
         (e.prototype.onGoToWishlist = function() {
           window.location.href =
-            P.COMMUNITY_BASE_URL + "profiles/" + P.STEAM_ID + "/wishlist";
+            A.COMMUNITY_BASE_URL + "profiles/" + A.STEAM_ID + "/wishlist";
         }),
         (e.prototype.onAddToCart = function(n, r) {
-          return d.b(this, void 0, void 0, function() {
+          return Object(d.b)(this, void 0, void 0, function() {
             var t, a;
-            return d.e(this, function(e) {
+            return Object(d.e)(this, function(e) {
               switch (e.label) {
                 case 0:
                   return (
-                    (t = { sessionid: P.SESSION_ID, appid: n }),
+                    (t = { sessionid: A.SESSION_ID, appid: n }),
                     [
                       4,
                       _.a.post(
-                        P.BASE_URL + "recommender/" + P.STEAM_ID + "/cart",
+                        A.BASE_URL + "recommender/" + A.STEAM_ID + "/cart",
                         t
                       )
                     ]
@@ -2409,8 +2412,8 @@
                   return (
                     e.sent(),
                     (a = {
-                      account_id: P.ACCOUNT_ID,
-                      session_id: P.SESSION_ID,
+                      account_id: A.ACCOUNT_ID,
+                      session_id: A.SESSION_ID,
                       app_id: n,
                       app_rank: r,
                       action: ae.AddToCart,
@@ -2421,7 +2424,7 @@
                     [
                       4,
                       _.a.post(
-                        P.BASE_URL + "recommender/" + P.STEAM_ID + "/stats",
+                        A.BASE_URL + "recommender/" + A.STEAM_ID + "/stats",
                         a
                       )
                     ]
@@ -2429,7 +2432,7 @@
                 case 2:
                   return (
                     e.sent(),
-                    (window.location.href = P.STORE_BASE_URL + "cart"),
+                    (window.location.href = A.STORE_BASE_URL + "cart"),
                     [2]
                   );
               }
@@ -2445,34 +2448,34 @@
         (e.prototype.shouldMute = function() {
           return this.m_bShouldMute;
         }),
-        d.c([ee.v], e.prototype, "m_fPopularityValue", void 0),
-        d.c([ee.v], e.prototype, "m_fRecencyValue", void 0),
-        d.c([ee.v], e.prototype, "m_rgFilterTags", void 0),
-        d.c([ee.v], e.prototype, "m_rgExcludeTags", void 0),
-        d.c([ee.v], e.prototype, "m_fQueuedPopularityValue", void 0),
-        d.c([ee.v], e.prototype, "m_fQueuedRecencyValue", void 0),
-        d.c([ee.v], e.prototype, "m_bExcludeWishlisted", void 0),
-        d.c([ee.v], e.prototype, "m_bShouldMute", void 0),
-        d.c([ee.v], e.prototype, "m_bIgnoredEdited", void 0),
-        d.c([g], e.prototype, "getTagHeight", null),
-        d.c([g], e.prototype, "onPopularityChanged", null),
-        d.c([g], e.prototype, "onRecencyChanged", null),
-        d.c([g], e.prototype, "onTagFilterAdd", null),
-        d.c([g], e.prototype, "onTagFilterRemove", null),
-        d.c([g], e.prototype, "onTagExcludeAdd", null),
-        d.c([g], e.prototype, "onTagExcludeRemove", null),
-        d.c([g], e.prototype, "doTagsPassFilter", null),
-        d.c([g], e.prototype, "doTagsFailExclusion", null),
-        d.c([g], e.prototype, "onExcludeWishlistedToggled", null),
-        d.c([g], e.prototype, "onToggleIgnore", null),
-        d.c([g], e.prototype, "onUpdateWithIgnored", null),
-        d.c([g], e.prototype, "onAppClicked", null),
-        d.c([g], e.prototype, "onAddToWishlist", null),
-        d.c([g], e.prototype, "onGoToWishlist", null),
-        d.c([g], e.prototype, "onAddToCart", null),
-        d.c([g], e.prototype, "onMuteClicked", null),
-        d.c([g], e.prototype, "onUnMuteClicked", null),
-        d.c([g], e.prototype, "shouldMute", null),
+        Object(d.c)([ee.v], e.prototype, "m_fPopularityValue", void 0),
+        Object(d.c)([ee.v], e.prototype, "m_fRecencyValue", void 0),
+        Object(d.c)([ee.v], e.prototype, "m_rgFilterTags", void 0),
+        Object(d.c)([ee.v], e.prototype, "m_rgExcludeTags", void 0),
+        Object(d.c)([ee.v], e.prototype, "m_fQueuedPopularityValue", void 0),
+        Object(d.c)([ee.v], e.prototype, "m_fQueuedRecencyValue", void 0),
+        Object(d.c)([ee.v], e.prototype, "m_bExcludeWishlisted", void 0),
+        Object(d.c)([ee.v], e.prototype, "m_bShouldMute", void 0),
+        Object(d.c)([ee.v], e.prototype, "m_bIgnoredEdited", void 0),
+        Object(d.c)([g], e.prototype, "getTagHeight", null),
+        Object(d.c)([g], e.prototype, "onPopularityChanged", null),
+        Object(d.c)([g], e.prototype, "onRecencyChanged", null),
+        Object(d.c)([g], e.prototype, "onTagFilterAdd", null),
+        Object(d.c)([g], e.prototype, "onTagFilterRemove", null),
+        Object(d.c)([g], e.prototype, "onTagExcludeAdd", null),
+        Object(d.c)([g], e.prototype, "onTagExcludeRemove", null),
+        Object(d.c)([g], e.prototype, "doTagsPassFilter", null),
+        Object(d.c)([g], e.prototype, "doTagsFailExclusion", null),
+        Object(d.c)([g], e.prototype, "onExcludeWishlistedToggled", null),
+        Object(d.c)([g], e.prototype, "onToggleIgnore", null),
+        Object(d.c)([g], e.prototype, "onUpdateWithIgnored", null),
+        Object(d.c)([g], e.prototype, "onAppClicked", null),
+        Object(d.c)([g], e.prototype, "onAddToWishlist", null),
+        Object(d.c)([g], e.prototype, "onGoToWishlist", null),
+        Object(d.c)([g], e.prototype, "onAddToCart", null),
+        Object(d.c)([g], e.prototype, "onMuteClicked", null),
+        Object(d.c)([g], e.prototype, "onUnMuteClicked", null),
+        Object(d.c)([g], e.prototype, "shouldMute", null),
         e
       );
     })();

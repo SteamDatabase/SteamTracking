@@ -3001,3 +3001,44 @@ div .cdkey_request_details_row
 #legend_table td {
 	padding: 8px 6px 8px 6px;
 }
+
+.close_email_reminder {
+	background-image: url( 'https://partner.steamgames.com/public/images/home/icon-close.svg' );
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	display: block;
+}
+
+.close_email_reminder:hover {
+	background-image: url( 'https://partner.steamgames.com/public/images/home/icon-close--black.svg' );
+}
+
+.address_reminder_header {
+	display: flex;
+	justify-content: space-between;
+}
+
+.address_reminder_header div {
+	font-size: 22px;
+	color: #FFF;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.address_reminder_ctn {
+	padding: 15px;
+	color: #FFF;
+	margin-top: 15px;
+	font-size: 14px;
+	background: #36577f;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.address_reminder_body {
+	padding: 15px 0;
+}

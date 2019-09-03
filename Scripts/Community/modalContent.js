@@ -346,6 +346,16 @@ function EnsureModalContentDivExists()
 	}
 }
 
+function ShowPartnerEvent( partnerEventClanAccountID, partnerEventAnnounceGID )
+{
+	if( typeof window.fnPartnerEvent_ShowInfiniteScroll !== 'undefined')
+	{
+		window.fnPartnerEvent_ShowInfiniteScroll( partnerEventClanAccountID, partnerEventAnnounceGID );
+		return true;
+	}
+	return false;
+}
+
 $J( function($) {
 
 	$(window ).on('resize.modalContent', PollResizeActiveModalContent );
@@ -369,6 +379,15 @@ $J( function($) {
 		if ( bIsAnchor )
 			e.preventDefault();
 
+		var partnerEventAnnounceGID = $Link.data('partnerEventAnnounceGid');
+		var partnerEventClanAccountID = $Link.data('partnerEventClanAccountId');
+			if( partnerEventAnnounceGID && partnerEventClanAccountID && ShowPartnerEvent( partnerEventClanAccountID, partnerEventAnnounceGID ) ) {
+			return;
+		}
+		else {
+			console.log( 'Partner Events: InfiniteScroll - Did not find div to hook onto');
+		}
+
 		var strURL = $Link.data('modalContentUrl');
 		if ( !strURL )
 		{
@@ -379,6 +398,7 @@ $J( function($) {
 		{
 			strURL = strURL.replace( "http://", "https://" );
 		}
+
 
 		// if they are touching a div, just navigate to the item url
 		if ( s_bInTouchEvent )

@@ -176,10 +176,12 @@ LocalizationReady("shared", "english", {
   EventDisplay_TimeBeginsOn_StartAndEnd_Past: "Past Event Started",
   EventDisplay_TimeEndsOn: "Ends",
   EventDisplay_TimeEndsOn_Past: "Ended",
+  EventDisplay_TimeEndsOn_Ran: "Ran",
   EventDisplay_TimeRange: "Event Time",
   EventDisplay_TimeInPast: "Posted",
   EventDisplay_TimeUpcoming: "Event Starts",
   EventDisplay_TimeEventActive: "Event is running now",
+  EventDisplay_TimeEventOnNow: "On now!",
 
   EventDisplay_Share_Link: "Link: ",
   EventDisplay_Share_OnMyStatus: "Share directly to my status",
@@ -195,6 +197,11 @@ LocalizationReady("shared", "english", {
   EventDisplay_Share_Failure: "Failed with following message: ",
   EventDisplay_Share_Announcement: "%1$s Announcement",
   EventDisplay_Share_Event: "%1$s Event",
+  EventDisplay_Share_NotLoggedIn: "Not signed in",
+  EventDisplay_Share_NotLoggedIn_Description:
+    "To use this feature, you first need to sign into Steam",
+  EventDisplay_Share_CommentMigrationInProcess:
+    "Discussion for this event are queued to be migrated to the events system. They are temporarily unaccessible. Please come back later.",
 
   EventDisplay_AreYouSure:
     "Are you sure you want to delete this event (%1$s)? This action cannot be undone.",
@@ -483,6 +490,9 @@ LocalizationReady("shared", "english", {
   EventEditor_YouTubeVideoTitle: "YouTube™ Video: %1$s",
   EventEditor_YouTubeVideoViews: "Views: %1$s",
   EventEditor_Author: "By: %1$s",
+  EventEditor_Comments: "Comments",
+  EventEditor_UpVotes: "Up Votes",
+  EventEditor_DownVotes: "Down Votes",
 
   Error_Message: "Error Message",
   Warning_Message: "Warning Message",

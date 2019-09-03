@@ -508,6 +508,11 @@ background: -webkit-linear-gradient( 45deg, rgba(87, 92, 104, 0.3) 5%,rgba(87, 9
 	display: inline-table;
 }
 
+#RecommendationsRows.hide_owned .ds_owned,
+#RecommendationsRows.hide_ignored .ds_ignored,
+#RecommendationsRows.hide_wishlist, .ds_wishlist {
+	display: none;
+}
 
 .curator .type_four_row .store_capsule {
 	box-shadow: 0 0 3px rgba( 0, 0, 0, 0.5);

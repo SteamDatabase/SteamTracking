@@ -167,13 +167,7 @@
         short_url: ""
       },
       s = { steamid: "", clanid: 0, listid: 0 },
-      a = {
-        CLANSTEAMID: "",
-        CLANACCOUNTID: 0,
-        IMG_URL: "",
-        CLANURLNAME: "",
-        APPID: 0
-      },
+      a = { CLANSTEAMID: "", CLANACCOUNTID: 0, IMG_URL: "", APPID: 0 },
       f = "webui_config";
     function l() {
       var e = (function() {

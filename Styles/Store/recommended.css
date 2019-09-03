@@ -2054,6 +2054,11 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	overflow: hidden;
 }
 
+.china_needs_approval.review_box .content {
+	font-style: italic;
+}
+
+
 .review_box .content b {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: bold; /* bold */

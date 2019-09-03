@@ -258,7 +258,7 @@ a.linkbar .rightblock {
 }
 
 .tab_filter_control.checked .tab_filter_control_count {
-	/* display: none; */
+	display: none;
 }
 
 .discovery_queue_ctn {
