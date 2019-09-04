@@ -14430,4 +14430,6 @@ Por favor, inténtalo de nuevo más tarde."
 "[english]Notification_Controller_Player_Number_Changed1"	"{s:controller}"
 "Notification_Controller_Player_Number_Changed2"	"ahora es el jugador {d:player_number}"
 "[english]Notification_Controller_Player_Number_Changed2"	"is Now Player {d:player_number}"
+"Library_RemotePlayOptimized"	"Optimizado para Remote Play"
+"[english]Library_RemotePlayOptimized"	"Remote Play Optimized"
 }

@@ -162,7 +162,7 @@
 
 		library_filters	   { ControlName=MenuButton labelText="#steam_library_filter_allgames" style="NavLabel2" showDownArrow=0 group=library align=right }
 		
-		library_search	   { ControlName=TextEntry maxchars=16 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 }
+		library_search	   { ControlName=TextEntry maxchars=16 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 unicode=1 }
 		label_search_icon	{ ControlName=Label style="LibrarySearchIcon" group=library zpos="4" }
 
 		label_library_zoom { ControlName=Label labelText="#steam_library_zoom"	style="NavLabelZoom" group=zoom  }

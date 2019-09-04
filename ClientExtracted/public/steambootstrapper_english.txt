@@ -40,4 +40,5 @@ SteamBootstrapper_Cancel			"Cancel"
 SteamBootstrapper_WindowTitle			"%appname%"
 SteamBootstrapper_Error_Title			"%appname% - Fatal Error"
 SteamBootstrapper_Warning_Title			"%appname% - Warning"
+SteamBootstrapper_OperatingSystemNoLongerSupported "%appname% is no longer supported on your operating system version."
 }
