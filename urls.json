@@ -202,6 +202,7 @@
 "Styles/WebUI/shared_dialog.css"                 : "https://steamcommunity.com/public/css/webui/shared_dialog.css?__TIME__",
 "Styles/WebUI/broadcast.css"                     : "https://steamcommunity.com/public/css/webui/broadcast.css?__TIME__",
 "Styles/WebUI/friends.css"                       : "https://steamcommunity.com/public/css/webui/friends.css?__TIME__",
+"Styles/WebUI/applications/community/main.css"   : "https://steamcommunity-a.akamaihd.net/public/css/applications/community/main.css?__TIME__",
 
 //
 // WebUI JS
@@ -215,6 +216,7 @@
 "Scripts/WebUI/profile_manifest.js"              : "https://steamcommunity.com/public/javascript/webui/localization/profile_manifest.js?__TIME__&l=english",
 "Scripts/WebUI/shared_english.js"                : "https://steamcommunity.com/public/javascript/webui/localization/shared_english.js?__TIME__",
 "Scripts/WebUI/applications/interactive_recommender/main.js" : "https://store.steampowered.com/public/javascript/applications/interactive_recommender/main.js?__TIME__&l=english",
+"Scripts/WebUI/applications/community/main.js" : "https://steamcommunity-a.akamaihd.net/public/javascript/applications/community/main.js?__TIME__&l=english",
 
 //
 // Holiday CSS
