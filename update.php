@@ -35,7 +35,7 @@
 				$this->UseCache = false;
 			}
 
-			$UrlsPath   = __DIR__ . '/urls.json';
+			$UrlsPath   = __DIR__ . '/urls.txt';
 			$ApiKeyPath = __DIR__ . '/.support/apikey.txt';
 			$ETagsPath  = __DIR__ . '/.support/etags.txt';
 
@@ -60,24 +60,7 @@
 			$this->APIKey = Trim( File_Get_Contents( $ApiKeyPath ) );
 			$this->CurrentTime = Time( );
 
-			$Data = File_Get_Contents( $UrlsPath );
-
-			// Strip comments
-			$Data = Preg_Replace( '#^([\s]?//.*)#m', '', $Data );
-
-			$Data = JSON_Decode( $Data, true );
-
-			asort( $Data );
-
-			foreach( $Data as $File => $URL )
-			{
-				$this->URLsToFetch[ ] = Array(
-					'URL'  => $URL,
-					'File' => $File
-				);
-			}
-
-			unset( $Data, $URL, $File );
+			$this->URLsToFetch = $this->ParseUrls( file_get_contents( $UrlsPath ) );
 
 			$Tries = 5;
 
@@ -192,7 +175,7 @@
 				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
 			}
 			// Prettify
-			else if( $File === 'Scripts/Dota2/heropickerdata.json' || $File === 'Random/Jobs.json' )
+			else if( $File === 'Random/Jobs.json' )
 			{
 				$Data = JSON_Decode( $Data, true );
 				$Data = JSON_Encode( $Data, JSON_PRETTY_PRINT );
@@ -314,7 +297,7 @@
 				mkdir( $Folder, 0755, true );
 			}
 
-			if( substr( $OriginalFile, 0, 14 ) === 'Scripts/WebUI/' )
+			if( substr( $File, -3 ) === '.js' && ( stripos( $OriginalFile, '/webui/' ) !== false || strpos( $OriginalFile, '/applications/' ) !== false ) )
 			{
 				$HashPath = $OriginalFile . '.unmodified';
 				$Hash = hash( 'sha256', $Data );
@@ -328,7 +311,7 @@
 
 				$this->ETags[ $HashPath ] = $Hash;
 
-				if( $OriginalFile === 'Scripts/WebUI/steammessages.js' )
+				if( $OriginalFile === 'steamcommunity.com/public/javascript/webui/steammessages.js' )
 				{
 					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > ../ValveProtobufs/webui/friends.proto && ../ValveProtobufs/update.sh' );
 				}
@@ -512,6 +495,50 @@
 			cURL_Multi_Add_Handle( $Master, $Slave );
 
 			return $Slave;
+		}
+
+		private function ParseUrls( string $Data ) : array
+		{
+			$Data = explode( "\n", $Data );
+			$Urls = [];
+
+			foreach( $Data as $Line )
+			{
+				$Line = trim( $Line );
+
+				if( empty( $Line ) || $Line[ 0 ] === '/' )
+				{
+					continue;
+				}
+
+				if( strpos( $Line, '@' ) !== false )
+				{
+					$Line = explode( '@', $Line );
+					$File = trim( $Line[ 0 ] );
+					$Url = trim( $Line[ 1 ] );
+				}
+				else
+				{
+					$Url = $Line;
+					$ParsedUrl = parse_url( $Url );
+
+					if( $ParsedUrl === false )
+					{
+						$this->Log( $Line . ' is malformed' );
+						continue;
+					}
+
+					$File = $ParsedUrl[ 'host' ] . $ParsedUrl[ 'path' ];
+				}
+
+				$Urls[] =
+				[
+					'URL' => $Url,
+					'File' => $File,
+				];
+			}
+
+			return $Urls;
 		}
 
 		private function Log( $String )
