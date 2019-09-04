@@ -118,6 +118,7 @@ https://steamcommunity.com/public/shared/css/skin_1/broadcast_watch.css?__TIME__
 https://steamcommunity.com/public/shared/css/store_game_shared.css?__TIME__
 https://steamcommunity.com/public/shared/css/user_reviews.css?__TIME__
 https://store.steampowered.com/public/css/applications/interactive_recommender/main.css?__TIME__
+https://store.steampowered.com/public/css/applications/store/main.css?__TIME__
 https://store.steampowered.com/public/css/bigpicture/application.css?__TIME__
 https://store.steampowered.com/public/css/bigpicture/eventbackground_empty.css?__TIME__
 https://store.steampowered.com/public/css/bigpicture/eventbackground.css?__TIME__
@@ -322,6 +323,7 @@ https://steamcommunity.com/public/shared/javascript/user_reviews.js?__TIME__&l=e
 https://steamcommunity.com/public/shared/javascript/vatidcheck.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/app_tagging.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/interactive_recommender/main.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/applications/store/main.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/bigpicture/home.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/broadcast_carousel.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/cart.js?__TIME__&l=english
@@ -405,11 +407,11 @@ API/SupportedAPIList.json                       @ https://api.steampowered.com/I
 Random/BPEventBackground.xml                    @ https://store.steampowered.com/api/bpeventbackground/
 Random/ControllerFirmware.vdf                   @ https://steamcdn-a.akamaihd.net/controller_config/firmware/firmware.vdf
 Random/NetworkDatagramConfig.json               @ https://steamcdn-a.akamaihd.net/apps/sdr/network_config.json
-Random/JobPostings.html                         @ https://www.valvesoftware.com/en/
-Random/Publications.html                        @ https://www.valvesoftware.com/en/publications
-Random/People.html                              @ https://www.valvesoftware.com/en/people
-Random/About.html                               @ https://www.valvesoftware.com/en/about
-Random/Jobs.json                                @ https://www.valvesoftware.com/en/jobs/job-search
+//Random/JobPostings.html                         @ https://www.valvesoftware.com/en/
+//Random/Publications.html                        @ https://www.valvesoftware.com/en/publications
+//Random/People.html                              @ https://www.valvesoftware.com/en/people
+//Random/About.html                               @ https://www.valvesoftware.com/en/about
+//Random/Jobs.json                                @ https://www.valvesoftware.com/en/jobs/job-search
 Random/ValveGroup.json                          @ https://steamcommunity.com/groups/valve/memberslistxml?xml=1
 Random/SteamModerators.json                     @ https://steamcommunity.com/groups/SUFMods/memberslistxml?xml=1
 Random/SteamDevs.json                           @ https://steamcommunity.com/groups/steam/memberslistxml?xml=1
