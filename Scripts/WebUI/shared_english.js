@@ -533,6 +533,9 @@ LocalizationReady("shared", "english", {
   User_ToggleDoNotDisturb: "Do Not Disturb",
   User_GameInfoHidden:
     "Your game status is hidden from friends because of your privacy settings",
+  User_LimitedAccount:
+    "Your account does not meet the requirements to use this feature. %1$s for more information.",
+  User_LimitedAccount_UrlInfo: "Visit Steam Support",
 
   isNickname: "Your nickname for this friend",
   Friend_Menu_NotAFriendLabel: "Not Friends",
@@ -641,6 +644,7 @@ LocalizationReady("shared", "english", {
   PartnerEvent_31: "Free Trial",
   PartnerEvent_32: "New Season Launch",
   PartnerEvent_33: "Season Update",
+  PartnerEvent_34: "Cross Promotion",
   PartnerEvent_Other: "Other Event",
 
   SocialMedia_Type_ShortName_1: "Steam",

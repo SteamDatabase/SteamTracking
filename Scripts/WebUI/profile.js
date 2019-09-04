@@ -557,6 +557,7 @@
       (c[(c.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
       (c[(c.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (c[(c.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
+      (c[(c.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
       ((s = a || (a = {}))[(s.k_ELaunchSource_None = 0)] =
         "k_ELaunchSource_None"),
       (s[(s.k_ELaunchSource_2ftLibraryDetails = 100)] =

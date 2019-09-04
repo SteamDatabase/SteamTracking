@@ -7158,7 +7158,7 @@ button.DialogButton::-moz-focus-inner {
   z-index: 10; }
 
 .ModalOverlayBackground {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 7; }
 
 .ModalOverlayBackground.NotificationBrowserWarning {
