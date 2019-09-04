@@ -13,7 +13,7 @@
         Object.prototype.hasOwnProperty.call(u, a) && u[a] && s.push(u[a][0]),
         (u[a] = 0);
     for (t in r) Object.prototype.hasOwnProperty.call(r, t) && (c[t] = r[t]);
-    for (d && d(e); s.length; ) s.shift()();
+    for (_ && _(e); s.length; ) s.shift()();
     return p.push.apply(p, o || []), l();
   }
   function l() {
@@ -83,7 +83,7 @@
     n = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var r = 0; r < t.length; r++) e(t[r]);
-  var d = n;
+  var _ = n;
   p.push(["gfbn", 0]), l();
 })({
   "2i24": function(e, t, a) {
@@ -246,9 +246,9 @@
   gfbn: function(e, t, a) {
     "use strict";
     a.r(t);
-    var d = a("mrSG"),
+    var _ = a("mrSG"),
       n = a("vDqi"),
-      _ = a.n(n),
+      d = a.n(n),
       A = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
@@ -367,7 +367,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(d.d)(t, e),
+          Object(_.d)(t, e),
           (t.prototype.onVisibilityChanged = function(e) {
             e && p.AddImpression(this.props.appID, this.props.snr);
           }),
@@ -378,7 +378,7 @@
               this.props.children
             );
           }),
-          Object(d.c)([g], t.prototype, "onVisibilityChanged", null),
+          Object(_.c)([g], t.prototype, "onVisibilityChanged", null),
           t
         );
       })(M.a.Component),
@@ -583,6 +583,7 @@
       (f[(f.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
       (f[(f.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (f[(f.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
+      (f[(f.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
       ((y = S || (S = {}))[(y.k_ELaunchSource_None = 0)] =
         "k_ELaunchSource_None"),
       (y[(y.k_ELaunchSource_2ftLibraryDetails = 100)] =
@@ -941,7 +942,7 @@
           return (t.state = {}), t;
         }
         return (
-          Object(d.d)(e, a),
+          Object(_.d)(e, a),
           (e.prototype.onUpdate = function() {
             le.m_bIgnoredEdited && le.onUpdateWithIgnored();
           }),
@@ -964,8 +965,8 @@
                   )
                 );
           }),
-          Object(d.c)([g], e.prototype, "onUpdate", null),
-          (e = Object(d.c)([i.a], e))
+          Object(_.c)([g], e.prototype, "onUpdate", null),
+          (e = Object(_.c)([i.a], e))
         );
       })(M.a.Component),
       q = (function(a) {
@@ -974,7 +975,7 @@
           return (t.state = {}), t;
         }
         return (
-          Object(d.d)(e, a),
+          Object(_.d)(e, a),
           (e.prototype.render = function() {
             var e = le.getInputApps(),
               a = [];
@@ -1021,7 +1022,7 @@
               )
             );
           }),
-          (e = Object(d.c)([i.a], e))
+          (e = Object(_.c)([i.a], e))
         );
       })(M.a.Component),
       X = function(e) {
@@ -1083,7 +1084,7 @@
           );
         }
         return (
-          Object(d.d)(e, a),
+          Object(_.d)(e, a),
           (e.prototype.componentDidMount = function() {
             var e = le.getTags();
             if (e)
@@ -1216,13 +1217,13 @@
               n
             );
           }),
-          Object(d.c)([g], e.prototype, "onFetchRequested", null),
-          Object(d.c)([g], e.prototype, "onClearRequested", null),
-          Object(d.c)([g], e.prototype, "onChange", null),
-          Object(d.c)([g], e.prototype, "onKeyDown", null),
-          Object(d.c)([g], e.prototype, "shouldRenderSuggestions", null),
-          Object(d.c)([g], e.prototype, "onSuggestionSelected", null),
-          Object(d.c)([g], e.prototype, "onRemoveSelectedTag", null),
+          Object(_.c)([g], e.prototype, "onFetchRequested", null),
+          Object(_.c)([g], e.prototype, "onClearRequested", null),
+          Object(_.c)([g], e.prototype, "onChange", null),
+          Object(_.c)([g], e.prototype, "onKeyDown", null),
+          Object(_.c)([g], e.prototype, "shouldRenderSuggestions", null),
+          Object(_.c)([g], e.prototype, "onSuggestionSelected", null),
+          Object(_.c)([g], e.prototype, "onRemoveSelectedTag", null),
           e
         );
       })(M.a.Component),
@@ -1305,7 +1306,7 @@
           );
         }
         return (
-          Object(d.d)(e, a),
+          Object(_.d)(e, a),
           (e.prototype.componentDidMount = function() {
             this.m_videoRef.current.defaultMuted = !0;
           }),
@@ -1374,8 +1375,8 @@
               l = 0 < s.r ? U("#Recommendation_ReleasedOn", B(s.r)) : "",
               u = [];
             if (s.t)
-              for (var p = 0, d = 0, _ = s.t; d < _.length; d++) {
-                var h = _[d];
+              for (var p = 0, _ = 0, d = s.t; _ < d.length; _++) {
+                var h = d[_];
                 if (
                   (u.push(
                     M.a.createElement(
@@ -1661,13 +1662,13 @@
               )
             );
           }),
-          Object(d.c)([g], e.prototype, "OnHover", null),
-          Object(d.c)([g], e.prototype, "OnUnHover", null),
-          Object(d.c)([g], e.prototype, "onMuteToggle", null),
-          Object(d.c)([g], e.prototype, "onAddToWishlist", null),
-          Object(d.c)([g], e.prototype, "onGoToWishlist", null),
-          Object(d.c)([g], e.prototype, "onAddToCart", null),
-          (e = Object(d.c)([i.a], e))
+          Object(_.c)([g], e.prototype, "OnHover", null),
+          Object(_.c)([g], e.prototype, "OnUnHover", null),
+          Object(_.c)([g], e.prototype, "onMuteToggle", null),
+          Object(_.c)([g], e.prototype, "onAddToWishlist", null),
+          Object(_.c)([g], e.prototype, "onGoToWishlist", null),
+          Object(_.c)([g], e.prototype, "onAddToCart", null),
+          (e = Object(_.c)([i.a], e))
         );
       })(M.a.Component),
       Z = (function(a) {
@@ -1676,7 +1677,7 @@
           return (t.state = { sortedRecommendedApps: [] }), t;
         }
         return (
-          Object(d.d)(e, a),
+          Object(_.d)(e, a),
           (e.prototype.render = function() {
             var e = le.m_fRecencyValue * (A.NUM_RECENCY_STEPS - 1 - 0.001),
               t = Math.floor(e),
@@ -1694,15 +1695,15 @@
               u.push({ index: i * A.NUM_RECENCY_STEPS + a, weight: c * r }),
               u.push({ index: s * A.NUM_RECENCY_STEPS + a, weight: l * r });
             var p = new Map(),
-              d = 0,
-              _ = le.getRecommendations(),
+              _ = 0,
+              d = le.getRecommendations(),
               h = le.getAppInfo(),
               m = [];
-            if (_) {
+            if (d) {
               for (var g = 0, E = u; g < E.length; g++) {
                 var b = E[g],
-                  v = _[b.index];
-                if (((d = Math.max(d, v.score_scale)), v))
+                  v = d[b.index];
+                if (((_ = Math.max(_, v.score_scale)), v))
                   for (var f = 0; f < v.app_ids.length; f++) {
                     var S = v.app_ids[f];
                     if (
@@ -1722,7 +1723,7 @@
                   }
               }
               p.forEach(function(e, t) {
-                return p.set(t, e / d);
+                return p.set(t, e / _);
               });
               var T = [];
               p.forEach(function(e, t) {
@@ -1792,7 +1793,7 @@
               )
             );
           }),
-          (e = Object(d.c)([i.a], e))
+          (e = Object(_.c)([i.a], e))
         );
       })(M.a.Component),
       $ = (function(a) {
@@ -1801,7 +1802,7 @@
           return (t.state = { width: window.innerWidth }), t;
         }
         return (
-          Object(d.d)(e, a),
+          Object(_.d)(e, a),
           (e.prototype.updateDimensions = function() {
             this.setState({ width: window.innerWidth });
           }),
@@ -1884,7 +1885,7 @@
                             o.push(n.substr(s)),
                             l.createElement.apply(
                               l,
-                              Object(d.f)([l.Fragment, null], o)
+                              Object(_.f)([l.Fragment, null], o)
                             )
                           );
                         })(
@@ -1910,8 +1911,8 @@
                   )
                 );
           }),
-          Object(d.c)([g], e.prototype, "updateDimensions", null),
-          (e = Object(d.c)([i.a], e))
+          Object(_.c)([g], e.prototype, "updateDimensions", null),
+          (e = Object(_.c)([i.a], e))
         );
       })(M.a.Component),
       ee = a("2vnA"),
@@ -1969,8 +1970,8 @@
           (e.prototype.rerequestDataIfPending = function() {
             this.eState == I.Pending && (this.eState = I.Rerequest);
           }),
-          Object(d.c)([ee.v], e.prototype, "data", void 0),
-          Object(d.c)([ee.v], e.prototype, "nExpirationTime", void 0),
+          Object(_.c)([ee.v], e.prototype, "data", void 0),
+          Object(_.c)([ee.v], e.prototype, "nExpirationTime", void 0),
           e
         );
       })();
@@ -2040,13 +2041,13 @@
             this.m_mapAppDetailsCache.get(t).getData(
               60,
               function() {
-                return Object(d.b)(e, void 0, void 0, function() {
-                  return Object(d.e)(this, function(e) {
+                return Object(_.b)(e, void 0, void 0, function() {
+                  return Object(_.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
                         return [
                           4,
-                          _.a.get(
+                          d.a.get(
                             A.BASE_URL +
                               "recommender/" +
                               A.STEAM_ID +
@@ -2086,13 +2087,13 @@
               this.m_ResultDataCache.getData(
                 9999999,
                 function() {
-                  return Object(d.b)(r, void 0, void 0, function() {
-                    return Object(d.e)(this, function(e) {
+                  return Object(_.b)(r, void 0, void 0, function() {
+                    return Object(_.e)(this, function(e) {
                       switch (e.label) {
                         case 0:
                           return [
                             4,
-                            _.a.get(
+                            d.a.get(
                               A.BASE_URL +
                                 "recommender/" +
                                 A.STEAM_ID +
@@ -2141,13 +2142,13 @@
           return this.m_InputAppsCache.getData(
             9999999,
             function() {
-              return Object(d.b)(e, void 0, void 0, function() {
-                return Object(d.e)(this, function(e) {
+              return Object(_.b)(e, void 0, void 0, function() {
+                return Object(_.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return [
                         4,
-                        _.a.get(
+                        d.a.get(
                           A.BASE_URL +
                             "recommender/" +
                             A.STEAM_ID +
@@ -2182,13 +2183,13 @@
           return this.m_TagsCache.getData(
             9999999,
             function() {
-              return Object(d.b)(r, void 0, void 0, function() {
-                return Object(d.e)(this, function(e) {
+              return Object(_.b)(r, void 0, void 0, function() {
+                return Object(_.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return [
                         4,
-                        _.a.get(
+                        d.a.get(
                           A.BASE_URL +
                             "recommender/" +
                             A.STEAM_ID +
@@ -2268,9 +2269,9 @@
             (this.m_bStateUpdated = !0);
         }),
         (e.prototype.onToggleIgnore = function(s) {
-          return Object(d.b)(this, void 0, void 0, function() {
+          return Object(_.b)(this, void 0, void 0, function() {
             var t, a, n, r, o, i;
-            return Object(d.e)(this, function(e) {
+            return Object(_.e)(this, function(e) {
               switch (e.label) {
                 case 0:
                   for (
@@ -2295,7 +2296,7 @@
                         }),
                         [
                           4,
-                          _.a.post(
+                          d.a.post(
                             A.BASE_URL + "recommended/ignorerecommendation/",
                             i
                           )
@@ -2314,9 +2315,9 @@
           this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
         }),
         (e.prototype.onAppClicked = function(a, n) {
-          return Object(d.b)(this, void 0, void 0, function() {
+          return Object(_.b)(this, void 0, void 0, function() {
             var t;
-            return Object(d.e)(this, function(e) {
+            return Object(_.e)(this, function(e) {
               switch (e.label) {
                 case 0:
                   return (
@@ -2332,7 +2333,7 @@
                     }),
                     [
                       4,
-                      _.a.post(
+                      d.a.post(
                         A.BASE_URL + "recommender/" + A.STEAM_ID + "/stats",
                         t
                       )
@@ -2345,9 +2346,9 @@
           });
         }),
         (e.prototype.onAddToWishlist = function(r, o) {
-          return Object(d.b)(this, void 0, void 0, function() {
+          return Object(_.b)(this, void 0, void 0, function() {
             var t, a, n;
-            return Object(d.e)(this, function(e) {
+            return Object(_.e)(this, function(e) {
               switch (e.label) {
                 case 0:
                   return (
@@ -2355,7 +2356,7 @@
                     (t = { sessionid: A.SESSION_ID, appid: r }),
                     [
                       4,
-                      _.a.post(
+                      d.a.post(
                         A.BASE_URL + "recommender/" + A.STEAM_ID + "/wishlist",
                         t
                       )
@@ -2376,7 +2377,7 @@
                     }),
                     [
                       4,
-                      _.a.post(
+                      d.a.post(
                         A.BASE_URL + "recommender/" + A.STEAM_ID + "/stats",
                         n
                       )
@@ -2393,16 +2394,16 @@
             A.COMMUNITY_BASE_URL + "profiles/" + A.STEAM_ID + "/wishlist";
         }),
         (e.prototype.onAddToCart = function(n, r) {
-          return Object(d.b)(this, void 0, void 0, function() {
+          return Object(_.b)(this, void 0, void 0, function() {
             var t, a;
-            return Object(d.e)(this, function(e) {
+            return Object(_.e)(this, function(e) {
               switch (e.label) {
                 case 0:
                   return (
                     (t = { sessionid: A.SESSION_ID, appid: n }),
                     [
                       4,
-                      _.a.post(
+                      d.a.post(
                         A.BASE_URL + "recommender/" + A.STEAM_ID + "/cart",
                         t
                       )
@@ -2423,7 +2424,7 @@
                     }),
                     [
                       4,
-                      _.a.post(
+                      d.a.post(
                         A.BASE_URL + "recommender/" + A.STEAM_ID + "/stats",
                         a
                       )
@@ -2448,34 +2449,34 @@
         (e.prototype.shouldMute = function() {
           return this.m_bShouldMute;
         }),
-        Object(d.c)([ee.v], e.prototype, "m_fPopularityValue", void 0),
-        Object(d.c)([ee.v], e.prototype, "m_fRecencyValue", void 0),
-        Object(d.c)([ee.v], e.prototype, "m_rgFilterTags", void 0),
-        Object(d.c)([ee.v], e.prototype, "m_rgExcludeTags", void 0),
-        Object(d.c)([ee.v], e.prototype, "m_fQueuedPopularityValue", void 0),
-        Object(d.c)([ee.v], e.prototype, "m_fQueuedRecencyValue", void 0),
-        Object(d.c)([ee.v], e.prototype, "m_bExcludeWishlisted", void 0),
-        Object(d.c)([ee.v], e.prototype, "m_bShouldMute", void 0),
-        Object(d.c)([ee.v], e.prototype, "m_bIgnoredEdited", void 0),
-        Object(d.c)([g], e.prototype, "getTagHeight", null),
-        Object(d.c)([g], e.prototype, "onPopularityChanged", null),
-        Object(d.c)([g], e.prototype, "onRecencyChanged", null),
-        Object(d.c)([g], e.prototype, "onTagFilterAdd", null),
-        Object(d.c)([g], e.prototype, "onTagFilterRemove", null),
-        Object(d.c)([g], e.prototype, "onTagExcludeAdd", null),
-        Object(d.c)([g], e.prototype, "onTagExcludeRemove", null),
-        Object(d.c)([g], e.prototype, "doTagsPassFilter", null),
-        Object(d.c)([g], e.prototype, "doTagsFailExclusion", null),
-        Object(d.c)([g], e.prototype, "onExcludeWishlistedToggled", null),
-        Object(d.c)([g], e.prototype, "onToggleIgnore", null),
-        Object(d.c)([g], e.prototype, "onUpdateWithIgnored", null),
-        Object(d.c)([g], e.prototype, "onAppClicked", null),
-        Object(d.c)([g], e.prototype, "onAddToWishlist", null),
-        Object(d.c)([g], e.prototype, "onGoToWishlist", null),
-        Object(d.c)([g], e.prototype, "onAddToCart", null),
-        Object(d.c)([g], e.prototype, "onMuteClicked", null),
-        Object(d.c)([g], e.prototype, "onUnMuteClicked", null),
-        Object(d.c)([g], e.prototype, "shouldMute", null),
+        Object(_.c)([ee.v], e.prototype, "m_fPopularityValue", void 0),
+        Object(_.c)([ee.v], e.prototype, "m_fRecencyValue", void 0),
+        Object(_.c)([ee.v], e.prototype, "m_rgFilterTags", void 0),
+        Object(_.c)([ee.v], e.prototype, "m_rgExcludeTags", void 0),
+        Object(_.c)([ee.v], e.prototype, "m_fQueuedPopularityValue", void 0),
+        Object(_.c)([ee.v], e.prototype, "m_fQueuedRecencyValue", void 0),
+        Object(_.c)([ee.v], e.prototype, "m_bExcludeWishlisted", void 0),
+        Object(_.c)([ee.v], e.prototype, "m_bShouldMute", void 0),
+        Object(_.c)([ee.v], e.prototype, "m_bIgnoredEdited", void 0),
+        Object(_.c)([g], e.prototype, "getTagHeight", null),
+        Object(_.c)([g], e.prototype, "onPopularityChanged", null),
+        Object(_.c)([g], e.prototype, "onRecencyChanged", null),
+        Object(_.c)([g], e.prototype, "onTagFilterAdd", null),
+        Object(_.c)([g], e.prototype, "onTagFilterRemove", null),
+        Object(_.c)([g], e.prototype, "onTagExcludeAdd", null),
+        Object(_.c)([g], e.prototype, "onTagExcludeRemove", null),
+        Object(_.c)([g], e.prototype, "doTagsPassFilter", null),
+        Object(_.c)([g], e.prototype, "doTagsFailExclusion", null),
+        Object(_.c)([g], e.prototype, "onExcludeWishlistedToggled", null),
+        Object(_.c)([g], e.prototype, "onToggleIgnore", null),
+        Object(_.c)([g], e.prototype, "onUpdateWithIgnored", null),
+        Object(_.c)([g], e.prototype, "onAppClicked", null),
+        Object(_.c)([g], e.prototype, "onAddToWishlist", null),
+        Object(_.c)([g], e.prototype, "onGoToWishlist", null),
+        Object(_.c)([g], e.prototype, "onAddToCart", null),
+        Object(_.c)([g], e.prototype, "onMuteClicked", null),
+        Object(_.c)([g], e.prototype, "onUnMuteClicked", null),
+        Object(_.c)([g], e.prototype, "shouldMute", null),
         e
       );
     })();
