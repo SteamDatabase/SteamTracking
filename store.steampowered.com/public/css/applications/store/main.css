@@ -5638,8 +5638,8 @@ textarea:-webkit-autofill:focus,
 
 .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
   padding: 0px 20px;
-  width: fit-content;
-  margin: 0 auto; }
+  margin: 0 auto;
+  pointer-events: none; }
 
 .apppartnereventspage_PartnerEvent_1KsYS {
   max-width: 860px;
