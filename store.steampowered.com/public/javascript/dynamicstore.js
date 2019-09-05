@@ -772,6 +772,8 @@ GDynamicStore = {
 					for( var i=0; i<rgAppIds.length; i++ )
 						GDynamicStore.ModifyIgnoredApp ( $elSource, rgAppIds[ i ], false );
 
+					$El.trigger('mouseleave');
+
 					return false;
 				};
 				var strText = "Ignore";
@@ -786,6 +788,8 @@ GDynamicStore = {
 					$J('.ds_flag.ds_ignored_flag', $elSource).remove();
 					for( var i=0; i<rgAppIds.length; i++ )
 						GDynamicStore.ModifyIgnoredApp ( $elSource, rgAppIds[ i ], true );
+
+					$El.trigger('mouseleave');
 
 					return false;
 				};

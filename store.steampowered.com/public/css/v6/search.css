@@ -167,7 +167,7 @@
 	background: #000000;
 	background: rgba( 0, 0, 0, 0.2 );
 
-	margin: 5px 0;
+	margin-bottom: 5px;
 	display: block;
 	text-decoration: none;
 	color: #c6d4df;
@@ -209,10 +209,18 @@
 	display: none;
 }
 
+.search_result_row {
+	height: 45px;
+	overflow: hidden;
+	transition: height 0.25s, margin 0.25s;
+}
+
 .search_results.hide_owned    .ds_owned,
 .search_results.hide_ignored  .ds_ignored,
 .search_results.hide_wishlist .ds_wishlist {
-    display: none;
+    height: 0;
+	margin: 0;
+	border: none;
 }
 
 .search_results_filtered_warning {
@@ -494,6 +502,13 @@ div.autocomplete ul li {
 
 	html.responsive .search_result_row {
 		padding: 5px;
+		height: auto;
+	}
+
+	html.responsive .search_results.hide_owned    .ds_owned,
+	html.responsive .search_results.hide_ignored  .ds_ignored,
+	html.responsive .search_results.hide_wishlist .ds_wishlist {
+		display: none;
 	}
 
 	html.responsive .search_result_row .title {
@@ -692,3 +707,105 @@ div.autocomplete ul li {
 
 .range_input:focus::-ms-fill-upper {
 	background: #7fcbf7; }
+
+
+
+.search_labs_banner
+{
+	position: relative;
+	display: block;
+	height: 62px;
+}
+
+.search_labs_banner_link
+{
+	display: block;
+}
+
+.search_labs_banner img.banner
+{
+	max-width: 100%;
+	display: block;
+}
+
+.search_labs_banner img.hover
+{
+	opacity: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	transition: opacity 0.25s;
+
+	width: 100%;
+	height: 100%;
+}
+
+.search_labs_banner_link:hover img.hover
+{
+	opacity: 1.0;
+	display: block;
+}
+
+.search_labs_banner_actions
+{
+	position: absolute;
+	bottom: -40px;
+	right: 2%;
+	display: grid;
+	grid-template-columns: auto auto;
+	line-height: 18px;
+	align-items: center;
+
+	font-size: 12px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+html[lang=en] .search_labs_banner_actions
+{
+	top: 6%;
+	bottom: 6%;
+}
+
+.search_labs_banner_actions .action_label
+{
+	text-align: right;
+	color: #19c0d0;
+	padding-right: 5px;
+}
+
+.search_labs_banner_actions .action_link
+{
+	color: #c0f3ff;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .search_labs_banner {
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 640px)
+{
+	html.responsive .search_labs_banner_actions {
+		font-size: 9px;
+	}
+
+	html[lang=en].responsive .search_labs_banner_actions {
+		top: 10%;
+		bottom: 10%;
+	}
+}
+
+.autocollapse_enabled .search_collapse_block .block_header {
+	cursor: pointer;
+}
+
+.search_collapse_block.collapsed .see_all_expander,
+.autocollapse_enabled .search_collapse_block .see_all_expander.nocollapse_only {
+	display: none;
+}

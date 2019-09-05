@@ -617,3 +617,54 @@ function jqEscapeSelectorAttribute(str)
 	return str;
 }
 
+function InitAutocollapse()
+{
+	var prefs = GetCollapsePrefs();
+	$J('.search_collapse_block').each( function() {
+		var $Block = $J(this);
+		var name = $Block.data('collapseName');
+		var bCollapsed;
+		if ( prefs[ name ] !== undefined )
+			bCollapsed = prefs[ name ];
+		else
+			prefs[ name ] = bCollapsed = $Block.data('collapseDefault');
+
+		bCollapsed = bCollapsed && !( $Block.find('.tab_filter_control.checked').length > 0 );
+
+		$Block.children('.block_content').css( 'height', '' );
+
+		if ( bCollapsed )
+		{
+			$Block.addClass( 'collapsed' );
+			$Block.children('.block_content').hide();
+		}
+
+		$Block.children('.block_header').on( 'click', function() {
+			if ( $Block.hasClass('collapsed') )
+			{
+				prefs[ name ] = false;
+				$Block.children('.block_content').slideDown( 'fast' );
+			}
+			else
+			{
+				prefs[ name ] = true;
+				$Block.children('.block_content').slideUp( 'fast' );
+			}
+
+			$Block.toggleClass('collapsed');
+			SaveCollapsePrefs( prefs );
+		});
+	});
+}
+
+function GetCollapsePrefs()
+{
+	var data = WebStorage.GetLocal( 'search_collapse_prefs' );
+	return data || {};
+}
+
+function SaveCollapsePrefs( data )
+{
+	WebStorage.SetLocal( 'search_collapse_prefs', data );
+}
+
