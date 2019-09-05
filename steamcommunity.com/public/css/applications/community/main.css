@@ -2347,6 +2347,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   font-size: 19px;
   line-height: 22px;
   font-weight: normal;
+  display: inline-block;
   clear: both; }
 
 .eventbbcodeparser_Link_29bMZ {
@@ -2383,7 +2384,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   list-style-position: inside;
   line-height: 21px;
   padding-left: 1em;
-  padding-inline-start: 40px; }
+  padding-inline-start: 40px;
+  margin-top: 14px;
+  margin-bottom: 14px; }
 
 .eventbbcodeparser_UnorderList_3995Y > li {
   list-style-position: outside; }
@@ -2558,6 +2561,9 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   justify-content: space-between;
   padding: 24px;
   background-image: radial-gradient(ellipse at top center, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0) 80%); }
+  @media screen and (max-width: 600px) {
+    .discussionwidget_Container_mKmrO {
+      flex-direction: column; } }
 
 .discussionwidget_VoteContainer_3Kelh,
 .discussionwidget_DiscussContainer_16xC0,
@@ -5673,6 +5679,7 @@ img {
     color: white; }
   .eventrow_HoversEnabled_3o6M8:hover .eventrow_EventSummaryContainer_2GYp4 .eventrow_EventSummaryType_11JXz {
     filter: blur(0);
+    color: #289cff;
     transform: scale(1); }
 
 .eventrow_EventSummaryContainer_2GYp4 {
@@ -5693,6 +5700,7 @@ img {
   font-weight: 300;
   overflow: hidden;
   filter: blur(5px);
+  opacity: 0;
   user-select: none;
   text-rendering: optimizeSpeed;
   transform: scale(1);
@@ -5705,7 +5713,8 @@ img {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 500;
-  color: #289cff;
+  color: rgba(40, 156, 255, 0);
+  opacity: 0;
   overflow: hidden;
   filter: blur(5px);
   user-select: none;
@@ -7618,6 +7627,7 @@ input.partnereventemails_HeadlineInput_2lHX9 {
   border-radius: 4px;
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 0 0 32px black;
+  pointer-events: initial;
   border: 1px solid transparent;
   border-image-source: url("/images/glassborder_02.png");
   border-image-width: 1px;
@@ -7742,7 +7752,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     color: #289cff; }
   .apppartnereventspage_TimeandPostedBy_2WwG2.apppartnereventspage_TimeandPostedBy_2WwG2 {
     color: #6c767f;
-    margin-bottom: -6px; }
+    margin-bottom: 0px; }
 
 .partnereventinfinitescroll_AppPartnerEventsContainer_1WjHn {
   width: 100vw;
@@ -7761,6 +7771,9 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   cursor: pointer;
   position: relative;
   bottom: 30px; }
+
+.partnereventinfinitescroll_EventFeed_21fiW.partnereventinfinitescroll_EventFeed_21fiW .ModalPosition_Content {
+  max-height: initial; }
 
 /* reset browser styles */
 button.DialogButton {

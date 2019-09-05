@@ -141,7 +141,7 @@
               {
                 0: "ebf340b3a6216e2d0fa9",
                 1: "031ada57d1f360d64609",
-                3: "39c310a7f672edc2b2c0",
+                3: "5e14518e2e78c4b0187b",
                 5: "d670e45f25fc7cea5fff",
                 6: "60f82bb5d28ded9239d5",
                 7: "72f61c3b6f98edc282ef",
@@ -2864,7 +2864,8 @@
     e.exports = {
       AppPartnerEventsContainer:
         "partnereventinfinitescroll_AppPartnerEventsContainer_1WjHn",
-      SectionButton: "partnereventinfinitescroll_SectionButton_3zeLN"
+      SectionButton: "partnereventinfinitescroll_SectionButton_3zeLN",
+      EventFeed: "partnereventinfinitescroll_EventFeed_21fiW"
     };
   },
   Ltvz: function(e, t) {
@@ -9540,10 +9541,14 @@
         );
       })(),
       Q = (function(a) {
-        function e(e, t) {
-          var n = a.call(this, e) || this;
+        function e(e, t, n) {
+          var o = a.call(this, e) || this;
           return (
-            (n.m_nStartCursor = 1), (n.m_nStartCursor = void 0 !== t ? t : 1), n
+            (o.m_nStartCursor = 1),
+            (o.m_bDisableDataCopy = !1),
+            (o.m_nStartCursor = void 0 !== t ? t : 1),
+            (o.m_bDisableDataCopy = Boolean(n)),
+            o
           );
         }
         return (
@@ -9559,20 +9564,25 @@
                   o.push(_.createElement("br")),
                   (n = n.substr(i + 1));
               n.length && o.push(n),
-                a.prototype.AppendNode.call(
-                  this,
-                  _.createElement.apply(
-                    _,
-                    [
-                      "span",
-                      {
-                        "data-copytext": "",
-                        "data-copystyle": "merge-adjacent",
-                        "bbcode-text": e
-                      }
-                    ].concat(o)
-                  )
-                );
+                this.m_bDisableDataCopy
+                  ? a.prototype.AppendNode.call(
+                      this,
+                      _.createElement.apply(_, ["span", {}].concat(o))
+                    )
+                  : a.prototype.AppendNode.call(
+                      this,
+                      _.createElement.apply(
+                        _,
+                        [
+                          "span",
+                          {
+                            "data-copytext": "",
+                            "data-copystyle": "merge-adjacent",
+                            "bbcode-text": e
+                          }
+                        ].concat(o)
+                      )
+                    );
             } else a.prototype.AppendNode.call(this, e);
           }),
           e
@@ -19023,7 +19033,7 @@
           (o.prototype.ElementAccumulator = function(e) {
             return new po(
               new ro(
-                new ao(new Q(new V(), 0), e, o.BBCodeURLComponent, {
+                new ao(new Q(new V(), 0, !0), e, o.BBCodeURLComponent, {
                   partnerEventStore: this.props.partnerEventStore,
                   event: this.props.event
                 })
@@ -54145,7 +54155,7 @@
               : this.state.eventModel
               ? _.createElement(
                   ze,
-                  { hideTopBar: !0 },
+                  { hideTopBar: !0, className: Al.EventFeed },
                   _.createElement(
                     "div",
                     { className: Al.AppPartnerEventsContainer },

@@ -4489,6 +4489,7 @@ b {
   font-size: 19px;
   line-height: 22px;
   font-weight: normal;
+  display: inline-block;
   clear: both; }
 
 .eventbbcodeparser_Link_29bMZ {
@@ -4525,7 +4526,9 @@ b {
   list-style-position: inside;
   line-height: 21px;
   padding-left: 1em;
-  padding-inline-start: 40px; }
+  padding-inline-start: 40px;
+  margin-top: 14px;
+  margin-bottom: 14px; }
 
 .eventbbcodeparser_UnorderList_3995Y > li {
   list-style-position: outside; }
@@ -4929,6 +4932,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   justify-content: space-between;
   padding: 24px;
   background-image: radial-gradient(ellipse at top center, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0) 80%); }
+  @media screen and (max-width: 600px) {
+    .discussionwidget_Container_mKmrO {
+      flex-direction: column; } }
 
 .discussionwidget_VoteContainer_3Kelh,
 .discussionwidget_DiscussContainer_16xC0,
@@ -5583,6 +5589,7 @@ textarea:-webkit-autofill:focus,
     color: white; }
   .eventrow_HoversEnabled_3o6M8:hover .eventrow_EventSummaryContainer_2GYp4 .eventrow_EventSummaryType_11JXz {
     filter: blur(0);
+    color: #289cff;
     transform: scale(1); }
 
 .eventrow_EventSummaryContainer_2GYp4 {
@@ -5603,6 +5610,7 @@ textarea:-webkit-autofill:focus,
   font-weight: 300;
   overflow: hidden;
   filter: blur(5px);
+  opacity: 0;
   user-select: none;
   text-rendering: optimizeSpeed;
   transform: scale(1);
@@ -5615,7 +5623,8 @@ textarea:-webkit-autofill:focus,
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 500;
-  color: #289cff;
+  color: rgba(40, 156, 255, 0);
+  opacity: 0;
   overflow: hidden;
   filter: blur(5px);
   user-select: none;
@@ -5649,6 +5658,7 @@ textarea:-webkit-autofill:focus,
   border-radius: 4px;
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 0 0 32px black;
+  pointer-events: initial;
   border: 1px solid transparent;
   border-image-source: url("/images/glassborder_02.png");
   border-image-width: 1px;
@@ -5773,7 +5783,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     color: #289cff; }
   .apppartnereventspage_TimeandPostedBy_2WwG2.apppartnereventspage_TimeandPostedBy_2WwG2 {
     color: #6c767f;
-    margin-bottom: -6px; }
+    margin-bottom: 0px; }
 
 body {
   color: #969696;
@@ -5928,6 +5938,9 @@ img {
   left: 0;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1500; }
+  @media screen and (max-width: 910px) {
+    .events_AppPartnerEventsContainer_3iS-s {
+      margin-top: 58px; } }
 
 .events_SectionButton_3I3q- {
   background: transparent;
