@@ -1424,9 +1424,17 @@ function ChangeReviewPurchaseTypeFilter()
 	ShowFilteredReviews();
 }
 
-function OnReviewPlaytimeFilterSliderChanged()
+function OnReviewPlaytimeFilterSliderChanged( hourMin, hourMax, maxHours )
 {
-	$J('input[name="review_playtime_preset"]').attr( 'checked', false );
+	if ( hourMin == 0 && hourMax == maxHours )
+	{
+		$J('input[name="review_playtime_preset"][value="0"]').attr( 'checked', true );
+	}
+	else
+	{
+		$J('input[name="review_playtime_preset"]').attr( 'checked', false );
+	}
+
 	ShowFilteredReviews();
 }
 
@@ -1504,7 +1512,13 @@ function InitPlaytimeFilterSlider()
 		change: function( event, ui ) {
 			if ( event.originalEvent )
 			{
-				OnReviewPlaytimeFilterSliderChanged();
+				var minSecs = ui.values[0];
+				var maxSecs = ui.values[1];
+
+				var hourMin = parseInt( minSecs / ( 60 * 60 ), 10 );
+				var hourMax = parseInt( maxSecs / ( 60 * 60 ), 10 );
+
+				OnReviewPlaytimeFilterSliderChanged( hourMin, hourMax, maxHours );
 			}
 		}
 	});
