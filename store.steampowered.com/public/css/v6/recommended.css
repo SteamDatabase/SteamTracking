@@ -2879,6 +2879,22 @@ div.graph_toggle_icon.down {
 
 }
 
+.user_reviews_steam_labs_desc > a {
+	color: #19c0d0;
+}
+.user_reviews_steam_labs_desc:hover > a {
+	color: #fff;
+}
+.user_reviews_steam_labs_desc > a > img {
+	height: 32px;
+	margin-right: 5px;
+}
+.user_reviews_steam_labs_desc > a > span {
+	display: inline-block;
+	position: relative;
+	bottom: 4px;
+}
+
 .user_reviews_date_range_explanation,
 .user_reviews_offtopic_activity_explanation,
 .user_reviews_playtime_filter_explanation {
