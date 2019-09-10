@@ -48,6 +48,38 @@
 	background: rgba( 0, 0, 0, 0.4 );
 	padding: 6px;
 }
+@media screen and (max-width: 560px)
+{
+    html.responsive .searchbar {
+        display: flex;
+        flex-direction: column;
+    }
+    html.responsive #term {
+        font-size: 15px;
+        height: 22px;
+
+        max-width: unset;
+        width: unset;
+        flex-grow: 1;
+        padding-left: 10px;
+    }
+    html.responsive .searchbar_left {
+        display: flex;
+        margin-top: 8px;
+    }
+    html.responsive .searchbar_left > button {
+        height: 33px;
+        margin-top: 1px;
+    }
+    html.responsive .searchbar_left > button >span {
+        font-size: 14px;
+    }
+    html.responsive div.autocomplete ul li {
+        font-size: 14px;
+        line-height: 19px;
+        padding: 6px;
+    }
+}
 
 .searchbar .sortbox {
 	float: right;

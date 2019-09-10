@@ -7,6 +7,16 @@
   display: flex;
   flex-direction: column;
   margin: 0; }
+  .throbber_LoadingWrapper_2wAKy.throbber_Static_1Qfwp {
+    animation-name: throbber_none_1F0lz; }
+    .throbber_LoadingWrapper_2wAKy.throbber_Static_1Qfwp * {
+      animation-name: throbber_none_1F0lz !important;
+      stroke-dasharray: initial !important;
+      stroke-dashoffset: initial !important;
+      stroke-width: 5px !important;
+      opacity: 1 !important; }
+    .throbber_LoadingWrapper_2wAKy.throbber_Static_1Qfwp .throbber_bottomCircle_2qjZm path {
+      stroke-width: 0 !important; }
 
 .throbber_LoadingWrapper_2wAKy.throbber_noString_1Sy0p {
   flex-direction: row; }
@@ -318,6 +328,10 @@
 .throbber_throbber_xlarge_1gYeZ {
   width: 120px;
   height: 120px; }
+
+.throbber_throbber_xxlarge_3j-p4 {
+  width: 240px;
+  height: 240px; }
 
 .SVGIcon_Button {
   fill: #ffffff;

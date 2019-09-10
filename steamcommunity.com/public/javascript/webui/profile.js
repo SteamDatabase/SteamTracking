@@ -1666,7 +1666,7 @@
                   n.document.execCommand("cut");
                 }
               },
-              Object(p.b)("#ContextMenu_Cut")
+              Object(p.c)("#ContextMenu_Cut")
             )
           ),
         (document.queryCommandEnabled("copy") || o) &&
@@ -1679,7 +1679,7 @@
                   n.document.execCommand("copy");
                 }
               },
-              Object(p.b)("#ContextMenu_Copy")
+              Object(p.c)("#ContextMenu_Copy")
             )
           ),
         h.b.IN_CLIENT &&
@@ -1693,7 +1693,7 @@
                   i.focus(), n.SteamClient._internal.Paste();
                 }
               },
-              Object(p.b)("#ContextMenu_Paste")
+              Object(p.c)("#ContextMenu_Paste")
             )
           ),
         t.length)
@@ -1828,13 +1828,13 @@
       return s;
     }),
       n.d(t, "a", function() {
-        return h;
+        return f;
       }),
       n.d(t, "b", function() {
-        return d;
+        return v;
       }),
       n.d(t, "d", function() {
-        return v;
+        return y;
       });
     var s,
       r,
@@ -1844,13 +1844,15 @@
       a = n("UqDm"),
       l = n("WpBz"),
       u = n("1VtQ"),
-      m = n("hEDq");
+      m = n("hEDq"),
+      p = n("oh5H"),
+      h = n("1n9R");
     ((r = s || (s = {}))[(r.Minimized = 1)] = "Minimized"),
       (r[(r.Hidden = 2)] = "Hidden"),
       (r[(r.Tooltip = 4)] = "Tooltip"),
       (r[(r.ContextMenu = 8)] = "ContextMenu"),
       (r[(r.Resizable = 16)] = "Resizable");
-    var p = (function() {
+    var d = (function() {
         function e(e, t) {
           (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
           for (
@@ -1879,7 +1881,7 @@
           e
         );
       })(),
-      h = (function() {
+      f = (function() {
         function e(e, t) {
           (this.m_bFocused = !1),
             (this.m_strName = e),
@@ -1922,7 +1924,7 @@
             var o,
               i,
               c,
-              a = v.GetExistingPopup(this.m_strName);
+              a = y.GetExistingPopup(this.m_strName);
             (a && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
               a
@@ -1930,7 +1932,7 @@
                   (o = a.m_popup),
                   a.ReleasePopup(),
                   (c = a.m_renderWhenReady),
-                  v.RemoveTrackedPopup(a),
+                  y.RemoveTrackedPopup(a),
                   o.removeEventListener("beforeunload", a.OnBeforeUnloadEvent),
                   o.removeEventListener("unload", a.OnUnload),
                   o.removeEventListener("resize", a.OnResizeEvent),
@@ -1939,10 +1941,10 @@
                   o.removeEventListener("drop", a.OnDrop),
                   o.removeEventListener("dragover", a.OnDragOver),
                   o.removeEventListener("message", this.OnMessage))
-                : ((o = (n = f.CreatePopup(this.m_strName, this.m_rgParams))
+                : ((o = (n = _.CreatePopup(this.m_strName, this.m_rgParams))
                     .popup),
                   (i = n.element),
-                  (c = new p(o, i))),
+                  (c = new d(o, i))),
               o &&
                 i &&
                 ((o.document.title = this.m_strTitle),
@@ -1954,13 +1956,18 @@
                 o.addEventListener("drop", this.OnDrop),
                 o.addEventListener("dragover", this.OnDragOver),
                 o.addEventListener("message", this.OnMessage),
+                h.b.LANGUAGE &&
+                  o.document.documentElement.setAttribute(
+                    "lang",
+                    p.a[h.b.LANGUAGE]
+                  ),
                 (this.m_popup = o),
                 (this.m_element = i),
                 (this.m_renderWhenReady = c),
                 this.m_renderWhenReady.SetTarget(function() {
                   return r.RenderInternal(r.m_popup, r.m_element, e);
                 })),
-              v.AddTrackedPopup(this),
+              y.AddTrackedPopup(this),
               a && e && this.Focus());
           }),
           (e.prototype.RemoveEventListeners = function() {
@@ -1998,7 +2005,7 @@
           }),
           (e.prototype.OnUnload = function() {
             this.RemoveEventListeners(),
-              v.RemoveTrackedPopup(this),
+              y.RemoveTrackedPopup(this),
               this.OnClose(),
               c.unmountComponentAtNode(this.m_element);
           }),
@@ -2123,7 +2130,7 @@
           e
         );
       })(),
-      d = (function(i) {
+      v = (function(i) {
         function e(e, t, n, r) {
           var o = i.call(this, e, n) || this;
           return o.SetSavedDimensionsKey(t), (o.m_bExpires = r), o;
@@ -2146,13 +2153,13 @@
               e.strRestoreDetails
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  v.SetRestoreDetails(
+                  y.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = v.GetRestoreDetails(
+                  (e.strRestoreDetails = y.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -2181,7 +2188,7 @@
                     n.m_strSavedDimensionsKey &&
                     e &&
                     !t &&
-                    (v.SetRestoreDetails(r, e, n.m_bExpires),
+                    (y.SetRestoreDetails(r, e, n.m_bExpires),
                     (n.m_rgParams.strRestoreDetails = e),
                     (n.m_strInitialSavedDimensionsKey = r),
                     n.OnResizeComplete(e));
@@ -2195,14 +2202,14 @@
           }),
           (e.prototype.OnClose = function() {}),
           (e.prototype.SaveWindowPosition = function(e) {
-            v.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            y.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }),
           o.c([u.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
-      })(h),
-      f = (function() {
+      })(f),
+      _ = (function() {
         function e() {
           var c = this;
           (this.m_bShuttingDown = !1),
@@ -2429,7 +2436,7 @@
           e
         );
       })(),
-      v = new f();
+      y = new _();
   },
   QHER: function(e, t, n) {
     "use strict";
@@ -2546,11 +2553,11 @@
     function h(e) {
       switch (e) {
         case 1:
-          return Object(a.b)("#Privacy_Private");
+          return Object(a.c)("#Privacy_Private");
         case 2:
-          return Object(a.b)("#Privacy_FriendsOnly");
+          return Object(a.c)("#Privacy_FriendsOnly");
         case 3:
-          return Object(a.b)("#Privacy_Public");
+          return Object(a.c)("#Privacy_Public");
         default:
           return "";
       }
@@ -2653,8 +2660,8 @@
                   if (1 != t.success)
                     return (
                       ShowAlertDialog(
-                        Object(a.b)("#Error_Error"),
-                        Object(a.b)("#Error_CommentEditFailed")
+                        Object(a.c)("#Error_Error"),
+                        Object(a.c)("#Error_CommentEditFailed")
                       ),
                       !1
                     );
@@ -2673,8 +2680,8 @@
                 .catch(function(e) {
                   return (
                     ShowAlertDialog(
-                      Object(a.b)("#Error_Error"),
-                      Object(a.b)("#Error_CommentEditFailed")
+                      Object(a.c)("#Error_Error"),
+                      Object(a.c)("#Error_CommentEditFailed")
                     ),
                     !1
                   );
@@ -2707,28 +2714,28 @@
                 g,
                 {
                   PrivacyStore: e,
-                  strLabel: Object(a.b)("#ProfilePrivacy_BasicDetails"),
+                  strLabel: Object(a.c)("#ProfilePrivacy_BasicDetails"),
                   strReadOnlySetting: h(3)
                 },
-                Object(a.b)("#ProfilePrivacy_BasicDetails_Desc")
+                Object(a.c)("#ProfilePrivacy_BasicDetails_Desc")
               ),
               i.createElement("div", { className: "ProfilePrivacyHR" }),
               i.createElement(
                 g,
                 {
                   PrivacyStore: e,
-                  strLabel: Object(a.b)("#ProfilePrivacy_Profile"),
+                  strLabel: Object(a.c)("#ProfilePrivacy_Profile"),
                   PrivacyKey: "PrivacyProfile"
                 },
                 i.createElement(
                   "p",
                   null,
-                  Object(a.b)("#ProfilePrivacy_Profile_Desc")
+                  Object(a.c)("#ProfilePrivacy_Profile_Desc")
                 ),
                 i.createElement(
                   "p",
                   null,
-                  Object(a.b)("#ProfilePrivacy_Profile_Desc2")
+                  Object(a.c)("#ProfilePrivacy_Profile_Desc2")
                 )
               ),
               i.createElement(
@@ -2738,11 +2745,11 @@
                   g,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(a.b)("#ProfilePrivacy_GameLibrary"),
+                    strLabel: Object(a.c)("#ProfilePrivacy_GameLibrary"),
                     PrivacyKey: "PrivacyOwnedGames",
                     LimitPrivacyKey: "PrivacyProfile"
                   },
-                  Object(a.b)("#ProfilePrivacy_GameLibrary_Desc"),
+                  Object(a.c)("#ProfilePrivacy_GameLibrary_Desc"),
                   1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                     i.createElement(
                       M,
@@ -2751,7 +2758,7 @@
                         PrivacyKey: "PrivacyPlaytime",
                         LimitPrivacyKey: "PrivacyOwnedGames"
                       },
-                      Object(a.b)("#ProfilePrivacy_Playtime")
+                      Object(a.c)("#ProfilePrivacy_Playtime")
                     )
                 ),
                 i.createElement("div", { className: "ProfilePrivacyHR" }),
@@ -2759,32 +2766,32 @@
                   g,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(a.b)("#ProfilePrivacy_FriendsList"),
+                    strLabel: Object(a.c)("#ProfilePrivacy_FriendsList"),
                     PrivacyKey: "PrivacyFriendsList",
                     LimitPrivacyKey: "PrivacyProfile"
                   },
-                  Object(a.b)("#ProfilePrivacy_FriendsList_Desc")
+                  Object(a.c)("#ProfilePrivacy_FriendsList_Desc")
                 ),
                 i.createElement("div", { className: "ProfilePrivacyHR" }),
                 i.createElement(
                   g,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(a.b)("#ProfilePrivacy_Inventory"),
+                    strLabel: Object(a.c)("#ProfilePrivacy_Inventory"),
                     PrivacyKey: "PrivacyInventory",
                     LimitPrivacyKey: "PrivacyProfile"
                   },
-                  Object(a.d)(
+                  Object(a.e)(
                     "#ProfilePrivacy_Inventory_Desc",
                     i.createElement(
                       "a",
                       { href: p.ProfileURL + "inventory/" },
-                      Object(a.b)("#ProfilePrivacy_Inventory_Inventory")
+                      Object(a.c)("#ProfilePrivacy_Inventory_Inventory")
                     ),
                     i.createElement(
                       "a",
                       { href: p.ProfileURL + "inventory/#753_6" },
-                      Object(a.b)("#ProfilePrivacy_Inventory_TradingCards")
+                      Object(a.c)("#ProfilePrivacy_Inventory_TradingCards")
                     )
                   ),
                   1 != e.GetPrivacySetting("PrivacyInventory") &&
@@ -2795,14 +2802,14 @@
                         PrivacyKey: "PrivacyInventoryGifts",
                         LimitPrivacyKey: "PrivacyInventory"
                       },
-                      Object(a.b)("#ProfilePrivacy_Gifts")
+                      Object(a.c)("#ProfilePrivacy_Gifts")
                     )
                 ),
                 i.createElement("div", { className: "ProfilePrivacyHR" }),
                 i.createElement(
                   w,
                   null,
-                  Object(a.b)("#ProfilePrivacy_Comments"),
+                  Object(a.c)("#ProfilePrivacy_Comments"),
                   ":",
                   i.createElement(C, { PrivacyStore: e })
                 ),
@@ -2811,20 +2818,20 @@
                   g,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(a.b)("#ProfilePrivacy_UGC"),
-                    strReadOnlySetting: Object(a.b)("#Privacy_PerItem")
+                    strLabel: Object(a.c)("#ProfilePrivacy_UGC"),
+                    strReadOnlySetting: Object(a.c)("#Privacy_PerItem")
                   },
-                  Object(a.d)(
+                  Object(a.e)(
                     "#ProfilePrivacy_UGC_Desc",
                     i.createElement(
                       "a",
                       { href: p.ProfileURL + "screenshots/" },
-                      Object(a.b)("#ProfilePrivacy_UGC_Desc_Screenshots")
+                      Object(a.c)("#ProfilePrivacy_UGC_Desc_Screenshots")
                     ),
                     i.createElement(
                       "a",
                       { href: p.ProfileURL + "myworkshopfiles/" },
-                      Object(a.b)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
+                      Object(a.c)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
                     )
                   )
                 )
@@ -2934,19 +2941,19 @@
           return i.createElement(
             "div",
             { className: "PrivacySaveNotice Saving" },
-            Object(a.b)("#Shared_Saving")
+            Object(a.c)("#Shared_Saving")
           );
         case 3:
           return i.createElement(
             "div",
             { className: "PrivacySaveNotice Error" },
-            Object(a.b)("#Error_Error")
+            Object(a.c)("#Error_Error")
           );
         case 2:
           return i.createElement(
             "div",
             { className: "PrivacySaveNotice Saved" },
-            Object(a.b)("#Shared_Saved")
+            Object(a.c)("#Shared_Saved")
           );
         case 0:
         default:
@@ -3027,11 +3034,11 @@
               o = (function(e) {
                 switch (e) {
                   case 0:
-                    return Object(a.b)("#Privacy_FriendsOnly");
+                    return Object(a.c)("#Privacy_FriendsOnly");
                   case 1:
-                    return Object(a.b)("#Privacy_Public");
+                    return Object(a.c)("#Privacy_Public");
                   case 2:
-                    return Object(a.b)("#Privacy_Private");
+                    return Object(a.c)("#Privacy_Private");
                   default:
                     return "";
                 }
@@ -3087,7 +3094,7 @@
                       return e.props.OnChange(3);
                     }
                   },
-                  Object(a.b)("#Privacy_Public")
+                  Object(a.c)("#Privacy_Public")
                 ),
               (!t || 2 <= t) &&
                 i.createElement(
@@ -3097,7 +3104,7 @@
                       return e.props.OnChange(2);
                     }
                   },
-                  Object(a.b)("#Privacy_FriendsOnly")
+                  Object(a.c)("#Privacy_FriendsOnly")
                 ),
               i.createElement(
                 y.d,
@@ -3106,7 +3113,7 @@
                     return e.props.OnChange(1);
                   }
                 },
-                Object(a.b)("#Privacy_Private")
+                Object(a.c)("#Privacy_Private")
               )
             );
           }),
@@ -3132,9 +3139,9 @@
                     onSelected: function() {
                       return e.props.OnChange(1);
                     },
-                    title: Object(a.b)("#Profile_CommentPermission_Public_Desc")
+                    title: Object(a.c)("#Profile_CommentPermission_Public_Desc")
                   },
-                  Object(a.b)("#Privacy_Public")
+                  Object(a.c)("#Privacy_Public")
                 ),
               (!t || 2 <= t) &&
                 i.createElement(
@@ -3143,11 +3150,11 @@
                     onSelected: function() {
                       return e.props.OnChange(0);
                     },
-                    title: Object(a.b)(
+                    title: Object(a.c)(
                       "#Profile_CommentPermission_FriendsOnly_Desc"
                     )
                   },
-                  Object(a.b)("#Privacy_FriendsOnly")
+                  Object(a.c)("#Privacy_FriendsOnly")
                 ),
               i.createElement(
                 y.d,
@@ -3155,9 +3162,9 @@
                   onSelected: function() {
                     return e.props.OnChange(2);
                   },
-                  title: Object(a.b)("#Profile_CommentPermission_Private_Desc")
+                  title: Object(a.c)("#Profile_CommentPermission_Private_Desc")
                 },
-                Object(a.b)("#Privacy_Private")
+                Object(a.c)("#Privacy_Private")
               )
             );
           }),
@@ -3198,7 +3205,7 @@
       }),
       (window.LocalizationManifestReady = function(e, t, n) {
         Object(o.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
-          a.a.InitDirect(n);
+          a.b.InitDirect(n);
       });
   },
   WpBz: function(e, t, n) {
@@ -3348,16 +3355,16 @@
         return R;
       }),
       n.d(t, "B", function() {
-        return F;
+        return z;
       }),
       n.d(t, "db", function() {
-        return W;
+        return F;
       }),
       n.d(t, "hb", function() {
-        return H;
+        return W;
       }),
       n.d(t, "z", function() {
-        return z;
+        return H;
       }),
       n.d(t, "c", function() {
         return A;
@@ -4903,7 +4910,7 @@
         )
       );
     }
-    function F() {
+    function z() {
       return o.createElement(
         "svg",
         {
@@ -4933,7 +4940,7 @@
         })
       );
     }
-    function W(e) {
+    function F(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -5177,7 +5184,7 @@
         )
       );
     }
-    function H() {
+    function W() {
       return o.createElement(
         "svg",
         {
@@ -5202,7 +5209,7 @@
         })
       );
     }
-    function z() {
+    function H() {
       return o.createElement(
         "svg",
         {
@@ -6816,20 +6823,23 @@ and limitations under the License.
   },
   oh5H: function(e, t, n) {
     "use strict";
-    n.d(t, "b", function() {
+    n.d(t, "c", function() {
       return a;
     }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return s;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return u;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return m;
       }),
       n.d(t, "a", function() {
         return p;
+      }),
+      n.d(t, "b", function() {
+        return h;
       });
     var l = n("q1tI"),
       r = (n("Gp1o"), n("XaMz"), n("ujHl")),
@@ -6912,7 +6922,7 @@ and limitations under the License.
     function a(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = p.LocalizeString(e);
+      var n = h.LocalizeString(e);
       return n
         ? (0 < r.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -6928,7 +6938,7 @@ and limitations under the License.
     function s(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = p.LocalizeString(e);
+      var r = h.LocalizeString(e);
       if (!r) return e;
       for (var o, i = [], c = /(.*?)%(\d+)\$s/g, a = 0; (o = c.exec(r)); ) {
         (a += o[0].length), i.push(o[1]);
@@ -6951,40 +6961,71 @@ and limitations under the License.
     function m(e, t) {
       void 0 === t && (t = !1);
       var n = t ? "#TimeInterval_" : "#TimeSince_";
-      return e >= 2 * r.a.PerYear
-        ? a(n + "XYears", Math.floor(e / r.a.PerYear))
-        : e >= r.a.PerYear
-        ? (e -= r.a.PerYear) >= 2 * r.a.PerMonth
-          ? a(n + "1YearXMonths", Math.floor(e / r.a.PerMonth))
+      return e >= 2 * r.b.PerYear
+        ? a(n + "XYears", Math.floor(e / r.b.PerYear))
+        : e >= r.b.PerYear
+        ? (e -= r.b.PerYear) >= 2 * r.b.PerMonth
+          ? a(n + "1YearXMonths", Math.floor(e / r.b.PerMonth))
           : a(n + "1Year")
-        : e >= 2 * r.a.PerMonth
-        ? a(n + "XMonths", Math.floor(e / r.a.PerMonth))
-        : e >= 2 * r.a.PerWeek
-        ? a(n + "XWeeks", Math.floor(e / r.a.PerWeek))
-        : e >= r.a.PerWeek
-        ? a(n + "1Week", Math.floor(e / r.a.PerWeek))
-        : e >= 2 * r.a.PerDay
-        ? a(n + "XDays", Math.floor(e / r.a.PerDay))
-        : e >= r.a.PerDay
-        ? (e -= r.a.PerDay) >= 2 * r.a.PerHour
-          ? a(n + "1DayXHours", Math.floor(e / r.a.PerHour))
+        : e >= 2 * r.b.PerMonth
+        ? a(n + "XMonths", Math.floor(e / r.b.PerMonth))
+        : e >= 2 * r.b.PerWeek
+        ? a(n + "XWeeks", Math.floor(e / r.b.PerWeek))
+        : e >= r.b.PerWeek
+        ? a(n + "1Week", Math.floor(e / r.b.PerWeek))
+        : e >= 2 * r.b.PerDay
+        ? a(n + "XDays", Math.floor(e / r.b.PerDay))
+        : e >= r.b.PerDay
+        ? (e -= r.b.PerDay) >= 2 * r.b.PerHour
+          ? a(n + "1DayXHours", Math.floor(e / r.b.PerHour))
           : a(n + "1Day")
-        : e >= 2 * r.a.PerHour
-        ? a(n + "XHours", Math.floor(e / r.a.PerHour))
-        : e >= r.a.PerHour
-        ? (e -= r.a.PerHour) >= 2 * r.a.PerMinute
-          ? a(n + "1HourXMinutes", Math.floor(e / r.a.PerMinute))
+        : e >= 2 * r.b.PerHour
+        ? a(n + "XHours", Math.floor(e / r.b.PerHour))
+        : e >= r.b.PerHour
+        ? (e -= r.b.PerHour) >= 2 * r.b.PerMinute
+          ? a(n + "1HourXMinutes", Math.floor(e / r.b.PerMinute))
           : a(n + "1Hour")
-        : e >= 2 * r.a.PerMinute
-        ? a(n + "XMinutes", Math.floor(e / r.a.PerMinute))
-        : e >= r.a.PerMinute
+        : e >= 2 * r.b.PerMinute
+        ? a(n + "XMinutes", Math.floor(e / r.b.PerMinute))
+        : e >= r.b.PerMinute
         ? a(n + "1Minute")
         : a(n + "LessThanAMinute");
     }
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
-    var p = new c();
-    window.LocalizationManager = p;
+    var p = {
+        english: "en",
+        german: "de",
+        french: "fr",
+        italian: "it",
+        korean: "ko",
+        latam: "es-419",
+        spanish: "es",
+        schinese: "zh-cn",
+        tchinese: "zh-tw",
+        russian: "ru",
+        thai: "th",
+        japanese: "ja",
+        brazilian: "pt-br",
+        portuguese: "pt",
+        polish: "pl",
+        danish: "da",
+        dutch: "nl",
+        finnish: "fi",
+        norwegian: "no",
+        swedish: "sv",
+        hungarian: "hu",
+        czech: "cs",
+        romanian: "ro",
+        turkish: "tr",
+        arabic: "ar",
+        bulgarian: "bg",
+        greek: "el",
+        ukrainian: "uk",
+        vietnamese: "vn"
+      },
+      h = new c();
+    window.LocalizationManager = h;
   },
   "s4p+": function(e, t, n) {
     "use strict";
@@ -7008,6 +7049,9 @@ and limitations under the License.
   twdX: function(e, t, n) {
     e.exports = {
       LoadingWrapper: "throbber_LoadingWrapper_9UFR8",
+      Static: "throbber_Static_2qWST",
+      none: "throbber_none_3yGk4",
+      bottomCircle: "throbber_bottomCircle_1XTvd",
       noString: "throbber_noString_2uxjb",
       Throbber: "throbber_Throbber_1Y6Da",
       throbber_small: "throbber_throbber_small_21jHr",
@@ -7025,7 +7069,6 @@ and limitations under the License.
       circlePulse: "throbber_circlePulse_17mrs",
       ThrobberTopCircleLoop: "throbber_ThrobberTopCircleLoop_RFW6m",
       ThrobberBottomCircleLoop: "throbber_ThrobberBottomCircleLoop_1AigW",
-      bottomCircle: "throbber_bottomCircle_1XTvd",
       roundThrobber15: "throbber_roundThrobber15_Ty6Px",
       roundThrobber14: "throbber_roundThrobber14_T03GA",
       roundThrobber13: "throbber_roundThrobber13_2YjHq",
@@ -7042,16 +7085,20 @@ and limitations under the License.
       roundThrobber02: "throbber_roundThrobber02_1m8h_",
       roundThrobber01: "throbber_roundThrobber01_2h6Ph",
       ThrobberRoundLoopThickness: "throbber_ThrobberRoundLoopThickness_1YJDV",
-      throbber_xlarge: "throbber_throbber_xlarge_iO6_X"
+      throbber_xlarge: "throbber_throbber_xlarge_iO6_X",
+      throbber_xxlarge: "throbber_throbber_xxlarge_3KPYp"
     };
   },
   ujHl: function(e, t, n) {
     "use strict";
-    n.d(t, "a", function() {
+    n.d(t, "b", function() {
       return r;
     }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return o;
+      }),
+      n.d(t, "c", function() {
+        return i;
       });
     var r = {
       PerYear: 31536e3,
@@ -7061,7 +7108,10 @@ and limitations under the License.
       PerHour: 3600,
       PerMinute: 60
     };
-    function o(t) {
+    function o(e) {
+      return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
+    }
+    function i(t) {
       return new Promise(function(e) {
         return setTimeout(e, t);
       });

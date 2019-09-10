@@ -2473,6 +2473,7 @@ img.package_header {
 .queue_ctn.in_queue .queue_actions_ctn {
 	padding-top: 8px;
 	padding-bottom: 12px;
+    position: relative;
 }
 
 .queue_actions_ctn .btn_medium {
@@ -2552,12 +2553,17 @@ img.package_header {
 		margin-right: -26px;
 	}
 }
-
-@media screen and (max-width: 500px)
+@media screen and (max-width: 600px)
 {
-	html.responsive .btn_next_in_queue .next_in_queue_content {
-		padding-top: 16px;
-	}
+    html.responsive .next_in_queue_area {
+        position: absolute;
+        right: 19px;
+        top: 53px;
+    }
+    html.responsive .queue_controls_description {
+        min-height: 38px;
+        width: 59vw;
+    }
 }
 
 .btn_next_in_queue:hover {
@@ -2592,6 +2598,13 @@ img.package_header {
     margin-bottom: 9px;
     color: #61696d;
 	font-size: 13px;
+}
+@media screen and (max-width: 600px)
+{
+    html.responsive .queue_ctn .queue_reason_description,
+    html.responsive .queue_ctn .queue_settings_link_ctn.queue_reason_description{
+        display: none;
+    }
 }
 .queue_ctn .queue_reason_description a {
     text-decoration: none;
@@ -3414,7 +3427,7 @@ h2.bb_tag + br {
 }
 
 #EmbedModal textarea {
-	width: 634px;
+    width: 100%;
 	height: 80px;
 	font-size: 13px;
 	line-height: 15px;
@@ -3435,7 +3448,7 @@ h2.bb_tag + br {
 }
 
 #widget_finished, #widget_create {
-	width: 646px;
+	max-width: 646px;
 }
 
 #widget_container {
@@ -3455,6 +3468,14 @@ h2.bb_tag + br {
 }
 #EmbedModal .buttoncontainer {
 	text-align: right;
+}
+
+.share > a {
+    display: inline-block;
+    margin-right: 6px;
+}
+.share > a:hover {
+    cursor: pointer;
 }
 
 .dropcontainer ul#ReviewLanguage_droplist,

@@ -3128,6 +3128,60 @@
             (r.prototype.set_first_playtime = function(e) {
               n.Message.setField(this, 5, e);
             }),
+            (r.prototype.playtime_windows_forever = function() {
+              return n.Message.getField(this, 6);
+            }),
+            (r.prototype.set_playtime_windows_forever = function(e) {
+              n.Message.setField(this, 6, e);
+            }),
+            (r.prototype.playtime_mac_forever = function() {
+              return n.Message.getField(this, 7);
+            }),
+            (r.prototype.set_playtime_mac_forever = function(e) {
+              n.Message.setField(this, 7, e);
+            }),
+            (r.prototype.playtime_linux_forever = function() {
+              return n.Message.getField(this, 8);
+            }),
+            (r.prototype.set_playtime_linux_forever = function(e) {
+              n.Message.setField(this, 8, e);
+            }),
+            (r.prototype.first_windows_playtime = function() {
+              return n.Message.getField(this, 9);
+            }),
+            (r.prototype.set_first_windows_playtime = function(e) {
+              n.Message.setField(this, 9, e);
+            }),
+            (r.prototype.first_mac_playtime = function() {
+              return n.Message.getField(this, 10);
+            }),
+            (r.prototype.set_first_mac_playtime = function(e) {
+              n.Message.setField(this, 10, e);
+            }),
+            (r.prototype.first_linux_playtime = function() {
+              return n.Message.getField(this, 11);
+            }),
+            (r.prototype.set_first_linux_playtime = function(e) {
+              n.Message.setField(this, 11, e);
+            }),
+            (r.prototype.last_windows_playtime = function() {
+              return n.Message.getField(this, 12);
+            }),
+            (r.prototype.set_last_windows_playtime = function(e) {
+              n.Message.setField(this, 12, e);
+            }),
+            (r.prototype.last_mac_playtime = function() {
+              return n.Message.getField(this, 13);
+            }),
+            (r.prototype.set_last_mac_playtime = function(e) {
+              n.Message.setField(this, 13, e);
+            }),
+            (r.prototype.last_linux_playtime = function() {
+              return n.Message.getField(this, 14);
+            }),
+            (r.prototype.set_last_linux_playtime = function(e) {
+              n.Message.setField(this, 14, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -3137,7 +3191,16 @@
                 last_playtime: n.Message.getField(t, 2),
                 playtime_2weeks: n.Message.getField(t, 3),
                 playtime_forever: n.Message.getField(t, 4),
-                first_playtime: n.Message.getField(t, 5)
+                first_playtime: n.Message.getField(t, 5),
+                playtime_windows_forever: n.Message.getField(t, 6),
+                playtime_mac_forever: n.Message.getField(t, 7),
+                playtime_linux_forever: n.Message.getField(t, 8),
+                first_windows_playtime: n.Message.getField(t, 9),
+                first_mac_playtime: n.Message.getField(t, 10),
+                first_linux_playtime: n.Message.getField(t, 11),
+                last_windows_playtime: n.Message.getField(t, 12),
+                last_mac_playtime: n.Message.getField(t, 13),
+                last_linux_playtime: n.Message.getField(t, 14)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -3164,6 +3227,33 @@
                   case 5:
                     e.set_first_playtime(t.readUint32());
                     break;
+                  case 6:
+                    e.set_playtime_windows_forever(t.readInt32());
+                    break;
+                  case 7:
+                    e.set_playtime_mac_forever(t.readInt32());
+                    break;
+                  case 8:
+                    e.set_playtime_linux_forever(t.readInt32());
+                    break;
+                  case 9:
+                    e.set_first_windows_playtime(t.readUint32());
+                    break;
+                  case 10:
+                    e.set_first_mac_playtime(t.readUint32());
+                    break;
+                  case 11:
+                    e.set_first_linux_playtime(t.readUint32());
+                    break;
+                  case 12:
+                    e.set_last_windows_playtime(t.readUint32());
+                    break;
+                  case 13:
+                    e.set_last_mac_playtime(t.readUint32());
+                    break;
+                  case 14:
+                    e.set_last_linux_playtime(t.readUint32());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -3182,7 +3272,22 @@
                 void 0 !== (i = n.Message.getField(e, 3)) && t.writeInt32(3, i),
                 void 0 !== (i = n.Message.getField(e, 4)) && t.writeInt32(4, i),
                 void 0 !== (i = n.Message.getField(e, 5)) &&
-                  t.writeUint32(5, i);
+                  t.writeUint32(5, i),
+                void 0 !== (i = n.Message.getField(e, 6)) && t.writeInt32(6, i),
+                void 0 !== (i = n.Message.getField(e, 7)) && t.writeInt32(7, i),
+                void 0 !== (i = n.Message.getField(e, 8)) && t.writeInt32(8, i),
+                void 0 !== (i = n.Message.getField(e, 9)) &&
+                  t.writeUint32(9, i),
+                void 0 !== (i = n.Message.getField(e, 10)) &&
+                  t.writeUint32(10, i),
+                void 0 !== (i = n.Message.getField(e, 11)) &&
+                  t.writeUint32(11, i),
+                void 0 !== (i = n.Message.getField(e, 12)) &&
+                  t.writeUint32(12, i),
+                void 0 !== (i = n.Message.getField(e, 13)) &&
+                  t.writeUint32(13, i),
+                void 0 !== (i = n.Message.getField(e, 14)) &&
+                  t.writeUint32(14, i);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetLastPlayedTimes_Response_Game";
@@ -4281,6 +4386,12 @@
             (r.prototype.add_returned_to_group = function(e, t) {
               return n.Message.addToRepeatedWrapperField(this, 8, e, R, t);
             }),
+            (r.prototype.active_friend_count = function() {
+              return n.Message.getFieldWithDefault(this, 9, 0);
+            }),
+            (r.prototype.set_active_friend_count = function(e) {
+              n.Message.setField(this, 9, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -4313,7 +4424,8 @@
                   t.returned_to_group(),
                   R.toObject,
                   e
-                )
+                ),
+                active_friend_count: n.Message.getFieldWithDefault(t, 9, 0)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -4365,6 +4477,9 @@
                     t.readMessage(i, R.deserializeBinaryFromReader),
                       e.add_returned_to_group(i);
                     break;
+                  case 9:
+                    e.set_active_friend_count(t.readUint32());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -4392,7 +4507,9 @@
                 0 < (i = e.new_to_group()).length &&
                   t.writeRepeatedMessage(7, i, R.serializeBinaryToWriter),
                 0 < (i = e.returned_to_group()).length &&
-                  t.writeRepeatedMessage(8, i, R.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(8, i, R.serializeBinaryToWriter),
+                void 0 !== (i = n.Message.getField(e, 9)) &&
+                  t.writeUint32(9, i);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetFriendsAppsActivity_Response";
@@ -43000,6 +43117,12 @@
             (r.prototype.set_low_priority = function(e) {
               d.Message.setField(this, 6, e);
             }),
+            (r.prototype.override_limits = function() {
+              return d.Message.getField(this, 7);
+            }),
+            (r.prototype.set_override_limits = function(e) {
+              d.Message.setField(this, 7, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -43010,7 +43133,8 @@
                 message: d.Message.getField(t, 3),
                 contains_bbcode: d.Message.getField(t, 4),
                 echo_to_sender: d.Message.getField(t, 5),
-                low_priority: d.Message.getField(t, 6)
+                low_priority: d.Message.getField(t, 6),
+                override_limits: d.Message.getField(t, 7)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -43040,6 +43164,9 @@
                   case 6:
                     e.set_low_priority(t.readBool());
                     break;
+                  case 7:
+                    e.set_override_limits(t.readBool());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -43059,7 +43186,8 @@
                   t.writeString(3, i),
                 void 0 !== (i = d.Message.getField(e, 4)) && t.writeBool(4, i),
                 void 0 !== (i = d.Message.getField(e, 5)) && t.writeBool(5, i),
-                void 0 !== (i = d.Message.getField(e, 6)) && t.writeBool(6, i);
+                void 0 !== (i = d.Message.getField(e, 6)) && t.writeBool(6, i),
+                void 0 !== (i = d.Message.getField(e, 7)) && t.writeBool(7, i);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendMessages_SendMessage_Request";

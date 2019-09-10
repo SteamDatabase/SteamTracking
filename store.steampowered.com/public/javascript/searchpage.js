@@ -359,6 +359,7 @@ function InitSearchPage()
 // Infinite scroll state is kept on the function itself.
 InitInfiniteScroll.oController = null;
 InitInfiniteScroll.bEnabled = false;
+InitInfiniteScroll.nScrollSize = 25; // Default, can be modified by calling page.
 
 function InitInfiniteScroll( rgParameters )
 {
@@ -379,7 +380,7 @@ function InitInfiniteScroll( rgParameters )
 	}
 
 	var oScrollOptions = {
-		"pagesize": 25,
+		"pagesize": self.nScrollSize,
 		"total_count": 1000, // Gets filled with real value after our first load.
 		"prefix": "search_results"
 	};
@@ -449,6 +450,9 @@ function InitInfiniteScroll( rgParameters )
 			}
 		});
 	});
+
+	// Kick off an infinite scroll check immediately, in case the user is on a high-res screen and doesn't have a scrollbar.
+	self.oController.OnScroll();
 
 	return self.oController;
 }

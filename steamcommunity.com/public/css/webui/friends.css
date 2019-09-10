@@ -7,6 +7,16 @@
   display: flex;
   flex-direction: column;
   margin: 0; }
+  .throbber_LoadingWrapper_9UFR8.throbber_Static_2qWST {
+    animation-name: throbber_none_3yGk4; }
+    .throbber_LoadingWrapper_9UFR8.throbber_Static_2qWST * {
+      animation-name: throbber_none_3yGk4 !important;
+      stroke-dasharray: initial !important;
+      stroke-dashoffset: initial !important;
+      stroke-width: 5px !important;
+      opacity: 1 !important; }
+    .throbber_LoadingWrapper_9UFR8.throbber_Static_2qWST .throbber_bottomCircle_1XTvd path {
+      stroke-width: 0 !important; }
 
 .throbber_LoadingWrapper_9UFR8.throbber_noString_2uxjb {
   flex-direction: row; }
@@ -319,6 +329,10 @@
   width: 120px;
   height: 120px; }
 
+.throbber_throbber_xxlarge_3KPYp {
+  width: 240px;
+  height: 240px; }
+
 .SVGIcon_Button {
   fill: #ffffff;
   overflow: visible;
@@ -462,6 +476,19 @@ html.contextmenu_ContextMenuPopup_1exss .contextmenu_contextMenuItem_CBC-y {
     box-shadow: 0 10px 32px 0px #000000ab;
     opacity: 1.0;
     word-wrap: break-word; }
+
+body.modals_BodyNoScroll_37Qxr {
+  overflow-y: hidden;
+  height: 100vh; }
+
+.modals_OverlayModal_2n8Ob {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1500; }
 
 .steamavatar_avatarHolder_1G7LI {
   height: 36px;
@@ -3706,6 +3733,9 @@ iframe.steamTVLogin {
   max-width: 780px;
   max-height: 250px;
   z-index: 1; }
+  @media screen and (max-width: 910px) {
+    .StoreSaleWidgetContainer {
+      flex-direction: column; } }
 
 .StoreSaleWidgetContainer_mini,
 .StoreSaleWidgetContainer_column {
@@ -4339,6 +4369,9 @@ iframe.steamTVLogin {
   margin-right: 1px;
   overflow: hidden; }
 
+.chatentry_EmoticonPickerButton_3fgX0:hover {
+  background-color: #3d424b; }
+
 .chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon {
   width: 26px;
   height: 26px; }
@@ -4349,9 +4382,6 @@ iframe.steamTVLogin {
   fill: #dfc408;
   margin-left: 1px;
   margin-top: 4px; }
-
-.chatentry_EmoticonPickerButton_3fgX0:hover {
-  background-color: #3d424b; }
 
 .chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon line,
 .chatentry_EmoticonPickerButton_3fgX0 .SVGIcon_Emoticon circle,

@@ -592,13 +592,13 @@
       return u;
     }),
       n.d(t, "a", function() {
-        return h;
+        return _;
       }),
       n.d(t, "b", function() {
-        return d;
+        return f;
       }),
       n.d(t, "d", function() {
-        return f;
+        return E;
       });
     var u,
       r,
@@ -608,13 +608,15 @@
       s = n("UqDm"),
       c = n("WpBz"),
       p = n("1VtQ"),
-      l = n("hEDq");
+      l = n("hEDq"),
+      m = n("oh5H"),
+      h = n("1n9R");
     ((r = u || (u = {}))[(r.Minimized = 1)] = "Minimized"),
       (r[(r.Hidden = 2)] = "Hidden"),
       (r[(r.Tooltip = 4)] = "Tooltip"),
       (r[(r.ContextMenu = 8)] = "ContextMenu"),
       (r[(r.Resizable = 16)] = "Resizable");
-    var m = (function() {
+    var d = (function() {
         function e(e, t) {
           (this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []);
           for (
@@ -643,7 +645,7 @@
           e
         );
       })(),
-      h = (function() {
+      _ = (function() {
         function e(e, t) {
           (this.m_bFocused = !1),
             (this.m_strName = e),
@@ -686,7 +688,7 @@
             var o,
               i,
               a,
-              s = f.GetExistingPopup(this.m_strName);
+              s = E.GetExistingPopup(this.m_strName);
             (s && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
               s
@@ -694,7 +696,7 @@
                   (o = s.m_popup),
                   s.ReleasePopup(),
                   (a = s.m_renderWhenReady),
-                  f.RemoveTrackedPopup(s),
+                  E.RemoveTrackedPopup(s),
                   o.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
                   o.removeEventListener("unload", s.OnUnload),
                   o.removeEventListener("resize", s.OnResizeEvent),
@@ -703,10 +705,10 @@
                   o.removeEventListener("drop", s.OnDrop),
                   o.removeEventListener("dragover", s.OnDragOver),
                   o.removeEventListener("message", this.OnMessage))
-                : ((o = (n = _.CreatePopup(this.m_strName, this.m_rgParams))
+                : ((o = (n = v.CreatePopup(this.m_strName, this.m_rgParams))
                     .popup),
                   (i = n.element),
-                  (a = new m(o, i))),
+                  (a = new d(o, i))),
               o &&
                 i &&
                 ((o.document.title = this.m_strTitle),
@@ -718,13 +720,18 @@
                 o.addEventListener("drop", this.OnDrop),
                 o.addEventListener("dragover", this.OnDragOver),
                 o.addEventListener("message", this.OnMessage),
+                h.b.LANGUAGE &&
+                  o.document.documentElement.setAttribute(
+                    "lang",
+                    m.a[h.b.LANGUAGE]
+                  ),
                 (this.m_popup = o),
                 (this.m_element = i),
                 (this.m_renderWhenReady = a),
                 this.m_renderWhenReady.SetTarget(function() {
                   return r.RenderInternal(r.m_popup, r.m_element, e);
                 })),
-              f.AddTrackedPopup(this),
+              E.AddTrackedPopup(this),
               s && e && this.Focus());
           }),
           (e.prototype.RemoveEventListeners = function() {
@@ -762,7 +769,7 @@
           }),
           (e.prototype.OnUnload = function() {
             this.RemoveEventListeners(),
-              f.RemoveTrackedPopup(this),
+              E.RemoveTrackedPopup(this),
               this.OnClose(),
               a.unmountComponentAtNode(this.m_element);
           }),
@@ -887,7 +894,7 @@
           e
         );
       })(),
-      d = (function(i) {
+      f = (function(i) {
         function e(e, t, n, r) {
           var o = i.call(this, e, n) || this;
           return o.SetSavedDimensionsKey(t), (o.m_bExpires = r), o;
@@ -910,13 +917,13 @@
               e.strRestoreDetails
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  f.SetRestoreDetails(
+                  E.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = f.GetRestoreDetails(
+                  (e.strRestoreDetails = E.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -945,7 +952,7 @@
                     n.m_strSavedDimensionsKey &&
                     e &&
                     !t &&
-                    (f.SetRestoreDetails(r, e, n.m_bExpires),
+                    (E.SetRestoreDetails(r, e, n.m_bExpires),
                     (n.m_rgParams.strRestoreDetails = e),
                     (n.m_strInitialSavedDimensionsKey = r),
                     n.OnResizeComplete(e));
@@ -959,14 +966,14 @@
           }),
           (e.prototype.OnClose = function() {}),
           (e.prototype.SaveWindowPosition = function(e) {
-            f.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            E.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }),
           o.c([p.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
-      })(h),
-      _ = (function() {
+      })(_),
+      v = (function() {
         function e() {
           var a = this;
           (this.m_bShuttingDown = !1),
@@ -1193,7 +1200,7 @@
           e
         );
       })(),
-      f = new _();
+      E = new v();
   },
   UqDm: function(e, t, n) {
     "use strict";
@@ -1934,20 +1941,23 @@ and limitations under the License.
   },
   oh5H: function(e, t, n) {
     "use strict";
-    n.d(t, "b", function() {
+    n.d(t, "c", function() {
       return s;
     }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return u;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return p;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return l;
       }),
       n.d(t, "a", function() {
         return m;
+      }),
+      n.d(t, "b", function() {
+        return h;
       });
     var c = n("q1tI"),
       r = (n("Gp1o"), n("XaMz"), n("ujHl")),
@@ -2030,7 +2040,7 @@ and limitations under the License.
     function s(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = m.LocalizeString(e);
+      var n = h.LocalizeString(e);
       return n
         ? (0 < r.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -2046,7 +2056,7 @@ and limitations under the License.
     function u(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = m.LocalizeString(e);
+      var r = h.LocalizeString(e);
       if (!r) return e;
       for (var o, i = [], a = /(.*?)%(\d+)\$s/g, s = 0; (o = a.exec(r)); ) {
         (s += o[0].length), i.push(o[1]);
@@ -2069,40 +2079,71 @@ and limitations under the License.
     function l(e, t) {
       void 0 === t && (t = !1);
       var n = t ? "#TimeInterval_" : "#TimeSince_";
-      return e >= 2 * r.a.PerYear
-        ? s(n + "XYears", Math.floor(e / r.a.PerYear))
-        : e >= r.a.PerYear
-        ? (e -= r.a.PerYear) >= 2 * r.a.PerMonth
-          ? s(n + "1YearXMonths", Math.floor(e / r.a.PerMonth))
+      return e >= 2 * r.b.PerYear
+        ? s(n + "XYears", Math.floor(e / r.b.PerYear))
+        : e >= r.b.PerYear
+        ? (e -= r.b.PerYear) >= 2 * r.b.PerMonth
+          ? s(n + "1YearXMonths", Math.floor(e / r.b.PerMonth))
           : s(n + "1Year")
-        : e >= 2 * r.a.PerMonth
-        ? s(n + "XMonths", Math.floor(e / r.a.PerMonth))
-        : e >= 2 * r.a.PerWeek
-        ? s(n + "XWeeks", Math.floor(e / r.a.PerWeek))
-        : e >= r.a.PerWeek
-        ? s(n + "1Week", Math.floor(e / r.a.PerWeek))
-        : e >= 2 * r.a.PerDay
-        ? s(n + "XDays", Math.floor(e / r.a.PerDay))
-        : e >= r.a.PerDay
-        ? (e -= r.a.PerDay) >= 2 * r.a.PerHour
-          ? s(n + "1DayXHours", Math.floor(e / r.a.PerHour))
+        : e >= 2 * r.b.PerMonth
+        ? s(n + "XMonths", Math.floor(e / r.b.PerMonth))
+        : e >= 2 * r.b.PerWeek
+        ? s(n + "XWeeks", Math.floor(e / r.b.PerWeek))
+        : e >= r.b.PerWeek
+        ? s(n + "1Week", Math.floor(e / r.b.PerWeek))
+        : e >= 2 * r.b.PerDay
+        ? s(n + "XDays", Math.floor(e / r.b.PerDay))
+        : e >= r.b.PerDay
+        ? (e -= r.b.PerDay) >= 2 * r.b.PerHour
+          ? s(n + "1DayXHours", Math.floor(e / r.b.PerHour))
           : s(n + "1Day")
-        : e >= 2 * r.a.PerHour
-        ? s(n + "XHours", Math.floor(e / r.a.PerHour))
-        : e >= r.a.PerHour
-        ? (e -= r.a.PerHour) >= 2 * r.a.PerMinute
-          ? s(n + "1HourXMinutes", Math.floor(e / r.a.PerMinute))
+        : e >= 2 * r.b.PerHour
+        ? s(n + "XHours", Math.floor(e / r.b.PerHour))
+        : e >= r.b.PerHour
+        ? (e -= r.b.PerHour) >= 2 * r.b.PerMinute
+          ? s(n + "1HourXMinutes", Math.floor(e / r.b.PerMinute))
           : s(n + "1Hour")
-        : e >= 2 * r.a.PerMinute
-        ? s(n + "XMinutes", Math.floor(e / r.a.PerMinute))
-        : e >= r.a.PerMinute
+        : e >= 2 * r.b.PerMinute
+        ? s(n + "XMinutes", Math.floor(e / r.b.PerMinute))
+        : e >= r.b.PerMinute
         ? s(n + "1Minute")
         : s(n + "LessThanAMinute");
     }
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
-    var m = new a();
-    window.LocalizationManager = m;
+    var m = {
+        english: "en",
+        german: "de",
+        french: "fr",
+        italian: "it",
+        korean: "ko",
+        latam: "es-419",
+        spanish: "es",
+        schinese: "zh-cn",
+        tchinese: "zh-tw",
+        russian: "ru",
+        thai: "th",
+        japanese: "ja",
+        brazilian: "pt-br",
+        portuguese: "pt",
+        polish: "pl",
+        danish: "da",
+        dutch: "nl",
+        finnish: "fi",
+        norwegian: "no",
+        swedish: "sv",
+        hungarian: "hu",
+        czech: "cs",
+        romanian: "ro",
+        turkish: "tr",
+        arabic: "ar",
+        bulgarian: "bg",
+        greek: "el",
+        ukrainian: "uk",
+        vietnamese: "vn"
+      },
+      h = new a();
+    window.LocalizationManager = h;
   },
   "qM/t": function(e, t, n) {
     "use strict";
@@ -2287,7 +2328,7 @@ and limitations under the License.
                 o.createElement(
                   "div",
                   { className: "postedExpiredInvite" },
-                  Object(s.b)("#bbcode_invite_requesting_info")
+                  Object(s.c)("#bbcode_invite_requesting_info")
                 )
               );
             var e = this.props.controller.GetConnectResults(),
@@ -2303,12 +2344,12 @@ and limitations under the License.
                     o.createElement(
                       "div",
                       { className: "groupName" },
-                      Object(s.b)("#InviteLanding_SentToSteam")
+                      Object(s.c)("#InviteLanding_SentToSteam")
                     ),
                     o.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(s.d)(
+                      Object(s.e)(
                         "#InviteLanding_SentToSteam_Desc",
                         o.createElement(
                           "a",
@@ -2316,7 +2357,7 @@ and limitations under the License.
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat
                           },
-                          Object(s.b)(
+                          Object(s.c)(
                             "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
                           )
                         )
@@ -2330,7 +2371,7 @@ and limitations under the License.
                     o.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(s.b)("#InviteLanding_AccountMismatch")
+                      Object(s.c)("#InviteLanding_AccountMismatch")
                     ),
                     o.createElement(
                       "div",
@@ -2342,7 +2383,7 @@ and limitations under the License.
                           type: "button",
                           onClick: this.OpenInSteamIgnoreAccount
                         },
-                        Object(s.b)("#InviteLanding_OpenInSteam")
+                        Object(s.c)("#InviteLanding_OpenInSteam")
                       ),
                       o.createElement(
                         "button",
@@ -2351,7 +2392,7 @@ and limitations under the License.
                           type: "button",
                           onClick: this.LaunchWebChat
                         },
-                        Object(s.b)("#InviteLanding_OpenInWebChat")
+                        Object(s.c)("#InviteLanding_OpenInWebChat")
                       )
                     )
                   )
@@ -2362,12 +2403,12 @@ and limitations under the License.
                     o.createElement(
                       "div",
                       { className: "groupName" },
-                      Object(s.b)("#InviteLanding_SentToSteam")
+                      Object(s.c)("#InviteLanding_SentToSteam")
                     ),
                     o.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(s.d)(
+                      Object(s.e)(
                         "#InviteLanding_SentToSteam_Desc",
                         o.createElement(
                           "a",
@@ -2375,7 +2416,7 @@ and limitations under the License.
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat
                           },
-                          Object(s.b)(
+                          Object(s.c)(
                             "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
                           )
                         )
@@ -2396,7 +2437,7 @@ and limitations under the License.
                             type: "button",
                             onClick: this.LaunchSteamClient
                           },
-                          Object(s.b)("#InviteLanding_OpenInSteam")
+                          Object(s.c)("#InviteLanding_OpenInSteam")
                         ),
                       o.createElement(
                         "button",
@@ -2405,14 +2446,14 @@ and limitations under the License.
                           type: "button",
                           onClick: this.LaunchWebChat
                         },
-                        Object(s.b)("#InviteLanding_OpenInWebChat")
+                        Object(s.c)("#InviteLanding_OpenInWebChat")
                       )
                     ),
                     this.m_bTriedToLaunchSteam &&
                       o.createElement(
                         "div",
                         { className: "inviteLabel inviteLabelLaunchPrompt" },
-                        Object(s.b)("#InviteLanding_OpenInSteam_Help")
+                        Object(s.c)("#InviteLanding_OpenInSteam_Help")
                       )
                   )
             );
@@ -2437,7 +2478,7 @@ and limitations under the License.
               o.createElement(
                 "div",
                 { className: "postedExpiredInvite" },
-                Object(s.b)("#InviteLanding_ExpiredOrInvalid")
+                Object(s.c)("#InviteLanding_ExpiredOrInvalid")
               )
             );
           }),
@@ -2458,7 +2499,7 @@ and limitations under the License.
           o.createElement(
             "div",
             { className: "inviteLabel" },
-            Object(s.d)(
+            Object(s.e)(
               "#bbcode_invite_description",
               o.createElement("span", {
                 dangerouslySetInnerHTML: {
@@ -2522,7 +2563,7 @@ and limitations under the License.
             a = null;
           void 0 !== g ? ((r = g), (o = n)) : (r = n),
             void 0 !== I ? ((i = I), (a = C)) : (i = C),
-            s.a.InitFromObjects(r, o, i, a),
+            s.b.InitFromObjects(r, o, i, a),
             (C = I = g = void 0);
         }
       });
@@ -2695,11 +2736,14 @@ and limitations under the License.
   },
   ujHl: function(e, t, n) {
     "use strict";
-    n.d(t, "a", function() {
+    n.d(t, "b", function() {
       return r;
     }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return o;
+      }),
+      n.d(t, "c", function() {
+        return i;
       });
     var r = {
       PerYear: 31536e3,
@@ -2709,7 +2753,10 @@ and limitations under the License.
       PerHour: 3600,
       PerMinute: 60
     };
-    function o(t) {
+    function o(e) {
+      return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
+    }
+    function i(t) {
       return new Promise(function(e) {
         return setTimeout(e, t);
       });

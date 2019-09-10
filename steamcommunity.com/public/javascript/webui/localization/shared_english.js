@@ -19,6 +19,7 @@ LocalizationReady("shared", "english", {
   Button_OK: "OK",
   Button_Overwrite: "Overwrite",
   Button_Retry: "Retry",
+  Button_Remove: "Remove",
   Button_Save: "Save",
   Button_Saved: "Saved",
   Button_Share: "Share",
@@ -321,6 +322,7 @@ LocalizationReady("shared", "english", {
 
   Time_Today: "Today",
   Time_Yesterday: "Yesterday",
+  Time_Recent: "Recent",
 
   ContextMenu_Copy: "Copy",
   ContextMenu_Cut: "Cut",
@@ -579,8 +581,11 @@ LocalizationReady("shared", "english", {
   WriteReview_Dialog_PostReview: "Post review",
   WriteReview_Dialog_Title: "Review",
   WriteReview_Dialog_Playtime: "You've played for %1$s",
+  WriteReview_Dialog_Playtime_Software: "You've used this title for %1$s",
   WriteReview_Dialog_RecommendGame:
     "Would you recommend this game to other players?",
+  WriteReview_Dialog_RecommendGame_Software:
+    "Would you recommend this software to other players?",
   WriteReview_Dialog_GetHelp_Btn: "Get help with your purchase",
   WriteReview_Dialog_Visibility: "Visibility:",
   WriteReview_Dialog_Public: "Public",
