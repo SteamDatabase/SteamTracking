@@ -1865,6 +1865,7 @@
  D typeinfo for CCallbackImpl<148>
  D typeinfo for CCallbackImpl<160>
  D typeinfo for CCallbackImpl<16>
+ D typeinfo for CCallbackImpl<17>
  D typeinfo for CCallbackImpl<184>
  D typeinfo for CCallbackImpl<1>
  D typeinfo for CCallbackImpl<20>
@@ -1883,7 +1884,6 @@
  D typeinfo for CCallbackImpl<80>
  D typeinfo for CCallbackImpl<88>
  D typeinfo for CCallbackImpl<8>
- D typeinfo for CCallbackImpl<9>
  D typeinfo for CChatActionsButton
  D typeinfo for CChatIntroductionDialog
  D typeinfo for CChatInviteNotification
@@ -2112,7 +2112,7 @@
  D typeinfo for CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for CJSMethodCallHandler<CRemotePlayController, char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CRemotePlayController, int>
  D typeinfo for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -2293,6 +2293,7 @@
  D typeinfo for CRefCountServiceBase<true, CRefMT>
  D typeinfo for CRefCounted<CRefCountServiceBase<true, CRefMT> >
  D typeinfo for CRemotePlayController
+ D typeinfo for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
@@ -2381,7 +2382,7 @@
  D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, int>
  D typeinfo for vgui::CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -3258,6 +3259,7 @@
  D vtable for CCallbackImpl<148>
  D vtable for CCallbackImpl<160>
  D vtable for CCallbackImpl<16>
+ D vtable for CCallbackImpl<17>
  D vtable for CCallbackImpl<184>
  D vtable for CCallbackImpl<1>
  D vtable for CCallbackImpl<20>
@@ -3276,7 +3278,6 @@
  D vtable for CCallbackImpl<80>
  D vtable for CCallbackImpl<88>
  D vtable for CCallbackImpl<8>
- D vtable for CCallbackImpl<9>
  D vtable for CChatActionsButton
  D vtable for CChatIntroductionDialog
  D vtable for CChatInviteNotification
@@ -3503,7 +3504,7 @@
  D vtable for CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- D vtable for CJSMethodCallHandler<CRemotePlayController, char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >
+ D vtable for CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CRemotePlayController, int>
  D vtable for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -3681,6 +3682,7 @@
  D vtable for CProportionalIntProperty
  D vtable for CRSAPublicKey
  D vtable for CRemotePlayController
+ D vtable for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
@@ -3758,7 +3760,7 @@
  D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >
+ D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, int>
  D vtable for vgui::CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -4035,6 +4037,7 @@
  R typeinfo name for CCallbackImpl<148>
  R typeinfo name for CCallbackImpl<160>
  R typeinfo name for CCallbackImpl<16>
+ R typeinfo name for CCallbackImpl<17>
  R typeinfo name for CCallbackImpl<184>
  R typeinfo name for CCallbackImpl<1>
  R typeinfo name for CCallbackImpl<20>
@@ -4053,7 +4056,6 @@
  R typeinfo name for CCallbackImpl<80>
  R typeinfo name for CCallbackImpl<88>
  R typeinfo name for CCallbackImpl<8>
- R typeinfo name for CCallbackImpl<9>
  R typeinfo name for CChatActionsButton
  R typeinfo name for CChatIntroductionDialog
  R typeinfo name for CChatInviteNotification
@@ -4282,7 +4284,7 @@
  R typeinfo name for CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for CJSMethodCallHandler<CRemotePlayController, char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CRemotePlayController, int>
  R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -4463,6 +4465,7 @@
  R typeinfo name for CRefCountServiceBase<true, CRefMT>
  R typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefMT> >
  R typeinfo name for CRemotePlayController
+ R typeinfo name for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
@@ -4672,7 +4675,7 @@
  R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, int>
  R typeinfo name for vgui::CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -5624,6 +5627,9 @@
  T CCallbackImpl<16>::GetCallbackSizeBytes()
  T CCallbackImpl<16>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<16>::~CCallbackImpl()
+ T CCallbackImpl<17>::GetCallbackSizeBytes()
+ T CCallbackImpl<17>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<17>::~CCallbackImpl()
  T CCallbackImpl<184>::GetCallbackSizeBytes()
  T CCallbackImpl<184>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<184>::~CCallbackImpl()
@@ -5678,9 +5684,6 @@
  T CCallbackImpl<8>::GetCallbackSizeBytes()
  T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<8>::~CCallbackImpl()
- T CCallbackImpl<9>::GetCallbackSizeBytes()
- T CCallbackImpl<9>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<9>::~CCallbackImpl()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
@@ -7536,7 +7539,7 @@
  T CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T CJSMethodCallHandler<CRemotePlayController, char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CRemotePlayController, int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
@@ -9676,7 +9679,12 @@
  T CRefCountServiceBase<true, CRefMT>::DoAddRef() const
  T CRefCountServiceBase<true, CRefMT>::DoRelease() const
  T CRefCountServiceBase<true, CRefMT>::OnFinalRelease()
+ T CRemotePlayController::BCanAcceptInviteForGame(char const*, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::BCanCreateInviteForGame(char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::BEnabled(CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange::CCallbackInternal_OnPlaceholderStateChange()
+ T CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange::Run(void*)
+ T CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange::~CCallbackInternal_OnPlaceholderStateChange()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange::CCallbackInternal_OnRemoteClientInputSettingsChange()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange::~CCallbackInternal_OnRemoteClientInputSettingsChange()
@@ -9697,10 +9705,11 @@
  T CRemotePlayController::CCallbackInternal_OnStreamingClientUsedInput::~CCallbackInternal_OnStreamingClientUsedInput()
  T CRemotePlayController::CRemotePlayController()
  T CRemotePlayController::CancelInviteAndSession(char const*, CSmartPtr<CJSCallbackPromise>)
- T CRemotePlayController::CreateInviteAndSession(char const*, unsigned int, CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::CreateInviteAndSession(char const*, char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetGameSystemVolume(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetPerUserInputSettings(char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::Initialize()
+ T CRemotePlayController::OnPlaceholderStateChange(PlaceholderStateChanged_t*)
  T CRemotePlayController::OnRemoteClientInputSettingsChange(RemoteClientInputSettingsChange_t*)
  T CRemotePlayController::OnRemoteClientStreamLifetime(RemoteClientStreamLifetime_t*)
  T CRemotePlayController::OnRemotePlayInviteResult(RemotePlayInviteResult_t*)
@@ -9708,6 +9717,7 @@
  T CRemotePlayController::OnStreamingClientConnected(StreamingClientConnected_t*)
  T CRemotePlayController::OnStreamingClientUsedInput(StreamingClientUsedInput_t*)
  T CRemotePlayController::RegisterForInputUsed(CSmartPtr<CJSCallbackFunc>)
+ T CRemotePlayController::RegisterForPlaceholderStateChanged(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForPlayerInputSettingsChanged(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForRemoteClientStarted(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForRemoteClientStopped(CSmartPtr<CJSCallbackFunc>)
@@ -11353,7 +11363,6 @@
  T FreeArgsInTuple<3, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T FreeArgsInTuple<3, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T FreeArgsInTuple<3, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
- T FreeArgsInTuple<3, std::__1::tuple<char const*, unsigned int, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T FreeArgsInTuple<3, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >&, bool*)
  T FreeArgsInTuple<3, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T FreeArgsInTuple<4, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
@@ -12832,7 +12841,7 @@
  T vgui::CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CRemotePlayController, char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T vgui::CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CRemotePlayController, int>::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
@@ -13501,7 +13510,6 @@
  T vgui::FreeArgsInTuple<3, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T vgui::FreeArgsInTuple<3, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T vgui::FreeArgsInTuple<3, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
- T vgui::FreeArgsInTuple<3, std::__1::tuple<char const*, unsigned int, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T vgui::FreeArgsInTuple<3, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >&, bool*)
  T vgui::FreeArgsInTuple<3, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T vgui::FreeArgsInTuple<4, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
@@ -16116,7 +16124,7 @@
  T void JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<bool, CSmartPtr<CJSCallbackPromise> >, bool, CSmartPtr<CJSCallbackPromise>, 0, 1>(CRemotePlayController*, void (CRemotePlayController::*)(bool, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<bool, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >, char const*, bool, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, bool, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&)
- T void JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >, char const*, unsigned int, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, unsigned int, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >&)
+ T void JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CSharedConnectionController*, void (CSharedConnectionController::*)(CSmartPtr<CJSCallbackPromise>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >, unsigned int, CSmartPtr<CJSCallbackFunc>, 0, 1>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, CSmartPtr<CJSCallbackFunc>), index_tuple<0, 1>, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >&)
  T void JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >, unsigned int, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&)
@@ -16155,7 +16163,7 @@
  T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<bool, CSmartPtr<CJSCallbackPromise> >, bool, CSmartPtr<CJSCallbackPromise>, 0, 1>(CRemotePlayController*, void (CRemotePlayController::*)(bool, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<bool, CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >, char const*, bool, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, bool, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >, char const*, unsigned int, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, unsigned int, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, unsigned int, CSmartPtr<CJSCallbackPromise> >&)
+ T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CSharedConnectionController*, void (CSharedConnectionController::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
  T void vgui::JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >, unsigned int, CSmartPtr<CJSCallbackFunc>, 0, 1>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0, 1>, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >&)
  T void vgui::JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >, unsigned int, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&)

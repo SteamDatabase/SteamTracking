@@ -68,6 +68,8 @@ public:
     virtual unknown_ret FinishAddingFiles(unsigned int) = 0;
     virtual unknown_ret GetAppStateInfo(unsigned int, AppStateInfo_s*) = 0;
     virtual unknown_ret BIsAvailableOnPlatform(unsigned int, char const*) = 0;
+    virtual unknown_ret BCanRemotePlayTogether(unsigned int) = 0;
+    virtual unknown_ret BIsLocalMultiplayerApp(unsigned int) = 0;
     virtual unknown_ret GetNumInstallBaseFolders() = 0;
     virtual unknown_ret GetInstallBaseFolder(int, char*, int) = 0;
     virtual unknown_ret AddInstallBaseFolder(char const*) = 0;

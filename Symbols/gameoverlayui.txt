@@ -737,6 +737,11 @@
  D CRefreshLoginDialog::GetKBMap()::s_pMap
  D CRefreshLoginDialog::GetMessageMap()::s_pMap
  D CRefreshLoginDialog::KB_ChainToMap()::chained
+ D CRemotePlayTogetherAvailableToInvite::ChainToAnimationMap()::chained
+ D CRemotePlayTogetherAvailableToInvite::ChainToMap()::chained
+ D CRemotePlayTogetherAvailableToInvite::GetKBMap()::s_pMap
+ D CRemotePlayTogetherAvailableToInvite::GetMessageMap()::s_pMap
+ D CRemotePlayTogetherAvailableToInvite::KB_ChainToMap()::chained
  D CScreenshotCaptionEntry::ChainToAnimationMap()::chained
  D CScreenshotCaptionEntry::ChainToMap()::chained
  D CScreenshotCaptionEntry::GetKBMap()::s_pMap
@@ -973,6 +978,7 @@
  D VTT for CPlaylistItemLabel
  D VTT for CPlaylistItemPanel
  D VTT for CRefreshLoginDialog
+ D VTT for CRemotePlayTogetherAvailableToInvite
  D VTT for CScreenshotCaptionEntry
  D VTT for CScreenshotDeleteDialog
  D VTT for CScreenshotGameSelector
@@ -1196,6 +1202,7 @@
  D construction vtable for vgui::EditablePanel-in-CPanelHideWrapper<COverlay_Details_Screenshots_Panel>
  D construction vtable for vgui::EditablePanel-in-CPlaylistItemPanel
  D construction vtable for vgui::EditablePanel-in-CRefreshLoginDialog
+ D construction vtable for vgui::EditablePanel-in-CRemotePlayTogetherAvailableToInvite
  D construction vtable for vgui::EditablePanel-in-CScreenshotDeleteDialog
  D construction vtable for vgui::EditablePanel-in-CScreenshotManager
  D construction vtable for vgui::EditablePanel-in-CScreenshotNotification
@@ -1329,6 +1336,7 @@
  D construction vtable for vgui::NotificationFrame-in-COverlayLoggedInElsewhereNotification
  D construction vtable for vgui::NotificationFrame-in-COverlayLowBattery
  D construction vtable for vgui::NotificationFrame-in-COverlaySplash
+ D construction vtable for vgui::NotificationFrame-in-CRemotePlayTogetherAvailableToInvite
  D construction vtable for vgui::NotificationFrame-in-CScreenshotNotification
  D construction vtable for vgui::NotificationFrame-in-CSteamInputControllerConfigNotification
  D construction vtable for vgui::NotificationFrame-in-vgui::EasyNotification
@@ -1394,6 +1402,7 @@
  D construction vtable for vgui::Panel-in-CPlaylistItemLabel
  D construction vtable for vgui::Panel-in-CPlaylistItemPanel
  D construction vtable for vgui::Panel-in-CRefreshLoginDialog
+ D construction vtable for vgui::Panel-in-CRemotePlayTogetherAvailableToInvite
  D construction vtable for vgui::Panel-in-CScreenshotCaptionEntry
  D construction vtable for vgui::Panel-in-CScreenshotDeleteDialog
  D construction vtable for vgui::Panel-in-CScreenshotGameSelector
@@ -1644,6 +1653,8 @@
  D guard variable for CPlaylistItemPanel::GetMessageMap()::s_pMap
  D guard variable for CRefreshLoginDialog::GetKBMap()::s_pMap
  D guard variable for CRefreshLoginDialog::GetMessageMap()::s_pMap
+ D guard variable for CRemotePlayTogetherAvailableToInvite::GetKBMap()::s_pMap
+ D guard variable for CRemotePlayTogetherAvailableToInvite::GetMessageMap()::s_pMap
  D guard variable for CScreenshotCaptionEntry::GetKBMap()::s_pMap
  D guard variable for CScreenshotCaptionEntry::GetMessageMap()::s_pMap
  D guard variable for CScreenshotDeleteDialog::GetKBMap()::s_pMap
@@ -2370,6 +2381,7 @@
  D typeinfo for CRefreshLoginDialog
  D typeinfo for CRefreshLoginDialog::CCallback_OnLogonFailure
  D typeinfo for CRefreshLoginDialog::CCallback_OnLogonSuccess
+ D typeinfo for CRemotePlayTogetherAvailableToInvite
  D typeinfo for CRunGameEngine
  D typeinfo for CSavedMemStream
  D typeinfo for CScreenshotCaptionEntry
@@ -3655,6 +3667,7 @@
  D vtable for CRefreshLoginDialog
  D vtable for CRefreshLoginDialog::CCallback_OnLogonFailure
  D vtable for CRefreshLoginDialog::CCallback_OnLogonSuccess
+ D vtable for CRemotePlayTogetherAvailableToInvite
  D vtable for CRunGameEngine
  D vtable for CSavedMemStream
  D vtable for CScreenshotCaptionEntry
@@ -4371,6 +4384,7 @@
  R typeinfo name for CRefreshLoginDialog
  R typeinfo name for CRefreshLoginDialog::CCallback_OnLogonFailure
  R typeinfo name for CRefreshLoginDialog::CCallback_OnLogonSuccess
+ R typeinfo name for CRemotePlayTogetherAvailableToInvite
  R typeinfo name for CRunGameEngine
  R typeinfo name for CSavedMemStream
  R typeinfo name for CScreenshotCaptionEntry
@@ -4933,6 +4947,7 @@
  T CBasePanel::ShowLegacyCDKeyIfNotIgnored()
  T CBasePanel::ShowMinimalModePanel(vgui::Panel*)
  T CBasePanel::ShowParentalUnlockDialog(std::__1::function<void ()>, std::__1::function<void ()>)
+ T CBasePanel::ShowRemotePlayTogetherAvailableNotification()
  T CBasePanel::ShowSplash()
  T CBasePanel::UpdatePlaytimeStats()
  T CBasePanel::ViewAchievements()
@@ -8857,6 +8872,17 @@
  T CRefreshLoginDialog::SetUser(char const*, bool)
  T CRefreshLoginDialog::~CRefreshLoginDialog()
  T CReliableTimer::CReliableTimer()
+ T CRemotePlayTogetherAvailableToInvite::CRemotePlayTogetherAvailableToInvite(vgui::Panel*, char const*, char const*)
+ T CRemotePlayTogetherAvailableToInvite::ChainToAnimationMap()
+ T CRemotePlayTogetherAvailableToInvite::ChainToMap()
+ T CRemotePlayTogetherAvailableToInvite::GetAnimMap()
+ T CRemotePlayTogetherAvailableToInvite::GetClassSize() const
+ T CRemotePlayTogetherAvailableToInvite::GetKBMap()
+ T CRemotePlayTogetherAvailableToInvite::GetMessageMap()
+ T CRemotePlayTogetherAvailableToInvite::GetPanelClassName()
+ T CRemotePlayTogetherAvailableToInvite::GetPanelTopClassName() const
+ T CRemotePlayTogetherAvailableToInvite::KB_ChainToMap()
+ T CRemotePlayTogetherAvailableToInvite::~CRemotePlayTogetherAvailableToInvite()
  T CRunGameEngine::IsRunning(unsigned int, char const*)
  T CRunGameEngine::RunEngine(int, char const*, char const*, bool)
  T CRunGameEngine::~CRunGameEngine()
@@ -10240,6 +10266,7 @@
  T ClientAPI_Init()
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
+ T ClientAppManager()
  T ClientApps()
  T ClientAudio()
  T ClientConfigStore()

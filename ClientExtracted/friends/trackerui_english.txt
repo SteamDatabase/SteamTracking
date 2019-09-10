@@ -794,5 +794,8 @@
 "Steam_Settings_Browser_ClearWebCacheTitle"	"Clear Browser Cache"
 "Steam_Settings_Browser_ClearWebCacheMsg"	"Delete all files in the built-in web browser cache?"
 
+"RemotePlayTogether_Notification_AvailableToInvite_Title" "Remote Play Together Available"
+"RemotePlayTogether_Notification_AvailableToInvite" "Right click friends in your Friends list to invite them to play."
+
 } 
 }  

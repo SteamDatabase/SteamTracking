@@ -4,7 +4,7 @@
 	{
 		// These are multipliers, to make an edge cost 50% more than
 		// usual, set the multiplier to 1.5
-		"CostForCrossingAtlantic"				5
+		"CostForCrossingAtlantic"				2
 		"CostForCrossingPacific"				6
 		"EuropeAndAfrica"			4
 		"NorthAndSouthAmerica"		4
@@ -19,11 +19,12 @@
 		"CanadaToUS"					1
 		"USToCanada"					4
 		"IndiaToDubai"					2
-		"LocalBackbone"					1
-		"RegionalBackbone"			2
+		"LocalBackbone"					3
+		"RegionalBackbone"			4
 		"GlobalBackbone"				25
 		"Default"	1
 		"InwardCost"	1
+		"OutwardCost"	3
 		"ZeroCost"		0
 		"AggregatorCost"	0
 	}
@@ -37,6 +38,23 @@
 		"videotron"	"5769"
 		"skyfiber"	"32212"
 		"TK-Telecom"	"60764"
+        	"Comhem"    	"39651"
+		"Belcenter"	"31449"
+		"Westman"	"19016"
+		"FPT"		"18403"
+		"TDC"		"3292"
+		"Link3"		"23688"
+		"Parkland"	"197301"
+		"Fiberby"	"42541"
+		"Kvant"		"43727"
+		"Procono"	"34977"
+		"Melita"	"12709"
+		"ACCL"		"21804"
+		"Sparkle"	"6762"
+		"ER-Telecom"	"9049"
+		"HKBN"		"9269"
+		"MEO"		"8657"
+		"TEO"		"8764"
 	}
 	"cells"
 	{
@@ -65,18 +83,18 @@
 			"edges"
 			{
 				// Spokes
-				79 { "dest"	79  }
-				80 { "dest"	80  }
-				95 { "dest"	95  }
-				77 { "dest"	77  }
-				49 { "dest"	49  }
-				76 { "dest"	76  }
+				79 { "cost"	OutwardCost  }
+				80 { "cost"	OutwardCost  }
+				95 { "cost"	OutwardCost  }
+				77 { "cost"	OutwardCost  }
+				49 { "cost"	OutwardCost  }
+				76 { "cost"	OutwardCost  }
 				// Backbones
-				63 { "dest"	63	"cost"	LocalBackbone }
-				31 { "dest"	31	"cost"	LocalBackbone }
-				65 { "dest"	65	"cost"	LocalBackbone }
-				50 { "dest"	50	"cost"	LocalBackbone }
-				64 { "dest"	64	"cost"	LocalBackbone }
+				63 { "dest"	63	"cost"	1 }
+				31 { "dest"	31	"cost"	1 }
+				65 { "dest"	65	"cost"	1 }
+				50 { "dest"	50	"cost"	1 }
+				64 { "dest"	64	"cost"	1 }
 				// high-cost
 				20 {  "dest"	20 "cost" USToCanada }
 			}
@@ -89,6 +107,8 @@
 				"verizon" { "cost_reduction"	"0.5" }
 
 				"charter" { "cost_reduction"	"0.5" }
+
+				"Westman" { "cost_reduction"	"1" }
 			}
 		}
 
@@ -131,11 +151,11 @@
 			"edges"
 			{
 				// Spokes
-				85 { "dest"	85 }
-				69 { "dest"	69 }
-				14 { "dest"	14 }
-				96 { "dest"	96 }
-				13 { "dest"	13 }
+				85 { "cost"	OutwardCost }
+				69 { "cost"	OutwardCost }
+				14 { "cost"	OutwardCost }
+				96 { "cost"	OutwardCost }
+				13 { "cost"	OutwardCost }
 				// Backbones
 				63 { "dest"	63	"cost"	GlobalBackbone }
 				26 { "dest"	26	"cost"	GlobalBackbone }
@@ -143,7 +163,7 @@
 				5 { "dest"	5	"cost"	RegionalBackbone }
 				129 { "dest"	129	"cost"	OneWayCellEdge }
 				40 { "dest"	40	"cost"	RegionalBackbone }
-				15 { "dest"	15	"cost"	LocalBackbone }	// Doesn't actually exist as a backbone
+				15 { "cost"	2 }
 				
 				// back to aggregators
 				24 { "cost" OneWayCellEdge }				
@@ -154,21 +174,21 @@
 		5
 		{
 			"name" "Germany - Frankfurt"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"DE"
 			"latitude"	"50.106744"
 			"longitude"	"8.662188"
 			"edges"
 			{
 				// Spokes
-				87 { "dest"	87 }
-				89 { "dest"	89 }
-				90 { "dest"	90 }
-				91 { "dest"	91 }
-				93 { "dest"	93 }
-				42 { "dest"	42 }
-				88 { "dest"	88 }
-				37 { "dest"	37 }
+				87 { "cost"	OutwardCost }
+				89 { "cost"	OutwardCost }
+				90 { "cost"	OutwardCost }
+				91 { "cost"	OutwardCost }
+				93 { "cost"	OutwardCost }
+				42 { "cost"	OutwardCost }
+				88 { "cost"	OutwardCost }
+				37 { "cost"	OutwardCost }
 				41 { }
 				165 { "cost"	OneWayCellEdge} // Belarus
 				// Backbones
@@ -197,6 +217,13 @@
 			"affinities"
 			{
 				"fiord" { "cost_reduction" 1 }
+                		"Comhem" { "cost_reduction" 1.25 }
+				"Belcenter" { "cost_reduction" 1 }
+				"TDC" { "cost_reduction" 0.5 }
+				"Parkland" { "cost_reduction" 4 }
+				"Fiberby" { "cost_reduction" 4 }
+				"Melita"  { "cost_reduction" 1 }
+				"MEO"  { "cost_reduction" -1 }
 			}
 		}
 
@@ -236,7 +263,7 @@
 		// #8 Korea
 		8
 		{
-			"name" "South Korea"
+			"name" "South Korea - Seoul"
 			"region"	"korea"
 			"countrycode"	"KR"
 			"latitude"	"37.555928"
@@ -244,7 +271,8 @@
 			"edges"
 			{
 				17 { "dest"	17 "cost"	AggregatorCost }
-				32 { "dest"	32 	"cost"	2 }
+				32 { "dest"	32 	"cost"	3 }
+				182 { "cost"	OutwardCost } // Busan
 			}
 		}
 
@@ -258,9 +286,9 @@
 			"longitude"	"120.992002"
 			"edges"
 			{
-				32 { "dest"	32 	"cost"	InwardCost }
-				33 { "dest"	33 	"cost"	InwardCost }
-				35 { "dest"	35 	"cost"	InwardCost }
+				32 { "dest"	32 	"cost"	1 }
+				33 { "dest"	33 	"cost"	0 }
+				35 { "dest"	35 	"cost"	1 }
 				17 { "dest"	17 "cost"	AggregatorCost }
 			}
 		}
@@ -332,8 +360,8 @@
 			"longitude"	"2.326540"
 			"edges"
 			{
-				4 { "dest"	 4  	"cost"	InwardCost }
-				15 { "cost"	InwardCost }
+				4 { "dest"	 4  	"cost"	OutwardCost}
+				15 { "cost"	OutwardCost }
 				129 { "dest"	129  	"cost"	1}
 			}
 		}
@@ -342,16 +370,16 @@
 		15
 		{
 			"name" "Netherlands"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"NL"
 			"latitude"	"52.379115"
 			"longitude"	"4.900231"
 			"edges"
 			{
 				// Spokes
-				14 { "dest"	14  }
-				86 { "dest"	86  }
-				87 { "dest"	87  }
+				14 { "cost"	OutwardCost  }
+				86 { "cost"	OutwardCost  }
+				87 { "cost"	OutwardCost  }
 				// Backbones
 				4 { "dest"	4  	"cost"	LocalBackbone }
 				5 { "dest"	5  	"cost"	LocalBackbone }
@@ -362,6 +390,10 @@
 			"affinities"
 			{
 				"fiord" { "cost_reduction" 2 }
+				"Comhem" { "cost_reduction" 1 }
+				"Parkland" { "cost_reduction" 2.5 }
+				"Fiberby" { "cost_reduction" 2.5 }
+				"TDC" { "cost_reduction" -0.5 }
 			}
 		}
 
@@ -369,7 +401,7 @@
 		16
 		{
 			"name" "Romania"
-			"region"	"europe"
+			"region"	"east europe"
 			"countrycode"	"RO"
 			"latitude"	"44.429857"
 			"longitude"	"26.097164"
@@ -466,7 +498,7 @@
 		22
 		{
 			"name" "New Zealand"
-			"region"	"australasia"
+			"region"	"new zealand"
 			"countrycode"	"NZ"
 			"latitude"	"-36.853252"
 			"longitude"	"174.768791"
@@ -535,7 +567,7 @@
 		26
 		{
 			"name" "South Africa - Johannesburg"
-			"region"	"africa"
+			"region"	"south africa"
 			"countrycode"	"ZA"
 			"latitude"	"-26.214591"
 			"longitude"	"28.046379"
@@ -553,7 +585,7 @@
 		27
 		{
 			"name" "Russia to Europe"
-			"region"	"europe"
+			"region"	"east europe"
 			"transit" 1
 			"edges"
 			{
@@ -588,7 +620,7 @@
 		29
 		{
 			"name" "Iceland, Greenland, and Faroe Islands"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"IS"
 			"latitude"	"64.150345"
 			"longitude"	"-21.933007"
@@ -624,7 +656,7 @@
 			"edges"
 			{
 				// Spokes
-				49 { "dest"	49 }		
+				49 { "cost"	OutwardCost }		
 				94 { "dest" 94 	"cost" USToCanada }
 				// Backbones
 				64 { "dest"	64  	"cost"	0.5 }
@@ -652,7 +684,7 @@
 		// #32 Japan
 		32
 		{
-			"name" "Japan"
+			"name" "Japan - Tokyo"
 			"region"	"japan"
 			"countrycode"	"JP"
 			"latitude"	"35.676398"
@@ -660,14 +692,24 @@
 			"edges"
 			{
 				// Spokes
+				177 {  "cost"	OutwardCost }	
+				178 {  "cost"	OutwardCost }	
+				179 {  "cost"	OutwardCost }	
+				180 {  "cost"	OutwardCost }	
+				181 {  "cost"	OutwardCost }	
+
 				8 {  "dest"	8 "cost"	JapanToKorea }								
 				9 {  "dest"	9  "cost"	OneWayCellEdge }			
 				17 { "dest"	17 "cost"	AggregatorCost }
 				// Backbones
 				31 {  "dest"	31  "cost"	GlobalBackbone }				
-				33 {  "dest"	33  "cost"	GlobalBackbone }
+				33 {  "dest"	33  "cost"	1 }
 				// High Cost
 				152  {  "dest"	152 "cost"	OneWayCellEdge }
+			}
+			"affinities"
+			{
+				"HKBN" { "cost_reduction"	-2 }
 			}
 		}
 
@@ -682,13 +724,17 @@
 			"edges"
 			{
 				// Spokes
-				9 { "dest"	9 }
+				9 { "cost"	OutwardCost }
 				// Backbones
 				32 { "dest" 32 "cost"	GlobalBackbone }
 				45 { "dest" 45 "cost"	GlobalBackbone }
 				35 { "dest" 35 "cost"	RegionalBackbone }
 				// High-Cost
 				47 { "dest"	47 "cost"	OneWayCellEdge }
+			}
+			"affinities"
+			{
+				"HKBN" { "cost_reduction"	2 }
 			}
 		}
 
@@ -717,19 +763,24 @@
 			"edges"
 			{
 				// Spokes
-				44 { "dest"	44 }
-				72 { "dest"	72 }
-				34 { "dest"	34 }
-				70 { "dest"	70 }
-				71 { "dest"	71 }
+				44 { "cost"	OutwardCost }
+				72 { "cost"	OutwardCost }
+				34 { "cost"	OutwardCost }
+				70 { "cost"	OutwardCost }
+				71 { "cost"	OutwardCost }
 				// Backbones
-				33 { "dest" 33 "cost"	RegionalBackbone }
+				33 { "dest" 33 "cost"	0.1 }
 				141 { "dest" 141 "cost"	SingaporeToIndia }
 				45 { "dest" 45 "cost"	GlobalBackbone }
 				// Other
 				17 { "dest"	17  "cost" AggregatorCost }
 				19  {  "dest"	19  "cost"		AggregatorCost}
 				9 { "dest"	9 "cost"	OneWayCellEdge }					
+			}
+			"affinities"
+			{
+				"FPT" { "cost_reduction"	"1" }
+				"HKBN"	{ "cost_reduction"	-2 }
 			}
 		}
 
@@ -762,36 +813,42 @@
 		// #37 Italy
 		37
 		{
-			"name" "Italy"
-			"region"	"europe"
+			"name" "Italy - Rome"
+			"region"	"west europe"
 			"countrycode"	"IT"
 			"latitude"	"41.890195"
 			"longitude"	"12.492346"
 			"edges"
 			{
-				5 { "cost"	2 }
-				92 { "cost"	InwardCost }
+				5 { "cost"	InwardCost }
+				92 { "cost"	2 }
+				184 { "cost"	OutwardCost } // Milan
 			}
 		}
 
 		// #38 Poland
 		38
 		{
-			"name" "Poland"
-			"region"	"europe"
+			"name" "Poland - Warsaw"
+			"region"	"east europe"
 			"countrycode"	"PL"
 			"latitude"	"52.227799"
 			"longitude"	"21.005001"
 			"edges"
 			{
 				// Spokes
-				165 { "cost"	Default } // Belarus
+				165 { "cost"	OutwardCost } // Belarus
+				183 { "cost"	OutwardCost } // Katowice
 				// Backbone
 				5 { "dest"	5 	"cost"	RegionalBackbone }
 				66 { "dest"	66 	"cost"	RegionalBackbone }
 				92 { "dest"	92 	"cost"	RegionalBackbone }
 				// High-cost
 				27 { "dest" 27	"cost"	OneWayCellEdge }
+			}
+			"affinities"
+			{
+				"TEO" { "cost_reduction"	"1" }
 			}
 		}
 
@@ -815,7 +872,7 @@
 		40
 		{
 			"name" "Spain & Portugal"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"ES"
 			"latitude"	"40.415405"
 			"longitude"	"-3.707378"
@@ -826,13 +883,19 @@
 				5 { "cost"	InwardCost }
 				92 { "dest"	92 	"cost"	GlobalBackbone }
 			}
+			"affinities"
+			{
+				"Procono" { "cost_reduction"	"1" }
+				"MEO" { "cost_reduction"	"1" }
+			}
+
 		}
 
 		// #41 Denmark
 		41
 		{
 			"name" "Denmark"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"DK"
 			"latitude"	"55.677584"
 			"longitude"	"12.562008"
@@ -848,7 +911,7 @@
 		42
 		{
 			"name" "Czech Republic"
-			"region"	"europe"
+			"region"	"east europe"
 			"countrycode"	"CZ"
 			"latitude"	"50.086473"
 			"longitude"	"14.411409"
@@ -863,7 +926,7 @@
 		43
 		{
 			"name" "Greece"
-			"region"	"europe"
+			"region"	"east europe"
 			"countrycode"	"GR"
 			"latitude"	"37.978845"
 			"longitude"	"23.717766"
@@ -884,7 +947,7 @@
 			"longitude"	"106.827621"
 			"edges"
 			{
-				35 { "dest"	35 	"cost"	InwardCost }
+				35 { "cost"	0 }
 			}
 		}
 
@@ -900,7 +963,7 @@
 			{
 				// Backbone
 				35 { "dest"	35 	"cost"	RegionalBackbone }
-				33 { "dest"	33 	"cost"	RegionalBackbone }
+				33 { "dest"	33 	"cost"	1 }
 				// Other
 				17 { "dest"	17 "cost"	AggregatorCost }
 			}
@@ -943,12 +1006,12 @@
 				171 {  }
 				48 { "dest"	48 }
 				// Backbone-ish
-				33 				{  					"dest"	33 					"cost"	CostToLeaveChina 				}
+				33 { "cost"	CostToLeaveChina }
 				// Special PerfectWorld cells
-				137  				{  					"dest"	137   					"cost"	OneWayCellEdge 				}
-				138 				{  					"dest"	138   					"cost"	OneWayCellEdge 				}
+				137 { "cost"	OneWayCellEdge 	}
+				138 { "cost"	OneWayCellEdge 	}
 				// Mongolia					
-				161 				{  					"dest"	161 					"cost"	OneWayCellEdge 				}	
+				161 { "cost"	OneWayCellEdge 	}	
 
 			}
 		}
@@ -1000,9 +1063,9 @@
 				65 { "dest"	65 }
 				25 { "dest"	25 "cost"	GlobalBackbone }
 				// Spokes
-				84 { "dest"	84 }
-				78 { "dest"	78  }
-				12 { "dest"	12  }
+				84 { "cost"	OutwardCost }
+				78 { "cost"	OutwardCost  }
+				12 { "cost"	OutwardCost  }
 				// Other
 				23 { "dest"	23 "cost"	OneWayCellEdge 	}	
 				139 { "dest"	139 "cost"	OneWayCellEdge }	
@@ -1184,10 +1247,10 @@
 				4 { "dest"	4	"cost"	GlobalBackbone  }
 				5 { "dest"	5	"cost"	GlobalBackbone  }
 				// Spokes
-				2 { "dest"	2  }
-				82 { "dest"	82  }
-				83 { "dest"	83 }
-				84 { "dest"	84 }
+				2 { "cost"	OutwardCost  }
+				82 { "cost"	OutwardCost  }
+				83 { "cost"	OutwardCost }
+				84 { "cost"	OutwardCost }
 				// Hop
 				3 { "dest"	3 }
 				21
@@ -1198,9 +1261,10 @@
 			}
 			"affinities"
 			{
-				"shaw" { "cost_reduction"	"0.8" }
+				"shaw" { "cost_reduction"	"0.4" }
 
 				"videotron" { "cost_reduction"	"0.8" }
+				"ACCL" { "cost_reduction"	-1 }
 			}
 		}
 		// #64 US - Los Angeles
@@ -1215,23 +1279,24 @@
 			{
 				// Backbone
 				1 { "dest"	1  }
-				31 { "cost"	LocalBackbone  }
-				65 { "dest"	65  }
-				50 { "dest"	50	"cost"	RegionalBackbone  }
-				33 { "dest"	33	"cost"	GlobalBackbone  }
+				31 { "cost"	1  }
+				65 { "cost"	1  }
+				50 { "cost"	RegionalBackbone  }
+				33 { "cost"	GlobalBackbone  }
 				// Spokes
-				10 { "dest"	10 }
-				74 { "dest"	74 }
-				75 { "dest"	75 }
-				11 { "dest"	11 }
-				49 { "dest"	49 }
-				146 { "dest"	146 }
+				10 { "cost"	OutwardCost }
+				74 { "cost"	OutwardCost }
+				75 { "cost"	OutwardCost }
+				11 { "cost"	OutwardCost }
+				49 { "cost"	OutwardCost }
+				146 { "cost"	OutwardCost }
 				18 { "dest"	18 }
 				114
 				{ 
 					"dest"	114
 					"cost"	OneWayCellEdge
 				}					
+				174 { "cost" 	OneWayCellEdge }
 			}
 		}
 		// #65 US - Dallas
@@ -1245,24 +1310,24 @@
 			"edges"
 			{
 				// Backbone
-				1 { "dest"	1  }
-				50 { "dest"	50  }
-				64 { "dest"	64  }
+				1 { "cost"	1 }
+				50 { "cost"	1 }
+				64 { "cost"	1 }
 				// Spokes
-				78 { "dest"	78 }
-				49 { "dest"	49 }
-				11 { "dest"	11 }
+				78 { "cost"	OutwardCost }
+				49 { "cost"	OutwardCost }
+				11 { "cost"	OutwardCost }
 			}
 			"affinities"
 			{
 				"skyfiber" { "cost_reduction"	"0.5" }
 			}
 		}
-		// #66 Sweden
+		// #66 Stockholm
 		66
 		{
-			"name" "Sweden"
-			"region"	"europe"
+			"name" "Sweden - Stockholm"
+			"region"	"west europe"
 			"countrycode"	"SE"
 			"latitude"	"59.327585"
 			"longitude"	"18.070793"
@@ -1274,22 +1339,30 @@
 				31 { "dest"	31	"cost"	GlobalBackbone }
 				38 { "dest"	38	"cost"	OneWayCellEdge }
 				// Spokes
-				68 { "dest"	68 }
-				67 { "dest"	67 }							
-				41 { "dest"	41 }
+				175 { "cost"	OutwardCost }
+				176 { "cost"	OutwardCost }
+				68 { "cost"	OutwardCost }
+				67 { "cost"	OutwardCost }							
+				41 { "cost"	OutwardCost }
 				27 { "dest"	27	"cost"	OneWayCellEdge }
 			}
 			"affinities"
 			{
+				"Kvant" { "cost_reduction" 3 }
 				"fiord" { "cost_reduction" 1 }
 				"TK-Telecom" { "cost_reduction" 1 }
+				"ER-Telecom" { "cost_reduction" 1 }
+				"TDC" { "cost_reduction" 0.5 }
+				"Parkland" { "cost_reduction" -4 }
+				"Fiberby" { "cost_reduction" -4 }
+
 			}
 		}
 		// #67 Norway
 		67
 		{
 			"name" "Norway"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"NO"
 			"latitude"	"59.910609"
 			"longitude"	"10.754294"
@@ -1302,7 +1375,7 @@
 		68
 		{
 			"name" "Finland"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"FI"
 			"latitude"	"60.174306"
 			"longitude"	"24.937248"
@@ -1315,7 +1388,7 @@
 		69
 		{
 			"name" "Ireland"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"IE"
 			"latitude"	"53.343993"
 			"longitude"	"-6.27491"
@@ -1334,7 +1407,7 @@
 			"longitude"	"104.937973"
 			"edges"
 			{
-				35 { "dest"	35	"cost"	InwardCost }
+				35 { "cost"	0 }
 			}
 		}
 		// #71 Vietnam
@@ -1347,7 +1420,8 @@
 			"longitude"	"106.631584"
 			"edges"
 			{
-				35 { "dest"	35	"cost"	InwardCost }
+				33 { "cost"	0 }
+				35 { "cost"	1 }
 			}
 		}
 		// #72 Malaysia
@@ -1360,14 +1434,14 @@
 			"longitude"	"101.703790"
 			"edges"
 			{
-				35 { "dest"	35	"cost"	InwardCost }
+				35 { "cost"	0}
 			}
 		}		
 		// #73 Ukraine
 		73
 		{
 			"name" "Ukraine"
-			"region"	"europe"
+			"region"	"east europe"
 			"countrycode"	"UA"
 			"latitude"	"50.455690"
 			"longitude"	"30.521386"
@@ -1535,14 +1609,14 @@
 			"longitude"	"-2.248119"
 			"edges"
 			{
-				4 { "dest"	4	"cost"	InwardCost }
+				4 { "dest"	4	"cost"	ZeroCost }
 			}
 		}			
 		// #86 Brussels
 		86
 		{
 			"name" "Belgium"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"BE"
 			"latitude"	"50.847573"
 			"longitude"	"4.348869"
@@ -1555,7 +1629,7 @@
 		87
 		{
 			"name" "Germany - Dusseldorf"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"DE"
 			"latitude"	"51.219684"
 			"longitude"	"6.794386"
@@ -1569,7 +1643,7 @@
 		88
 		{
 			"name" "Switzerland"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"CH"
 			"latitude"	"47.366074"
 			"longitude"	"8.541189"
@@ -1582,7 +1656,7 @@
 		89
 		{
 			"name" "Germany - Hamburg"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"DE"
 			"latitude"	"53.550099"
 			"longitude"	"9.991207"
@@ -1595,7 +1669,7 @@
 		90
 		{
 			"name" "Germany - Berlin"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"DE"
 			"latitude"	"52.516277"
 			"longitude"	"13.377734"
@@ -1608,7 +1682,7 @@
 		91
 		{
 			"name" "Germany - Munich"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"DE"
 			"latitude"	"48.144098"
 			"longitude"	"11.577873"
@@ -1621,30 +1695,34 @@
 		92
 		{
 			"name" "Austria"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"AT"
 			"latitude"	"48.207475"
 			"longitude"	"16.361858"
 			"edges"
 			{
 				// Backbone
-				5 { "dest"	5	"cost"	LocalBackbone }
+				5 { "dest"	5	"cost"	1 }
 				40 { "dest"	40	"cost"	GlobalBackbone	}
 				38 { "dest"	38	"cost"	OneWayCellEdge	}
 				// Spokes	
-				42 { "dest"	42 }
-				16 { "dest"	16 }
-				37 {  }
-				43 { "dest"	43 }
-				93 { "dest"	93 }
+				42 { "cost"	OutwardCost }
+				16 { "cost"	OutwardCost }
+				37 { "cost"	OutwardCost }
+				43 { "cost"	OutwardCost }
+				93 { "cost"	OutwardCost }
 				124 { "dest"	124 "cost"	OneWayCellEdge }
+			}
+			"affinities"
+			{
+				"Sparkle" { "cost_reduction"	"2" }
 			}
 		}			
 		// #93 Budapest
 		93
 		{
 			"name" "Hungary"
-			"region"	"europe"
+			"region"	"east europe"
 			"countrycode"	"HU"
 			"latitude"	"47.498354"
 			"longitude"	"19.040453"
@@ -1700,7 +1778,7 @@
 		97
 		{
 			"name" "South Africa - Cape Town"
-			"region"	"africa"
+			"region"	"south africa"
 			"countrycode"	"ZA"
 			"latitude"	"-33.917449"
 			"longitude"	"18.428065"
@@ -1713,7 +1791,7 @@
 		98
 		{
 			"name" "South Africa - Cape Town (MWEB)"
-			"region"	"africa"
+			"region"	"south africa"
 			"deprecated"	"1"
 			"edges"
 			{
@@ -1724,7 +1802,7 @@
 		99
 		{
 			"name" "South Africa - Johannesburg (MWEB)"
-			"region"	"africa"
+			"region"	"south africa"
 			"deprecated"	"1"
 			"edges"
 			{
@@ -1735,7 +1813,7 @@
 		100
 		{
 			"name" "South Africa - Cape Town (Web Africa)"
-			"region"	"africa"
+			"region"	"south africa"
 			"deprecated"	"1"
 			"edges"
 			{
@@ -1746,7 +1824,7 @@
 		101
 		{
 			"name" "South Africa - Johannesburg (IS Gaming)"
-			"region"	"africa"
+			"region"	"south africa"
 			"deprecated"	"1"
 			"edges"
 			{
@@ -1770,7 +1848,7 @@
 		103
 		{
 			"name" "LAN Event (Europe)"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"DE"
 			"deprecated"	"1"
 			"edges"
@@ -1908,7 +1986,7 @@
 		{
 			"name" "Mexico"
 			"countrycode"	"MX"
-			"region"	"north america"
+			"region"	"mexico"
 			"latitude"	"19.435514"
 			"longitude"	"-99.142342"
 			"edges"
@@ -2091,7 +2169,7 @@
 		128
 		{
 			"name" "Pakistan"
-			"region"	"asia"
+			"region"	"south asia"
 			"countrycode"	"PK"
 			"latitude"	"24.845544"
 			"longitude"	"66.992161"
@@ -2103,7 +2181,7 @@
 		129
 		{
 			"name" "Luxembourg"
-			"region"	"europe"
+			"region"	"west europe"
 			"countrycode"	"LU"
 			"latitude"	"49.600567"
 			"longitude"	"6.134500"
@@ -2244,7 +2322,7 @@
 			"longitude"	"-85.633793"
 			"edges"
 			{
-				50 { "dest"	50 }
+				50 { "cost"	3 }
 			}
 		}		
 		140
@@ -2256,7 +2334,7 @@
 			"longitude"	"-72.335701"
 			"edges"
 			{
-				50 { "dest"	50 }
+				50 { "cost"	3 }
 			}		
 		}
 		141
@@ -2418,7 +2496,7 @@
 				157 { "dest"	157 }
 				27 { "dest"	27	"cost"	AggregatorCost }
 				7 { "dest"	7 }
-				32 { "dest"	32	"cost"	1 }
+				32 { "dest"	32	"cost"	0.5 }
 			}		
 		}
 		153
@@ -2479,7 +2557,7 @@
 			"edges"
 			{
 				62 { "dest"	62 }
-				152 { "dest"	152	"cost"	1 }
+				152 { "dest"	152	"cost"	2.5 }
 				27 { "dest"	27	"cost"	AggregatorCost }
 			}		
 		}		
@@ -2533,6 +2611,7 @@
 			{
 				62 { "dest"	62 }
 				47 { "dest"	47 }
+				33 { "cost"	2 }
 			}		
 		}
 		162
@@ -2576,7 +2655,7 @@
 		{
 			"name" "Belarus"
 			"countrycode"	"BY"
-			"region"	"europe"
+			"region"	"east europe"
 			"latitude"	"53.904426"
 			"longitude"	"27.573423"
 			"edges"
@@ -2681,6 +2760,140 @@
 				158 { "cost"	InwardCost }
 			}		
 		}
+		174
+		{
+			"name" "Pacific Islands"
+			"region"	"oceania"
+			"countrycode"	"UZ"
+			"latitude"	"-14.272475"
+			"longitude"	"-170.698425"
+			"edges"
+			{
+				64 { "cost"	3 }
+			}		
+		}
+		175
+		{
+			"name" "Sweden - Malmo"
+			"region"	"west europe"
+			"countrycode"	"SE"
+			"latitude"	"55.6020107"
+			"longitude"	"12.9953381"
+			"edges"
+			{
+				66 { "cost"	InwardCost }
+			}		
+		}
+		176
+		{
+			"name" "Sweden - Gothenburg"
+			"region"	"west europe"
+			"countrycode"	"SE"
+			"latitude"	"57.7095476"
+			"longitude"	"11.9825166"
+			"edges"
+			{
+				66 { "cost"	InwardCost }
+			}		
+		}
+		177
+		{
+			"name" "Japan - Sapporo"
+			"region"	"japan"
+			"countrycode"	"JP"
+			"latitude"	"43.0601147"
+			"longitude"	"141.3523908"
+			"edges"
+			{
+				32 { "cost"	InwardCost }
+			}		
+		}
+		178
+		{
+			"name" "Japan - Sendai"
+			"region"	"japan"
+			"countrycode"	"JP"
+			"latitude"	"38.2669368"
+			"longitude"	"140.8712998"
+			"edges"
+			{
+				32 { "cost"	InwardCost }
+			}		
+		}
+		179
+		{
+			"name" "Japan - Nagoya"
+			"region"	"japan"
+			"countrycode"	"JP"
+			"latitude"	"35.1551311"
+			"longitude"	"136.9164507"
+			"edges"
+			{
+				32 { "cost"	InwardCost }
+			}		
+		}
+		180
+		{
+			"name" "Japan - Osaka"
+			"region"	"japan"
+			"countrycode"	"JP"
+			"latitude"	"34.7008893"
+			"longitude"	"135.4947667"
+			"edges"
+			{
+				32 { "cost"	InwardCost }
+			}		
+		}
+		181
+		{
+			"name" "Japan - Fukuoka"
+			"region"	"japan"
+			"countrycode"	"JP"
+			"latitude"	"33.5946899"
+			"longitude"	"130.4212494"
+			"edges"
+			{
+				32 { "cost"	InwardCost }
+			}		
+		}
+		182
+		{
+			"name" "South Korea - Busan"
+			"region"	"korea"
+			"countrycode"	"KR"
+			"latitude"	"35.1591925"
+			"longitude"	"129.0463444"
+			"edges"
+			{
+				32 { "cost"	InwardCost }
+			}		
+		}
+		183
+		{
+			"name" "Poland - Katowice"
+			"region"	"east europe"
+			"countrycode"	"PL"
+			"latitude"	"50.26367"
+			"longitude"	"19.0247792"
+			"edges"
+			{
+				38 { "cost"	InwardCost }
+			}
+		}
+		184
+		{
+			"name" "Italy - Milan"
+			"region"	"west europe"
+			"countrycode"	"IT"
+			"latitude"	"45.4674829"
+			"longitude"	"9.1781021"
+			"edges"
+			{
+				5 { "cost"	InwardCost }
+				92 { "cost"	2 }
+			}
+		}
+
 	}
 	"countries"
 	{
@@ -2697,7 +2910,7 @@
 		"DZ"	132
 		
 		//"American Samoa"
-		"AS"	10
+		"AS"	174
 		
 		//"Andorra"		
 		"AD"	40
@@ -2838,7 +3051,7 @@
 		"CD"	130
 		
 		//"Cook Islands"					
-		"CK"	0
+		"CK"	174
 		
 		//"Costa Rica"					
 		"CR"	139
@@ -2898,7 +3111,7 @@
 		"FO"	29
 		
 		//"Fiji"							
-		"FJ"	10
+		"FJ"	174
 		
 		//"Finland"						
 		"FI"	68
@@ -2910,7 +3123,7 @@
 		"GF"	139
 		
 		//"French Polynesia"				
-		"PF"	10
+		"PF"	174
 		
 		//"French Southern Territories"
 		"TF"	0
@@ -2946,7 +3159,7 @@
 		"GP"	140
 		
 		//"Guam"							
-		"GU"	10
+		"GU"	174
 		
 		//"Guatemala"						
 		"GT"	139
@@ -3027,7 +3240,7 @@
 		"KE"	131
 		
 		//"Kiribati"						
-		"KI"	0
+		"KI"	174
 		
 		//"Korea	Republic of"			
 		"KR"	8
@@ -3093,7 +3306,7 @@
 		"MT"	37
 		
 		//"Marshall Islands"				
-		"MH"	0
+		"MH"	174
 		
 		//"Martinique"					
 		"MQ"	140
@@ -3111,7 +3324,7 @@
 		"MX"	115
 		
 		//"Micronesia, Federated States of"			
-		"FM"	0
+		"FM"	174
 		
 		//"Moldova, Republic of"			
 		"MD"	16
@@ -3138,7 +3351,7 @@
 		"NA"	130
 		
 		//"Nauru"							
-		"NR"	0
+		"NR"	174
 		
 		//"Nepal"							
 		"NP"	142
@@ -3150,7 +3363,7 @@
 		"AN"	140
 		
 		//"New Caledonia"					
-		"NC"	10
+		"NC"	174
 		
 		//"New Zealand"					
 		"NZ"	22
@@ -3165,13 +3378,13 @@
 		"NG"	130
 		
 		//"Niue"							
-		"NU"	0
+		"NU"	174
 		
 		//"Norfolk Island"				
-		"NF"	0
+		"NF"	174
 		
 		//"Northern Mariana Islands"			
-		"MP"	10
+		"MP"	174
 		
 		//"Norway"						
 		"NO"	67
@@ -3183,7 +3396,7 @@
 		"PK"	128
 		
 		//"Palau"							
-		"PW"	0
+		"PW"	174
 		
 		//"Palestinian Territory, Occupied"				
 		"PS"	30
@@ -3204,7 +3417,7 @@
 		"PH"	45
 		
 		//"Pitcairn"						
-		"PN"	0
+		"PN"	174
 		
 		//"Poland"						
 		"PL"	38
@@ -3246,7 +3459,7 @@
 		"VC"	140
 		
 		//"Samoa"							
-		"WS"	10
+		"WS"	174
 		
 		//"San Marino"					
 		"SM"	37
@@ -3282,7 +3495,7 @@
 		"SI"	42
 		
 		//"Solomon Islands"				
-		"SB"	0
+		"SB"	174
 		
 		//"Somalia"						
 		"SO"	131
@@ -3304,6 +3517,10 @@
 		
 		//"Sudan"
 		"SD"	131
+
+		
+		//"South Sudan"
+		"SS"	131
 		
 		//"Svalbard and Jan Mayen"
 		"SJ"	66
@@ -3333,16 +3550,16 @@
 		"TH"	34
 		
 		//"Timor-Leste"					
-		"TL"	35
+		"TL"	44
 		
 		//"Togo"							
 		"TG"	130
 		
 		//"Tokelau"						
-		"TK"	0
+		"TK"	174
 		
 		//"Tonga"							
-		"TO"	0
+		"TO"	174
 		
 		//"Trinidad and Tobago"			
 		"TT"	140
@@ -3360,7 +3577,7 @@
 		"TC"	140
 		
 		//"Tuvalu"						
-		"TV"	0
+		"TV"	174
 		
 		//"Uganda"						
 		"UG"	131
@@ -3378,7 +3595,7 @@
 		"US"	10
 		
 		//"United States Minor Outlying Islands"			
-		"UM"	0
+		"UM"	174
 		
 		//"Uruguay"						
 		"UY"	116
@@ -3387,7 +3604,7 @@
 		"UZ"	173
 		
 		//"Vanuatu"						
-		"VU"	0
+		"VU"	174
 		
 		//"Venezuela"						
 		"VE"	162
@@ -3402,7 +3619,7 @@
 		"VI"	140
 		
 		//"Wallis and Futuna"				
-		"WF"	0
+		"WF"	174
 		
 		//"Western Sahara"				
 		"EH"	130

@@ -1906,7 +1906,7 @@
     },
     {
         "id": 3308,
-        "size": 9,
+        "size": 17,
         "posted_in": "void CRemoteClientStream::PostCallbackToUI<RemoteClientStreamLifetime_t>(RemoteClientStreamLifetime_t*)"
     },
     {
@@ -2018,6 +2018,11 @@
         "id": 3331,
         "size": 1,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStreamingDesktopToRemotePlayTogetherChange_t>(RemoteClientStreamingDesktopToRemotePlayTogetherChange_t*)"
+    },
+    {
+        "id": 3332,
+        "size": 1,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<PlaceholderStateChanged_t>(PlaceholderStateChanged_t*)"
     },
     {
         "id": 3401,

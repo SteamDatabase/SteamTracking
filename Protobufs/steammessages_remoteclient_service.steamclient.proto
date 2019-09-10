@@ -53,6 +53,21 @@ message CRemoteClient_SteamToSteam_Notification {
 	optional bytes encrypted_payload = 5;
 }
 
+message CRemotePlay_SessionStarted_Request {
+	optional uint32 host_account_id = 1;
+	optional uint32 client_account_id = 2;
+	optional uint32 appid = 3;
+	optional int32 device_form_factor = 4;
+}
+
+message CRemotePlay_SessionStarted_Response {
+	optional fixed64 record_id = 1;
+}
+
+message CRemotePlay_SessionStopped_Notification {
+	optional fixed64 record_id = 1;
+}
+
 message CRemotePlayTogether_Notification {
 	message GroupUpdated {
 		optional fixed64 host_steamid = 1;
@@ -103,6 +118,12 @@ service RemoteClient {
 	}
 	rpc SendSteamToSteamPacket (.CRemoteClient_SteamToSteam_Notification) returns (.NoResponse) {
 		option (method_description) = "Send a packet to a remote Steam client";
+	}
+	rpc SendRemotePlaySessionStarted (.CRemotePlay_SessionStarted_Request) returns (.CRemotePlay_SessionStarted_Response) {
+		option (method_description) = "Let the server know that we started a Remote Play session";
+	}
+	rpc SendRemotePlaySessionStopped (.CRemotePlay_SessionStopped_Notification) returns (.NoResponse) {
+		option (method_description) = "Let the server know that we stopped a Remote Play session";
 	}
 	rpc SendRemotePlayTogetherPacket (.CRemotePlayTogether_Notification) returns (.NoResponse) {
 		option (method_description) = "Send a Remote Play Together packet to a Steam client";
