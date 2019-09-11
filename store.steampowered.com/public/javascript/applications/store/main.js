@@ -34245,7 +34245,7 @@
           (i.prototype.BImageNeedScreenshotFallback = function(e, t) {
             var n = this.GetImageURL(e, t);
             return (
-              (n && 0 != n.length) || (0 != t && (n = this.GetImageURL(e, t))),
+              (n && 0 != n.length) || (0 != t && (n = this.GetImageURL(e, 0))),
               !n || 0 == n.length
             );
           }),
@@ -34932,11 +34932,11 @@
             _
           ) {
             return b.b(this, void 0, void 0, function() {
-              var r,
+              var o,
                 t,
                 n,
                 i,
-                o,
+                r,
                 a,
                 s,
                 l,
@@ -34944,14 +34944,14 @@
               return b.e(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    (r = new Array()),
+                    (o = new Array()),
                       (t =
                         v.STORE_BASE_URL +
                         "events/ajaxgetadjacentpartnerevents/"),
                       (n = N(v.LANGUAGE)),
                       (i = "" + n),
                       0 != n && (i += "_0"),
-                      (o = {
+                      (r = {
                         clan_accountid: p ? p.GetAccountID() : void 0,
                         appid: m,
                         count_before: h,
@@ -34981,7 +34981,7 @@
                       [
                         4,
                         S.a.get(t, {
-                          params: o,
+                          params: r,
                           cancelToken: _ ? _.token : void 0
                         })
                       ]
@@ -34993,19 +34993,21 @@
                         for (var e = 0, t = a.data.events; e < t.length; e++) {
                           var n = t[e],
                             i = c.GetEventLookupKey(n);
-                          c.m_mapExistingEvents.has(i) ||
+                          if (!c.m_mapExistingEvents.has(i)) {
+                            var r = new we(n.clan_steamid);
                             c.InsertEventModelFromClanEventData(
-                              p.GetAccountID(),
+                              (p || r).GetAccountID(),
                               n
-                            ),
-                            r.push(c.m_mapExistingEvents.get(i));
+                            );
+                          }
+                          o.push(c.m_mapExistingEvents.get(i));
                         }
-                        0 == r.length &&
+                        0 == o.length &&
                           (d && c.BHasClanEventModel(d)
-                            ? r.push(c.m_mapExistingEvents.get(d))
+                            ? o.push(c.m_mapExistingEvents.get(d))
                             : u &&
                               c.BHasClanAnnouncementGID(u) &&
-                              r.push(c.GetClanEventFromAnnouncementGID(u)));
+                              o.push(c.GetClanEventFromAnnouncementGID(u)));
                       }),
                       [3, 4]
                     );
@@ -35020,7 +35022,7 @@
                       [3, 4]
                     );
                   case 4:
-                    return [2, r];
+                    return [2, o];
                 }
               });
             });

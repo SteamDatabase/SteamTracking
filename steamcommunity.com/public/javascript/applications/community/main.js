@@ -8448,8 +8448,8 @@
       a = z("6TF7"),
       r = z.n(a),
       h = z("mgoM"),
-      u = z("kLLr"),
-      f = z("2vnA"),
+      f = z("kLLr"),
+      W = z("2vnA"),
       s = (function() {
         function e(e) {
           (this.m_bLoaded = !1),
@@ -8522,7 +8522,7 @@
                           [4, g.a.get(n, { params: t })]);
                     case 1:
                       (p = e.sent()),
-                        Object(f.z)(function() {
+                        Object(W.z)(function() {
                           if (!p.data || 1 != p.data.success)
                             return (
                               console.log(
@@ -8589,12 +8589,12 @@
               })
             );
           }),
-          q.c([f.w], e.prototype, "m_appStoreData", void 0),
-          q.c([f.f], e.prototype, "HintLoadBroadcastAppData", null),
+          q.c([W.w], e.prototype, "m_appStoreData", void 0),
+          q.c([W.f], e.prototype, "HintLoadBroadcastAppData", null),
           e
         );
       })();
-    function W(e) {
+    function B(e) {
       if (g.a.isCancel(e))
         return { strErrorMsg: "Action Cancelled", errorCode: 52 };
       if (void 0 !== e.response && "object" == typeof e.response.data) {
@@ -8699,7 +8699,7 @@
                   case 3:
                     return (
                       (i = e.sent()),
-                      console.log(W(i)),
+                      console.log(B(i)),
                       console.error(i),
                       [3, 4]
                     );
@@ -8714,15 +8714,15 @@
               });
             });
           }),
-          q.c([f.w], e.prototype, "m_mapAppIDToInfo", void 0),
-          q.c([f.w], e.prototype, "m_mapAppIDToDLCs", void 0),
-          q.c([f.f], e.prototype, "EnsureStoreCapsuleInfoLoaded", null),
+          q.c([W.w], e.prototype, "m_mapAppIDToInfo", void 0),
+          q.c([W.w], e.prototype, "m_mapAppIDToDLCs", void 0),
+          q.c([W.f], e.prototype, "EnsureStoreCapsuleInfoLoaded", null),
           e
         );
       })())(),
-      A = z("Gp1o"),
-      B = z("r64O"),
-      y = z("qiKp"),
+      u = z("Gp1o"),
+      y = z("r64O"),
+      A = z("qiKp"),
       R = z("X3Ds"),
       E = z("YyVH"),
       L = z("bxiW"),
@@ -8838,7 +8838,7 @@
                   case 0:
                     return (
                       (t = b.GetAccountID()),
-                      Object(B.a)(b && 0 != t, "ClanSteamID missing:" + b),
+                      Object(y.a)(b && 0 != t, "ClanSteamID missing:" + b),
                       !b || (this.m_mapClanToImages.has(t) && !M)
                         ? [3, 2]
                         : ((n = {}),
@@ -9016,7 +9016,7 @@
           }),
           (l.GenerateEditableArtworkURLFromHashAndExtension = function(e, t) {
             return (
-              Object(B.a)(e.BIsClanAccount(), "Not clan id " + e.Render()),
+              Object(y.a)(e.BIsClanAccount(), "Not clan id " + e.Render()),
               m.b.COMMUNITY_BASE_URL +
                 "gid/" +
                 e.ConvertTo64BitString() +
@@ -9051,7 +9051,7 @@
                           success: 1
                         }
                       ];
-                    (n = u.a.InitFromClanID(c.clanAccountID)),
+                    (n = f.a.InitFromClanID(c.clanAccountID)),
                       (o = l.GetHashAndExt(c)),
                       (i = l.GenerateEditableArtworkURLFromHashAndExtension(
                         n,
@@ -9064,14 +9064,14 @@
                           "Load fail on url " +
                           i +
                           " with error: " +
-                          W(e).strErrorMsg),
+                          B(e).strErrorMsg),
                           console.log(a.err_msg),
                           (a.success = 2);
                       }),
                       (r.onload = function() {
                         (a.width = r.width),
                           (a.height = r.height),
-                          Object(B.a)(
+                          Object(y.a)(
                             0 < a.width && 0 < a.height,
                             "unexpected image resolution discovered for clanimage " +
                               c.clanAccountID +
@@ -9127,7 +9127,7 @@
                           "Load fail on url " +
                           c +
                           " with error: " +
-                          W(e).strErrorMsg),
+                          B(e).strErrorMsg),
                           console.log(a);
                       }),
                       (p.onload = function() {
@@ -9138,7 +9138,7 @@
                               "Load fail on url " +
                               s +
                               " with error: " +
-                              W(e).strErrorMsg),
+                              B(e).strErrorMsg),
                               console.log(a);
                           }),
                           (i.onload = function() {
@@ -9221,7 +9221,7 @@
                               "Load fail on url " +
                               n +
                               " with error: " +
-                              W(e).strErrorMsg),
+                              B(e).strErrorMsg),
                               console.log(a);
                           }),
                           (o.onload = function() {
@@ -9297,10 +9297,10 @@
               });
             });
           }),
-          q.c([f.w], l.prototype, "m_mapClanToImages", void 0),
-          q.c([f.w], l.prototype, "m_mapClanImageLoadState", void 0),
-          q.c([f.f], l.prototype, "LoadClanImages", null),
-          q.c([f.f], l.prototype, "DeleteClanImageByID", null),
+          q.c([W.w], l.prototype, "m_mapClanToImages", void 0),
+          q.c([W.w], l.prototype, "m_mapClanImageLoadState", void 0),
+          q.c([W.f], l.prototype, "LoadClanImages", null),
+          q.c([W.f], l.prototype, "DeleteClanImageByID", null),
           l
         );
       })(),
@@ -9363,12 +9363,12 @@
               : "email_full" !== e ||
                 (this.img.width >= F && this.img.height >= w);
           }),
-          q.c([f.w], e.prototype, "dataUrl", void 0),
-          q.c([f.w], e.prototype, "width", void 0),
-          q.c([f.w], e.prototype, "height", void 0),
-          q.c([f.w], e.prototype, "type", void 0),
-          q.c([f.w], e.prototype, "status", void 0),
-          q.c([f.w], e.prototype, "message", void 0),
+          q.c([W.w], e.prototype, "dataUrl", void 0),
+          q.c([W.w], e.prototype, "width", void 0),
+          q.c([W.w], e.prototype, "height", void 0),
+          q.c([W.w], e.prototype, "type", void 0),
+          q.c([W.w], e.prototype, "status", void 0),
+          q.c([W.w], e.prototype, "message", void 0),
           e
         );
       })(),
@@ -9499,7 +9499,7 @@
                             ((o.status = "uploading"),
                             (i = o.uploadTime + "/" + o.file.name),
                             (t[i] = this.UploadFile(o.file, o.file.name)));
-                      return [4, Object(y.d)(t)];
+                      return [4, Object(A.d)(t)];
                     case 1:
                       return [2, e.sent()];
                   }
@@ -9564,7 +9564,7 @@
                       (this.m_lastError = {
                         file: p instanceof File ? p : void 0,
                         status: r.response ? r.response.status : 500,
-                        message: W(r).strErrorMsg
+                        message: B(r).strErrorMsg
                       }),
                       (t = r.response),
                       [3, 4]
@@ -9577,9 +9577,9 @@
               });
             });
           }),
-          q.c([f.w], e.prototype, "m_filesToUpload", void 0),
-          q.c([f.w], e.prototype, "m_filesCompleted", void 0),
-          q.c([f.w], e.prototype, "m_lastError", void 0),
+          q.c([W.w], e.prototype, "m_filesToUpload", void 0),
+          q.c([W.w], e.prototype, "m_filesCompleted", void 0),
+          q.c([W.w], e.prototype, "m_lastError", void 0),
           q.c([L.a], e.prototype, "AddImage", null),
           q.c([L.a], e.prototype, "AddExistingClanImage", null),
           q.c([L.a], e.prototype, "DeleteUploadImageByIndex", null),
@@ -9622,7 +9622,7 @@
       })(),
       Y = (function() {
         function e(e) {
-          Object(B.a)(e, "decorated accumulator cannot be null"),
+          Object(y.a)(e, "decorated accumulator cannot be null"),
             (this.m_decoratedAccumulator = e);
         }
         return (
@@ -10315,7 +10315,7 @@
       qe = (function() {
         function e() {
           (this.m_bUsePopups = !0),
-            (this.m_rgModals = f.w.array(null, { deep: !1 }));
+            (this.m_rgModals = W.w.array(null, { deep: !1 }));
         }
         return (
           Object.defineProperty(e.prototype, "modals", {
@@ -10774,8 +10774,8 @@
             }
           }),
           (a.sm_embeddedElements = new Te.a("CEmoticonHoverContainer")),
-          q.c([f.w], a.prototype, "m_bVisible", void 0),
-          q.c([f.w], a.prototype, "m_strEmoticonHoverHTML", void 0),
+          q.c([W.w], a.prototype, "m_bVisible", void 0),
+          q.c([W.w], a.prototype, "m_strEmoticonHoverHTML", void 0),
           a
         );
       })(),
@@ -11009,9 +11009,9 @@
             (this.m_bInitialized = !0), (this.m_bEmoticonListRequested = !1);
           }),
           (e.sm_EmoticonRegex = new RegExp("ː([a-zA-Z0-9_\\-]+)ː", "g")),
-          q.c([f.w], e.prototype, "m_bInitialized", void 0),
-          q.c([f.w], e.prototype, "m_rtMostRecentEmoticon", void 0),
-          q.c([f.f], e.prototype, "TrackEmoticonUsage", null),
+          q.c([W.w], e.prototype, "m_bInitialized", void 0),
+          q.c([W.w], e.prototype, "m_rtMostRecentEmoticon", void 0),
+          q.c([W.f], e.prototype, "TrackEmoticonUsage", null),
           e
         );
       })(),
@@ -11021,7 +11021,7 @@
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
-            (e.m_listeners = new y.c()),
+            (e.m_listeners = new A.c()),
             (e.m_bNoSpace = !1),
             (e.state = { x: void 0, y: void 0, hoverPositionReady: !1 }),
             e
@@ -11382,7 +11382,7 @@
           return (
             n.is_initialized ||
               (n.UpdateEmoticonList(),
-              (t.m_disposeEmoticonStore = Object(f.D)(
+              (t.m_disposeEmoticonStore = Object(W.D)(
                 function() {
                   return n.is_initialized;
                 },
@@ -11807,7 +11807,7 @@
           }),
           (e.prototype.componentWillMount = function() {
             var e = this;
-            this.m_hMobxSearchDisposer = Object(f.g)(function() {
+            this.m_hMobxSearchDisposer = Object(W.g)(function() {
               return q.b(e, void 0, void 0, function() {
                 return q.e(this, function(e) {
                   switch (e.label) {
@@ -12260,7 +12260,7 @@
           ((o = e).prototype.componentDidMount = function() {
             var t = this;
             this.AjaxGetFormattingHelp().catch(function(e) {
-              t.setState(W(e));
+              t.setState(B(e));
             });
           }),
           (e.prototype.componentWillUnmount = function() {
@@ -13510,8 +13510,8 @@
               (t.name = new Map(n.name)),
               (t.description = new Map(n.description)),
               (t.vecTags = new Array(n.vecTags)),
-              (t.clanSteamID = new u.a(n.clanSteamID)),
-              n.broadcaster && (t.broadcaster = new u.a(n.broadcaster)),
+              (t.clanSteamID = new f.a(n.clanSteamID)),
+              n.broadcaster && (t.broadcaster = new f.a(n.broadcaster)),
               t
             );
           }),
@@ -13565,7 +13565,7 @@
               (n.loadedAllLanguages = this.loadedAllLanguages),
               (n.bLoaded = this.bLoaded),
               (n.broadcaster = this.broadcaster
-                ? new u.a(this.broadcaster.ConvertTo64BitString())
+                ? new f.a(this.broadcaster.ConvertTo64BitString())
                 : null),
               (n.jsondata = JSON.parse(JSON.stringify(this.jsondata))),
               (n.vecTags = new Array()),
@@ -13698,7 +13698,7 @@
           (o.prototype.BImageNeedScreenshotFallback = function(e, t) {
             var n = this.GetImageURL(e, t);
             return (
-              (n && 0 != n.length) || (0 != t && (n = this.GetImageURL(e, t))),
+              (n && 0 != n.length) || (0 != t && (n = this.GetImageURL(e, 0))),
               !n || 0 == n.length
             );
           }),
@@ -13862,7 +13862,7 @@
           }),
           (o.prototype.GetBroadcastWhitelistAsSteamIDs = function() {
             return this.jsondata.broadcast_whitelist.map(function(e) {
-              return u.a.InitFromAccountID(e).ConvertTo64BitString();
+              return f.a.InitFromAccountID(e).ConvertTo64BitString();
             });
           }),
           (o.prototype.GetSaleSections = function() {
@@ -13925,37 +13925,37 @@
               );
             })(this);
           }),
-          q.c([f.w], o.prototype, "GID", void 0),
-          q.c([f.w], o.prototype, "AnnouncementGID", void 0),
-          q.c([f.w], o.prototype, "forumTopicGID", void 0),
-          q.c([f.w], o.prototype, "type", void 0),
-          q.c([f.w], o.prototype, "appid", void 0),
-          q.c([f.w], o.prototype, "name", void 0),
-          q.c([f.w], o.prototype, "description", void 0),
-          q.c([f.w], o.prototype, "timestamp_loc_updated", void 0),
-          q.c([f.w], o.prototype, "startTime", void 0),
-          q.c([f.w], o.prototype, "endTime", void 0),
-          q.c([f.w], o.prototype, "visibilityStartTime", void 0),
-          q.c([f.w], o.prototype, "visibilityEndTime", void 0),
-          q.c([f.w], o.prototype, "postTime", void 0),
-          q.c([f.w], o.prototype, "visibility_state", void 0),
-          q.c([f.w], o.prototype, "broadcaster", void 0),
-          q.c([f.w], o.prototype, "jsondata", void 0),
-          q.c([f.w], o.prototype, "nCommentCount", void 0),
-          q.c([f.w], o.prototype, "nVotesUp", void 0),
-          q.c([f.w], o.prototype, "nVotesDown", void 0),
-          q.c([f.w], o.prototype, "bOldAnnouncement", void 0),
-          q.c([f.w], o.prototype, "loadedAllLanguages", void 0),
-          q.c([f.w], o.prototype, "bLoaded", void 0),
-          q.c([f.w], o.prototype, "deleteInProgress", void 0),
-          q.c([f.w], o.prototype, "vecTags", void 0),
+          q.c([W.w], o.prototype, "GID", void 0),
+          q.c([W.w], o.prototype, "AnnouncementGID", void 0),
+          q.c([W.w], o.prototype, "forumTopicGID", void 0),
+          q.c([W.w], o.prototype, "type", void 0),
+          q.c([W.w], o.prototype, "appid", void 0),
+          q.c([W.w], o.prototype, "name", void 0),
+          q.c([W.w], o.prototype, "description", void 0),
+          q.c([W.w], o.prototype, "timestamp_loc_updated", void 0),
+          q.c([W.w], o.prototype, "startTime", void 0),
+          q.c([W.w], o.prototype, "endTime", void 0),
+          q.c([W.w], o.prototype, "visibilityStartTime", void 0),
+          q.c([W.w], o.prototype, "visibilityEndTime", void 0),
+          q.c([W.w], o.prototype, "postTime", void 0),
+          q.c([W.w], o.prototype, "visibility_state", void 0),
+          q.c([W.w], o.prototype, "broadcaster", void 0),
+          q.c([W.w], o.prototype, "jsondata", void 0),
+          q.c([W.w], o.prototype, "nCommentCount", void 0),
+          q.c([W.w], o.prototype, "nVotesUp", void 0),
+          q.c([W.w], o.prototype, "nVotesDown", void 0),
+          q.c([W.w], o.prototype, "bOldAnnouncement", void 0),
+          q.c([W.w], o.prototype, "loadedAllLanguages", void 0),
+          q.c([W.w], o.prototype, "bLoaded", void 0),
+          q.c([W.w], o.prototype, "deleteInProgress", void 0),
+          q.c([W.w], o.prototype, "vecTags", void 0),
           o
         );
       })(),
       Dt = z("Kw0F"),
       It = (function() {
         return function(e) {
-          Object(B.a)(
+          Object(y.a)(
             "number" == typeof e.appid,
             "AJAX updated app returned a non-numeric AppID! Did the PHP change?"
           ),
@@ -14042,7 +14042,7 @@
                       (n = t.data.clanAccountID),
                       (o = t.data.vanity_url),
                       (i = t.data.member_count),
-                      (a = new u.a(t.data.clanSteamIDString)),
+                      (a = new f.a(t.data.clanSteamIDString)),
                       this.m_mapAppIDToClanInfo.set(r, {
                         clanAccountID: n,
                         appid: r,
@@ -14079,7 +14079,7 @@
                       (n = t.data.clanAccountID),
                       (o = t.data.vanity_url),
                       (i = t.data.member_count),
-                      (a = new u.a(t.data.clanSteamIDString)),
+                      (a = new f.a(t.data.clanSteamIDString)),
                       this.m_mapAppIDToClanInfo.set(r, {
                         clanAccountID: n,
                         clanSteamID: a,
@@ -14108,7 +14108,7 @@
                     return [4, this.LoadOGGClanInfoForAppID(n)];
                   case 1:
                     return (
-                      (t = e.sent()), [2, u.a.InitFromClanID(t.clanAccountID)]
+                      (t = e.sent()), [2, f.a.InitFromClanID(t.clanAccountID)]
                     );
                 }
               });
@@ -14116,7 +14116,7 @@
           }),
           (e.prototype.GetClanSteamIDForAppID = function(e) {
             if (this.m_mapAppIDToClanInfo.has(e))
-              return u.a.InitFromClanID(
+              return f.a.InitFromClanID(
                 this.m_mapAppIDToClanInfo.get(e).clanAccountID
               );
           }),
@@ -14144,7 +14144,7 @@
           (e.prototype.InsertEventModelFromClanEventData = function(e, t) {
             var i = new Ft();
             if (
-              ((i.clanSteamID = u.a.InitFromClanID(e)),
+              ((i.clanSteamID = f.a.InitFromClanID(e)),
               (i.GID = this.GetEventLookupKey(t)),
               (i.bOldAnnouncement = this.BIsOldAnnouncement(t)),
               (i.appid = t.appid),
@@ -14186,7 +14186,7 @@
                 i.name.set(0, t.event_name),
                 i.description.set(0, t.event_notes);
             t.broadcaster_accountid &&
-              (i.broadcaster = new u.a(t.broadcaster_accountid));
+              (i.broadcaster = new f.a(t.broadcaster_accountid));
             var o = Tt;
             return (
               (i.jsondata = q.a(
@@ -14398,11 +14398,11 @@
             A
           ) {
             return q.b(this, void 0, void 0, function() {
-              var i,
+              var a,
                 t,
                 n,
                 o,
-                a,
+                i,
                 r,
                 p,
                 s,
@@ -14410,14 +14410,14 @@
               return q.e(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    (i = new Array()),
+                    (a = new Array()),
                       (t =
                         m.b.STORE_BASE_URL +
                         "events/ajaxgetadjacentpartnerevents/"),
                       (n = Object(h.d)(m.b.LANGUAGE)),
                       (o = "" + n),
                       0 != n && (o += "_0"),
-                      (a = {
+                      (i = {
                         clan_accountid: z ? z.GetAccountID() : void 0,
                         appid: l,
                         count_before: d,
@@ -14447,7 +14447,7 @@
                       [
                         4,
                         g.a.get(t, {
-                          params: a,
+                          params: i,
                           cancelToken: A ? A.token : void 0
                         })
                       ]
@@ -14455,30 +14455,32 @@
                   case 2:
                     return (
                       (r = e.sent()),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         for (var e = 0, t = r.data.events; e < t.length; e++) {
                           var n = t[e],
                             o = c.GetEventLookupKey(n);
-                          c.m_mapExistingEvents.has(o) ||
+                          if (!c.m_mapExistingEvents.has(o)) {
+                            var i = new f.a(n.clan_steamid);
                             c.InsertEventModelFromClanEventData(
-                              z.GetAccountID(),
+                              (z || i).GetAccountID(),
                               n
-                            ),
-                            i.push(c.m_mapExistingEvents.get(o));
+                            );
+                          }
+                          a.push(c.m_mapExistingEvents.get(o));
                         }
-                        0 == i.length &&
+                        0 == a.length &&
                           (b && c.BHasClanEventModel(b)
-                            ? i.push(c.m_mapExistingEvents.get(b))
+                            ? a.push(c.m_mapExistingEvents.get(b))
                             : M &&
                               c.BHasClanAnnouncementGID(M) &&
-                              i.push(c.GetClanEventFromAnnouncementGID(M)));
+                              a.push(c.GetClanEventFromAnnouncementGID(M)));
                       }),
                       [3, 4]
                     );
                   case 3:
                     return (
                       (p = e.sent()),
-                      (s = W(p)),
+                      (s = B(p)),
                       console.error(
                         "LoadAdjacentPartnerEvents hit error " + s.strErrorMsg,
                         s
@@ -14486,7 +14488,7 @@
                       [3, 4]
                     );
                   case 4:
-                    return [2, i];
+                    return [2, a];
                 }
               });
             });
@@ -14524,7 +14526,7 @@
                     case 2:
                       return (
                         (r = e.sent()),
-                        Object(f.z)(function() {
+                        Object(W.z)(function() {
                           for (
                             var e = 0, t = r.data.events;
                             e < t.length;
@@ -14533,7 +14535,7 @@
                             var n = t[e],
                               o = p.GetEventLookupKey(n);
                             if (!p.m_mapExistingEvents.has(o)) {
-                              var i = new u.a(n.clan_steamid);
+                              var i = new f.a(n.clan_steamid);
                               p.InsertEventModelFromClanEventData(
                                 i.GetAccountID(),
                                 n
@@ -14548,7 +14550,7 @@
                       return (
                         (o = e.sent()),
                         console.error(
-                          "LoadClanEventInDateRange hit error " + W(o)
+                          "LoadClanEventInDateRange hit error " + B(o)
                         ),
                         [3, 4]
                       );
@@ -14591,7 +14593,7 @@
                   case 2:
                     return (
                       (i = e.sent()),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         for (
                           var e = r.GetAccountID(),
                             t = 0,
@@ -14609,7 +14611,7 @@
                     return (
                       (o = e.sent()),
                       console.error(
-                        "LoadClanEventInDateRange hit error " + W(o)
+                        "LoadClanEventInDateRange hit error " + B(o)
                       ),
                       [3, 4]
                     );
@@ -14646,12 +14648,12 @@
                   case 1:
                     return (
                       (p = e.sent()),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         for (var e = 0, t = p.data.events; e < t.length; e++) {
                           var n = t[e],
                             o = s.GetEventLookupKey(n);
                           if (!s.m_mapExistingEvents.has(o)) {
-                            var i = new u.a(n.clan_steamid);
+                            var i = new f.a(n.clan_steamid);
                             s.InsertEventModelFromClanEventData(
                               i.GetAccountID(),
                               n
@@ -14716,12 +14718,12 @@
                   case 1:
                     return (
                       (r = e.sent()),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         for (var e = 0, t = r.data.events; e < t.length; e++) {
                           var n = t[e],
                             o = p.GetEventLookupKey(n);
                           if (!p.m_mapExistingEvents.has(o)) {
-                            var i = new u.a(n.clan_steamid);
+                            var i = new f.a(n.clan_steamid);
                             p.InsertEventModelFromClanEventData(
                               i.GetAccountID(),
                               n
@@ -14768,12 +14770,12 @@
                   case 1:
                     return (
                       (r = e.sent()),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         for (var e = 0, t = r.data.events; e < t.length; e++) {
                           var n = t[e],
                             o = p.GetEventLookupKey(n);
                           if (!p.m_mapExistingEvents.has(o)) {
-                            var i = new u.a(n.clan_steamid);
+                            var i = new f.a(n.clan_steamid);
                             p.InsertEventModelFromClanEventData(
                               i.GetAccountID(),
                               n
@@ -14884,11 +14886,11 @@
                         (p = r.data.event),
                         (s = this.GetEventLookupKey(p)),
                         this.m_mapExistingEvents.has(s) ||
-                          (Object(B.a)(
+                          (Object(y.a)(
                             p.clan_steamid,
                             "ClanSteamID is missing from data we received"
                           ),
-                          (c = new u.a(p.clan_steamid)),
+                          (c = new f.a(p.clan_steamid)),
                           this.InsertEventModelFromClanEventData(
                             c.GetAccountID(),
                             p
@@ -14992,7 +14994,7 @@
                   case 0:
                     return (
                       36e5,
-                      (t = Object(A.a)(36e5)) == this.m_tsUpdatedAppsQueryTime
+                      (t = Object(u.a)(36e5)) == this.m_tsUpdatedAppsQueryTime
                         ? [3, 2]
                         : ((this.m_tsUpdatedAppsQueryTime = t),
                           (n = {
@@ -15006,7 +15008,7 @@
                   case 1:
                     (i = e.sent()).data.apps &&
                       0 < i.data.apps.length &&
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         var e = new Map(
                           i.data.apps.map(function(e) {
                             return [e.appid, new It(e)];
@@ -15029,16 +15031,16 @@
               this.m_mapUpdatedApps && this.m_mapUpdatedApps.get(e)
             );
           }),
-          q.c([f.w], e.prototype, "m_mapExistingEvents", void 0),
-          q.c([f.w], e.prototype, "m_mapClanToGIDs", void 0),
-          q.c([f.w], e.prototype, "m_mapAppIDToGIDs", void 0),
-          q.c([f.w], e.prototype, "m_mapAppIDToClanInfo", void 0),
-          q.c([f.w], e.prototype, "m_mapUpdatedApps", void 0),
-          q.c([f.f], e.prototype, "InsertEventModelFromClanEventData", null),
+          q.c([W.w], e.prototype, "m_mapExistingEvents", void 0),
+          q.c([W.w], e.prototype, "m_mapClanToGIDs", void 0),
+          q.c([W.w], e.prototype, "m_mapAppIDToGIDs", void 0),
+          q.c([W.w], e.prototype, "m_mapAppIDToClanInfo", void 0),
+          q.c([W.w], e.prototype, "m_mapUpdatedApps", void 0),
+          q.c([W.f], e.prototype, "InsertEventModelFromClanEventData", null),
           q.c([L.a], e.prototype, "LoadGlobalEventCalendarData", null),
-          q.c([f.f], e.prototype, "DeleteClanEvent", null),
-          q.c([f.f], e.prototype, "RemoveGIDFromList", null),
-          q.c([f.w], e.prototype, "GetAppImportantUpdate", null),
+          q.c([W.f], e.prototype, "DeleteClanEvent", null),
+          q.c([W.f], e.prototype, "RemoveGIDFromList", null),
+          q.c([W.w], e.prototype, "GetAppImportantUpdate", null),
           e
         );
       })(),
@@ -15162,7 +15164,7 @@
               })
             );
           }),
-          q.c([f.w], e.prototype, "m_setting", void 0),
+          q.c([W.w], e.prototype, "m_setting", void 0),
           q.c([L.a], e.prototype, "BHasSomeLanguage", null),
           e
         );
@@ -15306,7 +15308,7 @@
           (e.prototype.BHasVideoImage = function() {
             return Boolean(this.m_section.video_image);
           }),
-          q.c([f.w], e.prototype, "m_section", void 0),
+          q.c([W.w], e.prototype, "m_section", void 0),
           e
         );
       })(),
@@ -15348,7 +15350,7 @@
           }),
           (t.prototype.EnsureTargetingExists = function() {
             if (!this.m_setting.targeting) {
-              this.m_setting.targeting = Object(f.w)({});
+              this.m_setting.targeting = Object(W.w)({});
             }
           }),
           (t.prototype.SetTargetingExistingPlayer = function(e) {
@@ -15396,14 +15398,14 @@
               ((this.m_setting.force_feature_id = e),
               this.m_editModel.SetDirty(Vt.jsondata_email));
           }),
-          q.c([f.w], t.prototype, "m_sections", void 0),
-          q.c([f.f], t.prototype, "SetTargetingExistingPlayer", null),
-          q.c([f.f], t.prototype, "SetTargetingGameWishlist", null),
-          q.c([f.f], t.prototype, "SetExcludeGameOwners", null),
-          q.c([f.f], t.prototype, "SetTargetingGameFollower", null),
-          q.c([f.f], t.prototype, "SetTargetingCreator", null),
-          q.c([f.f], t.prototype, "SetTargetingCreatorPlayer", null),
-          q.c([f.f], t.prototype, "SetForceFeatureID", null),
+          q.c([W.w], t.prototype, "m_sections", void 0),
+          q.c([W.f], t.prototype, "SetTargetingExistingPlayer", null),
+          q.c([W.f], t.prototype, "SetTargetingGameWishlist", null),
+          q.c([W.f], t.prototype, "SetExcludeGameOwners", null),
+          q.c([W.f], t.prototype, "SetTargetingGameFollower", null),
+          q.c([W.f], t.prototype, "SetTargetingCreator", null),
+          q.c([W.f], t.prototype, "SetTargetingCreatorPlayer", null),
+          q.c([W.f], t.prototype, "SetForceFeatureID", null),
           t
         );
       })(en),
@@ -16231,15 +16233,15 @@
               : this.m_curModel.vecTags.splice(t, 1),
               this.SetDirty(Vt.visibility);
           }),
-          q.c([f.w], n.prototype, "m_curModel", void 0),
-          q.c([f.w], n.prototype, "m_bChanged", void 0),
-          q.c([f.w], n.prototype, "m_changes", void 0),
-          q.c([f.w], n.prototype, "m_eCurLang", void 0),
-          q.c([f.w], n.prototype, "visibilitySetting", void 0),
-          q.c([f.w], n.prototype, "m_startTimeEditChoice", void 0),
-          q.c([f.w], n.prototype, "m_endTimeEditChoice", void 0),
-          q.c([f.w], n.prototype, "m_editDurationType", void 0),
-          q.c([f.w], n.prototype, "m_editDurationValue", void 0),
+          q.c([W.w], n.prototype, "m_curModel", void 0),
+          q.c([W.w], n.prototype, "m_bChanged", void 0),
+          q.c([W.w], n.prototype, "m_changes", void 0),
+          q.c([W.w], n.prototype, "m_eCurLang", void 0),
+          q.c([W.w], n.prototype, "visibilitySetting", void 0),
+          q.c([W.w], n.prototype, "m_startTimeEditChoice", void 0),
+          q.c([W.w], n.prototype, "m_endTimeEditChoice", void 0),
+          q.c([W.w], n.prototype, "m_editDurationType", void 0),
+          q.c([W.w], n.prototype, "m_editDurationValue", void 0),
           q.c([L.a], n.prototype, "GetEventStartTime", null),
           q.c([L.a], n.prototype, "GetEventEndTime", null),
           q.c([L.a], n.prototype, "GetEventVisibilityStartTime", null),
@@ -16247,27 +16249,27 @@
           q.c([L.a], n.prototype, "GetOriginalEventStartTime", null),
           q.c([L.a], n.prototype, "BIsValidStartTimeForEdit", null),
           q.c([L.a], n.prototype, "BHasLanguage", null),
-          q.c([f.f], n.prototype, "UpdateVisibilityState", null),
-          q.c([f.f], n.prototype, "SetVisibilityPublishingSetup", null),
-          q.c([f.f], n.prototype, "SetGIDs", null),
-          q.c([f.f], n.prototype, "SetVisibilityState", null),
-          q.c([f.f], n.prototype, "SetName", null),
-          q.c([f.f], n.prototype, "SetDescription", null),
-          q.c([f.f], n.prototype, "SetSubTitle", null),
-          q.c([f.f], n.prototype, "SetSummary", null),
-          q.c([f.f], n.prototype, "PrepareAsClone", null),
-          q.c([f.f], n.prototype, "setEventType", null),
-          q.c([f.f.bound], n.prototype, "SetEventStartTime", null),
-          q.c([f.f.bound], n.prototype, "SetEventEndTime", null),
-          q.c([f.f.bound], n.prototype, "SetVisibilityStartTime", null),
-          q.c([f.f], n.prototype, "ResetSetVisibilityStartTime", null),
-          q.c([f.f.bound], n.prototype, "SetVisibilityEndTime", null),
-          q.c([f.f], n.prototype, "ClearDirty", null),
-          q.c([f.f], n.prototype, "SetDirty", null),
-          q.c([f.f], n.prototype, "DeriveTimeEditChoices", null),
-          q.c([f.f], n.prototype, "DeriveVisibilitySetting", null),
-          q.c([f.f], n.prototype, "PreSaveEventTimeAssignment", null),
-          q.c([f.f], n.prototype, "Refresh", null),
+          q.c([W.f], n.prototype, "UpdateVisibilityState", null),
+          q.c([W.f], n.prototype, "SetVisibilityPublishingSetup", null),
+          q.c([W.f], n.prototype, "SetGIDs", null),
+          q.c([W.f], n.prototype, "SetVisibilityState", null),
+          q.c([W.f], n.prototype, "SetName", null),
+          q.c([W.f], n.prototype, "SetDescription", null),
+          q.c([W.f], n.prototype, "SetSubTitle", null),
+          q.c([W.f], n.prototype, "SetSummary", null),
+          q.c([W.f], n.prototype, "PrepareAsClone", null),
+          q.c([W.f], n.prototype, "setEventType", null),
+          q.c([W.f.bound], n.prototype, "SetEventStartTime", null),
+          q.c([W.f.bound], n.prototype, "SetEventEndTime", null),
+          q.c([W.f.bound], n.prototype, "SetVisibilityStartTime", null),
+          q.c([W.f], n.prototype, "ResetSetVisibilityStartTime", null),
+          q.c([W.f.bound], n.prototype, "SetVisibilityEndTime", null),
+          q.c([W.f], n.prototype, "ClearDirty", null),
+          q.c([W.f], n.prototype, "SetDirty", null),
+          q.c([W.f], n.prototype, "DeriveTimeEditChoices", null),
+          q.c([W.f], n.prototype, "DeriveVisibilitySetting", null),
+          q.c([W.f], n.prototype, "PreSaveEventTimeAssignment", null),
+          q.c([W.f], n.prototype, "Refresh", null),
           q.c([L.a], n.prototype, "BIsBeginTimeBeforeEnd", null),
           q.c([L.a], n.prototype, "BIsValidVisibilityStartTime", null),
           q.c([L.a], n.prototype, "GetEarliestStartTimeForEdit", null),
@@ -16277,13 +16279,13 @@
             "GetEarliestVisibilityStartTimeForEdit",
             null
           ),
-          q.c([f.f], n.prototype, "SetImageURL", null),
+          q.c([W.f], n.prototype, "SetImageURL", null),
           q.c([L.a], n.prototype, "BHasTitleImage", null),
-          q.c([f.f], n.prototype, "RevertSnapShotTitleImage", null),
+          q.c([W.f], n.prototype, "RevertSnapShotTitleImage", null),
           q.c([L.a], n.prototype, "LastTimeLanguageUpdate", null),
-          q.c([f.f], n.prototype, "SetLibrarySpotlight", null),
-          q.c([f.f], n.prototype, "SetLibrarySpotlightText", null),
-          q.c([f.f], n.prototype, "ToggleTag", null),
+          q.c([W.f], n.prototype, "SetLibrarySpotlight", null),
+          q.c([W.f], n.prototype, "SetLibrarySpotlightText", null),
+          q.c([W.f], n.prototype, "ToggleTag", null),
           n
         );
       })(),
@@ -16319,7 +16321,7 @@
               });
             });
           }),
-          q.c([f.f], t.prototype, "DeleteOldAnnouncement", null),
+          q.c([W.f], t.prototype, "DeleteOldAnnouncement", null),
           t
         );
       })(kt),
@@ -16339,18 +16341,18 @@
             (this.clanid = e);
         }
         return (
-          q.c([f.w], e.prototype, "clanid", void 0),
-          q.c([f.w], e.prototype, "appid", void 0),
-          q.c([f.w], e.prototype, "can_edit", void 0),
-          q.c([f.w], e.prototype, "owns_app", void 0),
-          q.c([f.w], e.prototype, "follows_app", void 0),
-          q.c([f.w], e.prototype, "support_user", void 0),
-          q.c([f.w], e.prototype, "valve_admin", void 0),
-          q.c([f.w], e.prototype, "limited_user", void 0),
-          q.c([f.w], e.prototype, "event_ignored", void 0),
-          q.c([f.w], e.prototype, "event_followed", void 0),
-          q.c([f.w], e.prototype, "event_followed_flags", void 0),
-          q.c([f.w], e.prototype, "event_email_permitted", void 0),
+          q.c([W.w], e.prototype, "clanid", void 0),
+          q.c([W.w], e.prototype, "appid", void 0),
+          q.c([W.w], e.prototype, "can_edit", void 0),
+          q.c([W.w], e.prototype, "owns_app", void 0),
+          q.c([W.w], e.prototype, "follows_app", void 0),
+          q.c([W.w], e.prototype, "support_user", void 0),
+          q.c([W.w], e.prototype, "valve_admin", void 0),
+          q.c([W.w], e.prototype, "limited_user", void 0),
+          q.c([W.w], e.prototype, "event_ignored", void 0),
+          q.c([W.w], e.prototype, "event_followed", void 0),
+          q.c([W.w], e.prototype, "event_followed_flags", void 0),
+          q.c([W.w], e.prototype, "event_email_permitted", void 0),
           e
         );
       })();
@@ -16420,12 +16422,12 @@
                   case 2:
                     if (1 != (o = e.sent()).data.success)
                       throw (console.log(
-                        "Partner Events Failed Load:" + W(o.data).strErrorMsg
+                        "Partner Events Failed Load:" + B(o.data).strErrorMsg
                       ),
                       this.m_mapClanToUserPermissions.delete(t),
                       o.data);
                     return (
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         (n.result.appid = o.data.appid),
                           (n.result.can_edit = o.data.can_edit),
                           (n.result.clanid = o.data.appid),
@@ -16451,12 +16453,12 @@
                       void 0 === a.response.data.success ||
                       21 != a.response.data.success
                     )
-                      throw (console.log(W(a).strErrorMsg, a),
+                      throw (console.log(B(a).strErrorMsg, a),
                       this.m_mapClanToUserPermissions.delete(t),
                       a);
                     return (
                       (r = a.response),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         (n.result.appid = r.data.appid),
                           (n.result.can_edit = !1),
                           (n.result.clanid = r.data.appid),
@@ -16506,7 +16508,7 @@
                   case 1:
                     return (
                       e.sent(),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         var e = r.m_mapClanToUserPermissions.get(
                             c.GetAccountID()
                           ),
@@ -16547,7 +16549,7 @@
                           Gt.LoadOGGClanInfoForAppID(a.appid).catch(function(
                             e
                           ) {
-                            var t = W(e);
+                            var t = B(e);
                             console.error("Vote: " + t.strErrorMsg, t);
                           })
                         ]
@@ -16651,12 +16653,12 @@
           (e.prototype.BShowSale = function(e) {
             return this.GetPartnerEventPermissions(e.clanSteamID).valve_admin;
           }),
-          q.c([f.w], e.prototype, "m_mapClanToUserPermissions", void 0),
-          q.c([f.w], e.prototype, "m_mapAnnounceGIDToVote", void 0),
-          q.c([f.w], e.prototype, "m_mapFollowedCreatorClanID", void 0),
-          q.c([f.f], e.prototype, "SetFollowOrUnfollowEvent", null),
-          q.c([f.f], e.prototype, "Vote", null),
-          q.c([f.f], e.prototype, "LoadMyVote", null),
+          q.c([W.w], e.prototype, "m_mapClanToUserPermissions", void 0),
+          q.c([W.w], e.prototype, "m_mapAnnounceGIDToVote", void 0),
+          q.c([W.w], e.prototype, "m_mapFollowedCreatorClanID", void 0),
+          q.c([W.f], e.prototype, "SetFollowOrUnfollowEvent", null),
+          q.c([W.f], e.prototype, "Vote", null),
+          q.c([W.f], e.prototype, "LoadMyVote", null),
           e
         );
       })())(),
@@ -16710,8 +16712,8 @@
           (e.prototype.BNeedHidden = function() {
             return !this.m_completed;
           }),
-          q.c([f.w], e.prototype, "m_startScanRange", void 0),
-          q.c([f.w], e.prototype, "m_endScanRange", void 0),
+          q.c([W.w], e.prototype, "m_startScanRange", void 0),
+          q.c([W.w], e.prototype, "m_endScanRange", void 0),
           e
         );
       })(
@@ -16734,10 +16736,10 @@
               this.BHasError() &&
                 ((this.m_errorCode = 1), (this.m_errMsg = ""));
             }),
-            q.c([f.w], e.prototype, "m_inflight", void 0),
-            q.c([f.w], e.prototype, "m_completed", void 0),
-            q.c([f.w], e.prototype, "m_errorCode", void 0),
-            q.c([f.w], e.prototype, "m_errMsg", void 0),
+            q.c([W.w], e.prototype, "m_inflight", void 0),
+            q.c([W.w], e.prototype, "m_completed", void 0),
+            q.c([W.w], e.prototype, "m_errorCode", void 0),
+            q.c([W.w], e.prototype, "m_errMsg", void 0),
             e
           );
         })()
@@ -16777,7 +16779,7 @@
           (e.prototype.ResetModel = function(e) {
             var t = new Ft();
             (t.GID = e),
-              (t.clanSteamID = u.a.InitFromClanID(m.a.CLANACCOUNTID)),
+              (t.clanSteamID = f.a.InitFromClanID(m.a.CLANACCOUNTID)),
               (t.appid = m.a.APPID),
               (t.bOldAnnouncement = e && e.startsWith(Xt)),
               (t.bLoaded = !0),
@@ -16858,7 +16860,7 @@
                   case 1:
                     return (
                       (b = e.sent()),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         (z.m_completed = !0), (z.m_dtLoaded = new Date());
                         var e = b.data.ogg_appid,
                           t = b.data.clan_account_id;
@@ -17006,7 +17008,7 @@
                           "We failed on the image conversion " +
                             t.success +
                             " " +
-                            W(t).strErrorMsg
+                            B(t).strErrorMsg
                         ),
                         t);
                       return [3, 4];
@@ -17016,7 +17018,7 @@
                         "We failed on the image conversion " +
                           n +
                           " " +
-                          W(n).strErrorMsg
+                          B(n).strErrorMsg
                       ),
                       n);
                     case 4:
@@ -17055,7 +17057,7 @@
                         (s = e.sent()),
                         console.log(
                           "We failed to create a video image, not a blocker: " +
-                            W(s).strErrorMsg
+                            B(s).strErrorMsg
                         ),
                         [3, 8]
                       );
@@ -17217,9 +17219,9 @@
                   case 1:
                     return (
                       (c = e.sent()),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         if (
-                          (Object(B.a)(
+                          (Object(y.a)(
                             200 == c.status && 1 == c.data.success,
                             "We should only get 200 if we succeed in this method."
                           ),
@@ -17283,7 +17285,7 @@
                             t
                           ).then(function(o) {
                             o &&
-                              Object(f.z)(function() {
+                              Object(W.z)(function() {
                                 i.loadedAllLanguages = !0;
                                 for (var e = 0, t = o; e < t.length; e++) {
                                   var n = t[e];
@@ -17369,7 +17371,7 @@
                     );
                   case 2:
                     (r = e.sent()),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         for (
                           var e = new Array(),
                             t = 0,
@@ -17378,7 +17380,7 @@
                           t++
                         ) {
                           var o = n[t],
-                            i = new u.a(o.clan_steamid);
+                            i = new f.a(o.clan_steamid);
                           a.push(
                             p.InsertEventModelFromClanEventData(
                               i.GetAccountID(),
@@ -17528,13 +17530,13 @@
               });
             });
           }),
-          q.c([f.w], e.prototype, "m_curHoverCategory", void 0),
-          q.c([f.w], e.prototype, "m_mapClanEventLoadState", void 0),
-          q.c([f.w], e.prototype, "m_mapAppIDToClanEventLoadState", void 0),
-          q.c([f.f], e.prototype, "ResetModel", null),
-          q.c([f.f], e.prototype, "LoadClanEventLocalization", null),
-          q.c([f.w], e.prototype, "m_AdminAllNewEventsInBeta", void 0),
-          q.c([f.f], e.prototype, "LoadAdminAllNewEventsInBeta", null),
+          q.c([W.w], e.prototype, "m_curHoverCategory", void 0),
+          q.c([W.w], e.prototype, "m_mapClanEventLoadState", void 0),
+          q.c([W.w], e.prototype, "m_mapAppIDToClanEventLoadState", void 0),
+          q.c([W.f], e.prototype, "ResetModel", null),
+          q.c([W.f], e.prototype, "LoadClanEventLocalization", null),
+          q.c([W.w], e.prototype, "m_AdminAllNewEventsInBeta", void 0),
+          q.c([W.f], e.prototype, "LoadAdminAllNewEventsInBeta", null),
           e
         );
       })(bn))(),
@@ -17708,7 +17710,7 @@
                     return (
                       (i = e.sent()) &&
                         200 == i.status &&
-                        Object(f.z)(function() {
+                        Object(W.z)(function() {
                           (a.m_bIsLoaded = !0),
                             (a.m_rgCreatorsFollowed.length = 0),
                             (a.m_rgCreatorsIgnored.length = 0),
@@ -17834,9 +17836,9 @@
               "" + Number.parseInt(localStorage.getItem(Nn) || "0") + 1
             );
           }),
-          q.c([f.w], e.prototype, "m_rgWishList", void 0),
-          q.c([f.w], e.prototype, "m_rgCreatorsFollowed", void 0),
-          q.c([f.w], e.prototype, "m_rgCreatorsIgnored", void 0),
+          q.c([W.w], e.prototype, "m_rgWishList", void 0),
+          q.c([W.w], e.prototype, "m_rgCreatorsFollowed", void 0),
+          q.c([W.w], e.prototype, "m_rgCreatorsIgnored", void 0),
           e
         );
       })())(),
@@ -18396,7 +18398,7 @@
                   case 1:
                     return (
                       (o = e.sent()),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         (i.m_bIsLoaded = !0),
                           (i.m_bValidatedEmail = o.data.email_validated),
                           (i.m_nMobileDeviceCount = o.data.mobile_device_count);
@@ -18407,8 +18409,8 @@
               });
             });
           }),
-          q.c([f.w], e.prototype, "m_bValidatedEmail", void 0),
-          q.c([f.w], e.prototype, "m_nMobileDeviceCount", void 0),
+          q.c([W.w], e.prototype, "m_bValidatedEmail", void 0),
+          q.c([W.w], e.prototype, "m_nMobileDeviceCount", void 0),
           e
         );
       })())(),
@@ -18434,7 +18436,7 @@
                   return t.setState({ bIsLoadingNotificationSettings: !1 });
                 })
                 .catch(function(e) {
-                  console.log(W(e).strErrorMsg),
+                  console.log(B(e).strErrorMsg),
                     t.setState({ bIsLoadingNotificationSettings: !1 });
                 });
           }),
@@ -18544,7 +18546,7 @@
                       },
                       _.createElement("br", null),
                       _.createElement("br", null),
-                      W(e).strErrorMsg
+                      B(e).strErrorMsg
                     ),
                     window
                   );
@@ -18758,7 +18760,7 @@
                       (i = e.sent()) &&
                         i.data &&
                         i.data.youtube &&
-                        Object(f.z)(function() {
+                        Object(W.z)(function() {
                           i.data.youtube.forEach(function(e, t) {
                             a.m_mapYouTubeVideo.set(e.videoid, e), n.push(e);
                           });
@@ -18805,7 +18807,7 @@
                       (i = e.sent()) &&
                         i.data &&
                         i.data.sharedfiles &&
-                        Object(f.z)(function() {
+                        Object(W.z)(function() {
                           i.data.sharedfiles.forEach(function(e, t) {
                             a.m_mapSharedFile.set(e.sharedfileid, e), n.push(e);
                           });
@@ -18816,10 +18818,10 @@
               });
             });
           }),
-          q.c([f.w], e.prototype, "m_mapYouTubeVideo", void 0),
-          q.c([f.w], e.prototype, "m_mapSharedFile", void 0),
-          q.c([f.f], e.prototype, "LoadYouTubeDynamicData", null),
-          q.c([f.f], e.prototype, "LoadSharedFileDynamicData", null),
+          q.c([W.w], e.prototype, "m_mapYouTubeVideo", void 0),
+          q.c([W.w], e.prototype, "m_mapSharedFile", void 0),
+          q.c([W.f], e.prototype, "LoadYouTubeDynamicData", null),
+          q.c([W.f], e.prototype, "LoadSharedFileDynamicData", null),
           e
         );
       })())(),
@@ -18868,7 +18870,7 @@
                     })
                     .catch(function(e) {
                       return console.log(
-                        "YouTubeInlineSnippet: " + W(e).strErrorMsg
+                        "YouTubeInlineSnippet: " + B(e).strErrorMsg
                       );
                     }),
                   [2]
@@ -18940,7 +18942,7 @@
             );
           }),
           (e.m_strYouTubeOptions = "?fs=1&modestbranding=1&rel=0"),
-          q.c([f.w], e.prototype, "m_youtubeInfo", void 0),
+          q.c([W.w], e.prototype, "m_youtubeInfo", void 0),
           q.c([L.a], e.prototype, "OnClick", null),
           (e = r = q.c([re.a], e))
         );
@@ -18981,7 +18983,7 @@
                   t.setState({ bLoadedMetadata: !0 }));
               })
               .catch(function(e) {
-                return console.log("SharedFileSnippet: " + W(e).strErrorMsg);
+                return console.log("SharedFileSnippet: " + B(e).strErrorMsg);
               });
           }),
           (e.prototype.componentWillUnmount = function() {
@@ -19043,7 +19045,7 @@
               )
             );
           }),
-          q.c([f.w], e.prototype, "m_sharedFileInfo", void 0),
+          q.c([W.w], e.prototype, "m_sharedFileInfo", void 0),
           (e = q.c([re.a], e))
         );
       })(_.Component),
@@ -19326,7 +19328,7 @@
                 });
           }),
           (e.prototype.HandleError = function(e) {
-            var t = W(e),
+            var t = B(e),
               n = this.props,
               o = n.eventGID,
               i = n.announcementGID;
@@ -19805,7 +19807,7 @@
                     return (
                       (t = e.sent()),
                       console.log(
-                        "ShareEventOnFriendsActivityFeed: " + W(t).strErrorMsg
+                        "ShareEventOnFriendsActivityFeed: " + B(t).strErrorMsg
                       ),
                       [3, 4]
                     );
@@ -19843,7 +19845,7 @@
                     strPostingMessage:
                       Object(v.c)("#EventDisplay_Share_Failure") +
                       "\n\n" +
-                      W(e).strErrorMsg
+                      B(e).strErrorMsg
                   });
                 });
           }),
@@ -19866,7 +19868,7 @@
                 switch (e.label) {
                   case 0:
                     return (
-                      (t = u.a.InitFromAccountID(m.d.accountid)),
+                      (t = f.a.InitFromAccountID(m.d.accountid)),
                       (n =
                         m.b.COMMUNITY_BASE_URL +
                         "profiles/" +
@@ -20253,7 +20255,7 @@
                   case 0:
                     return this.m_bRequestInFlight
                       ? [2]
-                      : (Object(f.z)(function() {
+                      : (Object(W.z)(function() {
                           (n.m_bRequestInFlight = !0),
                             (n.m_strErrorMessage = "");
                         }),
@@ -20268,7 +20270,7 @@
                   case 1:
                     return (
                       (t = e.sent()),
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         (n.m_bRequestInFlight = !1), n.UpdateLoginResult(t);
                       }),
                       [2]
@@ -20382,15 +20384,15 @@
                     })(this.m_strBaseURL, e)
                   : "");
           }),
-          q.c([f.w], e.prototype, "m_bRequestInFlight", void 0),
-          q.c([f.w], e.prototype, "m_userFields", void 0),
-          q.c([f.w], e.prototype, "m_eCurrentStep", void 0),
-          q.c([f.w], e.prototype, "m_strErrorMessage", void 0),
-          q.c([f.w], e.prototype, "m_strEmailDomain", void 0),
-          q.c([f.w], e.prototype, "m_strCaptchaURL", void 0),
-          q.c([f.w], e.prototype, "m_eSteamGuardCodeError", void 0),
+          q.c([W.w], e.prototype, "m_bRequestInFlight", void 0),
+          q.c([W.w], e.prototype, "m_userFields", void 0),
+          q.c([W.w], e.prototype, "m_eCurrentStep", void 0),
+          q.c([W.w], e.prototype, "m_strErrorMessage", void 0),
+          q.c([W.w], e.prototype, "m_strEmailDomain", void 0),
+          q.c([W.w], e.prototype, "m_strCaptchaURL", void 0),
+          q.c([W.w], e.prototype, "m_eSteamGuardCodeError", void 0),
           q.c([L.a], e.prototype, "DoLogin", null),
-          q.c([f.f.bound], e.prototype, "UpdateCaptchaURL", null),
+          q.c([W.f.bound], e.prototype, "UpdateCaptchaURL", null),
           e
         );
       })(),
@@ -20894,11 +20896,11 @@
                         a.setState({ myVote: t, bLoadedVote: !0 });
                       })
                       .catch(function(e) {
-                        var t = W(e);
+                        var t = B(e);
                         console.log("EventDiscussionWidget = " + t.strErrorMsg);
                       }),
                     i.LoadOGGClanInfoForAppID(n.appid).catch(function(e) {
-                      var t = W(e);
+                      var t = B(e);
                       console.log("EventDiscussionWidget = " + t.strErrorMsg);
                     })),
                   [2]
@@ -20944,7 +20946,7 @@
                   function() {
                     t.Vote(i, "up" == n, o.m_cancelSignal)
                       .then(function(e) {
-                        Object(f.z)(function() {
+                        Object(W.z)(function() {
                           "up" == o.state.myVote
                             ? (i.nVotesUp = Object(E.a)(
                                 i.nVotesUp - 1,
@@ -20968,7 +20970,7 @@
                         });
                       })
                       .catch(function(e) {
-                        var t = W(e);
+                        var t = B(e);
                         console.error(
                           "EventDiscussionWidget.OnVote" +
                             n +
@@ -21490,8 +21492,8 @@
           (e.prototype.AdjustFollower = function(e) {
             this.m_nFollowers += e;
           }),
-          q.c([f.w], e.prototype, "m_appidList", void 0),
-          q.c([f.w], e.prototype, "m_nFollowers", void 0),
+          q.c([W.w], e.prototype, "m_appidList", void 0),
+          q.c([W.w], e.prototype, "m_nFollowers", void 0),
           e
         );
       })(),
@@ -21565,7 +21567,7 @@
               });
             });
           }),
-          q.c([f.w], e.prototype, "m_mapClanToCreatorHome", void 0),
+          q.c([W.w], e.prototype, "m_mapClanToCreatorHome", void 0),
           e
         );
       })())(),
@@ -21577,7 +21579,7 @@
         function e(e) {
           var t = o.call(this, e) || this;
           t.m_cancelSignal = g.a.CancelToken.source();
-          var n = u.a.InitFromClanID(e.creatorID.clan_account_id);
+          var n = f.a.InitFromClanID(e.creatorID.clan_account_id);
           return (
             (t.state = {
               bLoading: !ia.BHasCreatorHomeLoaded(n) || !Tn.BIsLoaded()
@@ -21591,7 +21593,7 @@
             var t = this;
             if (this.state.bLoading) {
               Tn.HintLoad();
-              var e = u.a.InitFromClanID(this.props.creatorID.clan_account_id);
+              var e = f.a.InitFromClanID(this.props.creatorID.clan_account_id);
               ia.LoadCreatorHome(e, this.m_cancelSignal)
                 .then(function(e) {
                   Tn.HintLoad()
@@ -21608,7 +21610,7 @@
             }
           }),
           (e.prototype.HandleLoadingError = function(e) {
-            var t = W(e);
+            var t = B(e);
             console.log("CreatorHomeEmbed hit error: " + t.strErrorMsg, t),
               this.setState({ bLoading: !1, strErrorMsg: t.strErrorMsg });
           }),
@@ -21659,7 +21661,7 @@
           (e.prototype.TakeFollowAction = function() {
             var n = this,
               o = this.props.creatorID,
-              e = u.a.InitFromClanID(o.clan_account_id),
+              e = f.a.InitFromClanID(o.clan_account_id),
               i = Tn.BIsFollowingCreator(e),
               a = Tn.BIsIgnoringCreator(e);
             Tn.UpdateFollowOrIgnoreCurator(e, !a, !(a || i))
@@ -21681,7 +21683,7 @@
               );
             if (this.state.strErrorMsg) return _.createElement("div", null);
             var e = this.props.creatorID,
-              t = u.a.InitFromClanID(e.clan_account_id),
+              t = f.a.InitFromClanID(e.clan_account_id),
               n = ia.GetCreatorHomeByID(e),
               o =
                 "developer" == e.type
@@ -21825,7 +21827,7 @@
                   return n.setState({ bLoading: !1 });
                 })
                 .catch(function(e) {
-                  var t = W(e);
+                  var t = B(e);
                   console.log(
                     "CreatorHomeEmbedForApp - failed to load appinfo " +
                       t.strErrorMsg
@@ -22065,7 +22067,7 @@
                     return (
                       (o = e.sent()),
                       console.log(
-                        "LoadBIsEmbeddedBroadcastHidden: " + W(o).strErrorMsg
+                        "LoadBIsEmbeddedBroadcastHidden: " + B(o).strErrorMsg
                       ),
                       (this.m_bHideBroadcast = !1),
                       [3, 4]
@@ -22245,23 +22247,23 @@
             var t = null;
             return (
               (t = e.steamid
-                ? new u.a(e.steamid)
-                : u.a.InitFromAccountID(e.accountid)),
+                ? new f.a(e.steamid)
+                : f.a.InitFromAccountID(e.accountid)),
               m.b.COMMUNITY_BASE_URL +
                 "broadcast/watch/" +
                 t.ConvertTo64BitString()
             );
           }),
-          q.c([f.w], e.prototype, "m_mapDynamicStoreData", void 0),
-          q.c([f.w], e.prototype, "m_streams", void 0),
-          q.c([f.w], e.prototype, "m_playReadyStream", void 0),
-          q.c([f.w], e.prototype, "m_mapAppToInfo", void 0),
-          q.c([f.w], e.prototype, "m_settings", void 0),
-          q.c([f.w], e.prototype, "m_chatVisibility", void 0),
-          q.c([f.w], e.prototype, "m_bHideBroadcast", void 0),
-          q.c([f.f], e.prototype, "HintLoadEmbeddableStreams", null),
-          q.c([f.f], e.prototype, "AttemptToPlayStream", null),
-          q.c([f.f], e.prototype, "GetAppDetailsForBroadcast", null),
+          q.c([W.w], e.prototype, "m_mapDynamicStoreData", void 0),
+          q.c([W.w], e.prototype, "m_streams", void 0),
+          q.c([W.w], e.prototype, "m_playReadyStream", void 0),
+          q.c([W.w], e.prototype, "m_mapAppToInfo", void 0),
+          q.c([W.w], e.prototype, "m_settings", void 0),
+          q.c([W.w], e.prototype, "m_chatVisibility", void 0),
+          q.c([W.w], e.prototype, "m_bHideBroadcast", void 0),
+          q.c([W.f], e.prototype, "HintLoadEmbeddableStreams", null),
+          q.c([W.f], e.prototype, "AttemptToPlayStream", null),
+          q.c([W.f], e.prototype, "GetAppDetailsForBroadcast", null),
           e
         );
       })();
@@ -30895,7 +30897,7 @@
           }),
           Object.defineProperty(e.prototype, "steamid", {
             get: function() {
-              return new u.a();
+              return new f.a();
             },
             enumerable: !0,
             configurable: !0
@@ -31026,7 +31028,7 @@
             var n = this.m_mapChats.get(e) || this.m_mapChats.get(t);
             return n || ((n = new Dp()), this.m_mapChats.set(e || t, n)), n;
           }),
-          q.c([f.w], e.prototype, "m_mapChats", void 0),
+          q.c([W.w], e.prototype, "m_mapChats", void 0),
           e
         );
       })(),
@@ -31251,7 +31253,7 @@
                         persona_name: "",
                         steamid: ""
                       }),
-                      (this.m_chatScheduledFunc = new y.b()),
+                      (this.m_chatScheduledFunc = new A.b()),
                       this.m_chatScheduledFunc.Schedule(0, this.RequestLoop),
                       [3, 4]
                     );
@@ -31306,7 +31308,7 @@
                           persona_name: "",
                           steamid: ""
                         }),
-                        (this.m_chatScheduledFunc = new y.b()),
+                        (this.m_chatScheduledFunc = new A.b()),
                         this.m_chatScheduledFunc.Schedule(0, this.RequestLoop),
                         [3, 3])
                       : (console.log("Failed to join channel chat"), [2]);
@@ -32025,10 +32027,10 @@
               (this.m_nNextChatTS = 0),
               (this.m_rgChatMessages = []);
           }),
-          q.c([f.w], e.prototype, "m_mapChannelModeratorUsers", void 0),
-          q.c([f.w], e.prototype, "m_nRateLimitSeconds", void 0),
-          q.c([f.w], e.prototype, "m_bRateLimited", void 0),
-          q.c([f.w], e.prototype, "m_rgChatMessages", void 0),
+          q.c([W.w], e.prototype, "m_mapChannelModeratorUsers", void 0),
+          q.c([W.w], e.prototype, "m_nRateLimitSeconds", void 0),
+          q.c([W.w], e.prototype, "m_bRateLimited", void 0),
+          q.c([W.w], e.prototype, "m_rgChatMessages", void 0),
           q.c([L.a], e.prototype, "FetchChatModerators", null),
           q.c([L.a], e.prototype, "RequestLoop", null),
           q.c([L.a], e.prototype, "MuteUserForSession", null),
@@ -32510,7 +32512,7 @@
                 : null
             );
           }),
-          q.c([f.w], e.prototype, "m_chat", void 0),
+          q.c([W.w], e.prototype, "m_chat", void 0),
           q.c([L.a], e.prototype, "StartChat", null),
           q.c([L.a], e.prototype, "ChatBoxChange", null),
           q.c([L.a], e.prototype, "ChatBoxKeypress", null),
@@ -33206,9 +33208,9 @@
             (this.m_bRemoveBufferState = !1),
             (this.m_bSeekInProgress = !1),
             (this.m_tsLastBufferRemove = 0),
-            (this.m_schNextDownload = new y.b()),
+            (this.m_schNextDownload = new A.b()),
             (this.m_xhrDownload = null),
-            (this.m_listeners = new y.c()),
+            (this.m_listeners = new A.c()),
             (this.m_rgDownloadLog = []),
             (this.m_nCurDownloadProgress = 0),
             (this.m_nCurDownloadBitrate = 0),
@@ -33523,7 +33525,7 @@
                 return q.e(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      Object(B.a)(
+                      Object(y.a)(
                         null === this.m_xhrDownload,
                         "Trying to download another segment while a download is already in flight"
                       ),
@@ -34370,33 +34372,33 @@
               (e.bw_required = n),
               (e.bw_avg = Math.round(o)),
               (e.broadcast_accountid = this.m_steamIDBroadcast
-                ? new u.a(this.m_steamIDBroadcast).GetAccountID()
+                ? new f.a(this.m_steamIDBroadcast).GetAccountID()
                 : 0),
               (e.useragent = window.navigator.userAgent),
               (e.sessionid = m.b.SESSIONID),
               (e.broadcast_origin = this.m_strBroadcastOrigin);
           }),
-          q.c([f.w], e.prototype, "m_allTimeSnapshot", void 0),
-          q.c([f.w], e.prototype, "m_strBufferingVideoResolution", void 0),
-          q.c([f.w], e.prototype, "m_strPlaybackVideoResolution", void 0),
-          q.c([f.w], e.prototype, "m_strHtmlVideoDisplay", void 0),
-          q.c([f.w], e.prototype, "m_nBandwidthRequired", void 0),
-          q.c([f.w], e.prototype, "m_nCurBandwidthVideo", void 0),
-          q.c([f.w], e.prototype, "m_nAudioBufferedMS", void 0),
-          q.c([f.w], e.prototype, "m_nVideoBufferedMS", void 0),
-          q.c([f.w], e.prototype, "m_nActiveDownloads", void 0),
-          q.c([f.w], e.prototype, "m_nVideoDownloadProgress", void 0),
-          q.c([f.w], e.prototype, "m_videoBufferedRanges", void 0),
-          q.c([f.w], e.prototype, "m_audioBufferedRanges", void 0),
-          q.c([f.w], e.prototype, "m_nPlaybackRate", void 0),
-          q.c([f.f], e.prototype, "SetVideoPlaybackResolution", null),
-          q.c([f.f], e.prototype, "SetRepresentation", null),
-          q.c([f.f], e.prototype, "SetCurrentVideoBandwidth", null),
-          q.c([f.f], e.prototype, "CaptureFrequentlyUpdatingInformation", null),
-          q.c([f.f], e.prototype, "LogDownload", null),
-          q.c([f.f], e.prototype, "LogSegmentDownloadFailure", null),
-          q.c([f.f], e.prototype, "LogFrameInfo", null),
-          q.c([f.f], e.prototype, "LogBufferDuration", null),
+          q.c([W.w], e.prototype, "m_allTimeSnapshot", void 0),
+          q.c([W.w], e.prototype, "m_strBufferingVideoResolution", void 0),
+          q.c([W.w], e.prototype, "m_strPlaybackVideoResolution", void 0),
+          q.c([W.w], e.prototype, "m_strHtmlVideoDisplay", void 0),
+          q.c([W.w], e.prototype, "m_nBandwidthRequired", void 0),
+          q.c([W.w], e.prototype, "m_nCurBandwidthVideo", void 0),
+          q.c([W.w], e.prototype, "m_nAudioBufferedMS", void 0),
+          q.c([W.w], e.prototype, "m_nVideoBufferedMS", void 0),
+          q.c([W.w], e.prototype, "m_nActiveDownloads", void 0),
+          q.c([W.w], e.prototype, "m_nVideoDownloadProgress", void 0),
+          q.c([W.w], e.prototype, "m_videoBufferedRanges", void 0),
+          q.c([W.w], e.prototype, "m_audioBufferedRanges", void 0),
+          q.c([W.w], e.prototype, "m_nPlaybackRate", void 0),
+          q.c([W.f], e.prototype, "SetVideoPlaybackResolution", null),
+          q.c([W.f], e.prototype, "SetRepresentation", null),
+          q.c([W.f], e.prototype, "SetCurrentVideoBandwidth", null),
+          q.c([W.f], e.prototype, "CaptureFrequentlyUpdatingInformation", null),
+          q.c([W.f], e.prototype, "LogDownload", null),
+          q.c([W.f], e.prototype, "LogSegmentDownloadFailure", null),
+          q.c([W.f], e.prototype, "LogFrameInfo", null),
+          q.c([W.f], e.prototype, "LogBufferDuration", null),
           e
         );
       })(),
@@ -34462,16 +34464,16 @@
                 (this.m_nEntries += 1);
             }
           }),
-          q.c([f.w], e.prototype, "m_nBytesReceived", void 0),
-          q.c([f.w], e.prototype, "m_nFailedSegments", void 0),
-          q.c([f.w], e.prototype, "m_nStallEvents", void 0),
-          q.c([f.w], e.prototype, "m_nSegmentDownloadTimeMaxMS", void 0),
-          q.c([f.w], e.prototype, "m_nSegmentDownloadTimeMinMS", void 0),
-          q.c([f.w], e.prototype, "m_nBandwidthMin", void 0),
-          q.c([f.w], e.prototype, "m_nBandwidthMax", void 0),
-          q.c([f.w], e.prototype, "m_nFramesDecoded", void 0),
-          q.c([f.w], e.prototype, "m_nFramesDropped", void 0),
-          q.c([f.f], e.prototype, "SegmentReceived", null),
+          q.c([W.w], e.prototype, "m_nBytesReceived", void 0),
+          q.c([W.w], e.prototype, "m_nFailedSegments", void 0),
+          q.c([W.w], e.prototype, "m_nStallEvents", void 0),
+          q.c([W.w], e.prototype, "m_nSegmentDownloadTimeMaxMS", void 0),
+          q.c([W.w], e.prototype, "m_nSegmentDownloadTimeMinMS", void 0),
+          q.c([W.w], e.prototype, "m_nBandwidthMin", void 0),
+          q.c([W.w], e.prototype, "m_nBandwidthMax", void 0),
+          q.c([W.w], e.prototype, "m_nFramesDecoded", void 0),
+          q.c([W.w], e.prototype, "m_nFramesDropped", void 0),
+          q.c([W.f], e.prototype, "SegmentReceived", null),
           e
         );
       })(),
@@ -34491,7 +34493,7 @@
             (this.k_nDroppedFramesThreshold = 1),
             (this.k_nFailThreshold = 3),
             (this.k_nIgnoreReadingAroundResizeMS = 2e3),
-            (this.m_schTracker = new y.b()),
+            (this.m_schTracker = new A.b()),
             (this.m_rgResultsWindow = []),
             (this.m_nLastResizeMS = 0),
             (this.m_bDroppingFrameDetected = !1),
@@ -34570,9 +34572,9 @@
                 : new vs()).reset(e, t),
               this.m_rgResultsWindow.push(n);
           }),
-          q.c([f.w], e.prototype, "m_bDroppingFrameDetected", void 0),
-          q.c([f.w], e.prototype, "m_nCurrentFPS", void 0),
-          q.c([f.f.bound], e.prototype, "TakeReading", null),
+          q.c([W.w], e.prototype, "m_bDroppingFrameDetected", void 0),
+          q.c([W.w], e.prototype, "m_nCurrentFPS", void 0),
+          q.c([W.f.bound], e.prototype, "TakeReading", null),
           e
         );
       })();
@@ -34587,7 +34589,7 @@
           (this.m_elVideo = null),
           (this.m_strMPD = ""),
           (this.m_strHLS = ""),
-          (this.m_schUpdateMPD = new y.b()),
+          (this.m_schUpdateMPD = new A.b()),
           (this.m_bUseHLSManifest = !1),
           (this.m_strVideoAdaptationID = ""),
           (this.m_strAudioAdaptationID = ""),
@@ -34598,13 +34600,13 @@
           (this.m_nLimitFPS = 0),
           (this.m_bIsBuffering = !0),
           (this.m_nSeekingToTime = -1),
-          (this.m_listeners = new y.c()),
+          (this.m_listeners = new A.c()),
           (this.m_bFirstPlay = !0),
-          (this.m_schGameDataEventTrigger = new y.b()),
-          (this.m_schReportPlayerTrigger = new y.b()),
+          (this.m_schGameDataEventTrigger = new A.b()),
+          (this.m_schReportPlayerTrigger = new A.b()),
           (this.m_nGameDataLastFramePTS = -1),
           (this.m_bStatsViewVisible = !1),
-          (this.m_schCaptureDisplayStatsTrigger = new y.b()),
+          (this.m_schCaptureDisplayStatsTrigger = new A.b()),
           (this.m_videoRepSelected = null),
           (this.m_nAudioRepresentationIndex = 0),
           (this.m_stats = new Ws()),
@@ -34612,7 +34614,7 @@
           (this.m_hlsTimeOffset = 0),
           (this.m_bUserPlayChoice = !0),
           (this.m_bUserLiveEdgeChoice = !0),
-          (this.m_schFirstFrameThrottler = new y.b()),
+          (this.m_schFirstFrameThrottler = new A.b()),
           (this.m_elVideo = e),
           this.m_schReportPlayerTrigger.Schedule(3e4, this.ReportPlayerStats),
           (this.m_bUseHLSManifest = t);
@@ -34764,7 +34766,7 @@
                 case 0:
                   if (this.m_xhrUpdateMPD)
                     return (
-                      Object(B.a)(!1, "Multiple MPD download requests"),
+                      Object(y.a)(!1, "Multiple MPD download requests"),
                       [2, null]
                     );
                   (t = performance.now()), (e.label = 1);
@@ -35596,7 +35598,7 @@
         q.c([L.a], e.prototype, "VerifyFirstSegementDownloadProgress", null),
         q.c([L.a], e.prototype, "GameDataEventTrigger", null),
         q.c([L.a], e.prototype, "ReportPlayerStats", null),
-        q.c([f.f.bound], e.prototype, "CaptureStatsForDisplay", null),
+        q.c([W.f.bound], e.prototype, "CaptureStatsForDisplay", null),
         e
       );
     })();
@@ -35607,11 +35609,11 @@
         function e(e) {
           (this.m_elVideo = null),
             (this.m_peerConnection = null),
-            (this.m_schCandidateTimer = new y.b()),
-            (this.m_listeners = new y.c()),
+            (this.m_schCandidateTimer = new A.b()),
+            (this.m_listeners = new A.c()),
             (this.m_bFirstPlay = !0),
             (this.m_bStatsViewVisible = !1),
-            (this.m_schCaptureDisplayStatsTrigger = new y.b()),
+            (this.m_schCaptureDisplayStatsTrigger = new A.b()),
             (this.m_stats = new Ws()),
             (this.m_elVideo = e);
         }
@@ -35993,7 +35995,7 @@
             return !0;
           }),
           q.c([L.a], e.prototype, "PlayWebRTC", null),
-          q.c([f.f.bound], e.prototype, "CaptureStatsForDisplay", null),
+          q.c([W.f.bound], e.prototype, "CaptureStatsForDisplay", null),
           q.c([L.a], e.prototype, "OnVideoPause", null),
           q.c([L.a], e.prototype, "OnVideoResize", null),
           e
@@ -36017,15 +36019,15 @@
               (this.tabIcon = e.tabIcon),
               (this.offlineImage = e.offlineImage);
           }),
-          q.c([f.w], e.prototype, "bValid", void 0),
-          q.c([f.w], e.prototype, "stream", void 0),
-          q.c([f.w], e.prototype, "name", void 0),
-          q.c([f.w], e.prototype, "appName", void 0),
-          q.c([f.w], e.prototype, "appID", void 0),
-          q.c([f.w], e.prototype, "link", void 0),
-          q.c([f.w], e.prototype, "linkName", void 0),
-          q.c([f.w], e.prototype, "tabIcon", void 0),
-          q.c([f.w], e.prototype, "offlineImage", void 0),
+          q.c([W.w], e.prototype, "bValid", void 0),
+          q.c([W.w], e.prototype, "stream", void 0),
+          q.c([W.w], e.prototype, "name", void 0),
+          q.c([W.w], e.prototype, "appName", void 0),
+          q.c([W.w], e.prototype, "appID", void 0),
+          q.c([W.w], e.prototype, "link", void 0),
+          q.c([W.w], e.prototype, "linkName", void 0),
+          q.c([W.w], e.prototype, "tabIcon", void 0),
+          q.c([W.w], e.prototype, "offlineImage", void 0),
           e
         );
       })())({
@@ -36055,8 +36057,8 @@
             (this.m_eWatchState = Ss.None),
             (this.m_strStateDescription = ""),
             (this.m_rgVideos = []),
-            (this.m_schManifestTimeout = new y.b()),
-            (this.m_schHeartbeatTimeout = new y.b());
+            (this.m_schManifestTimeout = new A.b()),
+            (this.m_schHeartbeatTimeout = new A.b());
         }
         return (
           (e.prototype.SetState = function(e, t) {
@@ -36065,10 +36067,10 @@
               (this.m_strStateDescription = t),
               e == Ss.Error && console.log(this.m_strStateDescription);
           }),
-          q.c([f.w], e.prototype, "m_ulBroadcastID", void 0),
-          q.c([f.w], e.prototype, "m_eWatchState", void 0),
-          q.c([f.w], e.prototype, "m_strStateDescription", void 0),
-          q.c([f.f], e.prototype, "SetState", null),
+          q.c([W.w], e.prototype, "m_ulBroadcastID", void 0),
+          q.c([W.w], e.prototype, "m_eWatchState", void 0),
+          q.c([W.w], e.prototype, "m_strStateDescription", void 0),
+          q.c([W.f], e.prototype, "SetState", null),
           e
         );
       })(),
@@ -36081,17 +36083,17 @@
             (this.m_strThumbnailUrl = ""),
             (this.m_nViewerCount = 0),
             (this.m_bIsOnline = !1),
-            (this.m_schUpdateTimeout = new y.b()),
+            (this.m_schUpdateTimeout = new A.b()),
             (this.m_nRefCount = 0),
             (this.m_steamIDBroadcast = e);
         }
         return (
-          q.c([f.w], e.prototype, "m_strTitle", void 0),
-          q.c([f.w], e.prototype, "m_strAppId", void 0),
-          q.c([f.w], e.prototype, "m_strAppTitle", void 0),
-          q.c([f.w], e.prototype, "m_strThumbnailUrl", void 0),
-          q.c([f.w], e.prototype, "m_nViewerCount", void 0),
-          q.c([f.w], e.prototype, "m_bIsOnline", void 0),
+          q.c([W.w], e.prototype, "m_strTitle", void 0),
+          q.c([W.w], e.prototype, "m_strAppId", void 0),
+          q.c([W.w], e.prototype, "m_strAppTitle", void 0),
+          q.c([W.w], e.prototype, "m_strThumbnailUrl", void 0),
+          q.c([W.w], e.prototype, "m_nViewerCount", void 0),
+          q.c([W.w], e.prototype, "m_bIsOnline", void 0),
           e
         );
       })(),
@@ -36108,9 +36110,9 @@
               (this.m_strStateDescription = t),
               e == Ss.Error && console.log(this.m_strStateDescription);
           }),
-          q.c([f.w], e.prototype, "m_eWatchState", void 0),
-          q.c([f.w], e.prototype, "m_strStateDescription", void 0),
-          q.c([f.f], e.prototype, "SetState", null),
+          q.c([W.w], e.prototype, "m_eWatchState", void 0),
+          q.c([W.w], e.prototype, "m_strStateDescription", void 0),
+          q.c([W.f], e.prototype, "SetState", null),
           e
         );
       })(),
@@ -36124,7 +36126,7 @@
               bMuted: !1,
               ulViewerToken: "0"
             }),
-            (this.m_schSaveSettings = new y.b()),
+            (this.m_schSaveSettings = new A.b()),
             (this.m_broadcastInfos = {}),
             this.LoadBroadcastSettings();
         }
@@ -36698,7 +36700,7 @@
               (this.m_broadcastSettings.bMuted = t),
               this.SaveBroadcastSettings());
           }),
-          q.c([f.w], e.prototype, "m_mapBroadcasts", void 0),
+          q.c([W.w], e.prototype, "m_mapBroadcasts", void 0),
           e
         );
       })();
@@ -36708,7 +36710,7 @@
         function e(e, t, n, o) {
           (this.m_elVideo = null),
             (this.m_player = null),
-            (this.m_listeners = new y.c()),
+            (this.m_listeners = new A.c()),
             (this.m_gameDataParser = null),
             (this.m_rgSubtitles = []),
             (this.m_eWatchLocation = 0),
@@ -36728,9 +36730,9 @@
             (this.m_nVideoEndPos = 0),
             (this.m_editorStartTime = 0),
             (this.m_editorEndTime = 0),
-            (this.m_rgMarkers = f.w.array()),
-            (this.m_rgSegments = f.w.array()),
-            (this.m_rgRegions = f.w.array()),
+            (this.m_rgMarkers = W.w.array()),
+            (this.m_rgSegments = W.w.array()),
+            (this.m_rgRegions = W.w.array()),
             (this.m_elVideo = e),
             (this.m_nVolume = t),
             (this.m_bMuted = n),
@@ -36826,7 +36828,7 @@
             return ks.GetBroadcastStateDescription(this);
           }),
           (e.prototype.InitPlayer = function() {
-            Object(B.a)(!this.m_player, "Initialized twice?"),
+            Object(y.a)(!this.m_player, "Initialized twice?"),
               this.m_listeners.AddEventListener(
                 this.m_elVideo,
                 "playing",
@@ -37136,25 +37138,25 @@
             enumerable: !0,
             configurable: !0
           }),
-          q.c([f.w], e.prototype, "m_bPaused", void 0),
-          q.c([f.w], e.prototype, "m_nPlaybackTime", void 0),
-          q.c([f.w], e.prototype, "m_bBuffering", void 0),
-          q.c([f.w], e.prototype, "m_bOnLiveEdge", void 0),
-          q.c([f.w], e.prototype, "m_nVolume", void 0),
-          q.c([f.w], e.prototype, "m_bMuted", void 0),
-          q.c([f.w], e.prototype, "m_bUserInputNeeded", void 0),
-          q.c([f.w], e.prototype, "m_bIsReplay", void 0),
-          q.c([f.w], e.prototype, "m_nTimelineDuration", void 0),
-          q.c([f.w], e.prototype, "m_nVideoStartPos", void 0),
-          q.c([f.w], e.prototype, "m_nVideoEndPos", void 0),
-          q.c([f.w], e.prototype, "m_editorStartTime", void 0),
-          q.c([f.w], e.prototype, "m_editorEndTime", void 0),
-          q.c([f.f.bound], e.prototype, "StartBroadcast", null),
-          q.c([f.f.bound], e.prototype, "StartClip", null),
+          q.c([W.w], e.prototype, "m_bPaused", void 0),
+          q.c([W.w], e.prototype, "m_nPlaybackTime", void 0),
+          q.c([W.w], e.prototype, "m_bBuffering", void 0),
+          q.c([W.w], e.prototype, "m_bOnLiveEdge", void 0),
+          q.c([W.w], e.prototype, "m_nVolume", void 0),
+          q.c([W.w], e.prototype, "m_bMuted", void 0),
+          q.c([W.w], e.prototype, "m_bUserInputNeeded", void 0),
+          q.c([W.w], e.prototype, "m_bIsReplay", void 0),
+          q.c([W.w], e.prototype, "m_nTimelineDuration", void 0),
+          q.c([W.w], e.prototype, "m_nVideoStartPos", void 0),
+          q.c([W.w], e.prototype, "m_nVideoEndPos", void 0),
+          q.c([W.w], e.prototype, "m_editorStartTime", void 0),
+          q.c([W.w], e.prototype, "m_editorEndTime", void 0),
+          q.c([W.f.bound], e.prototype, "StartBroadcast", null),
+          q.c([W.f.bound], e.prototype, "StartClip", null),
           q.c([L.a], e.prototype, "OnVideoPlaying", null),
           q.c([L.a], e.prototype, "OnVideoPause", null),
-          q.c([f.f.bound], e.prototype, "OnVideoTimeUpdate", null),
-          q.c([f.f.bound], e.prototype, "OnGameDataUpdate", null),
+          q.c([W.f.bound], e.prototype, "OnVideoTimeUpdate", null),
+          q.c([W.f.bound], e.prototype, "OnGameDataUpdate", null),
           q.c([L.a], e.prototype, "OnDownloadFailed", null),
           q.c([L.a], e.prototype, "OnWebRTCRetry", null),
           q.c([L.a], e.prototype, "OnWebRTCFailed", null),
@@ -37511,7 +37513,7 @@
       Ps = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
-          return (e.m_schUpdate = new y.b()), (e.m_bSetupComplete = !1), e;
+          return (e.m_schUpdate = new A.b()), (e.m_bSetupComplete = !1), e;
         }
         return (
           q.d(e, t),
@@ -37661,7 +37663,7 @@
           return (
             (t.m_fnMouseUp = null),
             (t.m_fnMouseMove = null),
-            (t.m_listeners = new y.c()),
+            (t.m_listeners = new A.c()),
             (t.m_strDescription = ""),
             (t.state = {
               curLeftPosPct: t.props.xPosPct,
@@ -38150,12 +38152,12 @@
         function e(e) {
           var t = n.call(this, e) || this;
           return (
-            (t.m_schHideControls = new y.b()),
-            (t.m_schUnmountControls = new y.b()),
+            (t.m_schHideControls = new A.b()),
+            (t.m_schUnmountControls = new A.b()),
             (t.m_elBroadcastPlayer = null),
             (t.m_bMouseDown = !1),
             (t.m_elMouseDown = null),
-            (t.m_listeners = new y.c()),
+            (t.m_listeners = new A.c()),
             (t.state = {
               bMountControls: !1,
               bControlsVisible: !1,
@@ -38728,7 +38730,7 @@
               _.createElement(be.l, { bHidePostArrow: !0, bFlipHorizontal: !0 })
             );
           }),
-          q.c([f.h], t.prototype, "has_previous_marker", null),
+          q.c([W.h], t.prototype, "has_previous_marker", null),
           q.c([L.a], t.prototype, "OnJumpToPreviousMarkerClicked", null),
           (t = q.c([re.a], t))
         );
@@ -38775,7 +38777,7 @@
               _.createElement(be.l, { bHidePostArrow: !0, bFlipHorizontal: !1 })
             );
           }),
-          q.c([f.h], t.prototype, "has_next_marker", null),
+          q.c([W.h], t.prototype, "has_next_marker", null),
           q.c([L.a], t.prototype, "OnJumpToNextMarkerClicked", null),
           (t = q.c([re.a], t))
         );
@@ -39020,7 +39022,7 @@
           return (
             (e.k_nHideSliderTimeout = 1500),
             (e.m_bShowSlider = !0),
-            (e.m_schHideSlider = new y.b()),
+            (e.m_schHideSlider = new A.b()),
             (e.m_bChildDragging = !1),
             (e.m_bMouseOver = !1),
             e
@@ -39094,7 +39096,7 @@
               )
             );
           }),
-          q.c([f.w], e.prototype, "m_bShowSlider", void 0),
+          q.c([W.w], e.prototype, "m_bShowSlider", void 0),
           q.c([L.a], e.prototype, "ToggleMute", null),
           q.c([L.a], e.prototype, "OnMouseEnter", null),
           q.c([L.a], e.prototype, "OnMouseLeave", null),
@@ -39181,7 +39183,7 @@
           q.c([L.a], e.prototype, "OnMouseDown", null),
           q.c([L.a], e.prototype, "OnMouseMove", null),
           q.c([L.a], e.prototype, "OnMouseUp", null),
-          q.c([f.f], e.prototype, "SetVolumeWithCoord", null),
+          q.c([W.f], e.prototype, "SetVolumeWithCoord", null),
           (e = q.c([re.a], e))
         );
       })(_.Component),
@@ -41075,12 +41077,12 @@
                   .then(function(e) {
                     t.setState({ bUpdatingWishList: !1 }, function() {
                       1 != e.success &&
-                        t.DisplayWishlistUpdateErrors(W(e).strErrorMsg);
+                        t.DisplayWishlistUpdateErrors(B(e).strErrorMsg);
                     });
                   })
                   .catch(function(e) {
                     t.setState({ bUpdatingWishList: !1 }),
-                      t.DisplayWishlistUpdateErrors(W(e).strErrorMsg);
+                      t.DisplayWishlistUpdateErrors(B(e).strErrorMsg);
                   });
               }
             } else Qi(this.props.event);
@@ -41848,7 +41850,7 @@
                         });
                     })
                     .catch(function(e) {
-                      t.setState(q.a({ dialogState: "displayerror" }, W(e)));
+                      t.setState(q.a({ dialogState: "displayerror" }, B(e)));
                     })
                 : dn
                     .PublishModel(n, this.state.bFakeError)
@@ -41856,7 +41858,7 @@
                       t.setState({ dialogState: "showsuccess" });
                     })
                     .catch(function(e) {
-                      t.setState(q.a({ dialogState: "displayerror" }, W(e)));
+                      t.setState(q.a({ dialogState: "displayerror" }, B(e)));
                     });
           }),
           (e.prototype.OnFakeErrorChange = function(e) {
@@ -42067,7 +42069,7 @@
                   n.setState({ dialogState: "success" });
                 })
                 .catch(function(e) {
-                  var t = q.a({ dialogState: "error" }, W(e));
+                  var t = q.a({ dialogState: "error" }, B(e));
                   Object(v.c)("#EventEditor_Error_" + t.errorCode) &&
                     (t.strErrorMsg = Object(v.c)(
                       "#EventEditor_Error_" + t.errorCode
@@ -42283,7 +42285,7 @@
               });
             });
           }),
-          q.c([f.f], e.prototype, "DeleteForumTopic", null),
+          q.c([W.f], e.prototype, "DeleteForumTopic", null),
           e
         );
       })())(),
@@ -42328,10 +42330,10 @@
             this.m_cancelSignal.cancel("component unmounted");
           }),
           (p.prototype.OnDeleteEventFailureCallback = function(e) {
-            this.setState(q.a({ dialogState: "error" }, W(e)));
+            this.setState(q.a({ dialogState: "error" }, B(e)));
           }),
           (p.prototype.OnDeleteForumTopicFailureCallback = function(e) {
-            this.setState(q.a({ dialogState: "failed_thread_delete" }, W(e)));
+            this.setState(q.a({ dialogState: "failed_thread_delete" }, B(e)));
           }),
           (p.prototype.SetToWaiting = function() {
             "waiting" != this.state.dialogState &&
@@ -42996,7 +42998,7 @@
                     return e.sent(), [3, 4];
                   case 4:
                     return (
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         if (!o)
                           return (
                             (i.m_eOlderDirection = zb.Idle),
@@ -43057,7 +43059,7 @@
                     return e.sent(), [3, 4];
                   case 4:
                     return (
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         if (i) {
                           Dt.b(i, function(e) {
                             return e.GID == o.GID;
@@ -43112,7 +43114,7 @@
                     return e.sent(), [3, 4];
                   case 4:
                     return (
-                      Object(f.z)(function() {
+                      Object(W.z)(function() {
                         if (i) {
                           Dt.b(i, function(e) {
                             return e.GID == o.GID;
@@ -43133,9 +43135,9 @@
               });
             });
           }),
-          q.c([f.w.shallow], e.prototype, "m_rgEvents", void 0),
-          q.c([f.w], e.prototype, "m_eOlderDirection", void 0),
-          q.c([f.w], e.prototype, "m_eNewerDirection", void 0),
+          q.c([W.w.shallow], e.prototype, "m_rgEvents", void 0),
+          q.c([W.w], e.prototype, "m_eOlderDirection", void 0),
+          q.c([W.w], e.prototype, "m_eNewerDirection", void 0),
           e
         );
       })(),
@@ -43163,14 +43165,14 @@
                   (n = t.oggClanAccountID),
                   (o = t.announcementGID),
                   (i = t.partnerEventStore),
-                  (a = u.a.InitFromClanID(n)),
+                  (a = f.a.InitFromClanID(n)),
                   i
                     .LoadPartnerEventFromAnnoucementGIDAndClanSteamID(a, o, 0)
                     .then(function(e) {
                       return r.setState({ bLoading: !1, eventModel: e });
                     })
                     .catch(function(e) {
-                      var t = W(e);
+                      var t = B(e);
                       console.log(
                         "EventInfiniteScrollModal failed " + t.strErrorMsg,
                         t
@@ -43264,7 +43266,7 @@
               })
               .catch(function(e) {
                 t.setState({ bLoading: !1 }),
-                  console.log("EventDetails: " + W(e).strErrorMsg);
+                  console.log("EventDetails: " + B(e).strErrorMsg);
               });
           }),
           (e.prototype.componentDidMount = function() {
@@ -43613,7 +43615,7 @@
                   switch (e.label) {
                     case 0:
                       (t = m.a.APPID),
-                        (n = new u.a(m.a.CLANSTEAMID)),
+                        (n = new f.a(m.a.CLANSTEAMID)),
                         (e.label = 1);
                     case 1:
                       return (
@@ -43641,7 +43643,7 @@
                     case 3:
                       return (
                         (o = e.sent()),
-                        this.setState(q.a({ bLoading: !1 }, W(o))),
+                        this.setState(q.a({ bLoading: !1 }, B(o))),
                         [3, 4]
                       );
                     case 4:
@@ -43681,7 +43683,7 @@
         (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.m_clanSteamID = new u.a(m.a.CLANSTEAMID)), e;
+            return (e.m_clanSteamID = new f.a(m.a.CLANSTEAMID)), e;
           }
           return (
             q.d(e, t),
@@ -43781,7 +43783,7 @@
                 dn.CreateClone(), t.OnGotoPage(null, "clone");
               })
               .catch(function(e) {
-                var t = W(e);
+                var t = B(e);
                 _e(
                   _.createElement(me, {
                     strTitle: Object(v.c)("#EventEditor_CloneError"),
@@ -43812,7 +43814,7 @@
                 );
               })
               .catch(function(e) {
-                var t = W(e);
+                var t = B(e);
                 _e(
                   _.createElement(me, {
                     strTitle: Object(v.c)("#EventEditor_PublishingError"),
@@ -44185,7 +44187,7 @@
                     return (
                       (t = e.sent()),
                       t.is_creator_home &&
-                        ia.LoadCreatorHome(new u.a(m.a.CLANSTEAMID), null),
+                        ia.LoadCreatorHome(new f.a(m.a.CLANSTEAMID), null),
                       [2]
                     );
                 }
@@ -44194,7 +44196,7 @@
           }),
           (t.prototype.render = function() {
             var e = O.GetStoreCapsuleInfo(m.a.APPID),
-              t = ia.GetCreatorHome(new u.a(m.a.CLANSTEAMID)),
+              t = ia.GetCreatorHome(new f.a(m.a.CLANSTEAMID)),
               n = e.GetAppStoreData(),
               o = null;
             return (
@@ -44246,7 +44248,7 @@
             }),
             (e.m_refScroll = _.createRef()),
             (e.m_cancelSignal = g.a.CancelToken.source()),
-            (e.m_clanSteamID = new u.a(m.a.CLANSTEAMID)),
+            (e.m_clanSteamID = new f.a(m.a.CLANSTEAMID)),
             (e.k_nMaxPerDirection = 10),
             (e.m_IntervalTimer = void 0),
             e
@@ -44266,7 +44268,7 @@
               .catch(this.HandleErrorWithDialog);
           }),
           (e.prototype.HandleErrorWithDialog = function(e) {
-            var t = W(e);
+            var t = B(e);
             _e(
               _.createElement(
                 me,
@@ -44413,7 +44415,7 @@
                   case 6:
                     return (
                       (a = e.sent()),
-                      console.log("EventListView: " + W(a).strErrorMsg),
+                      console.log("EventListView: " + B(a).strErrorMsg),
                       (o = !0),
                       [3, 7]
                     );
@@ -45025,7 +45027,7 @@
           (e.prototype.OnUpdateAndMoveClanImageLang = function(t, n, o) {
             var i = this,
               a = dn.GetEditModel();
-            Object(f.z)(function() {
+            Object(W.z)(function() {
               var e = i.props.artworkType;
               a.GetImageHash(e, n) == t.image_hash && a.SetImageURL(e, null, n),
                 a.SetImageURL(e, t, o),
@@ -45261,7 +45263,7 @@
             var e = this.props,
               t = e.clanImage,
               n = e.closeModal,
-              o = (e.lang, u.a.InitFromClanID(t.clanAccountID)),
+              o = (e.lang, f.a.InitFromClanID(t.clanAccountID)),
               i = H.GenerateArtworkURLFromHashAndExtensions(
                 o,
                 H.GetHashAndExt(t)
@@ -45856,7 +45858,7 @@
                             "#EventEditor_EndTime_ToEarly"
                           ),
                           fnSetToNow: function(e) {
-                            Object(f.z)(function() {
+                            Object(W.z)(function() {
                               t.SetEventStartTime(e),
                                 t.SetEventEndTime(e + 3600);
                             });
@@ -45867,7 +45869,7 @@
                 )
             );
           }),
-          q.c([f.f.bound], e.prototype, "OnEndDateDurationChosen", null),
+          q.c([W.f.bound], e.prototype, "OnEndDateDurationChosen", null),
           q.c([L.a], e.prototype, "OnEndDateSpecifiedChosen", null),
           q.c([L.a], e.prototype, "OnDurationTypeChange", null),
           q.c([L.a], e.prototype, "OnDurationSpinnerChange", null),
@@ -46037,7 +46039,7 @@
                 )
             );
           }),
-          q.c([f.f.bound], t.prototype, "OnStartDateNowChosen", null),
+          q.c([W.f.bound], t.prototype, "OnStartDateNowChosen", null),
           q.c([L.a], t.prototype, "OnStartDateSpecifiedChosen", null),
           (t = q.c([re.a], t))
         );
@@ -47184,7 +47186,7 @@
                 n.m_cancelSignal.token.reason || n.setState({ bLoading: !1 });
               })
               .catch(function(e) {
-                var t = W(e);
+                var t = B(e);
                 console.log(
                   "ClanImagePicker Failed: " +
                     t.strErrorMsg +
@@ -47709,13 +47711,13 @@
             var t = this;
             e.dataTransfer.setData("text", this.props.clanImage.url),
               U.GetClanImageDragListener().forEach(function(e) {
-                e(u.a.InitFromClanID(t.props.clanImage.clanAccountID), !0);
+                e(f.a.InitFromClanID(t.props.clanImage.clanAccountID), !0);
               });
           }),
           (e.prototype.OnDragEndSource = function(e) {
             var t = this;
             U.GetClanImageDragListener().forEach(function(e) {
-              e(u.a.InitFromClanID(t.props.clanImage.clanAccountID), !1);
+              e(f.a.InitFromClanID(t.props.clanImage.clanAccountID), !1);
             });
           }),
           (e.prototype.OnDeleteClick = function(e) {
@@ -47768,14 +47770,14 @@
           (e.prototype.onDelete = function() {
             var t = this;
             this.setState({ bDeleting: !0 });
-            var e = u.a.InitFromClanID(this.props.clanImage.clanAccountID);
+            var e = f.a.InitFromClanID(this.props.clanImage.clanAccountID);
             U.DeleteClanImage(e, this.props.clanImage)
               .then(function(e) {
-                1 != e.success && t.ShowDeleteError(W(e).strErrorMsg),
+                1 != e.success && t.ShowDeleteError(B(e).strErrorMsg),
                   t.setState({ bDeleting: !1 });
               })
               .catch(function(e) {
-                t.ShowDeleteError(W(e).strErrorMsg),
+                t.ShowDeleteError(B(e).strErrorMsg),
                   t.setState({ bDeleting: !1 });
               }),
               this.m_linkPopupRef &&
@@ -47999,7 +48001,7 @@
               s = new Array(),
               c = "field";
             return (
-              Object(f.z)(function() {
+              Object(W.z)(function() {
                 e.data.forEach(function(a) {
                   if (a[c] === XM)
                     for (var e = 0; e < 29; ++e) {
@@ -48060,7 +48062,7 @@
             var p = this.props.editModel,
               s = new Array();
             return (
-              Object(f.z)(function() {
+              Object(W.z)(function() {
                 e.data.forEach(function(i) {
                   var a = Object(h.d)(i.language);
                   if (null != a && a <= 29 && -1 != a) {
@@ -48236,7 +48238,7 @@
                         null,
                         "Encountered the following error attempting to send the event information to CrowdIn:"
                       ),
-                      _.createElement("p", null, W(e).strErrorMsg)
+                      _.createElement("p", null, B(e).strErrorMsg)
                     )
                   ),
                   window
@@ -49042,7 +49044,7 @@
                               case 3:
                                 return (
                                   (n = e.sent()),
-                                  (o = W(n)),
+                                  (o = B(n)),
                                   console.error(
                                     "AddExistingClanImage: " + o.strErrorMsg,
                                     o
@@ -49562,7 +49564,7 @@
                 );
               })
               .catch(function(e) {
-                _e(_.createElement(me, null, W(e).strErrorMsg), window);
+                _e(_.createElement(me, null, B(e).strErrorMsg), window);
               });
           }),
           (e.prototype.OnTestEmail = function(e) {
@@ -49678,7 +49680,7 @@
                 );
               })
               .catch(function(e) {
-                console.error(W(e)),
+                console.error(B(e)),
                   _e(
                     _.createElement(
                       ue,
@@ -50185,7 +50187,7 @@
           (e.prototype.OnDestinationChange = function(e) {
             var t = this.props.section,
               n = Number(e.target.value);
-            Object(f.z)(function() {
+            Object(W.z)(function() {
               n < 2
                 ? (t.SetButtonDestination(n), t.SetButtonAppOverride(void 0))
                 : (t.SetButtonDestination(St.k_EStorePage),
@@ -50355,7 +50357,7 @@
                     );
                   case 3:
                     return (
-                      (n = e.sent()), console.log(W(n).strErrorMsg), [3, 4]
+                      (n = e.sent()), console.log(B(n).strErrorMsg), [3, 4]
                     );
                   case 4:
                     return [2];
@@ -50423,7 +50425,7 @@
                               case 3:
                                 return (
                                   (o = e.sent()),
-                                  (i = W(o)),
+                                  (i = B(o)),
                                   console.error(
                                     "AddExistingClanImage: " + i.strErrorMsg,
                                     i
@@ -50530,7 +50532,7 @@
                       O.GetStoreCapsuleInfo(t.GetAppID())
                         .GetAppStoreData()
                         .creator_list.forEach(function(e) {
-                          var t = u.a.InitFromClanID(e.clan_account_id),
+                          var t = f.a.InitFromClanID(e.clan_account_id),
                             n = new Array();
                           n.push(ia.LoadCreatorHome(t, o.m_cancelSignal)),
                             Promise.all(n).then(function(e) {
@@ -51106,7 +51108,7 @@
                       (a = e.sent()),
                       this.setState({
                         bRefreshing: !1,
-                        err_msg: W(a).strErrorMsg
+                        err_msg: B(a).strErrorMsg
                       }),
                       [3, 4]
                     );
@@ -51428,13 +51430,13 @@
               ((this.GetJSONData().broadcast_whitelist = []),
               this.m_editModel.SetDirty(Vt.jsondata_email));
           }),
-          q.c([f.f], e.prototype, "SetBroadcastEnabled", null),
-          q.c([f.f], e.prototype, "SetChangeSetting", null),
-          q.c([f.f], e.prototype, "SetTitleToken", null),
-          q.c([f.f], e.prototype, "SetCustomTitleLocalize", null),
-          q.c([f.f], e.prototype, "AddAccountToWhiteList", null),
-          q.c([f.f], e.prototype, "RemoveWhiteListAtIndex", null),
-          q.c([f.f], e.prototype, "ClearWhiteList", null),
+          q.c([W.f], e.prototype, "SetBroadcastEnabled", null),
+          q.c([W.f], e.prototype, "SetChangeSetting", null),
+          q.c([W.f], e.prototype, "SetTitleToken", null),
+          q.c([W.f], e.prototype, "SetCustomTitleLocalize", null),
+          q.c([W.f], e.prototype, "AddAccountToWhiteList", null),
+          q.c([W.f], e.prototype, "RemoveWhiteListAtIndex", null),
+          q.c([W.f], e.prototype, "ClearWhiteList", null),
           e
         );
       })(),
@@ -51531,7 +51533,7 @@
               var t;
               return q.e(this, function(e) {
                 return (
-                  (t = new u.a(n)), this.AddWhitelist(t.GetAccountID()), [2, !0]
+                  (t = new f.a(n)), this.AddWhitelist(t.GetAccountID()), [2, !0]
                 );
               });
             });
@@ -51594,7 +51596,7 @@
               r = this.props.editModel
                 .GetEventModel()
                 .jsondata.broadcast_whitelist.map(function(e) {
-                  var t = u.a.InitFromAccountID(e).ConvertTo64BitString();
+                  var t = f.a.InitFromAccountID(e).ConvertTo64BitString();
                   return oi.a.GetProfile(t) || { steamid: t };
                 });
             return _.createElement(
@@ -52736,7 +52738,7 @@
         (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.m_clanSteamID = new u.a(m.a.CLANSTEAMID)), e;
+            return (e.m_clanSteamID = new f.a(m.a.CLANSTEAMID)), e;
           }
           return (
             q.d(e, t),
@@ -53364,7 +53366,7 @@
     var xz = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
-          return (e.m_clanSteamID = new u.a(m.a.CLANSTEAMID)), e;
+          return (e.m_clanSteamID = new f.a(m.a.CLANSTEAMID)), e;
         }
         return (
           q.d(e, t),
@@ -53381,7 +53383,7 @@
                     )
                       return this.setState({ bLoading: !1 }), [2];
                     (n = m.a.APPID),
-                      (o = new u.a(m.a.CLANSTEAMID)),
+                      (o = new f.a(m.a.CLANSTEAMID)),
                       (e.label = 1);
                   case 1:
                     return (
@@ -53451,7 +53453,7 @@
                   case 10:
                     return (
                       (p = e.sent()),
-                      (s = W(p)),
+                      (s = B(p)),
                       console.error(
                         "OldAnnouncementMigrationBaseClass: " + s.strErrorMsg,
                         s
@@ -53650,7 +53652,7 @@
                   n.setState({ bLoading: !1 });
               })
               .catch(function(e) {
-                var t = W(e);
+                var t = B(e);
                 console.log(t.strErrorMsg, e),
                   _e(
                     _.createElement(me, {
