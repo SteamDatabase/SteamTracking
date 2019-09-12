@@ -3009,11 +3009,9 @@
             });
           }),
           (e.prototype.GetStoreCapsuleInfo = function(e) {
-            if (!this.m_mapAppIDToInfo.has(e)) {
-              var t = new Ie(e);
-              this.m_mapAppIDToInfo.set(e, t);
-            }
-            return this.m_mapAppIDToInfo.get(e);
+            return this.m_mapAppIDToInfo.has(e)
+              ? this.m_mapAppIDToInfo.get(e)
+              : new Ie(e);
           }),
           (e.prototype.BIsAppidLoaded = function(e) {
             return (
@@ -5865,7 +5863,7 @@
               r = e.discount_percent;
             return w.createElement(
               "div",
-              { style: { display: "flex" } },
+              { style: { display: "flex", flexWrap: "wrap" } },
               w.createElement(
                 "div",
                 { className: "StoreSalePriceActionWidgetContainer" },
