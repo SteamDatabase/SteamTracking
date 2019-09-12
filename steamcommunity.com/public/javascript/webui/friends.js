@@ -8740,16 +8740,16 @@
   },
   "5Nu3": function(e, t, n) {
     "use strict";
-    var i = n("mrSG"),
-      c = n("2vnA"),
+    var r = n("mrSG"),
+      i = n("2vnA"),
       p = n("4HGb"),
       a = n("s+DT"),
       o = n("OJz+"),
       u = n("RBVV"),
-      r = n("3zHc"),
-      l = n("VtNY"),
-      m = n("LAqV"),
-      d = (function() {
+      s = n("3zHc"),
+      c = n("VtNY"),
+      l = n("LAqV"),
+      m = (function() {
         function e(e, t, n, o, i, r, a) {
           (this.unAccountIDInviter = e),
             (this.rtTimestamp = t),
@@ -8787,40 +8787,40 @@
                   t.ConvertTo64BitString()),
                 void 0 !== this.connectString &&
                   (e += "/" + encodeURIComponent(this.connectString))),
-              m.f.OpenURLInBrowser(e, m.a),
+              l.f.OpenURLInBrowser(e, l.a),
               (this.bAccepted = !0),
-              m.f.ChatStore.GameInviteStore.RecordDismissTime(this);
+              l.f.ChatStore.GameInviteStore.RecordDismissTime(this);
           }),
           (e.prototype.DismissInvite = function() {
             (this.bDismissed = !0),
-              m.f.ChatStore.GameInviteStore.RecordDismissTime(this);
+              l.f.ChatStore.GameInviteStore.RecordDismissTime(this);
           }),
           Object.defineProperty(e.prototype, "bOld", {
             get: function() {
-              return 21600 < m.f.GetServerRTime32() - this.rtTimestamp;
+              return 21600 < l.f.GetServerRTime32() - this.rtTimestamp;
             },
             enumerable: !0,
             configurable: !0
           }),
-          i.c([c.x], e.prototype, "bDismissed", void 0),
-          i.c([c.x], e.prototype, "bAccepted", void 0),
-          i.c([c.g], e.prototype, "AcceptGameInvite", null),
-          i.c([c.g], e.prototype, "DismissInvite", null),
+          r.c([i.x], e.prototype, "bDismissed", void 0),
+          r.c([i.x], e.prototype, "bAccepted", void 0),
+          r.c([i.g], e.prototype, "AcceptGameInvite", null),
+          r.c([i.g], e.prototype, "DismissInvite", null),
           e
         );
       })(),
-      s = { dismisstimes: {} },
+      d = { dismisstimes: {} },
       h = "GameInvites",
       f = (function() {
         function e() {
           (this.m_mapGameInvites = new Map()),
-            (this.m_mapDismissedInvites = c.x.map()),
+            (this.m_mapDismissedInvites = i.x.map()),
             (this.m_mapInviteByCode = new Map());
         }
         return (
           (e.prototype.Init = function() {
             var r = this;
-            m.f.SettingsStore.GetObjectFromLocalStorageWhenReady(h, s).then(
+            l.f.SettingsStore.GetObjectFromLocalStorageWhenReady(h, d).then(
               function(e) {
                 var t = new Date();
                 for (var n in (t.setDate(t.getDate() - 14),
@@ -8841,7 +8841,7 @@
               var c = !1,
                 l = this.m_mapDismissedInvites.get(e);
               l && (c = t <= l),
-                (s = new d(e, t, n, o, i, c, r)),
+                (s = new m(e, t, n, o, i, c, r)),
                 a.set(t, s),
                 a.forEach(function(e) {
                   e.rtTimestamp < t && e.DismissInvite();
@@ -8859,7 +8859,7 @@
               this.WriteToLocalStorage());
           }),
           (e.prototype.WriteToLocalStorage = function() {
-            m.f.SettingsStore.StoreObjectInLocalStorage(h, {
+            l.f.SettingsStore.StoreObjectInLocalStorage(h, {
               dismisstimes: this.m_mapDismissedInvites
             });
           }),
@@ -8884,12 +8884,12 @@
       g = "ChatEmbeds",
       b = (function() {
         function e() {
-          this.m_mapEmbed = new c.b();
+          this.m_mapEmbed = new i.b();
         }
         return (
           (e.prototype.Init = function() {
             var o = this;
-            m.f.SettingsStore.GetObjectFromLocalStorageWhenReady(g, {}).then(
+            l.f.SettingsStore.GetObjectFromLocalStorageWhenReady(g, {}).then(
               function(e) {
                 for (var t in (o.m_mapEmbed.clear(), e)) {
                   var n = new _();
@@ -8920,7 +8920,7 @@
               this.WriteToLocalStorage();
           }),
           (e.prototype.WriteToLocalStorage = function() {
-            m.f.SettingsStore.StoreObjectInLocalStorage(g, this.m_mapEmbed);
+            l.f.SettingsStore.StoreObjectInLocalStorage(g, this.m_mapEmbed);
           }),
           (e.prototype.GetCollapsedState = function(e, t) {
             var n = this.m_mapEmbed.get(this.GetKey(e, t));
@@ -8981,7 +8981,7 @@
           );
         }
         return (
-          i.d(t, e),
+          r.d(t, e),
           (t.prototype.Init = function(e) {
             this.m_CMInterface = e;
           }),
@@ -9016,15 +9016,16 @@
       R = n("/SYB"),
       P = n("XaMz"),
       k = n("2sgH"),
-      L = n("9Eit");
+      L = n("9Eit"),
+      N = n("ujHl");
     n("tZiA");
     n.d(t, "a", function() {
-      return N;
+      return A;
     }),
       n.d(t, "b", function() {
-        return A;
+        return B;
       });
-    var N = (function() {
+    var A = (function() {
         function e(e) {
           var s = this;
           (this.LOG = R.b.create(function() {
@@ -9032,12 +9033,12 @@
           }, !1)),
             (this.m_EmoticonStore = new I()),
             (this.m_FriendChatStore = new O.b(this)),
-            (this.m_InviteStore = new l.a(this)),
+            (this.m_InviteStore = new c.a(this)),
             (this.m_GameInviteStore = new f()),
             (this.m_ChatRoomGroupDisplayPrefs = new S.c()),
             (this.m_EmbedStore = new b()),
-            (this.m_mapChatGroups = c.x.map()),
-            (this.m_mapActiveChatGroupsToRefCount = c.x.map()),
+            (this.m_mapChatGroups = i.x.map()),
+            (this.m_mapActiveChatGroupsToRefCount = i.x.map()),
             (this.m_mapClanChatsByClanID = new Map()),
             (this.m_bReceivedChatGroupList = !1),
             (this.m_bReadyToRender = !1),
@@ -9151,23 +9152,23 @@
                       t.group_summary(),
                       t.user_chat_group_state()
                     );
-                    m.f.UIStore.ShowAndOrActivateChatRoomGroup(m.a, i, !1);
+                    l.f.UIStore.ShowAndOrActivateChatRoomGroup(l.a, i, !1);
                     break;
                   case 2:
                   case 3:
                   case 10:
-                    m.f.VoiceStore.GetActiveChatRoomGroupID() == n &&
-                      m.f.VoiceStore.OnUserEndVoiceChat();
+                    l.f.VoiceStore.GetActiveChatRoomGroupID() == n &&
+                      l.f.VoiceStore.OnUserEndVoiceChat();
                     var r = (i = s.GetChatRoomGroup(n)) ? i.name : void 0;
                     s.RemoveChatRoomGroup(n),
                       r &&
                         (3 == o
-                          ? m.f.ShowAlert(
+                          ? l.f.ShowAlert(
                               Object(G.c)("#Alert_YouWereKickedTitle"),
                               Object(G.c)("#Alert_YouWereKickedDescription", r)
                             )
                           : 10 == o &&
-                            m.f.ShowAlert(
+                            l.f.ShowAlert(
                               Object(G.c)("#Alert_YouWereBannedTitle"),
                               Object(G.c)("#Alert_YouWereBannedDescription", r)
                             ));
@@ -9213,31 +9214,62 @@
             (this.m_FriendStore = e);
         }
         return (
-          (e.prototype.Init = function(e, t) {
+          (e.prototype.Init = function(t, e) {
             var n = this;
-            (this.m_CMInterface = e),
-              this.m_EmoticonStore.Init(e),
-              (this.m_VoiceChat = t),
-              (this.m_ChatRoomBBCodeParser = m.f.GetChatRoomBBCodeParser()),
-              (this.m_FriendChatBBCodeParser = m.f.GetFriendChatBBCodeParser()),
-              (this.m_NotificationBBCodeParser = m.f.GetNotificationBBCodeParser()),
-              this.m_ChatRoomGroupDisplayPrefs.Init(m.f.SettingsStore),
+            (this.m_CMInterface = t),
+              this.m_EmoticonStore.Init(t),
+              (this.m_VoiceChat = e),
+              (this.m_ChatRoomBBCodeParser = l.f.GetChatRoomBBCodeParser()),
+              (this.m_FriendChatBBCodeParser = l.f.GetFriendChatBBCodeParser()),
+              (this.m_NotificationBBCodeParser = l.f.GetNotificationBBCodeParser()),
+              this.m_ChatRoomGroupDisplayPrefs.Init(l.f.SettingsStore),
               this.m_EmbedStore.Init(),
               this.m_FriendChatStore.Init();
-            var o = !1;
+            var o = !1,
+              i = 0;
             return (
               this.m_CMInterface.AddOnLogonCallback(function() {
-                L.b
-                  .Init(m.f.Storage, e.steamid.GetAccountID().toString())
-                  .then(function() {
-                    return n.LoadMyChatRooms();
-                  }),
-                  o
-                    ? n.RestoreStatePostDisconnect()
-                    : (n.m_FriendChatStore.OnLogon(), (o = !0)),
-                  n.m_GameInviteStore.Init();
+                if (o) {
+                  var e = i < Date.now() / 1e3 - N.b.PerMinute / 2;
+                  e
+                    ? (function(n, o) {
+                        r.b(this, void 0, void 0, function() {
+                          var t;
+                          return r.e(this, function(e) {
+                            switch (e.label) {
+                              case 0:
+                                return (
+                                  (t = Math.floor(Math.random() * o * 1e3)),
+                                  [
+                                    4,
+                                    new Promise(function(e) {
+                                      return setTimeout(e, t);
+                                    })
+                                  ]
+                                );
+                              case 1:
+                                return e.sent(), [2, n()];
+                            }
+                          });
+                        });
+                      })(function() {
+                        return n.RestoreStatePostDisconnect(e);
+                      }, 4)
+                    : n.RestoreStatePostDisconnect(e);
+                } else
+                  L.b
+                    .Init(l.f.Storage, t.steamid.GetAccountID().toString())
+                    .then(function() {
+                      return n.LoadMyChatRooms();
+                    }),
+                    n.m_FriendChatStore.OnLogon(),
+                    (o = !0);
+                n.m_GameInviteStore.Init();
               }, 102),
-              new Promise(function(e, t) {
+              this.m_CMInterface.AddOnDisconnectCallback(function() {
+                return (i = Date.now() / 1e3);
+              }, 102),
+              new Promise(function(e) {
                 n.m_fnOnReadyToRender = e;
               })
             );
@@ -9249,19 +9281,23 @@
                 (this.m_fnOnReadyToRender(),
                 (this.m_fnOnReadyToRender = void 0)));
           }),
-          (e.prototype.RestoreStatePostDisconnect = function() {
-            this.m_FriendChatStore.RestoreStatePostDisconnect(),
+          (e.prototype.RestoreStatePostDisconnect = function(e) {
+            e && this.LoadMyChatRooms();
+            var t = this.m_mapActiveChatGroupsToRefCount.toPOJO();
+            Object.keys(t).some(function(e) {
+              return 0 < t[e];
+            }) && this.SendActiveChatRoomGroupsToServer(),
+              this.m_FriendChatStore.RestoreStatePostDisconnect(),
               this.m_mapChatGroups.forEach(function(e) {
                 return e.OnConnectionRestored();
-              }),
-              this.SendActiveChatRoomGroupsToServer();
+              });
           }),
           (e.prototype.LoadMyChatRooms = function() {
             var a = this,
               e = p.b.Init(u.t);
             u.V.GetMyChatRoomGroups(this.m_CMInterface.GetServiceTransport(), e)
               .then(function(r) {
-                Object(c.A)(function() {
+                Object(i.A)(function() {
                   1 != r.GetEResult() && !0;
                   for (
                     var e = 0, t = r.Body().chat_room_groups();
@@ -9277,7 +9313,7 @@
                         i.UpdateUserState(n.user_chat_group_state()),
                         a.OnGroupAdded(i),
                         i.BHasEverBeenAcked() ||
-                          m.f.UIStore.ShowUnackedGroup(i);
+                          l.f.UIStore.ShowUnackedGroup(i);
                     } else !0;
                   }
                   a.SetReadyToRender(), (a.m_bReceivedChatGroupList = !0);
@@ -9302,7 +9338,7 @@
           (e.prototype.JoinAndShowChatRoomGroup = function(e, t, n) {
             var o = this.GetChatRoomGroup(t);
             o && o.BIsCurrentUserAMember()
-              ? m.f.UIStore.ShowAndOrActivateChatRoomGroup(e, o, n)
+              ? l.f.UIStore.ShowAndOrActivateChatRoomGroup(e, o, n)
               : this.m_InviteStore.JoinChatGroup(t, null, e);
           }),
           (e.prototype.AddCreatedChatRoomGroup = function(e, t, n, o) {
@@ -9312,7 +9348,7 @@
                 i.UpdateGroupState(n),
                 i.UpdateUserState(o),
                 this.OnGroupAdded(i),
-                m.f.UIStore.ShowAndOrActivateChatRoomGroup(e, i, !0);
+                l.f.UIStore.ShowAndOrActivateChatRoomGroup(e, i, !0);
             }
           }),
           (e.prototype.AddKnownChatRoomGroup = function(e, t) {
@@ -9344,7 +9380,7 @@
             var t = this.m_mapChatGroups.get(e);
             if (t) {
               var n = this.m_mapChatGroups.get(e);
-              n && m.f.UIStore.CloseTabByID(n.unique_id),
+              n && l.f.UIStore.CloseTabByID(n.unique_id),
                 this.GetRefCountActiveChatRoomGroup(e) <= 0 &&
                   t.UnloadAndResetGroupState();
             }
@@ -9540,73 +9576,137 @@
               this.SendActiveChatRoomGroupsToServer();
           }),
           (e.prototype.SendActiveChatRoomGroupsToServer = function() {
-            var a = this;
-            if (this.m_bSendingActiveGroups)
-              this.m_bSendActiveGroupsQueued = !0;
-            else {
-              var s = [],
-                o = p.b.Init(u.N);
-              this.m_mapActiveChatGroupsToRefCount.forEach(function(e, t) {
-                if (
-                  (Object(P.a)(
-                    0 < e,
-                    "SendActiveChatRoomGroupsToServer found invalid ref count for chat group."
-                  ),
-                  !(e <= 0))
-                ) {
-                  o.Body().add_chat_group_ids(t);
-                  var n = a.m_mapChatGroups.get(t);
-                  (n && n.readyToRender) ||
-                    o.Body().add_chat_groups_data_requested(t),
-                    n && n.BIsClanChatRoom() && s.push(n.GetClanID());
+            return r.b(this, void 0, void 0, function() {
+              var t,
+                n,
+                o = this;
+              return r.e(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    if (this.m_bSendingActiveGroups)
+                      return (this.m_bSendActiveGroupsQueued = !0), [2];
+                    (t = 0.5),
+                      (n = function() {
+                        return r.b(o, void 0, void 0, function() {
+                          return r.e(this, function(e) {
+                            switch (e.label) {
+                              case 0:
+                                return (
+                                  e.trys.push([0, 2, , 3]),
+                                  [
+                                    4,
+                                    this.InternalSendActiveChatRoomGroupsToServer()
+                                  ]
+                                );
+                              case 1:
+                                return [2, e.sent()];
+                              case 2:
+                                return e.sent(), [2, !1];
+                              case 3:
+                                return [2];
+                            }
+                          });
+                        });
+                      }),
+                      (e.label = 1);
+                  case 1:
+                    return [4, n()];
+                  case 2:
+                    return e.sent()
+                      ? [3, 4]
+                      : [
+                          4,
+                          new Promise(function(e) {
+                            return setTimeout(e, 1e3 * t);
+                          })
+                        ];
+                  case 3:
+                    return e.sent(), (t *= 2), [3, 1];
+                  case 4:
+                    return [2];
                 }
               });
-              var t = void 0,
-                c = function(e) {
-                  T.a.IN_CLIENT && SteamClient.WebChat.SetActiveClanChatIDs(s),
-                    e && void 0 !== t && ClearBackgroundTimeout(t),
-                    (a.m_bSendingActiveGroups = !1),
-                    a.m_bSendActiveGroupsQueued &&
-                      a.SendActiveChatRoomGroupsToServer();
-                };
-              (this.m_bSendActiveGroupsQueued = !1),
-                (this.m_bSendingActiveGroups = !0),
-                u.V.SetSessionActiveChatRoomGroups(
-                  this.m_CMInterface.GetServiceTransport(),
-                  o
-                ).then(function(e) {
-                  if (1 == e.GetEResult()) {
-                    for (
-                      var t = !1, n = 0, o = e.Body().chat_states();
-                      n < o.length;
-                      n++
-                    ) {
-                      var i = o[n],
-                        r = a.m_mapChatGroups.get(
-                          i.header_state().chat_group_id()
-                        );
-                      if (r)
-                        try {
-                          r.UpdateGroupState(i),
-                            r.BIsClanChatRoom() &&
-                              -1 === s.indexOf(r.GetClanID()) &&
-                              s.push(r.GetClanID());
-                        } catch (e) {
-                          (t = !0),
-                            console.error(
-                              "exception processing group update for group " +
-                                r.GetGroupID(),
-                              e
-                            );
-                        }
-                    }
-                    c(!t);
-                  }
-                }),
-                (t = SetBackgroundTimeout(function() {
-                  (a.m_bSendActiveGroupsQueued = !0), c(!0);
-                }, 1e4));
-            }
+            });
+          }),
+          (e.prototype.InternalSendActiveChatRoomGroupsToServer = function() {
+            return r.b(this, void 0, void 0, function() {
+              var s = this;
+              return r.e(this, function(e) {
+                return [
+                  2,
+                  new Promise(function(t) {
+                    var a = [],
+                      o = p.b.Init(u.N);
+                    s.m_mapActiveChatGroupsToRefCount.forEach(function(e, t) {
+                      if (
+                        (Object(P.a)(
+                          0 < e,
+                          "SendActiveChatRoomGroupsToServer found invalid ref count for chat group."
+                        ),
+                        !(e <= 0))
+                      ) {
+                        o.Body().add_chat_group_ids(t);
+                        var n = s.m_mapChatGroups.get(t);
+                        (n && n.readyToRender) ||
+                          o.Body().add_chat_groups_data_requested(t),
+                          n && n.BIsClanChatRoom() && a.push(n.GetClanID());
+                      }
+                    });
+                    var e = function(e) {
+                        T.a.IN_CLIENT &&
+                          SteamClient.WebChat.SetActiveClanChatIDs(a),
+                          e && void 0 !== n && ClearBackgroundTimeout(n),
+                          (s.m_bSendingActiveGroups = !1),
+                          s.m_bSendActiveGroupsQueued ? t(!1) : t(e);
+                      },
+                      n = SetBackgroundTimeout(function() {
+                        (s.m_bSendActiveGroupsQueued = !0), e(!1);
+                      }, 1e4);
+                    (s.m_bSendActiveGroupsQueued = !1),
+                      (s.m_bSendingActiveGroups = !0),
+                      u.V.SetSessionActiveChatRoomGroups(
+                        s.m_CMInterface.GetServiceTransport(),
+                        o
+                      )
+                        .then(
+                          function(e) {
+                            var t = !1;
+                            if (1 != e.GetEResult()) return !1;
+                            for (
+                              var n = 0, o = e.Body().chat_states();
+                              n < o.length;
+                              n++
+                            ) {
+                              var i = o[n],
+                                r = s.m_mapChatGroups.get(
+                                  i.header_state().chat_group_id()
+                                );
+                              if (r)
+                                try {
+                                  r.UpdateGroupState(i),
+                                    r.BIsClanChatRoom() &&
+                                      -1 === a.indexOf(r.GetClanID()) &&
+                                      a.push(r.GetClanID());
+                                } catch (e) {
+                                  (t = !0),
+                                    console.error(
+                                      "exception processing group update for group " +
+                                        r.GetGroupID(),
+                                      e
+                                    );
+                                }
+                            }
+                            return !t;
+                          },
+                          function() {
+                            return !1;
+                          }
+                        )
+                        .then(e);
+                  })
+                ];
+              });
+            });
           }),
           (e.prototype.CreateChatRoomGroup = function(n, e, t, o) {
             var i = this;
@@ -9745,18 +9845,18 @@
             }
             return a;
           }),
-          i.c([c.x], e.prototype, "m_bReceivedChatGroupList", void 0),
-          i.c([m.g], e.prototype, "JoinAndShowChatRoomGroup", null),
-          i.c([c.g], e.prototype, "AddCreatedChatRoomGroup", null),
-          i.c([c.g], e.prototype, "AddKnownChatRoomGroup", null),
-          i.c([c.g], e.prototype, "AddJoinedChatRoomGroup", null),
-          i.c([c.g], e.prototype, "RemoveChatRoomGroup", null),
-          i.c([c.i], e.prototype, "currentChatRoomGroups", null),
-          i.c([c.i], e.prototype, "ClanChatRooms", null),
+          r.c([i.x], e.prototype, "m_bReceivedChatGroupList", void 0),
+          r.c([l.g], e.prototype, "JoinAndShowChatRoomGroup", null),
+          r.c([i.g], e.prototype, "AddCreatedChatRoomGroup", null),
+          r.c([i.g], e.prototype, "AddKnownChatRoomGroup", null),
+          r.c([i.g], e.prototype, "AddJoinedChatRoomGroup", null),
+          r.c([i.g], e.prototype, "RemoveChatRoomGroup", null),
+          r.c([i.i], e.prototype, "currentChatRoomGroups", null),
+          r.c([i.i], e.prototype, "ClanChatRooms", null),
           e
         );
       })(),
-      A = (function(o) {
+      B = (function(o) {
         function e(e, t) {
           var n = o.call(this) || this;
           return (
@@ -9775,7 +9875,7 @@
           );
         }
         return (
-          i.d(e, o),
+          r.d(e, o),
           (e.prototype.GetTabName = function() {
             return this.m_chat.name;
           }),
@@ -9839,7 +9939,7 @@
               e != this || (!this.m_tabset.is_popup_visible && !T.a.IN_MOBILE)
                 ? 1
                 : this.m_tabset.is_popup_focused || T.a.IN_MOBILE
-                ? this.m_bScrolledToBottom && !m.f.IdleTracker.BIsUserIdle(60)
+                ? this.m_bScrolledToBottom && !l.f.IdleTracker.BIsUserIdle(60)
                   ? 4
                   : 3
                 : 2
@@ -9939,8 +10039,8 @@
             this.m_fileUploadManager.SetImageFileToUpload(e, t);
           }),
           (e.prototype.UploadFile = function(t) {
-            return i.b(this, void 0, void 0, function() {
-              return i.e(this, function(e) {
+            return r.b(this, void 0, void 0, function() {
+              return r.e(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return [
@@ -9959,10 +10059,10 @@
           (e.prototype.BVoiceActive = function() {
             return this.m_chat.BVoiceActive();
           }),
-          i.c([c.x], e.prototype, "m_bScrolledToBottom", void 0),
+          r.c([i.x], e.prototype, "m_bScrolledToBottom", void 0),
           e
         );
-      })(r.b);
+      })(s.b);
   },
   "7Vyq": function(e, t, n) {
     e.exports = {
