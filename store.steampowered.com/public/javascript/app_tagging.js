@@ -1023,6 +1023,7 @@ function InitBannedTagModal( appid, $BanModal )
 }
 
 
+var g_bLoadingPopularTags = false;
 var g_rgGlobalPopularTags = [];
 
 // A modular tag auto-complete widget.
@@ -1068,20 +1069,27 @@ var CTagAutoComplete = function( $elContainer, fnOnTagSelected )
 		// hack to size the input control correctly
 		//$AppTagForm.find( '.gray_bevel').css( 'margin-right', ( $AppTagButton.width() + 12 ) + 'px' );
 
-		this.LoadPopularTags();
+		this.LoadPopularTags( false );
 	}
 }
 
 //
 CTagAutoComplete.prototype.LoadPopularTags = function( bForce )
 {
+	if ( g_bLoadingPopularTags )
+		return;
+
+	g_bLoadingPopularTags = true;
 	if( !bForce && g_rgGlobalPopularTags.length > 0 )
 		return;
 
 	$J.get( 'https://store.steampowered.com/tagdata/populartags/english').done( function ( data ) {
 		for ( var i = 0; i < data.length; i++ )
+		{
 			g_rgGlobalPopularTags.push( data[i] );	// don't assign, we've got references to this guy
+		}
 
+		g_bLoadingPopularTags = false;
 	});
 }
 
