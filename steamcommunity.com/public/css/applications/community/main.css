@@ -563,6 +563,7 @@ body.modals_BodyNoScroll_32ZiC {
     margin: 4px 0px;
     background-color: #1e2025;
     border: solid 1px #000000;
+    outline-width: 0;
     box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     color: grey; }
@@ -719,7 +720,7 @@ body.modals_BodyNoScroll_32ZiC {
   justify-content: flex-start; }
 
 .partnereventshared_SaveBackground_V0mbI .partnereventshared_FlexRowWrapFlexStartContainer_tyP_c {
-  background: #3a3f48;
+  background: #353941;
   padding: 12px;
   margin-top: 20px;
   margin-bottom: 20px; }
@@ -781,7 +782,8 @@ b {
 .partnereventshared_EventSectionTitleCtn_onqWK {
   display: flex;
   flex-direction: row;
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  position: relative; }
 
 .partnereventshared_EventSectionTitle_Idd_A {
   color: #ffffff;
@@ -896,8 +898,9 @@ b {
   border-radius: 3px;
   line-height: 26px;
   text-align: center;
-  background: #32373f;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); }
+  background: #3d434d;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none; }
   .partnereventshared_EditPreviewButton_1FhZQ:hover {
     cursor: pointer;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
@@ -1956,13 +1959,15 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   position: relative; }
 
 .partnereventdisplay_EventBody_3aht- {
-  margin-top: -78px;
+  margin-top: -6vw;
   width: 100%;
   min-height: 600px;
   background-color: #25282e;
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  border-radius: 4px; }
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden; }
   .partnereventdisplay_EventBody_3aht- .partnereventdisplay_EventBackgroundBlur_stsss {
     position: absolute;
     z-index: 0;
@@ -1977,8 +1982,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 
 .partnereventdisplay_EventCoverImageCtn_FZiaq {
   overflow: hidden;
-  height: 25vw;
-  min-height: 350px;
+  height: 26vw;
+  max-height: 510px;
   width: 100%;
   position: relative; }
 
@@ -1989,23 +1994,36 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .partnereventdisplay_EventCoverImage_17G2y {
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 1000px;
+  height: 622px;
   width: 100%;
-  min-width: 1400px;
-  top: -23%;
+  top: -22%;
+  max-width: 1920px;
   position: absolute; }
   .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImage_17G2y {
     min-width: unset;
     top: unset;
     background-size: cover;
     background-position-x: center;
+    background-position-y: -47px;
     background-repeat: no-repeat;
-    height: 278px;
+    height: 175px;
     width: 100%;
     opacity: 1;
     position: unset;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px; }
+    @media screen and (max-width: 910px) {
+      .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImage_17G2y {
+        height: 19vw;
+        background-position-y: -5vw; } }
+
+.partnereventdisplay_EventCoverImageFuzz_2EWL0 {
+  position: absolute;
+  filter: blur(30px);
+  height: 622px;
+  width: 100%; }
+  .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImageFuzz_2EWL0 {
+    display: none; }
 
 .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImage_17G2y.partnereventdisplay_no_title_artwork_1_wDF {
   height: 100%;
@@ -2020,32 +2038,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .partnereventdisplay_EventCoverImageBlr_3xNob {
   justify-content: center;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  height: 32vw; }
 
-/* Parallax stuff ========================================================== */
-/*
-.EventCoverImage {
-	background-size: contain;
-	background-repeat: no-repeat;
-	left: calc(50% - 960px);
-	top: 0;
-  right: 0;
-  bottom: 0;
-	height: 1000px;
-	width: 1920px;
-	position: absolute;
-	perspective: 1px;
-	transform-origin: top center;
-	transform: translateZ(-1px) translateY(-56vh) scale(1.6);
-}
-
-/* if in preview mode, we need to move the background image down to make room for the preview bar */
-/*
-.EventDetailsPageContainer.Previewing .EventCoverImage {
-	transform: translateZ(-1px) translateY(-582px) scale(2);
-}
-
-/* end parallax stuff ========================================================== */
 .partnereventdisplay_CoverImageGradient_1_x4o {
   position: absolute;
   bottom: 0px;
@@ -2085,16 +2080,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     order: 2; }
   body .partnereventdisplay_EventDetailsDescription_2orfV .partnereventdisplay_EventDetailsBody_A_A2B {
     border-right: none; } }
-
-@media screen and (max-width: 650px) {
-  body .partnereventdisplay_EventCoverImage_17G2y {
-    width: 221%;
-    min-width: unset; }
-  body .partnereventdisplay_EventCoverImageCtn_FZiaq {
-    height: 53vw;
-    min-height: unset; }
-  body .partnereventdisplay_EventBody_3aht- {
-    margin-top: -12vw; } }
 
 .partnereventdisplay_EventDetailsSticky_3IxVZ {
   position: -webkit-sticky;
@@ -6570,7 +6555,15 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .partnereventeditor_UploadPreviewButton_3ucHv {
   margin: 8px; }
 
+.partnereventeditor_ArtworkDimensionTooSmall_1BKDz {
+  color: darkred; }
+
 .partnereventeditor_UploadPreviewError_FqFpo {
+  color: #943636;
+  font-size: 12px;
+  font-weight: bold; }
+
+.partnereventeditor_UploadPreviewWarning_3WxvC {
   color: #ffba70;
   font-size: 12px; }
 
@@ -6820,7 +6813,7 @@ p a:hover {
   width: 500px;
   height: auto; }
 
-.partnereventartwork_detailExample_syg2Q {
+.partnereventartwork_detailExample_syg2Q, .partnereventartwork_detailExample2_9E9yp {
   width: 500px;
   height: 230px;
   position: relative;
@@ -6829,23 +6822,23 @@ p a:hover {
   -webkit-mask-image: linear-gradient(180deg, black 75%, rgba(0, 0, 0, 0) 100%);
   mask-image: linear-gradient(180deg, black 75%, rgba(0, 0, 0, 0) 100%);
   border-radius: 4px; }
-  .partnereventartwork_detailExample_syg2Q .partnereventartwork_MainImageCtn_1XTVD {
+  .partnereventartwork_detailExample_syg2Q .partnereventartwork_MainImageCtn_1XTVD, .partnereventartwork_detailExample2_9E9yp .partnereventartwork_MainImageCtn_1XTVD {
     width: 100%;
     height: 132px;
     position: absolute;
     overflow: hidden; }
-  .partnereventartwork_detailExample_syg2Q .partnereventartwork_MainImageCtn_1XTVD > img {
+  .partnereventartwork_detailExample_syg2Q .partnereventartwork_MainImageCtn_1XTVD > img, .partnereventartwork_detailExample2_9E9yp .partnereventartwork_MainImageCtn_1XTVD > img {
     width: 100%;
     height: auto;
     top: -29px;
     position: relative; }
-  .partnereventartwork_detailExample_syg2Q .partnereventartwork_ExampleBodyPosition_rEaNp {
+  .partnereventartwork_detailExample_syg2Q .partnereventartwork_ExampleBodyPosition_rEaNp, .partnereventartwork_detailExample2_9E9yp .partnereventartwork_ExampleBodyPosition_rEaNp {
     top: 101px;
     height: 100%;
     max-width: 70%;
     margin: 0px auto;
     position: relative; }
-  .partnereventartwork_detailExample_syg2Q .partnereventartwork_ExampleContentCtn_-LvtM {
+  .partnereventartwork_detailExample_syg2Q .partnereventartwork_ExampleContentCtn_-LvtM, .partnereventartwork_detailExample2_9E9yp .partnereventartwork_ExampleContentCtn_-LvtM {
     position: absolute;
     width: calc(100% - 22px);
     height: 100%;
@@ -6854,16 +6847,19 @@ p a:hover {
     background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     border-radius: 4px; }
-    .partnereventartwork_detailExample_syg2Q .partnereventartwork_ExampleContentCtn_-LvtM .partnereventartwork_TextTitle_WMeyY {
+    .partnereventartwork_detailExample_syg2Q .partnereventartwork_ExampleContentCtn_-LvtM .partnereventartwork_TextTitle_WMeyY, .partnereventartwork_detailExample2_9E9yp .partnereventartwork_ExampleContentCtn_-LvtM .partnereventartwork_TextTitle_WMeyY {
       font-size: 11px;
       line-height: 11px;
       color: #ffffff; }
-    .partnereventartwork_detailExample_syg2Q .partnereventartwork_ExampleContentCtn_-LvtM .partnereventartwork_TextSubTitle_3zHVs {
+    .partnereventartwork_detailExample_syg2Q .partnereventartwork_ExampleContentCtn_-LvtM .partnereventartwork_TextSubTitle_3zHVs, .partnereventartwork_detailExample2_9E9yp .partnereventartwork_ExampleContentCtn_-LvtM .partnereventartwork_TextSubTitle_3zHVs {
       font-size: 7px;
       line-height: 16px;
       color: #ADAEB2; }
-    .partnereventartwork_detailExample_syg2Q .partnereventartwork_ExampleContentCtn_-LvtM .partnereventartwork_TextBody_IiSBO {
+    .partnereventartwork_detailExample_syg2Q .partnereventartwork_ExampleContentCtn_-LvtM .partnereventartwork_TextBody_IiSBO, .partnereventartwork_detailExample2_9E9yp .partnereventartwork_ExampleContentCtn_-LvtM .partnereventartwork_TextBody_IiSBO {
       font-size: 6px; }
+
+.partnereventartwork_detailExample2_9E9yp {
+  height: 400px; }
 
 .partnereventartwork_SpotlightExample_rAJxh {
   width: 778px;
@@ -6964,6 +6960,14 @@ p a:hover {
   background-image: url(../../../images/applications/community/8f658325bf36f3194c454ed90f94471d.png);
   width: 600px;
   opacity: 0.1; }
+
+.partnereventartwork_ExampleSpacer_2r0lB {
+  height: 40px;
+  width: auto; }
+
+.partnereventartwork_MultipleExampleContainer_1dda1 {
+  display: flex;
+  flex-direction: column; }
 
 /**
  * Font Mixins.
@@ -8194,11 +8198,14 @@ button.DialogButton::-moz-focus-inner {
   margin-bottom: 32px;
   user-select: none; }
 
-.DialogBodyText a {
+.DialogBodyText p {
+  user-select: text; }
+
+.DialogBodyText p a {
   color: #969696;
   text-decoration: underline; }
 
-.DialogBodyText a:hover {
+.DialogBodyText p a:hover {
   color: #ffffff; }
 
 .DialogLabel {

@@ -22,6 +22,10 @@ html.responsive body {
 .responsive_page_content {
 }
 
+.partner_events .responsive_page_content {
+    height: 100vh;
+}
+
 .responsive_page_menu_ctn {
 	position: fixed;
 	top: 0;

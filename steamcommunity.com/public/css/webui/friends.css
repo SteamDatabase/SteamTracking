@@ -7417,11 +7417,14 @@ button.DialogButton::-moz-focus-inner {
   margin-bottom: 32px;
   user-select: none; }
 
-.DialogBodyText a {
+.DialogBodyText p {
+  user-select: text; }
+
+.DialogBodyText p a {
   color: #969696;
   text-decoration: underline; }
 
-.DialogBodyText a:hover {
+.DialogBodyText p a:hover {
   color: #ffffff; }
 
 .DialogLabel {

@@ -67442,34 +67442,35 @@
   lqmi: function(e, t, n) {
     "use strict";
     n.d(t, "c", function() {
-      return u;
+      return m;
     }),
       n.d(t, "a", function() {
-        return m;
-      }),
-      n.d(t, "d", function() {
         return d;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "d", function() {
         return h;
+      }),
+      n.d(t, "b", function() {
+        return f;
       });
     var o = n("mrSG"),
       i = n("1n9R"),
       l = n("s+DT"),
       r = n("2vnA"),
       p = n("Kqva"),
+      u = n("XCHq"),
       a = n("OTLo"),
       s = n("Gp1o"),
       c = n("oh5H"),
-      u = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-    function m(e, t) {
+      m = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+    function d(e, t) {
       var n = ".jpg";
-      "0000000000000000000000000000000000000000" === e && (e = u),
+      "0000000000000000000000000000000000000000" === e && (e = m),
         44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
       var o = i.b.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
       return (o += e.substr(0, 2) + "/" + e), t && (o += "_" + t), (o += n);
     }
-    function d(e) {
+    function h(e) {
       var t = "offline";
       return (
         e.is_golden && e.is_online
@@ -67483,7 +67484,7 @@
         t
       );
     }
-    var h = (function() {
+    var f = (function() {
       function e(e) {
         (this.m_bInitialized = !1),
           (this.m_ePersonaState = 0),
@@ -67491,7 +67492,7 @@
           (this.m_gameid = "0"),
           (this.m_unPersonaStateFlags = 0),
           (this.m_strPlayerName = ""),
-          (this.m_strAvatarHash = u),
+          (this.m_strAvatarHash = m),
           (this.m_rtLastSeenOnline = 0),
           (this.m_strGameExtraInfo = ""),
           (this.m_unGameServerIP = 0),
@@ -67543,7 +67544,7 @@
               o = !0;
             if (n) {
               for (var i = 0; i < n.length && o; i++) o = !n[i];
-              this.m_strAvatarHash = o ? u : Object(p.a)(n);
+              this.m_strAvatarHash = o ? m : Object(p.a)(n);
             }
           }
           if (
@@ -67564,15 +67565,15 @@
             var c = l.a
               .InitFromAccountID(t.watching_broadcast_accountid())
               .ConvertTo64BitString();
-            this.m_strBroadcastTitle = c
+            c && u.b.stream[c]
               ? ((this.m_broadcastAccountId = t.watching_broadcast_accountid()),
                 (this.m_broadcastAppId = t.watching_broadcast_appid()),
                 (this.m_broadcastViewerCount = t.watching_broadcast_viewers()),
-                t.watching_broadcast_title())
+                (this.m_strBroadcastTitle = t.watching_broadcast_title()))
               : ((this.m_broadcastAccountId = 0),
                 (this.m_broadcastAppId = 0),
                 (this.m_broadcastViewerCount = 0),
-                "");
+                (this.m_strBroadcastTitle = ""));
           }
           this.m_bNameInitialized &&
             this.m_bStatusInitialized &&
@@ -67792,25 +67793,25 @@
           configurable: !0
         }),
         (e.prototype.BHasAvatarSet = function() {
-          return this.m_strAvatarHash != u;
+          return this.m_strAvatarHash != m;
         }),
         Object.defineProperty(e.prototype, "avatar_url", {
           get: function() {
-            return m(this.m_strAvatarHash);
+            return d(this.m_strAvatarHash);
           },
           enumerable: !0,
           configurable: !0
         }),
         Object.defineProperty(e.prototype, "avatar_url_medium", {
           get: function() {
-            return m(this.m_strAvatarHash, "medium");
+            return d(this.m_strAvatarHash, "medium");
           },
           enumerable: !0,
           configurable: !0
         }),
         Object.defineProperty(e.prototype, "avatar_url_full", {
           get: function() {
-            return m(this.m_strAvatarHash, "full");
+            return d(this.m_strAvatarHash, "full");
           },
           enumerable: !0,
           configurable: !0
