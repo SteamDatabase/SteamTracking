@@ -1482,11 +1482,11 @@ function UpdatePlaytimeFilterValues( hourMin, hourMax )
 	$J( "#app_reviews_playtime_range_max" ).val( hourMax == maxHours ? 0 : hourMax );
 
 	var strHoursMinNumber = v_numberformat( hourMin, 0 );
-	var strHourMin = hourMin > 0 ? 'Minimum of %1$s hour(s)'.replace( /%1\$s/g, strHoursMinNumber ) : 'No Minimum';
+	var strHourMin = hourMin > 0 ? 'Minimum of %1$s hour(s)'.replace( /%1\$s/g, strHoursMinNumber ) : 'No minimum';
 	$J( "#app_reviews_playtime_range_text_min" ).text( strHourMin );
 
 	var strHoursMaxNumber = v_numberformat( hourMax, 0 );
-	var strHourMax = hourMax > 0 && hourMax != maxHours ? 'Maximum of %1$s hour(s)'.replace( /%1\$s/g, strHoursMaxNumber ) : 'No Maximum';
+	var strHourMax = hourMax > 0 && hourMax != maxHours ? 'Maximum of %1$s hour(s)'.replace( /%1\$s/g, strHoursMaxNumber ) : 'No maximum';
 	$J( "#app_reviews_playtime_range_text_max" ).text( strHourMax );
 }
 
