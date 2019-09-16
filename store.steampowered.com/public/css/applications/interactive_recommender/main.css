@@ -943,7 +943,7 @@ a:link {
         .app_RecommendationEntry_2B7qq.app_Hovered_1qERs .app_RightSection_1fjc9 .app_BottomEntrySection_E5OsK .app_WishlistSection_2Q9UW {
           margin-top: 8px; }
           .app_RecommendationEntry_2B7qq.app_Hovered_1qERs .app_RightSection_1fjc9 .app_BottomEntrySection_E5OsK .app_WishlistSection_2Q9UW.app_Wishlisted_2dizG {
-            padding-top: 4px;
+            padding-top: 2px;
             line-height: 26px; }
         .app_RecommendationEntry_2B7qq.app_Hovered_1qERs .app_RightSection_1fjc9 .app_BottomEntrySection_E5OsK .app_PurchaseSection_10cot {
           margin-top: 8px; }
@@ -951,6 +951,8 @@ a:link {
             padding: 0px;
             background-color: transparent;
             border-radius: 0px; }
+            .app_RecommendationEntry_2B7qq.app_Hovered_1qERs .app_RightSection_1fjc9 .app_BottomEntrySection_E5OsK .app_PurchaseSection_10cot .app_PurchaseBG_36CAa .app_Price_3JBgo {
+              padding-top: 5px; }
     .app_RecommendationEntry_2B7qq.app_Hovered_1qERs .app_TopEntrySection_2n9PA .app_LeftSection_11vww .app_WishlistFlag_2yNvy {
       opacity: 0; }
     .app_RecommendationEntry_2B7qq.app_Hovered_1qERs .app_TopEntrySection_2n9PA .app_LeftSection_11vww .app_Logo_yICkU, .app_RecommendationEntry_2B7qq.app_Hovered_1qERs .app_TopEntrySection_2n9PA .app_LeftSection_11vww .app_Video_3XA5i {

@@ -237,6 +237,7 @@
       Wishlisted: "app_Wishlisted_2dizG",
       PurchaseSection: "app_PurchaseSection_10cot",
       PurchaseBG: "app_PurchaseBG_36CAa",
+      Price: "app_Price_3JBgo",
       WishlistFlag: "app_WishlistFlag_2yNvy",
       SelectionBox: "app_SelectionBox_Hwrdc",
       SuggestionInput: "app_SuggestionInput_2-k0l",
@@ -1230,7 +1231,7 @@
           e
         );
       })(M.a.Component),
-      Q = Object(i.a)(function(e) {
+      J = Object(i.a)(function(e) {
         var t = le.getTags(),
           a = [],
           n = [];
@@ -1299,7 +1300,7 @@
           )
         );
       }),
-      J = (function(a) {
+      Q = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (
@@ -1586,7 +1587,13 @@
                             !y &&
                               M.a.createElement(
                                 "div",
-                                { className: "game_purchase_price price" },
+                                {
+                                  className: D(
+                                    "game_purchase_price",
+                                    "price",
+                                    G.a.Price
+                                  )
+                                },
                                 R
                               ),
                             !T &&
@@ -1762,7 +1769,7 @@
               ) {
                 var I = N[O];
                 m.push(
-                  M.a.createElement(J, {
+                  M.a.createElement(Q, {
                     key: I.appid,
                     appID: I.appid,
                     score: I.score,
@@ -1786,7 +1793,7 @@
                 { className: G.a.Header },
                 U("#Recommendations_Header")
               ),
-              M.a.createElement(Q, null),
+              M.a.createElement(J, null),
               M.a.createElement(
                 "div",
                 {
