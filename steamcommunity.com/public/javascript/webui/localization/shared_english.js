@@ -140,6 +140,7 @@ LocalizationReady("shared", "english", {
   EventDisplay_SeeOldVersion: "View Current Customer Version",
 
   EventDisplay_RightColumnTitle_Game: "Game",
+  EventDisplay_RightColumnTitle_Blog: "Blog",
   EventDisplay_RightColumnTitle_DateAndTime: "Date and Time",
   EventDisplay_RightColumnTitle_EventType: "Type",
 
@@ -714,6 +715,22 @@ LocalizationReady("shared", "english", {
   Broadcast_VideoContext_ToggleStats: "Toggle technical stats",
   Broadcast_VideoContext_OpenStore: "Visit Store",
   Broadcast_None: "None",
+
+  BroadcastWatch_MinBrowser:
+    "Your web browser does not support the minimum set of features required to watch this broadcast",
+  BroadcastWatch_RequestFailed: "Failed to load this broadcast",
+  BroadcastWatch_NotAvailable: "This broadcaster is offline",
+  BroadcastWatch_WaitingForResponse: "Waiting for approval to watch",
+  BroadcastWatch_WaitingForStart: "This broadcast is starting",
+  BroadcastWatch_WaitingForReconnect: "Reconnecting to this broadcast",
+  BroadcastWatch_ServerLoad:
+    "Steam is experiencing high broadcast load and is currently unable to reserve a server spot to start this broadcast. Please try again in a few minutes.",
+  BroadcastWatch_SystemNotSupported:
+    "Steam Broadcasting is not currently supported on this broadcaster's system",
+  BroadcastWatch_UserRestricted:
+    "This broadcaster is currently restricted from broadcasting on Steam",
+  BroadcastWatch_PoorUploadQuality:
+    "This broadcaster is currently unable to maintain a stable broadcast connection to Steam",
 
   BroadcastChat_Reconnected: "Reconnected to chat",
   BroadcastChat_UnableToJoinChat: "Unable to join chat",

@@ -281,6 +281,14 @@ function UserReview_ShowClearReportsDialog( recommendationID, baseURL, callback 
 	});
 }
 
+function UserReview_ShowVoteBanUsersDialog( recommendationID, baseURL, callback )
+{
+	var dialog = ShowConfirmDialog( 'Vote Ban Users', 'Are you sure you want to vote ban users who upvoted this review? This cannot be undone!<br><br>This should only be done if this review is attempting to scam/phish other users.' );
+	dialog.done( function() {
+		UserReview_Moderate_VoteBanUsers( recommendationID, baseURL, callback);
+	});
+}
+
 function UserReview_Moderate_SetBanStatus( recommendationID, force_hidden, baseURL, callback, strModerationNote )
 {
 	UserReview_Moderate( recommendationID, { 'force_hidden' : force_hidden, 'moderation_note' : strModerationNote }, baseURL, callback );
@@ -294,4 +302,9 @@ function UserReview_Moderate_SetDeveloperFlag( recommendationID, flagged_by_deve
 function UserReview_Moderate_SetQuality( recommendationID, quality, baseURL, callback )
 {
 	UserReview_Moderate( recommendationID, { 'review_quality' : quality }, baseURL, callback );
+}
+
+function UserReview_Moderate_VoteBanUsers( recommendationID, baseURL, callback )
+{
+	UserReview_Moderate( recommendationID, { 'vote_ban_users' : 1 }, baseURL, callback );
 }

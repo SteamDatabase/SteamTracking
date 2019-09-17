@@ -497,6 +497,8 @@ a.ultracast_now_playing_link:hover .ds_options {
 .labs_top_menu_item a:hover {
 	color: #4b90ff;
 }
+
+
 @media screen and (max-width: 990px)
 {
     html.responsive .labs-content {
@@ -507,6 +509,18 @@ a.ultracast_now_playing_link:hover .ds_options {
     }
     .experiment-title-area {
         margin-left: -11px;
+    }
+}
+@media screen and (max-width: 1400px)
+{
+    html.responsive .labs-content {
+        margin: 0px 10px;
+    }
+    html.responsive .right-column {
+        width: 35%;
+    }
+    .experiment-title-area {
+        margin-left: 0px;
     }
 }
 @media screen and (max-width: 910px)

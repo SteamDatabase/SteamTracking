@@ -16,6 +16,7 @@ GHomepage = {
 	rgRecommendedGames: [],
 	rgFriendRecommendations: [],	// { appid, accountid_friends, time_most_recent_recommendation }
 	rgRecommendedAppsByCreators: [], // { appid, creatorid }
+    rgRecommendedBySteamLabsApps: [],
 
 	rgCuratedAppsData: [],
 	rgCreatorFollowedAppData: [],
@@ -109,69 +110,65 @@ GHomepage = {
 	InitUserData: function( rgParams )
 	{
 		try {
-			GHomepage.oSettings = rgParams.oSettings;
-			GDynamicStorePage.oSettings = rgParams.oSettings;	// GDynamicStorePage is used to filter capsule lists, so make sure that has the settings too.
-			GHomepage.CheckLocalStorageSettings();
+            GHomepage.oSettings = rgParams.oSettings;
+            GDynamicStorePage.oSettings = rgParams.oSettings;	// GDynamicStorePage is used to filter capsule lists, so make sure that has the settings too.
+            GHomepage.CheckLocalStorageSettings();
 
-			if ( rgParams.rgRecommendedGames && rgParams.rgRecommendedGames.length )
-			{
-				var rgRecommendedAppIDs = v_shuffle( rgParams.rgRecommendedGames );
-				for( var i = 0; i < rgRecommendedAppIDs.length; i++ )
-				{
-					GHomepage.rgRecommendedGames.push( { appid: rgRecommendedAppIDs[i], recommended: true } );
-				}
-			}
-			
-			GHomepage.bMergeRecommendationsToHighlights = rgParams.bMergeRecommendationsToHighlights || false;
-			GHomepage.bNewRecommendations = rgParams.bNewRecommendations || false;
-			GHomepage.bIsLimitedUser = rgParams.bIsLimitedUser || false;
-			GHomepage.bAddTopSellersToMainCap = rgParams.bAddTopSellersToMainCap || false;
+            if (rgParams.rgRecommendedGames && rgParams.rgRecommendedGames.length) {
+                var rgRecommendedAppIDs = v_shuffle(rgParams.rgRecommendedGames);
+                for (var i = 0; i < rgRecommendedAppIDs.length; i++) {
+                    GHomepage.rgRecommendedGames.push({appid: rgRecommendedAppIDs[i], recommended: true});
+                }
+            }
 
-			if ( g_AccountID == 0 )
-			{
-				$J('#home_recommended_spotlight_notloggedin').show();
-				$J('.home_top_sellers_area').show();
-				$J('.home_logged_in').hide();
-				$J('.home_friends_purchased_area').hide();
-				$J('.home_btn.home_customize_btn').hide();
-			}
-			else
-			{
-				$J('#home_recommended_more').show();
-			}
+            GHomepage.bMergeRecommendationsToHighlights = rgParams.bMergeRecommendationsToHighlights || false;
+            GHomepage.bNewRecommendations = rgParams.bNewRecommendations || false;
+            GHomepage.bIsLimitedUser = rgParams.bIsLimitedUser || false;
+            GHomepage.bAddTopSellersToMainCap = rgParams.bAddTopSellersToMainCap || false;
 
-			GHomepage.rgCuratedAppsData = rgParams.rgCuratedAppsData || {};
-			if ( rgParams.rgCuratedAppsData['apps'] && rgParams.rgCuratedAppsData['apps'].length )
-			{
-				var rgRecommendedAppIDs = v_shuffle( rgParams.rgCuratedAppsData['apps'] );
-				for( var i = 0; i < rgRecommendedAppIDs.length; i++ )
-				{
-					GHomepage.rgAppsRecommendedByCurators.push( { appid: rgRecommendedAppIDs[i].appid, recommended_by_curator: true } );
-				}
-			}
+            if (g_AccountID == 0) {
+                $J('#home_recommended_spotlight_notloggedin').show();
+                $J('.home_top_sellers_area').show();
+                $J('.home_logged_in').hide();
+                $J('.home_friends_purchased_area').hide();
+                $J('.home_btn.home_customize_btn').hide();
+            }
+            else {
+                $J('#home_recommended_more').show();
+            }
 
-			GHomepage.rgCreatorFollowedAppData = rgParams.rgCreatorFollowedAppData || [];
-			if ( GHomepage.rgCreatorFollowedAppData && rgParams.rgCreatorFollowedAppData['apps'] && rgParams.rgCreatorFollowedAppData['apps'].length )
-			{
-								var rgRecentAppIDs = rgParams.rgCreatorFollowedAppData['apps'];
-				var rgCreators = rgParams.rgCreatorFollowedAppData['creator'];
-				for( var i = 0; i < rgRecentAppIDs.length; i++ )
-				{
-										var iCreatorChoice = Math.floor( Math.random() * rgRecentAppIDs[i].filtered_clanids.length );
-					var iClanIDToMatch = rgRecentAppIDs[i].filtered_clanids[ iCreatorChoice ];
+            GHomepage.rgCuratedAppsData = rgParams.rgCuratedAppsData || {};
+            if (rgParams.rgCuratedAppsData['apps'] && rgParams.rgCuratedAppsData['apps'].length) {
+                var rgRecommendedAppIDs = v_shuffle(rgParams.rgCuratedAppsData['apps']);
+                for (var i = 0; i < rgRecommendedAppIDs.length; i++) {
+                    GHomepage.rgAppsRecommendedByCurators.push({
+                        appid: rgRecommendedAppIDs[i].appid,
+                        recommended_by_curator: true
+                    });
+                }
+            }
 
-										var creator = rgCreators['' + iClanIDToMatch];
-					GHomepage.rgRecentAppsByCreator.push( { appid: rgRecentAppIDs[i].appid, creator_info: creator } );
-				}
-			}
+            GHomepage.rgCreatorFollowedAppData = rgParams.rgCreatorFollowedAppData || [];
+            if (GHomepage.rgCreatorFollowedAppData && rgParams.rgCreatorFollowedAppData['apps'] && rgParams.rgCreatorFollowedAppData['apps'].length) {
+                                var rgRecentAppIDs = rgParams.rgCreatorFollowedAppData['apps'];
+                var rgCreators = rgParams.rgCreatorFollowedAppData['creator'];
+                for (var i = 0; i < rgRecentAppIDs.length; i++) {
+                                        var iCreatorChoice = Math.floor(Math.random() * rgRecentAppIDs[i].filtered_clanids.length);
+                    var iClanIDToMatch = rgRecentAppIDs[i].filtered_clanids[iCreatorChoice];
 
-			GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
-			GHomepage.rgUserNewsFriendsPurchased = rgParams.rgUserNewsFriendsPurchased || {};
-			GHomepage.rgTopSteamCurators = rgParams.rgTopSteamCurators || [];
-			GHomepage.nNumIgnoredCurators = rgParams.nNumIgnoredCurators || 0;
-			GHomepage.rgFriendRecommendations = v_shuffle( rgParams.rgFriendRecommendations ) || [];
-			GHomepage.rgRecommendedAppsByCreators = v_shuffle( rgParams.rgRecommendedAppsByCreators ) || [];
-		} catch( e ) { OnHomepageException(e); }
+                                        var creator = rgCreators['' + iClanIDToMatch];
+                    GHomepage.rgRecentAppsByCreator.push({appid: rgRecentAppIDs[i].appid, creator_info: creator});
+                }
+            }
+
+            GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
+            GHomepage.rgUserNewsFriendsPurchased = rgParams.rgUserNewsFriendsPurchased || {};
+            GHomepage.rgTopSteamCurators = rgParams.rgTopSteamCurators || [];
+            GHomepage.nNumIgnoredCurators = rgParams.nNumIgnoredCurators || 0;
+            GHomepage.rgFriendRecommendations = v_shuffle(rgParams.rgFriendRecommendations) || [];
+            GHomepage.rgRecommendedAppsByCreators = v_shuffle(rgParams.rgRecommendedAppsByCreators) || [];
+            GHomepage.rgRecommendedBySteamLabsApps = rgParams.rgRecommendedBySteamLabsApps || [];
+        } catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;
 		if ( GHomepage.bStaticDataReady )
@@ -326,7 +323,13 @@ GHomepage = {
 		// Recommended Curators
 		try {
 			GHomepage.RenderRecommendedCreatorApps();
-		} catch( e ) { OnHomepageException(e); }			
+		} catch( e ) { OnHomepageException(e); }
+
+		// Logged in
+        // Recommended by Steam Labs
+        try {
+		    GHomepage.RenderRecommendedBySteamLabsApps();
+        } catch ( e ) { OnHomepageException(e); }
 
 		// Sidebar
 		// Recommended tags
@@ -1073,7 +1076,7 @@ GHomepage = {
 		var $RecommendedCreators =  $J('.recommended_creators_ctn' );
 		$RecommendedCreators.hide();
 
-		var rgCapsules = GHomepage.FilterItemsForDisplay(
+        var rgCapsules = GHomepage.FilterItemsForDisplay(
 			GHomepage.rgRecommendedAppsByCreators, 'home', 4, 100, { games_already_in_library: false, dlc: false, localized: true, displayed_elsewhere: false }
 		);
 		
@@ -1122,8 +1125,30 @@ GHomepage = {
 				return $CapCtn;
 			},	'creator_recommendations', 4
 		);
-	},	
-	
+	},
+
+    RenderRecommendedBySteamLabsApps: function()
+    {
+        var $RecommendedBySteamLabs = $J('.recommended_by_steam_labs_ctn');
+
+        var rgCapsules = GHomepage.FilterItemsForDisplay(
+            GHomepage.rgRecommendedBySteamLabsApps, 'home', 4, 12, { games_already_in_library: false, dlc: false, localized: true, not_wishlisted: false }
+        );
+
+        if ( rgCapsules.length < 4 )
+        {
+            $RecommendedBySteamLabs.hide();
+            return;
+        }
+
+        GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecommendedBySteamLabs,
+            function( oItem, strFeature, rgOptions, nDepth )
+            {
+                var nAppId = oItem.appid;
+                return GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions, nDepth );
+            }, 'recommended_by_steam_labs', 4
+        );
+    },
 	
 	RenderTopVRApps: function()
 	{

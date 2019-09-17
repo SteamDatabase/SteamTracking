@@ -4677,4 +4677,8 @@ CAppearMonitor.prototype.TrackAppearance = function( elTarget )
 	this.fnOnAppear( elTarget );
 };
 
+CAppearMonitor.prototype.ClearElements = function()
+{
+	this.rgMonitoredElements = [];
+}
 

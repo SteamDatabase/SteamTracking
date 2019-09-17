@@ -172,6 +172,15 @@ function BanReview( id )
 	);
 }
 
+function BanReviewVoters( id )
+{
+	UserReview_Moderate_VoteBanUsers( id, 'https://steamcommunity.com',
+		function( results ) {
+			ShowWithFade( $( 'banned_voters_' + id ) );
+		}
+	);
+}
+
 function ClearReviewDevFlag( id )
 {
 	UserReview_ClearDeveloperFlag( id, 'https://steamcommunity.com',
@@ -198,6 +207,11 @@ function ViewReviewReports( id )
 function SelectedReviews_Ban()
 {
 	ApplyFuncOnSelectedItems( BanReview );
+}
+
+function SelectedReviews_BanVoters()
+{
+	ApplyFuncOnSelectedItems( BanReviewVoters );
 }
 
 function SelectedReviews_ClearReports()

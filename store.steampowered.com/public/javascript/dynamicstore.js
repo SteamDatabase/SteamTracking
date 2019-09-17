@@ -1856,6 +1856,9 @@ GStoreItemData = {
 		if ( rgAppData.virtual_reality && ApplicableSettings.virtual_reality && !Settings.virtual_reality )
 			return false;
 
+		if ( ApplicableSettings.not_wishlisted && !Settings.not_wishlished && GDynamicStore.BIsAppOnWishlist( appid ) )
+		    return false;
+
 		if ( rgAppData.tagids && rgAppData.tagids.length != 0 )
 		{
 			for ( var i = 0; i < rgAppData.tagids.length; ++i )

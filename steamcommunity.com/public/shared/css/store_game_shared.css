@@ -70,7 +70,9 @@
 }
 
 
-.sysreq_tabs {
+.sysreq_tabs,
+.discselect_tabs
+{
 	font-size: 12px;
 	padding-top: 8px;
 	padding-left: 5px;
@@ -80,7 +82,9 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 }
 
 
-.sysreq_tab {
+.sysreq_tab,
+.discselect_tab
+{
 	padding-left: 10px;
 	padding-right: 10px;
 	line-height: 20px;
@@ -90,21 +94,29 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 	cursor: pointer;
 }
 
-.sysreq_tab:hover {
+.sysreq_tab:hover,
+.discselect_tab:hover
+{
 	color: #ffffff;
 }
 
-.sysreq_tab.active {
+.sysreq_tab.active,
+.discselect_tab.active
+{
 	background-color: #18222e;
 	color: #67c1f5;
 	cusor: default;
 }
 
-.sysreq_contents .sysreq_content {
+.sysreq_contents .sysreq_content,
+.music_album_track_list_contents .music_album_track_listing_ctn 
+{
 	display: none;
 }
 
-.sysreq_contents .sysreq_content.active {
+.sysreq_contents .sysreq_content.active,
+.music_album_track_list_contents .music_album_track_listing_ctn 
+{
 	display: block;
 }
 

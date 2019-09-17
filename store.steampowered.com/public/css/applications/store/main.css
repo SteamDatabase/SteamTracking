@@ -3235,6 +3235,51 @@ iframe.steamTVLogin {
     flex-basis: auto;
     max-height: 32px; } }
 
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .STV_BroadcastController {
+  margin: 0; }
+
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .LeftSpacer {
+  display: none; }
+
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlsButtons {
+  width: fit-content; }
+
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.videoControlGoLive .SVGIcon_Button {
+  margin-left: 0; }
+
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .STV_BroadcastSettings .videoControlButton.videoControlFitWidth {
+  width: fit-content; }
+
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoTimelineMain {
+  margin-top: 0; }
+
+@media screen and (max-width: 1735px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.videoControlJump, .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.VideoSettings {
+    display: none; } }
+
+@media screen and (max-width: 1434px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .BroadcastVolumeSlider {
+    display: none; }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .BroadcastVolumeControl.ShowVolumeSlider, .videoContainer.GameDetailsPlayer:not(.TheaterMode) .BroadcastVolumeControl_FixedLayout {
+    width: initial; } }
+
+@media screen and (max-width: 1275px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton {
+    margin-top: 2px;
+    margin-bottom: 2px; }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.videoControlGoLive:not(.isLiveEdge) {
+    margin-left: -10px; }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.buttonPlayPause {
+    width: 24px;
+    height: 24px; }
+    .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.buttonPlayPause .SVGIcon_Pause {
+      margin-left: 3px;
+      margin-top: 3px; } }
+
+@media screen and (max-width: 1180px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.videoControlGoLive {
+    display: none; } }
+
 .crossfade {
   position: relative;
   overflow: hidden; }
@@ -3578,7 +3623,7 @@ iframe.steamTVLogin {
   justify-content: flex-start; }
 
 .partnereventshared_SaveBackground_V0mbI .partnereventshared_FlexRowWrapFlexStartContainer_tyP_c {
-  background: #3a3f48;
+  background: #353941;
   padding: 12px;
   margin-top: 20px;
   margin-bottom: 20px; }
@@ -3640,7 +3685,8 @@ b {
 .partnereventshared_EventSectionTitleCtn_onqWK {
   display: flex;
   flex-direction: row;
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  position: relative; }
 
 .partnereventshared_EventSectionTitle_Idd_A {
   color: #ffffff;
@@ -3755,8 +3801,9 @@ b {
   border-radius: 3px;
   line-height: 26px;
   text-align: center;
-  background: #32373f;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); }
+  background: #3d434d;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none; }
   .partnereventshared_EditPreviewButton_1FhZQ:hover {
     cursor: pointer;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
@@ -3936,7 +3983,7 @@ b {
   padding: 10px; }
 
 .localdateandtime_DateAndTime_2V6GL {
-  display: inline;
+  display: flex;
   white-space: nowrap; }
   .localdateandtime_DateAndTime_2V6GL span.localdateandtime_At_Fn5EU {
     margin: 0px 4px;
@@ -3955,6 +4002,14 @@ b {
     text-transform: uppercase;
     font-weight: 500;
     margin-right: 4px; }
+
+.localdateandtime_RightSideTitles_4LAnP {
+  font-size: 12px;
+  font-weight: 200;
+  color: #b1b4b9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px; }
 
 body.modals_BodyNoScroll_32ZiC {
   overflow-y: hidden;
@@ -4129,6 +4184,7 @@ body.modals_BodyNoScroll_32ZiC {
     margin: 4px 0px;
     background-color: #1e2025;
     border: solid 1px #000000;
+    outline-width: 0;
     box-shadow: 1px 1px rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     color: grey; }
@@ -4303,11 +4359,14 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   overflow: hidden; }
 
 .partnereventdisplay_EventBackgroundBlur_stsss {
-  filter: blur(45px) saturate(0.9);
+  filter: blur(32px) saturate(0.9);
   background-repeat: no-repeat;
   width: 100%;
   height: -webkit-fill-available;
-  opacity: 0.4; }
+  opacity: 0.4;
+  position: absolute; }
+  .LowPerfMode .partnereventdisplay_EventBackgroundBlur_stsss {
+    display: none; }
 
 .partnereventdisplay_DetailArtworkAgeAppropriate_1p_ls {
   position: relative; }
@@ -4332,17 +4391,22 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   position: relative; }
 
 .partnereventdisplay_EventBody_3aht- {
-  margin-top: -78px;
+  margin-top: -6vw;
   width: 100%;
   min-height: 600px;
   background-color: #25282e;
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  border-radius: 4px; }
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden; }
+  @media screen and (min-width: 1920px) {
+    .partnereventdisplay_EventBody_3aht- {
+      margin-top: -113px; } }
   .partnereventdisplay_EventBody_3aht- .partnereventdisplay_EventBackgroundBlur_stsss {
     position: absolute;
     z-index: 0;
-    filter: blur(117px) saturate(0.9);
+    filter: blur(32px) saturate(0.9);
     opacity: 0.3;
     left: 0; }
 
@@ -4353,8 +4417,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 
 .partnereventdisplay_EventCoverImageCtn_FZiaq {
   overflow: hidden;
-  height: 25vw;
-  min-height: 350px;
+  height: 26vw;
+  max-height: 510px;
   width: 100%;
   position: relative; }
 
@@ -4362,26 +4426,56 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   height: 12vw;
   min-height: auto; }
 
-.partnereventdisplay_EventCoverImage_17G2y {
+.partnereventdisplay_EventCoverImage_17G2y,
+.partnereventdisplay_EventCoverImageBackground_2-Iyg {
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 1000px;
+  height: 622px;
   width: 100%;
-  min-width: 1400px;
-  top: -23%;
-  position: absolute; }
-  .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImage_17G2y {
+  top: -22%;
+  max-width: 1920px;
+  position: absolute;
+  -webkit-mask-image: url(../../../images/applications/store/2f400342c2a3683b788fdacf946a9430.png);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-image: url(../../../images/applications/store/2f400342c2a3683b788fdacf946a9430.png);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%; }
+  .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImage_17G2y, .partnereventdisplay_InLibraryView_3_SEi
+  .partnereventdisplay_EventCoverImageBackground_2-Iyg {
+    display: block;
     min-width: unset;
     top: unset;
     background-size: cover;
     background-position-x: center;
+    background-position-y: -47px;
     background-repeat: no-repeat;
-    height: 278px;
+    height: 175px;
     width: 100%;
     opacity: 1;
     position: unset;
     border-top-left-radius: 4px;
-    border-top-right-radius: 4px; }
+    border-top-right-radius: 4px;
+    -webkit-mask-image: unset;
+    mask-image: unset; }
+    @media screen and (max-width: 910px) {
+      .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImage_17G2y, .partnereventdisplay_InLibraryView_3_SEi
+      .partnereventdisplay_EventCoverImageBackground_2-Iyg {
+        height: 19vw;
+        background-position-y: -5vw; } }
+
+.partnereventdisplay_EventCoverImageBackground_2-Iyg {
+  background-color: #25292e;
+  object-fit: cover;
+  object-position: center top; }
+
+.partnereventdisplay_EventCoverImageFuzz_2EWL0 {
+  position: absolute;
+  filter: blur(30px);
+  height: 622px;
+  width: 100%; }
+  .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImageFuzz_2EWL0 {
+    display: none; }
 
 .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImage_17G2y.partnereventdisplay_no_title_artwork_1_wDF {
   height: 100%;
@@ -4391,37 +4485,20 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 
 .partnereventdisplay_LibraryEventTitleContainer_ZHAfj {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
 
 .partnereventdisplay_EventCoverImageBlr_3xNob {
   justify-content: center;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  height: 32vw;
+  object-fit: cover;
+  object-position: center top; }
+  @media screen and (min-width: 1920px) {
+    .partnereventdisplay_EventCoverImageBlr_3xNob {
+      height: 614px; } }
 
-/* Parallax stuff ========================================================== */
-/*
-.EventCoverImage {
-	background-size: contain;
-	background-repeat: no-repeat;
-	left: calc(50% - 960px);
-	top: 0;
-  right: 0;
-  bottom: 0;
-	height: 1000px;
-	width: 1920px;
-	position: absolute;
-	perspective: 1px;
-	transform-origin: top center;
-	transform: translateZ(-1px) translateY(-56vh) scale(1.6);
-}
-
-/* if in preview mode, we need to move the background image down to make room for the preview bar */
-/*
-.EventDetailsPageContainer.Previewing .EventCoverImage {
-	transform: translateZ(-1px) translateY(-582px) scale(2);
-}
-
-/* end parallax stuff ========================================================== */
 .partnereventdisplay_CoverImageGradient_1_x4o {
   position: absolute;
   bottom: 0px;
@@ -4435,7 +4512,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .partnereventdisplay_EventDetailTitleDesc_3Ej2u {
   text-align: left;
   width: 280px;
-  padding: 7px 24px 24px 0px;
+  padding: 3px 24px 24px 0px;
   align-items: flex-start; }
 
 @media screen and (max-width: 910px) {
@@ -4462,16 +4539,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   body .partnereventdisplay_EventDetailsDescription_2orfV .partnereventdisplay_EventDetailsBody_A_A2B {
     border-right: none; } }
 
-@media screen and (max-width: 650px) {
-  body .partnereventdisplay_EventCoverImage_17G2y {
-    width: 221%;
-    min-width: unset; }
-  body .partnereventdisplay_EventCoverImageCtn_FZiaq {
-    height: 53vw;
-    min-height: unset; }
-  body .partnereventdisplay_EventBody_3aht- {
-    margin-top: -12vw; } }
-
 .partnereventdisplay_EventDetailsSticky_3IxVZ {
   position: -webkit-sticky;
   position: sticky;
@@ -4479,7 +4546,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 
 .partnereventdisplay_EventDetailsGame_1JqXp {
   font-size: 18px;
-  color: #DADADB;
+  color: #eaeaeb;
   width: 280px;
   height: 130px;
   background-color: #000000;
@@ -4548,14 +4615,14 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   letter-spacing: 1px; }
 
 .partnereventdisplay_EventDetailsDescription_2orfV {
-  width: calc(760px - 48px);
   padding: 24px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  flex-grow: 1; }
 
 .partnereventdisplay_EventDetailTitle_TqEPC {
   font-size: 33px;
   font-weight: 200;
-  color: #DADADB; }
+  color: #eaeaeb; }
   .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventDetailTitle_TqEPC {
     font-size: 24px;
     margin-top: 12px; }
@@ -4565,6 +4632,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   color: #ADAEB2; }
 
 .partnereventdisplay_EventDetailsBody_A_A2B {
+  padding-right: 24px;
   font-size: 14px;
   line-height: 19px;
   border-right: 1px solid #464953;
@@ -4574,7 +4642,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 
 .partnereventdisplay_LibraryEventBodyContainer_32mHv .partnereventdisplay_EventDetailsBody_A_A2B {
   border-right: unset;
-  position: relative; }
+  position: relative;
+  padding-right: unset; }
 
 .partnereventdisplay_EventDetailsBody_A_A2B img {
   max-width: 100%; }
@@ -4619,15 +4688,16 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   overflow: hidden; }
   .partnereventdisplay_LibraryEventBodyContainer_32mHv .partnereventdisplay_EventBackgroundBlur_stsss {
     position: absolute;
-    opacity: 0.2; }
+    opacity: 0.4; }
 
 .partnereventdisplay_EventDetailTitleContainer_3z2NY {
   padding: 24px;
   position: relative;
   z-index: 2; }
   .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventDetailTitleContainer_3z2NY {
-    padding: 16px;
-    background-color: #0007; }
+    padding: 16px 24px 12px 24px;
+    /* background-color: hsla(229, 5%, 47%, 0.2); */
+    background: radial-gradient(ellipse at bottom center, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0) 80%); }
 
 .partnereventdisplay_RightSideTitles_efy3k, .partnereventdisplay_DisplayAdminPanel_Title_1lmj3 {
   font-size: 11px;
@@ -4644,7 +4714,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventDetailTimeInfo_2KsEb {
     font-size: 12px;
     margin-bottom: 0;
-    color: #6c767f;
+    color: #868f98;
     margin-left: 4px; }
     .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventDetailTimeInfo_2KsEb div {
       display: flex; }
@@ -4733,6 +4803,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .partnereventdisplay_EditorStatsRow_2Seco {
   display: flex;
   justify-content: space-between; }
+
+.partnereventdisplay_SteamBlog_1rafn {
+  visibility: hidden; }
 
 body {
   color: #969696;
@@ -4951,10 +5024,16 @@ img {
   padding-left: 1em;
   padding-inline-start: 40px;
   margin-top: 14px;
-  margin-bottom: 14px; }
+  margin-bottom: 14px;
+  display: inline-block; }
 
 .eventbbcodeparser_UnorderList_3995Y > li {
   list-style-position: outside; }
+
+ol {
+  padding-left: 3em;
+  margin-top: 14px;
+  margin-bottom: 14px; }
 
 Table {
   display: table;
@@ -5120,6 +5199,9 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   justify-content: space-between;
   padding: 24px;
   background-image: radial-gradient(ellipse at top center, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0) 80%); }
+  @media screen and (max-width: 600px) {
+    .discussionwidget_Container_mKmrO {
+      padding: 4px; } }
 
 .discussionwidget_VoteContainer_3Kelh,
 .discussionwidget_DiscussContainer_16xC0,
@@ -5140,13 +5222,24 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
     .discussionwidget_VoteContainer_3Kelh,
     .discussionwidget_ShareContainer_3ctGq,
     .discussionwidget_DiscussContainer_16xC0 {
-      background: transparent;
       padding: 0px; } }
+
+@media screen and (max-width: 910px) {
+  .discussionwidget_VoteContainer_3Kelh .discussionwidget_DiscussionButton_rHz7G {
+    margin-left: 0px; } }
+
+.discussionwidget_DiscussContainer_16xC0 {
+  margin-right: 0px; }
+  @media screen and (max-width: 910px) {
+    .discussionwidget_DiscussContainer_16xC0 .discussionwidget_DiscussionButton_rHz7G {
+      padding: 6px 11px 8px 11px;
+      margin-left: 0px; } }
 
 .discussionwidget_ShareContainer_3ctGq {
   display: flex;
   white-space: nowrap;
-  align-items: center; }
+  align-items: center;
+  margin-right: 0px; }
 
 .discussionwidget_DiscussIcon_1HBhp {
   width: 22px;
@@ -5157,8 +5250,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
     .discussionwidget_DiscussIcon_1HBhp {
       margin-right: 0px;
       margin-left: 0px;
-      left: 15px;
-      position: absolute; } }
+      left: 15px; } }
 
 .discussionwidget_linkField_3Vmkn {
   font-size: 12px; }
@@ -5226,7 +5318,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   padding-top: 7px;
   margin-right: 12px;
   margin-left: 5px;
-  margin-top: 5px;
+  margin-top: 3px;
   margin-bottom: 5px;
   height: 20px;
   position: relative;
@@ -5234,14 +5326,19 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   @media screen and (max-width: 910px) {
     .discussionwidget_VoteCount_3csl-,
     .discussionwidget_DiscussionCount_QQy4B {
-      display: none; } }
+      margin-right: 6px; } }
+
+.discussionwidget_DiscussionCount_QQy4B {
+  display: flex; }
+  .discussionwidget_DiscussionCount_QQy4B .discussionwidget_DiscussIcon_1HBhp {
+    margin-left: 4px;
+    margin-right: 5px;
+    margin-top: 1px; }
 
 .discussionwidget_DiscussionButton_rHz7G {
   display: flex;
   white-space: nowrap;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  margin-top: 5px; }
+  margin: 5px; }
   @media screen and (max-width: 910px) {
     .discussionwidget_DiscussionButton_rHz7G .discussionwidget_DiscussionButtonText_3P2Xe {
       display: none; } }
@@ -5298,7 +5395,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
 .discussionwidget_VoteUpStaticIcon_Sf3ur {
   width: 22px;
   height: 22px;
-  margin-right: 12px;
+  margin-right: 6px;
   vertical-align: bottom; }
 
 .discussionwidget_VoteButtonSelected_2OXBS {
@@ -5753,12 +5850,6 @@ textarea:-webkit-autofill:focus,
   .eventrow_OtherEvents_EventCtn_1MwNf:hover .eventrow_OtherEvents_MainImage_3_wKb {
     transform: scale(1.1); }
 
-@media screen and (max-width: 500px) {
-  .eventrow_OtherEvents_EventCtn_1MwNf:not(:first-child) {
-    display: none; }
-  a.eventrow_OtherEvents_EventCtn_1MwNf:not(:last-child) {
-    margin-right: 0px; } }
-
 .eventrow_OtherEvents_BGImage_2pPj9 {
   width: 100%;
   height: 100%;
@@ -5913,9 +6004,13 @@ textarea:-webkit-autofill:focus,
   padding: 0px 20px;
   margin: 0 auto;
   pointer-events: none; }
+  @media screen and (max-width: 910px) {
+    .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
+      padding: 0px 10px 0px 10px; } }
 
 .apppartnereventspage_PartnerEvent_1KsYS {
-  max-width: 860px;
+  max-width: 848px;
+  overflow: hidden;
   margin: 56px auto 16px auto;
   position: relative;
   background-color: #25282e;
@@ -5946,7 +6041,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   position: sticky;
   position: -webkit-sticky;
   top: 28px;
-  margin-bottom: -138px;
+  margin-bottom: -196px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -5955,11 +6050,27 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   pointer-events: none;
   /* fix shared styles to not use z-index */
   z-index: 1000; }
+  .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoGameLink_2GfPe {
+    margin-bottom: -138px; }
+  @media screen and (max-width: 910px) {
+    .apppartnereventspage_ControlSection_2pA5C {
+      top: 66px; } }
   .apppartnereventspage_ControlSection_2pA5C .apppartnereventspage_ControlSectionWidth_3yfs7 {
     display: flex;
     flex-direction: column;
     margin-left: auto;
     pointer-events: initial; }
+    .apppartnereventspage_ControlSection_2pA5C .apppartnereventspage_ControlSectionWidth_3yfs7 .apppartnereventspage_GameArt_2a5oS {
+      width: 48px;
+      height: 48px; }
+      .apppartnereventspage_ControlSection_2pA5C .apppartnereventspage_ControlSectionWidth_3yfs7 .apppartnereventspage_GameArt_2a5oS img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: filter .1s ease-in-out; }
   .apppartnereventspage_ControlSection_2pA5C > *:not(:first-child) {
     margin-left: 8px; }
 
@@ -5983,6 +6094,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     border: 1px solid #9e9ead; }
     .apppartnereventspage_ScrollButton_1t_97:hover svg polygon {
       fill: white; }
+    .apppartnereventspage_ScrollButton_1t_97:hover.apppartnereventspage_GameArt_2a5oS img {
+      filter: brightness(1.25); }
   .apppartnereventspage_ScrollButton_1t_97.apppartnereventspage_Up_3vBD2 {
     padding-top: 3px; }
   .apppartnereventspage_ScrollButton_1t_97.apppartnereventspage_Down_3VePR {
@@ -6080,6 +6193,56 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .events_EventsSummariesCtn_1MHN3 {
   display: flex;
   margin-bottom: 20px; }
+
+.eventmoderation_AnalysisCtn_1YGfW {
+  padding-left: 10px; }
+
+.eventmoderation_AnalysisMissing_rH1Dt {
+  color: darkred; }
+
+.eventmoderation_Tile_3oU1y {
+  background-color: darkgrey;
+  display: flex;
+  flex-direction: row;
+  margin: 10px; }
+
+.eventmoderation_TileEventOtherType_3LUrW {
+  color: darkred; }
+
+.eventmoderation_TileCapsule_36tP8 {
+  width: 400px;
+  height: 255px; }
+
+.eventmoderation_TileDetails_2mRup {
+  display: flex;
+  flex-direction: column;
+  color: black; }
+
+.eventmoderation_TileAppInfo_2IJ__ {
+  padding: 10px; }
+
+.eventmoderation_TileAppInfoTitle_2X75q {
+  font-weight: bolder; }
+
+.eventmoderation_TileAppInfoImage_1rVmL {
+  width: 150px;
+  height: auto; }
+
+.eventmoderation_TileSplit_aaFuC {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.eventmoderation_TileTitle_yJw1i {
+  font-weight: bold;
+  font-size: 14px; }
+
+.storepartnerevent_main_GClP_ {
+  height: 100vh;
+  overflow-y: scroll; }
+
+.eventbackfill_error_18okr {
+  color: darkred; }
 
 /* reset browser styles */
 button.DialogButton {
@@ -6345,7 +6508,8 @@ button.DialogButton::-moz-focus-inner {
   text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
-  margin-right: 26px; }
+  margin-right: 26px;
+  margin-bottom: 12px; }
 
 .DialogSubHeader {
   font-weight: 300;
@@ -6382,11 +6546,14 @@ button.DialogButton::-moz-focus-inner {
   margin-bottom: 32px;
   user-select: none; }
 
-.DialogBodyText a {
+.DialogBodyText p {
+  user-select: text; }
+
+.DialogBodyText p a {
   color: #969696;
   text-decoration: underline; }
 
-.DialogBodyText a:hover {
+.DialogBodyText p a:hover {
   color: #ffffff; }
 
 .DialogLabel {

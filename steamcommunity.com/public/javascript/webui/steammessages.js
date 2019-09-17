@@ -1220,7 +1220,73 @@
             r
           );
         })(n.Message)),
-        m = (function(i) {
+        m = (n.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return n.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            s.d(r, i),
+            (r.prototype.voted_up = function() {
+              return n.Message.getField(this, 1);
+            }),
+            (r.prototype.set_voted_up = function(e) {
+              n.Message.setField(this, 1, e);
+            }),
+            (r.prototype.voted_down = function() {
+              return n.Message.getField(this, 2);
+            }),
+            (r.prototype.set_voted_down = function(e) {
+              n.Message.setField(this, 2, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var i = {
+                voted_up: n.Message.getField(t, 1),
+                voted_down: n.Message.getField(t, 2)
+              };
+              return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new n.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_voted_up(t.readBool());
+                    break;
+                  case 2:
+                    e.set_voted_down(t.readBool());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new n.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i;
+              void 0 !== (i = n.Message.getField(e, 1)) && t.writeBool(1, i),
+                void 0 !== (i = n.Message.getField(e, 2)) && t.writeBool(2, i);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CCommunity_GetClanAnnouncementVoteForUser_Response";
+            }),
+            r
+          );
+        })(n.Message)),
+        b = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1289,7 +1355,7 @@
             r
           );
         })(n.Message),
-        b = (n.Message,
+        B = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -1350,7 +1416,7 @@
             r
           );
         })(n.Message)),
-        B = (n.Message,
+        w = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -1464,7 +1530,7 @@
             r
           );
         })(n.Message)),
-        w = (function(i) {
+        z = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1473,20 +1539,20 @@
           return (
             s.d(r, i),
             (r.prototype.results = function() {
-              return n.Message.getRepeatedWrapperField(this, B, 1);
+              return n.Message.getRepeatedWrapperField(this, w, 1);
             }),
             (r.prototype.set_results = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_results = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, B, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, w, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                results: n.Message.toObjectList(t.results(), B.toObject, e)
+                results: n.Message.toObjectList(t.results(), w.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -1499,8 +1565,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new B();
-                    t.readMessage(i, B.deserializeBinaryFromReader),
+                    var i = new w();
+                    t.readMessage(i, w.deserializeBinaryFromReader),
                       e.add_results(i);
                     break;
                   default:
@@ -1516,7 +1582,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.results()).length &&
-                t.writeRepeatedMessage(1, i, B.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, w.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CCommunity_GetBestEventsForUser_Response";
@@ -1524,7 +1590,7 @@
             r
           );
         })(n.Message),
-        z = (n.Message,
+        R = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -1624,7 +1690,7 @@
             r
           );
         })(n.Message)),
-        R = (function(i) {
+        k = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1691,18 +1757,26 @@
         (o.RateClanAnnouncement = function(e, t) {
           return e.SendMsg("Community.RateClanAnnouncement#1", t, v, {});
         }),
+        (o.GetClanAnnouncementVoteForUser = function(e, t) {
+          return e.SendMsg(
+            "Community.GetClanAnnouncementVoteForUser#1",
+            t,
+            m,
+            {}
+          );
+        }),
         (o.GetUserPartnerEventNews = function(e, t) {
-          return e.SendMsg("Community.GetUserPartnerEventNews#1", t, b, {
+          return e.SendMsg("Community.GetUserPartnerEventNews#1", t, B, {
             bConstMethod: !0
           });
         }),
         (o.GetBestEventsForUser = function(e, t) {
-          return e.SendMsg("Community.GetBestEventsForUser#1", t, w, {
+          return e.SendMsg("Community.GetBestEventsForUser#1", t, z, {
             bConstMethod: !0
           });
         }),
         (o.MarkPartnerEventsForUser = function(e, t) {
-          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, R, {});
+          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, k, {});
         });
     },
     "/511": function(e, t, i) {
@@ -34820,10 +34894,10 @@
             (r.prototype.set_wine_version = function(e) {
               n.Message.setField(this, 9, e);
             }),
-            (r.prototype.ping_ms_from_cell_search = function() {
+            (r.prototype.deprecated_10 = function() {
               return n.Message.getField(this, 10);
             }),
-            (r.prototype.set_ping_ms_from_cell_search = function(e) {
+            (r.prototype.set_deprecated_10 = function(e) {
               n.Message.setField(this, 10, e);
             }),
             (r.prototype.obfuscated_private_ip = function(e) {
@@ -35108,7 +35182,7 @@
                     !1
                   ),
                   wine_version: n.Message.getField(t, 9),
-                  ping_ms_from_cell_search: n.Message.getField(t, 10),
+                  deprecated_10: n.Message.getField(t, 10),
                   obfuscated_private_ip:
                     (i = t.obfuscated_private_ip(!1)) && a.d.toObject(e, i),
                   deprecated_public_ip: n.Message.getField(t, 20),
@@ -35200,7 +35274,7 @@
                     e.set_wine_version(t.readString());
                     break;
                   case 10:
-                    e.set_ping_ms_from_cell_search(t.readUint32());
+                    e.set_deprecated_10(t.readUint32());
                     break;
                   case 11:
                     var i = new a.d();

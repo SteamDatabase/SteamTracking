@@ -104,22 +104,6 @@ LocalizationReady("friendsui", "english", {
   Broadcast_CSGO_Stage2: "Legends Stage - September 12 – 16",
   Broadcast_CSGO_Stage3: "Champions Stage - September 20 – 23",
 
-  BroadcastWatch_MinBrowser:
-    "Your web browser does not support the minimum set of features required to watch this broadcast",
-  BroadcastWatch_RequestFailed: "Failed to load this broadcast",
-  BroadcastWatch_NotAvailable: "This broadcaster is offline",
-  BroadcastWatch_WaitingForResponse: "Waiting for approval to watch",
-  BroadcastWatch_WaitingForStart: "This broadcast is starting",
-  BroadcastWatch_WaitingForReconnect: "Reconnecting to this broadcast",
-  BroadcastWatch_ServerLoad:
-    "Steam is experiencing high broadcast load and is currently unable to reserve a server spot to start this broadcast. Please try again in a few minutes.",
-  BroadcastWatch_SystemNotSupported:
-    "Steam Broadcasting is not currently supported on this broadcaster's system",
-  BroadcastWatch_UserRestricted:
-    "This broadcaster is currently restricted from broadcasting on Steam",
-  BroadcastWatch_PoorUploadQuality:
-    "This broadcaster is currently unable to maintain a stable broadcast connection to Steam",
-
   ActiveVoiceChat: "VOICE CHAT:",
   VoiceChatConnecting: "Connecting...",
   VoiceChatConnectingHelp: "Get help with Voice Chat connection issues",

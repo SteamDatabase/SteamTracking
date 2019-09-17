@@ -753,7 +753,12 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 @media screen and (max-width: 910px)
 {
     html.responsive .newmodal_header .title_text {
-        padding: 32px 3% 0px 3%;
+        padding: 32px 15px 0px 15px;
+    }
+    html.responsive .newmodal_content {
+
+        max-width: 646px;
+        min-width: 280px;
     }
 }
 
@@ -784,6 +789,10 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	opacity: 1;
 }
 
+#ShareModal {
+    width: 290px;
+}
+
 .newmodal_content_border {
 	padding: 0 1px 1px 1px;
     display: flex;
@@ -791,8 +800,6 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 
 .newmodal_content {
 
-    max-width: 646px;
-    min-width: 280px;
     width: 100%;
 	overflow: auto;
 	word-wrap: break-word;
@@ -2068,15 +2075,22 @@ body.v6 #footer_nav .popup_menu .hr{
 .ds_flag {
 	position: absolute;
 	left: 0;
-	top: 42px;
+	top: 14px;
 	font-size: 10px;
 	color: #111111;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
 
 	height: 18px;
 	line-height: 19px;
 	padding: 0 0 0 18px;
 	white-space: nowrap;
 	z-index: 5;
+}
+.store_main_capsule .ds_flag {
+    top: 42px;
+}
+.broadcast_capsule .ds_flag {
+    top: 28px;
 }
 
 .ds_flag.ds_owned_flag {
@@ -2321,6 +2335,6 @@ body.v6 #footer_nav .popup_menu .hr{
 @media screen and (max-width: 910px)
 {
 	html.responsive .newmodal_content {
-		padding: 15px 3%;
+		padding: 15px;
 	}
 }

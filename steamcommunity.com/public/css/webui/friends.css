@@ -3727,6 +3727,53 @@ iframe.steamTVLogin {
     flex-basis: auto;
     max-height: 32px; } }
 
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .STV_BroadcastController {
+  margin: 0; }
+
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .LeftSpacer {
+  display: none; }
+
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlsButtons {
+  width: fit-content; }
+
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.videoControlGoLive .SVGIcon_Button {
+  margin-left: 0; }
+
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .STV_BroadcastSettings .videoControlButton.videoControlFitWidth {
+  width: fit-content; }
+
+.videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoTimelineMain {
+  margin-top: 0; }
+
+@media screen and (max-width: 1735px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.videoControlJump,
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.VideoSettings {
+    display: none; } }
+
+@media screen and (max-width: 1434px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .BroadcastVolumeSlider {
+    display: none; }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .BroadcastVolumeControl.ShowVolumeSlider,
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .BroadcastVolumeControl_FixedLayout {
+    width: initial; } }
+
+@media screen and (max-width: 1275px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton {
+    margin-top: 2px;
+    margin-bottom: 2px; }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.videoControlGoLive:not(.isLiveEdge) {
+    margin-left: -10px; }
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.buttonPlayPause {
+    width: 24px;
+    height: 24px; }
+    .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.buttonPlayPause .SVGIcon_Pause {
+      margin-left: 3px;
+      margin-top: 3px; } }
+
+@media screen and (max-width: 1180px) {
+  .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.videoControlGoLive {
+    display: none; } }
+
 .StoreSaleWidgetContainer {
   display: flex;
   flex-direction: row;
@@ -7380,7 +7427,8 @@ button.DialogButton::-moz-focus-inner {
   text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
-  margin-right: 26px; }
+  margin-right: 26px;
+  margin-bottom: 12px; }
 
 .DialogSubHeader {
   font-weight: 300;

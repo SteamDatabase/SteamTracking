@@ -4584,7 +4584,19 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('cart_price_summary_shipping').style.display =  'none';
 				$('review_shipping_value').style.display = 'none';
 			}
-				
+
+			if ( price_data.formattedImportFee && price_data.formattedImportFee != '' )
+			{
+				$('review_import_fee_value').innerHTML = price_data.formattedImportFee;
+				$('cart_price_summary_import_fee').style.display = 'block';
+				$('review_import_fee_value').style.display = 'block';
+			}
+			else
+			{
+				$('cart_price_summary_import_fee').style.display =  'none';
+				$('review_import_fee_value').style.display = 'none';
+			}			
+
 			if ( price_data.base )
 				$('review_total_value').innerHTML = price_data.formattedTotal;
 			else

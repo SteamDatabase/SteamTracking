@@ -649,7 +649,6 @@ a.home_headercap:hover {
 }
 
 
-
 /*
  * DISCOVERY QUEUE
  */
@@ -2347,6 +2346,100 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
 	font-size: 10px;
 }
 
+/*
+ * Recommended by Steam Labs widget
+ */
+.recommended_by_steam_labs_ctn
+{
+    position: relative;
+}
+
+.recommended_by_steam_labs_ctn .left_block
+{
+    flex-direction: column;
+    width: 40%;
+    padding-top: 50px;
+}
+
+.recommended_by_steam_labs_ctn .pad_block
+{
+    width: 0%;
+}
+
+.recommended_by_steam_labs_ctn .right_block {
+    width: 60%;
+    flex-direction: column;
+    justify-content: right;
+}
+
+.recommended_by_steam_labs_ctn .flex-container
+{
+    display: flex;
+    height: 140px;
+}
+
+body.v6 .recommended_by_steam_labs_ctn h2 {
+  margin-bottom: 10px;
+  color: #ffffff66;
+}
+
+.recommended_by_steam_labs_ctn .detail_text {
+  text-transform: unset;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  text-align: right;
+  letter-spacing: 0em;
+  max-width: 275px;
+  float: right;
+  padding-right: 240px;
+  padding-bottom: 50px;
+}
+
+.recommended_by_steam_labs_ctn h1 {
+  text-transform: uppercase;
+  color: #eee;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.07em;
+	z-index: -1;
+}
+
+.recommended_by_steam_labs_ctn .btnv6_white_transparent { 
+		z-index: 10;
+}
+
+.recommended_by_steam_labs_ctn .btn_uppercase > span {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+}
+
+.foreground_img_ctn {
+	perspective: 60em;
+	position: absolute;
+  width: 240px;
+	height: 48px;
+}
+
+.recommended_by_steam_labs_fore_img {
+	position: absolute;
+	transform: rotateY(-40deg) translateY(25px) translateZ(20px); 
+	height: 93px;
+	box-shadow: 0px 0px 0px rgba(28, 95, 138);
+}
+	
+.recommended_by_steam_labs_back_img {
+	position: absolute;
+	top: 0;
+	display: none;
+}
 
 /* Discovery queue widget */
 
@@ -2427,13 +2520,10 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
 	color: #fff;
 }
 
-
-
 .home_specials_grid .store_capsule {
 	width: 133px;
 	margin: 7px 8px 7px 0;
 }
-
 
 /* Top sellers (not logged in) */
 .home_top_sellers_area .store_capsule {

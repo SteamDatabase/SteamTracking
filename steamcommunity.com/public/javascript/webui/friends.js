@@ -24331,11 +24331,9 @@
             });
           }),
           (e.prototype.GetStoreCapsuleInfo = function(e) {
-            if (!this.m_mapAppIDToInfo.has(e)) {
-              var t = new v(e);
-              this.m_mapAppIDToInfo.set(e, t);
-            }
-            return this.m_mapAppIDToInfo.get(e);
+            return this.m_mapAppIDToInfo.has(e)
+              ? this.m_mapAppIDToInfo.get(e)
+              : new v(e);
           }),
           (e.prototype.BIsAppidLoaded = function(e) {
             return (
@@ -24518,7 +24516,7 @@
               i = e.discount_percent;
             return O.createElement(
               "div",
-              { style: { display: "flex" } },
+              { style: { display: "flex", flexWrap: "wrap" } },
               O.createElement(
                 "div",
                 { className: "StoreSalePriceActionWidgetContainer" },
@@ -25450,7 +25448,8 @@
               s = "videoContainer";
             r || (s += " HidePlayerControls"),
               t && (s += " VideoPaused"),
-              this.state.bFullscreen && (s += " fullscreenVideo");
+              this.state.bFullscreen && (s += " fullscreenVideo"),
+              this.props.classes && (s += " " + this.props.classes);
             var c = [];
             !this.state.bFullscreen &&
               this.props.actions &&
@@ -26005,7 +26004,8 @@
                 "div",
                 {
                   className:
-                    "videoControlButton" + (t ? " VideoSettingsOpen" : ""),
+                    "videoControlButton VideoSettings " +
+                    (t ? " VideoSettingsOpen" : ""),
                   onClick: this.OnVideoControlClick,
                   ref: this.bindSettingsButton
                 },
@@ -26016,7 +26016,10 @@
                 s.map(function(e) {
                   return O.createElement(
                     "div",
-                    { key: e.key, className: "videoControlButton" },
+                    {
+                      key: e.key,
+                      className: "videoControlButton videoControlFitWidth"
+                    },
                     e
                   );
                 }),
@@ -65198,7 +65201,7 @@
         (n.onKeyDown = function(e) {
           27 == e.keyCode && t.onEscKeypress();
         }),
-        (n.onClick = function(e) {
+        (n.onMouseDown = function(e) {
           e.currentTarget !== e.target ||
             t.bDisableBackgroundDismiss ||
             t.onEscKeypress();
@@ -66613,7 +66616,11 @@
         }
         return (
           (e.prototype.RegisterDropRegion = function(e) {
-            this.m_rgDropRegions.push(e);
+            this.m_rgDropRegions.push(e),
+              this.m_activeDraggable &&
+                e.BAcceptDraggable(this.m_activeDraggable) &&
+                (e.OnDragStarted(this.m_activeDraggable),
+                this.m_rgActiveDropRegions.push(e));
           }),
           (e.prototype.UnregisterDropRegion = function(e) {
             j.c(this.m_rgDropRegions, e),
@@ -71577,7 +71584,7 @@ and limitations under the License.
   uw3m: function(e, t, n) {
     "use strict";
     n.d(t, "b", function() {
-      return m;
+      return d;
     }),
       n.d(t, "a", function() {
         return a;
@@ -71585,10 +71592,10 @@ and limitations under the License.
     var c = n("mrSG"),
       l = n("q1tI"),
       o = n("okNM"),
-      s = n("lqmi"),
-      p = n("QHER"),
+      p = n("lqmi"),
+      u = n("QHER"),
       i = n("ugMY"),
-      u = n.n(i),
+      m = n.n(i),
       r = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -71615,8 +71622,8 @@ and limitations under the License.
               "div",
               c.a(
                 {
-                  className: Object(p.a)(
-                    u.a.avatarHolder,
+                  className: Object(u.a)(
+                    m.a.avatarHolder,
                     "avatarHolder",
                     "no-drag",
                     n || "Medium",
@@ -71626,11 +71633,11 @@ and limitations under the License.
                 s
               ),
               l.createElement("div", {
-                className: Object(p.a)(u.a.avatarStatus, "avatarStatus", r),
+                className: Object(u.a)(m.a.avatarStatus, "avatarStatus", r),
                 style: i
               }),
               l.createElement("img", {
-                className: Object(p.a)(u.a.avatar, "avatar"),
+                className: Object(u.a)(m.a.avatar, "avatar"),
                 src: t,
                 draggable: !1
               }),
@@ -71640,7 +71647,7 @@ and limitations under the License.
           t
         );
       })(l.Component),
-      m = (function(e) {
+      d = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -71682,23 +71689,28 @@ and limitations under the License.
                 "statusStyle",
                 "statusPosition",
                 "children"
-              ]);
-            return l.createElement(
-              "div",
-              c.a(
-                {
-                  className: Object(p.a)(
-                    u.a.friendavatar,
-                    "friend",
-                    "FriendAvatar",
-                    Object(s.d)(t),
-                    o
-                  )
-                },
-                a
-              ),
-              r,
-              l.createElement(m, { persona: t, size: n, statusPosition: i })
+              ]),
+              s = {};
+            return (
+              a.onClick && (s.cursor = "pointer"),
+              l.createElement(
+                "div",
+                c.a(
+                  {
+                    style: s,
+                    className: Object(u.a)(
+                      m.a.friendavatar,
+                      "friend",
+                      "FriendAvatar",
+                      Object(p.d)(t),
+                      o
+                    )
+                  },
+                  a
+                ),
+                r,
+                l.createElement(d, { persona: t, size: n, statusPosition: i })
+              )
             );
           }),
           (t = c.c([o.a], t))

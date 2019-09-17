@@ -282,7 +282,9 @@
         REINFERENCE: !1,
         MODEL_VERSION: 0,
         IMMEDIATE_IGNORE_UPDATE: !1,
-        PERSISTENT_IGNORE: !1
+        PERSISTENT_IGNORE: !1,
+        DEFAULT_RECENCY_SLIDER: 0,
+        DEFAULT_POPULARITY_SLIDER: 0
       },
       r = "application_config";
     function o() {
@@ -303,7 +305,7 @@
     }
     var i = a("okNM"),
       l = a("q1tI"),
-      M = a.n(l);
+      P = a.n(l);
     function s(e) {
       if (!u() || !window.document.cookie) return null;
       var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
@@ -366,7 +368,7 @@
         }
       };
     }
-    var P = (function(e) {
+    var M = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -376,7 +378,7 @@
             e && p.AddImpression(this.props.appID, this.props.snr);
           }),
           (t.prototype.render = function() {
-            return M.a.createElement(
+            return P.a.createElement(
               m.a,
               { onChange: this.onVisibilityChanged },
               this.props.children
@@ -385,7 +387,7 @@
           Object(_.c)([g], t.prototype, "onVisibilityChanged", null),
           t
         );
-      })(M.a.Component),
+      })(P.a.Component),
       D = (a("2i24"),
       function() {
         for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
@@ -645,7 +647,7 @@
       (y[(y.k_ELaunchSource_GameActionJoinParty = 900)] =
         "k_ELaunchSource_GameActionJoinParty");
     var L,
-      k = {
+      R = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -678,9 +680,9 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!u()) return L || (L = R()), L;
+            if (!u()) return L || (L = k()), L;
             var e = s("sessionid");
-            e || (e = R());
+            e || (e = k());
             return e;
           })();
         },
@@ -689,7 +691,7 @@
         DEV_MODE: !1,
         OFFLINE_MODE: !1
       };
-    function R() {
+    function k() {
       var e = (function() {
         for (var e, t, a = "", n = 0; n < 24; n++)
           a += ((e = 0),
@@ -751,9 +753,9 @@
         (e.prototype.GetELanguageFallbackOrder = function() {
           var t = new Array();
           return (
-            t.push(T(k.LANGUAGE)),
-            (k.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-              e.value != k.LANGUAGE && t.push(T(e.value));
+            t.push(T(R.LANGUAGE)),
+            (R.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+              e.value != R.LANGUAGE && t.push(T(e.value));
             }),
             t
           );
@@ -825,27 +827,27 @@
           Object.keys(t).map(function(e) {
             n += t[e].p;
           }),
-          M.a.createElement(
+          P.a.createElement(
             "div",
             { className: G.a.IdentityBlock },
-            M.a.createElement("img", {
+            P.a.createElement("img", {
               className: G.a.Avatar,
               src: A.AVATAR_URL
             }),
-            M.a.createElement(
+            P.a.createElement(
               "div",
               { className: G.a.PersonalInfo },
-              M.a.createElement(
+              P.a.createElement(
                 "div",
                 { className: G.a.Persona },
                 A.PERSONA_NAME
               ),
-              M.a.createElement(
+              P.a.createElement(
                 "div",
                 { className: G.a.GameCount },
                 U("#PlaytimeList_RecentGames", a)
               ),
-              M.a.createElement(
+              P.a.createElement(
                 "div",
                 { className: G.a.TotalTime },
                 U("#PlaytimeList_HoursTotal", n)
@@ -908,25 +910,25 @@
                           : U(a + "LessThanAMinute");
                       })(s)
                 )),
-          M.a.createElement(
+          P.a.createElement(
             "div",
             { className: D(G.a.PlayedGame, o && G.a.Ignored) },
-            M.a.createElement(
+            P.a.createElement(
               "a",
               { href: A.BASE_URL + "app/" + t },
-              M.a.createElement("img", { className: G.a.Logo, src: i })
+              P.a.createElement("img", { className: G.a.Logo, src: i })
             ),
-            M.a.createElement(
+            P.a.createElement(
               "div",
               { className: G.a.PlaytimeInfo },
-              M.a.createElement(
+              P.a.createElement(
                 "div",
                 { className: G.a.HoursPlayed },
                 U("#PlaytimeList_Hours", n)
               ),
-              M.a.createElement("div", { className: G.a.Title }, a),
-              M.a.createElement("div", { className: G.a.LastPlayed }, c),
-              M.a.createElement(
+              P.a.createElement("div", { className: G.a.Title }, a),
+              P.a.createElement("div", { className: G.a.LastPlayed }, c),
+              P.a.createElement(
                 "div",
                 {
                   className: G.a.IgnoreToggle,
@@ -952,11 +954,11 @@
           }),
           (e.prototype.render = function() {
             return A.IMMEDIATE_IGNORE_UPDATE
-              ? M.a.createElement("div", null)
-              : M.a.createElement(
+              ? P.a.createElement("div", null)
+              : P.a.createElement(
                   "div",
                   { className: G.a.UpdateSaveBlock },
-                  M.a.createElement(
+                  P.a.createElement(
                     "div",
                     {
                       className: D(
@@ -972,7 +974,7 @@
           Object(_.c)([g], e.prototype, "onUpdate", null),
           (e = Object(_.c)([i.a], e))
         );
-      })(M.a.Component),
+      })(P.a.Component),
       q = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
@@ -984,15 +986,15 @@
             var e = le.getInputApps(),
               a = [];
             if (!e)
-              return M.a.createElement(
+              return P.a.createElement(
                 "div",
                 { className: G.a.PlaytimeList },
-                M.a.createElement(
+                P.a.createElement(
                   "div",
                   { className: G.a.Header },
                   U("#PlaytimeList_Header")
                 ),
-                M.a.createElement("div", { className: G.a.Loading })
+                P.a.createElement("div", { className: G.a.Loading })
               );
             le.getAppInfo();
             var n = e.slice().sort(function(e, t) {
@@ -1002,7 +1004,7 @@
               Object.keys(n).map(function(e) {
                 var t = n[e];
                 a.push(
-                  M.a.createElement(H, {
+                  P.a.createElement(H, {
                     key: "PlayedGame_" + t.a,
                     appID: t.a,
                     name: t.t,
@@ -1012,23 +1014,23 @@
                   })
                 );
               }),
-              M.a.createElement(
+              P.a.createElement(
                 "div",
                 { className: G.a.PlaytimeList },
-                M.a.createElement(
+                P.a.createElement(
                   "div",
                   { className: G.a.Header },
                   U("#PlaytimeList_Header")
                 ),
-                M.a.createElement(W, { accountID: this.props.accountID }),
-                M.a.createElement(Y, null),
-                M.a.createElement("div", { className: G.a.List }, a)
+                P.a.createElement(W, { accountID: this.props.accountID }),
+                P.a.createElement(Y, null),
+                P.a.createElement("div", { className: G.a.List }, a)
               )
             );
           }),
           (e = Object(_.c)([i.a], e))
         );
-      })(M.a.Component),
+      })(P.a.Component),
       X = function(e) {
         var t = e.titleLabel,
           a = e.minLabel,
@@ -1040,17 +1042,17 @@
           c = e.sliderLabels,
           l = c ? Math.round((c.length - 1) * ((i - r) / (o - r))) : void 0,
           u = c ? c[l] : "";
-        return M.a.createElement(
+        return P.a.createElement(
           "div",
           { className: G.a.OptionSlider },
-          M.a.createElement("div", { className: G.a.Title }, t),
-          M.a.createElement(
+          P.a.createElement("div", { className: G.a.Title }, t),
+          P.a.createElement(
             "div",
             { className: G.a.Labels },
-            M.a.createElement("div", { className: G.a.Min }, a),
-            M.a.createElement("div", { className: G.a.Max }, n)
+            P.a.createElement("div", { className: G.a.Min }, a),
+            P.a.createElement("div", { className: G.a.Max }, n)
           ),
-          M.a.createElement("input", {
+          P.a.createElement("input", {
             type: "range",
             min: r,
             max: o,
@@ -1058,7 +1060,7 @@
             value: i,
             onChange: s
           }),
-          M.a.createElement("div", { className: G.a.OptionalLabel }, u)
+          P.a.createElement("div", { className: G.a.OptionalLabel }, u)
         );
       },
       z = function(e) {
@@ -1066,10 +1068,10 @@
           a = e.titleLabel,
           n = e.checked,
           r = e.onChange;
-        return M.a.createElement(
+        return P.a.createElement(
           "label",
           { className: D(G.a.OptionCheckbox, t && t) },
-          M.a.createElement("input", {
+          P.a.createElement("input", {
             type: "checkbox",
             className: G.a.Checkbox,
             checked: n,
@@ -1078,7 +1080,7 @@
           a
         );
       },
-      K = (function(a) {
+      Q = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (
@@ -1169,7 +1171,7 @@
                 n = [],
                 t = function(t) {
                   n.push(
-                    M.a.createElement(
+                    P.a.createElement(
                       "div",
                       {
                         key: t.id,
@@ -1178,8 +1180,8 @@
                           return a.onRemoveSelectedTag(t.id);
                         }
                       },
-                      M.a.createElement("div", null, t.name),
-                      M.a.createElement("div", { className: G.a.Close }, "X")
+                      P.a.createElement("div", null, t.name),
+                      P.a.createElement("div", { className: G.a.Close }, "X")
                     )
                   );
                 },
@@ -1190,15 +1192,15 @@
             ) {
               t(o[r]);
             }
-            return M.a.createElement(
+            return P.a.createElement(
               "div",
               { className: G.a.OptionTagList },
-              M.a.createElement(
+              P.a.createElement(
                 "div",
                 { className: G.a.Label },
                 this.props.title
               ),
-              M.a.createElement(V.a, {
+              P.a.createElement(V.a, {
                 suggestions: this.state.suggestions,
                 onSuggestionsFetchRequested: this.onFetchRequested,
                 onSuggestionsClearRequested: this.onClearRequested,
@@ -1208,7 +1210,7 @@
                   return e.name;
                 },
                 renderSuggestion: function(e) {
-                  return M.a.createElement("div", null, e.name);
+                  return P.a.createElement("div", null, e.name);
                 },
                 inputProps: e,
                 theme: {
@@ -1230,8 +1232,8 @@
           Object(_.c)([g], e.prototype, "onRemoveSelectedTag", null),
           e
         );
-      })(M.a.Component),
-      J = Object(i.a)(function(e) {
+      })(P.a.Component),
+      K = Object(i.a)(function(e) {
         var t = le.getTags(),
           a = [],
           n = [];
@@ -1248,13 +1250,13 @@
           U("#FilterAge_12"),
           U("#FilterAge_6")
         ];
-        return M.a.createElement(
+        return P.a.createElement(
           "div",
           { className: G.a.RecommendationOptions },
-          M.a.createElement(
+          P.a.createElement(
             "div",
             { className: D(G.a.Row, G.a.FirstRow) },
-            M.a.createElement(X, {
+            P.a.createElement(X, {
               minLabel: U("#Popularity_Popular"),
               titleLabel: U("#Popularity_Title"),
               maxLabel: U("#Popularity_Niche"),
@@ -1263,7 +1265,7 @@
               value: le.m_fQueuedPopularityValue,
               onChange: le.onPopularityChanged
             }),
-            M.a.createElement(X, {
+            P.a.createElement(X, {
               minLabel: U("#Recency_Older"),
               titleLabel: U("#Recency_Title"),
               maxLabel: U("#Recency_Newer"),
@@ -1274,24 +1276,24 @@
               sliderLabels: s
             })
           ),
-          M.a.createElement(
+          P.a.createElement(
             "div",
             { className: D(G.a.Row, G.a.SecondRow) },
-            M.a.createElement(K, {
+            P.a.createElement(Q, {
               title: U("#TagFilterMultiple_Title"),
               tagoptions: a,
               selectedtags: n,
               onAddTag: le.onTagFilterAdd,
               onRemoveTag: le.onTagFilterRemove
             }),
-            M.a.createElement(K, {
+            P.a.createElement(Q, {
               title: U("#TagExcludeMultiple_Title"),
               tagoptions: a,
               selectedtags: n,
               onAddTag: le.onTagExcludeAdd,
               onRemoveTag: le.onTagExcludeRemove
             }),
-            M.a.createElement(z, {
+            P.a.createElement(z, {
               className: G.a.WishlistCheckbox,
               titleLabel: U("#ExcludeWishlisted"),
               checked: le.m_bExcludeWishlisted,
@@ -1300,11 +1302,11 @@
           )
         );
       }),
-      Q = (function(a) {
+      J = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (
-            (t.m_videoRef = M.a.createRef()),
+            (t.m_videoRef = P.a.createRef()),
             (t.state = { hovered: !1, wishlisted: le.getAppInfo()[e.appID].w }),
             t
           );
@@ -1374,7 +1376,7 @@
                 a +
                 "/header.jpg",
               s = le.getAppInfo()[a];
-            if (!s) return M.a.createElement("div", null);
+            if (!s) return P.a.createElement("div", null);
             var c = s.n,
               l = 0 < s.r ? U("#Recommendation_ReleasedOn", B(s.r)) : "",
               u = [];
@@ -1383,7 +1385,7 @@
                 var h = d[_];
                 if (
                   (u.push(
-                    M.a.createElement(
+                    P.a.createElement(
                       "div",
                       { key: a + "_" + h, className: G.a.Tag },
                       le.getTagName(h)
@@ -1404,8 +1406,8 @@
               y = !1,
               T = !0,
               L = "",
-              k = "",
               R = "",
+              k = "",
               C = "",
               O = "";
             if (v) {
@@ -1422,15 +1424,15 @@
                     ? N.video_webm
                     : N.video_mp4),
                 (L = "-" + N.discount_pct + "%"),
-                (k = N.base_price),
-                (R = T ? U("#FreeToPlay") : N.discount_price),
+                (R = N.base_price),
+                (k = T ? U("#FreeToPlay") : N.discount_price),
                 (C = N.description));
             }
             var I = O && 0 < O.length;
-            return M.a.createElement(
-              P,
+            return P.a.createElement(
+              M,
               { appID: a, snr: A.LINK_PARAM },
-              M.a.createElement(
+              P.a.createElement(
                 "a",
                 {
                   href: A.BASE_URL + "app/" + a + "?snr=" + A.LINK_PARAM,
@@ -1448,17 +1450,17 @@
                   onMouseEnter: this.OnHover,
                   onMouseLeave: this.OnUnHover
                 },
-                M.a.createElement(
+                P.a.createElement(
                   "div",
                   { className: G.a.TopEntrySection },
-                  M.a.createElement(
+                  P.a.createElement(
                     "div",
                     { className: G.a.LeftSection },
-                    M.a.createElement("img", {
+                    P.a.createElement("img", {
                       className: D(G.a.Logo, (!I || !v) && G.a.Revealed),
                       src: i
                     }),
-                    M.a.createElement("video", {
+                    P.a.createElement("video", {
                       ref: this.m_videoRef,
                       className: D(
                         "highlight_player_item",
@@ -1471,7 +1473,7 @@
                       muted: le.shouldMute(),
                       src: O
                     }),
-                    M.a.createElement(
+                    P.a.createElement(
                       "div",
                       {
                         className: D(G.a.UnMute, I && G.a.Revealed),
@@ -1479,10 +1481,10 @@
                           return t.onMuteToggle(e);
                         }
                       },
-                      M.a.createElement(w, { muted: le.shouldMute() })
+                      P.a.createElement(w, { muted: le.shouldMute() })
                     ),
                     this.state.wishlisted &&
-                      M.a.createElement(
+                      P.a.createElement(
                         "div",
                         {
                           className: D(
@@ -1494,14 +1496,14 @@
                         U("#Recommendation_OnWishlist") + "  "
                       )
                   ),
-                  M.a.createElement(
+                  P.a.createElement(
                     "div",
                     { className: G.a.RightSection },
-                    M.a.createElement("div", { className: G.a.Name }, c),
-                    M.a.createElement(
+                    P.a.createElement("div", { className: G.a.Name }, c),
+                    P.a.createElement(
                       "div",
                       { className: G.a.CenterSection },
-                      M.a.createElement(
+                      P.a.createElement(
                         "div",
                         {
                           className: D(
@@ -1510,22 +1512,22 @@
                             v && G.a.Hidden
                           )
                         },
-                        M.a.createElement(
+                        P.a.createElement(
                           "div",
                           { className: G.a.Released },
                           l
                         ),
-                        M.a.createElement(
+                        P.a.createElement(
                           "div",
                           { className: G.a.BarContainer },
-                          M.a.createElement("div", {
+                          P.a.createElement("div", {
                             className: G.a.Bar,
                             style: { width: f + "%" }
                           })
                         ),
-                        M.a.createElement("div", { className: G.a.Tags }, u)
+                        P.a.createElement("div", { className: G.a.Tags }, u)
                       ),
-                      M.a.createElement(
+                      P.a.createElement(
                         "div",
                         {
                           className: D(
@@ -1538,10 +1540,10 @@
                       )
                     ),
                     S &&
-                      M.a.createElement(
+                      P.a.createElement(
                         "div",
                         { className: G.a.BottomEntrySection },
-                        M.a.createElement(
+                        P.a.createElement(
                           "div",
                           {
                             className: D(
@@ -1549,7 +1551,7 @@
                               G.a.PurchaseSection
                             )
                           },
-                          M.a.createElement(
+                          P.a.createElement(
                             "div",
                             {
                               className: D(
@@ -1558,34 +1560,34 @@
                               )
                             },
                             y &&
-                              M.a.createElement(
+                              P.a.createElement(
                                 "div",
                                 {
                                   className:
                                     "discount_block game_purchase_discount"
                                 },
-                                M.a.createElement(
+                                P.a.createElement(
                                   "div",
                                   { className: "discount_pct" },
                                   L
                                 ),
-                                M.a.createElement(
+                                P.a.createElement(
                                   "div",
                                   { className: "discount_prices" },
-                                  M.a.createElement(
+                                  P.a.createElement(
                                     "div",
                                     { className: "discount_original_price" },
-                                    k
+                                    R
                                   ),
-                                  M.a.createElement(
+                                  P.a.createElement(
                                     "div",
                                     { className: "discount_final_price" },
-                                    R
+                                    k
                                   )
                                 )
                               ),
                             !y &&
-                              M.a.createElement(
+                              P.a.createElement(
                                 "div",
                                 {
                                   className: D(
@@ -1594,10 +1596,10 @@
                                     G.a.Price
                                   )
                                 },
-                                R
+                                k
                               ),
                             !T &&
-                              M.a.createElement(
+                              P.a.createElement(
                                 "div",
                                 {
                                   className: "btn_addtocart",
@@ -1605,13 +1607,13 @@
                                     return t.onAddToCart(e);
                                   }
                                 },
-                                M.a.createElement(
+                                P.a.createElement(
                                   "span",
                                   {
                                     className:
                                       "btnv6_green_white_innerfade btn_medium"
                                   },
-                                  M.a.createElement(
+                                  P.a.createElement(
                                     "span",
                                     null,
                                     U("#btn_add_to_cart")
@@ -1622,7 +1624,7 @@
                         ),
                         !this.state.wishlisted &&
                           !T &&
-                          M.a.createElement(
+                          P.a.createElement(
                             "div",
                             {
                               id: "add_to_wishlist_area",
@@ -1631,10 +1633,10 @@
                                 return t.onAddToWishlist(e);
                               }
                             },
-                            M.a.createElement(
+                            P.a.createElement(
                               "div",
                               { className: "btnv6_blue_hoverfade btn_medium" },
-                              M.a.createElement(
+                              P.a.createElement(
                                 "span",
                                 null,
                                 U("#wishlist_add_to_wishlist")
@@ -1643,7 +1645,7 @@
                           ),
                         this.state.wishlisted &&
                           !T &&
-                          M.a.createElement(
+                          P.a.createElement(
                             "div",
                             {
                               className: D(
@@ -1657,10 +1659,10 @@
                                 return t.onGoToWishlist(e);
                               }
                             },
-                            M.a.createElement(
+                            P.a.createElement(
                               "span",
                               null,
-                              M.a.createElement("img", {
+                              P.a.createElement("img", {
                                 src: A.IMG_URL_BASE + "/v6/ico/ico_selected.png"
                               }),
                               "  " + U("#OnWishlist")
@@ -1680,7 +1682,7 @@
           Object(_.c)([g], e.prototype, "onAddToCart", null),
           (e = Object(_.c)([i.a], e))
         );
-      })(M.a.Component),
+      })(P.a.Component),
       Z = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
@@ -1751,13 +1753,13 @@
                   })).sort(function(e, t) {
                     return t.score - e.score;
                   }),
-                  k = 0,
                   R = 0,
+                  k = 0,
                   C = (L = L.slice(0, 30));
-                R < C.length;
-                R++
+                k < C.length;
+                k++
               ) {
-                (C[R].rank = k), k++;
+                (C[k].rank = R), R++;
               }
               for (
                 var O = 0,
@@ -1769,7 +1771,7 @@
               ) {
                 var I = N[O];
                 m.push(
-                  M.a.createElement(Q, {
+                  P.a.createElement(J, {
                     key: I.appid,
                     appID: I.appid,
                     score: I.score,
@@ -1780,21 +1782,21 @@
               }
             } else
               m.push(
-                M.a.createElement("div", {
+                P.a.createElement("div", {
                   key: "recommendations_loading",
                   className: G.a.RecommendationsLoading
                 })
               );
-            return M.a.createElement(
+            return P.a.createElement(
               "div",
               { className: G.a.RecommendationList },
-              M.a.createElement(
+              P.a.createElement(
                 "div",
                 { className: G.a.Header },
                 U("#Recommendations_Header")
               ),
-              M.a.createElement(J, null),
-              M.a.createElement(
+              P.a.createElement(K, null),
+              P.a.createElement(
                 "div",
                 {
                   className: D(G.a.List, le.areResultsExpired() && G.a.Updating)
@@ -1805,7 +1807,7 @@
           }),
           (e = Object(_.c)([i.a], e))
         );
-      })(M.a.Component),
+      })(P.a.Component),
       $ = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
@@ -1821,18 +1823,18 @@
           }),
           (e.prototype.render = function() {
             return 0 == A.ACCOUNT_ID
-              ? M.a.createElement(
+              ? P.a.createElement(
                   "div",
                   { className: G.a.App },
-                  M.a.createElement(
+                  P.a.createElement(
                     "div",
                     { className: G.a.Login },
-                    M.a.createElement(
+                    P.a.createElement(
                       "div",
                       { className: G.a.Text },
                       U("#LoginText")
                     ),
-                    M.a.createElement(
+                    P.a.createElement(
                       "a",
                       {
                         className: D(
@@ -1841,40 +1843,40 @@
                         ),
                         href: A.LOGIN_REDIRECT
                       },
-                      M.a.createElement("span", null, U("#LoginButton"))
+                      P.a.createElement("span", null, U("#LoginButton"))
                     )
                   )
                 )
-              : M.a.createElement(
+              : P.a.createElement(
                   "div",
                   {
                     className: G.a.App,
                     style: { height: 3840 + 26 * le.getTagHeight() }
                   },
-                  M.a.createElement(
+                  P.a.createElement(
                     "div",
                     { className: G.a.Container },
-                    M.a.createElement(
+                    P.a.createElement(
                       "div",
                       { className: G.a.TopSection },
-                      M.a.createElement(
+                      P.a.createElement(
                         "div",
                         { className: G.a.Header },
                         U("#HeaderTitle")
                       ),
-                      M.a.createElement(
+                      P.a.createElement(
                         "div",
                         { className: G.a.Body },
                         U("#HeaderBody1")
                       ),
-                      M.a.createElement("div", { className: G.a.Spacer }),
-                      M.a.createElement(
+                      P.a.createElement("div", { className: G.a.Spacer }),
+                      P.a.createElement(
                         "div",
                         { className: G.a.Body },
                         U("#HeaderBody2")
                       ),
-                      M.a.createElement("div", { className: G.a.Spacer }),
-                      M.a.createElement(
+                      P.a.createElement("div", { className: G.a.Spacer }),
+                      P.a.createElement(
                         "div",
                         { className: G.a.Body },
                         (function(e) {
@@ -1900,7 +1902,7 @@
                           );
                         })(
                           "#HeaderBody3",
-                          M.a.createElement(
+                          P.a.createElement(
                             "a",
                             {
                               href:
@@ -1911,12 +1913,12 @@
                         )
                       )
                     ),
-                    M.a.createElement(
+                    P.a.createElement(
                       "div",
                       { className: G.a.BottomSection },
-                      M.a.createElement(q, { accountID: A.ACCOUNT_ID }),
-                      M.a.createElement("div", { className: G.a.VerticalBar }),
-                      M.a.createElement(Z, { width: this.state.width })
+                      P.a.createElement(q, { accountID: A.ACCOUNT_ID }),
+                      P.a.createElement("div", { className: G.a.VerticalBar }),
+                      P.a.createElement(Z, { width: this.state.width })
                     )
                   )
                 );
@@ -1924,7 +1926,7 @@
           Object(_.c)([g], e.prototype, "updateDimensions", null),
           (e = Object(_.c)([i.a], e))
         );
-      })(M.a.Component),
+      })(P.a.Component),
       ee = a("2vnA"),
       te = a("i8i4");
     ((x = I || (I = {}))[(x.Unrequested = 0)] = "Unrequested"),
@@ -2038,8 +2040,10 @@
             document.getElementById("recommender_root")
           ),
             A.RESET_OPTIONS &&
-              ((this.m_fPopularityValue = 1 / (A.NUM_POPULARITY_STEPS - 1)),
-              (this.m_fRecencyValue = 0),
+              ((this.m_fPopularityValue = A.DEFAULT_POPULARITY_SLIDER),
+              (this.m_fRecencyValue = A.DEFAULT_RECENCY_SLIDER),
+              (this.m_fQueuedPopularityValue = this.m_fPopularityValue),
+              (this.m_fQueuedRecencyValue = this.m_fRecencyValue),
               (this.m_bExcludeWishlisted = !1),
               (this.m_bStateUpdated = !0));
         }),

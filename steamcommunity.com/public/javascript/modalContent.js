@@ -346,11 +346,11 @@ function EnsureModalContentDivExists()
 	}
 }
 
-function ShowPartnerEvent( partnerEventClanAccountID, partnerEventAnnounceGID )
+function ShowPartnerEvent( partnerEventAppid, partnerEventAnnounceGID )
 {
 	if( typeof window.fnPartnerEvent_ShowInfiniteScroll !== 'undefined')
 	{
-		window.fnPartnerEvent_ShowInfiniteScroll( partnerEventClanAccountID, partnerEventAnnounceGID );
+		window.fnPartnerEvent_ShowInfiniteScroll( partnerEventAppid, partnerEventAnnounceGID );
 		return true;
 	}
 	return false;
@@ -380,8 +380,8 @@ $J( function($) {
 			e.preventDefault();
 
 		var partnerEventAnnounceGID = $Link.data('partnerEventAnnounceGid');
-		var partnerEventClanAccountID = $Link.data('partnerEventClanAccountId');
-			if( partnerEventAnnounceGID && partnerEventClanAccountID && ShowPartnerEvent( partnerEventClanAccountID, partnerEventAnnounceGID ) ) {
+		var partnerEventAppid = $Link.data('partnerEventAppid');
+			if( partnerEventAnnounceGID && partnerEventAppid && ShowPartnerEvent( partnerEventAppid, partnerEventAnnounceGID ) ) {
 			return;
 		}
 		else {
