@@ -8869,6 +8869,15 @@
               }
             return t;
           }),
+          (l.GetExtensionTypeFromURL = function(e) {
+            return e.endsWith(".jpg")
+              ? 1
+              : e.endsWith(".png")
+              ? 3
+              : e.endsWith(".gif")
+              ? 2
+              : void 0;
+          }),
           (l.GetHashAndExt = function(e) {
             return e.image_hash + l.GetExtensionString(e);
           }),
@@ -9052,6 +9061,13 @@
               if (e.endsWith(Object(h.b)(n))) return n;
             return null;
           }),
+          (l.GetHashFromHashAndExt = function(e) {
+            var t = e.substring(e.lastIndexOf("."));
+            return e.substring(0, e.length - t.length);
+          }),
+          (l.GetExtensionStringFromHashAndExt = function(e) {
+            return e.substring(e.lastIndexOf("."));
+          }),
           (l.GenerateArtworkURLFromHashAndExtensions = function(e, t, n) {
             if ((void 0 === n && (n = c.full), n == c.full))
               return (
@@ -9075,12 +9091,11 @@
           }),
           (l.GenerateEditableArtworkURLFromHashAndExtension = function(e, t) {
             return (
-              Object(y.a)(e.BIsClanAccount(), "Not clan id " + e.Render()),
               m.b.COMMUNITY_BASE_URL +
-                "gid/" +
-                e.ConvertTo64BitString() +
-                "/showclanimage/?image_hash_and_ext=" +
-                t
+              "gid/" +
+              e.ConvertTo64BitString() +
+              "/showclanimage/?image_hash_and_ext=" +
+              t
             );
           }),
           (l.GetMimeType = function(e) {
@@ -9095,7 +9110,7 @@
             }
             return "image/" + t;
           }),
-          (l.prototype.AsyncGetImageResolution = function(c, b) {
+          (l.prototype.AsyncGetImageResolution = function(c, b, M) {
             return q.b(this, void 0, void 0, function() {
               var t, n, o, i, a, r, p, s;
               return q.e(this, function(e) {
@@ -9119,12 +9134,13 @@
                       (a = { success: void 0 }),
                       ((r = new Image()).crossOrigin = "anonymous"),
                       (r.onerror = function(e) {
-                        (a.err_msg =
-                          "Load fail on url " +
-                          i +
-                          " with error: " +
-                          B(e).strErrorMsg),
-                          console.log(a.err_msg),
+                        M ||
+                          ((a.err_msg =
+                            "Load fail on url " +
+                            i +
+                            " with error: " +
+                            B(e).strErrorMsg),
+                          console.error(a.err_msg)),
                           (a.success = 2);
                       }),
                       (r.onload = function() {
@@ -9331,11 +9347,14 @@
                 (this.img.width >= G && this.img.height >= k);
           }),
           (e.prototype.GetResizeDimension = function() {
-            return "background" === this.type
+            return e.GetResizeDimension(this.type);
+          }),
+          (e.GetResizeDimension = function(e) {
+            return "background" === e
               ? [{ width: 960, height: 311 }, { width: 480, height: 156 }]
-              : "capsule" === this.type
+              : "capsule" === e
               ? [{ width: X / 2, height: T / 2 }]
-              : "spotlight" === this.type
+              : "spotlight" === e
               ? [{ width: F / 2, height: w / 2 }]
               : void 0;
           }),
@@ -9558,6 +9577,37 @@
                     return [4, this.handleUploadRefresh(o)];
                   case 5:
                     return e.sent(), [2, t.data];
+                }
+              });
+            });
+          }),
+          (e.SendResizeRequest = function(o, i, a, r, p) {
+            return q.b(this, void 0, void 0, function() {
+              var t, n;
+              return q.e(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return (
+                      (t =
+                        m.b.COMMUNITY_BASE_URL +
+                        "/gid/" +
+                        i.ConvertTo64BitString() +
+                        "/resizeimage/"),
+                      (n = new FormData()).append("imagehash", a),
+                      n.append("extension", r),
+                      n.append(
+                        "resize",
+                        p
+                          .map(function(e) {
+                            return e.width + "x" + e.height;
+                          })
+                          .join(",")
+                      ),
+                      n.append("sessionid", m.b.SESSIONID),
+                      [4, g.a.post(t, n, { cancelToken: o.token })]
+                    );
+                  case 1:
+                    return [2, e.sent().data.count];
                 }
               });
             });
@@ -19461,24 +19511,26 @@
               return t.startsWith("www.") && (t = t.slice(4)), t;
             })(t)
           : void 0;
-      return _.createElement(
-        _.Fragment,
-        null,
-        _.createElement(
-          "a",
-          {
-            className: no.Link,
-            href:
-              (m.b.IN_CLIENT ? "steam://openurl_external/" : "") +
-              m.b.COMMUNITY_BASE_URL +
-              "linkfilter/?url=" +
-              t,
-            target: m.b.IN_CLIENT ? void 0 : "_blank",
-            rel: "noopener noreferrer"
-          },
-          _.createElement("span", { "data-tooltip-text": n }, e.children)
-        )
-      );
+      return "steam://settings/account" == t
+        ? _.createElement(
+            "a",
+            { className: no.Link, href: "steam://settings/account" },
+            e.children
+          )
+        : _.createElement(
+            "a",
+            {
+              className: no.Link,
+              href:
+                (m.b.IN_CLIENT ? "steam://openurl_external/" : "") +
+                m.b.COMMUNITY_BASE_URL +
+                "linkfilter/?url=" +
+                t,
+              target: m.b.IN_CLIENT ? void 0 : "_blank",
+              rel: "noopener noreferrer"
+            },
+            _.createElement("span", { "data-tooltip-text": n }, e.children)
+          );
     }
     function To(e) {
       var t = _o(e.args, "author");

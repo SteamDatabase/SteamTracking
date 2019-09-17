@@ -36985,24 +36985,26 @@
               return t.startsWith("www.") && (t = t.slice(4)), t;
             })(t)
           : void 0;
-      return w.createElement(
-        w.Fragment,
-        null,
-        w.createElement(
-          "a",
-          {
-            className: Gc.Link,
-            href:
-              (v.IN_CLIENT ? "steam://openurl_external/" : "") +
-              v.COMMUNITY_BASE_URL +
-              "linkfilter/?url=" +
-              t,
-            target: v.IN_CLIENT ? void 0 : "_blank",
-            rel: "noopener noreferrer"
-          },
-          w.createElement("span", { "data-tooltip-text": n }, e.children)
-        )
-      );
+      return "steam://settings/account" == t
+        ? w.createElement(
+            "a",
+            { className: Gc.Link, href: "steam://settings/account" },
+            e.children
+          )
+        : w.createElement(
+            "a",
+            {
+              className: Gc.Link,
+              href:
+                (v.IN_CLIENT ? "steam://openurl_external/" : "") +
+                v.COMMUNITY_BASE_URL +
+                "linkfilter/?url=" +
+                t,
+              target: v.IN_CLIENT ? void 0 : "_blank",
+              rel: "noopener noreferrer"
+            },
+            w.createElement("span", { "data-tooltip-text": n }, e.children)
+          );
     }
     function pd(e) {
       var t = nd(e.args, "author");
