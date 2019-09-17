@@ -49,6 +49,7 @@ enum EStreamTransport {
 	k_EStreamTransportUDP = 1;
 	k_EStreamTransportUDPRelay = 2;
 	k_EStreamTransportWebRTC = 3;
+	k_EStreamTransportSDR = 4;
 }
 
 enum ERemoteDeviceStreamingResult {

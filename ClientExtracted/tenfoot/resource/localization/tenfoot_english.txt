@@ -3668,6 +3668,9 @@
 	"Parental_Disable"			"DISABLE"
 	"Parental_Disable_Cancel"	"CANCEL"
 
+	"SiteLicense_LockTitle"		"Restricted Usage"
+	"SiteLicense_LockInfo"		"The network operator has added restrictions on Steam usage. Some functionality may be unavailable while running from this location."
+
 	"GoOnline_Header"			"YOU ARE"
 	"GoOnline_CurrentMode"		"OFFLINE"
 	"GoOnline_Footer"			"SELECT TO CHANGE"

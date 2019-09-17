@@ -342,6 +342,9 @@ message CMsgSteamDatagramP2PRoutes {
 }
 
 message CMsgSteamDatagramP2PRendezvous {
+	optional string from_identity = 8;
+	optional fixed32 from_connection_id = 9;
+	optional string to_identity = 10;
 	optional fixed32 to_connection_id = 1;
 	optional .CMsgSteamDatagramP2PRoutes routes = 2;
 	optional uint32 ack_peer_routes_revision = 3;

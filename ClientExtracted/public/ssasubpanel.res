@@ -26,7 +26,7 @@
 		"wide"		"431"
 		"tall"		"400"
 		"AutoResize"		"3"
-		"PinCorner"		"0"
+		"PinCorner"		"3"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"		"0"

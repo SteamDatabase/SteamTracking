@@ -189,6 +189,8 @@
 				42 { "cost"	OutwardCost }
 				88 { "cost"	OutwardCost }
 				37 { "cost"	OutwardCost }
+				194 { "cost"	OutwardCost }
+				195 { "cost"	OutwardCost }
 				41 { }
 				165 { "cost"	OneWayCellEdge} // Belarus
 				// Backbones
@@ -871,7 +873,7 @@
 		// #40 Spain
 		40
 		{
-			"name" "Spain & Portugal"
+			"name" "Spain - Madrid"
 			"region"	"west europe"
 			"countrycode"	"ES"
 			"latitude"	"40.415405"
@@ -879,9 +881,13 @@
 			"edges"
 			{
 				// Backbone
-				4 { "dest"	4 	"cost"	RegionalBackbone }
+				4 { "cost"	RegionalBackbone }
 				5 { "cost"	InwardCost }
-				92 { "dest"	92 	"cost"	GlobalBackbone }
+				92 { "cost"	GlobalBackbone }
+				185 { "cost"	OutwardCost }
+				186 { "cost"	OutwardCost }
+				187 { "cost"	OutwardCost }
+				188 { "cost"	OutwardCost }
 			}
 			"affinities"
 			{
@@ -1440,7 +1446,7 @@
 		// #73 Ukraine
 		73
 		{
-			"name" "Ukraine"
+			"name" "Ukraine - Kiev"
 			"region"	"east europe"
 			"countrycode"	"UA"
 			"latitude"	"50.455690"
@@ -1450,6 +1456,9 @@
 				7 { "dest"	7 }
 				5 { "dest"	5 }
 				38 { "cost"	1 }
+				191 { "cost"	OutwardCost }
+				192 { "cost"	OutwardCost }
+				193 { "cost"	OutwardCost }
 			}
 		}		
 		// #74 San Diego
@@ -1711,6 +1720,7 @@
 				37 { "cost"	OutwardCost }
 				43 { "cost"	OutwardCost }
 				93 { "cost"	OutwardCost }
+				194 { "cost"	OutwardCost }
 				124 { "dest"	124 "cost"	OneWayCellEdge }
 			}
 			"affinities"
@@ -2112,7 +2122,7 @@
 		}		
 		124
 		{
-			"name" "Turkey"
+			"name" "Turkey - Istanbul"
 			"region"	"middle east"
 			"countrycode"	"TR"
 			"latitude"	"41.022696"
@@ -2121,6 +2131,8 @@
 			{
 				92 { "dest"	92 	"cost"	InwardCost  }
 				172 { "cost" 	OneWayCellEdge }
+				189 { "cost" 	OutwardCost }
+				190 { "cost" 	OutwardCost }
 			}
 		}
 		125
@@ -2893,7 +2905,141 @@
 				92 { "cost"	2 }
 			}
 		}
+		185
+		{
+			"name" "Portugal"
+			"region"	"west europe"
+			"countrycode"	"PT"
+			"latitude"	"38.6953932"
+			"longitude"	"-9.1411357"
+			"edges"
+			{
+				40 { "cost"	InwardCost }
+			}
 
+		}
+		186
+		{
+			"name" "Spain - Barcelona"
+			"region"	"west europe"
+			"countrycode"	"ES"
+			"latitude"	"41.3884818"
+			"longitude"	"2.1853934"
+			"edges"
+			{
+				40 { "cost"	InwardCost }
+			}
+		}
+		187
+		{
+			"name" "Spain - Valencia"
+			"region"	"west europe"
+			"countrycode"	"ES"
+			"latitude"	"39.4665756"
+			"longitude"	"-0.3771582"
+			"edges"
+			{
+				40 { "cost"	InwardCost }
+			}
+		}
+		188
+		{
+			"name" "Spain - Malaga"
+			"region"	"west europe"
+			"countrycode"	"ES"
+			"latitude"	"36.7204317"
+			"longitude"	"-4.4246812"
+			"edges"
+			{
+				40 { "cost"	InwardCost }
+			}
+		}
+		189
+		{
+			"name" "Turkey - Ankara"
+			"region"	"middle east"
+			"countrycode"	"TR"
+			"latitude"	"39.927713"
+			"longitude"	"32.8557008"
+			"edges"
+			{
+				124 { "cost"	InwardCost  }
+			}
+		}
+		190
+		{
+			"name" "Turkey - Izmir"
+			"region"	"middle east"
+			"countrycode"	"TR"
+			"latitude"	"38.4279917"
+			"longitude"	"27.1425603"
+			"edges"
+			{
+				124 { "cost"	InwardCost  }
+			}
+		}
+		191
+		{
+			"name" "Ukraine - Odessa"
+			"region"	"east europe"
+			"countrycode"	"UA"
+			"latitude"	"46.4688376"
+			"longitude"	"30.7392194"
+			"edges"
+			{
+				73 { "cost" 	InwardCost }
+			}
+		}
+		192
+		{
+			"name" "Ukraine - Lviv"
+			"region"	"east europe"
+			"countrycode"	"UA"
+			"latitude"	"49.8400205"
+			"longitude"	"24.0281634"
+			"edges"
+			{
+				73 { "cost" 	InwardCost }
+			}
+		}
+		193
+		{
+			"name" "Ukraine - Kharkiv"
+			"region"	"east europe"
+			"countrycode"	"UA"
+			"latitude"	"49.9905255"
+			"longitude"	"36.2293353"
+			"edges"
+			{
+				73 { "cost" 	InwardCost }
+			}
+		}
+		194
+		{
+			"name" "Bulgaria"
+			"region"	"east europe"
+			"countrycode"	"BG"
+			"latitude"	"42.6962592"
+			"longitude"	"23.3170245"
+			"edges"
+			{
+				92 { "cost"	InwardCost}
+				5 { "cost"	InwardCost}
+			}
+		}
+		195
+		{
+			"name" "Croatia"
+			"region"	"east europe"
+			"countrycode"	"HR"
+			"latitude"	"45.8071915"
+			"longitude"	"15.974066"
+			"edges"
+			{
+				92 { "cost"	InwardCost}
+				5 { "cost"	InwardCost}
+			}
+		}
 	}
 	"countries"
 	{
@@ -2901,7 +3047,7 @@
 		"AF"	173
 			
 		//"Albania"		
-		"AL"	43
+		"AL"	195
 		
 		//"Aland Islands"
 		"AX"	66
@@ -2979,7 +3125,7 @@
 		"BO"	164
 		
 		//"Bosnia and Herzegovina"	
-		"BA"	92
+		"BA"	195
 		
 		//"Botswana"		
 		"BW"	26
@@ -2997,7 +3143,7 @@
 		"BN"	44
 		
 		//"Bulgaria"						
-		"BG"	43
+		"BG"	194
 		
 		//"Burkina Faso"					
 		"BF"	130
@@ -3060,7 +3206,7 @@
 		"CI"	130
 		
 		//"Croatia"						
-		"HR"	42
+		"HR"	195
 		
 		//"Curacao"
 		"CW"	140
@@ -3099,7 +3245,7 @@
 		"ER"	131
 		
 		//"Estonia"						
-		"EE"	41
+		"EE"	68
 		
 		//"Ethiopia"						
 		"ET"	131
@@ -3276,7 +3422,7 @@
 		"LI"	88
 		
 		//"Lithuania"						
-		"LT"	66
+		"LT"	38
 		
 		//"Luxembourg"					
 		"LU"	129
@@ -3285,7 +3431,7 @@
 		"MO"	33
 		
 		//"Macedonia, the former Yugoslav Republic of"			
-		"MK"	43
+		"MK"	194
 		
 		//"Madagascar"					
 		"MG"	131
@@ -3423,7 +3569,7 @@
 		"PL"	38
 		
 		//"Portugal"						
-		"PT"	40
+		"PT"	185
 		
 		//"Puerto Rico"					
 		"PR"	140
@@ -3474,10 +3620,10 @@
 		"SN"	130
 		
 		//"Serbia"				
-		"RS"	42
+		"RS"	195
 		
 		//"Montenegro"
-		"ME"	42
+		"ME"	195
 		
 		//"Seychelles"					
 		"SC"	131
@@ -3492,7 +3638,7 @@
 		"SK"	92
 		
 		//"Slovenia"						
-		"SI"	42
+		"SI"	195
 		
 		//"Solomon Islands"				
 		"SB"	174

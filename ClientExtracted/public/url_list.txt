@@ -238,6 +238,12 @@ PartnerEvent
 	method		"internal"
 	filter		"news"
 }
+EventAnnouncementPage
+{
+	url			"%community%/games/%p1%/announcements/detail/%p2%"
+	method		"internal"
+	filter		"community"
+}
 PartnerEventOld
 {
 	url			"%community%/ogg/%p1%/partnerevents/view_old_announcement/%p2%"
@@ -433,9 +439,30 @@ StoreCurators
 	filter	"store"
 }
 
+StoreFreeToPlay
+{
+	url			"%store%/genre/Free%20to%20Play/"
+	method		"internal"
+	filter	"store"
+}
+
+StoreSpecials
+{
+	url			"%store%/specials/"
+	method		"internal"
+	filter	"store"
+}
+
 StoreExplore
 {
 	url			"%store%/explore/"
+	method		"internal"
+	filter	"store"
+}
+
+StoreExploreNew
+{
+	url			"%store%/explore/new/"
 	method		"internal"
 	filter	"store"
 }
@@ -731,6 +758,12 @@ RecommendedByFriends
 CommunityRecommendations
 {
 	url		"%community%/%mystuff%/recommended/"
+	method	"internal"
+	filter	"community"
+}
+FriendRecommendations
+{
+	url		"%community%/profiles/%p1%/recommended/"
 	method	"internal"
 	filter	"community"
 }
@@ -1150,6 +1183,13 @@ SteamVRHMDHelp
 	method	"external"
 }
 
+RegisterKeyNoParams
+{
+	url		"%storehttps%/account/registerkey/"
+	method	"internal"
+	filter	"store"
+}
+
 RegisterKey
 {
 	url		"%storehttps%/account/registerkey/?key=%p1%&retail=%p2%"
@@ -1165,7 +1205,7 @@ LauncherFrontPage
 }
 
 BLEFirmwareLearnMore
-{	
+{
 	url			"http://link.steampowered.com"
 	method		"external"
 }

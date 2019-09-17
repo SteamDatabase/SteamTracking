@@ -6,6 +6,16 @@
   display: flex;
   flex-direction: column;
   margin: 0; }
+  .throbber_LoadingWrapper_9UFR8.throbber_Static_2qWST {
+    animation-name: throbber_none_3yGk4; }
+    .throbber_LoadingWrapper_9UFR8.throbber_Static_2qWST * {
+      animation-name: throbber_none_3yGk4 !important;
+      stroke-dasharray: initial !important;
+      stroke-dashoffset: initial !important;
+      stroke-width: 5px !important;
+      opacity: 1 !important; }
+    .throbber_LoadingWrapper_9UFR8.throbber_Static_2qWST .throbber_bottomCircle_1XTvd path {
+      stroke-width: 0 !important; }
 
 .throbber_LoadingWrapper_9UFR8.throbber_noString_2uxjb {
   flex-direction: row; }
@@ -302,14 +312,6 @@
   100% {
     stroke-dashoffset: -1100.00; } }
 
-.SVGIcon_Button {
-  fill: #ffffff;
-  overflow: visible;
-  width: 100%;
-  height: 100%;
-  max-width: 320px;
-  max-height: 320px; }
-
 .throbber_throbber_small_21jHr {
   width: 36px;
   height: 36px; }
@@ -325,6 +327,18 @@
 .throbber_throbber_xlarge_iO6_X {
   width: 120px;
   height: 120px; }
+
+.throbber_throbber_xxlarge_3KPYp {
+  width: 240px;
+  height: 240px; }
+
+.SVGIcon_Button {
+  fill: #ffffff;
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  max-width: 320px;
+  max-height: 320px; }
 
 /* reset browser styles */
 button.DialogButton {
@@ -398,15 +412,13 @@ button.DialogButton::-moz-focus-inner {
   z-index: 10; }
 
 .ModalOverlayBackground {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 7; }
 
 .ModalOverlayBackground.NotificationBrowserWarning {
   background: rgba(0, 0, 0, 0.9); }
 
 .DialogBody {
-  padding-top: 4px;
-  padding-right: 12px;
   /*border: 2px dotted #f005;*/
   display: flex;
   flex-direction: column;
@@ -519,8 +531,7 @@ button.DialogButton::-moz-focus-inner {
   position: absolute; }
 
 .DialogContent {
-  padding: 32px;
-  padding-right: 6px;
+  padding: 24px;
   display: flex;
   overflow: visible;
   position: relative; }
@@ -593,7 +604,8 @@ button.DialogButton::-moz-focus-inner {
   text-transform: uppercase;
   flex-shrink: 0;
   user-select: none;
-  margin-right: 26px; }
+  margin-right: 26px;
+  margin-bottom: 12px; }
 
 .DialogSubHeader {
   font-weight: 300;
@@ -620,8 +632,7 @@ button.DialogButton::-moz-focus-inner {
 
 .DialogFooter {
   margin-top: 16px;
-  flex-shrink: 0;
-  margin-right: 26px; }
+  flex-shrink: 0; }
 
 .DialogBodyText {
   color: #969696;
@@ -631,11 +642,14 @@ button.DialogButton::-moz-focus-inner {
   margin-bottom: 32px;
   user-select: none; }
 
-.DialogBodyText a {
+.DialogBodyText p {
+  user-select: text; }
+
+.DialogBodyText p a {
   color: #969696;
   text-decoration: underline; }
 
-.DialogBodyText a:hover {
+.DialogBodyText p a:hover {
   color: #ffffff; }
 
 .DialogLabel {
@@ -744,7 +758,8 @@ button.DialogButton::-moz-focus-inner {
   background: rgba(59, 63, 72, 0.5);
   color: #dfe3e6;
   font-size: 14px;
-  font-family: "Motiva Sans Light", Arial, Helvetica, sans-serif;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
   margin: 0;
   padding: 0;
   border: none;
@@ -830,6 +845,13 @@ button.DialogButton.DialogInput_CopyAction {
   bottom: 0;
   width: 24px;
   cursor: pointer; }
+
+.DialogInput_ClearAction .SVGIcon_X_Line line {
+  stroke-width: 22px;
+  stroke: #aaa; }
+
+.DialogInput_ClearAction:hover .SVGIcon_X_Line line {
+  stroke: #fff; }
 
 .DialogInput {
   display: block;

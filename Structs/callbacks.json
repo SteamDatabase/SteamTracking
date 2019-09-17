@@ -27,7 +27,7 @@
     {
         "id": 130,
         "size": 16,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppLifetimeNotice_t>(AppLifetimeNotice_t*)"
+        "posted_in": "CUser::InternalRemoveClientGame(int, AppLifetimeNotice_t*)"
     },
     {
         "id": 143,

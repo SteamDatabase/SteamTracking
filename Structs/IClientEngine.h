@@ -11,7 +11,7 @@ public:
     virtual unknown_ret IsValidHSteamUserPipe(int, int) = 0;
     virtual unknown_ret GetIClientUser(int, int) = 0;
     virtual unknown_ret GetIClientGameServer(int, int) = 0;
-    virtual unknown_ret SetLocalIPBinding(unsigned int, unsigned short) = 0;
+    virtual unknown_ret SetLocalIPBinding(SteamIPAddress_t const&, unsigned short) = 0;
     virtual unknown_ret GetUniverseName(EUniverse) = 0;
     virtual unknown_ret GetIClientFriends(int, int) = 0;
     virtual unknown_ret GetIClientUtils(int) = 0;
@@ -49,7 +49,7 @@ public:
     virtual unknown_ret GetIClientAudio(int, int) = 0;
     virtual unknown_ret GetIClientMusic(int, int) = 0;
     virtual unknown_ret GetIClientUnifiedMessages(int, int) = 0;
-    virtual unknown_ret GetIClientController(int, int) = 0;
+    virtual unknown_ret GetIClientController(int) = 0;
     virtual unknown_ret GetIClientParentalSettings(int, int) = 0;
     virtual unknown_ret GetIClientStreamLauncher(int, int) = 0;
     virtual unknown_ret GetIClientDeviceAuth(int, int) = 0;

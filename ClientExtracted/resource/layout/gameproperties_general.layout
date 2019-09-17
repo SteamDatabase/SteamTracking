@@ -138,7 +138,7 @@
 		region { name=main margin=20 }
 		place { control=HomepageLabelName,DeveloperLabelName,ManualLabelName spacing=20 dir=down region=main }
 		place { controls=HomepageLabel,DeveloperLabel spacing=20 dir=down x=100 region=main }
-		place { control=ManualLabel start=DeveloperLabel spacing=20 dir=down region=main }
+		place { control=ManualLabel start=DeveloperLabel spacing=20 margin-top=20 dir=down region=main }
 		place { control=NoManualLabel start=DeveloperLabel spacing=20 margin-top=20 dir=down region=main }
 
 		place {controls=ExternalSignupLabel,ExternalSignupButton x=260 margin-top=34 dir=down margin-left=20 width=260 height=24 spacing=0 region=main }

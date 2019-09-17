@@ -9,10 +9,10 @@
 	{
 		HTMLRoot
 		{
-			inset="-2 -2 -2 -2"
+			inset="0 0 0 0"
 		}
 	}
-	
+
 	layout
 	{
 		region	{ name="root" y=0 x=0 width=max height=max }

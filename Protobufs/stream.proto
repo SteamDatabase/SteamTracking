@@ -736,5 +736,6 @@ message CTransportSignalMsg {
 	}
 
 	optional .CTransportSignalMsg.WebRTCMessage webrtc = 1;
+	optional bytes sdr = 2;
 }
 

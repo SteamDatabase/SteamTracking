@@ -8782,6 +8782,7 @@
  T CParentalCache::BIsAppInBlockList(unsigned int)
  T CParentalCache::BIsFeatureBlocked(EParentalFeature)
  T CParentalCache::BIsFeatureInBlockList(EParentalFeature)
+ T CParentalCache::BIsLockFromSiteLicense()
  T CParentalCache::BIsParentalLockEnabled()
  T CParentalCache::BIsParentalLockLocked()
  T CParentalCache::CCallback_OnParentalLockChangeBegin::Run(void*)
@@ -8795,6 +8796,7 @@
  T CParentalSettingsInterpreter::BIsAppInBlockList(unsigned int) const
  T CParentalSettingsInterpreter::BIsFeatureBlocked(EParentalFeature) const
  T CParentalSettingsInterpreter::BIsFeatureInBlockList(EParentalFeature) const
+ T CParentalSettingsInterpreter::BIsLockFromSiteLicense() const
  T CParentalSettingsInterpreter::BIsParentalLockEnabled() const
  T CParentalSettingsInterpreter::BIsParentalLockLocked() const
  T CParentalSettingsInterpreter::BSerializeToBuffer(CUtlBuffer*) const
@@ -8891,7 +8893,7 @@
  T CSHA1::Transform(unsigned int*, unsigned char const*)
  T CSHA1::Update(unsigned char const*, unsigned int)
  T CSTime::CSTime()
- T CSavedMemStream::BWaitForDataToGet(bool)
+ T CSavedMemStream::BWaitForDataToGet(bool, unsigned int)
  T CSavedMemStream::CSavedMemStream(unsigned int)
  T CSavedMemStream::Clear(unsigned int)
  T CSavedMemStream::Get(void*, unsigned int)
@@ -9220,7 +9222,7 @@
  T CSettingsSubVoice::StartTestMicrophone()
  T CSettingsSubVoice::Validate(CValidator&, char const*)
  T CSettingsSubVoice::~CSettingsSubVoice()
- T CSharedMemStream::BWaitForDataToGet(bool)
+ T CSharedMemStream::BWaitForDataToGet(bool, unsigned int)
  T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
  T CSharedMemStream::Clear(unsigned int)
  T CSharedMemStream::Get(void*, unsigned int)
@@ -9879,6 +9881,8 @@
  T CUtlVector<CGuideItemPanel*, CUtlMemory<CGuideItemPanel*> >::AddToTail(CGuideItemPanel*&&)
  T CUtlVector<CGuideItemPanel*, CUtlMemory<CGuideItemPanel*> >::GrowVector(int)
  T CUtlVector<CGuideItemPanel*, CUtlMemory<CGuideItemPanel*> >::~CUtlVector()
+ T CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >::AddToTail()
+ T CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >::GrowVector(int)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::AddToTail(CItemImageManager::ImagesToDownload_t const&)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::GrowVector(int)
  T CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >::Remove(int)
@@ -10781,6 +10785,7 @@
  T bn_scatter5
  T bn_sqr8x_internal
  T bn_sqrx8x_internal
+ T bool BResolveHostString<CIPAddress>(char const*, bool, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
@@ -15192,6 +15197,8 @@
  b g_pClientMatchmakingServers
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
+ b g_pClientNetworkingSockets
+ b g_pClientNetworkingUtils
  b g_pClientParentalSettings
  b g_pClientParties
  b g_pClientRemoteClientManager
@@ -15416,6 +15423,7 @@
  fputs
  fread
  free
+ freeaddrinfo
  fseek
  fstat$INODE64
  ftell

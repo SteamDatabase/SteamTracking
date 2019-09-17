@@ -9,7 +9,7 @@
 			group="library"
 			zpos="-4"
 		}
-		
+
 		"PageLoadThrobber"
 		{
 			"ControlName"		"ThrobberImagePanel"
@@ -51,7 +51,7 @@
 			"labelText"		"#steam_store"
 			style="CuinavButton"
 		}
-		
+
 		"label_library"
 		{
 			"ControlName"		"Label"
@@ -153,7 +153,21 @@
 			style="TextEntryURL"
 			group="url"
 		}
-		
+		"URLAnchor"
+		{
+			"ControlName" "Label"
+			"labelText" ""
+			group="url"
+			zpos="-5"
+		}
+		"LibraryAnchor"
+		{
+			"ControlName" "Label"
+			"labelText" ""
+			group="library"
+			zpos="-5"
+		}
+
 		"WebPanel"
 		{
 			style="WebPanelStyle"
@@ -161,30 +175,30 @@
 
 
 		library_filters	   { ControlName=MenuButton labelText="#steam_library_filter_allgames" style="NavLabel2" showDownArrow=0 group=library align=right }
-		
+
 		library_search	   { ControlName=TextEntry maxchars=16 hintText="#steam_library_search" style="LibrarySearch" group=library tabposition=2 unicode=1 }
 		label_search_icon	{ ControlName=Label style="LibrarySearchIcon" group=library zpos="4" }
 
 		label_library_zoom { ControlName=Label labelText="#steam_library_zoom"	style="NavLabelZoom" group=zoom  }
 		library_zoom	   { ControlName=Slider showbar="1" showticks="0" style=zoomslider group=zoom zpos="4" }
 		label_zoom_separator { ControlName=Label labelText="  |  " style="LibrarySeparator" group=zoom }
-		
+
 		label_library_view          { ControlName=Label labelText="#steam_library_views" style="NavLabelView" 		group=views }
 		library_filters_list	    { ControlName=Label style="ViewListButton"	tooltiptext="#tooltip_view_list"	group=views }
 		library_filters_grid	    { ControlName=Label style="ViewGridButton" 	tooltiptext="#tooltip_view_grid"	group=views }
 		library_filters_details	    { ControlName=Label style="ViewDetailButton" tooltiptext="#tooltip_view_details"	group=views }
-		
+
 		library_music_menu { ControlName=MenuButton labelText="#Music_Nav_Menu_Artists" style="NavLabel2" showDownArrow=0 align=left group=music }
 		library_music_add_button {	ControlName=Button labelText=""	tooltiptext="#Music_Playlist_Details_Menu_Add" style="MusicAddButton" group=music_add_button visible=false }
 		library_music_player_icon { ControlName=URLLabel style="MusicPlayerIcon" tooltiptext="#music_tooltip_view_player" URLtext="steam://open/musicplayer" align=right group=music }
-		
+
 		emailreminderbar { zpos=1 }
 		phonereminderbar { zpos=1 }
 
-		EVCert	{ controlname="Label" style="LabelEVCert" visible=false }		
+		EVCert	{ controlname="Label" style="LabelEVCert" visible=false }
 		URLStatusImage	{ controlname="ImagePanel" style="URLStatusImage" group="urlsec" }
 	}
-	
+
 	styles
 	{
 		grouper
@@ -198,9 +212,9 @@
 
 
 			}
-			
+
 		}
-		
+
 		headertextlarge
 		{
 			padding-left=10
@@ -213,13 +227,13 @@
 			bgcolor=DarkDialogBGTransparent
 			minimum-width=200
 		}
-		
+
 		zoomslider
 		{
 			inset="0 -1 0 0"
 			textcolor=navlabel
 		}
-		
+
 		zoomslider:hover
 		{
 			inset="0 -1 0 0"
@@ -235,7 +249,7 @@
 			textcolor=LabelDisabled
 			inset="0 -2 0 0"
 		}
-		
+
 		TextEntry
 		{
 			font-family=basefont
@@ -246,65 +260,65 @@
 			selectedtextcolor="white"
 			selectedbgcolor="TextSelectedBG"
 			shadowtextcolor="Text"  // this is the cursor color
-	
+
 			inset-left=4
 			inset-top=0
 			render
 			{
-		        
-			}  
-	      }   
-	      
+
+			}
+	      }
+
 	   	TextEntry:hover
 			{
 				textcolor="TextHover"
-	    }   
-	      
+	    }
+
 	     TextEntry:active
 			{
 				textcolor="TextHover"
-	   	}   
-	      
+	   	}
+
 	      TextEntry:selected
 			{
 				textcolor="TextHover"
-	    }   
-		
+	    }
+
 		LibrarySearch
 		{
 			padding-left=-4
 			font-family=basefont
 			font-size=14
-			font-weight=400	
-			textcolor="text"	
+			font-weight=400
+			textcolor="text"
 		}
-		
+
 		LibrarySearch:empty
 		{
 			font-style=italic
 			textcolor="LabelDisabled"
-			
+
 		}
-		
+
 		LibrarySearch:hover
-		{	
-			textcolor="texthover"	
+		{
+			textcolor="texthover"
 		}
-		
+
 		LibrarySearch:empty:hover
 		{
 			font-style=italic
 			textcolor="texthover"
-			
+
 		}
-			
+
 		LibrarySearch:disabled
 		{
 			font-style=italic
 			textcolor="None"
-			
+
 		}
-			
+
 		LibrarySearchIcon
 		{
 			bgcolor="none"
@@ -314,9 +328,9 @@
 			padding-left=0
 			padding-right=-1
 			padding-top=-1
-		
+
 		}
-		
+
 		LibrarySearchIcon:disabled
 		{
 			bgcolor="none"
@@ -325,7 +339,7 @@
 			image="none"
 			padding-left=0
 			padding-right=-1
-		
+
 		}
 
 		MusicAddButton
@@ -340,7 +354,7 @@
 				0="image( x0, y0 + 2, x1, y1, graphics/icon_collapse )"
 			}
 		}
-		
+
 		MusicAddButton:hover
 		{
 			textcolor="white"
@@ -348,8 +362,8 @@
 			{
 				0="image( x0, y0 + 2, x1, y1, graphics/icon_collapse_over )"
 			}
-		}			
-		
+		}
+
 		MusicPlayerIcon
 		{
 			bgcolor="none"
@@ -360,7 +374,7 @@
 			padding-right=-1
 			padding-top=-1
 		}
-		
+
 		MusicPlayerIcon:hover
 		{
 			bgcolor="none"
@@ -371,7 +385,7 @@
 			padding-right=-1
 			padding-top=-1
 		}
-		
+
 		MusicPlayerIcon:selected
 		{
 			bgcolor="none"
@@ -382,12 +396,12 @@
 			padding-right=-1
 			padding-top=-1
 		}
-		
+
 		LibraryShow [!$OSX]
 		{
 			padding-left=0
 			font-family=basefont
-			font-size=14 
+			font-size=14
 			font-weight=400
 			textcolor="LabelDisabled"
 			font-style=uppercase
@@ -397,22 +411,22 @@
 		{
 			padding-left=0
 			font-family=basefont
-			font-size=13 
+			font-size=13
 			font-weight=400
 			textcolor="LabelDisabled"
-			font-style=uppercase 
+			font-style=uppercase
 		}
-		
+
 		NavLabel
 		{
 			font-family=basefont
 			font-size=14 [!$OSX]
-			font-size=15 [$OSX] 
+			font-size=15 [$OSX]
 			font-weight=400
 			textcolor="Label"
 			font-style=uppercase
-		}	
-		
+		}
+
 		NavLabelView [!$OSX]
 		{
 			font-family=basefont
@@ -426,7 +440,7 @@
 		NavLabelView [$OSX]
 		{
 			font-family=basefont
-			font-size=13 
+			font-size=13
 			font-weight=400
 			textcolor="LabelDisabled"
 			font-style=uppercase
@@ -438,23 +452,23 @@
 		NavLabelZoom [!$OSX]
 		{
 			font-family=basefont
-			font-size=14 
+			font-size=14
 			font-weight=400
 			textcolor="LabelDisabled"
-			font-style=uppercase 
+			font-style=uppercase
 			padding-right=5
 		}
 
 		NavLabelZoom [$OSX]
 		{
 			font-family=basefont
-			font-size=13 
+			font-size=13
 			font-weight=400
 			textcolor="LabelDisabled"
-			font-style=uppercase 
+			font-style=uppercase
 			padding-right=5
 		}
-	
+
 		NavLabel2 [!$OSX]
 		{
 			font-family=basefont
@@ -471,8 +485,8 @@
 			font-weight=400
 			textcolor="labelfocus"
 			font-style="uppercase"
-		}	
-		
+		}
+
 		NavLabel2:hover
 		{
 			textcolor="texthover"
@@ -480,8 +494,8 @@
 			font-outerglow-color="TextGlowHover"
 			font-outerglow-offset=1
 			font-outerglow-filtersize=3
-		}	
-		
+		}
+
 		NavLabel2:selected
 		{
 			textcolor="white"
@@ -490,12 +504,12 @@
 			font-outerglow-offset=1
 			font-outerglow-filtersize=3
 		}
-		
+
 		Panel_transparent
 		{
 			bgcolor="none"
 		}
-		
+
 
 		ViewDetailButton
 		{
@@ -506,7 +520,7 @@
 			padding-left=0
 			padding-right=0
 		}
-		
+
 		ViewDetailButton:hover
 		{
 			bgcolor="none"
@@ -519,9 +533,9 @@
 			bgcolor="none"
 			render_bg={}
 			image="graphics/icon_button_detail_down"
-			
+
 		}
-		
+
 		ViewDetailButton:selected
 		{
 			bgcolor="none"
@@ -536,7 +550,7 @@
 			render_bg={}
 			image="graphics/icon_button_detail_disabled"
 		}
-		
+
 		ViewGridButton
 		{
 			bgcolor="none"
@@ -546,7 +560,7 @@
 			padding-left=0
 			padding-right=0
 		}
-		
+
 		ViewGridButton:hover
 		{
 			bgcolor="none"
@@ -560,7 +574,7 @@
 			render_bg={}
 			image="graphics/icon_button_grid_down"
 		}
-		
+
 		ViewGridButton:selected
 		{
 			bgcolor="none"
@@ -568,14 +582,14 @@
 			image="graphics/icon_button_grid_down"
 
 		}
-		
+
 		ViewGridButton:disabled
 		{
 			bgcolor="none"
 			render_bg={}
 			image="graphics/icon_button_grid_disabled"
 		}
-		
+
 		ViewListButton
 		{
 			bgcolor="none"
@@ -585,7 +599,7 @@
 			padding-left=0
 			padding-right=0
 		}
-		
+
 		ViewListButton:hover
 		{
 			bgcolor="none"
@@ -599,7 +613,7 @@
 			render_bg={}
 			image="graphics/icon_button_list_down"
 		}
-		
+
 		ViewListButton:selected
 		{
 			bgcolor="none"
@@ -607,7 +621,7 @@
 			image="graphics/icon_button_list_down"
 
 		}
-		
+
 		ViewListButton:disabled
 		{
 			bgcolor="none"
@@ -620,7 +634,7 @@
 		{
 			inset="0 0 0 0"
 		}
-		
+
 		CWebPanel
 		{
 			bgcolor="none"
@@ -631,18 +645,18 @@
 				0="fill( x0, y0, x1, y1, almostblack )" // bg
 			}
 		}
-		
+
 		BroadcastPanelMinimized
 		{
 			bgcolor="none"
 			textcolor="label"
 			inset="0 0 0 0"
-			render_bg 
+			render_bg
 			{
 				0="fill( x0, y0, x1, y1, almostblack )" // bg
 			}
 		}
-		
+
 		TextEntryURL [!$OSX]
 		{
 			font-family=basefont
@@ -654,7 +668,7 @@
 			bgcolor="none"
 			selectedtextcolor="TextEntrySelected"
 			selectedbgcolor="TextSelectedBG"
-			shadowtextcolor="Text"	// this is the cursor color	
+			shadowtextcolor="Text"	// this is the cursor color
 		}
 
 		TextEntryURL [$OSX]
@@ -668,32 +682,32 @@
 			bgcolor="none"
 			selectedtextcolor="TextEntrySelected"
 			selectedbgcolor="TextSelectedBG"
-			shadowtextcolor="Text"	// this is the cursor color	
+			shadowtextcolor="Text"	// this is the cursor color
 		}
-		
+
 		"CSteamRootDialog TextEntryURL"
 		{
-			textcolor="101 105 112 255"		
+			textcolor="101 105 112 255"
 		}
-		
+
 		"CSteamRootDialog TextEntryURL:hover"
 		{
 			textcolor="texthover"
 		}
-		
+
 		CUINavButtonNew
 		{
 			textcolor="133 139 148 255"
 			font-weight=800
 		}
-		
+
 		CUINavButton [!$OSX]
 		{
 			textcolor="Labelfocus"
 			bgcolor="none"
 			font-family=basefont
 			font-size=24
-			font-weight=400 
+			font-weight=400
 			font-style="uppercase"
 			padding-left=5
 			padding-right=5
@@ -705,7 +719,7 @@
 			bgcolor="none"
 			font-family=basefont
 			font-size=24
-			font-weight=400 
+			font-weight=400
 			font-style="uppercase"
 			padding-left=5
 			padding-right=5
@@ -717,10 +731,10 @@
 			bgcolor="none"
 			font-family=basefont
 			font-size=26
-			font-weight=400 
+			font-weight=400
 			font-style="uppercase"
 		}
-		
+
 		CUINavButton:hover
 		{
 			textcolor="Text"
@@ -752,7 +766,7 @@
 			bgcolor="none"
 			font-family=basefont
 			font-size=15
-			font-weight=400 
+			font-weight=400
 			font-style="uppercase"
 			padding-left=5
 			padding-right=5
@@ -764,14 +778,14 @@
 			textcolor="Labelfocus"
 			bgcolor="none"
 			font-family=basefont
-			font-size=13 
-			font-weight=400 
+			font-size=13
+			font-weight=400
 			font-style="uppercase"
 			padding-left=5
 			padding-right=5
 			padding-bottom=4
 		}
- 				
+
 		CUINavButton2:hover
 		{
 			textcolor="text"
@@ -781,7 +795,7 @@
 			font-outerglow-filtersize=1
 		}
 
-		CUINavButton2:selected 
+		CUINavButton2:selected
 		{
 			textcolor="white"
 			bgcolor=none
@@ -792,23 +806,23 @@
 		}
 
 		CUINavigatorPanel
-		{			
+		{
 				bgcolor="none"
 		}
-		
+
 		"CSteamRootDialog CGameFilterMenuButton"
 		{
 			inset="3 0 0 0"
 			padding-left="0"
-			
+
 		}
-				
+
 		"CGamesPage_Mini CGameFilterMenuButton"
 		{
 			inset="3 0 0 0"
 			padding-left="0"
-			
-		}	
+
+		}
 
 		LabelEVCert [!$OSX]
 		{
@@ -819,10 +833,10 @@
 		bgcolor="html.secureurl"
 		inset-left=4
 		inset-right=4
-		inset-top=3		
+		inset-top=3
 		}
 
-			
+
 		LabelEVCert [$OSX]
 		{
 		font-family=basefont
@@ -832,9 +846,9 @@
 		bgcolor="html.secureurl"
 		inset-left=3
 		inset-right=4
-		inset-top=3	
-		}	
-		
+		inset-top=3
+		}
+
 		URLStatusImage
 		{
 		bgcolor=none
@@ -851,21 +865,21 @@
 		URLBarBrokenSecure
 		{
 		textcolor="html.insecureurl"
-		}		
+		}
 
 
-		
+
 	}
-	
+
 	colors
 	{
     ClientBG="30 30 30 255"
     DialogBG="41 41 41 255"
 	}
-	
+
 	layout
 	{
-		place { control="label_store,label_library,label_community,label_me,label_news,label_console,label_oldlibrary" x=72 y=9 spacing=9 margin=2 height=40 } 
+		place { control="label_store,label_library,label_community,label_me,label_news,label_console,label_oldlibrary" x=72 y=9 spacing=9 margin=2 height=40 }
 
 		place { control="label_community_friends,label_community_profile,label_community_gamehubs,label_community_forums,label_community_workshop,label_community_greenlight,label_community_marketplace" x="84" y="40" x="10" }
 
@@ -873,54 +887,56 @@
 
 		place [!$OSX] { control="back,forward" x=3 y=17 height=30 width=30 spacing=2 margin-right=5 margin-top=0 }
 		place [$OSX] { control="back,forward" x=3 y=17 height=30 width=30 spacing=2 margin-right=5 margin-top=0 }
-			
+
 		place { control="PageLoadThrobber" align=right y=54 height=20 width=20  margin-right=9 margin-top=1 }
 
 		place { control="subnavgroup_library" align=top-center y=50 height=28 width=max margin-right=-2 margin-left=8 }
-		
+
 		place { control="refresh,stop,URLStatusImage,EVCert,URLBar" align=left y=54 height=20 width=max spacing=1 margin-left=9 }
- 	
-		place { control="library_search"  width=112 }	
+
+		place { control="library_search"  width=112 }
 
 		place [!$OSX] { control="label_search_icon,library_search" align=left y=56 height=17 spacing=1 x=12 }
 		place  [$OSX] { control="label_search_icon,library_search" align=left y=56 height=17 spacing=1 x=11 }
-		
+
 		region { name="dropdown" width=200 x=82 y=55 height=20 }
-		
+
 		place { control="library_filters" align=right spacing=1  region="dropdown" }
- 
+
 		place { control="library_zoom" width=82 height=20 }
-	     
+
 		place [!$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view" align=right y=55 height=20 spacing=3 margin-right=85 }
 		place [$OSX] { control="label_library_zoom,library_zoom,label_zoom_separator, label_library_view" align=right y=55 height=20 spacing=3 margin-right=84 }
-		
+
 		place [!$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=180 }
 		place [$OSX] { control="library_music_menu,library_music_add_button" align=left x=290 y=55 height=20 spacing=3 margin-right=179 }
-		
 
-			
+
 		place { control="library_filters_details,library_filters_list,library_filters_grid," align=right y=54 height=20 spacing=4 margin-right=9 width=20 }
 
- 	  	place { control=emailreminderbar margin-top=81 margin-left=8 margin-right=8 width=max height=48 }
- 	  	place { control=phonereminderbar margin-top=81 margin-left=8 margin-right=8 width=max height=80 }
+		place { control=URLAnchor align=left y=54 height=28 width=max }
+		place { control=LibraryAnchor height=28 width=max start=URLAnchor dir=down }
+
+ 	  	place { control=emailreminderbar margin-top=0 margin-left=6 margin-right=6 width=max height=48  start="LibraryAnchor" dir=down}
+ 	  	place { control=phonereminderbar margin-top=0 margin-left=0 margin-right=6 width=max height=80  start=emailreminderbar dir=down}
 
 		// content pages - these are all pushed down by the email reminder bar (above) if it's visible
-		place { control=DownloadsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
-		place { control=ScreenshotsPage 	width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
-		place { control=GamesPage_List		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=phonereminderbar dir=down }
-		place { control=GamesPage_Details 	width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=phonereminderbar dir=down }
-		place { control=GamesPage_Grid 		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=20 start=phonereminderbar dir=down }
-		place { control=WebPanel 			width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=phonereminderbar dir=down }
-		place { control=BroadcastPage			width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=phonereminderbar dir=down }
-		place { control=BroadcastPageMin		width=298 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=26 dir=down align=bottom-right }
-		place { control=BroadcastPageMinHoriz	width=298 height=168 margin-top=0 margin-left=0 margin-right=30 margin-bottom=40 dir=down align=bottom-right }
-		place { control=ConsolePage 		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=phonereminderbar dir=down }
-		place { control=NewLibraryPage		width=max height=max margin-top=0 margin-left=0 margin-right=9 margin-bottom=21 start=phonereminderbar dir=down }
+		place { control=DownloadsPage 		width=max height=max margin-top=0 margin-left=2 margin-right=7 margin-bottom=20 start=phonereminderbar dir=down }
+		place { control=ScreenshotsPage 	width=max height=max margin-top=0 margin-left=2 margin-right=7 margin-bottom=20 start=phonereminderbar dir=down }
+		place { control=GamesPage_List		width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=21 start=phonereminderbar dir=down }
+		place { control=GamesPage_Details 	width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=21 start=phonereminderbar dir=down }
+		place { control=GamesPage_Grid 		width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
+		place { control=WebPanel 			width=max height=max margin-top=0 margin-left=-7 margin-right=0 margin-bottom=21 start=phonereminderbar dir=down }
+		place { control=BroadcastPage			width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=21 start=phonereminderbar dir=down }
+		place { control=BroadcastPageMin		width=298 height=168 margin-top=0 margin-left=2 margin-right=30 margin-bottom=26 dir=down align=bottom-right }
+		place { control=BroadcastPageMinHoriz	width=298 height=168 margin-top=0 margin-left=2 margin-right=30 margin-bottom=40 dir=down align=bottom-right }
+		place { control=ConsolePage 		width=max height=max margin-top=0 margin-left=-7 margin-right=0 margin-bottom=21 start=phonereminderbar dir=down }
+		place { control=NewLibraryPage		width=max height=max margin-top=0 margin-left=-6 margin-right=0 margin-bottom=21 start=phonereminderbar dir=down }
 
-		place { control=MediaPage 		width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
-		place { control=ToolsPage 		width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
-		
-		place { control=MusicPage_Details width=max height=max margin-top=0 margin-left=0 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
+		place { control=MediaPage 		width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
+		place { control=ToolsPage 		width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
+
+		place { control=MusicPage_Details width=max height=max margin-top=0 margin-left=2 margin-right=8 margin-bottom=20 start=phonereminderbar dir=down }
 		place { control="library_music_player_icon" align=right y=57 height=16 width=16 margin-right=10 }
 	}
 

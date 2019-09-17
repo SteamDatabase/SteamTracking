@@ -240,6 +240,7 @@
  B g_pSteamVGuiModule
  B g_vecTempTextBuffer
  B obj_cleanup_defer
+ B s_ClientNewVRChat
  B s_CmdLineParamDisableBrowser
  B s_NoEscConversion
  B s_OpenDevToolsParam
@@ -255,6 +256,17 @@
  B vgui::Panel::s_DragDropCapture
  B vgui::ToolWindow::s_ToolWindows
  B vgui::g_ButtonSoundNames
+ B vrapi::g_VRApplications
+ B vrapi::g_VRChaperone
+ B vrapi::g_VRCompositor
+ B vrapi::g_VRControlPanel
+ B vrapi::g_VRDashboardManager
+ B vrapi::g_VRExternalEventSource
+ B vrapi::g_VRNotifications
+ B vrapi::g_VROverlay
+ B vrapi::g_VRRenderModels
+ B vrapi::g_VRSettings
+ B vrapi::g_VRSystem
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
  CFArrayCreate
@@ -1925,6 +1937,12 @@
  D typeinfo for CDLLValidate
  D typeinfo for CDirContentsWatcher
  D typeinfo for CDirWatcher
+ D typeinfo for CDynamicFunc<bool (*)()>
+ D typeinfo for CDynamicFunc<char const* (*)(vr::EVRInitError)>
+ D typeinfo for CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>
+ D typeinfo for CDynamicFunc<void (*)()>
+ D typeinfo for CDynamicFunc<void* (*)(char const*, vr::EVRInitError*)>
+ D typeinfo for CDynamicFunc<vr::IVRSystem* (*)(vr::EVRInitError*, vr::EVRApplicationType)>
  D typeinfo for CEditFriendsGroupsDialog
  D typeinfo for CEditFriendsGroupsPage
  D typeinfo for CEditFriendsGroupsPage::CCallback_OnGroupCreated
@@ -2343,6 +2361,7 @@
  D typeinfo for HTMLFramelessWrapper
  D typeinfo for IBaseInterface
  D typeinfo for IClientParentalSettings
+ D typeinfo for IDynamicFunction
  D typeinfo for IFriendPanelContainer
  D typeinfo for IFriendsUI
  D typeinfo for IHTMLResponses
@@ -2355,6 +2374,8 @@
  D typeinfo for ListPanelColumnSelectButton
  D typeinfo for ListPanelDragger
  D typeinfo for SharedLibraryNotification
+ D typeinfo for std::__1::__function::__base<void (IHTMLWindow*)>
+ D typeinfo for std::__1::bad_function_call
  D typeinfo for vgui::AnimatingImagePanel
  D typeinfo for vgui::AnimationController
  D typeinfo for vgui::Button
@@ -3318,6 +3339,12 @@
  D vtable for CDLLValidate
  D vtable for CDirContentsWatcher
  D vtable for CDirWatcher
+ D vtable for CDynamicFunc<bool (*)()>
+ D vtable for CDynamicFunc<char const* (*)(vr::EVRInitError)>
+ D vtable for CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>
+ D vtable for CDynamicFunc<void (*)()>
+ D vtable for CDynamicFunc<void* (*)(char const*, vr::EVRInitError*)>
+ D vtable for CDynamicFunc<vr::IVRSystem* (*)(vr::EVRInitError*, vr::EVRApplicationType)>
  D vtable for CEditFriendsGroupsDialog
  D vtable for CEditFriendsGroupsPage
  D vtable for CEditFriendsGroupsPage::CCallback_OnGroupCreated
@@ -3733,6 +3760,7 @@
  D vtable for ListPanelColumnSelectButton
  D vtable for ListPanelDragger
  D vtable for SharedLibraryNotification
+ D vtable for std::__1::bad_function_call
  D vtable for vgui::AnimatingImagePanel
  D vtable for vgui::AnimationController
  D vtable for vgui::Button
@@ -4097,6 +4125,12 @@
  R typeinfo name for CDLLValidate
  R typeinfo name for CDirContentsWatcher
  R typeinfo name for CDirWatcher
+ R typeinfo name for CDynamicFunc<bool (*)()>
+ R typeinfo name for CDynamicFunc<char const* (*)(vr::EVRInitError)>
+ R typeinfo name for CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>
+ R typeinfo name for CDynamicFunc<void (*)()>
+ R typeinfo name for CDynamicFunc<void* (*)(char const*, vr::EVRInitError*)>
+ R typeinfo name for CDynamicFunc<vr::IVRSystem* (*)(vr::EVRInitError*, vr::EVRApplicationType)>
  R typeinfo name for CEditFriendsGroupsDialog
  R typeinfo name for CEditFriendsGroupsPage
  R typeinfo name for CEditFriendsGroupsPage::CCallback_OnGroupCreated
@@ -4634,6 +4668,7 @@
  R typeinfo name for HTMLFramelessWrapper
  R typeinfo name for IBaseInterface
  R typeinfo name for IClientParentalSettings
+ R typeinfo name for IDynamicFunction
  R typeinfo name for IFriendPanelContainer
  R typeinfo name for IFriendsUI
  R typeinfo name for IHTMLResponses
@@ -4647,6 +4682,8 @@
  R typeinfo name for ListPanelColumnSelectButton
  R typeinfo name for ListPanelDragger
  R typeinfo name for SharedLibraryNotification
+ R typeinfo name for std::__1::__function::__base<void (IHTMLWindow*)>
+ R typeinfo name for std::__1::bad_function_call
  R typeinfo name for vgui::AnimatingImagePanel
  R typeinfo name for vgui::AnimationController
  R typeinfo name for vgui::Button
@@ -6129,6 +6166,33 @@
  T CDirWatcher::SetDirToWatch(char const*)
  T CDirWatcher::Validate(CValidator&, char const*)
  T CDirWatcher::~CDirWatcher()
+ T CDynamicFunc<bool (*)()>::GetNextPointer()
+ T CDynamicFunc<bool (*)()>::Init(CSysModule*)
+ T CDynamicFunc<bool (*)()>::Release()
+ T CDynamicFunc<bool (*)()>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<char const* (*)(vr::EVRInitError)>::GetNextPointer()
+ T CDynamicFunc<char const* (*)(vr::EVRInitError)>::Init(CSysModule*)
+ T CDynamicFunc<char const* (*)(vr::EVRInitError)>::Release()
+ T CDynamicFunc<char const* (*)(vr::EVRInitError)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>::GetNextPointer()
+ T CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>::Init(CSysModule*)
+ T CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>::Release()
+ T CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void (*)()>::GetNextPointer()
+ T CDynamicFunc<void (*)()>::Init(CSysModule*)
+ T CDynamicFunc<void (*)()>::Release()
+ T CDynamicFunc<void (*)()>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<void* (*)(char const*, vr::EVRInitError*)>::GetNextPointer()
+ T CDynamicFunc<void* (*)(char const*, vr::EVRInitError*)>::Init(CSysModule*)
+ T CDynamicFunc<void* (*)(char const*, vr::EVRInitError*)>::Release()
+ T CDynamicFunc<void* (*)(char const*, vr::EVRInitError*)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<vr::IVRSystem* (*)(vr::EVRInitError*, vr::EVRApplicationType)>::GetNextPointer()
+ T CDynamicFunc<vr::IVRSystem* (*)(vr::EVRInitError*, vr::EVRApplicationType)>::Init(CSysModule*)
+ T CDynamicFunc<vr::IVRSystem* (*)(vr::EVRInitError*, vr::EVRApplicationType)>::Release()
+ T CDynamicFunc<vr::IVRSystem* (*)(vr::EVRInitError*, vr::EVRApplicationType)>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunctionList::InitFunctions(char const*)
+ T CDynamicFunctionList::Shutdown()
+ T CDynamicFunctionListUnloadOnDestruct::~CDynamicFunctionListUnloadOnDestruct()
  T CEditFriendsGroupsDialog::CEditFriendsGroupsDialog(vgui::Panel*, char const*, CSteamID)
  T CEditFriendsGroupsDialog::ChainToAnimationMap()
  T CEditFriendsGroupsDialog::ChainToMap()
@@ -6950,6 +7014,8 @@
  T CFriendsUIModule::CheckForFriendsUIUpdates()
  T CFriendsUIModule::ConCommandInit(IConCommandBaseAccessor*)
  T CFriendsUIModule::CreateFriendContextMenu(vgui::Panel*, CSteamID&)
+ T CFriendsUIModule::EnterVRMode()
+ T CFriendsUIModule::ExitVRMode()
  T CFriendsUIModule::GetBasicFriendPanel(vgui::Panel*, CSteamID&, char const*)
  T CFriendsUIModule::GetPanel()
  T CFriendsUIModule::GetSelfAvatarPanel(vgui::Panel*)
@@ -7407,6 +7473,8 @@
  T CHTMLWindow::Reload()
  T CHTMLWindow::RunJavascript(char const*)
  T CHTMLWindow::SendPendingHTMLMessages()
+ T CHTMLWindow::SetBrowserIndexHook(std::__1::function<void (IHTMLWindow*)>)
+ T CHTMLWindow::SetBrowserPopupHTMLWindowHook(std::__1::function<IHTMLResponses* (char const*, int, int, int, int, bool)>)
  T CHTMLWindow::SetLocalFileRequestMapping(char const*, char const*, CUtlVector<CHTMLWindow::AdditionalRoute_t, CUtlMemory<CHTMLWindow::AdditionalRoute_t> >*)
  T CHTMLWindow::SetMinSize(unsigned int, unsigned int)
  T CHTMLWindow::SetOpenSteamURLCallback(CUtlDelegate<void (char const*)>)
@@ -9538,6 +9606,7 @@
  T CParentalCache::BIsAppInBlockList(unsigned int)
  T CParentalCache::BIsFeatureBlocked(EParentalFeature)
  T CParentalCache::BIsFeatureInBlockList(EParentalFeature)
+ T CParentalCache::BIsLockFromSiteLicense()
  T CParentalCache::BIsParentalLockEnabled()
  T CParentalCache::BIsParentalLockLocked()
  T CParentalCache::CCallback_OnParentalLockChangeBegin::Run(void*)
@@ -9551,6 +9620,7 @@
  T CParentalSettingsInterpreter::BIsAppInBlockList(unsigned int) const
  T CParentalSettingsInterpreter::BIsFeatureBlocked(EParentalFeature) const
  T CParentalSettingsInterpreter::BIsFeatureInBlockList(EParentalFeature) const
+ T CParentalSettingsInterpreter::BIsLockFromSiteLicense() const
  T CParentalSettingsInterpreter::BIsParentalLockEnabled() const
  T CParentalSettingsInterpreter::BIsParentalLockLocked() const
  T CParentalSettingsInterpreter::BSerializeToBuffer(CUtlBuffer*) const
@@ -10951,6 +11021,7 @@
  T ClientUser()
  T ClientUserStats()
  T ClientUtils()
+ T ClientVR()
  T ClientVideo()
  T ComboBox_Factory()
  T CommonKeyCode::KeyCodeToVirtualKey(CommonKeyCode::KeyCode)
@@ -12155,6 +12226,8 @@
  T non-virtual thunk to CFriendsUIModule::CheckForFriendsUIUpdates()
  T non-virtual thunk to CFriendsUIModule::ConCommandInit(IConCommandBaseAccessor*)
  T non-virtual thunk to CFriendsUIModule::CreateFriendContextMenu(vgui::Panel*, CSteamID&)
+ T non-virtual thunk to CFriendsUIModule::EnterVRMode()
+ T non-virtual thunk to CFriendsUIModule::ExitVRMode()
  T non-virtual thunk to CFriendsUIModule::GetBasicFriendPanel(vgui::Panel*, CSteamID&, char const*)
  T non-virtual thunk to CFriendsUIModule::GetSelfAvatarPanel(vgui::Panel*)
  T non-virtual thunk to CFriendsUIModule::GetSelfFriendPanel(vgui::Panel*)
@@ -12596,10 +12669,19 @@
  T std::__1::__vector_base<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*> >::~__vector_base()
  T std::__1::__vector_base<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::~__vector_base()
  T std::__1::__vector_base<void*, std::__1::allocator<void*> >::~__vector_base()
+ T std::__1::bad_function_call::~bad_function_call()
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char const*)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >& std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__append_forward_unsafe<char const*>(char const*, char const*)
+ T std::__1::function<IHTMLResponses* (char const*, int, int, int, int, bool)>::function(std::__1::function<IHTMLResponses* (char const*, int, int, int, int, bool)> const&)
+ T std::__1::function<IHTMLResponses* (char const*, int, int, int, int, bool)>::operator()(char const*, int, int, int, int, bool) const
+ T std::__1::function<IHTMLResponses* (char const*, int, int, int, int, bool)>::operator=(std::__1::function<IHTMLResponses* (char const*, int, int, int, int, bool)> const&)
+ T std::__1::function<IHTMLResponses* (char const*, int, int, int, int, bool)>::swap(std::__1::function<IHTMLResponses* (char const*, int, int, int, int, bool)>&)
+ T std::__1::function<void (IHTMLWindow*)>::function(std::__1::function<void (IHTMLWindow*)> const&)
+ T std::__1::function<void (IHTMLWindow*)>::operator()(IHTMLWindow*) const
+ T std::__1::function<void (IHTMLWindow*)>::operator=(std::__1::function<void (IHTMLWindow*)> const&)
+ T std::__1::function<void (IHTMLWindow*)>::swap(std::__1::function<void (IHTMLWindow*)>&)
  T std::__1::pair<int*, long> std::__1::get_temporary_buffer<int>(long)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, long>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__emplace_unique_key_args<int, int const&>(int const&, int const&)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, long>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__emplace_unique_key_args<int, int>(int const&, int&&)
@@ -16179,6 +16261,9 @@
  T vpaes_encrypt
  T vpaes_set_decrypt_key
  T vpaes_set_encrypt_key
+ T vrapi::ClearInterfaces()
+ T vrapi::EnsureOpenVRAPILoaded(char const*)
+ T vrapi::VRSettings()
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
  ThreadGetCurrentRunningRef
@@ -16712,6 +16797,8 @@
  b g_pClientMatchmakingServers
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
+ b g_pClientNetworkingSockets
+ b g_pClientNetworkingUtils
  b g_pClientParentalSettings
  b g_pClientParties
  b g_pClientRemoteClientManager
@@ -16868,6 +16955,15 @@
  b vgui::s_pSurfaceInterface
  b vgui::s_pSystemInterface
  b vgui::s_pVGuiInterface
+ b vrapi::dfVR_GetGenericInterface
+ b vrapi::dfVR_GetStringForHmdError
+ b vrapi::dfVR_Init
+ b vrapi::dfVR_InitInternal
+ b vrapi::dfVR_IsHmdPresent
+ b vrapi::dfVR_Shutdown
+ b vrapi::dfVR_ShutdownInternal
+ b vrapi::g_bVRApiLoaded
+ b vrapi::vrapiFuncs
  bootstrap_look_up
  bootstrap_port
  ceil
@@ -17165,11 +17261,14 @@
  d stringconverter
  d textureidconverter
  d typeinfo for (anonymous namespace)::ScrollBarButton
+ d typeinfo for CFriendsUIModule::EnterVRMode()::$_0
+ d typeinfo for std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>
  d vgui::Panel::OnOldMessage(KeyValues*, unsigned long long)::s_bDebugMessages
  d vgui::RichText::GetAppearanceForLocalStyle(int, int)::styleNameList3
  d vgui::RichText::InsertStringWithHTML(wchar_t const*)::rgTagToStyles
  d vgui::ScrollBarSlider::Paint()::styleNameList
  d vtable for (anonymous namespace)::ScrollBarButton
+ d vtable for std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>
  deflate
  deflateEnd
  deflateInit2_
@@ -17570,6 +17669,8 @@
  r two80
  r twobppswaptable
  r typeinfo name for (anonymous namespace)::ScrollBarButton
+ r typeinfo name for CFriendsUIModule::EnterVRMode()::$_0
+ r typeinfo name for std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>
  r utf8_lead_bits
  r zeroes
  read
@@ -17613,6 +17714,7 @@
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::resize(unsigned long, char)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::rfind(char, unsigned long) const
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_string()
+ std::exception::what() const
  std::exception::~exception()
  std::length_error::~length_error()
  std::logic_error::logic_error(char const*)
@@ -17846,6 +17948,7 @@
  t _GLOBAL__sub_I_utlsymbol.cpp
  t _GLOBAL__sub_I_validate_globals.cpp
  t _GLOBAL__sub_I_vgui_controls.cpp
+ t _GLOBAL__sub_I_vrapi.cpp
  t _aesni_set_encrypt_key
  t _bn_post4x_internal
  t _bn_postx4x_internal
@@ -18404,6 +18507,14 @@
  t start_pass_main
  t start_pass_merged_upsample
  t start_pass_upsample
+ t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::__clone() const
+ t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::__clone(std::__1::__function::__base<void (IHTMLWindow*)>*) const
+ t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::destroy()
+ t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::destroy_deallocate()
+ t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::operator()(IHTMLWindow*&&)
+ t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::target(std::type_info const&) const
+ t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::target_type() const
+ t std::__1::__function::__func<CFriendsUIModule::EnterVRMode()::$_0, std::__1::allocator<CFriendsUIModule::EnterVRMode()::$_0>, void (IHTMLWindow*)>::~__func()
  t trans_cb
  t update
  t update256

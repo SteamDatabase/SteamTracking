@@ -25,6 +25,7 @@ public:
     virtual unknown_ret InitiateGameConnection(void*, int, CSteamID, CGameID, unsigned int, unsigned short, bool) = 0;
     virtual unknown_ret InitiateGameConnectionOld(void*, int, CSteamID, CGameID, unsigned int, unsigned short, bool, void*, int) = 0;
     virtual unknown_ret TerminateGameConnection(unsigned int, unsigned short) = 0;
+    virtual unknown_ret SignalAppsToShutDown(CGameID) = 0;
     virtual unknown_ret TerminateAppMultiStep(CGameID, unsigned int) = 0;
     virtual unknown_ret SetSelfAsChatDestination(bool) = 0;
     virtual unknown_ret IsPrimaryChatDestination() = 0;
@@ -206,6 +207,7 @@ public:
     virtual unknown_ret GetParentalUnlockTime() = 0;
     virtual unknown_ret BGetRecoveryEmail(char*, int) = 0;
     virtual unknown_ret RequestParentalRecoveryEmail() = 0;
+    virtual unknown_ret BIsLockFromSiteLicense() = 0;
     virtual unknown_ret BGetSerializedParentalSettings(CUtlBuffer*) = 0;
     virtual unknown_ret BSetParentalSettings(CUtlBuffer*) = 0;
     virtual unknown_ret BDisableParentalSettings() = 0;
@@ -221,8 +223,10 @@ public:
     virtual unknown_ret BIsOtherSessionPlaying(unsigned int*) = 0;
     virtual unknown_ret BKickOtherPlayingSession() = 0;
     virtual unknown_ret BIsAccountLockedDown() = 0;
+    virtual unknown_ret ClearAndSetAppTags(CGameID, SteamParamStringArray_t const*) = 0;
     virtual unknown_ret RemoveAppTag(CGameID, char const*) = 0;
     virtual unknown_ret AddAppTag(CGameID, char const*) = 0;
+    virtual unknown_ret ClearAppTags(CGameID) = 0;
     virtual unknown_ret SetAppHidden(CGameID, bool) = 0;
     virtual unknown_ret RequestAccountLinkInfo() = 0;
     virtual unknown_ret RequestSurveySchedule() = 0;
@@ -230,4 +234,7 @@ public:
     virtual unknown_ret UpdateSteamAnnouncementLastRead(unsigned long long, unsigned int) = 0;
     virtual unknown_ret GetMarketEligibility() = 0;
     virtual unknown_ret UpdateGameVrDllState(CGameID, bool, bool) = 0;
+    virtual unknown_ret BIsAnyGameOrServiceAppRunning() = 0;
+    virtual unknown_ret BGetAppArrayMinutesPlayed(unsigned int*, int, int*, int*) = 0;
+    virtual unknown_ret BGetAppsLastPlayedTime(unsigned int*, int, unsigned int*) = 0;
 };

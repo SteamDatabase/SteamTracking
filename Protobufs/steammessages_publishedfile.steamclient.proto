@@ -491,6 +491,21 @@ message CPublishedFile_RemoveChild_Request {
 message CPublishedFile_RemoveChild_Response {
 }
 
+message CPublishedFile_GetUserVoteSummary_Request {
+	repeated fixed64 publishedfileids = 1;
+}
+
+message CPublishedFile_GetUserVoteSummary_Response {
+	message VoteSummary {
+		optional fixed64 publishedfileid = 1;
+		optional bool vote_for = 2;
+		optional bool vote_against = 3;
+		optional bool reported = 4;
+	}
+
+	repeated .CPublishedFile_GetUserVoteSummary_Response.VoteSummary summaries = 1;
+}
+
 message CPublishedFile_FileSubscribed_Notification {
 	message RevisionData {
 		optional .EPublishedFileRevision revision = 1 [default = k_EPublishedFileRevision_Default];
@@ -585,6 +600,9 @@ service PublishedFile {
 	}
 	rpc RemoveChild (.CPublishedFile_RemoveChild_Request) returns (.CPublishedFile_RemoveChild_Response) {
 		option (method_description) = "Removes parent->child relationship between the given items.";
+	}
+	rpc GetUserVoteSummary (.CPublishedFile_GetUserVoteSummary_Request) returns (.CPublishedFile_GetUserVoteSummary_Response) {
+		option (method_description) = "Get user vote summary";
 	}
 }
 service PublishedFileClient {

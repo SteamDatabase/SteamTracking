@@ -43,6 +43,7 @@ public:
     virtual unknown_ret ClearShortcutUserTags(unsigned int) = 0;
     virtual unknown_ret AddShortcutUserTag(unsigned int, char const*) = 0;
     virtual unknown_ret RemoveShortcutUserTag(unsigned int, char const*) = 0;
+    virtual unknown_ret ClearAndSetShortcutUserTags(unsigned int, SteamParamStringArray_t const*) = 0;
     virtual unknown_ret SetShortcutHidden(unsigned int, bool) = 0;
     virtual unknown_ret SetAllowDesktopConfig(unsigned int, bool) = 0;
     virtual unknown_ret SetAllowOverlay(unsigned int, bool) = 0;

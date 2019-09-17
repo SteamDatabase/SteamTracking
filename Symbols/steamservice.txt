@@ -2746,13 +2746,13 @@
  T HMAC_Update
  T HasWrittenMinidumpForFileLine(char const*, unsigned int)
  T HashStringCaseless(char const*, unsigned long)
- T IClientInstallUtilsDispatchMsg(IClientInstallUtils*, CUtlBuffer&, CUtlBuffer&)
- T IClientModuleManagerDispatchMsg(IClientModuleManager*, CUtlBuffer&, CUtlBuffer&)
- T IClientProcessMonitorDispatchMsg(IClientProcessMonitor*, CUtlBuffer&, CUtlBuffer&)
- T IClientSecureDesktopDispatchMsg(IClientSecureDesktop*, CUtlBuffer&, CUtlBuffer&)
+ T IClientInstallUtilsDispatchMsg(IClientInstallUtils*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)
+ T IClientModuleManagerDispatchMsg(IClientModuleManager*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)
+ T IClientProcessMonitorDispatchMsg(IClientProcessMonitor*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)
+ T IClientSecureDesktopDispatchMsg(IClientSecureDesktop*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)
  T IPv6AddrToString
  T IPv6IPToString
- T IRegistryInterfaceDispatchMsg(IRegistryInterface*, CUtlBuffer&, CUtlBuffer&)
+ T IRegistryInterfaceDispatchMsg(IRegistryInterface*, CUtlBuffer&, CUtlBuffer&, IInterfaceStats*)
  T InitStackWalk()
  T InitializeSpewConfig()
  T Internal_Coroutine_Continue(int, bool, char const*)

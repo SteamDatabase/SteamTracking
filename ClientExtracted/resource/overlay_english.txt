@@ -28,6 +28,19 @@
 "Steam_Settings_Ingame_ShowFPS_LeftBottom" "Bottom-left"
 "Steam_Settings_Ingame_ShowFPS_HightContrast" "High contrast color"
 
+"Steam_Settings_Library_Size_Automatic" "Automatic"
+"Steam_Settings_Library_Size_Small" "Small"
+"Steam_Settings_Library_Size_Medium" "Medium"
+"Steam_Settings_Library_Size_Large" "Large"
+"Steam_Settings_Library" "Library Settings"
+"Steam_Settings_Library_Size_Title" "Display size for Library user interface elements"
+"Steam_Settings_Library_Size_Automatic_Label" "(Element size determined by window width)"
+"Steam_Settings_Library_LowBandwidth_Title" "Low Bandwidth Mode"
+"Steam_Settings_Library_LowBandwidth_Desc" "Reduces bandwidth use by disabling features like auto-load of community content."
+"Steam_Settings_Library_LowPerf_Title" "Low Performance Mode"
+"Steam_Settings_Library_LowPerf_Desc" "Improves library performance by disabling certain graphical improvements and transitions."
+
+
 "Overlay_WebBrowserTitle"	"Web Browser In-Game"
 "Overlay_WebBrowserTitleApp"	"Web Browser In-Application"
 "Overlay_Settings_Title"		"Steam - Settings"

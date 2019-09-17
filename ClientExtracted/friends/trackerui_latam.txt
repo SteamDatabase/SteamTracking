@@ -1337,5 +1337,9 @@
 "[english]Library_ControllerSaveDefaultTitle"	"Official Configuration"
 "SettingsController_AutosaveName"	"Autoguardado personal"
 "[english]SettingsController_AutosaveName"	"Personal Autosave"
+"RemotePlayTogether_Notification_AvailableToInvite_Title"	"Remote Play Together disponible"
+"[english]RemotePlayTogether_Notification_AvailableToInvite_Title"	"Remote Play Together Available"
+"RemotePlayTogether_Notification_AvailableToInvite"	"En tu lista de amigos, haz clic derecho en ellos para invitarlos a jugar."
+"[english]RemotePlayTogether_Notification_AvailableToInvite"	"Right click friends in your Friends list to invite them to play."
 }
 }

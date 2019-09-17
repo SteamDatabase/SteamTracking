@@ -4,7 +4,7 @@
 	{
 		TitleLabel { controlname=label labeltext="#Steam_SettingsInGameTitle" style=highlight }
 		EnableOverlayCheck {	ControlName=CheckButton labelText="#Overlay_SettingsEnable" }
-		EnableSCTenfootOverlayCheck [!$OSX&&!$LINUX] {	ControlName=CheckButton labelText="#Overlay_SettingsSCTenfootEnable" }	
+		EnableSCTenfootOverlayCheck [!$OSX] {	ControlName=CheckButton labelText="#Overlay_SettingsSCTenfootEnable" }
 		EnableVRDesktopGameTheaterCheck [!$OSX&&!$LINUX] {	ControlName=CheckButton labelText="#Overlay_SettingsEnableVRDesktopGameTheaterCheck" }	
 		HotKeySelector {	ControlName=HotKeyEntry	}
 		ScreenshotHotKeySelector { ControlName=HotKeyEntry }
@@ -62,7 +62,7 @@
 		place { controls=TitleLabel region=top }
 		place { controls=DescriptionLabel height=40 width=max region=top start=TitleLabel dir=down margin-top=8 }
 		place { controls=EnableOverlayCheck region=top start=DescriptionLabel dir=down height=20 }
-		place [!$OSX&&!$LINUX] { controls=EnableSCTenfootOverlayCheck region=top start=EnableOverlayCheck dir=down height=20 }
+		place [!$OSX] { controls=EnableSCTenfootOverlayCheck region=top start=EnableOverlayCheck dir=down height=20 }
 		place [!$OSX&&!$LINUX] { controls=EnableVRDesktopGameTheaterCheck region=top start=EnableSCTenfootOverlayCheck dir=down height=20 }
 		place { controls=HotKeySelectorLabel,HotKeySelector dir=down spacing=5 width=max region=topleft }
 		

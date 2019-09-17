@@ -3106,7 +3106,7 @@
  T CPathString::GetUTF8Path() const
  T CPathString::Validate(CValidator&, char const*)
  T CPathString::~CPathString()
- T CSharedMemStream::BWaitForDataToGet(bool)
+ T CSharedMemStream::BWaitForDataToGet(bool, unsigned int)
  T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
  T CSharedMemStream::Clear(unsigned int)
  T CSharedMemStream::Get(void*, unsigned int)

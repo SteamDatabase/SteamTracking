@@ -105,7 +105,7 @@ message CMsgClientGameConnectTokens {
 message CMsgGSServerType {
 	optional uint32 app_id_served = 1;
 	optional uint32 flags = 2;
-	optional uint32 game_ip_address = 3;
+	optional uint32 deprecated_game_ip_address = 3;
 	optional uint32 game_port = 4;
 	optional string game_dir = 5;
 	optional string game_version = 6;
@@ -119,8 +119,9 @@ message CMsgGSStatusReply {
 message CMsgGSPlayerList {
 	message Player {
 		optional uint64 steam_id = 1;
-		optional uint32 public_ip = 2;
+		optional uint32 deprecated_public_ip = 2;
 		optional bytes token = 3;
+		optional .CMsgIPAddress public_ip = 4;
 	}
 
 	repeated .CMsgGSPlayerList.Player players = 1;
@@ -128,8 +129,9 @@ message CMsgGSPlayerList {
 
 message CMsgGSUserPlaying {
 	optional fixed64 steam_id = 1;
-	optional uint32 public_ip = 2;
+	optional uint32 deprecated_public_ip = 2;
 	optional bytes token = 3;
+	optional .CMsgIPAddress public_ip = 4;
 }
 
 message CMsgGSDisconnectNotice {
@@ -140,7 +142,7 @@ message CMsgClientGamesPlayed {
 	message GamePlayed {
 		optional uint64 steam_id_gs = 1;
 		optional fixed64 game_id = 2;
-		optional uint32 game_ip_address = 3;
+		optional uint32 deprecated_game_ip_address = 3;
 		optional uint32 game_port = 4;
 		optional bool is_secure = 5;
 		optional bytes token = 6;
@@ -160,6 +162,7 @@ message CMsgClientGamesPlayed {
 		optional uint64 controller_workshop_file_id = 20 [default = 0];
 		optional uint32 launch_source = 21 [default = 0];
 		optional uint32 vr_hmd_runtime = 22;
+		optional .CMsgIPAddress game_ip_address = 23;
 	}
 
 	repeated .CMsgClientGamesPlayed.GamePlayed games_played = 1;
@@ -339,9 +342,10 @@ message CMsgClientMMSCreateLobby {
 	optional int32 lobby_type = 3;
 	optional int32 lobby_flags = 4;
 	optional uint32 cell_id = 5;
-	optional uint32 public_ip = 6;
+	optional uint32 deprecated_public_ip = 6;
 	optional bytes metadata = 7;
 	optional string persona_name_owner = 8;
+	optional .CMsgIPAddress public_ip = 9;
 }
 
 message CMsgClientMMSCreateLobbyResponse {
@@ -396,8 +400,9 @@ message CMsgClientMMSGetLobbyList {
 	optional uint32 app_id = 1;
 	optional int32 num_lobbies_requested = 3;
 	optional uint32 cell_id = 4;
-	optional uint32 public_ip = 5;
+	optional uint32 deprecated_public_ip = 5;
 	repeated .CMsgClientMMSGetLobbyList.Filter filters = 6;
+	optional .CMsgIPAddress public_ip = 7;
 }
 
 message CMsgClientMMSGetLobbyListResponse {
@@ -493,17 +498,19 @@ message CMsgClientMMSSetLobbyLinked {
 message CMsgClientMMSSetLobbyGameServer {
 	optional uint32 app_id = 1;
 	optional fixed64 steam_id_lobby = 2;
-	optional uint32 game_server_ip = 3;
+	optional uint32 deprecated_game_server_ip = 3;
 	optional uint32 game_server_port = 4;
 	optional fixed64 game_server_steam_id = 5;
+	optional .CMsgIPAddress game_server_ip = 6;
 }
 
 message CMsgClientMMSLobbyGameServerSet {
 	optional uint32 app_id = 1;
 	optional fixed64 steam_id_lobby = 2;
-	optional uint32 game_server_ip = 3;
+	optional uint32 deprecated_game_server_ip = 3;
 	optional uint32 game_server_port = 4;
 	optional fixed64 game_server_steam_id = 5;
+	optional .CMsgIPAddress game_server_ip = 6;
 }
 
 message CMsgClientMMSUserJoinedLobby {

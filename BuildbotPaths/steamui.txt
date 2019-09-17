@@ -505,6 +505,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamnetwork.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamnetwork.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamsocket.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamtransportsdr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamtransportudp.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamtransportwebrtc.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/proto/stream.pb.cc

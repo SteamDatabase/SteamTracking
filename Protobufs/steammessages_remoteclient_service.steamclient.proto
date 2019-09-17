@@ -39,6 +39,13 @@ message CRemoteClient_AllocateRelayServer_Response {
 	optional string relay_server = 1;
 }
 
+message CRemoteClient_AllocateSDR_Request {
+	optional uint32 appid = 1;
+}
+
+message CRemoteClient_AllocateSDR_Response {
+}
+
 message CRemoteClient_SteamBroadcast_Notification {
 	optional fixed64 steamid = 1;
 	optional fixed64 clientid = 2;
@@ -112,6 +119,9 @@ service RemoteClient {
 	}
 	rpc AllocateRelayServer (.CRemoteClient_AllocateRelayServer_Request) returns (.CRemoteClient_AllocateRelayServer_Response) {
 		option (method_description) = "Allocate a UDP relay server for a streaming session";
+	}
+	rpc AllocateSDR (.CRemoteClient_AllocateSDR_Request) returns (.CRemoteClient_AllocateSDR_Response) {
+		option (method_description) = "Allocate SDR resources for an app";
 	}
 	rpc SendSteamBroadcastPacket (.CRemoteClient_SteamBroadcast_Notification) returns (.NoResponse) {
 		option (method_description) = "Broadcast a packet to remote Steam clients";

@@ -3542,8 +3542,7 @@ steam.styles
 
 		render_bg
 		{
-			1="image( x0+48, y0, x1, y1, graphics/glow_friendslist )"
-			2="image( x1-30, y0+20, x1, y1, graphics/icon_friendslist )"
+			1="image( x1-30, y0+20, x1, y1, graphics/icon_friendslist )"
 		}
 	}
 
@@ -3560,8 +3559,7 @@ steam.styles
 
 		render_bg
 		{
-			1="image( x0+48, y0, x1, y1, graphics/glow_friendslist )"
-			2="image( x1-30, y0+20, x0, y0, graphics/icon_friendslist )"
+			1="image( x1-30, y0+20, x0, y0, graphics/icon_friendslist )"
 		}
 	}
 
@@ -3571,8 +3569,7 @@ steam.styles
 
 		 render_bg
 		{
-			1="image( x0+48, y0, x1, y1, graphics/glow_friendslist )"
-			2="image( x1-30, y0+20, x1, y1, graphics/icon_friendslist_over )"
+			1="image( x1-30, y0+20, x1, y1, graphics/icon_friendslist_over )"
 		}
 	}
 

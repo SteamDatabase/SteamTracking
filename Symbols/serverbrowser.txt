@@ -5410,6 +5410,8 @@
  T CUtlSymbolTable::Validate(CValidator&, char const*)
  T CUtlSymbolTable::~CUtlSymbolTable()
  T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
+ T CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >::AddToTail()
+ T CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >::GrowVector(int)
  T CUtlVector<CIPAndPort, CUtlMemory<CIPAndPort> >::AddToTail(CIPAndPort const&)
  T CUtlVector<CIPAndPort, CUtlMemory<CIPAndPort> >::GrowVector(int)
  T CUtlVector<CIPAndPort, CUtlMemory<CIPAndPort> >::~CUtlVector()
@@ -5875,6 +5877,7 @@
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
+ T bool BResolveHostString<CIPAddress>(char const*, bool, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
  T int CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertUnconstructed<vgui::CFontWidthCache::key_t const&>(vgui::CFontWidthCache::key_t const&, int*, bool)
  T int CUtlRBTree<CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t, int, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CIPAndPort, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess>(CIPAndPort const&, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess const&) const
@@ -9453,6 +9456,8 @@
  b g_pClientMatchmakingServers
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
+ b g_pClientNetworkingSockets
+ b g_pClientNetworkingUtils
  b g_pClientParentalSettings
  b g_pClientParties
  b g_pClientRemoteClientManager
@@ -9611,6 +9616,7 @@
  fputs
  fread
  free
+ freeaddrinfo
  fseek
  ftell
  fwrite

@@ -1,5 +1,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h

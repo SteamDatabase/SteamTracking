@@ -17,8 +17,7 @@ enum EDisplayStatus {
 	k_EDisplayStatusRegionRestricted = 12;
 	k_EDisplayStatusPresaleOnly = 13;
 	k_EDisplayStatusInvalidPlatform = 14;
-	k_EDisplayStatusParentalBlocked = 15;
-	k_EDisplayStatusPreloadOnly = 16;
+	k_EDisplayStatusPreloadComplete = 16;
 	k_EDisplayStatusBorrowerLocked = 17;
 	k_EDisplayStatusUpdatePaused = 18;
 	k_EDisplayStatusUpdateQueued = 19;
@@ -77,18 +76,6 @@ message CAppOverview_AppAssociation {
 	optional string name = 2;
 }
 
-message CAppOverview_AppLanguageFeatures {
-	optional string language = 1;
-	optional bool supported = 2;
-	optional bool full_audio = 3;
-	optional bool subtitles = 4;
-}
-
-message CAppOverview_PlayAreaDimensions {
-	optional float width = 1;
-	optional float height = 2;
-}
-
 message CAppOverview_PerClientData {
 	optional uint64 clientid = 1;
 	optional string client_name = 2;
@@ -96,6 +83,9 @@ message CAppOverview_PerClientData {
 	optional uint32 status_percentage = 4 [default = 0];
 	optional string active_beta = 5;
 	optional bool installed = 6;
+	optional uint64 bytes_downloaded = 7 [default = 0];
+	optional uint64 bytes_total = 8 [default = 0];
+	optional bool streaming_to_local_client = 9;
 }
 
 message CAppOverview {
@@ -104,7 +94,6 @@ message CAppOverview {
 	optional bool visible_in_game_list = 4;
 	optional string sort_as = 6;
 	optional .EProtoAppType app_type = 7 [default = k_EAppTypeInvalid];
-	optional bool subscribed = 9;
 	optional bool favorite = 11;
 	optional bool hidden = 12;
 	optional uint32 mru_index = 13;
@@ -115,19 +104,13 @@ message CAppOverview {
 	optional uint32 rt_last_time_played = 18 [default = 0];
 	repeated uint32 store_tag = 19;
 	repeated .CAppOverview_AppAssociation association = 20;
-	optional uint32 primary_genre = 21;
-	repeated uint32 genre = 22;
 	repeated uint32 store_category = 23;
-	repeated .CAppOverview_AppLanguageFeatures language_feature = 24;
 	optional uint32 rt_original_release_date = 25 [default = 0];
 	optional uint32 rt_steam_release_date = 26 [default = 0];
 	optional string icon_hash = 27;
 	optional string logo_hash = 30;
 	optional .EAppControllerSupportLevel controller_support = 31 [default = k_EAppControllerSupportLevelNone];
 	optional bool vr_supported = 32;
-	optional uint32 vr_controller_support = 33;
-	optional uint32 vr_play_area_support = 34;
-	optional .CAppOverview_PlayAreaDimensions vr_play_area_dimensions = 35;
 	optional uint32 metacritic_score = 36;
 	optional uint64 size_on_disk = 37;
 	optional bool third_party_mod = 38;
@@ -139,6 +122,7 @@ message CAppOverview {
 	optional uint64 most_available_clientid = 44;
 	optional uint64 selected_clientid = 45;
 	optional uint32 rt_store_asset_mtime = 46;
+	optional uint32 rt_custom_image_mtime = 47;
 }
 
 message CAppOverview_Change {

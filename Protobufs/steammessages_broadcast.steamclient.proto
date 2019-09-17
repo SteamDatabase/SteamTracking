@@ -33,6 +33,7 @@ message CBroadcast_BeginBroadcastSession_Request {
 	optional uint64 rtmp_token = 6;
 	optional bool thumbnail_upload = 7;
 	optional string client_beta = 8;
+	optional uint32 sysid = 9;
 }
 
 message CBroadcast_BeginBroadcastSession_Response {
@@ -58,6 +59,7 @@ message CBroadcast_StartBroadcastUpload_Request {
 	optional uint64 rtmp_token = 5 [default = 0, (description) = "Only set during RTMP uploads; secret key from the user."];
 	optional uint32 upload_ip_address = 6;
 	optional bool is_replay = 7;
+	optional uint32 sysid = 8;
 }
 
 message CBroadcast_StartBroadcastUpload_Response {

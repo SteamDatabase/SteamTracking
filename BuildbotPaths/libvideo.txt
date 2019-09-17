@@ -42,6 +42,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoalignedbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videodecoderlibav.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videofilestream.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videolib.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videomanifest.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoplayer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/video/videoplayermanager.cpp
@@ -60,6 +61,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/refcount.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/thash.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h

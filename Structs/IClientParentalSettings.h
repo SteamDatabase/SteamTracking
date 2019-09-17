@@ -9,4 +9,5 @@ public:
     virtual unknown_ret BIsFeatureInBlockList(EParentalFeature) = 0;
     virtual unknown_ret BGetSerializedParentalSettings(CUtlBuffer*) = 0;
     virtual unknown_ret BGetRecoveryEmail(char*, int) = 0;
+    virtual unknown_ret BIsLockFromSiteLicense() = 0;
 };

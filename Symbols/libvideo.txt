@@ -5,6 +5,7 @@
  B CClanMatchEventByRange::default_instance_
  B CCommunity_ClanAnnouncementInfo::default_instance_
  B CCuratorPreferences::default_instance_
+ B CFileWriterThread::s_bExit
  B CHTTPClientConnection::sm_vecSSLHostnamesValidateMutex
  B CLocalizationToken::default_instance_
  B CLogger::s_LogWatchesMutex
@@ -1583,13 +1584,12 @@
  T CFileWriter::Seek(unsigned long long, EFioSeekMode)
  T CFileWriter::Write(void const*, unsigned int)
  T CFileWriter::~CFileWriter()
+ T CFileWriterThread::ActivateThreadIfNecessary()
  T CFileWriterThread::BWriteAsync(CFileWriter*, void const*, int)
  T CFileWriterThread::CFileWriterThread()
  T CFileWriterThread::FileWriterItem_t::Validate(CValidator&, char const*)
- T CFileWriterThread::GlobalDestruction()
  T CFileWriterThread::RegisterWriter(CFileWriter const*)
  T CFileWriterThread::Run()
- T CFileWriterThread::StartThreadIfNecessary()
  T CFileWriterThread::UnregisterWriter(CFileWriter const*)
  T CFileWriterThread::Validate(CValidator&, char const*)
  T CFileWriterThread::~CFileWriterThread()
@@ -3517,6 +3517,8 @@
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::RemoveAll()
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::Validate(CValidator&, char const*)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::~CUtlVector()
+ T CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >::AddToTail()
+ T CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >::GrowVector(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::GrowVector(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::~CUtlVector()
@@ -4616,7 +4618,7 @@
  T KeyValues::KeyValues(char const*)
  T KeyValues::KeyValues(unsigned int)
  T KeyValues::MakeCopyInternal(KeyValues*) const
- T KeyValues::MergeKey(KeyValues const*)
+ T KeyValues::MergeKey(KeyValues const*, bool)
  T KeyValues::RemoveEverything()
  T KeyValues::RemoveSubKey(KeyValues*)
  T KeyValues::Validate(CValidator&, char const*, bool, bool)
@@ -5397,6 +5399,7 @@
  T bn_sqrx8x_internal
  T bn_sub_part_words
  T bn_sub_words
+ T bool BResolveHostString<CIPAddress>(char const*, bool, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&, VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
@@ -6419,7 +6422,7 @@
  b SHA1.m
  b SYS_str_reasons
  b SetWritingMiniDump(bool)::fAsserted
- b StaticFileWriterThread()::s_pFileWriterThread
+ b StaticFileWriterThread()::s_FileWriterThread
  b SteamThreadTools::g_ThreadMainThreadID
  b TestForAppleGraphicsUpdateInstalled()::bInstalled
  b TestForAppleGraphicsUpdateInstalled()::bLoaded
@@ -6502,7 +6505,7 @@
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
  b guard variable for RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
  b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
- b guard variable for StaticFileWriterThread()::s_pFileWriterThread
+ b guard variable for StaticFileWriterThread()::s_FileWriterThread
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
  b guard variable for protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
@@ -7045,6 +7048,7 @@
  fputs$UNIX2003
  fread
  free
+ freeaddrinfo
  fseek
  fstat$INODE64
  fsync

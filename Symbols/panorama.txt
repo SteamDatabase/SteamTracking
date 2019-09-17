@@ -7856,7 +7856,7 @@
  T CScheduler::CScheduler(unsigned long long)
  T CScheduler::Validate(CValidator&, char const*)
  T CScheduler::~CScheduler()
- T CSharedMemStream::BWaitForDataToGet(bool)
+ T CSharedMemStream::BWaitForDataToGet(bool, unsigned int)
  T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
  T CSharedMemStream::Clear(unsigned int)
  T CSharedMemStream::Get(void*, unsigned int)
@@ -10539,7 +10539,6 @@
  T bool panorama::DispatchEvent<panorama::VRApplicationMenuButtonUp>(panorama::VRApplicationMenuButtonUp, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRChaperoneChanged>(panorama::VRChaperoneChanged, panorama::IUIPanel const*)
  T bool panorama::DispatchEvent<panorama::VRDashboardRequested, unsigned int, unsigned long long>(panorama::VRDashboardRequested, panorama::IUIPanel const*, unsigned int, unsigned long long)
- T bool panorama::DispatchEvent<panorama::VRDashboardThumbSelected, unsigned long long>(panorama::VRDashboardThumbSelected, panorama::IUIPanel const*, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRDashboardVisibilityChanged, bool>(panorama::VRDashboardVisibilityChanged, panorama::IUIPanel const*, bool)
  T bool panorama::DispatchEvent<panorama::VRGamepadFocusGained, unsigned long long>(panorama::VRGamepadFocusGained, panorama::IUIPanel const*, unsigned long long)
  T bool panorama::DispatchEvent<panorama::VRGamepadFocusLost, unsigned long long>(panorama::VRGamepadFocusLost, panorama::IUIPanel const*, unsigned long long)
@@ -12731,6 +12730,7 @@
  T panorama::CTopLevelWindow::ResumeFromValidate()
  T panorama::CTopLevelWindow::RunPlatformFrame()
  T panorama::CTopLevelWindow::SetAllowThrottling(bool)
+ T panorama::CTopLevelWindow::SetClearColor(Color)
  T panorama::CTopLevelWindow::SetContextPtr(void*)
  T panorama::CTopLevelWindow::SetFocusBehavior(panorama::EWindowFocusBehavior)
  T panorama::CTopLevelWindow::SetFullscreen(bool)
@@ -12763,7 +12763,6 @@
  T panorama::CTopLevelWindowOpenVROverlay::CTopLevelWindowOpenVROverlay(panorama::CUIEngine*)
  T panorama::CTopLevelWindowOpenVROverlay::EnableControllerCursor(bool)
  T panorama::CTopLevelWindowOpenVROverlay::ForceHideWindow()
- T panorama::CTopLevelWindowOpenVROverlay::GetClearColor()
  T panorama::CTopLevelWindowOpenVROverlay::GetClientDimensions(float&, float&)
  T panorama::CTopLevelWindowOpenVROverlay::GetMouseCursorTexture(Vector2D*)
  T panorama::CTopLevelWindowOpenVROverlay::GetNativeWindowHandle()
@@ -12794,7 +12793,6 @@
  T panorama::CTopLevelWindowOverlay::BIsVisible()
  T panorama::CTopLevelWindowOverlay::CTopLevelWindowOverlay(panorama::CUIEngine*)
  T panorama::CTopLevelWindowOverlay::ForceHideWindow()
- T panorama::CTopLevelWindowOverlay::GetClearColor()
  T panorama::CTopLevelWindowOverlay::GetClientDimensions(float&, float&)
  T panorama::CTopLevelWindowOverlay::GetNativeWindowHandle()
  T panorama::CTopLevelWindowOverlay::GetOverlayInterface()
@@ -12817,7 +12815,7 @@
  T panorama::CTopLevelWindowSDL::Activate(bool)
  T panorama::CTopLevelWindowSDL::BAllowInput(panorama::InputMessage_t&)
  T panorama::CTopLevelWindowSDL::BHasFocus()
- T panorama::CTopLevelWindowSDL::BInitializeSurface(char const*, int, int, panorama::IUIEngine::ERenderTarget, bool, bool, bool, char const*)
+ T panorama::CTopLevelWindowSDL::BInitializeSurface(char const*, int, int, panorama::IUIEngine::ERenderTarget, bool, bool, bool, char const*, bool)
  T panorama::CTopLevelWindowSDL::BIsVisible()
  T panorama::CTopLevelWindowSDL::CTopLevelWindowSDL(panorama::CUIEngine*)
  T panorama::CTopLevelWindowSDL::FindWindowForSDLWindow(SDL_Window*)
@@ -13213,7 +13211,7 @@
  T panorama::CUIEngineSDL::BInitialize()
  T panorama::CUIEngineSDL::CUIEngineSDL()
  T panorama::CUIEngineSDL::CopyToClipboardImpl(char const*)
- T panorama::CUIEngineSDL::CreateNewWindow(char const*, unsigned int, unsigned int, panorama::IUIEngine::ERenderTarget, bool, bool, bool, char const*)
+ T panorama::CUIEngineSDL::CreateNewWindow(char const*, unsigned int, unsigned int, panorama::IUIEngine::ERenderTarget, bool, bool, bool, char const*, bool)
  T panorama::CUIEngineSDL::GetClipboardTextImpl(CUtlString&) const
  T panorama::CUIEngineSDL::GetCurrentInputLocale()
  T panorama::CUIEngineSDL::RunPlatformFrame()
@@ -17118,6 +17116,8 @@
  b g_pClientMatchmakingServers
  b g_pClientMusic
  b g_pClientNetworkDeviceManager
+ b g_pClientNetworkingSockets
+ b g_pClientNetworkingUtils
  b g_pClientParentalSettings
  b g_pClientParties
  b g_pClientRemoteClientManager
