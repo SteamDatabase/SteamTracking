@@ -894,14 +894,14 @@ CWishlistController.prototype.BPassesFilters = function( unAppId, rgFilters ) {
 			if( rgTerms[j].length == 0 || !appInfo.name )
 				continue;
 
-			if ( appInfo.name.toLowerCase().indexOf ( rgTerms[j] ) !== -1 )
+			if ( appInfo.name.toLowerCase().indexOf ( rgTerms[j].toLowerCase() ) !== -1 )
 			{
 				bMatchesTerm = true
 				rgelMatchedElements.push( $J('.title', elParent) );
 			}
 
 			for ( var i = 0; i < appInfo.tags.length; i++ )
-				if ( appInfo.tags[ i ].toLowerCase ().indexOf ( rgTerms[j] ) !== -1 )
+				if ( appInfo.tags[ i ].toLowerCase ().indexOf ( rgTerms[j].toLowerCase() ) !== -1 )
 				{
 					bMatchesTerm = true;
 					rgelMatchedElements.push( $J('.tag[data-tag-index=\''+i+'\']', elParent) );
