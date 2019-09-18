@@ -9281,15 +9281,15 @@
                 (this.m_fnOnReadyToRender(),
                 (this.m_fnOnReadyToRender = void 0)));
           }),
-          (e.prototype.RestoreStatePostDisconnect = function(e) {
-            e && this.LoadMyChatRooms();
-            var t = this.m_mapActiveChatGroupsToRefCount.toPOJO();
-            Object.keys(t).some(function(e) {
-              return 0 < t[e];
+          (e.prototype.RestoreStatePostDisconnect = function(t) {
+            t && this.LoadMyChatRooms();
+            var n = this.m_mapActiveChatGroupsToRefCount.toPOJO();
+            Object.keys(n).some(function(e) {
+              return 0 < n[e];
             }) && this.SendActiveChatRoomGroupsToServer(),
-              this.m_FriendChatStore.RestoreStatePostDisconnect(),
+              this.m_FriendChatStore.RestoreStatePostDisconnect(t),
               this.m_mapChatGroups.forEach(function(e) {
-                return e.OnConnectionRestored();
+                return e.OnConnectionRestored(t);
               });
           }),
           (e.prototype.LoadMyChatRooms = function() {
@@ -30966,8 +30966,8 @@
           (e.prototype.GetChatRoom = function(e) {
             return this.m_mapRooms.get(e);
           }),
-          (e.prototype.OnConnectionRestored = function() {
-            this.UnloadGroupState(),
+          (e.prototype.OnConnectionRestored = function(e) {
+            e && this.UnloadGroupState(),
               this.m_mapRooms.forEach(function(e) {
                 return e.OnConnectionRestored();
               });
@@ -54976,10 +54976,10 @@
                 }
               );
           }),
-          (e.prototype.RestoreStatePostDisconnect = function() {
-            this.LoadFriendMessageSessions();
-            for (var e = 0, t = this.m_rgFriendChats; e < t.length; e++) {
-              t[e].OnConnectionRestored();
+          (e.prototype.RestoreStatePostDisconnect = function(e) {
+            e && this.LoadFriendMessageSessions();
+            for (var t = 0, n = this.m_rgFriendChats; t < n.length; t++) {
+              n[t].OnConnectionRestored();
             }
           }),
           (e.prototype.GetServiceTransport = function() {
