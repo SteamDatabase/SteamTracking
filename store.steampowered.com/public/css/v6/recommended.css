@@ -2909,17 +2909,38 @@ div.graph_toggle_icon.down {
 	min-width: 300px;
 }
 
-#app_reviews_playtime_slider .ui-slider-range,
-#app_reviews_playtime_slider .ui-slider-handle {
-	/*transition: all 0.1s; */
-}
-
 #app_reviews_playtime_range_text_min, #app_reviews_playtime_range_text_max {
 	font-weight: bold;
+}
+#app_reviews_playtime_slider {
+	margin: 10px;
+	height: auto;
+	border: 2px solid #fff;
+	border-radius: 0px;
+	cursor: pointer;
+}
+
+#app_reviews_playtime_slider .ui-slider-range {
+
+}
+
+#app_reviews_playtime_slider .ui-slider-handle {
+	margin-top: -2px;
+	height: 14px;
+	width: 14px;
+	border-radius: 7px;
+	box-shadow: 0px 0px 4px 0px #000000;
+	border: none;
+	cursor: pointer;
+}
+#app_reviews_playtime_slider .ui-slider-handle.ui-state-hover {
+	background: #fff;
 }
 
 #app_reviews_playtime_slider .ui-widget-header {
 	background: #4582a5;
+	height: 4px;
+	margin-top: -2px;
 }
 
 #app_reviews_hash.graph_hidden #reviews_date_range_menu {
