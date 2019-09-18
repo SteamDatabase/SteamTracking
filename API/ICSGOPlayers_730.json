@@ -2,6 +2,31 @@
     "name": "ICSGOPlayers_730",
     "methods": [
         {
+            "name": "GetNextMatchSharingCode",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "The SteamID of the user"
+                },
+                {
+                    "name": "steamidkey",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Authentication obtained from the SteamID"
+                },
+                {
+                    "name": "knowncode",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Previously known match sharing code obtained from the SteamID"
+                }
+            ]
+        },
+        {
             "name": "GetPlayerProfileCoin",
             "version": 1,
             "httpmethod": "GET",
