@@ -882,7 +882,10 @@ function SaveFields()
 function CORSTest( fnOnSuccess )
 {
 	var strBody = $J( '#body' ).val();
-	var regex = /\[img\](.+)\[\/img\]/ig;
+	// Skip the shortform version, because it will translate to our CDN and will be CORS compliant.
+	// Partners are seeing this when they are using their creator home to post an announcement and copying
+	// the body they generated on the partner event's editor side.
+	var regex = /\[img\](?!{STEAM_CLAN_IMAGE})(.+)\[\/img\]/ig;
 	var regexCDN = new RegExp(g_strCDNRegex, 'i');
 
 	var nImages = 0;
