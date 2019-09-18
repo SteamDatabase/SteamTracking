@@ -266,26 +266,55 @@ function InitAutocollapse()
 	});
 }
 
-function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, bExtendedDisplay )
+function DefaultRecScoreFactory( nOwnedPenalty )
+{
+	return function DefaultRecScore( i, unAppID )
+	{
+		if ( GDynamicStore.BIsAppIgnored( unAppID ) )
+			return null;
+		else if ( GDynamicStore.BIsAppOwned( unAppID, false ) )
+			return nOwnedPenalty + i;
+		else
+			return i;
+	};
+}
+
+function ShuffleRecScore( i, unAppID )
+{
+	var nScore = 0;
+	var nOwnedPenalty = 5;
+
+	if ( GDynamicStore.BIsAppIgnored( unAppID ) )
+		return null;
+
+	if ( GDynamicStore.BIsAppOwned( unAppID, false ) )
+		nScore += nOwnedPenalty;
+
+	// shuffle a little
+	nScore += ( Math.sqrt(i) + 2 ) * Math.random();
+	nScore += Math.sqrt( i );
+
+	return nScore;
+}
+
+
+function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecScore )
 {
 	var rgRecommendationsToShow = [];
-	var nCurScore = 0;
-	var nOwnedPenalty = bExtendedDisplay ? 15 : 3;
+	var fnScore = fnRecScore || DefaultRecScoreFactory( 3 );
+
 	for ( var i = 0; i < rgRecommendedAppIDs.length; i++ )
 	{
 		var unAppID = rgRecommendedAppIDs[i];
-		if ( GDynamicStore.BIsAppIgnored( unAppID ) )
-			continue;
-		else if ( GDynamicStore.BIsAppOwned( unAppID, false ) )
-			rgRecommendationsToShow.push( { score: nOwnedPenalty + nCurScore++, appid: unAppID } );
-		else
-			rgRecommendationsToShow.push( { score: nCurScore++, appid: unAppID } );
+		var nScore = fnScore( i, unAppID );
+
+		if ( nScore !== null )
+			rgRecommendationsToShow.push( { score: nScore, appid: unAppID, orig: i } );
 	}
 
 	rgRecommendationsToShow.sort( function( a, b ) { return a.score - b.score; } );
 
-	if ( bExtendedDisplay )
-		rgRecommendationsToShow = rgRecommendationsToShow.slice( 0, 15 );
+	rgRecommendationsToShow = rgRecommendationsToShow.slice( 0, 12 );
 
 	for ( var i = 0; i < rgRecommendationsToShow.length; i++ )
 	{
@@ -293,6 +322,8 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, bExtend
 		var rgItemData = GStoreItemData.rgAppData[ unAppID ];
 		if ( !rgItemData )
 			continue;
+
+				console.log( `#${i} (${rgRecommendationsToShow[i].orig}): ${rgRecommendationsToShow[i].score} pts - ${rgItemData.name}` );
 
 		var params = {'class': 'small_cap',
 			'data-ds-appid': unAppID,
@@ -314,7 +345,7 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, bExtend
 	elTarget.trigger('v_contentschanged');
 }
 
-function RenderMoreLikeThisBlock( rgRecommendedAppIDs, bExtendedDisplay )
+function RenderMoreLikeThisBlock( rgRecommendedAppIDs, bUseShuffle )
 {
 	if ( !rgRecommendedAppIDs || !rgRecommendedAppIDs.length > 0 || !$J('#recommended_block_content').length )
 	{
@@ -322,7 +353,7 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs, bExtendedDisplay )
 		return;
 	}
 
-	RenderRecommendBlock( rgRecommendedAppIDs, 'recommended', $J('#recommended_block_content'), bExtendedDisplay );
+	RenderRecommendBlock( rgRecommendedAppIDs, 'recommended', $J('#recommended_block_content'), bUseShuffle ? ShuffleRecScore : DefaultRecScoreFactory( 15 ) );
 }
 
 function RenderSuccessorRankedAppsBlock( rgSuccessorAppIDs )

@@ -1340,7 +1340,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 	visibility: hidden;
 }
 
-.similar_grid_item:hover .buttons {
+.similar_grid_item:hover .buttons,
+html.touch .similar_grid_item .buttons {
 	visibility: visible;
 }
 
@@ -2978,5 +2979,94 @@ div.graph_toggle_icon.down {
 	html.responsive .review_box .leftcol {
 		float: none;
 		width: auto;
+	}
+}
+
+body.v6 h2.morelike_section_divider
+{
+	margin-top: 36px;
+	border-bottom: 1px solid #66c0f4;
+	margin-bottom: 0;
+	line-height: 24px;
+}
+
+.similar_grid_flex
+{
+	margin-right: -2px;
+	margin-bottom: -2px;
+	display: flex;
+}
+
+.similar_grid_flex .similar_grid_item
+{
+	float: none;
+	flex: 1;
+}
+
+.recommendation_highlight.recommendation_highlightv2
+{
+	display: flex;
+	min-height: 0;
+	padding: 3%;
+}
+
+.recommendation_highlightv2 .highlight_description
+{
+	padding: 4%;
+	min-height: 0;
+}
+
+.recommendation_highlightv2 .header_image
+{
+	position: relative;
+	left: 0;
+	top: 0;
+	min-width: 0;
+	max-width: 60%;
+	align-self: center;
+}
+
+.recommendation_highlightv2 .header_image img
+{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .recommendation_highlightv2 .header_image
+	{
+		height: auto;
+	}
+
+	html.responsive .similar_grid_flex .similar_grid_item
+	{
+		box-sizing: border-box;
+		min-width: 213px;
+		max-width: calc( 50% - 2px );
+		height: auto;
+		flex: 1;
+	}
+
+	html.responsive .similar_grid_flex .similar_grid_item .similar_grid_capsule
+	{
+		width: 100%;
+		height: auto;
+	}
+
+	html.responsive .similar_grid_flex .similar_grid_item .similar_grid_capsule img
+	{
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media screen and ( max-width: 500px )
+{
+	html.responsive .similar_grid_flex .similar_grid_item
+	{
+		min-width: 48%;
 	}
 }
