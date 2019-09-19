@@ -768,76 +768,82 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
     opacity: 1.0;
     word-wrap: break-word; }
 
-.StoreSaleWidgetContainer {
+.broadcastwidgets_StoreSaleWidgetContainer_2RL6D {
   display: flex;
   flex-direction: row;
   max-width: 780px;
   max-height: 250px;
   z-index: 1; }
   @media screen and (max-width: 910px) {
-    .StoreSaleWidgetContainer {
+    .broadcastwidgets_StoreSaleWidgetContainer_2RL6D {
       flex-direction: column; } }
 
-.StoreSaleWidgetContainer_mini, .StoreSaleWidgetContainer_column {
+.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp,
+.broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   max-height: 337px; }
 
-.StoreSaleWidgetContainer_mini {
+.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
   max-width: 155px;
   background: #000; }
 
-.StoreSaleWidgetContainer_column {
+.broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
   max-width: 310px;
   padding: 8px; }
 
-.StoreSaleWidgetImage {
+.broadcastwidgets_StoreSaleWidgetImage_2T_Na {
   padding-right: 16px;
   cursor: pointer; }
 
-.StoreSaleWidgetImage_mini {
+.broadcastwidgets_StoreSaleWidgetImage_mini_yvW2h {
   cursor: pointer;
   max-width: 155px; }
 
-.StoreSaleWidgetImage_column {
+.broadcastwidgets_StoreSaleWidgetImage_column_1vMOn {
   cursor: pointer;
   max-width: 310px; }
 
-.StoreSaleImage {
+.broadcastwidgets_StoreSaleImage_2LocI {
   width: 200px;
   cursor: pointer; }
 
-.StoreSaleImage_mini {
+.broadcastwidgets_StoreSaleImage_mini_1zSsm {
   cursor: pointer;
   width: 155px; }
 
-.StoreSaleImage_column {
+.broadcastwidgets_StoreSaleImage_column_3DVUq {
   cursor: pointer;
   width: 294px; }
 
-.StoreSaleWidgetTitle {
+/* Override the EventDetailsBody img style in partnereventdisplay.scss */
+.broadcastwidgets_StoreSaleImage_2LocI.broadcastwidgets_StoreSaleImage_2LocI {
+  max-width: initial; }
+
+.broadcastwidgets_StoreSaleWidgetTitle_38YoU {
   cursor: pointer;
   font-size: 19px;
   width: fit-content;
   color: #c1c6cf;
   flex-shrink: 0; }
 
-.StoreSaleWidgetTitle:hover {
+.broadcastwidgets_StoreSaleWidgetTitle_38YoU:hover {
   color: #AAA; }
 
-.StoreSaleWidgetRelease {
+.broadcastwidgets_StoreSaleWidgetRelease_3yCCs {
   font-size: 10px;
   color: #919fb1;
   margin-bottom: 8px; }
 
-.StoreSaleWidgetShortDesc {
+.broadcastwidgets_StoreSaleWidgetShortDesc_2by8B {
   font-size: 12px;
-  max-height: 120px;
+  max-height: 80px;
   overflow: hidden; }
 
-.StoreSaleWidgetShortDesc_column, .StoreSaleWidgetShortDesc_mini {
-  max-height: 160px;
+.broadcastwidgets_StoreSaleWidgetShortDesc_column_cZoip,
+.broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
+  max-height: 150px;
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
@@ -846,26 +852,26 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   letter-spacing: 0px;
   line-height: 15px; }
 
-.StoreSaleWidgetRight {
+.broadcastwidgets_StoreSaleWidgetRight_1MzBO {
   padding: 4px; }
 
-.StoreSalePriceActionWidgetContainer {
+.broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY {
   display: flex;
   flex-direction: row;
   padding: 1px; }
 
-.StoreSaleDiscountBox {
+.broadcastwidgets_StoreSaleDiscountBox_3uiyX {
   font-size: 14px;
   padding: 5px;
   background-color: #4C6B22;
   color: #A4D007; }
 
-.StoreSalePriceBox {
+.broadcastwidgets_StoreSalePriceBox_2A_NW {
   font-size: 14px;
   padding: 5px;
   background-color: black; }
 
-.StoreSalePriceButton {
+.broadcastwidgets_StoreSalePriceButton_3lydG {
   border-radius: 2px;
   border: none;
   padding: 1px;
@@ -880,7 +886,7 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
   font-size: 15px;
   line-height: 30px; }
 
-.StoreSalePriceButton:hover {
+.broadcastwidgets_StoreSalePriceButton_3lydG:hover {
   text-decoration: none !important;
   color: #ffffff !important;
   background: #a4d007;
@@ -4024,94 +4030,6 @@ body.modals_BodyNoScroll_32ZiC {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1500; }
 
-.eventreminder_FlexColumnContainer_15ufN {
-  display: flex;
-  flex-direction: column; }
-
-.eventreminder_ReminderDialog_3YUEY.eventreminder_ReminderOptions_1Tp8K {
-  width: 279px;
-  padding: 0px;
-  background: transparent; }
-
-.eventreminder_ReminderBackground_TNf9_ {
-  background: #444850;
-  padding: 0px;
-  border-radius: 2px;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2); }
-
-.eventreminder_ReminderOption_26nnh {
-  color: #ffffff; }
-  .eventreminder_ReminderOption_26nnh:hover {
-    background: rgba(255, 255, 255, 0.2); }
-
-.eventreminder_ReminderCheckBox_vPo2j {
-  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%);
-  display: flex;
-  flex-direction: row; }
-
-.eventreminder_ReminderCheckBox_vPo2j:hover {
-  cursor: pointer;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
-
-.eventreminder_ReminderDefault_19p2Q {
-  padding: 8px;
-  color: #ffffff;
-  flex: 1;
-  flex-grow: 100;
-  border-right: 1px solid rgba(0, 0, 0, 0.5); }
-
-.eventreminder_ReminderDefault_19p2Q:hover {
-  background-color: rgba(57, 154, 236, 0.5); }
-
-.eventreminder_ReminderOptions_1Tp8K,
-.eventreminder_ReminderOpennedOptions_vBuhk {
-  flex: 1;
-  flex-basis: 32px;
-  background-repeat: no-repeat;
-  background-position: 9px 10px;
-  width: 35px;
-  height: 32px;
-  border-left: 1px solid rgba(255, 255, 255, 0.15); }
-
-.eventreminder_ReminderOptions_1Tp8K {
-  background-image: url(/public/images//applications/community/ico_arrow_dn.png); }
-
-.eventreminder_ReminderOpennedOptions_vBuhk {
-  background-image: url(/public/images//applications/community/ico_arrow_up.png); }
-
-.eventreminder_ReminderOptions_1Tp8K:hover {
-  background-color: rgba(57, 154, 236, 0.5); }
-
-.eventreminder_ReminderOptionsHeader_2oOZC {
-  color: #b1b4b9;
-  font-size: 11px;
-  text-transform: uppercase;
-  padding-left: 8px;
-  margin-top: 8px; }
-
-.eventreminder_ReminderCalendarOptions_VO6FS {
-  padding: 8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-
-.eventreminder_ReminderSettings_2Pn59 {
-  margin-top: 12px;
-  border-top: 1px solid #5b616b;
-  padding: 8px; }
-
-.eventreminder_ReminderCalendarOptions_VO6FS .eventreminder_ReminderOption_26nnh {
-  padding: 2px 8px; }
-
-.eventreminder_ReminderCalendarOptions_VO6FS .eventreminder_ReminderSpacer_3n3uJ {
-  padding: 2px 0px;
-  text-align: center; }
-
-.eventreminder_ReminderNotes_3qE0w {
-  padding: 8px;
-  color: #e1c48a;
-  font-size: 12px; }
-
 :root {
   --main-text-color: #dbe2e6;
   --main-light-blue-background: #93b3c8;
@@ -4346,6 +4264,94 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   display: inline-block;
   margin-right: 8px;
   padding: 0 4px; }
+
+.eventreminder_FlexColumnContainer_15ufN {
+  display: flex;
+  flex-direction: column; }
+
+.eventreminder_ReminderDialog_3YUEY.eventreminder_ReminderOptions_1Tp8K {
+  width: 279px;
+  padding: 0px;
+  background: transparent; }
+
+.eventreminder_ReminderBackground_TNf9_ {
+  background: #444850;
+  padding: 0px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2); }
+
+.eventreminder_ReminderOption_26nnh {
+  color: #ffffff; }
+  .eventreminder_ReminderOption_26nnh:hover {
+    background: rgba(255, 255, 255, 0.2); }
+
+.eventreminder_ReminderCheckBox_vPo2j {
+  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%);
+  display: flex;
+  flex-direction: row; }
+
+.eventreminder_ReminderCheckBox_vPo2j:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+
+.eventreminder_ReminderDefault_19p2Q {
+  padding: 8px;
+  color: #ffffff;
+  flex: 1;
+  flex-grow: 100;
+  border-right: 1px solid rgba(0, 0, 0, 0.5); }
+
+.eventreminder_ReminderDefault_19p2Q:hover {
+  background-color: rgba(57, 154, 236, 0.5); }
+
+.eventreminder_ReminderOptions_1Tp8K,
+.eventreminder_ReminderOpennedOptions_vBuhk {
+  flex: 1;
+  flex-basis: 32px;
+  background-repeat: no-repeat;
+  background-position: 9px 10px;
+  width: 35px;
+  height: 32px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15); }
+
+.eventreminder_ReminderOptions_1Tp8K {
+  background-image: url(/public/images//applications/community/ico_arrow_dn.png); }
+
+.eventreminder_ReminderOpennedOptions_vBuhk {
+  background-image: url(/public/images//applications/community/ico_arrow_up.png); }
+
+.eventreminder_ReminderOptions_1Tp8K:hover {
+  background-color: rgba(57, 154, 236, 0.5); }
+
+.eventreminder_ReminderOptionsHeader_2oOZC {
+  color: #b1b4b9;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding-left: 8px;
+  margin-top: 8px; }
+
+.eventreminder_ReminderCalendarOptions_VO6FS {
+  padding: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.eventreminder_ReminderSettings_2Pn59 {
+  margin-top: 12px;
+  border-top: 1px solid #5b616b;
+  padding: 8px; }
+
+.eventreminder_ReminderCalendarOptions_VO6FS .eventreminder_ReminderOption_26nnh {
+  padding: 2px 8px; }
+
+.eventreminder_ReminderCalendarOptions_VO6FS .eventreminder_ReminderSpacer_3n3uJ {
+  padding: 2px 0px;
+  text-align: center; }
+
+.eventreminder_ReminderNotes_3qE0w {
+  padding: 8px;
+  color: #e1c48a;
+  font-size: 12px; }
 
 .partnereventdisplay_EventDetailsPageContainer_2Ptra {
   display: flex;
@@ -5024,8 +5030,7 @@ img {
   padding-left: 1em;
   padding-inline-start: 40px;
   margin-top: 14px;
-  margin-bottom: 14px;
-  display: inline-block; }
+  margin-bottom: 0px; }
 
 .eventbbcodeparser_UnorderList_3995Y > li {
   list-style-position: outside; }
@@ -5065,6 +5070,15 @@ iframe.eventbbcodeparser_StoreWidget_36Y-l {
 iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   height: 360px;
   width: 100%; }
+
+.eventbbcodeparser_AppSummaryWidgetCtn_3DfY9 {
+  flex-grow: 2;
+  flex-basis: 0;
+  margin-right: 16px;
+  padding: 16px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 4px; }
 
 .eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
   position: relative;
@@ -6165,17 +6179,20 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     color: #6c767f;
     margin-bottom: 0px; }
 
+.partnereventwebrowembed_Container_2Jd3M {
+  padding-top: 5px; }
+
 @media screen and (max-width: 910px) {
-  .events_StoreHeaderAdjust_1MJYc {
+  .partnereventwebrowembed_StoreHeaderAdjust_3YyCp {
     margin-top: 58px; } }
 
-.events_SectionButtonCtn_xzUHb {
+.partnereventwebrowembed_SectionButtonCtn_1HP0y {
   display: flex;
   flex-direction: row-reverse;
   margin-bottom: -21px;
   margin-top: -5px; }
 
-.events_SectionButton_3I3q- {
+.partnereventwebrowembed_SectionButton_3n8sw {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 2px;
@@ -6187,10 +6204,10 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   cursor: pointer;
   position: relative;
   bottom: 30px; }
-  .events_SectionButton_3I3q-:hover {
+  .partnereventwebrowembed_SectionButton_3n8sw:hover {
     border: 1px solid white; }
 
-.events_EventsSummariesCtn_1MHN3 {
+.partnereventwebrowembed_EventsSummariesCtn_1snIw {
   display: flex;
   margin-bottom: 20px; }
 
@@ -6236,6 +6253,35 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .eventmoderation_TileTitle_yJw1i {
   font-weight: bold;
   font-size: 14px; }
+
+@media screen and (max-width: 910px) {
+  .events_StoreHeaderAdjust_1MJYc {
+    margin-top: 58px; } }
+
+.events_SectionButtonCtn_xzUHb {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: -21px;
+  margin-top: -5px; }
+
+.events_SectionButton_3I3q- {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 2px 15px;
+  line-height: normal;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  bottom: 30px; }
+  .events_SectionButton_3I3q-:hover {
+    border: 1px solid white; }
+
+.events_EventsSummariesCtn_1MHN3 {
+  display: flex;
+  margin-bottom: 20px; }
 
 .storepartnerevent_main_GClP_ {
   height: 100vh;
