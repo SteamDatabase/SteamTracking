@@ -889,3 +889,8 @@ message CMsgInspectElement {
 	optional uint32 y = 3;
 }
 
+message CMsgDisableF5 {
+	optional uint32 browser_handle = 1;
+	optional bool disable = 2;
+}
+

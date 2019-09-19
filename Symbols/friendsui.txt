@@ -31,6 +31,7 @@
  B CMsgComboNeedsPaint::default_instance_
  B CMsgCopy::default_instance_
  B CMsgDisableBackgroundThrottling::default_instance_
+ B CMsgDisableF5::default_instance_
  B CMsgDraggableRegionsChanged::default_instance_
  B CMsgDraggableRegionsChanged_DraggableRects::default_instance_
  B CMsgExecuteJavaScript::default_instance_
@@ -2054,6 +2055,7 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserSize>
  D typeinfo for CHTMLProtoBufMsg<CMsgCopy>
  D typeinfo for CHTMLProtoBufMsg<CMsgDisableBackgroundThrottling>
+ D typeinfo for CHTMLProtoBufMsg<CMsgDisableF5>
  D typeinfo for CHTMLProtoBufMsg<CMsgExecuteJavaScript>
  D typeinfo for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D typeinfo for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
@@ -2173,6 +2175,7 @@
  D typeinfo for CMsgComboNeedsPaint
  D typeinfo for CMsgCopy
  D typeinfo for CMsgDisableBackgroundThrottling
+ D typeinfo for CMsgDisableF5
  D typeinfo for CMsgDraggableRegionsChanged
  D typeinfo for CMsgDraggableRegionsChanged_DraggableRects
  D typeinfo for CMsgExecuteJavaScript
@@ -3455,6 +3458,7 @@
  D vtable for CHTMLProtoBufMsg<CMsgBrowserSize>
  D vtable for CHTMLProtoBufMsg<CMsgCopy>
  D vtable for CHTMLProtoBufMsg<CMsgDisableBackgroundThrottling>
+ D vtable for CHTMLProtoBufMsg<CMsgDisableF5>
  D vtable for CHTMLProtoBufMsg<CMsgExecuteJavaScript>
  D vtable for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D vtable for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
@@ -3574,6 +3578,7 @@
  D vtable for CMsgComboNeedsPaint
  D vtable for CMsgCopy
  D vtable for CMsgDisableBackgroundThrottling
+ D vtable for CMsgDisableF5
  D vtable for CMsgDraggableRegionsChanged
  D vtable for CMsgDraggableRegionsChanged_DraggableRects
  D vtable for CMsgExecuteJavaScript
@@ -4242,6 +4247,7 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserSize>
  R typeinfo name for CHTMLProtoBufMsg<CMsgCopy>
  R typeinfo name for CHTMLProtoBufMsg<CMsgDisableBackgroundThrottling>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgDisableF5>
  R typeinfo name for CHTMLProtoBufMsg<CMsgExecuteJavaScript>
  R typeinfo name for CHTMLProtoBufMsg<CMsgExitFullScreen>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
@@ -4361,6 +4367,7 @@
  R typeinfo name for CMsgComboNeedsPaint
  R typeinfo name for CMsgCopy
  R typeinfo name for CMsgDisableBackgroundThrottling
+ R typeinfo name for CMsgDisableF5
  R typeinfo name for CMsgDraggableRegionsChanged
  R typeinfo name for CMsgDraggableRegionsChanged_DraggableRects
  R typeinfo name for CMsgExecuteJavaScript
@@ -7291,6 +7298,8 @@
  T CHTMLProtoBufMsg<CMsgCopy>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgDisableBackgroundThrottling>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgDisableBackgroundThrottling>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgDisableF5>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgDisableF5>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgExecuteJavaScript>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgExecuteJavaScript>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgExitFullScreen>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -8015,6 +8024,17 @@
  T CMsgDisableBackgroundThrottling::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgDisableBackgroundThrottling::SetCachedSize(int) const
  T CMsgDisableBackgroundThrottling::~CMsgDisableBackgroundThrottling()
+ T CMsgDisableF5::ByteSize() const
+ T CMsgDisableF5::CMsgDisableF5()
+ T CMsgDisableF5::Clear()
+ T CMsgDisableF5::GetCachedSize() const
+ T CMsgDisableF5::GetMetadata() const
+ T CMsgDisableF5::IsInitialized() const
+ T CMsgDisableF5::MergeFrom(CMsgDisableF5 const&)
+ T CMsgDisableF5::New() const
+ T CMsgDisableF5::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgDisableF5::SetCachedSize(int) const
+ T CMsgDisableF5::~CMsgDisableF5()
  T CMsgDraggableRegionsChanged::ByteSize() const
  T CMsgDraggableRegionsChanged::CMsgDraggableRegionsChanged()
  T CMsgDraggableRegionsChanged::Clear()
@@ -13823,6 +13843,7 @@
  T vgui::HTML::SetBrowserIndexCallback(CUtlDelegate<void (vgui::HTML*)>)
  T vgui::HTML::SetBrowserPopupHTMLWindowHook(CUtlDelegate<IHTMLResponses* (char const*, int, int, int, int, bool)>)
  T vgui::HTML::SetContextMenuEnabled(bool)
+ T vgui::HTML::SetDisableF5(bool)
  T vgui::HTML::SetForceChildHWNDPopupsToDirectHWND(bool)
  T vgui::HTML::SetLocalFileRequestMapping(char const*, char const*, CUtlVector<vgui::HTML::AdditionalRoute_t, CUtlMemory<vgui::HTML::AdditionalRoute_t> >*)
  T vgui::HTML::ShowFindDialog()
@@ -16432,6 +16453,8 @@
  b (anonymous namespace)::CMsgCopy_reflection_
  b (anonymous namespace)::CMsgDisableBackgroundThrottling_descriptor_
  b (anonymous namespace)::CMsgDisableBackgroundThrottling_reflection_
+ b (anonymous namespace)::CMsgDisableF5_descriptor_
+ b (anonymous namespace)::CMsgDisableF5_reflection_
  b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_descriptor_
  b (anonymous namespace)::CMsgDraggableRegionsChanged_DraggableRects_reflection_
  b (anonymous namespace)::CMsgDraggableRegionsChanged_descriptor_
@@ -17537,6 +17560,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgComboNeedsPaint_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgCopy_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDisableBackgroundThrottling_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDisableF5_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_DraggableRects_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgDraggableRegionsChanged_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgExecuteJavaScript_offsets_
