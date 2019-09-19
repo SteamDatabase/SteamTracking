@@ -126,6 +126,8 @@ https://store.steampowered.com/public/css/bigpicture/home.css?__TIME__
 https://store.steampowered.com/public/css/bigpicture/store.css?__TIME__
 https://store.steampowered.com/public/css/bigpicture/subscription.css?__TIME__
 https://store.steampowered.com/public/css/labs.css?__TIME__
+https://store.steampowered.com/public/css/labs/divingbell.css?__TIME__
+https://store.steampowered.com/public/css/labs_trending_reviews.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2016.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2017.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2018.css?__TIME__
@@ -357,7 +359,7 @@ https://store.steampowered.com/public/javascript/supportmessages.js?__TIME__&l=e
 https://store.steampowered.com/public/javascript/video_watch.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/wishlist.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/youraccount.js?__TIME__&l=english
-
+https://store.steampowered.com/public/javascript/labs/divingbell.js?__TIME__&l=english
 
 
 //
