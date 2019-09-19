@@ -17,19 +17,6 @@ enum ActivityType
 	Airborne = 5;
 }
 
-enum AuthenticationType
-{
-	FINGERPRINT = 1;
-	FACIAL_RECOGNITION = 2;
-}
-
-enum BrightnessMode
-{
-	UNKNOWN = 0;
-	AUTOMATIC = 1;
-	MANUAL = 2;
-}
-
 enum CBroadcast_BroadcastViewerState_Notification_EViewerState
 {
 	NeedsApproval = 1;
@@ -295,6 +282,23 @@ enum EBroadcastWatchState
 	Error = 3;
 }
 
+enum EBrowserType
+{
+	OffScreen = 0;
+	OpenVROverlay = 1;
+	OpenVROverlay_Dashboard = 2;
+	DirectHWND = 3;
+	DirectHWND_Borderless = 4;
+	DirectHWND_Hidden = 5;
+	ChildHWNDNative = 6;
+	Transparent_Toplevel = 7;
+	OffScreen_SharedTexture = 8;
+	OffScreen_GameOverlay = 9;
+	OffScreen_GameOverlay_SharedTexture = 10;
+	Offscreen_FriendsUI = 11;
+	MAX = 12;
+}
+
 enum EChatEntryType
 {
 	Invalid = 0;
@@ -474,6 +478,7 @@ enum EClanEventType
 	BetaReleaseEvent = 29;
 	FreeTrial = 31;
 	SeasonRelease = 32;
+	CrosspostEvent = 34;
 }
 
 enum EClanImageFileType
@@ -535,6 +540,14 @@ enum EClientUINotificationType
 	GroupChatMessage = 1;
 	FriendChatMessage = 2;
 	FriendPersonaState = 3;
+}
+
+enum EClientUsedInputType
+{
+	Keyboard = 0;
+	Mouse = 1;
+	Controller = 2;
+	Max = 3;
 }
 
 enum ECommentDeleteReason
@@ -680,7 +693,6 @@ enum EDisplayStatus
 	RegionRestricted = 12;
 	PresaleOnly = 13;
 	InvalidPlatform = 14;
-	ParentalBlocked = 15;
 	PreloadComplete = 16;
 	BorrowerLocked = 17;
 	UpdatePaused = 18;
@@ -812,6 +824,8 @@ enum EForceFeatureNotificationTargetSelection
 	LaterLastPlayedApp = 64;
 	FollowSomeCreatorApp = 128;
 	PlaySomeCreatorApp = 256;
+	ExcludeAppOwner = 512;
+	AppWishList = 1024;
 }
 
 enum EFraudReviewReason
@@ -961,6 +975,7 @@ enum EHelpIssue
 	SteamFeature_CannotTrade = 810;
 	SteamFeature_Market_TaxForm = 811;
 	SteamFeature_Cloud = 812;
+	SteamFeature_ItemBug = 813;
 	Publishing_ManagingMyApp = 901;
 	Publishing_ReleasingMyApp = 902;
 	Publishing_ManagingMySteamworksAccount = 903;
@@ -1198,7 +1213,8 @@ enum EHelpRequestType
 	Publishing_BuildReview = 70;
 	Publishing_StorePageReview = 71;
 	SteamCommunity_MobileChat = 72;
-	Max = 73;
+	SteamFeature_ItemBug = 73;
+	Max = 74;
 }
 
 enum EInternalAccountType
@@ -1309,6 +1325,15 @@ enum ELibraryAssetType
 	Logo = 2;
 	Header = 3;
 	Icon = 4;
+	aryAssetType_HeroBlur = 5;
+}
+
+enum ELibraryDisplaySize
+{
+	Automatic = 0;
+	Small = 1;
+	Medium = 2;
+	Large = 3;
 }
 
 enum ELoginManagerStep
@@ -1798,6 +1823,7 @@ enum EMsg
 	FBSBootstrapperGetPackageChunkResponse = 1131;
 	FBSBootstrapperPackageTransferProgress = 1132;
 	FBSRestartBootstrapper = 1133;
+	FBSPauseFrozenDumps = 1134;
 	BaseFileXfer = 1200;
 	FileXferRequest = 1200;
 	FileXferResponse = 1201;
@@ -1814,6 +1840,8 @@ enum EMsg
 	BaseBS = 1400;
 	BSPurchaseStart = 1401;
 	BSPurchaseResponse = 1402;
+	BSAuthenticateCCTrans = 1403;
+	BSAuthenticateCCTransResponse = 1404;
 	BSSettleComplete = 1406;
 	BSInitPayPalTxn = 1408;
 	BSInitPayPalTxnResponse = 1409;
@@ -2551,6 +2579,7 @@ enum EMsg
 	ClientNetworkingCertRequestResponse = 5622;
 	ClientChallengeRequest = 5623;
 	ClientChallengeResponse = 5624;
+	BadgeCraftedNotification = 5625;
 	BaseMDS = 5800;
 	AMToMDSGetDepotDecryptionKey = 5812;
 	MDSToAMGetDepotDecryptionKeyResponse = 5813;
@@ -2614,6 +2643,8 @@ enum EMsg
 	ClientMMSSetRatelimitPolicyOnClient = 6625;
 	ClientMMSGetLobbyStatus = 6626;
 	ClientMMSGetLobbyStatusResponse = 6627;
+	MMSGetLobbyList = 6628;
+	MMSGetLobbyListResponse = 6629;
 	NonStdMsgBase = 6800;
 	NonStdMsgMemcached = 6801;
 	NonStdMsgHTTPServer = 6802;
@@ -3033,6 +3064,17 @@ enum EPartnerEventDisplayLocation
 	Invalid = 0;
 	AppDetailsSpotlight = 1;
 	LibraryOverview = 2;
+	StoreAppPage = 3;
+	EventScroller = 4;
+	AppDetailsActivity = 5;
+}
+
+enum EPartnerLinkTrackingStoreLocation
+{
+	Invalid = 0;
+	AppPage = 1;
+	PackagePage = 2;
+	AnnouncementPage = 3;
 }
 
 enum EPersonaState
@@ -3079,6 +3121,13 @@ enum EPlaytestingState
 	Active = 1;
 	Full = 2;
 	Ended = 3;
+}
+
+enum EPostGameSummaryType
+{
+	Screenshot = 0;
+	TradingCard = 1;
+	Achievement = 2;
 }
 
 enum EProductImpressionFromClientType
@@ -3172,39 +3221,40 @@ enum EProtoAppType
 
 enum EProtoClanEventType
 {
-	OtherEvent = 1;
-	GameEvent = 2;
-	PartyEvent = 3;
-	MeetingEvent = 4;
-	SpecialCauseEvent = 5;
-	MusicAndArtsEvent = 6;
-	SportsEvent = 7;
-	TripEvent = 8;
-	ChatEvent = 9;
-	GameReleaseEvent = 10;
-	BroadcastEvent = 11;
-	SmallUpdateEvent = 12;
-	PreAnnounceMajorUpdateEvent = 13;
-	MajorUpdateEvent = 14;
-	DLCReleaseEvent = 15;
-	FutureReleaseEvent = 16;
-	ESportTournamentStreamEvent = 17;
-	DevStreamEvent = 18;
-	FamousStreamEvent = 19;
-	GameSalesEvent = 20;
-	GameItemSalesEvent = 21;
-	InGameBonusXPEvent = 22;
-	InGameLootEvent = 23;
-	InGamePerksEvent = 24;
-	InGameChallengeEvent = 25;
-	InGameContestEvent = 26;
-	IRLEvent = 27;
-	NewsEvent = 28;
-	BetaReleaseEvent = 29;
-	InGameContentReleaseEvent = 30;
-	FreeTrial = 31;
-	SeasonRelease = 32;
-	SeasonUpdate = 33;
+	lanOtherEvent = 1;
+	lanGameEvent = 2;
+	lanPartyEvent = 3;
+	lanMeetingEvent = 4;
+	lanSpecialCauseEvent = 5;
+	lanMusicAndArtsEvent = 6;
+	lanSportsEvent = 7;
+	lanTripEvent = 8;
+	lanChatEvent = 9;
+	lanGameReleaseEvent = 10;
+	lanBroadcastEvent = 11;
+	lanSmallUpdateEvent = 12;
+	lanPreAnnounceMajorUpdateEvent = 13;
+	lanMajorUpdateEvent = 14;
+	lanDLCReleaseEvent = 15;
+	lanFutureReleaseEvent = 16;
+	lanESportTournamentStreamEvent = 17;
+	lanDevStreamEvent = 18;
+	lanFamousStreamEvent = 19;
+	lanGameSalesEvent = 20;
+	lanGameItemSalesEvent = 21;
+	lanInGameBonusXPEvent = 22;
+	lanInGameLootEvent = 23;
+	lanInGamePerksEvent = 24;
+	lanInGameChallengeEvent = 25;
+	lanInGameContestEvent = 26;
+	lanIRLEvent = 27;
+	lanNewsEvent = 28;
+	lanBetaReleaseEvent = 29;
+	lanInGameContentReleaseEvent = 30;
+	lanFreeTrial = 31;
+	lanSeasonRelease = 32;
+	lanSeasonUpdate = 33;
+	rosspostEvent = 34;
 }
 
 enum EPublishedFileInappropriateProvider
@@ -3218,6 +3268,7 @@ enum EPublishedFileInappropriateResult
 {
 	NotScanned = 0;
 	VeryUnlikely = 1;
+	Unlikely = 30;
 	Possible = 50;
 	Likely = 75;
 	VeryLikely = 100;
@@ -3273,6 +3324,7 @@ enum ERefundSupportAction
 	DeclineRefund_GameBan = 14;
 	DeclineRefund_NoDefectAU = 15;
 	DeclineRefund_NeedMoreInfo = 16;
+	DeclineRefund_GiftResellerAbuse = 17;
 }
 
 enum EResult
@@ -3839,27 +3891,6 @@ enum ResponsiveWindowActiveView
 {
 	FriendsList = 0;
 	Chat = 1;
-}
-
-enum Result
-{
-	NoData = 1;
-	NewData = 2;
-	Failed = 3;
-}
-
-enum ResultCode
-{
-	Success = -1;
-	Canceled = 0;
-	FirstUser = 1;
-}
-
-enum Status
-{
-	Denied = 1;
-	Restricted = 2;
-	Available = 3;
 }
 
 enum bbNodeType
