@@ -8520,8 +8520,45 @@
       r = z.n(a),
       h = z("mgoM"),
       f = z("kLLr"),
-      W = z("2vnA"),
-      s = (function() {
+      W = z("2vnA");
+    function B(e) {
+      if (g.a.isCancel(e))
+        return { strErrorMsg: "Action Cancelled", errorCode: 52 };
+      if (void 0 !== e.response && "object" == typeof e.response.data) {
+        if ("msg" in e.response.data)
+          return {
+            strErrorMsg: e.response.data.msg,
+            errorCode: e.response.data.success
+          };
+        if ("err_msg" in e.response.data)
+          return {
+            strErrorMsg: e.response.data.err_msg,
+            errorCode: e.response.data.success
+          };
+        if ("message" in e.response.data)
+          return {
+            strErrorMsg: e.response.data.message,
+            errorCode: e.response.data.success
+          };
+      } else {
+        if (void 0 !== e.success && void 0 !== e.msg)
+          return { strErrorMsg: e.msg, errorCode: e.success };
+        if (void 0 !== e.success && void 0 !== e.message)
+          return { strErrorMsg: e.message, errorCode: e.success };
+        if (void 0 !== e.success && void 0 !== e.err_msg)
+          return { strErrorMsg: e.err_msg, errorCode: e.success };
+        console.error("GetMsgAndErrorCodeFromResponse: ", e);
+      }
+      return "status" in e
+        ? {
+            strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
+            errorCode: 2
+          }
+        : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
+    }
+    var u,
+      s,
+      c = (function() {
         function e(e) {
           (this.m_bLoaded = !1),
             (this.m_appid = e),
@@ -8568,31 +8605,37 @@
               })
             );
           }),
-          (e.prototype.InternalLoadBroadcastAppData = function(o) {
+          (e.prototype.InternalLoadBroadcastAppData = function(a) {
             return (
-              void 0 === o && (o = "steamtv"),
+              void 0 === a && (a = "steamtv"),
               q.b(this, void 0, void 0, function() {
                 var t,
                   n,
                   p,
+                  o,
+                  i,
                   s = this;
                 return q.e(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return this.m_bLoaded
-                        ? [3, 2]
-                        : ((t = {
-                            appid: this.m_appid,
-                            feature: o,
-                            cc: m.b.COUNTRY,
-                            l: m.b.LANGUAGE
-                          }),
-                          (n =
-                            m.b.STORE_BASE_URL +
-                            "broadcast/ajaxgetappinfoforcap"),
-                          [4, g.a.get(n, { params: t })]);
+                      if (this.m_bLoaded) return [3, 4];
+                      (t = {
+                        appid: this.m_appid,
+                        feature: a,
+                        cc: m.b.COUNTRY,
+                        l: m.b.LANGUAGE
+                      }),
+                        (n =
+                          m.b.STORE_BASE_URL +
+                          "broadcast/ajaxgetappinfoforcap"),
+                        (e.label = 1);
                     case 1:
-                      (p = e.sent()),
+                      return (
+                        e.trys.push([1, 3, , 4]), [4, g.a.get(n, { params: t })]
+                      );
+                    case 2:
+                      return (
+                        (p = e.sent()),
                         Object(W.z)(function() {
                           if (!p.data || 1 != p.data.success)
                             return (
@@ -8652,8 +8695,22 @@
                           }
                           s.m_bLoaded = !0;
                         }),
-                        (e.label = 2);
-                    case 2:
+                        [3, 4]
+                      );
+                    case 3:
+                      return (
+                        (o = e.sent()),
+                        (i = B(o)),
+                        console.log(
+                          "InternalLoadBroadcastAppData: calling ajaxgetappinfoforcap for appid " +
+                            this.m_appid +
+                            " failed with " +
+                            i.strErrorMsg,
+                          i
+                        ),
+                        [3, 4]
+                      );
+                    case 4:
                       return [2, this];
                   }
                 });
@@ -8664,44 +8721,7 @@
           q.c([W.f], e.prototype, "HintLoadBroadcastAppData", null),
           e
         );
-      })();
-    function B(e) {
-      if (g.a.isCancel(e))
-        return { strErrorMsg: "Action Cancelled", errorCode: 52 };
-      if (void 0 !== e.response && "object" == typeof e.response.data) {
-        if ("msg" in e.response.data)
-          return {
-            strErrorMsg: e.response.data.msg,
-            errorCode: e.response.data.success
-          };
-        if ("err_msg" in e.response.data)
-          return {
-            strErrorMsg: e.response.data.err_msg,
-            errorCode: e.response.data.success
-          };
-        if ("message" in e.response.data)
-          return {
-            strErrorMsg: e.response.data.message,
-            errorCode: e.response.data.success
-          };
-      } else {
-        if (void 0 !== e.success && void 0 !== e.msg)
-          return { strErrorMsg: e.msg, errorCode: e.success };
-        if (void 0 !== e.success && void 0 !== e.message)
-          return { strErrorMsg: e.message, errorCode: e.success };
-        if (void 0 !== e.success && void 0 !== e.err_msg)
-          return { strErrorMsg: e.err_msg, errorCode: e.success };
-        console.error("GetMsgAndErrorCodeFromResponse: ", e);
-      }
-      return "status" in e
-        ? {
-            strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-            errorCode: 2
-          }
-        : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
-    }
-    var u,
-      c,
+      })(),
       O = new ((function() {
         function e() {
           (this.m_mapAppIDToInfo = new Map()),
@@ -8716,7 +8736,7 @@
                   case 0:
                     return this.m_mapAppIDToInfo.has(n)
                       ? [3, 2]
-                      : ((t = new s(n)),
+                      : ((t = new c(n)),
                         this.m_mapAppIDToInfo.set(n, t),
                         n && 0 < n
                           ? [4, t.HintLoadBroadcastAppData("partner-events")]
@@ -8732,7 +8752,7 @@
           (e.prototype.GetStoreCapsuleInfo = function(e) {
             return this.m_mapAppIDToInfo.has(e)
               ? this.m_mapAppIDToInfo.get(e)
-              : new s(e);
+              : new c(e);
           }),
           (e.prototype.BIsAppidLoaded = function(e) {
             return (
@@ -8830,11 +8850,11 @@
         }
       var p;
     }
-    ((c = u || (u = {})).full = ""),
-      (c.background_main = "_960x311"),
-      (c.background_mini = "_480x156"),
-      (c.capsule_main = "_400x225"),
-      (c.spotlight_main = "_1054x230");
+    ((s = u || (u = {})).full = ""),
+      (s.background_main = "_960x311"),
+      (s.background_mini = "_480x156"),
+      (s.capsule_main = "_400x225"),
+      (s.spotlight_main = "_1054x230");
     var j = (function() {
         function l() {
           (this.m_mapClanToImages = new Map()),
@@ -17857,7 +17877,7 @@
       wn = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
-          return (t.state = { appInfo: new s(e.appid) }), t;
+          return (t.state = { appInfo: new c(e.appid) }), t;
         }
         return (
           q.d(e, n),

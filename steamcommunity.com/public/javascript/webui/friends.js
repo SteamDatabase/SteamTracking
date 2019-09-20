@@ -23957,7 +23957,8 @@
       _ = n("z9WT"),
       g = (n("ABqK"), n("vDqi")),
       b = n.n(g),
-      v = (function() {
+      v = n("/SYB"),
+      S = (function() {
         function e(e) {
           (this.m_bLoaded = !1),
             (this.m_appid = e),
@@ -24004,31 +24005,37 @@
               })
             );
           }),
-          (e.prototype.InternalLoadBroadcastAppData = function(o) {
+          (e.prototype.InternalLoadBroadcastAppData = function(r) {
             return (
-              void 0 === o && (o = "steamtv"),
+              void 0 === r && (r = "steamtv"),
               l.b(this, void 0, void 0, function() {
                 var t,
                   n,
                   s,
+                  o,
+                  i,
                   c = this;
                 return l.e(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return this.m_bLoaded
-                        ? [3, 2]
-                        : ((t = {
-                            appid: this.m_appid,
-                            feature: o,
-                            cc: p.b.COUNTRY,
-                            l: p.b.LANGUAGE
-                          }),
-                          (n =
-                            p.b.STORE_BASE_URL +
-                            "broadcast/ajaxgetappinfoforcap"),
-                          [4, b.a.get(n, { params: t })]);
+                      if (this.m_bLoaded) return [3, 4];
+                      (t = {
+                        appid: this.m_appid,
+                        feature: r,
+                        cc: p.b.COUNTRY,
+                        l: p.b.LANGUAGE
+                      }),
+                        (n =
+                          p.b.STORE_BASE_URL +
+                          "broadcast/ajaxgetappinfoforcap"),
+                        (e.label = 1);
                     case 1:
-                      (s = e.sent()),
+                      return (
+                        e.trys.push([1, 3, , 4]), [4, b.a.get(n, { params: t })]
+                      );
+                    case 2:
+                      return (
+                        (s = e.sent()),
                         Object(a.A)(function() {
                           if (!s.data || 1 != s.data.success)
                             return (
@@ -24088,8 +24095,22 @@
                           }
                           c.m_bLoaded = !0;
                         }),
-                        (e.label = 2);
-                    case 2:
+                        [3, 4]
+                      );
+                    case 3:
+                      return (
+                        (o = e.sent()),
+                        (i = Object(v.a)(o)),
+                        console.log(
+                          "InternalLoadBroadcastAppData: calling ajaxgetappinfoforcap for appid " +
+                            this.m_appid +
+                            " failed with " +
+                            i.strErrorMsg,
+                          i
+                        ),
+                        [3, 4]
+                      );
+                    case 4:
                       return [2, this];
                   }
                 });
@@ -24101,8 +24122,8 @@
           e
         );
       })(),
-      S = "unUserdataVersion",
-      y = new ((function() {
+      y = "unUserdataVersion",
+      C = new ((function() {
         function e() {
           (this.m_rgWishList = new Array()),
             (this.m_rgCreatorsFollowed = new Array()),
@@ -24161,7 +24182,7 @@
                 switch (e.label) {
                   case 0:
                     return (
-                      (t = localStorage.getItem(S) || "0"),
+                      (t = localStorage.getItem(y) || "0"),
                       (n = { v: t, id: "" + p.f.accountid }),
                       (o = p.b.STORE_BASE_URL + "dynamicstore/userdata/"),
                       [4, b.a.get(o, { params: n, withCredentials: !0 })]
@@ -24292,8 +24313,8 @@
           }),
           (e.prototype.InvalidateCache = function() {
             localStorage.setItem(
-              S,
-              "" + Number.parseInt(localStorage.getItem(S) || "0") + 1
+              y,
+              "" + Number.parseInt(localStorage.getItem(y) || "0") + 1
             );
           }),
           l.c([a.x], e.prototype, "m_rgWishList", void 0),
@@ -24302,7 +24323,6 @@
           e
         );
       })())(),
-      C = n("/SYB"),
       I = new ((function() {
         function e() {
           (this.m_mapAppIDToInfo = new Map()),
@@ -24317,7 +24337,7 @@
                   case 0:
                     return this.m_mapAppIDToInfo.has(n)
                       ? [3, 2]
-                      : ((t = new v(n)),
+                      : ((t = new S(n)),
                         this.m_mapAppIDToInfo.set(n, t),
                         n && 0 < n
                           ? [4, t.HintLoadBroadcastAppData("partner-events")]
@@ -24333,7 +24353,7 @@
           (e.prototype.GetStoreCapsuleInfo = function(e) {
             return this.m_mapAppIDToInfo.has(e)
               ? this.m_mapAppIDToInfo.get(e)
-              : new v(e);
+              : new S(e);
           }),
           (e.prototype.BIsAppidLoaded = function(e) {
             return (
@@ -24369,7 +24389,7 @@
                   case 3:
                     return (
                       (i = e.sent()),
-                      console.log(Object(C.a)(i)),
+                      console.log(Object(v.a)(i)),
                       console.error(i),
                       [3, 4]
                     );
@@ -24393,7 +24413,7 @@
       G = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
-          return (t.state = { appInfo: new v(e.appid) }), t;
+          return (t.state = { appInfo: new S(e.appid) }), t;
         }
         return (
           l.d(e, n),
@@ -24501,7 +24521,7 @@
         return (
           l.d(t, e),
           (t.prototype.handleOnClick = function(e) {
-            y.AddToCart(
+            C.AddToCart(
               e,
               this.props.subid,
               this.props.add_to_cart_url,
