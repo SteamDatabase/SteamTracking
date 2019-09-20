@@ -7711,6 +7711,16 @@ img.emoticon_emoticon_AB86v {
     filter: brightness(1);
     opacity: 0.0; } }
 
+.comment_thread_CommentThread_34ZDO {
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out; }
+  .comment_thread_CommentThread_34ZDO.comment_thread_Shown_kfRj0 {
+    opacity: 1; }
+
+.comment_thread_ThreadLoading_3viqq {
+  width: 64px;
+  height: 32px; }
+
 .artworkmodal_ArtworkModal_36VpV {
   border: 2px solid black;
   box-sizing: border-box; }

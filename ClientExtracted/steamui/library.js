@@ -3542,12 +3542,12 @@
       var c = new Date();
       if ((c.setHours(0, 0, 0, 0), c <= n)) return u("#Time_Today");
       if ((c.setDate(c.getDate() - 1), c <= n)) return u("#Time_Yesterday");
-      var o = n.setHours(0, 0, 0, 0),
-        a = x.get(o);
-      if (a) return a;
-      var i = { month: t ? "long" : "short", day: "numeric" };
+      var o = { month: t ? "long" : "short", day: "numeric" },
+        a = n.setHours(0, 0, 0, 0) + o.month,
+        i = x.get(a);
       return (
-        (a = n.toLocaleDateString(I.GetPreferredLocales(), i)), x.set(o, a), a
+        i ||
+        ((i = n.toLocaleDateString(I.GetPreferredLocales(), o)), x.set(a, i), i)
       );
     }
     function v(e) {
