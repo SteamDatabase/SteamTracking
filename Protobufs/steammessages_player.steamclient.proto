@@ -293,6 +293,7 @@ message CPlayer_GetDurationControl_Request {
 message CPlayer_GetDurationControl_Response {
 	optional bool is_enabled = 1;
 	optional int32 seconds = 2;
+	optional int32 seconds_today = 3;
 }
 
 message CPlayer_LastPlayedTimes_Notification {

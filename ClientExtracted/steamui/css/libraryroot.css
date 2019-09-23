@@ -3274,7 +3274,7 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
   height: 100%;
   padding-bottom: 0;
   background: linear-gradient(to top, #24282f 18px, rgba(0, 0, 0, 0) 100%), rgba(29, 34, 39, 0.75);
-  transition: all 0.3s;
+  transition: background 0.21s ease-in-out;
   margin-bottom: -1px; }
   .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_PlayBar_3fLo1 {
     /* When we scroll to the sticky position, transition to solid (so we don't show text over text). Also fade in a small boundary line to make this feel more like a header.*/
@@ -3283,10 +3283,7 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
 
 .appdetailsplaysection_InnerContainer_3Y87Y {
   box-sizing: border-box;
-  padding: 10px 20px 7px 20px;
-  height: 63px; }
-  .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_InnerContainer_3Y87Y {
-    height: 53px; }
+  padding: 10px 20px 7px 20px; }
 
 .appdetailsplaysection_Row_9EHg9 {
   box-sizing: border-box;
@@ -3295,8 +3292,7 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
 
 .appdetailsplaysection_ActionSection_2zxzS {
   flex: 0 0 auto;
-  height: 46px;
-  transition: height .06s ease-in-out; }
+  height: 46px; }
   .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_ActionSection_2zxzS {
     height: 32px; }
 
@@ -3657,7 +3653,7 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
 .appdetailsplaysection_Glassy_3DeO9.appdetailsplaysection_PlayBar_3fLo1 {
   background: linear-gradient(to top, rgba(36, 40, 47, 0) 0%, rgba(43, 57, 66, 0.2) calc( 100% - 2px), rgba(193, 202, 207, 0.1) calc( 100% - 1px), rgba(29, 29, 29, 0.3) 100%);
   box-shadow: none;
-  transition: all .21s ease-in-out; }
+  transition: background 0.21s ease-in-out; }
   div.LowPerfMode .appdetailsplaysection_Glassy_3DeO9.appdetailsplaysection_PlayBar_3fLo1 {
     background: linear-gradient(to top, rgba(36, 40, 47, 0) 0%, rgba(43, 57, 66, 0.82) calc( 100% - 2px), rgba(193, 202, 207, 0.1) calc( 100% - 1px), rgba(29, 29, 29, 0.3) 100%); }
 
@@ -10000,8 +9996,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 
 .appdetails_Glassy_3Fmxx.appdetails_ScrollContainer_2l416 {
   background-image: radial-gradient(100% 100% at 45% 35%, #2c323d 0%, #151616 100%); }
-  .appdetails_Glassy_3Fmxx.appdetails_ScrollContainer_2l416.appdetails_Sticky_2aaNj {
-    background-image: linear-gradient(to bottom, #3f444c 0px, #272c31 3px, #252B33 52px, #262c34 52px, #0000008a 52px, transparent 64px), radial-gradient(100% 100% at 45% 35%, #2c323d 0%, #151616 100%); }
 
 .appdetails_PlayBar_2L3s2 {
   opacity: 0;
@@ -11325,6 +11319,29 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     .pageablecontainer_PageableCloseButton_Y6Tq4.pageablecontainer_PageButtonsVisible_1Lqnp:hover,
     .pageablecontainer_PageableContainer_15R3T:hover .pageablecontainer_PageableCloseButton_Y6Tq4:hover {
       opacity: 1; }
+
+.appdetailssectionnonsteam_Body_1TGl5 {
+  overflow: hidden;
+  font-size: 13px;
+  padding: 16px 32px;
+  border-radius: 3px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 12px;
+  min-height: 120px;
+  border: 2px dashed rgba(219, 238, 255, 0.226);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .appdetailssectionnonsteam_Body_1TGl5 .appdetailssectionnonsteam_OfflineButton_3UqWq {
+    max-width: 50%;
+    margin: 16px 0; }
+  .appdetailssectionnonsteam_Body_1TGl5 div {
+    text-align: center; }
+
+.appdetailssectionnonsteam_InnerContainer_Mrkcb {
+  overflow: hidden;
+  font-size: 13px;
+  color: #d3d3d3; }
 
 .appdetailssectionoffline_OfflineSectionBody_2dnxv {
   overflow: hidden;

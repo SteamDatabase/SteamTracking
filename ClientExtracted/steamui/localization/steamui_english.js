@@ -706,7 +706,7 @@
 
 	"AppSpotlight_PostGameSummary": "Post-Game Summary",
 
-	"AppDetails_Shortcut_Explanation": "Some detailed information on %1$s is unavailable because it is a non-Steam mod or shortcut. Steam will still manage launching the game for you and in most cases the in-game overlay will be available.",
+	"AppDetails_Shortcut_Explanation": "Some detailed information on %1$s is unavailable because it is a non-Steam game or mod. Steam will still manage launching the game for you and in most cases the in-game overlay will be available.",
 
 	"AppDetails_Takeover_Update_Header": "In case you missed it",
 	"AppDetails_Takeover_Update_ViewAll": "View all %1$s game updates",

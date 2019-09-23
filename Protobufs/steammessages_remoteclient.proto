@@ -34,6 +34,7 @@ message CMsgRemoteClientAppStatus {
 		optional uint32 app_state = 2;
 		optional .CMsgRemoteClientAppStatus.AppUpdateInfo update_info = 3;
 		optional .CMsgRemoteClientAppStatus.ShortcutInfo shortcut_info = 4;
+		optional bool launch_available = 5 [default = true];
 	}
 
 	repeated .CMsgRemoteClientAppStatus.AppStatus status_updates = 1;

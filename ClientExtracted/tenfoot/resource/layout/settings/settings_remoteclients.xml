@@ -33,7 +33,7 @@
 			  <Panel class="SettingsContent SettingsContentStreaming ShowIfStreamingUI" id="SettingsRemoteClientsStreamActiveContainer">
 				  <Label text="#Settings_RemoteClients_StreamActiveIntro" />
 				  <Label id="SettingsRemoteClientsStreamActiveDeviceLabel" text="#Settings_RemoteClients_StreamActiveDeviceName" />
-				  <Button class="Button" onactivate="StopStreaming()"><Label class="LongDesc" text="#Quit_StopStreaming" /></Button>
+				  <Button class="Button" onactivate="StopStreaming(0)"><Label class="LongDesc" text="#Quit_StopStreaming" /></Button>
 				  <Panel id="SettingsRemoteClientsStreamActiveSpacefiller" />
 				  <Label text="#Settings_RemoteClients_StreamActiveSettings" />
 			  </Panel>
