@@ -86,6 +86,7 @@ div.advanced_controls_toggle_icon.down {
 
 .trending_reviews_controls {
 	display: flex;
+	flex-wrap: wrap;
 	padding: 0 10px 0 10px;
 	font-size: 14px;
 	color: #fff;
@@ -100,10 +101,11 @@ div.advanced_controls_toggle_icon.down {
 	opacity: 1;
 }
 .trending_reviews_controls > div {
-	flex: 1;
+	flex-grow: 1;
 	margin-right: 10px;
+	width: 32%;
 }
-.trending_reviews_controls > div:last-child {
+.trending_reviews_controls > div:nth-child(3) {
 	margin-right: 0px;
 }
 
@@ -163,6 +165,18 @@ div.advanced_controls_toggle_icon.down {
 	font-weight: bold;
 }
 
+.hide_options label > input {
+	vertical-align: bottom;
+	top: -3px;
+	position: relative;
+	margin-right: 5px;
+}
+
+.trending_reviews_customize_language {
+	padding-top: 5px;
+}
+
+
 .reviewed_app {
 	display: flex;
 	margin-bottom: 5px;
@@ -177,6 +191,13 @@ div.advanced_controls_toggle_icon.down {
 
 .reviewed_app.visible:hover {
 	transform: scale(1.0);
+}
+
+.reviewed_app > .ds_options {
+	right: 317px;
+}
+.reviewed_app:hover > .ds_options {
+	right: 323px;
 }
 
 .reviewed_app.appeared {
