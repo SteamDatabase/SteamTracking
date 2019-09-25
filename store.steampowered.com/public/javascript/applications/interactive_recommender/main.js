@@ -673,6 +673,7 @@
         USE_POPUPS: !1,
         IN_MOBILE: !1,
         IN_TENFOOT: !1,
+        PLATFORM: "",
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
@@ -1080,7 +1081,7 @@
           a
         );
       },
-      Q = (function(a) {
+      K = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (
@@ -1233,7 +1234,7 @@
           e
         );
       })(P.a.Component),
-      K = Object(i.a)(function(e) {
+      Q = Object(i.a)(function(e) {
         var t = le.getTags(),
           a = [],
           n = [];
@@ -1279,14 +1280,14 @@
           P.a.createElement(
             "div",
             { className: D(G.a.Row, G.a.SecondRow) },
-            P.a.createElement(Q, {
+            P.a.createElement(K, {
               title: U("#TagFilterMultiple_Title"),
               tagoptions: a,
               selectedtags: n,
               onAddTag: le.onTagFilterAdd,
               onRemoveTag: le.onTagFilterRemove
             }),
-            P.a.createElement(Q, {
+            P.a.createElement(K, {
               title: U("#TagExcludeMultiple_Title"),
               tagoptions: a,
               selectedtags: n,
@@ -1795,7 +1796,7 @@
                 { className: G.a.Header },
                 U("#Recommendations_Header")
               ),
-              P.a.createElement(K, null),
+              P.a.createElement(Q, null),
               P.a.createElement(
                 "div",
                 {
@@ -2371,7 +2372,11 @@
                     [
                       4,
                       d.a.post(
-                        A.BASE_URL + "recommender/" + A.STEAM_ID + "/wishlist",
+                        A.BASE_URL +
+                          "recommender/" +
+                          A.STEAM_ID +
+                          "/wishlist?snr=" +
+                          A.LINK_PARAM,
                         t
                       )
                     ]
@@ -2418,7 +2423,11 @@
                     [
                       4,
                       d.a.post(
-                        A.BASE_URL + "recommender/" + A.STEAM_ID + "/cart",
+                        A.BASE_URL +
+                          "recommender/" +
+                          A.STEAM_ID +
+                          "/cart?snr=" +
+                          A.LINK_PARAM,
                         t
                       )
                     ]

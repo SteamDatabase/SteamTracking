@@ -725,11 +725,13 @@ GDynamicStore = {
 					$elSource.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
 
 					for( var i=0; i<rgAppIds.length; i++ )
-						GDynamicStore.ModifyWishlist ( rgAppIds[ i ], false, false, function(){
+						GDynamicStore.ModifyWishlist ( $elSource, rgAppIds[ i ], false, false, function(){
 							// Remove the flag if we failed.
 							$elSource.removeClass( 'ds_wishlist ds_flagged' );
 							$J('.ds_flag.ds_wishlist_flag', $elSource).remove();
 						} );
+
+					$El.trigger('mouseleave');
 
 					return false;
 				};
@@ -746,12 +748,14 @@ GDynamicStore = {
 					$J('.ds_flag.ds_wishlist_flag', $elSource).remove();
 
 					for( var i=0; i<rgAppIds.length; i++ )
-						GDynamicStore.ModifyWishlist ( rgAppIds[ i ], true, false, function(){
+						GDynamicStore.ModifyWishlist ( $elSource, rgAppIds[ i ], true, false, function(){
 							// Add the flag back if we failed for some reason
 							$elSource.addClass( 'ds_flagged ds_wishlist' );
 							$elSource.append( '<div class="ds_flag ds_wishlist_flag">ON WISHLIST&nbsp;&nbsp;</div>');
 
 						} );
+
+					$El.trigger('mouseleave');
 
 					return false;
 				};
@@ -808,7 +812,7 @@ GDynamicStore = {
 		}
 	},
 
-	ModifyWishlist: function( appid, bRemove, fnOnSuccess, fnOnFail )
+	ModifyWishlist: function( $elSource, appid, bRemove, fnOnSuccess, fnOnFail )
 	{
 		var url = 'https://store.steampowered.com/api/addtowishlist';
 		GDynamicStore.s_rgWishlist[appid] = !bRemove;
@@ -817,14 +821,17 @@ GDynamicStore = {
 			url = 'https://store.steampowered.com/api/removefromwishlist';
 
 
-		$J.post( url, {sessionid: g_sessionID, appid: appid} )
-			.done( function( data ) {
-				if( fnOnSuccess )
-					fnOnSuccess( appid );
-				GDynamicStore.InvalidateCache();
-			}).fail( function() {
-				if( fnOnFail )
-					fnOnFail( appid );
+		$J.post( url, {
+			sessionid: g_sessionID,
+			appid: appid,
+			snr: $elSource.data( 'snr' )
+		}).done( function( data ) {
+			if( fnOnSuccess )
+				fnOnSuccess( appid );
+			GDynamicStore.InvalidateCache();
+		}).fail( function() {
+			if( fnOnFail )
+				fnOnFail( appid );
 			GDynamicStore.s_rgWishlist[appid] = false;
 		});
 	},
@@ -1553,6 +1560,11 @@ GStoreItemData = {
 			strURL += ( strURL.indexOf( '?' ) != -1 ? '&' : '?' ) + strClanParam;
 		}
 		return strURL;
+	},
+
+	GetCurrentPageNavParams: function()
+	{
+				return GStoreItemData.rgNavParams['__page_default'];
 	},
 
 	GetAppURL: function( unAppID, strFeatureContext, nDepth, nCuratorClanID)

@@ -4561,12 +4561,13 @@ function ViewTitlesWithDescriptors( descid )
 
 // Element appearance montior. Designed to replace jQuery.appear
 
-var CAppearMonitor = function( fnOnAppear ){
+var CAppearMonitor = function( fnOnAppear, bCheckAnyIntersection ){
 	this.rgMonitoredElements = [];
 	this.bRunning = false;
 	this.unTimerFrequency = 500;
 	this.bRegisteredWindowEvent = false;
 	this.fnOnAppear = fnOnAppear;
+	this.bCheckAnyIntersection = bCheckAnyIntersection || false;
 };
 
 CAppearMonitor.prototype.RegisterScrollEvent = function( elTarget )
@@ -4622,9 +4623,21 @@ CAppearMonitor.prototype.bIsElementVisible = function( elElement )
 
 	// Check physical position vs viewport. This is likely the fastest early-out.
 	var rectElement = elElement.getBoundingClientRect();
-	if( !( rectElement.top >= 0 && rectElement.left >= 0
-			&& rectElement.bottom <= window.innerHeight && rectElement.right <= window.innerWidth ) )
-		return false;
+
+	if ( this.bCheckAnyIntersection )
+	{
+		if ( rectElement.left > window.innerWidth || rectElement.right < 0 )
+			return false;
+
+		if ( rectElement.top > window.innerHeight || rectElement.bottom < 0 )
+			return false;
+	}
+	else
+	{
+		if ( !( rectElement.top >= 0 && rectElement.left >= 0
+				&& rectElement.bottom <= window.innerHeight && rectElement.right <= window.innerWidth ) )
+			return false;
+	}
 
 	// Ask jQuery to compute visibility, since it knows all the edge cases.
 	if( !$J(elElement).is(':visible'))

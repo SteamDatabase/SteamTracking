@@ -98,7 +98,7 @@
         return s;
       }),
       n.d(t, "c", function() {
-        return l;
+        return f;
       }),
       n.d(t, "e", function() {
         return p;
@@ -132,6 +132,7 @@
         USE_POPUPS: !1,
         IN_MOBILE: !1,
         IN_TENFOOT: !1,
+        PLATFORM: "",
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
@@ -139,13 +140,13 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!c()) return r || (r = l()), r;
+            if (!c()) return r || (r = f()), r;
             var e = (function(e) {
               if (!c() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
-            e || (e = l());
+            e || (e = f());
             return e;
           })();
         },
@@ -167,9 +168,19 @@
         short_url: ""
       },
       s = { steamid: "", clanid: 0, listid: 0 },
-      a = { CLANSTEAMID: "", CLANACCOUNTID: 0, IMG_URL: "", APPID: 0 },
-      f = "webui_config";
-    function l() {
+      a = {
+        CLANSTEAMID: "",
+        CLANACCOUNTID: 0,
+        IMG_URL: "",
+        APPID: 0,
+        HEADER_IMAGE: "",
+        APP_NAME: "",
+        HAS_ADULT_CONTENT: !1,
+        HAS_ADULT_CONTENT_SEX: !1,
+        HAS_ADULT_CONTENT_VIOLENCE: !1
+      },
+      l = "webui_config";
+    function f() {
       var e = (function() {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(o.b)(0, 35).toString(36);
@@ -198,7 +209,7 @@
       );
     }
     function p(e) {
-      void 0 === e && (e = f);
+      void 0 === e && (e = l);
       var t = d("config", e);
       t && (delete t.SESSIONID, Object.assign(i, t));
       var n = d("userinfo", e);
@@ -211,7 +222,7 @@
     function d(e, t) {
       var n;
       if (
-        (void 0 === t && (t = f),
+        (void 0 === t && (t = l),
         (n = "string" == typeof t ? document.getElementById(t) : t))
       )
         try {
@@ -492,6 +503,9 @@
       }),
       n.d(t, "e", function() {
         return a;
+      }),
+      n.d(t, "g", function() {
+        return l;
       });
     /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -547,7 +561,9 @@ and limitations under the License.
       if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
         var r = 0;
         for (o = Object.getOwnPropertySymbols(e); r < o.length; r++)
-          t.indexOf(o[r]) < 0 && (n[o[r]] = e[o[r]]);
+          t.indexOf(o[r]) < 0 &&
+            Object.prototype.propertyIsEnumerable.call(e, o[r]) &&
+            (n[o[r]] = e[o[r]]);
       }
       return n;
     }
@@ -681,6 +697,16 @@ and limitations under the License.
           })([t, e]);
         };
       }
+    }
+    function l() {
+      for (var e = 0, t = 0, n = arguments.length; t < n; t++)
+        e += arguments[t].length;
+      var o = Array(e),
+        r = 0;
+      for (t = 0; t < n; t++)
+        for (var i = arguments[t], c = 0, u = i.length; c < u; c++, r++)
+          o[r] = i[c];
+      return o;
     }
   },
   tkkQ: function(e, t, n) {

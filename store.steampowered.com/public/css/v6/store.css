@@ -2309,6 +2309,13 @@ span.platform_img.valveindex {
 	background-image: url( '/public/images/v6/icon_platform_valveindex.png' );
 	width: 26px;
 }
+span.vr_supported,
+span.vr_required {
+    vertical-align: top;
+    line-height: 21px;
+    margin-left: 4px;
+    font-size: 11px;
+}
 
 .hover_release span.platform_img.valveindex {
 	background-image: url( '/public/images/v6/icon_platform_valveindex_dark.png' );
@@ -3727,7 +3734,7 @@ a.cluster_capsule:hover {
 	opacity: 0;
 	padding: 5px 5px 0 0;
 	transition: opacity 0.2s, right 0.2s;
-
+	z-index: 15;
 }
 
 .ds_options > div {

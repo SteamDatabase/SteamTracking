@@ -507,22 +507,22 @@ a#store_search_link img:hover {
 	margin-bottom: 10px;
 }
 
-.special_tags
-{
+.special_tags {
 	margin-top: 20px;
 	font-size: 15px;
-	color: #61686d;
+	color: #7d868c;
 }
 
-.market_commodity_explanation
-{
+.market_commodity_explanation {
 	margin-top: 20px;
 	font-size: 15px;
-	color: #61686d;
+	color: #7d868c;
 }
-.market_commodity_explanation li
-{
+.market_commodity_explanation li {
 	margin-left: 20px;
+}
+.discount_final_price {
+    color: white;
 }
 
 #market_info_ctn
@@ -571,4 +571,60 @@ a#store_search_link img:hover {
 {
 	width: 65px;
 	height: 65px;
+}
+
+/* ================ Styling for multi-item drop-down ===================== */
+.game_purchase_action {
+    margin-bottom: 6px;
+}
+.dselect_container a.activetrigger,
+.dselect_container a.trigger,
+.dropcontainer ul li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4px 34px 4px 10px;
+    color: white;
+    background: rgba(255,255,255,0.4);
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		}
+
+.dropcontainer ul {
+    background: #5d6369;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.dropcontainer ul li a {
+    background: #5d6369;
+    transition: all 0.2s ease-out;
+}
+.dropcontainer ul li a:hover {
+    transform: translateX(3px);
+}
+.dselect_container a.trigger:hover,
+.dselect_container .dropcontainer a.highlighted_selection,
+.dselect_container a.activetrigger:hover {
+    background: #9ba0a6;
+}
+.dselect_container .discount_block .discount_pct {
+    padding: 0px 4px;
+    font-size: 12px;
+    line-height: 21px;
+}
+.dselect_container .discount_block .discount_prices {
+    padding: 0px 4px;
+    margin-right: -4px;
+    font-size: 12px;
+    line-height: 21px;
+    vertical-align: unset;
+}
+.dselect_container .discount_original_price {
+    color: #87898c;
+    font-size: 12px;
+}
+.dselect_container .discount_block .discount_final_price {
+    margin-left: 2px;
+    color: white;
 }

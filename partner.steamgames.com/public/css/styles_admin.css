@@ -3323,3 +3323,25 @@ complete #A4D007
 	flex: 1;
 	min-width: 0;
 }
+
+.trackmetadatatable {
+    width: 85%;
+    margin-left: 20px;
+    border-spacing: 4px;
+}
+
+.trackmetadataheader {
+    font-weight: bold;
+    color: #cdcdcd;
+}
+
+.trackmetadataheader td {
+    border-bottom: 1px solid #555;
+}
+
+.trackmetadatarow {
+}
+
+.hasNoTrackTranslation {
+    color: #333333;
+}

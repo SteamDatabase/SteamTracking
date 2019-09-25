@@ -1074,6 +1074,13 @@ b {
   margin: 4px;
   width: 50%; }
 
+.partnereventshared_ThemedCtn_1xFOb.partnereventshared_Halloween_36Ru6 .partnereventshared_EventDefaultRowContainer_3WO6c {
+  background-image: url(https://steamcommunity-a.akamaihd.net/public/images/events/halloween_art_tile.jpg); }
+  .partnereventshared_ThemedCtn_1xFOb.partnereventshared_Halloween_36Ru6 .partnereventshared_EventDefaultRowContainer_3WO6c .partnereventshared_EventEditorTextSubTitle_1i_pY {
+    color: #e6d68f; }
+  .partnereventshared_ThemedCtn_1xFOb.partnereventshared_Halloween_36Ru6 .partnereventshared_EventDefaultRowContainer_3WO6c > div:last-child {
+    background: rgba(0, 0, 0, 0.8); }
+
 .hoverposition_HoverPosition_3vg1v {
   position: fixed;
   z-index: 100;
@@ -1690,76 +1697,82 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   margin-right: 8px;
   padding: 0 4px; }
 
-.StoreSaleWidgetContainer {
+.broadcastwidgets_StoreSaleWidgetContainer_2RL6D {
   display: flex;
   flex-direction: row;
   max-width: 780px;
   max-height: 250px;
   z-index: 1; }
   @media screen and (max-width: 910px) {
-    .StoreSaleWidgetContainer {
+    .broadcastwidgets_StoreSaleWidgetContainer_2RL6D {
       flex-direction: column; } }
 
-.StoreSaleWidgetContainer_mini, .StoreSaleWidgetContainer_column {
+.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp,
+.broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   max-height: 337px; }
 
-.StoreSaleWidgetContainer_mini {
+.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
   max-width: 155px;
   background: #000; }
 
-.StoreSaleWidgetContainer_column {
+.broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
   max-width: 310px;
   padding: 8px; }
 
-.StoreSaleWidgetImage {
+.broadcastwidgets_StoreSaleWidgetImage_2T_Na {
   padding-right: 16px;
   cursor: pointer; }
 
-.StoreSaleWidgetImage_mini {
+.broadcastwidgets_StoreSaleWidgetImage_mini_yvW2h {
   cursor: pointer;
   max-width: 155px; }
 
-.StoreSaleWidgetImage_column {
+.broadcastwidgets_StoreSaleWidgetImage_column_1vMOn {
   cursor: pointer;
   max-width: 310px; }
 
-.StoreSaleImage {
+.broadcastwidgets_StoreSaleImage_2LocI {
   width: 200px;
   cursor: pointer; }
 
-.StoreSaleImage_mini {
+.broadcastwidgets_StoreSaleImage_mini_1zSsm {
   cursor: pointer;
   width: 155px; }
 
-.StoreSaleImage_column {
+.broadcastwidgets_StoreSaleImage_column_3DVUq {
   cursor: pointer;
   width: 294px; }
 
-.StoreSaleWidgetTitle {
+/* Override the EventDetailsBody img style in partnereventdisplay.scss */
+.broadcastwidgets_StoreSaleImage_2LocI.broadcastwidgets_StoreSaleImage_2LocI {
+  max-width: initial; }
+
+.broadcastwidgets_StoreSaleWidgetTitle_38YoU {
   cursor: pointer;
   font-size: 19px;
   width: fit-content;
   color: #c1c6cf;
   flex-shrink: 0; }
 
-.StoreSaleWidgetTitle:hover {
+.broadcastwidgets_StoreSaleWidgetTitle_38YoU:hover {
   color: #AAA; }
 
-.StoreSaleWidgetRelease {
+.broadcastwidgets_StoreSaleWidgetRelease_3yCCs {
   font-size: 10px;
   color: #919fb1;
   margin-bottom: 8px; }
 
-.StoreSaleWidgetShortDesc {
+.broadcastwidgets_StoreSaleWidgetShortDesc_2by8B {
   font-size: 12px;
-  max-height: 120px;
+  max-height: 80px;
   overflow: hidden; }
 
-.StoreSaleWidgetShortDesc_column, .StoreSaleWidgetShortDesc_mini {
-  max-height: 160px;
+.broadcastwidgets_StoreSaleWidgetShortDesc_column_cZoip,
+.broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
+  max-height: 150px;
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
@@ -1768,26 +1781,26 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   letter-spacing: 0px;
   line-height: 15px; }
 
-.StoreSaleWidgetRight {
+.broadcastwidgets_StoreSaleWidgetRight_1MzBO {
   padding: 4px; }
 
-.StoreSalePriceActionWidgetContainer {
+.broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY {
   display: flex;
   flex-direction: row;
   padding: 1px; }
 
-.StoreSaleDiscountBox {
+.broadcastwidgets_StoreSaleDiscountBox_3uiyX {
   font-size: 14px;
   padding: 5px;
   background-color: #4C6B22;
   color: #A4D007; }
 
-.StoreSalePriceBox {
+.broadcastwidgets_StoreSalePriceBox_2A_NW {
   font-size: 14px;
   padding: 5px;
   background-color: black; }
 
-.StoreSalePriceButton {
+.broadcastwidgets_StoreSalePriceButton_3lydG {
   border-radius: 2px;
   border: none;
   padding: 1px;
@@ -1802,7 +1815,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   font-size: 15px;
   line-height: 30px; }
 
-.StoreSalePriceButton:hover {
+.broadcastwidgets_StoreSalePriceButton_3lydG:hover {
   text-decoration: none !important;
   color: #ffffff !important;
   background: #a4d007;
@@ -2327,10 +2340,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap; }
-  @media screen and (max-width: 910px) {
-    .partnereventdisplay_AppSummaryCtn_Wk21c .partnereventdisplay_EventBodyPosition_3lIxP {
-      flex-direction: column; } }
+  flex-wrap: wrap;
+  min-width: 400px; }
 
 .partnereventdisplay_AppSummaryWidgetTitleCtn_jJFfo {
   flex-grow: 2;
@@ -2531,9 +2542,6 @@ img {
 .shared_common_RemoveIcon_3NeLW {
   cursor: pointer; }
 
-.eventbbcodeparser_Bold_2N83D {
-  font-family: "Motiva Sans"; }
-
 .eventbbcodeparser_BlockQuote_2cY7b {
   border: 1px solid #56707f;
   border-radius: 3px;
@@ -2603,8 +2611,7 @@ img {
   padding-left: 1em;
   padding-inline-start: 40px;
   margin-top: 14px;
-  margin-bottom: 14px;
-  display: inline-block; }
+  margin-bottom: 0px; }
 
 .eventbbcodeparser_UnorderList_3995Y > li {
   list-style-position: outside; }
@@ -2644,6 +2651,15 @@ iframe.eventbbcodeparser_StoreWidget_36Y-l {
 iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   height: 360px;
   width: 100%; }
+
+.eventbbcodeparser_AppSummaryWidgetCtn_3DfY9 {
+  flex-grow: 2;
+  flex-basis: 0;
+  margin-right: 16px;
+  padding: 16px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 4px; }
 
 .eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
   position: relative;
@@ -5778,7 +5794,8 @@ iframe.steamTVLogin {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
 
 .eventrow_OtherEvents_EventCtn_1MwNf {
   height: auto;
@@ -5787,6 +5804,7 @@ iframe.steamTVLogin {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  min-width: 200px;
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px; }
@@ -8046,6 +8064,50 @@ input.partnereventemails_HeadlineInput_2lHX9 {
   position: relative;
   padding: 8px; }
 
+.communityagegate_adult_content_age_gate_2PyPU {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  text-align: center;
+  max-width: 940px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 88px 5% 0 5%; }
+
+.communityagegate_ButtonRow_2I-G6 {
+  justify-content: center; }
+  .communityagegate_ButtonRow_2I-G6 div {
+    margin-right: 20px; }
+
+.communityagegate_checkbox_3zQBG {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.communityagegate_edit_link_1fSrN {
+  text-decoration: underline; }
+  .communityagegate_edit_link_1fSrN:hover {
+    color: white; }
+
+.communityagegate_edit_preference_3eHEB {
+  border-top: 1px solid #779abc;
+  margin-top: 80px;
+  padding-top: 20px;
+  padding-bottom: 100px; }
+
+.communityagegate_header_image_3H7w6 {
+  max-width: 100%;
+  box-shadow: 0 0 40px rgba(102, 192, 244, 0.4); }
+
+.communityagegate_descriptor_3s2aY {
+  padding-top: 5px;
+  padding: 26px 0;
+  font-size: 18px;
+  line-height: 26px; }
+
+.communityagegate_strong_3lsXG {
+  text-decoration: underline #7092a5; }
+
 @media screen and (max-width: 910px) {
   .partnereventinfinitescroll_StoreHeaderAdjust_2bdcZ {
     margin-top: 58px; } }
@@ -8062,6 +8124,38 @@ input.partnereventemails_HeadlineInput_2lHX9 {
   cursor: pointer;
   position: relative;
   bottom: 30px; }
+
+.partnereventwebrowembed_Container_2Jd3M {
+  padding-top: 5px; }
+
+@media screen and (max-width: 910px) {
+  .partnereventwebrowembed_StoreHeaderAdjust_3YyCp {
+    margin-top: 58px; } }
+
+.partnereventwebrowembed_SectionButtonCtn_1HP0y {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: -21px;
+  margin-top: -5px; }
+
+.partnereventwebrowembed_SectionButton_3n8sw {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 2px 15px;
+  line-height: normal;
+  width: fit-content;
+  cursor: pointer;
+  position: relative;
+  bottom: 30px; }
+  .partnereventwebrowembed_SectionButton_3n8sw:hover {
+    border: 1px solid white; }
+
+.partnereventwebrowembed_EventsSummariesCtn_1snIw {
+  display: flex;
+  margin-bottom: 20px; }
 
 /* reset browser styles */
 button.DialogButton {

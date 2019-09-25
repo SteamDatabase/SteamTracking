@@ -2345,7 +2345,7 @@ GSteamCurators = {
 					var $elButtonWishlist = $J('<span />').text("Add to Wishlist");
 
 					$elButtonWishlist.click(function(){
-						GDynamicStore.ModifyWishlist( appid, false, function(){ $elButtonWishlist.hide(); return false; } );
+						GDynamicStore.ModifyWishlist( $Item, appid, false, function(){ $elButtonWishlist.hide(); return false; } );
 					});
 
 					var $elButtonNotInterested = $J('<span />').text("Ignore");

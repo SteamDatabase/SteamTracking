@@ -3774,78 +3774,82 @@ iframe.steamTVLogin {
   .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.videoControlGoLive {
     display: none; } }
 
-.StoreSaleWidgetContainer {
+.broadcastwidgets_StoreSaleWidgetContainer_3-tam {
   display: flex;
   flex-direction: row;
   max-width: 780px;
   max-height: 250px;
   z-index: 1; }
   @media screen and (max-width: 910px) {
-    .StoreSaleWidgetContainer {
+    .broadcastwidgets_StoreSaleWidgetContainer_3-tam {
       flex-direction: column; } }
 
-.StoreSaleWidgetContainer_mini,
-.StoreSaleWidgetContainer_column {
+.broadcastwidgets_StoreSaleWidgetContainer_mini_1ROIM,
+.broadcastwidgets_StoreSaleWidgetContainer_column_24DMn {
   display: flex;
   flex-direction: column;
   overflow: hidden;
   max-height: 337px; }
 
-.StoreSaleWidgetContainer_mini {
+.broadcastwidgets_StoreSaleWidgetContainer_mini_1ROIM {
   max-width: 155px;
   background: #000; }
 
-.StoreSaleWidgetContainer_column {
+.broadcastwidgets_StoreSaleWidgetContainer_column_24DMn {
   max-width: 310px;
   padding: 8px; }
 
-.StoreSaleWidgetImage {
+.broadcastwidgets_StoreSaleWidgetImage_3o5D5 {
   padding-right: 16px;
   cursor: pointer; }
 
-.StoreSaleWidgetImage_mini {
+.broadcastwidgets_StoreSaleWidgetImage_mini_2q0vP {
   cursor: pointer;
   max-width: 155px; }
 
-.StoreSaleWidgetImage_column {
+.broadcastwidgets_StoreSaleWidgetImage_column_7Bq7X {
   cursor: pointer;
   max-width: 310px; }
 
-.StoreSaleImage {
+.broadcastwidgets_StoreSaleImage_1yJtE {
   width: 200px;
   cursor: pointer; }
 
-.StoreSaleImage_mini {
+.broadcastwidgets_StoreSaleImage_mini_4Y7Cy {
   cursor: pointer;
   width: 155px; }
 
-.StoreSaleImage_column {
+.broadcastwidgets_StoreSaleImage_column_Smdgs {
   cursor: pointer;
   width: 294px; }
 
-.StoreSaleWidgetTitle {
+/* Override the EventDetailsBody img style in partnereventdisplay.scss */
+.broadcastwidgets_StoreSaleImage_1yJtE.broadcastwidgets_StoreSaleImage_1yJtE {
+  max-width: initial; }
+
+.broadcastwidgets_StoreSaleWidgetTitle_LHGly {
   cursor: pointer;
   font-size: 19px;
   width: fit-content;
   color: #c1c6cf;
   flex-shrink: 0; }
 
-.StoreSaleWidgetTitle:hover {
+.broadcastwidgets_StoreSaleWidgetTitle_LHGly:hover {
   color: #AAA; }
 
-.StoreSaleWidgetRelease {
+.broadcastwidgets_StoreSaleWidgetRelease_1oyXP {
   font-size: 10px;
   color: #919fb1;
   margin-bottom: 8px; }
 
-.StoreSaleWidgetShortDesc {
+.broadcastwidgets_StoreSaleWidgetShortDesc_3yqwc {
   font-size: 12px;
-  max-height: 120px;
+  max-height: 80px;
   overflow: hidden; }
 
-.StoreSaleWidgetShortDesc_column,
-.StoreSaleWidgetShortDesc_mini {
-  max-height: 160px;
+.broadcastwidgets_StoreSaleWidgetShortDesc_column_1NZeo,
+.broadcastwidgets_StoreSaleWidgetShortDesc_mini_2Jm21 {
+  max-height: 150px;
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
@@ -3854,26 +3858,26 @@ iframe.steamTVLogin {
   letter-spacing: 0px;
   line-height: 15px; }
 
-.StoreSaleWidgetRight {
+.broadcastwidgets_StoreSaleWidgetRight_2Bwn2 {
   padding: 4px; }
 
-.StoreSalePriceActionWidgetContainer {
+.broadcastwidgets_StoreSalePriceActionWidgetContainer_1uPIp {
   display: flex;
   flex-direction: row;
   padding: 1px; }
 
-.StoreSaleDiscountBox {
+.broadcastwidgets_StoreSaleDiscountBox_1Hb4z {
   font-size: 14px;
   padding: 5px;
   background-color: #4C6B22;
   color: #A4D007; }
 
-.StoreSalePriceBox {
+.broadcastwidgets_StoreSalePriceBox_3fccA {
   font-size: 14px;
   padding: 5px;
   background-color: black; }
 
-.StoreSalePriceButton {
+.broadcastwidgets_StoreSalePriceButton_2rtnv {
   border-radius: 2px;
   border: none;
   padding: 1px;
@@ -3888,7 +3892,7 @@ iframe.steamTVLogin {
   font-size: 15px;
   line-height: 30px; }
 
-.StoreSalePriceButton:hover {
+.broadcastwidgets_StoreSalePriceButton_2rtnv:hover {
   text-decoration: none !important;
   color: #ffffff !important;
   background: #a4d007;
@@ -20302,4 +20306,7 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 .FriendChatBroadcastDetails_GameName {
   margin-left: 4px;
   cursor: pointer; }
+
+body.VR {
+  zoom: 200%; }
 

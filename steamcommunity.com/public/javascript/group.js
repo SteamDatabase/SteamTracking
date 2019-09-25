@@ -13,8 +13,42 @@ function InitGroupPage( strGroupBaseURL, strActiveTab )
 	g_strGroupURL = strGroupBaseURL;
 	g_strActiveTab = strActiveTab;
 	g_strActiveURL = '';
+
+	var initial_group_url = '';
+	if ( window.location.hash )
+	{
+		initial_group_url = window.location.hash.substr( 1 );
+	}
+	history.replaceState( {group_url: initial_group_url}, '', initial_group_url ? g_strGroupURL + '/' + initial_group_url : g_strGroupURL );
+	OnGroupHashChange( initial_group_url, true );
+
+	$J(document).on( 'click', 'a', function( event ) {
+		if ( this.href.startsWith( g_strGroupURL ) )
+		{
+			var group_url;
+
+			var iHash = this.href.indexOf( '#' );
+			if ( iHash != -1 )
+				group_url = this.href.substr( iHash + 1 );
+			else
+				group_url = this.href.substr( g_strGroupURL.length + 1 /* skip the # or / */ );
+
+			if ( !group_url.startsWith( 'discussions' ) )
+			{
+				event.preventDefault();
+				OnGroupHashChange( group_url );
+			}
+		}
+	});
+
+	$J(window).on('popstate', function( event ) {
+		var oState = event.originalEvent.state;
+
+		var group_url = oState && oState.group_url;
+		OnGroupHashChange( group_url || '', false, true );
+	});
+
 	BindOnHashChange( OnGroupHashChange );
-	OnGroupHashChange( window.location.hash, true );
 }
 
 function ValidateURLRoot( url, base )
@@ -25,27 +59,28 @@ function ValidateURLRoot( url, base )
 	return elAnchor.href.startsWith( base );
 }
 
-function OnGroupHashChange( hash, bInitialLoad )
+function OnGroupHashChange( group_url, bInitialLoad, bIsPopState )
 {
 	var strTab = 'overview';
 	var url = '';
-	if ( hash.length > 1 )
-	{
-		hash = hash.substr ( 1 );	// skip the #
-		var rgMatches = hash.match ( /^[^\^]*/ );
 
-		if ( rgMatches && rgMatches[ 0 ] )
-		{
-			url = rgMatches[ 0 ];
-			url = url.replace ( /(\.|%2E)+([\/\\]|%2F|%5C)/g, '' );	//clean out any ./ or ../ in the URL
-			strTab = url.match ( /^[a-zA-Z]*/ )[ 0 ];
-		}
+	var rgMatches = group_url.match ( /^[^\^]*/ );
+
+	if ( rgMatches && rgMatches[ 0 ] )
+	{
+		url = rgMatches[ 0 ];
+		url = url.replace ( /(\.|%2E)+([\/\\]|%2F|%5C)/g, '' );	//clean out any ./ or ../ in the URL
+		strTab = url.match ( /^[a-zA-Z]*/ )[ 0 ];
 	}
+
 	if ( !ValidateURLRoot ( url, "https:\/\/steamcommunity.com\/groups\/") )
 	{
 		console.log("Failed to load URL: %s", url );
 		return;
 	}
+
+	if ( url == '/' || url == 'overview' )
+		url = '';
 
 
 	if ( url != g_strActiveURL )
@@ -58,6 +93,10 @@ function OnGroupHashChange( hash, bInitialLoad )
 			$('group_tab_content_overview').hide();
 			$('group_page_dynamic_content').show();
 			FlipToTab( strTab );
+		}
+		else if ( !bIsPopState )
+		{
+			history.pushState( {group_url: url}, '', url ? g_strGroupURL + '/' + url : g_strGroupURL );
 		}
 		LoadURL( strTab, url );
 	}

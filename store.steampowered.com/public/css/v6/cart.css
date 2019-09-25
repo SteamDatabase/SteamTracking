@@ -2186,6 +2186,10 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 .recommended_grid {
 
 }
+.cart_recommendations_ctn p {
+    color: #56707f;
+    margin-top: -13px;
+}
 
 .checkout div.rightcol {
 	margin-top: 40px;

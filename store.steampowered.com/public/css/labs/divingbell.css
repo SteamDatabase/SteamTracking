@@ -6,7 +6,7 @@
 }
 
 body.v6.labs {
-  background: url( 'https://steamcdn-a.akamaihd.net/store/labs/diving_bell/background.jpg' ) no-repeat center center fixed; 
+  background: url( 'https://steamcdn-a.akamaihd.net/store/labs/diving_bell/background.jpg?t=1' ) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -15,7 +15,7 @@ body.v6.labs {
 }
 
 body .responsive_page_content {
-  background: url( 'https://steamcdn-a.akamaihd.net/store/labs/diving_bell/background.jpg' ) no-repeat center center fixed; 
+  background: url( 'https://steamcdn-a.akamaihd.net/store/labs/diving_bell/background.jpg?t=1' ) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -120,7 +120,7 @@ body.v6 .page_content  {
 
 .page_content .breadcrumbs {
 	color: var(--primary-color);
-	height: 80px;
+	height: 50px;
 	margin-left: 4px;
 	padding-left: 0px;
 	margin-top: 50px;
@@ -171,7 +171,7 @@ body.v6 .page_content  {
 }
 
 .page_content .breadcrumbbox .breadcrumb{	
-	height: 66px;
+	height: 45px;
 	transition-duration: 0.23s;
 	transition-timing-function: ease-in;
 	opacity: 0.7;
@@ -200,7 +200,7 @@ body.v6 .page_content  {
 }
 
 .page_content .box {
-	width: 304px;
+	width: 292px;
 	height: 304px;
 	color: white;
 	margin: 5px;
@@ -216,7 +216,7 @@ body.v6 .page_content  {
 
 .page_content .box:hover {
 	background: linear-gradient(0deg, #0179b499 0%, #0179b455 18%, rgba(112, 195, 255, 0.25) 51.07%, #24282f66 95%, #24282f77 100% );	
-	box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.75);	
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.75);	
 	transition-timing-function: ease-in;
 	transition-duration: .23s;
 	transition-delay: .1s;
@@ -244,10 +244,15 @@ body.v6 .page_content  {
 	transition-duration: .2s;
 }
 
+.hover_screenshots {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+}
 
 .page_content .box-microtrailer {
 	width: 100%;
-	height: 142.08px;
+	height: 136px;
 	margin-bottom: 5px;
 	overflow: hidden;
 	transition-timing-function: ease-in;
@@ -325,7 +330,7 @@ body.v6 .page_content  {
 
 .page_content .box.focused .box-image img
 {
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.45);
 }
 
 .page_content .box.focused video
@@ -386,6 +391,7 @@ body.v6 .page_content  {
 	margin-bottom: 22px;
 	max-height: 217px;
 	width: 386px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .page_content .box-images-big .focus-box-microtrailer {
@@ -403,6 +409,7 @@ body.v6 .page_content  {
 	height: 103px;
 	margin-right: 20px;
 	margin-bottom: 15px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .page_content .box-tags .tag-cloud {
@@ -535,7 +542,7 @@ body.v6 .page_content  {
 
 .page_content .breadcrumb-startover-container {
 	position: relative;
-	height: 60px;
+	height: 45px;
 	display: flex;
 	opacity: 0.9;	
 	transition-duration: 0.23s;
@@ -549,9 +556,9 @@ body.v6 .page_content  {
 .page_content .breadcrumb-startover-text {
 	position: absolute;
 	text-align: left;
-	padding-left: 15px;
-	font-size:12px;
-	line-height: 68px;
+	padding-left: 10px;
+	font-size:11px;
+	line-height: 45px;
 	font-family:Motiva Sans; 
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -572,6 +579,12 @@ body.v6 .page_content  {
 
 .page_content .btn-details span {
 	line-height: 25px;
+}
+
+.page_content .btn-details img {
+	height: 14px;
+	vertical-align: middle;
+	margin-bottom: 2px;
 }
 
 .page_content .btn-wishlist.btn_disabled img {
@@ -618,14 +631,14 @@ round buttons
 	font-weight:bold; 
 	color: #FFFFFF;
 	background: linear-gradient(155.52deg, #2595D199 20%, #1A44C299 90%);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in;
 }
 
 .page_content .button-round:hover{
 	background: linear-gradient(155.52deg, #2595D1ff 20%, #1A44C2ff 90%);
-	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
 	color: rgba(255,255,255,0.8);
 	transition-duration: 0.2s;
 	transition-timing-function: ease-in;
@@ -642,8 +655,8 @@ round buttons
 
 .page_content .button-back {
 	position: absolute;
-	top: 83px;
-	left: 1090px; 
+	top: 60px;
+	left: 1052px; 
 }
 
 .page_content .button-back p {
@@ -672,8 +685,8 @@ round buttons
 
 .page_content .button-refresh {
 	position: absolute;
-	top: 83px;
-	left: 1248px;
+	top: 60px;
+	left: 1210px;
 }
 
 .page_content .button-refresh:hover p {
@@ -903,11 +916,10 @@ round buttons
 	width:100%;
 }
 
-.hover-description {
-	line-height: 13px; 
+.hover-description, .body.v6 .h2 .bb_tag  {
+	line-height: 14px; 
 	padding-bottom: 10px;
+
 }
 
-.game_hover_box .hover-similar-title .p {
-	padding-top: -5px;
-}
+

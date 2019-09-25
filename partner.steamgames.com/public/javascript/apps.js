@@ -3566,11 +3566,6 @@ function CreateDemo( parentId, demoName )
 	CreateNewAppHelper( 0, parentId, demoName, 'Demo', false, 10, true );
 }
 
-function CreateSoundtrack( parentId, soundtrackName )
-{
-    CreateNewAppHelper( 0, parentId, soundtrackName, 'Music', false, 10, true );
-}
-
 function CreateTool( parentId, strName, bAddToFreeSub )
 {
 	CreateNewAppHelper( 0, parentId, strName, 'Tool', false, 10, true, bAddToFreeSub );

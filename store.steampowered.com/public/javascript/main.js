@@ -1440,6 +1440,9 @@ function addToCart( subid, dedupe )
 			$Form.append( $J('<input/>', { type: 'hidden', name: 'subid', value: subid } ) );
 			$Form.append( $J('<input/>', { type: 'hidden', name: 'sessionid', value: g_sessionID } ) );
 
+			if ( typeof GDynamicStore !== 'undefined' )
+				$Form.append( $J('<input/>', { type: 'hidden', name: 'snr', value: GDynamicStore.GetCurrentPageNavParams() } ) );
+
 			$J(document.body).append( $Form );
 		}
 

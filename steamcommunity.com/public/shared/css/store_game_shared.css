@@ -115,7 +115,7 @@ background: -webkit-linear-gradient( left, rgba(58,110,139,0.2) 0%,rgba(58,110,1
 }
 
 .sysreq_contents .sysreq_content.active,
-.music_album_track_list_contents .music_album_track_listing_ctn 
+.music_album_track_list_contents .music_album_track_listing_ctn.active 
 {
 	display: block;
 }

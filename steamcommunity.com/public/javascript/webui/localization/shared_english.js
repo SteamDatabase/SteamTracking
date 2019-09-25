@@ -32,6 +32,7 @@ LocalizationReady("shared", "english", {
   Button_NotifyMe: "Notify Me",
   Button_NotInterested: "Not Interested",
   Button_RateUp: "Rate Up",
+  Button_ViewPage: "View Page",
 
   ToolTip_CopyLinkToClipboard: "Copy link to clipboard",
 
@@ -113,6 +114,7 @@ LocalizationReady("shared", "english", {
 
   EventBrowse_MoreEventsTitle: "More events from %1$s",
   EventBrowse_MoreEventsBtn: "View All",
+  EventBrowse_RecentUpdates: "Recent Updates",
 
   EventCalendar_Title: "events",
   EventCalendar_SubTitle:

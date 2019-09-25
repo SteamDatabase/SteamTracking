@@ -151,10 +151,10 @@
         return v;
       }),
       n.d(t, "d", function() {
-        return E;
+        return b;
       }),
       n.d(t, "f", function() {
-        return b;
+        return E;
       }),
       n.d(t, "e", function() {
         return y;
@@ -175,8 +175,8 @@
       _ = 330050,
       f = 358510,
       v = 366490,
-      E = "18446744073709551615",
-      b = 0,
+      b = "18446744073709551615",
+      E = 0,
       y = 2147483647;
     function S(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
@@ -409,6 +409,7 @@
         USE_POPUPS: !1,
         IN_MOBILE: !1,
         IN_TENFOOT: !1,
+        PLATFORM: "",
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
@@ -444,7 +445,17 @@
         short_url: ""
       },
       u = { steamid: "", clanid: 0, listid: 0 },
-      c = { CLANSTEAMID: "", CLANACCOUNTID: 0, IMG_URL: "", APPID: 0 },
+      c = {
+        CLANSTEAMID: "",
+        CLANACCOUNTID: 0,
+        IMG_URL: "",
+        APPID: 0,
+        HEADER_IMAGE: "",
+        APP_NAME: "",
+        HAS_ADULT_CONTENT: !1,
+        HAS_ADULT_CONTENT_SEX: !1,
+        HAS_ADULT_CONTENT_VIOLENCE: !1
+      },
       p = "webui_config";
     function l() {
       var e = (function() {
@@ -574,9 +585,9 @@
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          r.c([o.x], e.prototype, "m_bReady", void 0),
-          r.c([o.g], e.prototype, "InitInvalid", null),
-          r.c([o.g], e.prototype, "InitDirectInvite", null),
+          Object(r.c)([o.x], e.prototype, "m_bReady", void 0),
+          Object(r.c)([o.g], e.prototype, "InitInvalid", null),
+          Object(r.c)([o.g], e.prototype, "InitDirectInvite", null),
           e
         );
       })();
@@ -598,7 +609,7 @@
         return f;
       }),
       n.d(t, "d", function() {
-        return E;
+        return b;
       });
     var u,
       r,
@@ -641,7 +652,7 @@
               0 == this.m_rgLoadingLinks.length &&
                 (this.m_fnRender(), (this.m_fnRender = void 0));
           }),
-          o.c([p.a], e.prototype, "OnLinkLoad", null),
+          Object(o.c)([p.a], e.prototype, "OnLinkLoad", null),
           e
         );
       })(),
@@ -688,7 +699,7 @@
             var o,
               i,
               a,
-              s = E.GetExistingPopup(this.m_strName);
+              s = b.GetExistingPopup(this.m_strName);
             (s && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
               s
@@ -696,7 +707,7 @@
                   (o = s.m_popup),
                   s.ReleasePopup(),
                   (a = s.m_renderWhenReady),
-                  E.RemoveTrackedPopup(s),
+                  b.RemoveTrackedPopup(s),
                   o.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
                   o.removeEventListener("unload", s.OnUnload),
                   o.removeEventListener("resize", s.OnResizeEvent),
@@ -731,7 +742,7 @@
                 this.m_renderWhenReady.SetTarget(function() {
                   return r.RenderInternal(r.m_popup, r.m_element, e);
                 })),
-              E.AddTrackedPopup(this),
+              b.AddTrackedPopup(this),
               s && e && this.Focus());
           }),
           (e.prototype.RemoveEventListeners = function() {
@@ -769,7 +780,7 @@
           }),
           (e.prototype.OnUnload = function() {
             this.RemoveEventListeners(),
-              E.RemoveTrackedPopup(this),
+              b.RemoveTrackedPopup(this),
               this.OnClose(),
               a.unmountComponentAtNode(this.m_element);
           }),
@@ -884,13 +895,13 @@
           (e.prototype.OnBeforeUnload = function() {}),
           (e.prototype.OnFocus = function() {}),
           (e.prototype.OnBlur = function() {}),
-          o.c([i.x], e.prototype, "m_bFocused", void 0),
-          o.c([p.a], e.prototype, "OnMessage", null),
-          o.c([p.a], e.prototype, "OnResizeEvent", null),
-          o.c([p.a], e.prototype, "OnBeforeUnloadEvent", null),
-          o.c([p.a], e.prototype, "OnUnload", null),
-          o.c([p.a], e.prototype, "OnFocusInternal", null),
-          o.c([p.a], e.prototype, "OnBlurInternal", null),
+          Object(o.c)([i.x], e.prototype, "m_bFocused", void 0),
+          Object(o.c)([p.a], e.prototype, "OnMessage", null),
+          Object(o.c)([p.a], e.prototype, "OnResizeEvent", null),
+          Object(o.c)([p.a], e.prototype, "OnBeforeUnloadEvent", null),
+          Object(o.c)([p.a], e.prototype, "OnUnload", null),
+          Object(o.c)([p.a], e.prototype, "OnFocusInternal", null),
+          Object(o.c)([p.a], e.prototype, "OnBlurInternal", null),
           e
         );
       })(),
@@ -900,7 +911,7 @@
           return o.SetSavedDimensionsKey(t), (o.m_bExpires = r), o;
         }
         return (
-          o.d(e, i),
+          Object(o.d)(e, i),
           (e.prototype.BIsInOverlay = function() {
             return (
               this.browser_info &&
@@ -917,13 +928,13 @@
               e.strRestoreDetails
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  E.SetRestoreDetails(
+                  b.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = E.GetRestoreDetails(
+                  (e.strRestoreDetails = b.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -952,7 +963,7 @@
                     n.m_strSavedDimensionsKey &&
                     e &&
                     !t &&
-                    (E.SetRestoreDetails(r, e, n.m_bExpires),
+                    (b.SetRestoreDetails(r, e, n.m_bExpires),
                     (n.m_rgParams.strRestoreDetails = e),
                     (n.m_strInitialSavedDimensionsKey = r),
                     n.OnResizeComplete(e));
@@ -966,10 +977,10 @@
           }),
           (e.prototype.OnClose = function() {}),
           (e.prototype.SaveWindowPosition = function(e) {
-            E.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            b.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }),
-          o.c([p.a], e.prototype, "QueryAndStoreWindowPosition", null),
+          Object(o.c)([p.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
       })(_),
@@ -1101,12 +1112,12 @@
               var f = d[_];
               if ("stylesheet" == f.rel) {
                 for (
-                  var v = c.document.createElement("link"), E = 0;
-                  E < f.attributes.length;
-                  E++
+                  var v = c.document.createElement("link"), b = 0;
+                  b < f.attributes.length;
+                  b++
                 ) {
-                  var b = f.attributes.item(E);
-                  v.setAttribute(b.name, b.value);
+                  var E = f.attributes.item(b);
+                  v.setAttribute(E.name, E.value);
                 }
                 h.appendChild(v);
               }
@@ -1191,7 +1202,7 @@
                   : this.DebouncedSaveSavedDimensionStore();
             }
           }),
-          o.c(
+          Object(o.c)(
             [p.a, Object(c.a)(100)],
             e.prototype,
             "DebouncedSaveSavedDimensionStore",
@@ -1200,7 +1211,7 @@
           e
         );
       })(),
-      E = new v();
+      b = new v();
   },
   UqDm: function(e, t, n) {
     "use strict";
@@ -1308,18 +1319,19 @@
   },
   XaMz: function(e, t, n) {
     "use strict";
+    n.d(t, "a", function() {
+      return r;
+    });
+    var o = n("mrSG");
     function r(e, t) {
       for (var n = [], r = 2; r < arguments.length; r++)
         n[r - 2] = arguments[r];
       console.assert
         ? 0 == n.length
           ? console.assert(!!e, t)
-          : console.assert.apply(console, [!!e, t].concat(n))
-        : e || console.warn.apply(console, [t].concat(n));
+          : console.assert.apply(console, Object(o.g)([!!e, t], n))
+        : e || console.warn.apply(console, Object(o.g)([t], n));
     }
-    n.d(t, "a", function() {
-      return r;
-    });
   },
   Y3TG: function(e, t, n) {
     "use strict";
@@ -1598,13 +1610,13 @@
         return d;
       }),
       n.d(t, "c", function() {
-        return E;
+        return b;
       }),
       n.d(t, "e", function() {
         return f;
       }),
       n.d(t, "h", function() {
-        return b;
+        return E;
       });
     var r = n("mrSG"),
       o = n("0N1H");
@@ -1622,12 +1634,12 @@
             (this.customlist = void 0);
         }
         return (
-          r.c([i.x], e.prototype, "enabled", void 0),
-          r.c([i.x], e.prototype, "locked", void 0),
-          r.c([i.x], e.prototype, "features", void 0),
-          r.c([i.x], e.prototype, "allowallapps", void 0),
-          r.c([i.x], e.prototype, "baselist", void 0),
-          r.c([i.x], e.prototype, "customlist", void 0),
+          Object(r.c)([i.x], e.prototype, "enabled", void 0),
+          Object(r.c)([i.x], e.prototype, "locked", void 0),
+          Object(r.c)([i.x], e.prototype, "features", void 0),
+          Object(r.c)([i.x], e.prototype, "allowallapps", void 0),
+          Object(r.c)([i.x], e.prototype, "baselist", void 0),
+          Object(r.c)([i.x], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -1715,14 +1727,14 @@
       (_[(_.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
     var f,
       v,
-      E = (function() {
+      b = (function() {
         return function() {};
       })();
     ((v = f || (f = {}))[(v.k_EPending = 0)] = "k_EPending"),
       (v[(v.k_EAccepted = 1)] = "k_EAccepted"),
       (v[(v.k_ERejected = 2)] = "k_ERejected");
-    var b, y;
-    ((y = b || (b = {}))[(y.k_EClientUsedInputTypeKeyboard = 0)] =
+    var E, y;
+    ((y = E || (E = {}))[(y.k_EClientUsedInputTypeKeyboard = 0)] =
       "k_EClientUsedInputTypeKeyboard"),
       (y[(y.k_EClientUsedInputTypeMouse = 1)] = "k_EClientUsedInputTypeMouse"),
       (y[(y.k_EClientUsedInputTypeController = 2)] =
@@ -1748,6 +1760,9 @@
       }),
       n.d(t, "e", function() {
         return c;
+      }),
+      n.d(t, "g", function() {
+        return p;
       });
     /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -1803,7 +1818,9 @@ and limitations under the License.
       if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
         var o = 0;
         for (r = Object.getOwnPropertySymbols(e); o < r.length; o++)
-          t.indexOf(r[o]) < 0 && (n[r[o]] = e[r[o]]);
+          t.indexOf(r[o]) < 0 &&
+            Object.prototype.propertyIsEnumerable.call(e, r[o]) &&
+            (n[r[o]] = e[r[o]]);
       }
       return n;
     }
@@ -1938,6 +1955,16 @@ and limitations under the License.
         };
       }
     }
+    function p() {
+      for (var e = 0, t = 0, n = arguments.length; t < n; t++)
+        e += arguments[t].length;
+      var r = Array(e),
+        o = 0;
+      for (t = 0; t < n; t++)
+        for (var i = arguments[t], a = 0, s = i.length; a < s; a++, o++)
+          r[o] = i[a];
+      return r;
+    }
   },
   oh5H: function(e, t, n) {
     "use strict";
@@ -1948,18 +1975,19 @@ and limitations under the License.
         return u;
       }),
       n.d(t, "d", function() {
-        return p;
-      }),
-      n.d(t, "f", function() {
         return l;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "f", function() {
         return m;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return h;
+      }),
+      n.d(t, "b", function() {
+        return d;
       });
-    var c = n("q1tI"),
+    var c = n("mrSG"),
+      p = n("q1tI"),
       r = (n("Gp1o"), n("XaMz"), n("ujHl")),
       o = n("0N1H"),
       i = n("1n9R"),
@@ -2040,7 +2068,7 @@ and limitations under the License.
     function s(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = h.LocalizeString(e);
+      var n = d.LocalizeString(e);
       return n
         ? (0 < r.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -2056,7 +2084,7 @@ and limitations under the License.
     function u(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = h.LocalizeString(e);
+      var r = d.LocalizeString(e);
       if (!r) return e;
       for (var o, i = [], a = /(.*?)%(\d+)\$s/g, s = 0; (o = a.exec(r)); ) {
         (s += o[0].length), i.push(o[1]);
@@ -2065,18 +2093,20 @@ and limitations under the License.
       }
       return (
         i.push(r.substr(s)),
-        c.createElement.apply(c, [c.Fragment, null].concat(i))
+        p.createElement.apply(p, Object(c.g)([p.Fragment, null], i))
       );
     }
-    function p(e, t) {
+    function l(e, t) {
       for (var n = [], r = 2; r < arguments.length; r++)
         n[r - 2] = arguments[r];
       return s.apply(
         void 0,
-        1 === t || "1" === t ? [e, t].concat(n) : [e + "_Plural", t].concat(n)
+        1 === t || "1" === t
+          ? Object(c.g)([e, t], n)
+          : Object(c.g)([e + "_Plural", t], n)
       );
     }
-    function l(e, t) {
+    function m(e, t) {
       void 0 === t && (t = !1);
       var n = t ? "#TimeInterval_" : "#TimeSince_";
       return e >= 2 * r.b.PerYear
@@ -2111,7 +2141,7 @@ and limitations under the License.
     }
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
-    var m = {
+    var h = {
         english: "en",
         german: "de",
         french: "fr",
@@ -2142,8 +2172,8 @@ and limitations under the License.
         ukrainian: "uk",
         vietnamese: "vn"
       },
-      h = new a();
-    window.LocalizationManager = h;
+      d = new a();
+    window.LocalizationManager = d;
   },
   "qM/t": function(e, t, n) {
     "use strict";
@@ -2166,7 +2196,7 @@ and limitations under the License.
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          c.d(t, e),
+          Object(c.d)(t, e),
           (t.prototype.BIsExpired = function() {
             return v.sm_rtTimeCur >= this.m_rtTimeExpires;
           }),
@@ -2183,7 +2213,7 @@ and limitations under the License.
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          c.c([p.g], t.prototype, "InitFromPHPInviteLinkInfo", null),
+          Object(c.c)([p.g], t.prototype, "InitFromPHPInviteLinkInfo", null),
           t
         );
       })(m.b),
@@ -2268,36 +2298,36 @@ and limitations under the License.
                   });
                 }));
           }),
-          c.c([p.x], e.prototype, "m_bConnectingToClient", void 0),
-          c.c([p.x], e.prototype, "m_connectResult", void 0),
+          Object(c.c)([p.x], e.prototype, "m_bConnectingToClient", void 0),
+          Object(c.c)([p.x], e.prototype, "m_connectResult", void 0),
           e
         );
       })(),
-      E = (function(e) {
+      b = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          c.d(t, e),
+          Object(c.d)(t, e),
           (t.prototype.render = function() {
             return o.createElement(
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? o.createElement(b, { controller: this.props.controller })
+                ? o.createElement(E, { controller: this.props.controller })
                 : o.createElement(y, { controller: this.props.controller })
             );
           }),
-          (t = c.c([l.a], t))
+          (t = Object(c.c)([l.a], t))
         );
       })(o.Component),
-      b = (function(t) {
+      E = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_bTriedToLaunchSteam = !1), e;
         }
         return (
-          c.d(e, t),
+          Object(c.d)(e, t),
           (e.prototype.LaunchWebChat = function() {
             this.props.controller.LaunchWebChat();
           }),
@@ -2458,11 +2488,11 @@ and limitations under the License.
                   )
             );
           }),
-          c.c([p.x], e.prototype, "m_bTriedToLaunchSteam", void 0),
-          c.c([d.a], e.prototype, "LaunchWebChat", null),
-          c.c([d.a], e.prototype, "OpenInSteamIgnoreAccount", null),
-          c.c([d.a], e.prototype, "LaunchSteamClient", null),
-          (e = c.c([l.a], e))
+          Object(c.c)([p.x], e.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(c.c)([d.a], e.prototype, "LaunchWebChat", null),
+          Object(c.c)([d.a], e.prototype, "OpenInSteamIgnoreAccount", null),
+          Object(c.c)([d.a], e.prototype, "LaunchSteamClient", null),
+          (e = Object(c.c)([l.a], e))
         );
       })(o.Component),
       y = (function(e) {
@@ -2470,7 +2500,7 @@ and limitations under the License.
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          c.d(t, e),
+          Object(c.d)(t, e),
           (t.prototype.render = function() {
             return o.createElement(
               "div",
@@ -2529,7 +2559,7 @@ and limitations under the License.
       } catch (e) {}
       v.sm_rtTimeCur = t.rtTimeCur;
       var n = new v(t);
-      r.render(o.createElement(E, { controller: n }), e);
+      r.render(o.createElement(b, { controller: n }), e);
     }
     (window.ClientConnectionAPI = k),
       document.addEventListener("DOMContentLoaded", function() {

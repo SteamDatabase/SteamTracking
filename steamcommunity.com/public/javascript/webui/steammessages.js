@@ -28,7 +28,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appids = function() {
               return n.Message.getField(this, 1);
             }),
@@ -98,7 +98,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.apps = function() {
               return n.Message.getRepeatedWrapperField(this, a.a, 1);
             }),
@@ -158,7 +158,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -217,14 +217,14 @@
             r
           );
         })(n.Message),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -292,14 +292,14 @@
             r
           );
         })(n.Message),
-        c = (function(i) {
+        g = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.name = function() {
               return n.Message.getField(this, 1);
             }),
@@ -365,7 +365,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.language = function() {
               return n.Message.getField(this, 1);
             }),
@@ -373,13 +373,13 @@
               n.Message.setField(this, 1, e);
             }),
             (r.prototype.tokens = function() {
-              return n.Message.getRepeatedWrapperField(this, c, 2);
+              return n.Message.getRepeatedWrapperField(this, g, 2);
             }),
             (r.prototype.set_tokens = function(e) {
               n.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_tokens = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 2, e, c, t);
+              return n.Message.addToRepeatedWrapperField(this, 2, e, g, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -387,7 +387,7 @@
             (r.toObject = function(e, t) {
               var i = {
                 language: n.Message.getField(t, 1),
-                tokens: n.Message.toObjectList(t.tokens(), c.toObject, e)
+                tokens: n.Message.toObjectList(t.tokens(), g.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -403,8 +403,8 @@
                     e.set_language(t.readString());
                     break;
                   case 2:
-                    var i = new c();
-                    t.readMessage(i, c.deserializeBinaryFromReader),
+                    var i = new g();
+                    t.readMessage(i, g.deserializeBinaryFromReader),
                       e.add_tokens(i);
                     break;
                   default:
@@ -421,7 +421,7 @@
               var i;
               void 0 !== (i = n.Message.getField(e, 1)) && t.writeString(1, i),
                 0 < (i = e.tokens()).length &&
-                  t.writeRepeatedMessage(2, i, c.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, i, g.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CCommunity_GetAppRichPresenceLocalization_Response_TokenList";
@@ -437,7 +437,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.gidcomment = function() {
               return n.Message.getField(this, 1);
             }),
@@ -614,7 +614,7 @@
             return n.Message.initialize(t, e, 0, -1, [1, 2, 9], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.comments = function() {
               return n.Message.getRepeatedWrapperField(this, _, 1);
             }),
@@ -851,7 +851,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.gidcomment = function() {
               return n.Message.getField(this, 1);
             }),
@@ -941,7 +941,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -980,7 +980,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.gidcomment = function() {
               return n.Message.getField(this, 1);
             }),
@@ -1083,7 +1083,7 @@
             return n.Message.initialize(t, e, 0, -1, [5], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.commentthreadid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -1189,7 +1189,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -1220,7 +1220,7 @@
             r
           );
         })(n.Message)),
-        m = (n.Message,
+        b = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -1228,7 +1228,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.voted_up = function() {
               return n.Message.getField(this, 1);
             }),
@@ -1286,14 +1286,14 @@
             r
           );
         })(n.Message)),
-        b = (function(i) {
+        m = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.priority = function() {
               return n.Message.getField(this, 1);
             }),
@@ -1363,7 +1363,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
               return n.Message.getRepeatedWrapperField(this, a.b, 1);
             }),
@@ -1424,7 +1424,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.clanid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -1537,7 +1537,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
               return n.Message.getRepeatedWrapperField(this, w, 1);
             }),
@@ -1598,7 +1598,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.clanid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -1690,14 +1690,14 @@
             r
           );
         })(n.Message)),
-        k = (function(i) {
+        j = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -1735,7 +1735,7 @@
           return e.SendMsg(
             "Community.GetAppRichPresenceLocalization#1",
             t,
-            g,
+            c,
             {}
           );
         }),
@@ -1761,7 +1761,7 @@
           return e.SendMsg(
             "Community.GetClanAnnouncementVoteForUser#1",
             t,
-            m,
+            b,
             {}
           );
         }),
@@ -1776,7 +1776,7 @@
           });
         }),
         (o.MarkPartnerEventsForUser = function(e, t) {
-          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, k, {});
+          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, j, {});
         });
     },
     "/511": function(e, t, i) {
@@ -1797,7 +1797,7 @@
           return u;
         }),
         i.d(t, "b", function() {
-          return g;
+          return c;
         });
       var s = i("mrSG"),
         n = i("hRO2");
@@ -1808,7 +1808,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.v4 = function() {
               return n.Message.getField(this, 1);
             }),
@@ -1873,7 +1873,7 @@
             return n.Message.initialize(t, e, 0, -1, [27], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -2242,7 +2242,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.size_unzipped = function() {
               return n.Message.getField(this, 1);
             }),
@@ -2308,7 +2308,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.estate = function() {
               return n.Message.getField(this, 1);
             }),
@@ -2433,7 +2433,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -2618,7 +2618,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.clanid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -2773,14 +2773,14 @@
             r
           );
         })(n.Message)),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [4], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.rtime_before = function() {
               return n.Message.getField(this, 1);
             }),
@@ -2868,14 +2868,14 @@
             r
           );
         })(n.Message),
-        c = (function(i) {
+        g = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [9], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.gid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -3062,10 +3062,10 @@
     "3Liw": function(e, t, i) {
       "use strict";
       i.d(t, "d", function() {
-        return g;
+        return c;
       }),
         i.d(t, "e", function() {
-          return S;
+          return C;
         }),
         i.d(t, "j", function() {
           return T;
@@ -3111,7 +3111,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.games = function() {
               return n.Message.getRepeatedWrapperField(this, l, 1);
             }),
@@ -3171,7 +3171,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -3369,14 +3369,14 @@
             r
           );
         })(n.Message),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -3407,14 +3407,14 @@
             r
           );
         })(n.Message),
-        c = (function(i) {
+        g = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -3484,9 +3484,9 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.incoming_invite_mutual_friends_lists = function() {
-              return n.Message.getRepeatedWrapperField(this, c, 1);
+              return n.Message.getRepeatedWrapperField(this, g, 1);
             }),
             (r.prototype.set_incoming_invite_mutual_friends_lists = function(
               e
@@ -3497,7 +3497,7 @@
               e,
               t
             ) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, c, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, g, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -3506,7 +3506,7 @@
               var i = {
                 incoming_invite_mutual_friends_lists: n.Message.toObjectList(
                   t.incoming_invite_mutual_friends_lists(),
-                  c.toObject,
+                  g.toObject,
                   e
                 )
               };
@@ -3521,8 +3521,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new c();
-                    t.readMessage(i, c.deserializeBinaryFromReader),
+                    var i = new g();
+                    t.readMessage(i, g.deserializeBinaryFromReader),
                       e.add_incoming_invite_mutual_friends_lists(i);
                     break;
                   default:
@@ -3538,7 +3538,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.incoming_invite_mutual_friends_lists()).length &&
-                t.writeRepeatedMessage(1, i, c.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, g.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetMutualFriendsForIncomingInvites_Response";
@@ -3554,7 +3554,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.player_level = function() {
               return n.Message.getField(this, 1);
             }),
@@ -3625,7 +3625,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.level = function() {
               return n.Message.getField(this, 1);
             }),
@@ -3703,7 +3703,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.emoticons = function() {
               return n.Message.getRepeatedWrapperField(this, F, 1);
             }),
@@ -3763,7 +3763,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.name = function() {
               return n.Message.getField(this, 1);
             }),
@@ -3865,7 +3865,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -3904,7 +3904,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.accountid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -4006,7 +4006,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -4037,7 +4037,7 @@
             r
           );
         })(n.Message)),
-        m = (n.Message,
+        b = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4045,7 +4045,7 @@
             return n.Message.initialize(t, e, 0, -1, [2, 3, 4, 5, 6], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.your_info = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -4056,49 +4056,49 @@
               n.Message.setWrapperField(this, 1, e);
             }),
             (r.prototype.in_game = function() {
-              return n.Message.getRepeatedWrapperField(this, b, 2);
+              return n.Message.getRepeatedWrapperField(this, m, 2);
             }),
             (r.prototype.set_in_game = function(e) {
               n.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_in_game = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 2, e, b, t);
+              return n.Message.addToRepeatedWrapperField(this, 2, e, m, t);
             }),
             (r.prototype.played_recently = function() {
-              return n.Message.getRepeatedWrapperField(this, b, 3);
+              return n.Message.getRepeatedWrapperField(this, m, 3);
             }),
             (r.prototype.set_played_recently = function(e) {
               n.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (r.prototype.add_played_recently = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 3, e, b, t);
+              return n.Message.addToRepeatedWrapperField(this, 3, e, m, t);
             }),
             (r.prototype.played_ever = function() {
-              return n.Message.getRepeatedWrapperField(this, b, 4);
+              return n.Message.getRepeatedWrapperField(this, m, 4);
             }),
             (r.prototype.set_played_ever = function(e) {
               n.Message.setRepeatedWrapperField(this, 4, e);
             }),
             (r.prototype.add_played_ever = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 4, e, b, t);
+              return n.Message.addToRepeatedWrapperField(this, 4, e, m, t);
             }),
             (r.prototype.owns = function() {
-              return n.Message.getRepeatedWrapperField(this, b, 5);
+              return n.Message.getRepeatedWrapperField(this, m, 5);
             }),
             (r.prototype.set_owns = function(e) {
               n.Message.setRepeatedWrapperField(this, 5, e);
             }),
             (r.prototype.add_owns = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 5, e, b, t);
+              return n.Message.addToRepeatedWrapperField(this, 5, e, m, t);
             }),
             (r.prototype.in_wishlist = function() {
-              return n.Message.getRepeatedWrapperField(this, b, 6);
+              return n.Message.getRepeatedWrapperField(this, m, 6);
             }),
             (r.prototype.set_in_wishlist = function(e) {
               n.Message.setRepeatedWrapperField(this, 6, e);
             }),
             (r.prototype.add_in_wishlist = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 6, e, b, t);
+              return n.Message.addToRepeatedWrapperField(this, 6, e, m, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -4107,21 +4107,21 @@
               var i,
                 r = {
                   your_info: (i = t.your_info(!1)) && B.toObject(e, i),
-                  in_game: n.Message.toObjectList(t.in_game(), b.toObject, e),
+                  in_game: n.Message.toObjectList(t.in_game(), m.toObject, e),
                   played_recently: n.Message.toObjectList(
                     t.played_recently(),
-                    b.toObject,
+                    m.toObject,
                     e
                   ),
                   played_ever: n.Message.toObjectList(
                     t.played_ever(),
-                    b.toObject,
+                    m.toObject,
                     e
                   ),
-                  owns: n.Message.toObjectList(t.owns(), b.toObject, e),
+                  owns: n.Message.toObjectList(t.owns(), m.toObject, e),
                   in_wishlist: n.Message.toObjectList(
                     t.in_wishlist(),
-                    b.toObject,
+                    m.toObject,
                     e
                   )
                 };
@@ -4141,28 +4141,28 @@
                       e.set_your_info(i);
                     break;
                   case 2:
-                    i = new b();
-                    t.readMessage(i, b.deserializeBinaryFromReader),
+                    i = new m();
+                    t.readMessage(i, m.deserializeBinaryFromReader),
                       e.add_in_game(i);
                     break;
                   case 3:
-                    i = new b();
-                    t.readMessage(i, b.deserializeBinaryFromReader),
+                    i = new m();
+                    t.readMessage(i, m.deserializeBinaryFromReader),
                       e.add_played_recently(i);
                     break;
                   case 4:
-                    i = new b();
-                    t.readMessage(i, b.deserializeBinaryFromReader),
+                    i = new m();
+                    t.readMessage(i, m.deserializeBinaryFromReader),
                       e.add_played_ever(i);
                     break;
                   case 5:
-                    i = new b();
-                    t.readMessage(i, b.deserializeBinaryFromReader),
+                    i = new m();
+                    t.readMessage(i, m.deserializeBinaryFromReader),
                       e.add_owns(i);
                     break;
                   case 6:
-                    i = new b();
-                    t.readMessage(i, b.deserializeBinaryFromReader),
+                    i = new m();
+                    t.readMessage(i, m.deserializeBinaryFromReader),
                       e.add_in_wishlist(i);
                     break;
                   default:
@@ -4180,15 +4180,15 @@
               null != (i = e.your_info(!1)) &&
                 t.writeMessage(1, i, B.serializeBinaryToWriter),
                 0 < (i = e.in_game()).length &&
-                  t.writeRepeatedMessage(2, i, b.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(2, i, m.serializeBinaryToWriter),
                 0 < (i = e.played_recently()).length &&
-                  t.writeRepeatedMessage(3, i, b.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(3, i, m.serializeBinaryToWriter),
                 0 < (i = e.played_ever()).length &&
-                  t.writeRepeatedMessage(4, i, b.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(4, i, m.serializeBinaryToWriter),
                 0 < (i = e.owns()).length &&
-                  t.writeRepeatedMessage(5, i, b.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(5, i, m.serializeBinaryToWriter),
                 0 < (i = e.in_wishlist()).length &&
-                  t.writeRepeatedMessage(6, i, b.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(6, i, m.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetFriendsGameplayInfo_Response";
@@ -4196,14 +4196,14 @@
             r
           );
         })(n.Message)),
-        b = (function(i) {
+        m = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -4282,7 +4282,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -4387,7 +4387,7 @@
             );
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.trending = function() {
               return n.Message.getRepeatedWrapperField(this, R, 1);
             }),
@@ -4598,7 +4598,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -4701,7 +4701,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -4765,7 +4765,7 @@
             r
           );
         })(n.Message),
-        k = (n.Message,
+        j = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4773,7 +4773,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -4804,7 +4804,7 @@
             r
           );
         })(n.Message)),
-        j = (n.Message,
+        k = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4812,22 +4812,22 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.nicknames = function() {
-              return n.Message.getRepeatedWrapperField(this, W, 1);
+              return n.Message.getRepeatedWrapperField(this, O, 1);
             }),
             (r.prototype.set_nicknames = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_nicknames = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, W, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, O, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                nicknames: n.Message.toObjectList(t.nicknames(), W.toObject, e)
+                nicknames: n.Message.toObjectList(t.nicknames(), O.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -4840,8 +4840,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new W();
-                    t.readMessage(i, W.deserializeBinaryFromReader),
+                    var i = new O();
+                    t.readMessage(i, O.deserializeBinaryFromReader),
                       e.add_nicknames(i);
                     break;
                   default:
@@ -4857,7 +4857,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.nicknames()).length &&
-                t.writeRepeatedMessage(1, i, W.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, O.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetNicknameList_Response";
@@ -4865,14 +4865,14 @@
             r
           );
         })(n.Message)),
-        W = (function(i) {
+        O = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.accountid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -4931,14 +4931,14 @@
             r
           );
         })(n.Message),
-        C = (function(i) {
+        W = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.accountid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -5074,14 +5074,14 @@
             r
           );
         })(n.Message),
-        S = (function(i) {
+        C = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -5112,22 +5112,22 @@
             r
           );
         })(n.Message),
-        O = (function(i) {
+        S = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.preferences = function() {
-              return n.Message.getRepeatedWrapperField(this, C, 1);
+              return n.Message.getRepeatedWrapperField(this, W, 1);
             }),
             (r.prototype.set_preferences = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_preferences = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, C, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, W, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -5136,7 +5136,7 @@
               var i = {
                 preferences: n.Message.toObjectList(
                   t.preferences(),
-                  C.toObject,
+                  W.toObject,
                   e
                 )
               };
@@ -5151,8 +5151,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new C();
-                    t.readMessage(i, C.deserializeBinaryFromReader),
+                    var i = new W();
+                    t.readMessage(i, W.deserializeBinaryFromReader),
                       e.add_preferences(i);
                     break;
                   default:
@@ -5168,7 +5168,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.preferences()).length &&
-                t.writeRepeatedMessage(1, i, C.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, W.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetPerFriendPreferences_Response";
@@ -5183,11 +5183,11 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, C, 1, e ? 1 : 0)
+                n.Message.getWrapperField(this, W, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_preferences = function(e) {
@@ -5199,7 +5199,7 @@
             (r.toObject = function(e, t) {
               var i,
                 r = {
-                  preferences: (i = t.preferences(!1)) && C.toObject(e, i)
+                  preferences: (i = t.preferences(!1)) && W.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -5212,8 +5212,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new C();
-                    t.readMessage(i, C.deserializeBinaryFromReader),
+                    var i = new W();
+                    t.readMessage(i, W.deserializeBinaryFromReader),
                       e.set_preferences(i);
                     break;
                   default:
@@ -5229,7 +5229,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.preferences(!1)) &&
-                t.writeMessage(1, i, C.serializeBinaryToWriter);
+                t.writeMessage(1, i, W.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_SetPerFriendPreferences_Request";
@@ -5244,7 +5244,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -5282,7 +5282,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -5335,7 +5335,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.invite_sent = function() {
               return n.Message.getField(this, 1);
             }),
@@ -5401,7 +5401,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -5454,7 +5454,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.friend_relationship = function() {
               return n.Message.getField(this, 1);
             }),
@@ -5506,7 +5506,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -5572,7 +5572,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.friend_relationship = function() {
               return n.Message.getField(this, 1);
             }),
@@ -5624,7 +5624,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.hide_adult_content_violence = function() {
               return n.Message.getFieldWithDefault(this, 1, !0);
             }),
@@ -5716,7 +5716,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -5754,7 +5754,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -5815,7 +5815,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -5876,7 +5876,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -5915,7 +5915,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.state = function() {
               return n.Message.getField(this, 1);
             }),
@@ -6018,7 +6018,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -6056,7 +6056,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.privacy_state = function() {
               return n.Message.getField(this, 1);
             }),
@@ -6165,7 +6165,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -6203,7 +6203,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.privacy_settings = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -6266,7 +6266,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.is_enabled = function() {
               return n.Message.getField(this, 1);
             }),
@@ -6279,13 +6279,20 @@
             (r.prototype.set_seconds = function(e) {
               n.Message.setField(this, 2, e);
             }),
+            (r.prototype.seconds_today = function() {
+              return n.Message.getField(this, 3);
+            }),
+            (r.prototype.set_seconds_today = function(e) {
+              n.Message.setField(this, 3, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
                 is_enabled: n.Message.getField(t, 1),
-                seconds: n.Message.getField(t, 2)
+                seconds: n.Message.getField(t, 2),
+                seconds_today: n.Message.getField(t, 3)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -6303,6 +6310,9 @@
                   case 2:
                     e.set_seconds(t.readInt32());
                     break;
+                  case 3:
+                    e.set_seconds_today(t.readInt32());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -6316,7 +6326,8 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               void 0 !== (i = n.Message.getField(e, 1)) && t.writeBool(1, i),
-                void 0 !== (i = n.Message.getField(e, 2)) && t.writeInt32(2, i);
+                void 0 !== (i = n.Message.getField(e, 2)) && t.writeInt32(2, i),
+                void 0 !== (i = n.Message.getField(e, 3)) && t.writeInt32(3, i);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetDurationControl_Response";
@@ -6331,7 +6342,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.games = function() {
               return n.Message.getRepeatedWrapperField(this, l, 1);
             }),
@@ -6391,7 +6402,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.accountid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -6468,7 +6479,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.state = function() {
               return n.Message.getField(this, 1);
             }),
@@ -6570,7 +6581,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -6631,7 +6642,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.accountid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -6641,7 +6652,7 @@
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, C, 2, e ? 1 : 0)
+                n.Message.getWrapperField(this, W, 2, e ? 1 : 0)
               );
             }),
             (r.prototype.set_preferences = function(e) {
@@ -6654,7 +6665,7 @@
               var i,
                 r = {
                   accountid: n.Message.getField(t, 1),
-                  preferences: (i = t.preferences(!1)) && C.toObject(e, i)
+                  preferences: (i = t.preferences(!1)) && W.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -6670,8 +6681,8 @@
                     e.set_accountid(t.readFixed32());
                     break;
                   case 2:
-                    var i = new C();
-                    t.readMessage(i, C.deserializeBinaryFromReader),
+                    var i = new W();
+                    t.readMessage(i, W.deserializeBinaryFromReader),
                       e.set_preferences(i);
                     break;
                   default:
@@ -6688,7 +6699,7 @@
               var i;
               void 0 !== (i = n.Message.getField(e, 1)) && t.writeFixed32(1, i),
                 null != (i = e.preferences(!1)) &&
-                  t.writeMessage(2, i, C.serializeBinaryToWriter);
+                  t.writeMessage(2, i, W.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_PerFriendPreferencesChanged_Notification";
@@ -6703,7 +6714,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.privacy_settings = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -6764,7 +6775,7 @@
         });
       }),
         (a.GetFriendsGameplayInfo = function(e, t) {
-          return e.SendMsg("Player.GetFriendsGameplayInfo#1", t, m, {
+          return e.SendMsg("Player.GetFriendsGameplayInfo#1", t, b, {
             bConstMethod: !0
           });
         }),
@@ -6800,15 +6811,15 @@
           });
         }),
         (a.AcceptSSA = function(e, t) {
-          return e.SendMsg("Player.AcceptSSA#1", t, k, {});
+          return e.SendMsg("Player.AcceptSSA#1", t, j, {});
         }),
         (a.GetNicknameList = function(e, t) {
-          return e.SendMsg("Player.GetNicknameList#1", t, j, {
+          return e.SendMsg("Player.GetNicknameList#1", t, k, {
             bConstMethod: !0
           });
         }),
         (a.GetPerFriendPreferences = function(e, t) {
-          return e.SendMsg("Player.GetPerFriendPreferences#1", t, O, {
+          return e.SendMsg("Player.GetPerFriendPreferences#1", t, S, {
             bConstMethod: !0
           });
         }),
@@ -6901,7 +6912,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.sdp = function() {
               return d.Message.getField(this, 1);
             }),
@@ -6953,7 +6964,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.remote_description = function() {
               return d.Message.getField(this, 1);
             }),
@@ -6998,14 +7009,14 @@
             r
           );
         })(d.Message),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.ssrc = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7100,14 +7111,14 @@
             r
           );
         })(d.Message),
-        c = (function(i) {
+        g = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return d.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.remote_description = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7194,7 +7205,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.ssrc = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7260,7 +7271,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.ip_webrtc_server = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7362,7 +7373,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -7406,12 +7417,12 @@
         }),
         ((a = n || (n = {})).NotifyWebRTCSessionConnectedHandler = {
           name: "WebRTCClientNotifications.NotifyWebRTCSessionConnected#1",
-          request: g
+          request: c
         }),
         (a.NotifyWebRTCUpdateRemoteDescriptionHandler = {
           name:
             "WebRTCClientNotifications.NotifyWebRTCUpdateRemoteDescription#1",
-          request: c
+          request: g
         });
     },
     "7t13": function(e, t, i) {
@@ -7420,7 +7431,7 @@
         return u;
       }),
         i.d(t, "a", function() {
-          return c;
+          return g;
         }),
         i.d(t, "b", function() {
           return f;
@@ -7432,7 +7443,7 @@
           return v;
         }),
         i.d(t, "e", function() {
-          return b;
+          return m;
         }),
         i.d(t, "f", function() {
           return w;
@@ -7456,7 +7467,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.steamid_partner = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7509,7 +7520,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7555,14 +7566,14 @@
             r
           );
         })(d.Message),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7622,14 +7633,14 @@
             r
           );
         })(d.Message),
-        c = (function(i) {
+        g = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7707,7 +7718,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -7745,7 +7756,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voicechat_id = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7823,7 +7834,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.steamid_partner = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7876,7 +7887,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -7914,7 +7925,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.steamid_partner = function() {
               return d.Message.getField(this, 1);
             }),
@@ -7981,7 +7992,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -8019,7 +8030,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -8146,7 +8157,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -8250,14 +8261,14 @@
             r
           );
         })(d.Message),
-        m = (function(i) {
+        b = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return d.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -8322,14 +8333,14 @@
             r
           );
         })(d.Message),
-        b = (function(i) {
+        m = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -8467,7 +8478,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.send_client_voice_logs = function() {
               return d.Message.getField(this, 1);
             }),
@@ -8519,7 +8530,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -8586,7 +8597,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -8625,7 +8636,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -8656,14 +8667,14 @@
             r
           );
         })(d.Message)),
-        k = (function(i) {
+        j = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -8783,14 +8794,14 @@
             r
           );
         })(d.Message),
-        j = (function(i) {
+        k = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -8916,11 +8927,11 @@
         }),
         (a.NotifyUserLeftVoiceChatHandler = {
           name: "VoiceChatClient.NotifyUserLeftVoiceChat#1",
-          request: k
+          request: j
         }),
         (a.NotifyVoiceChatEndedHandler = {
           name: "VoiceChatClient.NotifyVoiceChatEnded#1",
-          request: j
+          request: k
         }),
         (a.NotifyUserVoiceStatusHandler = {
           name: "VoiceChatClient.NotifyUserVoiceStatus#1",
@@ -8928,11 +8939,11 @@
         }),
         (a.NotifyAllUsersVoiceStatusHandler = {
           name: "VoiceChatClient.NotifyAllUsersVoiceStatus#1",
-          request: m
+          request: b
         }),
         (a.NotifyOneOnOneChatRequestedHandler = {
           name: "VoiceChatClient.NotifyOneOnOneChatRequested#1",
-          request: g
+          request: c
         }),
         (a.NotifyOneOnOneChatResponseHandler = {
           name: "VoiceChatClient.NotifyOneOnOneChatResponse#1",
@@ -8951,7 +8962,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.ticket_version_no = function() {
               return n.Message.getField(this, 1);
             }),
@@ -9086,7 +9097,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steam_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -9185,7 +9196,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steam_id_gs = function() {
               return n.Message.getField(this, 1);
             }),
@@ -9534,7 +9545,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.package_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -9774,7 +9785,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steam_id_user = function() {
               return n.Message.getField(this, 1);
             }),
@@ -9867,7 +9878,7 @@
             r
           );
         })(n.Message)),
-        g = (n.Message,
+        c = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -9875,7 +9886,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.app_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -9944,7 +9955,7 @@
             r
           );
         })(n.Message)),
-        c = (n.Message,
+        g = (n.Message,
         n.Message,
         (function(i) {
           function r(e) {
@@ -9953,7 +9964,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.client_stat = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10020,7 +10031,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.client_stat = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10139,7 +10150,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steam_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10220,7 +10231,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.key = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10309,7 +10320,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steam_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10446,7 +10457,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steam_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10533,7 +10544,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.app_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10613,7 +10624,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steam_id_dest = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10706,7 +10717,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.connect_attempts = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10822,14 +10833,14 @@
             r
           );
         })(n.Message)),
-        m = (function(i) {
+        b = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.pkts_sent = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10925,14 +10936,14 @@
             r
           );
         })(n.Message),
-        b = (function(i) {
+        m = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.connections_udp = function() {
               return n.Message.getField(this, 1);
             }),
@@ -10948,7 +10959,7 @@
             (r.prototype.stats_udp = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, m, 3, e ? 1 : 0)
+                n.Message.getWrapperField(this, b, 3, e ? 1 : 0)
               );
             }),
             (r.prototype.set_stats_udp = function(e) {
@@ -11064,7 +11075,7 @@
                 r = {
                   connections_udp: n.Message.getField(t, 1),
                   connections_tcp: n.Message.getField(t, 2),
-                  stats_udp: (i = t.stats_udp(!1)) && m.toObject(e, i),
+                  stats_udp: (i = t.stats_udp(!1)) && b.toObject(e, i),
                   pkts_abandoned: n.Message.getField(t, 4),
                   conn_req_received: n.Message.getField(t, 5),
                   pkts_resent: n.Message.getField(t, 6),
@@ -11100,8 +11111,8 @@
                     e.set_connections_tcp(t.readUint32());
                     break;
                   case 3:
-                    var i = new m();
-                    t.readMessage(i, m.deserializeBinaryFromReader),
+                    var i = new b();
+                    t.readMessage(i, b.deserializeBinaryFromReader),
                       e.set_stats_udp(i);
                     break;
                   case 4:
@@ -11171,7 +11182,7 @@
                 void 0 !== (i = n.Message.getField(e, 2)) &&
                   t.writeUint32(2, i),
                 null != (i = e.stats_udp(!1)) &&
-                  t.writeMessage(3, i, m.serializeBinaryToWriter),
+                  t.writeMessage(3, i, b.serializeBinaryToWriter),
                 void 0 !== (i = n.Message.getField(e, 4)) &&
                   t.writeUint64String(4, i),
                 void 0 !== (i = n.Message.getField(e, 5)) &&
@@ -11220,7 +11231,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.server_types_available = function() {
               return n.Message.getRepeatedWrapperField(this, w, 1);
             }),
@@ -11296,7 +11307,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.server = function() {
               return n.Message.getField(this, 1);
             }),
@@ -11363,7 +11374,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.stat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -11429,7 +11440,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.achievement_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -11491,7 +11502,7 @@
             r
           );
         })(n.Message),
-        k = (n.Message,
+        j = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -11499,7 +11510,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.stat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -11558,7 +11569,7 @@
             r
           );
         })(n.Message)),
-        j = (n.Message,
+        k = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -11566,7 +11577,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.stat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -11625,7 +11636,7 @@
             r
           );
         })(n.Message)),
-        W = (n.Message,
+        O = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -11633,7 +11644,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.stat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -11692,7 +11703,7 @@
             r
           );
         })(n.Message)),
-        C = (n.Message,
+        W = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -11700,7 +11711,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.stat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -11759,7 +11770,7 @@
             r
           );
         })(n.Message)),
-        S = (n.Message,
+        C = (n.Message,
         n.Message,
         n.Message,
         (function(i) {
@@ -11769,7 +11780,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -11840,7 +11851,7 @@
             r
           );
         })(n.Message)),
-        O = (n.Message,
+        S = (n.Message,
         n.Message,
         (function(i) {
           function r(e) {
@@ -11849,7 +11860,7 @@
             return n.Message.initialize(t, e, 0, -1, [9], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -12073,7 +12084,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -12147,7 +12158,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getFieldWithDefault(this, 1, 2);
             }),
@@ -12249,7 +12260,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getFieldWithDefault(this, 1, 2);
             }),
@@ -12333,7 +12344,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.app_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -12479,7 +12490,7 @@
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.app_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -12561,7 +12572,7 @@
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.app_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -12644,7 +12655,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.section_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -12711,7 +12722,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.package_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -12801,7 +12812,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.packageid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -12878,7 +12889,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -12956,7 +12967,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -13033,7 +13044,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.packageid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -13100,7 +13111,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -13222,7 +13233,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.packageid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -13335,7 +13346,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.packageid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -13401,7 +13412,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -13475,7 +13486,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.id_count = function() {
               return n.Message.getField(this, 1);
             }),
@@ -13546,7 +13557,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -13599,7 +13610,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.responses = function() {
               return n.Message.getRepeatedWrapperField(this, X, 2);
             }),
@@ -13659,7 +13670,7 @@
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getFieldWithDefault(this, 1, 2);
             }),
@@ -13742,7 +13753,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.name_since = function() {
               return n.Message.getField(this, 1);
             }),
@@ -13809,7 +13820,7 @@
             return n.Message.initialize(t, e, 0, -1, [6, 7], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid_clan = function() {
               return n.Message.getField(this, 1);
             }),
@@ -13960,7 +13971,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.clan_name = function() {
               return n.Message.getField(this, 1);
             }),
@@ -14025,7 +14036,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.members = function() {
               return n.Message.getField(this, 1);
             }),
@@ -14127,7 +14138,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.gid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -14227,7 +14238,7 @@
     Dss5: function(e, t, i) {
       "use strict";
       i.d(t, "a", function() {
-        return O;
+        return S;
       }),
         i.d(t, "b", function() {
           return N;
@@ -14253,7 +14264,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_channel_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -14307,7 +14318,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_channel_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -14387,7 +14398,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -14426,7 +14437,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.unique_name = function() {
               return n.Message.getField(this, 1);
             }),
@@ -14581,7 +14592,7 @@
             r
           );
         })(n.Message)),
-        g = (n.Message,
+        c = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -14589,7 +14600,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.replace_image_hash = function() {
               return n.Message.getField(this, 1);
             }),
@@ -14634,7 +14645,7 @@
             r
           );
         })(n.Message)),
-        c = (n.Message,
+        g = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -14642,7 +14653,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.images = function() {
               return n.Message.getRepeatedWrapperField(this, p, 1);
             }),
@@ -14702,7 +14713,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.image_type = function() {
               return n.Message.getField(this, 1);
             }),
@@ -14781,7 +14792,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.links = function() {
               return n.Message.getRepeatedWrapperField(this, f, 1);
             }),
@@ -14841,7 +14852,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.link_index = function() {
               return n.Message.getField(this, 1);
             }),
@@ -14968,7 +14979,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.link_index = function() {
               return n.Message.getField(this, 1);
             }),
@@ -15094,7 +15105,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -15133,7 +15144,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.is_live = function() {
               return n.Message.getField(this, 1);
             }),
@@ -15306,7 +15317,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_channel_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -15578,7 +15589,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
               return n.Message.getRepeatedWrapperField(this, h, 1);
             }),
@@ -15631,7 +15642,7 @@
             r
           );
         })(n.Message)),
-        m = (n.Message,
+        b = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -15639,7 +15650,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
               return n.Message.getRepeatedWrapperField(this, h, 1);
             }),
@@ -15692,7 +15703,7 @@
             r
           );
         })(n.Message)),
-        b = (n.Message,
+        m = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -15700,7 +15711,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.is_followed = function() {
               return n.Message.getField(this, 1);
             }),
@@ -15753,7 +15764,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.is_subscribed = function() {
               return n.Message.getField(this, 1);
             }),
@@ -15806,7 +15817,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -15845,7 +15856,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.is_followed = function() {
               return n.Message.getField(this, 1);
             }),
@@ -15910,7 +15921,7 @@
             return n.Message.initialize(t, e, 0, -1, [5], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -16046,7 +16057,7 @@
             r
           );
         })(n.Message),
-        k = (n.Message,
+        j = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -16054,7 +16065,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
               return n.Message.getRepeatedWrapperField(this, R, 1);
             }),
@@ -16107,7 +16118,7 @@
             r
           );
         })(n.Message)),
-        j = (n.Message,
+        k = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -16115,7 +16126,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
               return n.Message.getRepeatedWrapperField(this, h, 1);
             }),
@@ -16168,7 +16179,7 @@
             r
           );
         })(n.Message)),
-        W = (n.Message,
+        O = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -16176,15 +16187,15 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcasters = function() {
-              return n.Message.getRepeatedWrapperField(this, C, 1);
+              return n.Message.getRepeatedWrapperField(this, W, 1);
             }),
             (r.prototype.set_broadcasters = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_broadcasters = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, C, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, W, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -16193,7 +16204,7 @@
               var i = {
                 broadcasters: n.Message.toObjectList(
                   t.broadcasters(),
-                  C.toObject,
+                  W.toObject,
                   e
                 )
               };
@@ -16208,8 +16219,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new C();
-                    t.readMessage(i, C.deserializeBinaryFromReader),
+                    var i = new W();
+                    t.readMessage(i, W.deserializeBinaryFromReader),
                       e.add_broadcasters(i);
                     break;
                   default:
@@ -16225,7 +16236,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.broadcasters()).length &&
-                t.writeRepeatedMessage(1, i, C.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, W.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetBroadcastChannelBroadcasters_Response";
@@ -16233,14 +16244,14 @@
             r
           );
         })(n.Message)),
-        C = (function(i) {
+        W = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -16312,14 +16323,14 @@
             r
           );
         })(n.Message),
-        S = (function(i) {
+        C = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.issuer_steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -16414,14 +16425,14 @@
             r
           );
         })(n.Message),
-        O = (function(i) {
+        S = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_channel_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -16522,7 +16533,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -16561,22 +16572,22 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
-              return n.Message.getRepeatedWrapperField(this, S, 1);
+              return n.Message.getRepeatedWrapperField(this, C, 1);
             }),
             (r.prototype.set_results = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_results = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, S, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, C, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                results: n.Message.toObjectList(t.results(), S.toObject, e)
+                results: n.Message.toObjectList(t.results(), C.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -16589,8 +16600,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new S();
-                    t.readMessage(i, S.deserializeBinaryFromReader),
+                    var i = new C();
+                    t.readMessage(i, C.deserializeBinaryFromReader),
                       e.add_results(i);
                     break;
                   default:
@@ -16606,7 +16617,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.results()).length &&
-                t.writeRepeatedMessage(1, i, S.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, C.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CSteamTV_GetChatBans_Response";
@@ -16621,7 +16632,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_channel_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -16699,7 +16710,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -16737,7 +16748,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_channel_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -16790,7 +16801,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -16857,7 +16868,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
               return n.Message.getRepeatedWrapperField(this, G, 1);
             }),
@@ -16918,7 +16929,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -16957,7 +16968,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
               return n.Message.getField(this, 1);
             }),
@@ -17013,7 +17024,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_channel_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -17066,7 +17077,7 @@
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -17149,7 +17160,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
               return n.Message.getRepeatedWrapperField(this, h, 1);
             }),
@@ -17210,7 +17221,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.stream_live_email = function() {
               return n.Message.getField(this, 1);
             }),
@@ -17276,7 +17287,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -17315,7 +17326,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.results = function() {
               return n.Message.getRepeatedWrapperField(this, h, 1);
             }),
@@ -17375,7 +17386,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcasts = function() {
               return n.Message.getRepeatedWrapperField(this, h, 1);
             }),
@@ -17439,7 +17450,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcasts = function() {
               return n.Message.getRepeatedWrapperField(this, h, 1);
             }),
@@ -17527,7 +17538,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -17611,7 +17622,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.entries = function() {
               return n.Message.getRepeatedWrapperField(this, Q, 1);
             }),
@@ -17683,7 +17694,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcasts = function() {
               return n.Message.getRepeatedWrapperField(this, h, 1);
             }),
@@ -17759,7 +17770,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcasts = function() {
               return n.Message.getRepeatedWrapperField(this, h, 1);
             }),
@@ -17835,7 +17846,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -17920,7 +17931,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -17993,7 +18004,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.title = function() {
               return n.Message.getField(this, 1);
             }),
@@ -18045,7 +18056,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.template_type = function() {
               return n.Message.getField(this, 1);
             }),
@@ -18237,7 +18248,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.rows = function() {
               return n.Message.getRepeatedWrapperField(this, re, 1);
             }),
@@ -18298,7 +18309,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_clip_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -18449,7 +18460,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.clips = function() {
               return n.Message.getRepeatedWrapperField(this, ne, 1);
             }),
@@ -18531,10 +18542,10 @@
           });
         }),
         (a.SetBroadcastChannelImage = function(e, t) {
-          return e.SendMsg("SteamTV.SetBroadcastChannelImage#1", t, g, {});
+          return e.SendMsg("SteamTV.SetBroadcastChannelImage#1", t, c, {});
         }),
         (a.GetBroadcastChannelImages = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelImages#1", t, c, {
+          return e.SendMsg("SteamTV.GetBroadcastChannelImages#1", t, g, {
             bConstMethod: !0
           });
         }),
@@ -18552,7 +18563,7 @@
           });
         }),
         (a.GetBroadcastChannelBroadcasters = function(e, t) {
-          return e.SendMsg("SteamTV.GetBroadcastChannelBroadcasters#1", t, W, {
+          return e.SendMsg("SteamTV.GetBroadcastChannelBroadcasters#1", t, O, {
             bConstMethod: !0
           });
         }),
@@ -18562,7 +18573,7 @@
           });
         }),
         (a.GetSubscribedChannels = function(e, t) {
-          return e.SendMsg("SteamTV.GetSubscribedChannels#1", t, m, {
+          return e.SendMsg("SteamTV.GetSubscribedChannels#1", t, b, {
             bConstMethod: !0
           });
         }),
@@ -18572,7 +18583,7 @@
           });
         }),
         (a.FollowBroadcastChannel = function(e, t) {
-          return e.SendMsg("SteamTV.FollowBroadcastChannel#1", t, b, {});
+          return e.SendMsg("SteamTV.FollowBroadcastChannel#1", t, m, {});
         }),
         (a.SubscribeBroadcastChannel = function(e, t) {
           return e.SendMsg("SteamTV.SubscribeBroadcastChannel#1", t, B, {});
@@ -18591,10 +18602,10 @@
           });
         }),
         (a.GetGames = function(e, t) {
-          return e.SendMsg("SteamTV.GetGames#1", t, k, { bConstMethod: !0 });
+          return e.SendMsg("SteamTV.GetGames#1", t, j, { bConstMethod: !0 });
         }),
         (a.GetChannels = function(e, t) {
-          return e.SendMsg("SteamTV.GetChannels#1", t, j, { bConstMethod: !0 });
+          return e.SendMsg("SteamTV.GetChannels#1", t, k, { bConstMethod: !0 });
         }),
         (a.AddChatBan = function(e, t) {
           return e.SendMsg("SteamTV.AddChatBan#1", t, T, {});
@@ -18674,7 +18685,7 @@
             return o.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.groupid = function() {
               return o.Message.getField(this, 1);
             }),
@@ -18755,7 +18766,7 @@
             return o.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -18786,14 +18797,14 @@
             r
           );
         })(o.Message),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return o.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.categories = function() {
               return o.Message.getRepeatedWrapperField(this, u, 1);
             }),
@@ -18850,14 +18861,14 @@
             r
           );
         })(o.Message),
-        c = (function(i) {
+        g = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return o.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.accountid = function() {
               return o.Message.getField(this, 1);
             }),
@@ -18935,7 +18946,7 @@
             return o.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -18973,22 +18984,22 @@
             return o.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.favorites = function() {
-              return o.Message.getRepeatedWrapperField(this, c, 1);
+              return o.Message.getRepeatedWrapperField(this, g, 1);
             }),
             (r.prototype.set_favorites = function(e) {
               o.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_favorites = function(e, t) {
-              return o.Message.addToRepeatedWrapperField(this, 1, e, c, t);
+              return o.Message.addToRepeatedWrapperField(this, 1, e, g, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                favorites: o.Message.toObjectList(t.favorites(), c.toObject, e)
+                favorites: o.Message.toObjectList(t.favorites(), g.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -19001,8 +19012,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new c();
-                    t.readMessage(i, c.deserializeBinaryFromReader),
+                    var i = new g();
+                    t.readMessage(i, g.deserializeBinaryFromReader),
                       e.add_favorites(i);
                     break;
                   default:
@@ -19018,7 +19029,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.favorites()).length &&
-                t.writeRepeatedMessage(1, i, c.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, g.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendsList_GetFavorites_Response";
@@ -19033,22 +19044,22 @@
             return o.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.favorites = function() {
-              return o.Message.getRepeatedWrapperField(this, c, 1);
+              return o.Message.getRepeatedWrapperField(this, g, 1);
             }),
             (r.prototype.set_favorites = function(e) {
               o.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_favorites = function(e, t) {
-              return o.Message.addToRepeatedWrapperField(this, 1, e, c, t);
+              return o.Message.addToRepeatedWrapperField(this, 1, e, g, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                favorites: o.Message.toObjectList(t.favorites(), c.toObject, e)
+                favorites: o.Message.toObjectList(t.favorites(), g.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -19061,8 +19072,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new c();
-                    t.readMessage(i, c.deserializeBinaryFromReader),
+                    var i = new g();
+                    t.readMessage(i, g.deserializeBinaryFromReader),
                       e.add_favorites(i);
                     break;
                   default:
@@ -19078,7 +19089,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.favorites()).length &&
-                t.writeRepeatedMessage(1, i, c.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, g.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendsList_SetFavorites_Request";
@@ -19093,7 +19104,7 @@
             return o.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -19131,22 +19142,22 @@
             return o.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.favorites = function() {
-              return o.Message.getRepeatedWrapperField(this, c, 1);
+              return o.Message.getRepeatedWrapperField(this, g, 1);
             }),
             (r.prototype.set_favorites = function(e) {
               o.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_favorites = function(e, t) {
-              return o.Message.addToRepeatedWrapperField(this, 1, e, c, t);
+              return o.Message.addToRepeatedWrapperField(this, 1, e, g, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                favorites: o.Message.toObjectList(t.favorites(), c.toObject, e)
+                favorites: o.Message.toObjectList(t.favorites(), g.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -19159,8 +19170,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new c();
-                    t.readMessage(i, c.deserializeBinaryFromReader),
+                    var i = new g();
+                    t.readMessage(i, g.deserializeBinaryFromReader),
                       e.add_favorites(i);
                     break;
                   default:
@@ -19176,7 +19187,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.favorites()).length &&
-                t.writeRepeatedMessage(1, i, c.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, g.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CFriendsList_FavoritesChanged_Notification";
@@ -19191,7 +19202,7 @@
             return o.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -19229,7 +19240,7 @@
             return o.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            a.d(r, i),
+            Object(a.d)(r, i),
             (r.prototype.friendslist = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -19284,7 +19295,7 @@
           );
         })(o.Message);
       ((s = r || (r = {})).GetCategories = function(e, t) {
-        return e.SendMsg("FriendsList.GetCategories#1", t, g, {
+        return e.SendMsg("FriendsList.GetCategories#1", t, c, {
           bConstMethod: !0
         });
       }),
@@ -19312,7 +19323,7 @@
         return w;
       }),
         i.d(t, "c", function() {
-          return O;
+          return S;
         }),
         i.d(t, "d", function() {
           return T;
@@ -19334,7 +19345,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.tag_name = function() {
               return n.Message.getField(this, 1);
             }),
@@ -19406,7 +19417,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.key = function() {
               return n.Message.getField(this, 1);
             }),
@@ -19472,7 +19483,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.original_file_name = function() {
               return n.Message.getField(this, 1);
             }),
@@ -19578,7 +19589,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -19633,7 +19644,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -19693,7 +19704,7 @@
             r
           );
         })(n.Message)),
-        g = (n.Message,
+        c = (n.Message,
         n.Message,
         (function(i) {
           function r(e) {
@@ -19702,7 +19713,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -19821,7 +19832,7 @@
             r
           );
         })(n.Message)),
-        c = (n.Message,
+        g = (n.Message,
         n.Message,
         n.Message,
         n.Message,
@@ -19832,7 +19843,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -19912,7 +19923,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -19980,7 +19991,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20072,7 +20083,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20129,7 +20140,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20201,7 +20212,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid_user = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20290,7 +20301,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.betaname = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20360,7 +20371,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.source_type = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20478,7 +20489,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.day_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20486,13 +20497,13 @@
               n.Message.setField(this, 1, e);
             }),
             (r.prototype.stats = function() {
-              return n.Message.getRepeatedWrapperField(this, m, 2);
+              return n.Message.getRepeatedWrapperField(this, b, 2);
             }),
             (r.prototype.set_stats = function(e) {
               n.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_stats = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 2, e, m, t);
+              return n.Message.addToRepeatedWrapperField(this, 2, e, b, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -20500,7 +20511,7 @@
             (r.toObject = function(e, t) {
               var i = {
                 day_id: n.Message.getField(t, 1),
-                stats: n.Message.toObjectList(t.stats(), m.toObject, e)
+                stats: n.Message.toObjectList(t.stats(), b.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -20516,8 +20527,8 @@
                     e.set_day_id(t.readUint32());
                     break;
                   case 2:
-                    var i = new m();
-                    t.readMessage(i, m.deserializeBinaryFromReader),
+                    var i = new b();
+                    t.readMessage(i, b.deserializeBinaryFromReader),
                       e.add_stats(i);
                     break;
                   default:
@@ -20534,7 +20545,7 @@
               var i;
               void 0 !== (i = n.Message.getField(e, 1)) && t.writeUint32(1, i),
                 0 < (i = e.stats()).length &&
-                  t.writeRepeatedMessage(2, i, m.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, i, b.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CMsgClientUGSGetGlobalStatsResponse_Day";
@@ -20542,14 +20553,14 @@
             r
           );
         })(n.Message)),
-        m = (function(i) {
+        b = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.stat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20608,7 +20619,7 @@
             r
           );
         })(n.Message),
-        b = (n.Message,
+        m = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -20616,7 +20627,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steam_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20672,7 +20683,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.deprecated_server_ip = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20771,7 +20782,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid_clans = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20848,7 +20859,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.appid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -20964,7 +20975,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.user_notification_type = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21023,7 +21034,7 @@
             r
           );
         })(n.Message)),
-        k = (n.Message,
+        j = (n.Message,
         n.Message,
         n.Message,
         n.Message,
@@ -21036,7 +21047,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.accountid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21118,7 +21129,7 @@
             r
           );
         })(n.Message)),
-        j = (n.Message,
+        k = (n.Message,
         n.Message,
         n.Message,
         (function(i) {
@@ -21128,7 +21139,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.accountid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21187,7 +21198,7 @@
             r
           );
         })(n.Message)),
-        W = (n.Message,
+        O = (n.Message,
         n.Message,
         n.Message,
         (function(i) {
@@ -21197,7 +21208,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21289,7 +21300,7 @@
             r
           );
         })(n.Message)),
-        C = (n.Message,
+        W = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -21297,7 +21308,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21343,7 +21354,7 @@
             r
           );
         })(n.Message)),
-        S = (n.Message,
+        C = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -21351,7 +21362,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21443,14 +21454,14 @@
             r
           );
         })(n.Message)),
-        O = (function(i) {
+        S = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21516,7 +21527,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getFieldWithDefault(this, 1, 2);
             }),
@@ -21568,7 +21579,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_ids = function() {
               return n.Message.getRepeatedWrapperField(this, N, 1);
             }),
@@ -21632,7 +21643,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21685,7 +21696,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getFieldWithDefault(this, 1, 2);
             }),
@@ -21760,7 +21771,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.published_file_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21827,7 +21838,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.ip = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21924,7 +21935,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.owner_account_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -21992,7 +22003,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.auth_device_token = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22107,7 +22118,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.owner_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22174,7 +22185,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.app_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22255,10 +22266,10 @@
           return l;
         }),
         i.d(t, "c", function() {
-          return g;
+          return c;
         }),
         i.d(t, "m", function() {
-          return c;
+          return g;
         }),
         i.d(t, "d", function() {
           return y;
@@ -22276,10 +22287,10 @@
           return v;
         }),
         i.d(t, "l", function() {
-          return m;
+          return b;
         }),
         i.d(t, "a", function() {
-          return b;
+          return m;
         }),
         i.d(t, "b", function() {
           return B;
@@ -22294,7 +22305,7 @@
           return R;
         }),
         i.d(t, "h", function() {
-          return k;
+          return j;
         });
       var s = i("mrSG"),
         n = i("hRO2"),
@@ -22311,7 +22322,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.bincremental = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22417,7 +22428,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.ulfriendid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22485,7 +22496,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.nGroupID = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22551,7 +22562,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.ulSteamID = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22618,7 +22629,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22687,7 +22698,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.persona_state_requested = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22749,14 +22760,14 @@
             r
           );
         })(n.Message)),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.persona_state = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22882,7 +22893,7 @@
             r
           );
         })(n.Message),
-        c = (n.Message,
+        g = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -22890,7 +22901,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.status_flags = function() {
               return n.Message.getField(this, 1);
             }),
@@ -22961,7 +22972,7 @@
             return n.Message.initialize(t, e, 0, -1, [71], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.friendid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -23367,7 +23378,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.ogg_app_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -23433,7 +23444,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.key = function() {
               return n.Message.getField(this, 1);
             }),
@@ -23501,7 +23512,7 @@
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -23583,7 +23594,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getField(this, 1);
             }),
@@ -23648,7 +23659,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -23714,7 +23725,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getField(this, 1);
             }),
@@ -23766,7 +23777,7 @@
             return n.Message.initialize(t, e, 0, -1, [3, 4], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.groupid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -23855,14 +23866,14 @@
             r
           );
         })(n.Message),
-        m = (function(i) {
+        b = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getField(this, 1);
             }),
@@ -23907,14 +23918,14 @@
             r
           );
         })(n.Message),
-        b = (function(i) {
+        m = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.groupid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -23980,7 +23991,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getField(this, 1);
             }),
@@ -24032,7 +24043,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.groupid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -24098,7 +24109,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getField(this, 1);
             }),
@@ -24150,7 +24161,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -24181,29 +24192,29 @@
             r
           );
         })(n.Message),
-        k = (function(i) {
+        j = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.emoticons = function() {
-              return n.Message.getRepeatedWrapperField(this, j, 1);
+              return n.Message.getRepeatedWrapperField(this, k, 1);
             }),
             (r.prototype.set_emoticons = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_emoticons = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, j, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, k, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                emoticons: n.Message.toObjectList(t.emoticons(), j.toObject, e)
+                emoticons: n.Message.toObjectList(t.emoticons(), k.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -24216,8 +24227,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new j();
-                    t.readMessage(i, j.deserializeBinaryFromReader),
+                    var i = new k();
+                    t.readMessage(i, k.deserializeBinaryFromReader),
                       e.add_emoticons(i);
                     break;
                   default:
@@ -24233,7 +24244,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.emoticons()).length &&
-                t.writeRepeatedMessage(1, i, j.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, k.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CMsgClientEmoticonList";
@@ -24241,14 +24252,14 @@
             r
           );
         })(n.Message),
-        j = (function(i) {
+        k = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.name = function() {
               return n.Message.getField(this, 1);
             }),
@@ -24358,7 +24369,7 @@
           return v;
         }),
         i.d(t, "I", function() {
-          return b;
+          return m;
         }),
         i.d(t, "L", function() {
           return w;
@@ -24367,13 +24378,13 @@
           return R;
         }),
         i.d(t, "M", function() {
-          return j;
+          return k;
         }),
         i.d(t, "A", function() {
-          return C;
+          return W;
         }),
         i.d(t, "x", function() {
-          return O;
+          return S;
         }),
         i.d(t, "O", function() {
           return U;
@@ -24430,13 +24441,13 @@
           return ze;
         }),
         i.d(t, "u", function() {
-          return ke;
+          return je;
         }),
         i.d(t, "y", function() {
-          return We;
+          return Oe;
         }),
         i.d(t, "w", function() {
-          return Se;
+          return Ce;
         }),
         i.d(t, "z", function() {
           return Te;
@@ -24475,7 +24486,7 @@
           return lt;
         }),
         i.d(t, "P", function() {
-          return ct;
+          return gt;
         }),
         i.d(t, "i", function() {
           return yt;
@@ -24496,7 +24507,7 @@
           return u;
         }),
         i.d(t, "U", function() {
-          return g;
+          return c;
         }),
         i.d(t, "Y", function() {
           return p;
@@ -24514,8 +24525,8 @@
         d,
         u,
         l,
-        g,
         c,
+        g,
         p,
         _,
         f = (function(i) {
@@ -24525,7 +24536,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -24563,7 +24574,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -24601,7 +24612,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.message = function() {
               return n.Message.getField(this, 1);
             }),
@@ -24679,7 +24690,7 @@
             return n.Message.initialize(t, e, 0, -1, [4], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid_partner = function() {
               return n.Message.getField(this, 1);
             }),
@@ -24797,7 +24808,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -24888,7 +24899,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -24948,14 +24959,14 @@
             r
           );
         })(n.Message),
-        m = (function(i) {
+        b = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.name = function() {
               return n.Message.getField(this, 1);
             }),
@@ -25000,14 +25011,14 @@
             r
           );
         })(n.Message),
-        b = (function(i) {
+        m = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -25074,7 +25085,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -25112,7 +25123,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -25179,7 +25190,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -25217,7 +25228,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -25276,14 +25287,14 @@
             r
           );
         })(n.Message),
-        k = (function(i) {
+        j = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -25314,14 +25325,14 @@
             r
           );
         })(n.Message),
-        j = (function(i) {
+        k = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -25393,14 +25404,14 @@
             r
           );
         })(n.Message),
-        W = (function(i) {
+        O = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -25431,14 +25442,14 @@
             r
           );
         })(n.Message),
-        C = (function(i) {
+        W = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -25509,14 +25520,14 @@
             r
           );
         })(n.Message),
-        S = (function(i) {
+        C = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -25547,14 +25558,14 @@
             r
           );
         })(n.Message),
-        O = (function(i) {
+        S = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -25632,7 +25643,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -25670,7 +25681,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -25748,7 +25759,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -25786,7 +25797,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -25853,7 +25864,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -25891,7 +25902,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.role_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -25970,7 +25981,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.role_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -26149,7 +26160,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -26216,7 +26227,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.actions = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -26275,7 +26286,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.app_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -26366,7 +26377,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.roles = function() {
               return n.Message.getRepeatedWrapperField(this, G, 1);
             }),
@@ -26426,7 +26437,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -26505,7 +26516,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -26543,7 +26554,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -26622,7 +26633,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -26660,7 +26671,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -26727,7 +26738,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -26766,7 +26777,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.actions = function() {
               return n.Message.getRepeatedWrapperField(this, E, 1);
             }),
@@ -26826,7 +26837,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -26911,7 +26922,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -26949,7 +26960,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -27028,7 +27039,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -27067,7 +27078,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.role_ids = function() {
               return n.Message.getField(this, 1);
             }),
@@ -27123,7 +27134,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -27202,7 +27213,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -27240,7 +27251,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.header_state = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -27301,7 +27312,7 @@
             return n.Message.initialize(t, e, 0, -1, [7], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.accountid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -27407,7 +27418,7 @@
             );
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -27711,7 +27722,7 @@
             return n.Message.initialize(t, e, 0, -1, [4], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -27852,7 +27863,7 @@
             return n.Message.initialize(t, e, 0, -1, [18, 19, 22], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -28074,7 +28085,7 @@
             return n.Message.initialize(t, e, 0, -1, [2, 5, 7], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.header_state = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -28202,7 +28213,7 @@
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -28216,13 +28227,13 @@
               n.Message.setField(this, 2, e);
             }),
             (r.prototype.user_chat_room_state = function() {
-              return n.Message.getRepeatedWrapperField(this, ge, 3);
+              return n.Message.getRepeatedWrapperField(this, ce, 3);
             }),
             (r.prototype.set_user_chat_room_state = function(e) {
               n.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (r.prototype.add_user_chat_room_state = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 3, e, ge, t);
+              return n.Message.addToRepeatedWrapperField(this, 3, e, ce, t);
             }),
             (r.prototype.desktop_notification_level = function() {
               return n.Message.getFieldWithDefault(this, 4, 0);
@@ -28257,7 +28268,7 @@
                 time_joined: n.Message.getField(t, 2),
                 user_chat_room_state: n.Message.toObjectList(
                   t.user_chat_room_state(),
-                  ge.toObject,
+                  ce.toObject,
                   e
                 ),
                 desktop_notification_level: n.Message.getFieldWithDefault(
@@ -28290,8 +28301,8 @@
                     e.set_time_joined(t.readUint32());
                     break;
                   case 3:
-                    var i = new ge();
-                    t.readMessage(i, ge.deserializeBinaryFromReader),
+                    var i = new ce();
+                    t.readMessage(i, ce.deserializeBinaryFromReader),
                       e.add_user_chat_room_state(i);
                     break;
                   case 4:
@@ -28323,7 +28334,7 @@
                 void 0 !== (i = n.Message.getField(e, 2)) &&
                   t.writeUint32(2, i),
                 0 < (i = e.user_chat_room_state()).length &&
-                  t.writeRepeatedMessage(3, i, ge.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(3, i, ce.serializeBinaryToWriter),
                 void 0 !== (i = n.Message.getField(e, 4)) && t.writeEnum(4, i),
                 void 0 !== (i = n.Message.getField(e, 5)) && t.writeEnum(5, i),
                 void 0 !== (i = n.Message.getField(e, 6)) &&
@@ -28336,14 +28347,14 @@
             r
           );
         })(n.Message),
-        ge = (function(i) {
+        ce = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -28480,14 +28491,14 @@
             r
           );
         })(n.Message),
-        ce = (function(i) {
+        ge = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.user_chat_group_state = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -28566,7 +28577,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -28644,7 +28655,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_room = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -28703,7 +28714,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -28770,7 +28781,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -28808,7 +28819,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -28887,7 +28898,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -28925,7 +28936,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -29004,7 +29015,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -29035,14 +29046,14 @@
             r
           );
         })(n.Message),
-        me = (function(i) {
+        be = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.mention_all = function() {
               return n.Message.getField(this, 1);
             }),
@@ -29115,7 +29126,7 @@
             r
           );
         })(n.Message),
-        be = (n.Message,
+        me = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -29123,7 +29134,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.state = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -29182,7 +29193,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -29220,15 +29231,15 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_room_groups = function() {
-              return n.Message.getRepeatedWrapperField(this, ce, 1);
+              return n.Message.getRepeatedWrapperField(this, ge, 1);
             }),
             (r.prototype.set_chat_room_groups = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_chat_room_groups = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, ce, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, ge, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -29237,7 +29248,7 @@
               var i = {
                 chat_room_groups: n.Message.toObjectList(
                   t.chat_room_groups(),
-                  ce.toObject,
+                  ge.toObject,
                   e
                 )
               };
@@ -29252,8 +29263,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new ce();
-                    t.readMessage(i, ce.deserializeBinaryFromReader),
+                    var i = new ge();
+                    t.readMessage(i, ge.deserializeBinaryFromReader),
                       e.add_chat_room_groups(i);
                     break;
                   default:
@@ -29269,7 +29280,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.chat_room_groups()).length &&
-                t.writeRepeatedMessage(1, i, ce.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, ge.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CChatRoom_GetMyChatRoomGroups_Response";
@@ -29284,7 +29295,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -29363,7 +29374,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.state = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -29459,14 +29470,14 @@
             r
           );
         })(n.Message),
-        ke = (function(i) {
+        je = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -29549,14 +29560,14 @@
             r
           );
         })(n.Message),
-        je = (function(i) {
+        ke = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -29587,14 +29598,14 @@
             r
           );
         })(n.Message),
-        We = (function(i) {
+        Oe = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -29640,14 +29651,14 @@
             r
           );
         })(n.Message),
-        Ce = (function(i) {
+        We = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -29678,14 +29689,14 @@
             r
           );
         })(n.Message),
-        Se = (function(i) {
+        Ce = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -29745,14 +29756,14 @@
             r
           );
         })(n.Message),
-        Oe = (function(i) {
+        Se = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.voice_chatid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -29805,7 +29816,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -29872,7 +29883,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -29910,7 +29921,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -29977,7 +29988,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -30056,7 +30067,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.modified_message = function() {
               return n.Message.getField(this, 1);
             }),
@@ -30134,7 +30145,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -30168,7 +30179,7 @@
             (r.prototype.mentions = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, me, 6, e ? 1 : 0)
+                n.Message.getWrapperField(this, be, 6, e ? 1 : 0)
               );
             }),
             (r.prototype.set_mentions = function(e) {
@@ -30212,7 +30223,7 @@
                   steamid_sender: n.Message.getField(t, 3),
                   message: n.Message.getField(t, 4),
                   timestamp: n.Message.getField(t, 5),
-                  mentions: (i = t.mentions(!1)) && me.toObject(e, i),
+                  mentions: (i = t.mentions(!1)) && be.toObject(e, i),
                   ordinal: n.Message.getField(t, 7),
                   server_message:
                     (i = t.server_message(!1)) && F.toObject(e, i),
@@ -30245,8 +30256,8 @@
                     e.set_timestamp(t.readUint32());
                     break;
                   case 6:
-                    var i = new me();
-                    t.readMessage(i, me.deserializeBinaryFromReader),
+                    var i = new be();
+                    t.readMessage(i, be.deserializeBinaryFromReader),
                       e.set_mentions(i);
                     break;
                   case 7:
@@ -30286,7 +30297,7 @@
                 void 0 !== (i = n.Message.getField(e, 5)) &&
                   t.writeUint32(5, i),
                 null != (i = e.mentions(!1)) &&
-                  t.writeMessage(6, i, me.serializeBinaryToWriter),
+                  t.writeMessage(6, i, be.serializeBinaryToWriter),
                 void 0 !== (i = n.Message.getField(e, 7)) &&
                   t.writeUint32(7, i),
                 null != (i = e.server_message(!1)) &&
@@ -30309,7 +30320,7 @@
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -30393,7 +30404,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.server_timestamp = function() {
               return n.Message.getField(this, 1);
             }),
@@ -30470,7 +30481,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -30597,7 +30608,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.messages = function() {
               return n.Message.getRepeatedWrapperField(this, qe, 1);
             }),
@@ -30668,7 +30679,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.sender = function() {
               return n.Message.getField(this, 1);
             }),
@@ -30788,7 +30799,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -30872,7 +30883,7 @@
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -30960,7 +30971,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -31039,7 +31050,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -31118,7 +31129,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.invite_code = function() {
               return n.Message.getField(this, 1);
             }),
@@ -31184,7 +31195,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.invite_code = function() {
               return n.Message.getField(this, 1);
             }),
@@ -31236,7 +31247,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid_sender = function() {
               return n.Message.getField(this, 3);
             }),
@@ -31375,7 +31386,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid_invitee = function() {
               return n.Message.getField(this, 1);
             }),
@@ -31466,7 +31477,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.group_summary = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -31550,7 +31561,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -31603,7 +31614,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.invite_links = function() {
               return n.Message.getRepeatedWrapperField(this, tt, 1);
             }),
@@ -31667,7 +31678,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.invite_code = function() {
               return n.Message.getField(this, 1);
             }),
@@ -31757,7 +31768,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -31824,7 +31835,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -31862,7 +31873,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -31915,7 +31926,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.bans = function() {
               return n.Message.getRepeatedWrapperField(this, at, 1);
             }),
@@ -31975,7 +31986,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.accountid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -32065,7 +32076,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.accountid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -32143,7 +32154,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -32196,7 +32207,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.invites = function() {
               return n.Message.getRepeatedWrapperField(this, ot, 1);
             }),
@@ -32256,7 +32267,7 @@
             return n.Message.initialize(t, e, 0, -1, [1, 2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_ids = function() {
               return n.Message.getField(this, 1);
             }),
@@ -32322,14 +32333,14 @@
             r
           );
         })(n.Message),
-        gt = (function(i) {
+        ct = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_states = function() {
               return n.Message.getRepeatedWrapperField(this, ue, 1);
             }),
@@ -32386,14 +32397,14 @@
             r
           );
         })(n.Message),
-        ct = (function(i) {
+        gt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -32488,7 +32499,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.desktop_notification_level = function() {
               return n.Message.getField(this, 1);
             }),
@@ -32564,7 +32575,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -32652,7 +32663,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -32690,7 +32701,7 @@
             return n.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -32774,7 +32785,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.server_timestamp = function() {
               return n.Message.getField(this, 1);
             }),
@@ -32840,7 +32851,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -32878,7 +32889,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -32944,7 +32955,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_summary = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -32999,7 +33010,7 @@
             r
           );
         })(n.Message),
-        mt = (n.Message,
+        bt = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -33007,7 +33018,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_room_private = function() {
               return n.Message.getField(this, 1);
             }),
@@ -33052,14 +33063,14 @@
             r
           );
         })(n.Message)),
-        bt = (function(i) {
+        mt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_group_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -33161,7 +33172,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.metrics_run_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -33213,7 +33224,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.metrics_run_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -33259,7 +33270,7 @@
             (r.prototype.ui_state = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, kt, 12, e ? 1 : 0)
+                n.Message.getWrapperField(this, jt, 12, e ? 1 : 0)
               );
             }),
             (r.prototype.set_ui_state = function(e) {
@@ -33268,7 +33279,7 @@
             (r.prototype.metrics = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, Wt, 13, e ? 1 : 0)
+                n.Message.getWrapperField(this, Ot, 13, e ? 1 : 0)
               );
             }),
             (r.prototype.set_metrics = function(e) {
@@ -33287,8 +33298,8 @@
                   settings: (i = t.settings(!1)) && zt.toObject(e, i),
                   voice_settings:
                     (i = t.voice_settings(!1)) && Rt.toObject(e, i),
-                  ui_state: (i = t.ui_state(!1)) && kt.toObject(e, i),
-                  metrics: (i = t.metrics(!1)) && Wt.toObject(e, i)
+                  ui_state: (i = t.ui_state(!1)) && jt.toObject(e, i),
+                  metrics: (i = t.metrics(!1)) && Ot.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -33323,13 +33334,13 @@
                       e.set_voice_settings(i);
                     break;
                   case 12:
-                    i = new kt();
-                    t.readMessage(i, kt.deserializeBinaryFromReader),
+                    i = new jt();
+                    t.readMessage(i, jt.deserializeBinaryFromReader),
                       e.set_ui_state(i);
                     break;
                   case 13:
-                    i = new Wt();
-                    t.readMessage(i, Wt.deserializeBinaryFromReader),
+                    i = new Ot();
+                    t.readMessage(i, Ot.deserializeBinaryFromReader),
                       e.set_metrics(i);
                     break;
                   default:
@@ -33355,9 +33366,9 @@
                 null != (i = e.voice_settings(!1)) &&
                   t.writeMessage(11, i, Rt.serializeBinaryToWriter),
                 null != (i = e.ui_state(!1)) &&
-                  t.writeMessage(12, i, kt.serializeBinaryToWriter),
+                  t.writeMessage(12, i, jt.serializeBinaryToWriter),
                 null != (i = e.metrics(!1)) &&
-                  t.writeMessage(13, i, Wt.serializeBinaryToWriter);
+                  t.writeMessage(13, i, Ot.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CChatUsability_ClientUsabilityMetrics_Notification";
@@ -33372,7 +33383,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.notifications_show_ingame = function() {
               return n.Message.getField(this, 1);
             }),
@@ -33706,7 +33717,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.voice_input_gain = function() {
               return n.Message.getField(this, 1);
             }),
@@ -33865,14 +33876,14 @@
             r
           );
         })(n.Message),
-        kt = (function(i) {
+        jt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.friends_list_height = function() {
               return n.Message.getField(this, 1);
             }),
@@ -33942,7 +33953,7 @@
             (r.prototype.category_collapse = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, jt, 12, e ? 1 : 0)
+                n.Message.getWrapperField(this, kt, 12, e ? 1 : 0)
               );
             }),
             (r.prototype.set_category_collapse = function(e) {
@@ -33990,7 +34001,7 @@
                   chat_window_width: n.Message.getField(t, 10),
                   chat_window_height: n.Message.getField(t, 11),
                   category_collapse:
-                    (i = t.category_collapse(!1)) && jt.toObject(e, i),
+                    (i = t.category_collapse(!1)) && kt.toObject(e, i),
                   group_chat_left_col_collapsed: n.Message.getField(t, 13),
                   group_chat_right_col_collapsed: n.Message.getField(t, 14),
                   in_one_on_one_voice_chat: n.Message.getField(t, 15),
@@ -34040,8 +34051,8 @@
                     e.set_chat_window_height(t.readInt32());
                     break;
                   case 12:
-                    var i = new jt();
-                    t.readMessage(i, jt.deserializeBinaryFromReader),
+                    var i = new kt();
+                    t.readMessage(i, kt.deserializeBinaryFromReader),
                       e.set_category_collapse(i);
                     break;
                   case 13:
@@ -34082,7 +34093,7 @@
                 void 0 !== (i = n.Message.getField(e, 11)) &&
                   t.writeInt32(11, i),
                 null != (i = e.category_collapse(!1)) &&
-                  t.writeMessage(12, i, jt.serializeBinaryToWriter),
+                  t.writeMessage(12, i, kt.serializeBinaryToWriter),
                 void 0 !== (i = n.Message.getField(e, 13)) &&
                   t.writeInt32(13, i),
                 void 0 !== (i = n.Message.getField(e, 14)) &&
@@ -34098,14 +34109,14 @@
             r
           );
         })(n.Message),
-        jt = (function(i) {
+        kt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.in_game_collapsed = function() {
               return n.Message.getField(this, 1);
             }),
@@ -34196,14 +34207,14 @@
             r
           );
         })(n.Message),
-        Wt = (function(i) {
+        Ot = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.friends_count = function() {
               return n.Message.getField(this, 1);
             }),
@@ -34360,24 +34371,24 @@
           return e.SendMsg("ChatRoom.SaveChatRoomGroup#1", t, B, {});
         }),
         (d.RenameChatRoomGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.RenameChatRoomGroup#1", t, m, {});
+          return e.SendMsg("ChatRoom.RenameChatRoomGroup#1", t, b, {});
         }),
         (d.SetChatRoomGroupTagline = function(e, t) {
           return e.SendMsg("ChatRoom.SetChatRoomGroupTagline#1", t, z, {});
         }),
         (d.SetChatRoomGroupAvatar = function(e, t) {
-          return e.SendMsg("ChatRoom.SetChatRoomGroupAvatar#1", t, k, {});
+          return e.SendMsg("ChatRoom.SetChatRoomGroupAvatar#1", t, j, {});
         }),
         (d.SetChatRoomGroupWatchingBroadcast = function(e, t) {
           return e.SendMsg(
             "ChatRoom.SetChatRoomGroupWatchingBroadcast#1",
             t,
-            W,
+            O,
             {}
           );
         }),
         (d.MuteUserInGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.MuteUserInGroup#1", t, S, {});
+          return e.SendMsg("ChatRoom.MuteUserInGroup#1", t, C, {});
         }),
         (d.KickUserFromGroup = function(e, t) {
           return e.SendMsg("ChatRoom.KickUserFromGroup#1", t, T, {});
@@ -34422,10 +34433,10 @@
           return e.SendMsg("ChatRoom.JoinChatRoomGroup#1", t, Re, {});
         }),
         (d.InviteFriendToChatRoomGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.InviteFriendToChatRoomGroup#1", t, je, {});
+          return e.SendMsg("ChatRoom.InviteFriendToChatRoomGroup#1", t, ke, {});
         }),
         (d.LeaveChatRoomGroup = function(e, t) {
-          return e.SendMsg("ChatRoom.LeaveChatRoomGroup#1", t, Ce, {});
+          return e.SendMsg("ChatRoom.LeaveChatRoomGroup#1", t, We, {});
         }),
         (d.CreateChatRoom = function(e, t) {
           return e.SendMsg("ChatRoom.CreateChatRoom#1", t, _e, {});
@@ -34443,7 +34454,7 @@
           return e.SendMsg("ChatRoom.SendChatMessage#1", t, Ie, {});
         }),
         (d.JoinVoiceChat = function(e, t) {
-          return e.SendMsg("ChatRoom.JoinVoiceChat#1", t, Oe, {});
+          return e.SendMsg("ChatRoom.JoinVoiceChat#1", t, Se, {});
         }),
         (d.LeaveVoiceChat = function(e, t) {
           return e.SendMsg("ChatRoom.LeaveVoiceChat#1", t, Ue, {});
@@ -34455,7 +34466,7 @@
           return e.SendMsg("ChatRoom.GetMyChatRoomGroups#1", t, we, {});
         }),
         (d.GetChatRoomGroupState = function(e, t) {
-          return e.SendMsg("ChatRoom.GetChatRoomGroupState#1", t, be, {});
+          return e.SendMsg("ChatRoom.GetChatRoomGroupState#1", t, me, {});
         }),
         (d.GetChatRoomGroupSummary = function(e, t) {
           return e.SendMsg("ChatRoom.GetChatRoomGroupSummary#1", t, ae, {});
@@ -34488,7 +34499,7 @@
           return e.SendMsg(
             "ChatRoom.SetSessionActiveChatRoomGroups#1",
             t,
-            gt,
+            ct,
             {}
           );
         }),
@@ -34502,37 +34513,37 @@
           return e.SendMsg("ClanChatRooms.GetClanChatRoomInfo#1", t, vt, {});
         }),
         (l.SetClanChatRoomPrivate = function(e, t) {
-          return e.SendMsg("ClanChatRooms.SetClanChatRoomPrivate#1", t, mt, {});
+          return e.SendMsg("ClanChatRooms.SetClanChatRoomPrivate#1", t, bt, {});
         }),
-        ((c = g || (g = {})).NotifyIncomingChatMessageHandler = {
+        ((g = c || (c = {})).NotifyIncomingChatMessageHandler = {
           name: "ChatRoomClient.NotifyIncomingChatMessage#1",
           request: Ge
         }),
-        (c.NotifyChatMessageModifiedHandler = {
+        (g.NotifyChatMessageModifiedHandler = {
           name: "ChatRoomClient.NotifyChatMessageModified#1",
           request: Ee
         }),
-        (c.NotifyMemberStateChangeHandler = {
+        (g.NotifyMemberStateChangeHandler = {
           name: "ChatRoomClient.NotifyMemberStateChange#1",
           request: Ve
         }),
-        (c.NotifyChatRoomHeaderStateChangeHandler = {
+        (g.NotifyChatRoomHeaderStateChangeHandler = {
           name: "ChatRoomClient.NotifyChatRoomHeaderStateChange#1",
           request: se
         }),
-        (c.NotifyChatRoomGroupRoomsChangeHandler = {
+        (g.NotifyChatRoomGroupRoomsChangeHandler = {
           name: "ChatRoomClient.NotifyChatRoomGroupRoomsChange#1",
           request: De
         }),
-        (c.NotifyShouldRejoinChatRoomVoiceChatHandler = {
+        (g.NotifyShouldRejoinChatRoomVoiceChatHandler = {
           name: "ChatRoomClient.NotifyShouldRejoinChatRoomVoiceChat#1",
           request: Ne
         }),
-        (c.NotifyChatGroupUserStateChangedHandler = {
+        (g.NotifyChatGroupUserStateChangedHandler = {
           name: "ChatRoomClient.NotifyChatGroupUserStateChanged#1",
-          request: bt
+          request: mt
         }),
-        (c.NotifyAckChatMessageEchoHandler = {
+        (g.NotifyAckChatMessageEchoHandler = {
           name: "ChatRoomClient.NotifyAckChatMessageEcho#1",
           request: Ae
         }),
@@ -34562,10 +34573,10 @@
           return l;
         }),
         i.d(t, "e", function() {
-          return g;
+          return c;
         }),
         i.d(t, "c", function() {
-          return c;
+          return g;
         }),
         i.d(t, "a", function() {
           return p;
@@ -34580,7 +34591,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -34618,7 +34629,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.client_request_timestamp = function() {
               return n.Message.getField(this, 1);
             }),
@@ -34671,7 +34682,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.client_request_timestamp = function() {
               return n.Message.getField(this, 1);
             }),
@@ -34738,7 +34749,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.version = function() {
               return n.Message.getField(this, 1);
             }),
@@ -34839,7 +34850,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.protocol_version = function() {
               return n.Message.getField(this, 1);
             }),
@@ -35529,14 +35540,14 @@
             r
           );
         })(n.Message),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getFieldWithDefault(this, 1, 2);
             }),
@@ -35862,7 +35873,7 @@
             r
           );
         })(n.Message),
-        c = (n.Message,
+        g = (n.Message,
         n.Message,
         n.Message,
         (function(i) {
@@ -35872,7 +35883,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.eresult = function() {
               return n.Message.getFieldWithDefault(this, 1, 2);
             }),
@@ -35926,7 +35937,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.persona_name = function() {
               return n.Message.getField(this, 1);
             }),
@@ -36136,7 +36147,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.appid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -36201,7 +36212,7 @@
             return d.Message.initialize(t, e, 0, -1, [4, 5], null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.steamid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -36396,7 +36407,7 @@
             r
           );
         })(d.Message),
-        g = (d.Message,
+        c = (d.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -36404,7 +36415,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -36435,7 +36446,7 @@
             r
           );
         })(d.Message)),
-        c = (d.Message,
+        g = (d.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -36443,7 +36454,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -36481,7 +36492,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.steamid = function() {
               return d.Message.getField(this, 10);
             }),
@@ -36534,7 +36545,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.settings = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -36594,7 +36605,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.serialized_settings = function() {
               return d.Message.getField(this, 1);
             }),
@@ -36660,7 +36671,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -36698,7 +36709,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.unlock_token = function() {
               return d.Message.getField(this, 1);
             }),
@@ -36750,7 +36761,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -36788,7 +36799,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.password = function() {
               return d.Message.getField(this, 1);
             }),
@@ -36865,7 +36876,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.token = function() {
               return d.Message.getField(this, 1);
             }),
@@ -36910,7 +36921,7 @@
             r
           );
         })(d.Message),
-        m = (d.Message,
+        b = (d.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -36918,7 +36929,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -36949,7 +36960,7 @@
             r
           );
         })(d.Message)),
-        b = (d.Message,
+        m = (d.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -36957,7 +36968,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -36996,7 +37007,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -37034,7 +37045,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.serialized_settings = function() {
               return d.Message.getField(this, 1);
             }),
@@ -37123,7 +37134,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.password = function() {
               return d.Message.getField(this, 1);
             }),
@@ -37189,7 +37200,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.sessionid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -37235,10 +37246,10 @@
           );
         })(d.Message);
       ((s = r || (r = {})).EnableParentalSettings = function(e, t) {
-        return e.SendMsg("Parental.EnableParentalSettings#1", t, g, {});
+        return e.SendMsg("Parental.EnableParentalSettings#1", t, c, {});
       }),
         (s.DisableParentalSettings = function(e, t) {
-          return e.SendMsg("Parental.DisableParentalSettings#1", t, c, {});
+          return e.SendMsg("Parental.DisableParentalSettings#1", t, g, {});
         }),
         (s.GetParentalSettings = function(e, t) {
           return e.SendMsg("Parental.GetParentalSettings#1", t, _, {
@@ -37260,10 +37271,10 @@
           return e.SendMsg("Parental.ValidatePassword#1", t, v, {});
         }),
         (s.LockClient = function(e, t) {
-          return e.SendMsg("Parental.LockClient#1", t, m, {});
+          return e.SendMsg("Parental.LockClient#1", t, b, {});
         }),
         (s.RequestRecoveryCode = function(e, t) {
-          return e.SendMsg("Parental.RequestRecoveryCode#1", t, b, {});
+          return e.SendMsg("Parental.RequestRecoveryCode#1", t, m, {});
         }),
         (s.DisableWithRecoveryCode = function(e, t) {
           return e.SendMsg("Parental.DisableWithRecoveryCode#1", t, B, {});
@@ -37301,7 +37312,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.tags = function() {
               return n.Message.getRepeatedWrapperField(this, d, 1);
             }),
@@ -37359,7 +37370,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.tagid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -37437,7 +37448,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.primary_language = function() {
               return n.Message.getField(this, 1);
             }),
@@ -37612,15 +37623,15 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.tags_to_exclude = function() {
-              return n.Message.getRepeatedWrapperField(this, g, 1);
+              return n.Message.getRepeatedWrapperField(this, c, 1);
             }),
             (r.prototype.set_tags_to_exclude = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_tags_to_exclude = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, g, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, c, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -37629,7 +37640,7 @@
               var i = {
                 tags_to_exclude: n.Message.toObjectList(
                   t.tags_to_exclude(),
-                  g.toObject,
+                  c.toObject,
                   e
                 )
               };
@@ -37644,8 +37655,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new g();
-                    t.readMessage(i, g.deserializeBinaryFromReader),
+                    var i = new c();
+                    t.readMessage(i, c.deserializeBinaryFromReader),
                       e.add_tags_to_exclude(i);
                     break;
                   default:
@@ -37661,7 +37672,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.tags_to_exclude()).length &&
-                t.writeRepeatedMessage(1, i, g.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, c.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CStore_UserTagPreferences";
@@ -37669,14 +37680,14 @@
             r
           );
         })(n.Message),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.tagid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -37747,14 +37758,14 @@
             r
           );
         })(n.Message),
-        c = (function(i) {
+        g = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.content_descriptors_to_exclude = function() {
               return n.Message.getRepeatedWrapperField(this, p, 1);
             }),
@@ -37818,7 +37829,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.content_descriptorid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -37884,7 +37895,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -37922,7 +37933,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
@@ -37944,7 +37955,7 @@
             (r.prototype.content_descriptor_preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, c, 3, e ? 1 : 0)
+                n.Message.getWrapperField(this, g, 3, e ? 1 : 0)
               );
             }),
             (r.prototype.set_content_descriptor_preferences = function(e) {
@@ -37961,7 +37972,7 @@
                     (i = t.tag_preferences(!1)) && l.toObject(e, i),
                   content_descriptor_preferences:
                     (i = t.content_descriptor_preferences(!1)) &&
-                    c.toObject(e, i)
+                    g.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -37984,8 +37995,8 @@
                       e.set_tag_preferences(i);
                     break;
                   case 3:
-                    i = new c();
-                    t.readMessage(i, c.deserializeBinaryFromReader),
+                    i = new g();
+                    t.readMessage(i, g.deserializeBinaryFromReader),
                       e.set_content_descriptor_preferences(i);
                     break;
                   default:
@@ -38005,7 +38016,7 @@
                 null != (i = e.tag_preferences(!1)) &&
                   t.writeMessage(2, i, l.serializeBinaryToWriter),
                 null != (i = e.content_descriptor_preferences(!1)) &&
-                  t.writeMessage(3, i, c.serializeBinaryToWriter);
+                  t.writeMessage(3, i, g.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CStore_GetStorePreferences_Response";
@@ -38038,7 +38049,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -38104,7 +38115,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -38145,13 +38156,13 @@
         return u;
       }),
         i.d(t, "c", function() {
-          return g;
+          return c;
         }),
         i.d(t, "e", function() {
-          return W;
+          return O;
         }),
         i.d(t, "g", function() {
-          return S;
+          return C;
         }),
         i.d(t, "d", function() {
           return T;
@@ -38172,7 +38183,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -38276,7 +38287,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -38315,7 +38326,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.upload_token = function() {
               return n.Message.getField(this, 1);
             }),
@@ -38416,7 +38427,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -38542,7 +38553,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -38609,7 +38620,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.gameid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -38808,14 +38819,14 @@
             r
           );
         })(n.Message),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -38875,14 +38886,14 @@
             r
           );
         })(n.Message),
-        c = (function(i) {
+        g = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.thumbnail_url = function() {
               return n.Message.getField(this, 1);
             }),
@@ -38970,7 +38981,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.response = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39238,7 +39249,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.success = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39291,7 +39302,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -39329,7 +39340,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39392,14 +39403,14 @@
         M,
         h,
         v,
-        m = (function(i) {
+        b = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39445,14 +39456,14 @@
             r
           );
         })(n.Message),
-        b = (function(i) {
+        m = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39542,7 +39553,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39595,7 +39606,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39661,7 +39672,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_channel_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39740,7 +39751,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.thumbnail_upload_token = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39834,7 +39845,7 @@
             r
           );
         })(n.Message),
-        k = (n.Message,
+        j = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -39842,7 +39853,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcaster_steamid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39888,7 +39899,7 @@
             r
           );
         })(n.Message)),
-        j = (n.Message,
+        k = (n.Message,
         n.Message,
         (function(i) {
           function r(e) {
@@ -39897,7 +39908,7 @@
             return n.Message.initialize(t, e, 0, -1, [4], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -39972,14 +39983,14 @@
             r
           );
         })(n.Message)),
-        W = (function(i) {
+        O = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -40051,14 +40062,14 @@
             r
           );
         })(n.Message),
-        C = (function(i) {
+        W = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.persona_name = function() {
               return n.Message.getField(this, 1);
             }),
@@ -40138,14 +40149,14 @@
             r
           );
         })(n.Message),
-        S = (function(i) {
+        C = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -40205,14 +40216,14 @@
             r
           );
         })(n.Message),
-        O = (function(i) {
+        S = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.result = function() {
               return n.Message.getField(this, 1);
             }),
@@ -40290,7 +40301,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -40368,7 +40379,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -40406,7 +40417,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.chat_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -40473,7 +40484,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -40512,7 +40523,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.persona_names = function() {
               return n.Message.getRepeatedWrapperField(this, G, 1);
             }),
@@ -40576,7 +40587,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.steam_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -40644,7 +40655,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_clip_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -40698,7 +40709,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -40737,7 +40748,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -40776,7 +40787,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_clip_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -40940,7 +40951,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -40979,7 +40990,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_permission = function() {
               return n.Message.getField(this, 1);
             }),
@@ -41151,7 +41162,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.upload_stats = function() {
               return n.Message.getRepeatedWrapperField(this, A, 1);
             }),
@@ -41215,7 +41226,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.upload_result = function() {
               return n.Message.getField(this, 1);
             }),
@@ -41330,6 +41341,12 @@
             (r.prototype.set_is_replay = function(e) {
               n.Message.setField(this, 19, e);
             }),
+            (r.prototype.session_id = function() {
+              return n.Message.getField(this, 20);
+            }),
+            (r.prototype.set_session_id = function(e) {
+              n.Message.setField(this, 20, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -41353,7 +41370,8 @@
                 frames_per_second: n.Message.getField(t, 16),
                 num_representations: n.Message.getField(t, 17),
                 app_name: n.Message.getField(t, 18),
-                is_replay: n.Message.getField(t, 19)
+                is_replay: n.Message.getField(t, 19),
+                session_id: n.Message.getField(t, 20)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -41422,6 +41440,9 @@
                   case 19:
                     e.set_is_replay(t.readBool());
                     break;
+                  case 20:
+                    e.set_session_id(t.readUint64String());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -41470,7 +41491,9 @@
                 void 0 !== (i = n.Message.getField(e, 18)) &&
                   t.writeString(18, i),
                 void 0 !== (i = n.Message.getField(e, 19)) &&
-                  t.writeBool(19, i);
+                  t.writeBool(19, i),
+                void 0 !== (i = n.Message.getField(e, 20)) &&
+                  t.writeUint64String(20, i);
             }),
             (r.prototype.getClassName = function() {
               return "CBroadcast_GetBroadcastUploadStats_Response_UploadStats";
@@ -41486,7 +41509,7 @@
             return n.Message.initialize(t, e, 0, -1, [1, 2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.viewer_stats = function() {
               return n.Message.getRepeatedWrapperField(this, J, 1);
             }),
@@ -41571,7 +41594,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.time = function() {
               return n.Message.getField(this, 1);
             }),
@@ -41637,7 +41660,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.country_code = function() {
               return n.Message.getField(this, 1);
             }),
@@ -41704,7 +41727,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -41743,7 +41766,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -41782,7 +41805,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -41820,7 +41843,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.sdp_mid = function() {
               return n.Message.getField(this, 1);
             }),
@@ -41898,7 +41921,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -41937,7 +41960,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -41976,7 +41999,7 @@
             return n.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.candidate_generation = function() {
               return n.Message.getField(this, 1);
             }),
@@ -42051,7 +42074,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_session_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -42105,7 +42128,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.turn_server = function() {
               return n.Message.getField(this, 1);
             }),
@@ -42158,7 +42181,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_session_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -42249,7 +42272,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_session_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -42328,7 +42351,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.broadcast_session_id = function() {
               return n.Message.getField(this, 1);
             }),
@@ -42431,7 +42454,7 @@
           return e.SendMsg("Broadcast.GetBroadcastStatus#1", t, l, {});
         }),
         (M.GetBroadcastThumbnail = function(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, c, {});
+          return e.SendMsg("Broadcast.GetBroadcastThumbnail#1", t, g, {});
         }),
         (M.InviteToBroadcast = function(e, t) {
           return e.SendMsg("Broadcast.InviteToBroadcast#1", t, _, {});
@@ -42446,13 +42469,13 @@
           );
         }),
         (M.GetBroadcastChatInfo = function(e, t) {
-          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, j, {});
+          return e.SendMsg("Broadcast.GetBroadcastChatInfo#1", t, k, {});
         }),
         (M.PostChatMessage = function(e, t) {
-          return e.SendMsg("Broadcast.PostChatMessage#1", t, C, {});
+          return e.SendMsg("Broadcast.PostChatMessage#1", t, W, {});
         }),
         (M.UpdateChatMessageFlair = function(e, t) {
-          return e.SendMsg("Broadcast.UpdateChatMessageFlair#1", t, O, {});
+          return e.SendMsg("Broadcast.UpdateChatMessageFlair#1", t, S, {});
         }),
         (M.MuteBroadcastChatUser = function(e, t) {
           return e.SendMsg("Broadcast.MuteBroadcastChatUser#1", t, U, {});
@@ -42530,7 +42553,7 @@
         }),
         (v.NotifyWaitingBroadcastViewerHandler = {
           name: "BroadcastClient.NotifyWaitingBroadcastViewer#1",
-          request: m
+          request: b
         }),
         (v.NotifyBroadcastUploadStartedHandler = {
           name: "BroadcastClient.NotifyBroadcastUploadStarted#1",
@@ -42538,7 +42561,7 @@
         }),
         (v.NotifyStopBroadcastUploadHandler = {
           name: "BroadcastClient.NotifyStopBroadcastUpload#1",
-          request: b
+          request: m
         }),
         (v.NotifySessionClosedHandler = {
           name: "BroadcastClient.NotifySessionClosed#1",
@@ -42546,7 +42569,7 @@
         }),
         (v.NotifyViewerBroadcastInviteHandler = {
           name: "BroadcastClient.NotifyViewerBroadcastInvite#1",
-          request: k
+          request: j
         }),
         (v.NotifyBroadcastStatusHandler = {
           name: "BroadcastClient.NotifyBroadcastStatus#1",
@@ -42583,7 +42606,7 @@
         return u;
       }),
         i.d(t, "e", function() {
-          return c;
+          return g;
         }),
         i.d(t, "d", function() {
           return f;
@@ -42613,7 +42636,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.steamid1 = function() {
               return d.Message.getField(this, 1);
             }),
@@ -42762,15 +42785,15 @@
             return d.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.messages = function() {
-              return d.Message.getRepeatedWrapperField(this, g, 1);
+              return d.Message.getRepeatedWrapperField(this, c, 1);
             }),
             (r.prototype.set_messages = function(e) {
               d.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_messages = function(e, t) {
-              return d.Message.addToRepeatedWrapperField(this, 1, e, g, t);
+              return d.Message.addToRepeatedWrapperField(this, 1, e, c, t);
             }),
             (r.prototype.more_available = function() {
               return d.Message.getField(this, 4);
@@ -42783,7 +42806,7 @@
             }),
             (r.toObject = function(e, t) {
               var i = {
-                messages: d.Message.toObjectList(t.messages(), g.toObject, e),
+                messages: d.Message.toObjectList(t.messages(), c.toObject, e),
                 more_available: d.Message.getField(t, 4)
               };
               return e && (i.$jspbMessageInstance = t), i;
@@ -42797,8 +42820,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new g();
-                    t.readMessage(i, g.deserializeBinaryFromReader),
+                    var i = new c();
+                    t.readMessage(i, c.deserializeBinaryFromReader),
                       e.add_messages(i);
                     break;
                   case 4:
@@ -42817,7 +42840,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.messages()).length &&
-                t.writeRepeatedMessage(1, i, g.serializeBinaryToWriter),
+                t.writeRepeatedMessage(1, i, c.serializeBinaryToWriter),
                 void 0 !== (i = d.Message.getField(e, 4)) && t.writeBool(4, i);
             }),
             (r.prototype.getClassName = function() {
@@ -42826,14 +42849,14 @@
             r
           );
         })(d.Message),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.accountid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -42916,14 +42939,14 @@
             r
           );
         })(d.Message),
-        c = (function(i) {
+        g = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.lastmessage_since = function() {
               return d.Message.getField(this, 1);
             }),
@@ -42988,7 +43011,7 @@
             return d.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.message_sessions = function() {
               return d.Message.getRepeatedWrapperField(this, _, 1);
             }),
@@ -43064,7 +43087,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.accountid_friend = function() {
               return d.Message.getField(this, 1);
             }),
@@ -43154,7 +43177,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.steamid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -43276,7 +43299,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.modified_message = function() {
               return d.Message.getField(this, 1);
             }),
@@ -43354,7 +43377,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.steamid_friend = function() {
               return d.Message.getField(this, 1);
             }),
@@ -43501,7 +43524,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.steamid_partner = function() {
               return d.Message.getField(this, 1);
             }),
@@ -43568,7 +43591,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.steamid = function() {
               return d.Message.getField(this, 1);
             }),
@@ -43621,7 +43644,7 @@
             return d.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            o.d(r, i),
+            Object(o.d)(r, i),
             (r.prototype.online_in_friendsui = function() {
               return d.Message.getField(this, 1);
             }),
@@ -43725,7 +43748,7 @@
             return n.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.impressions = function() {
               return n.Message.getRepeatedWrapperField(this, o, 1);
             }),
@@ -43789,7 +43812,7 @@
             return n.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            s.d(r, i),
+            Object(s.d)(r, i),
             (r.prototype.type = function() {
               return n.Message.getField(this, 1);
             }),
@@ -43879,7 +43902,7 @@
     rrR9: function(e, t, i) {
       "use strict";
       i.d(t, "b", function() {
-        return g;
+        return c;
       }),
         i.d(t, "a", function() {
           return _;
@@ -43898,7 +43921,7 @@
             return a.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            n.d(r, i),
+            Object(n.d)(r, i),
             (r.prototype.type = function() {
               return a.Message.getField(this, 1);
             }),
@@ -43988,7 +44011,7 @@
             return a.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            n.d(r, i),
+            Object(n.d)(r, i),
             (r.prototype.link = function() {
               return a.Message.getField(this, 1);
             }),
@@ -44054,7 +44077,7 @@
             return a.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            n.d(r, i),
+            Object(n.d)(r, i),
             (r.prototype.appid = function() {
               return a.Message.getField(this, 1);
             }),
@@ -44178,7 +44201,7 @@
             );
           }
           return (
-            n.d(s, i),
+            Object(n.d)(s, i),
             (s.prototype.appid = function() {
               return a.Message.getField(this, 1);
             }),
@@ -44603,14 +44626,14 @@
             s
           );
         })(a.Message),
-        g = (function(i) {
+        c = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return a.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            n.d(r, i),
+            Object(n.d)(r, i),
             (r.prototype.generate_new_token = function() {
               return a.Message.getField(this, 1);
             }),
@@ -44655,14 +44678,14 @@
             r
           );
         })(a.Message),
-        c = (function(i) {
+        g = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
             return a.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            n.d(r, i),
+            Object(n.d)(r, i),
             (r.prototype.trade_offer_access_token = function() {
               return a.Message.getField(this, 1);
             }),
@@ -44715,7 +44738,7 @@
             return a.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            n.d(r, i),
+            Object(n.d)(r, i),
             (r.prototype.url = function() {
               return a.Message.getField(this, 1);
             }),
@@ -44767,7 +44790,7 @@
             return a.Message.initialize(t, e, 0, -1, [3], null), t;
           }
           return (
-            n.d(r, i),
+            Object(n.d)(r, i),
             (r.prototype.language = function() {
               return a.Message.getField(this, 1);
             }),
@@ -44850,7 +44873,7 @@
             return a.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            n.d(r, i),
+            Object(n.d)(r, i),
             (r.prototype.classid = function() {
               return a.Message.getField(this, 1);
             }),
@@ -44917,7 +44940,7 @@
             return a.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            n.d(r, i),
+            Object(n.d)(r, i),
             (r.prototype.descriptions = function() {
               return a.Message.getRepeatedWrapperField(this, l, 1);
             }),
@@ -44975,7 +44998,7 @@
           );
         })(a.Message);
       ((s = r || (r = {})).GetTradeOfferAccessToken = function(e, t) {
-        return e.SendMsg("Econ.GetTradeOfferAccessToken#1", t, c, {});
+        return e.SendMsg("Econ.GetTradeOfferAccessToken#1", t, g, {});
       }),
         (s.ClientGetItemShopOverlayAuthURL = function(e, t) {
           return e.SendMsg("Econ.ClientGetItemShopOverlayAuthURL#1", t, p, {});

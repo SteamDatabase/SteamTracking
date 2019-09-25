@@ -692,6 +692,7 @@
         USE_POPUPS: !1,
         IN_MOBILE: !1,
         IN_TENFOOT: !1,
+        PLATFORM: "",
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
@@ -727,7 +728,17 @@
         short_url: ""
       },
       s = { steamid: "", clanid: 0, listid: 0 },
-      l = { CLANSTEAMID: "", CLANACCOUNTID: 0, IMG_URL: "", APPID: 0 },
+      l = {
+        CLANSTEAMID: "",
+        CLANACCOUNTID: 0,
+        IMG_URL: "",
+        APPID: 0,
+        HEADER_IMAGE: "",
+        APP_NAME: "",
+        HAS_ADULT_CONTENT: !1,
+        HAS_ADULT_CONTENT_SEX: !1,
+        HAS_ADULT_CONTENT_VIOLENCE: !1
+      },
       u = "webui_config";
     function m() {
       var e = (function() {
@@ -861,7 +872,7 @@
           );
         }
         return (
-          r.d(e, n),
+          Object(r.d)(e, n),
           (e.prototype.Init = function(e, t) {
             (e.options.bForcePopup || this.m_ownerWindow.innerWidth) < 400 &&
             this.m_ownerWindow.SteamClient &&
@@ -1001,7 +1012,7 @@
           (e.prototype.BIsSubMenuVisible = function() {
             return !!this.m_submenu;
           }),
-          r.c([a.x], e.prototype, "m_bVisible", void 0),
+          Object(r.c)([a.x], e.prototype, "m_bVisible", void 0),
           e
         );
       })(s),
@@ -1024,7 +1035,7 @@
           return i.Init(c, e), i;
         }
         return (
-          r.d(s, a),
+          Object(r.d)(s, a),
           (s.prototype.Show = function() {
             this.m_options.bDisableMouseOverlay ||
               s.sm_mapEmbeddedMouseOverlays.ShowElement(
@@ -1071,7 +1082,7 @@
           return r.Init(o, t), r;
         }
         return (
-          r.d(e, i),
+          Object(r.d)(e, i),
           (e.prototype.Hide = function() {
             var e = this;
             this.m_popupContextMenu
@@ -1136,12 +1147,12 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          c.d(t, e),
+          Object(c.d)(t, e),
           (t.prototype.render = function() {
             var e = this.props,
               t = e.children,
               n = e.className,
-              r = c.f(e, ["children", "className"]),
+              r = Object(c.f)(e, ["children", "className"]),
               o =
                 this.context.contextMenuInstance &&
                 this.context.contextMenuInstance.options.bUseWebStyles
@@ -1149,7 +1160,7 @@
                   : f.a.contextMenuContents;
             return (
               n && (o += " " + n),
-              a.createElement("div", c.a({}, r, { className: o }), t)
+              a.createElement("div", Object(c.a)({}, r, { className: o }), t)
             );
           }),
           (t.contextTypes = {
@@ -1165,7 +1176,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          c.d(t, e),
+          Object(c.d)(t, e),
           (t.prototype.OnClick = function(e) {
             this.props.disabled ||
               (this.props.onClick && this.props.onClick(e),
@@ -1182,7 +1193,7 @@
             var e = this.props,
               t = (e.onSelected,
               e.bInteractableItem,
-              c.f(e, ["onSelected", "bInteractableItem"])),
+              Object(c.f)(e, ["onSelected", "bInteractableItem"])),
               n = [];
             return (
               this.context.contextMenuInstance &&
@@ -1193,7 +1204,7 @@
               this.props.disabled && n.push("disabled"),
               a.createElement(
                 "div",
-                c.a({ onMouseEnter: this.OnMouseEnter }, t, {
+                Object(c.a)({ onMouseEnter: this.OnMouseEnter }, t, {
                   onClick: this.OnClick,
                   unselectable: this.props.unselectable,
                   className: v.a.apply(void 0, n)
@@ -1207,8 +1218,8 @@
               return null;
             }
           }),
-          c.c([o.a], t.prototype, "OnClick", null),
-          c.c([o.a], t.prototype, "OnMouseEnter", null),
+          Object(c.c)([o.a], t.prototype, "OnClick", null),
+          Object(c.c)([o.a], t.prototype, "OnMouseEnter", null),
           t
         );
       })(a.PureComponent),
@@ -1217,16 +1228,18 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          c.d(t, e),
+          Object(c.d)(t, e),
           (t.prototype.render = function() {
             var e = this.props,
               t = e.bChecked,
               n = e.children,
               r = e.className,
-              o = c.f(e, ["bChecked", "children", "className"]);
+              o = Object(c.f)(e, ["bChecked", "children", "className"]);
             return a.createElement(
               y,
-              c.a({}, o, { className: Object(v.a)(r, t && "menuChecked") }),
+              Object(c.a)({}, o, {
+                className: Object(v.a)(r, t && "menuChecked")
+              }),
               a.createElement("div", { className: "contextMenuCheckMark" }),
               n
             );
@@ -1240,7 +1253,7 @@
           return (t.state = { bActive: !1 }), t;
         }
         return (
-          c.d(e, n),
+          Object(c.d)(e, n),
           (e.prototype.OnSubMenuMouseEnter = function() {
             this.context.contextMenuInstance.CancelHideSubMenuTimer();
           }),
@@ -1272,12 +1285,12 @@
             var e = this.props,
               t = e.label,
               n = (e.children, e.className),
-              r = c.f(e, ["label", "children", "className"]);
+              r = Object(c.f)(e, ["label", "children", "className"]);
             return (
               this.state.bActive && (n = (n || "") + " " + f.a.active),
               a.createElement(
                 y,
-                c.a({}, r, {
+                Object(c.a)({}, r, {
                   onClick: this.OnClick,
                   className: n,
                   onMouseEnter: this.OnMouseEnter,
@@ -1295,10 +1308,10 @@
               return null;
             }
           }),
-          c.c([o.a], e.prototype, "OnSubMenuMouseEnter", null),
-          c.c([o.a], e.prototype, "RenderSubMenu", null),
-          c.c([o.a], e.prototype, "OnMouseEnter", null),
-          c.c([o.a], e.prototype, "OnClick", null),
+          Object(c.c)([o.a], e.prototype, "OnSubMenuMouseEnter", null),
+          Object(c.c)([o.a], e.prototype, "RenderSubMenu", null),
+          Object(c.c)([o.a], e.prototype, "OnMouseEnter", null),
+          Object(c.c)([o.a], e.prototype, "OnClick", null),
           e
         );
       })(a.PureComponent),
@@ -1322,7 +1335,7 @@
           );
         }
         return (
-          c.d(e, n),
+          Object(c.d)(e, n),
           (e.prototype.BindMenuElement = function(e) {
             var t = this;
             this.m_elMenu &&
@@ -1455,21 +1468,21 @@
                 C = 0 < M,
                 P = m - (c.bOverlapVertical ? S : k) - x,
                 L = 0 < P,
-                I = (c.bPreferPopTop || !L) && C;
+                O = (c.bPreferPopTop || !L) && C;
               if (!C && !L) {
-                var O =
+                var I =
                   void 0 !== c.bShiftToFitWindow
                     ? c.bShiftToFitWindow
                     : c.bFitToWindow && !c.bOverlapHorizontal;
-                (I = P < M),
-                  O && (I ? (a.menuTop = 4) : (a.menuBottom = 4)),
+                (O = P < M),
+                  I && (O ? (a.menuTop = 4) : (a.menuBottom = 4)),
                   c.bFitToWindow &&
-                    (O ? (x = Math.min(x, m - 8)) : (x += I ? M : P),
+                    (I ? (x = Math.min(x, m - 8)) : (x += O ? M : P),
                     (a.menuHeight = x - 8));
               }
               void 0 === a.menuBottom &&
                 void 0 === a.menuTop &&
-                (I
+                (O
                   ? (a.menuBottom = m - (c.bOverlapVertical ? k : S))
                   : (a.menuTop = c.bOverlapVertical ? S : k)),
                 i
@@ -1574,12 +1587,17 @@
               return null;
             }
           }),
-          c.c([o.a], e.prototype, "BindMenuElement", null),
-          c.c([o.a, Object(m.a)(100)], e.prototype, "OnMenuMutation", null),
-          c.c([o.a], e.prototype, "OnWindowResize", null),
-          c.c([o.a], e.prototype, "OnBlur", null),
-          c.c([o.a], e.prototype, "OnKeyDown", null),
-          (e = c.c([r.a], e))
+          Object(c.c)([o.a], e.prototype, "BindMenuElement", null),
+          Object(c.c)(
+            [o.a, Object(m.a)(100)],
+            e.prototype,
+            "OnMenuMutation",
+            null
+          ),
+          Object(c.c)([o.a], e.prototype, "OnWindowResize", null),
+          Object(c.c)([o.a], e.prototype, "OnBlur", null),
+          Object(c.c)([o.a], e.prototype, "OnKeyDown", null),
+          (e = Object(c.c)([r.a], e))
         );
       })(a.Component),
       w = (function(o) {
@@ -1596,7 +1614,7 @@
           return (r.m_menuProps = e), (r.m_children = t), r;
         }
         return (
-          c.d(i, o),
+          Object(c.d)(i, o),
           (i.prototype.UpdateParamsBeforeShow = function(e) {
             if (this.m_menuProps.options.bScreenCoordinates)
               e.dimensions = {
@@ -1627,7 +1645,7 @@
             s.render(
               a.createElement(
                 g,
-                c.a({}, this.m_menuProps, { popup: this }),
+                Object(c.a)({}, this.m_menuProps, { popup: this }),
                 this.m_children
               ),
               t
@@ -1759,12 +1777,11 @@
             );
           }),
           (e.prototype.InternalShow = function(e) {
-            this.m_container
-              ? r.unmountComponentAtNode(this.m_container)
-              : ((this.m_container = this.m_parent.ownerDocument.createElement(
-                  "div"
-                )),
-                this.m_parent.appendChild(this.m_container)),
+            this.m_container ||
+              ((this.m_container = this.m_parent.ownerDocument.createElement(
+                "div"
+              )),
+              this.m_parent.appendChild(this.m_container)),
               r.render(e, this.m_container);
           }),
           (e.prototype.Hide = function(e) {
@@ -1877,7 +1894,7 @@
               0 == this.m_rgLoadingLinks.length &&
                 (this.m_fnRender(), (this.m_fnRender = void 0));
           }),
-          o.c([u.a], e.prototype, "OnLinkLoad", null),
+          Object(o.c)([u.a], e.prototype, "OnLinkLoad", null),
           e
         );
       })(),
@@ -2120,13 +2137,13 @@
           (e.prototype.OnBeforeUnload = function() {}),
           (e.prototype.OnFocus = function() {}),
           (e.prototype.OnBlur = function() {}),
-          o.c([i.x], e.prototype, "m_bFocused", void 0),
-          o.c([u.a], e.prototype, "OnMessage", null),
-          o.c([u.a], e.prototype, "OnResizeEvent", null),
-          o.c([u.a], e.prototype, "OnBeforeUnloadEvent", null),
-          o.c([u.a], e.prototype, "OnUnload", null),
-          o.c([u.a], e.prototype, "OnFocusInternal", null),
-          o.c([u.a], e.prototype, "OnBlurInternal", null),
+          Object(o.c)([i.x], e.prototype, "m_bFocused", void 0),
+          Object(o.c)([u.a], e.prototype, "OnMessage", null),
+          Object(o.c)([u.a], e.prototype, "OnResizeEvent", null),
+          Object(o.c)([u.a], e.prototype, "OnBeforeUnloadEvent", null),
+          Object(o.c)([u.a], e.prototype, "OnUnload", null),
+          Object(o.c)([u.a], e.prototype, "OnFocusInternal", null),
+          Object(o.c)([u.a], e.prototype, "OnBlurInternal", null),
           e
         );
       })(),
@@ -2136,7 +2153,7 @@
           return o.SetSavedDimensionsKey(t), (o.m_bExpires = r), o;
         }
         return (
-          o.d(e, i),
+          Object(o.d)(e, i),
           (e.prototype.BIsInOverlay = function() {
             return (
               this.browser_info &&
@@ -2205,7 +2222,7 @@
             y.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }),
-          o.c([u.a], e.prototype, "QueryAndStoreWindowPosition", null),
+          Object(o.c)([u.a], e.prototype, "QueryAndStoreWindowPosition", null),
           e
         );
       })(f),
@@ -2427,7 +2444,7 @@
                   : this.DebouncedSaveSavedDimensionStore();
             }
           }),
-          o.c(
+          Object(o.c)(
             [u.a, Object(l.a)(100)],
             e.prototype,
             "DebouncedSaveSavedDimensionStore",
@@ -2688,10 +2705,10 @@
                 })
             );
           }),
-          s.c([l.x], e.prototype, "m_PrivacySettings", void 0),
-          s.c([l.x], e.prototype, "m_eCommentPermission", void 0),
-          s.c([l.x], e.prototype, "m_eSaveStateByKey", void 0),
-          s.c([l.x], e.prototype, "m_eCommentSaveState", void 0),
+          Object(s.c)([l.x], e.prototype, "m_PrivacySettings", void 0),
+          Object(s.c)([l.x], e.prototype, "m_eCommentPermission", void 0),
+          Object(s.c)([l.x], e.prototype, "m_eSaveStateByKey", void 0),
+          Object(s.c)([l.x], e.prototype, "m_eCommentSaveState", void 0),
           e
         );
       })(),
@@ -2704,7 +2721,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          s.d(t, e),
+          Object(s.d)(t, e),
           (t.prototype.render = function() {
             var e = this.props.PrivacyStore;
             return i.createElement(
@@ -2838,7 +2855,7 @@
               )
             );
           }),
-          (t = s.c([b.a], t))
+          (t = Object(s.c)([b.a], t))
         );
       })(i.Component);
     function g(e) {
@@ -2878,7 +2895,7 @@
         return (null !== e && e.apply(this, arguments)) || this;
       }
       return (
-        s.d(t, e),
+        Object(s.d)(t, e),
         (t.prototype.OnClick = function(e) {
           var t = this.props.PrivacyStore.GetPrivacySetting(
             this.props.PrivacyKey
@@ -2930,9 +2947,9 @@
             })
           );
         }),
-        s.c([v.a], t.prototype, "OnClick", null),
-        s.c([v.a], t.prototype, "OnSettingChanged", null),
-        (t = s.c([b.a], t))
+        Object(s.c)([v.a], t.prototype, "OnClick", null),
+        Object(s.c)([v.a], t.prototype, "OnSettingChanged", null),
+        (t = Object(s.c)([b.a], t))
       );
     })(i.Component);
     function x(e) {
@@ -2965,7 +2982,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          s.d(t, e),
+          Object(s.d)(t, e),
           (t.prototype.OnCheckboxChecked = function(e) {
             var t = e.currentTarget.checked ? 1 : 3;
             this.props.PrivacyStore.ChangePrivacySetting(
@@ -2998,8 +3015,8 @@
               )
             );
           }),
-          s.c([v.a], t.prototype, "OnCheckboxChecked", null),
-          (t = s.c([b.a], t))
+          Object(s.c)([v.a], t.prototype, "OnCheckboxChecked", null),
+          (t = Object(s.c)([b.a], t))
         );
       })(k),
       C = (function(n) {
@@ -3008,11 +3025,11 @@
           return (t.state = { eSaveState: 0 }), t;
         }
         return (
-          s.d(e, n),
+          Object(s.d)(e, n),
           (e.prototype.OnClick = function(e) {
             var t = this.props.PrivacyStore.CommentPermission;
             Object(_.a)(
-              i.createElement(I, {
+              i.createElement(O, {
                 OnChange: this.OnSettingChanged,
                 eCurrentPermission: t,
                 eMinPrivacy: this.props.PrivacyStore.GetPrivacySetting(
@@ -3062,9 +3079,9 @@
               })
             );
           }),
-          s.c([v.a], e.prototype, "OnClick", null),
-          s.c([v.a], e.prototype, "OnSettingChanged", null),
-          (e = s.c([b.a], e))
+          Object(s.c)([v.a], e.prototype, "OnClick", null),
+          Object(s.c)([v.a], e.prototype, "OnSettingChanged", null),
+          (e = Object(s.c)([b.a], e))
         );
       })(i.Component);
     function P(e) {
@@ -3079,7 +3096,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          s.d(t, e),
+          Object(s.d)(t, e),
           (t.prototype.render = function() {
             var e = this,
               t = this.props.eMinPrivacy;
@@ -3120,12 +3137,12 @@
           t
         );
       })(i.Component),
-      I = (function(e) {
+      O = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          s.d(t, e),
+          Object(s.d)(t, e),
           (t.prototype.render = function() {
             var e = this,
               t = this.props.eMinPrivacy;
@@ -3172,7 +3189,7 @@
         );
       })(i.Component);
     n("s4p+");
-    function O(e) {
+    function I(e) {
       var t;
       try {
         t = JSON.parse(e.getAttribute("data-privacysettings"));
@@ -3195,7 +3212,7 @@
                 r = n.getAttribute("data-component");
               switch (r) {
                 case "ProfilePrivacySettings":
-                  O(n);
+                  I(n);
                   break;
                 default:
                   Object(o.a)(!1, 'unknown component: "' + r + '"');
@@ -3239,18 +3256,19 @@
   },
   XaMz: function(e, t, n) {
     "use strict";
+    n.d(t, "a", function() {
+      return r;
+    });
+    var o = n("mrSG");
     function r(e, t) {
       for (var n = [], r = 2; r < arguments.length; r++)
         n[r - 2] = arguments[r];
       console.assert
         ? 0 == n.length
           ? console.assert(!!e, t)
-          : console.assert.apply(console, [!!e, t].concat(n))
-        : e || console.warn.apply(console, [t].concat(n));
+          : console.assert.apply(console, Object(o.g)([!!e, t], n))
+        : e || console.warn.apply(console, Object(o.g)([t], n));
     }
-    n.d(t, "a", function() {
-      return r;
-    });
   },
   Y3TG: function(e, t, n) {
     "use strict";
@@ -3328,19 +3346,19 @@
         return L;
       }),
       n.d(t, "kb", function() {
-        return I;
+        return O;
       }),
       n.d(t, "I", function() {
-        return O;
+        return I;
       }),
       n.d(t, "k", function() {
         return N;
       }),
       n.d(t, "M", function() {
-        return B;
+        return T;
       }),
       n.d(t, "K", function() {
-        return T;
+        return B;
       }),
       n.d(t, "Y", function() {
         return D;
@@ -3349,28 +3367,28 @@
         return G;
       }),
       n.d(t, "l", function() {
-        return V;
-      }),
-      n.d(t, "f", function() {
         return R;
       }),
+      n.d(t, "f", function() {
+        return V;
+      }),
       n.d(t, "B", function() {
-        return z;
+        return H;
       }),
       n.d(t, "db", function() {
         return F;
       }),
       n.d(t, "hb", function() {
-        return W;
+        return z;
       }),
       n.d(t, "z", function() {
-        return H;
+        return W;
       }),
       n.d(t, "c", function() {
-        return A;
+        return j;
       }),
       n.d(t, "b", function() {
-        return j;
+        return A;
       }),
       n.d(t, "n", function() {
         return U;
@@ -3917,7 +3935,7 @@
     function y(e) {
       return o.createElement(
         "svg",
-        r.a(
+        Object(r.a)(
           {
             fill: "#FFFFFF",
             xmlns: "http://www.w3.org/2000/svg",
@@ -4480,7 +4498,7 @@
         })
       );
     }
-    function I(e) {
+    function O(e) {
       return o.createElement(
         "svg",
         {
@@ -4552,7 +4570,7 @@
         )
       );
     }
-    function O() {
+    function I() {
       return o.createElement(
         "svg",
         {
@@ -4614,7 +4632,7 @@
         )
       );
     }
-    function B() {
+    function T() {
       return o.createElement(
         "svg",
         {
@@ -4635,7 +4653,7 @@
         })
       );
     }
-    function T() {
+    function B() {
       return o.createElement(
         "svg",
         {
@@ -4772,7 +4790,7 @@
         })
       );
     }
-    function V(e) {
+    function R(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return o.createElement(
@@ -4852,7 +4870,7 @@
         })
       );
     }
-    function R() {
+    function V() {
       return o.createElement(
         "svg",
         {
@@ -4910,7 +4928,7 @@
         )
       );
     }
-    function z() {
+    function H() {
       return o.createElement(
         "svg",
         {
@@ -5184,7 +5202,7 @@
         )
       );
     }
-    function W() {
+    function z() {
       return o.createElement(
         "svg",
         {
@@ -5209,7 +5227,7 @@
         })
       );
     }
-    function H() {
+    function W() {
       return o.createElement(
         "svg",
         {
@@ -5235,7 +5253,7 @@
         })
       );
     }
-    function A() {
+    function j() {
       return o.createElement(
         "svg",
         {
@@ -5255,12 +5273,12 @@
         })
       );
     }
-    function j(e) {
+    function A(e) {
       return o.createElement(
         "svg",
         {
+          style: { transform: "rotate(" + e.angle + "deg)" },
           version: "1.1",
-          transform: "rotate(" + e.angle + ")",
           id: "arrowBase",
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button SVGIcon_Arrow",
@@ -5291,43 +5309,39 @@
       );
     }
     function U(e) {
-      var t = "";
-      return (
-        e.angle && (t = "rotate(" + e.angle + ")"),
-        o.createElement(
-          "svg",
-          {
-            transform: t,
-            version: "1.1",
-            id: "arrowBase",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_DoubleArrow",
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256"
-          },
+      return o.createElement(
+        "svg",
+        {
+          style: { transform: "rotate(" + e.angle + "deg)" },
+          version: "1.1",
+          id: "arrowBase",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_DoubleArrow",
+          x: "0px",
+          y: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256"
+        },
+        o.createElement("polyline", {
+          className: "Arrow1",
+          fill: "none",
+          stroke: "#ffffff",
+          strokeWidth: "23",
+          strokeLinecap: "round",
+          strokeMiterlimit: "10",
+          points: "135.65,21.667 30.081,127.235 137.18,234.333 "
+        }),
+        !e.singlearrow &&
           o.createElement("polyline", {
-            className: "Arrow1",
+            className: "Arrow2",
             fill: "none",
             stroke: "#ffffff",
             strokeWidth: "23",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
-            points: "135.65,21.667 30.081,127.235 137.18,234.333 "
-          }),
-          !e.singlearrow &&
-            o.createElement("polyline", {
-              className: "Arrow2",
-              fill: "none",
-              stroke: "#ffffff",
-              strokeWidth: "23",
-              strokeLinecap: "round",
-              strokeMiterlimit: "10",
-              points: "224.389,21.667 118.821,127.235 225.92,234.333 "
-            })
-        )
+            points: "224.389,21.667 118.821,127.235 225.92,234.333 "
+          })
       );
     }
     function K() {
@@ -5682,7 +5696,7 @@
       return o.createElement(
         "svg",
         {
-          transform: "rotate(" + e.angle + ")",
+          style: { transform: "rotate(" + e.angle + "deg)" },
           version: "1.1",
           id: "base",
           xmlns: "http://www.w3.org/2000/svg",
@@ -6504,12 +6518,12 @@
             (this.customlist = void 0);
         }
         return (
-          r.c([i.x], e.prototype, "enabled", void 0),
-          r.c([i.x], e.prototype, "locked", void 0),
-          r.c([i.x], e.prototype, "features", void 0),
-          r.c([i.x], e.prototype, "allowallapps", void 0),
-          r.c([i.x], e.prototype, "baselist", void 0),
-          r.c([i.x], e.prototype, "customlist", void 0),
+          Object(r.c)([i.x], e.prototype, "enabled", void 0),
+          Object(r.c)([i.x], e.prototype, "locked", void 0),
+          Object(r.c)([i.x], e.prototype, "features", void 0),
+          Object(r.c)([i.x], e.prototype, "allowallapps", void 0),
+          Object(r.c)([i.x], e.prototype, "baselist", void 0),
+          Object(r.c)([i.x], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -6630,6 +6644,9 @@
       }),
       n.d(t, "e", function() {
         return l;
+      }),
+      n.d(t, "g", function() {
+        return u;
       });
     /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -6685,7 +6702,9 @@ and limitations under the License.
       if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
         var o = 0;
         for (r = Object.getOwnPropertySymbols(e); o < r.length; o++)
-          t.indexOf(r[o]) < 0 && (n[r[o]] = e[r[o]]);
+          t.indexOf(r[o]) < 0 &&
+            Object.prototype.propertyIsEnumerable.call(e, r[o]) &&
+            (n[r[o]] = e[r[o]]);
       }
       return n;
     }
@@ -6820,6 +6839,16 @@ and limitations under the License.
         };
       }
     }
+    function u() {
+      for (var e = 0, t = 0, n = arguments.length; t < n; t++)
+        e += arguments[t].length;
+      var r = Array(e),
+        o = 0;
+      for (t = 0; t < n; t++)
+        for (var i = arguments[t], c = 0, a = i.length; c < a; c++, o++)
+          r[o] = i[c];
+      return r;
+    }
   },
   oh5H: function(e, t, n) {
     "use strict";
@@ -6830,18 +6859,19 @@ and limitations under the License.
         return s;
       }),
       n.d(t, "d", function() {
-        return u;
-      }),
-      n.d(t, "f", function() {
         return m;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "f", function() {
         return p;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return h;
+      }),
+      n.d(t, "b", function() {
+        return d;
       });
-    var l = n("q1tI"),
+    var l = n("mrSG"),
+      u = n("q1tI"),
       r = (n("Gp1o"), n("XaMz"), n("ujHl")),
       o = n("0N1H"),
       i = n("1n9R"),
@@ -6922,7 +6952,7 @@ and limitations under the License.
     function a(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = h.LocalizeString(e);
+      var n = d.LocalizeString(e);
       return n
         ? (0 < r.length &&
             (n = n.replace(/%(\d+)\$s/g, function(e, t) {
@@ -6938,7 +6968,7 @@ and limitations under the License.
     function s(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = h.LocalizeString(e);
+      var r = d.LocalizeString(e);
       if (!r) return e;
       for (var o, i = [], c = /(.*?)%(\d+)\$s/g, a = 0; (o = c.exec(r)); ) {
         (a += o[0].length), i.push(o[1]);
@@ -6947,18 +6977,20 @@ and limitations under the License.
       }
       return (
         i.push(r.substr(a)),
-        l.createElement.apply(l, [l.Fragment, null].concat(i))
+        u.createElement.apply(u, Object(l.g)([u.Fragment, null], i))
       );
     }
-    function u(e, t) {
+    function m(e, t) {
       for (var n = [], r = 2; r < arguments.length; r++)
         n[r - 2] = arguments[r];
       return a.apply(
         void 0,
-        1 === t || "1" === t ? [e, t].concat(n) : [e + "_Plural", t].concat(n)
+        1 === t || "1" === t
+          ? Object(l.g)([e, t], n)
+          : Object(l.g)([e + "_Plural", t], n)
       );
     }
-    function m(e, t) {
+    function p(e, t) {
       void 0 === t && (t = !1);
       var n = t ? "#TimeInterval_" : "#TimeSince_";
       return e >= 2 * r.b.PerYear
@@ -6993,7 +7025,7 @@ and limitations under the License.
     }
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
-    var p = {
+    var h = {
         english: "en",
         german: "de",
         french: "fr",
@@ -7024,8 +7056,8 @@ and limitations under the License.
         ukrainian: "uk",
         vietnamese: "vn"
       },
-      h = new c();
-    window.LocalizationManager = h;
+      d = new c();
+    window.LocalizationManager = d;
   },
   "s4p+": function(e, t, n) {
     "use strict";

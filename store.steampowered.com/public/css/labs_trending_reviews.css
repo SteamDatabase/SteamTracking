@@ -172,6 +172,10 @@ div.advanced_controls_toggle_icon.down {
 	margin-right: 5px;
 }
 
+.language_options > label > input {
+	margin-right: 3px;
+}
+
 .trending_reviews_customize_language {
 	padding-top: 5px;
 }
