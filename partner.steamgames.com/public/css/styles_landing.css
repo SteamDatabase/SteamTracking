@@ -3044,3 +3044,29 @@ div .cdkey_request_details_row
 .address_reminder_body {
 	padding: 15px 0;
 }
+
+.AppStatsOneColLayout .landingRightCol {
+	float: none;
+	width: auto;
+	padding: 0;
+	margin: 0;
+}
+
+.AppStatsOneColLayout .panel.twoColOnly {
+	display: none;
+}
+
+.AppStatsOneColLayout .landingLeftCol {
+	float: none;
+	margin-right: 0;
+}
+
+.AppStatsOneColLayout #DetailedViewControls {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.jsTooltip {
+	white-space: pre-line;
+}
