@@ -4095,6 +4095,8 @@ Set a category for these games to help you find them quickly and organize your L
 "steam_subnav_media"		"Media"
 "steam_subnav_tools"		"Tools"
 "steam_subnav_downloads"	"Downloads"
+"steam_subnav_all_collections"	"Collections"
+
 
 "steam_subnav_community_home"	"Home"
 "steam_subnav_discussions"	"Discussions"

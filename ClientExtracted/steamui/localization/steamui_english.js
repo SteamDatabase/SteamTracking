@@ -31,6 +31,10 @@
 	"CollectionEdit_RenameButton": "Rename Collection",
 	"Collection_DynamicCollection": "Dynamic Collection",
 	"FilterEdit_AdvancedTooltip": "Advanced filtering options to refine your game list by genre, game features, etc.",
+	"Collection_ResetDialogTitle": "Reset Collections",
+	"Collection_ResetConfirmation": "Are you sure you want to reset your collection list and re-import your old categories?",
+	"Collection_AfterResetSummary_NoCollections": "You will have no collections after reset.",
+	"Collection_AfterResetSummary_CountAndNames": "You will have the following %1$s collections after reset: %2$s",
 
 	"FilterEdit_SelectedFilters": "Selected Filters",
 	"FilterEdit_SaveCollectionNameInputPrompt": "Enter a name for the collection",
@@ -121,6 +125,8 @@
 
 	"CollectionViewHeader_Tooltip_ManuallyAddedApp": "This game was added to the collection manually.",
 	"CollectionViewHeader_Tooltip_ManuallyRemovedApp": "This game was removed from this collection.",
+	"CollectionViewHeader_Tooltip_ManuallyRemovedApps_WithCount": "%1$s games were removed from this collection.",
+	"CollectionViewHeader_ManuallyRemovedApps_WithCount": "%1$s removed",
 
 	"CollectionView_EmptyReadOnlyCollection": "Nothing to see here",
 	"CollectionView_EmptyDynamicCollection_Line1": "No games match this filter!",
@@ -166,6 +172,8 @@
 	"GameList_View_ShowOnlyReadyToPlay": "Show only ready to play games",
 	"GameList_View_ShowingOnlyReadyToPlay": "Showing ready to play only",
 	"GameList_View_ShowOnlyVR": "Show only VR games",
+	"GameList_View_Platform_Linux": "Show only games that run on Linux",
+	"GameList_View_Platform_Apple": "Show only games that run on Apple",
 
 	"GameList_View_ReadyToPlay_ToolTip1": "• Installed on this machine",
 	"GameList_View_ReadyToPlay_ToolTip2": "• Can be streamed from another machine",

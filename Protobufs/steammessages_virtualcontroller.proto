@@ -80,6 +80,7 @@ message CVirtualControllerConfig {
 		optional int32 output_mouse = 8;
 		optional string icon_foreground = 9;
 		optional string icon_background = 10;
+		optional bool input_toggle = 11;
 	}
 
 	message ActionSet {
