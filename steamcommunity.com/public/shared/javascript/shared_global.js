@@ -1934,6 +1934,10 @@ function CAjaxInfiniteScrollingControls( rgSearchData, url )
 	if ( $J( "#" + this.m_strElementPrefix + '_scroll_top').length )
 		window.addEventListener('beforeunload', function() { thisControl.OnUnload() } );
 
+	// Optional: Dynamic data returned from the last request, to provided to the next request. Lets them
+	// being stringed together with some memory
+	this.m_rgDynamicData = null;
+
 	this.RestoreScrollTop( true );
 }
 
@@ -2115,7 +2119,8 @@ CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
 	var params = {
 		query: this.m_strQuery,
 		start: this.m_cPageSize * iPage,
-		count: this.m_cPageSize
+		count: this.m_cPageSize,
+		dynamic_data: this.m_rgDynamicData,
 	};
 
 	if ( this.m_rgStaticParams != null )
@@ -2156,7 +2161,7 @@ CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
 };
 
 CAjaxInfiniteScrollingControls.prototype.GetThrobber = function() {
-	return $(this.m_strElementPrefix + '_loading');
+	return $J(this.m_strElementPrefix + '_loading');
 };
 
 CAjaxInfiniteScrollingControls.prototype.HideThrobber = function() {
@@ -2200,6 +2205,9 @@ CAjaxInfiniteScrollingControls.prototype.OnResponseRenderResults = function( tra
 		var elResults = $(this.m_StrRowsId);
 
 		elResults.insert( response.results_html );
+
+		this.m_rgDynamicData = ( response.dynamic_data ) ? response.dynamic_data : null;
+		console.log( 'adil' , this.m_rgDynamicData );
 
 		if ( this.m_fnResponseHandler != null )
 		{
