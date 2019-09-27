@@ -8,11 +8,13 @@ var g_strActiveURL;
 var g_strGroupURL;
 var g_rgPageContentCache = {};
 var g_oRecommendedApps = null;
-function InitGroupPage( strGroupBaseURL, strActiveTab )
+function InitGroupPage( strGroupBaseURL, strActiveTab, rgAJAXSupportedMethods )
 {
 	g_strGroupURL = strGroupBaseURL;
 	g_strActiveTab = strActiveTab;
 	g_strActiveURL = '';
+
+	var regexpSupported = new RegExp( '^(?:' + rgAJAXSupportedMethods.join( '|' ) + ')(?:\\W|$)' );
 
 	var initial_group_url = '';
 	if ( window.location.hash )
@@ -33,8 +35,8 @@ function InitGroupPage( strGroupBaseURL, strActiveTab )
 			else
 				group_url = this.href.substr( g_strGroupURL.length + 1 /* skip the # or / */ );
 
-			if ( !group_url.startsWith( 'discussions' ) )
-			{
+			if ( !group_url || regexpSupported.match( group_url ) || group_url.match( /announcements\/?$/ ) )
+			{;
 				event.preventDefault();
 				OnGroupHashChange( group_url );
 			}
