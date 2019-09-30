@@ -31,6 +31,11 @@
 	"CollectionEdit_RenameButton": "Rename Collection",
 	"Collection_DynamicCollection": "Dynamic Collection",
 	"FilterEdit_AdvancedTooltip": "Advanced filtering options to refine your game list by genre, game features, etc.",
+	"Collection_FreezeDynamicCollection_Button": "Snapshot",
+	"Collection_FreezeDynamicCollection_ToolTip": "Convert this dynamic collection to a simple one, freezing the current game list.",
+	"Collection_FreezeDynamicCollection_DialogTitle": "Snapshot Collection",
+	"Collection_FreezeDynamicCollection_Confirmation": "Are you sure you want to convert this collection? It will no longer dynamically update when you add matching games to your library.",
+
 	"Collection_ResetDialogTitle": "Reset Collections",
 	"Collection_ResetConfirmation": "Are you sure you want to reset your collection list and re-import your old categories?",
 	"Collection_AfterResetSummary_NoCollections": "You will have no collections after reset.",
@@ -808,5 +813,8 @@
 
 	"Beta_BetaTag": "BETA",
 	"Beta_Changelist": "Changelist",
-	"Beta_GiveFeedback": "Give Feedback"
+	"Beta_GiveFeedback": "Give Feedback",
+
+	"ContextMenu_SaveScreenshot": "Save screenshot as...",
+	"ContextMenu_BrowseScreenshot": "Browse to screenshot"
 }

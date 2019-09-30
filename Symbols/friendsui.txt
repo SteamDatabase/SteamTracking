@@ -133,6 +133,7 @@
  B CMsgShowToolTip::default_instance_
  B CMsgShowWindow::default_instance_
  B CMsgSizePopup::default_instance_
+ B CMsgStartDownload::default_instance_
  B CMsgStartRequest::default_instance_
  B CMsgStartRequestResponse::default_instance_
  B CMsgStatusText::default_instance_
@@ -2277,6 +2278,7 @@
  D typeinfo for CMsgShowToolTip
  D typeinfo for CMsgShowWindow
  D typeinfo for CMsgSizePopup
+ D typeinfo for CMsgStartDownload
  D typeinfo for CMsgStartRequest
  D typeinfo for CMsgStartRequestResponse
  D typeinfo for CMsgStatusText
@@ -3680,6 +3682,7 @@
  D vtable for CMsgShowToolTip
  D vtable for CMsgShowWindow
  D vtable for CMsgSizePopup
+ D vtable for CMsgStartDownload
  D vtable for CMsgStartRequest
  D vtable for CMsgStartRequestResponse
  D vtable for CMsgStatusText
@@ -4469,6 +4472,7 @@
  R typeinfo name for CMsgShowToolTip
  R typeinfo name for CMsgShowWindow
  R typeinfo name for CMsgSizePopup
+ R typeinfo name for CMsgStartDownload
  R typeinfo name for CMsgStartRequest
  R typeinfo name for CMsgStartRequestResponse
  R typeinfo name for CMsgStatusText
@@ -7388,7 +7392,6 @@
  T CHTMLProtoBufMsg<CMsgWasHidden>::~CHTMLProtoBufMsg()
  T CHTMLWindow::AddGameOverlayPID(unsigned int)
  T CHTMLWindow::AddJSCallback(CJSCallbackFunc*)
- T CHTMLWindow::BIsGameOverlayBrowser() const
  T CHTMLWindow::BSupportsOffMainThreadPaints()
  T CHTMLWindow::BrowserAckPIDShuttingDown(CMsgAckPIDShuttingDown const*)
  T CHTMLWindow::BrowserBringWindowToFront(CMsgBringWindowToFront const*)
@@ -7509,7 +7512,6 @@
  T CHTMLWindowController::CreateVROverlayBrowser(char const*, bool, char const*, int, int)
  T CHTMLWindowController::Initialize(IHTMLChromeController*)
  T CHTMLWindowController::IsValidBrowser(IHTMLWindow*)
- T CHTMLWindowController::OnOverlayFPSCvarChanged()
  T CHTMLWindowController::OnPostLogonState(PostLogonState_t*)
  T CHTMLWindowController::RegisterJSMethodInternal(char const*, IJSMethodCallHandler*, EJSRegisterMethodType)
  T CHTMLWindowController::RunFrame()
@@ -9349,6 +9351,21 @@
  T CMsgSizePopup::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSizePopup::SetCachedSize(int) const
  T CMsgSizePopup::~CMsgSizePopup()
+ T CMsgStartDownload::ByteSize() const
+ T CMsgStartDownload::CMsgStartDownload()
+ T CMsgStartDownload::Clear()
+ T CMsgStartDownload::GetCachedSize() const
+ T CMsgStartDownload::GetMetadata() const
+ T CMsgStartDownload::IsInitialized() const
+ T CMsgStartDownload::MergeFrom(CMsgStartDownload const&)
+ T CMsgStartDownload::New() const
+ T CMsgStartDownload::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgStartDownload::SetCachedSize(int) const
+ T CMsgStartDownload::SharedCtor()
+ T CMsgStartDownload::SharedDtor()
+ T CMsgStartDownload::mutable_url()
+ T CMsgStartDownload::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgStartDownload::~CMsgStartDownload()
  T CMsgStartRequest::ByteSize() const
  T CMsgStartRequest::CMsgStartRequest()
  T CMsgStartRequest::Clear()
@@ -11062,7 +11079,7 @@
  T ConVar::ClampValue(float&)
  T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
- T ConVar::ConVar(char const*, char const*, unsigned long long, char const*, void (*)(ConVar*, char const*))
+ T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
@@ -16657,6 +16674,8 @@
  b (anonymous namespace)::CMsgShowWindow_reflection_
  b (anonymous namespace)::CMsgSizePopup_descriptor_
  b (anonymous namespace)::CMsgSizePopup_reflection_
+ b (anonymous namespace)::CMsgStartDownload_descriptor_
+ b (anonymous namespace)::CMsgStartDownload_reflection_
  b (anonymous namespace)::CMsgStartRequestResponse_descriptor_
  b (anonymous namespace)::CMsgStartRequestResponse_reflection_
  b (anonymous namespace)::CMsgStartRequest_descriptor_
@@ -17662,6 +17681,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowToolTip_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSizePopup_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartDownload_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartRequestResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartRequest_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStatusText_offsets_
@@ -17843,7 +17863,6 @@
  t MakeExpression(ExprNode*&)
  t MakeFactor(ExprNode*&)
  t MakeTerm(ExprNode*&)
- t OverlayFPSCvarChanged(ConVar*, char const*)
  t PNGErrorFunction(png_struct_def*, char const*)
  t PNGWarningFunction(png_struct_def*, char const*)
  t RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)

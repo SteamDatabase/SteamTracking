@@ -6073,6 +6073,9 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
   flex: 1;
   max-height: 130px; }
 
+.appactivityday_PartnerEventMediumImage_By7D9 {
+  height: 178px; }
+
 .appactivityday_PartnerEventMediumImage_Container_1HZy7 {
   background: radial-gradient(100% 80% at 64% 95%, rgba(107, 115, 127, 0.3) 0%, rgba(62, 70, 80, 0.5) 20%, rgba(36, 40, 47, 0.5) 100%);
   transition: all 0.2s ease-out; }
@@ -6147,7 +6150,8 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
   border-image-width: 1px;
   border-image-repeat: stretch;
   border-image-slice: 7;
-  box-shadow: 0 0 12px #00000025; }
+  box-shadow: 0 0 12px #00000025;
+  height: 213px; }
   .appactivityday_PartnerEventLargeUpdate_39Zk3:last-child {
     margin-bottom: 0; }
 
@@ -6586,9 +6590,13 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: reverse;
+  animation-play-state: running;
   -webkit-mask-image: url("/images/star_mask.png"); }
   div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlowContainer_14U52 {
     animation-duration: 0s; }
+
+.appdetailsachievementssection_RareAchievementNoAnimation_D1o1W .appdetailsachievementssection_RareAchievementIconGlowContainer_14U52 {
+  animation-play-state: paused; }
 
 .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
   position: absolute;
@@ -6600,10 +6608,14 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
   animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  animation-play-state: running;
   mix-blend-mode: overlay;
   background: repeating-conic-gradient(rgba(255, 217, 0, 0.178) 0%, rgba(255, 184, 78, 0) 6%, rgba(255, 217, 0, 0.178) 10%, #ffb84e 26%, rgba(255, 217, 0, 0.178) 35%, #ffb84e 40%, rgba(255, 217, 0, 0.178) 60%, #ffb84e 82%, rgba(255, 217, 0, 0.178) 100%); }
   div.LowPerfMode .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     animation-duration: 0s; }
+
+.appdetailsachievementssection_RareAchievementNoAnimation_D1o1W .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
+  animation-play-state: paused; }
 
 @keyframes appdetailsachievementssection_rotate_2-nYM {
   to {
@@ -12800,7 +12812,9 @@ div.appgrid_CoverSizeSlider_U4J9B {
     box-sizing: border-box;
     flex: none;
     display: flex;
-    height: 28px; }
+    height: 28px;
+    text-transform: uppercase;
+    align-items: center; }
     .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_CollectionName_2oJt3 {
       text-transform: uppercase;
       flex: none;
@@ -12817,6 +12831,84 @@ div.appgrid_CoverSizeSlider_U4J9B {
       margin-left: 16px;
       align-self: center;
       background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)); }
+    .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ {
+      display: flex;
+      align-items: center;
+      user-select: none;
+      cursor: pointer;
+      padding: 2px 8px; }
+      .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ:hover {
+        background-color: #fff2;
+        border-radius: 2px; }
+        .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ:hover .collectionview_DynamicCollectionLabel_2cTiG {
+          color: white; }
+          .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ:hover .collectionview_DynamicCollectionLabel_2cTiG svg {
+            fill: white; }
+        .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ:hover .collectionview_EditButton_12pDi svg {
+          fill: white; }
+      .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ .collectionview_DynamicCollectionLabel_2cTiG {
+        font-size: 16px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        letter-spacing: 2px;
+        line-height: 16px;
+        color: lightgray; }
+        .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ .collectionview_DynamicCollectionLabel_2cTiG > div {
+          height: fit-content; }
+        .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ .collectionview_DynamicCollectionLabel_2cTiG svg {
+          height: 22px;
+          width: 22px;
+          margin-right: 6px;
+          fill: #55aaff; }
+    .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_EditButton_12pDi.collectionview_Close_1t_GA {
+      margin-top: 4px; }
+    .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_EditButton_12pDi svg line {
+      stroke: darkgray;
+      stroke-width: 16px; }
+    .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_EditButton_12pDi svg:hover line {
+      stroke: white; }
+    .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_Title_1QDqP {
+      font-size: 20px;
+      margin-right: 80px; }
+    .collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_NamePrompt_SwTTw {
+      font-size: 12px;
+      margin-right: 8px; }
+    .collectionview_Container_2q70u .collectionview_Header_2rqTS .DialogInput_Wrapper {
+      width: 340px;
+      border-radius: 3px;
+      outline: none;
+      margin-left: -8px;
+      margin-top: 0px;
+      margin-bottom: 0px; }
+      .collectionview_Container_2q70u .collectionview_Header_2rqTS .DialogInput_Wrapper .DialogTextInputBase {
+        font-size: 16px;
+        padding: 4px 8px;
+        background: rgba(0, 0, 0, 0.25);
+        text-transform: uppercase;
+        flex: 1;
+        transition: all .16s ease-in-out;
+        box-shadow: inset 0 0 12px transparent; }
+        .collectionview_Container_2q70u .collectionview_Header_2rqTS .DialogInput_Wrapper .DialogTextInputBase:hover {
+          background: #1e1f23; }
+        .collectionview_Container_2q70u .collectionview_Header_2rqTS .DialogInput_Wrapper .DialogTextInputBase:focus {
+          box-shadow: inset 0 0 12px black; }
+    .collectionview_Container_2q70u .collectionview_Header_2rqTS .DialogInput_ClearAction {
+      margin-right: -6px;
+      width: 16px; }
+      .collectionview_Container_2q70u .collectionview_Header_2rqTS .DialogInput_ClearAction line {
+        stroke-width: 20px; }
+    .collectionview_Container_2q70u .collectionview_Header_2rqTS .DialogButton {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 120px;
+      line-height: 24px;
+      margin: 0px 0px 0px 16px;
+      flex: none; }
+      .collectionview_Container_2q70u .collectionview_Header_2rqTS .DialogButton:disabled {
+        color: rgba(0, 0, 0, 0.4);
+        background: rgba(105, 105, 105, 0.3); }
   .collectionview_Container_2q70u.collectionview_DropOption_3Buvs {
     box-sizing: border-box;
     border: 2px dashed dodgerblue; }
@@ -12828,109 +12920,37 @@ div.appgrid_CoverSizeSlider_U4J9B {
     box-sizing: border-box;
     padding: 20px;
     text-align: center; }
-
-.collectionview_EditButton_12pDi {
-  height: 18px;
-  width: 18px;
-  margin-left: 8px;
-  margin-top: 1px;
-  align-self: flex-start;
-  cursor: pointer; }
-  .collectionview_EditButton_12pDi svg {
-    fill: darkgray; }
-    .collectionview_EditButton_12pDi svg:hover {
-      fill: white; }
-  .collectionview_EditButton_12pDi.collectionview_Pencil_2CPHr {
-    height: 16px;
-    width: 16px;
-    margin-top: -3px; }
-
-.collectionview_CollectionEditor_2xpzK {
-  transition: all .21s ease-in-out; }
-
-.collectionview_Header_2rqTS {
-  text-transform: uppercase;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center; }
-  .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ {
-    display: flex;
-    align-items: center;
-    user-select: none;
-    cursor: pointer;
-    padding: 2px 8px; }
-    .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ:hover {
-      background-color: #fff2;
-      border-radius: 2px; }
-      .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ:hover .collectionview_DynamicCollectionLabel_2cTiG {
-        color: white; }
-        .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ:hover .collectionview_DynamicCollectionLabel_2cTiG svg {
-          fill: white; }
-      .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ:hover .collectionview_EditButton_12pDi svg {
+  .collectionview_Container_2q70u .collectionview_DynamicCollectionSubHeader_1sK_7 {
+    display: flex; }
+    .collectionview_Container_2q70u .collectionview_DynamicCollectionSubHeader_1sK_7 .collectionview_RightSideButtons_3vDj4 {
+      padding: 2px 0px 2px 12px; }
+      .collectionview_Container_2q70u .collectionview_DynamicCollectionSubHeader_1sK_7 .collectionview_RightSideButtons_3vDj4 .collectionview_FreezeButton_1qkt4 {
+        box-sizing: border-box;
+        padding: 2px 8px;
+        border-radius: 4px;
+        background-color: rgba(211, 216, 224, 0.14);
+        border: none;
+        cursor: pointer;
+        text-transform: uppercase; }
+        .collectionview_Container_2q70u .collectionview_DynamicCollectionSubHeader_1sK_7 .collectionview_RightSideButtons_3vDj4 .collectionview_FreezeButton_1qkt4:hover {
+          background-color: rgba(205, 213, 226, 0.26); }
+  .collectionview_Container_2q70u .collectionview_EditButton_12pDi {
+    height: 18px;
+    width: 18px;
+    margin-left: 8px;
+    margin-top: 1px;
+    align-self: flex-start;
+    cursor: pointer; }
+    .collectionview_Container_2q70u .collectionview_EditButton_12pDi svg {
+      fill: darkgray; }
+      .collectionview_Container_2q70u .collectionview_EditButton_12pDi svg:hover {
         fill: white; }
-    .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ .collectionview_DynamicCollectionLabel_2cTiG {
-      font-size: 16px;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      letter-spacing: 2px;
-      line-height: 16px;
-      color: lightgray; }
-      .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ .collectionview_DynamicCollectionLabel_2cTiG > div {
-        height: fit-content; }
-      .collectionview_Header_2rqTS .collectionview_DynamicCollectionLabelAndButton_8JUfQ .collectionview_DynamicCollectionLabel_2cTiG svg {
-        height: 22px;
-        width: 22px;
-        margin-right: 6px;
-        fill: #55aaff; }
-  .collectionview_Header_2rqTS .collectionview_EditButton_12pDi.collectionview_Close_1t_GA {
-    margin-top: 4px; }
-  .collectionview_Header_2rqTS .collectionview_EditButton_12pDi svg line {
-    stroke: darkgray;
-    stroke-width: 16px; }
-  .collectionview_Header_2rqTS .collectionview_EditButton_12pDi svg:hover line {
-    stroke: white; }
-  .collectionview_Header_2rqTS .collectionview_Title_1QDqP {
-    font-size: 20px;
-    margin-right: 80px; }
-  .collectionview_Header_2rqTS .collectionview_NamePrompt_SwTTw {
-    font-size: 12px;
-    margin-right: 8px; }
-  .collectionview_Header_2rqTS .DialogInput_Wrapper {
-    width: 340px;
-    border-radius: 3px;
-    outline: none;
-    margin-left: -8px;
-    margin-top: 0px;
-    margin-bottom: 0px; }
-    .collectionview_Header_2rqTS .DialogInput_Wrapper .DialogTextInputBase {
-      font-size: 16px;
-      padding: 4px 8px;
-      background: rgba(0, 0, 0, 0.25);
-      text-transform: uppercase;
-      flex: 1;
-      transition: all .16s ease-in-out;
-      box-shadow: inset 0 0 12px transparent; }
-      .collectionview_Header_2rqTS .DialogInput_Wrapper .DialogTextInputBase:hover {
-        background: #1e1f23; }
-      .collectionview_Header_2rqTS .DialogInput_Wrapper .DialogTextInputBase:focus {
-        box-shadow: inset 0 0 12px black; }
-  .collectionview_Header_2rqTS .DialogInput_ClearAction {
-    margin-right: -6px;
-    width: 16px; }
-    .collectionview_Header_2rqTS .DialogInput_ClearAction line {
-      stroke-width: 20px; }
-  .collectionview_Header_2rqTS .DialogButton {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 120px;
-    line-height: 24px;
-    margin: 0px 0px 0px 16px;
-    flex: none; }
-    .collectionview_Header_2rqTS .DialogButton:disabled {
-      color: rgba(0, 0, 0, 0.4);
-      background: rgba(105, 105, 105, 0.3); }
+    .collectionview_Container_2q70u .collectionview_EditButton_12pDi.collectionview_Pencil_2CPHr {
+      height: 16px;
+      width: 16px;
+      margin-top: -3px; }
+  .collectionview_Container_2q70u .collectionview_CollectionEditor_2xpzK {
+    transition: all .21s ease-in-out; }
 
 .gamelistentry_Container_2-O4Z {
   box-sizing: border-box;

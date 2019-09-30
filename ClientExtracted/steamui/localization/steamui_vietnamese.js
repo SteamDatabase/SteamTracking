@@ -30,10 +30,10 @@
 	"FilterEdit_AdvancedTooltip": "Sử dụng tùy chọn lọc nâng cao để làm rõ hơn danh sách trò chơi của bạn theo thể loại, tính năng, v.v...",
 	"Collection_FreezeDynamicCollection": "Ảnh chụp",
 	"Collection_FreezeDynamicCollection_ToolTip": "Chuyển bộ sưu tập linh động thành loại đơn giản, khóa danh sách trò chơi hiện tại.",
-	"Collection_ResetDialogTitle": "Reset Collections",
-	"Collection_ResetConfirmation": "Are you sure you want to reset your collection list and re-import your old categories?",
-	"Collection_AfterResetSummary_NoCollections": "You will have no collections after reset.",
-	"Collection_AfterResetSummary_CountAndNames": "You will have the following %1$s collections after reset: %2$s",
+	"Collection_ResetDialogTitle": "Đặt lại bộ sưu tập",
+	"Collection_ResetConfirmation": "Bạn có chắc muốn cài đặt lại bộ sưu tập và nhập lại các danh mục cũ?",
+	"Collection_AfterResetSummary_NoCollections": "Bạn không có bộ sưu tập nào sau khi cài đặt lại.",
+	"Collection_AfterResetSummary_CountAndNames": "Bạn sẽ có %1$s bộ sưu tập sau khi cài đặt lại: %2$s",
 	"FilterEdit_SelectedFilters": "Bộ lọc đã chọn",
 	"FilterEdit_SaveCollectionNameInputPrompt": "Đặt tên cho bộ sưu tập",
 	"FilterEdit_SaveOverwrite": "Đã có bộ sưu tập \"%1$s\". Ghi đè lên?",
@@ -163,8 +163,8 @@
 	"GameList_View_ShowOnlyReadyToPlay": "Chỉ hiện trò chơi có thể mở ngay",
 	"GameList_View_ShowingOnlyReadyToPlay": "Chỉ hiện trò có thể dùng ngay",
 	"GameList_View_ShowOnlyVR": "Chỉ hiện trò chơi VR",
-	"GameList_View_Platform_Linux": "Show only games that run on Linux",
-	"GameList_View_Platform_Apple": "Show only games that run on Apple",
+	"GameList_View_Platform_Linux": "Chỉ hiện các trò chơi chạy trên Linux",
+	"GameList_View_Platform_Apple": "Chỉ hiện các trò chơi chạy trên Apple",
 	"GameList_View_ReadyToPlay_ToolTip1": "• Đã cài đặt trên máy này",
 	"GameList_View_ReadyToPlay_ToolTip2": "• Có thể phát sóng từ một máy khác",
 	"GameList_Entry_ReadyToPlay_ToolTip": "Sẽ được phát sóng từ một máy khác",
@@ -729,5 +729,5 @@
 	"Beta_BetaTag": "BETA",
 	"Beta_Changelist": "Thay đổi cập nhật",
 	"Beta_GiveFeedback": "Gửi phản hồi",
-	"ContextMenu_SaveScreenshot": "Save screenshot as..."
+	"ContextMenu_SaveScreenshot": "Lưu ảnh chụp màn hình như..."
 }

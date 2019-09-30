@@ -2772,6 +2772,7 @@
  T KeyValues::InternalGetAsString(char*, int, KeyValues*)
  T KeyValues::InternalGetString(KeyValues*, char const*)
  T KeyValues::InternalGetUint64(KeyValues*, unsigned long long, KeyValues::EConversionState*)
+ T KeyValues::InternalIsEmpty(KeyValues*)
  T KeyValues::InternalSetString(KeyValues*, char const*)
  T KeyValues::InternalSetUint64(KeyValues*, unsigned long long)
  T KeyValues::KeyValues(char const*)

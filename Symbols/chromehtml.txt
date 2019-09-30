@@ -131,6 +131,7 @@
  B CMsgShowToolTip::default_instance_
  B CMsgShowWindow::default_instance_
  B CMsgSizePopup::default_instance_
+ B CMsgStartDownload::default_instance_
  B CMsgStartRequest::default_instance_
  B CMsgStartRequestResponse::default_instance_
  B CMsgStatusText::default_instance_
@@ -226,7 +227,6 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgSetHTMLTitle>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetPIDShuttingDown>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>
- D typeinfo for CHTMLProtoBufMsg<CMsgSetTargetFrameRate>
  D typeinfo for CHTMLProtoBufMsg<CMsgSetWindowPosition>
  D typeinfo for CHTMLProtoBufMsg<CMsgShowBrowserContextMenu>
  D typeinfo for CHTMLProtoBufMsg<CMsgShowPopup>
@@ -371,6 +371,7 @@
  D typeinfo for CMsgShowToolTip
  D typeinfo for CMsgShowWindow
  D typeinfo for CMsgSizePopup
+ D typeinfo for CMsgStartDownload
  D typeinfo for CMsgStartRequest
  D typeinfo for CMsgStartRequestResponse
  D typeinfo for CMsgStatusText
@@ -467,7 +468,6 @@
  D vtable for CHTMLProtoBufMsg<CMsgSetHTMLTitle>
  D vtable for CHTMLProtoBufMsg<CMsgSetPIDShuttingDown>
  D vtable for CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>
- D vtable for CHTMLProtoBufMsg<CMsgSetTargetFrameRate>
  D vtable for CHTMLProtoBufMsg<CMsgSetWindowPosition>
  D vtable for CHTMLProtoBufMsg<CMsgShowBrowserContextMenu>
  D vtable for CHTMLProtoBufMsg<CMsgShowPopup>
@@ -612,6 +612,7 @@
  D vtable for CMsgShowToolTip
  D vtable for CMsgShowWindow
  D vtable for CMsgSizePopup
+ D vtable for CMsgStartDownload
  D vtable for CMsgStartRequest
  D vtable for CMsgStartRequestResponse
  D vtable for CMsgStatusText
@@ -720,7 +721,6 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetHTMLTitle>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetPIDShuttingDown>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>
- R typeinfo name for CHTMLProtoBufMsg<CMsgSetTargetFrameRate>
  R typeinfo name for CHTMLProtoBufMsg<CMsgSetWindowPosition>
  R typeinfo name for CHTMLProtoBufMsg<CMsgShowBrowserContextMenu>
  R typeinfo name for CHTMLProtoBufMsg<CMsgShowPopup>
@@ -865,6 +865,7 @@
  R typeinfo name for CMsgShowToolTip
  R typeinfo name for CMsgShowWindow
  R typeinfo name for CMsgSizePopup
+ R typeinfo name for CMsgStartDownload
  R typeinfo name for CMsgStartRequest
  R typeinfo name for CMsgStartRequestResponse
  R typeinfo name for CMsgStatusText
@@ -1023,8 +1024,6 @@
  T CHTMLController::RemoveBrowser(IHTMLResponses*)
  T CHTMLController::RunFrame()
  T CHTMLController::SendSteamAuthCookiesSetNotification(bool)
- T CHTMLController::SetBrowserFrameRate(IHTMLResponses*, int)
- T CHTMLController::SetCefThreadTargetFrameRate(unsigned int)
  T CHTMLController::SetClientBuildID(unsigned long long)
  T CHTMLController::SetPIDShuttingDown(unsigned int)
  T CHTMLController::SetSteamAuthHandler(IHTMLSteamAuthHandler*)
@@ -1181,8 +1180,6 @@
  T CHTMLProtoBufMsg<CMsgSetPIDShuttingDown>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgSetSharedPaintBuffers>::~CHTMLProtoBufMsg()
- T CHTMLProtoBufMsg<CMsgSetTargetFrameRate>::CHTMLProtoBufMsg(EHTMLCommands)
- T CHTMLProtoBufMsg<CMsgSetTargetFrameRate>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgSetWindowPosition>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgSetWindowPosition>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgShowBrowserContextMenu>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -2884,6 +2881,21 @@
  T CMsgSizePopup::SerializeWithCachedSizesToArray(unsigned char*) const
  T CMsgSizePopup::SetCachedSize(int) const
  T CMsgSizePopup::~CMsgSizePopup()
+ T CMsgStartDownload::ByteSize() const
+ T CMsgStartDownload::CMsgStartDownload()
+ T CMsgStartDownload::Clear()
+ T CMsgStartDownload::GetCachedSize() const
+ T CMsgStartDownload::GetMetadata() const
+ T CMsgStartDownload::IsInitialized() const
+ T CMsgStartDownload::MergeFrom(CMsgStartDownload const&)
+ T CMsgStartDownload::New() const
+ T CMsgStartDownload::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgStartDownload::SetCachedSize(int) const
+ T CMsgStartDownload::SharedCtor()
+ T CMsgStartDownload::SharedDtor()
+ T CMsgStartDownload::mutable_url()
+ T CMsgStartDownload::set_url(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CMsgStartDownload::~CMsgStartDownload()
  T CMsgStartRequest::ByteSize() const
  T CMsgStartRequest::CMsgStartRequest()
  T CMsgStartRequest::Clear()
@@ -3665,6 +3677,8 @@
  b (anonymous namespace)::CMsgShowWindow_reflection_
  b (anonymous namespace)::CMsgSizePopup_descriptor_
  b (anonymous namespace)::CMsgSizePopup_reflection_
+ b (anonymous namespace)::CMsgStartDownload_descriptor_
+ b (anonymous namespace)::CMsgStartDownload_reflection_
  b (anonymous namespace)::CMsgStartRequestResponse_descriptor_
  b (anonymous namespace)::CMsgStartRequestResponse_reflection_
  b (anonymous namespace)::CMsgStartRequest_descriptor_
@@ -3905,6 +3919,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowToolTip_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgShowWindow_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgSizePopup_offsets_
+ r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartDownload_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartRequestResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStartRequest_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgStatusText_offsets_

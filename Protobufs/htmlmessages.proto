@@ -396,6 +396,8 @@ message CMsgFileLoadDialog {
 	optional uint32 browser_handle = 1;
 	optional string title = 2;
 	optional string initialFile = 3;
+	repeated string accept_types = 4;
+	optional bool is_save = 5;
 }
 
 message CMsgFileLoadDialogResponse {
@@ -892,5 +894,10 @@ message CMsgInspectElement {
 message CMsgDisableF5 {
 	optional uint32 browser_handle = 1;
 	optional bool disable = 2;
+}
+
+message CMsgStartDownload {
+	optional uint32 browser_handle = 1;
+	optional string url = 2;
 }
 

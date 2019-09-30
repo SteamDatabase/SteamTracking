@@ -30,10 +30,10 @@
 	"FilterEdit_AdvancedTooltip": "Haladó szűrő lehetőségek játéklistád szűkítésére műfaj, játékjellemzők stb. szerint.",
 	"Collection_FreezeDynamicCollection": "Pillanatkép",
 	"Collection_FreezeDynamicCollection_ToolTip": "E dinamikus gyűjtemény egyszerűvé konvertálása, befagyasztva a jelenlegi játéklistát.",
-	"Collection_ResetDialogTitle": "Reset Collections",
-	"Collection_ResetConfirmation": "Are you sure you want to reset your collection list and re-import your old categories?",
-	"Collection_AfterResetSummary_NoCollections": "You will have no collections after reset.",
-	"Collection_AfterResetSummary_CountAndNames": "You will have the following %1$s collections after reset: %2$s",
+	"Collection_ResetDialogTitle": "Gyűjtemények alaphelyzetbe",
+	"Collection_ResetConfirmation": "Biztosan alaphelyzetbe akarod állítani a gyűjteménylistádat, és újra importálni a régi kategóriáidat?",
+	"Collection_AfterResetSummary_NoCollections": "Alaphelyzetbe állítás után nem lesz egy gyűjteményed sem.",
+	"Collection_AfterResetSummary_CountAndNames": "Alaphelyzetbe állítás után a következő %1$s gyűjteményed lesz: %2$s",
 	"FilterEdit_SelectedFilters": "Kiválasztott szűrők",
 	"FilterEdit_SaveCollectionNameInputPrompt": "Írj be nevet a gyűjteménynek",
 	"FilterEdit_SaveOverwrite": "A(z) „%1$s” gyűjtemény már létezik. Felülírod?",
@@ -163,7 +163,7 @@
 	"GameList_View_ShowOnlyReadyToPlay": "Csak játékra kész játékok mutatása",
 	"GameList_View_ShowingOnlyReadyToPlay": "Csak játékra készek mutatása",
 	"GameList_View_ShowOnlyVR": "Csak VR-játékok mutatása",
-	"GameList_View_Platform_Linux": "Show only games that run on Linux",
+	"GameList_View_Platform_Linux": "Csak Linuxon futó játékok mutatása",
 	"GameList_View_Platform_Apple": "Show only games that run on Apple",
 	"GameList_View_ReadyToPlay_ToolTip1": "• Ezen a gépen telepítve",
 	"GameList_View_ReadyToPlay_ToolTip2": "• Másik gépről továbbítható",
@@ -729,5 +729,5 @@
 	"Beta_BetaTag": "BÉTA",
 	"Beta_Changelist": "Változáslista",
 	"Beta_GiveFeedback": "Visszajelzés küldése",
-	"ContextMenu_SaveScreenshot": "Save screenshot as..."
+	"ContextMenu_SaveScreenshot": "Képernyőmentés másként..."
 }

@@ -296,6 +296,7 @@
  OBJC_CLASS_$_NSOpenPanel
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication
+ OBJC_CLASS_$_NSSavePanel
  OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSTrackingArea
@@ -588,7 +589,7 @@
  T CBaseSurface::OnMouseReleasedMenu()
  T CBaseSurface::OnScreenSizeChanged()
  T CBaseSurface::OnTraverseChangePopup(unsigned long long)
- T CBaseSurface::OpenOSFileOpenDialog(char const*, char const*, char const*, char*, int)
+ T CBaseSurface::OpenOSFileOpenDialog(char const*, char const*, char const*, char*, int, bool)
  T CBaseSurface::OrderBottom(unsigned long long)
  T CBaseSurface::PaintTraverse(unsigned long long)
  T CBaseSurface::PaintTraverseEx(unsigned long long, bool)
@@ -1854,6 +1855,7 @@
  T KeyValues::InternalGetString(KeyValues*, char const*)
  T KeyValues::InternalGetUint64(KeyValues*, unsigned long long, KeyValues::EConversionState*)
  T KeyValues::InternalGetWString(KeyValues*, wchar_t const*)
+ T KeyValues::InternalIsEmpty(KeyValues*)
  T KeyValues::InternalSetInt(KeyValues*, int)
  T KeyValues::InternalSetPtr(KeyValues*, void*)
  T KeyValues::InternalSetString(KeyValues*, char const*)
@@ -2229,7 +2231,7 @@
  T vgui::CBaseOSXSurface<CBaseSurface>::IsOnScreen(unsigned long long)
  T vgui::CBaseOSXSurface<CBaseSurface>::IsWithin(int, int)
  T vgui::CBaseOSXSurface<CBaseSurface>::OSSetDockMenu(void*)
- T vgui::CBaseOSXSurface<CBaseSurface>::OpenOSFileOpenDialog(char const*, char const*, char const*, char*, int)
+ T vgui::CBaseOSXSurface<CBaseSurface>::OpenOSFileOpenDialog(char const*, char const*, char const*, char*, int, bool)
  T vgui::CBaseOSXSurface<CBaseSurface>::PlaySound(char const*)
  T vgui::CBaseOSXSurface<CBaseSurface>::RecreateContext(unsigned long long)
  T vgui::CBaseOSXSurface<CBaseSurface>::RegisterPanelForDeviceChangedMessages(unsigned long long)
@@ -2519,15 +2521,15 @@
  d CBaseSurface::CreateNewTextureID(bool)::staticBindIndex
  d CScheme::GetAdjustedFontHeightForCurrentLanguage(int)::language
  d __block_descriptor_tmp
- d __block_descriptor_tmp709
- d __block_descriptor_tmp728
- d __block_descriptor_tmp744
- d __block_descriptor_tmp748
- d __block_descriptor_tmp750
+ d __block_descriptor_tmp718
+ d __block_descriptor_tmp737
+ d __block_descriptor_tmp753
+ d __block_descriptor_tmp757
+ d __block_descriptor_tmp759
  d __block_literal_global
- d __block_literal_global745
- d __block_literal_global749
- d __block_literal_global751
+ d __block_literal_global754
+ d __block_literal_global758
+ d __block_literal_global760
  d g_FontMetricTweaks
  d g_bScissor
  d g_rgBorderColor
@@ -2771,9 +2773,9 @@
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_2
  t ___ZN4vgui15CBaseOSXSurfaceI12CBaseSurfaceEC2Ev_block_invoke_3
  t __copy_helper_block_
- t __copy_helper_block_726
+ t __copy_helper_block_735
  t __destroy_helper_block_
- t __destroy_helper_block_727
+ t __destroy_helper_block_736
  t fsevents_callback(__FSEventStream const*, void*, unsigned long, void*, unsigned int const*, unsigned long long const*)
  t png_build_16bit_table
  t png_format_buffer

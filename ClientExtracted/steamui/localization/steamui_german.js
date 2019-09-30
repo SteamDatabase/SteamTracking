@@ -30,10 +30,10 @@
 	"FilterEdit_AdvancedTooltip": "Erweiterte Filteroptionen zum Ordnen Ihrer Spielliste nach Genre, Spielfunktionen, usw.",
 	"Collection_FreezeDynamicCollection": "Momentaufnahme",
 	"Collection_FreezeDynamicCollection_ToolTip": "Wandelt diese dynamische Kollektion in eine einfache um und friert die aktuelle Spielliste ein.",
-	"Collection_ResetDialogTitle": "Reset Collections",
-	"Collection_ResetConfirmation": "Are you sure you want to reset your collection list and re-import your old categories?",
-	"Collection_AfterResetSummary_NoCollections": "You will have no collections after reset.",
-	"Collection_AfterResetSummary_CountAndNames": "You will have the following %1$s collections after reset: %2$s",
+	"Collection_ResetDialogTitle": "Kollektionen zurücksetzen",
+	"Collection_ResetConfirmation": "Möchten Sie Ihre Kollektionsliste wirklich zurücksetzen und Ihre alten Kategorien neu importieren?",
+	"Collection_AfterResetSummary_NoCollections": "Sie verlieren nach dem Zurücksetzen Ihre Kollektionen.",
+	"Collection_AfterResetSummary_CountAndNames": "Die folgenden %1$s Kollektionen sind nach dem Zurücksetzen verfügbar: %2$s",
 	"FilterEdit_SelectedFilters": "Ausgewählte Filter",
 	"FilterEdit_SaveCollectionNameInputPrompt": "Einen Namen für die Kollektion eingeben",
 	"FilterEdit_SaveOverwrite": "Kollektion „%1$s“ existiert bereits. Überschreiben?",
@@ -163,8 +163,8 @@
 	"GameList_View_ShowOnlyReadyToPlay": "Nur spielbereite Spiele anzeigen",
 	"GameList_View_ShowingOnlyReadyToPlay": "Spielbereite Spiele werden anzeigt",
 	"GameList_View_ShowOnlyVR": "Nur VR-Spiele anzeigen",
-	"GameList_View_Platform_Linux": "Show only games that run on Linux",
-	"GameList_View_Platform_Apple": "Show only games that run on Apple",
+	"GameList_View_Platform_Linux": "Nur auf Linux ausführbare Spiele anzeigen",
+	"GameList_View_Platform_Apple": "Nur auf macOS ausführbare Spiele anzeigen",
 	"GameList_View_ReadyToPlay_ToolTip1": "• auf diesem Gerät installiert",
 	"GameList_View_ReadyToPlay_ToolTip2": "• kann über ein anderes Gerät gestreamt werden",
 	"GameList_Entry_ReadyToPlay_ToolTip": "Wird über ein anderes Gerät gestreamt",
@@ -729,5 +729,5 @@
 	"Beta_BetaTag": "BETA",
 	"Beta_Changelist": "Änderungsliste",
 	"Beta_GiveFeedback": "Feedback geben",
-	"ContextMenu_SaveScreenshot": "Save screenshot as..."
+	"ContextMenu_SaveScreenshot": "Screenshot speichern als"
 }

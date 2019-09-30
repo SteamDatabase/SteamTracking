@@ -729,5 +729,5 @@
 	"Beta_BetaTag": "BETA",
 	"Beta_Changelist": "Lista de alterações",
 	"Beta_GiveFeedback": "Enviar comentários",
-	"ContextMenu_SaveScreenshot": "Save screenshot as..."
+	"ContextMenu_SaveScreenshot": "Salvar captura como..."
 }
