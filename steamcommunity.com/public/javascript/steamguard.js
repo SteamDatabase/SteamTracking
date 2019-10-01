@@ -456,6 +456,69 @@ function bToggleWarning( bShow )
 
 }
 
+function OnPhoneAdded( bForTwoFactor )
+{
+	if ( bForTwoFactor )
+	{
+		GetValueFromLocalURL( 'steammobile://steamguardset?scheme=twofactor&ph=1', 60,
+			function ()
+			{
+				window.location = 'https://steamcommunity.com/steamguard/phone_checksms?bForTwoFactor=1&bRevoke2fOnCancel=';
+			},
+			function( data, code )
+			{
+				if ( code == 84 )
+				{
+					window.location = 'https://steamcommunity.com/steamguard/phone_cantsendsms';
+				}
+				else
+				{
+					FatalError( data, code );
+				}
+			},
+			FatalError
+		);
+	}
+	else
+	{
+		window.location = 'https://steamcommunity.com/steamguard/phone_checksms?bRevoke2fOnCancel=';
+	}
+}
+
+function HandleEmailConfirm( near, bForTwoFactor )
+{
+	if ( BIsMobileAPICallInProgress() )
+		return;
+	ClearError();
+
+	ShowBusy( near );
+
+	PhoneAjax( 'email_confirmation', null,
+		function( data )
+		{
+			if ( data.email_confirmation )
+			{
+				ClearBusy();
+				ShowAlertDialog( 'Confirm your email' , 'It looks like you still haven\'t clicked the link we sent to your email address. Please check your email, and click the link we sent you before continuing.' );
+				return;
+			}
+
+			OnPhoneAdded( bForTwoFactor );
+		},
+
+		function( errorText, fatal )
+		{
+			ClearBusy();
+
+			if ( fatal ) {
+				FatalError( errorText );
+			} else if ( errorText ) {
+				ShowError( errorText );
+			}
+		}
+	);
+}
+
 
 function HandlePhoneNumber( near, bForTwoFactor, resetForm )
 {
@@ -476,22 +539,15 @@ function HandlePhoneNumber( near, bForTwoFactor, resetForm )
 	ShowBusy( near );
 
 	PhoneAjax( 'add_phone_number', phone_number,
-		function()
+		function( data )
 		{
-			if ( bForTwoFactor )
+			if ( data.email_confirmation )
 			{
-				GetValueFromLocalURL( 'steammobile://steamguardset?scheme=twofactor&ph=1', 60,
-					function()
-					{
-						window.location = 'https://steamcommunity.com/steamguard/phone_checksms?bForTwoFactor=1&bRevoke2fOnCancel=';
-					},
-					FatalError,
-					FatalError
-				);
+				window.location = 'https://steamcommunity.com/steamguard/phone_checkemail?bForTwoFactor=' + (bForTwoFactor ? 1 : 0) + '&bRevoke2fOnCancel=';
 			}
 			else
 			{
-				window.location = 'https://steamcommunity.com/steamguard/phone_checksms?bRevoke2fOnCancel=';
+				OnPhoneAdded( bForTwoFactor );
 			}
 		},
 

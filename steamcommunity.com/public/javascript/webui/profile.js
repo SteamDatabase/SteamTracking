@@ -710,6 +710,18 @@
             return e;
           })();
         },
+        get BASE_URL() {
+          var e = window.location.href;
+          return e.startsWith(this.STORE_BASE_URL)
+            ? this.STORE_BASE_URL
+            : e.startsWith(this.COMMUNITY_BASE_URL)
+            ? this.COMMUNITY_BASE_URL
+            : e.startsWith(this.PARTNER_BASE_URL)
+            ? this.PARTNER_BASE_URL
+            : e.startsWith(this.HELP_BASE_URL)
+            ? this.HELP_BASE_URL
+            : "";
+        },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
         DEV_MODE: !1,
@@ -1468,7 +1480,7 @@
                 C = 0 < M,
                 P = m - (c.bOverlapVertical ? S : k) - x,
                 L = 0 < P,
-                O = (c.bPreferPopTop || !L) && C;
+                O = (c.bPreferPopTop || !L) && C && !c.bDisablePopTop;
               if (!C && !L) {
                 var I =
                   void 0 !== c.bShiftToFitWindow
@@ -3376,13 +3388,13 @@
         return H;
       }),
       n.d(t, "db", function() {
-        return F;
+        return W;
       }),
       n.d(t, "hb", function() {
-        return z;
+        return F;
       }),
       n.d(t, "z", function() {
-        return W;
+        return z;
       }),
       n.d(t, "c", function() {
         return j;
@@ -4958,7 +4970,7 @@
         })
       );
     }
-    function F(e) {
+    function W(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -5202,7 +5214,7 @@
         )
       );
     }
-    function z() {
+    function F() {
       return o.createElement(
         "svg",
         {
@@ -5227,7 +5239,7 @@
         })
       );
     }
-    function W() {
+    function z() {
       return o.createElement(
         "svg",
         {

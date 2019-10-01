@@ -38,8 +38,20 @@ BoxEntry.prototype = {
 		this.url = "";
 		this.shortDescription = "";
 	}
-	,makeTagEntries: function(focusedTags) {
+	,makeTagEntries: function(focusedTags,justGetEm) {
+		if(justGetEm == null) {
+			justGetEm = false;
+		}
 		this.tagEntries = [];
+		if(justGetEm) {
+			var _g = 0;
+			while(_g < focusedTags.length) {
+				var tag = focusedTags[_g];
+				++_g;
+				this.tagEntries.push({ name : tag.name, tagid : tag.tagid, highlighted : true});
+			}
+			return;
+		}
 		this.tags.sort(function(a,b) {
 			if(a.count < b.count) {
 				return -1;
@@ -49,18 +61,18 @@ BoxEntry.prototype = {
 			}
 			return 0;
 		});
-		var _g = 0;
-		var _g1 = this.tags;
-		while(_g < _g1.length) {
-			var tag = _g1[_g];
-			++_g;
+		var _g1 = 0;
+		var _g11 = this.tags;
+		while(_g1 < _g11.length) {
+			var tag1 = _g11[_g1];
+			++_g1;
 			var found = false;
 			if(focusedTags != null && focusedTags.length > 0) {
 				var _g2 = 0;
 				while(_g2 < focusedTags.length) {
 					var fTag = focusedTags[_g2];
 					++_g2;
-					if(fTag.tagid == tag.tagid) {
+					if(fTag.tagid == tag1.tagid) {
 						found = true;
 						break;
 					}
@@ -69,11 +81,76 @@ BoxEntry.prototype = {
 				found = true;
 			}
 			if(found) {
-				this.tagEntries.push({ name : tag.name, tagid : tag.tagid, highlighted : true});
+				this.tagEntries.push({ name : tag1.name, tagid : tag1.tagid, highlighted : true});
 			} else {
-				this.tagEntries.push({ name : tag.name, tagid : tag.tagid, highlighted : false});
+				this.tagEntries.push({ name : tag1.name, tagid : tag1.tagid, highlighted : false});
 			}
 		}
+	}
+	,getTagHTML3: function(maxLines) {
+		if(maxLines == null) {
+			maxLines = 3;
+		}
+		var str = "";
+		if(this.keyTags != null) {
+			var _this = this.keyTags;
+			var catTags = __map_reserved["reccats"] != null ? _this.getReserved("reccats") : _this.h["reccats"];
+			if(catTags != null) {
+				var keys = __map_reserved["key"] != null ? catTags.getReserved("key") : catTags.h["key"];
+				var others = __map_reserved["other"] != null ? catTags.getReserved("other") : catTags.h["other"];
+				var allTags = [];
+				if(keys != null) {
+					var _g = 0;
+					while(_g < keys.length) {
+						var key = keys[_g];
+						++_g;
+						allTags.push(key);
+					}
+				}
+				if(others != null) {
+					var _g1 = 0;
+					while(_g1 < others.length) {
+						var other = others[_g1];
+						++_g1;
+						allTags.push(other);
+					}
+				}
+				allTags.sort(function(a,b) {
+					if(a.weight < b.weight) {
+						return 1;
+					}
+					if(a.weight > b.weight) {
+						return -1;
+					}
+					return 0;
+				});
+				var allTagIds = [];
+				var _g2 = 0;
+				while(_g2 < allTags.length) {
+					var tag = allTags[_g2];
+					++_g2;
+					allTagIds.push(tag.tagid == null ? "null" : "" + tag.tagid);
+				}
+				var i = 0;
+				var lines = 0;
+				str += "<div>";
+				var names = this.getTagNames(allTagIds);
+				var _g3 = 0;
+				while(_g3 < names.length) {
+					var name = names[_g3];
+					++_g3;
+					if(i >= maxLines * 2) {
+						break;
+					}
+					str += "<p class=\"tag-list\"> " + name + "</p>";
+					++lines;
+					++i;
+				}
+				str += "</div>";
+				return str;
+			}
+		}
+		return this.getTagHTML2(maxLines);
 	}
 	,getTagHTML2: function(maxLines) {
 		if(maxLines == null) {
@@ -148,6 +225,9 @@ BoxEntry.prototype = {
 			while(_g < _g1.length) {
 				var cat = _g1[_g];
 				++_g;
+				if(cat == null || cat.category == null) {
+					continue;
+				}
 				if(cat.category.indexOf("genre") != -1) {
 					genreIndex = i;
 					break;
@@ -188,10 +268,14 @@ BoxEntry.prototype = {
 						HxOverrides.remove(names,name1);
 					}
 				}
-				tagNames = this.getTagNames(cat1.tags).join(", ");
+				var arr = this.getTagNames(cat1.tags);
+				while(arr.length > 3) arr.pop();
+				tagNames = arr.join(", ");
 				if(tagNames != null && tagNames.length > 0) {
-					str += "<p class=\"tag-list\"> " + tagNames + "</p>";
-					++lines;
+					if(!(tagNames.length == 1 && cat1.tags[0] == "492")) {
+						str += "<p class=\"tag-list\"> " + tagNames + "</p>";
+						++lines;
+					}
 				}
 				++i;
 			}
@@ -269,16 +353,7 @@ BoxEntry.prototype = {
 		return arr;
 	}
 	,getTagName: function(id) {
-		var _g = 0;
-		var _g1 = this.tagEntries;
-		while(_g < _g1.length) {
-			var tag = _g1[_g];
-			++_g;
-			if(tag.tagid == id) {
-				return tag.name;
-			}
-		}
-		return "<" + id + ">";
+		return Main.tagDB.getName(id);
 	}
 	,setDetails: function(details) {
 		if(details == null) {
@@ -383,11 +458,16 @@ Data.getVariables = function() {
 Data.getBasicStuff = function(callback) {
 	Data.request("dbbasics",[],function(str) {
 		var data = JSON.parse(str);
-		var tagMap = Data.jsonToMapStrArrOfStr(data.categories);
+		var tagData = data.tagData;
+		var categoriesByTag = tagData.categoriesByTag;
+		var tags = Data.jsonToMapStrStr(tagData.tags);
+		var tagMap = Data.jsonToMapStrArrOfStr(categoriesByTag);
 		var prefs = data.prefs;
 		var locMap = Data.parseLocs(data.locs);
 		var wishlist = Data.parseWishlist(data.wishlist);
-		var basicStuff = { baseUrl : data.baseUrl, cdnUrl : data.cdnUrl, tagMap : tagMap, prefs : prefs, locMap : locMap, loggedIn : data.loggedIn, wishlist : wishlist};
+		console.log("tagMap = " + tagMap.toString());
+		console.log("tags = " + tags.toString());
+		var basicStuff = { baseUrl : data.baseUrl, cdnUrl : data.cdnUrl, tagMap : tagMap, tags : tags, prefs : prefs, locMap : locMap, loggedIn : data.loggedIn, wishlist : wishlist};
 		callback(basicStuff);
 	},function(error) {
 		callback(null);
@@ -624,7 +704,9 @@ Data.parseMatches = function(data) {
 	var map = new haxe_ds_StringMap();
 	var tags = new haxe_ds_StringMap();
 	var details = new haxe_ds_StringMap();
+	var keyTags = new haxe_ds_StringMap();
 	var storeItemData = null;
+	var wishlist = null;
 	var _g = 0;
 	var _g1 = Reflect.fields(json);
 	while(_g < _g1.length) {
@@ -646,13 +728,41 @@ Data.parseMatches = function(data) {
 					}
 				}
 			}
+		} else if(field == "keyTags") {
+			var keyTagBlob = Reflect.field(json,field);
+			console.log("keyTagBlob = " + JSON.stringify(keyTagBlob));
+			var _g21 = 0;
+			var _g31 = Reflect.fields(keyTagBlob);
+			while(_g21 < _g31.length) {
+				var recommenderField = _g31[_g21];
+				++_g21;
+				var recommenderBlob = Reflect.field(keyTagBlob,recommenderField);
+				var weightMap = new haxe_ds_StringMap();
+				var _g4 = 0;
+				var _g5 = Reflect.fields(recommenderBlob);
+				while(_g4 < _g5.length) {
+					var tagTypeField = _g5[_g4];
+					++_g4;
+					var weightList = Reflect.field(recommenderBlob,tagTypeField);
+					if(__map_reserved[tagTypeField] != null) {
+						weightMap.setReserved(tagTypeField,weightList);
+					} else {
+						weightMap.h[tagTypeField] = weightList;
+					}
+				}
+				if(__map_reserved[recommenderField] != null) {
+					keyTags.setReserved(recommenderField,weightMap);
+				} else {
+					keyTags.h[recommenderField] = weightMap;
+				}
+			}
 		} else if(field == "details") {
 			var detailBlob = Reflect.field(json,field);
-			var _g21 = 0;
-			var _g31 = Reflect.fields(detailBlob);
-			while(_g21 < _g31.length) {
-				var detailField = _g31[_g21];
-				++_g21;
+			var _g22 = 0;
+			var _g32 = Reflect.fields(detailBlob);
+			while(_g22 < _g32.length) {
+				var detailField = _g32[_g22];
+				++_g22;
 				var data1 = Reflect.field(detailBlob,detailField);
 				var dets = data1;
 				if(dets != null) {
@@ -676,6 +786,9 @@ Data.parseMatches = function(data) {
 					details.h[key] = dets1;
 				}
 			}
+		} else if(field == "wishlist") {
+			var data3 = Reflect.field(json,field);
+			wishlist = Data.parseWishlist(data3);
 		} else {
 			var arr1 = Reflect.field(json,field);
 			if(arr1 != null) {
@@ -687,7 +800,8 @@ Data.parseMatches = function(data) {
 			}
 		}
 	}
-	return { map : map, tags : tags, details : details, storeItemData : storeItemData};
+	console.log("keyTags = " + keyTags.toString());
+	return { map : map, tags : tags, keyTags : keyTags, details : details, storeItemData : storeItemData, wishlist : wishlist};
 };
 Data.getStarterApps = function(callback) {
 	Data.request("dbstarterapps",[],function(data) {
@@ -772,6 +886,27 @@ Data.request = function(url,params,onData,onError) {
 		onError(error);
 	};
 	query.request();
+};
+Data.jsonToMapStrStr = function(json) {
+	var map = new haxe_ds_StringMap();
+	if(json == null) {
+		return map;
+	}
+	var _g = 0;
+	var _g1 = Reflect.fields(json);
+	while(_g < _g1.length) {
+		var field = _g1[_g];
+		++_g;
+		if(field != null && field != "") {
+			var value = Std.string(Reflect.field(json,field));
+			if(__map_reserved[field] != null) {
+				map.setReserved(field,value);
+			} else {
+				map.h[field] = value;
+			}
+		}
+	}
+	return map;
 };
 Data.jsonToMapStrArrOfStr = function(json) {
 	var map = new haxe_ds_StringMap();
@@ -1500,6 +1635,14 @@ Main.renderFocusedBox = function() {
 Main.countHistory = function() {
 	return Main.breadcrumbs.length + (Main.focusedEntry != null ? 1 : 0);
 };
+Main.renderHeader = function(i) {
+	var headerId = "box-header-" + i;
+	var headerNode = window.document.getElementById(headerId);
+	if(headerNode != null) {
+		var headerTitle = Render.similarBlurb(Main.columnHeaders[i]).title;
+		headerNode.innerHTML = "<a href=\"javascript:Main.clickColumn(" + i + ")\"><p>" + headerTitle + "</p></a>";
+	}
+};
 Main.renderBoxes = function(sink) {
 	if(sink == null) {
 		sink = false;
@@ -1571,7 +1714,7 @@ Main.init = function(callback) {
 	Data.getBasicStuff(function(basicStuff) {
 		Main.baseURL = basicStuff.baseUrl;
 		Main.cdnURL = basicStuff.cdnUrl;
-		Main.tagDB = new TagDB(basicStuff.tagMap);
+		Main.tagDB = new TagDB(basicStuff.tagMap,basicStuff.tags);
 		Main.prefs = basicStuff.prefs;
 		Main.locs = basicStuff.locMap;
 		Main.LOGGED_IN = basicStuff.loggedIn;
@@ -1748,7 +1891,7 @@ Main.onMutateHoverNode = function(mutationList,observer) {
 		if(Main.focusedEntry == null || boxEntry.appid != Main.focusedEntry.appid) {
 			var similarTitle = similar.title;
 			var similarBlurb = similar.blurb;
-			similarText = "<div id=\"hover-similar-title-" + hoverAppId + "\" class=\"hover-similar-title\">\r\n\t\t\t\t\t<p><strong>" + similarTitle + "</strong></p>\r\n\t\t\t\t\t<p>" + similarBlurb + "</p>\r\n\t\t\t\t</div>";
+			similarText = "<div id=\"hover-similar-title-" + hoverAppId + "\" class=\"hover-similar-title\">\r\n\t\t\t\t\t<p><em><strong>" + similarTitle + "</strong></em><br/>\r\n\t\t\t\t\t<em>" + similarBlurb + "</em></p>\r\n\t\t\t\t\t</hr>\r\n\t\t\t\t</div>";
 		}
 		var hoverScreenshots = hoverAppNode.getElementsByClassName("hover_screenshots")[0];
 		if(hoverScreenshots != null) {
@@ -1919,6 +2062,19 @@ Main.refresh = $hx_exports["Main"]["refresh"] = function() {
 		return true;
 	});
 };
+Main.clickColumn = $hx_exports["Main"]["clickColumn"] = function(i) {
+	var cycle = ["reccats","recdefault","recgems"];
+	var currHeader = Main.columnHeaders[i];
+	var index = cycle.indexOf(currHeader);
+	++index;
+	if(index >= cycle.length) {
+		index -= cycle.length;
+	}
+	currHeader = cycle[index];
+	Main.columnHeaders[i] = currHeader;
+	Main.renderHeader(i);
+	Main.handleMatches(Main.focusedEntry.appid,Main.currMatches);
+};
 Main.clickBreadcrumb = $hx_exports["Main"]["clickBreadcrumb"] = function(i) {
 	Main.justClickedBreadcrumb = true;
 	if(i == -1) {
@@ -2003,6 +2159,7 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	}
 	var showFocusDetails = function(details) {
 		Main.focusedEntry.setDetails(details);
+		Main.focusedEntry.keyTags = Main.currMatches.keyTags;
 		Main.renderFocusedBox();
 		Main.showBoxes(false);
 	};
@@ -2025,7 +2182,6 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	}
 	if(showTheseBoxes == null || showTheseBoxes.length == 0) {
 		Data.getMatches(appid,["rec1","rec2","rec3","rec4","rec5"],function(rawMatches) {
-			rawMatches.map = Main.removeDuplicates(rawMatches.map);
 			rawMatches.map = Main.removeByPreferences(rawMatches.map);
 			Main.currMatches = rawMatches;
 			if(detailsWereNull) {
@@ -2038,14 +2194,10 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 				showFocusDetails(details1);
 			}
 			if(Main.LOGGED_IN) {
-				Data.getWishlist(function(list) {
-					Main.wishlist = list;
-					Main.tempWishlist = [];
-					Main.handleMatches(appid,rawMatches,callback);
-				});
-			} else {
-				Main.handleMatches(appid,rawMatches,callback);
+				Main.wishlist = rawMatches.wishlist;
+				Main.tempWishlist = [];
 			}
+			Main.handleMatches(appid,rawMatches,callback);
 		});
 	} else {
 		Main.displayBoxes(showTheseBoxes,callback);
@@ -2198,32 +2350,42 @@ Main.handleMatches = function(appid,rawMatches,callback) {
 			} else {
 				var i = 0;
 				var _g = 0;
-				var _g1 = recs.appids;
-				while(_g < _g1.length) {
-					var appid1 = _g1[_g];
-					++_g;
+				while(_g < 9) {
+					var j = _g++;
+					Main.boxEntries[j].appid = null;
+					Main.setBoxDetails(Main.boxEntries[j],null);
+					Main.boxEntries[j].recommender = "";
+				}
+				var lookup = [0,3,6,1,4,7,2,5,8];
+				var _g1 = 0;
+				var _g11 = recs.appids;
+				while(_g1 < _g11.length) {
+					var appid1 = _g11[_g1];
+					++_g1;
 					if(i >= 9) {
 						break;
 					}
 					var detail = __map_reserved[appid1] != null ? details.getReserved(appid1) : details.h[appid1];
-					var appid2 = detail.appid;
 					if(detail != null) {
+						var appid2 = detail.appid;
 						var arrIndex = -1;
 						var _g3 = 0;
 						var _g2 = recs.appids.length;
 						while(_g3 < _g2) {
-							var j = _g3++;
-							var otherappid = recs.appids[j];
+							var j1 = _g3++;
+							var otherappid = recs.appids[j1];
 							if(appid2 == otherappid) {
-								arrIndex = j;
+								arrIndex = j1;
 								break;
 							}
 						}
-						Main.boxEntries[i].appid = appid2;
-						Main.setBoxDetails(Main.boxEntries[i],detail,Main.focusedEntry);
-						Main.boxEntries[i].recommender = arrIndex != -1 ? recs.recommenders[arrIndex] : "";
-						++i;
+						var boxIndex = lookup[i];
+						var entry = Main.boxEntries[boxIndex];
+						entry.appid = appid2;
+						Main.setBoxDetails(entry,detail,Main.focusedEntry);
+						entry.recommender = arrIndex != -1 ? recs.recommenders[arrIndex] : "";
 					}
+					++i;
 				}
 				Main.updateBoxes();
 				if(callback != null) {
@@ -2277,7 +2439,7 @@ Main.updateBoxes = function() {
 		var comparison2 = Main.tagDB.compare(Main.focusedEntry.tags,Main.focusedEntry.tags);
 		var results2 = Main.tagDB.normalizeMatches(comparison2.matches);
 		Main.focusedEntry.tagCategories = results2;
-		Main.focusedEntry.makeTagEntries(Main.focusedEntry.tags);
+		Main.focusedEntry.makeTagEntries(Main.focusedEntry.tags,true);
 	}
 	if(Main.gridObserver != null) {
 		Main.gridObserver.disconnect();
@@ -2373,45 +2535,65 @@ Main.narrowMatches = function(rawMatches,previousAppIds) {
 	var failsafe = 100;
 	var target = 9;
 	var matches = { appids : [], recommenders : []};
-	var sorter = [];
-	var matchQuota = [{ name : "rec1", value : 3, count : 0},{ name : "rec2", value : 3, count : 0},{ name : "rec3", value : 3, count : 0}];
+	var columns = [{ appids : [null,null,null], recommenders : ["","",""]},{ appids : [null,null,null], recommenders : ["","",""]},{ appids : [null,null,null], recommenders : ["","",""]}];
+	var matchQuota = [{ name : Main.columnHeaders[0], value : 3, count : 0},{ name : Main.columnHeaders[1], value : 3, count : 0},{ name : Main.columnHeaders[2], value : 3, count : 0}];
+	var matchedApps = [];
 	var failsafe1 = 100;
 	while(target > 0 && failsafe1 > 0) {
-		var _g4 = 0;
-		while(_g4 < matchQuota.length) {
-			var quota = matchQuota[_g4];
-			++_g4;
+		var _g11 = 0;
+		var _g4 = matchQuota.length;
+		while(_g11 < _g4) {
+			var i1 = _g11++;
+			var quota = matchQuota[i1];
 			var recommender2 = quota.name;
 			var value = quota.value;
-			var _g21 = 0;
-			var _g11 = value;
-			while(_g21 < _g11) {
-				var j1 = _g21++;
+			var matches1 = 0;
+			var _g31 = 0;
+			var _g21 = value;
+			while(_g31 < _g21) {
+				var j1 = _g31++;
 				var matchList1 = __map_reserved[recommender2] != null ? rawMatches.getReserved(recommender2) : rawMatches.h[recommender2];
-				var appid1 = matchList1[quota.count];
-				sorter.push({ appid : appid1, recommender : recommender2});
-				quota.count++;
+				var appid1 = null;
+				while(appid1 == null && quota.count < matchList1.length) {
+					appid1 = matchList1[quota.count];
+					if(matchedApps.indexOf(appid1) != -1) {
+						appid1 = null;
+					}
+					quota.count++;
+				}
+				if(appid1 != null) {
+					matchedApps.push(appid1);
+					++matches1;
+				}
+				columns[i1].appids[matches1 - 1] = appid1;
+				columns[i1].recommenders[matches1 - 1] = recommender2;
 				--target;
+				if(appid1 != null) {
+					matchedApps.push(appid1);
+				}
 			}
 			quota.value = 1;
 		}
 		--failsafe1;
 	}
-	sorter.sort(function(a,b) {
-		if(a.recommender < b.recommender) {
-			return -1;
-		}
-		if(a.recommender > b.recommender) {
-			return 1;
-		}
-		return 0;
-	});
 	var _g5 = 0;
-	while(_g5 < sorter.length) {
-		var sortbit = sorter[_g5];
+	while(_g5 < columns.length) {
+		var column = columns[_g5];
 		++_g5;
-		matches.appids.push(sortbit.appid);
-		matches.recommenders.push(sortbit.recommender);
+		var _g12 = 0;
+		var _g22 = column.appids;
+		while(_g12 < _g22.length) {
+			var appid2 = _g22[_g12];
+			++_g12;
+			matches.appids.push(appid2);
+		}
+		var _g13 = 0;
+		var _g23 = column.recommenders;
+		while(_g13 < _g23.length) {
+			var recommender3 = _g23[_g13];
+			++_g13;
+			matches.recommenders.push(recommender3);
+		}
 	}
 	return matches;
 };
@@ -2646,7 +2828,7 @@ Render.focusBoxContent = function(entry,enableBack,enableRefresh) {
 		entry.tagCategories = results;
 	}
 	entry.makeTagEntries(entry.tags);
-	var tagHTML = entry.getTagHTML2(6);
+	var tagHTML = entry.getTagHTML3(6);
 	var screenShots = "";
 	screenShots += "<div class=\"box-images-big\">";
 	var screenshot = entry.screenshots[0];
@@ -2698,15 +2880,15 @@ Render.similarBlurb = function(recommender) {
 	var recTitle = "";
 	var recBlurb = "";
 	switch(recommender) {
-	case "rec1":
+	case "reccats":
 		recTitle = Main.loc("#labs_deepdive_directmatch");
 		recBlurb = Main.loc("#labs_deepdive_directmatch_blurb");
 		break;
-	case "rec2":
+	case "recdefault":
 		recTitle = Main.loc("#labs_deepdive_indirectmatch");
 		recBlurb = Main.loc("#labs_deepdive_indirectmatch_blurb");
 		break;
-	case "rec3":
+	case "recgems":
 		recTitle = Main.loc("#labs_deepdive_similargem");
 		recBlurb = Main.loc("#labs_deepdive_similargem_blurb");
 		break;
@@ -2759,7 +2941,7 @@ Render.boxContent = function(index,entry,sink,first) {
 	var wishlistBtn = Main.LOGGED_IN ? Render.wishlistButton(appid,onWishlist,isOwned) : "";
 	var detailsBtn = Render.detailsButton(appid,url);
 	var headerURL = "https://steamcdn-a.akamaihd.net/steam/apps/" + appid + "/header_292x136.jpg";
-	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">\r\n\t\t\t\t<a class=\"box-link\" href=\"javascript:Main.focus(" + appid + ")\"></a>\r\n\t\t\t\t<div class=\"box-image\" id=\"" + boxImageId + "\">\r\n\t\t\t\t\t<img src=\"" + headerURL + "\" alt=\"" + title + "\" title=\"" + title + "\"/>\r\n\t\t\t\t</div>\n" + Render.microtrailer(index,entry,"microtrailer","","",true) + "\n" + ("<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">\r\n\t\t\t\t\t<p>" + selectToExplore + "</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-doodads\" id=\"" + doodadId + "\">") + discountBlock + ("</div>\r\n\t\t\t\t<div class=\"title\" id=\"box-title\" title='" + recBlurb + "'>\r\n\t\t\t\t\t" + recTitle + "\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-buttons\" id=\"" + boxButtonsId + "\">\r\n\t\t\t\t\t" + wishlistBtn + "\r\n\t\t\t\t\t" + detailsBtn + "\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-tags hide-fancy\" id=\"" + boxTagsId + "\">\r\n\t\t\t\t\t<em>" + keyThings + "</em><br>\r\n\t\t\t\t\t" + tagHTML + "\r\n\t\t\t\t</div>\r\n\t\t\t</div>");
+	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">\r\n\t\t\t\t<a class=\"box-link\" href=\"javascript:Main.focus(" + appid + ")\"></a>\r\n\t\t\t\t<div class=\"box-image\" id=\"" + boxImageId + "\">\r\n\t\t\t\t\t<img src=\"" + headerURL + "\" alt=\"" + title + "\" title=\"" + title + "\"/>\r\n\t\t\t\t</div>\n" + Render.microtrailer(index,entry,"microtrailer","","",true) + "\n" + ("<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">\r\n\t\t\t\t\t<p>" + selectToExplore + "</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-doodads\" id=\"" + doodadId + "\">") + discountBlock + "</div>" + ("<div class=\"box-buttons\" id=\"" + boxButtonsId + "\">\r\n\t\t\t\t\t" + wishlistBtn + "\r\n\t\t\t\t\t" + detailsBtn + "\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-tags hide-fancy\" id=\"" + boxTagsId + "\">\r\n\t\t\t\t\t<em>" + keyThings + "</em><br>\r\n\t\t\t\t\t" + tagHTML + "\r\n\t\t\t\t</div>\r\n\t\t\t</div>");
 	return html;
 };
 Render.detailsButton = function(appid,url) {
@@ -2840,6 +3022,7 @@ Render.grid = function(recommendations,focus,sink,first) {
 	var html = "";
 	var b = 0;
 	html += Render.backRefreshButtons();
+	var headers = [Render.similarBlurb("reccats").title,Render.similarBlurb("recdefault").title,Render.similarBlurb("recgems").title];
 	html += "<section class=\"side-panel\" id=\"side-panel\">\n";
 	if(focus != null) {
 		html += Render.focusBox(focus) + "\n";
@@ -2848,14 +3031,24 @@ Render.grid = function(recommendations,focus,sink,first) {
 	}
 	html += "</section>\n";
 	html += "<section class=\"grid-container\" id=\"grid\">";
+	html += "<section class=\"header-container\">";
 	var _g = 0;
 	while(_g < 3) {
 		var i = _g++;
+		var boxHeaderId = "box-header-" + i;
+		html += "<div id=\"" + boxHeaderId + "\" class=\"box-header\">";
+		html += "<a href=\"javascript:Main.clickColumn(" + i + ")\"><p>" + headers[i] + "</p></a>";
+		html += "</div>";
+	}
+	html += "</section>";
+	var _g1 = 0;
+	while(_g1 < 3) {
+		var i1 = _g1++;
 		html += "<section class=\"box-container\">";
 		var j = 0;
-		var _g1 = 0;
-		while(_g1 < 3) {
-			var j1 = _g1++;
+		var _g11 = 0;
+		while(_g11 < 3) {
+			var j1 = _g11++;
 			var entry = recommendations[b];
 			html += Render.box(b,entry,sink,first);
 			++b;
@@ -2936,11 +3129,12 @@ StringTools.__name__ = true;
 StringTools.replace = function(s,sub,by) {
 	return s.split(sub).join(by);
 };
-var TagDB = function(map) {
+var TagDB = function(map,tags) {
 	this.allCategories = [];
 	this.allTags = [];
 	this.id2Cat = map;
 	this.cat2Id = new haxe_ds_StringMap();
+	this.id2Name = new haxe_ds_StringMap();
 	var id = map.keys();
 	while(id.hasNext()) {
 		var id1 = id.next();
@@ -2958,10 +3152,33 @@ var TagDB = function(map) {
 			this.allTags.push(id1);
 		}
 	}
+	var id2 = tags.keys();
+	while(id2.hasNext()) {
+		var id3 = id2.next();
+		var name = __map_reserved[id3] != null ? tags.getReserved(id3) : tags.h[id3];
+		var _this = this.id2Name;
+		if(__map_reserved[id3] != null) {
+			_this.setReserved(id3,name);
+		} else {
+			_this.h[id3] = name;
+		}
+	}
 };
 TagDB.__name__ = true;
 TagDB.prototype = {
-	copyTagMatch: function(tm) {
+	getName: function(id) {
+		var _this = this.id2Name;
+		if(__map_reserved[id] != null ? _this.existsReserved(id) : _this.h.hasOwnProperty(id)) {
+			var _this1 = this.id2Name;
+			if(__map_reserved[id] != null) {
+				return _this1.getReserved(id);
+			} else {
+				return _this1.h[id];
+			}
+		}
+		return "tag<" + id + ">";
+	}
+	,copyTagMatch: function(tm) {
 		var tm2 = { category : tm.category, tags : tm.tags != null ? tm.tags.slice() : null, weight : tm.weight, focusCount : tm.focusCount, otherCount : tm.otherCount};
 		return tm2;
 	}
@@ -3798,6 +4015,7 @@ Main.tempWishlist = [];
 Main.justClickedBreadcrumb = false;
 Main.justClickedAppBack = false;
 Main.originalHistory = "";
+Main.columnHeaders = ["reccats","recdefault","recgems"];
 Main.baseMap = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567889+*";
 js_Boot.__toStr = ({ }).toString;
 Main.main();

@@ -255,6 +255,11 @@
 	border: none;
 }
 
+.search_results_count {
+	padding: 10px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+}
+
 .search_results_filtered_warning {
 	display: flex;
 }

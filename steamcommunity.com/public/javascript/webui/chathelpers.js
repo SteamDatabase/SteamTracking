@@ -157,10 +157,10 @@
         return E;
       }),
       n.d(t, "e", function() {
-        return y;
+        return S;
       }),
       n.d(t, "c", function() {
-        return S;
+        return y;
       });
     var i,
       a,
@@ -177,8 +177,8 @@
       v = 366490,
       b = "18446744073709551615",
       E = 0,
-      y = 2147483647;
-    function S(e, t) {
+      S = 2147483647;
+    function y(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -426,6 +426,18 @@
             e || (e = l());
             return e;
           })();
+        },
+        get BASE_URL() {
+          var e = window.location.href;
+          return e.startsWith(this.STORE_BASE_URL)
+            ? this.STORE_BASE_URL
+            : e.startsWith(this.COMMUNITY_BASE_URL)
+            ? this.COMMUNITY_BASE_URL
+            : e.startsWith(this.PARTNER_BASE_URL)
+            ? this.PARTNER_BASE_URL
+            : e.startsWith(this.HELP_BASE_URL)
+            ? this.HELP_BASE_URL
+            : "";
         },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
@@ -1733,13 +1745,13 @@
     ((v = f || (f = {}))[(v.k_EPending = 0)] = "k_EPending"),
       (v[(v.k_EAccepted = 1)] = "k_EAccepted"),
       (v[(v.k_ERejected = 2)] = "k_ERejected");
-    var E, y;
-    ((y = E || (E = {}))[(y.k_EClientUsedInputTypeKeyboard = 0)] =
+    var E, S;
+    ((S = E || (E = {}))[(S.k_EClientUsedInputTypeKeyboard = 0)] =
       "k_EClientUsedInputTypeKeyboard"),
-      (y[(y.k_EClientUsedInputTypeMouse = 1)] = "k_EClientUsedInputTypeMouse"),
-      (y[(y.k_EClientUsedInputTypeController = 2)] =
+      (S[(S.k_EClientUsedInputTypeMouse = 1)] = "k_EClientUsedInputTypeMouse"),
+      (S[(S.k_EClientUsedInputTypeController = 2)] =
         "k_EClientUsedInputTypeController"),
-      (y[(y.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
+      (S[(S.k_EClientUsedInputTypeMax = 3)] = "k_EClientUsedInputTypeMax");
   },
   mrSG: function(e, t, n) {
     "use strict";
@@ -2315,7 +2327,7 @@ and limitations under the License.
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
                 ? o.createElement(E, { controller: this.props.controller })
-                : o.createElement(y, { controller: this.props.controller })
+                : o.createElement(S, { controller: this.props.controller })
             );
           }),
           (t = Object(c.c)([l.a], t))
@@ -2396,7 +2408,7 @@ and limitations under the License.
                   )
                 : e.account_mismatch
                 ? o.createElement(
-                    S,
+                    y,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     o.createElement(
                       "div",
@@ -2454,7 +2466,7 @@ and limitations under the License.
                     )
                   )
                 : o.createElement(
-                    S,
+                    y,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     o.createElement(
                       "div",
@@ -2495,7 +2507,7 @@ and limitations under the License.
           (e = Object(c.c)([l.a], e))
         );
       })(o.Component),
-      y = (function(e) {
+      S = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -2515,7 +2527,7 @@ and limitations under the License.
           t
         );
       })(o.Component);
-    function S(e) {
+    function y(e) {
       return o.createElement(
         "div",
         { className: "ChatMessageInvite" },

@@ -2247,7 +2247,7 @@ background: -webkit-linear-gradient( -65deg, #304761 5%,#30739f 95%);
 
 /* friends recently purchased */
 .friends_recently_purchased {
-	margin: 30px auto 45px auto;
+    margin: 45px auto 0px auto;
 }
 
 .friends_recently_purchased .store_capsule {

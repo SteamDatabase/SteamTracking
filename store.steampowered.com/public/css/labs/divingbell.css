@@ -100,7 +100,7 @@ body.v6 .page_content  {
 .page_content .side-panel {
   width: 450px;
   background: linear-gradient(0deg, #3A5774cc 0.01%, #286591cc 49.2%, rgba(36, 38, 39, 0.69) 78.28%, rgba(0, 0, 0, 0) 101.55%);
-  height: 932px;
+  height: 847px;
   display: inline-block;
   vertical-align: top;
   margin: 5px;
@@ -168,6 +168,13 @@ body.v6 .page_content  {
 .page_content .breadcrumbbox {
 	font-family: Arial, sans-serif;
 	display: flex;
+	-webkit-mask-image: linear-gradient(to top, #00000044 0%, black 75%);
+  mask-image: linear-gradient(to top, #00000044 0%, black 75%);
+}
+
+.page_content .breadcrumbbox:hover {
+	-webkit-mask-image: none;
+  mask-image: none;
 }
 
 .page_content .breadcrumbbox .breadcrumb{	
@@ -199,9 +206,44 @@ body.v6 .page_content  {
 	flex-wrap: wrap;
 }
 
+.page_content .header-container {
+	display: flex;
+	flex: 3;
+	flex-wrap: wrap;
+}
+.page_content .box-header {
+	width: 292px;
+	height: 40px;
+
+	margin: 5px;
+	position: relative;
+	vertical-align: top;
+	border-radius: 5px;
+	background: linear-gradient(155.52deg, #2595D199 20%, #1A44C299 90%);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+		transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+.page_content .box-header:hover {
+	background: linear-gradient(155.52deg, #2595D1ff 20%, #1A44C2ff 90%);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+	color: rgba(255,255,255,0.8);
+}
+
+.page_content .box-header p {
+	color: #eee;
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+	vertical-align:middle;
+	padding-top: 1px;
+	line-height:40px;
+	letter-spacing: 0.05em;
+}
+
 .page_content .box {
 	width: 292px;
-	height: 304px;
+	height: 259px;
 	color: white;
 	margin: 5px;
 	background: linear-gradient(0deg, #3F6A8D22 0%, #3F6A8D55 18%, rgba(112, 195, 255, 0.25) 51.07%, #24282f66 95%, #24282f77 100% );	
@@ -228,6 +270,10 @@ body.v6 .page_content  {
 	transition-duration: .2s;
 }
 
+.page_content .box-doodads .discount_block{
+	line-height:8px;
+}
+
 .page_content .box-wrapper {
 	transition: all 0.1s ease-in-out;
 }
@@ -252,7 +298,7 @@ body.v6 .page_content  {
 
 .page_content .box-microtrailer {
 	width: 100%;
-	height: 136px;
+	height: 142px;
 	margin-bottom: 5px;
 	overflow: hidden;
 	transition-timing-function: ease-in;
@@ -326,6 +372,7 @@ body.v6 .page_content  {
 
 .page_content .box-image img {
 	display: block;
+	height: 142px;
 }
 
 .page_content .box.focused .box-image img
@@ -343,8 +390,7 @@ body.v6 .page_content  {
 	right: 5px;
 	left: 5px;
 	bottom: 7px;
-	font-size: 11px;
-	line-height: 140%;	
+	font-size: 12px;
 	opacity: 0.7;
 	transition-timing-function: ease-in;
 	transition-duration: .3s;
@@ -363,10 +409,14 @@ body.v6 .page_content  {
 .page_content .box-tags-focus p {
 	color: #eee	;
 	font-weight: normal;
+	font-size: 12px;
+	line-height: 16px;
 }
 
 .page_content .box-tags em, .page_content .box-tags-focus em {
 	color: #70C3FF;
+	font-weight: bold;
+	font-size: 12px;
 }
 
 
@@ -374,10 +424,10 @@ body.v6 .page_content  {
 	margin-left: 5px;
 	right: 5px;
 	left: 5px;
-	margin-top: 5px;
-	bottom: 7px;
+	margin-top: 2px;
+	bottom: 14px;
 	height: 100px;
-	font-size: 11px;
+	font-size: 12px;
 	opacity: 0.7;
 	transition-timing-function: ease-in;
 	transition-duration: .3s;
@@ -453,7 +503,7 @@ body.v6 .page_content  {
 }
 
 .empty-result {
-	display:none;
+	opacity:0;
 }
 
 .focus-box-microtrailer.hide-fancy {
@@ -528,7 +578,7 @@ body.v6 .page_content  {
 
 .page_content .box-buttons {
 	margin-left: 5px;
-	margin-top: 25px;
+	margin-top: 17px;
 	transition-duration: 0.3s;
 	transition-delay: 0.2s;
 	transition-timing-function: ease-in;
@@ -537,7 +587,7 @@ body.v6 .page_content  {
 .box.focused .box-buttons {
 	margin-top: 10px;
 	margin-left: 0px;
-	margin-bottom: 7px;
+	margin-bottom: 4px;
 }
 
 .page_content .breadcrumb-startover-container {
@@ -556,7 +606,7 @@ body.v6 .page_content  {
 .page_content .breadcrumb-startover-text {
 	position: absolute;
 	text-align: left;
-	padding-left: 10px;
+	padding-left: 20px;
 	font-size:11px;
 	line-height: 45px;
 	font-family:Motiva Sans; 
@@ -614,7 +664,7 @@ round buttons
 */
 
 .page_content .button-round{
-	width: 148px;
+	width: 140px;
 	height: 40px;
 	outline: none;
 	border: none; -webkit-border-radius: 50%; -moz-border-radius: 50%; 
@@ -656,7 +706,7 @@ round buttons
 .page_content .button-back {
 	position: absolute;
 	top: 60px;
-	left: 1052px; 
+	left: 1067px; 
 }
 
 .page_content .button-back p {
@@ -679,14 +729,14 @@ round buttons
 	width: 26px;
 	height: 26px;
 	bottom: 10px;
-	right: 55px;
+	right: 50px;
 	opacity: 0.9;
 }
 
 .page_content .button-refresh {
 	position: absolute;
 	top: 60px;
-	left: 1210px;
+	left: 1220px;
 }
 
 .page_content .button-refresh:hover p {
@@ -709,7 +759,7 @@ round buttons
 	width: 24px;
 	height: 24px;
 	bottom: 9px;
-	right: 55px;
+	right: 50px;
 
 }
 

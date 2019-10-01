@@ -3899,6 +3899,23 @@ iframe.steamTVLogin {
   background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
   background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%); }
 
+.broadcastwidgets_CapsuleContainer_18Ts- {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  overflow: hidden; }
+
+.broadcastwidgets_CapsuleBottomBar_1gdPZ {
+  background-color: black;
+  display: flex;
+  color: white;
+  padding: 4px;
+  height: 30px;
+  box-sizing: border-box; }
+
+.broadcastwidgets_CapsuleImage_1Qyc8 {
+  width: 100%; }
+
 .linkregionbox_LinkRegionDragBox_30gow {
   position: absolute;
   top: 32px;
@@ -7955,6 +7972,9 @@ button.TextButton:focus {
 .DialogDropDown {
   cursor: pointer;
   position: relative; }
+
+.DialogDropDown.Disabled {
+  cursor: initial; }
 
 .DialogDropDown:hover {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16); }
@@ -14122,6 +14142,13 @@ html.web_chat_frame .perf_timing_area {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px; }
+
+.gameInviteMsg .acceptButtonsGroup {
+  display: flex;
+  flex-direction: row; }
+
+.acceptButtonsGroup .DialogButton {
+  margin-right: 10px; }
 
 .gameInviteMsg .playingWithAvatars {
   display: flex;

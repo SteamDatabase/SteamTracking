@@ -1121,6 +1121,7 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_GameInvite_Invite: "%1$s invited you to play",
   ChatRoom_GameInvite_PlayingWith: "playing with:",
   ChatRoom_GameInvite_Accept: "Play Game",
+  ChatRoom_GameInvite_Accept_And_Voice_Chat: "Play & Voice Chat",
   ChatRoom_GameInvite_InviteTime: "Invited at ",
   ChatRoom_GameInvite_PartyMore: "+ %1$s More",
   ChatRoom_GameInvite_Dismissed: "%1$s invited you to play %2$s%3$s",
