@@ -822,7 +822,7 @@ body.modals_BodyNoScroll_32ZiC {
       .LibraryDisplaySizeSmall .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_DisplayCaseContainer_3vMgn {
         transform-origin: 40% 20%; }
 
-@media (max-width: 1700px) {
+@media screen and (max-width: 1774px) {
   .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_Grid_Ma65K {
     grid-template-columns: repeat(auto-fit, 175px);
     grid-gap: 24px 18px; }
@@ -831,7 +831,7 @@ body.modals_BodyNoScroll_32ZiC {
   .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_NewCollection_2_dwx .allcollections_BigPlus_g0-tU {
     top: 20%; } }
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1158px) {
   .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_Grid_Ma65K {
     grid-template-columns: repeat(auto-fit, 130px);
     grid-gap: 20px 12px; }
@@ -1699,11 +1699,11 @@ body.modals_BodyNoScroll_32ZiC {
     opacity: 0;
     z-index: -1;
     position: absolute;
-    width: 124px;
-    height: 98px;
-    top: 4px;
-    left: 4px;
-    padding-top: unset;
+    width: 166px;
+    height: 80px;
+    top: 2px;
+    left: 0px;
+    padding: 3px 8px;
     background-color: rgba(44, 55, 74, 0.95) !important;
     transform: translateY(-42px) translateX(-92px) scale(0.3);
     box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.63) !important;
@@ -1887,7 +1887,7 @@ body.modals_BodyNoScroll_32ZiC {
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: inherit;
     margin-bottom: 16px; }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1158px) {
     .appactionbutton_PlayButtonContainer_1FnJ6:not(.appactionbutton_LongButton_20gjC) {
       min-width: 114px;
       height: 32px; }
@@ -1982,7 +1982,7 @@ body.modals_BodyNoScroll_32ZiC {
       line-height: 20px;
       font-size: 13px;
       letter-spacing: 1px; }
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1158px) {
       :not(.appactionbutton_LongButton_20gjC) .appactionbutton_PlayButton_3ydig .appactionbutton_ButtonText_33cnX {
         font-size: 16px; } }
   .appactionbutton_Disabled_1Pb6P .appactionbutton_PlayButton_3ydig .appactionbutton_ButtonText_33cnX {
@@ -3331,7 +3331,7 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
 		first and last child and will therefore have opacity 1.  When a status section is added as
 		the first child, the game stats section will transition to opacity 0
 	*/ }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1158px) {
     .appdetailsplaysection_StatusAndStats_1YbtI {
       align-items: normal; } }
   .appdetailsplaysection_StatusAndStats_1YbtI.appdetailsplaysection_PermanentlyUnavailable_3CYvy {
@@ -3578,14 +3578,14 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
   display: flex;
   flex-flow: row;
   margin: 0px 0px auto 30px; }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1158px) {
     .appdetailsplaysection_GameStat_1kiZK {
       margin-left: 25px; } }
   .appdetailsplaysection_GameStat_1kiZK .appdetailsplaysection_GameStatIcon_1tIg- {
     width: 30px;
     height: 30px;
     margin: 3px; }
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1158px) {
       .appdetailsplaysection_GameStat_1kiZK .appdetailsplaysection_GameStatIcon_1tIg- {
         display: none; } }
   .appdetailsplaysection_GameStat_1kiZK .appdetailsplaysection_GameStatRight_3m_zj {
@@ -3602,7 +3602,7 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
     flex-flow: row; }
     .appdetailsplaysection_MiniAchievements_UAhWi .appdetailsplaysection_AchievementProgressRow_16quG .appdetailsplaysection_DetailsProgressContainer_25YVD {
       flex: 1 1 auto; }
-      @media screen and (max-width: 1100px) {
+      @media screen and (max-width: 1158px) {
         .appdetailsplaysection_MiniAchievements_UAhWi .appdetailsplaysection_AchievementProgressRow_16quG .appdetailsplaysection_DetailsProgressContainer_25YVD {
           width: initial; } }
   .appdetailsplaysection_MiniAchievements_UAhWi .appdetailsplaysection_AchievementCountLabel_2muiK {
@@ -8111,7 +8111,7 @@ img.emoticon_emoticon_AB86v {
   line-height: 16px;
   color: white;
   background-color: #00000060; }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1158px) {
     .appdetailscommunityfeed_AnyThree_22fcF .appdetailscommunityfeed_InappropriateOverlay_aX5_K,
     .appdetailscommunityfeed_TwoTallAndTwoWide_3hdNY .appdetailscommunityfeed_InappropriateOverlay_aX5_K {
       font-size: 12px; } }
@@ -9111,7 +9111,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   transition-duration: .32s, 0s;
   animation: appdetailstradingcardssection_animateZ_3VKsZ .32s forwards;
   font-size: .1px; }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1158px) {
     .appdetailstradingcardssection_Card_1WsOn {
       width: 31%; } }
   @media screen and (min-width: 1200px) {
@@ -9120,7 +9120,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   @media screen and (min-width: 1400px) {
     .appdetailstradingcardssection_Card_1WsOn {
       width: 18%; } }
-  @media screen and (min-width: 1700px) {
+  @media screen and (min-width: 1774px) {
     .appdetailstradingcardssection_Card_1WsOn {
       max-width: 110px; } }
   .appdetailstradingcardssection_Card_1WsOn .appdetailstradingcardssection_CardContainer_2DUDv {
@@ -9213,7 +9213,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   color: white;
   margin-bottom: 64px;
   max-width: 66%; }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1158px) {
     .appdetailsactivitysection_ActivityFeedContainer_3yTl3 {
       max-width: 100%; } }
   .appdetailsactivitysection_ActivityFeedContainer_3yTl3 .appdetailsactivitysection_FetchMoreContainer_39Zur {
@@ -9576,7 +9576,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     grid-template-columns: 109px repeat(2, minmax(0, 1fr)) max-content;
     grid-column-gap: 8px;
     grid-template-areas: "portrait desc stats features"; }
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1158px) {
       .appdetailsgameinfopanel_Container_2jPMy .appdetailsgameinfopanel_InnerContainer_37mmO {
         grid-template-columns: 15% 1fr max-content;
         grid-template-rows: max-content max-content;
@@ -9605,7 +9605,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
       line-height: 18px; }
   .appdetailsgameinfopanel_Container_2jPMy .appdetailsgameinfopanel_Stats_3cntz {
     grid-area: stats; }
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1158px) {
       .appdetailsgameinfopanel_Container_2jPMy .appdetailsgameinfopanel_Stats_3cntz {
         display: flex;
         flex-direction: column;
@@ -9789,7 +9789,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 			grid-template-columns: 1fr;
 			grid-template-rows: auto auto;
 		}*/ }
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1158px) {
       .appdetailsscreenshotssection_ScreenshotsSection_2_TE0 .appdetailsscreenshotssection_Screenshots_2fgcq {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto; } }
@@ -10220,7 +10220,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 16px; }
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1158px) {
     .appdetailsprimarylinkssection_LinksSection_3-V8v {
       margin-top: 0px; } }
   .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_LinksSectionBody_25f0f {
@@ -11576,7 +11576,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
         box-shadow: 0px 2px 8px 1px black;
         opacity: 0;
         pointer-events: none; }
-        @media screen and (max-height: 550px) {
+        @media screen and (max-height: 600px) {
           .appfilterpane_Container_170Np .appfilterpane_FilterArea_1ennW .appfilterpane_FilterBucket_1axoi.appfilterpane_SearchResultsBox_MIMuV .appfilterpane_FilterBucketBoxes_32e6r {
             display: grid;
             grid-template-columns: 1fr 1fr; } }
@@ -12135,7 +12135,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     .LibraryDisplaySizeSmall .appportrait_LibraryItemActionButton_3AjoL.appportrait_Landscape_3VOR2,
     .LibraryDisplaySizeMedium .appportrait_LibraryItemActionButton_3AjoL.appportrait_Landscape_3VOR2 {
       bottom: 8px; }
-    @media (max-width: 1774px) {
+    @media screen and (max-width: 1774px) {
       .LibraryDisplaySizeAutomatic .appportrait_LibraryItemActionButton_3AjoL.appportrait_Landscape_3VOR2 {
         bottom: 8px; } }
     .appportrait_Short_yGeS6 .appportrait_LibraryItemActionButton_3AjoL.appportrait_Landscape_3VOR2 {
@@ -12251,11 +12251,11 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   .LibraryDisplaySizeSmall .appportrait_RecentGameFooter_2d1hS {
     height: 55px; }
 
-@media (max-width: 1774px) {
+@media screen and (max-width: 1774px) {
   .LibraryDisplaySizeAutomatic .appportrait_RecentGameFooter_2d1hS {
     height: 75px; } }
 
-@media (max-width: 1158px) {
+@media (max-width: 1158px), (max-height: 600px) {
   .LibraryDisplaySizeAutomatic .appportrait_RecentGameFooter_2d1hS {
     height: 55px; } }
 
@@ -13048,10 +13048,6 @@ div.appgrid_CoverSizeSlider_U4J9B {
     color: #74d1ff;
     background: linear-gradient(to right, #4f5364 0%, #444757 90%, rgba(69, 73, 88, 0) 110%); }
 
-@media screen and (max-width: 1024px) {
-  body .gamelistentry_Container_2-O4Z {
-    font-size: 13px; } }
-
 .gamelistentry_AppIconDownloading_2kzMb {
   box-sizing: border-box;
   margin-right: 5px;
@@ -13499,9 +13495,7 @@ div.appgrid_CoverSizeSlider_U4J9B {
 
 .gamelistbar_OneCollectionWarning_2Q95p {
   background-color: #3d3f47;
-  margin-left: 20px;
-  margin-top: 2px;
-  margin-bottom: 6px;
+  margin: 6px 32px;
   padding: 2px 6px 6px;
   border-radius: 3px;
   height: 14px;
@@ -13510,6 +13504,8 @@ div.appgrid_CoverSizeSlider_U4J9B {
   width: fit-content;
   font-size: 13px;
   color: white; }
+  .gamelistbar_OneCollectionWarning_2Q95p:hover {
+    background-color: #545763; }
 
 .apppartnereventspage_AppPartnerEventsPage_3CJsg {
   transition: all 0.32s ease-in-out;
@@ -15838,13 +15834,18 @@ textarea:-webkit-autofill:focus,
   .LibraryDisplaySizeSmall .libraryhome_UpdatesContainer_17uEB {
     height: 283px; }
 
-@media (max-width: 1774px) {
+@media screen and (max-width: 1774px) {
   .LibraryDisplaySizeAutomatic .libraryhome_UpdatesContainer_17uEB {
     height: 306px; } }
 
-@media (max-width: 1158px) {
+@media (max-width: 1158px), (max-height: 600px) {
   .LibraryDisplaySizeAutomatic .libraryhome_UpdatesContainer_17uEB {
-    height: 283px; } }
+    height: 283px;
+    padding-top: 12px; } }
+
+@media screen and (max-height: 600px) {
+  .libraryhome_LibraryHome_3Sb2o {
+    padding: 8px 14px; } }
 
 .libraryhome_LibraryHomeSection_1NCHR {
   height: 100%;
@@ -15976,7 +15977,7 @@ textarea:-webkit-autofill:focus,
   cursor: pointer;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5); }
 
-@media (max-width: 1774px) {
+@media screen and (max-width: 1774px) {
   .libraryhomefriendsactivity_LibraryAutomatic_3AWBh .libraryhomefriendsactivity_Carousel_1mIPY {
     height: 162px; }
   .libraryhomefriendsactivity_LibraryAutomatic_3AWBh .libraryhomefriendsactivity_HeroContainer_183Mf {
@@ -15985,7 +15986,7 @@ textarea:-webkit-autofill:focus,
   .libraryhomefriendsactivity_LibraryAutomatic_3AWBh .libraryhomefriendsactivity_LogoImage_2_Qh_.libraryhomefriendsactivity_LogoImage_2_Qh_ img {
     height: 90px; } }
 
-@media (max-width: 1158px) {
+@media (max-width: 1158px), (max-height: 600px) {
   .libraryhomefriendsactivity_LibraryAutomatic_3AWBh .libraryhomefriendsactivity_Carousel_1mIPY {
     height: 138px; }
   .libraryhomefriendsactivity_LibraryAutomatic_3AWBh .libraryhomefriendsactivity_HeroContainer_183Mf {
@@ -16364,7 +16365,7 @@ textarea:-webkit-autofill:focus,
     width: 240px;
     overflow: hidden; }
 
-@media (max-width: 1774px) {
+@media screen and (max-width: 1774px) {
   .LibraryDisplaySizeAutomatic .libraryhomenewupdates_PartnerEventRowCapsule_3YO5B {
     width: 280px;
     overflow: hidden; }
@@ -16376,7 +16377,7 @@ textarea:-webkit-autofill:focus,
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical; } }
 
-@media (max-width: 1158px) {
+@media (max-width: 1158px), (max-height: 600px) {
   .LibraryDisplaySizeAutomatic .libraryhomenewupdates_PartnerEventRowCapsule_3YO5B {
     width: 240px;
     overflow: hidden; }
@@ -16751,6 +16752,9 @@ textarea:-webkit-autofill:focus,
   border: 1px solid #47bfff;
   border-radius: 5px; }
 
+/* stylelint-disable */
+
+/* stylelint-enable */
 .libraryhomeshowcases_Showcase_V7RuD {
   box-sizing: border-box;
   border: 2px dashed transparent;
@@ -16988,6 +16992,14 @@ textarea:-webkit-autofill:focus,
         stroke: #c9c9c950;
         stroke-width: 3px;
         stroke-dasharray: 6; }
+
+@media screen and (max-height: 600px) {
+  .libraryhomeshowcases_Showcase_V7RuD {
+    padding: 6px 0px 0px; }
+    .libraryhomeshowcases_Showcase_V7RuD .libraryhomeshowcases_ShowcaseHeader_23Snl {
+      margin-bottom: 0px; }
+  .libraryhomeshowcases_AddShowcase_2aw5a {
+    line-height: 14px; } }
 
 /* reset browser styles */
 button.DialogButton {
@@ -18541,9 +18553,9 @@ body {
   position: absolute;
   z-index: 100;
   padding: 3px 8px;
-  height: 98px;
+  height: 80px;
   right: 4px;
-  top: 4px;
+  top: 2px;
   left: 4px;
   font-size: 13px;
   overflow: hidden;
@@ -18571,7 +18583,7 @@ body {
       font-weight: 500; }
     .removegamehover_Container_1rdB7 .removegamehover_Message_oYmrg .removegamehover_AppName_1cn0X, .removegamehover_Container_1rdB7 .removegamehover_Message_oYmrg .removegamehover_CollectionName_3Wdcn {
       display: inline-block;
-      max-width: 100%;
+      max-width: 60%;
       vertical-align: bottom;
       text-overflow: ellipsis;
       white-space: nowrap;

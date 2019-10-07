@@ -66,7 +66,7 @@
     },
     {
         "id": 167,
-        "size": 24,
+        "size": 32,
         "posted_in": "void CBaseAPIJob::PostAPIResult<DurationControl_t>(DurationControl_t*)"
     },
     {
@@ -491,7 +491,7 @@
     },
     {
         "id": 816,
-        "size": 8,
+        "size": 12,
         "posted_in": "CUserFriends::OpenChatDialog(CSteamID)"
     },
     {

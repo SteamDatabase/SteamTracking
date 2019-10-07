@@ -2050,6 +2050,7 @@
  D typeinfo for CCallbackImpl<2>
  D typeinfo for CCallbackImpl<3092>
  D typeinfo for CCallbackImpl<3096>
+ D typeinfo for CCallbackImpl<32>
  D typeinfo for CCallbackImpl<4120>
  D typeinfo for CCallbackImpl<4>
  D typeinfo for CCallbackImpl<520>
@@ -3341,6 +3342,7 @@
  D vtable for CCallbackImpl<2>
  D vtable for CCallbackImpl<3092>
  D vtable for CCallbackImpl<3096>
+ D vtable for CCallbackImpl<32>
  D vtable for CCallbackImpl<4120>
  D vtable for CCallbackImpl<4>
  D vtable for CCallbackImpl<520>
@@ -4057,6 +4059,7 @@
  R typeinfo name for CCallbackImpl<2>
  R typeinfo name for CCallbackImpl<3092>
  R typeinfo name for CCallbackImpl<3096>
+ R typeinfo name for CCallbackImpl<32>
  R typeinfo name for CCallbackImpl<4120>
  R typeinfo name for CCallbackImpl<4>
  R typeinfo name for CCallbackImpl<520>
@@ -5517,6 +5520,9 @@
  T CCallbackImpl<3096>::GetCallbackSizeBytes()
  T CCallbackImpl<3096>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<3096>::~CCallbackImpl()
+ T CCallbackImpl<32>::GetCallbackSizeBytes()
+ T CCallbackImpl<32>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<32>::~CCallbackImpl()
  T CCallbackImpl<4120>::GetCallbackSizeBytes()
  T CCallbackImpl<4120>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<4120>::~CCallbackImpl()
@@ -13096,6 +13102,7 @@
  T vgui::Menu::SetMenuItemHeight(int)
  T vgui::Menu::SetNumberOfVisibleItems(int)
  T vgui::Menu::SetVisible(bool)
+ T vgui::Menu::SetVisibleInternal(bool, bool)
  T vgui::Menu::SizeMenuItems()
  T vgui::Menu::UpdateMenuItem(int, char const*, KeyValues*, KeyValues const*)
  T vgui::Menu::UpdateMenuItem(int, wchar_t const*, KeyValues*, KeyValues const*)

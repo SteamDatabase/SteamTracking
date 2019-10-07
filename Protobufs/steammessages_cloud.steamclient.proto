@@ -114,6 +114,9 @@ message CCloud_ExternalStorageTransferReport_Notification {
 	optional uint64 bytes_actual = 7;
 	optional uint32 duration_ms = 8;
 	optional uint32 cellid = 9;
+	optional bool proxied = 10;
+	optional bool ipv6_local = 11;
+	optional bool ipv6_remote = 12;
 }
 
 message CCloud_ClientBeginFileUpload_Request {

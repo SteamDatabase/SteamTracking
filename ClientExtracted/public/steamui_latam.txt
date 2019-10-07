@@ -8103,4 +8103,6 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]Steam_SiteLicense_LockTitle"	"Restricted Usage"
 "Steam_SiteLicense_LockInfo"	"El operador de red ha agregado restricciones en el uso de Steam. Es posible que algunas funciones no estén disponibles mientras se ejecuta desde esta ubicación."
 "[english]Steam_SiteLicense_LockInfo"	"The network operator has added restrictions on Steam usage. Some functionality may be unavailable while running from this location."
+"steam_subnav_all_collections"	"Colecciones"
+"[english]steam_subnav_all_collections"	"Collections"
 }

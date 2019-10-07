@@ -7682,6 +7682,7 @@
  T vgui::Menu::SetMenuItemHeight(int)
  T vgui::Menu::SetNumberOfVisibleItems(int)
  T vgui::Menu::SetVisible(bool)
+ T vgui::Menu::SetVisibleInternal(bool, bool)
  T vgui::Menu::SizeMenuItems()
  T vgui::Menu::UpdateMenuItem(int, char const*, KeyValues*, KeyValues const*)
  T vgui::Menu::UpdateMenuItem(int, wchar_t const*, KeyValues*, KeyValues const*)
