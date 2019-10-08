@@ -53,10 +53,10 @@ BoxEntry.prototype = {
 			return;
 		}
 		this.tags.sort(function(a,b) {
-			if(a.count < b.count) {
+			if(a.count > b.count) {
 				return -1;
 			}
-			if(a.count > b.count) {
+			if(a.count < b.count) {
 				return 1;
 			}
 			return 0;
@@ -115,15 +115,6 @@ BoxEntry.prototype = {
 						allTags.push(other);
 					}
 				}
-				allTags.sort(function(a,b) {
-					if(a.weight < b.weight) {
-						return 1;
-					}
-					if(a.weight > b.weight) {
-						return -1;
-					}
-					return 0;
-				});
 				var allTagIds = [];
 				var _g2 = 0;
 				while(_g2 < allTags.length) {
@@ -157,54 +148,7 @@ BoxEntry.prototype = {
 			maxLines = 3;
 		}
 		var str = "";
-		if(this.tagCategories != null) {
-			var genreIndex = -1;
-			var i = 0;
-			var hasWarning = false;
-			var _g = 0;
-			var _g1 = this.tagCategories;
-			while(_g < _g1.length) {
-				var cat = _g1[_g];
-				++_g;
-				if(cat.category.indexOf("genre") != -1) {
-					genreIndex = i;
-					break;
-				} else {
-					var tmp = cat.category.indexOf("content") != -1;
-				}
-				++i;
-			}
-			i = 0;
-			var lines = 0;
-			str += "<div>";
-			var allTags = [];
-			var _g2 = 0;
-			var _g11 = this.tagCategories;
-			while(_g2 < _g11.length) {
-				var cat1 = _g11[_g2];
-				++_g2;
-				var names = this.getTagNames(cat1.tags);
-				var _g21 = 0;
-				while(_g21 < names.length) {
-					var name = names[_g21];
-					++_g21;
-					if(name != null && name != "") {
-						allTags.push(name);
-					}
-				}
-			}
-			var _g3 = 0;
-			while(_g3 < allTags.length) {
-				var tag = allTags[_g3];
-				++_g3;
-				if(i >= maxLines * 2) {
-					break;
-				}
-				str += "<p class=\"tag-list\"> " + tag + "</p>";
-				++lines;
-				++i;
-			}
-		}
+		var tmp = this.tagCategories != null;
 		str += "</div>";
 		return str;
 	}
@@ -238,44 +182,63 @@ BoxEntry.prototype = {
 			}
 			i = 0;
 			var lines = 0;
+			var genres = [];
 			var _g2 = 0;
 			var _g11 = this.tagCategories;
 			while(_g2 < _g11.length) {
 				var cat1 = _g11[_g2];
 				++_g2;
-				if(i >= maxLines) {
-					break;
-				}
 				if(cat1.category.indexOf("genre") != -1) {
-					if(i > genreIndex) {
-						continue;
-					}
+					genres = genres.concat(cat1.tags);
 				}
-				if(cat1.category.indexOf("weak") != -1) {
-					continue;
+			}
+			if(genres.length > 0) {
+				var hasRogueLike = Data.cheapIndexOf(genres,"1716") != -1;
+				var hasRogueLite = Data.cheapIndexOf(genres,"3959") != -1;
+				if(hasRogueLike && hasRogueLite) {
+					var i1 = Data.cheapIndexOf(genres,"1716");
+					genres.splice(i1,1);
 				}
-				var name = this.getCategoryName(cat1.category);
-				var bit = forHover ? "outline/" : "";
-				var url = Main.cdnURL + "/labs/diving_bell/emoji/" + bit + name + ".png?t=13\t";
-				var label = StrTool.fu(name);
-				var tagNames = "";
-				var names = this.getTagNames(cat1.tags);
-				var _g21 = 0;
-				while(_g21 < names.length) {
-					var name1 = names[_g21];
-					++_g21;
-					if(name1 == null || name1 == "") {
-						HxOverrides.remove(names,name1);
-					}
-				}
-				var arr = this.getTagNames(cat1.tags);
+				var arr = this.getTagNames(genres);
 				while(arr.length > 3) arr.pop();
-				tagNames = arr.join(", ");
+				var tagNames = arr.join(", ");
 				if(tagNames != null && tagNames.length > 0) {
-					if(!(tagNames.length == 1 && cat1.tags[0] == "492")) {
+					if(!(tagNames.length == 1 && genres[0] == "492")) {
 						str += "<p class=\"tag-list\"> " + tagNames + "</p>";
 						++lines;
 					}
+				}
+			}
+			var _g3 = 0;
+			var _g12 = this.tagCategories;
+			while(_g3 < _g12.length) {
+				var cat2 = _g12[_g3];
+				++_g3;
+				if(i >= maxLines) {
+					break;
+				}
+				if(cat2.category.indexOf("genre") != -1) {
+					continue;
+				}
+				if(cat2.category.indexOf("weak") != -1) {
+					continue;
+				}
+				var tagNames1 = "";
+				var names = this.getTagNames(cat2.tags);
+				var _g21 = 0;
+				while(_g21 < names.length) {
+					var name = names[_g21];
+					++_g21;
+					if(name == null || name == "") {
+						HxOverrides.remove(names,name);
+					}
+				}
+				var arr1 = this.getTagNames(cat2.tags);
+				while(arr1.length > 3) arr1.pop();
+				tagNames1 = arr1.join(", ");
+				if(lines < maxLines && tagNames1 != null && tagNames1.length > 0) {
+					str += "<p class=\"tag-list\"> " + tagNames1 + "</p>";
+					++lines;
 				}
 				++i;
 			}
@@ -465,8 +428,6 @@ Data.getBasicStuff = function(callback) {
 		var prefs = data.prefs;
 		var locMap = Data.parseLocs(data.locs);
 		var wishlist = Data.parseWishlist(data.wishlist);
-		console.log("tagMap = " + tagMap.toString());
-		console.log("tags = " + tags.toString());
 		var basicStuff = { baseUrl : data.baseUrl, cdnUrl : data.cdnUrl, tagMap : tagMap, tags : tags, prefs : prefs, locMap : locMap, loggedIn : data.loggedIn, wishlist : wishlist};
 		callback(basicStuff);
 	},function(error) {
@@ -677,9 +638,9 @@ Data.filterMatches = function(matches) {
 	}
 	return matches.map;
 };
-Data.getMatches = function(appid,recommenders,callback) {
+Data.getMatches = function(appid,recommenders,page,alreadySeen,callback) {
 	var recString = recommenders.join("-");
-	Data.request("dbapi/" + appid + "/matches/" + recString,[{ name : "beta_divingbell", value : "1"}],function(data) {
+	Data.request("dbapi/" + appid + "/" + page,[{ name : "beta_divingbell", value : "1"}],function(data) {
 		var map = null;
 		var matchData = null;
 		try {
@@ -687,9 +648,6 @@ Data.getMatches = function(appid,recommenders,callback) {
 			map = Data.filterMatches(matchData);
 			matchData.map = map;
 		} catch( msg ) {
-			if (msg instanceof js__$Boot_HaxeError) msg = msg.val;
-			console.log("msg = " + Std.string(msg));
-			console.log("data = \n" + data);
 		}
 		callback(matchData);
 	},function(error) {
@@ -730,7 +688,6 @@ Data.parseMatches = function(data) {
 			}
 		} else if(field == "keyTags") {
 			var keyTagBlob = Reflect.field(json,field);
-			console.log("keyTagBlob = " + JSON.stringify(keyTagBlob));
 			var _g21 = 0;
 			var _g31 = Reflect.fields(keyTagBlob);
 			while(_g21 < _g31.length) {
@@ -800,7 +757,6 @@ Data.parseMatches = function(data) {
 			}
 		}
 	}
-	console.log("keyTags = " + keyTags.toString());
 	return { map : map, tags : tags, keyTags : keyTags, details : details, storeItemData : storeItemData, wishlist : wishlist};
 };
 Data.getStarterApps = function(callback) {
@@ -885,7 +841,7 @@ Data.request = function(url,params,onData,onError) {
 		console.log("HTTP Error = " + Std.string(error));
 		onError(error);
 	};
-	query.request();
+	query.request(true);
 };
 Data.jsonToMapStrStr = function(json) {
 	var map = new haxe_ds_StringMap();
@@ -1383,47 +1339,6 @@ Main.getBlankAppIds = function() {
 Main.getTestAppIds = function() {
 	return ["670750","243220","512790","866440","258520","251110","383870","757480","239030"];
 };
-Main.getPreviousAppIdsForHistory = function() {
-	var boxes = [];
-	var _g = 0;
-	var _g1 = Main.breadcrumbBoxEntries;
-	while(_g < _g1.length) {
-		var arr = _g1[_g];
-		++_g;
-		var appids = [];
-		var _g2 = 0;
-		while(_g2 < arr.length) {
-			var entry = arr[_g2];
-			++_g2;
-			if(entry.appid != "" && entry.appid != null) {
-				appids.push(Main.base64Encode(Std.parseInt(entry.appid)));
-			}
-		}
-		var appidStr = appids.join(",");
-		boxes.push(appidStr);
-	}
-	var boxStr = boxes.join("-");
-	var refreshes = [];
-	var _g3 = 0;
-	var _g11 = Main.refreshHistory;
-	while(_g3 < _g11.length) {
-		var arr1 = _g11[_g3];
-		++_g3;
-		var appids1 = [];
-		var _g21 = 0;
-		while(_g21 < arr1.length) {
-			var entry1 = arr1[_g21];
-			++_g21;
-			if(entry1.appid != "" && entry1.appid != null) {
-				appids1.push(Main.base64Encode(Std.parseInt(entry1.appid)));
-			}
-		}
-		var appidStr1 = appids1.join(",");
-		refreshes.push(appidStr1);
-	}
-	var refreshStr = refreshes.join("-");
-	return "&bx=" + boxStr + "&rf=" + refreshStr;
-};
 Main.getPreviousAppIds = function() {
 	var appids = [];
 	var _g = 0;
@@ -1435,8 +1350,9 @@ Main.getPreviousAppIds = function() {
 		while(_g2 < arr.length) {
 			var entry = arr[_g2];
 			++_g2;
-			if(entry.appid != "" && appids.indexOf(entry.appid) == -1) {
-				appids.push(entry.appid);
+			var appid = entry.appid == null ? "null" : "" + entry.appid;
+			if(appid != "" && appids.indexOf(appid) == -1) {
+				appids.push(appid);
 			}
 		}
 	}
@@ -1449,8 +1365,9 @@ Main.getPreviousAppIds = function() {
 		while(_g21 < arr1.length) {
 			var entry1 = arr1[_g21];
 			++_g21;
-			if(entry1.appid != "" && appids.indexOf(entry1.appid) == -1) {
-				appids.push(entry1.appid);
+			var appid1 = entry1.appid == null ? "null" : "" + entry1.appid;
+			if(appid1 != "" && appids.indexOf(appid1) == -1) {
+				appids.push(appid1);
 			}
 		}
 	}
@@ -1459,13 +1376,15 @@ Main.getPreviousAppIds = function() {
 	while(_g4 < _g12.length) {
 		var breadcrumbid = _g12[_g4];
 		++_g4;
-		if(breadcrumbid != "" && appids.indexOf(breadcrumbid) == -1) {
-			appids.push(breadcrumbid);
+		var appid2 = breadcrumbid == null ? "null" : "" + breadcrumbid;
+		if(appid2 != "" && appids.indexOf(appid2) == -1) {
+			appids.push(appid2);
 		}
 	}
 	if(Main.focusedEntry != null) {
-		if(Main.focusedEntry.appid != "" && appids.indexOf(Main.focusedEntry.appid) == -1) {
-			appids.push(Main.focusedEntry.appid);
+		var appid3 = Std.string(Main.focusedEntry.appid);
+		if(appid3 != "" && appids.indexOf(appid3) == -1) {
+			appids.push(appid3);
 		}
 	}
 	return appids;
@@ -1643,24 +1562,40 @@ Main.renderHeader = function(i) {
 		headerNode.innerHTML = "<a href=\"javascript:Main.clickColumn(" + i + ")\"><p>" + headerTitle + "</p></a>";
 	}
 };
-Main.renderBoxes = function(sink) {
+Main.renderBoxes = function(sink,justThese) {
 	if(sink == null) {
 		sink = false;
 	}
-	var _g1 = 0;
-	var _g = Main.boxEntries.length;
-	while(_g1 < _g) {
-		var i = _g1++;
-		var boxNode = window.document.getElementById("box-" + i);
+	var indeces = justThese;
+	if(indeces == null) {
+		indeces = [];
+		var _g1 = 0;
+		var _g = Main.boxEntries.length;
+		while(_g1 < _g) {
+			var i = _g1++;
+			indeces.push(i);
+		}
+		console.log("indeces = " + Std.string(indeces));
+	}
+	var _g2 = 0;
+	while(_g2 < indeces.length) {
+		var i1 = indeces[_g2];
+		++_g2;
+		var boxNode = window.document.getElementById("box-" + i1);
 		if(boxNode != null) {
-			var entry = Main.boxEntries[i];
-			boxNode.innerHTML = Render.boxContent(i,entry,sink,Main.countHistory() == 0);
+			var entry = Main.boxEntries[i1];
+			boxNode.innerHTML = Render.boxContent(i1,entry,sink,Main.countHistory() == 0);
 			if(entry == null || entry.appid == null || entry.appid == "") {
 				GlobalStuff.addClass(boxNode,"empty-result");
 			} else {
 				GlobalStuff.removeClass(boxNode,"empty-result");
 			}
 		}
+	}
+	var html = Render.columnHeadersContent(Main.focusedEntry == null);
+	var node = window.document.getElementById("header-container");
+	if(node != null) {
+		node.innerHTML = html;
 	}
 };
 Main.getStarterApps = function(callback) {
@@ -1952,6 +1887,15 @@ Main.hideHover = function() {
 		GlobalStuff.hardHide(globalHover);
 	}
 };
+Main.toggleMicrotrailers = $hx_exports["Main"]["toggleMicrotrailers"] = function() {
+	var el = window.document.getElementById("checkbox-microtrailers");
+	if(el != null) {
+		Main.MICROTRAILERS = el.checked;
+		if(!Main.focusBusy) {
+			Render.hydrateBoxes(true);
+		}
+	}
+};
 Main.onClickFocusSearch = $hx_exports["Main"]["onClickFocusSearch"] = function() {
 	Main.focus("",null,function() {
 		Main.renderBackRefreshButtons();
@@ -2073,7 +2017,7 @@ Main.clickColumn = $hx_exports["Main"]["clickColumn"] = function(i) {
 	currHeader = cycle[index];
 	Main.columnHeaders[i] = currHeader;
 	Main.renderHeader(i);
-	Main.handleMatches(Main.focusedEntry.appid,Main.currMatches);
+	Main.updateMatches(Main.focusedEntry.appid,Main.currMatches,i);
 };
 Main.clickBreadcrumb = $hx_exports["Main"]["clickBreadcrumb"] = function(i) {
 	Main.justClickedBreadcrumb = true;
@@ -2125,6 +2069,9 @@ Main.focusFromSearch = $hx_exports["Main"]["focusFromSearch"] = function(appid) 
 	Main.focus(appid);
 };
 Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callback) {
+	if(Main.focusBusy) {
+		return;
+	}
 	var priorApp = "";
 	var priorTitle = "";
 	if(Main.focusedEntry != null) {
@@ -2181,9 +2128,17 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 		detailsWereNull = true;
 	}
 	if(showTheseBoxes == null || showTheseBoxes.length == 0) {
-		Data.getMatches(appid,["rec1","rec2","rec3","rec4","rec5"],function(rawMatches) {
+		Main.focusBusy = true;
+		var tmp = Main.getPreviousAppIds();
+		Data.getMatches(appid,["reccats","recdefault","recgems"],0,tmp,function(rawMatches) {
+			Main.focusBusy = false;
+			if(rawMatches == null || rawMatches.map == null) {
+				Main.handleMatches(appid,null,callback);
+				return;
+			}
 			rawMatches.map = Main.removeByPreferences(rawMatches.map);
 			Main.currMatches = rawMatches;
+			Main.matchPage = 0;
 			if(detailsWereNull) {
 				var _this1 = Main.currMatches.details;
 				if(__map_reserved[appid] != null) {
@@ -2225,6 +2180,80 @@ Main.displayBoxes = function(showTheseBoxes,callback) {
 		}
 		return true;
 	});
+};
+Main.getMoreMatches = function(appid,callback) {
+	Data.getMatches(appid,["reccats","recdefault","recgems"],Main.matchPage + 1,Main.getPreviousAppIds(),function(rawMatches) {
+		rawMatches.map = Main.removeByPreferences(rawMatches.map);
+		Main.addToCurrentMatches(rawMatches);
+		Main.matchPage++;
+		if(Main.LOGGED_IN) {
+			Main.wishlist = rawMatches.wishlist;
+			Main.tempWishlist = [];
+		}
+		if(callback != null) {
+			callback();
+		}
+	});
+};
+Main.addToCurrentMatches = function(rawMatches) {
+	var currMap = Main.currMatches.map;
+	var rawMap = rawMatches.map;
+	var key = currMap.keys();
+	while(key.hasNext()) {
+		var key1 = key.next();
+		var currAppIds = __map_reserved[key1] != null ? currMap.getReserved(key1) : currMap.h[key1];
+		var rawAppIds = __map_reserved[key1] != null ? rawMap.getReserved(key1) : rawMap.h[key1];
+		var _g = 0;
+		while(_g < rawAppIds.length) {
+			var appid = rawAppIds[_g];
+			++_g;
+			if(currAppIds.indexOf(appid) == -1) {
+				currAppIds.push(appid);
+			}
+		}
+	}
+	var currDetails = Main.currMatches.details;
+	var rawDetails = rawMatches.details;
+	var key2 = rawDetails.keys();
+	while(key2.hasNext()) {
+		var key3 = key2.next();
+		if((__map_reserved[key3] != null ? currDetails.existsReserved(key3) : currDetails.h.hasOwnProperty(key3)) == false) {
+			var value = __map_reserved[key3] != null ? rawDetails.getReserved(key3) : rawDetails.h[key3];
+			if(__map_reserved[key3] != null) {
+				currDetails.setReserved(key3,value);
+			} else {
+				currDetails.h[key3] = value;
+			}
+		}
+	}
+	var currTags = Main.currMatches.tags;
+	var rawTags = rawMatches.tags;
+	var key4 = rawTags.keys();
+	while(key4.hasNext()) {
+		var key5 = key4.next();
+		if((__map_reserved[key5] != null ? currTags.existsReserved(key5) : currTags.h.hasOwnProperty(key5)) == false) {
+			var value1 = __map_reserved[key5] != null ? rawTags.getReserved(key5) : rawTags.h[key5];
+			if(__map_reserved[key5] != null) {
+				currTags.setReserved(key5,value1);
+			} else {
+				currTags.h[key5] = value1;
+			}
+		}
+	}
+	var currStoreItemData = Main.currMatches.storeItemData;
+	var rawStoreItemData = rawMatches.storeItemData;
+	var currRgApps = currStoreItemData.rgApps;
+	var rawRgApps = rawStoreItemData.rgApps;
+	var _g1 = 0;
+	var _g11 = Reflect.fields(rawRgApps);
+	while(_g1 < _g11.length) {
+		var appid1 = _g11[_g1];
+		++_g1;
+		var appBlob = Reflect.field(rawRgApps,appid1);
+		if(Object.prototype.hasOwnProperty.call(currRgApps,appid1) == false) {
+			currRgApps[appid1] = appBlob;
+		}
+	}
 };
 Main.removeByPreferences = function(rawMatches) {
 	if(rawMatches == null) {
@@ -2342,7 +2371,8 @@ Main.handleMatches = function(appid,rawMatches,callback) {
 			Main.lastMatchCount = recs.appids.length;
 		}
 		if(recs == null || recs.appids == null || recs.appids.length == 0) {
-			console.log("ERROR: couldn't narrow matches for (" + appid + ") rawMatches = " + rawMatches.map.toString());
+			var _this = rawMatches.map;
+			console.log("ERROR: couldn't narrow matches for (" + appid + ") rawMatches = " + Std.string(__map_reserved["reccats"] != null ? _this.getReserved("reccats") : _this.h["reccats"]));
 		} else {
 			var details = rawMatches.details;
 			if(details == null) {
@@ -2395,6 +2425,99 @@ Main.handleMatches = function(appid,rawMatches,callback) {
 		}
 	}
 };
+Main.updateMatches = function(appid,rawMatches,column) {
+	console.log("updateMatches(" + appid + "," + column + ")");
+	if(rawMatches == null) {
+		console.log("ERROR: couldn't get matches for (" + appid + ")");
+	} else {
+		var recs = Main.narrowMatches(rawMatches.map,Main.getPreviousAppIds(),column);
+		console.log("recs = " + Std.string(recs));
+		var colIds;
+		switch(column) {
+		case 0:
+			colIds = [0,3,6];
+			break;
+		case 1:
+			colIds = [1,4,7];
+			break;
+		case 2:
+			colIds = [2,5,8];
+			break;
+		default:
+			colIds = [0,3,6];
+		}
+		console.log("colIds = " + Std.string(colIds));
+		var count = 0;
+		if(recs != null) {
+			Main.lastMatchCount = recs.appids.length;
+		}
+		if(recs == null || recs.appids == null || recs.appids.length == 0) {
+			var _this = rawMatches.map;
+			console.log("ERROR: couldn't narrow matches for (" + appid + ") rawMatches = " + Std.string(__map_reserved["reccats"] != null ? _this.getReserved("reccats") : _this.h["reccats"]));
+		} else {
+			var i = 0;
+			var details = rawMatches.details;
+			var _g = 0;
+			while(_g < colIds.length) {
+				var colId = colIds[_g];
+				++_g;
+				Main.boxEntries[colId].appid = null;
+				Main.setBoxDetails(Main.boxEntries[colId],null);
+				Main.boxEntries[colId].recommender = "";
+				console.log("CLEARING : " + colId);
+			}
+			var lookup_0 = 0;
+			var lookup_1 = 3;
+			var lookup_2 = 6;
+			var lookup_3 = 1;
+			var lookup_4 = 4;
+			var lookup_5 = 7;
+			var lookup_6 = 2;
+			var lookup_7 = 5;
+			var lookup_8 = 8;
+			var _g1 = 0;
+			var _g11 = recs.appids;
+			while(_g1 < _g11.length) {
+				var appid1 = _g11[_g1];
+				++_g1;
+				if(i >= 3) {
+					break;
+				}
+				var detail = __map_reserved[appid1] != null ? details.getReserved(appid1) : details.h[appid1];
+				if(detail != null) {
+					var appid2 = detail.appid;
+					var arrIndex = -1;
+					var _g2 = 0;
+					while(_g2 < 9) {
+						var j = _g2++;
+						if(colIds.indexOf(j) != -1) {
+							console.log("ignore " + j);
+							continue;
+						}
+						var otherappid = Main.boxEntries[j].appid;
+						console.log("consider " + j + " = " + otherappid);
+						if(appid2 == otherappid) {
+							arrIndex = j;
+							break;
+						}
+					}
+					if(arrIndex != -1) {
+						console.log("MATCHED @ " + arrIndex + " FOR " + appid2 + " SO SKIP");
+						continue;
+					}
+					var boxIndex = colIds[i];
+					var entry = Main.boxEntries[boxIndex];
+					entry.appid = appid2;
+					Main.setBoxDetails(entry,detail,Main.focusedEntry);
+					entry.recommender = Main.columnHeaders[column];
+					console.log("Writing (" + appid2 + ") to position " + i + " = [" + colIds[i] + "]");
+					++i;
+				}
+			}
+			Main.updateTheseBoxes(colIds);
+		}
+	}
+};
 Main.setBoxDetails = function(boxEntry,detail,focusedEntry) {
 	boxEntry.setDetails(detail);
 	if(focusedEntry != null) {
@@ -2402,6 +2525,40 @@ Main.setBoxDetails = function(boxEntry,detail,focusedEntry) {
 	} else {
 		boxEntry.makeTagEntries([]);
 	}
+};
+Main.updateTheseBoxes = function(arr) {
+	var _g = 0;
+	while(_g < arr.length) {
+		var boxIndex = arr[_g];
+		++_g;
+		var entry = Main.boxEntries[boxIndex];
+		var _g1 = 0;
+		var _g2 = Main.breadcrumbBoxEntries;
+		while(_g1 < _g2.length) {
+			var bcEntries = _g2[_g1];
+			++_g1;
+			var _g3 = 0;
+			while(_g3 < bcEntries.length) {
+				var bcEntry = bcEntries[_g3];
+				++_g3;
+				if(bcEntry.appid == entry.appid) {
+					entry.title = entry.title;
+				}
+			}
+		}
+		if(entry.tags != null) {
+			if(Main.focusedEntry != null && Main.focusedEntry.tags != null) {
+				var comparison = Main.tagDB.compare(Main.focusedEntry.tags,entry.tags);
+				var results = Main.tagDB.normalizeMatches(comparison.matches);
+				entry.tagCategories = results;
+			} else {
+				var comparison1 = Main.tagDB.compare(entry.tags,entry.tags);
+				var results1 = Main.tagDB.normalizeMatches(comparison1.matches);
+				entry.tagCategories = results1;
+			}
+		}
+	}
+	Main.afterUpdateBoxes(arr);
 };
 Main.updateBoxes = function() {
 	var _g = 0;
@@ -2435,10 +2592,13 @@ Main.updateBoxes = function() {
 			}
 		}
 	}
+	Main.afterUpdateBoxes();
+};
+Main.afterUpdateBoxes = function(justThese) {
 	if(Main.focusedEntry != null && Main.focusedEntry.tags != null) {
-		var comparison2 = Main.tagDB.compare(Main.focusedEntry.tags,Main.focusedEntry.tags);
-		var results2 = Main.tagDB.normalizeMatches(comparison2.matches);
-		Main.focusedEntry.tagCategories = results2;
+		var comparison = Main.tagDB.compare(Main.focusedEntry.tags,Main.focusedEntry.tags);
+		var results = Main.tagDB.normalizeMatches(comparison.matches);
+		Main.focusedEntry.tagCategories = results;
 		Main.focusedEntry.makeTagEntries(Main.focusedEntry.tags,true);
 	}
 	if(Main.gridObserver != null) {
@@ -2453,9 +2613,32 @@ Main.updateBoxes = function() {
 	});
 	var gridRoot = window.document.getElementById("grid");
 	Main.gridObserver.observe(gridRoot,{ attributes : true, childList : true, subtree : true});
-	Main.renderBoxes(true);
+	Main.renderBoxes(true,justThese);
 	Main.updateBoxesHover();
 	Main.renderBackRefreshButtons();
+	if(Main.isContentStarved() && Main.focusedEntry != null) {
+		EggTimer.runOnce(1000,function() {
+			Main.getMoreMatches(Main.focusedEntry.appid,function() {
+				var result = Main.isContentStarved();
+			});
+			return true;
+		});
+	}
+};
+Main.isContentStarved = function() {
+	if(Main.currMatches == null) {
+		return false;
+	}
+	var key = Main.currMatches.map.keys();
+	while(key.hasNext()) {
+		var key1 = key.next();
+		var _this = Main.currMatches.map;
+		var list = __map_reserved[key1] != null ? _this.getReserved(key1) : _this.h[key1];
+		if(list.length <= 18) {
+			return true;
+		}
+	}
+	return false;
 };
 Main.updateBoxesHover = function() {
 	var _g = 0;
@@ -2505,7 +2688,10 @@ Main.updateBoxesHover = function() {
 		GlobalStuff.bindHoverEvents("box-focused",appIdInt1,true,onMouseEnterFocus,onMouseLeaveFocus);
 	}
 };
-Main.narrowMatches = function(rawMatches,previousAppIds) {
+Main.narrowMatches = function(rawMatches,previousAppIds,column) {
+	if(column == null) {
+		column = -1;
+	}
 	var matchTypes = [];
 	var recommender = rawMatches.keys();
 	while(recommender.hasNext()) {
@@ -2536,7 +2722,12 @@ Main.narrowMatches = function(rawMatches,previousAppIds) {
 	var target = 9;
 	var matches = { appids : [], recommenders : []};
 	var columns = [{ appids : [null,null,null], recommenders : ["","",""]},{ appids : [null,null,null], recommenders : ["","",""]},{ appids : [null,null,null], recommenders : ["","",""]}];
-	var matchQuota = [{ name : Main.columnHeaders[0], value : 3, count : 0},{ name : Main.columnHeaders[1], value : 3, count : 0},{ name : Main.columnHeaders[2], value : 3, count : 0}];
+	var matchQuota = [];
+	if(column == -1) {
+		matchQuota = [{ name : Main.columnHeaders[0], value : 3, count : 0},{ name : Main.columnHeaders[1], value : 3, count : 0},{ name : Main.columnHeaders[2], value : 3, count : 0}];
+	} else {
+		matchQuota = [{ name : Main.columnHeaders[column], value : 9, count : 0}];
+	}
 	var matchedApps = [];
 	var failsafe1 = 100;
 	while(target > 0 && failsafe1 > 0) {
@@ -2578,17 +2769,17 @@ Main.narrowMatches = function(rawMatches,previousAppIds) {
 	}
 	var _g5 = 0;
 	while(_g5 < columns.length) {
-		var column = columns[_g5];
+		var column1 = columns[_g5];
 		++_g5;
 		var _g12 = 0;
-		var _g22 = column.appids;
+		var _g22 = column1.appids;
 		while(_g12 < _g22.length) {
 			var appid2 = _g22[_g12];
 			++_g12;
 			matches.appids.push(appid2);
 		}
 		var _g13 = 0;
-		var _g23 = column.recommenders;
+		var _g23 = column1.recommenders;
 		while(_g13 < _g23.length) {
 			var recommender3 = _g23[_g13];
 			++_g13;
@@ -2599,6 +2790,22 @@ Main.narrowMatches = function(rawMatches,previousAppIds) {
 };
 Main.clear = function() {
 	Main.domRoot.innerHTML = "<main class=\"diving-bell-content\"></main>";
+};
+Main.getPotatoScore = function() {
+	var someConstant = 1.156 * Math.pow(10,-8);
+	var oldTime = new Date().getTime() / 1000;
+	var amount = 150000000;
+	var medianCPU = 3.0;
+	var _g1 = 0;
+	var _g = amount;
+	while(_g1 < _g) {
+		var j = _g1++;
+	}
+	var newTime = new Date().getTime() / 1000;
+	var deltaTime = newTime - oldTime;
+	var speed = someConstant * amount / deltaTime;
+	var estimatedSpeed = Math.round(someConstant * amount / medianCPU * 100) / 100;
+	return 0.0;
 };
 Math.__name__ = true;
 var Reflect = function() { };
@@ -2671,7 +2878,8 @@ Render.breadcrumbsContent = function(appids,titles) {
 			}
 		}
 	}
-	var html = "" + hr + "<p>" + blurb + "</p>\r\n\t\t\t<div class=\"note-preferences\">\r\n\t\t\t\t<p><strong>" + diveMapTitle + "</strong>&nbsp;&nbsp;&nbsp;" + diveMapBlurb + "</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"breadcrumbbox\">" + crumbs + "</div>";
+	var checked = Main.MICROTRAILERS ? "checked" : "";
+	var html = "" + hr + "<p>" + blurb + "</p>\r\n\t\t\t<div class=\"note-preferences\">\r\n\t\t\t\t<p><strong>" + diveMapTitle + "</strong>&nbsp;&nbsp;&nbsp;" + diveMapBlurb + "</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"container-checkbox-microtrailers\">\r\n\t\t\t\t<input type=\"checkbox\" name=\"microtrailers\" value=\"microtrailers\" id=\"checkbox-microtrailers\" onclick=\"Main.toggleMicrotrailers()\" " + checked + ">\r\n\t\t\t\t\t<label class=\"label-checkbox-microtrailers\" for=\"microtrailers\">Show Microtrailers</label>\r\n\t\t\t\t</input>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"breadcrumbbox\">" + crumbs + "</div>";
 	return html;
 };
 Render.header = function() {
@@ -2702,7 +2910,10 @@ Render.showBox = function(index,show) {
 		});
 	}
 };
-Render.hydrateMicrotrailer = function(index,entry,className,id) {
+Render.hydrateMicrotrailer = function(index,entry,className,id,overwrite) {
+	if(overwrite == null) {
+		overwrite = false;
+	}
 	if(id == null) {
 		id = "";
 	}
@@ -2712,7 +2923,7 @@ Render.hydrateMicrotrailer = function(index,entry,className,id) {
 	var boxMicrotrailerId = id == "" ? "box-microtrailer-" + index : id;
 	if(boxMicrotrailerId != null) {
 		var el = window.document.getElementById(boxMicrotrailerId);
-		if(el != null && el.childElementCount == 0) {
+		if(el != null && (el.childElementCount == 0 || overwrite)) {
 			el.innerHTML = Render._microtrailerContent(entry,className,index);
 		}
 		return true;
@@ -2789,7 +3000,12 @@ Render._microtrailerContent = function(entry,className,index) {
 	}
 	var error1 = "Render.replaceWithScreenshot(" + index + ",this)";
 	var error2 = "Render.replaceWithScreenshot(" + index + ",this)";
-	return "<video id=\"" + id + "\" class=\"" + className + "\" loop preload muted autoplay alt=\"" + title + "\">\r\n\t\t\t<source src=\"" + webm + "\" onerror=\"" + error1 + "\">\r\n\t\t\t<source src=\"" + mpeg4 + "\" onerror=\"" + error2 + "\">\r\n\t\t</video>\r\n\t\t<div class=\"hover_screenshots\" id=\"" + carouselid + "\" style=\"display:none\">\r\n\t\t\t" + screenshots + "\r\n\t\t</div>";
+	var videoTag = "";
+	if(Main.MICROTRAILERS) {
+		videoTag = "<video id=\"" + id + "\" class=\"" + className + "\" loop preload muted autoplay alt=\"" + title + "\">\r\n\t\t\t\t<source src=\"" + webm + "\" onerror=\"" + error1 + "\">\r\n\t\t\t\t<source src=\"" + mpeg4 + "\" onerror=\"" + error2 + "\">\r\n\t\t\t</video>";
+	}
+	var display = Main.MICROTRAILERS ? "style=display:none" : "";
+	return videoTag + "\n" + ("<div class=\"hover_screenshots\" id=\"" + carouselid + "\" " + display + ">\r\n\t\t\t" + screenshots + "\r\n\t\t</div>");
 };
 Render.focusBox = function(entry) {
 	if(entry == null || entry.appid == "") {
@@ -2881,16 +3097,16 @@ Render.similarBlurb = function(recommender) {
 	var recBlurb = "";
 	switch(recommender) {
 	case "reccats":
-		recTitle = Main.loc("#labs_deepdive_directmatch");
-		recBlurb = Main.loc("#labs_deepdive_directmatch_blurb");
+		recTitle = Main.loc("#labs_deepdive_keystonetagmatch");
+		recBlurb = Main.loc("#labs_deepdive_keystonetagmatch_blurb");
 		break;
 	case "recdefault":
-		recTitle = Main.loc("#labs_deepdive_indirectmatch");
-		recBlurb = Main.loc("#labs_deepdive_indirectmatch_blurb");
+		recTitle = Main.loc("#labs_deepdive_defaultmatch");
+		recBlurb = Main.loc("#labs_deepdive_defaultmatch_blurb");
 		break;
 	case "recgems":
-		recTitle = Main.loc("#labs_deepdive_similargem");
-		recBlurb = Main.loc("#labs_deepdive_similargem_blurb");
+		recTitle = Main.loc("#labs_deepdive_gemmatch");
+		recBlurb = Main.loc("#labs_deepdive_gemmatch_blurb");
 		break;
 	}
 	return { title : recTitle, blurb : recBlurb};
@@ -3012,6 +3228,25 @@ Render.backRefreshButtonsContent = function(enableBack,enableRefresh) {
 	var back = Main.loc("#labs_deepdive_back");
 	return "<div class='nav-button-wrapper'>" + ((enableBack ? "<button id=\"button-back\" class=\"button-back button-round\" onclick=\"Main.back()\">\r\n\t\t\t\t\t<p>" + back + "</p>\r\n\t\t\t\t\t<img src=\"" + backSvg + "\">\r\n\t\t\t\t </button>\n" : "<button id=\"button-back\" class=\"button-back button-round disabled\" onclick=\"\">\r\n\t\t\t\t\t<p>" + back + "</p>\r\n\t\t\t\t\t<img src=\"" + backSvg + "\">\r\n\t\t\t\t </button>\n") + (enableRefresh ? "<button id=\"button-refresh\" class=\"button-refresh button-round\" onclick=\"Main.refresh()\">\r\n\t\t\t\t\t<p>" + refresh + "</p>\r\n\t\t\t\t\t<img src=\"" + refreshSvg + "\">\r\n\t\t\t\t </button>\n" : "<button id=\"button-refresh\" class=\"button-refresh button-round disabled\" onclick=\"\">\r\n\t\t\t\t\t<p>" + refresh + "</p>\r\n\t\t\t\t\t<img src=\"" + refreshSvg + "\">\r\n\t\t\t\t </button>\n")) + "</div>";
 };
+Render.columnHeadersContent = function(first) {
+	if(first == null) {
+		first = false;
+	}
+	var html = "";
+	var _g = 0;
+	while(_g < 3) {
+		var i = _g++;
+		var headerText = Render.similarBlurb(Main.columnHeaders[i]).title;
+		if(first) {
+			headerText = "";
+		}
+		var boxHeaderId = "box-header-" + i;
+		html += "<div id=\"" + boxHeaderId + "\" class=\"box-header\">";
+		html += "<a href=\"javascript:Main.clickColumn(" + i + ")\"><p>" + headerText + "</p></a>";
+		html += "</div>";
+	}
+	return html;
+};
 Render.grid = function(recommendations,focus,sink,first) {
 	if(first == null) {
 		first = false;
@@ -3022,7 +3257,6 @@ Render.grid = function(recommendations,focus,sink,first) {
 	var html = "";
 	var b = 0;
 	html += Render.backRefreshButtons();
-	var headers = [Render.similarBlurb("reccats").title,Render.similarBlurb("recdefault").title,Render.similarBlurb("recgems").title];
 	html += "<section class=\"side-panel\" id=\"side-panel\">\n";
 	if(focus != null) {
 		html += Render.focusBox(focus) + "\n";
@@ -3031,24 +3265,17 @@ Render.grid = function(recommendations,focus,sink,first) {
 	}
 	html += "</section>\n";
 	html += "<section class=\"grid-container\" id=\"grid\">";
-	html += "<section class=\"header-container\">";
+	html += "<section id=\"header-container\" class=\"header-container\">";
+	html += Render.columnHeadersContent(first);
+	html += "</section>";
 	var _g = 0;
 	while(_g < 3) {
 		var i = _g++;
-		var boxHeaderId = "box-header-" + i;
-		html += "<div id=\"" + boxHeaderId + "\" class=\"box-header\">";
-		html += "<a href=\"javascript:Main.clickColumn(" + i + ")\"><p>" + headers[i] + "</p></a>";
-		html += "</div>";
-	}
-	html += "</section>";
-	var _g1 = 0;
-	while(_g1 < 3) {
-		var i1 = _g1++;
 		html += "<section class=\"box-container\">";
 		var j = 0;
-		var _g11 = 0;
-		while(_g11 < 3) {
-			var j1 = _g11++;
+		var _g1 = 0;
+		while(_g1 < 3) {
+			var j1 = _g1++;
 			var entry = recommendations[b];
 			html += Render.box(b,entry,sink,first);
 			++b;
@@ -3058,13 +3285,16 @@ Render.grid = function(recommendations,focus,sink,first) {
 	html += "<section>";
 	return html;
 };
-Render.hydrateBoxes = function() {
+Render.hydrateBoxes = function(overwrite) {
+	if(overwrite == null) {
+		overwrite = false;
+	}
 	var successes = 0;
 	var _g = 0;
 	while(_g < 9) {
 		var i = _g++;
 		var entry = Main.boxEntries[i];
-		var success = Render.hydrateMicrotrailer(i,entry);
+		var success = Render.hydrateMicrotrailer(i,entry,"microtrailer","",overwrite);
 		if(success) {
 			++successes;
 		}
@@ -3334,7 +3564,6 @@ TagDB.prototype = {
 			}
 		}
 		if(a == "1677") {
-			console.log("TURN BASED a == " + a + " b == " + b);
 			if(b == "1741" || b == "4325" || b == "14139") {
 				return a;
 			}
@@ -3736,25 +3965,6 @@ haxe_ds_StringMap.prototype = {
 		}
 		return out;
 	}
-	,toString: function() {
-		var s_b = "";
-		s_b += "{";
-		var keys = this.arrayKeys();
-		var _g1 = 0;
-		var _g = keys.length;
-		while(_g1 < _g) {
-			var i = _g1++;
-			var k = keys[i];
-			s_b += k == null ? "null" : "" + k;
-			s_b += " => ";
-			s_b += Std.string(Std.string(__map_reserved[k] != null ? this.getReserved(k) : this.h[k]));
-			if(i < keys.length - 1) {
-				s_b += ", ";
-			}
-		}
-		s_b += "}";
-		return s_b;
-	}
 	,__class__: haxe_ds_StringMap
 };
 var js__$Boot_HaxeError = function(val) {
@@ -3989,6 +4199,8 @@ function $bind(o,m) { if( m == null ) return null; if( m.__id__ == null ) m.__id
 String.prototype.__class__ = String;
 String.__name__ = true;
 Array.__name__ = true;
+Date.prototype.__class__ = Date;
+Date.__name__ = ["Date"];
 var Int = { __name__ : ["Int"]};
 var Dynamic = { __name__ : ["Dynamic"]};
 var Float = Number;
@@ -3998,6 +4210,7 @@ Bool.__ename__ = ["Bool"];
 var Class = { __name__ : ["Class"]};
 var Enum = { };
 var __map_reserved = {};
+Main.matchPage = 0;
 Main.breadcrumbs = [];
 Main.breadcrumbTitles = [];
 Main.breadcrumbBoxEntries = [];
@@ -4015,6 +4228,8 @@ Main.tempWishlist = [];
 Main.justClickedBreadcrumb = false;
 Main.justClickedAppBack = false;
 Main.originalHistory = "";
+Main.focusBusy = false;
+Main.MICROTRAILERS = true;
 Main.columnHeaders = ["reccats","recdefault","recgems"];
 Main.baseMap = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567889+*";
 js_Boot.__toStr = ({ }).toString;

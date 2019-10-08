@@ -229,7 +229,7 @@ LocalizationReady("shared", "english", {
   EventDisplay_DeleteEvent: "Delete Event",
 
   EventReminder_InProgress:
-    "(note that notification options shown here are representitive and not yet functional)",
+    "(note that notification options shown here are representative and not yet functional)",
   EventReminder_NotifyByEmail: "Notify me by Email",
   EventReminder_NotifyByEmail_ttip:
     "Steam will send an email notification to your account when the event starts.",
@@ -253,10 +253,28 @@ LocalizationReady("shared", "english", {
   EventEmail_Destination_Store: "Steam Store Page",
   EventEmail_Destination_Event: "Event Detail Page",
 
+  EventDashBoard_SummaryStats_Title: "Total Unique Impressions and Views",
+  EventDashBoard_SummaryStats_Desc:
+    "(Beta) These are impressions and reads for your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
+  EventDashBoard_Summary_LibraryHome_Shown: "Library Home Page Impressions:",
+  EventDashBoard_Summary_LibraryHome_Read: "Library Home Page Reads:",
+  EventDashBoard_Summary_AppDetailSpotlight_Shown:
+    "Library App Detail Spotlight Impressions:",
+  EventDashBoard_Summary_AppDetailSpotlight_Read:
+    "Library App Detail Spotlight Reads:",
+  EventDashBoard_Summary_AppDetailActivity_Shown:
+    "Library App Detail Activity Feed Impressions:",
+  EventDashBoard_Summary_AppDetailActivity_Read:
+    "Library App Detail Activity Feed Reads:",
+  EventDashBoard_Summary_StoreAppPage_Shown: "Store Product Page Impressions:",
+  EventDashBoard_Summary_StoreAppPage_Read: "Store Product Page Reads:",
+  EventDashBoard_Summary_Community_Shown: "Steam Community Impressions:",
+  EventDashBoard_Summary_Community_Read: "Steam Community Reads:",
+
   AddToWishlist: "Add to your Wishlist",
   Wishlisted: "In your Wishlist",
   AddToWishlist_ttip:
-    "Get notified by email when your wishlisted items get released on are on sale",
+    "Get notified by email when your wishlisted items get released or are on sale",
   Wishlist_Error: "Update Wishlist Error",
   Wishlist_Error_Desc:
     "We encountered an error adding to your wishlist. Please try again later:",
@@ -458,7 +476,7 @@ LocalizationReady("shared", "english", {
 
   EventEditor_ConvertHTML_Error: "Failed Converting HTML",
   EventEditor_ConvertHTML_Error_Desc:
-    "Failed Converting HTML to BBCode with the following error: '%1$s'",
+    "Failed Converting HTML to BBcode with the following error: '%1$s'",
   EventEditor_InsertLinkURL: "Insert URL",
   EventEditor_FormattingHelp_GetHelpLink: "Formatting help",
   EventEditor_ImportHTML: "Import HTML",
@@ -509,7 +527,7 @@ LocalizationReady("shared", "english", {
   Image_ErrorTitle: "Failed to Load Image '%1$s', possible issues include:",
   Image_Error_msg1: "Check that the path to the image is correct.",
   Image_Error_msg2:
-    "Check if server hosting the iamge support anonymous access. The browser console may indicate an error related Access-Control-Allow-Origin if it doesn't.",
+    "Check if server hosting the image supports anonymous access. The browser console may indicate an error related Access-Control-Allow-Origin if it doesn't.",
   Image_Error_suggestion:
     "You can always upload the image to Steam to host the content for free.",
 
@@ -626,7 +644,13 @@ LocalizationReady("shared", "english", {
   Broadcast_Store_FreeToPlay: "Free to Play",
 
   PartnerEvent_1: "Other Event",
+  PartnerEvent_2: "Game Event",
+  PartnerEvent_3: "Party Event",
   PartnerEvent_4: "Meeting Event",
+  PartnerEvent_5: "Special Cause",
+  PartnerEvent_6: "Music and Arts Event",
+  PartnerEvent_7: "Sports Event",
+  PartnerEvent_8: "Live Trip Event",
   PartnerEvent_9: "Chat",
   PartnerEvent_10: "Game Release",
   PartnerEvent_11: "Live-Stream / Broadcast",
@@ -792,6 +816,8 @@ LocalizationReady("shared", "english", {
   ChatEntryButton_Emoticon: "Emoticon Picker",
   ChatEntryButton_Flair: "Flair Picker",
   ChatEntryButton_SendEmbed: "Send Special",
+
+  Store_AddToCart: "Add to Cart",
 
   home_page_live_broadcast: "Live",
   StoreBroadcast_Hide_Tooltip: "Show/hide the live broadcast",

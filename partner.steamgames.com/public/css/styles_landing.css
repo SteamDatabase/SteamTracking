@@ -568,6 +568,10 @@ p {
 	.landingTable .td a:hover {
 		color: white;
 	}
+    .landingTable .td a.noformatting {
+        text-decoration: none;
+        color: inherit;
+    }
 
 	.landingTable strong {
 		color: #fff;

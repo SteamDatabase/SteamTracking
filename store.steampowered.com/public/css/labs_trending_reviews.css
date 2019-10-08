@@ -180,6 +180,27 @@ div.advanced_controls_toggle_icon.down {
 	padding-top: 5px;
 }
 
+.save_preferences_ctn {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: height 0.75s, opacity 0.75s;
+}
+
+.show_advanced_controls .save_preferences_ctn {
+	margin-top: 20px;
+	height: auto;
+	opacity: 1;
+}
+
+.save_preferences_desc {
+	color: #fff;
+	font-size: 14px;
+}
+#preferences_last_saved {
+	color: #fff;
+	padding: 5px;
+}
 
 .reviewed_app {
 	display: flex;

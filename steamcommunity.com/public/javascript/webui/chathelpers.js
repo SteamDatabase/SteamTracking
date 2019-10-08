@@ -124,61 +124,59 @@
         return o;
       }),
       n.d(t, "n", function() {
-        return c;
+        return s;
       }),
       n.d(t, "o", function() {
-        return p;
+        return u;
       }),
       n.d(t, "g", function() {
-        return l;
+        return c;
       }),
       n.d(t, "h", function() {
-        return m;
+        return p;
       }),
       n.d(t, "m", function() {
-        return h;
+        return l;
       }),
       n.d(t, "i", function() {
-        return d;
+        return m;
       }),
       n.d(t, "j", function() {
-        return _;
+        return h;
       }),
       n.d(t, "l", function() {
-        return f;
+        return d;
       }),
       n.d(t, "k", function() {
-        return v;
+        return _;
       }),
       n.d(t, "d", function() {
-        return b;
+        return f;
       }),
       n.d(t, "f", function() {
-        return E;
+        return v;
       }),
       n.d(t, "e", function() {
-        return S;
+        return E;
       }),
       n.d(t, "c", function() {
-        return y;
+        return b;
       });
     var i,
       a,
-      s,
-      u,
-      c = 1,
-      p = 4,
-      l = 750,
-      m = 799,
-      h = 7,
-      d = 250820,
-      _ = 330050,
-      f = 358510,
-      v = 366490,
-      b = "18446744073709551615",
-      E = 0,
-      S = 2147483647;
-    function y(e, t) {
+      s = 1,
+      u = 4,
+      c = 750,
+      p = 799,
+      l = 7,
+      m = 250820,
+      h = 330050,
+      d = 358510,
+      _ = 366490,
+      f = "18446744073709551615",
+      v = 0,
+      E = 2147483647;
+    function b(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -274,64 +272,96 @@
       (a[(a.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
       (a[(a.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (a[(a.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-      (a[(a.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
-      ((u = s || (s = {}))[(u.k_ELaunchSource_None = 0)] =
-        "k_ELaunchSource_None"),
-      (u[(u.k_ELaunchSource_2ftLibraryDetails = 100)] =
+      (a[(a.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent");
+    var S, y;
+    i.k_EOtherEvent,
+      i.k_EGameEvent,
+      i.k_EPartyEvent,
+      i.k_EMeetingEvent,
+      i.k_ESpecialCauseEvent,
+      i.k_EMusicAndArtsEvent,
+      i.k_ESportsEvent,
+      i.k_ETripEvent,
+      i.k_EChatEvent,
+      i.k_EGameReleaseEvent,
+      i.k_EBroadcastEvent,
+      i.k_ESmallUpdateEvent,
+      i.k_ERegularUpdateEvent,
+      i.k_EMajorUpdateEvent,
+      i.k_EFutureReleaseEvent,
+      i.k_EESportTournamentStreamEvent,
+      i.k_EDevStreamEvent,
+      i.k_EFamousStreamEvent,
+      i.k_EGameSalesEvent,
+      i.k_EGameItemSalesEvent,
+      i.k_EInGameBonusXPEvent,
+      i.k_EInGameLootEvent,
+      i.k_EInGamePerksEvent,
+      i.k_EInGameChallengeEvent,
+      i.k_EInGameContestEvent,
+      i.k_EIRLEvent,
+      i.k_ENewsEvent,
+      i.k_EBetaReleaseEvent,
+      i.k_EFreeTrial,
+      i.k_ESeasonRelease,
+      i.k_ECrosspostEvent;
+    ((y = S || (S = {}))[(y.k_ELaunchSource_None = 0)] =
+      "k_ELaunchSource_None"),
+      (y[(y.k_ELaunchSource_2ftLibraryDetails = 100)] =
         "k_ELaunchSource_2ftLibraryDetails"),
-      (u[(u.k_ELaunchSource_2ftLibraryListView = 101)] =
+      (y[(y.k_ELaunchSource_2ftLibraryListView = 101)] =
         "k_ELaunchSource_2ftLibraryListView"),
-      (u[(u.k_ELaunchSource_2ftLibraryGrid = 103)] =
+      (y[(y.k_ELaunchSource_2ftLibraryGrid = 103)] =
         "k_ELaunchSource_2ftLibraryGrid"),
-      (u[(u.k_ELaunchSource_InstallSubComplete = 104)] =
+      (y[(y.k_ELaunchSource_InstallSubComplete = 104)] =
         "k_ELaunchSource_InstallSubComplete"),
-      (u[(u.k_ELaunchSource_DownloadsPage = 105)] =
+      (y[(y.k_ELaunchSource_DownloadsPage = 105)] =
         "k_ELaunchSource_DownloadsPage"),
-      (u[(u.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
+      (y[(y.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
         "k_ELaunchSource_RemoteClientStartStreaming"),
-      (u[(u.k_ELaunchSource_2ftMiniModeList = 107)] =
+      (y[(y.k_ELaunchSource_2ftMiniModeList = 107)] =
         "k_ELaunchSource_2ftMiniModeList"),
-      (u[(u.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-      (u[(u.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
+      (y[(y.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
+      (y[(y.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
         "k_ELaunchSource_DashAppLaunchCmdLine"),
-      (u[(u.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
+      (y[(y.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
         "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-      (u[(u.k_ELaunchSource_RunByGameDir = 302)] =
+      (y[(y.k_ELaunchSource_RunByGameDir = 302)] =
         "k_ELaunchSource_RunByGameDir"),
-      (u[(u.k_ELaunchSource_SubCmdRunDashGame = 303)] =
+      (y[(y.k_ELaunchSource_SubCmdRunDashGame = 303)] =
         "k_ELaunchSource_SubCmdRunDashGame"),
-      (u[(u.k_ELaunchSource_SteamURL_Launch = 400)] =
+      (y[(y.k_ELaunchSource_SteamURL_Launch = 400)] =
         "k_ELaunchSource_SteamURL_Launch"),
-      (u[(u.k_ELaunchSource_SteamURL_Run = 401)] =
+      (y[(y.k_ELaunchSource_SteamURL_Run = 401)] =
         "k_ELaunchSource_SteamURL_Run"),
-      (u[(u.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
+      (y[(y.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
         "k_ELaunchSource_SteamURL_JoinLobby"),
-      (u[(u.k_ELaunchSource_SteamURL_RunGame = 403)] =
+      (y[(y.k_ELaunchSource_SteamURL_RunGame = 403)] =
         "k_ELaunchSource_SteamURL_RunGame"),
-      (u[(u.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
+      (y[(y.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
         "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-      (u[(u.k_ELaunchSource_SteamURL_RunSafe = 405)] =
+      (y[(y.k_ELaunchSource_SteamURL_RunSafe = 405)] =
         "k_ELaunchSource_SteamURL_RunSafe"),
-      (u[(u.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
-      (u[(u.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
+      (y[(y.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
+      (y[(y.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
         "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-      (u[(u.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
+      (y[(y.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
         "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-      (u[(u.k_ELaunchSource_Dota2Launcher = 700)] =
+      (y[(y.k_ELaunchSource_Dota2Launcher = 700)] =
         "k_ELaunchSource_Dota2Launcher"),
-      (u[(u.k_ELaunchSource_IRunGameEngine = 800)] =
+      (y[(y.k_ELaunchSource_IRunGameEngine = 800)] =
         "k_ELaunchSource_IRunGameEngine"),
-      (u[(u.k_ELaunchSource_DRMFailureResponse = 801)] =
+      (y[(y.k_ELaunchSource_DRMFailureResponse = 801)] =
         "k_ELaunchSource_DRMFailureResponse"),
-      (u[(u.k_ELaunchSource_DRMDataRequest = 802)] =
+      (y[(y.k_ELaunchSource_DRMDataRequest = 802)] =
         "k_ELaunchSource_DRMDataRequest"),
-      (u[(u.k_ELaunchSource_CloudFilePanel = 803)] =
+      (y[(y.k_ELaunchSource_CloudFilePanel = 803)] =
         "k_ELaunchSource_CloudFilePanel"),
-      (u[(u.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
+      (y[(y.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
-      (u[(u.k_ELaunchSource_GameActionJoinParty = 900)] =
+      (y[(y.k_ELaunchSource_GameActionJoinParty = 900)] =
         "k_ELaunchSource_GameActionJoinParty"),
-      (u[(u.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
+      (y[(y.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
         "k_ELaunchSource_AppPortraitContextMenu");
   },
   "1VtQ": function(e, t, n) {
@@ -460,8 +490,10 @@
       c = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
+        ANNOUNCEMENT_GID: "",
         IMG_URL: "",
         APPID: 0,
+        VANITY_ID: "",
         HEADER_IMAGE: "",
         APP_NAME: "",
         HAS_ADULT_CONTENT: !1,
@@ -621,7 +653,7 @@
         return f;
       }),
       n.d(t, "d", function() {
-        return b;
+        return E;
       });
     var u,
       r,
@@ -711,7 +743,7 @@
             var o,
               i,
               a,
-              s = b.GetExistingPopup(this.m_strName);
+              s = E.GetExistingPopup(this.m_strName);
             (s && !this.m_rgParams.replace_existing_popup) ||
               ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
               s
@@ -719,7 +751,7 @@
                   (o = s.m_popup),
                   s.ReleasePopup(),
                   (a = s.m_renderWhenReady),
-                  b.RemoveTrackedPopup(s),
+                  E.RemoveTrackedPopup(s),
                   o.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
                   o.removeEventListener("unload", s.OnUnload),
                   o.removeEventListener("resize", s.OnResizeEvent),
@@ -754,7 +786,7 @@
                 this.m_renderWhenReady.SetTarget(function() {
                   return r.RenderInternal(r.m_popup, r.m_element, e);
                 })),
-              b.AddTrackedPopup(this),
+              E.AddTrackedPopup(this),
               s && e && this.Focus());
           }),
           (e.prototype.RemoveEventListeners = function() {
@@ -792,7 +824,7 @@
           }),
           (e.prototype.OnUnload = function() {
             this.RemoveEventListeners(),
-              b.RemoveTrackedPopup(this),
+              E.RemoveTrackedPopup(this),
               this.OnClose(),
               a.unmountComponentAtNode(this.m_element);
           }),
@@ -940,13 +972,13 @@
               e.strRestoreDetails
                 ? e.strRestoreDetails &&
                   ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  b.SetRestoreDetails(
+                  E.SetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey,
                     e.strRestoreDetails,
                     this.m_bExpires
                   ))
                 : ((this.m_strInitialSavedDimensionsKey = this.GetSavedDimensionsKey()),
-                  (e.strRestoreDetails = b.GetRestoreDetails(
+                  (e.strRestoreDetails = E.GetRestoreDetails(
                     this.m_strInitialSavedDimensionsKey
                   ))),
               e
@@ -975,7 +1007,7 @@
                     n.m_strSavedDimensionsKey &&
                     e &&
                     !t &&
-                    (b.SetRestoreDetails(r, e, n.m_bExpires),
+                    (E.SetRestoreDetails(r, e, n.m_bExpires),
                     (n.m_rgParams.strRestoreDetails = e),
                     (n.m_strInitialSavedDimensionsKey = r),
                     n.OnResizeComplete(e));
@@ -989,7 +1021,7 @@
           }),
           (e.prototype.OnClose = function() {}),
           (e.prototype.SaveWindowPosition = function(e) {
-            b.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
+            E.SetRestoreDetails(this.GetSavedDimensionsKey(), e, !1),
               (this.m_rgParams.strRestoreDetails = e);
           }),
           Object(o.c)([p.a], e.prototype, "QueryAndStoreWindowPosition", null),
@@ -1124,12 +1156,12 @@
               var f = d[_];
               if ("stylesheet" == f.rel) {
                 for (
-                  var v = c.document.createElement("link"), b = 0;
-                  b < f.attributes.length;
-                  b++
+                  var v = c.document.createElement("link"), E = 0;
+                  E < f.attributes.length;
+                  E++
                 ) {
-                  var E = f.attributes.item(b);
-                  v.setAttribute(E.name, E.value);
+                  var b = f.attributes.item(E);
+                  v.setAttribute(b.name, b.value);
                 }
                 h.appendChild(v);
               }
@@ -1223,7 +1255,7 @@
           e
         );
       })(),
-      b = new v();
+      E = new v();
   },
   UqDm: function(e, t, n) {
     "use strict";
@@ -1622,13 +1654,13 @@
         return d;
       }),
       n.d(t, "c", function() {
-        return b;
+        return E;
       }),
       n.d(t, "e", function() {
         return f;
       }),
       n.d(t, "h", function() {
-        return E;
+        return b;
       });
     var r = n("mrSG"),
       o = n("0N1H");
@@ -1739,14 +1771,14 @@
       (_[(_.k_EComputerActiveStateIdle = 2)] = "k_EComputerActiveStateIdle");
     var f,
       v,
-      b = (function() {
+      E = (function() {
         return function() {};
       })();
     ((v = f || (f = {}))[(v.k_EPending = 0)] = "k_EPending"),
       (v[(v.k_EAccepted = 1)] = "k_EAccepted"),
       (v[(v.k_ERejected = 2)] = "k_ERejected");
-    var E, S;
-    ((S = E || (E = {}))[(S.k_EClientUsedInputTypeKeyboard = 0)] =
+    var b, S;
+    ((S = b || (b = {}))[(S.k_EClientUsedInputTypeKeyboard = 0)] =
       "k_EClientUsedInputTypeKeyboard"),
       (S[(S.k_EClientUsedInputTypeMouse = 1)] = "k_EClientUsedInputTypeMouse"),
       (S[(S.k_EClientUsedInputTypeController = 2)] =
@@ -2315,7 +2347,7 @@ and limitations under the License.
           e
         );
       })(),
-      b = (function(e) {
+      E = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -2326,14 +2358,14 @@ and limitations under the License.
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? o.createElement(E, { controller: this.props.controller })
+                ? o.createElement(b, { controller: this.props.controller })
                 : o.createElement(S, { controller: this.props.controller })
             );
           }),
           (t = Object(c.c)([l.a], t))
         );
       })(o.Component),
-      E = (function(t) {
+      b = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_bTriedToLaunchSteam = !1), e;
@@ -2562,8 +2594,8 @@ and limitations under the License.
     window.AssertMsg = u.a;
     var g,
       I,
-      C,
-      k = new a.a();
+      k,
+      C = new a.a();
     function L(e) {
       var t;
       try {
@@ -2571,9 +2603,9 @@ and limitations under the License.
       } catch (e) {}
       v.sm_rtTimeCur = t.rtTimeCur;
       var n = new v(t);
-      r.render(o.createElement(b, { controller: n }), e);
+      r.render(o.createElement(E, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = k),
+    (window.ClientConnectionAPI = C),
       document.addEventListener("DOMContentLoaded", function() {
         Object(i.c)(),
           (function() {
@@ -2597,16 +2629,16 @@ and limitations under the License.
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
           "friendsui" == e ? (g = n) : "shared" == e && (I = n);
-        else if ("shared" == e) C = n;
+        else if ("shared" == e) k = n;
         else {
           var r = void 0,
             o = null,
             i = void 0,
             a = null;
           void 0 !== g ? ((r = g), (o = n)) : (r = n),
-            void 0 !== I ? ((i = I), (a = C)) : (i = C),
+            void 0 !== I ? ((i = I), (a = k)) : (i = k),
             s.b.InitFromObjects(r, o, i, a),
-            (C = I = g = void 0);
+            (k = I = g = void 0);
         }
       });
   },
@@ -2632,10 +2664,10 @@ and limitations under the License.
         }
         return (
           (o.InitFromAccountID = function(e) {
-            return new o(e, s.b.EUNIVERSE, 1, i.n);
+            return new o(Number(e), s.b.EUNIVERSE, 1, i.n);
           }),
           (o.InitFromClanID = function(e) {
-            return new o(e, s.b.EUNIVERSE, 7, 0);
+            return new o(Number(e), s.b.EUNIVERSE, 7, 0);
           }),
           (o.prototype.GetAccountID = function() {
             return this.m_ulSteamID.getLowBitsUnsigned();

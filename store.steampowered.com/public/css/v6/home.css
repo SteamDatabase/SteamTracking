@@ -3303,6 +3303,15 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	background-position-x: 23px;
 }
 
+.best_selling_vr_ctn .carousel_container .arrow.left,
+.best_selling_vr_ctn .carousel_container .arrow.right {
+	transform: translateY(-14px);
+}
+
+.recommended_by_steam_labs_ctn .carousel_container .arrow.left,
+.recommended_by_steam_labs_ctn .carousel_container .arrow.right {
+	transform: translateY(-34px);
+}
 
 /* Specific capsule heights */
 .friends_recently_purchased .carousel_items {

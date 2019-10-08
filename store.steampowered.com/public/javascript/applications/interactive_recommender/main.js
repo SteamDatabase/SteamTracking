@@ -492,8 +492,8 @@
       PerHour: 3600,
       PerMinute: 60
     };
-    var v, f, S, y;
-    function T(e, t) {
+    var v, f;
+    function S(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -589,65 +589,97 @@
       (f[(f.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
       (f[(f.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (f[(f.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-      (f[(f.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
-      ((y = S || (S = {}))[(y.k_ELaunchSource_None = 0)] =
-        "k_ELaunchSource_None"),
-      (y[(y.k_ELaunchSource_2ftLibraryDetails = 100)] =
+      (f[(f.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent");
+    var y, T;
+    v.k_EOtherEvent,
+      v.k_EGameEvent,
+      v.k_EPartyEvent,
+      v.k_EMeetingEvent,
+      v.k_ESpecialCauseEvent,
+      v.k_EMusicAndArtsEvent,
+      v.k_ESportsEvent,
+      v.k_ETripEvent,
+      v.k_EChatEvent,
+      v.k_EGameReleaseEvent,
+      v.k_EBroadcastEvent,
+      v.k_ESmallUpdateEvent,
+      v.k_ERegularUpdateEvent,
+      v.k_EMajorUpdateEvent,
+      v.k_EFutureReleaseEvent,
+      v.k_EESportTournamentStreamEvent,
+      v.k_EDevStreamEvent,
+      v.k_EFamousStreamEvent,
+      v.k_EGameSalesEvent,
+      v.k_EGameItemSalesEvent,
+      v.k_EInGameBonusXPEvent,
+      v.k_EInGameLootEvent,
+      v.k_EInGamePerksEvent,
+      v.k_EInGameChallengeEvent,
+      v.k_EInGameContestEvent,
+      v.k_EIRLEvent,
+      v.k_ENewsEvent,
+      v.k_EBetaReleaseEvent,
+      v.k_EFreeTrial,
+      v.k_ESeasonRelease,
+      v.k_ECrosspostEvent;
+    ((T = y || (y = {}))[(T.k_ELaunchSource_None = 0)] =
+      "k_ELaunchSource_None"),
+      (T[(T.k_ELaunchSource_2ftLibraryDetails = 100)] =
         "k_ELaunchSource_2ftLibraryDetails"),
-      (y[(y.k_ELaunchSource_2ftLibraryListView = 101)] =
+      (T[(T.k_ELaunchSource_2ftLibraryListView = 101)] =
         "k_ELaunchSource_2ftLibraryListView"),
-      (y[(y.k_ELaunchSource_2ftLibraryGrid = 103)] =
+      (T[(T.k_ELaunchSource_2ftLibraryGrid = 103)] =
         "k_ELaunchSource_2ftLibraryGrid"),
-      (y[(y.k_ELaunchSource_InstallSubComplete = 104)] =
+      (T[(T.k_ELaunchSource_InstallSubComplete = 104)] =
         "k_ELaunchSource_InstallSubComplete"),
-      (y[(y.k_ELaunchSource_DownloadsPage = 105)] =
+      (T[(T.k_ELaunchSource_DownloadsPage = 105)] =
         "k_ELaunchSource_DownloadsPage"),
-      (y[(y.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
+      (T[(T.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
         "k_ELaunchSource_RemoteClientStartStreaming"),
-      (y[(y.k_ELaunchSource_2ftMiniModeList = 107)] =
+      (T[(T.k_ELaunchSource_2ftMiniModeList = 107)] =
         "k_ELaunchSource_2ftMiniModeList"),
-      (y[(y.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-      (y[(y.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
+      (T[(T.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
+      (T[(T.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
         "k_ELaunchSource_DashAppLaunchCmdLine"),
-      (y[(y.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
+      (T[(T.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
         "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-      (y[(y.k_ELaunchSource_RunByGameDir = 302)] =
+      (T[(T.k_ELaunchSource_RunByGameDir = 302)] =
         "k_ELaunchSource_RunByGameDir"),
-      (y[(y.k_ELaunchSource_SubCmdRunDashGame = 303)] =
+      (T[(T.k_ELaunchSource_SubCmdRunDashGame = 303)] =
         "k_ELaunchSource_SubCmdRunDashGame"),
-      (y[(y.k_ELaunchSource_SteamURL_Launch = 400)] =
+      (T[(T.k_ELaunchSource_SteamURL_Launch = 400)] =
         "k_ELaunchSource_SteamURL_Launch"),
-      (y[(y.k_ELaunchSource_SteamURL_Run = 401)] =
+      (T[(T.k_ELaunchSource_SteamURL_Run = 401)] =
         "k_ELaunchSource_SteamURL_Run"),
-      (y[(y.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
+      (T[(T.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
         "k_ELaunchSource_SteamURL_JoinLobby"),
-      (y[(y.k_ELaunchSource_SteamURL_RunGame = 403)] =
+      (T[(T.k_ELaunchSource_SteamURL_RunGame = 403)] =
         "k_ELaunchSource_SteamURL_RunGame"),
-      (y[(y.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
+      (T[(T.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
         "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-      (y[(y.k_ELaunchSource_SteamURL_RunSafe = 405)] =
+      (T[(T.k_ELaunchSource_SteamURL_RunSafe = 405)] =
         "k_ELaunchSource_SteamURL_RunSafe"),
-      (y[(y.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
-      (y[(y.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
+      (T[(T.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
+      (T[(T.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
         "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-      (y[(y.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
+      (T[(T.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
         "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-      (y[(y.k_ELaunchSource_Dota2Launcher = 700)] =
+      (T[(T.k_ELaunchSource_Dota2Launcher = 700)] =
         "k_ELaunchSource_Dota2Launcher"),
-      (y[(y.k_ELaunchSource_IRunGameEngine = 800)] =
+      (T[(T.k_ELaunchSource_IRunGameEngine = 800)] =
         "k_ELaunchSource_IRunGameEngine"),
-      (y[(y.k_ELaunchSource_DRMFailureResponse = 801)] =
+      (T[(T.k_ELaunchSource_DRMFailureResponse = 801)] =
         "k_ELaunchSource_DRMFailureResponse"),
-      (y[(y.k_ELaunchSource_DRMDataRequest = 802)] =
+      (T[(T.k_ELaunchSource_DRMDataRequest = 802)] =
         "k_ELaunchSource_DRMDataRequest"),
-      (y[(y.k_ELaunchSource_CloudFilePanel = 803)] =
+      (T[(T.k_ELaunchSource_CloudFilePanel = 803)] =
         "k_ELaunchSource_CloudFilePanel"),
-      (y[(y.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
+      (T[(T.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
-      (y[(y.k_ELaunchSource_GameActionJoinParty = 900)] =
+      (T[(T.k_ELaunchSource_GameActionJoinParty = 900)] =
         "k_ELaunchSource_GameActionJoinParty");
-    var L,
-      R = {
+    var k,
+      L = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -668,7 +700,7 @@
         STEAMTV_BASE_URL: "",
         HELP_BASE_URL: "",
         PARTNER_BASE_URL: "",
-        IN_CLIENT: !(y[(y.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
+        IN_CLIENT: !(T[(T.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
           "k_ELaunchSource_AppPortraitContextMenu"),
         USE_POPUPS: !1,
         IN_MOBILE: !1,
@@ -681,9 +713,9 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!u()) return L || (L = k()), L;
+            if (!u()) return k || (k = R()), k;
             var e = s("sessionid");
-            e || (e = k());
+            e || (e = R());
             return e;
           })();
         },
@@ -704,7 +736,7 @@
         DEV_MODE: !1,
         OFFLINE_MODE: !1
       };
-    function k() {
+    function R() {
       var e = (function() {
         for (var e, t, a = "", n = 0; n < 24; n++)
           a += ((e = 0),
@@ -766,9 +798,9 @@
         (e.prototype.GetELanguageFallbackOrder = function() {
           var t = new Array();
           return (
-            t.push(T(R.LANGUAGE)),
-            (R.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-              e.value != R.LANGUAGE && t.push(T(e.value));
+            t.push(S(L.LANGUAGE)),
+            (L.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+              e.value != L.LANGUAGE && t.push(S(e.value));
             }),
             t
           );
@@ -792,7 +824,7 @@
     function w(e) {
       for (var n = [], t = 1; t < arguments.length; t++)
         n[t - 1] = arguments[t];
-      var a = N.LocalizeString(e);
+      var a = I.LocalizeString(e);
       return a
         ? (0 < n.length &&
             (a = a.replace(/%(\d+)\$s/g, function(e, t) {
@@ -811,7 +843,7 @@
         n = O.get(a);
       if (n) return n;
       return (
-        (n = t.toLocaleDateString(N.GetPreferredLocales(), {
+        (n = t.toLocaleDateString(I.GetPreferredLocales(), {
           year: "numeric",
           month: "short",
           day: "numeric"
@@ -823,12 +855,12 @@
     var O = new Map();
     new Map();
     new Map(), new Map(), new Map(), new Map();
-    var N = new C();
-    window.LocalizationManager = N;
-    var I,
+    var I = new C();
+    window.LocalizationManager = I;
+    var N,
       x,
-      j = a("6TF7"),
-      G = a.n(j),
+      G = a("6TF7"),
+      j = a.n(G),
       F = a("1h/R"),
       V = a.n(F),
       W = function(e) {
@@ -842,27 +874,27 @@
           }),
           P.a.createElement(
             "div",
-            { className: G.a.IdentityBlock },
+            { className: j.a.IdentityBlock },
             P.a.createElement("img", {
-              className: G.a.Avatar,
+              className: j.a.Avatar,
               src: A.AVATAR_URL
             }),
             P.a.createElement(
               "div",
-              { className: G.a.PersonalInfo },
+              { className: j.a.PersonalInfo },
               P.a.createElement(
                 "div",
-                { className: G.a.Persona },
+                { className: j.a.Persona },
                 A.PERSONA_NAME
               ),
               P.a.createElement(
                 "div",
-                { className: G.a.GameCount },
+                { className: j.a.GameCount },
                 w("#PlaytimeList_RecentGames", a)
               ),
               P.a.createElement(
                 "div",
-                { className: G.a.TotalTime },
+                { className: j.a.TotalTime },
                 w("#PlaytimeList_HoursTotal", n)
               )
             )
@@ -925,26 +957,26 @@
                 )),
           P.a.createElement(
             "div",
-            { className: D(G.a.PlayedGame, o && G.a.Ignored) },
+            { className: D(j.a.PlayedGame, o && j.a.Ignored) },
             P.a.createElement(
               "a",
               { href: A.BASE_URL + "app/" + t },
-              P.a.createElement("img", { className: G.a.Logo, src: i })
+              P.a.createElement("img", { className: j.a.Logo, src: i })
             ),
             P.a.createElement(
               "div",
-              { className: G.a.PlaytimeInfo },
+              { className: j.a.PlaytimeInfo },
               P.a.createElement(
                 "div",
-                { className: G.a.HoursPlayed },
+                { className: j.a.HoursPlayed },
                 w("#PlaytimeList_Hours", n)
               ),
-              P.a.createElement("div", { className: G.a.Title }, a),
-              P.a.createElement("div", { className: G.a.LastPlayed }, c),
+              P.a.createElement("div", { className: j.a.Title }, a),
+              P.a.createElement("div", { className: j.a.LastPlayed }, c),
               P.a.createElement(
                 "div",
                 {
-                  className: G.a.IgnoreToggle,
+                  className: j.a.IgnoreToggle,
                   onClick: function() {
                     return le.onToggleIgnore(t);
                   }
@@ -970,13 +1002,13 @@
               ? P.a.createElement("div", null)
               : P.a.createElement(
                   "div",
-                  { className: G.a.UpdateSaveBlock },
+                  { className: j.a.UpdateSaveBlock },
                   P.a.createElement(
                     "div",
                     {
                       className: D(
-                        G.a.UpdateButton,
-                        le.m_bIgnoredEdited && G.a.Enabled
+                        j.a.UpdateButton,
+                        le.m_bIgnoredEdited && j.a.Enabled
                       ),
                       onClick: this.onUpdate
                     },
@@ -1001,13 +1033,13 @@
             if (!e)
               return P.a.createElement(
                 "div",
-                { className: G.a.PlaytimeList },
+                { className: j.a.PlaytimeList },
                 P.a.createElement(
                   "div",
-                  { className: G.a.Header },
+                  { className: j.a.Header },
                   w("#PlaytimeList_Header")
                 ),
-                P.a.createElement("div", { className: G.a.Loading })
+                P.a.createElement("div", { className: j.a.Loading })
               );
             le.getAppInfo();
             var n = e.slice().sort(function(e, t) {
@@ -1029,15 +1061,15 @@
               }),
               P.a.createElement(
                 "div",
-                { className: G.a.PlaytimeList },
+                { className: j.a.PlaytimeList },
                 P.a.createElement(
                   "div",
-                  { className: G.a.Header },
+                  { className: j.a.Header },
                   w("#PlaytimeList_Header")
                 ),
                 P.a.createElement(W, { accountID: this.props.accountID }),
                 P.a.createElement(Y, null),
-                P.a.createElement("div", { className: G.a.List }, a)
+                P.a.createElement("div", { className: j.a.List }, a)
               )
             );
           }),
@@ -1057,13 +1089,13 @@
           u = c ? c[l] : "";
         return P.a.createElement(
           "div",
-          { className: G.a.OptionSlider },
-          P.a.createElement("div", { className: G.a.Title }, t),
+          { className: j.a.OptionSlider },
+          P.a.createElement("div", { className: j.a.Title }, t),
           P.a.createElement(
             "div",
-            { className: G.a.Labels },
-            P.a.createElement("div", { className: G.a.Min }, a),
-            P.a.createElement("div", { className: G.a.Max }, n)
+            { className: j.a.Labels },
+            P.a.createElement("div", { className: j.a.Min }, a),
+            P.a.createElement("div", { className: j.a.Max }, n)
           ),
           P.a.createElement("input", {
             type: "range",
@@ -1073,7 +1105,7 @@
             value: i,
             onChange: s
           }),
-          P.a.createElement("div", { className: G.a.OptionalLabel }, u)
+          P.a.createElement("div", { className: j.a.OptionalLabel }, u)
         );
       },
       z = function(e) {
@@ -1083,10 +1115,10 @@
           r = e.onChange;
         return P.a.createElement(
           "label",
-          { className: D(G.a.OptionCheckbox, t && t) },
+          { className: D(j.a.OptionCheckbox, t && t) },
           P.a.createElement("input", {
             type: "checkbox",
-            className: G.a.Checkbox,
+            className: j.a.Checkbox,
             checked: n,
             onChange: r
           }),
@@ -1188,13 +1220,13 @@
                       "div",
                       {
                         key: t.id,
-                        className: G.a.SelectedTag,
+                        className: j.a.SelectedTag,
                         onClick: function(e) {
                           return a.onRemoveSelectedTag(t.id);
                         }
                       },
                       P.a.createElement("div", null, t.name),
-                      P.a.createElement("div", { className: G.a.Close }, "X")
+                      P.a.createElement("div", { className: j.a.Close }, "X")
                     )
                   );
                 },
@@ -1207,10 +1239,10 @@
             }
             return P.a.createElement(
               "div",
-              { className: G.a.OptionTagList },
+              { className: j.a.OptionTagList },
               P.a.createElement(
                 "div",
-                { className: G.a.Label },
+                { className: j.a.Label },
                 this.props.title
               ),
               P.a.createElement(V.a, {
@@ -1227,10 +1259,10 @@
                 },
                 inputProps: e,
                 theme: {
-                  input: G.a.SuggestionInput,
-                  suggestion: G.a.OptionSuggestion,
-                  suggestionsList: G.a.SuggestionsList,
-                  suggestionsContainerOpen: G.a.SuggestionContainerOpen
+                  input: j.a.SuggestionInput,
+                  suggestion: j.a.OptionSuggestion,
+                  suggestionsList: j.a.SuggestionsList,
+                  suggestionsContainerOpen: j.a.SuggestionContainerOpen
                 }
               }),
               n
@@ -1265,10 +1297,10 @@
         ];
         return P.a.createElement(
           "div",
-          { className: G.a.RecommendationOptions },
+          { className: j.a.RecommendationOptions },
           P.a.createElement(
             "div",
-            { className: D(G.a.Row, G.a.FirstRow) },
+            { className: D(j.a.Row, j.a.FirstRow) },
             P.a.createElement(X, {
               minLabel: w("#Popularity_Popular"),
               titleLabel: w("#Popularity_Title"),
@@ -1291,7 +1323,7 @@
           ),
           P.a.createElement(
             "div",
-            { className: D(G.a.Row, G.a.SecondRow) },
+            { className: D(j.a.Row, j.a.SecondRow) },
             P.a.createElement(K, {
               title: w("#TagFilterMultiple_Title"),
               tagoptions: a,
@@ -1307,7 +1339,7 @@
               onRemoveTag: le.onTagExcludeRemove
             }),
             P.a.createElement(z, {
-              className: G.a.WishlistCheckbox,
+              className: j.a.WishlistCheckbox,
               titleLabel: w("#ExcludeWishlisted"),
               checked: le.m_bExcludeWishlisted,
               onChange: le.onExcludeWishlistedToggled
@@ -1400,7 +1432,7 @@
                   (u.push(
                     P.a.createElement(
                       "div",
-                      { key: a + "_" + h, className: G.a.Tag },
+                      { key: a + "_" + h, className: j.a.Tag },
                       le.getTagName(h)
                     )
                   ),
@@ -1408,8 +1440,8 @@
                 )
                   break;
               }
-            var m = parseInt(G.a.nSmallEntryWidth),
-              E = parseInt(G.a.nOptionsWrapWidth),
+            var m = parseInt(j.a.nSmallEntryWidth),
+              E = parseInt(j.a.nOptionsWrapWidth),
               g = 112,
               b = !0;
             o < m ? (b = !(g = 66)) : o < E && (b = !(g = 87));
@@ -1418,30 +1450,30 @@
               S = (Math.max(1, n), !1),
               y = !1,
               T = !0,
+              k = "",
               L = "",
               R = "",
-              k = "",
               C = "",
               O = "";
             if (v) {
-              var N = le.getDetails(this.props.appID);
-              N &&
+              var I = le.getDetails(this.props.appID);
+              I &&
                 ((S = !0),
-                (y = 0 < N.discount_pct),
-                (T = "0" == N.discount_price),
+                (y = 0 < I.discount_pct),
+                (T = "0" == I.discount_price),
                 (O =
                   "probably" ==
                   document
                     .createElement("video")
                     .canPlayType('video/webm; codecs="vp8, vorbis"')
-                    ? N.video_webm
-                    : N.video_mp4),
-                (L = "-" + N.discount_pct + "%"),
-                (R = N.base_price),
-                (k = T ? w("#FreeToPlay") : N.discount_price),
-                (C = N.description));
+                    ? I.video_webm
+                    : I.video_mp4),
+                (k = "-" + I.discount_pct + "%"),
+                (L = I.base_price),
+                (R = T ? w("#FreeToPlay") : I.discount_price),
+                (C = I.description));
             }
-            var I = O && 0 < O.length;
+            var N = O && 0 < O.length;
             return P.a.createElement(
               M,
               { appID: a, snr: A.LINK_PARAM },
@@ -1453,11 +1485,11 @@
                     return le.onAppClicked(a, r);
                   },
                   className: D(
-                    G.a.RecommendationEntry,
+                    j.a.RecommendationEntry,
                     "ds_flagged",
                     "ds_wishlist",
-                    30 < r && G.a.Hidden,
-                    v && G.a.Hovered
+                    30 < r && j.a.Hidden,
+                    v && j.a.Hovered
                   ),
                   style: { top: Math.min(31, r) * g },
                   onMouseEnter: this.OnHover,
@@ -1465,12 +1497,12 @@
                 },
                 P.a.createElement(
                   "div",
-                  { className: G.a.TopEntrySection },
+                  { className: j.a.TopEntrySection },
                   P.a.createElement(
                     "div",
-                    { className: G.a.LeftSection },
+                    { className: j.a.LeftSection },
                     P.a.createElement("img", {
-                      className: D(G.a.Logo, (!I || !v) && G.a.Revealed),
+                      className: D(j.a.Logo, (!N || !v) && j.a.Revealed),
                       src: i
                     }),
                     P.a.createElement("video", {
@@ -1478,8 +1510,8 @@
                       className: D(
                         "highlight_player_item",
                         "highlight_movie",
-                        G.a.Video,
-                        I && v && G.a.Revealed
+                        j.a.Video,
+                        N && v && j.a.Revealed
                       ),
                       playsInline: !0,
                       autoPlay: !0,
@@ -1489,7 +1521,7 @@
                     P.a.createElement(
                       "div",
                       {
-                        className: D(G.a.UnMute, I && G.a.Revealed),
+                        className: D(j.a.UnMute, N && j.a.Revealed),
                         onClick: function(e) {
                           return t.onMuteToggle(e);
                         }
@@ -1503,7 +1535,7 @@
                           className: D(
                             "ds_flag",
                             "ds_wishlist_flag",
-                            G.a.WishlistFlag
+                            j.a.WishlistFlag
                           )
                         },
                         w("#Recommendation_OnWishlist") + "  "
@@ -1511,42 +1543,42 @@
                   ),
                   P.a.createElement(
                     "div",
-                    { className: G.a.RightSection },
-                    P.a.createElement("div", { className: G.a.Name }, c),
+                    { className: j.a.RightSection },
+                    P.a.createElement("div", { className: j.a.Name }, c),
                     P.a.createElement(
                       "div",
-                      { className: G.a.CenterSection },
+                      { className: j.a.CenterSection },
                       P.a.createElement(
                         "div",
                         {
                           className: D(
-                            G.a.CenterOption,
-                            G.a.CenterDefault,
-                            v && G.a.Hidden
+                            j.a.CenterOption,
+                            j.a.CenterDefault,
+                            v && j.a.Hidden
                           )
                         },
                         P.a.createElement(
                           "div",
-                          { className: G.a.Released },
+                          { className: j.a.Released },
                           l
                         ),
                         P.a.createElement(
                           "div",
-                          { className: G.a.BarContainer },
+                          { className: j.a.BarContainer },
                           P.a.createElement("div", {
-                            className: G.a.Bar,
+                            className: j.a.Bar,
                             style: { width: f + "%" }
                           })
                         ),
-                        P.a.createElement("div", { className: G.a.Tags }, u)
+                        P.a.createElement("div", { className: j.a.Tags }, u)
                       ),
                       P.a.createElement(
                         "div",
                         {
                           className: D(
-                            G.a.CenterOption,
-                            G.a.CenterHovered,
-                            !v && G.a.Hidden
+                            j.a.CenterOption,
+                            j.a.CenterHovered,
+                            !v && j.a.Hidden
                           )
                         },
                         C
@@ -1555,13 +1587,13 @@
                     S &&
                       P.a.createElement(
                         "div",
-                        { className: G.a.BottomEntrySection },
+                        { className: j.a.BottomEntrySection },
                         P.a.createElement(
                           "div",
                           {
                             className: D(
                               "game_purchase_action",
-                              G.a.PurchaseSection
+                              j.a.PurchaseSection
                             )
                           },
                           P.a.createElement(
@@ -1569,7 +1601,7 @@
                             {
                               className: D(
                                 "game_purchase_action_bg",
-                                G.a.PurchaseBG
+                                j.a.PurchaseBG
                               )
                             },
                             y &&
@@ -1582,7 +1614,7 @@
                                 P.a.createElement(
                                   "div",
                                   { className: "discount_pct" },
-                                  L
+                                  k
                                 ),
                                 P.a.createElement(
                                   "div",
@@ -1590,12 +1622,12 @@
                                   P.a.createElement(
                                     "div",
                                     { className: "discount_original_price" },
-                                    R
+                                    L
                                   ),
                                   P.a.createElement(
                                     "div",
                                     { className: "discount_final_price" },
-                                    k
+                                    R
                                   )
                                 )
                               ),
@@ -1606,10 +1638,10 @@
                                   className: D(
                                     "game_purchase_price",
                                     "price",
-                                    G.a.Price
+                                    j.a.Price
                                   )
                                 },
-                                k
+                                R
                               ),
                             !T &&
                               P.a.createElement(
@@ -1641,7 +1673,7 @@
                             "div",
                             {
                               id: "add_to_wishlist_area",
-                              className: G.a.WishlistSection,
+                              className: j.a.WishlistSection,
                               onClick: function(e) {
                                 return t.onAddToWishlist(e);
                               }
@@ -1664,8 +1696,8 @@
                               className: D(
                                 "btnv6_blue_hoverfade btn_medium",
                                 "queue_btn_active",
-                                G.a.Wishlisted,
-                                G.a.WishlistSection
+                                j.a.Wishlisted,
+                                j.a.WishlistSection
                               ),
                               "data-tooltip-text": w("#OnWishlistTooltip"),
                               onClick: function(e) {
@@ -1755,7 +1787,7 @@
                 return T.push({ appid: t, score: e });
               });
               for (
-                var L = (T = (T = (T = T.filter(function(e) {
+                var k = (T = (T = (T = T.filter(function(e) {
                     return h[e.appid].t && le.doTagsPassFilter(h[e.appid].t);
                   })).filter(function(e) {
                     return (
@@ -1766,29 +1798,29 @@
                   })).sort(function(e, t) {
                     return t.score - e.score;
                   }),
+                  L = 0,
                   R = 0,
-                  k = 0,
-                  C = (L = L.slice(0, 30));
-                k < C.length;
-                k++
+                  C = (k = k.slice(0, 30));
+                R < C.length;
+                R++
               ) {
-                (C[k].rank = R), R++;
+                (C[R].rank = L), L++;
               }
               for (
                 var O = 0,
-                  N = L.sort(function(e, t) {
+                  I = k.sort(function(e, t) {
                     return t.appid - e.appid;
                   });
-                O < N.length;
+                O < I.length;
                 O++
               ) {
-                var I = N[O];
+                var N = I[O];
                 m.push(
                   P.a.createElement(J, {
-                    key: I.appid,
-                    appID: I.appid,
-                    score: I.score,
-                    rank: I.rank,
+                    key: N.appid,
+                    appID: N.appid,
+                    score: N.score,
+                    rank: N.rank,
                     width: this.props.width
                   })
                 );
@@ -1797,22 +1829,22 @@
               m.push(
                 P.a.createElement("div", {
                   key: "recommendations_loading",
-                  className: G.a.RecommendationsLoading
+                  className: j.a.RecommendationsLoading
                 })
               );
             return P.a.createElement(
               "div",
-              { className: G.a.RecommendationList },
+              { className: j.a.RecommendationList },
               P.a.createElement(
                 "div",
-                { className: G.a.Header },
+                { className: j.a.Header },
                 w("#Recommendations_Header")
               ),
               P.a.createElement(Q, null),
               P.a.createElement(
                 "div",
                 {
-                  className: D(G.a.List, le.areResultsExpired() && G.a.Updating)
+                  className: D(j.a.List, le.areResultsExpired() && j.a.Updating)
                 },
                 m
               )
@@ -1838,13 +1870,13 @@
             return 0 == A.ACCOUNT_ID
               ? P.a.createElement(
                   "div",
-                  { className: G.a.App },
+                  { className: j.a.App },
                   P.a.createElement(
                     "div",
-                    { className: G.a.Login },
+                    { className: j.a.Login },
                     P.a.createElement(
                       "div",
-                      { className: G.a.Text },
+                      { className: j.a.Text },
                       w("#LoginText")
                     ),
                     P.a.createElement(
@@ -1863,39 +1895,39 @@
               : P.a.createElement(
                   "div",
                   {
-                    className: G.a.App,
+                    className: j.a.App,
                     style: { height: 3840 + 26 * le.getTagHeight() }
                   },
                   P.a.createElement(
                     "div",
-                    { className: G.a.Container },
+                    { className: j.a.Container },
                     P.a.createElement(
                       "div",
-                      { className: G.a.TopSection },
+                      { className: j.a.TopSection },
                       P.a.createElement(
                         "div",
-                        { className: G.a.Header },
+                        { className: j.a.Header },
                         w("#HeaderTitle")
                       ),
                       P.a.createElement(
                         "div",
-                        { className: G.a.Body },
+                        { className: j.a.Body },
                         w("#HeaderBody1")
                       ),
-                      P.a.createElement("div", { className: G.a.Spacer }),
+                      P.a.createElement("div", { className: j.a.Spacer }),
                       P.a.createElement(
                         "div",
-                        { className: G.a.Body },
+                        { className: j.a.Body },
                         w("#HeaderBody2")
                       ),
-                      P.a.createElement("div", { className: G.a.Spacer }),
+                      P.a.createElement("div", { className: j.a.Spacer }),
                       P.a.createElement(
                         "div",
-                        { className: G.a.Body },
+                        { className: j.a.Body },
                         (function(e) {
                           for (var t = [], a = 1; a < arguments.length; a++)
                             t[a - 1] = arguments[a];
-                          var n = N.LocalizeString(e);
+                          var n = I.LocalizeString(e);
                           if (!n) return e;
                           for (
                             var r, o = [], i = /(.*?)%(\d+)\$s/g, s = 0;
@@ -1928,9 +1960,9 @@
                     ),
                     P.a.createElement(
                       "div",
-                      { className: G.a.BottomSection },
+                      { className: j.a.BottomSection },
                       P.a.createElement(q, { accountID: A.ACCOUNT_ID }),
-                      P.a.createElement("div", { className: G.a.VerticalBar }),
+                      P.a.createElement("div", { className: j.a.VerticalBar }),
                       P.a.createElement(Z, { width: this.state.width })
                     )
                   )
@@ -1942,7 +1974,7 @@
       })(P.a.Component),
       ee = a("2vnA"),
       te = a("i8i4");
-    ((x = I || (I = {}))[(x.Unrequested = 0)] = "Unrequested"),
+    ((x = N || (N = {}))[(x.Unrequested = 0)] = "Unrequested"),
       (x[(x.Pending = 1)] = "Pending"),
       (x[(x.Valid = 2)] = "Valid"),
       (x[(x.Failed = 3)] = "Failed"),
@@ -1951,32 +1983,32 @@
       ne,
       re = (function() {
         function e() {
-          (this.eState = I.Unrequested), (this.nExpirationTime = 0);
+          (this.eState = N.Unrequested), (this.nExpirationTime = 0);
         }
         return (
           (e.prototype.getData = function(t, a, n) {
             var r = this,
               o = Date.now() / 1e3,
-              e = this.eState == I.Pending || this.eState == I.Rerequest;
+              e = this.eState == N.Pending || this.eState == N.Rerequest;
             return (
               o >= this.nExpirationTime &&
                 !e &&
-                ((this.eState = I.Pending),
+                ((this.eState = N.Pending),
                 a().then(function(e) {
-                  if (r.eState == I.Rerequest)
+                  if (r.eState == N.Rerequest)
                     return r.expireData(), void r.getData(t, a, n);
                   r.eState = e
                     ? ((r.data = n ? n(e) : e),
                       (r.nExpirationTime = o + t),
-                      I.Valid)
-                    : I.Failed;
+                      N.Valid)
+                    : N.Failed;
                 })),
               this.data
             );
           }),
           (e.prototype.clearData = function() {
             var e = Date.now() / 1e3;
-            (this.eState = I.Unrequested),
+            (this.eState = N.Unrequested),
               (this.data = null),
               (this.nExpirationTime = e);
           }),
@@ -1993,7 +2025,7 @@
             this.nExpirationTime = t + e;
           }),
           (e.prototype.rerequestDataIfPending = function() {
-            this.eState == I.Pending && (this.eState = I.Rerequest);
+            this.eState == N.Pending && (this.eState = N.Rerequest);
           }),
           Object(_.c)([ee.v], e.prototype, "data", void 0),
           Object(_.c)([ee.v], e.prototype, "nExpirationTime", void 0),
@@ -2535,7 +2567,7 @@
             i = null;
           void 0 !== ie ? ((n = ie), (r = a)) : (n = a),
             void 0 !== se ? ((o = se), (i = ce)) : (o = ce),
-            N.InitFromObjects(n, r, o, i),
+            I.InitFromObjects(n, r, o, i),
             (ce = se = ie = void 0);
         }
       });

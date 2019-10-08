@@ -128,7 +128,7 @@ body.v6 .page_content  {
 }
 
 .page_content .breadcrumbs hr {
-	width: 1450px;
+	width: 1355px;
 	border-color: #ffffff99;
 	margin: 0;
 }
@@ -795,6 +795,17 @@ round buttons
 .search-icon{
 	margin-bottom: -13px;
 	padding-left: 2px;
+}
+
+.container-checkbox-microtrailers {
+	position: absolute;
+	right: 90px;
+	top: 30px;
+}
+
+.label-checkbox-microtrailers {
+	vertical-align: middle;
+	color:white;
 }
 
 .note-preferences {

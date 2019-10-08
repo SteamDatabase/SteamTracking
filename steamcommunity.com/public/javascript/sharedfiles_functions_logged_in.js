@@ -855,4 +855,45 @@ function ResendItemSubmissionVerificationEmail( publishedfileid )
 	} );
 }
 
+function SelectItemVisibility( publishedfileid, value )
+{
+	HideMenu( $('visibilityselect'), $('visibilityselect_options') );
+
+	var rgParams = {
+		sessionid: g_sessionID,
+		id: publishedfileid,
+		visibility: value
+	};
+
+	$J.post(
+		"https://steamcommunity.com/sharedfiles/itemsetvisibility",
+		rgParams
+	)
+	.done( function( rgResult ) {
+		$J('#visibilityNotificationPrivate').hide();
+		$J('#visibilityNotificationFriendsOnly').hide();
+		$J('#visibilityselect_option_0_check').css( 'visibility', 'hidden' );
+		$J('#visibilityselect_option_1_check').css( 'visibility', 'hidden' );
+		$J('#visibilityselect_option_2_check').css( 'visibility', 'hidden' );
+
+		switch ( value )
+		{
+			case '0':
+				$J('#visibilityselect_option_0_check').css( 'visibility', 'visible' );
+				break;
+			case '1':
+				$J('#visibilityNotificationFriendsOnly').show();
+				$J('#visibilityselect_option_1_check').css( 'visibility', 'visible' );
+				break;
+			case '2':
+				$J('#visibilityNotificationPrivate').show();
+				$J('#visibilityselect_option_2_check').css( 'visibility', 'visible' );
+				break;
+		}
+	} )
+	.fail( function( jqXHR ) {
+		ShowAlertDialog( "Unable to change visibility", "There was a problem changing the visibility of this item (%1$s). Please try again later".replace('%1$s', jqXHR.responseJSON.success) );
+	} );
+}
+
 

@@ -2161,7 +2161,8 @@ CAjaxInfiniteScrollingControls.prototype.LoadPage = function( iPage, bForce )
 };
 
 CAjaxInfiniteScrollingControls.prototype.GetThrobber = function() {
-	return $J(this.m_strElementPrefix + '_loading');
+	// NB: This is using prototype, *not* jQuery, hence the lack of 'J'.
+	return $(this.m_strElementPrefix + '_loading');
 };
 
 CAjaxInfiniteScrollingControls.prototype.HideThrobber = function() {

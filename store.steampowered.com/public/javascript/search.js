@@ -1,7 +1,7 @@
 
 var g_oSuggestParams;
 
-function EnableSearchSuggestions( elemTerm, navcontext, cc, l, strPackageXMLVersion )
+function EnableSearchSuggestions( elemTerm, navcontext, cc, realm, l, strPackageXMLVersion )
 {
 	elemTerm = $(elemTerm);
 	new Form.Element.DelayedObserver( elemTerm, 0.4, SearchTimeout );
@@ -10,6 +10,7 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, l, strPackageXMLVers
 	elemTerm.observe( 'blur', SearchSuggestSetDefaultSearchText.bind( null, elemTerm ) );
    	g_oSuggestParams = {
 		cc: cc,
+		realm: realm,
 		l:l,
 		v: strPackageXMLVersion
 	}

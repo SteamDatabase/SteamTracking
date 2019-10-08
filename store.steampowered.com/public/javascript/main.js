@@ -1066,7 +1066,7 @@ GraphicalCountdown.prototype.setImage = function( idSuffix, val )
 
 var g_oSuggestParams;
 
-function EnableSearchSuggestions( elemTerm, navcontext, cc, l, rgUserPreferences, strPackageXMLVersion, elemSuggestionCtn, elemSuggestions )
+function EnableSearchSuggestions( elemTerm, navcontext, cc, realm, l, rgUserPreferences, strPackageXMLVersion, elemSuggestionCtn, elemSuggestions )
 {
 	var $Term = $JFromIDOrElement(elemTerm);
 	var $SuggestionsCtn = elemSuggestionCtn ? $JFromIDOrElement(elemSuggestionCtn) : $J('#searchterm_options');
@@ -1122,6 +1122,7 @@ function EnableSearchSuggestions( elemTerm, navcontext, cc, l, rgUserPreferences
 	$Term.on( 'blur', function( event ) { SearchSuggestSetDefaultSearchText( $Term, $SuggestionsCtn, $Suggestions ); } );
 	g_oSuggestParams = {
 		cc: cc,
+		realm: realm,
 		l:l,
 		excluded_tags: rgUserPreferences['excluded_tags'],
 		excluded_content_descriptors: rgUserPreferences['excluded_content_descriptors'],

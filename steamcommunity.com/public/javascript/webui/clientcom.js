@@ -104,7 +104,7 @@
         return p;
       }),
       n.d(e, "d", function() {
-        return d;
+        return _;
       });
     var r,
       i = {
@@ -183,8 +183,10 @@
       a = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
+        ANNOUNCEMENT_GID: "",
         IMG_URL: "",
         APPID: 0,
+        VANITY_ID: "",
         HEADER_IMAGE: "",
         APP_NAME: "",
         HAS_ADULT_CONTENT: !1,
@@ -222,16 +224,16 @@
     }
     function p(t) {
       void 0 === t && (t = l);
-      var e = d("config", t);
+      var e = _("config", t);
       e && (delete e.SESSIONID, Object.assign(i, e));
-      var n = d("userinfo", t);
+      var n = _("userinfo", t);
       n && Object.assign(u, n);
-      var o = d("broadcast", t);
+      var o = _("broadcast", t);
       o && Object.assign(s, o);
-      var r = d("community", t);
+      var r = _("community", t);
       r && Object.assign(a, r);
     }
-    function d(t, e) {
+    function _(t, e) {
       var n;
       if (
         (void 0 === e && (e = l),

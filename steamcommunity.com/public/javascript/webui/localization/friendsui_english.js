@@ -177,7 +177,7 @@ LocalizationReady("friendsui", "english", {
     "Check in with friends, coordinate a time to play with your group, or check out official game chats.",
   MobileWelcomePage_Friends_Title: "See who's playing now",
   MobileWelcomePage_Friends_Body:
-    "Quickly see who is playing or is ready to play, so you never miss an opportunity",
+    "Quickly see who is playing or is ready to play, so you never miss an opportunity.",
   MobileWelcomePage_FriendLink_Title: "Add friends with a link",
   MobileWelcomePage_FriendLink_Body:
     "Adding a friend on Steam is now as easy as texting or emailing a custom link.",
@@ -226,7 +226,7 @@ LocalizationReady("friendsui", "english", {
   ConnectionTrouble_LoginLost: "You have been logged out of Steam.",
   ConnectionTrouble_LoginAgain: "Log in",
   ConnectionTrouble_LoginChanged:
-    "You have logged in to the Steam Community with a different Steam account.  Click the button below to change to the new account.",
+    "You have logged in to the Steam Community with a different Steam account. Click the button below to change to the new account.",
   ConnectionTrouble_LoginChanged_Reload: "Change Accounts",
   ConnectionTrouble_LoggedOnElsewhere:
     "Your account is logged in to Steam in too many locations.",
@@ -1129,7 +1129,8 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_GameInvite_Accepted: "You accepted an invitation to play %1$s%2$s",
   ChatRoom_GameInvite_AcceptOnPC: "You can accept this invite from your PC.",
 
-  ChatRoom_GameInviteRemotePlay_Invite: "%1$s invited you to play remotely",
+  ChatRoom_GameInviteRemotePlay_Invite:
+    "%1$s invited you using Remote Play Together",
   ChatRoom_GameInviteRemotePlay_Accept: "Connect",
   ChatRoom_GameInviteRemotePlay_Dismissed:
     "%1$s invited you to play %2$s%3$s via Steam Remote Play",
@@ -1298,9 +1299,9 @@ LocalizationReady("friendsui", "english", {
   changeLog_UpdateItem12:
     "Fix friend context menu to show Join Game if the friend is in a lobby or has a valid server IP.",
   changeLog_UpdateItem13:
-    "Make Ctrl-Tab and Shift-Ctrl tab work reliably when pressed rapidly.",
+    "Make Ctrl+Tab and Shift+Ctrl+Tab work reliably when pressed rapidly.",
   changeLog_UpdateItem14:
-    "Add Ctrl-PgUp and Ctrl-PgDn shortcuts for tab switching.",
+    "Add Ctrl+PgUp and Ctrl-PgDn shortcuts for tab switching.",
   changeLog_UpdateItem15: "Add buttons to collapse YouTube and video embeds.",
   changeLog_UpdateItem16:
     "Remember the collapsed state and sizes of embedded media.",

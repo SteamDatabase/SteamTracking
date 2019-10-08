@@ -407,61 +407,59 @@
         return o;
       }),
       n.d(t, "n", function() {
-        return l;
+        return a;
       }),
       n.d(t, "o", function() {
-        return u;
+        return s;
       }),
       n.d(t, "g", function() {
-        return m;
+        return l;
       }),
       n.d(t, "h", function() {
-        return p;
+        return u;
       }),
       n.d(t, "m", function() {
-        return h;
+        return m;
       }),
       n.d(t, "i", function() {
-        return d;
+        return p;
       }),
       n.d(t, "j", function() {
-        return f;
+        return h;
       }),
       n.d(t, "l", function() {
-        return v;
+        return d;
       }),
       n.d(t, "k", function() {
-        return _;
+        return f;
       }),
       n.d(t, "d", function() {
-        return y;
+        return v;
       }),
       n.d(t, "f", function() {
-        return b;
+        return _;
       }),
       n.d(t, "e", function() {
-        return E;
+        return y;
       }),
       n.d(t, "c", function() {
-        return g;
+        return b;
       });
     var i,
       c,
-      a,
-      s,
-      l = 1,
-      u = 4,
-      m = 750,
-      p = 799,
-      h = 7,
-      d = 250820,
-      f = 330050,
-      v = 358510,
-      _ = 366490,
-      y = "18446744073709551615",
-      b = 0,
-      E = 2147483647;
-    function g(e, t) {
+      a = 1,
+      s = 4,
+      l = 750,
+      u = 799,
+      m = 7,
+      p = 250820,
+      h = 330050,
+      d = 358510,
+      f = 366490,
+      v = "18446744073709551615",
+      _ = 0,
+      y = 2147483647;
+    function b(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -557,64 +555,96 @@
       (c[(c.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
       (c[(c.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (c[(c.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-      (c[(c.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
-      ((s = a || (a = {}))[(s.k_ELaunchSource_None = 0)] =
-        "k_ELaunchSource_None"),
-      (s[(s.k_ELaunchSource_2ftLibraryDetails = 100)] =
+      (c[(c.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent");
+    var E, g;
+    i.k_EOtherEvent,
+      i.k_EGameEvent,
+      i.k_EPartyEvent,
+      i.k_EMeetingEvent,
+      i.k_ESpecialCauseEvent,
+      i.k_EMusicAndArtsEvent,
+      i.k_ESportsEvent,
+      i.k_ETripEvent,
+      i.k_EChatEvent,
+      i.k_EGameReleaseEvent,
+      i.k_EBroadcastEvent,
+      i.k_ESmallUpdateEvent,
+      i.k_ERegularUpdateEvent,
+      i.k_EMajorUpdateEvent,
+      i.k_EFutureReleaseEvent,
+      i.k_EESportTournamentStreamEvent,
+      i.k_EDevStreamEvent,
+      i.k_EFamousStreamEvent,
+      i.k_EGameSalesEvent,
+      i.k_EGameItemSalesEvent,
+      i.k_EInGameBonusXPEvent,
+      i.k_EInGameLootEvent,
+      i.k_EInGamePerksEvent,
+      i.k_EInGameChallengeEvent,
+      i.k_EInGameContestEvent,
+      i.k_EIRLEvent,
+      i.k_ENewsEvent,
+      i.k_EBetaReleaseEvent,
+      i.k_EFreeTrial,
+      i.k_ESeasonRelease,
+      i.k_ECrosspostEvent;
+    ((g = E || (E = {}))[(g.k_ELaunchSource_None = 0)] =
+      "k_ELaunchSource_None"),
+      (g[(g.k_ELaunchSource_2ftLibraryDetails = 100)] =
         "k_ELaunchSource_2ftLibraryDetails"),
-      (s[(s.k_ELaunchSource_2ftLibraryListView = 101)] =
+      (g[(g.k_ELaunchSource_2ftLibraryListView = 101)] =
         "k_ELaunchSource_2ftLibraryListView"),
-      (s[(s.k_ELaunchSource_2ftLibraryGrid = 103)] =
+      (g[(g.k_ELaunchSource_2ftLibraryGrid = 103)] =
         "k_ELaunchSource_2ftLibraryGrid"),
-      (s[(s.k_ELaunchSource_InstallSubComplete = 104)] =
+      (g[(g.k_ELaunchSource_InstallSubComplete = 104)] =
         "k_ELaunchSource_InstallSubComplete"),
-      (s[(s.k_ELaunchSource_DownloadsPage = 105)] =
+      (g[(g.k_ELaunchSource_DownloadsPage = 105)] =
         "k_ELaunchSource_DownloadsPage"),
-      (s[(s.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
+      (g[(g.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
         "k_ELaunchSource_RemoteClientStartStreaming"),
-      (s[(s.k_ELaunchSource_2ftMiniModeList = 107)] =
+      (g[(g.k_ELaunchSource_2ftMiniModeList = 107)] =
         "k_ELaunchSource_2ftMiniModeList"),
-      (s[(s.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-      (s[(s.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
+      (g[(g.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
+      (g[(g.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
         "k_ELaunchSource_DashAppLaunchCmdLine"),
-      (s[(s.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
+      (g[(g.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
         "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-      (s[(s.k_ELaunchSource_RunByGameDir = 302)] =
+      (g[(g.k_ELaunchSource_RunByGameDir = 302)] =
         "k_ELaunchSource_RunByGameDir"),
-      (s[(s.k_ELaunchSource_SubCmdRunDashGame = 303)] =
+      (g[(g.k_ELaunchSource_SubCmdRunDashGame = 303)] =
         "k_ELaunchSource_SubCmdRunDashGame"),
-      (s[(s.k_ELaunchSource_SteamURL_Launch = 400)] =
+      (g[(g.k_ELaunchSource_SteamURL_Launch = 400)] =
         "k_ELaunchSource_SteamURL_Launch"),
-      (s[(s.k_ELaunchSource_SteamURL_Run = 401)] =
+      (g[(g.k_ELaunchSource_SteamURL_Run = 401)] =
         "k_ELaunchSource_SteamURL_Run"),
-      (s[(s.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
+      (g[(g.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
         "k_ELaunchSource_SteamURL_JoinLobby"),
-      (s[(s.k_ELaunchSource_SteamURL_RunGame = 403)] =
+      (g[(g.k_ELaunchSource_SteamURL_RunGame = 403)] =
         "k_ELaunchSource_SteamURL_RunGame"),
-      (s[(s.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
+      (g[(g.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
         "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-      (s[(s.k_ELaunchSource_SteamURL_RunSafe = 405)] =
+      (g[(g.k_ELaunchSource_SteamURL_RunSafe = 405)] =
         "k_ELaunchSource_SteamURL_RunSafe"),
-      (s[(s.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
-      (s[(s.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
+      (g[(g.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
+      (g[(g.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
         "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-      (s[(s.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
+      (g[(g.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
         "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-      (s[(s.k_ELaunchSource_Dota2Launcher = 700)] =
+      (g[(g.k_ELaunchSource_Dota2Launcher = 700)] =
         "k_ELaunchSource_Dota2Launcher"),
-      (s[(s.k_ELaunchSource_IRunGameEngine = 800)] =
+      (g[(g.k_ELaunchSource_IRunGameEngine = 800)] =
         "k_ELaunchSource_IRunGameEngine"),
-      (s[(s.k_ELaunchSource_DRMFailureResponse = 801)] =
+      (g[(g.k_ELaunchSource_DRMFailureResponse = 801)] =
         "k_ELaunchSource_DRMFailureResponse"),
-      (s[(s.k_ELaunchSource_DRMDataRequest = 802)] =
+      (g[(g.k_ELaunchSource_DRMDataRequest = 802)] =
         "k_ELaunchSource_DRMDataRequest"),
-      (s[(s.k_ELaunchSource_CloudFilePanel = 803)] =
+      (g[(g.k_ELaunchSource_CloudFilePanel = 803)] =
         "k_ELaunchSource_CloudFilePanel"),
-      (s[(s.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
+      (g[(g.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
-      (s[(s.k_ELaunchSource_GameActionJoinParty = 900)] =
+      (g[(g.k_ELaunchSource_GameActionJoinParty = 900)] =
         "k_ELaunchSource_GameActionJoinParty"),
-      (s[(s.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
+      (g[(g.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
         "k_ELaunchSource_AppPortraitContextMenu");
   },
   "1VtQ": function(e, t, n) {
@@ -743,8 +773,10 @@
       l = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
+        ANNOUNCEMENT_GID: "",
         IMG_URL: "",
         APPID: 0,
+        VANITY_ID: "",
         HEADER_IMAGE: "",
         APP_NAME: "",
         HAS_ADULT_CONTENT: !1,
@@ -1145,7 +1177,7 @@
       s = n("i8i4"),
       l = n("8o0Y"),
       u = n("JtU4"),
-      N = n("/IDK"),
+      B = n("/IDK"),
       o = n("1VtQ"),
       i = n("e2SU"),
       m = n("WpBz"),
@@ -1382,7 +1414,7 @@
             this.PositionMenu();
           }),
           (e.prototype.OnBlur = function(e) {
-            (e.relatedTarget && N.e(e.currentTarget, e.relatedTarget)) ||
+            (e.relatedTarget && B.e(e.currentTarget, e.relatedTarget)) ||
               (e.relatedTarget &&
                 this.props.instance.BIsElementInMenuHierarchy(
                   e.relatedTarget
@@ -1413,7 +1445,7 @@
               this.state.ready &&
               this.props.instance.visible &&
               (this.props.popup ||
-                !N.e(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
+                !B.e(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
             ) {
               var e = this.m_elMenu.querySelector(".ContextMenuAutoFocus");
               e && e.focus ? e.focus() : this.m_elMenu.focus();
@@ -1446,7 +1478,7 @@
               if (i) {
                 this.props.options.bScreenCoordinates ||
                   ((s += n.screenLeft), (l += n.screenTop)),
-                  (r = N.h(n, r));
+                  (r = B.h(n, r));
                 var p = n.screen,
                   h = 0,
                   d = 0;
@@ -1636,7 +1668,7 @@
                 height: 1
               };
             else {
-              var t = N.h(
+              var t = B.h(
                 this.m_menuProps.element.ownerDocument.defaultView,
                 this.m_menuProps.element.getBoundingClientRect()
               );
@@ -1677,7 +1709,7 @@
     }
     function k(e) {
       var t = [],
-        n = N.n(e),
+        n = B.n(e),
         r = n.getSelection(),
         o = r && 0 < r.rangeCount && 0 < r.toString().length,
         i = e.target,
@@ -3288,210 +3320,220 @@
   },
   e2SU: function(e, t, n) {
     "use strict";
-    n.d(t, "y", function() {
-      return a;
+    n.d(t, "z", function() {
+      return s;
     }),
-      n.d(t, "V", function() {
-        return s;
-      }),
-      n.d(t, "g", function() {
+      n.d(t, "X", function() {
         return l;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "g", function() {
         return u;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "j", function() {
         return m;
       }),
-      n.d(t, "C", function() {
+      n.d(t, "o", function() {
         return p;
       }),
-      n.d(t, "F", function() {
+      n.d(t, "E", function() {
         return h;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "H", function() {
         return d;
       }),
-      n.d(t, "ab", function() {
+      n.d(t, "p", function() {
         return f;
       }),
-      n.d(t, "Q", function() {
+      n.d(t, "db", function() {
         return v;
       }),
-      n.d(t, "O", function() {
+      n.d(t, "S", function() {
         return _;
       }),
-      n.d(t, "lb", function() {
+      n.d(t, "Q", function() {
         return y;
       }),
-      n.d(t, "mb", function() {
+      n.d(t, "ob", function() {
         return b;
       }),
-      n.d(t, "jb", function() {
+      n.d(t, "pb", function() {
         return E;
       }),
-      n.d(t, "cb", function() {
+      n.d(t, "mb", function() {
         return g;
       }),
-      n.d(t, "v", function() {
+      n.d(t, "fb", function() {
         return w;
       }),
-      n.d(t, "u", function() {
+      n.d(t, "w", function() {
         return S;
       }),
-      n.d(t, "L", function() {
+      n.d(t, "v", function() {
         return k;
       }),
       n.d(t, "N", function() {
         return x;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "P", function() {
         return M;
       }),
-      n.d(t, "s", function() {
+      n.d(t, "a", function() {
         return C;
       }),
-      n.d(t, "A", function() {
+      n.d(t, "t", function() {
         return P;
       }),
-      n.d(t, "J", function() {
+      n.d(t, "B", function() {
         return L;
       }),
-      n.d(t, "kb", function() {
+      n.d(t, "L", function() {
         return O;
       }),
-      n.d(t, "I", function() {
+      n.d(t, "nb", function() {
         return I;
-      }),
-      n.d(t, "k", function() {
-        return N;
-      }),
-      n.d(t, "M", function() {
-        return T;
       }),
       n.d(t, "K", function() {
         return B;
       }),
-      n.d(t, "Y", function() {
+      n.d(t, "k", function() {
+        return N;
+      }),
+      n.d(t, "O", function() {
+        return T;
+      }),
+      n.d(t, "M", function() {
+        return G;
+      }),
+      n.d(t, "ab", function() {
         return D;
       }),
       n.d(t, "h", function() {
-        return G;
-      }),
-      n.d(t, "l", function() {
         return R;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "l", function() {
         return V;
       }),
-      n.d(t, "B", function() {
+      n.d(t, "f", function() {
         return H;
       }),
-      n.d(t, "db", function() {
-        return W;
-      }),
-      n.d(t, "hb", function() {
+      n.d(t, "D", function() {
         return F;
       }),
-      n.d(t, "z", function() {
+      n.d(t, "gb", function() {
+        return W;
+      }),
+      n.d(t, "kb", function() {
         return z;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "A", function() {
         return j;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "c", function() {
         return A;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "b", function() {
         return U;
       }),
-      n.d(t, "bb", function() {
+      n.d(t, "n", function() {
         return K;
       }),
-      n.d(t, "D", function() {
+      n.d(t, "eb", function() {
         return Y;
       }),
-      n.d(t, "G", function() {
+      n.d(t, "F", function() {
         return X;
       }),
-      n.d(t, "R", function() {
+      n.d(t, "I", function() {
         return q;
       }),
-      n.d(t, "X", function() {
+      n.d(t, "T", function() {
         return J;
       }),
-      n.d(t, "P", function() {
+      n.d(t, "Z", function() {
         return Q;
       }),
-      n.d(t, "eb", function() {
+      n.d(t, "R", function() {
         return Z;
       }),
-      n.d(t, "fb", function() {
+      n.d(t, "hb", function() {
         return $;
       }),
-      n.d(t, "U", function() {
+      n.d(t, "ib", function() {
         return ee;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "W", function() {
         return te;
       }),
       n.d(t, "r", function() {
         return ne;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "s", function() {
         return re;
       }),
-      n.d(t, "E", function() {
+      n.d(t, "m", function() {
         return oe;
       }),
-      n.d(t, "Z", function() {
+      n.d(t, "G", function() {
         return ie;
       }),
-      n.d(t, "ib", function() {
+      n.d(t, "cb", function() {
         return ce;
       }),
-      n.d(t, "t", function() {
+      n.d(t, "bb", function() {
         return ae;
       }),
-      n.d(t, "S", function() {
+      n.d(t, "lb", function() {
         return se;
       }),
-      n.d(t, "T", function() {
+      n.d(t, "u", function() {
         return le;
       }),
-      n.d(t, "x", function() {
+      n.d(t, "U", function() {
         return ue;
       }),
-      n.d(t, "W", function() {
+      n.d(t, "V", function() {
         return me;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "y", function() {
         return pe;
       }),
-      n.d(t, "H", function() {
+      n.d(t, "Y", function() {
         return he;
       }),
-      n.d(t, "gb", function() {
+      n.d(t, "d", function() {
         return de;
       }),
-      n.d(t, "nb", function() {
+      n.d(t, "J", function() {
         return fe;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "jb", function() {
         return ve;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "C", function() {
         return _e;
       }),
-      n.d(t, "w", function() {
+      n.d(t, "q", function() {
         return ye;
+      }),
+      n.d(t, "qb", function() {
+        return be;
+      }),
+      n.d(t, "e", function() {
+        return Ee;
+      }),
+      n.d(t, "i", function() {
+        return ge;
+      }),
+      n.d(t, "x", function() {
+        return we;
       });
     var r = n("mrSG"),
       o = n("q1tI"),
       i = n("twdX"),
-      c = n.n(i);
-    n("QHER"), n("/7KC"), n("vvG3");
-    function a() {
+      c = n.n(i),
+      a = n("QHER");
+    n("/7KC"), n("vvG3");
+    function s() {
       return o.createElement(
         "svg",
         {
@@ -3527,7 +3569,7 @@
         )
       );
     }
-    function s() {
+    function l() {
       return o.createElement(
         "svg",
         {
@@ -3548,7 +3590,7 @@
         })
       );
     }
-    function l() {
+    function u() {
       return o.createElement(
         "svg",
         {
@@ -3570,7 +3612,7 @@
         )
       );
     }
-    function u() {
+    function m() {
       return o.createElement(
         "svg",
         {
@@ -3619,7 +3661,7 @@
         })
       );
     }
-    function m() {
+    function p() {
       return o.createElement(
         "svg",
         {
@@ -3636,7 +3678,7 @@
         })
       );
     }
-    function p() {
+    function h() {
       return o.createElement(
         "svg",
         {
@@ -3664,7 +3706,7 @@
         )
       );
     }
-    function h(e) {
+    function d(e) {
       var t = "SVGIcon_Button SVGIcon_Microphone";
       return (
         e.className && (t += " " + e.className),
@@ -3810,7 +3852,7 @@
         )
       );
     }
-    function d() {
+    function f() {
       return o.createElement(
         "svg",
         {
@@ -3866,7 +3908,7 @@
         })
       );
     }
-    function f() {
+    function v() {
       return o.createElement(
         "svg",
         {
@@ -3895,7 +3937,7 @@
         )
       );
     }
-    function v() {
+    function _() {
       return o.createElement(
         "svg",
         {
@@ -3927,7 +3969,7 @@
         )
       );
     }
-    function _() {
+    function y() {
       return o.createElement(
         "svg",
         {
@@ -3944,7 +3986,7 @@
         })
       );
     }
-    function y(e) {
+    function b(e) {
       return o.createElement(
         "svg",
         Object(r.a)(
@@ -3969,7 +4011,7 @@
         )
       );
     }
-    function b() {
+    function E() {
       return o.createElement(
         "svg",
         {
@@ -4005,7 +4047,7 @@
         })
       );
     }
-    function E(e) {
+    function g(e) {
       return o.createElement(
         "svg",
         {
@@ -4097,7 +4139,7 @@
           )
       );
     }
-    function g() {
+    function w() {
       return o.createElement(
         "svg",
         {
@@ -4184,7 +4226,7 @@
         })
       );
     }
-    function w(e) {
+    function S(e) {
       var t = "SVGIcon_Button SVGIcon_Headphones";
       return (
         e.className && (t += " " + e.className),
@@ -4247,7 +4289,7 @@
         )
       );
     }
-    function S() {
+    function k() {
       return o.createElement(
         "svg",
         {
@@ -4271,7 +4313,7 @@
         )
       );
     }
-    function k(e) {
+    function x(e) {
       var t = "SVGIcon_Button SVGIcon_Pin";
       return (
         e.bPinned && (t += " Pinned"),
@@ -4313,7 +4355,7 @@
         )
       );
     }
-    function x(e) {
+    function M(e) {
       return o.createElement(
         "svg",
         {
@@ -4360,7 +4402,7 @@
           })
       );
     }
-    function M() {
+    function C() {
       return o.createElement(
         "svg",
         {
@@ -4394,7 +4436,7 @@
         })
       );
     }
-    function C() {
+    function P() {
       return o.createElement(
         "svg",
         {
@@ -4438,7 +4480,7 @@
         })
       );
     }
-    function P() {
+    function L() {
       return o.createElement(
         "svg",
         {
@@ -4486,7 +4528,7 @@
         )
       );
     }
-    function L() {
+    function O() {
       return o.createElement(
         "svg",
         {
@@ -4510,7 +4552,7 @@
         })
       );
     }
-    function O(e) {
+    function I(e) {
       return o.createElement(
         "svg",
         {
@@ -4582,7 +4624,7 @@
         )
       );
     }
-    function I() {
+    function B() {
       return o.createElement(
         "svg",
         {
@@ -4665,7 +4707,7 @@
         })
       );
     }
-    function B() {
+    function G() {
       return o.createElement(
         "svg",
         {
@@ -4777,7 +4819,7 @@
         )
       );
     }
-    function G() {
+    function R() {
       return o.createElement(
         "svg",
         {
@@ -4802,7 +4844,7 @@
         })
       );
     }
-    function R(e) {
+    function V(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return o.createElement(
@@ -4882,7 +4924,7 @@
         })
       );
     }
-    function V() {
+    function H() {
       return o.createElement(
         "svg",
         {
@@ -4940,7 +4982,7 @@
         )
       );
     }
-    function H() {
+    function F() {
       return o.createElement(
         "svg",
         {
@@ -5214,7 +5256,7 @@
         )
       );
     }
-    function F() {
+    function z() {
       return o.createElement(
         "svg",
         {
@@ -5239,7 +5281,7 @@
         })
       );
     }
-    function z() {
+    function j() {
       return o.createElement(
         "svg",
         {
@@ -5265,7 +5307,7 @@
         })
       );
     }
-    function j() {
+    function A() {
       return o.createElement(
         "svg",
         {
@@ -5285,7 +5327,7 @@
         })
       );
     }
-    function A(e) {
+    function U(e) {
       return o.createElement(
         "svg",
         {
@@ -5320,7 +5362,7 @@
         })
       );
     }
-    function U(e) {
+    function K(e) {
       return o.createElement(
         "svg",
         {
@@ -5356,7 +5398,7 @@
           })
       );
     }
-    function K() {
+    function Y() {
       return o.createElement(
         "svg",
         {
@@ -5390,7 +5432,7 @@
         })
       );
     }
-    function Y() {
+    function X() {
       return o.createElement(
         "svg",
         {
@@ -5426,7 +5468,7 @@
         })
       );
     }
-    function X() {
+    function q() {
       return o.createElement(
         "svg",
         {
@@ -5452,7 +5494,7 @@
         })
       );
     }
-    function q() {
+    function J() {
       return o.createElement(
         "svg",
         {
@@ -5485,7 +5527,7 @@
         })
       );
     }
-    function J() {
+    function Q() {
       return o.createElement(
         "svg",
         {
@@ -5549,7 +5591,7 @@
         )
       );
     }
-    function Q() {
+    function Z() {
       return o.createElement(
         "svg",
         {
@@ -5577,7 +5619,7 @@
         })
       );
     }
-    function Z() {
+    function $() {
       return o.createElement(
         "svg",
         {
@@ -5601,7 +5643,7 @@
         })
       );
     }
-    function $() {
+    function ee() {
       return o.createElement(
         "svg",
         {
@@ -5680,7 +5722,7 @@
         )
       );
     }
-    function ee() {
+    function te() {
       return o.createElement(
         "svg",
         {
@@ -5704,7 +5746,7 @@
         )
       );
     }
-    function te(e) {
+    function ne(e) {
       return o.createElement(
         "svg",
         {
@@ -5725,7 +5767,7 @@
         })
       );
     }
-    function ne(e) {
+    function re(e) {
       return o.createElement(
         "svg",
         {
@@ -5789,7 +5831,7 @@
         )
       );
     }
-    function re() {
+    function oe() {
       return o.createElement(
         "svg",
         {
@@ -5824,7 +5866,7 @@
         })
       );
     }
-    function oe(e) {
+    function ie(e) {
       return o.createElement(
         "svg",
         {
@@ -5862,7 +5904,7 @@
         })
       );
     }
-    function ie() {
+    function ce() {
       return o.createElement(
         "svg",
         {
@@ -5976,7 +6018,41 @@
         )
       );
     }
-    function ce() {
+    function ae(e) {
+      var t = Object(a.a)(
+        "SVGIcon_Button",
+        "SVGIcon_SteamLogo",
+        e && e.className
+      );
+      return o.createElement(
+        "svg",
+        {
+          version: "1.1",
+          id: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: t,
+          x: "0px",
+          y: "0px",
+          viewBox: "0 0 256 256"
+        },
+        o.createElement("path", {
+          fill: "#ffffff",
+          d:
+            "M127.374,5.355c-64.404,0-117.167,49.661-122.18,112.77l65.712,27.171 c5.567-3.808,12.293-6.032,19.53-6.032c0.649,0,1.294,0.017,1.934,0.051l29.226-42.354c0-0.202-0.005-0.399-0.005-0.598 c0-25.496,20.74-46.241,46.237-46.241c25.498,0,46.238,20.745,46.238,46.241c0,25.494-20.74,46.242-46.238,46.242 c-0.352,0-0.698-0.011-1.047-0.021l-41.68,29.741c0.022,0.546,0.041,1.095,0.041,1.644c0,19.141-15.569,34.707-34.706,34.707 c-16.796,0-30.843-11.99-34.026-27.869l-46.993-19.43c14.55,51.464,61.831,89.189,117.957,89.189 c67.713,0,122.604-54.893,122.604-122.604C249.979,60.244,195.086,5.355,127.374,5.355"
+        }),
+        o.createElement("path", {
+          fill: "#ffffff",
+          d:
+            "M82.026,191.387l-15.061-6.22c2.67,5.56,7.285,10.208,13.418,12.767 c13.25,5.521,28.531-0.771,34.054-14.027c2.674-6.416,2.694-13.5,0.04-19.93c-2.646-6.431-7.64-11.451-14.063-14.129 c-6.371-2.647-13.196-2.552-19.198-0.291l15.561,6.437c9.776,4.073,14.396,15.299,10.324,25.071 C103.031,190.841,91.801,195.464,82.026,191.387"
+        }),
+        o.createElement("path", {
+          fill: "#ffffff",
+          d:
+            "M198.639,96.359c0-16.987-13.82-30.809-30.809-30.809c-16.987,0-30.813,13.821-30.813,30.809 c0,16.988,13.824,30.806,30.813,30.806S198.639,113.347,198.639,96.359 M144.736,96.306c0-12.783,10.363-23.142,23.145-23.142 c12.783,0,23.145,10.359,23.145,23.142c0,12.783-10.36,23.142-23.145,23.142C155.1,119.447,144.736,109.089,144.736,96.306"
+        })
+      );
+    }
+    function se() {
       return o.createElement(
         "svg",
         {
@@ -6004,7 +6080,7 @@
         })
       );
     }
-    function ae() {
+    function le() {
       return o.createElement(
         "svg",
         {
@@ -6026,7 +6102,7 @@
         )
       );
     }
-    function se() {
+    function ue() {
       return o.createElement(
         "svg",
         {
@@ -6063,7 +6139,7 @@
         )
       );
     }
-    function le() {
+    function me() {
       return o.createElement(
         "svg",
         {
@@ -6091,7 +6167,7 @@
         })
       );
     }
-    function ue(e) {
+    function pe(e) {
       return o.createElement(
         "svg",
         {
@@ -6203,7 +6279,7 @@
         )
       );
     }
-    function me() {
+    function he() {
       return o.createElement(
         "svg",
         {
@@ -6270,7 +6346,7 @@
         })
       );
     }
-    function pe() {
+    function de() {
       return o.createElement(
         "svg",
         {
@@ -6291,7 +6367,7 @@
         })
       );
     }
-    function he() {
+    function fe() {
       return o.createElement(
         "svg",
         {
@@ -6311,7 +6387,7 @@
         })
       );
     }
-    function de() {
+    function ve() {
       return o.createElement(
         "svg",
         {
@@ -6335,7 +6411,90 @@
         })
       );
     }
-    function fe() {
+    function _e() {
+      return o.createElement(
+        "svg",
+        {
+          version: "1.1",
+          id: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_LargeMobilePhone",
+          x: "0px",
+          y: "0px",
+          width: "128px",
+          height: "255px",
+          viewBox: "0 0 128 255"
+        },
+        o.createElement("rect", {
+          className: "screen",
+          x: "7.756",
+          y: "5.518",
+          fill: "#292D33",
+          width: "112.144",
+          height: "234.357"
+        }),
+        o.createElement("path", {
+          className: "frame",
+          fill: "#3C414B",
+          d:
+            "M40.334,15.72h47.237c3.957,0,7.164-3.259,7.164-7.28c0-1.113,0.889-2.017,1.984-2.017h9.746 c7.417,0,13.432,6.108,13.432,13.646v206.156c0,7.538-6.015,13.647-13.431,13.647H21.459c-7.417,0-13.429-6.109-13.429-13.647 V20.071c0-7.536,6.013-13.646,13.429-13.646h9.728c1.096,0,1.983,0.903,1.983,2.017C33.17,12.461,36.377,15.72,40.334,15.72 M107.057,0.001H20.87c-9.922,0-17.965,8.174-17.965,18.256v217.505c0,10.082,8.043,18.256,17.965,18.256h86.188 c9.923,0,17.966-8.174,17.966-18.256V18.257C125.022,8.175,116.979,0.001,107.057,0.001"
+        }),
+        o.createElement("path", {
+          fill: "#3C414B",
+          d:
+            "M0.826,33.349C0.369,33.349,0,33.725,0,34.189v7.616c0,0.464,0.37,0.84,0.826,0.84s0.827-0.376,0.827-0.84 v-7.617C1.653,33.725,1.283,33.349,0.826,33.349"
+        }),
+        o.createElement("path", {
+          fill: "#3C414B",
+          d:
+            "M0.826,51.56C0.369,51.56,0,51.936,0,52.4v16.8c0,0.465,0.37,0.841,0.826,0.841s0.827-0.376,0.827-0.841 V52.4C1.653,51.936,1.283,51.56,0.826,51.56"
+        }),
+        o.createElement("path", {
+          fill: "#3C414B",
+          d:
+            "M0.826,75.304C0.369,75.304,0,75.68,0,76.144v15.904c0,0.464,0.37,0.84,0.826,0.84s0.827-0.376,0.827-0.84 V76.144C1.653,75.68,1.283,75.304,0.826,75.304"
+        }),
+        o.createElement("path", {
+          fill: "#3C414B",
+          d:
+            "M127.617,58.056c-0.457,0-0.827,0.376-0.827,0.84v27.328c0,0.464,0.37,0.84,0.827,0.84 c0.456,0,0.826-0.376,0.826-0.84V58.896C128.443,58.432,128.073,58.056,127.617,58.056"
+        })
+      );
+    }
+    function ye() {
+      return o.createElement(
+        "svg",
+        {
+          version: "1.1",
+          id: "Layer_2",
+          xmlns: "http://www.w3.org/2000/svg",
+          className: "SVGIcon_Button SVGIcon_Envelope",
+          x: "0px",
+          y: "0px",
+          width: "256px",
+          height: "256px",
+          viewBox: "0 0 256 256"
+        },
+        o.createElement("polygon", {
+          fill: "#3C414B",
+          points: "3.167,48.809 127.22,128 252.833,48.809 "
+        }),
+        o.createElement("polygon", {
+          fill: "#3C414B",
+          points: "252.833,203.68 252.833,55.439 185.151,99.131 "
+        }),
+        o.createElement("polygon", {
+          fill: "#3C414B",
+          points:
+            "247.958,207.191 180.47,101.472 128.001,134.24 75.142,101.472 7.849,207.191 "
+        }),
+        o.createElement("polygon", {
+          fill: "#3C414B",
+          points: "3.167,203.682 3.167,55.441 70.851,99.132 "
+        })
+      );
+    }
+    function be() {
       return o.createElement(
         "svg",
         {
@@ -6355,7 +6514,7 @@
         })
       );
     }
-    function ve() {
+    function Ee() {
       return o.createElement(
         "svg",
         {
@@ -6377,7 +6536,7 @@
         })
       );
     }
-    function _e() {
+    function ge() {
       return o.createElement(
         "svg",
         {
@@ -6411,7 +6570,7 @@
         })
       );
     }
-    function ye() {
+    function we() {
       return o.createElement(
         "svg",
         {

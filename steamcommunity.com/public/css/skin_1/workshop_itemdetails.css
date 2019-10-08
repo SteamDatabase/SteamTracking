@@ -376,6 +376,9 @@ div.visibilityselect {
 	padding: 0 8px 0 8px;
 	margin-right: 5px;
 }
+.panel.admin div.visibilityselect {
+	padding-left: 0px;
+}
 
 div.visibilityselect_options {
 	width: 200px;

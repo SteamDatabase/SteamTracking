@@ -3774,12 +3774,738 @@ iframe.steamTVLogin {
   .videoContainer.GameDetailsPlayer:not(.TheaterMode) .videoControlButton.videoControlGoLive {
     display: none; } }
 
+.partnereventshared_PartnerEventFont_guiIY {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300; }
+
+.partnereventshared_BetaContainer_2yDhg {
+  background-image: radial-gradient(circle at top left, #056890 0%, #143d4d 60%);
+  border-bottom: 1px solid #09b8fe;
+  padding: 40px;
+  color: #e5e5e5; }
+  .partnereventshared_BetaContainer_2yDhg a {
+    text-decoration: underline; }
+  .partnereventshared_BetaContainer_2yDhg .partnereventshared_EventBetaTextTitle_3NjnO {
+    font-size: 23px;
+    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: #78bbf2;
+    text-transform: none;
+    margin-bottom: 8px; }
+
+.partnereventshared_Clear_3n3_O {
+  clear: left;
+  display: block; }
+
+.partnereventshared_Divider_26Tlx {
+  background-color: #161616;
+  border-bottom: 1px solid #4c4c4c;
+  height: 1px;
+  margin-top: 15px;
+  margin-bottom: 10px; }
+
+.partnereventshared_EventDefaultRowContainer_3Q8Dr {
+  background: rgba(57, 61, 71, 0.5);
+  padding: 16px;
+  border-radius: 4px; }
+
+.partnereventshared_EventDefaultRowContainer_3Q8Dr.partnereventshared_EventStartPublic_3oV6b {
+  border-left: 1px solid #a3cf06; }
+
+.partnereventshared_EventOptions_2vHY_ {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row; }
+
+.partnereventshared_FlexColumnContainer_1IIW_ {
+  display: flex;
+  flex-direction: column; }
+
+.partnereventshared_FlexRowContainer_34oey {
+  display: flex;
+  flex-direction: row; }
+
+.partnereventshared_FlexContainSpaceBetween_2yJdN {
+  justify-content: space-between;
+  position: absolute; }
+
+.partnereventshared_FlexRowContainer_34oey > div:not(:first-child) {
+  margin-left: 8px; }
+
+.partnereventshared_FlexRowWrapSpaceBetweenContainer_12nJm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .partnereventshared_FlexRowWrapSpaceBetweenContainer_12nJm .partnereventshared_Button_vHRhC {
+    display: block; }
+
+.partnereventshared_FlexRowWrapFlexStartContainer_1t48T {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.partnereventshared_SaveBackground_1GJS5 .partnereventshared_FlexRowWrapFlexStartContainer_1t48T {
+  background: #353941;
+  padding: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.partnereventshared_LangaugeWithContent_sidWp {
+  color: #a3cf06; }
+
+input::placeholder {
+  font-style: italic; }
+
+/* Give a gray border around input lines */
+.partnereventshared_InputBorder_2XVMj {
+  padding: 0px; }
+
+b {
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif; }
+
+.partnereventshared_RadioOption_dMFpL {
+  padding: 4px 0px; }
+
+.partnereventshared_RadioOption_dMFpL label {
+  margin-left: 8px; }
+
+.partnereventshared_EventEditorTextTitleCtn_2qs1W {
+  padding-bottom: 3px;
+  padding-top: 20px; }
+  .partnereventshared_EventEditorTextTitleCtn_2qs1W .partnereventshared_doclink_vnuV8 {
+    float: right;
+    background: #30343b;
+    border-radius: 3px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #bbbdbf;
+    padding: 2px 6px; }
+    .partnereventshared_EventEditorTextTitleCtn_2qs1W .partnereventshared_doclink_vnuV8:hover {
+      background: #495059; }
+
+.partnereventshared_EventEditorUnpaddedTextTitle_3zuPV,
+.partnereventshared_EventEditorTextTitle_4u8AK,
+.partnereventshared_EventEditorTextTitleLengthInfo_3uNCx {
+  color: #a7aeb4;
+  padding-bottom: 3px;
+  letter-spacing: 0px; }
+
+.partnereventshared_EventEditorUnpaddedTextTitle_3zuPV,
+.partnereventshared_EventEditorTextTitle_4u8AK {
+  padding-left: 0px;
+  text-transform: uppercase;
+  font-size: 13px; }
+  .partnereventshared_EventEditorUnpaddedTextTitle_3zuPV span,
+  .partnereventshared_EventEditorTextTitle_4u8AK span {
+    text-transform: none;
+    color: #868f98; }
+
+.partnereventshared_EventEditorTextTitleLengthInfo_3uNCx {
+  font-size: 11px;
+  padding-left: 10px; }
+
+.partnereventshared_EventSectionTitleCtn_ozwVb {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 12px;
+  position: relative; }
+
+.partnereventshared_EventSectionTitle_KEXXa {
+  color: #ffffff;
+  padding-left: 0px;
+  padding-bottom: 3px;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-top: 2px; }
+
+.partnereventshared_EventSectionSpacer_5FbJa {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  flex-grow: 1;
+  margin-top: 12px;
+  height: 4px;
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.partnereventshared_EventSectionMoreBtn_2hdIF {
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  padding: 4px 12px;
+  color: #ffffff;
+  font-size: 11px;
+  height: 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+  text-overflow: ellipsis; }
+  .partnereventshared_EventSectionMoreBtn_2hdIF:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+    cursor: pointer; }
+
+.partnereventshared_EventEditorTextTitle_4u8AK,
+.partnereventshared_EventEditorSpacerPadding_2trt_ {
+  padding-top: 20px; }
+
+.partnereventshared_EventEditorVisibilityCtn_1dC8o {
+  margin-top: 10px; }
+
+.partnereventshared_EventEditorTextSubTitle_1HRiS {
+  color: #b2b5ba;
+  margin-bottom: 12px; }
+
+.partnereventshared_FloatingTitle_3TKtJ {
+  color: #4297f8;
+  text-transform: uppercase;
+  float: left;
+  margin-top: 40px;
+  margin-left: 40px;
+  font-size: 13px;
+  font-weight: 300; }
+
+@media screen and (max-width: 1400px) {
+  body .partnereventshared_FloatingTitle_3TKtJ {
+    float: unset;
+    width: 1056px;
+    margin: 0px auto;
+    padding-top: 40px;
+    border-top: unset; } }
+
+.partnereventshared_EventEditorEventStatus_1H_x_ {
+  color: var(--main-editor-section-title-color);
+  padding-left: 0px;
+  padding-bottom: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  font-size: 13px; }
+
+.partnereventshared_EventHidden_33eoA {
+  color: #c44848; }
+
+.partnereventshared_EventVisible_9OA0F {
+  color: #a3cf06; }
+
+.partnereventshared_EventBarTitleCtn_1rO-6 {
+  text-align: center;
+  color: #32373f; }
+
+.partnereventshared_EventBarTitle_2iysK {
+  font-size: 22px;
+  font-weight: bold;
+  color: #32373f;
+  top: -4px;
+  position: relative; }
+
+.partnereventshared_EventBarTitleCtn_1rO-6 .partnereventshared_FlexRowContainer_34oey {
+  justify-content: center; }
+
+.partnereventshared_EventBarBack_1Xr6O {
+  background-image: url(https://steamcommunity-a.akamaihd.net/public/images//applications/community/icon_back_dark.png);
+  left: 2px;
+  color: #32373f;
+  font-size: 16px;
+  background-repeat: no-repeat;
+  background-position: 6px center;
+  background-size: 32px 32px;
+  padding: 10px 16px 0px 51px;
+  height: 28px;
+  border-radius: 3px; }
+  .partnereventshared_EventBarBack_1Xr6O:hover {
+    background-color: #32373f;
+    color: #ffffff;
+    background-image: url(https://steamcommunity-a.akamaihd.net/public/images//applications/community/icon_back_light.png);
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer; }
+
+.partnereventshared_EditPreviewButton_2PEIa {
+  min-width: 100px;
+  padding: 4px 20px;
+  margin-left: 12px;
+  border-radius: 3px;
+  line-height: 26px;
+  text-align: center;
+  background: #3d434d;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none; }
+  .partnereventshared_EditPreviewButton_2PEIa:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+
+.partnereventshared_Button_vHRhC {
+  color: #dfe3e6;
+  transition: all 0.2s ease-out;
+  background: #3d4450;
+  padding: 6px 25px 6px 25px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative; }
+  .partnereventshared_Button_vHRhC:hover {
+    background: #464d58;
+    color: white;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer; }
+
+.partnereventshared_Button_vHRhC.partnereventshared_Icon_fCQJR {
+  color: #dfe3e6;
+  transition: all 0.2s ease-out;
+  background: #3d4450;
+  padding: 6px 25px 8px 25px;
+  height: 20px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative; }
+  .partnereventshared_Button_vHRhC.partnereventshared_Icon_fCQJR:hover {
+    background: #464d58;
+    color: white;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer; }
+
+.partnereventshared_Button_vHRhC.partnereventshared_Primary_3uuII {
+  color: #e1e1e1;
+  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%);
+  padding: 8px 25px;
+  line-height: 32px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); }
+
+.partnereventshared_Button_vHRhC.partnereventshared_Primary_3uuII:hover {
+  background-image: radial-gradient(circle at top left, #59abee 10%, #225dce 130%);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+
+.partnereventshared_ClearThings_1p6-J {
+  clear: both; }
+
+.partnereventshared_OnIndicator_lPo-r, .partnereventshared_OffIndicator_U53TH {
+  color: white;
+  padding-top: 1px;
+  padding-bottom: 3px;
+  padding-left: 8px;
+  padding-right: 8px; }
+
+.partnereventshared_OnIndicator_lPo-r {
+  background-color: #2d73ff; }
+
+.partnereventshared_OffIndicator_U53TH {
+  background-color: #5f6875; }
+
+.partnereventshared_IconImage_1iap9 {
+  height: 18px;
+  width: 18px;
+  padding-right: 5px; }
+
+.partnereventshared_RightColumnContainer_3ofiw {
+  background-color: #2a2d34;
+  padding: 15px; }
+
+.partnereventshared_RightColumnContainer_3ofiw button.partnereventshared_EventPublishButton_U0o0u {
+  margin-top: 20px; }
+
+.partnereventshared_FloatRight_3qSeX {
+  float: right; }
+
+.partnereventshared_TTip_3E9wx {
+  background: #3a3f48;
+  padding: 0px 7px;
+  border-radius: 20px;
+  display: inline-block; }
+
+.partnereventshared_TTip_3E9wx:hover {
+  cursor: default; }
+
+.partnereventshared_ValveSupportOnly_2hj7U {
+  padding: 10px;
+  color: white; }
+
+.partnereventshared_ArtworkAgeNotAppropriate_-1se4 {
+  position: relative; }
+
+.partnereventshared_ArtworkAgeNotAppropriate_-1se4 {
+  filter: blur(30px) saturate(0.9); }
+
+/* Shared header stuff ================================ */
+.partnereventshared_EventDashboardHeader_2lb6f {
+  display: flex;
+  flex-direction: column; }
+
+.partnereventshared_ContainerSpaceBetween_3T0Pr,
+.partnereventshared_EventDashboardTitles_3XWe3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.partnereventshared_EventDashboardTitles_3XWe3 {
+  margin-bottom: 15px; }
+
+.partnereventshared_EventDashboardActions_2i1-P {
+  /* top right section with actions */ }
+
+.partnereventshared_EventDashboardAppCtn_iUAoi {
+  margin-top: 40px;
+  position: relative;
+  margin-bottom: 20px; }
+
+.partnereventshared_maintitle_21WFS,
+.partnereventshared_AppTitle_3-UCH {
+  font-size: 28px; }
+
+.partnereventshared_maintitle_21WFS {
+  color: #b7ccd5; }
+
+.partnereventshared_AppTitle_3-UCH {
+  border-bottom: 1px dotted #535b6a;
+  padding-bottom: 4px;
+  display: inherit; }
+
+.partnereventshared_AppTitle_3-UCH img {
+  width: 81px;
+  vertical-align: text-top;
+  margin-right: 8px; }
+
+.partnereventshared_subtitle_2psnk {
+  font-size: 16px;
+  color: #8F98A0; }
+
+.partnereventshared_ValveOnlyBackground_3HNFH {
+  background-color: #461F28;
+  padding: 4px; }
+
+.partnereventshared_Columns_3F7nd {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.partnereventshared_LeftCol_jRpF9 {
+  width: 640px; }
+  @media screen and (max-width: 910px) {
+    .partnereventshared_LeftCol_jRpF9 {
+      width: auto;
+      float: none;
+      max-width: 640px; } }
+
+.partnereventshared_RightCol_1Rsr2 {
+  max-width: 33vw;
+  padding-left: 24px; }
+  @media screen and (max-width: 910px) {
+    .partnereventshared_RightCol_1Rsr2 {
+      width: auto;
+      float: none;
+      padding: 16px 8px 0 8px; } }
+
+.partnereventshared_DropDownScroll_22e7r {
+  max-height: 400px;
+  overflow: hidden scroll; }
+
+.partnereventshared_CloseButton_1sshi {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 12px;
+  height: 12px; }
+
+.partnereventshared_HalfColumn_iCcAr {
+  box-sizing: border-box;
+  margin: 4px;
+  width: 50%; }
+
+.partnereventshared_ThemedCtn_2jzrF.partnereventshared_Halloween_juiix .partnereventshared_EventDefaultRowContainer_3Q8Dr {
+  background-image: url(https://steamcommunity-a.akamaihd.net/public/images/events/halloween_art_tile.jpg); }
+  .partnereventshared_ThemedCtn_2jzrF.partnereventshared_Halloween_juiix .partnereventshared_EventDefaultRowContainer_3Q8Dr .partnereventshared_EventEditorTextSubTitle_1HRiS {
+    color: #e6d68f; }
+  .partnereventshared_ThemedCtn_2jzrF.partnereventshared_Halloween_juiix .partnereventshared_EventDefaultRowContainer_3Q8Dr > div:last-child {
+    background: rgba(0, 0, 0, 0.8); }
+
+.login_LoginDialog_1AiEN {
+  background-color: #101114;
+  background-image: linear-gradient(to bottom, #101114, #1f2127);
+  margin: 20px;
+  min-height: 512px;
+  position: relative; }
+
+.login_AccountPasswordPanel_qEDoX .DialogCheckbox_Container .DialogToggle_Label {
+  color: #969696;
+  font-size: 12px;
+  font-weight: 300; }
+
+.login_LoginPanelBackground_1OIQT {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+  .login_LoginPanelBackground_1OIQT .SVGIcon_SteamLogo {
+    pointer-events: none;
+    position: absolute;
+    bottom: -128px;
+    left: -64px;
+    opacity: .02;
+    width: 800px;
+    height: 800px;
+    max-width: 500px;
+    max-height: 500px; }
+
+.login_LoginPanelContent_2f9PO {
+  padding: 32px; }
+
+.login_ErrorMessage_1iM0s {
+  user-select: none;
+  position: absolute;
+  color: #ff9696;
+  font-size: 12px;
+  margin: 0px; }
+
+.login_AccountPasswordForm_1Qq0T {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px; }
+  .login_AccountPasswordForm_1Qq0T .DialogInputLabelGroup {
+    margin-bottom: 16px; }
+  .login_AccountPasswordForm_1Qq0T .DialogTextInputBase {
+    font-size: 24px;
+    height: 24px;
+    width: 100%;
+    max-width: 398px;
+    color: #bfc6d4;
+    box-sizing: content-box;
+    background: #32353c; }
+    .login_AuthenticationPanel_1-8sv .login_AccountPasswordForm_1Qq0T .DialogTextInputBase {
+      text-transform: uppercase; }
+    .login_AccountPasswordForm_1Qq0T .DialogTextInputBase:hover {
+      background: #3a3e46; }
+    .login_AccountPasswordForm_1Qq0T .DialogTextInputBase:focus {
+      background: #464a53; }
+  .login_AccountPasswordForm_1Qq0T .login_AccountNameLabel_2bgVa.login_MedName_13-91 {
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .login_AccountPasswordForm_1Qq0T .login_AccountNameLabel_2bgVa.login_LargeName_tfWYS {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .login_AccountPasswordForm_1Qq0T .login_PasswordDots_at615 {
+    font-size: 62px;
+    padding-top: 6px;
+    padding-bottom: 14px; }
+    .login_AccountPasswordForm_1Qq0T .login_PasswordDots_at615.login_MedPass_3k9SP {
+      font-size: 32px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+    .login_AccountPasswordForm_1Qq0T .login_PasswordDots_at615.login_LargePass_1xBFu {
+      font-size: 19px;
+      padding-top: 10px;
+      padding-bottom: 10px; }
+  .login_AccountPasswordForm_1Qq0T input:-webkit-autofill,
+  .login_AccountPasswordForm_1Qq0T input:-webkit-autofill:hover,
+  .login_AccountPasswordForm_1Qq0T input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+  .login_AccountPasswordForm_1Qq0T textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+  .login_AccountPasswordForm_1Qq0T select:-webkit-autofill,
+  .login_AccountPasswordForm_1Qq0T select:-webkit-autofill:hover,
+  .login_AccountPasswordForm_1Qq0T select:-webkit-autofill:focus {
+    -webkit-text-fill-color: #d3eaeb;
+    -webkit-box-shadow: 0 0 0px 100px #53523f inset; }
+  .login_AccountPasswordForm_1Qq0T .DialogButton.Primary {
+    height: 44px;
+    width: 50%;
+    align-self: flex-end; }
+
+.login_AccountFieldHeader_iW_Im {
+  margin-top: 10px; }
+
+.login_PasswordFieldHeader_2XPUQ {
+  margin-top: 10px; }
+
+.login_NeedHelpLink_TXivN {
+  color: #969696;
+  margin: 10px 0px 20px 0px;
+  font-size: 12px;
+  text-decoration: underline;
+  text-decoration-color: #4b4b4b;
+  transition: all .21s ease-in-out; }
+  .login_NeedHelpLink_TXivN.login_NeedHelpHighlight_w-u5P {
+    color: #ff7300;
+    text-decoration-color: #8f5100; }
+  .login_NeedHelpLink_TXivN:hover {
+    color: white;
+    text-decoration-color: #b6b6b6; }
+  .login_NeedHelpLink_TXivN:visited {
+    color: #969696; }
+
+.login_CreateAccountLink_210gd a {
+  color: #bfc6d4; }
+
+.login_CreateAccountLink_210gd a:visited {
+  color: #bfc6d4; }
+
+.login_LoginCreateSeperator_1jJwP {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 16px;
+  height: 24px; }
+
+.login_RefreshCaptchaText_uH2zO {
+  color: #67c1f5;
+  margin: 10px 0px 20px 0px;
+  font-size: 12px;
+  cursor: pointer; }
+  .login_RefreshCaptchaText_uH2zO:visited {
+    color: #67c1f5; }
+
+.login_SigningInAccountName_3PzFM,
+.login_SigninTitle_wNkza {
+  user-select: none;
+  font-size: 28px;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #bfc6d4;
+  margin-top: 28px;
+  margin-bottom: 12px; }
+
+.login_RememberMeCheck_1GhRU {
+  margin-top: -8px; }
+
+.login_SteamUpsellContainer_ACnPK {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .login_SteamUpsellContainer_ACnPK div {
+    width: fit-content;
+    align-self: center; }
+
+.login_SteamUpsell_3bePc {
+  color: #969696;
+  font-size: 12px; }
+
+.login_CreateAccountLink_210gd a {
+  color: #bfc6d4;
+  text-decoration: underline;
+  text-decoration-color: #4b4b4b; }
+
+.login_CreateAccountLink_210gd a:hover {
+  color: white;
+  text-decoration-color: #b6b6b6; }
+
+.login_CaptchaContainer_1W85e .login_CaptchaBlock_2NMvn {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid dotted; }
+  .login_CaptchaContainer_1W85e .login_CaptchaBlock_2NMvn .login_CaptchaImageAndInput_3u7iL {
+    display: flex;
+    flex-direction: column; }
+  .login_CaptchaContainer_1W85e .login_CaptchaBlock_2NMvn .login_ErrorMessage_1iM0s {
+    position: relative;
+    padding-left: 16px;
+    margin: 0; }
+
+.login_CaptchaContainer_1W85e .login_CaptchaImageBox_we1G3 {
+  border: 1px solid black;
+  border-radius: 3px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  width: 203px;
+  height: 37px;
+  /*box-shadow: 0px 8px 38px 5px rgba( 0, 0, 0, 0.75 );*/ }
+
+.login_CaptchaContainer_1W85e .login_CaptchaImage_16f5d {
+  margin-top: -2px;
+  margin-left: -2px; }
+
+.login_CaptchaContainer_1W85e .login_CaptchaInput_1y9KG {
+  text-transform: uppercase;
+  color: #6dc7fb;
+  letter-spacing: 10px;
+  max-width: 159px;
+  background-color: #2a3649;
+  border: 0.5px solid #737373;
+  padding: 6px 14px 6px 30px;
+  font-family: monospace;
+  font-size: 28px;
+  border: 1px solid black;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top-width: 0px;
+  overflow: hidden;
+  box-shadow: 0px 6px 16px 2px rgba(0, 0, 0, 0.75) inset; }
+  .login_CaptchaContainer_1W85e .login_CaptchaInput_1y9KG:focus {
+    padding: 6px 14px 6px 30px; }
+
+.login_AuthenticationPanel_1-8sv .DialogLabel {
+  margin-top: 16px;
+  margin-bottom: 0px; }
+
+.login_AuthenticationPanel_1-8sv .DialogBodyText {
+  font-size: 14px;
+  margin-bottom: 25px; }
+  .login_AuthenticationPanel_1-8sv .DialogBodyText .SVGIcon_Caution {
+    width: 20px;
+    height: 20px;
+    margin-bottom: -5px; }
+    .login_AuthenticationPanel_1-8sv .DialogBodyText .SVGIcon_Caution .triangle path {
+      fill: #bd6500; }
+
+.login_AuthenticationPanel_1-8sv .login_NeedHelpLink_TXivN {
+  margin-top: 32px;
+  display: block; }
+
+.login_AuthenticatorInputcontainer_1emeo {
+  /*border: 0.5px solid #f002;*/
+  position: relative;
+  height: 180px; }
+  .login_AuthenticatorInputcontainer_1emeo .SVGIcon_LargeMobilePhone {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 180px;
+    width: 90px;
+    filter: brightness(0.6); }
+  .login_AuthenticatorInputcontainer_1emeo .SVGIcon_Envelope {
+    position: absolute;
+    top: -22px;
+    left: 0px;
+    height: 92px;
+    width: 92px;
+    filter: brightness(0.6); }
+  .login_AuthenticatorInputcontainer_1emeo .login_AccountPasswordForm_1Qq0T {
+    z-index: 2;
+    position: relative;
+    margin-left: 24px;
+    margin-bottom: 0px;
+    height: 100%; }
+    .login_AuthenticatorInputcontainer_1emeo .login_AccountPasswordForm_1Qq0T .DialogButton.Primary {
+      width: calc( 50% + 12px);
+      position: absolute;
+      bottom: 0px; }
+  .login_AuthenticatorInputcontainer_1emeo .DialogInputLabelGroup {
+    margin-top: 10px; }
+
+.login_SigningInAccountName_3PzFM {
+  text-transform: none;
+  color: #3ea5f1;
+  margin-top: -6px;
+  letter-spacing: 1px; }
+
+.login_Highlight_2FzBS {
+  color: #dde1e4;
+  font-style: italic; }
+
+.login_LoginComplete_CDuZt {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .broadcastwidgets_StoreSaleWidgetContainer_3-tam {
   display: flex;
   flex-direction: row;
   max-width: 780px;
   max-height: 250px;
   z-index: 1; }
+  .broadcastwidgets_StoreSaleWidgetContainer_3-tam.broadcastwidgets_Bundle_1chCl {
+    max-height: initial; }
   @media screen and (max-width: 910px) {
     .broadcastwidgets_StoreSaleWidgetContainer_3-tam {
       flex-direction: column; } }
@@ -3849,7 +4575,7 @@ iframe.steamTVLogin {
 
 .broadcastwidgets_StoreSaleWidgetShortDesc_column_1NZeo,
 .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2Jm21 {
-  max-height: 150px;
+  max-height: 120px;
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
@@ -3875,7 +4601,9 @@ iframe.steamTVLogin {
 .broadcastwidgets_StoreSalePriceBox_3fccA {
   font-size: 14px;
   padding: 5px;
-  background-color: black; }
+  background-color: black;
+  align-items: center;
+  display: flex; }
 
 .broadcastwidgets_StoreSalePriceButton_2rtnv {
   border-radius: 2px;
@@ -3903,7 +4631,8 @@ iframe.steamTVLogin {
   display: flex;
   flex-direction: column;
   border-radius: 4px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .broadcastwidgets_CapsuleBottomBar_1gdPZ {
   background-color: black;
@@ -3915,6 +4644,101 @@ iframe.steamTVLogin {
 
 .broadcastwidgets_CapsuleImage_1Qyc8 {
   width: 100%; }
+
+.broadcastwidgets_CapsuleTitle_2S9i1 {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 60%;
+  font-size: 14px; }
+
+.broadcastwidgets_Action_2Wm1- {
+  min-width: 50%;
+  flex-direction: row;
+  background-image: radial-gradient(circle at top left, #a3cf06 10%, #6a8704 80%);
+  transition: all 0.2s ease-out;
+  padding: 9px;
+  height: 38px;
+  box-sizing: border-box;
+  color: #dfe3e6;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  align-self: center;
+  /*
+	// TODO these are the styles for the older add to cart button style
+	border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #D2E885 !important;
+    background: #799905;
+    background: -webkit-linear-gradient(top, #799905 5%, #536904 95%);
+    background: linear-gradient(to bottom, #799905 5%, #536904 95%);
+    padding: 0 15px;
+    font-size: 15px;
+	line-height: 30px;
+	
+	&:hover {
+		text-decoration: none !important;
+		color: #ffffff !important;
+		background: #a4d007;
+		background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
+		background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);
+	}
+	*/ }
+  .broadcastwidgets_Action_2Wm1-:hover {
+    color: white;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    background-image: radial-gradient(circle at top left, #a3cf06 0%, #6a8704 120%);
+    cursor: pointer; }
+
+.broadcastwidgets_WishList_bSzoR {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-image: radial-gradient(circle at top left, #0675cf 10%, #046287 80%);
+  transition: all 0.2s ease-out;
+  padding: 9px;
+  height: 38px;
+  box-sizing: border-box;
+  color: #dfe3e6;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); }
+  .broadcastwidgets_WishList_bSzoR:hover {
+    color: white;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+    background-image: radial-gradient(circle at top left, #0675cf 0%, #046287 120%);
+    cursor: pointer; }
+
+.broadcastwidgets_Banner_3b8-q {
+  position: absolute;
+  left: 0;
+  top: 14px;
+  font-size: 10px;
+  color: #111111;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  height: 18px;
+  line-height: 19px;
+  padding-left: 14px;
+  padding-right: 14px;
+  white-space: nowrap;
+  z-index: 5;
+  text-transform: uppercase;
+  background-color: #d3deea; }
+
+.broadcastwidgets_BundleContent_2tK4u {
+  margin-left: 40px;
+  padding: 4px;
+  zoom: 80%; }
 
 .linkregionbox_LinkRegionDragBox_30gow {
   position: absolute;

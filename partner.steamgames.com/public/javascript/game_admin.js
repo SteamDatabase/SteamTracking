@@ -1384,4 +1384,151 @@ function DeleteAssetOverride( nAltAssetIndex, nItemID )
 	} );
 }
 
+function ToggleRatingVisibility( rating )
+{
+	var bHasRating = $J( "#HasRatingCheckbox_" + rating ).attr( "checked" );
+
+	var container = $J( "#RatingDetails_" + rating );
+
+	if ( bHasRating )
+	{
+		container.animate( { opacity: 'show', height: 'show'}, 500 );
+	}
+	else
+	{
+		container.animate( { opacity: 'hide', height: 'hide'}, 500 );
+
+		container.find( "input[type=hidden]" ).each( function( i, e ) {
+			SetFancyCheckboxUnchecked( $J( e ).parent().attr( "id" ) );
+		} );
+		container.find( "input[type=text]" ).each( function( i, e ) {
+			$J( e ).val( "" );
+		} );
+		container.find( "textarea" ).each( function( i, e ) {
+			$J( e ).val( "" );
+		} );
+		container.find( "select" ).each( function( i, e ) {
+			$J( e ).val( "" );
+		} );
+	}
+}
+
+function DeclineRatingQuestionaire( ratingAgency )
+{
+	$J( "#HasRatingCheckbox_" + ratingAgency ).attr( "checked", false  );
+	ToggleRatingVisibility( ratingAgency );
+	ShowRatingQuestionaire( false );
+
+	$J( "#ManualRating_" + ratingAgency ).hide();
+
+	$J( "#RatingGenerated" ).fadeOut();
+	$J( "#QuestionaireCurrentRating" ).fadeOut();
+
+	$J( "#ratings_questionaire_declined_dejus" ).val( "true" );
+}
+
+function EnterRatingManually( ratingAgency )
+{
+	$J( "#HasRatingCheckbox_" + ratingAgency ).attr( "checked", true  );
+
+	ToggleRatingVisibility( ratingAgency );
+	ShowRatingQuestionaire( false );
+
+	$J( "#RatingGenerated" ).fadeOut();
+	$J( "#QuestionaireCurrentRating" ).fadeOut();
+
+	$J( "#ManualRating_" + ratingAgency ).show();
+	$J( "#ManualRating_" + ratingAgency )[0].scrollIntoView();
+	$J( "#ratings_questionaire_declined_dejus" ).val( "" );
+}
+
+function AcceptRatingQuestionaire( ratingAgency )
+{
+	ShowRatingQuestionaire( true );
+
+	$J( "#ManualRating_" + ratingAgency ).hide();
+
+	$J( "#ratings_questionaire_declined_dejus" ).val( "" );
+}
+
+function ShowRatingQuestionaire( bShow )
+{
+	if ( bShow )
+	{
+		$J( "#RatingQuestionaire" ).animate( { opacity: 'show', height: 'show'}, 500 );
+		$J( "#RestartQuestionaireButton" ).fadeOut();
+	}
+	else
+	{
+		$J( "#RatingQuestionaire" ).animate( { opacity: 'hide', height: 'hide'}, 500 );
+	}
+}
+
+function DeselectAllQuestionaireOptions()
+{
+	$J("a[id^=questionaire_category_]").each( function( idx, elem ) {
+		SetFancyCheckboxUnchecked( elem.id );
+	});
+}
+
+function NoCategoriesApplyInQuestionaire( itemid )
+{
+	$J( 'a[id^=questionaire_category_]' ).each( function( idx, elem ) {
+		SetFancyCheckboxUnchecked( elem.id );
+	} );
+	ProcessRatingQuestionaire( itemid );
+}
+
+function ProcessRatingQuestionaire( itemid )
+{
+	var waitingDialog = ShowBlockingWaitDialog( 'Computing Rating', 'Please wait while your final rating is computed...' );
+
+	$J.post( 'https://partner.steamgames.com/admin/game/ajaxgeneraterating/' + itemid, $J( "#gameform" ).serialize() )
+	.done( function( data ) {
+		if ( data.success == 1 )
+		{
+			ShowRatingQuestionaire( false );
+			for ( var i = 0; i < data.ratings.length; ++i )
+			{
+				var ratingAgencyData = data.ratings[i];
+				$J( "#HasRatingCheckbox_" + ratingAgencyData.rating_agency ).attr( "checked", true  );
+				ToggleRatingVisibility( ratingAgencyData.rating_agency );
+
+				var selectRating = $J( "#app_game_ratings_" + ratingAgencyData.rating_agency + "_rating__entry" );
+				selectRating.val( ratingAgencyData.rating.rating );
+
+				var descriptors = $J( "#app_game_ratings_" + ratingAgencyData.rating_agency + "_descriptors" );
+				descriptors.val( ratingAgencyData.rating.descriptors );
+
+				var ageGateCheckboxID = "checkbox_app_game_ratings_" + ratingAgencyData.rating_agency + "_use_age_gate_";
+				if ( ratingAgencyData.rating.required_age > 0 )
+				{
+					SetFancyCheckboxChecked( ageGateCheckboxID );
+				}
+				else
+				{
+					SetFancyCheckboxUnchecked( ageGateCheckboxID );
+				}
+
+				var requiredAge = $J( "#rating_" + ratingAgencyData.rating_agency + "_required_age" );
+				requiredAge.val( ratingAgencyData.rating.required_age > 0 ? ratingAgencyData.rating.required_age : '' );
+
+				$J( "#preview_game_rating_" + ratingAgencyData.rating_agency ).html( ratingAgencyData.preview_html );
+				$J( "#preview_game_rating_" + ratingAgencyData.rating_agency ).show();
+			}
+
+			$J( "#RestartQuestionaireButton" ).fadeIn();
+			$J( "#QuestionaireCurrentRating" ).fadeIn();
+			$J( "#JustCompletedQuestionaireNotice" ).fadeIn();
+			$J( "#RatingGenerated" ).fadeIn();
+		}
+		else
+		{
+			ShowAlertDialog( 'Error', 'There was a problem computing your rating: ' );
+		}
+	} )
+	.always( function() {
+		waitingDialog.Dismiss();
+	} );
+}
 

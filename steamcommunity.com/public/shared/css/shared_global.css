@@ -2311,6 +2311,37 @@ body.v6 #footer_nav .popup_menu .hr{
 	margin-left: 20px;
 }
 
+.shared_game_rating {
+	color: #c6d4df;
+	font-size: 12px;
+}
+.shared_game_rating .game_rating_agency {
+	margin-top: 8px;
+}
+.shared_game_rating .game_rating_required_age {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			text-transform: uppercase;
+	margin-bottom: 5px;
+    font-size: 14px;
+    color: white;
+}
+.shared_game_rating .game_rating_details {
+	display: flex;
+}
+.shared_game_rating .game_rating_icon {
+	margin-right: 10px;
+}
+.shared_game_rating p.descriptorText {
+	margin: 0;
+
+	font-size: 11px !important;
+	color: #c6d4df !important;
+	text-transform: uppercase;
+	line-height: 14px;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .newmodal {
