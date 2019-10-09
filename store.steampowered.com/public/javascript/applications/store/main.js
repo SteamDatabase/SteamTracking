@@ -45907,7 +45907,7 @@
                           i.AnnouncementGID,
                           r ? [] : ["mod_reviewed"],
                           r ? ["mod_reviewed"] : [],
-                          new nm().SetReviewAction(r)
+                          new nm().SetReviewAction(!r)
                         )
                       ]
                     );
