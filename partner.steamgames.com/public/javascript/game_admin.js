@@ -1424,7 +1424,7 @@ function DeclineRatingQuestionaire( ratingAgency )
 	$J( "#RatingGenerated" ).fadeOut();
 	$J( "#QuestionaireCurrentRating" ).fadeOut();
 
-	$J( "#ratings_questionaire_declined_dejus" ).val( "true" );
+	$J( "#ratings_questionaire_declined_" + ratingAgency ).val( "true" );
 }
 
 function EnterRatingManually( ratingAgency )
@@ -1439,7 +1439,15 @@ function EnterRatingManually( ratingAgency )
 
 	$J( "#ManualRating_" + ratingAgency ).show();
 	$J( "#ManualRating_" + ratingAgency )[0].scrollIntoView();
-	$J( "#ratings_questionaire_declined_dejus" ).val( "" );
+	$J( "#ratings_questionaire_declined_" + ratingAgency ).val( "" );
+
+	var selectRating = $J( "#app_game_ratings_" + ratingAgency + "_rating__entry" );
+	var currentRating = selectRating.val();
+	if ( currentRating.length == 0 )
+	{
+		var firstOption = $J( selectRating.children()[1] );
+		selectRating.val( firstOption.val() );
+	}
 }
 
 function AcceptRatingQuestionaire( ratingAgency )
@@ -1448,7 +1456,7 @@ function AcceptRatingQuestionaire( ratingAgency )
 
 	$J( "#ManualRating_" + ratingAgency ).hide();
 
-	$J( "#ratings_questionaire_declined_dejus" ).val( "" );
+	$J( "#ratings_questionaire_declined_" + ratingAgency).val( "" );
 }
 
 function ShowRatingQuestionaire( bShow )
