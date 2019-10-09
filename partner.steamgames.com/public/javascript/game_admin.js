@@ -1524,7 +1524,7 @@ function ProcessRatingQuestionaire( itemid )
 		}
 		else
 		{
-			ShowAlertDialog( 'Error', 'There was a problem computing your rating: ' );
+			ShowAlertDialog( 'Error', 'There was a problem computing your rating: ' + data.success );
 		}
 	} )
 	.always( function() {
