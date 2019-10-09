@@ -202,6 +202,17 @@ div.advanced_controls_toggle_icon.down {
 	padding: 5px;
 }
 
+.using_saved_preferences {
+	color: #fff;
+	padding-left: 15px;
+	transition: height 0.75s, opacity 0.75s;
+}
+
+.show_advanced_controls .using_saved_preferences {
+	opacity: 0;
+	height: 0;
+}
+
 .reviewed_app {
 	display: flex;
 	margin-bottom: 5px;
