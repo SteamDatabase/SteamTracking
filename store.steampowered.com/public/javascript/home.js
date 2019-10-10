@@ -269,7 +269,7 @@ GHomepage = {
 
 		GHomepage.oDisplayLists.main_cluster_legacy = GHomepage.oDisplayListsRaw.main_cluster_legacy || [];
 		GHomepage.oDisplayLists.main_cluster = GHomepage.oDisplayListsRaw.main_cluster || [];
-		GHomepage.oDisplayLists.top_sellers = GHomepage.oDisplayListsRaw.top_sellers || [];
+		GHomepage.oDisplayLists.top_sellers = GHomepage.oDisplayListsRaw.top_grossing || GHomepage.oDisplayListsRaw.top_sellers || [];
 		GHomepage.oDisplayLists.popular_new = GHomepage.oDisplayListsRaw.popular_new_releases || [];
 		GHomepage.oDisplayLists.specials = GHomepage.oDisplayListsRaw.specials || [];
 		GHomepage.oDisplayLists.under10 = GHomepage.oDisplayListsRaw.under10 || [];
@@ -1314,11 +1314,13 @@ GHomepage = {
 
 	FilterTabs: function()
 	{
-		var rgTabSections =  ['#tab_newreleases_content', '#tab_topsellers_content', '#tab_specials_content'];
+		var rgTabSections =  ['#tab_newreleases_content', '#tab_topsellers_content', '#tab_topgrossing_content', '#tab_specials_content'];
 
 		for( var i=0; i<rgTabSections.length; i++)
 		{
 			var $elTabSection = $J( rgTabSections[i] );
+			if ( !$elTabSection.length )
+				continue;
 
 			GDynamicStorePage.FilterCapsules( 10, 10, $elTabSection.children('.tab_item'), $elTabSection, { games_already_in_library: false, only_current_platform: true } )
 		}
