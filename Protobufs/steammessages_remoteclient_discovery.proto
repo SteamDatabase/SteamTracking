@@ -50,6 +50,8 @@ enum EStreamTransport {
 	k_EStreamTransportUDPRelay = 2;
 	k_EStreamTransportWebRTC = 3;
 	k_EStreamTransportSDR = 4;
+	k_EStreamTransportUDP_SNS = 5;
+	k_EStreamTransportUDPRelay_SNS = 6;
 }
 
 enum ERemoteDeviceStreamingResult {
@@ -172,6 +174,7 @@ message CMsgRemoteDeviceStreamingResponse {
 	optional bytes encrypted_session_key = 4;
 	optional .EStreamTransport transport = 6 [default = k_EStreamTransportUDP];
 	optional string relay_server = 7;
+	optional string cert = 8;
 }
 
 message CMsgRemoteDeviceProofRequest {

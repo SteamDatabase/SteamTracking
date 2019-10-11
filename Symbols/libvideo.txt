@@ -91,6 +91,7 @@
  B CRTime::sm_rgchLocalTimeCur
  B CReliableTimer::sm_nPerformanceFrequency
  B CSTime::sm_lTimeCur
+ B CSafeSet::g_bInitialized
  B CTCPConnection::m_cRecvStateStructCount
  B CTCPConnection::sm_HMostBackloggedConnection
  B CTCPConnection::sm_MostBackloggedBytes
@@ -173,8 +174,11 @@
  B g_VecPCoroutineMgr
  B g_bDisableWriteCoalescing
  B g_bPreventCoroutineContinue
+ B g_bTrackedAllocRecordStack
  B g_cNetPacket
  B g_cPendingMsg
+ B g_cTrackedAllocs
+ B g_cTrackedAllocsMax
  B g_cnIPThisBox
  B g_cnIPThisBoxV6
  B g_mapAllocations
@@ -2590,6 +2594,7 @@
  T CSTime::CServerMicroSecsPassed() const
  T CSTime::SetFromServerTime(long long)
  T CSTime::SetToServerTime()
+ T CSafeSet::~CSafeSet()
  T CScheduledFunction<CHTTPClientConnection>::CScheduledFunction(CHTTPClientConnection*, void (CHTTPClientConnection::*)())
  T CScheduledFunction<CHTTPClientConnection>::Run()
  T CScheduledFunction<CHTTPClientConnection>::~CScheduledFunction()
@@ -2628,6 +2633,7 @@
  T CSmartPtr<CHTTPClientResponse>::operator=(CSmartPtr<CHTTPClientResponse> const&)
  T CSmartPtr<COpenSSLCachedSession>::CSmartPtr(CSmartPtr<COpenSSLCachedSession> const&)
  T CSmartPtr<COpenSSLCachedSession>::CSmartPtr(ESmartPtrAddRef, COpenSSLCachedSession*)
+ T CStackLess::operator()(CStack*, CStack*) const
  T CStatT<SteamThreadTools::CThreadMutex>::AgeGracefully()
  T CStatT<SteamThreadTools::CThreadMutex>::CStatT(int, unsigned long long)
  T CStatT<SteamThreadTools::CThreadMutex>::Clear()
@@ -2676,7 +2682,7 @@
  T CStdMemAlloc::CubSBHFree()
  T CStdMemAlloc::CubSBHMinPoolFree()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
- T CStdMemAlloc::DumpMemTrackingStats(int)
+ T CStdMemAlloc::DumpMemTrackingStats(int, int, int)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)
  T CStdMemAlloc::Expand_NoLongerSupported(void*, unsigned long)
@@ -2718,8 +2724,8 @@
  T CStdMemAlloc::SetLowFragmentationHeap()
  T CStdMemAlloc::SetMemLeakReported(void*)
  T CStdMemAlloc::SetMemUntracked(void*)
- T CStdMemAlloc::SetReleaseMemTrackingOn(int)
- T CStdMemAlloc::WalkAndAuditHeap()
+ T CStdMemAlloc::SetReleaseMemTrackingOn(int, int, int, bool)
+ T CStdMemAlloc::WalkAndAuditHeap(bool)
  T CStdMemAlloc::heapchk()
  T CStdMemAlloc::~CStdMemAlloc()
  T CSteam3DumpHelper::ComputeBuildID(char const*, char const*)
@@ -3154,14 +3160,12 @@
  T CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::~CUtlHashMapLRU()
  T CUtlLinkedList<AVPacket, int>::AllocInternal(bool)
  T CUtlLinkedList<AVPacket, int>::Free(int)
- T CUtlLinkedList<AVPacket, int>::InsertBefore(int, AVPacket const&)
  T CUtlLinkedList<AVPacket, int>::LinkBefore(int, int)
  T CUtlLinkedList<AVPacket, int>::RemoveAll()
  T CUtlLinkedList<AVPacket, int>::Unlink(int)
  T CUtlLinkedList<AVPacket, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CBaseScheduledFunction*, int>::AllocInternal(bool)
  T CUtlLinkedList<CBaseScheduledFunction*, int>::Free(int)
- T CUtlLinkedList<CBaseScheduledFunction*, int>::InsertBefore(int, CBaseScheduledFunction* const&)
  T CUtlLinkedList<CBaseScheduledFunction*, int>::LinkBefore(int, int)
  T CUtlLinkedList<CBaseScheduledFunction*, int>::RemoveAll()
  T CUtlLinkedList<CBaseScheduledFunction*, int>::Unlink(int)
@@ -3180,25 +3184,20 @@
  T CUtlLinkedList<CHTTPRequestCache::CachedFileLRUData_t, int>::Unlink(int)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::AllocInternal(bool)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::Free(int)
- T CUtlLinkedList<CHTTPRequestHandle*, int>::InsertAfter(int, CHTTPRequestHandle* const&)
- T CUtlLinkedList<CHTTPRequestHandle*, int>::InsertBefore(int, CHTTPRequestHandle* const&)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::LinkAfter(int, int)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::LinkBefore(int, int)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::RecursiveValidate(CValidator&, char const*)
  T CUtlLinkedList<CHTTPRequestHandle*, int>::RemoveAll()
  T CUtlLinkedList<CHTTPRequestHandle*, int>::Unlink(int)
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::AllocInternal(bool)
- T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::InsertBefore(int, CJobMgr::JobTimeout_t const&)
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<CJobMgr::JobTimeout_t, int>::Unlink(int)
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::AllocInternal(bool)
- T CUtlLinkedList<CJobMgr::JobYielding_t, int>::InsertBefore(int, CJobMgr::JobYielding_t const&)
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<CJobMgr::JobYielding_t, int>::Unlink(int)
  T CUtlLinkedList<CLogWatchParam, int>::RemoveAll()
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::AllocInternal(bool)
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::Free(int)
- T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::InsertBefore(int, CNet::NetConnectionWakeUp_t const&)
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::RemoveAll()
  T CUtlLinkedList<CNet::NetConnectionWakeUp_t, int>::Unlink(int)
@@ -3210,34 +3209,29 @@
  T CUtlLinkedList<CNet::NetRecvThrottleGroup_t, int>::~CUtlLinkedList()
  T CUtlLinkedList<CNetPacket*, int>::AllocInternal(bool)
  T CUtlLinkedList<CNetPacket*, int>::Free(int)
- T CUtlLinkedList<CNetPacket*, int>::InsertBefore(int, CNetPacket* const&)
  T CUtlLinkedList<CNetPacket*, int>::LinkBefore(int, int)
  T CUtlLinkedList<CNetPacket*, int>::RecursiveValidate(CValidator&, char const*)
  T CUtlLinkedList<CNetPacket*, int>::RemoveAll()
  T CUtlLinkedList<CNetPacket*, int>::Unlink(int)
  T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::AllocInternal(bool)
  T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::Free(int)
- T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::InsertBefore(int, COpenSSLConnection::COutgoingBuffer* const&)
  T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::LinkBefore(int, int)
  T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::RecursiveValidate(CValidator&, char const*)
  T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::RemoveAll()
  T CUtlLinkedList<COpenSSLConnection::COutgoingBuffer*, int>::Unlink(int)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::AllocInternal(bool)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::Free(int)
- T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::InsertBefore(int, COpenSSLConnection::JobWakeData_t const&)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::RecursiveValidate(CValidator&, char const*)
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::RemoveAll()
  T CUtlLinkedList<COpenSSLConnection::JobWakeData_t, int>::Unlink(int)
  T CUtlLinkedList<CScheduledItem, int>::AllocInternal(bool)
- T CUtlLinkedList<CScheduledItem, int>::InsertBefore(int, CScheduledItem const&)
  T CUtlLinkedList<CScheduledItem, int>::LinkBefore(int, int)
  T CUtlLinkedList<CScheduledItem, int>::RemoveAll()
  T CUtlLinkedList<CScheduledItem, int>::Unlink(int)
  T CUtlLinkedList<CScheduledItem, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::AllocInternal(bool)
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::Free(int)
- T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::InsertBefore(int, CVideoPlayer::QueuedSegment_t* const&)
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::LinkBefore(int, int)
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::RemoveAll()
  T CUtlLinkedList<CVideoPlayer::QueuedSegment_t*, int>::Unlink(int)
@@ -3246,20 +3240,17 @@
  T CUtlLinkedList<CWatchingLog, int>::~CUtlLinkedList()
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::AllocInternal(bool)
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::Free(int)
- T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::InsertBefore(int, CWorkItemNetFilterEncrypt* const&)
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::LinkBefore(int, int)
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::RemoveAll()
  T CUtlLinkedList<CWorkItemNetFilterEncrypt*, int>::Unlink(int)
  T CUtlLinkedList<NetPacketToDelete_t, int>::AllocInternal(bool)
  T CUtlLinkedList<NetPacketToDelete_t, int>::Free(int)
- T CUtlLinkedList<NetPacketToDelete_t, int>::InsertBefore(int, NetPacketToDelete_t const&)
  T CUtlLinkedList<NetPacketToDelete_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<NetPacketToDelete_t, int>::RemoveAll()
  T CUtlLinkedList<NetPacketToDelete_t, int>::Unlink(int)
  T CUtlLinkedList<NetPacketToDelete_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<int, int>::AllocInternal(bool)
  T CUtlLinkedList<int, int>::Free(int)
- T CUtlLinkedList<int, int>::InsertAfter(int, int const&)
  T CUtlLinkedList<int, int>::LinkAfter(int, int)
  T CUtlLinkedList<int, int>::RecursiveValidate(CValidator&, char const*)
  T CUtlLinkedList<int, int>::RemoveAll()
@@ -3267,7 +3258,6 @@
  T CUtlLinkedList<int, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<unsigned int, int>::AllocInternal(bool)
  T CUtlLinkedList<unsigned int, int>::Free(int)
- T CUtlLinkedList<unsigned int, int>::InsertBefore(int, unsigned int const&)
  T CUtlLinkedList<unsigned int, int>::LinkBefore(int, int)
  T CUtlLinkedList<unsigned int, int>::RemoveAll()
  T CUtlLinkedList<unsigned int, int>::Unlink(int)
@@ -3306,14 +3296,11 @@
  T CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >::RemoveAt(int)
  T CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >::RevaluateElement(int)
  T CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >::Validate(CValidator&, char const*)
- T CUtlQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlQueue<CLogEvent*>::BRemoveFromHead(CLogEvent**)
  T CUtlQueue<CLogEvent*>::~CUtlQueue()
  T CUtlQueue<CProtoBufMsg<CMsgSpew>*>::~CUtlQueue()
- T CUtlQueue<CWorkItemHTTPClientRequest*>::AddToTail(CWorkItemHTTPClientRequest* const&)
  T CUtlQueue<CWorkItemHTTPClientRequest*>::BRemoveFromHead(CWorkItemHTTPClientRequest**)
  T CUtlQueue<CWorkItemHTTPClientRequest*>::~CUtlQueue()
- T CUtlQueue<WSABUF_S>::AddToTail(WSABUF_S const&)
  T CUtlQueue<WSABUF_S>::BRemoveFromHead(WSABUF_S*)
  T CUtlQueue<WSABUF_S>::Validate(CValidator&, char const*)
  T CUtlQueue<WSABUF_S>::operator[](int)
@@ -3512,12 +3499,10 @@
  T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::AddToTail(CHTTPRequestHandle* const&)
  T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::GrowVector(int)
  T CUtlVector<CHTTPRequestHandle*, CUtlMemory<CHTTPRequestHandle*> >::~CUtlVector()
- T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::AddToTail()
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::GrowVector(int)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::RemoveAll()
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::Validate(CValidator&, char const*)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::~CUtlVector()
- T CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >::AddToTail()
  T CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >::GrowVector(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::GrowVector(int)
@@ -3568,7 +3553,6 @@
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlPair<unsigned long long, char const*>, CUtlMemory<CUtlPair<unsigned long long, char const*> > >::Remove(int)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Find(CUtlString const&) const
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
@@ -4065,6 +4049,7 @@
  T ConVar::InternalSetInt64Value(long long)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
+ T ConVar::InvokeCallbacks(char const*)
  T ConVar::IsCommand() const
  T ConVar::IsRegistered() const
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
@@ -4524,6 +4509,7 @@
  T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, char*)
  T Error
  T FillDataStruct(_finddata_t*)
+ T FindOrCreateStack(CStack*)
  T FindSpewGroup(char const*, int*)
  T FioClose(int)
  T FioCreateFile(char const*, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
@@ -4805,8 +4791,8 @@
  T RSA_up_ref
  T RSA_verify
  T RSA_verify_PKCS1_PSS_mgf1
- T RTAClearData()
- T RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)
+ T RTAClearData(int, bool)
+ T RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)
  T RTANoteFree(void*, char const*)
  T RawInflateToBuffer(void const*, unsigned int, CUtlBuffer&, unsigned int)
  T RealGetCallStack
@@ -5954,14 +5940,9 @@
  T ssl_verify_alarm_type
  T ssl_verify_cert_chain
  T ssleay_rand_bytes
- T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::find<AllocTracking_t>(AllocTracking_t const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::find<int>(int const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::find<long long>(long long const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::find<void*>(void* const&)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, void*>*)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::__rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::~__hash_table()
  T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*)
  T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::rehash(unsigned long)
@@ -5986,6 +5967,9 @@
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >&>::~__split_buffer()
  T std::__1::__split_buffer<void (*)(), std::__1::allocator<void (*)()>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<void (*)()>&)
  T std::__1::__split_buffer<void*, std::__1::allocator<void*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<void*>&)
+ T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__insert_unique(CStack* const&)
+ T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::destroy(std::__1::__tree_node<CStack*, void*>*)
  T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_unique(MinidumpWritten_t const&)
  T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::destroy(std::__1::__tree_node<MinidumpWritten_t, void*>*)
@@ -6017,6 +6001,10 @@
  T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
  T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*) const
  T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
+ T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, int> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__lower_bound<CStack*>(CStack* const&, std::__1::__tree_node<CStack*, void*>*, std::__1::__tree_node<CStack*, void*>*)
+ T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, int> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::find<CStack*>(CStack* const&)
+ T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, long> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__lower_bound<CStack*>(CStack* const&, std::__1::__tree_node<CStack*, void*>*, std::__1::__tree_node<CStack*, void*>*)
+ T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, long> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::find<CStack*>(CStack* const&)
  T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, int> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
  T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, long> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
  T std::__1::__tree_iterator<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*, int> std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::find<SteamVProf::CVProfNode*>(SteamVProf::CVProfNode* const&)
@@ -6031,6 +6019,7 @@
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, int> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*)
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__find_equal<CStack*>(std::__1::__tree_node_base<void*>*&, CStack* const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__find_equal<MinidumpWritten_t>(std::__1::__tree_node_base<void*>*&, MinidumpWritten_t const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::__find_equal<std::__1::__value_type<SteamVProf::CVProfNode*, double> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<SteamVProf::CVProfNode*, double> const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::__find_equal<std::__1::__value_type<char const*, unsigned int> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<char const*, unsigned int> const&)
@@ -6077,7 +6066,6 @@
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*> > > > std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__construct_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T std::__1::unordered_map<AllocTracking_t, unsigned long, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, unsigned long> > >::operator[](AllocTracking_t const&)
  T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::operator[](void* const&)
  T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::~unordered_map()
  T std::__1::vector<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t> >::allocate(unsigned long)
@@ -6365,6 +6353,7 @@
  b (anonymous namespace)::CMsgProtobufWrapped_descriptor_
  b (anonymous namespace)::CMsgProtobufWrapped_reflection_
  b (anonymous namespace)::EProtoClanEventType_descriptor_
+ b (anonymous namespace)::PartnerEventNotificationType_descriptor_
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
@@ -6398,6 +6387,7 @@
  b DebugStatsSystem::g_DebugStatsSystem
  b ERR_get_state.fallback
  b EmptyStr
+ b FindOrCreateStack(CStack*)::autoMutex__
  b GScheduledFunctionMgr()::g_ScheduledFunctionMgr
  b GetCPUInformation()::pi
  b GetMemAlloc::s_StdMemAlloc
@@ -6418,7 +6408,7 @@
  b OSXHelpers::s_pPollingHelperSingleton
  b OneTimeCryptoInitOpenSSL()::threadonce_51_26
  b RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
- b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
+ b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b SHA1.m
  b SYS_str_reasons
  b SetWritingMiniDump(bool)::fAsserted
@@ -6473,6 +6463,7 @@
  b g_ConVarNetBacklogTimeAllowedSec
  b g_ConVarNetLoopback
  b g_DumpHelper
+ b g_Stacks
  b g_TLSSendBuffer
  b g_ThreadNetMainThreadID
  b g_TickBase
@@ -6493,6 +6484,7 @@
  b guard variable for CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
  b guard variable for CUDPSocket::ContinueRecv(int, unsigned int, void*)::stimeLastSpew
  b guard variable for DebugStatsSystem::g_DebugStatsSystem
+ b guard variable for FindOrCreateStack(CStack*)::autoMutex__
  b guard variable for GScheduledFunctionMgr()::g_ScheduledFunctionMgr
  b guard variable for GetMemAlloc::s_StdMemAlloc
  b guard variable for GetMessageList()::g_theMessageList
@@ -6504,7 +6496,7 @@
  b guard variable for GetVideoLibData()::data
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
  b guard variable for RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
- b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
+ b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b guard variable for StaticFileWriterThread()::s_FileWriterThread
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
@@ -7760,7 +7752,7 @@
  t bn_rand_range
  t bn_sqr8x_mont
  t bnrand
- t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
  t bsaes_const
  t bsaes_decrypt8
  t bsaes_encrypt8
@@ -8331,7 +8323,9 @@
  t ssleay_rand_seed
  t ssleay_rand_status
  t ssse3_shortcut
- t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&>::~__split_buffer()
+ t std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t> > >::__rehash(unsigned long)
+ t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&>::~__split_buffer()
+ t std::__1::unordered_map<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t> > >::operator[](AllocTracking_t const&)
  t str_copy
  t str_free
  t sxnet_i2r
@@ -8354,9 +8348,9 @@
  t trust_1oidany
  t trust_compat
  t type_str
- t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
- t unsigned int std::__1::__sort4<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
- t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort4<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
  t update
  t update256
  t update512
@@ -8371,7 +8365,7 @@
  t v2i_idp
  t v2i_issuer_alt
  t v2i_subject_alt
- t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
  t vpaes_consts
  t vpaes_decrypt_core
  t vpaes_encrypt_core

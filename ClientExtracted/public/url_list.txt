@@ -276,7 +276,7 @@ GroupEventDetailPage
 }
 GroupAnnouncementPage
 {
-	url			"%community%/gid/%p1%#announcements/detail/%p2%"
+	url			"%community%/gid/%p1%/announcements/detail/%p2%"
 	method		"internal"
 	filter		"friends"
 }
@@ -506,6 +506,13 @@ StoreAppPage
 StoreAppPageAddToCart
 {
 	url			"%store%/app/%p1%/?addtocart=%p2%"
+	method		"internal"
+	filter		"store"
+}
+
+StoreCart
+{
+	url			"%store%/cart/"
 	method		"internal"
 	filter		"store"
 }

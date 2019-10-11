@@ -1,6 +1,12 @@
 option optimize_for = SPEED;
 option cc_generic_services = false;
 
+enum ESteamNetworkingSocketsCipher {
+	k_ESteamNetworkingSocketsCipher_INVALID = 0;
+	k_ESteamNetworkingSocketsCipher_NULL = 1;
+	k_ESteamNetworkingSocketsCipher_AES_256_GCM = 2;
+}
+
 message CMsgSteamDatagramSessionCryptInfo {
 	enum EKeyType {
 		INVALID = 0;
@@ -11,6 +17,7 @@ message CMsgSteamDatagramSessionCryptInfo {
 	optional bytes key_data = 2;
 	optional fixed64 nonce = 3;
 	optional uint32 protocol_version = 4;
+	repeated .ESteamNetworkingSocketsCipher ciphers = 5;
 }
 
 message CMsgSteamDatagramSessionCryptInfoSigned {

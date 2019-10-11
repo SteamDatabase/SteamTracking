@@ -39,6 +39,9 @@
 "Steam_Settings_Library_LowBandwidth_Desc" "Reduces bandwidth use by disabling features like auto-load of community content."
 "Steam_Settings_Library_LowPerf_Title" "Low Performance Mode"
 "Steam_Settings_Library_LowPerf_Desc" "Improves library performance by disabling certain graphical improvements and transitions."
+"Steam_Settings_Library_DisableCommunityContent_Title" "Disable Community Content"
+"Steam_Settings_Library_DisableCommunityContent_Desc" "Prevents the automatic load of community content when viewing game details."
+"Steam_Settings_Library_DisableCommunityContent_Disabled_Desc" "Enabled by Low Bandwidth Mode.\n\nPrevents the automatic load of community content when viewing game details."
 
 
 "Overlay_WebBrowserTitle"	"Web Browser In-Game"

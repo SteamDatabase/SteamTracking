@@ -5,6 +5,8 @@ public:
     virtual unknown_ret ConnectByIPAddress(SteamNetworkingIPAddr const&, int, SteamNetworkingConfigValue_t const*) = 0;
     virtual unknown_ret CreateListenSocketP2P(int, int, SteamNetworkingConfigValue_t const*) = 0;
     virtual unknown_ret ConnectP2P(SteamNetworkingIdentity const&, int, int, SteamNetworkingConfigValue_t const*) = 0;
+    virtual unknown_ret ConnectP2PCustomSignaling(ISteamNetworkingConnectionCustomSignaling*, SteamNetworkingIdentity const*, int, SteamNetworkingConfigValue_t const*) = 0;
+    virtual unknown_ret ReceivedP2PCustomSignal(void const*, int, ISteamNetworkingCustomSignalingRecvContext*) = 0;
     virtual unknown_ret AcceptConnection(unsigned int) = 0;
     virtual unknown_ret CloseConnection(unsigned int, int, char const*, bool) = 0;
     virtual unknown_ret CloseListenSocket(unsigned int) = 0;
@@ -32,6 +34,4 @@ public:
     virtual unknown_ret GetHostedDedicatedServerAddress(SteamDatagramHostedAddress*) = 0;
     virtual unknown_ret CreateHostedDedicatedServerListenSocket(int, int, SteamNetworkingConfigValue_t const*) = 0;
     virtual unknown_ret GetGameCoordinatorServerLogin(SteamDatagramGameCoordinatorServerLogin*, int*, void*) = 0;
-    virtual unknown_ret ConnectP2PCustomSignaling(ISteamNetworkingConnectionCustomSignaling*, SteamNetworkingIdentity const*, int, SteamNetworkingConfigValue_t const*) = 0;
-    virtual unknown_ret ReceivedP2PCustomSignal(void const*, int, ISteamNetworkingCustomSignalingRecvContext*) = 0;
 };

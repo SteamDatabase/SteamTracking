@@ -32,6 +32,7 @@
 	"Button_NotifyMe": "Notify Me",
 	"Button_NotInterested": "Not Interested",
 	"Button_RateUp": "Rate Up",
+	"Button_ViewPage": "View Page",
 
 	"ToolTip_CopyLinkToClipboard": "Copy link to clipboard",
 
@@ -107,6 +108,7 @@
 
 	"EventBrowse_MoreEventsTitle": "More events from %1$s",
 	"EventBrowse_MoreEventsBtn": "View All",
+	"EventBrowse_RecentUpdates": "Recent Updates",
 
 	"EventCalendar_Title": "events",
 	"EventCalendar_SubTitle": "Upcoming events and activities hosted by game creators",
@@ -133,6 +135,7 @@
 	"EventDisplay_SeeOldVersion": "View Current Customer Version",
 
 	"EventDisplay_RightColumnTitle_Game": "Game",
+	"EventDisplay_RightColumnTitle_Blog": "Blog",
 	"EventDisplay_RightColumnTitle_DateAndTime": "Date and Time",
 	"EventDisplay_RightColumnTitle_EventType": "Type",
 
@@ -203,7 +206,7 @@
 	"EventEditor_Edit": "Edit Event",
 	"EventDisplay_DeleteEvent": "Delete Event",
 
-	"EventReminder_InProgress": "(note that notification options shown here are representitive and not yet functional)",
+	"EventReminder_InProgress": "(note that notification options shown here are representative and not yet functional)",
 	"EventReminder_NotifyByEmail": "Notify me by Email",
 	"EventReminder_NotifyByEmail_ttip": "Steam will send an email notification to your account when the event starts.",
 	"EventReminder_NotifyByMobile": "Notify me on my Mobile device",
@@ -225,9 +228,22 @@
 	"EventEmail_Destination_Store": "Steam Store Page",
 	"EventEmail_Destination_Event": "Event Detail Page",
 
+	"EventDashBoard_SummaryStats_Title": "Total Unique Impressions and Views",
+	"EventDashBoard_SummaryStats_Desc": "(Beta) These are impressions and reads for your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
+	"EventDashBoard_Summary_LibraryHome_Shown": "Library Home Page Impressions:",
+	"EventDashBoard_Summary_LibraryHome_Read": "Library Home Page Reads:",
+	"EventDashBoard_Summary_AppDetailSpotlight_Shown": "Library App Detail Spotlight Impressions:",
+	"EventDashBoard_Summary_AppDetailSpotlight_Read": "Library App Detail Spotlight Reads:",
+	"EventDashBoard_Summary_AppDetailActivity_Shown": "Library App Detail Activity Feed Impressions:",
+	"EventDashBoard_Summary_AppDetailActivity_Read": "Library App Detail Activity Feed Reads:",
+	"EventDashBoard_Summary_StoreAppPage_Shown": "Store Product Page Impressions:",
+	"EventDashBoard_Summary_StoreAppPage_Read": "Store Product Page Reads:",
+	"EventDashBoard_Summary_Community_Shown": "Steam Community Impressions:",
+	"EventDashBoard_Summary_Community_Read": "Steam Community Reads:",
+
 	"AddToWishlist": "Add to your Wishlist",
 	"Wishlisted": "In your Wishlist",
-	"AddToWishlist_ttip": "Get notified by email when your wishlisted items get released on are on sale",
+	"AddToWishlist_ttip": "Get notified by email when your wishlisted items get released or are on sale",
 	"Wishlist_Error": "Update Wishlist Error",
 	"Wishlist_Error_Desc": "We encountered an error adding to your wishlist. Please try again later:",
 
@@ -421,7 +437,7 @@
 	"Editor_Emoticon": "Insert Emoticon",
 
 	"EventEditor_ConvertHTML_Error": "Failed Converting HTML",
-	"EventEditor_ConvertHTML_Error_Desc": "Failed Converting HTML to BBCode with the following error: '%1$s'",
+	"EventEditor_ConvertHTML_Error_Desc": "Failed Converting HTML to BBcode with the following error: '%1$s'",
 	"EventEditor_InsertLinkURL": "Insert URL",
 	"EventEditor_FormattingHelp_GetHelpLink": "Formatting help",
 	"EventEditor_ImportHTML": "Import HTML",
@@ -466,7 +482,7 @@
 
 	"Image_ErrorTitle": "Failed to Load Image '%1$s', possible issues include:",
 	"Image_Error_msg1": "Check that the path to the image is correct.",
-	"Image_Error_msg2": "Check if server hosting the iamge support anonymous access. The browser console may indicate an error related Access-Control-Allow-Origin if it doesn't.",
+	"Image_Error_msg2": "Check if server hosting the image supports anonymous access. The browser console may indicate an error related Access-Control-Allow-Origin if it doesn't.",
 	"Image_Error_suggestion": "You can always upload the image to Steam to host the content for free.",
 
 	"Platform_Hint_Mobile": "on Mobile Device",
@@ -572,7 +588,13 @@
 	"Broadcast_Store_FreeToPlay": "Free to Play",
 
 	"PartnerEvent_1":		"Other Event",
+	"PartnerEvent_2":		"Game Event",
+	"PartnerEvent_3":		"Party Event",
 	"PartnerEvent_4":		"Meeting Event",
+	"PartnerEvent_5":		"Special Cause",
+	"PartnerEvent_6":		"Music and Arts Event",
+	"PartnerEvent_7":		"Sports Event",
+	"PartnerEvent_8":		"Live Trip Event",
 	"PartnerEvent_9":		"Chat",
 	"PartnerEvent_10":		"Game Release",
 	"PartnerEvent_11":		"Live-Stream / Broadcast",
@@ -657,6 +679,17 @@
 	"Broadcast_VideoContext_OpenStore": "Visit Store",
 	"Broadcast_None": "None",
 
+	"BroadcastWatch_MinBrowser": "Your web browser does not support the minimum set of features required to watch this broadcast",
+	"BroadcastWatch_RequestFailed": "Failed to load this broadcast",
+	"BroadcastWatch_NotAvailable": "This broadcaster is offline",
+	"BroadcastWatch_WaitingForResponse": "Waiting for approval to watch",
+	"BroadcastWatch_WaitingForStart": "This broadcast is starting",
+	"BroadcastWatch_WaitingForReconnect": "Reconnecting to this broadcast",
+	"BroadcastWatch_ServerLoad": "Steam is experiencing high broadcast load and is currently unable to reserve a server spot to start this broadcast. Please try again in a few minutes.",
+	"BroadcastWatch_SystemNotSupported": "Steam Broadcasting is not currently supported on this broadcaster's system",
+	"BroadcastWatch_UserRestricted": "This broadcaster is currently restricted from broadcasting on Steam",
+	"BroadcastWatch_PoorUploadQuality": "This broadcaster is currently unable to maintain a stable broadcast connection to Steam",
+
 	"BroadcastChat_Reconnected": "Reconnected to chat",
 	"BroadcastChat_UnableToJoinChat": "Unable to join chat",
 	"BroadcastChat_NeverTell": "Never tell your password to anyone",
@@ -708,6 +741,8 @@
 	"ChatEntryButton_Emoticon": "Emoticon Picker",
 	"ChatEntryButton_Flair": "Flair Picker",
 	"ChatEntryButton_SendEmbed": "Send Special",
+
+	"Store_AddToCart": "Add to Cart",
 
 	"home_page_live_broadcast": "Live",
 	"StoreBroadcast_Hide_Tooltip": "Show/hide the live broadcast",

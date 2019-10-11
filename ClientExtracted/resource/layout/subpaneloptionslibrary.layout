@@ -16,6 +16,9 @@
 		
 		LibraryLowPerfCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_LowPerf_Title" }
 		LibraryLowPerfLabel { ControlName=Label labelText="#Steam_Settings_Library_LowPerf_Desc" wrap=1 }
+
+		LibraryDisableCommunityContentCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_DisableCommunityContent_Title" }
+		LibraryDisableCommunityContentLabel { ControlName=Label labelText="#Steam_Settings_Library_DisableCommunityContent_Desc" wrap=1 style=disable_community_content }
 	}
 	
 	colors
@@ -28,6 +31,14 @@
 		{
 			textcolor=Text
 		}
+		disable_community_content
+		{
+		}
+		disable_community_content:disabled
+		{
+			textcolor="TextDisabled"
+		}
+
 	}
 
 	layout
@@ -52,5 +63,8 @@
 
 		place { control=LibraryLowPerfCheckbox align=top width=max region=bottomright }
 		place { control=LibraryLowPerfLabel start=LibraryLowPerfCheckbox dir=down width=max height=200 align=top margin-top=5 margin-left=30 region=bottomright}
+
+		place { control=LibraryDisableCommunityContentCheckbox y=100 width=max region=bottomleft }
+		place { control=LibraryDisableCommunityContentLabel start=LibraryDisableCommunityContentCheckbox dir=down width=max height=200 align=top margin-top=5 margin-left=30 region=bottomleft}
 	}
 }

@@ -358,6 +358,7 @@
  B CRadiusData_CCornerRadius::default_instance_
  B CReliableTimer::sm_nPerformanceFrequency
  B CSTime::sm_lTimeCur
+ B CSafeSet::g_bInitialized
  B CTCPConnection::m_cRecvStateStructCount
  B CTCPConnection::sm_THashPTCPConnection
  B CTCPConnection::sm_ThreadSafeQueueIncoming
@@ -438,6 +439,9 @@
  B g_ThreadLocalModuleAddressRangeSerial
  B g_ThreadLocalModuleAddressRanges
  B g_VecLoadedModules
+ B g_bTrackedAllocRecordStack
+ B g_cTrackedAllocs
+ B g_cTrackedAllocsMax
  B g_cvarForceActiveControllerType
  B g_glBlendEquationSeparate
  B g_glGetProgramBinary
@@ -3731,7 +3735,6 @@
  T BResizeImageInternal(CUtlBuffer&, int, int, int&, int&, bool, bool)
  T BResizeImageRGBA(CUtlBuffer&, int, int, int&, int&, bool)
  T BTestForDefine(char*, char const*, unsigned int*)
- T BValidDefineName(char const*)
  T BValveDomain(char const*)
  T BWrapScriptInCDATA(CUtlString*, char const*, int)
  T BezierEvaluateImpl<Vector2D, 3>::BezierEvaluate(Vector2D const*, float, Vector2D&)
@@ -7887,6 +7890,7 @@
  T CSTime::CSTime()
  T CSTime::SetToServerTime()
  T CSTime::UpdateServerTime(int)
+ T CSafeSet::~CSafeSet()
  T CScheduler::CScheduler(unsigned long long)
  T CScheduler::Validate(CValidator&, char const*)
  T CScheduler::~CScheduler()
@@ -7918,6 +7922,7 @@
  T CSmartPtr<panorama::CStyleFile>::CSmartPtr(CSmartPtr<panorama::CStyleFile> const&)
  T CSmartPtr<panorama::CStyleFile>::CSmartPtr(ESmartPtrNoAddRef, panorama::CStyleFile*)
  T CSmartPtr<panorama::CStyleFile>::operator=(CSmartPtr<panorama::CStyleFile> const&)
+ T CStackLess::operator()(CStack*, CStack*) const
  T CStatT<SteamThreadTools::CThreadMutex>::Validate(CValidator&, char const*)
  T CStatT<SteamThreadTools::CThreadNullMutex>::CStatT(int, unsigned long long)
  T CStatT<SteamThreadTools::CThreadNullMutex>::Clear()
@@ -7954,7 +7959,7 @@
  T CStdMemAlloc::CubSBHFree()
  T CStdMemAlloc::CubSBHMinPoolFree()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
- T CStdMemAlloc::DumpMemTrackingStats(int)
+ T CStdMemAlloc::DumpMemTrackingStats(int, int, int)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)
  T CStdMemAlloc::Expand_NoLongerSupported(void*, unsigned long)
@@ -7996,8 +8001,8 @@
  T CStdMemAlloc::SetLowFragmentationHeap()
  T CStdMemAlloc::SetMemLeakReported(void*)
  T CStdMemAlloc::SetMemUntracked(void*)
- T CStdMemAlloc::SetReleaseMemTrackingOn(int)
- T CStdMemAlloc::WalkAndAuditHeap()
+ T CStdMemAlloc::SetReleaseMemTrackingOn(int, int, int, bool)
+ T CStdMemAlloc::WalkAndAuditHeap(bool)
  T CStdMemAlloc::heapchk()
  T CStdMemAlloc::~CStdMemAlloc()
  T CSteamAsyncIoThread::Run()
@@ -8600,21 +8605,18 @@
  T CUtlLinkedList<CScheduledItem, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOOperation*, int>::AllocInternal(bool)
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOOperation*, int>::Free(int)
- T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOOperation*, int>::InsertBefore(int, CSteamPanoramaFileSystem::CAsyncIOOperation* const&)
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOOperation*, int>::LinkBefore(int, int)
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOOperation*, int>::RemoveAll()
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOOperation*, int>::Unlink(int)
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOOperation*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOResult*, int>::AllocInternal(bool)
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOResult*, int>::Free(int)
- T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOResult*, int>::InsertBefore(int, CSteamPanoramaFileSystem::CAsyncIOResult* const&)
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOResult*, int>::LinkBefore(int, int)
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOResult*, int>::RemoveAll()
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOResult*, int>::Unlink(int)
  T CUtlLinkedList<CSteamPanoramaFileSystem::CAsyncIOResult*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CUtlDelegate<void ()>, int>::AllocInternal(bool)
  T CUtlLinkedList<CUtlDelegate<void ()>, int>::Free(int)
- T CUtlLinkedList<CUtlDelegate<void ()>, int>::InsertBefore(int, CUtlDelegate<void ()> const&)
  T CUtlLinkedList<CUtlDelegate<void ()>, int>::LinkBefore(int, int)
  T CUtlLinkedList<CUtlDelegate<void ()>, int>::RemoveAll()
  T CUtlLinkedList<CUtlDelegate<void ()>, int>::Unlink(int)
@@ -8629,14 +8631,12 @@
  T CUtlLinkedList<CUtlString, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngine::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngine::RenderOperation_t*> >*, int>::AllocInternal(bool)
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngine::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngine::RenderOperation_t*> >*, int>::Free(int)
- T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngine::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngine::RenderOperation_t*> >*, int>::InsertBefore(int, CUtlVector<panorama::CUIAnimationEngine::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngine::RenderOperation_t*> >* const&)
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngine::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngine::RenderOperation_t*> >*, int>::LinkBefore(int, int)
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngine::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngine::RenderOperation_t*> >*, int>::RemoveAll()
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngine::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngine::RenderOperation_t*> >*, int>::Unlink(int)
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngine::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngine::RenderOperation_t*> >*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngineNew::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngineNew::RenderOperation_t*> >*, int>::AllocInternal(bool)
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngineNew::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngineNew::RenderOperation_t*> >*, int>::Free(int)
- T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngineNew::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngineNew::RenderOperation_t*> >*, int>::InsertBefore(int, CUtlVector<panorama::CUIAnimationEngineNew::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngineNew::RenderOperation_t*> >* const&)
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngineNew::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngineNew::RenderOperation_t*> >*, int>::LinkBefore(int, int)
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngineNew::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngineNew::RenderOperation_t*> >*, int>::RemoveAll()
  T CUtlLinkedList<CUtlVector<panorama::CUIAnimationEngineNew::RenderOperation_t*, CUtlMemory<panorama::CUIAnimationEngineNew::RenderOperation_t*> >*, int>::Unlink(int)
@@ -8647,55 +8647,47 @@
  T CUtlLinkedList<NetPacketToDelete_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<panorama::CAnimationAndTransformContext*, int>::AllocInternal(bool)
  T CUtlLinkedList<panorama::CAnimationAndTransformContext*, int>::Free(int)
- T CUtlLinkedList<panorama::CAnimationAndTransformContext*, int>::InsertBefore(int, panorama::CAnimationAndTransformContext* const&)
  T CUtlLinkedList<panorama::CAnimationAndTransformContext*, int>::LinkBefore(int, int)
  T CUtlLinkedList<panorama::CAnimationAndTransformContext*, int>::RemoveAll()
  T CUtlLinkedList<panorama::CAnimationAndTransformContext*, int>::Unlink(int)
  T CUtlLinkedList<panorama::CAnimationAndTransformContext*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::LRU_t, int>::AllocInternal(bool)
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::LRU_t, int>::Free(int)
- T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::LRU_t, int>::InsertBefore(int, panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::LRU_t const&)
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::LRU_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::LRU_t, int>::RemoveAll()
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::LRU_t, int>::Unlink(int)
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::COpenGLSurface::ShadowLayerKey_t, CDefLess<panorama::COpenGLSurface::ShadowLayerKey_t>, false>::LRU_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::LRU_t, int>::AllocInternal(bool)
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::LRU_t, int>::Free(int)
- T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::LRU_t, int>::InsertBefore(int, panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::LRU_t const&)
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::LRU_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::LRU_t, int>::RemoveAll()
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::LRU_t, int>::Unlink(int)
  T CUtlLinkedList<panorama::CCompositionLayerCache<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CDefLessPtr<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer>, true>::LRU_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::LRU_t, int>::AllocInternal(bool)
  T CUtlLinkedList<panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::LRU_t, int>::Free(int)
- T CUtlLinkedList<panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::LRU_t, int>::InsertBefore(int, panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::LRU_t const&)
  T CUtlLinkedList<panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::LRU_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::LRU_t, int>::RemoveAll()
  T CUtlLinkedList<panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::LRU_t, int>::Unlink(int)
  T CUtlLinkedList<panorama::CCompositionLayerCache<unsigned long long, CDefLess<unsigned long long>, false>::LRU_t, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<panorama::CImageDecodeWorkItem*, int>::AllocInternal(bool)
  T CUtlLinkedList<panorama::CImageDecodeWorkItem*, int>::Free(int)
- T CUtlLinkedList<panorama::CImageDecodeWorkItem*, int>::InsertBefore(int, panorama::CImageDecodeWorkItem* const&)
  T CUtlLinkedList<panorama::CImageDecodeWorkItem*, int>::LinkBefore(int, int)
  T CUtlLinkedList<panorama::CImageDecodeWorkItem*, int>::RemoveAll()
  T CUtlLinkedList<panorama::CImageDecodeWorkItem*, int>::Unlink(int)
  T CUtlLinkedList<panorama::CImageDecodeWorkItem*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<panorama::CTextLayoutDrawCache::TextOpacityMaskLRU_t, int>::AllocInternal(bool)
  T CUtlLinkedList<panorama::CTextLayoutDrawCache::TextOpacityMaskLRU_t, int>::Free(int)
- T CUtlLinkedList<panorama::CTextLayoutDrawCache::TextOpacityMaskLRU_t, int>::InsertBefore(int, panorama::CTextLayoutDrawCache::TextOpacityMaskLRU_t const&)
  T CUtlLinkedList<panorama::CTextLayoutDrawCache::TextOpacityMaskLRU_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<panorama::CTextLayoutDrawCache::TextOpacityMaskLRU_t, int>::RemoveAll()
  T CUtlLinkedList<panorama::CTextLayoutDrawCache::TextOpacityMaskLRU_t, int>::Unlink(int)
  T CUtlLinkedList<panorama::CUIPanel*, int>::AllocInternal(bool)
  T CUtlLinkedList<panorama::CUIPanel*, int>::Free(int)
- T CUtlLinkedList<panorama::CUIPanel*, int>::InsertBefore(int, panorama::CUIPanel* const&)
  T CUtlLinkedList<panorama::CUIPanel*, int>::LinkBefore(int, int)
  T CUtlLinkedList<panorama::CUIPanel*, int>::RemoveAll()
  T CUtlLinkedList<panorama::CUIPanel*, int>::Unlink(int)
  T CUtlLinkedList<panorama::CUIPanel*, int>::Validate(CValidator&, char const*)
  T CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, int>::AllocInternal(bool)
  T CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, int>::Free(int)
- T CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, int>::InsertBefore(int, panorama::CUIWindowInput::TopMostFocus_t const&)
  T CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, int>::RemoveAll()
  T CUtlLinkedList<panorama::CUIWindowInput::TopMostFocus_t, int>::Unlink(int)
@@ -8834,8 +8826,8 @@
  T CUtlPtrArray<panorama::CStyleSelector>::Validate(CValidator&, char const*)
  T CUtlPtrArray<panorama::CStyleSelector>::~CUtlPtrArray()
  T CUtlPtrArray<panorama::UITextFormatProperties_t>::Allocate(unsigned int)
+ T CUtlPtrArray<panorama::UITextFormatProperties_t>::Copy(panorama::UITextFormatProperties_t const*, unsigned int)
  T CUtlPtrArray<panorama::UITextFormatProperties_t>::~CUtlPtrArray()
- T CUtlQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlQueue<CLogEvent*>::BRemoveFromHead(CLogEvent**)
  T CUtlQueue<CLogEvent*>::~CUtlQueue()
  T CUtlQueue<CProtoBufMsg<CMsgSpew>*>::~CUtlQueue()
@@ -9610,7 +9602,6 @@
  T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
  T CUtlVector<int, CUtlMemory<int> >::Remove(int)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
- T CUtlVector<panorama::AnimationProperty_t, CUtlMemory<panorama::AnimationProperty_t> >::AddToTail()
  T CUtlVector<panorama::AnimationProperty_t, CUtlMemory<panorama::AnimationProperty_t> >::AddToTail(panorama::AnimationProperty_t const&)
  T CUtlVector<panorama::AnimationProperty_t, CUtlMemory<panorama::AnimationProperty_t> >::GrowVector(int)
  T CUtlVector<panorama::AnimationProperty_t, CUtlMemory<panorama::AnimationProperty_t> >::Validate(CValidator&, char const*)
@@ -9677,7 +9668,6 @@
  T CUtlVector<panorama::CLocalization::DialogVariableToPanel_t, CUtlMemory<panorama::CLocalization::DialogVariableToPanel_t> >::AddToTail(panorama::CLocalization::DialogVariableToPanel_t&&)
  T CUtlVector<panorama::CLocalization::DialogVariableToPanel_t, CUtlMemory<panorama::CLocalization::DialogVariableToPanel_t> >::GrowVector(int)
  T CUtlVector<panorama::CLocalization::DialogVariableToPanel_t, CUtlMemory<panorama::CLocalization::DialogVariableToPanel_t> >::~CUtlVector()
- T CUtlVector<panorama::CLocalization::LocEntry_t, CUtlMemory<panorama::CLocalization::LocEntry_t> >::AddToTail()
  T CUtlVector<panorama::CLocalization::LocEntry_t, CUtlMemory<panorama::CLocalization::LocEntry_t> >::AddToTail(panorama::CLocalization::LocEntry_t const&)
  T CUtlVector<panorama::CLocalization::LocEntry_t, CUtlMemory<panorama::CLocalization::LocEntry_t> >::GrowVector(int)
  T CUtlVector<panorama::CLocalization::LocEntry_t, CUtlMemory<panorama::CLocalization::LocEntry_t> >::RemoveAll()
@@ -9711,7 +9701,6 @@
  T CUtlVector<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t, CUtlMemory<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t> >::AddToTail(panorama::COpenGLWriteableTexture::PendingTextureUpdate_t&&)
  T CUtlVector<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t, CUtlMemory<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t> >::GrowVector(int)
  T CUtlVector<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t, CUtlMemory<panorama::COpenGLWriteableTexture::PendingTextureUpdate_t> >::~CUtlVector()
- T CUtlVector<panorama::CPanelKeyValue, CUtlMemory<panorama::CPanelKeyValue> >::AddToTail()
  T CUtlVector<panorama::CPanelKeyValue, CUtlMemory<panorama::CPanelKeyValue> >::CopyArray(panorama::CPanelKeyValue const*, int)
  T CUtlVector<panorama::CPanelKeyValue, CUtlMemory<panorama::CPanelKeyValue> >::Find(panorama::CPanelKeyValue const&) const
  T CUtlVector<panorama::CPanelKeyValue, CUtlMemory<panorama::CPanelKeyValue> >::GrowVector(int)
@@ -9746,7 +9735,6 @@
  T CUtlVector<panorama::CRenderCommandMemoryStack*, CUtlMemory<panorama::CRenderCommandMemoryStack*> >::AddToTail(panorama::CRenderCommandMemoryStack* const&)
  T CUtlVector<panorama::CRenderCommandMemoryStack*, CUtlMemory<panorama::CRenderCommandMemoryStack*> >::GrowVector(int)
  T CUtlVector<panorama::CRenderCommandMemoryStack*, CUtlMemory<panorama::CRenderCommandMemoryStack*> >::~CUtlVector()
- T CUtlVector<panorama::CStyleFile::ImportedStyleFile_t, CUtlMemory<panorama::CStyleFile::ImportedStyleFile_t> >::AddToTail()
  T CUtlVector<panorama::CStyleFile::ImportedStyleFile_t, CUtlMemory<panorama::CStyleFile::ImportedStyleFile_t> >::GrowVector(int)
  T CUtlVector<panorama::CStyleFile::ImportedStyleFile_t, CUtlMemory<panorama::CStyleFile::ImportedStyleFile_t> >::RemoveAll()
  T CUtlVector<panorama::CStyleFile::ImportedStyleFile_t, CUtlMemory<panorama::CStyleFile::ImportedStyleFile_t> >::~CUtlVector()
@@ -9796,18 +9784,15 @@
  T CUtlVector<panorama::CUIEngine::QueuedEvent_t, CUtlMemory<panorama::CUIEngine::QueuedEvent_t> >::RemoveMultiple(int, int)
  T CUtlVector<panorama::CUIEngine::QueuedEvent_t, CUtlMemory<panorama::CUIEngine::QueuedEvent_t> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CUIEngine::QueuedEvent_t, CUtlMemory<panorama::CUIEngine::QueuedEvent_t> >::~CUtlVector()
- T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::AddToTail()
  T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::GrowVector(int)
  T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::RemoveAll()
  T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CUIEngine::ScheduledItem_t, CUtlMemory<panorama::CUIEngine::ScheduledItem_t> >::~CUtlVector()
- T CUtlVector<panorama::CUIEngine::V8GlobalFunctionRegistration_t, CUtlMemory<panorama::CUIEngine::V8GlobalFunctionRegistration_t> >::AddToTail()
  T CUtlVector<panorama::CUIEngine::V8GlobalFunctionRegistration_t, CUtlMemory<panorama::CUIEngine::V8GlobalFunctionRegistration_t> >::GrowVector(int)
  T CUtlVector<panorama::CUIEngine::V8GlobalFunctionRegistration_t, CUtlMemory<panorama::CUIEngine::V8GlobalFunctionRegistration_t> >::RemoveAll()
  T CUtlVector<panorama::CUIEngine::V8GlobalFunctionRegistration_t, CUtlMemory<panorama::CUIEngine::V8GlobalFunctionRegistration_t> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CUIEngine::V8GlobalFunctionRegistration_t, CUtlMemory<panorama::CUIEngine::V8GlobalFunctionRegistration_t> >::~CUtlVector()
- T CUtlVector<panorama::CUIEngine::V8GlobalObjectRegistration_t, CUtlMemory<panorama::CUIEngine::V8GlobalObjectRegistration_t> >::AddToTail()
  T CUtlVector<panorama::CUIEngine::V8GlobalObjectRegistration_t, CUtlMemory<panorama::CUIEngine::V8GlobalObjectRegistration_t> >::GrowVector(int)
  T CUtlVector<panorama::CUIEngine::V8GlobalObjectRegistration_t, CUtlMemory<panorama::CUIEngine::V8GlobalObjectRegistration_t> >::Remove(int)
  T CUtlVector<panorama::CUIEngine::V8GlobalObjectRegistration_t, CUtlMemory<panorama::CUIEngine::V8GlobalObjectRegistration_t> >::RemoveAll()
@@ -9836,7 +9821,6 @@
  T CUtlVector<panorama::CUIWindowInput*, CUtlMemory<panorama::CUIWindowInput*> >::SortedInsert(panorama::CUIWindowInput* const&, bool (*)(panorama::CUIWindowInput* const&, panorama::CUIWindowInput* const&, void*), void*)
  T CUtlVector<panorama::CUIWindowInput*, CUtlMemory<panorama::CUIWindowInput*> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::CUIWindowInput*, CUtlMemory<panorama::CUIWindowInput*> >::~CUtlVector()
- T CUtlVector<panorama::CUIWindowInput::QueuedPanelEvent_t, CUtlMemory<panorama::CUIWindowInput::QueuedPanelEvent_t> >::AddToTail()
  T CUtlVector<panorama::CUIWindowInput::QueuedPanelEvent_t, CUtlMemory<panorama::CUIWindowInput::QueuedPanelEvent_t> >::GrowVector(int)
  T CUtlVector<panorama::CUIWindowInput::QueuedPanelEvent_t, CUtlMemory<panorama::CUIWindowInput::QueuedPanelEvent_t> >::~CUtlVector()
  T CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >::GrowVector(int)
@@ -9919,7 +9903,6 @@
  T CUtlVector<panorama::JSGenericCallback_t*, CUtlMemory<panorama::JSGenericCallback_t*> >::GrowVector(int)
  T CUtlVector<panorama::JSGenericCallback_t*, CUtlMemory<panorama::JSGenericCallback_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::JSGenericCallback_t*, CUtlMemory<panorama::JSGenericCallback_t*> >::~CUtlVector()
- T CUtlVector<panorama::JSInclude_t, CUtlMemory<panorama::JSInclude_t> >::AddToTail()
  T CUtlVector<panorama::JSInclude_t, CUtlMemory<panorama::JSInclude_t> >::GrowVector(int)
  T CUtlVector<panorama::JSInclude_t, CUtlMemory<panorama::JSInclude_t> >::RemoveAll()
  T CUtlVector<panorama::JSInclude_t, CUtlMemory<panorama::JSInclude_t> >::Validate(CValidator&, char const*)
@@ -9935,10 +9918,8 @@
  T CUtlVector<panorama::PanelDescription_t*, CUtlMemory<panorama::PanelDescription_t*> >::Remove(int)
  T CUtlVector<panorama::PanelDescription_t*, CUtlMemory<panorama::PanelDescription_t*> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::PanelDescription_t*, CUtlMemory<panorama::PanelDescription_t*> >::~CUtlVector()
- T CUtlVector<panorama::PanelEventsToParse_t, CUtlMemory<panorama::PanelEventsToParse_t> >::AddToTail()
  T CUtlVector<panorama::PanelEventsToParse_t, CUtlMemory<panorama::PanelEventsToParse_t> >::GrowVector(int)
  T CUtlVector<panorama::PanelEventsToParse_t, CUtlMemory<panorama::PanelEventsToParse_t> >::~CUtlVector()
- T CUtlVector<panorama::ParsedPanelProperty_t, CUtlMemory<panorama::ParsedPanelProperty_t> >::AddToTail()
  T CUtlVector<panorama::ParsedPanelProperty_t, CUtlMemory<panorama::ParsedPanelProperty_t> >::GrowVector(int)
  T CUtlVector<panorama::ParsedPanelProperty_t, CUtlMemory<panorama::ParsedPanelProperty_t> >::~CUtlVector()
  T CUtlVector<panorama::PropertyInTransition_t*, CUtlMemory<panorama::PropertyInTransition_t*> >::AddToTail(panorama::PropertyInTransition_t* const&)
@@ -9948,7 +9929,6 @@
  T CUtlVector<panorama::RectBounds_t, CUtlMemory<panorama::RectBounds_t> >::Remove(int)
  T CUtlVector<panorama::RectBounds_t, CUtlMemory<panorama::RectBounds_t> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::RectBounds_t, CUtlMemory<panorama::RectBounds_t> >::~CUtlVector()
- T CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >::AddToTail()
  T CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >::GrowVector(int)
  T CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >::RemoveAll()
  T CUtlVector<panorama::RegisterJSEntryInfoInternal_t, CUtlMemory<panorama::RegisterJSEntryInfoInternal_t> >::Validate(CValidator&, char const*)
@@ -9962,7 +9942,6 @@
  T CUtlVector<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CUtlMemory<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*> >::Remove(int)
  T CUtlVector<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CUtlMemory<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*> >::Validate(CValidator&, char const*)
  T CUtlVector<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*, CUtlMemory<panorama::SDLOGLSurfaceNameSpace::CCompositionLayer*> >::~CUtlVector()
- T CUtlVector<panorama::StyleEntry_t, CUtlMemory<panorama::StyleEntry_t> >::AddToTail()
  T CUtlVector<panorama::StyleEntry_t, CUtlMemory<panorama::StyleEntry_t> >::GrowVector(int)
  T CUtlVector<panorama::StyleEntry_t, CUtlMemory<panorama::StyleEntry_t> >::Remove(int)
  T CUtlVector<panorama::StyleEntry_t, CUtlMemory<panorama::StyleEntry_t> >::Validate(CValidator&, char const*)
@@ -9972,7 +9951,6 @@
  T CUtlVector<panorama::StyleFromFile_t*, CUtlMemory<panorama::StyleFromFile_t*> >::PurgeAndDeleteElements()
  T CUtlVector<panorama::StyleFromFile_t*, CUtlMemory<panorama::StyleFromFile_t*> >::~CUtlVector()
  T CUtlVector<panorama::TransitionProperty_t, CUtlMemory<panorama::TransitionProperty_t> >::AddMultipleToTail(int, panorama::TransitionProperty_t const*)
- T CUtlVector<panorama::TransitionProperty_t, CUtlMemory<panorama::TransitionProperty_t> >::AddToTail()
  T CUtlVector<panorama::TransitionProperty_t, CUtlMemory<panorama::TransitionProperty_t> >::AddToTail(panorama::TransitionProperty_t const&)
  T CUtlVector<panorama::TransitionProperty_t, CUtlMemory<panorama::TransitionProperty_t> >::GrowVector(int)
  T CUtlVector<panorama::TransitionProperty_t, CUtlMemory<panorama::TransitionProperty_t> >::InsertMultipleBefore(int, int, panorama::TransitionProperty_t const*)
@@ -10102,6 +10080,7 @@
  T ConVar::InternalSetInt64Value(long long)
  T ConVar::InternalSetIntValue(int)
  T ConVar::InternalSetValue(char const*)
+ T ConVar::InvokeCallbacks(char const*)
  T ConVar::IsCommand() const
  T ConVar::IsRegistered() const
  T ConVar::LegacyCallbackProxy(void*, ConVar*, char const*)
@@ -10141,6 +10120,7 @@
  T FillDataStruct(_finddata_t*)
  T FindInputPanel(panorama::IUIPanel*)
  T FindNextSpace(char const*)
+ T FindOrCreateStack(CStack*)
  T FioClose(int)
  T FioCreateFile(char const*, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
  T FioGetSize(int, unsigned long long*)
@@ -10322,8 +10302,8 @@
  T QuaternionMatrix(Quaternion const&, matrix3x4_t&)
  T QuaternionSlerp(Quaternion const&, Quaternion const&, float, Quaternion&)
  T QuaternionSlerpNoAlign(Quaternion const&, Quaternion const&, float, Quaternion&)
- T RTAClearData()
- T RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)
+ T RTAClearData(int, bool)
+ T RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)
  T RTANoteFree(void*, char const*)
  T RawInflateToBuffer(void const*, unsigned int, CUtlBuffer&, unsigned int)
  T ReadPNGData(png_struct_def*, unsigned char*, unsigned long)
@@ -10796,7 +10776,6 @@
  T non-virtual thunk to panorama::CUISoundSystem::SinkAdded(int)
  T non-virtual thunk to panorama::CUISoundSystem::SinkRemoved(int)
  T non-virtual thunk to panorama::CUISoundSystem::~CUISoundSystem()
- T operator*(VMatrix const&, Vector4D const&)
  T panorama::ActionInput_t::ActionInput_t(panorama::EInputType, panorama::GamePadCode, char const*)
  T panorama::ActionInput_t::ActionInput_t(panorama::EInputType, panorama::KeyCode, unsigned int, char const*)
  T panorama::ActionInput_t::ActionInput_t(panorama::EInputType, panorama::MouseCode, char const*)
@@ -10845,19 +10824,12 @@
  T panorama::BeginDebuggerInspect::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::BeginDebuggerInspect::FormatEventArgs(char const*)
  T panorama::BeginDebuggerInspect::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::BeginFrameRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::BeginFrameRenderCommand_t>()
  T panorama::BeginFrameRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::BeginFrameRenderCommand_t>()
  T panorama::BeginFrameRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::BeginPaintBackgroundRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::BeginPaintBackgroundRenderCommand_t>()
  T panorama::BeginPaintBackgroundRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::BeginPaintBackgroundRenderCommand_t>()
  T panorama::BeginPaintBackgroundRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::BeginPaintLastRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::BeginPaintLastRenderCommand_t>()
  T panorama::BeginPaintLastRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::BeginPaintLastRenderCommand_t>()
  T panorama::BeginPaintLastRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::BorderRadiusWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::BorderRadiusWithTransition_t>()
- T panorama::BorderWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::BorderWithTransition_t>()
- T panorama::BoxShadowWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::BoxShadowWithTransition_t>()
- T panorama::BrightnessWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::BrightnessWithTransition_t>()
  T panorama::BrowserGoToURL::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::BrowserGoToURL::FormatEventArgs(char const*)
  T panorama::BrowserGoToURL::MakeEvent(panorama::IUIPanelClient const*, char const*)
@@ -10969,6 +10941,7 @@
  T panorama::CFillBrush::Validate(CValidator&, char const*)
  T panorama::CFillBrush::operator==(panorama::CFillBrush const&) const
  T panorama::CFillBrushCollection::Interpolate(float, float, panorama::CFillBrushCollection const&, float)
+ T panorama::CFillBrushCollection::ScaleLengthValues(float)
  T panorama::CFillBrushCollection::Validate(CValidator&, char const*)
  T panorama::CFillBrushCollection::operator==(panorama::CFillBrushCollection const&) const
  T panorama::CFragmentShader::CreateShader()
@@ -11494,7 +11467,10 @@
  T panorama::CPanelStyle::CompletePropertyTransitionNow(panorama::CStyleSymbol, bool)
  T panorama::CPanelStyle::EnableBackgroundMovies(bool)
  T panorama::CPanelStyle::FillInAnimationData(CMsgAnimationData*, panorama::CActiveAnimation const*)
+ T panorama::CPanelStyle::FillInAnimationData(panorama::BaseAnimationData_t*, panorama::CActiveAnimation const*)
+ T panorama::CPanelStyle::FillInAnimationFrameData(CMsgAnimationFrameData*, panorama::CActiveAnimation::PropertyFrameData_t const&)
  T panorama::CPanelStyle::FillInTransitionData(CMsgTransitionData*, panorama::PropertyInTransition_t*)
+ T panorama::CPanelStyle::FillInTransitionData(panorama::TransitionData_t*, panorama::PropertyInTransition_t*)
  T panorama::CPanelStyle::FindActiveAnimation(panorama::CPanoramaSymbol)
  T panorama::CPanelStyle::FindProperty(panorama::CStyleSymbol, int*)
  T panorama::CPanelStyle::FindPropertyInTransition(panorama::CStyleSymbol, short*)
@@ -11679,6 +11655,7 @@
  T panorama::CPanelStyle::SetRenderMsgData(CMsgClipData*, panorama::CStylePropertyClip*, void*)
  T panorama::CPanelStyle::SetRenderMsgData(CMsgGaussianValues*, panorama::CStylePropertyBlur*, void*)
  T panorama::CPanelStyle::SetRenderMsgData(CMsgMatrix4x4*, panorama::CStylePropertyTransform3D*, void*)
+ T panorama::CPanelStyle::SetRenderMsgData(CMsgMotionBlurValues*, panorama::CStylePropertyMotionBlur*, void*)
  T panorama::CPanelStyle::SetRenderMsgData(CMsgOpacityMaskData*, panorama::CStylePropertyOpacityMask*, void*)
  T panorama::CPanelStyle::SetRenderMsgData(CMsgPoint*, panorama::CStylePropertyPerspectiveOrigin*, void*)
  T panorama::CPanelStyle::SetRenderMsgData(CMsgPoint*, panorama::CStylePropertyPosition*, void*)
@@ -11766,74 +11743,63 @@
  T panorama::CRenderCommandList::~CRenderCommandList()
  T panorama::CRenderDataList<panorama::ColorStop_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::ColorStop_t>::AppendNode(panorama::CRenderDataList<panorama::ColorStop_t>::ListNode_t*)
+ T panorama::CRenderDataList<panorama::ColorStop_t>::CopyFrom(panorama::CRenderDataList<panorama::ColorStop_t> const&, panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::FillBrush_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::FillBrush_t>::AppendNode(panorama::CRenderDataList<panorama::FillBrush_t>::ListNode_t*)
  T panorama::CRenderDataList<panorama::FillBrush_t>::CopyFrom(panorama::CRenderDataList<panorama::FillBrush_t> const&, panorama::CRenderCommandList&)
- T panorama::CRenderDataList<panorama::Particle_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::Particle_t>::AppendNode(panorama::CRenderDataList<panorama::Particle_t>::ListNode_t*)
  T panorama::CRenderDataList<panorama::Particle_t>::CopyFrom(panorama::CRenderDataList<panorama::Particle_t> const&, panorama::CRenderCommandList&)
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<double>::AnimationData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<double>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<double>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<double>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<double>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<double>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<double>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<double>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<double>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<double>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BorderData_t>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::BoxShadowData_t>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::ClipData_t>::AnimationFrameData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::FillBrushCollection_t>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::GaussianValues_t>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::MotionBlur_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::MotionBlur_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::MotionBlur_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::MotionBlur_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::MotionBlur_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::MotionBlur_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::MotionBlur_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::MotionBlur_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::MotionBlur_t>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::OpacityMask_t>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RadiusData_t>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderMatrix4x4_t>::AnimationFrameData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::RenderPoint_t>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::AnimationFrameData_t>::ListNode_t>()
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationFrameData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationFrameData_t>::AppendNode(panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationFrameData_t>::ListNode_t*)
- T panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationFrameData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::PropertyWithTransition_t<unsigned int>::AnimationFrameData_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::RenderTextRangeFormat_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::RenderTextRangeFormat_t>::AppendNode(panorama::CRenderDataList<panorama::RenderTextRangeFormat_t>::ListNode_t*)
  T panorama::CRenderDataList<panorama::RenderTextRangeFormat_t>::CopyFrom(panorama::CRenderDataList<panorama::RenderTextRangeFormat_t> const&, panorama::CRenderCommandList&)
- T panorama::CRenderDataList<panorama::RenderTextRangeFormat_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::RenderTextRangeFormat_t>::ListNode_t>()
+ T panorama::CRenderDataList<panorama::TextRangeFormatData_t>::AddToTail(panorama::CRenderCommandList&)
  T panorama::CRenderDataList<panorama::TextRangeFormatData_t>::AppendNode(panorama::CRenderDataList<panorama::TextRangeFormatData_t>::ListNode_t*)
  T panorama::CRenderDataList<panorama::TextRangeFormatData_t>::CopyFrom(panorama::CRenderDataList<panorama::TextRangeFormatData_t> const&, panorama::CRenderCommandList&)
- T panorama::CRenderDataList<panorama::TextRangeFormatData_t>::ListNode_t* panorama::CRenderCommandList::AllocType<panorama::CRenderDataList<panorama::TextRangeFormatData_t>::ListNode_t>()
  T panorama::CRenderMsg<CMsgBeginFrame>::~CRenderMsg()
  T panorama::CRenderMsg<CMsgBeginPaintBackground>::~CRenderMsg()
  T panorama::CRenderMsg<CMsgBeginPaintLast>::~CRenderMsg()
@@ -12574,6 +12540,7 @@
  T panorama::CStylePropertyTransform3D::BAffectsCompositionOnly()
  T panorama::CStylePropertyTransform3D::BCanTransition()
  T panorama::CStylePropertyTransform3D::BFullySet() const
+ T panorama::CStylePropertyTransform3D::BHasNon2DTransforms()
  T panorama::CStylePropertyTransform3D::BSetFromString(panorama::CStyleSymbol, char const*)
  T panorama::CStylePropertyTransform3D::CStylePropertyTransform3D()
  T panorama::CStylePropertyTransform3D::GetDescription(panorama::CStyleSymbol)
@@ -12946,7 +12913,6 @@
  T panorama::CUIAnimationEngine::PushTextShadow(panorama::CAnimationAndTransformContext*, CMsgTextShadow const&)
  T panorama::CUIAnimationEngine::PushWashColor(panorama::CAnimationAndTransformContext*, CMsgColor const&)
  T panorama::CUIAnimationEngine::RenderOpSort(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&)
- T panorama::CUIAnimationEngine::RenderOperation_t** std::__1::__merge<bool (*&)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&), std::__1::move_iterator<panorama::CUIAnimationEngine::RenderOperation_t**>, std::__1::move_iterator<panorama::CUIAnimationEngine::RenderOperation_t**>, panorama::CUIAnimationEngine::RenderOperation_t**>(std::__1::move_iterator<panorama::CUIAnimationEngine::RenderOperation_t**>, std::__1::move_iterator<panorama::CUIAnimationEngine::RenderOperation_t**>, std::__1::move_iterator<panorama::CUIAnimationEngine::RenderOperation_t**>, std::__1::move_iterator<panorama::CUIAnimationEngine::RenderOperation_t**>, panorama::CUIAnimationEngine::RenderOperation_t**, bool (*&)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&))
  T panorama::CUIAnimationEngine::RenderOperation_t** std::__1::__rotate_gcd<panorama::CUIAnimationEngine::RenderOperation_t**>(panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**)
  T panorama::CUIAnimationEngine::RenderOperation_t::Validate(CValidator&, char const*)
  T panorama::CUIAnimationEngine::RequestRenderCallback(panorama::CRenderMsg<CMsgRequestRenderCallback> const&, CUtlBuffer*)
@@ -13008,7 +12974,6 @@
  T panorama::CUIAnimationEngineNew::PushTextShadow(panorama::CAnimationAndTransformContext*, panorama::TextShadowWithTransition_t const&)
  T panorama::CUIAnimationEngineNew::PushWashColor(panorama::CAnimationAndTransformContext*, panorama::WashColorWithTransition_t const&)
  T panorama::CUIAnimationEngineNew::RenderOpSort(panorama::CUIAnimationEngineNew::RenderOperation_t* const&, panorama::CUIAnimationEngineNew::RenderOperation_t* const&)
- T panorama::CUIAnimationEngineNew::RenderOperation_t** std::__1::__merge<bool (*&)(panorama::CUIAnimationEngineNew::RenderOperation_t* const&, panorama::CUIAnimationEngineNew::RenderOperation_t* const&), std::__1::move_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**>, std::__1::move_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**>, panorama::CUIAnimationEngineNew::RenderOperation_t**>(std::__1::move_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**>, std::__1::move_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**>, std::__1::move_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**>, std::__1::move_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**>, panorama::CUIAnimationEngineNew::RenderOperation_t**, bool (*&)(panorama::CUIAnimationEngineNew::RenderOperation_t* const&, panorama::CUIAnimationEngineNew::RenderOperation_t* const&))
  T panorama::CUIAnimationEngineNew::RenderOperation_t** std::__1::__rotate_gcd<panorama::CUIAnimationEngineNew::RenderOperation_t**>(panorama::CUIAnimationEngineNew::RenderOperation_t**, panorama::CUIAnimationEngineNew::RenderOperation_t**, panorama::CUIAnimationEngineNew::RenderOperation_t**)
  T panorama::CUIAnimationEngineNew::RenderOperation_t::Validate(CValidator&, char const*)
  T panorama::CUIAnimationEngineNew::RequestRenderCallback(panorama::RequestRenderCallbackCommand_t const&, panorama::CRenderCommandList&)
@@ -13510,7 +13475,6 @@
  T panorama::CUIPanel::AddClasses(panorama::CPanoramaSymbol*, unsigned int)
  T panorama::CUIPanel::AddClassesInternal(panorama::CPanoramaSymbol*, unsigned int, bool)
  T panorama::CUIPanel::AddDisabledFlagToChildren()
- T panorama::CUIPanel::AddFlagToParents(panorama::EStyleFlags)
  T panorama::CUIPanel::AddStyleFlag(panorama::EStyleFlags)
  T panorama::CUIPanel::AddToTopLevelWindow()
  T panorama::CUIPanel::AdjustPositionForAlignment(float*, float*, float, float, float, float)
@@ -13741,7 +13705,6 @@
  T panorama::CUIPanel::RemoveClasses(char const*)
  T panorama::CUIPanel::RemoveClasses(panorama::CPanoramaSymbol const*, unsigned int)
  T panorama::CUIPanel::RemoveDisabledFlagFromChildren()
- T panorama::CUIPanel::RemoveFlagFromParents(panorama::EStyleFlags)
  T panorama::CUIPanel::RemoveFromTopLevelWindow()
  T panorama::CUIPanel::RemoveParentDisabledFlag()
  T panorama::CUIPanel::RemoveStyleFlag(panorama::EStyleFlags)
@@ -14466,6 +14429,7 @@
  T panorama::CUIRenderEngine::CUIRenderThread::RunSingleFrame()
  T panorama::CUIRenderEngine::CUIRenderThread::Validate(CValidator&, char const*)
  T panorama::CUIRenderEngine::CUIRenderThread::~CUIRenderThread()
+ T panorama::CUIRenderEngine::ConvertBaseAnimationData(CMsgAnimationData const&, panorama::BaseAnimationData_t&, panorama::CRenderCommandList&)
  T panorama::CUIRenderEngine::ConvertFillBrush(CMsgFillBrush const&, panorama::FillBrush_t&, panorama::CRenderCommandList&)
  T panorama::CUIRenderEngine::ConvertFillBrushCollection(CMsgFillBrushCollection const&, panorama::FillBrushCollectionWithTransition_t&, panorama::CRenderCommandList&)
  T panorama::CUIRenderEngine::ConvertLinearGradient(CMsgLinearGradient const&, panorama::LinearGradient_t&, panorama::CRenderCommandList&)
@@ -14474,6 +14438,7 @@
  T panorama::CUIRenderEngine::ConvertRadialGradient(CMsgRadialGradient const&, panorama::RadialGradient_t&, panorama::CRenderCommandList&)
  T panorama::CUIRenderEngine::ConvertTextFormat(CMsgTextFormat const&, panorama::TextFormat_t&, panorama::CRenderCommandList&)
  T panorama::CUIRenderEngine::ConvertTextRangeFormat(CMsgTextRangeFormat const&, panorama::TextRangeFormatData_t&, panorama::CRenderCommandList&)
+ T panorama::CUIRenderEngine::ConvertTransitionData(CMsgTransitionData const&, panorama::TransitionData_t&, panorama::CRenderCommandList&)
  T panorama::CUIRenderEngine::CopyPaintString(char const*)
  T panorama::CUIRenderEngine::DrawFilledRect(float, float, float, float, CMsgFillBrushCollection const&, panorama::EAntialiasing)
  T panorama::CUIRenderEngine::DrawFilledRect(float, float, float, float, panorama::EAntialiasing)
@@ -14695,13 +14660,11 @@
  T panorama::CheckChildrenScrolledIntoView::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::CheckChildrenScrolledIntoView::FormatEventArgs(char const*)
  T panorama::CheckChildrenScrolledIntoView::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::ClearBackbufferRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::ClearBackbufferRenderCommand_t>()
  T panorama::ClearBackbufferRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::ClearBackbufferRenderCommand_t>()
  T panorama::ClearBackbufferRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::ClearPanelEvent::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ClearPanelEvent::FormatEventArgs(char const*)
  T panorama::ClearPanelEvent::MakeEvent(panorama::IUIPanelClient const*, char const*)
- T panorama::ClipWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::ClipWithTransition_t>()
  T panorama::CloseDebuggerWindow::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::CloseDebuggerWindow::FormatEventArgs(char const*)
  T panorama::CloseDebuggerWindow::MakeEvent(panorama::IUIPanelClient const*)
@@ -14712,7 +14675,6 @@
  T panorama::ContextMenu::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ContextMenu::FormatEventArgs(char const*)
  T panorama::ContextMenu::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
- T panorama::ContrastWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::ContrastWithTransition_t>()
  T panorama::ConvertRGBA8ToA8(CUtlBuffer&, CUtlBuffer&, unsigned int, unsigned int)
  T panorama::CopyStringToClipboard::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::CopyStringToClipboard::FormatEventArgs(char const*)
@@ -14726,13 +14688,10 @@
  T panorama::DeletePanel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::DeletePanel::FormatEventArgs(char const*)
  T panorama::DeletePanel::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::DeletePanelRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::DeletePanelRenderCommand_t>()
  T panorama::DeletePanelRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::DeletePanelRenderCommand_t>()
  T panorama::DeletePanelRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::DeleteParticleSystemRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::DeleteParticleSystemRenderCommand_t>()
  T panorama::DeleteParticleSystemRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::DeleteParticleSystemRenderCommand_t>()
  T panorama::DeleteParticleSystemRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::DeleteTextureRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::DeleteTextureRenderCommand_t>()
  T panorama::DeleteTextureRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::DeleteTextureRenderCommand_t>()
  T panorama::DeleteTextureRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::DetermineResourceType(panorama::CFileResource const&)
@@ -14760,13 +14719,10 @@
  T panorama::DragStart::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::DragStart::FormatEventArgs(char const*)
  T panorama::DragStart::MakeEvent(panorama::IUIPanelClient const*, panorama::IDragStartCallbacks*)
- T panorama::DrawFilledRectRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::DrawFilledRectRenderCommand_t>()
  T panorama::DrawFilledRectRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::DrawFilledRectRenderCommand_t>()
  T panorama::DrawFilledRectRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::DrawTextRegionRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::DrawTextRegionRenderCommand_t>()
  T panorama::DrawTextRegionRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::DrawTextRegionRenderCommand_t>()
  T panorama::DrawTextRegionRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::DrawTexturedRectRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::DrawTexturedRectRenderCommand_t>()
  T panorama::DrawTexturedRectRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::DrawTexturedRectRenderCommand_t>()
  T panorama::DrawTexturedRectRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::DropdownMenuFocusChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -14780,13 +14736,10 @@
  T panorama::EBackgroundRepeatFromName(char const*)
  T panorama::ETextDecorationFromName(char const*)
  T panorama::ETextTransformFromName(char const*)
- T panorama::EndFrameRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::EndFrameRenderCommand_t>()
  T panorama::EndFrameRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::EndFrameRenderCommand_t>()
  T panorama::EndFrameRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::EndPaintBackgroundRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::EndPaintBackgroundRenderCommand_t>()
  T panorama::EndPaintBackgroundRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::EndPaintBackgroundRenderCommand_t>()
  T panorama::EndPaintBackgroundRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::EndPaintLastRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::EndPaintLastRenderCommand_t>()
  T panorama::EndPaintLastRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::EndPaintLastRenderCommand_t>()
  T panorama::EndPaintLastRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::EscapeUIEventParam(CUtlString*, char const*)
@@ -14799,10 +14752,8 @@
  T panorama::ExitSteam::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ExitSteam::FormatEventArgs(char const*)
  T panorama::ExitSteam::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::FillBrushCollectionWithTransition_t::AddSolidColorFillBrushNoTransition(unsigned int, panorama::CRenderCommandList&)
  T panorama::FillBrush_t::CopyFrom(panorama::FillBrush_t const&, panorama::CRenderCommandList&)
  T panorama::FormatEventArgsCore(char const**, int, char const*)
- T panorama::FreeCompositingLayerRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::FreeCompositingLayerRenderCommand_t>()
  T panorama::FreeCompositingLayerRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::FreeCompositingLayerRenderCommand_t>()
  T panorama::FreeCompositingLayerRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::FriendsOptionsChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -14820,7 +14771,6 @@
  T panorama::GamepadRemoved::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::GamepadRemoved::FormatEventArgs(char const*)
  T panorama::GamepadRemoved::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::GaussianBlurWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::GaussianBlurWithTransition_t>()
  T panorama::GetAnimationCurveControlPoints(panorama::EAnimationTimingFunction, Vector2D*)
  T panorama::GetParentSizeAvailable(panorama::IUIPanel*, float&, float&, float&)
  T panorama::GetProgressForTimingFunction(CCubicBezierCurve<Vector2D> const&, float)
@@ -14841,7 +14791,6 @@
  T panorama::HidePanel::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::HidePanel::FormatEventArgs(char const*)
  T panorama::HidePanel::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::HueShiftWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::HueShiftWithTransition_t>()
  T panorama::IImageSource::GetJSTypeName()
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<AutoReloadFailedLayoutReloads>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ActivateMainWindow, bool>(panorama::IUIPanel*, char const*, char const**)
@@ -15067,7 +15016,6 @@
  T panorama::JSScheduledFunction::MakeEvent(panorama::IUIPanelClient const*, panorama::CPanelPtr<panorama::IUIPanel>, v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*, int, unsigned int)
  T panorama::LayoutManager()
  T panorama::LerpUILength(float, panorama::CUILength, panorama::CUILength, float)
- T panorama::LinearGradient_t* panorama::CRenderCommandList::AllocType<panorama::LinearGradient_t>()
  T panorama::LoadAsyncComplete::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::LoadAsyncComplete::FormatEventArgs(char const*)
  T panorama::LoadAsyncComplete::MakeEvent(panorama::IUIPanelClient const*, bool, panorama::ELoadLayoutAsyncDetails, bool)
@@ -15083,7 +15031,6 @@
  T panorama::LocalizationChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::LocalizationChanged::FormatEventArgs(char const*)
  T panorama::LocalizationChanged::MakeEvent(panorama::IUIPanelClient const*, panorama::ILocalizationString const*, int)
- T panorama::LockTextureRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::LockTextureRenderCommand_t>()
  T panorama::LockTextureRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::LogLayoutParsingError(panorama::CPanoramaSymbol, unsigned int, char const*, ...)
  T panorama::MakeSymbol(char const*)
@@ -15111,7 +15058,6 @@
  T panorama::MinimizeApp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::MinimizeApp::FormatEventArgs(char const*)
  T panorama::MinimizeApp::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::MotionBlurWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::MotionBlurWithTransition_t>()
  T panorama::MoveDown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::MoveDown::FormatEventArgs(char const*)
  T panorama::MoveDown::MakeEvent(panorama::IUIPanelClient const*, int)
@@ -15136,13 +15082,11 @@
  T panorama::MoveUp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::MoveUp::FormatEventArgs(char const*)
  T panorama::MoveUp::MakeEvent(panorama::IUIPanelClient const*, int)
- T panorama::NestedRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::NestedRenderCommand_t>()
  T panorama::NestedRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::NestedRenderCommand_t>()
  T panorama::NestedRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::None::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::None::FormatEventArgs(char const*)
  T panorama::None::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::OpacityMaskWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::OpacityMaskWithTransition_t>()
  T panorama::OpacityWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::OpacityWithTransition_t>()
  T panorama::OverlayGamepadInputMsg::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::OverlayGamepadInputMsg::FormatEventArgs(char const*)
@@ -15191,7 +15135,6 @@
  T panorama::PanoramaPanelTypeToV8Param(panorama::IUIWindow*, v8::Handle<v8::Value>*)
  T panorama::PanoramaTypeToV8ParamJSObject(panorama::IUIJSObject*, void*, v8::Handle<v8::Value>*)
  T panorama::ParseUIEventParamHelper(CUtlBuffer&, char const*, char const**)
- T panorama::ParticleSystem_t* panorama::CRenderCommandList::AllocType<panorama::ParticleSystem_t>()
  T panorama::ParticleSystem_t::CopyFrom(panorama::ParticleSystem_t const&, panorama::CRenderCommandList&)
  T panorama::PchNameFromEAnimationTimingFunction(int)
  T panorama::PchNameFromEBackgroundRepeat(int)
@@ -15210,16 +15153,12 @@
  T panorama::PollingForSteamClientUpdate::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::PollingForSteamClientUpdate::FormatEventArgs(char const*)
  T panorama::PollingForSteamClientUpdate::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::PopAAndTContextRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::PopAAndTContextRenderCommand_t>()
  T panorama::PopAAndTContextRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::PopAAndTContextRenderCommand_t>()
  T panorama::PopAAndTContextRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::PopClipLayerRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::PopClipLayerRenderCommand_t>()
  T panorama::PopClipLayerRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::PopClipLayerRenderCommand_t>()
  T panorama::PopClipLayerRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::PopCompositingLayerRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::PopCompositingLayerRenderCommand_t>()
  T panorama::PopCompositingLayerRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::PopCompositingLayerRenderCommand_t>()
  T panorama::PopCompositingLayerRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::PopPanelContextInLayerRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::PopPanelContextInLayerRenderCommand_t>()
  T panorama::PopPanelContextInLayerRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::PopPanelContextInLayerRenderCommand_t>()
  T panorama::PopPanelContextInLayerRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::ProfileOff::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -15247,16 +15186,13 @@
  T panorama::PropertyWithTransition_t<panorama::TextShadowData_t>::CopyFrom(panorama::PropertyWithTransition_t<panorama::TextShadowData_t> const&, panorama::CRenderCommandList&)
  T panorama::PropertyWithTransition_t<panorama::TransformOriginData_t>::CopyFrom(panorama::PropertyWithTransition_t<panorama::TransformOriginData_t> const&, panorama::CRenderCommandList&)
  T panorama::PropertyWithTransition_t<unsigned int>::CopyFrom(panorama::PropertyWithTransition_t<unsigned int> const&, panorama::CRenderCommandList&)
- T panorama::PushAAndTContextRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::PushAAndTContextRenderCommand_t>()
  T panorama::PushAAndTContextRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::PushAAndTContextRenderCommand_t>()
  T panorama::PushAAndTContextRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::PushClipLayerRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::PushClipLayerRenderCommand_t>()
  T panorama::PushClipLayerRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::PushClipLayerRenderCommand_t>()
  T panorama::PushClipLayerRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::PushCompositingLayerRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::PushCompositingLayerRenderCommand_t>()
  T panorama::PushCompositingLayerRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::PushCompositingLayerRenderCommand_t>()
  T panorama::PushCompositingLayerRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::PushPanelContextInLayerRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::PushPanelContextInLayerRenderCommand_t>()
  T panorama::PushPanelContextInLayerRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::PushPanelContextInLayerRenderCommand_t>()
  T panorama::PushPanelContextInLayerRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::QueueTextureDelete::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -15264,8 +15200,6 @@
  T panorama::QuitApp::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::QuitApp::FormatEventArgs(char const*)
  T panorama::QuitApp::MakeEvent(panorama::IUIPanelClient const*)
- T panorama::RadialGradient_t* panorama::CRenderCommandList::AllocType<panorama::RadialGradient_t>()
- T panorama::RadialGradient_t::CopyFrom(panorama::RadialGradient_t const&, panorama::CRenderCommandList&)
  T panorama::ReadyForDisplay::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ReadyForDisplay::FormatEventArgs(char const*)
  T panorama::ReadyForDisplay::MakeEvent(panorama::IUIPanelClient const*)
@@ -15291,17 +15225,13 @@
  T panorama::RemoveStyleFromEachChild::MakeEvent(panorama::IUIPanelClient const*, char const*)
  T panorama::RenderCommandToTextLayoutKey(panorama::RenderTextFormat_t const&, panorama::CRenderDataList<panorama::RenderTextRangeFormat_t> const&, panorama::UITextLayoutProperties_t*)
  T panorama::RenderCommand_t::CopyBaseCommandFrom(panorama::RenderCommand_t const&, panorama::CRenderCommandList&)
- T panorama::RenderFilledRectRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::RenderFilledRectRenderCommand_t>()
  T panorama::RenderFilledRectRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::RenderFilledRectRenderCommand_t>()
  T panorama::RenderFilledRectRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::RenderTextFormat_t::CopyFrom(panorama::RenderTextFormat_t const&, panorama::CRenderCommandList&)
- T panorama::RenderTextRegionCommand_t* panorama::CRenderCommandList::AllocType<panorama::RenderTextRegionCommand_t>()
  T panorama::RenderTextRegionCommand_t* panorama::CRenderCommandList::PushCommand<panorama::RenderTextRegionCommand_t>()
  T panorama::RenderTextRegionCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::RenderTexturedRectRenderCommand_t* panorama::CRenderCommandList::AllocType<panorama::RenderTexturedRectRenderCommand_t>()
  T panorama::RenderTexturedRectRenderCommand_t* panorama::CRenderCommandList::PushCommand<panorama::RenderTexturedRectRenderCommand_t>()
  T panorama::RenderTexturedRectRenderCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
- T panorama::RequestRenderCallbackCommand_t* panorama::CRenderCommandList::AllocType<panorama::RequestRenderCallbackCommand_t>()
  T panorama::RequestRenderCallbackCommand_t* panorama::CRenderCommandList::PushCommand<panorama::RequestRenderCallbackCommand_t>()
  T panorama::RequestRenderCallbackCommand_t::PushCommandCopy(panorama::CRenderCommandList&) const
  T panorama::RequiredCallFailed(char const*, ...)
@@ -15315,7 +15245,6 @@
  T panorama::RetryStyleReload::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::RetryStyleReload::FormatEventArgs(char const*)
  T panorama::RetryStyleReload::MakeEvent(panorama::IUIPanelClient const*, panorama::CReloadStyleFile*)
- T panorama::Rotate2DWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::Rotate2DWithTransition_t>()
  T panorama::SDLOGLSurfaceNameSpace::CCompositionLayer::ActivateRenderTarget()
  T panorama::SDLOGLSurfaceNameSpace::CCompositionLayer::CCompositionLayer(panorama::COpenGLSurface*, void*, float, float)
  T panorama::SDLOGLSurfaceNameSpace::CCompositionLayer::CheckAndClearClipLayers()
@@ -15329,8 +15258,6 @@
  T panorama::SDLOGLSurfaceNameSpace::CCompositionLayer::PushCliplayersAndBeginDraw(float, float, float, float)
  T panorama::SDLOGLSurfaceNameSpace::CCompositionLayer::Validate(CValidator&, char const*)
  T panorama::SDLOGLSurfaceNameSpace::CCompositionLayer::~CCompositionLayer()
- T panorama::SaturationWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::SaturationWithTransition_t>()
- T panorama::Scale2DWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::Scale2DWithTransition_t>()
  T panorama::ScreenSpacePanelQuad_t::~ScreenSpacePanelQuad_t()
  T panorama::ScrollDown::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::ScrollDown::FormatEventArgs(char const*)
@@ -15472,7 +15399,6 @@
  T panorama::TextInputHandlerStateChange::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::TextInputHandlerStateChange::FormatEventArgs(char const*)
  T panorama::TextInputHandlerStateChange::MakeEvent(panorama::IUIPanelClient const*, bool)
- T panorama::TextShadowWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::TextShadowWithTransition_t>()
  T panorama::TimeoutFastScrollSound::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::TimeoutFastScrollSound::FormatEventArgs(char const*)
  T panorama::TimeoutFastScrollSound::MakeEvent(panorama::IUIPanelClient const*)
@@ -15496,10 +15422,6 @@
  T panorama::TopLevelWindowClose::MakeEvent(panorama::IUIPanelClient const*, panorama::IUIWindow*)
  T panorama::TopLevelWindowVisibilityChanged::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::TopLevelWindowVisibilityChanged::FormatEventArgs(char const*)
- T panorama::TransformMatrixWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::TransformMatrixWithTransition_t>()
- T panorama::TransformOriginWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::TransformOriginWithTransition_t>()
- T panorama::TransformPerspectiveOriginWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::TransformPerspectiveOriginWithTransition_t>()
- T panorama::TransformPerspectiveWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::TransformPerspectiveWithTransition_t>()
  T panorama::TransitionData_t* panorama::CRenderCommandList::AllocType<panorama::TransitionData_t>()
  T panorama::TransitionProperty_t::operator==(panorama::TransitionProperty_t const&) const
  T panorama::TurnOffActiveController::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
@@ -15615,7 +15537,6 @@
  T panorama::VideoPlayerRepeated::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::VideoPlayerRepeated::FormatEventArgs(char const*)
  T panorama::VideoPlayerRepeated::MakeEvent(panorama::IUIPanelClient const*, IVideoPlayer*)
- T panorama::WashColorWithTransition_t* panorama::CRenderCommandList::AllocType<panorama::WashColorWithTransition_t>()
  T panorama::WindowCursorHidden::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::WindowCursorHidden::FormatEventArgs(char const*)
  T panorama::WindowCursorHidden::MakeEvent(panorama::IUIPanelClient const*, panorama::IUIWindow*)
@@ -15804,13 +15725,8 @@
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::clear()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::end()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::~__deque_base()
- T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::find<AllocTracking_t>(AllocTracking_t const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::find<long long>(long long const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::find<void*>(void* const&)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, void*>*)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::__rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::~__hash_table()
  T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*)
  T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::rehash(unsigned long)
@@ -15838,6 +15754,9 @@
  T std::__1::__split_buffer<v8::platform::WorkerThread*, std::__1::allocator<v8::platform::WorkerThread*>&>::~__split_buffer()
  T std::__1::__split_buffer<void (*)(), std::__1::allocator<void (*)()>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<void (*)()>&)
  T std::__1::__split_buffer<void*, std::__1::allocator<void*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<void*>&)
+ T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__insert_unique(CStack* const&)
+ T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::destroy(std::__1::__tree_node<CStack*, void*>*)
  T std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__insert_node_at(std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::destroy(std::__1::__tree_node<int, void*>*)
  T std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
@@ -15864,6 +15783,8 @@
  T std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::find<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&) const
  T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*) const
  T std::__1::__tree_const_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) const
+ T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, long> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__lower_bound<CStack*>(CStack* const&, std::__1::__tree_node<CStack*, void*>*, std::__1::__tree_node<CStack*, void*>*)
+ T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, long> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::find<CStack*>(CStack* const&)
  T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::__insert_multi<std::__1::pair<int const, CCallbackBase*>&>(std::__1::pair<int const, CCallbackBase*>&)
  T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::find<int>(int const&)
  T std::__1::__tree_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long> std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__emplace_hint_unique_key_args<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
@@ -15874,6 +15795,7 @@
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__lower_bound<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*)
  T std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::find<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree_node_base<void*>* std::__1::__tree_next<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__find_equal<CStack*>(std::__1::__tree_node_base<void*>*&, CStack* const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::__tree_const_iterator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>*, long>, std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::__tree_node_base<void*>*&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__find_equal<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >(std::__1::__tree_end_node<std::__1::__tree_node_base<void*>*>*&, std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const&)
@@ -15920,13 +15842,10 @@
  T std::__1::pair<std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long>, bool> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__emplace_unique_key_args<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::pair<v8::Isolate* const, std::__1::queue<v8::Task*, std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> > > >::~pair()
  T std::__1::queue<v8::Task*, std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> > >::~queue()
- T std::__1::reverse_iterator<panorama::CUIAnimationEngine::RenderOperation_t**> std::__1::__merge<std::__1::__negate<bool (*&)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&)>, std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngine::RenderOperation_t**> >, std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngine::RenderOperation_t**> >, std::__1::reverse_iterator<panorama::CUIAnimationEngine::RenderOperation_t**> >(std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngine::RenderOperation_t**> >, std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngine::RenderOperation_t**> >, std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngine::RenderOperation_t**> >, std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngine::RenderOperation_t**> >, std::__1::reverse_iterator<panorama::CUIAnimationEngine::RenderOperation_t**>, std::__1::__negate<bool (*&)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&)>)
- T std::__1::reverse_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**> std::__1::__merge<std::__1::__negate<bool (*&)(panorama::CUIAnimationEngineNew::RenderOperation_t* const&, panorama::CUIAnimationEngineNew::RenderOperation_t* const&)>, std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**> >, std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**> >, std::__1::reverse_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**> >(std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**> >, std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**> >, std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**> >, std::__1::move_iterator<std::__1::reverse_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**> >, std::__1::reverse_iterator<panorama::CUIAnimationEngineNew::RenderOperation_t**>, std::__1::__negate<bool (*&)(panorama::CUIAnimationEngineNew::RenderOperation_t* const&, panorama::CUIAnimationEngineNew::RenderOperation_t* const&)>)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*> > > > std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__construct_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T std::__1::unordered_map<AllocTracking_t, unsigned long, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, unsigned long> > >::operator[](AllocTracking_t const&)
  T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::operator[](void* const&)
  T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::~unordered_map()
  T std::__1::vector<char const*, std::__1::allocator<char const*> >::__append(unsigned long)
@@ -16123,9 +16042,7 @@
  T void panorama::CPanelStyle::SetRenderMsgAnimation<CMsgRotate2D, panorama::CStylePropertyRotate2DCentered>(CMsgAnimationFrameData*, double, panorama::CStylePropertyRotate2DCentered*, void*)
  T void panorama::CPanelStyle::SetRenderMsgAnimation<CMsgSaturation, panorama::CStylePropertySaturation>(CMsgAnimationFrameData*, double, panorama::CStylePropertySaturation*, void*)
  T void panorama::CPanelStyle::SetRenderMsgAnimation<CMsgTextShadow, CTextShadowData, panorama::CStylePropertyTextShadow>(CMsgAnimationFrameData*, CTextShadowData const&, panorama::CStylePropertyTextShadow*, void*)
- T void panorama::CPanelStyle::SetRenderMsgBase<CMsgMotionBlur, CMsgMotionBlurValues, panorama::CStylePropertyMotionBlur>(CMsgMotionBlur&, CMsgMotionBlurValues const&, panorama::CStylePropertyMotionBlur*, void*)
  T void panorama::CPanelStyle::SetRenderMsgBase<CMsgPointWithTransition, CMsgPoint, panorama::CStylePropertyScale2DCentered>(CMsgPointWithTransition&, CMsgPoint const&, panorama::CStylePropertyScale2DCentered*, void*)
- T void panorama::CPanelStyle::SetRenderMsgTransition<CMsgMotionBlur, CMsgMotionBlurValues, panorama::CStylePropertyMotionBlur>(CMsgMotionBlur&, CMsgMotionBlurValues const&, panorama::CStylePropertyMotionBlur*, void*)
  T void panorama::CPanelStyle::SetRenderMsgTransition<CMsgPointWithTransition, CMsgPoint, panorama::CStylePropertyScale2DCentered>(CMsgPointWithTransition&, CMsgPoint const&, panorama::CStylePropertyScale2DCentered*, void*)
  T void panorama::CStyleFile::AddMatchingStylesCore<char const*, panorama::StyleFromFile_t const* (panorama::CStyleFile::*)(char const*)>(panorama::IUILayoutFile*, panorama::CPanelIdentifiers const&, char const*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, unsigned int, unsigned int, panorama::StyleFromFile_t const* (panorama::CStyleFile::*)(char const*))
  T void panorama::CStyleFile::AddMatchingStylesCore<panorama::CPanoramaSymbol, panorama::StyleFromFile_t const* (panorama::CStyleFile::*)(panorama::CPanoramaSymbol)>(panorama::IUILayoutFile*, panorama::CPanelIdentifiers const&, panorama::CPanoramaSymbol, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, unsigned int, unsigned int, panorama::StyleFromFile_t const* (panorama::CStyleFile::*)(panorama::CPanoramaSymbol))
@@ -17078,6 +16995,7 @@
  b (anonymous namespace)::CUIFontFilePackagePB_reflection_
  b (anonymous namespace)::EJSRegisterMethodType_descriptor_
  b (anonymous namespace)::EProtoClanEventType_descriptor_
+ b (anonymous namespace)::PartnerEventNotificationType_descriptor_
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
  b BExtractAESRoundKeys(aes_key_st const*, bool, unsigned int (&) [60], int*)::s_nDetectPlatformKeyFormat
@@ -17095,6 +17013,7 @@
  b CSteamID::Render() const::rgchBuf
  b CUtlSymbol::Initialize()::symbolsInitialized
  b EmptyStr
+ b FindOrCreateStack(CStack*)::autoMutex__
  b GCallbackMgr()::s_CallbackMgr
  b GetMapLocalPanel2DFactory()::s_mapPanel2DFactory
  b GetMemAlloc::s_StdMemAlloc
@@ -17108,7 +17027,7 @@
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
  b PretifyFloat(float)::s_rgchBuffer
- b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
+ b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b V_pretifymem(float, int, bool)::current
  b V_pretifymem(float, int, bool)::output
  b dump_panorama_css_properties_command
@@ -17123,6 +17042,7 @@
  b g_DevMode
  b g_Mathlib_GammaToLinear
  b g_Mathlib_LinearToGamma
+ b g_Stacks
  b g_StylePropertyRegistrations
  b g_TLSSendBuffer
  b g_ThreadNetMainThreadID
@@ -17186,6 +17106,7 @@
  b g_pfnVoiceDeviceFactory
  b g_queuePacketsToDelete
  b guard variable for CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
+ b guard variable for FindOrCreateStack(CStack*)::autoMutex__
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetMapLocalPanel2DFactory()::s_mapPanel2DFactory
  b guard variable for GetMemAlloc::s_StdMemAlloc
@@ -17194,7 +17115,7 @@
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for GetStyleSymbolMap()::s_MapStyleSymbolStringsToIndex
  b guard variable for MapLocalRegisteredEvents()::s_mapRegisteredEvents
- b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
+ b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b guard variable for panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)::k_SymBasePos
  b guard variable for panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)::k_SymBasePosVar
  b guard variable for panorama::CSSHelpers::BParseFillBrush(panorama::CFillBrush*, char const*, char const**, float)::k_SymEndColor
@@ -17611,6 +17532,7 @@
  b s_bHWAccelCRC32
  b s_bInitializedKeyMap
  b s_bMathlibInitializedGlobalConstructorOnly
+ b s_bParseErrorDisplayed
  b s_netadrResolveCache
  b s_netadrResolveCacheMutexEnforceConstruction
  b s_objCloseSocket
@@ -18622,7 +18544,7 @@
  t bool std::__1::__insertion_sort_incomplete<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t bool std::__1::__insertion_sort_incomplete<panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&, panorama::CascadeStyleFileInfo_t*>(panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&)
  t bool std::__1::__insertion_sort_incomplete<panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&, panorama::IUIPanel**>(panorama::IUIPanel**, panorama::IUIPanel**, panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&)
- t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
  t color_quantize
  t color_quantize3
  t consume_data
@@ -18950,19 +18872,21 @@
  t start_pass_main
  t start_pass_merged_upsample
  t start_pass_upsample
- t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&>::~__split_buffer()
+ t std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t> > >::__rehash(unsigned long)
+ t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&>::~__split_buffer()
+ t std::__1::unordered_map<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t> > >::operator[](AllocTracking_t const&)
  t unsigned int std::__1::__sort3<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t unsigned int std::__1::__sort3<panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&, panorama::CascadeStyleFileInfo_t*>(panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&)
  t unsigned int std::__1::__sort3<panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&, panorama::IUIPanel**>(panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&)
- t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
  t unsigned int std::__1::__sort4<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t unsigned int std::__1::__sort4<panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&, panorama::CascadeStyleFileInfo_t*>(panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&)
  t unsigned int std::__1::__sort4<panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&, panorama::IUIPanel**>(panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&)
- t unsigned int std::__1::__sort4<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort4<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
  t unsigned int std::__1::__sort5<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t unsigned int std::__1::__sort5<panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&, panorama::CascadeStyleFileInfo_t*>(panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&)
  t unsigned int std::__1::__sort5<panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&, panorama::IUIPanel**>(panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::IUIPanel**, panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&)
- t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
  t update_box
  t use_merged_upsample
  t v8::base::DestroyNativeHandle(_opaque_pthread_mutex_t*)
@@ -18974,7 +18898,7 @@
  t void std::__1::__sort<CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*>(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t*, CUtlVector<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t, CUtlMemory<panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t> >::Sort(bool (*)(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&))::{lambda(panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&, panorama::CUIPanel::SetInputFocusToFirstOrLastChildInFocusOrder(panorama::EFocusMoveDirection, float, float)::PotentialFocusChild_t const&)#1}&)
  t void std::__1::__sort<panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&, panorama::CascadeStyleFileInfo_t*>(panorama::CascadeStyleFileInfo_t*, panorama::CascadeStyleFileInfo_t*, panorama::CStyleFileSet::BuildMatchingStyleList(panorama::CLayoutFile*, CUtlVector<panorama::CascadeStyleFileInfo_t, CUtlMemory<panorama::CascadeStyleFileInfo_t> >&, panorama::CPanelIdentifiers const&, panorama::IUILayoutFile*)::$_0&)
  t void std::__1::__sort<panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&, panorama::IUIPanel**>(panorama::IUIPanel**, panorama::IUIPanel**, panorama::CUIPanel::SortChildren(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>)::$_1&)
- t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
  t ycc_rgb_convert
  t ycck_cmyk_convert
  time

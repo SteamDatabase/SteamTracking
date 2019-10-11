@@ -20,7 +20,7 @@
 							<Label id="20000" text="#Settings_RemoteClients_Bandwidth20000" />
 							<Label id="25000" text="#Settings_RemoteClients_Bandwidth25000" />
 							<Label id="30000" text="#Settings_RemoteClients_Bandwidth30000" />
-              <Label id="50000" text="#Settings_RemoteClients_Bandwidth50000" />
+							<Label id="50000" text="#Settings_RemoteClients_Bandwidth50000" />
 							<Label id="0" text="#Settings_RemoteClients_BandwidthUnlimited" />
 						</DropDown>
 					</Panel>	
@@ -29,8 +29,8 @@
 						<Label class="SettingsLabel" text="#Settings_RemoteClients_Resolution" />
 						<DropDown id="ResolutionLimit" class="Filter" tabindex="auto">
 							<Label id="0x0" text="#Settings_RemoteClients_ResolutionDesktop" />
-              <Label id="3840x2160" text="#Settings_RemoteClients_Resolution2160p" />
-              <Label id="2560x1440" text="#Settings_RemoteClients_Resolution1440p" />
+							<Label id="3840x2160" text="#Settings_RemoteClients_Resolution2160p" />
+							<Label id="2560x1440" text="#Settings_RemoteClients_Resolution1440p" />
 							<Label id="1920x1080" text="#Settings_RemoteClients_Resolution1080p" />
 							<Label id="1600x900" text="#Settings_RemoteClients_Resolution900p" />
 							<Label id="1280x720" text="#Settings_RemoteClients_Resolution720p" />
@@ -48,9 +48,18 @@
 						</DropDown>
 					</Panel>
 					<Panel class="Spacer" />
+					<Panel class="VertContainer">
+						<Label class="SettingsLabel" text="#Settings_RemoteClients_PerformanceOverlay" />
+						<DropDown id="PerformanceOverlay" class="Filter" tabindex="auto">
+							<Label id="0" text="#Settings_RemoteClients_PerformanceOverlayDisabled" />
+							<Label id="1" text="#Settings_RemoteClients_PerformanceOverlayIcons" />
+							<Label id="3" text="#Settings_RemoteClients_PerformanceOverlayDetails" />
+						</DropDown>
+					</Panel>
+					<Panel class="Spacer" />
 					<Panel class="Spacer" />
 					<ToggleButton class="CheckBox" id="EnableHardwareDecoding" onactivate="ToggleHardwareDecoding()" text="#Settings_RemoteClients_EnableHardwareDecoding" />
-					<ToggleButton class="CheckBox" id="EnableDebugOverlay" onactivate="ToggleDebugOverlay()" text="#Settings_RemoteClients_EnableDebugOverlay" />
+					<Panel class="Spacer" />
 					<Button class="Button" onactivate="BrowserGoToURL(https://support.steampowered.com/kb_article.php?ref=3629-RIAV-1617);">
 						<Label class="LongDesc" text="#Settings_RemoteClients_StreamingSupport" />
 					</Button>

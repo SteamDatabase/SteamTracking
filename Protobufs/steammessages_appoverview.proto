@@ -87,6 +87,7 @@ message CAppOverview_PerClientData {
 	optional uint64 bytes_total = 8 [default = 0];
 	optional bool streaming_to_local_client = 9;
 	optional bool is_available_on_current_platform = 10;
+	optional bool is_invalid_os_type = 11;
 }
 
 message CAppOverview {

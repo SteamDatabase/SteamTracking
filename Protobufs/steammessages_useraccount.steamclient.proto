@@ -28,6 +28,13 @@ message CUserAccount_GetAccountLinkStatus_Response {
 	optional uint32 identity_verification = 2;
 }
 
+message CUserAccount_CancelLicenseForApp_Request {
+	optional uint32 appid = 1;
+}
+
+message CUserAccount_CancelLicenseForApp_Response {
+}
+
 message CUserAccount_CreateFriendInviteToken_Request {
 	optional uint32 invite_limit = 1;
 	optional uint32 invite_duration = 2;
@@ -125,6 +132,9 @@ service UserAccount {
 	option (service_description) = "A service to get user account information";
 	rpc GetAccountLinkStatus (.CUserAccount_GetAccountLinkStatus_Request) returns (.CUserAccount_GetAccountLinkStatus_Response) {
 		option (method_description) = "Fetches account link status";
+	}
+	rpc CancelLicenseForApp (.CUserAccount_CancelLicenseForApp_Request) returns (.CUserAccount_CancelLicenseForApp_Response) {
+		option (method_description) = "Cancels a free license for a user";
 	}
 	rpc CreateFriendInviteToken (.CUserAccount_CreateFriendInviteToken_Request) returns (.CUserAccount_CreateFriendInviteToken_Response) {
 		option (method_description) = "Create a limited-use token that can be used to create a friend request";

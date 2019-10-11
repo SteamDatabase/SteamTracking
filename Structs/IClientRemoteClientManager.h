@@ -1,6 +1,7 @@
 class IClientRemoteClientManager
 {
 public:
+    virtual unknown_ret SetUIReadyForStream(bool) = 0;
     virtual unknown_ret StreamingAudioPreparationComplete(bool) = 0;
     virtual unknown_ret StreamingAudioFinished() = 0;
     virtual unknown_ret ProcessStreamAvailable(unsigned int, unsigned int) = 0;
@@ -27,9 +28,8 @@ public:
     virtual unknown_ret GetRemoteClientConnectState(unsigned long long) = 0;
     virtual unknown_ret BRemoteClientHasStreamingSupported(unsigned long long) = 0;
     virtual unknown_ret BRemoteClientHasStreamingEnabled(unsigned long long) = 0;
-    virtual unknown_ret BRemoteClientCanStreamApp(unsigned long long, unsigned int) = 0;
+    virtual unknown_ret GetRemoteClientAppAvailability(unsigned long long, unsigned int) = 0;
     virtual unknown_ret GetRemoteClientAppState(unsigned long long, unsigned int) = 0;
-    virtual unknown_ret GetRemoteClientAppLaunchAvailable(unsigned long long, unsigned int) = 0;
     virtual unknown_ret GetRemoteDeviceCount() = 0;
     virtual unknown_ret GetRemoteDeviceIDByIndex(unsigned int) = 0;
     virtual unknown_ret GetRemoteDeviceNameByIndex(unsigned int) = 0;

@@ -1,3 +1,4 @@
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/dbg.cpp

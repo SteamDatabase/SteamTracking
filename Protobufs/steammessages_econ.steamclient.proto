@@ -70,6 +70,8 @@ message CEconItem_Description {
 	optional bool marketable = 25;
 	repeated .CEconItem_Tag tags = 26;
 	optional string item_expiration = 27;
+	optional string market_buy_country_restriction = 30;
+	optional string market_sell_country_restriction = 31;
 }
 
 message CEconItem_Tag {

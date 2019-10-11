@@ -1129,6 +1129,9 @@ button.TextButton:focus {
   cursor: pointer;
   position: relative; }
 
+.DialogDropDown.Disabled {
+  cursor: initial; }
+
 .DialogDropDown:hover {
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.16); }
 
@@ -1594,7 +1597,7 @@ body.in_global_drag .title-area {
   display: none; }
 
 .window_resize_grip {
-  background-image: url("../../images/chrome/resizehandleicon.png");
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAACXBIWXMAAAsSAAALEgHS3X78AAAAR0lEQVRIx2P8z0AZYKJQPwMLyTqQncxIBReMGsDAwDjg6WAYGIAvKaMlWuyiA++FYWDAaFKmWlImKtFiFx14LwwDAwY+KQMAmkcKPwxTSEoAAAAASUVORK5CYII=);
   background-size: 16px 16px;
   background-position: 4px 4px;
   background-repeat: no-repeat;

@@ -396,7 +396,6 @@
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
- D typeinfo for HTMLCommandBuffer_t
  D typeinfo for IHTMLChromeController
  D typeinfo for IMemStream
  D typeinfo for IPC::BinarySemaphore
@@ -637,7 +636,6 @@
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
- D vtable for HTMLCommandBuffer_t
  D vtable for IPC::BinarySemaphore
  D vtable for IPC::PosixEvent
  D vtable for IPC::PosixMutex
@@ -653,6 +651,7 @@
  OSMemoryBarrier
  Plat_AbsoluteTime
  Plat_CommandLineParamExists
+ Plat_CommandLineParamValue
  Plat_FloatTime
  Plat_GetExecutablePathUTF8
  Plat_IsInDebugSession
@@ -3399,7 +3398,6 @@
  __bzero
  __cxa_allocate_exception
  __cxa_atexit
- __cxa_bad_typeid
  __cxa_begin_catch
  __cxa_free_exception
  __cxa_guard_abort

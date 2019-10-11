@@ -247,7 +247,7 @@
     {
         "id": 504,
         "size": 20,
-        "posted_in": "CAPIJobMatchmakingJoinLobby::BYieldingRunAPIJob()"
+        "posted_in": "CAPIJobMatchmakingCreateLobby::BYieldingRunAPIJob()"
     },
     {
         "id": 505,
@@ -507,7 +507,7 @@
     {
         "id": 819,
         "size": 12,
-        "posted_in": "CClientJobClanState::BYieldingRunClientJob(IMsgNetPacket*)"
+        "posted_in": "CClientJobFriendsList::BYieldingRunClientJob(IMsgNetPacket*)"
     },
     {
         "id": 820,
@@ -722,7 +722,7 @@
     {
         "id": 915,
         "size": 1,
-        "posted_in": "CClientJobEmailAddrInfo::BYieldingRunClientJob(IMsgNetPacket*)"
+        "posted_in": "CClientJobAccountInfo::BYieldingRunClientJob(IMsgNetPacket*)"
     },
     {
         "id": 917,
@@ -980,6 +980,11 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<StopBigPictureForStreaming_t>(StopBigPictureForStreaming_t*)"
     },
     {
+        "id": 994,
+        "size": 264,
+        "posted_in": "CUser::SendAppLicenseUpdates()"
+    },
+    {
         "id": 1001,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppInfoChanged_t>(AppInfoChanged_t*)"
@@ -1107,7 +1112,7 @@
     {
         "id": 1101,
         "size": 20,
-        "posted_in": "CClientJobStatsUpdated::BYieldingRunClientJob(IMsgNetPacket*)"
+        "posted_in": "void CAPIJobRequestUserStats::PostCallback<UserStatsReceived_t>(UserStatsReceived_t&)"
     },
     {
         "id": 1102,
@@ -1397,7 +1402,7 @@
     {
         "id": 1800,
         "size": 12,
-        "posted_in": "CClientJobStatsUpdated::BYieldingRunClientJob(IMsgNetPacket*)"
+        "posted_in": "void CAPIJobRequestUserStats::PostCallback<GSStatsReceived_t>(GSStatsReceived_t&)"
     },
     {
         "id": 1801,
@@ -1462,7 +1467,7 @@
     {
         "id": 2301,
         "size": 8,
-        "posted_in": "CClientJobImportScreenshot::BYieldingRunClientJob()"
+        "posted_in": "CClientJobWriteScreenshot::BYieldingRunClientJob()"
     },
     {
         "id": 2302,
@@ -1652,12 +1657,12 @@
     {
         "id": 3001,
         "size": 84,
-        "posted_in": "CClientJobAuthorizeLocalDeviceNotification::BYieldingRunClientJob(IMsgNetPacket*)"
+        "posted_in": "void CBaseAPIJob::PostAPIResult<AuthorizeDeviceResult_t>(AuthorizeDeviceResult_t*)"
     },
     {
         "id": 3002,
         "size": 76,
-        "posted_in": "CClientJobDeauthorizeLocalDevice::BYieldingRunClientJob(IMsgNetPacket*)"
+        "posted_in": "void CBaseAPIJob::PostAPIResult<DeauthorizeDeviceResult_t>(DeauthorizeDeviceResult_t*)"
     },
     {
         "id": 3003,
@@ -1967,7 +1972,7 @@
     {
         "id": 3321,
         "size": 2,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<CheckStreamingDriverSupport_t>(CheckStreamingDriverSupport_t*)"
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<CheckStreamingDriverSupport_t>(CheckStreamingDriverSupport_t*)"
     },
     {
         "id": 3322,

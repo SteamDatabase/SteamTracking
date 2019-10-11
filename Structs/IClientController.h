@@ -72,6 +72,7 @@ public:
     virtual unknown_ret SendIRCode(unsigned int, int, bool, unsigned int) = 0;
     virtual unknown_ret StopIRCode(unsigned int) = 0;
     virtual unknown_ret InvalidateBindingCache() = 0;
+    virtual unknown_ret InvalidateBindingCacheForApp(unsigned int) = 0;
     virtual unknown_ret LoadConfigFromVDFString(unsigned int, char const*, unsigned int, SteamControllerAppSettings_t) = 0;
     virtual unknown_ret ActivateConfig(unsigned int, unsigned int) = 0;
     virtual unknown_ret WarmOptInStatus(unsigned int, unsigned int) = 0;

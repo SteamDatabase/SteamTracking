@@ -51,6 +51,9 @@
 			NotificationPlaylistNowPlayingCheckbox { ControlName="CheckButton" labelText="#Music_Settings_NotificationPlaylistNowPlaying" }
 			EnableMediaKeysCheckbox { ControlName="CheckButton" labelText="#Music_Settings_EnableMediaKeys" }
 			
+			AdditionalFilesHeader { ControlName="Label" labelText="#Music_Settings_AdditionalFiles_Header" style="HeaderText" }
+			AdditionalFilesHighQualityCheckbox { ControlName="CheckButton" labelText="#Music_Settings_AdditionalFiles_HighQuality" }
+
 			LoggingHeader { ControlName="Label" labelText="#Music_Settings_Logging_Header" style="HeaderText" }
 			LoggingCrawlingCheckbox { ControlName="CheckButton" labelText="#Music_Settings_LoggingCrawling" }
 	}
@@ -108,8 +111,10 @@
 		place { control=PauseMusicHeader region=content y=330 }
 		place { control=PauseMusicWhenStartingApplicationCheckbox region=content y=345 }
 		place { control=PauseMusicWhenVoiceChatCheckbox region=content y=370 }
-		place { control=LoggingHeader region=content y=330 x=250}
-		place { control=LoggingCrawlingCheckbox region=content y=345 x=250 }
+		place { control=AdditionalFilesHeader region=content y=330 x=250 }
+		place { control=AdditionalFilesHighQualityCheckbox region=content y=345 x=250 }
+		place { control=LoggingHeader region=content y=380 x=250}
+		place { control=LoggingCrawlingCheckbox region=content y=395 x=250 }
 		place { control=NotificationHeader region=content y=405 }
 		place { control=NotificationPlaylistNowPlayingCheckbox region=content y=420 }
 		

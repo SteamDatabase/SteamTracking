@@ -53,6 +53,13 @@ enum EProtoClanEventType {
 	k_ECrosspostEvent = 34;
 }
 
+enum PartnerEventNotificationType {
+	k_EEventStart = 0;
+	k_EEventBroadcastStart = 1;
+	k_EEventMatchStart = 2;
+	k_EEventPartnerMaxType = 3;
+}
+
 message CMsgIPAddress {
 	oneof ip {
 		fixed32 v4 = 1;
@@ -197,6 +204,7 @@ message CCommunity_ClanAnnouncementInfo {
 	optional int32 language = 10;
 	optional bool hidden = 11;
 	optional fixed64 forum_topic_id = 12;
+	optional fixed64 event_gid = 13;
 }
 
 message CClanEventData {

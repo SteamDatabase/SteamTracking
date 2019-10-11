@@ -587,6 +587,7 @@ message CSetGammaRampMsg {
 
 message CSetActivityMsg {
 	optional .EStreamActivity activity = 1 [default = k_EStreamActivityIdle];
+	optional uint32 appid = 2;
 }
 
 message CSystemSuspendMsg {
@@ -736,6 +737,6 @@ message CTransportSignalMsg {
 	}
 
 	optional .CTransportSignalMsg.WebRTCMessage webrtc = 1;
-	optional bytes sdr = 2;
+	repeated bytes sdr = 2;
 }
 

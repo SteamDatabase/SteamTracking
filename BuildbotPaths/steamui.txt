@@ -101,9 +101,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/ihtmlchrome.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector2d.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/mathlib/vector4d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/../data/iimagesource.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/carousel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/controls/contextmenu.h
@@ -139,6 +137,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/uipbmsgbase.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/panorama/vrevents.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/rtime.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/tslist.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
@@ -496,7 +495,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/ui/ui_tooltip_manager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/uinavigatorpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/uinavigatorpanel.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/uninstallgamesdialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/vr2dgameoverlay.cpp
@@ -505,6 +503,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamnetwork.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamnetwork.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamsocket.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamtransport.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamtransportsdr.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamtransportudp.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/streaming/common/streamtransportwebrtc.cpp

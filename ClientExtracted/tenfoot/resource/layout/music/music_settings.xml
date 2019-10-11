@@ -41,6 +41,11 @@
 			  </Panel>
 	
 			  <Panel class="SettingsLeftContent" >
+          <Label class="SettingsStatic" text="#Music_Settings_Downloads_Music_Header" />
+          <ToggleButton class="CheckBox" id="AdditionalFilesHighQualityCheckbox"
+					  text="#Music_Settings_Downloads_HighQualityAudio"
+					  onactivate="ToggleHighQualityAudio();"/>
+          
 				  <Label class="SettingsStatic" text="#Music_Settings_Pause_Music_Header" />
 				  <ToggleButton class="CheckBox" id="PauseOnStartAnApplicationCheckbox" 
 					  text="#Music_Settings_Pause_On_Start_An_Application" 

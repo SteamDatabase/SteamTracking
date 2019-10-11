@@ -282,7 +282,6 @@
  T CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >::Validate(CValidator&, char const*)
  T CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >::~CUtlVector()
  T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::AddToHead()
- T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::AddToTail()
  T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::FastRemove(int)
  T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::GrowVector(int)
  T CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >::InsertBefore(int)

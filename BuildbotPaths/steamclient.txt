@@ -701,14 +701,12 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voiceclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voiceencoder_opus.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/voiceencoder_silk.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrcommon.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrmanager.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vrpathregistry.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/vthumbstick.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/workshopcontentupdatejob.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/xinputmemstream.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/../common/constants.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/../steamexe/osx/ipctool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/../vac2/common/vac_osx.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/ClientJobRemoteStorageSync.cpp
@@ -928,6 +926,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/asyncfileiohandler.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/clientaudio.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/audio/clientaudio.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/bannedwords.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/chunkdatastore.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/chunkdatastore.h
@@ -1198,6 +1197,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/workthreadpool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/zip_helpers.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/zip_helpers.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/JSON_parser/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/curve25519-donna/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/curve25519-donna/curve25519-donna-64bit.h
@@ -1287,6 +1287,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/scrypt-jane/scrypt-jane.c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/taglib-1.9.1/taglib/toolkit/tlist.tcc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/taglib-1.9.1/taglib/toolkit/tmap.tcc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/taglib-1.9.1/taglib/toolkit/trefcounter.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ujson/ujson/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ujson/ujson/double-conversion.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ujson/ujson/ujson.hpp
@@ -1804,7 +1805,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/minbase/minbase_securezeromemory_impl.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/nattypes.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/p2pjinglewrapper/
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/p2pjinglewrapper/ip2pjinglewrapper.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/p2pjinglewrapper/p2pcandidate.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/p2pvoice/P2PVoicePackets.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/rtime.cpp

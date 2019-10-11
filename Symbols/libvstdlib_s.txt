@@ -229,7 +229,6 @@
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::AllocInternal(bool)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Find(SteamStdLib::CCommandLine::CommandLineParam_t const&) const
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Free(int)
- T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::InsertBefore(int, SteamStdLib::CCommandLine::CommandLineParam_t const&)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::LinkBefore(int, int)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::RemoveAll()
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Unlink(int)
@@ -321,7 +320,6 @@
  T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddMultipleToTail(int, CUtlString const*)
- T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString const&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)

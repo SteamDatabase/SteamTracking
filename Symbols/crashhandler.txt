@@ -3,6 +3,7 @@
  .objc_class_name_NSBundle
  .objc_class_name_NSString
  B CBreakpadFactory::sm_HandlerMutex
+ B CSafeSet::g_bInitialized
  B SteamThreadTools::g_SuspendResumeLock
  B SteamThreadTools::g_nCurThreadSuspendCount
  B SteamThreadTools::g_pCurThread
@@ -15,6 +16,9 @@
  B g_VProfManager
  B g_VProfProfilesRunningCount
  B g_VProfile
+ B g_bTrackedAllocRecordStack
+ B g_cTrackedAllocs
+ B g_cTrackedAllocsMax
  B g_mapAllocations
  B s_NoEscConversion
  B s_StringCharConversion
@@ -128,11 +132,13 @@
  T CPathString::CPathString(char const*, char const*)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
+ T CSafeSet::~CSafeSet()
  T CSimpleMachClient::DoVersionCommand()
  T CSimpleMachClient::Init(char const*, unsigned int, bool)
  T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::SendAndReceive(mach_msg_header_t*, mach_msg_header_t*, unsigned int, int*)
  T CSimpleMachClient::~CSimpleMachClient()
+ T CStackLess::operator()(CStack*, CStack*) const
  T CStdMemAlloc::Alloc(unsigned long)
  T CStdMemAlloc::Alloc(unsigned long, char const*, int, bool, bool)
  T CStdMemAlloc::AllocCanFail(unsigned long)
@@ -163,7 +169,7 @@
  T CStdMemAlloc::CubSBHFree()
  T CStdMemAlloc::CubSBHMinPoolFree()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
- T CStdMemAlloc::DumpMemTrackingStats(int)
+ T CStdMemAlloc::DumpMemTrackingStats(int, int, int)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)
  T CStdMemAlloc::Expand_NoLongerSupported(void*, unsigned long)
@@ -205,8 +211,8 @@
  T CStdMemAlloc::SetLowFragmentationHeap()
  T CStdMemAlloc::SetMemLeakReported(void*)
  T CStdMemAlloc::SetMemUntracked(void*)
- T CStdMemAlloc::SetReleaseMemTrackingOn(int)
- T CStdMemAlloc::WalkAndAuditHeap()
+ T CStdMemAlloc::SetReleaseMemTrackingOn(int, int, int, bool)
+ T CStdMemAlloc::WalkAndAuditHeap(bool)
  T CStdMemAlloc::heapchk()
  T CStdMemAlloc::~CStdMemAlloc()
  T CSteam3DumpHelper::ComputeBuildID(char const*, char const*)
@@ -270,6 +276,7 @@
  T DoNewAssertDialog
  T Error
  T FillDataStruct(_finddata_t*)
+ T FindOrCreateStack(CStack*)
  T FindSpewGroup(char const*, int*)
  T GetMemAlloc
  T GetOSMajorMinorPatchVersion(int*, int*, int*)
@@ -286,8 +293,8 @@
  T Plat_IsInDebugSession
  T Plat_RelativeTickFrequency
  T Plat_RelativeTicks
- T RTAClearData()
- T RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)
+ T RTAClearData(int, bool)
+ T RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)
  T RTANoteFree(void*, char const*)
  T RealGetCallStack
  T RealPrintCallStack
@@ -367,14 +374,9 @@
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
- T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::find<AllocTracking_t>(AllocTracking_t const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::find<int>(int const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::find<long long>(long long const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::find<void*>(void* const&)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, void*>*)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::__rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::rehash(unsigned long)
- T std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, unsigned long>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, unsigned long> > >::~__hash_table()
  T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*)
  T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::rehash(unsigned long)
@@ -391,20 +393,27 @@
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::remove(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::~__hash_table()
  T std::__1::__murmur2_or_cityhash<unsigned long, 32ul>::operator()(void const*, unsigned long)
+ T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
+ T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__insert_unique(CStack* const&)
+ T std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::destroy(std::__1::__tree_node<CStack*, void*>*)
  T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_node_at(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*&, std::__1::__tree_node_base<void*>*)
  T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__insert_unique(MinidumpWritten_t const&)
  T std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::destroy(std::__1::__tree_node<MinidumpWritten_t, void*>*)
  T std::__1::__tree<std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::__map_value_compare<SteamVProf::CVProfNode*, std::__1::__value_type<SteamVProf::CVProfNode*, double>, std::__1::less<SteamVProf::CVProfNode*>, true>, std::__1::allocator<std::__1::__value_type<SteamVProf::CVProfNode*, double> > >::destroy(std::__1::__tree_node<std::__1::__value_type<SteamVProf::CVProfNode*, double>, void*>*)
  T std::__1::__tree<std::__1::__value_type<char const*, unsigned int>, std::__1::__map_value_compare<char const*, std::__1::__value_type<char const*, unsigned int>, std::__1::less<char const*>, true>, std::__1::allocator<std::__1::__value_type<char const*, unsigned int> > >::destroy(std::__1::__tree_node<std::__1::__value_type<char const*, unsigned int>, void*>*)
+ T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, int> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__lower_bound<CStack*>(CStack* const&, std::__1::__tree_node<CStack*, void*>*, std::__1::__tree_node<CStack*, void*>*)
+ T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, int> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::find<CStack*>(CStack* const&)
+ T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, long> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__lower_bound<CStack*>(CStack* const&, std::__1::__tree_node<CStack*, void*>*, std::__1::__tree_node<CStack*, void*>*)
+ T std::__1::__tree_iterator<CStack*, std::__1::__tree_node<CStack*, void*>*, long> std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::find<CStack*>(CStack* const&)
  T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, int> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
  T std::__1::__tree_iterator<MinidumpWritten_t, std::__1::__tree_node<MinidumpWritten_t, void*>*, long> std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::find<MinidumpWritten_t>(MinidumpWritten_t const&)
+ T std::__1::__tree_node_base<void*>*& std::__1::__tree<CStack*, CStackLess, CNoRecurseAllocator<CStack*> >::__find_equal<CStack*>(std::__1::__tree_node_base<void*>*&, CStack* const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::__find_equal<MinidumpWritten_t>(std::__1::__tree_node_base<void*>*&, MinidumpWritten_t const&)
  T std::__1::__vector_base<SteamVProf::IVProfileCallbackHandler*, std::__1::allocator<SteamVProf::IVProfileCallbackHandler*> >::~__vector_base()
  T std::__1::__vector_base<SteamVProf::TimeSums_t, std::__1::allocator<SteamVProf::TimeSums_t> >::~__vector_base()
  T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__insert_unique<std::__1::pair<int, char const*> >(std::__1::pair<int, char const*>&&)
  T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__insert_unique<std::__1::pair<long long, char const*> >(std::__1::pair<long long, char const*>&&)
  T std::__1::set<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::~set()
- T std::__1::unordered_map<AllocTracking_t, unsigned long, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, unsigned long> > >::operator[](AllocTracking_t const&)
  T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::operator[](void* const&)
  T std::__1::unordered_map<void*, AllocTracking_t, std::__1::hash<void*>, std::__1::equal_to<void*>, std::__1::allocator<std::__1::pair<void* const, AllocTracking_t> > >::~unordered_map()
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -429,7 +438,6 @@
  __stderrp
  __stdoutp
  __tolower
- __udivdi3
  __umoddi3
  _dyld_get_image_name
  _exit
@@ -440,10 +448,11 @@
  b CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
  b CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::values
  b ClearWritingMiniDump::fAsserted
+ b FindOrCreateStack(CStack*)::autoMutex__
  b GetMemAlloc::s_StdMemAlloc
  b GetMiniDumpMutex()::ThreadMutexMiniDump
  b GetMinidumpsWritten()::s_MinidumpsWritten
- b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
+ b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b SetWritingMiniDump(bool)::fAsserted
  b SteamThreadTools::g_ThreadMainThreadID
  b TestForAppleGraphicsUpdateInstalled()::bInstalled
@@ -456,6 +465,7 @@
  b _ZL6g_Info.1
  b _ZL6g_Info.2
  b g_DumpHelper
+ b g_Stacks
  b g_TickBase
  b g_TickFrequency
  b g_TickFrequencyDouble
@@ -465,13 +475,15 @@
  b g_bWritingFatalMinidump
  b g_bWritingNonfatalMinidump
  b g_pAssertDisables
+ b g_pCrashMemoryReserve
  b guard variable for AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
  b guard variable for CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
  b guard variable for CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::values
+ b guard variable for FindOrCreateStack(CStack*)::autoMutex__
  b guard variable for GetMemAlloc::s_StdMemAlloc
  b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
  b guard variable for GetMinidumpsWritten()::s_MinidumpsWritten
- b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int)::g_FilenamesCache
+ b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b guard variable for TestForAppleGraphicsUpdateInstalled()::handle
  b guard variable for _SpewMessageType::autoMutex__
  b s_AssertFailedNotifyFunc
@@ -617,13 +629,15 @@
  t _GLOBAL__sub_I_threadtools.cpp
  t _GLOBAL__sub_I_utlbuffer.cpp
  t _GLOBAL__sub_I_vprof.cpp
- t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
  t global constructors keyed to 000200
- t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&>::~__split_buffer()
- t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
- t unsigned int std::__1::__sort4<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
- t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
- t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int)::AllocSpewData_t>&)
+ t std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t> > >::__rehash(unsigned long)
+ t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&>::~__split_buffer()
+ t std::__1::unordered_map<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t> > >::operator[](AllocTracking_t const&)
+ t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort4<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
+ t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
  time
  unlink
  usleep
