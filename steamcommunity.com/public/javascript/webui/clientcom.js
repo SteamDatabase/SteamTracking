@@ -187,6 +187,7 @@
         IMG_URL: "",
         APPID: 0,
         VANITY_ID: "",
+        IS_CREATOR_HOME: !1,
         HEADER_IMAGE: "",
         APP_NAME: "",
         HAS_ADULT_CONTENT: !1,
