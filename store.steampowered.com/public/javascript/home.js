@@ -30,6 +30,7 @@ GHomepage = {
 	bUserDataReady: false,
 	bStaticDataReady: false,
 	bLoadedActiveData: false,
+	bInitialRenderComplete: false,
 
 	bAddTopSellersToMainCap: false,
 
@@ -104,7 +105,10 @@ GHomepage = {
 
 	AddCustomRender: function( fnRender )
 	{
-		GHomepage.rgfnCustomRenders.push( fnRender );
+		if ( !GHomepage.bInitialRenderComplete )
+			GHomepage.rgfnCustomRenders.push( fnRender );
+		else
+			window.setTimeout( function() { fnRender( GHomepage.oDisplayListsRaw ); }, 1 );
 	},
 
 	InitUserData: function( rgParams )
@@ -348,7 +352,10 @@ GHomepage = {
 		// Tabbed section
 		try {
 
-			GHomepage.InstrumentTabbedSection();
+			// select the first item in the tabbed lists area
+			window.setTimeout( function() {
+				$J('.tab_item:visible').first().trigger('mouseenter');
+			}, 10 );
 
 		} catch( e ) { OnHomepageException(e); }
 
@@ -362,14 +369,14 @@ GHomepage = {
 			} catch (e) { OnHomepageException(e); }
 		}
 
+		// this is the only time we'll execute rgfnCustomRenders, future requests will be called directly
+		GHomepage.bInitialRenderComplete = true;
 		for( var i = 0; i < GHomepage.rgfnCustomRenders.length; i++ )
 		{
 			try {
 				GHomepage.rgfnCustomRenders[i]( GHomepage.oDisplayListsRaw );
 			} catch( e ) { OnHomepageException(e); }
 		}
-
-		GHomepage.oDisplayListsRaw = null;
 
 		$J(window ).on('Responsive_SmallScreenModeToggled.StoreHome', function() {
 			// TODO: this was never updated for discovery update 2
@@ -907,13 +914,10 @@ GHomepage = {
 		return $CapCtn;
 	},
 
-
-	InstrumentTabbedSection: function()
+	m_iTabItemPreviewMountTimeout: null,
+	InstrumentTabbedSection: function( $Items )
 	{
-		var $elTarget = $J('#tab_preview_container');
-		var iMountTimeout = null;
-
-		$J('.tab_item').each(function(i, j){
+		$Items.each(function(i, j){
 			var $el = $J(j);
 			var rgLookup = GStoreItemData.GetStoreItemDataForElement( $el );
 			var $elInfoDiv = null;
@@ -924,11 +928,11 @@ GHomepage = {
 
 					var fnShowElement = function()
 					{
-						if ( iMountTimeout )
+						if ( GHomepage.m_iTabItemPreviewMountTimeout )
 						{
 							// we may have someone showing delayed.  clear them out if that's the case.
-							window.clearTimeout( iMountTimeout );
-							iMountTimeout = null;
+							window.clearTimeout( GHomepage.m_iTabItemPreviewMountTimeout );
+							GHomepage.m_iTabItemPreviewMountTimeout = null;
 						}
 
 						$el.siblings().removeClass('focus');
@@ -1005,18 +1009,14 @@ GHomepage = {
 							}
 						}
 
-						$elTarget.append($elInfoDiv);
+						$J('#tab_preview_container').append($elInfoDiv);
 						PreloadImages( $elInfoDiv );
 
-						iMountTimeout = window.setTimeout( fnShowElement, 1 );
+						GHomepage.m_iTabItemPreviewMountTimeout = window.setTimeout( fnShowElement, 1 );
 					}
 				});
 			}
 		});
-
-		window.setTimeout( function() {
-			$J('.tab_item:visible').first().trigger('mouseenter');
-		}, 10 );
 
 	},
 
@@ -1314,20 +1314,31 @@ GHomepage = {
 
 	FilterTabs: function()
 	{
-		var rgTabSections =  ['#tab_newreleases_content', '#tab_topsellers_content', '#tab_topgrossing_content', '#tab_specials_content'];
+		var rgTabSections =  ['#tab_newreleases_content', '#tab_topsellers_content', '#tab_specials_content'];
 
 		for( var i=0; i<rgTabSections.length; i++)
 		{
-			var $elTabSection = $J( rgTabSections[i] );
-			if ( !$elTabSection.length )
-				continue;
-
-			GDynamicStorePage.FilterCapsules( 10, 10, $elTabSection.children('.tab_item'), $elTabSection, { games_already_in_library: false, only_current_platform: true } )
+			GHomepage.FilterTab( rgTabSections[i] );
 		}
 
-		var $elTabSection = $J( '#tab_upcoming_content' );
-		GDynamicStorePage.FilterCapsules( 10, 10, $elTabSection.children('.tab_item'), $elTabSection, { games_already_in_library: false, only_current_platform: true, prepurchase: true } )
+		GHomepage.FilterTab( '#tab_upcoming_content', { prepurchase: true } );
+	},
 
+	FilterTab: function( id, opts )
+	{
+		var Settings = $J.extend( { games_already_in_library: false, only_current_platform: true }, opts );
+
+		var $elTabSection = $J( id );
+		if ( !$elTabSection.length )
+			return;
+
+		if ( $elTabSection.children('.tab_content_items').length )
+			$elTabSection = $elTabSection.children('.tab_content_items');
+
+		GDynamicStorePage.FilterCapsules( 10, 10, $elTabSection.children('.tab_item'), $elTabSection, Settings );
+
+		// the results of $elTabSection.children('.tab_item') will change after the call to FilterCapsules above
+		GHomepage.InstrumentTabbedSection( $elTabSection.children('.tab_item') );
 	},
 
 	FillPagedCapsuleCarousel: function( rgCapsules, $elTarget, fnCapsule, strNavContext, nCapsules )
@@ -3066,4 +3077,108 @@ CUsabilityTracker.prototype.PostStats = function()
 jQuery( document ).ready(function( $ ) {
 	TabSelectLast();
 });
+
+
+/*
+ var InitArgs = {
+						UpdateRangeControlByIndex: UpdateRangeControlByIndex,
+						UpdateRangeControlByValue: UpdateRangeControlByValue,
+						rgRangeData: rgRangeData,
+						$Element: $Element
+					};
+
+ */
+
+function InitTopGrossingDateSlider( InitArgs )
+{
+	var $Element = InitArgs.$Element;
+	var rgRangeData = InitArgs.rgRangeData;
+
+	var $Checkbox = $J('#top_grossing_library_check');
+
+	var $TabItems = $J('#tab_topgrossing_content').children('.tab_content_items');
+	var ItemsByReleaseDate = {};
+	var bAJAXInFlight = false;
+	var fnLoadTopGrossing = function( time )
+	{
+		if ( bAJAXInFlight )
+		{
+			// when we re-render, we'll request again with the current values.
+			return;
+		}
+
+		bAJAXInFlight = true;
+		$TabItems.addClass('loading');
+		$J.get( 'https://store.steampowered.com/search/hometab/TopGrossing/', {time: time } ).done( function( data ) {
+			if ( data.storeitemdata && data.html )
+			{
+				GStoreItemData.AddStoreItemDataSet( data.storeitemdata );
+			}
+			var html = '<div>Error</div>';
+			if ( data.html )
+			{
+				var $Temp = $J('<div/>');
+				$Temp.html( data.html );
+				GDynamicStore.DecorateDynamicItems( $Temp );
+				html = $Temp.html();
+				$Temp.empty();
+			}
+			ItemsByReleaseDate[ time ] = html;
+		}).fail( function() {
+			ItemsByReleaseDate[ time ] = '<div>Error</div>';
+		} ).always( function() {
+			$TabItems.removeClass('loading');
+			bAJAXInFlight = false;
+			fnRenderTopGrossing();
+		});
+	};
+
+	var fnRenderTopGrossing = function( bOnChange )
+	{
+		var bFilterLibraryItems = $Checkbox.length ? $Checkbox.prop('checked') : true;
+		var nTimeValue = rgRangeData[ $Element.val() ].time;
+
+		if ( bOnChange )
+		{
+			WebStorage.SetLocal( 'topgrossing_prefs', { bFilterLibraryItems: bFilterLibraryItems, nTimeValue: nTimeValue } );
+		}
+
+		if ( !ItemsByReleaseDate[ nTimeValue ] )
+		{
+			// We don't have the HTML.  Load it.
+			fnLoadTopGrossing( nTimeValue );
+		}
+		else
+		{
+			$TabItems.html( ItemsByReleaseDate[nTimeValue] );
+			GHomepage.FilterTab( '#tab_topgrossing_content', { games_already_in_library: !bFilterLibraryItems } );
+		}
+	};
+
+	$Element.add($Checkbox).on( 'change', function() {
+		fnRenderTopGrossing( true /*onchange*/ );
+	});
+
+	if ( !g_AccountID )
+		$Checkbox.parents('.tab_control').hide();
+
+	ItemsByReleaseDate[0] = $TabItems.html();
+
+	GHomepage.AddCustomRender( function() {
+		var rgPrefs = WebStorage.GetLocal( 'topgrossing_prefs' );
+		if ( rgPrefs )
+		{
+			if ( rgPrefs.bFilterLibraryItems !== undefined )
+			{
+				$Checkbox.prop( 'checked', rgPrefs.bFilterLibraryItems );
+			}
+			if ( rgPrefs.nTimeValue !== undefined )
+			{
+				InitArgs.UpdateRangeControlByValue( 'time', rgPrefs.nTimeValue );
+			}
+		}
+		fnRenderTopGrossing();
+	});
+
+}
 

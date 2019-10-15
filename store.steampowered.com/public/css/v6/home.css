@@ -1182,10 +1182,15 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
     margin-top: 15px;
 }
 
+.tab_controls,
+.tab_see_more
+{
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 4px;
+}
+
 .tab_see_more {
 	text-align: right;
-    background: rgba( 0, 0, 0, 0.2 );
-    padding: 4px;
 }
 
 .tab_see_more .btnv6_blue_hoverfade {
@@ -3893,4 +3898,59 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	{
 		max-width: 200%;
 	}
+}
+
+.tab_controls
+{
+	display: flex;
+	flex-direction: row;
+	padding: 4px;
+	margin-bottom: 5px;
+	justify-content: space-between;
+}
+
+.tab_control
+{
+	padding: 4px;
+	min-height: 14px;
+}
+
+.tab_range_control
+{
+	display: flex;
+	flex-direction: row;
+}
+
+.tab_range_control .range_container
+{
+	display: flex;
+	flex-direction: row;
+	max-width: 250px;
+	padding: 0;
+}
+
+.tab_range_control .range_container > div
+{
+	margin-left: 12px;
+}
+
+.tab_range_control .range_display
+{
+	min-width: 64px;
+	text-align: left;
+}
+
+.tab_check_control input[type=checkbox]
+{
+	vertical-align: text-bottom;
+}
+
+.tab_content_items
+{
+}
+
+.tab_content_items.loading
+{
+	opacity: 0.5;
+	transition: opacity 0.25s 0.1s;
 }
