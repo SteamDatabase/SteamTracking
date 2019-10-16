@@ -53891,7 +53891,7 @@
       fl = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
-          return (e.state = { bShowCSV: !0 }), e;
+          return (e.state = { bShowCSV: !0 }), (e.m_nDummyValue = 0), e;
         }
         return (
           Object(q.d)(e, t),
@@ -53980,6 +53980,22 @@
               o.setAttribute("download", t),
               o.click();
           }),
+          (e.prototype.GetQuestion = function() {
+            return 0 == this.m_nDummyValue ? "?" : "banana";
+          }),
+          (e.prototype.WriteXMLToFile = function(e, t) {
+            var n =
+              "<" +
+              this.GetQuestion() +
+              'xml version="1.0" encoding="UTF-8" ' +
+              this.GetQuestion() +
+              " >\n";
+            (n += new XMLSerializer().serializeToString(e)),
+              this.WriteFile(
+                new Blob([n], { type: "application/xml:charset=utf-8;" }),
+                t
+              );
+          }),
           (e.prototype.CreateAndAppendElement = function(e, t, n) {
             var o = e.createElement("string");
             o.setAttribute("id", t),
@@ -53987,37 +54003,44 @@
               e.documentElement.append(o);
           }),
           (e.prototype.OnDownloadXML = function() {
-            var r = this;
+            var p = this;
             event.preventDefault();
             for (
               var e = this.props.editModel,
                 t = e.GetEventModel(),
                 n = function(a) {
                   var i = document.implementation.createDocument(
-                    null,
-                    "content",
-                    null
-                  );
+                      null,
+                      "content",
+                      null
+                    ),
+                    r = 0;
                   ((e.BHasLanguageTitle(a) || 0 == a) &&
-                    (o.CreateAndAppendElement(i, Ol, e.GetName(a)), 1),
+                    (o.CreateAndAppendElement(i, Ol, e.GetName(a)), (r += 1)),
                   (t.BHasSubTitle(a) || 0 == a) &&
-                    (o.CreateAndAppendElement(i, ul, e.GetSubTitle(a)), 1),
+                    (o.CreateAndAppendElement(i, ul, e.GetSubTitle(a)),
+                    (r += 1)),
                   (e.BHasLanguageDescription(a) || 0 == a) &&
-                    (o.CreateAndAppendElement(i, ml, e.GetDescription(a)), 1),
+                    (o.CreateAndAppendElement(i, ml, e.GetDescription(a)),
+                    (r += 1)),
                   (t.BHasSummary(a) || 0 == a) &&
-                    (o.CreateAndAppendElement(i, ul, e.GetSummary(a)), 1),
+                    (o.CreateAndAppendElement(i, ul, e.GetSummary(a)),
+                    (r += 1)),
                   e.BHasEmailEnabled()) &&
                     e.GetEmailSettings().sections.forEach(function(e, t) {
                       var n = new Yc(e);
                       if (n.BHasHeadlineInLanguage(a)) {
                         var o = hl + t;
-                        r.CreateAndAppendElement(i, o, n.GetHeadline(a)), 1;
+                        p.CreateAndAppendElement(i, o, n.GetHeadline(a)),
+                          (r += 1);
                       }
                       if (n.BHasBodyInLanguage(a)) {
                         o = ql + t;
-                        r.CreateAndAppendElement(i, o, n.GetBody(a)), 1;
+                        p.CreateAndAppendElement(i, o, n.GetBody(a)), (r += 1);
                       }
                     });
+                  0 < r &&
+                    o.WriteXMLToFile(i, "event_" + Object(B.b)(a) + ".xml");
                 },
                 o = this,
                 a = 0;
