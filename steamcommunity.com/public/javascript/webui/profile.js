@@ -406,44 +406,47 @@
       n.d(t, "a", function() {
         return o;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "o", function() {
         return a;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return s;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return l;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return u;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return m;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return p;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return h;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "m", function() {
         return d;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "l", function() {
         return f;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return v;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return _;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return y;
       }),
       n.d(t, "c", function() {
         return b;
+      }),
+      n.d(t, "d", function() {
+        return E;
       });
     var i,
       c,
@@ -460,6 +463,70 @@
       _ = 0,
       y = 2147483647;
     function b(e, t) {
+      switch ((void 0 === t && (t = ""), e)) {
+        case 0:
+          return "english";
+        case 1:
+          return "german";
+        case 2:
+          return "french";
+        case 3:
+          return "italian";
+        case 4:
+          return "korean";
+        case 5:
+          return "spanish";
+        case 6:
+          return "schinese";
+        case 7:
+          return "tchinese";
+        case 8:
+          return "russian";
+        case 9:
+          return "thai";
+        case 10:
+          return "japanese";
+        case 11:
+          return "portuguese";
+        case 12:
+          return "polish";
+        case 13:
+          return "danish";
+        case 14:
+          return "dutch";
+        case 15:
+          return "finnish";
+        case 16:
+          return "norwegian";
+        case 17:
+          return "swedish";
+        case 18:
+          return "hungarian";
+        case 19:
+          return "czech";
+        case 20:
+          return "romanian";
+        case 21:
+          return "turkish";
+        case 25:
+          return "arabic";
+        case 22:
+          return "brazilian";
+        case 23:
+          return "bulgarian";
+        case 24:
+          return "greek";
+        case 26:
+          return "ukrainian";
+        case 27:
+          return "latam";
+        case 28:
+          return "vietnamese";
+        default:
+          return t;
+      }
+    }
+    function E(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -556,7 +623,7 @@
       (c[(c.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (c[(c.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
       (c[(c.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent");
-    var E, g;
+    var g, w;
     i.k_EOtherEvent,
       i.k_EGameEvent,
       i.k_EPartyEvent,
@@ -588,63 +655,63 @@
       i.k_EFreeTrial,
       i.k_ESeasonRelease,
       i.k_ECrosspostEvent;
-    ((g = E || (E = {}))[(g.k_ELaunchSource_None = 0)] =
+    ((w = g || (g = {}))[(w.k_ELaunchSource_None = 0)] =
       "k_ELaunchSource_None"),
-      (g[(g.k_ELaunchSource_2ftLibraryDetails = 100)] =
+      (w[(w.k_ELaunchSource_2ftLibraryDetails = 100)] =
         "k_ELaunchSource_2ftLibraryDetails"),
-      (g[(g.k_ELaunchSource_2ftLibraryListView = 101)] =
+      (w[(w.k_ELaunchSource_2ftLibraryListView = 101)] =
         "k_ELaunchSource_2ftLibraryListView"),
-      (g[(g.k_ELaunchSource_2ftLibraryGrid = 103)] =
+      (w[(w.k_ELaunchSource_2ftLibraryGrid = 103)] =
         "k_ELaunchSource_2ftLibraryGrid"),
-      (g[(g.k_ELaunchSource_InstallSubComplete = 104)] =
+      (w[(w.k_ELaunchSource_InstallSubComplete = 104)] =
         "k_ELaunchSource_InstallSubComplete"),
-      (g[(g.k_ELaunchSource_DownloadsPage = 105)] =
+      (w[(w.k_ELaunchSource_DownloadsPage = 105)] =
         "k_ELaunchSource_DownloadsPage"),
-      (g[(g.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
+      (w[(w.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
         "k_ELaunchSource_RemoteClientStartStreaming"),
-      (g[(g.k_ELaunchSource_2ftMiniModeList = 107)] =
+      (w[(w.k_ELaunchSource_2ftMiniModeList = 107)] =
         "k_ELaunchSource_2ftMiniModeList"),
-      (g[(g.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-      (g[(g.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
+      (w[(w.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
+      (w[(w.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
         "k_ELaunchSource_DashAppLaunchCmdLine"),
-      (g[(g.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
+      (w[(w.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
         "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-      (g[(g.k_ELaunchSource_RunByGameDir = 302)] =
+      (w[(w.k_ELaunchSource_RunByGameDir = 302)] =
         "k_ELaunchSource_RunByGameDir"),
-      (g[(g.k_ELaunchSource_SubCmdRunDashGame = 303)] =
+      (w[(w.k_ELaunchSource_SubCmdRunDashGame = 303)] =
         "k_ELaunchSource_SubCmdRunDashGame"),
-      (g[(g.k_ELaunchSource_SteamURL_Launch = 400)] =
+      (w[(w.k_ELaunchSource_SteamURL_Launch = 400)] =
         "k_ELaunchSource_SteamURL_Launch"),
-      (g[(g.k_ELaunchSource_SteamURL_Run = 401)] =
+      (w[(w.k_ELaunchSource_SteamURL_Run = 401)] =
         "k_ELaunchSource_SteamURL_Run"),
-      (g[(g.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
+      (w[(w.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
         "k_ELaunchSource_SteamURL_JoinLobby"),
-      (g[(g.k_ELaunchSource_SteamURL_RunGame = 403)] =
+      (w[(w.k_ELaunchSource_SteamURL_RunGame = 403)] =
         "k_ELaunchSource_SteamURL_RunGame"),
-      (g[(g.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
+      (w[(w.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
         "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-      (g[(g.k_ELaunchSource_SteamURL_RunSafe = 405)] =
+      (w[(w.k_ELaunchSource_SteamURL_RunSafe = 405)] =
         "k_ELaunchSource_SteamURL_RunSafe"),
-      (g[(g.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
-      (g[(g.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
+      (w[(w.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
+      (w[(w.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
         "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-      (g[(g.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
+      (w[(w.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
         "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-      (g[(g.k_ELaunchSource_Dota2Launcher = 700)] =
+      (w[(w.k_ELaunchSource_Dota2Launcher = 700)] =
         "k_ELaunchSource_Dota2Launcher"),
-      (g[(g.k_ELaunchSource_IRunGameEngine = 800)] =
+      (w[(w.k_ELaunchSource_IRunGameEngine = 800)] =
         "k_ELaunchSource_IRunGameEngine"),
-      (g[(g.k_ELaunchSource_DRMFailureResponse = 801)] =
+      (w[(w.k_ELaunchSource_DRMFailureResponse = 801)] =
         "k_ELaunchSource_DRMFailureResponse"),
-      (g[(g.k_ELaunchSource_DRMDataRequest = 802)] =
+      (w[(w.k_ELaunchSource_DRMDataRequest = 802)] =
         "k_ELaunchSource_DRMDataRequest"),
-      (g[(g.k_ELaunchSource_CloudFilePanel = 803)] =
+      (w[(w.k_ELaunchSource_CloudFilePanel = 803)] =
         "k_ELaunchSource_CloudFilePanel"),
-      (g[(g.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
+      (w[(w.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
-      (g[(g.k_ELaunchSource_GameActionJoinParty = 900)] =
+      (w[(w.k_ELaunchSource_GameActionJoinParty = 900)] =
         "k_ELaunchSource_GameActionJoinParty"),
-      (g[(g.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
+      (w[(w.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
         "k_ELaunchSource_AppPortraitContextMenu");
   },
   "1VtQ": function(e, t, n) {
@@ -6677,7 +6744,7 @@
     var r = n("mrSG"),
       o = n("0N1H");
     n.d(t, "k", function() {
-      return o.c;
+      return o.d;
     });
     var i = n("2vnA"),
       c = (function() {
@@ -7098,9 +7165,9 @@ and limitations under the License.
           (e.prototype.GetELanguageFallbackOrder = function() {
             var t = new Array();
             return (
-              t.push(Object(o.c)(i.b.LANGUAGE)),
+              t.push(Object(o.d)(i.b.LANGUAGE)),
               (i.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-                e.value != i.b.LANGUAGE && t.push(Object(o.c)(e.value));
+                e.value != i.b.LANGUAGE && t.push(Object(o.d)(e.value));
               }),
               t
             );

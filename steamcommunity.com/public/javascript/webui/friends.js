@@ -1034,7 +1034,7 @@
                 SetBackgroundInterval(this.NotifyImpressions, 12e4);
           }),
           (e.prototype.RecordFriendInGameImpression = function(e) {
-            if (!a.a.IN_MOBILE && !(e == O.m || (e >= O.g && e <= O.h))) {
+            if (!a.a.IN_MOBILE && !(e == O.n || (e >= O.h && e <= O.i))) {
               this.m_currentMsg || (this.m_currentMsg = p.b.Init(l.a));
               var t = !0;
               if (this.m_mapLastSeenApp.has(e)) {
@@ -2952,7 +2952,7 @@
           (a.prototype.GetRTimeLastMessage = function() {
             return this.m_rgMessages.length
               ? this.m_rgMessages[this.m_rgMessages.length - 1].rtTimestamp
-              : u.e;
+              : u.f;
           }),
           (a.prototype.GetRTimeFirstMessage = function() {
             return this.m_rgMessages.length
@@ -4835,44 +4835,47 @@
       n.d(t, "a", function() {
         return i;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "o", function() {
         return s;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return c;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return l;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return p;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return u;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return m;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return d;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "m", function() {
         return h;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "l", function() {
         return f;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return _;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return g;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return b;
       }),
       n.d(t, "c", function() {
         return v;
+      }),
+      n.d(t, "d", function() {
+        return S;
       });
     var r,
       a,
@@ -4889,6 +4892,70 @@
       g = 0,
       b = 2147483647;
     function v(e, t) {
+      switch ((void 0 === t && (t = ""), e)) {
+        case 0:
+          return "english";
+        case 1:
+          return "german";
+        case 2:
+          return "french";
+        case 3:
+          return "italian";
+        case 4:
+          return "korean";
+        case 5:
+          return "spanish";
+        case 6:
+          return "schinese";
+        case 7:
+          return "tchinese";
+        case 8:
+          return "russian";
+        case 9:
+          return "thai";
+        case 10:
+          return "japanese";
+        case 11:
+          return "portuguese";
+        case 12:
+          return "polish";
+        case 13:
+          return "danish";
+        case 14:
+          return "dutch";
+        case 15:
+          return "finnish";
+        case 16:
+          return "norwegian";
+        case 17:
+          return "swedish";
+        case 18:
+          return "hungarian";
+        case 19:
+          return "czech";
+        case 20:
+          return "romanian";
+        case 21:
+          return "turkish";
+        case 25:
+          return "arabic";
+        case 22:
+          return "brazilian";
+        case 23:
+          return "bulgarian";
+        case 24:
+          return "greek";
+        case 26:
+          return "ukrainian";
+        case 27:
+          return "latam";
+        case 28:
+          return "vietnamese";
+        default:
+          return t;
+      }
+    }
+    function S(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -4985,7 +5052,7 @@
       (a[(a.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (a[(a.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
       (a[(a.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent");
-    var S, y;
+    var y, C;
     r.k_EOtherEvent,
       r.k_EGameEvent,
       r.k_EPartyEvent,
@@ -5017,63 +5084,63 @@
       r.k_EFreeTrial,
       r.k_ESeasonRelease,
       r.k_ECrosspostEvent;
-    ((y = S || (S = {}))[(y.k_ELaunchSource_None = 0)] =
+    ((C = y || (y = {}))[(C.k_ELaunchSource_None = 0)] =
       "k_ELaunchSource_None"),
-      (y[(y.k_ELaunchSource_2ftLibraryDetails = 100)] =
+      (C[(C.k_ELaunchSource_2ftLibraryDetails = 100)] =
         "k_ELaunchSource_2ftLibraryDetails"),
-      (y[(y.k_ELaunchSource_2ftLibraryListView = 101)] =
+      (C[(C.k_ELaunchSource_2ftLibraryListView = 101)] =
         "k_ELaunchSource_2ftLibraryListView"),
-      (y[(y.k_ELaunchSource_2ftLibraryGrid = 103)] =
+      (C[(C.k_ELaunchSource_2ftLibraryGrid = 103)] =
         "k_ELaunchSource_2ftLibraryGrid"),
-      (y[(y.k_ELaunchSource_InstallSubComplete = 104)] =
+      (C[(C.k_ELaunchSource_InstallSubComplete = 104)] =
         "k_ELaunchSource_InstallSubComplete"),
-      (y[(y.k_ELaunchSource_DownloadsPage = 105)] =
+      (C[(C.k_ELaunchSource_DownloadsPage = 105)] =
         "k_ELaunchSource_DownloadsPage"),
-      (y[(y.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
+      (C[(C.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
         "k_ELaunchSource_RemoteClientStartStreaming"),
-      (y[(y.k_ELaunchSource_2ftMiniModeList = 107)] =
+      (C[(C.k_ELaunchSource_2ftMiniModeList = 107)] =
         "k_ELaunchSource_2ftMiniModeList"),
-      (y[(y.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-      (y[(y.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
+      (C[(C.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
+      (C[(C.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
         "k_ELaunchSource_DashAppLaunchCmdLine"),
-      (y[(y.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
+      (C[(C.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
         "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-      (y[(y.k_ELaunchSource_RunByGameDir = 302)] =
+      (C[(C.k_ELaunchSource_RunByGameDir = 302)] =
         "k_ELaunchSource_RunByGameDir"),
-      (y[(y.k_ELaunchSource_SubCmdRunDashGame = 303)] =
+      (C[(C.k_ELaunchSource_SubCmdRunDashGame = 303)] =
         "k_ELaunchSource_SubCmdRunDashGame"),
-      (y[(y.k_ELaunchSource_SteamURL_Launch = 400)] =
+      (C[(C.k_ELaunchSource_SteamURL_Launch = 400)] =
         "k_ELaunchSource_SteamURL_Launch"),
-      (y[(y.k_ELaunchSource_SteamURL_Run = 401)] =
+      (C[(C.k_ELaunchSource_SteamURL_Run = 401)] =
         "k_ELaunchSource_SteamURL_Run"),
-      (y[(y.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
+      (C[(C.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
         "k_ELaunchSource_SteamURL_JoinLobby"),
-      (y[(y.k_ELaunchSource_SteamURL_RunGame = 403)] =
+      (C[(C.k_ELaunchSource_SteamURL_RunGame = 403)] =
         "k_ELaunchSource_SteamURL_RunGame"),
-      (y[(y.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
+      (C[(C.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
         "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-      (y[(y.k_ELaunchSource_SteamURL_RunSafe = 405)] =
+      (C[(C.k_ELaunchSource_SteamURL_RunSafe = 405)] =
         "k_ELaunchSource_SteamURL_RunSafe"),
-      (y[(y.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
-      (y[(y.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
+      (C[(C.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
+      (C[(C.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
         "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-      (y[(y.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
+      (C[(C.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
         "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-      (y[(y.k_ELaunchSource_Dota2Launcher = 700)] =
+      (C[(C.k_ELaunchSource_Dota2Launcher = 700)] =
         "k_ELaunchSource_Dota2Launcher"),
-      (y[(y.k_ELaunchSource_IRunGameEngine = 800)] =
+      (C[(C.k_ELaunchSource_IRunGameEngine = 800)] =
         "k_ELaunchSource_IRunGameEngine"),
-      (y[(y.k_ELaunchSource_DRMFailureResponse = 801)] =
+      (C[(C.k_ELaunchSource_DRMFailureResponse = 801)] =
         "k_ELaunchSource_DRMFailureResponse"),
-      (y[(y.k_ELaunchSource_DRMDataRequest = 802)] =
+      (C[(C.k_ELaunchSource_DRMDataRequest = 802)] =
         "k_ELaunchSource_DRMDataRequest"),
-      (y[(y.k_ELaunchSource_CloudFilePanel = 803)] =
+      (C[(C.k_ELaunchSource_CloudFilePanel = 803)] =
         "k_ELaunchSource_CloudFilePanel"),
-      (y[(y.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
+      (C[(C.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
-      (y[(y.k_ELaunchSource_GameActionJoinParty = 900)] =
+      (C[(C.k_ELaunchSource_GameActionJoinParty = 900)] =
         "k_ELaunchSource_GameActionJoinParty"),
-      (y[(y.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
+      (C[(C.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
         "k_ELaunchSource_AppPortraitContextMenu");
   },
   "0wLp": function(e, t, n) {
@@ -5422,703 +5489,6 @@
           e
         );
       })();
-  },
-  "1MmB": function(e, t, n) {
-    "use strict";
-    var i = n("mrSG"),
-      a = n("ljid"),
-      s = n("e2SU"),
-      o = n("q1tI"),
-      u = n.n(o),
-      r = n("okNM"),
-      c = n("2vnA"),
-      p = n("NB6M"),
-      m = n("hx5d"),
-      d = n("Hi0u"),
-      h = n("oh5H"),
-      f = n("LAqV"),
-      _ = n("hReu"),
-      g = n("Z578"),
-      l = n("1VtQ"),
-      b = n("YZlK"),
-      v = n("bbBM"),
-      S = (n("cTkQ"),
-      function(e) {
-        var t = e.group,
-          n = e.onClick,
-          o = t.watching_broadcast_steamid;
-        return u.a.createElement(
-          "button",
-          {
-            className:
-              "ChatRoomListGroupItem NoChannels WatchPartyGroup DialogButton watchHowButton",
-            onClick: n
-          },
-          u.a.createElement(
-            "div",
-            { className: "ChatRoomListGroupItem_header" },
-            u.a.createElement(b.a, { group: t, small: !0 }),
-            u.a.createElement(
-              "div",
-              { className: "groupNameStatusContainer" },
-              u.a.createElement("div", { className: "chatRoomName" }, t.name),
-              o &&
-                u.a.createElement(
-                  "div",
-                  { className: "chatRoomDetails" },
-                  Object(h.c)("#Broadcast_WatchParty_Viewers_NoneActive")
-                )
-            )
-          )
-        );
-      }),
-      y = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
-        }
-        return (
-          Object(i.d)(t, e),
-          (t.prototype.CreateWatchParty = function(e) {
-            void 0 === e && (e = !1);
-            var t = this.props,
-              n = t.browserContext,
-              o = t.ownerWindow,
-              i = t.broadcastAccountId,
-              r = t.initialFriend;
-            this.Close();
-            var a,
-              s,
-              c,
-              l,
-              p = e && r ? [r.accountid] : [];
-            (a = n),
-              (s = o || window),
-              (c = i),
-              (l = p),
-              Object(d.b)(
-                u.a.createElement(g.a, {
-                  browserContext: a,
-                  bHideChatNameEntry: !1,
-                  vecInvitePlayers: l,
-                  chatViewToReplace: void 0,
-                  creationOptions: { unBroadcastAccountId: c },
-                  strTitle: Object(h.c)("#Broadcast_CreateWatchParty")
-                }),
-                s,
-                "CreateChatDialog",
-                {
-                  strTitle: Object(h.c)("#Broadcast_CreateWatchParty"),
-                  popupWidth: 450,
-                  popupHeight: 600
-                },
-                Object(_.g)(s)
-              );
-          }),
-          (t.prototype.WatchAlone = function() {
-            this.Close();
-          }),
-          (t.prototype.UpgradeExisting = function(e) {
-            var t = this.props,
-              n = t.broadcastAccountId,
-              o = t.browserContext,
-              i = t.broadcastChannelID,
-              r = t.broadcastTabId;
-            this.Close(),
-              i
-                ? e.SetChatRoomGroupWatchingBroadcast(void 0, i)
-                : e.SetChatRoomGroupWatchingBroadcast(n);
-            var a = f.f.UIStore.ShowAndOrActivateChatRoomGroup(o, e, !0);
-            r && f.f.UIStore.CloseTabByID(r),
-              this.props.bIsNewSteamTVDialog || a.ShowBroadcast();
-          }),
-          (t.prototype.Close = function() {
-            var e = this.props.closeModal;
-            e && e();
-          }),
-          (t.prototype.render = function() {
-            var t = this,
-              e = this.props,
-              n = e.closeModal,
-              o = e.initialFriend,
-              i = f.f.ChatStore.currentChatRoomGroups.filter(function(e) {
-                return e.BCanIAssociateBroadcast();
-              }),
-              r = o;
-            return u.a.createElement(
-              "div",
-              { className: "chatModalCover" },
-              u.a.createElement(
-                d.a,
-                { onEscKeypress: n },
-                u.a.createElement(
-                  a.g,
-                  { className: "watchPartyDialog" },
-                  u.a.createElement(
-                    a.b,
-                    null,
-                    u.a.createElement(
-                      "div",
-                      { className: "watchPartyPrompt" },
-                      Object(h.c)("#Broadcast_WatchPrompt")
-                    ),
-                    u.a.createElement(
-                      a.n,
-                      null,
-                      !this.props.bIsNewSteamTVDialog &&
-                        u.a.createElement(
-                          a.d,
-                          {
-                            svgicon: s.t,
-                            className: "watchHowButton",
-                            onClick: this.WatchAlone
-                          },
-                          Object(h.c)("#Broadcast_WatchAlone")
-                        ),
-                      r &&
-                        u.a.createElement(
-                          a.d,
-                          {
-                            className: "watchHowButton",
-                            onClick: function() {
-                              return t.CreateWatchParty(!0);
-                            }
-                          },
-                          u.a.createElement(v.d, {
-                            friend: r,
-                            context: null,
-                            bLarge: !1
-                          }),
-                          Object(h.e)(
-                            "#Broadcast_WatchWith",
-                            u.a.createElement(
-                              "span",
-                              { className: "highlight" },
-                              " ",
-                              r.display_name
-                            )
-                          )
-                        ),
-                      0 !== i.length &&
-                        u.a.createElement(
-                          u.a.Fragment,
-                          null,
-                          u.a.createElement(
-                            a.p,
-                            null,
-                            Object(h.c)(
-                              "#Broadcast_WatchWithExistingWatchParty"
-                            )
-                          ),
-                          i.map(function(e) {
-                            return u.a.createElement(S, {
-                              key: e.unique_id,
-                              group: e,
-                              onClick: function() {
-                                return t.UpgradeExisting(e);
-                              }
-                            });
-                          })
-                        ),
-                      u.a.createElement(
-                        a.d,
-                        {
-                          className: "watchHowButton newWatchGroup",
-                          svgicon: s.K,
-                          onClick: function() {
-                            return t.CreateWatchParty(!1);
-                          }
-                        },
-                        Object(h.c)("#Broadcast_LinkBroadcastToGroup_New")
-                      )
-                    )
-                  ),
-                  u.a.createElement(a.j, null)
-                )
-              )
-            );
-          }),
-          Object(i.c)([l.a], t.prototype, "WatchAlone", null),
-          Object(i.c)([l.a], t.prototype, "Close", null),
-          t
-        );
-      })(u.a.Component);
-    var C = n("D3Kh"),
-      O = n("qa7T"),
-      I = n("kQil"),
-      E = n("xdma"),
-      w = n("1n9R"),
-      M = n("XCHq"),
-      D = n("/7KC"),
-      T = n("dcQ8"),
-      G = n.n(T);
-    function R() {
-      return w.b.STEAM_TV ? 1 : 3;
-    }
-    n.d(t, "a", function() {
-      return j;
-    }),
-      n.d(t, "b", function() {
-        return L;
-      });
-    var j = (function(o) {
-        function e(e) {
-          var t = o.call(this, e) || this;
-          t.m_broadcastInfo = null;
-          var n = t.props.broadcastView.GetSteamID().ConvertTo64BitString();
-          return (
-            (t.m_broadcastInfo = C.a.StartInfo(n)),
-            (t.state = { bChatCollapsed: !1 }),
-            t
-          );
-        }
-        return (
-          Object(i.d)(e, o),
-          (e.prototype.componentWillUnmount = function() {
-            this.m_broadcastInfo &&
-              (C.a.StopInfo(this.m_broadcastInfo),
-              (this.m_broadcastInfo = null));
-          }),
-          (e.prototype.OnWatchWithFriends = function() {
-            this.props.broadcastView.ShowWatchPromptDialog();
-          }),
-          (e.prototype.ToggleChat = function() {
-            this.setState({ bChatCollapsed: !this.state.bChatCollapsed });
-          }),
-          (e.prototype.ToggleTheaterMode = function() {
-            f.f.UIStore.SetTheaterMode(!f.f.UIStore.GetTheaterMode());
-          }),
-          (e.prototype.render = function() {
-            var e = this.props,
-              t = e.broadcastView,
-              n = e.popup,
-              o = e.style,
-              i = t.GetSteamID().ConvertTo64BitString(),
-              r = R(),
-              a = t.m_bShowWatchPromptDialog
-                ? u.a.createElement(y, {
-                    closeModal: function() {
-                      return t.HideWatchPromptDialog();
-                    },
-                    broadcastAccountId: t.GetSteamID().GetAccountID(),
-                    broadcastTabId: t.GetUniqueID(),
-                    initialFriend: t.m_watchPromptInitialFriend,
-                    browserContext: f.a,
-                    ownerWindow: n
-                  })
-                : null;
-            return u.a.createElement(
-              "div",
-              { className: "BroadcastTab", style: o },
-              u.a.createElement(E.a, {
-                className: "FullpageBroadcastBackdrop",
-                src: this.m_broadcastInfo.m_strThumbnailUrl,
-                draggable: !1,
-                duration: 2500
-              }),
-              u.a.createElement(
-                "div",
-                { className: "BroadcastTab_OverBackground" },
-                u.a.createElement(
-                  "div",
-                  { className: "BroadcastTabHeaderContainer" },
-                  u.a.createElement(
-                    "div",
-                    {
-                      className:
-                        "BroadcastTab_HeaderRow" +
-                        (this.state.bChatCollapsed ? " ChatCollapsed" : "")
-                    },
-                    u.a.createElement(P, { onClick: this.OnWatchWithFriends }),
-                    u.a.createElement(k, {
-                      onClick: this.ToggleChat,
-                      hideIcon: this.state.bChatCollapsed
-                    })
-                  )
-                ),
-                u.a.createElement(
-                  A,
-                  {
-                    steamID: i,
-                    watchLocation: r,
-                    bHideChat: this.state.bChatCollapsed,
-                    onTheaterMode: this.ToggleTheaterMode
-                  },
-                  a
-                )
-              )
-            );
-          }),
-          Object(i.c)([l.a], e.prototype, "OnWatchWithFriends", null),
-          Object(i.c)([l.a], e.prototype, "ToggleChat", null),
-          Object(i.c)([l.a], e.prototype, "ToggleTheaterMode", null),
-          (e = Object(i.c)([r.a], e))
-        );
-      })(u.a.Component),
-      L = (function(n) {
-        function e(e) {
-          var t = n.call(this, e) || this;
-          return (
-            (t.m_broadcastInfo = null),
-            (t.m_broadcastInfo = C.a.StartInfo(
-              t.props.app.GetSteamIDWatched()
-            )),
-            (t.state = { bChatCollapsed: !1, bTheaterMode: !1 }),
-            t
-          );
-        }
-        return (
-          Object(i.d)(e, n),
-          (e.prototype.componentWillUnmount = function() {
-            this.m_broadcastInfo &&
-              (C.a.StopInfo(this.m_broadcastInfo),
-              (this.m_broadcastInfo = null));
-          }),
-          (e.prototype.OnShowLogin = function() {
-            this.props.app.ShowLogonDialog();
-          }),
-          (e.prototype.ToggleChat = function() {
-            this.setState({ bChatCollapsed: !this.state.bChatCollapsed });
-          }),
-          (e.prototype.ToggleTheaterMode = function() {
-            this.setState({ bTheaterMode: !this.state.bTheaterMode });
-          }),
-          (e.prototype.render = function() {
-            var e = this.props.app,
-              t = this.m_broadcastInfo,
-              n = R();
-            return u.a.createElement(
-              u.a.Fragment,
-              null,
-              e.BReadyToRender() &&
-                u.a.createElement(
-                  "div",
-                  {
-                    className:
-                      "StandalonePlayer" +
-                      (this.state.bTheaterMode ? " TheaterMode" : "")
-                  },
-                  u.a.createElement(E.a, {
-                    className: "FullpageBroadcastBackdrop",
-                    src: t.m_strThumbnailUrl,
-                    draggable: !1,
-                    duration: 2500
-                  }),
-                  u.a.createElement(
-                    "div",
-                    { className: "BroadcastTab" },
-                    u.a.createElement(
-                      "div",
-                      { className: "StandalonePlayerHeader" },
-                      u.a.createElement(
-                        "div",
-                        { className: "STV_Logo" },
-                        u.a.createElement(s.cb, null)
-                      ),
-                      u.a.createElement(
-                        "div",
-                        {
-                          className:
-                            "BroadcastTab_HeaderRow" +
-                            (this.state.bChatCollapsed ? " ChatCollapsed" : "")
-                        },
-                        u.a.createElement(P, { onClick: this.OnShowLogin }),
-                        u.a.createElement(k, {
-                          onClick: this.ToggleChat,
-                          hideIcon: this.state.bChatCollapsed
-                        })
-                      )
-                    ),
-                    u.a.createElement(
-                      A,
-                      {
-                        steamID: e.GetSteamIDWatched(),
-                        watchLocation: n,
-                        bHideChat: this.state.bChatCollapsed,
-                        onTheaterMode: this.ToggleTheaterMode
-                      },
-                      u.a.createElement(x, { app: e })
-                    )
-                  )
-                ),
-              u.a.createElement(N, { app: e })
-            );
-          }),
-          Object(i.c)([l.a], e.prototype, "OnShowLogin", null),
-          Object(i.c)([l.a], e.prototype, "ToggleChat", null),
-          Object(i.c)([l.a], e.prototype, "ToggleTheaterMode", null),
-          (e = Object(i.c)([r.a], e))
-        );
-      })(u.a.Component);
-    function P(e) {
-      return u.a.createElement(
-        "div",
-        { className: "BroadcastButton WatchWithFriends", onClick: e.onClick },
-        u.a.createElement(s.lb, null),
-        Object(h.c)("#Broadcast_WatchWithFriends")
-      );
-    }
-    function k(e) {
-      return u.a.createElement(
-        "div",
-        {
-          className: "ToggleBroadcastChat",
-          title: Object(h.c)("#Broadcast_ToggleChat"),
-          onClick: e.onClick
-        },
-        u.a.createElement(s.y, { showChat: e.hideIcon })
-      );
-    }
-    var N = Object(r.a)(function(e) {
-        var t = e.app;
-        return t.BIsPerformingLogonCheck()
-          ? u.a.createElement(
-              "div",
-              null,
-              u.a.createElement("iframe", {
-                style: { display: "none" },
-                src: t.GetLoginURL()
-              })
-            )
-          : null;
-      }),
-      A = (function(n) {
-        function e(e) {
-          var t = n.call(this, e) || this;
-          return (
-            (t.m_strLocalSteamID = ""),
-            (t.m_refBroadcastContainer = u.a.createRef()),
-            (t.state = { info: null }),
-            t
-          );
-        }
-        return (
-          Object(i.d)(e, n),
-          (e.prototype.componentDidMount = function() {
-            M.b.stream["76561198208088121"] && "chinese" === w.b.LANGUAGE
-              ? this.OnLocalStreamChange("76561198208088121")
-              : M.b.stream["76561198207552741"] &&
-                "russian" === w.b.LANGUAGE &&
-                this.OnLocalStreamChange("76561198207552741");
-          }),
-          (e.getDerivedStateFromProps = function(e, t) {
-            return t.info && t.info.m_steamIDBroadcast === e.steamID
-              ? null
-              : (t.info && C.a.StopInfo(t.info),
-                { info: C.a.StartInfo(e.steamID) });
-          }),
-          (e.prototype.componentWillUnmount = function() {
-            this.state.info && C.a.StopInfo(this.state.info);
-          }),
-          (e.prototype.OnLocalStreamChange = function(e) {
-            this.m_strLocalSteamID = e;
-          }),
-          (e.prototype.SetMainContentRef = function(e) {
-            this.m_elMainContent = e;
-          }),
-          (e.prototype.CalculateBroadcastSectionStyles = function(e) {
-            if (this.props.bHideChat) return { width: "100%", height: "100%" };
-            var t, n;
-            _.h &&
-              ((t = _.h.UIDisplayPrefs.nWatchPartyBroadcastHeightPercentage),
-              (n = _.h.UIDisplayPrefs.nWatchPartyBroadcastWidthPercentage));
-            var o = {};
-            if (e) {
-              var i = t || 66;
-              if (((o.height = i + "%"), this.m_elMainContent)) {
-                var r = this.m_elMainContent,
-                  a = r.clientWidth,
-                  s = r.clientHeight,
-                  c = (9 / 16) * a + 50,
-                  l = Object(D.a)(i, 1, (c / s) * 100);
-                o.height = l + "%";
-              }
-            } else
-              (o.width = n ? n + "%" : "66%"),
-                (o.minWidth = n ? n + "%" : "66%"),
-                (o.maxWidth = "calc( 100% - 316px )"),
-                (o.overflowY = "auto");
-            return o;
-          }),
-          (e.prototype.OnGrabberMouseDown = function(e) {
-            var t = e.currentTarget.ownerDocument.defaultView;
-            t.addEventListener("mousemove", this.HandleMouseMove),
-              t.addEventListener("mouseup", this.UnregisterDragEvents),
-              this.setState({ bDraggingChatGrabber: !0 });
-          }),
-          (e.prototype.HandleMouseMove = function(e) {
-            e.preventDefault(), e.stopPropagation();
-            var t = this.m_refBroadcastContainer.current.getBoundingClientRect(),
-              n = this.m_refBroadcastContainer.current.parentElement.getBoundingClientRect(),
-              o = t.left,
-              i = e.clientX,
-              r = n.width,
-              a = Object(D.a)(((i - o) / r) * 100, 1, 100);
-            _.h.SetUIDisplayPref("nWatchPartyBroadcastWidthPercentage", a);
-          }),
-          (e.prototype.UnregisterDragEvents = function(e) {
-            e.view.removeEventListener("mousemove", this.HandleMouseMove),
-              e.view.removeEventListener("mouseup", this.UnregisterDragEvents),
-              this.setState({ bDraggingChatGrabber: !1 });
-          }),
-          (e.prototype.render = function() {
-            var e = this.props,
-              t = e.steamID,
-              n = e.children,
-              o = this.m_strLocalSteamID || t,
-              i = this.state.info.m_bIsOnline,
-              r = null,
-              a = this.CalculateBroadcastSectionStyles(!1);
-            (a.flexGrow = this.props.bHideChat ? 1 : null),
-              M.b.bValid && (r = u.a.createElement(B, { info: M.b }));
-            var s = new O.a(),
-              c = u.a.createElement(
-                "div",
-                { className: "LoginDiv" },
-                u.a.createElement(
-                  "a",
-                  {
-                    onClick: function() {
-                      return s.ShowLogonDialog();
-                    },
-                    className: G.a.ChatLoginButton,
-                    href: "javascript:void(0);"
-                  },
-                  Object(h.c)("#BroadcastChat_Login")
-                ),
-                u.a.createElement(x, { app: s })
-              ),
-              l = C.a.GetBroadcast(o)
-                ? C.a.GetBroadcast(o).m_ulBroadcastID
-                : "0";
-            return u.a.createElement(
-              "div",
-              { className: "BroadcastContainer" },
-              u.a.createElement(
-                "div",
-                {
-                  className: "BroadcastContainerSection",
-                  ref: this.m_refBroadcastContainer,
-                  style: a
-                },
-                u.a.createElement(
-                  "div",
-                  { className: "BroadcastContainerSectionVideoContainer" },
-                  i &&
-                    u.a.createElement(p.b, {
-                      key: o,
-                      steamIDBroadcast: o,
-                      watchLocation: this.props.watchLocation,
-                      onTheaterMode: this.props.onTheaterMode
-                    }),
-                  !i && r,
-                  u.a.createElement("div", { className: "videoContainerSizer" })
-                ),
-                n,
-                u.a.createElement(
-                  "div",
-                  { className: "BroadcastDetailsSection" },
-                  u.a.createElement(p.a, {
-                    steamID: o,
-                    onLocalStreamChange: this.OnLocalStreamChange,
-                    bVerticalBroadcastChat: !0
-                  })
-                )
-              ),
-              !this.props.bHideChat &&
-                u.a.createElement("div", {
-                  className: "BroadcastChatDivider horizontal",
-                  onMouseDown: this.OnGrabberMouseDown
-                }),
-              u.a.createElement(
-                "div",
-                {
-                  className: "BroadcastChatDiv",
-                  style: {
-                    display: this.props.bHideChat ? "none" : "flex",
-                    flexDirection: "column",
-                    width: "100%",
-                    minWidth: "300px"
-                  }
-                },
-                u.a.createElement(m.a, {
-                  emoticonStore: f.f ? f.f.ChatStore.EmoticonStore : null,
-                  broadcastID: l,
-                  steamID: o,
-                  watchLocation: this.props.watchLocation,
-                  hidden: this.props.bHideChat
-                }),
-                w.f && w.f.logged_in ? null : c
-              )
-            );
-          }),
-          Object(i.c)([c.x], e.prototype, "m_strLocalSteamID", void 0),
-          Object(i.c)([l.a], e.prototype, "OnLocalStreamChange", null),
-          Object(i.c)([l.a], e.prototype, "SetMainContentRef", null),
-          Object(i.c)([l.a], e.prototype, "OnGrabberMouseDown", null),
-          Object(i.c)([l.a], e.prototype, "HandleMouseMove", null),
-          Object(i.c)([l.a], e.prototype, "UnregisterDragEvents", null),
-          (e = Object(i.c)([r.a], e))
-        );
-      })(u.a.Component);
-    function B(e) {
-      var t = 'url( "' + (w.b.CHAT_BASE_URL + e.info.offlineImage) + '" )';
-      return u.a.createElement("div", {
-        style: { backgroundImage: t },
-        className: "BroadcastOffline"
-      });
-    }
-    var F = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
-        }
-        return (
-          Object(i.d)(t, e),
-          (t.prototype.Dismiss = function() {
-            this.props.app.DismissLogonDialog();
-          }),
-          (t.prototype.render = function() {
-            return u.a.createElement(
-              I.d,
-              { onEscKeypress: this.Dismiss },
-              u.a.createElement(
-                a.g,
-                { className: "SteamTVLoginDialog" },
-                u.a.createElement("iframe", {
-                  className: "steamTVLogin",
-                  src: this.props.app.GetLoginURL()
-                })
-              )
-            );
-          }),
-          Object(i.c)([l.a], t.prototype, "Dismiss", null),
-          t
-        );
-      })(u.a.Component),
-      x = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
-        }
-        return (
-          Object(i.d)(t, e),
-          (t.prototype.render = function() {
-            if (!this.props.app.BIsLogonDialogVisible()) return null;
-            var e = u.a.createElement(F, { app: this.props.app });
-            return u.a.createElement(
-              "div",
-              { className: "FullModalOverlay" },
-              u.a.createElement("div", {
-                className: "ModalOverlayContent ModalOverlayBackground"
-              }),
-              u.a.createElement(
-                "div",
-                { className: "ModalOverlayContent active" },
-                e
-              )
-            );
-          }),
-          (t = Object(i.c)([r.a], t))
-        );
-      })(u.a.Component);
   },
   "1VtQ": function(e, t, n) {
     "use strict";
@@ -9489,14 +8859,15 @@
           }),
           (e.prototype.RestoreStatePostDisconnect = function(t) {
             t && this.LoadMyChatRooms();
-            var n = this.m_mapActiveChatGroupsToRefCount.toPOJO();
-            Object.keys(n).some(function(e) {
-              return 0 < n[e];
-            }) && this.SendActiveChatRoomGroupsToServer(),
-              this.m_FriendChatStore.RestoreStatePostDisconnect(t),
+            var n = this.m_mapActiveChatGroupsToRefCount.toPOJO(),
+              e = Object.keys(n).some(function(e) {
+                return 0 < n[e];
+              });
+            this.m_FriendChatStore.RestoreStatePostDisconnect(t),
               this.m_mapChatGroups.forEach(function(e) {
                 return e.OnConnectionRestored(t);
-              });
+              }),
+              e && this.SendActiveChatRoomGroupsToServer();
           }),
           (e.prototype.LoadMyChatRooms = function() {
             var a = this,
@@ -12759,7 +12130,8 @@
       Action: "broadcastwidgets_Action_2Wm1-",
       WishList: "broadcastwidgets_WishList_bSzoR",
       Banner: "broadcastwidgets_Banner_3b8-q",
-      BundleContent: "broadcastwidgets_BundleContent_2tK4u"
+      BundleContent: "broadcastwidgets_BundleContent_2tK4u",
+      ShowContentsButton: "broadcastwidgets_ShowContentsButton_1ZnPD"
     };
   },
   Au4U: function(e, t, n) {
@@ -18126,26 +17498,26 @@
   },
   FkUk: function(e, t, n) {
     "use strict";
-    var i = n("mrSG"),
-      O = n("LAqV"),
-      I = n("hReu"),
-      r = n("okNM"),
-      E = n("Hi0u"),
-      w = n("q1tI"),
-      a = n("1VtQ"),
-      M = n("oh5H"),
+    var c = n("mrSG"),
+      E = n("LAqV"),
+      w = n("hReu"),
+      i = n("okNM"),
+      M = n("Hi0u"),
+      D = n("q1tI"),
+      r = n("1VtQ"),
+      T = n("oh5H"),
       s = n("ljid");
-    function D(e, t, n) {
-      Object(E.b)(
-        w.createElement(o, { player: t }),
+    function G(e, t, n) {
+      Object(M.b)(
+        D.createElement(o, { player: t }),
         n,
         "NicknameDialog",
         {
-          strTitle: Object(M.c)("#Friend_Menu_AddNickname"),
+          strTitle: Object(T.c)("#Friend_Menu_AddNickname"),
           popupWidth: 640,
           popupHeight: 400
         },
-        Object(I.g)(n)
+        Object(w.g)(n)
       );
     }
     var o = (function(n) {
@@ -18157,13 +17529,13 @@
           );
         }
         return (
-          Object(i.d)(e, n),
+          Object(c.d)(e, n),
           (e.prototype.HandleTextEntry = function(e) {
             this.setState({ strCurrentNameEntry: e.currentTarget.value });
           }),
           (e.prototype.HandleSubmit = function(e) {
             var t = this;
-            O.f.FriendStore.SetPlayerNickname(
+            E.f.FriendStore.SetPlayerNickname(
               this.props.player,
               this.state.strCurrentNameEntry
             ).then(function(e) {
@@ -18182,65 +17554,65 @@
                 ? (e += " ingame")
                 : this.props.player.persona.is_online && (e += " online"),
               t && (e += " nickNamed"),
-              w.createElement(
-                E.a,
+              D.createElement(
+                M.a,
                 {
                   className: "Dialog_EditNickName",
                   onEscKeypress: this.props.closeModal
                 },
-                w.createElement(
+                D.createElement(
                   s.h,
                   {
                     classNameContent: "NicknameDialog",
                     onSubmit: this.HandleSubmit
                   },
-                  w.createElement(
+                  D.createElement(
                     s.m,
                     null,
                     t
-                      ? Object(M.c)("#Friend_Menu_ChangeNickname")
-                      : Object(M.c)("#Friend_Menu_AddNickname")
+                      ? Object(T.c)("#Friend_Menu_ChangeNickname")
+                      : Object(T.c)("#Friend_Menu_AddNickname")
                   ),
-                  w.createElement(
+                  D.createElement(
                     s.b,
                     null,
-                    w.createElement(
+                    D.createElement(
                       s.c,
                       null,
                       t
-                        ? Object(M.c)("#Nickname_EditNickname")
-                        : Object(M.c)("#Nickname_AddANickname")
+                        ? Object(T.c)("#Nickname_EditNickname")
+                        : Object(T.c)("#Nickname_AddANickname")
                     ),
-                    w.createElement(
+                    D.createElement(
                       s.c,
                       null,
-                      w.createElement(
+                      D.createElement(
                         "div",
                         { className: e },
-                        w.createElement("img", {
+                        D.createElement("img", {
                           className: "avatarMedium",
                           src: this.props.player.persona.avatar_url_full
                         }),
-                        w.createElement(
+                        D.createElement(
                           "div",
                           { className: "labelHolder" },
-                          w.createElement(
+                          D.createElement(
                             "div",
                             { className: "mediumName" },
                             this.props.player.secondary_display_name
                           ),
-                          w.createElement(
+                          D.createElement(
                             "div",
                             { className: "nickNamedAs" },
-                            Object(M.c)("#Nickname_NickNameAsDialog")
+                            Object(T.c)("#Nickname_NickNameAsDialog")
                           ),
-                          w.createElement(
+                          D.createElement(
                             "div",
                             { className: "mediumName asNickName" },
-                            w.createElement(s.o, {
+                            D.createElement(s.o, {
                               placeholder: t
-                                ? Object(M.c)("#Nickname_PlaceHolderNickName")
-                                : Object(M.c)(
+                                ? Object(T.c)("#Nickname_PlaceHolderNickName")
+                                : Object(T.c)(
                                     "#Nickname_PlaceHolderNickNameFresh"
                                   ),
                               className: "nicknameInput",
@@ -18254,38 +17626,38 @@
                       )
                     )
                   ),
-                  w.createElement(
+                  D.createElement(
                     s.j,
                     null,
-                    w.createElement(s.t, { onCancel: this.props.closeModal })
+                    D.createElement(s.t, { onCancel: this.props.closeModal })
                   )
                 )
               )
             );
           }),
-          Object(i.c)([a.a], e.prototype, "HandleTextEntry", null),
-          Object(i.c)([a.a], e.prototype, "HandleSubmit", null),
-          (e = Object(i.c)([r.a], e))
+          Object(c.c)([r.a], e.prototype, "HandleTextEntry", null),
+          Object(c.c)([r.a], e.prototype, "HandleSubmit", null),
+          (e = Object(c.c)([i.a], e))
         );
-      })(w.Component),
-      c = n("eQUm"),
-      l = n("y4mg"),
+      })(D.Component),
+      l = n("eQUm"),
+      a = n("y4mg"),
       u = n("s+DT"),
       p = n("/IDK"),
       m = n("bbBM"),
       d = n("2vnA");
-    function T(e, t, n) {
+    function R(e, t, n) {
       var o = n ? [n.accountid] : [];
-      Object(E.b)(
-        w.createElement(h, { browserContext: e, rgPreSelectedFriends: o }),
+      Object(M.b)(
+        D.createElement(h, { browserContext: e, rgPreSelectedFriends: o }),
         t,
         "CreateFriendCategoryDialog",
         {
-          strTitle: Object(M.c)("#FriendGroup_Menu_CreateGroup"),
+          strTitle: Object(T.c)("#FriendGroup_Menu_CreateGroup"),
           popupWidth: 664,
           popupHeight: 700
         },
-        Object(I.g)(t)
+        Object(w.g)(t)
       );
     }
     var h = (function(n) {
@@ -18300,7 +17672,7 @@
           );
         }
         return (
-          Object(i.d)(e, n),
+          Object(c.d)(e, n),
           (e.prototype.HandleTextEntry = function(e) {
             this.setState({ strNameEntry: e.target.value, strError: null });
           }),
@@ -18326,7 +17698,7 @@
               i.forEach(function(e) {
                 a.push(u.a.InitFromAccountID(e).ConvertTo64BitString());
               }),
-                O.f.FriendStore.FriendGroupStore.ManageGroup(
+                E.f.FriendStore.FriendGroupStore.ManageGroup(
                   this.props.group,
                   o,
                   r,
@@ -18335,7 +17707,7 @@
                   e
                     ? t.props.closeModal && t.props.closeModal()
                     : t.setState({
-                        strError: Object(M.c)(
+                        strError: Object(T.c)(
                           "#FriendGroup_ManageGroup_ErrorFailed"
                         )
                       });
@@ -18343,20 +17715,20 @@
             } else {
               if (!o)
                 return void this.setState({
-                  strError: Object(M.c)(
+                  strError: Object(T.c)(
                     "#FriendGroup_CreateGroup_ErrorNeedName"
                   )
                 });
               var p = n.map(function(e) {
                 return e.persona.m_steamid.ConvertTo64BitString();
               });
-              O.f.FriendStore.FriendGroupStore.CreateGroup(o, p).then(function(
+              E.f.FriendStore.FriendGroupStore.CreateGroup(o, p).then(function(
                 e
               ) {
                 e
                   ? t.props.closeModal && t.props.closeModal()
                   : t.setState({
-                      strError: Object(M.c)(
+                      strError: Object(T.c)(
                         "#FriendGroup_CreateGroup_ErrorFailed"
                       )
                     });
@@ -18367,61 +17739,61 @@
             this.m_friendPicker = e;
           }),
           (e.prototype.render = function() {
-            return w.createElement(
-              E.a,
+            return D.createElement(
+              M.a,
               { onEscKeypress: this.props.closeModal },
-              w.createElement(
+              D.createElement(
                 s.h,
                 {
                   classNameContent: "ManageGroupDialog",
                   onSubmit: this.HandleSubmit
                 },
-                w.createElement(
+                D.createElement(
                   s.m,
                   null,
                   this.props.group
-                    ? Object(M.c)("#FriendGroup_Menu_Manage")
-                    : Object(M.c)("#FriendGroup_Menu_CreateGroup")
+                    ? Object(T.c)("#FriendGroup_Menu_Manage")
+                    : Object(T.c)("#FriendGroup_Menu_CreateGroup")
                 ),
-                w.createElement(
+                D.createElement(
                   s.b,
                   null,
                   this.state.strError &&
-                    w.createElement(
+                    D.createElement(
                       s.c,
                       { className: "nicknameError" },
                       this.state.strError
                     ),
-                  w.createElement(s.o, {
+                  D.createElement(s.o, {
                     type: "text",
-                    label: Object(M.c)("#FriendGroup_CategoryName"),
+                    label: Object(T.c)("#FriendGroup_CategoryName"),
                     className: "nicknameInput",
                     value: this.state.strNameEntry,
                     onChange: this.HandleTextEntry,
                     autoFocus: !0
                   }),
-                  w.createElement(l.a, {
+                  D.createElement(a.a, {
                     ref: this.OnFriendPickerRef,
-                    label: Object(M.c)("#FriendGroup_CategoryMembers"),
+                    label: Object(T.c)("#FriendGroup_CategoryMembers"),
                     eSort: 1,
                     rgSelectedFriends: this.props.rgPreSelectedFriends
                   })
                 ),
-                w.createElement(
+                D.createElement(
                   s.j,
                   null,
-                  w.createElement(s.t, { onCancel: this.props.closeModal })
+                  D.createElement(s.t, { onCancel: this.props.closeModal })
                 )
               )
             );
           }),
-          Object(i.c)([a.a], e.prototype, "HandleTextEntry", null),
-          Object(i.c)([a.a], e.prototype, "HandleSubmit", null),
-          Object(i.c)([a.a], e.prototype, "OnFriendPickerRef", null),
+          Object(c.c)([r.a], e.prototype, "HandleTextEntry", null),
+          Object(c.c)([r.a], e.prototype, "HandleSubmit", null),
+          Object(c.c)([r.a], e.prototype, "OnFriendPickerRef", null),
           e
         );
-      })(w.Component),
-      G = (function(n) {
+      })(D.Component),
+      j = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -18431,20 +17803,20 @@
           );
         }
         return (
-          Object(i.d)(e, n),
+          Object(c.d)(e, n),
           (e.prototype.componentWillReceiveProps = function(e) {
             e.friend != this.props.friend && this.m_mapCategoryChecks.clear();
           }),
           (e.prototype.HandleSubmit = function(e) {
             var a = this,
               o = [];
-            O.f.FriendStore.FriendGroupStore.user_groups.forEach(function(e) {
+            E.f.FriendStore.FriendGroupStore.user_groups.forEach(function(e) {
               if (a.m_mapCategoryChecks.has(e.unique_id)) {
                 var t = void 0,
                   n = void 0;
                 a.m_mapCategoryChecks.get(e.unique_id) ? (n = e) : (t = e),
                   o.push(
-                    O.f.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
+                    E.f.FriendStore.FriendGroupStore.TransferFriendFromToGroup(
                       a.props.friend,
                       t,
                       n
@@ -18459,7 +17831,7 @@
                   }
                 t
                   ? a.setState({
-                      strError: Object(M.c)(
+                      strError: Object(T.c)(
                         "#FriendGroup_ManageGroup_ErrorFailed"
                       )
                     })
@@ -18467,39 +17839,39 @@
               });
           }),
           (e.prototype.CreateNew = function(e) {
-            T(Object(I.e)(this, e), Object(p.n)(e), this.props.friend);
+            R(Object(w.e)(this, e), Object(p.n)(e), this.props.friend);
           }),
           (e.prototype.render = function() {
-            return w.createElement(
-              E.a,
+            return D.createElement(
+              M.a,
               { onEscKeypress: this.props.closeModal },
-              w.createElement(
+              D.createElement(
                 s.h,
                 {
                   classNameContent: "AssignCategoriesDialog",
                   onSubmit: this.HandleSubmit
                 },
-                w.createElement(
+                D.createElement(
                   s.m,
                   null,
-                  Object(M.c)("#FriendGroup_Categorize_Title")
+                  Object(T.c)("#FriendGroup_Categorize_Title")
                 ),
-                w.createElement(
+                D.createElement(
                   s.b,
                   null,
                   this.state.strError &&
-                    w.createElement(
+                    D.createElement(
                       s.c,
                       { className: "nicknameError" },
                       this.state.strError
                     ),
-                  w.createElement(
+                  D.createElement(
                     s.D,
                     null,
-                    w.createElement(
+                    D.createElement(
                       s.f,
                       null,
-                      w.createElement(m.c, {
+                      D.createElement(m.c, {
                         friend: this.props.friend,
                         className: "AssignCategoriesDialog_Friend",
                         noActions: !0,
@@ -18507,80 +17879,80 @@
                       })
                     )
                   ),
-                  w.createElement(f, {
+                  D.createElement(f, {
                     friend: this.props.friend,
                     mapChecks: this.m_mapCategoryChecks
                   }),
-                  w.createElement(
+                  D.createElement(
                     s.D,
                     { className: "AssignCategoriesDialog_AddNewButton" },
-                    w.createElement(
+                    D.createElement(
                       s.d,
                       { onClick: this.CreateNew },
-                      Object(M.c)("#FriendGroup_Categorize_AddNew")
+                      Object(T.c)("#FriendGroup_Categorize_AddNew")
                     )
                   )
                 ),
-                w.createElement(
+                D.createElement(
                   s.j,
                   null,
-                  w.createElement(s.t, { onCancel: this.props.closeModal })
+                  D.createElement(s.t, { onCancel: this.props.closeModal })
                 )
               )
             );
           }),
-          Object(i.c)([a.a], e.prototype, "HandleSubmit", null),
-          Object(i.c)([a.a], e.prototype, "CreateNew", null),
+          Object(c.c)([r.a], e.prototype, "HandleSubmit", null),
+          Object(c.c)([r.a], e.prototype, "CreateNew", null),
           e
         );
-      })(w.Component),
+      })(D.Component),
       f = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(i.d)(t, e),
+          Object(c.d)(t, e),
           (t.prototype.render = function() {
             var t = this,
-              e = O.f.FriendStore.FriendGroupStore.user_groups.map(function(e) {
-                return w.createElement(_, {
+              e = E.f.FriendStore.FriendGroupStore.user_groups.map(function(e) {
+                return D.createElement(_, {
                   friend: t.props.friend,
                   group: e,
                   key: e.unique_id,
                   mapChecks: t.props.mapChecks
                 });
               });
-            return w.createElement(
-              w.Fragment,
+            return D.createElement(
+              D.Fragment,
               null,
-              w.createElement(
+              D.createElement(
                 s.p,
                 null,
-                Object(M.c)("#FriendGroup_Categorize_Categories")
+                Object(T.c)("#FriendGroup_Categorize_Categories")
               ),
-              w.createElement(
+              D.createElement(
                 "div",
                 { className: "FriendCategoryCheckboxes_List" },
                 e
               )
             );
           }),
-          (t = Object(i.c)([r.a], t))
+          (t = Object(c.c)([i.a], t))
         );
-      })(w.Component),
+      })(D.Component),
       _ = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(i.d)(t, e),
+          Object(c.d)(t, e),
           (t.prototype.OnToggle = function(e) {
             e != this.props.group.HasMember(this.props.friend.accountid)
               ? this.props.mapChecks.set(this.props.group.unique_id, e)
               : this.props.mapChecks.delete(this.props.group.unique_id);
           }),
           (t.prototype.OnContextMenu = function(e) {
-            ne(Object(I.e)(this, e), this.props.group, e);
+            ne(Object(w.e)(this, e), this.props.group, e);
           }),
           (t.prototype.render = function() {
             var e,
@@ -18590,10 +17962,10 @@
               (e = this.props.mapChecks.has(t.unique_id)
                 ? this.props.mapChecks.get(t.unique_id)
                 : t.HasMember(n.accountid)),
-              w.createElement(
+              D.createElement(
                 "div",
                 { onContextMenu: this.OnContextMenu },
-                w.createElement(s.e, {
+                D.createElement(s.e, {
                   label: t.name,
                   checked: e,
                   onChange: this.OnToggle
@@ -18601,27 +17973,27 @@
               )
             );
           }),
-          Object(i.c)([a.a], t.prototype, "OnToggle", null),
-          Object(i.c)([a.a], t.prototype, "OnContextMenu", null),
-          (t = Object(i.c)([r.a], t))
+          Object(c.c)([r.a], t.prototype, "OnToggle", null),
+          Object(c.c)([r.a], t.prototype, "OnContextMenu", null),
+          (t = Object(c.c)([i.a], t))
         );
-      })(w.Component),
+      })(D.Component),
       g = n("8o0Y"),
-      R = n("EGkk"),
-      j = n("geE1"),
-      L = n("rsEv"),
+      L = n("EGkk"),
+      P = n("geE1"),
+      k = n("rsEv"),
       b = n("tkkQ"),
       v = n("uWOQ"),
       S = n("+mma"),
-      P = n("e2SU"),
+      N = n("e2SU"),
       y = n("VZeO"),
       C = n("fGPn"),
-      k = n("vDqi"),
-      N = n.n(k);
+      O = n("vDqi"),
+      I = n.n(O);
     var A = (function(o) {
         function e(e) {
           var t = o.call(this, e) || this,
-            n = O.f.FriendStore.self;
+            n = E.f.FriendStore.self;
           return (
             (t.state = {
               strCurrentNameEntry: n.primary_display_name,
@@ -18631,7 +18003,7 @@
           );
         }
         return (
-          Object(i.d)(e, o),
+          Object(c.d)(e, o),
           (e.prototype.HandleTextEntry = function(e) {
             this.setState({
               strCurrentNameEntry: e.currentTarget.value,
@@ -18654,19 +18026,19 @@
                 this.state.strCurrentNameEntry
               ).then(function(e) {
                 e
-                  ? o.DisplayError(Object(M.c)(e))
+                  ? o.DisplayError(Object(T.c)(e))
                   : o.props.closeModal && o.props.closeModal();
               });
             else {
               var t = new FormData();
               t.append("sessionid", b.a.SESSIONID), t.append("persona", e);
-              var n = O.f.FriendStore.self,
+              var n = E.f.FriendStore.self,
                 i =
                   b.a.CHAT_BASE_URL +
                   "profiles/" +
                   n.steamid64 +
                   "/ajaxsetpersonaname/";
-              N.a
+              I.a
                 .post(i, t)
                 .then(function(e) {
                   var t = e.data;
@@ -18677,12 +18049,12 @@
                   }
                 })
                 .catch(function(e) {
-                  o.DisplayError(Object(M.c)("#Friends_NameChangeFailed_Info"));
+                  o.DisplayError(Object(T.c)("#Friends_NameChangeFailed_Info"));
                 });
             }
           }),
           (e.prototype.render = function() {
-            var e = O.f.FriendStore.self,
+            var e = E.f.FriendStore.self,
               t = "friend changePersonaName";
             e.persona.is_ingame
               ? (t += " ingame")
@@ -18690,63 +18062,63 @@
             var n = !1;
             return (
               this.state.strError && (n = !0),
-              w.createElement(
-                E.a,
+              D.createElement(
+                M.a,
                 {
                   className: "Dialog_ChangePersonaName",
                   onEscKeypress: this.props.closeModal
                 },
-                w.createElement(
+                D.createElement(
                   s.h,
                   {
                     classNameContent: "ChangePersonaNameDialog",
                     onSubmit: this.HandleSubmit
                   },
-                  w.createElement(
+                  D.createElement(
                     s.m,
                     null,
-                    Object(M.c)("#ChangePersona_Title")
+                    Object(T.c)("#ChangePersona_Title")
                   ),
-                  w.createElement(
+                  D.createElement(
                     s.b,
                     null,
-                    w.createElement(
+                    D.createElement(
                       s.c,
                       null,
-                      Object(M.c)("#ChangePersona_Description")
+                      Object(T.c)("#ChangePersona_Description")
                     ),
-                    w.createElement(
+                    D.createElement(
                       s.c,
                       null,
-                      w.createElement(
+                      D.createElement(
                         "div",
                         { className: t },
-                        w.createElement("img", {
+                        D.createElement("img", {
                           className: "avatarMedium",
                           src: e.persona.avatar_url_full
                         }),
-                        w.createElement(
+                        D.createElement(
                           "div",
                           { className: "labelHolder" },
                           n &&
-                            w.createElement(
+                            D.createElement(
                               "div",
                               { className: "error" },
                               this.state.strError
                             ),
-                          w.createElement(
+                          D.createElement(
                             "div",
                             null,
-                            w.createElement(
+                            D.createElement(
                               "div",
                               null,
-                              Object(M.c)("#ChangePersona_Change")
+                              Object(T.c)("#ChangePersona_Change")
                             ),
-                            w.createElement(
+                            D.createElement(
                               "div",
                               { className: "mediumName" },
-                              w.createElement(s.o, {
-                                placeholder: Object(M.c)(
+                              D.createElement(s.o, {
+                                placeholder: Object(T.c)(
                                   "#ChangePersona_PlaceHolder"
                                 ),
                                 className: "changePersonaInput",
@@ -18760,20 +18132,20 @@
                       )
                     )
                   ),
-                  w.createElement(
+                  D.createElement(
                     s.j,
                     null,
-                    w.createElement(s.t, { onCancel: this.props.closeModal })
+                    D.createElement(s.t, { onCancel: this.props.closeModal })
                   )
                 )
               )
             );
           }),
-          Object(i.c)([a.a], e.prototype, "HandleTextEntry", null),
-          Object(i.c)([a.a], e.prototype, "HandleSubmit", null),
-          (e = Object(i.c)([r.a], e))
+          Object(c.c)([r.a], e.prototype, "HandleTextEntry", null),
+          Object(c.c)([r.a], e.prototype, "HandleSubmit", null),
+          (e = Object(c.c)([i.a], e))
         );
-      })(w.Component),
+      })(D.Component),
       B = n("dpJ7"),
       F = n("hEDq"),
       x = n("+M9t"),
@@ -18790,7 +18162,7 @@
         );
       }
       return (
-        Object(i.d)(e, n),
+        Object(c.d)(e, n),
         (e.prototype.ConvertENotificationSettingToBoolean = function(e) {
           return 1 == e;
         }),
@@ -18824,7 +18196,7 @@
                 (t.bSounds_PlayOnline = this.ConvertENotificationSettingToBoolean(
                   e.Sounds_PlayOnline
                 )))
-              : ((n = !0), (t = O.f.SettingsStore.FriendsSettings)),
+              : ((n = !0), (t = E.f.SettingsStore.FriendsSettings)),
             { settings: t, bUseDefaults: n }
           );
         }),
@@ -18859,7 +18231,7 @@
         }),
         (e.prototype.HandleSubmit = function(e) {
           var t = this;
-          O.f.FriendStore.SetPlayerNotificationSettings(
+          E.f.FriendStore.SetPlayerNotificationSettings(
             this.props.player,
             this.FriendSettingsToNotificationSettings(this.state.settings)
           ).then(function(e) {
@@ -18877,15 +18249,15 @@
         (e.prototype.OnSettingToggled = function(e, t) {
           var n;
           this.setState({
-            settings: Object(i.a)(
-              Object(i.a)({}, this.state.settings),
+            settings: Object(c.a)(
+              Object(c.a)({}, this.state.settings),
               ((n = {}), (n[e] = t), n)
             )
           });
         }),
         (e.prototype.FriendsSettingsCheckbox = function(t) {
           var n = this;
-          return w.createElement(s.e, {
+          return D.createElement(s.e, {
             key: t.strName,
             disabled: this.state.bUseDefaults,
             onChange: function(e) {
@@ -18896,26 +18268,26 @@
         }),
         (e.prototype.NotificationRow = function(e) {
           var t = this.FriendsSettingsCheckbox;
-          return w.createElement(
+          return D.createElement(
             "div",
             null,
-            w.createElement(
+            D.createElement(
               "div",
               { className: "FriendsSettingsNotificationRow" },
-              w.createElement(
+              D.createElement(
                 "div",
                 { className: "FriendsSettingsNotificationRow_Label" },
                 e.strLabel
               ),
-              w.createElement(
+              D.createElement(
                 "div",
                 { className: "FriendsSettingsNotificationRow_Checkbox" },
-                w.createElement(t, { strName: e.strNameShow })
+                D.createElement(t, { strName: e.strNameShow })
               ),
-              w.createElement(
+              D.createElement(
                 "div",
                 { className: "FriendsSettingsNotificationRow_Checkbox" },
-                w.createElement(t, { strName: e.strNameSound })
+                D.createElement(t, { strName: e.strNameSound })
               )
             )
           );
@@ -18923,7 +18295,7 @@
         (e.prototype.OnDefaultToggled = function(e) {
           e
             ? this.setState({
-                settings: O.f.SettingsStore.FriendsSettings,
+                settings: E.f.SettingsStore.FriendsSettings,
                 bUseDefaults: !0
               })
             : this.setState({ bUseDefaults: !1 });
@@ -18935,51 +18307,51 @@
             o = "friend editFriendNotifications";
           return (
             (o += Object(V.d)(this.props.player.persona)),
-            w.createElement(
-              E.a,
+            D.createElement(
+              M.a,
               {
                 className: "Dialog_FriendNotifications",
                 onEscKeypress: this.props.closeModal
               },
-              w.createElement(
+              D.createElement(
                 s.h,
                 {
                   classNameContent: "FriendNotificationsDialog",
                   onSubmit: this.HandleSubmit
                 },
-                w.createElement(
+                D.createElement(
                   s.m,
                   null,
-                  Object(M.c)("#Friend_Menu_NotificationsTitle")
+                  Object(T.c)("#Friend_Menu_NotificationsTitle")
                 ),
-                w.createElement(
+                D.createElement(
                   s.b,
                   { className: n ? "useDefaults" : "" },
-                  w.createElement(
+                  D.createElement(
                     s.c,
                     null,
-                    Object(M.c)(
+                    Object(T.c)(
                       "#FriendNotifications_Instructions",
                       this.props.player.display_name
                     )
                   ),
-                  w.createElement(
+                  D.createElement(
                     s.c,
                     null,
-                    w.createElement(
+                    D.createElement(
                       "div",
                       { className: o },
-                      w.createElement(U.b, {
+                      D.createElement(U.b, {
                         persona: this.props.player.persona,
                         size: "Large"
                       }),
-                      w.createElement(
+                      D.createElement(
                         "div",
                         { className: "labelHolder" },
                         this.props.player.primary_display_name,
                         !this.props.player.is_display_name_nickname &&
                           this.props.player.has_secondary_display_name &&
-                          w.createElement(
+                          D.createElement(
                             "span",
                             { className: "playerNickname" },
                             " (",
@@ -18987,70 +18359,70 @@
                             ")"
                           ),
                         this.props.player.is_display_name_nickname &&
-                          w.createElement(
+                          D.createElement(
                             "span",
                             {
                               className: "playerNicknameBracket",
-                              title: Object(M.c)("#isNickname")
+                              title: Object(T.c)("#isNickname")
                             },
                             "*"
                           )
                       )
                     )
                   ),
-                  w.createElement(s.e, {
+                  D.createElement(s.e, {
                     classname: "useDefaultsCheckBox",
-                    label: Object(M.c)("#FriendNotifications_UseDefaults"),
+                    label: Object(T.c)("#FriendNotifications_UseDefaults"),
                     onChange: function(e) {
                       t.OnDefaultToggled(e);
                     },
                     checked: this.state.bUseDefaults
                   }),
-                  w.createElement(
+                  D.createElement(
                     "div",
                     { className: "SettingsGroup" },
-                    w.createElement(
+                    D.createElement(
                       "div",
                       {
                         className:
                           "FriendsSettingsNotificationRow FriendsSettingsNotificationRow_Header"
                       },
-                      w.createElement(
+                      D.createElement(
                         "div",
                         { className: "FriendsSettingsNotificationRow_Label" },
-                        Object(M.c)("#FriendSettings_Notification_Table_Label")
+                        Object(T.c)("#FriendSettings_Notification_Table_Label")
                       ),
-                      w.createElement(
+                      D.createElement(
                         "div",
                         {
                           className: "FriendsSettingsNotificationRow_Checkbox"
                         },
-                        Object(M.c)("#FriendSettings_Notification_Table_Show")
+                        Object(T.c)("#FriendSettings_Notification_Table_Show")
                       ),
-                      w.createElement(
+                      D.createElement(
                         "div",
                         {
                           className: "FriendsSettingsNotificationRow_Checkbox"
                         },
-                        Object(M.c)("#FriendSettings_Notification_Table_Play")
+                        Object(T.c)("#FriendSettings_Notification_Table_Play")
                       )
                     ),
-                    w.createElement(e, {
-                      strLabel: Object(M.c)(
+                    D.createElement(e, {
+                      strLabel: Object(T.c)(
                         "#FriendSettings_FriendNotification_FriendJoins"
                       ),
                       strNameShow: "bNotifications_ShowIngame",
                       strNameSound: "bSounds_PlayIngame"
                     }),
-                    w.createElement(e, {
-                      strLabel: Object(M.c)(
+                    D.createElement(e, {
+                      strLabel: Object(T.c)(
                         "#FriendSettings_FriendNotification_FriendOnline"
                       ),
                       strNameShow: "bNotifications_ShowOnline",
                       strNameSound: "bSounds_PlayOnline"
                     }),
-                    w.createElement(e, {
-                      strLabel: Object(M.c)(
+                    D.createElement(e, {
+                      strLabel: Object(T.c)(
                         "#FriendSettings_Notification_ChatMessage"
                       ),
                       strNameShow: "bNotifications_ShowMessage",
@@ -19058,26 +18430,26 @@
                     })
                   )
                 ),
-                w.createElement(
+                D.createElement(
                   s.j,
                   null,
-                  w.createElement(s.t, { onCancel: this.props.closeModal })
+                  D.createElement(s.t, { onCancel: this.props.closeModal })
                 )
               )
             )
           );
         }),
-        Object(i.c)([a.a], e.prototype, "HandleSubmit", null),
-        Object(i.c)([a.a], e.prototype, "OnSettingToggled", null),
-        Object(i.c)([a.a], e.prototype, "FriendsSettingsCheckbox", null),
-        Object(i.c)([a.a], e.prototype, "NotificationRow", null),
-        Object(i.c)([a.a], e.prototype, "OnDefaultToggled", null),
-        (e = Object(i.c)([r.a], e))
+        Object(c.c)([r.a], e.prototype, "HandleSubmit", null),
+        Object(c.c)([r.a], e.prototype, "OnSettingToggled", null),
+        Object(c.c)([r.a], e.prototype, "FriendsSettingsCheckbox", null),
+        Object(c.c)([r.a], e.prototype, "NotificationRow", null),
+        Object(c.c)([r.a], e.prototype, "OnDefaultToggled", null),
+        (e = Object(c.c)([i.a], e))
       );
-    })(w.Component);
+    })(D.Component);
     function W(e, t, n, o) {
       return Object(g.a)(
-        w.createElement(Y, {
+        D.createElement(Y, {
           browserContext: e,
           context: t,
           friend: n,
@@ -19087,7 +18459,7 @@
       );
     }
     function z(e, t, n, o) {
-      return w.createElement(Y, {
+      return D.createElement(Y, {
         browserContext: e,
         context: t,
         friend: n,
@@ -19109,7 +18481,7 @@
       n.d(t, "a", function() {
         return ie;
       });
-    var q = Object(r.a)(function(e) {
+    var q = Object(i.a)(function(e) {
         var t = e.friend,
           n = [],
           o = t.persona_name_history,
@@ -19118,7 +18490,7 @@
           for (var r = 0, a = 0, s = o; a < s.length; a++) {
             var c = s[a];
             n.push(
-              w.createElement(
+              D.createElement(
                 "div",
                 { className: "recentName", key: "name_history_" + r },
                 c
@@ -19129,25 +18501,25 @@
         else
           i
             ? n.push(
-                w.createElement(
+                D.createElement(
                   "div",
                   { className: "recentName", key: "name_history_none" },
-                  Object(M.c)("#Friend_Menu_RecentAliases_None")
+                  Object(T.c)("#Friend_Menu_RecentAliases_None")
                 )
               )
             : n.push(
-                w.createElement(
+                D.createElement(
                   "div",
                   { className: "recentName", key: "name_history_loading" },
-                  Object(M.c)("#Friend_Menu_RecentAliases_Loading")
+                  Object(T.c)("#Friend_Menu_RecentAliases_Loading")
                 )
               );
-        return w.createElement(
-          w.Fragment,
+        return D.createElement(
+          D.Fragment,
           null,
-          w.createElement(
-            R.e,
-            { label: Object(M.c)("#Friend_Menu_RecentAliases") },
+          D.createElement(
+            L.e,
+            { label: Object(T.c)("#Friend_Menu_RecentAliases") },
             n
           )
         );
@@ -19157,7 +18529,7 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(i.d)(t, e),
+          Object(c.d)(t, e),
           (t.prototype.OnToggle = function(e) {
             this.props.group.ToggleMemberRoleState(
               this.props.friend.accountid,
@@ -19195,9 +18567,9 @@
                     o = i.props.group.BCanIAssignRole(t.role_id);
                   return (
                     t.role_id == r
-                      ? (n = Object(M.c)("#ChatRoomRole_Member"))
-                      : n.startsWith("#ChatRoomRole_") && (n = Object(M.c)(n)),
-                    w.createElement(Q, {
+                      ? (n = Object(T.c)("#ChatRoomRole_Member"))
+                      : n.startsWith("#ChatRoomRole_") && (n = Object(T.c)(n)),
+                    D.createElement(Q, {
                       key: t.role_id,
                       friend: i.props.friend,
                       group: i.props.group,
@@ -19210,51 +18582,51 @@
                 }),
               n =
                 s && !e
-                  ? Object(M.c)("#Friend_Menu_EditRoles")
-                  : Object(M.c)("#Friend_Menu_ViewRoles");
-            return w.createElement(
-              w.Fragment,
+                  ? Object(T.c)("#Friend_Menu_EditRoles")
+                  : Object(T.c)("#Friend_Menu_ViewRoles");
+            return D.createElement(
+              D.Fragment,
               null,
-              w.createElement(
-                R.e,
+              D.createElement(
+                L.e,
                 { label: n },
                 e
-                  ? w.createElement(
-                      R.d,
+                  ? D.createElement(
+                      L.d,
                       {
                         className: "FriendMenuRoleCheckbox disabled",
                         key: "role",
                         onSelected: function() {},
                         bInteractableItem: !0
                       },
-                      w.createElement(P.k, null),
-                      Object(M.c)("#ChatRoomRole_Owner")
+                      D.createElement(N.k, null),
+                      Object(T.c)("#ChatRoomRole_Owner")
                     )
                   : t
               )
             );
           }),
-          Object(i.c)([a.a], t.prototype, "OnToggle", null),
-          (t = Object(i.c)([r.a], t))
+          Object(c.c)([r.a], t.prototype, "OnToggle", null),
+          (t = Object(c.c)([i.a], t))
         );
-      })(w.Component),
+      })(D.Component),
       Y = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.state = { bCanCreateRemotePlayInvite: !1 }), e;
         }
         return (
-          Object(i.d)(e, t),
+          Object(c.d)(e, t),
           (e.prototype.componentDidMount = function() {
-            return Object(i.b)(this, void 0, void 0, function() {
+            return Object(c.b)(this, void 0, void 0, function() {
               var t;
-              return Object(i.e)(this, function(e) {
+              return Object(c.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return [
                       4,
-                      O.f.RemotePlayStore.BCanCreateInviteForGame(
-                        O.f.FriendStore.self.persona.m_gameid
+                      E.f.RemotePlayStore.BCanCreateInviteForGame(
+                        E.f.FriendStore.self.persona.m_gameid
                       )
                     ];
                   case 1:
@@ -19273,28 +18645,28 @@
           }),
           (e.prototype.InviteFriend = function() {
             var t = this;
-            O.f.FriendStore.SendFriendInvite(this.props.friend).then(function(
+            E.f.FriendStore.SendFriendInvite(this.props.friend).then(function(
               e
             ) {
               4 == e
                 ? Object(S.c)(
                     t.props.ownerWindow,
-                    Object(M.c)("#Friend_Menu_AddToFriendsList"),
-                    Object(M.c)("#Friend_InviteSent")
+                    Object(T.c)("#Friend_Menu_AddToFriendsList"),
+                    Object(T.c)("#Friend_InviteSent")
                   )
                 : 3 == e
                 ? Object(S.c)(
                     t.props.ownerWindow,
-                    Object(M.c)("#Friend_Menu_AddToFriendsList"),
-                    Object(M.c)(
+                    Object(T.c)("#Friend_Menu_AddToFriendsList"),
+                    Object(T.c)(
                       "#Friend_MutualInviteSent",
                       t.props.friend.display_name
                     )
                   )
                 : Object(S.c)(
                     t.props.ownerWindow,
-                    Object(M.c)("#Friend_Menu_AddToFriendsList"),
-                    Object(M.c)(
+                    Object(T.c)("#Friend_Menu_AddToFriendsList"),
+                    Object(T.c)(
                       "#Friend_InviteError",
                       t.props.friend.display_name
                     )
@@ -19303,22 +18675,22 @@
           }),
           (e.prototype.AcceptIncomingInvite = function() {
             var t = this;
-            O.f.FriendStore.SendFriendInvite(this.props.friend).then(function(
+            E.f.FriendStore.SendFriendInvite(this.props.friend).then(function(
               e
             ) {
               3 == e
                 ? Object(S.c)(
                     t.props.ownerWindow,
-                    Object(M.c)("#Friend_Menu_AddToFriendsList"),
-                    Object(M.c)(
+                    Object(T.c)("#Friend_Menu_AddToFriendsList"),
+                    Object(T.c)(
                       "#Friend_MutualInviteSent",
                       t.props.friend.display_name
                     )
                   )
                 : Object(S.c)(
                     t.props.ownerWindow,
-                    Object(M.c)("#Friend_Menu_AddToFriendsList"),
-                    Object(M.c)(
+                    Object(T.c)("#Friend_Menu_AddToFriendsList"),
+                    Object(T.c)(
                       "#Friend_InviteError",
                       t.props.friend.display_name
                     )
@@ -19327,20 +18699,20 @@
           }),
           (e.prototype.IgnoreIncomingInvite = function() {
             var t = this;
-            O.f.FriendStore.RemoveFriend(this.props.friend).then(function(e) {
+            E.f.FriendStore.RemoveFriend(this.props.friend).then(function(e) {
               1 == e
                 ? Object(S.c)(
                     t.props.ownerWindow,
-                    Object(M.c)("#Friend_Menu_IgnoreIncomingInvite"),
-                    Object(M.c)(
+                    Object(T.c)("#Friend_Menu_IgnoreIncomingInvite"),
+                    Object(T.c)(
                       "#Friend_IgnoreIncomingInvite_Success",
                       t.props.friend.display_name
                     )
                   )
                 : Object(S.c)(
                     t.props.ownerWindow,
-                    Object(M.c)("#Friend_Menu_IgnoreIncomingInvite"),
-                    Object(M.c)(
+                    Object(T.c)("#Friend_Menu_IgnoreIncomingInvite"),
+                    Object(T.c)(
                       "#Friend_IgnoreIncomingInvite_Error",
                       t.props.friend.display_name
                     )
@@ -19350,21 +18722,21 @@
           (e.prototype.RemoveFriend = function() {
             var t = this,
               e = 4 == this.props.friend.efriendrelationship,
-              n = Object(M.c)(
+              n = Object(T.c)(
                 e
                   ? "#Friend_Menu_CancelInvitation"
                   : "#Friend_Menu_RemoveFromFriendsList"
               ),
-              o = Object(M.c)(
+              o = Object(T.c)(
                 e
                   ? "#Friend_CancelInvitation_Confirm"
                   : "#Friend_RemoveFromFriendsList_Confirm",
                 this.props.friend.display_name
               ),
-              i = Object(M.c)(
+              i = Object(T.c)(
                 e ? "#Button_Confirm" : "#Friend_Menu_RemoveFromFriendsList"
               ),
-              r = Object(M.c)(
+              r = Object(T.c)(
                 e
                   ? "#Friend_CancelInvitation_Error"
                   : "#Friend_RemoveFromFriendsList_Error"
@@ -19374,11 +18746,11 @@
               n,
               o,
               i,
-              Object(M.c)("#Button_Cancel"),
+              Object(T.c)("#Button_Cancel"),
               !0
             )
               .then(function() {
-                O.f.FriendStore.RemoveFriend(t.props.friend).then(function(e) {
+                E.f.FriendStore.RemoveFriend(t.props.friend).then(function(e) {
                   (3 != e && 6 != e) || Object(S.c)(t.props.ownerWindow, n, r);
                 });
               })
@@ -19388,15 +18760,15 @@
             var e = this;
             Object(S.d)(
               this.props.ownerWindow,
-              Object(M.c)("#Friend_Menu_BlockAllCommunication"),
-              Object(M.c)(
+              Object(T.c)("#Friend_Menu_BlockAllCommunication"),
+              Object(T.c)(
                 "#Friend_Block_Confirm",
                 this.props.friend.display_name
               ),
-              Object(M.c)("#Friend_Menu_BlockAllCommunication")
+              Object(T.c)("#Friend_Menu_BlockAllCommunication")
             )
               .then(function() {
-                O.f.FriendStore.BlockPlayer(e.props.friend);
+                E.f.FriendStore.BlockPlayer(e.props.friend);
               })
               .catch(function() {});
           }),
@@ -19404,59 +18776,113 @@
             var e = this;
             Object(S.d)(
               this.props.ownerWindow,
-              Object(M.c)("#Friend_Menu_UnblockAllCommunication"),
-              Object(M.c)(
+              Object(T.c)("#Friend_Menu_UnblockAllCommunication"),
+              Object(T.c)(
                 "#Friend_Unblock_Confirm",
                 this.props.friend.display_name
               ),
-              Object(M.c)("#Friend_Menu_UnblockAllCommunication")
+              Object(T.c)("#Friend_Menu_UnblockAllCommunication")
             )
               .then(function() {
-                O.f.FriendStore.BlockPlayer(e.props.friend, !0);
+                E.f.FriendStore.BlockPlayer(e.props.friend, !0);
               })
               .catch(function() {});
           }),
           (e.prototype.InviteToGame = function(e) {
-            O.f.FriendStore.InviteToGame(this.props.friend, e);
+            E.f.FriendStore.InviteToGame(this.props.friend, e);
           }),
           (e.prototype.InviteToLobby = function(e, t) {
-            O.f.FriendStore.InviteToLobby(this.props.friend, e, t);
+            E.f.FriendStore.InviteToLobby(this.props.friend, e, t);
           }),
           (e.prototype.InviteToWatch = function() {
-            O.f.FriendStore.InviteToWatch(this.props.friend);
+            E.f.FriendStore.InviteToWatch(this.props.friend);
           }),
           (e.prototype.InviteToRemotePlay = function() {
-            var e = this.props.friend;
-            if (O.f.FriendStore.self != e) {
-              var t = 2 == e.efriendrelationship,
-                n = 4 == e.efriendrelationship,
-                o = e.persona.is_online && !t && !n && !e.is_blocked;
-              !O.f.VoiceStore.IsAnyVoiceActive() && o
-                ? O.f.UIStore.ShowFriendChatDialogAndStartVoice(
-                    O.f.GetDefaultBrowserContext(),
-                    e.accountid
-                  )
-                : O.f.UIStore.ShowFriendChatDialog(
-                    O.f.GetDefaultBrowserContext(),
-                    e.accountid,
-                    !0,
-                    !1
-                  ),
-                O.f.RemotePlayStore.CreateInviteAndSession(
-                  e.accountid,
-                  O.f.FriendStore.self.persona.m_gameid
-                ),
-                Object(c.a)(
-                  this.props.browserContext,
-                  O.f.FriendStore.self,
-                  this.props.ownerWindow,
-                  !0
-                );
-            }
+            return Object(c.b)(this, void 0, void 0, function() {
+              var t, n, o, i, r, a, s;
+              return Object(c.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return (
+                      (t = this.props.friend),
+                      E.f.FriendStore.self == t
+                        ? [2]
+                        : [
+                            4,
+                            E.f.RemotePlayStore.CreateInviteAndSession(
+                              t.accountid,
+                              E.f.FriendStore.self.persona.m_gameid
+                            )
+                          ]
+                    );
+                  case 1:
+                    if (0 === (n = e.sent()))
+                      return (
+                        (i = 2 == t.efriendrelationship),
+                        (r = 4 == t.efriendrelationship),
+                        (a = t.persona.is_online && !i && !r && !t.is_blocked),
+                        [4, E.f.RemotePlayStore.BCanIsolateGameAudio()]
+                      );
+                    switch (((o = ""), n)) {
+                      case 2:
+                        o = "#RemotePlay_ErrorInviteFailed_ScreenLocked";
+                        break;
+                      case 7:
+                        o = "#RemotePlay_ErrorInviteFailed_DriversNotInstalled";
+                        break;
+                      case 8:
+                        o = "#RemotePlay_ErrorInviteFailed_Disabled";
+                        break;
+                      case 9:
+                        o = "#RemotePlay_ErrorInviteFailed_BroadcastingActive";
+                        break;
+                      case 10:
+                        o = "#RemotePlay_ErrorInviteFailed_VRActive";
+                        break;
+                      case 12:
+                        o =
+                          "#RemotePlay_ErrorInviteFailed_TransportUnavailable";
+                        break;
+                      default:
+                        o = "#RemotePlay_ErrorInviteFailed_Failed";
+                    }
+                    return (
+                      Object(S.c)(
+                        this.props.ownerWindow,
+                        Object(T.c)("#RemotePlay_Error"),
+                        Object(T.c)(o)
+                      ),
+                      [2]
+                    );
+                  case 2:
+                    return (
+                      (s = e.sent()),
+                      !E.f.VoiceStore.IsAnyVoiceActive() && a && s
+                        ? E.f.UIStore.ShowFriendChatDialogAndStartVoice(
+                            E.f.GetDefaultBrowserContext(),
+                            t.accountid
+                          )
+                        : E.f.UIStore.ShowFriendChatDialog(
+                            E.f.GetDefaultBrowserContext(),
+                            t.accountid,
+                            !0,
+                            !1
+                          ),
+                      Object(l.a)(
+                        this.props.browserContext,
+                        E.f.FriendStore.self,
+                        this.props.ownerWindow,
+                        !0
+                      ),
+                      [2]
+                    );
+                }
+              });
+            });
           }),
           (e.prototype.CancelRemotePlay = function() {
             var e = this.props.friend;
-            O.f.RemotePlayStore.CancelInviteAndSession(e.accountid);
+            E.f.RemotePlayStore.CancelInviteAndSession(e.accountid);
           }),
           (e.prototype.InviteToVoice = function(e, t) {
             Object(B.k)(
@@ -19473,49 +18899,49 @@
               i = [],
               r = [],
               a = o.friend,
-              s = O.f.FriendStore.FavoritesStore,
-              c = O.f.FriendStore.self == a,
+              s = E.f.FriendStore.FavoritesStore,
+              c = E.f.FriendStore.self == a,
               l = "favorites" == n.chatContext,
               p = n.group;
-            !p && n.chat instanceof L.a && (p = n.chat.GetGroup());
+            !p && n.chat instanceof k.a && (p = n.chat.GetGroup());
             var u = !1,
               m = a.is_friend,
               d = 2 == a.efriendrelationship,
               h = 4 == a.efriendrelationship,
               f = d || 4 == a.efriendrelationship,
-              _ = O.f.FriendStore.self.persona.m_unGamePlayedAppID,
+              _ = E.f.FriendStore.self.persona.m_unGamePlayedAppID,
               g = a.persona.m_unGamePlayedAppID;
             n.chat &&
-              (n.chat instanceof j.a
+              (n.chat instanceof P.a
                 ? (e = n.chat).BVoiceActive() && (u = !0)
-                : n.chat instanceof L.a && n.chat.BVoiceActive() && (u = !0)),
+                : n.chat instanceof k.a && n.chat.BVoiceActive() && (u = !0)),
               m ||
                 d ||
                 c ||
                 i.push(
-                  w.createElement(
+                  D.createElement(
                     "div",
                     {
                       className: "contextMenuLabel contextMenuNotAFriend",
                       key: "header"
                     },
-                    Object(M.c)("#Friend_Menu_NotAFriendLabel")
+                    Object(T.c)("#Friend_Menu_NotAFriendLabel")
                   )
                 ),
               u &&
                 !c &&
-                i.push(w.createElement(J, { friend: this.props.friend })),
+                i.push(D.createElement(J, { friend: this.props.friend })),
               n.tab &&
                 i.push(
-                  w.createElement(
-                    R.d,
+                  D.createElement(
+                    L.d,
                     {
                       key: "closetab",
                       onSelected: function() {
-                        O.f.UIStore.CloseTab(o.browserContext, n.tab);
+                        E.f.UIStore.CloseTab(o.browserContext, n.tab);
                       }
                     },
-                    Object(M.c)("#Chat_CloseTabAction")
+                    Object(T.c)("#Chat_CloseTabAction")
                   )
                 ),
               e ||
@@ -19525,8 +18951,8 @@
                 c ||
                 a.is_blocked ||
                 i.push(
-                  w.createElement(
-                    R.d,
+                  D.createElement(
+                    L.d,
                     {
                       key: "chat",
                       className: m ? "" : "SendMessageContextNotFriends",
@@ -19534,31 +18960,31 @@
                         o.friend.OpenChatDialog(o.browserContext);
                       }
                     },
-                    Object(M.c)("#Friend_Menu_SendMessage")
+                    Object(T.c)("#Friend_Menu_SendMessage")
                   )
                 );
             var b =
                 a.persona.is_online && !e && !d && !h && !c && !a.is_blocked,
-              v = O.f.ChatStore.GetActiveVoiceChat();
+              v = E.f.ChatStore.GetActiveVoiceChat();
             if (
-              (v && v instanceof j.a && v.accountid_partner == a.accountid
+              (v && v instanceof P.a && v.accountid_partner == a.accountid
                 ? i.push(
-                    w.createElement(
-                      R.d,
+                    D.createElement(
+                      L.d,
                       {
                         key: "voicechat",
                         onSelected: function() {
                           v.ToggleVoiceChat();
                         }
                       },
-                      Object(M.c)("#Friend_Menu_StopVoiceChat")
+                      Object(T.c)("#Friend_Menu_StopVoiceChat")
                     )
                   )
                 : b &&
-                  (v instanceof L.a
+                  (v instanceof k.a
                     ? i.push(
-                        w.createElement(
-                          R.d,
+                        D.createElement(
+                          L.d,
                           {
                             key: "voicechat",
                             className: "contextVoiceInvite",
@@ -19566,35 +18992,35 @@
                               t.InviteToVoice(v, n);
                             }
                           },
-                          w.createElement(P.mb, null),
-                          Object(M.c)("#Chat_Actions_InviteFriend_VoiceChat")
+                          D.createElement(N.mb, null),
+                          Object(T.c)("#Chat_Actions_InviteFriend_VoiceChat")
                         )
                       )
                     : i.push(
-                        w.createElement(
-                          R.d,
+                        D.createElement(
+                          L.d,
                           {
                             key: "voicechat",
                             onSelected: function() {
-                              O.f.UIStore.ShowFriendChatDialogAndStartVoice(
+                              E.f.UIStore.ShowFriendChatDialogAndStartVoice(
                                 o.browserContext,
                                 a.accountid
                               );
                             }
                           },
-                          Object(M.c)("#Friend_Menu_StartVoiceChat")
+                          Object(T.c)("#Friend_Menu_StartVoiceChat")
                         )
                       )),
               i.push(
-                w.createElement(
-                  R.d,
+                D.createElement(
+                  L.d,
                   { key: "viewprofile", onSelected: this.ShowFriendProfile },
-                  Object(M.c)("#Friend_Menu_ViewProfile")
+                  Object(T.c)("#Friend_Menu_ViewProfile")
                 )
               ),
               p &&
                 i.push(
-                  w.createElement($, {
+                  D.createElement($, {
                     key: "moderationoptions",
                     friend: a,
                     bIsSelf: c,
@@ -19607,15 +19033,15 @@
               if (m) {
                 if (
                   (r.push(
-                    w.createElement(
-                      R.d,
+                    D.createElement(
+                      L.d,
                       {
                         key: "setnickname",
                         onSelected: function() {
-                          D(o.browserContext, o.friend, o.ownerWindow);
+                          G(o.browserContext, o.friend, o.ownerWindow);
                         }
                       },
-                      Object(M.c)(
+                      Object(T.c)(
                         o.friend.has_nickname
                           ? "#Friend_Menu_ChangeNickname"
                           : "#Friend_Menu_AddNickname"
@@ -19625,72 +19051,71 @@
                   s.BIsFavorited({ friend: a }))
                 )
                   (l ? i : r).push(
-                    w.createElement(
-                      R.d,
+                    D.createElement(
+                      L.d,
                       {
                         key: "quickaccess",
                         onSelected: function(e) {
-                          O.f.FriendStore.FavoritesStore.RemoveFromFavorites({
+                          E.f.FriendStore.FavoritesStore.RemoveFromFavorites({
                             friend: e
                           });
                         }.bind(null, a)
                       },
-                      Object(M.c)("#Friend_Menu_RemoveFromQuickAccess")
+                      Object(T.c)("#Friend_Menu_RemoveFromQuickAccess")
                     )
                   );
                 else
                   r.push(
-                    w.createElement(
-                      R.d,
+                    D.createElement(
+                      L.d,
                       {
                         key: "quickaccess",
                         onSelected: function(e) {
-                          O.f.FriendStore.FavoritesStore.AddToFavorites({
+                          E.f.FriendStore.FavoritesStore.AddToFavorites({
                             friend: e
                           });
                         }.bind(null, a)
                       },
-                      Object(M.c)("#Friend_Menu_AddToQuickAccess")
+                      Object(T.c)("#Friend_Menu_AddToQuickAccess")
                     )
                   );
-                if (
-                  (r.push(
-                    w.createElement(
-                      R.d,
-                      {
-                        key: "managecategories",
-                        onSelected: function() {
-                          var e, t, n;
-                          (e = o.browserContext),
-                            (t = o.ownerWindow),
-                            (n = o.friend),
-                            0 ==
-                            O.f.FriendStore.FriendGroupStore.user_groups.length
-                              ? T(e, t, n)
-                              : Object(E.b)(
-                                  w.createElement(G, {
-                                    browserContext: e,
-                                    friend: n
-                                  }),
-                                  t,
-                                  "AssignFriendCategoryDialog",
-                                  {
-                                    strTitle: Object(M.c)(
-                                      "#FriendGroup_Menu_CreateGroup"
-                                    ),
-                                    popupWidth: 664,
-                                    popupHeight: 580
-                                  },
-                                  Object(I.g)(t)
-                                );
-                        }
-                      },
-                      Object(M.c)("#FriendGroup_Menu_Categorize")
-                    )
-                  ),
+                r.push(
+                  D.createElement(
+                    L.d,
+                    {
+                      key: "managecategories",
+                      onSelected: function() {
+                        var e, t, n;
+                        (e = o.browserContext),
+                          (t = o.ownerWindow),
+                          (n = o.friend),
+                          0 ==
+                          E.f.FriendStore.FriendGroupStore.user_groups.length
+                            ? R(e, t, n)
+                            : Object(M.b)(
+                                D.createElement(j, {
+                                  browserContext: e,
+                                  friend: n
+                                }),
+                                t,
+                                "AssignFriendCategoryDialog",
+                                {
+                                  strTitle: Object(T.c)(
+                                    "#FriendGroup_Menu_CreateGroup"
+                                  ),
+                                  popupWidth: 664,
+                                  popupHeight: 580
+                                },
+                                Object(w.g)(t)
+                              );
+                      }
+                    },
+                    Object(T.c)("#FriendGroup_Menu_Categorize")
+                  )
+                ),
                   r.push(
-                    w.createElement(
-                      R.d,
+                    D.createElement(
+                      L.d,
                       {
                         key: "notifications",
                         onSelected: function() {
@@ -19698,240 +19123,221 @@
                             o.browserContext,
                             (e = o.friend),
                             (t = o.ownerWindow),
-                            void Object(E.b)(
-                              w.createElement(H, { player: e }),
+                            void Object(M.b)(
+                              D.createElement(H, { player: e }),
                               t,
                               "FriendNotificationsDialog",
                               {
-                                strTitle: Object(M.c)(
+                                strTitle: Object(T.c)(
                                   "#Friend_Menu_Notifications"
                                 ),
                                 popupWidth: 640,
                                 popupHeight: 490
                               },
-                              Object(I.g)(t)
+                              Object(w.g)(t)
                             )
                           );
                           var e, t;
                         }
                       },
-                      Object(M.c)("#Friend_Menu_Notifications")
+                      Object(T.c)("#Friend_Menu_Notifications")
                     )
                   ),
                   l ||
                     r.push(
-                      w.createElement(
-                        R.d,
+                      D.createElement(
+                        L.d,
                         { key: "removefriend", onSelected: this.RemoveFriend },
-                        Object(M.c)("#Friend_Menu_RemoveFromFriendsList")
+                        Object(T.c)("#Friend_Menu_RemoveFromFriendsList")
                       )
                     ),
-                  r.push(w.createElement(q, { key: "aliases", friend: a })),
-                  O.f.FriendStore.self.persona.is_ingame &&
-                    O.f.BroadcastStore.is_broadcast_capable &&
-                    i.push(
-                      w.createElement(
-                        R.d,
+                  r.push(D.createElement(q, { key: "aliases", friend: a }));
+                var S = [],
+                  y = void 0;
+                if (0 == _)
+                  y = D.createElement(
+                    "div",
+                    { className: "contextMenuGameItem" },
+                    D.createElement(
+                      "div",
+                      { className: "contextMenuGameName" },
+                      E.f.FriendStore.self.current_game_name
+                    )
+                  );
+                else {
+                  var C = E.f.AppInfoStore.GetAppInfo(_);
+                  y = D.createElement(
+                    "div",
+                    { className: "contextMenuGameItem" },
+                    D.createElement(
+                      "div",
+                      { className: "contextMenuGameIcon" },
+                      D.createElement("img", {
+                        className: "GameIcon",
+                        src: C.icon_url
+                      })
+                    ),
+                    D.createElement(
+                      "div",
+                      { className: "contextMenuGameName" },
+                      C.name
+                    )
+                  );
+                }
+                if (
+                  (E.f.FriendStore.self.persona.is_ingame &&
+                    E.f.BroadcastStore.is_broadcast_capable &&
+                    S.push(
+                      D.createElement(
+                        L.d,
                         {
+                          className: "contextMenuGameOptions",
                           key: "invitetowatch",
                           onSelected: function() {
                             t.InviteToWatch();
                           }
                         },
-                        Object(M.c)("#Friend_Menu_InviteToWatch")
+                        Object(T.c)("#Friend_Menu_InviteToWatch")
                       )
                     ),
-                  O.f.RemotePlayStore.BEnabled())
+                  0 != _ && "0" != E.f.FriendStore.self.persona.m_game_lobby_id
+                    ? S.push(
+                        D.createElement(
+                          L.d,
+                          {
+                            className: "contextMenuGameOptions",
+                            key: "lobbyinvite",
+                            onSelected: function() {
+                              t.InviteToLobby(
+                                _,
+                                E.f.FriendStore.self.persona.m_game_lobby_id
+                              );
+                            }
+                          },
+                          Object(T.c)("#Friend_Menu_InviteToLobby")
+                        )
+                      )
+                    : 0 != _ &&
+                      _ != g &&
+                      S.push(
+                        D.createElement(
+                          L.d,
+                          {
+                            className: "contextMenuGameOptions",
+                            key: "lobbyinvite",
+                            onSelected: function() {
+                              t.InviteToLobby(
+                                _,
+                                E.f.FriendStore.self.persona.m_game_lobby_id
+                              );
+                            }
+                          },
+                          Object(T.c)("#Friend_Menu_InviteToLobby")
+                        )
+                      ),
+                  E.f.RemotePlayStore.BEnabled())
                 ) {
-                  var S = this.props.friend;
-                  if (O.f.RemotePlayStore.HasInviteAndSession(S.accountid))
-                    i.push(
-                      w.createElement(
-                        R.d,
+                  var O = this.props.friend;
+                  E.f.RemotePlayStore.HasInviteAndSession(O.accountid)
+                    ? S.push(
+                        D.createElement(
+                          L.d,
+                          {
+                            className: "contextMenuGameOptions",
+                            key: "cancelremoteplay",
+                            onSelected: function() {
+                              t.CancelRemotePlay();
+                            }
+                          },
+                          Object(T.c)("#Friend_Menu_CancelRemotePlay")
+                        )
+                      )
+                    : this.state.bCanCreateRemotePlayInvite &&
+                      S.push(
+                        D.createElement(
+                          L.d,
+                          {
+                            className: "contextMenuGameOptions",
+                            key: "invitetoremoteplay",
+                            onSelected: function() {
+                              t.InviteToRemotePlay();
+                            }
+                          },
+                          Object(T.c)("#Friend_Menu_InviteToRemotePlay")
+                        )
+                      );
+                }
+                0 < S.length &&
+                  i.push(
+                    D.createElement(
+                      D.Fragment,
+                      null,
+                      D.createElement(
+                        L.d,
                         {
-                          key: "cancelremoteplay",
-                          onSelected: function() {
-                            t.CancelRemotePlay();
-                          }
+                          className:
+                            "contextMenuGameTitle contextMenuUnselectable",
+                          onSelected: null
                         },
-                        Object(M.c)("#Friend_Menu_CancelRemotePlay")
-                      )
-                    );
-                  else if (this.state.bCanCreateRemotePlayInvite)
-                    if (0 == _)
-                      i.push(
-                        w.createElement(
-                          R.d,
-                          {
-                            key: "invitetoremoteplay",
-                            onSelected: function() {
-                              t.InviteToRemotePlay();
-                            }
-                          },
-                          Object(M.c)("#Friend_Menu_InviteToRemotePlay"),
-                          w.createElement(
-                            "div",
-                            { className: "contextMenuGameItem" },
-                            w.createElement(
-                              "div",
-                              { className: "contextMenuGameName" },
-                              O.f.FriendStore.self.current_game_name
-                            )
-                          )
-                        )
-                      );
-                    else {
-                      var y = O.f.AppInfoStore.GetAppInfo(_);
-                      i.push(
-                        w.createElement(
-                          R.d,
-                          {
-                            key: "invitetoremoteplay",
-                            onSelected: function() {
-                              t.InviteToRemotePlay();
-                            }
-                          },
-                          Object(M.c)("#Friend_Menu_InviteToRemotePlay"),
-                          w.createElement(
-                            "div",
-                            { className: "contextMenuGameItem" },
-                            w.createElement(
-                              "div",
-                              { className: "contextMenuGameIcon" },
-                              w.createElement("img", {
-                                className: "GameIcon",
-                                src: y.icon_url
-                              })
-                            ),
-                            w.createElement(
-                              "div",
-                              { className: "contextMenuGameName" },
-                              y.name
-                            )
-                          )
-                        )
-                      );
-                    }
-                }
-                if (
-                  0 != _ &&
-                  "0" != O.f.FriendStore.self.persona.m_game_lobby_id
-                ) {
-                  y = O.f.AppInfoStore.GetAppInfo(_);
-                  i.push(
-                    w.createElement(
-                      R.d,
-                      {
-                        key: "lobbyinvite",
-                        onSelected: function() {
-                          t.InviteToLobby(
-                            _,
-                            O.f.FriendStore.self.persona.m_game_lobby_id
-                          );
-                        }
-                      },
-                      Object(M.c)("#Friend_Menu_InviteToLobby"),
-                      w.createElement(
+                        y
+                      ),
+                      D.createElement(
                         "div",
-                        { className: "contextMenuGameItem" },
-                        w.createElement(
-                          "div",
-                          { className: "contextMenuGameIcon" },
-                          w.createElement("img", {
-                            className: "GameIcon",
-                            src: y.icon_url
-                          })
-                        ),
-                        w.createElement(
-                          "div",
-                          { className: "contextMenuGameName" },
-                          y.name
-                        )
+                        { className: "contextMenuSectionContent" },
+                        S
                       )
                     )
-                  );
-                } else if (0 != _ && _ != g) {
-                  y = O.f.AppInfoStore.GetAppInfo(_);
-                  i.push(
-                    w.createElement(
-                      R.d,
-                      {
-                        key: "gameinvite",
-                        onSelected: function() {
-                          t.InviteToGame(_);
-                        }
-                      },
-                      Object(M.c)("#Friend_Menu_InviteToGame"),
-                      w.createElement(
-                        "div",
-                        { className: "contextMenuGameItem" },
-                        w.createElement(
-                          "div",
-                          { className: "contextMenuGameIcon" },
-                          w.createElement("img", {
-                            className: "GameIcon",
-                            src: y.icon_url
-                          })
-                        ),
-                        w.createElement(
-                          "div",
-                          { className: "contextMenuGameName" },
-                          y.name
-                        )
-                      )
-                    )
-                  );
-                }
-                i.push(w.createElement(X, { key: "trading", friend: a }));
+                  ),
+                  i.push(D.createElement(X, { key: "trading", friend: a }));
               } else
                 d
                   ? (i.push(
-                      w.createElement(
-                        R.d,
+                      D.createElement(
+                        L.d,
                         {
                           key: "acceptincominginvite",
                           onSelected: this.AcceptIncomingInvite
                         },
-                        Object(M.c)("#Friend_Menu_AcceptIncomingInvite")
+                        Object(T.c)("#Friend_Menu_AcceptIncomingInvite")
                       )
                     ),
                     i.push(
-                      w.createElement(
-                        R.d,
+                      D.createElement(
+                        L.d,
                         {
                           key: "ignoreincominginvite",
                           onSelected: this.IgnoreIncomingInvite
                         },
-                        Object(M.c)("#Friend_Menu_IgnoreIncomingInvite")
+                        Object(T.c)("#Friend_Menu_IgnoreIncomingInvite")
                       )
                     ),
-                    i.push(w.createElement(q, { key: "aliases", friend: a })))
+                    i.push(D.createElement(q, { key: "aliases", friend: a })))
                   : h
                   ? i.push(
-                      w.createElement(
-                        R.d,
+                      D.createElement(
+                        L.d,
                         { key: "remove", onSelected: this.RemoveFriend },
-                        Object(M.c)("#Friend_Menu_CancelInvitation")
+                        Object(T.c)("#Friend_Menu_CancelInvitation")
                       )
                     )
                   : i.push(
-                      w.createElement(
-                        R.d,
+                      D.createElement(
+                        L.d,
                         { key: "invite", onSelected: this.InviteFriend },
-                        Object(M.c)("#Friend_Menu_AddToFriendsList")
+                        Object(T.c)("#Friend_Menu_AddToFriendsList")
                       )
                     );
               f &&
                 i.push(
-                  w.createElement(
-                    R.d,
+                  D.createElement(
+                    L.d,
                     {
                       key: "setnickname",
                       onSelected: function() {
-                        D(o.browserContext, o.friend, o.ownerWindow);
+                        G(o.browserContext, o.friend, o.ownerWindow);
                       }
                     },
-                    Object(M.c)(
+                    Object(T.c)(
                       o.friend.has_nickname
                         ? "#Friend_Menu_ChangeNickname"
                         : "#Friend_Menu_AddNickname"
@@ -19940,15 +19346,15 @@
                 ),
                 (l && !a.is_blocked) ||
                   r.push(
-                    w.createElement(
-                      R.d,
+                    D.createElement(
+                      L.d,
                       {
                         key: "block",
                         onSelected: a.is_blocked
                           ? this.UnblockFriend
                           : this.BlockFriend
                       },
-                      Object(M.c)(
+                      Object(T.c)(
                         a.is_blocked
                           ? "#Friend_Menu_UnblockAllCommunication"
                           : "#Friend_Menu_BlockAllCommunication"
@@ -19957,74 +19363,74 @@
                   );
             }
             if (!i) return null;
-            var C = void 0;
+            var I = void 0;
             return (
               this.props.context &&
                 this.props.context.group &&
-                (C = this.props.context.group.GetMemberPartyBeacon(
+                (I = this.props.context.group.GetMemberPartyBeacon(
                   this.props.friend.accountid
                 )),
-              w.createElement(
-                R.c,
+              D.createElement(
+                L.c,
                 { className: "friendsContextMenu" },
                 i,
                 1 == r.length && r,
                 1 < r.length &&
-                  w.createElement(
-                    R.e,
-                    { label: Object(M.c)("#Friend_Menu_Manage") },
+                  D.createElement(
+                    L.e,
+                    { label: Object(T.c)("#Friend_Menu_Manage") },
                     r
                   ),
                 !!a.persona.m_broadcastAccountId &&
                   !c &&
-                  w.createElement(te, {
+                  D.createElement(te, {
                     friend: a,
                     ownerWindow: o.ownerWindow,
                     browserContext: o.browserContext
                   }),
                 !!a.persona.m_unGamePlayedAppID &&
                   !c &&
-                  w.createElement(ee, {
+                  D.createElement(ee, {
                     unAppID: a.persona.m_unGamePlayedAppID,
                     strGameName: a.current_game_name,
                     ulGameID: a.persona.m_gameid,
                     friend: a,
-                    partyBeacon: C
+                    partyBeacon: I
                   })
               )
             );
           }),
-          Object(i.c)([a.a], e.prototype, "ShowFriendProfile", null),
-          Object(i.c)([a.a], e.prototype, "InviteFriend", null),
-          Object(i.c)([a.a], e.prototype, "AcceptIncomingInvite", null),
-          Object(i.c)([a.a], e.prototype, "IgnoreIncomingInvite", null),
-          Object(i.c)([a.a], e.prototype, "RemoveFriend", null),
-          Object(i.c)([a.a], e.prototype, "BlockFriend", null),
-          Object(i.c)([a.a], e.prototype, "UnblockFriend", null),
-          Object(i.c)([a.a], e.prototype, "InviteToGame", null),
-          Object(i.c)([a.a], e.prototype, "InviteToLobby", null),
-          Object(i.c)([a.a], e.prototype, "InviteToWatch", null),
-          Object(i.c)([a.a], e.prototype, "InviteToRemotePlay", null),
-          Object(i.c)([a.a], e.prototype, "CancelRemotePlay", null),
-          Object(i.c)([a.a], e.prototype, "InviteToVoice", null),
+          Object(c.c)([r.a], e.prototype, "ShowFriendProfile", null),
+          Object(c.c)([r.a], e.prototype, "InviteFriend", null),
+          Object(c.c)([r.a], e.prototype, "AcceptIncomingInvite", null),
+          Object(c.c)([r.a], e.prototype, "IgnoreIncomingInvite", null),
+          Object(c.c)([r.a], e.prototype, "RemoveFriend", null),
+          Object(c.c)([r.a], e.prototype, "BlockFriend", null),
+          Object(c.c)([r.a], e.prototype, "UnblockFriend", null),
+          Object(c.c)([r.a], e.prototype, "InviteToGame", null),
+          Object(c.c)([r.a], e.prototype, "InviteToLobby", null),
+          Object(c.c)([r.a], e.prototype, "InviteToWatch", null),
+          Object(c.c)([r.a], e.prototype, "InviteToRemotePlay", null),
+          Object(c.c)([r.a], e.prototype, "CancelRemotePlay", null),
+          Object(c.c)([r.a], e.prototype, "InviteToVoice", null),
           e
         );
-      })(w.PureComponent),
+      })(D.PureComponent),
       J = (function(o) {
         function e(e) {
           var t = o.call(this, e) || this,
-            n = O.f.VoiceStore.ConvertGainValueToSliderValue(
-              O.f.VoiceStore.GetPerUserGainLevel(t.props.friend.accountid),
+            n = E.f.VoiceStore.ConvertGainValueToSliderValue(
+              E.f.VoiceStore.GetPerUserGainLevel(t.props.friend.accountid),
               y.a.k_MaxPerUserGainMultiplier
             );
           return (t.state = { volumeNumber: n }), t;
         }
         return (
-          Object(i.d)(e, o),
+          Object(c.d)(e, o),
           (e.prototype.OnFriendVolumeChanged = function(e) {
-            O.f.VoiceStore.SetPerUserGainLevel(
+            E.f.VoiceStore.SetPerUserGainLevel(
               this.props.friend.accountid,
-              O.f.VoiceStore.ConvertSliderToGainValue(
+              E.f.VoiceStore.ConvertSliderToGainValue(
                 e,
                 y.a.k_MaxPerUserGainMultiplier
               )
@@ -20032,10 +19438,10 @@
               this.setState({ volumeNumber: e });
           }),
           (e.prototype.OnMutingClick = function(e) {
-            var t = O.f.VoiceStore.GetPerUserMuting(
+            var t = E.f.VoiceStore.GetPerUserMuting(
               this.props.friend.accountid
             );
-            O.f.VoiceStore.SetPerUserMuting(this.props.friend.accountid, !t),
+            E.f.VoiceStore.SetPerUserMuting(this.props.friend.accountid, !t),
               this.forceUpdate();
           }),
           (e.prototype.OnInlineVolumeClick = function(e) {
@@ -20044,7 +19450,7 @@
           (e.prototype.render = function() {
             var e = this.state.volumeNumber,
               t = "VolumeIcon",
-              n = O.f.VoiceStore.GetPerUserMuting(this.props.friend.accountid);
+              n = E.f.VoiceStore.GetPerUserMuting(this.props.friend.accountid);
             return (
               65 < e
                 ? (t += " HighestVolume")
@@ -20053,32 +19459,32 @@
                 : e < 46 && 24 < e
                 ? (t += " MedVolume")
                 : e < 25 && (t += " LowVolume"),
-              w.createElement(
-                R.d,
+              D.createElement(
+                L.d,
                 {
                   key: "volume",
                   onSelected: function() {},
                   bInteractableItem: !0
                 },
-                w.createElement(
+                D.createElement(
                   "div",
                   {
                     className: "InlineVolume" + (n ? " Muted" : ""),
                     onClick: this.OnInlineVolumeClick
                   },
-                  w.createElement(
+                  D.createElement(
                     "button",
                     { className: t, onClick: this.OnMutingClick },
-                    w.createElement(P.nb, null)
+                    D.createElement(N.nb, null)
                   ),
-                  w.createElement(s.A, {
+                  D.createElement(s.A, {
                     min: 0,
                     max: 100,
                     label: "",
                     value: e,
                     onChange: this.OnFriendVolumeChanged
                   }),
-                  w.createElement(
+                  D.createElement(
                     "div",
                     { className: "volumePercentage" },
                     2 * e,
@@ -20088,18 +19494,18 @@
               )
             );
           }),
-          Object(i.c)([a.a], e.prototype, "OnFriendVolumeChanged", null),
-          Object(i.c)([a.a], e.prototype, "OnMutingClick", null),
-          Object(i.c)([a.a], e.prototype, "OnInlineVolumeClick", null),
-          (e = Object(i.c)([r.a], e))
+          Object(c.c)([r.a], e.prototype, "OnFriendVolumeChanged", null),
+          Object(c.c)([r.a], e.prototype, "OnMutingClick", null),
+          Object(c.c)([r.a], e.prototype, "OnInlineVolumeClick", null),
+          (e = Object(c.c)([i.a], e))
         );
-      })(w.Component),
+      })(D.Component),
       Q = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(i.d)(t, e),
+          Object(c.d)(t, e),
           (t.prototype.OnChange = function(e) {
             this.props.group.SetMemberRoleState(
               this.props.friend.accountid,
@@ -20108,8 +19514,8 @@
             );
           }),
           (t.prototype.render = function() {
-            return w.createElement(
-              R.d,
+            return D.createElement(
+              L.d,
               {
                 className:
                   "FriendMenuRoleCheckbox" +
@@ -20118,7 +19524,7 @@
                 onSelected: function() {},
                 bInteractableItem: !0
               },
-              w.createElement(s.e, {
+              D.createElement(s.e, {
                 label: this.props.roleName,
                 checked: this.props.bHasRole,
                 onChange: this.OnChange,
@@ -20126,21 +19532,21 @@
               })
             );
           }),
-          Object(i.c)([a.a], t.prototype, "OnChange", null),
-          (t = Object(i.c)([r.a], t))
+          Object(c.c)([r.a], t.prototype, "OnChange", null),
+          (t = Object(c.c)([i.a], t))
         );
-      })(w.Component),
+      })(D.Component),
       X = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(i.d)(t, e),
+          Object(c.d)(t, e),
           (t.prototype.SendTradeOffer = function(e) {
             var t = "NewTradeOffer" + this.props.friend.accountid;
             Object(p.n)(e)
               .open(
-                O.f.EconomyStore.GetDefaultTradeOfferURLForFriend(
+                E.f.EconomyStore.GetDefaultTradeOfferURLForFriend(
                   this.props.friend.accountid
                 ),
                 t,
@@ -20150,30 +19556,30 @@
           }),
           (t.prototype.render = function() {
             var e = this.props.friend;
-            return w.createElement(
-              R.e,
-              { label: Object(M.c)("#FriendMenu_Trading") },
-              w.createElement(Z, { friend: e }),
-              w.createElement(
-                R.d,
+            return D.createElement(
+              L.e,
+              { label: Object(T.c)("#FriendMenu_Trading") },
+              D.createElement(Z, { friend: e }),
+              D.createElement(
+                L.d,
                 { onSelected: this.SendTradeOffer },
-                Object(M.c)("#FriendMenu_SendTradeOffer")
+                Object(T.c)("#FriendMenu_SendTradeOffer")
               )
             );
           }),
-          Object(i.c)([a.a], t.prototype, "SendTradeOffer", null),
+          Object(c.c)([r.a], t.prototype, "SendTradeOffer", null),
           t
         );
-      })(w.Component);
+      })(D.Component);
     function Z(t) {
-      return w.createElement(
-        R.d,
+      return D.createElement(
+        L.d,
         {
           onSelected: function(e) {
             Object(v.e)(e, t.friend.GetCommunityProfileURL() + "inventory/");
           }
         },
-        Object(M.c)("#FriendMenu_ViewInventory")
+        Object(T.c)("#FriendMenu_ViewInventory")
       );
     }
     var $ = (function(e) {
@@ -20181,23 +19587,23 @@
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(i.d)(t, e),
+          Object(c.d)(t, e),
           (t.prototype.BanFriend = function() {
-            return Object(i.b)(this, void 0, void 0, function() {
-              return Object(i.e)(this, function(e) {
+            return Object(c.b)(this, void 0, void 0, function() {
+              return Object(c.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return [
                       4,
                       Object(S.a)(
                         this.props.ownerWindow,
-                        Object(M.c)("#Friend_Ban"),
-                        Object(M.c)(
+                        Object(T.c)("#Friend_Ban"),
+                        Object(T.c)(
                           "#Friend_Ban_Confirm",
                           this.props.friend.display_name
                         ),
-                        Object(M.c)("#Friend_Ban_Button"),
-                        Object(M.c)("#Button_Cancel"),
+                        Object(T.c)("#Friend_Ban_Button"),
+                        Object(T.c)("#Button_Cancel"),
                         !0
                       )
                     ];
@@ -20222,10 +19628,10 @@
             new Promise(function(e, t) {
               var n = Object(S.b)(
                 r,
-                Object(M.c)("#Friend_Kick", o.props.friend.display_name)
+                Object(T.c)("#Friend_Kick", o.props.friend.display_name)
               );
-              Object(E.b)(
-                w.createElement(se, {
+              Object(M.b)(
+                D.createElement(se, {
                   OnOK: e,
                   OnCancel: t,
                   OnSet: function(e) {
@@ -20235,7 +19641,7 @@
                 r,
                 "alertdialog",
                 n,
-                Object(I.g)(r)
+                Object(w.g)(r)
               );
             })
               .then(function() {
@@ -20255,32 +19661,32 @@
                 ? (!this.props.bIsSelf &&
                     n.BCanKick() &&
                     e.push(
-                      w.createElement(
-                        R.d,
+                      D.createElement(
+                        L.d,
                         {
                           disabled: !n.BCanKickMember(t.accountid),
                           key: "kick",
                           onSelected: this.OnKickFriend
                         },
-                        Object(M.c)("#Friend_Menu_KickFromChatRoom")
+                        Object(T.c)("#Friend_Menu_KickFromChatRoom")
                       )
                     ),
                   !this.props.bIsSelf &&
                     n.BCanBan() &&
                     e.push(
-                      w.createElement(
-                        R.d,
+                      D.createElement(
+                        L.d,
                         {
                           disabled: !n.BCanBanMember(t.accountid),
                           key: "ban",
                           onSelected: this.BanFriend
                         },
-                        Object(M.c)("#Friend_Menu_Ban")
+                        Object(T.c)("#Friend_Menu_Ban")
                       )
                     ),
                   n &&
                     e.push(
-                      w.createElement(K, {
+                      D.createElement(K, {
                         key: "editroles",
                         friend: t,
                         group: n,
@@ -20288,20 +19694,20 @@
                       })
                     ))
                 : e.push(
-                    w.createElement(
-                      R.d,
+                    D.createElement(
+                      L.d,
                       { disabled: !0, key: "notmember", onSelected: null },
-                      Object(M.c)("#Friend_Menu_HasLeftChat")
+                      Object(T.c)("#Friend_Menu_HasLeftChat")
                     )
                   ),
               e
             );
           }),
-          Object(i.c)([a.a], t.prototype, "BanFriend", null),
-          Object(i.c)([a.a], t.prototype, "OnKickFriend", null),
+          Object(c.c)([r.a], t.prototype, "BanFriend", null),
+          Object(c.c)([r.a], t.prototype, "OnKickFriend", null),
           t
         );
-      })(w.Component),
+      })(D.Component),
       ee = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -20322,7 +19728,7 @@
           );
         }
         return (
-          Object(i.d)(e, n),
+          Object(c.d)(e, n),
           (e.prototype.ShowStorePage = function(e) {
             var t = b.a.STORE_BASE_URL + "app/" + this.props.unAppID;
             Object(v.e)(e, t), e.stopPropagation();
@@ -20338,11 +19744,11 @@
             Object(v.e)(e, t), e.stopPropagation();
           }),
           (e.prototype.WatchGame = function(e) {
-            O.f.UIStore.SetFriendBroadcastVisible(
+            E.f.UIStore.SetFriendBroadcastVisible(
               this.props.friend.steamid64,
               !0
             ),
-              this.props.friend.OpenChatDialog(Object(I.e)(this, e));
+              this.props.friend.OpenChatDialog(Object(w.e)(this, e));
           }),
           (e.prototype.JoinGame = function(t) {
             var n = this,
@@ -20391,34 +19797,34 @@
             var e = [],
               t = void 0,
               n = this.props.friend,
-              o = O.f.AppInfoStore.GetAppInfo(this.props.unAppID);
+              o = E.f.AppInfoStore.GetAppInfo(this.props.unAppID);
             if (!o.is_valid) return null;
             if (o.is_initialized)
               if (this.props.bShowLargeHeader)
-                t = w.createElement(
+                t = D.createElement(
                   "div",
                   { className: "contextMenuGameHeader" },
-                  w.createElement("img", {
+                  D.createElement("img", {
                     className: "GameHeader",
                     src: o.logo_url
                   })
                 );
               else {
-                var i = w.createElement(
+                var i = D.createElement(
                   "span",
                   { className: "contextMenuGameName" },
-                  Object(M.c)(
+                  Object(T.c)(
                     "#Friend_Menu_ViewGameStorePageGameName",
                     this.props.strGameName || o.name
                   )
                 );
-                t = w.createElement(
+                t = D.createElement(
                   "div",
                   { className: "contextMenuGameItem" },
-                  w.createElement(
+                  D.createElement(
                     "div",
                     { className: "contextMenuGameIcon" },
-                    w.createElement("img", {
+                    D.createElement("img", {
                       className: "GameIcon",
                       src: o.icon_url
                     })
@@ -20429,121 +19835,121 @@
             return (
               void 0 === this.state.bIsSubscribedToApp
                 ? e.push(
-                    w.createElement(
-                      R.d,
+                    D.createElement(
+                      L.d,
                       {
                         className:
                           "contextMenuGameOptions contextMenuPlayButton",
                         key: "showinsteam",
                         onSelected: this.ShowInSteam
                       },
-                      w.createElement(P.O, null),
-                      Object(M.c)("#Friend_Menu_ShowInSteam")
+                      D.createElement(N.O, null),
+                      Object(T.c)("#Friend_Menu_ShowInSteam")
                     )
                   )
                 : this.state.bIsSubscribedToApp &&
                   (this.props.partyBeacon
                     ? e.push(
-                        w.createElement(
-                          R.d,
+                        D.createElement(
+                          L.d,
                           {
                             className:
                               "contextMenuGameOptions contextMenuPlayButton contextMenuPartyBeacon",
                             key: "joinparty",
                             onSelected: this.JoinPartyBeacon
                           },
-                          w.createElement(P.O, null),
-                          Object(M.c)("#Friend_Menu_JoinFriendPartyBeacon")
+                          D.createElement(N.O, null),
+                          Object(T.c)("#Friend_Menu_JoinFriendPartyBeacon")
                         )
                       )
                     : n &&
                       (n.persona.is_in_joinable_game ||
                         n.persona.is_in_valid_lobby) &&
                       e.push(
-                        w.createElement(
-                          R.d,
+                        D.createElement(
+                          L.d,
                           {
                             className:
                               "contextMenuGameOptions contextMenuPlayButton",
                             key: "joingame",
                             onSelected: this.JoinGame
                           },
-                          w.createElement(P.O, null),
-                          Object(M.c)("#Friend_Menu_JoinFriendGame")
+                          D.createElement(N.O, null),
+                          Object(T.c)("#Friend_Menu_JoinFriendGame")
                         )
                       ),
                   e.push(
-                    w.createElement(
-                      R.d,
+                    D.createElement(
+                      L.d,
                       {
                         className:
                           "contextMenuGameOptions contextMenuPlayButton",
                         key: "launchgame",
                         onSelected: this.LaunchGame
                       },
-                      w.createElement(P.O, null),
-                      Object(M.c)("#Friend_Menu_LaunchFriendGame")
+                      D.createElement(N.O, null),
+                      Object(T.c)("#Friend_Menu_LaunchFriendGame")
                     )
                   )),
               n &&
                 e.push(
-                  w.createElement(
-                    R.d,
+                  D.createElement(
+                    L.d,
                     {
                       className: "contextMenuGameOptions",
                       key: "watchgame",
                       onSelected: this.WatchGame
                     },
-                    Object(M.c)("#Friend_Menu_WatchFriendGame")
+                    Object(T.c)("#Friend_Menu_WatchFriendGame")
                   )
                 ),
               n &&
                 this.state.bShowViewGameInfo &&
                 e.push(
-                  w.createElement(
-                    R.d,
+                  D.createElement(
+                    L.d,
                     {
                       className: "contextMenuGameOptions",
                       key: "viewgameinfo",
                       onSelected: this.ViewGameInfo
                     },
-                    Object(M.c)("#Friend_Menu_ViewGameInfo")
+                    Object(T.c)("#Friend_Menu_ViewGameInfo")
                   )
                 ),
               e.push(
-                w.createElement(
-                  R.d,
+                D.createElement(
+                  L.d,
                   {
                     className: "contextMenuGameOptions",
                     key: "viewstorepage",
                     onSelected: this.ShowStorePage
                   },
-                  Object(M.c)("#Friend_Menu_ViewGameStorePage")
+                  Object(T.c)("#Friend_Menu_ViewGameStorePage")
                 )
               ),
               e.push(
-                w.createElement(
-                  R.d,
+                D.createElement(
+                  L.d,
                   {
                     className: "contextMenuGameOptions",
                     key: "viewcommunityhub",
                     onSelected: this.ShowCommunityHub
                   },
-                  Object(M.c)("#Friend_Menu_ViewCommunityHub")
+                  Object(T.c)("#Friend_Menu_ViewCommunityHub")
                 )
               ),
-              w.createElement(
-                w.Fragment,
+              D.createElement(
+                D.Fragment,
                 null,
-                w.createElement(
-                  R.d,
+                D.createElement(
+                  L.d,
                   {
                     className: "contextMenuGameTitle contextMenuUnselectable",
                     onSelected: null
                   },
                   t
                 ),
-                w.createElement(
+                D.createElement(
                   "div",
                   { className: "contextMenuSectionContent" },
                   e
@@ -20551,74 +19957,74 @@
               )
             );
           }),
-          Object(i.c)([a.a], e.prototype, "ShowStorePage", null),
-          Object(i.c)([a.a], e.prototype, "ShowCommunityHub", null),
-          Object(i.c)([a.a], e.prototype, "LaunchGame", null),
-          Object(i.c)([a.a], e.prototype, "WatchGame", null),
-          Object(i.c)([a.a], e.prototype, "JoinGame", null),
-          Object(i.c)([a.a], e.prototype, "ViewGameInfo", null),
-          Object(i.c)([a.a], e.prototype, "ShowInSteam", null),
-          Object(i.c)([a.a], e.prototype, "JoinPartyBeacon", null),
-          (e = Object(i.c)([r.a], e))
+          Object(c.c)([r.a], e.prototype, "ShowStorePage", null),
+          Object(c.c)([r.a], e.prototype, "ShowCommunityHub", null),
+          Object(c.c)([r.a], e.prototype, "LaunchGame", null),
+          Object(c.c)([r.a], e.prototype, "WatchGame", null),
+          Object(c.c)([r.a], e.prototype, "JoinGame", null),
+          Object(c.c)([r.a], e.prototype, "ViewGameInfo", null),
+          Object(c.c)([r.a], e.prototype, "ShowInSteam", null),
+          Object(c.c)([r.a], e.prototype, "JoinPartyBeacon", null),
+          (e = Object(c.c)([i.a], e))
         );
-      })(w.Component),
+      })(D.Component),
       te = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(i.d)(t, e),
+          Object(c.d)(t, e),
           (t.prototype.WatchStream = function() {
             var e = this.props.browserContext,
               t = this.props.friend,
               n = t.persona.m_broadcastAccountId;
-            O.f.UIStore.ShowOrActivateBroadcast(e, n, !0).ShowWatchPromptDialog(
+            E.f.UIStore.ShowOrActivateBroadcast(e, n, !0).ShowWatchPromptDialog(
               t
             );
           }),
           (t.prototype.render = function() {
             var e = this.props.friend;
-            return w.createElement(
-              w.Fragment,
+            return D.createElement(
+              D.Fragment,
               null,
-              w.createElement(
-                R.d,
+              D.createElement(
+                L.d,
                 {
                   className: "contextMenuBroadcast contextMenuUnselectable",
                   onSelected: null
                 },
-                w.createElement(
+                D.createElement(
                   "div",
                   { className: "contextMenuBroadcastTitle" },
-                  Object(M.c)("#Broadcast_Watching")
+                  Object(T.c)("#Broadcast_Watching")
                 ),
-                w.createElement(
+                D.createElement(
                   "div",
                   { className: "contextMenuBroadcastSubtitle" },
                   e.GetBroadcastDescription()
                 )
               ),
-              w.createElement(
+              D.createElement(
                 "div",
                 { className: "contextMenuSectionContent" },
-                w.createElement(
-                  R.d,
+                D.createElement(
+                  L.d,
                   {
                     className: "contextMenuGameOptions",
                     onSelected: this.WatchStream
                   },
-                  Object(M.c)("#Broadcast_WatchStream")
+                  Object(T.c)("#Broadcast_WatchStream")
                 )
               )
             );
           }),
-          Object(i.c)([a.a], t.prototype, "WatchStream", null),
-          (t = Object(i.c)([r.a], t))
+          Object(c.c)([r.a], t.prototype, "WatchStream", null),
+          (t = Object(c.c)([i.a], t))
         );
-      })(w.Component);
+      })(D.Component);
     function ne(e, t, n) {
       return Object(g.a)(
-        w.createElement(oe, {
+        D.createElement(oe, {
           browserContext: e,
           group: t,
           ownerWindow: n.currentTarget.ownerDocument.defaultView
@@ -20632,8 +20038,8 @@
         o.group &&
           o.group.modifiable &&
           (e.push(
-            w.createElement(
-              R.d,
+            D.createElement(
+              L.d,
               {
                 key: "managegroup",
                 onSelected: function() {
@@ -20641,8 +20047,8 @@
                   (e = o.browserContext),
                     (t = o.group),
                     (n = o.ownerWindow),
-                    Object(E.b)(
-                      w.createElement(h, {
+                    Object(M.b)(
+                      D.createElement(h, {
                         browserContext: e,
                         group: t,
                         rgPreSelectedFriends: t.member_accountid_list
@@ -20650,49 +20056,49 @@
                       n,
                       "CreateFriendCategoryDialog",
                       {
-                        strTitle: Object(M.c)("#FriendGroup_Menu_Manage"),
+                        strTitle: Object(T.c)("#FriendGroup_Menu_Manage"),
                         popupWidth: 664,
                         popupHeight: 700
                       },
-                      Object(I.g)(n)
+                      Object(w.g)(n)
                     );
                 }
               },
-              Object(M.c)("#FriendGroup_Menu_Manage")
+              Object(T.c)("#FriendGroup_Menu_Manage")
             )
           ),
           e.push(
-            w.createElement(
-              R.d,
+            D.createElement(
+              L.d,
               {
                 key: "removegroup",
                 onSelected: function() {
-                  O.f.FriendStore.FriendGroupStore.RemoveGroup(o.group);
+                  E.f.FriendStore.FriendGroupStore.RemoveGroup(o.group);
                 }
               },
-              Object(M.c)("#FriendGroup_Menu_Remove")
+              Object(T.c)("#FriendGroup_Menu_Remove")
             )
           )),
-        w.createElement(
-          R.c,
+        D.createElement(
+          L.c,
           { className: "friendsContextMenu" },
           e,
-          w.createElement(
-            R.d,
+          D.createElement(
+            L.d,
             {
               key: "creategroup",
               onSelected: function() {
-                T(o.browserContext, o.ownerWindow);
+                R(o.browserContext, o.ownerWindow);
               }
             },
-            Object(M.c)("#FriendGroup_Menu_CreateGroup")
+            Object(T.c)("#FriendGroup_Menu_CreateGroup")
           )
         )
       );
     }
     function ie(e, t) {
       return Object(g.a)(
-        w.createElement(re, {
+        D.createElement(re, {
           browserContext: e,
           ownerWindow: t.currentTarget.ownerDocument.defaultView
         }),
@@ -20704,154 +20110,154 @@
           return t.call(this, e) || this;
         }
         return (
-          Object(i.d)(e, t),
+          Object(c.d)(e, t),
           (e.prototype.SetUserOnline = function() {
-            O.f.FriendStore.SetUserPersonaState(1);
+            E.f.FriendStore.SetUserPersonaState(1);
           }),
           (e.prototype.SetUserInvisible = function() {
-            O.f.FriendStore.SetUserPersonaState(7);
+            E.f.FriendStore.SetUserPersonaState(7);
           }),
           (e.prototype.SetUserAway = function() {
-            O.f.FriendStore.SetUserPersonaState(3);
+            E.f.FriendStore.SetUserPersonaState(3);
           }),
           (e.prototype.SetUserOffline = function() {
-            O.f.SignOutOfFriends(this.props.browserContext);
+            E.f.SignOutOfFriends(this.props.browserContext);
           }),
           (e.prototype.ToggleUserDND = function() {
-            O.f.FriendStore.SetUserDoNotDisturb(
-              !O.f.FriendStore.GetUserDoNotDisturb()
+            E.f.FriendStore.SetUserDoNotDisturb(
+              !E.f.FriendStore.GetUserDoNotDisturb()
             );
           }),
           (e.prototype.ShowUserProfile = function(e) {
-            var t = O.f.FriendStore.self.GetCommunityProfileURL();
+            var t = E.f.FriendStore.self.GetCommunityProfileURL();
             Object(v.e)(e, t), e.stopPropagation();
           }),
           (e.prototype.EditProfile = function(e) {
-            var t = O.f.FriendStore.self.GetCommunityProfileURL() + "edit";
+            var t = E.f.FriendStore.self.GetCommunityProfileURL() + "edit";
             Object(v.e)(e, t), e.stopPropagation();
           }),
           (e.prototype.EditName = function(e) {
             var t;
             this.props.browserContext,
               (t = this.props.ownerWindow),
-              Object(E.b)(
-                w.createElement(A, null),
+              Object(M.b)(
+                D.createElement(A, null),
                 t,
                 "ChangePersonaDialog",
                 {
-                  strTitle: Object(M.c)("#Friend_Menu_AddNickname"),
+                  strTitle: Object(T.c)("#Friend_Menu_AddNickname"),
                   popupWidth: 640,
                   popupHeight: 400
                 },
-                Object(I.g)(t)
+                Object(w.g)(t)
               );
           }),
           (e.prototype.render = function() {
             var e = [],
               t = [],
-              n = 1 == O.f.FriendStore.self.persona.m_ePersonaState;
+              n = 1 == E.f.FriendStore.self.persona.m_ePersonaState;
             e.push(
-              w.createElement(
-                R.b,
+              D.createElement(
+                L.b,
                 {
                   key: "state_online",
                   bChecked: n,
                   onSelected: this.SetUserOnline
                 },
-                Object(M.c)("#PersonaStateOnline")
+                Object(T.c)("#PersonaStateOnline")
               )
             );
-            var o = 3 == O.f.FriendStore.self.persona.m_ePersonaState;
+            var o = 3 == E.f.FriendStore.self.persona.m_ePersonaState;
             e.push(
-              w.createElement(
-                R.b,
+              D.createElement(
+                L.b,
                 {
                   key: "state_away",
                   bChecked: o,
                   onSelected: this.SetUserAway
                 },
-                Object(M.c)("#PersonaStateAway")
+                Object(T.c)("#PersonaStateAway")
               )
             );
-            var i = 7 == O.f.FriendStore.self.persona.m_ePersonaState;
+            var i = 7 == E.f.FriendStore.self.persona.m_ePersonaState;
             if (
               (e.push(
-                w.createElement(
-                  R.b,
+                D.createElement(
+                  L.b,
                   {
                     key: "state_invisible",
                     className: "personaContextMenuItem",
                     bChecked: i,
                     onSelected: this.SetUserInvisible
                   },
-                  Object(M.c)("#PersonaStateInvisible"),
-                  w.createElement(
+                  Object(T.c)("#PersonaStateInvisible"),
+                  D.createElement(
                     "div",
                     { className: "persona_menu_descriptor" },
-                    Object(M.c)("#PersonaStateInvisibleDescriptor")
+                    Object(T.c)("#PersonaStateInvisibleDescriptor")
                   )
                 )
               ),
               b.a.IN_CLIENT &&
-                O.f.SettingsStore.BClientHasFeatureOrOnWeb("DoNotDisturb"))
+                E.f.SettingsStore.BClientHasFeatureOrOnWeb("DoNotDisturb"))
             ) {
-              var r = 0 == O.f.FriendStore.self.persona.m_ePersonaState;
+              var r = 0 == E.f.FriendStore.self.persona.m_ePersonaState;
               e.push(
-                w.createElement(
-                  R.b,
+                D.createElement(
+                  L.b,
                   {
                     key: "state_offline",
                     className: "personaContextMenuItem",
                     bChecked: r,
                     onSelected: this.SetUserOffline
                   },
-                  Object(M.c)("#PersonaStateOffline"),
-                  w.createElement(
+                  Object(T.c)("#PersonaStateOffline"),
+                  D.createElement(
                     "div",
                     { className: "persona_menu_descriptor" },
-                    Object(M.c)("#PersonaStateOfflineDescriptor")
+                    Object(T.c)("#PersonaStateOfflineDescriptor")
                   )
                 )
               );
             }
-            if (O.f.SettingsStore.BClientHasFeatureOrOnWeb("DoNotDisturb")) {
-              var a = O.f.FriendStore.GetUserDoNotDisturb();
+            if (E.f.SettingsStore.BClientHasFeatureOrOnWeb("DoNotDisturb")) {
+              var a = E.f.FriendStore.GetUserDoNotDisturb();
               t.push(
-                w.createElement(
-                  R.b,
+                D.createElement(
+                  L.b,
                   {
                     key: "do_not_disturb",
                     className: "personaContextMenuItem",
                     bChecked: !1,
                     onSelected: this.ToggleUserDND
                   },
-                  w.createElement(s.e, {
+                  D.createElement(s.e, {
                     key: "dnd_checkbox",
                     classname: "DNDCheckBox",
                     checked: a,
-                    label: Object(M.c)("#User_ToggleDoNotDisturb")
+                    label: Object(T.c)("#User_ToggleDoNotDisturb")
                   }),
-                  w.createElement(
+                  D.createElement(
                     "div",
                     { className: "persona_menu_dnd_descriptor" },
-                    Object(M.c)("#PersonaStateDoNotDisturbDescriptor")
+                    Object(T.c)("#PersonaStateDoNotDisturbDescriptor")
                   )
                 )
               );
             }
             return (
               t.push(
-                w.createElement(
-                  R.d,
+                D.createElement(
+                  L.d,
                   { key: "editname", onSelected: this.EditName },
-                  Object(M.c)("#Friend_Menu_ChangeMyName")
+                  Object(T.c)("#Friend_Menu_ChangeMyName")
                 )
               ),
               t
-                ? w.createElement(
-                    R.c,
+                ? D.createElement(
+                    L.c,
                     { className: "friendsContextMenu currentUserContextMenu" },
-                    w.createElement(
+                    D.createElement(
                       "div",
                       { className: "contextMenuSectionContent" },
                       e
@@ -20861,24 +20267,24 @@
                 : null
             );
           }),
-          Object(i.c)([a.a], e.prototype, "SetUserOnline", null),
-          Object(i.c)([a.a], e.prototype, "SetUserInvisible", null),
-          Object(i.c)([a.a], e.prototype, "SetUserAway", null),
-          Object(i.c)([a.a], e.prototype, "SetUserOffline", null),
-          Object(i.c)([a.a], e.prototype, "ToggleUserDND", null),
-          Object(i.c)([a.a], e.prototype, "ShowUserProfile", null),
-          Object(i.c)([a.a], e.prototype, "EditProfile", null),
-          Object(i.c)([a.a], e.prototype, "EditName", null),
+          Object(c.c)([r.a], e.prototype, "SetUserOnline", null),
+          Object(c.c)([r.a], e.prototype, "SetUserInvisible", null),
+          Object(c.c)([r.a], e.prototype, "SetUserAway", null),
+          Object(c.c)([r.a], e.prototype, "SetUserOffline", null),
+          Object(c.c)([r.a], e.prototype, "ToggleUserDND", null),
+          Object(c.c)([r.a], e.prototype, "ShowUserProfile", null),
+          Object(c.c)([r.a], e.prototype, "EditProfile", null),
+          Object(c.c)([r.a], e.prototype, "EditName", null),
           e
         );
-      })(w.PureComponent),
+      })(D.PureComponent),
       ae = 3600,
       se = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(i.d)(t, e),
+          Object(c.d)(t, e),
           (t.prototype.OnCancel = function() {
             this.props.OnCancel(), this.props.closeModal();
           }),
@@ -20890,60 +20296,60 @@
           }),
           (t.prototype.render = function() {
             var e = [
-              { label: Object(M.c)("#Friend_Kick_Hour"), data: ae },
-              { label: Object(M.c)("#Friend_Kick_Day"), data: 86400 },
-              { label: Object(M.c)("#Friend_Kick_Week"), data: 604800 }
+              { label: Object(T.c)("#Friend_Kick_Hour"), data: ae },
+              { label: Object(T.c)("#Friend_Kick_Day"), data: 86400 },
+              { label: Object(T.c)("#Friend_Kick_Week"), data: 604800 }
             ];
-            return w.createElement(
-              E.a,
+            return D.createElement(
+              M.a,
               { onEscKeypress: this.OnCancel },
-              w.createElement(
+              D.createElement(
                 s.h,
                 {
                   classNameContent: "KickUserDialog",
                   onSubmit: this.OnOK,
                   bCenterVertically: !0
                 },
-                w.createElement(
+                D.createElement(
                   s.m,
                   null,
                   " ",
-                  Object(M.c)("#Friend_Kick"),
+                  Object(T.c)("#Friend_Kick"),
                   " "
                 ),
-                w.createElement(
+                D.createElement(
                   s.b,
                   null,
-                  w.createElement(
+                  D.createElement(
                     s.c,
                     null,
-                    Object(M.c)("#Friend_Kick_How_Long")
+                    Object(T.c)("#Friend_Kick_How_Long")
                   ),
-                  w.createElement(s.i, {
-                    strDefaultLabel: Object(M.c)("#Friend_Kick_Hour"),
+                  D.createElement(s.i, {
+                    strDefaultLabel: Object(T.c)("#Friend_Kick_Hour"),
                     rgOptions: e,
                     onChange: this.OnDropDownChange,
                     selectedOption: void 0
                   })
                 ),
-                w.createElement(
+                D.createElement(
                   s.j,
                   null,
-                  w.createElement(s.t, {
+                  D.createElement(s.t, {
                     onCancel: this.OnCancel,
-                    strOKText: Object(M.c)("#Friend_Kick_Button"),
-                    strCancelText: Object(M.c)("#Button_Cancel")
+                    strOKText: Object(T.c)("#Friend_Kick_Button"),
+                    strCancelText: Object(T.c)("#Button_Cancel")
                   })
                 )
               )
             );
           }),
-          Object(i.c)([a.a], t.prototype, "OnCancel", null),
-          Object(i.c)([a.a], t.prototype, "OnOK", null),
-          Object(i.c)([a.a], t.prototype, "OnDropDownChange", null),
+          Object(c.c)([r.a], t.prototype, "OnCancel", null),
+          Object(c.c)([r.a], t.prototype, "OnOK", null),
+          Object(c.c)([r.a], t.prototype, "OnDropDownChange", null),
           t
         );
-      })(w.Component);
+      })(D.Component);
   },
   FuJV: function(e, t, n) {},
   "G+3Z": function(e, t, n) {
@@ -22422,7 +21828,7 @@
             return this.m_strInviteCode;
           }),
           (e.prototype.BNeverExpires = function() {
-            return this.m_rtTimeExpires == r.e;
+            return this.m_rtTimeExpires == r.f;
           }),
           (e.prototype.GetChatRoomGroupID = function() {
             return this.m_ulChatRoomGroupID;
@@ -22459,7 +21865,7 @@
               (this.m_ulChatID = t),
               (this.m_bIsBanned = n),
               (this.m_rtKickExpires = o),
-              (this.m_rtTimeExpires = r.e),
+              (this.m_rtTimeExpires = r.f),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
@@ -23353,6 +22759,793 @@
       return t;
     }
   },
+  Kwyy: function(e, t, n) {
+    "use strict";
+    var i = n("mrSG"),
+      o = n("q1tI"),
+      u = n.n(o),
+      r = n("i8i4"),
+      a = n("1VtQ"),
+      p = n("1n9R"),
+      s = n("2vnA"),
+      c = n("okNM"),
+      m = n("D3Kh"),
+      l = n("ljid"),
+      d = n("e2SU"),
+      h = n("NB6M"),
+      f = n("hx5d"),
+      _ = n("Hi0u"),
+      g = n("oh5H"),
+      b = n("LAqV"),
+      v = n("hReu"),
+      S = n("Z578"),
+      y = n("YZlK"),
+      C = n("bbBM"),
+      O = (n("cTkQ"),
+      function(e) {
+        var t = e.group,
+          n = e.onClick,
+          o = t.watching_broadcast_steamid;
+        return u.a.createElement(
+          "button",
+          {
+            className:
+              "ChatRoomListGroupItem NoChannels WatchPartyGroup DialogButton watchHowButton",
+            onClick: n
+          },
+          u.a.createElement(
+            "div",
+            { className: "ChatRoomListGroupItem_header" },
+            u.a.createElement(y.a, { group: t, small: !0 }),
+            u.a.createElement(
+              "div",
+              { className: "groupNameStatusContainer" },
+              u.a.createElement("div", { className: "chatRoomName" }, t.name),
+              o &&
+                u.a.createElement(
+                  "div",
+                  { className: "chatRoomDetails" },
+                  Object(g.c)("#Broadcast_WatchParty_Viewers_NoneActive")
+                )
+            )
+          )
+        );
+      }),
+      I = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          Object(i.d)(t, e),
+          (t.prototype.CreateWatchParty = function(e) {
+            void 0 === e && (e = !1);
+            var t = this.props,
+              n = t.browserContext,
+              o = t.ownerWindow,
+              i = t.broadcastAccountId,
+              r = t.initialFriend;
+            this.Close();
+            var a,
+              s,
+              c,
+              l,
+              p = e && r ? [r.accountid] : [];
+            (a = n),
+              (s = o || window),
+              (c = i),
+              (l = p),
+              Object(_.b)(
+                u.a.createElement(S.a, {
+                  browserContext: a,
+                  bHideChatNameEntry: !1,
+                  vecInvitePlayers: l,
+                  chatViewToReplace: void 0,
+                  creationOptions: { unBroadcastAccountId: c },
+                  strTitle: Object(g.c)("#Broadcast_CreateWatchParty")
+                }),
+                s,
+                "CreateChatDialog",
+                {
+                  strTitle: Object(g.c)("#Broadcast_CreateWatchParty"),
+                  popupWidth: 450,
+                  popupHeight: 600
+                },
+                Object(v.g)(s)
+              );
+          }),
+          (t.prototype.WatchAlone = function() {
+            this.Close();
+          }),
+          (t.prototype.UpgradeExisting = function(e) {
+            var t = this.props,
+              n = t.broadcastAccountId,
+              o = t.browserContext,
+              i = t.broadcastChannelID,
+              r = t.broadcastTabId;
+            this.Close(),
+              i
+                ? e.SetChatRoomGroupWatchingBroadcast(void 0, i)
+                : e.SetChatRoomGroupWatchingBroadcast(n);
+            var a = b.f.UIStore.ShowAndOrActivateChatRoomGroup(o, e, !0);
+            r && b.f.UIStore.CloseTabByID(r),
+              this.props.bIsNewSteamTVDialog || a.ShowBroadcast();
+          }),
+          (t.prototype.Close = function() {
+            var e = this.props.closeModal;
+            e && e();
+          }),
+          (t.prototype.render = function() {
+            var t = this,
+              e = this.props,
+              n = e.closeModal,
+              o = e.initialFriend,
+              i = b.f.ChatStore.currentChatRoomGroups.filter(function(e) {
+                return e.BCanIAssociateBroadcast();
+              }),
+              r = o;
+            return u.a.createElement(
+              "div",
+              { className: "chatModalCover" },
+              u.a.createElement(
+                _.a,
+                { onEscKeypress: n },
+                u.a.createElement(
+                  l.g,
+                  { className: "watchPartyDialog" },
+                  u.a.createElement(
+                    l.b,
+                    null,
+                    u.a.createElement(
+                      "div",
+                      { className: "watchPartyPrompt" },
+                      Object(g.c)("#Broadcast_WatchPrompt")
+                    ),
+                    u.a.createElement(
+                      l.n,
+                      null,
+                      !this.props.bIsNewSteamTVDialog &&
+                        u.a.createElement(
+                          l.d,
+                          {
+                            svgicon: d.t,
+                            className: "watchHowButton",
+                            onClick: this.WatchAlone
+                          },
+                          Object(g.c)("#Broadcast_WatchAlone")
+                        ),
+                      r &&
+                        u.a.createElement(
+                          l.d,
+                          {
+                            className: "watchHowButton",
+                            onClick: function() {
+                              return t.CreateWatchParty(!0);
+                            }
+                          },
+                          u.a.createElement(C.d, {
+                            friend: r,
+                            context: null,
+                            bLarge: !1
+                          }),
+                          Object(g.e)(
+                            "#Broadcast_WatchWith",
+                            u.a.createElement(
+                              "span",
+                              { className: "highlight" },
+                              " ",
+                              r.display_name
+                            )
+                          )
+                        ),
+                      0 !== i.length &&
+                        u.a.createElement(
+                          u.a.Fragment,
+                          null,
+                          u.a.createElement(
+                            l.p,
+                            null,
+                            Object(g.c)(
+                              "#Broadcast_WatchWithExistingWatchParty"
+                            )
+                          ),
+                          i.map(function(e) {
+                            return u.a.createElement(O, {
+                              key: e.unique_id,
+                              group: e,
+                              onClick: function() {
+                                return t.UpgradeExisting(e);
+                              }
+                            });
+                          })
+                        ),
+                      u.a.createElement(
+                        l.d,
+                        {
+                          className: "watchHowButton newWatchGroup",
+                          svgicon: d.K,
+                          onClick: function() {
+                            return t.CreateWatchParty(!1);
+                          }
+                        },
+                        Object(g.c)("#Broadcast_LinkBroadcastToGroup_New")
+                      )
+                    )
+                  ),
+                  u.a.createElement(l.j, null)
+                )
+              )
+            );
+          }),
+          Object(i.c)([a.a], t.prototype, "WatchAlone", null),
+          Object(i.c)([a.a], t.prototype, "Close", null),
+          t
+        );
+      })(u.a.Component);
+    var E = n("xdma"),
+      w = n("XCHq"),
+      M = n("/7KC"),
+      D = n("dcQ8"),
+      T = n.n(D),
+      G = n("kQil");
+    function R() {
+      window.sessionStorage.setItem(
+        "oFriendsUIStartupParam",
+        JSON.stringify({
+          command: { command: "ShowWatchBroadcast", steamid: p.a.steamid }
+        })
+      );
+    }
+    n.d(t, "c", function() {
+      return R;
+    }),
+      n.d(t, "b", function() {
+        return j;
+      }),
+      n.d(t, "a", function() {
+        return B;
+      });
+    var j = (function() {
+        function e() {
+          (this.m_iTimeoutLogin = void 0),
+            (this.m_eLogonState = 0),
+            (this.m_bLogonDialogVisisible = !1);
+        }
+        return (
+          (e.prototype.Init = function(e) {
+            var t = this;
+            (this.m_fnLaunchChat = e),
+              (this.m_steamID = p.a.steamid),
+              window.addEventListener("message", this.HandlePostMessage),
+              r.render(
+                u.a.createElement(L, { app: this }),
+                document.getElementById("friendslist-container")
+              ),
+              (this.m_iTimeoutLogin = window.setTimeout(function() {
+                0 == t.m_eLogonState && (t.m_eLogonState = 1);
+              }, 2500));
+          }),
+          (e.prototype.LaunchChat = function() {
+            r.unmountComponentAtNode(
+              document.getElementById("friendslist-container")
+            ),
+              window.removeEventListener("message", this.HandlePostMessage),
+              window.clearTimeout(this.m_iTimeoutLogin),
+              R(),
+              this.m_fnLaunchChat();
+          }),
+          (e.prototype.GetLoginURL = function() {
+            return p.b.STORE_BASE_URL + "login/?steamtv";
+          }),
+          (e.prototype.BIsPerformingLogonCheck = function() {
+            return 0 == this.m_eLogonState || 1 == this.m_eLogonState;
+          }),
+          (e.prototype.BIsLogonDialogVisible = function() {
+            return this.m_bLogonDialogVisisible;
+          }),
+          (e.prototype.ShowLogonDialog = function() {
+            this.m_bLogonDialogVisisible = !0;
+          }),
+          (e.prototype.BReadyToRender = function() {
+            return 0 != this.m_eLogonState;
+          }),
+          (e.prototype.DismissLogonDialog = function() {
+            this.m_bLogonDialogVisisible = !1;
+          }),
+          (e.prototype.GetSteamIDWatched = function() {
+            return this.m_steamID;
+          }),
+          (e.prototype.ExtractOrigin = function(e) {
+            return e.replace(/^(https?:\/\/[^/]*).*$/, "$1");
+          }),
+          (e.prototype.HandlePostMessage = function(e) {
+            if (
+              e.origin == this.ExtractOrigin(p.b.STORE_BASE_URL) ||
+              e.origin == this.ExtractOrigin(p.b.CHAT_BASE_URL)
+            ) {
+              var t = e.data;
+              if (t)
+                if ("OnLoginButtonClicked" == t.msg)
+                  console.log("Login button clicked"),
+                    (this.m_bLogonDialogVisisible = !0);
+                else if ("LoginNeeded" == t.command) this.m_eLogonState = 2;
+                else if ("LogonComplete" == t.command)
+                  return void this.LaunchChat();
+            } else
+              console.warn(
+                'Ignoring message from untrusted domain "' + e.origin + '"'
+              );
+          }),
+          Object(i.c)([s.x], e.prototype, "m_eLogonState", void 0),
+          Object(i.c)([s.x], e.prototype, "m_bLogonDialogVisisible", void 0),
+          Object(i.c)([s.x], e.prototype, "m_steamID", void 0),
+          Object(i.c)([s.g], e.prototype, "LaunchChat", null),
+          Object(i.c)([s.g.bound], e.prototype, "HandlePostMessage", null),
+          e
+        );
+      })(),
+      L = (function(n) {
+        function e(e) {
+          var t = n.call(this, e) || this;
+          return (
+            (t.m_broadcastInfo = null),
+            (t.m_broadcastInfo = m.a.StartInfo(
+              t.props.app.GetSteamIDWatched()
+            )),
+            (t.state = { bChatCollapsed: !1, bTheaterMode: !1 }),
+            t
+          );
+        }
+        return (
+          Object(i.d)(e, n),
+          (e.prototype.componentWillUnmount = function() {
+            this.m_broadcastInfo &&
+              (m.a.StopInfo(this.m_broadcastInfo),
+              (this.m_broadcastInfo = null));
+          }),
+          (e.prototype.OnShowLogin = function() {
+            this.props.app.ShowLogonDialog();
+          }),
+          (e.prototype.ToggleChat = function() {
+            this.setState({ bChatCollapsed: !this.state.bChatCollapsed });
+          }),
+          (e.prototype.ToggleTheaterMode = function() {
+            this.setState({ bTheaterMode: !this.state.bTheaterMode });
+          }),
+          (e.prototype.render = function() {
+            var e = this.props.app,
+              t = this.m_broadcastInfo,
+              n = A();
+            return u.a.createElement(
+              u.a.Fragment,
+              null,
+              e.BReadyToRender() &&
+                u.a.createElement(
+                  "div",
+                  {
+                    className:
+                      "StandalonePlayer" +
+                      (this.state.bTheaterMode ? " TheaterMode" : "")
+                  },
+                  u.a.createElement(E.a, {
+                    className: "FullpageBroadcastBackdrop",
+                    src: t.m_strThumbnailUrl,
+                    draggable: !1,
+                    duration: 2500
+                  }),
+                  u.a.createElement(
+                    "div",
+                    { className: "BroadcastTab" },
+                    u.a.createElement(
+                      "div",
+                      { className: "StandalonePlayerHeader" },
+                      u.a.createElement(
+                        "div",
+                        { className: "STV_Logo" },
+                        u.a.createElement(d.cb, null)
+                      ),
+                      u.a.createElement(
+                        "div",
+                        {
+                          className:
+                            "BroadcastTab_HeaderRow" +
+                            (this.state.bChatCollapsed ? " ChatCollapsed" : "")
+                        },
+                        u.a.createElement(k, { onClick: this.OnShowLogin }),
+                        u.a.createElement(N, {
+                          onClick: this.ToggleChat,
+                          hideIcon: this.state.bChatCollapsed
+                        })
+                      )
+                    ),
+                    u.a.createElement(
+                      F,
+                      {
+                        steamID: e.GetSteamIDWatched(),
+                        watchLocation: n,
+                        bHideChat: this.state.bChatCollapsed,
+                        onTheaterMode: this.ToggleTheaterMode
+                      },
+                      u.a.createElement(U, { app: e })
+                    )
+                  )
+                ),
+              u.a.createElement(P, { app: e })
+            );
+          }),
+          Object(i.c)([a.a], e.prototype, "OnShowLogin", null),
+          Object(i.c)([a.a], e.prototype, "ToggleChat", null),
+          Object(i.c)([a.a], e.prototype, "ToggleTheaterMode", null),
+          (e = Object(i.c)([c.a], e))
+        );
+      })(u.a.Component),
+      P = Object(c.a)(function(e) {
+        var t = e.app;
+        return t.BIsPerformingLogonCheck()
+          ? u.a.createElement(
+              "div",
+              null,
+              u.a.createElement("iframe", {
+                style: { display: "none" },
+                src: t.GetLoginURL()
+              })
+            )
+          : null;
+      });
+    function k(e) {
+      return u.a.createElement(
+        "div",
+        { className: "BroadcastButton WatchWithFriends", onClick: e.onClick },
+        u.a.createElement(d.lb, null),
+        Object(g.c)("#Broadcast_WatchWithFriends")
+      );
+    }
+    function N(e) {
+      return u.a.createElement(
+        "div",
+        {
+          className: "ToggleBroadcastChat",
+          title: Object(g.c)("#Broadcast_ToggleChat"),
+          onClick: e.onClick
+        },
+        u.a.createElement(d.y, { showChat: e.hideIcon })
+      );
+    }
+    function A() {
+      return p.b.STEAM_TV ? 1 : 3;
+    }
+    var B = (function(o) {
+        function e(e) {
+          var t = o.call(this, e) || this;
+          t.m_broadcastInfo = null;
+          var n = t.props.broadcastView.GetSteamID().ConvertTo64BitString();
+          return (
+            (t.m_broadcastInfo = m.a.StartInfo(n)),
+            (t.state = { bChatCollapsed: !1 }),
+            t
+          );
+        }
+        return (
+          Object(i.d)(e, o),
+          (e.prototype.componentWillUnmount = function() {
+            this.m_broadcastInfo &&
+              (m.a.StopInfo(this.m_broadcastInfo),
+              (this.m_broadcastInfo = null));
+          }),
+          (e.prototype.OnWatchWithFriends = function() {
+            this.props.broadcastView.ShowWatchPromptDialog();
+          }),
+          (e.prototype.ToggleChat = function() {
+            this.setState({ bChatCollapsed: !this.state.bChatCollapsed });
+          }),
+          (e.prototype.ToggleTheaterMode = function() {
+            b.f.UIStore.SetTheaterMode(!b.f.UIStore.GetTheaterMode());
+          }),
+          (e.prototype.render = function() {
+            var e = this.props,
+              t = e.broadcastView,
+              n = e.popup,
+              o = e.style,
+              i = t.GetSteamID().ConvertTo64BitString(),
+              r = A(),
+              a = t.m_bShowWatchPromptDialog
+                ? u.a.createElement(I, {
+                    closeModal: function() {
+                      return t.HideWatchPromptDialog();
+                    },
+                    broadcastAccountId: t.GetSteamID().GetAccountID(),
+                    broadcastTabId: t.GetUniqueID(),
+                    initialFriend: t.m_watchPromptInitialFriend,
+                    browserContext: b.a,
+                    ownerWindow: n
+                  })
+                : null;
+            return u.a.createElement(
+              "div",
+              { className: "BroadcastTab", style: o },
+              u.a.createElement(E.a, {
+                className: "FullpageBroadcastBackdrop",
+                src: this.m_broadcastInfo.m_strThumbnailUrl,
+                draggable: !1,
+                duration: 2500
+              }),
+              u.a.createElement(
+                "div",
+                { className: "BroadcastTab_OverBackground" },
+                u.a.createElement(
+                  "div",
+                  { className: "BroadcastTabHeaderContainer" },
+                  u.a.createElement(
+                    "div",
+                    {
+                      className:
+                        "BroadcastTab_HeaderRow" +
+                        (this.state.bChatCollapsed ? " ChatCollapsed" : "")
+                    },
+                    u.a.createElement(k, { onClick: this.OnWatchWithFriends }),
+                    u.a.createElement(N, {
+                      onClick: this.ToggleChat,
+                      hideIcon: this.state.bChatCollapsed
+                    })
+                  )
+                ),
+                u.a.createElement(
+                  F,
+                  {
+                    steamID: i,
+                    watchLocation: r,
+                    bHideChat: this.state.bChatCollapsed,
+                    onTheaterMode: this.ToggleTheaterMode
+                  },
+                  a
+                )
+              )
+            );
+          }),
+          Object(i.c)([a.a], e.prototype, "OnWatchWithFriends", null),
+          Object(i.c)([a.a], e.prototype, "ToggleChat", null),
+          Object(i.c)([a.a], e.prototype, "ToggleTheaterMode", null),
+          (e = Object(i.c)([c.a], e))
+        );
+      })(u.a.Component),
+      F = (function(n) {
+        function e(e) {
+          var t = n.call(this, e) || this;
+          return (
+            (t.m_strLocalSteamID = ""),
+            (t.m_refBroadcastContainer = u.a.createRef()),
+            (t.state = { info: null }),
+            t
+          );
+        }
+        return (
+          Object(i.d)(e, n),
+          (e.prototype.componentDidMount = function() {
+            w.b.stream["76561198208088121"] && "chinese" === p.b.LANGUAGE
+              ? this.OnLocalStreamChange("76561198208088121")
+              : w.b.stream["76561198207552741"] &&
+                "russian" === p.b.LANGUAGE &&
+                this.OnLocalStreamChange("76561198207552741");
+          }),
+          (e.getDerivedStateFromProps = function(e, t) {
+            return t.info && t.info.m_steamIDBroadcast === e.steamID
+              ? null
+              : (t.info && m.a.StopInfo(t.info),
+                { info: m.a.StartInfo(e.steamID) });
+          }),
+          (e.prototype.componentWillUnmount = function() {
+            this.state.info && m.a.StopInfo(this.state.info);
+          }),
+          (e.prototype.OnLocalStreamChange = function(e) {
+            this.m_strLocalSteamID = e;
+          }),
+          (e.prototype.SetMainContentRef = function(e) {
+            this.m_elMainContent = e;
+          }),
+          (e.prototype.CalculateBroadcastSectionStyles = function(e) {
+            if (this.props.bHideChat) return { width: "100%", height: "100%" };
+            var t, n;
+            v.h &&
+              ((t = v.h.UIDisplayPrefs.nWatchPartyBroadcastHeightPercentage),
+              (n = v.h.UIDisplayPrefs.nWatchPartyBroadcastWidthPercentage));
+            var o = {};
+            if (e) {
+              var i = t || 66;
+              if (((o.height = i + "%"), this.m_elMainContent)) {
+                var r = this.m_elMainContent,
+                  a = r.clientWidth,
+                  s = r.clientHeight,
+                  c = (9 / 16) * a + 50,
+                  l = Object(M.a)(i, 1, (c / s) * 100);
+                o.height = l + "%";
+              }
+            } else
+              (o.width = n ? n + "%" : "66%"),
+                (o.minWidth = n ? n + "%" : "66%"),
+                (o.maxWidth = "calc( 100% - 316px )"),
+                (o.overflowY = "auto");
+            return o;
+          }),
+          (e.prototype.OnGrabberMouseDown = function(e) {
+            var t = e.currentTarget.ownerDocument.defaultView;
+            t.addEventListener("mousemove", this.HandleMouseMove),
+              t.addEventListener("mouseup", this.UnregisterDragEvents),
+              this.setState({ bDraggingChatGrabber: !0 });
+          }),
+          (e.prototype.HandleMouseMove = function(e) {
+            e.preventDefault(), e.stopPropagation();
+            var t = this.m_refBroadcastContainer.current.getBoundingClientRect(),
+              n = this.m_refBroadcastContainer.current.parentElement.getBoundingClientRect(),
+              o = t.left,
+              i = e.clientX,
+              r = n.width,
+              a = Object(M.a)(((i - o) / r) * 100, 1, 100);
+            v.h.SetUIDisplayPref("nWatchPartyBroadcastWidthPercentage", a);
+          }),
+          (e.prototype.UnregisterDragEvents = function(e) {
+            e.view.removeEventListener("mousemove", this.HandleMouseMove),
+              e.view.removeEventListener("mouseup", this.UnregisterDragEvents),
+              this.setState({ bDraggingChatGrabber: !1 });
+          }),
+          (e.prototype.render = function() {
+            var e = this.props,
+              t = e.steamID,
+              n = e.children,
+              o = this.m_strLocalSteamID || t,
+              i = this.state.info.m_bIsOnline,
+              r = null,
+              a = this.CalculateBroadcastSectionStyles(!1);
+            (a.flexGrow = this.props.bHideChat ? 1 : null),
+              w.b.bValid && (r = u.a.createElement(x, { info: w.b }));
+            var s = new j(),
+              c = u.a.createElement(
+                "div",
+                { className: "LoginDiv" },
+                u.a.createElement(
+                  "a",
+                  {
+                    onClick: function() {
+                      return s.ShowLogonDialog();
+                    },
+                    className: T.a.ChatLoginButton,
+                    href: "javascript:void(0);"
+                  },
+                  Object(g.c)("#BroadcastChat_Login")
+                ),
+                u.a.createElement(U, { app: s })
+              ),
+              l = m.a.GetBroadcast(o)
+                ? m.a.GetBroadcast(o).m_ulBroadcastID
+                : "0";
+            return u.a.createElement(
+              "div",
+              { className: "BroadcastContainer" },
+              u.a.createElement(
+                "div",
+                {
+                  className: "BroadcastContainerSection",
+                  ref: this.m_refBroadcastContainer,
+                  style: a
+                },
+                u.a.createElement(
+                  "div",
+                  { className: "BroadcastContainerSectionVideoContainer" },
+                  i &&
+                    u.a.createElement(h.b, {
+                      key: o,
+                      steamIDBroadcast: o,
+                      watchLocation: this.props.watchLocation,
+                      onTheaterMode: this.props.onTheaterMode
+                    }),
+                  !i && r,
+                  u.a.createElement("div", { className: "videoContainerSizer" })
+                ),
+                n,
+                u.a.createElement(
+                  "div",
+                  { className: "BroadcastDetailsSection" },
+                  u.a.createElement(h.a, {
+                    steamID: o,
+                    onLocalStreamChange: this.OnLocalStreamChange,
+                    bVerticalBroadcastChat: !0
+                  })
+                )
+              ),
+              !this.props.bHideChat &&
+                u.a.createElement("div", {
+                  className: "BroadcastChatDivider horizontal",
+                  onMouseDown: this.OnGrabberMouseDown
+                }),
+              u.a.createElement(
+                "div",
+                {
+                  className: "BroadcastChatDiv",
+                  style: {
+                    display: this.props.bHideChat ? "none" : "flex",
+                    flexDirection: "column",
+                    width: "100%",
+                    minWidth: "300px"
+                  }
+                },
+                u.a.createElement(f.a, {
+                  emoticonStore: b.f ? b.f.ChatStore.EmoticonStore : null,
+                  broadcastID: l,
+                  steamID: o,
+                  watchLocation: this.props.watchLocation,
+                  hidden: this.props.bHideChat
+                }),
+                p.f && p.f.logged_in ? null : c
+              )
+            );
+          }),
+          Object(i.c)([s.x], e.prototype, "m_strLocalSteamID", void 0),
+          Object(i.c)([a.a], e.prototype, "OnLocalStreamChange", null),
+          Object(i.c)([a.a], e.prototype, "SetMainContentRef", null),
+          Object(i.c)([a.a], e.prototype, "OnGrabberMouseDown", null),
+          Object(i.c)([a.a], e.prototype, "HandleMouseMove", null),
+          Object(i.c)([a.a], e.prototype, "UnregisterDragEvents", null),
+          (e = Object(i.c)([c.a], e))
+        );
+      })(u.a.Component);
+    function x(e) {
+      var t = 'url( "' + (p.b.CHAT_BASE_URL + e.info.offlineImage) + '" )';
+      return u.a.createElement("div", {
+        style: { backgroundImage: t },
+        className: "BroadcastOffline"
+      });
+    }
+    var V = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          Object(i.d)(t, e),
+          (t.prototype.Dismiss = function() {
+            this.props.app.DismissLogonDialog();
+          }),
+          (t.prototype.render = function() {
+            return u.a.createElement(
+              G.d,
+              { onEscKeypress: this.Dismiss },
+              u.a.createElement(
+                l.g,
+                { className: "SteamTVLoginDialog" },
+                u.a.createElement("iframe", {
+                  className: "steamTVLogin",
+                  src: this.props.app.GetLoginURL()
+                })
+              )
+            );
+          }),
+          Object(i.c)([a.a], t.prototype, "Dismiss", null),
+          t
+        );
+      })(u.a.Component),
+      U = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          Object(i.d)(t, e),
+          (t.prototype.render = function() {
+            if (!this.props.app.BIsLogonDialogVisible()) return null;
+            var e = u.a.createElement(V, { app: this.props.app });
+            return u.a.createElement(
+              "div",
+              { className: "FullModalOverlay" },
+              u.a.createElement("div", {
+                className: "ModalOverlayContent ModalOverlayBackground"
+              }),
+              u.a.createElement(
+                "div",
+                { className: "ModalOverlayContent active" },
+                e
+              )
+            );
+          }),
+          (t = Object(i.c)([c.a], t))
+        );
+      })(u.a.Component);
+  },
   LAqV: function(e, t, n) {
     "use strict";
     var s = n("mrSG"),
@@ -23959,8 +24152,8 @@
               !!this.isLocked &&
               (!this.m_ParentalState.allowallapps &&
                 (0 != e &&
-                  (!(e >= w.g && e <= w.h) &&
-                    (-1 === [w.m, w.i, w.j, w.l, w.k].indexOf(e) &&
+                  (!(e >= w.h && e <= w.i) &&
+                    (-1 === [w.n, w.j, w.k, w.m, w.l].indexOf(e) &&
                       (null != this.m_ParentalState.customlist &&
                       null != this.m_ParentalState.customlist["App_" + e]
                         ? !this.m_ParentalState.customlist["App_" + e]
@@ -24125,6 +24318,15 @@
               });
             });
           }),
+          (e.prototype.BCanIsolateGameAudio = function() {
+            return Object(s.b)(this, void 0, void 0, function() {
+              return Object(s.e)(this, function(e) {
+                return Object(b.a)("RemotePlay.BCanHostIsolatedGameAudio")
+                  ? [2, SteamClient.RemotePlay.BCanIsolateGameAudio()]
+                  : [2, !1];
+              });
+            });
+          }),
           (e.prototype.HasInviteAndSession = function(e) {
             var t = G.a.InitFromAccountID(e).ConvertTo64BitString();
             return this.m_sessions.has(t) && this.m_sessions.get(t).bSession;
@@ -24169,6 +24371,10 @@
               t.CancelInviteAndSession(e.friend.accountid);
             }),
               this.m_sessions.clear();
+          }),
+          (e.prototype.StopStreamingClient = function() {
+            Object(b.a)("RemotePlay.StopStreamingClient") &&
+              SteamClient.RemotePlay.StopStreamingClient();
           }),
           (e.prototype.SetStreamingDesktopToRemotePlayTogetherEnabled = function(
             e
@@ -25126,12 +25332,12 @@
       l = (n("FuJV"), n("2vnA")),
       o = n("okNM"),
       i = n("1VtQ"),
-      u = n("1n9R"),
+      p = n("1n9R"),
       M = n("D3Kh"),
       r = n("E7zH"),
       D = n("Y3w+"),
       T = n("oh5H"),
-      m = (function(t) {
+      u = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -25441,7 +25647,7 @@
       })(I.Component),
       c = n("/IDK"),
       h = n("EGkk"),
-      p = n("8o0Y"),
+      m = n("8o0Y"),
       f = n("XCHq"),
       _ = n("xdma"),
       g = n("vDqi"),
@@ -25454,7 +25660,7 @@
           (e.prototype.GetPackageInfo = function(e) {
             return this.m_mapPackageInfo.get(e);
           }),
-          (e.prototype.LoadPackageInfo = function(p) {
+          (e.prototype.LoadPackageInfo = function(c) {
             return Object(d.b)(this, void 0, void 0, function() {
               var t,
                 n,
@@ -25462,53 +25668,35 @@
                 i,
                 r,
                 a,
-                s,
-                c,
-                l = this;
+                s = this;
               return Object(d.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return (
                       (t = []),
-                      p.forEach(function(e) {
-                        l.m_mapPackageInfo.has(e) || t.push(e);
+                      c.forEach(function(e) {
+                        s.m_mapPackageInfo.has(e) || t.push(e);
                       }),
                       t.length
                         ? [
                             4,
                             b.a.get(
-                              u.b.COMMUNITY_BASE_URL +
+                              p.b.STORE_BASE_URL +
                                 "actions/ajaxresolvepackages",
                               { params: { packageids: t.join(",") } }
                             )
                           ]
-                        : [3, 5]
+                        : [3, 2]
                     );
                   case 1:
-                    if (((n = e.sent()), !(o = n && n.data))) return [3, 5];
-                    (i = 0), (e.label = 2);
+                    if (((n = e.sent()), (o = n && n.data)))
+                      for (i = {}, r = 0; r < o.length; r++)
+                        (a = o[r]),
+                          i[a.appids.join(",")] ||
+                            ((i[a.appids.join(",")] = 1),
+                            this.m_mapPackageInfo.set(a.packageid, a));
+                    e.label = 2;
                   case 2:
-                    return i < o.length
-                      ? ((r = o[i]),
-                        [
-                          4,
-                          b.a.get(
-                            u.b.STORE_BASE_URL +
-                              "sub/" +
-                              r.packageid +
-                              "/ajaxpackage"
-                          )
-                        ])
-                      : [3, 5];
-                  case 3:
-                    (a = e.sent()),
-                      (s = a && a.data),
-                      (c = Object(d.a)(Object(d.a)({}, r), s)),
-                      this.m_mapPackageInfo.set(r.packageid, c),
-                      (e.label = 4);
-                  case 4:
-                    return i++, [3, 2];
-                  case 5:
                     return [2];
                 }
               });
@@ -25526,66 +25714,40 @@
           (e.prototype.GetBundleInfo = function(e) {
             return this.m_mapBundleInfo.get(e);
           }),
-          (e.prototype.LoadBundleInfo = function(p) {
+          (e.prototype.LoadBundleInfo = function(s) {
             return Object(d.b)(this, void 0, void 0, function() {
               var t,
                 n,
                 o,
                 i,
                 r,
-                a,
-                s,
-                c,
-                l = this;
+                a = this;
               return Object(d.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return (
                       (t = []),
-                      p.forEach(function(e) {
-                        l.m_mapBundleInfo.has(e) || t.push(e);
+                      s.forEach(function(e) {
+                        a.m_mapBundleInfo.has(e) || t.push(e);
                       }),
                       t.length
                         ? [
                             4,
                             b.a.get(
-                              u.b.COMMUNITY_BASE_URL +
-                                "actions/ajaxresolvebundles",
+                              p.b.STORE_BASE_URL + "actions/ajaxresolvebundles",
                               { params: { bundleids: t.join(",") } }
                             )
                           ]
-                        : [3, 5]
+                        : [3, 2]
                     );
                   case 1:
-                    if (((n = e.sent()), !(o = n && n.data))) return [3, 5];
-                    (i = 0), (e.label = 2);
+                    if (((n = e.sent()), (o = n && n.data)))
+                      for (i = 0; i < o.length; i++)
+                        (r = o[i]),
+                          v.LoadPackageInfo(r.packageids),
+                          this.m_mapBundleInfo.set(r.bundleid, r);
+                    e.label = 2;
                   case 2:
-                    return i < o.length
-                      ? ((r = o[i]),
-                        v.LoadPackageInfo(
-                          r.package_quantities.map(function(e) {
-                            return e.packageid;
-                          })
-                        ),
-                        [
-                          4,
-                          b.a.get(
-                            u.b.STORE_BASE_URL +
-                              "bundle/" +
-                              r.bundleid +
-                              "/ajaxbundle"
-                          )
-                        ])
-                      : [3, 5];
-                  case 3:
-                    (a = e.sent()),
-                      (s = a && a.data),
-                      (c = Object(d.a)(Object(d.a)({}, r), s)),
-                      this.m_mapBundleInfo.set(r.bundleid, c),
-                      (e.label = 4);
-                  case 4:
-                    return i++, [3, 2];
-                  case 5:
                     return [2];
                 }
               });
@@ -25607,11 +25769,12 @@
               title: "",
               screenshot: "",
               age_safe_screenshot: !1,
-              capsule_link: u.b.STORE_BASE_URL + "app/" + e,
+              capsule_link: p.b.STORE_BASE_URL + "app/" + e,
               creator_list: new Array(),
               is_free: !1,
               required_age: !1,
-              coming_soon: !1
+              coming_soon: !1,
+              library_asset_setup_complete: !0
             });
         }
         return (
@@ -25660,11 +25823,11 @@
                       (t = {
                         appid: this.m_appid,
                         feature: r,
-                        cc: u.b.COUNTRY,
-                        l: u.b.LANGUAGE
+                        cc: p.b.COUNTRY,
+                        l: p.b.LANGUAGE
                       }),
                         (n =
-                          u.b.STORE_BASE_URL +
+                          p.b.STORE_BASE_URL +
                           "broadcast/ajaxgetappinfoforcap"),
                         (e.label = 1);
                     case 1:
@@ -25713,6 +25876,8 @@
                               s.data.screenshot_list),
                             (c.m_appStoreData.age_safe_screenshot =
                               s.data.age_safe_screenshot),
+                            (c.m_appStoreData.library_asset_setup_complete =
+                              s.data.library_asset_setup_complete),
                             (c.m_appStoreData.item_id = s.data.item_id),
                             (c.m_appStoreData.icon_url = s.data.icon_url),
                             (c.m_appStoreData.creator_list = new Array());
@@ -25809,7 +25974,7 @@
                   case 1:
                     return (
                       e.trys.push([1, 3, , 4]),
-                      (t = u.b.STORE_BASE_URL + "dlc/" + r + "/ajaxgetdlclist"),
+                      (t = p.b.STORE_BASE_URL + "dlc/" + r + "/ajaxgetdlclist"),
                       [4, b.a.get(t, { cancelToken: a.token })]
                     );
                   case 2:
@@ -25921,8 +26086,8 @@
                   case 0:
                     return (
                       (t = localStorage.getItem(R) || "0"),
-                      (n = { v: t, id: "" + u.f.accountid }),
-                      (o = u.b.STORE_BASE_URL + "dynamicstore/userdata/"),
+                      (n = { v: t, id: "" + p.f.accountid }),
+                      (o = p.b.STORE_BASE_URL + "dynamicstore/userdata/"),
                       [4, b.a.get(o, { params: n, withCredentials: !0 })]
                     );
                   case 1:
@@ -25963,12 +26128,12 @@
                   case 0:
                     return (
                       (t =
-                        u.b.STORE_BASE_URL +
+                        p.b.STORE_BASE_URL +
                         "curators/" +
                         (s ? "ajaxfollow/" : "ajaxignore/")),
                       (n = new FormData()).append(
                         "authwgtoken",
-                        u.f.authwgtoken
+                        p.f.authwgtoken
                       ),
                       n.append("clanid", "" + a.GetAccountID()),
                       n.append(s ? "follow" : "ignore", c ? "1" : "0"),
@@ -26002,11 +26167,11 @@
                   case 0:
                     return (
                       (t =
-                        u.b.COMMUNITY_BASE_URL +
+                        p.b.COMMUNITY_BASE_URL +
                         "/actions/" +
                         (a ? "AddToWishlist" : "RemoveFromWishlist")),
                       (n = new FormData()).append("appid", "" + r),
-                      n.append("sessionid", u.b.SESSIONID),
+                      n.append("sessionid", p.b.SESSIONID),
                       [4, b.a.post(t, n, { withCredentials: !0 })]
                     );
                   case 1:
@@ -26037,9 +26202,9 @@
                       l
                         ? t.append("bundleid", l.toString())
                         : t.append("subid", "" + a),
-                      (n = u.f.authwgtoken)
+                      (n = p.f.authwgtoken)
                         ? t.append("authwgtoken", n)
-                        : t.append("sessionid", u.b.SESSIONID),
+                        : t.append("sessionid", p.b.SESSIONID),
                       t.append("quantity", "1"),
                       (e.label = 1);
                   case 1:
@@ -26050,7 +26215,7 @@
                   case 2:
                     return (
                       e.sent(),
-                      (o = u.b.IN_CLIENT ? "steam://url/StoreCart" : c),
+                      (o = p.b.IN_CLIENT ? "steam://url/StoreCart" : c),
                       r.preventDefault(),
                       this.InvalidateCache(),
                       Object(G.f)(window, o),
@@ -26463,23 +26628,22 @@
         );
       })(),
       Y = n("GxRc"),
-      J = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
+      J = (function(n) {
+        function e(e) {
+          var t = n.call(this, e) || this;
+          return (
+            (t.m_manager = new K(t.props.baseURL)),
+            t.props.onLoginComplete &&
+              t.m_manager.SetLoginCompleteCallback(t.props.onLoginComplete),
+            t
+          );
         }
         return (
-          Object(d.d)(t, e),
-          (t.prototype.componentWillMount = function() {
-            (this.m_manager = new K(this.props.baseURL)),
-              this.props.onLoginComplete &&
-                this.m_manager.SetLoginCompleteCallback(
-                  this.props.onLoginComplete
-                );
-          }),
-          (t.prototype.componentWillUnmount = function() {
+          Object(d.d)(e, n),
+          (e.prototype.componentWillUnmount = function() {
             this.m_manager.Shutdown();
           }),
-          (t.prototype.render = function() {
+          (e.prototype.render = function() {
             var e = this.props,
               t = (e.baseURL, e.className),
               n = Object(d.f)(e, ["baseURL", "className"]),
@@ -26519,7 +26683,7 @@
               )
             );
           }),
-          (t = Object(d.c)([o.a], t))
+          (e = Object(d.c)([o.a], e))
         );
       })(a.a.Component);
     function Q(e) {
@@ -26835,18 +26999,18 @@
           (t.prototype.OnLoginComplete = function(e) {
             window.location.href =
               this.props.redirectURL &&
-              this.props.redirectURL !== u.b.COMMUNITY_BASE_URL + "login"
+              this.props.redirectURL !== p.b.COMMUNITY_BASE_URL + "login"
                 ? this.props.redirectURL
-                : u.b.COMMUNITY_BASE_URL;
+                : p.b.COMMUNITY_BASE_URL;
           }),
           (t.prototype.render = function() {
-            return u.f && u.f.logged_in
+            return p.f && p.f.logged_in
               ? (this.OnLoginComplete(), null)
               : a.a.createElement(
                   "div",
                   null,
                   a.a.createElement(J, {
-                    baseURL: u.b.COMMUNITY_BASE_URL,
+                    baseURL: p.b.COMMUNITY_BASE_URL,
                     onLoginComplete: this.OnLoginComplete
                   })
                 );
@@ -26884,7 +27048,8 @@
       pe = n.n(le),
       ue = n("S+nL"),
       me = n.n(ue),
-      de = (function(n) {
+      de = n("0N1H"),
+      he = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { appInfo: new C(e.appid) }), t;
@@ -26962,7 +27127,7 @@
                           { className: a },
                           Object(oe.c)(t.short_desc)
                         ),
-                      I.createElement(he, {
+                      I.createElement(fe, {
                         appid: t.appid,
                         price: t.price,
                         discount_percent: t.discount_percent,
@@ -26993,7 +27158,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      he = (function(e) {
+      fe = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -27037,30 +27202,53 @@
                 I.createElement(
                   "div",
                   null,
-                  I.createElement(ge, { appid: this.props.appid })
+                  I.createElement(be, { appid: this.props.appid })
                 ),
               !n &&
                 I.createElement(
                   "div",
                   null,
-                  I.createElement(_e, { appid: this.props.appid })
+                  I.createElement(ge, { appid: this.props.appid })
                 )
             );
           }),
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      fe = (I.Component,
-      (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
+      _e = (I.Component,
+      (function(t) {
+        function e() {
+          var e = (null !== t && t.apply(this, arguments)) || this;
+          return (
+            (e.state = {
+              bShowContents: !1,
+              containerStyle: {
+                maxHeight: "0vh",
+                overflow: "hidden",
+                transition: "max-height 1s ease-in-out"
+              }
+            }),
+            e
+          );
         }
         return (
-          Object(d.d)(t, e),
-          (t.prototype.componentDidMount = function() {
+          Object(d.d)(e, t),
+          (e.prototype.ShowContents = function() {
+            var e = this;
+            this.setState({ bShowContents: !0 }),
+              window.setTimeout(function() {
+                return e.setState({
+                  containerStyle: Object(d.a)(
+                    Object(d.a)({}, e.state.containerStyle),
+                    { maxHeight: "100vh" }
+                  )
+                });
+              }, 100);
+          }),
+          (e.prototype.componentDidMount = function() {
             v.LoadPackageInfo([this.props.packageid]);
           }),
-          (t.prototype.render = function() {
+          (e.prototype.render = function() {
             var t = this,
               e = v.GetPackageInfo(this.props.packageid);
             if (!e) return null;
@@ -27084,7 +27272,7 @@
                       onClick: function(e) {
                         return Object(G.g)(
                           e,
-                          u.b.STORE_BASE_URL + "sub/" + t.props.packageid
+                          p.b.STORE_BASE_URL + "sub/" + t.props.packageid
                         );
                       }
                     },
@@ -27107,7 +27295,7 @@
                         onClick: function(e) {
                           return Object(G.g)(
                             e,
-                            u.b.STORE_BASE_URL + "sub/" + t.props.packageid
+                            p.b.STORE_BASE_URL + "sub/" + t.props.packageid
                           );
                         }
                       },
@@ -27138,29 +27326,43 @@
                     I.createElement(
                       "div",
                       { style: { width: "150px" } },
-                      I.createElement(ge, { packageid: this.props.packageid })
+                      I.createElement(be, { packageid: this.props.packageid })
                     )
                   )
                 )
               ),
-              this.props.bShowContents &&
+              !this.state.bShowContents &&
                 I.createElement(
                   "div",
-                  null,
-                  e.appids.map(function(e) {
-                    return I.createElement(
-                      "div",
-                      { key: e, className: ce.a.BundleContent },
-                      I.createElement(de, { appid: e, bHideDescription: !0 })
-                    );
-                  })
-                )
+                  {
+                    onClick: this.ShowContents,
+                    style: { display: "flex", justifyContent: "center" }
+                  },
+                  I.createElement(
+                    "button",
+                    { className: ce.a.ShowContentsButton },
+                    Object(T.c)("#Sale_ShowContents")
+                  )
+                ),
+              I.createElement(
+                "div",
+                { style: this.state.containerStyle },
+                e.appids.map(function(e) {
+                  return I.createElement(
+                    "div",
+                    { key: e, className: ce.a.BundleContent },
+                    I.createElement(he, { appid: e, bHideDescription: !0 })
+                  );
+                })
+              )
             );
           }),
-          (t = Object(d.c)([o.a], t))
+          Object(d.c)([i.a], e.prototype, "ShowContents", null),
+          (e = Object(d.c)([o.a], e))
         );
       })(I.Component)),
-      _e = (I.Component,
+      ge = (I.Component,
+      I.Component,
       I.Component,
       I.Component,
       (function(t) {
@@ -27218,7 +27420,7 @@
               return Object(d.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    if (!u.f.logged_in)
+                    if (!p.f.logged_in)
                       return (
                         Object(ee.b)(
                           a.a.createElement(ne, {
@@ -27303,7 +27505,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component)),
-      ge = (function(e) {
+      be = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -27324,15 +27526,15 @@
               j.AddToCart(
                 e,
                 this.props.packageid,
-                u.b.STORE_BASE_URL + "cart/addtocart",
-                u.b.STORE_BASE_URL + "cart"
+                p.b.STORE_BASE_URL + "cart/addtocart",
+                p.b.STORE_BASE_URL + "cart"
               );
             else if (this.props.bundleid)
               j.AddToCart(
                 e,
                 null,
-                u.b.STORE_BASE_URL + "cart/addtocart",
-                u.b.STORE_BASE_URL + "cart",
+                p.b.STORE_BASE_URL + "cart/addtocart",
+                p.b.STORE_BASE_URL + "cart",
                 this.props.bundleid
               );
             else {
@@ -27362,7 +27564,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      be = (function(t) {
+      ve = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_schUpdate = new r.b()), (e.m_bSetupComplete = !1), e;
@@ -27424,16 +27626,16 @@
           e
         );
       })(I.Component);
-    function ve() {
+    function Se() {
       return I.createElement(
         "div",
         { className: "STV_ReplayBanner" },
         Object(T.c)("#DASHPlayerControls_IsReplay")
       );
     }
-    var Se,
-      ye,
-      Ce = (function(e) {
+    var ye,
+      Ce,
+      Oe = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -27470,7 +27672,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      Oe = (function(e) {
+      Ie = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -27498,18 +27700,18 @@
           t
         );
       })(I.Component),
-      Ie = n("KbL7"),
-      Ee = n.n(Ie);
-    ((ye = Se || (Se = {})).topleft = "topleft"),
-      (ye.top = "top"),
-      (ye.topright = "topright"),
-      (ye.left = "left"),
-      (ye.middle = "middle"),
-      (ye.right = "right"),
-      (ye.bottomleft = "bottomleft"),
-      (ye.bottom = "bottom"),
-      (ye.bottomright = "bottomright");
-    var we = (function(n) {
+      Ee = n("KbL7"),
+      we = n.n(Ee);
+    ((Ce = ye || (ye = {})).topleft = "topleft"),
+      (Ce.top = "top"),
+      (Ce.topright = "topright"),
+      (Ce.left = "left"),
+      (Ce.middle = "middle"),
+      (Ce.right = "right"),
+      (Ce.bottomleft = "bottomleft"),
+      (Ce.bottom = "bottom"),
+      (Ce.bottomright = "bottomright");
+    var Me = (function(n) {
       function e(e) {
         var t = n.call(this, e) || this;
         return (
@@ -27578,7 +27780,7 @@
         (e.prototype.OnMouseMove = function(e, t) {
           if (void 0 !== this.state.EdgeDown) {
             switch ((e.shiftKey && this.m_fnMouseUp(), t)) {
-              case Se.left:
+              case ye.left:
                 var n = {
                   curLeftPosPct: this.CalcLeftEdge(e.clientX),
                   curBottomPosPct: this.state.curBottomPosPct
@@ -27594,7 +27796,7 @@
                   0 < n.curBottomPosPct &&
                   this.setState(n);
                 break;
-              case Se.right:
+              case ye.right:
                 n = {
                   curRightPosPct: this.CalcRightEdge(e.clientX),
                   curBottomPosPct: this.state.curBottomPosPct
@@ -27610,7 +27812,7 @@
                   0 < n.curBottomPosPct &&
                   this.setState(n);
                 break;
-              case Se.top:
+              case ye.top:
                 n = {
                   curTopPosPct: this.CalcTopEdge(e.clientY),
                   curRightPosPct: this.state.curRightPosPct
@@ -27624,7 +27826,7 @@
                 }
                 0 < n.curTopPosPct && 0 < n.curRightPosPct && this.setState(n);
                 break;
-              case Se.bottom:
+              case ye.bottom:
                 n = {
                   curBottomPosPct: this.CalcBottomEdge(e.clientY),
                   curRightPosPct: this.state.curRightPosPct
@@ -27640,7 +27842,7 @@
                   0 < n.curRightPosPct &&
                   this.setState(n);
                 break;
-              case Se.topleft:
+              case ye.topleft:
                 n = {
                   curTopPosPct: this.CalcBottomEdge(e.clientY),
                   curLeftPosPct: this.CalcLeftEdge(e.clientX)
@@ -27654,7 +27856,7 @@
                 }
                 0 < n.curTopPosPct && 0 < n.curLeftPosPct && this.setState(n);
                 break;
-              case Se.topright:
+              case ye.topright:
                 n = {
                   curTopPosPct: this.CalcTopEdge(e.clientY),
                   curRightPosPct: this.CalcRightEdge(e.clientX)
@@ -27668,7 +27870,7 @@
                 }
                 0 < n.curTopPosPct && 0 < n.curRightPosPct && this.setState(n);
                 break;
-              case Se.bottomleft:
+              case ye.bottomleft:
                 n = {
                   curLeftPosPct: this.CalcLeftEdge(e.clientX),
                   curBottomPosPct: this.CalcBottomEdge(e.clientY)
@@ -27684,7 +27886,7 @@
                   0 < n.curBottomPosPct &&
                   this.setState(n);
                 break;
-              case Se.bottomright:
+              case ye.bottomright:
                 n = {
                   curRightPosPct: this.CalcRightEdge(e.clientX),
                   curBottomPosPct: this.CalcBottomEdge(e.clientY)
@@ -27700,7 +27902,7 @@
                   0 < n.curBottomPosPct &&
                   this.setState(n);
                 break;
-              case Se.middle:
+              case ye.middle:
                 var a = Object(w.a)(
                     this.CalcLeftEdge(e.clientX),
                     0,
@@ -27824,10 +28026,10 @@
               right: this.state.curRightPosPct + "%",
               bottom: this.state.curBottomPosPct + "%"
             },
-            n = Ee.a.LinkRegionDragBox;
+            n = we.a.LinkRegionDragBox;
           return (
             null !== this.state.EdgeDown &&
-              (n += " " + Ee.a.EdgeDown + " " + Ee.a[this.state.EdgeDown]),
+              (n += " " + we.a.EdgeDown + " " + we.a[this.state.EdgeDown]),
             I.createElement(
               "div",
               {
@@ -27838,40 +28040,40 @@
               },
               I.createElement(
                 "div",
-                { className: Ee.a.LinkRegionGridBox },
+                { className: we.a.LinkRegionGridBox },
                 I.createElement("div", {
-                  className: Ee.a.LinkRegionEdge + " " + Ee.a.TopLeft,
+                  className: we.a.LinkRegionEdge + " " + we.a.TopLeft,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, Se.topleft);
+                    t.OnMouseDown(e, ye.topleft);
                   },
                   draggable: !1
                 }),
                 I.createElement("div", {
-                  className: Ee.a.LinkRegionEdge + " " + Ee.a.Top,
+                  className: we.a.LinkRegionEdge + " " + we.a.Top,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, Se.top);
+                    t.OnMouseDown(e, ye.top);
                   }
                 }),
                 I.createElement("div", {
-                  className: Ee.a.LinkRegionEdge + " " + Ee.a.TopRight,
+                  className: we.a.LinkRegionEdge + " " + we.a.TopRight,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, Se.topright);
+                    t.OnMouseDown(e, ye.topright);
                   },
                   draggable: !1
                 }),
                 I.createElement("div", {
-                  className: Ee.a.LinkRegionEdge + " " + Ee.a.Left,
+                  className: we.a.LinkRegionEdge + " " + we.a.Left,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, Se.left);
+                    t.OnMouseDown(e, ye.left);
                   },
                   draggable: !1
                 }),
                 I.createElement(
                   "div",
                   {
-                    className: Ee.a.LinkRegionEdge + " " + Ee.a.Middle,
+                    className: we.a.LinkRegionEdge + " " + we.a.Middle,
                     onMouseDown: function(e) {
-                      t.OnMouseDown(e, Se.middle);
+                      t.OnMouseDown(e, ye.middle);
                     },
                     draggable: !1
                   },
@@ -27879,7 +28081,7 @@
                     I.createElement(
                       "div",
                       {
-                        className: Ee.a.LinkRegionDelete,
+                        className: we.a.LinkRegionDelete,
                         onClick: this.HandleDelete
                       },
                       I.createElement(E.pb, null)
@@ -27888,44 +28090,44 @@
                     I.createElement(
                       "div",
                       {
-                        className: Ee.a.LinkRegionSettings,
+                        className: we.a.LinkRegionSettings,
                         onClick: this.OnEditLink
                       },
                       I.createElement(E.L, null)
                     ),
                   I.createElement(
                     "div",
-                    { className: Ee.a.LinkText },
+                    { className: we.a.LinkText },
                     " ",
                     this.m_strDescription,
                     " "
                   )
                 ),
                 I.createElement("div", {
-                  className: Ee.a.LinkRegionEdge + " " + Ee.a.Right,
+                  className: we.a.LinkRegionEdge + " " + we.a.Right,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, Se.right);
+                    t.OnMouseDown(e, ye.right);
                   },
                   draggable: !1
                 }),
                 I.createElement("div", {
-                  className: Ee.a.LinkRegionEdge + " " + Ee.a.BottomLeft,
+                  className: we.a.LinkRegionEdge + " " + we.a.BottomLeft,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, Se.bottomleft);
+                    t.OnMouseDown(e, ye.bottomleft);
                   },
                   draggable: !1
                 }),
                 I.createElement("div", {
-                  className: Ee.a.LinkRegionEdge + " " + Ee.a.Bottom,
+                  className: we.a.LinkRegionEdge + " " + we.a.Bottom,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, Se.bottom);
+                    t.OnMouseDown(e, ye.bottom);
                   },
                   draggable: !1
                 }),
                 I.createElement("div", {
-                  className: Ee.a.LinkRegionEdge + " " + Ee.a.BottomRight,
+                  className: we.a.LinkRegionEdge + " " + we.a.BottomRight,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, Se.bottomright);
+                    t.OnMouseDown(e, ye.bottomright);
                   },
                   draggable: !1
                 })
@@ -27933,9 +28135,9 @@
               this.state.bEditingLink &&
                 I.createElement(
                   "div",
-                  { className: Ee.a.LinkRegionInfo },
+                  { className: we.a.LinkRegionInfo },
                   I.createElement(k.o, {
-                    className: Ee.a.LinkRegionInput,
+                    className: we.a.LinkRegionInput,
                     type: "text",
                     name: "link_url",
                     value: this.state.text_link_url,
@@ -27945,7 +28147,7 @@
                     mustBeURL: !0
                   }),
                   I.createElement(k.o, {
-                    className: Ee.a.LinkRegionInput,
+                    className: we.a.LinkRegionInput,
                     type: "text",
                     name: "link_description",
                     value: this.state.text_link_description,
@@ -27957,7 +28159,7 @@
                   }),
                   I.createElement(
                     "div",
-                    { className: Ee.a.LinkRegionButtonContainer },
+                    { className: we.a.LinkRegionButtonContainer },
                     I.createElement(
                       k.d,
                       {
@@ -27996,12 +28198,12 @@
       );
     })(I.Component);
     n.d(t, "b", function() {
-      return Me;
+      return De;
     }),
       n.d(t, "a", function() {
-        return Ve;
+        return Ue;
       });
-    var Me = (function(n) {
+    var De = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -28155,7 +28357,7 @@
                 e.SetStatsViewIsVisible(!0)));
           }),
           (e.prototype.OnContextMenu = function(e) {
-            Object(p.a)(
+            Object(m.a)(
               I.createElement(h.c, null, this.GetContextMenuItems()),
               e
             ),
@@ -28172,7 +28374,7 @@
             if (t && this.props.onOpenLinkInNewWindow) {
               var n = t.GetBroadcastInfo();
               if (n) {
-                var o = u.b.STORE_BASE_URL + "app/" + n.m_strAppId;
+                var o = p.b.STORE_BASE_URL + "app/" + n.m_strAppId;
                 this.props.onOpenLinkInNewWindow(e, o), e.stopPropagation();
               }
             }
@@ -28289,9 +28491,9 @@
                 onContextMenu: this.OnContextMenu,
                 onMouseDown: this.OnMouseDown
               },
-              o && I.createElement(ve, null),
+              o && I.createElement(Se, null),
               this.props.showVideoBackgroundBlur &&
-                I.createElement(be, {
+                I.createElement(ve, {
                   className: "videoBlur",
                   elementRef: this.m_elVideo,
                   updateRate: 33,
@@ -28309,7 +28511,7 @@
                 controls: !1
               }),
               this.props.linkRegions
-                ? I.createElement(He, {
+                ? I.createElement(We, {
                     linkRegions: this.props.linkRegions,
                     editMode: this.props.editMode,
                     onSaveLinkRegions: this.props.onSaveLinkRegions
@@ -28317,21 +28519,21 @@
                 : null,
               this.props.linkElement,
               l &&
-                I.createElement(De, {
+                I.createElement(Te, {
                   video: e,
                   actions: c,
                   onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
                   onShowStats: this.ToggleStatsView,
                   bIncludeClipEditor: this.props.bIncludeClipEditor
                 }),
-              p && I.createElement(Te, { onClick: this.props.onRequestClose }),
+              p && I.createElement(Ge, { onClick: this.props.onRequestClose }),
               n &&
-                I.createElement(m, {
+                I.createElement(u, {
                   stats: e.GetDASHPlayerStats(),
                   closeStats: this.CloseStats
                 }),
-              I.createElement(Ce, { video: e }),
-              a && I.createElement(Oe, { video: e })
+              I.createElement(Oe, { video: e }),
+              a && I.createElement(Ie, { video: e })
             );
           }),
           Object(d.c)([i.a], e.prototype, "BindBroadcastPlayerRef", null),
@@ -28352,7 +28554,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      De = (function(e) {
+      Te = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28365,7 +28567,7 @@
             return I.createElement(
               "div",
               { className: "videoControls" },
-              I.createElement(Ve, {
+              I.createElement(Ue, {
                 steamID: this.props.video.GetBroadcastSteamID(),
                 bHideThumbnail: !0,
                 bVerticalBroadcastChat: !0,
@@ -28374,7 +28576,7 @@
               I.createElement(
                 "div",
                 { className: "videoControlsBottom" + (t ? "" : " noSegments") },
-                I.createElement(xe, {
+                I.createElement(Ve, {
                   video: e,
                   bIncludeClipEditor: this.props.bIncludeClipEditor
                 }),
@@ -28384,9 +28586,9 @@
                   I.createElement("div", {
                     className: "videoControlsButtons LeftSpacer"
                   }),
-                  I.createElement(Ge, { video: e }),
                   I.createElement(Re, { video: e }),
-                  I.createElement(ke, {
+                  I.createElement(je, { video: e }),
+                  I.createElement(Ne, {
                     video: e,
                     actions: this.props.actions,
                     onShowStats: this.props.onShowStats
@@ -28398,7 +28600,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      Te = (function(e) {
+      Ge = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28419,7 +28621,7 @@
           t
         );
       })(I.PureComponent),
-      Ge = (function(e) {
+      Re = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28437,7 +28639,7 @@
             return I.createElement(
               "div",
               { className: "videoControlsButtons PlayControls" },
-              I.createElement(Le, { video: e }),
+              I.createElement(Pe, { video: e }),
               t &&
                 I.createElement(
                   "div",
@@ -28454,7 +28656,7 @@
                   }),
                   I.createElement("div", { className: "jumpAheadValue" }, 15)
                 ),
-              I.createElement(je, { video: e }),
+              I.createElement(Le, { video: e }),
               t &&
                 I.createElement(
                   "div",
@@ -28470,7 +28672,7 @@
                   }),
                   I.createElement("div", { className: "jumpAheadValue" }, 15)
                 ),
-              t && I.createElement(Pe, { video: e })
+              t && I.createElement(ke, { video: e })
             );
           }),
           Object(d.c)([i.a], t.prototype, "OnJumpBackward", null),
@@ -28478,7 +28680,7 @@
           t
         );
       })(I.Component),
-      Re = (function(e) {
+      je = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28519,7 +28721,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      je = (function(e) {
+      Le = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28543,7 +28745,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      Le = (function(e) {
+      Pe = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28595,7 +28797,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      Pe = (function(e) {
+      ke = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28642,7 +28844,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      ke = (function(n) {
+      Ne = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -28820,7 +29022,7 @@
                 },
                 I.createElement(E.X, null)
               ),
-              I.createElement(Ne, { video: a }),
+              I.createElement(Ae, { video: a }),
               s &&
                 s.map(function(e) {
                   return I.createElement(
@@ -28880,7 +29082,7 @@
           e
         );
       })(I.Component),
-      Ne = (function(t) {
+      Ae = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
@@ -28955,7 +29157,7 @@
                     { className: o, onClick: this.ToggleMute },
                     I.createElement(E.nb, null)
                   ),
-                  I.createElement(Ae, { video: e, onDrag: this.OnChildDrag })
+                  I.createElement(Be, { video: e, onDrag: this.OnChildDrag })
                 )
               )
             );
@@ -28968,7 +29170,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      Ae = (function(t) {
+      Be = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_elSlider = null), (e.m_nVolumeStartOfDrag = 0), e;
@@ -29051,7 +29253,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      Be = function(e) {
+      Fe = function(e) {
         return I.createElement(
           "div",
           {
@@ -29071,7 +29273,7 @@
           )
         );
       };
-    function Fe(e) {
+    function xe(e) {
       var t = e.startPos,
         n = e.endPos,
         o = "",
@@ -29104,7 +29306,7 @@
         )
       );
     }
-    var xe = (function(n) {
+    var Ve = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -29269,7 +29471,7 @@
               n < 0 ||
                 100 < n ||
                 v.push(
-                  I.createElement(Be, {
+                  I.createElement(Fe, {
                     key: t,
                     pos: n,
                     label: e.strTemplateName,
@@ -29285,7 +29487,7 @@
                 var o = r.GetPercentOffsetFromTime(t.nTimeEnd, M.c.Timeline);
                 o < 0 ||
                   S.push(
-                    I.createElement(Fe, {
+                    I.createElement(xe, {
                       key: e,
                       startPos: n,
                       endPos: o,
@@ -29305,7 +29507,7 @@
               C = r.GetPercentOffsetFromTime(r.m_editorEndTime, M.c.Timeline),
               O = this.props.bIncludeClipEditor
                 ? [
-                    I.createElement(Be, {
+                    I.createElement(Fe, {
                       key: "start",
                       pos: y,
                       label: Object(T.c)("#DASHPlayerControls_Start"),
@@ -29315,7 +29517,7 @@
                         return i.OnMouseDown(e, "start");
                       }
                     }),
-                    I.createElement(Be, {
+                    I.createElement(Fe, {
                       key: "end",
                       pos: C,
                       label: Object(T.c)("#DASHPlayerControls_End"),
@@ -29413,7 +29615,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      Ve = (function(t) {
+      Ue = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.state = { info: null }), e;
@@ -29433,8 +29635,8 @@
           }),
           (e.prototype.RenderStreamSwitcher = function() {
             var e = this.props.steamID;
-            return "public" != u.b.WEB_UNIVERSE || f.b.stream[e]
-              ? I.createElement(Ue, {
+            return "public" != p.b.WEB_UNIVERSE || f.b.stream[e]
+              ? I.createElement(He, {
                   value: e,
                   options: f.b.stream,
                   onChange: this.props.onLocalStreamChange
@@ -29446,7 +29648,8 @@
               e = this.state.info;
             if (!e) return null;
             var n = "";
-            e.m_nViewerCount && (n = e.m_nViewerCount.toLocaleString());
+            e.m_nViewerCount &&
+              (n = e.m_nViewerCount.toLocaleString(T.b.GetPreferredLocales()));
             var o =
                 f.b.bValid && f.b.stream && f.b.stream[e.m_steamIDBroadcast],
               i =
@@ -29515,7 +29718,7 @@
                   )
               ),
               i &&
-                I.createElement(de, {
+                I.createElement(he, {
                   appid:
                     f.b.bValid && f.b.stream && f.b.stream[e.m_steamIDBroadcast]
                       ? f.b.appID
@@ -29526,7 +29729,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      Ue = (function(e) {
+      He = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -29550,7 +29753,7 @@
                   Object(T.c)(n[e])
                 );
               });
-            Object(p.a)(I.createElement(h.c, null, r), e);
+            Object(m.a)(I.createElement(h.c, null, r), e);
           }),
           (t.prototype.render = function() {
             var e = this.props,
@@ -29571,7 +29774,7 @@
           t
         );
       })(I.Component),
-      He = (function(n) {
+      We = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { sizableRegion: [] }), t;
@@ -29705,7 +29908,7 @@
                         "a",
                         {
                           key: e.link_index,
-                          href: u.b.STEAMTV_BASE_URL + "linkfilter/" + e.url,
+                          href: p.b.STEAMTV_BASE_URL + "linkfilter/" + e.url,
                           target: "_blank",
                           rel: "noopener noreferrer"
                         },
@@ -29732,7 +29935,7 @@
                   : null,
                 this.props.editMode &&
                   this.state.sizableRegion.map(function(e, t) {
-                    return I.createElement(we, {
+                    return I.createElement(Me, {
                       key: 100 * t + e.xPosPct,
                       index: t,
                       deleteFn: n.DeleteRegion,
@@ -38678,7 +38881,7 @@
               (this.m_ulChatID = t),
               (this.m_bIsBanned = n),
               (this.m_rtKickExpires = o),
-              (this.m_rtTimeExpires = r.e),
+              (this.m_rtTimeExpires = r.f),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
@@ -47495,7 +47698,7 @@
       S = n("bbBM"),
       y = n("NB6M"),
       C = n("cLtS"),
-      O = n("1MmB"),
+      O = n("Kwyy"),
       I = n("2vnA"),
       E = n("/SYB"),
       w = n("adxy"),
@@ -48221,9 +48424,9 @@
               o = this.props.chatView,
               i = o.chat.chat_message_blocks,
               r = !o.IsChatRoom() && i.time_passes_index,
-              a = o.IsChatRoom() ? o.chat.first_unread_msg_time : D.f,
+              a = o.IsChatRoom() ? o.chat.first_unread_msg_time : D.g,
               s = i.message_blocks[e],
-              c = 0 == e ? D.f : i.message_blocks[e - 1].GetRTimeLastMessage();
+              c = 0 == e ? D.g : i.message_blocks[e - 1].GetRTimeLastMessage();
             if (a && c <= a && s.GetRTimeLastMessage() > a) {
               var l = s,
                 p = void 0;
@@ -49193,6 +49396,21 @@
           return (
             (t.m_rgCurrentMatches = []),
             (t.m_mapMatchByKey = new Map()),
+            (t.m_hMobxSearchDisposer = Object(I.h)(function() {
+              return Object(G.b)(t, void 0, void 0, function() {
+                return Object(G.e)(this, function(e) {
+                  switch (e.label) {
+                    case 0:
+                      return [
+                        4,
+                        this.UpdateSearchResults(this.props.strSearch)
+                      ];
+                    case 1:
+                      return e.sent(), this.forceUpdate(), [2];
+                  }
+                });
+              });
+            })),
             (t.state = { selectedIndex: void 0 }),
             t
           );
@@ -49337,32 +49555,14 @@
               (this.m_hMobxSearchDisposer(),
               (this.m_hMobxSearchDisposer = void 0));
           }),
-          (e.prototype.componentWillMount = function() {
-            var e = this;
-            this.m_hMobxSearchDisposer = Object(I.h)(function() {
-              return Object(G.b)(e, void 0, void 0, function() {
-                return Object(G.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      return [
-                        4,
-                        this.UpdateSearchResults(this.props.strSearch)
-                      ];
-                    case 1:
-                      return e.sent(), this.forceUpdate(), [2];
-                  }
-                });
-              });
-            });
-          }),
-          (e.prototype.componentWillUpdate = function(t) {
+          (e.prototype.componentDidUpdate = function(e) {
             return Object(G.b)(this, void 0, void 0, function() {
               return Object(G.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    return this.m_strLastSearch == t.strSearch
+                    return this.m_strLastSearch == this.props.strSearch
                       ? [3, 2]
-                      : [4, this.UpdateSearchResults(t.strSearch)];
+                      : [4, this.UpdateSearchResults(this.props.strSearch)];
                   case 1:
                     e.sent(), this.forceUpdate(), (e.label = 2);
                   case 2:
@@ -57044,6 +57244,7 @@
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
             (e.bHadPlayers = !1),
+            (e.nCurrentAppID = 0),
             (e.state = { gameVolumeNumber: -1, bAllowDesktopStream: !1 }),
             e
           );
@@ -57082,7 +57283,9 @@
             });
           }),
           (e.prototype.componentWillUnmount = function() {
-            p.f.RemotePlayStore.CancelAllInvitesAndSessions();
+            this.props.bIsHost
+              ? p.f.RemotePlayStore.CancelAllInvitesAndSessions()
+              : p.f.RemotePlayStore.StopStreamingClient();
           }),
           (e.prototype.RemoteClientStopped = function(e) {
             this.props.closeModal();
@@ -57142,8 +57345,10 @@
               c = p.f.VoiceStore.ConvertGainValueToSliderValue(
                 p.f.VoiceStore.GetVoiceInputGain(),
                 u.a.k_MaxInputOutputGainValue
-              ),
-              l = this.props.streamHost.persona.m_unGamePlayedAppID;
+              );
+            0 == this.nCurrentAppID &&
+              (this.nCurrentAppID = this.props.streamHost.persona.m_unGamePlayedAppID);
+            var l = this.nCurrentAppID;
             return d.createElement(
               m.a,
               {
@@ -59122,7 +59327,7 @@
       })(),
       S = n("hReu"),
       y = n("yoQ3"),
-      C = n("qa7T"),
+      C = n("Kwyy"),
       O = n("oh5H"),
       I = (n("Y3TG"), n("XCHq"));
     n("w/TS"), n("whIR"), n("eeM7"), n("m1EC");
@@ -59134,9 +59339,10 @@
           !a.a.IN_CLIENT &&
             a.a.STEAM_TV &&
             (a.d.logged_in
-              ? Object(C.b)()
+              ? Object(C.c)()
               : ((e = !1),
-                new C.a().Init(function() {
+                Object(S.d)(),
+                new C.b().Init(function() {
                   window.location = window.location;
                 }))),
           e &&
@@ -59629,7 +59835,7 @@
     var o = n("mrSG"),
       i = n("0N1H");
     n.d(t, "k", function() {
-      return i.c;
+      return i.d;
     });
     var r = n("2vnA"),
       a = (function() {
@@ -60373,7 +60579,10 @@
               u = Object(L.e)(p, this.props.inviter.display_name),
               m =
                 this.props.gameInvite.remoteplayString &&
-                this.BCanAcceptVoiceChat();
+                this.BCanAcceptVoiceChat() &&
+                G.f.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
+                  this.props.inviter.accountid
+                );
             return R.createElement(
               "div",
               { className: "msg ChatMessageInvite gameInviteMsg", style: l },
@@ -60892,27 +61101,25 @@
       W = [];
     }
     var q = (function(n) {
-        function e(e) {
+        function o(e) {
           var t = n.call(this, e) || this;
           return (
             (t.m_strPlayerID = ""),
             (t.m_player = null),
             (t.m_playerContainer = null),
             (t.m_bPlayerReady = !1),
+            (t.m_strPlayerID = "YoutubePlayer_" + o.s_nPlayerIndex++),
             (t.state = { bYoutubeLoaded: !1 }),
             t
           );
         }
         return (
-          Object(l.d)(e, n),
-          (e.prototype.componentWillMount = function() {
-            this.m_strPlayerID = "YoutubePlayer_" + e.s_nPlayerIndex++;
-          }),
-          (e.prototype.componentWillUnmount = function() {
+          Object(l.d)(o, n),
+          (o.prototype.componentWillUnmount = function() {
             var e;
             this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), U.c(W, e);
           }),
-          (e.prototype.shouldComponentUpdate = function(e, t) {
+          (o.prototype.shouldComponentUpdate = function(e, t) {
             if (!this.m_player) return !1;
             var n = this.props;
             return (
@@ -60927,7 +61134,7 @@
               !1
             );
           }),
-          (e.prototype.DestroyPlayer = function() {
+          (o.prototype.DestroyPlayer = function() {
             if (this.m_player)
               try {
                 this.m_player.stopVideo && this.m_player.stopVideo(),
@@ -60937,7 +61144,7 @@
                 this.m_player = null;
               }
           }),
-          (e.prototype.BindPlayerContainer = function(e) {
+          (o.prototype.BindPlayerContainer = function(e) {
             this.m_playerContainer != e &&
               ((this.m_playerContainer = e),
               this.DestroyPlayer(),
@@ -60957,10 +61164,10 @@
                   } else t();
                 })(this.OnYoutubeScriptsReady));
           }),
-          (e.prototype.OnYoutubeScriptsReady = function() {
+          (o.prototype.OnYoutubeScriptsReady = function() {
             this.CreatePlayer(this.props);
           }),
-          (e.prototype.CreatePlayer = function(e) {
+          (o.prototype.CreatePlayer = function(e) {
             if ((this.DestroyPlayer(), this.m_playerContainer)) {
               var t = !1 === e.autoplay ? 0 : 1,
                 n = !0 === e.showInfo ? 1 : 0,
@@ -60992,7 +61199,7 @@
               (this.m_bPlayerReady = !1), (this.m_player = new YT.Player(a, r));
             }
           }),
-          (e.prototype.OnPlayerReady = function(e) {
+          (o.prototype.OnPlayerReady = function(e) {
             if (((this.m_bPlayerReady = !0), this.props.onVideoInfoChanged)) {
               var t = this.m_player.getVideoData(),
                 n = { strAuthor: "", strTitle: "", strVideoID: "" };
@@ -61004,7 +61211,7 @@
             this.m_player.setSize(this.props.width, this.props.height),
               this.props.onPlayerReady && this.props.onPlayerReady();
           }),
-          (e.prototype.OnPlayerStateChange = function(e) {
+          (o.prototype.OnPlayerStateChange = function(e) {
             switch (e.data) {
               case YT.PlayerState.UNSTARTED:
               case YT.PlayerState.PLAYING:
@@ -61015,11 +61222,11 @@
                 this.props.onMovieEnd && this.props.onMovieEnd();
             }
           }),
-          (e.prototype.OnError = function(e) {
+          (o.prototype.OnError = function(e) {
             console.log("Youtube: Playback failed", e),
               this.props.onError && this.props.onError(e);
           }),
-          (e.prototype.render = function() {
+          (o.prototype.render = function() {
             return R.createElement(
               "div",
               {
@@ -61030,14 +61237,14 @@
               R.createElement("div", null, "Loading Youtube...")
             );
           }),
-          (e.s_nPlayerIndex = 0),
-          Object(l.c)([_.a], e.prototype, "BindPlayerContainer", null),
-          Object(l.c)([_.a], e.prototype, "OnYoutubeScriptsReady", null),
-          Object(l.c)([_.a], e.prototype, "CreatePlayer", null),
-          Object(l.c)([_.a], e.prototype, "OnPlayerReady", null),
-          Object(l.c)([_.a], e.prototype, "OnPlayerStateChange", null),
-          Object(l.c)([_.a], e.prototype, "OnError", null),
-          e
+          (o.s_nPlayerIndex = 0),
+          Object(l.c)([_.a], o.prototype, "BindPlayerContainer", null),
+          Object(l.c)([_.a], o.prototype, "OnYoutubeScriptsReady", null),
+          Object(l.c)([_.a], o.prototype, "CreatePlayer", null),
+          Object(l.c)([_.a], o.prototype, "OnPlayerReady", null),
+          Object(l.c)([_.a], o.prototype, "OnPlayerStateChange", null),
+          Object(l.c)([_.a], o.prototype, "OnError", null),
+          o
         );
       })(R.Component),
       K = n("adxy");
@@ -68824,11 +69031,11 @@
         }
         return (
           Object(d.d)(e, n),
-          (e.prototype.componentWillReceiveProps = function(e) {
-            e.checked != this.state.checked &&
-              this.setState({ checked: e.checked }),
-              e.disabled != this.state.disabled &&
-                this.setState({ disabled: e.disabled });
+          (e.prototype.componentDidUpdate = function(e) {
+            this.props.checked != this.state.checked &&
+              this.setState({ checked: this.props.checked }),
+              this.props.disabled != this.state.disabled &&
+                this.setState({ disabled: this.props.disabled });
           }),
           (e.prototype.shouldComponentUpdate = function(e, t) {
             return (
@@ -69046,6 +69253,7 @@
         function e(e) {
           var t = n.call(this, e) || this;
           return (
+            t.CheckProps(e),
             (t.state = {
               m_CopiedYPos: 0,
               m_bPlayingCopiedAnimation: !1,
@@ -69061,6 +69269,9 @@
         }
         return (
           Object(d.d)(e, n),
+          (e.prototype.componentDidUpdate = function(e) {
+            this.CheckProps(this.props);
+          }),
           (e.prototype.OnInputRef = function(e) {
             (this.m_elInput = e),
               this.m_elInput &&
@@ -69151,7 +69362,7 @@
                 new Event("input", { bubbles: !0 })
               ));
           }),
-          (e.prototype.componentWillReceiveProps = function(e) {
+          (e.prototype.CheckProps = function(e) {
             Object(j.a)(
               !(e.bShowClearAction || e.bAlwaysShowClearAction) || e.onChange,
               "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input."
@@ -69429,8 +69640,9 @@
                 e.onChange !== this.props.onChange)
             );
           }),
-          (e.prototype.componentWillReceiveProps = function(e) {
-            e.value != this.props.value && this.setState({ value: e.value });
+          (e.prototype.componentDidUpdate = function(e) {
+            e.value != this.props.value &&
+              this.setState({ value: this.props.value });
           }),
           (e.prototype.OnMouseDown = function(e) {
             (this.m_elSlider = e.currentTarget),
@@ -69648,20 +69860,18 @@
               var r = i[o];
               if (e[r] !== this.props[r]) return !0;
             }
-            return !(
-              !this.state.bOpened || !this.didOptionsChange(e.rgOptions)
-            );
+            return !(!this.state.bOpened || !this.DoOptionsDiffer(e.rgOptions));
           }),
-          (e.prototype.didOptionsChange = function(e) {
+          (e.prototype.DoOptionsDiffer = function(e) {
             if (e.length != this.props.rgOptions.length) return !0;
             for (var t = 0; t < e.length; t++)
               if (e[t].label !== this.props.rgOptions[t].label) return !0;
             return !1;
           }),
-          (e.prototype.componentWillReceiveProps = function(e) {
+          (e.prototype.componentDidUpdate = function(e) {
             e.selectedOption !== this.props.selectedOption &&
-              this.FindAndSetActiveOption(e.selectedOption),
-              this.didOptionsChange(e.rgOptions) &&
+              this.FindAndSetActiveOption(this.props.selectedOption),
+              this.DoOptionsDiffer(e.rgOptions) &&
                 (this.HideMenu(), (this.m_iMenuInstance = void 0));
           }),
           (e.prototype.OnInputRef = function(e) {
@@ -71939,9 +72149,9 @@ and limitations under the License.
           (e.prototype.GetELanguageFallbackOrder = function() {
             var t = new Array();
             return (
-              t.push(Object(i.c)(r.b.LANGUAGE)),
+              t.push(Object(i.d)(r.b.LANGUAGE)),
               (r.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-                e.value != r.b.LANGUAGE && t.push(Object(i.c)(e.value));
+                e.value != r.b.LANGUAGE && t.push(Object(i.d)(e.value));
               }),
               t
             );
@@ -72071,110 +72281,6 @@ and limitations under the License.
       },
       h = new a();
     window.LocalizationManager = h;
-  },
-  qa7T: function(e, t, n) {
-    "use strict";
-    n.d(t, "b", function() {
-      return p;
-    }),
-      n.d(t, "a", function() {
-        return u;
-      });
-    var o = n("mrSG"),
-      i = n("1n9R"),
-      r = n("i8i4"),
-      a = n("q1tI"),
-      s = n("1MmB"),
-      c = n("2vnA"),
-      l = n("hReu");
-    function p() {
-      window.sessionStorage.setItem(
-        "oFriendsUIStartupParam",
-        JSON.stringify({
-          command: { command: "ShowWatchBroadcast", steamid: i.a.steamid }
-        })
-      );
-    }
-    var u = (function() {
-      function e() {
-        (this.m_iTimeoutLogin = void 0),
-          (this.m_eLogonState = 0),
-          (this.m_bLogonDialogVisisible = !1);
-      }
-      return (
-        (e.prototype.Init = function(e) {
-          var t = this;
-          (this.m_fnLaunchChat = e),
-            (this.m_steamID = i.a.steamid),
-            window.addEventListener("message", this.HandlePostMessage),
-            Object(l.d)(),
-            r.render(
-              a.createElement(s.b, { app: this }),
-              document.getElementById("friendslist-container")
-            ),
-            (this.m_iTimeoutLogin = window.setTimeout(function() {
-              0 == t.m_eLogonState && (t.m_eLogonState = 1);
-            }, 2500));
-        }),
-        (e.prototype.LaunchChat = function() {
-          r.unmountComponentAtNode(
-            document.getElementById("friendslist-container")
-          ),
-            window.removeEventListener("message", this.HandlePostMessage),
-            window.clearTimeout(this.m_iTimeoutLogin),
-            p(),
-            this.m_fnLaunchChat();
-        }),
-        (e.prototype.GetLoginURL = function() {
-          return i.b.STORE_BASE_URL + "login/?steamtv";
-        }),
-        (e.prototype.BIsPerformingLogonCheck = function() {
-          return 0 == this.m_eLogonState || 1 == this.m_eLogonState;
-        }),
-        (e.prototype.BIsLogonDialogVisible = function() {
-          return this.m_bLogonDialogVisisible;
-        }),
-        (e.prototype.ShowLogonDialog = function() {
-          this.m_bLogonDialogVisisible = !0;
-        }),
-        (e.prototype.BReadyToRender = function() {
-          return 0 != this.m_eLogonState;
-        }),
-        (e.prototype.DismissLogonDialog = function() {
-          this.m_bLogonDialogVisisible = !1;
-        }),
-        (e.prototype.GetSteamIDWatched = function() {
-          return this.m_steamID;
-        }),
-        (e.prototype.ExtractOrigin = function(e) {
-          return e.replace(/^(https?:\/\/[^/]*).*$/, "$1");
-        }),
-        (e.prototype.HandlePostMessage = function(e) {
-          if (
-            e.origin == this.ExtractOrigin(i.b.STORE_BASE_URL) ||
-            e.origin == this.ExtractOrigin(i.b.CHAT_BASE_URL)
-          ) {
-            var t = e.data;
-            if (t)
-              if ("OnLoginButtonClicked" == t.msg)
-                console.log("Login button clicked"),
-                  (this.m_bLogonDialogVisisible = !0);
-              else if ("LoginNeeded" == t.command) this.m_eLogonState = 2;
-              else if ("LogonComplete" == t.command)
-                return void this.LaunchChat();
-          } else
-            console.warn(
-              'Ignoring message from untrusted domain "' + e.origin + '"'
-            );
-        }),
-        Object(o.c)([c.x], e.prototype, "m_eLogonState", void 0),
-        Object(o.c)([c.x], e.prototype, "m_bLogonDialogVisisible", void 0),
-        Object(o.c)([c.x], e.prototype, "m_steamID", void 0),
-        Object(o.c)([c.g], e.prototype, "LaunchChat", null),
-        Object(o.c)([c.g.bound], e.prototype, "HandlePostMessage", null),
-        e
-      );
-    })();
   },
   r6f6: function(e, t, n) {
     e.exports = {
@@ -73578,7 +73684,7 @@ and limitations under the License.
         }
         return (
           (i.InitFromAccountID = function(e) {
-            return new i(Number(e), s.b.EUNIVERSE, 1, r.n);
+            return new i(Number(e), s.b.EUNIVERSE, 1, r.o);
           }),
           (i.InitFromClanID = function(e) {
             return new i(Number(e), s.b.EUNIVERSE, 7, 0);
@@ -73652,7 +73758,7 @@ and limitations under the License.
             var t = this.GetUniverse();
             if (t <= 0 || 5 <= t) return !1;
             if (1 == e) {
-              if (0 == this.GetAccountID() || this.GetInstance() > r.o)
+              if (0 == this.GetAccountID() || this.GetInstance() > r.p)
                 return !1;
             } else if (7 == e) {
               if (0 == this.GetAccountID() || 0 != this.GetInstance())
@@ -74314,10 +74420,10 @@ and limitations under the License.
               i = this;
             if ((void 0 === e && (e = !1), e)) {
               var r = this.GetMostRecentChatMsg();
-              n = r ? ((t = r.rtTimestamp), r.unOrdinal) : ((t = p.f), 0);
-            } else (t = p.f), (n = 0);
+              n = r ? ((t = r.rtTimestamp), r.unOrdinal) : ((t = p.g), 0);
+            } else (t = p.g), (n = 0);
             return (
-              (o = p.e),
+              (o = p.f),
               0,
               (this.m_nLoadingHistoryInProgressCount += 1),
               this.GetMessagesFromTimeRange(t, n, o, 0, a.k_InitialMessageCount)
@@ -74341,7 +74447,7 @@ and limitations under the License.
               ? Promise.resolve(!0)
               : ((this.m_nLoadingHistoryInProgressCount += 1),
                 this.GetMessagesFromTimeRange(
-                  p.f,
+                  p.g,
                   0,
                   this.m_oldestMessageTime,
                   this.m_oldestMessageOrdinal,
@@ -74607,7 +74713,7 @@ and limitations under the License.
                 n++
               );
               n >= this.m_rgChatMessages.length
-                ? ((this.m_oldestMessageTime = p.e),
+                ? ((this.m_oldestMessageTime = p.f),
                   (this.m_oldestMessageOrdinal = 0))
                 : ((this.m_oldestMessageTime = this.m_rgChatMessages[
                     n
@@ -79120,7 +79226,7 @@ and limitations under the License.
           if (
             e.BIsValid() &&
             e.Hdr().jobid_target() &&
-            e.Hdr().jobid_target() !== w.d
+            e.Hdr().jobid_target() !== w.e
           ) {
             var t = parseInt(e.Hdr().jobid_target());
             if (this.m_mapWaitingCallbacks.has(t)) {

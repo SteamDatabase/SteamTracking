@@ -364,7 +364,7 @@ GHomepage = {
 		if( window.hasOwnProperty('GSteamBroadcasts')) {
 			try {
 				new CScrollOffsetWatcher( '#home_broadcast_scroll_target', function() {
-					GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay, 0, 0, GHomepage.nMaxBroadcasts, GHomepage.bAutoPlayingFeaturedBroadcast );
+					GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay, 0, 0, 0, GHomepage.nMaxBroadcasts, GHomepage.bAutoPlayingFeaturedBroadcast );
 				} );
 			} catch (e) { OnHomepageException(e); }
 		}

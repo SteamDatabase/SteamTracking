@@ -1,3 +1,4 @@
+/* Third-party software licenses can be found at licenses.txt */
 !(function(l) {
   function e(e) {
     for (
@@ -3630,7 +3631,7 @@
       );
     }
     function _(e) {
-      return new Date(1e3 * e).toLocaleTimeString("default", {
+      return new Date(1e3 * e).toLocaleTimeString(C.GetPreferredLocales(), {
         hour: "numeric",
         minute: "numeric"
       });
@@ -4402,3 +4403,4 @@
     (f = p), o.render(c.createElement(f, null), m);
   }
 });
+//# sourceMappingURL=library.js.map

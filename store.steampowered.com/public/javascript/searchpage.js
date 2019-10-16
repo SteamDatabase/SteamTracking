@@ -536,17 +536,15 @@ function UpdateTags()
 
 }
 
-function EnableClientSideFilters()
+function EnableClientSideFilters( CUserPreferences )
 {
-	var oFilters = {
-		'hide_owned':    { 'default': true },
-		'hide_ignored':  { 'default': true },
-		'hide_wishlist': { 'default': false },
-	};
+	var rgFilterNames = [ 'hide_owned', 'hide_ignored', 'hide_wishlist' ];
+
+	var oFilters = {};
 
 	var results_container = $J("#search_results");
 
-	for (var strFilter of Object.keys(oFilters))
+	for ( var strFilter of rgFilterNames )
 	{
 		// Find our control widget for this filter.
 		var $Control = $J("div[data-param='hide'][data-value='" + strFilter + "']");
@@ -557,8 +555,7 @@ function EnableClientSideFilters()
 			continue;
 		}
 
-		// If it's a default filter, set it on the widget and our results container.
-		if (oFilters[strFilter].default)
+		if ( CUserPreferences[ strFilter ] )
 		{
 			results_container.addClass(strFilter);
 			$Control.addClass("checked");
@@ -573,8 +570,10 @@ function EnableClientSideFilters()
 	} );
 }
 
-// This exists to ensure that we've got function-scope for our closures because *some* browsers
-// don't properly do block-scope.
+// This exists as a function returning a function to ensure that we've got
+// function-scope for our closures, because *some* browsers don't properly do
+// block-scope.
+
 function OnClickClientFilter( $Control, strFilter, results_container )
 {
     return function() {
@@ -583,9 +582,16 @@ function OnClickClientFilter( $Control, strFilter, results_container )
 
         $Control.toggleClass('checked');
 
-        if ($Control.hasClass('checked')) {
+		var bChecked = $Control.hasClass('checked');
+
+		// We don't just 'toggle' classes here, because if things somehow get out of whack, then
+		// they'll stay out of whack. Instead we yoke the container to our control's value.
+        if ( bChecked )
+		{
             results_container.addClass(strFilter);
-        } else {
+        }
+		else 
+		{
             results_container.removeClass(strFilter);
         }
 
@@ -593,8 +599,21 @@ function OnClickClientFilter( $Control, strFilter, results_container )
         // need to be to be to keep the side-menu in the same location, and "scroll" to there.
         var nFixScrollOffset = $document.scrollTop() - nSavedOffset + $Control[0].getBoundingClientRect().top;
         $document.scrollTop(nFixScrollOffset);
+
+		// Update the user's preferences back-end, so the toggles remain sticky. SavePrefs explicitly allows
+		// only a subset to be posted for update. There's no checking if this succeeds, as what would we
+		// do if it fails?
+		
+		var oPrefs = { 'sessionid' : g_sessionID };
+		oPrefs[strFilter] = bChecked ? 1 : 0;
+		
+		$J.post(
+			'https://store.steampowered.com/account/savesearchpreferences',
+			oPrefs
+		);
     };
 }
+
 function OnSelectFilteredContentSettingsMenu( elSource )
 {
 	var d = $J(elSource).data('dropdownValue');

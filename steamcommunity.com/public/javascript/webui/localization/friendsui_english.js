@@ -710,7 +710,7 @@ LocalizationReady("friendsui", "english", {
   Friend_Menu_InviteToGame: "Invite to Play",
   Friend_Menu_InviteToLobby: "Invite to Lobby",
   Friend_Menu_InviteToWatch: "Invite to Watch",
-  Friend_Menu_InviteToRemotePlay: "Invite for Remote Play",
+  Friend_Menu_InviteToRemotePlay: "Remote Play Together",
   Friend_Menu_CancelRemotePlay: "Cancel Remote Play",
   Friend_Menu_KickFromChatRoom: "Kick",
   Friend_Menu_LaunchGame: "Launch ",
@@ -945,6 +945,21 @@ LocalizationReady("friendsui", "english", {
   Tooltip_RemotePlayDisableMouse: "Disable Mouse",
   Tooltip_RemotePlayEnableController: "Enable Controller",
   Tooltip_RemotePlayDisableController: "Disable Controller",
+  RemotePlay_Error: "Remote Play Error",
+  RemotePlay_ErrorInviteFailed_ScreenLocked:
+    "Remote Play Together invite failed because the screen is locked.",
+  RemotePlay_ErrorInviteFailed_Failed:
+    "Remote Play Together invite failed, couldn't start streaming session.",
+  RemotePlay_ErrorInviteFailed_DriversNotInstalled:
+    "Remote Play Together requires additional driver installation, follow the Steam prompts to install drivers.",
+  RemotePlay_ErrorInviteFailed_Disabled:
+    "Remote Play Together invite failed because Remote Play is disabled in settings.",
+  RemotePlay_ErrorInviteFailed_BroadcastingActive:
+    "Remote Play Together invite failed because a broadcast is active.",
+  RemotePlay_ErrorInviteFailed_VRActive:
+    "Remote Play Together invite failed because VR is active.",
+  RemotePlay_ErrorInviteFailed_TransportUnavailable:
+    "Remote Play Together invite failed because Remote Play networking is not currently available, try again later.",
 
   FriendNotifications_Instructions: "Notification options for %1$s",
   FriendNotifications_UseDefaults: "Use my default notifications settings",

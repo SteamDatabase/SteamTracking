@@ -68,6 +68,7 @@ GContentHub = {
 			GContentHub.oDisplayLists = rgParams.rgDisplayLists || {};
 			GContentHub.unTagID = rgParams.unTagID || 0;
 			GContentHub.unGenreID = rgParams.unGenreID || 0;
+			GContentHub.unCategoryID = rgParams.unCategoryID || 0;
 			GContentHub.unSpecialsShown = rgParams.unSpecialsShown || GContentHub.unSpecialsShown;
 		} catch ( e )
 		{
@@ -117,9 +118,9 @@ GContentHub = {
 
 		// Broadcast section goes on the end, as it decorates the storeitems with the live icon after the fact.
 		// Only show on the content hubs which we have specific information about.
-		if( window.hasOwnProperty('GSteamBroadcasts') && ( GContentHub.unTagID != 0 || GContentHub.unGenreID != 0 )) {
+		if( window.hasOwnProperty('GSteamBroadcasts') && ( GContentHub.unTagID != 0 || GContentHub.unGenreID != 0 || GContentHub.unCategoryID != 0 )) {
 			try {
-				GSteamBroadcasts.Init( GContentHub.FilterItemsForDisplay, GContentHub.unTagID, GContentHub.unGenreID );
+				GSteamBroadcasts.Init( GContentHub.FilterItemsForDisplay, GContentHub.unTagID, GContentHub.unGenreID, GContentHub.unCategoryID );
 			} catch (e) { OnHomepageException(e); }
 		}
 	},

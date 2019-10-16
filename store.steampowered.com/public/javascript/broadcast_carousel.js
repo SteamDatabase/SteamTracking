@@ -1,7 +1,7 @@
 
 
 GSteamBroadcasts = {
-		Init: function( fnFilterFunction, tagid, genreid, maxBroadcasts, bAutoPlayingFeaturedBroadcast )
+		Init: function( fnFilterFunction, tagid, genreid, categoryid, maxBroadcasts, bAutoPlayingFeaturedBroadcast )
 	{
 		if ( tagid === undefined ) {
 			tagid = 0;
@@ -9,6 +9,10 @@ GSteamBroadcasts = {
 
 		if ( genreid === undefined ) {
 			genreid = 0;
+		}
+
+		if( categoryid === undefined ) {
+			categoryid = 0;
 		}
 
 		if ( maxBroadcasts === undefined ) {
@@ -22,6 +26,7 @@ GSteamBroadcasts = {
 		GSteamBroadcasts.m_fnFilterItemToDisplayFunction = fnFilterFunction;
 		GSteamBroadcasts.m_tagid = tagid;
 		GSteamBroadcasts.m_genreid = genreid;
+		GSteamBroadcasts.m_categoryid = categoryid;
 		GSteamBroadcasts.m_nMaxBroadcasts = maxBroadcasts;
 		GSteamBroadcasts.m_bAutoPlayingFeaturedBroadcast = bAutoPlayingFeaturedBroadcast;
 		GSteamBroadcasts.Render();
@@ -95,6 +100,8 @@ GSteamBroadcasts = {
 				'minviews' : 1, // We ask for all streams with a viewer so we can decorate the 'live' tags on all of the capsules on the page.
 				'tagid' : GSteamBroadcasts.m_tagid,
 				'genreid' : GSteamBroadcasts.m_genreid,
+				'categoryid' : GSteamBroadcasts.m_categoryid,
+				'maxbroadcasts' : GSteamBroadcasts.m_nMaxBroadcasts * 2, // We might need to filter some results out based on the users preference so ask for a few more
 			},
 			dataType: 'json',
 			type: 'GET'

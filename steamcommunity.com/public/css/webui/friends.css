@@ -3815,7 +3815,8 @@ iframe.steamTVLogin {
 .partnereventshared_EventOptions_2vHY_ {
   margin-left: 10px;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  flex-wrap: wrap; }
 
 .partnereventshared_FlexColumnContainer_1IIW_ {
   display: flex;
@@ -4593,10 +4594,12 @@ textarea:-webkit-autofill:focus,
   padding: 1px; }
 
 .broadcastwidgets_StoreSaleDiscountBox_1Hb4z {
-  font-size: 14px;
-  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 3px 5px;
   background-color: #4C6B22;
-  color: #A4D007; }
+  color: #A4D007;
+  margin-right: 4px; }
 
 .broadcastwidgets_StoreSalePriceBox_3fccA {
   font-size: 14px;
@@ -4632,7 +4635,11 @@ textarea:-webkit-autofill:focus,
   flex-direction: column;
   border-radius: 4px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-out; }
+  .broadcastwidgets_CapsuleContainer_18Ts-:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
 
 .broadcastwidgets_CapsuleBottomBar_1gdPZ {
   background-color: black;
@@ -4649,8 +4656,10 @@ textarea:-webkit-autofill:focus,
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 60%;
-  font-size: 14px; }
+  line-height: 20px;
+  font-size: 13px;
+  margin-left: 3px;
+  margin-right: 5px; }
 
 .broadcastwidgets_Action_2Wm1- {
   min-width: 50%;
@@ -4739,6 +4748,20 @@ textarea:-webkit-autofill:focus,
   margin-left: 40px;
   padding: 4px;
   zoom: 80%; }
+
+.broadcastwidgets_ShowContentsButton_1ZnPD {
+  border-radius: 2px;
+  border: none;
+  padding: 4px;
+  display: inline-block;
+  cursor: pointer;
+  color: #67c1f5;
+  background: rgba(103, 193, 245, 0.2); }
+  .broadcastwidgets_ShowContentsButton_1ZnPD:hover {
+    color: #fff;
+    background: #417a9b;
+    background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
+    background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%); }
 
 .linkregionbox_LinkRegionDragBox_30gow {
   position: absolute;

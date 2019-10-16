@@ -950,40 +950,6 @@ function InitTagBrowsePage( strTagLanguage, rgDefaultGetParams )
 		fnGoToHash();
 	else
 		fnSelectOption( 'global' );
-
-	if ( g_AccountID != 0 )
-	{
-		// load recommended tags
-		var bGotRecommendedTags = false;
-		$J.get( 'https://store.steampowered.com/tagdata/recommendedtags', {games: 10, count: 25, taglang: strTagLanguage }).done( function( data ) {
-			if ( data && data.length > 0 )
-			{
-				bGotRecommendedTags = true;
-				var $Tags = $J('#tag_browse_recommended');
-				for ( var i = 0; i < data.length; i++ )
-				{
-					var tag = data[i];
-					var $Tag = $J('<div/>', {'class': 'tag_browse_tag', 'data-tagid': tag.tagid }).text( tag.name );
-					$Tag.on( strEvent, function() { fnSelectTag( $J(this) ); } );
-					$Tags.append( $Tag );
-				}
-			}
-		}).always( function() {
-			if ( !bGotRecommendedTags )
-			{
-				$J('.tag_browse_option[data-browseoption=recommended]').hide();
-				if ( strActiveOption == 'recommended' )
-					fnSelectOption( 'global' );
-			}
-			else if ( strActiveOption == 'recommended' )
-			{
-				if ( window.location.hash.length )
-					fnGoToHash();
-				else
-					fnSelectOption( 'recommended' );
-			}
-		});
-	}
 }
 
 function InitBannedTagModal( appid, $BanModal )

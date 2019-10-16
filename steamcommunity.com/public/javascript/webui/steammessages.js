@@ -1461,6 +1461,12 @@
             (r.prototype.set_rtime32_last_modified = function(e) {
               n.Message.setField(this, 6, e);
             }),
+            (r.prototype.user_app_priority = function() {
+              return n.Message.getField(this, 7);
+            }),
+            (r.prototype.set_user_app_priority = function(e) {
+              n.Message.setField(this, 7, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -1471,7 +1477,8 @@
                 announcement_gid: n.Message.getField(t, 3),
                 appid: n.Message.getField(t, 4),
                 possible_takeover: n.Message.getField(t, 5),
-                rtime32_last_modified: n.Message.getFieldWithDefault(t, 6, 0)
+                rtime32_last_modified: n.Message.getFieldWithDefault(t, 6, 0),
+                user_app_priority: n.Message.getField(t, 7)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -1501,6 +1508,9 @@
                   case 6:
                     e.set_rtime32_last_modified(t.readUint32());
                     break;
+                  case 7:
+                    e.set_user_app_priority(t.readInt32());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -1522,7 +1532,8 @@
                   t.writeUint32(4, i),
                 void 0 !== (i = n.Message.getField(e, 5)) && t.writeBool(5, i),
                 void 0 !== (i = n.Message.getField(e, 6)) &&
-                  t.writeUint32(6, i);
+                  t.writeUint32(6, i),
+                void 0 !== (i = n.Message.getField(e, 7)) && t.writeInt32(7, i);
             }),
             (r.prototype.getClassName = function() {
               return "CCommunity_PartnerEventResult";
@@ -1591,6 +1602,84 @@
           );
         })(n.Message),
         R = (n.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return n.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(s.d)(r, i),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var i = {};
+              return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new n.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                t.getFieldNumber();
+                t.skipField();
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new n.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {}),
+            (r.prototype.getClassName = function() {
+              return "CCommunity_PartnerEventsShowMoreForApp_Response";
+            }),
+            r
+          );
+        })(n.Message)),
+        j = (n.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return n.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(s.d)(r, i),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var i = {};
+              return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new n.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                t.getFieldNumber();
+                t.skipField();
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new n.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {}),
+            (r.prototype.getClassName = function() {
+              return "CCommunity_PartnerEventsShowLessForApp_Response";
+            }),
+            r
+          );
+        })(n.Message)),
+        k = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -1690,7 +1779,7 @@
             r
           );
         })(n.Message)),
-        j = (function(i) {
+        O = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1776,7 +1865,13 @@
           });
         }),
         (o.MarkPartnerEventsForUser = function(e, t) {
-          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, j, {});
+          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, O, {});
+        }),
+        (o.PartnerEventsShowMoreForApp = function(e, t) {
+          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, R, {});
+        }),
+        (o.PartnerEventsShowLessForApp = function(e, t) {
+          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, j, {});
         });
     },
     "/511": function(e, t, i) {
@@ -2951,6 +3046,12 @@
             (r.prototype.set_forum_topic_id = function(e) {
               n.Message.setField(this, 12, e);
             }),
+            (r.prototype.event_gid = function() {
+              return n.Message.getField(this, 13);
+            }),
+            (r.prototype.set_event_gid = function(e) {
+              n.Message.setField(this, 13, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -2967,7 +3068,8 @@
                 tags: n.Message.getField(t, 9),
                 language: n.Message.getField(t, 10),
                 hidden: n.Message.getField(t, 11),
-                forum_topic_id: n.Message.getField(t, 12)
+                forum_topic_id: n.Message.getField(t, 12),
+                event_gid: n.Message.getField(t, 13)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -3015,6 +3117,9 @@
                   case 12:
                     e.set_forum_topic_id(t.readFixed64String());
                     break;
+                  case 13:
+                    e.set_event_gid(t.readFixed64String());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -3049,7 +3154,9 @@
                 void 0 !== (i = n.Message.getField(e, 11)) &&
                   t.writeBool(11, i),
                 void 0 !== (i = n.Message.getField(e, 12)) &&
-                  t.writeFixed64String(12, i);
+                  t.writeFixed64String(12, i),
+                void 0 !== (i = n.Message.getField(e, 13)) &&
+                  t.writeFixed64String(13, i);
             }),
             (r.prototype.getClassName = function() {
               return "CCommunity_ClanAnnouncementInfo";
@@ -20408,6 +20515,18 @@
             (r.prototype.set_microseconds = function(e) {
               n.Message.setField(this, 6, e);
             }),
+            (r.prototype.used_ipv6 = function() {
+              return n.Message.getField(this, 7);
+            }),
+            (r.prototype.set_used_ipv6 = function(e) {
+              n.Message.setField(this, 7, e);
+            }),
+            (r.prototype.proxied = function() {
+              return n.Message.getField(this, 8);
+            }),
+            (r.prototype.set_proxied = function(e) {
+              n.Message.setField(this, 8, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -20418,7 +20537,9 @@
                 seconds: n.Message.getField(t, 3),
                 bytes: n.Message.getField(t, 4),
                 host_name: n.Message.getField(t, 5),
-                microseconds: n.Message.getField(t, 6)
+                microseconds: n.Message.getField(t, 6),
+                used_ipv6: n.Message.getField(t, 7),
+                proxied: n.Message.getField(t, 8)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -20448,6 +20569,12 @@
                   case 6:
                     e.set_microseconds(t.readUint64String());
                     break;
+                  case 7:
+                    e.set_used_ipv6(t.readBool());
+                    break;
+                  case 8:
+                    e.set_proxied(t.readBool());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -20470,7 +20597,9 @@
                 void 0 !== (i = n.Message.getField(e, 5)) &&
                   t.writeString(5, i),
                 void 0 !== (i = n.Message.getField(e, 6)) &&
-                  t.writeUint64String(6, i);
+                  t.writeUint64String(6, i),
+                void 0 !== (i = n.Message.getField(e, 7)) && t.writeBool(7, i),
+                void 0 !== (i = n.Message.getField(e, 8)) && t.writeBool(8, i);
             }),
             (r.prototype.getClassName = function() {
               return "CMsgDownloadRateStatistics_StatsInfo";
@@ -44394,6 +44523,18 @@
             (s.prototype.set_item_expiration = function(e) {
               a.Message.setField(this, 27, e);
             }),
+            (s.prototype.market_buy_country_restriction = function() {
+              return a.Message.getField(this, 30);
+            }),
+            (s.prototype.set_market_buy_country_restriction = function(e) {
+              a.Message.setField(this, 30, e);
+            }),
+            (s.prototype.market_sell_country_restriction = function() {
+              return a.Message.getField(this, 31);
+            }),
+            (s.prototype.set_market_sell_country_restriction = function(e) {
+              a.Message.setField(this, 31, e);
+            }),
             (s.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), s.toObject(e, this);
             }),
@@ -44444,7 +44585,9 @@
                   market_marketable_restriction: a.Message.getField(t, 24),
                   marketable: a.Message.getField(t, 25),
                   tags: a.Message.toObjectList(t.tags(), u.toObject, e),
-                  item_expiration: a.Message.getField(t, 27)
+                  item_expiration: a.Message.getField(t, 27),
+                  market_buy_country_restriction: a.Message.getField(t, 30),
+                  market_sell_country_restriction: a.Message.getField(t, 31)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -44554,6 +44697,12 @@
                   case 27:
                     e.set_item_expiration(t.readString());
                     break;
+                  case 30:
+                    e.set_market_buy_country_restriction(t.readString());
+                    break;
+                  case 31:
+                    e.set_market_sell_country_restriction(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -44618,7 +44767,11 @@
                 0 < (i = e.tags()).length &&
                   t.writeRepeatedMessage(26, i, u.serializeBinaryToWriter),
                 void 0 !== (i = a.Message.getField(e, 27)) &&
-                  t.writeString(27, i);
+                  t.writeString(27, i),
+                void 0 !== (i = a.Message.getField(e, 30)) &&
+                  t.writeString(30, i),
+                void 0 !== (i = a.Message.getField(e, 31)) &&
+                  t.writeString(31, i);
             }),
             (s.prototype.getClassName = function() {
               return "CEconItem_Description";

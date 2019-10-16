@@ -590,6 +590,11 @@ function SubmitScreenshotsUpload( ele, itemID, type )
 // called when user wants to submit images
 function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPostfix )
 {
+    // Album image types (cover art, etc.) aren't in the list of known image types because we don't want any of the
+    // other code that relies on this path (store contents, screenshots) to see or know about those types. Instead we
+    // skip over all of the extra work looking for a type to match and just store what we're given.
+    var isAlbumImageType = (type == 'AlbumCover' || type == 'AlbumAdditional');
+
 	var cScreenshots = 0;
 	var fd = new FormData();
 	for ( var i = 0; i < previews.length; i++ )
@@ -599,41 +604,49 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 		if( !filename )
 			continue;
 		var image = $J( preview.find( 'div.actual_screenshot' )[0] ).data( 'image' );
-		var strSelectedType = $J( preview.find( 'select.image_type_select :selected' )[0] ).val();
-		if( !strSelectedType )
-			strSelectedType = $J( preview.find( 'input.image_type_select' )[0] ).val();
-		var nParentID = $J( preview.find( 'input.image_parent_input' )[0] ).val();
-		var strSelectedLanguage = $J( preview.find( 'select.image_language_select :selected' )[0] ).val();
+		var strKey = "dummy";
 
-		// get type information
-		var imageType;
-		for ( var iImageType = 0; iImageType < g_ImageTypes.length; iImageType++ )
+		if ( isAlbumImageType )
 		{
-			if ( g_ImageTypes[iImageType].name == strSelectedType )
-				imageType = g_ImageTypes[iImageType];
+		    strKey = type + '_' + i;
 		}
-
-		// build key and append. Need to special case screenshots path.
-		var strKey = imageType.path;
-		if ( strSelectedType == 'Screenshot' )
-			strKey = strKey + cScreenshots++ + '|english[]';
-		if ( strSelectedType == 'ScreenshotLocalized' )
-			strKey = strKey + nParentID;
-
-		if ( imageType.localized )
-			strKey = strKey + '|' + strSelectedLanguage;
-
-		if( replaceAssetKeyPostfix !== "" && altAssetIndex !== "" )
+		else
 		{
-			// Updates the end of the filename and the key for the key-value
-			strKey = strKey.replace('|assets|', '_alt_assets_' + replaceAssetKeyPostfix + '|alt_assets|' + altAssetIndex + '|');
+		    var strSelectedType = $J( preview.find( 'select.image_type_select :selected' )[0] ).val();
+		    if( !strSelectedType )
+		        strSelectedType = $J( preview.find( 'input.image_type_select' )[0] ).val();
+		    var nParentID = $J( preview.find( 'input.image_parent_input' )[0] ).val();
+		    var strSelectedLanguage = $J( preview.find( 'select.image_language_select :selected' )[0] ).val();
+
+		    // get type information
+		    var imageType;
+		    for ( var iImageType = 0; iImageType < g_ImageTypes.length; iImageType++ )
+		    {
+		        if ( g_ImageTypes[iImageType].name == strSelectedType )
+		            imageType = g_ImageTypes[iImageType];
+		    }
+
+		    // build key and append. Need to special case screenshots path.
+		    strKey = imageType.path;
+		    if ( strSelectedType == 'Screenshot' )
+		        strKey = strKey + cScreenshots++ + '|english[]';
+		    if ( strSelectedType == 'ScreenshotLocalized' )
+		        strKey = strKey + nParentID;
+
+		    if ( imageType.localized )
+		        strKey = strKey + '|' + strSelectedLanguage;
+
+		    if( replaceAssetKeyPostfix !== "" && altAssetIndex !== "" )
+		    {
+		        // Updates the end of the filename and the key for the key-value
+		        strKey = strKey.replace('|assets|', '_alt_assets_' + replaceAssetKeyPostfix + '|alt_assets|' + altAssetIndex + '|');
+		    }
 		}
 
 		// previously just passed file object through to this point, however because
 		// we can now take images from a remote URL, to unify paths we just get the
 		// image data from the loaded Image object
 		AppendImageToFormData( fd, strKey, filename, image );
-		//fd.append( strKey, file );
 	}
 
 	fd.append( 'sessionid', g_sessionID );
@@ -648,6 +661,16 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 	{
 		strPostURL = 'https://partner.steamgames.com/bundles/savestore/' + itemID + '?activetab=tab_graphicalassets&json=1';
 		strRedirectURL = 'https://partner.steamgames.com/bundles/view/' + itemID + '?activetab=tab_graphicalassets';
+	}
+	else if ( isAlbumImageType )
+	{
+	    // Note that for albums, "itemID" actually means "appID". We save this image content in the Steamworks config, not
+	    // the store data.
+	    fd.append( 'appID', itemID );
+	    fd.append( 'requestType', type );
+
+	    strPostURL = 'https://partner.steamgames.com/images/upload/';
+	    strRedirectURL = 'https://partner.steamgames.com/apps/musicalbumimages/' + itemID;
 	}
 	else
 	{

@@ -185,7 +185,7 @@
 	"GameList_View_ReadyToPlay_ToolTip2": "• Can be streamed from another machine",
 	"GameList_Entry_ReadyToPlay_ToolTip": "Will be streamed from another machine",
 
-	"GameList_Entry_Invalid_OSType": "Your current MacOS (Catalina) is unable to run 32-bit games, like this one.",
+	"GameList_Entry_Invalid_OSType": "Your current MacOS (Catalina) is unable to run 32-bit games. This game may not run.",
 	"GameList_Entry_Invalid_OSType2": "This game is Steam Play enabled, so you can play it on Windows via Bootcamp or by using a PC.",
 	"GameList_Entry_Invalid_OSType3": "Learn more.",
 
@@ -214,6 +214,8 @@
 	"LibraryHome_NewUpdates": "What's New",
 	"LibraryHome_YourCollection": "Your Complete Library",
 	"LibraryHome_RecentFriendsActivity": "Recent Friend Activity",
+
+	"LibraryHome_RecentFriendsActivity_Empty": "Nothing is new or popular in your friend group right now. This shelf will auto-hide when there is no activity to display.",
 
 	"Library_FriendsActivity_HotRightNowHeading": "Hot right now",
 	"Library_FriendsActivity_HotRightNowHover": "We're showing you this game because a number of your friends are playing this game right now.",
@@ -827,7 +829,7 @@
 	"UninstallDialog_SecuROM": "Uninstalling this application requires an internet connection.",
 	"UninstallDialog_UnknownError": "An unexpeted error occurred while uninstalling this application.",
 	"UninstallDialog_AppUpdateError": "Uninstall error - %1$s",
-	"UninstallDialog_Confirmation_Single": "Would you like to uinstall %1$s from this computer? It will remain in your Games Library, but to play it in the future, you will need to first redownload all of its content.",
+	"UninstallDialog_Confirmation_Single": "Would you like to uninstall %1$s from this computer? It will remain in your Games Library, but to play it in the future, you will need to first redownload all of its content.",
 	"UninstallDialog_Confirmation_Multiple": "Would you like to uninstall these selected titles from your computer? These titles will remain in your Games Library, but to play it in the future, you will need to first redownload their content.",
 	"UninstallingDialog_Uninstalling": "Uninstalling",
 	"UninstallingDialog_UninstallingApp": "Uninstalling %1$s",

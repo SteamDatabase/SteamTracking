@@ -3345,3 +3345,33 @@ complete #A4D007
 .hasNoTrackTranslation {
     color: #333333;
 }
+
+#discounteventlist_table tr.odd {
+	background-color: #101010;
+}
+
+#discounteventlist_table tr.even {
+	background-color: #181818;
+}
+
+#discounteventlist_table tr.discountevent_current td, #discountevent_current_key {
+	color: #6F9F3F;
+	font-weight: bold;
+}
+
+#discounteventlist_table tr.discountevent_future td, #discountevent_future_key {
+	color: #3F6F9F;
+}
+
+#discounteventlist_table tr.discountevent_past td, #discountevent_past_key {
+	color: #606060;
+}
+
+#discounteventlist_table td a{
+	color: inherit;
+	text-decoration: none;
+}
+
+.hiddenDiscountEvent {
+	display: none !important;
+}

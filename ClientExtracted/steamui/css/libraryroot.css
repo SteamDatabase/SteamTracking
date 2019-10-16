@@ -1256,7 +1256,10 @@ body.modals_BodyNoScroll_32ZiC {
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 100%; }
+  height: 100%;
+  display: none; }
+  .sharedappdetailsheader_TitleLogo_3NBxS.sharedappdetailsheader_Loaded_2dzwX {
+    display: inline-block; }
   .sharedappdetailsheader_BottomLeft_2levH .sharedappdetailsheader_TitleLogo_3NBxS {
     top: initial;
     bottom: 0;
@@ -8517,7 +8520,6 @@ img.emoticon_emoticon_AB86v {
   .comment_thread_RatingBar_1yWgP .comment_thread_CommentCount_2RkIc {
     color: #707070;
     user-select: none;
-    cursor: pointer;
     font-size: 14px; }
   .comment_thread_RatingBar_1yWgP .comment_thread_ButtonSpacer_21jcw {
     width: 10px; }
@@ -8525,22 +8527,22 @@ img.emoticon_emoticon_AB86v {
   .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H {
     display: flex;
     flex-direction: row;
-    cursor: pointer;
     justify-content: center;
     align-items: center;
     padding-left: 6px;
     border-radius: 2px;
     position: relative;
     transition: all 0.2s ease-out; }
-    .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK:hover,
-    .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H:hover {
+    .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover,
+    .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover {
+      cursor: pointer;
       background-color: #323941; }
-      .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK:hover .comment_thread_LikeCount_3grvn, .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK:hover .comment_thread_CommentCount_2RkIc,
-      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H:hover .comment_thread_LikeCount_3grvn,
-      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H:hover .comment_thread_CommentCount_2RkIc {
+      .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover .comment_thread_LikeCount_3grvn, .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover .comment_thread_CommentCount_2RkIc,
+      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover .comment_thread_LikeCount_3grvn,
+      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover .comment_thread_CommentCount_2RkIc {
         color: #cccccc; }
-      .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK:hover .comment_thread_RatingIcon_2AVfX,
-      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H:hover .comment_thread_RatingIcon_2AVfX {
+      .comment_thread_RatingBar_1yWgP .comment_thread_LikeButton_161IK.comment_thread_CanClick_3Mds9:hover .comment_thread_RatingIcon_2AVfX,
+      .comment_thread_RatingBar_1yWgP .comment_thread_CommentButton_3i62H.comment_thread_CanClick_3Mds9:hover .comment_thread_RatingIcon_2AVfX {
         width: auto;
         height: inherit;
         fill: #cccccc;
@@ -9608,7 +9610,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     margin-top: -8em;
     opacity: 0;
     transition: opacity .21s ease-in-out; }
-  .appdetailstradingcardssection_Card_1WsOn.appdetailstradingcardssection_Owned_2uDS7 {
+  .appdetailstradingcardssection_Card_1WsOn.appdetailstradingcardssection_Clickable_2gXzF {
     cursor: pointer; }
   .appdetailstradingcardssection_Card_1WsOn img {
     width: 100%;
@@ -16979,9 +16981,15 @@ img {
 .libraryhomefriendsactivity_PageableContainer_2gwUi {
   transition: all 0.4s ease-in-out;
   max-height: 240px; }
-  .libraryhomefriendsactivity_PageableContainer_2gwUi.libraryhomefriendsactivity_Empty_2kozJ {
-    max-height: 0;
-    overflow: hidden; }
+
+.libraryhomefriendsactivity_Empty_2kozJ {
+  justify-content: center; }
+  .libraryhomefriendsactivity_Empty_2kozJ .libraryhomefriendsactivity_Message_27Vu9 {
+    text-align: center;
+    width: 50%;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 200; }
 
 .libraryhomefriendsactivity_Carousel_1mIPY {
   display: flex;
@@ -16993,8 +17001,6 @@ img {
   .libraryhomefriendsactivity_Short_2yDYY .libraryhomefriendsactivity_Carousel_1mIPY {
     height: 226px;
     margin-bottom: 0; }
-  .libraryhomefriendsactivity_Empty_2kozJ .libraryhomefriendsactivity_Carousel_1mIPY {
-    height: 0px; }
 
 .libraryhomefriendsactivity_ForcedCarouselPadding_2tQiJ {
   width: 10px; }
@@ -17349,11 +17355,20 @@ img {
 /* stylelint-disable */
 
 /* stylelint-enable */
-.libraryhomeshowcases_DragInProgress_2WrQ0 .libraryhomeshowcases_ShowcaseOuter_2tC_c {
+/* stylelint-disable */
+
+/* stylelint-enable */
+.libraryhomeshowcases_DragInProgress_2WrQ0 .libraryhomeshowcases_ShowcaseOuter_2tC_c,
+.libraryhomeshowcases_DeleteInProgress_GKjvW .libraryhomeshowcases_ShowcaseOuter_2tC_c {
   transition: transform 0.2s linear; }
-  .libraryhomeshowcases_DragInProgress_2WrQ0 .libraryhomeshowcases_ShowcaseOuter_2tC_c.libraryhomeshowcases_DragElement_176H2 {
+  .libraryhomeshowcases_DragInProgress_2WrQ0 .libraryhomeshowcases_ShowcaseOuter_2tC_c.libraryhomeshowcases_DragElement_176H2,
+  .libraryhomeshowcases_DeleteInProgress_GKjvW .libraryhomeshowcases_ShowcaseOuter_2tC_c.libraryhomeshowcases_DragElement_176H2 {
     transition: none;
     z-index: 5; }
+
+.libraryhomeshowcases_Deleting_1KTj8.libraryhomeshowcases_ShowcaseOuter_2tC_c {
+  opacity: 0;
+  z-index: -500; }
 
 .libraryhomeshowcases_Draggable_2W0O3 {
   cursor: grab; }
@@ -17521,6 +17536,19 @@ img {
     opacity: 0; }
   .libraryhomeshowcases_DragInProgress_2WrQ0 .libraryhomeshowcases_DragElement_176H2 .libraryhomeshowcases_ShowcaseHeader_23Snl .libraryhomeshowcases_DragHandle_1OGfH {
     opacity: 1; }
+  .libraryhomeshowcases_ShowcaseHeader_23Snl .libraryhomeshowcases_DeleteButton_3cK5j {
+    cursor: pointer;
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0; }
+    .libraryhomeshowcases_ShowcaseHeader_23Snl .libraryhomeshowcases_DeleteButton_3cK5j svg path {
+      stroke: #a0a1a5; }
+  .libraryhomeshowcases_ShowcaseHeader_23Snl:hover .libraryhomeshowcases_DeleteButton_3cK5j {
+    opacity: 1; }
+  .libraryhomeshowcases_DragInProgress_2WrQ0 .libraryhomeshowcases_ShowcaseHeader_23Snl:hover .libraryhomeshowcases_DeleteButton_3cK5j {
+    opacity: 0; }
 
 .libraryhomeshowcases_OptionsRule_2U_Y7 {
   border-top: 1px solid rgba(255, 255, 255, 0.25);

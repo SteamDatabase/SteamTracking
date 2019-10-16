@@ -833,5 +833,18 @@ LocalizationReady("shared", "english", {
     "Watch and chat with Friends on Steam.tv",
   sale_three_section_hide_chat: "Hide Chat",
   sale_three_section_show_chat: "Show Chat",
-  btn_live_streams_all: "View all"
+  btn_live_streams_all: "View all",
+
+  Sale_BundleSave: "Includes %1$s items.",
+  Sale_PackageSave: "Includes %1$s items.",
+  Sale_ShowContents: "Show contents",
+  Sale_OnWishlist: "On Wishlist",
+  Sale_InLibrary: "In Library",
+  Sale_default_label: "(no title)",
+  Sale_default_label_OnSale: "On Sale",
+  Sale_default_label_TopSellers: "Top Sellers",
+  Sale_default_label_FreeToPlay: "Free to Play",
+  Sale_default_label_HorrorGames: "Horror Games",
+  Sale_default_label_HorrorVR: "Horror VR",
+  Sale_default_label_HorrorFreeToPlay: "Horror Free to Play"
 });
