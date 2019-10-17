@@ -840,6 +840,7 @@ LocalizationReady("shared", "english", {
   Sale_ShowContents: "Show contents",
   Sale_OnWishlist: "On Wishlist",
   Sale_InLibrary: "In Library",
+  Sale_HiddenItems: "%1$s item(s) are hidden due to your preferences",
   Sale_default_label: "(no title)",
   Sale_default_label_OnSale: "On Sale",
   Sale_default_label_TopSellers: "Top Sellers",

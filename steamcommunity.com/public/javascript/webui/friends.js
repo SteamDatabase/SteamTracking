@@ -25880,6 +25880,9 @@
                               s.data.library_asset_setup_complete),
                             (c.m_appStoreData.item_id = s.data.item_id),
                             (c.m_appStoreData.icon_url = s.data.icon_url),
+                            (c.m_appStoreData.tags = s.data.tags),
+                            (c.m_appStoreData.content_descriptors =
+                              s.data.content_descriptors),
                             (c.m_appStoreData.creator_list = new Array());
                           var e = s.data.creator_list;
                           if (e)
@@ -26019,6 +26022,8 @@
           (this.m_rgWishList = new Array()),
             (this.m_rgOwnedPackages = []),
             (this.m_rgOwnedApps = []),
+            (this.m_excludedTags = []),
+            (this.m_excludedContentDescriptors = []),
             (this.m_rgCreatorsFollowed = new Array()),
             (this.m_rgCreatorsIgnored = new Array()),
             (this.m_bIsLoaded = !1);
@@ -26047,6 +26052,33 @@
               this.m_rgCreatorsIgnored.findIndex(function(e) {
                 return e == t.GetAccountID();
               })
+            );
+          }),
+          (e.prototype.BExcludesTag = function(t) {
+            return (
+              !!t &&
+              Boolean(
+                this.m_excludedTags.filter(function(e) {
+                  return (
+                    -1 !==
+                    t
+                      .map(function(e) {
+                        return e.tagid;
+                      })
+                      .indexOf(e)
+                  );
+                }).length
+              )
+            );
+          }),
+          (e.prototype.BExcludesContentDescriptor = function(t) {
+            return (
+              !!t &&
+              Boolean(
+                this.m_excludedContentDescriptors.filter(function(e) {
+                  return -1 !== t.indexOf(e);
+                }).length
+              )
             );
           }),
           (e.prototype.BIsGameWishlisted = function(t) {
@@ -26111,8 +26143,19 @@
                               i.data.rgWishlist.forEach(function(e) {
                                 return r.m_rgWishList.push(e);
                               }),
-                            (r.m_rgOwnedApps = i.data.rgOwnedApps),
-                            (r.m_rgOwnedPackages = i.data.rgOwnedPackages);
+                            i.data.rgOwnedApps &&
+                              (r.m_rgOwnedApps = i.data.rgOwnedApps),
+                            i.data.rgOwnedPackages &&
+                              (r.m_rgOwnedPackages = i.data.rgOwnedPackages),
+                            i.data.rgExcludedTags &&
+                              (r.m_excludedTags = i.data.rgExcludedTags.map(
+                                function(e) {
+                                  return e.tagid;
+                                }
+                              )),
+                            i.data.rgExcludedContentDescriptorIDs &&
+                              (r.m_excludedContentDescriptors =
+                                i.data.rgExcludedContentDescriptorIDs);
                         }),
                       [2, this]
                     );
@@ -26243,6 +26286,13 @@
           Object(d.c)([l.x], e.prototype, "m_rgWishList", void 0),
           Object(d.c)([l.x], e.prototype, "m_rgOwnedPackages", void 0),
           Object(d.c)([l.x], e.prototype, "m_rgOwnedApps", void 0),
+          Object(d.c)([l.x], e.prototype, "m_excludedTags", void 0),
+          Object(d.c)(
+            [l.x],
+            e.prototype,
+            "m_excludedContentDescriptors",
+            void 0
+          ),
           Object(d.c)([l.x], e.prototype, "m_rgCreatorsFollowed", void 0),
           Object(d.c)([l.x], e.prototype, "m_rgCreatorsIgnored", void 0),
           e
@@ -27143,8 +27193,10 @@
                           "a",
                           {
                             className: ce.a.StoreSaleWidgetExtraLink,
-                            href: this.props.extraLink.url,
-                            target: "_blank"
+                            href:
+                              (p.b.IN_CLIENT ? "steam://openurl/" : "") +
+                              this.props.extraLink.url,
+                            target: p.b.IN_CLIENT ? void 0 : "_blank"
                           },
                           this.props.extraLink.name
                         )

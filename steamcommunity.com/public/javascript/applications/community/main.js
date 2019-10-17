@@ -140,35 +140,35 @@
               ".js?v=" +
               {
                 0: "ebf340b3a6216e2d0fa9",
-                1: "f5c27319911236360d81",
-                3: "b25feb53049c1abc02a7",
-                5: "ff023c346ffb16c6a9cf",
-                6: "a2a7ea9554c2bf9899e3",
-                7: "db1c2ec08eeea3e26d3e",
-                8: "a2c06d4be1b04108df68",
-                9: "64986207a67d1dd6655f",
-                10: "9de4b12448649ed4c1c1",
-                11: "d43acd6f7b5ffe4c7905",
-                12: "f074832bba39029102cb",
-                13: "ed1077f50f70a52174da",
-                14: "a2c90aaaa9c9768f127c",
-                15: "0cbda8f9edb0a1016ad9",
-                16: "18c0ecd61894997eecc4",
-                17: "7de512e257d5150a5449",
-                18: "564ab32c326aeb025705",
-                19: "1439904ac9e20a76cc0b",
-                20: "64a3d3216918568bc574",
-                21: "68c6e8918c63766f623e",
-                22: "3fc4be1089a127c59751",
-                23: "d869da77de3ad9f1a336",
-                24: "a54dfbde966ac2466872",
-                25: "0f96599aaffcd13873ba",
-                26: "2baff52e41c4df0029a0",
-                27: "f93d3d034aba0d54a400",
-                28: "5059e3162f2dd1dc7946",
-                29: "3ee9e614581e38cc54bc",
-                30: "08d93f83eec819670289",
-                31: "fff479cdd177580af3e7",
+                1: "84b8487a44529cc43a07",
+                3: "8d627e7831c76f70e396",
+                5: "85bb4cd60f4d5705bab2",
+                6: "607c3275e83d933e2ca1",
+                7: "0f344c670e1f67637de0",
+                8: "1b66d9a2c8a76c102c20",
+                9: "521cec3b84890a41edb3",
+                10: "5fc93f0da22ce24e78cb",
+                11: "5b0c7fb8701c95c2fbfa",
+                12: "7776cda8299183847fad",
+                13: "6a7479d91ad6c06fbf1e",
+                14: "38bbf7666a02f64397ac",
+                15: "d1e72ffa065811d8e947",
+                16: "eef3ea0eec555e6ab255",
+                17: "c7ebe2223ad494e657fd",
+                18: "fc14b5be23e1f1a41a6b",
+                19: "fec2a4c7ecbd9b19f210",
+                20: "b5f127b993677bdc6106",
+                21: "044ddc04ed271c823382",
+                22: "db23ac0e77ddd526da8a",
+                23: "20d8ec1dee989548f187",
+                24: "ecf8153aa8e4a8abd863",
+                25: "1497fcbe501491aaf902",
+                26: "0b1b46fa0b74359a7907",
+                27: "1278a6f9f04a78bd6cfc",
+                28: "6e5a6fe866a1742aba60",
+                29: "93f5e2a0ec7f9b4046c5",
+                30: "318fb8f48696e0d60c8b",
+                31: "c1f0a6acb1a98bd1dac0",
                 33: "1389b6bab9c4895d521d",
                 34: "c52e24f5ecd5dc9a0946",
                 35: "74e84f0ffb34a8d64b3e",
@@ -10213,7 +10213,9 @@
       SaleSection: "partnersaledisplay_SaleSection_1cOoC",
       SaleSectionHeader: "partnersaledisplay_SaleSectionHeader_1D0v6",
       AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_2H8Bm",
-      SaleOuterContainer: "partnersaledisplay_SaleOuterContainer_150kd"
+      SaleOuterContainer: "partnersaledisplay_SaleOuterContainer_150kd",
+      SaleBackground: "partnersaledisplay_SaleBackground_2N8Se",
+      SaleSectionSubtext: "partnersaledisplay_SaleSectionSubtext_17Fnl"
     };
   },
   a6qw: function(e, t, n) {},
@@ -12300,6 +12302,9 @@
                               p.data.library_asset_setup_complete),
                             (s.m_appStoreData.item_id = p.data.item_id),
                             (s.m_appStoreData.icon_url = p.data.icon_url),
+                            (s.m_appStoreData.tags = p.data.tags),
+                            (s.m_appStoreData.content_descriptors =
+                              p.data.content_descriptors),
                             (s.m_appStoreData.creator_list = new Array());
                           var e = p.data.creator_list;
                           if (e)
@@ -16348,7 +16353,8 @@
           localized_sale_header: new Array(29),
           sale_font: "",
           sale_background_color: "",
-          sale_title_overlay: !1
+          sale_title_overlay: !1,
+          sale_header_offset: 150
         },
         V
       ),
@@ -18594,6 +18600,8 @@
           (this.m_rgWishList = new Array()),
             (this.m_rgOwnedPackages = []),
             (this.m_rgOwnedApps = []),
+            (this.m_excludedTags = []),
+            (this.m_excludedContentDescriptors = []),
             (this.m_rgCreatorsFollowed = new Array()),
             (this.m_rgCreatorsIgnored = new Array()),
             (this.m_bIsLoaded = !1);
@@ -18622,6 +18630,33 @@
               this.m_rgCreatorsIgnored.findIndex(function(e) {
                 return e == t.GetAccountID();
               })
+            );
+          }),
+          (e.prototype.BExcludesTag = function(t) {
+            return (
+              !!t &&
+              Boolean(
+                this.m_excludedTags.filter(function(e) {
+                  return (
+                    -1 !==
+                    t
+                      .map(function(e) {
+                        return e.tagid;
+                      })
+                      .indexOf(e)
+                  );
+                }).length
+              )
+            );
+          }),
+          (e.prototype.BExcludesContentDescriptor = function(t) {
+            return (
+              !!t &&
+              Boolean(
+                this.m_excludedContentDescriptors.filter(function(e) {
+                  return -1 !== t.indexOf(e);
+                }).length
+              )
             );
           }),
           (e.prototype.BIsGameWishlisted = function(t) {
@@ -18686,8 +18721,19 @@
                               a.data.rgWishlist.forEach(function(e) {
                                 return i.m_rgWishList.push(e);
                               }),
-                            (i.m_rgOwnedApps = a.data.rgOwnedApps),
-                            (i.m_rgOwnedPackages = a.data.rgOwnedPackages);
+                            a.data.rgOwnedApps &&
+                              (i.m_rgOwnedApps = a.data.rgOwnedApps),
+                            a.data.rgOwnedPackages &&
+                              (i.m_rgOwnedPackages = a.data.rgOwnedPackages),
+                            a.data.rgExcludedTags &&
+                              (i.m_excludedTags = a.data.rgExcludedTags.map(
+                                function(e) {
+                                  return e.tagid;
+                                }
+                              )),
+                            a.data.rgExcludedContentDescriptorIDs &&
+                              (i.m_excludedContentDescriptors =
+                                a.data.rgExcludedContentDescriptorIDs);
                         }),
                       [2, this]
                     );
@@ -18818,6 +18864,13 @@
           Object(q.c)([_.w], e.prototype, "m_rgWishList", void 0),
           Object(q.c)([_.w], e.prototype, "m_rgOwnedPackages", void 0),
           Object(q.c)([_.w], e.prototype, "m_rgOwnedApps", void 0),
+          Object(q.c)([_.w], e.prototype, "m_excludedTags", void 0),
+          Object(q.c)(
+            [_.w],
+            e.prototype,
+            "m_excludedContentDescriptors",
+            void 0
+          ),
           Object(q.c)([_.w], e.prototype, "m_rgCreatorsFollowed", void 0),
           Object(q.c)([_.w], e.prototype, "m_rgCreatorsIgnored", void 0),
           e
@@ -19722,8 +19775,10 @@
                           "a",
                           {
                             className: Xn.a.StoreSaleWidgetExtraLink,
-                            href: this.props.extraLink.url,
-                            target: "_blank"
+                            href:
+                              (m.b.IN_CLIENT ? "steam://openurl/" : "") +
+                              this.props.extraLink.url,
+                            target: m.b.IN_CLIENT ? void 0 : "_blank"
                           },
                           this.props.extraLink.name
                         )
@@ -20117,8 +20172,12 @@
               "a",
               {
                 ref: this.hoverRef,
-                href: m.b.STORE_BASE_URL + "bundle/" + this.props.bundleid,
-                target: "_blank",
+                href:
+                  (m.b.IN_CLIENT ? "steam://openurl/" : "") +
+                  m.b.STORE_BASE_URL +
+                  "bundle/" +
+                  this.props.bundleid,
+                target: m.b.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
                 onMouseOver: function(e) {
                   return window.GameHover(
@@ -20187,8 +20246,12 @@
               "a",
               {
                 ref: this.hoverRef,
-                href: m.b.STORE_BASE_URL + "sub/" + this.props.packageid,
-                target: "_blank",
+                href:
+                  (m.b.IN_CLIENT ? "steam://openurl/" : "") +
+                  m.b.STORE_BASE_URL +
+                  "sub/" +
+                  this.props.packageid,
+                target: m.b.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer",
                 onMouseOver: function(e) {
                   return window.GameHover(
@@ -20252,73 +20315,85 @@
               o = e.title,
               a = e.price,
               i = e.discount_percent,
-              r = Mn.BIsGameWishlisted(this.props.appid),
-              p = Mn.BOwnsApp(this.props.appid);
-            return W.createElement(
-              "a",
-              {
-                ref: this.hoverRef,
-                href: m.b.STORE_BASE_URL + "app/" + this.props.appid,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                onMouseOver: function(e) {
-                  return window.GameHover(
-                    t.hoverRef.current,
-                    e,
-                    "global_hover",
-                    { type: "app", id: t.props.appid, v6: 1 }
-                  );
-                },
-                onMouseOut: function(e) {
-                  return window.HideGameHover(
-                    t.hoverRef.current,
-                    e,
-                    "global_hover"
-                  );
-                }
-              },
-              W.createElement(
-                "div",
-                { className: Xn.a.CapsuleContainer },
-                !p &&
-                  r &&
+              r = e.content_descriptors,
+              p = e.tags,
+              s = Mn.BIsGameWishlisted(this.props.appid),
+              c = Mn.BOwnsApp(this.props.appid);
+            return Mn.BExcludesContentDescriptor(r) || Mn.BExcludesTag(p)
+              ? null
+              : W.createElement(
+                  "a",
+                  {
+                    ref: this.hoverRef,
+                    href:
+                      (m.b.IN_CLIENT ? "steam://openurl/" : "") +
+                      m.b.STORE_BASE_URL +
+                      "app/" +
+                      this.props.appid,
+                    target: m.b.IN_CLIENT ? void 0 : "_blank",
+                    rel: "noopener noreferrer",
+                    onMouseOver: function(e) {
+                      return window.GameHover(
+                        t.hoverRef.current,
+                        e,
+                        "global_hover",
+                        { type: "app", id: t.props.appid, v6: 1 }
+                      );
+                    },
+                    onMouseOut: function(e) {
+                      return window.HideGameHover(
+                        t.hoverRef.current,
+                        e,
+                        "global_hover"
+                      );
+                    }
+                  },
                   W.createElement(
-                    "span",
-                    { className: Xn.a.Banner },
-                    W.createElement("img", { src: In.a }),
-                    " ",
-                    Object(v.c)("#Sale_OnWishlist")
-                  ),
-                p &&
-                  W.createElement(
-                    "span",
-                    { className: Xn.a.Banner },
-                    W.createElement("img", { src: jn.a }),
-                    " ",
-                    Object(v.c)("#Sale_InLibrary")
-                  ),
-                W.createElement("img", {
-                  className: Xn.a.CapsuleImage,
-                  src: n
-                }),
-                W.createElement(
-                  "div",
-                  { className: Xn.a.CapsuleBottomBar },
-                  W.createElement("span", { className: Xn.a.CapsuleTitle }, o),
-                  W.createElement(
-                    "span",
-                    { style: { marginLeft: "auto" } },
-                    Boolean(i) &&
+                    "div",
+                    { className: Xn.a.CapsuleContainer },
+                    !c &&
+                      s &&
                       W.createElement(
                         "span",
-                        { className: Xn.a.StoreSaleDiscountBox },
-                        "-" + i + "%"
+                        { className: Xn.a.Banner },
+                        W.createElement("img", { src: In.a }),
+                        " ",
+                        Object(v.c)("#Sale_OnWishlist")
                       ),
-                    Boolean(a) && a
+                    c &&
+                      W.createElement(
+                        "span",
+                        { className: Xn.a.Banner },
+                        W.createElement("img", { src: jn.a }),
+                        " ",
+                        Object(v.c)("#Sale_InLibrary")
+                      ),
+                    W.createElement("img", {
+                      className: Xn.a.CapsuleImage,
+                      src: n
+                    }),
+                    W.createElement(
+                      "div",
+                      { className: Xn.a.CapsuleBottomBar },
+                      W.createElement(
+                        "span",
+                        { className: Xn.a.CapsuleTitle },
+                        o
+                      ),
+                      W.createElement(
+                        "span",
+                        { style: { marginLeft: "auto" } },
+                        Boolean(i) &&
+                          W.createElement(
+                            "span",
+                            { className: Xn.a.StoreSaleDiscountBox },
+                            "-" + i + "%"
+                          ),
+                        Boolean(a) && a
+                      )
+                    )
                   )
-                )
-              )
-            );
+                );
           }),
           (e = Object(q.c)([J.a], e))
         );
@@ -20333,8 +20408,12 @@
             return W.createElement(
               "a",
               {
-                href: m.b.STORE_BASE_URL + "tags/en/" + this.props.tagName,
-                target: "_blank",
+                href:
+                  (m.b.IN_CLIENT ? "steam://openurl/" : "") +
+                  m.b.STORE_BASE_URL +
+                  "tags/en/" +
+                  this.props.tagName,
+                target: m.b.IN_CLIENT ? void 0 : "_blank",
                 rel: "noopener noreferrer"
               },
               W.createElement(
@@ -20693,23 +20772,24 @@
                   case 0:
                     (this.m_settings = r),
                       (t = null),
-                      (n = new URLSearchParams()),
-                      r.appid && n.append("appid", "" + r.appid),
-                      r.promotionname &&
-                        n.append("promotionname", r.promotionname),
-                      r.clanid && n.append("clanid", "" + r.clanid),
-                      r.listid && n.append("listid", "" + r.listid),
-                      r.event && n.append("eventid", r.event.GID),
+                      (n = {
+                        appid: r.appid,
+                        promotionname: r.promotionname,
+                        clanid: r.clanid,
+                        listid: r.listid,
+                        eventid: r.event ? r.event.GID : void 0,
+                        test: !1
+                      }),
                       (e.label = 1);
                   case 1:
                     return (
                       e.trys.push([1, 3, , 4]),
                       [
                         4,
-                        g.a.post(
+                        g.a.get(
                           m.b.STORE_BASE_URL +
                             "broadcast/ajaxgetstreamersforpage",
-                          n
+                          { params: n }
                         )
                       ]
                     );
@@ -48121,20 +48201,21 @@
           }),
           (t.prototype.render = function() {
             var o = this,
-              i =
+              r =
                 this.props.eventModel ||
                 It.GetClanEventFromAnnouncementGID(m.a.ANNOUNCEMENT_GID);
-            return i
+            return r
               ? W.createElement(
                   "div",
                   {
+                    className: Vb.a.SaleBackground,
                     style: {
                       display: "flex",
                       position: "relative",
-                      background:
-                        "url(" + i.GetImageURL("sale_header") + ") no-repeat",
-                      backgroundColor: i.jsondata.sale_background_color,
-                      flexDirection: "column"
+                      flexDirection: "column",
+                      backgroundImage:
+                        "url(" + r.GetImageURL("sale_header") + ")",
+                      backgroundColor: r.jsondata.sale_background_color
                     }
                   },
                   W.createElement(
@@ -48146,20 +48227,20 @@
                         justifyContent: "center"
                       }
                     },
-                    i.jsondata.sale_header_overlay &&
+                    r.jsondata.sale_header_overlay &&
                       W.createElement(
                         "div",
                         { style: { width: "500px" } },
                         W.createElement(Zb, null)
                       ),
-                    i.jsondata.sale_title_overlay &&
+                    r.jsondata.sale_title_overlay &&
                       W.createElement(
                         "div",
                         null,
                         W.createElement(
                           "h1",
-                          { style: { fontFamily: i.jsondata.sale_font } },
-                          i.GetNameWithFallback(this.props.language)
+                          { style: { fontFamily: r.jsondata.sale_font } },
+                          r.GetNameWithFallback(this.props.language)
                         ),
                         W.createElement("hr", null),
                         W.createElement(
@@ -48167,44 +48248,59 @@
                           {
                             style: {
                               textAlign: "left",
-                              fontFamily: i.jsondata.sale_font
+                              fontFamily: r.jsondata.sale_font
                             }
                           },
                           W.createElement(qs, {
-                            text: i.GetDescriptionWithFallback(
+                            text: r.GetDescriptionWithFallback(
                               this.props.language
                             ),
                             partnerEventStore: It,
                             showErrorInfo: this.props.bIsPreview,
-                            event: i
+                            event: r
                           })
                         )
                       )
                   ),
                   W.createElement(
                     "div",
-                    { className: Vb.a.SaleOuterContainer },
-                    i.BHasBroadcastEnabled() &&
+                    {
+                      className: Vb.a.SaleOuterContainer,
+                      style: { marginTop: r.jsondata.sale_header_offset + "px" }
+                    },
+                    r.BHasBroadcastEnabled() &&
                       W.createElement(
                         "div",
-                        { style: { width: "100%" } },
+                        {
+                          style: {
+                            width: "100%",
+                            margin: "0 auto",
+                            maxWidth: "940px"
+                          }
+                        },
                         W.createElement(tp, {
                           promotionname: this.props.promotionname,
-                          event: i,
+                          event: r,
                           bIsPreview: this.props.bIsPreview
                         })
                       ),
-                    i.jsondata.sale_show_creator &&
+                    r.jsondata.sale_show_creator &&
                       W.createElement(
                         "div",
-                        { style: { width: "100%" } },
+                        {
+                          style: {
+                            width: "100%",
+                            margin: "0 auto",
+                            maxWidth: "940px"
+                          }
+                        },
                         W.createElement(Hp, {
                           creatorID: {
                             name: null,
-                            clan_account_id: i.clanSteamID.GetAccountID(),
+                            clan_account_id: r.clanSteamID.GetAccountID(),
                             type: "developer"
                           },
-                          eventModel: i,
+                          eventModel: r,
                           eventUserStore: jt,
                           bShowTagline: !0
                         })
@@ -48212,7 +48308,7 @@
                     W.createElement(
                       "div",
                       null,
-                      i.GetSaleSections().map(function(a, e) {
+                      r.GetSaleSections().map(function(a, e) {
                         if ("events" === a.section_type)
                           return W.createElement(
                             "div",
@@ -48234,7 +48330,7 @@
                               {
                                 className: Vb.a.SaleSectionHeader,
                                 style: {
-                                  fontFamily: i.jsondata.sale_font,
+                                  fontFamily: r.jsondata.sale_font,
                                   color: a.label_color
                                 }
                               },
@@ -48287,9 +48383,26 @@
                           );
                         var t = Object(q.g)(a.capsules),
                           n = Object(q.g)(a.tags);
+                        a.use_random_order &&
+                          (Object(wt.e)(t), Object(wt.e)(n));
+                        var i = 0;
                         return (
-                          a.use_random_order &&
-                            (Object(wt.e)(t), Object(wt.e)(n)),
+                          t.forEach(function(e) {
+                            if (
+                              "game" === e.type ||
+                              "dlc" === e.type ||
+                              "software" === e.type
+                            ) {
+                              var t = X.GetStoreCapsuleInfo(
+                                  e.id
+                                ).GetAppStoreData(),
+                                n = t.content_descriptors,
+                                o = t.tags;
+                              (Mn.BExcludesContentDescriptor(n) ||
+                                Mn.BExcludesTag(o)) &&
+                                (i += 1);
+                            }
+                          }),
                           W.createElement(
                             "div",
                             {
@@ -48310,7 +48423,7 @@
                               {
                                 className: Vb.a.SaleSectionHeader,
                                 style: {
-                                  fontFamily: i.jsondata.sale_font,
+                                  fontFamily: r.jsondata.sale_font,
                                   color: a.label_color
                                 }
                               },
@@ -48318,6 +48431,12 @@
                                 a.localized_label[0] ||
                                 Object(v.c)(a.default_label)
                             ),
+                            Boolean(i) &&
+                              W.createElement(
+                                "div",
+                                { className: Vb.a.SaleSectionSubtext },
+                                Object(v.c)("#Sale_HiddenItems", i)
+                              ),
                             W.createElement(
                               "div",
                               {
@@ -48395,15 +48514,15 @@
                         );
                       })
                     ),
-                    Boolean(i.jsondata.sale_browsemore_url) &&
+                    Boolean(r.jsondata.sale_browsemore_url) &&
                       W.createElement(
                         "div",
                         { style: { textAlign: "center", marginTop: "20px" } },
                         W.createElement(Jb, {
-                          text: i.jsondata.sale_browsemore_text,
-                          url: i.jsondata.sale_browsemore_url,
-                          color: i.jsondata.sale_browsemore_color,
-                          bgcolor: i.jsondata.sale_browsemore_bgcolor
+                          text: r.jsondata.sale_browsemore_text,
+                          url: r.jsondata.sale_browsemore_url,
+                          color: r.jsondata.sale_browsemore_color,
+                          bgcolor: r.jsondata.sale_browsemore_bgcolor
                         })
                       )
                   )
@@ -48674,32 +48793,43 @@
                     .appid_or_vanity_str,
                   gid: this.props.match.params.gid
                 });
-              var e = nb.GetEditModel().GetEventModel();
-              return W.createElement(
-                W.Fragment,
-                null,
-                W.createElement(Bc, {
-                  event: e,
-                  lang: Object(B.d)(m.b.LANGUAGE),
-                  fnEventRouter: an,
-                  eventUserStore: jt,
-                  partnerEventStore: nb,
-                  emoticonStore: eo,
-                  adminPanel: W.createElement(Bb, {
-                    eventModel: e,
-                    eventUserStore: jt,
-                    fnEventRouter: an,
-                    partnerEventStore: nb
-                  }),
-                  otherEventRow: W.createElement(xb, {
-                    appid: e.appid,
-                    trackingLocation: 6,
-                    eventModel: e,
-                    fnEventRouter: an,
-                    partnerEventStore: nb
-                  })
-                })
-              );
+              var e = nb.GetEditModel().GetEventModel(),
+                t = Object(B.d)(m.b.LANGUAGE);
+              return e.BHasSaleEnabled()
+                ? W.createElement(
+                    te,
+                    null,
+                    W.createElement(Kb, {
+                      eventModel: e,
+                      bIsPreview: !0,
+                      language: t
+                    })
+                  )
+                : W.createElement(
+                    W.Fragment,
+                    null,
+                    W.createElement(Bc, {
+                      event: e,
+                      lang: t,
+                      fnEventRouter: an,
+                      eventUserStore: jt,
+                      partnerEventStore: nb,
+                      emoticonStore: eo,
+                      adminPanel: W.createElement(Bb, {
+                        eventModel: e,
+                        eventUserStore: jt,
+                        fnEventRouter: an,
+                        partnerEventStore: nb
+                      }),
+                      otherEventRow: W.createElement(xb, {
+                        appid: e.appid,
+                        trackingLocation: 6,
+                        eventModel: e,
+                        fnEventRouter: an,
+                        partnerEventStore: nb
+                      })
+                    })
+                  );
             }),
             (e = Object(q.c)([J.a], e))
           );
@@ -49120,7 +49250,7 @@
               n = e.GetAppStoreData(),
               o = null;
             return (
-              Number.isNaN(Number(this.props.identifier))
+              m.a.IS_CREATOR_HOME
                 ? t &&
                   t.BIsLoaded() &&
                   (o = W.createElement(
@@ -49830,6 +49960,10 @@
           (e.prototype.OnHeaderTitleDisplayChange = function(e) {
             nb.GetEditModel().GetEventModel().jsondata.sale_title_overlay = e;
           }),
+          (e.prototype.OnHeaderOffsetChange = function(e) {
+            nb.GetEditModel().GetEventModel().jsondata.sale_header_offset =
+              Number(e.target.value) || 0;
+          }),
           (e.prototype.render = function() {
             var e = nb.GetEditModel();
             if (this.state.bRedirectToFullyMaterialzedEditPage) {
@@ -49960,6 +50094,11 @@
                   label: Object(v.c)("#Sale_TitleOverlay"),
                   checked: e.GetEventModel().jsondata.sale_title_overlay,
                   description: ""
+                }),
+                W.createElement($.i, {
+                  onChange: this.OnHeaderOffsetChange,
+                  label: Object(v.c)("#Sale_HeaderOffset"),
+                  value: e.GetEventModel().jsondata.sale_header_offset
                 })
               );
             else if ("hero" === this.props.artworkType) {
@@ -50024,6 +50163,7 @@
           Object(q.c)([d.a], e.prototype, "OnExampleClick", null),
           Object(q.c)([d.a], e.prototype, "OnHeaderOverlayChange", null),
           Object(q.c)([d.a], e.prototype, "OnHeaderTitleDisplayChange", null),
+          Object(q.c)([d.a], e.prototype, "OnHeaderOffsetChange", null),
           (e = Object(q.c)([J.a], e))
         );
       })(W.Component),
@@ -58789,7 +58929,8 @@
                 W.createElement("p", null, Object(v.c)("#Sale_option_title")),
                 W.createElement($.f, {
                   rgOptions: e,
-                  selectedOption: e[0].data,
+                  selectedOption:
+                    this.props.saleSection.default_label || e[0].data,
                   onChange: this.OnTitleChange
                 }),
                 W.createElement(
@@ -59561,11 +59702,12 @@
                     title: Object(v.c)("#EventEditor_ArtworkType_spotlight"),
                     artworkType: "spotlight"
                   }),
-              W.createElement(BM, {
-                clanSteamID: e.GetClanSteamID(),
-                title: Object(v.c)("#EventEditor_ArtworkType_hero"),
-                artworkType: "hero"
-              })
+              Boolean(!m.a.IS_CREATOR_HOME) &&
+                W.createElement(BM, {
+                  clanSteamID: e.GetClanSteamID(),
+                  title: Object(v.c)("#EventEditor_ArtworkType_hero"),
+                  artworkType: "hero"
+                })
             );
           }),
           t
