@@ -140,8 +140,8 @@
               ".js?v=" +
               {
                 0: "ebf340b3a6216e2d0fa9",
-                1: "84b8487a44529cc43a07",
-                3: "8d627e7831c76f70e396",
+                1: "dbce808d6e2254c3ab24",
+                3: "e6b36d83b6bb39efa791",
                 5: "85bb4cd60f4d5705bab2",
                 6: "607c3275e83d933e2ca1",
                 7: "0f344c670e1f67637de0",
@@ -1024,6 +1024,10 @@
   "0XOM": function(e, t, n) {
     e.exports = {
       TileContainer: "partnereventtile_TileContainer_1eeyC",
+      EventStateUpcoming: "partnereventtile_EventStateUpcoming_qfpNt",
+      EventStateActive: "partnereventtile_EventStateActive_3F1Bj",
+      EventStateRecent: "partnereventtile_EventStateRecent_2ge3p",
+      TileStats: "partnereventtile_TileStats_GZhwe",
       Spacer: "partnereventtile_Spacer_Lux3q",
       TileImageCtn: "partnereventtile_TileImageCtn_1vi2y",
       TileImage: "partnereventtile_TileImage_5NjHV",
@@ -9820,7 +9824,10 @@
       EventType: "spotlight_EventType_3zVyX",
       GameIconAndName: "spotlight_GameIconAndName_IltgR",
       GameIcon: "spotlight_GameIcon_3Dkj3",
+      MajorEventSpotlightBackground:
+        "spotlight_MajorEventSpotlightBackground_1aheP",
       MajorEventContent: "spotlight_MajorEventContent_2nr7N",
+      MajorEventTextCtn: "spotlight_MajorEventTextCtn_Ojdg2",
       MajorEventTitle: "spotlight_MajorEventTitle_nEBZT",
       MajorEventSummary: "spotlight_MajorEventSummary_HPngO",
       MajorEvent_Ctn: "spotlight_MajorEvent_Ctn_2_kU7",
@@ -11147,6 +11154,10 @@
       StoreSaleWidgetShortDesc_mini:
         "broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU",
       StoreSaleWidgetRight: "broadcastwidgets_StoreSaleWidgetRight_1MzBO",
+      StoreActionWidgetContainer:
+        "broadcastwidgets_StoreActionWidgetContainer_2MF6Y",
+      WishList: "broadcastwidgets_WishList_3mTSE",
+      Action: "broadcastwidgets_Action_2Xpw9",
       StoreSalePriceActionWidgetContainer:
         "broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY",
       StoreSaleDiscountBox: "broadcastwidgets_StoreSaleDiscountBox_3uiyX",
@@ -11156,8 +11167,6 @@
       CapsuleBottomBar: "broadcastwidgets_CapsuleBottomBar_2ygf4",
       CapsuleImage: "broadcastwidgets_CapsuleImage_XI8fY",
       CapsuleTitle: "broadcastwidgets_CapsuleTitle_2eIiB",
-      Action: "broadcastwidgets_Action_2Xpw9",
-      WishList: "broadcastwidgets_WishList_3mTSE",
       Banner: "broadcastwidgets_Banner_3ikQa",
       BundleContent: "broadcastwidgets_BundleContent_TGX3I",
       ShowContentsButton: "broadcastwidgets_ShowContentsButton_1cu3o"
@@ -11292,6 +11301,7 @@
       ContainerSpaceBetween: "partnereventshared_ContainerSpaceBetween_3gYZG",
       EventDashboardTitles: "partnereventshared_EventDashboardTitles_1ym4r",
       EventDashboardActions: "partnereventshared_EventDashboardActions_2z_02",
+      EventDashboardStatsCtn: "partnereventshared_EventDashboardStatsCtn_3IptF",
       EventDashboardAppCtn: "partnereventshared_EventDashboardAppCtn_2iPrK",
       maintitle: "partnereventshared_maintitle_vEk_z",
       AppTitle: "partnereventshared_AppTitle_l-Ow7",
@@ -19806,7 +19816,10 @@
               a = e.subid;
             return W.createElement(
               "div",
-              { style: { display: "flex", flexWrap: "wrap" } },
+              {
+                style: { display: "flex", flexWrap: "wrap" },
+                className: Xn.a.StoreActionWidgetContainer
+              },
               W.createElement(
                 "div",
                 { className: Xn.a.StoreSalePriceActionWidgetContainer },
@@ -39741,180 +39754,217 @@
                   null,
                   W.createElement(
                     "div",
-                    { className: ve.a.EventEditorTextTitle },
-                    Object(v.c)("#EventDashBoard_SummaryStats_Title")
-                  ),
-                  Boolean(n) &&
-                    W.createElement(
-                      "p",
-                      null,
-                      Object(v.c)("#EventDashBoard_SummaryStats_Desc")
-                    ),
-                  W.createElement(
-                    "div",
-                    { className: mp.StatsTitle },
-                    W.createElement(
-                      "span",
-                      null,
-                      Object(v.c)("#EventDashBoard_Summary_LibraryHome_Shown")
-                    ),
-                    W.createElement(
-                      "span",
-                      null,
-                      t.library_overview_shown.toLocaleString(
-                        v.b.GetPreferredLocales()
+                    {
+                      className: Object(oe.a)(
+                        mp.StatsCtnTitle,
+                        n ? mp.NormalStatsMode : mp.SmallStatsMode
                       )
-                    )
+                    },
+                    W.createElement(
+                      "h1",
+                      null,
+                      Object(v.c)("#EventDashBoard_SummaryStats_Title")
+                    ),
+                    Boolean(n) &&
+                      W.createElement(
+                        "p",
+                        null,
+                        Object(v.c)("#EventDashBoard_SummaryStats_Desc")
+                      )
                   ),
                   W.createElement(
                     "div",
-                    { className: mp.StatsTitle },
+                    {
+                      className: Object(oe.a)(
+                        mp.StatsCtn,
+                        n ? mp.NormalStatsMode : mp.SmallStatsMode
+                      )
+                    },
                     W.createElement(
-                      "span",
-                      null,
-                      Object(v.c)("#EventDashBoard_Summary_LibraryHome_Read")
+                      "div",
+                      { className: mp.StatsLeftSection },
+                      W.createElement(
+                        "div",
+                        { className: mp.StatsTitle },
+                        W.createElement(
+                          "span",
+                          null,
+                          Object(v.c)(
+                            "#EventDashBoard_Summary_LibraryHome_Shown"
+                          )
+                        ),
+                        W.createElement(
+                          "span",
+                          null,
+                          t.library_overview_shown.toLocaleString(
+                            v.b.GetPreferredLocales()
+                          )
+                        )
+                      ),
+                      W.createElement(
+                        "div",
+                        { className: mp.StatsTitle },
+                        W.createElement(
+                          "span",
+                          null,
+                          Object(v.c)(
+                            "#EventDashBoard_Summary_LibraryHome_Read"
+                          )
+                        ),
+                        W.createElement(
+                          "span",
+                          null,
+                          t.library_overview_read.toLocaleString(
+                            v.b.GetPreferredLocales()
+                          )
+                        )
+                      ),
+                      W.createElement("br", null),
+                      W.createElement(
+                        "div",
+                        { className: mp.StatsTitle },
+                        W.createElement(
+                          "span",
+                          null,
+                          Object(v.c)(
+                            "#EventDashBoard_Summary_AppDetailSpotlight_Shown"
+                          )
+                        ),
+                        W.createElement(
+                          "span",
+                          null,
+                          t.app_details_spotlight_shown.toLocaleString(
+                            v.b.GetPreferredLocales()
+                          )
+                        )
+                      ),
+                      W.createElement(
+                        "div",
+                        { className: mp.StatsTitle },
+                        W.createElement(
+                          "span",
+                          null,
+                          Object(v.c)(
+                            "#EventDashBoard_Summary_AppDetailSpotlight_Read"
+                          )
+                        ),
+                        W.createElement(
+                          "span",
+                          null,
+                          t.app_details_spotlight_read.toLocaleString(
+                            v.b.GetPreferredLocales()
+                          )
+                        )
+                      ),
+                      W.createElement("br", null),
+                      W.createElement(
+                        "div",
+                        { className: mp.StatsTitle },
+                        W.createElement(
+                          "span",
+                          null,
+                          Object(v.c)(
+                            "#EventDashBoard_Summary_AppDetailActivity_Shown"
+                          )
+                        ),
+                        W.createElement(
+                          "span",
+                          null,
+                          t.app_details_activity_shown.toLocaleString(
+                            v.b.GetPreferredLocales()
+                          )
+                        )
+                      ),
+                      W.createElement(
+                        "div",
+                        { className: mp.StatsTitle },
+                        W.createElement(
+                          "span",
+                          null,
+                          Object(v.c)(
+                            "#EventDashBoard_Summary_AppDetailActivity_Read"
+                          )
+                        ),
+                        W.createElement(
+                          "span",
+                          null,
+                          t.app_details_activity_read.toLocaleString(
+                            v.b.GetPreferredLocales()
+                          )
+                        )
+                      )
                     ),
                     W.createElement(
-                      "span",
-                      null,
-                      t.library_overview_read.toLocaleString(
-                        v.b.GetPreferredLocales()
-                      )
-                    )
-                  ),
-                  W.createElement(
-                    "div",
-                    { className: mp.StatsTitle },
-                    W.createElement(
-                      "span",
-                      null,
-                      Object(v.c)(
-                        "#EventDashBoard_Summary_AppDetailSpotlight_Shown"
-                      )
-                    ),
-                    W.createElement(
-                      "span",
-                      null,
-                      t.app_details_spotlight_shown.toLocaleString(
-                        v.b.GetPreferredLocales()
-                      )
-                    )
-                  ),
-                  W.createElement(
-                    "div",
-                    { className: mp.StatsTitle },
-                    W.createElement(
-                      "span",
-                      null,
-                      Object(v.c)(
-                        "#EventDashBoard_Summary_AppDetailSpotlight_Read"
-                      )
-                    ),
-                    W.createElement(
-                      "span",
-                      null,
-                      t.app_details_spotlight_read.toLocaleString(
-                        v.b.GetPreferredLocales()
-                      )
-                    )
-                  ),
-                  W.createElement(
-                    "div",
-                    { className: mp.StatsTitle },
-                    W.createElement(
-                      "span",
-                      null,
-                      Object(v.c)(
-                        "#EventDashBoard_Summary_AppDetailActivity_Shown"
-                      )
-                    ),
-                    W.createElement(
-                      "span",
-                      null,
-                      t.app_details_activity_shown.toLocaleString(
-                        v.b.GetPreferredLocales()
-                      )
-                    )
-                  ),
-                  W.createElement(
-                    "div",
-                    { className: mp.StatsTitle },
-                    W.createElement(
-                      "span",
-                      null,
-                      Object(v.c)(
-                        "#EventDashBoard_Summary_AppDetailActivity_Read"
-                      )
-                    ),
-                    W.createElement(
-                      "span",
-                      null,
-                      t.app_details_activity_read.toLocaleString(
-                        v.b.GetPreferredLocales()
-                      )
-                    )
-                  ),
-                  W.createElement(
-                    "div",
-                    { className: mp.StatsTitle },
-                    W.createElement(
-                      "span",
-                      null,
-                      Object(v.c)("#EventDashBoard_Summary_StoreAppPage_Shown")
-                    ),
-                    W.createElement(
-                      "span",
-                      null,
-                      t.store_app_page_shown.toLocaleString(
-                        v.b.GetPreferredLocales()
-                      )
-                    )
-                  ),
-                  W.createElement(
-                    "div",
-                    { className: mp.StatsTitle },
-                    W.createElement(
-                      "span",
-                      null,
-                      Object(v.c)("#EventDashBoard_Summary_StoreAppPage_Read")
-                    ),
-                    W.createElement(
-                      "span",
-                      null,
-                      t.store_app_page_read.toLocaleString(
-                        v.b.GetPreferredLocales()
-                      )
-                    )
-                  ),
-                  W.createElement(
-                    "div",
-                    { className: mp.StatsTitle },
-                    W.createElement(
-                      "span",
-                      null,
-                      Object(v.c)("#EventDashBoard_Summary_Community_Shown")
-                    ),
-                    W.createElement(
-                      "span",
-                      null,
-                      t.community_hub_shown.toLocaleString(
-                        v.b.GetPreferredLocales()
-                      )
-                    )
-                  ),
-                  W.createElement(
-                    "div",
-                    { className: mp.StatsTitle },
-                    W.createElement(
-                      "span",
-                      null,
-                      Object(v.c)("#EventDashBoard_Summary_Community_Read")
-                    ),
-                    W.createElement(
-                      "span",
-                      null,
-                      t.community_hub_read.toLocaleString(
-                        v.b.GetPreferredLocales()
+                      "div",
+                      { className: mp.StatsRightSection },
+                      W.createElement(
+                        "div",
+                        { className: mp.StatsTitle },
+                        W.createElement(
+                          "span",
+                          null,
+                          Object(v.c)(
+                            "#EventDashBoard_Summary_StoreAppPage_Shown"
+                          )
+                        ),
+                        W.createElement(
+                          "span",
+                          null,
+                          t.store_app_page_shown.toLocaleString(
+                            v.b.GetPreferredLocales()
+                          )
+                        )
+                      ),
+                      W.createElement(
+                        "div",
+                        { className: mp.StatsTitle },
+                        W.createElement(
+                          "span",
+                          null,
+                          Object(v.c)(
+                            "#EventDashBoard_Summary_StoreAppPage_Read"
+                          )
+                        ),
+                        W.createElement(
+                          "span",
+                          null,
+                          t.store_app_page_read.toLocaleString(
+                            v.b.GetPreferredLocales()
+                          )
+                        )
+                      ),
+                      W.createElement("br", null),
+                      W.createElement(
+                        "div",
+                        { className: mp.StatsTitle },
+                        W.createElement(
+                          "span",
+                          null,
+                          Object(v.c)("#EventDashBoard_Summary_Community_Shown")
+                        ),
+                        W.createElement(
+                          "span",
+                          null,
+                          t.community_hub_shown.toLocaleString(
+                            v.b.GetPreferredLocales()
+                          )
+                        )
+                      ),
+                      W.createElement(
+                        "div",
+                        { className: mp.StatsTitle },
+                        W.createElement(
+                          "span",
+                          null,
+                          Object(v.c)("#EventDashBoard_Summary_Community_Read")
+                        ),
+                        W.createElement(
+                          "span",
+                          null,
+                          t.community_hub_read.toLocaleString(
+                            v.b.GetPreferredLocales()
+                          )
+                        )
                       )
                     )
                   )
@@ -43546,6 +43596,7 @@
                 W.createElement(
                   "div",
                   { className: vc.a.EditorStatsCtn },
+                  Object(v.c)("#EventDashBoard_SummaryStats_Admin_Title"),
                   W.createElement(hp, { summary: o.m_stats })
                 )
             );
@@ -48999,22 +49050,19 @@
               n.GetStartTimeAndDateUnixSeconds() > u
                 ? (O = W.createElement(
                     "span",
-                    null,
-                    " - ",
+                    { className: iM.EventStateUpcoming },
                     Object(v.c)("#EventDisplay_Upcoming")
                   ))
                 : Q(n.type) && n.GetEndTimeAndDateUnixSeconds() > u
                 ? (O = W.createElement(
                     "span",
-                    null,
-                    " - ",
+                    { className: iM.EventStateActive },
                     Object(v.c)("#EventDisplay_Active")
                   ))
                 : n.GetStartTimeAndDateUnixSeconds() > u + 3600 &&
                   (O = W.createElement(
                     "span",
-                    null,
-                    " - ",
+                    { className: iM.EventStateRecent },
                     Object(v.c)("#EventDisplay_RecentlyActive")
                   ));
             }
@@ -49073,12 +49121,7 @@
                         K(n.type)
                       )
                     ),
-                    M &&
-                      W.createElement(
-                        "div",
-                        { className: iM.TileTextSubTitle },
-                        n.GetSubTitleWithLanguageFallback(s)
-                      ),
+                    M && !1,
                     W.createElement(
                       "div",
                       { className: We.ContainerSpaceBetween },
@@ -49093,12 +49136,24 @@
                       ),
                       Boolean(A) &&
                         W.createElement(
-                          "span",
-                          null,
-                          Object(v.c)(
-                            "#EventDashBoard_Summary_Tile",
-                            A.m_stats.total_showm.toLocaleString(),
-                            A.m_stats.total_read.toLocaleString()
+                          "div",
+                          { className: iM.TileStats },
+                          Object(v.g)(
+                            "#EventDashBoard_Summary_Tile_Impressions",
+                            W.createElement(
+                              "span",
+                              null,
+                              A.m_stats.total_showm.toLocaleString()
+                            )
+                          ),
+                          W.createElement("br", null),
+                          Object(v.g)(
+                            "#EventDashBoard_Summary_Tile_Read",
+                            W.createElement(
+                              "span",
+                              null,
+                              A.m_stats.total_read.toLocaleString()
+                            )
                           )
                         )
                     ),
@@ -49537,80 +49592,94 @@
               W.createElement(
                 "div",
                 {
-                  className: Object(oe.a)(
-                    "maincontent",
-                    "eventlist",
-                    aM.a.EventDashboardCtn
-                  )
+                  className: Object(oe.a)("maincontent", aM.a.EventDashboardCtn)
                 },
                 W.createElement(MM, {
                   appid_or_vanity_str: this.props.match.params
                     .appid_or_vanity_str
-                }),
-                W.createElement(
-                  "div",
-                  { className: aM.a.MainLists },
+                })
+              ),
+              W.createElement(
+                "div",
+                { className: aM.a.MainLists },
+                0 < e.length &&
                   W.createElement(
                     "div",
                     { className: Object(oe.a)(aM.a.Section, aM.a.Unpublished) },
                     W.createElement(
                       "div",
-                      { className: aM.a.DisplaySectionHeader },
-                      Object(v.c)("#EventDisplay_Unpublished_Title"),
-                      " ",
-                      W.createElement(
-                        "span",
-                        {
-                          "data-tooltip-text": Object(v.c)(
-                            "#EventDisplay_Unpublished_SubTitle"
-                          )
-                        },
-                        " (?)"
-                      )
-                    ),
-                    0 < e.length && e,
-                    0 == e.length &&
+                      {
+                        className: Object(oe.a)(
+                          "maincontent",
+                          "eventlist",
+                          aM.a.EventDashboardCtn
+                        )
+                      },
                       W.createElement(
                         "div",
-                        { className: aM.a.DisplaySectionEmpty },
-                        Object(v.c)("#EventDisplay_NoDraft"),
-                        " "
-                      )
+                        { className: aM.a.DisplaySectionHeader },
+                        Object(v.c)("#EventDisplay_Unpublished_Title"),
+                        " ",
+                        W.createElement(
+                          "span",
+                          {
+                            "data-tooltip-text": Object(v.c)(
+                              "#EventDisplay_Unpublished_SubTitle"
+                            )
+                          },
+                          " (?)"
+                        )
+                      ),
+                      0 < e.length && e
+                    )
                   ),
+                0 < t.length &&
                   W.createElement(
                     "div",
                     { className: Object(oe.a)(aM.a.Section, aM.a.Staged) },
                     W.createElement(
                       "div",
-                      { className: aM.a.DisplaySectionHeader },
-                      Object(v.c)("#EventDisplay_Stage_Title"),
-                      " ",
-                      W.createElement(
-                        "span",
-                        {
-                          "data-tooltip-text": Object(v.c)(
-                            "#EventDisplay_Stage_SubTitle"
-                          )
-                        },
-                        " (?)"
-                      )
-                    ),
-                    0 < t.length && t,
-                    0 == t.length &&
+                      {
+                        className: Object(oe.a)(
+                          "maincontent",
+                          "eventlist",
+                          aM.a.EventDashboardCtn
+                        )
+                      },
                       W.createElement(
                         "div",
-                        { className: aM.a.DisplaySectionEmpty },
-                        Object(v.c)("#EventDisplay_NoStaged"),
-                        " "
-                      )
+                        { className: aM.a.DisplaySectionHeader },
+                        Object(v.c)("#EventDisplay_Stage_Title"),
+                        " ",
+                        W.createElement(
+                          "span",
+                          {
+                            "data-tooltip-text": Object(v.c)(
+                              "#EventDisplay_Stage_SubTitle"
+                            )
+                          },
+                          " (?)"
+                        )
+                      ),
+                      0 < t.length && t
+                    )
                   ),
+                W.createElement(
+                  "div",
+                  {
+                    className: Object(oe.a)(
+                      aM.a.Section,
+                      aM.a.DisplaySectionHeaderContainer,
+                      aM.a.Visible
+                    )
+                  },
                   W.createElement(
                     "div",
                     {
                       className: Object(oe.a)(
-                        aM.a.Section,
-                        aM.a.DisplaySectionHeaderContainer,
-                        aM.a.Visible
+                        "maincontent",
+                        "eventlist",
+                        aM.a.EventDashboardCtn
                       )
                     },
                     W.createElement(
@@ -49703,10 +49772,14 @@
                   )
                 )
               ),
-              W.createElement(hp, {
-                summary: t.m_stats,
-                bIncludeDescription: !0
-              })
+              W.createElement(
+                "div",
+                { className: ve.a.EventDashboardStatsCtn },
+                W.createElement(hp, {
+                  summary: t.m_stats,
+                  bIncludeDescription: !0
+                })
+              )
             );
           }),
           Object(q.c)([d.a], e.prototype, "onCreateButtonPress", null),
@@ -49818,15 +49891,26 @@
                         W.createElement(
                           "div",
                           { className: qM.a.MajorEventContent },
+                          W.createElement(Ms, {
+                            className: qM.a.MajorEventSpotlightBackground,
+                            rgSources: r,
+                            onIncrementalError: function(e, t, n) {
+                              return a && a(t);
+                            }
+                          }),
                           W.createElement(
                             "div",
-                            { className: qM.a.MajorEventTitle },
-                            t.GetNameWithFallback(0)
-                          ),
-                          W.createElement(
-                            "div",
-                            { className: qM.a.MajorEventSummary },
-                            p
+                            { className: qM.a.MajorEventTextCtn },
+                            W.createElement(
+                              "div",
+                              { className: qM.a.MajorEventTitle },
+                              t.GetNameWithFallback(0)
+                            ),
+                            W.createElement(
+                              "div",
+                              { className: qM.a.MajorEventSummary },
+                              p
+                            )
                           )
                         )
                     )
@@ -54129,7 +54213,7 @@
               this.GetQuestion() +
               'xml version="1.0" encoding="UTF-8" ' +
               this.GetQuestion() +
-              " >\n";
+              ">\n";
             (n += new XMLSerializer().serializeToString(e)),
               this.WriteFile(
                 new Blob([n], { type: "application/xml:charset=utf-8;" }),
@@ -57899,7 +57983,8 @@
       sz = l("WFjJ");
     ((cl = sl || (sl = {}))[(cl.k_ModReviewed = 0)] = "k_ModReviewed"),
       (cl[(cl.k_ModUnreviewed = 1)] = "k_ModUnreviewed"),
-      (cl[(cl.k_ChangeEventType = 2)] = "k_ChangeEventType");
+      (cl[(cl.k_ChangeEventType = 2)] = "k_ChangeEventType"),
+      (cl[(cl.k_UpdateSeasonTags = 3)] = "k_UpdateSeasonTags");
     var cz = new ((function() {
         function e() {
           (this.m_mapEventGIDToSolrData = new Map()),
@@ -57923,7 +58008,8 @@
             p,
             s,
             c,
-            b
+            b,
+            M
           ) {
             return (
               void 0 === i && (i = 0),
@@ -57937,7 +58023,7 @@
                     case 0:
                       return [
                         4,
-                        this.GetLatestPartnerEvents(a, i, r, p, s, c, b)
+                        this.GetLatestPartnerEvents(a, i, r, p, s, c, b, M)
                       ];
                     case 1:
                       return (
@@ -57958,10 +58044,19 @@
               })
             );
           }),
-          (e.prototype.GetLatestPartnerEvents = function(e, a, i, r, p, s, c) {
+          (e.prototype.GetLatestPartnerEvents = function(
+            a,
+            i,
+            r,
+            p,
+            s,
+            c,
+            b,
+            M
+          ) {
             return (
-              void 0 === a && (a = 0),
-              void 0 === i && (i = 10),
+              void 0 === i && (i = 0),
+              void 0 === r && (r = 10),
               Object(q.b)(this, void 0, void 0, function() {
                 var t, n, o;
                 return Object(q.e)(this, function(e) {
@@ -57972,14 +58067,22 @@
                           m.b.STORE_BASE_URL +
                           "events_admin/ajaxgetlatestpartnerevents"),
                         (n = {
-                          appid: r,
-                          page: a,
-                          count: i,
-                          date: c,
-                          required_tags: void 0 === p ? void 0 : p.join(","),
-                          exclude_tags: void 0 === s ? void 0 : s.join(",")
+                          appid: p,
+                          page: i,
+                          count: r,
+                          date: b,
+                          required_tags: void 0 === s ? void 0 : s.join(","),
+                          exclude_tags: void 0 === c ? void 0 : c.join(","),
+                          eventtypefilter: void 0 === M ? void 0 : M.join(",")
                         }),
-                        [4, g.a.get(t, { params: n, withCredentials: !0 })]
+                        [
+                          4,
+                          g.a.get(t, {
+                            params: n,
+                            withCredentials: !0,
+                            cancelToken: a ? a.token : void 0
+                          })
+                        ]
                       );
                     case 1:
                       return [2, (o = e.sent()).data ? o.data.docs : []];
@@ -64676,7 +64779,14 @@
     };
   },
   sGzE: function(e, t, n) {
-    e.exports = { StatsTitle: "partnereventstats_StatsTitle_3YLaB" };
+    e.exports = {
+      StatsTitle: "partnereventstats_StatsTitle_3YLaB",
+      StatsCtnTitle: "partnereventstats_StatsCtnTitle_1LlRF",
+      SmallStatsMode: "partnereventstats_SmallStatsMode_2A2-p",
+      StatsCtn: "partnereventstats_StatsCtn_hWCs4",
+      StatsLeftSection: "partnereventstats_StatsLeftSection_3L-uh",
+      StatsRightSection: "partnereventstats_StatsRightSection_1yibD"
+    };
   },
   sUmc: function(e, t, n) {
     "use strict";

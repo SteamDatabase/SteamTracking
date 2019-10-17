@@ -6817,6 +6817,7 @@
       ContainerSpaceBetween: "partnereventshared_ContainerSpaceBetween_3T0Pr",
       EventDashboardTitles: "partnereventshared_EventDashboardTitles_3XWe3",
       EventDashboardActions: "partnereventshared_EventDashboardActions_2i1-P",
+      EventDashboardStatsCtn: "partnereventshared_EventDashboardStatsCtn_iDETf",
       EventDashboardAppCtn: "partnereventshared_EventDashboardAppCtn_iUAoi",
       maintitle: "partnereventshared_maintitle_21WFS",
       AppTitle: "partnereventshared_AppTitle_3-UCH",
@@ -12118,6 +12119,10 @@
       StoreSaleWidgetShortDesc_mini:
         "broadcastwidgets_StoreSaleWidgetShortDesc_mini_2Jm21",
       StoreSaleWidgetRight: "broadcastwidgets_StoreSaleWidgetRight_2Bwn2",
+      StoreActionWidgetContainer:
+        "broadcastwidgets_StoreActionWidgetContainer_3nrCI",
+      WishList: "broadcastwidgets_WishList_bSzoR",
+      Action: "broadcastwidgets_Action_2Wm1-",
       StoreSalePriceActionWidgetContainer:
         "broadcastwidgets_StoreSalePriceActionWidgetContainer_1uPIp",
       StoreSaleDiscountBox: "broadcastwidgets_StoreSaleDiscountBox_1Hb4z",
@@ -12127,8 +12132,6 @@
       CapsuleBottomBar: "broadcastwidgets_CapsuleBottomBar_1gdPZ",
       CapsuleImage: "broadcastwidgets_CapsuleImage_1Qyc8",
       CapsuleTitle: "broadcastwidgets_CapsuleTitle_2S9i1",
-      Action: "broadcastwidgets_Action_2Wm1-",
-      WishList: "broadcastwidgets_WishList_bSzoR",
       Banner: "broadcastwidgets_Banner_3b8-q",
       BundleContent: "broadcastwidgets_BundleContent_2tK4u",
       ShowContentsButton: "broadcastwidgets_ShowContentsButton_1ZnPD"
@@ -27224,7 +27227,10 @@
               i = e.subid;
             return I.createElement(
               "div",
-              { style: { display: "flex", flexWrap: "wrap" } },
+              {
+                style: { display: "flex", flexWrap: "wrap" },
+                className: ce.a.StoreActionWidgetContainer
+              },
               I.createElement(
                 "div",
                 { className: ce.a.StoreSalePriceActionWidgetContainer },

@@ -33,6 +33,8 @@ LocalizationReady("shared", "english", {
   Button_NotInterested: "Not Interested",
   Button_RateUp: "Rate Up",
   Button_ViewPage: "View Page",
+  Button_Accept: "Accept",
+  Button_Reject: "Reject",
 
   ToolTip_CopyLinkToClipboard: "Copy link to clipboard",
 
@@ -253,6 +255,7 @@ LocalizationReady("shared", "english", {
   EventEmail_Destination_Store: "Steam Store Page",
   EventEmail_Destination_Event: "Event Detail Page",
 
+  EventDashBoard_SummaryStats_Admin_Title: "(Visible only to admins)",
   EventDashBoard_SummaryStats_Title: "Total Unique Impressions and Views",
   EventDashBoard_SummaryStats_Desc:
     "(Beta) These are impressions and reads for your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",

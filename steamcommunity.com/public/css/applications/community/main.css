@@ -1014,6 +1014,16 @@ b {
 .partnereventshared_EventDashboardActions_2z_02 {
   /* top right section with actions */ }
 
+.partnereventshared_EventDashboardStatsCtn_3IptF {
+  background: #36404f;
+  color: #c5cdd8;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+  .partnereventshared_EventDashboardStatsCtn_3IptF P {
+    color: #c5cdd8;
+    margin-bottom: 0px;
+    margin-top: 4px; }
+
 .partnereventshared_EventDashboardAppCtn_2iPrK {
   margin-top: 40px;
   position: relative;
@@ -2077,6 +2087,10 @@ textarea:-webkit-autofill:focus,
 .broadcastwidgets_StoreSaleWidgetRight_1MzBO {
   padding: 4px; }
 
+.broadcastwidgets_StoreActionWidgetContainer_2MF6Y .broadcastwidgets_WishList_3mTSE,
+.broadcastwidgets_StoreActionWidgetContainer_2MF6Y .broadcastwidgets_Action_2Xpw9 {
+  margin-left: 5px; }
+
 .broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY {
   display: flex;
   flex-direction: row;
@@ -2153,7 +2167,7 @@ textarea:-webkit-autofill:focus,
 .broadcastwidgets_Action_2Xpw9 {
   min-width: 50%;
   flex-direction: row;
-  background-image: radial-gradient(circle at top left, #a3cf06 10%, #6a8704 80%);
+  background-image: radial-gradient(circle at top left, #85a805 10%, #6a8704 80%);
   transition: all 0.2s ease-out;
   padding: 9px;
   height: 38px;
@@ -4661,7 +4675,57 @@ iframe.steamTVLogin {
 .partnereventstats_StatsTitle_3YLaB {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  font-size: 11px;
+  line-height: 18px; }
+
+.partnereventstats_StatsCtnTitle_1LlRF {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border: 1px solid #323a49;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+  .partnereventstats_StatsCtnTitle_1LlRF h1 {
+    font-size: 18px;
+    color: white;
+    font-weight: 200; }
+
+.partnereventstats_StatsCtnTitle_1LlRF.partnereventstats_SmallStatsMode_2A2-p {
+  background-color: transparent;
+  padding: 0px;
+  border: none; }
+
+.partnereventstats_StatsCtn_hWCs4 {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border: 1px solid #424e61;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+  @media screen and (max-width: 500px) {
+    .partnereventstats_StatsCtn_hWCs4 {
+      flex-direction: column; } }
+  .partnereventstats_StatsCtn_hWCs4 .partnereventstats_StatsLeftSection_3L-uh {
+    margin-right: 20px;
+    width: 50%;
+    border-right: 1px solid #636e7e;
+    padding-right: 20px; }
+  .partnereventstats_StatsCtn_hWCs4 .partnereventstats_StatsRightSection_1yibD {
+    margin-right: 10px;
+    width: 50%; }
+
+.partnereventstats_StatsCtn_hWCs4.partnereventstats_SmallStatsMode_2A2-p {
+  flex-direction: column;
+  border: none;
+  padding: 0px; }
+  .partnereventstats_StatsCtn_hWCs4.partnereventstats_SmallStatsMode_2A2-p .partnereventstats_StatsLeftSection_3L-uh {
+    border-right: none;
+    width: 100%; }
+  .partnereventstats_StatsCtn_hWCs4.partnereventstats_SmallStatsMode_2A2-p .partnereventstats_StatsRightSection_1yibD {
+    width: 100%;
+    margin-top: 20px; }
 
 .localdateandtime_DateAndTime_2V6GL {
   display: flex;
@@ -4675,6 +4739,7 @@ iframe.steamTVLogin {
   display: flex; }
   .localdateandtime_ActiveEvent_rT7Ek .localdateandtime_ActiveEventCallOut_2pJft {
     background: #a3cf06;
+    font-size: 11px;
     color: #222222;
     padding: 0px 5px;
     border-radius: 2px;
@@ -4682,7 +4747,8 @@ iframe.steamTVLogin {
     position: relative;
     text-transform: uppercase;
     font-weight: 500;
-    margin-right: 4px; }
+    margin-right: 4px;
+    margin-top: 1px; }
 
 .localdateandtime_RightSideTitles_4LAnP {
   font-size: 12px;
@@ -5475,8 +5541,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   @media screen and (min-width: 1920px) {
     .partnereventdisplay_EventBody_3aht- {
       margin-top: -113px; } }
@@ -5695,7 +5760,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
 
 .partnereventdisplay_EventDetailsBody_A_A2B {
   padding-right: 24px;
-  border-right: 1px solid #464953;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 14px;
   line-height: 19px;
   min-height: 600px;
@@ -6737,12 +6802,26 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   flex-direction: column; }
 
 .partnereventdashboard_Section_16BNV.partnereventdashboard_Unpublished_2MUzv {
-  /* list of unpublished events */ }
+  /* list of unpublished events */
+  background: #343942;
+  background: linear-gradient(160deg, #464c59 20%, #343942 40%);
+  box-shadow: 0 0 10px #a1a7b5;
+  border-top: 1px solid #848d9f;
+  border-bottom: 1px solid #848d9f;
+  padding-bottom: 24px;
+  padding-top: 12px; }
 
 .partnereventtile_TileContainer_1eeyC {
   display: flex;
   flex-direction: row;
-  background-image: radial-gradient(circle at top left, #464d59 10%, #272930 90%);
+  background-color: #464d59;
+  /*
+	background-image: radial-gradient(
+		circle at top left,
+		#464d59 10%,
+		#272930 90%
+	);
+	*/
   height: 110px;
   margin-bottom: 10px;
   border-radius: 3px;
@@ -6752,11 +6831,37 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .partnereventtile_TileContainer_1eeyC:hover {
   background-image: radial-gradient(circle at top left, #464d59 0%, #272930 140%); }
 
+.partnereventtile_EventStateUpcoming_qfpNt {
+  background: rgba(0, 0, 0, 0.5); }
+
+.partnereventtile_EventStateActive_3F1Bj {
+  background: #a3cf06;
+  color: #222222;
+  padding: 0px 5px;
+  border-radius: 2px;
+  display: table;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 500; }
+
+.partnereventtile_EventStateRecent_2ge3p {
+  background: rgba(0, 0, 0, 0.5); }
+
+.partnereventtile_TileStats_GZhwe {
+  text-align: right;
+  font-size: 12px;
+  margin-right: 16px;
+  margin-top: 4px;
+  color: #b3c2cb; }
+  .partnereventtile_TileStats_GZhwe > span {
+    width: 70px;
+    display: inline-block; }
+
 .partnereventtile_Spacer_Lux3q {
   flex-grow: 1; }
 
 .partnereventtile_TileImageCtn_1vi2y {
-  background-image: url(https://steamcommunity-a.akamaihd.net/public/images//applications/community/fallbacktile.png);
+  background-color: #414752;
   width: 200px;
   height: 110px;
   overflow: hidden;
@@ -6788,9 +6893,12 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 
 .partnereventtile_TileTextEventType_2DMSl {
   text-align: right;
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 15px;
-  margin-right: 5px;
+  color: #dbcaa4;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-right: 16px;
   margin-top: 5px;
   margin-left: auto;
   white-space: nowrap; }
@@ -7911,7 +8019,10 @@ input.clanimagepicker_SearchInput_lwt4u {
   position: relative;
   display: flex;
   align-items: flex-end;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 44px, black calc( 100% - 44px), transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; }
 
 .spotlight_MajorEventImage_25fL1 {
   object-fit: contain;
@@ -7921,9 +8032,6 @@ input.clanimagepicker_SearchInput_lwt4u {
   max-width: 100%;
   cursor: pointer;
   position: relative;
-  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 44px, black calc( 100% - 44px), transparent 100%);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%;
   margin-left: auto;
   margin-right: auto;
   filter: saturate(0.9);
@@ -7945,7 +8053,8 @@ input.clanimagepicker_SearchInput_lwt4u {
   left: 0;
   right: 0;
   bottom: 0;
-  position: absolute; }
+  position: absolute;
+  z-index: 2; }
 
 .spotlight_MajorEventImageTemplate_lQR9_ {
   margin-top: 10px;
@@ -8002,26 +8111,43 @@ input.clanimagepicker_SearchInput_lwt4u {
     margin-top: auto;
     margin-bottom: auto; }
 
+.spotlight_MajorEventSpotlightBackground_1aheP {
+  position: absolute;
+  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, black 45%, black 80%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, black 45%, black 80%, rgba(0, 0, 0, 0) 100%);
+  filter: blur(30px);
+  transform: scaleY(2);
+  opacity: 0.7; }
+
 .spotlight_MajorEventContent_2nr7N {
   position: absolute;
-  top: 28.0%;
-  left: 44.5%;
-  right: 9.3%;
-  bottom: 14.0%;
-  max-width: 490px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 11%, rgba(0, 0, 0, 0.7) 45%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
   pointer-events: none;
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .spotlight_MajorEventContent_2nr7N .spotlight_MajorEventTextCtn_Ojdg2 {
+    position: absolute;
+    left: 42%;
+    padding-right: 5%;
+    max-width: 490px; }
 
 .spotlight_MajorEventTitle_nEBZT {
   font-size: 18px;
-  line-height: 20px;
+  line-height: 22px;
   font-weight: 300;
   color: #fff;
   overflow: hidden;
   margin-top: 4px; }
 
 .spotlight_MajorEventSummary_HPngO {
-  color: #c0c0c0;
+  color: #dbdbdb;
   font-size: 13px;
   padding-top: 10px;
   display: -webkit-box;

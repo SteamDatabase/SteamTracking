@@ -4141,6 +4141,16 @@ b {
 .partnereventshared_EventDashboardActions_2i1-P {
   /* top right section with actions */ }
 
+.partnereventshared_EventDashboardStatsCtn_iDETf {
+  background: #36404f;
+  color: #c5cdd8;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+  .partnereventshared_EventDashboardStatsCtn_iDETf P {
+    color: #c5cdd8;
+    margin-bottom: 0px;
+    margin-top: 4px; }
+
 .partnereventshared_EventDashboardAppCtn_iUAoi {
   margin-top: 40px;
   position: relative;
@@ -4588,6 +4598,10 @@ textarea:-webkit-autofill:focus,
 .broadcastwidgets_StoreSaleWidgetRight_2Bwn2 {
   padding: 4px; }
 
+.broadcastwidgets_StoreActionWidgetContainer_3nrCI .broadcastwidgets_WishList_bSzoR,
+.broadcastwidgets_StoreActionWidgetContainer_3nrCI .broadcastwidgets_Action_2Wm1- {
+  margin-left: 5px; }
+
 .broadcastwidgets_StoreSalePriceActionWidgetContainer_1uPIp {
   display: flex;
   flex-direction: row;
@@ -4664,7 +4678,7 @@ textarea:-webkit-autofill:focus,
 .broadcastwidgets_Action_2Wm1- {
   min-width: 50%;
   flex-direction: row;
-  background-image: radial-gradient(circle at top left, #a3cf06 10%, #6a8704 80%);
+  background-image: radial-gradient(circle at top left, #85a805 10%, #6a8704 80%);
   transition: all 0.2s ease-out;
   padding: 9px;
   height: 38px;
