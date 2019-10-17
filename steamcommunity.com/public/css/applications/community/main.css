@@ -6326,6 +6326,16 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   display: flex;
   flex-direction: column; }
 
+.partnersaledisplay_SaleBackground_2N8Se {
+  background-position: center top;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 768px) {
+    .partnersaledisplay_SaleBackground_2N8Se {
+      background-size: 100%; } }
+
+.partnersaledisplay_SaleSectionSubtext_17Fnl {
+  margin-bottom: 10px; }
+
 .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
   -webkit-transition: all .25s ease-in;
   -moz-transition: all .25s ease-in;
