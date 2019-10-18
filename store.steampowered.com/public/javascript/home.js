@@ -1,7 +1,13 @@
 
 function OnHomepageException(e)
 {
+	if ( typeof console != 'undefined' && console.log )
+	{
+		console.log( 'Exception rendering homepage:', e );
+		if ( e.stack )
+			console.log( e.stack );
 	}
+}
 
 
 GHomepage = {
@@ -1755,26 +1761,29 @@ GHomepage = {
 			}
 
 			var reviewer = GStoreItemData.GetAccountData( null, review.accountid );
-			var $AuthorBlock = $J( '<div>', { class: "author_block" } ).appendTo( $Review );
-			var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="%2$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid) );
-			$AuthorBlock.append( $AvatarCap );
+			if ( reviewer )
+			{
+				var $AuthorBlock = $J( '<div>', { class: "author_block" } ).appendTo( $Review );
+				var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="%2$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid) );
+				$AuthorBlock.append( $AvatarCap );
 
-			var $AuthorDetails = $J( '<div>' ).appendTo( $AuthorBlock );
-			var $AvatarName = $J('<div class="persona_name"><a href="%1$s" data-miniprofile="%3$s">%2$s</a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, reviewer.name ).replace(/\%3\$s/g, reviewer.accountid) );
-			$AuthorDetails.append( $AvatarName );
-			if ( review.playtime_at_review > 0 )
-			{
-				var strHours = 'Played %s hrs at review time'.replace( "%s", v_numberformat( review.playtime_at_review / 60, 1 ) );
-				$AuthorDetails.append( $J( '<div>', { class: "hours ellipsis", text: strHours } ) );
-			}
-			if ( review.votes_up > 0 )
-			{
-				var voteUpText = '1 person found this review helpful';
-				if ( review.votes_up > 1 )
+				var $AuthorDetails = $J( '<div>' ).appendTo( $AuthorBlock );
+				var $AvatarName = $J('<div class="persona_name"><a href="%1$s" data-miniprofile="%3$s">%2$s</a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, reviewer.name ).replace(/\%3\$s/g, reviewer.accountid) );
+				$AuthorDetails.append( $AvatarName );
+				if ( review.playtime_at_review > 0 )
 				{
-					voteUpText = '%2$s people found this review helpful'.replace( "%2$s", v_numberformat( review.votes_up ) );
+					var strHours = 'Played %s hrs at review time'.replace( "%s", v_numberformat( review.playtime_at_review / 60, 1 ) );
+					$AuthorDetails.append( $J( '<div>', { class: "hours ellipsis", text: strHours } ) );
 				}
-				$AuthorDetails.append( $J( '<div>', { class: "hours vote_info", text: voteUpText } ) );
+				if ( review.votes_up > 0 )
+				{
+					var voteUpText = '1 person found this review helpful';
+					if ( review.votes_up > 1 )
+					{
+						voteUpText = '%2$s people found this review helpful'.replace( "%2$s", v_numberformat( review.votes_up ) );
+					}
+					$AuthorDetails.append( $J( '<div>', { class: "hours vote_info", text: voteUpText } ) );
+				}
 			}
 		}
 
