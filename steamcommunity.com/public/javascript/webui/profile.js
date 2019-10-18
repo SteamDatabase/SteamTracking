@@ -790,6 +790,7 @@
         IN_MOBILE: !1,
         IN_TENFOOT: !1,
         PLATFORM: "",
+        SNR: "",
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
@@ -1245,7 +1246,7 @@
       s = n("i8i4"),
       l = n("8o0Y"),
       u = n("JtU4"),
-      B = n("/IDK"),
+      N = n("/IDK"),
       o = n("1VtQ"),
       i = n("e2SU"),
       m = n("WpBz"),
@@ -1482,7 +1483,7 @@
             this.PositionMenu();
           }),
           (e.prototype.OnBlur = function(e) {
-            (e.relatedTarget && B.e(e.currentTarget, e.relatedTarget)) ||
+            (e.relatedTarget && N.e(e.currentTarget, e.relatedTarget)) ||
               (e.relatedTarget &&
                 this.props.instance.BIsElementInMenuHierarchy(
                   e.relatedTarget
@@ -1513,7 +1514,7 @@
               this.state.ready &&
               this.props.instance.visible &&
               (this.props.popup ||
-                !B.e(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
+                !N.e(this.m_elMenu, this.m_elMenu.ownerDocument.activeElement))
             ) {
               var e = this.m_elMenu.querySelector(".ContextMenuAutoFocus");
               e && e.focus ? e.focus() : this.m_elMenu.focus();
@@ -1546,7 +1547,7 @@
               if (i) {
                 this.props.options.bScreenCoordinates ||
                   ((s += n.screenLeft), (l += n.screenTop)),
-                  (r = B.h(n, r));
+                  (r = N.h(n, r));
                 var p = n.screen,
                   h = 0,
                   d = 0;
@@ -1736,7 +1737,7 @@
                 height: 1
               };
             else {
-              var t = B.h(
+              var t = N.h(
                 this.m_menuProps.element.ownerDocument.defaultView,
                 this.m_menuProps.element.getBoundingClientRect()
               );
@@ -1777,7 +1778,7 @@
     }
     function k(e) {
       var t = [],
-        n = B.n(e),
+        n = N.n(e),
         r = n.getSelection(),
         o = r && 0 < r.rangeCount && 0 < r.toString().length,
         i = e.target,
@@ -3461,10 +3462,10 @@
         return I;
       }),
       n.d(t, "K", function() {
-        return B;
+        return N;
       }),
       n.d(t, "k", function() {
-        return N;
+        return B;
       }),
       n.d(t, "O", function() {
         return T;
@@ -4692,7 +4693,7 @@
         )
       );
     }
-    function B() {
+    function N() {
       return o.createElement(
         "svg",
         {
@@ -4730,7 +4731,7 @@
         })
       );
     }
-    function N() {
+    function B() {
       return o.createElement(
         "svg",
         {

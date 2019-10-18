@@ -4586,7 +4586,7 @@ textarea:-webkit-autofill:focus,
 
 .broadcastwidgets_StoreSaleWidgetShortDesc_column_1NZeo,
 .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2Jm21 {
-  max-height: 120px;
+  max-height: 100px;
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
@@ -4655,6 +4655,9 @@ textarea:-webkit-autofill:focus,
   .broadcastwidgets_CapsuleContainer_18Ts-:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
 
+.broadcastwidgets_Muted_1dCO9 {
+  opacity: 0.3; }
+
 .broadcastwidgets_CapsuleBottomBar_1gdPZ {
   background-color: black;
   display: flex;
@@ -4664,7 +4667,8 @@ textarea:-webkit-autofill:focus,
   box-sizing: border-box; }
 
 .broadcastwidgets_CapsuleImage_1Qyc8 {
-  width: 100%; }
+  max-width: 100%;
+  max-height: 100%; }
 
 .broadcastwidgets_CapsuleTitle_2S9i1 {
   white-space: nowrap;
@@ -4673,7 +4677,8 @@ textarea:-webkit-autofill:focus,
   line-height: 20px;
   font-size: 13px;
   margin-left: 3px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  max-width: 60vw; }
 
 .broadcastwidgets_Action_2Wm1- {
   min-width: 50%;
@@ -4757,6 +4762,8 @@ textarea:-webkit-autofill:focus,
   z-index: 5;
   text-transform: uppercase;
   background-color: #d3deea; }
+  .broadcastwidgets_Banner_3b8-q.broadcastwidgets_Blue_2_0oj {
+    background-color: #66c0f4; }
 
 .broadcastwidgets_BundleContent_2tK4u {
   margin-left: 40px;

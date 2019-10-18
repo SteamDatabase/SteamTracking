@@ -133,6 +133,7 @@
         IN_MOBILE: !1,
         IN_TENFOOT: !1,
         PLATFORM: "",
+        SNR: "",
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",

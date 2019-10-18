@@ -139,6 +139,8 @@ LocalizationReady("shared", "english", {
   EventDisplay_CallToAction_LearnMore: "Learn More",
   EventDisplay_CallToAction_InLibrary: "In Library",
   EventDisplay_CallToAction_PlayNow: "Play Now",
+  EventDisplay_CallToAction_ComingSoon: "Coming Soon",
+  EventDisplay_CallToAction_FreeToPlay: "Free To Play",
 
   EventDisplay_Events: "Admin Dashboard",
   EventDisplay_SeeOldVersion: "View Current Customer Version",
@@ -838,12 +840,20 @@ LocalizationReady("shared", "english", {
   sale_three_section_show_chat: "Show Chat",
   btn_live_streams_all: "View all",
 
+  Broadcast_default_title_dev: "Now broadcasting: Watch the developer play",
+  Broadcast_default_title_community:
+    "Now broadcasting: Watch the community play",
+  Broadcast_default_title_comp:
+    "Now broadcasting: Watch this competitive match",
+  Broadcast_default_title_speed: "Now broadcasting: Watch this speedrun",
+
   Sale_BundleSave: "Includes %1$s items.",
   Sale_PackageSave: "Includes %1$s items.",
   Sale_ShowContents: "Show contents",
   Sale_OnWishlist: "On Wishlist",
   Sale_InLibrary: "In Library",
-  Sale_HiddenItems: "%1$s item(s) are hidden due to your preferences",
+  Sale_HiddenItems: "%1$s item(s) are hidden due to %2$s",
+  Sale_StorePreferences: "your store preferences",
   Sale_default_label: "(no title)",
   Sale_default_label_OnSale: "On Sale",
   Sale_default_label_TopSellers: "Top Sellers",

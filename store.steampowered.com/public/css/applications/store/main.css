@@ -1593,7 +1593,7 @@ body.modals_BodyNoScroll_32ZiC {
 
 .broadcastwidgets_StoreSaleWidgetShortDesc_column_cZoip,
 .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
-  max-height: 120px;
+  max-height: 100px;
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
@@ -1662,6 +1662,9 @@ body.modals_BodyNoScroll_32ZiC {
   .broadcastwidgets_CapsuleContainer_1gET8:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
 
+.broadcastwidgets_Muted_2ksIf {
+  opacity: 0.3; }
+
 .broadcastwidgets_CapsuleBottomBar_2ygf4 {
   background-color: black;
   display: flex;
@@ -1671,7 +1674,8 @@ body.modals_BodyNoScroll_32ZiC {
   box-sizing: border-box; }
 
 .broadcastwidgets_CapsuleImage_XI8fY {
-  width: 100%; }
+  max-width: 100%;
+  max-height: 100%; }
 
 .broadcastwidgets_CapsuleTitle_2eIiB {
   white-space: nowrap;
@@ -1680,7 +1684,8 @@ body.modals_BodyNoScroll_32ZiC {
   line-height: 20px;
   font-size: 13px;
   margin-left: 3px;
-  margin-right: 5px; }
+  margin-right: 5px;
+  max-width: 60vw; }
 
 .broadcastwidgets_Action_2Xpw9 {
   min-width: 50%;
@@ -1764,6 +1769,8 @@ body.modals_BodyNoScroll_32ZiC {
   z-index: 5;
   text-transform: uppercase;
   background-color: #d3deea; }
+  .broadcastwidgets_Banner_3ikQa.broadcastwidgets_Blue_3hfTG {
+    background-color: #66c0f4; }
 
 .broadcastwidgets_BundleContent_TGX3I {
   margin-left: 40px;
@@ -5804,7 +5811,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
 .partnereventdisplay_GameActions_bGROT {
   display: flex;
   flex-direction: row;
-  height: 34px;
+  max-height: 34px;
   background: rgba(0, 0, 0, 0.5);
   margin-bottom: 24px; }
 

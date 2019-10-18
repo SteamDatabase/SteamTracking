@@ -5566,6 +5566,7 @@
         IN_MOBILE: !1,
         IN_TENFOOT: !1,
         PLATFORM: "",
+        SNR: "",
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
@@ -12129,10 +12130,12 @@
       StoreSalePriceBox: "broadcastwidgets_StoreSalePriceBox_3fccA",
       StoreSalePriceButton: "broadcastwidgets_StoreSalePriceButton_2rtnv",
       CapsuleContainer: "broadcastwidgets_CapsuleContainer_18Ts-",
+      Muted: "broadcastwidgets_Muted_1dCO9",
       CapsuleBottomBar: "broadcastwidgets_CapsuleBottomBar_1gdPZ",
       CapsuleImage: "broadcastwidgets_CapsuleImage_1Qyc8",
       CapsuleTitle: "broadcastwidgets_CapsuleTitle_2S9i1",
       Banner: "broadcastwidgets_Banner_3b8-q",
+      Blue: "broadcastwidgets_Blue_2_0oj",
       BundleContent: "broadcastwidgets_BundleContent_2tK4u",
       ShowContentsButton: "broadcastwidgets_ShowContentsButton_1ZnPD"
     };
@@ -27101,8 +27104,13 @@
       pe = n.n(le),
       ue = n("S+nL"),
       me = n.n(ue),
-      de = n("0N1H"),
-      he = (function(n) {
+      de = n("0N1H");
+    function he(e) {
+      return p.b.SNR && 0 < p.b.SNR.length
+        ? e + (0 <= e.indexOf("?") ? "&" : "?") + "snr=" + p.b.SNR
+        : e;
+    }
+    var fe = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { appInfo: new C(e.appid) }), t;
@@ -27180,7 +27188,7 @@
                           { className: a },
                           Object(oe.c)(t.short_desc)
                         ),
-                      I.createElement(fe, {
+                      I.createElement(_e, {
                         appid: t.appid,
                         price: t.price,
                         discount_percent: t.discount_percent,
@@ -27196,9 +27204,10 @@
                           "a",
                           {
                             className: ce.a.StoreSaleWidgetExtraLink,
-                            href:
+                            href: he(
                               (p.b.IN_CLIENT ? "steam://openurl/" : "") +
-                              this.props.extraLink.url,
+                                this.props.extraLink.url
+                            ),
                             target: p.b.IN_CLIENT ? void 0 : "_blank"
                           },
                           this.props.extraLink.name
@@ -27213,7 +27222,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      fe = (function(e) {
+      _e = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -27260,20 +27269,15 @@
                 I.createElement(
                   "div",
                   null,
-                  I.createElement(be, { appid: this.props.appid })
+                  I.createElement(ve, { appid: this.props.appid })
                 ),
-              !n &&
-                I.createElement(
-                  "div",
-                  null,
-                  I.createElement(ge, { appid: this.props.appid })
-                )
+              I.createElement(be, { appid: this.props.appid })
             );
           }),
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      _e = (I.Component,
+      ge = (I.Component,
       (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
@@ -27384,7 +27388,7 @@
                     I.createElement(
                       "div",
                       { style: { width: "150px" } },
-                      I.createElement(be, { packageid: this.props.packageid })
+                      I.createElement(ve, { packageid: this.props.packageid })
                     )
                   )
                 )
@@ -27409,7 +27413,7 @@
                   return I.createElement(
                     "div",
                     { key: e, className: ce.a.BundleContent },
-                    I.createElement(he, { appid: e, bHideDescription: !0 })
+                    I.createElement(fe, { appid: e, bHideDescription: !0 })
                   );
                 })
               )
@@ -27419,7 +27423,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component)),
-      ge = (I.Component,
+      be = (I.Component,
       I.Component,
       I.Component,
       I.Component,
@@ -27527,7 +27531,10 @@
             });
           }),
           (e.prototype.render = function() {
-            var e = j.BIsGameWishlisted(this.props.appid);
+            var e = O.GetStoreCapsuleInfo(this.props.appid).GetAppStoreData();
+            if (j.BOwnsApp(this.props.appid) || (!e.coming_soon && e.is_free))
+              return null;
+            var t = j.BIsGameWishlisted(this.props.appid);
             return I.createElement(
               "div",
               {
@@ -27542,7 +27549,7 @@
                   I.createElement(Y.a, { size: "small" })
               ),
               !this.state.bUpdatingWishList &&
-                e &&
+                t &&
                 I.createElement("img", { className: P.a.IconImage, src: re.a }),
               I.createElement(
                 "span",
@@ -27552,7 +27559,7 @@
                     ? "#Updating"
                     : this.state.bLoadingUserData
                     ? "#Loading"
-                    : e
+                    : t
                     ? "#Wishlisted"
                     : "#AddToWishlist"
                 )
@@ -27563,7 +27570,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component)),
-      be = (function(e) {
+      ve = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -27607,10 +27614,12 @@
             if (this.props.bundleid || this.props.packageid)
               e = Object(T.c)("#Store_AddToCart");
             else {
-              var t = O.GetStoreCapsuleInfo(this.props.appid).GetAppStoreData();
+              var t = O.GetStoreCapsuleInfo(this.props.appid),
+                n = t.GetAppStoreData();
+              if (t.GetAppStoreData().coming_soon) return null;
               e = this.BOwnsApp()
                 ? Object(T.c)("#EventDisplay_CallToAction_PlayNow")
-                : t.button_action;
+                : n.button_action;
             }
             return I.createElement(
               "div",
@@ -27622,7 +27631,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      ve = (function(t) {
+      Se = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_schUpdate = new r.b()), (e.m_bSetupComplete = !1), e;
@@ -27684,16 +27693,16 @@
           e
         );
       })(I.Component);
-    function Se() {
+    function ye() {
       return I.createElement(
         "div",
         { className: "STV_ReplayBanner" },
         Object(T.c)("#DASHPlayerControls_IsReplay")
       );
     }
-    var ye,
-      Ce,
-      Oe = (function(e) {
+    var Ce,
+      Oe,
+      Ie = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -27730,7 +27739,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      Ie = (function(e) {
+      Ee = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -27758,18 +27767,18 @@
           t
         );
       })(I.Component),
-      Ee = n("KbL7"),
-      we = n.n(Ee);
-    ((Ce = ye || (ye = {})).topleft = "topleft"),
-      (Ce.top = "top"),
-      (Ce.topright = "topright"),
-      (Ce.left = "left"),
-      (Ce.middle = "middle"),
-      (Ce.right = "right"),
-      (Ce.bottomleft = "bottomleft"),
-      (Ce.bottom = "bottom"),
-      (Ce.bottomright = "bottomright");
-    var Me = (function(n) {
+      we = n("KbL7"),
+      Me = n.n(we);
+    ((Oe = Ce || (Ce = {})).topleft = "topleft"),
+      (Oe.top = "top"),
+      (Oe.topright = "topright"),
+      (Oe.left = "left"),
+      (Oe.middle = "middle"),
+      (Oe.right = "right"),
+      (Oe.bottomleft = "bottomleft"),
+      (Oe.bottom = "bottom"),
+      (Oe.bottomright = "bottomright");
+    var De = (function(n) {
       function e(e) {
         var t = n.call(this, e) || this;
         return (
@@ -27838,7 +27847,7 @@
         (e.prototype.OnMouseMove = function(e, t) {
           if (void 0 !== this.state.EdgeDown) {
             switch ((e.shiftKey && this.m_fnMouseUp(), t)) {
-              case ye.left:
+              case Ce.left:
                 var n = {
                   curLeftPosPct: this.CalcLeftEdge(e.clientX),
                   curBottomPosPct: this.state.curBottomPosPct
@@ -27854,7 +27863,7 @@
                   0 < n.curBottomPosPct &&
                   this.setState(n);
                 break;
-              case ye.right:
+              case Ce.right:
                 n = {
                   curRightPosPct: this.CalcRightEdge(e.clientX),
                   curBottomPosPct: this.state.curBottomPosPct
@@ -27870,7 +27879,7 @@
                   0 < n.curBottomPosPct &&
                   this.setState(n);
                 break;
-              case ye.top:
+              case Ce.top:
                 n = {
                   curTopPosPct: this.CalcTopEdge(e.clientY),
                   curRightPosPct: this.state.curRightPosPct
@@ -27884,7 +27893,7 @@
                 }
                 0 < n.curTopPosPct && 0 < n.curRightPosPct && this.setState(n);
                 break;
-              case ye.bottom:
+              case Ce.bottom:
                 n = {
                   curBottomPosPct: this.CalcBottomEdge(e.clientY),
                   curRightPosPct: this.state.curRightPosPct
@@ -27900,7 +27909,7 @@
                   0 < n.curRightPosPct &&
                   this.setState(n);
                 break;
-              case ye.topleft:
+              case Ce.topleft:
                 n = {
                   curTopPosPct: this.CalcBottomEdge(e.clientY),
                   curLeftPosPct: this.CalcLeftEdge(e.clientX)
@@ -27914,7 +27923,7 @@
                 }
                 0 < n.curTopPosPct && 0 < n.curLeftPosPct && this.setState(n);
                 break;
-              case ye.topright:
+              case Ce.topright:
                 n = {
                   curTopPosPct: this.CalcTopEdge(e.clientY),
                   curRightPosPct: this.CalcRightEdge(e.clientX)
@@ -27928,7 +27937,7 @@
                 }
                 0 < n.curTopPosPct && 0 < n.curRightPosPct && this.setState(n);
                 break;
-              case ye.bottomleft:
+              case Ce.bottomleft:
                 n = {
                   curLeftPosPct: this.CalcLeftEdge(e.clientX),
                   curBottomPosPct: this.CalcBottomEdge(e.clientY)
@@ -27944,7 +27953,7 @@
                   0 < n.curBottomPosPct &&
                   this.setState(n);
                 break;
-              case ye.bottomright:
+              case Ce.bottomright:
                 n = {
                   curRightPosPct: this.CalcRightEdge(e.clientX),
                   curBottomPosPct: this.CalcBottomEdge(e.clientY)
@@ -27960,7 +27969,7 @@
                   0 < n.curBottomPosPct &&
                   this.setState(n);
                 break;
-              case ye.middle:
+              case Ce.middle:
                 var a = Object(w.a)(
                     this.CalcLeftEdge(e.clientX),
                     0,
@@ -28084,10 +28093,10 @@
               right: this.state.curRightPosPct + "%",
               bottom: this.state.curBottomPosPct + "%"
             },
-            n = we.a.LinkRegionDragBox;
+            n = Me.a.LinkRegionDragBox;
           return (
             null !== this.state.EdgeDown &&
-              (n += " " + we.a.EdgeDown + " " + we.a[this.state.EdgeDown]),
+              (n += " " + Me.a.EdgeDown + " " + Me.a[this.state.EdgeDown]),
             I.createElement(
               "div",
               {
@@ -28098,40 +28107,40 @@
               },
               I.createElement(
                 "div",
-                { className: we.a.LinkRegionGridBox },
+                { className: Me.a.LinkRegionGridBox },
                 I.createElement("div", {
-                  className: we.a.LinkRegionEdge + " " + we.a.TopLeft,
+                  className: Me.a.LinkRegionEdge + " " + Me.a.TopLeft,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, ye.topleft);
+                    t.OnMouseDown(e, Ce.topleft);
                   },
                   draggable: !1
                 }),
                 I.createElement("div", {
-                  className: we.a.LinkRegionEdge + " " + we.a.Top,
+                  className: Me.a.LinkRegionEdge + " " + Me.a.Top,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, ye.top);
+                    t.OnMouseDown(e, Ce.top);
                   }
                 }),
                 I.createElement("div", {
-                  className: we.a.LinkRegionEdge + " " + we.a.TopRight,
+                  className: Me.a.LinkRegionEdge + " " + Me.a.TopRight,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, ye.topright);
+                    t.OnMouseDown(e, Ce.topright);
                   },
                   draggable: !1
                 }),
                 I.createElement("div", {
-                  className: we.a.LinkRegionEdge + " " + we.a.Left,
+                  className: Me.a.LinkRegionEdge + " " + Me.a.Left,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, ye.left);
+                    t.OnMouseDown(e, Ce.left);
                   },
                   draggable: !1
                 }),
                 I.createElement(
                   "div",
                   {
-                    className: we.a.LinkRegionEdge + " " + we.a.Middle,
+                    className: Me.a.LinkRegionEdge + " " + Me.a.Middle,
                     onMouseDown: function(e) {
-                      t.OnMouseDown(e, ye.middle);
+                      t.OnMouseDown(e, Ce.middle);
                     },
                     draggable: !1
                   },
@@ -28139,7 +28148,7 @@
                     I.createElement(
                       "div",
                       {
-                        className: we.a.LinkRegionDelete,
+                        className: Me.a.LinkRegionDelete,
                         onClick: this.HandleDelete
                       },
                       I.createElement(E.pb, null)
@@ -28148,44 +28157,44 @@
                     I.createElement(
                       "div",
                       {
-                        className: we.a.LinkRegionSettings,
+                        className: Me.a.LinkRegionSettings,
                         onClick: this.OnEditLink
                       },
                       I.createElement(E.L, null)
                     ),
                   I.createElement(
                     "div",
-                    { className: we.a.LinkText },
+                    { className: Me.a.LinkText },
                     " ",
                     this.m_strDescription,
                     " "
                   )
                 ),
                 I.createElement("div", {
-                  className: we.a.LinkRegionEdge + " " + we.a.Right,
+                  className: Me.a.LinkRegionEdge + " " + Me.a.Right,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, ye.right);
+                    t.OnMouseDown(e, Ce.right);
                   },
                   draggable: !1
                 }),
                 I.createElement("div", {
-                  className: we.a.LinkRegionEdge + " " + we.a.BottomLeft,
+                  className: Me.a.LinkRegionEdge + " " + Me.a.BottomLeft,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, ye.bottomleft);
+                    t.OnMouseDown(e, Ce.bottomleft);
                   },
                   draggable: !1
                 }),
                 I.createElement("div", {
-                  className: we.a.LinkRegionEdge + " " + we.a.Bottom,
+                  className: Me.a.LinkRegionEdge + " " + Me.a.Bottom,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, ye.bottom);
+                    t.OnMouseDown(e, Ce.bottom);
                   },
                   draggable: !1
                 }),
                 I.createElement("div", {
-                  className: we.a.LinkRegionEdge + " " + we.a.BottomRight,
+                  className: Me.a.LinkRegionEdge + " " + Me.a.BottomRight,
                   onMouseDown: function(e) {
-                    t.OnMouseDown(e, ye.bottomright);
+                    t.OnMouseDown(e, Ce.bottomright);
                   },
                   draggable: !1
                 })
@@ -28193,9 +28202,9 @@
               this.state.bEditingLink &&
                 I.createElement(
                   "div",
-                  { className: we.a.LinkRegionInfo },
+                  { className: Me.a.LinkRegionInfo },
                   I.createElement(k.o, {
-                    className: we.a.LinkRegionInput,
+                    className: Me.a.LinkRegionInput,
                     type: "text",
                     name: "link_url",
                     value: this.state.text_link_url,
@@ -28205,7 +28214,7 @@
                     mustBeURL: !0
                   }),
                   I.createElement(k.o, {
-                    className: we.a.LinkRegionInput,
+                    className: Me.a.LinkRegionInput,
                     type: "text",
                     name: "link_description",
                     value: this.state.text_link_description,
@@ -28217,7 +28226,7 @@
                   }),
                   I.createElement(
                     "div",
-                    { className: we.a.LinkRegionButtonContainer },
+                    { className: Me.a.LinkRegionButtonContainer },
                     I.createElement(
                       k.d,
                       {
@@ -28256,12 +28265,12 @@
       );
     })(I.Component);
     n.d(t, "b", function() {
-      return De;
+      return Te;
     }),
       n.d(t, "a", function() {
-        return Ue;
+        return He;
       });
-    var De = (function(n) {
+    var Te = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -28549,9 +28558,9 @@
                 onContextMenu: this.OnContextMenu,
                 onMouseDown: this.OnMouseDown
               },
-              o && I.createElement(Se, null),
+              o && I.createElement(ye, null),
               this.props.showVideoBackgroundBlur &&
-                I.createElement(ve, {
+                I.createElement(Se, {
                   className: "videoBlur",
                   elementRef: this.m_elVideo,
                   updateRate: 33,
@@ -28569,7 +28578,7 @@
                 controls: !1
               }),
               this.props.linkRegions
-                ? I.createElement(We, {
+                ? I.createElement(ze, {
                     linkRegions: this.props.linkRegions,
                     editMode: this.props.editMode,
                     onSaveLinkRegions: this.props.onSaveLinkRegions
@@ -28577,21 +28586,21 @@
                 : null,
               this.props.linkElement,
               l &&
-                I.createElement(Te, {
+                I.createElement(Ge, {
                   video: e,
                   actions: c,
                   onOpenLinkInNewWindow: this.props.onOpenLinkInNewWindow,
                   onShowStats: this.ToggleStatsView,
                   bIncludeClipEditor: this.props.bIncludeClipEditor
                 }),
-              p && I.createElement(Ge, { onClick: this.props.onRequestClose }),
+              p && I.createElement(Re, { onClick: this.props.onRequestClose }),
               n &&
                 I.createElement(u, {
                   stats: e.GetDASHPlayerStats(),
                   closeStats: this.CloseStats
                 }),
-              I.createElement(Oe, { video: e }),
-              a && I.createElement(Ie, { video: e })
+              I.createElement(Ie, { video: e }),
+              a && I.createElement(Ee, { video: e })
             );
           }),
           Object(d.c)([i.a], e.prototype, "BindBroadcastPlayerRef", null),
@@ -28612,7 +28621,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      Te = (function(e) {
+      Ge = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28625,7 +28634,7 @@
             return I.createElement(
               "div",
               { className: "videoControls" },
-              I.createElement(Ue, {
+              I.createElement(He, {
                 steamID: this.props.video.GetBroadcastSteamID(),
                 bHideThumbnail: !0,
                 bVerticalBroadcastChat: !0,
@@ -28634,7 +28643,7 @@
               I.createElement(
                 "div",
                 { className: "videoControlsBottom" + (t ? "" : " noSegments") },
-                I.createElement(Ve, {
+                I.createElement(Ue, {
                   video: e,
                   bIncludeClipEditor: this.props.bIncludeClipEditor
                 }),
@@ -28644,9 +28653,9 @@
                   I.createElement("div", {
                     className: "videoControlsButtons LeftSpacer"
                   }),
-                  I.createElement(Re, { video: e }),
                   I.createElement(je, { video: e }),
-                  I.createElement(Ne, {
+                  I.createElement(Le, { video: e }),
+                  I.createElement(Ae, {
                     video: e,
                     actions: this.props.actions,
                     onShowStats: this.props.onShowStats
@@ -28658,7 +28667,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      Ge = (function(e) {
+      Re = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28679,7 +28688,7 @@
           t
         );
       })(I.PureComponent),
-      Re = (function(e) {
+      je = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28697,7 +28706,7 @@
             return I.createElement(
               "div",
               { className: "videoControlsButtons PlayControls" },
-              I.createElement(Pe, { video: e }),
+              I.createElement(ke, { video: e }),
               t &&
                 I.createElement(
                   "div",
@@ -28714,7 +28723,7 @@
                   }),
                   I.createElement("div", { className: "jumpAheadValue" }, 15)
                 ),
-              I.createElement(Le, { video: e }),
+              I.createElement(Pe, { video: e }),
               t &&
                 I.createElement(
                   "div",
@@ -28730,7 +28739,7 @@
                   }),
                   I.createElement("div", { className: "jumpAheadValue" }, 15)
                 ),
-              t && I.createElement(ke, { video: e })
+              t && I.createElement(Ne, { video: e })
             );
           }),
           Object(d.c)([i.a], t.prototype, "OnJumpBackward", null),
@@ -28738,7 +28747,7 @@
           t
         );
       })(I.Component),
-      je = (function(e) {
+      Le = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28779,7 +28788,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      Le = (function(e) {
+      Pe = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28803,7 +28812,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      Pe = (function(e) {
+      ke = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28855,7 +28864,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      ke = (function(e) {
+      Ne = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -28902,7 +28911,7 @@
           (t = Object(d.c)([o.a], t))
         );
       })(I.Component),
-      Ne = (function(n) {
+      Ae = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -29080,7 +29089,7 @@
                 },
                 I.createElement(E.X, null)
               ),
-              I.createElement(Ae, { video: a }),
+              I.createElement(Be, { video: a }),
               s &&
                 s.map(function(e) {
                   return I.createElement(
@@ -29140,7 +29149,7 @@
           e
         );
       })(I.Component),
-      Ae = (function(t) {
+      Be = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
@@ -29215,7 +29224,7 @@
                     { className: o, onClick: this.ToggleMute },
                     I.createElement(E.nb, null)
                   ),
-                  I.createElement(Be, { video: e, onDrag: this.OnChildDrag })
+                  I.createElement(Fe, { video: e, onDrag: this.OnChildDrag })
                 )
               )
             );
@@ -29228,7 +29237,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      Be = (function(t) {
+      Fe = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_elSlider = null), (e.m_nVolumeStartOfDrag = 0), e;
@@ -29311,7 +29320,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      Fe = function(e) {
+      xe = function(e) {
         return I.createElement(
           "div",
           {
@@ -29331,7 +29340,7 @@
           )
         );
       };
-    function xe(e) {
+    function Ve(e) {
       var t = e.startPos,
         n = e.endPos,
         o = "",
@@ -29364,7 +29373,7 @@
         )
       );
     }
-    var Ve = (function(n) {
+    var Ue = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -29529,7 +29538,7 @@
               n < 0 ||
                 100 < n ||
                 v.push(
-                  I.createElement(Fe, {
+                  I.createElement(xe, {
                     key: t,
                     pos: n,
                     label: e.strTemplateName,
@@ -29545,7 +29554,7 @@
                 var o = r.GetPercentOffsetFromTime(t.nTimeEnd, M.c.Timeline);
                 o < 0 ||
                   S.push(
-                    I.createElement(xe, {
+                    I.createElement(Ve, {
                       key: e,
                       startPos: n,
                       endPos: o,
@@ -29565,7 +29574,7 @@
               C = r.GetPercentOffsetFromTime(r.m_editorEndTime, M.c.Timeline),
               O = this.props.bIncludeClipEditor
                 ? [
-                    I.createElement(Fe, {
+                    I.createElement(xe, {
                       key: "start",
                       pos: y,
                       label: Object(T.c)("#DASHPlayerControls_Start"),
@@ -29575,7 +29584,7 @@
                         return i.OnMouseDown(e, "start");
                       }
                     }),
-                    I.createElement(Fe, {
+                    I.createElement(xe, {
                       key: "end",
                       pos: C,
                       label: Object(T.c)("#DASHPlayerControls_End"),
@@ -29673,7 +29682,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      Ue = (function(t) {
+      He = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.state = { info: null }), e;
@@ -29694,7 +29703,7 @@
           (e.prototype.RenderStreamSwitcher = function() {
             var e = this.props.steamID;
             return "public" != p.b.WEB_UNIVERSE || f.b.stream[e]
-              ? I.createElement(He, {
+              ? I.createElement(We, {
                   value: e,
                   options: f.b.stream,
                   onChange: this.props.onLocalStreamChange
@@ -29776,7 +29785,7 @@
                   )
               ),
               i &&
-                I.createElement(he, {
+                I.createElement(fe, {
                   appid:
                     f.b.bValid && f.b.stream && f.b.stream[e.m_steamIDBroadcast]
                       ? f.b.appID
@@ -29787,7 +29796,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      He = (function(e) {
+      We = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -29832,7 +29841,7 @@
           t
         );
       })(I.Component),
-      We = (function(n) {
+      ze = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { sizableRegion: [] }), t;
@@ -29993,7 +30002,7 @@
                   : null,
                 this.props.editMode &&
                   this.state.sizableRegion.map(function(e, t) {
-                    return I.createElement(Me, {
+                    return I.createElement(De, {
                       key: 100 * t + e.xPosPct,
                       index: t,
                       deleteFn: n.DeleteRegion,
