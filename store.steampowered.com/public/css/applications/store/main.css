@@ -1674,8 +1674,7 @@ body.modals_BodyNoScroll_32ZiC {
   box-sizing: border-box; }
 
 .broadcastwidgets_CapsuleImage_XI8fY {
-  max-width: 100%;
-  max-height: 100%; }
+  width: 100%; }
 
 .broadcastwidgets_CapsuleTitle_2eIiB {
   white-space: nowrap;
