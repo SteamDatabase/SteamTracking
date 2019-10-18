@@ -16,7 +16,10 @@ GHomepage = {
 	rgRecommendedGames: [],
 	rgFriendRecommendations: [],	// { appid, accountid_friends, time_most_recent_recommendation }
 	rgRecommendedAppsByCreators: [], // { appid, creatorid }
-    rgRecommendedBySteamLabsApps: [],
+	rgRecommendedBySteamLabsApps: [],
+
+	rgCommunityRecommendations: [],
+	rgCommunityRecommendationsByAppID: {},
 
 	rgCuratedAppsData: [],
 	rgCreatorFollowedAppData: [],
@@ -172,6 +175,7 @@ GHomepage = {
             GHomepage.rgFriendRecommendations = v_shuffle(rgParams.rgFriendRecommendations) || [];
             GHomepage.rgRecommendedAppsByCreators = v_shuffle(rgParams.rgRecommendedAppsByCreators) || [];
             GHomepage.rgRecommendedBySteamLabsApps = rgParams.rgRecommendedBySteamLabsApps || [];
+			GHomepage.rgCommunityRecommendations = rgParams.rgCommunityRecommendations || [];
         } catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;
@@ -334,6 +338,11 @@ GHomepage = {
         try {
 		    GHomepage.RenderRecommendedBySteamLabsApps();
         } catch ( e ) { OnHomepageException(e); }
+
+		// Community Recommendations - Steam Labs
+		try {
+			GHomepage.RenderCommunityRecommendations();
+		} catch ( e ) { OnHomepageException(e); }
 
 		// Sidebar
 		// Recommended tags
@@ -1137,7 +1146,6 @@ GHomepage = {
 
         if ( rgCapsules.length < 4 )
         {
-            $RecommendedBySteamLabs.hide();
             return;
         }
 
@@ -1148,7 +1156,44 @@ GHomepage = {
                 return GHomepage.BuildHomePageGenericCap( strFeature, nAppId, null, null, rgOptions, nDepth );
             }, 'recommended_by_steam_labs', 4
         );
+
+		$RecommendedBySteamLabs.show();
     },
+
+	RenderCommunityRecommendations: function()
+	{
+		var $Ctn = $J('.community_recommendations_by_steam_labs_ctn');
+		if ( $Ctn.length == 0 )
+		{
+			return;
+		}
+
+		var rgCapsules = GHomepage.FilterItemsForDisplay(
+			GHomepage.rgCommunityRecommendations, 'home', 4, 12, { games_already_in_library: false, dlc: false, localized: true, not_wishlisted: false }
+		);
+
+		if ( rgCapsules.length < 4 )
+		{
+			return;
+		}
+
+		for ( var i = 0; i < rgCapsules.length; ++i )
+		{
+			var item =  rgCapsules[i];
+			GHomepage.rgCommunityRecommendationsByAppID[item.appid] = item.reviews;
+		}
+
+		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $Ctn,
+			function( oItem, strFeature, rgOptions, nDepth )
+			{
+				var nAppId = oItem.appid;
+				var $Item = GHomepage.BuildCommunityRecommendationCap( strFeature, oItem );
+				return $Item;
+			}, 'community_recommendations_by_steam_labs', 1
+		);
+
+		$Ctn.show();
+	},
 	
 	RenderTopVRApps: function()
 	{
@@ -1570,6 +1615,170 @@ GHomepage = {
 		}
 
 		return $CapCtn;
+	},
+
+	SelectCommunityRecommendationFromIndex: function( appContainer, reviewIdx )
+	{
+		var relatedReview = $J( "#Review" + appContainer.data( 'recommendationid_' + reviewIdx ) );
+		relatedReview.siblings().removeClass( "focus" );
+		relatedReview.addClass( "focus" );
+
+		appContainer.data( "currentreviewidx", reviewIdx );
+	},
+
+	BuildCommunityRecommendationCap: function( strFeatureContext, oItem )
+	{
+		var unAppID = oItem.appid;
+		var params = { 'class' : 'community_recommendation_capsule' };
+		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, params );
+
+		var rgReviews = GHomepage.rgCommunityRecommendationsByAppID[ unAppID ] || [];
+
+		if ( !rgItemData || !rgReviews || rgReviews.length == 0 )
+			return null;
+
+		let $Item = $J( '<div>', { 'class' : 'community_recommendation_app' } );
+		GStoreItemData.BindHoverEventsForItem( $Item, oItem );
+
+		var $ItemLink = $J('<a/>', params );
+		$Item.append( $ItemLink );
+
+		// app image
+		// app image anchor
+		var $ImageCapsule = $J ( '<div/>' );
+		$ImageCapsule.addClass('capsule');
+
+		var $Image = $J('<img/>', { src: rgItemData.main_capsule ? rgItemData.main_capsule : rgItemData.header } );
+		if ( !rgItemData.main_capsule )
+		{
+			$Image.css({'height': '288px' });
+		}
+		$Image.bind('error', function(){
+			$Image.attr('src', rgItemData.header  );
+			$Image.css({'height': '288px' });
+		});
+		$ImageCapsule.append( $Image );
+		$ImageCapsule.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_large main_cap_discount') : '&nbsp;' ) );
+
+		$ItemLink.append( $ImageCapsule );
+
+		// micro trailer
+		if ( rgItemData.microtrailer )
+		{
+			let $Video = $J( '<video class="microtrailer_video" looped muted>' ).appendTo( $ItemLink );
+			$Video.on( "canplay", function() {
+				$Item.addClass( "has_microtrailer" );
+			} );
+			$Video.on( "playing", function() {
+				$Item.addClass( "has_microtrailer" );
+			} );
+
+			$Item.hover(
+				function () {
+					if ( !$Video.hasClass( "added_source" ) )
+					{
+						$Video.addClass( "added_source" );
+						$Video.append( $J( "<source>", { src: rgItemData.microtrailer, type: "video/webm" } ) );
+					}
+
+					playPromise = $Video[0].play();
+					if ( playPromise )
+					{
+						playPromise.catch( function( e ) {
+							$Item.removeClass( 'has_microtrailer' );
+						} );
+					}
+				},
+
+				function () {
+					$Video[0].pause();
+				}
+			);
+
+			var $TinyCap = $J( '<img class="reviewed_app_small_image" src="' + rgItemData.tiny_capsule + '">' );
+			$ItemLink.append( $TinyCap );
+		}
+
+		var $RightCol = $J( '<div>', { class : 'right_col' } ).appendTo( $Item );
+		var $ReviewsCtn = $J('<div/>', { class: 'community_recommendations_block'} ).appendTo( $RightCol );
+
+		let numReviews = rgReviews.length;
+		if ( numReviews > 1 )
+		{
+			$Item.data( 'currentreviewidx', 0 );
+
+			let strNumReviews = '%1$s of %2$s reviews'.replace( "%1$s", 1 ).replace( "%2$s", numReviews );
+
+			let pagingThumbs = $J( '<div>', { class: 'paging_thumbs' } ).appendTo( $RightCol );
+
+			let arrowLeft = $J( '<div>', { class: 'community_recommendation_arrow left', text: "<" } ).appendTo( pagingThumbs );
+			let numReviewsElem = $J( '<div>', { class: 'num_reviews_desc', text: strNumReviews } ).appendTo( pagingThumbs );
+			let arrowRight = $J( '<div>', { class: 'community_recommendation_arrow right', text: ">" } ).appendTo( pagingThumbs );
+
+			arrowLeft.click( function() {
+				var curIdx = $Item.data( "currentreviewidx" );
+				curIdx = ( curIdx + numReviews - 1 ) % numReviews;
+				var strNumReviews = '%1$s of %2$s reviews'.replace( "%1$s", curIdx + 1 ).replace( "%2$s", numReviews );
+				numReviewsElem.text( strNumReviews );
+
+				GHomepage.SelectCommunityRecommendationFromIndex( $Item, curIdx );
+			});
+
+			arrowRight.click( function() {
+				var curIdx = $Item.data( "currentreviewidx" );
+				curIdx = ( curIdx + 1 ) % numReviews;
+				var strNumReviews = '%1$s of %2$s reviews'.replace( "%1$s", curIdx + 1 ).replace( "%2$s", numReviews );
+				numReviewsElem.text( strNumReviews );
+
+				GHomepage.SelectCommunityRecommendationFromIndex( $Item, curIdx );
+			});
+		}
+
+		// add reviews
+		for( var i = 0; i < rgReviews.length; ++i)
+		{
+			var review = rgReviews[i];
+
+			$Item.data( 'recommendationid_' + i, review.recommendationid );
+
+			var $Review = $J( '<div>', { id: "Review" + review.recommendationid, class : 'review_box' } ).appendTo( $ReviewsCtn );
+			if ( i == 0 && numReviews >= 1 )
+			{
+				$Review.addClass( "focus" );
+			}
+
+			var $Content = $Review.append( $J( '<div>', { class: 'content', text: '"' + review.review_text + '"' } ) );
+			if ( review.review_text_truncated )
+			{
+				var $ViewMore = $J( '<div class="view_more"><a href="' + review.review_link + '" target="_blank">Read Entire Review</a></div>' );
+				$Content.append( $ViewMore );
+			}
+
+			var reviewer = GStoreItemData.GetAccountData( null, review.accountid );
+			var $AuthorBlock = $J( '<div>', { class: "author_block" } ).appendTo( $Review );
+			var $AvatarCap = $J('<div class="avatar"><a href="%1$s" data-miniprofile="%3$s"><div class="playerAvatar"><img src="%2$s"></div></a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, GetAvatarURL( reviewer.avatar ) ).replace(/\%3\$s/g, reviewer.accountid) );
+			$AuthorBlock.append( $AvatarCap );
+
+			var $AuthorDetails = $J( '<div>' ).appendTo( $AuthorBlock );
+			var $AvatarName = $J('<div class="persona_name"><a href="%1$s" data-miniprofile="%3$s">%2$s</a></div>'.replace(/\%1\$s/g, reviewer.url).replace(/\%2\$s/g, reviewer.name ).replace(/\%3\$s/g, reviewer.accountid) );
+			$AuthorDetails.append( $AvatarName );
+			if ( review.playtime_at_review > 0 )
+			{
+				var strHours = 'Played %s hrs at review time'.replace( "%s", v_numberformat( review.playtime_at_review / 60, 1 ) );
+				$AuthorDetails.append( $J( '<div>', { class: "hours ellipsis", text: strHours } ) );
+			}
+			if ( review.votes_up > 0 )
+			{
+				var voteUpText = '1 person found this review helpful';
+				if ( review.votes_up > 1 )
+				{
+					voteUpText = '%2$s people found this review helpful'.replace( "%2$s", v_numberformat( review.votes_up ) );
+				}
+				$AuthorDetails.append( $J( '<div>', { class: "hours vote_info", text: voteUpText } ) );
+			}
+		}
+
+		return $Item;
 	},
 
 	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay, rgAdditionalSettings )

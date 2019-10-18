@@ -350,15 +350,8 @@ div.advanced_controls_toggle_icon.down {
 	margin-right: 20px;
 }
 
-
-.reviewed_app.has_multiple_reviews .right_col:hover .arrow {
-	display: inline-block;
-}
-
-
 .reviewed_app .arrow:hover {
 	background-color: #66c0f466;
-	//border-color: #66c0f4;
 	color: #fff;
 	text-decoration: none;
 }

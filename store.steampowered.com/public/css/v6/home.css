@@ -2446,6 +2446,199 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 	display: none;
 }
 
+/* Community Recommendations widget */
+
+.community_recommendations_by_steam_labs_ctn h2 {
+	margin-bottom: 10px;
+	color: #ffffff66;
+}
+
+.community_recommendations_by_steam_labs_ctn h1 {
+	text-transform: uppercase;
+	color: #eee;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.07em;
+	z-index: -1;
+}
+
+.community_recommendation_app {
+	display: none;
+	margin-bottom: 5px;
+	background-color: rgba(0,0,0,0.25);
+	overflow: hidden;
+}
+.focus > .community_recommendation_app {
+	display: flex;
+}
+.community_recommendation_app > .community_recommendation_capsule {
+	position: relative;
+	margin-right: 5px;
+}
+.community_recommendation_app > .community_recommendation_capsule > .capsule {
+	height: 356px;
+}
+
+.community_recommendation_app .microtrailer_video {
+	position: absolute;
+	left: 0;
+	opacity: 0;
+	width: 100%;
+	height: auto;
+	transition: opacity 0.5s;
+}
+.community_recommendation_app:hover .microtrailer_video {
+	display: block;
+	top: 50%;
+	opacity: 1;
+	transform: translateY(-50%);
+}
+.community_recommendation_app.has_microtrailer:hover .capsule {
+	opacity: 0;
+}
+
+.community_recommendation_app .reviewed_app_small_image {
+	position: absolute;
+	bottom: 2px;
+	right: 0;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+.community_recommendation_app.has_microtrailer:hover .reviewed_app_small_image {
+	opacity: 1;
+}
+
+.community_recommendation_app > .right_col {
+	background: -webkit-linear-gradient( top, #506c86 5%, #101431 66%);
+	background: linear-gradient( to bottom, #506c86 5%, #101431 66%);
+	border-radius: 3px;
+}
+.community_recommendation_app:hover > .right_col {
+	background: -webkit-linear-gradient( top, #506c86 5%, #101431 76%);
+	background: linear-gradient( to bottom, #506c86 5%, #101431 76%);
+}
+.community_recommendation_app > .right_col > .community_recommendations_block {
+	position: relative;
+	width: 319px;
+	height: 320px;
+	overflow: hidden;
+	display: flex;
+}
+.community_recommendation_app > .right_col > .paging_thumbs {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	z-index: 1;
+}
+.community_recommendation_app > .right_col > .paging_thumbs > .num_reviews_desc {
+	line-height: 24px;
+	display: inline-block;
+	color: #66c0f4;
+}
+
+.community_recommendation_app  > .right_col > .paging_thumbs > .community_recommendation_arrow {
+	display: inline-block;
+	line-height: 24px;
+	background-color: rgba( 103, 193, 245, 0.2 );
+	border: 1px transparent;
+	border-radius: 3px;
+	cursor: pointer;
+	padding: 0px 16px;
+	color: #66c0f4;
+	transition: background-color 0.2s, color 0.2s;
+}
+.community_recommendation_app  > .right_col > .paging_thumbs >  .community_recommendation_arrow.left {
+	margin-left: 20px;
+}
+.community_recommendation_app  > .right_col > .paging_thumbs >  .community_recommendation_arrow.right {
+	margin-right: 20px;
+}
+.community_recommendation_app  > .right_col > .paging_thumbs > .community_recommendation_arrow:hover {
+	background-color: #66c0f466;
+	color: #fff;
+	text-decoration: none;
+}
+
+.community_recommendations_block > .review_box {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	transition: opacity 400ms;
+	pointer-events: none;
+	padding: 20px;
+}
+.community_recommendations_block > .review_box.focus {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.community_recommendations_block > .review_box .author_block {
+	display: flex;
+	flex-direction: row;
+	font-size: 10px;
+	color: #8091a2;
+	position: absolute;
+	bottom: 10px;
+}
+
+.community_recommendations_block > .review_box .avatar {
+	margin-right: 5px;
+}
+.community_recommendations_block > .review_box .avatar .playerAvatar {
+	width: 40px;
+	height: 40px;
+}
+.community_recommendations_block > .review_box .avatar .playerAvatar img {
+	width: 38px;
+	height: 38px;
+}
+
+.community_recommendations_block > .review_box .view_more {
+	text-align: center;
+	font-size: 12px;
+}
+.community_recommendations_block > .review_box .view_more a {
+	color: #c1dbf4;
+}
+.community_recommendations_block > .review_box .view_more a:hover {
+	color: #fff;
+}
+
+.community_recommendations_block > .review_box .persona_name {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 140px;
+	overflow: hidden;
+	margin-top: -2px;
+}
+.community_recommendations_block > .review_box .persona_name a {
+	color: #c1dbf4;
+	font-size: 13px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.review_box .content {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 18px;
+	height: 210px;
+	color: #ebebeb;
+	overflow-wrap: break-word;
+	overflow: hidden;
+}
+
 /* Discovery queue widget */
 
 .home_ctn.discovery_queue_ctn {
