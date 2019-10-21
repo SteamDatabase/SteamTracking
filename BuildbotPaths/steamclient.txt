@@ -191,7 +191,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/depotdownloadmgr.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/depotreconstruct.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/dgif_lib.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/double-conversion.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/eventlog.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/friendsuihelpers.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/gameserver.o
@@ -381,7 +380,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/tgaloader.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/trackpad_kalman.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/ugcmanager.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/ujson.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/unified_messages_client.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/urlhelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/user.o
@@ -486,7 +484,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/depotdownloadmgr.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/depotreconstruct.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/dgif_lib.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/double-conversion.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/eventlog.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/friendsuihelpers.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/gameserver.o
@@ -676,7 +673,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/tgaloader.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/trackpad_kalman.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/ugcmanager.o
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/ujson.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/unified_messages_client.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/urlhelper.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/user.o
@@ -1231,6 +1227,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/p2p/base/portallocator.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/p2p/base/transport.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/libjingle-0.4.0/talk/p2p/base/transportchannel.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/picojson/picojson.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/bin/osx32/libc++/libprotobuf.a(coded_stream.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/bin/osx32/libc++/libprotobuf.a(common.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/bin/osx32/libc++/libprotobuf.a(descriptor.o)
@@ -1288,9 +1285,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/taglib-1.9.1/taglib/toolkit/tlist.tcc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/taglib-1.9.1/taglib/toolkit/tmap.tcc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/taglib-1.9.1/taglib/toolkit/trefcounter.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ujson/ujson/
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ujson/ujson/double-conversion.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/ujson/ujson/ujson.hpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/include/osx32/pcre_stringpiece.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/include/osx32/pcrecpp.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/include/osx32/pcrecpparg.h

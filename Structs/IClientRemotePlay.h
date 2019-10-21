@@ -7,4 +7,5 @@ public:
     virtual unknown_ret GetSessionClientName(unsigned int) = 0;
     virtual unknown_ret GetSessionClientFormFactor(unsigned int) = 0;
     virtual unknown_ret BGetSessionClientResolution(unsigned int, int*, int*) = 0;
+    virtual unknown_ret BSendRemotePlayTogetherInvite(CSteamID) = 0;
 };

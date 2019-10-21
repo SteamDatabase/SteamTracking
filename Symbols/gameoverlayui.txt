@@ -15154,7 +15154,6 @@
  b ProcessInputEvents()::bInitialized
  b ProcessInputEvents()::iCurCommand
  b ProcessInputEvents()::rgLastTenCommands
- b ProcessInputEvents()::s_bFocus
  b QueueEntryColumnSortFunc(vgui::ListPanelItem const&, vgui::ListPanelItem const&)::s_KeyQueueID
  b SerializedOverlayPumps::SendHotKeyAndVisibilityState()::bLastVisibilityValue
  b SerializedOverlayPumps::SendHotKeyAndVisibilityState()::dwLastSend

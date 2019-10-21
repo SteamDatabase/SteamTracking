@@ -56,10 +56,18 @@ message CVirtualControllerElement {
 	optional float y_scale = 6 [default = 1];
 }
 
+message CVirtualControllerColor {
+	optional float r = 1 [default = 1];
+	optional float g = 2 [default = 1];
+	optional float b = 3 [default = 1];
+	optional float a = 4 [default = 1];
+}
+
 message CVirtualControllerLayout {
 	optional int32 layout_version = 1;
 	optional int32 actionset_id = 2;
 	repeated .CVirtualControllerElement elements = 4;
+	optional .CVirtualControllerColor color = 5;
 }
 
 message CVirtualControllerLayouts {
@@ -100,9 +108,5 @@ message CVirtualControllerLayoutPackage {
 	optional uint32 revision = 2;
 	optional .CVirtualControllerConfig config = 3;
 	optional .CVirtualControllerLayouts layouts = 4;
-}
-
-message CVirtualControllerGlobalConfig {
-	optional bool feedback_enabled = 1;
 }
 

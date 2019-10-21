@@ -9839,6 +9839,7 @@
  T CRemotePlayController::SetPerUserKeyboardInputEnabled(char const*, bool, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::SetPerUserMouseInputEnabled(char const*, bool, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::SetStreamingDesktopToRemotePlayTogetherEnabled(bool, CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::StopStreamingClient(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::Validate(CValidator&, char const*)
  T CSHA1::Final()
  T CSHA1::HashFile(char const*, bool)

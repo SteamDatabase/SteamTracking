@@ -40,6 +40,7 @@
 	"Collection_ResetConfirmation": "Are you sure you want to reset your collection list and re-import your old categories?",
 	"Collection_AfterResetSummary_NoCollections": "You will have no collections after reset.",
 	"Collection_AfterResetSummary_CountAndNames": "You will have the following %1$s collections after reset: %2$s",
+	"Collection_ResetFailed": "Could not reset collections",
 
 	"FilterEdit_SelectedFilters": "Selected Filters",
 	"FilterEdit_SaveCollectionNameInputPrompt": "Enter a name for the collection",

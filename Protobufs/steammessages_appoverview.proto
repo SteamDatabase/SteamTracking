@@ -93,14 +93,14 @@ message CAppOverview_PerClientData {
 message CAppOverview {
 	optional uint32 appid = 1;
 	optional string display_name = 2;
-	optional bool visible_in_game_list = 4;
+	optional bool visible_in_game_list = 4 [deprecated = true];
 	optional string sort_as = 6;
 	optional .EProtoAppType app_type = 7 [default = k_EAppTypeInvalid];
-	optional bool favorite = 11;
-	optional bool hidden = 12;
+	optional bool favorite = 11 [deprecated = true];
+	optional bool hidden = 12 [deprecated = true];
 	optional uint32 mru_index = 13;
 	optional uint32 rt_recent_activity_time = 14 [default = 0];
-	repeated string user_tag = 15;
+	repeated string user_tag = 15 [deprecated = true];
 	optional uint32 minutes_playtime_forever = 16 [default = 0];
 	optional uint32 minutes_playtime_last_two_weeks = 17 [default = 0];
 	optional uint32 rt_last_time_played = 18 [default = 0];
@@ -125,10 +125,21 @@ message CAppOverview {
 	optional uint64 selected_clientid = 45;
 	optional uint32 rt_store_asset_mtime = 46;
 	optional uint32 rt_custom_image_mtime = 47;
+	optional uint32 optional_parent_app_id = 48;
 }
 
 message CAppOverview_Change {
 	repeated .CAppOverview app_overview = 1;
 	repeated uint32 removed_appid = 2;
+}
+
+message CAppBootstrapData {
+	optional uint32 appid = 1;
+	optional bool hidden = 2;
+	repeated string user_tag = 3;
+}
+
+message CLibraryBootstrapData {
+	repeated .CAppBootstrapData app_data = 1;
 }
 

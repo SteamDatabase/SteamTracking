@@ -4621,6 +4621,7 @@
  T MD5_Update
  T MakeFileWriteable(char const*)
  T MemAlloc_AllocAligned(unsigned long, unsigned long, char const*, int, bool, bool)
+ T MessageInfo_t::~MessageInfo_t()
  T MiniDumpUnlock
  T Msg
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
