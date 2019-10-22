@@ -87,7 +87,7 @@ function handleFile(file) {
 		protoShortNamesToLongNames[currentModuleName] = {};
 		protoShortNamesAliases[currentModuleName] = {};
 
-		module.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",function\(\){return ([_a-zA-Z]+)}\)/g).forEach((alias) => {
+		(module.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",function\(\){return ([_a-zA-Z]+)}\)/g) || []).forEach((alias) => {
 			let [/*skip*/, aliasName, protoShortName] = alias.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",function\(\){return ([_a-zA-Z]+)}\)/);
 			protoShortNamesAliases[currentModuleName][aliasName] = protoShortName;
 		});
@@ -107,7 +107,7 @@ function handleFile(file) {
 			let minVarName = match[0].match(/^[_a-zA-Z\$]{1,3}/)[0];
 			match[0] = match[0].replace(/^[_a-zA-Z\$]{1,3}=/, '');
 
-			let func = match[0].replace(/[_a-zA-Z\$]{1,3}\.[a-zA-Z\$]\([a-zA-Z\$],[a-zA-Z\$]\),/g, '');
+			let func = match[0].replace(/(Object\()?[_a-zA-Z\$]{1,3}\.[a-zA-Z\$]\)?\([a-zA-Z\$],[a-zA-Z\$]\),/g, '');
 			eval('func=(' + func + ')');
 			let proto = decodeProtobuf(func(), minVarName);
 			currentModuleProtos.push(proto);
@@ -136,7 +136,7 @@ function handleFile(file) {
 			}
 
 			if (!msgRequestName) {
-				let bFixFound = currentModuleProtos.some((proto) => {
+				currentModuleProtos.some((proto) => {
 					if ((proto.name === "C" + svcName + "_" + methodName + (matches[4] ? "_Request" : "_Notification"))
 						|| !matches[4] && (proto.name === "C" + svcName + "_" + methodName.replace(/^Notify/, "") + "_Notification")) {
 						msgRequestName = proto.name;
@@ -145,7 +145,7 @@ function handleFile(file) {
 					return false;
 				});
 
-				if (!bFixFound) {
+				if (!msgRequestName) {
 					msgRequestName = "NotImplemented";
 					bHasUnknownRequest = true;
 				}
@@ -219,7 +219,7 @@ function decodeProtobuf(proto, minVarName) {
 			}
 		} else {
 			// It's a nested message of some sort
-			let nestMatch = field.match(/case \d+:(?=var)?[^;]+new ([_a-zA-Z\$]{1,3}(\.[_a-zA-Z\$]{1,3})?)(\(\))?;/);
+			let nestMatch = field.match(/case \d+:(?=var)?[^;]+new ([_a-zA-Z\$]{1,3}(\.[_a-zA-Z\$]{1,3})?)(\(\))?[;,]/);
 			if (nestMatch) {
 				if (nestMatch[1] === proto.name) { // constructor name, special case for recursive messages
 					fieldDesc.type = minVarName;
@@ -234,7 +234,17 @@ function decodeProtobuf(proto, minVarName) {
 		// default?
 		let defaultMatch = proto.prototype[fieldDesc.name].toString().match(/getFieldWithDefault\(this,\d+,([^\)]+)\)/);
 		if (defaultMatch) {
-			fieldDesc.default = eval(defaultMatch[1]);
+			if (fieldDesc.type === 'string') {
+				fieldDesc.default = defaultMatch[1].replace(/^'|'$/g, '"');
+			} else if (fieldDesc.description === 'enum') {
+				fieldDesc.default = defaultMatch[1];
+			} else {
+				try {
+					fieldDesc.default = eval(defaultMatch[1]); // number, bool
+				} catch(e) {
+					fieldDesc.default = 'fixme';
+				}
+			}
 		}
 
 		fields.push(fieldDesc);
