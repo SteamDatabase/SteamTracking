@@ -3375,3 +3375,7 @@ complete #A4D007
 .hiddenDiscountEvent {
 	display: none !important;
 }
+
+.n_section_label_data input {
+	width: 300px;
+}
