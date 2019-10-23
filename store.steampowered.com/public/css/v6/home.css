@@ -2850,6 +2850,7 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 
 .deep_dive_omni_ctn {
 	position:relative;
+    display: none;
 }
 
 .deep_dive_search_text {

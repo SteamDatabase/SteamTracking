@@ -1158,7 +1158,12 @@ GHomepage = {
 
 	RenderRecommendedByDeepDiveApps: function()
 	{
-		var rgOptions = $J.extend({
+
+        // Do nothing if deep-dive not loaded
+        if ( GHomepage.rgRecommendedByDeepDiveFocusedApp <= 0 )
+            return;
+
+        var rgOptions = $J.extend({
 			'class': 'store_capsule',
 			'include_title': false,
 			'discount_class': 'discount_block_inline',
@@ -1179,6 +1184,7 @@ GHomepage = {
 		var focusedAppTitle = (focusedApp !== null ? focusedApp.name : "");
 		
 		var $DeepDiveSearchText = $J('.deep_dive_search_text');
+
 		$DeepDiveSearchText.attr("placeholder",focusedAppTitle);
 		
 		var bottomText = "";

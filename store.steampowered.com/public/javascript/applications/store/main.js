@@ -45691,11 +45691,12 @@
                         e,
                         t
                       ) {
-                        c.setState({
-                          bShowModal: !0,
-                          announcementGID: t,
-                          modalInitialEvent: void 0
-                        });
+                        console.log("appid: " + e + " gid: " + t),
+                          c.setState({
+                            bShowModal: !0,
+                            announcementGID: t,
+                            modalInitialEvent: void 0
+                          });
                       }),
                       [2]
                     );
@@ -45705,7 +45706,11 @@
           }),
           (e.prototype.ShowModal = function(e) {
             var t = this.props.trackingLocation;
-            this.setState({ bShowModal: !0, modalInitialEvent: e }),
+            this.setState({
+              bShowModal: !0,
+              modalInitialEvent: e,
+              announcementGID: void 0
+            }),
               e.BIsPartnerEvent() &&
                 this.m_tracker.MarkEventRead(
                   e.GID,
@@ -45740,7 +45745,9 @@
                   classname: nm.StoreHeaderAdjust,
                   appid: o,
                   trackingLocation: a,
-                  announcementGID: this.state.modalInitialEvent.AnnouncementGID,
+                  announcementGID: this.state.announcementGID
+                    ? this.state.announcementGID
+                    : this.state.modalInitialEvent.AnnouncementGID,
                   partnerEventStore: t,
                   eventModel: this.state.modalInitialEvent,
                   closeModal: this.CloseModal
