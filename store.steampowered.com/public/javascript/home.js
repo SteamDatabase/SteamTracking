@@ -23,9 +23,14 @@ GHomepage = {
 	rgFriendRecommendations: [],	// { appid, accountid_friends, time_most_recent_recommendation }
 	rgRecommendedAppsByCreators: [], // { appid, creatorid }
 	rgRecommendedBySteamLabsApps: [],
+	rgRecommendedBySteamLabsApps: [],
 
 	rgCommunityRecommendations: [],
 	rgCommunityRecommendationsByAppID: {},
+	strCommunityRecommendationsPrefLastSaved: false,
+	rgRecommendedBySteamLabsApps: [],
+	rgRecommendedByDeepDiveApps: [],
+	rgRecommendedByDeepDiveFocusedApp: -1,
 
 	rgCuratedAppsData: [],
 	rgCreatorFollowedAppData: [],
@@ -123,66 +128,69 @@ GHomepage = {
 	InitUserData: function( rgParams )
 	{
 		try {
-            GHomepage.oSettings = rgParams.oSettings;
-            GDynamicStorePage.oSettings = rgParams.oSettings;	// GDynamicStorePage is used to filter capsule lists, so make sure that has the settings too.
-            GHomepage.CheckLocalStorageSettings();
+			GHomepage.oSettings = rgParams.oSettings;
+			GDynamicStorePage.oSettings = rgParams.oSettings;	// GDynamicStorePage is used to filter capsule lists, so make sure that has the settings too.
+			GHomepage.CheckLocalStorageSettings();
 
-            if (rgParams.rgRecommendedGames && rgParams.rgRecommendedGames.length) {
-                var rgRecommendedAppIDs = v_shuffle(rgParams.rgRecommendedGames);
-                for (var i = 0; i < rgRecommendedAppIDs.length; i++) {
-                    GHomepage.rgRecommendedGames.push({appid: rgRecommendedAppIDs[i], recommended: true});
-                }
-            }
+			if (rgParams.rgRecommendedGames && rgParams.rgRecommendedGames.length) {
+				var rgRecommendedAppIDs = v_shuffle(rgParams.rgRecommendedGames);
+				for (var i = 0; i < rgRecommendedAppIDs.length; i++) {
+					GHomepage.rgRecommendedGames.push({appid: rgRecommendedAppIDs[i], recommended: true});
+				}
+			}
 
-            GHomepage.bMergeRecommendationsToHighlights = rgParams.bMergeRecommendationsToHighlights || false;
-            GHomepage.bNewRecommendations = rgParams.bNewRecommendations || false;
-            GHomepage.bIsLimitedUser = rgParams.bIsLimitedUser || false;
-            GHomepage.bAddTopSellersToMainCap = rgParams.bAddTopSellersToMainCap || false;
+			GHomepage.bMergeRecommendationsToHighlights = rgParams.bMergeRecommendationsToHighlights || false;
+			GHomepage.bNewRecommendations = rgParams.bNewRecommendations || false;
+			GHomepage.bIsLimitedUser = rgParams.bIsLimitedUser || false;
+			GHomepage.bAddTopSellersToMainCap = rgParams.bAddTopSellersToMainCap || false;
 
-            if (g_AccountID == 0) {
-                $J('#home_recommended_spotlight_notloggedin').show();
-                $J('.home_top_sellers_area').show();
-                $J('.home_logged_in').hide();
-                $J('.home_friends_purchased_area').hide();
-                $J('.home_btn.home_customize_btn').hide();
-            }
-            else {
-                $J('#home_recommended_more').show();
-            }
+			if (g_AccountID == 0) {
+				$J('#home_recommended_spotlight_notloggedin').show();
+				$J('.home_top_sellers_area').show();
+				$J('.home_logged_in').hide();
+				$J('.home_friends_purchased_area').hide();
+				$J('.home_btn.home_customize_btn').hide();
+			}
+			else {
+				$J('#home_recommended_more').show();
+			}
 
-            GHomepage.rgCuratedAppsData = rgParams.rgCuratedAppsData || {};
-            if (rgParams.rgCuratedAppsData['apps'] && rgParams.rgCuratedAppsData['apps'].length) {
-                var rgRecommendedAppIDs = v_shuffle(rgParams.rgCuratedAppsData['apps']);
-                for (var i = 0; i < rgRecommendedAppIDs.length; i++) {
-                    GHomepage.rgAppsRecommendedByCurators.push({
-                        appid: rgRecommendedAppIDs[i].appid,
-                        recommended_by_curator: true
-                    });
-                }
-            }
+			GHomepage.rgCuratedAppsData = rgParams.rgCuratedAppsData || {};
+			if (rgParams.rgCuratedAppsData['apps'] && rgParams.rgCuratedAppsData['apps'].length) {
+				var rgRecommendedAppIDs = v_shuffle(rgParams.rgCuratedAppsData['apps']);
+				for (var i = 0; i < rgRecommendedAppIDs.length; i++) {
+					GHomepage.rgAppsRecommendedByCurators.push({
+						appid: rgRecommendedAppIDs[i].appid,
+						recommended_by_curator: true
+					});
+				}
+			}
 
-            GHomepage.rgCreatorFollowedAppData = rgParams.rgCreatorFollowedAppData || [];
-            if (GHomepage.rgCreatorFollowedAppData && rgParams.rgCreatorFollowedAppData['apps'] && rgParams.rgCreatorFollowedAppData['apps'].length) {
-                                var rgRecentAppIDs = rgParams.rgCreatorFollowedAppData['apps'];
-                var rgCreators = rgParams.rgCreatorFollowedAppData['creator'];
-                for (var i = 0; i < rgRecentAppIDs.length; i++) {
-                                        var iCreatorChoice = Math.floor(Math.random() * rgRecentAppIDs[i].filtered_clanids.length);
-                    var iClanIDToMatch = rgRecentAppIDs[i].filtered_clanids[iCreatorChoice];
+			GHomepage.rgCreatorFollowedAppData = rgParams.rgCreatorFollowedAppData || [];
+			if (GHomepage.rgCreatorFollowedAppData && rgParams.rgCreatorFollowedAppData['apps'] && rgParams.rgCreatorFollowedAppData['apps'].length) {
+								var rgRecentAppIDs = rgParams.rgCreatorFollowedAppData['apps'];
+				var rgCreators = rgParams.rgCreatorFollowedAppData['creator'];
+				for (var i = 0; i < rgRecentAppIDs.length; i++) {
+										var iCreatorChoice = Math.floor(Math.random() * rgRecentAppIDs[i].filtered_clanids.length);
+					var iClanIDToMatch = rgRecentAppIDs[i].filtered_clanids[iCreatorChoice];
 
-                                        var creator = rgCreators['' + iClanIDToMatch];
-                    GHomepage.rgRecentAppsByCreator.push({appid: rgRecentAppIDs[i].appid, creator_info: creator});
-                }
-            }
+										var creator = rgCreators['' + iClanIDToMatch];
+					GHomepage.rgRecentAppsByCreator.push({appid: rgRecentAppIDs[i].appid, creator_info: creator});
+				}
+			}
 
-            GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
-            GHomepage.rgUserNewsFriendsPurchased = rgParams.rgUserNewsFriendsPurchased || {};
-            GHomepage.rgTopSteamCurators = rgParams.rgTopSteamCurators || [];
-            GHomepage.nNumIgnoredCurators = rgParams.nNumIgnoredCurators || 0;
-            GHomepage.rgFriendRecommendations = v_shuffle(rgParams.rgFriendRecommendations) || [];
-            GHomepage.rgRecommendedAppsByCreators = v_shuffle(rgParams.rgRecommendedAppsByCreators) || [];
-            GHomepage.rgRecommendedBySteamLabsApps = rgParams.rgRecommendedBySteamLabsApps || [];
+			GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
+			GHomepage.rgUserNewsFriendsPurchased = rgParams.rgUserNewsFriendsPurchased || {};
+			GHomepage.rgTopSteamCurators = rgParams.rgTopSteamCurators || [];
+			GHomepage.nNumIgnoredCurators = rgParams.nNumIgnoredCurators || 0;
+			GHomepage.rgFriendRecommendations = v_shuffle(rgParams.rgFriendRecommendations) || [];
+			GHomepage.rgRecommendedAppsByCreators = v_shuffle(rgParams.rgRecommendedAppsByCreators) || [];
+			GHomepage.rgRecommendedBySteamLabsApps = rgParams.rgRecommendedBySteamLabsApps || [];
 			GHomepage.rgCommunityRecommendations = rgParams.rgCommunityRecommendations || [];
-        } catch( e ) { OnHomepageException(e); }
+			GHomepage.strCommunityRecommendationsPrefLastSaved = rgParams.strCommunityRecommendationsPrefLastSaved || false,
+			GHomepage.rgRecommendedByDeepDiveApps = rgParams.rgRecommendedByDeepDiveApps || [];
+			GHomepage.rgRecommendedByDeepDiveFocusedApp = rgParams.rgRecommendedByDeepDiveFocusedApp || -1;
+	} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;
 		if ( GHomepage.bStaticDataReady )
@@ -296,6 +304,8 @@ GHomepage = {
 			GSteamCurators.Init( GHomepage.rgTopSteamCurators, GHomepage.rgCuratedAppsData, GHomepage.nNumIgnoredCurators );
 		} catch( e ) { OnHomepageException(e); }
 
+		// mark index as displayed so it doesn't appear in main cap; it is always below main cap
+		GDynamicStore.MarkAppIDsAsDisplayed( [ 1059530, 1059570, 1059550 ] );
 
 		// MAIN CLUSTER
 		try {
@@ -348,6 +358,10 @@ GHomepage = {
 		// Community Recommendations - Steam Labs
 		try {
 			GHomepage.RenderCommunityRecommendations();
+		} catch ( e ) { OnHomepageException(e); }
+
+		try {
+			GHomepage.RenderRecommendedByDeepDiveApps();
 		} catch ( e ) { OnHomepageException(e); }
 
 		// Sidebar
@@ -458,7 +472,7 @@ GHomepage = {
 			return;
 
 		var rgDisplayListCombined = false;
-		GDynamicStore.s_rgDisplayedApps = [];	
+
 		if ( GHomepage.bAutumnSaleMainCap && GHomepage.bMergeRecommendationsToHighlights )
 		{
 			$J('.home_cluster_ctn').hide();
@@ -1142,6 +1156,98 @@ GHomepage = {
 		);
 	},
 
+	RenderRecommendedByDeepDiveApps: function()
+	{
+		var rgOptions = $J.extend({
+			'class': 'store_capsule',
+			'include_title': false,
+			'discount_class': 'discount_block_inline',
+			'capsule_size': 'headerv5',
+			'html_before_price': '',
+			'lazy': false
+		}, rgOptions ? rgOptions : {} );
+		
+		var getItemData = function(appid,rgOptions){
+			var nDepth = 0;
+			var params = { 'class': 'store_capsule deepdive_capsule' };
+			var rgItemData = GStoreItemData.GetCapParams( 'recommended_by_deep_dive' , appid, null, null, params, nDepth );
+			return rgItemData;
+		};
+		
+		var focusedAppID = GHomepage.rgRecommendedByDeepDiveFocusedApp;
+		var focusedApp = getItemData(focusedAppID,rgOptions);
+		var focusedAppTitle = (focusedApp !== null ? focusedApp.name : "");
+		
+		var $DeepDiveSearchText = $J('.deep_dive_search_text');
+		$DeepDiveSearchText.attr("placeholder",focusedAppTitle);
+		
+		var bottomText = "";
+		if(g_AccountID == 0){
+			bottomText = 'EXPLORE MORE LIKE THIS POPULAR GAME<br/>IN STEAM LABS DEEP DIVE';
+		}else{
+			bottomText = 'EXPLORE MORE LIKE THIS RECENTLY PLAYED GAME<br/>IN STEAM LABS DEEP DIVE';
+		}
+		
+		var $DeepDiveBottomText = $J('.deep_dive_bottom_text');
+		$DeepDiveBottomText.append('<strong>'+bottomText+'</strong>');
+		
+		var deepDiveTracking = GStoreItemData.rgNavParams["recommended_by_deep_dive"];
+		
+		var $DeepDiveLink = $J('.deep_dive_link');
+		var url = ('https://store.steampowered.com/labs/divingbell/' + '?snr=' + deepDiveTracking + '#' + focusedAppID);
+		
+		$DeepDiveLink.attr("href",url);
+		
+		var $DeepDiveContainerLink = $J('.deep_dive_container_link');
+		$DeepDiveContainerLink.attr("href",url);
+		
+		var $DeepDiveWhiteBox = $J('.deep_dive_white_box');
+		$DeepDiveWhiteBox.attr("href",url);
+		
+		var $RecommendedByDeepDive = $J('.deep_dive_capsule_container');
+		var rgCapsules = GHomepage.rgRecommendedByDeepDiveApps;
+		
+		for(var i = 0; i < rgCapsules.length; i++){
+			var app = rgCapsules[i];
+			if(app == null) continue;
+			
+			var rgItemData = getItemData(app.appid,rgOptions);
+		
+			var capsule = "";
+			try{ capsule = rgItemData.headerv5;}catch(e){
+				try{capsule = rgItemData.headerv;}catch(e){
+					capsule = "";
+				}
+			}
+			
+			if(capsule != "" && capsule != null){
+				$RecommendedByDeepDive.append('<img src="'+capsule+'">');
+			}
+		}
+		injectSearch("deep_dive_search_text", "deep_dive_searchterm_options", "deep_dive_search_suggestion_contents");
+		
+		var mutateCallback = function(mutationsList, observer){
+			for(let mutation of mutationsList){
+				if(mutation.type === 'childList'){
+					var el = document.getElementById('deep_dive_search_suggestion_contents');
+					var children = el.children;
+					var count = children.length;
+					for(var i = 0; i < count; i++){
+						var child = children.item(i);
+						var appid = child.getAttribute("data-ds-appid");
+						child.setAttribute("href",'https://store.steampowered.com/labs/divingbell/#'+appid);
+						var url = child.getAttribute("href");
+					}
+				}
+			}
+		}
+		
+		var searchSuggestionContents = document.getElementById('deep_dive_search_suggestion_contents');
+		var observer = new MutationObserver(mutateCallback);
+		var config = {attributes: true, childList: true, subtree: true};
+		observer.observe(searchSuggestionContents, config);
+    },
+
     RenderRecommendedBySteamLabsApps: function()
     {
         var $RecommendedBySteamLabs = $J('.recommended_by_steam_labs_ctn');
@@ -1155,7 +1261,7 @@ GHomepage = {
             return;
         }
 
-        GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecommendedBySteamLabs,
+		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $RecommendedBySteamLabs,
             function( oItem, strFeature, rgOptions, nDepth )
             {
                 var nAppId = oItem.appid;
@@ -1197,6 +1303,12 @@ GHomepage = {
 				return $Item;
 			}, 'community_recommendations_by_steam_labs', 1
 		);
+
+		var elemPrefLastUpdated = $J( "#community_recommendations_preferences_last_updated" );
+		if ( GHomepage.strCommunityRecommendationsPrefLastSaved )
+		{
+			elemPrefLastUpdated.text( 'Using preferences saved on %1$s'.replace( "%1$s", GHomepage.strCommunityRecommendationsPrefLastSaved ) );
+		}
 
 		$Ctn.show();
 	},
@@ -1623,6 +1735,7 @@ GHomepage = {
 		return $CapCtn;
 	},
 
+
 	SelectCommunityRecommendationFromIndex: function( appContainer, reviewIdx )
 	{
 		var relatedReview = $J( "#Review" + appContainer.data( 'recommendationid_' + reviewIdx ) );
@@ -1790,6 +1903,7 @@ GHomepage = {
 		return $Item;
 	},
 
+	
 	FilterItemsForDisplay: function( rgItems, strSettingsName, cMinItemsToDisplay, cMaxItemsToDisplay, rgAdditionalSettings )
 	{
 
@@ -1994,6 +2108,8 @@ GHomepage = {
 		);
 		return $SpotlightCtn;
 	},
+
+
 
 	RenderMarketingMessages: function(  )
 	{

@@ -1436,6 +1436,38 @@ function ToggleRatingVisibility( rating )
 	}
 }
 
+function OnChangeChildInheritRating()
+{
+	var childInheritRating = $J( "input[name='app[game][child_inherit_rating_setting]']:checked" ).val();
+	$J( "#tab_ratings_content" ).removeClass( "child_inherit_rating_unknown" );
+	$J( "#tab_ratings_content" ).removeClass( "child_inherit_rating" );
+	$J( "#tab_ratings_content" ).removeClass( "child_do_not_inherit_rating" );
+
+	$J( "#tab_ratings_content" ).addClass( "child_" + childInheritRating );
+}
+
+function CopyRatingsFromParent( itemid )
+{
+	var waitDialog = ShowBlockingWaitDialog( 'Please Wait', 'Please wait while we copy the ratings from this item\'s parent...' );
+
+	var rgParams = {
+		sessionid: g_sessionID
+	};
+	$J.post( 'https://partner.steamgames.com/admin/game/ajaxcopyratingfromparent/' + itemid, rgParams )
+	.done( function( data ) {
+		waitDialog.Dismiss();
+		switch( data.success )
+		{
+			case 1:
+				top.location.reload();
+				break;
+			default:
+				ShowAlertDialog( 'Error', 'There was a problem copying over the parent item\'s ratings: ' + data.success );
+				break;
+		}
+	} );
+}
+
 function DeclineRatingQuestionaire( ratingAgency )
 {
 	$J( "#HasRatingCheckbox_" + ratingAgency ).attr( "checked", false  );

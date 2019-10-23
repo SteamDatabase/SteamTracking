@@ -589,7 +589,8 @@
       (f[(f.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
       (f[(f.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (f[(f.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-      (f[(f.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent");
+      (f[(f.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
+      (f[(f.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral");
     var y, T;
     v.k_EOtherEvent,
       v.k_EGameEvent,
@@ -621,7 +622,8 @@
       v.k_EBetaReleaseEvent,
       v.k_EFreeTrial,
       v.k_ESeasonRelease,
-      v.k_ECrosspostEvent;
+      v.k_ECrosspostEvent,
+      v.k_EInGameEventGeneral;
     ((T = y || (y = {}))[(T.k_ELaunchSource_None = 0)] =
       "k_ELaunchSource_None"),
       (T[(T.k_ELaunchSource_2ftLibraryDetails = 100)] =

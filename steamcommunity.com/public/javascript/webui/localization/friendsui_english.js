@@ -960,6 +960,8 @@ LocalizationReady("friendsui", "english", {
     "Remote Play Together invite failed because VR is active.",
   RemotePlay_ErrorInviteFailed_TransportUnavailable:
     "Remote Play Together invite failed because Remote Play networking is not currently available, try again later.",
+  RemotePlay_ErrorInviteFailed_Invisible:
+    "Remote Play Together invite can't be sent while you are Invisible.",
 
   FriendNotifications_Instructions: "Notification options for %1$s",
   FriendNotifications_UseDefaults: "Use my default notifications settings",

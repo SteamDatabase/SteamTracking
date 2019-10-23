@@ -54,7 +54,7 @@
   align-items: center;
   justify-content: center; }
 
-.throbber_throbber_center_wrapper_3IYPz .throbber_ThrobberText_21nVi,
+.throbber_ThrobberText_21nVi,
 .throbber_LoadingWrapper_2wAKy .throbber_ThrobberText_21nVi {
   color: #3d85c8;
   font-size: 12px;
@@ -318,8 +318,8 @@
   height: 36px; }
 
 .throbber_throbber_medium_2CphU {
-  width: 60px;
-  height: 60px; }
+  width: 64px;
+  height: 64px; }
 
 .throbber_throbber_large_1x18v {
   width: 92px;

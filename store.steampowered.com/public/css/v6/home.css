@@ -2354,6 +2354,38 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
 /*
  * Recommended by Steam Labs widget
  */
+ 
+.labs_cluster {
+	background: linear-gradient(86deg, rgba(30, 46, 82, 0) 6.04%, #253968 39.34%, rgba(30, 46, 82, 0) 100.06%);
+	margin-top: 20px;
+	padding-top: 20px;
+}
+
+.labs_title {
+	position: relative;
+	padding-top: 20px;
+	width: 940px;
+	padding-bottom: 24px;
+}
+
+.labs_title h1
+{
+
+}
+
+.labs_cluster h1 {
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+	font-weight: normal;
+	color: #fff;
+	letter-spacing: 2px;
+}
+	
 .recommended_by_steam_labs_ctn
 {
     position: relative;
@@ -2362,8 +2394,8 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
 .recommended_by_steam_labs_ctn .left_block
 {
     flex-direction: column;
-    width: 40%;
-    padding-top: 50px;
+    width: 100%;
+    padding-top: 8px;
 }
 
 .recommended_by_steam_labs_ctn .pad_block
@@ -2380,12 +2412,12 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
 .recommended_by_steam_labs_ctn .flex-container
 {
     display: flex;
-    height: 140px;
+    height: 60px;
 }
 
 body.v6 .recommended_by_steam_labs_ctn h2 {
   margin-bottom: 10px;
-  color: #ffffff66;
+  color: #7392D899;
 }
 
 .recommended_by_steam_labs_ctn .detail_text {
@@ -2402,15 +2434,15 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 
 .recommended_by_steam_labs_ctn h1 {
   text-transform: uppercase;
-  color: #eee;
+  color: #7392d8;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
 		;
 	font-style: normal;
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 30px;
+	font-weight: 300;
+	font-size: 21px;
+	line-height: 21px;
 	letter-spacing: 0.07em;
 	z-index: -1;
 }
@@ -2418,6 +2450,19 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 .recommended_by_steam_labs_ctn .btnv6_white_transparent { 
 		z-index: 10;
 }
+
+
+.recommended_by_steam_labs_ctn .btnv6_white_transparent { 
+		float: right;
+}
+
+.recommended_by_steam_labs_ctn.home_ctn.ir_ctn .btnv6_white_transparent { 
+		margin-top: 26px;
+}
+
+.community_recommendations_by_steam_labs_ctn .carousel_container {
+	margin-bottom: 10px;
+	}
 
 .recommended_by_steam_labs_ctn .btn_uppercase > span {
 			font-family: "Motiva Sans", Sans-serif;
@@ -2449,23 +2494,31 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 /* Community Recommendations widget */
 
 .community_recommendations_by_steam_labs_ctn h2 {
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 	color: #ffffff66;
 }
 
 .community_recommendations_by_steam_labs_ctn h1 {
 	text-transform: uppercase;
-	color: #eee;
+	color: #7392d8;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
 		;
 	font-style: normal;
-	font-weight: 400;
-	font-size: 24px;
-	line-height: 30px;
+	font-weight: 300;
+	font-size: 21px;
+	line-height: 36px;
 	letter-spacing: 0.07em;
 	z-index: -1;
+}
+
+.community_recommendations_by_steam_labs_ctn h1 {
+	margin-bottom: -8px;
+}
+
+.community_recommendations_by_steam_labs_ctn #community_recommendations_preferences_last_updated {
+	font-size: 14px;
 }
 
 .community_recommendation_app {
@@ -2638,6 +2691,190 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 	overflow-wrap: break-word;
 	overflow: hidden;
 }
+
+/* Deep Dive widget */
+
+.recommended_by_deep_dive_ctn {
+	position: relative;
+	overflow: visible;
+}
+
+.deep_dive_white_button_ctn {
+	 width:940px;
+	 left:0;
+	 text-align:right;
+}
+
+.deep_dive_white_box {
+	margin-bottom:7px;
+}
+
+.deep_dive_search_suggest {
+	left:43px;
+	top:120px;
+}
+
+.deep_dive_container {
+	position: relative;
+	width: 940px;
+	height: 160px;
+}
+
+.deep_dive_gradient_container {
+	position: absolute;
+	left:0px;
+	top:0px;
+	bottom:0px;
+	right:0px;
+	z-index:1;
+}
+
+.deep_dive_gradient_1 {
+	width:100%;
+	height:100%;
+	background: linear-gradient(101.27deg, #eeeeee -2.19%, rgba(196, 196, 196, 0) 60.92%);
+	position:absolute;
+}
+
+.deep_dive_gradient_2 {
+	width:100%;
+	height:100%;
+	background: linear-gradient(173.61deg, rgba(30, 235, 173, 0.63) 8.41%, rgba(3, 20, 36, 0) 103.62%);
+	opacity: 0.75;
+	transform: rotate(180deg);
+	position:absolute;
+}
+
+.deep_dive_gradient_3 {
+	width:100%;
+	height:100%;
+	background: linear-gradient(173.36deg, #2C5F8D 13.48%, rgba(3, 20, 36, 0) 115.68%);
+	opacity: 0.8;
+	position:absolute;
+}
+
+.deep_dive_capsule_container_container {
+	overflow:hidden;
+}
+
+.deep_dive_capsule_container {
+	width: 1400px;
+	height: 160px;
+	transform: rotate(-4deg);
+	position:relative;
+	top: -68px;
+	left: -40px;
+}
+
+.deep_dive_capsule_container img {
+	margin: -2px;
+	height:155px;
+}
+
+.deep_dive_capsule {
+	width:33%;
+	margin:-2px;
+}
+
+.deep_dive_text {
+	font-family: Motiva Sans;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	color: #060606;
+}
+
+.deep_dive_top_text {
+	position:absolute;
+	z-index:2;
+	top: -34px;
+  color: #7392d8;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 21px;
+	line-height: 30px;
+	letter-spacing: 0.07em;
+
+}
+
+.deep_dive_bottom_text {
+	position:absolute;
+	z-index:2;
+	left:60px;
+	bottom:14px;
+	font-size:12px;
+	line-height:14px;
+}
+
+.deep_dive_container_link {
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:2;
+}
+
+.deep_dive_searchbox{
+	position:absolute;
+	z-index:2;
+	left:30px;
+	top:50px;
+	width: 466px;
+	height: 57px;
+	background: rgba(0, 0, 0, 0.7);
+	border-radius: 20px;
+}
+
+.deep_dive_search_button {
+	display:inline-block;
+	position:relative;
+	left:430px;
+	width: 57px;
+	height: 57px;
+	background: #2587E6;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+}
+
+.deep_dive_search_button_icon {
+	position:absolute;
+	left:12px;
+	top:18px;
+}
+
+.deep_dive_omni_ctn {
+	position:relative;
+}
+
+.deep_dive_search_text {
+	display:inline-block;
+	position:relative;
+	left:-35px;
+	bottom:18px;
+	width: 395px;
+	height: 91px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 33px;
+	line-height: 57px;
+	color: rgba(255, 255, 255, 0.5);
+	text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+	text-overflow: ellipsis;
+	white-space:nowrap;
+	overflow: hidden;
+	font-style:italic;
+	border:0px;
+	background-color:transparent;
+	outline-width:0;
+}
+
 
 /* Discovery queue widget */
 

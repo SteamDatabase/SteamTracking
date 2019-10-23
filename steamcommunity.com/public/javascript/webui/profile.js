@@ -622,7 +622,8 @@
       (c[(c.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
       (c[(c.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (c[(c.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-      (c[(c.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent");
+      (c[(c.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
+      (c[(c.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral");
     var g, w;
     i.k_EOtherEvent,
       i.k_EGameEvent,
@@ -654,7 +655,8 @@
       i.k_EBetaReleaseEvent,
       i.k_EFreeTrial,
       i.k_ESeasonRelease,
-      i.k_ECrosspostEvent;
+      i.k_ECrosspostEvent,
+      i.k_EInGameEventGeneral;
     ((w = g || (g = {}))[(w.k_ELaunchSource_None = 0)] =
       "k_ELaunchSource_None"),
       (w[(w.k_ELaunchSource_2ftLibraryDetails = 100)] =
@@ -2435,6 +2437,7 @@
                   t.availscreenheight &&
                   (s.push("screenavailwidth=" + t.availscreenwidth),
                   s.push("screenavailheight=" + t.availscreenheight))),
+              t.strVROverlayKey && s.push("vrOverlayKey=" + t.strVROverlayKey),
               t.strRestoreDetails &&
                 s.push("restoredetails=" + t.strRestoreDetails),
               s && (a += "?" + s.join("&"));

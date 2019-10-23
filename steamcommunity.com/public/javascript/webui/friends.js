@@ -3344,7 +3344,7 @@
       })();
     function s(e) {
       if (r.a.isCancel(e))
-        return { strErrorMsg: "Action Cancelled", errorCode: 52 };
+        return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
       if (void 0 !== e.response && "object" == typeof e.response.data) {
         if ("msg" in e.response.data)
           return {
@@ -5051,7 +5051,8 @@
       (a[(a.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
       (a[(a.k_EFreeTrial = 31)] = "k_EFreeTrial"),
       (a[(a.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-      (a[(a.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent");
+      (a[(a.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
+      (a[(a.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral");
     var y, C;
     r.k_EOtherEvent,
       r.k_EGameEvent,
@@ -5083,7 +5084,8 @@
       r.k_EBetaReleaseEvent,
       r.k_EFreeTrial,
       r.k_ESeasonRelease,
-      r.k_ECrosspostEvent;
+      r.k_ECrosspostEvent,
+      r.k_EInGameEventGeneral;
     ((C = y || (y = {}))[(C.k_ELaunchSource_None = 0)] =
       "k_ELaunchSource_None"),
       (C[(C.k_ELaunchSource_2ftLibraryDetails = 100)] =
@@ -6831,7 +6833,8 @@
       CloseButton: "partnereventshared_CloseButton_1sshi",
       HalfColumn: "partnereventshared_HalfColumn_iCcAr",
       ThemedCtn: "partnereventshared_ThemedCtn_2jzrF",
-      Halloween: "partnereventshared_Halloween_juiix"
+      Halloween: "partnereventshared_Halloween_juiix",
+      tooltip_Ctn: "partnereventshared_tooltip_Ctn_1JlN_"
     };
   },
   "3/mw": function(e, t, n) {
@@ -11725,7 +11728,7 @@
   "9Cmb": function(e, t, n) {
     "use strict";
     var p = n("oh5H");
-    n("mrSG"), n("q1tI"), n("XaMz");
+    n("mrSG"), n("q1tI"), n("XaMz"), n("0N1H"), n("1n9R");
     function o(e, t, n, o) {
       void 0 === t && (t = 2),
         void 0 === n && (n = !0),
@@ -12099,6 +12102,8 @@
       StoreSaleWidgetContainer:
         "broadcastwidgets_StoreSaleWidgetContainer_3-tam",
       Bundle: "broadcastwidgets_Bundle_1chCl",
+      WishList: "broadcastwidgets_WishList_bSzoR",
+      Action: "broadcastwidgets_Action_2Wm1-",
       StoreSaleWidgetContainer_mini:
         "broadcastwidgets_StoreSaleWidgetContainer_mini_1ROIM",
       StoreSaleWidgetContainer_column:
@@ -12120,10 +12125,6 @@
       StoreSaleWidgetShortDesc_mini:
         "broadcastwidgets_StoreSaleWidgetShortDesc_mini_2Jm21",
       StoreSaleWidgetRight: "broadcastwidgets_StoreSaleWidgetRight_2Bwn2",
-      StoreActionWidgetContainer:
-        "broadcastwidgets_StoreActionWidgetContainer_3nrCI",
-      WishList: "broadcastwidgets_WishList_bSzoR",
-      Action: "broadcastwidgets_Action_2Wm1-",
       StoreSalePriceActionWidgetContainer:
         "broadcastwidgets_StoreSalePriceActionWidgetContainer_1uPIp",
       StoreSaleDiscountBox: "broadcastwidgets_StoreSaleDiscountBox_1Hb4z",
@@ -12143,6 +12144,7 @@
   Au4U: function(e, t, n) {
     e.exports = {
       BodyNoScroll: "modals_BodyNoScroll_37Qxr",
+      BodyNoScrollDialog: "modals_BodyNoScrollDialog_2E4Pq",
       OverlayModal: "modals_OverlayModal_2n8Ob"
     };
   },
@@ -18849,6 +18851,9 @@
                         o =
                           "#RemotePlay_ErrorInviteFailed_TransportUnavailable";
                         break;
+                      case 13:
+                        o = "#RemotePlay_ErrorInviteFailed_Invisible";
+                        break;
                       default:
                         o = "#RemotePlay_ErrorInviteFailed_Failed";
                     }
@@ -20507,19 +20512,21 @@
                 r.a.createElement(a.gb, { className: c.a.blur })
               )
             );
-            return (
-              "center" == this.props.position &&
-                (t = r.a.createElement(
+            return r.a.createElement(
+              "div",
+              {
+                className:
+                  "center" == this.props.position
+                    ? c.a.throbber_center_wrapper
+                    : ""
+              },
+              t,
+              Boolean(this.props.string) &&
+                r.a.createElement(
                   "div",
-                  { className: c.a.throbber_center_wrapper },
-                  t,
-                  r.a.createElement(
-                    "div",
-                    { className: c.a.ThrobberText },
-                    this.props.string
-                  )
-                )),
-              t
+                  { className: c.a.ThrobberText },
+                  this.props.string
+                )
             );
           }),
           e
@@ -22480,6 +22487,7 @@
                   t.availscreenheight &&
                   (c.push("screenavailwidth=" + t.availscreenwidth),
                   c.push("screenavailheight=" + t.availscreenheight))),
+              t.strVROverlayKey && c.push("vrOverlayKey=" + t.strVROverlayKey),
               t.strRestoreDetails &&
                 c.push("restoredetails=" + t.strRestoreDetails),
               c && (s += "?" + c.join("&"));
@@ -24320,7 +24328,7 @@
               return Object(s.e)(this, function(e) {
                 return Object(b.a)("RemotePlay.BCanAcceptInviteForGame")
                   ? [2, SteamClient.RemotePlay.BCanAcceptInviteForGame(t, n)]
-                  : [2, !1];
+                  : [2, !0];
               });
             });
           }),
@@ -25829,7 +25837,7 @@
                       (t = {
                         appid: this.m_appid,
                         feature: r,
-                        cc: p.b.COUNTRY,
+                        cc: p.b.COUNTRY || "US",
                         l: p.b.LANGUAGE
                       }),
                         (n =
@@ -27154,10 +27162,7 @@
                             return Object(G.g)(e, t.capsule_link);
                           }
                         },
-                        I.createElement("img", {
-                          className: r,
-                          src: n ? t.tiny_capsule : t.capsule
-                        })
+                        I.createElement("img", { className: r, src: t.capsule })
                       )
                     ),
                     I.createElement(
@@ -27265,12 +27270,7 @@
                     )
                   : null
               ),
-              Boolean(i) &&
-                I.createElement(
-                  "div",
-                  null,
-                  I.createElement(ve, { appid: this.props.appid })
-                ),
+              Boolean(i) && I.createElement(ve, { appid: this.props.appid }),
               I.createElement(be, { appid: this.props.appid })
             );
           }),
@@ -31885,9 +31885,9 @@
     "use strict";
     var o = n("mrSG"),
       i = n("q1tI"),
-      r = n.n(i),
-      a = n("okNM"),
-      s = n("1VtQ"),
+      s = n.n(i),
+      r = n("okNM"),
+      a = n("1VtQ"),
       c = n("8o0Y"),
       l = n("tY0L"),
       p = n("e2SU"),
@@ -31904,16 +31904,21 @@
           (t.prototype.OnEmoticonClick = function(e) {
             var t = this.props,
               n = t.emoticonStore,
-              o = t.SetUIDisplayPref;
+              o = t.SetUIDisplayPref,
+              i = t.contextOptions;
             Object(c.a)(
-              r.a.createElement(l.b, {
+              s.a.createElement(l.b, {
                 emoticonStore: this.props.emoticonStore,
                 emoticonHoverStore: this.props.emoticonHoverStore,
                 strFlairGroupID: this.props.strFlairGroupID,
                 OnSelected: this.props.OnEmoticonSelected
               }),
-              e.currentTarget,
-              { bOverlapHorizontal: !0, bPreferPopLeft: !0, bPreferPopTop: !0 }
+              e,
+              i || {
+                bOverlapHorizontal: !0,
+                bPreferPopLeft: !0,
+                bPreferPopTop: !0
+              }
             ),
               this.BHaveUnseenEmoticons() &&
                 o &&
@@ -31929,38 +31934,49 @@
           (t.prototype.render = function() {
             var e = this.props,
               t = e.disabled,
-              n = [e.className, h.a.chatSubmitButton, h.a.EmoticonPickerButton],
-              o = !1;
+              n = e.className,
+              o = e.ttip,
+              i = e.useImg,
+              r = [n],
+              a = !1;
             return (
-              t ? n.push("disabled") : this.BHaveUnseenEmoticons() && (o = !0),
-              this.props.useImg
-                ? r.a.createElement("img", {
-                    src: this.props.useImg,
-                    onClick: this.OnEmoticonClick,
-                    title:
-                      this.props.title ||
-                      Object(u.c)("#ChatEntryButton_Emoticon")
-                  })
-                : r.a.createElement(
+              t ? r.push("disabled") : this.BHaveUnseenEmoticons() && (a = !0),
+              o && r.push("ttip"),
+              i
+                ? s.a.createElement(
+                    "span",
+                    { onClick: this.OnEmoticonClick },
+                    s.a.createElement("img", {
+                      src: this.props.useImg,
+                      className: m.a.apply(void 0, r),
+                      title:
+                        this.props.title ||
+                        Object(u.c)("#ChatEntryButton_Emoticon"),
+                      "data-tooltip-text": o
+                    })
+                  )
+                : (r.push(h.a.chatSubmitButton, h.a.EmoticonPickerButton),
+                  s.a.createElement(
                     "button",
                     {
-                      className: m.a.apply(void 0, n),
+                      className: m.a.apply(void 0, r),
                       type: "button",
                       onClick: this.OnEmoticonClick,
                       title:
                         this.props.title ||
                         Object(u.c)("#ChatEntryButton_Emoticon"),
-                      disabled: t
+                      disabled: t,
+                      "data-tooltip-text": o
                     },
-                    this.props.buttonIcon || r.a.createElement(p.p, null),
-                    o && r.a.createElement(l.c, null)
-                  )
+                    this.props.buttonIcon || s.a.createElement(p.p, null),
+                    a && s.a.createElement(l.c, null)
+                  ))
             );
           }),
-          Object(o.c)([s.a], t.prototype, "OnEmoticonClick", null),
-          (t = Object(o.c)([a.a], t))
+          Object(o.c)([a.a], t.prototype, "OnEmoticonClick", null),
+          (t = Object(o.c)([r.a], t))
         );
-      })(r.a.Component);
+      })(s.a.Component);
     t.a = f;
   },
   "S+nL": function(e, t) {
@@ -57645,7 +57661,7 @@
                   ),
                   (t = !1));
               }
-            return d.createElement("div", null, e);
+            return d.createElement("div", { className: C.HeightLimited }, e);
           }),
           (t = Object(o.c)([i.a], t))
         );
@@ -68876,6 +68892,12 @@
         }
         return (
           Object(l.d)(t, e),
+          (t.prototype.componentDidUpdate = function() {
+            var e = this.props.ModalManager.modals;
+            e && e.length
+              ? document.body.classList.add(f.a.BodyNoScrollDialog)
+              : document.body.classList.remove(f.a.BodyNoScrollDialog);
+          }),
           (t.prototype.render = function() {
             var e = this.props.ModalManager.modals;
             if (!e || !e.length) return null;
@@ -75955,6 +75977,7 @@ and limitations under the License.
       SharedInputContainer: "remoteplay_SharedInputContainer_3mLvF",
       StreamPauseOptionLabel: "remoteplay_StreamPauseOptionLabel_3lNx_",
       VerticalContainer: "remoteplay_VerticalContainer_JlcJr",
+      HeightLimited: "remoteplay_HeightLimited_3YWYC",
       AlignRight: "remoteplay_AlignRight_33Dx4",
       Width100: "remoteplay_Width100_2pizL",
       GroupingBox: "remoteplay_GroupingBox_3RQlG",
@@ -79497,7 +79520,8 @@ and limitations under the License.
         "currentTarget" in e ? e.currentTarget.ownerDocument.defaultView : e),
         "undefined" != typeof SteamClient && void 0 !== SteamClient.WebChat
           ? SteamClient.WebChat.OpenURLInClient(t, r || 0, !!i)
-          : 0 == t.indexOf("steam://")
+          : 0 == t.indexOf("steam://") &&
+            0 != t.indexOf("steam://remoteplay/connect")
           ? (o.location.href = t)
           : o.open(
               t,

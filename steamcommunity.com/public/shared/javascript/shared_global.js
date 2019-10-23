@@ -2208,7 +2208,6 @@ CAjaxInfiniteScrollingControls.prototype.OnResponseRenderResults = function( tra
 		elResults.insert( response.results_html );
 
 		this.m_rgDynamicData = ( response.dynamic_data ) ? response.dynamic_data : null;
-		console.log( 'adil' , this.m_rgDynamicData );
 
 		if ( this.m_fnResponseHandler != null )
 		{

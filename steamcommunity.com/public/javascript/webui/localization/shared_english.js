@@ -117,6 +117,7 @@ LocalizationReady("shared", "english", {
   EventBrowse_MoreEventsTitle: "More events from %1$s",
   EventBrowse_MoreEventsBtn: "View All",
   EventBrowse_RecentUpdates: "Recent Updates",
+  EventBrowse_RecentEvents: "Recent Events & Announcements",
 
   EventCalendar_Title: "events",
   EventCalendar_SubTitle:
@@ -210,6 +211,7 @@ LocalizationReady("shared", "english", {
     "To use this feature, you first need to sign into Steam",
   EventDisplay_Share_CommentMigrationInProcess:
     "Discussion for this event are queued to be migrated to the events system. They are temporarily unaccessible. Please come back later.",
+  EventDisplay_Share_OpenActivityFeed: "Open my activity feed",
 
   EventDisplay_AreYouSure:
     "Are you sure you want to delete this event (%1$s)? This action cannot be undone.",
@@ -261,6 +263,7 @@ LocalizationReady("shared", "english", {
   EventDashBoard_SummaryStats_Title: "Total Unique Impressions and Views",
   EventDashBoard_SummaryStats_Desc:
     "(Beta) These are impressions and reads for your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
+  EventDashBoard_SummaryStats_Link: "Click here for more details.",
   EventDashBoard_Summary_LibraryHome_Shown: "Library Home Page Impressions:",
   EventDashBoard_Summary_LibraryHome_Read: "Library Home Page Reads:",
   EventDashBoard_Summary_AppDetailSpotlight_Shown:

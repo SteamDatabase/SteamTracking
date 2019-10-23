@@ -822,6 +822,12 @@ Data.getDetailsMulti = function(appids,callback) {
 	});
 };
 Data.request = function(url,params,onData,onError) {
+	var href = window.location.href;
+	var hrefBits = href.split("/");
+	var labsIndex = hrefBits.indexOf("labs");
+	hrefBits.splice(labsIndex + 1,hrefBits.length);
+	href = hrefBits.join("/");
+	url = href + "/" + url;
 	var query = new haxe_Http(url);
 	var _g = 0;
 	while(_g < params.length) {
@@ -1575,7 +1581,6 @@ Main.renderBoxes = function(sink,justThese) {
 			var i = _g1++;
 			indeces.push(i);
 		}
-		console.log("indeces = " + Std.string(indeces));
 	}
 	var _g2 = 0;
 	while(_g2 < indeces.length) {
@@ -1725,30 +1730,21 @@ Main.firstLoadApp = function(appid) {
 		while(apps.indexOf("") != -1) HxOverrides.remove(apps,"");
 		var history = apps.slice();
 		var states = [];
-		var _g1 = 0;
-		var _g = history.length;
-		while(_g1 < _g) {
-			var i = _g1++;
-			var focused = history[i];
-			var crumbs = history.slice(i + 1,history.length);
-			var state = Main.getCurrentHistoryPath(focused,crumbs);
-			states.push(state);
-		}
 		states.push(Main.originalHistory);
-		var _g2 = 0;
-		while(_g2 < states.length) {
-			var state1 = states[_g2];
-			++_g2;
-			window.history.pushState(null,"",state1);
+		var _g = 0;
+		while(_g < states.length) {
+			var state = states[_g];
+			++_g;
+			window.history.pushState(null,"",state);
 		}
 		currApp = apps.shift();
 		Main.breadcrumbs = apps.slice();
 		Main.breadcrumbs.reverse();
 		Main.breadcrumbs.unshift("");
-		var _g11 = 0;
-		var _g3 = Main.breadcrumbs.length;
-		while(_g11 < _g3) {
-			var i1 = _g11++;
+		var _g1 = 0;
+		var _g2 = Main.breadcrumbs.length;
+		while(_g1 < _g2) {
+			var i = _g1++;
 			Main.breadcrumbBoxEntries.push([]);
 			Main.breadcrumbTitles.push("");
 		}
@@ -2426,12 +2422,10 @@ Main.handleMatches = function(appid,rawMatches,callback) {
 	}
 };
 Main.updateMatches = function(appid,rawMatches,column) {
-	console.log("updateMatches(" + appid + "," + column + ")");
 	if(rawMatches == null) {
 		console.log("ERROR: couldn't get matches for (" + appid + ")");
 	} else {
 		var recs = Main.narrowMatches(rawMatches.map,Main.getPreviousAppIds(),column);
-		console.log("recs = " + Std.string(recs));
 		var colIds;
 		switch(column) {
 		case 0:
@@ -2446,7 +2440,6 @@ Main.updateMatches = function(appid,rawMatches,column) {
 		default:
 			colIds = [0,3,6];
 		}
-		console.log("colIds = " + Std.string(colIds));
 		var count = 0;
 		if(recs != null) {
 			Main.lastMatchCount = recs.appids.length;
@@ -2464,7 +2457,6 @@ Main.updateMatches = function(appid,rawMatches,column) {
 				Main.boxEntries[colId].appid = null;
 				Main.setBoxDetails(Main.boxEntries[colId],null);
 				Main.boxEntries[colId].recommender = "";
-				console.log("CLEARING : " + colId);
 			}
 			var lookup_0 = 0;
 			var lookup_1 = 3;
@@ -2491,18 +2483,15 @@ Main.updateMatches = function(appid,rawMatches,column) {
 					while(_g2 < 9) {
 						var j = _g2++;
 						if(colIds.indexOf(j) != -1) {
-							console.log("ignore " + j);
 							continue;
 						}
 						var otherappid = Main.boxEntries[j].appid;
-						console.log("consider " + j + " = " + otherappid);
 						if(appid2 == otherappid) {
 							arrIndex = j;
 							break;
 						}
 					}
 					if(arrIndex != -1) {
-						console.log("MATCHED @ " + arrIndex + " FOR " + appid2 + " SO SKIP");
 						continue;
 					}
 					var boxIndex = colIds[i];
@@ -2510,7 +2499,6 @@ Main.updateMatches = function(appid,rawMatches,column) {
 					entry.appid = appid2;
 					Main.setBoxDetails(entry,detail,Main.focusedEntry);
 					entry.recommender = Main.columnHeaders[column];
-					console.log("Writing (" + appid2 + ") to position " + i + " = [" + colIds[i] + "]");
 					++i;
 				}
 			}
