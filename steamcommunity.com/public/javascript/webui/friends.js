@@ -11727,8 +11727,33 @@
   },
   "9Cmb": function(e, t, n) {
     "use strict";
-    var p = n("oh5H");
-    n("mrSG"), n("q1tI"), n("XaMz"), n("0N1H"), n("1n9R");
+    var p = n("oh5H"),
+      i = (n("mrSG"),
+      n("q1tI"),
+      n("XaMz"),
+      n("0N1H"),
+      n("1n9R"),
+      [
+        "h1",
+        "b",
+        "u",
+        "i",
+        "img",
+        "strike",
+        "spoiler",
+        "noparse",
+        "url",
+        "list",
+        "olist",
+        "quote",
+        "code",
+        "table",
+        "tr",
+        "td",
+        "th",
+        "previewyoutube",
+        "looping_media"
+      ]);
     function o(e, t, n, o) {
       void 0 === t && (t = 2),
         void 0 === n && (n = !0),
@@ -11775,7 +11800,7 @@
         174 == e
       );
     }
-    function i(e) {
+    function r(e) {
       for (var t = !1, n = !1, o = !0, i = 0; i < e.length; i++) {
         var r = e.charCodeAt(i);
         if (
@@ -11791,15 +11816,15 @@
       }
       return !o && t;
     }
-    function r(e) {
+    function s(e) {
       var t = e.charCodeAt(0);
       return 65 <= t && t <= 90;
     }
-    function s(e) {
+    function c(e) {
       if (e.length <= 2) return e;
-      for (var t = e.charAt(1), n = r(t), o = 2; o < e.length; o++) {
+      for (var t = e.charAt(1), n = s(t), o = 2; o < e.length; o++) {
         var i = e.charAt(o);
-        if (n || !r(i)) {
+        if (n || !s(i)) {
           if (" " == i) {
             0 < (i = e.charAt(o + 1)).length && (t = i);
             break;
@@ -11808,7 +11833,7 @@
       }
       return e.charAt(0) + t;
     }
-    function c(e) {
+    function l(e) {
       return e
         ? DOMParser
           ? new DOMParser().parseFromString(e, "text/html").documentElement
@@ -11816,7 +11841,12 @@
           : e
         : "";
     }
-    function l(e) {
+    function u(e, t, n) {
+      void 0 === t && (t = i), void 0 === n && (n = " ");
+      var o = "\\[\\/?(?:" + t.join("|") + ")*?.*?\\]";
+      return e.replace(new RegExp(o, "gi"), n);
+    }
+    function m(e) {
       if (e.startsWith("[emoticon")) {
         var t = e.match(/^(?:\[emoticon\][^\[]+\[\/emoticon\]\s*)+$/);
         if (t && t.length) {
@@ -11830,16 +11860,19 @@
       return o;
     }),
       n.d(t, "d", function() {
-        return i;
+        return r;
       }),
       n.d(t, "b", function() {
-        return s;
-      }),
-      n.d(t, "c", function() {
         return c;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "c", function() {
         return l;
+      }),
+      n.d(t, "f", function() {
+        return u;
+      }),
+      n.d(t, "a", function() {
+        return m;
       });
   },
   "9Eit": function(e, t, n) {
@@ -27191,7 +27224,7 @@
                         I.createElement(
                           "div",
                           { className: a },
-                          Object(oe.c)(t.short_desc)
+                          Object(oe.f)(Object(oe.c)(t.short_desc))
                         ),
                       I.createElement(_e, {
                         appid: t.appid,

@@ -853,6 +853,7 @@ LocalizationReady("shared", "english", {
   Sale_BundleSave: "Includes %1$s items.",
   Sale_PackageSave: "Includes %1$s items.",
   Sale_ShowContents: "Show contents",
+  Sale_ShowMore: "Show more",
   Sale_OnWishlist: "On Wishlist",
   Sale_InLibrary: "In Library",
   Sale_HiddenItems: "%1$s item(s) are hidden due to %2$s",
@@ -863,5 +864,10 @@ LocalizationReady("shared", "english", {
   Sale_default_label_FreeToPlay: "Free to Play",
   Sale_default_label_HorrorGames: "Horror Games",
   Sale_default_label_HorrorVR: "Horror VR",
-  Sale_default_label_HorrorFreeToPlay: "Horror Free to Play"
+  Sale_default_label_HorrorFreeToPlay: "Horror Free to Play",
+  Sale_default_label_HalloweenEventsHorror: "Halloween Events in Horror Games",
+  Sale_default_label_HalloweenEventsNonHorror:
+    "Halloween Events in Non-Horror Games",
+  Sale_default_label_MoreHalloweenEventsNonHorror:
+    "More Halloween Events in Non-Horror Games"
 });
