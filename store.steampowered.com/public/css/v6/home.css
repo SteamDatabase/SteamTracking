@@ -3116,6 +3116,8 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 
 .home_page_content.special_offers {
 	margin-bottom: 20px;
+	position: relative;
+	z-index: 1;
 }
 
 /* Fix left when gutter is visible */
@@ -3744,8 +3746,7 @@ background: -webkit-linear-gradient( left, rgba( 171, 218, 244, 0) 5%,rgba( 171,
 	transform: translateY(-14px);
 }
 
-.recommended_by_steam_labs_ctn .carousel_container .arrow.left,
-.recommended_by_steam_labs_ctn .carousel_container .arrow.right {
+.basic_caps_carousel.carousel_container .arrow {
 	transform: translateY(-34px);
 }
 
@@ -4384,4 +4385,55 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 {
 	opacity: 0.5;
 	transition: opacity 0.25s 0.1s;
+}
+
+.home_ctn.top_new_releases
+{
+	overflow: visible;
+}
+
+/* 1080 x 350 */
+.top_new_releases_background
+{
+	position: absolute;
+	top: -46px;
+	left: -70px;
+	width: 1080px;
+	height: 350px;
+}
+
+.top_new_releases_banner_ctn
+{
+	position: relative;
+	margin-bottom: 16px;
+}
+
+.top_new_releases_banner_click
+{
+	position: relative;
+	z-index: 1;
+}
+
+.top_new_releases_banner_click > img
+{
+	display: block;
+	width: 100%;
+	transition: filter 0.25s;
+}
+
+.top_new_releases_banner_click > img:hover
+{
+	filter: brightness( 130% );
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .top_new_releases_background
+	{
+		top: -47.5%;
+		left: -7.45%;
+		width: 114.9%;
+		height: 360.8%;
+		background-size: contain;
+	}
 }
