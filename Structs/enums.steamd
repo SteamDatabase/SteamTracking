@@ -479,6 +479,7 @@ enum EClanEventType
 	FreeTrial = 31;
 	SeasonRelease = 32;
 	CrosspostEvent = 34;
+	InGameEventGeneral = 35;
 }
 
 enum EClanImageFileType
@@ -674,6 +675,8 @@ enum EDiscoveryQueueExperimentalCohort
 	None = 0;
 	RecommendedForYouMay2019 = 1;
 	ExperimentalRecommenderMarch2019 = 2;
+	Sept2019Experiment = 3;
+	Sept2019ComingSoon = 4;
 }
 
 enum EDisplayStatus
@@ -826,6 +829,7 @@ enum EForceFeatureNotificationTargetSelection
 	PlaySomeCreatorApp = 256;
 	ExcludeAppOwner = 512;
 	AppWishList = 1024;
+	SteamworksPublishers = 2048;
 }
 
 enum EFraudReviewReason
@@ -850,6 +854,15 @@ enum EFriendRelationship
 	IgnoredFriend = 6;
 	Suggested_DEPRECATED = 7;
 	Max = 8;
+}
+
+enum EGetFriendsAppsActivityFlags
+{
+	ForceFreshQuery = 1;
+	ForgetAppHistory = 2;
+	NoMinimumFriendCount = 4;
+	AllowRepeats = 8;
+	IgnoreUnownedLimit = 16;
 }
 
 enum EHelpIssue
@@ -1390,6 +1403,7 @@ enum EMobileConfirmationType
 	MarketListing = 3;
 	FeatureOptOut = 4;
 	PhoneNumberChange = 5;
+	AccountRecovery = 6;
 }
 
 enum EMobileLogonState
@@ -1528,7 +1542,6 @@ enum EMsg
 	GMWriteStatsToSOS = 330;
 	GMGetServiceMethodRouting = 331;
 	GMGetServiceMethodRoutingResponse = 332;
-	GMConvertUserWallets = 333;
 	GMTestNextBuildSchemaConversion = 334;
 	GMTestNextBuildSchemaConversionResponse = 335;
 	ExpectShellRestart = 336;
@@ -2328,6 +2341,8 @@ enum EMsg
 	AMFundedPayment = 4418;
 	AMFundedPaymentResponse = 4419;
 	AMRequestPersonaUpdateForChatServer = 4420;
+	AMPerfectWorldPayment = 4421;
+	AMPerfectWorldPaymentResponse = 4422;
 	BasePSRange = 5000;
 	PSCreateShoppingCart = 5001;
 	PSCreateShoppingCartResponse = 5002;
@@ -3067,6 +3082,8 @@ enum EPartnerEventDisplayLocation
 	StoreAppPage = 3;
 	EventScroller = 4;
 	AppDetailsActivity = 5;
+	CommunityHub = 6;
+	StoreFrontPage = 7;
 }
 
 enum EPartnerLinkTrackingStoreLocation
@@ -3152,6 +3169,14 @@ enum EProductPageAction
 	AddsAnEmoticonToChat = 11;
 }
 
+enum EProductViewAction
+{
+	Visit = 0;
+	AddToWishlist = 1;
+	IgnoreNotInterested = 2;
+	AddToCart = 3;
+}
+
 enum EProfileCustomizationStyle
 {
 	Default = 0;
@@ -3221,40 +3246,41 @@ enum EProtoAppType
 
 enum EProtoClanEventType
 {
-	lanOtherEvent = 1;
-	lanGameEvent = 2;
-	lanPartyEvent = 3;
-	lanMeetingEvent = 4;
-	lanSpecialCauseEvent = 5;
-	lanMusicAndArtsEvent = 6;
-	lanSportsEvent = 7;
-	lanTripEvent = 8;
-	lanChatEvent = 9;
-	lanGameReleaseEvent = 10;
-	lanBroadcastEvent = 11;
-	lanSmallUpdateEvent = 12;
-	lanPreAnnounceMajorUpdateEvent = 13;
-	lanMajorUpdateEvent = 14;
-	lanDLCReleaseEvent = 15;
-	lanFutureReleaseEvent = 16;
-	lanESportTournamentStreamEvent = 17;
-	lanDevStreamEvent = 18;
-	lanFamousStreamEvent = 19;
-	lanGameSalesEvent = 20;
-	lanGameItemSalesEvent = 21;
-	lanInGameBonusXPEvent = 22;
-	lanInGameLootEvent = 23;
-	lanInGamePerksEvent = 24;
-	lanInGameChallengeEvent = 25;
-	lanInGameContestEvent = 26;
-	lanIRLEvent = 27;
-	lanNewsEvent = 28;
-	lanBetaReleaseEvent = 29;
-	lanInGameContentReleaseEvent = 30;
-	lanFreeTrial = 31;
-	lanSeasonRelease = 32;
-	lanSeasonUpdate = 33;
-	rosspostEvent = 34;
+	OtherEvent = 1;
+	GameEvent = 2;
+	PartyEvent = 3;
+	MeetingEvent = 4;
+	SpecialCauseEvent = 5;
+	MusicAndArtsEvent = 6;
+	SportsEvent = 7;
+	TripEvent = 8;
+	ChatEvent = 9;
+	GameReleaseEvent = 10;
+	BroadcastEvent = 11;
+	SmallUpdateEvent = 12;
+	PreAnnounceMajorUpdateEvent = 13;
+	MajorUpdateEvent = 14;
+	DLCReleaseEvent = 15;
+	FutureReleaseEvent = 16;
+	ESportTournamentStreamEvent = 17;
+	DevStreamEvent = 18;
+	FamousStreamEvent = 19;
+	GameSalesEvent = 20;
+	GameItemSalesEvent = 21;
+	InGameBonusXPEvent = 22;
+	InGameLootEvent = 23;
+	InGamePerksEvent = 24;
+	InGameChallengeEvent = 25;
+	InGameContestEvent = 26;
+	IRLEvent = 27;
+	NewsEvent = 28;
+	BetaReleaseEvent = 29;
+	InGameContentReleaseEvent = 30;
+	FreeTrial = 31;
+	SeasonRelease = 32;
+	SeasonUpdate = 33;
+	CrosspostEvent = 34;
+	InGameEventGeneral = 35;
 }
 
 enum EPublishedFileInappropriateProvider
@@ -3614,7 +3640,6 @@ enum EStoreDiscoveryQueueType
 	ComingSoon = 1;
 	Recommended = 2;
 	EveryNewRelease = 3;
-	RecommendedNeuralNet = 4;
 	MLRecommender = 5;
 	MAX = 6;
 }
@@ -3698,6 +3723,14 @@ enum ETransportError
 	SetupError = 102;
 	InternalError = 103;
 	NotSupported = 104;
+}
+
+enum EUCMFilePrivacyState
+{
+	Invalid = -1;
+	Private = 2;
+	FriendsOnly = 4;
+	Public = 8;
 }
 
 enum EUCMListType
@@ -3885,6 +3918,14 @@ enum IDerivationState
 	UP_TO_DATE = 0;
 	POSSIBLY_STALE = 1;
 	STALE = 2;
+}
+
+enum PartnerEventNotificationType
+{
+	Start = 0;
+	BroadcastStart = 1;
+	MatchStart = 2;
+	PartnerMaxType = 3;
 }
 
 enum ResponsiveWindowActiveView
