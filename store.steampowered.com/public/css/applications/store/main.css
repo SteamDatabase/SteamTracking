@@ -6214,6 +6214,9 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   color: rgba(255, 255, 255, 0.5);
   font-size: 13px; }
 
+.eventrow_OtherEvents_TextCtn_3-EtN.eventrow_OtherEvents_TextCtn_3-EtN {
+  box-sizing: content-box; }
+
 .eventrow_OtherEvents_TextTitle_2jc1D {
   font-size: 15px;
   color: #ffffff;
@@ -6668,16 +6671,27 @@ h4 {
 .eventbackfill_error_18okr {
   color: darkred; }
 
+.partnersaledisplay_SaleHeaderContainer_W4mvn {
+  display: flex;
+  margin: 0 auto;
+  max-width: 100vw;
+  align-items: center; }
+  @media screen and (max-width: 1200px) {
+    .partnersaledisplay_SaleHeaderContainer_W4mvn {
+      flex-wrap: wrap;
+      flex-direction: column-reverse; } }
+
 .partnersaledisplay_SaleSection_1cOoC {
-  margin-top: 10px;
   padding: 16px;
   max-width: 940px;
   border-radius: 19px;
-  margin: 0 auto; }
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; }
 
 .partnersaledisplay_SaleSectionHeader_1D0v6 {
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   font-size: 18px;
   color: #FFFFFF;
   margin-bottom: 10px;
@@ -6704,6 +6718,20 @@ h4 {
 
 .partnersaledisplay_SaleSectionSubtext_17Fnl {
   margin-bottom: 10px; }
+
+.partnersaledisplay_ShowContentsButton_2EjTW {
+  border-radius: 2px;
+  border: none;
+  padding: 4px;
+  display: inline-block;
+  cursor: pointer;
+  color: #67c1f5;
+  background: rgba(103, 193, 245, 0.2); }
+  .partnersaledisplay_ShowContentsButton_2EjTW:hover {
+    color: #fff;
+    background: #417a9b;
+    background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
+    background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%); }
 
 .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
   -webkit-transition: all .25s ease-in;
@@ -6964,6 +6992,14 @@ h4 {
 
 .carousel:hover .slide .legend {
   opacity: 1; }
+
+ {
+  /* Override default styles from react-responsive-carousel */
+  /* Override default styles from store */ }
+  .carousel .slide {
+    background: none; }
+  .slider {
+    background: none; }
 
 /* latin-ext */
 @font-face {
