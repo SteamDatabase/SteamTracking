@@ -1763,8 +1763,10 @@ function v_shuffle( rgArray )
 	return rgArray;
 }
 
+var g_bWaitingOnWebSocketRetry = false
 function SubscribeToPopularItemUpdates()
 {
+	g_bWaitingOnWebSocketRetry = false;
 	if ( !("WebSocket" in window) )
 	{
 		console.log( "No web socket support" );
@@ -1789,13 +1791,22 @@ function SubscribeToPopularItemUpdates()
 		{
 		}
 
-		setTimeout( SubscribeToPopularItemUpdates, cmsRetry );
+		if ( !g_bWaitingOnWebSocketRetry )
+		{
+			g_bWaitingOnWebSocketRetry = true;
+			setTimeout( SubscribeToPopularItemUpdates, cmsRetry );
+		}
 	};
 
 	socket.onclose = function() {
-		var cmsRetry = 90000 + Math.floor(Math.random() * 60000);
-		console.log( "WebSocket closed. Retry in " + cmsRetry + "ms." );
-		setTimeout( SubscribeToPopularItemUpdates, cmsRetry );
+		if ( !g_bWaitingOnWebSocketRetry )
+		{
+			g_bWaitingOnWebSocketRetry = true;
+
+			var cmsRetry = 90000 + Math.floor( Math.random() * 60000 );
+			console.log( "WebSocket closed. Retry in " + cmsRetry + "ms." );
+			setTimeout( SubscribeToPopularItemUpdates, cmsRetry );
+		}
 	};
 
 	socket.onmessage = function( oMessage ) {
