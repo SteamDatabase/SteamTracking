@@ -6453,15 +6453,16 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
       flex-direction: column-reverse; } }
 
 .partnersaledisplay_SaleSection_1cOoC {
-  margin-top: 10px;
   padding: 16px;
   max-width: 940px;
   border-radius: 19px;
-  margin: 0 auto; }
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; }
 
 .partnersaledisplay_SaleSectionHeader_1D0v6 {
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   font-size: 18px;
   color: #FFFFFF;
   margin-bottom: 10px;

@@ -49473,7 +49473,8 @@
               l,
               {
                 className: Db.a.OtherEvents_EventCtn + " " + Db.a.HoversEnabled,
-                to: M,
+                to: (m.b.IN_CLIENT ? "steam://openurl/" : "") + M,
+                target: m.b.IN_CLIENT ? void 0 : "_blank",
                 href: o ? null : M,
                 onClick: this.props.onClick || void 0
               },
@@ -49668,7 +49669,8 @@
                     style: {
                       transform: "scaleX(-1)",
                       cursor: "pointer",
-                      zIndex: 1
+                      zIndex: 1,
+                      width: "100px"
                     }
                   })
                 ),
@@ -49690,7 +49692,7 @@
                       alignItems: "center",
                       position: "absolute",
                       top: 0,
-                      right: "-10px",
+                      right: "-30px",
                       height: "100%"
                     }
                   },
@@ -49702,7 +49704,8 @@
                     style: {
                       position: "absolute",
                       cursor: "pointer",
-                      zIndex: 1
+                      zIndex: 1,
+                      width: "100px"
                     }
                   })
                 ),
@@ -49751,8 +49754,8 @@
                 maxWidth: "100vw",
                 maxHeight: "100vw"
               },
-              width: "750",
-              height: "750"
+              width: "600",
+              height: "600"
             });
           }),
           t
@@ -60815,7 +60818,7 @@
                               4,
                               wd.GetLatestPartnerEvents(
                                 q.a.CancelToken.source(),
-                                1,
+                                0,
                                 200,
                                 null,
                                 [this.state.eventTagToSearch]
