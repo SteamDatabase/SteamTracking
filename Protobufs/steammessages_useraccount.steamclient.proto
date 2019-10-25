@@ -114,6 +114,7 @@ message CEmbeddedClient_AuthorizeCurrentDevice_Request {
 	optional fixed64 steamid = 1;
 	optional uint32 appid = 2;
 	optional string device_info = 3;
+	optional uint32 deviceid = 4;
 }
 
 message CEmbeddedClient_Token {

@@ -138,6 +138,10 @@ body.modals_BodyNoScroll_32ZiC {
   overflow-y: hidden;
   height: 100vh; }
 
+body.modals_BodyNoScrollDialog_105OB {
+  overflow-y: hidden;
+  height: 100vh; }
+
 .modals_OverlayModal_1yDps {
   position: fixed;
   top: 0;
@@ -169,6 +173,41 @@ body.modals_BodyNoScroll_32ZiC {
 
 .uninstalldialog_UninstallError_2n_P7 {
   margin-top: 20px; }
+
+.durationcontroldialog_DurationControlDialog_3iEiQ {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.durationcontroldialog_TimerContainer_2j4TN {
+  position: absolute;
+  top: 1em;
+  left: 1em; }
+
+.durationcontroldialog_TimerDisplay_2M3Zm {
+  height: 2em;
+  width: 2em;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50%; }
+
+.durationcontroldialog_TimerText_25RpV {
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  text-align: center; }
+
+.durationcontroldialog_InfoContainer_1rF2O {
+  width: 50%;
+  padding-top: 20vw;
+  vertical-align: middle; }
+
+.durationcontroldialog_InfoContainer_1rF2O div {
+  color: white;
+  text-align: center;
+  font-size: 2vw;
+  line-height: 4vw;
+  user-select: none; }
 
 .savecollectiondialog_CollectionSummary_1M6bF {
   padding: 12px 20px 0px;
@@ -1656,6 +1695,9 @@ body.modals_BodyNoScroll_32ZiC {
   flex-wrap: wrap;
   justify-content: flex-end; }
 
+button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeButton_i7jBC {
+  padding: 0px 10px; }
+
 /* stylelint-disable */
 
 /* stylelint-enable */
@@ -1918,7 +1960,9 @@ body.modals_BodyNoScroll_32ZiC {
   transition: all 0.2s ease-out;
   cursor: pointer; }
   .appactionbutton_ButtonChild_2AzIX.appactionbutton_StreamingSelector_2q-gZ {
-    background: #235ecf; }
+    background: linear-gradient(to right, #235ecf 0%, #235ecf 60%);
+    background-position: 0%;
+    background-size: 330% 100%; }
   :not(.appactionbutton_Disabled_1Pb6P) > .appactionbutton_ButtonChild_2AzIX svg {
     fill: #cbeeff;
     transition: all 0.2s ease-in-out; }
@@ -1945,7 +1989,9 @@ body.modals_BodyNoScroll_32ZiC {
     background-size: 330% 100%;
     transition: all 0.2s ease-out; }
     .appactionbutton_Green_3cI5T > .appactionbutton_ButtonChild_2AzIX.appactionbutton_StreamingSelector_2q-gZ {
-      background: #19b14e; }
+      background: linear-gradient(to right, #19b14e 0%, #19b14e 60%);
+      background-position: 25%;
+      background-size: 330% 100%; }
     :not(.appactionbutton_Disabled_1Pb6P) > .appactionbutton_Green_3cI5T > .appactionbutton_ButtonChild_2AzIX:hover {
       background: linear-gradient(to right, #70d61d 0%, #01a75b 60%);
       background-position: 0%;
@@ -3330,18 +3376,21 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
 .appdetailsplaysection_Row_9EHg9 {
   box-sizing: border-box;
   display: flex;
-  flex-flow: row; }
+  flex-flow: row;
+  min-width: 0; }
 
 .appdetailsplaysection_ActionSection_2zxzS {
-  flex: 0 0 auto;
+  flex: none;
   height: 46px; }
   .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_ActionSection_2zxzS {
     height: 32px; }
 
 .appdetailsplaysection_StatusAndStats_1YbtI {
   flex: 1 1 auto;
+  flex-wrap: wrap-reverse;
   position: relative;
   display: flex;
+  min-width: 0;
   transition: opacity .16s ease-out, transform .16s ease-out;
   /* These next two selectors handle the fading in and out of the stuff to the right of the
 		action button.  In normal operation only the game stats section is there, it will be the
@@ -3351,6 +3400,9 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
   @media screen and (max-width: 1158px) {
     .appdetailsplaysection_StatusAndStats_1YbtI {
       align-items: normal; } }
+  .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_StatusAndStats_1YbtI {
+    height: 35px;
+    flex-wrap: nowrap; }
   .appdetailsplaysection_StatusAndStats_1YbtI.appdetailsplaysection_PermanentlyUnavailable_3CYvy {
     display: flex;
     flex-direction: row; }
@@ -3362,41 +3414,43 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
   .appdetailsplaysection_StatusAndStats_1YbtI.appdetailsplaysection_PermanentlyUnavailable_3CYvy > .appdetailsplaysection_GameStatsSection_1mDAV {
     opacity: 1.0; }
   .appdetailsplaysection_StatusAndStats_1YbtI .appdetailsplaysection_DetailsSection_1dg8h {
-    transition: opacity .2s ease-in-out;
+    transition: opacity .2s ease-in-out, transform .16s ease-out;
     opacity: 1.0; }
   .appdetailsplaysection_StatusAndStats_1YbtI .appdetailsplaysection_StatusNameContainer_zjtAI {
     position: relative;
     flex: 1;
-    min-height: 32px;
+    height: 46px;
     display: flex;
     align-items: center; }
+    .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_StatusAndStats_1YbtI .appdetailsplaysection_StatusNameContainer_zjtAI {
+      min-width: inherit; }
   .appdetailsplaysection_StatusAndStats_1YbtI .appdetailsplaysection_GameStatsSection_1mDAV {
     display: flex;
     flex-direction: row;
     transition: opacity .16s ease-out, transform .16s ease-out;
-    min-height: 36px; }
+    min-height: 36px;
+    width: max-content; }
   .appdetailsplaysection_StatusAndStats_1YbtI .appdetailsplaysection_PlayBarIconAndGame_2MBVR {
+    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
     position: absolute;
-    left: 16px;
+    padding-left: 16px;
     top: 0px;
     align-items: center;
     align-content: center;
     height: 32px;
+    width: 100%;
     opacity: 0;
     transition: opacity .16s ease-out;
     pointer-events: none; }
     .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_StatusAndStats_1YbtI .appdetailsplaysection_PlayBarIconAndGame_2MBVR {
       opacity: 1; }
     .appdetailsplaysection_StatusAndStats_1YbtI .appdetailsplaysection_PlayBarIconAndGame_2MBVR .appdetailsplaysection_PlayBarGameName_3rpUk {
-      align-self: center;
-      display: flex;
-      flex-direction: row;
-      align-content: center;
-      align-items: center;
-      line-height: 16px; }
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
     .appdetailsplaysection_StatusAndStats_1YbtI .appdetailsplaysection_PlayBarIconAndGame_2MBVR .appdetailsplaysection_PlayBarGameIcon_1iNIp {
+      flex: none;
       height: 32px;
       width: 32px;
       margin-right: 6px;
@@ -3406,10 +3460,11 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
     position: relative; }
   .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_StatusAndStats_1YbtI .appdetailsplaysection_GameStatsSection_1mDAV {
     opacity: 0;
-    transform: translateY(-24px); }
+    transform: translateY(-24px);
+    width: inherit; }
 
 .appdetailsplaysection_RightControls_1EAxK {
-  flex: 0 0 auto;
+  flex: none;
   display: flex;
   flex-flow: column;
   margin-left: 16px;
@@ -3518,22 +3573,17 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
 .appdetailsplaysection_DetailsSection_1dg8h {
   box-sizing: border-box;
   margin-left: 30px;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center; }
   .appdetailsplaysection_DetailsSection_1dg8h.appdetailsplaysection_Downloading_2F4Pc {
     cursor: pointer; }
-    .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_DetailsSection_1dg8h.appdetailsplaysection_Downloading_2F4Pc {
-      margin-top: -4px; }
   .appdetailsplaysection_DetailsSection_1dg8h .appdetailsplaysection_DetailsSectionStatus_1sKdg {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap; }
   .appdetailsplaysection_DetailsSection_1dg8h.appdetailsplaysection_OfflineMode_36lN_ .appdetailsplaysection_DetailsSectionStatus_1sKdg {
     white-space: initial; }
-    .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_DetailsSection_1dg8h.appdetailsplaysection_OfflineMode_36lN_ .appdetailsplaysection_DetailsSectionStatus_1sKdg {
-      margin-top: -8px; }
   .appdetailsplaysection_DetailsSection_1dg8h .appdetailsplaysection_ComingSoon_1YqJb {
     align-self: center;
     font-size: 20px;
@@ -3546,14 +3596,11 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
   .appdetailsplaysection_DetailsSection_1dg8h .appdetailsplaysection_DetailsSectionExtra_2pGX3 {
     text-overflow: ellipsis;
     overflow: hidden;
-    white-space: nowrap;
-    line-height: 20px;
-    min-height: 20px; }
+    white-space: nowrap; }
   .appdetailsplaysection_DetailsSection_1dg8h .appdetailsplaysection_DetailsProgressContainer_25YVD {
     width: 184px;
-    margin: 4px 0px; }
+    margin: 4px 0px 2px; }
     .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_DetailsSection_1dg8h .appdetailsplaysection_DetailsProgressContainer_25YVD {
-      margin: 5px 0px;
       margin-bottom: 0px; }
 
 .appdetailsplaysection_DetailsProgressContainer_25YVD {
@@ -3561,7 +3608,6 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
   width: 80px;
   border-radius: 5px;
   background-color: #151619;
-  margin-top: 6px;
   transition: height .06s ease-in-out, border-radius .06s ease-in-out; }
   .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_DetailsProgressContainer_25YVD {
     height: 2px;
@@ -3592,12 +3638,10 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
   margin-right: 5px; }
 
 .appdetailsplaysection_GameStat_1kiZK {
+  flex-shrink: 0;
   display: flex;
   flex-flow: row;
-  margin: 0px 0px auto 30px; }
-  @media screen and (max-width: 1158px) {
-    .appdetailsplaysection_GameStat_1kiZK {
-      margin-left: 25px; } }
+  margin: 0px 0px auto 25px; }
   .appdetailsplaysection_GameStat_1kiZK .appdetailsplaysection_GameStatIcon_1tIg- {
     width: 30px;
     height: 30px;
@@ -3616,7 +3660,8 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
   cursor: pointer; }
   .appdetailsplaysection_MiniAchievements_UAhWi .appdetailsplaysection_AchievementProgressRow_16quG {
     display: flex;
-    flex-flow: row; }
+    flex-flow: row;
+    align-items: center; }
     .appdetailsplaysection_MiniAchievements_UAhWi .appdetailsplaysection_AchievementProgressRow_16quG .appdetailsplaysection_DetailsProgressContainer_25YVD {
       flex: 1 1 auto; }
       @media screen and (max-width: 1158px) {
@@ -3632,15 +3677,14 @@ button.TextButton.appdetailsfriendssection_ShowMore_34gmV {
   text-transform: uppercase;
   letter-spacing: 1px;
   line-height: 16px; }
-  .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_PlayBarLabel_34lrt {
-    margin-bottom: -4px; }
 
 .appdetailsplaysection_PlayBarDetailLabel_2TYVG {
   font-size: 13px;
   margin-right: 10px;
   transition: margin .1s ease-in-out; }
   .appdetailsplaysection_StickyHeader_39Rhe .appdetailsplaysection_PlayBarDetailLabel_2TYVG {
-    margin-bottom: -6px; }
+    font-size: 12px;
+    margin-bottom: -4px; }
 
 .appdetailsplaysection_Playtime_1aKeg .appdetailsplaysection_PlaytimeIcon_1GZdo svg {
   width: 26px;
@@ -5405,7 +5449,8 @@ iframe.steamTVLogin {
 .partnereventshared_EventOptions_2r_Qe {
   margin-left: 10px;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  flex-wrap: wrap; }
 
 .partnereventshared_FlexColumnContainer_1qhLq {
   display: flex;
@@ -5730,6 +5775,16 @@ b {
 .partnereventshared_EventDashboardActions_2z_02 {
   /* top right section with actions */ }
 
+.partnereventshared_EventDashboardStatsCtn_3IptF {
+  background: #36404f;
+  color: #c5cdd8;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+  .partnereventshared_EventDashboardStatsCtn_3IptF P {
+    color: #c5cdd8;
+    margin-bottom: 0px;
+    margin-top: 4px; }
+
 .partnereventshared_EventDashboardAppCtn_2iPrK {
   margin-top: 40px;
   position: relative;
@@ -5804,6 +5859,14 @@ b {
     color: #e6d68f; }
   .partnereventshared_ThemedCtn_1xFOb.partnereventshared_Halloween_36Ru6 .partnereventshared_EventDefaultRowContainer_3WO6c > div:last-child {
     background: rgba(0, 0, 0, 0.8); }
+
+span.partnereventshared_tooltip_Ctn_3nqxI {
+  cursor: pointer;
+  background: #3d4450;
+  border-radius: 20px;
+  padding: 0px 6px;
+  color: white;
+  margin-left: 10px; }
 
 .login_LoginDialog_2Hj3a {
   background-color: #101114;
@@ -6092,24 +6155,39 @@ textarea:-webkit-autofill:focus,
   display: flex;
   flex-direction: row;
   max-width: 780px;
-  max-height: 250px;
   z-index: 1; }
   .broadcastwidgets_StoreSaleWidgetContainer_2RL6D.broadcastwidgets_Bundle_3wMcs {
     max-height: initial; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 630px) {
     .broadcastwidgets_StoreSaleWidgetContainer_2RL6D {
       flex-direction: column; } }
+  .broadcastwidgets_StoreSaleWidgetContainer_2RL6D .broadcastwidgets_WishList_3mTSE,
+  .broadcastwidgets_StoreSaleWidgetContainer_2RL6D .broadcastwidgets_Action_2Xpw9 {
+    margin-right: 5px;
+    margin-top: 6px;
+    width: auto;
+    min-width: unset;
+    padding: 9px 20px; }
 
 .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp,
 .broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  max-height: 337px; }
+  overflow: hidden; }
 
 .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
   max-width: 155px;
   background: #000; }
+  .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp .broadcastwidgets_Action_2Xpw9,
+  .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp .broadcastwidgets_WishList_3mTSE {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 24px;
+    line-height: 9px;
+    font-size: 11px;
+    margin-top: 2px; }
 
 .broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
   max-width: 310px;
@@ -6145,7 +6223,8 @@ textarea:-webkit-autofill:focus,
 
 .broadcastwidgets_StoreSaleWidgetTitle_38YoU {
   cursor: pointer;
-  font-size: 19px;
+  font-size: 15px;
+  line-height: 17px;
   width: fit-content;
   color: #c1c6cf;
   flex-shrink: 0; }
@@ -6156,23 +6235,26 @@ textarea:-webkit-autofill:focus,
 .broadcastwidgets_StoreSaleWidgetRelease_3yCCs {
   font-size: 10px;
   color: #919fb1;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  margin-top: 4px; }
 
 .broadcastwidgets_StoreSaleWidgetShortDesc_2by8B {
   font-size: 12px;
+  line-height: 15px;
   max-height: 80px;
   overflow: hidden; }
 
 .broadcastwidgets_StoreSaleWidgetShortDesc_column_cZoip,
 .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
-  max-height: 120px;
+  max-height: 103px;
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
   padding-bottom: 8px;
   overflow: hidden;
   letter-spacing: 0px;
-  line-height: 15px; }
+  line-height: 13px;
+  font-size: 11px; }
 
 .broadcastwidgets_StoreSaleWidgetRight_1MzBO {
   padding: 4px; }
@@ -6180,13 +6262,17 @@ textarea:-webkit-autofill:focus,
 .broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY {
   display: flex;
   flex-direction: row;
-  padding: 1px; }
+  padding: 0px;
+  margin-top: 6px; }
 
 .broadcastwidgets_StoreSaleDiscountBox_3uiyX {
-  font-size: 14px;
-  padding: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 3px 5px;
   background-color: #4C6B22;
-  color: #A4D007; }
+  color: #A4D007;
+  display: flex;
+  align-items: center; }
 
 .broadcastwidgets_StoreSalePriceBox_2A_NW {
   font-size: 14px;
@@ -6222,7 +6308,14 @@ textarea:-webkit-autofill:focus,
   flex-direction: column;
   border-radius: 4px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-out; }
+  .broadcastwidgets_CapsuleContainer_1gET8:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+
+.broadcastwidgets_Muted_2ksIf {
+  opacity: 0.3; }
 
 .broadcastwidgets_CapsuleBottomBar_2ygf4 {
   background-color: black;
@@ -6239,13 +6332,16 @@ textarea:-webkit-autofill:focus,
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  width: 60%;
-  font-size: 14px; }
+  line-height: 20px;
+  font-size: 13px;
+  margin-left: 3px;
+  margin-right: 5px;
+  max-width: 60vw; }
 
 .broadcastwidgets_Action_2Xpw9 {
   min-width: 50%;
   flex-direction: row;
-  background-image: radial-gradient(circle at top left, #a3cf06 10%, #6a8704 80%);
+  background-image: radial-gradient(circle at top left, #85a805 10%, #6a8704 80%);
   transition: all 0.2s ease-out;
   padding: 9px;
   height: 38px;
@@ -6324,11 +6420,27 @@ textarea:-webkit-autofill:focus,
   z-index: 5;
   text-transform: uppercase;
   background-color: #d3deea; }
+  .broadcastwidgets_Banner_3ikQa.broadcastwidgets_Blue_3hfTG {
+    background-color: #66c0f4; }
 
 .broadcastwidgets_BundleContent_TGX3I {
   margin-left: 40px;
   padding: 4px;
   zoom: 80%; }
+
+.broadcastwidgets_ShowContentsButton_1cu3o {
+  border-radius: 2px;
+  border: none;
+  padding: 4px;
+  display: inline-block;
+  cursor: pointer;
+  color: #67c1f5;
+  background: rgba(103, 193, 245, 0.2); }
+  .broadcastwidgets_ShowContentsButton_1cu3o:hover {
+    color: #fff;
+    background: #417a9b;
+    background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
+    background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%); }
 
 .linkregionbox_LinkRegionDragBox_Rtlc- {
   position: absolute;
@@ -8178,7 +8290,6 @@ img.emoticon_emoticon_AB86v {
     background: rgba(29, 34, 39, 0.6);
     box-shadow: inset 0px 0px 4px transparent;
     color: #b1b0b0;
-    margin-top: 8px;
     resize: none;
     font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
     padding: 8px;
@@ -8572,7 +8683,7 @@ img.emoticon_emoticon_AB86v {
     display: inherit; }
 
 .comment_thread_AddReply_2Yybx {
-  padding: 0 10px 0 0; }
+  padding: 8px 10px 0 0; }
 
 .comment_thread_BackgroundEffects_2lVtD {
   pointer-events: none;
@@ -8665,7 +8776,12 @@ img.emoticon_emoticon_AB86v {
   .artworkmodal_ArtworkModalDetails_1sEyq .artworkmodal_Header_J0VnC {
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    position: relative; }
+    .artworkmodal_ArtworkModalDetails_1sEyq .artworkmodal_Header_J0VnC .artworkmodal_ShareButton_rrgVL {
+      position: absolute;
+      right: 0;
+      top: 14px; }
     .artworkmodal_ArtworkModalDetails_1sEyq .artworkmodal_Header_J0VnC .artworkmodal_ScrollForMore_WgpsF {
       user-select: none;
       align-self: center;
@@ -8782,6 +8898,79 @@ img.emoticon_emoticon_AB86v {
   align-self: center;
   box-shadow: 0 0 12px #0008;
   position: relative; }
+
+.sharedialog_ShareIcon_2yDBG {
+  width: 19px;
+  height: 19px; }
+
+.sharedialog_ShareButton_1FFkd {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 6px 25px 8px 25px;
+  height: 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  background: #3d4450;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  color: #dfe3e6;
+  transition-property: background, color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out; }
+  .sharedialog_ShareButton_1FFkd span {
+    margin-left: 10px; }
+  .sharedialog_ShareButton_1FFkd:hover {
+    background: #464d58;
+    color: white;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+
+.sharescreenshotupload_ShareScreenshotDialog_3VEpp {
+  min-width: 460px; }
+
+.sharescreenshotupload_CaptionTextArea_qFjVw {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: rgba(29, 34, 39, 0.6);
+  box-shadow: inset 0px 0px 4px transparent;
+  color: #b1b0b0;
+  margin-top: 8px;
+  resize: none;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+  padding: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  width: calc( 100% - 16px - 2px);
+  transition: all .18s ease-in-out; }
+  .sharescreenshotupload_CaptionTextArea_qFjVw::placeholder {
+    font-style: italic;
+    color: rgba(148, 161, 166, 0.562); }
+  .sharescreenshotupload_CaptionTextArea_qFjVw:focus {
+    outline: none;
+    background: rgba(29, 34, 39, 0.8);
+    box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.4); }
+    .sharescreenshotupload_CaptionTextArea_qFjVw:focus::placeholder {
+      margin-left: 2px; }
+
+.sharescreenshotupload_RadioButtonGroup_1BSXp {
+  padding: 8px 8px;
+  background-color: rgba(16, 18, 21, 0.4); }
+
+.sharescreenshotupload_CloudStorageMessage_2_qlC {
+  font-size: 12px;
+  line-height: 14px;
+  font-style: italic; }
+
+div.sharescreenshotupload_VisibilityHeader_1YSUb {
+  margin-top: 20px; }
+
+div.sharescreenshotupload_Spoiler_tmUAv {
+  margin-top: 30px; }
+
+.sharescreenshotupload_UploadingText_nUy9B {
+  text-align: center; }
+
+.sharescreenshotupload_CaptionHeader_23tKR {
+  margin-top: 30px; }
 
 .reportitem_Description_nT2-e {
   margin: 12px 0px;
@@ -9325,7 +9514,8 @@ img.emoticon_emoticon_AB86v {
   background-color: #25282e;
   position: relative; }
 
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span {
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span,
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > img.bbcodeeditor_EmoteOuter_1x3UO {
   cursor: pointer;
   padding: 5px;
   border-radius: 2px;
@@ -9334,11 +9524,13 @@ img.emoticon_emoticon_AB86v {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   margin-right: 2px; }
 
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span:hover {
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span:hover,
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > img.bbcodeeditor_EmoteOuter_1x3UO:hover {
   background-color: #4f5763;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
 
-.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span > img {
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > span > img,
+.bbcodeeditor_TextEditorToolBarContainer_2bOpQ > img.bbcodeeditor_EmoteOuter_1x3UO {
   vertical-align: middle;
   width: 16px;
   height: 16px; }
@@ -9380,12 +9572,13 @@ img.emoticon_emoticon_AB86v {
   .bbcodeeditor_YouTubePreviewInsertOption_6ocli label > span {
     vertical-align: super; }
 
-#emoticonButtonContainer > .bbcodeeditor_EmoteOuter_1x3UO {
+.bbcodeeditor_EmoteOuter_1x3UO {
   min-width: initial;
   color: unset;
   background-color: unset;
   border: unset;
-  display: unset; }
+  display: unset;
+  cursor: hand; }
 
 .suggestdialog_mentionDialogPosition_3isL0 {
   position: absolute;
@@ -9808,6 +10001,306 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     background-color: rgba(101, 113, 128, 0.356);
     color: white; }
 
+.appdetailssoundtrack_SoundtrackPanel_23zCI {
+  perspective: 1px;
+  perspective-origin: 0 0;
+  overflow: hidden scroll;
+  background: radial-gradient(73% 81% at 0% 0%, #24282f 86%, #000000 196%);
+  flex: 1; }
+
+.appdetailssoundtrack_SoundtrackPanel_23zCI a {
+  text-decoration: none; }
+
+.appdetailssoundtrack_BackgroundContainer_26bNl {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  transform-origin: 0 0;
+  transform: translateZ(-1px) scale(2); }
+  .appdetailssoundtrack_BackgroundContainer_26bNl .appdetailssoundtrack_BackgroundBlurArt_3JZ9b {
+    background-size: contain;
+    filter: blur(12px) saturate(5);
+    width: 1200px;
+    height: 100%;
+    -webkit-mask-image: radial-gradient(53% 61% at 0% 0%, #000000 56%, #00000000 166%);
+    -webkit-mask-size: 100%;
+    -webkit-mask-repeat: no-repeat;
+    opacity: .15; }
+
+.appdetailssoundtrack_SoundtrackButtonDivider_2n7O9 {
+  height: 10px; }
+
+.appdetailssoundtrack_SoundtrackContainer_1c7FW {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  box-sizing: border-box; }
+  .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+    .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_AlbumName_oW5xv {
+      font-size: 32px;
+      letter-spacing: 2px;
+      color: white;
+      font-weight: 200; }
+    .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_ArtistName_2bTdS {
+      font-size: 18px;
+      color: #a7a6a6;
+      font-weight: 300;
+      margin-bottom: 4px; }
+    .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_StatsAndParent_3pUBu {
+      display: flex;
+      justify-content: space-between; }
+      .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_StatsAndParent_3pUBu .appdetailssoundtrack_AlbumStats_1qxAZ {
+        font-size: 14px;
+        color: gray; }
+      .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_StatsAndParent_3pUBu .appdetailssoundtrack_ParentGameLink_2pcGG {
+        font-size: 14px;
+        color: gray;
+        display: flex; }
+        .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_StatsAndParent_3pUBu .appdetailssoundtrack_ParentGameLink_2pcGG .appdetailssoundtrack_ParentAppName_3C_pT {
+          color: white;
+          cursor: pointer;
+          text-decoration-color: #fff4;
+          display: flex;
+          align-items: center; }
+          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_StatsAndParent_3pUBu .appdetailssoundtrack_ParentGameLink_2pcGG .appdetailssoundtrack_ParentAppName_3C_pT:hover {
+            text-decoration-color: #fffa; }
+          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_StatsAndParent_3pUBu .appdetailssoundtrack_ParentGameLink_2pcGG .appdetailssoundtrack_ParentAppName_3C_pT .appdetailssoundtrack_ParentGameIcon_Pc5ZA {
+            height: 20px;
+            width: 20px;
+            margin: 0 6px;
+            border-radius: 2px;
+            overflow: hidden; }
+  .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 {
+    display: flex; }
+    .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_LeftColumn_23WS1 {
+      display: flex;
+      flex-direction: column;
+      margin-right: 32px; }
+      .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_LeftColumn_23WS1 .appdetailssoundtrack_AlbumArt_1R0eE {
+        width: 200px;
+        height: 200px;
+        box-sizing: content-box;
+        margin-bottom: 32px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 2px solid transparent;
+        border-image-source: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF7GlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA2LTI5VDAxOjMxOjA4LTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNy0wMVQxNjoyNjoxNi0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOS0wNy0wMVQxNjoyNjoxNi0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDplOTY3MmNmNy02NjI1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);
+        border-image-width: 2px;
+        border-image-repeat: stretch;
+        border-image-slice: 7;
+        box-shadow: 0 0 12px #00000080;
+        cursor: pointer; }
+        .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_LeftColumn_23WS1 .appdetailssoundtrack_AlbumArt_1R0eE:hover {
+          filter: brightness(1.3);
+          background-color: #0003; }
+      .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_LeftColumn_23WS1 .appdetailssoundtrack_PlayButton_2TWHM {
+        margin-bottom: 4px; }
+    .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep {
+      display: flex;
+      flex-direction: column;
+      flex: 3;
+      border: 1px solid transparent;
+      border-image-width: 1px;
+      border-image-repeat: stretch;
+      border-image-slice: 7;
+      background: radial-gradient(100% 80% at 64% 95%, rgba(153, 174, 204, 0.3) 0%, rgba(125, 150, 184, 0.13) 40%, rgba(83, 104, 104, 0.1) 100%);
+      box-shadow: 0 0 12px #00000025; }
+      .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq {
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        padding: 6px;
+        padding-bottom: 86px;
+        max-width: 1024px;
+        border-radius: 3px; }
+        .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_Disc_17Yl1 {
+          background: linear-gradient(to right, rgba(44, 49, 51, 0.842) 0%, transparent 100%);
+          padding-left: 6px;
+          color: #8a8a8a;
+          margin-top: 12px;
+          margin-bottom: 6px;
+          font-size: 15px; }
+          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_Disc_17Yl1:first-child {
+            margin-top: 0; }
+        .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP {
+          flex: 1;
+          display: flex;
+          flex-direction: row;
+          align-self: stretch;
+          color: rgba(255, 255, 255, 0.836);
+          justify-content: space-between;
+          padding: 4px 1px;
+          padding-left: 0;
+          font-weight: 300;
+          /*
+					&:hover {
+						background-color: #aaa4;
+						border-radius: 3px;
+						cursor: pointer;
+						color: white;
+
+						.TrackNumber {
+							background: linear-gradient( to right, #0002 0%, #0002 100%);
+						}
+					}
+					*/ }
+          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP .appdetailssoundtrack_TrackNumber_NZZPO {
+            width: 32px;
+            text-align: right;
+            padding-right: 4px;
+            font-size: 14px;
+            color: #8a8a8a;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px; }
+          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP .appdetailssoundtrack_TrackName_JpRLQ {
+            text-align: left;
+            flex: 1;
+            padding: 0 8px;
+            font-size: 14px; }
+          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP .appdetailssoundtrack_TrackLength_157uf {
+            text-align: right;
+            padding: 0 8px;
+            font-size: 14px;
+            color: #8a8a8a; }
+
+.appdetailssoundtrack_AlbumArtworkModal_1xedg {
+  border: 2px solid black;
+  box-sizing: border-box; }
+  .appdetailssoundtrack_AlbumArtworkModal_1xedg .appdetailssoundtrack_ModalArtCloseButton_27E66 {
+    width: 50%;
+    min-width: fit-content;
+    align-self: center;
+    margin-top: 14px;
+    min-height: 37px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px; }
+
+.appdetailssoundtrack_ModalBox_NIF-B {
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(132% 155% at 50% 28%, rgba(113, 125, 145, 0.5) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+  box-shadow: inset 0 0 0 6px #0003; }
+
+.appdetailssoundtrack_ArtworkModalContainer_1ye7X {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  padding-bottom: 8px;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, transparent 12px, #0003 23px, #0008 24px, black 24px, black calc( 100% - 12px), transparent calc( 100% - 6px));
+  overflow-y: scroll;
+  box-sizing: border-box; }
+  .appdetailssoundtrack_ArtworkModalContainer_1ye7X::-webkit-scrollbar {
+    width: 12px; }
+  .appdetailssoundtrack_ArtworkModalContainer_1ye7X::-webkit-scrollbar-thumb {
+    width: 4px;
+    border: 3px solid transparent;
+    background-image: none; }
+  .appdetailssoundtrack_ArtworkModalContainer_1ye7X::-webkit-scrollbar-track, .appdetailssoundtrack_ArtworkModalContainer_1ye7X::-webkit-scrollbar-button {
+    display: none; }
+  .appdetailssoundtrack_ArtworkModalContainer_1ye7X::-webkit-scrollbar-thumb:hover {
+    background-color: #606774;
+    background-clip: padding-box; }
+  .appdetailssoundtrack_ArtworkModalContainer_1ye7X::-webkit-scrollbar-corner {
+    background-color: #434953; }
+
+.appdetailssoundtrack_ArtworkModalDetails_SLVVM {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-height: 100px; }
+  .appdetailssoundtrack_ArtworkModalDetails_SLVVM .appdetailssoundtrack_Header_4f23l {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .appdetailssoundtrack_ArtworkModalDetails_SLVVM .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_ScrollForMore_1CMeA {
+      user-select: none;
+      align-self: center;
+      display: flex;
+      align-items: center;
+      margin-top: 14px;
+      text-align: center; }
+      .appdetailssoundtrack_ArtworkModalDetails_SLVVM .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_ScrollForMore_1CMeA svg {
+        width: 20px;
+        height: 20px;
+        padding: 0 16px;
+        opacity: .5; }
+  .appdetailssoundtrack_ArtworkModalDetails_SLVVM .appdetailssoundtrack_ChildrenContainer_nM5kI {
+    margin-top: 10px;
+    margin-bottom: 16px; }
+
+.appdetailssoundtrack_ArtworkContainer_2F8hw {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+  box-shadow: 0 0 12px #0008;
+  position: relative;
+  min-width: 500px;
+  min-height: 500px;
+  object-fit: contain;
+  background-color: #0003; }
+
+.appdetailssoundtrack_ArtworkImage_3h0Rv {
+  width: 100%;
+  height: 100%; }
+
+/* stylelint-disable */
+
+/* stylelint-enable */
+.appdetailsadditionalcontentsection_Soundtracks_LO26Z {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer; }
+  .appdetailsadditionalcontentsection_Soundtracks_LO26Z:hover {
+    background-color: #fff1; }
+    .appdetailsadditionalcontentsection_Soundtracks_LO26Z:hover .appdetailsadditionalcontentsection_SoundtrackDetails_krdL6 .appdetailsadditionalcontentsection_Title_QDrH3 {
+      color: #fff; }
+    .appdetailsadditionalcontentsection_Soundtracks_LO26Z:hover .appdetailsadditionalcontentsection_SoundtracksImage_294mJ {
+      filter: brightness(1.2); }
+  .appdetailsadditionalcontentsection_Soundtracks_LO26Z .appdetailsadditionalcontentsection_SoundtrackDetails_krdL6 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px; }
+    .appdetailsadditionalcontentsection_Soundtracks_LO26Z .appdetailsadditionalcontentsection_SoundtrackDetails_krdL6 .appdetailsadditionalcontentsection_Title_QDrH3 {
+      color: #ffffffe0;
+      font-weight: 300;
+      font-size: 14px;
+      margin-top: 4px; }
+    .appdetailsadditionalcontentsection_Soundtracks_LO26Z .appdetailsadditionalcontentsection_SoundtrackDetails_krdL6 .appdetailsadditionalcontentsection_Artist_3NeZL {
+      font-weight: 300;
+      color: #ffffff80;
+      font-size: 14px; }
+    .appdetailsadditionalcontentsection_Soundtracks_LO26Z .appdetailsadditionalcontentsection_SoundtrackDetails_krdL6 .appdetailsadditionalcontentsection_TracksDetails_3Yvj5 {
+      font-weight: 300;
+      color: #ffffff80;
+      font-size: 13px; }
+
+.appdetailsadditionalcontentsection_SoundtracksImage_294mJ {
+  width: 72px;
+  height: 72px;
+  background-size: cover;
+  padding: 0 !important;
+  border-radius: 2px; }
+  .appdetailsadditionalcontentsection_SoundtracksImage_294mJ img {
+    height: 100%;
+    border-radius: 4px;
+    box-shadow: 1px 1px 8px #0009; }
+
 .managedlcdialog_Container_1Gc2g {
   width: 1100px; }
   .managedlcdialog_Container_1Gc2g :focus {
@@ -10193,13 +10686,38 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   background-color: transparent; }
 
 .screenshots_ClickableScreenshot_3JNo1 {
-  cursor: pointer; }
+  cursor: pointer;
+  position: relative; }
+
+.screenshots_ClickableScreenshotImg_21yM8 {
+  display: block;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  object-fit: contain; }
+  .screenshots_ClickableScreenshotImg_21yM8.screenshots_UseWidth_1zPkV {
+    max-width: 100%; }
+  .screenshots_ClickableScreenshotImg_21yM8.screenshots_UseHeight_2H_NX {
+    max-height: 100%; }
+
+.screenshots_ScreenshotShareIcon_gOv9M {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 19px;
+  height: 19px;
+  opacity: 0.2;
+  transition: opacity 0.2s ease-in-out; }
+  .screenshots_ClickableScreenshot_3JNo1:hover .screenshots_ScreenshotShareIcon_gOv9M {
+    opacity: 1.0; }
 
 .screenshots_Hover_2EMM5 {
   width: 400px;
   max-height: 300px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  color: #ffffffe0;
+  font-size: 13px; }
   .screenshots_Hover_2EMM5 .screenshots_Screenshot_2pHz5 {
     display: block;
     width: 100%;
@@ -10229,13 +10747,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto; } }
   .appdetailsscreenshotssection_ScreenshotsSection_2_TE0 .appdetailsscreenshotssection_Thumbnail_2B8Nk {
-    width: 100%; }
-    .appdetailsscreenshotssection_ScreenshotsSection_2_TE0 .appdetailsscreenshotssection_Thumbnail_2B8Nk img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      background-color: rgba(1, 1, 1, 0.6); }
+    width: 100%;
+    background-color: rgba(1, 1, 1, 0.6); }
   .appdetailsscreenshotssection_ScreenshotsSection_2_TE0 .appdetailsscreenshotssection_InstructionText_2QCkj {
     text-align: left;
     vertical-align: middle;
@@ -10283,7 +10796,10 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   justify-content: space-between;
   margin: 30px 0; }
   .writereview_RatingContainer_2Jk1D .writereview_LeftContainer_WpfaL {
-    font-size: 14px; }
+    font-size: 14px;
+    margin-right: 16px; }
+    .writereview_RatingContainer_2Jk1D .writereview_LeftContainer_WpfaL .writereview_Playtime_3sp4W {
+      color: #67c1f5; }
   .writereview_RatingContainer_2Jk1D .writereview_RecommendGame_2Lzg9 {
     color: #FFF; }
 
@@ -10308,6 +10824,30 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
       bottom: -12px; }
     .writereview_ThumbIcon_1XUtc.writereview_Selected_1XaZs.writereview_Up_3-sjK {
       top: -12px; }
+
+.writereview_DelayIcon_1wUiL {
+  width: 28px;
+  height: 28px;
+  fill: #67c1f5;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  border: none;
+  outline: none;
+  justify-self: center; }
+
+.writereview_CompactThumbButton_2INLf {
+  padding: 8px 20px;
+  background: rgba(103, 193, 245, 0.2);
+  color: #67c1f5;
+  text-decoration: none !important;
+  margin: 0 3px;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  outline: none;
+  border-radius: 2px; }
 
 .writereview_ReviewThumbButton_1pD0o {
   padding: 8px 30px;
@@ -11333,6 +11873,41 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   height: 14px;
   cursor: pointer; }
 
+.appdetailsspotlight_ReviewContainerOuter_1Ha-8 {
+  margin-left: 20px;
+  margin-right: 20px; }
+
+.appdetailsspotlight_ReviewContainer_3LE-6 {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 10px;
+  margin-bottom: 16px;
+  background-color: #434953;
+  color: #969696;
+  font-size: 13px;
+  font-weight: 200; }
+  .appdetailsspotlight_ReviewContainer_3LE-6 .appdetailsspotlight_RatingContainer_1E_EN {
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  .appdetailsspotlight_ReviewContainer_3LE-6 .appdetailsspotlight_CloseButton_3-729 {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 4px;
+    opacity: .2;
+    position: absolute;
+    right: 30px; }
+    .appdetailsspotlight_ReviewContainer_3LE-6 .appdetailsspotlight_CloseButton_3-729 svg line {
+      stroke-width: 22px; }
+  .appdetailsspotlight_ReviewContainer_3LE-6 .appdetailsspotlight_CloseButton_3-729:hover {
+    opacity: .8; }
+  .appdetailsspotlight_ReviewContainer_3LE-6 .appdetailsspotlight_Inner_2z8Na {
+    width: fit-content;
+    height: fit-content;
+    flex-direction: row; }
+
 .appdetailsspotlight_Glassy_el0c2.appdetailsspotlight_AppDetailsSpotlight_gh6du {
   background-color: transparent; }
 
@@ -11377,7 +11952,10 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   position: relative;
   display: flex;
   align-items: flex-end;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 44px, black calc( 100% - 44px), transparent 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%; }
 
 .spotlight_MajorEventImage_25fL1 {
   object-fit: contain;
@@ -11387,9 +11965,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   max-width: 100%;
   cursor: pointer;
   position: relative;
-  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, black 44px, black calc( 100% - 44px), transparent 100%);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%;
   margin-left: auto;
   margin-right: auto;
   filter: saturate(0.9);
@@ -11411,7 +11986,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   left: 0;
   right: 0;
   bottom: 0;
-  position: absolute; }
+  position: absolute;
+  z-index: 2; }
 
 .spotlight_MajorEventImageTemplate_lQR9_ {
   margin-top: 10px;
@@ -11468,26 +12044,43 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     margin-top: auto;
     margin-bottom: auto; }
 
+.spotlight_MajorEventSpotlightBackground_1aheP {
+  position: absolute;
+  -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, black 45%, black 80%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, black 45%, black 80%, rgba(0, 0, 0, 0) 100%);
+  filter: blur(30px);
+  transform: scaleY(2);
+  opacity: 0.7; }
+
 .spotlight_MajorEventContent_2nr7N {
   position: absolute;
-  top: 28.0%;
-  left: 44.5%;
-  right: 9.3%;
-  bottom: 14.0%;
-  max-width: 490px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 11%, rgba(0, 0, 0, 0.7) 45%, rgba(0, 0, 0, 0.5) 80%, rgba(0, 0, 0, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
   pointer-events: none;
-  overflow: hidden; }
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .spotlight_MajorEventContent_2nr7N .spotlight_MajorEventTextCtn_Ojdg2 {
+    position: absolute;
+    left: 42%;
+    padding-right: 5%;
+    max-width: 490px; }
 
 .spotlight_MajorEventTitle_nEBZT {
   font-size: 18px;
-  line-height: 20px;
+  line-height: 22px;
   font-weight: 300;
   color: #fff;
   overflow: hidden;
   margin-top: 4px; }
 
 .spotlight_MajorEventSummary_HPngO {
-  color: #c0c0c0;
+  color: #dbdbdb;
   font-size: 13px;
   padding-top: 10px;
   display: -webkit-box;
@@ -11560,12 +12153,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     margin-right: 20px; } }
 
 .spotlightgameplaysummary_SummaryScreenshot_2gFx1 {
+  height: 126px;
   box-shadow: 2px 2px 8px black; }
-  .spotlightgameplaysummary_SummaryScreenshot_2gFx1 img {
-    overflow: hidden;
-    max-height: 100%;
-    height: 126px;
-    vertical-align: middle; }
 
 .spotlightgameplaysummary_SummaryTradingCard_2FvCW {
   width: 108px;
@@ -11970,132 +12559,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 
 .appdetailsoverview_HidePlayBar_3SSPI {
   opacity: 0; }
-
-.appdetailssoundtrack_SoundtrackPanel_23zCI {
-  perspective: 1px;
-  perspective-origin: 0 0;
-  overflow: hidden scroll;
-  background: radial-gradient(73% 81% at 0% 0%, #24282f 86%, #000000 196%);
-  flex: 1; }
-
-.appdetailssoundtrack_BackgroundContainer_26bNl {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  display: flex;
-  transform-origin: 0 0;
-  transform: translateZ(-1px) scale(2); }
-  .appdetailssoundtrack_BackgroundContainer_26bNl .appdetailssoundtrack_BackgroundBlurArt_3JZ9b {
-    background-size: contain;
-    filter: blur(12px) saturate(5);
-    width: 1200px;
-    height: 100%;
-    -webkit-mask-image: radial-gradient(53% 61% at 0% 0%, #000000 56%, #00000000 166%);
-    -webkit-mask-image: url(/images/halftone_mask.png);
-    -webkit-mask-size: 100%;
-    -webkit-mask-repeat: no-repeat;
-    opacity: .25; }
-
-.appdetailssoundtrack_SoundtrackContainer_1c7FW {
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
-  flex: 1;
-  position: relative;
-  z-index: 1;
-  height: 100%;
-  box-sizing: border-box; }
-  .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 24px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-    .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_AlbumName_oW5xv {
-      font-size: 32px;
-      letter-spacing: 2px;
-      color: white;
-      font-weight: 200; }
-    .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_ArtistName_2bTdS {
-      font-size: 18px;
-      color: #8e99a3;
-      margin-bottom: 4px; }
-    .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Header_4f23l .appdetailssoundtrack_AlbumStats_1qxAZ {
-      font-size: 14px;
-      color: gray; }
-  .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 {
-    display: flex; }
-    .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_LeftColumn_23WS1 {
-      display: flex;
-      flex-direction: column;
-      margin-right: 32px; }
-      .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_LeftColumn_23WS1 .appdetailssoundtrack_AlbumArt_1R0eE {
-        width: 200px;
-        height: 200px;
-        box-sizing: content-box;
-        margin-bottom: 32px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        border: 2px solid transparent;
-        border-image-source: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF7GlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxOCAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDE5LTA2LTI5VDAxOjMxOjA4LTA3OjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAxOS0wNy0wMVQxNjoyNjoxNi0wNzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAxOS0wNy0wMVQxNjoyNjoxNi0wNzowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDplOTY3MmNmNy02NjI1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);
-        border-image-width: 2px;
-        border-image-repeat: stretch;
-        border-image-slice: 7;
-        box-shadow: 0 0 12px #00000080; }
-      .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_LeftColumn_23WS1 .appdetailssoundtrack_PlayButton_2TWHM {
-        margin-bottom: 4px; }
-    .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep {
-      display: flex;
-      flex-direction: column;
-      flex: 3; }
-      .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq {
-        display: flex;
-        flex-direction: column;
-        align-self: stretch;
-        background: radial-gradient(53% 61% at 0% 0%, rgba(0, 0, 0, 0.5) 56%, #00000000 166%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
-        padding: 6px;
-        padding-bottom: 86px;
-        max-width: 1024px;
-        border-radius: 3px; }
-        .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_Disc_17Yl1 {
-          background: linear-gradient(to right, rgba(44, 49, 51, 0.842) 0%, transparent 100%);
-          padding-left: 6px;
-          color: #8ba0b6;
-          margin-top: 12px;
-          margin-bottom: 6px; }
-          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_Disc_17Yl1:first-child {
-            margin-top: 0; }
-        .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP {
-          flex: 1;
-          display: flex;
-          flex-direction: row;
-          align-self: stretch;
-          color: rgba(255, 255, 255, 0.836);
-          justify-content: space-between;
-          padding: 4px 1px; }
-          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP:hover {
-            background-color: #aaa4;
-            border-radius: 3px;
-            cursor: pointer;
-            color: white; }
-          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP .appdetailssoundtrack_TrackNumber_NZZPO {
-            width: 32px;
-            text-align: right;
-            background-color: #0002;
-            padding-right: 4px;
-            font-size: 14px;
-            color: #8a8a8a; }
-          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP .appdetailssoundtrack_TrackName_JpRLQ {
-            text-align: left;
-            flex: 1;
-            padding: 0 8px;
-            font-size: 14px; }
-          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP .appdetailssoundtrack_TrackLength_157uf {
-            text-align: right;
-            padding: 0 8px;
-            font-size: 14px;
-            color: #8a8a8a; }
 
 /* stylelint-disable */
 
@@ -12633,6 +13096,12 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   width: 100%;
   height: 100%;
   will-change: transform; }
+  .appportrait_Draggable_1pwP4.appportrait_Soundtrack_3Lu_5 .appportrait_PortraitImage_2IYf7 {
+    padding-top: 100%;
+    bottom: initial; }
+  .appportrait_Draggable_1pwP4.appportrait_Soundtrack_3Lu_5 .appportrait_LibraryItemBox_WYgDg {
+    height: 66.666666%;
+    margin-top: 25%; }
 
 .appportrait_UninstalledBar_kX-tI {
   width: 100%;
@@ -12695,7 +13164,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   text-overflow: ellipsis;
   transition: transform 0.32s cubic-bezier(0, 0.73, 0.48, 1);
   pointer-events: none; }
-  .appportrait_Draggable_1pwP4.appportrait_HoversEnabled_54PuC:hover .appportrait_AppPortraitBanner_N8aJr {
+  .appportrait_Draggable_1pwP4.appportrait_HoversEnabled_54PuC:not(.appportrait_Soundtrack_3Lu_5):hover .appportrait_AppPortraitBanner_N8aJr {
     transform: translateZ(12px); }
 
 .appportrait_LibraryItemActionButton_3AjoL {
@@ -12866,13 +13335,13 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  filter: blur(16px); }
 
 .appportrait_FooterBlurImage_2nq-z {
   margin-top: -206px;
   margin-left: -246px;
   width: 200%;
-  filter: blur(16px);
   transform: scaleY(1);
   transform-origin: 50% -40px;
   object-fit: cover;
@@ -13004,9 +13473,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 
 .appgrid_GridWithControls_rz1mr {
   box-sizing: border-box;
-  padding: 4px 0px;
-  margin-left: -8px;
-  margin-right: -8px; }
+  padding: 4px 0px; }
 
 .appgrid_YourCollection_11p6F {
   display: grid;
@@ -13019,7 +13486,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 
 .appgrid_CollectionOptions_BpxCz {
   box-sizing: border-box;
-  padding: 4px 8px;
+  padding: 20px 0px 0px 0px;
   display: flex;
   user-select: none;
   align-items: flex-end; }
@@ -13038,7 +13505,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     line-height: 18px;
     font-weight: 100;
     letter-spacing: 1px;
-    white-space: nowrap; }
+    white-space: nowrap;
+    margin-top: 1px; }
   .appgrid_SortingDropDown_1tBzy:focus {
     outline: none; }
   .appgrid_SortingDropDown_1tBzy .DialogInputLabelGroup {
@@ -13054,7 +13522,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     font-weight: 100;
     letter-spacing: 1px;
     margin-top: 0px;
-    width: 200px;
+    width: 230px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
@@ -13973,7 +14441,7 @@ div.appgrid_CoverSizeSlider_U4J9B {
         transform: translateY(-4px); }
         .gamelistdropdown_Bar_1ZS_x .gamelistdropdown_Filters_1PgAo .gamelistdropdown_CheckboxWithImage_3mzKd .SVGIcon_Installed .Catch {
           stroke-width: 14px; }
-      .gamelistdropdown_Bar_1ZS_x .gamelistdropdown_Filters_1PgAo .gamelistdropdown_CheckboxWithImage_3mzKd .SVGIcon_LinuxLogo {
+      .gamelistdropdown_Bar_1ZS_x .gamelistdropdown_Filters_1PgAo .gamelistdropdown_CheckboxWithImage_3mzKd .SVGIcon_LinuxLogo2 {
         width: 14px;
         height: 14px; }
       .gamelistdropdown_Bar_1ZS_x .gamelistdropdown_Filters_1PgAo .gamelistdropdown_CheckboxWithImage_3mzKd .SVGIcon_AppleLogo {
@@ -14428,8 +14896,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
   @media screen and (min-width: 1920px) {
     .partnereventdisplay_EventBody_3aht- {
       margin-top: -113px; } }
@@ -14594,7 +15061,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .partnereventdisplay_GameActions_bGROT {
   display: flex;
   flex-direction: row;
-  height: 34px;
+  max-height: 34px;
   background: rgba(0, 0, 0, 0.5);
   margin-bottom: 24px; }
 
@@ -14648,7 +15115,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 
 .partnereventdisplay_EventDetailsBody_A_A2B {
   padding-right: 24px;
-  border-right: 1px solid #464953;
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 14px;
   line-height: 19px;
   min-height: 600px;
@@ -14708,7 +15175,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   padding: 24px;
   position: relative;
   z-index: 2;
-  overflow: hidden; }
+  overflow: hidden;
+  min-height: 300px; }
   .partnereventdisplay_LibraryEventBodyContainer_32mHv .partnereventdisplay_EventBackgroundBlur_stsss {
     position: absolute;
     opacity: 0.4; }
@@ -14827,125 +15295,6 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 
 .partnereventdisplay_SteamBlog_1rafn {
   visibility: hidden; }
-
-.eventbbcodeparser_BlockQuote_2cY7b {
-  border: 1px solid #56707f;
-  border-radius: 3px;
-  padding: 12px;
-  margin: 8px;
-  font-size: 92%;
-  display: table;
-  word-break: break-word; }
-
-.eventbbcodeparser_BlockQuoteAuthor_Jyzed {
-  font-size: 92%;
-  font-style: italic; }
-
-.eventbbcodeparser_Code_1zoQP {
-  border: 1px solid #535354;
-  border-radius: 3px;
-  padding: 12px;
-  margin: 8px;
-  font-size: 11px;
-  font-family: Consolas,monospace;
-  white-space: pre;
-  white-space: pre-wrap;
-  overflow-x: auto; }
-
-.eventbbcodeparser_Header1_SPYFj {
-  color: #ffffff;
-  margin-bottom: 6px;
-  margin-top: 8px;
-  font-size: 19px;
-  line-height: 22px;
-  font-weight: normal;
-  clear: both; }
-
-.eventbbcodeparser_Link_29bMZ {
-  color: #969696;
-  text-decoration: underline; }
-  .eventbbcodeparser_Link_29bMZ:hover {
-    color: #ffffff; }
-
-.eventbbcodeparser_LinkHost_16eO9 {
-  font-size: 10px;
-  color: #7e8391;
-  padding: 4px;
-  top: -1px; }
-
-.eventbbcodeparser_Strike_1tIBv {
-  text-decoration: line-through; }
-
-.eventbbcodeparser_Spoiler_3QcA9 {
-  color: #000000;
-  background-color: #000000;
-  padding: 0px 8px; }
-
-.eventbbcodeparser_Spoiler_3QcA9:hover {
-  color: #ffffff; }
-
-.eventbbcodeparser_Spoiler_3QcA9 > span {
-  visibility: hidden; }
-
-.eventbbcodeparser_Spoiler_3QcA9:hover > span {
-  visibility: visible; }
-
-.eventbbcodeparser_UnorderList_3995Y {
-  list-style-type: disc;
-  list-style-position: inside;
-  line-height: 21px;
-  padding-left: 1em;
-  padding-inline-start: 40px;
-  margin-top: 14px;
-  margin-bottom: 0px; }
-
-.eventbbcodeparser_UnorderList_3995Y > li {
-  list-style-position: outside; }
-
-ol {
-  padding-left: 3em;
-  margin-top: 14px;
-  margin-bottom: 14px; }
-
-Table {
-  display: table;
-  font-size: 12px; }
-
-.eventbbcodeparser_TableHeader_3WcB- {
-  display: table-cell;
-  font-weight: bold;
-  border: 1px solid #4d4d4d;
-  padding: 4px; }
-
-.eventbbcodeparser_TableHeader_3WcB- img.eventbbcodeparser_sharedFilePreviewImage_2bwhK,
-.eventbbcodeparser_TableData_1skQk img.eventbbcodeparser_sharedFilePreviewImage_2bwhK {
-  margin: 0px; }
-
-.eventbbcodeparser_TableRow_sc_Sn {
-  display: table-row; }
-
-.eventbbcodeparser_TableData_1skQk {
-  display: table-cell;
-  vertical-align: middle;
-  border: 1px solid #4d4d4d;
-  padding: 4px; }
-
-iframe.eventbbcodeparser_StoreWidget_36Y-l {
-  height: 190px;
-  width: 100%; }
-
-iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
-  height: 360px;
-  width: 100%; }
-
-.eventbbcodeparser_AppSummaryWidgetCtn_3DfY9 {
-  flex-grow: 2;
-  flex-basis: 0;
-  margin-right: 16px;
-  padding: 16px;
-  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 4px; }
 
 .eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
   position: relative;
@@ -15079,11 +15428,128 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   border: 1px solid;
   padding: 10px; }
 
+.eventbbcodeparser_BlockQuote_2cY7b {
+  border: 1px solid #56707f;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
+  font-size: 92%;
+  display: table;
+  word-break: break-word; }
+
+.eventbbcodeparser_BlockQuoteAuthor_Jyzed {
+  font-size: 92%;
+  font-style: italic; }
+
+.eventbbcodeparser_Code_1zoQP {
+  border: 1px solid #535354;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
+  font-size: 11px;
+  font-family: Consolas,monospace;
+  white-space: pre;
+  white-space: pre-wrap;
+  overflow-x: auto; }
+
+.eventbbcodeparser_Header1_SPYFj {
+  color: #ffffff;
+  margin-bottom: 6px;
+  margin-top: 8px;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: normal;
+  clear: both; }
+
+.eventbbcodeparser_Link_29bMZ {
+  color: #969696;
+  text-decoration: underline; }
+  .eventbbcodeparser_Link_29bMZ:hover {
+    color: #ffffff; }
+
+.eventbbcodeparser_LinkHost_16eO9 {
+  font-size: 10px;
+  color: #7e8391;
+  padding: 4px;
+  top: -1px; }
+
+.eventbbcodeparser_Strike_1tIBv {
+  text-decoration: line-through; }
+
+.eventbbcodeparser_Spoiler_3QcA9 {
+  color: #000000;
+  background-color: #000000;
+  padding: 0px 8px; }
+
+.eventbbcodeparser_Spoiler_3QcA9:hover {
+  color: #ffffff; }
+
+.eventbbcodeparser_Spoiler_3QcA9 > span {
+  visibility: hidden; }
+
+.eventbbcodeparser_Spoiler_3QcA9:hover > span {
+  visibility: visible; }
+
+.eventbbcodeparser_UnorderList_3995Y {
+  list-style-type: disc;
+  list-style-position: inside;
+  line-height: 21px;
+  padding-left: 1em;
+  padding-inline-start: 40px;
+  margin-top: 14px;
+  margin-bottom: 0px; }
+
+.eventbbcodeparser_UnorderList_3995Y > li {
+  list-style-position: outside; }
+
+ol {
+  padding-left: 3em;
+  margin-top: 14px;
+  margin-bottom: 14px; }
+
+Table {
+  display: table;
+  font-size: 12px; }
+
+.eventbbcodeparser_TableHeader_3WcB- {
+  display: table-cell;
+  font-weight: bold;
+  border: 1px solid #4d4d4d;
+  padding: 4px; }
+
+.eventbbcodeparser_TableHeader_3WcB- img.eventbbcodeparser_sharedFilePreviewImage_2bwhK,
+.eventbbcodeparser_TableData_1skQk img.eventbbcodeparser_sharedFilePreviewImage_2bwhK {
+  margin: 0px; }
+
+.eventbbcodeparser_TableRow_sc_Sn {
+  display: table-row; }
+
+.eventbbcodeparser_TableData_1skQk {
+  display: table-cell;
+  vertical-align: middle;
+  border: 1px solid #4d4d4d;
+  padding: 4px; }
+
+iframe.eventbbcodeparser_StoreWidget_36Y-l {
+  height: 190px;
+  width: 100%; }
+
+iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
+  height: 360px;
+  width: 100%; }
+
+.eventbbcodeparser_AppSummaryWidgetCtn_3DfY9 {
+  flex-grow: 2;
+  flex-basis: 0;
+  margin-right: 16px;
+  padding: 16px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 4px; }
+
 .broadcast_embeddable_bordered_container_3zXpF {
   padding: 15px;
-  background: -webkit-linear-gradient(top, #576472 5%, #92a0ac 95%);
-  background: linear-gradient(to bottom, #576472 5%, #92a0ac 95%);
-  border-radius: 4px;
+  background: radial-gradient(100% 80% at 64% 95%, rgba(108, 119, 134, 0.4) 40%, rgba(83, 104, 104, 0.4) 100%) !important;
   text-align: left; }
   .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY {
     /* TODO alden might want to style the background differently for events */ }
@@ -15096,7 +15562,8 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   color: #ffffff;
   font-size: 14px;
   font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
+  font-weight: 500;
+  text-transform: uppercase;
   position: relative;
   letter-spacing: 1px; }
 
@@ -15124,7 +15591,8 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   letter-spacing: 1px;
   font-size: 12px;
   padding: 3px 6px 3px 20px;
-  box-shadow: 0 0 7px #a94847; }
+  box-shadow: 0 0 7px #a94847;
+  border-radius: 9px; }
 
 .broadcast_embeddable_bordered_corner_container_3IBcN {
   float: right;
@@ -15171,9 +15639,14 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
     .broadcast_embeddable_side_panels_T_zpR {
       display: none; } }
 
+.broadcast_embeddable_side_panels_T_zpR.broadcast_embeddable_multistream_1DS-W {
+  max-width: 158px; }
+
 .broadcast_embeddable_side_panels_T_zpR::-webkit-scrollbar {
-  height: 0px;
-  width: 0px; }
+  height: 0px; }
+
+.broadcast_embeddable_side_panels_T_zpR::-webkit-scrollbar-thumb {
+  background-color: #7581a3; }
 
 .broadcast_embeddable_wrapper_1mH-v {
   display: flex;
@@ -15206,8 +15679,8 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   justify-content: space-between; }
 
 .broadcast_embeddable_viewer_count_1MrTW {
-  font-size: 12px;
-  margin: 0px 0px 10px 0px;
+  font-size: 11px;
+  margin: 0px 0px 11px 0px;
   padding-left: 31px;
   letter-spacing: 0px;
   pointer-events: none;
@@ -15216,7 +15689,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   background-position: 3px center;
   line-height: 22px;
   text-decoration: none;
-  max-width: 116px; }
+  max-width: 105px; }
 
 .broadcast_embeddable_viewer_links_2EQpO {
   padding: 5px;
@@ -15244,28 +15717,55 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   display: flex;
   flex-direction: row;
   justify-content: left;
-  align-items: center; }
+  align-items: center;
+  background: white;
+  margin-right: 8px;
+  position: relative; }
 
 .broadcast_embeddable_stream_icon_1LBYs,
 .broadcast_embeddable_stream_icon_selected_mSpze {
-  max-width: 143px;
-  border-width: 2px;
-  border-style: solid; }
+  max-width: 136px;
+  border-width: 0px;
+  border-style: solid;
+  transition: transform 0.1s ease-out; }
 
 .broadcast_embeddable_stream_icon_1LBYs {
   border-color: black; }
   .broadcast_embeddable_stream_icon_1LBYs:hover {
-    border-color: #399aec; }
+    transform: scaleX(0.96) scaleY(0.93);
+    cursor: pointer; }
+
+.broadcast_embeddable_multistream_1DS-W {
+  overflow: hidden; }
+  .broadcast_embeddable_multistream_1DS-W .broadcast_embeddable_viewer_count_1MrTW {
+    max-width: 116px; }
+  .broadcast_embeddable_multistream_1DS-W .broadcast_embeddable_stream_icon_1LBYs,
+  .broadcast_embeddable_multistream_1DS-W .broadcast_embeddable_stream_icon_selected_mSpze {
+    max-width: 147px; }
+
+.broadcast_embeddable_scrollingstreams_3aYWl {
+  overflow: scroll;
+  max-width: 136px;
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px); }
+  .broadcast_embeddable_scrollingstreams_3aYWl .broadcast_embeddable_viewer_count_1MrTW {
+    max-width: 105px;
+    margin-bottom: 5px; }
+  .broadcast_embeddable_scrollingstreams_3aYWl .broadcast_embeddable_stream_icon_1LBYs,
+  .broadcast_embeddable_scrollingstreams_3aYWl .broadcast_embeddable_stream_icon_selected_mSpze {
+    max-width: 136px; }
 
 .broadcast_embeddable_stream_icon_selected_mSpze {
-  border-color: white; }
+  transform: scaleX(0.96) scaleY(0.93); }
 
 .broadcast_embeddable_stream_icon_arrow_2Qpu- {
   width: 0;
   height: 0;
   border-top: 8px solid transparent;
   border-left: 8px solid white;
-  border-bottom: 8px solid transparent; }
+  border-bottom: 8px solid transparent;
+  position: absolute;
+  right: -7px; }
 
 .broadcast_embeddable_clear_div_1oCVb {
   clear: both;
@@ -15690,7 +16190,57 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
 .partnereventstats_StatsTitle_3YLaB {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  font-size: 11px;
+  line-height: 18px; }
+
+.partnereventstats_StatsCtnTitle_1LlRF {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border: 1px solid #323a49;
+  border-bottom: none;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+  .partnereventstats_StatsCtnTitle_1LlRF h1 {
+    font-size: 18px;
+    color: white;
+    font-weight: 200; }
+
+.partnereventstats_StatsCtnTitle_1LlRF.partnereventstats_SmallStatsMode_2A2-p {
+  background-color: transparent;
+  padding: 0px;
+  border: none; }
+
+.partnereventstats_StatsCtn_hWCs4 {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  border: 1px solid #424e61;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px; }
+  @media screen and (max-width: 500px) {
+    .partnereventstats_StatsCtn_hWCs4 {
+      flex-direction: column; } }
+  .partnereventstats_StatsCtn_hWCs4 .partnereventstats_StatsLeftSection_3L-uh {
+    margin-right: 20px;
+    width: 50%;
+    border-right: 1px solid #636e7e;
+    padding-right: 20px; }
+  .partnereventstats_StatsCtn_hWCs4 .partnereventstats_StatsRightSection_1yibD {
+    margin-right: 10px;
+    width: 50%; }
+
+.partnereventstats_StatsCtn_hWCs4.partnereventstats_SmallStatsMode_2A2-p {
+  flex-direction: column;
+  border: none;
+  padding: 0px; }
+  .partnereventstats_StatsCtn_hWCs4.partnereventstats_SmallStatsMode_2A2-p .partnereventstats_StatsLeftSection_3L-uh {
+    border-right: none;
+    width: 100%; }
+  .partnereventstats_StatsCtn_hWCs4.partnereventstats_SmallStatsMode_2A2-p .partnereventstats_StatsRightSection_1yibD {
+    width: 100%;
+    margin-top: 20px; }
 
 .localdateandtime_DateAndTime_2V6GL {
   display: flex;
@@ -15704,6 +16254,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   display: flex; }
   .localdateandtime_ActiveEvent_rT7Ek .localdateandtime_ActiveEventCallOut_2pJft {
     background: #a3cf06;
+    font-size: 11px;
     color: #222222;
     padding: 0px 5px;
     border-radius: 2px;
@@ -15711,7 +16262,8 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
     position: relative;
     text-transform: uppercase;
     font-weight: 500;
-    margin-right: 4px; }
+    margin-right: 4px;
+    margin-top: 1px; }
 
 .localdateandtime_RightSideTitles_4LAnP {
   font-size: 12px;
@@ -16090,10 +16642,13 @@ img {
 .discussionwidget_ShareBtn_22m-G:not(:first-child) {
   margin-left: 8px; }
 
-.discussionwidget_ShareBtn_22m-G {
+.discussionwidget_ShareBtn_22m-G > img {
   height: 33px;
-  padding-top: 8px;
-  padding-bottom: 8px; }
+  padding-bottom: 8px;
+  vertical-align: bottom; }
+
+.discussionwidget_ShareBtn_22m-G > span {
+  line-height: 33px; }
 
 .discussionwidget_VoteCount_3csl-,
 .discussionwidget_DiscussionCount_QQy4B {
@@ -16240,6 +16795,44 @@ img {
   flex-direction: column;
   padding: 8px 14px 14px; }
 
+.libraryhome_UpdateLoweredPriorityNotice_2Yry4 {
+  padding-left: 12px;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  max-height: 40px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  animation: libraryhome_fadeout_1Qfrn 1s ease-out 1;
+  animation-fill-mode: forwards;
+  animation-delay: 28s; }
+
+@keyframes libraryhome_fadeout_1Qfrn {
+  from {
+    opacity: 1;
+    max-width: 100%; }
+  to {
+    opacity: 0;
+    max-width: 0%; } }
+
+.libraryhome_UpdateLoweredPriorityUndo_2sdvi {
+  box-sizing: border-box;
+  margin-right: 10px;
+  margin-left: 10px;
+  height: 32px;
+  padding: 7px;
+  border-radius: 4px;
+  background-color: rgba(211, 216, 224, 0.14);
+  border: none;
+  cursor: pointer;
+  transition: background-color .12s ease-in-out; }
+
+.libraryhome_UpdateLoweredPriorityUndo_2sdvi:hover {
+  background-color: rgba(205, 213, 226, 0.26); }
+
 .libraryhome_UpdatesContainer_17uEB {
   box-sizing: border-box;
   padding: 24px;
@@ -16331,6 +16924,19 @@ img {
   .libraryhome_BetaBar_1HcmY:hover .libraryhome_HoverContent_2z8Px {
     opacity: 1;
     position: static; }
+
+.libraryhome_AchievementCacheStatus_2I0nm {
+  background-color: #575761;
+  padding: 0px 10px;
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  color: #888890;
+  font-size: 13px;
+  position: absolute;
+  top: 0;
+  left: 100px; }
 
 .libraryhome_PrePurchaseContainer_3P7_- {
   position: absolute;
@@ -17109,7 +17715,9 @@ img {
       filter: saturate(0.4) brightness(1.2); }
   .libraryhomefriendsactivity_HeroImage_32LCs.libraryhomefriendsactivity_HeroImage_32LCs img {
     opacity: 0.22;
-    filter: saturate(0); }
+    filter: saturate(0);
+    height: 100%;
+    object-fit: cover; }
 
 .libraryhomefriendsactivity_HeroImageBlur_nvFbx {
   width: 100%;
@@ -17993,8 +18601,10 @@ button.DialogButton::-moz-focus-inner {
 .Destructive .ModalPosition_TopBar {
   background: linear-gradient(to right, #c44848, #c44848); }
 
-.ModalDialogPopup .ModalPosition,
-.ModalDialogPopup .ModalPosition_Content {
+/* Needs to target only the ModalPosition provided to the popup window and avoid being applied
+   to the additional, generic popups that can be placed inside the modal */
+.ModalDialogPopup .PopupFullWindow > .ModalPosition,
+.ModalDialogPopup .PopupFullWindow > .ModalPosition > .ModalPosition_Content {
   max-width: none;
   max-height: none;
   width: 100%;
@@ -18375,6 +18985,9 @@ button.DialogButton:disabled:hover {
   color: #464d58;
   box-shadow: none;
   cursor: default; }
+
+button.DialogButton.Small {
+  line-height: 22px; }
 
 button.TextButton {
   background-color: transparent;

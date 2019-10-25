@@ -428,6 +428,20 @@ SteamControllerHUD
 
 // Action set indicator styles
 
+#ActionSetIndicator
+{
+	opacity: 0.95;
+
+	transition-property: opacity;
+	transition-duration: 0.1s;
+	transition-timing-function: bigpicture-ease-in-out;
+}
+
+#ActionSetIndicator.FadeOut
+{
+	opacity: 0.0;
+}
+
 #ActionSetFadeMask
 {
 	background-color: #072135bb;
@@ -439,17 +453,6 @@ SteamControllerHUD
 	y: 800px;
 	
 	opacity-mask: url( "file://{images}/overlay/actionset_fademask.png" );
-	
-	opacity: 0.95;
-	
-	transition-property: opacity;
-	transition-duration: 0.1s;
-	transition-timing-function: bigpicture-ease-in-out;
-}
-
-#ActionSetFadeMask.FadeOut
-{
-	opacity: 0.0;
 }
 
 #ActionSetLabelsContainer

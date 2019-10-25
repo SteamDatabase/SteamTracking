@@ -28,6 +28,7 @@ message CClientMetrics_IPv6Connectivity_Result {
 message CClientMetrics_IPv6Connectivity_Notification {
 	optional uint32 cell_id = 1;
 	repeated .CClientMetrics_IPv6Connectivity_Result results = 2;
+	optional bool private_ip_is_rfc6598 = 3;
 }
 
 service ClientMetrics {

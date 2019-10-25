@@ -30,6 +30,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(ed25519_VALVE_sse2.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(encrypted_app_ticket.pb.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(enum_names.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(enums_clientserver.pb.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(filetransfer.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(framefunction.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(gid.o)
@@ -85,6 +86,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(sysid.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(tcpconnection.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(tcphost.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(timeutils.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(udpconnection.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(udphost.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(udpsocket.o)
@@ -352,6 +354,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_unified_base.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_unified_test.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_useraccount.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_vac.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_video.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steammessages_virtualcontroller.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_certs.o
@@ -645,6 +648,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_unified_base.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_unified_test.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_useraccount.steamclient.pb.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_vac.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_video.steamclient.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steammessages_virtualcontroller.pb.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_certs.o
@@ -958,6 +962,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/encrypted_app_ticket.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/encrypted_app_ticket.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enums_clientserver.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enums_clientserver.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filetransfer.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filetransfer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/framefunction.cpp
@@ -1163,6 +1169,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_unified_test.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_useraccount.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_useraccount.steamclient.pb.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_vac.steamclient.pb.cc
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_vac.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_video.steamclient.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_video.steamclient.pb.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steammessages_virtualcontroller.pb.cc

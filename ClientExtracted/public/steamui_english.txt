@@ -2787,6 +2787,15 @@ Make one now by emailing a gift to someone you know."
 "SteamUI_LicenseExpired_Title"	"License Expired"
 "SteamUI_LicenseExpired_Body"		"Your license for %game% has expired."
 
+
+"SteamUI_DurationControl_PlaytimeExceeded_Title"		"Playtime Exceeded"
+
+"SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"You have accumulated 3 hours of online time. Please take a break of at least 5 hours. Engage in physical activity."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"You have reached your limit of online time for today. Please take a break and try tomorrow after 8AM."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"You can't play this game between 10PM and 8AM the following day. Please take a break."
+
+
+
 "Steam_GuestPassesColumn" 		"Gifts"
 "Steam_GuestPasses_LeftGift"		"Extra copy"
 "Steam_GuestPasses_LeftGuestPass"		"Guest pass"
@@ -4079,6 +4088,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_45"		"parental control blocked"
 "Steam_AppUpdateError_46"		"create process failed"
 "Steam_AppUpdateError_47"		"Steam client outdated"
+"Steam_AppUpdateError_48"		"allowed playtime exceeded"
 
 
 "steam_subnav_featured"		"Featured"

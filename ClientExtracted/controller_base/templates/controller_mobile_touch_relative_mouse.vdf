@@ -15,22 +15,22 @@
 			"title"		"Mouse trackpad"
 			"description"		"This template works great for the games on Steam that were designed for trackpad interaction"
 		}
-		"korean"
+		"koreana"
 		{
 			"title"		"마우스 트랙패드"
 			"description"		"이 템플릿은 Steam에 있는 게임 중 트랙패드 조작을 위해 설계된 게임에서 유용합니다."
 		}
-		"chinese traditional"
+		"tchinese"
 		{
 			"title"		"滑鼠觸控板"
 			"description"		"此模板適用於 Steam 上設計來利用觸控板互動的遊戲"
 		}
-		"chinese simplified"
+		"schinese"
 		{
 			"title"		"鼠标触控板"
 			"description"		"此模板适用于 Steam 上触控板互动类游戏。"
 		}
-		"czeh"
+		"czech"
 		{
 			"title"		"Trackpad"
 			"description"		"Tato šablona je pro hry ve službě Steam, které byly vytvořeny pro ovládání trackpadem."
@@ -85,7 +85,7 @@
 			"title"		"Panel táctil (trackpad)"
 			"description"		"Esta plantilla funciona muy bien con los juegos de Steam que han sido diseñados para la interacción con un panel táctil (trackpad)"
 		}
-		"spanish, mexico"
+		"latam"
 		{
 			"title"		"Trackpad del mouse"
 			"description"		"Esta plantilla funciona muy bien con los juegos de Steam que fueron diseñados para la interacción con el trackpad"
@@ -105,7 +105,7 @@
 			"title"		"Hiiren kosketuslevy"
 			"description"		"Malli sopii erityisesti kosketuslevyllä käytettäviksi suunniteltuihin Steam-peleihin"
 		}
-		"ukranian"
+		"ukrainian"
 		{
 			"title"		"Сенсорна панель"
 			"description"		"Цей шаблон чудово працює з іграми у Steam, які розроблені для взаємодії із сенсорною панеллю"
@@ -125,7 +125,7 @@
 			"title"		"Bàn cảm ứng chuột"
 			"description"		"Bản đồ phím mẫu này rất phù hợp với các trò chơi trên Steam được thiết kế dành cho tương tác cảm ứng"
 		}
-		"portuguese, brazilian"
+		"brazilian"
 		{
 			"title"		"Trackpad"
 			"description"		"Este modelo é ótimo para jogos no Steam que se baseiam em interações com o trackpad"

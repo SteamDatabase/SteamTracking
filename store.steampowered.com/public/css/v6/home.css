@@ -29,7 +29,6 @@
     }
 }
 
-
 .page_background_holder {
 	position: absolute;
 	top: 0;
@@ -1519,21 +1518,18 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 
 .home_header_textimage_ctn {
 	width: 100%;
-	max-width:1200px;
-	height:auto;
-	margin: 80px auto 0 auto;
+	margin-top: 100px;
 }
 
 .home_header_textimage {
+	display: block;
 	z-index: 100;
 	position: relative;
-	min-height: 220px;
-	width: 100%;
-
+	height: 300px;
 	background-repeat: no-repeat;
-	background-position: left;
-	background-size: contain;
-	display: block;
+	background-size: auto;
+	background-position-y: top;
+	background-position-x: 49vw;
 }
 
 @media screen and (max-width: 910px)
@@ -1704,6 +1700,14 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 
 	html.responsive .responsive_home_spotlight_recommended {
 		text-align: center;
+	}
+
+	body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn {
+		margin-top: 0;
+	}
+	body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn .home_header_textimage {
+		background-size: 45vw;
+		background-position-y: 20px;
 	}
 
 }

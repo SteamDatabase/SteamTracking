@@ -179,7 +179,7 @@
  B g_cPendingMsg
  B g_cTrackedAllocs
  B g_cTrackedAllocsMax
- B g_cnIPThisBox
+ B g_cnIPThisBoxV4
  B g_cnIPThisBoxV6
  B g_mapAllocations
  B g_mutexTempTextBuffer
@@ -190,7 +190,7 @@
  B g_pThreadLocalHashMapServerTypeWatches
  B g_pThreadLocalHashMapSteamIDWatches
  B g_pThreadLocalHashMapTxnIDWatches
- B g_rgunIPThisBox
+ B g_rgunIPThisBoxV4
  B g_rgunIPThisBoxV6
  B g_unPrivateIPThisBox
  B g_unPublicIPThisBox
@@ -1872,7 +1872,8 @@
  T CMemoryPool::Free(void*)
  T CMemoryPool::Validate(CValidator&, char const*)
  T CMemoryPool::~CMemoryPool()
- T CMessageList::CMessageList(OldMsgInfo_t*, int)
+ T CMessageList::AddMessageInfoToMaps(MessageInfo_t*)
+ T CMessageList::CMessageList()
  T CMessageList::FindMessageInfoForEMsg(EMsg) const
  T CMessageList::GetMessageFlags(EMsg, char const**, EServerType*)
  T CMessageList::TallySendMessage(EMsg, unsigned int)
@@ -2280,6 +2281,7 @@
  T CNet::SetDefaultSocketOptions(int, EConnectionType, unsigned int)
  T CNet::SetSocketNonBlocking(int)
  T CNet::SetSocketToAbortWhenClosed(unsigned int)
+ T CNet::ShutdownWorkThreadPool(CWorkThreadPool*)
  T CNet::ValidateGlobals(CValidator&)
  T CNetConnection::AddNetFilterToChain(CNetFilter*)
  T CNetConnection::BAsyncDisconnect()
@@ -2682,7 +2684,7 @@
  T CStdMemAlloc::CubSBHFree()
  T CStdMemAlloc::CubSBHMinPoolFree()
  T CStdMemAlloc::DefaultFailHandler(unsigned long)
- T CStdMemAlloc::DumpMemTrackingStats(int, int, int)
+ T CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)
  T CStdMemAlloc::DumpStats()
  T CStdMemAlloc::DumpStatsFileBase(char const*)
  T CStdMemAlloc::Expand_NoLongerSupported(void*, unsigned long)
@@ -3068,8 +3070,16 @@
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::CUtlHashMap()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::Purge()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::~CUtlHashMap()
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::AllocNode()
  T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::CUtlHashMap()
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::EnsureCapacity(int)
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::Find(char const* const&) const
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::FindInBucket(int, char const* const&) const
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::IncrementalRehash()
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::InsertOrReplace(char const* const&, MessageInfo_t* const&)
  T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::Purge()
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::RehashNodesInBucket(int)
+ T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::~CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::CUtlHashMap()
  T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::Purge()
@@ -3531,6 +3541,8 @@
  T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >::GrowVector(int)
@@ -4257,6 +4269,8 @@
  T EC_POINTs_make_affine
  T EC_curve_nid2nist
  T EC_curve_nist2nid
+ T EMsg_IsValid(int)
+ T EMsg_descriptor()
  T ERR_add_error_data
  T ERR_add_error_vdata
  T ERR_clear_error
@@ -4582,6 +4596,7 @@
  T InitializeSpewConfig()
  T Internal_Coroutine_Continue(int, bool, char const*)
  T IsSpewActive
+ T IsValveIPAddress(CIPAddress const&)
  T KeyValues::CopySubkeys(KeyValues*) const
  T KeyValues::FindKey(char const*) const
  T KeyValues::FindKey(char const*, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
@@ -5645,6 +5660,7 @@
  T i2v_GENERAL_NAMES
  T int CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::InsertUnconstructed<CIPAndPort const&>(CIPAndPort const&, int*, bool)
  T int CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::InsertUnconstructed<CIPAndPort const&>(CIPAndPort const&, int*, bool)
+ T int CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::InsertUnconstructed<char const* const&>(char const* const&, int*, bool)
  T int CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::InsertUnconstructed<int const&>(int const&, int*, bool)
  T int CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
  T int CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
@@ -5728,10 +5744,13 @@
  T private_AES_set_encrypt_key
  T private_Camellia_set_key
  T private_RC4_set_key
+ T protobuf_AddDesc_enums_5fclientserver_2eproto()
  T protobuf_AddDesc_steammessages_5fbase_2eproto()
  T protobuf_AddDesc_steammessages_5fclientserver_5flogin_2eproto()
+ T protobuf_AssignDesc_enums_5fclientserver_2eproto()
  T protobuf_AssignDesc_steammessages_5fbase_2eproto()
  T protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()
+ T protobuf_ShutdownFile_enums_5fclientserver_2eproto()
  T protobuf_ShutdownFile_steammessages_5fbase_2eproto()
  T protobuf_ShutdownFile_steammessages_5fclientserver_5flogin_2eproto()
  T rsaz_1024_gather5_avx2
@@ -5943,6 +5962,7 @@
  T ssleay_rand_bytes
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::find<int>(int const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::find<long long>(long long const&)
+ T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__insert_multi<std::__1::__hash_value_type<void*, AllocTracking_t> const&>(std::__1::__hash_value_type<void*, AllocTracking_t> const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::find<void*>(void* const&)
  T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*)
  T std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__rehash(unsigned long)
@@ -5952,10 +5972,12 @@
  T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::~__hash_table()
+ T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__node_insert_multi(std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__node_insert_unique(std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::clear()
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::erase(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
+ T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::operator=(std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > > const&)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::rehash(unsigned long)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::remove(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
  T std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::~__hash_table()
@@ -6063,6 +6085,7 @@
  T std::__1::pair<std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long>, bool> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__emplace_unique_key_args<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&&)
  T std::__1::pair<std::__1::__tree_iterator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__tree_node<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, void*>*, long>, bool> std::__1::__tree<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__emplace_unique_key_args<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::set<MinidumpWritten_t, std::__1::less<MinidumpWritten_t>, std::__1::allocator<MinidumpWritten_t> >::~set()
+ T std::__1::unique_ptr<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>, std::__1::__hash_node_destructor<std::__1::allocator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*> > > > std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__construct_node<std::__1::__hash_value_type<void*, AllocTracking_t> const&>(std::__1::__hash_value_type<void*, AllocTracking_t> const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > >(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> >&&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> >, std::__1::less<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > >, true>, std::__1::allocator<std::__1::__value_type<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const, std::__1::pair<void const*, int> > const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, void*> > > > std::__1::__tree<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::__map_value_compare<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> >, std::__1::less<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> >, true>, std::__1::allocator<std::__1::__value_type<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int>, std::__1::pair<void const*, int> > > >::__construct_node<std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&>(std::__1::pair<std::__1::pair<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, int> const, std::__1::pair<void const*, int> > const&)
@@ -6163,6 +6186,7 @@
  T void _ValidateSelectType<ITCPHostCallback>(ITCPHostCallback*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<IUDPSocketCallback>(IUDPSocketCallback*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<char>(char*, CValidator&, char const*, fallback_)
+ T void std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__assign_multi<std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> >(std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>, std::__1::__hash_const_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*>)
  T void std::__1::__insertion_sort_3<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&, VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
@@ -6353,6 +6377,9 @@
  b (anonymous namespace)::CMsgProtoBufHeader_reflection_
  b (anonymous namespace)::CMsgProtobufWrapped_descriptor_
  b (anonymous namespace)::CMsgProtobufWrapped_reflection_
+ b (anonymous namespace)::EClientPersonaStateFlag_descriptor_
+ b (anonymous namespace)::EMsgClanAccountFlags_descriptor_
+ b (anonymous namespace)::EMsg_descriptor_
  b (anonymous namespace)::EProtoClanEventType_descriptor_
  b (anonymous namespace)::PartnerEventNotificationType_descriptor_
  b (anonymous namespace)::_CLEANUP
@@ -6546,6 +6573,7 @@
  b param_table
  b pbe_algs
  b prompt_string
+ b protobuf_AddDesc_enums_5fclientserver_2eproto()::already_here
  b protobuf_AddDesc_steammessages_5fbase_2eproto()::already_here
  b protobuf_AddDesc_steammessages_5fclientserver_5flogin_2eproto()::already_here
  b protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddress_offsets_
@@ -7532,6 +7560,7 @@
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
  t _GLOBAL__sub_I_enum_names.cpp
+ t _GLOBAL__sub_I_enums_clientserver.pb.cc
  t _GLOBAL__sub_I_extension_set.cc
  t _GLOBAL__sub_I_fasttimer.cpp
  t _GLOBAL__sub_I_framefunction.cpp
@@ -7753,7 +7782,7 @@
  t bn_rand_range
  t bn_sqr8x_mont
  t bnrand
- t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
+ t bool std::__1::__insertion_sort_incomplete<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&)
  t bsaes_const
  t bsaes_decrypt8
  t bsaes_encrypt8
@@ -8324,9 +8353,9 @@
  t ssleay_rand_seed
  t ssleay_rand_status
  t ssse3_shortcut
- t std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t> > >::__rehash(unsigned long)
- t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&>::~__split_buffer()
- t std::__1::unordered_map<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocDetails_t> > >::operator[](AllocTracking_t const&)
+ t std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t> > >::__rehash(unsigned long)
+ t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&>::~__split_buffer()
+ t std::__1::unordered_map<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t> > >::operator[](AllocTracking_t const&)
  t str_copy
  t str_free
  t sxnet_i2r
@@ -8349,9 +8378,9 @@
  t trust_1oidany
  t trust_compat
  t type_str
- t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
- t unsigned int std::__1::__sort4<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
- t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort3<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort4<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&)
+ t unsigned int std::__1::__sort5<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&)
  t update
  t update256
  t update512
@@ -8366,7 +8395,7 @@
  t v2i_idp
  t v2i_issuer_alt
  t v2i_subject_alt
- t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int)::AllocSpewData_t>&)
+ t void std::__1::__sort<std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*>(CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t*, std::__1::__less<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&)
  t vpaes_consts
  t vpaes_decrypt_core
  t vpaes_encrypt_core

@@ -2082,7 +2082,6 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D typeinfo for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgFind>
- D typeinfo for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  D typeinfo for CHTMLProtoBufMsg<CMsgFullRepaint>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoBack>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoForward>
@@ -2127,7 +2126,9 @@
  D typeinfo for CIntProperty
  D typeinfo for CItemImageManager
  D typeinfo for CJSCallbackFunc
+ D typeinfo for CJSCallbackFunc_HTMLJS
  D typeinfo for CJSMethodArgument
+ D typeinfo for CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CLambdaCallResult<DurationControl_t>
  D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CMainOverlay
@@ -2441,7 +2442,9 @@
  D typeinfo for IClientParentalSettings
  D typeinfo for ICommonOverlayHelpers
  D typeinfo for IConCommandBaseAccessor
+ D typeinfo for IHTMLJS
  D typeinfo for IHTMLResponses
+ D typeinfo for IJSMethodCallHandler
  D typeinfo for IMemStream
  D typeinfo for IOverlayOSPumps
  D typeinfo for IPC::BinarySemaphore
@@ -2461,7 +2464,6 @@
  D typeinfo for ZooDialog
  D typeinfo for ZooDialog::ZooPropertyPage
  D typeinfo for std::__1::__function::__base<void ()>
- D typeinfo for std::__1::__function::__base<void (DurationControl_t*, bool)>
  D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D typeinfo for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
@@ -2472,8 +2474,6 @@
  D typeinfo for vgui::CBitmapImagePanel
  D typeinfo for vgui::CFileOpenListPanel
  D typeinfo for vgui::CIMEPanel
- D typeinfo for vgui::CJSCallbackFunc_vgui
- D typeinfo for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for vgui::CNotificationClickPanel
  D typeinfo for vgui::CStyleImage
  D typeinfo for vgui::CTreeViewListControl
@@ -2513,7 +2513,6 @@
  D typeinfo for vgui::IDebugOverlayPainter
  D typeinfo for vgui::IHostOfflineMode
  D typeinfo for vgui::IImage
- D typeinfo for vgui::IJSMethodCallHandler
  D typeinfo for vgui::IPanelAnimationPropertyConverter
  D typeinfo for vgui::IPanelInputForwarding
  D typeinfo for vgui::IToolWindowFactory
@@ -3373,7 +3372,6 @@
  D vtable for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D vtable for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D vtable for CHTMLProtoBufMsg<CMsgFind>
- D vtable for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  D vtable for CHTMLProtoBufMsg<CMsgFullRepaint>
  D vtable for CHTMLProtoBufMsg<CMsgGoBack>
  D vtable for CHTMLProtoBufMsg<CMsgGoForward>
@@ -3418,7 +3416,9 @@
  D vtable for CIntProperty
  D vtable for CItemImageManager
  D vtable for CJSCallbackFunc
+ D vtable for CJSCallbackFunc_HTMLJS
  D vtable for CJSMethodArgument
+ D vtable for CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >
  D vtable for CLambdaCallResult<DurationControl_t>
  D vtable for CMSgJumpListMRUApp
  D vtable for CMainOverlay
@@ -3724,6 +3724,7 @@
  D vtable for DirectoryTreeView
  D vtable for GridMenu
  D vtable for HTMLComboBoxHost
+ D vtable for IHTMLJS
  D vtable for IHTMLResponses
  D vtable for IPC::BinarySemaphore
  D vtable for IPC::PosixEvent
@@ -3746,8 +3747,6 @@
  D vtable for vgui::CBitmapImagePanel
  D vtable for vgui::CFileOpenListPanel
  D vtable for vgui::CIMEPanel
- D vtable for vgui::CJSCallbackFunc_vgui
- D vtable for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >
  D vtable for vgui::CNotificationClickPanel
  D vtable for vgui::CStyleImage
  D vtable for vgui::CTreeViewListControl
@@ -4091,7 +4090,6 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgExitFullScreen>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFind>
- R typeinfo name for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFullRepaint>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoBack>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoForward>
@@ -4136,7 +4134,9 @@
  R typeinfo name for CIntProperty
  R typeinfo name for CItemImageManager
  R typeinfo name for CJSCallbackFunc
+ R typeinfo name for CJSCallbackFunc_HTMLJS
  R typeinfo name for CJSMethodArgument
+ R typeinfo name for CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CLambdaCallResult<DurationControl_t>
  R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CMainOverlay
@@ -4535,7 +4535,9 @@
  R typeinfo name for IClientParentalSettings
  R typeinfo name for ICommonOverlayHelpers
  R typeinfo name for IConCommandBaseAccessor
+ R typeinfo name for IHTMLJS
  R typeinfo name for IHTMLResponses
+ R typeinfo name for IJSMethodCallHandler
  R typeinfo name for IMemStream
  R typeinfo name for IOverlayOSPumps
  R typeinfo name for IPC::BinarySemaphore
@@ -4555,7 +4557,6 @@
  R typeinfo name for ZooDialog
  R typeinfo name for ZooDialog::ZooPropertyPage
  R typeinfo name for std::__1::__function::__base<void ()>
- R typeinfo name for std::__1::__function::__base<void (DurationControl_t*, bool)>
  R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
@@ -4567,8 +4568,6 @@
  R typeinfo name for vgui::CFileOpenListPanel
  R typeinfo name for vgui::CFontWidthCache
  R typeinfo name for vgui::CIMEPanel
- R typeinfo name for vgui::CJSCallbackFunc_vgui
- R typeinfo name for vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for vgui::CNotificationClickPanel
  R typeinfo name for vgui::CStyleImage
  R typeinfo name for vgui::CTreeViewListControl
@@ -4608,7 +4607,6 @@
  R typeinfo name for vgui::IDebugOverlayPainter
  R typeinfo name for vgui::IHostOfflineMode
  R typeinfo name for vgui::IImage
- R typeinfo name for vgui::IJSMethodCallHandler
  R typeinfo name for vgui::IPanelAnimationPropertyConverter
  R typeinfo name for vgui::IPanelInputForwarding
  R typeinfo name for vgui::IToolWindowFactory
@@ -4953,7 +4951,6 @@
  T CBasePanel::ShellExecuteHook(char const*, char const*)
  T CBasePanel::ShowBroadcastAvailableNotification()
  T CBasePanel::ShowControllerConfigNotification()
- T CBasePanel::ShowDurationControl(float)
  T CBasePanel::ShowLegacyCDKey()
  T CBasePanel::ShowLegacyCDKeyIfNotIgnored()
  T CBasePanel::ShowMinimalModePanel(vgui::Panel*)
@@ -5756,8 +5753,6 @@
  T CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFind>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFind>::~CHTMLProtoBufMsg()
- T CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>::CHTMLProtoBufMsg(EHTMLCommands)
- T CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFullRepaint>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFullRepaint>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgGoBack>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -5894,6 +5889,11 @@
  T CJSCallbackFunc::MarkInvalid()
  T CJSCallbackFunc::OnFinalRelease()
  T CJSCallbackFunc::~CJSCallbackFunc()
+ T CJSCallbackFunc_HTMLJS::Call(CJSMethodArgs&)
+ T CJSCallbackFunc_HTMLJS::IsValid()
+ T CJSCallbackFunc_HTMLJS::MarkInvalid()
+ T CJSCallbackFunc_HTMLJS::OnFinalRelease()
+ T CJSCallbackFunc_HTMLJS::~CJSCallbackFunc_HTMLJS()
  T CJSMethodArgs::AddArray()
  T CJSMethodArgs::AddBoolean(bool)
  T CJSMethodArgs::AddObject()
@@ -5913,6 +5913,7 @@
  T CJSMethodArgument::mutable_json_data()
  T CJSMethodArgument::set_json_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CJSMethodArgument::~CJSMethodArgument()
+ T CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSObject::SetString(char const*, char const*)
  T CJpegSourceMgr::error_exit(jpeg_common_struct*)
  T CJpegSourceMgr::imp_fill_input_buffer(jpeg_decompress_struct*)
@@ -5932,7 +5933,6 @@
  T CLambdaCallResult<DurationControl_t>::GetCallbackSizeBytes()
  T CLambdaCallResult<DurationControl_t>::Run(void*)
  T CLambdaCallResult<DurationControl_t>::Run(void*, bool, unsigned long long)
- T CLambdaCallResult<DurationControl_t>::Set(unsigned long long, std::__1::function<void (DurationControl_t*, bool)>)
  T CLambdaCallResult<DurationControl_t>::~CLambdaCallResult()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
@@ -10401,6 +10401,7 @@
  T FioRead(int, void*, int, int*)
  T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
  T FormatCurrencyUTF8(char*, unsigned int, long long, ECurrencyCode, ELanguage)
+ T FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&, bool*)
  T GCallbackMgr()
  T GOverlayVRState()
  T GenerateBuildIdentifierFromDateAndTimeMacros(char const*, char const*, char*, unsigned long)
@@ -10807,11 +10808,11 @@
  T bn_scatter5
  T bn_sqr8x_internal
  T bn_sqrx8x_internal
+ T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(IHTMLJS*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
  T bool BResolveHostString<CIPAddress>(char const*, bool, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
- T bool vgui::BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(vgui::HTML*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
  T bsaes_cbc_encrypt
  T bsaes_ctr32_encrypt_blocks
  T bsaes_xts_decrypt
@@ -10958,6 +10959,7 @@
  T non-virtual thunk to LayoutDebugDialog::MousePressed(vgui::Panel*, int)
  T non-virtual thunk to LayoutDebugDialog::MouseReleased(vgui::Panel*, int)
  T non-virtual thunk to LayoutDebugDialog::PaintDebugOverlay(vgui::Panel*)
+ T non-virtual thunk to vgui::HTML::AddJSCallback(CJSCallbackFunc*)
  T non-virtual thunk to vgui::HTML::BSupportsOffMainThreadPaints()
  T non-virtual thunk to vgui::HTML::BrowserAckPIDShuttingDown(CMsgAckPIDShuttingDown const*)
  T non-virtual thunk to vgui::HTML::BrowserBringWindowToFront(CMsgBringWindowToFront const*)
@@ -11021,6 +11023,12 @@
  T non-virtual thunk to vgui::HTML::BrowserUpdateToolTip(CMsgUpdateToolTip const*)
  T non-virtual thunk to vgui::HTML::BrowserVerticalScrollBarSizeResponse(CMsgVerticalScrollBarSizeResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserZoomToElementAtPositionResponse(CMsgZoomToElementAtPositionResponse const*)
+ T non-virtual thunk to vgui::HTML::ClearRegisteredJSMethods()
+ T non-virtual thunk to vgui::HTML::GetBrowserIndexForJS()
+ T non-virtual thunk to vgui::HTML::RaiseJSException(char const*)
+ T non-virtual thunk to vgui::HTML::RegisterJSMethodInternal(char const*, IJSMethodCallHandler*, EJSRegisterMethodType)
+ T non-virtual thunk to vgui::HTML::ReleaseJSCallback(CJSCallbackFunc*)
+ T non-virtual thunk to vgui::HTML::RunJavascript(char const*)
  T non-virtual thunk to vgui::HTML::ThreadNotifyPendingPaints()
  T non-virtual thunk to vgui::HTML::~HTML()
  T non-virtual thunk to vgui::HTMLPopup::PopupHTML::~PopupHTML()
@@ -11327,10 +11335,7 @@
  T std::__1::function<void ()>::operator()() const
  T std::__1::function<void ()>::operator=(std::__1::function<void ()> const&)
  T std::__1::function<void ()>::swap(std::__1::function<void ()>&)
- T std::__1::function<void (DurationControl_t*, bool)>::function(std::__1::function<void (DurationControl_t*, bool)> const&)
  T std::__1::function<void (DurationControl_t*, bool)>::operator()(DurationControl_t*, bool) const
- T std::__1::function<void (DurationControl_t*, bool)>::operator=(std::__1::function<void (DurationControl_t*, bool)> const&)
- T std::__1::function<void (DurationControl_t*, bool)>::swap(std::__1::function<void (DurationControl_t*, bool)>&)
  T std::__1::pair<int*, long> std::__1::get_temporary_buffer<int>(long)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, long>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__emplace_unique_key_args<int, int const&>(int const&, int const&)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, long>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__emplace_unique_key_args<int, int>(int const&, int&&)
@@ -11568,12 +11573,6 @@
  T vgui::CIMEPanel::ShowIMECandidates()
  T vgui::CIMEPanel::UpdateIMECandidates()
  T vgui::CIMEPanel::~CIMEPanel()
- T vgui::CJSCallbackFunc_vgui::Call(CJSMethodArgs&)
- T vgui::CJSCallbackFunc_vgui::IsValid()
- T vgui::CJSCallbackFunc_vgui::MarkInvalid()
- T vgui::CJSCallbackFunc_vgui::OnFinalRelease()
- T vgui::CJSCallbackFunc_vgui::~CJSCallbackFunc_vgui()
- T vgui::CJSMethodCallHandler<CSteamAuthedHTML, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T vgui::CNotificationClickPanel::CNotificationClickPanel(vgui::Panel*, char const*)
  T vgui::CNotificationClickPanel::ChainToAnimationMap()
  T vgui::CNotificationClickPanel::ChainToMap()
@@ -12205,7 +12204,6 @@
  T vgui::FrameTitle::PerformLayout()
  T vgui::FrameTitle::SetDisabledLook(bool)
  T vgui::FrameTitle::~FrameTitle()
- T vgui::FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&, bool*)
  T vgui::GetAnimationController()
  T vgui::GetControlsModuleName()
  T vgui::GetINotificationManager()
@@ -12350,6 +12348,7 @@
  T vgui::HTML::FindPrevious()
  T vgui::HTML::GetAnimMap()
  T vgui::HTML::GetBaseStyleName()
+ T vgui::HTML::GetBrowserIndexForJS()
  T vgui::HTML::GetClassSize() const
  T vgui::HTML::GetKBMap()
  T vgui::HTML::GetLinkAtPosition(int, int)
@@ -12421,7 +12420,7 @@
  T vgui::HTML::PostURL(char const*, char const*, bool)
  T vgui::HTML::RaiseJSException(char const*)
  T vgui::HTML::Refresh()
- T vgui::HTML::RegisterJSMethodInternal(char const*, vgui::IJSMethodCallHandler*, EJSRegisterMethodType)
+ T vgui::HTML::RegisterJSMethodInternal(char const*, IJSMethodCallHandler*, EJSRegisterMethodType)
  T vgui::HTML::ReleaseJSCallback(CJSCallbackFunc*)
  T vgui::HTML::ReleaseSharedTexture(bool)
  T vgui::HTML::ResizeHTML()
@@ -12431,7 +12430,6 @@
  T vgui::HTML::SendScreenDimensionsToCEF()
  T vgui::HTML::SetBrowserHidden(bool)
  T vgui::HTML::SetContextMenuEnabled(bool)
- T vgui::HTML::SetForceChildHWNDPopupsToDirectHWND(bool)
  T vgui::HTML::SetViewSourceEnabled(bool)
  T vgui::HTML::ShowFindDialog()
  T vgui::HTML::StopFind()
@@ -14678,6 +14676,7 @@
  T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
  T void Destruct<CScreenshotGameSelector::NameSort_t>(CScreenshotGameSelector::NameSort_t*)
  T void Destruct<vgui::HTML::AdditionalRoute_t>(vgui::HTML::AdditionalRoute_t*)
+ T void JSMethodCallTuple_Helper<CSteamAuthedHTML, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T void std::__1::__insertion_sort_3<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
@@ -14695,7 +14694,6 @@
  T void std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__push_back_slow_path<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T void std::__1::vector<void (*)(), std::__1::allocator<void (*)()> >::__push_back_slow_path<void (* const&)()>(void (* const&)())
  T void std::__1::vector<void*, std::__1::allocator<void*> >::__push_back_slow_path<void* const&>(void* const&)
- T void vgui::JSMethodCallTuple_Helper<CSteamAuthedHTML, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CSteamAuthedHTML*, void (CSteamAuthedHTML::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
  T vpaes_cbc_encrypt
  T vpaes_decrypt
  T vpaes_encrypt
@@ -15414,11 +15412,9 @@
  d typeinfo for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1
  d typeinfo for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2
  d typeinfo for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3
- d typeinfo for CBasePanel::ShowDurationControl(float)::$_0
  d typeinfo for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>
  d typeinfo for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
  d typeinfo for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>
- d typeinfo for std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
  d vgui::Panel::OnOldMessage(KeyValues*, unsigned long long)::s_bDebugMessages
  d vgui::RichText::GetAppearanceForLocalStyle(int, int)::styleNameList3
  d vgui::RichText::InsertStringWithHTML(wchar_t const*)::rgTagToStyles
@@ -15427,7 +15423,6 @@
  d vtable for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>
  d vtable for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
  d vtable for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>
- d vtable for std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
  dlclose
  dlopen
  dlsym
@@ -15743,11 +15738,9 @@
  r typeinfo name for CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1
  r typeinfo name for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2
  r typeinfo name for CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3
- r typeinfo name for CBasePanel::ShowDurationControl(float)::$_0
  r typeinfo name for std::__1::__function::__func<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1, std::__1::allocator<CBasePanel::OnGameOverlayActivateRequested(GameOverlayActivateRequested_t const*)::$_1>, void ()>
  r typeinfo name for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_2>, void ()>
  r typeinfo name for std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>
- r typeinfo name for std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>
  r utf8_lead_bits
  r verbnames
  r verbs
@@ -15950,7 +15943,6 @@
  t _GLOBAL__sub_I_FriendsImageManager.cpp
  t _GLOBAL__sub_I_GraphPanel.cpp
  t _GLOBAL__sub_I_HTML.cpp
- t _GLOBAL__sub_I_HTML_js.cpp
  t _GLOBAL__sub_I_HotKeyEntry.cpp
  t _GLOBAL__sub_I_IMEPanel.cpp
  t _GLOBAL__sub_I_Image.cpp
@@ -16010,7 +16002,6 @@
  t _GLOBAL__sub_I_globals.cpp
  t _GLOBAL__sub_I_htmlmessages.pb.cc
  t _GLOBAL__sub_I_htmlpopup.cpp
- t _GLOBAL__sub_I_htmlwindowjstypes.cpp
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_ipcposix.cpp
  t _GLOBAL__sub_I_itemimagemanager.cpp
@@ -16298,14 +16289,6 @@
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::target(std::type_info const&) const
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::target_type() const
  t std::__1::__function::__func<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3, std::__1::allocator<CBasePanel::OnMicroTxnAuthRequest(MicroTxnAuthRequestCallback_t const*)::$_3>, void ()>::~__func()
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::__clone() const
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::__clone(std::__1::__function::__base<void (DurationControl_t*, bool)>*) const
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::destroy()
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::destroy_deallocate()
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::operator()(DurationControl_t*&&, bool&&)
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::target(std::type_info const&) const
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::target_type() const
- t std::__1::__function::__func<CBasePanel::ShowDurationControl(float)::$_0, std::__1::allocator<CBasePanel::ShowDurationControl(float)::$_0>, void (DurationControl_t*, bool)>::~__func()
  t update_box
  t use_merged_upsample
  t vgui::GetDroppingSheet(CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >&)

@@ -33,6 +33,8 @@
 	"Button_NotInterested": "Not Interested",
 	"Button_RateUp": "Rate Up",
 	"Button_ViewPage": "View Page",
+	"Button_Accept": "Accept",
+	"Button_Reject": "Reject",
 
 	"ToolTip_CopyLinkToClipboard": "Copy link to clipboard",
 
@@ -109,6 +111,7 @@
 	"EventBrowse_MoreEventsTitle": "More events from %1$s",
 	"EventBrowse_MoreEventsBtn": "View All",
 	"EventBrowse_RecentUpdates": "Recent Updates",
+	"EventBrowse_RecentEvents": "Recent Events & Announcements",
 
 	"EventCalendar_Title": "events",
 	"EventCalendar_SubTitle": "Upcoming events and activities hosted by game creators",
@@ -130,6 +133,8 @@
 	"EventDisplay_CallToAction_LearnMore": "Learn More",
 	"EventDisplay_CallToAction_InLibrary": "In Library",
 	"EventDisplay_CallToAction_PlayNow": "Play Now",
+	"EventDisplay_CallToAction_ComingSoon": "Coming Soon",
+	"EventDisplay_CallToAction_FreeToPlay": "Free To Play",
 
 	"EventDisplay_Events": "Admin Dashboard",
 	"EventDisplay_SeeOldVersion": "View Current Customer Version",
@@ -190,6 +195,7 @@
 	"EventDisplay_Share_NotLoggedIn": "Not signed in",
 	"EventDisplay_Share_NotLoggedIn_Description": "To use this feature, you first need to sign into Steam",
 	"EventDisplay_Share_CommentMigrationInProcess": "Discussion for this event are queued to be migrated to the events system. They are temporarily unaccessible. Please come back later.",
+	"EventDisplay_Share_OpenActivityFeed": "Open my activity feed",
 
 	"EventDisplay_AreYouSure": "Are you sure you want to delete this event (%1$s)? This action cannot be undone.",
 	"EventDisplay_AreYouSure_Visible": "Are you sure you want to delete this event (%1$s)? This action cannot be undone. This event will be removed from all places a user can discover it within a few minutes.",
@@ -228,8 +234,10 @@
 	"EventEmail_Destination_Store": "Steam Store Page",
 	"EventEmail_Destination_Event": "Event Detail Page",
 
+	"EventDashBoard_SummaryStats_Admin_Title": "(Visible only to admins)",
 	"EventDashBoard_SummaryStats_Title": "Total Unique Impressions and Views",
 	"EventDashBoard_SummaryStats_Desc": "(Beta) These are impressions and reads for your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
+	"EventDashBoard_SummaryStats_Link": "Click here for more details.",
 	"EventDashBoard_Summary_LibraryHome_Shown": "Library Home Page Impressions:",
 	"EventDashBoard_Summary_LibraryHome_Read": "Library Home Page Reads:",
 	"EventDashBoard_Summary_AppDetailSpotlight_Shown": "Library App Detail Spotlight Impressions:",
@@ -552,11 +560,14 @@
 	"Played_Hours": "%1$s hours",
 
 	"WriteReview_Dialog_PostReview":	"Post review",
+	"WriteReview_Dialog_ReviseReview":	"Revise review",
 	"WriteReview_Dialog_Title":	"Review",
 	"WriteReview_Dialog_Playtime":	"You've played for %1$s",
 	"WriteReview_Dialog_Playtime_Software":	"You've used this title for %1$s",
+	"WriteReview_Dialog_Playtime_Revise":	"You've played an additional %1$s",
 	"WriteReview_Dialog_RecommendGame":	"Would you recommend this game to other players?",
 	"WriteReview_Dialog_RecommendGame_Software":	"Would you recommend this software to other players?",
+	"WriteReview_Dialog_RecommendGame_Revise":	"Would you like to revise your review?",
 	"WriteReview_Dialog_GetHelp_Btn":	"Get help with your purchase",
 	"WriteReview_Dialog_Visibility":	"Visibility:",
 	"WriteReview_Dialog_Public":	"Public",
@@ -576,6 +587,7 @@
 	"WriteReview_Dialog_FormattingHelp":	"Formatting Help",
 	"WriteReview_Dialog_GenericError":	"We encountered a problem while posting your review. Please try again later.",
 	"WriteReview_Dialog_NoTextError": "Please describe what you liked or disliked about this product.",
+	"WriteReview_Dialog_Delay": "Maybe Later",
 
 	"Broadcast_View_Stack_H":		"Horizontal View",
 	"Broadcast_View_Stack_V":		"Vertical View",
@@ -756,5 +768,29 @@
 	"Broadcast_Embed_Watch_With_Frieds_SteamTV": "Watch and chat with Friends on Steam.tv",
 	"sale_three_section_hide_chat": "Hide Chat",
 	"sale_three_section_show_chat": "Show Chat",
-	"btn_live_streams_all": "View all"
+	"btn_live_streams_all": "View all",
+
+	"Broadcast_default_title_dev": "Now broadcasting: Watch the developer play",
+	"Broadcast_default_title_community": "Now broadcasting: Watch the community play",
+	"Broadcast_default_title_comp": "Now broadcasting: Watch this competitive match",
+	"Broadcast_default_title_speed": "Now broadcasting: Watch this speedrun",
+
+	"Sale_BundleSave": "Includes %1$s items.",
+	"Sale_PackageSave": "Includes %1$s items.",
+	"Sale_ShowContents": "Show contents",
+	"Sale_ShowMore": "Show more",
+	"Sale_OnWishlist": "On Wishlist",
+	"Sale_InLibrary": "In Library",
+	"Sale_HiddenItems": "%1$s item(s) are hidden due to %2$s",
+	"Sale_StorePreferences": "your store preferences",
+	"Sale_default_label": "(no title)",
+	"Sale_default_label_OnSale": "On Sale",
+	"Sale_default_label_TopSellers": "Top Sellers",
+	"Sale_default_label_FreeToPlay": "Free to Play",
+	"Sale_default_label_HorrorGames": "Horror Games",
+	"Sale_default_label_HorrorVR": "Horror VR",
+	"Sale_default_label_HorrorFreeToPlay": "Horror Free to Play",
+	"Sale_default_label_HalloweenEventsHorror": "Halloween Events in Horror Games",
+	"Sale_default_label_HalloweenEventsNonHorror": "Halloween Events in Non-Horror Games",
+	"Sale_default_label_MoreHalloweenEventsNonHorror": "More Halloween Events in Non-Horror Games"
 }

@@ -858,6 +858,7 @@ LocalizationReady("shared", "english", {
   Sale_InLibrary: "In Library",
   Sale_HiddenItems: "%1$s item(s) are hidden due to %2$s",
   Sale_StorePreferences: "your store preferences",
+  Sale_SeeAllSpecials: "See All Specials",
   Sale_default_label: "(no title)",
   Sale_default_label_OnSale: "On Sale",
   Sale_default_label_TopSellers: "Top Sellers",
@@ -869,5 +870,6 @@ LocalizationReady("shared", "english", {
   Sale_default_label_HalloweenEventsNonHorror:
     "Halloween Events in Non-Horror Games",
   Sale_default_label_MoreHalloweenEventsNonHorror:
-    "More Halloween Events in Non-Horror Games"
+    "More Halloween Events in Non-Horror Games",
+  Sale_default_label_NewAndUpcomingHorror: "New and Upcoming Horror"
 });

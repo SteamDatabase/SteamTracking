@@ -48,7 +48,8 @@ message CPlayer_GetFriendsGameplayInfo_Response {
 }
 
 message CPlayer_GetFriendsAppsActivity_Request {
-	optional string news_language = 1 [(description) = "Language for which to query about news items (for the being_discussed results)."];
+	optional string news_language = 1 [(description) = "Language for which to query about news items (for the being_discussed results). DEPRECATED AND UNUSED."];
+	optional uint32 request_flags = 2 [(description) = "Flags describing the request; see EGetFriendsAppsActivityFlags"];
 }
 
 message CPlayer_GetFriendsAppsActivity_Response {
@@ -57,7 +58,7 @@ message CPlayer_GetFriendsAppsActivity_Response {
 		optional uint32 minutes_played_this_week = 2 [(description) = "Minutes this friend played the game (from the enclosing structure) this week."];
 		optional uint32 minutes_played_two_weeks = 3 [(description) = "Minutes this friend played the game (from the enclosing structure) in the past 2 weeks."];
 		optional uint32 minutes_played_forever = 4 [(description) = "Minutes this friend played the game (from the enclosing structure) all time."];
-		optional uint32 event_count = 5 [(description) = "Number of events involving this user & app. (Only set for results in being_discussed.)"];
+		optional uint32 event_count = 5 [(description) = "Number of events involving this user & app. (Only set for results in being_discussed.) DEPRECATED AND UNUSED."];
 	}
 
 	message AppFriendsInfo {
@@ -70,7 +71,7 @@ message CPlayer_GetFriendsAppsActivity_Response {
 	repeated .CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfo unowned = 3 [(description) = "Apps friends have played in the past two weeks for which the user has no license"];
 	repeated .CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfo popular = 4 [(description) = "Apps friends have played in the past two weeks, for which the user has a license, sorted by count"];
 	repeated .CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfo dont_forget = 5 [(description) = "Apps friends have played in the past two weeks which the user has neither purchased nor played in the past two weeks"];
-	repeated .CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfo being_discussed = 6 [(description) = "Owned apps that friends have posted status or screenshots for in the past two weeks"];
+	repeated .CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfo being_discussed = 6 [(description) = "Owned apps that friends have posted status or screenshots for in the past two weeks. DEPRECATED AND UNUSED."];
 	repeated .CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfo new_to_group = 7 [(description) = "Owned apps that none of your friends had played prior to 2 weeks."];
 	repeated .CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfo returned_to_group = 8 [(description) = "Owned apps that friends hadn't played for a while, but are again."];
 	optional uint32 active_friend_count = 9 [default = 0, (description) = "Number of friends with non-trivial activity in the past two weeks."];

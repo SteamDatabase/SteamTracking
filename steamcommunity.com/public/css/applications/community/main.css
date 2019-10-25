@@ -6159,6 +6159,9 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   color: rgba(255, 255, 255, 0.5);
   font-size: 13px; }
 
+.eventrow_OtherEvents_TextCtn_3-EtN.eventrow_OtherEvents_TextCtn_3-EtN {
+  box-sizing: content-box; }
+
 .eventrow_OtherEvents_TextTitle_2jc1D {
   font-size: 15px;
   color: #ffffff;
@@ -6438,6 +6441,16 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   .apppartnereventspage_TimeandPostedBy_2WwG2.apppartnereventspage_TimeandPostedBy_2WwG2 {
     color: #6c767f;
     margin-bottom: 0px; }
+
+.partnersaledisplay_SaleHeaderContainer_W4mvn {
+  display: flex;
+  margin: 0 auto;
+  max-width: 100vw;
+  align-items: center; }
+  @media screen and (max-width: 1200px) {
+    .partnersaledisplay_SaleHeaderContainer_W4mvn {
+      flex-wrap: wrap;
+      flex-direction: column-reverse; } }
 
 .partnersaledisplay_SaleSection_1cOoC {
   margin-top: 10px;
@@ -6749,6 +6762,11 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 
 .carousel:hover .slide .legend {
   opacity: 1; }
+
+ {
+  /* Override default styles from react-responsive-carousel */ }
+  .carousel .slide {
+    background: none; }
 
 /* latin-ext */
 @font-face {

@@ -68,6 +68,7 @@ enum ERemoteDeviceStreamingResult {
 	k_ERemoteDeviceStreamingVRActive = 10;
 	k_ERemoteDeviceStreamingPINRequired = 11;
 	k_ERemoteDeviceStreamingTransportUnavailable = 12;
+	k_ERemoteDeviceStreamingInvisible = 13;
 }
 
 message CMsgRemoteClientBroadcastHeader {

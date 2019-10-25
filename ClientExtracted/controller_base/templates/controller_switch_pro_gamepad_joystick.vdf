@@ -490,6 +490,19 @@
 					}
 				}
 			}
+			"button_capture"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action SCREENSHOT"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"

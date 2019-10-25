@@ -1,4 +1,3 @@
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindowjstypes.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/appregkeystring.h
@@ -10,9 +9,11 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enums_clientserver.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/framefunction.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/gid.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html_jstypes.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/imageloadwrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/ipcclient.cpp
@@ -188,6 +189,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/controllerconfig.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/controllerconfig.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/controllerfirmwareupdater.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/customimagemanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/d2l_rootdialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/d2l_settings.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.cpp

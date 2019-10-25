@@ -2061,7 +2061,6 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D typeinfo for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgFind>
- D typeinfo for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  D typeinfo for CHTMLProtoBufMsg<CMsgFullRepaint>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoBack>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoForward>
@@ -2109,7 +2108,7 @@
  D typeinfo for CItemImageManager
  D typeinfo for CItemReceivedNotification
  D typeinfo for CJSCallbackFunc
- D typeinfo for CJSCallbackFunc_HTMLWindow
+ D typeinfo for CJSCallbackFunc_HTMLJS
  D typeinfo for CJSCallbackPromise
  D typeinfo for CJSMethodArgument
  D typeinfo for CJSMethodCallHandler<CBroadcastController, CSmartPtr<CJSCallbackFunc> >
@@ -2369,6 +2368,7 @@
  D typeinfo for IDynamicFunction
  D typeinfo for IFriendPanelContainer
  D typeinfo for IFriendsUI
+ D typeinfo for IHTMLJS
  D typeinfo for IHTMLResponses
  D typeinfo for IHTMLWindow
  D typeinfo for IHTMLWindowController
@@ -2387,43 +2387,6 @@
  D typeinfo for vgui::CBitmapImagePanel
  D typeinfo for vgui::CFileOpenListPanel
  D typeinfo for vgui::CIMEPanel
- D typeinfo for vgui::CJSCallbackFunc_vgui
- D typeinfo for vgui::CJSMethodCallHandler<CBroadcastController, CSmartPtr<CJSCallbackFunc> >
- D typeinfo for vgui::CJSMethodCallHandler<CBroadcastController, char const*, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
- D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
- D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
- D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
- D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
- D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, bool>
- D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>
- D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
- D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat, int>
- D typeinfo for vgui::CJSMethodCallHandler<CFriendsWebChat>
- D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackFunc> >
- D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CRemotePlayController, int>
- D typeinfo for vgui::CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
- D typeinfo for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*>
- D typeinfo for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, int>
- D typeinfo for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int>
- D typeinfo for vgui::CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >
- D typeinfo for vgui::CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CSteamParentalController>
- D typeinfo for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >
- D typeinfo for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
- D typeinfo for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for vgui::CNotificationClickPanel
  D typeinfo for vgui::CStyleImage
  D typeinfo for vgui::CTreeViewListControl
@@ -2466,7 +2429,6 @@
  D typeinfo for vgui::HTMLPopup::PopupHTML
  D typeinfo for vgui::IClientPanel
  D typeinfo for vgui::IImage
- D typeinfo for vgui::IJSMethodCallHandler
  D typeinfo for vgui::IPanelAnimationPropertyConverter
  D typeinfo for vgui::ISectionedListPanelHeader
  D typeinfo for vgui::ISectionedListPanelItem
@@ -3465,7 +3427,6 @@
  D vtable for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D vtable for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D vtable for CHTMLProtoBufMsg<CMsgFind>
- D vtable for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  D vtable for CHTMLProtoBufMsg<CMsgFullRepaint>
  D vtable for CHTMLProtoBufMsg<CMsgGoBack>
  D vtable for CHTMLProtoBufMsg<CMsgGoForward>
@@ -3513,7 +3474,7 @@
  D vtable for CItemImageManager
  D vtable for CItemReceivedNotification
  D vtable for CJSCallbackFunc
- D vtable for CJSCallbackFunc_HTMLWindow
+ D vtable for CJSCallbackFunc_HTMLJS
  D vtable for CJSCallbackPromise
  D vtable for CJSMethodArgument
  D vtable for CJSMethodCallHandler<CBroadcastController, CSmartPtr<CJSCallbackFunc> >
@@ -3764,6 +3725,7 @@
  D vtable for GridMenu
  D vtable for HTMLComboBoxHost
  D vtable for HTMLFramelessWrapper
+ D vtable for IHTMLJS
  D vtable for IHTMLResponses
  D vtable for ListPanelColumnSelectButton
  D vtable for ListPanelDragger
@@ -3775,43 +3737,6 @@
  D vtable for vgui::CBitmapImagePanel
  D vtable for vgui::CFileOpenListPanel
  D vtable for vgui::CIMEPanel
- D vtable for vgui::CJSCallbackFunc_vgui
- D vtable for vgui::CJSMethodCallHandler<CBroadcastController, CSmartPtr<CJSCallbackFunc> >
- D vtable for vgui::CJSMethodCallHandler<CBroadcastController, char const*, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
- D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
- D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
- D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
- D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
- D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, bool>
- D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>
- D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
- D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat, int>
- D vtable for vgui::CJSMethodCallHandler<CFriendsWebChat>
- D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackFunc> >
- D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CRemotePlayController, int>
- D vtable for vgui::CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
- D vtable for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*>
- D vtable for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, int>
- D vtable for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int>
- D vtable for vgui::CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >
- D vtable for vgui::CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CSteamParentalController>
- D vtable for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >
- D vtable for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
- D vtable for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for vgui::CNotificationClickPanel
  D vtable for vgui::CStyleImage
  D vtable for vgui::CTreeViewListControl
@@ -4255,7 +4180,6 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgExitFullScreen>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFind>
- R typeinfo name for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFullRepaint>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoBack>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoForward>
@@ -4303,7 +4227,7 @@
  R typeinfo name for CItemImageManager
  R typeinfo name for CItemReceivedNotification
  R typeinfo name for CJSCallbackFunc
- R typeinfo name for CJSCallbackFunc_HTMLWindow
+ R typeinfo name for CJSCallbackFunc_HTMLJS
  R typeinfo name for CJSCallbackPromise
  R typeinfo name for CJSMethodArgument
  R typeinfo name for CJSMethodCallHandler<CBroadcastController, CSmartPtr<CJSCallbackFunc> >
@@ -4682,6 +4606,7 @@
  R typeinfo name for IDynamicFunction
  R typeinfo name for IFriendPanelContainer
  R typeinfo name for IFriendsUI
+ R typeinfo name for IHTMLJS
  R typeinfo name for IHTMLResponses
  R typeinfo name for IHTMLWindow
  R typeinfo name for IHTMLWindowController
@@ -4702,43 +4627,6 @@
  R typeinfo name for vgui::CFileOpenListPanel
  R typeinfo name for vgui::CFontWidthCache
  R typeinfo name for vgui::CIMEPanel
- R typeinfo name for vgui::CJSCallbackFunc_vgui
- R typeinfo name for vgui::CJSMethodCallHandler<CBroadcastController, CSmartPtr<CJSCallbackFunc> >
- R typeinfo name for vgui::CJSMethodCallHandler<CBroadcastController, char const*, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, bool>
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat, int>
- R typeinfo name for vgui::CJSMethodCallHandler<CFriendsWebChat>
- R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackFunc> >
- R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CRemotePlayController, int>
- R typeinfo name for vgui::CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
- R typeinfo name for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*>
- R typeinfo name for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, int>
- R typeinfo name for vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int>
- R typeinfo name for vgui::CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >
- R typeinfo name for vgui::CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CSteamParentalController>
- R typeinfo name for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >
- R typeinfo name for vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
- R typeinfo name for vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for vgui::CNotificationClickPanel
  R typeinfo name for vgui::CStyleImage
  R typeinfo name for vgui::CTreeViewListControl
@@ -4781,7 +4669,6 @@
  R typeinfo name for vgui::HTMLPopup::PopupHTML
  R typeinfo name for vgui::IClientPanel
  R typeinfo name for vgui::IImage
- R typeinfo name for vgui::IJSMethodCallHandler
  R typeinfo name for vgui::IPanelAnimationPropertyConverter
  R typeinfo name for vgui::ISectionedListPanelHeader
  R typeinfo name for vgui::ISectionedListPanelItem
@@ -7098,6 +6985,7 @@
  T CFriendsWebChat::GetOverlayChatBrowserInfo(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::GetPushToTalkEnabled(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::GetSignIntoFriendsOnStart(CSmartPtr<CJSCallbackPromise>)
+ T CFriendsWebChat::GetSteamVRWebSecret(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::GetWebChatLanguage(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::GetWebChatURL(CSmartPtr<CJSCallbackPromise>)
  T CFriendsWebChat::InitWebChatURL(char const*)
@@ -7312,8 +7200,6 @@
  T CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFind>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFind>::~CHTMLProtoBufMsg()
- T CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>::CHTMLProtoBufMsg(EHTMLCommands)
- T CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFullRepaint>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFullRepaint>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgGoBack>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -7568,11 +7454,11 @@
  T CJSCallbackFunc::MarkInvalid()
  T CJSCallbackFunc::OnFinalRelease()
  T CJSCallbackFunc::~CJSCallbackFunc()
- T CJSCallbackFunc_HTMLWindow::Call(CJSMethodArgs&)
- T CJSCallbackFunc_HTMLWindow::IsValid()
- T CJSCallbackFunc_HTMLWindow::MarkInvalid()
- T CJSCallbackFunc_HTMLWindow::OnFinalRelease()
- T CJSCallbackFunc_HTMLWindow::~CJSCallbackFunc_HTMLWindow()
+ T CJSCallbackFunc_HTMLJS::Call(CJSMethodArgs&)
+ T CJSCallbackFunc_HTMLJS::IsValid()
+ T CJSCallbackFunc_HTMLJS::MarkInvalid()
+ T CJSCallbackFunc_HTMLJS::OnFinalRelease()
+ T CJSCallbackFunc_HTMLJS::~CJSCallbackFunc_HTMLJS()
  T CJSCallbackPromise::CJSCallbackPromise(CSmartPtr<CJSCallbackFunc>, CSmartPtr<CJSCallbackFunc>)
  T CJSCallbackPromise::~CJSCallbackPromise()
  T CJSMethodArgs::AddArray()
@@ -11875,24 +11761,15 @@
  T bn_sqrx8x_internal
  T bn_sub_part_words
  T bn_sub_words
- T bool BConvertArray<unsigned int>(IHTMLWindow*, CMsgJSValue const*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >**)
- T bool BConvertMsgJSValue<CMsgJSValue const*>(IHTMLWindow*, CMsgJSValue const*, CMsgJSValue const**)
- T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(IHTMLWindow*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
- T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackPromise> >(IHTMLWindow*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>*)
- T bool BConvertMsgJSValue<CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>(IHTMLWindow*, CMsgJSValue const*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >**)
- T bool BConvertMsgJSValue<bool>(IHTMLWindow*, CMsgJSValue const*, bool*)
- T bool BConvertMsgJSValue<char const*>(IHTMLWindow*, CMsgJSValue const*, char const**)
- T bool BConvertMsgJSValue<int>(IHTMLWindow*, CMsgJSValue const*, int*)
- T bool BConvertMsgJSValue<unsigned int>(IHTMLWindow*, CMsgJSValue const*, unsigned int*)
+ T bool BConvertMsgJSValue<CMsgJSValue const*>(IHTMLJS*, CMsgJSValue const*, CMsgJSValue const**)
+ T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(IHTMLJS*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
+ T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackPromise> >(IHTMLJS*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>*)
+ T bool BConvertMsgJSValue<CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>(IHTMLJS*, CMsgJSValue const*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >**)
+ T bool BConvertMsgJSValue<bool>(IHTMLJS*, CMsgJSValue const*, bool*)
+ T bool BConvertMsgJSValue<char const*>(IHTMLJS*, CMsgJSValue const*, char const**)
+ T bool BConvertMsgJSValue<int>(IHTMLJS*, CMsgJSValue const*, int*)
+ T bool BConvertMsgJSValue<unsigned int>(IHTMLJS*, CMsgJSValue const*, unsigned int*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
- T bool vgui::BConvertMsgJSValue<CMsgJSValue const*>(vgui::HTML*, CMsgJSValue const*, CMsgJSValue const**)
- T bool vgui::BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(vgui::HTML*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
- T bool vgui::BConvertMsgJSValue<CSmartPtr<CJSCallbackPromise> >(vgui::HTML*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>*)
- T bool vgui::BConvertMsgJSValue<CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>(vgui::HTML*, CMsgJSValue const*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >**)
- T bool vgui::BConvertMsgJSValue<bool>(vgui::HTML*, CMsgJSValue const*, bool*)
- T bool vgui::BConvertMsgJSValue<char const*>(vgui::HTML*, CMsgJSValue const*, char const**)
- T bool vgui::BConvertMsgJSValue<int>(vgui::HTML*, CMsgJSValue const*, int*)
- T bool vgui::BConvertMsgJSValue<unsigned int>(vgui::HTML*, CMsgJSValue const*, unsigned int*)
  T bsaes_cbc_encrypt
  T bsaes_ctr32_encrypt_blocks
  T bsaes_xts_decrypt
@@ -12325,6 +12202,7 @@
  T non-virtual thunk to CHTMLWindow::ThreadNotifyPendingPaints()
  T non-virtual thunk to CHTMLWindow::~CHTMLWindow()
  T non-virtual thunk to HTMLFramelessWrapper::~HTMLFramelessWrapper()
+ T non-virtual thunk to vgui::HTML::AddJSCallback(CJSCallbackFunc*)
  T non-virtual thunk to vgui::HTML::BSupportsOffMainThreadPaints()
  T non-virtual thunk to vgui::HTML::BrowserAckPIDShuttingDown(CMsgAckPIDShuttingDown const*)
  T non-virtual thunk to vgui::HTML::BrowserBringWindowToFront(CMsgBringWindowToFront const*)
@@ -12388,6 +12266,12 @@
  T non-virtual thunk to vgui::HTML::BrowserUpdateToolTip(CMsgUpdateToolTip const*)
  T non-virtual thunk to vgui::HTML::BrowserVerticalScrollBarSizeResponse(CMsgVerticalScrollBarSizeResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserZoomToElementAtPositionResponse(CMsgZoomToElementAtPositionResponse const*)
+ T non-virtual thunk to vgui::HTML::ClearRegisteredJSMethods()
+ T non-virtual thunk to vgui::HTML::GetBrowserIndexForJS()
+ T non-virtual thunk to vgui::HTML::RaiseJSException(char const*)
+ T non-virtual thunk to vgui::HTML::RegisterJSMethodInternal(char const*, IJSMethodCallHandler*, EJSRegisterMethodType)
+ T non-virtual thunk to vgui::HTML::ReleaseJSCallback(CJSCallbackFunc*)
+ T non-virtual thunk to vgui::HTML::RunJavascript(char const*)
  T non-virtual thunk to vgui::HTML::ThreadNotifyPendingPaints()
  T non-virtual thunk to vgui::HTML::~HTML()
  T non-virtual thunk to vgui::HTMLPopup::PopupHTML::~PopupHTML()
@@ -12916,47 +12800,6 @@
  T vgui::CIMEPanel::ShowIMECandidates()
  T vgui::CIMEPanel::UpdateIMECandidates()
  T vgui::CIMEPanel::~CIMEPanel()
- T vgui::CJSCallbackFunc_vgui::Call(CJSMethodArgs&)
- T vgui::CJSCallbackFunc_vgui::IsValid()
- T vgui::CJSCallbackFunc_vgui::MarkInvalid()
- T vgui::CJSCallbackFunc_vgui::OnFinalRelease()
- T vgui::CJSCallbackFunc_vgui::~CJSCallbackFunc_vgui()
- T vgui::CJSMethodCallHandler<CBroadcastController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CBroadcastController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CBroadcastController, char const*, unsigned int>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendSettingsController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendSettingsController, char const*>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendsWebChat, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendsWebChat, CUtlVector<unsigned int, CUtlMemory<unsigned int> >*>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendsWebChat, bool>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendsWebChat, int>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CFriendsWebChat>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CRemotePlayController, bool, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CRemotePlayController, int>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, char const*>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int, int>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSharedConnectionController, unsigned int>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSteamParentalController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSteamParentalController, char const*, bool, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSteamParentalController>::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSteamUIMessagingController, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
- T vgui::CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T vgui::CNotificationClickPanel::CNotificationClickPanel(vgui::Panel*, char const*)
  T vgui::CNotificationClickPanel::ChainToAnimationMap()
  T vgui::CNotificationClickPanel::ChainToMap()
@@ -13601,18 +13444,6 @@
  T vgui::FrameTitle::PerformLayout()
  T vgui::FrameTitle::SetDisabledLook(bool)
  T vgui::FrameTitle::~FrameTitle()
- T vgui::FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&, bool*)
- T vgui::FreeArgsInTuple<1, std::__1::tuple<CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&, bool*)
- T vgui::FreeArgsInTuple<2, std::__1::tuple<bool, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<bool, CSmartPtr<CJSCallbackPromise> >&, bool*)
- T vgui::FreeArgsInTuple<2, std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> >&, bool*)
- T vgui::FreeArgsInTuple<2, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
- T vgui::FreeArgsInTuple<2, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >&, bool*)
- T vgui::FreeArgsInTuple<3, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
- T vgui::FreeArgsInTuple<3, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&, bool*)
- T vgui::FreeArgsInTuple<3, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
- T vgui::FreeArgsInTuple<3, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> > >::Call(std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >&, bool*)
- T vgui::FreeArgsInTuple<3, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
- T vgui::FreeArgsInTuple<4, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> > >::Call(std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >&, bool*)
  T vgui::FreeStaticAnimationController()
  T vgui::GetAnimationController()
  T vgui::GetControlsModuleName()
@@ -13756,6 +13587,7 @@
  T vgui::HTML::FindPrevious()
  T vgui::HTML::GetAnimMap()
  T vgui::HTML::GetBaseStyleName()
+ T vgui::HTML::GetBrowserIndexForJS()
  T vgui::HTML::GetClassSize() const
  T vgui::HTML::GetKBMap()
  T vgui::HTML::GetLinkAtPosition(int, int)
@@ -13829,10 +13661,11 @@
  T vgui::HTML::PostURL(char const*, char const*, bool)
  T vgui::HTML::RaiseJSException(char const*)
  T vgui::HTML::Refresh()
- T vgui::HTML::RegisterJSMethodInternal(char const*, vgui::IJSMethodCallHandler*, EJSRegisterMethodType)
+ T vgui::HTML::RegisterJSMethodInternal(char const*, IJSMethodCallHandler*, EJSRegisterMethodType)
  T vgui::HTML::ReleaseJSCallback(CJSCallbackFunc*)
  T vgui::HTML::ReleaseSharedTexture(bool)
  T vgui::HTML::ResizeHTML()
+ T vgui::HTML::RunJavascript(char const*)
  T vgui::HTML::SendLocalFileRequestMappings()
  T vgui::HTML::SendPendingHTMLMessages()
  T vgui::HTML::SendScreenDimensionsToCEF()
@@ -13842,7 +13675,6 @@
  T vgui::HTML::SetBrowserPopupHTMLWindowHook(CUtlDelegate<IHTMLResponses* (char const*, int, int, int, int, bool)>)
  T vgui::HTML::SetContextMenuEnabled(bool)
  T vgui::HTML::SetDisableF5(bool)
- T vgui::HTML::SetForceChildHWNDPopupsToDirectHWND(bool)
  T vgui::HTML::SetLocalFileRequestMapping(char const*, char const*, CUtlVector<vgui::HTML::AdditionalRoute_t, CUtlMemory<vgui::HTML::AdditionalRoute_t> >*)
  T vgui::HTML::ShowFindDialog()
  T vgui::HTML::StopFind()
@@ -16253,30 +16085,6 @@
  T void std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__push_back_slow_path<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T void std::__1::vector<void (*)(), std::__1::allocator<void (*)()> >::__push_back_slow_path<void (* const&)()>(void (* const&)())
  T void std::__1::vector<void*, std::__1::allocator<void*> >::__push_back_slow_path<void* const&>(void* const&)
- T void vgui::JSMethodCallTuple_Helper<CBroadcastController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CBroadcastController*, void (CBroadcastController::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
- T void vgui::JSMethodCallTuple_Helper<CBroadcastController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CBroadcastController*, void (CBroadcastController::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
- T void vgui::JSMethodCallTuple_Helper<CFriendSettingsController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendSettingsController*, void (CFriendSettingsController::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
- T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CFriendsWebChat*, void (CFriendsWebChat::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CFriendsWebChat*, void (CFriendsWebChat::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CFriendsWebChat, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >, int, char const*, CSmartPtr<CJSCallbackFunc>, 0, 1, 2>(CFriendsWebChat*, void (CFriendsWebChat::*)(int, char const*, CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<int, char const*, CSmartPtr<CJSCallbackFunc> >&)
- T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CRemotePlayController*, void (CRemotePlayController::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
- T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CRemotePlayController*, void (CRemotePlayController::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<bool, CSmartPtr<CJSCallbackPromise> >, bool, CSmartPtr<CJSCallbackPromise>, 0, 1>(CRemotePlayController*, void (CRemotePlayController::*)(bool, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<bool, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >, char const*, bool, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, bool, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CRemotePlayController, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CRemotePlayController*, void (CRemotePlayController::*)(char const*, char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >, CSmartPtr<CJSCallbackPromise>, 0>(CSharedConnectionController*, void (CSharedConnectionController::*)(CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >, unsigned int, CSmartPtr<CJSCallbackFunc>, 0, 1>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0, 1>, std::__1::tuple<unsigned int, CSmartPtr<CJSCallbackFunc> >&)
- T void vgui::JSMethodCallTuple_Helper<CSharedConnectionController, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >, unsigned int, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSharedConnectionController*, void (CSharedConnectionController::*)(unsigned int, char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<unsigned int, char const*, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CSteamParentalController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CSteamParentalController*, void (CSteamParentalController::*)(CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
- T void vgui::JSMethodCallTuple_Helper<CSteamParentalController, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >, char const*, bool, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamParentalController*, void (CSteamParentalController::*)(char const*, bool, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, bool, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CSteamUIMessagingController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> >, char const*, CSmartPtr<CJSCallbackFunc>, 0, 1>(CSteamUIMessagingController*, void (CSteamUIMessagingController::*)(char const*, CSmartPtr<CJSCallbackFunc>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackFunc> >&)
- T void vgui::JSMethodCallTuple_Helper<CSteamUIMessagingController, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2, 3>(CSteamUIMessagingController*, void (CSteamUIMessagingController::*)(char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2, 3>, std::__1::tuple<char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
- T void vgui::JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, char const*, CSmartPtr<CJSCallbackPromise>), vgui::index_tuple<0, 1, 2>, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
  T vpaes_cbc_encrypt
  T vpaes_decrypt
  T vpaes_encrypt
@@ -17880,7 +17688,6 @@
  t _GLOBAL__sub_I_FriendsListSubPanel.cpp
  t _GLOBAL__sub_I_GraphPanel.cpp
  t _GLOBAL__sub_I_HTML.cpp
- t _GLOBAL__sub_I_HTML_js.cpp
  t _GLOBAL__sub_I_HotKeyEntry.cpp
  t _GLOBAL__sub_I_IMEPanel.cpp
  t _GLOBAL__sub_I_Image.cpp
@@ -17945,8 +17752,6 @@
  t _GLOBAL__sub_I_htmlpopup.cpp
  t _GLOBAL__sub_I_htmlwindow.cpp
  t _GLOBAL__sub_I_htmlwindowcontroller.cpp
- t _GLOBAL__sub_I_htmlwindowjs.cpp
- t _GLOBAL__sub_I_htmlwindowjstypes.cpp
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_itemimagemanager.cpp
  t _GLOBAL__sub_I_jpegloader.cpp

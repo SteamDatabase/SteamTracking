@@ -20,4 +20,5 @@ public:
     virtual unknown_ret LaunchApplication(char const*) = 0;
     virtual unknown_ret GetSteamVRAppId() = 0;
     virtual unknown_ret GetSteamVRPid() = 0;
+    virtual unknown_ret GetWebSecret() = 0;
 };

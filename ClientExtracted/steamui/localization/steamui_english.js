@@ -1,8 +1,14 @@
-{
+﻿{
 	"Generic_Okay": "Okay",
 	"Generic_Close": "Close",
 	"Generic_Open": "Open",
 	"Generic_GotIt": "Got it!",
+	"Generic_Share": "Share",
+	"Generic_Upload": "Upload",
+
+	"Privacy_Public": "Public",
+	"Privacy_FriendsOnly": "Friends Only",
+	"Privacy_Private": "Private",
 
 	"AppType_0": "Invalid",
 	"AppType_1": "Games",
@@ -216,6 +222,10 @@
 	"LibraryHome_YourCollection": "Your Complete Library",
 	"LibraryHome_RecentFriendsActivity": "Recent Friend Activity",
 
+	"LibraryHome_NewUpdates_LoweredPriority": "Now showing fewer updates for %1$s.",
+	"LibraryHome_NewUpdates_RaisedPriority": "Now showing more updates for %1$s.",
+	"LibraryHome_NewUpdates_Undo": "Undo",
+
 	"LibraryHome_RecentFriendsActivity_Empty": "Nothing is new or popular in your friend group right now. This shelf will auto-hide when there is no activity to display.",
 
 	"Library_FriendsActivity_HotRightNowHeading": "Hot right now",
@@ -264,6 +274,8 @@
 	"Library_SortBySizeOnDisk": "Size on Disk",
 	"Library_SortByMetacriticScore": "Metacritic Score",
 	"Library_SortByFriendsPlaying": "Friends Playing",
+
+	"Library_SortByPctAchievementsComplete_Tag": "%1$s% Complete",
 
 	"Library_InstalledOnlyCheck": "Installed Only",
 
@@ -647,6 +659,7 @@
 	"AppDetails_Link_Store": "Store Page",
 	"AppDetails_Link_Support": "Support",
 	"AppDetails_Link_Workshop": "Workshop",
+	"AppDetails_Link_Market": "Market",
 	"AppDetails_Link_Controller": "Controller Configuration",
 
 	"AppDetails_SocialMediaLink": "%1$s on %2$s",
@@ -758,11 +771,15 @@
 
 	"AppDetails_Soundtrack_TotalTracks": "%1$s tracks",
 	"AppDetails_Soundtrack_DiscNumber": "Disc %1$s",
+	"AppDetails_Soundtrack_TrackCount": "%1$s Tracks",
 	"AppDetails_Soundtrack_PlayAlbum": "Play Album",
+	"AppDetails_Soundtrack_DownloadAlbum": "Download Album",
 	"AppDetails_Soundtrack_AddToQueue": "Add to Queue",
 	"AppDetails_Soundtrack_AddToPlaylist": "Add to Playlist",
 	"AppDetails_Soundtrack_ViewOnDisk": "View on disk",
-
+	"AppDetails_Soundtrack_ViewStorePage": "View Store Page",
+	"AppDetails_Soundtrack_Support": "Support",
+	"AppDetails_Soundtrack_ParentAppLink": "Soundtrack for %1$s",
 
 	"AppPortraitHover_DownloadStatusTitle": "Downloading",
 	"AppPortraitHover_DownloadStatusTitle_Update": "Downloading Update",
@@ -778,6 +795,8 @@
 	"MajorUpdate_Type1": "Live Stream",
 	"MajorUpdate_Type14": "Major Update",
 	"MajorUpdate_Context_RemoveThisUpdate": "Remove This Update",
+	"MajorUpdate_Context_ShowMeFewerForApp": "Show Less From %1$s",
+	"MajorUpdate_Context_ShowMeMoreForApp": "Show More From %1$s",
 	"MajorUpdate_Context_ResetHiddenUpdates": "Show All Updates Again",
 	"MajorUpdate_Context_WhyAmISeeingThis": "Why Am I Seeing This?",
 	"MajorUpdate_Context_WhyAmISeeingThis_Text": "This is a major update for a product in your library with more than 20 hours of playtime (placeholder).",
@@ -786,6 +805,14 @@
 	"CustomArt_ErrorTitle": "Error",
 	"CustomArt_BadFileType": "Your file must be in JPG or PNG format.",
 	"CustomArt_UnknownError": "An error occurred while setting your artwork.",
+
+	"CustomArt_SetCustomBackground": "Set Custom Background",
+	"CustomArt_ClearCustomBackground": "Clear Custom Background",
+	"CustomArt_SetCustomLogo": "Set Custom Logo",
+	"CustomArt_ClearCustomLogo": "Clear Custom Logo",
+	"CustomArt_EditLogoPosition": "Adjust Logo Position",
+	"CustomArt_ResetLogoPosition": "Reset Logo Position",
+	"CustomArt_DoneEditingLogo": "Done",
 
 	"AppDetails_LibraryInUse": "Library in use by",
 	"AppDetails_InSharedLibrary": "From the library of",
@@ -805,6 +832,7 @@
 	"ArtworkModal_Size": "Size",
 	"ArtworkModal_CreatedBy": "Created by",
 	"ArtworkModal_ScrollForMore": "Scroll down for comments",
+	"ArtworkModal_ScrollForDetails": "Scroll down for details",
 
 	"CommunityItem_Menu_Report": "Report",
 
@@ -867,6 +895,11 @@
 
 	"ContextMenu_SaveScreenshot": "Save screenshot as...",
 	"ContextMenu_BrowseScreenshot": "Browse to screenshot",
+	"SteamChina_DurationControl_Init_1":	"Healthy Gaming Advisory",
+	"SteamChina_DurationControl_Init_2":	"Boycott harmful games; reject game piracy.",
+	"SteamChina_DurationControl_Init_3":	"Exercise self-protection; avoid deception.",
+	"SteamChina_DurationControl_Init_4":	"Moderation promotes brain health; excess play is harmful to the body.",
+	"SteamChina_DurationControl_Init_5":	"Well-planned use of your time will lead to a healthy lifestyle.",
 
 	"Steam_AppUpdateError_0": "no error",
 	"Steam_AppUpdateError_1": "unknown error",
@@ -916,5 +949,16 @@
 	"Steam_AppUpdateError_45": "parental control blocked",
 	"Steam_AppUpdateError_46": "create process failed",
 	"Steam_AppUpdateError_47": "Steam client outdated",
+
+	"ShareDialog_Title": "Share",
+	"ShareUploadScreenshot_Description": "Upload this screenshot to your Steam Profile and Activity Feed.",
+	"ShareUploadScreenshot_AddCaption": "add a caption here",
+	"ShareUploadScreenshot_CaptionHeader": "Caption:",
+	"ShareUploadScreenshot_TagSpoiler": "Tag as spoiler",
+	"ShareUploadScreenshot_CloudUsage": "Will use %1$s of your remaining %2$s of cloud storage (%3$s total)",
+	"ShareUploadScreenshot_Uploading": "Uploading to Steam",
+	"ShareUploadScreenshot_PermissionDenied": "Steam was unable to upload this screenshot. You are not allowed to upload content because of an active ban on your account.",
+	"ShareUploadScreenshot_UnexpectedError": "Steam was unable to upload this screenshot to the Steam Cloud. Please try again.",
+
 	"ContextMenu_BrowseScreenshot": "Browse to screenshot"
 }

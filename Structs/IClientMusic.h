@@ -150,4 +150,5 @@ public:
     virtual unknown_ret ForgetCurrentUserSpotify() = 0;
     virtual unknown_ret LogoutSpotify() = 0;
     virtual unknown_ret DumpStatusToConsole() = 0;
+    virtual unknown_ret ReplacePlaylistWithSoundtrackAlbum(unsigned int) = 0;
 };

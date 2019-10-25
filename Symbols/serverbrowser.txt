@@ -876,10 +876,10 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserPosition>
  D typeinfo for CHTMLProtoBufMsg<CMsgBrowserSize>
  D typeinfo for CHTMLProtoBufMsg<CMsgCopy>
+ D typeinfo for CHTMLProtoBufMsg<CMsgExecuteJavaScript>
  D typeinfo for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D typeinfo for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D typeinfo for CHTMLProtoBufMsg<CMsgFind>
- D typeinfo for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  D typeinfo for CHTMLProtoBufMsg<CMsgFullRepaint>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoBack>
  D typeinfo for CHTMLProtoBufMsg<CMsgGoForward>
@@ -889,8 +889,10 @@
  D typeinfo for CHTMLProtoBufMsg<CMsgImeSetComposition>
  D typeinfo for CHTMLProtoBufMsg<CMsgInspectElement>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ D typeinfo for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSRaiseException>
  D typeinfo for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
+ D typeinfo for CHTMLProtoBufMsg<CMsgJSReleaseCallback>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyChar>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyDown>
  D typeinfo for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -1089,6 +1091,7 @@
  D typeinfo for HTMLComboBoxHost
  D typeinfo for IBaseInterface
  D typeinfo for IGameList
+ D typeinfo for IHTMLJS
  D typeinfo for IHTMLResponses
  D typeinfo for IServerBrowser
  D typeinfo for ISteamMatchmakingPingResponse
@@ -1750,10 +1753,10 @@
  D vtable for CHTMLProtoBufMsg<CMsgBrowserPosition>
  D vtable for CHTMLProtoBufMsg<CMsgBrowserSize>
  D vtable for CHTMLProtoBufMsg<CMsgCopy>
+ D vtable for CHTMLProtoBufMsg<CMsgExecuteJavaScript>
  D vtable for CHTMLProtoBufMsg<CMsgExitFullScreen>
  D vtable for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  D vtable for CHTMLProtoBufMsg<CMsgFind>
- D vtable for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  D vtable for CHTMLProtoBufMsg<CMsgFullRepaint>
  D vtable for CHTMLProtoBufMsg<CMsgGoBack>
  D vtable for CHTMLProtoBufMsg<CMsgGoForward>
@@ -1763,8 +1766,10 @@
  D vtable for CHTMLProtoBufMsg<CMsgImeSetComposition>
  D vtable for CHTMLProtoBufMsg<CMsgInspectElement>
  D vtable for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ D vtable for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  D vtable for CHTMLProtoBufMsg<CMsgJSRaiseException>
  D vtable for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
+ D vtable for CHTMLProtoBufMsg<CMsgJSReleaseCallback>
  D vtable for CHTMLProtoBufMsg<CMsgKeyChar>
  D vtable for CHTMLProtoBufMsg<CMsgKeyDown>
  D vtable for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -1962,6 +1967,7 @@
  D vtable for CVACBannedConnRefusedDialog
  D vtable for HTMLComboBoxHost
  D vtable for IGameList
+ D vtable for IHTMLJS
  D vtable for IHTMLResponses
  D vtable for ISteamMatchmakingPingResponse
  D vtable for ISteamMatchmakingServerListResponse
@@ -2107,10 +2113,10 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserPosition>
  R typeinfo name for CHTMLProtoBufMsg<CMsgBrowserSize>
  R typeinfo name for CHTMLProtoBufMsg<CMsgCopy>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgExecuteJavaScript>
  R typeinfo name for CHTMLProtoBufMsg<CMsgExitFullScreen>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFind>
- R typeinfo name for CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>
  R typeinfo name for CHTMLProtoBufMsg<CMsgFullRepaint>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoBack>
  R typeinfo name for CHTMLProtoBufMsg<CMsgGoForward>
@@ -2120,8 +2126,10 @@
  R typeinfo name for CHTMLProtoBufMsg<CMsgImeSetComposition>
  R typeinfo name for CHTMLProtoBufMsg<CMsgInspectElement>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSDialogResponse>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgJSExecuteCallback>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSRaiseException>
  R typeinfo name for CHTMLProtoBufMsg<CMsgJSRegisterMethod>
+ R typeinfo name for CHTMLProtoBufMsg<CMsgJSReleaseCallback>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyChar>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyDown>
  R typeinfo name for CHTMLProtoBufMsg<CMsgKeyUp>
@@ -2409,6 +2417,7 @@
  R typeinfo name for HTMLComboBoxHost
  R typeinfo name for IBaseInterface
  R typeinfo name for IGameList
+ R typeinfo name for IHTMLJS
  R typeinfo name for IHTMLResponses
  R typeinfo name for IServerBrowser
  R typeinfo name for ISteamMatchmakingPingResponse
@@ -2913,14 +2922,14 @@
  T CHTMLProtoBufMsg<CMsgBrowserSize>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgCopy>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgCopy>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgExecuteJavaScript>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgExecuteJavaScript>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgExitFullScreen>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgExitFullScreen>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFileLoadDialogResponse>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFind>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFind>::~CHTMLProtoBufMsg()
- T CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>::CHTMLProtoBufMsg(EHTMLCommands)
- T CHTMLProtoBufMsg<CMsgForcePopupsToDirectHWND>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgFullRepaint>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgFullRepaint>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgGoBack>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -2939,10 +2948,14 @@
  T CHTMLProtoBufMsg<CMsgInspectElement>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSDialogResponse>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgJSExecuteCallback>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgJSExecuteCallback>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSRaiseException>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSRaiseException>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgJSRegisterMethod>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgJSRegisterMethod>::~CHTMLProtoBufMsg()
+ T CHTMLProtoBufMsg<CMsgJSReleaseCallback>::CHTMLProtoBufMsg(EHTMLCommands)
+ T CHTMLProtoBufMsg<CMsgJSReleaseCallback>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgKeyChar>::CHTMLProtoBufMsg(EHTMLCommands)
  T CHTMLProtoBufMsg<CMsgKeyChar>::~CHTMLProtoBufMsg()
  T CHTMLProtoBufMsg<CMsgKeyDown>::CHTMLProtoBufMsg(EHTMLCommands)
@@ -3514,6 +3527,7 @@
  T CMsgExecuteJavaScript::SharedCtor()
  T CMsgExecuteJavaScript::SharedDtor()
  T CMsgExecuteJavaScript::mutable_script()
+ T CMsgExecuteJavaScript::set_script(char const*)
  T CMsgExecuteJavaScript::set_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgExecuteJavaScript::~CMsgExecuteJavaScript()
  T CMsgExitFullScreen::ByteSize() const
@@ -5204,11 +5218,17 @@
  T CUtlHandleTable<vgui::BuildGroup, 20>::SetHandle(unsigned int, vgui::BuildGroup*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::Validate(CValidator&, char const*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::~CUtlHandleTable()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::AllocNode()
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, vgui::HTML::JSMethodRegistration_t const&)
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveAll()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::AllocNode()
  T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::CUtlHashMap()
@@ -5443,6 +5463,9 @@
  T CUtlVector<CIPAndPort, CUtlMemory<CIPAndPort> >::~CUtlVector()
  T CUtlVector<CInternetGames::regions_s, CUtlMemory<CInternetGames::regions_s> >::Validate(CValidator&, char const*)
  T CUtlVector<CInternetGames::regions_s, CUtlMemory<CInternetGames::regions_s> >::~CUtlVector()
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::AddToTail(CJSCallbackFunc* const&)
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::GrowVector(int)
+ T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::Remove(int)
  T CUtlVector<CJSCallbackFunc*, CUtlMemory<CJSCallbackFunc*> >::~CUtlVector()
  T CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::AddToTail(CModList::mod_t const&)
  T CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::GrowVector(int)
@@ -5456,6 +5479,8 @@
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t const*)
@@ -5899,6 +5924,7 @@
  T _findnext(long long, _finddata_t*)
  T bool BResolveHostString<CIPAddress>(char const*, bool, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
+ T int CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
  T int CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertUnconstructed<vgui::CFontWidthCache::key_t const&>(vgui::CFontWidthCache::key_t const&, int*, bool)
  T int CUtlRBTree<CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::Node_t, int, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CIPAndPort, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess>(CIPAndPort const&, CUtlMap<CIPAndPort, int, int, CDefLess<CIPAndPort> >::CKeyLess const&) const
  T int CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CUtlString, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess>(CUtlString const&, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess const&) const
@@ -5960,6 +5986,7 @@
  T non-virtual thunk to CServerBrowser::Shutdown()
  T non-virtual thunk to CServerBrowser::~CServerBrowser()
  T non-virtual thunk to CSpectateGames::GetNewServerList()
+ T non-virtual thunk to vgui::HTML::AddJSCallback(CJSCallbackFunc*)
  T non-virtual thunk to vgui::HTML::BSupportsOffMainThreadPaints()
  T non-virtual thunk to vgui::HTML::BrowserAckPIDShuttingDown(CMsgAckPIDShuttingDown const*)
  T non-virtual thunk to vgui::HTML::BrowserBringWindowToFront(CMsgBringWindowToFront const*)
@@ -6023,6 +6050,12 @@
  T non-virtual thunk to vgui::HTML::BrowserUpdateToolTip(CMsgUpdateToolTip const*)
  T non-virtual thunk to vgui::HTML::BrowserVerticalScrollBarSizeResponse(CMsgVerticalScrollBarSizeResponse const*)
  T non-virtual thunk to vgui::HTML::BrowserZoomToElementAtPositionResponse(CMsgZoomToElementAtPositionResponse const*)
+ T non-virtual thunk to vgui::HTML::ClearRegisteredJSMethods()
+ T non-virtual thunk to vgui::HTML::GetBrowserIndexForJS()
+ T non-virtual thunk to vgui::HTML::RaiseJSException(char const*)
+ T non-virtual thunk to vgui::HTML::RegisterJSMethodInternal(char const*, IJSMethodCallHandler*, EJSRegisterMethodType)
+ T non-virtual thunk to vgui::HTML::ReleaseJSCallback(CJSCallbackFunc*)
+ T non-virtual thunk to vgui::HTML::RunJavascript(char const*)
  T non-virtual thunk to vgui::HTML::ThreadNotifyPendingPaints()
  T non-virtual thunk to vgui::HTML::~HTML()
  T non-virtual thunk to vgui::HTMLPopup::PopupHTML::~PopupHTML()
@@ -6891,6 +6924,7 @@
  T vgui::GripPanel::moved(int, int)
  T vgui::GripPanel::~GripPanel()
  T vgui::HTML::AddCustomURLHandler(char const*, vgui::Panel*)
+ T vgui::HTML::AddJSCallback(CJSCallbackFunc*)
  T vgui::HTML::ApplySchemeSettings(vgui::IScheme*)
  T vgui::HTML::BCanGoBack()
  T vgui::HTML::BCanGoForward()
@@ -6989,6 +7023,7 @@
  T vgui::HTML::FindPrevious()
  T vgui::HTML::GetAnimMap()
  T vgui::HTML::GetBaseStyleName()
+ T vgui::HTML::GetBrowserIndexForJS()
  T vgui::HTML::GetClassSize() const
  T vgui::HTML::GetKBMap()
  T vgui::HTML::GetLinkAtPosition(int, int)
@@ -7060,13 +7095,15 @@
  T vgui::HTML::PostURL(char const*, char const*, bool)
  T vgui::HTML::RaiseJSException(char const*)
  T vgui::HTML::Refresh()
+ T vgui::HTML::RegisterJSMethodInternal(char const*, IJSMethodCallHandler*, EJSRegisterMethodType)
+ T vgui::HTML::ReleaseJSCallback(CJSCallbackFunc*)
  T vgui::HTML::ReleaseSharedTexture(bool)
  T vgui::HTML::ResizeHTML()
+ T vgui::HTML::RunJavascript(char const*)
  T vgui::HTML::SendLocalFileRequestMappings()
  T vgui::HTML::SendPendingHTMLMessages()
  T vgui::HTML::SendScreenDimensionsToCEF()
  T vgui::HTML::SetBrowserHidden(bool)
- T vgui::HTML::SetForceChildHWNDPopupsToDirectHWND(bool)
  T vgui::HTML::ShowFindDialog()
  T vgui::HTML::StopFind()
  T vgui::HTML::StopLoading()
@@ -10003,7 +10040,6 @@
  t _GLOBAL__sub_I_FriendsGames.cpp
  t _GLOBAL__sub_I_GraphPanel.cpp
  t _GLOBAL__sub_I_HTML.cpp
- t _GLOBAL__sub_I_HTML_js.cpp
  t _GLOBAL__sub_I_HistoryGames.cpp
  t _GLOBAL__sub_I_IMEPanel.cpp
  t _GLOBAL__sub_I_Image.cpp
@@ -10053,7 +10089,6 @@
  t _GLOBAL__sub_I_extension_set.cc
  t _GLOBAL__sub_I_htmlmessages.pb.cc
  t _GLOBAL__sub_I_htmlpopup.cpp
- t _GLOBAL__sub_I_htmlwindowjstypes.cpp
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_netadr.cpp
  t _GLOBAL__sub_I_typingjump.cpp

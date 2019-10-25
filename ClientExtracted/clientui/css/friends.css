@@ -53,7 +53,7 @@
   align-items: center;
   justify-content: center; }
 
-.throbber_throbber_center_wrapper_1Dn-N .throbber_ThrobberText_3r290,
+.throbber_ThrobberText_3r290,
 .throbber_LoadingWrapper_9UFR8 .throbber_ThrobberText_3r290 {
   color: #3d85c8;
   font-size: 12px;
@@ -317,8 +317,8 @@
   height: 36px; }
 
 .throbber_throbber_medium_1nACb {
-  width: 60px;
-  height: 60px; }
+  width: 64px;
+  height: 64px; }
 
 .throbber_throbber_large_3hJM_ {
   width: 92px;
@@ -584,8 +584,10 @@ button.DialogButton::-moz-focus-inner {
 .Destructive .ModalPosition_TopBar {
   background: linear-gradient(to right, #c44848, #c44848); }
 
-.ModalDialogPopup .ModalPosition,
-.ModalDialogPopup .ModalPosition_Content {
+/* Needs to target only the ModalPosition provided to the popup window and avoid being applied
+   to the additional, generic popups that can be placed inside the modal */
+.ModalDialogPopup .PopupFullWindow > .ModalPosition,
+.ModalDialogPopup .PopupFullWindow > .ModalPosition > .ModalPosition_Content {
   max-width: none;
   max-height: none;
   width: 100%;
@@ -966,6 +968,9 @@ button.DialogButton:disabled:hover {
   color: #464d58;
   box-shadow: none;
   cursor: default; }
+
+button.DialogButton.Small {
+  line-height: 22px; }
 
 button.TextButton {
   background-color: transparent;
