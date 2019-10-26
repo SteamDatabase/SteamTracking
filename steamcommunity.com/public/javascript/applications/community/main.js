@@ -18964,7 +18964,7 @@
                         }),
                         (a = { params: o, withCredentials: !1 }),
                         (i = m.b.STORE_BASE_URL),
-                        O
+                        m.d.is_support || O
                           ? ((i += "events/ajaxgetpartnereventforedit"),
                             (a = { params: o, withCredentials: !0 }))
                           : (i += "events/ajaxgetpartnerevent"),
@@ -49820,11 +49820,7 @@
                     o.jsondata.sale_header_overlay && W.createElement(OM, null),
                     o.GetImageURL("sale_overlay") &&
                       W.createElement("img", {
-                        style: {
-                          height: "100%",
-                          width: "100%",
-                          marginTop: "150px"
-                        },
+                        style: { marginTop: "150px" },
                         src: o.GetImageURL("sale_overlay")
                       }),
                     o.jsondata.sale_title_overlay &&
@@ -60427,8 +60423,8 @@
                     rgOptions: [
                       { label: "Default", data: "" },
                       {
-                        label: "DM Serif Display (Halloween)",
-                        data: "'DM Serif Display', 'Chonburi', 'Motiva Sans'"
+                        label: "Jolly Lodger (Halloween)",
+                        data: "'Jolly Lodger', 'Chonburi', 'Motiva Sans'"
                       }
                     ],
                     selectedOption: i,

@@ -3530,7 +3530,7 @@
         DEV_MODE: !1,
         OFFLINE_MODE: !1
       },
-      h = {
+      f = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -3617,7 +3617,7 @@
           : console.assert.apply(console, Object(v.g)([!!e, t], n))
         : e || console.warn.apply(console, Object(v.g)([t], n));
     }
-    function f(e) {
+    function h(e) {
       for (var t = e.length; 0 !== t; ) {
         var n = Math.floor(Math.random() * t),
           r = e[(t -= 1)];
@@ -8123,7 +8123,7 @@
                   case 0:
                     return (
                       (t = localStorage.getItem(qt) || "0"),
-                      (n = { v: t, id: "" + h.accountid }),
+                      (n = { v: t, id: "" + f.accountid }),
                       (r = b.STORE_BASE_URL + "dynamicstore/userdata/"),
                       [4, y.a.get(r, { params: n, withCredentials: !0 })]
                     );
@@ -8179,7 +8179,7 @@
                         b.STORE_BASE_URL +
                         "curators/" +
                         (s ? "ajaxfollow/" : "ajaxignore/")),
-                      (n = new FormData()).append("authwgtoken", h.authwgtoken),
+                      (n = new FormData()).append("authwgtoken", f.authwgtoken),
                       n.append("clanid", "" + a.GetAccountID()),
                       n.append(s ? "follow" : "ignore", c ? "1" : "0"),
                       [4, y.a.post(t, n, { withCredentials: !0 })]
@@ -8247,7 +8247,7 @@
                       l
                         ? t.append("bundleid", l.toString())
                         : t.append("subid", "" + a),
-                      (n = h.authwgtoken)
+                      (n = f.authwgtoken)
                         ? t.append("authwgtoken", n)
                         : t.append("sessionid", b.SESSIONID),
                       t.append("quantity", "1"),
@@ -11011,7 +11011,7 @@
                 : b.COMMUNITY_BASE_URL;
           }),
           (t.prototype.render = function() {
-            return h && h.logged_in
+            return f && f.logged_in
               ? (this.OnLoginComplete(), null)
               : s.a.createElement(
                   "div",
@@ -12246,7 +12246,7 @@
               return Object(v.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    if (!h.logged_in) return sr(), [2];
+                    if (!f.logged_in) return sr(), [2];
                     if (this.state.bUpdatingWishList) return [3, 4];
                     this.setState({ bUpdatingWishList: !0 }),
                       (t = this.props.appid),
@@ -22506,7 +22506,7 @@
             (this.m_rgChatMessages = []),
             (this.m_webAPIInterface = new pa(
               b.WEBAPI_BASE_URL,
-              h.webapi_token
+              f.webapi_token
             ));
         }
         return (
@@ -22519,7 +22519,7 @@
           (e.prototype.StartForSteamID = function(e, t) {
             (this.m_webAPIInterface = new pa(
               b.WEBAPI_BASE_URL,
-              h.webapi_token
+              f.webapi_token
             )),
               (this.m_ulBroadcastSteamID = e),
               (this.m_ulBroadcastID = t),
@@ -22528,10 +22528,10 @@
           (e.prototype.StartForChannel = function(e) {
             (this.m_webAPIInterface = new pa(
               b.WEBAPI_BASE_URL,
-              h.webapi_token
+              f.webapi_token
             )),
               (this.m_ulBroadcastChannelID = e),
-              (this.m_strUserSteamID = h.steamid),
+              (this.m_strUserSteamID = f.steamid),
               this.JoinChannelChat();
           }),
           (e.prototype.Stop = function() {
@@ -24340,7 +24340,7 @@
             if (t.type !== Hi.Chat) return null;
             var r = [];
             return (
-              (h && h.is_support) ||
+              (f && f.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID()) ||
               this.m_chat.IsUserChannelModerator(this.m_chat.GetUserSteamID())
                 ? r.push(
@@ -24470,7 +24470,7 @@
                       K("#BroadcastChat_MuteLocal")
                     )
                   ),
-              ((h && h.is_support) ||
+              ((f && f.is_support) ||
                 this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
                 r.push(
                   E.createElement(
@@ -24620,7 +24620,7 @@
                 })
               ),
               E.createElement(Wa, null),
-              h && h.logged_in && this.m_chat
+              f && f.logged_in && this.m_chat
                 ? E.createElement(
                     "div",
                     null,
@@ -31602,7 +31602,7 @@
             t &&
               (t.SetBroadcasterAndViewerInfo(
                 this.m_steamIDBroadcast,
-                h.steamid,
+                f.steamid,
                 e.m_ulBroadcastID,
                 e.m_ulViewerToken
               ),
@@ -40439,7 +40439,7 @@
                         }),
                         (i = { params: r, withCredentials: !1 }),
                         (o = b.STORE_BASE_URL),
-                        g
+                        f.is_support || g
                           ? ((o += "events/ajaxgetpartnereventforedit"),
                             (i = { params: r, withCredentials: !0 }))
                           : (o += "events/ajaxgetpartnerevent"),
@@ -40685,7 +40685,7 @@
         }
         return (
           (e.prototype.BIsUserLoggedIn = function() {
-            return h.logged_in;
+            return f.logged_in;
           }),
           (e.prototype.GetPartnerEventPermissions = function(e) {
             if (!e) return new Bd(0);
@@ -40904,7 +40904,7 @@
                         "sessionid",
                         b.SESSIONID
                       ),
-                      n.append("wgauthtoken", h.authwgtoken),
+                      n.append("wgauthtoken", f.authwgtoken),
                       n.append("voteup", a ? "1" : "0"),
                       n.append("ajax", "1"),
                       (r = { withCredentials: !0, cancelToken: s.token }),
@@ -41031,7 +41031,7 @@
                   case 0:
                     return (
                       (t = b.STORE_BASE_URL + "notification/ajaxusersettings"),
-                      (n = { authwgtoken: h.authwgtoken }),
+                      (n = { authwgtoken: f.authwgtoken }),
                       [4, y.a.get(t, { params: n, withCredentials: !0 })]
                     );
                   case 1:
@@ -43383,7 +43383,7 @@
           return (
             (t.m_cancelSignal = y.a.CancelToken.source()),
             (t.state = {
-              bLoadedProfile: Boolean(rp.GetProfile(h.steamid)),
+              bLoadedProfile: Boolean(rp.GetProfile(f.steamid)),
               text: "",
               bPosting: !1,
               strPostingMessage: ""
@@ -43404,7 +43404,7 @@
                   case 1:
                     return (
                       e.trys.push([1, 3, , 4]),
-                      [4, rp.LoadProfiles([h.steamid])]
+                      [4, rp.LoadProfiles([f.steamid])]
                     );
                   case 2:
                     return (
@@ -43470,7 +43470,7 @@
                 switch (e.label) {
                   case 0:
                     return (
-                      (t = ze.InitFromAccountID(h.accountid)),
+                      (t = ze.InitFromAccountID(f.accountid)),
                       (n =
                         b.COMMUNITY_BASE_URL +
                         "profiles/" +
@@ -43494,10 +43494,10 @@
             });
           }),
           (e.prototype.render = function() {
-            var e = rp.GetProfile(h.steamid),
+            var e = rp.GetProfile(f.steamid),
               t = e ? e.avatar_url : null,
               n = this.GetAnnouncementURL(),
-              r = ze.InitFromAccountID(h.accountid);
+              r = ze.InitFromAccountID(f.accountid);
             return this.state.bPosting
               ? E.createElement(
                   Yn,
@@ -45859,7 +45859,7 @@
                       [3, 6]
                     );
                   case 2:
-                    if (!h.logged_in) return [2];
+                    if (!f.logged_in) return [2];
                     (c = t.map(function(e) {
                       return e.toObject();
                     })),
@@ -46135,7 +46135,7 @@
               a.BHasAnnouncementGID() && r.push(a.AnnouncementGID);
             }
             var s = this.props.partnerEventStore;
-            f(r);
+            h(r);
             for (var c = 0, l = r; c < l.length; c++) {
               var d = l[c],
                 p = s.GetClanEventFromAnnouncementGID(d);
@@ -46742,7 +46742,7 @@
           }),
           (e.prototype.SetActionChangeEvent = function(e) {
             return (
-              (this.m_moderator = h.accountid),
+              (this.m_moderator = f.accountid),
               (this.m_rtWhen = Date.now() / 1e3),
               (this.m_action = $u.k_ChangeEventType),
               (this.m_newEventType = e),
@@ -46751,7 +46751,7 @@
           }),
           (e.prototype.SetReviewAction = function(e) {
             return (
-              (this.m_moderator = h.accountid),
+              (this.m_moderator = f.accountid),
               (this.m_rtWhen = Date.now() / 1e3),
               (this.m_action = e ? $u.k_ModReviewed : $u.k_ModUnreviewed),
               this
@@ -46762,7 +46762,7 @@
           }),
           (e.prototype.SetUpdateSeasonalTags = function(e) {
             return (
-              (this.m_moderator = h.accountid),
+              (this.m_moderator = f.accountid),
               (this.m_rtWhen = Date.now() / 1e3),
               (this.m_action = $u.k_UpdateSeasonTags),
               (this.m_newTagAdded = e),
@@ -49451,11 +49451,7 @@
                     r.jsondata.sale_header_overlay && E.createElement(Km, null),
                     r.GetImageURL("sale_overlay") &&
                       E.createElement("img", {
-                        style: {
-                          height: "100%",
-                          width: "100%",
-                          marginTop: "150px"
-                        },
+                        style: { marginTop: "150px" },
                         src: r.GetImageURL("sale_overlay")
                       }),
                     r.jsondata.sale_title_overlay &&
@@ -49601,9 +49597,9 @@
                         window.sessionStorage &&
                           ((r = window.sessionStorage.getItem(n))
                             ? (t = JSON.parse(r))
-                            : (f(t.capsules),
-                              f(t.tags),
-                              f(t.events),
+                            : (h(t.capsules),
+                              h(t.tags),
+                              h(t.events),
                               window.sessionStorage.setItem(
                                 n,
                                 JSON.stringify(t)
@@ -50109,7 +50105,7 @@
                   var t = c("config", e);
                   t && (delete t.SESSIONID, Object.assign(b, t));
                   var n = c("userinfo", e);
-                  n && Object.assign(h, n);
+                  n && Object.assign(f, n);
                   var r = c("broadcast", e);
                   r && Object.assign(u, r);
                   var i = c("community", e);
@@ -50142,7 +50138,7 @@
                               : [3, 4];
                           case 3:
                             (r = e.sent()),
-                              (i = r.data) && Object.assign(h, i),
+                              (i = r.data) && Object.assign(f, i),
                               (e.label = 4);
                           case 4:
                             return p.broadcastConfig
