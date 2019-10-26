@@ -4441,3 +4441,8 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 		background-size: contain;
 	}
 }
+
+.top_new_releases.below_tabs
+{
+	margin-top: 50px;
+}
