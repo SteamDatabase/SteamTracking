@@ -1,2918 +1,2432 @@
 [
     {
         "emsg": 113,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 124,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 146,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 147,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 41
     },
     {
         "emsg": 151,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 152,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 597,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 701,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 702,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 703,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 704,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 706,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 707,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 710,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 712,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 714,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 715,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 716,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 717,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 718,
-        "name": "",
-        "flags": 102,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 102
     },
     {
         "emsg": 726,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 727,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 728,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 730,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 731,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 732,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 736,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 740,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 741,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 742,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 743,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 744,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 745,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 746,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 747,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 751,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 755,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 756,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 757,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 758,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 759,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 760,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 761,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 763,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 764,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 765,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 766,
-        "name": "νώ",
-        "flags": 4294967295,
+        "flags": 2,
         "server_type": -1
     },
     {
         "emsg": 767,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 768,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 771,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 773,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 774,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 779,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 780,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 782,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 783,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 784,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 785,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 791,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 792,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 796,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 797,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 798,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 799,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 800,
-        "name": "νώ",
-        "flags": 4294967295,
+        "flags": 2,
         "server_type": -1
     },
     {
         "emsg": 801,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 802,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 803,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 805,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 807,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 808,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 809,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 810,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 813,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 814,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 815,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 818,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 819,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 820,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 821,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 822,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 33
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 830,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 831,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 832,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 839,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 842,
-        "name": "",
-        "flags": 17,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 17
     },
     {
         "emsg": 845,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 846,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 848,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 849,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 850,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 851,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 855,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 856,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 857,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 858,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 880,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 896,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 897,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 901,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 903,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 905,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 906,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 907,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 908,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 909,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 910,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 911,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 918,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 919,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 920,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 923,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 936,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 937,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 938,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 939,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 940,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 941,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 1200,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 1201,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 1202,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 1203,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 1204,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 1303,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 1304,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 1620,
-        "name": "",
-        "flags": 17,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 17
     },
     {
         "emsg": 1621,
-        "name": "",
-        "flags": 17,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 17
     },
     {
         "emsg": 1622,
-        "name": "",
-        "flags": 17,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 17
     },
     {
         "emsg": 1623,
-        "name": "",
-        "flags": 17,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 17
     },
     {
         "emsg": 1625,
-        "name": "",
-        "flags": 17,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 17
     },
     {
         "emsg": 1627,
-        "name": "",
-        "flags": 17,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 17
     },
     {
         "emsg": 1630,
-        "name": "",
-        "flags": 16,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 16
     },
     {
         "emsg": 4026,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 4331,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 4332,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 4402,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 4403,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 4406,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 4407,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 4408,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 4409,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5202,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5203,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5204,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5205,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5206,
-        "name": "",
-        "flags": 21,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 21
     },
     {
         "emsg": 5207,
-        "name": "",
-        "flags": 21,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 21
     },
     {
         "emsg": 5210,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5211,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5212,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5213,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5214,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5216,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5219,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5220,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5226,
-        "name": "",
-        "flags": 21,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 21
     },
     {
         "emsg": 5227,
-        "name": "",
-        "flags": 21,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 21
     },
     {
         "emsg": 5230,
-        "name": "",
-        "flags": 21,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 21
     },
     {
         "emsg": 5231,
-        "name": "",
-        "flags": 21,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 21
     },
     {
         "emsg": 5232,
-        "name": "",
-        "flags": 21,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 21
     },
     {
         "emsg": 5233,
-        "name": "",
-        "flags": 21,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 21
     },
     {
         "emsg": 5251,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5252,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5401,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5402,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5403,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5404,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5405,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5407,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5408,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5409,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5410,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5411,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5412,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5413,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5414,
-        "name": "",
-        "flags": 34,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 34
     },
     {
         "emsg": 5415,
-        "name": "",
-        "flags": 34,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 34
     },
     {
         "emsg": 5416,
-        "name": "",
-        "flags": 34,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 34
     },
     {
         "emsg": 5417,
-        "name": "",
-        "flags": 34,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 34
     },
     {
         "emsg": 5418,
-        "name": "",
-        "flags": 34,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 34
     },
     {
         "emsg": 5419,
-        "name": "",
-        "flags": 34,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 34
     },
     {
         "emsg": 5426,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5427,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5428,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5429,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5430,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5431,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5432,
-        "name": "",
-        "flags": 58,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 58
     },
     {
         "emsg": 5433,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5434,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 16
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5435,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 16
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5438,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5439,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5440,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5443,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5444,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5445,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5446,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5448,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5449,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5450,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5451,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5452,
-        "name": "",
-        "flags": 57,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 57
     },
     {
         "emsg": 5453,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5454,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5455,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5456,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5457,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5458,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5459,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5460,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5461,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5463,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5464,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5465,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5466,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5467,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 5
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5468,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5469,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5470,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5480,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5481,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5482,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5483,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5484,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5485,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5486,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5487,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5488,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5489,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5490,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5491,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5492,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5493,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5494,
-        "name": "",
-        "flags": 39,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 39
     },
     {
         "emsg": 5495,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5496,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5500,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5501,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5502,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5503,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5504,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5505,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5506,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5507,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5508,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5509,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5510,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5511,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5512,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5514,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5515,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5516,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5517,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 5518,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5519,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5520,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5521,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5522,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5523,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5524,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5525,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5526,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5527,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5528,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 33
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5529,
-        "name": "",
-        "flags": 34,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 34
     },
     {
         "emsg": 5530,
-        "name": "",
-        "flags": 34,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 34
     },
     {
         "emsg": 5531,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5532,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5535,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5536,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5537,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5538,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5539,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5540,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5541,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5542,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5543,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5546,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5547,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5548,
-        "name": "",
-        "flags": 16,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 16
     },
     {
         "emsg": 5549,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5550,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5551,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5552,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5553,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5554,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5555,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5558,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5559,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5560,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5561,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5562,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5563,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5564,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5565,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5566,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5567,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5568,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5569,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5570,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5571,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5572,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5573,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 65
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5574,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5575,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5576,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 33
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5577,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5578,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5582,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 33
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5583,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 5584,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5585,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5586,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5587,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5588,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5589,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5592,
-        "name": "",
-        "flags": 17,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 17
     },
     {
         "emsg": 5593,
-        "name": "",
-        "flags": 17,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 17
     },
     {
         "emsg": 5594,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5595,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 5596,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5597,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5598,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5599,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 33
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5605,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5606,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5607,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5617,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5621,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5622,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5623,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5624,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 64
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 5625,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 6403,
-        "name": "",
-        "flags": 43,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 43
     },
     {
         "emsg": 6404,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 6407,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 6501,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 6502,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 6503,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 6504,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 6505,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 6506,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 6507,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 6509,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 6601,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6602,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6603,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6604,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6605,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6606,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6607,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6608,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6609,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6610,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6611,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6612,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6613,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6614,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6615,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6616,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6617,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6618,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6619,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6620,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6621,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 63,
+        "server_type": 42
     },
     {
         "emsg": 6624,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6625,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6626,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6627,
-        "name": "",
-        "flags": 42,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 42
     },
     {
         "emsg": 6801,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6802,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6803,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6804,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6805,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6806,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6807,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6808,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6809,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6810,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6811,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 6815,
-        "name": "Ξϊνώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 0,
+        "server_type": -1
     },
     {
         "emsg": 7001,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 7002,
-        "name": "",
-        "flags": 41,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 41
     },
     {
         "emsg": 7005,
-        "name": "",
-        "flags": 102,
-        "server_type": 33
+        "flags": 6,
+        "server_type": 102
     },
     {
         "emsg": 7301,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7302,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7309,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7310,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7311,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7312,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7315,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7316,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7317,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7318,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7321,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7322,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7325,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7326,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7347,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 7348,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 7360,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7361,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7364,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7365,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7366,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7367,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7368,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 7378,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7379,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7381,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 7382,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7383,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7384,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7385,
-        "name": "",
-        "flags": 45,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 45
     },
     {
         "emsg": 7501,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 7502,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 7503,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 7515,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 7516,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 7517,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 7518,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 7519,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 7520,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 7523,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 33
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 7524,
-        "name": "",
-        "flags": 102,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 102
     },
     {
         "emsg": 7525,
-        "name": "",
-        "flags": 102,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 102
     },
     {
         "emsg": 7526,
-        "name": "",
-        "flags": 102,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 102
     },
     {
         "emsg": 7527,
-        "name": "",
-        "flags": 102,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 102
     },
     {
         "emsg": 7528,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 7529,
-        "name": "",
-        "flags": 47,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 47
     },
     {
         "emsg": 7701,
-        "name": "",
-        "flags": 59,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 59
     },
     {
         "emsg": 7702,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 33
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 7703,
-        "name": "",
-        "flags": 59,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 59
     },
     {
         "emsg": 7704,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 33
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 7705,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 33
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 7706,
-        "name": "",
-        "flags": 59,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 59
     },
     {
         "emsg": 7901,
-        "name": "",
-        "flags": 119,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 119
     },
     {
         "emsg": 7902,
-        "name": "",
-        "flags": 119,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 119
     },
     {
         "emsg": 8503,
-        "name": "",
-        "flags": 53,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 53
     },
     {
         "emsg": 8504,
-        "name": "",
-        "flags": 53,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 53
     },
     {
         "emsg": 8507,
-        "name": "",
-        "flags": 53,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 53
     },
     {
         "emsg": 8508,
-        "name": "",
-        "flags": 53,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 53
     },
     {
         "emsg": 8509,
-        "name": "",
-        "flags": 53,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 53
     },
     {
         "emsg": 8510,
-        "name": "",
-        "flags": 53,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 53
     },
     {
         "emsg": 8511,
-        "name": "",
-        "flags": 53,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 53
     },
     {
         "emsg": 8512,
-        "name": "",
-        "flags": 53,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 53
     },
     {
         "emsg": 8901,
-        "name": "",
-        "flags": 14,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 14
     },
     {
         "emsg": 8902,
-        "name": "",
-        "flags": 14,
-        "server_type": 65
+        "flags": 6,
+        "server_type": 14
     },
     {
         "emsg": 8903,
-        "name": "",
-        "flags": 14,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 14
     },
     {
         "emsg": 8904,
-        "name": "",
-        "flags": 14,
-        "server_type": 65
+        "flags": 6,
+        "server_type": 14
     },
     {
         "emsg": 8905,
-        "name": "",
-        "flags": 14,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 14
     },
     {
         "emsg": 8906,
-        "name": "",
-        "flags": 14,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 14
     },
     {
         "emsg": 9330,
-        "name": "",
-        "flags": 63,
-        "server_type": 0
+        "flags": 6,
+        "server_type": 63
     },
     {
         "emsg": 9331,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 33
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9405,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9406,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 1
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9503,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9504,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9505,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9506,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9507,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 9508,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 9510,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9511,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9513,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 9514,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 9600,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9601,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9700,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9701,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9702,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9703,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9704,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9800,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 9801,
-        "name": "",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 59,
+        "server_type": -1
     },
     {
         "emsg": 9802,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9900,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 9901,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 10100,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 10101,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 10102,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 10103,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 10104,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 10105,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     },
     {
         "emsg": 10106,
-        "name": "νώ",
-        "flags": 4294967295,
-        "server_type": 0
+        "flags": 2,
+        "server_type": -1
     }
 ]
