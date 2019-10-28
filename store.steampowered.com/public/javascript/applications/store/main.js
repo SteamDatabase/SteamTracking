@@ -118,7 +118,7 @@
                 5: "ca1901c80c06533d0674",
                 6: "13d254fa0066606afdb2",
                 7: "f49e5eae2a28debe86a5",
-                8: "e6353fec3692fd23b397",
+                8: "be2f60f0618701cf0290",
                 9: "5c4526d3b812355293a3",
                 10: "b29faaf0bf250f8b440d",
                 11: "51cf41904b3991ddc36e",
@@ -139,36 +139,36 @@
                 26: "0e138cc7d4c47818287c",
                 27: "5c09e9952a9694e158fb",
                 28: "5123391b7a4ee7576c75",
-                29: "890e9ab18b22577e9a0a",
+                29: "3ab48e4893acc8e09d8c",
                 30: "be7ec2fb0b0705fe60f7",
                 31: "5116646722dbdf99de46",
-                32: "5d7d7ce74874587650f1",
-                33: "ae83491ee996319629a8",
-                34: "ae64d15eebc0949aead9",
-                35: "222cada913aa65fa5c65",
-                36: "4e1a939201c9b0db37e0",
-                37: "86d8d2eed796c4b8b5eb",
-                38: "d42fb3a137f0dc9a5c80",
-                39: "855bf08b318825b8a1da",
-                40: "d8e7ab466e444b0912e2",
-                41: "d8fa0a1149be44461019",
-                42: "4a5aa89058c4f7406d27",
-                43: "9d0e764ca2e3e2ad8532",
-                44: "4cba79c0e94e2f8f013c",
-                45: "8a3cc29d7aab5ef052c1",
-                46: "201cc0e10f455fee9f68",
-                47: "f81dcf9bc2f11c2d63e0",
-                48: "7b3fc3389c6a94565d8c",
-                49: "3b8c11d6d644b0f816af",
-                50: "66dd1676806172e663ef",
-                51: "4fc366b621cf81b99350",
-                52: "026d28c08f6e5055b0a6",
-                53: "7cebacb18ff14635b9ad",
-                54: "d2b678f0a07e5e34216c",
-                55: "4b4cee6d3ef1798c9949",
-                56: "b8b606c6a3323c4f2247",
-                57: "293afe7913c34171cdd3",
-                58: "d158d7570802a96ffca3"
+                32: "e4ff36bf55f54c309f7e",
+                33: "4801633396c8ed0c6706",
+                34: "a36ca608d4b95286e9b5",
+                35: "c1251338272c79b580eb",
+                36: "162c0219a96231583563",
+                37: "dfb6271060a64bc15780",
+                38: "b936e63f01073522a335",
+                39: "2706ab5419c320c02bd8",
+                40: "4f4064d407db46e2dc40",
+                41: "f122193b4e93c67baf95",
+                42: "263c9f7282f246960d3e",
+                43: "b4766cd5e654c79a7efa",
+                44: "9792d0e12ad4986144f7",
+                45: "00394f917bc9a9841a56",
+                46: "55849a3a73eed787a097",
+                47: "91c5e7017974ddb08dc2",
+                48: "1731f1422979258210fa",
+                49: "073575e7ab2a69717440",
+                50: "6fb9c1e911ef58bbf59e",
+                51: "4b4efd22889d84e34186",
+                52: "7992731cbc32e0be0a2e",
+                53: "82b69aec2e4f5b9c7ca0",
+                54: "7ca37517673f2751dc45",
+                55: "774bfed522bb09447b3d",
+                56: "3bcb287d9d4073350dd9",
+                57: "38623a1c510474c1f6e6",
+                58: "06ec584e015cca0c3986"
               }[e]
             );
           })(o)),
@@ -46253,7 +46253,7 @@
               a = void 0 !== n ? n : t.GetImageURLWithFallback("capsule", o),
               s = t.GetNameWithFallback(o),
               c = ol(t.type),
-              l = t.GetSummaryWithFallback(0),
+              l = t.GetSummaryWithFallback(o),
               d = t.GetSubTitleWithLanguageFallback(o);
             d && (30 < d.length || 30 < s.length) && (d = void 0);
             var p = r ? r(t) : i,
@@ -49441,7 +49441,12 @@
                       position: "relative",
                       flexDirection: "column",
                       backgroundImage:
-                        "url(" + r.GetImageURL("sale_header") + ")",
+                        "url(" +
+                        r.GetImageURLWithFallback(
+                          "sale_header",
+                          this.props.language
+                        ) +
+                        ")",
                       backgroundColor: r.jsondata.sale_background_color
                     }
                   },
@@ -49449,10 +49454,16 @@
                     "div",
                     { className: jm.a.SaleHeaderContainer },
                     r.jsondata.sale_header_overlay && E.createElement(Km, null),
-                    r.GetImageURL("sale_overlay") &&
+                    r.GetImageURLWithFallback(
+                      "sale_overlay",
+                      this.props.language
+                    ) &&
                       E.createElement("img", {
-                        style: { marginTop: "150px" },
-                        src: r.GetImageURL("sale_overlay")
+                        style: { marginTop: "20px", maxWidth: "100vw" },
+                        src: r.GetImageURLWithFallback(
+                          "sale_overlay",
+                          this.props.language
+                        )
                       }),
                     r.jsondata.sale_title_overlay &&
                       E.createElement(
@@ -49650,7 +49661,17 @@
                       this.setState({ hiddenItems: o }),
                       (e.label = 3);
                   case 3:
-                    return [2];
+                    return (
+                      "events" === t.section_type &&
+                        t.events.forEach(function(e) {
+                          Od.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
+                            new ze(e.clan_steamid),
+                            e.announcement_gid,
+                            0
+                          );
+                        }),
+                      [2]
+                    );
                 }
               });
             });
@@ -49688,11 +49709,6 @@
                       },
                       s
                         .map(function(e) {
-                          Od.LoadPartnerEventFromAnnoucementGIDAndClanSteamID(
-                            new ze(e.clan_steamid),
-                            e.announcement_gid,
-                            0
-                          );
                           var t = Od.GetClanEventFromAnnouncementGID(
                             e.announcement_gid
                           );

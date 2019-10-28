@@ -1680,8 +1680,8 @@ body.modals_BodyNoScrollDialog_105OB {
   padding: 3px 5px;
   background-color: #4C6B22;
   color: #A4D007;
-  display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-right: 3px; }
 
 .broadcastwidgets_StoreSalePriceBox_2A_NW {
   font-size: 14px;
