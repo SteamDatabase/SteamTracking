@@ -171,6 +171,7 @@ https://store.steampowered.com/public/css/v6/home.css?__TIME__
 https://store.steampowered.com/public/css/v6/itemstore.css?__TIME__
 https://store.steampowered.com/public/css/v6/login.css?__TIME__
 https://store.steampowered.com/public/css/v6/news.css?__TIME__
+https://store.steampowered.com/public/css/v6/promo/sale_n_section.css?__TIME__
 https://store.steampowered.com/public/css/v6/recommended.css?__TIME__
 https://store.steampowered.com/public/css/v6/sale.css?__TIME__
 https://store.steampowered.com/public/css/v6/search.css?__TIME__
