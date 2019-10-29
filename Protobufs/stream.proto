@@ -89,6 +89,8 @@ enum EStreamControlMessage {
 	k_EStreamControlInputTouchFingerUp = 119;
 	k_EStreamControlSetCaptureSize = 120;
 	k_EStreamControlSetFlashState = 121;
+	k_EStreamControlPause = 122;
+	k_EStreamControlResume = 123;
 }
 
 enum EStreamVersion {
@@ -549,6 +551,12 @@ message CVideoDecoderInfoMsg {
 
 message CVideoEncoderInfoMsg {
 	optional string info = 1;
+}
+
+message CPauseMsg {
+}
+
+message CResumeMsg {
 }
 
 message CQuitRequest {

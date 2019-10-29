@@ -798,6 +798,20 @@ body.modals_BodyNoScrollDialog_105OB {
   .smartscrollcontainer_ScrollToTopButton_1J21t:hover.smartscrollcontainer_Visible_28ZR8 {
     filter: brightness(2); }
 
+.cssgrid_CSSGrid_3vHkm {
+  display: grid;
+  box-sizing: border-box; }
+
+.cssgrid_Container_DGRkX {
+  transition: height 0.3s ease-in-out;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden; }
+
+/* stylelint-disable */
+
+/* stylelint-enable */
+
 /* stylelint-disable */
 
 /* stylelint-enable */
@@ -836,53 +850,35 @@ body.modals_BodyNoScrollDialog_105OB {
     box-sizing: border-box;
     padding: 16px 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 200px);
-    grid-auto-rows: auto;
-    grid-gap: 32px 24px;
     position: relative; }
-    .LibraryDisplaySizeLarge .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K {
-      grid-template-columns: repeat(auto-fit, 200px);
-      grid-gap: 32px 24px; }
-      .LibraryDisplaySizeLarge .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_CollectionLabel_1J1LQ {
-        font-size: 18px; }
-      .LibraryDisplaySizeLarge .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_NewCollection_2_dwx .allcollections_BigPlus_g0-tU {
-        top: 30%;
-        font-size: 48px; }
-      .LibraryDisplaySizeLarge .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_NewCollection_2_dwx .allcollections_CollectionLabel_1J1LQ {
-        font-size: 14px; }
-    .LibraryDisplaySizeMedium .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K {
-      grid-template-columns: repeat(auto-fit, 175px);
-      grid-gap: 24px 18px; }
-      .LibraryDisplaySizeMedium .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_CollectionLabel_1J1LQ {
-        font-size: 14px; }
-      .LibraryDisplaySizeMedium .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_NewCollection_2_dwx .allcollections_BigPlus_g0-tU {
-        top: 20%; }
-    .LibraryDisplaySizeSmall .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K {
-      grid-template-columns: repeat(auto-fit, 130px);
-      grid-gap: 20px 12px; }
-      .LibraryDisplaySizeSmall .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_CollectionLabel_1J1LQ {
-        font-size: 12px;
-        letter-spacing: 1px; }
-      .LibraryDisplaySizeSmall .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_NewCollection_2_dwx .allcollections_BigPlus_g0-tU {
-        top: 0; }
-      .LibraryDisplaySizeSmall .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_NewCollection_2_dwx .allcollections_CollectionLabel_1J1LQ {
-        bottom: 0; }
-      .LibraryDisplaySizeSmall .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_DisplayCaseContainer_3vMgn {
-        transform-origin: 40% 20%; }
+    .LibraryDisplaySizeLarge .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_CollectionLabel_1J1LQ {
+      font-size: 18px; }
+    .LibraryDisplaySizeLarge .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_NewCollection_2_dwx .allcollections_BigPlus_g0-tU {
+      top: 30%;
+      font-size: 48px; }
+    .LibraryDisplaySizeLarge .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_NewCollection_2_dwx .allcollections_CollectionLabel_1J1LQ {
+      font-size: 14px; }
+    .LibraryDisplaySizeMedium .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_CollectionLabel_1J1LQ {
+      font-size: 14px; }
+    .LibraryDisplaySizeMedium .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_NewCollection_2_dwx .allcollections_BigPlus_g0-tU {
+      top: 20%; }
+    .LibraryDisplaySizeSmall .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_CollectionLabel_1J1LQ {
+      font-size: 12px;
+      letter-spacing: 1px; }
+    .LibraryDisplaySizeSmall .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_NewCollection_2_dwx .allcollections_BigPlus_g0-tU {
+      top: 0; }
+    .LibraryDisplaySizeSmall .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_NewCollection_2_dwx .allcollections_CollectionLabel_1J1LQ {
+      bottom: 0; }
+    .LibraryDisplaySizeSmall .allcollections_ScrollContainer_u1xD3 .allcollections_Grid_Ma65K .allcollections_DisplayCaseContainer_3vMgn {
+      transform-origin: 40% 20%; }
 
 @media screen and (max-width: 1774px) {
-  .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_Grid_Ma65K {
-    grid-template-columns: repeat(auto-fit, 175px);
-    grid-gap: 24px 18px; }
   .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_CollectionLabel_1J1LQ {
     font-size: 14px; }
   .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_NewCollection_2_dwx .allcollections_BigPlus_g0-tU {
     top: 20%; } }
 
 @media screen and (max-width: 1158px) {
-  .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_Grid_Ma65K {
-    grid-template-columns: repeat(auto-fit, 130px);
-    grid-gap: 20px 12px; }
   .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_Collection_3IWn- .allcollections_CollectionImage_2ERAQ .allcollections_DisplayCaseContainer_3vMgn {
     transform-origin: 40% 20%; }
   .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_CollectionLabel_1J1LQ {
@@ -920,7 +916,6 @@ body.modals_BodyNoScrollDialog_105OB {
 .allcollections_Collection_3IWn- {
   box-sizing: border-box;
   width: 100%;
-  padding-top: 100%;
   background: #313d53;
   position: relative;
   overflow: hidden;
@@ -13446,20 +13441,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     bottom: -16px;
     width: 100%;
     margin-right: unset; }
-
-/* stylelint-disable */
-
-/* stylelint-enable */
-
-.cssgrid_CSSGrid_3vHkm {
-  display: grid;
-  box-sizing: border-box; }
-
-.cssgrid_Container_DGRkX {
-  transition: height 0.3s ease-in-out;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden; }
 
 .appgrid_EmptyGridMessageContainer_Vl8Ft {
   box-sizing: border-box;

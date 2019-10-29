@@ -1142,6 +1142,8 @@ enum EMsg {
 	k_EMsgClientChallengeRequest = 5623;
 	k_EMsgClientChallengeResponse = 5624;
 	k_EMsgBadgeCraftedNotification = 5625;
+	k_EMsgClientNetworkingMobileCertRequest = 5626;
+	k_EMsgClientNetworkingMobileCertRequestResponse = 5627;
 	k_EMsgBaseMDS = 5800;
 	k_EMsgAMToMDSGetDepotDecryptionKey = 5812;
 	k_EMsgMDSToAMGetDepotDecryptionKeyResponse = 5813;

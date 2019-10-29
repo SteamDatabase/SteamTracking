@@ -4580,7 +4580,7 @@
 	"Country_SV"		"El Salvador"
 	"Country_SX"		"St Maarten (Dutch part)"
 	"Country_SY"		"Syria"
-	"Country_SZ"		"Swaziland"
+	"Country_SZ"		"Eswatini"
 	"Country_TC"		"Turks & Caicos Is"
 	"Country_TD"		"Chad"
 	"Country_TF"		"French Southern & Antarctic Lands"

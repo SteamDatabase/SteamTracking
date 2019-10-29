@@ -206,7 +206,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_details_news.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_grid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamespage_list.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/audiorecorder.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/cudawrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/desktopcaptureosx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/gamestream/desktopstreamthread.cpp

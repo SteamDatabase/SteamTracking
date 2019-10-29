@@ -83,6 +83,14 @@ message CMsgClientNetworkingCertReply {
 	optional bytes ca_signature = 6;
 }
 
+message CMsgClientNetworkingMobileCertRequest {
+	optional uint32 app_id = 1;
+}
+
+message CMsgClientNetworkingMobileCertReply {
+	optional string encoded_cert = 1;
+}
+
 message CMsgClientGetAppOwnershipTicket {
 	optional uint32 app_id = 1;
 }
