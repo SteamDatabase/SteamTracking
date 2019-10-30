@@ -1708,6 +1708,7 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	body.responsive_page .home_page_body_ctn.has_takeover .home_header_textimage_ctn .home_header_textimage {
 		background-size: 45vw;
 		background-position-y: 20px;
+		height: 29vw;
 	}
 
 }
