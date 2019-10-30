@@ -1705,6 +1705,10 @@ body.modals_BodyNoScrollDialog_105OB {
   margin-right: 3px; }
 
 .broadcastwidgets_StoreSalePriceBox_2A_NW {
+  background: black;
+  padding: 3px 5px; }
+
+.broadcastwidgets_StoreSalePriceBox_2A_NW {
   font-size: 14px;
   padding: 5px;
   background-color: black;
@@ -6344,6 +6348,25 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     display: initial;
     margin-right: 4px; }
 
+.eventrow_AppCapsuleImage_3OzV3.eventrow_AppCapsuleImage_3OzV3.eventrow_AppCapsuleImage_3OzV3 {
+  width: 120px;
+  box-shadow: 2px 2px 10px #000; }
+
+.eventrow_AppCapsuleCtn_16au- {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -10px;
+  left: 10px;
+  width: calc(100% - 20px); }
+
+.eventrow_AppCapsulePrice_2-l2M {
+  background: black;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 15px; }
+
 .apppartnereventspage_AppPartnerEventsPage_3CJsg {
   transition: all 0.32s ease-in-out;
   position: absolute;
@@ -6711,6 +6734,8 @@ h4 {
   margin-right: auto;
   margin-bottom: 20px;
   box-sizing: border-box; }
+  .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_EventSection_2c00B {
+    max-width: 1020px; }
 
 .partnersaledisplay_AppSummaryWidgetCtn_2H8Bm {
   flex-grow: 2;
@@ -7010,7 +7035,7 @@ h4 {
   /* Override default styles from store */ }
   .carousel .slide {
     background: none; }
-  .slider {
+  .carousel .slider {
     background: initial;
     border-radius: initial;
     top: initial;

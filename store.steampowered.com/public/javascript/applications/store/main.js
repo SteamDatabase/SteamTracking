@@ -2605,7 +2605,10 @@
       HorizontalSummary: "eventrow_HorizontalSummary_2bTWa",
       HorizontalTitle: "eventrow_HorizontalTitle_B9-wl",
       HorizontalDescriptionCtn: "eventrow_HorizontalDescriptionCtn_3CQtW",
-      HorizontalDescription: "eventrow_HorizontalDescription_2hPZw"
+      HorizontalDescription: "eventrow_HorizontalDescription_2hPZw",
+      AppCapsuleImage: "eventrow_AppCapsuleImage_3OzV3",
+      AppCapsuleCtn: "eventrow_AppCapsuleCtn_16au-",
+      AppCapsulePrice: "eventrow_AppCapsulePrice_2-l2M"
     };
   },
   Z7Ow: function(e, t, n) {},
@@ -2632,6 +2635,7 @@
     e.exports = {
       SaleHeaderContainer: "partnersaledisplay_SaleHeaderContainer_W4mvn",
       SaleSection: "partnersaledisplay_SaleSection_1cOoC",
+      EventSection: "partnersaledisplay_EventSection_2c00B",
       AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_2H8Bm",
       SaleOuterContainer: "partnersaledisplay_SaleOuterContainer_150kd",
       SaleBackground: "partnersaledisplay_SaleBackground_2N8Se",
@@ -8145,7 +8149,7 @@
                 switch (e.label) {
                   case 0:
                     return (
-                      (t = localStorage.getItem(Xt) || "0"),
+                      (t = sessionStorage.getItem(Xt) || "0"),
                       (n = { v: t, id: "" + f.accountid }),
                       (r = b.STORE_BASE_URL + "dynamicstore/userdata/"),
                       [4, y.a.get(r, { params: n, withCredentials: !0 })]
@@ -8303,9 +8307,11 @@
             });
           }),
           (e.prototype.InvalidateCache = function() {
-            localStorage.setItem(
+            sessionStorage.setItem(
               Xt,
-              (Number.parseInt(localStorage.getItem(Xt) || "0") + 1).toString()
+              (
+                Number.parseInt(sessionStorage.getItem(Xt) || "0") + 1
+              ).toString()
             );
           }),
           Object(v.c)([_.v], e.prototype, "m_rgWishList", void 0),
@@ -46415,58 +46421,96 @@
             var p = r ? r(t) : i,
               u = r ? ol.a : "a";
             return E.createElement(
-              u,
-              {
-                className: Hu.a.OtherEvents_EventCtn + " " + Hu.a.HoversEnabled,
-                to: (b.IN_CLIENT ? "steam://openurl/" : "") + p,
-                target: b.IN_CLIENT ? void 0 : "_blank",
-                href: r ? null : p,
-                onClick: this.props.onClick || void 0
-              },
+              E.Fragment,
+              null,
               E.createElement(
-                "div",
-                { className: Hu.a.EventSummaryContainer },
-                E.createElement("div", { className: Hu.a.EventSummaryType }, c),
-                E.createElement("div", { className: Hu.a.EventSummaryText }, l)
-              ),
-              E.createElement("div", {
-                className: Hu.a.OtherEvents_BGImage,
-                style: {
-                  backgroundColor: "#ffffff",
-                  backgroundImage: "url(" + a + ")"
-                }
-              }),
-              E.createElement(
-                "div",
-                { className: Hu.a.OtherEvents_ContentCtn },
+                u,
+                {
+                  className:
+                    Hu.a.OtherEvents_EventCtn + " " + Hu.a.HoversEnabled,
+                  to: (b.IN_CLIENT ? "steam://openurl/" : "") + p,
+                  target: b.IN_CLIENT ? void 0 : "_blank",
+                  href: r ? null : p,
+                  onClick: this.props.onClick || void 0
+                },
                 E.createElement(
                   "div",
-                  { className: Hu.a.OtherEvents_MainImageCtn },
-                  E.createElement("img", {
-                    src: a,
-                    className: Hu.a.OtherEvents_MainImage
-                  })
-                ),
-                E.createElement(
-                  "div",
-                  { className: Hu.a.OtherEvents_TextCtn },
+                  { className: Hu.a.EventSummaryContainer },
                   E.createElement(
                     "div",
-                    { className: Hu.a.OtherEvents_TextTitle },
-                    s
+                    { className: Hu.a.EventSummaryType },
+                    c
                   ),
-                  d &&
+                  E.createElement(
+                    "div",
+                    { className: Hu.a.EventSummaryText },
+                    l
+                  )
+                ),
+                E.createElement("div", {
+                  className: Hu.a.OtherEvents_BGImage,
+                  style: {
+                    backgroundColor: "#ffffff",
+                    backgroundImage: "url(" + a + ")"
+                  }
+                }),
+                E.createElement(
+                  "div",
+                  { className: Hu.a.OtherEvents_ContentCtn },
+                  E.createElement(
+                    "div",
+                    { className: Hu.a.OtherEvents_MainImageCtn },
+                    E.createElement("img", {
+                      src: a,
+                      className: Hu.a.OtherEvents_MainImage
+                    })
+                  ),
+                  E.createElement(
+                    "div",
+                    { className: Hu.a.OtherEvents_TextCtn },
                     E.createElement(
                       "div",
-                      { className: Hu.a.OtherEvents_SubTitle },
-                      d
+                      { className: Hu.a.OtherEvents_TextTitle },
+                      s
                     ),
-                  E.createElement(bl, {
-                    bSingleLine: !0,
-                    dateAndTime: t.GetStartTimeAndDateUnixSeconds()
-                  })
+                    d &&
+                      E.createElement(
+                        "div",
+                        { className: Hu.a.OtherEvents_SubTitle },
+                        d
+                      ),
+                    E.createElement(bl, {
+                      bSingleLine: !0,
+                      dateAndTime: t.GetStartTimeAndDateUnixSeconds()
+                    })
+                  )
                 )
-              )
+              ),
+              this.props.appInfo &&
+                E.createElement(
+                  "span",
+                  { className: Hu.a.AppCapsuleCtn },
+                  E.createElement("img", {
+                    className: Hu.a.AppCapsuleImage,
+                    src: this.props.appInfo.tiny_capsule
+                  }),
+                  E.createElement(
+                    "span",
+                    { className: Hu.a.AppCapsulePrice },
+                    Boolean(this.props.appInfo.discount_percent) &&
+                      E.createElement(
+                        "span",
+                        { className: Ar.a.StoreSaleDiscountBox },
+                        "-" + this.props.appInfo.discount_percent + "%"
+                      ),
+                    Boolean(this.props.appInfo.price) &&
+                      E.createElement(
+                        "span",
+                        { className: Ar.a.StoreSalePriceBox },
+                        this.props.appInfo.price
+                      )
+                  )
+                )
             );
           }),
           (t = Object(v.c)([Ee.a], t))
@@ -49532,7 +49576,11 @@
                   E.Children.map(this.props.children, function(e, t) {
                     return (t - 1) % 3 == 0
                       ? E.createElement("img", {
-                          src: n.state.currentSlide === t ? Qm.a : Jm.a,
+                          src:
+                            Math.floor(t / 3) ===
+                            Math.floor(n.state.currentSlide / 3)
+                              ? Qm.a
+                              : Jm.a,
                           onClick: function() {
                             return n.UpdateCurrentSlide(t);
                           },
@@ -49915,16 +49963,30 @@
                       this.setState({ hiddenItems: o }),
                       (e.label = 3);
                   case 3:
-                    return (
-                      "events" === t.section_type &&
-                        Td.LoadBatchPartnerEventsByAnnouncementGID(
-                          null,
-                          t.events.map(function(e) {
-                            return e.announcement_gid;
-                          })
-                        ),
-                      [2]
-                    );
+                    return "events" !== t.section_type
+                      ? [3, 5]
+                      : [
+                          4,
+                          Td.LoadBatchPartnerEventsByAnnouncementGID(
+                            null,
+                            t.events.map(function(e) {
+                              return e.announcement_gid;
+                            })
+                          )
+                        ];
+                  case 4:
+                    e.sent(),
+                      eh.LoadAppLinkInfo(
+                        t.events.map(function(e) {
+                          return Td.GetClanEventFromAnnouncementGID(
+                            e.announcement_gid
+                          ).appid;
+                        }),
+                        this.props.promotionname
+                      ),
+                      (e.label = 5);
+                  case 5:
+                    return [2];
                 }
               });
             });
@@ -49978,7 +50040,8 @@
                                 },
                                 E.createElement(sm, {
                                   event: t,
-                                  linkURL: t.GetEventURL()
+                                  linkURL: t.GetEventURL(),
+                                  appInfo: eh.GetAppLinkInfo(t.appid)
                                 })
                               )
                             : null;
@@ -50105,7 +50168,12 @@
               E.createElement(
                 "div",
                 {
-                  className: xm.a.SaleSection,
+                  className:
+                    xm.a.SaleSection +
+                    " " +
+                    ("events" === this.props.section.section_type
+                      ? xm.a.EventSection
+                      : ""),
                   style: (function(e, t) {
                     return {
                       background:
