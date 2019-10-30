@@ -5,6 +5,7 @@
 	"Generic_GotIt": "Got it!",
 	"Generic_Share": "Share",
 	"Generic_Upload": "Upload",
+	"Generic_Delete": "Delete",
 
 	"Privacy_Public": "Public",
 	"Privacy_FriendsOnly": "Friends Only",
@@ -350,6 +351,7 @@
 	"GameAction_Install": "Install",
 	"GameAction_Uninstall": "Uninstall",
 	"GameAction_Play": "Play",
+	"GameAction_PlayMusic": "Play Album",
 	"GameAction_Launch": "Launch",
 	"GameAction_PreLoad": "Preload",
 	"GameAction_Update": "Update",
@@ -895,6 +897,7 @@
 
 	"ContextMenu_SaveScreenshot": "Save screenshot as...",
 	"ContextMenu_BrowseScreenshot": "Browse to screenshot",
+	"ContextMenu_ManageScreenshots": "Manage screenshots",
 	"SteamChina_DurationControl_Init_1":	"Healthy Gaming Advisory",
 	"SteamChina_DurationControl_Init_2":	"Boycott harmful games; reject game piracy.",
 	"SteamChina_DurationControl_Init_3":	"Exercise self-protection; avoid deception.",
@@ -960,5 +963,8 @@
 	"ShareUploadScreenshot_PermissionDenied": "Steam was unable to upload this screenshot. You are not allowed to upload content because of an active ban on your account.",
 	"ShareUploadScreenshot_UnexpectedError": "Steam was unable to upload this screenshot to the Steam Cloud. Please try again.",
 
-	"ContextMenu_BrowseScreenshot": "Browse to screenshot"
+	"DeleteScreenshot_Title": "Delete Screenshot",
+	"DeleteScreenshot_Single": "Are you sure you want to permanently delete this screenshot from your hard disk?",
+	"DeleteScreenshot_Failed": "Steam was unable to delete the selected screenshot from your hard disk."
+
 }

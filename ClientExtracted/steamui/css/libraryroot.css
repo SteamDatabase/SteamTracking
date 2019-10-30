@@ -878,7 +878,7 @@ body.modals_BodyNoScrollDialog_105OB {
   .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_NewCollection_2_dwx .allcollections_BigPlus_g0-tU {
     top: 20%; } }
 
-@media screen and (max-width: 1158px) {
+@media (max-width: 1158px), (max-height: 600px) {
   .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_Collection_3IWn- .allcollections_CollectionImage_2ERAQ .allcollections_DisplayCaseContainer_3vMgn {
     transform-origin: 40% 20%; }
   .LibraryDisplaySizeAutomatic .allcollections_Container_1TBJ1 .allcollections_CollectionLabel_1J1LQ {
@@ -1819,29 +1819,32 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
     pointer-events: auto; }
     div.LowPerfMode .library_AppDetailsOverlayTransitionGroup_37MAY > div {
       background-color: rgba(16, 16, 16, 0.75); }
+  .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionEnter_2WEP3,
+  .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionEnterActive_24sm_,
+  .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionEntered_19eb8,
+  .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionExit_iJ6kM,
+  .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionExitActive_1YKr0 {
+    transition-property: opacity;
+    transition-duration: 0.12s;
+    transition-timing-function: ease-in-out; }
   .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionEnter_2WEP3 {
     opacity: 0;
-    transition: all 0.12s ease-in-out;
     backdrop-filter: blur(0px) brightness(1) saturate(1); }
   .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionEnterActive_24sm_ {
     opacity: 1;
-    transition: all 0.12s ease-in-out;
     transition-delay: 0.28s;
     backdrop-filter: blur(5px) brightness(0.65) saturate(0.7); }
   .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionEntered_19eb8 {
     opacity: 1;
-    transition: all 0.12s ease-in-out;
     backdrop-filter: blur(5px) brightness(0.65) saturate(0.7); }
   .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionExit_iJ6kM {
     opacity: 1;
-    transition: all 0.12s ease-in-out;
     backdrop-filter: blur(5px) brightness(0.65) saturate(0.7);
     pointer-events: none; }
     .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionExit_iJ6kM * {
       pointer-events: none; }
   .library_AppDetailsOverlayTransitionGroup_37MAY .library_OverlayAppDetailsTransitionExitActive_1YKr0 {
     opacity: 0;
-    transition: all 0.12s ease-in-out;
     transition-delay: 0.28s;
     backdrop-filter: blur(0px) brightness(1) saturate(1); }
 
@@ -14387,7 +14390,10 @@ div.appgrid_CoverSizeSlider_U4J9B {
       width: 20px;
       height: 20px;
       margin: 0px 2px;
-      cursor: pointer; }
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
       .gamelistdropdown_Bar_1ZS_x .gamelistdropdown_Filters_1PgAo .gamelistdropdown_CheckboxWithImage_3mzKd svg {
         fill: gray; }
         .gamelistdropdown_Bar_1ZS_x .gamelistdropdown_Filters_1PgAo .gamelistdropdown_CheckboxWithImage_3mzKd svg g path {
