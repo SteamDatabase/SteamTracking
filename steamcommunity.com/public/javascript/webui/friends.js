@@ -5526,20 +5526,23 @@
     n.d(t, "b", function() {
       return r;
     }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return s;
       }),
       n.d(t, "a", function() {
         return c;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return u;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return m;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return d;
+      }),
+      n.d(t, "c", function() {
+        return h;
       });
     var i,
       r = {
@@ -5672,6 +5675,20 @@
           console.error("Failed to parse config", e);
         }
       else console.error("Missing config element #", t);
+    }
+    function h() {
+      var e = window.location.href;
+      return e.startsWith(r.STORE_BASE_URL)
+        ? "store"
+        : e.startsWith(r.COMMUNITY_BASE_URL)
+        ? "community"
+        : e.startsWith(r.PARTNER_BASE_URL)
+        ? "partnerweb"
+        : e.startsWith(r.HELP_BASE_URL)
+        ? "help"
+        : e.startsWith(r.STEAMTV_BASE_URL)
+        ? "steamtv"
+        : "";
     }
   },
   "20CD": function(e, t, n) {
@@ -12181,6 +12198,40 @@
       OverlayModal: "modals_OverlayModal_2n8Ob"
     };
   },
+  B7ut: function(e, t, n) {
+    "use strict";
+    n.d(t, "b", function() {
+      return i;
+    }),
+      n.d(t, "a", function() {
+        return r;
+      }),
+      n.d(t, "c", function() {
+        return a;
+      });
+    var o = n("1n9R");
+    function i(e) {
+      var t,
+        n,
+        o,
+        i = ((t = e),
+        (n = new RegExp(
+          "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
+          "im"
+        )),
+        (o = t.match(n)) && 5 < o.length ? o[6].toString() : t);
+      return i.startsWith("www.") && (i = i.slice(4)), i;
+    }
+    function r(e) {
+      var t = document.createElement("a");
+      return (t.href = e), 0 <= t.hostname.indexOf("xn--") ? t.href : e;
+    }
+    function a(e) {
+      return o.b.SNR && 0 < o.b.SNR.length
+        ? e + (0 <= e.indexOf("?") ? "&" : "?") + "snr=" + o.b.SNR
+        : e;
+    }
+  },
   Cebd: function(e, t, n) {
     e.exports = {
       PersonaStatusIcon: "personastatusicons_PersonaStatusIcon_2rP7f",
@@ -16522,7 +16573,7 @@
             t &&
               (t.SetBroadcasterAndViewerInfo(
                 this.m_steamIDBroadcast,
-                d.f.steamid,
+                d.g.steamid,
                 e.m_ulBroadcastID,
                 e.m_ulViewerToken
               ),
@@ -23520,7 +23571,7 @@
                   watchLocation: this.props.watchLocation,
                   hidden: this.props.bHideChat
                 }),
-                p.f && p.f.logged_in ? null : c
+                p.g && p.g.logged_in ? null : c
               )
             );
           }),
@@ -26035,8 +26086,9 @@
                           ? [
                               4,
                               t.HintLoadBroadcastAppData(
-                                (p.b.IN_CLIENT ? "library-" : "") +
-                                  "partner-events"
+                                (p.b.IN_CLIENT
+                                  ? "library-"
+                                  : Object(p.c)() + "-") + "partner-events"
                               )
                             ]
                           : [3, 2]);
@@ -26210,8 +26262,8 @@
                 switch (e.label) {
                   case 0:
                     return (
-                      (t = localStorage.getItem(R) || "0"),
-                      (n = { v: t, id: "" + p.f.accountid }),
+                      (t = sessionStorage.getItem(R) || "0"),
+                      (n = { v: t, id: "" + p.g.accountid }),
                       (o = p.b.STORE_BASE_URL + "dynamicstore/userdata/"),
                       [4, b.a.get(o, { params: n, withCredentials: !0 })]
                     );
@@ -26269,7 +26321,7 @@
                         (s ? "ajaxfollow/" : "ajaxignore/")),
                       (n = new FormData()).append(
                         "authwgtoken",
-                        p.f.authwgtoken
+                        p.g.authwgtoken
                       ),
                       n.append("clanid", "" + a.GetAccountID()),
                       n.append(s ? "follow" : "ignore", c ? "1" : "0"),
@@ -26338,7 +26390,7 @@
                       l
                         ? t.append("bundleid", l.toString())
                         : t.append("subid", "" + a),
-                      (n = p.f.authwgtoken)
+                      (n = p.g.authwgtoken)
                         ? t.append("authwgtoken", n)
                         : t.append("sessionid", p.b.SESSIONID),
                       t.append("quantity", "1"),
@@ -26371,9 +26423,9 @@
             });
           }),
           (e.prototype.InvalidateCache = function() {
-            localStorage.setItem(
+            sessionStorage.setItem(
               R,
-              (Number.parseInt(localStorage.getItem(R) || "0") + 1).toString()
+              (Number.parseInt(sessionStorage.getItem(R) || "0") + 1).toString()
             );
           }),
           Object(d.c)([l.x], e.prototype, "m_rgWishList", void 0),
@@ -27147,7 +27199,7 @@
                 : p.b.COMMUNITY_BASE_URL;
           }),
           (t.prototype.render = function() {
-            return p.f && p.f.logged_in
+            return p.g && p.g.logged_in
               ? (this.OnLoginComplete(), null)
               : a.a.createElement(
                   "div",
@@ -27197,13 +27249,9 @@
       _e = n.n(fe),
       ge = n("q8zB"),
       be = n.n(ge),
-      ve = n("0N1H");
-    function Se(e) {
-      return p.b.SNR && 0 < p.b.SNR.length
-        ? e + (0 <= e.indexOf("?") ? "&" : "?") + "snr=" + p.b.SNR
-        : e;
-    }
-    var ye = (function(n) {
+      ve = n("0N1H"),
+      Se = n("B7ut"),
+      ye = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { appInfo: new C(e.appid) }), t;
@@ -27294,7 +27342,7 @@
                           "a",
                           {
                             className: ce.a.StoreSaleWidgetExtraLink,
-                            href: Se(
+                            href: Object(Se.c)(
                               (p.b.IN_CLIENT ? "steam://openurl/" : "") +
                                 this.props.extraLink.url
                             ),
@@ -27567,7 +27615,7 @@
               return Object(d.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    if (!p.f.logged_in)
+                    if (!p.g.logged_in)
                       return (
                         Object(ee.b)(
                           a.a.createElement(ne, {
@@ -59539,7 +59587,7 @@
                 n = null,
                 o = !1;
               if (a.a.IN_CLIENT) {
-                Object(p.c)();
+                Object(p.d)();
                 var i = {
                   message: "ChatJavascriptInitialized",
                   data: a.a.BUILD_TIMESTAMP
@@ -61434,21 +61482,9 @@
           o
         );
       })(R.Component),
-      K = n("adxy");
-    n("1n9R");
-    function Y(e) {
-      var t,
-        n,
-        o,
-        i = ((t = e),
-        (n = new RegExp(
-          "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
-          "im"
-        )),
-        (o = t.match(n)) && 5 < o.length ? o[6].toString() : t);
-      return i.startsWith("www.") && (i = i.slice(4)), i;
-    }
-    var J = n("s+DT"),
+      K = n("adxy"),
+      Y = n("B7ut"),
+      J = n("s+DT"),
       Q = function(e) {
         var t = e.children;
         return i.a.createElement(
@@ -61696,29 +61732,25 @@
         return (
           Object(l.d)(t, e),
           (t.prototype.render = function() {
-            var e,
-              t,
-              n = this.GetArgument(),
-              o = this.props.children,
-              i = null,
-              r = ((e = n),
-              ((t = document.createElement("a")).href = e),
-              0 <= t.hostname.indexOf("xn--") ? t.href : e);
+            var e = this.GetArgument(),
+              t = this.props.children,
+              n = null,
+              o = Y.a(e);
             return (
-              r != n && (i = r),
-              o || (i = r),
+              o != e && (n = o),
+              t || (n = o),
               G.f.SettingsStore.FriendsSettings.bDisableEmbedInlining &&
-              "string" != typeof o
+              "string" != typeof t
                 ? R.createElement(
                     Ce,
-                    { href: n },
+                    { href: e },
                     R.createElement(j.z, null),
-                    r
+                    o
                   )
                 : R.createElement(
                     C.b,
-                    { text: n, style: "merge-adjacent" },
-                    R.createElement(k.b, { href: n }, i || o)
+                    { text: e, style: "merge-adjacent" },
+                    R.createElement(k.b, { href: e }, n || t)
                   )
             );
           }),
@@ -62215,7 +62247,7 @@
                   (m = Object(L.c)(
                     "#bbcode_disable_embed_inlining_parenthetical",
                     r,
-                    Y(i)
+                    Y.b(i)
                   )),
                 R.createElement(
                   Ce,
@@ -62408,7 +62440,7 @@
                   (o = Object(L.c)(
                     "#bbcode_disable_embed_inlining_parenthetical",
                     t,
-                    Y(e)
+                    Y.b(e)
                   )),
                 R.createElement(Ce, { href: e }, R.createElement(j.kb, null), o)
               );
@@ -62570,7 +62602,7 @@
               t = this.GetArgument("title"),
               n = this.GetArgument("desc"),
               o = this.GetArgument("url"),
-              i = Y(o);
+              i = Y.b(o);
             if (G.f.SettingsStore.FriendsSettings.bDisableEmbedInlining) {
               var r = o;
               return (
@@ -63974,7 +64006,7 @@
             if (a && t) {
               var c = this.props.context.chat.GetMember(a),
                 l = c ? c.display_name : this.GetArgument("persona"),
-                p = Y(t),
+                p = Y.b(t),
                 u = f.a.COMMUNITY_BASE_URL + "economy/image/" + e + "/512x512",
                 m = { color: "" },
                 d = f.a.COMMUNITY_BASE_URL + "market/listings/" + n + "/" + r,
@@ -66806,7 +66838,7 @@
             (this.m_rgChatMessages = []),
             (this.m_webAPIInterface = new y(
               u.b.WEBAPI_BASE_URL,
-              u.f.webapi_token
+              u.g.webapi_token
             ));
         }
         return (
@@ -66819,7 +66851,7 @@
           (e.prototype.StartForSteamID = function(e, t) {
             (this.m_webAPIInterface = new y(
               u.b.WEBAPI_BASE_URL,
-              u.f.webapi_token
+              u.g.webapi_token
             )),
               (this.m_ulBroadcastSteamID = e),
               (this.m_ulBroadcastID = t),
@@ -66828,10 +66860,10 @@
           (e.prototype.StartForChannel = function(e) {
             (this.m_webAPIInterface = new y(
               u.b.WEBAPI_BASE_URL,
-              u.f.webapi_token
+              u.g.webapi_token
             )),
               (this.m_ulBroadcastChannelID = e),
-              (this.m_strUserSteamID = u.f.steamid),
+              (this.m_strUserSteamID = u.g.steamid),
               this.JoinChannelChat();
           }),
           (e.prototype.Stop = function() {
@@ -67895,7 +67927,7 @@
             if (t.type !== f.a.Chat) return null;
             var o = [];
             return (
-              (u.f && u.f.is_support) ||
+              (u.g && u.g.is_support) ||
               this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID()) ||
               this.m_chat.IsUserChannelModerator(this.m_chat.GetUserSteamID())
                 ? o.push(
@@ -68025,7 +68057,7 @@
                       Object(h.c)("#BroadcastChat_MuteLocal")
                     )
                   ),
-              ((u.f && u.f.is_support) ||
+              ((u.g && u.g.is_support) ||
                 this.m_chat.IsUserBroadcaster(this.m_chat.GetUserSteamID())) &&
                 o.push(
                   r.createElement(
@@ -68171,7 +68203,7 @@
                 })
               ),
               r.createElement(k.a, null),
-              u.f && u.f.logged_in && this.m_chat
+              u.g && u.g.logged_in && this.m_chat
                 ? r.createElement(
                     "div",
                     null,
@@ -75128,13 +75160,13 @@ and limitations under the License.
       return o.b;
     }),
       n.d(t, "d", function() {
-        return o.f;
+        return o.g;
       }),
       n.d(t, "c", function() {
-        return o.e;
+        return o.f;
       }),
       n.d(t, "b", function() {
-        return o.d;
+        return o.e;
       });
   },
   twdX: function(e, t, n) {
@@ -78733,10 +78765,10 @@ and limitations under the License.
               e.strSteamid
                 ? ((this.m_steamid = new i.a(e.strSteamid)),
                   (this.m_steamidLastLoggedOn = this.m_steamid),
-                  (h.f.logged_in = !0),
-                  (h.f.steamid = e.strSteamid),
-                  (h.f.accountid = this.m_steamid.GetAccountID()),
-                  (h.f.account_name = e.strAccountName))
+                  (h.g.logged_in = !0),
+                  (h.g.steamid = e.strSteamid),
+                  (h.g.accountid = this.m_steamid.GetAccountID()),
+                  (h.g.account_name = e.strAccountName))
                 : 0 != this.m_steamid.GetAccountID() &&
                   (this.m_steamid = new i.a()),
               this.m_bLoggedOn

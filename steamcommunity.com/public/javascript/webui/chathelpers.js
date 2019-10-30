@@ -467,20 +467,23 @@
     n.d(t, "b", function() {
       return i;
     }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return s;
       }),
       n.d(t, "a", function() {
         return u;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return l;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return m;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return h;
+      }),
+      n.d(t, "c", function() {
+        return d;
       });
     var o,
       i = {
@@ -613,6 +616,20 @@
           console.error("Failed to parse config", e);
         }
       else console.error("Missing config element #", t);
+    }
+    function d() {
+      var e = window.location.href;
+      return e.startsWith(i.STORE_BASE_URL)
+        ? "store"
+        : e.startsWith(i.COMMUNITY_BASE_URL)
+        ? "community"
+        : e.startsWith(i.PARTNER_BASE_URL)
+        ? "partnerweb"
+        : e.startsWith(i.HELP_BASE_URL)
+        ? "help"
+        : e.startsWith(i.STEAMTV_BASE_URL)
+        ? "steamtv"
+        : "";
     }
   },
   J0bI: function(e, t, n) {
@@ -2859,13 +2876,13 @@ and limitations under the License.
       return r.b;
     }),
       n.d(t, "d", function() {
-        return r.f;
+        return r.g;
       }),
       n.d(t, "c", function() {
-        return r.e;
+        return r.f;
       }),
       n.d(t, "b", function() {
-        return r.d;
+        return r.e;
       });
   },
   ujHl: function(e, t, n) {

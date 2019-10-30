@@ -6289,6 +6289,9 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     display: initial;
     margin-right: 4px; }
 
+.eventrow_AppCapsuleImage_3OzV3.eventrow_AppCapsuleImage_3OzV3.eventrow_AppCapsuleImage_3OzV3 {
+  width: 150px; }
+
 .apppartnereventspage_AppPartnerEventsPage_3CJsg {
   transition: all 0.32s ease-in-out;
   position: absolute;
@@ -6482,6 +6485,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   margin-right: auto;
   margin-bottom: 20px;
   box-sizing: border-box; }
+  .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_EventSection_2c00B {
+    max-width: 1020px; }
 
 .partnersaledisplay_AppSummaryWidgetCtn_2H8Bm {
   flex-grow: 2;
@@ -6781,7 +6786,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   /* Override default styles from store */ }
   .carousel .slide {
     background: none; }
-  .slider {
+  .carousel .slider {
     background: initial;
     border-radius: initial;
     top: initial;
@@ -6843,24 +6848,6 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   font-display: swap;
   src: local("Chonburi"), local("Chonburi-Regular"), url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2) format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB; }
-
-/* latin-ext */
-@font-face {
-  font-family: 'Chonburi';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"), url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWTHLzriA.woff2) format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-
-/* latin */
-@font-face {
-  font-family: 'Chonburi';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local("Chonburi"), local("Chonburi-Regular"), url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWdHLw.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 .partnereventdashboard_DisplaySectionHeaderContainer_1xnIX {
   display: flex;

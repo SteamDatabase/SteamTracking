@@ -750,20 +750,23 @@
     n.d(t, "b", function() {
       return i;
     }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return a;
       }),
       n.d(t, "a", function() {
         return s;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return m;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return p;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return h;
+      }),
+      n.d(t, "c", function() {
+        return d;
       });
     var o,
       i = {
@@ -896,6 +899,20 @@
           console.error("Failed to parse config", e);
         }
       else console.error("Missing config element #", t);
+    }
+    function d() {
+      var e = window.location.href;
+      return e.startsWith(i.STORE_BASE_URL)
+        ? "store"
+        : e.startsWith(i.COMMUNITY_BASE_URL)
+        ? "community"
+        : e.startsWith(i.PARTNER_BASE_URL)
+        ? "partnerweb"
+        : e.startsWith(i.HELP_BASE_URL)
+        ? "help"
+        : e.startsWith(i.STEAMTV_BASE_URL)
+        ? "steamtv"
+        : "";
     }
   },
   "7Vyq": function(e, t, n) {
@@ -3468,22 +3485,22 @@
         return D;
       }),
       n.d(t, "h", function() {
-        return V;
+        return R;
       }),
       n.d(t, "l", function() {
-        return R;
+        return V;
       }),
       n.d(t, "f", function() {
         return H;
       }),
       n.d(t, "D", function() {
-        return F;
+        return W;
       }),
       n.d(t, "gb", function() {
-        return z;
+        return F;
       }),
       n.d(t, "kb", function() {
-        return W;
+        return z;
       }),
       n.d(t, "A", function() {
         return j;
@@ -4879,7 +4896,7 @@
         )
       );
     }
-    function V() {
+    function R() {
       return o.createElement(
         "svg",
         {
@@ -4904,7 +4921,7 @@
         })
       );
     }
-    function R(e) {
+    function V(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return o.createElement(
@@ -5042,7 +5059,7 @@
         )
       );
     }
-    function F() {
+    function W() {
       return o.createElement(
         "svg",
         {
@@ -5072,7 +5089,7 @@
         })
       );
     }
-    function z(e) {
+    function F(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -5316,7 +5333,7 @@
         )
       );
     }
-    function W() {
+    function z() {
       return o.createElement(
         "svg",
         {
@@ -7300,13 +7317,13 @@ and limitations under the License.
       return r.b;
     }),
       n.d(t, "d", function() {
-        return r.f;
+        return r.g;
       }),
       n.d(t, "c", function() {
-        return r.e;
+        return r.f;
       }),
       n.d(t, "b", function() {
-        return r.d;
+        return r.e;
       });
   },
   twdX: function(e, t, n) {
