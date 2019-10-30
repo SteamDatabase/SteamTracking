@@ -6759,11 +6759,11 @@ h4 {
 .partnersaledisplay_ShowContentsButton_2EjTW {
   border-radius: 2px;
   border: none;
-  padding: 4px;
+  padding: 8px;
   display: inline-block;
   cursor: pointer;
-  color: #67c1f5;
-  background: rgba(103, 193, 245, 0.2); }
+  color: #285b9a;
+  background: rgba(103, 193, 245, 0.4); }
   .partnersaledisplay_ShowContentsButton_2EjTW:hover {
     color: #fff;
     background: #417a9b;

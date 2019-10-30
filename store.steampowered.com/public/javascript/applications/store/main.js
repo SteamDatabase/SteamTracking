@@ -12119,8 +12119,9 @@
               i = n.discount_percent,
               o = n.content_descriptors,
               a = n.tags,
-              s = Yt.BIsGameWishlisted(n.appid),
-              c = Yt.BOwnsApp(n.appid);
+              s = n.is_free,
+              c = Yt.BIsGameWishlisted(n.appid),
+              l = Yt.BOwnsApp(n.appid);
             return Yt.BExcludesContentDescriptor(o) || Yt.BExcludesTag(a)
               ? null
               : E.createElement(
@@ -12154,8 +12155,8 @@
                   E.createElement(
                     "div",
                     { className: Sr.a.CapsuleContainer },
-                    !c &&
-                      s &&
+                    !l &&
+                      c &&
                       E.createElement(
                         "span",
                         { className: Sr.a.Banner },
@@ -12163,7 +12164,7 @@
                         " ",
                         $("#Sale_OnWishlist")
                       ),
-                    c &&
+                    l &&
                       E.createElement(
                         "span",
                         { className: Sr.a.Banner + " " + Sr.a.Blue },
@@ -12173,14 +12174,14 @@
                       ),
                     E.createElement("img", {
                       className:
-                        Sr.a.CapsuleImage + " " + (c ? Sr.a.Muted : ""),
+                        Sr.a.CapsuleImage + " " + (l ? Sr.a.Muted : ""),
                       src: e
                     }),
                     E.createElement(
                       "div",
                       {
                         className:
-                          Sr.a.CapsuleBottomBar + " " + (c ? Sr.a.Muted : "")
+                          Sr.a.CapsuleBottomBar + " " + (l ? Sr.a.Muted : "")
                       },
                       E.createElement(Xr, { item: n }),
                       E.createElement(
@@ -12192,7 +12193,7 @@
                             { className: Sr.a.StoreSaleDiscountBox },
                             "-" + i + "%"
                           ),
-                        Boolean(r) && r
+                        !s && r
                       )
                     )
                   )
@@ -46591,7 +46592,9 @@
                           e,
                           "global_hover"
                         );
-                      }
+                      },
+                      onFocus: function() {},
+                      onBlur: function() {}
                     },
                     E.createElement("img", {
                       className: Zu.a.AppCapsuleImage,
@@ -46607,7 +46610,7 @@
                         { className: Sr.a.StoreSaleDiscountBox },
                         "-" + this.props.appInfo.discount_percent + "%"
                       ),
-                    Boolean(this.props.appInfo.price) &&
+                    !this.props.appInfo.is_free &&
                       E.createElement(
                         "span",
                         { className: Sr.a.StoreSalePriceBox },
@@ -49678,21 +49681,32 @@
                 E.createElement(
                   "div",
                   { style: { display: "flex", justifyContent: "center" } },
-                  E.Children.map(this.props.children, function(e, t) {
-                    return (t - 1) % 3 == 0
-                      ? E.createElement("img", {
-                          src:
-                            Math.floor(t / 3) ===
-                            Math.floor(n.state.currentSlide / 3)
-                              ? Jm.a
-                              : eh.a,
-                          onClick: function() {
-                            return n.UpdateCurrentSlide(t);
-                          },
-                          style: { cursor: "pointer", margin: "4px" }
-                        })
-                      : null;
-                  })
+                  768 < window.screen.width &&
+                    E.Children.map(this.props.children, function(e, t) {
+                      return (t - 1) % 3 == 0
+                        ? E.createElement("img", {
+                            src:
+                              Math.floor(t / 3) ===
+                              Math.floor(n.state.currentSlide / 3)
+                                ? Jm.a
+                                : eh.a,
+                            onClick: function() {
+                              return n.UpdateCurrentSlide(t);
+                            },
+                            style: { cursor: "pointer", margin: "4px" }
+                          })
+                        : null;
+                    }),
+                  window.screen.width <= 768 &&
+                    E.Children.map(this.props.children, function(e, t) {
+                      return E.createElement("img", {
+                        src: t === n.state.currentSlide ? Jm.a : eh.a,
+                        onClick: function() {
+                          return n.UpdateCurrentSlide(t);
+                        },
+                        style: { cursor: "pointer", margin: "4px" }
+                      });
+                    })
                 )
               )
             );
@@ -50154,7 +50168,7 @@
                         showThumbs: !1,
                         showStatus: !1,
                         centerMode: 768 < window.screen.width,
-                        centerSlidePercentage: 33.3
+                        centerSlidePercentage: 33.33
                       },
                       s
                         .map(function(e) {
@@ -50166,10 +50180,7 @@
                                 "div",
                                 {
                                   key: e.announcement_gid,
-                                  style: {
-                                    padding: "10px",
-                                    paddingBottom: "30px"
-                                  },
+                                  style: {},
                                   className: Zu.a.OtherEvents
                                 },
                                 E.createElement(lm, {
@@ -50289,12 +50300,18 @@
                         E.createElement(
                           "div",
                           {
-                            onClick: this.ShowContents,
-                            style: { display: "flex", justifyContent: "center" }
+                            style: {
+                              display: "flex",
+                              justifyContent: "center",
+                              marginTop: "5px"
+                            }
                           },
                           E.createElement(
                             "button",
-                            { className: Um.a.ShowContentsButton },
+                            {
+                              onClick: this.ShowContents,
+                              className: Um.a.ShowContentsButton
+                            },
                             $("#Sale_ShowMore")
                           )
                         )
