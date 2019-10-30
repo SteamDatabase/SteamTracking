@@ -1070,6 +1070,13 @@ LocalizationReady("friendsui", "english", {
     "Only embed images and other media when on wifi",
   FriendSettings_Mobile_UploadCurrentLogs: "Upload Current Session Logs",
   FriendSettings_Mobile_UploadPreviousLogs: "Upload Previous Session Logs",
+  FriendSettings_Mobile_SaveImageCaptures: "Save image captures",
+  FriendSettings_Mobile_SaveImageCaptures_Desc:
+    "Images you capture within the app will be saved to your device's camera roll.",
+
+  Mobile_SaveImageCaptures_AlertTitle: "Image Saved",
+  Mobile_SaveImageCaptures_AlertBody:
+    "We've saved the image to your device's camera roll.\n\nYou can disable this behavior in Settings > Interface.",
 
   AboutSettings_Title: "About",
   InfoSettings_Title: "Information",

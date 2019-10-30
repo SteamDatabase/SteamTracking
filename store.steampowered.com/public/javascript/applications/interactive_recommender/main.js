@@ -203,6 +203,7 @@
       OptionCheckbox: "app_OptionCheckbox_3ONXD",
       Checkbox: "app_Checkbox_10M0W",
       WishlistCheckbox: "app_WishlistCheckbox_3Yttg",
+      SaveUserSettingsButton: "app_SaveUserSettingsButton_q56LH",
       OptionSlider: "app_OptionSlider_2w3dR",
       Labels: "app_Labels_2gaDw",
       Min: "app_Min_2uKTb",
@@ -253,7 +254,7 @@
     var _ = a("mrSG"),
       n = a("vDqi"),
       d = a.n(n),
-      A = {
+      N = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -281,10 +282,12 @@
         ALGORITHM: 0,
         REINFERENCE: !1,
         MODEL_VERSION: 0,
-        IMMEDIATE_IGNORE_UPDATE: !1,
         PERSISTENT_IGNORE: !1,
         DEFAULT_RECENCY_SLIDER: 0,
-        DEFAULT_POPULARITY_SLIDER: 0
+        DEFAULT_POPULARITY_SLIDER: 0,
+        DEFAULT_INCLUDED_TAGS: [],
+        DEFAULT_EXCLUDED_TAGS: [],
+        DEFAULT_IGNORED_PLAYED_APPS: []
       },
       r = "application_config";
     function o() {
@@ -301,11 +304,11 @@
         else console.error("Missing config element #" + t);
         return;
       })("config");
-      e && Object.assign(A, e);
+      e && Object.assign(N, e);
     }
     var i = a("okNM"),
       l = a("q1tI"),
-      P = a.n(l);
+      D = a.n(l);
     function s(e) {
       if (!u() || !window.document.cookie) return null;
       var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
@@ -368,7 +371,7 @@
         }
       };
     }
-    var M = (function(e) {
+    var P = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -378,7 +381,7 @@
             e && p.AddImpression(this.props.appID, this.props.snr);
           }),
           (t.prototype.render = function() {
-            return P.a.createElement(
+            return D.a.createElement(
               m.a,
               { onChange: this.onVisibilityChanged },
               this.props.children
@@ -387,8 +390,8 @@
           Object(_.c)([E], t.prototype, "onVisibilityChanged", null),
           t
         );
-      })(P.a.Component),
-      D = (a("2i24"),
+      })(D.a.Component),
+      M = (a("2i24"),
       function() {
         for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
         return e.reduce(function(e, t) {
@@ -591,7 +594,7 @@
       (f[(f.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
       (f[(f.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
       (f[(f.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral");
-    var y, T;
+    var T, y;
     v.k_EOtherEvent,
       v.k_EGameEvent,
       v.k_EPartyEvent,
@@ -624,64 +627,64 @@
       v.k_ESeasonRelease,
       v.k_ECrosspostEvent,
       v.k_EInGameEventGeneral;
-    ((T = y || (y = {}))[(T.k_ELaunchSource_None = 0)] =
+    ((y = T || (T = {}))[(y.k_ELaunchSource_None = 0)] =
       "k_ELaunchSource_None"),
-      (T[(T.k_ELaunchSource_2ftLibraryDetails = 100)] =
+      (y[(y.k_ELaunchSource_2ftLibraryDetails = 100)] =
         "k_ELaunchSource_2ftLibraryDetails"),
-      (T[(T.k_ELaunchSource_2ftLibraryListView = 101)] =
+      (y[(y.k_ELaunchSource_2ftLibraryListView = 101)] =
         "k_ELaunchSource_2ftLibraryListView"),
-      (T[(T.k_ELaunchSource_2ftLibraryGrid = 103)] =
+      (y[(y.k_ELaunchSource_2ftLibraryGrid = 103)] =
         "k_ELaunchSource_2ftLibraryGrid"),
-      (T[(T.k_ELaunchSource_InstallSubComplete = 104)] =
+      (y[(y.k_ELaunchSource_InstallSubComplete = 104)] =
         "k_ELaunchSource_InstallSubComplete"),
-      (T[(T.k_ELaunchSource_DownloadsPage = 105)] =
+      (y[(y.k_ELaunchSource_DownloadsPage = 105)] =
         "k_ELaunchSource_DownloadsPage"),
-      (T[(T.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
+      (y[(y.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
         "k_ELaunchSource_RemoteClientStartStreaming"),
-      (T[(T.k_ELaunchSource_2ftMiniModeList = 107)] =
+      (y[(y.k_ELaunchSource_2ftMiniModeList = 107)] =
         "k_ELaunchSource_2ftMiniModeList"),
-      (T[(T.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-      (T[(T.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
+      (y[(y.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
+      (y[(y.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
         "k_ELaunchSource_DashAppLaunchCmdLine"),
-      (T[(T.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
+      (y[(y.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
         "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-      (T[(T.k_ELaunchSource_RunByGameDir = 302)] =
+      (y[(y.k_ELaunchSource_RunByGameDir = 302)] =
         "k_ELaunchSource_RunByGameDir"),
-      (T[(T.k_ELaunchSource_SubCmdRunDashGame = 303)] =
+      (y[(y.k_ELaunchSource_SubCmdRunDashGame = 303)] =
         "k_ELaunchSource_SubCmdRunDashGame"),
-      (T[(T.k_ELaunchSource_SteamURL_Launch = 400)] =
+      (y[(y.k_ELaunchSource_SteamURL_Launch = 400)] =
         "k_ELaunchSource_SteamURL_Launch"),
-      (T[(T.k_ELaunchSource_SteamURL_Run = 401)] =
+      (y[(y.k_ELaunchSource_SteamURL_Run = 401)] =
         "k_ELaunchSource_SteamURL_Run"),
-      (T[(T.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
+      (y[(y.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
         "k_ELaunchSource_SteamURL_JoinLobby"),
-      (T[(T.k_ELaunchSource_SteamURL_RunGame = 403)] =
+      (y[(y.k_ELaunchSource_SteamURL_RunGame = 403)] =
         "k_ELaunchSource_SteamURL_RunGame"),
-      (T[(T.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
+      (y[(y.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
         "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-      (T[(T.k_ELaunchSource_SteamURL_RunSafe = 405)] =
+      (y[(y.k_ELaunchSource_SteamURL_RunSafe = 405)] =
         "k_ELaunchSource_SteamURL_RunSafe"),
-      (T[(T.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
-      (T[(T.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
+      (y[(y.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
+      (y[(y.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
         "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-      (T[(T.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
+      (y[(y.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
         "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-      (T[(T.k_ELaunchSource_Dota2Launcher = 700)] =
+      (y[(y.k_ELaunchSource_Dota2Launcher = 700)] =
         "k_ELaunchSource_Dota2Launcher"),
-      (T[(T.k_ELaunchSource_IRunGameEngine = 800)] =
+      (y[(y.k_ELaunchSource_IRunGameEngine = 800)] =
         "k_ELaunchSource_IRunGameEngine"),
-      (T[(T.k_ELaunchSource_DRMFailureResponse = 801)] =
+      (y[(y.k_ELaunchSource_DRMFailureResponse = 801)] =
         "k_ELaunchSource_DRMFailureResponse"),
-      (T[(T.k_ELaunchSource_DRMDataRequest = 802)] =
+      (y[(y.k_ELaunchSource_DRMDataRequest = 802)] =
         "k_ELaunchSource_DRMDataRequest"),
-      (T[(T.k_ELaunchSource_CloudFilePanel = 803)] =
+      (y[(y.k_ELaunchSource_CloudFilePanel = 803)] =
         "k_ELaunchSource_CloudFilePanel"),
-      (T[(T.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
+      (y[(y.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
         "k_ELaunchSource_DiscoveredAlreadyRunning"),
-      (T[(T.k_ELaunchSource_GameActionJoinParty = 900)] =
+      (y[(y.k_ELaunchSource_GameActionJoinParty = 900)] =
         "k_ELaunchSource_GameActionJoinParty");
-    var k,
-      L = {
+    var L,
+      k = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -702,7 +705,7 @@
         STEAMTV_BASE_URL: "",
         HELP_BASE_URL: "",
         PARTNER_BASE_URL: "",
-        IN_CLIENT: !(T[(T.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
+        IN_CLIENT: !(y[(y.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
           "k_ELaunchSource_AppPortraitContextMenu"),
         USE_POPUPS: !1,
         IN_MOBILE: !1,
@@ -716,23 +719,11 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!u()) return k || (k = R()), k;
+            if (!u()) return L || (L = R()), L;
             var e = s("sessionid");
             e || (e = R());
             return e;
           })();
-        },
-        get BASE_URL() {
-          var e = window.location.href;
-          return e.startsWith(this.STORE_BASE_URL)
-            ? this.STORE_BASE_URL
-            : e.startsWith(this.COMMUNITY_BASE_URL)
-            ? this.COMMUNITY_BASE_URL
-            : e.startsWith(this.PARTNER_BASE_URL)
-            ? this.PARTNER_BASE_URL
-            : e.startsWith(this.HELP_BASE_URL)
-            ? this.HELP_BASE_URL
-            : "";
         },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
@@ -801,9 +792,9 @@
         (e.prototype.GetELanguageFallbackOrder = function() {
           var t = new Array();
           return (
-            t.push(S(L.LANGUAGE)),
-            (L.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-              e.value != L.LANGUAGE && t.push(S(e.value));
+            t.push(S(k.LANGUAGE)),
+            (k.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+              e.value != k.LANGUAGE && t.push(S(e.value));
             }),
             t
           );
@@ -827,7 +818,7 @@
     function w(e) {
       for (var n = [], t = 1; t < arguments.length; t++)
         n[t - 1] = arguments[t];
-      var a = I.LocalizeString(e);
+      var a = A.LocalizeString(e);
       return a
         ? (0 < n.length &&
             (a = a.replace(/%(\d+)\$s/g, function(e, t) {
@@ -846,7 +837,7 @@
         n = O.get(a);
       if (n) return n;
       return (
-        (n = t.toLocaleDateString(I.GetPreferredLocales(), {
+        (n = t.toLocaleDateString(A.GetPreferredLocales(), {
           year: "numeric",
           month: "short",
           day: "numeric"
@@ -858,44 +849,44 @@
     var O = new Map();
     new Map();
     new Map(), new Map(), new Map(), new Map();
-    var I = new C();
-    window.LocalizationManager = I;
-    var N,
-      x,
-      G = a("6TF7"),
-      j = a.n(G),
+    var A = new C();
+    window.LocalizationManager = A;
+    var I,
+      G,
+      x = a("6TF7"),
+      j = a.n(x),
       F = a("1h/R"),
       V = a.n(F),
       W = function(e) {
         e.accountID;
-        var t = le.getInputApps(),
+        var t = ce.getInputApps(),
           a = Object.keys(t).length,
           n = 0;
         return (
           Object.keys(t).map(function(e) {
             n += t[e].p;
           }),
-          P.a.createElement(
+          D.a.createElement(
             "div",
             { className: j.a.IdentityBlock },
-            P.a.createElement("img", {
+            D.a.createElement("img", {
               className: j.a.Avatar,
-              src: A.AVATAR_URL
+              src: N.AVATAR_URL
             }),
-            P.a.createElement(
+            D.a.createElement(
               "div",
               { className: j.a.PersonalInfo },
-              P.a.createElement(
+              D.a.createElement(
                 "div",
                 { className: j.a.Persona },
-                A.PERSONA_NAME
+                N.PERSONA_NAME
               ),
-              P.a.createElement(
+              D.a.createElement(
                 "div",
                 { className: j.a.GameCount },
                 w("#PlaytimeList_RecentGames", a)
               ),
-              P.a.createElement(
+              D.a.createElement(
                 "div",
                 { className: j.a.TotalTime },
                 w("#PlaytimeList_HoursTotal", n)
@@ -910,7 +901,7 @@
           n = e.hours,
           r = e.lastPlayed,
           o = e.ignored,
-          i = A.CDN_URL + "apps/" + t + "/header.jpg",
+          i = N.CDN_URL + "apps/" + t + "/header.jpg",
           s = Date.now() / 1e3 - r,
           c = "";
         return (
@@ -958,30 +949,30 @@
                           : w(a + "LessThanAMinute");
                       })(s)
                 )),
-          P.a.createElement(
+          D.a.createElement(
             "div",
-            { className: D(j.a.PlayedGame, o && j.a.Ignored) },
-            P.a.createElement(
+            { className: M(j.a.PlayedGame, o && j.a.Ignored) },
+            D.a.createElement(
               "a",
-              { href: A.BASE_URL + "app/" + t },
-              P.a.createElement("img", { className: j.a.Logo, src: i })
+              { href: N.BASE_URL + "app/" + t },
+              D.a.createElement("img", { className: j.a.Logo, src: i })
             ),
-            P.a.createElement(
+            D.a.createElement(
               "div",
               { className: j.a.PlaytimeInfo },
-              P.a.createElement(
+              D.a.createElement(
                 "div",
                 { className: j.a.HoursPlayed },
                 w("#PlaytimeList_Hours", n)
               ),
-              P.a.createElement("div", { className: j.a.Title }, a),
-              P.a.createElement("div", { className: j.a.LastPlayed }, c),
-              P.a.createElement(
+              D.a.createElement("div", { className: j.a.Title }, a),
+              D.a.createElement("div", { className: j.a.LastPlayed }, c),
+              D.a.createElement(
                 "div",
                 {
                   className: j.a.IgnoreToggle,
                   onClick: function() {
-                    return le.onToggleIgnore(t);
+                    return ce.onToggleIgnore(t);
                   }
                 },
                 w(o ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore")
@@ -997,54 +988,21 @@
         }
         return (
           Object(_.d)(e, a),
-          (e.prototype.onUpdate = function() {
-            le.m_bIgnoredEdited && le.onUpdateWithIgnored();
-          }),
           (e.prototype.render = function() {
-            return A.IMMEDIATE_IGNORE_UPDATE
-              ? P.a.createElement("div", null)
-              : P.a.createElement(
-                  "div",
-                  { className: j.a.UpdateSaveBlock },
-                  P.a.createElement(
-                    "div",
-                    {
-                      className: D(
-                        j.a.UpdateButton,
-                        le.m_bIgnoredEdited && j.a.Enabled
-                      ),
-                      onClick: this.onUpdate
-                    },
-                    w("#UpdateSaveBlock_Update")
-                  )
-                );
-          }),
-          Object(_.c)([E], e.prototype, "onUpdate", null),
-          (e = Object(_.c)([i.a], e))
-        );
-      })(P.a.Component),
-      q = (function(a) {
-        function e(e) {
-          var t = a.call(this, e) || this;
-          return (t.state = {}), t;
-        }
-        return (
-          Object(_.d)(e, a),
-          (e.prototype.render = function() {
-            var e = le.getInputApps(),
+            var e = ce.getInputApps(),
               a = [];
             if (!e)
-              return P.a.createElement(
+              return D.a.createElement(
                 "div",
                 { className: j.a.PlaytimeList },
-                P.a.createElement(
+                D.a.createElement(
                   "div",
                   { className: j.a.Header },
                   w("#PlaytimeList_Header")
                 ),
-                P.a.createElement("div", { className: j.a.Loading })
+                D.a.createElement("div", { className: j.a.Loading })
               );
-            le.getAppInfo();
+            ce.getAppInfo();
             var n = e.slice().sort(function(e, t) {
               return t.l - e.l;
             });
@@ -1052,34 +1010,33 @@
               Object.keys(n).map(function(e) {
                 var t = n[e];
                 a.push(
-                  P.a.createElement(H, {
+                  D.a.createElement(H, {
                     key: "PlayedGame_" + t.a,
                     appID: t.a,
                     name: t.t,
                     hours: t.p,
                     lastPlayed: t.l,
-                    ignored: t.i
+                    ignored: t.i || t.ip
                   })
                 );
               }),
-              P.a.createElement(
+              D.a.createElement(
                 "div",
                 { className: j.a.PlaytimeList },
-                P.a.createElement(
+                D.a.createElement(
                   "div",
                   { className: j.a.Header },
                   w("#PlaytimeList_Header")
                 ),
-                P.a.createElement(W, { accountID: this.props.accountID }),
-                P.a.createElement(Y, null),
-                P.a.createElement("div", { className: j.a.List }, a)
+                D.a.createElement(W, { accountID: this.props.accountID }),
+                D.a.createElement("div", { className: j.a.List }, a)
               )
             );
           }),
           (e = Object(_.c)([i.a], e))
         );
-      })(P.a.Component),
-      X = function(e) {
+      })(D.a.Component),
+      q = function(e) {
         var t = e.titleLabel,
           a = e.minLabel,
           n = e.maxLabel,
@@ -1090,17 +1047,17 @@
           c = e.sliderLabels,
           l = c ? Math.round((c.length - 1) * ((i - r) / (o - r))) : void 0,
           u = c ? c[l] : "";
-        return P.a.createElement(
+        return D.a.createElement(
           "div",
           { className: j.a.OptionSlider },
-          P.a.createElement("div", { className: j.a.Title }, t),
-          P.a.createElement(
+          D.a.createElement("div", { className: j.a.Title }, t),
+          D.a.createElement(
             "div",
             { className: j.a.Labels },
-            P.a.createElement("div", { className: j.a.Min }, a),
-            P.a.createElement("div", { className: j.a.Max }, n)
+            D.a.createElement("div", { className: j.a.Min }, a),
+            D.a.createElement("div", { className: j.a.Max }, n)
           ),
-          P.a.createElement("input", {
+          D.a.createElement("input", {
             type: "range",
             min: r,
             max: o,
@@ -1108,18 +1065,18 @@
             value: i,
             onChange: s
           }),
-          P.a.createElement("div", { className: j.a.OptionalLabel }, u)
+          D.a.createElement("div", { className: j.a.OptionalLabel }, u)
         );
       },
-      z = function(e) {
+      X = function(e) {
         var t = e.className,
           a = e.titleLabel,
           n = e.checked,
           r = e.onChange;
-        return P.a.createElement(
+        return D.a.createElement(
           "label",
-          { className: D(j.a.OptionCheckbox, t && t) },
-          P.a.createElement("input", {
+          { className: M(j.a.OptionCheckbox, t && t) },
+          D.a.createElement("input", {
             type: "checkbox",
             className: j.a.Checkbox,
             checked: n,
@@ -1128,19 +1085,23 @@
           a
         );
       },
-      K = (function(a) {
+      z = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (
             (t.rgTags = []),
-            (t.state = { value: "", suggestions: [], selected: [] }),
+            (t.state = {
+              value: "",
+              suggestions: [],
+              selected: e.selectedtags
+            }),
             t
           );
         }
         return (
           Object(_.d)(e, a),
           (e.prototype.componentDidMount = function() {
-            var e = le.getTags();
+            var e = ce.getTags();
             if (e)
               for (var t = 0, a = e; t < a.length; t++) {
                 var n = a[t];
@@ -1159,7 +1120,10 @@
             this.setState({ suggestions: n });
           }),
           (e.prototype.onClearRequested = function() {
-            this.setState({ suggestions: this.props.tagoptions });
+            this.setState({
+              suggestions: this.props.tagoptions,
+              selected: this.props.selectedtags
+            });
           }),
           (e.prototype.onChange = function(e, t) {
             this.setState({ value: t.newValue });
@@ -1190,19 +1154,20 @@
               n < r.length;
               n++
             ) {
-              if (r[n].id == t.suggestion.id) {
+              if (r[n] == t.suggestion.id) {
                 a = !0;
                 break;
               }
             }
             var o = this.state.selected;
-            a || (o.push(t.suggestion), this.props.onAddTag(t.suggestion.id)),
+            a ||
+              (o.push(t.suggestion.id), this.props.onAddTag(t.suggestion.id)),
               this.setState({ value: "", selected: o });
           }),
           (e.prototype.onRemoveSelectedTag = function(e) {
             for (var t = this.state.selected, a = 0; a < t.length; a++)
-              if (t[a].id == e) {
-                this.props.onRemoveTag(t[a].id), t.splice(a, 1);
+              if (t[a] == e) {
+                this.props.onRemoveTag(t[a]), t.splice(a, 1);
                 break;
               }
             this.setState({ selected: t });
@@ -1218,18 +1183,19 @@
                 },
                 n = [],
                 t = function(t) {
+                  var e = ce.m_TagNameMap.get(t);
                   n.push(
-                    P.a.createElement(
+                    D.a.createElement(
                       "div",
                       {
-                        key: t.id,
+                        key: t,
                         className: j.a.SelectedTag,
                         onClick: function(e) {
-                          return a.onRemoveSelectedTag(t.id);
+                          return a.onRemoveSelectedTag(t);
                         }
                       },
-                      P.a.createElement("div", null, t.name),
-                      P.a.createElement("div", { className: j.a.Close }, "X")
+                      D.a.createElement("div", null, e),
+                      D.a.createElement("div", { className: j.a.Close }, "X")
                     )
                   );
                 },
@@ -1240,15 +1206,15 @@
             ) {
               t(o[r]);
             }
-            return P.a.createElement(
+            return D.a.createElement(
               "div",
               { className: j.a.OptionTagList },
-              P.a.createElement(
+              D.a.createElement(
                 "div",
                 { className: j.a.Label },
                 this.props.title
               ),
-              P.a.createElement(V.a, {
+              D.a.createElement(V.a, {
                 suggestions: this.state.suggestions,
                 onSuggestionsFetchRequested: this.onFetchRequested,
                 onSuggestionsClearRequested: this.onClearRequested,
@@ -1258,7 +1224,7 @@
                   return e.name;
                 },
                 renderSuggestion: function(e) {
-                  return P.a.createElement("div", null, e.name);
+                  return D.a.createElement("div", null, e.name);
                 },
                 inputProps: e,
                 theme: {
@@ -1280,17 +1246,16 @@
           Object(_.c)([E], e.prototype, "onRemoveSelectedTag", null),
           e
         );
-      })(P.a.Component),
-      Q = Object(i.a)(function(e) {
-        var t = le.getTags(),
-          a = [],
-          n = [];
+      })(D.a.Component),
+      K = Object(i.a)(function(e) {
+        var t = ce.getTags(),
+          a = [];
         if (t)
-          for (var r = 0, o = t; r < o.length; r++) {
-            var i = o[r];
-            a.push({ id: parseInt(i.tagid), name: i.name });
+          for (var n = 0, r = t; n < r.length; n++) {
+            var o = r[n];
+            a.push({ id: parseInt(o.tagid), name: o.name });
           }
-        var s = [
+        var i = [
           w("#FilterAge_120"),
           w("#FilterAge_60"),
           w("#FilterAge_36"),
@@ -1298,64 +1263,73 @@
           w("#FilterAge_12"),
           w("#FilterAge_6")
         ];
-        return P.a.createElement(
+        return D.a.createElement(
           "div",
           { className: j.a.RecommendationOptions },
-          P.a.createElement(
+          D.a.createElement(
             "div",
-            { className: D(j.a.Row, j.a.FirstRow) },
-            P.a.createElement(X, {
+            { className: M(j.a.Row, j.a.FirstRow) },
+            D.a.createElement(q, {
               minLabel: w("#Popularity_Popular"),
               titleLabel: w("#Popularity_Title"),
               maxLabel: w("#Popularity_Niche"),
               minValue: 0,
               maxValue: 1,
-              value: le.m_fQueuedPopularityValue,
-              onChange: le.onPopularityChanged
+              value: ce.m_fQueuedPopularityValue,
+              onChange: ce.onPopularityChanged
             }),
-            P.a.createElement(X, {
+            D.a.createElement(q, {
               minLabel: w("#Recency_Older"),
               titleLabel: w("#Recency_Title"),
               maxLabel: w("#Recency_Newer"),
               minValue: 0,
               maxValue: 1,
-              value: le.m_fQueuedRecencyValue,
-              onChange: le.onRecencyChanged,
-              sliderLabels: s
+              value: ce.m_fQueuedRecencyValue,
+              onChange: ce.onRecencyChanged,
+              sliderLabels: i
             })
           ),
-          P.a.createElement(
+          D.a.createElement(
             "div",
-            { className: D(j.a.Row, j.a.SecondRow) },
-            P.a.createElement(K, {
+            { className: M(j.a.Row, j.a.SecondRow) },
+            D.a.createElement(z, {
               title: w("#TagFilterMultiple_Title"),
               tagoptions: a,
-              selectedtags: n,
-              onAddTag: le.onTagFilterAdd,
-              onRemoveTag: le.onTagFilterRemove
+              selectedtags: ce.m_rgFilterTags,
+              onAddTag: ce.onTagFilterAdd,
+              onRemoveTag: ce.onTagFilterRemove
             }),
-            P.a.createElement(K, {
+            D.a.createElement(z, {
               title: w("#TagExcludeMultiple_Title"),
               tagoptions: a,
-              selectedtags: n,
-              onAddTag: le.onTagExcludeAdd,
-              onRemoveTag: le.onTagExcludeRemove
+              selectedtags: ce.m_rgExcludeTags,
+              onAddTag: ce.onTagExcludeAdd,
+              onRemoveTag: ce.onTagExcludeRemove
             }),
-            P.a.createElement(z, {
+            D.a.createElement(X, {
               className: j.a.WishlistCheckbox,
               titleLabel: w("#ExcludeWishlisted"),
-              checked: le.m_bExcludeWishlisted,
-              onChange: le.onExcludeWishlistedToggled
-            })
+              checked: ce.m_bExcludeWishlisted,
+              onChange: ce.onExcludeWishlistedToggled
+            }),
+            D.a.createElement(
+              "button",
+              {
+                className: j.a.SaveUserSettingsButton,
+                onClick: ce.onSaveUserSettings,
+                title: w("#SaveUserSettingsTooltip")
+              },
+              w("#SaveUserSettings")
+            )
           )
         );
       }),
-      J = (function(a) {
+      Q = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (
-            (t.m_videoRef = P.a.createRef()),
-            (t.state = { hovered: !1, wishlisted: le.getAppInfo()[e.appID].w }),
+            (t.m_videoRef = D.a.createRef()),
+            (t.state = { hovered: !1, wishlisted: ce.getAppInfo()[e.appID].w }),
             t
           );
         }
@@ -1386,12 +1360,12 @@
                 this.m_videoRef.current.pause());
           }),
           (e.prototype.onMuteToggle = function(e) {
-            le.shouldMute()
-              ? (le.onUnMuteClicked(),
+            ce.shouldMute()
+              ? (ce.onUnMuteClicked(),
                 this.m_videoRef &&
                   this.m_videoRef.current &&
                   (this.m_videoRef.current.muted = !1))
-              : (le.onMuteClicked(),
+              : (ce.onMuteClicked(),
                 this.m_videoRef &&
                   this.m_videoRef.current &&
                   (this.m_videoRef.current.muted = !0)),
@@ -1399,16 +1373,16 @@
               e.stopPropagation();
           }),
           (e.prototype.onAddToWishlist = function(e) {
-            le.onAddToWishlist(this.props.appID, this.props.rank),
+            ce.onAddToWishlist(this.props.appID, this.props.rank),
               this.setState({ wishlisted: !0 }),
               e.preventDefault(),
               e.stopPropagation();
           }),
           (e.prototype.onGoToWishlist = function(e) {
-            le.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
+            ce.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
           }),
           (e.prototype.onAddToCart = function(e) {
-            le.onAddToCart(this.props.appID, this.props.rank),
+            ce.onAddToCart(this.props.appID, this.props.rank),
               e.preventDefault(),
               e.stopPropagation();
           }),
@@ -1423,8 +1397,8 @@
                 "https://steamcdn-a.akamaihd.net/steam/apps/" +
                 a +
                 "/header.jpg",
-              s = le.getAppInfo()[a];
-            if (!s) return P.a.createElement("div", null);
+              s = ce.getAppInfo()[a];
+            if (!s) return D.a.createElement("div", null);
             var c = s.n,
               l = 0 < s.r ? w("#Recommendation_ReleasedOn", B(s.r)) : "",
               u = [];
@@ -1433,10 +1407,10 @@
                 var h = d[_];
                 if (
                   (u.push(
-                    P.a.createElement(
+                    D.a.createElement(
                       "div",
                       { key: a + "_" + h, className: j.a.Tag },
-                      le.getTagName(h)
+                      ce.getTagName(h)
                     )
                   ),
                   5 == ++p)
@@ -1451,43 +1425,43 @@
             var v = b && this.state.hovered,
               f = Math.min(Number(n) / 10, 1e3),
               S = (Math.max(1, n), !1),
-              y = !1,
-              T = !0,
-              k = "",
+              T = !1,
+              y = !0,
               L = "",
+              k = "",
               R = "",
               C = "",
               O = "";
             if (v) {
-              var I = le.getDetails(this.props.appID);
-              I &&
+              var A = ce.getDetails(this.props.appID);
+              A &&
                 ((S = !0),
-                (y = 0 < I.discount_pct),
-                (T = "0" == I.discount_price),
+                (T = 0 < A.discount_pct),
+                (y = "0" == A.discount_price),
                 (O =
                   "probably" ==
                   document
                     .createElement("video")
                     .canPlayType('video/webm; codecs="vp8, vorbis"')
-                    ? I.video_webm
-                    : I.video_mp4),
-                (k = "-" + I.discount_pct + "%"),
-                (L = I.base_price),
-                (R = T ? w("#FreeToPlay") : I.discount_price),
-                (C = I.description));
+                    ? A.video_webm
+                    : A.video_mp4),
+                (L = "-" + A.discount_pct + "%"),
+                (k = A.base_price),
+                (R = y ? w("#FreeToPlay") : A.discount_price),
+                (C = A.description));
             }
-            var N = O && 0 < O.length;
-            return P.a.createElement(
-              M,
-              { appID: a, snr: A.LINK_PARAM },
-              P.a.createElement(
+            var I = O && 0 < O.length;
+            return D.a.createElement(
+              P,
+              { appID: a, snr: N.LINK_PARAM },
+              D.a.createElement(
                 "a",
                 {
-                  href: A.BASE_URL + "app/" + a + "?snr=" + A.LINK_PARAM,
+                  href: N.BASE_URL + "app/" + a + "?snr=" + N.LINK_PARAM,
                   onClick: function() {
-                    return le.onAppClicked(a, r);
+                    return ce.onAppClicked(a, r);
                   },
-                  className: D(
+                  className: M(
                     j.a.RecommendationEntry,
                     "ds_flagged",
                     "ds_wishlist",
@@ -1498,44 +1472,44 @@
                   onMouseEnter: this.OnHover,
                   onMouseLeave: this.OnUnHover
                 },
-                P.a.createElement(
+                D.a.createElement(
                   "div",
                   { className: j.a.TopEntrySection },
-                  P.a.createElement(
+                  D.a.createElement(
                     "div",
                     { className: j.a.LeftSection },
-                    P.a.createElement("img", {
-                      className: D(j.a.Logo, (!N || !v) && j.a.Revealed),
+                    D.a.createElement("img", {
+                      className: M(j.a.Logo, (!I || !v) && j.a.Revealed),
                       src: i
                     }),
-                    P.a.createElement("video", {
+                    D.a.createElement("video", {
                       ref: this.m_videoRef,
-                      className: D(
+                      className: M(
                         "highlight_player_item",
                         "highlight_movie",
                         j.a.Video,
-                        N && v && j.a.Revealed
+                        I && v && j.a.Revealed
                       ),
                       playsInline: !0,
                       autoPlay: !0,
-                      muted: le.shouldMute(),
+                      muted: ce.shouldMute(),
                       src: O
                     }),
-                    P.a.createElement(
+                    D.a.createElement(
                       "div",
                       {
-                        className: D(j.a.UnMute, N && j.a.Revealed),
+                        className: M(j.a.UnMute, I && j.a.Revealed),
                         onClick: function(e) {
                           return t.onMuteToggle(e);
                         }
                       },
-                      P.a.createElement(U, { muted: le.shouldMute() })
+                      D.a.createElement(U, { muted: ce.shouldMute() })
                     ),
                     this.state.wishlisted &&
-                      P.a.createElement(
+                      D.a.createElement(
                         "div",
                         {
-                          className: D(
+                          className: M(
                             "ds_flag",
                             "ds_wishlist_flag",
                             j.a.WishlistFlag
@@ -1544,41 +1518,41 @@
                         w("#Recommendation_OnWishlist") + "  "
                       )
                   ),
-                  P.a.createElement(
+                  D.a.createElement(
                     "div",
                     { className: j.a.RightSection },
-                    P.a.createElement("div", { className: j.a.Name }, c),
-                    P.a.createElement(
+                    D.a.createElement("div", { className: j.a.Name }, c),
+                    D.a.createElement(
                       "div",
                       { className: j.a.CenterSection },
-                      P.a.createElement(
+                      D.a.createElement(
                         "div",
                         {
-                          className: D(
+                          className: M(
                             j.a.CenterOption,
                             j.a.CenterDefault,
                             v && j.a.Hidden
                           )
                         },
-                        P.a.createElement(
+                        D.a.createElement(
                           "div",
                           { className: j.a.Released },
                           l
                         ),
-                        P.a.createElement(
+                        D.a.createElement(
                           "div",
                           { className: j.a.BarContainer },
-                          P.a.createElement("div", {
+                          D.a.createElement("div", {
                             className: j.a.Bar,
                             style: { width: f + "%" }
                           })
                         ),
-                        P.a.createElement("div", { className: j.a.Tags }, u)
+                        D.a.createElement("div", { className: j.a.Tags }, u)
                       ),
-                      P.a.createElement(
+                      D.a.createElement(
                         "div",
                         {
-                          className: D(
+                          className: M(
                             j.a.CenterOption,
                             j.a.CenterHovered,
                             !v && j.a.Hidden
@@ -1588,57 +1562,57 @@
                       )
                     ),
                     S &&
-                      P.a.createElement(
+                      D.a.createElement(
                         "div",
                         { className: j.a.BottomEntrySection },
-                        P.a.createElement(
+                        D.a.createElement(
                           "div",
                           {
-                            className: D(
+                            className: M(
                               "game_purchase_action",
                               j.a.PurchaseSection
                             )
                           },
-                          P.a.createElement(
+                          D.a.createElement(
                             "div",
                             {
-                              className: D(
+                              className: M(
                                 "game_purchase_action_bg",
                                 j.a.PurchaseBG
                               )
                             },
-                            y &&
-                              P.a.createElement(
+                            T &&
+                              D.a.createElement(
                                 "div",
                                 {
                                   className:
                                     "discount_block game_purchase_discount"
                                 },
-                                P.a.createElement(
+                                D.a.createElement(
                                   "div",
                                   { className: "discount_pct" },
-                                  k
+                                  L
                                 ),
-                                P.a.createElement(
+                                D.a.createElement(
                                   "div",
                                   { className: "discount_prices" },
-                                  P.a.createElement(
+                                  D.a.createElement(
                                     "div",
                                     { className: "discount_original_price" },
-                                    L
+                                    k
                                   ),
-                                  P.a.createElement(
+                                  D.a.createElement(
                                     "div",
                                     { className: "discount_final_price" },
                                     R
                                   )
                                 )
                               ),
-                            !y &&
-                              P.a.createElement(
+                            !T &&
+                              D.a.createElement(
                                 "div",
                                 {
-                                  className: D(
+                                  className: M(
                                     "game_purchase_price",
                                     "price",
                                     j.a.Price
@@ -1646,8 +1620,8 @@
                                 },
                                 R
                               ),
-                            !T &&
-                              P.a.createElement(
+                            !y &&
+                              D.a.createElement(
                                 "div",
                                 {
                                   className: "btn_addtocart",
@@ -1655,13 +1629,13 @@
                                     return t.onAddToCart(e);
                                   }
                                 },
-                                P.a.createElement(
+                                D.a.createElement(
                                   "span",
                                   {
                                     className:
                                       "btnv6_green_white_innerfade btn_medium"
                                   },
-                                  P.a.createElement(
+                                  D.a.createElement(
                                     "span",
                                     null,
                                     w("#btn_add_to_cart")
@@ -1671,8 +1645,8 @@
                           )
                         ),
                         !this.state.wishlisted &&
-                          !T &&
-                          P.a.createElement(
+                          !y &&
+                          D.a.createElement(
                             "div",
                             {
                               id: "add_to_wishlist_area",
@@ -1681,10 +1655,10 @@
                                 return t.onAddToWishlist(e);
                               }
                             },
-                            P.a.createElement(
+                            D.a.createElement(
                               "div",
                               { className: "btnv6_blue_hoverfade btn_medium" },
-                              P.a.createElement(
+                              D.a.createElement(
                                 "span",
                                 null,
                                 w("#wishlist_add_to_wishlist")
@@ -1692,11 +1666,11 @@
                             )
                           ),
                         this.state.wishlisted &&
-                          !T &&
-                          P.a.createElement(
+                          !y &&
+                          D.a.createElement(
                             "div",
                             {
-                              className: D(
+                              className: M(
                                 "btnv6_blue_hoverfade btn_medium",
                                 "queue_btn_active",
                                 j.a.Wishlisted,
@@ -1707,11 +1681,11 @@
                                 return t.onGoToWishlist(e);
                               }
                             },
-                            P.a.createElement(
+                            D.a.createElement(
                               "span",
                               null,
-                              P.a.createElement("img", {
-                                src: A.IMG_URL_BASE + "/v6/ico/ico_selected.png"
+                              D.a.createElement("img", {
+                                src: N.IMG_URL_BASE + "/v6/ico/ico_selected.png"
                               }),
                               "  " + w("#OnWishlist")
                             )
@@ -1730,8 +1704,8 @@
           Object(_.c)([E], e.prototype, "onAddToCart", null),
           (e = Object(_.c)([i.a], e))
         );
-      })(P.a.Component),
-      Z = (function(a) {
+      })(D.a.Component),
+      J = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (t.state = { sortedRecommendedApps: [] }), t;
@@ -1739,25 +1713,25 @@
         return (
           Object(_.d)(e, a),
           (e.prototype.render = function() {
-            var e = le.m_fRecencyValue * (A.NUM_RECENCY_STEPS - 1 - 0.001),
+            var e = ce.m_fRecencyValue * (N.NUM_RECENCY_STEPS - 1 - 0.001),
               t = Math.floor(e),
               a = t + 1,
               n = 1 - (e - t),
               r = 1 - n,
-              o = le.m_fPopularityValue * (A.NUM_POPULARITY_STEPS - 1 - 0.001),
+              o = ce.m_fPopularityValue * (N.NUM_POPULARITY_STEPS - 1 - 0.001),
               i = Math.floor(o),
               s = i + 1,
               c = 1 - (o - i),
               l = 1 - c,
               u = [];
-            u.push({ index: i * A.NUM_RECENCY_STEPS + t, weight: c * n }),
-              u.push({ index: s * A.NUM_RECENCY_STEPS + t, weight: l * n }),
-              u.push({ index: i * A.NUM_RECENCY_STEPS + a, weight: c * r }),
-              u.push({ index: s * A.NUM_RECENCY_STEPS + a, weight: l * r });
+            u.push({ index: i * N.NUM_RECENCY_STEPS + t, weight: c * n }),
+              u.push({ index: s * N.NUM_RECENCY_STEPS + t, weight: l * n }),
+              u.push({ index: i * N.NUM_RECENCY_STEPS + a, weight: c * r }),
+              u.push({ index: s * N.NUM_RECENCY_STEPS + a, weight: l * r });
             var p = new Map(),
               _ = 0,
-              d = le.getRecommendations(),
-              h = le.getAppInfo(),
+              d = ce.getRecommendations(),
+              h = ce.getAppInfo(),
               m = [];
             if (d) {
               for (var E = 0, g = u; E < g.length; E++) {
@@ -1772,82 +1746,82 @@
                         h[S].o ||
                         h[S].i ||
                         h[S].ti ||
-                        (h[S].w && le.m_bExcludeWishlisted)
+                        (h[S].w && ce.m_bExcludeWishlisted)
                       )
                     ) {
-                      var y =
+                      var T =
                         (p.get(S) || 0) +
                         v.scores[f] * b.weight * v.score_scale;
-                      p.set(S, y);
+                      p.set(S, T);
                     }
                   }
               }
               p.forEach(function(e, t) {
                 return p.set(t, e / _);
               });
-              var T = [];
+              var y = [];
               p.forEach(function(e, t) {
-                return T.push({ appid: t, score: e });
+                return y.push({ appid: t, score: e });
               });
               for (
-                var k = (T = (T = (T = T.filter(function(e) {
-                    return h[e.appid].t && le.doTagsPassFilter(h[e.appid].t);
+                var L = (y = (y = (y = y.filter(function(e) {
+                    return h[e.appid].t && ce.doTagsPassFilter(h[e.appid].t);
                   })).filter(function(e) {
                     return (
-                      h[e.appid].t && !le.doTagsFailExclusion(h[e.appid].t)
+                      h[e.appid].t && !ce.doTagsFailExclusion(h[e.appid].t)
                     );
                   })).filter(function(e) {
                     return 0 < e.score;
                   })).sort(function(e, t) {
                     return t.score - e.score;
                   }),
-                  L = 0,
+                  k = 0,
                   R = 0,
-                  C = (k = k.slice(0, 30));
+                  C = (L = L.slice(0, 30));
                 R < C.length;
                 R++
               ) {
-                (C[R].rank = L), L++;
+                (C[R].rank = k), k++;
               }
               for (
                 var O = 0,
-                  I = k.sort(function(e, t) {
+                  A = L.sort(function(e, t) {
                     return t.appid - e.appid;
                   });
-                O < I.length;
+                O < A.length;
                 O++
               ) {
-                var N = I[O];
+                var I = A[O];
                 m.push(
-                  P.a.createElement(J, {
-                    key: N.appid,
-                    appID: N.appid,
-                    score: N.score,
-                    rank: N.rank,
+                  D.a.createElement(Q, {
+                    key: I.appid,
+                    appID: I.appid,
+                    score: I.score,
+                    rank: I.rank,
                     width: this.props.width
                   })
                 );
               }
             } else
               m.push(
-                P.a.createElement("div", {
+                D.a.createElement("div", {
                   key: "recommendations_loading",
                   className: j.a.RecommendationsLoading
                 })
               );
-            return P.a.createElement(
+            return D.a.createElement(
               "div",
               { className: j.a.RecommendationList },
-              P.a.createElement(
+              D.a.createElement(
                 "div",
                 { className: j.a.Header },
                 w("#Recommendations_Header")
               ),
-              P.a.createElement(Q, null),
-              P.a.createElement(
+              D.a.createElement(K, null),
+              D.a.createElement(
                 "div",
                 {
-                  className: D(j.a.List, le.areResultsExpired() && j.a.Updating)
+                  className: M(j.a.List, ce.areResultsExpired() && j.a.Updating)
                 },
                 m
               )
@@ -1855,8 +1829,8 @@
           }),
           (e = Object(_.c)([i.a], e))
         );
-      })(P.a.Component),
-      $ = (function(a) {
+      })(D.a.Component),
+      Z = (function(a) {
         function e(e) {
           var t = a.call(this, e) || this;
           return (t.state = { width: window.innerWidth }), t;
@@ -1870,67 +1844,67 @@
             window.addEventListener("resize", this.updateDimensions);
           }),
           (e.prototype.render = function() {
-            return 0 == A.ACCOUNT_ID
-              ? P.a.createElement(
+            return 0 == N.ACCOUNT_ID
+              ? D.a.createElement(
                   "div",
                   { className: j.a.App },
-                  P.a.createElement(
+                  D.a.createElement(
                     "div",
                     { className: j.a.Login },
-                    P.a.createElement(
+                    D.a.createElement(
                       "div",
                       { className: j.a.Text },
                       w("#LoginText")
                     ),
-                    P.a.createElement(
+                    D.a.createElement(
                       "a",
                       {
-                        className: D(
+                        className: M(
                           "btn_green_white_innerfade",
                           " btn_medium"
                         ),
-                        href: A.LOGIN_REDIRECT
+                        href: N.LOGIN_REDIRECT
                       },
-                      P.a.createElement("span", null, w("#LoginButton"))
+                      D.a.createElement("span", null, w("#LoginButton"))
                     )
                   )
                 )
-              : P.a.createElement(
+              : D.a.createElement(
                   "div",
                   {
                     className: j.a.App,
-                    style: { height: 3840 + 26 * le.getTagHeight() }
+                    style: { height: 3840 + 26 * ce.getTagHeight() }
                   },
-                  P.a.createElement(
+                  D.a.createElement(
                     "div",
                     { className: j.a.Container },
-                    P.a.createElement(
+                    D.a.createElement(
                       "div",
                       { className: j.a.TopSection },
-                      P.a.createElement(
+                      D.a.createElement(
                         "div",
                         { className: j.a.Header },
                         w("#HeaderTitle")
                       ),
-                      P.a.createElement(
+                      D.a.createElement(
                         "div",
                         { className: j.a.Body },
                         w("#HeaderBody1")
                       ),
-                      P.a.createElement("div", { className: j.a.Spacer }),
-                      P.a.createElement(
+                      D.a.createElement("div", { className: j.a.Spacer }),
+                      D.a.createElement(
                         "div",
                         { className: j.a.Body },
                         w("#HeaderBody2")
                       ),
-                      P.a.createElement("div", { className: j.a.Spacer }),
-                      P.a.createElement(
+                      D.a.createElement("div", { className: j.a.Spacer }),
+                      D.a.createElement(
                         "div",
                         { className: j.a.Body },
                         (function(e) {
                           for (var t = [], a = 1; a < arguments.length; a++)
                             t[a - 1] = arguments[a];
-                          var n = I.LocalizeString(e);
+                          var n = A.LocalizeString(e);
                           if (!n) return e;
                           for (
                             var r, o = [], i = /(.*?)%(\d+)\$s/g, s = 0;
@@ -1950,7 +1924,7 @@
                           );
                         })(
                           "#HeaderBody3",
-                          P.a.createElement(
+                          D.a.createElement(
                             "a",
                             {
                               href:
@@ -1961,12 +1935,12 @@
                         )
                       )
                     ),
-                    P.a.createElement(
+                    D.a.createElement(
                       "div",
                       { className: j.a.BottomSection },
-                      P.a.createElement(q, { accountID: A.ACCOUNT_ID }),
-                      P.a.createElement("div", { className: j.a.VerticalBar }),
-                      P.a.createElement(Z, { width: this.state.width })
+                      D.a.createElement(Y, { accountID: N.ACCOUNT_ID }),
+                      D.a.createElement("div", { className: j.a.VerticalBar }),
+                      D.a.createElement(J, { width: this.state.width })
                     )
                   )
                 );
@@ -1974,44 +1948,44 @@
           Object(_.c)([E], e.prototype, "updateDimensions", null),
           (e = Object(_.c)([i.a], e))
         );
-      })(P.a.Component),
-      ee = a("2vnA"),
-      te = a("i8i4");
-    ((x = N || (N = {}))[(x.Unrequested = 0)] = "Unrequested"),
-      (x[(x.Pending = 1)] = "Pending"),
-      (x[(x.Valid = 2)] = "Valid"),
-      (x[(x.Failed = 3)] = "Failed"),
-      (x[(x.Rerequest = 4)] = "Rerequest");
-    var ae,
-      ne,
-      re = (function() {
+      })(D.a.Component),
+      $ = a("2vnA"),
+      ee = a("i8i4");
+    ((G = I || (I = {}))[(G.Unrequested = 0)] = "Unrequested"),
+      (G[(G.Pending = 1)] = "Pending"),
+      (G[(G.Valid = 2)] = "Valid"),
+      (G[(G.Failed = 3)] = "Failed"),
+      (G[(G.Rerequest = 4)] = "Rerequest");
+    var te,
+      ae,
+      ne = (function() {
         function e() {
-          (this.eState = N.Unrequested), (this.nExpirationTime = 0);
+          (this.eState = I.Unrequested), (this.nExpirationTime = 0);
         }
         return (
           (e.prototype.getData = function(t, a, n) {
             var r = this,
               o = Date.now() / 1e3,
-              e = this.eState == N.Pending || this.eState == N.Rerequest;
+              e = this.eState == I.Pending || this.eState == I.Rerequest;
             return (
               o >= this.nExpirationTime &&
                 !e &&
-                ((this.eState = N.Pending),
+                ((this.eState = I.Pending),
                 a().then(function(e) {
-                  if (r.eState == N.Rerequest)
+                  if (r.eState == I.Rerequest)
                     return r.expireData(), void r.getData(t, a, n);
                   r.eState = e
                     ? ((r.data = n ? n(e) : e),
                       (r.nExpirationTime = o + t),
-                      N.Valid)
-                    : N.Failed;
+                      I.Valid)
+                    : I.Failed;
                 })),
               this.data
             );
           }),
           (e.prototype.clearData = function() {
             var e = Date.now() / 1e3;
-            (this.eState = N.Unrequested),
+            (this.eState = I.Unrequested),
               (this.data = null),
               (this.nExpirationTime = e);
           }),
@@ -2028,25 +2002,25 @@
             this.nExpirationTime = t + e;
           }),
           (e.prototype.rerequestDataIfPending = function() {
-            this.eState == N.Pending && (this.eState = N.Rerequest);
+            this.eState == I.Pending && (this.eState = I.Rerequest);
           }),
-          Object(_.c)([ee.v], e.prototype, "data", void 0),
-          Object(_.c)([ee.v], e.prototype, "nExpirationTime", void 0),
+          Object(_.c)([$.v], e.prototype, "data", void 0),
+          Object(_.c)([$.v], e.prototype, "nExpirationTime", void 0),
           e
         );
       })();
-    ((ne = ae || (ae = {}))[(ne.ClickThrough = 1)] = "ClickThrough"),
-      (ne[(ne.AddToWishlist = 2)] = "AddToWishlist"),
-      (ne[(ne.AddToCart = 3)] = "AddToCart");
-    var oe = (function() {
+    ((ae = te || (te = {}))[(ae.ClickThrough = 1)] = "ClickThrough"),
+      (ae[(ae.AddToWishlist = 2)] = "AddToWishlist"),
+      (ae[(ae.AddToCart = 3)] = "AddToCart");
+    var re = (function() {
       function e() {
         var e = this;
         (this.m_rgFilterTags = []),
           (this.m_rgExcludeTags = []),
           (this.m_mapAppDetailsCache = new Map()),
-          (this.m_ResultDataCache = new re()),
-          (this.m_InputAppsCache = new re()),
-          (this.m_TagsCache = new re()),
+          (this.m_ResultDataCache = new ne()),
+          (this.m_InputAppsCache = new ne()),
+          (this.m_TagsCache = new ne()),
           (this.m_TagNameMap = new Map()),
           (this.m_fPopularityValue = window.history.state
             ? window.history.state.popularity
@@ -2083,23 +2057,24 @@
       }
       return (
         (e.prototype.Init = function() {
-          te.render(
-            l.createElement($, { app: this }),
-            document.getElementById("recommender_root")
-          ),
-            A.RESET_OPTIONS &&
-              ((this.m_fPopularityValue = A.DEFAULT_POPULARITY_SLIDER),
-              (this.m_fRecencyValue = A.DEFAULT_RECENCY_SLIDER),
-              (this.m_fQueuedPopularityValue = this.m_fPopularityValue),
-              (this.m_fQueuedRecencyValue = this.m_fRecencyValue),
-              (this.m_bExcludeWishlisted = !1),
-              (this.m_bStateUpdated = !0));
+          (this.m_fPopularityValue = N.DEFAULT_POPULARITY_SLIDER),
+            (this.m_fRecencyValue = N.DEFAULT_RECENCY_SLIDER),
+            (this.m_rgExcludeTags = N.DEFAULT_EXCLUDED_TAGS),
+            (this.m_rgFilterTags = N.DEFAULT_INCLUDED_TAGS),
+            (this.m_fQueuedPopularityValue = this.m_fPopularityValue),
+            (this.m_fQueuedRecencyValue = this.m_fRecencyValue),
+            (this.m_bExcludeWishlisted = !1),
+            (this.m_bStateUpdated = !0),
+            ee.render(
+              l.createElement(Z, { app: this }),
+              document.getElementById("recommender_root")
+            );
         }),
         (e.prototype.getDetails = function(t) {
           var e = this;
           return (
             this.m_mapAppDetailsCache.has(t) ||
-              this.m_mapAppDetailsCache.set(t, new re()),
+              this.m_mapAppDetailsCache.set(t, new ne()),
             this.m_mapAppDetailsCache.get(t).getData(
               60,
               function() {
@@ -2110,13 +2085,13 @@
                         return [
                           4,
                           d.a.get(
-                            A.BASE_URL +
+                            N.BASE_URL +
                               "recommender/" +
-                              A.STEAM_ID +
+                              N.STEAM_ID +
                               "/details?appid=" +
                               t +
                               "&sessionid=" +
-                              A.SESSION_ID
+                              N.SESSION_ID
                           )
                         ];
                       case 1:
@@ -2143,7 +2118,7 @@
             var p = [];
             return (
               Object.keys(u).map(function(e) {
-                u[e].i && p.push(u[e].a);
+                (u[e].i || u[e].ip) && p.push(u[e].a);
               }),
               0 < p.length && (l = "&ignored=" + p.join()),
               this.m_ResultDataCache.getData(
@@ -2156,13 +2131,13 @@
                           return [
                             4,
                             d.a.get(
-                              A.BASE_URL +
+                              N.BASE_URL +
                                 "recommender/" +
-                                A.STEAM_ID +
+                                N.STEAM_ID +
                                 "/results?sessionid=" +
-                                A.SESSION_ID +
+                                N.SESSION_ID +
                                 "&steamid=" +
-                                A.STEAM_ID +
+                                N.STEAM_ID +
                                 "&include_played=" +
                                 o +
                                 "&algorithm=" +
@@ -2191,11 +2166,11 @@
           return this.m_ResultDataCache.isExpired();
         }),
         (e.prototype.getRecommendations = function() {
-          var e = le.getResults(
-            A.INCLUDE_PLAYED,
-            A.ALGORITHM,
-            A.REINFERENCE,
-            A.MODEL_VERSION
+          var e = ce.getResults(
+            N.INCLUDE_PLAYED,
+            N.ALGORITHM,
+            N.REINFERENCE,
+            N.MODEL_VERSION
           );
           return e ? e.recommendations : void 0;
         }),
@@ -2211,13 +2186,13 @@
                       return [
                         4,
                         d.a.get(
-                          A.BASE_URL +
+                          N.BASE_URL +
                             "recommender/" +
-                            A.STEAM_ID +
+                            N.STEAM_ID +
                             "/inputs?sessionid=" +
-                            A.SESSION_ID +
+                            N.SESSION_ID +
                             "&steamid=" +
-                            A.STEAM_ID
+                            N.STEAM_ID
                         )
                       ];
                     case 1:
@@ -2232,11 +2207,11 @@
           );
         }),
         (e.prototype.getAppInfo = function() {
-          var e = le.getResults(
-            A.INCLUDE_PLAYED,
-            A.ALGORITHM,
-            A.REINFERENCE,
-            A.MODEL_VERSION
+          var e = ce.getResults(
+            N.INCLUDE_PLAYED,
+            N.ALGORITHM,
+            N.REINFERENCE,
+            N.MODEL_VERSION
           );
           return e ? e.app_info : void 0;
         }),
@@ -2252,11 +2227,11 @@
                       return [
                         4,
                         d.a.get(
-                          A.BASE_URL +
+                          N.BASE_URL +
                             "recommender/" +
-                            A.STEAM_ID +
+                            N.STEAM_ID +
                             "/tags?sessionid=" +
-                            A.SESSION_ID
+                            N.SESSION_ID
                         )
                       ];
                     case 1:
@@ -2291,25 +2266,15 @@
           this.m_fQueuedRecencyValue = Number(e.target.value);
         }),
         (e.prototype.onTagFilterAdd = function(e) {
-          this.m_rgFilterTags.push(e), (this.m_bStateUpdated = !0);
+          this.m_bStateUpdated = !0;
         }),
         (e.prototype.onTagFilterRemove = function(e) {
-          for (var t = 0; t < this.m_rgFilterTags.length; t++)
-            if (this.m_rgFilterTags[t] == e) {
-              this.m_rgFilterTags.splice(t, 1);
-              break;
-            }
           this.m_bStateUpdated = !0;
         }),
         (e.prototype.onTagExcludeAdd = function(e) {
-          this.m_rgExcludeTags.push(e), (this.m_bStateUpdated = !0);
+          this.m_bStateUpdated = !0;
         }),
         (e.prototype.onTagExcludeRemove = function(e) {
-          for (var t = 0; t < this.m_rgExcludeTags.length; t++)
-            if (this.m_rgExcludeTags[t] == e) {
-              this.m_rgExcludeTags.splice(t, 1);
-              break;
-            }
           this.m_bStateUpdated = !0;
         }),
         (e.prototype.doTagsPassFilter = function(e) {
@@ -2330,46 +2295,89 @@
           (this.m_bExcludeWishlisted = !this.m_bExcludeWishlisted),
             (this.m_bStateUpdated = !0);
         }),
-        (e.prototype.onToggleIgnore = function(s) {
+        (e.prototype.onSaveUserSettings = function(e) {
           return Object(_.b)(this, void 0, void 0, function() {
             var t, a, n, r, o, i;
             return Object(_.e)(this, function(e) {
               switch (e.label) {
                 case 0:
                   for (
-                    t = this.getInputApps(), a = !1, n = 0, r = t;
+                    t = [], a = this.getInputApps(), n = 0, r = a;
                     n < r.length;
                     n++
                   )
-                    if ((o = r[n]).a == s) {
-                      (o.i = !o.i), (a = !o.i);
-                      break;
-                    }
-                  return (
-                    A.IMMEDIATE_IGNORE_UPDATE &&
-                      this.m_ResultDataCache.expireData(),
-                    (this.m_bIgnoredEdited = !0),
-                    A.PERSISTENT_IGNORE
-                      ? ((i = {
-                          sessionid: A.SESSION_ID,
-                          appid: s,
-                          remove: a ? 1 : 0,
-                          ignore_reason: 3
-                        }),
-                        [
-                          4,
-                          d.a.post(
-                            A.BASE_URL + "recommended/ignorerecommendation/",
-                            i
-                          )
-                        ])
-                      : [3, 2]
-                  );
+                    ((o = r[n]).i || o.ip) && t.push(o.a);
+                  return this.m_fRecencyValue != N.DEFAULT_RECENCY_SLIDER ||
+                    this.m_fPopularityValue != N.DEFAULT_POPULARITY_SLIDER ||
+                    this.m_rgFilterTags
+                      .slice()
+                      .sort()
+                      .join(",") !== N.DEFAULT_INCLUDED_TAGS.sort().join(",") ||
+                    this.m_rgExcludeTags
+                      .slice()
+                      .sort()
+                      .join(",") !== N.DEFAULT_EXCLUDED_TAGS.sort().join(",") ||
+                    t
+                      .slice()
+                      .sort()
+                      .join(",") !==
+                      N.DEFAULT_IGNORED_PLAYED_APPS.sort().join(",")
+                    ? [3, 1]
+                    : (console.log("Not saving settings, nothing changed."),
+                      [3, 3]);
                 case 1:
-                  e.sent(), (e.label = 2);
+                  return (
+                    console.log("Settings changed. Saving."),
+                    (i = {
+                      session_id: N.SESSION_ID,
+                      recency_position: this.m_fRecencyValue,
+                      popularity_position: this.m_fPopularityValue,
+                      included_tags: this.m_rgFilterTags,
+                      excluded_tags: this.m_rgExcludeTags,
+                      ignored_played_apps: t
+                    }),
+                    (N.DEFAULT_RECENCY_SLIDER = this.m_fRecencyValue),
+                    (N.DEFAULT_POPULARITY_SLIDER = this.m_fPopularityValue),
+                    (N.DEFAULT_INCLUDED_TAGS = Object(_.f)(
+                      this.m_rgFilterTags
+                    )),
+                    (N.DEFAULT_EXCLUDED_TAGS = Object(_.f)(
+                      this.m_rgExcludeTags
+                    )),
+                    (N.DEFAULT_IGNORED_PLAYED_APPS = Object(_.f)(t)),
+                    [
+                      4,
+                      d.a.post(
+                        N.BASE_URL +
+                          "recommender/" +
+                          N.STEAM_ID +
+                          "/savesettings",
+                        i
+                      )
+                    ]
+                  );
                 case 2:
+                  e.sent(), (e.label = 3);
+                case 3:
                   return [2];
               }
+            });
+          });
+        }),
+        (e.prototype.onToggleIgnore = function(o) {
+          return Object(_.b)(this, void 0, void 0, function() {
+            var t, a, n, r;
+            return Object(_.e)(this, function(e) {
+              for (t = this.getInputApps(), a = 0, n = t; a < n.length; a++)
+                if ((r = n[a]).a == o) {
+                  r.i || r.ip ? ((r.i = !1), (r.ip = !1)) : (r.ip = !0);
+                  break;
+                }
+              return (
+                this.m_ResultDataCache.expireData(),
+                (this.m_bIgnoredEdited = !0),
+                [2]
+              );
             });
           });
         }),
@@ -2384,11 +2392,11 @@
                 case 0:
                   return (
                     (t = {
-                      account_id: A.ACCOUNT_ID,
-                      session_id: A.SESSION_ID,
+                      account_id: N.ACCOUNT_ID,
+                      session_id: N.SESSION_ID,
                       app_id: a,
                       app_rank: n,
-                      action: ae.ClickThrough,
+                      action: te.ClickThrough,
                       algorithm: 1,
                       setting_1: 100 * this.m_fPopularityValue,
                       setting_2: 100 * this.m_fRecencyValue
@@ -2396,7 +2404,7 @@
                     [
                       4,
                       d.a.post(
-                        A.BASE_URL + "recommender/" + A.STEAM_ID + "/stats",
+                        N.BASE_URL + "recommender/" + N.STEAM_ID + "/stats",
                         t
                       )
                     ]
@@ -2414,16 +2422,16 @@
               switch (e.label) {
                 case 0:
                   return (
-                    (le.getAppInfo()[r].w = !0),
-                    (t = { sessionid: A.SESSION_ID, appid: r }),
+                    (ce.getAppInfo()[r].w = !0),
+                    (t = { sessionid: N.SESSION_ID, appid: r }),
                     [
                       4,
                       d.a.post(
-                        A.BASE_URL +
+                        N.BASE_URL +
                           "recommender/" +
-                          A.STEAM_ID +
+                          N.STEAM_ID +
                           "/wishlist?snr=" +
-                          A.LINK_PARAM,
+                          N.LINK_PARAM,
                         t
                       )
                     ]
@@ -2432,11 +2440,11 @@
                   return (
                     (a = e.sent()),
                     (n = {
-                      account_id: A.ACCOUNT_ID,
-                      session_id: A.SESSION_ID,
+                      account_id: N.ACCOUNT_ID,
+                      session_id: N.SESSION_ID,
                       app_id: r,
                       app_rank: o,
-                      action: ae.AddToWishlist,
+                      action: te.AddToWishlist,
                       algorithm: 1,
                       setting_1: 100 * this.m_fPopularityValue,
                       setting_2: 100 * this.m_fRecencyValue
@@ -2444,7 +2452,7 @@
                     [
                       4,
                       d.a.post(
-                        A.BASE_URL + "recommender/" + A.STEAM_ID + "/stats",
+                        N.BASE_URL + "recommender/" + N.STEAM_ID + "/stats",
                         n
                       )
                     ]
@@ -2457,7 +2465,7 @@
         }),
         (e.prototype.onGoToWishlist = function() {
           window.location.href =
-            A.COMMUNITY_BASE_URL + "profiles/" + A.STEAM_ID + "/wishlist";
+            N.COMMUNITY_BASE_URL + "profiles/" + N.STEAM_ID + "/wishlist";
         }),
         (e.prototype.onAddToCart = function(n, r) {
           return Object(_.b)(this, void 0, void 0, function() {
@@ -2466,15 +2474,15 @@
               switch (e.label) {
                 case 0:
                   return (
-                    (t = { sessionid: A.SESSION_ID, appid: n }),
+                    (t = { sessionid: N.SESSION_ID, appid: n }),
                     [
                       4,
                       d.a.post(
-                        A.BASE_URL +
+                        N.BASE_URL +
                           "recommender/" +
-                          A.STEAM_ID +
+                          N.STEAM_ID +
                           "/cart?snr=" +
-                          A.LINK_PARAM,
+                          N.LINK_PARAM,
                         t
                       )
                     ]
@@ -2483,11 +2491,11 @@
                   return (
                     e.sent(),
                     (a = {
-                      account_id: A.ACCOUNT_ID,
-                      session_id: A.SESSION_ID,
+                      account_id: N.ACCOUNT_ID,
+                      session_id: N.SESSION_ID,
                       app_id: n,
                       app_rank: r,
-                      action: ae.AddToCart,
+                      action: te.AddToCart,
                       algorithm: 1,
                       setting_1: 100 * this.m_fPopularityValue,
                       setting_2: 100 * this.m_fRecencyValue
@@ -2495,7 +2503,7 @@
                     [
                       4,
                       d.a.post(
-                        A.BASE_URL + "recommender/" + A.STEAM_ID + "/stats",
+                        N.BASE_URL + "recommender/" + N.STEAM_ID + "/stats",
                         a
                       )
                     ]
@@ -2503,7 +2511,7 @@
                 case 2:
                   return (
                     e.sent(),
-                    (window.location.href = A.STORE_BASE_URL + "cart"),
+                    (window.location.href = N.STORE_BASE_URL + "cart"),
                     [2]
                   );
               }
@@ -2519,15 +2527,15 @@
         (e.prototype.shouldMute = function() {
           return this.m_bShouldMute;
         }),
-        Object(_.c)([ee.v], e.prototype, "m_fPopularityValue", void 0),
-        Object(_.c)([ee.v], e.prototype, "m_fRecencyValue", void 0),
-        Object(_.c)([ee.v], e.prototype, "m_rgFilterTags", void 0),
-        Object(_.c)([ee.v], e.prototype, "m_rgExcludeTags", void 0),
-        Object(_.c)([ee.v], e.prototype, "m_fQueuedPopularityValue", void 0),
-        Object(_.c)([ee.v], e.prototype, "m_fQueuedRecencyValue", void 0),
-        Object(_.c)([ee.v], e.prototype, "m_bExcludeWishlisted", void 0),
-        Object(_.c)([ee.v], e.prototype, "m_bShouldMute", void 0),
-        Object(_.c)([ee.v], e.prototype, "m_bIgnoredEdited", void 0),
+        Object(_.c)([$.v], e.prototype, "m_fPopularityValue", void 0),
+        Object(_.c)([$.v], e.prototype, "m_fRecencyValue", void 0),
+        Object(_.c)([$.v], e.prototype, "m_rgFilterTags", void 0),
+        Object(_.c)([$.v], e.prototype, "m_rgExcludeTags", void 0),
+        Object(_.c)([$.v], e.prototype, "m_fQueuedPopularityValue", void 0),
+        Object(_.c)([$.v], e.prototype, "m_fQueuedRecencyValue", void 0),
+        Object(_.c)([$.v], e.prototype, "m_bExcludeWishlisted", void 0),
+        Object(_.c)([$.v], e.prototype, "m_bShouldMute", void 0),
+        Object(_.c)([$.v], e.prototype, "m_bIgnoredEdited", void 0),
         Object(_.c)([E], e.prototype, "getTagHeight", null),
         Object(_.c)([E], e.prototype, "onPopularityChanged", null),
         Object(_.c)([E], e.prototype, "onRecencyChanged", null),
@@ -2538,6 +2546,7 @@
         Object(_.c)([E], e.prototype, "doTagsPassFilter", null),
         Object(_.c)([E], e.prototype, "doTagsFailExclusion", null),
         Object(_.c)([E], e.prototype, "onExcludeWishlistedToggled", null),
+        Object(_.c)([E], e.prototype, "onSaveUserSettings", null),
         Object(_.c)([E], e.prototype, "onToggleIgnore", null),
         Object(_.c)([E], e.prototype, "onUpdateWithIgnored", null),
         Object(_.c)([E], e.prototype, "onAppClicked", null),
@@ -2551,27 +2560,27 @@
       );
     })();
     a.d(t, "g_App", function() {
-      return le;
+      return ce;
     });
-    var ie,
+    var oe,
+      ie,
       se,
-      ce,
-      le = new oe();
+      ce = new re();
     document.addEventListener("DOMContentLoaded", function() {
-      o(), le.Init();
+      o(), ce.Init();
     }),
       (window.LocalizationReady = function(e, t, a) {
-        if ("english" !== t) "main" == e ? (ie = a) : "shared" == e && (se = a);
-        else if ("shared" == e) ce = a;
+        if ("english" !== t) "main" == e ? (oe = a) : "shared" == e && (ie = a);
+        else if ("shared" == e) se = a;
         else {
           var n = void 0,
             r = null,
             o = void 0,
             i = null;
-          void 0 !== ie ? ((n = ie), (r = a)) : (n = a),
-            void 0 !== se ? ((o = se), (i = ce)) : (o = ce),
-            I.InitFromObjects(n, r, o, i),
-            (ce = se = ie = void 0);
+          void 0 !== oe ? ((n = oe), (r = a)) : (n = a),
+            void 0 !== ie ? ((o = ie), (i = se)) : (o = se),
+            A.InitFromObjects(n, r, o, i),
+            (se = ie = oe = void 0);
         }
       });
   }

@@ -5396,3 +5396,31 @@ body.v6 .page_content.notes {
 .color_informational {
 	color: #f5df67;
 }
+
+.music_album_track_listing_table {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.music_album_track_ctn {
+    display: flex;
+    justify-content: space-between;
+    background: #213649;
+    padding: 4px 6px;
+}
+.music_album_track_ctn:nth-child(2n) {
+    background: #1e2e40;
+}
+.music_album_track_number {
+    width: 30px;
+}
+.music_album_track_name_ctn {
+    flex-grow: 1;
+}
+.music_album_track_name,
+.music_album_track_name_other_language {
+    display: inline;
+}

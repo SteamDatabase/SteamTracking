@@ -4041,6 +4041,17 @@ b {
     cursor: pointer;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
 
+.partnereventshared_BrowseMoreButton_QTrhr {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none; }
+  .partnereventshared_BrowseMoreButton_QTrhr:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+
 .partnereventshared_Button_vHRhC {
   color: #dfe3e6;
   transition: all 0.2s ease-out;
@@ -4241,6 +4252,14 @@ span.partnereventshared_tooltip_Ctn_1JlN_ {
   padding: 0px 6px;
   color: white;
   margin-left: 10px; }
+
+.partnereventshared_SaleSectionHeader_tYyZc {
+  font-weight: 300;
+  letter-spacing: 0px;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  text-transform: uppercase; }
 
 .login_LoginDialog_1AiEN {
   background-color: #101114;
@@ -4645,8 +4664,8 @@ textarea:-webkit-autofill:focus,
   padding: 3px 5px;
   background-color: #4C6B22;
   color: #A4D007;
-  display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-right: 3px; }
 
 .broadcastwidgets_StoreSalePriceBox_3fccA {
   font-size: 14px;
@@ -8328,8 +8347,10 @@ button.DialogButton::-moz-focus-inner {
 .Destructive .ModalPosition_TopBar {
   background: linear-gradient(to right, #c44848, #c44848); }
 
-.ModalDialogPopup .ModalPosition,
-.ModalDialogPopup .ModalPosition_Content {
+/* Needs to target only the ModalPosition provided to the popup window and avoid being applied
+   to the additional, generic popups that can be placed inside the modal */
+.ModalDialogPopup .PopupFullWindow > .ModalPosition,
+.ModalDialogPopup .PopupFullWindow > .ModalPosition > .ModalPosition_Content {
   max-width: none;
   max-height: none;
   width: 100%;

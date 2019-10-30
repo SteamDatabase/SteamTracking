@@ -87,9 +87,12 @@ BoxEntry.prototype = {
 			}
 		}
 	}
-	,getTagHTML3: function(maxLines) {
+	,getTagHTML3: function(keyAttributes,maxLines) {
 		if(maxLines == null) {
 			maxLines = 3;
+		}
+		if(keyAttributes == null) {
+			keyAttributes = "";
 		}
 		var str = "";
 		if(this.keyTags != null) {
@@ -138,10 +141,13 @@ BoxEntry.prototype = {
 					++i;
 				}
 				str += "</div>";
-				return str;
+				return "<em>" + keyAttributes + "</em><br>" + str;
 			}
+		} else {
+			var keyAttributes1 = Main.loc("#labs_deepdive_keytags");
+			return "<em>" + Main.loc("#labs_deepdive_loading") + "</em><br><p class=\"tag-List\">" + "<br><br><br><br><br></p>";
 		}
-		return this.getTagHTML2(maxLines);
+		return "<em>" + keyAttributes + "</em><br>" + this.getTagHTML2(maxLines);
 	}
 	,getTagHTML2: function(maxLines) {
 		if(maxLines == null) {
@@ -152,12 +158,15 @@ BoxEntry.prototype = {
 		str += "</div>";
 		return str;
 	}
-	,getTagHTML: function(forHover,maxLines) {
+	,getTagHTML: function(header,forHover,maxLines) {
 		if(maxLines == null) {
 			maxLines = 3;
 		}
 		if(forHover == null) {
 			forHover = false;
+		}
+		if(header == null) {
+			header = "";
 		}
 		var str = "";
 		if(this.tagCategories != null) {
@@ -640,7 +649,7 @@ Data.filterMatches = function(matches) {
 };
 Data.getMatches = function(appid,recommenders,page,alreadySeen,callback) {
 	var recString = recommenders.join("-");
-	Data.request("dbapi/" + appid + "/" + page,[{ name : "beta_divingbell", value : "1"}],function(data) {
+	Data.request("dbapi/" + appid + "/" + page,[],function(data) {
 		var map = null;
 		var matchData = null;
 		try {
@@ -793,11 +802,22 @@ Data.shuffle = function(list) {
 	}
 	return list;
 };
+Data.getDetailsFullFat = function(appid,callback) {
+	if(appid == "") {
+		callback(null);
+	}
+	Data.request("dbdetailsfullfat/" + appid,[],function(data) {
+		var json = JSON.parse(data);
+		callback(json);
+	},function(error) {
+		callback(null);
+	});
+};
 Data.getDetails = function(appid,callback) {
 	if(appid == "") {
 		callback(null);
 	}
-	Data.request("dbdetails/" + appid,[{ name : "beta_divingbell", value : "1"}],function(data) {
+	Data.request("dbdetails/" + appid,[],function(data) {
 		var json = JSON.parse(data);
 		callback(json);
 	},function(error) {
@@ -805,21 +825,54 @@ Data.getDetails = function(appid,callback) {
 	});
 };
 Data.getDetailsMulti = function(appids,callback) {
-	var arr = appids.join("-");
-	Data.request("dbdetailsmulti/" + arr,[{ name : "beta_divingbell", value : "1"}],function(data) {
-		var json = null;
-		var arr1 = null;
+	var allEmpty = true;
+	var _g = 0;
+	while(_g < appids.length) {
+		var appid = appids[_g];
+		++_g;
+		if(appid != "" && appid != null) {
+			allEmpty = false;
+		}
+	}
+	if(allEmpty) {
+		var data = "[";
+		var _g1 = 0;
+		var _g2 = appids.length;
+		while(_g1 < _g2) {
+			var i = _g1++;
+			data += "[]";
+			if(i != appids.length - 1) {
+				data += ",";
+			}
+		}
+		data += "]";
+		var json = JSON.parse(data);
+		var arr = json;
+		callback(arr);
+		return;
+	}
+	var arr1 = appids.join("-");
+	Data.request("dbdetailsmulti/" + arr1,[],function(data1) {
+		var json1 = null;
+		var arr2 = null;
 		try {
-			json = JSON.parse(data);
-			arr1 = json;
+			json1 = JSON.parse(data1);
+			arr2 = json1;
 		} catch( msg ) {
 			if (msg instanceof js__$Boot_HaxeError) msg = msg.val;
-			console.log("getDetailsMulti(" + Std.string(appids) + ") ERROR(" + Std.string(msg) + ") parsing data:\n" + data);
+			console.log("getDetailsMulti(" + Std.string(appids) + ") ERROR(" + Std.string(msg) + ") parsing data:\n" + data1);
 		}
-		callback(arr1);
+		callback(arr2);
 	},function(error) {
 		callback(null);
 	});
+};
+Data.setCookie = function(name,value) {
+	var expireDelay = 2592000;
+	js_Cookie.set(name,value,expireDelay);
+};
+Data.getCookie = function(name) {
+	return js_Cookie.get(name);
 };
 Data.request = function(url,params,onData,onError) {
 	var href = window.location.href;
@@ -1032,6 +1085,24 @@ GlobalStuff.hardHide = function(element) {
 	var newStyle = newStyleArr.join("; ");
 	element.setAttribute("style",newStyle);
 };
+GlobalStuff.hardShow = function(element) {
+	var style = element.getAttribute("style");
+	var styleArr = style.split(";");
+	var newStyleArr = [];
+	var _g = 0;
+	while(_g < styleArr.length) {
+		var styleBit = styleArr[_g];
+		++_g;
+		var bits = styleBit.split(":");
+		var i = bits[0].indexOf("display");
+		if(i != -1) {
+			bits[1] = "block";
+		}
+		newStyleArr.push(bits.join(": "));
+	}
+	var newStyle = newStyleArr.join("; ");
+	element.setAttribute("style",newStyle);
+};
 GlobalStuff.hasClass = function(element,className) {
 	var classStr = element.getAttribute("class");
 	if(classStr != "" && classStr != null) {
@@ -1160,6 +1231,29 @@ GlobalStuff.injectSearch = function() {
 };
 var HxOverrides = function() { };
 HxOverrides.__name__ = true;
+HxOverrides.strDate = function(s) {
+	var _g = s.length;
+	switch(_g) {
+	case 8:
+		var k = s.split(":");
+		var d = new Date();
+		d["setTime"](0);
+		d["setUTCHours"](k[0]);
+		d["setUTCMinutes"](k[1]);
+		d["setUTCSeconds"](k[2]);
+		return d;
+	case 10:
+		var k1 = s.split("-");
+		return new Date(k1[0],k1[1] - 1,k1[2],0,0,0);
+	case 19:
+		var k2 = s.split(" ");
+		var y = k2[0].split("-");
+		var t = k2[1].split(":");
+		return new Date(y[0],y[1] - 1,y[2],t[0],t[1],t[2]);
+	default:
+		throw new js__$Boot_HaxeError("Invalid date format : " + s);
+	}
+};
 HxOverrides.cca = function(s,index) {
 	var x = s.charCodeAt(index);
 	if(x != x) {
@@ -1525,18 +1619,44 @@ Main.renderBackRefreshButtons = function() {
 	var enableRefresh = Main.lastMatchCount >= 9 || Main.lastMatchCount == -1;
 	var back = window.document.getElementById("button-back");
 	var refresh = window.document.getElementById("button-refresh");
-	if(!enableBack) {
-		back.setAttribute("class","button-back button-round disabled");
-	} else {
-		back.setAttribute("class","button-back button-round");
+	if(back != null) {
+		if(!enableBack) {
+			back.setAttribute("class","button-back button-round disabled");
+		} else {
+			back.setAttribute("class","button-back button-round");
+		}
 	}
-	if(!enableRefresh) {
-		refresh.setAttribute("class","button-refresh button-round disabled");
-	} else {
-		refresh.setAttribute("class","button-refresh button-round");
+	if(refresh != null) {
+		if(!enableRefresh) {
+			refresh.setAttribute("class","button-refresh button-round disabled");
+		} else {
+			refresh.setAttribute("class","button-refresh button-round");
+		}
 	}
 };
-Main.renderFocusedBox = function() {
+Main.renderFocusedBox = function(appidSafeguard) {
+	if(appidSafeguard == null) {
+		appidSafeguard = "";
+	}
+	if(appidSafeguard != "") {
+		if(appidSafeguard != Main.focusedEntry.appid) {
+			return;
+		}
+	}
+	if(Main.focusedEntry != null) {
+		if(Main.focusedEntry.screenshots == null || Main.focusedEntry.screenshots.length == 0) {
+			Data.getDetailsFullFat(Main.focusedEntry.appid,function(details) {
+				Main.focusedEntry.screenshots = details.screenshots;
+				if(Main.focusedEntry.screenshots == null || Main.focusedEntry.screenshots.length == 0) {
+					Main.focusedEntry.screenshots = [""];
+				}
+				Main.renderFocusedBox(Main.focusedEntry.appid);
+			});
+			return;
+		} else if(Main.focusedEntry.screenshots.length == 1 && Main.focusedEntry.screenshots[0] == "") {
+			Main.focusedEntry.screenshots = [];
+		}
+	}
 	var focusBoxNode = window.document.getElementById("box-focused");
 	var appid = Main.focusedEntry != null ? Main.focusedEntry.appid : "";
 	if(appid == "") {
@@ -1703,6 +1823,7 @@ Main.loc = function(str) {
 Main.onLoad = function() {
 	Main.init(function() {
 		Main.renderPage(function() {
+			Main.hideMainThrobber();
 			var searchNode = window.document.getElementById("search_suggestion_contents");
 			if(searchNode != null) {
 				Main.searchObserver = new MutationObserver(Main.onMutateSearchNode);
@@ -1724,6 +1845,8 @@ Main.onLoad = function() {
 	});
 };
 Main.firstLoadApp = function(appid) {
+	Main.MICROTRAILERS = Data.getCookie("deep_dive_show_microtrailers") != "false";
+	Main.setMicrotrailers(Main.MICROTRAILERS);
 	var currApp = appid;
 	var apps = appid.split(",");
 	if(apps.length > 0) {
@@ -1883,10 +2006,18 @@ Main.hideHover = function() {
 		GlobalStuff.hardHide(globalHover);
 	}
 };
+Main.setMicrotrailers = function(b) {
+	Main.MICROTRAILERS = b;
+	var el = window.document.getElementById("checkbox-microtrailers");
+	if(el != null) {
+		el.checked = b;
+	}
+};
 Main.toggleMicrotrailers = $hx_exports["Main"]["toggleMicrotrailers"] = function() {
 	var el = window.document.getElementById("checkbox-microtrailers");
 	if(el != null) {
 		Main.MICROTRAILERS = el.checked;
+		Data.setCookie("deep_dive_show_microtrailers",Std.string(Main.MICROTRAILERS));
 		if(!Main.focusBusy) {
 			Render.hydrateBoxes(true);
 		}
@@ -2068,6 +2199,7 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	if(Main.focusBusy) {
 		return;
 	}
+	console.log("focus(" + appid + ")");
 	var priorApp = "";
 	var priorTitle = "";
 	if(Main.focusedEntry != null) {
@@ -2100,9 +2232,16 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 		}
 		return;
 	}
-	var showFocusDetails = function(details) {
+	var showFocusDetails = function(details,early) {
+		if(early == null) {
+			early = false;
+		}
 		Main.focusedEntry.setDetails(details);
-		Main.focusedEntry.keyTags = Main.currMatches.keyTags;
+		if(early) {
+			Main.focusedEntry.keyTags = null;
+		} else {
+			Main.focusedEntry.keyTags = Main.currMatches.keyTags;
+		}
 		Main.renderFocusedBox();
 		Main.showBoxes(false);
 	};
@@ -2118,8 +2257,11 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 		details1 = null;
 	}
 	var detailsWereNull = false;
+	var partialFocus = false;
 	if(details1 != null) {
-		showFocusDetails(details1);
+		partialFocus = true;
+		showFocusDetails(details1,true);
+		console.log("details.screenshots = " + Std.string(details1.screenshots));
 	} else {
 		detailsWereNull = true;
 	}
@@ -2143,6 +2285,9 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 					details1 = _this1.h[appid];
 				}
 				showFocusDetails(details1);
+			} else {
+				Main.focusedEntry.keyTags = Main.currMatches.keyTags;
+				Main.renderFocusedBox();
 			}
 			if(Main.LOGGED_IN) {
 				Main.wishlist = rawMatches.wishlist;
@@ -2153,6 +2298,10 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	} else {
 		Main.displayBoxes(showTheseBoxes,callback);
 	}
+};
+Main.hideMainThrobber = function() {
+	var el = window.document.getElementById("main_loader");
+	GlobalStuff.hardHide(el);
 };
 Main.displayBoxes = function(showTheseBoxes,callback) {
 	var _g1 = 0;
@@ -2636,29 +2785,27 @@ Main.updateBoxesHover = function() {
 		var params_top_area_content = "";
 		var boxButtons = [window.document.getElementById("box-buttons-" + i)];
 		var boxMicrotrailer = [window.document.getElementById("box-microtrailer-" + i)];
-		var boxImage = [window.document.getElementById("box-image-" + i)];
+		var boxImage = window.document.getElementById("box-image-" + i);
 		var boxPrompt = [window.document.getElementById("box-prompt-" + i)];
 		var boxTags = [window.document.getElementById("box-tags-" + i)];
 		GlobalStuff.show(boxButtons[0],false);
 		GlobalStuff.show(boxMicrotrailer[0],false);
-		var onMouseEnter = (function(boxTags1,boxPrompt1,boxImage1,boxMicrotrailer1,boxButtons1) {
+		var onMouseEnter = (function(boxTags1,boxPrompt1,boxMicrotrailer1,boxButtons1) {
 			return function() {
 				GlobalStuff.show(boxButtons1[0],true);
 				GlobalStuff.show(boxMicrotrailer1[0],true);
 				GlobalStuff.show(boxPrompt1[0],true);
 				GlobalStuff.show(boxTags1[0],true);
-				GlobalStuff.show(boxImage1[0],false);
 			};
-		})(boxTags,boxPrompt,boxImage,boxMicrotrailer,boxButtons);
-		var onMouseLeave = (function(boxTags2,boxPrompt2,boxImage2,boxMicrotrailer2,boxButtons2) {
+		})(boxTags,boxPrompt,boxMicrotrailer,boxButtons);
+		var onMouseLeave = (function(boxTags2,boxPrompt2,boxMicrotrailer2,boxButtons2) {
 			return function() {
 				GlobalStuff.show(boxButtons2[0],false);
 				GlobalStuff.show(boxMicrotrailer2[0],false);
 				GlobalStuff.show(boxPrompt2[0],false);
 				GlobalStuff.show(boxTags2[0],false);
-				GlobalStuff.show(boxImage2[0],true);
 			};
-		})(boxTags,boxPrompt,boxImage,boxMicrotrailer,boxButtons);
+		})(boxTags,boxPrompt,boxMicrotrailer,boxButtons);
 		GlobalStuff.bindHoverEvents("box-" + i,appIdInt,true,onMouseEnter,onMouseLeave);
 	}
 	if(Main.focusedEntry != null && Main.focusedEntry.appid != "") {
@@ -2667,11 +2814,9 @@ Main.updateBoxesHover = function() {
 		var focusBoxBigScreenshot = window.document.getElementById("focus-box-big-screenshot");
 		var onMouseEnterFocus = function() {
 			GlobalStuff.show(focusBoxMicrotrailer,true);
-			GlobalStuff.show(focusBoxBigScreenshot,false);
 		};
 		var onMouseLeaveFocus = function() {
 			GlobalStuff.show(focusBoxMicrotrailer,false);
-			GlobalStuff.show(focusBoxBigScreenshot,true);
 		};
 		GlobalStuff.bindHoverEvents("box-focused",appIdInt1,true,onMouseEnterFocus,onMouseLeaveFocus);
 	}
@@ -2878,6 +3023,7 @@ Render.showBox = function(index,show) {
 	var box = window.document.getElementById(Std.string("box-wrapper-" + index));
 	var appid = Main.boxEntries[index] != null ? Main.boxEntries[index].appid : "null";
 	var doodads = window.document.getElementById(Std.string("box-doodads-" + index));
+	var throbber = window.document.getElementById(Std.string("throbber-" + index));
 	if(!show) {
 		if(!box.classList.contains("sink")) {
 			box.classList.add("sink");
@@ -3032,33 +3178,62 @@ Render.focusBoxContent = function(entry,enableBack,enableRefresh) {
 		entry.tagCategories = results;
 	}
 	entry.makeTagEntries(entry.tags);
-	var tagHTML = entry.getTagHTML3(6);
+	var arr = [];
+	var _g = 0;
+	var _g1 = entry.tags;
+	while(_g < _g1.length) {
+		var tag = _g1[_g];
+		++_g;
+		arr.push(tag.name);
+	}
+	var arr2 = [];
+	var _g2 = 0;
+	var _g11 = entry.tagEntries;
+	while(_g2 < _g11.length) {
+		var e = _g11[_g2];
+		++_g2;
+		arr2.push(e.name + ":" + (e.highlighted == null ? "null" : "" + e.highlighted));
+	}
+	var keyAttributes = Main.loc("#labs_deepdive_keytags");
+	var tagHTML = entry.getTagHTML3(keyAttributes,6);
 	var screenShots = "";
 	screenShots += "<div class=\"box-images-big\">";
 	var screenshot = entry.screenshots[0];
 	if(screenshot != null) {
-		screenShots += "<img class=\"focus-box-big-screenshot\" id=\"focus-box-big-screenshot\" src=\"" + screenshot + "\"/>";
+		screenShots += "<img class=\"focus-box-big-screenshot\" id=\"focus-box-big-screenshot\" src=\"" + screenshot + "\">";
 		screenShots += Render.microtrailer(index,entry,"focus-box-microtrailer-video","focus-box-microtrailer","focus-box-microtrailer hide-fancy",false);
+		screenShots += "</img>";
 	}
 	screenShots += "</div>";
 	screenShots += "<div class=\"box-images-small\">";
-	var _g = 1;
-	while(_g < 5) {
-		var i = _g++;
+	var _g3 = 1;
+	while(_g3 < 5) {
+		var i = _g3++;
 		var screenshot1 = entry.screenshots[i];
 		if(screenshot1 != null) {
 			screenShots += "<img src=\"" + screenshot1 + "\"/>";
 		}
 	}
 	screenShots += "</div>";
-	var keyAttributes = Main.loc("#labs_deepdive_keytags");
 	var selectToExplore = Main.loc("#labs_deepdive_selecttoexplore");
 	var gamesLike = Main.loc("#labs_deepdive_gameslike");
 	var onWishlist = Main.LOGGED_IN && Main.onWishlist(appid);
 	var isOwned = Main.LOGGED_IN && Main.isOwned(appid);
 	var wishlistBtn = Main.LOGGED_IN ? Render.wishlistButton(appid,onWishlist,isOwned) : "";
 	var detailsBtn = Render.detailsButton(appid,entry.url);
-	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">\r\n\t\t\t\t\r\n\t\t\t\t<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">\r\n\t\t\t\t\t<p>" + selectToExplore + "</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"games-like\">" + gamesLike + "</div>\r\n\t\t\t\t\t<div id=\"search-wrapper\">\r\n\t\t\t\t\t\t<div class=\"search-container\" id=\"search-container\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:Main.onClickFocusSearch();\">\r\n\t\t\t\t\t\t\t\t<h2>" + title + "</h2>\r\n\t\t\t\t\t\t\t\t<img src=\"" + searchSvg + "\" class=\"search-icon\"/>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<hr>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-doodads\" id=\"" + doodadId + "\">" + discountBlock + "</div>\r\n\t\t\t\t<div class=\"box-buttons\" id=\"" + boxButtonsId1 + "\">\r\n\t\t\t\t\t" + wishlistBtn + "\r\n\t\t\t\t\t" + detailsBtn + "\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-tags-focus hide-fancy\" id=\"" + boxTagsId + "\">\r\n\t\t\t\t\t<em>" + keyAttributes + "</em><br>\r\n\t\t\t\t\t" + tagHTML + "\r\n\t\t\t\t</div>\r\n\t\t\t\t" + screenShots + "\r\n\t\t\t</div>";
+	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">\r\n\t\t\t\t\r\n\t\t\t\t<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">\r\n\t\t\t\t\t<p>" + selectToExplore + "</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"games-like\">" + gamesLike + "</div>\r\n\t\t\t\t\t<div id=\"search-wrapper\">\r\n\t\t\t\t\t\t<div class=\"search-container\" id=\"search-container\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:Main.onClickFocusSearch();\">\r\n\t\t\t\t\t\t\t\t<h2>" + title + "</h2>\r\n\t\t\t\t\t\t\t\t<img src=\"" + searchSvg + "\" class=\"search-icon\"/>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<hr>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-doodads\" id=\"" + doodadId + "\">" + discountBlock + "</div>\r\n\t\t\t\t<div class=\"box-buttons\" id=\"" + boxButtonsId1 + "\">\r\n\t\t\t\t\t" + wishlistBtn + "\r\n\t\t\t\t\t" + detailsBtn + "\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-tags-focus hide-fancy\" id=\"" + boxTagsId + "\">\r\n\t\t\t\t\t" + tagHTML + "\r\n\t\t\t\t</div>\r\n\t\t\t\t" + screenShots + "\r\n\t\t\t</div>";
+	return html;
+};
+Render.throbber = function(id,hide,position) {
+	if(position == null) {
+		position = "absolute";
+	}
+	var display = hide ? "display:none;" : "display:inline";
+	var html = "<div class=\"box-microtrailer LoadingWrapper\" id=\"" + id + "\" style=\"z-index:0;position:" + position + ";" + display + "\">\r\n\t\t\t<div class=\"LoadingThrobber\">\r\n\t\t\t\t<div class=\"Bar Bar1\"></div>\r\n\t\t\t\t<div class=\"Bar Bar2\"></div>\r\n\t\t\t\t<div class=\"Bar Bar3\"></div>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"LoadingText\">Main.loc(\"#labs_deepdive_loading\")</div>\r\n\t\t</div> ";
+	return html;
+};
+Render.throbber2 = function() {
+	var html = "<div class=\"LoadingThrobber\">\r\n\t\t\t<div class=\"Bar Bar1\"></div>\r\n\t\t\t<div class=\"Bar Bar2\"></div>\r\n\t\t\t<div class=\"Bar Bar3\"></div>\r\n\t\t</div>";
 	return html;
 };
 Render.box = function(index,entry,sink,first) {
@@ -3145,7 +3320,8 @@ Render.boxContent = function(index,entry,sink,first) {
 	var wishlistBtn = Main.LOGGED_IN ? Render.wishlistButton(appid,onWishlist,isOwned) : "";
 	var detailsBtn = Render.detailsButton(appid,url);
 	var headerURL = "https://steamcdn-a.akamaihd.net/steam/apps/" + appid + "/header_292x136.jpg";
-	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">\r\n\t\t\t\t<a class=\"box-link\" href=\"javascript:Main.focus(" + appid + ")\"></a>\r\n\t\t\t\t<div class=\"box-image\" id=\"" + boxImageId + "\">\r\n\t\t\t\t\t<img src=\"" + headerURL + "\" alt=\"" + title + "\" title=\"" + title + "\"/>\r\n\t\t\t\t</div>\n" + Render.microtrailer(index,entry,"microtrailer","","",true) + "\n" + ("<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">\r\n\t\t\t\t\t<p>" + selectToExplore + "</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-doodads\" id=\"" + doodadId + "\">") + discountBlock + "</div>" + ("<div class=\"box-buttons\" id=\"" + boxButtonsId + "\">\r\n\t\t\t\t\t" + wishlistBtn + "\r\n\t\t\t\t\t" + detailsBtn + "\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-tags hide-fancy\" id=\"" + boxTagsId + "\">\r\n\t\t\t\t\t<em>" + keyThings + "</em><br>\r\n\t\t\t\t\t" + tagHTML + "\r\n\t\t\t\t</div>\r\n\t\t\t</div>");
+	var throbberStr = Render.throbber("throbber-" + index,true);
+	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">" + ("<a class=\"box-link\" href=\"javascript:Main.focus(" + appid + ")\"></a>") + ("<div class=\"box-image\" id=\"" + boxImageId + "\">") + throbberStr + ("<img src=\"" + headerURL + "\" alt=\"" + title + "\" title=\"" + title + "\">") + Render.microtrailer(index,entry,"microtrailer","","",true) + "</div>" + ("<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">") + ("<p>" + selectToExplore + "</p>") + "</div>" + ("<div class=\"box-doodads\" id=\"" + doodadId + "\">") + discountBlock + "</div>" + ("<div class=\"box-buttons\" id=\"" + boxButtonsId + "\">") + wishlistBtn + detailsBtn + "</div>" + ("<div class=\"box-tags hide-fancy\" id=\"" + boxTagsId + "\">") + ("<em>" + keyThings + "</em><br>") + tagHTML + "</div>" + "</div>";
 	return html;
 };
 Render.detailsButton = function(appid,url) {
@@ -3344,6 +3520,24 @@ StrTool.isLink = function(str) {
 };
 var StringTools = function() { };
 StringTools.__name__ = true;
+StringTools.isSpace = function(s,pos) {
+	var c = HxOverrides.cca(s,pos);
+	if(!(c > 8 && c < 14)) {
+		return c == 32;
+	} else {
+		return true;
+	}
+};
+StringTools.ltrim = function(s) {
+	var l = s.length;
+	var r = 0;
+	while(r < l && StringTools.isSpace(s,r)) ++r;
+	if(r > 0) {
+		return HxOverrides.substr(s,r,l - r);
+	} else {
+		return s;
+	}
+};
 StringTools.replace = function(s,sub,by) {
 	return s.split(sub).join(by);
 };
@@ -4180,6 +4374,53 @@ js_Browser.createXMLHttpRequest = function() {
 		return new ActiveXObject("Microsoft.XMLHTTP");
 	}
 	throw new js__$Boot_HaxeError("Unable to create XMLHttpRequest object.");
+};
+var js_Cookie = function() { };
+js_Cookie.__name__ = true;
+js_Cookie.set = function(name,value,expireDelay,path,domain) {
+	var s = name + "=" + encodeURIComponent(value);
+	if(expireDelay != null) {
+		var t = new Date().getTime() + expireDelay * 1000;
+		var d = new Date(t);
+		s += ";expires=" + d.toGMTString();
+	}
+	if(path != null) {
+		s += ";path=" + path;
+	}
+	if(domain != null) {
+		s += ";domain=" + domain;
+	}
+	window.document.cookie = s;
+};
+js_Cookie.all = function() {
+	var h = new haxe_ds_StringMap();
+	var a = window.document.cookie.split(";");
+	var _g = 0;
+	while(_g < a.length) {
+		var e = a[_g];
+		++_g;
+		e = StringTools.ltrim(e);
+		var t = e.split("=");
+		if(t.length < 2) {
+			continue;
+		}
+		var key = t[0];
+		var value = decodeURIComponent(t[1].split("+").join(" "));
+		if(__map_reserved[key] != null) {
+			h.setReserved(key,value);
+		} else {
+			h.h[key] = value;
+		}
+	}
+	return h;
+};
+js_Cookie.get = function(name) {
+	var _this = js_Cookie.all();
+	if(__map_reserved[name] != null) {
+		return _this.getReserved(name);
+	} else {
+		return _this.h[name];
+	}
 };
 function $iterator(o) { if( o instanceof Array ) return function() { return HxOverrides.iter(o); }; return typeof(o.iterator) == 'function' ? $bind(o,o.iterator) : o.iterator; }
 var $_, $fid = 0;

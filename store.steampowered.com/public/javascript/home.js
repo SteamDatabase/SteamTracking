@@ -30,7 +30,7 @@ GHomepage = {
 	strCommunityRecommendationsPrefLastSaved: false,
 	rgRecommendedBySteamLabsApps: [],
 	rgRecommendedByDeepDiveApps: [],
-	rgRecommendedByDeepDiveFocusedApp: -1,
+	recommendedByDeepDiveFocusedApp: -1,
 
 	rgCuratedAppsData: [],
 	rgCreatorFollowedAppData: [],
@@ -189,7 +189,10 @@ GHomepage = {
 			GHomepage.rgCommunityRecommendations = rgParams.rgCommunityRecommendations || [];
 			GHomepage.strCommunityRecommendationsPrefLastSaved = rgParams.strCommunityRecommendationsPrefLastSaved || false,
 			GHomepage.rgRecommendedByDeepDiveApps = rgParams.rgRecommendedByDeepDiveApps || [];
-			GHomepage.rgRecommendedByDeepDiveFocusedApp = rgParams.rgRecommendedByDeepDiveFocusedApp || -1;
+			GHomepage.recommendedByDeepDiveFocusedApp = rgParams.recommendedByDeepDiveFocusedApp || -1;
+			GHomepage.nLastIRSettingsUpdate = rgParams.nLastIRSettingsUpdate || 0;
+			GHomepage.rgIRIncludedTags = rgParams.rgIRIncludedTags || [];
+			GHomepage.rgIRExcludedTags = rgParams.rgIRExcludedTags || [];
 	} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;
@@ -1165,9 +1168,9 @@ GHomepage = {
 	{
 
         // Do nothing if deep-dive not loaded
-        if ( GHomepage.rgRecommendedByDeepDiveFocusedApp <= 0 )
+        if ( GHomepage.recommendedByDeepDiveFocusedApp <= 0 )
             return;
-
+		
         var rgOptions = $J.extend({
 			'class': 'store_capsule',
 			'include_title': false,
@@ -1184,9 +1187,10 @@ GHomepage = {
 			return rgItemData;
 		};
 		
-		var focusedAppID = GHomepage.rgRecommendedByDeepDiveFocusedApp;
+		var focusedAppID = GHomepage.recommendedByDeepDiveFocusedApp;
 		var focusedApp = getItemData(focusedAppID,rgOptions);
 		var focusedAppTitle = (focusedApp !== null ? focusedApp.name : "");
+		focusedAppTitle = $J('<textarea/>').html(focusedAppTitle).text();
 		
 		var $DeepDiveSearchText = $J('.deep_dive_search_text');
 
@@ -1264,7 +1268,15 @@ GHomepage = {
         var $RecommendedBySteamLabs = $J('.recommended_by_steam_labs_ctn');
 
         var rgCapsules = GHomepage.FilterItemsForDisplay(
-            GHomepage.rgRecommendedBySteamLabsApps, 'home', 4, 12, { games_already_in_library: false, dlc: false, localized: true, not_wishlisted: false }
+            GHomepage.rgRecommendedBySteamLabsApps, 'home', 4, 12,
+            {
+                games_already_in_library: false,
+                dlc: false,
+                localized: true,
+                not_wishlisted: false,
+                explicitly_included_tags: GHomepage.rgIRIncludedTags,
+                explicitly_excluded_tags: GHomepage.rgIRExcludedTags
+            }
         );
 
         if ( rgCapsules.length < 4 )
@@ -1816,7 +1828,7 @@ GHomepage = {
 		// micro trailer
 		if ( rgItemData.microtrailer )
 		{
-			let $Video = $J( '<video class="microtrailer_video" looped muted>' ).appendTo( $ItemLink );
+			let $Video = $J( '<video class="microtrailer_video" loop muted>' ).appendTo( $ItemLink );
 			$Video.on( "canplay", function() {
 				$Item.addClass( "has_microtrailer" );
 			} );

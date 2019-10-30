@@ -683,7 +683,7 @@ a:link {
 .app_OptionCheckbox_3ONXD {
   color: #CCC;
   margin-top: 10px;
-  width: 200px;
+  width: 180px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -693,6 +693,22 @@ a:link {
     margin-top: 2px; }
   .app_OptionCheckbox_3ONXD.app_WishlistCheckbox_3Yttg {
     height: 40px; }
+
+.app_SaveUserSettingsButton_q56LH {
+  height: 40px;
+  margin-left: 4px;
+  margin-right: 0px;
+  margin-top: 10px;
+  padding: 8px;
+  justify-content: center;
+  background-color: #00000000;
+  border-color: #DDD;
+  border-style: solid;
+  color: #DDD; }
+  .app_SaveUserSettingsButton_q56LH:hover {
+    background-color: #29455c; }
+  .app_SaveUserSettingsButton_q56LH:active {
+    background-color: #355D79; }
 
 .app_OptionSlider_2w3dR {
   display: flex;

@@ -810,18 +810,6 @@
             return e;
           })();
         },
-        get BASE_URL() {
-          var e = window.location.href;
-          return e.startsWith(this.STORE_BASE_URL)
-            ? this.STORE_BASE_URL
-            : e.startsWith(this.COMMUNITY_BASE_URL)
-            ? this.COMMUNITY_BASE_URL
-            : e.startsWith(this.PARTNER_BASE_URL)
-            ? this.PARTNER_BASE_URL
-            : e.startsWith(this.HELP_BASE_URL)
-            ? this.HELP_BASE_URL
-            : "";
-        },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
         DEV_MODE: !1,
@@ -1231,10 +1219,10 @@
         return w;
       }),
       n.d(t, "f", function() {
-        return S;
+        return k;
       }),
       n.d(t, "i", function() {
-        return k;
+        return S;
       }),
       n.d(t, "h", function() {
         return M;
@@ -1575,13 +1563,13 @@
                 (!c.bPreferPopLeft && g) || !b
                   ? (a.menuLeft = c.bOverlapHorizontal ? f : v)
                   : (a.menuRight = u - (c.bOverlapHorizontal ? v : f));
-              var S = l || r.top,
-                k = l || r.bottom,
+              var k = l || r.top,
+                S = l || r.bottom,
                 x = o.height;
-              c.bMatchHeight && ((x = k - S), (a.menuHeight = x));
-              var M = (c.bOverlapVertical ? k : S) - x,
+              c.bMatchHeight && ((x = S - k), (a.menuHeight = x));
+              var M = (c.bOverlapVertical ? S : k) - x,
                 C = 0 < M,
-                P = m - (c.bOverlapVertical ? S : k) - x,
+                P = m - (c.bOverlapVertical ? k : S) - x,
                 L = 0 < P,
                 O = (c.bPreferPopTop || !L) && C && !c.bDisablePopTop;
               if (!C && !L) {
@@ -1598,8 +1586,8 @@
               void 0 === a.menuBottom &&
                 void 0 === a.menuTop &&
                 (O
-                  ? (a.menuBottom = m - (c.bOverlapVertical ? k : S))
-                  : (a.menuTop = c.bOverlapVertical ? S : k)),
+                  ? (a.menuBottom = m - (c.bOverlapVertical ? S : k))
+                  : (a.menuTop = c.bOverlapVertical ? k : S)),
                 i
                   ? (a.menuHeight || (a.menuHeight = o.height),
                     a.menuWidth || (a.menuWidth = o.width),
@@ -1775,10 +1763,10 @@
           i
         );
       })(u.a);
-    function S(e) {
+    function k(e) {
       return a.createElement("div", { className: f.a.ContextMenuMouseOverlay });
     }
-    function k(e) {
+    function S(e) {
       var t = [],
         n = N.n(e),
         r = n.getSelection(),
@@ -2979,7 +2967,7 @@
       return (
         (t = e.strReadOnlySetting
           ? i.createElement(P, { strLabel: e.strReadOnlySetting })
-          : i.createElement(k, {
+          : i.createElement(S, {
               PrivacyStore: e.PrivacyStore,
               PrivacyKey: e.PrivacyKey,
               LimitPrivacyKey: e.LimitPrivacyKey
@@ -2988,7 +2976,7 @@
           i.Fragment,
           null,
           i.createElement(w, null, e.strLabel, ":", t),
-          i.createElement(S, null, e.children)
+          i.createElement(k, null, e.children)
         )
       );
     }
@@ -2999,14 +2987,14 @@
         e.children
       );
     }
-    function S(e) {
+    function k(e) {
       return i.createElement(
         "div",
         { className: "ProfilePrivacyDesc" },
         e.children
       );
     }
-    var k = (function(e) {
+    var S = (function(e) {
       function t() {
         return (null !== e && e.apply(this, arguments)) || this;
       }
@@ -3134,7 +3122,7 @@
           Object(s.c)([v.a], t.prototype, "OnCheckboxChecked", null),
           (t = Object(s.c)([b.a], t))
         );
-      })(k),
+      })(S),
       C = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -3438,10 +3426,10 @@
         return w;
       }),
       n.d(t, "w", function() {
-        return S;
+        return k;
       }),
       n.d(t, "v", function() {
-        return k;
+        return S;
       }),
       n.d(t, "N", function() {
         return x;
@@ -3480,10 +3468,10 @@
         return D;
       }),
       n.d(t, "h", function() {
-        return R;
+        return V;
       }),
       n.d(t, "l", function() {
-        return V;
+        return R;
       }),
       n.d(t, "f", function() {
         return H;
@@ -3492,10 +3480,10 @@
         return F;
       }),
       n.d(t, "gb", function() {
-        return W;
+        return z;
       }),
       n.d(t, "kb", function() {
-        return z;
+        return W;
       }),
       n.d(t, "A", function() {
         return j;
@@ -4298,7 +4286,7 @@
         })
       );
     }
-    function S(e) {
+    function k(e) {
       var t = "SVGIcon_Button SVGIcon_Headphones";
       return (
         e.className && (t += " " + e.className),
@@ -4361,7 +4349,7 @@
         )
       );
     }
-    function k() {
+    function S() {
       return o.createElement(
         "svg",
         {
@@ -4891,7 +4879,7 @@
         )
       );
     }
-    function R() {
+    function V() {
       return o.createElement(
         "svg",
         {
@@ -4916,7 +4904,7 @@
         })
       );
     }
-    function V(e) {
+    function R(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return o.createElement(
@@ -5084,7 +5072,7 @@
         })
       );
     }
-    function W(e) {
+    function z(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -5328,7 +5316,7 @@
         )
       );
     }
-    function z() {
+    function W() {
       return o.createElement(
         "svg",
         {

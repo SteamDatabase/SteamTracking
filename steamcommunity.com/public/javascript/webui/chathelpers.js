@@ -527,18 +527,6 @@
             return e;
           })();
         },
-        get BASE_URL() {
-          var e = window.location.href;
-          return e.startsWith(this.STORE_BASE_URL)
-            ? this.STORE_BASE_URL
-            : e.startsWith(this.COMMUNITY_BASE_URL)
-            ? this.COMMUNITY_BASE_URL
-            : e.startsWith(this.PARTNER_BASE_URL)
-            ? this.PARTNER_BASE_URL
-            : e.startsWith(this.HELP_BASE_URL)
-            ? this.HELP_BASE_URL
-            : "";
-        },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
         DEV_MODE: !1,

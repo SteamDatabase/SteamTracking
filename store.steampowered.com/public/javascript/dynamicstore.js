@@ -1895,6 +1895,37 @@ GStoreItemData = {
 			}
 		}
 
+		// If a non-empty list of explicit tag exclusions is specified, reject apps with one of those tags
+		if ( ApplicableSettings.explicitly_excluded_tags && Settings.explicitly_excluded_tags.length > 0 && rgAppData.tagids )
+		{
+			for ( var i = 0; i < rgAppData.tagids.length; ++i )
+			{
+				var tagid = rgAppData.tagids[i];
+				if ( Settings.explicitly_excluded_tags.includes( tagid ) )
+				{
+				    return false;
+				}
+			}
+		}
+
+		// If a non-empty list of explicit tag inclusions is specified, reject apps which don't have one of those tags
+		if ( ApplicableSettings.explicitly_included_tags && Settings.explicitly_included_tags.length > 0 )
+		{
+		    if ( !rgAppData.tagids )
+		    {
+		        return false;
+		    }
+
+		    for ( var i = 0; i < Settings.explicitly_included_tags.length; ++i )
+		    {
+		        var tagid = Settings.explicitly_included_tags[i];
+		        if ( !rgAppData.tagids.includes( tagid ) )
+		        {
+		            return false;
+		        }
+		    }
+		}
+
 		if ( rgAppData.no_main_cap )
 			return false;
 

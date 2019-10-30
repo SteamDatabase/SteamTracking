@@ -4824,13 +4824,20 @@
             (r.prototype.add_friends = function(e, t) {
               return n.Message.addToRepeatedWrapperField(this, 2, e, z, t);
             }),
+            (r.prototype.display_order = function() {
+              return n.Message.getField(this, 3);
+            }),
+            (r.prototype.set_display_order = function(e) {
+              n.Message.setField(this, 3, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
                 appid: n.Message.getField(t, 1),
-                friends: n.Message.toObjectList(t.friends(), z.toObject, e)
+                friends: n.Message.toObjectList(t.friends(), z.toObject, e),
+                display_order: n.Message.getField(t, 3)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -4850,6 +4857,9 @@
                     t.readMessage(i, z.deserializeBinaryFromReader),
                       e.add_friends(i);
                     break;
+                  case 3:
+                    e.set_display_order(t.readUint32());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -4864,7 +4874,9 @@
               var i;
               void 0 !== (i = n.Message.getField(e, 1)) && t.writeUint32(1, i),
                 0 < (i = e.friends()).length &&
-                  t.writeRepeatedMessage(2, i, z.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, i, z.serializeBinaryToWriter),
+                void 0 !== (i = n.Message.getField(e, 3)) &&
+                  t.writeUint32(3, i);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetFriendsAppsActivity_Response_AppFriendsInfo";
@@ -9182,6 +9194,8 @@
           return ee;
         });
       n.Message,
+        n.Message,
+        n.Message,
         n.Message,
         n.Message,
         n.Message,

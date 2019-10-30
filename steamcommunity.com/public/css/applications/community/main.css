@@ -914,6 +914,17 @@ b {
     cursor: pointer;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
 
+.partnereventshared_BrowseMoreButton_1Yrcl {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-decoration: none; }
+  .partnereventshared_BrowseMoreButton_1Yrcl:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+
 .partnereventshared_Button_1ABCO {
   color: #dfe3e6;
   transition: all 0.2s ease-out;
@@ -1114,6 +1125,14 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   padding: 0px 6px;
   color: white;
   margin-left: 10px; }
+
+.partnereventshared_SaleSectionHeader_2WMiQ {
+  font-weight: 300;
+  letter-spacing: 0px;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+  text-transform: uppercase; }
 
 .hoverposition_HoverPosition_3vg1v {
   position: fixed;
@@ -2134,8 +2153,8 @@ textarea:-webkit-autofill:focus,
   padding: 3px 5px;
   background-color: #4C6B22;
   color: #A4D007;
-  display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-right: 3px; }
 
 .broadcastwidgets_StoreSalePriceBox_2A_NW {
   font-size: 14px;
@@ -2464,7 +2483,9 @@ textarea:-webkit-autofill:focus,
 .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG {
   display: flex;
   flex-direction: column;
-  max-width: 155px; }
+  max-width: 155px;
+  /* Give each stream a fixed height so that the auto-scrolling logic can scroll the container correctly down when changing streams */
+  height: 104px; }
 
 .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG .broadcast_embeddable_viewer_count_1MrTW {
   background-color: rgba(0, 0, 0, 0.4);
@@ -4748,7 +4769,8 @@ iframe.steamTVLogin {
   flex-direction: row;
   justify-content: space-between;
   font-size: 11px;
-  line-height: 18px; }
+  line-height: 18px;
+  margin-left: 8px; }
 
 .partnereventstats_StatsCtnTitle_1LlRF {
   background-color: rgba(0, 0, 0, 0.2);
@@ -6156,6 +6178,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   bottom: 0px;
   height: 61px;
   padding: 12px;
+  text-align: left;
   color: rgba(255, 255, 255, 0.5);
   font-size: 13px; }
 
@@ -6457,15 +6480,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   border-radius: 19px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px; }
-
-.partnersaledisplay_SaleSectionHeader_1D0v6 {
-  font-weight: 300;
-  letter-spacing: 0px;
-  font-size: 18px;
-  color: #FFFFFF;
-  margin-bottom: 10px;
-  text-transform: uppercase; }
+  margin-bottom: 20px;
+  box-sizing: border-box; }
 
 .partnersaledisplay_AppSummaryWidgetCtn_2H8Bm {
   flex-grow: 2;
@@ -6482,9 +6498,6 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .partnersaledisplay_SaleBackground_2N8Se {
   background-position: center top;
   background-repeat: no-repeat; }
-  @media screen and (max-width: 768px) {
-    .partnersaledisplay_SaleBackground_2N8Se {
-      background-size: 100%; } }
 
 .partnersaledisplay_SaleSectionSubtext_17Fnl {
   margin-bottom: 10px; }
@@ -6769,7 +6782,13 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   .carousel .slide {
     background: none; }
   .slider {
-    background: none; }
+    background: initial;
+    border-radius: initial;
+    top: initial;
+    bottom: initial;
+    left: initial;
+    right: initial;
+    position: initial; }
 
 /* latin-ext */
 @font-face {
@@ -6787,6 +6806,24 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   font-weight: 400;
   font-display: swap;
   src: local("Jolly Lodger"), local("JollyLodger"), url(https://fonts.gstatic.com/s/jollylodger/v7/BXRsvFTAh_bGkA1uQ48dlB3lXuDS.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* latin-ext */
+@font-face {
+  font-family: 'New Rocker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("New Rocker"), local("NewRocker-Regular"), url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGofiIlP.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+/* latin */
+@font-face {
+  font-family: 'New Rocker';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("New Rocker"), local("NewRocker-Regular"), url(https://fonts.gstatic.com/s/newrocker/v8/MwQzbhjp3-HImzcCU_cJoGQfiA.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 /* thai */
@@ -8889,6 +8926,13 @@ input.partnereventemails_HeadlineInput_2lHX9 {
   background-color: #2e3138;
   position: relative;
   padding: 8px; }
+  .partnereventsale_SaleSection_SOMqO.partnereventsale_InEditor_2RNmZ {
+    padding: 16px; }
+  .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ {
+    border-radius: 4px;
+    padding: 16px;
+    margin-top: 16px;
+    background-color: #2e3138; }
 
 .partnereventsale_SmallText_1SKHf {
   color: gray;
@@ -8896,6 +8940,10 @@ input.partnereventemails_HeadlineInput_2lHX9 {
 
 .partnereventsale_FlexContainer_23PZF {
   display: flex; }
+  .partnereventsale_FlexContainer_23PZF > button:not(:first-of-type) {
+    margin-left: 6px; }
+  .partnereventsale_FlexContainer_23PZF > button:first-of-type {
+    margin-left: 0px; }
 
 .partnereventsale_SearchResults_IBZUs {
   overflow: scroll;
@@ -8933,6 +8981,32 @@ input.partnereventemails_HeadlineInput_2lHX9 {
     transition: all .2s ease-in-out; }
     .partnereventsale_customTitleOptionsCtn_18Ftt .partnereventsale_TitleRowCtn_3FgfJ:hover {
       background: rgba(67, 73, 83, 0.6); }
+
+.partnereventsale_SettingCtn_32UTR {
+  box-shadow: 0px 0px 20px black;
+  border-radius: 4px;
+  padding: 16px;
+  margin-top: 16px;
+  background-color: #2e3138; }
+  .partnereventsale_SettingCtn_32UTR .partnereventsale_Title_11Euz {
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: white;
+    display: flex;
+    line-height: 36px; }
+  .partnereventsale_SettingCtn_32UTR .partnereventsale_Columns_1uTkj {
+    display: flex;
+    flex-direction: row; }
+    .partnereventsale_SettingCtn_32UTR .partnereventsale_Columns_1uTkj .partnereventsale_LeftCol_3CdEC {
+      flex-grow: 0;
+      flex-basis: 50%; }
+    .partnereventsale_SettingCtn_32UTR .partnereventsale_Columns_1uTkj .partnereventsale_RightCol_ly_n8 {
+      flex-grow: 0;
+      flex-basis: 50%;
+      margin-left: 16px;
+      padding-left: 16px;
+      border-left: 1px solid #505662; }
 
 .communityagegate_adult_content_age_gate_2PyPU {
   font-family: "Motiva Sans", Sans-serif;
@@ -9271,8 +9345,10 @@ button.DialogButton::-moz-focus-inner {
 .Destructive .ModalPosition_TopBar {
   background: linear-gradient(to right, #c44848, #c44848); }
 
-.ModalDialogPopup .ModalPosition,
-.ModalDialogPopup .ModalPosition_Content {
+/* Needs to target only the ModalPosition provided to the popup window and avoid being applied
+   to the additional, generic popups that can be placed inside the modal */
+.ModalDialogPopup .PopupFullWindow > .ModalPosition,
+.ModalDialogPopup .PopupFullWindow > .ModalPosition > .ModalPosition_Content {
   max-width: none;
   max-height: none;
   width: 100%;

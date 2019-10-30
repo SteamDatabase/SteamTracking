@@ -46,7 +46,8 @@ body .responsive_page_content .img {
 }
 
 body.v6 .page_content  {
-	width: 1425px;
+	max-width: 1425px;
+	width: 100%;
 	margin: auto;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -68,6 +69,10 @@ body.v6 .page_content  {
 .side-panel .page_content img {
 	max-width: 386px;
 	max-height: 218px;
+}
+
+.page_content .side-panel .box.focused {
+	width: 100%;
 }
 
 .page_content h1 {
@@ -92,13 +97,12 @@ body.v6 .page_content  {
 .page_content main {
 	position: relative;
 	background: none;
-	width: 1445px;
 	margin: 5px auto;
 	padding: 0px 25px 25px 0px;
 }
 
 .page_content .side-panel {
-  width: 450px;
+  width: 31.75%;
   background: linear-gradient(0deg, #3A5774cc 0.01%, #286591cc 49.2%, rgba(36, 38, 39, 0.69) 78.28%, rgba(0, 0, 0, 0) 101.55%);
   height: 847px;
   display: inline-block;
@@ -114,12 +118,14 @@ body.v6 .page_content  {
 }
 
 .page_content .grid-container {
+	width: calc(100% - 33%);
 	display: inline-block;
 	vertical-align: top;
 }
 
 .page_content .breadcrumbs {
 	color: var(--primary-color);
+	width: calc(68.25% - 10px);
 	height: 50px;
 	margin-left: 4px;
 	padding-left: 0px;
@@ -147,7 +153,6 @@ body.v6 .page_content  {
 
 .page_content .breadcrumbs .note-preferences p{
 	width: 1450px;
-	height: 100%;
 	display: inline;
 	position: relative;
 	top: 25px;
@@ -212,7 +217,7 @@ body.v6 .page_content  {
 	flex-wrap: wrap;
 }
 .page_content .box-header {
-	width: 292px;
+	width: calc(100% / 3 - 10px);
 	height: 40px;
 
 	margin: 5px;
@@ -242,8 +247,7 @@ body.v6 .page_content  {
 }
 
 .page_content .box {
-	width: 292px;
-	height: 259px;
+	width: calc(100% / 3 - 10px);
 	color: white;
 	margin: 5px;
 	background: linear-gradient(0deg, #3F6A8D22 0%, #3F6A8D55 18%, rgba(112, 195, 255, 0.25) 51.07%, #24282f66 95%, #24282f77 100% );	
@@ -297,8 +301,10 @@ body.v6 .page_content  {
 }
 
 .page_content .box-microtrailer {
+	height: 100%;
 	width: 100%;
-	height: 142px;
+	position:absolute;
+	top:0px;
 	margin-bottom: 5px;
 	overflow: hidden;
 	transition-timing-function: ease-in;
@@ -306,8 +312,7 @@ body.v6 .page_content  {
 }
 
 .page_content .box-microtrailer video{
-	width: 100%;
-	height: 100%;
+	width: 101%;
 	object-fit: cover;
 	transition-timing-function: ease-in;
 	transition-duration: .3s;
@@ -372,7 +377,7 @@ body.v6 .page_content  {
 
 .page_content .box-image img {
 	display: block;
-	height: 142px;
+	width: 100%;
 }
 
 .page_content .box.focused .box-image img
@@ -424,13 +429,17 @@ body.v6 .page_content  {
 	margin-left: 5px;
 	right: 5px;
 	left: 5px;
-	margin-top: 2px;
+	margin-top: 0px;
+	margin-bottom: 2px;
 	bottom: 14px;
-	height: 100px;
 	font-size: 12px;
 	opacity: 0.7;
 	transition-timing-function: ease-in;
 	transition-duration: .3s;
+}
+
+.page_content .box-images-big {
+	position: relative;
 }
 
 .page_content .box-images-big img, .page_content .box-images-small img, .page_content .box-images-big .focus-box-microtrailer  {
@@ -440,26 +449,33 @@ body.v6 .page_content  {
 .page_content .box-images-big img, .page_content .box-images-big .focus-box-microtrailer  {
 	margin-bottom: 22px;
 	max-height: 217px;
-	width: 386px;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .page_content .box-images-big .focus-box-microtrailer {
-	margin-bottom: 26px;
+	position: absolute;
+	top: 0px;
+	margin-bottom: 22px;
+	overflow: hidden;
 }
 
 .page_content .box-images-small {
-	position: absolute;
-	mmargin-bottom: 8px;
+	position: relative;
+	bottom:5px;
+	width:100%;
+	margin-bottom: 8px;
 }
 
 .page_content .box-images-small img {
 	position: relative;
-	width:183px;
-	height: 103px;
-	margin-right: 20px;
-	margin-bottom: 15px;
+	width:calc(50% - 5px);
+	margin-right: 10px;
+	margin-bottom: 10px;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.page_content .box-images-small img:nth-child(2n){
+	margin-right:0px;
 }
 
 .page_content .box-tags .tag-cloud {
@@ -496,8 +512,6 @@ body.v6 .page_content  {
 }
 
 .focus-box-microtrailer {
-	width: 100%;
-	height: 216.8px;
 	margin-bottom: 22px;
 	overflow: hidden;
 }
@@ -512,7 +526,6 @@ body.v6 .page_content  {
 
 .focus-box-microtrailer video{
 	width: 100%;
-	height: 100%;
 	object-fit: cover;
 }
 
@@ -664,7 +677,7 @@ round buttons
 */
 
 .page_content .button-round{
-	width: 140px;
+	width: calc(10%);
 	height: 40px;
 	outline: none;
 	border: none; -webkit-border-radius: 50%; -moz-border-radius: 50%; 
@@ -700,17 +713,17 @@ round buttons
 }
 
 .page_content .nav-button-wrapper {
-	
+	position:relative;
 }
 
 .page_content .button-back {
 	position: absolute;
-	top: 60px;
-	left: 1067px; 
+	top: -45px;
+	right: calc(12.5%);
 }
 
 .page_content .button-back p {
-	position: relative;
+	position: absolute;
 	padding-left: 10px;
 	color: #eee;
 	top: 11px;
@@ -725,18 +738,18 @@ round buttons
 }
 
 .page_content .button-back img {
-	position: relative;
+	position: absolute;
 	width: 26px;
 	height: 26px;
-	bottom: 10px;
-	right: 50px;
+	bottom: 7px;
+	left: 7px;
 	opacity: 0.9;
 }
 
 .page_content .button-refresh {
 	position: absolute;
-	top: 60px;
-	left: 1220px;
+	top: -45px;
+	right: 9px;
 }
 
 .page_content .button-refresh:hover p {
@@ -745,7 +758,7 @@ round buttons
 }
 
 .page_content .button-refresh p {
-	position: relative;
+	position: absolute;
 	top: 11px;
 	opacity: 0.8;
 	text-align: left;
@@ -754,12 +767,12 @@ round buttons
 }
 
 .page_content .button-refresh img {
-	position: relative;
+	position: absolute;
 	opacity: 0.9;
 	width: 24px;
 	height: 24px;
-	bottom: 9px;
-	right: 50px;
+	bottom: 7px;
+	left: 7px;
 
 }
 
@@ -771,11 +784,6 @@ round buttons
 	width: 450px;
 	background-repeat: no-repeat;
 	z-index:4;
-}
-
-.page_content .box.focused .box-content {
-	position: relative;
-	height: 100%
 }
 
 .page_content .search-container {
@@ -799,8 +807,14 @@ round buttons
 
 .container-checkbox-microtrailers {
 	position: absolute;
-	right: 90px;
-	top: 30px;
+	right: 35px;
+	top: 40px;
+}
+
+.container-checkbox-microtrailers input {
+	top: 5px;
+	position: absolute;
+	left: -15px;
 }
 
 .label-checkbox-microtrailers {
@@ -908,12 +922,14 @@ round buttons
 	margin-left: 5px;
 	padding-top: 20px;
 	font-weight: 500;
-	width: 89%;
+	width: 88%;
 	background-color:transparent;
 	border: 0 none;
 	color: #ffffffee	;
 	outline: none;
 	text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+	position:relative;
+	z-index:2;
 }
 
 .page_content .games-like {

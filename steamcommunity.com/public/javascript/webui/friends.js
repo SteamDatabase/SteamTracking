@@ -5586,18 +5586,6 @@
             return e;
           })();
         },
-        get BASE_URL() {
-          var e = window.location.href;
-          return e.startsWith(this.STORE_BASE_URL)
-            ? this.STORE_BASE_URL
-            : e.startsWith(this.COMMUNITY_BASE_URL)
-            ? this.COMMUNITY_BASE_URL
-            : e.startsWith(this.PARTNER_BASE_URL)
-            ? this.PARTNER_BASE_URL
-            : e.startsWith(this.HELP_BASE_URL)
-            ? this.HELP_BASE_URL
-            : "";
-        },
         FRIENDSUI_BETA: !1,
         STEAM_TV: !1,
         DEV_MODE: !1,
@@ -6803,6 +6791,7 @@
       EventBarTitle: "partnereventshared_EventBarTitle_2iysK",
       EventBarBack: "partnereventshared_EventBarBack_1Xr6O",
       EditPreviewButton: "partnereventshared_EditPreviewButton_2PEIa",
+      BrowseMoreButton: "partnereventshared_BrowseMoreButton_QTrhr",
       Icon: "partnereventshared_Icon_fCQJR",
       Primary: "partnereventshared_Primary_3uuII",
       ClearThings: "partnereventshared_ClearThings_1p6-J",
@@ -6834,7 +6823,8 @@
       HalfColumn: "partnereventshared_HalfColumn_iCcAr",
       ThemedCtn: "partnereventshared_ThemedCtn_2jzrF",
       Halloween: "partnereventshared_Halloween_juiix",
-      tooltip_Ctn: "partnereventshared_tooltip_Ctn_1JlN_"
+      tooltip_Ctn: "partnereventshared_tooltip_Ctn_1JlN_",
+      SaleSectionHeader: "partnereventshared_SaleSectionHeader_tYyZc"
     };
   },
   "3/mw": function(e, t, n) {
@@ -8330,7 +8320,8 @@
       s = n("3zHc"),
       c = n("VtNY"),
       l = n("LAqV"),
-      m = (function() {
+      m = n("tkkQ"),
+      d = (function() {
         function e(e, t, n, o, i, r, a) {
           (this.unAccountIDInviter = e),
             (this.rtTimestamp = t),
@@ -8354,13 +8345,19 @@
                   "/" +
                   t.ConvertTo64BitString())
               : this.remoteplayString
-              ? (e =
-                  "steam://remoteplay/connect/" +
-                  t.ConvertTo64BitString() +
-                  "?appid=" +
-                  this.appID +
-                  "&" +
-                  this.remoteplayString)
+              ? (e = m.a.IN_MOBILE
+                  ? "https://s.team/remoteplay/connect/" +
+                    t.ConvertTo64BitString() +
+                    "?appid=" +
+                    this.appID +
+                    "&" +
+                    this.remoteplayString
+                  : "steam://remoteplay/connect/" +
+                    t.ConvertTo64BitString() +
+                    "?appid=" +
+                    this.appID +
+                    "&" +
+                    this.remoteplayString)
               : ((e =
                   "steam://rungame/" +
                   this.appID +
@@ -8390,9 +8387,9 @@
           e
         );
       })(),
-      d = { dismisstimes: {} },
-      h = "GameInvites",
-      f = (function() {
+      h = { dismisstimes: {} },
+      f = "GameInvites",
+      _ = (function() {
         function e() {
           (this.m_mapGameInvites = new Map()),
             (this.m_mapDismissedInvites = i.x.map()),
@@ -8401,7 +8398,7 @@
         return (
           (e.prototype.Init = function() {
             var r = this;
-            l.f.SettingsStore.GetObjectFromLocalStorageWhenReady(h, d).then(
+            l.f.SettingsStore.GetObjectFromLocalStorageWhenReady(f, h).then(
               function(e) {
                 var t = new Date();
                 for (var n in (t.setDate(t.getDate() - 14),
@@ -8422,7 +8419,7 @@
               var c = !1,
                 l = this.m_mapDismissedInvites.get(e);
               l && (c = t <= l),
-                (s = new m(e, t, n, o, i, c, r)),
+                (s = new d(e, t, n, o, i, c, r)),
                 a.set(t, s),
                 a.forEach(function(e) {
                   e.rtTimestamp < t && e.DismissInvite();
@@ -8440,14 +8437,14 @@
               this.WriteToLocalStorage());
           }),
           (e.prototype.WriteToLocalStorage = function() {
-            l.f.SettingsStore.StoreObjectInLocalStorage(h, {
+            l.f.SettingsStore.StoreObjectInLocalStorage(f, {
               dismisstimes: this.m_mapDismissedInvites
             });
           }),
           e
         );
       })(),
-      _ = (function() {
+      g = (function() {
         function e() {
           this.bCollapsed = !1;
         }
@@ -8462,18 +8459,18 @@
           e
         );
       })(),
-      g = "ChatEmbeds",
-      b = (function() {
+      b = "ChatEmbeds",
+      v = (function() {
         function e() {
           this.m_mapEmbed = new i.b();
         }
         return (
           (e.prototype.Init = function() {
             var o = this;
-            l.f.SettingsStore.GetObjectFromLocalStorageWhenReady(g, {}).then(
+            l.f.SettingsStore.GetObjectFromLocalStorageWhenReady(b, {}).then(
               function(e) {
                 for (var t in (o.m_mapEmbed.clear(), e)) {
-                  var n = new _();
+                  var n = new g();
                   Object.assign(n, e[t]), o.m_mapEmbed.set(t, n);
                 }
               }
@@ -8491,7 +8488,7 @@
           (e.prototype.GetOrCreateEmbedData = function(e, t) {
             var n = this.GetKey(e, t),
               o = this.m_mapEmbed.get(n);
-            return o || ((o = new _()).bCollapsed = !1), o;
+            return o || ((o = new g()).bCollapsed = !1), o;
           }),
           (e.prototype.SaveEmbedData = function(e, t, n) {
             n.IsEmpty()
@@ -8501,7 +8498,7 @@
               this.WriteToLocalStorage();
           }),
           (e.prototype.WriteToLocalStorage = function() {
-            l.f.SettingsStore.StoreObjectInLocalStorage(g, this.m_mapEmbed);
+            l.f.SettingsStore.StoreObjectInLocalStorage(b, this.m_mapEmbed);
           }),
           (e.prototype.GetCollapsedState = function(e, t) {
             var n = this.m_mapEmbed.get(this.GetKey(e, t));
@@ -8529,15 +8526,15 @@
           e
         );
       })(),
-      v = n("rsEv"),
-      S = n("V7Fl"),
-      y = n("1KZt"),
-      C = n("R/D/"),
-      O = (function(e) {
+      S = n("rsEv"),
+      y = n("V7Fl"),
+      C = n("1KZt"),
+      O = n("R/D/"),
+      I = (function(e) {
         function t() {
           var c = (null !== e && e.apply(this, arguments)) || this;
           return (
-            (c.fnRecvEmoticonList = Object(o.a)(9331, C.h, function(e) {
+            (c.fnRecvEmoticonList = Object(o.a)(9331, O.h, function(e) {
               for (
                 var t = [], n = 0, o = e.Body().emoticons();
                 n < o.length;
@@ -8575,24 +8572,23 @@
           (t.prototype.RequestEmoticonListInternal = function() {
             var t = this;
             this.m_CMInterface.RunWhenLoggedOn(function() {
-              var e = p.b.Init(C.j, 9330);
+              var e = p.b.Init(O.j, 9330);
               t.m_CMInterface.Send(e);
             });
           }),
           t
         );
-      })(y.a),
-      I = n("geE1"),
-      E = n("UqDm"),
-      w = n("E7zH");
-    function M(e, t) {
+      })(C.a),
+      E = n("geE1"),
+      w = n("UqDm"),
+      M = n("E7zH");
+    function D(e, t) {
       if (!e || !t) return [];
       for (var n = [], o = e.values(), i = o.next(); !i.done; )
         t(i.value) && n.push(i.value), (i = o.next());
       return n;
     }
-    var D = n("/FkP"),
-      T = n("tkkQ"),
+    var T = n("/FkP"),
       G = n("oh5H"),
       R = n("/SYB"),
       j = n("XaMz"),
@@ -8612,12 +8608,12 @@
           (this.LOG = R.b.create(function() {
             return "chatstore";
           }, !1)),
-            (this.m_EmoticonStore = new O()),
-            (this.m_FriendChatStore = new I.b(this)),
+            (this.m_EmoticonStore = new I()),
+            (this.m_FriendChatStore = new E.b(this)),
             (this.m_InviteStore = new c.a(this)),
-            (this.m_GameInviteStore = new f()),
-            (this.m_ChatRoomGroupDisplayPrefs = new S.c()),
-            (this.m_EmbedStore = new b()),
+            (this.m_GameInviteStore = new _()),
+            (this.m_ChatRoomGroupDisplayPrefs = new y.c()),
+            (this.m_EmbedStore = new v()),
             (this.m_mapChatGroups = i.x.map()),
             (this.m_mapActiveChatGroupsToRefCount = i.x.map()),
             (this.m_mapClanChatsByClanID = new Map()),
@@ -8685,7 +8681,7 @@
                       unOrdinal: a.ordinal()
                     });
                 }
-                return n.UpdateChatMessageDeletedState(o, D.e.Deleting), 1;
+                return n.UpdateChatMessageDeletedState(o, T.e.Deleting), 1;
               }
             )),
             (this.m_IncomingChatRoomHeaderStateChangeHandler = Object(o.c)(
@@ -8890,7 +8886,7 @@
                       o = n.group_summary().chat_group_id();
                     if (o) {
                       var i = a.m_mapChatGroups.get(o);
-                      i || ((i = new S.b(a, o)), a.m_mapChatGroups.set(o, i)),
+                      i || ((i = new y.b(a, o)), a.m_mapChatGroups.set(o, i)),
                         i.SetInitialGroupState(n.group_summary()),
                         i.UpdateUserState(n.user_chat_group_state()),
                         a.OnGroupAdded(i),
@@ -8925,7 +8921,7 @@
           }),
           (e.prototype.AddCreatedChatRoomGroup = function(e, t, n, o) {
             if (!this.m_mapChatGroups.has(t)) {
-              var i = new S.b(this, t);
+              var i = new y.b(this, t);
               this.m_mapChatGroups.set(t, i),
                 i.UpdateGroupState(n),
                 i.UpdateUserState(o),
@@ -8938,7 +8934,7 @@
             if (this.m_mapChatGroups.has(n)) {
               (o = this.m_mapChatGroups.get(n)).SetInitialGroupState(e);
             } else {
-              var o = new S.b(this, n);
+              var o = new y.b(this, n);
               this.m_mapChatGroups.set(n, o),
                 o.SetInitialGroupState(e),
                 t && o.UpdateUserState(t),
@@ -8949,7 +8945,7 @@
             var n = t.chat_group_id(),
               o = this.m_mapChatGroups.get(n);
             return (
-              o || ((o = new S.b(this, n)), this.m_mapChatGroups.set(n, o)),
+              o || ((o = new y.b(this, n)), this.m_mapChatGroups.set(n, o)),
               e instanceof u.b
                 ? o.UpdateGroupState(e)
                 : o.SetInitialGroupState(e),
@@ -9099,7 +9095,7 @@
           }),
           Object.defineProperty(e.prototype, "currentChatRoomGroups", {
             get: function() {
-              return M(this.m_mapChatGroups, function(e) {
+              return D(this.m_mapChatGroups, function(e) {
                 return e.BIsCurrentUserAMember();
               });
             },
@@ -9113,7 +9109,7 @@
           }),
           Object.defineProperty(e.prototype, "ClanChatRooms", {
             get: function() {
-              return M(this.m_mapChatGroups, function(e) {
+              return D(this.m_mapChatGroups, function(e) {
                 return e.BIsClanChatRoom();
               });
             },
@@ -9235,7 +9231,7 @@
                       }
                     });
                     var e = function(e) {
-                        T.a.IN_CLIENT &&
+                        m.a.IN_CLIENT &&
                           SteamClient.WebChat.SetActiveClanChatIDs(a),
                           e && void 0 !== n && ClearBackgroundTimeout(n),
                           (s.m_bSendingActiveGroups = !1),
@@ -9357,7 +9353,7 @@
           }),
           (e.prototype.FillInChatUsabilityMetrics = function(e) {
             e.metrics().set_group_chat_count(
-              E.b(Array.from(this.m_mapChatGroups.values()), function(e) {
+              w.b(Array.from(this.m_mapChatGroups.values()), function(e) {
                 return e.BIsCurrentUserAMember();
               })
             ),
@@ -9447,7 +9443,7 @@
             (n.m_scrollTop = -1),
             (n.m_scrollHeight = -1),
             (n.m_clientHeight = 1),
-            (n.m_textEntryFocusCallbacks = new w.a()),
+            (n.m_textEntryFocusCallbacks = new M.a()),
             (n.m_tabset = e),
             (n.m_chat = t),
             n.m_tabset && n.m_chat.AddChatView(n),
@@ -9477,10 +9473,10 @@
             this.OnViewClosed();
           }),
           (e.prototype.IsChatRoom = function() {
-            return this.m_chat instanceof v.a;
+            return this.m_chat instanceof S.a;
           }),
           (e.prototype.IsFriendChat = function() {
-            return this.m_chat instanceof I.a;
+            return this.m_chat instanceof E.a;
           }),
           (e.prototype.IsVoiceActive = function() {
             return this.m_chat.BVoiceActive();
@@ -9511,16 +9507,16 @@
           (e.prototype.GetVisibilityState = function() {
             if (
               !this.m_tabset ||
-              (!this.m_tabset.is_popup_active && !T.a.IN_MOBILE)
+              (!this.m_tabset.is_popup_active && !m.a.IN_MOBILE)
             )
               return 0;
             var e = void 0;
             return (
               this.m_tabset.activeTab &&
                 (e = this.m_tabset.activeTab.GetChatView()),
-              e != this || (!this.m_tabset.is_popup_visible && !T.a.IN_MOBILE)
+              e != this || (!this.m_tabset.is_popup_visible && !m.a.IN_MOBILE)
                 ? 1
-                : this.m_tabset.is_popup_focused || T.a.IN_MOBILE
+                : this.m_tabset.is_popup_focused || m.a.IN_MOBILE
                 ? this.m_bScrolledToBottom && !l.f.IdleTracker.BIsUserIdle(60)
                   ? 4
                   : 3
@@ -9606,7 +9602,7 @@
             this.m_rgOnChatFrameChangedCallbacks.push(e);
           }),
           (e.prototype.RemoveOnChatFrameChangedCallback = function(e) {
-            E.c(this.m_rgOnChatFrameChangedCallbacks, e);
+            w.c(this.m_rgOnChatFrameChangedCallbacks, e);
           }),
           (e.prototype.OnChatFrameChanged = function() {
             for (
@@ -23749,15 +23745,17 @@
               ? e + "_" + this.m_CM.steamid.GetAccountID()
               : null;
           }),
-          (e.prototype.GetObjectFromLocalStorageWhenReady = function(n, o) {
-            var i = this;
-            return this.m_bReady
-              ? Promise.resolve(this.GetObjectFromLocalStorage(n, o))
-              : new Promise(function(e, t) {
-                  i.RunOnReady(function() {
-                    e(i.GetObjectFromLocalStorage(n, o));
-                  });
-                });
+          (e.prototype.GetObjectFromLocalStorageWhenReady = function(t, n) {
+            return Object(s.b)(this, void 0, void 0, function() {
+              return Object(s.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return [4, this.WhenReady()];
+                  case 1:
+                    return e.sent(), [2, this.GetObjectFromLocalStorage(t, n)];
+                }
+              });
+            });
           }),
           (e.prototype.GetObjectFromLocalStorage = function(e, o) {
             var t = this.GetAccountSpecificLocalStorageKey(e);
@@ -23777,15 +23775,17 @@
             var n = this.GetAccountSpecificLocalStorageKey(e);
             return !!n && (this.m_Storage.StoreObject(n, t), !0);
           }),
-          (e.prototype.GetFlagFromLocalStorageWhenReady = function(n) {
-            var o = this;
-            return this.m_bReady
-              ? Promise.resolve(this.GetFlagFromLocalStorage(n))
-              : new Promise(function(e, t) {
-                  o.RunOnReady(function() {
-                    e(o.GetFlagFromLocalStorage(n));
-                  });
-                });
+          (e.prototype.GetFlagFromLocalStorageWhenReady = function(t) {
+            return Object(s.b)(this, void 0, void 0, function() {
+              return Object(s.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return [4, this.WhenReady()];
+                  case 1:
+                    return e.sent(), [2, this.GetFlagFromLocalStorage(t)];
+                }
+              });
+            });
           }),
           (e.prototype.GetFlagFromLocalStorage = function(e) {
             var t = this.GetAccountSpecificLocalStorageKey(e);
@@ -23804,6 +23804,22 @@
                 : this.m_Storage.RemoveObject(n),
               !0)
             );
+          }),
+          (e.prototype.BFlagExistsInLocalStorage = function(e) {
+            var t = this.GetAccountSpecificLocalStorageKey(e);
+            return t
+              ? this.m_Storage.GetString(t).then(function(e) {
+                  return null !== e;
+                })
+              : Promise.reject("Storage not ready");
+          }),
+          (e.prototype.WhenReady = function() {
+            var t = this;
+            return this.m_bReady
+              ? Promise.resolve()
+              : new Promise(function(e) {
+                  return t.RunOnReady(e);
+                });
           }),
           (e.prototype.SetReady = function() {
             if (this.m_bFriendSettingsReady && this.m_CM.steamid.BIsValid()) {
@@ -24365,6 +24381,8 @@
               return Object(s.e)(this, function(e) {
                 return Object(b.a)("RemotePlay.BCanAcceptInviteForGame")
                   ? [2, SteamClient.RemotePlay.BCanAcceptInviteForGame(t, n)]
+                  : c.a.COUNTRY && -1 !== n.indexOf(c.a.COUNTRY)
+                  ? [2, !1]
                   : [2, !0];
               });
             });
@@ -25734,7 +25752,13 @@
                             b.a.get(
                               p.b.STORE_BASE_URL +
                                 "actions/ajaxresolvepackages",
-                              { params: { packageids: t.join(",") } }
+                              {
+                                params: {
+                                  packageids: t.join(","),
+                                  cc: p.b.COUNTRY || "US",
+                                  l: p.b.LANGUAGE
+                                }
+                              }
                             )
                           ]
                         : [3, 2]
@@ -25786,7 +25810,13 @@
                             4,
                             b.a.get(
                               p.b.STORE_BASE_URL + "actions/ajaxresolvebundles",
-                              { params: { bundleids: t.join(",") } }
+                              {
+                                params: {
+                                  bundleids: t.join(","),
+                                  cc: p.b.COUNTRY || "US",
+                                  l: p.b.LANGUAGE
+                                }
+                              }
                             )
                           ]
                         : [3, 2]
@@ -26002,7 +26032,13 @@
                       : ((t = new C(n)),
                         this.m_mapAppIDToInfo.set(n, t),
                         n && 0 < n
-                          ? [4, t.HintLoadBroadcastAppData("partner-events")]
+                          ? [
+                              4,
+                              t.HintLoadBroadcastAppData(
+                                (p.b.IN_CLIENT ? "library-" : "") +
+                                  "partner-events"
+                              )
+                            ]
                           : [3, 2]);
                   case 1:
                     e.sent(), (e.label = 2);
@@ -57387,6 +57423,7 @@
           return (
             (e.bHadPlayers = !1),
             (e.nCurrentAppID = 0),
+            (e.bUnmounted = !1),
             (e.state = { gameVolumeNumber: -1, bAllowDesktopStream: !1 }),
             e
           );
@@ -57406,9 +57443,8 @@
                         : [3, 2]
                       : [3, 3];
                   case 1:
-                    (t = e.sent()),
-                      this.setState({ gameVolumeNumber: t }),
-                      (e.label = 2);
+                    if (((t = e.sent()), this.bUnmounted)) return [2];
+                    this.setState({ gameVolumeNumber: t }), (e.label = 2);
                   case 2:
                     Object(l.a)("RemotePlay.RegisterForRemoteClientStopped") &&
                       SteamClient.RemotePlay.RegisterForRemoteClientStopped(
@@ -57425,9 +57461,10 @@
             });
           }),
           (e.prototype.componentWillUnmount = function() {
-            this.props.bIsHost
-              ? p.f.RemotePlayStore.CancelAllInvitesAndSessions()
-              : p.f.RemotePlayStore.StopStreamingClient();
+            (this.bUnmounted = !0),
+              this.props.bIsHost
+                ? p.f.RemotePlayStore.CancelAllInvitesAndSessions()
+                : p.f.RemotePlayStore.StopStreamingClient();
           }),
           (e.prototype.RemoteClientStopped = function(e) {
             this.props.closeModal();
@@ -57701,6 +57738,7 @@
             this.props.isHost ||
               (e.push(
                 d.createElement(M, {
+                  key: "player_host",
                   accountid: this.props.streamHost.accountid,
                   isHost: this.props.isHost,
                   isHostPlayer: !0
@@ -57711,9 +57749,16 @@
               for (var o = 0; o < p.f.RemotePlayStore.player_props_count; o++) {
                 var i = p.f.RemotePlayStore.GetPlayerPropsByIndex(o);
                 i.bSession &&
-                  (t || e.push(d.createElement("div", { className: C.Spacer })),
+                  (t ||
+                    e.push(
+                      d.createElement("div", {
+                        key: "spacer_" + n + "_" + o,
+                        className: C.Spacer
+                      })
+                    ),
                   e.push(
                     d.createElement(M, {
+                      key: "player_client_" + o,
                       accountid: i.friend.accountid,
                       isHost: this.props.isHost
                     })
@@ -59414,7 +59459,7 @@
             ),
               11 != this.m_eWebLogonState &&
                 ((this.m_eWebLogonState = 11),
-                this.m_CMInterface.Connect(),
+                this.m_CMInterface.Connect().catch(function() {}),
                 m.a
                   .get(a.a.TOKEN_URL, { method: "POST" })
                   .then(function(e) {
@@ -60527,13 +60572,13 @@
       })(R.Component),
       D = n("bbBM"),
       k = n("uWOQ"),
-      T = (function(n) {
-        function e(e) {
-          var t = n.call(this, e) || this;
-          return (t.state = { bCanAcceptRemotePlayInvite: !1 }), t;
+      T = (function(t) {
+        function e() {
+          var e = (null !== t && t.apply(this, arguments)) || this;
+          return (e.state = { bCanAcceptRemotePlayInvite: !1 }), e;
         }
         return (
-          Object(l.d)(e, n),
+          Object(l.d)(e, t),
           (e.prototype.componentDidMount = function() {
             return Object(l.b)(this, void 0, void 0, function() {
               var t, n, o, i;
@@ -69184,9 +69229,11 @@
         return (
           Object(d.d)(e, n),
           (e.prototype.componentDidUpdate = function(e) {
-            this.props.checked != this.state.checked &&
+            e.checked != this.props.checked &&
+              this.props.checked != this.state.checked &&
               this.setState({ checked: this.props.checked }),
-              this.props.disabled != this.state.disabled &&
+              e.disabled != this.props.disabled &&
+                this.props.disabled != this.state.disabled &&
                 this.setState({ disabled: this.props.disabled });
           }),
           (e.prototype.shouldComponentUpdate = function(e, t) {
@@ -69327,6 +69374,7 @@
               : this.KeyDown(e);
           }),
           (t.prototype.render = function() {
+            console.log(this.props.checked, this.state.checked);
             var e =
               "DialogOnOffToggle _DialogInputContainer _DialogLayout " +
               (this.props.classname ? this.props.classname : "");
@@ -79241,13 +79289,17 @@ and limitations under the License.
                           function() {
                             console.log(
                               "Failed to connect to CM " +
-                                e +
-                                " of 3: " +
+                                (e + 1) +
+                                " of " +
+                                n.length +
+                                ": " +
                                 t.strHost
                             ),
                               ++r === n.length &&
                                 (console.log(
-                                  "Failed to connect to all 3 best CMs"
+                                  "Failed to connect to all " +
+                                    n.length +
+                                    " best CMs"
                                 ),
                                 i());
                           }

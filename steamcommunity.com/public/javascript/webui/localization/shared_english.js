@@ -262,22 +262,32 @@ LocalizationReady("shared", "english", {
   EventDashBoard_SummaryStats_Admin_Title: "(Visible only to admins)",
   EventDashBoard_SummaryStats_Title: "Total Unique Impressions and Views",
   EventDashBoard_SummaryStats_Desc:
-    "(Beta) These are impressions and reads for your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
+    "(Beta) These are impressions and views of your events and announcements by unique logged-in users. This is only for new events and announcements crafted with this editor.",
   EventDashBoard_SummaryStats_Link: "Click here for more details.",
-  EventDashBoard_Summary_LibraryHome_Shown: "Library Home Page Impressions:",
-  EventDashBoard_Summary_LibraryHome_Read: "Library Home Page Reads:",
+  EventDashBoard_Summary_LibraryHome_Shown:
+    "Impressions of events (cover image):",
+  EventDashBoard_Summary_LibraryHome_Read:
+    "Clicks on an event to view details:",
   EventDashBoard_Summary_AppDetailSpotlight_Shown:
-    "Library App Detail Spotlight Impressions:",
+    "Impressions of spotlight banner:",
   EventDashBoard_Summary_AppDetailSpotlight_Read:
-    "Library App Detail Spotlight Reads:",
+    "Clicks on a spotlight banner to view details:",
   EventDashBoard_Summary_AppDetailActivity_Shown:
-    "Library App Detail Activity Feed Impressions:",
+    "Impressions of events in activity feed:",
   EventDashBoard_Summary_AppDetailActivity_Read:
-    "Library App Detail Activity Feed Reads:",
-  EventDashBoard_Summary_StoreAppPage_Shown: "Store Product Page Impressions:",
-  EventDashBoard_Summary_StoreAppPage_Read: "Store Product Page Reads:",
-  EventDashBoard_Summary_Community_Shown: "Steam Community Impressions:",
-  EventDashBoard_Summary_Community_Read: "Steam Community Reads:",
+    "Clicks on an event to view details:",
+  EventDashBoard_Summary_StoreAppPage_Shown:
+    "Impressions of events (cover image):",
+  EventDashBoard_Summary_StoreAppPage_Read:
+    "Clicks on an event to view details:",
+  EventDashBoard_Summary_Community_Shown: "Impressions of event summary:",
+  EventDashBoard_Summary_Community_Read:
+    "Clicks on event summary to view details:",
+  EventDashBoard_Location_LibraryHome: "Library Home Page",
+  EventDashBoard_Location_LibraryDetail: "Library Game Page",
+  EventDashBoard_Location_StoreDetail: "Store Game Page",
+  EventDashBoard_Location_CommunityDetail: "Community App Hub",
+  EventDashBoard_Location_PopUpViews: "Views of event pop-up",
 
   AddToWishlist: "Add to your Wishlist",
   Wishlisted: "In your Wishlist",
@@ -608,13 +618,17 @@ LocalizationReady("shared", "english", {
   Played_Hours: "%1$s hours",
 
   WriteReview_Dialog_PostReview: "Post review",
+  WriteReview_Dialog_ReviseReview: "Revise review",
   WriteReview_Dialog_Title: "Review",
   WriteReview_Dialog_Playtime: "You've played for %1$s",
   WriteReview_Dialog_Playtime_Software: "You've used this title for %1$s",
+  WriteReview_Dialog_Playtime_Revise: "You've played an additional %1$s",
   WriteReview_Dialog_RecommendGame:
     "Would you recommend this game to other players?",
   WriteReview_Dialog_RecommendGame_Software:
     "Would you recommend this software to other players?",
+  WriteReview_Dialog_RecommendGame_Revise:
+    "Would you like to revise your review?",
   WriteReview_Dialog_GetHelp_Btn: "Get help with your purchase",
   WriteReview_Dialog_Visibility: "Visibility:",
   WriteReview_Dialog_Public: "Public",
@@ -640,6 +654,7 @@ LocalizationReady("shared", "english", {
     "We encountered a problem while posting your review. Please try again later.",
   WriteReview_Dialog_NoTextError:
     "Please describe what you liked or disliked about this product.",
+  WriteReview_Dialog_Delay: "Maybe Later",
 
   Broadcast_View_Stack_H: "Horizontal View",
   Broadcast_View_Stack_V: "Vertical View",
@@ -685,6 +700,7 @@ LocalizationReady("shared", "english", {
   PartnerEvent_32: "New Season Launch",
   PartnerEvent_33: "Season Update",
   PartnerEvent_34: "Cross Promotion",
+  PartnerEvent_35: "General In-Game Event",
   PartnerEvent_Other: "Other Event",
 
   SocialMedia_Type_ShortName_1: "Steam",
@@ -869,7 +885,20 @@ LocalizationReady("shared", "english", {
   Sale_default_label_HalloweenEventsHorror: "Halloween Events in Horror Games",
   Sale_default_label_HalloweenEventsNonHorror:
     "Halloween Events in Non-Horror Games",
+  Sale_default_label_MoreHalloweenEvents: "More Halloween Events",
   Sale_default_label_MoreHalloweenEventsNonHorror:
     "More Halloween Events in Non-Horror Games",
-  Sale_default_label_NewAndUpcomingHorror: "New and Upcoming Horror"
+  Sale_default_label_NewAndUpcomingHorror: "New and Upcoming Horror",
+  Sale_default_label_RemotePlay_Together: "Play Together – With Remote Friends",
+  Sale_default_label_RemotePlay_Phone: "Play Anywhere - On your Phone",
+  Sale_default_label_RemotePlay_Tablet: "Play Anywhere - On your Tablet",
+  Sale_default_label_RemotePlay_TV: "Play Anywhere - On your TV",
+
+  Steam_Settings_Compat_Launch_Prefix: "Runs on this computer via",
+  Steam_Settings_Compat_Launch_Name: "Steam Play.",
+  Steam_Settings_Compat_Launch_Forced: "selected by you for this title.",
+  Steam_Settings_Compat_Launch_Wildcard: "selected by you for all titles.",
+  Steam_Settings_Compat_Launch_Whitelisted: "selected by Valve testing.",
+
+  shared_dummy: "dont translate"
 });
