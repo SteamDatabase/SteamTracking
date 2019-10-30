@@ -16874,44 +16874,6 @@ img {
     width: 100%;
     height: calc( 100% - 24px); }
 
-.libraryhome_BetaBar_1HcmY {
-  background-color: #575761;
-  padding: 0px 10px;
-  border-radius: 0px 0px 4px 4px;
-  overflow: hidden;
-  color: #888890;
-  font-size: 13px;
-  position: absolute;
-  top: 0;
-  right: 100px; }
-  .libraryhome_BetaBar_1HcmY:hover {
-    background-color: #01a9ea; }
-  .libraryhome_BetaBar_1HcmY .libraryhome_NoHoverContent_2MUNT {
-    position: absolute;
-    right: 10px;
-    opacity: 1;
-    transition: opacity 0.2s ease-in-out; }
-  .libraryhome_BetaBar_1HcmY:hover .libraryhome_NoHoverContent_2MUNT {
-    opacity: 0;
-    pointer-events: none; }
-  .libraryhome_BetaBar_1HcmY .libraryhome_HoverContent_2z8Px {
-    opacity: 0;
-    white-space: nowrap;
-    direction: rtl;
-    transition-property: width, opacity;
-    transition-duration: 0.2s;
-    transition-timing-function: ease-in-out; }
-    .libraryhome_BetaBar_1HcmY .libraryhome_HoverContent_2z8Px span {
-      cursor: pointer;
-      color: rgba(255, 255, 255, 0.842); }
-    .libraryhome_BetaBar_1HcmY .libraryhome_HoverContent_2z8Px span:hover {
-      color: white; }
-    .libraryhome_BetaBar_1HcmY .libraryhome_HoverContent_2z8Px span:first-child {
-      margin-right: 20px; }
-  .libraryhome_BetaBar_1HcmY:hover .libraryhome_HoverContent_2z8Px {
-    opacity: 1;
-    position: static; }
-
 .libraryhome_AchievementCacheStatus_2I0nm {
   background-color: #575761;
   padding: 0px 10px;
