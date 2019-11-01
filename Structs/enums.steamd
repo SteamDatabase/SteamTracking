@@ -2595,6 +2595,8 @@ enum EMsg
 	ClientChallengeRequest = 5623;
 	ClientChallengeResponse = 5624;
 	BadgeCraftedNotification = 5625;
+	ClientNetworkingMobileCertRequest = 5626;
+	ClientNetworkingMobileCertRequestResponse = 5627;
 	BaseMDS = 5800;
 	AMToMDSGetDepotDecryptionKey = 5812;
 	MDSToAMGetDepotDecryptionKeyResponse = 5813;
@@ -2675,6 +2677,7 @@ enum EMsg
 	NonStdMsgSteam2Emulator = 6812;
 	NonStdMsgRTMPServer = 6813;
 	NonStdMsgWebSocket = 6814;
+	NonStdMsgRedis = 6815;
 	UDSBase = 7000;
 	ClientUDSP2PSessionStarted = 7001;
 	ClientUDSP2PSessionEnded = 7002;
