@@ -1433,6 +1433,36 @@ function UpdateActiveFilters()
 		$J( "#reviews_filter_offtopic_activity" ).hide();
 	}
 
+	var playtimeFilterMin = $J( "#app_reviews_playtime_range_min" ).val();
+	var playtimeFilterMax = $J( "#app_reviews_playtime_range_max" ).val();
+
+	if ( playtimeFilterMin != 0 || playtimeFilterMax != 0 )
+	{
+		var elemPlaytimeDesc = $J( "#review_playtime_preset_text" );
+		if ( playtimeFilterMax == 0 )
+		{
+			if ( playtimeFilterMin == 1 )
+			{
+				elemPlaytimeDesc.text( 'Over 1 hour' );
+			}
+			else
+			{
+				elemPlaytimeDesc.text( 'Over %2$s hours'.replace( "%2$s", playtimeFilterMin ) );
+			}
+		}
+		else
+		{
+			elemPlaytimeDesc.text( '%1$s hour(s) to %2$s hours'.replace( "%1$s", playtimeFilterMin ).replace( "%2$s", playtimeFilterMax ) );
+		}
+
+		bAnyActiveFilters = true;
+		$J( "#reviews_filter_playtime" ).show();
+	}
+	else
+	{
+		$J( "#reviews_filter_playtime" ).hide();
+	}
+
 	$J( "#reviews_filter_title" ).toggle( bAnyActiveFilters );
 }
 
@@ -1491,6 +1521,12 @@ function ClearOfftopicReviewActivityFilter()
 {
 	$J('#reviews_offtopic_activity_checkbox').attr( 'checked', false );
 	ShowFilteredReviews();
+}
+
+function ClearReviewPlaytimeFilter()
+{
+	$J('#review_playtime_preset_0').attr( 'checked', true );
+	SelectPlaytimeFilterPreset( 0 );
 }
 
 function CollapseLongReviews()
