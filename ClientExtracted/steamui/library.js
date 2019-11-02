@@ -10,7 +10,7 @@
         Object.prototype.hasOwnProperty.call(m, r) && m[r] && i.push(m[r][0]),
         (m[r] = 0);
     for (t in c) Object.prototype.hasOwnProperty.call(c, t) && (l[t] = c[t]);
-    for (p && p(e); i.length; ) i.shift()();
+    for (d && d(e); i.length; ) i.shift()();
     return u.push.apply(u, o || []), s();
   }
   function s() {
@@ -180,7 +180,7 @@
     n = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var c = 0; c < t.length; c++) e(t[c]);
-  var p = n;
+  var d = n;
   u.push(["tVvj", 0]), s();
 })({
   "0OaU": function(e, t, r) {
@@ -309,10 +309,10 @@
         return f;
       }),
       r.d(t, "ob", function() {
-        return p;
+        return d;
       }),
       r.d(t, "pb", function() {
-        return d;
+        return p;
       }),
       r.d(t, "lb", function() {
         return E;
@@ -471,10 +471,10 @@
         return fe;
       }),
       r.d(t, "b", function() {
-        return pe;
+        return de;
       }),
       r.d(t, "C", function() {
-        return de;
+        return pe;
       }),
       r.d(t, "A", function() {
         return Ee;
@@ -658,7 +658,7 @@
         )
       );
     }
-    function p(e) {
+    function d(e) {
       return o.createElement(
         "svg",
         Object(n.a)(
@@ -683,7 +683,7 @@
         )
       );
     }
-    function d() {
+    function p() {
       return o.createElement(
         "svg",
         {
@@ -2860,7 +2860,7 @@
         })
       );
     }
-    function pe() {
+    function de() {
       return o.createElement(
         "svg",
         {
@@ -2884,7 +2884,7 @@
         })
       );
     }
-    function de() {
+    function pe() {
       return o.createElement(
         "svg",
         {
@@ -3100,8 +3100,8 @@
     var f = r("mrSG"),
       i = r("TLQK"),
       n = r("vDqi"),
-      p = r.n(n),
-      d = r("mgoM");
+      d = r.n(n),
+      p = r("mgoM");
     function E(e, t) {
       var r = document.createElement("link");
       (r.href = e), (r.type = "text/css"), (r.rel = "stylesheet");
@@ -3133,8 +3133,8 @@
           }
         }
         for (var m = 0, f = r; m < f.length; m++) {
-          var p = f[m];
-          E(p.newRelative, p.sheet);
+          var d = f[m];
+          E(d.newRelative, d.sheet);
         }
       });
     }
@@ -3147,7 +3147,7 @@
               (r = {}), (n = {}), (c = 0), (e.label = 1);
             case 1:
               return c < 29
-                ? ("korean" == (o = Object(d.d)(c)) && (o = "koreana"),
+                ? ("korean" == (o = Object(p.d)(c)) && (o = "koreana"),
                   [
                     4,
                     (function(t, r) {
@@ -3157,7 +3157,7 @@
                             case 0:
                               return [
                                 4,
-                                p.a.get(
+                                d.a.get(
                                   "https://steamloopback.host/localization/" +
                                     t +
                                     "_" +
@@ -3214,7 +3214,7 @@
     }
     function l(e) {
       function t(e, t, r) {
-        return p.a
+        return d.a
           .get("https://steamloopback.host/localization/" + e + "_" + t + ".js")
           .then(function(e) {
             r(e.data);
@@ -3255,7 +3255,7 @@
   },
   CdLH: function(e, t, r) {
     "use strict";
-    r.d(t, "e", function() {
+    r.d(t, "d", function() {
       return n;
     }),
       r.d(t, "b", function() {
@@ -3264,17 +3264,14 @@
       r.d(t, "c", function() {
         return o;
       }),
-      r.d(t, "d", function() {
+      r.d(t, "e", function() {
         return a;
       }),
-      r.d(t, "f", function() {
+      r.d(t, "a", function() {
         return i;
       }),
-      r.d(t, "a", function() {
+      r.d(t, "f", function() {
         return l;
-      }),
-      r.d(t, "g", function() {
-        return s;
       });
     var n = {
       PerYear: 31536e3,
@@ -3292,20 +3289,17 @@
       );
     }
     function o(e) {
-      return new Date(e.getFullYear(), e.getMonth(), e.getDate(), 0, 0, 0, 0);
-    }
-    function a(e) {
       return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
     }
-    function i(t) {
+    function a(t) {
       return new Promise(function(e) {
         return setTimeout(e, t);
       });
     }
-    function l() {
+    function i() {
       return Math.floor(Date.now() / 1e3);
     }
-    function s(e) {
+    function l(e) {
       return Math.floor(e.getTime() / 1e3);
     }
   },
@@ -3324,10 +3318,10 @@
         return f;
       }),
       r.d(t, "e", function() {
-        return p;
+        return d;
       }),
       r.d(t, "o", function() {
-        return d;
+        return p;
       }),
       r.d(t, "i", function() {
         return E;
@@ -3480,7 +3474,7 @@
     function f(e, t) {
       return h((1 < t ? "#GameActionPlural_" : "#GameAction_") + e);
     }
-    function p(e, t) {
+    function d(e, t) {
       var r = t ? "#DisplayStatus_Compact_" : "#DisplayStatus_",
         n = "";
       switch (e) {
@@ -3579,36 +3573,36 @@
       }
       return h(r + n);
     }
-    function d(e, t) {
+    function p(e, t) {
       void 0 === t && (t = !1);
       var r = t ? "#TimeInterval_" : "#TimeSince_";
-      return e >= 2 * a.e.PerYear
-        ? h(r + "XYears", Math.floor(e / a.e.PerYear))
-        : e >= a.e.PerYear
-        ? (e -= a.e.PerYear) >= 2 * a.e.PerMonth
-          ? h(r + "1YearXMonths", Math.floor(e / a.e.PerMonth))
+      return e >= 2 * a.d.PerYear
+        ? h(r + "XYears", Math.floor(e / a.d.PerYear))
+        : e >= a.d.PerYear
+        ? (e -= a.d.PerYear) >= 2 * a.d.PerMonth
+          ? h(r + "1YearXMonths", Math.floor(e / a.d.PerMonth))
           : h(r + "1Year")
-        : e >= 2 * a.e.PerMonth
-        ? h(r + "XMonths", Math.floor(e / a.e.PerMonth))
-        : e >= 2 * a.e.PerWeek
-        ? h(r + "XWeeks", Math.floor(e / a.e.PerWeek))
-        : e >= a.e.PerWeek
-        ? h(r + "1Week", Math.floor(e / a.e.PerWeek))
-        : e >= 2 * a.e.PerDay
-        ? h(r + "XDays", Math.floor(e / a.e.PerDay))
-        : e >= a.e.PerDay
-        ? (e -= a.e.PerDay) >= 2 * a.e.PerHour
-          ? h(r + "1DayXHours", Math.floor(e / a.e.PerHour))
+        : e >= 2 * a.d.PerMonth
+        ? h(r + "XMonths", Math.floor(e / a.d.PerMonth))
+        : e >= 2 * a.d.PerWeek
+        ? h(r + "XWeeks", Math.floor(e / a.d.PerWeek))
+        : e >= a.d.PerWeek
+        ? h(r + "1Week", Math.floor(e / a.d.PerWeek))
+        : e >= 2 * a.d.PerDay
+        ? h(r + "XDays", Math.floor(e / a.d.PerDay))
+        : e >= a.d.PerDay
+        ? (e -= a.d.PerDay) >= 2 * a.d.PerHour
+          ? h(r + "1DayXHours", Math.floor(e / a.d.PerHour))
           : h(r + "1Day")
-        : e >= 2 * a.e.PerHour
-        ? h(r + "XHours", Math.floor(e / a.e.PerHour))
-        : e >= a.e.PerHour
-        ? (e -= a.e.PerHour) >= 2 * a.e.PerMinute
-          ? h(r + "1HourXMinutes", Math.floor(e / a.e.PerMinute))
+        : e >= 2 * a.d.PerHour
+        ? h(r + "XHours", Math.floor(e / a.d.PerHour))
+        : e >= a.d.PerHour
+        ? (e -= a.d.PerHour) >= 2 * a.d.PerMinute
+          ? h(r + "1HourXMinutes", Math.floor(e / a.d.PerMinute))
           : h(r + "1Hour")
-        : e >= 2 * a.e.PerMinute
-        ? h(r + "XMinutes", Math.floor(e / a.e.PerMinute))
-        : e >= a.e.PerMinute
+        : e >= 2 * a.d.PerMinute
+        ? h(r + "XMinutes", Math.floor(e / a.d.PerMinute))
+        : e >= a.d.PerMinute
         ? h(r + "1Minute")
         : h(r + "LessThanAMinute");
     }
@@ -3675,7 +3669,7 @@
           (t.getMonth() == r.getMonth() && t.getFullYear() == r.getFullYear()))
       ) {
         var o =
-          Math.floor((c.valueOf() - t.valueOf()) / (1e3 * a.e.PerWeek)) + 1;
+          Math.floor((c.valueOf() - t.valueOf()) / (1e3 * a.d.PerWeek)) + 1;
         return 1 == o ? h("#TimeSince_1Week") : h("#TimeSince_XWeeks", o);
       }
       return t.getFullYear() == r.getFullYear() ? M(t) : N(t);
@@ -3687,7 +3681,7 @@
       var n = new Date();
       return (
         n.getDate() < 15 && n.setMonth(n.getMonth() - 1),
-        (n = Object(a.d)(n)) <= t
+        (n = Object(a.c)(n)) <= t
           ? h("#Time_Recent")
           : t.getFullYear() == r.getFullYear()
           ? M(t)
@@ -3972,10 +3966,10 @@
         return f;
       }),
       r.d(t, "n", function() {
-        return p;
+        return d;
       }),
       r.d(t, "p", function() {
-        return d;
+        return p;
       }),
       r.d(t, "o", function() {
         return E;
@@ -4010,8 +4004,8 @@
       h = 7,
       m = 753,
       f = 250820,
-      p = 330050,
-      d = 358510,
+      d = 330050,
+      p = 358510,
       E = 366490,
       k = "18446744073709551615",
       _ = 0;
@@ -4377,7 +4371,7 @@
       m = document.getElementById("root");
     Object(i.c)();
     var f,
-      p = (function(e) {
+      d = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -4411,7 +4405,7 @@
           t
         );
       })(c.Component);
-    (f = p), o.render(c.createElement(f, null), m);
+    (f = d), o.render(c.createElement(f, null), m);
   }
 });
 //# sourceMappingURL=library.js.map

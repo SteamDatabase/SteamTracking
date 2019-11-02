@@ -64,6 +64,7 @@ message CPlayer_GetFriendsAppsActivity_Response {
 	message AppFriendsInfo {
 		optional uint32 appid = 1;
 		repeated .CPlayer_GetFriendsAppsActivity_Response.FriendPlayTime friends = 2 [(description) = "Friends (w/ playtime) that meet a specific criteria -- e.g. for trending, only includes friends w/ more playtime this week."];
+		optional uint32 display_order = 3 [(description) = "Index indicating the order in which this app should be displayed, relative to other apps in the same response."];
 	}
 
 	repeated .CPlayer_GetFriendsAppsActivity_Response.AppFriendsInfo trending = 1 [(description) = "Apps that friends have played more this week than last, with list of friends who've played more this week"];

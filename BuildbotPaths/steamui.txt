@@ -12,6 +12,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enums_clientserver.pb.cc
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/framefunction.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/gid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html_jstypes.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/imageloadwrapper.cpp

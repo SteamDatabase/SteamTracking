@@ -2551,6 +2551,7 @@
  StringAfterPrefix
  T BFileExists(char const*)
  T BGetLocalFormattedDateAndTime(long, char*, int, char*, int, bool, bool)
+ T BHasNoBrowserCommandLineParam()
  T BIsValidDirectory(char const*)
  T BlankImage::GetContentSize(int&, int&)
  T BlankImage::GetSize(int&, int&)
@@ -9450,6 +9451,7 @@
  b (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
  b (anonymous namespace)::ScrollBarButton::KB_ChainToMap()::chained
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
+ b BHasNoBrowserCommandLineParam()::s_CmdLineParamDisableBrowser
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CUtlSymbol::Initialize()::symbolsInitialized
  b DefaultSortFunc(unsigned int, vgui::ListPanelItem const&, vgui::ListPanelItem const&)::fAsserted
@@ -9542,6 +9544,7 @@
  b g_pSysModuleSteam
  b guard variable for (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
+ b guard variable for BHasNoBrowserCommandLineParam()::s_CmdLineParamDisableBrowser
  b guard variable for GCallbackMgr()::s_CallbackMgr
  b guard variable for GetNetAdrResolveCacheMutex()::mutex
  b guard variable for GetPanelAnimationDictionary()::dictionary

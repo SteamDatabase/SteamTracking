@@ -683,6 +683,8 @@
 	"AppDetails_ChangeMyScreenshotKey": "Change My Screenshot Key",
 	"AppDetails_NoScreenshots": "You haven't taken any screenshots yet",
 
+	"AppDetails_Screenshot_SpoilerAlert": "Potential spoilers. Hover to reveal image.",
+
 	"AppDetails_Artwork": "Artwork",
 	"AppDetails_Video": "Video",
 	"AppDetails_CommunityItem": "Community Content",
@@ -965,6 +967,8 @@
 
 	"DeleteScreenshot_Title": "Delete Screenshot",
 	"DeleteScreenshot_Single": "Are you sure you want to permanently delete this screenshot from your hard disk?",
-	"DeleteScreenshot_Failed": "Steam was unable to delete the selected screenshot from your hard disk."
+	"DeleteScreenshot_Failed": "Steam was unable to delete the selected screenshot from your hard disk.",
 
+	"AppDetailsAchievement_Hidden": "Hidden Achievement",
+	"AppDetailsAchievement_HiddenDesc": "Keep playing to discover this achievement."
 }

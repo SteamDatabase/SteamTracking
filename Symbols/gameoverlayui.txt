@@ -4744,6 +4744,7 @@
  T BFileExists(char const*)
  T BGetLocalFormattedDateAndTime(long, char*, int, char*, int, bool, bool)
  T BGetLocalFormattedTime(long, char*, int, bool)
+ T BHasNoBrowserCommandLineParam()
  T BInFriendsUI()
  T BIsFileReadOnly(char const*)
  T BIsReleasedSomewhere(CGameID)
@@ -15118,6 +15119,7 @@
  b (anonymous namespace)::ScrollBarButton::KB_ChainToMap()::chained
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
+ b BHasNoBrowserCommandLineParam()::s_CmdLineParamDisableBrowser
  b CBasePanel::ShowLegacyCDKeyDataOnce()::bAlreadyHandled
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
@@ -15245,6 +15247,7 @@
  b g_serializedOverlay
  b guard variable for (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
+ b guard variable for BHasNoBrowserCommandLineParam()::s_CmdLineParamDisableBrowser
  b guard variable for CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
  b guard variable for CItemImageManager::FindEmoticonImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::eUniverse
  b guard variable for CItemImageManager::FindImageString(char const*, CUtlString&, char const**, char const**, CItemImageManager::ItemIdentifier_t*)::s_bDisableAllImageStrings

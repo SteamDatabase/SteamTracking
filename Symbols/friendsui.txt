@@ -4828,6 +4828,7 @@
  T BGetFriendGamePlayedName(CSteamID, CGameID, char*, unsigned int)
  T BGetFriendGamePlayedName(CSteamID, CGameID, wchar_t*, unsigned int)
  T BGetLocalFormattedDateAndTime(long, char*, int, char*, int, bool, bool)
+ T BHasNoBrowserCommandLineParam()
  T BIO_indent
  T BIO_printf
  T BIO_puts
@@ -16511,6 +16512,7 @@
  b (anonymous namespace)::ScrollBarButton::KB_ChainToMap()::chained
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_
+ b BHasNoBrowserCommandLineParam()::s_CmdLineParamDisableBrowser
  b BUF_str_reasons
  b CCallbackMgr::RunCallbacks(int, bool)::bRunningCallbacks
  b CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
@@ -16655,6 +16657,7 @@
  b g_pSysModuleSteam
  b guard variable for (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
  b guard variable for (anonymous namespace)::ScrollBarButton::GetMessageMap()::s_pMap
+ b guard variable for BHasNoBrowserCommandLineParam()::s_CmdLineParamDisableBrowser
  b guard variable for CEmoticonButton::OnShowMenu(vgui::Menu*)::eUniverse
  b guard variable for CFriendPanel::UpdateContents()::bInOfflineMode
  b guard variable for CFriendsDialog::PerformLayout()::s_bOfflineMode

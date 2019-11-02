@@ -4671,6 +4671,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_BLEControllerFirmware_UpdateNow" "Update Firmware Now"
 
 "Steam_Browser_Disabled" "The Steam Browser is disabled."
+"Steam_Browser_Disabled_NoBrowser" "The Steam browser is disabled because \"-no-browser\" was specified on the Steam command line."
 "Steam_Browser_Disabled_KB" "See this Support Article for more Information"
 "Steam_Browser_Disabled_KB_URL" "https://support.steampowered.com/kb_article.php?ref=4090-RTKZ-4347"
 "Steam_ViewSSAInBrowser" "You must read and agree to the Steam Subscriber Agreement.\n<a href=\"%url%\">Click Here</a> to open the agreement in your browser.  Return to this window to continue."

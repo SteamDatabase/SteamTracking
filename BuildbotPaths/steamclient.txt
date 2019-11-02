@@ -970,6 +970,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filetransfer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/framefunction.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/framefunction.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/gid.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hardware_osx.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/hiddevicelocal.cpp

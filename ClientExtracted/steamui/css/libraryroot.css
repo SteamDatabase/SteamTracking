@@ -6823,6 +6823,30 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
 .appactivityday_ActivityPublishedScreenshot_KIhNe {
   padding: 0; }
 
+.appactivityday_ImageWrapper_rRIYi {
+  position: relative; }
+  .appactivityday_ImageWrapper_rRIYi .appactivityday_SpoilerOverlay_1oYvb {
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    right: 0;
+    left: 0;
+    background-color: black;
+    z-index: 5;
+    opacity: 1;
+    font-size: 13px;
+    line-height: 16px;
+    color: white;
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    pointer-events: none; }
+  .appactivityday_ActiveScreenshot_290Dq:hover .appactivityday_ImageWrapper_rRIYi .appactivityday_SpoilerOverlay_1oYvb {
+    opacity: 0; }
+
 .appactivityday_ScreenshotCarousel_1pdQd {
   display: flex;
   flex-direction: row;
@@ -7509,6 +7533,16 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
     text-shadow: 1px 1px 1px black;
     letter-spacing: 1px;
     position: relative; }
+
+.appdetailsachievementssection_HiddenLabel_2AYFr {
+  width: 48px;
+  height: 48px;
+  font-size: 32px;
+  color: #cacbcd;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  background: linear-gradient(to right, #3b414a 0%, #2c3138 95%); }
 
 .appdetailsachievementssection_Icon_zcasg {
   width: 48px;
@@ -9241,7 +9275,8 @@ div.sharescreenshotupload_Spoiler_tmUAv {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
   .appdetailscommunityfeed_Guide_-85o5 .appdetailscommunityfeed_TopSection_33Cd4 {
     margin: 0 2px;
     border-radius: 2px; }
@@ -9417,6 +9452,30 @@ div.sharescreenshotupload_Spoiler_tmUAv {
   overflow: hidden;
   display: flex;
   flex-direction: row; }
+
+.appdetailscommunityfeed_SpoilerOverlay_2uP7d {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  right: 0;
+  left: 0;
+  background-color: black;
+  z-index: 5;
+  opacity: 1;
+  font-size: 13px;
+  line-height: 16px;
+  color: white;
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 0.2s;
+  pointer-events: none; }
+
+.appdetailscommunityfeed_ArtItem_1aP1b:hover .appdetailscommunityfeed_SpoilerOverlay_2uP7d,
+.appdetailscommunityfeed_Guide_-85o5:hover .appdetailscommunityfeed_SpoilerOverlay_2uP7d {
+  opacity: 0; }
 
 :root {
   --main-text-color: #dbe2e6;
