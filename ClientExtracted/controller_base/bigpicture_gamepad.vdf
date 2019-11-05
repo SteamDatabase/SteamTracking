@@ -2115,8 +2115,8 @@
 		"group_source_bindings"
 		{
 			"16"		"switch active"
-			"7"		"right_trackpad active"
-			"8"		"right_trackpad active modeshift"
+			"7"		"right_trackpad inactive"
+			"8"		"right_trackpad inactive modeshift"
 			"37"		"right_joystick active"
 			"38"		"right_joystick active modeshift"
 			"0"		"button_diamond active"
@@ -2125,7 +2125,7 @@
 			"18"		"joystick inactive"
 			"42"		"joystick active"
 			"33"		"dpad active"
-			"6"		"left_trackpad active"
+			"6"		"left_trackpad inactive"
 		}
 	}
 	"preset"
@@ -2135,7 +2135,7 @@
 		"group_source_bindings"
 		{
 			"17"		"switch active"
-			"9"		"right_trackpad active"
+			"9"		"right_trackpad inactive"
 			"39"		"right_joystick active"
 			"14"		"button_diamond active"
 			"23"		"left_trigger active"
@@ -2151,7 +2151,7 @@
 		{
 			"20"		"switch active"
 			"25"		"right_trackpad inactive"
-			"28"		"right_trackpad active"
+			"28"		"right_trackpad inactive"
 			"40"		"right_joystick inactive"
 			"41"		"right_joystick inactive"
 			"30"		"button_diamond inactive"
@@ -2162,7 +2162,7 @@
 			"43"		"joystick inactive"
 			"35"		"dpad active"
 			"26"		"left_trackpad inactive"
-			"27"		"left_trackpad active"
+			"27"		"left_trackpad inactive"
 		}
 	}
 	"preset"
@@ -2172,8 +2172,8 @@
 		"group_source_bindings"
 		{
 			"44"		"switch active"
-			"45"		"right_trackpad active"
-			"46"		"right_trackpad active modeshift"
+			"45"		"right_trackpad inactive"
+			"46"		"right_trackpad inactive modeshift"
 			"47"		"right_joystick active"
 			"48"		"right_joystick active modeshift"
 			"49"		"button_diamond active"
@@ -2181,7 +2181,7 @@
 			"51"		"right_trigger active"
 			"52"		"joystick active"
 			"53"		"dpad active"
-			"54"		"left_trackpad active"
+			"54"		"left_trackpad inactive"
 		}
 	}
 	"settings"
