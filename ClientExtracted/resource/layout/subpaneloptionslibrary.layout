@@ -12,12 +12,13 @@
 		LibraryDisplaySizeLarge { ControlName="RadioButton" fieldName="LibraryDisplaySizeLarge" labelText="#Steam_Settings_Library_Size_Large" }
 
 		LibraryLowBandwidthCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_LowBandwidth_Title" }
-		LibraryLowBandwidthLabel { ControlName=Label labelText="#Steam_Settings_Library_LowBandwidth_Desc" wrap=1 }
+		LibraryLowBandwidthLabel { ControlName=Label labelText="#Steam_Settings_Library_LowBandwidth_Desc" wrap=1 zpos="0" }
 		
 		LibraryLowPerfCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_LowPerf_Title" }
 		LibraryLowPerfLabel { ControlName=Label labelText="#Steam_Settings_Library_LowPerf_Desc" wrap=1 }
 
-		LibraryDisableCommunityContentCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_DisableCommunityContent_Title" }
+		// zpos=1 to keep the low-bandwidth label from preventing the checkbox label from being clickable
+		LibraryDisableCommunityContentCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_DisableCommunityContent_Title" zpos="1" }
 		LibraryDisableCommunityContentLabel { ControlName=Label labelText="#Steam_Settings_Library_DisableCommunityContent_Desc" wrap=1 style=disable_community_content }
 	}
 	
