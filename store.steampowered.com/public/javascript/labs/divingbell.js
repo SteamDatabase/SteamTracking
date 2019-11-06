@@ -334,6 +334,7 @@ BoxEntry.prototype = {
 		}
 		this.appid = details.appid;
 		this.title = details.title;
+		this.header = details.capsule;
 		this.screenshot = details.screenshots != null && details.screenshots.length > 0 ? details.screenshots[0] : "";
 		this.screenshots = details.screenshots != null ? details.screenshots.slice() : [];
 		this.microtrailer_webm = details.microtrailer_webm;
@@ -347,6 +348,7 @@ BoxEntry.prototype = {
 	,copyValuesFrom: function(other) {
 		this.appid = other.appid;
 		this.title = other.title;
+		this.header = other.header;
 		this.discountBlock = other.discountBlock;
 		this.comingSoon = other.comingSoon;
 		this.screenshot = other.screenshot;
@@ -2199,7 +2201,6 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	if(Main.focusBusy) {
 		return;
 	}
-	console.log("focus(" + appid + ")");
 	var priorApp = "";
 	var priorTitle = "";
 	if(Main.focusedEntry != null) {
@@ -2257,11 +2258,8 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 		details1 = null;
 	}
 	var detailsWereNull = false;
-	var partialFocus = false;
 	if(details1 != null) {
-		partialFocus = true;
 		showFocusDetails(details1,true);
-		console.log("details.screenshots = " + Std.string(details1.screenshots));
 	} else {
 		detailsWereNull = true;
 	}
@@ -3319,7 +3317,7 @@ Render.boxContent = function(index,entry,sink,first) {
 	var isOwned = Main.LOGGED_IN && Main.isOwned(appid);
 	var wishlistBtn = Main.LOGGED_IN ? Render.wishlistButton(appid,onWishlist,isOwned) : "";
 	var detailsBtn = Render.detailsButton(appid,url);
-	var headerURL = "https://steamcdn-a.akamaihd.net/steam/apps/" + appid + "/header_292x136.jpg";
+	var headerURL = entry.header;
 	var throbberStr = Render.throbber("throbber-" + index,true);
 	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">" + ("<a class=\"box-link\" href=\"javascript:Main.focus(" + appid + ")\"></a>") + ("<div class=\"box-image\" id=\"" + boxImageId + "\">") + throbberStr + ("<img src=\"" + headerURL + "\" alt=\"" + title + "\" title=\"" + title + "\">") + Render.microtrailer(index,entry,"microtrailer","","",true) + "</div>" + ("<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">") + ("<p>" + selectToExplore + "</p>") + "</div>" + ("<div class=\"box-doodads\" id=\"" + doodadId + "\">") + discountBlock + "</div>" + ("<div class=\"box-buttons\" id=\"" + boxButtonsId + "\">") + wishlistBtn + detailsBtn + "</div>" + ("<div class=\"box-tags hide-fancy\" id=\"" + boxTagsId + "\">") + ("<em>" + keyThings + "</em><br>") + tagHTML + "</div>" + "</div>";
 	return html;

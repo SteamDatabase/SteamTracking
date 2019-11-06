@@ -495,7 +495,7 @@ a:link {
         font-size: 16px;
         font-weight: 100;
         line-height: 22px;
-        letter-spacing: 0.8px; }
+        letter-spacing: 0px; }
         @media screen and (max-width: 414px) {
           .app_App_2uHYt .app_Container_3wbt9 .app_TopSection_2GV0T .app_Body_3BvIC {
             font-size: 10px;

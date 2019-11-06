@@ -59,6 +59,8 @@ GDynamicStore = {
 	s_bUserOnLinux: false,
 	s_bUserOnWindows: false,
 
+	s_rgRecommendedApps: [],
+
 
 	s_ImpressionTracker: false,
 
@@ -150,7 +152,6 @@ GDynamicStore = {
 			}
 		);
 
-
 		if ( accountid )
 		{
 			if ( bForceRefresh )
@@ -215,6 +216,7 @@ GDynamicStore = {
 
 				GDynamicStore.s_nRemainingCartDiscount = data.nRemainingCartDiscount ? data.nRemainingCartDiscount : 0;
 				GDynamicStore.s_nTotalCartDiscount = data.nTotalCartDiscount ? data.nTotalCartDiscount : 0;
+				GDynamicStore.s_rgRecommendedApps = data.rgRecommendedApps || [];
 
 			}).always( function() { $J(fnRunOnLoadCallbacks); } );
 		}

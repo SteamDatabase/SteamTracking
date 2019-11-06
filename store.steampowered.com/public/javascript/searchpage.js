@@ -189,6 +189,25 @@ function AjaxSearchResults()
 	AjaxSearchResultsInternal( false, false );
 }
 
+// Sets the URL to include all the params from rgParameters, and places
+// them in the history interface under the 'params' key if supported.
+//
+// If oHistoryStash is set, those options will also be stored in the
+// history interface, but will *not* appear in the URL.
+function UpdateUrl( rgParameters, oHistoryStash = {}, bPushState = true )
+{
+
+	var fnUpdateState = bPushState ? history.pushState : history.replaceState;
+
+	if ( g_bUseHistoryAPI )
+	{
+		oHistoryStash.params = rgParameters;
+		fnUpdateState.call( history, oHistoryStash, '', '?' + Object.toQueryString( rgParameters ) );
+	}
+	else
+		window.location = '#' + Object.toQueryString( rgParameters );
+}
+
 function AjaxSearchResultsInternal( bOnLocationChange, bInitialLoad )
 {
 	// we're in the middle of filling in all the controls from the hash parameter
@@ -209,23 +228,8 @@ function AjaxSearchResultsInternal( bOnLocationChange, bInitialLoad )
 	var hide_filtered_results_warning = rgParameters['hide_filtered_results_warning'];
 	delete rgParameters['hide_filtered_results_warning'];
 
-	if ( !bOnLocationChange )
-	{
-		if ( g_bUseHistoryAPI )
-		{
-			history.pushState( { params: rgParameters}, '', '?' + Object.toQueryString( rgParameters ) );
-		}
-		else
-		{
-
-			window.location = '#' + Object.toQueryString( rgParameters );
-		}
-	}
-	else if ( bInitialLoad && g_bUseHistoryAPI )
-	{
-		history.replaceState( { params: rgParameters}, '', '?' + Object.toQueryString( rgParameters ) );
-	}
-
+	if ( ( bInitialLoad && g_bUseHistoryAPI ) || !bOnLocationChange )
+		UpdateUrl( rgParameters, {}, !bOnLocationChange );
 
 	if ( snr )
 		rgParameters['snr'] = snr;
@@ -322,6 +326,85 @@ LocationHashObserver = Class.create(Abstract.TimedObserver, {
 	}
 } );
 
+// Function generator that stashes the current page number so we can get back there if navigated back to the page.
+function fnStashSearchPositionHistory( nPageNo, sItemKey )
+{
+	return function()
+	{
+		// Grab our search params from the form.
+		var rgParams = GatherSearchParameters();
+
+		// Inject our PageNo
+		if ( nPageNo > 1 )
+			rgParams['page'] = nPageNo;
+
+		// Update the URL, stashing infiniscroll + itemKey in history storage.
+		UpdateUrl( rgParams, { infiniscroll: true, itemkey: sItemKey } );
+	};
+}
+
+function IsNavFromBackButton()
+{
+	// '2' is a magic number in the spec for back/forward. The important thing for us
+	// is it's not reload or direct navigation.
+	// https://www.w3.org/TR/navigation-timing/#performancenavigation
+	return g_bUseHistoryAPI && window.performance && window.performance.navigation.type == 2;
+}
+
+// Smoothly scrolls us to the last element the user was viewing.
+function HandleBackReposition()
+{
+	// Nothing to do unless we've an itemkey stashed and they hit the back button.
+	if ( !( IsNavFromBackButton() && history.state && history.state.itemkey ) )
+		return;
+
+	// Find the item we want to be scrolling to.
+	var sItemKey = history.state.itemkey;
+	var nodeItem = $J( "a[data-ds-itemkey='" + history.state.itemkey + "']" );
+
+	if ( nodeItem.length == 0 )
+		return;
+
+	// 'html, body' makes Firefox happy, as well as working in other browsers.
+	$J('html, body').animate({
+		// Scroll to just before the element we're after.
+		scrollTop: nodeItem.offset().top - nodeItem[0].offsetHeight
+	});
+
+	var origBackground = nodeItem.css('background-color');
+
+	// Pulse the item's colour to draw attention to it.
+	nodeItem.css({
+		'background-color': '#aaaaaa',
+		'transition': 'background-color ease-in 1s'
+	});
+
+	setTimeout( function() {
+		nodeItem.css({ 'background-color': origBackground });
+	}, 1000 );
+
+	// Remove our itemkey from the state to avoid risk of double-scrolls.
+	delete history.state.itemkey;
+}
+
+// Returns a boolean as to whether InfiniScroll should be used.
+// Does not examine user preferences.
+function BShouldUseInfiniscroll()
+{
+	// InfiniScroll is enabled by default.
+	var bEnable = true;
+
+	// If we see a page number, we'd normally disable InfiniScroll...
+	if ( new URL( window.location.href ).searchParams.get('page') )
+		bEnable = false;
+
+	// But if the user has hit back and originally came from infiniscroll, reanable it.
+	if ( IsNavFromBackButton() && history.state && history.state.infiniscroll )
+		bEnable = true;
+
+	return bEnable;
+}
+
 function InitSearchPage()
 {
 	if ( g_bUseHistoryAPI )
@@ -363,29 +446,50 @@ InitInfiniteScroll.nScrollSize = 25; // Default, can be modified by calling page
 
 function InitInfiniteScroll( rgParameters )
 {
+	var self = InitInfiniteScroll;
+
+	// Stop if disabled by preferences.
+	if ( ! self.bEnabled )
+		return null;
+
+	// Stop if overriden by navigation.
+	if  (! BShouldUseInfiniscroll() )
+		return null;
+
     // Copy our params so we don't surprise our caller by changing theirs.
     rgParameters = Object.assign({}, rgParameters);
-
-	// Is there a better way to find our current function?
-	var self = InitInfiniteScroll;
 
 	// Clear any existing infinite scroll so we don't mix search results.
 	if (typeof( self.oController ) != "undefined" && self.oController !== null )
 		self.oController.Stop();
 
-	// If we're not enabled, or see a page parameter, then we don't want to use infiniscroll.
-	if ( ! self.bEnabled || new URL( window.location.href ).searchParams.get('page') )
-	{
-		return null;
-	}
-
 	var oScrollOptions = {
 		"pagesize": self.nScrollSize,
-		"total_count": 1000, // Gets filled with real value after our first load.
-		"prefix": "search_results"
+		"page": parseInt( rgParameters['page'] ),
+		"total_count": 1000,         // Gets filled with real value after our first load.
+		"prefix": "search_results",  // Where to put our results
 	};
 
 	self.oController = new CAjaxInfiniteScrollingControls( oScrollOptions, 'https://store.steampowered.com/search/results' );
+
+	// We may have stashed a 'page' param in the URL to make sure we fetch the right page when the user
+	// hits the back button. We remove that now because the pageno usually gets interpreted as paginated
+	// search.
+	
+	var url = new URL( location.href );
+	var params = new URLSearchParams( url.search );
+	
+	if ( params.has('page') )
+	{
+		params.delete('page');
+		url.search = params.toString();
+		history.replaceState( history.state, "", url.toString() );
+		var $reloadNotice = $J("#search_infiniscroll_reload_container");
+		$reloadNotice.show();
+		$reloadNotice.click( function() {
+			location.href = url.toString();
+		});
+	}	
 
 	// Make sure our backend knows we're infinite scrolling, and don't need a whole page.
 	rgParameters['infinite'] = "1";
@@ -404,7 +508,6 @@ function InitInfiniteScroll( rgParameters )
 	// cycles by calculating what's newly loaded and just checking those.
 	self.oController.SetPageChangedHandler(function( iPageNo, oUpdatedDom )
 	{
-
 		if ( GDynamicStore != null )
 		{
 			GDynamicStore.DecorateDynamicItems($J(oUpdatedDom));
@@ -423,13 +526,16 @@ function InitInfiniteScroll( rgParameters )
 
 		oUpdatedDom.childNodes.forEach( function ( item )
 		{
+			// No attributes? Not a node we can work with.
+			if ( ! item["attributes"] )
+				return;
 
-			// Some nodes will be text or otherwise attributeless.
-			if ( ! item["attributes"] ) return;
+			AddSearchPositionClickHandler( item );
 
-			//  Check our duplicate params.
 			for (var i = 0; i < arrayAttrs.length; i++)
 			{
+
+				// Remove duplicate results.
 				var strAttr = arrayAttrs[i];
 				var node = null;
 				if ( node = item.attributes[ strAttr ] )
@@ -455,6 +561,23 @@ function InitInfiniteScroll( rgParameters )
 	self.oController.OnScroll();
 
 	return self.oController;
+}
+
+// Decorates the given node with a click handler to support smoothly returning
+// to it on navigation back through the browser history.
+// Does nothing if the node is not a store item.
+function AddSearchPositionClickHandler( item )
+{
+	var attrPageNo = item.attributes[ 'data-search-page' ];
+	var sItemKey = item.attributes[ 'data-ds-itemkey' ].value;
+
+	if ( attrPageNo && sItemKey )
+	{
+		$J(item).click( fnStashSearchPositionHistory( parseInt( attrPageNo.value ), sItemKey ) ); 
+
+		// Remove the page number, so we don't try to attach a click handler again.
+		item.removeAttributeNode(attrPageNo);
+	}
 }
 
 function AddSearchTag( strParam, strValue, strLabel, fnOnClick )
@@ -539,10 +662,13 @@ function UpdateTags()
 function EnableClientSideFilters( CUserPreferences )
 {
 	var rgFilterNames = [ 'hide_owned', 'hide_ignored', 'hide_wishlist' ];
-
 	var oFilters = {};
-
 	var results_container = $J("#search_results");
+
+	// If we're using the dynamic store, hide our results until it finishes loading,
+	// otherwise they can appear and then disappear.
+	if ( GDynamicStore )
+		results_container.addClass('results_loading');
 
 	for ( var strFilter of rgFilterNames )
 	{
@@ -565,6 +691,8 @@ function EnableClientSideFilters( CUserPreferences )
 		$Control.click( OnClickClientFilter($Control, strFilter, results_container) );
 	}
 
+	// Schedule our results to appear once we've finished decorating them.
+	// Dynamic store will trigger the event immediately if it's already finished loading.
 	GDynamicStore.OnReady( function() {
 		results_container.removeClass( 'results_loading' );
 	} );

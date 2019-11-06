@@ -1635,7 +1635,7 @@
             }),
             (r.serializeBinaryToWriter = function(e, t) {}),
             (r.prototype.getClassName = function() {
-              return "CCommunity_PartnerEventsShowMoreForApp_Response";
+              return "CCommunity_ClearUserPartnerEventsAppPriorities_Response";
             }),
             r
           );
@@ -1674,12 +1674,51 @@
             }),
             (r.serializeBinaryToWriter = function(e, t) {}),
             (r.prototype.getClassName = function() {
-              return "CCommunity_PartnerEventsShowLessForApp_Response";
+              return "CCommunity_PartnerEventsShowMoreForApp_Response";
             }),
             r
           );
         })(n.Message)),
         k = (n.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return n.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(s.d)(r, i),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var i = {};
+              return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new n.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                t.getFieldNumber();
+                t.skipField();
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new n.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {}),
+            (r.prototype.getClassName = function() {
+              return "CCommunity_PartnerEventsShowLessForApp_Response";
+            }),
+            r
+          );
+        })(n.Message)),
+        O = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -1779,7 +1818,7 @@
             r
           );
         })(n.Message)),
-        O = (function(i) {
+        W = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1865,13 +1904,21 @@
           });
         }),
         (o.MarkPartnerEventsForUser = function(e, t) {
-          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, O, {});
+          return e.SendMsg("Community.MarkPartnerEventsForUser#1", t, W, {});
         }),
         (o.PartnerEventsShowMoreForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, R, {});
+          return e.SendMsg("Community.PartnerEventsShowMoreForApp#1", t, j, {});
         }),
         (o.PartnerEventsShowLessForApp = function(e, t) {
-          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, j, {});
+          return e.SendMsg("Community.PartnerEventsShowLessForApp#1", t, k, {});
+        }),
+        (o.ClearUserPartnerEventsAppPriorities = function(e, t) {
+          return e.SendMsg(
+            "Community.ClearUserPartnerEventsAppPriorities#1",
+            t,
+            R,
+            {}
+          );
         });
     },
     "/511": function(e, t, i) {
@@ -3172,31 +3219,31 @@
         return c;
       }),
         i.d(t, "e", function() {
-          return C;
-        }),
-        i.d(t, "j", function() {
           return T;
         }),
-        i.d(t, "a", function() {
+        i.d(t, "j", function() {
           return N;
         }),
-        i.d(t, "h", function() {
+        i.d(t, "a", function() {
           return I;
         }),
-        i.d(t, "g", function() {
+        i.d(t, "h", function() {
           return E;
         }),
-        i.d(t, "b", function() {
+        i.d(t, "g", function() {
           return P;
         }),
-        i.d(t, "c", function() {
-          return L;
+        i.d(t, "b", function() {
+          return q;
         }),
-        i.d(t, "i", function() {
+        i.d(t, "c", function() {
           return V;
         }),
+        i.d(t, "i", function() {
+          return A;
+        }),
         i.d(t, "f", function() {
-          return K;
+          return Y;
         }),
         i.d(t, "l", function() {
           return r;
@@ -4149,6 +4196,183 @@
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
+            return n.Message.initialize(t, e, 0, -1, [1], null), t;
+          }
+          return (
+            Object(s.d)(r, i),
+            (r.prototype.achievement_progress = function() {
+              return n.Message.getRepeatedWrapperField(this, m, 1);
+            }),
+            (r.prototype.set_achievement_progress = function(e) {
+              n.Message.setRepeatedWrapperField(this, 1, e);
+            }),
+            (r.prototype.add_achievement_progress = function(e, t) {
+              return n.Message.addToRepeatedWrapperField(this, 1, e, m, t);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var i = {
+                achievement_progress: n.Message.toObjectList(
+                  t.achievement_progress(),
+                  m.toObject,
+                  e
+                )
+              };
+              return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new n.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    var i = new m();
+                    t.readMessage(i, m.deserializeBinaryFromReader),
+                      e.add_achievement_progress(i);
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new n.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i;
+              0 < (i = e.achievement_progress()).length &&
+                t.writeRepeatedMessage(1, i, m.serializeBinaryToWriter);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CPlayer_GetAchievementsProgress_Response";
+            }),
+            r
+          );
+        })(n.Message)),
+        m = (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
+            return n.Message.initialize(t, e, 0, -1, void 0, null), t;
+          }
+          return (
+            Object(s.d)(r, i),
+            (r.prototype.appid = function() {
+              return n.Message.getField(this, 1);
+            }),
+            (r.prototype.set_appid = function(e) {
+              n.Message.setField(this, 1, e);
+            }),
+            (r.prototype.unlocked = function() {
+              return n.Message.getField(this, 2);
+            }),
+            (r.prototype.set_unlocked = function(e) {
+              n.Message.setField(this, 2, e);
+            }),
+            (r.prototype.total = function() {
+              return n.Message.getField(this, 3);
+            }),
+            (r.prototype.set_total = function(e) {
+              n.Message.setField(this, 3, e);
+            }),
+            (r.prototype.percentage = function() {
+              return n.Message.getField(this, 4);
+            }),
+            (r.prototype.set_percentage = function(e) {
+              n.Message.setField(this, 4, e);
+            }),
+            (r.prototype.all_unlocked = function() {
+              return n.Message.getField(this, 5);
+            }),
+            (r.prototype.set_all_unlocked = function(e) {
+              n.Message.setField(this, 5, e);
+            }),
+            (r.prototype.cache_time = function() {
+              return n.Message.getField(this, 6);
+            }),
+            (r.prototype.set_cache_time = function(e) {
+              n.Message.setField(this, 6, e);
+            }),
+            (r.prototype.toObject = function(e) {
+              return void 0 === e && (e = !1), r.toObject(e, this);
+            }),
+            (r.toObject = function(e, t) {
+              var i = {
+                appid: n.Message.getField(t, 1),
+                unlocked: n.Message.getField(t, 2),
+                total: n.Message.getField(t, 3),
+                percentage: n.Message.getField(t, 4),
+                all_unlocked: n.Message.getField(t, 5),
+                cache_time: n.Message.getField(t, 6)
+              };
+              return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.deserializeBinary = function(e) {
+              var t = new n.BinaryReader(e),
+                i = new r();
+              return r.deserializeBinaryFromReader(i, t);
+            }),
+            (r.deserializeBinaryFromReader = function(e, t) {
+              for (; t.nextField() && !t.isEndGroup(); ) {
+                switch (t.getFieldNumber()) {
+                  case 1:
+                    e.set_appid(t.readUint32());
+                    break;
+                  case 2:
+                    e.set_unlocked(t.readUint32());
+                    break;
+                  case 3:
+                    e.set_total(t.readUint32());
+                    break;
+                  case 4:
+                    e.set_percentage(t.readFloat());
+                    break;
+                  case 5:
+                    e.set_all_unlocked(t.readBool());
+                    break;
+                  case 6:
+                    e.set_cache_time(t.readUint32());
+                    break;
+                  default:
+                    t.skipField();
+                }
+              }
+              return e;
+            }),
+            (r.prototype.serializeBinary = function() {
+              var e = new n.BinaryWriter();
+              return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
+            }),
+            (r.serializeBinaryToWriter = function(e, t) {
+              var i;
+              void 0 !== (i = n.Message.getField(e, 1)) && t.writeUint32(1, i),
+                void 0 !== (i = n.Message.getField(e, 2)) &&
+                  t.writeUint32(2, i),
+                void 0 !== (i = n.Message.getField(e, 3)) &&
+                  t.writeUint32(3, i),
+                void 0 !== (i = n.Message.getField(e, 4)) && t.writeFloat(4, i),
+                void 0 !== (i = n.Message.getField(e, 5)) && t.writeBool(5, i),
+                void 0 !== (i = n.Message.getField(e, 6)) &&
+                  t.writeUint32(6, i);
+            }),
+            (r.prototype.getClassName = function() {
+              return "CPlayer_GetAchievementsProgress_Response_AchievementProgress";
+            }),
+            r
+          );
+        })(n.Message),
+        B = (n.Message,
+        (function(i) {
+          function r(e) {
+            void 0 === e && (e = null);
+            var t = i.call(this) || this;
             return n.Message.initialize(t, e, 0, -1, [2, 3, 4, 5, 6], null), t;
           }
           return (
@@ -4156,56 +4380,56 @@
             (r.prototype.your_info = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, B, 1, e ? 1 : 0)
+                n.Message.getWrapperField(this, z, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_your_info = function(e) {
               n.Message.setWrapperField(this, 1, e);
             }),
             (r.prototype.in_game = function() {
-              return n.Message.getRepeatedWrapperField(this, m, 2);
+              return n.Message.getRepeatedWrapperField(this, w, 2);
             }),
             (r.prototype.set_in_game = function(e) {
               n.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_in_game = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 2, e, m, t);
+              return n.Message.addToRepeatedWrapperField(this, 2, e, w, t);
             }),
             (r.prototype.played_recently = function() {
-              return n.Message.getRepeatedWrapperField(this, m, 3);
+              return n.Message.getRepeatedWrapperField(this, w, 3);
             }),
             (r.prototype.set_played_recently = function(e) {
               n.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (r.prototype.add_played_recently = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 3, e, m, t);
+              return n.Message.addToRepeatedWrapperField(this, 3, e, w, t);
             }),
             (r.prototype.played_ever = function() {
-              return n.Message.getRepeatedWrapperField(this, m, 4);
+              return n.Message.getRepeatedWrapperField(this, w, 4);
             }),
             (r.prototype.set_played_ever = function(e) {
               n.Message.setRepeatedWrapperField(this, 4, e);
             }),
             (r.prototype.add_played_ever = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 4, e, m, t);
+              return n.Message.addToRepeatedWrapperField(this, 4, e, w, t);
             }),
             (r.prototype.owns = function() {
-              return n.Message.getRepeatedWrapperField(this, m, 5);
+              return n.Message.getRepeatedWrapperField(this, w, 5);
             }),
             (r.prototype.set_owns = function(e) {
               n.Message.setRepeatedWrapperField(this, 5, e);
             }),
             (r.prototype.add_owns = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 5, e, m, t);
+              return n.Message.addToRepeatedWrapperField(this, 5, e, w, t);
             }),
             (r.prototype.in_wishlist = function() {
-              return n.Message.getRepeatedWrapperField(this, m, 6);
+              return n.Message.getRepeatedWrapperField(this, w, 6);
             }),
             (r.prototype.set_in_wishlist = function(e) {
               n.Message.setRepeatedWrapperField(this, 6, e);
             }),
             (r.prototype.add_in_wishlist = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 6, e, m, t);
+              return n.Message.addToRepeatedWrapperField(this, 6, e, w, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -4213,22 +4437,22 @@
             (r.toObject = function(e, t) {
               var i,
                 r = {
-                  your_info: (i = t.your_info(!1)) && B.toObject(e, i),
-                  in_game: n.Message.toObjectList(t.in_game(), m.toObject, e),
+                  your_info: (i = t.your_info(!1)) && z.toObject(e, i),
+                  in_game: n.Message.toObjectList(t.in_game(), w.toObject, e),
                   played_recently: n.Message.toObjectList(
                     t.played_recently(),
-                    m.toObject,
+                    w.toObject,
                     e
                   ),
                   played_ever: n.Message.toObjectList(
                     t.played_ever(),
-                    m.toObject,
+                    w.toObject,
                     e
                   ),
-                  owns: n.Message.toObjectList(t.owns(), m.toObject, e),
+                  owns: n.Message.toObjectList(t.owns(), w.toObject, e),
                   in_wishlist: n.Message.toObjectList(
                     t.in_wishlist(),
-                    m.toObject,
+                    w.toObject,
                     e
                   )
                 };
@@ -4243,33 +4467,33 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new B();
-                    t.readMessage(i, B.deserializeBinaryFromReader),
+                    var i = new z();
+                    t.readMessage(i, z.deserializeBinaryFromReader),
                       e.set_your_info(i);
                     break;
                   case 2:
-                    i = new m();
-                    t.readMessage(i, m.deserializeBinaryFromReader),
+                    i = new w();
+                    t.readMessage(i, w.deserializeBinaryFromReader),
                       e.add_in_game(i);
                     break;
                   case 3:
-                    i = new m();
-                    t.readMessage(i, m.deserializeBinaryFromReader),
+                    i = new w();
+                    t.readMessage(i, w.deserializeBinaryFromReader),
                       e.add_played_recently(i);
                     break;
                   case 4:
-                    i = new m();
-                    t.readMessage(i, m.deserializeBinaryFromReader),
+                    i = new w();
+                    t.readMessage(i, w.deserializeBinaryFromReader),
                       e.add_played_ever(i);
                     break;
                   case 5:
-                    i = new m();
-                    t.readMessage(i, m.deserializeBinaryFromReader),
+                    i = new w();
+                    t.readMessage(i, w.deserializeBinaryFromReader),
                       e.add_owns(i);
                     break;
                   case 6:
-                    i = new m();
-                    t.readMessage(i, m.deserializeBinaryFromReader),
+                    i = new w();
+                    t.readMessage(i, w.deserializeBinaryFromReader),
                       e.add_in_wishlist(i);
                     break;
                   default:
@@ -4285,17 +4509,17 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.your_info(!1)) &&
-                t.writeMessage(1, i, B.serializeBinaryToWriter),
+                t.writeMessage(1, i, z.serializeBinaryToWriter),
                 0 < (i = e.in_game()).length &&
-                  t.writeRepeatedMessage(2, i, m.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(2, i, w.serializeBinaryToWriter),
                 0 < (i = e.played_recently()).length &&
-                  t.writeRepeatedMessage(3, i, m.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(3, i, w.serializeBinaryToWriter),
                 0 < (i = e.played_ever()).length &&
-                  t.writeRepeatedMessage(4, i, m.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(4, i, w.serializeBinaryToWriter),
                 0 < (i = e.owns()).length &&
-                  t.writeRepeatedMessage(5, i, m.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(5, i, w.serializeBinaryToWriter),
                 0 < (i = e.in_wishlist()).length &&
-                  t.writeRepeatedMessage(6, i, m.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(6, i, w.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetFriendsGameplayInfo_Response";
@@ -4303,7 +4527,7 @@
             r
           );
         })(n.Message)),
-        m = (function(i) {
+        w = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -4382,7 +4606,7 @@
             r
           );
         })(n.Message),
-        B = (function(i) {
+        z = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -4483,7 +4707,7 @@
             r
           );
         })(n.Message),
-        w = (n.Message,
+        R = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4496,76 +4720,76 @@
           return (
             Object(s.d)(r, i),
             (r.prototype.trending = function() {
-              return n.Message.getRepeatedWrapperField(this, R, 1);
+              return n.Message.getRepeatedWrapperField(this, k, 1);
             }),
             (r.prototype.set_trending = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_trending = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, R, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, k, t);
             }),
             (r.prototype.recent_purchases = function() {
-              return n.Message.getRepeatedWrapperField(this, R, 2);
+              return n.Message.getRepeatedWrapperField(this, k, 2);
             }),
             (r.prototype.set_recent_purchases = function(e) {
               n.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_recent_purchases = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 2, e, R, t);
+              return n.Message.addToRepeatedWrapperField(this, 2, e, k, t);
             }),
             (r.prototype.unowned = function() {
-              return n.Message.getRepeatedWrapperField(this, R, 3);
+              return n.Message.getRepeatedWrapperField(this, k, 3);
             }),
             (r.prototype.set_unowned = function(e) {
               n.Message.setRepeatedWrapperField(this, 3, e);
             }),
             (r.prototype.add_unowned = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 3, e, R, t);
+              return n.Message.addToRepeatedWrapperField(this, 3, e, k, t);
             }),
             (r.prototype.popular = function() {
-              return n.Message.getRepeatedWrapperField(this, R, 4);
+              return n.Message.getRepeatedWrapperField(this, k, 4);
             }),
             (r.prototype.set_popular = function(e) {
               n.Message.setRepeatedWrapperField(this, 4, e);
             }),
             (r.prototype.add_popular = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 4, e, R, t);
+              return n.Message.addToRepeatedWrapperField(this, 4, e, k, t);
             }),
             (r.prototype.dont_forget = function() {
-              return n.Message.getRepeatedWrapperField(this, R, 5);
+              return n.Message.getRepeatedWrapperField(this, k, 5);
             }),
             (r.prototype.set_dont_forget = function(e) {
               n.Message.setRepeatedWrapperField(this, 5, e);
             }),
             (r.prototype.add_dont_forget = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 5, e, R, t);
+              return n.Message.addToRepeatedWrapperField(this, 5, e, k, t);
             }),
             (r.prototype.being_discussed = function() {
-              return n.Message.getRepeatedWrapperField(this, R, 6);
+              return n.Message.getRepeatedWrapperField(this, k, 6);
             }),
             (r.prototype.set_being_discussed = function(e) {
               n.Message.setRepeatedWrapperField(this, 6, e);
             }),
             (r.prototype.add_being_discussed = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 6, e, R, t);
+              return n.Message.addToRepeatedWrapperField(this, 6, e, k, t);
             }),
             (r.prototype.new_to_group = function() {
-              return n.Message.getRepeatedWrapperField(this, R, 7);
+              return n.Message.getRepeatedWrapperField(this, k, 7);
             }),
             (r.prototype.set_new_to_group = function(e) {
               n.Message.setRepeatedWrapperField(this, 7, e);
             }),
             (r.prototype.add_new_to_group = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 7, e, R, t);
+              return n.Message.addToRepeatedWrapperField(this, 7, e, k, t);
             }),
             (r.prototype.returned_to_group = function() {
-              return n.Message.getRepeatedWrapperField(this, R, 8);
+              return n.Message.getRepeatedWrapperField(this, k, 8);
             }),
             (r.prototype.set_returned_to_group = function(e) {
               n.Message.setRepeatedWrapperField(this, 8, e);
             }),
             (r.prototype.add_returned_to_group = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 8, e, R, t);
+              return n.Message.addToRepeatedWrapperField(this, 8, e, k, t);
             }),
             (r.prototype.active_friend_count = function() {
               return n.Message.getFieldWithDefault(this, 9, 0);
@@ -4578,32 +4802,32 @@
             }),
             (r.toObject = function(e, t) {
               var i = {
-                trending: n.Message.toObjectList(t.trending(), R.toObject, e),
+                trending: n.Message.toObjectList(t.trending(), k.toObject, e),
                 recent_purchases: n.Message.toObjectList(
                   t.recent_purchases(),
-                  R.toObject,
+                  k.toObject,
                   e
                 ),
-                unowned: n.Message.toObjectList(t.unowned(), R.toObject, e),
-                popular: n.Message.toObjectList(t.popular(), R.toObject, e),
+                unowned: n.Message.toObjectList(t.unowned(), k.toObject, e),
+                popular: n.Message.toObjectList(t.popular(), k.toObject, e),
                 dont_forget: n.Message.toObjectList(
                   t.dont_forget(),
-                  R.toObject,
+                  k.toObject,
                   e
                 ),
                 being_discussed: n.Message.toObjectList(
                   t.being_discussed(),
-                  R.toObject,
+                  k.toObject,
                   e
                 ),
                 new_to_group: n.Message.toObjectList(
                   t.new_to_group(),
-                  R.toObject,
+                  k.toObject,
                   e
                 ),
                 returned_to_group: n.Message.toObjectList(
                   t.returned_to_group(),
-                  R.toObject,
+                  k.toObject,
                   e
                 ),
                 active_friend_count: n.Message.getFieldWithDefault(t, 9, 0)
@@ -4619,43 +4843,43 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new R();
-                    t.readMessage(i, R.deserializeBinaryFromReader),
+                    var i = new k();
+                    t.readMessage(i, k.deserializeBinaryFromReader),
                       e.add_trending(i);
                     break;
                   case 2:
-                    i = new R();
-                    t.readMessage(i, R.deserializeBinaryFromReader),
+                    i = new k();
+                    t.readMessage(i, k.deserializeBinaryFromReader),
                       e.add_recent_purchases(i);
                     break;
                   case 3:
-                    i = new R();
-                    t.readMessage(i, R.deserializeBinaryFromReader),
+                    i = new k();
+                    t.readMessage(i, k.deserializeBinaryFromReader),
                       e.add_unowned(i);
                     break;
                   case 4:
-                    i = new R();
-                    t.readMessage(i, R.deserializeBinaryFromReader),
+                    i = new k();
+                    t.readMessage(i, k.deserializeBinaryFromReader),
                       e.add_popular(i);
                     break;
                   case 5:
-                    i = new R();
-                    t.readMessage(i, R.deserializeBinaryFromReader),
+                    i = new k();
+                    t.readMessage(i, k.deserializeBinaryFromReader),
                       e.add_dont_forget(i);
                     break;
                   case 6:
-                    i = new R();
-                    t.readMessage(i, R.deserializeBinaryFromReader),
+                    i = new k();
+                    t.readMessage(i, k.deserializeBinaryFromReader),
                       e.add_being_discussed(i);
                     break;
                   case 7:
-                    i = new R();
-                    t.readMessage(i, R.deserializeBinaryFromReader),
+                    i = new k();
+                    t.readMessage(i, k.deserializeBinaryFromReader),
                       e.add_new_to_group(i);
                     break;
                   case 8:
-                    i = new R();
-                    t.readMessage(i, R.deserializeBinaryFromReader),
+                    i = new k();
+                    t.readMessage(i, k.deserializeBinaryFromReader),
                       e.add_returned_to_group(i);
                     break;
                   case 9:
@@ -4674,21 +4898,21 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.trending()).length &&
-                t.writeRepeatedMessage(1, i, R.serializeBinaryToWriter),
+                t.writeRepeatedMessage(1, i, k.serializeBinaryToWriter),
                 0 < (i = e.recent_purchases()).length &&
-                  t.writeRepeatedMessage(2, i, R.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(2, i, k.serializeBinaryToWriter),
                 0 < (i = e.unowned()).length &&
-                  t.writeRepeatedMessage(3, i, R.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(3, i, k.serializeBinaryToWriter),
                 0 < (i = e.popular()).length &&
-                  t.writeRepeatedMessage(4, i, R.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(4, i, k.serializeBinaryToWriter),
                 0 < (i = e.dont_forget()).length &&
-                  t.writeRepeatedMessage(5, i, R.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(5, i, k.serializeBinaryToWriter),
                 0 < (i = e.being_discussed()).length &&
-                  t.writeRepeatedMessage(6, i, R.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(6, i, k.serializeBinaryToWriter),
                 0 < (i = e.new_to_group()).length &&
-                  t.writeRepeatedMessage(7, i, R.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(7, i, k.serializeBinaryToWriter),
                 0 < (i = e.returned_to_group()).length &&
-                  t.writeRepeatedMessage(8, i, R.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(8, i, k.serializeBinaryToWriter),
                 void 0 !== (i = n.Message.getField(e, 9)) &&
                   t.writeUint32(9, i);
             }),
@@ -4698,7 +4922,7 @@
             r
           );
         })(n.Message)),
-        z = (function(i) {
+        j = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -4801,7 +5025,7 @@
             r
           );
         })(n.Message),
-        R = (function(i) {
+        k = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -4816,13 +5040,13 @@
               n.Message.setField(this, 1, e);
             }),
             (r.prototype.friends = function() {
-              return n.Message.getRepeatedWrapperField(this, z, 2);
+              return n.Message.getRepeatedWrapperField(this, j, 2);
             }),
             (r.prototype.set_friends = function(e) {
               n.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_friends = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 2, e, z, t);
+              return n.Message.addToRepeatedWrapperField(this, 2, e, j, t);
             }),
             (r.prototype.display_order = function() {
               return n.Message.getField(this, 3);
@@ -4836,7 +5060,7 @@
             (r.toObject = function(e, t) {
               var i = {
                 appid: n.Message.getField(t, 1),
-                friends: n.Message.toObjectList(t.friends(), z.toObject, e),
+                friends: n.Message.toObjectList(t.friends(), j.toObject, e),
                 display_order: n.Message.getField(t, 3)
               };
               return e && (i.$jspbMessageInstance = t), i;
@@ -4853,8 +5077,8 @@
                     e.set_appid(t.readUint32());
                     break;
                   case 2:
-                    var i = new z();
-                    t.readMessage(i, z.deserializeBinaryFromReader),
+                    var i = new j();
+                    t.readMessage(i, j.deserializeBinaryFromReader),
                       e.add_friends(i);
                     break;
                   case 3:
@@ -4874,7 +5098,7 @@
               var i;
               void 0 !== (i = n.Message.getField(e, 1)) && t.writeUint32(1, i),
                 0 < (i = e.friends()).length &&
-                  t.writeRepeatedMessage(2, i, z.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(2, i, j.serializeBinaryToWriter),
                 void 0 !== (i = n.Message.getField(e, 3)) &&
                   t.writeUint32(3, i);
             }),
@@ -4884,7 +5108,7 @@
             r
           );
         })(n.Message),
-        j = (n.Message,
+        O = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4923,7 +5147,7 @@
             r
           );
         })(n.Message)),
-        k = (n.Message,
+        W = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -4933,20 +5157,20 @@
           return (
             Object(s.d)(r, i),
             (r.prototype.nicknames = function() {
-              return n.Message.getRepeatedWrapperField(this, O, 1);
+              return n.Message.getRepeatedWrapperField(this, C, 1);
             }),
             (r.prototype.set_nicknames = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_nicknames = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, O, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, C, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                nicknames: n.Message.toObjectList(t.nicknames(), O.toObject, e)
+                nicknames: n.Message.toObjectList(t.nicknames(), C.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -4959,8 +5183,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new O();
-                    t.readMessage(i, O.deserializeBinaryFromReader),
+                    var i = new C();
+                    t.readMessage(i, C.deserializeBinaryFromReader),
                       e.add_nicknames(i);
                     break;
                   default:
@@ -4976,7 +5200,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.nicknames()).length &&
-                t.writeRepeatedMessage(1, i, O.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, C.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetNicknameList_Response";
@@ -4984,7 +5208,7 @@
             r
           );
         })(n.Message)),
-        O = (function(i) {
+        C = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5050,7 +5274,7 @@
             r
           );
         })(n.Message),
-        W = (function(i) {
+        S = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5193,7 +5417,7 @@
             r
           );
         })(n.Message),
-        C = (function(i) {
+        T = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5231,7 +5455,7 @@
             r
           );
         })(n.Message),
-        S = (function(i) {
+        U = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5240,13 +5464,13 @@
           return (
             Object(s.d)(r, i),
             (r.prototype.preferences = function() {
-              return n.Message.getRepeatedWrapperField(this, W, 1);
+              return n.Message.getRepeatedWrapperField(this, S, 1);
             }),
             (r.prototype.set_preferences = function(e) {
               n.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_preferences = function(e, t) {
-              return n.Message.addToRepeatedWrapperField(this, 1, e, W, t);
+              return n.Message.addToRepeatedWrapperField(this, 1, e, S, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -5255,7 +5479,7 @@
               var i = {
                 preferences: n.Message.toObjectList(
                   t.preferences(),
-                  W.toObject,
+                  S.toObject,
                   e
                 )
               };
@@ -5270,8 +5494,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new W();
-                    t.readMessage(i, W.deserializeBinaryFromReader),
+                    var i = new S();
+                    t.readMessage(i, S.deserializeBinaryFromReader),
                       e.add_preferences(i);
                     break;
                   default:
@@ -5287,7 +5511,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               0 < (i = e.preferences()).length &&
-                t.writeRepeatedMessage(1, i, W.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, S.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetPerFriendPreferences_Response";
@@ -5295,7 +5519,7 @@
             r
           );
         })(n.Message),
-        T = (function(i) {
+        N = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5306,7 +5530,7 @@
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, W, 1, e ? 1 : 0)
+                n.Message.getWrapperField(this, S, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_preferences = function(e) {
@@ -5318,7 +5542,7 @@
             (r.toObject = function(e, t) {
               var i,
                 r = {
-                  preferences: (i = t.preferences(!1)) && W.toObject(e, i)
+                  preferences: (i = t.preferences(!1)) && S.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -5331,8 +5555,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new W();
-                    t.readMessage(i, W.deserializeBinaryFromReader),
+                    var i = new S();
+                    t.readMessage(i, S.deserializeBinaryFromReader),
                       e.set_preferences(i);
                     break;
                   default:
@@ -5348,7 +5572,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.preferences(!1)) &&
-                t.writeMessage(1, i, W.serializeBinaryToWriter);
+                t.writeMessage(1, i, S.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_SetPerFriendPreferences_Request";
@@ -5356,7 +5580,7 @@
             r
           );
         })(n.Message),
-        U = (function(i) {
+        x = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5394,7 +5618,7 @@
             r
           );
         })(n.Message),
-        N = (function(i) {
+        I = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5447,7 +5671,7 @@
             r
           );
         })(n.Message),
-        x = (function(i) {
+        G = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5513,7 +5737,7 @@
             r
           );
         })(n.Message),
-        I = (function(i) {
+        E = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5566,7 +5790,7 @@
             r
           );
         })(n.Message),
-        G = (function(i) {
+        $ = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5618,7 +5842,7 @@
             r
           );
         })(n.Message),
-        E = (function(i) {
+        P = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5684,7 +5908,7 @@
             r
           );
         })(n.Message),
-        $ = (function(i) {
+        L = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5736,7 +5960,7 @@
             r
           );
         })(n.Message),
-        P = (function(i) {
+        q = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5828,7 +6052,7 @@
             r
           );
         })(n.Message),
-        L = (function(i) {
+        V = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5866,7 +6090,7 @@
             r
           );
         })(n.Message),
-        q = (function(i) {
+        D = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5877,7 +6101,7 @@
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, P, 1, e ? 1 : 0)
+                n.Message.getWrapperField(this, q, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_preferences = function(e) {
@@ -5889,7 +6113,7 @@
             (r.toObject = function(e, t) {
               var i,
                 r = {
-                  preferences: (i = t.preferences(!1)) && P.toObject(e, i)
+                  preferences: (i = t.preferences(!1)) && q.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -5902,8 +6126,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new P();
-                    t.readMessage(i, P.deserializeBinaryFromReader),
+                    var i = new q();
+                    t.readMessage(i, q.deserializeBinaryFromReader),
                       e.set_preferences(i);
                     break;
                   default:
@@ -5919,7 +6143,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.preferences(!1)) &&
-                t.writeMessage(1, i, P.serializeBinaryToWriter);
+                t.writeMessage(1, i, q.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetCommunityPreferences_Response";
@@ -5927,7 +6151,7 @@
             r
           );
         })(n.Message),
-        V = (function(i) {
+        A = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -5938,7 +6162,7 @@
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, P, 1, e ? 1 : 0)
+                n.Message.getWrapperField(this, q, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_preferences = function(e) {
@@ -5950,7 +6174,7 @@
             (r.toObject = function(e, t) {
               var i,
                 r = {
-                  preferences: (i = t.preferences(!1)) && P.toObject(e, i)
+                  preferences: (i = t.preferences(!1)) && q.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -5963,8 +6187,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new P();
-                    t.readMessage(i, P.deserializeBinaryFromReader),
+                    var i = new q();
+                    t.readMessage(i, q.deserializeBinaryFromReader),
                       e.set_preferences(i);
                     break;
                   default:
@@ -5980,7 +6204,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.preferences(!1)) &&
-                t.writeMessage(1, i, P.serializeBinaryToWriter);
+                t.writeMessage(1, i, q.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_SetCommunityPreferences_Request";
@@ -5988,7 +6212,7 @@
             r
           );
         })(n.Message),
-        D = (function(i) {
+        H = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6026,7 +6250,7 @@
             r
           );
         })(n.Message),
-        A = (n.Message,
+        J = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6129,7 +6353,7 @@
             r
           );
         })(n.Message)),
-        H = (n.Message,
+        K = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6168,7 +6392,7 @@
             r
           );
         })(n.Message)),
-        J = (function(i) {
+        Q = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6277,7 +6501,7 @@
             r
           );
         })(n.Message),
-        K = (function(i) {
+        Y = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6315,7 +6539,7 @@
             r
           );
         })(n.Message),
-        Q = (function(i) {
+        X = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6326,7 +6550,7 @@
             (r.prototype.privacy_settings = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, J, 1, e ? 1 : 0)
+                n.Message.getWrapperField(this, Q, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_privacy_settings = function(e) {
@@ -6339,7 +6563,7 @@
               var i,
                 r = {
                   privacy_settings:
-                    (i = t.privacy_settings(!1)) && J.toObject(e, i)
+                    (i = t.privacy_settings(!1)) && Q.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -6352,8 +6576,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new J();
-                    t.readMessage(i, J.deserializeBinaryFromReader),
+                    var i = new Q();
+                    t.readMessage(i, Q.deserializeBinaryFromReader),
                       e.set_privacy_settings(i);
                     break;
                   default:
@@ -6369,7 +6593,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.privacy_settings(!1)) &&
-                t.writeMessage(1, i, J.serializeBinaryToWriter);
+                t.writeMessage(1, i, Q.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_GetPrivacySettings_Response";
@@ -6377,7 +6601,7 @@
             r
           );
         })(n.Message),
-        Y = (n.Message,
+        Z = (n.Message,
         (function(i) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6454,7 +6678,7 @@
             r
           );
         })(n.Message)),
-        X = (function(i) {
+        ee = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6514,7 +6738,7 @@
             r
           );
         })(n.Message),
-        Z = (function(i) {
+        te = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6591,7 +6815,7 @@
             r
           );
         })(n.Message),
-        ee = (function(i) {
+        ie = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6693,7 +6917,7 @@
             r
           );
         })(n.Message),
-        te = (function(i) {
+        re = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6704,7 +6928,7 @@
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, P, 1, e ? 1 : 0)
+                n.Message.getWrapperField(this, q, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_preferences = function(e) {
@@ -6716,7 +6940,7 @@
             (r.toObject = function(e, t) {
               var i,
                 r = {
-                  preferences: (i = t.preferences(!1)) && P.toObject(e, i)
+                  preferences: (i = t.preferences(!1)) && q.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -6729,8 +6953,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new P();
-                    t.readMessage(i, P.deserializeBinaryFromReader),
+                    var i = new q();
+                    t.readMessage(i, q.deserializeBinaryFromReader),
                       e.set_preferences(i);
                     break;
                   default:
@@ -6746,7 +6970,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.preferences(!1)) &&
-                t.writeMessage(1, i, P.serializeBinaryToWriter);
+                t.writeMessage(1, i, q.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_CommunityPreferencesChanged_Notification";
@@ -6754,7 +6978,7 @@
             r
           );
         })(n.Message),
-        ie = (function(i) {
+        se = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6771,7 +6995,7 @@
             (r.prototype.preferences = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, W, 2, e ? 1 : 0)
+                n.Message.getWrapperField(this, S, 2, e ? 1 : 0)
               );
             }),
             (r.prototype.set_preferences = function(e) {
@@ -6784,7 +7008,7 @@
               var i,
                 r = {
                   accountid: n.Message.getField(t, 1),
-                  preferences: (i = t.preferences(!1)) && W.toObject(e, i)
+                  preferences: (i = t.preferences(!1)) && S.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -6800,8 +7024,8 @@
                     e.set_accountid(t.readFixed32());
                     break;
                   case 2:
-                    var i = new W();
-                    t.readMessage(i, W.deserializeBinaryFromReader),
+                    var i = new S();
+                    t.readMessage(i, S.deserializeBinaryFromReader),
                       e.set_preferences(i);
                     break;
                   default:
@@ -6818,7 +7042,7 @@
               var i;
               void 0 !== (i = n.Message.getField(e, 1)) && t.writeFixed32(1, i),
                 null != (i = e.preferences(!1)) &&
-                  t.writeMessage(2, i, W.serializeBinaryToWriter);
+                  t.writeMessage(2, i, S.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_PerFriendPreferencesChanged_Notification";
@@ -6826,7 +7050,7 @@
             r
           );
         })(n.Message),
-        re = (function(i) {
+        ne = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -6837,7 +7061,7 @@
             (r.prototype.privacy_settings = function(e) {
               return (
                 void 0 === e && (e = !0),
-                n.Message.getWrapperField(this, J, 1, e ? 1 : 0)
+                n.Message.getWrapperField(this, Q, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_privacy_settings = function(e) {
@@ -6850,7 +7074,7 @@
               var i,
                 r = {
                   privacy_settings:
-                    (i = t.privacy_settings(!1)) && J.toObject(e, i)
+                    (i = t.privacy_settings(!1)) && Q.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -6863,8 +7087,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new J();
-                    t.readMessage(i, J.deserializeBinaryFromReader),
+                    var i = new Q();
+                    t.readMessage(i, Q.deserializeBinaryFromReader),
                       e.set_privacy_settings(i);
                     break;
                   default:
@@ -6880,7 +7104,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i;
               null != (i = e.privacy_settings(!1)) &&
-                t.writeMessage(1, i, J.serializeBinaryToWriter);
+                t.writeMessage(1, i, Q.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CPlayer_PrivacySettingsChanged_Notification";
@@ -6894,12 +7118,12 @@
         });
       }),
         (a.GetFriendsGameplayInfo = function(e, t) {
-          return e.SendMsg("Player.GetFriendsGameplayInfo#1", t, b, {
+          return e.SendMsg("Player.GetFriendsGameplayInfo#1", t, B, {
             bConstMethod: !0
           });
         }),
         (a.GetFriendsAppsActivity = function(e, t) {
-          return e.SendMsg("Player.GetFriendsAppsActivity#1", t, w, {
+          return e.SendMsg("Player.GetFriendsAppsActivity#1", t, R, {
             bConstMethod: !0
           });
         }),
@@ -6912,6 +7136,9 @@
           return e.SendMsg("Player.GetEmoticonList#1", t, y, {
             bConstMethod: !0
           });
+        }),
+        (a.GetAchievementsProgress = function(e, t) {
+          return e.SendMsg("Player.GetAchievementsProgress#1", t, b, {});
         }),
         (a.PostStatusToFriends = function(e, t) {
           return e.SendMsg("Player.PostStatusToFriends#1", t, M, {});
@@ -6930,38 +7157,38 @@
           });
         }),
         (a.AcceptSSA = function(e, t) {
-          return e.SendMsg("Player.AcceptSSA#1", t, j, {});
+          return e.SendMsg("Player.AcceptSSA#1", t, O, {});
         }),
         (a.GetNicknameList = function(e, t) {
-          return e.SendMsg("Player.GetNicknameList#1", t, k, {
+          return e.SendMsg("Player.GetNicknameList#1", t, W, {
             bConstMethod: !0
           });
         }),
         (a.GetPerFriendPreferences = function(e, t) {
-          return e.SendMsg("Player.GetPerFriendPreferences#1", t, S, {
+          return e.SendMsg("Player.GetPerFriendPreferences#1", t, U, {
             bConstMethod: !0
           });
         }),
         (a.SetPerFriendPreferences = function(e, t) {
-          return e.SendMsg("Player.SetPerFriendPreferences#1", t, U, {});
+          return e.SendMsg("Player.SetPerFriendPreferences#1", t, x, {});
         }),
         (a.AddFriend = function(e, t) {
-          return e.SendMsg("Player.AddFriend#1", t, x, {});
+          return e.SendMsg("Player.AddFriend#1", t, G, {});
         }),
         (a.RemoveFriend = function(e, t) {
-          return e.SendMsg("Player.RemoveFriend#1", t, G, {});
+          return e.SendMsg("Player.RemoveFriend#1", t, $, {});
         }),
         (a.IgnoreFriend = function(e, t) {
-          return e.SendMsg("Player.IgnoreFriend#1", t, $, {});
+          return e.SendMsg("Player.IgnoreFriend#1", t, L, {});
         }),
         (a.GetCommunityPreferences = function(e, t) {
-          return e.SendMsg("Player.GetCommunityPreferences#1", t, q, {});
+          return e.SendMsg("Player.GetCommunityPreferences#1", t, D, {});
         }),
         (a.SetCommunityPreferences = function(e, t) {
-          return e.SendMsg("Player.SetCommunityPreferences#1", t, D, {});
+          return e.SendMsg("Player.SetCommunityPreferences#1", t, H, {});
         }),
         (a.GetNewSteamAnnouncementState = function(e, t) {
-          return e.SendMsg("Player.GetNewSteamAnnouncementState#1", t, A, {
+          return e.SendMsg("Player.GetNewSteamAnnouncementState#1", t, J, {
             bConstMethod: !0
           });
         }),
@@ -6969,39 +7196,39 @@
           return e.SendMsg(
             "Player.UpdateSteamAnnouncementLastRead#1",
             t,
-            H,
+            K,
             {}
           );
         }),
         (a.GetPrivacySettings = function(e, t) {
-          return e.SendMsg("Player.GetPrivacySettings#1", t, Q, {});
+          return e.SendMsg("Player.GetPrivacySettings#1", t, X, {});
         }),
         (a.GetDurationControl = function(e, t) {
-          return e.SendMsg("Player.GetDurationControl#1", t, Y, {});
+          return e.SendMsg("Player.GetDurationControl#1", t, Z, {});
         }),
         ((d = o || (o = {})).NotifyLastPlayedTimesHandler = {
           name: "PlayerClient.NotifyLastPlayedTimes#1",
-          request: X
+          request: ee
         }),
         (d.NotifyFriendNicknameChangedHandler = {
           name: "PlayerClient.NotifyFriendNicknameChanged#1",
-          request: Z
+          request: te
         }),
         (d.NotifyNewSteamAnnouncementStateHandler = {
           name: "PlayerClient.NotifyNewSteamAnnouncementState#1",
-          request: ee
+          request: ie
         }),
         (d.NotifyCommunityPreferencesChangedHandler = {
           name: "PlayerClient.NotifyCommunityPreferencesChanged#1",
-          request: te
+          request: re
         }),
         (d.NotifyPerFriendPreferencesChangedHandler = {
           name: "PlayerClient.NotifyPerFriendPreferencesChanged#1",
-          request: ie
+          request: se
         }),
         (d.NotifyPrivacyPrivacySettingsChangedHandler = {
           name: "PlayerClient.NotifyPrivacyPrivacySettingsChanged#1",
-          request: re
+          request: ne
         });
     },
     "48Gm": function(e, t, i) {

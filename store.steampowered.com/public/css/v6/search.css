@@ -285,6 +285,35 @@
 	font-weight: bold;
 }
 
+#search_infiniscroll_reload_container {
+	display: none;
+}
+
+#search_infiniscroll_reload_notice {
+	display: table;
+	padding: 10px;
+	height: 45px;
+	background: rgba(0, 0, 0, 0.2);
+	text-align: center;
+	cursor: pointer;
+}
+
+#search_infiniscroll_reload_notice > img,
+#search_infiniscroll_reload_notice > span {
+	display: table-cell;
+	vertical-align: middle
+}
+
+#search_infiniscroll_reload_notice > img {
+	height: 40px;
+}
+
+#search_infiniscroll_reload_notice > span {
+	padding-left: 10px;
+	width: 100%;
+	font-size: larger;
+}
+
 #search_results_loading {
 	text-align: center;
 	font-size: 20px;

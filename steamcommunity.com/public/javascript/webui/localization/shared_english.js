@@ -875,6 +875,8 @@ LocalizationReady("shared", "english", {
   Sale_HiddenItems: "%1$s item(s) are hidden due to %2$s",
   Sale_StorePreferences: "your store preferences",
   Sale_SeeAllSpecials: "See All Specials",
+  Sale_AddToWishlist: "Add to Wishlist",
+  Sale_Preferences: "Preferences",
   Sale_default_label: "(no title)",
   Sale_default_label_OnSale: "On Sale",
   Sale_default_label_TopSellers: "Top Sellers",
@@ -893,6 +895,8 @@ LocalizationReady("shared", "english", {
   Sale_default_label_RemotePlay_Phone: "Play Anywhere - On your Phone",
   Sale_default_label_RemotePlay_Tablet: "Play Anywhere - On your Tablet",
   Sale_default_label_RemotePlay_TV: "Play Anywhere - On your TV",
+  Sale_default_label_OnYourWishlist: "On Your Wishlist",
+  Sale_default_label_RecommendedForYou: "Recommended For You",
 
   Steam_Settings_Compat_Launch_Prefix: "Runs on this computer via",
   Steam_Settings_Compat_Launch_Name: "Steam Play.",

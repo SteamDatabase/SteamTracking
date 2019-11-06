@@ -1895,12 +1895,6 @@
                       D.a.createElement(
                         "div",
                         { className: j.a.Body },
-                        w("#HeaderBody2")
-                      ),
-                      D.a.createElement("div", { className: j.a.Spacer }),
-                      D.a.createElement(
-                        "div",
-                        { className: j.a.Body },
                         (function(e) {
                           for (var t = [], a = 1; a < arguments.length; a++)
                             t[a - 1] = arguments[a];

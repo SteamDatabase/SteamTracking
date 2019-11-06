@@ -119,6 +119,7 @@ body.v6 .page_content  {
 
 .page_content .grid-container {
 	width: calc(100% - 33%);
+	height: 847px;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -209,6 +210,7 @@ body.v6 .page_content  {
 	display: flex;
 	flex: 3;
 	flex-wrap: wrap;
+	height: calc(100% / 3 - 13.333px)
 }
 
 .page_content .header-container {
@@ -283,7 +285,7 @@ body.v6 .page_content  {
 }
 
 .page_content .box-wrapper.sink{
-	margin: 10px 10px 10px 10px;
+	margin: 0px 0px 0px 0px;
 	transition-timing-function: ease-in;
 	transition-duration: 1.0s;
 }

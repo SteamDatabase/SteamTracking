@@ -1166,7 +1166,6 @@ GHomepage = {
 
 	RenderRecommendedByDeepDiveApps: function()
 	{
-
         // Do nothing if deep-dive not loaded
         if ( GHomepage.recommendedByDeepDiveFocusedApp <= 0 )
             return;
@@ -1193,8 +1192,14 @@ GHomepage = {
 		focusedAppTitle = $J('<textarea/>').html(focusedAppTitle).text();
 		
 		var $DeepDiveSearchText = $J('.deep_dive_search_text');
-
+		
 		$DeepDiveSearchText.attr("placeholder",focusedAppTitle);
+		$DeepDiveSearchText.focusin(function(){
+			$DeepDiveSearchText.attr("placeholder","");
+		});
+		$DeepDiveSearchText.focusout(function(){
+			$DeepDiveSearchText.attr("placeholder",focusedAppTitle);
+		});
 		
 		var bottomText = "";
 		if(g_AccountID == 0){
@@ -3529,7 +3534,7 @@ function InitTopGrossingDateSlider( InitArgs )
 		else
 		{
 			$TabItems.html( ItemsByReleaseDate[nTimeValue] );
-			GHomepage.FilterTab( '#tab_topgrossing_content', { games_already_in_library: !bFilterLibraryItems } );
+			GHomepage.FilterTab( '#tab_topgrossing_content', { games_already_in_library: !bFilterLibraryItems, dlc_for_you: true } );
 		}
 	};
 

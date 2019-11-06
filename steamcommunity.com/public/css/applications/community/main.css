@@ -3,6 +3,7 @@
 
 
 
+@import url(https://p.typekit.net/p.css?s=1&k=sxp5lha&ht=tk&f=1785.1786.24726&a=8491078&app=typekit&e=css);
 
 .throbber_LoadingWrapper_2wAKy {
   display: flex;
@@ -728,11 +729,15 @@ body.modals_BodyNoScrollDialog_105OB {
   flex-wrap: wrap;
   justify-content: flex-start; }
 
+.partnereventshared_SaveBackground_V0mbI {
+  position: fixed;
+  bottom: 0;
+  width: 100vw; }
+
 .partnereventshared_SaveBackground_V0mbI .partnereventshared_FlexRowWrapFlexStartContainer_tyP_c {
   background: #353941;
   padding: 12px;
-  margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-top: 20px; }
 
 .partnereventshared_LangaugeWithContent_16xEW {
   color: #a3cf06; }
@@ -2157,6 +2162,10 @@ textarea:-webkit-autofill:focus,
   margin-right: 3px; }
 
 .broadcastwidgets_StoreSalePriceBox_2A_NW {
+  background: black;
+  padding: 3px 5px; }
+
+.broadcastwidgets_StoreSalePriceBox_2A_NW {
   font-size: 14px;
   padding: 5px;
   background-color: black;
@@ -2192,6 +2201,7 @@ textarea:-webkit-autofill:focus,
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  background: #1F2126;
   transition: all 0.2s ease-out; }
   .broadcastwidgets_CapsuleContainer_1gET8:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
@@ -2305,6 +2315,28 @@ textarea:-webkit-autofill:focus,
   .broadcastwidgets_Banner_3ikQa.broadcastwidgets_Blue_3hfTG {
     background-color: #66c0f4; }
 
+.broadcastwidgets_LiveIcon_1iKjC {
+  position: absolute;
+  left: 0;
+  top: 36px; }
+
+.broadcastwidgets_CapsuleMenuButton_2hdaQ {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  padding: 3px;
+  box-sizing: border-box;
+  background: white;
+  display: flex;
+  border: 1px solid black; }
+  .broadcastwidgets_CapsuleMenuButton_2hdaQ:hover {
+    background: #67c1f5; }
+  .broadcastwidgets_CapsuleMenuButton_2hdaQ > img {
+    width: 100%; }
+
 .broadcastwidgets_BundleContent_TGX3I {
   margin-left: 40px;
   padding: 4px;
@@ -2316,8 +2348,8 @@ textarea:-webkit-autofill:focus,
   padding: 4px;
   display: inline-block;
   cursor: pointer;
-  color: #67c1f5;
-  background: rgba(103, 193, 245, 0.2); }
+  color: #285b9a;
+  background: rgba(103, 193, 245, 0.9); }
   .broadcastwidgets_ShowContentsButton_1cu3o:hover {
     color: #fff;
     background: #417a9b;
@@ -5546,28 +5578,36 @@ ol {
   margin-top: 14px;
   margin-bottom: 14px; }
 
-Table {
+.eventbbcodeparser_Table_3sT80 {
   display: table;
+  border-collapse: collapse;
   font-size: 12px; }
 
 .eventbbcodeparser_TableHeader_3WcB- {
   display: table-cell;
   font-weight: bold;
-  border: 1px solid #4d4d4d;
-  padding: 4px; }
+  padding: 4px;
+  border-right: 1px solid #77797e; }
+  .eventbbcodeparser_TableHeader_3WcB-:first-of-type {
+    border-left: 1px solid #77797e; }
 
 .eventbbcodeparser_TableHeader_3WcB- img.eventbbcodeparser_sharedFilePreviewImage_2bwhK,
 .eventbbcodeparser_TableData_1skQk img.eventbbcodeparser_sharedFilePreviewImage_2bwhK {
   margin: 0px; }
 
 .eventbbcodeparser_TableRow_sc_Sn {
-  display: table-row; }
+  display: table-row;
+  border-bottom: 1px solid #77797e; }
+  .eventbbcodeparser_TableRow_sc_Sn:first-of-type {
+    border-top: 1px solid #77797e; }
 
 .eventbbcodeparser_TableData_1skQk {
   display: table-cell;
   vertical-align: middle;
-  border: 1px solid #4d4d4d;
-  padding: 4px; }
+  padding: 4px;
+  border-right: 1px solid #77797e; }
+  .eventbbcodeparser_TableData_1skQk:first-of-type {
+    border-left: 1px solid #77797e; }
 
 iframe.eventbbcodeparser_StoreWidget_36Y-l {
   height: 190px;
@@ -6290,7 +6330,23 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     margin-right: 4px; }
 
 .eventrow_AppCapsuleImage_3OzV3.eventrow_AppCapsuleImage_3OzV3.eventrow_AppCapsuleImage_3OzV3 {
-  width: 150px; }
+  width: 120px;
+  box-shadow: 2px 2px 10px #000; }
+
+.eventrow_AppCapsuleCtn_16au- {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -10px;
+  left: 10px;
+  width: calc(100% - 20px); }
+
+.eventrow_AppCapsulePrice_2-l2M {
+  background: black;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 15px; }
 
 .apppartnereventspage_AppPartnerEventsPage_3CJsg {
   transition: all 0.32s ease-in-out;
@@ -6480,13 +6536,19 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .partnersaledisplay_SaleSection_1cOoC {
   padding: 16px;
   max-width: 940px;
-  border-radius: 19px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
   box-sizing: border-box; }
   .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_EventSection_2c00B {
     max-width: 1020px; }
+
+.partnersaledisplay_SaleOverlay_1sZo8 {
+  margin-top: 20px;
+  max-width: 100vw; }
+  @media screen and (max-width: 1200px) {
+    .partnersaledisplay_SaleOverlay_1sZo8 {
+      margin-top: 100px; } }
 
 .partnersaledisplay_AppSummaryWidgetCtn_2H8Bm {
   flex-grow: 2;
@@ -6510,11 +6572,11 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .partnersaledisplay_ShowContentsButton_2EjTW {
   border-radius: 2px;
   border: none;
-  padding: 4px;
+  padding: 10px;
   display: inline-block;
   cursor: pointer;
-  color: #67c1f5;
-  background: rgba(103, 193, 245, 0.2); }
+  color: #285b9a;
+  background: rgba(103, 193, 245, 0.9); }
   .partnersaledisplay_ShowContentsButton_2EjTW:hover {
     color: #fff;
     background: #417a9b;
@@ -6795,6 +6857,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     right: initial;
     position: initial; }
 
+@charset "UTF-8";
 /* latin-ext */
 @font-face {
   font-family: 'Jolly Lodger';
@@ -6848,6 +6911,48 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   font-display: swap;
   src: local("Chonburi"), local("Chonburi-Regular"), url(https://fonts.gstatic.com/s/chonburi/v4/8AtqGs-wOpGRTBq66LWSHLzriA.woff2) format("woff2");
   unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB; }
+
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * blenny:
+ *   - http://typekit.com/eulas/00000000000000003b9acd86
+ * kulturista-web:
+ *   - http://typekit.com/eulas/00000000000000003b9afb5a
+ *   - http://typekit.com/eulas/00000000000000003b9afb59
+ *
+ * © 2009-2019 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2019-11-01 01:37:51 UTC"}*/
+@font-face {
+  font-family: "kulturista-web";
+  src: url("https://use.typekit.net/af/40f7d5/00000000000000003b9afb5a/27/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n6&v=3") format("woff2"), url("https://use.typekit.net/af/40f7d5/00000000000000003b9afb5a/27/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n6&v=3") format("woff"), url("https://use.typekit.net/af/40f7d5/00000000000000003b9afb5a/27/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n6&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 600; }
+
+@font-face {
+  font-family: "kulturista-web";
+  src: url("https://use.typekit.net/af/cc438d/00000000000000003b9afb59/27/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=i6&v=3") format("woff2"), url("https://use.typekit.net/af/cc438d/00000000000000003b9afb59/27/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=i6&v=3") format("woff"), url("https://use.typekit.net/af/cc438d/00000000000000003b9afb59/27/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=i6&v=3") format("opentype");
+  font-display: auto;
+  font-style: italic;
+  font-weight: 600; }
+
+@font-face {
+  font-family: "blenny";
+  src: url("https://use.typekit.net/af/a32eca/00000000000000003b9acd86/27/l?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n9&v=3") format("woff2"), url("https://use.typekit.net/af/a32eca/00000000000000003b9acd86/27/d?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n9&v=3") format("woff"), url("https://use.typekit.net/af/a32eca/00000000000000003b9acd86/27/a?primer=f592e0a4b9356877842506ce344308576437e4f677d7c9b78ca2162e6cad991a&fvd=n9&v=3") format("opentype");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 900; }
+
+.tk-kulturista-web {
+  font-family: "kulturista-web",serif; }
+
+.tk-blenny {
+  font-family: "blenny",sans-serif; }
 
 .partnereventdashboard_DisplaySectionHeaderContainer_1xnIX {
   display: flex;
@@ -7327,6 +7432,15 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .partnereventeditor_ExceptionNote_19VPv {
   margin-top: 10px;
   color: #d7d79d; }
+
+.partnereventeditor_ExceptionDocsLink_1iykQ {
+  margin-top: 6px; }
+  .partnereventeditor_ExceptionDocsLink_1iykQ > a {
+    color: #b0e9ff;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(176, 233, 255, 0.5); }
+    .partnereventeditor_ExceptionDocsLink_1iykQ > a:hover {
+      color: white; }
 
 .partnereventeditor_EventVisibility_Title_jWhiI {
   font-size: 14px;
@@ -8530,6 +8644,15 @@ input.clanimagepicker_SearchInput_lwt4u {
   .partnereventemails_ButtonSettingContainer_3jwD2 .partnereventemails_ButtonSettingRow_1mF5p {
     margin-bottom: 8px; }
 
+.partnereventemails_DevHeader_35PpK {
+  width: 800px;
+  min-width: 800px;
+  font-size: 0pt;
+  line-height: 0pt;
+  padding: 0;
+  margin: 0;
+  font-weight: normal; }
+
 .partnereventemails_EmailTabCtn_fDsyX {
   position: relative; }
 
@@ -8628,6 +8751,10 @@ input.partnereventemails_HeadlineInput_2lHX9 {
   margin-top: 20px;
   padding-left: 10px; }
 
+.partnereventemails_ImgCrossCtn_59gyF {
+  display: flex;
+  flex-direction: row-reverse; }
+
 .partnereventemails_FullImageCtn_uv6NV {
   width: 100%;
   height: 300px;
@@ -8711,6 +8838,59 @@ input.partnereventemails_HeadlineInput_2lHX9 {
   .partnereventemails_VideoInputCtn_1ESNV input {
     align-self: center;
     width: 90%; }
+
+.partnereventemails_DevEmailTemplate_sC9ZV {
+  width: 100%;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  -webkit-border-horizontal-spacing: 0px;
+  -webkit-border-vertical-spacing: 0px;
+  background-color: #1748a7; }
+
+.partnereventemails_DevEmail_Content_25Gtl {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 78px;
+  padding-right: 78px; }
+
+.partnereventemails_DevEmail_HearComes_3nvmQ {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 36px;
+  line-height: 50px;
+  text-align: left;
+  font-weight: normal;
+  letter-spacing: 1px;
+  min-width: auto !important;
+  padding-bottom: 5px;
+  text-transform: uppercase; }
+
+.partnereventemails_DevEmail_TopLogo_1dbBh {
+  width: 203px;
+  height: 43px;
+  /** To get the right placement in the editor tool */
+  padding-top: 70px;
+  padding-left: 450px; }
+
+.partnereventemails_DevEmail_TopHeader_2lmZl {
+  background-image: url(https://steamcommunity-a.akamaihd.net/public/images/events/devemailblue/header_bg.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 180px; }
+
+.partnereventemails_DevEmail_Subject_37Wbo {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+  line-height: 64px;
+  text-align: left;
+  font-weight: bold;
+  letter-spacing: 1px;
+  min-width: auto !important;
+  padding-bottom: 45px;
+  text-transform: uppercase; }
 
 .progressutils_ErrorMessaage_13sZc {
   color: red;
@@ -9871,7 +10051,6 @@ button.TextButton:focus {
 
 .DialogMenuPosition {
   position: absolute;
-  transition: opacity 200ms;
   z-index: 1600; }
 
 .DialogMenuPosition:not(.visible) {

@@ -1885,11 +1885,7 @@ function CAjaxInfiniteScrollingControls( rgSearchData, url )
 	this.m_strClassPrefix = "";
 	this.m_StrRowsId = "";
 	this.m_rgStaticParams = null;
-
-	this.m_strQuery = null;
-	this.m_cTotalCount = 0;
-	this.m_iCurrentPage = 0;
-	this.m_cMaxPages = 0;
+	
 	this.m_bLoading = false;
 
 	this.m_fnPreRequestHandler = null;
@@ -1905,7 +1901,7 @@ function CAjaxInfiniteScrollingControls( rgSearchData, url )
 
 	this.m_strQuery = rgSearchData['query'];
 	this.m_cTotalCount = rgSearchData['total_count'];
-	this.m_iCurrentPage = 0;
+	this.m_iCurrentPage = rgSearchData['page'] || 0;
 	this.m_cPageSize = rgSearchData['pagesize'];
 	this.m_cMaxPages = Math.ceil( this.m_cTotalCount / this.m_cPageSize );
 
