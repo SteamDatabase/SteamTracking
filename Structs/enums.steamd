@@ -859,7 +859,7 @@ enum EFriendRelationship
 enum EGetFriendsAppsActivityFlags
 {
 	ForceFreshQuery = 1;
-	ForgetAppHistory = 2;
+	IgnoreAppHistory = 2;
 	NoMinimumFriendCount = 4;
 	AllowRepeats = 8;
 	IgnoreUnownedLimit = 16;
@@ -3239,7 +3239,7 @@ enum EProtoAppType
 	Franchise = 1024;
 	Video = 2048;
 	Plugin = 4096;
-	Music = 8192;
+	MusicAlbum = 8192;
 	Series = 16384;
 	Comic = 32768;
 	Beta = 65536;
