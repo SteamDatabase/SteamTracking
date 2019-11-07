@@ -697,7 +697,7 @@ LocalizationReady("shared", "english", {
   PartnerEvent_29: "Beta Release",
   PartnerEvent_30: "In-Game Content Updated",
   PartnerEvent_31: "Free Trial",
-  PartnerEvent_32: "New Season Launch",
+  PartnerEvent_32: "New DLC or Season Launch",
   PartnerEvent_33: "Season Update",
   PartnerEvent_34: "Cross Promotion",
   PartnerEvent_35: "General In-Game Event",

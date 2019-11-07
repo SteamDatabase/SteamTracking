@@ -732,12 +732,14 @@ body.modals_BodyNoScrollDialog_105OB {
 .partnereventshared_SaveBackground_V0mbI {
   position: fixed;
   bottom: 0;
-  width: 100vw; }
+  width: 100vw;
+  z-index: 1;
+  background: #353941; }
 
 .partnereventshared_SaveBackground_V0mbI .partnereventshared_FlexRowWrapFlexStartContainer_tyP_c {
-  background: #353941;
-  padding: 12px;
-  margin-top: 20px; }
+  width: 1056px;
+  margin: 0 auto;
+  padding: 12px; }
 
 .partnereventshared_LangaugeWithContent_16xEW {
   color: #a3cf06; }
@@ -8094,6 +8096,8 @@ input.clanimagepicker_SearchInput_lwt4u {
   overflow-y: auto;
   max-height: 732px;
   background: #000; }
+  .clanimagepicker_ImagesContainer_2MNEt::-webkit-scrollbar-thumb {
+    background: #3d4450; }
 
 .clanimagepicker_ImageWrapperContainer_3nF8i {
   text-align: center;

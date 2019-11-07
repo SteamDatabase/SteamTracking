@@ -3858,12 +3858,14 @@ iframe.steamTVLogin {
 .partnereventshared_SaveBackground_1GJS5 {
   position: fixed;
   bottom: 0;
-  width: 100vw; }
+  width: 100vw;
+  z-index: 1;
+  background: #353941; }
 
 .partnereventshared_SaveBackground_1GJS5 .partnereventshared_FlexRowWrapFlexStartContainer_1t48T {
-  background: #353941;
-  padding: 12px;
-  margin-top: 20px; }
+  width: 1056px;
+  margin: 0 auto;
+  padding: 12px; }
 
 .partnereventshared_LangaugeWithContent_sidWp {
   color: #a3cf06; }
