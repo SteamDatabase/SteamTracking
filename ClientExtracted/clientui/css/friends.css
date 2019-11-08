@@ -1123,7 +1123,6 @@ button.TextButton:focus {
 
 .DialogMenuPosition {
   position: absolute;
-  transition: opacity 200ms;
   z-index: 1600; }
 
 .DialogMenuPosition:not(.visible) {
@@ -1159,8 +1158,7 @@ button.TextButton:focus {
   margin-top: 2px; }
 
 .DialogDropDownMenu_Item {
-  line-height: 40px;
-  padding: 0 16px;
+  padding: 10px 15px;
   cursor: pointer; }
 
 .DialogDropDownMenu_Item:hover {

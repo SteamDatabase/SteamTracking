@@ -160,6 +160,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vector2d.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/DialogManager.h
@@ -319,7 +320,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_achievements.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_community_guides.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_community_guides.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_community_hub.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_controller.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_controllerbindings.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/tenfoot/library/librarydetails_controllerbindings_gordon.cpp

@@ -145,6 +145,7 @@
  B g_VecPCoroutineMgr
  B g_bDebugSpewVerbose
  B g_bPreventCoroutineContinue
+ B g_bSuppressParseErrorDisplay
  B g_bTrackedAllocRecordStack
  B g_cTrackedAllocs
  B g_cTrackedAllocsMax
@@ -2164,7 +2165,9 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::AddToTail(CWorkItem* const&)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::FastRemove(int)
+ T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::FindAndRemove(CWorkItem* const&)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::GrowVector(int)
+ T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::Remove(int)
  T CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >::~CUtlVector()
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::AddToTail(CWorkThread* const&)
  T CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >::FastRemove(int)
@@ -2224,6 +2227,7 @@
  T CWSASendThread::~CWSASendThread()
  T CWatchingLog::BMeetsMyCriteria(CLogWatchParam const&) const
  T CWatchingLog::~CWatchingLog()
+ T CWorkItem::CWorkItem()
  T CWorkItem::DispatchCompletedWorkItem(CJobMgr*)
  T CWorkItem::Validate(CValidator&, char const*)
  T CWorkItem::~CWorkItem()
@@ -2251,6 +2255,8 @@
  T CWorkThreadPool::GetNextCompletedWorkItem()
  T CWorkThreadPool::GetNextWorkItemToProcess()
  T CWorkThreadPool::HasWorkItemsToProcess() const
+ T CWorkThreadPool::OnThreadBusy(CWorkItem*)
+ T CWorkThreadPool::OnThreadNotBusy(CWorkItem*)
  T CWorkThreadPool::OnWorkItemCompleted(CWorkItem*)
  T CWorkThreadPool::PreallocateThreads()
  T CWorkThreadPool::ReleaseAllWorkItems()
@@ -2326,9 +2332,11 @@
  T ConVar::GetName() const
  T ConVar::Init()
  T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
+ T ConVar::InternalSetDoubleValue(double)
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetInt64Value(long long)
  T ConVar::InternalSetIntValue(int)
+ T ConVar::InternalSetUnsignedInt64Value(unsigned long long)
  T ConVar::InternalSetValue(char const*)
  T ConVar::InvokeCallbacks(char const*)
  T ConVar::IsCommand() const
@@ -2339,9 +2347,11 @@
  T ConVar::SetReplicated()
  T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
+ T ConVar::SetValue(double)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
  T ConVar::SetValue(long long)
+ T ConVar::SetValue(unsigned long long)
  T ConVar::~ConVar()
  T Coroutine_Continue
  T Coroutine_Finish()
@@ -3009,6 +3019,8 @@
  T SteamThreadTools::CThreadEvent::CThreadEvent(bool)
  T SteamThreadTools::CThreadEvent::Reset()
  T SteamThreadTools::CThreadEvent::Set()
+ T SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
+ T SteamThreadTools::CThreadFullMutex::Release()
  T SteamThreadTools::CThreadLocal<long long>::~CThreadLocal()
  T SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
  T SteamThreadTools::CThreadLocalBase::Get() const
@@ -3038,6 +3050,7 @@
  T SteamThreadTools::CThreadSyncObject::AssertUseable()
  T SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
  T SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
+ T SteamThreadTools::CThreadSyncObject::CreateSemaphoreInternal(char const*, long, bool, bool*)
  T SteamThreadTools::CThreadSyncObject::EnsureSemaphoreClearedInternal(int)
  T SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
  T SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
@@ -3133,6 +3146,7 @@
  T V_UnqualifiedFileName
  T V_atof
  T V_atoi
+ T V_atoui64
  T V_binarytohex
  T V_hextobinary
  T V_pretifymem(float, int, bool)
@@ -4411,6 +4425,7 @@
  r _nist_p_521
  r _nist_p_521_sqr
  r bf_init
+ r crc32(unsigned int, void const*, unsigned long)::s_crc32
  r default_iv
  r des_skb
  r dh1024_160_g
@@ -4477,6 +4492,7 @@
  sched_yield
  select$1050
  semctl
+ semget
  semop
  send
  setenv
@@ -4821,6 +4837,7 @@
  t cmac_size
  t compute_key
  t compute_wNAF
+ t crc32(unsigned int, void const*, unsigned long)
  t def_cleanup_cb
  t def_cleanup_util_cb
  t def_get_class

@@ -187,13 +187,18 @@
 	"GameList_View_ShowingOnlyReadyToPlay": "Showing ready to play only",
 	"GameList_View_ShowOnlyVR": "Show only VR games",
 	"GameList_View_Platform_Linux": "Show only games that run on Linux",
-	"GameList_View_Platform_Apple": "Show only games that run on Apple",
+	"GameList_View_Platform_Apple": "Show only games that run on macOS",
+	"GameList_View_MyOwnGames": "My games",
+	"GameList_View_GamesSharedByOther": "%1$s's games",
+	"GameList_View_NothingSelected": "None",
+	"GameList_View_NothingSelected_HelpText": "Nothing matches this view filter.",
+	"GameList_Search_GamesCheckbox_Link": "Show games",
 
 	"GameList_View_ReadyToPlay_ToolTip1": "• Installed on this machine",
 	"GameList_View_ReadyToPlay_ToolTip2": "• Can be streamed from another machine",
 	"GameList_Entry_ReadyToPlay_ToolTip": "Will be streamed from another machine",
 
-	"GameList_Entry_Invalid_OSType": "Your current MacOS (Catalina) is unable to run 32-bit games. This game may not run.",
+	"GameList_Entry_Invalid_OSType": "Your current macOS (Catalina) is unable to run 32-bit games. This game may not run.",
 	"GameList_Entry_Invalid_OSType2": "This game is Steam Play enabled, so you can play it on Windows via Bootcamp or by using a PC.",
 	"GameList_Entry_Invalid_OSType3": "Learn more.",
 

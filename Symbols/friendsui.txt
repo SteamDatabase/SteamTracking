@@ -230,6 +230,7 @@
  B g_URLLabelLinkerHack
  B g_URLLabelPullInModule
  B g_VecLoadedModules
+ B g_bSuppressParseErrorDisplay
  B g_convarEnableTradeInviteBarInLaunchers
  B g_cvarDeveloper
  B g_cvarOverlayFPS
@@ -4517,6 +4518,7 @@
  R typeinfo name for CUtlQueueDeprecated<CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int> >*>
  R typeinfo name for CUtlQueueDeprecated<int>
  R typeinfo name for CUtlRBTree<CFriendListItemBase*, int, bool (*)(CFriendListItemBase* const&, CFriendListItemBase* const&), CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlRBTree<CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CSteamID, float, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, float, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CSteamID, int, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, int, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -4537,9 +4539,9 @@
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short> >
- R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlString
+ R typeinfo name for CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >
  R typeinfo name for CUtlVector<CItemImageManager::ImagesToDownload_t, CUtlMemory<CItemImageManager::ImagesToDownload_t> >
  R typeinfo name for CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >
  R typeinfo name for CUtlVector<CSteamID, CUtlMemory<CSteamID> >
@@ -4548,7 +4550,6 @@
  R typeinfo name for CUtlVector<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t, CUtlMemory<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
- R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
  R typeinfo name for CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >
  R typeinfo name for CUtlVector<KeyValues const*, CUtlMemory<KeyValues const*> >
  R typeinfo name for CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >
@@ -5021,6 +5022,13 @@
  T CAvatarOverlayImage::PanelMessageFunc_OpenProfile::InitVar()
  T CAvatarOverlayImage::SetEnabled(bool)
  T CAvatarOverlayImage::~CAvatarOverlayImage()
+ T CBaseUtlSymbolTable<CUtlSymbol>::AddString(char const*)
+ T CBaseUtlSymbolTable<CUtlSymbol>::CBaseUtlSymbolTable(int, int, bool, int)
+ T CBaseUtlSymbolTable<CUtlSymbol>::CLess::operator()(CStringPoolIndex const&, CStringPoolIndex const&) const
+ T CBaseUtlSymbolTable<CUtlSymbol>::RemoveAll()
+ T CBaseUtlSymbolTable<CUtlSymbol>::String(CUtlSymbol) const
+ T CBaseUtlSymbolTable<CUtlSymbol>::Validate(CValidator&, char const*)
+ T CBaseUtlSymbolTable<CUtlSymbol>::~CBaseUtlSymbolTable()
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CBoolProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -10292,6 +10300,12 @@
  T CUtlRBTree<CSteamID, int, CDefLess<CSteamID>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CSteamID, int, CDefLess<CSteamID>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CSteamID, int, CDefLess<CSteamID>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CStringPoolIndex const&) const
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CStringPoolIndex const&, bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
@@ -10425,12 +10439,6 @@
  T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CUtlSymbolTable::CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CUtlSymbolTable::CStringPoolIndex const&, bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::Find(unsigned long long const&) const
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(unsigned long long const&, bool, int&, bool&, bool&)
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int> >::Insert(unsigned long long const&, bool)
@@ -10486,15 +10494,12 @@
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
  T CUtlSymbol::ValidateGlobals(CValidator&, char const*)
- T CUtlSymbolTable::AddString(char const*)
- T CUtlSymbolTable::CLess::operator()(CUtlSymbolTable::CStringPoolIndex const&, CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlSymbolTable::CUtlSymbolTable(int, int, bool, int)
- T CUtlSymbolTable::Find(char const*)
- T CUtlSymbolTable::RemoveAll()
- T CUtlSymbolTable::String(CUtlSymbol) const
- T CUtlSymbolTable::Validate(CValidator&, char const*)
  T CUtlSymbolTable::~CUtlSymbolTable()
- T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
+ T CUtlSymbolTableMT<CUtlSymbol>::CUtlSymbolTableMT(int, int, bool)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::AddToTail(CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t* const&)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::GrowVector(int)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::Validate(CValidator&, char const*)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::~CUtlVector()
  T CUtlVector<CChatIntroductionDialog::QueuedChatMsg_t, CUtlMemory<CChatIntroductionDialog::QueuedChatMsg_t> >::AddToTail(CChatIntroductionDialog::QueuedChatMsg_t const&)
  T CUtlVector<CChatIntroductionDialog::QueuedChatMsg_t, CUtlMemory<CChatIntroductionDialog::QueuedChatMsg_t> >::GrowVector(int)
  T CUtlVector<CChatIntroductionDialog::QueuedChatMsg_t, CUtlMemory<CChatIntroductionDialog::QueuedChatMsg_t> >::~CUtlVector()
@@ -10569,10 +10574,6 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::AddToTail(CUtlSymbolTable::StringPool_t* const&)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
@@ -10952,9 +10953,11 @@
  T ConVar::GetName() const
  T ConVar::Init()
  T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
+ T ConVar::InternalSetDoubleValue(double)
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetInt64Value(long long)
  T ConVar::InternalSetIntValue(int)
+ T ConVar::InternalSetUnsignedInt64Value(unsigned long long)
  T ConVar::InternalSetValue(char const*)
  T ConVar::InvokeCallbacks(char const*)
  T ConVar::IsCommand() const
@@ -10965,9 +10968,11 @@
  T ConVar::SetReplicated()
  T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
+ T ConVar::SetValue(double)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
  T ConVar::SetValue(long long)
+ T ConVar::SetValue(unsigned long long)
  T ConVar::Validate(CValidator&, char const*)
  T ConVar::~ConVar()
  T ConvertJpegToRGBA(unsigned char const*, int, CUtlBuffer&, int&, int&, int*)

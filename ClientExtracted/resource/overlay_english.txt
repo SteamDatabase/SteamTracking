@@ -42,6 +42,7 @@
 "Steam_Settings_Library_DisableCommunityContent_Title" "Disable Community Content"
 "Steam_Settings_Library_DisableCommunityContent_Desc" "Prevents the automatic load of community content when viewing game details."
 "Steam_Settings_Library_DisableCommunityContent_Disabled_Desc" "Enabled by Low Bandwidth Mode.\n\nPrevents the automatic load of community content when viewing game details."
+"Steam_Settings_Library_IconInGameList_Title" "Show game icons in the left column"
 
 
 "Overlay_WebBrowserTitle"	"Web Browser In-Game"

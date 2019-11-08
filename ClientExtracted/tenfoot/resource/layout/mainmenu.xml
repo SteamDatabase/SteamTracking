@@ -108,6 +108,9 @@
 					<Button id="BetaButton" class="Button TopRowButton" onactivate="BrowserGoToURL(http://www.steampowered.com/steamosbeta);" selectionpos="auto" tabindex="auto" >
 						<Image src="file://{images}/betabutton4.tga" />
 					</Button>
+
+					<BatteryIndicator id="MainMenuBatteryIndicator" class="MainMenuBatteryIndicator" />
+
 					<Clock id="Clock" class="Clock" />
 				</Panel>
 				

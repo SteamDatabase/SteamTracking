@@ -132,6 +132,7 @@ message CCloud_ClientBeginFileUpload_Request {
 	optional uint32 cell_id = 9 [(description) = "Client's cell ID so we can pick storage location."];
 	optional bool can_encrypt = 10 [(description) = "if true, client can encrypt the file before uploading it"];
 	optional bool is_shared_file = 11 [(description) = "if true, this is going to be UGC or a screenshot or some other shared file"];
+	optional uint32 realm = 12 [(description) = "Steam Realm"];
 }
 
 message ClientCloudFileUploadBlockDetails {
@@ -170,6 +171,7 @@ message CCloud_ClientCommitFileUpload_Response {
 message CCloud_ClientFileDownload_Request {
 	optional uint32 appid = 1 [(description) = "App ID the file is part of."];
 	optional string filename = 2 [(description) = "Filename of the file."];
+	optional uint32 realm = 3 [(description) = "Steam Realm"];
 }
 
 message CCloud_ClientFileDownload_Response {

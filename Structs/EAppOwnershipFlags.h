@@ -16,4 +16,10 @@ typedef enum EAppOwnershipFlags
     k_EAppOwnershipFlagsRecurring = 4096, // Recurring
     k_EAppOwnershipFlagsCanceled = 8192, // Canceled
     k_EAppOwnershipFlagsAutoGrant = 16384, // Auto Grant
+    k_EAppOwnershipFlagsPendingGift = 32768, // Pending Gift
+    k_EAppOwnershipFlagsRentalnotActivated = 65536, // Rental (not activated)
+    k_EAppOwnershipFlagsRental = 131072, // Rental
+    k_EAppOwnershipFlagsSiteLicense = 262144, // Site License
+    k_EAppOwnershipFlagsLegacyFreeSub = 524288, // Legacy Free Sub
+    k_EAppOwnershipFlagsInvalidOSType = 1048576, // Invalid OS Type
 } EAppOwnershipFlags;

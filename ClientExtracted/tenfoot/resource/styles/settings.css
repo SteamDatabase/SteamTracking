@@ -4086,3 +4086,19 @@ SettingsPanel_ControllerConfigs .SettingsContent
 {
     background-image: url("file://{images}/library/controller/controller_nintendo_layout.png");
 }
+
+.CloudGamingActive .CloudGamingVisible {
+    visibility: visible;
+}
+
+.CloudGamingActive .CloudGamingHidden {
+    visibility: collapse;
+}
+
+.CloudGamingVisible {
+    visibility: collapse;
+}
+
+.CloudGamingHidden {
+    visibility: visible;
+}

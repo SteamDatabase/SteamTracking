@@ -275,6 +275,7 @@
  B g_VGUIApplicationOverlay
  B g_VecLoadedModules
  B g_bManuallyClearFrames
+ B g_bSuppressParseErrorDisplay
  B g_cvarDeveloper
  B g_listOverlayBrowserWindowPositions
  B g_machClient
@@ -4963,6 +4964,12 @@
  T CBasePanel::ViewNews()
  T CBasePanel::WriteScreenshot(unsigned int, unsigned int, CUtlBuffer&)
  T CBasePanel::~CBasePanel()
+ T CBaseUtlSymbolTable<CUtlSymbol>::AddString(char const*)
+ T CBaseUtlSymbolTable<CUtlSymbol>::CBaseUtlSymbolTable(int, int, bool, int)
+ T CBaseUtlSymbolTable<CUtlSymbol>::CLess::operator()(CStringPoolIndex const&, CStringPoolIndex const&) const
+ T CBaseUtlSymbolTable<CUtlSymbol>::RemoveAll()
+ T CBaseUtlSymbolTable<CUtlSymbol>::String(CUtlSymbol) const
+ T CBaseUtlSymbolTable<CUtlSymbol>::~CBaseUtlSymbolTable()
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CBoolProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -8219,7 +8226,7 @@
  T CMusicPlayerLabel::KB_ChainToMap()
  T CMusicPlayerLabel::OnMousePressed(vgui::MouseCode)
  T CMusicPlayerLabel::~CMusicPlayerLabel()
- T CMusicPlayerPanel::Activate()
+ T CMusicPlayerPanel::Activate(unsigned int)
  T CMusicPlayerPanel::CCallback_OnAlbumCoverLoaded::Run(void*)
  T CMusicPlayerPanel::CCallback_OnAlbumCoverLoaded::~CCallback_OnAlbumCoverLoaded()
  T CMusicPlayerPanel::CCallback_OnCurrentQueueEntryHasChanged::Run(void*)
@@ -9704,6 +9711,11 @@
  T CUtlRBTree<BestMatch_t, int, CDefLess<BestMatch_t>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, CDefLess<CKeyBindingsMgr::KBContext_t>, CDefRBTreeBalanceListener<int> >::Find(CKeyBindingsMgr::KBContext_t const&) const
  T CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, CDefLess<CKeyBindingsMgr::KBContext_t>, CDefRBTreeBalanceListener<int> >::RemoveAll()
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CStringPoolIndex const&) const
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CStringPoolIndex const&, bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Find(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&) const
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Insert(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*&&, bool)
@@ -9828,11 +9840,6 @@
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Remove(CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t const&)
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CUtlSymbolTable::CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CUtlSymbolTable::CStringPoolIndex const&, bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::Find(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&) const
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::Insert(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*&&, bool)
@@ -9894,14 +9901,8 @@
  T CUtlSymbol::CUtlSymbol(char const*)
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
- T CUtlSymbolTable::AddString(char const*)
- T CUtlSymbolTable::CLess::operator()(CUtlSymbolTable::CStringPoolIndex const&, CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlSymbolTable::CUtlSymbolTable(int, int, bool, int)
- T CUtlSymbolTable::Find(char const*)
- T CUtlSymbolTable::RemoveAll()
- T CUtlSymbolTable::String(CUtlSymbol) const
  T CUtlSymbolTable::~CUtlSymbolTable()
- T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
+ T CUtlSymbolTableMT<CUtlSymbol>::CUtlSymbolTableMT(int, int, bool)
  T CUtlThreadSafeQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlThreadSafeQueue<CLogEvent*>::BRemoveAtHead(CLogEvent**)
  T CUtlThreadSafeQueue<CLogEvent*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
@@ -9910,6 +9911,9 @@
  T CUtlThreadSafeQueue<CLogEvent*>::~CUtlThreadSafeQueue()
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
  T CUtlThreadSafeQueue<CProtoBufMsg<CMsgSpew>*>::~CUtlThreadSafeQueue()
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::AddToTail(CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t* const&)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::GrowVector(int)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::~CUtlVector()
  T CUtlVector<CGuideItemPanel*, CUtlMemory<CGuideItemPanel*> >::AddToTail(CGuideItemPanel*&&)
  T CUtlVector<CGuideItemPanel*, CUtlMemory<CGuideItemPanel*> >::GrowVector(int)
  T CUtlVector<CGuideItemPanel*, CUtlMemory<CGuideItemPanel*> >::~CUtlVector()
@@ -10000,9 +10004,6 @@
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::AddToTail(CUtlSymbolTable::StringPool_t* const&)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::GrowVector(int)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<HTMLCommandBuffer_t*, CUtlMemory<HTMLCommandBuffer_t*> >::AddToTail(HTMLCommandBuffer_t* const&)
@@ -10334,9 +10335,11 @@
  T ConVar::GetName() const
  T ConVar::Init()
  T ConVar::InstallChangeCallback(void (*)(ConVar*, char const*))
+ T ConVar::InternalSetDoubleValue(double)
  T ConVar::InternalSetFloatValue(float)
  T ConVar::InternalSetInt64Value(long long)
  T ConVar::InternalSetIntValue(int)
+ T ConVar::InternalSetUnsignedInt64Value(unsigned long long)
  T ConVar::InternalSetValue(char const*)
  T ConVar::InvokeCallbacks(char const*)
  T ConVar::IsCommand() const
@@ -10347,9 +10350,11 @@
  T ConVar::SetReplicated()
  T ConVar::SetSendDiscardLocalOverride()
  T ConVar::SetValue(char const*)
+ T ConVar::SetValue(double)
  T ConVar::SetValue(float)
  T ConVar::SetValue(int)
  T ConVar::SetValue(long long)
+ T ConVar::SetValue(unsigned long long)
  T ConVar::~ConVar()
  T ConvertImageToRGB(unsigned char const*, int, CUtlBuffer&, int&, int&)
  T ConvertImageToRGBA(unsigned char const*, int, CUtlBuffer&, int&, int&)
@@ -14752,6 +14757,7 @@
  V_WcsSkipArticles
  V_atof
  V_atoi
+ V_atoui64
  V_binarytohex
  V_isbreakablewspace
  V_pretifymem

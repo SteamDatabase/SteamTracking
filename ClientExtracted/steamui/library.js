@@ -223,8 +223,8 @@
               o.a.createElement(
                 "div",
                 { className: l.a.Throbber },
-                o.a.createElement(a.db, { className: l.a.base }),
-                o.a.createElement(a.db, { className: l.a.blur })
+                o.a.createElement(a.eb, { className: l.a.base }),
+                o.a.createElement(a.eb, { className: l.a.blur })
               )
             );
             return o.a.createElement(
@@ -293,7 +293,7 @@
   },
   "6Y59": function(e, t, r) {
     "use strict";
-    r.d(t, "W", function() {
+    r.d(t, "X", function() {
       return s;
     }),
       r.d(t, "n", function() {
@@ -305,34 +305,34 @@
       r.d(t, "r", function() {
         return m;
       }),
-      r.d(t, "cb", function() {
+      r.d(t, "db", function() {
         return f;
       }),
-      r.d(t, "ob", function() {
+      r.d(t, "pb", function() {
         return d;
       }),
-      r.d(t, "pb", function() {
+      r.d(t, "qb", function() {
         return p;
       }),
-      r.d(t, "lb", function() {
+      r.d(t, "mb", function() {
         return E;
       }),
-      r.d(t, "O", function() {
-        return k;
-      }),
-      r.d(t, "J", function() {
+      r.d(t, "P", function() {
         return _;
       }),
-      r.d(t, "mb", function() {
+      r.d(t, "K", function() {
+        return k;
+      }),
+      r.d(t, "nb", function() {
         return g;
       }),
-      r.d(t, "M", function() {
+      r.d(t, "N", function() {
         return v;
       }),
-      r.d(t, "L", function() {
+      r.d(t, "M", function() {
         return x;
       }),
-      r.d(t, "Z", function() {
+      r.d(t, "ab", function() {
         return w;
       }),
       r.d(t, "g", function() {
@@ -344,7 +344,7 @@
       r.d(t, "D", function() {
         return S;
       }),
-      r.d(t, "db", function() {
+      r.d(t, "eb", function() {
         return y;
       }),
       r.d(t, "c", function() {
@@ -356,16 +356,16 @@
       r.d(t, "F", function() {
         return N;
       }),
-      r.d(t, "H", function() {
+      r.d(t, "I", function() {
         return I;
       }),
-      r.d(t, "S", function() {
+      r.d(t, "T", function() {
         return C;
       }),
-      r.d(t, "R", function() {
+      r.d(t, "S", function() {
         return B;
       }),
-      r.d(t, "gb", function() {
+      r.d(t, "hb", function() {
         return T;
       }),
       r.d(t, "u", function() {
@@ -375,33 +375,33 @@
         return z;
       }),
       r.d(t, "l", function() {
-        return D;
-      }),
-      r.d(t, "G", function() {
-        return F;
-      }),
-      r.d(t, "bb", function() {
         return R;
       }),
-      r.d(t, "kb", function() {
+      r.d(t, "G", function() {
+        return D;
+      }),
+      r.d(t, "cb", function() {
+        return F;
+      }),
+      r.d(t, "lb", function() {
         return P;
       }),
       r.d(t, "w", function() {
         return W;
       }),
-      r.d(t, "U", function() {
+      r.d(t, "V", function() {
         return O;
       }),
-      r.d(t, "V", function() {
+      r.d(t, "W", function() {
         return A;
       }),
       r.d(t, "d", function() {
         return j;
       }),
-      r.d(t, "I", function() {
+      r.d(t, "J", function() {
         return U;
       }),
-      r.d(t, "jb", function() {
+      r.d(t, "kb", function() {
         return H;
       }),
       r.d(t, "B", function() {
@@ -413,13 +413,13 @@
       r.d(t, "t", function() {
         return q;
       }),
-      r.d(t, "ib", function() {
+      r.d(t, "jb", function() {
         return J;
       }),
-      r.d(t, "qb", function() {
+      r.d(t, "rb", function() {
         return K;
       }),
-      r.d(t, "hb", function() {
+      r.d(t, "ib", function() {
         return Q;
       }),
       r.d(t, "f", function() {
@@ -431,7 +431,7 @@
       r.d(t, "x", function() {
         return ee;
       }),
-      r.d(t, "ab", function() {
+      r.d(t, "bb", function() {
         return te;
       }),
       r.d(t, "o", function() {
@@ -440,16 +440,16 @@
       r.d(t, "a", function() {
         return ne;
       }),
-      r.d(t, "N", function() {
+      r.d(t, "O", function() {
         return ce;
       }),
       r.d(t, "y", function() {
         return oe;
       }),
-      r.d(t, "P", function() {
+      r.d(t, "Q", function() {
         return ae;
       }),
-      r.d(t, "Q", function() {
+      r.d(t, "R", function() {
         return ie;
       }),
       r.d(t, "q", function() {
@@ -458,16 +458,16 @@
       r.d(t, "z", function() {
         return se;
       }),
-      r.d(t, "Y", function() {
+      r.d(t, "Z", function() {
         return ue;
       }),
       r.d(t, "p", function() {
         return he;
       }),
-      r.d(t, "X", function() {
+      r.d(t, "Y", function() {
         return me;
       }),
-      r.d(t, "K", function() {
+      r.d(t, "L", function() {
         return fe;
       }),
       r.d(t, "b", function() {
@@ -476,29 +476,32 @@
       r.d(t, "C", function() {
         return pe;
       }),
-      r.d(t, "A", function() {
+      r.d(t, "H", function() {
         return Ee;
+      }),
+      r.d(t, "A", function() {
+        return _e;
       }),
       r.d(t, "i", function() {
         return ke;
       }),
       r.d(t, "j", function() {
-        return _e;
-      }),
-      r.d(t, "fb", function() {
         return ge;
       }),
-      r.d(t, "eb", function() {
+      r.d(t, "gb", function() {
         return ve;
       }),
-      r.d(t, "T", function() {
+      r.d(t, "fb", function() {
         return xe;
       }),
-      r.d(t, "nb", function() {
+      r.d(t, "U", function() {
         return we;
       }),
-      r.d(t, "e", function() {
+      r.d(t, "ob", function() {
         return be;
+      }),
+      r.d(t, "e", function() {
+        return Le;
       });
     var n = r("mrSG"),
       o = r("q1tI"),
@@ -811,7 +814,7 @@
           )
       );
     }
-    function k(e) {
+    function _(e) {
       return o.createElement(
         "svg",
         {
@@ -858,7 +861,7 @@
           })
       );
     }
-    function _() {
+    function k() {
       return o.createElement(
         "svg",
         {
@@ -1824,7 +1827,7 @@
         )
       );
     }
-    function D() {
+    function R() {
       return o.createElement(
         "svg",
         {
@@ -1859,7 +1862,7 @@
         })
       );
     }
-    function F(e) {
+    function D(e) {
       return o.createElement(
         "svg",
         {
@@ -1897,7 +1900,7 @@
         })
       );
     }
-    function R(e) {
+    function F(e) {
       var t = Object(i.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -2914,6 +2917,22 @@
           version: "1.1",
           id: "Layer_1",
           xmlns: "http://www.w3.org/2000/svg",
+          x: "0px",
+          y: "0px",
+          viewBox: "0 0 256 256"
+        },
+        o.createElement("circle", { cx: "126", cy: "134", r: "20.6" }),
+        o.createElement("circle", { cx: "189.4", cy: "134", r: "20.6" }),
+        o.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
+      );
+    }
+    function _e() {
+      return o.createElement(
+        "svg",
+        {
+          version: "1.1",
+          id: "Layer_1",
+          xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button SVGIcon_Invalid",
           x: "0px",
           y: "0px",
@@ -2947,7 +2966,7 @@
         })
       );
     }
-    function _e(e) {
+    function ge(e) {
       return o.createElement(
         "svg",
         {
@@ -2967,7 +2986,7 @@
         })
       );
     }
-    function ge(e) {
+    function ve(e) {
       return o.createElement(
         "svg",
         {
@@ -2987,7 +3006,7 @@
         })
       );
     }
-    function ve(e) {
+    function xe(e) {
       return o.createElement(
         "svg",
         {
@@ -3008,7 +3027,7 @@
         })
       );
     }
-    function xe(e) {
+    function we(e) {
       return o.createElement(
         "svg",
         {
@@ -3033,7 +3052,7 @@
         })
       );
     }
-    function we(e) {
+    function be(e) {
       return o.createElement(
         "svg",
         {
@@ -3058,7 +3077,7 @@
         })
       );
     }
-    function be(e) {
+    function Le(e) {
       return o.createElement(
         "svg",
         { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -3327,10 +3346,10 @@
         return E;
       }),
       r.d(t, "m", function() {
-        return k;
+        return _;
       }),
       r.d(t, "k", function() {
-        return _;
+        return k;
       }),
       r.d(t, "n", function() {
         return x;
@@ -3614,7 +3633,7 @@
         year: "numeric"
       });
     }
-    function k(e) {
+    function _(e) {
       var t = new Date(1e3 * e),
         r = t.setHours(0, 0, 0, 0),
         n = g.get(r);
@@ -3629,7 +3648,7 @@
         n
       );
     }
-    function _(e) {
+    function k(e) {
       return new Date(1e3 * e).toLocaleTimeString(C.GetPreferredLocales(), {
         hour: "numeric",
         minute: "numeric"
@@ -3640,7 +3659,7 @@
     function x(e, t) {
       var r = new Date(),
         n = new Date(1e3 * e);
-      if (n.getFullYear() != r.getFullYear()) return k(e);
+      if (n.getFullYear() != r.getFullYear()) return _(e);
       l.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
       var c = new Date();
       if ((c.setHours(0, 0, 0, 0), c <= n)) return h("#Time_Today");
@@ -3821,11 +3840,14 @@
     r.d(t, "a", function() {
       return o;
     }),
-      r.d(t, "c", function() {
+      r.d(t, "d", function() {
         return i;
       }),
       r.d(t, "b", function() {
         return s;
+      }),
+      r.d(t, "c", function() {
+        return u;
       });
     var c,
       o = {
@@ -3927,6 +3949,22 @@
         ? o.PARTNER_BASE_URL
         : e.startsWith(o.HELP_BASE_URL)
         ? o.HELP_BASE_URL
+        : e.startsWith(o.STEAMTV_BASE_URL)
+        ? o.STEAMTV_BASE_URL
+        : "";
+    }
+    function u() {
+      var e = window.location.href;
+      return e.startsWith(o.STORE_BASE_URL)
+        ? "store"
+        : e.startsWith(o.COMMUNITY_BASE_URL)
+        ? "community"
+        : e.startsWith(o.PARTNER_BASE_URL)
+        ? "partnerweb"
+        : e.startsWith(o.HELP_BASE_URL)
+        ? "help"
+        : e.startsWith(o.STEAMTV_BASE_URL)
+        ? "steamtv"
         : "";
     }
   },
@@ -3975,10 +4013,10 @@
         return E;
       }),
       r.d(t, "h", function() {
-        return k;
+        return _;
       }),
       r.d(t, "i", function() {
-        return _;
+        return k;
       }),
       r.d(t, "e", function() {
         return g;
@@ -4007,8 +4045,8 @@
       d = 330050,
       p = 358510,
       E = 366490,
-      k = "18446744073709551615",
-      _ = 0;
+      _ = "18446744073709551615",
+      k = 0;
     function g(e, t) {
       switch ((void 0 === t && (t = "en"), e)) {
         case 0:

@@ -79,7 +79,7 @@
        	<Button id="BroadcastSettingsButton" class="Button" onactivate="ShowSettings( Broadcast );">
 					<Label class="LongDesc" text="#Settings_Broadcast" />
 				</Button>
-        <Button id="RemoteClientsButton" class="Button" onactivate="ShowSettings( RemoteClients );">    <!-- in-home streaming -->
+        <Button id="RemoteClientsButton" class="Button CloudGamingHidden" onactivate="ShowSettings( RemoteClients );">    <!-- in-home streaming -->
     			<Label class="LongDesc" text="#Settings_RemoteClients" />
 		    </Button>
        	<Button id="ParentalSettingsButton" class="Button" onactivate="ShowParentalSettings();">        <!-- parental settings -->

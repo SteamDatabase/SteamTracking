@@ -202,11 +202,11 @@
  R typeinfo name for CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
+ R typeinfo name for CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlString
+ R typeinfo name for CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >
  R typeinfo name for CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >
- R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
  R typeinfo name for CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >
  R typeinfo name for CUtlVector<IAudioOutputStream*, CUtlMemory<IAudioOutputStream*> >
  R typeinfo name for CUtlVector<IAudioSound*, CUtlMemory<IAudioSound*> >
@@ -231,6 +231,13 @@
  T CAudioController::OpenDriverForDevice(CMilesAudioDevice*)
  T CAudioController::UpdateSharedContextForDevice(CMilesAudioDevice*)
  T CAudioController::Validate(CValidator&, char const*)
+ T CBaseUtlSymbolTable<CUtlSymbol>::AddString(char const*)
+ T CBaseUtlSymbolTable<CUtlSymbol>::CBaseUtlSymbolTable(int, int, bool, int)
+ T CBaseUtlSymbolTable<CUtlSymbol>::CLess::operator()(CStringPoolIndex const&, CStringPoolIndex const&) const
+ T CBaseUtlSymbolTable<CUtlSymbol>::RemoveAll()
+ T CBaseUtlSymbolTable<CUtlSymbol>::String(CUtlSymbol) const
+ T CBaseUtlSymbolTable<CUtlSymbol>::Validate(CValidator&, char const*)
+ T CBaseUtlSymbolTable<CUtlSymbol>::~CBaseUtlSymbolTable()
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CDLLValidate::Validate(CValidator&)
  T CDynamicFunc<_DIG_DRIVER* (*)(unsigned int, int, int, unsigned int, int (*)(_RadSoundSystem*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int))>::GetNextPointer()
@@ -591,16 +598,16 @@
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(char const*, int*)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CStringPoolIndex const&) const
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CStringPoolIndex const&, bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CUtlSymbolTable::CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CUtlSymbolTable::CStringPoolIndex const&, bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
@@ -617,24 +624,17 @@
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
  T CUtlSymbol::ValidateGlobals(CValidator&, char const*)
- T CUtlSymbolTable::AddString(char const*)
- T CUtlSymbolTable::CLess::operator()(CUtlSymbolTable::CStringPoolIndex const&, CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlSymbolTable::CUtlSymbolTable(int, int, bool, int)
- T CUtlSymbolTable::RemoveAll()
- T CUtlSymbolTable::String(CUtlSymbol) const
- T CUtlSymbolTable::Validate(CValidator&, char const*)
- T CUtlSymbolTable::~CUtlSymbolTable()
- T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
+ T CUtlSymbolTableMT<CUtlSymbol>::CUtlSymbolTableMT(int, int, bool)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::AddToTail(CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t* const&)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::GrowVector(int)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::Validate(CValidator&, char const*)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::~CUtlVector()
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::AddToTail(CMilesAudioDevice* const&)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::FindAndRemove(CMilesAudioDevice* const&)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::GrowVector(int)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::Remove(int)
  T CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >::~CUtlVector()
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::AddToTail(CUtlSymbolTable::StringPool_t* const&)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::AddToTail(IAudioDeviceListener* const&)
  T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::FindAndRemove(IAudioDeviceListener* const&)
  T CUtlVector<IAudioDeviceListener*, CUtlMemory<IAudioDeviceListener*> >::GrowVector(int)

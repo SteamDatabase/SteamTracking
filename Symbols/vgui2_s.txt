@@ -57,6 +57,7 @@
  B g_VGui
  B g_VModuleLoader
  B g_VecLoadedModules
+ B g_bSuppressParseErrorDisplay
  B g_mutexTempTextBuffer
  B g_pFioAsyncFinalize
  B g_pInputBase
@@ -367,6 +368,7 @@
  R typeinfo name for CUtlRBTree<CLocalizedStringTable::fastvalue_t, int, bool (*)(CLocalizedStringTable::fastvalue_t const&, CLocalizedStringTable::fastvalue_t const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CLocalizedStringTable::localizedstring_t, int, bool (*)(CLocalizedStringTable::localizedstring_t const&, CLocalizedStringTable::localizedstring_t const&), CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<COSXFont::abc_cache_t, unsigned short, bool (*)(COSXFont::abc_cache_t const&, COSXFont::abc_cache_t const&), CDefRBTreeBalanceListener<unsigned short> >
+ R typeinfo name for CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlRBTree<CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t, int, CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >::Node_t, int, CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Node_t, int, CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
@@ -379,12 +381,12 @@
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Node_t, short, CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<short> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::Node_t, int, CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlRBTree<int, int, CSchemeManager::CObjLessFunc<int, CSchemeManager>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<unsigned int, int, CDefLess<unsigned int>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int> >
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >
+ R typeinfo name for CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >
  R typeinfo name for CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >
  R typeinfo name for CUtlVector<CFontAmalgam::TFontRange, CUtlMemory<CFontAmalgam::TFontRange> >
  R typeinfo name for CUtlVector<CNotificationManager::NotificationPanel, CUtlMemory<CNotificationManager::NotificationPanel> >
@@ -396,7 +398,6 @@
  R typeinfo name for CUtlVector<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::IImage*, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
  R typeinfo name for CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >
- R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
  R typeinfo name for CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >
  R typeinfo name for CUtlVector<CVGuiSystemModuleLoader::module_t, CUtlMemory<CVGuiSystemModuleLoader::module_t> >
  R typeinfo name for CUtlVector<Color, CUtlMemory<Color> >
@@ -450,10 +451,12 @@
  SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
  SteamStdLib::CCommandLineParam::~CCommandLineParam()
  SteamStdLib::CommandLine()
+ SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
  SteamThreadTools::CThreadLocalBase::Get() const
  SteamThreadTools::CThreadLocalBase::Set(void*)
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
+ SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  SteamVProf::CVProfNode::EnterScope(void*)
  SteamVProf::CVProfNode::ExitScope()
  SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
@@ -646,6 +649,13 @@
  T CBaseSurface::WakeMainThread(bool)
  T CBaseSurface::setFocus(unsigned long long, bool)
  T CBaseSurface::~CBaseSurface()
+ T CBaseUtlSymbolTable<CUtlSymbol>::AddString(char const*)
+ T CBaseUtlSymbolTable<CUtlSymbol>::CBaseUtlSymbolTable(int, int, bool, int)
+ T CBaseUtlSymbolTable<CUtlSymbol>::CLess::operator()(CStringPoolIndex const&, CStringPoolIndex const&) const
+ T CBaseUtlSymbolTable<CUtlSymbol>::RemoveAll()
+ T CBaseUtlSymbolTable<CUtlSymbol>::String(CUtlSymbol) const
+ T CBaseUtlSymbolTable<CUtlSymbol>::Validate(CValidator&, char const*)
+ T CBaseUtlSymbolTable<CUtlSymbol>::~CBaseUtlSymbolTable()
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
@@ -1394,6 +1404,12 @@
  T CUtlRBTree<COSXFont::abc_cache_t, unsigned short, bool (*)(COSXFont::abc_cache_t const&, COSXFont::abc_cache_t const&), CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
  T CUtlRBTree<COSXFont::abc_cache_t, unsigned short, bool (*)(COSXFont::abc_cache_t const&, COSXFont::abc_cache_t const&), CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
  T CUtlRBTree<COSXFont::abc_cache_t, unsigned short, bool (*)(COSXFont::abc_cache_t const&, COSXFont::abc_cache_t const&), CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CStringPoolIndex const&) const
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CStringPoolIndex const&, bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t, int, CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t, int, CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t, int, CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
@@ -1483,12 +1499,6 @@
  T CUtlRBTree<CUtlMap<vgui::VPanel*, int, int, CDefLess<vgui::VPanel*> >::Node_t, int, CUtlMap<vgui::VPanel*, int, int, CDefLess<vgui::VPanel*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<vgui::VPanel*, int, int, CDefLess<vgui::VPanel*> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<vgui::VPanel*, int, int, CDefLess<vgui::VPanel*> >::Node_t, int, CUtlMap<vgui::VPanel*, int, int, CDefLess<vgui::VPanel*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<vgui::VPanel*, int, int, CDefLess<vgui::VPanel*> >::Node_t, int, CUtlMap<vgui::VPanel*, int, int, CDefLess<vgui::VPanel*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CUtlSymbolTable::CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CUtlSymbolTable::CStringPoolIndex const&, bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
  T CUtlRBTree<int, int, CDefLess<int>, CDefRBTreeBalanceListener<int> >::Find(int const&) const
  T CUtlRBTree<int, int, CDefLess<int>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(int const&, bool, int&, bool&, bool&)
  T CUtlRBTree<int, int, CDefLess<int>, CDefRBTreeBalanceListener<int> >::Insert(int const&, bool)
@@ -1551,17 +1561,14 @@
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
  T CUtlSymbol::ValidateGlobals(CValidator&, char const*)
- T CUtlSymbolTable::AddString(char const*)
- T CUtlSymbolTable::CLess::operator()(CUtlSymbolTable::CStringPoolIndex const&, CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlSymbolTable::CUtlSymbolTable(int, int, bool, int)
- T CUtlSymbolTable::RemoveAll()
- T CUtlSymbolTable::String(CUtlSymbol) const
- T CUtlSymbolTable::Validate(CValidator&, char const*)
- T CUtlSymbolTable::~CUtlSymbolTable()
- T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
+ T CUtlSymbolTableMT<CUtlSymbol>::CUtlSymbolTableMT(int, int, bool)
  T CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >::GrowVector(int)
  T CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >::~CUtlVector()
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::AddToTail(CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t* const&)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::GrowVector(int)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::Validate(CValidator&, char const*)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::~CUtlVector()
  T CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >::GrowVector(int)
  T CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >::RemoveAll()
  T CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >::Validate(CValidator&, char const*)
@@ -1619,10 +1626,6 @@
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::SetCount(int)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlSymbol, CUtlMemory<CUtlSymbol> >::~CUtlVector()
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::AddToTail(CUtlSymbolTable::StringPool_t* const&)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
  T CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >::AddToTail(CVGui::Tick_t* const&)
  T CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >::GrowVector(int)
  T CUtlVector<CVGui::Tick_t*, CUtlMemory<CVGui::Tick_t*> >::Remove(int)

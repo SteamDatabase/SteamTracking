@@ -54,14 +54,14 @@
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >
  R typeinfo name for CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >
  R typeinfo name for CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >
  R typeinfo name for CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >
  R typeinfo name for CUtlVector<CBaseFileSystem::CSearchPath, CUtlMemory<CBaseFileSystem::CSearchPath> >
  R typeinfo name for CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >
- R typeinfo name for CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >
+ R typeinfo name for CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >
  R typeinfo name for CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >
  R typeinfo name for CUtlVector<__sFILE*, CUtlMemory<__sFILE*> >
  R typeinfo name for CUtlVector<char, CUtlMemory<char> >
@@ -169,6 +169,13 @@
  T CBaseFileSystem::Warning(FileWarningLevel_t, char const*, ...)
  T CBaseFileSystem::Write(void const*, int, void*)
  T CBaseFileSystem::~CBaseFileSystem()
+ T CBaseUtlSymbolTable<CUtlSymbol>::AddString(char const*)
+ T CBaseUtlSymbolTable<CUtlSymbol>::CBaseUtlSymbolTable(int, int, bool, int)
+ T CBaseUtlSymbolTable<CUtlSymbol>::CLess::operator()(CStringPoolIndex const&, CStringPoolIndex const&) const
+ T CBaseUtlSymbolTable<CUtlSymbol>::RemoveAll()
+ T CBaseUtlSymbolTable<CUtlSymbol>::String(CUtlSymbol) const
+ T CBaseUtlSymbolTable<CUtlSymbol>::Validate(CValidator&, char const*)
+ T CBaseUtlSymbolTable<CUtlSymbol>::~CBaseUtlSymbolTable()
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
  T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BCurrentIsReadOnly() const
@@ -232,17 +239,17 @@
  T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CStringPoolIndex const&) const
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CStringPoolIndex const&, bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
  T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CUtlSymbolTable::CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CUtlSymbolTable::CStringPoolIndex const&, bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<CUtlSymbolTable::CStringPoolIndex, unsigned short, CUtlSymbolTable::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_NextInorder(int, unsigned long, void*) const
@@ -256,14 +263,8 @@
  T CUtlSymbol::Initialize()
  T CUtlSymbol::String() const
  T CUtlSymbol::ValidateGlobals(CValidator&, char const*)
- T CUtlSymbolTable::AddString(char const*)
- T CUtlSymbolTable::CLess::operator()(CUtlSymbolTable::CStringPoolIndex const&, CUtlSymbolTable::CStringPoolIndex const&) const
- T CUtlSymbolTable::CUtlSymbolTable(int, int, bool, int)
- T CUtlSymbolTable::RemoveAll()
- T CUtlSymbolTable::String(CUtlSymbol) const
- T CUtlSymbolTable::Validate(CValidator&, char const*)
  T CUtlSymbolTable::~CUtlSymbolTable()
- T CUtlSymbolTableMT::CUtlSymbolTableMT(int, int, bool)
+ T CUtlSymbolTableMT<CUtlSymbol>::CUtlSymbolTableMT(int, int, bool)
  T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::AddToTail(CBaseFileSystem::CFileHandle* const&)
  T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::FindAndRemove(CBaseFileSystem::CFileHandle* const&)
  T CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >::GrowVector(int)
@@ -295,10 +296,10 @@
  T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::RemoveAll()
  T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CBaseFileSystem::FindData_t, CUtlMemory<CBaseFileSystem::FindData_t> >::~CUtlVector()
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::AddToTail(CUtlSymbolTable::StringPool_t* const&)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::GrowVector(int)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlSymbolTable::StringPool_t*, CUtlMemory<CUtlSymbolTable::StringPool_t*> >::~CUtlVector()
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::AddToTail(CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t* const&)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::GrowVector(int)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::Validate(CValidator&, char const*)
+ T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::~CUtlVector()
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::AddToTail(ModuleCount_t const&)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::GrowVector(int)
  T CUtlVector<ModuleCount_t, CUtlMemory<ModuleCount_t> >::Remove(int)

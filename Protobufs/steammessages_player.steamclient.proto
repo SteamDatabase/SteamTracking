@@ -108,6 +108,25 @@ message CPlayer_GetEmoticonList_Response {
 	repeated .CPlayer_GetEmoticonList_Response.Emoticon emoticons = 1;
 }
 
+message CPlayer_GetAchievementsProgress_Request {
+	optional uint64 steamid = 1;
+	optional string language = 2;
+	repeated uint32 appids = 3;
+}
+
+message CPlayer_GetAchievementsProgress_Response {
+	message AchievementProgress {
+		optional uint32 appid = 1;
+		optional uint32 unlocked = 2;
+		optional uint32 total = 3;
+		optional float percentage = 4;
+		optional bool all_unlocked = 5;
+		optional uint32 cache_time = 6;
+	}
+
+	repeated .CPlayer_GetAchievementsProgress_Response.AchievementProgress achievement_progress = 1;
+}
+
 message CPlayer_PostStatusToFriends_Request {
 	optional uint32 appid = 1;
 	optional string status_text = 2;
@@ -345,6 +364,9 @@ service Player {
 	}
 	rpc GetEmoticonList (.CPlayer_GetEmoticonList_Request) returns (.CPlayer_GetEmoticonList_Response) {
 		option (method_description) = "Gets a list of the emoticons a user has with metadata";
+	}
+	rpc GetAchievementsProgress (.CPlayer_GetAchievementsProgress_Request) returns (.CPlayer_GetAchievementsProgress_Response) {
+		option (method_description) = "Gets the achievement completion stats for the specified list of apps.";
 	}
 	rpc PostStatusToFriends (.CPlayer_PostStatusToFriends_Request) returns (.CPlayer_PostStatusToFriends_Response) {
 		option (method_description) = "Posts custom status text into the blotter";

@@ -1,0 +1,16 @@
+<root>
+	<styles>
+		<include src="file://{resources}/styles/steamstyles.css" />
+		<include src="file://{resources}/styles/batteryindicator.css" />
+		<include src="file://{resources}/styles/button.css" />
+		<include src="file://{resources}/styles/library/library.css" />
+		<include src="file://{resources}/styles/overlay/overlay.css" />
+	</styles>
+
+	<BatteryIndicator class="BatteryIndicatorPanel" tabindex="auto" selectionpos="auto">
+		<Panel id="Battery">
+			<Panel id="BatteryLevel" />
+		</Panel>
+		<Panel id="BatteryTip" />
+	</BatteryIndicator>
+</root>

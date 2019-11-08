@@ -50,7 +50,7 @@ enum EProtoAppType {
 	k_EAppTypeFranchise = 1024;
 	k_EAppTypeVideo = 2048;
 	k_EAppTypePlugin = 4096;
-	k_EAppTypeMusic = 8192;
+	k_EAppTypeMusicAlbum = 8192;
 	k_EAppTypeSeries = 16384;
 	k_EAppTypeComic = 32768;
 	k_EAppTypeBeta = 65536;
@@ -123,6 +123,10 @@ message CAppOverview {
 	optional uint32 rt_store_asset_mtime = 46;
 	optional uint32 rt_custom_image_mtime = 47;
 	optional uint32 optional_parent_app_id = 48;
+	optional uint32 owner_account_id = 49;
+	optional bool compat_mapping_enabled = 50;
+	optional uint32 compat_mapping_priority = 51;
+	optional string compat_mapping_tool_name = 52;
 }
 
 message CAppOverview_Change {

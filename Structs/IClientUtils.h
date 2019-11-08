@@ -81,4 +81,5 @@ public:
     virtual unknown_ret GetIPv6ConnectivityState(ESteamIPv6ConnectivityProtocol) = 0;
     virtual unknown_ret RecordSteamInterfaceCreation(char const*, char const*) = 0;
     virtual unknown_ret GetRuntimeInformation() = 0;
+    virtual unknown_ret GetCloudGamingPlatform() = 0;
 };
