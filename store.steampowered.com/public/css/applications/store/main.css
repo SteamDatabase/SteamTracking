@@ -879,12 +879,14 @@ html.contextmenu_ContextMenuPopup_14wqd .contextmenu_contextMenuItem_1n7Wl {
 .partnereventshared_SaveBackground_V0mbI {
   position: fixed;
   bottom: 0;
-  width: 100vw; }
+  width: 100vw;
+  z-index: 1;
+  background: #353941; }
 
 .partnereventshared_SaveBackground_V0mbI .partnereventshared_FlexRowWrapFlexStartContainer_tyP_c {
-  background: #353941;
-  padding: 12px;
-  margin-top: 20px; }
+  width: 1056px;
+  margin: 0 auto;
+  padding: 12px; }
 
 .partnereventshared_LangaugeWithContent_16xEW {
   color: #a3cf06; }
