@@ -463,7 +463,7 @@
         return j;
       }),
       n.d(t, "a", function() {
-        return N;
+        return k;
       });
     var A = (function() {
         return function() {
@@ -1083,7 +1083,7 @@
           e
         );
       })(),
-      N = (function() {
+      k = (function() {
         function e() {
           var D = this;
           (this.m_FriendGroupStore = new G.a(this)),
@@ -3655,10 +3655,10 @@
       j = n("XaMz"),
       L = n("E7zH");
     n.d(t, "a", function() {
-      return N;
+      return k;
     }),
       n.d(t, "b", function() {
-        return k;
+        return N;
       }),
       n.d(t, "c", function() {
         return F;
@@ -3671,7 +3671,7 @@
         return e.BMatchesSearchString(t, !1);
       });
     }
-    var N = (function(n) {
+    var k = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -3804,7 +3804,7 @@
           (e = Object(d.c)([p.a], e))
         );
       })(h.Component),
-      k = (function(t) {
+      N = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -8668,12 +8668,12 @@
       P = n("ujHl");
     n("tZiA");
     n.d(t, "a", function() {
-      return N;
+      return k;
     }),
       n.d(t, "b", function() {
-        return k;
+        return N;
       });
-    var N = (function() {
+    var k = (function() {
         function e(e) {
           var s = this;
           (this.LOG = R.b.create(function() {
@@ -9505,7 +9505,7 @@
           e
         );
       })(),
-      k = (function(o) {
+      N = (function(o) {
         function e(e, t) {
           var n = o.call(this) || this;
           return (
@@ -12783,11 +12783,11 @@
                   y++
                 ) {
                   var C = {
-                      strID: W((k = S[y]), "id"),
-                      nBandwidth: H(k, "bandwidth"),
+                      strID: W((N = S[y]), "id"),
+                      nBandwidth: H(N, "bandwidth"),
                       strClosedCaptionFile: ""
                     },
-                    O = x(k, "BaseURL"),
+                    O = x(N, "BaseURL"),
                     I = O ? O.textContent : "";
                   if (!I)
                     return (
@@ -12857,10 +12857,10 @@
                   ))
                 )
                   return Object(B.c)("MPD - Segment Template Data Missing"), !1;
-                var N = h.getElementsByTagName("Representation");
-                for (w = 0; w < N.length; w++) {
-                  var k = N[w];
-                  if (!(C = this.ParseRepresentation(k, g))) return !1;
+                var k = h.getElementsByTagName("Representation");
+                for (w = 0; w < k.length; w++) {
+                  var N = k[w];
+                  if (!(C = this.ParseRepresentation(N, g))) return !1;
                   g.rgRepresentations.push(C);
                 }
               }
@@ -13629,7 +13629,7 @@
             (this.m_nSegmentDurationMS = 0),
             (this.m_nPlaybackRate = 0),
             (this.m_nTimeToFirstFrameMS = -1),
-            (this.m_fpsMonitor = new N());
+            (this.m_fpsMonitor = new k());
         }
         return (
           (e.prototype.GetBytesReceivedToDisplay = function() {
@@ -14228,7 +14228,7 @@
           e
         );
       })(),
-      N = (function() {
+      k = (function() {
         function e() {
           (this.k_nTestFrequencyMS = 1e3),
             (this.k_nSlidingWindow = 6),
@@ -14320,7 +14320,7 @@
           e
         );
       })(),
-      k = n("ujHl");
+      N = n("ujHl");
     ((E = I || (I = {}))[(E.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
       (E[(E.HAVE_METADATA = 1)] = "HAVE_METADATA"),
       (E[(E.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
@@ -14547,7 +14547,7 @@
                       : (Object(B.c)(
                           "Failed to download, will retry: " + this.m_strMPD
                         ),
-                        [4, Object(k.c)(200)])
+                        [4, Object(N.c)(200)])
                   );
                 case 6:
                   return e.sent(), [3, 1];
@@ -18144,12 +18144,12 @@
       b = n("tkkQ"),
       v = n("uWOQ"),
       S = n("+mma"),
-      N = n("e2SU"),
+      k = n("e2SU"),
       y = n("VZeO"),
       C = n("fGPn"),
       O = n("vDqi"),
       I = n.n(O);
-    var k = (function(o) {
+    var N = (function(o) {
         function e(e) {
           var t = o.call(this, e) || this,
             n = E.f.FriendStore.self;
@@ -18758,7 +18758,7 @@
                         onSelected: function() {},
                         bInteractableItem: !0
                       },
-                      M.createElement(N.k, null),
+                      M.createElement(k.k, null),
                       Object(T.c)("#ChatRoomRole_Owner")
                     )
                   : t
@@ -19154,7 +19154,7 @@
                               t.InviteToVoice(v, n);
                             }
                           },
-                          M.createElement(N.mb, null),
+                          M.createElement(k.mb, null),
                           Object(T.c)("#Chat_Actions_InviteFriend_VoiceChat")
                         )
                       )
@@ -19637,7 +19637,7 @@
                   M.createElement(
                     "button",
                     { className: t, onClick: this.OnMutingClick },
-                    M.createElement(N.nb, null)
+                    M.createElement(k.nb, null)
                   ),
                   M.createElement(s.A, {
                     min: 0,
@@ -20005,7 +20005,7 @@
                         key: "showinsteam",
                         onSelected: this.ShowInSteam
                       },
-                      M.createElement(N.O, null),
+                      M.createElement(k.O, null),
                       Object(T.c)("#Friend_Menu_ShowInSteam")
                     )
                   )
@@ -20020,7 +20020,7 @@
                             key: "joinparty",
                             onSelected: this.JoinPartyBeacon
                           },
-                          M.createElement(N.O, null),
+                          M.createElement(k.O, null),
                           Object(T.c)("#Friend_Menu_JoinFriendPartyBeacon")
                         )
                       )
@@ -20036,7 +20036,7 @@
                             key: "joingame",
                             onSelected: this.JoinGame
                           },
-                          M.createElement(N.O, null),
+                          M.createElement(k.O, null),
                           Object(T.c)("#Friend_Menu_JoinFriendGame")
                         )
                       ),
@@ -20049,7 +20049,7 @@
                         key: "launchgame",
                         onSelected: this.LaunchGame
                       },
-                      M.createElement(N.O, null),
+                      M.createElement(k.O, null),
                       Object(T.c)("#Friend_Menu_LaunchFriendGame")
                     )
                   )),
@@ -20303,7 +20303,7 @@
             this.props.browserContext,
               (t = this.props.ownerWindow),
               Object(D.b)(
-                M.createElement(k, null),
+                M.createElement(N, null),
                 t,
                 "ChangePersonaDialog",
                 {
@@ -21505,7 +21505,7 @@
                 S.createElement(
                   T.a,
                   null,
-                  S.createElement(k, { tab: this.props.tab })
+                  S.createElement(N, { tab: this.props.tab })
                 ),
                 S.createElement(
                   "div",
@@ -21519,7 +21519,7 @@
                     },
                     S.createElement(C.pb, null)
                   ),
-                  S.createElement(N, { tab: this.props.tab })
+                  S.createElement(k, { tab: this.props.tab })
                 )
               )
             );
@@ -21535,7 +21535,7 @@
           (e = Object(o.c)([m.a], e))
         );
       })(S.Component),
-      N = (function(e) {
+      k = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -21573,7 +21573,7 @@
           (t = Object(o.c)([m.a], t))
         );
       })(S.Component),
-      k = (function(e) {
+      N = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -23279,7 +23279,7 @@
           (e.prototype.render = function() {
             var e = this.props.app,
               t = this.m_broadcastInfo,
-              n = k();
+              n = N();
             return u.a.createElement(
               u.a.Fragment,
               null,
@@ -23316,7 +23316,7 @@
                             (this.state.bChatCollapsed ? " ChatCollapsed" : "")
                         },
                         u.a.createElement(P, { onClick: this.OnShowLogin }),
-                        u.a.createElement(N, {
+                        u.a.createElement(k, {
                           onClick: this.ToggleChat,
                           hideIcon: this.state.bChatCollapsed
                         })
@@ -23364,7 +23364,7 @@
         Object(g.c)("#Broadcast_WatchWithFriends")
       );
     }
-    function N(e) {
+    function k(e) {
       return u.a.createElement(
         "div",
         {
@@ -23375,7 +23375,7 @@
         u.a.createElement(d.y, { showChat: e.hideIcon })
       );
     }
-    function k() {
+    function N() {
       return p.b.STEAM_TV ? 1 : 3;
     }
     var B = (function(o) {
@@ -23411,7 +23411,7 @@
               n = e.popup,
               o = e.style,
               i = t.GetSteamID().ConvertTo64BitString(),
-              r = k(),
+              r = N(),
               a = t.m_bShowWatchPromptDialog
                 ? u.a.createElement(I, {
                     closeModal: function() {
@@ -23447,7 +23447,7 @@
                         (this.state.bChatCollapsed ? " ChatCollapsed" : "")
                     },
                     u.a.createElement(P, { onClick: this.OnWatchWithFriends }),
-                    u.a.createElement(N, {
+                    u.a.createElement(k, {
                       onClick: this.ToggleChat,
                       hideIcon: this.state.bChatCollapsed
                     })
@@ -24720,17 +24720,17 @@
     function P(e, t, n) {
       return { value: L(n.value) };
     }
-    function N(e) {
+    function k(e) {
       return L(e, e.name);
     }
     n.d(t, "g", function() {
       return P;
     }),
       n.d(t, "h", function() {
-        return N;
+        return k;
       }),
       n.d(t, "c", function() {
-        return k;
+        return N;
       }),
       n.d(t, "e", function() {
         return B;
@@ -24747,7 +24747,7 @@
       n.d(t, "b", function() {
         return j.b;
       });
-    var k = (function() {
+    var N = (function() {
         return function() {};
       })(),
       B = (function() {
@@ -26523,9 +26523,9 @@
       j = n("2wX0"),
       L = n.n(j),
       P = n("ljid"),
-      N = n("QHER"),
-      k = n("TY1L"),
-      B = n.n(k),
+      k = n("QHER"),
+      N = n("TY1L"),
+      B = n.n(N),
       F = n("6b33").default;
     function x(e, t) {
       return e.endsWith("/") || (e += "/"), e + "login/" + t + "/";
@@ -26919,7 +26919,7 @@
             var e = this.props,
               t = (e.baseURL, e.className),
               n = Object(d.f)(e, ["baseURL", "className"]),
-              o = Object(N.a)(B.a.LoginDialog, t),
+              o = Object(k.a)(B.a.LoginDialog, t),
               i = this.m_manager.GetCurrentStep(),
               r = this.m_manager.GetErrorMessage();
             return a.a.createElement(
@@ -27026,7 +27026,7 @@
                     onSubmit: this.OnSubmit
                   },
                   a.a.createElement(P.o, {
-                    className: Object(N.a)(B.a.AccountNameLabel, e),
+                    className: Object(k.a)(B.a.AccountNameLabel, e),
                     label: Object(T.c)("#Login_AccountName"),
                     type: "text",
                     value: o.GetUserName(),
@@ -27036,7 +27036,7 @@
                   }),
                   a.a.createElement(P.o, {
                     bIsPassword: !0,
-                    className: Object(N.a)(B.a.PasswordDots, t),
+                    className: Object(k.a)(B.a.PasswordDots, t),
                     label: Object(T.c)("#Login_Password"),
                     type: "password",
                     autoComplete: "off",
@@ -27227,7 +27227,7 @@
                     onSubmit: this.OnSubmit
                   },
                   a.a.createElement(P.o, {
-                    className: Object(N.a)(B.a.AccountName),
+                    className: Object(k.a)(B.a.AccountName),
                     label: "Steam Guard Code",
                     type: "text",
                     autoComplete: "off",
@@ -27246,7 +27246,7 @@
               a.a.createElement(
                 "a",
                 {
-                  className: Object(N.a)(
+                  className: Object(k.a)(
                     B.a.NeedHelpLink,
                     r ? B.a.NeedHelpHighlight : null
                   ),
@@ -27414,7 +27414,9 @@
                       (t = null),
                       (n = {
                         appid: a.appid,
-                        promotionname: a.promotionname,
+                        promotionname: a.bIsPreview
+                          ? "preview"
+                          : a.promotionname,
                         clanid: a.clanid,
                         listid: a.listid,
                         eventid: a.event ? a.event.GID : void 0,
@@ -27440,7 +27442,11 @@
                   case 4:
                     return t
                       ? ((this.m_mapDynamicStoreData = t.data.rgAppData),
-                        this.m_settings.bIsPreview &&
+                        (t &&
+                          t.data &&
+                          t.data.filtered &&
+                          t.data.filtered.length) ||
+                          !this.m_settings.bIsPreview ||
                           (t.data = {
                             filtered: [{}],
                             success: 1,
@@ -27460,19 +27466,11 @@
                         t.data.broadcast_chat_visibility &&
                           (this.m_chatVisibility =
                             t.data.broadcast_chat_visibility),
-                        i
-                          ? this.m_settings.bIsPreview
-                            ? ((this.m_playReadyStream = i),
-                              (this.m_chatVisibility = "hide"),
-                              [3, 7])
-                            : [3, 5]
-                          : [3, 7])
+                        i ? [4, this.AttemptToPlayStream(i)] : [3, 6])
                       : [2, null];
                   case 5:
-                    return [4, this.AttemptToPlayStream(i)];
+                    e.sent(), (e.label = 6);
                   case 6:
-                    e.sent(), (e.label = 7);
-                  case 7:
                     return [2, i];
                 }
               });
@@ -27484,6 +27482,7 @@
               return Object(d.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
+                    if (0 === Object.keys(i).length) return [2, null];
                     (t = null),
                       (n = new URLSearchParams()).append(
                         "broadcastaccountid",
@@ -27741,7 +27740,7 @@
           e
         );
       })(I.Component)),
-      Ne = (function(t) {
+      ke = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -27858,7 +27857,7 @@
           (e = Object(d.c)([o.a], e))
         );
       })(I.Component),
-      ke = (function(e) {
+      Ne = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -27940,7 +27939,7 @@
               "div",
               {
                 ref: this.itemRef,
-                className: Object(N.a)(
+                className: Object(k.a)(
                   Ge.a.side_panels,
                   Ge.a.multistream,
                   3 < e.length ? Ge.a.scrollingstreams : ""
@@ -28462,7 +28461,7 @@
             return I.createElement(
               "div",
               {
-                className: Object(N.a)(pe.a.WishList, L.a.FlexRowContainer),
+                className: Object(k.a)(pe.a.WishList, L.a.FlexRowContainer),
                 onClick: this.OnWishListClick,
                 "data-tooltip-text": Object(T.c)("#AddToWishlist_ttip")
               },
@@ -40309,7 +40308,7 @@
                   t.push({
                     title: Object(I.c)("#GroupSettings_Permissions_Section"),
                     uniqueName: "GroupSettings_Permissions",
-                    content: v.createElement(k, { group: e, enabled: o }),
+                    content: v.createElement(N, { group: e, enabled: o }),
                     enabled: o,
                     hideTitle: !0
                   }),
@@ -41040,7 +41039,7 @@
           (e = Object(r.c)([_.a], e))
         );
       })(S.w),
-      N = (function(n) {
+      k = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           g.f.FriendStore.self;
@@ -41112,7 +41111,7 @@
           e
         );
       })(v.Component),
-      k = (function(n) {
+      N = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -41132,7 +41131,7 @@
           (e.prototype.OnCreateRole = function(e) {
             var t = e.currentTarget.ownerDocument.defaultView;
             Object(h.b)(
-              v.createElement(N, { ownerWin: t, group: this.props.group }),
+              v.createElement(k, { ownerWin: t, group: this.props.group }),
               t
             );
           }),
@@ -43104,14 +43103,14 @@
       L = n("e2SU"),
       P = n("QHER"),
       i = n("s13G"),
-      N = n.n(i);
-    function k(e) {
+      k = n.n(i);
+    function N(e) {
       return M.createElement(
         M.Fragment,
         null,
         M.createElement(
           "span",
-          { className: N.a.partyBeaconJoin },
+          { className: k.a.partyBeaconJoin },
           Object(T.c)("#User_WantsToPlay")
         ),
         " – ",
@@ -43169,17 +43168,17 @@
             C = null,
             O = [
               t,
-              N.a.personaNameAndStatusLabel,
+              k.a.personaNameAndStatusLabel,
               Object(R.d)(o),
-              c && N.a.compactView,
-              b && N.a.NoMask
+              c && k.a.compactView,
+              b && k.a.NoMask
             ];
           m
             ? (y = m())
             : _ || o.has_public_party_beacon
-            ? (y = M.createElement(k, { persona: o }))
+            ? (y = M.createElement(N, { persona: o }))
             : Object(G.a)(i)
-            ? ((y = Object(T.c)("#PersonaStateBlocked")), O.push(N.a.blocked))
+            ? ((y = Object(T.c)("#PersonaStateBlocked")), O.push(k.a.blocked))
             : o.is_ingame
             ? ((y =
                 !o.is_in_nonsteam_game || r || Object(G.b)(i)
@@ -43204,10 +43203,10 @@
                 { className: "ContextMenuButton", onClick: n },
                 M.createElement(L.o, null)
               ))
-            : O.push(N.a.noContextMenu),
-            h && O.push(N.a.hidePersona),
+            : O.push(k.a.noContextMenu),
+            h && O.push(k.a.hidePersona),
             d && (C = d()),
-            (!l && C) || O.push(N.a.twoLine);
+            (!l && C) || O.push(k.a.twoLine);
           var E = s && !a,
             w = E ? s : o.m_strPlayerName;
           return M.createElement(
@@ -43218,16 +43217,16 @@
             }),
             M.createElement(
               "div",
-              { className: N.a.statusAndName },
+              { className: k.a.statusAndName },
               M.createElement(
                 "div",
-                { className: N.a.playerName },
+                { className: k.a.playerName },
                 w || " ",
                 a &&
                   s &&
                   M.createElement(
                     "span",
-                    { className: N.a.playerNickname },
+                    { className: k.a.playerNickname },
                     "(",
                     s,
                     ")"
@@ -43237,7 +43236,7 @@
                 M.createElement(
                   "div",
                   {
-                    className: N.a.DNDContainer,
+                    className: k.a.DNDContainer,
                     title: Object(T.c)("#User_ToggleDoNotDisturb")
                   },
                   M.createElement(L.m, null)
@@ -43246,7 +43245,7 @@
                 M.createElement(
                   "span",
                   {
-                    className: N.a.playerNicknameBracket,
+                    className: k.a.playerNicknameBracket,
                     title: Object(T.c)("#isNickname")
                   },
                   " *"
@@ -43258,14 +43257,14 @@
             !h &&
               M.createElement(
                 "div",
-                { className: N.a.richPresenceContainer },
+                { className: k.a.richPresenceContainer },
                 (!l || !C) &&
                   M.createElement(
                     "div",
                     {
                       className: Object(P.a)(
-                        N.a.gameName,
-                        N.a.richPresenceLabel,
+                        k.a.gameName,
+                        k.a.richPresenceLabel,
                         "no-drag"
                       )
                     },
@@ -43273,7 +43272,7 @@
                       M.createElement(
                         "div",
                         {
-                          className: N.a.gameIsPrivateIcon,
+                          className: k.a.gameIsPrivateIcon,
                           title: Object(T.c)("#User_GameInfoHidden")
                         },
                         M.createElement(L.x, null)
@@ -43285,7 +43284,7 @@
                   M.createElement(
                     "div",
                     {
-                      className: Object(P.a)(N.a.richPresenceLabel, "no-drag")
+                      className: Object(P.a)(k.a.richPresenceLabel, "no-drag")
                     },
                     C,
                     " "
@@ -43313,13 +43312,13 @@
         Object(D.a)({}, r, { className: Object(P.a)(i, Object(R.d)(t)) }),
         M.createElement(
           "span",
-          { className: N.a.playerName },
+          { className: k.a.playerName },
           a || " ",
           n &&
             o &&
             M.createElement(
               "span",
-              { className: N.a.playerNickname },
+              { className: k.a.playerNickname },
               "(",
               o,
               ")"
@@ -43877,8 +43876,8 @@
       P = n("1w3K"),
       w = n("8o0Y"),
       D = n("EGkk"),
-      N = n("e2SU"),
-      k = n("adxy"),
+      k = n("e2SU"),
+      N = n("adxy"),
       B = n("/7KC"),
       F = n("Z578"),
       x = n("yolM"),
@@ -44007,7 +44006,7 @@
                       null,
                       A.createElement(U.x, null, "PrimaryButton"),
                       A.createElement(U.B, null, "TextButton"),
-                      A.createElement(U.d, { svgicon: N.k }, "Button w/ Icon")
+                      A.createElement(U.d, { svgicon: k.k }, "Button w/ Icon")
                     )
                   ),
                   A.createElement(
@@ -45218,8 +45217,8 @@
               A.createElement(
                 "button",
                 { className: o, onClick: this.ToggleMicrophone, title: i },
-                A.createElement(N.H, null),
-                A.createElement(N.H, { className: "SVGIcon_Shadow" })
+                A.createElement(k.H, null),
+                A.createElement(k.H, { className: "SVGIcon_Shadow" })
               )
             );
           }),
@@ -45251,8 +45250,8 @@
               A.createElement(
                 "button",
                 { className: t, onClick: this.ToggleVoiceOutput, title: n },
-                A.createElement(N.w, null),
-                A.createElement(N.w, { className: "SVGIcon_Shadow" })
+                A.createElement(k.w, null),
+                A.createElement(k.w, { className: "SVGIcon_Shadow" })
               )
             );
           }),
@@ -45277,7 +45276,7 @@
                 onClick: this.EndVoiceChat,
                 title: Object(j.c)("#VoiceChat_Leave")
               },
-              A.createElement(N.mb, null)
+              A.createElement(k.mb, null)
             );
           }),
           Object(M.c)([h.a], t.prototype, "EndVoiceChat", null),
@@ -45408,7 +45407,7 @@
               n = 1;
               var t = this.m_tabLabelWidth;
               this.setState({ tabLabelWidth: n }, function() {
-                (e.m_animationTabLabelCollapse = new k.b(
+                (e.m_animationTabLabelCollapse = new N.b(
                   e,
                   { tabLabelWidth: t },
                   { msDuration: 300, timing: "sine" }
@@ -45418,7 +45417,7 @@
             } else {
               var n = this.m_tabLabelWidth;
               this.setState({ tabLabelWidth: n }, function() {
-                (e.m_animationTabLabelCollapse = new k.b(
+                (e.m_animationTabLabelCollapse = new N.b(
                   e,
                   { tabLabelWidth: 1 },
                   { msDuration: 300, timing: "sine" }
@@ -45538,7 +45537,7 @@
                             (b ? "Collapsed" : ""),
                           onClick: this.ToggleCollapseExpand
                         },
-                        A.createElement(N.n, null)
+                        A.createElement(k.n, null)
                       )
                     ),
                   A.createElement(ve, {
@@ -45558,7 +45557,7 @@
                             ? Object(j.c)("#Tooltip_FriendsListUpdate_VeryOld")
                             : Object(j.c)("#Tooltip_FriendsListUpdate")
                         },
-                        A.createElement(N.R, null)
+                        A.createElement(k.R, null)
                       ),
                     A.createElement(
                       "div",
@@ -45568,7 +45567,7 @@
                         onClick: this.OnSettingsClick,
                         title: Object(j.c)("#Tooltip_Settings")
                       },
-                      A.createElement(N.X, null)
+                      A.createElement(k.X, null)
                     )
                   ),
                   A.createElement(
@@ -45663,7 +45662,7 @@
                                             className: "friendSearchClear",
                                             onClick: this.OnClearSearch
                                           },
-                                          A.createElement(N.pb, null)
+                                          A.createElement(k.pb, null)
                                         )
                                       )
                                     )
@@ -45677,7 +45676,7 @@
                                 onClick: this.OnTabSearchClick,
                                 title: Object(j.c)("#Tooltip_SearchFriends")
                               },
-                              A.createElement(N.E, null)
+                              A.createElement(k.E, null)
                             )
                           ),
                           (n || o || i) &&
@@ -45688,7 +45687,7 @@
                                 onClick: this.ToggleViewingIncomingInvites,
                                 title: Object(j.d)("#Tooltip_FriendRequest", r)
                               },
-                              A.createElement(N.t, null),
+                              A.createElement(k.t, null),
                               0 < r &&
                                 A.createElement(
                                   "div",
@@ -45706,7 +45705,7 @@
                                   "friendListButton addFriendButton no-drag",
                                 title: Object(j.c)("#Tooltip_AddFriend")
                               },
-                              A.createElement(N.a, null)
+                              A.createElement(k.a, null)
                             )
                           )
                         )
@@ -45829,7 +45828,7 @@
                         ? Object(j.c)("#changeLog_Value_Button", t)
                         : Object(j.c)("#changeLog_Button")
                     },
-                    A.createElement(N.W, null),
+                    A.createElement(k.W, null),
                     e &&
                       A.createElement(
                         "div",
@@ -46001,7 +46000,7 @@
                     ),
                     onClick: this.ToggleSingleWindowToggle
                   },
-                  A.createElement(N.Z, null)
+                  A.createElement(k.Z, null)
                 )
             );
           }),
@@ -46437,7 +46436,7 @@
               var o = this.state.nChatRoomListContainerMaxHeight,
                 i = t;
               this.setState({ nChatRoomListContainerMaxHeight: o }, function() {
-                (e.m_animationChatSectionShrink = new k.b(
+                (e.m_animationChatSectionShrink = new N.b(
                   e,
                   {
                     nChatRoomListContainerHeight: Object(B.a)(
@@ -46652,7 +46651,7 @@
                         ? Object(j.c)("#Tooltip_ChatsExpand")
                         : Object(j.c)("#Tooltip_ChatsCollapse")
                     },
-                    A.createElement(N.n, { angle: -90 })
+                    A.createElement(k.n, { angle: -90 })
                   ),
                   A.createElement(
                     "div",
@@ -46674,7 +46673,7 @@
                       onClick: this.OnCreateChatRoom,
                       title: Object(j.c)("#Tooltip_CreateGroupChat")
                     },
-                    A.createElement(N.K, null)
+                    A.createElement(k.K, null)
                   ),
                   A.createElement("div", { className: "disconnectBlocker" })
                 ),
@@ -47160,7 +47159,7 @@
                                   },
                                   title: Object(j.c)("#FriendGroup_Tip_Accept")
                                 },
-                                A.createElement(N.h, null)
+                                A.createElement(k.h, null)
                               ),
                               A.createElement(
                                 "div",
@@ -47173,7 +47172,7 @@
                                   },
                                   title: Object(j.c)("#FriendGroup_Tip_Decline")
                                 },
-                                A.createElement(N.pb, null)
+                                A.createElement(k.pb, null)
                               )
                             ),
                           l &&
@@ -47285,7 +47284,7 @@
                       A.createElement(
                         "div",
                         { className: "ExpandPlusMinus" },
-                        A.createElement(N.P, null)
+                        A.createElement(k.P, null)
                       ),
                       this.props.group.icon_url &&
                         A.createElement("img", {
@@ -47317,7 +47316,7 @@
                           ? Object(j.c)("#FriendGroup_Tip_SortByRecent")
                           : Object(j.c)("#FriendGroup_Tip_SortByAlphabet")
                       },
-                      A.createElement(N.ab, null)
+                      A.createElement(k.ab, null)
                     )
                 ),
                 A.createElement(
@@ -47373,7 +47372,7 @@
                             onClick: this.OnCloseInvites,
                             title: Object(j.c)("#FriendGroup_Close")
                           },
-                          A.createElement(N.b, { angle: -90 })
+                          A.createElement(k.b, { angle: -90 })
                         )
                       )
                     )
@@ -47647,7 +47646,7 @@
                     A.createElement(
                       "div",
                       { className: "ExpandPlusMinus" },
-                      A.createElement(N.P, null)
+                      A.createElement(k.P, null)
                     ),
                     D,
                     this.props.group.icon_url &&
@@ -47932,7 +47931,7 @@
                     size: this.props.avatarQualityFull ? "Large" : "Medium",
                     statusStyle: m
                   },
-                  this.props.bInVoiceList && _ && A.createElement(N.nb, null)
+                  this.props.bInVoiceList && _ && A.createElement(k.nb, null)
                 );
               this.props.noActions ||
                 (g = A.createElement(
@@ -48079,7 +48078,7 @@
                     className: "voicestatusIcon voiceStatusMic disabled",
                     title: o
                   },
-                  A.createElement(N.H, null)
+                  A.createElement(k.H, null)
                 ),
                 A.createElement(
                   "div",
@@ -48087,7 +48086,7 @@
                     className: "voicestatusIcon voiceStatusOutput disabled",
                     title: i
                   },
-                  A.createElement(N.w, null)
+                  A.createElement(k.w, null)
                 )
               )
             );
@@ -48217,7 +48216,7 @@
                 A.createElement(
                   "div",
                   { className: "ExpandPlusMinus" },
-                  A.createElement(N.P, null)
+                  A.createElement(k.P, null)
                 ),
                 Object(j.c)("#FriendGroup_UnreadMessages"),
                 A.createElement(
@@ -48699,9 +48698,9 @@
       g = n("+M9t"),
       u = n("geE1"),
       P = n("LAqV"),
-      N = n("hReu"),
+      k = n("hReu"),
       l = n("/IDK"),
-      k = n("29iz"),
+      N = n("29iz"),
       B = n("YZlK"),
       i = n("20CD"),
       a = n("Z578"),
@@ -50949,9 +50948,9 @@
           (t = Object(G.c)([c.a], t))
         );
       })(R.Component),
-      Ne = n("Jdiq"),
-      ke = n("vDqi"),
-      Be = n.n(ke),
+      ke = n("Jdiq"),
+      Ne = n("vDqi"),
+      Be = n.n(Ne),
       Fe = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -51287,7 +51286,7 @@
               case "Emoticon":
                 i = R.createElement(Te, {
                   emoticonStore: P.f.ChatStore.EmoticonStore,
-                  emoticonHoverStore: Ne.b,
+                  emoticonHoverStore: ke.b,
                   strSearch: this.state.mentionSearch,
                   nMinimumSearchLengthBeforeAutoSelection: 2,
                   onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -51378,9 +51377,9 @@
                       disabled: n,
                       OnEmoticonSelected: this.OnEmoticonSelected,
                       rtLastAckedNewEmoticons:
-                        N.h.UIDisplayPrefs.rtLastAckedNewEmoticons,
-                      SetUIDisplayPref: N.h.SetUIDisplayPref.bind(N.h),
-                      emoticonHoverStore: Ne.b,
+                        k.h.UIDisplayPrefs.rtLastAckedNewEmoticons,
+                      SetUIDisplayPref: k.h.SetUIDisplayPref.bind(k.h),
+                      emoticonHoverStore: ke.b,
                       emoticonStore: P.f.ChatStore.EmoticonStore
                     }),
                     R.createElement(
@@ -51480,7 +51479,7 @@
           }),
           (t.prototype.OnSettingsClick = function(e) {
             Object(ve.a)(
-              Object(N.e)(this, e),
+              Object(k.e)(this, e),
               e.currentTarget.ownerDocument.defaultView,
               "voice"
             );
@@ -51957,7 +51956,7 @@
               if (o.friend) {
                 this.state.dropToInviteFriend &&
                   this.setState({ dropToInviteFriend: void 0 }),
-                  N.h.DragDropManager.SetDropConsumed();
+                  k.h.DragDropManager.SetDropConsumed();
                 var i = t.currentTarget.ownerDocument.defaultView;
                 o.sourceContext.group != this.props.groupView.GetGroup() &&
                   rt(
@@ -51966,7 +51965,7 @@
                       chatview: null,
                       invitedto: this.props.groupView.GetGroup()
                     },
-                    Object(N.e)(this, t),
+                    Object(k.e)(this, t),
                     i
                   );
               }
@@ -52051,7 +52050,7 @@
           (e.prototype.CalculateBroadcastSectionStyles = function(e) {
             if (this.props.groupView.m_bChatHidden)
               return { width: "100%", height: "100%" };
-            var t = N.h.UIDisplayPrefs,
+            var t = k.h.UIDisplayPrefs,
               n = t.nWatchPartyBroadcastHeightPercentage,
               o = t.nWatchPartyBroadcastWidthPercentage,
               i = {};
@@ -52097,7 +52096,7 @@
               c = o
                 ? "nWatchPartyBroadcastHeightPercentage"
                 : "nWatchPartyBroadcastWidthPercentage";
-            N.h.SetUIDisplayPref(c, s);
+            k.h.SetUIDisplayPref(c, s);
           }),
           (e.prototype.UnregisterDragEvents = function(e) {
             e.view.removeEventListener("mousemove", this.HandleMouseMove),
@@ -52244,7 +52243,7 @@
               (L.a.STEAM_TV && (h = 2),
               e.watching_broadcast_steamid && t.isBroadcastShown)
             ) {
-              var f = N.h.UIDisplayPrefs,
+              var f = k.h.UIDisplayPrefs,
                 _ = (f.nWatchPartyBroadcastHeightPercentage,
                 f.nWatchPartyBroadcastWidthPercentage,
                 this.CalculateBroadcastSectionStyles(m));
@@ -52330,7 +52329,7 @@
                       disabled: !1
                     }),
               D = R.createElement(
-                k.a,
+                N.a,
                 Object(G.a)(
                   { style: v, className: "chatHistoryAndMembers" },
                   this.GetChatBodyDragDropProps()
@@ -52379,7 +52378,7 @@
               c && (T += " GlobalChatVisible"),
               s && (T += " GroupChatVisible"),
               R.createElement(
-                k.a,
+                N.a,
                 Object(G.a)(
                   {
                     "data-activechat": this.props.isActive,
@@ -52551,7 +52550,7 @@
             if (n && n.accountid !== this.props.chatView.chat.accountid_partner)
               return (
                 this.m_fnUnregisterDropComplete ||
-                  (this.m_fnUnregisterDropComplete = N.h.DragDropManager.RegisterForDropComplete(
+                  (this.m_fnUnregisterDropComplete = k.h.DragDropManager.RegisterForDropComplete(
                     this.OnDropComplete
                   )),
                 this.setState({ dropToInviteFriend: n }),
@@ -52561,7 +52560,7 @@
             if (o)
               return (
                 this.m_fnUnregisterDropComplete ||
-                  (this.m_fnUnregisterDropComplete = N.h.DragDropManager.RegisterForDropComplete(
+                  (this.m_fnUnregisterDropComplete = k.h.DragDropManager.RegisterForDropComplete(
                     this.OnDropComplete
                   )),
                 this.setState({ dropGroupToInviteFriend: o }),
@@ -52571,7 +52570,7 @@
             return (
               i &&
                 (this.m_fnUnregisterDropComplete ||
-                  (this.m_fnUnregisterDropComplete = N.h.DragDropManager.RegisterForDropComplete(
+                  (this.m_fnUnregisterDropComplete = k.h.DragDropManager.RegisterForDropComplete(
                     this.OnDropComplete
                   )),
                 this.setState({ dropClanToInvite: i })),
@@ -52618,10 +52617,10 @@
                   (this.m_fnUnregisterDropComplete.Unregister(),
                   (this.m_fnUnregisterDropComplete = void 0),
                   this.setState({ dropToInviteFriend: void 0 })),
-                  N.h.DragDropManager.SetDropConsumed(),
+                  k.h.DragDropManager.SetDropConsumed(),
                   rt(
                     { invitee: r, chatview: n, invitedto: i },
-                    Object(N.e)(this, t),
+                    Object(k.e)(this, t),
                     o
                   );
               } else
@@ -52634,12 +52633,12 @@
                       dropGroupToInviteFriend: void 0,
                       dropClanToInvite: void 0
                     })),
-                  N.h.DragDropManager.SetDropConsumed(),
+                  k.h.DragDropManager.SetDropConsumed(),
                   s &&
                     (a = P.f.ChatStore.GetChatRoomGroup(
                       s.GetChatGroupIDIfLoaded()
                     )),
-                  rt({ invitee: i, invitedto: a }, Object(N.e)(this, t), o));
+                  rt({ invitee: i, invitedto: a }, Object(k.e)(this, t), o));
             } else if (0 != t.dataTransfer.files.length) {
               var c = t.dataTransfer.files[0];
               n.SetFileToUpload(c);
@@ -52662,7 +52661,7 @@
           }),
           (e.prototype.CalculateBroadcastSectionStyles = function(e) {
             if (this.m_bChatHidden) return { width: "100%", height: "100%" };
-            var t = N.h.UIDisplayPrefs,
+            var t = k.h.UIDisplayPrefs,
               n = t.nWatchPartyBroadcastHeightPercentage,
               o = t.nWatchPartyBroadcastWidthPercentage,
               i = {};
@@ -52707,7 +52706,7 @@
               c = o
                 ? "nWatchPartyBroadcastHeightPercentage"
                 : "nWatchPartyBroadcastWidthPercentage";
-            N.h.SetUIDisplayPref(c, s);
+            k.h.SetUIDisplayPref(c, s);
           }),
           (e.prototype.UnregisterDragEvents = function(e) {
             e.view.removeEventListener("mousemove", this.HandleMouseMove),
@@ -52831,7 +52830,7 @@
               c = this.ShouldShowVerticalBroadcastChat(),
               l = this.m_bChatHidden;
             if (i) {
-              var p = N.h.UIDisplayPrefs,
+              var p = k.h.UIDisplayPrefs,
                 u = (p.nWatchPartyBroadcastHeightPercentage,
                 p.nWatchPartyBroadcastWidthPercentage,
                 this.CalculateBroadcastSectionStyles(c));
@@ -52904,7 +52903,7 @@
                       disabled: !1
                     }),
               _ = R.createElement(
-                k.a,
+                N.a,
                 Object(G.a)(
                   { style: m, className: "chatHistoryAndMembers" },
                   this.GetChatBodyDragDropProps()
@@ -52946,7 +52945,7 @@
                 (c ? "displayRow" : "displayColumn") +
                 " GroupChatVisible";
             return R.createElement(
-              k.a,
+              N.a,
               Object(G.a)(
                 {
                   "data-activechat": this.props.isActive,
@@ -53292,22 +53291,22 @@
               var n = e,
                 o = -1;
               this.m_refChatTabs && (o = this.m_refChatTabs.state.iDragIndex),
-                N.h.DragDropManager.SetDropConsumed(),
+                k.h.DragDropManager.SetDropConsumed(),
                 n.tabSet != this.props.tabs &&
                   (n.tabSet.RemoveTab(n.tab),
                   this.props.tabs.AddTab(n.tab),
-                  N.h.DragDropManager.EndDrag()),
+                  k.h.DragDropManager.EndDrag()),
                 -1 != o && this.props.tabs.MoveTabToIndex(n.tab, o),
                 this.props.tabs.ActivateTab(n.tab),
                 this.setState({ tabDrag: void 0 });
             } else if ("friend" == e.type) {
-              N.h.DragDropManager.SetDropConsumed(),
-                e.friend.OpenChatDialog(Object(N.e)(this, t));
+              k.h.DragDropManager.SetDropConsumed(),
+                e.friend.OpenChatDialog(Object(k.e)(this, t));
             } else if ("chatroomgroup" == e.type) {
-              N.h.DragDropManager.SetDropConsumed();
+              k.h.DragDropManager.SetDropConsumed();
               var i = e;
               P.f.UIStore.ShowAndOrActivateChatRoomGroup(
-                Object(N.e)(this),
+                Object(k.e)(this),
                 i.group,
                 !0
               );
@@ -53379,7 +53378,7 @@
               );
             });
             return R.createElement(
-              k.a,
+              N.a,
               {
                 className: "multiChatDialog",
                 rgAcceptedTypes: ["chattab", "friend", "chatroomgroup"],
@@ -53670,7 +53669,7 @@
               popupWidth: 650,
               popupHeight: o
             },
-            Object(N.g)(n)
+            Object(k.g)(n)
           )
         : Object(m.c)(
             n,
@@ -53691,7 +53690,7 @@
             t.push(this.invitee.accountid),
               this.props.invitedto instanceof g.b
                 ? Object(a.c)(
-                    Object(N.e)(this, e),
+                    Object(k.e)(this, e),
                     n,
                     this.props.chatview,
                     !0,
@@ -53699,7 +53698,7 @@
                   )
                 : this.props.invitedto instanceof _.b
                 ? Object(i.c)(
-                    Object(N.e)(this, e),
+                    Object(k.e)(this, e),
                     n,
                     this.props.invitedto,
                     void 0,
@@ -53708,7 +53707,7 @@
                   )
                 : this.props.invitedto instanceof f.a &&
                   Object(i.b)(
-                    Object(N.e)(this, e),
+                    Object(k.e)(this, e),
                     n,
                     this.props.invitedto.GetGroup(),
                     this.props.invitedto,
@@ -53972,7 +53971,7 @@
         return (
           Object(G.d)(t, e),
           (t.prototype.AddFriendClick = function(e) {
-            this.ContinueCreateChat(Object(N.e)(this, e), Object(l.n)(e));
+            this.ContinueCreateChat(Object(k.e)(this, e), Object(l.n)(e));
           }),
           (t.prototype.AddFriendClickNotInBeta = function(o) {
             return Object(G.b)(this, void 0, void 0, function() {
@@ -53981,7 +53980,7 @@
                 switch (e.label) {
                   case 0:
                     return (
-                      (t = Object(N.e)(this, o)),
+                      (t = Object(k.e)(this, o)),
                       (n = Object(l.n)(o)),
                       P.f.IsInBeta()
                         ? (Object(m.c)(
@@ -54476,10 +54475,10 @@
         return P;
       }),
       n.d(t, "ab", function() {
-        return N;
+        return k;
       }),
       n.d(t, "h", function() {
-        return k;
+        return N;
       }),
       n.d(t, "l", function() {
         return B;
@@ -55802,7 +55801,7 @@
         })
       );
     }
-    function N(e) {
+    function k(e) {
       return i.createElement(
         "svg",
         {
@@ -55890,7 +55889,7 @@
         )
       );
     }
-    function k() {
+    function N() {
       return i.createElement(
         "svg",
         {
@@ -61716,7 +61715,7 @@
           (e = Object(l.c)([o.a], e))
         );
       })(R.Component),
-      N = (function(n) {
+      k = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -61875,7 +61874,7 @@
           (e = Object(l.c)([o.a], e))
         );
       })(R.Component),
-      k = n("hEDq"),
+      N = n("hEDq"),
       B = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -61932,13 +61931,13 @@
               (void 0 === this.m_broadcastid &&
                 "0" !== G.f.BroadcastStore.broadcastid &&
                 (this.m_broadcastid = G.f.BroadcastStore.broadcastid),
-              i || o != k.e.k_EPending)
+              i || o != N.e.k_EPending)
             ) {
               var r = "#ChatRoom_BroadcastViewRequest_Expired";
               return (
-                o == k.e.k_EAccepted
+                o == N.e.k_EAccepted
                   ? (r = "#ChatRoom_BroadcastViewRequest_Accepted")
-                  : o == k.e.k_ERejected &&
+                  : o == N.e.k_ERejected &&
                     (r = "#ChatRoom_BroadcastViewRequest_Dismissed"),
                 R.createElement(
                   "div",
@@ -62494,8 +62493,8 @@
         plusone: je,
         flip: Le,
         random: Pe,
-        quote: Ne,
-        pre: ke,
+        quote: ke,
+        pre: Ne,
         code: Be
       };
     }
@@ -64030,7 +64029,7 @@
           t
         );
       })(V.b),
-      Ne = (function(e) {
+      ke = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -64042,7 +64041,7 @@
           t
         );
       })(V.b),
-      ke = (function(e) {
+      Ne = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -64262,7 +64261,7 @@
             );
           }),
           (e.prototype.render = function() {
-            return R.createElement(N, {
+            return R.createElement(k, {
               broadcastid: this.state.broadcastid,
               appid: this.state.appid,
               broadcaster: this.state.broadcaster,
@@ -65895,13 +65894,13 @@
               var o = JSON.stringify(e);
               e.tag.startsWith("groupmsg_")
                 ? SteamClient.ClientNotifications.DisplayClientNotification(
-                    k.g.k_EClientUINotificationGroupChatMessage,
+                    N.g.k_EClientUINotificationGroupChatMessage,
                     o,
                     t
                   )
                 : e.tag.startsWith("message_")
                 ? SteamClient.ClientNotifications.DisplayClientNotification(
-                    k.g.k_EClientUINotificationFriendChatMessage,
+                    N.g.k_EClientUINotificationFriendChatMessage,
                     o,
                     t
                   )
@@ -65910,7 +65909,7 @@
                   ) &&
                   e.tag.startsWith("state_") &&
                   SteamClient.ClientNotifications.DisplayClientNotification(
-                    k.g.k_EClientUINotificationFriendPersonaState,
+                    N.g.k_EClientUINotificationFriendPersonaState,
                     o,
                     t
                   );
@@ -66286,7 +66285,7 @@
         function e() {
           var e = t.call(this) || this;
           return (
-            (e.m_eActiveState = k.i.k_EComputerActiveStateActive),
+            (e.m_eActiveState = N.i.k_EComputerActiveStateActive),
             (e.m_hRegisterForComputerActiveStateChange = null),
             (e.m_hFireUserStillActive = void 0),
             (e.m_hRegisterForComputerActiveStateChange = SteamClient.WebChat.RegisterForComputerActiveStateChange(
@@ -66304,7 +66303,7 @@
                 performance.now() - 1e3 * n,
                 this.m_msUserLastAction
               )),
-              this.m_eActiveState == k.i.k_EComputerActiveStateActive &&
+              this.m_eActiveState == N.i.k_EComputerActiveStateActive &&
                 (this.m_hFireUserStillActive &&
                   (clearTimeout(this.m_hFireUserStillActive),
                   (this.m_hFireUserStillActive = void 0)),
@@ -66312,7 +66311,7 @@
           }),
           (e.prototype.UpdateStillActive = function() {
             (this.m_hFireUserStillActive = void 0),
-              this.m_eActiveState == k.i.k_EComputerActiveStateActive &&
+              this.m_eActiveState == N.i.k_EComputerActiveStateActive &&
                 (this.OnUserAction(),
                 (this.m_hFireUserStillActive = SetBackgroundTimeout(
                   this.UpdateStillActive,
@@ -66696,8 +66695,8 @@
         bFavoritesHintDismissed: !1,
         nChangeLogDismissed: 0
       },
-      Nt = "UIDisplayPrefs",
-      kt = (function() {
+      kt = "UIDisplayPrefs",
+      Nt = (function() {
         function e(e, t) {
           var n = this;
           (this.m_FriendHoverStore = new rt.c()),
@@ -66978,7 +66977,7 @@
             var r = this,
               o = [],
               i = this.m_FriendsUIApp.SettingsStore.GetObjectFromLocalStorageWhenReady(
-                Nt,
+                kt,
                 Pt
               ).then(function(e) {
                 Object(ot.A)(function() {
@@ -67076,7 +67075,7 @@
                   n.m_FriendsUIApp &&
                     n.m_FriendsUIApp.SettingsStore &&
                     n.m_FriendsUIApp.SettingsStore.StoreObjectInLocalStorage(
-                      Nt,
+                      kt,
                       n.m_UIDisplayPrefs
                     ),
                     (n.m_iTimeoutSaveUIDisplayPrefs = void 0);
@@ -67223,7 +67222,7 @@
           return (
             (t.m_AudioPlaybackManager = new ut()),
             (t.m_IdleTracker = f.a.IN_CLIENT ? new ft() : new ht()),
-            (t.m_DesktopApp = xt = new kt(t, !1)),
+            (t.m_DesktopApp = xt = new Nt(t, !1)),
             (t.m_ChatRoomBBCodeParser = new V.d(
               Object.assign(fe(), { mention: Ze }),
               V.c
@@ -67409,7 +67408,7 @@
         );
       })(G.d);
     function Ft() {
-      return (xt = new kt(new Bt(), !1));
+      return (xt = new Nt(new Bt(), !1));
     }
     var xt = void 0;
   },
@@ -68621,8 +68620,8 @@
     n.d(t, "a", function() {
       return B;
     });
-    var N = new RegExp("ː([^ː]*)ː", "g"),
-      k = (new RegExp("(https?://[^ '\"<>]*)", "gi"),
+    var k = new RegExp("ː([^ː]*)ː", "g"),
+      N = (new RegExp("(https?://[^ '\"<>]*)", "gi"),
       new RegExp(
         "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
         "i"
@@ -68685,11 +68684,11 @@
               e && e.preventDefault());
           }),
           (e.prototype.IsTrustedDomain = function(e) {
-            return !!e.match(k);
+            return !!e.match(N);
           }),
           (e.prototype.AddLinksEmoticons = function(e, t) {
             t && this.m_chat.GetUserEmoticons();
-            for (var n = e.split(N), o = [], i = 0; i < n.length; i += 1)
+            for (var n = e.split(k), o = [], i = 0; i < n.length; i += 1)
               i % 2 == 1
                 ? o.push(
                     r.createElement(j.a, {
@@ -70817,8 +70816,8 @@
           e
         );
       })(h.Component),
-      N = n("8o0Y"),
-      k = (function(n) {
+      k = n("8o0Y"),
+      N = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -70928,7 +70927,7 @@
                 },
                 this.props.contextMenuPositionOptions
               );
-              (this.m_iMenuInstance = Object(N.a)(
+              (this.m_iMenuInstance = Object(k.a)(
                 h.createElement(B, {
                   rgOptions: this.props.rgOptions,
                   fnOnItemSelected: this.OnItemSelected,
@@ -72010,7 +72009,7 @@
         return P;
       }),
       n.d(t, "i", function() {
-        return k;
+        return N;
       }),
       n.d(t, "r", function() {
         return z;
@@ -77153,7 +77152,7 @@ and limitations under the License.
               [
                 g.createElement(j, { key: "throbber", fadeOut: s }),
                 d.f.ready_to_render
-                  ? g.createElement(N, {
+                  ? g.createElement(k, {
                       key: "interface",
                       friends: n,
                       chats: o,
@@ -77281,7 +77280,7 @@ and limitations under the License.
               i = d.f.UIStore.GetDefaultTabSetForContext(o);
             (this.m_browserContext = o),
               c.render(
-                g.createElement(N, {
+                g.createElement(k, {
                   popup: this,
                   friends: this.m_friends,
                   chats: this.m_chats,
@@ -77312,7 +77311,7 @@ and limitations under the License.
           e
         );
       })(L),
-      N = (function(o) {
+      k = (function(o) {
         function e(e) {
           var t = o.call(this, e) || this;
           (t.m_bUsePopups = !1),
@@ -77598,7 +77597,7 @@ and limitations under the License.
                       popup: this.props.popup ? this.props.popup.window : void 0
                     })
                   ),
-                  a && g.createElement(k, { friends: this.props.friends }),
+                  a && g.createElement(N, { friends: this.props.friends }),
                   g.createElement(
                     "div",
                     {
@@ -77680,7 +77679,7 @@ and limitations under the License.
           (e = Object(r.c)([s.a], e))
         );
       })(g.Component),
-      k = (function(e) {
+      N = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
