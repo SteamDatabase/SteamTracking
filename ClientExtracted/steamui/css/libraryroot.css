@@ -14580,7 +14580,8 @@ div.appgrid_CoverSizeSlider_U4J9B {
     vertical-align: middle;
     margin-right: 5px;
     border-radius: 2px;
-    flex-shrink: 0; }
+    flex-shrink: 0;
+    transition: none; }
   .gamelistentry_Container_2-O4Z .gamelistentry_GameListEntryContainer_1vO6B {
     display: flex;
     box-sizing: border-box;

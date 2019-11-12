@@ -282,6 +282,7 @@
 	"Library_SortByFriendsPlaying": "Friends Playing",
 
 	"Library_SortByPctAchievementsComplete_Tag": "%1$s% Complete",
+	"Library_SortByPctAchievementsNoAchievements_Tag": "No Achievements",
 
 	"Library_InstalledOnlyCheck": "Installed Only",
 
