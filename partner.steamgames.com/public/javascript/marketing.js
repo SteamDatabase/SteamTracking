@@ -566,16 +566,9 @@ function ToggleCheckbox( id )
 	if ( input.type == 'checkbox' )
 		bChecked = input.checked;
 	else
-		bChecked = input.value && input.value != "false"; 
-	
-	if ( bChecked )
-	{
-		SetFancyCheckboxUnchecked( id );
-	}
-	else
-	{
-		SetFancyCheckboxChecked( id );
-	}
+		bChecked = input.value && input.value != "false";
+
+	SetFancyCheckboxState( id, !bChecked );
 }
 
 function SetFancyCheckboxChecked( id )
@@ -623,6 +616,24 @@ function SetFancyCheckboxEnabled( id, enable )
 		input.disable();
 
 	$(id ).setOpacity( opacity );
+}
+
+function SetFancyCheckboxState( id, bChecked )
+{
+	var bCurrentState = GetFancyCheckboxState( id );
+	if ( bChecked == bCurrentState )
+	{
+		return;
+	}
+
+	if ( bChecked )
+	{
+		SetFancyCheckboxChecked( id );
+	}
+	else
+	{
+		SetFancyCheckboxUnchecked( id );
+	}
 }
 
 function GetFancyCheckboxState( id )

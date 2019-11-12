@@ -3379,3 +3379,39 @@ complete #A4D007
 .n_section_label_data input {
 	width: 300px;
 }
+
+.game_area_details_specs {
+	min-height: 26px;
+	position: relative;
+	margin-bottom: 2px;
+	background-color: rgba( 0, 0, 0, 0.2 );
+}
+
+.game_area_details_specs .icon {
+	position: absolute;
+	left: 0px;
+	width: 30px;
+	min-height: 22px;
+	padding-top: 5px;
+	padding-left: 6px;
+	height: 100%;
+}
+
+.game_area_details_specs div.name {
+	margin-left: 37px;
+	min-height: 22px;
+	padding-top: 4px;
+	padding-left: 8px;
+	line-height: 17px;
+	background: rgba( 103, 193, 245, 0.1 );
+	color: #67c1f5;
+	display: block;
+	border-radius: 1px;
+	cursor: default;
+}
+
+img.category_icon {
+	width: 26px;
+	height: 16px;
+	vertical-align: top;
+}
