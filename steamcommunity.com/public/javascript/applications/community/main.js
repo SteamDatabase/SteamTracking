@@ -141,7 +141,7 @@
               {
                 0: "ebf340b3a6216e2d0fa9",
                 1: "8cedaea73d5f9732e3f7",
-                3: "b7bb1fc8ac52de5741aa",
+                3: "b3851e51e6375119e578",
                 5: "e15218ca33f9a9b01150",
                 6: "9613cad859146b0b0409",
                 7: "e5dac8b6459c8e21f512",
@@ -51452,9 +51452,9 @@
             e.background_image
           ) +
           "), linear-gradient(0deg, " +
-          (e.background_gradient_bottom || e.background_gradient_top) +
+          (e.background_gradient_bottom || "transparent") +
           " 0%, " +
-          e.background_gradient_top +
+          (e.background_gradient_top || "transparent") +
           " 100%)"
       };
     }
@@ -63569,6 +63569,10 @@
               });
             });
           }),
+          (e.prototype.OnSectionBackgroundClear = function() {
+            (this.props.saleSection.background_image = null),
+              this.props.editModel.SetDirty(ib.jsondata_sales);
+          }),
           (e.prototype.OnEventSearchTagChange = function(e) {
             this.setState({ eventTagToSearch: e.data });
           }),
@@ -63858,10 +63862,10 @@
                           background:
                             "linear-gradient(0deg, " +
                             (this.props.saleSection
-                              .background_gradient_bottom ||
-                              this.props.saleSection.background_gradient_top) +
+                              .background_gradient_bottom || "transparent") +
                             " 0%, " +
-                            this.props.saleSection.background_gradient_top +
+                            (this.props.saleSection.background_gradient_top ||
+                              "transparent") +
                             " 100%)"
                         }
                       },
@@ -63877,10 +63881,10 @@
                           background:
                             "linear-gradient(0deg, " +
                             (this.props.saleSection
-                              .background_gradient_bottom ||
-                              this.props.saleSection.background_gradient_top) +
+                              .background_gradient_bottom || "transparent") +
                             " 0%, " +
-                            this.props.saleSection.background_gradient_top +
+                            (this.props.saleSection.background_gradient_top ||
+                              "transparent") +
                             " 100%)"
                         }
                       },
@@ -63893,7 +63897,15 @@
                     v.createElement(ed, {
                       onDropFiles: this.OnDropFiles,
                       clanSteamID: this.props.editModel.GetClanSteamID()
-                    })
+                    }),
+                    v.createElement(
+                      ee.c,
+                      {
+                        onClick: this.OnSectionBackgroundClear,
+                        className: ye.a.EventEditorTextTitle
+                      },
+                      Object(W.c)("#Sale_Section_Background_Clear")
+                    )
                   )
                 )
               ),
@@ -64291,6 +64303,7 @@
           Object(g.c)([z.a], e.prototype, "OnRandomChange", null),
           Object(g.c)([z.a], e.prototype, "OnCapSectionChange", null),
           Object(g.c)([z.a], e.prototype, "OnDropFiles", null),
+          Object(g.c)([z.a], e.prototype, "OnSectionBackgroundClear", null),
           Object(g.c)([z.a], e.prototype, "OnEventSearchTagChange", null),
           Object(g.c)([z.a], e.prototype, "OnShowLinkCapsuleUpload", null),
           Object(g.c)([z.a], e.prototype, "OnSmartSectionChange", null),
