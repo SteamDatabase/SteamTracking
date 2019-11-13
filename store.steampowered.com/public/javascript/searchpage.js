@@ -435,8 +435,70 @@ function InitSearchPage()
 	}
 
 	HandleFilteredResultsWarning();
-
 	InitInfiniteScroll(g_rgCurrentParameters);
+	DecorateFilterControls();
+}
+
+// Decorates all our filter controls with event handlers.
+function DecorateFilterControls()
+{
+	$J('.tab_filter_control').each( function() {
+		var $Control = $J(this);
+		var strParam = $Control.data('param');
+		var value = $Control.data('value');
+		var bClientSideOnly = $Control.data('clientside');
+
+		// Skip client-side only fields.
+		if (bClientSideOnly)
+		    return;
+
+		$Control.click( function() {
+			var strValues = decodeURIComponent( $J("#"+strParam).val() );
+			value = String(value); // Javascript: Dynamic types except sometimes not.
+			var bIsToggle = ( value === '__toggle' );
+
+			var finalValue = null;
+
+			if ( !$Control.hasClass( 'checked' ) )
+			{
+				if ( bIsToggle )
+				{
+					finalValue = 1;
+				}
+				else
+				{
+					var rgValues;
+					if( !strValues )
+						rgValues = [ value ];
+					else
+					{
+						rgValues = strValues.split(',');
+						if( $J.inArray(value, rgValues) == -1 )
+							rgValues.push(value)
+					}
+
+					finalValue = rgValues.join(',');
+				}
+
+				$Control.trigger('tablefilter_clear');
+			}
+			else
+			{
+				if ( !bIsToggle )
+				{
+					var rgValues = strValues.split(',');
+					if( rgValues.indexOf(value) != -1 )
+						rgValues.splice( rgValues.indexOf(value), 1 );
+
+					finalValue = rgValues.join(',');
+				}
+			}
+
+			$Control.toggleClass('checked');
+			$J("#"+strParam).val( finalValue );
+			AjaxSearchResults();
+		});
+	});
 }
 
 // Infinite scroll state is kept on the function itself.

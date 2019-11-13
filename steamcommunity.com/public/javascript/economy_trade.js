@@ -1914,7 +1914,7 @@ function ToggleReady( bReady )
 				bShouldWarn = true;
 				strWarning += '<li' + ( rgItem && rgItem.name_color ? ' style="color: #' + rgItem.name_color + ';"' : '' ) + '>';
 				if ( rgItem )
-					strWarning += rgItem.name.escapeHTML() + ' <span class="trade_warning_item_type">(' + rgItem.type + ')</span>';
+					strWarning += rgItem.name.escapeHTML() + ' <span class="trade_warning_item_type">(' + rgItem.type.escapeHTML() + ')</span>';
 				else
 					strWarning += 'Unknown Item';
 				strWarning += '</li>';
@@ -1953,7 +1953,7 @@ function ToggleReady( bReady )
 				bShouldWarn = true;
 				strWarning += '<li' + ( rgItem && rgItem.name_color ? ' style="color: #' + rgItem.name_color + ';"' : '' ) + '>';
 				if ( rgItem )
-					strWarning += rgItem.name.escapeHTML() + ' <span class="trade_warning_item_type">(' + rgItem.type + ')</span>';
+					strWarning += rgItem.name.escapeHTML() + ' <span class="trade_warning_item_type">(' + rgItem.type.escapeHTML() + ')</span>';
 				else
 					strWarning += 'Unknown Item';
 				strWarning += '</li>';
@@ -2003,7 +2003,7 @@ function ToggleReady( bReady )
 				var rgItem = UserThem.findAsset( rgAssets[i].appid, rgAssets[i].contextid, rgAssets[i].assetid );
 				strWarning += '<li' + ( rgItem && rgItem.name_color ? ' style="color: #' + rgItem.name_color + ';"' : '' ) + '>';
 				if ( rgItem )
-					strWarning += rgItem.name.escapeHTML() + ' <span class="trade_warning_item_type">(' + rgItem.type + ')</span>';
+					strWarning += rgItem.name.escapeHTML() + ' <span class="trade_warning_item_type">(' + rgItem.type.escapeHTML() + ')</span>';
 				else
 					strWarning += 'Unknown Item';
 				// afarnsworthTODO: fraud warnings!

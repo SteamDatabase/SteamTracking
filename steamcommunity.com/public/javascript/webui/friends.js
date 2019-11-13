@@ -5241,13 +5241,12 @@
             e != this.state.maximized && this.setState({ maximized: e });
           }),
           (e.prototype.render = function() {
-            var e = this,
-              t = this.props.popup,
-              n = "title-area-icon";
+            var e = this.props.popup,
+              t = "title-area-icon";
             return (
               this.state.maximized
-                ? (n += " restoreButton")
-                : (n += " maximizeButton"),
+                ? (t += " restoreButton")
+                : (t += " maximizeButton"),
               i.createElement(
                 "div",
                 { className: "TitleBar title-area" },
@@ -5266,7 +5265,7 @@
                       {
                         className: "title-area-icon closeButton",
                         onClick: function() {
-                          e.props.OnClose && e.props.OnClose(), t && t.close();
+                          e && e.close();
                         }
                       },
                       i.createElement(r.pb, null)
@@ -5275,9 +5274,9 @@
                       i.createElement(
                         "div",
                         {
-                          className: n,
+                          className: t,
                           onClick: function() {
-                            t.SteamClient.Window.ToggleMaximize();
+                            e.SteamClient.Window.ToggleMaximize();
                           }
                         },
                         this.state.maximized && i.createElement(r.T, null),
@@ -5289,7 +5288,7 @@
                         {
                           className: "title-area-icon minimizeButton",
                           onClick: function() {
-                            t.SteamClient.Window.Minimize();
+                            e.SteamClient.Window.Minimize();
                           }
                         },
                         i.createElement(r.I, null)
@@ -21785,7 +21784,6 @@
       i = n("EGkk"),
       h = n("kQil"),
       r = n("0wLp"),
-      s = n("1VtQ"),
       f = n("1n9R");
     function a(o, i, r, a, s, c, l, p) {
       return Object(u.b)(this, void 0, void 0, function() {
@@ -21839,7 +21837,6 @@
                     strTitle: r || "Steam Dialog",
                     popupWidth: Math.max(t.width, l || 0),
                     popupHeight: Math.max(t.height, c || 0),
-                    bDispatchFakeUnloadEvent: !0,
                     bHideMainWindowForPopups: !1 !== p
                   }),
                   [2, _(o, i, r, n, s)]);
@@ -21891,7 +21888,6 @@
           }) || this;
         return (
           (r.m_bModalInitiatedClose = !1),
-          (r.m_elContentRefForUnloadHack = d.createRef()),
           (r.m_windowOpener = e),
           (r.m_modalProps = n),
           (r.m_modalElement = o),
@@ -21901,15 +21897,7 @@
       return (
         Object(u.d)(e, a),
         (e.prototype.Close = function() {
-          (this.m_bModalInitiatedClose = !0),
-            a.prototype.Close.call(this),
-            this.SendFakeUnloadEvent();
-        }),
-        (e.prototype.SendFakeUnloadEvent = function() {
-          this.m_elContentRefForUnloadHack.current &&
-            this.m_elContentRefForUnloadHack.current.dispatchEvent(
-              new Event("unload", { bubbles: !0 })
-            );
+          (this.m_bModalInitiatedClose = !0), a.prototype.Close.call(this);
         }),
         (e.prototype.UpdateParamsBeforeShow = function(e) {
           var t = this.m_modalProps.popupWidth || 500,
@@ -21940,22 +21928,13 @@
                 d.createElement(
                   "div",
                   { className: "PopupFullWindow", onContextMenu: i.i },
-                  d.createElement(r.a, {
-                    hideMinMax: !0,
-                    popup: e,
-                    OnClose: this.SendFakeUnloadEvent
-                  }),
+                  d.createElement(r.a, { hideMinMax: !0, popup: e }),
                   d.createElement(h.a, { ModalManager: Object(h.c)(e) }),
-                  this.m_modalElement,
-                  this.m_modalProps.bDispatchFakeUnloadEvent &&
-                    d.createElement("div", {
-                      ref: this.m_elContentRefForUnloadHack
-                    })
+                  this.m_modalElement
                 ),
                 t
               );
         }),
-        Object(u.c)([s.a], e.prototype, "SendFakeUnloadEvent", null),
         e
       );
     })(o.a);
@@ -41644,7 +41623,7 @@
           (t.prototype.OKToSwitchAway = function() {
             return !0;
           }),
-          (t.prototype.componentWillMount = function() {
+          (t.prototype.componentDidMount = function() {
             var t = this.props.inviteLinks;
             if ("loaded" != t.loadingState) {
               var e = this.props.group;
@@ -41847,7 +41826,7 @@
           (t.prototype.OKToSwitchAway = function() {
             return !0;
           }),
-          (t.prototype.componentWillMount = function() {
+          (t.prototype.componentDidMount = function() {
             var t = this.props.invitedUsers;
             if ("loaded" != t.loadingState) {
               var e = this.props.group;
@@ -42013,7 +41992,7 @@
           (t.prototype.OKToSwitchAway = function() {
             return !0;
           }),
-          (t.prototype.componentWillMount = function() {
+          (t.prototype.componentDidMount = function() {
             var e = this.props.group,
               t = this.props.bans;
             "pending" == t.loadingState &&
@@ -42023,7 +42002,6 @@
                 }, 500);
               });
           }),
-          (t.prototype.componentWillUnmount = function() {}),
           (t.prototype.OnClickUnban = function(e, t) {
             var n = this,
               o = g.f.FriendStore.GetPlayer(t),
@@ -51254,11 +51232,8 @@
                 this.FocusTextInput
               ));
           }),
-          (e.prototype.componentWillMount = function() {
-            this.InitForChatView(this.props.chatView);
-          }),
           (e.prototype.componentDidMount = function() {
-            this.FocusTextInput();
+            this.InitForChatView(this.props.chatView), this.FocusTextInput();
           }),
           (e.prototype.componentWillUnmount = function() {
             this.m_textFocusCallback && this.m_textFocusCallback.Unregister(),
@@ -70202,7 +70177,6 @@
               : this.KeyDown(e);
           }),
           (t.prototype.render = function() {
-            console.log(this.props.checked, this.state.checked);
             var e =
               "DialogOnOffToggle _DialogInputContainer _DialogLayout " +
               (this.props.classname ? this.props.classname : "");
@@ -70403,13 +70377,15 @@
               o = e.bShowCopyAction,
               i = e.bShowClearAction,
               r = e.bAlwaysShowClearAction,
-              a = Object(d.f)(e, [
+              a = (e.tooltip,
+              Object(d.f)(e, [
                 "label",
                 "explainer",
                 "bShowCopyAction",
                 "bShowClearAction",
-                "bAlwaysShowClearAction"
-              ]),
+                "bAlwaysShowClearAction",
+                "tooltip"
+              ])),
               s =
                 "DialogInput DialogInputPlaceholder DialogTextInputBase" +
                 (a.className ? " " + a.className : ""),
@@ -70487,6 +70463,12 @@
                       { className: "DialogLabel" },
                       t,
                       " ",
+                      this.props.tooltip &&
+                        h.createElement(
+                          "span",
+                          { "data-tooltip-text": this.props.tooltip },
+                          " (?)"
+                        ),
                       h.createElement(
                         "span",
                         { className: "DialogInputRequirementLabel" },
@@ -71046,19 +71028,18 @@
           e
         );
       })(h.Component),
-      F = n("i8i4"),
-      x = n("2vnA"),
-      V = n("G+3Z"),
-      U = n("UqDm"),
-      H = n("QHER"),
-      W = n("/7KC");
-    function z(e) {
+      F = n("2vnA"),
+      x = n("G+3Z"),
+      V = n("UqDm"),
+      U = n("QHER"),
+      H = n("/7KC");
+    function W(e) {
       return e.children;
     }
-    var q = (function(t) {
+    var z = (function(t) {
       function e() {
         var e = (null !== t && t.apply(this, arguments)) || this;
-        return (e.m_coordinator = new Y()), e;
+        return (e.m_coordinator = new K()), e;
       }
       return (
         Object(d.d)(e, t),
@@ -71070,7 +71051,7 @@
             r = [];
           return (
             r.push(
-              h.createElement(X, {
+              h.createElement(Z, {
                 coordinator: this.m_coordinator,
                 key: "dropregion_top",
                 fnBAcceptDraggable: function(e) {
@@ -71086,13 +71067,13 @@
                 o = t + 1;
               r.push(
                 h.createElement(
-                  Q,
+                  Y,
                   { coordinator: i.m_coordinator, data: t, key: n },
                   e
                 )
               ),
                 r.push(
-                  h.createElement(X, {
+                  h.createElement(Z, {
                     coordinator: i.m_coordinator,
                     key: "dropregion_" + n,
                     fnBAcceptDraggable: function(e) {
@@ -71111,14 +71092,14 @@
         e
       );
     })(h.Component);
-    function K(e, t, n, o) {
+    function q(e, t, n, o) {
       return o
         ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
         : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
     }
-    var Y = (function() {
+    var K = (function() {
         function e() {
-          (this.m_embeddedElement = new V.a("DragGhosts")),
+          (this.m_embeddedElement = new x.a("DragGhosts")),
             (this.m_rgDropRegions = []),
             (this.m_rgActiveDropRegions = []);
         }
@@ -71131,8 +71112,8 @@
                 this.m_rgActiveDropRegions.push(e));
           }),
           (e.prototype.UnregisterDropRegion = function(e) {
-            U.c(this.m_rgDropRegions, e),
-              U.c(this.m_rgActiveDropRegions, e),
+            V.c(this.m_rgDropRegions, e),
+              V.c(this.m_rgActiveDropRegions, e),
               this.m_activeDropRegion == e &&
                 ((this.m_activeDropRegion = void 0),
                 this.m_activeDraggable && this.ShowDragGhost());
@@ -71142,7 +71123,7 @@
           }),
           (e.prototype.ShowDragGhost = function() {
             var e = this.m_activeDraggable.renderDragGhost(),
-              t = Object(H.a)(
+              t = Object(U.a)(
                 e.props.className,
                 !!this.m_activeDropRegion && "DraggedOverActiveDrop"
               ),
@@ -71185,6 +71166,42 @@
                 (this.m_rgActiveDropRegions = []);
             }
           }),
+          (e.prototype.FindBestActiveDropRegionForPoint = function(e, t) {
+            var n,
+              o = this.m_activeDraggable.GetDragDocument();
+            if ("elementsFromPoint" in o) n = o.elementsFromPoint(e, t);
+            else if ("msElementsFromPoint" in o) {
+              var i = o.msElementsFromPoint;
+              n = Array.from(i(e, t));
+            }
+            if (n) {
+              var r = new Map();
+              this.m_rgActiveDropRegions.forEach(function(e) {
+                return r.set(e.GetElement(), e);
+              });
+              for (var a = 0, s = n; a < s.length; a++) {
+                var c = s[a],
+                  l = r.get(c);
+                if (l) return l;
+              }
+            } else {
+              if (
+                this.m_activeDropRegion &&
+                this.m_activeDropRegion.BDraggableInRegion(
+                  e,
+                  t,
+                  this.m_activeDraggable
+                )
+              )
+                return this.m_activeDropRegion;
+              for (var p = this.m_rgActiveDropRegions.length - 1; 0 <= p; p--) {
+                var u = this.m_rgActiveDropRegions[p];
+                if (u.BDraggableInRegion(e, t, this.m_activeDraggable))
+                  return u;
+              }
+            }
+            return null;
+          }),
           (e.prototype.OnDrag = function(e, t, n) {
             var o = this,
               i = void 0 === t ? 0 : t - this.m_dragGhost.state.clientX,
@@ -71206,53 +71223,38 @@
               var a = t + i,
                 s = n + r,
                 c = e.GetDragDocument().body.getBoundingClientRect();
-              if (K(t, n, c) && !K(a, s, c, !0)) {
-                var l = W.c(a, c.left, c.right, c.left - 200, c.right + 200),
-                  p = W.c(s, c.top, c.bottom, c.top - 100, c.bottom + 100);
+              if (q(t, n, c) && !q(a, s, c, !0)) {
+                var l = H.c(a, c.left, c.right, c.left - 200, c.right + 200),
+                  p = H.c(s, c.top, c.bottom, c.top - 100, c.bottom + 100);
                 this.m_dragOffWindowTimer = window.setTimeout(function() {
                   e == o.m_activeDraggable && o.OnDrag(e, l, p);
                 }, 50);
               }
             }
-            if (
+            var u = this.FindBestActiveDropRegionForPoint(t, n);
+            !!this.m_activeDropRegion != !!u &&
+              (this.ShowDragGhost(),
+              this.m_dropGhost ||
+                (this.m_dropGhost = this.m_activeDraggable.renderDropGhost())),
               this.m_activeDropRegion &&
-              this.m_activeDropRegion.BDraggableInRegion(
-                t,
-                n,
-                this.m_activeDraggable
-              )
-            )
-              this.m_activeDropRegion.OnDragMove(t, n, this.m_activeDraggable);
-            else {
-              var u = !!this.m_activeDropRegion;
+                this.m_activeDropRegion != u &&
+                this.m_activeDropRegion.OnDragLeave(this.m_activeDraggable),
+              u &&
+                this.m_activeDropRegion != u &&
+                u.OnDragEnter(this.m_activeDraggable, this.m_dropGhost),
+              (this.m_activeDropRegion = u),
               this.m_activeDropRegion &&
-                (this.m_activeDropRegion.OnDragLeave(this.m_activeDraggable),
-                (this.m_activeDropRegion = void 0));
-              for (
-                var m = 0, d = this.m_rgActiveDropRegions;
-                m < d.length;
-                m++
-              ) {
-                var h = d[m];
-                if (h.BDraggableInRegion(t, n, this.m_activeDraggable)) {
-                  (this.m_activeDropRegion = h),
-                    this.m_dropGhost ||
-                      (this.m_dropGhost = this.m_activeDraggable.renderDropGhost()),
-                    this.m_activeDropRegion.OnDragEnter(
-                      this.m_activeDraggable,
-                      this.m_dropGhost
-                    );
-                  break;
-                }
-              }
-              !!this.m_activeDropRegion != u && this.ShowDragGhost();
-            }
+                this.m_activeDropRegion.OnDragMove(
+                  t,
+                  n,
+                  this.m_activeDraggable
+                );
           }),
           Object(d.c)([o.a], e.prototype, "OnDragGhostRef", null),
           e
         );
       })(),
-      Q = (function(t) {
+      Y = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
@@ -71266,6 +71268,7 @@
               startHeight: void 0,
               ownerWin: void 0
             }),
+            (e.m_divRef = h.createRef()),
             e
           );
         }
@@ -71418,7 +71421,7 @@
               s = n || "DialogDraggable";
             return (
               this.m_DragInfo.bStarted
-                ? ((s = Object(H.a)(s, o || "DraggedOut")),
+                ? ((s = Object(U.a)(s, o || "DraggedOut")),
                   t &&
                     (a = {
                       onDrag: this.ProcessDragMove,
@@ -71436,7 +71439,9 @@
                       }),
               h.createElement(
                 "div",
-                Object(d.a)({ className: s }, a, r, { draggable: t }),
+                Object(d.a)({ ref: this.m_divRef, className: s }, a, r, {
+                  draggable: t
+                }),
                 i
               )
             );
@@ -71444,12 +71449,12 @@
           (e.prototype.renderDropGhost = function() {
             return this.props.fnRenderDropGhost
               ? this.props.fnRenderDropGhost()
-              : h.createElement(J, { elContent: this.GetClone() });
+              : h.createElement(Q, { elContent: this.GetClone() });
           }),
           (e.prototype.renderDragGhost = function() {
             return this.props.fnRenderDragGhost
               ? this.props.fnRenderDragGhost()
-              : h.createElement(Z, {
+              : h.createElement(J, {
                   elContent: this.GetClone(),
                   offsetX: this.m_DragInfo.startOffsetX,
                   offsetY: this.m_DragInfo.startOffsetY,
@@ -71459,7 +71464,7 @@
           }),
           (e.prototype.GetClone = function() {
             var e,
-              t = F.findDOMNode(this);
+              t = this.m_divRef.current;
             if (t && t.childElementCount)
               if (1 == t.childElementCount)
                 e = t.firstElementChild.cloneNode(!0);
@@ -71475,13 +71480,13 @@
           Object(d.c)([o.a], e.prototype, "OnMouseUp", null),
           Object(d.c)([o.a], e.prototype, "OnTouchStart", null),
           Object(d.c)([o.a], e.prototype, "OnTouchEnd", null),
-          Object(d.c)([x.g], e.prototype, "ResetDragState", null),
+          Object(d.c)([F.g], e.prototype, "ResetDragState", null),
           Object(d.c)([o.a], e.prototype, "OnHTMLDragStart", null),
           Object(d.c)([o.a], e.prototype, "OnHTMLDragEnd", null),
           e
         );
       })(h.Component),
-      J = (function(e) {
+      Q = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -71500,7 +71505,7 @@
           t
         );
       })(h.Component),
-      Z = (function(t) {
+      J = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
@@ -71538,7 +71543,7 @@
                 height: this.props.height || "auto",
                 perspective: "600px"
               },
-              t = W.c(
+              t = H.c(
                 this.CalculateRotationDegrees(this.state.clientYDelta),
                 -90,
                 90,
@@ -71566,7 +71571,7 @@
           e
         );
       })(h.Component),
-      X = (function(e) {
+      Z = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -71588,7 +71593,7 @@
         (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
-            return (t.state = {}), t;
+            return (t.m_divRef = h.createRef()), (t.state = {}), t;
           }
           return (
             Object(d.d)(e, n),
@@ -71623,14 +71628,15 @@
               );
             }),
             (e.prototype.BDraggableInRegion = function(e, t, n) {
-              return K(e, t, this.GetClientRect());
+              return q(e, t, this.GetClientRect());
+            }),
+            (e.prototype.GetElement = function() {
+              return this.m_divRef.current;
             }),
             (e.prototype.GetClientRect = function() {
               return (
-                this.m_elDropRegion ||
-                  (this.m_elDropRegion = F.findDOMNode(this)),
-                this.m_elDropRegion &&
-                  this.m_elDropRegion.getBoundingClientRect()
+                this.m_divRef.current &&
+                this.m_divRef.current.getBoundingClientRect()
               );
             }),
             (e.prototype.render = function() {
@@ -71653,23 +71659,13 @@
                   "strActiveClassName",
                   "children"
                 ]),
-                r = Object(H.a)(
+                r = Object(U.a)(
                   t || "DialogDropRegion",
                   this.state.bDraggableActive && (n || "Active")
-                ),
-                a = function(e) {
-                  e.preventDefault();
-                },
-                s = {
-                  onDragEnter: a,
-                  onDragOver: a,
-                  onDragLeave: a,
-                  onDrop: a,
-                  id: "fff"
-                };
+                );
               return h.createElement(
                 "div",
-                Object(d.a)({ className: r }, s, { onDragOver: a }, i),
+                Object(d.a)({ ref: this.m_divRef, className: r }, i),
                 this.state.dropGhost,
                 o
               );
@@ -71678,14 +71674,14 @@
           );
         })(h.Component)
       ),
-      $ = n("1w3K"),
-      ee = (function(e) {
+      X = n("1w3K"),
+      $ = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return Object(d.d)(t, e), t;
       })(h.Component),
-      te = (function(n) {
+      ee = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -71699,7 +71695,7 @@
           Object(d.d)(e, n),
           (e.prototype.OnActivePageRef = function(e) {
             this.m_ActivePage =
-              e instanceof ee
+              e instanceof $
                 ? e
                 : (Object(A.a)(
                     !e,
@@ -71782,11 +71778,11 @@
                   )
                 ),
                 h.createElement(
-                  $.TransitionGroup,
+                  X.TransitionGroup,
                   { className: "DialogContentTransition" },
                   c &&
                     h.createElement(
-                      $.CSSTransition,
+                      X.CSSTransition,
                       {
                         key: c.title,
                         classNames: "opacityfade-anim",
@@ -71822,7 +71818,7 @@
           e
         );
       })(h.Component),
-      ne = (function(t) {
+      te = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
@@ -72018,19 +72014,19 @@
         return k;
       }),
       n.d(t, "r", function() {
-        return z;
+        return W;
       }),
       n.d(t, "y", function() {
-        return q;
+        return z;
       }),
       n.d(t, "w", function() {
-        return ee;
+        return $;
       }),
       n.d(t, "v", function() {
-        return te;
+        return ee;
       }),
       n.d(t, "a", function() {
-        return ne;
+        return te;
       });
   },
   lqmi: function(e, t, n) {
@@ -76534,7 +76530,7 @@ and limitations under the License.
           (e.prototype.componentWillUpdate = function(e, t) {
             this.BuildChosenFriendList(t);
           }),
-          (e.prototype.componentWillMount = function() {
+          (e.prototype.componentDidMount = function() {
             if (this.props.rgSelectedFriends) {
               var e = this.props.rgSelectedFriends.map(function(e) {
                 return d.f.FriendStore.GetFriend(e);
@@ -76623,23 +76619,28 @@ and limitations under the License.
           e
         );
       })(f.Component),
-      p = (function(t) {
-        function e() {
-          var e = (null !== t && t.apply(this, arguments)) || this;
+      p = (function(n) {
+        function e(e) {
+          var t = n.call(this, e) || this;
           return (
-            (e.m_iSelectedFriendIndex = -1), (e.m_rgFriendSuggestions = []), e
+            (t.m_rgFriendsList = []),
+            (t.m_iSelectedFriendIndex = -1),
+            (t.m_rgFriendSuggestions = []),
+            t.BuildFriendsList(e),
+            t
           );
         }
         return (
-          Object(m.d)(e, t),
-          (e.prototype.BuildFriendsList = function(t) {
+          Object(m.d)(e, n),
+          (e.prototype.BuildFriendsList = function(e) {
+            var t = this.props.setExcludedFriends;
             (this.m_rgFriendsList = d.f.FriendStore.all_friends),
-              t.setExcludedFriends &&
-                t.setExcludedFriends.size &&
+              t &&
+                t.size &&
                 (this.m_rgFriendsList = this.m_rgFriendsList.filter(function(
                   e
                 ) {
-                  return !t.setExcludedFriends.has(e.accountid);
+                  return !t.has(e.accountid);
                 }));
             var o = d.f.ChatStore.FriendChatStore;
             switch (this.props.eSort) {
@@ -76657,10 +76658,7 @@ and limitations under the License.
                   return e.display_name.localeCompare(t.display_name);
                 });
             }
-            this.BuildFriendSuggestionList(t);
-          }),
-          (e.prototype.componentWillMount = function() {
-            this.BuildFriendsList(this.props);
+            this.BuildFriendSuggestionList(e);
           }),
           (e.prototype.componentWillReceiveProps = function(e) {
             e.setExcludedFriends != this.props.setExcludedFriends &&
@@ -77424,29 +77422,27 @@ and limitations under the License.
                 (this.m_popupFocusDisposer.unregister(),
                 (this.m_popupFocusDisposer = void 0));
           }),
-          (e.prototype.componentWillMount = function() {
-            var e = this.props.popup ? this.props.popup.window : window;
-            e && e.addEventListener("resize", this.OnWindowResizeEvent),
-              this.BindWindowHandlers();
-          }),
           (e.prototype.componentWillUnmount = function() {
             var e = this.props.popup ? this.props.popup.window : window;
             e && e.removeEventListener("resize", this.OnWindowResizeEvent),
               this.UnbindWindowHandlers();
           }),
           (e.prototype.componentDidMount = function() {
-            (this.m_browserContext.m_eBrowserType !=
-              G.f.EBrowserType_OpenVROverlay &&
-              this.m_browserContext.m_eBrowserType !=
-                G.f.EBrowserType_OpenVROverlay_Dashboard) ||
-              (this.m_refRoot.current.addEventListener(
-                "focusin",
-                this.OnFocusIn
-              ),
-              this.m_refRoot.current.addEventListener(
-                "focusout",
-                this.OnFocusOut
-              ));
+            var e = this.props.popup ? this.props.popup.window : window;
+            e && e.addEventListener("resize", this.OnWindowResizeEvent),
+              this.BindWindowHandlers(),
+              (this.m_browserContext.m_eBrowserType !=
+                G.f.EBrowserType_OpenVROverlay &&
+                this.m_browserContext.m_eBrowserType !=
+                  G.f.EBrowserType_OpenVROverlay_Dashboard) ||
+                (this.m_refRoot.current.addEventListener(
+                  "focusin",
+                  this.OnFocusIn
+                ),
+                this.m_refRoot.current.addEventListener(
+                  "focusout",
+                  this.OnFocusOut
+                ));
           }),
           (e.prototype.OnFocusIn = function(e) {
             var t = !1;
@@ -77912,7 +77908,7 @@ and limitations under the License.
         }
         return (
           Object(r.d)(e, n),
-          (e.prototype.componentWillMount = function() {
+          (e.prototype.componentDidMount = function() {
             var e = this;
             if (!d.f.ready_to_render) {
               var t = performance.now() - d.f.GetStartupTime();

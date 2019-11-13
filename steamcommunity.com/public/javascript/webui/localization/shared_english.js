@@ -251,6 +251,7 @@ LocalizationReady("shared", "english", {
   EventEmail_Subject_UpcomingLaunch: "%1$s, Upcoming Launch",
   EventEmail_Subject_NowAvailable: "%1$s Now Available",
   EventEmail_Subject_FreeDemoAvailable: "%1$s Free Demo Now Available",
+  EventEmail_Subject_SpecialOffer: "%1$s Special Offer",
   EventEmail_Button_ClickForMoreDetails: "Click for more details",
   EventEmail_Button_PrepurchaseNow: "Prepurchase now!",
   EventEmail_Button_BuyNow: "Buy now!",
@@ -290,7 +291,7 @@ LocalizationReady("shared", "english", {
   EventDashBoard_Location_PopUpViews: "Views of event pop-up",
 
   AddToWishlist: "Add to your Wishlist",
-  Wishlisted: "In your Wishlist",
+  Wishlisted: "On your Wishlist",
   AddToWishlist_ttip:
     "Get notified by email when your wishlisted items get released or are on sale",
   Wishlist_Error: "Update Wishlist Error",

@@ -4163,8 +4163,9 @@ b {
 .partnereventshared_EventDashboardTitles_3XWe3 {
   margin-bottom: 15px; }
 
-.partnereventshared_EventDashboardActions_2i1-P {
-  /* top right section with actions */ }
+.partnereventshared_EventDashboardActions_2i1-P > .partnereventshared_Button_vHRhC {
+  display: inline-block;
+  margin-top: 4px; }
 
 .partnereventshared_EventDashboardStatsCtn_iDETf {
   background: #36404f;
@@ -4870,7 +4871,6 @@ textarea:-webkit-autofill:focus,
 
 .broadcast_embeddable_bordered_container_2W1jH {
   padding: 15px;
-  background: radial-gradient(100% 80% at 64% 95%, rgba(108, 119, 134, 0.4) 40%, rgba(83, 104, 104, 0.4) 100%) !important;
   text-align: left; }
   .broadcast_embeddable_bordered_container_2W1jH.broadcast_embeddable_Event_3dSbs {
     /* TODO alden might want to style the background differently for events */ }
@@ -9276,8 +9276,7 @@ button.TextButton:focus {
   margin-top: 2px; }
 
 .DialogDropDownMenu_Item {
-  line-height: 40px;
-  padding: 0 16px;
+  padding: 10px 15px;
   cursor: pointer; }
 
 .DialogDropDownMenu_Item:hover {

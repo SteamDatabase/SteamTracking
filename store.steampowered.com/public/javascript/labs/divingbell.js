@@ -1063,6 +1063,9 @@ EggTimer.prototype = {
 var GlobalStuff = function() { };
 GlobalStuff.__name__ = true;
 GlobalStuff.show = function(element,b) {
+	if(element == null) {
+		return;
+	}
 	if(!b) {
 		GlobalStuff.addClass(element,"hide-fancy");
 	} else {
@@ -1070,6 +1073,9 @@ GlobalStuff.show = function(element,b) {
 	}
 };
 GlobalStuff.hardHide = function(element) {
+	if(element == null) {
+		return;
+	}
 	var style = element.getAttribute("style");
 	var styleArr = style.split(";");
 	var newStyleArr = [];
@@ -1088,6 +1094,9 @@ GlobalStuff.hardHide = function(element) {
 	element.setAttribute("style",newStyle);
 };
 GlobalStuff.hardShow = function(element) {
+	if(element == null) {
+		return;
+	}
 	var style = element.getAttribute("style");
 	var styleArr = style.split(";");
 	var newStyleArr = [];
@@ -1106,6 +1115,9 @@ GlobalStuff.hardShow = function(element) {
 	element.setAttribute("style",newStyle);
 };
 GlobalStuff.hasClass = function(element,className) {
+	if(element == null) {
+		return false;
+	}
 	var classStr = element.getAttribute("class");
 	if(classStr != "" && classStr != null) {
 		var classes = classStr.split(" ");
@@ -1118,6 +1130,9 @@ GlobalStuff.hasClass = function(element,className) {
 	return false;
 };
 GlobalStuff.addClass = function(element,className) {
+	if(element == null) {
+		return;
+	}
 	var classStr = element.getAttribute("class");
 	if(classStr != "" && classStr != null) {
 		var classes = classStr.split(" ");
@@ -1130,6 +1145,9 @@ GlobalStuff.addClass = function(element,className) {
 	}
 };
 GlobalStuff.removeClass = function(element,className) {
+	if(element == null) {
+		return;
+	}
 	var classStr = element.getAttribute("class");
 	if(classStr != "" && classStr != null) {
 		var classes = classStr.split(" ");
@@ -1636,9 +1654,15 @@ Main.renderBackRefreshButtons = function() {
 		}
 	}
 };
-Main.renderFocusedBox = function(appidSafeguard) {
+Main.renderFocusedBox = function(appidSafeguard,iterations) {
+	if(iterations == null) {
+		iterations = 0;
+	}
 	if(appidSafeguard == null) {
 		appidSafeguard = "";
+	}
+	if(iterations > 1) {
+		return;
 	}
 	if(appidSafeguard != "") {
 		if(appidSafeguard != Main.focusedEntry.appid) {
@@ -1646,13 +1670,15 @@ Main.renderFocusedBox = function(appidSafeguard) {
 		}
 	}
 	if(Main.focusedEntry != null) {
-		if(Main.focusedEntry.screenshots == null || Main.focusedEntry.screenshots.length == 0) {
+		if(Main.focusedEntry.screenshots == null || Main.focusedEntry.screenshots.length < 5) {
 			Data.getDetailsFullFat(Main.focusedEntry.appid,function(details) {
-				Main.focusedEntry.screenshots = details.screenshots;
+				if(details != null) {
+					Main.focusedEntry.screenshots = details.screenshots;
+				}
 				if(Main.focusedEntry.screenshots == null || Main.focusedEntry.screenshots.length == 0) {
 					Main.focusedEntry.screenshots = [""];
 				}
-				Main.renderFocusedBox(Main.focusedEntry.appid);
+				Main.renderFocusedBox(Main.focusedEntry.appid,iterations + 1);
 			});
 			return;
 		} else if(Main.focusedEntry.screenshots.length == 1 && Main.focusedEntry.screenshots[0] == "") {
@@ -2261,6 +2287,7 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	if(details1 != null) {
 		showFocusDetails(details1,true);
 	} else {
+		showFocusDetails(details1,true);
 		detailsWereNull = true;
 	}
 	if(showTheseBoxes == null || showTheseBoxes.length == 0) {
@@ -3219,7 +3246,7 @@ Render.focusBoxContent = function(entry,enableBack,enableRefresh) {
 	var isOwned = Main.LOGGED_IN && Main.isOwned(appid);
 	var wishlistBtn = Main.LOGGED_IN ? Render.wishlistButton(appid,onWishlist,isOwned) : "";
 	var detailsBtn = Render.detailsButton(appid,entry.url);
-	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">\r\n\t\t\t\t\r\n\t\t\t\t<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">\r\n\t\t\t\t\t<p>" + selectToExplore + "</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"games-like\">" + gamesLike + "</div>\r\n\t\t\t\t\t<div id=\"search-wrapper\">\r\n\t\t\t\t\t\t<div class=\"search-container\" id=\"search-container\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:Main.onClickFocusSearch();\">\r\n\t\t\t\t\t\t\t\t<h2>" + title + "</h2>\r\n\t\t\t\t\t\t\t\t<img src=\"" + searchSvg + "\" class=\"search-icon\"/>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<hr>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-doodads\" id=\"" + doodadId + "\">" + discountBlock + "</div>\r\n\t\t\t\t<div class=\"box-buttons\" id=\"" + boxButtonsId1 + "\">\r\n\t\t\t\t\t" + wishlistBtn + "\r\n\t\t\t\t\t" + detailsBtn + "\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-tags-focus hide-fancy\" id=\"" + boxTagsId + "\">\r\n\t\t\t\t\t" + tagHTML + "\r\n\t\t\t\t</div>\r\n\t\t\t\t" + screenShots + "\r\n\t\t\t</div>";
+	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">\r\n\t\t\t\t\r\n\t\t\t\t<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">\r\n\t\t\t\t\t<p>" + selectToExplore + "</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"games-like\">" + gamesLike + "</div>\r\n\t\t\t\t\t<div id=\"search-wrapper\">\r\n\t\t\t\t\t\t<div class=\"search-container\" id=\"search-container\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:Main.onClickFocusSearch();\">\r\n\t\t\t\t\t\t\t\t<h2>" + title + "</h2>\r\n\t\t\t\t\t\t\t\t<button id=\"button-search\" class=\"button-search-focus button-round\" onclick=\"trySearch()\">\r\n\t\t\t\t\t\t\t\t\t<img src=\"" + searchSvg + "\" class=\"search-icon-focus\"/>\r\n\t\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<hr>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-doodads\" id=\"" + doodadId + "\">" + discountBlock + "</div>\r\n\t\t\t\t<div class=\"box-buttons\" id=\"" + boxButtonsId1 + "\">\r\n\t\t\t\t\t" + wishlistBtn + "\r\n\t\t\t\t\t" + detailsBtn + "\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-tags-focus hide-fancy\" id=\"" + boxTagsId + "\">\r\n\t\t\t\t\t" + tagHTML + "\r\n\t\t\t\t</div>\r\n\t\t\t\t" + screenShots + "\r\n\t\t\t</div>";
 	return html;
 };
 Render.throbber = function(id,hide,position) {
@@ -3359,14 +3386,14 @@ Render.searchBoxContent = function() {
 	var searchBlurb = Main.loc("#labs_deepdive_searchblurb");
 	var search = Main.loc("#labs_deepdive_search");
 	var searchSvg = Main.cdnURL + "/labs/diving_bell/search.svg";
-	return "<div class=\"box-shadow\"></div>\r\n\t\t\t<div class=\"box-background\" style=\"background-image: url(" + backgroundUrl + ");\"></div>\r\n\t\t\t<div class=\"box-content\">\r\n\t\t\t\t<div class=\"games-like\">" + gamesLike + "</div>\r\n\t\t\t\t<br>\r\n\t\t\t\t<br>\r\n\t\t\t\t<input id=\"search-name\" type=\"text\" class=\"text-search-big\" placeholder=\"" + search + "\" autocomplete=\"off\" autofocus/>\r\n\t\t\t\t<img src=\"" + searchSvg + "\" class=\"search-icon\"/>\r\n\t\t\t\t<hr>\r\n\t\t\t\t<p class=\"text-search-small\">" + searchBlurb + "</p>\r\n\t\t\t\t<div class=\"search-wrapper\">\r\n\t\t\t\t\t<div id=\"searchterm_options\" class=\"search_suggest popup_block_new\" style=\"display: none;\">\r\n\t\t\t\t\t<div class=\"popup_body\" style=\"border-top: none;\">\r\n\t\t\t\t\t\t<div id=\"search_suggestion_contents\">\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>";
+	return "<div class=\"box-shadow\"></div>\r\n\t\t\t<div class=\"box-background\" style=\"background-image: url(" + backgroundUrl + ");\"></div>\r\n\t\t\t<div class=\"box-content\">\r\n\t\t\t\t<div class=\"games-like\">" + gamesLike + "</div>\r\n\t\t\t\t<br>\r\n\t\t\t\t<br>\r\n\t\t\t\t<input id=\"search-name\" type=\"text\" class=\"text-search-big\" placeholder=\"" + search + "\" autocomplete=\"off\" autofocus/>\r\n\t\t\t\t<button id=\"button-search\" class=\"button-search button-round\" onclick=\"trySearch()\">\r\n\t\t\t\t\t<img src=\"" + searchSvg + "\" class=\"search-icon\"/>\r\n\t\t\t\t</button>\r\n\t\t\t\t<hr>\r\n\t\t\t\t<p class=\"text-search-small\">" + searchBlurb + "</p>\r\n\t\t\t\t<div class=\"search-wrapper\">\r\n\t\t\t\t\t<div id=\"searchterm_options\" class=\"search_suggest popup_block_new\" style=\"display: none;\">\r\n\t\t\t\t\t<div class=\"popup_body\" style=\"border-top: none;\">\r\n\t\t\t\t\t\t<div id=\"search_suggestion_contents\">\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>";
 };
 Render.injectSearchContent = function(text) {
 	return "<input id=\"search-name\" type=\"text\" class=\"text-search-big\" placeholder=\"" + text + "\" autocomplete=\"off\"/>\r\n\t\t<hr>\r\n\t\t<div id=\"searchterm_options\" class=\"search_suggest popup_block_new\" style=\"display: none;\">\r\n\t\t<div class=\"popup_body\" style=\"border-top: none;\">\r\n\t\t\t<div id=\"search_suggestion_contents\">\r\n\t\t\t</div>\r\n\t\t</div>";
 };
 Render.injectFocusContent = function(title) {
 	var searchSvg = Main.cdnURL + "/labs/diving_bell/search.svg";
-	return "<div class=\"search-container\" id=\"search-container\">\r\n\t\t\t<h2 id=\"focus-title\">" + title + "</h2>\r\n\t\t\t<img src=\"" + searchSvg + "\" class=\"search-icon\"/>;\r\n\t\t</div>";
+	return "<div class=\"search-container\" id=\"search-container\">\r\n\t\t\t<h2 id=\"focus-title\">" + title + "</h2>\r\n\t\t\t<button id=\"button-search\" class=\"button-search button-round\" onclick=\"trySearch()\">\r\n\t\t\t\t<img src=\"" + searchSvg + "\" class=\"search-icon\"/>\r\n\t\t\t</button>\r\n\t\t</div>";
 };
 Render.backRefreshButtons = function(enableBack,enableRefresh) {
 	if(enableRefresh == null) {

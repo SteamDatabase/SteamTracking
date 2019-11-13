@@ -799,12 +799,38 @@ round buttons
 	bottom: -5px;
 	margin-bottom: 0px;
 	padding-left: 0px;
+}
 
+.page_content .button-search {
+	position: absolute;
+	bottom: -5px;
+	margin-bottom:0px;
+	padding-left:0px;
+	top: 119px;
+	width: 40px;
+	height: 40px;
+	z-index: 1;
+}
+
+.page_content .button-search-focus {
+	position: absolute;
+	bottom: -8px;
+	margin-bottom:0px;
+	padding-left:0px;
+	z-index: 1;
+	width: 40px;
+	height: 40px;
+	right:0px;
 }
 
 .search-icon{
 	margin-bottom: -13px;
 	padding-left: 2px;
+}
+
+.search-icon-focus{
+	top: 6px;
+	position: relative;
 }
 
 .container-checkbox-microtrailers {

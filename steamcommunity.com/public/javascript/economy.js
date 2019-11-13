@@ -2711,13 +2711,13 @@ function PopulateDescriptions( elDescriptions, rgDescriptions )
 			var elImage = new Element( 'img', {src: v_trim( description.value ) } );
 			elDescription.appendChild( elImage );
 		}
-		else if ( description.type == 'html' || description.type == 'bbcode' )
+		else if ( description.type == 'html' )
 		{
 			elDescription.update( strParsedDescription );
 		}
 		else
 		{
-			elDescription.update( strParsedDescription.escapeHTML().replace( /\n/g, '<br>' ) );
+									elDescription.update( strParsedDescription.escapeHTML().replace( /\n/g, '<br>' ) );
 		}
 
 		if ( description.label )
@@ -3180,7 +3180,7 @@ SellItemDialog = {
 			$('market_sell_dialog_game_icon').src = rgAppData.icon;
 			$('market_sell_dialog_game_icon').alt = rgAppData.name;
 			$JFromIDOrElement('market_sell_dialog_game_name').text( rgAppData.name );
-			$('market_sell_dialog_item_type').update( item.type );
+			$J('#market_sell_dialog_item_type').update( item.type );
 			$('market_sell_dialog_game_info').show();
 		}
 		else

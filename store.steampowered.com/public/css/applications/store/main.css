@@ -9,7 +9,6 @@
 
 .broadcast_embeddable_bordered_container_3zXpF {
   padding: 15px;
-  background: radial-gradient(100% 80% at 64% 95%, rgba(108, 119, 134, 0.4) 40%, rgba(83, 104, 104, 0.4) 100%) !important;
   text-align: left; }
   .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY {
     /* TODO alden might want to style the background differently for events */ }
@@ -1184,8 +1183,9 @@ b {
 .partnereventshared_EventDashboardTitles_1ym4r {
   margin-bottom: 15px; }
 
-.partnereventshared_EventDashboardActions_2z_02 {
-  /* top right section with actions */ }
+.partnereventshared_EventDashboardActions_2z_02 > .partnereventshared_Button_1ABCO {
+  display: inline-block;
+  margin-top: 4px; }
 
 .partnereventshared_EventDashboardStatsCtn_3IptF {
   background: #36404f;
@@ -5394,7 +5394,7 @@ img {
   display: flex;
   white-space: nowrap;
   margin: 5px; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 550px) {
     .discussionwidget_DiscussionButton_rHz7G .discussionwidget_DiscussionButtonText_3P2Xe {
       display: none; } }
   .discussionwidget_DiscussionButton_rHz7G .discussionwidget_DiscussIcon_1HBhp {
@@ -6795,7 +6795,8 @@ h4 {
 
 .partnersaledisplay_SaleBackground_2N8Se {
   background-position: center top;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  padding-bottom: 20px; }
 
 .partnersaledisplay_SaleSectionSubtext_17Fnl {
   margin-bottom: 10px; }
@@ -8003,8 +8004,7 @@ button.TextButton:focus {
   margin-top: 2px; }
 
 .DialogDropDownMenu_Item {
-  line-height: 40px;
-  padding: 0 16px;
+  padding: 10px 15px;
   cursor: pointer; }
 
 .DialogDropDownMenu_Item:hover {

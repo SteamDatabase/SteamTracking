@@ -1037,8 +1037,9 @@ b {
 .partnereventshared_EventDashboardTitles_1ym4r {
   margin-bottom: 15px; }
 
-.partnereventshared_EventDashboardActions_2z_02 {
-  /* top right section with actions */ }
+.partnereventshared_EventDashboardActions_2z_02 > .partnereventshared_Button_1ABCO {
+  display: inline-block;
+  margin-top: 4px; }
 
 .partnereventshared_EventDashboardStatsCtn_3IptF {
   background: #36404f;
@@ -2360,7 +2361,6 @@ textarea:-webkit-autofill:focus,
 
 .broadcast_embeddable_bordered_container_3zXpF {
   padding: 15px;
-  background: radial-gradient(100% 80% at 64% 95%, rgba(108, 119, 134, 0.4) 40%, rgba(83, 104, 104, 0.4) 100%) !important;
   text-align: left; }
   .broadcast_embeddable_bordered_container_3zXpF.broadcast_embeddable_Event_1A0NY {
     /* TODO alden might want to style the background differently for events */ }
@@ -5291,7 +5291,7 @@ img {
   display: flex;
   white-space: nowrap;
   margin: 5px; }
-  @media screen and (max-width: 910px) {
+  @media screen and (max-width: 550px) {
     .discussionwidget_DiscussionButton_rHz7G .discussionwidget_DiscussionButtonText_3P2Xe {
       display: none; } }
   .discussionwidget_DiscussionButton_rHz7G .discussionwidget_DiscussIcon_1HBhp {
@@ -6566,7 +6566,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 
 .partnersaledisplay_SaleBackground_2N8Se {
   background-position: center top;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  padding-bottom: 20px; }
 
 .partnersaledisplay_SaleSectionSubtext_17Fnl {
   margin-bottom: 10px; }
@@ -6963,6 +6964,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 
 .partnereventdashboard_DisplaySectionHeader_34f0c {
   padding-top: 10px;
+  padding-bottom: 6px;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   font-size: 15px;
   text-transform: uppercase;
@@ -8896,6 +8898,72 @@ input.partnereventemails_HeadlineInput_2lHX9 {
   padding-bottom: 45px;
   text-transform: uppercase; }
 
+.partnereventemails_DevEmail_SignOff_Img_KW2YG {
+  width: 70px;
+  height: 70px;
+  border: 0px; }
+
+.partnereventemails_DevEmail_Signoff_3iJuG {
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 240px; }
+
+.partnereventemails_DevEmail_Footer_Ctn_RINyW {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: white; }
+
+.partnereventemails_DevEmail_Footer_Reason_1h_Bm {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 50px; }
+
+.partnereventemails_DevEmail_Footer_SubSection_2gEsj {
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px; }
+
+.partnereventemails_DevEmail_Footer_Bold_CSfHW {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 12px; }
+
+.partnereventemails_DevEmail_Footer_Regular_1dDJa {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  min-width: auto !important;
+  padding-bottom: 18px; }
+
+.partnereventemails_DevEmail_Follow_1gwxy {
+  color: #000000;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
+  min-width: auto !important; }
+
+.partnereventemails_DevEmail_RecipientTable_2EDti {
+  border-spacing: 0 30px; }
+  .partnereventemails_DevEmail_RecipientTable_2EDti th {
+    vertical-align: top; }
+
 .progressutils_ErrorMessaage_13sZc {
   color: red;
   font-weight: bold; }
@@ -10090,8 +10158,7 @@ button.TextButton:focus {
   margin-top: 2px; }
 
 .DialogDropDownMenu_Item {
-  line-height: 40px;
-  padding: 0 16px;
+  padding: 10px 15px;
   cursor: pointer; }
 
 .DialogDropDownMenu_Item:hover {

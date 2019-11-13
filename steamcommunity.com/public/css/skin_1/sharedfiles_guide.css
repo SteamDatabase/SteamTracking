@@ -334,6 +334,22 @@ html.responsive .responsive_page_menu .FixedElementOnScrollWrapper_padding
 	padding-right: 16px;
 }
 
+.editGuideAlertHeader {
+	text-align: left;
+	margin: 10px 0px 5px 0px;
+	padding: 0px;
+	padding-left: 8px;
+	padding-right: 8px;
+	height: 27px;
+	line-height: 27px;
+	color: #FFC369;
+	background-color: rgba(153, 112, 51, 0.4);
+	border: 1px solid rgba(153, 112, 51, 0.2);
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	border-radius: 4px;
+	font-size: 13px;
+}
+
 /* manage page */
 #BG_bottom
 {
