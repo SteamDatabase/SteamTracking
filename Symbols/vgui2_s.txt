@@ -2613,7 +2613,6 @@
  realpath$DARWIN_EXTSN
  rindex
  round
- roundf
  setjmp
  setlocale
  snprintf

@@ -135,6 +135,10 @@
 	"FilterElement_GenreStrategy": "Strategy",
 	"FilterElement_Tooltip_GenreStrategy": "Include strategy games.",
 	"FilterElement_Tooltip_StoreTag": "Include apps tagged %1$s on Steam.",
+	"FilterElement_SteamCloud": "Steam Cloud",
+	"FilterElement_Tooltip_SteamCloud": "Include games that save to Steam Cloud.",
+	"FilterElement_RemotePlayTogether": "Remote Play Together",
+	"FilterElement_Tooltip_RemotePlayTogether": "Include games that support Remote Play Together.",
 
 	"CollectionViewHeader_Tooltip_ManuallyAddedApp": "This game was added to the collection manually.",
 	"CollectionViewHeader_Tooltip_ManuallyRemovedApp": "This game was removed from this collection.",

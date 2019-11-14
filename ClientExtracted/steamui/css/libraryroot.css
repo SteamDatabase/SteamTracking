@@ -12323,6 +12323,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   display: flex;
   justify-content: space-between; }
 
+.appdetailsspotlight_AppDetailsSpotlight_gh6du {
+  margin-top: 20px; }
+
 .appdetailsspotlight_NewDLCContainer_3Exow {
   position: relative;
   background: linear-gradient(to bottom, transparent 0px, rgba(81, 76, 123, 0.3) 84px, rgba(81, 76, 123, 0.4) 121px, rgba(0, 0, 0, 0.2) 172px, transparent 130px); }
@@ -12983,16 +12986,18 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     box-sizing: border-box;
     width: 100%;
     padding: 10px;
-    background-color: #24282f; }
+    background-color: #24282f;
+    font-size: 0px; }
   .appdetailsoverview_Container_27RcN .appdetailsoverview_Spotlights_11kuV {
     padding: 0px 10px 0px 10px;
-    margin-bottom: 20px;
     /* fix child */ }
     .appdetailsoverview_Container_27RcN .appdetailsoverview_Spotlights_11kuV > div {
       display: inline-block;
       width: 100%; }
     .appdetailsoverview_Container_27RcN .appdetailsoverview_Spotlights_11kuV > div:not(:first-child) {
       margin-top: 20px; }
+    .appdetailsoverview_Container_27RcN .appdetailsoverview_Spotlights_11kuV > div:last-child {
+      margin-bottom: 20px; }
     @media screen and (min-width: 1500px) {
       .appdetailsoverview_Container_27RcN .appdetailsoverview_Spotlights_11kuV {
         /* the width below is to replicate the column layout already built with floats, that needs to remain as community content
@@ -13082,7 +13087,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     box-sizing: border-box;
     display: grid;
     grid-auto-flow: row;
-    grid-template-rows: 5fr 4fr 3fr;
+    grid-template-rows: 5fr 5fr 3fr;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 8px 24px; }
     @media screen and (min-width: 1300px) {

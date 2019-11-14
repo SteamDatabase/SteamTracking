@@ -304,6 +304,22 @@
 	visibility: visible;
 }
 
+.CloudGamingActive .CloudGamingVisible {
+    visibility: visible;
+}
+
+.CloudGamingActive .CloudGamingHidden {
+    visibility: collapse;
+}
+
+.CloudGamingVisible {
+    visibility: collapse;
+}
+
+.CloudGamingHidden {
+    visibility: visible;
+}
+
 #MusicControllerPanel:descendantfocus .SystemButton:hover
 {
 	transition-duration: 0.25s !immediate;
