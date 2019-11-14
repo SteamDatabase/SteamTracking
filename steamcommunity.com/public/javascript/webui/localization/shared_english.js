@@ -252,11 +252,14 @@ LocalizationReady("shared", "english", {
   EventEmail_Subject_NowAvailable: "%1$s Now Available",
   EventEmail_Subject_FreeDemoAvailable: "%1$s Free Demo Now Available",
   EventEmail_Subject_SpecialOffer: "%1$s Special Offer",
+  EventEmail_Subject_Tournament_Now: "%1$s Tournament, Tune in Now",
+  EventEmail_Subject_LiveStream_Now: "%1$s Live Stream, Tune in Now",
   EventEmail_Button_ClickForMoreDetails: "Click for more details",
   EventEmail_Button_PrepurchaseNow: "Prepurchase now!",
   EventEmail_Button_BuyNow: "Buy now!",
   EventEmail_Button_PlayNow: "Play Now!",
   EventEmail_Button_WishlistNow: "Wishlist now!",
+  EventEmail_WatchNow: "Watch Now",
   EventEmail_Destination_Store: "Steam Store Page",
   EventEmail_Destination_Event: "Event Detail Page",
 
@@ -898,6 +901,16 @@ LocalizationReady("shared", "english", {
   Sale_default_label_RemotePlay_TV: "Play Anywhere - On your TV",
   Sale_default_label_OnYourWishlist: "On Your Wishlist",
   Sale_default_label_RecommendedForYou: "Recommended For You",
+
+  SalePage_WatchForDrop_Minutes_Developer:
+    "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
+  SalePage_WatchForDrop_Minutes_CreatorNamed:
+    "Watch the stream for %1$s minutes and get item drops from %2$s when the event is over!",
+  SalePage_WatchForDrop_Hours_Developer:
+    "Watch the stream for %1$s hours and get item drops from the developer when the event is over!",
+  SalePage_WatchForDrop_Hours_CreatorNamed:
+    "Watch the stream for %1$s hours and get item drops from %2$s when the event is over!",
+  SalePage_WatchForDrop_LearnMore: "Learn more about the drops here.",
 
   Steam_Settings_Compat_Launch_Prefix: "Runs on this computer via",
   Steam_Settings_Compat_Launch_Name: "Steam Play.",

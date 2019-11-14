@@ -680,25 +680,28 @@
     function c() {
       return !!window.document;
     }
-    n.d(t, "b", function() {
+    n.d(t, "c", function() {
       return i;
     }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return a;
       }),
       n.d(t, "a", function() {
         return s;
       }),
-      n.d(t, "d", function() {
-        return m;
-      }),
-      n.d(t, "f", function() {
-        return p;
+      n.d(t, "b", function() {
+        return l;
       }),
       n.d(t, "e", function() {
+        return m;
+      }),
+      n.d(t, "g", function() {
+        return p;
+      }),
+      n.d(t, "f", function() {
         return h;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return d;
       });
     var o,
@@ -1753,7 +1756,7 @@
               Object(p.c)("#ContextMenu_Copy")
             )
           ),
-        h.b.IN_CLIENT &&
+        h.c.IN_CLIENT &&
           c &&
           t.push(
             a.createElement(
@@ -2026,10 +2029,10 @@
                 o.addEventListener("drop", this.OnDrop),
                 o.addEventListener("dragover", this.OnDragOver),
                 o.addEventListener("message", this.OnMessage),
-                h.b.LANGUAGE &&
+                h.c.LANGUAGE &&
                   o.document.documentElement.setAttribute(
                     "lang",
-                    p.a[h.b.LANGUAGE]
+                    p.a[h.c.LANGUAGE]
                   ),
                 (this.m_popup = o),
                 (this.m_element = i),
@@ -7107,9 +7110,9 @@ and limitations under the License.
           (e.prototype.GetELanguageFallbackOrder = function() {
             var t = new Array();
             return (
-              t.push(Object(o.c)(i.b.LANGUAGE)),
-              (i.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-                e.value != i.b.LANGUAGE && t.push(Object(o.c)(e.value));
+              t.push(Object(o.c)(i.c.LANGUAGE)),
+              (i.c.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+                e.value != i.c.LANGUAGE && t.push(Object(o.c)(e.value));
               }),
               t
             );
@@ -7247,16 +7250,16 @@ and limitations under the License.
     "use strict";
     var r = n("1n9R");
     n.d(t, "a", function() {
-      return r.b;
+      return r.c;
     }),
       n.d(t, "d", function() {
-        return r.g;
+        return r.h;
       }),
       n.d(t, "c", function() {
-        return r.f;
+        return r.g;
       }),
       n.d(t, "b", function() {
-        return r.e;
+        return r.f;
       });
   },
   twdX: function(e, t, n) {

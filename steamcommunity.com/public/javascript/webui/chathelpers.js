@@ -397,25 +397,28 @@
     function a() {
       return !!window.document;
     }
-    n.d(t, "b", function() {
+    n.d(t, "c", function() {
       return i;
     }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return s;
       }),
       n.d(t, "a", function() {
         return u;
       }),
-      n.d(t, "d", function() {
-        return l;
-      }),
-      n.d(t, "f", function() {
-        return m;
+      n.d(t, "b", function() {
+        return c;
       }),
       n.d(t, "e", function() {
+        return l;
+      }),
+      n.d(t, "g", function() {
+        return m;
+      }),
+      n.d(t, "f", function() {
         return h;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return d;
       });
     var o,
@@ -784,10 +787,10 @@
                 o.addEventListener("drop", this.OnDrop),
                 o.addEventListener("dragover", this.OnDragOver),
                 o.addEventListener("message", this.OnMessage),
-                h.b.LANGUAGE &&
+                h.c.LANGUAGE &&
                   o.document.documentElement.setAttribute(
                     "lang",
-                    m.a[h.b.LANGUAGE]
+                    m.a[h.c.LANGUAGE]
                   ),
                 (this.m_popup = o),
                 (this.m_element = i),
@@ -2096,9 +2099,9 @@ and limitations under the License.
           (e.prototype.GetELanguageFallbackOrder = function() {
             var t = new Array();
             return (
-              t.push(Object(o.c)(i.b.LANGUAGE)),
-              (i.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-                e.value != i.b.LANGUAGE && t.push(Object(o.c)(e.value));
+              t.push(Object(o.c)(i.c.LANGUAGE)),
+              (i.c.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+                e.value != i.c.LANGUAGE && t.push(Object(o.c)(e.value));
               }),
               t
             );
@@ -2674,10 +2677,10 @@ and limitations under the License.
         }
         return (
           (o.InitFromAccountID = function(e) {
-            return new o(Number(e), s.b.EUNIVERSE, 1, i.n);
+            return new o(Number(e), s.c.EUNIVERSE, 1, i.n);
           }),
           (o.InitFromClanID = function(e) {
-            return new o(Number(e), s.b.EUNIVERSE, 7, 0);
+            return new o(Number(e), s.c.EUNIVERSE, 7, 0);
           }),
           (o.prototype.GetAccountID = function() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -2806,16 +2809,16 @@ and limitations under the License.
     "use strict";
     var r = n("1n9R");
     n.d(t, "a", function() {
-      return r.b;
+      return r.c;
     }),
       n.d(t, "d", function() {
-        return r.g;
+        return r.h;
       }),
       n.d(t, "c", function() {
-        return r.f;
+        return r.g;
       }),
       n.d(t, "b", function() {
-        return r.e;
+        return r.f;
       });
   },
   ujHl: function(e, t, n) {
