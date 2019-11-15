@@ -260,8 +260,9 @@ LocalizationReady("shared", "english", {
   EventEmail_Button_PlayNow: "Play Now!",
   EventEmail_Button_WishlistNow: "Wishlist now!",
   EventEmail_WatchNow: "Watch Now",
-  EventEmail_Destination_Store: "Steam Store Page",
+  EventEmail_Destination_Store: "Steam Store Game Product Page",
   EventEmail_Destination_Event: "Event Detail Page",
+  EventEmail_Destination_SalesPage: "Steam Store Sales Page",
 
   EventDashBoard_SummaryStats_Admin_Title: "(Visible only to admins)",
   EventDashBoard_SummaryStats_Title: "Total Unique Impressions and Views",

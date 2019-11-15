@@ -27313,9 +27313,8 @@
       Se = n.n(ve),
       ye = n("B7ut"),
       Ce = n("s+DT"),
-      Oe = n("0N1H"),
-      Ie = n("/1MB"),
-      Ee = (function() {
+      Oe = n("/1MB"),
+      Ie = (function() {
         function e() {
           (this.m_mapAppToInfo = new Map()),
             (this.m_chatVisibility = "hide"),
@@ -27383,27 +27382,22 @@
               (this.m_chatVisibility =
                 "hide" === this.GetChatVisibility() ? "show" : "hide");
           }),
-          (e.prototype.HintLoadEmbeddableStreams = function(s) {
+          (e.prototype.HintLoadEmbeddableStreams = function(a) {
             return Object(d.b)(this, void 0, void 0, function() {
-              var t,
-                n,
-                o,
-                i,
-                r,
-                a = this;
+              var t, n, o, i, r;
               return Object(d.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    (this.m_settings = s),
+                    (this.m_settings = a),
                       (t = null),
                       (n = {
-                        appid: s.appid,
-                        promotionname: s.bIsPreview
+                        appid: a.appid,
+                        promotionname: a.bIsPreview
                           ? "preview"
-                          : s.promotionname,
-                        clanid: s.clanid,
-                        listid: s.listid,
-                        eventid: s.event ? s.event.GID : void 0,
+                          : a.promotionname,
+                        clanid: a.clanid,
+                        listid: a.listid,
+                        eventid: a.event ? a.event.GID : void 0,
                         test: !1
                       }),
                       (e.label = 1);
@@ -27441,13 +27435,7 @@
                             rgAppData: null
                           }),
                           (i = !0)),
-                        this.m_settings.event
-                          ? (this.m_streams = t.data.filtered.map(function(e) {
-                              return Object(
-                                d.a
-                              )(Object(d.a)({}, e), { left_panel: a.m_settings.event.GetImageURL("broadcast_left", Object(Oe.c)(p.c.LANGUAGE)), right_panel: a.m_settings.event.GetImageURL("broadcast_right", Object(Oe.c)(p.c.LANGUAGE)), store_title: a.m_settings.event.GetBroadcastTitle(Object(Oe.c)(p.c.LANGUAGE)), chat_visibility: a.m_settings.event.GetBroadcastChatVisibility() });
-                            }))
-                          : (this.m_streams = t.data.filtered),
+                        (this.m_streams = t.data.filtered),
                         (r = this.GetPrimaryStream()),
                         t.data.broadcast_chat_visibility &&
                           (this.m_chatVisibility =
@@ -27503,7 +27491,7 @@
                           (1 < this.GetConcurrentStreams()
                             ? (this.m_chatVisibility = "hide")
                             : (this.m_chatVisibility = i.chat_visibility)),
-                        we(i.appid, oe.k_EProductActionWatchBroadcast, i.snr)),
+                        Ee(i.appid, oe.k_EProductActionWatchBroadcast, i.snr)),
                       [2, i]
                     );
                 }
@@ -27597,7 +27585,7 @@
       (ie[(ie.k_EProductActionSendChat = 10)] = "k_EProductActionSendChat"),
       (ie[(ie.k_EProductActionAddsAnEmoticonToChat = 11)] =
         "k_EProductActionAddsAnEmoticonToChat");
-    function we(n, o, i) {
+    function Ee(n, o, i) {
       return Object(d.b)(this, void 0, void 0, function() {
         var t;
         return Object(d.e)(this, function(e) {
@@ -27616,10 +27604,11 @@
         });
       });
     }
-    var De = new Ee(),
-      Me = new Ie.a(),
-      Te = n("/Dvq"),
-      Ge = n.n(Te),
+    var we = new Ie(),
+      De = new Oe.a(),
+      Me = n("/Dvq"),
+      Te = n.n(Me),
+      Ge = n("hEDq"),
       Ae = n("hx5d"),
       Re = n("uuQE"),
       je = n.n(Re),
@@ -27858,26 +27847,26 @@
             }
           }),
           (e.prototype.CloseBroadcastPopup = function() {
-            var e = De.GetPlayReadyStream();
-            we(e.appid, oe.k_EProductActionCloseBroadcastSmallPopup, e.snr),
+            var e = we.GetPlayReadyStream();
+            Ee(e.appid, oe.k_EProductActionCloseBroadcastSmallPopup, e.snr),
               this.setState({ bPopout: !1, bPreventPopup: !0 });
           }),
           (e.prototype.render = function() {
             return I.createElement(
               "div",
-              { className: Ge.a.wrapper },
+              { className: Te.a.wrapper },
               I.createElement(
                 "div",
                 {
-                  className: Ge.a.video_placeholder,
+                  className: Te.a.video_placeholder,
                   ref: this.m_iVideoContainerRef
                 },
                 I.createElement(
                   "div",
                   {
                     className: this.state.bPopout
-                      ? Ge.a.broadcast_floating
-                      : Ge.a.video_container
+                      ? Te.a.broadcast_floating
+                      : Te.a.video_container
                   },
                   this.state.bPopout &&
                     I.createElement(xe, {
@@ -27886,7 +27875,7 @@
                     }),
                   I.createElement(
                     "div",
-                    { className: Ge.a.BroadcastPlayerContainer },
+                    { className: Te.a.BroadcastPlayerContainer },
                     I.createElement(ct, {
                       steamIDBroadcast: this.props.stream.steamid,
                       watchLocation: 6,
@@ -27945,23 +27934,23 @@
           }),
           (e.prototype.OnToggleChat = function(e) {
             e.preventDefault();
-            var t = De.GetPlayReadyStream();
-            we(
+            var t = we.GetPlayReadyStream();
+            Ee(
               t.appid,
-              "show" === De.GetChatVisibility()
+              "show" === we.GetChatVisibility()
                 ? oe.k_EProductActionHideBroadcastChat
                 : oe.k_EProductActionShowBroadcastChat,
               t.snr
             ),
-              De.ToggleChatVisibility();
+              we.ToggleChatVisibility();
           }),
           (e.prototype.onWatchBroadcastPage = function() {
-            var e = De.GetPlayReadyStream();
-            we(e.appid, oe.k_EProductActionOpenBroadcastWatchPage, e.snr);
+            var e = we.GetPlayReadyStream();
+            Ee(e.appid, oe.k_EProductActionOpenBroadcastWatchPage, e.snr);
           }),
           (e.prototype.render = function() {
             var e = this.ConstructBroadcastLink(),
-              t = "remove" != De.GetChatVisibility(),
+              t = "remove" != we.GetChatVisibility(),
               n = Number.parseInt(
                 "" +
                   D.a.GetOrCreateBroadcastInfo(this.props.stream.steamid)
@@ -27969,25 +27958,25 @@
               );
             return I.createElement(
               "div",
-              { className: Ge.a.viewer_bar },
+              { className: Te.a.viewer_bar },
               I.createElement(
                 "div",
-                { className: Ge.a.viewer_count },
+                { className: Te.a.viewer_count },
                 n.toLocaleString(T.b.GetPreferredLocales())
               ),
               I.createElement(
                 "div",
-                { className: Ge.a.viewer_links },
+                { className: Te.a.viewer_links },
                 t &&
                   I.createElement(
                     "a",
                     {
                       href: "#",
-                      className: Ge.a.ChatToggle,
+                      className: Te.a.ChatToggle,
                       onClick: this.OnToggleChat
                     },
                     Object(T.c)(
-                      "hide" === De.GetChatVisibility()
+                      "hide" === we.GetChatVisibility()
                         ? "#sale_three_section_show_chat"
                         : "#sale_three_section_hide_chat"
                     )
@@ -27995,7 +27984,7 @@
                 t &&
                   I.createElement(
                     "span",
-                    { className: Ge.a.ChatToggle },
+                    { className: Te.a.ChatToggle },
                     " | "
                   ),
                 I.createElement(
@@ -28032,10 +28021,10 @@
               null,
               e &&
                 I.createElement("img", {
-                  className: Ge.a.side_panels,
+                  className: Te.a.side_panels,
                   src: this.props.ImgUrl
                 }),
-              !e && I.createElement("div", { className: Ge.a.side_panels })
+              !e && I.createElement("div", { className: Te.a.side_panels })
             );
           }),
           t
@@ -28052,18 +28041,18 @@
             return I.createElement(
               "div",
               {
-                className: [Ge.a.PopOutVideoTitleBar, Ge.a.NoSeslect].join(" ")
+                className: [Te.a.PopOutVideoTitleBar, Te.a.NoSeslect].join(" ")
               },
               I.createElement(
                 "div",
-                { className: Ge.a.PopOutVideoTitleText },
+                { className: Te.a.PopOutVideoTitleText },
                 Object(T.c)("#StoreBroadcast_Detault_popout_Title")
               ),
               I.createElement(
                 "button",
                 {
                   className: [
-                    Ge.a.PopOutVideoCloseButton,
+                    Te.a.PopOutVideoCloseButton,
                     "btnv6_blue_hoverfade"
                   ].join(" "),
                   "data-tooltip-text": Object(T.c)(
@@ -28087,7 +28076,7 @@
           Object(d.d)(e, t),
           (e.prototype.componentDidMount = function() {
             var t = this,
-              e = De.GetStreams().findIndex(function(e) {
+              e = we.GetStreams().findIndex(function(e) {
                 return t.props.curStream.accountid == e.accountid;
               });
             this.itemRef &&
@@ -28096,15 +28085,15 @@
           }),
           (e.prototype.render = function() {
             var t = this,
-              e = De.GetStreams();
+              e = we.GetStreams();
             return I.createElement(
               "div",
               {
                 ref: this.itemRef,
                 className: Object(N.a)(
-                  Ge.a.side_panels,
-                  Ge.a.multistream,
-                  3 < e.length ? Ge.a.scrollingstreams : ""
+                  Te.a.side_panels,
+                  Te.a.multistream,
+                  3 < e.length ? Te.a.scrollingstreams : ""
                 )
               },
               e.map(function(e) {
@@ -28135,24 +28124,24 @@
               t = Number.parseInt("" + e.viewer_count);
             return I.createElement(
               "div",
-              { className: Ge.a.stream_icon_and_viewer_container },
+              { className: Te.a.stream_icon_and_viewer_container },
               I.createElement(
                 "div",
-                { className: Ge.a.stream_icon_container },
+                { className: Te.a.stream_icon_container },
                 I.createElement("img", {
                   className: this.props.bSelected
-                    ? Ge.a.stream_icon_selected
-                    : Ge.a.stream_icon,
+                    ? Te.a.stream_icon_selected
+                    : Te.a.stream_icon,
                   src: e.thumbnail_http_address,
                   onClick: this.onClick,
                   "data-tooltip-text": e.app_name
                 }),
                 this.props.bSelected &&
-                  I.createElement("div", { className: Ge.a.stream_icon_arrow })
+                  I.createElement("div", { className: Te.a.stream_icon_arrow })
               ),
               I.createElement(
                 "div",
-                { className: Ge.a.viewer_count },
+                { className: Te.a.viewer_count },
                 t.toLocaleString(T.b.GetPreferredLocales())
               )
             );
@@ -28175,14 +28164,14 @@
                   "div",
                   {
                     className: e
-                      ? Ge.a.chat_below_container
-                      : Ge.a.chat_rightside_container
+                      ? Te.a.chat_below_container
+                      : Te.a.chat_rightside_container
                   },
                   I.createElement(
                     "div",
-                    { className: Ge.a.ChatContainer },
+                    { className: Te.a.ChatContainer },
                     I.createElement(Ae.a, {
-                      emoticonStore: Me,
+                      emoticonStore: De,
                       watchLocation: 6,
                       steamID: this.props.stream.steamid,
                       broadcastID: t.m_ulBroadcastID
@@ -28197,7 +28186,7 @@
       We = function() {
         return I.createElement(
           "div",
-          { className: Ge.a.bordered_live_stream_icon },
+          { className: Te.a.bordered_live_stream_icon },
           Object(T.c)("#home_page_live_broadcast")
         );
       },

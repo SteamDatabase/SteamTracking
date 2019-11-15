@@ -6606,6 +6606,9 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   background-position: center top;
   background-repeat: no-repeat;
   padding-bottom: 20px; }
+  @media screen and (max-width: 768px) {
+    .partnersaledisplay_SaleBackground_2N8Se {
+      background-size: 180%; } }
 
 .partnersaledisplay_SaleSectionSubtext_17Fnl {
   margin-bottom: 10px; }
@@ -8883,6 +8886,10 @@ input.partnereventemails_HeadlineInput_2lHX9 {
     align-self: center;
     width: 90%; }
 
+.partnereventemails_ButtonDestInputSaleURL_3Lr4k {
+  margin-top: 10px;
+  width: 550px; }
+
 .partnereventemails_DevEmailTemplate_sC9ZV {
   width: 100%;
   border-top-width: 0px;
@@ -9284,6 +9291,9 @@ input.partnereventemails_HeadlineInput_2lHX9 {
       margin-left: 16px;
       padding-left: 16px;
       border-left: 1px solid #505662; }
+
+.partnereventsale_SmartSelType_17JE0 {
+  min-width: 480px; }
 
 .communityagegate_adult_content_age_gate_2PyPU {
   font-family: "Motiva Sans", Sans-serif;

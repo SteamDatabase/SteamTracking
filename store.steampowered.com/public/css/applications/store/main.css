@@ -6835,6 +6835,9 @@ h4 {
   background-position: center top;
   background-repeat: no-repeat;
   padding-bottom: 20px; }
+  @media screen and (max-width: 768px) {
+    .partnersaledisplay_SaleBackground_2N8Se {
+      background-size: 180%; } }
 
 .partnersaledisplay_SaleSectionSubtext_17Fnl {
   margin-bottom: 10px; }
