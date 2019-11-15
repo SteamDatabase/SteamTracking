@@ -660,6 +660,12 @@ body.v6 .broadcast_live_stream_icon {
 	margin-left: 10px;
 }
 
+@media screen and (max-width: 830px) {
+    .react_landing_background {
+        background-size: 218vw;
+    }
+}
+
 @media screen and (max-width: 910px )
 {
 	html.responsive .sale_page_background_image_color {

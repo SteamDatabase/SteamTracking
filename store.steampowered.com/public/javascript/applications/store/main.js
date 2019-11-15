@@ -137,38 +137,38 @@
                 24: "07c83d4821cbde29ec56",
                 25: "ddcaaf4dae62bd7b51e4",
                 26: "65a63921aa8f932a0296",
-                27: "95a8a9adcdcc995af3c8",
+                27: "8d2ed65ca2a2d34fd363",
                 28: "c54c1b2d8e9d5993835c",
                 29: "9e0710965ec46982e434",
                 30: "5f04be882e8535c08c6c",
                 31: "5116646722dbdf99de46",
-                32: "bdf226db04b1e4e19615",
-                33: "783a465e119d8eb5ca52",
-                34: "fb37c54331b20f62a94f",
-                35: "fe3f77a6c9c58bf13059",
-                36: "e11b808c41705c542693",
-                37: "fcdbcdf70902d37d8a2e",
-                38: "bffbd807503fb5f14a9e",
-                39: "772fa46ca93cc9fa53a1",
-                40: "587633a393a518cf25eb",
-                41: "244bdb3f05afac58d1ef",
-                42: "88270f5098f704769b6a",
-                43: "c8cdbd2be1b1adeae632",
-                44: "aea6d28a291e323b68f8",
-                45: "bab893028e048edb535b",
-                46: "5bfd68fcfd981264454f",
-                47: "099c1d382b1b67f1cbaa",
-                48: "ac9d301b02f2a40dd86c",
-                49: "20779ec17cdf20f7ce90",
-                50: "b6f2f8ad64c701e6a2ae",
-                51: "519a83af9270e8a4de73",
-                52: "c12e5ebe6ec98c80fb60",
-                53: "26108b4b147874ff94e5",
-                54: "3fa44458b02f661c84d2",
-                55: "b63190c05ad5d44c7e76",
-                56: "a8233135ec89323b12e5",
-                57: "ea017776bdaf00e62b55",
-                58: "27f16117938abeb38f6e"
+                32: "87f9f3274fc638f832fd",
+                33: "296170b2cd40caf9c2d1",
+                34: "fd90c0d47ef2491db1f5",
+                35: "c349b4b34d262adf5ea2",
+                36: "d083bcfcb278d2c9aca6",
+                37: "b48a8dfebdf854e65b72",
+                38: "e95324088c4b63407b0f",
+                39: "b23c3b6e595f31be475a",
+                40: "e0be77626f1c162cd622",
+                41: "a63abc213ae00c2eea8b",
+                42: "d9ca9f9427c0b09c2978",
+                43: "b6e0ea75d07a835319c8",
+                44: "a7839dfbf78daf99acbe",
+                45: "a8cabcac1bff162d69cc",
+                46: "0277be572ca555c2f80a",
+                47: "e30b03107655d2959bdf",
+                48: "2f990b14c71b814c978d",
+                49: "ad83fc75d62c2ae3c746",
+                50: "4d2b1188eb7f7e768d46",
+                51: "4813c8a7501d65bf2b76",
+                52: "baf3acd14c07eaff43a5",
+                53: "a44bb381db401cedbe91",
+                54: "d910c57073563fd595b7",
+                55: "e0ed929e49c054b5cf46",
+                56: "b531b023b426637fc8d8",
+                57: "f543faae5e9e98fc09b1",
+                58: "2b2d61f706645d1d410a"
               }[e]
             );
           })(o)),
@@ -50146,7 +50146,8 @@
                 this.props.eventModel ||
                 Wd.GetClanEventFromAnnouncementGID(h.ANNOUNCEMENT_GID);
             if (r) {
-              var e = Pd.GetPartnerEventPermissions(r.clanSteamID);
+              var e = this.props.bIsPreview,
+                t = Pd.GetPartnerEventPermissions(r.clanSteamID);
               return E.createElement(
                 Yn,
                 null,
@@ -50158,14 +50159,17 @@
                       display: "flex",
                       position: "relative",
                       flexDirection: "column",
-                      backgroundImage:
-                        "url(" +
-                        r.GetImageURLWithFallback(
-                          "sale_header",
-                          this.props.language
-                        ) +
-                        ")",
-                      backgroundColor: r.jsondata.sale_background_color
+                      backgroundImage: e
+                        ? "url(" +
+                          r.GetImageURLWithFallback(
+                            "sale_header",
+                            this.props.language
+                          ) +
+                          ")"
+                        : void 0,
+                      backgroundColor: e
+                        ? r.jsondata.sale_background_color
+                        : void 0
                     }
                   },
                   E.createElement(
@@ -50306,7 +50310,7 @@
                           bgcolor: r.jsondata.sale_browsemore_bgcolor
                         })
                       ),
-                    e.can_edit &&
+                    t.can_edit &&
                       E.createElement(em, {
                         eventModel: r,
                         eventUserStore: Pd,
