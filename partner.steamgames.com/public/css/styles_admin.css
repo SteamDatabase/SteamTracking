@@ -227,7 +227,7 @@ div.rightcol {
 }
 
 .required {
-	color: orange;
+	color: #e24044;
 }
 
 .reference {
@@ -2294,6 +2294,9 @@ html, body { height:100%; }
 	padding-right: 10px;
 	min-width: 131px;
 }
+#page_background {
+    max-width: 100%;
+}
 
 .screenshot_upload_preview
 {
@@ -3249,7 +3252,7 @@ span.new {
 
 .checklist_suggested
 {
-	color: #e76e34;
+	color: orange;
 }
 
 .checklist_complete
