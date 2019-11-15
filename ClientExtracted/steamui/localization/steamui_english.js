@@ -389,6 +389,7 @@
 	"GameAction_ClearCustomArtwork": "Clear custom artwork",
 	"GameAction_ViewCDKeys": "CD keys",
 	"GameAction_ControllerConfiguration": "Controller configuration",
+	"GameAction_Launching": "Launching",
 
 	"GameAction_RemoveAppFromCollection": "DRAG HERE to remove %1$s from the %2$s collection",
 	"GameAction_RemoveAppFromMultipleCollections": "DRAG HERE to remove %1$s from these collections",

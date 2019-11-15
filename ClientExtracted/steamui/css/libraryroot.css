@@ -2001,13 +2001,14 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   .appactionbutton_Disabled_1Pb6P > .appactionbutton_ButtonChild_2AzIX {
     box-sizing: border-box;
     background: #2e3136;
-    color: #ffffff80; }
+    color: #ffffff80;
+    cursor: default; }
 
 .appactionbutton_PlayButton_3ydig {
   box-sizing: border-box;
   height: 100%;
   flex: 1 0 auto;
-  padding: 4px 12px 4px 8px;
+  padding: 4px 12px 4px 12px;
   border-radius: 2px;
   border: none;
   display: flex;
@@ -2045,6 +2046,8 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
     @media screen and (max-width: 1158px) {
       :not(.appactionbutton_LongButton_20gjC) .appactionbutton_PlayButton_3ydig .appactionbutton_ButtonText_33cnX {
         font-size: 16px; } }
+  .appactionbutton_PlayButton_3ydig .appactionbutton_ButtonThrobberPadding_k1-BH {
+    margin-right: 16px; }
   .appactionbutton_Disabled_1Pb6P .appactionbutton_PlayButton_3ydig .appactionbutton_ButtonText_33cnX {
     color: #ffffff80; }
   .appactionbutton_PlayButton_3ydig svg {
