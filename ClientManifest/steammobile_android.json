@@ -7,6 +7,7 @@
         "appVersion": "1.0.11",
         "bundleCompatibilityId": 18,
         "bundleHasPatchNotes": false,
+        "bundleIsUrgent": false,
         "publishAssetsPath": "android\/app\/src\/main\/assets\/"
     },
     "platforms": [
@@ -95,11 +96,11 @@
         "asset_a7161e2eac6d5de743204fd9a2b040b1.ttf"
     ],
     "assetUrlOverride": ".\/assets",
-    "publishedTime": "2019-11-07T22:05:57.557Z",
-    "commitTime": "2019-11-07T22:05:57.557Z",
-    "revisionId": "zVrAvo2K8P",
+    "publishedTime": "2019-11-14T23:56:33.998Z",
+    "commitTime": "2019-11-14T23:56:33.998Z",
+    "revisionId": "Rk5wDDW3vO",
     "id": "@colbys\/friendsui",
-    "bundleUrl": "https:\/\/steammobile.akamaized.net\/apps\/mobile\/chat\/bundles\/android-ac3cfe653dff207eefb66742a31d4f5d.js",
+    "bundleUrl": "https:\/\/steammobile.akamaized.net\/apps\/mobile\/chat\/bundles\/android-0fb2868450b7d17a3e3bc76d73b7ea6c.js",
     "platform": "android",
     "dependencies": [
         "axios",
