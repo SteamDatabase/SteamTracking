@@ -8247,6 +8247,7 @@
                         (s ? "ajaxfollow/" : "ajaxignore/")),
                       (n = new FormData()).append("authwgtoken", f.authwgtoken),
                       n.append("clanid", "" + a.GetAccountID()),
+                      n.append("sessionid", M.SESSIONID),
                       n.append(s ? "follow" : "ignore", c ? "1" : "0"),
                       [4, y.a.post(t, n, { withCredentials: !0 })]
                     );
