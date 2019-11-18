@@ -1088,6 +1088,7 @@
  T KeyValues::InternalSetUint64(KeyValues*, unsigned long long)
  T KeyValues::InternalSetWString(KeyValues*, wchar_t const*)
  T KeyValues::IsEqual(KeyValues const*) const
+ T KeyValues::KeyValues(char const*)
  T KeyValues::KeyValues(unsigned int)
  T KeyValues::LoadFromBuffer(char const*, CUtlBuffer&, KeyValuesTextParser*)
  T KeyValues::MakeCopyInternal(KeyValues*) const
@@ -1104,6 +1105,7 @@
  T KeyValues::WriteConvertedString(CUtlBuffer*, char const*, bool) const
  T KeyValues::deleteThis()
  T KeyValues::~KeyValues()
+ T KeyValuesAD::KeyValuesAD(char const*)
  T KeyValuesAD::operator KeyValues*()
  T KeyValuesAD::operator->()
  T KeyValuesAD::~KeyValuesAD()
@@ -1112,6 +1114,7 @@
  T KeyValuesTextParser::Reset(int, int)
  T KeyValuesTextParser::~KeyValuesTextParser()
  T LoadConVarsFromFile(char const*)
+ T LoadConVarsFromKeyValues(KeyValues const*)
  T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool, EFioModifiers)
  T LogMsg(char const*, ...)
  T MakeFileWriteable(char const*)
@@ -1497,6 +1500,7 @@
  putchar
  puts
  r IPv6IPToString.hexdigits
+ r LoadConVarsFromKeyValues(KeyValues const*)::rgchConVarFlag
  r s_rgCRCTable_Standard
  read
  remove
@@ -1514,6 +1518,7 @@
  strcmp
  strcpy
  strlen
+ strncmp
  strncpy
  strrchr
  strstr
