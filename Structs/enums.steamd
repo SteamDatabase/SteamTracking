@@ -3807,6 +3807,8 @@ enum EUserBadge
 	SummerSale2019_TeamCorgi = 40;
 	SummerSale2019_TeamCockatiel = 41;
 	SummerSale2019_TeamPig = 42;
+	SteamAwards2019Nominations = 43;
+	WinterSaleEvent2019 = 44;
 }
 
 enum EUserLastReadFeedType
