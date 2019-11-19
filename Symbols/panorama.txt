@@ -179,6 +179,7 @@
  B CMsgHueShift::default_instance_
  B CMsgHueShift_AnimationFrameData::default_instance_
  B CMsgIPAddress::default_instance_
+ B CMsgIPAddressBucket::default_instance_
  B CMsgImeCancelComposition::default_instance_
  B CMsgImeCommitText::default_instance_
  B CMsgImeCompositionRangeChanged::default_instance_
@@ -1364,6 +1365,7 @@
  D typeinfo for CMsgHueShift
  D typeinfo for CMsgHueShift_AnimationFrameData
  D typeinfo for CMsgIPAddress
+ D typeinfo for CMsgIPAddressBucket
  D typeinfo for CMsgImeCancelComposition
  D typeinfo for CMsgImeCommitText
  D typeinfo for CMsgImeCompositionRangeChanged
@@ -2065,6 +2067,7 @@
  D vtable for CMsgHueShift
  D vtable for CMsgHueShift_AnimationFrameData
  D vtable for CMsgIPAddress
+ D vtable for CMsgIPAddressBucket
  D vtable for CMsgImeCancelComposition
  D vtable for CMsgImeCommitText
  D vtable for CMsgImeCompositionRangeChanged
@@ -2768,6 +2771,7 @@
  R typeinfo name for CMsgHueShift
  R typeinfo name for CMsgHueShift_AnimationFrameData
  R typeinfo name for CMsgIPAddress
+ R typeinfo name for CMsgIPAddressBucket
  R typeinfo name for CMsgImeCancelComposition
  R typeinfo name for CMsgImeCommitText
  R typeinfo name for CMsgImeCompositionRangeChanged
@@ -5846,6 +5850,18 @@
  T CMsgIPAddress::mutable_v6()
  T CMsgIPAddress::set_v6(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgIPAddress::~CMsgIPAddress()
+ T CMsgIPAddressBucket::ByteSize() const
+ T CMsgIPAddressBucket::CMsgIPAddressBucket()
+ T CMsgIPAddressBucket::Clear()
+ T CMsgIPAddressBucket::GetCachedSize() const
+ T CMsgIPAddressBucket::GetMetadata() const
+ T CMsgIPAddressBucket::IsInitialized() const
+ T CMsgIPAddressBucket::MergeFrom(CMsgIPAddressBucket const&)
+ T CMsgIPAddressBucket::New() const
+ T CMsgIPAddressBucket::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgIPAddressBucket::SetCachedSize(int) const
+ T CMsgIPAddressBucket::mutable_original_ip_address()
+ T CMsgIPAddressBucket::~CMsgIPAddressBucket()
  T CMsgImeCancelComposition::ByteSize() const
  T CMsgImeCancelComposition::CMsgImeCancelComposition()
  T CMsgImeCancelComposition::Clear()
@@ -11715,6 +11731,7 @@
  T panorama::CPanoramaVideoPlayer::Seek(unsigned int)
  T panorama::CPanoramaVideoPlayer::SetPlaybackSpeed(float)
  T panorama::CPanoramaVideoPlayer::SetRepeat(bool)
+ T panorama::CPanoramaVideoPlayer::SetSeekMode(EVideoPlayerSeekMode)
  T panorama::CPanoramaVideoPlayer::Stop()
  T panorama::CPanoramaVideoPlayer::SuggestMaxVeritcalResolution(int)
  T panorama::CPanoramaVideoPlayer::Validate(CValidator&, char const*)
@@ -15946,6 +15963,12 @@
  T v8::platform::WorkerThread::WorkerThread(v8::platform::TaskQueue*)
  T v8::platform::WorkerThread::~WorkerThread()
  T virtual thunk to std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_ostringstream()
+ T void DeleteHelper<CUtlBuffer*>(CUtlBuffer*)
+ T void DeleteHelper<panorama::CActiveAnimation*>(panorama::CActiveAnimation*)
+ T void DeleteHelper<panorama::CStyleKeyFrame*>(panorama::CStyleKeyFrame*)
+ T void DeleteHelper<panorama::CUIEngine::DirWatchers_t*>(panorama::CUIEngine::DirWatchers_t*)
+ T void DeleteHelper<panorama::PanelDescription_t*>(panorama::PanelDescription_t*)
+ T void DeleteHelper<panorama::StyleFromFile_t*>(panorama::StyleFromFile_t*)
  T void Destruct<LayoutIncludeFile_t>(LayoutIncludeFile_t*)
  T void Destruct<panorama::CLocalization::LocEntry_t>(panorama::CLocalization::LocEntry_t*)
  T void Destruct<panorama::CUIEngine::ScheduledItem_t>(panorama::CUIEngine::ScheduledItem_t*)
@@ -16706,6 +16729,8 @@
  b (anonymous namespace)::CMsgHueShift_AnimationFrameData_reflection_
  b (anonymous namespace)::CMsgHueShift_descriptor_
  b (anonymous namespace)::CMsgHueShift_reflection_
+ b (anonymous namespace)::CMsgIPAddressBucket_descriptor_
+ b (anonymous namespace)::CMsgIPAddressBucket_reflection_
  b (anonymous namespace)::CMsgIPAddress_default_oneof_instance_
  b (anonymous namespace)::CMsgIPAddress_descriptor_
  b (anonymous namespace)::CMsgIPAddress_reflection_
@@ -18221,6 +18246,7 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CLocalizationToken_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddressBucket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientAccountInfo_offsets_

@@ -296,6 +296,7 @@
  T SetInAssert
  T SetMiniDumpAppID
  T SetMiniDumpBuildID
+ T SetMiniDumpCustomInfo
  T SetMiniDumpSteamID
  T SetStackTrackingFilter
  T SetWritingMiniDump(bool)

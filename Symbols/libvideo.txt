@@ -57,6 +57,7 @@
  B CMsgClientServerTimestampRequest::default_instance_
  B CMsgClientServerTimestampResponse::default_instance_
  B CMsgIPAddress::default_instance_
+ B CMsgIPAddressBucket::default_instance_
  B CMsgMulti::default_instance_
  B CMsgProtoBufHeader::default_instance_
  B CMsgProtobufWrapped::default_instance_
@@ -460,6 +461,7 @@
  D typeinfo for CMsgClientServerTimestampRequest
  D typeinfo for CMsgClientServerTimestampResponse
  D typeinfo for CMsgIPAddress
+ D typeinfo for CMsgIPAddressBucket
  D typeinfo for CMsgMulti
  D typeinfo for CMsgProtoBufHeader
  D typeinfo for CMsgProtobufWrapped
@@ -643,6 +645,7 @@
  D vtable for CMsgClientServerTimestampRequest
  D vtable for CMsgClientServerTimestampResponse
  D vtable for CMsgIPAddress
+ D vtable for CMsgIPAddressBucket
  D vtable for CMsgMulti
  D vtable for CMsgProtoBufHeader
  D vtable for CMsgProtobufWrapped
@@ -789,6 +792,7 @@
  R typeinfo name for CMsgClientServerTimestampRequest
  R typeinfo name for CMsgClientServerTimestampResponse
  R typeinfo name for CMsgIPAddress
+ R typeinfo name for CMsgIPAddressBucket
  R typeinfo name for CMsgMulti
  R typeinfo name for CMsgProtoBufHeader
  R typeinfo name for CMsgProtobufWrapped
@@ -2183,6 +2187,18 @@
  T CMsgIPAddress::mutable_v6()
  T CMsgIPAddress::set_v6(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CMsgIPAddress::~CMsgIPAddress()
+ T CMsgIPAddressBucket::ByteSize() const
+ T CMsgIPAddressBucket::CMsgIPAddressBucket()
+ T CMsgIPAddressBucket::Clear()
+ T CMsgIPAddressBucket::GetCachedSize() const
+ T CMsgIPAddressBucket::GetMetadata() const
+ T CMsgIPAddressBucket::IsInitialized() const
+ T CMsgIPAddressBucket::MergeFrom(CMsgIPAddressBucket const&)
+ T CMsgIPAddressBucket::New() const
+ T CMsgIPAddressBucket::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CMsgIPAddressBucket::SetCachedSize(int) const
+ T CMsgIPAddressBucket::mutable_original_ip_address()
+ T CMsgIPAddressBucket::~CMsgIPAddressBucket()
  T CMsgMulti::ByteSize() const
  T CMsgMulti::CMsgMulti()
  T CMsgMulti::Clear()
@@ -3566,7 +3582,6 @@
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlPair<unsigned long long, char const*>, CUtlMemory<CUtlPair<unsigned long long, char const*> > >::Remove(int)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Find(CUtlString const&) const
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
@@ -3661,6 +3676,7 @@
  T CUtlVector<int, CUtlMemory<int> >::GrowVector(int)
  T CUtlVector<int, CUtlMemory<int> >::Remove(int)
  T CUtlVector<int, CUtlMemory<int> >::~CUtlVector()
+ T CUtlVector<std::__1::pair<unsigned long long, char const*>, CUtlMemory<std::__1::pair<unsigned long long, char const*> > >::Remove(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::AddToTail(unsigned int const&)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::GrowVector(int)
  T CUtlVector<unsigned int, CUtlMemory<unsigned int> >::InsertBefore(int, unsigned int const&)
@@ -3710,7 +3726,7 @@
  T CVideoDecoderLibav::GetVideoWidth()
  T CVideoDecoderLibav::IsSingleFrameGIF()
  T CVideoDecoderLibav::ReadFrameInternal(AVPacket*, bool*)
- T CVideoDecoderLibav::Seek(long long)
+ T CVideoDecoderLibav::Seek(long long, bool)
  T CVideoDecoderLibav::SetAudioOut(int, unsigned long long, int)
  T CVideoDecoderLibav::SetStartTime()
  T CVideoDecoderLibav::Validate(CValidator&, char const*)
@@ -3834,6 +3850,7 @@
  T CVideoPlayer::SetNextRunFrameFunc(long long)
  T CVideoPlayer::SetPlaybackSpeed(float)
  T CVideoPlayer::SetRepeat(bool)
+ T CVideoPlayer::SetSeekMode(EVideoPlayerSeekMode)
  T CVideoPlayer::Stop()
  T CVideoPlayer::SuggestMaxVeritcalResolution(int)
  T CVideoPlayer::UpdateMainThreadPlaybackInfo()
@@ -6171,6 +6188,10 @@
  T v2i_GENERAL_NAME
  T v2i_GENERAL_NAMES
  T v2i_GENERAL_NAME_ex
+ T void DeleteHelper<MessageInfo_t*>(MessageInfo_t*)
+ T void DeleteHelper<VideoAdaptationSet_t*>(VideoAdaptationSet_t*)
+ T void DeleteHelper<VideoRepresentation_t*>(VideoRepresentation_t*)
+ T void DeleteHelper<VideoSegment_t*>(VideoSegment_t*)
  T void Destruct<CCookieContainer::CCookieInfo>(CCookieContainer::CCookieInfo*)
  T void Destruct<CHTTPRequestCache::CachedFileLRUData_t>(CHTTPRequestCache::CachedFileLRUData_t*)
  T void RecursiveValidate<CUtlString>(CUtlString const&, CValidator&, char const*)
@@ -6378,6 +6399,8 @@
  b (anonymous namespace)::CMsgClientServerTimestampRequest_reflection_
  b (anonymous namespace)::CMsgClientServerTimestampResponse_descriptor_
  b (anonymous namespace)::CMsgClientServerTimestampResponse_reflection_
+ b (anonymous namespace)::CMsgIPAddressBucket_descriptor_
+ b (anonymous namespace)::CMsgIPAddressBucket_reflection_
  b (anonymous namespace)::CMsgIPAddress_default_oneof_instance_
  b (anonymous namespace)::CMsgIPAddress_descriptor_
  b (anonymous namespace)::CMsgIPAddress_reflection_
@@ -7322,6 +7345,7 @@
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CLocalizationToken_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAppRights_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgAuthTicket_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgIPAddressBucket_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgMulti_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CMsgProtobufWrapped_offsets_
  r protobuf_AssignDesc_steammessages_5fclientserver_5flogin_2eproto()::CMsgClientAccountInfo_offsets_

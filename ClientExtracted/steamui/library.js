@@ -351,22 +351,22 @@
         return M;
       }),
       r.d(t, "m", function() {
-        return G;
-      }),
-      r.d(t, "F", function() {
         return N;
       }),
-      r.d(t, "I", function() {
+      r.d(t, "F", function() {
         return I;
       }),
-      r.d(t, "T", function() {
+      r.d(t, "I", function() {
         return C;
       }),
+      r.d(t, "T", function() {
+        return G;
+      }),
       r.d(t, "S", function() {
-        return B;
+        return T;
       }),
       r.d(t, "hb", function() {
-        return T;
+        return B;
       }),
       r.d(t, "u", function() {
         return V;
@@ -381,25 +381,25 @@
         return D;
       }),
       r.d(t, "cb", function() {
-        return F;
-      }),
-      r.d(t, "lb", function() {
         return P;
       }),
+      r.d(t, "lb", function() {
+        return F;
+      }),
       r.d(t, "w", function() {
-        return W;
+        return A;
       }),
       r.d(t, "V", function() {
         return O;
       }),
       r.d(t, "W", function() {
-        return A;
+        return W;
       }),
       r.d(t, "d", function() {
-        return j;
+        return U;
       }),
       r.d(t, "J", function() {
-        return U;
+        return j;
       }),
       r.d(t, "kb", function() {
         return H;
@@ -1504,7 +1504,7 @@
         })
       );
     }
-    function G(e) {
+    function N(e) {
       return o.createElement(
         "svg",
         {
@@ -1540,7 +1540,7 @@
           })
       );
     }
-    function N() {
+    function I() {
       return o.createElement(
         "svg",
         {
@@ -1576,7 +1576,7 @@
         })
       );
     }
-    function I() {
+    function C() {
       return o.createElement(
         "svg",
         {
@@ -1602,7 +1602,7 @@
         })
       );
     }
-    function C() {
+    function G() {
       return o.createElement(
         "svg",
         {
@@ -1635,7 +1635,7 @@
         })
       );
     }
-    function B() {
+    function T() {
       return o.createElement(
         "svg",
         {
@@ -1663,7 +1663,7 @@
         })
       );
     }
-    function T() {
+    function B() {
       return o.createElement(
         "svg",
         {
@@ -1900,7 +1900,7 @@
         })
       );
     }
-    function F(e) {
+    function P(e) {
       var t = Object(i.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -1934,7 +1934,7 @@
         })
       );
     }
-    function P() {
+    function F() {
       return o.createElement(
         "svg",
         {
@@ -1962,7 +1962,7 @@
         })
       );
     }
-    function W() {
+    function A() {
       return o.createElement(
         "svg",
         {
@@ -2021,7 +2021,7 @@
         )
       );
     }
-    function A() {
+    function W() {
       return o.createElement(
         "svg",
         {
@@ -2049,7 +2049,7 @@
         })
       );
     }
-    function j() {
+    function U() {
       return o.createElement(
         "svg",
         {
@@ -2070,7 +2070,7 @@
         })
       );
     }
-    function U() {
+    function j() {
       return o.createElement(
         "svg",
         {
@@ -3361,13 +3361,13 @@
         return b;
       }),
       r.d(t, "h", function() {
-        return G;
+        return N;
       }),
       r.d(t, "a", function() {
-        return I;
+        return C;
       }),
       r.d(t, "b", function() {
-        return C;
+        return G;
       });
     var s = r("mrSG"),
       u = r("q1tI"),
@@ -3426,9 +3426,9 @@
           (e.prototype.GetELanguageFallbackOrder = function() {
             var t = new Array();
             return (
-              t.push(Object(n.g)(c.a.LANGUAGE)),
-              (c.a.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-                e.value != c.a.LANGUAGE && t.push(Object(n.g)(e.value));
+              t.push(Object(n.g)(c.b.LANGUAGE)),
+              (c.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+                e.value != c.b.LANGUAGE && t.push(Object(n.g)(e.value));
               }),
               t
             );
@@ -3452,7 +3452,7 @@
     function h(e) {
       for (var n = [], t = 1; t < arguments.length; t++)
         n[t - 1] = arguments[t];
-      var r = C.LocalizeString(e);
+      var r = G.LocalizeString(e);
       return r
         ? (0 < n.length &&
             (r = r.replace(/%(\d+)\$s/g, function(e, t) {
@@ -3468,7 +3468,7 @@
     function i(e) {
       for (var t = [], r = 1; r < arguments.length; r++)
         t[r - 1] = arguments[r];
-      var n = C.LocalizeString(e);
+      var n = G.LocalizeString(e);
       if (!n) return e;
       for (var c, o = [], a = /(.*?)%(\d+)\$s/g, i = 0; (c = a.exec(n)); ) {
         (i += c[0].length), o.push(c[1]);
@@ -3626,7 +3626,7 @@
         : h(r + "LessThanAMinute");
     }
     function E(e) {
-      return new Date(1e3 * e).toLocaleDateString(C.GetPreferredLocales(), {
+      return new Date(1e3 * e).toLocaleDateString(G.GetPreferredLocales(), {
         weekday: "short",
         month: "long",
         day: "numeric",
@@ -3639,7 +3639,7 @@
         n = g.get(r);
       if (n) return n;
       return (
-        (n = t.toLocaleDateString(C.GetPreferredLocales(), {
+        (n = t.toLocaleDateString(G.GetPreferredLocales(), {
           year: "numeric",
           month: "short",
           day: "numeric"
@@ -3649,7 +3649,7 @@
       );
     }
     function k(e) {
-      return new Date(1e3 * e).toLocaleTimeString(C.GetPreferredLocales(), {
+      return new Date(1e3 * e).toLocaleTimeString(G.GetPreferredLocales(), {
         hour: "numeric",
         minute: "numeric"
       });
@@ -3669,13 +3669,13 @@
         i = v.get(a);
       return (
         i ||
-        ((i = n.toLocaleDateString(C.GetPreferredLocales(), o)), v.set(a, i), i)
+        ((i = n.toLocaleDateString(G.GetPreferredLocales(), o)), v.set(a, i), i)
       );
     }
     function w(e) {
       var t = new Date(1e3 * e),
         r = new Date();
-      if (r < t) return l.b(t.getTime() - r.getTime()), N(t);
+      if (r < t) return l.b(t.getTime() - r.getTime()), I(t);
       l.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
       var n = new Date();
       if ((n.setHours(0, 0, 0, 0), n <= t)) return h("#Time_Today");
@@ -3691,7 +3691,7 @@
           Math.floor((c.valueOf() - t.valueOf()) / (1e3 * a.d.PerWeek)) + 1;
         return 1 == o ? h("#TimeSince_1Week") : h("#TimeSince_XWeeks", o);
       }
-      return t.getFullYear() == r.getFullYear() ? M(t) : N(t);
+      return t.getFullYear() == r.getFullYear() ? M(t) : I(t);
     }
     function b(e) {
       var t = new Date(1e3 * e),
@@ -3705,8 +3705,8 @@
           : t.getFullYear() == r.getFullYear()
           ? M(t)
           : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
-          ? N(t)
-          : G(t)
+          ? I(t)
+          : N(t)
       );
     }
     new Map();
@@ -3717,28 +3717,28 @@
       var t = L.get(e.getMonth());
       return (
         t ||
-        ((t = e.toLocaleDateString(C.GetPreferredLocales(), { month: "long" })),
+        ((t = e.toLocaleDateString(G.GetPreferredLocales(), { month: "long" })),
         L.set(e.getMonth(), t),
         t)
       );
     }
-    function G(e) {
+    function N(e) {
       var t = S.get(e.getFullYear());
       return (
         t ||
-        ((t = e.toLocaleDateString(C.GetPreferredLocales(), {
+        ((t = e.toLocaleDateString(G.GetPreferredLocales(), {
           year: "numeric"
         })),
         S.set(e.getFullYear(), t),
         t)
       );
     }
-    function N(e) {
+    function I(e) {
       var t = e.getMonth() + 12 * e.getFullYear(),
         r = y.get(t);
       return (
         r ||
-        ((r = e.toLocaleDateString(C.GetPreferredLocales(), {
+        ((r = e.toLocaleDateString(G.GetPreferredLocales(), {
           month: "long",
           year: "numeric"
         })),
@@ -3746,7 +3746,7 @@
         r)
       );
     }
-    var I = {
+    var C = {
         english: "en",
         german: "de",
         french: "fr",
@@ -3777,8 +3777,8 @@
         ukrainian: "uk",
         vietnamese: "vn"
       },
-      C = new o();
-    window.LocalizationManager = C;
+      G = new o();
+    window.LocalizationManager = G;
   },
   YyVH: function(e, t, r) {
     "use strict";
@@ -3837,17 +3837,20 @@
     function a() {
       return !!window.document;
     }
-    r.d(t, "a", function() {
+    r.d(t, "b", function() {
       return o;
     }),
-      r.d(t, "d", function() {
+      r.d(t, "e", function() {
         return i;
       }),
-      r.d(t, "b", function() {
-        return s;
+      r.d(t, "a", function() {
+        return l;
       }),
       r.d(t, "c", function() {
         return u;
+      }),
+      r.d(t, "d", function() {
+        return h;
       });
     var c,
       o = {
@@ -3884,13 +3887,13 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!a()) return (c = c || l());
+            if (!a()) return (c = c || s());
             var e = (function(e) {
               if (!a() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
-            e = e || l();
+            e = e || s();
             return e;
           })();
         },
@@ -3910,8 +3913,22 @@
         authwgtoken: "",
         is_support: !1,
         short_url: ""
+      },
+      l = {
+        CLANSTEAMID: "",
+        CLANACCOUNTID: 0,
+        ANNOUNCEMENT_GID: "",
+        IMG_URL: "",
+        APPID: 0,
+        VANITY_ID: "",
+        IS_CREATOR_HOME: !1,
+        HEADER_IMAGE: "",
+        APP_NAME: "",
+        HAS_ADULT_CONTENT: !1,
+        HAS_ADULT_CONTENT_SEX: !1,
+        HAS_ADULT_CONTENT_VIOLENCE: !1
       };
-    function l() {
+    function s() {
       var e = (function() {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(n.b)(0, 35).toString(36);
@@ -3939,7 +3956,7 @@
         e
       );
     }
-    function s() {
+    function u() {
       var e = window.location.href;
       return e.startsWith(o.STORE_BASE_URL)
         ? o.STORE_BASE_URL
@@ -3953,7 +3970,7 @@
         ? o.STEAMTV_BASE_URL
         : "";
     }
-    function u() {
+    function h() {
       var e = window.location.href;
       return e.startsWith(o.STORE_BASE_URL)
         ? "store"

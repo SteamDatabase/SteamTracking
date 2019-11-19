@@ -82,6 +82,7 @@
  T BIsValidDirectory(char const*)
  T BWritingMiniDump
  T Breakpad_SetSteamID
+ T CBreakpadFactory::AddCustomInfoEx(char const*, char const*)
  T CBreakpadFactory::AllocateHandle()
  T CBreakpadFactory::GetMinidumpDirectory()
  T CBreakpadFactory::Init()
@@ -94,6 +95,7 @@
  T CBreakpadFactory::WriteMiniDump(void*)
  T CBreakpadFactory::WriteMiniDumpSetComment(char const*)
  T CBreakpadFactory::~CBreakpadFactory()
+ T CCrashHandler::AddCustomInfoEx(char const*, char const*)
  T CCrashHandler::AllocateHandle()
  T CCrashHandler::GetDirectory()
  T CCrashHandler::GetGlobals()

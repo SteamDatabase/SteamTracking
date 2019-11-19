@@ -14679,6 +14679,7 @@
  T vgui::surface()
  T vgui::system()
  T virtual thunk to std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_ostringstream()
+ T void DeleteHelper<CUtlBuffer*>(CUtlBuffer*)
  T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
  T void Destruct<CScreenshotGameSelector::NameSort_t>(CScreenshotGameSelector::NameSort_t*)
  T void Destruct<vgui::HTML::AdditionalRoute_t>(vgui::HTML::AdditionalRoute_t*)

@@ -22,6 +22,9 @@ public:
     virtual unknown_ret SetAppConfigValue(unsigned int, char const*, char const*) = 0;
     virtual unknown_ret BIsAppUpToDate(unsigned int) = 0;
     virtual unknown_ret GetAvailableLanguages(unsigned int, bool, char*, unsigned int) = 0;
+    virtual unknown_ret GetCurrentLanguage(unsigned int, char*, unsigned int) = 0;
+    virtual unknown_ret GetCurrentLanguage(unsigned int) = 0;
+    virtual unknown_ret GetFallbackLanguage(unsigned int, ELanguage) = 0;
     virtual unknown_ret BIsDlcEnabled(unsigned int, unsigned int, bool*) = 0;
     virtual unknown_ret SetDlcEnabled(unsigned int, unsigned int, bool) = 0;
     virtual unknown_ret StartValidatingApp(unsigned int) = 0;

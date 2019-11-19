@@ -1841,6 +1841,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/checksum_sha1.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/circularbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/convar.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/deletehelper.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/fileio.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/fmtstr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/functors.h
@@ -1867,7 +1868,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlops.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlpair.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlqueue.h

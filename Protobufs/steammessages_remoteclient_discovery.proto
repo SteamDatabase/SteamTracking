@@ -104,6 +104,7 @@ message CMsgRemoteClientBroadcastStatus {
 	optional uint32 content_cache_port = 19;
 	repeated string ip_addresses = 20;
 	optional string public_ip_address = 21;
+	optional bool remoteplay_active = 22;
 }
 
 message CMsgRemoteClientBroadcastDiscovery {

@@ -16530,7 +16530,7 @@
  b CMAC_Init.zero_iv
  b CUtlSymbol::Initialize()::symbolsInitialized
  b ClientUIHTMLController()::s_ClientUIHTMLController
- b CommonKeyCode::InitKeyTranslation()::threadonce_538_41
+ b CommonKeyCode::InitKeyTranslation()::threadonce_538_42
  b CommonKeyCode::s_pKeyCodeToVirtualKey
  b CommonKeyCode::s_pKeyCodeToWindowsVirtualKey
  b CommonKeyCode::s_pVirtualKeyToKeyCode

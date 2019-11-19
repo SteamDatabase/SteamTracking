@@ -198,6 +198,8 @@
 	"GameList_View_NothingSelected_HelpText": "Nothing matches this view filter.",
 	"GameList_Search_GamesCheckbox_Link": "Show games",
 
+	"GameList_View_GroupSharedLibraries": "Group By Library",
+
 	"GameList_View_ReadyToPlay_ToolTip1": "• Installed on this machine",
 	"GameList_View_ReadyToPlay_ToolTip2": "• Can be streamed from another machine",
 	"GameList_Entry_ReadyToPlay_ToolTip": "Will be streamed from another machine",
@@ -463,6 +465,11 @@
 	"DisplayStatus_AvailToBorrow": "Available to borrow",
 	"DisplayStatus_AvailGuestPass": "Guest pass available",
 	"DisplayStatus_Purchase": "Available to purchase",
+	"DisplayStatus_Preallocating": "Preallocating",
+	"DisplayStatus_Committing": "Committing",
+	"DisplayStatus_Verifying": "Verifying",
+	"DisplayStatus_Unpacking": "Unpacking",
+
 
 	"DisplayStatus_Compact_Launching": "Launching",
 	"DisplayStatus_Compact_Uninstalling": "Uninstalling",
