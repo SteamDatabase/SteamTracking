@@ -3915,14 +3915,6 @@ enum GeofencingRegionState
 	Outside = 2;
 }
 
-enum IDerivationState
-{
-	NOT_TRACKING = -1;
-	UP_TO_DATE = 0;
-	POSSIBLY_STALE = 1;
-	STALE = 2;
-}
-
 enum PartnerEventNotificationType
 {
 	Start = 0;
