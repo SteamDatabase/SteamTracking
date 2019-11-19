@@ -96,11 +96,11 @@
         "asset_a7161e2eac6d5de743204fd9a2b040b1.ttf"
     ],
     "assetUrlOverride": ".\/assets",
-    "publishedTime": "2019-11-19T04:48:09.669Z",
-    "commitTime": "2019-11-19T04:48:09.669Z",
-    "revisionId": "5jeX9aWAnB",
+    "publishedTime": "2019-11-19T05:47:52.943Z",
+    "commitTime": "2019-11-19T05:47:52.943Z",
+    "revisionId": "0Ay45yM422",
     "id": "@colbys\/friendsui",
-    "bundleUrl": "https:\/\/steammobile.akamaized.net\/apps\/mobile\/chat\/bundles\/android-c14a67e8439b73be73864d6311bddc19.js",
+    "bundleUrl": "https:\/\/steammobile.akamaized.net\/apps\/mobile\/chat\/bundles\/android-7dcd3016d5e47ed01a4c37b82e3e3807.js",
     "platform": "android",
     "dependencies": [
         "axios",
