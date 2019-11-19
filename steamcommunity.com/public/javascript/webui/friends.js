@@ -61754,7 +61754,8 @@
                 this.BCanAcceptVoiceChat() &&
                 G.f.VoiceStore.BPartnerHasAcceptedOrInitiatedOneOnOneChat(
                   this.props.inviter.accountid
-                );
+                ),
+              d = G.f.ParentalStore.BIsAppBlocked(this.props.gameInvite.appID);
             return A.createElement(
               "div",
               { className: "msg ChatMessageInvite gameInviteMsg", style: l },
@@ -61828,23 +61829,35 @@
                 A.createElement(
                   "div",
                   { className: "acceptButtonsGroup" },
-                  A.createElement(
-                    "button",
-                    {
-                      className: "DialogButton GreenPlay",
-                      onClick: this.AcceptGameInvite
-                    },
-                    Object(j.c)("#ChatRoom_GameInvite_Accept")
-                  ),
-                  m &&
-                    A.createElement(
-                      "button",
-                      {
-                        className: "DialogButton GreenPlay",
-                        onClick: this.AcceptGameInviteAndVoiceChat
-                      },
-                      Object(j.c)("#ChatRoom_GameInvite_Accept_And_Voice_Chat")
-                    )
+                  d
+                    ? A.createElement(
+                        "div",
+                        null,
+                        Object(j.c)("#ChatRoom_GameInvite_Family_View")
+                      )
+                    : A.createElement(
+                        A.Fragment,
+                        null,
+                        A.createElement(
+                          "button",
+                          {
+                            className: "DialogButton GreenPlay",
+                            onClick: this.AcceptGameInvite
+                          },
+                          Object(j.c)("#ChatRoom_GameInvite_Accept")
+                        ),
+                        m &&
+                          A.createElement(
+                            "button",
+                            {
+                              className: "DialogButton GreenPlay",
+                              onClick: this.AcceptGameInviteAndVoiceChat
+                            },
+                            Object(j.c)(
+                              "#ChatRoom_GameInvite_Accept_And_Voice_Chat"
+                            )
+                          )
+                      )
                 ),
                 A.createElement(
                   "div",

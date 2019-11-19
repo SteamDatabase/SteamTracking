@@ -46,6 +46,7 @@ LocalizationReady("shared", "english", {
 
   Loading: "Loading...",
   Updating: "Updating...",
+  Uploading: "Uploading...",
 
   Settings: "Settings",
   FriendSettings_AlwaysNewChatWindow:
