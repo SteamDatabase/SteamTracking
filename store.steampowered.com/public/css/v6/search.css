@@ -673,6 +673,11 @@ div.autocomplete ul li {
 	height: 62px;
 }
 
+.search_remote_play_banner
+{
+	width: 940px;
+}
+
 .search_labs_banner_link
 {
 	display: block;

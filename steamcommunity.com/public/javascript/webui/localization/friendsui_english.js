@@ -161,6 +161,9 @@ LocalizationReady("friendsui", "english", {
   ChatEntry_TakePhoto: "Take Photo",
   ChatEntry_ChooseFromLibrary: "Choose Photo From Library",
 
+  ChatEntryButton_SendSnowfall: "Make it snow!",
+  ChatEntryButton_SendConfetti: "Use a party popper!",
+
   MobilePermission_TakePhoto:
     "Oops, looks like your device was told to deny us camera or photo library access!",
   MobilePermission_ChoosePhoto:
@@ -1202,6 +1205,8 @@ LocalizationReady("friendsui", "english", {
   FriendChat_NoMessages: "You have no recent messages with this friend.",
 
   ChatRoom_New_Messages: "New messages since %1$s",
+  ChatRoom_RoomEffectSnow: "%1$s made it snow!",
+  ChatRoom_RoomEffectConfetti: "%1$s used a party popper!",
 
   bbcode_community_publishedfile_vote_up: "Rate",
 

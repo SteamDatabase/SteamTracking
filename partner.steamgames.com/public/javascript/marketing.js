@@ -560,62 +560,54 @@ function AddAdditionalContentLanguage( selectInput, contentName )
 
 function ToggleCheckbox( id )
 {
-	var input = $(id + '_input');
-	var cb = $(id);
-	var bChecked = false;
-	if ( input.type == 'checkbox' )
-		bChecked = input.checked;
-	else
-		bChecked = input.value && input.value != "false";
+	var input = $J( '#' + id + '_input');
+	var bChecked = ( input.is(":checkbox") ) ?
+		input.is(":checked") : (input.val() && input.val() != 'false') ;
 
 	SetFancyCheckboxState( id, !bChecked );
 }
 
 function SetFancyCheckboxChecked( id )
 {
-	var input = $(id + '_input');
-	if ( input.disabled )
+	var input = $J( '#' + id + '_input');
+	if ( input.is(':disabled') )
 		return;
 
-	if ( input.type == 'checkbox' )
-		input.checked = true;
+	if ( input.is(":checkbox") )
+		input.prop( "checked", true );
 	else
-		input.value = "true";
+		input.val( "true" );
 	
-	$(id + '_checked').show();
-	$(id + '_unchecked').hide();
-	
-	if ( input.onchange )
-		input.onchange();	
+	$J('#' + id + '_checked').show();
+	$J('#' + id + '_unchecked').hide();
+
+	input.change();
 }
 
 function SetFancyCheckboxUnchecked( id )
 {
-	var input = $(id + '_input');
-	if ( input.disabled )
+	var input = $J('#' + id + '_input');
+	if ( input.is(':disabled') )
 		return;
 
-	if ( input.type == 'checkbox' )
-		input.checked = false;
+	if ( input.is(":checkbox") )
+		input.prop( "checked", false );
 	else
-		input.value = "";
-	$(id + '_checked').hide();
-	$(id + '_unchecked').show();
-	
-	if ( input.onchange )
-		input.onchange();	
+		input.val( '' );
+
+	$J('#' + id + '_checked').hide();
+	$J('#' + id + '_unchecked').show();
+
+	input.change();
 }
 
 function SetFancyCheckboxEnabled( id, enable )
 {
 	var opacity = enable ? 1 : 0.25;
-	var input = $(id + '_input');
-	if ( enable )
-		input.enable();
-	else
-		input.disable();
+	var input = $J('#' + id + '_input');
+	input.prop( 'disabled', !enable );
 
-	$(id ).setOpacity( opacity );
+	$J('#' + id ).fadeTo( "slow", opacity );
 }
 
 function SetFancyCheckboxState( id, bChecked )
@@ -638,30 +630,14 @@ function SetFancyCheckboxState( id, bChecked )
 
 function GetFancyCheckboxState( id )
 {
-	var input = $(id + '_input');
+	var input = $J( '#' + id + '_input');
 	var bChecked = false;
-	if ( input.type == 'checkbox' )
-		bChecked = (input.checked);
+	if ( input.is(":checkbox") )
+		bChecked = input.is( ':checked' );
 	else
-		bChecked = (input.value == "true" || input.value == "1");
+		bChecked = (input.val() == "true" || input.val() == "1" || input.val() == 'on');
 
 	return bChecked;
-}
-
-
-function ToggleInputEnabled( id, enable )
-{
-	var input = $(id);
-	if ( enable )
-	{
-		input.enable();
-		input.setOpacity( 1 );
-	}
-	else
-	{
-		input.disable();
-		input.setOpacity( 0.25 );
-	}
 }
 
 function SetImageSrc( id, url )

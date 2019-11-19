@@ -736,8 +736,13 @@ a.badge_row:hover .badge_view_details {
 }
 
 
+.badge_card_set_cards
+{
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .badge_card_set_card {
-	float: left;
 	margin-left: 8px;
 	margin-bottom: 18px;
 

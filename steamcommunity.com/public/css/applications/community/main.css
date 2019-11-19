@@ -1229,6 +1229,28 @@ img.emoticon_emoticon_AB86v {
     margin-top: -14px;
     margin-bottom: -14px; }
 
+.emoticon_RoomEffectButton_2v2oP {
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  border: 1px solid black;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer; }
+
+.emoticon_CountBadge_3lf1T {
+  background: #ec2020;
+  color: white;
+  position: absolute;
+  font-size: 10px;
+  border-radius: 50%;
+  right: 4px;
+  top: 4px;
+  width: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 /* These styles are used within the returned emoticon tooltip, so need to be global for now */
 .emoticon_hover_arrow {
   width: 13px;
@@ -2078,6 +2100,10 @@ textarea:-webkit-autofill:focus,
     line-height: 9px;
     font-size: 11px;
     margin-top: 2px; }
+  @media screen and (max-width: 620px) {
+    .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
+      max-width: unset;
+      flex-direction: row; } }
 
 .broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
   max-width: 310px;
@@ -2101,7 +2127,8 @@ textarea:-webkit-autofill:focus,
 
 .broadcastwidgets_StoreSaleImage_mini_1zSsm {
   cursor: pointer;
-  width: 155px; }
+  width: 155px;
+  display: block; }
 
 .broadcastwidgets_StoreSaleImage_column_3DVUq {
   cursor: pointer;
@@ -2127,6 +2154,9 @@ textarea:-webkit-autofill:focus,
   color: #919fb1;
   margin-bottom: 8px;
   margin-top: 4px; }
+  @media screen and (max-width: 620px) {
+    .broadcastwidgets_StoreSaleWidgetRelease_3yCCs {
+      display: none; } }
 
 .broadcastwidgets_StoreSaleWidgetShortDesc_2by8B {
   font-size: 12px;
@@ -2145,6 +2175,10 @@ textarea:-webkit-autofill:focus,
   letter-spacing: 0px;
   line-height: 13px;
   font-size: 11px; }
+  @media screen and (max-width: 620px) {
+    .broadcastwidgets_StoreSaleWidgetShortDesc_column_cZoip,
+    .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
+      display: none; } }
 
 .broadcastwidgets_StoreSaleWidgetRight_1MzBO {
   padding: 4px; }
@@ -2479,6 +2513,9 @@ textarea:-webkit-autofill:focus,
   align-content: stretch;
   align-items: stretch;
   justify-content: space-between; }
+  @media screen and (max-width: 620px) {
+    .broadcast_embeddable_container_2yiy6 {
+      flex-direction: column; } }
 
 .broadcast_embeddable_side_panels_T_zpR {
   max-width: 155px;
@@ -2517,6 +2554,16 @@ textarea:-webkit-autofill:focus,
 .broadcast_embeddable_video_container_1gbNx {
   background: black;
   display: flex; }
+  @media screen and (max-width: 770px) {
+    .broadcast_embeddable_video_placeholder_1KU95,
+    .broadcast_embeddable_video_container_1gbNx {
+      height: calc( (100vw - 185px) * 0.55);
+      min-height: 270px; } }
+  @media screen and (max-width: 620px) {
+    .broadcast_embeddable_video_placeholder_1KU95,
+    .broadcast_embeddable_video_container_1gbNx {
+      height: calc( (100vw - 30px) * 0.55);
+      min-height: unset; } }
 
 .broadcast_embeddable_BorderedContainerPromotion_-b_1H .broadcast_embeddable_video_placeholder_1KU95,
 .broadcast_embeddable_BorderedContainerPromotion_-b_1H .broadcast_embeddable_video_container_1gbNx {
@@ -2557,12 +2604,14 @@ textarea:-webkit-autofill:focus,
   flex-direction: column;
   max-width: 155px;
   /* Give each stream a fixed height so that the auto-scrolling logic can scroll the container correctly down when changing streams */
-  height: 104px; }
+  height: 104px;
+  padding-bottom: 12px; }
 
 .broadcast_embeddable_stream_icon_and_viewer_container_2sbrG .broadcast_embeddable_viewer_count_1MrTW {
   background-color: rgba(0, 0, 0, 0.4);
   border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px; }
+  border-bottom-right-radius: 3px;
+  margin: 0px; }
 
 .broadcast_embeddable_stream_icon_container_2zBOi {
   display: flex;
@@ -5085,12 +5134,14 @@ img {
   flex-basis: 0;
   display: flex;
   flex-direction: column;
-  min-height: 200px; }
+  min-height: 145px;
+  margin-bottom: 16px; }
 
 .creatorhomeembed_DevSummaryWidgetCtn_A2B2V {
   flex-grow: 1;
   flex-basis: 0;
-  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  background: -webkit-linear-gradient(left, rgba(87, 92, 104, 0.6) 5%, rgba(255, 255, 255, 0.2) 95%);
+  background: linear-gradient(to right, rgba(87, 92, 104, 0.6) 5%, rgba(255, 255, 255, 0.2) 95%);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   position: relative;
@@ -5106,18 +5157,21 @@ img {
   opacity: 0.4; }
 
 .creatorhomeembed_DevSummaryContent_23xa4 {
-  padding: 10px 16px 16px 16px; }
+  padding: 16px; }
 
 .creatorhomeembed_Avatar_3Jepb {
   width: 94px;
-  box-shadow: 0 0 8px #000000;
+  box-shadow: 0 0 8px #ffffff;
+  border-radius: 5px;
   border: none; }
 
 .creatorhomeembed_CreatorTitleCtn_2T8Ub {
-  position: relative; }
+  position: relative;
+  margin-left: 4px; }
   .creatorhomeembed_CreatorTitleCtn_2T8Ub .creatorhomeembed_CreatorNameName_8196l {
-    padding-bottom: 10px;
-    font-size: 19px; }
+    padding-bottom: 2px;
+    font-size: 21px;
+    font-weight: 300; }
 
 .creatorhomeembed_Title_37vyV {
   text-transform: uppercase;
@@ -5141,7 +5195,8 @@ img {
 .creatorhomeembed_FollowButton_1HwWX {
   background-color: #54a5d4;
   position: relative;
-  display: flex; }
+  display: flex;
+  align-items: center; }
   .creatorhomeembed_FollowButton_1HwWX img {
     display: block; }
 
@@ -6154,6 +6209,18 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     border-width: 8px;
     margin-top: -8px; }
 
+.partnereventpreview_StoreNavigationPlaceholder_tHKKN {
+  background: #80808099;
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  color: white; }
+
 .partnereventdialog_ErrorStyles_2Sg7W {
   color: #c44848; }
 
@@ -6396,6 +6463,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   bottom: 0;
   left: 0;
   z-index: 20;
+  outline: none;
   overflow-y: scroll;
   overflow-x: hidden; }
 
@@ -6601,6 +6669,10 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .partnersaledisplay_SaleOuterContainer_150kd {
   display: flex;
   flex-direction: column; }
+
+@media screen and (max-width: 830px) {
+  .partnersaledisplay_SaleOuterContainer_150kd {
+    margin-top: 62vw !important; } }
 
 .partnersaledisplay_SaleBackground_2N8Se {
   background-position: center top;
@@ -9574,9 +9646,6 @@ button.DialogButton::-moz-focus-inner {
   position: absolute;
   bottom: 0;
   top: 0; }
-
-:not(.PopupFullWindow) .DialogContentTransition .opacityfade-anim-exit {
-  position: absolute; }
 
 .DialogContent {
   padding: 24px;

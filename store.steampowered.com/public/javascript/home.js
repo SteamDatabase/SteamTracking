@@ -2844,8 +2844,16 @@ var g_bDisableAutoloader = false;
 
 			ele.indices = {chunks: 0};
 
-			var offset = $(ele).offset();
-			this.nNextTrigger = $(ele).height() + offset.top - 750;
+			var nLastTriggerCalc = 0;
+			ele.BShouldTrigger = function( scrollTop )
+			{
+				if ( !nLastTriggerCalc || nLastTriggerCalc < scrollTop )
+				{
+					var offset = $(ele).offset();
+					nLastTriggerCalc = $(ele).height() + offset.top - 500;
+				}
+				return nLastTriggerCalc < scrollTop;
+			}
 
 			ele.bTriggerActive = false;
 			ele.tagIndex = 0;
@@ -3040,10 +3048,9 @@ var g_bDisableAutoloader = false;
 						});
 						$(ele).append(newElement);
 						ele.bTriggerActive = false;
-
 						var nCurrentScroll = $(window).scrollTop() + $(window).height();
-						ele.nNextTrigger = $(ele).height() + offset.top - 750;
-						if(nCurrentScroll > ele.nNextTrigger)
+
+						if( ele.BShouldTrigger( nCurrentScroll ) )
 						{
 							loadFunc.apply(ele);
 						}
@@ -3129,7 +3136,7 @@ var g_bDisableAutoloader = false;
 					WebStorage.SetLocal('home_scroll',$(window).scrollTop(), true);
 
 				var nCurrentScroll = $(window).scrollTop() + $(window).height();
-				if(nCurrentScroll > this.nNextTrigger)
+				if( this.BShouldTrigger( nCurrentScroll ) )
 				{
 					loadFunc.apply(this);
 				}

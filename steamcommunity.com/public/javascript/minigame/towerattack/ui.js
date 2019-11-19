@@ -70,12 +70,12 @@ CUI.prototype.BuildUI = function()
 	this.m_rgElementCache['lane_0_element'] = $J( '.lane_element', this.m_rgElementCache['lane0'] );
 	this.m_rgElementCache['lane_1_element'] = $J( '.lane_element', this.m_rgElementCache['lane1'] );
 	this.m_rgElementCache['lane_2_element'] = $J( '.lane_element', this.m_rgElementCache['lane2'] );
-	this.m_rgElementCache['lane_0_treasure'] = $J('.enemy_icon_4', this.m_rgElementCache['lane0' ] );
-	this.m_rgElementCache['lane_0_boss'] = $J('.enemy_icon_2', this.m_rgElementCache['lane0' ] );
-	this.m_rgElementCache['lane_1_treasure'] = $J('.enemy_icon_4', this.m_rgElementCache['lane1' ] );
-	this.m_rgElementCache['lane_1_boss'] = $J('.enemy_icon_2', this.m_rgElementCache['lane1' ] );
-	this.m_rgElementCache['lane_2_treasure'] = $J('.enemy_icon_4', this.m_rgElementCache['lane2' ] );
-	this.m_rgElementCache['lane_2_boss'] = $J('.enemy_icon_2', this.m_rgElementCache['lane2' ] );
+	this.m_rgElementCache['lane_0_treasure'] = $J('.enemy_icon_k_ETowerAttackEnemyType_TreasureMob', this.m_rgElementCache['lane0' ] );
+	this.m_rgElementCache['lane_0_boss'] = $J('.enemy_icon_k_ETowerAttackEnemyType_Boss', this.m_rgElementCache['lane0' ] );
+	this.m_rgElementCache['lane_1_treasure'] = $J('.enemy_icon_k_ETowerAttackEnemyType_TreasureMob', this.m_rgElementCache['lane1' ] );
+	this.m_rgElementCache['lane_1_boss'] = $J('.enemy_icon_k_ETowerAttackEnemyType_Boss', this.m_rgElementCache['lane1' ] );
+	this.m_rgElementCache['lane_2_treasure'] = $J('.enemy_icon_k_ETowerAttackEnemyType_TreasureMob', this.m_rgElementCache['lane2' ] );
+	this.m_rgElementCache['lane_2_boss'] = $J('.enemy_icon_k_ETowerAttackEnemyType_Boss', this.m_rgElementCache['lane2' ] );
 
 	this.m_rgElementCache['players_in_lane'] = $J('#players_in_lane');
 
@@ -84,7 +84,7 @@ CUI.prototype.BuildUI = function()
 
 	var rgAbilities = this.m_Game.m_rgTuningData.abilities;
 
-	for( var i=0; i< 28; i++ )
+	for( var i=0; i< k_ETowerAttackAbility_MaxAbilities; i++ )
 	{
 		if( !rgAbilities[i] )
 			continue;
@@ -110,11 +110,11 @@ CUI.prototype.BuildUI = function()
 	{
 		var laneID = "#lane" + i;
 
-		var imgBoss = $J(laneID + '_enemy_icon_2 > img');
-		imgBoss.attr( 'src', g_rgIconMap["enemy_2"].icon );
+		var imgBoss = $J(laneID + '_enemy_icon_k_ETowerAttackEnemyType_Boss > img');
+		imgBoss.attr( 'src', g_rgIconMap["enemy_k_ETowerAttackEnemyType_Boss"].icon );
 
-		var imgTreasureMob = $J(laneID + '_enemy_icon_4 > img');
-		imgTreasureMob.attr( 'src', g_rgIconMap["enemy_4"].icon );
+		var imgTreasureMob = $J(laneID + '_enemy_icon_k_ETowerAttackEnemyType_TreasureMob > img');
+		imgTreasureMob.attr( 'src', g_rgIconMap["enemy_k_ETowerAttackEnemyType_TreasureMob"].icon );
 	}
 
 	$J(".lane_element" ).v_tooltip({tooltipClass: 'ta_tooltip', location: 'top'});
@@ -236,7 +236,7 @@ CUI.prototype.Tick = function()
 
 	switch ( game.m_rgGameData.status )
 	{
-		case 1:
+		case k_EMiniGameStatus_WaitingForPlayers:
 			this.m_dialogWaitingForPlayers.show();
 			var numPlayers = 0;
 			if ( game.m_rgStats )
@@ -248,7 +248,7 @@ CUI.prototype.Tick = function()
 			$J( "#num_players_waiting", this.m_dialogWaitingForPlayers )[0].textContent = numPlayers ;
 			break;
 
-		case 2:
+		case k_EMiniGameStatus_Running:
 			this.m_dialogWaitingForPlayers.hide();
 			this.UpdateLevelAndTimes();
 			this.UpdateAbilities();
@@ -257,7 +257,7 @@ CUI.prototype.Tick = function()
 			this.UpdateHealthBars();
 			break;
 
-		case 3:
+		case k_EMiniGameStatus_Ended:
 			this.m_dialogWaitingForPlayers.hide();
 			if ( !this.m_gameOverDialog )
 			{
@@ -298,7 +298,7 @@ CUI.prototype.UpdateSpendBadgePointsDialog = function()
 	{
 		this.m_spendBadgePointsDialog = $J( "#spend_badge_points_dialog" );
 	}
-	if ( !this.m_Game.m_rgPlayerTechTree || !this.m_Game.m_rgPlayerTechTree.badge_points || this.m_Game.m_rgGameData.status != 2 )
+	if ( !this.m_Game.m_rgPlayerTechTree || !this.m_Game.m_rgPlayerTechTree.badge_points || this.m_Game.m_rgGameData.status != k_EMiniGameStatus_Running )
 	{
 		this.m_spendBadgePointsDialog.hide();
 		return;
@@ -318,7 +318,7 @@ CUI.prototype.UpdateSpendBadgePointsDialog = function()
 	// add ability items
 	var bResort = false;
 	var abilities = this.m_Game.m_rgTuningData.abilities;
-	for ( var i=0; i< 28; i++ )
+	for ( var i=0; i< k_ETowerAttackAbility_MaxAbilities; i++ )
 	{
 		var ability = abilities[i];
 		if ( !ability || !ability.badge_points_cost )
@@ -696,7 +696,7 @@ CUI.prototype.UpdateUpgrades = function()
 			{
 				this.m_rgElementCache['upgr_'+i] = ele;
 			} else {
-				if( upgrade.type == '8' )
+				if( upgrade.type == 'k_ETowerAttackUpgradeType_PurchaseAbility' )
 					ele = purchasetemplate.clone();
 				else
 					ele = template.clone();
@@ -713,7 +713,7 @@ CUI.prototype.UpdateUpgrades = function()
 
 				$J('.link', ele).v_tooltip({tooltipClass: 'ta_tooltip', location: 'top'});
 
-				if ( upgrade.type == '8' )
+				if ( upgrade.type == 'k_ETowerAttackUpgradeType_PurchaseAbility' )
 				{
 					$J('.icon', ele).attr( 'src', g_rgIconMap['ability_' + upgrade.ability].icon );
 					$J('.container_purchase', container).append(ele);
@@ -729,7 +729,7 @@ CUI.prototype.UpdateUpgrades = function()
 		$J('.link', ele).data( 'cost', nCost );
 
 		// hide purchased abilities
-		if (upgrades[i].type == '8') {
+		if (upgrades[i].type == 'k_ETowerAttackUpgradeType_PurchaseAbility') {
 			if (!this.m_Game.bHaveAbility(upgrades[i].ability)) {
 				ele.show();
 			}
@@ -857,7 +857,7 @@ CUI.prototype.UpdateActiveAbilities = function()
 	// TODO: Don't do this every tick, it's awful.
 	//container.empty();
 
-	for( var i=0; i< 28; i++ )
+	for( var i=0; i< k_ETowerAttackAbility_MaxAbilities; i++ )
 	{
 		var $ele = this.m_rgElementCache['activeability_' + i];
 
@@ -899,7 +899,7 @@ CUI.prototype.UpdateAbilities = function()
 	//container.empty();
 
 	var bResortAbilities = false;
-	for( var i=0; i< 28; i++ )
+	for( var i=0; i< k_ETowerAttackAbility_MaxAbilities; i++ )
 	{
 		if( !this.m_Game.bHaveAbility( i ) )
 			continue;
@@ -960,7 +960,7 @@ CUI.prototype.UpdateAbilities = function()
 		}
 	}
 
-	for( var i=0; i< 28; i++ )
+	for( var i=0; i< k_ETowerAttackAbility_MaxAbilities; i++ )
 	{
 		var ele = this.m_rgElementCache['abilityitem_'+i];// $J('#abilityitem_' + i)[0];
 
@@ -978,7 +978,7 @@ CUI.prototype.UpdateAbilities = function()
 			ele = item_template.clone();
 			$J(ele).attr('id','abilityitem_' + i);
 			this.m_rgElementCache['abilityitem_'+i] = ele;
-			$J(ele).data('sortIndex', 28 + i );
+			$J(ele).data('sortIndex', k_ETowerAttackAbility_MaxAbilities + i );
 			$J('.name', ele).text( abilities[i].name );
 			$J('.link', ele).data( 'type', i );
 			$J('.link', ele).data( 'abilityid', i );
@@ -1163,15 +1163,15 @@ window.fnTooltipUpgradeDesc = function( context )
 	var multiplier = parseFloat( $context.data('multiplier') );
 	switch( $context.data('upgrade_type') )
 	{
-		case 8:
+		case k_ETowerAttackUpgradeType_PurchaseAbility:
 			break;
-		case 0:
+		case k_ETowerAttackUpgradeType_HitPoints:
 			strOut += '<br><br>Base Health: ' + FormatNumberForDisplay( g_Minigame.CurrentScene().m_rgTuningData.player.hp );
 			strOut += '<br>Current Health: ' + FormatNumberForDisplay( g_Minigame.CurrentScene().m_rgPlayerTechTree.max_hp );
 			strOut += '<br>New Health: ' + FormatNumberForDisplay( g_Minigame.CurrentScene().m_rgTuningData.player.hp * ( g_Minigame.CurrentScene().m_rgPlayerTechTree.hp_multiplier + multiplier ) );
 			strOut += '<br><br>Base Increased by: ' + FormatNumberForDisplay( 100 * multiplier ) + '%';
 			break;
-		case 1:
+		case k_ETowerAttackUpgradeType_DPS:
 			strOut += "<br>";
 			if ( $context.data('type') == 1 )
 			{
@@ -1181,7 +1181,7 @@ window.fnTooltipUpgradeDesc = function( context )
 			strOut += '<br>New DPS: ' + FormatNumberForDisplay( g_Minigame.CurrentScene().m_rgPlayerTechTree.base_dps * ( g_Minigame.CurrentScene().m_rgPlayerTechTree.damage_multiplier_dps + multiplier ) );
 			strOut += '<br><br>Base Increased by: ' + FormatNumberForDisplay( 100 * multiplier ) + '%';
 			break;
-		case 2:
+		case k_ETowerAttackUpgradeType_ClickDamage:
 			strOut += '<br><br>Base: ' + FormatNumberForDisplay( g_Minigame.CurrentScene().m_rgTuningData.player.damage_per_click );
 			strOut += '<br>Current: ' + FormatNumberForDisplay( g_Minigame.CurrentScene().m_rgPlayerTechTree.damage_per_click );
 			strOut += '<br>Next Level: ' + FormatNumberForDisplay( g_Minigame.CurrentScene().m_rgTuningData.player.damage_per_click * ( g_Minigame.CurrentScene().m_rgPlayerTechTree.damage_per_click_multiplier + multiplier ) );
@@ -1202,16 +1202,16 @@ window.fnTooltipLaneElementDesc = function( context )
 	var element = $context.data('element');
 	switch ( element )
 	{
-		case 1:
+		case k_ETowerAttackElement_Fire:
 			strOut = "This lane has Fire Monsters" ;
 			break
-		case 2:
+		case k_ETowerAttackElement_Water:
 			strOut = "This lane has Water Monsters";
 			break
-		case 3:
+		case k_ETowerAttackElement_Air:
 			strOut = "This lane has Air Monsters";
 			break
-		case 4:
+		case k_ETowerAttackElement_Earth:
 			strOut = "This lane has Earth Monsters";
 			break
 	}
@@ -1234,7 +1234,7 @@ window.fnTooltipAbilityDesc = function( context )
 
 	strOut += ability.name + '<br><br>' +  ability.desc ;
 
-	if ( idx == '22' )
+	if ( idx == 'k_ETowerAttackAbility_Item_GiveGold' )
 	{
 		var levelMultiplier = Math.pow( 10, Math.max( 0, Math.floor( log10( g_Minigame.CurrentScene().m_rgGameData.level + 1 ) ) - 1 ) );
 		var goldGiven = ability.multiplier * levelMultiplier;

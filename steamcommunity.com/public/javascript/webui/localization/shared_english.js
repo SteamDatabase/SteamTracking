@@ -255,7 +255,7 @@ LocalizationReady("shared", "english", {
   EventEmail_Subject_SpecialOffer: "%1$s Special Offer",
   EventEmail_Subject_Tournament_Now: "%1$s Tournament, Tune in Now",
   EventEmail_Subject_LiveStream_Now: "%1$s Live Stream, Tune in Now",
-  EventEmail_Button_ClickForMoreDetails: "Click for more details",
+  EventEmail_Button_ClickForMoreDetails: "Read More",
   EventEmail_Button_PrepurchaseNow: "Prepurchase now!",
   EventEmail_Button_BuyNow: "Buy now!",
   EventEmail_Button_PlayNow: "Play Now!",

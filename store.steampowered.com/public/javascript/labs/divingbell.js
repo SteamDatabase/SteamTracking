@@ -12,6 +12,7 @@ var BoxEntry = function() {
 	this.tags = [];
 	this.tagEntries = [];
 	this.tagCategories = [];
+	this.disabledTags = [];
 };
 BoxEntry.__name__ = true;
 BoxEntry.prototype = {
@@ -38,17 +39,51 @@ BoxEntry.prototype = {
 		this.url = "";
 		this.shortDescription = "";
 	}
-	,makeTagEntries: function(focusedTags,justGetEm) {
+	,getConsideredTags: function() {
+		var results = [];
+		var _g = 0;
+		var _g1 = this.tags;
+		while(_g < _g1.length) {
+			var tag = _g1[_g];
+			++_g;
+			var pass = true;
+			var _g2 = 0;
+			var _g3 = this.disabledTags;
+			while(_g2 < _g3.length) {
+				var dt = _g3[_g2];
+				++_g2;
+				if(dt == tag.tagid) {
+					pass = false;
+					break;
+				}
+			}
+			if(pass) {
+				results.push(tag);
+			}
+		}
+		return results;
+	}
+	,makeTagEntries: function(focusedTags,justGetEm,ignoreTags) {
 		if(justGetEm == null) {
 			justGetEm = false;
 		}
 		this.tagEntries = [];
+		if(ignoreTags == null) {
+			ignoreTags = [];
+		}
+		var blah = [];
+		var _g = 0;
+		while(_g < focusedTags.length) {
+			var tag = focusedTags[_g];
+			++_g;
+			blah.push(tag.name);
+		}
 		if(justGetEm) {
-			var _g = 0;
-			while(_g < focusedTags.length) {
-				var tag = focusedTags[_g];
-				++_g;
-				this.tagEntries.push({ name : tag.name, tagid : tag.tagid, highlighted : true});
+			var _g1 = 0;
+			while(_g1 < focusedTags.length) {
+				var tag1 = focusedTags[_g1];
+				++_g1;
+				this.tagEntries.push({ name : tag1.name, tagid : tag1.tagid, highlighted : true});
 			}
 			return;
 		}
@@ -61,30 +96,50 @@ BoxEntry.prototype = {
 			}
 			return 0;
 		});
-		var _g1 = 0;
+		var _g2 = 0;
 		var _g11 = this.tags;
-		while(_g1 < _g11.length) {
-			var tag1 = _g11[_g1];
-			++_g1;
+		while(_g2 < _g11.length) {
+			var tag2 = _g11[_g2];
+			++_g2;
 			var found = false;
+			var disabled = false;
 			if(focusedTags != null && focusedTags.length > 0) {
-				var _g2 = 0;
-				while(_g2 < focusedTags.length) {
-					var fTag = focusedTags[_g2];
-					++_g2;
-					if(fTag.tagid == tag1.tagid) {
-						found = true;
+				var _g21 = 0;
+				while(_g21 < ignoreTags.length) {
+					var iTag = ignoreTags[_g21];
+					++_g21;
+					if(iTag == tag2.tagid) {
+						found = false;
+						disabled = true;
 						break;
+					}
+				}
+				if(!disabled) {
+					var _g22 = 0;
+					while(_g22 < focusedTags.length) {
+						var fTag = focusedTags[_g22];
+						++_g22;
+						if(fTag.tagid == tag2.tagid) {
+							found = true;
+							break;
+						}
 					}
 				}
 			} else {
 				found = true;
 			}
 			if(found) {
-				this.tagEntries.push({ name : tag1.name, tagid : tag1.tagid, highlighted : true});
+				this.tagEntries.push({ name : tag2.name, tagid : tag2.tagid, highlighted : true});
 			} else {
-				this.tagEntries.push({ name : tag1.name, tagid : tag1.tagid, highlighted : false});
+				this.tagEntries.push({ name : tag2.name, tagid : tag2.tagid, highlighted : false});
 			}
+		}
+	}
+	,toggleTag: function(tagid) {
+		if(this.disabledTags.indexOf(tagid) == -1) {
+			this.disabledTags.push(tagid);
+		} else {
+			HxOverrides.remove(this.disabledTags,tagid);
 		}
 	}
 	,getTagHTML3: function(keyAttributes,maxLines) {
@@ -128,7 +183,7 @@ BoxEntry.prototype = {
 				var i = 0;
 				var lines = 0;
 				str += "<div>";
-				var names = this.getTagNames(allTagIds);
+				var names = this.getTagNames(allTagIds,true);
 				var _g3 = 0;
 				while(_g3 < names.length) {
 					var name = names[_g3];
@@ -136,7 +191,11 @@ BoxEntry.prototype = {
 					if(i >= maxLines * 2) {
 						break;
 					}
-					str += "<p class=\"tag-list\"> " + name + "</p>";
+					var tagid = allTagIds[i];
+					var disabled = this.disabledTags.indexOf(tagid) != -1;
+					var disabledClass = disabled ? " disabled" : "";
+					var tagListClass = Main.FEATURE_FLAG_KILLABLE_TAGS ? " tag-list-killable" : "";
+					str += "<span class=\"tag-list tag-list-" + i + " tag-id-" + tagid + disabledClass + tagListClass + "\" onclick=\"Main.toggleTag(" + tagid + ")\"> " + name + "&nbsp;</span><br/>";
 					++lines;
 					++i;
 				}
@@ -211,9 +270,10 @@ BoxEntry.prototype = {
 				var arr = this.getTagNames(genres);
 				while(arr.length > 3) arr.pop();
 				var tagNames = arr.join(", ");
+				var i2 = 0;
 				if(tagNames != null && tagNames.length > 0) {
 					if(!(tagNames.length == 1 && genres[0] == "492")) {
-						str += "<p class=\"tag-list\"> " + tagNames + "</p>";
+						str += "<p class=\"tag-list tag-list-0\"> " + tagNames + "</p>";
 						++lines;
 					}
 				}
@@ -246,14 +306,14 @@ BoxEntry.prototype = {
 				while(arr1.length > 3) arr1.pop();
 				tagNames1 = arr1.join(", ");
 				if(lines < maxLines && tagNames1 != null && tagNames1.length > 0) {
-					str += "<p class=\"tag-list\"> " + tagNames1 + "</p>";
+					str += "<p class=\"tag-list tag-list-" + lines + "\"> " + tagNames1 + "</p>";
 					++lines;
 				}
 				++i;
 			}
 			if(!forHover) {
 				while(lines < maxLines) {
-					str += "<p class=\"tag-list\">&nbsp;</p>";
+					str += "<p class=\"tag-list tag-list-" + lines + "\">&nbsp;</p>";
 					++lines;
 				}
 			}
@@ -311,15 +371,33 @@ BoxEntry.prototype = {
 		}
 		return str;
 	}
-	,getTagNames: function(tags) {
+	,getTagNames: function(tags,showDisabled) {
+		if(showDisabled == null) {
+			showDisabled = false;
+		}
 		var arr = [];
 		var _g = 0;
 		while(_g < tags.length) {
 			var tagId = tags[_g];
 			++_g;
-			var name = this.getTagName(tagId);
-			if(name != "") {
-				arr.push(name);
+			var pass = true;
+			if(!showDisabled && this.disabledTags != null) {
+				var _g1 = 0;
+				var _g2 = this.disabledTags;
+				while(_g1 < _g2.length) {
+					var dTag = _g2[_g1];
+					++_g1;
+					if(dTag == tagId) {
+						pass = false;
+						break;
+					}
+				}
+			}
+			if(pass) {
+				var name = this.getTagName(tagId);
+				if(name != "") {
+					arr.push(name);
+				}
 			}
 		}
 		return arr;
@@ -359,6 +437,7 @@ BoxEntry.prototype = {
 		this.tags = this.copyTags(other.tags);
 		this.tagEntries = this.copyTagEntries(other.tagEntries);
 		this.tagCategories = this.copyTagCategories(other.tagCategories);
+		this.disabledTags = other.disabledTags != null ? other.disabledTags.slice() : [];
 		this.url = other.url;
 		this.shortDescription = other.shortDescription;
 	}
@@ -649,9 +728,13 @@ Data.filterMatches = function(matches) {
 	}
 	return matches.map;
 };
-Data.getMatches = function(appid,recommenders,page,alreadySeen,callback) {
+Data.getMatches = function(appid,recommenders,page,alreadySeen,disabledTags,callback) {
 	var recString = recommenders.join("-");
-	Data.request("dbapi/" + appid + "/" + page,[],function(data) {
+	var url = "dbapi/" + appid + "/" + page;
+	if(disabledTags != null && disabledTags.length > 0) {
+		url += "/" + disabledTags.join(",");
+	}
+	Data.request(url,[],function(data) {
 		var map = null;
 		var matchData = null;
 		try {
@@ -1365,15 +1448,33 @@ var Main = function() { };
 Main.__name__ = true;
 Main.main = function() {
 	Main.userVariables = Data.getVariables();
+	var _this = Main.userVariables;
+	if(__map_reserved["killtags"] != null ? _this.existsReserved("killtags") : _this.h.hasOwnProperty("killtags")) {
+		Main.FEATURE_FLAG_KILLABLE_TAGS = true;
+	}
 	Main.recordOriginalHistoryPath(Main.userVariables);
 	var hash = window.location.hash;
 	if(hash != "") {
 		hash = StringTools.replace(hash,"#","");
-		Main.APPID = hash;
+		Main.APPID = Main.sanitizeAppId(hash);
 	}
 	window.onpopstate = Main.onPopState;
 	window.onhashchange = Main.onHashChange;
 	GDynamicStore.OnReady(Main.onLoad);
+};
+Main.sanitizeAppId = function(hash) {
+	var bits = hash.split(",");
+	var newBits = [];
+	var _g = 0;
+	while(_g < bits.length) {
+		var bit = bits[_g];
+		++_g;
+		var newBit = Std.parseInt(bit);
+		if(newBits != null) {
+			newBits.push(newBit);
+		}
+	}
+	return newBits.join(",");
 };
 Main.getCurrentHistoryPath = function(useAsFocusedApp,useAsBreadcrumbs) {
 	var history = "#";
@@ -1671,16 +1772,18 @@ Main.renderFocusedBox = function(appidSafeguard,iterations) {
 	}
 	if(Main.focusedEntry != null) {
 		if(Main.focusedEntry.screenshots == null || Main.focusedEntry.screenshots.length < 5) {
-			Data.getDetailsFullFat(Main.focusedEntry.appid,function(details) {
-				if(details != null) {
-					Main.focusedEntry.screenshots = details.screenshots;
-				}
-				if(Main.focusedEntry.screenshots == null || Main.focusedEntry.screenshots.length == 0) {
-					Main.focusedEntry.screenshots = [""];
-				}
-				Main.renderFocusedBox(Main.focusedEntry.appid,iterations + 1);
-			});
-			return;
+			if(iterations < 1) {
+				Data.getDetailsFullFat(Main.focusedEntry.appid,function(details) {
+					if(details != null) {
+						Main.focusedEntry.screenshots = details.screenshots;
+					}
+					if(Main.focusedEntry.screenshots == null || Main.focusedEntry.screenshots.length == 0) {
+						Main.focusedEntry.screenshots = [""];
+					}
+					Main.renderFocusedBox(Main.focusedEntry.appid,iterations + 1);
+				});
+				return;
+			}
 		} else if(Main.focusedEntry.screenshots.length == 1 && Main.focusedEntry.screenshots[0] == "") {
 			Main.focusedEntry.screenshots = [];
 		}
@@ -1737,6 +1840,7 @@ Main.renderBoxes = function(sink,justThese) {
 		var boxNode = window.document.getElementById("box-" + i1);
 		if(boxNode != null) {
 			var entry = Main.boxEntries[i1];
+			entry.disabledTags = Main.focusedEntry != null && Main.focusedEntry.disabledTags != null ? Main.focusedEntry.disabledTags.slice() : [];
 			boxNode.innerHTML = Render.boxContent(i1,entry,sink,Main.countHistory() == 0);
 			if(entry == null || entry.appid == null || entry.appid == "") {
 				GlobalStuff.addClass(boxNode,"empty-result");
@@ -2018,6 +2122,9 @@ Main.cleanupSearchNode = function() {
 		}
 	}
 };
+Main.killRefreshHistory = function() {
+	Main.refreshHistory = [];
+};
 Main.killHistory = function() {
 	Main.lastMatchCount = 0;
 	Main.breadcrumbs = [];
@@ -2040,6 +2147,22 @@ Main.setMicrotrailers = function(b) {
 	if(el != null) {
 		el.checked = b;
 	}
+};
+Main.toggleTag = $hx_exports["Main"]["toggleTag"] = function(tagid) {
+	if(Main.focusedEntry == null) {
+		return;
+	}
+	if(!Main.FEATURE_FLAG_KILLABLE_TAGS) {
+		return;
+	}
+	var strtagid = tagid == null ? "null" : "" + tagid;
+	Main.focusedEntry.toggleTag(strtagid);
+	var el = window.document.getElementById("box-tags-10");
+	var keyAttributes = Main.loc("#labs_deepdive_keytags");
+	var tagHTML = Main.focusedEntry.getTagHTML3(keyAttributes,6);
+	el.innerHTML = tagHTML;
+	Main.killRefreshHistory();
+	Main.focus(Main.focusedEntry.appid,null,null,Main.focusedEntry.disabledTags);
 };
 Main.toggleMicrotrailers = $hx_exports["Main"]["toggleMicrotrailers"] = function() {
 	var el = window.document.getElementById("checkbox-microtrailers");
@@ -2223,7 +2346,7 @@ Main.focusFromSearch = $hx_exports["Main"]["focusFromSearch"] = function(appid) 
 	Main.killHistory();
 	Main.focus(appid);
 };
-Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callback) {
+Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callback,disabledTags) {
 	if(Main.focusBusy) {
 		return;
 	}
@@ -2233,6 +2356,9 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 		priorApp = Main.focusedEntry.appid;
 		priorTitle = Main.focusedEntry.title;
 	}
+	if(disabledTags == null) {
+		disabledTags = [];
+	}
 	if(priorApp != appid) {
 		Main.hideHover();
 	}
@@ -2240,8 +2366,12 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	Main.focusedEntry.appid = appid;
 	Main.focusedEntry.title = "App(" + appid + ")";
 	Main.focusedEntry.setPrice(1999);
+	Main.focusedEntry.disabledTags = disabledTags.slice();
+	var disabledTags1 = disabledTags.slice();
 	if(showTheseBoxes == null || showTheseBoxes.length == 0) {
-		Main.saveBreadcrumbs(priorApp,priorTitle,Main.boxEntries);
+		if(priorApp != appid) {
+			Main.saveBreadcrumbs(priorApp,priorTitle,Main.boxEntries);
+		}
 		Main.renderBreadcrumbs();
 		if(priorApp != appid) {
 			Main.refreshHistory = [];
@@ -2263,6 +2393,7 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 		if(early == null) {
 			early = false;
 		}
+		Main.focusedEntry.disabledTags = disabledTags1;
 		Main.focusedEntry.setDetails(details);
 		if(early) {
 			Main.focusedEntry.keyTags = null;
@@ -2293,7 +2424,7 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	if(showTheseBoxes == null || showTheseBoxes.length == 0) {
 		Main.focusBusy = true;
 		var tmp = Main.getPreviousAppIds();
-		Data.getMatches(appid,["reccats","recdefault","recgems"],0,tmp,function(rawMatches) {
+		Data.getMatches(appid,["reccats","recdefault","recgems"],0,tmp,Main.focusedEntry.disabledTags,function(rawMatches) {
 			Main.focusBusy = false;
 			if(rawMatches == null || rawMatches.map == null) {
 				Main.handleMatches(appid,null,callback);
@@ -2352,7 +2483,7 @@ Main.displayBoxes = function(showTheseBoxes,callback) {
 	});
 };
 Main.getMoreMatches = function(appid,callback) {
-	Data.getMatches(appid,["reccats","recdefault","recgems"],Main.matchPage + 1,Main.getPreviousAppIds(),function(rawMatches) {
+	Data.getMatches(appid,["reccats","recdefault","recgems"],Main.matchPage + 1,Main.getPreviousAppIds(),Main.focusedEntry.disabledTags,function(rawMatches) {
 		rawMatches.map = Main.removeByPreferences(rawMatches.map);
 		Main.addToCurrentMatches(rawMatches);
 		Main.matchPage++;
@@ -2683,9 +2814,9 @@ Main.updateMatches = function(appid,rawMatches,column) {
 Main.setBoxDetails = function(boxEntry,detail,focusedEntry) {
 	boxEntry.setDetails(detail);
 	if(focusedEntry != null) {
-		boxEntry.makeTagEntries(focusedEntry.tags);
+		boxEntry.makeTagEntries(focusedEntry.getConsideredTags(),false,focusedEntry.disabledTags);
 	} else {
-		boxEntry.makeTagEntries([]);
+		boxEntry.makeTagEntries([],false,[]);
 	}
 };
 Main.updateTheseBoxes = function(arr) {
@@ -2761,7 +2892,7 @@ Main.afterUpdateBoxes = function(justThese) {
 		var comparison = Main.tagDB.compare(Main.focusedEntry.tags,Main.focusedEntry.tags);
 		var results = Main.tagDB.normalizeMatches(comparison.matches);
 		Main.focusedEntry.tagCategories = results;
-		Main.focusedEntry.makeTagEntries(Main.focusedEntry.tags,true);
+		Main.focusedEntry.makeTagEntries(Main.focusedEntry.getConsideredTags(),true,Main.focusedEntry.disabledTags);
 	}
 	if(Main.gridObserver != null) {
 		Main.gridObserver.disconnect();
@@ -3016,6 +3147,7 @@ Render.breadcrumbsContent = function(appids,titles) {
 		if(overflow > 0) {
 			start = overflow;
 		}
+		var k = 0;
 		var _g1 = 0;
 		var _g = appids.length;
 		while(_g1 < _g) {
@@ -3029,11 +3161,26 @@ Render.breadcrumbsContent = function(appids,titles) {
 			if(appid != "" && appid != null) {
 				var url1 = "https://steamcdn-a.akamaihd.net/steam/apps/" + appid + "/capsule_sm_120.jpg";
 				var urlArrow = Main.cdnURL + "labs/diving_bell/arrow.png";
+				var breadcrumbClass = "xcrumb-" + k;
 				if(crumbs != "") {
-					crumbs += "<img src=\"" + urlArrow + "\" class=\"arrow\">";
+					var arrowClass = "arrow " + breadcrumbClass;
+					crumbs += "<img src=\"" + urlArrow + "\" class=\"" + arrowClass + "\">";
 				}
-				crumbs += "\n<a href=\"javascript:Main.clickBreadcrumb(" + j + ")\"><img src=\"" + url1 + "\" alt=\"" + title + "\" class=\"breadcrumb\"/></a>";
+				crumbs += "\n<a href=\"javascript:Main.clickBreadcrumb(" + j + ")\" class=\"" + breadcrumbClass + "\"><img src=\"" + url1 + "\" alt=\"" + title + "\" class=\"breadcrumb\"/></a>";
+				++k;
 			}
+		}
+		if(k > 3) {
+			var overflow1 = k - 3;
+			var _g11 = 0;
+			var _g2 = overflow1;
+			while(_g11 < _g2) {
+				var i1 = _g11++;
+				var pattern = "xcrumb-" + i1;
+				var replacement = "breadcrumb-" + i1 + " breadcrumb-hide-on-narrow";
+				crumbs = StringTools.replace(crumbs,pattern,replacement);
+			}
+			crumbs = StringTools.replace(crumbs,"xcrumb-","breadcrumb-");
 		}
 	}
 	var checked = Main.MICROTRAILERS ? "checked" : "";
@@ -3114,6 +3261,34 @@ Render.microtrailer = function(index,entry,className,id,containerClass,empty) {
 	html += "</div>";
 	return html;
 };
+Render.replaceWithFullFatVideo = $hx_exports["Render"]["replaceWithFullFatVideo"] = function(index,el) {
+	var id = "video-" + index;
+	var videoTag = window.document.getElementById(id);
+	var src = "";
+	if(videoTag != null) {
+		var _g1 = 0;
+		var _g = videoTag.children.length;
+		while(_g1 < _g) {
+			var i = _g1++;
+			var child = videoTag.children.item(i);
+			if(child == el) {
+				src = child.getAttribute("src");
+				child.remove();
+				break;
+			}
+		}
+		if(src != "") {
+			var srcFullFat = "";
+			srcFullFat = StringTools.replace(src,"240.webm",".webm");
+			srcFullFat = StringTools.replace(src,"240.mp4",".mp4");
+			var error = "Render.replaceWithScreenshot(" + index + ",this)";
+			var sourceEl = window.document.createElement("source");
+			sourceEl.setAttribute("src",srcFullFat);
+			sourceEl.setAttribute("onerror",error);
+			videoTag.appendChild(sourceEl);
+		}
+	}
+};
 Render.replaceWithScreenshot = $hx_exports["Render"]["replaceWithScreenshot"] = function(index,el) {
 	var id = "video-" + index;
 	var videoTag = window.document.getElementById(id);
@@ -3142,6 +3317,8 @@ Render._microtrailerContent = function(entry,className,index) {
 	var title = entry.title;
 	var webm = entry.microtrailer_webm;
 	var mpeg4 = entry.microtrailer_mpeg4;
+	var webm240 = webm != null ? StringTools.replace(webm,".webm","240.webm") : null;
+	var mpeg4240 = mpeg4 != null ? StringTools.replace(mpeg4,".mp4","240.mp4") : null;
 	var id = "video-" + index;
 	var carouselid = "screenshot-carousel-" + index;
 	var screenshots = "";
@@ -3157,11 +3334,17 @@ Render._microtrailerContent = function(entry,className,index) {
 			}
 		}
 	}
-	var error1 = "Render.replaceWithScreenshot(" + index + ",this)";
-	var error2 = "Render.replaceWithScreenshot(" + index + ",this)";
+	var error1 = "Render.replaceWithFullFatVideo(" + index + ",this)";
+	var error2 = "Render.replaceWithFullFatVideo(" + index + ",this)";
+	if(webm240 == null || webm240 == "") {
+		error1 = "Render.replaceWithScreenshot(" + index + ",this)";
+	}
+	if(mpeg4240 == null || mpeg4240 == "") {
+		error2 = "Render.replaceWithScreenshot(" + index + ",this)";
+	}
 	var videoTag = "";
 	if(Main.MICROTRAILERS) {
-		videoTag = "<video id=\"" + id + "\" class=\"" + className + "\" loop preload muted autoplay alt=\"" + title + "\">\r\n\t\t\t\t<source src=\"" + webm + "\" onerror=\"" + error1 + "\">\r\n\t\t\t\t<source src=\"" + mpeg4 + "\" onerror=\"" + error2 + "\">\r\n\t\t\t</video>";
+		videoTag = "<video id=\"" + id + "\" class=\"" + className + "\" loop preload muted autoplay alt=\"" + title + "\">\r\n\t\t\t\t<source src=\"" + webm240 + "\" onerror=\"" + error1 + "\">\r\n\t\t\t\t<source src=\"" + mpeg4240 + "\" onerror=\"" + error2 + "\">\r\n\t\t\t</video>";
 	}
 	var display = Main.MICROTRAILERS ? "style=display:none" : "";
 	return videoTag + "\n" + ("<div class=\"hover_screenshots\" id=\"" + carouselid + "\" " + display + ">\r\n\t\t\t" + screenshots + "\r\n\t\t</div>");
@@ -3202,7 +3385,7 @@ Render.focusBoxContent = function(entry,enableBack,enableRefresh) {
 		var results = Main.tagDB.normalizeMatches(comparison.matches);
 		entry.tagCategories = results;
 	}
-	entry.makeTagEntries(entry.tags);
+	entry.makeTagEntries(entry.getConsideredTags(),null,entry.disabledTags);
 	var arr = [];
 	var _g = 0;
 	var _g1 = entry.tags;
@@ -3220,7 +3403,7 @@ Render.focusBoxContent = function(entry,enableBack,enableRefresh) {
 		arr2.push(e.name + ":" + (e.highlighted == null ? "null" : "" + e.highlighted));
 	}
 	var keyAttributes = Main.loc("#labs_deepdive_keytags");
-	var tagHTML = entry.getTagHTML3(keyAttributes,6);
+	var tagHTML = entry.getTagHTML3(keyAttributes,8);
 	var screenShots = "";
 	screenShots += "<div class=\"box-images-big\">";
 	var screenshot = entry.screenshots[0];
@@ -3236,7 +3419,8 @@ Render.focusBoxContent = function(entry,enableBack,enableRefresh) {
 		var i = _g3++;
 		var screenshot1 = entry.screenshots[i];
 		if(screenshot1 != null) {
-			screenShots += "<img src=\"" + screenshot1 + "\"/>";
+			var imageClass = "box-images-" + i;
+			screenShots += "<img src=\"" + screenshot1 + "\" class=\"" + imageClass + "\"/>";
 		}
 	}
 	screenShots += "</div>";
@@ -3277,7 +3461,22 @@ Render.box = function(index,entry,sink,first) {
 	if(entry == null || entry.appid == null || entry.appid == "") {
 		extraClass = "empty-result";
 	}
-	var html = "<div class=\"box\" id=\"" + boxId + "\">\n" + Render.boxContent(index,entry,sink,first) + "\n" + "</div>";
+	var boxColumn;
+	switch(index) {
+	case 1:case 4:case 7:
+		boxColumn = "1";
+		break;
+	case 0:case 3:case 6:
+		boxColumn = "0";
+		break;
+	case 2:case 5:case 8:
+		boxColumn = "2";
+		break;
+	default:
+		boxColumn = "side";
+	}
+	var boxColumn1 = "column-" + boxColumn;
+	var html = "<div class=\"box " + boxColumn1 + "\" id=\"" + boxId + "\">\n" + Render.boxContent(index,entry,sink,first) + "\n" + "</div>";
 	return html;
 };
 Render.similarBlurb = function(recommender) {
@@ -3346,7 +3545,7 @@ Render.boxContent = function(index,entry,sink,first) {
 	var detailsBtn = Render.detailsButton(appid,url);
 	var headerURL = entry.header;
 	var throbberStr = Render.throbber("throbber-" + index,true);
-	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">" + ("<a class=\"box-link\" href=\"javascript:Main.focus(" + appid + ")\"></a>") + ("<div class=\"box-image\" id=\"" + boxImageId + "\">") + throbberStr + ("<img src=\"" + headerURL + "\" alt=\"" + title + "\" title=\"" + title + "\">") + Render.microtrailer(index,entry,"microtrailer","","",true) + "</div>" + ("<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">") + ("<p>" + selectToExplore + "</p>") + "</div>" + ("<div class=\"box-doodads\" id=\"" + doodadId + "\">") + discountBlock + "</div>" + ("<div class=\"box-buttons\" id=\"" + boxButtonsId + "\">") + wishlistBtn + detailsBtn + "</div>" + ("<div class=\"box-tags hide-fancy\" id=\"" + boxTagsId + "\">") + ("<em>" + keyThings + "</em><br>") + tagHTML + "</div>" + "</div>";
+	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">" + ("<a class=\"box-link\" href=\"javascript:Main.focus(" + appid + ")\"></a>") + ("<div class=\"box-image\" id=\"" + boxImageId + "\">") + throbberStr + ("<img src=\"" + headerURL + "\" alt=\"" + title + "\" title=\"" + title + "\">") + Render.microtrailer(index,entry,"microtrailer","","",true) + "</div>" + ("<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">") + ("<p>" + selectToExplore + "</p>") + "</div>" + ("<div class=\"box-doodads\" id=\"" + doodadId + "\">") + discountBlock + "</div>" + ("<div class=\"box-buttons\" id=\"" + boxButtonsId + "\">") + wishlistBtn + detailsBtn + "</div>" + ("<div class=\"box-tags hide-fancy\" id=\"" + boxTagsId + "\">") + ("<em class=\"key-tags-line\">" + keyThings + "<br></em>") + tagHTML + "</div>" + "</div>";
 	return html;
 };
 Render.detailsButton = function(appid,url) {
@@ -3430,7 +3629,8 @@ Render.columnHeadersContent = function(first) {
 			headerText = "";
 		}
 		var boxHeaderId = "box-header-" + i;
-		html += "<div id=\"" + boxHeaderId + "\" class=\"box-header\">";
+		var boxColumn = "column-" + i;
+		html += "<div id=\"" + boxHeaderId + "\" class=\"box-header " + boxColumn + "\">";
 		html += "<a href=\"javascript:Main.clickColumn(" + i + ")\"><p>" + headerText + "</p></a>";
 		html += "</div>";
 	}
@@ -4485,6 +4685,7 @@ Main.originalHistory = "";
 Main.focusBusy = false;
 Main.MICROTRAILERS = true;
 Main.columnHeaders = ["reccats","recdefault","recgems"];
+Main.FEATURE_FLAG_KILLABLE_TAGS = false;
 Main.baseMap = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567889+*";
 js_Boot.__toStr = ({ }).toString;
 Main.main();

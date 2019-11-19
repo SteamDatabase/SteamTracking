@@ -2008,7 +2008,8 @@
             r
           );
         })(n.Message),
-        a = (function(i) {
+        a = (n.Message,
+        (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -2376,7 +2377,7 @@
             }),
             r
           );
-        })(n.Message),
+        })(n.Message)),
         o = (function(i) {
           function r(e) {
             void 0 === e && (e = null);

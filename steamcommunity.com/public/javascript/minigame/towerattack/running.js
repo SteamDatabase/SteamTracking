@@ -190,7 +190,7 @@ CSceneGame.prototype.Tick = function()
 		var instance = this;
 
 		// request player names as soon as we go running
-		if ( !this.m_bRequestedPlayerNames && this.m_rgGameData.status == '2' )
+		if ( !this.m_bRequestedPlayerNames && this.m_rgGameData.status == 'k_EMiniGameStatus_Running' )
 		{
 			this.m_bRequestedPlayerNames = true;
 			this.RequestOutstandingPlayerNames( true, null );
@@ -340,7 +340,7 @@ CSceneGame.prototype.Tick = function()
 					console.log("Network error");
 					console.log(err);
 				},
-				instance.m_rgGameData && instance.m_rgGameData.status == 1			);
+				instance.m_rgGameData && instance.m_rgGameData.status == k_EMiniGameStatus_WaitingForPlayers			);
 			// Switch lane
 			//console.log(this.m_rgPlayerData);
 			//if( this.m_rgPlayerData.current_lane != undefined )
@@ -718,7 +718,7 @@ CSceneGame.prototype.OnSimulatedServerTick = function()
 	if( g_msTickRate < 10000 )
 		g_msTickRate += 10;
 
-	if ( !this.m_rgPlayerData || !this.m_rgGameData || this.m_rgGameData.status != 2 )
+	if ( !this.m_rgPlayerData || !this.m_rgGameData || this.m_rgGameData.status != k_EMiniGameStatus_Running )
 		return;
 
 	var element = this.m_rgGameData.lanes[this.m_rgPlayerData.current_lane].element;
@@ -803,7 +803,7 @@ CSceneGame.prototype.RequestOutstandingPlayerNames = function( bAllowEmpty, call
 
 CSceneGame.prototype.OnGameDataUpdate = function()
 {
-	this.m_bRunning = this.m_rgGameData.status != '3';
+	this.m_bRunning = this.m_rgGameData.status != 'k_EMiniGameStatus_Ended';
 
 	if( this.m_rgGameData.universe_state && g_eUniverseState != this.m_rgGameData.universe_state )
 	{
@@ -979,12 +979,12 @@ CSceneGame.prototype.UpdateEnemies = function()
 			{
 				// Spawn enemy if we need to
 
-				if( this.m_rgGameData.lanes[i].enemies[j].type == 0)
+				if( this.m_rgGameData.lanes[i].enemies[j].type == k_ETowerAttackEnemyType_Tower)
 				{
 					enemy = new CEnemySpawner(this, i, j, this.m_rgGameData.lanes[i].enemies[j], this.m_strLevelName  );
 					this.m_mapEnemies.push(enemy);
 				}
-				else if( this.m_rgGameData.lanes[i].enemies[j].type == 1 )
+				else if( this.m_rgGameData.lanes[i].enemies[j].type == k_ETowerAttackEnemyType_Mob )
 				{
 					// Is our spawner alive? If so we should let it handle this...
 					if( this.m_rgGameData.lanes[i].enemies[0].hp <= 0 )
@@ -994,23 +994,23 @@ CSceneGame.prototype.UpdateEnemies = function()
 						this.m_mapEnemies.push(enemy);
 					}
 				}
-				else if( this.m_rgGameData.lanes[i].enemies[j].type == 2 )
+				else if( this.m_rgGameData.lanes[i].enemies[j].type == k_ETowerAttackEnemyType_Boss )
 				{
 					enemy = new CEnemyBoss(this, i, j, this.m_rgGameData.lanes[i].enemies[j], this.m_strLevelName );
 					this.m_mapEnemies.push(enemy);
 				}
-				else if( this.m_rgGameData.lanes[i].enemies[j].type == 3 )
+				else if( this.m_rgGameData.lanes[i].enemies[j].type == k_ETowerAttackEnemyType_MiniBoss )
 				{
 					enemy = new CEnemyMiniBoss(this, i, j, this.m_rgGameData.lanes[i].enemies[j] );
 					//enemy = new CEnemyTreasure(this, i, j, this.m_rgGameData.lanes[i].enemies[j] );
 					this.m_mapEnemies.push(enemy);
 				}
-				else if( this.m_rgGameData.lanes[i].enemies[j].type == 4 )
+				else if( this.m_rgGameData.lanes[i].enemies[j].type == k_ETowerAttackEnemyType_TreasureMob )
 				{
 					enemy = new CEnemyTreasure(this, i, j, this.m_rgGameData.lanes[i].enemies[j] );
 					this.m_mapEnemies.push(enemy);
 				}
-				else if( this.m_rgGameData.lanes[i].enemies[j].type != 1 )
+				else if( this.m_rgGameData.lanes[i].enemies[j].type != k_ETowerAttackEnemyType_Mob )
 				{
 					console.log("Unknown enemy type %s!!!!", this.m_rgGameData.lanes[i].enemies[j].type);
 					enemy = new CEnemyCreep(this, i, j, this.m_rgGameData.lanes[i].enemies[j] );
@@ -1028,10 +1028,10 @@ CSceneGame.prototype.UpdateEnemies = function()
 			{
 				switch( enemy.m_data.type )
 				{
-					case 2:
+					case k_ETowerAttackEnemyType_Boss:
 						this.m_rgLaneData[i].has_boss = 1;
 						break;
-					case 4:
+					case k_ETowerAttackEnemyType_TreasureMob:
 						this.m_rgLaneData[i].has_treasure_mob = 1;
 						break;
 				}
@@ -1077,87 +1077,87 @@ CSceneGame.prototype.UpdateEnemies = function()
 	// Update particles...
 	if( this.m_rgLaneData && this.m_rgLaneData[this.m_rgPlayerData.current_lane] )
 	{
-		if( window.g_TESTA || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ 7 ] )
+		if( window.g_TESTA || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ k_ETowerAttackAbility_Support_Heal ] )
 		{
-			if( !this.m_rgActiveParticles[ 7 ] )
+			if( !this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_Heal ] )
 			{
-				this.m_rgActiveParticles[ 7 ] = [
+				this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_Heal ] = [
 					this.SpawnEmitter( g_rgEmitterCache.healing_wave_crosses, 1280/2, 720/2, this.m_containerUI),
 					this.SpawnEmitter( g_rgEmitterCache.healing_wave_mist, 1280/2, 920, this.m_containerUI)
 				];
 			}
-		} else if (this.m_rgActiveParticles[ 7 ])
+		} else if (this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_Heal ])
 		{
-			this.m_rgActiveParticles[ 7 ][0].emit = false;
-			this.m_rgActiveParticles[ 7 ][1].emit = false;
-			this.m_rgActiveParticles[ 7 ] = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_Heal ][0].emit = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_Heal ][1].emit = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_Heal ] = false;
 		}
 
-		if( window.g_TESTB || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ 5 ] )
+		if( window.g_TESTB || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ k_ETowerAttackAbility_Support_IncreaseDamage ] )
 		{
-			if( !this.m_rgActiveParticles[ 5 ] )
+			if( !this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseDamage ] )
 			{
-				this.m_rgActiveParticles[ 5 ] = [
+				this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseDamage ] = [
 					this.SpawnEmitter( g_rgEmitterCache.blue_streaks, 1280/2, 720/2, this.m_containerUI)
 
 				];
 			}
-		} else if (this.m_rgActiveParticles[ 5 ])
+		} else if (this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseDamage ])
 		{
-			this.m_rgActiveParticles[ 5 ][0].emit = false;
-			this.m_rgActiveParticles[ 5 ] = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseDamage ][0].emit = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseDamage ] = false;
 		}
 
-		if( window.g_TESTC || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ 6 ] )
+		if( window.g_TESTC || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ k_ETowerAttackAbility_Support_IncreaseCritPercentage ] )
 		{
-			if( !this.m_rgActiveParticles[ 6 ] )
+			if( !this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseCritPercentage ] )
 			{
-				this.m_rgActiveParticles[ 6 ] = [
+				this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseCritPercentage ] = [
 					this.SpawnEmitter( g_rgEmitterCache.luck_clover, 1280/2, 720/2, this.m_containerUI),
 					this.SpawnEmitter( g_rgEmitterCache.luck_sparkle, 1280/2, 720/2, this.m_containerUI)
 
 				];
 			}
-		} else if (this.m_rgActiveParticles[ 6 ])
+		} else if (this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseCritPercentage ])
 		{
-			this.m_rgActiveParticles[ 6 ][0].emit = false;
-			this.m_rgActiveParticles[ 6 ][1].emit = false;
-			this.m_rgActiveParticles[ 6 ] = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseCritPercentage ][0].emit = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseCritPercentage ][1].emit = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseCritPercentage ] = false;
 		}
 
-		if( window.g_TESTE || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ 8 ] )
+		if( window.g_TESTE || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ k_ETowerAttackAbility_Support_IncreaseGoldDropped ] )
 		{
-			if( !this.m_rgActiveParticles[ 8 ] )
+			if( !this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseGoldDropped ] )
 			{
-				this.m_rgActiveParticles[ 8 ] = [
+				this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseGoldDropped ] = [
 					this.SpawnEmitter( g_rgEmitterCache.gold_up_coin, 1280/2, 720/2, this.m_containerUIBehind),
 					this.SpawnEmitter( g_rgEmitterCache.radial_rays_yellow, 1280/2, 720/2, this.m_containerUIBehind),
 					this.SpawnEmitter( g_rgEmitterCache.gold_up_sparkle, 1280/2, 720/2, this.m_containerUIBehind),
 				];
 			}
-		} else if (this.m_rgActiveParticles[ 8 ])
+		} else if (this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseGoldDropped ])
 		{
-			this.m_rgActiveParticles[ 8 ][0].emit = false;
-			this.m_rgActiveParticles[ 8 ][1].emit = false;
-			this.m_rgActiveParticles[ 8 ][2].emit = false;
-			this.m_rgActiveParticles[ 8 ] = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseGoldDropped ][0].emit = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseGoldDropped ][1].emit = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseGoldDropped ][2].emit = false;
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_IncreaseGoldDropped ] = false;
 		}
 	}
 
-	if( window.g_TESTG || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ 9 ] )
+	if( window.g_TESTG || this.m_rgLaneData[ this.m_rgPlayerData.current_lane ].abilities[ k_ETowerAttackAbility_Support_DecreaseCooldowns ] )
 	{
-		if( !this.m_rgActiveParticles[ 9 ] )
+		if( !this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_DecreaseCooldowns ] )
 		{
-			this.m_rgActiveParticles[ 9 ] = [
+			this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_DecreaseCooldowns ] = [
 				this.SpawnEmitter( g_rgEmitterCache.time_explosion, 1280/2, 720/2, this.m_containerUIBehind),
 				this.SpawnEmitter( g_rgEmitterCache.time_clock, 1280/2, 720/2, this.m_containerUIBehind)
 			];
 		}
-	} else if (this.m_rgActiveParticles[ 9 ])
+	} else if (this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_DecreaseCooldowns ])
 	{
-		this.m_rgActiveParticles[ 9 ][0].emit = false;
-		this.m_rgActiveParticles[ 9 ][1].emit = false;
-		this.m_rgActiveParticles[ 9 ] = false;
+		this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_DecreaseCooldowns ][0].emit = false;
+		this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_DecreaseCooldowns ][1].emit = false;
+		this.m_rgActiveParticles[ k_ETowerAttackAbility_Support_DecreaseCooldowns ] = false;
 	}
 
 }

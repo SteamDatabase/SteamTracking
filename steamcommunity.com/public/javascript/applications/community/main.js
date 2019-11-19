@@ -140,35 +140,35 @@
               ".js?v=" +
               {
                 0: "ebf340b3a6216e2d0fa9",
-                1: "23aaa9f01602a6a91f7d",
-                3: "e58e34c307ad1130916b",
-                5: "e15218ca33f9a9b01150",
-                6: "9613cad859146b0b0409",
-                7: "e5dac8b6459c8e21f512",
-                8: "3eb12d04bb166ce40565",
-                9: "11697df2002b37a2b339",
-                10: "a1f12ff2c4f2dc0f93de",
-                11: "95e4e6cdcdb799ec9ea2",
-                12: "60ff6ff28b6f4de811e0",
-                13: "229a7629f090085d9bba",
-                14: "a92cf6ec80de42063562",
-                15: "a76bc4765f34e4f1f35f",
-                16: "e586abee90f0742a41d5",
-                17: "11bc4a37aec2fdd363aa",
-                18: "33146e62f59ea5e7ae12",
-                19: "d0c300988d4fe94dcf81",
-                20: "bebff64f564063e19fc2",
-                21: "331f8bbfdb1a3a3bdd16",
-                22: "a2b73e5c140d6b36cdbd",
-                23: "66bc6143947b71643817",
-                24: "f4397706368d10226f18",
-                25: "c6951a7e8b3a3282d9ee",
-                26: "6ac61b8d06b614345c23",
-                27: "4aba0e6f567741d323aa",
-                28: "b834d9b07e22fbd13e60",
-                29: "3609b0882de2fae1eb23",
-                30: "a1fbeafa2fc23643542f",
-                31: "6a9967049f15bad9f85e",
+                1: "8dc280dba678e1b0a030",
+                3: "5c180f83ef10f341f2e6",
+                5: "fb8471e47aa8b80aa976",
+                6: "e9bfb1b1515830c5843f",
+                7: "1d0e48e1468bad99e83c",
+                8: "bceaa990628d6b6832c5",
+                9: "32aa3fe51cb8c294666e",
+                10: "fec997105e67dd4b6c6c",
+                11: "651cc11738a39f0f9e7a",
+                12: "2ba164b1e6ff4c97ba1a",
+                13: "9159e45bd304ed187f0b",
+                14: "4a13db6925184bce2050",
+                15: "de92f2b4ac34570f8be1",
+                16: "dd2ca6e794a276040ed3",
+                17: "6526bc718a319778e31f",
+                18: "21920e402b236d9226c3",
+                19: "b0076e0704c2c492b056",
+                20: "4186805829d34692c01c",
+                21: "a92cfb0327786bae2881",
+                22: "8c18ca9096c53f6a13b5",
+                23: "85a238d4489e60c46ad9",
+                24: "96cdbe79989c5a887a8a",
+                25: "59b1b88431f283b4a021",
+                26: "af2841537bfdddf5490b",
+                27: "cd423d406fae611e53e6",
+                28: "9f7e314bbd8d1729a3a0",
+                29: "6c3ba911c205e5c7c3b4",
+                30: "272c63981108d08d7b87",
+                31: "4e1c80516b07e2e4bc78",
                 33: "1389b6bab9c4895d521d",
                 34: "c52e24f5ecd5dc9a0946",
                 35: "74e84f0ffb34a8d64b3e",
@@ -197,33 +197,33 @@
                 58: "13e6daa9ecce278ea943",
                 59: "b6bf04f8cb7612d836bc",
                 60: "877d6e0f7fa9ced9ff2f",
-                61: "aa1b89417794e00284bf",
-                62: "e9d89cee15116b31f970",
-                63: "2a5262b9441f189f1738",
-                64: "4e12cbdcb333cd24114f",
-                65: "fb221cb10af6c13cad56",
-                66: "19a8991cdb5d1485c97e",
-                67: "d6b30873f2eaf6d5620b",
-                68: "d39a0c46a77abeb8de56",
-                69: "98bb0881f29a77f8743d",
-                70: "104195afb8f8d752f0c9",
-                71: "97264e4adbe74c989ced",
-                72: "70c177618c8d40e23747",
-                73: "15391045bbee56cbe7de",
-                74: "dc762d262b11c89743a9",
-                75: "d9bc2ae486005a8ad2a1",
-                76: "9304d5b7b8d2dd021f84",
-                77: "ec55030e6a0f80cf244a",
-                78: "17781fea9e115686d976",
-                79: "da7b1f605dc1d4dd3827",
-                80: "d92d4a3c86282a0921c2",
-                81: "cc1934d623173674ee02",
-                82: "4a6eb230c5a813460d81",
-                83: "a2201dc5c24869785c7c",
-                84: "8c221f8d028fc64c98a5",
-                85: "6e4edd694e5e9e81055e",
-                86: "283d49bcec18f2c0c110",
-                87: "359731bd42bd3c690ffd"
+                61: "8b0c0345a8f38a5e7254",
+                62: "56a59117e3a5b4545831",
+                63: "fdda85f55fc7e799f331",
+                64: "cc449afec0fc0066c8ec",
+                65: "4c53758cc3d063a4a34c",
+                66: "5ec784ae94e4d3286a8d",
+                67: "a8bbf8b2146cc04cdfd8",
+                68: "9cbba70ee361fab74c80",
+                69: "e7c147592c2cabeb0e74",
+                70: "157e737bd62c1f4774dc",
+                71: "9ab5e0f3f3bed0ecbf93",
+                72: "090ef82ec5e416c71775",
+                73: "75540ea6ef1b629d2e91",
+                74: "a3b513baaf1b4d206354",
+                75: "5747ffdb5ad8e0708de7",
+                76: "255234c1f4709002c632",
+                77: "7b9f3451bff3710e0f08",
+                78: "f0c37741fd4e10926c81",
+                79: "4e22c010a7d394f1bea9",
+                80: "c837b36fad6a3c8ee10c",
+                81: "5bc483f2df8434e15839",
+                82: "88ef3dbfb2390b1d3de0",
+                83: "3faaafdcdf781dff1f69",
+                84: "33197b8862a944ec2819",
+                85: "31d4df1630176a481567",
+                86: "22520d1ad649ebb27042",
+                87: "e039ee91dae8bc4d7ce2"
               }[e]
             );
           })(i)),
@@ -8649,8 +8649,7 @@
           );
         })(z.Component)
       ),
-      V = n("1w3K"),
-      Y = (function(e) {
+      V = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -8974,7 +8973,8 @@
           o
         );
       })(i.Message),
-      r = (function(n) {
+      r = (i.Message,
+      (function(n) {
         function o(e) {
           void 0 === e && (e = null);
           var t = n.call(this) || this;
@@ -9335,7 +9335,7 @@
           }),
           o
         );
-      })(i.Message),
+      })(i.Message)),
       p = (i.Message,
       i.Message,
       i.Message,
@@ -13732,7 +13732,8 @@
         "td",
         "th",
         "previewyoutube",
-        "looping_media"
+        "looping_media",
+        "roomeffect"
       ],
       G = ["h1", "b", "u", "i", "strike", "spoiler", "noparse", "url"];
     function x(e, t, n) {
@@ -15568,6 +15569,7 @@
               v.createElement(
                 "div",
                 { className: Ge.a.EmoticonSelector },
+                v.createElement("div", { style: { display: "flex" } }, !1, !1),
                 v.createElement(
                   "div",
                   {
@@ -15679,7 +15681,8 @@
                 emoticonStore: this.props.emoticonStore,
                 emoticonHoverStore: this.props.emoticonHoverStore,
                 strFlairGroupID: this.props.strFlairGroupID,
-                OnSelected: this.props.OnEmoticonSelected
+                OnSelected: this.props.OnEmoticonSelected,
+                onRoomEffectSelected: this.props.onRoomEffectSelected
               }),
               e,
               a || {
@@ -20266,6 +20269,7 @@
                         m.f.authwgtoken
                       ),
                       n.append("clanid", "" + r.GetAccountID()),
+                      n.append("sessionid", m.b.SESSIONID),
                       n.append(p ? "follow" : "ignore", s ? "1" : "0"),
                       [4, f.a.post(t, n, { withCredentials: !0 })]
                     );
@@ -40167,7 +40171,7 @@
                           "div",
                           { className: r },
                           (function(e, t, n) {
-                            void 0 === t && (t = k), void 0 === n && (n = " ");
+                            void 0 === t && (t = k), void 0 === n && (n = "");
                             var o = "\\[\\/?(?:" + t.join("|") + ")*?.*?\\]";
                             return e.replace(new RegExp(o, "gi"), n);
                           })(V(t.short_desc))
@@ -42469,20 +42473,6 @@
                     },
                     v.createElement(
                       "div",
-                      {
-                        className: Object(re.a)(
-                          as.CreatorTitleCtn,
-                          Be.FlexColumnContainer
-                        )
-                      },
-                      v.createElement(
-                        "a",
-                        { href: s, className: as.CreatorNameName },
-                        a.GetName()
-                      )
-                    ),
-                    v.createElement(
-                      "div",
                       { className: Be.FlexRowContainer },
                       v.createElement(
                         "a",
@@ -42495,6 +42485,20 @@
                       v.createElement(
                         "div",
                         { className: Be.FlexColumnContainer },
+                        v.createElement(
+                          "div",
+                          {
+                            className: Object(re.a)(
+                              as.CreatorTitleCtn,
+                              Be.FlexColumnContainer
+                            )
+                          },
+                          v.createElement(
+                            "a",
+                            { href: s, className: as.CreatorNameName },
+                            a.GetName()
+                          )
+                        ),
                         v.createElement(
                           "div",
                           { className: as.FollowBtnCtn },
@@ -42512,6 +42516,7 @@
                             !this.state.bApplyingFollowing &&
                               (b || M) &&
                               v.createElement("img", {
+                                style: { height: "16px" },
                                 src:
                                   "https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_selected.png"
                               }),
@@ -49519,6 +49524,9 @@
           (e.prototype.OnBackgroundClick = function(e) {
             e.currentTarget == e.target && this.Close();
           }),
+          (e.prototype.OnKeyDown = function(e) {
+            27 == e.keyCode && this.Close();
+          }),
           (e.prototype.OnScroll = function(e) {
             var t = this.m_refScroll.current;
             if (t) {
@@ -49539,12 +49547,17 @@
             var o = this.m_refScrollAnchor.current.GetDOM();
             return o ? o.offsetTop - n.scrollTop : null;
           }),
+          (e.prototype.componentDidMount = function() {
+            var e = this.m_refScroll.current;
+            e && !b.c(e, e.ownerDocument.activeElement) && e.focus();
+          }),
           (e.prototype.componentDidUpdate = function(e, t, n) {
             if (null !== n) {
-              var o = this.m_refScroll.current,
-                a = this.m_refScrollAnchor.current
-                  ? this.m_refScrollAnchor.current.GetDOM()
-                  : null;
+              var o = this.m_refScroll.current;
+              o && !b.c(o, o.ownerDocument.activeElement) && o.focus();
+              var a = this.m_refScrollAnchor.current
+                ? this.m_refScrollAnchor.current.GetDOM()
+                : null;
               a && (o.scrollTop = a.offsetTop - n);
             }
           }),
@@ -49580,7 +49593,9 @@
                 className: eM.a.AppPartnerEventsPage,
                 ref: this.m_refScroll,
                 onScroll: this.OnScroll,
-                onClick: this.OnBackgroundClick
+                onClick: this.OnBackgroundClick,
+                tabIndex: -1,
+                onKeyDown: this.OnKeyDown
               },
               v.createElement(
                 "div",
@@ -49657,6 +49672,7 @@
           Object(g.c)([z.a], e.prototype, "OnScrollComplete", null),
           Object(g.c)([z.a], e.prototype, "Close", null),
           Object(g.c)([z.a], e.prototype, "OnBackgroundClick", null),
+          Object(g.c)([z.a], e.prototype, "OnKeyDown", null),
           Object(g.c)([z.a], e.prototype, "OnScroll", null),
           (e = Object(g.c)([te.a], e))
         );
@@ -51028,7 +51044,8 @@
                 this.props.eventModel ||
                 Zt.GetClanEventFromAnnouncementGID(m.a.ANNOUNCEMENT_GID);
             if (o) {
-              var e = Jt.GetPartnerEventPermissions(o.clanSteamID);
+              var e = this.props.bIsPreview,
+                t = Jt.GetPartnerEventPermissions(o.clanSteamID);
               return v.createElement(
                 ae,
                 null,
@@ -51040,14 +51057,17 @@
                       display: "flex",
                       position: "relative",
                       flexDirection: "column",
-                      backgroundImage:
-                        "url(" +
-                        o.GetImageURLWithFallback(
-                          "sale_header",
-                          this.props.language
-                        ) +
-                        ")",
-                      backgroundColor: o.jsondata.sale_background_color
+                      backgroundImage: e
+                        ? "url(" +
+                          o.GetImageURLWithFallback(
+                            "sale_header",
+                            this.props.language
+                          ) +
+                          ")"
+                        : void 0,
+                      backgroundColor: e
+                        ? o.jsondata.sale_background_color
+                        : void 0
                     }
                   },
                   v.createElement(
@@ -51188,7 +51208,7 @@
                           bgcolor: o.jsondata.sale_browsemore_bgcolor
                         })
                       ),
-                    e.can_edit &&
+                    t.can_edit &&
                       v.createElement(Qb, {
                         eventModel: o,
                         eventUserStore: Jt,
@@ -51333,11 +51353,14 @@
                           s = Object(g.g)(s, e.capsules);
                         }),
                       (c = s.filter(function(e) {
-                        return "wishlist" === z.props.section.smart_section_type
-                          ? qn.BIsGameWishlisted(e.id)
-                          : "interactive_recommender" ===
-                              z.props.section.smart_section_type &&
-                              qn.BIsGameRecommended(e.id);
+                        return (
+                          !qn.BOwnsApp(e.id) &&
+                          ("wishlist" === z.props.section.smart_section_type
+                            ? qn.BIsGameWishlisted(e.id)
+                            : "interactive_recommender" ===
+                                z.props.section.smart_section_type &&
+                              qn.BIsGameRecommended(e.id))
+                        );
                       })),
                       (i = c),
                       (e.label = 6);
@@ -51811,11 +51834,20 @@
                     appid_or_vanity_str: n,
                     gid: this.props.gid
                   }),
-                  v.createElement(LM, {
-                    eventModel: o,
-                    bIsPreview: !0,
-                    language: e.GetCurEditLanguage()
-                  })
+                  v.createElement(
+                    "div",
+                    { style: { position: "relative" } },
+                    v.createElement(
+                      "div",
+                      { className: Eb.a.StoreNavigationPlaceholder },
+                      Object(W.c)("#Sale_ReservedStoreNavigation")
+                    ),
+                    v.createElement(LM, {
+                      eventModel: o,
+                      bIsPreview: !0,
+                      language: e.GetCurEditLanguage()
+                    })
+                  )
                 )
               : v.createElement(Zc, {
                   event: o,
@@ -62314,18 +62346,6 @@
                   v.createElement(
                     ne.c,
                     {
-                      onClick: this.OnOpenGradientInnerColor,
-                      className: Ee.a.EventEditorTextTitle,
-                      style: {
-                        backgroundColor: this.props.editModel.GetEventModel()
-                          .jsondata.broadcast_gradient_inner_color
-                      }
-                    },
-                    Object(W.c)("#Broadcast_GradientInnerColor")
-                  ),
-                  v.createElement(
-                    ne.c,
-                    {
                       onClick: this.OnOpenGradientOuterColor,
                       className: Ee.a.EventEditorTextTitle,
                       style: {
@@ -62334,6 +62354,18 @@
                       }
                     },
                     Object(W.c)("#Broadcast_GradientOuterColor")
+                  ),
+                  v.createElement(
+                    ne.c,
+                    {
+                      onClick: this.OnOpenGradientInnerColor,
+                      className: Ee.a.EventEditorTextTitle,
+                      style: {
+                        backgroundColor: this.props.editModel.GetEventModel()
+                          .jsondata.broadcast_gradient_inner_color
+                      }
+                    },
+                    Object(W.c)("#Broadcast_GradientInnerColor")
                   ),
                   v.createElement(
                     "div",
@@ -62873,6 +62905,10 @@
             (this.props.editModel.GetEventModel().jsondata.sale_show_creator = e),
               this.props.editModel.SetDirty(cb.jsondata_sales);
           }),
+          (e.prototype.OnShowOnlySaleWhiteListedBroadcasts = function(e) {
+            (this.props.editModel.GetEventModel().jsondata.sale_only_whitelisted_broadcasts = e),
+              this.props.editModel.SetDirty(cb.jsondata_sales);
+          }),
           (e.prototype.OnBrowseMoreButtonChange = function(e) {
             (this.props.editModel.GetEventModel().jsondata.sale_browse_more_button = e),
               this.props.editModel.SetDirty(cb.jsondata_sales);
@@ -63319,6 +63355,26 @@
                             checked: this.props.editModel.GetEventModel()
                               .jsondata.sale_show_creator
                           })
+                        ),
+                        v.createElement(
+                          "div",
+                          { className: Ee.a.EventEditorTextTitle },
+                          Object(W.c)("#Sale_Broadcast")
+                        ),
+                        v.createElement(
+                          "div",
+                          { className: Ee.a.InputBorder },
+                          v.createElement(ne.m, {
+                            onChange: this.OnShowOnlySaleWhiteListedBroadcasts,
+                            label: Object(W.c)(
+                              "#Sale_BroadcastOnlyWhiteListedInSale"
+                            ),
+                            tooltip: Object(W.c)(
+                              "#Sale_BroadcastOnlyWhiteListedInSale_ttip"
+                            ),
+                            checked: this.props.editModel.GetEventModel()
+                              .jsondata.sale_only_whitelisted_broadcasts
+                          })
                         )
                       )
                     )
@@ -63366,7 +63422,11 @@
                     .GetSaleSections()
                     .map(function(e, t) {
                       return v.createElement(zz, {
-                        key: t,
+                        key:
+                          n.props.editModel.GetEventModel().GetSaleSections()
+                            .length +
+                          "_" +
+                          t,
                         saleSection: e,
                         editModel: n.props.editModel,
                         index: t
@@ -63440,6 +63500,12 @@
           Object(g.c)([z.a], e.prototype, "OnOpenButtonBackgroundColor", null),
           Object(g.c)([z.a], e.prototype, "OnSaleOptionChange", null),
           Object(g.c)([z.a], e.prototype, "OnShowCreatorChange", null),
+          Object(g.c)(
+            [z.a],
+            e.prototype,
+            "OnShowOnlySaleWhiteListedBroadcasts",
+            null
+          ),
           Object(g.c)([z.a], e.prototype, "OnBrowseMoreButtonChange", null),
           Object(g.c)([z.a], e.prototype, "OnImportSaleChange", null),
           Object(g.c)([z.a], e.prototype, "OnSaleFontChange", null),
@@ -63470,7 +63536,8 @@
               eventTagToSearch: "halloween2019",
               linkToAddURL: "",
               storeTags: [],
-              storeCategories: []
+              storeCategories: [],
+              bIsExiting: !1
             }),
             e
           );
@@ -63541,10 +63608,14 @@
             });
           }),
           (e.prototype.RemoveSection = function(e) {
-            this.props.editModel
-              .GetEventModel()
-              .jsondata.sale_sections.splice(e, 1),
-              this.props.editModel.SetDirty(cb.jsondata_sales);
+            var t = this;
+            this.setState({ bIsExiting: !0 }),
+              window.setTimeout(function() {
+                t.props.editModel
+                  .GetEventModel()
+                  .jsondata.sale_sections.splice(e, 1),
+                  t.props.editModel.SetDirty(cb.jsondata_sales);
+              }, 500);
           }),
           (e.prototype.OnSaleSectionChange = function(e, t) {
             (e[t.target.name] = t.target.value),
@@ -64178,9 +64249,18 @@
               "div",
               {
                 className: Object(re.a)(Mz.a.SaleSection, Mz.a.InEditor),
-                style: IM(
-                  this.props.saleSection,
-                  this.props.editModel.GetEventModel()
+                style: Object(g.a)(
+                  Object(g.a)(
+                    {},
+                    IM(
+                      this.props.saleSection,
+                      this.props.editModel.GetEventModel()
+                    )
+                  ),
+                  {
+                    opacity: this.state.bIsExiting ? 0 : 1,
+                    transition: "opacity 500ms"
+                  }
                 )
               },
               v.createElement(
@@ -70963,13 +71043,17 @@
         "emoticon_EmoticonSelector_SeparatorBackground_3_kYc",
       EmoticonSelector_Controls: "emoticon_EmoticonSelector_Controls_2cdkF",
       EmoticonSelector_Item: "emoticon_EmoticonSelector_Item_2C8r7",
-      EmoticonSelector_Item_New: "emoticon_EmoticonSelector_Item_New_1vWJH"
+      EmoticonSelector_Item_New: "emoticon_EmoticonSelector_Item_New_1vWJH",
+      RoomEffectButton: "emoticon_RoomEffectButton_2v2oP",
+      CountBadge: "emoticon_CountBadge_3lf1T"
     };
   },
   rerp: function(e, t, n) {
     e.exports = {
       PreviewBarContainer: "partnereventpreview_PreviewBarContainer_2OUix",
-      FallBackWarning: "partnereventpreview_FallBackWarning_2x0Ma"
+      FallBackWarning: "partnereventpreview_FallBackWarning_2x0Ma",
+      StoreNavigationPlaceholder:
+        "partnereventpreview_StoreNavigationPlaceholder_tHKKN"
     };
   },
   sGzE: function(e, t, n) {

@@ -3418,3 +3418,19 @@ img.category_icon {
 	height: 16px;
 	vertical-align: top;
 }
+
+.communityitem_locinput textarea
+{
+	width: 323px;
+	height: 120px;
+}
+
+.communityitem_locinput .LocTextAreaBar
+{
+	float: right;
+}
+
+.communityitem_locinput .LocTextArea > input[type=text]
+{
+	width: 315px;
+}
