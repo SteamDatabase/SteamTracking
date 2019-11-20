@@ -50417,7 +50417,8 @@
                 p,
                 u,
                 m,
-                h = this;
+                h,
+                g = this;
               return Object(v.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
@@ -50500,36 +50501,41 @@
                     );
                   case 5:
                     (c = []),
+                      (l = new Set()),
                       this.props.event.jsondata.sale_sections
                         .filter(function(e) {
                           return "items" === e.section_type;
                         })
                         .forEach(function(e) {
-                          c = Object(v.g)(c, e.capsules);
+                          e.capsules.forEach(function(e) {
+                            "game" !== e.type ||
+                              l.has(e.id) ||
+                              (l.add(e.id), c.push(e));
+                          });
                         }),
-                      (l = c.filter(function(e) {
+                      (d = c.filter(function(e) {
                         return (
                           !Kt.BOwnsApp(e.id) &&
-                          ("wishlist" === h.props.section.smart_section_type
+                          ("wishlist" === g.props.section.smart_section_type
                             ? Kt.BIsGameWishlisted(e.id)
                             : "interactive_recommender" ===
-                                h.props.section.smart_section_type &&
+                                g.props.section.smart_section_type &&
                               Kt.BIsGameRecommended(e.id))
                         );
                       })),
-                      (o = l),
+                      (o = d),
                       (e.label = 6);
                   case 6:
                     this.setState({ dynamicCapsules: o }), (e.label = 7);
                   case 7:
                     return (
-                      (d = o.filter(function(e) {
+                      (p = o.filter(function(e) {
                         return Y(e.type);
                       })),
                       [
                         4,
                         dh.LoadAppLinkInfo(
-                          d.map(function(e) {
+                          p.map(function(e) {
                             return e.id;
                           }),
                           i
@@ -50539,13 +50545,13 @@
                   case 8:
                     return (
                       e.sent(),
-                      (p = t.capsules.filter(function(e) {
+                      (u = t.capsules.filter(function(e) {
                         return "bundle" === e.type;
                       })),
                       [
                         4,
                         He.LoadBundleInfo(
-                          p.map(function(e) {
+                          u.map(function(e) {
                             return e.id;
                           })
                         )
@@ -50554,13 +50560,13 @@
                   case 9:
                     return (
                       e.sent(),
-                      (u = t.capsules.filter(function(e) {
+                      (m = t.capsules.filter(function(e) {
                         return "sub" === e.type;
                       })),
                       [
                         4,
                         Xe.LoadPackageInfo(
-                          u.map(function(e) {
+                          m.map(function(e) {
                             return e.id;
                           })
                         )
@@ -50568,18 +50574,18 @@
                     );
                   case 10:
                     e.sent(),
-                      (m = new Set()),
-                      d.forEach(function(e) {
+                      (h = new Set()),
+                      p.forEach(function(e) {
                         if (Y(e.type)) {
                           var t = dh.GetAppLinkInfo(e.id),
                             n = t.content_descriptors,
                             r = t.tags;
                           (Kt.BExcludesContentDescriptor(n) ||
                             Kt.BExcludesTag(r)) &&
-                            m.add(e.id);
+                            h.add(e.id);
                         }
                       }),
-                      this.setState({ hiddenItems: m }),
+                      this.setState({ hiddenItems: h }),
                       (e.label = 11);
                   case 11:
                     return "events" !== t.section_type
