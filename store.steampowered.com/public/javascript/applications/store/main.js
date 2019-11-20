@@ -2643,6 +2643,7 @@
       SaleOverlay: "partnersaledisplay_SaleOverlay_1sZo8",
       AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_2H8Bm",
       SaleOuterContainer: "partnersaledisplay_SaleOuterContainer_150kd",
+      CustomStyle_together: "partnersaledisplay_CustomStyle_together_1lAyg",
       SaleBackground: "partnersaledisplay_SaleBackground_2N8Se",
       SaleSectionSubtext: "partnersaledisplay_SaleSectionSubtext_17Fnl",
       ShowContentsButton: "partnersaledisplay_ShowContentsButton_2EjTW"
@@ -50204,19 +50205,21 @@
                 E.createElement(
                   "div",
                   {
-                    className: Km.a.SaleBackground,
+                    className:
+                      Km.a.SaleBackground +
+                      " " +
+                      Km.a["CustomStyle_" + r.jsondata.sale_vanity_id],
                     style: {
                       display: "flex",
                       position: "relative",
                       flexDirection: "column",
-                      backgroundImage: e
-                        ? "url(" +
-                          r.GetImageURLWithFallback(
-                            "sale_header",
-                            this.props.language
-                          ) +
-                          ")"
-                        : void 0,
+                      backgroundImage:
+                        "url(" +
+                        r.GetImageURLWithFallback(
+                          "sale_header",
+                          this.props.language
+                        ) +
+                        ")",
                       backgroundColor: e
                         ? r.jsondata.sale_background_color
                         : void 0
@@ -50279,7 +50282,10 @@
                   E.createElement(
                     "div",
                     {
-                      className: Km.a.SaleOuterContainer,
+                      className:
+                        Km.a.SaleOuterContainer +
+                        " " +
+                        Km.a["CustomStyle_" + r.jsondata.sale_vanity_id],
                       style: { marginTop: r.jsondata.sale_header_offset + "px" }
                     },
                     r.BHasBroadcastEnabled() &&

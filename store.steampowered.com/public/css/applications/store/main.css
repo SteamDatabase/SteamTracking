@@ -1335,7 +1335,7 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
 
 .partnereventshared_SaleSectionHeader_2WMiQ {
   font-weight: 300;
-  letter-spacing: 0px;
+  letter-spacing: 0.05em;
   font-size: 18px;
   color: #FFFFFF;
   margin-bottom: 10px;
@@ -6886,15 +6886,23 @@ h4 {
 .partnersaledisplay_SaleOuterContainer_150kd {
   display: flex;
   flex-direction: column; }
-
-@media screen and (max-width: 830px) {
-  .partnersaledisplay_SaleOuterContainer_150kd {
-    margin-top: 62vw !important; } }
+  @media screen and (max-width: 1110px) {
+    .partnersaledisplay_SaleOuterContainer_150kd.partnersaledisplay_CustomStyle_together_1lAyg {
+      margin-top: 36vw !important; } }
+  @media screen and (max-width: 768px) {
+    .partnersaledisplay_SaleOuterContainer_150kd {
+      margin-top: 48vw !important; } }
 
 .partnersaledisplay_SaleBackground_2N8Se {
   background-position: center top;
   background-repeat: no-repeat;
   padding-bottom: 20px; }
+  @media screen and (max-width: 1110px) {
+    .partnersaledisplay_SaleBackground_2N8Se.partnersaledisplay_CustomStyle_together_1lAyg {
+      background-size: 230vw; } }
+  @media screen and (max-width: 768px) {
+    .partnersaledisplay_SaleBackground_2N8Se.partnersaledisplay_CustomStyle_together_1lAyg {
+      background-size: 230vw; } }
   @media screen and (max-width: 768px) {
     .partnersaledisplay_SaleBackground_2N8Se {
       background-size: 180%; } }

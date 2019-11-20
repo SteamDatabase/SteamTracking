@@ -9956,6 +9956,16 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 /* stylelint-enable */
 .appdetailscommunityfeed_InnerContainer_3Uy7t {
   display: block; }
+  .appdetailscommunityfeed_InnerContainer_3Uy7t.appdetailscommunityfeed_HasBlanks_2hEnQ {
+    opacity: 0.2;
+    animation-name: appdetailscommunityfeed_BlankItemLoop_2yovz;
+    animation-duration: 1.0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1.0s; }
+    div.LowPerfMode .appdetailscommunityfeed_InnerContainer_3Uy7t.appdetailscommunityfeed_HasBlanks_2hEnQ {
+      animation: none; }
 
 .appdetailscommunityfeed_CommunityContentContainer_A6G1l {
   font-size: 16px;
@@ -10072,15 +10082,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   transition: box-shadow .21s ease-in-out; }
   .appdetailscommunityfeed_CommunityItem_3QS6O.appdetailscommunityfeed_Blank_1HAb- {
     background-color: #646464;
-    opacity: 0.2;
-    animation-name: appdetailscommunityfeed_BlankItemLoop_2yovz;
-    animation-duration: 1.0s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-    animation-delay: 1.0s; }
-    div.LowPerfMode .appdetailscommunityfeed_CommunityItem_3QS6O.appdetailscommunityfeed_Blank_1HAb- {
-      animation: none; }
+    opacity: 1.0; }
   .appdetailscommunityfeed_CommunityItem_3QS6O:hover {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22); }
   .appdetailscommunityfeed_CommunityItem_3QS6O .appdetailscommunityfeed_ChildItem_2EOPV {

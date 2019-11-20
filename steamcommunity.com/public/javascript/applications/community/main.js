@@ -51052,19 +51052,21 @@
                 v.createElement(
                   "div",
                   {
-                    className: OM.a.SaleBackground,
+                    className:
+                      OM.a.SaleBackground +
+                      " " +
+                      OM.a["CustomStyle_" + o.jsondata.sale_vanity_id],
                     style: {
                       display: "flex",
                       position: "relative",
                       flexDirection: "column",
-                      backgroundImage: e
-                        ? "url(" +
-                          o.GetImageURLWithFallback(
-                            "sale_header",
-                            this.props.language
-                          ) +
-                          ")"
-                        : void 0,
+                      backgroundImage:
+                        "url(" +
+                        o.GetImageURLWithFallback(
+                          "sale_header",
+                          this.props.language
+                        ) +
+                        ")",
                       backgroundColor: e
                         ? o.jsondata.sale_background_color
                         : void 0
@@ -51127,7 +51129,10 @@
                   v.createElement(
                     "div",
                     {
-                      className: OM.a.SaleOuterContainer,
+                      className:
+                        OM.a.SaleOuterContainer +
+                        " " +
+                        OM.a["CustomStyle_" + o.jsondata.sale_vanity_id],
                       style: { marginTop: o.jsondata.sale_header_offset + "px" }
                     },
                     o.BHasBroadcastEnabled() &&

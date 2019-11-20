@@ -17,7 +17,8 @@
 		LibraryLowPerfCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_LowPerf_Title" }
 		LibraryLowPerfLabel { ControlName=Label labelText="#Steam_Settings_Library_LowPerf_Desc" wrap=1 }
 
-		LibraryDisplayIconInGameListCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_IconInGameList_Title" }
+		// zpos=1 to keep the low-perf label from preventing the checkbox label from being clickable
+		LibraryDisplayIconInGameListCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_IconInGameList_Title" zpos="1" }
 
 		// zpos=1 to keep the low-bandwidth label from preventing the checkbox label from being clickable
 		LibraryDisableCommunityContentCheckbox { controlname=checkbutton labeltext="#Steam_Settings_Library_DisableCommunityContent_Title" zpos="1" }
