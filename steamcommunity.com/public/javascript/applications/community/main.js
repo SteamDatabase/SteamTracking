@@ -137,7 +137,7 @@
                 86: "shared_ukrainian-json",
                 87: "shared_vietnamese-json"
               }[e] || e) +
-              ".js?v=" +
+              ".js?chunkhash=" +
               {
                 0: "ebf340b3a6216e2d0fa9",
                 1: "8dc280dba678e1b0a030",
