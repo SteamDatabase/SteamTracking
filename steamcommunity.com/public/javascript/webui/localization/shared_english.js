@@ -708,6 +708,7 @@ LocalizationReady("shared", "english", {
   PartnerEvent_34: "Cross Promotion",
   PartnerEvent_35: "General In-Game Event",
   PartnerEvent_Other: "Other Event",
+  PartnerEvent_SteamAwardNominations: "Steam Award Nomination Request",
 
   SocialMedia_Type_ShortName_1: "Steam",
   SocialMedia_Type_ShortName_2: "Google",
@@ -920,5 +921,40 @@ LocalizationReady("shared", "english", {
   Steam_Settings_Compat_Launch_Wildcard: "selected by you for all titles.",
   Steam_Settings_Compat_Launch_Whitelisted: "selected by Valve testing.",
 
+  SteamAwards_EventMainTitle: "The Steam Awards",
+  SteamAwards_EventCallToAction: "Coming this December",
+  SteamAwards_EventNominateGamePrompt_Long:
+    "Nominate %1$s for the category below as suggested by the developers of this game, or select a different category",
+  SteamAwards_EventNominateGamePrompt_NoCategory:
+    "Click here to nominate %1$s for a category on the Steam Awards page.",
+  SteamAwards_EventNominateGamePrompt_CategoryPrefix: "Nominate for:",
+  SteamAwards_EventNominationAlternativeLinkText: "Or pick another category",
+  SteamAward_CategoryTitle_none: "No category",
+  SteamAward_CategoryDesc_none:
+    "Do not suggest a specific category, and instead let your fans pick the category they think best fits your game. The event will still include a link to the nominations page.",
+  SteamAward_CategoryTitle_goty: "Game of the Year 2019",
+  SteamAward_CategoryDesc_goty:
+    "Maybe it was its immersive gameplay, or its gripping story... its well-crafted characters, immaculate design, or addictive multiplayer. Whatever the reason, the winner of the Game of the Year Award is an instant classic.",
+  SteamAward_CategoryTitle_vrgoty: "VR Game of the Year 2019",
+  SteamAward_CategoryDesc_vrgoty:
+    "When it comes to breaking new ground in games, there is no greater pace of advancement than in VR. If we had our way, all VR devs would get an award for building the future of immersive games and experiences unparalleled by any other medium. But since there’s only one trophy, it’s up to you, Steam Awards Selection Committee member, to crown just one as the best of the year.",
+  SteamAward_CategoryTitle_love: "Labor of Love 2019",
+  SteamAward_CategoryDesc_love:
+    "This game has been out for a while. The team is well past the first unveiling of their creative baby, but being the good parents they are, these devs continue to nurture and support their creation. This game, to this day, is still getting new content after all these years.",
+  SteamAward_CategoryTitle_friends: "Better with Friends 2019",
+  SteamAward_CategoryDesc_friends:
+    "There are some games out there that just aren't the same when you play by yourself. Maybe you need to have a friend to watch your back. Maybe you need to have a friend that you can stab in their back. Either way, mirth is awaiting those who gather friends to play these games.",
+  SteamAward_CategoryTitle_gameplay: "Most Innovative Gameplay",
+  SteamAward_CategoryDesc_gameplay:
+    "This game is at the front lines of experimentation, pushing the boundaries of the medium with exciting, novel interactions and brain-breaking surprises. This game thinks outside the box, and pulls you out with it!",
+  SteamAward_CategoryTitle_storyrich: "Outstanding Story-Rich Game",
+  SteamAward_CategoryDesc_storyrich:
+    "Some days, only a narrative-heavy game will hit the spot, and this one packs a wallop. It's as gripping as any soap opera and as well-tuned as a prestige-TV screenplay. Bravissimo -- for making us feel things!",
+  SteamAward_CategoryTitle_yousuck: "Best Game You Suck At",
+  SteamAward_CategoryDesc_yousuck:
+    "Games have a way of pushing us past any limits we thought we had. Like a montage sequence, we put in work, training our fingers to be quick and nimble, mastering timing and placement over weeks and weeks. At the end of the gauntlet, we're rewarded with profound beauty and a deep sense of personal growth. Unless you hurled your monitor through a plate-glass window on the first day.",
+  SteamAward_CategoryTitle_visual: "Outstanding Visual Style",
+  SteamAward_CategoryDesc_visual:
+    "These devs are the Willy Wonka of eye candy. Visual style doesn't aspire to real-world graphical fidelity (though a noble goal in itself)… it describes a distinctive look and feel that suffuses an entire game. This game displays visual cohesion and expression that not only fit the game's world, but make our world look paltry by comparison.",
   shared_dummy: "dont translate"
 });
