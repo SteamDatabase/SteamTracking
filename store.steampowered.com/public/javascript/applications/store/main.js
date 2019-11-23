@@ -110,7 +110,7 @@
                 57: "shared_ukrainian-json",
                 58: "shared_vietnamese-json"
               }[e] || e) +
-              ".js?v=" +
+              ".js?chunkhash=" +
               {
                 0: "179d2208bb00c015535b",
                 1: "8dc280dba678e1b0a030",
@@ -33203,8 +33203,9 @@
                 e.SetStatsViewIsVisible(!0)));
           }),
           (e.prototype.OnContextMenu = function(e) {
-            ot(E.createElement(xt, null, this.GetContextMenuItems()), e),
-              e.preventDefault();
+            this.state.bFullscreen ||
+              (ot(E.createElement(xt, null, this.GetContextMenuItems()), e),
+              e.preventDefault());
           }),
           (e.prototype.ToggleStatsView = function(e) {
             var t = !this.state.bShowStats;
@@ -51140,7 +51141,7 @@
                         switch (e.label) {
                           case 0:
                             return p.config
-                              ? [4, l.get(d + "getconfig")]
+                              ? [4, l.get(d + "ajaxgetconfig")]
                               : [3, 2];
                           case 1:
                             (t = e.sent()),
@@ -51151,7 +51152,7 @@
                             return p.userConfig
                               ? [
                                   4,
-                                  l.get(d + "getuserconfig", {
+                                  l.get(d + "ajaxgetuserconfig", {
                                     withCredentials: !0
                                   })
                                 ]
@@ -51162,7 +51163,7 @@
                               (e.label = 4);
                           case 4:
                             return p.broadcastConfig
-                              ? [4, l.get(d + "getbroadcastconfig")]
+                              ? [4, l.get(d + "ajaxgetbroadcastconfig")]
                               : [3, 6];
                           case 5:
                             (o = e.sent()),
@@ -51170,7 +51171,7 @@
                               (e.label = 6);
                           case 6:
                             return p.communityConfig
-                              ? [4, l.get(d + "getcommunityconfig")]
+                              ? [4, l.get(d + "ajaxgetcommunityconfig")]
                               : [3, 8];
                           case 7:
                             (s = e.sent()),
@@ -51181,7 +51182,7 @@
                         }
                       });
                     });
-                  })(y.a, M.COMMUNITY_BASE_URL + "chat/", { userConfig: !0 })
+                  })(y.a, M.STORE_BASE_URL + "actions/", { userConfig: !0 })
                 ]
               );
             case 1:
