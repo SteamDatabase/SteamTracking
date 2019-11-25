@@ -47782,6 +47782,12 @@
                         "rtime32_visibility_end",
                         "" + this.m_editModel.GetEventVisibilityEndTime()
                       ),
+                      a.append(
+                        "start_time_is_now",
+                        this.m_editModel.GetStartTimeEditChoice() == bb.k_ENow
+                          ? "1"
+                          : "0"
+                      ),
                       !z)
                     )
                       for (
@@ -48269,8 +48275,9 @@
           Object(g.c)([_.f], e.prototype, "LoadClanEventLocalization", null),
           e
         );
-      })(Rb))(),
-      Cb = l("rerp"),
+      })(Rb))();
+    window.g_PartnerEventEditStore = Lb;
+    var Cb = l("rerp"),
       Tb = l.n(Cb),
       Nb = l("TSYQ"),
       wb = (function(e) {
