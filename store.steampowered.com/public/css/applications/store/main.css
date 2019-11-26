@@ -1691,7 +1691,7 @@ body.modals_BodyNoScrollDialog_105OB {
   max-width: 155px; }
 
 .broadcastwidgets_StoreSaleImage_2LocI {
-  width: 300px;
+  width: 100%;
   cursor: pointer; }
 
 .broadcastwidgets_StoreSaleImage_mini_1zSsm {
@@ -1723,8 +1723,12 @@ body.modals_BodyNoScrollDialog_105OB {
     .broadcastwidgets_StoreSaleWidgetRelease_3yCCs {
       display: none; } }
 
+.broadcastwidgets_StoreSaleWidgetTags_26_Kk {
+  display: none; }
+
 .broadcastwidgets_StoreSaleWidgetScreenshots_3mnba {
-  margin-top: 4px; }
+  margin-top: 4px;
+  display: none; }
 
 .broadcastwidgets_AppTag_2pNqf {
   display: inline-block;
@@ -1767,8 +1771,13 @@ body.modals_BodyNoScrollDialog_105OB {
     .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
       display: none; } }
 
+.broadcastwidgets_StoreSaleWidgetLeft_20n87 {
+  padding: 0px;
+  flex-basis: 30%; }
+
 .broadcastwidgets_StoreSaleWidgetRight_1MzBO {
-  padding: 4px; }
+  padding: 4px;
+  flex-basis: 70%; }
 
 .broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY {
   display: flex;
@@ -1853,6 +1862,9 @@ body.modals_BodyNoScrollDialog_105OB {
   margin-left: 3px;
   margin-right: 5px;
   max-width: 60vw; }
+
+.broadcastwidgets_CapsulePlatform_1YzDv {
+  display: none; }
 
 .broadcastwidgets_Action_2Xpw9 {
   min-width: 50%;
@@ -6256,7 +6268,8 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   margin-right: 24px;
   margin-bottom: 40px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-  border-radius: 4px; }
+  border-radius: 4px;
+  position: relative; }
   .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_SteamAwardContainer_1Knmj {
     margin: 24px; }
   .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P {

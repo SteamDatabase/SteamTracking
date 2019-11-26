@@ -6186,7 +6186,8 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   margin-right: 24px;
   margin-bottom: 40px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
-  border-radius: 4px; }
+  border-radius: 4px;
+  position: relative; }
   .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_SteamAwardContainer_1Knmj {
     margin: 24px; }
   .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P {

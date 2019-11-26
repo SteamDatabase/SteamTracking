@@ -3324,6 +3324,7 @@
       StoreSaleImage_mini: "broadcastwidgets_StoreSaleImage_mini_1zSsm",
       StoreSaleWidgetTitle: "broadcastwidgets_StoreSaleWidgetTitle_38YoU",
       StoreSaleWidgetRelease: "broadcastwidgets_StoreSaleWidgetRelease_3yCCs",
+      StoreSaleWidgetTags: "broadcastwidgets_StoreSaleWidgetTags_26_Kk",
       StoreSaleWidgetScreenshots:
         "broadcastwidgets_StoreSaleWidgetScreenshots_3mnba",
       AppTag: "broadcastwidgets_AppTag_2pNqf",
@@ -3331,6 +3332,7 @@
         "broadcastwidgets_StoreSaleWidgetShortDesc_2by8B",
       StoreSaleWidgetShortDesc_mini:
         "broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU",
+      StoreSaleWidgetLeft: "broadcastwidgets_StoreSaleWidgetLeft_20n87",
       StoreSaleWidgetRight: "broadcastwidgets_StoreSaleWidgetRight_1MzBO",
       StoreSalePriceActionWidgetContainer:
         "broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY",
@@ -3342,6 +3344,7 @@
       CapsuleBottomBar: "broadcastwidgets_CapsuleBottomBar_2ygf4",
       CapsuleImage: "broadcastwidgets_CapsuleImage_XI8fY",
       CapsuleTitle: "broadcastwidgets_CapsuleTitle_2eIiB",
+      CapsulePlatform: "broadcastwidgets_CapsulePlatform_1YzDv",
       Banner: "broadcastwidgets_Banner_3ikQa",
       Blue: "broadcastwidgets_Blue_3hfTG",
       LiveIcon: "broadcastwidgets_LiveIcon_1iKjC",
@@ -11584,7 +11587,7 @@
                   { className: e },
                   A.createElement(
                     "div",
-                    { className: Tr.a.Actions },
+                    { className: pt(Tr.a.Actions, Tr.a.StoreSaleWidgetLeft) },
                     A.createElement(
                       "div",
                       {
@@ -11596,6 +11599,25 @@
                       A.createElement("img", {
                         className: i,
                         src: this.state.mainImageURL || n.capsule
+                      })
+                    ),
+                    A.createElement(
+                      "div",
+                      { className: Tr.a.StoreSaleWidgetScreenshots },
+                      n.screenshot_list.slice(0, 3).map(function(e) {
+                        return A.createElement("img", {
+                          key: e,
+                          onMouseOver: function() {
+                            return t.OnScreenshotOver(e);
+                          },
+                          onMouseOut: t.OnScreenshotOut,
+                          onFocus: function() {
+                            return t.OnScreenshotOver(e);
+                          },
+                          onBlur: t.OnScreenshotOut,
+                          style: { width: "150px", marginRight: "10px" },
+                          src: e
+                        });
                       })
                     )
                   ),
@@ -11629,32 +11651,13 @@
                     ),
                     A.createElement(
                       "div",
-                      { className: Tr.a.StoreSaleWidgetRelease },
+                      { className: Tr.a.StoreSaleWidgetTags },
                       n.tags.map(function(e) {
                         return A.createElement(
                           "div",
                           { key: e.tagid, className: Tr.a.AppTag },
                           e.name
                         );
-                      })
-                    ),
-                    A.createElement(
-                      "div",
-                      { className: Tr.a.StoreSaleWidgetScreenshots },
-                      n.screenshot_list.slice(0, 3).map(function(e) {
-                        return A.createElement("img", {
-                          key: e,
-                          onMouseOver: function() {
-                            return t.OnScreenshotOver(e);
-                          },
-                          onMouseOut: t.OnScreenshotOut,
-                          onFocus: function() {
-                            return t.OnScreenshotOver(e);
-                          },
-                          onBlur: t.OnScreenshotOut,
-                          style: { width: "150px", marginRight: "10px" },
-                          src: e
-                        });
                       })
                     ),
                     A.createElement(qr, {
@@ -12660,7 +12663,7 @@
         var t = e.item;
         return A.createElement(
           "span",
-          { className: Tr.a.CapsuleTitle },
+          { className: Tr.a.CapsulePlatform },
           t.available_windows && A.createElement("img", { src: Dr.a }),
           t.available_mac && A.createElement("img", { src: Ir.a }),
           t.available_linux && A.createElement("img", { src: kr.a })
