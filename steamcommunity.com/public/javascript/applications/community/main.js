@@ -55111,7 +55111,7 @@
               n = e.GetEventStartTime(),
               o = e.GetEventVisibilityStartTime(),
               a = e.GetEarliestStartTimeForEdit(),
-              i = a && a > Gl.unix(),
+              i = !a || a > Gl.unix(),
               r = e.BPublished(),
               p = e.BVisible(),
               s = n == o || o <= 1,

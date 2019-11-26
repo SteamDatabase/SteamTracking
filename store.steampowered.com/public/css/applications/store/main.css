@@ -2383,9 +2383,6 @@ body.modals_BodyNoScrollDialog_105OB {
   width: 20px;
   height: 20px; }
 
-.compactView .chatentry_chatSubmitButton_RVIs8 .SVGIcon_Paperclip {
-  margin-bottom: 8px; }
-
 .ChatMessageEntryVoice {
   /* our layout */
   flex: 0;
@@ -2663,6 +2660,8 @@ img.emoticon_emoticon_AB86v {
 .emoticon_RoomEffectButton_2v2oP {
   width: 40px;
   height: 40px;
+  color: white;
+  font-size: 26px;
   background-color: gray;
   border: 1px solid black;
   border-radius: 4px;
@@ -2673,14 +2672,25 @@ img.emoticon_emoticon_AB86v {
   background: #ec2020;
   color: white;
   position: absolute;
-  font-size: 10px;
+  font-size: 8px;
   border-radius: 50%;
-  right: 4px;
-  top: 4px;
-  width: 14px;
+  right: 3px;
+  top: 3px;
+  width: 12px;
   display: flex;
   align-items: center;
   justify-content: center; }
+
+.emoticon_StickerButton_3Wc3j {
+  width: 40px;
+  height: 40px;
+  color: white;
+  font-size: 26px;
+  background-color: gray;
+  border: 1px solid black;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer; }
 
 /* These styles are used within the returned emoticon tooltip, so need to be global for now */
 .emoticon_hover_arrow {
@@ -6270,6 +6280,95 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 .partnereventdisplay_SteamBlog_1rafn {
   visibility: hidden; }
 
+.partnereventdisplay_SteamAwardContainer_1Knmj {
+  margin-right: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  border-radius: 4px; }
+  .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P {
+    box-sizing: border-box;
+    position: relative;
+    padding: 16px;
+    border-top-left-radius: 4px;
+    background-color: #061822;
+    height: 153px;
+    font-size: 12px; }
+    .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardHeaderImage_12B50 {
+      position: absolute;
+      top: -36px;
+      right: 0; }
+    .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardMainCtn_jLgIp {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center; }
+    .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardMainTitle_1ywQr {
+      position: relative;
+      color: #bcf3dc;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 36px;
+      line-height: 36px; }
+    .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardSubTitle_3fvjW {
+      position: relative;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #bcf3dc; }
+      .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardSubTitle_3fvjW .partnereventdisplay_SteamAwardLearnMore_DOp8w {
+        color: #c9d3d9;
+        margin-left: 12px; }
+        .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardSubTitle_3fvjW .partnereventdisplay_SteamAwardLearnMore_DOp8w:hover {
+          color: white; }
+    .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardHeaderText_dbCh6 {
+      position: relative;
+      padding-top: 15px;
+      width: 75%;
+      color: #c9d3d9;
+      font-style: italic; }
+      .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardHeaderText_dbCh6 a {
+        text-decoration: underline;
+        font-style: normal; }
+        .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardHeaderText_dbCh6 a:hover {
+          color: white; }
+  .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardVoteWidget_2qw6n {
+    background-color: #355a5f;
+    padding: 4px 16px 8px;
+    color: #ebebeb;
+    font-size: 12px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
+    .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardVoteWidget_2qw6n .partnereventdisplay_SteamAwardVotePrompt_2zwQp {
+      text-transform: uppercase;
+      color: #bcf3dc;
+      margin-bottom: 4px;
+      letter-spacing: 0.05em; }
+    .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardVoteWidget_2qw6n .partnereventdisplay_SteamAwardVoteButton_2GL0x {
+      border: 1px solid rgba(188, 243, 220, 0.4);
+      border-radius: 4px;
+      padding: 4px 6px 0px;
+      color: #dfe3e6; }
+      .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardVoteWidget_2qw6n .partnereventdisplay_SteamAwardVoteButton_2GL0x:hover {
+        border: 1px solid #bcf3dc; }
+      .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardVoteWidget_2qw6n .partnereventdisplay_SteamAwardVoteButton_2GL0x .DialogCheckbox {
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 1px solid #bcf3dc;
+        border-radius: 12px;
+        margin-top: 4px; }
+      .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardVoteWidget_2qw6n .partnereventdisplay_SteamAwardVoteButton_2GL0x .partnereventdisplay_SteamAwardCategoryTitle_XYCtL {
+        color: white;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 31px; }
+      .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardVoteWidget_2qw6n .partnereventdisplay_SteamAwardVoteButton_2GL0x .partnereventdisplay_SteamAwardCategoryDesc_18xat {
+        margin-left: 32px;
+        display: block; }
+    .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardVoteWidget_2qw6n .partnereventdisplay_SteamAwardLinkToNominationPage_1gwEH {
+      margin-top: 4px;
+      text-decoration: underline; }
+
+.partnereventdisplay_SteamAwardModalGameTitle_3IQcZ {
+  color: white; }
+
 .partnereventdialog_ErrorStyles_2Sg7W {
   color: #c44848; }
 
@@ -7480,7 +7579,9 @@ button.DialogButton::-moz-focus-inner {
 .ModalDialogPopup .DialogContentTransition > .DialogContent {
   position: absolute;
   bottom: 0;
-  top: 0; }
+  top: 0;
+  left: 0;
+  right: 0; }
 
 .DialogContent {
   padding: 24px;
@@ -7546,7 +7647,6 @@ button.DialogButton::-moz-focus-inner {
   height: 100%; }
 
 .DialogContent._DialogLayout.PagedSettingsDialog_PageContent .DialogHeader {
-  margin-bottom: 16px;
   margin-right: 0; }
 
 .DialogHeader {
@@ -8572,7 +8672,6 @@ body.in_global_drag .title-area {
   line-height: 18px;
   height: 18px;
   display: flex;
-  position: absolute;
   margin-top: -2px; }
 
 .permissionDetailsPage .DialogBodyNotificationBar {

@@ -17,6 +17,11 @@ body{
 	height: 76px;
 }
 
+#CreateNewAppDialog select#appType
+{
+	width: 250px;
+}
+
 	#landingHeader .logo {
 		display: inline-block;
 
