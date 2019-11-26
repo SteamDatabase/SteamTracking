@@ -9963,7 +9963,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
-    animation-delay: 1.0s; }
+    animation-delay: 1.0s;
+    pointer-events: none; }
     div.LowPerfMode .appdetailscommunityfeed_InnerContainer_3Uy7t.appdetailscommunityfeed_HasBlanks_2hEnQ {
       animation: none; }
 
@@ -11617,6 +11618,8 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     margin-right: 16px; }
     .writereview_RatingContainer_2SAb6 .writereview_LeftContainer_2aeAn .writereview_Playtime_qX4kN {
       color: #67c1f5; }
+  .writereview_RatingContainer_2SAb6 .writereview_RightContainer_1E6Iv {
+    flex-shrink: 0; }
   .writereview_RatingContainer_2SAb6 .writereview_RecommendGame_My1be {
     color: #FFF; }
 

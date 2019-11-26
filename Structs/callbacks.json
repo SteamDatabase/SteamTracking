@@ -1516,7 +1516,7 @@
     },
     {
         "id": 2707,
-        "size": 84,
+        "size": 88,
         "posted_in": "CGetControllerInfoWorkItem::DispatchCompletion()"
     },
     {

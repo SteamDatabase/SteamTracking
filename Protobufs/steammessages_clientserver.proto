@@ -171,6 +171,7 @@ message CMsgClientGamesPlayed {
 		optional uint32 launch_source = 21 [default = 0];
 		optional uint32 vr_hmd_runtime = 22;
 		optional .CMsgIPAddress game_ip_address = 23;
+		optional uint32 controller_connection_type = 24 [default = 0];
 	}
 
 	repeated .CMsgClientGamesPlayed.GamePlayed games_played = 1;
