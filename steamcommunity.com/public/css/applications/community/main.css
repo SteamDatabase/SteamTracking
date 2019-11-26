@@ -6187,6 +6187,8 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   margin-bottom: 40px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   border-radius: 4px; }
+  .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_SteamAwardContainer_1Knmj {
+    margin: 24px; }
   .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P {
     box-sizing: border-box;
     position: relative;
@@ -6197,8 +6199,9 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     font-size: 12px; }
     .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardHeaderImage_12B50 {
       position: absolute;
-      top: -36px;
-      right: 0; }
+      bottom: 0;
+      right: 0;
+      max-width: 100%; }
     .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardMainCtn_jLgIp {
       display: flex;
       flex-direction: column;
@@ -6232,6 +6235,9 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
         font-style: normal; }
         .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardHeaderText_dbCh6 a:hover {
           color: white; }
+      @media screen and (max-width: 620px) {
+        .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardHeaderText_dbCh6 {
+          display: none; } }
   .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardVoteWidget_2qw6n {
     background-color: #355a5f;
     padding: 4px 16px 8px;
