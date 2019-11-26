@@ -59,15 +59,21 @@
             ]
         },
         {
-            "name": "GetItemCreators",
+            "name": "GetItemIconPath",
             "version": 1,
             "httpmethod": "GET",
             "parameters": [
                 {
-                    "name": "itemdef",
-                    "type": "uint32",
+                    "name": "iconname",
+                    "type": "string",
                     "optional": false,
-                    "description": "The item definition to get creator information for."
+                    "description": "The item icon name to get the CDN path of"
+                },
+                {
+                    "name": "icontype",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "The type of image you want. 0 = normal, 1 = large, 2 = ingame"
                 }
             ]
         },

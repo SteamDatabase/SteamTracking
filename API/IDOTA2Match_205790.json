@@ -2,6 +2,12 @@
     "name": "IDOTA2Match_205790",
     "methods": [
         {
+            "name": "GetLeagueListing",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        },
+        {
             "name": "GetLiveLeagueGames",
             "version": 1,
             "httpmethod": "GET",
@@ -30,12 +36,6 @@
                     "type": "uint64",
                     "optional": false,
                     "description": "Match id"
-                },
-                {
-                    "name": "include_persona_names",
-                    "type": "bool",
-                    "optional": true,
-                    "description": "Include persona names as part of the response"
                 }
             ]
         },
@@ -209,6 +209,12 @@
                 {
                     "name": "match_id",
                     "type": "uint64",
+                    "optional": true,
+                    "description": ""
+                },
+                {
+                    "name": "phase_id",
+                    "type": "uint32",
                     "optional": true,
                     "description": ""
                 }
