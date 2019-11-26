@@ -285,6 +285,14 @@
 	font-weight: bold;
 }
 
+.search_crouton_icon {
+	display: inline;
+	float: left;
+	width: 14px;
+	height: 14px;
+	padding-right: 4px;
+}
+
 #search_infiniscroll_reload_container {
 	display: none;
 }

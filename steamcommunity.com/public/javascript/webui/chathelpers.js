@@ -1292,9 +1292,6 @@
       }),
       n.d(t, "g", function() {
         return c;
-      }),
-      n.d(t, "h", function() {
-        return p;
       });
     n("XaMz");
     function r(e, t, n) {
@@ -1321,12 +1318,7 @@
         return t !== e;
       });
     }
-    function u(e, t) {
-      if (e.length != t.length) return !1;
-      for (var n = 0; n < e.length; n++) if (e[n] != t[n]) return !1;
-      return !0;
-    }
-    function c(e, t, n) {
+    function u(e, t, n) {
       for (var r = 0, o = e.length - 1; r <= o; ) {
         var i = Math.floor((r + o) / 2),
           a = n(e[i], t);
@@ -1340,8 +1332,8 @@
       }
       return o;
     }
-    function p(e, t, n) {
-      var r = c(e, t, n);
+    function c(e, t, n) {
+      var r = u(e, t, n);
       e.splice(r + 1, 0, t);
     }
   },
@@ -1737,6 +1729,7 @@
         bDisableEmbedInlining: !1,
         bSignIntoFriends: !0,
         bDisableSpellcheck: !1,
+        bDisableRoomEffects: !1,
         featuresEnabled: {}
       };
     }

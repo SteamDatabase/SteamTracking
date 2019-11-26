@@ -27,13 +27,14 @@ function OnLocationChange ( elIgnored, hash )
 	}
 }
 
+// This sorts our tags by frequency (tag facet) or explicitly (forced top)
 g_TagMap = null;
-function PopulateTagFacetData( rgTagFacetData )
+function PopulateTagFacetData( rgTagFacetData, rgForcedTop )
 {
-	// tab_filter_control_count
 	var $Container = $J('#TagFilter_Container');
 	var $Tags = $Container.children('div').detach();
 
+	// Map of tag IDs to HTML elements
 	if ( !g_TagMap )
 	{
 		g_TagMap = {};
@@ -45,27 +46,46 @@ function PopulateTagFacetData( rgTagFacetData )
 
 	var nIndex = 0;
 	var rgDisplayedTags = {};
+
+	// Move our forcedTop elements to the top of our control.
+	for ( var i = 0; i < rgForcedTop.length; i++ )
+	{
+		var tagid = rgForcedTop[i];
+		var $Tag = g_TagMap[ tagid ];
+		$Container.append( $Tag );
+		$Tag.show();
+		rgDisplayedTags[ tagid ] = true;
+		nIndex++;
+		$Tag.find('.tab_filter_control_count').css( {display: 'none' });
+	}
+
+	// Walk the rest of our tags that have facet counts and continue appending.
 	for ( var i = 0; i < rgTagFacetData.length; i++ )
 	{
 		var tagid = rgTagFacetData[i][0];
 		var count = rgTagFacetData[i][1];
 
+		if (rgDisplayedTags[tagid])
+			continue;
+
 		rgDisplayedTags[ tagid ] = true;
 		var $Tag = g_TagMap[tagid];
-		$Tag.children('.tab_filter_control_count').text( v_numberformat( count ) ).css( {display: '' });
+		$Tag.find('.tab_filter_control_count').text( v_numberformat( count ) ).css( {display: '' });
 		$Container.append( $Tag );
 		if ( nIndex++ > 15 )
 			$Tag.hide();
 		else
 			$Tag.show();
 	}
+
+	//Add any remaining tags.
 	for ( var tagid in g_TagMap )
 	{
 		if ( rgDisplayedTags[tagid] )
 			continue;	//handled above
 
 		var $Tag = g_TagMap[tagid];
-		$Tag.children('.tab_filter_control_count').css( {display: 'none' });
+		$Tag.find('.tab_filter_control_count').css( {display: 'none' });
 		$Container.append( $Tag );
 		if ( nIndex++ > 15 )
 			$Tag.hide();
@@ -439,59 +459,89 @@ function InitSearchPage()
 	DecorateFilterControls();
 }
 
+// Adds an element to an array that we've encoded in a string.
+function strArrayAdd( strArray, strElement )
+{
+	if ( ! strArray )
+		return strElement
+
+	var rgValues = strArray.split(',');
+
+	if( $J.inArray( strElement, rgValues ) == -1 )
+		rgValues.push( strElement )
+
+	return rgValues.join(',');
+}
+
+// Remove an element from an array we've encoded in a string.
+function strArrayDel( strArray, strElement )
+{
+	if (! strArray)
+		return "";
+
+	if ( strElement === null )
+		return strArray;
+
+	var rgValues = strArray.split(',');
+
+	if( rgValues.indexOf( strElement ) != -1 )
+		rgValues.splice( rgValues.indexOf( strElement ), 1 );
+
+	return rgValues.join(',');
+}
+
 // Decorates all our filter controls with event handlers.
 function DecorateFilterControls()
 {
-	$J('.tab_filter_control').each( function() {
+	$J('.tab_filter_control_include, .tab_filter_control_not').each( function() {
 		var $Control = $J(this);
-		var strParam = $Control.data('param');
-		var value = $Control.data('value');
 		var bClientSideOnly = $Control.data('clientside');
 
 		// Skip client-side only fields.
 		if (bClientSideOnly)
 		    return;
 
+		var strParam = $Control.data('param'); // Eg: 'tags'
+		var value = $Control.data('value');
+		var $dataStore = $J('#' + strParam);
+		var antiField = $dataStore.data('antifield');
+
 		$Control.click( function() {
-			var strValues = decodeURIComponent( $J("#"+strParam).val() );
+			var $antiStore = antiField ? $J('#' + antiField) : null;
+			var strValues = decodeURIComponent( $dataStore.val() );
 			value = String(value); // Javascript: Dynamic types except sometimes not.
 			var bIsToggle = ( value === '__toggle' );
 
 			var finalValue = null;
+			var finalAntiValue = null;
 
-			if ( !$Control.hasClass( 'checked' ) )
-			{
+			// When checking a field, we need to remove values from the antistore, if it
+			// exists.
+			if ( !$Control.hasClass( 'checked' ) ) {
 				if ( bIsToggle )
-				{
 					finalValue = 1;
-				}
-				else
-				{
-					var rgValues;
-					if( !strValues )
-						rgValues = [ value ];
-					else
-					{
-						rgValues = strValues.split(',');
-						if( $J.inArray(value, rgValues) == -1 )
-							rgValues.push(value)
-					}
+				else {
+					finalValue = strArrayAdd( strValues, value );
+					if ( $antiStore ) {
+						$antiStore.val( strArrayDel( $antiStore.val(), value ) );
 
-					finalValue = rgValues.join(',');
+						// Remove checked from the anti-element, if it exists.
+						$J("span[data-value="+value+"][data-param="+antiField+"]").removeClass( 'checked' );
+
+					}
+					// Set checked on our parent row.
+					$Control.parent().addClass( 'checked' );
 				}
 
 				$Control.trigger('tablefilter_clear');
 			}
-			else
-			{
+			// When unchecking a field, no extra anti-field work is needed.
+			else {
 				if ( !bIsToggle )
-				{
-					var rgValues = strValues.split(',');
-					if( rgValues.indexOf(value) != -1 )
-						rgValues.splice( rgValues.indexOf(value), 1 );
+					finalValue = strArrayDel( strValues, value );
 
-					finalValue = rgValues.join(',');
-				}
+				// Remove checked on our parent row.
+				$Control.parent().removeClass( 'checked' );
 			}
 
 			$Control.toggleClass('checked');
@@ -642,7 +692,8 @@ function AddSearchPositionClickHandler( item )
 	}
 }
 
-function AddSearchTag( strParam, strValue, strLabel, fnOnClick )
+// This handles our croutons at the top of the page.
+function AddSearchTag( strParam, strValue, strLabel, fnOnClick, strIcon = null )
 {
 	if( $J('#searchtag_tmpl').length == 0 )
 		return;
@@ -653,6 +704,15 @@ function AddSearchTag( strParam, strValue, strLabel, fnOnClick )
 	eleTag.addClass('tag_dynamic');
 	$J(".label", eleTag).text(strLabel);
 	$J(".btn", eleTag).click( fnOnClick );
+
+	var $icon = $J(".search_crouton_icon", eleTag);
+
+	// Add an icon, or remove the icon element
+	if (strIcon)
+		$icon.attr("src",strIcon);
+	else
+		$icon.remove();
+
 	eleTag.css('display', 'inline-block');
 	$J('.termcontainer').append(eleTag);
 }
@@ -676,7 +736,8 @@ function UpdateTags()
 {
 	$J('.tag_dynamic').remove();
 	$J('#termsnone').show();
-	var rgActiveTags = $J('#TagFilter_Container .tab_filter_control.checked');
+	var rgActiveTags   = $J('#TagFilter_Container .tab_filter_control.checked');
+	var rgActiveUntags = $J('#TagFilter_Container .tab_filter_control_not.checked');
 
 	// Search term
 	var strTerm = $J("#realterm").val();
@@ -710,7 +771,6 @@ function UpdateTags()
 			AddSearchTag( Tag.data('param'), Tag.data('value'), $J('.tab_filter_control_label', Tag).text(), function(tag) { return function() { tag.click(); return false; } }(Tag) );
 			if ( !Tag.is(':visible') )
 			{
-				Tag.parent().prepend(Tag.show());
 				Tag.trigger( 'tablefilter_update' );
 			}
 		}
@@ -719,6 +779,14 @@ function UpdateTags()
 		$J('#termsnone').hide();
 	}
 
+	// NOT tags.
+	if ( rgActiveUntags.length ) {
+		for ( var i=0; i < rgActiveUntags.length; i++ ) {
+			var $untag = $J(rgActiveUntags[i]);
+			AddSearchTag( $untag.data('param'), $untag.data('value'), $untag.data('loc'), function(elem) { return function() { elem.click(); return false; } }($untag), $untag.data('icon') );
+		}
+		$J('#termsnone').hide();
+	}
 }
 
 function EnableClientSideFilters( CUserPreferences )
@@ -735,7 +803,7 @@ function EnableClientSideFilters( CUserPreferences )
 	for ( var strFilter of rgFilterNames )
 	{
 		// Find our control widget for this filter.
-		var $Control = $J("div[data-param='hide'][data-value='" + strFilter + "']");
+		var $Control = $J("span[data-param='hide'][data-value='" + strFilter + "']");
 
 		if ($Control.length < 1)
 		{
@@ -747,6 +815,7 @@ function EnableClientSideFilters( CUserPreferences )
 		{
 			results_container.addClass(strFilter);
 			$Control.addClass("checked");
+			$Control.parent().addClass("checked");
 		}
 
 		// Click handler to toggle this filter.
@@ -779,10 +848,12 @@ function OnClickClientFilter( $Control, strFilter, results_container )
         if ( bChecked )
 		{
             results_container.addClass(strFilter);
+			$Control.parent().addClass("checked");
         }
 		else 
 		{
             results_container.removeClass(strFilter);
+			$Control.parent().removeClass("checked");
         }
 
         // Our viewport will "jump" with the results list changing in length, so we calculate where we

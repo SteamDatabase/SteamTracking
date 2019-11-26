@@ -163,6 +163,7 @@ LocalizationReady("friendsui", "english", {
 
   ChatEntryButton_SendSnowfall: "Make it snow!",
   ChatEntryButton_SendConfetti: "Use a party popper!",
+  ChatEntryButton_SendSticker: "Send an animated sticker",
 
   MobilePermission_TakePhoto:
     "Oops, looks like your device was told to deny us camera or photo library access!",

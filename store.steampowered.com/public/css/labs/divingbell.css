@@ -62,7 +62,7 @@ body.v6 .page_content  {
 	outline: none;
 }
 
-.page_content img {
+.page_content .focus-box-big-screenshot {
 	max-width: 100%;
 }
 
@@ -126,7 +126,7 @@ body.v6 .page_content  {
 
 .page_content .breadcrumbs {
 	color: var(--primary-color);
-	width: calc(68.25% - 10px);
+	width: calc(80% - 10px);
 	height: 50px;
 	margin-left: 4px;
 	padding-left: 0px;
@@ -183,7 +183,7 @@ body.v6 .page_content  {
   mask-image: none;
 }
 
-.page_content .breadcrumbbox .breadcrumb{	
+.page_content .breadcrumbbox .breadcrumb{
 	height: 45px;
 	transition-duration: 0.23s;
 	transition-timing-function: ease-in;
@@ -1048,14 +1048,51 @@ round buttons
 	text-decoration: none;
 }
 
-@media(max-width: 850px){
-{
-	.page_content .column-1 {
+.page_content .wishlist_button_short {
+	display:none;
+}
+
+.page_content .details_button_short {
+	display:none;
+}
+
+@media(max-width: 1500px) {
+	.page_content .breadcrumb-hide-on-narrow0 {
+		display:none;
+	}
+}
+
+@media(max-width: 1400px) {
+	.page_content .breadcrumb-hide-on-narrow1 {
+		display:none;
+	}
+}
+
+@media(max-width: 1250px) {
+	.page_content .breadcrumb-hide-on-narrow2 {
 		display:none;
 	}
 }
 
 @media(max-width: 1000px){
+	
+	.page_content .wishlist_button_short {
+		display:inline;
+	}
+
+	.page_content .details_button_short {
+		display:inline;
+	}
+
+	.page_content .wishlist_button_long {
+		display:none;
+	}
+
+	.page_content .details_button_long {
+		display:none;
+	}
+
+
 	.page_content .box-tags em{
 		display:none;
 	}
@@ -1094,11 +1131,13 @@ round buttons
 	
 	.page_content .button-refresh {
 		width: calc(6.5%);
+		min-width: 40px;
 	}
 	
 	.page_content .button-back {
 		width: calc(6.5%);
 		right: calc(9%);
+		min-width: 40px;
 	}
 	
 	.page_content .grid-container {
@@ -1124,13 +1163,14 @@ round buttons
 	
 	.page_content .breadcrumbbox .breadcrumb{
 		height: 44px;
+		min-width: 106px
 	}
 	
 	.page_content .breadcrumbs {
 		width:100%;
 	}
 	
-	.page_content .breadcrumb-hide-on-narrow {
+	.page_content .breadcrumb-hide-on-narrow3 {
 		display:none;
 	}
 	
@@ -1141,4 +1181,142 @@ round buttons
 	.container-checkbox-microtrailers {
 		top:0px;
 	}
+	
+	.page_content .button-search {
+		top: 90px;
+		right: 10px;
+	}
 }
+
+@media(max-width: 850px){
+
+	.page_content .box.focused h2 {
+		font-size: 17pt;
+		line-height: 19pt;
+	}
+	
+	.page_content .column-1 {
+		display:none;
+	}
+	
+	.page_content .box {
+		width: calc(100% - 10px);
+	}
+	
+	.page_content .box-header {
+		width: calc(100% - 10px)
+	}
+	
+	.page_content .side-panel {
+		width: 50%;
+	}
+	
+	.page_content .grid-container {
+		width:calc(100% - 52%);
+		height: 100%;
+	}
+	
+	.page_content .breadcrumb-hide-on-narrow4 {
+		display:none;
+	}
+	
+	.page_content main {
+		padding: 0px;
+	}
+	
+	body.v6 .page_content {
+		padding: 0px;
+	}
+	
+	html.responsive body.v6 .page_content {
+		width: 100%;
+	}
+	
+	.page_content .button-back {
+		top: -50px;
+	}
+	
+	.page_content .button-refresh {
+		top: -50px;
+	}
+}
+
+@media(max-width: 680px){
+	
+	.page_content .box.focused h2 {
+		font-size: 16pt;
+		line-height: 18pt;
+	}
+	
+	.page_content .note-preferences {
+		display: none;
+	}
+	
+	.page_content .side-panel {
+		width: 48%;
+	}
+	
+	.page_content .button-back {
+		right: 55px;
+	}
+
+	.page_content .breadcrumb-hide-on-narrow5 {
+		display:none;
+	}
+}
+
+@media(max-width: 500px){
+	
+	.page_content .text-search-big {
+		font-size: 25px;
+	}
+	
+	.page_content .breadcrumbs {
+		margin-top: 0px;
+	}
+	
+	.container-checkbox-microtrailers {
+		display:none;
+	}
+}
+
+@media(max-width: 350px){
+	
+	.page_content .box.focused h2 {
+		font-size: 14pt;
+		line-height: 16pt;
+	}
+	
+	.page_content .breadcrumbbox .xcrumb-0 {
+		display: none;
+	}
+	
+	.page_content .breadcrumbbox .xcrumb-1 {
+		display: none;
+	}
+	
+	.page_content .breadcrumbbox .breadcrumb-0 {
+		display: none;
+	}
+	
+	.page_content .breadcrumbbox .breadcrumb-1 {
+		display: none;
+	}
+	
+	.page_content .box-tags-focus div {
+		column-count: 1;
+	}
+	
+	.page_content .grid-container {
+		width: 54%;
+	}
+	
+	.page_content .side-panel {
+		width: 40%;
+	}
+	
+	.page_content .box-images-small {
+		display:none;
+	}
+}
+

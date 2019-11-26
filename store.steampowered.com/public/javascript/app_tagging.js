@@ -468,6 +468,46 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		$AppTagInput.val('').change().focus();
 	};
 
+	var changeUrl = function(url, removeParam="", addParam="") {
+		
+		if(url.indexOf("?") === -1) return url;
+		var bits = url.split("?");
+		if(bits.length < 2) return url;
+		var firstBit = bits[0];
+		var secondBit = bits[1];
+		var params = [];
+		if(secondBit.indexOf("&") === -1){
+			params.push(secondBit);
+		}else{
+			var nextBits = secondBit.split("&");
+			for(var i = 0; i < nextBits.length; i++){
+				params.push(nextBits[i]);
+			}
+		}
+		
+		var result = firstBit;
+		
+		for(var i = params.length-1; i >= 0; i--){
+			var param = params[i];
+			if(param === removeParam){
+				params.splice(i,1);
+			}
+		}
+		
+		if(addParam !== "" && addParam !== null && params.indexOf(addParam) === -1){
+			params.push(addParam);
+		}
+		
+		var extraBits = params.join("&");
+		if(extraBits === "&") extraBits = "";
+		
+		if(extraBits !== ""){
+			result += "?" + extraBits;
+		}
+		
+		return result;
+	}
+
 	window.ShowAppTagModal = function( appid )
 	{
 
@@ -488,6 +528,9 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 			if ( bBannedTag )
 				window.location.reload();
+			
+			window.history.pushState({}, document.title, changeUrl(window.location.href, "tags", ""));
+			
 		} );
 
 		// in the "you need to log in" case, we don't have a form to display
@@ -507,6 +550,10 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 			// hack to size the input control correctly
 			$AppTagForm.find( '.gray_bevel').css( 'margin-right', ( $AppTagButton.width() + 12 ) + 'px' );
 		}
+		
+		//add "tags" param to the URL
+		window.history.pushState({}, document.title, changeUrl(window.location.href, "", "tags"));
+		
 	};
 
 

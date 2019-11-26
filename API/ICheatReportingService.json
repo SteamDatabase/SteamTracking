@@ -146,6 +146,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "Additional information about the ban request."
+                },
+                {
+                    "name": "invisible_ban",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "The ban will be recorded but not be visible or deny access to secure servers."
                 }
             ]
         },

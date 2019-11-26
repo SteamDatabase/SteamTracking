@@ -956,5 +956,9 @@ LocalizationReady("shared", "english", {
   SteamAward_CategoryTitle_visual: "Outstanding Visual Style",
   SteamAward_CategoryDesc_visual:
     "These devs are the Willy Wonka of eye candy. Visual style doesn't aspire to real-world graphical fidelity (though a noble goal in itself)… it describes a distinctive look and feel that suffuses an entire game. This game displays visual cohesion and expression that not only fit the game's world, but make our world look paltry by comparison.",
+  SteamAward_NominationConflictWarning_Title: "Change your nomination?",
+  SteamAward_NominationConflictWarning_Explanation:
+    "You can only nominate one game for each category, and you have already nominated %1$s for this one. Would you like to nominate %2$s instead?",
+
   shared_dummy: "dont translate"
 });

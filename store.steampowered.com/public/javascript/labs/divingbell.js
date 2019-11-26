@@ -204,7 +204,11 @@ BoxEntry.prototype = {
 			}
 		} else {
 			var keyAttributes1 = Main.loc("#labs_deepdive_keytags");
-			return "<em>" + Main.loc("#labs_deepdive_loading") + "</em><br><p class=\"tag-List\">" + "<br><br><br><br><br></p>";
+			var tagListClass1 = "tag-list";
+			if(Main.FEATURE_FLAG_KILLABLE_TAGS) {
+				tagListClass1 += " tag-list-killable";
+			}
+			return "<em>" + Main.loc("#labs_deepdive_loading") + ("</em><br><p class=\"" + tagListClass1 + "\">") + "<br><br><br><br><br></p>";
 		}
 		return "<em>" + keyAttributes + "</em><br>" + this.getTagHTML2(maxLines);
 	}
@@ -271,9 +275,13 @@ BoxEntry.prototype = {
 				while(arr.length > 3) arr.pop();
 				var tagNames = arr.join(", ");
 				var i2 = 0;
+				var tagListClass = "tag-list";
+				if(Main.FEATURE_FLAG_KILLABLE_TAGS) {
+					tagListClass += " tag-list-killable";
+				}
 				if(tagNames != null && tagNames.length > 0) {
 					if(!(tagNames.length == 1 && genres[0] == "492")) {
-						str += "<p class=\"tag-list tag-list-0\"> " + tagNames + "</p>";
+						str += "<p class=\"" + tagListClass + " tag-list-0\"> " + tagNames + "</p>";
 						++lines;
 					}
 				}
@@ -305,15 +313,23 @@ BoxEntry.prototype = {
 				var arr1 = this.getTagNames(cat2.tags);
 				while(arr1.length > 3) arr1.pop();
 				tagNames1 = arr1.join(", ");
+				var tagListClass1 = "tag-list";
+				if(Main.FEATURE_FLAG_KILLABLE_TAGS) {
+					tagListClass1 += " tag-list-killable";
+				}
 				if(lines < maxLines && tagNames1 != null && tagNames1.length > 0) {
-					str += "<p class=\"tag-list tag-list-" + lines + "\"> " + tagNames1 + "</p>";
+					str += "<p class=\"" + tagListClass1 + " tag-list-" + lines + "\"> " + tagNames1 + "</p>";
 					++lines;
 				}
 				++i;
 			}
 			if(!forHover) {
+				var tagListClass2 = "tag-list";
+				if(Main.FEATURE_FLAG_KILLABLE_TAGS) {
+					tagListClass2 += " tag-list-killable";
+				}
 				while(lines < maxLines) {
-					str += "<p class=\"tag-list tag-list-" + lines + "\">&nbsp;</p>";
+					str += "<p class=\"" + tagListClass2 + " tag-list-" + lines + "\">&nbsp;</p>";
 					++lines;
 				}
 			}
@@ -733,6 +749,11 @@ Data.getMatches = function(appid,recommenders,page,alreadySeen,disabledTags,call
 	var url = "dbapi/" + appid + "/" + page;
 	if(disabledTags != null && disabledTags.length > 0) {
 		url += "/" + disabledTags.join(",");
+	} else {
+		url += "/_";
+	}
+	if(Main.FEATURE_FLAG_ML_RECOMMENDER) {
+		url += "/ml";
 	}
 	Data.request(url,[],function(data) {
 		var map = null;
@@ -1451,6 +1472,13 @@ Main.main = function() {
 	var _this = Main.userVariables;
 	if(__map_reserved["killtags"] != null ? _this.existsReserved("killtags") : _this.h.hasOwnProperty("killtags")) {
 		Main.FEATURE_FLAG_KILLABLE_TAGS = true;
+	}
+	var _this1 = Main.userVariables;
+	if(__map_reserved["ml"] != null ? _this1.existsReserved("ml") : _this1.h.hasOwnProperty("ml")) {
+		Main.FEATURE_FLAG_ML_RECOMMENDER = true;
+	}
+	if(Main.FEATURE_FLAG_ML_RECOMMENDER) {
+		Main.columnHeaders = ["reccats","recml","recgems","recdefault"];
 	}
 	Main.recordOriginalHistoryPath(Main.userVariables);
 	var hash = window.location.hash;
@@ -2285,7 +2313,7 @@ Main.refresh = $hx_exports["Main"]["refresh"] = function() {
 	});
 };
 Main.clickColumn = $hx_exports["Main"]["clickColumn"] = function(i) {
-	var cycle = ["reccats","recdefault","recgems"];
+	var cycle = Main.FEATURE_FLAG_ML_RECOMMENDER ? ["reccats","recml","recgems","recdefault"] : ["reccats","recdefault","recgems"];
 	var currHeader = Main.columnHeaders[i];
 	var index = cycle.indexOf(currHeader);
 	++index;
@@ -3141,9 +3169,16 @@ Render.breadcrumbsContent = function(appids,titles) {
 		var url = Main.cdnURL + "labs/diving_bell/startover.svg";
 		crumbs += "\n\r\n\t\t\t\t<a href=\"divingbell\">\r\n\t\t\t\t\t<div class=\"breadcrumb-startover-container\">\r\n\t\t\t\t\t\t<img src=\"" + url + "\" alt=\"" + startOver + "\" class=\"breadcrumb\"/>\r\n\t\t\t\t\t\t<div class=\"breadcrumb-startover-text\">" + startOver + "</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</a>";
 	}
+	var maxBreadcrumbs = 7;
+	var minBreadcrumbs1 = 2;
+	var minBreadcrumbs2 = 3;
+	var minBreadcrumbs3 = 4;
+	var minBreadcrumbs4 = 5;
+	var minBreadcrumbs5 = 6;
+	var minBreadcrumbs6 = 7;
 	if(appids != null) {
 		var start = 0;
-		var overflow = appids.length - 6;
+		var overflow = appids.length - maxBreadcrumbs;
 		if(overflow > 0) {
 			start = overflow;
 		}
@@ -3167,20 +3202,37 @@ Render.breadcrumbsContent = function(appids,titles) {
 					crumbs += "<img src=\"" + urlArrow + "\" class=\"" + arrowClass + "\">";
 				}
 				crumbs += "\n<a href=\"javascript:Main.clickBreadcrumb(" + j + ")\" class=\"" + breadcrumbClass + "\"><img src=\"" + url1 + "\" alt=\"" + title + "\" class=\"breadcrumb\"/></a>";
+				if(k >= minBreadcrumbs1) {
+					var narrow = "narrow5";
+					var minBreadcrumbs = minBreadcrumbs1;
+					if(k >= minBreadcrumbs2) {
+						narrow = "narrow4";
+						minBreadcrumbs = minBreadcrumbs2;
+					}
+					if(k >= minBreadcrumbs3) {
+						narrow = "narrow3";
+						minBreadcrumbs = minBreadcrumbs3;
+					}
+					if(k >= minBreadcrumbs4) {
+						narrow = "narrow2";
+						minBreadcrumbs = minBreadcrumbs4;
+					}
+					if(k >= minBreadcrumbs5) {
+						narrow = "narrow1";
+						minBreadcrumbs = minBreadcrumbs5;
+					}
+					if(k >= minBreadcrumbs6) {
+						narrow = "narrow0";
+						minBreadcrumbs = minBreadcrumbs6;
+					}
+					var overflow1 = k - minBreadcrumbs;
+					var pattern = "xcrumb-" + i;
+					var replacement = "breadcrumb-" + i + " breadcrumb-hide-on-" + narrow;
+					crumbs = StringTools.replace(crumbs,pattern,replacement);
+					crumbs = StringTools.replace(crumbs,"xcrumb-","breadcrumb-");
+				}
 				++k;
 			}
-		}
-		if(k > 3) {
-			var overflow1 = k - 3;
-			var _g11 = 0;
-			var _g2 = overflow1;
-			while(_g11 < _g2) {
-				var i1 = _g11++;
-				var pattern = "xcrumb-" + i1;
-				var replacement = "breadcrumb-" + i1 + " breadcrumb-hide-on-narrow";
-				crumbs = StringTools.replace(crumbs,pattern,replacement);
-			}
-			crumbs = StringTools.replace(crumbs,"xcrumb-","breadcrumb-");
 		}
 	}
 	var checked = Main.MICROTRAILERS ? "checked" : "";
@@ -3495,6 +3547,10 @@ Render.similarBlurb = function(recommender) {
 		recTitle = Main.loc("#labs_deepdive_gemmatch");
 		recBlurb = Main.loc("#labs_deepdive_gemmatch_blurb");
 		break;
+	case "recml":
+		recTitle = Main.loc("#labs_deepdive_mlmatch");
+		recBlurb = Main.loc("#labs_deepdive_mlmatch_blurb");
+		break;
 	}
 	return { title : recTitle, blurb : recBlurb};
 };
@@ -3536,7 +3592,6 @@ Render.boxContent = function(index,entry,sink,first) {
 		discountBlock = "<div class=\"discount_block discount_block_inline no_discount\" data-price-final=\"\">\r\n\t\t\t\t\t<div class=\"discount_prices\">\r\n\t\t\t\t\t\t<div class=\"discount_final_price\">Coming Soon</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>";
 	}
 	var tagHTML = entry.getTagHTML();
-	var details = Main.loc("#labs_deepdive_store_page_button");
 	var keyThings = first ? Main.loc("#labs_deepdive_keytags") : Main.loc("#labs_deepdive_keysimilarities");
 	var selectToExplore = Main.loc("#labs_deepdive_selecttoexplore");
 	var onWishlist = Main.LOGGED_IN && Main.onWishlist(appid);
@@ -3550,8 +3605,9 @@ Render.boxContent = function(index,entry,sink,first) {
 };
 Render.detailsButton = function(appid,url) {
 	var details = Main.loc("#labs_deepdive_store_page_button");
+	var details_short = Main.loc("#labs_deepdive_store_page_button_short");
 	var newTabBtn = Main.cdnURL + "/labs/diving_bell/openinnewtab_icon.svg";
-	return "<a href=\"" + url + "\" target=\"_blank\" class=\"btn_blue_steamui btn_small_tall btn-details\"><span>" + details + "&nbsp;&nbsp;<img src=\"" + newTabBtn + "\"></span></a>";
+	return "<a href=\"" + url + "\" target=\"_blank\" class=\"btn_blue_steamui btn_small_tall btn-details\">\r\n\t\t\t<span>\t\r\n\t\t\t\t<span class=\"details_button_long\">" + details + "</span>\r\n\t\t\t\t<span class=\"details_button_short\">" + details_short + "</span>&nbsp;&nbsp;\r\n\t\t\t\t<img src=\"" + newTabBtn + "\">\r\n\t\t\t</span>\r\n\t\t</a>";
 };
 Render.wishlistButton = function(appid,onWishlist,isOwned) {
 	if(isOwned == null) {
@@ -3568,7 +3624,8 @@ Render.wishlistButton = function(appid,onWishlist,isOwned) {
 	}
 	if(!onWishlist) {
 		var wishlist1 = Main.loc("#btn_add_to_wishlist");
-		return "<a id=\"" + id + "\" href=\"javascript:Main.addToWishlist(" + appid + ")\" class=\"btn_blue_steamui btn_small_tall btn-wishlist\">\r\n\t\t\t\t<span>\r\n\t\t\t\t<img src=\"https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_selected.png\" border=\"0\">\r\n\t\t\t\t" + wishlist1 + "\r\n\t\t\t\t</span>\r\n\t\t\t</a>";
+		var wishlist_short = Main.loc("#btn_add_to_wishlist_short");
+		return "<a id=\"" + id + "\" href=\"javascript:Main.addToWishlist(" + appid + ")\" class=\"btn_blue_steamui btn_small_tall btn-wishlist\">\r\n\t\t\t\t<span>\r\n\t\t\t\t<img src=\"https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_selected.png\" border=\"0\">\r\n\t\t\t\t<span class=\"wishlist_button_long\">" + wishlist1 + "</span>\r\n\t\t\t\t<span class=\"wishlist_button_short\">" + wishlist_short + "</span>\r\n\t\t\t\t</span>\r\n\t\t\t</a>";
 	} else {
 		var wishlist2 = Main.loc("#labs_deepdive_onwishlist");
 		var cdn1 = Main.cdnURL;
@@ -4686,6 +4743,7 @@ Main.focusBusy = false;
 Main.MICROTRAILERS = true;
 Main.columnHeaders = ["reccats","recdefault","recgems"];
 Main.FEATURE_FLAG_KILLABLE_TAGS = false;
+Main.FEATURE_FLAG_ML_RECOMMENDER = false;
 Main.baseMap = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567889+*";
 js_Boot.__toStr = ({ }).toString;
 Main.main();
