@@ -1644,7 +1644,7 @@ body.modals_BodyNoScrollDialog_105OB {
 .broadcastwidgets_StoreSaleWidgetContainer_2RL6D {
   display: flex;
   flex-direction: row;
-  max-width: 780px;
+  max-width: 880px;
   z-index: 1; }
   .broadcastwidgets_StoreSaleWidgetContainer_2RL6D.broadcastwidgets_Bundle_3wMcs {
     max-height: initial; }
@@ -1659,8 +1659,7 @@ body.modals_BodyNoScrollDialog_105OB {
     min-width: unset;
     padding: 9px 20px; }
 
-.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp,
-.broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
+.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
   display: flex;
   flex-direction: column;
   overflow: hidden; }
@@ -1683,10 +1682,6 @@ body.modals_BodyNoScrollDialog_105OB {
       max-width: unset;
       flex-direction: row; } }
 
-.broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
-  max-width: 310px;
-  padding: 8px; }
-
 .broadcastwidgets_StoreSaleWidgetImage_2T_Na {
   padding-right: 16px;
   cursor: pointer; }
@@ -1695,22 +1690,14 @@ body.modals_BodyNoScrollDialog_105OB {
   cursor: pointer;
   max-width: 155px; }
 
-.broadcastwidgets_StoreSaleWidgetImage_column_1vMOn {
-  cursor: pointer;
-  max-width: 310px; }
-
 .broadcastwidgets_StoreSaleImage_2LocI {
-  width: 200px;
+  width: 300px;
   cursor: pointer; }
 
 .broadcastwidgets_StoreSaleImage_mini_1zSsm {
   cursor: pointer;
   width: 155px;
   display: block; }
-
-.broadcastwidgets_StoreSaleImage_column_3DVUq {
-  cursor: pointer;
-  width: 294px; }
 
 /* Override the EventDetailsBody img style in partnereventdisplay.scss */
 .broadcastwidgets_StoreSaleImage_2LocI.broadcastwidgets_StoreSaleImage_2LocI {
@@ -1736,13 +1723,36 @@ body.modals_BodyNoScrollDialog_105OB {
     .broadcastwidgets_StoreSaleWidgetRelease_3yCCs {
       display: none; } }
 
+.broadcastwidgets_StoreSaleWidgetScreenshots_3mnba {
+  margin-top: 4px; }
+
+.broadcastwidgets_AppTag_2pNqf {
+  display: inline-block;
+  line-height: 19px;
+  padding: 0 7px;
+  color: #67c1f5;
+  background-color: rgba(103, 193, 245, 0.2);
+  box-shadow: none;
+  margin-right: 2px;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .broadcastwidgets_AppTag_2pNqf:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background: #67c1f5;
+    background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+    /* W3C */ }
+
 .broadcastwidgets_StoreSaleWidgetShortDesc_2by8B {
   font-size: 12px;
   line-height: 15px;
   max-height: 80px;
   overflow: hidden; }
 
-.broadcastwidgets_StoreSaleWidgetShortDesc_column_cZoip,
 .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
   max-height: 103px;
   overflow-y: scroll;
@@ -1754,7 +1764,6 @@ body.modals_BodyNoScrollDialog_105OB {
   line-height: 13px;
   font-size: 11px; }
   @media screen and (max-width: 620px) {
-    .broadcastwidgets_StoreSaleWidgetShortDesc_column_cZoip,
     .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
       display: none; } }
 
@@ -3380,8 +3389,7 @@ img.emoticon_emoticon_AB86v {
   color: white;
   flex: 0 1;
   z-index: 2;
-  border-radius: 2px;
-  margin-left: -12px; }
+  border-radius: 2px; }
 
 .timelineMarker {
   width: 8px;
@@ -3422,42 +3430,6 @@ img.emoticon_emoticon_AB86v {
 
 .timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .line {
   fill: #ffe9cd; }
-
-.STV_timelineThumbnailContainer {
-  position: absolute;
-  width: 72px;
-  height: 48px;
-  border-radius: 4px;
-  background-color: #5dc3ff;
-  background: linear-gradient(to top, white 0%, #b29a7c 80%);
-  margin-left: -32px;
-  top: -52px;
-  opacity: 0;
-  transform: scale(0);
-  transform-origin: 50% 100%;
-  z-index: 2;
-  pointer-events: none; }
-
-.STV_timelineThumbnailContainer.thumbnailVisible {
-  opacity: 1;
-  transform: scale(1); }
-
-.STV_timelineContainer.grabberDown .STV_timelineThumbnailContainer {
-  opacity: 1;
-  transform: scale(1);
-  top: -64px;
-  background: linear-gradient(to top, #5dc3ff 0%, #166b9c 80%); }
-
-.STV_timelineThumbnail {
-  width: calc( 100% - 4px);
-  height: calc( 100% - 4px);
-  padding: 2px; }
-
-.STV_timelineThumbnail_Img {
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  /*object-fit: contain;*/ }
 
 .STV_timelineSegmentsContainer {
   display: flex;
@@ -6285,6 +6257,8 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   margin-bottom: 40px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
   border-radius: 4px; }
+  .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_SteamAwardContainer_1Knmj {
+    margin: 24px; }
   .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P {
     box-sizing: border-box;
     position: relative;
@@ -6295,8 +6269,9 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     font-size: 12px; }
     .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardHeaderImage_12B50 {
       position: absolute;
-      top: -36px;
-      right: 0; }
+      bottom: 0;
+      right: 0;
+      max-width: 100%; }
     .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardMainCtn_jLgIp {
       display: flex;
       flex-direction: column;
@@ -6330,6 +6305,9 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
         font-style: normal; }
         .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardHeaderText_dbCh6 a:hover {
           color: white; }
+      @media screen and (max-width: 620px) {
+        .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardHeader_18k5P .partnereventdisplay_SteamAwardHeaderText_dbCh6 {
+          display: none; } }
   .partnereventdisplay_SteamAwardContainer_1Knmj .partnereventdisplay_SteamAwardVoteWidget_2qw6n {
     background-color: #355a5f;
     padding: 4px 16px 8px;

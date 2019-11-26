@@ -223,7 +223,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	var $Tier2 = $J('#tier2_target' );
 	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2,$Tier2  ); } );
 
-	var $TagBlock = $J('#sale_tag_categories')
+	var $TagBlock = $J('#sale_tag_categories');
 	new CScrollOffsetWatcher( $TagBlock, function() {
 		for ( var iTag = 0; iTag < rgPersonalizedTagData.length; iTag++ )
 		{
@@ -829,18 +829,22 @@ CVideoScrollController.prototype.update = function()
  writein	o
  }
  */
-function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories )
+function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories, bReleasedCurrentYear )
 {
 	$J('.show_nomination_dialog').click( function() {
 		var $PageElement = $J(this);
+
+		if ( $PageElement.hasClass( 'disabled' ) )
+			return;
+
 		if ( !g_AccountID )
 		{
 			// prompt for login
-			ShowConfirmDialog( 'Community\'s Choice',
+			ShowConfirmDialog( 'Nominate Game',
 				'You need to log in first before you can vote.',
 				'Login'
 			).done( function() {
-				window.location = 'https://store.steampowered.com/login/?redir=app%2F__APPID__'.replace( /__APPID__/, appid );
+				window.location = 'https://store.steampowered.com/login/?redir=app%2F__APPID__'.replace( /__APPID__/, nominatedid );
 			});
 			return;
 		}
@@ -855,6 +859,10 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories )
 			if ( oCategory.categoryid == -1 )
 				continue;
 
+			var bHideCategory = !bReleasedCurrentYear && oCategory.categoryid != 3;
+
+			if ( bHideCategory )
+				continue;
 
 			var id = 'category' + oCategory.categoryid;
 			var $Row = $J('<div/>', {'class': 'steamaward_nomination_row'} );
@@ -895,27 +903,6 @@ function InitSteamAwardNominationDialog( nominatedid, appname, rgCategories )
 						$J(this).parents('.steamaward_nomination_row').find('input[type=radio]').prop('checked', true ).change();
 				});
 			}
-			$Form.append( $Row );
-		}
-
-		if ( bFoundCurrentApp )
-		{
-			// remove option
-			var id = 'category_remove';
-
-
-			var $Row = $J('<div/>', {'class': 'steamaward_nomination_row remove_row'} );
-
-			var $Div = $J('<div/>', {'class': 'steamaward_nomination_content'} );
-			var $Radio = $J('<input/>', {type: 'radio', id: id, name: 'nomination_category', value: 0 } );
-
-			$Radio.change( function() {
-				if ( $J(this).prop('checked') )
-					$J(this).parents( '.steamaward_nomination_row' ).addClass('selected').siblings().removeClass('selected');
-				else
-					$J(this).parents( '.steamaward_nomination_row' ).removeClass('selected');
-			});
-
 			$Form.append( $Row );
 		}
 
