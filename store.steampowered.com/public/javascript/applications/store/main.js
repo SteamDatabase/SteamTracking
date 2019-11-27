@@ -3578,7 +3578,7 @@
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1
       },
-      a = "webui_config";
+      c = "webui_config";
     function i() {
       var e = (function() {
         for (var e, t, n = "", r = 0; r < 24; r++)
@@ -3611,10 +3611,10 @@
         e
       );
     }
-    function c(e, t) {
+    function l(e, t) {
       var n;
       if (
-        (void 0 === t && (t = a),
+        (void 0 === t && (t = c),
         (n = "string" == typeof t ? document.getElementById(t) : t))
       )
         try {
@@ -3654,8 +3654,8 @@
         ? "steamtv"
         : "";
     }
-    var l = d("vDqi"),
-      y = d.n(l),
+    var a = d("vDqi"),
+      y = d.n(a),
       _ = d("2vnA");
     function E(e, t) {
       for (var n = [], r = 2; r < arguments.length; r++)
@@ -5509,38 +5509,39 @@
           (e.prototype.GetPlayReadyStream = function() {
             return this.m_playReadyStream;
           }),
-          (e.prototype.LoadBIsEmbeddedBroadcastHidden = function(i) {
+          (e.prototype.LoadBIsEmbeddedBroadcastHidden = function(a) {
             return Object(v.b)(this, void 0, void 0, function() {
-              var t, n, r;
+              var t, n, r, i;
               return Object(v.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    if (void 0 !== this.m_bHideBroadcast) return [3, 4];
+                    if (void 0 !== this.m_bHideBroadcast) return [3, 5];
+                    if ((t = l("broadcastuser", "application_config")))
+                      return [3, 4];
                     e.label = 1;
                   case 1:
                     return (
                       e.trys.push([1, 3, , 4]),
-                      (t =
+                      (n =
                         M.STORE_BASE_URL +
                         "broadcast/ajaxgetuserbroadcastpreferences"),
-                      [4, y.a.get(t, { params: {}, cancelToken: i.token })]
+                      [4, y.a.get(n, { params: {}, cancelToken: a.token })]
                     );
                   case 2:
-                    return (
-                      (n = e.sent()),
-                      (this.m_bHideBroadcast = n.data.bHideStoreBroadcast),
-                      [3, 4]
-                    );
+                    return (r = e.sent()), (t = r.data), [3, 4];
                   case 3:
                     return (
-                      (r = e.sent()),
+                      (i = e.sent()),
                       console.log(
-                        "LoadBIsEmbeddedBroadcastHidden: " + Fe(r).strErrorMsg
+                        "LoadBIsEmbeddedBroadcastHidden: " + Fe(i).strErrorMsg
                       ),
-                      (this.m_bHideBroadcast = !1),
+                      (t = { bHideStoreBroadcast: !1 }),
                       [3, 4]
                     );
                   case 4:
+                    (this.m_bHideBroadcast = t.bHideStoreBroadcast),
+                      (e.label = 5);
+                  case 5:
                     return [2, this.m_bHideBroadcast];
                 }
               });
@@ -5579,7 +5580,9 @@
                         clanid: o.clanid,
                         listid: o.listid,
                         eventid: o.event ? o.event.GID : void 0,
-                        test: !1
+                        test: !1,
+                        cc: M.COUNTRY,
+                        l: M.LANGUAGE
                       }),
                       (e.label = 1);
                   case 1:
@@ -48884,7 +48887,7 @@
                           s == N.k_EOtherEvent ? km.TileEventOtherType : ""
                         )
                       },
-                      ee("#PartnerEvent_" + s)
+                      a ? a.GetCategoryAsString() : e.event_type
                     ),
                     this.state.bLoadingEvent &&
                       A.createElement(Pn, {
@@ -51753,131 +51756,130 @@
         return Object(v.e)(this, function(e) {
           switch (e.label) {
             case 0:
-              return (
-                (function(e) {
-                  void 0 === e && (e = a);
-                  var t = c("config", e);
-                  t && (delete t.SESSIONID, Object.assign(M, t));
-                  var n = c("userinfo", e);
-                  n && Object.assign(f, n);
-                  var r = c("broadcast", e);
-                  r && Object.assign(m, r);
-                  var i = c("community", e);
-                  i && Object.assign(h, i);
-                })("application_config"),
-                [
-                  4,
-                  (function(l, d, p) {
-                    return Object(v.b)(this, void 0, void 0, function() {
-                      var t, n, r, i, a, o, s, c;
-                      return Object(v.e)(this, function(e) {
-                        switch (e.label) {
-                          case 0:
-                            return p.config
-                              ? [4, l.get(d + "ajaxgetconfig")]
-                              : [3, 2];
-                          case 1:
-                            (t = e.sent()),
-                              (n = t.data) &&
-                                (delete n.SESSIONID, Object.assign(M, n)),
-                              (e.label = 2);
-                          case 2:
-                            return p.userConfig
-                              ? [
-                                  4,
-                                  l.get(d + "ajaxgetuserconfig", {
-                                    withCredentials: !0
-                                  })
-                                ]
-                              : [3, 4];
-                          case 3:
-                            (r = e.sent()),
-                              (i = r.data) && Object.assign(f, i),
-                              (e.label = 4);
-                          case 4:
-                            return p.broadcastConfig
-                              ? [4, l.get(d + "ajaxgetbroadcastconfig")]
-                              : [3, 6];
-                          case 5:
-                            (a = e.sent()),
-                              (o = a.data) && Object.assign(m, o),
-                              (e.label = 6);
-                          case 6:
-                            return p.communityConfig
-                              ? [4, l.get(d + "ajaxgetcommunityconfig")]
-                              : [3, 8];
-                          case 7:
-                            (s = e.sent()),
-                              (c = s.data) && Object.assign(h, c),
-                              (e.label = 8);
-                          case 8:
-                            return [2];
-                        }
-                      });
-                    });
-                  })(y.a, M.STORE_BASE_URL + "actions/", { userConfig: !0 })
-                ]
-              );
-            case 1:
-              return (
-                e.sent(),
-                [
-                  4,
-                  (function(l) {
-                    return Object(v.b)(this, void 0, void 0, function() {
-                      var t, n, r, i, a, o, s, c;
-                      return Object(v.e)(this, function(e) {
-                        switch (e.label) {
-                          case 0:
-                            return (
-                              (d.p =
-                                M.STORE_CDN_URL +
-                                "public/javascript/applications/store/"),
-                              [
-                                4,
-                                Promise.all([
-                                  d("rCDf")("./shared_" + l + ".json"),
-                                  d("AvbV")("./main_" + l + ".json")
-                                ])
-                              ]
-                            );
-                          case 1:
-                            return (
+              return (function(e) {
+                void 0 === e && (e = c);
+                var t = {},
+                  n = l("config", e);
+                n && (delete n.SESSIONID, Object.assign(M, n), (t.config = !0));
+                var r = l("userinfo", e);
+                r && (Object.assign(f, r), (t.userConfig = !0));
+                var i = l("broadcast", e);
+                i && (Object.assign(m, i), (t.broadcastConfig = !0));
+                var a = l("community", e);
+                return a && (Object.assign(h, a), (t.communityConfig = !0)), t;
+              })("application_config").userConfig
+                ? [3, 2]
+                : [
+                    4,
+                    (function(l, d, p) {
+                      return Object(v.b)(this, void 0, void 0, function() {
+                        var t, n, r, i, a, o, s, c;
+                        return Object(v.e)(this, function(e) {
+                          switch (e.label) {
+                            case 0:
+                              return p.config
+                                ? [4, l.get(d + "ajaxgetconfig")]
+                                : [3, 2];
+                            case 1:
                               (t = e.sent()),
-                              (n = t[0]),
-                              (r = t[1]),
-                              (i = Object(v.a)({}, r.default)),
-                              "english" === l
-                                ? [3, 3]
-                                : [
+                                (n = t.data) &&
+                                  (delete n.SESSIONID, Object.assign(M, n)),
+                                (e.label = 2);
+                            case 2:
+                              return p.userConfig
+                                ? [
                                     4,
-                                    Promise.all([
-                                      d.e(1).then(d.t.bind(null, "TYjx", 3)),
-                                      d.e(0).then(d.t.bind(null, "/rNK", 3))
-                                    ])
+                                    l.get(d + "ajaxgetuserconfig", {
+                                      withCredentials: !0
+                                    })
                                   ]
-                            );
-                          case 2:
-                            return (
+                                : [3, 4];
+                            case 3:
+                              (r = e.sent()),
+                                (i = r.data) && Object.assign(f, i),
+                                (e.label = 4);
+                            case 4:
+                              return p.broadcastConfig
+                                ? [4, l.get(d + "ajaxgetbroadcastconfig")]
+                                : [3, 6];
+                            case 5:
                               (a = e.sent()),
-                              (o = a[0]),
-                              (s = a[1]),
-                              (c = Object(v.a)({}, s.default)),
-                              oe.InitFromObjects(i, c, n.default, o.default),
-                              [3, 4]
-                            );
-                          case 3:
-                            oe.InitFromObjects(i, null, n.default, null),
-                              (e.label = 4);
-                          case 4:
-                            return [2];
-                        }
+                                (o = a.data) && Object.assign(m, o),
+                                (e.label = 6);
+                            case 6:
+                              return p.communityConfig
+                                ? [4, l.get(d + "ajaxgetcommunityconfig")]
+                                : [3, 8];
+                            case 7:
+                              (s = e.sent()),
+                                (c = s.data) && Object.assign(h, c),
+                                (e.label = 8);
+                            case 8:
+                              return [2];
+                          }
+                        });
                       });
-                    });
-                  })(M.LANGUAGE)
-                ]
-              );
+                    })(y.a, M.STORE_BASE_URL + "actions/", { userConfig: !0 })
+                  ];
+            case 1:
+              e.sent(), (e.label = 2);
             case 2:
+              return [
+                4,
+                (function(l) {
+                  return Object(v.b)(this, void 0, void 0, function() {
+                    var t, n, r, i, a, o, s, c;
+                    return Object(v.e)(this, function(e) {
+                      switch (e.label) {
+                        case 0:
+                          return (
+                            (d.p =
+                              M.STORE_CDN_URL +
+                              "public/javascript/applications/store/"),
+                            [
+                              4,
+                              Promise.all([
+                                d("rCDf")("./shared_" + l + ".json"),
+                                d("AvbV")("./main_" + l + ".json")
+                              ])
+                            ]
+                          );
+                        case 1:
+                          return (
+                            (t = e.sent()),
+                            (n = t[0]),
+                            (r = t[1]),
+                            (i = Object(v.a)({}, r.default)),
+                            "english" === l
+                              ? [3, 3]
+                              : [
+                                  4,
+                                  Promise.all([
+                                    d.e(1).then(d.t.bind(null, "TYjx", 3)),
+                                    d.e(0).then(d.t.bind(null, "/rNK", 3))
+                                  ])
+                                ]
+                          );
+                        case 2:
+                          return (
+                            (a = e.sent()),
+                            (o = a[0]),
+                            (s = a[1]),
+                            (c = Object(v.a)({}, s.default)),
+                            oe.InitFromObjects(i, c, n.default, o.default),
+                            [3, 4]
+                          );
+                        case 3:
+                          oe.InitFromObjects(i, null, n.default, null),
+                            (e.label = 4);
+                        case 4:
+                          return [2];
+                      }
+                    });
+                  });
+                })(M.LANGUAGE)
+              ];
+            case 3:
               return (
                 e.sent(),
                 document.getElementById("application_root") &&
