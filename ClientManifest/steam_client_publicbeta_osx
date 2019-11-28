@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1574820875"
+	"version"		"1574913081"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.1ca83d76835b4613170f5cead778b176b11f2b0c"
@@ -125,19 +125,19 @@
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.3a689b38f8016ab1812616a8fc6876c10bf28f40"
-		"size"		"25310349"
-		"sha2"		"ea11878cb3e3b11c48bb487d107b4b0806cef26308a06e4f6da625fe859d49a7"
-		"zipvz"		"bins_osx.zip.vz.13bf4c62cc17db620a6d7353e9b08de0f4db946a_13429799"
-		"sha2vz"		"7cd0617cffa2fb8f00299b7fb0d2911459bd451770ea11ffeadf656bc4ae0813"
+		"file"		"bins_osx.zip.453e185ebc6c4a017d1307bf29d8ccbab7f0f369"
+		"size"		"25310521"
+		"sha2"		"dd1c5be3cf57d8498c181f62c0e7cd0fe9c3e3f195fdf4bdf24ddbdd75fc6acd"
+		"zipvz"		"bins_osx.zip.vz.475b6d9a186c6bcef4d266aa9d6bbf8af56c3718_13437105"
+		"sha2vz"		"707611b6dd68073ef5ed763de06716a89213134e5f56b5e17dc5f4302a90db33"
 	}
 	"bins_client_osx"
 	{
-		"file"		"bins_client_osx.zip.9a93dde1614636b751ed71e8077240cc254b910b"
-		"size"		"21732198"
-		"sha2"		"a5a58767fd751bf39e4d3fca5eb82a2c56e8c25e6bd7ec25e03b8b471f25734c"
-		"zipvz"		"bins_client_osx.zip.vz.f3da22056a70b1d5ac3bdc4830e4ae036d5355e3_13723977"
-		"sha2vz"		"47f2569f775c02bddaec15c7a7f7c69eb449e540b95fa7bc0f0641b4bc72e3bc"
+		"file"		"bins_client_osx.zip.a2be0f9de5a6ab99392b23fb0d44ad01b8577b79"
+		"size"		"21752578"
+		"sha2"		"10f9ab33d1bc08640eedf73af1e8f47fff99eb04d9efe9f18b0351154972b5bf"
+		"zipvz"		"bins_client_osx.zip.vz.da9d8855b2f9ae7256562d85fc13a77e439878f2_13746478"
+		"sha2vz"		"4fc9d8a7f4aa5a8de5384f07397efb3ff2f7bef55b68605d258c6ac620fd25b5"
 	}
 	"bins_codecs_osx"
 	{
@@ -149,11 +149,11 @@
 	}
 	"bins_misc_osx"
 	{
-		"file"		"bins_misc_osx.zip.ccb4995d8f30e2f36bb2892657f02bc30612523b"
-		"size"		"23275826"
-		"sha2"		"66401a8b6656bf2ec2e5535a78e98359015359297574514a604404ca236dc19d"
-		"zipvz"		"bins_misc_osx.zip.vz.99f46f704b5977eeacaf02a155396bf7b6d17818_12882478"
-		"sha2vz"		"8a92217d2e54174ec6831b6ef55a5f30e2078f629013f2b32f4f26a42c786a0e"
+		"file"		"bins_misc_osx.zip.6971593d1747167808b1ae2bafdd0f29fea837c8"
+		"size"		"23275827"
+		"sha2"		"171b678200a0f21a325a393e7ba4f0c2ebd7521b054b443aa4e9beecf1efe1cd"
+		"zipvz"		"bins_misc_osx.zip.vz.d82dc3de51d2796320ed28c8f86f6b0a22e8d417_12876391"
+		"sha2vz"		"56f47f11c9a7a44e4614bb89f930fa0e5fb1e2f278da43a79021d2d532e03c90"
 	}
 	"bins_panorama_osx"
 	{
@@ -180,11 +180,11 @@
 		"sha2vz"		"1a9320638bd5c5e35eccc29b07828f13e87fd744c05108add84f117cc8202913"
 		"macos109"
 		{
-			"file"		"webhelpers_osx_macos109.zip.6328437ce4b6bf7cbc5208bd833710a11d74cbc8"
-			"size"		"3041643"
-			"sha2"		"2c24f8311de31dbc9b47eac2c199cdccc8b102115ad930028e28838397c3bd77"
-			"zipvz"		"webhelpers_osx_macos109.zip.vz.1f13e6fe0e747a6a5b7b5409efb05c50f249b3a3_1318201"
-			"sha2vz"		"a4192ae4046413b231ecfc872fd445c224455b03ac07e16f9200848f225c1503"
+			"file"		"webhelpers_osx_macos109.zip.94879c5a28ff5050ff61cbfc5618c69e3c3dc130"
+			"size"		"3041831"
+			"sha2"		"5fbc29f5b5f43d8a971abeb6e957b92d64ab2f031192cd6b8d454d5a3a20c667"
+			"zipvz"		"webhelpers_osx_macos109.zip.vz.9fae7c43b31536955d7d9149b7e5b77bc03d21e7_1315231"
+			"sha2vz"		"eb0b6bbd77c2b2ef04167d50e4bcf301e7bfc09249e6a372a640c228e5c252f7"
 		}
 	}
 	"webkit_osx"
@@ -235,9 +235,9 @@
 }
 "kvsign2"
 {
-	"osx"		"4c95bb483acfc42a5bf17befb026272210393ea9da6b7ced2d8d06d986f62e8bcdb486fae87c3ae79b62ce4a6af016ab8608191ab002bcea211302e5d406c30f"
+	"osx"		"7603ddbffeca6bb1afec08a501d3e1a5a7a2112fdef61546b0f245d04a00bce35b7d02aa3eb3963115f3caddc2e763a4acf50e4bc76cf8a6dbab7ab7d0730808"
 }
 "kvsignatures"
 {
-	"osx"		"861c5d4717c2b5c39f635d9eb466a2a7c6dd833fa61060766bd57c478edf77a24c7238996a953084fcd010e7ecae42542f9e62d10e73b56378aee0a68781f0e2f20fb025ea26b763919b322dc1d0b98158a87b9e67e7c8be78e18f5596ef16fca5fbab2b8fb067f44a15cf8db8b773a633aa6105b53ff1e3349ad3fcf1cee53f"
+	"osx"		"a794ecdfa9f67659da83bd22941afefce3d73791b81eabe23806c3a35f2e7d27bed9b0496a7182f872501838958a6fb2a9b2275548b5c3ee58ce708849a794947788b42081d75a1576b6de18fff0961ebd21fdd6b9db19d66152f0fbb6c8be373937cdd0cf08ca04b4f396a90687c90d2de68b6c40a64fc187660fa021cab775"
 }

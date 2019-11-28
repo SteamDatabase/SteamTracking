@@ -25,6 +25,7 @@ public:
     virtual unknown_ret GetCurrentLanguage(unsigned int, char*, unsigned int) = 0;
     virtual unknown_ret GetCurrentLanguage(unsigned int) = 0;
     virtual unknown_ret GetFallbackLanguage(unsigned int, ELanguage) = 0;
+    virtual unknown_ret SetCurrentLanguage(unsigned int, ELanguage) = 0;
     virtual unknown_ret BIsDlcEnabled(unsigned int, unsigned int, bool*) = 0;
     virtual unknown_ret SetDlcEnabled(unsigned int, unsigned int, bool) = 0;
     virtual unknown_ret StartValidatingApp(unsigned int) = 0;
