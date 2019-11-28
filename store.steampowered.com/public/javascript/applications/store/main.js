@@ -144,30 +144,30 @@
                 31: "5116646722dbdf99de46",
                 32: "e5dee249f43bbfdbbf0b",
                 33: "68776e9f25a08832d9ea",
-                34: "93be8ed674503824224d",
+                34: "1277e8877c92124c6013",
                 35: "9b153514fcab34c8f1a1",
                 36: "cc4af38baa9db7fcfb58",
-                37: "528b3e92bd49cfc6fdc1",
+                37: "4ce198c2b94670041451",
                 38: "5f8427cf983f7d61f10c",
                 39: "84136c402574959cb597",
                 40: "bd2ee93965af7fba52ac",
                 41: "a79a7f78540b71333130",
                 42: "9dd1d4d518c8ee9217b4",
                 43: "cbe7e152c96acc152926",
-                44: "eafa75a370d5f5b88a45",
+                44: "c379a8159aa362c6771c",
                 45: "e3a192fad41b987f16d3",
-                46: "91be03a6ad1806e145e7",
-                47: "ffe7b5cbc8d30178a830",
+                46: "2f30bde2c4817f14d9d2",
+                47: "1bed09883c07cf43dd39",
                 48: "5dac17dd9865471e5bf4",
                 49: "2808ba00295d729e1d35",
                 50: "16c9d500428267d747c7",
                 51: "39b4cb8de3aaebdbadc3",
-                52: "a7d1adf85b6ae877d573",
+                52: "554d9e45cd5ace855eb4",
                 53: "3d85a9c9123497d56879",
                 54: "6e241afd4f00581e9579",
                 55: "120e333bf0c908e7fabe",
                 56: "2d10318dedb8afd45cd5",
-                57: "71a6ac2ebd220961ed76",
+                57: "142c75f8c5468ac5d874",
                 58: "5a9717c8e9c51c301574"
               }[e]
             );
@@ -30649,7 +30649,7 @@
             var t =
                 this.m_mpd.GetPeriods()[0].rgAdaptationSets[0].segmentTemplate
                   .nDuration / 1e3,
-              n = e - (e % (5 * t)),
+              n = e - (e % (10 * t)),
               r = Math.floor(n / t) + 1,
               i = this.m_mpd.GetPeriods()[0].rgAdaptationSets[0].segmentTemplate
                 .strMedia;
