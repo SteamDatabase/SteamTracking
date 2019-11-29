@@ -49405,7 +49405,7 @@
           }),
           (e.prototype.ChangeCategoryForEvent = function() {
             return Object(v.b)(this, void 0, void 0, function() {
-              var t, n, r, i, a, o, s, c, l, d, p;
+              var t, n, r, i, a, o, s, c, l, d;
               return Object(v.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
@@ -49433,12 +49433,14 @@
                       e.sent(),
                       (o = ["patchnotes", "steam_award_nomination_request"]),
                       (s = []),
-                      i.value.tag &&
-                        (s.push(i.value.tag),
-                        (c = new Im()
-                          .SetUpdateSeasonalTags(i.value.tag)
-                          .ToModString()),
-                        s.push(c)),
+                      i.value.tags &&
+                        i.value.tags.forEach(function(e) {
+                          s.push(e);
+                          var t = new Im()
+                            .SetUpdateSeasonalTags(e)
+                            .ToModString();
+                          s.push(t);
+                        }),
                       [
                         4,
                         Rm.UpdateTagsOnPartnerEvent(
@@ -49453,24 +49455,24 @@
                     );
                   case 3:
                     return (
-                      (l = e.sent()),
+                      (c = e.sent()),
                       Object(_.x)(function() {
-                        (n.type = a), (n.vecTags = l);
+                        (n.type = a), (n.vecTags = c);
                       }),
                       this.setState({ bUpdating: !1 }, r),
                       [3, 5]
                     );
                   case 4:
                     return (
-                      (d = e.sent()),
-                      (p = Fe(d)),
+                      (l = e.sent()),
+                      (d = Fe(l)),
                       console.error(
-                        "ChangeEventTypeDialog error " + p.strErrorMsg,
-                        p
+                        "ChangeEventTypeDialog error " + d.strErrorMsg,
+                        d
                       ),
                       this.setState({
                         bUpdating: !1,
-                        strErrorMsg: p.strErrorMsg
+                        strErrorMsg: d.strErrorMsg
                       }),
                       [3, 5]
                     );
@@ -49497,7 +49499,7 @@
               }).map(function(e) {
                 var t = { eventType: e };
                 return (
-                  e == N.k_ESmallUpdateEvent && (t.tag = "patchnotes"),
+                  e == N.k_ESmallUpdateEvent && (t.tags = ["patchnotes"]),
                   { label: Al(e), value: t }
                 );
               });
@@ -49505,7 +49507,10 @@
               i.unshift({
                 value: {
                   eventType: N.k_ENewsEvent,
-                  tag: "steam_award_nomination_request"
+                  tags: [
+                    "steam_award_nomination_request",
+                    "mod_hide_library_overview"
+                  ]
                 },
                 label: ee("#PartnerEvent_SteamAwardNominations")
               }),
