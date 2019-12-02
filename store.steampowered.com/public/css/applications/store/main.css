@@ -1699,6 +1699,13 @@ body.modals_BodyNoScrollDialog_105OB {
   width: 155px;
   display: block; }
 
+.broadcastwidgets_StoreSaleVideo_2D7lp {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.6s; }
+
 /* Override the EventDetailsBody img style in partnereventdisplay.scss */
 .broadcastwidgets_StoreSaleImage_2LocI.broadcastwidgets_StoreSaleImage_2LocI {
   max-width: initial; }
@@ -1724,7 +1731,8 @@ body.modals_BodyNoScrollDialog_105OB {
       display: none; } }
 
 .broadcastwidgets_StoreSaleWidgetTags_26_Kk {
-  display: none; }
+  height: 25px;
+  overflow: hidden; }
 
 .broadcastwidgets_StoreSaleWidgetScreenshots_3mnba {
   margin-top: 4px;
@@ -1743,7 +1751,8 @@ body.modals_BodyNoScrollDialog_105OB {
   max-width: 200px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  font-size: 10px; }
   .broadcastwidgets_AppTag_2pNqf:hover {
     text-decoration: none;
     color: #ffffff;
@@ -1862,9 +1871,6 @@ body.modals_BodyNoScrollDialog_105OB {
   margin-left: 3px;
   margin-right: 5px;
   max-width: 60vw; }
-
-.broadcastwidgets_CapsulePlatform_1YzDv {
-  display: none; }
 
 .broadcastwidgets_Action_2Xpw9 {
   min-width: 50%;

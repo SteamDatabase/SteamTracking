@@ -3322,6 +3322,7 @@
         "broadcastwidgets_StoreSaleWidgetImage_mini_yvW2h",
       StoreSaleImage: "broadcastwidgets_StoreSaleImage_2LocI",
       StoreSaleImage_mini: "broadcastwidgets_StoreSaleImage_mini_1zSsm",
+      StoreSaleVideo: "broadcastwidgets_StoreSaleVideo_2D7lp",
       StoreSaleWidgetTitle: "broadcastwidgets_StoreSaleWidgetTitle_38YoU",
       StoreSaleWidgetRelease: "broadcastwidgets_StoreSaleWidgetRelease_3yCCs",
       StoreSaleWidgetTags: "broadcastwidgets_StoreSaleWidgetTags_26_Kk",
@@ -3344,7 +3345,6 @@
       CapsuleBottomBar: "broadcastwidgets_CapsuleBottomBar_2ygf4",
       CapsuleImage: "broadcastwidgets_CapsuleImage_XI8fY",
       CapsuleTitle: "broadcastwidgets_CapsuleTitle_2eIiB",
-      CapsulePlatform: "broadcastwidgets_CapsulePlatform_1YzDv",
       Banner: "broadcastwidgets_Banner_3ikQa",
       Blue: "broadcastwidgets_Blue_3hfTG",
       LiveIcon: "broadcastwidgets_LiveIcon_1iKjC",
@@ -5342,6 +5342,8 @@
                             (l.m_appStoreData.capsule = c.data.capsule),
                             (l.m_appStoreData.tiny_capsule =
                               c.data.tiny_capsule),
+                            (l.m_appStoreData.main_capsule =
+                              c.data.main_capsule),
                             (l.m_appStoreData.screenshot = c.data.screenshot),
                             (l.m_appStoreData.screenshot_list =
                               c.data.screenshot_list),
@@ -5360,6 +5362,8 @@
                               c.data.available_mac),
                             (l.m_appStoreData.available_linux =
                               c.data.available_linux),
+                            (l.m_appStoreData.microtrailer =
+                              c.data.microtrailer),
                             (l.m_appStoreData.creator_list = new Array());
                           var e = c.data.creator_list;
                           if (e)
@@ -11562,27 +11566,24 @@
       Pr = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
-          return (e.state = { mainImageURL: "" }), e;
+          return (e.state = { isHovered: !1 }), e;
         }
         return (
           Object(v.d)(e, t),
           (e.prototype.componentDidMount = function() {
             xe.EnsureStoreCapsuleInfoLoaded(this.props.appid);
           }),
-          (e.prototype.OnScreenshotOver = function(e) {
-            this.setState({ mainImageURL: e });
+          (e.prototype.OnCapsuleOver = function() {
+            this.setState({ isHovered: !0 });
           }),
-          (e.prototype.OnScreenshotOut = function() {
-            this.setState({ mainImageURL: "" });
+          (e.prototype.OnCapsuleOut = function() {
+            this.setState({ isHovered: !1 });
           }),
           (e.prototype.render = function() {
-            var t = this,
-              n = xe.GetStoreCapsuleInfo(this.props.appid).GetAppStoreData(),
+            var t = xe.GetStoreCapsuleInfo(this.props.appid).GetAppStoreData(),
               e = Tr.a.StoreSaleWidgetContainer,
-              r = Tr.a.StoreSaleWidgetImage,
-              i = Tr.a.StoreSaleImage,
-              a = Tr.a.StoreSaleWidgetShortDesc;
-            return n && n.title
+              n = Tr.a.StoreSaleWidgetShortDesc;
+            return t && t.title
               ? A.createElement(
                   "div",
                   { className: e },
@@ -11592,34 +11593,27 @@
                     A.createElement(
                       "div",
                       {
-                        className: r,
+                        className: Tr.a.StoreSaleWidgetImage,
                         onClick: function(e) {
-                          return Yt(e, n.capsule_link);
-                        }
+                          return Yt(e, t.capsule_link);
+                        },
+                        onMouseOver: this.OnCapsuleOver,
+                        onMouseOut: this.OnCapsuleOut,
+                        onFocus: this.OnCapsuleOver,
+                        onBlur: this.OnCapsuleOut
                       },
-                      A.createElement("img", {
-                        className: i,
-                        src: this.state.mainImageURL || n.capsule
-                      })
-                    ),
-                    A.createElement(
-                      "div",
-                      { className: Tr.a.StoreSaleWidgetScreenshots },
-                      n.screenshot_list.slice(0, 3).map(function(e) {
-                        return A.createElement("img", {
-                          key: e,
-                          onMouseOver: function() {
-                            return t.OnScreenshotOver(e);
-                          },
-                          onMouseOut: t.OnScreenshotOut,
-                          onFocus: function() {
-                            return t.OnScreenshotOver(e);
-                          },
-                          onBlur: t.OnScreenshotOut,
-                          style: { width: "150px", marginRight: "10px" },
-                          src: e
-                        });
-                      })
+                      this.state.isHovered && t.microtrailer
+                        ? A.createElement("video", {
+                            className: Tr.a.StoreSaleVideo,
+                            src: t.microtrailer,
+                            loop: !0,
+                            muted: !0,
+                            autoPlay: !0
+                          })
+                        : A.createElement("img", {
+                            className: Tr.a.StoreSaleImage,
+                            src: t.main_capsule || t.capsule
+                          })
                     )
                   ),
                   A.createElement(
@@ -11633,27 +11627,27 @@
                         {
                           className: Tr.a.StoreSaleWidgetTitle,
                           onClick: function(e) {
-                            return Yt(e, n.capsule_link);
+                            return Yt(e, t.capsule_link);
                           }
                         },
-                        n.title
+                        t.title
                       )
                     ),
-                    A.createElement($r, { item: n }),
+                    A.createElement($r, { item: t }),
                     A.createElement(
                       "div",
                       { className: Tr.a.StoreSaleWidgetRelease },
-                      n.release
+                      t.release
                     ),
                     A.createElement(
                       "div",
-                      { className: a },
-                      Sr(Ar(n.short_desc))
+                      { className: n },
+                      Sr(Ar(t.short_desc))
                     ),
                     A.createElement(
                       "div",
                       { className: Tr.a.StoreSaleWidgetTags },
-                      n.tags.map(function(e) {
+                      t.tags.map(function(e) {
                         return A.createElement(
                           "div",
                           { key: e.tagid, className: Tr.a.AppTag },
@@ -11662,15 +11656,15 @@
                       })
                     ),
                     A.createElement(qr, {
-                      appid: n.appid,
-                      price: n.price,
-                      discount_percent: n.discount_percent,
-                      subid: n.subid,
-                      is_free: n.is_free,
-                      button_action: n.button_action,
-                      cart_url: this.props.cart_url || n.cart_url,
-                      add_to_cart_url: n.add_to_cart_url,
-                      capsule_link: n.capsule_link
+                      appid: t.appid,
+                      price: t.price,
+                      discount_percent: t.discount_percent,
+                      subid: t.subid,
+                      is_free: t.is_free,
+                      button_action: t.button_action,
+                      cart_url: this.props.cart_url || t.cart_url,
+                      add_to_cart_url: t.add_to_cart_url,
+                      capsule_link: t.capsule_link
                     })
                   )
                 )
@@ -11678,8 +11672,8 @@
                   className: Tr.a.StoreSaleWidgetEmptyContainer
                 });
           }),
-          Object(v.c)([z], e.prototype, "OnScreenshotOver", null),
-          Object(v.c)([z], e.prototype, "OnScreenshotOut", null),
+          Object(v.c)([z], e.prototype, "OnCapsuleOver", null),
+          Object(v.c)([z], e.prototype, "OnCapsuleOut", null),
           (e = Object(v.c)([we.a], e))
         );
       })(A.Component),
