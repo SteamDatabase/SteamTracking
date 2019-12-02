@@ -5284,10 +5284,10 @@
               Object(v.b)(this, void 0, void 0, function() {
                 var t,
                   n,
-                  s,
+                  c,
                   r,
                   i,
-                  c = this;
+                  l = this;
                 return Object(v.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
@@ -5307,76 +5307,74 @@
                       );
                     case 2:
                       return (
-                        (s = e.sent()),
+                        (c = e.sent()),
                         Object(_.x)(function() {
-                          if (!s.data || 1 != s.data.success)
+                          if (!c.data || 1 != c.data.success)
                             return (
                               console.log(
                                 "AMS - failed to load store info about appid: " +
-                                  c.m_appid
+                                  l.m_appid
                               ),
-                              void (c.m_appStoreData.success = s.data
-                                ? s.data.success
+                              void (l.m_appStoreData.success = c.data
+                                ? c.data.success
                                 : 2)
                             );
-                          (c.m_appStoreData.success = 1),
-                            (c.m_appStoreData.capsule_link =
-                              s.data.capsule_link),
-                            (c.m_appStoreData.price = s.data.price),
-                            (c.m_appStoreData.discount_percent =
-                              s.data.discount_percent),
-                            (c.m_appStoreData.subid = s.data.subid),
-                            (c.m_appStoreData.button_action =
-                              s.data.button_action),
-                            (c.m_appStoreData.cart_url = s.data.cart_url),
-                            (c.m_appStoreData.add_to_cart_url =
-                              s.data.add_to_cart_url),
-                            (c.m_appStoreData.app_to_run = s.data.app_to_run),
-                            (c.m_appStoreData.is_free = s.data.is_free),
-                            (c.m_appStoreData.required_age =
-                              s.data.required_age),
-                            (c.m_appStoreData.coming_soon = s.data.coming_soon),
-                            (c.m_appStoreData.title = s.data.title),
-                            (c.m_appStoreData.release = s.data.release),
-                            (c.m_appStoreData.short_desc = s.data.short_desc),
-                            (c.m_appStoreData.capsule = s.data.capsule),
-                            (c.m_appStoreData.tiny_capsule =
-                              s.data.tiny_capsule),
-                            (c.m_appStoreData.screenshot = s.data.screenshot),
-                            (c.m_appStoreData.screenshot_list =
-                              s.data.screenshot_list),
-                            (c.m_appStoreData.age_safe_screenshot =
-                              s.data.age_safe_screenshot),
-                            (c.m_appStoreData.library_asset_setup_complete =
-                              s.data.library_asset_setup_complete),
-                            (c.m_appStoreData.item_id = s.data.item_id),
-                            (c.m_appStoreData.icon_url = s.data.icon_url),
-                            (c.m_appStoreData.tags = s.data.tags),
-                            (c.m_appStoreData.content_descriptors =
-                              s.data.content_descriptors),
-                            (c.m_appStoreData.available_windows =
-                              s.data.available_windows),
-                            (c.m_appStoreData.available_mac =
-                              s.data.available_mac),
-                            (c.m_appStoreData.available_linux =
-                              s.data.available_linux),
-                            (c.m_appStoreData.creator_list = new Array());
-                          var e = s.data.creator_list;
+                          (l.m_appStoreData.success = 1),
+                            (l.m_appStoreData.capsule_link =
+                              c.data.capsule_link),
+                            (l.m_appStoreData.price = c.data.price),
+                            (l.m_appStoreData.discount_percent =
+                              c.data.discount_percent),
+                            (l.m_appStoreData.subid = c.data.subid),
+                            (l.m_appStoreData.button_action =
+                              c.data.button_action),
+                            (l.m_appStoreData.cart_url = c.data.cart_url),
+                            (l.m_appStoreData.add_to_cart_url =
+                              c.data.add_to_cart_url),
+                            (l.m_appStoreData.app_to_run = c.data.app_to_run),
+                            (l.m_appStoreData.is_free = c.data.is_free),
+                            (l.m_appStoreData.required_age =
+                              c.data.required_age),
+                            (l.m_appStoreData.coming_soon = c.data.coming_soon),
+                            (l.m_appStoreData.title = c.data.title),
+                            (l.m_appStoreData.release = c.data.release),
+                            (l.m_appStoreData.short_desc = c.data.short_desc),
+                            (l.m_appStoreData.capsule = c.data.capsule),
+                            (l.m_appStoreData.tiny_capsule =
+                              c.data.tiny_capsule),
+                            (l.m_appStoreData.screenshot = c.data.screenshot),
+                            (l.m_appStoreData.screenshot_list =
+                              c.data.screenshot_list),
+                            (l.m_appStoreData.age_safe_screenshot =
+                              c.data.age_safe_screenshot),
+                            (l.m_appStoreData.library_asset_setup_complete =
+                              c.data.library_asset_setup_complete),
+                            (l.m_appStoreData.item_id = c.data.item_id),
+                            (l.m_appStoreData.icon_url = c.data.icon_url),
+                            (l.m_appStoreData.tags = c.data.tags),
+                            (l.m_appStoreData.content_descriptors =
+                              c.data.content_descriptors),
+                            (l.m_appStoreData.available_windows =
+                              c.data.available_windows),
+                            (l.m_appStoreData.available_mac =
+                              c.data.available_mac),
+                            (l.m_appStoreData.available_linux =
+                              c.data.available_linux),
+                            (l.m_appStoreData.creator_list = new Array());
+                          var e = c.data.creator_list;
                           if (e)
                             for (var t = 0, n = e; t < n.length; t++) {
                               var r = n[t];
-                              c.m_appStoreData.creator_list.push(r);
+                              l.m_appStoreData.creator_list.push(r);
                             }
-                          c.m_appStoreData.social = new Array();
-                          for (
-                            var i = 0, a = s.data.social;
-                            i < a.length;
-                            i++
-                          ) {
-                            var o = a[i];
-                            c.m_appStoreData.social.push(o);
-                          }
-                          c.m_bLoaded = !0;
+                          l.m_appStoreData.social = new Array();
+                          var i = c.data.social;
+                          if (i)
+                            for (var a = 0, o = i; a < o.length; a++) {
+                              var s = o[a];
+                              l.m_appStoreData.social.push(s);
+                            }
+                          l.m_bLoaded = !0;
                         }),
                         [3, 4]
                       );
