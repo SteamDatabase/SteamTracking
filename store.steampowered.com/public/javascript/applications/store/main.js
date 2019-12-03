@@ -113,7 +113,7 @@
               ".js?chunkhash=" +
               {
                 0: "179d2208bb00c015535b",
-                1: "8cdecfb53611d8f9c7d0",
+                1: "16ccacfefe720b74e7d5",
                 4: "5186310fc5d82e3c0b9c",
                 5: "ca1901c80c06533d0674",
                 6: "74928b516afe89f63249",
@@ -38681,6 +38681,12 @@
           (r.prototype.GetVisibilityStartTimeAndDateUnixSeconds = function() {
             return this.visibilityStartTime;
           }),
+          (r.prototype.BIsEventActionEnabled = function() {
+            return (
+              !!this.jsondata.action_end_time &&
+              this.jsondata.action_end_time > Date.now() / 1e3
+            );
+          }),
           (r.prototype.BHasSubTitle = function(e) {
             if (
               !this.jsondata ||
@@ -45789,7 +45795,9 @@
               t = !!e && e != Md.k_ENone,
               n =
                 this.state.eCategoryLoaded == e &&
-                this.state.nomineeAppID == this.props.event.appid;
+                this.state.nomineeAppID == this.props.event.appid,
+              r = this.props.event.BIsEventActionEnabled(),
+              i = t && (r || n);
             return A.createElement(
               "div",
               { className: Hu.a.SteamAwardContainer },
@@ -45815,40 +45823,48 @@
                   A.createElement(
                     "div",
                     { className: Hu.a.SteamAwardSubTitle },
-                    ee("#SteamAwards_EventCallToAction"),
-                    A.createElement(
-                      "a",
-                      {
-                        href: M.STORE_BASE_URL + "steamawards/nominations/",
-                        className: Hu.a.SteamAwardLearnMore
-                      },
-                      "(",
-                      ee("#EventDisplay_CallToAction_LearnMore"),
-                      ")"
-                    )
+                    ee(
+                      r
+                        ? "#SteamAwards_EventCallToAction"
+                        : "#SteamAwards_EventVotingDateTeaser"
+                    ),
+                    r &&
+                      A.createElement(
+                        "a",
+                        {
+                          href: M.STORE_BASE_URL + "steamawards/nominations/",
+                          className: Hu.a.SteamAwardLearnMore
+                        },
+                        "(",
+                        ee("#EventDisplay_CallToAction_LearnMore"),
+                        ")"
+                      )
                   ),
                   A.createElement(
                     "div",
                     { className: Hu.a.SteamAwardHeaderText },
-                    t
-                      ? ee(
-                          "#SteamAwards_EventNominateGamePrompt_Long",
-                          this.props.event.GetGameTitle(this.props.lang)
-                        )
-                      : A.createElement(
-                          "a",
-                          {
-                            href: M.STORE_BASE_URL + "steamawards/nominations/"
-                          },
-                          ee(
-                            "#SteamAwards_EventNominateGamePrompt_NoCategory",
+                    r
+                      ? t
+                        ? ee(
+                            "#SteamAwards_EventNominateGamePrompt_Long",
                             this.props.event.GetGameTitle(this.props.lang)
                           )
-                        )
+                        : A.createElement(
+                            "a",
+                            {
+                              href:
+                                M.STORE_BASE_URL + "steamawards/nominations/"
+                            },
+                            ee(
+                              "#SteamAwards_EventNominateGamePrompt_NoCategory",
+                              this.props.event.GetGameTitle(this.props.lang)
+                            )
+                          )
+                      : ee("#SteamAwards_Event_NominationsClosed")
                   )
                 )
               ),
-              t &&
+              i &&
                 A.createElement(
                   "div",
                   { className: Hu.a.SteamAwardVoteWidget },
@@ -45856,7 +45872,8 @@
                     "div",
                     { className: Hu.a.SteamAwardVotePrompt },
                     " ",
-                    ee("#SteamAwards_EventNominateGamePrompt_CategoryPrefix"),
+                    r &&
+                      ee("#SteamAwards_EventNominateGamePrompt_CategoryPrefix"),
                     " "
                   ),
                   A.createElement(
@@ -45867,6 +45884,7 @@
                       classname: Hu.a.SteamAwardVoteCheckBox,
                       checked: n,
                       onChange: this.OnNominateClick,
+                      disabled: !r,
                       color: "#bcf3dc",
                       highlightColor: "white",
                       label: A.createElement(
@@ -45885,17 +45903,18 @@
                       )
                     })
                   ),
-                  A.createElement(
-                    "div",
-                    { className: Hu.a.SteamAwardLinkToNominationPage },
+                  r &&
                     A.createElement(
-                      "a",
-                      { href: M.STORE_BASE_URL + "steamawards/nominations/" },
-                      " ",
-                      ee("#SteamAwards_EventNominationAlternativeLinkText"),
-                      " "
+                      "div",
+                      { className: Hu.a.SteamAwardLinkToNominationPage },
+                      A.createElement(
+                        "a",
+                        { href: M.STORE_BASE_URL + "steamawards/nominations/" },
+                        " ",
+                        ee("#SteamAwards_EventNominationAlternativeLinkText"),
+                        " "
+                      )
                     )
-                  )
                 )
             );
           }),
