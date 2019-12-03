@@ -6,6 +6,11 @@
 body {
 	background-color: #161920;
 	font-size: 14px;
+    color: #acb5be;
+}
+
+a {
+    color: #4699C9;
 }
 
 body h4 {
@@ -19,7 +24,7 @@ body h4 {
 
 table {
 	width: 100%;
-	font-size: 12px;
+	font-size: 13px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -184,8 +189,9 @@ td {
 }
 
 .docPageTitle {
-	font-size: 25px;
-	color: #67c1f5;
+	font-size: 34px;
+	color: #e6e6e6;
+    font-weight: 400;
 }
 
 .docPageTitle + .landingBreadcrumbs,
@@ -215,7 +221,7 @@ td {
 
 .documentation_bbcode img {
 	max-width: 100%;
-	box-shadow: 0 0 10px 3px rgba(54, 73, 99, 0.7);
+	box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7);
 }
 
 .documentation_bbcode h2 {
@@ -239,21 +245,21 @@ td {
 	margin-bottom: 6px;
 
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
+		font-weight: 300; /* light */
 
-		}
-.documentation_bbcode h2.bb_section:not(:first-child) {
-	border-top: 2px solid #2e3037;
+		    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    font-size: 22px;
 }
 
 .documentation_bbcode h2.bb_subsection {
-	font-size: 16px;
-	color: #76accb;
+	font-size: 20px;
+	color: white;
 	margin-bottom: 4px;
 	padding-top: 5px;
 
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
+		font-weight: 300; /* light */
 
 		}
 
@@ -263,6 +269,44 @@ td {
 	top: -100px;
 	visibility: hidden;
 }
+
+/* Intro block ========================================================= */
+.documentation_bbcode .bb_introblock {
+    width: 100%;
+    background: #20475d;
+    display: flex;
+    flex-direction: row;
+}
+.documentation_bbcode .bb_introblock > div.left {
+    max-width: 215px;
+
+    background: #f2f3f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.documentation_bbcode .bb_introblock > div.introtext {
+    padding: 0px 16px 16px 16px;
+    font-size: 14px;
+}
+.documentation_bbcode .bb_introblock > div.introtext h5 {
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		    margin-top: 16px;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #fff;
+    border-bottom: none;
+}
+.documentation_bbcode .bb_introblock img {
+    width: 100%;
+    height: auto;
+    max-height: 215px;
+    box-shadow: none;
+}
+/* End Intro block ========================================================= */
 
 #hashLocationHighlight {
 	position: absolute;
@@ -577,7 +621,7 @@ h2.editorOnly {
 
 #docMainContentArea {
 	width: 100%;
-	padding: 12px 24px;
+	padding: 24px 24px;
 }
 
 #docNavigation > ul {

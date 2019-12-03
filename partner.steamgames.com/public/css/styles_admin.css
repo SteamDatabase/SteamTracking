@@ -381,6 +381,18 @@ select.hourselect,  select.minuteselect {
 	margin-left: 270px;
 }
 
+.localized_image_picker_ctn {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+}
+.localized_file_select {
+    width: 298px;
+}
+.localized_lang_select {
+    margin-left: 6px;
+}
+
 .boxlist_content:has( > .specialannouncementarea ) {
 	background-color: #1c2022;
 }
