@@ -140,7 +140,7 @@
               ".js?chunkhash=" +
               {
                 0: "ebf340b3a6216e2d0fa9",
-                1: "8cdecfb53611d8f9c7d0",
+                1: "16ccacfefe720b74e7d5",
                 3: "5065546d6c44560ac72b",
                 5: "d04d73d4f36b0c9c4a17",
                 6: "f2e812189ea5832c9429",
@@ -18112,6 +18112,12 @@
           }),
           (o.prototype.GetVisibilityStartTimeAndDateUnixSeconds = function() {
             return this.visibilityStartTime;
+          }),
+          (o.prototype.BIsEventActionEnabled = function() {
+            return (
+              !!this.jsondata.action_end_time &&
+              this.jsondata.action_end_time > Date.now() / 1e3
+            );
           }),
           (o.prototype.BHasSubTitle = function(e) {
             if (
@@ -45808,7 +45814,9 @@
               t = !!e && e != Dt.k_ENone,
               n =
                 this.state.eCategoryLoaded == e &&
-                this.state.nomineeAppID == this.props.event.appid;
+                this.state.nomineeAppID == this.props.event.appid,
+              o = this.props.event.BIsEventActionEnabled(),
+              a = t && (o || n);
             return v.createElement(
               "div",
               { className: nb.a.SteamAwardContainer },
@@ -45834,41 +45842,48 @@
                   v.createElement(
                     "div",
                     { className: nb.a.SteamAwardSubTitle },
-                    Object(W.c)("#SteamAwards_EventCallToAction"),
-                    v.createElement(
-                      "a",
-                      {
-                        href: m.b.STORE_BASE_URL + "steamawards/nominations/",
-                        className: nb.a.SteamAwardLearnMore
-                      },
-                      "(",
-                      Object(W.c)("#EventDisplay_CallToAction_LearnMore"),
-                      ")"
-                    )
+                    Object(W.c)(
+                      o
+                        ? "#SteamAwards_EventCallToAction"
+                        : "#SteamAwards_EventVotingDateTeaser"
+                    ),
+                    o &&
+                      v.createElement(
+                        "a",
+                        {
+                          href: m.b.STORE_BASE_URL + "steamawards/nominations/",
+                          className: nb.a.SteamAwardLearnMore
+                        },
+                        "(",
+                        Object(W.c)("#EventDisplay_CallToAction_LearnMore"),
+                        ")"
+                      )
                   ),
                   v.createElement(
                     "div",
                     { className: nb.a.SteamAwardHeaderText },
-                    t
-                      ? Object(W.c)(
-                          "#SteamAwards_EventNominateGamePrompt_Long",
-                          this.props.event.GetGameTitle(this.props.lang)
-                        )
-                      : v.createElement(
-                          "a",
-                          {
-                            href:
-                              m.b.STORE_BASE_URL + "steamawards/nominations/"
-                          },
-                          Object(W.c)(
-                            "#SteamAwards_EventNominateGamePrompt_NoCategory",
+                    o
+                      ? t
+                        ? Object(W.c)(
+                            "#SteamAwards_EventNominateGamePrompt_Long",
                             this.props.event.GetGameTitle(this.props.lang)
                           )
-                        )
+                        : v.createElement(
+                            "a",
+                            {
+                              href:
+                                m.b.STORE_BASE_URL + "steamawards/nominations/"
+                            },
+                            Object(W.c)(
+                              "#SteamAwards_EventNominateGamePrompt_NoCategory",
+                              this.props.event.GetGameTitle(this.props.lang)
+                            )
+                          )
+                      : Object(W.c)("#SteamAwards_Event_NominationsClosed")
                   )
                 )
               ),
-              t &&
+              a &&
                 v.createElement(
                   "div",
                   { className: nb.a.SteamAwardVoteWidget },
@@ -45876,9 +45891,10 @@
                     "div",
                     { className: nb.a.SteamAwardVotePrompt },
                     " ",
-                    Object(W.c)(
-                      "#SteamAwards_EventNominateGamePrompt_CategoryPrefix"
-                    ),
+                    o &&
+                      Object(W.c)(
+                        "#SteamAwards_EventNominateGamePrompt_CategoryPrefix"
+                      ),
                     " "
                   ),
                   v.createElement(
@@ -45889,6 +45905,7 @@
                       classname: nb.a.SteamAwardVoteCheckBox,
                       checked: n,
                       onChange: this.OnNominateClick,
+                      disabled: !o,
                       color: "#bcf3dc",
                       highlightColor: "white",
                       label: v.createElement(
@@ -45907,19 +45924,22 @@
                       )
                     })
                   ),
-                  v.createElement(
-                    "div",
-                    { className: nb.a.SteamAwardLinkToNominationPage },
+                  o &&
                     v.createElement(
-                      "a",
-                      { href: m.b.STORE_BASE_URL + "steamawards/nominations/" },
-                      " ",
-                      Object(W.c)(
-                        "#SteamAwards_EventNominationAlternativeLinkText"
-                      ),
-                      " "
+                      "div",
+                      { className: nb.a.SteamAwardLinkToNominationPage },
+                      v.createElement(
+                        "a",
+                        {
+                          href: m.b.STORE_BASE_URL + "steamawards/nominations/"
+                        },
+                        " ",
+                        Object(W.c)(
+                          "#SteamAwards_EventNominationAlternativeLinkText"
+                        ),
+                        " "
+                      )
                     )
-                  )
                 )
             );
           }),
@@ -47093,6 +47113,10 @@
               ((this.m_curModel.visibilityEndTime = e),
               this.SetDirty(gb.visibility));
           }),
+          (n.prototype.SetActionEndTime = function(e) {
+            (this.m_curModel.jsondata.action_end_time = e),
+              this.SetDirty(gb.jsondata_other);
+          }),
           (n.prototype.BIsDirty = function() {
             return this.m_bChanged;
           }),
@@ -47607,6 +47631,7 @@
           Object(g.c)([_.f.bound], n.prototype, "SetVisibilityStartTime", null),
           Object(g.c)([_.f], n.prototype, "ResetSetVisibilityStartTime", null),
           Object(g.c)([_.f.bound], n.prototype, "SetVisibilityEndTime", null),
+          Object(g.c)([_.f.bound], n.prototype, "SetActionEndTime", null),
           Object(g.c)([_.f], n.prototype, "ClearDirty", null),
           Object(g.c)([_.f], n.prototype, "SetDirty", null),
           Object(g.c)([_.f], n.prototype, "DeriveTimeEditChoices", null),
@@ -66317,7 +66342,7 @@
           (e.prototype.OnStartTimeInputChange = function(e) {
             e
               ? this.GetEntryEditModel().SetUseDeltaFromStart()
-              : this.GetEntryEditModel().SetUseExplicitStartTime(Tz.unix());
+              : this.GetEntryEditModel().SetUseExplicitStartTime(Tz().unix());
           }),
           (e.prototype.OnDeltaFromStartChanged = function(e) {
             var t = Number.parseInt(e.target.value);
@@ -66832,7 +66857,8 @@
           e.earliestAllowedStartTime > n &&
             (t.SetStartTimeEditChoice(ub.k_ESpecified),
             t.SetEventStartTime(e.earliestAllowedStartTime)))
-        : t.SetEarliestAllowedStartTime(void 0);
+        : t.SetEarliestAllowedStartTime(void 0),
+        t.SetActionEndTime(e.actionEndTime);
     }
     var Pz = (function(t) {
         function e() {
@@ -67317,6 +67343,8 @@
                 to: o ? ln(t, e.GetAnnouncementGID()) : rn(t, n)
               });
             }
+            var a = Ob()("2019-12-03T10:00:00-08:00").unix(),
+              i = Ob()().unix() < a && !!e.GetAppReleaseDate();
             return v.createElement(
               "div",
               null,
@@ -67375,7 +67403,7 @@
                       { className: ll.a.EventCategory_Top_Title },
                       Object(W.c)("#EventCategory_SelectCategory")
                     ),
-                    !!e.GetAppReleaseDate() &&
+                    i &&
                       v.createElement(
                         "div",
                         { className: ll.a.EventCategory_SteamAwardsNomination },
@@ -67392,7 +67420,8 @@
                           ],
                           earliestAllowedStartTime: Ob()(
                             "2019-11-26T10:00:00-08:00"
-                          ).unix()
+                          ).unix(),
+                          actionEndTime: a
                         })
                       ),
                     v.createElement(Uz, {

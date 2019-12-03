@@ -923,10 +923,13 @@ LocalizationReady("shared", "english", {
 
   SteamAwards_EventMainTitle: "The Steam Awards",
   SteamAwards_EventCallToAction: "Coming this December",
+  SteamAwards_EventVotingDateTeaser: "December 2019",
   SteamAwards_EventNominateGamePrompt_Long:
     "Nominate %1$s for the category below as suggested by the developers of this game, or select a different category",
   SteamAwards_EventNominateGamePrompt_NoCategory:
     "Click here to nominate %1$s for a category on the Steam Awards page.",
+  SteamAwards_Event_NominationsClosed:
+    "Nominations have closed. Vote during the Winter Sale. Winners announced December 31st.",
   SteamAwards_EventNominateGamePrompt_CategoryPrefix: "Nominate for:",
   SteamAwards_EventNominationAlternativeLinkText: "Or pick another category",
   SteamAward_CategoryTitle_none: "No category",
