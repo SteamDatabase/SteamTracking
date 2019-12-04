@@ -16974,7 +16974,7 @@
       (Ye.right = "rightthumb"),
       (Ye.full = "full"),
       (Ye.summary = "summary");
-    var ht = /v=(.{11}).*/,
+    var ht = /^[^v]+v=(.{11}).*/,
       gt = /.*youtu\.be\/(.{11}).*/;
     var ft = (function(t) {
         function e() {
