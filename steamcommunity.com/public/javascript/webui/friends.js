@@ -24565,7 +24565,7 @@
             var n = !1;
             return (
               this.m_sessions.forEach(function(e) {
-                e.bSession && e.gameID !== t && (n = !0);
+                e.bSession && e.gameID !== t && void 0 !== e.gameID && (n = !0);
               }),
               n
             );
