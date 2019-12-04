@@ -123,41 +123,38 @@
       n.d(t, "a", function() {
         return a;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "k", function() {
         return s;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "h", function() {
         return l;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "n", function() {
         return u;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "m", function() {
         return m;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "i", function() {
         return p;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return h;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "l", function() {
         return d;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "b", function() {
         return f;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "o", function() {
         return v;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "g", function() {
         return _;
       }),
-      n.d(t, "g", function() {
-        return y;
-      }),
       n.d(t, "f", function() {
-        return E;
+        return y;
       });
     var r = n("UqDm");
     n("XaMz");
@@ -215,15 +212,7 @@
       }
       return 0 < t.rangeCount && t.rangeCount == n;
     }
-    function s(e, t) {
-      var n = e.offsetTop;
-      e.offsetParent != t && (n -= t.offsetTop),
-        n < t.scrollTop
-          ? e.scrollIntoView(!0)
-          : n + e.offsetHeight > t.scrollTop + t.offsetHeight &&
-            e.scrollIntoView(!1);
-    }
-    function l(e, t, n) {
+    function s(e, t, n) {
       var r = 0,
         o = 0;
       return (
@@ -232,7 +221,7 @@
         Math.sqrt(r * r + o * o)
       );
     }
-    function u(e, t) {
+    function l(e, t) {
       return {
         width: t.width,
         height: t.height,
@@ -242,18 +231,18 @@
         right: e.screenLeft + t.right
       };
     }
-    function m(e) {
+    function u(e) {
       var t = void 0;
       return (
         e && e.currentTarget && (t = e.currentTarget.ownerDocument.defaultView),
         t
       );
     }
-    function p(e) {
+    function m(e) {
       var t = void 0;
       return e && (t = e.ownerDocument.defaultView), t;
     }
-    function h(e) {
+    function p(e) {
       var t = document.createElement("textarea");
       (t.textContent = e),
         (t.style.position = "fixed"),
@@ -267,11 +256,11 @@
         document.body.removeChild(t);
       }
     }
-    function d(e) {
+    function h(e) {
       var t = "steam://openurl/";
-      e.startsWith(t) && (e = e.slice(t.length)), h(e);
+      e.startsWith(t) && (e = e.slice(t.length)), p(e);
     }
-    function f(e) {
+    function d(e) {
       return e
         ? 0 == e.clipboardData.files.length
           ? null
@@ -284,7 +273,7 @@
           : e.clipboardData.files[0]
         : null;
     }
-    function v(e) {
+    function f(e) {
       var t = e.ownerDocument;
       return (
         t.fullscreen ||
@@ -293,7 +282,7 @@
         t.msFullscreenElement
       );
     }
-    function _(e, t) {
+    function v(e, t) {
       var n = e;
       n.requestFullscreen
         ? n.requestFullscreen()
@@ -305,7 +294,7 @@
         ? n.mozRequestFullScreen()
         : n.msRequestFullscreen && n.msRequestFullscreen();
     }
-    function y(e) {
+    function _(e) {
       var t = e.ownerDocument;
       t.cancelFullscreen
         ? t.cancelFullscreen()
@@ -315,7 +304,7 @@
         ? t.mozCancelFullScreen()
         : t.msExitFullscreen && t.msExitFullscreen();
     }
-    var E = (function() {
+    var y = (function() {
       function e(e) {
         var i = this;
         (this.m_bNeedSort = !1),
@@ -681,19 +670,19 @@
       return !!window.document;
     }
     n.d(t, "c", function() {
-      return i;
+      return a;
     }),
       n.d(t, "h", function() {
-        return a;
-      }),
-      n.d(t, "a", function() {
         return s;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return l;
       }),
+      n.d(t, "b", function() {
+        return u;
+      }),
       n.d(t, "e", function() {
-        return m;
+        return i;
       }),
       n.d(t, "g", function() {
         return p;
@@ -705,7 +694,7 @@
         return d;
       });
     var o,
-      i = {
+      a = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -739,13 +728,13 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!c()) return o || (o = m()), o;
+            if (!c()) return o || (o = i()), o;
             var e = (function(e) {
               if (!c() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
-            e || (e = m());
+            e || (e = i());
             return e;
           })();
         },
@@ -754,7 +743,7 @@
         DEV_MODE: !1,
         OFFLINE_MODE: !1
       },
-      a = {
+      s = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -766,8 +755,8 @@
         is_support: !1,
         short_url: ""
       },
-      s = { steamid: "", clanid: 0, listid: 0 },
-      l = {
+      l = { steamid: "", clanid: 0, listid: 0 },
+      u = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
         ANNOUNCEMENT_GID: "",
@@ -781,8 +770,8 @@
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1
       },
-      u = "webui_config";
-    function m() {
+      m = "webui_config";
+    function i() {
       var e = (function() {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(r.b)(0, 35).toString(36);
@@ -811,20 +800,21 @@
       );
     }
     function p(e) {
-      void 0 === e && (e = u);
-      var t = h("config", e);
-      t && (delete t.SESSIONID, Object.assign(i, t));
-      var n = h("userinfo", e);
-      n && Object.assign(a, n);
-      var r = h("broadcast", e);
-      r && Object.assign(s, r);
-      var o = h("community", e);
-      o && Object.assign(l, o);
+      void 0 === e && (e = m);
+      var t = {},
+        n = h("config", e);
+      n && (delete n.SESSIONID, Object.assign(a, n), (t.config = !0));
+      var r = h("userinfo", e);
+      r && (Object.assign(s, r), (t.userConfig = !0));
+      var o = h("broadcast", e);
+      o && (Object.assign(l, o), (t.broadcastConfig = !0));
+      var i = h("community", e);
+      return i && (Object.assign(u, i), (t.communityConfig = !0)), t;
     }
     function h(e, t) {
       var n;
       if (
-        (void 0 === t && (t = u),
+        (void 0 === t && (t = m),
         (n = "string" == typeof t ? document.getElementById(t) : t))
       )
         try {
@@ -838,15 +828,15 @@
     }
     function d() {
       var e = window.location.href;
-      return e.startsWith(i.STORE_BASE_URL)
+      return e.startsWith(a.STORE_BASE_URL)
         ? "store"
-        : e.startsWith(i.COMMUNITY_BASE_URL)
+        : e.startsWith(a.COMMUNITY_BASE_URL)
         ? "community"
-        : e.startsWith(i.PARTNER_BASE_URL)
+        : e.startsWith(a.PARTNER_BASE_URL)
         ? "partnerweb"
-        : e.startsWith(i.HELP_BASE_URL)
+        : e.startsWith(a.HELP_BASE_URL)
         ? "help"
-        : e.startsWith(i.STEAMTV_BASE_URL)
+        : e.startsWith(a.STEAMTV_BASE_URL)
         ? "steamtv"
         : "";
     }
@@ -3349,7 +3339,7 @@
       n.d(t, "p", function() {
         return f;
       }),
-      n.d(t, "eb", function() {
+      n.d(t, "db", function() {
         return v;
       }),
       n.d(t, "T", function() {
@@ -3358,16 +3348,16 @@
       n.d(t, "R", function() {
         return y;
       }),
-      n.d(t, "pb", function() {
+      n.d(t, "ob", function() {
         return E;
       }),
-      n.d(t, "qb", function() {
+      n.d(t, "pb", function() {
         return b;
       }),
-      n.d(t, "nb", function() {
+      n.d(t, "mb", function() {
         return g;
       }),
-      n.d(t, "gb", function() {
+      n.d(t, "fb", function() {
         return w;
       }),
       n.d(t, "w", function() {
@@ -3394,7 +3384,7 @@
       n.d(t, "L", function() {
         return O;
       }),
-      n.d(t, "ob", function() {
+      n.d(t, "nb", function() {
         return I;
       }),
       n.d(t, "K", function() {
@@ -3409,7 +3399,7 @@
       n.d(t, "N", function() {
         return G;
       }),
-      n.d(t, "bb", function() {
+      n.d(t, "ab", function() {
         return D;
       }),
       n.d(t, "h", function() {
@@ -3422,13 +3412,13 @@
         return H;
       }),
       n.d(t, "D", function() {
-        return W;
-      }),
-      n.d(t, "hb", function() {
         return F;
       }),
-      n.d(t, "lb", function() {
+      n.d(t, "gb", function() {
         return z;
+      }),
+      n.d(t, "kb", function() {
+        return W;
       }),
       n.d(t, "A", function() {
         return j;
@@ -3442,7 +3432,7 @@
       n.d(t, "n", function() {
         return K;
       }),
-      n.d(t, "fb", function() {
+      n.d(t, "eb", function() {
         return Y;
       }),
       n.d(t, "F", function() {
@@ -3454,86 +3444,83 @@
       n.d(t, "U", function() {
         return Z;
       }),
-      n.d(t, "ab", function() {
+      n.d(t, "S", function() {
         return J;
       }),
-      n.d(t, "S", function() {
+      n.d(t, "hb", function() {
         return Q;
       }),
       n.d(t, "ib", function() {
         return $;
       }),
-      n.d(t, "jb", function() {
+      n.d(t, "X", function() {
         return ee;
       }),
-      n.d(t, "X", function() {
+      n.d(t, "r", function() {
         return te;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "s", function() {
         return ne;
       }),
-      n.d(t, "s", function() {
+      n.d(t, "m", function() {
         return re;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "G", function() {
         return oe;
       }),
-      n.d(t, "G", function() {
+      n.d(t, "cb", function() {
         return ie;
       }),
-      n.d(t, "db", function() {
+      n.d(t, "bb", function() {
         return ce;
       }),
-      n.d(t, "cb", function() {
+      n.d(t, "lb", function() {
         return ae;
       }),
-      n.d(t, "mb", function() {
+      n.d(t, "u", function() {
         return se;
       }),
-      n.d(t, "u", function() {
+      n.d(t, "V", function() {
         return le;
       }),
-      n.d(t, "V", function() {
+      n.d(t, "W", function() {
         return ue;
       }),
-      n.d(t, "W", function() {
+      n.d(t, "y", function() {
         return me;
       }),
-      n.d(t, "y", function() {
+      n.d(t, "Z", function() {
         return pe;
       }),
-      n.d(t, "Z", function() {
+      n.d(t, "d", function() {
         return he;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "J", function() {
         return de;
       }),
-      n.d(t, "J", function() {
+      n.d(t, "jb", function() {
         return fe;
       }),
-      n.d(t, "kb", function() {
+      n.d(t, "C", function() {
         return ve;
       }),
-      n.d(t, "C", function() {
+      n.d(t, "q", function() {
         return _e;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "qb", function() {
         return ye;
       }),
-      n.d(t, "rb", function() {
+      n.d(t, "e", function() {
         return Ee;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "i", function() {
         return be;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "x", function() {
         return ge;
       }),
-      n.d(t, "x", function() {
-        return we;
-      }),
       n.d(t, "M", function() {
-        return Se;
+        return we;
       });
     var r = n("mrSG"),
       o = n("q1tI"),
@@ -4990,7 +4977,7 @@
         )
       );
     }
-    function W() {
+    function F() {
       return o.createElement(
         "svg",
         {
@@ -5020,7 +5007,7 @@
         })
       );
     }
-    function F(e) {
+    function z(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -5264,7 +5251,7 @@
         )
       );
     }
-    function z() {
+    function W() {
       return o.createElement(
         "svg",
         {
@@ -5540,70 +5527,6 @@
         "svg",
         {
           version: "1.1",
-          id: "base",
-          xmlns: "http://www.w3.org/2000/svg",
-          className: "SVGIcon_Button SVGIcon_SingleWindowToggle",
-          x: "0px",
-          y: "0px",
-          width: "256px",
-          height: "256px",
-          viewBox: "0 0 256 256"
-        },
-        o.createElement(
-          "g",
-          { className: "mainBox" },
-          o.createElement("rect", {
-            x: "90",
-            y: "42.167",
-            fill: "none",
-            stroke: "rgb(120, 138, 146)",
-            strokeWidth: "18",
-            strokeMiterlimit: "10",
-            width: "142",
-            height: "171.667"
-          }),
-          o.createElement("line", {
-            fill: "none",
-            stroke: "rgb(120, 138, 146)",
-            strokeWidth: "42",
-            strokeMiterlimit: "10",
-            x1: "90",
-            y1: "54.01",
-            x2: "232",
-            y2: "54.01"
-          })
-        ),
-        o.createElement(
-          "g",
-          { className: "leftBox" },
-          o.createElement("rect", {
-            x: "28",
-            y: "42.167",
-            fill: "none",
-            stroke: "rgb(120, 138, 146)",
-            strokeWidth: "18",
-            strokeMiterlimit: "10",
-            width: "62",
-            height: "171.667"
-          }),
-          o.createElement("line", {
-            fill: "none",
-            stroke: "rgb(120, 138, 146)",
-            strokeWidth: "42",
-            strokeMiterlimit: "10",
-            x1: "28",
-            y1: "54.01",
-            x2: "90",
-            y2: "54.01"
-          })
-        )
-      );
-    }
-    function Q() {
-      return o.createElement(
-        "svg",
-        {
-          version: "1.1",
           id: "Layer_2",
           xmlns: "http://www.w3.org/2000/svg",
           className: "SVGIcon_Button SVGIcon_Reload",
@@ -5627,7 +5550,7 @@
         })
       );
     }
-    function $() {
+    function Q() {
       return o.createElement(
         "svg",
         {
@@ -5651,7 +5574,7 @@
         })
       );
     }
-    function ee() {
+    function $() {
       return o.createElement(
         "svg",
         {
@@ -5730,7 +5653,7 @@
         )
       );
     }
-    function te() {
+    function ee() {
       return o.createElement(
         "svg",
         {
@@ -5754,7 +5677,7 @@
         )
       );
     }
-    function ne(e) {
+    function te(e) {
       return o.createElement(
         "svg",
         {
@@ -5775,7 +5698,7 @@
         })
       );
     }
-    function re(e) {
+    function ne(e) {
       return o.createElement(
         "svg",
         {
@@ -5839,7 +5762,7 @@
         )
       );
     }
-    function oe() {
+    function re() {
       return o.createElement(
         "svg",
         {
@@ -5874,7 +5797,7 @@
         })
       );
     }
-    function ie(e) {
+    function oe(e) {
       return o.createElement(
         "svg",
         {
@@ -5912,7 +5835,7 @@
         })
       );
     }
-    function ce() {
+    function ie() {
       return o.createElement(
         "svg",
         {
@@ -6026,7 +5949,7 @@
         )
       );
     }
-    function ae(e) {
+    function ce(e) {
       var t = Object(a.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -6060,7 +5983,7 @@
         })
       );
     }
-    function se() {
+    function ae() {
       return o.createElement(
         "svg",
         {
@@ -6088,7 +6011,7 @@
         })
       );
     }
-    function le() {
+    function se() {
       return o.createElement(
         "svg",
         {
@@ -6110,7 +6033,7 @@
         )
       );
     }
-    function ue() {
+    function le() {
       return o.createElement(
         "svg",
         {
@@ -6147,7 +6070,7 @@
         )
       );
     }
-    function me() {
+    function ue() {
       return o.createElement(
         "svg",
         {
@@ -6175,7 +6098,7 @@
         })
       );
     }
-    function pe(e) {
+    function me(e) {
       return o.createElement(
         "svg",
         {
@@ -6287,7 +6210,7 @@
         )
       );
     }
-    function he() {
+    function pe() {
       return o.createElement(
         "svg",
         {
@@ -6354,7 +6277,7 @@
         })
       );
     }
-    function de() {
+    function he() {
       return o.createElement(
         "svg",
         {
@@ -6375,7 +6298,7 @@
         })
       );
     }
-    function fe() {
+    function de() {
       return o.createElement(
         "svg",
         {
@@ -6395,7 +6318,7 @@
         })
       );
     }
-    function ve() {
+    function fe() {
       return o.createElement(
         "svg",
         {
@@ -6419,7 +6342,7 @@
         })
       );
     }
-    function _e() {
+    function ve() {
       return o.createElement(
         "svg",
         {
@@ -6469,7 +6392,7 @@
         })
       );
     }
-    function ye() {
+    function _e() {
       return o.createElement(
         "svg",
         {
@@ -6502,7 +6425,7 @@
         })
       );
     }
-    function Ee() {
+    function ye() {
       return o.createElement(
         "svg",
         {
@@ -6522,7 +6445,7 @@
         })
       );
     }
-    function be() {
+    function Ee() {
       return o.createElement(
         "svg",
         {
@@ -6544,7 +6467,7 @@
         })
       );
     }
-    function ge() {
+    function be() {
       return o.createElement(
         "svg",
         {
@@ -6578,7 +6501,7 @@
         })
       );
     }
-    function we() {
+    function ge() {
       return o.createElement(
         "svg",
         {
@@ -6648,7 +6571,7 @@
         })
       );
     }
-    function Se() {
+    function we() {
       return o.createElement(
         "svg",
         { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 63.61 59.05" },

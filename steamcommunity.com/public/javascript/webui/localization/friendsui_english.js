@@ -203,6 +203,8 @@ LocalizationReady("friendsui", "english", {
     "Friends can't see you (you'll appear offline), but you can see them.",
   PersonaStateInvisibleNote: "Chat and notifications are still on.",
 
+  PersonaStateRemotePlayTogether: "Remote Play Together",
+
   Menu_Help_Capital: "HELP",
   Menu_LogOut: "Sign Out",
   Menu_AddAFriend_Capital: "ADD A FRIEND",
@@ -716,6 +718,7 @@ LocalizationReady("friendsui", "english", {
   Friend_Menu_InviteToWatch: "Invite to Watch",
   Friend_Menu_InviteToRemotePlay: "Remote Play Together",
   Friend_Menu_CancelRemotePlay: "Cancel Remote Play",
+  Friend_Menu_CancelAllRemotePlay: "End Remote Play Streams",
   Friend_Menu_KickFromChatRoom: "Kick",
   Friend_Menu_LaunchGame: "Launch ",
   Friend_Menu_HasLeftChat: "No Longer in Chat",
@@ -943,12 +946,12 @@ LocalizationReady("friendsui", "english", {
   RemotePlay_Invited: "Invite Sent",
   RemotePlay_FriendJoinedSession: "Joined Remote Play Session",
   RemotePlay_InviteFriend: "Invite Friend",
-  Tooltip_RemotePlayEnableKeyboard: "Enable Keyboard",
-  Tooltip_RemotePlayDisableKeyboard: "Disable Keyboard",
-  Tooltip_RemotePlayEnableMouse: "Enable Mouse",
-  Tooltip_RemotePlayDisableMouse: "Disable Mouse",
-  Tooltip_RemotePlayEnableController: "Enable Controller",
-  Tooltip_RemotePlayDisableController: "Disable Controller",
+  Tooltip_RemotePlayEnableKeyboard: "Keyboard Disabled",
+  Tooltip_RemotePlayDisableKeyboard: "Sharing Host Keyboard",
+  Tooltip_RemotePlayEnableMouse: "Mouse Disabled",
+  Tooltip_RemotePlayDisableMouse: "Sharing Host Mouse",
+  Tooltip_RemotePlayEnableController: "Controllers Disabled",
+  Tooltip_RemotePlayDisableController: "Allowing Controllers",
   RemotePlay_Error: "Remote Play Error",
   RemotePlay_ErrorInviteFailed_ScreenLocked:
     "Remote Play Together invite failed because the screen is locked.",
@@ -1002,6 +1005,7 @@ LocalizationReady("friendsui", "english", {
     "Restores tabs for chats that were previously open when you launch Steam.",
   FriendSettings_RememberOpenChats_DescClient:
     "Restores tabs for chats that were previously open when you launch Steam. This option does not apply if Steam starts when your computer starts.",
+  FriendSettings_DockChats: "Dock chats to the friends list",
   FriendSettings_SortFriendsByStatus:
     "Ignore 'Away' status when sorting friends",
   FriendSettings_HideOfflineFriendsInCategories:
@@ -1206,6 +1210,7 @@ LocalizationReady("friendsui", "english", {
   FriendChat_NoMessages: "You have no recent messages with this friend.",
 
   ChatRoom_New_Messages: "New messages since %1$s",
+  ChatRoom_ReplayRoomEffect: "Replay effect",
   ChatRoom_RoomEffectSnow: "%1$s made it snow!",
   ChatRoom_RoomEffectConfetti: "%1$s used a party popper!",
 

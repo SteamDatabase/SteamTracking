@@ -398,19 +398,19 @@
       return !!window.document;
     }
     n.d(t, "c", function() {
-      return i;
+      return s;
     }),
       n.d(t, "h", function() {
-        return s;
-      }),
-      n.d(t, "a", function() {
         return u;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return c;
       }),
+      n.d(t, "b", function() {
+        return p;
+      }),
       n.d(t, "e", function() {
-        return l;
+        return i;
       }),
       n.d(t, "g", function() {
         return m;
@@ -422,7 +422,7 @@
         return d;
       });
     var o,
-      i = {
+      s = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -456,13 +456,13 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!a()) return o || (o = l()), o;
+            if (!a()) return o || (o = i()), o;
             var e = (function(e) {
               if (!a() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
-            e || (e = l());
+            e || (e = i());
             return e;
           })();
         },
@@ -471,7 +471,7 @@
         DEV_MODE: !1,
         OFFLINE_MODE: !1
       },
-      s = {
+      u = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -483,8 +483,8 @@
         is_support: !1,
         short_url: ""
       },
-      u = { steamid: "", clanid: 0, listid: 0 },
-      c = {
+      c = { steamid: "", clanid: 0, listid: 0 },
+      p = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
         ANNOUNCEMENT_GID: "",
@@ -498,8 +498,8 @@
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1
       },
-      p = "webui_config";
-    function l() {
+      l = "webui_config";
+    function i() {
       var e = (function() {
         for (var e = "", t = 0; t < 24; t++)
           e += Object(r.b)(0, 35).toString(36);
@@ -528,20 +528,21 @@
       );
     }
     function m(e) {
-      void 0 === e && (e = p);
-      var t = h("config", e);
-      t && (delete t.SESSIONID, Object.assign(i, t));
-      var n = h("userinfo", e);
-      n && Object.assign(s, n);
-      var r = h("broadcast", e);
-      r && Object.assign(u, r);
-      var o = h("community", e);
-      o && Object.assign(c, o);
+      void 0 === e && (e = l);
+      var t = {},
+        n = h("config", e);
+      n && (delete n.SESSIONID, Object.assign(s, n), (t.config = !0));
+      var r = h("userinfo", e);
+      r && (Object.assign(u, r), (t.userConfig = !0));
+      var o = h("broadcast", e);
+      o && (Object.assign(c, o), (t.broadcastConfig = !0));
+      var i = h("community", e);
+      return i && (Object.assign(p, i), (t.communityConfig = !0)), t;
     }
     function h(e, t) {
       var n;
       if (
-        (void 0 === t && (t = p),
+        (void 0 === t && (t = l),
         (n = "string" == typeof t ? document.getElementById(t) : t))
       )
         try {
@@ -555,15 +556,15 @@
     }
     function d() {
       var e = window.location.href;
-      return e.startsWith(i.STORE_BASE_URL)
+      return e.startsWith(s.STORE_BASE_URL)
         ? "store"
-        : e.startsWith(i.COMMUNITY_BASE_URL)
+        : e.startsWith(s.COMMUNITY_BASE_URL)
         ? "community"
-        : e.startsWith(i.PARTNER_BASE_URL)
+        : e.startsWith(s.PARTNER_BASE_URL)
         ? "partnerweb"
-        : e.startsWith(i.HELP_BASE_URL)
+        : e.startsWith(s.HELP_BASE_URL)
         ? "help"
-        : e.startsWith(i.STEAMTV_BASE_URL)
+        : e.startsWith(s.STEAMTV_BASE_URL)
         ? "steamtv"
         : "";
     }

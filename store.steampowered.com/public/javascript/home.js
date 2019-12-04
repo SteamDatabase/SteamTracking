@@ -2850,9 +2850,28 @@ var g_bDisableAutoloader = false;
 				if ( !nLastTriggerCalc || nLastTriggerCalc < scrollTop )
 				{
 					var offset = $(ele).offset();
-					nLastTriggerCalc = $(ele).height() + offset.top - 500;
+					nLastTriggerCalc = $(ele).height() + offset.top - 750;
 				}
 				return nLastTriggerCalc < scrollTop;
+			}
+
+			var bLoggedView = false;
+			var nLastViewCalc = 0;
+			ele.BCheckAndLogView = function( scrollTop )
+			{
+				if ( bLoggedView )
+					return;
+				if ( !nLastViewCalc || nLastViewCalc < scrollTop )
+				{
+					var offset = $(ele).offset();
+					nLastViewCalc = offset.top + 375;	// log the view when the first row of large caps are completely visible
+
+					if ( nLastViewCalc < scrollTop )
+					{
+						bLoggedView = true;
+						$J.post( 'https://store.steampowered.com/explore/logfeedview/')
+					}
+				}
 			}
 
 			ele.bTriggerActive = false;
@@ -3136,6 +3155,9 @@ var g_bDisableAutoloader = false;
 					WebStorage.SetLocal('home_scroll',$(window).scrollTop(), true);
 
 				var nCurrentScroll = $(window).scrollTop() + $(window).height();
+
+				this.BCheckAndLogView( nCurrentScroll );
+
 				if( this.BShouldTrigger( nCurrentScroll ) )
 				{
 					loadFunc.apply(this);

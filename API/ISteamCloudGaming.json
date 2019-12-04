@@ -1,0 +1,24 @@
+{
+    "name": "ISteamCloudGaming",
+    "methods": [
+        {
+            "name": "GetSupportedApps",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "platform",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Cloud gaming platform name"
+                },
+                {
+                    "name": "detailed",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "Request extra details if supported"
+                }
+            ]
+        }
+    ]
+}

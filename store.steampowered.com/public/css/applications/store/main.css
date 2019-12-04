@@ -1800,6 +1800,7 @@ body.modals_BodyNoScrollDialog_105OB {
   padding: 3px 5px;
   background-color: #4C6B22;
   color: #A4D007;
+  display: flex;
   align-items: center;
   margin-right: 3px; }
 
@@ -1855,12 +1856,16 @@ body.modals_BodyNoScrollDialog_105OB {
   background-color: black;
   display: flex;
   color: white;
-  padding: 4px;
   height: 30px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 2; }
+
+.broadcastwidgets_CapsulePlatform_1YzDv {
+  padding: 4px; }
 
 .broadcastwidgets_CapsuleImage_XI8fY {
-  width: 100%; }
+  width: 100%;
+  display: block; }
 
 .broadcastwidgets_CapsuleTitle_2eIiB {
   white-space: nowrap;
@@ -5237,7 +5242,7 @@ img {
   flex-basis: 0;
   display: flex;
   flex-direction: column;
-  min-height: 145px;
+  min-height: 126px;
   margin-bottom: 16px; }
 
 .creatorhomeembed_DevSummaryWidgetCtn_A2B2V {
@@ -5276,6 +5281,9 @@ img {
     font-size: 21px;
     font-weight: 300; }
 
+.creatorhomeembed_CreatorTagline_NX5We {
+  position: relative; }
+
 .creatorhomeembed_Title_37vyV {
   text-transform: uppercase;
   font-size: 13px;
@@ -5285,7 +5293,10 @@ img {
 .creatorhomeembed_Followers_2ZpFi {
   display: block;
   padding: 0px 6px;
-  font-size: 13px; }
+  font-size: 12px; }
+  .creatorhomeembed_Followers_2ZpFi span {
+    font-size: 15px;
+    line-height: 17px; }
 
 .creatorhomeembed_FollowBtnCtn_2artm {
   display: flex;
@@ -5322,9 +5333,10 @@ img {
   position: relative;
   display: flex;
   flex-direction: row;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 2px 7px 2px 4px;
-  margin-right: 4px;
+  padding: 2px 12px 2px 15px;
+  margin-right: 0px;
   margin-bottom: 4px;
   border-radius: 3px;
   color: #8e9093; }
@@ -5333,7 +5345,7 @@ img {
     color: #000000; }
 
 .creatorhomeembed_SocialLink_3eCVb > div {
-  padding-top: 4px;
+  padding-top: 0px;
   padding-left: 4px;
   display: block;
   font-size: 12px; }
@@ -7477,9 +7489,7 @@ button.DialogButton::-moz-focus-inner {
   overflow: auto; }
 
 .ModalDialogPopup .DialogContentTransition .DialogBody {
-  overflow-y: scroll;
-  -webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%);
-  mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%); }
+  overflow-y: scroll; }
 
 .DialogInnerBody {
   flex: 1;

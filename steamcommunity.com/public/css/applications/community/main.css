@@ -2076,7 +2076,7 @@ textarea:-webkit-autofill:focus,
 .broadcastwidgets_StoreSaleWidgetContainer_2RL6D {
   display: flex;
   flex-direction: row;
-  max-width: 780px;
+  max-width: 880px;
   z-index: 1; }
   .broadcastwidgets_StoreSaleWidgetContainer_2RL6D.broadcastwidgets_Bundle_3wMcs {
     max-height: initial; }
@@ -2091,8 +2091,7 @@ textarea:-webkit-autofill:focus,
     min-width: unset;
     padding: 9px 20px; }
 
-.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp,
-.broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
+.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
   display: flex;
   flex-direction: column;
   overflow: hidden; }
@@ -2115,10 +2114,6 @@ textarea:-webkit-autofill:focus,
       max-width: unset;
       flex-direction: row; } }
 
-.broadcastwidgets_StoreSaleWidgetContainer_column_3fQJJ {
-  max-width: 310px;
-  padding: 8px; }
-
 .broadcastwidgets_StoreSaleWidgetImage_2T_Na {
   padding-right: 16px;
   cursor: pointer; }
@@ -2127,12 +2122,8 @@ textarea:-webkit-autofill:focus,
   cursor: pointer;
   max-width: 155px; }
 
-.broadcastwidgets_StoreSaleWidgetImage_column_1vMOn {
-  cursor: pointer;
-  max-width: 310px; }
-
 .broadcastwidgets_StoreSaleImage_2LocI {
-  width: 200px;
+  width: 100%;
   cursor: pointer; }
 
 .broadcastwidgets_StoreSaleImage_mini_1zSsm {
@@ -2140,9 +2131,12 @@ textarea:-webkit-autofill:focus,
   width: 155px;
   display: block; }
 
-.broadcastwidgets_StoreSaleImage_column_3DVUq {
-  cursor: pointer;
-  width: 294px; }
+.broadcastwidgets_StoreSaleVideo_2D7lp {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.6s; }
 
 /* Override the EventDetailsBody img style in partnereventdisplay.scss */
 .broadcastwidgets_StoreSaleImage_2LocI.broadcastwidgets_StoreSaleImage_2LocI {
@@ -2168,13 +2162,42 @@ textarea:-webkit-autofill:focus,
     .broadcastwidgets_StoreSaleWidgetRelease_3yCCs {
       display: none; } }
 
+.broadcastwidgets_StoreSaleWidgetTags_26_Kk {
+  height: 25px;
+  overflow: hidden; }
+
+.broadcastwidgets_StoreSaleWidgetScreenshots_3mnba {
+  margin-top: 4px;
+  display: none; }
+
+.broadcastwidgets_AppTag_2pNqf {
+  display: inline-block;
+  line-height: 19px;
+  padding: 0 7px;
+  color: #67c1f5;
+  background-color: rgba(103, 193, 245, 0.2);
+  box-shadow: none;
+  margin-right: 2px;
+  border-radius: 2px;
+  margin-bottom: 3px;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px; }
+  .broadcastwidgets_AppTag_2pNqf:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background: #67c1f5;
+    background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
+    /* W3C */ }
+
 .broadcastwidgets_StoreSaleWidgetShortDesc_2by8B {
   font-size: 12px;
   line-height: 15px;
   max-height: 80px;
   overflow: hidden; }
 
-.broadcastwidgets_StoreSaleWidgetShortDesc_column_cZoip,
 .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
   max-height: 103px;
   overflow-y: scroll;
@@ -2186,12 +2209,16 @@ textarea:-webkit-autofill:focus,
   line-height: 13px;
   font-size: 11px; }
   @media screen and (max-width: 620px) {
-    .broadcastwidgets_StoreSaleWidgetShortDesc_column_cZoip,
     .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
       display: none; } }
 
+.broadcastwidgets_StoreSaleWidgetLeft_20n87 {
+  padding: 0px;
+  flex-basis: 30%; }
+
 .broadcastwidgets_StoreSaleWidgetRight_1MzBO {
-  padding: 4px; }
+  padding: 4px;
+  flex-basis: 70%; }
 
 .broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY {
   display: flex;
@@ -2205,6 +2232,7 @@ textarea:-webkit-autofill:focus,
   padding: 3px 5px;
   background-color: #4C6B22;
   color: #A4D007;
+  display: flex;
   align-items: center;
   margin-right: 3px; }
 
@@ -2260,12 +2288,16 @@ textarea:-webkit-autofill:focus,
   background-color: black;
   display: flex;
   color: white;
-  padding: 4px;
   height: 30px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  z-index: 2; }
+
+.broadcastwidgets_CapsulePlatform_1YzDv {
+  padding: 4px; }
 
 .broadcastwidgets_CapsuleImage_XI8fY {
-  width: 100%; }
+  width: 100%;
+  display: block; }
 
 .broadcastwidgets_CapsuleTitle_2eIiB {
   white-space: nowrap;
@@ -3617,8 +3649,7 @@ textarea:-webkit-autofill:focus,
   color: white;
   flex: 0 1;
   z-index: 2;
-  border-radius: 2px;
-  margin-left: -12px; }
+  border-radius: 2px; }
 
 .timelineMarker {
   width: 8px;
@@ -3659,42 +3690,6 @@ textarea:-webkit-autofill:focus,
 
 .timelineMarker:hover .timelineMarkerIcon .SVGIcon_STVTimelineMarker .line {
   fill: #ffe9cd; }
-
-.STV_timelineThumbnailContainer {
-  position: absolute;
-  width: 72px;
-  height: 48px;
-  border-radius: 4px;
-  background-color: #5dc3ff;
-  background: linear-gradient(to top, white 0%, #b29a7c 80%);
-  margin-left: -32px;
-  top: -52px;
-  opacity: 0;
-  transform: scale(0);
-  transform-origin: 50% 100%;
-  z-index: 2;
-  pointer-events: none; }
-
-.STV_timelineThumbnailContainer.thumbnailVisible {
-  opacity: 1;
-  transform: scale(1); }
-
-.STV_timelineContainer.grabberDown .STV_timelineThumbnailContainer {
-  opacity: 1;
-  transform: scale(1);
-  top: -64px;
-  background: linear-gradient(to top, #5dc3ff 0%, #166b9c 80%); }
-
-.STV_timelineThumbnail {
-  width: calc( 100% - 4px);
-  height: calc( 100% - 4px);
-  padding: 2px; }
-
-.STV_timelineThumbnail_Img {
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  /*object-fit: contain;*/ }
 
 .STV_timelineSegmentsContainer {
   display: flex;
@@ -5144,7 +5139,7 @@ img {
   flex-basis: 0;
   display: flex;
   flex-direction: column;
-  min-height: 145px;
+  min-height: 126px;
   margin-bottom: 16px; }
 
 .creatorhomeembed_DevSummaryWidgetCtn_A2B2V {
@@ -5183,6 +5178,9 @@ img {
     font-size: 21px;
     font-weight: 300; }
 
+.creatorhomeembed_CreatorTagline_NX5We {
+  position: relative; }
+
 .creatorhomeembed_Title_37vyV {
   text-transform: uppercase;
   font-size: 13px;
@@ -5192,7 +5190,10 @@ img {
 .creatorhomeembed_Followers_2ZpFi {
   display: block;
   padding: 0px 6px;
-  font-size: 13px; }
+  font-size: 12px; }
+  .creatorhomeembed_Followers_2ZpFi span {
+    font-size: 15px;
+    line-height: 17px; }
 
 .creatorhomeembed_FollowBtnCtn_2artm {
   display: flex;
@@ -5229,9 +5230,10 @@ img {
   position: relative;
   display: flex;
   flex-direction: row;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 2px 7px 2px 4px;
-  margin-right: 4px;
+  padding: 2px 12px 2px 15px;
+  margin-right: 0px;
   margin-bottom: 4px;
   border-radius: 3px;
   color: #8e9093; }
@@ -5240,7 +5242,7 @@ img {
     color: #000000; }
 
 .creatorhomeembed_SocialLink_3eCVb > div {
-  padding-top: 4px;
+  padding-top: 0px;
   padding-left: 4px;
   display: block;
   font-size: 12px; }
@@ -9702,9 +9704,7 @@ button.DialogButton::-moz-focus-inner {
   overflow: auto; }
 
 .ModalDialogPopup .DialogContentTransition .DialogBody {
-  overflow-y: scroll;
-  -webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%);
-  mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%); }
+  overflow-y: scroll; }
 
 .DialogInnerBody {
   flex: 1;
