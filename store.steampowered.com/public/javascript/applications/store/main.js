@@ -11834,7 +11834,7 @@
                   className: Nr.a.StoreSaleWidgetEmptyContainer
                 });
           }),
-          t
+          (t = Object(v.c)([Ce.a], t))
         );
       })(A.Component),
       Zr = (function(e) {
