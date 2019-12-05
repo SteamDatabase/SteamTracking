@@ -2030,6 +2030,16 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<PlaceholderStateChanged_t>(PlaceholderStateChanged_t*)"
     },
     {
+        "id": 3333,
+        "size": 16,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<RemoteClientRemotePlayTogetherPlayerJoined_t>(RemoteClientRemotePlayTogetherPlayerJoined_t*)"
+    },
+    {
+        "id": 3334,
+        "size": 16,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<RemoteClientRemotePlayTogetherPlayerLeft_t>(RemoteClientRemotePlayTogetherPlayerLeft_t*)"
+    },
+    {
         "id": 3401,
         "size": 280,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SteamUGCQueryCompleted_t>(SteamUGCQueryCompleted_t*)"

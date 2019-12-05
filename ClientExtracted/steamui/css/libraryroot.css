@@ -1482,10 +1482,12 @@ body.modals_BodyNoScrollDialog_105OB {
   box-sizing: border-box; }
 
 .cssgrid_Container_DGRkX {
-  transition: height 0.3s ease-in-out;
   width: 100%;
   box-sizing: border-box;
   overflow: hidden; }
+
+.cssgrid_Animate_1IbFa {
+  transition: height 0.3s ease-in-out; }
 
 /* stylelint-disable */
 
@@ -3106,6 +3108,10 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
 
 .groupMemberList .personanameandstatus_richPresenceLabel_2Ri00 {
   line-height: 13px; }
+
+.Dialog_RemotePlay .personanameandstatus_twoLine_1BbOe {
+  margin-top: -44px;
+  width: 250px; }
 
 .personanameandstatus_gameIsPrivateIcon_2gBKQ {
   width: 28px;
@@ -13457,6 +13463,14 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   z-index: inherit;
   display: flex; }
 
+.appportraithover_ScreenshotImg_2X1QC {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover; }
+
 .appportraithover_NoScreenshotFallback_2I4_R,
 .appportraithover_MiniScreenshot_3yeSS {
   position: absolute;
@@ -13817,7 +13831,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: all .21s ease-in-out;
+  transition-property: opacity, transform, background;
+  transition-duration: .21s;
+  transition-timing-function: ease-in-out;
   transform: scale(0.75);
   z-index: 5; }
   .appportrait_HoversEnabled_54PuC .appportrait_LibraryItemBox_WYgDg:hover .appportrait_LibraryItemActionButton_3AjoL {
@@ -13866,15 +13882,17 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     height: 56.25%;
     margin-left: 9.37%;
     fill: #c1ebff;
-    transition: all .21s ease-in-out; }
+    transition-property: fill, transform;
+    transition-duration: .21s;
+    transition-timing-function: ease-in-out; }
   .appportrait_LibraryItemActionButton_3AjoL .SVGIcon_Pause {
     width: 56.25%;
     height: 56.25%;
-    transition: all .21s ease-in-out; }
+    transition: transform .21s ease-in-out; }
   .appportrait_LibraryItemActionButton_3AjoL .SVGIcon_Download {
     width: 50.25%;
     height: 50.25%;
-    transition: all .21s ease-in-out; }
+    transition: transform .21s ease-in-out; }
     .appportrait_LibraryItemActionButton_3AjoL .SVGIcon_Download line {
       stroke-width: 20px; }
     .appportrait_LibraryItemActionButton_3AjoL .SVGIcon_Download polyline {
@@ -13882,7 +13900,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   .appportrait_LibraryItemActionButton_3AjoL .SVGIcon_X_Line {
     width: 56.25%;
     height: 56.25%;
-    transition: all .21s ease-in-out; }
+    transition: transform .21s ease-in-out; }
     .appportrait_LibraryItemActionButton_3AjoL .SVGIcon_X_Line line {
       stroke-width: 16px; }
   .appportrait_LibraryItemActionButton_3AjoL .SVGIcon_Reload {
@@ -13898,7 +13916,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     height: 88%;
     border-radius: 2px;
     position: absolute;
-    transition: all .21s ease-in-out;
+    transition-property: border-color, transform;
+    transition-duration: .21s;
+    transition-timing-function: ease-in-out;
     left: 6.25%;
     top: 6.25%;
     display: none; }

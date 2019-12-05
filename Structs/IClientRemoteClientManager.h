@@ -61,6 +61,9 @@ public:
     virtual unknown_ret SetStreamingPIN(char const*) = 0;
     virtual unknown_ret GetStreamingPINSize(int*) = 0;
     virtual unknown_ret UnlockHEVC() = 0;
+    virtual unknown_ret UsedVideoX264() = 0;
+    virtual unknown_ret UsedVideoH264() = 0;
+    virtual unknown_ret UsedVideoHEVC() = 0;
     virtual unknown_ret BHasRemotePlayInviteAndSession(CSteamID) = 0;
     virtual unknown_ret CreateRemotePlayInviteAndSession(CSteamID, unsigned int) = 0;
     virtual unknown_ret CancelRemotePlayInviteAndSession(CSteamID) = 0;

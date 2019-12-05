@@ -523,6 +523,7 @@
 	"PersonaStateLookingToPlay": "Looking to Play",
 	"PersonaStateLastSeen": "Last online %1$s",
 	"PersonaStateLastSeen_JustNow": "Last online just now",
+	"PersonaStateRemotePlayTogether": "Remote Play Together",
 
 	"User_WantsToPlay": "Join",
 	"User_ToggleDoNotDisturb": "Do Not Disturb",

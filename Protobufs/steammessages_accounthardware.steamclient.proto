@@ -2,6 +2,12 @@ import "steammessages_unified_base.steamclient.proto";
 
 option cc_generic_services = true;
 
+enum EValveIndexComponent {
+	k_EValveIndexComponentHMD = 1;
+	k_EValveIndexComponentLeftKnuckle = 2;
+	k_EValveIndexComponentRightKnuckle = 3;
+}
+
 message CAccountHardware_RegisterSteamController_Request {
 	optional string serial_number = 1;
 	optional string controller_code = 2;
@@ -123,6 +129,17 @@ message CAccountHardware_VRCompatibilityCheck_Response {
 	repeated .CAccountHardware_VRCompatibilityCheck_Response.ComponentDisplay components = 2 [(description) = "Specific values to display"];
 }
 
+message CAccountHardware_RegisterValveIndexComponent_Request {
+	optional string serial_number = 1;
+	optional string manufacturer_serial_number = 2;
+	optional string component_code = 3;
+	optional .EValveIndexComponent component_type = 4 [default = k_EValveIndexComponentHMD];
+	optional int32 estimated_time_registered = 5;
+}
+
+message CAccountHardware_RegisterValveIndexComponent_Response {
+}
+
 service AccountHardware {
 	option (service_description) = "A service to use account hardware related methods";
 	rpc RegisterSteamController (.CAccountHardware_RegisterSteamController_Request) returns (.CAccountHardware_RegisterSteamController_Response) {
@@ -151,5 +168,8 @@ service AccountHardware {
 	}
 	rpc VRCompatibilityCheck (.CAccountHardware_VRCompatibilityCheck_Request) returns (.CAccountHardware_VRCompatibilityCheck_Response) {
 		option (method_description) = "Check system info for compatibility with VR";
+	}
+	rpc RegisterValveIndexComponent (.CAccountHardware_RegisterValveIndexComponent_Request) returns (.CAccountHardware_RegisterValveIndexComponent_Response) {
+		option (method_description) = "Registers a valve index component to a customer";
 	}
 }

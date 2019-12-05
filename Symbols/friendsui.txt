@@ -2321,6 +2321,8 @@
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
+ D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined
+ D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft
  D typeinfo for CRemotePlayController::CCallbackInternal_OnStreamingClientConnected
  D typeinfo for CRemotePlayController::CCallbackInternal_OnStreamingClientUsedInput
  D typeinfo for CSetNicknameDialog
@@ -3684,6 +3686,8 @@
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
+ D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined
+ D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft
  D vtable for CRemotePlayController::CCallbackInternal_OnStreamingClientConnected
  D vtable for CRemotePlayController::CCallbackInternal_OnStreamingClientUsedInput
  D vtable for CSetNicknameDialog
@@ -4440,6 +4444,8 @@
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
+ R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined
+ R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnStreamingClientConnected
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnStreamingClientUsedInput
  R typeinfo name for CSetNicknameDialog
@@ -9683,6 +9689,7 @@
  T CRefCountServiceBase<true, CRefMT>::OnFinalRelease()
  T CRemotePlayController::BCanAcceptInviteForGame(char const*, char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::BCanCreateInviteForGame(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::BCanHostIsolatedGameAudio(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::BEnabled(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange::CCallbackInternal_OnPlaceholderStateChange()
  T CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange::Run(void*)
@@ -9699,6 +9706,12 @@
  T CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped::CCallbackInternal_OnRemotePlaySessionStopped()
  T CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped::~CCallbackInternal_OnRemotePlaySessionStopped()
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined::CCallbackInternal_OnRemotePlayTogetherPlayerJoined()
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined::Run(void*)
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerJoined::~CCallbackInternal_OnRemotePlayTogetherPlayerJoined()
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft::CCallbackInternal_OnRemotePlayTogetherPlayerLeft()
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft::Run(void*)
+ T CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft::~CCallbackInternal_OnRemotePlayTogetherPlayerLeft()
  T CRemotePlayController::CCallbackInternal_OnStreamingClientConnected::CCallbackInternal_OnStreamingClientConnected()
  T CRemotePlayController::CCallbackInternal_OnStreamingClientConnected::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnStreamingClientConnected::~CCallbackInternal_OnStreamingClientConnected()
@@ -9716,6 +9729,8 @@
  T CRemotePlayController::OnRemoteClientStreamLifetime(RemoteClientStreamLifetime_t*)
  T CRemotePlayController::OnRemotePlayInviteResult(RemotePlayInviteResult_t*)
  T CRemotePlayController::OnRemotePlaySessionStopped(RemoteClientStopStreamSession_t*)
+ T CRemotePlayController::OnRemotePlayTogetherPlayerJoined(RemoteClientRemotePlayTogetherPlayerJoined_t*)
+ T CRemotePlayController::OnRemotePlayTogetherPlayerLeft(RemoteClientRemotePlayTogetherPlayerLeft_t*)
  T CRemotePlayController::OnStreamingClientConnected(StreamingClientConnected_t*)
  T CRemotePlayController::OnStreamingClientUsedInput(StreamingClientUsedInput_t*)
  T CRemotePlayController::RegisterForInputUsed(CSmartPtr<CJSCallbackFunc>)
@@ -17522,6 +17537,7 @@
  realloc
  realpath$DARWIN_EXTSN
  rindex
+ roundf
  scandir$INODE64
  sched_yield
  select$1050

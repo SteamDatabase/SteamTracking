@@ -73,6 +73,9 @@ message CRemotePlay_SessionStarted_Response {
 
 message CRemotePlay_SessionStopped_Notification {
 	optional fixed64 record_id = 1;
+	optional bool used_x264 = 2;
+	optional bool used_h264 = 3;
+	optional bool used_hevc = 4;
 }
 
 message CRemotePlayTogether_Notification {
