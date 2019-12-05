@@ -26156,6 +26156,8 @@
                               c.data.available_linux),
                             (l.m_appStoreData.microtrailer =
                               c.data.microtrailer),
+                            (l.m_appStoreData.microtrailer_mp4 =
+                              c.data.microtrailer_mp4),
                             (l.m_appStoreData.creator_list = new Array());
                           var e = c.data.creator_list;
                           if (e)
@@ -28368,18 +28370,34 @@
                         onFocus: this.OnCapsuleOver,
                         onBlur: this.OnCapsuleOut
                       },
-                      this.state.isHovered && t.microtrailer
-                        ? C.createElement("video", {
-                            className: pe.a.StoreSaleVideo,
-                            src: t.microtrailer,
-                            loop: !0,
-                            muted: !0,
-                            autoPlay: !0
-                          })
-                        : C.createElement("img", {
-                            className: pe.a.StoreSaleImage,
-                            src: t.main_capsule || t.capsule
-                          })
+                      C.createElement(
+                        "div",
+                        { style: { position: "relative" } },
+                        C.createElement("img", {
+                          className: pe.a.StoreSaleImage,
+                          src: t.main_capsule || t.capsule
+                        }),
+                        this.state.isHovered &&
+                          t.microtrailer &&
+                          C.createElement(
+                            "video",
+                            {
+                              className: pe.a.StoreSaleVideo,
+                              loop: !0,
+                              muted: !0,
+                              autoPlay: !0
+                            },
+                            C.createElement("source", {
+                              src: t.microtrailer,
+                              type: "video/webm"
+                            }),
+                            !p.c.IN_CLIENT &&
+                              C.createElement("source", {
+                                src: t.microtrailer_mp4,
+                                type: "video/mp4"
+                              })
+                          )
+                      )
                     )
                   ),
                   C.createElement(
@@ -28520,7 +28538,7 @@
                   className: pe.a.StoreSaleWidgetEmptyContainer
                 });
           }),
-          t
+          (t = Object(d.c)([o.a], t))
         );
       })(C.Component),
       Qe = (function(e) {
@@ -28581,7 +28599,7 @@
             (e.state = {
               bShowContents: !1,
               containerStyle: {
-                maxHeight: "0vh",
+                maxHeight: "0px",
                 overflow: "hidden",
                 transition: "max-height 1s ease-in-out"
               }
@@ -28598,7 +28616,7 @@
                 return e.setState({
                   containerStyle: Object(d.a)(
                     Object(d.a)({}, e.state.containerStyle),
-                    { maxHeight: "100vh" }
+                    { maxHeight: "2000px" }
                   )
                 });
               }, 100);

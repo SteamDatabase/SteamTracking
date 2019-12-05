@@ -13540,6 +13540,8 @@
                               s.data.available_linux),
                             (c.m_appStoreData.microtrailer =
                               s.data.microtrailer),
+                            (c.m_appStoreData.microtrailer_mp4 =
+                              s.data.microtrailer_mp4),
                             (c.m_appStoreData.creator_list = new Array());
                           var e = s.data.creator_list;
                           if (e)
@@ -40455,18 +40457,34 @@
                         onFocus: this.OnCapsuleOver,
                         onBlur: this.OnCapsuleOut
                       },
-                      this.state.isHovered && t.microtrailer
-                        ? q.createElement("video", {
-                            className: $n.a.StoreSaleVideo,
-                            src: t.microtrailer,
-                            loop: !0,
-                            muted: !0,
-                            autoPlay: !0
-                          })
-                        : q.createElement("img", {
-                            className: $n.a.StoreSaleImage,
-                            src: t.main_capsule || t.capsule
-                          })
+                      q.createElement(
+                        "div",
+                        { style: { position: "relative" } },
+                        q.createElement("img", {
+                          className: $n.a.StoreSaleImage,
+                          src: t.main_capsule || t.capsule
+                        }),
+                        this.state.isHovered &&
+                          t.microtrailer &&
+                          q.createElement(
+                            "video",
+                            {
+                              className: $n.a.StoreSaleVideo,
+                              loop: !0,
+                              muted: !0,
+                              autoPlay: !0
+                            },
+                            q.createElement("source", {
+                              src: t.microtrailer,
+                              type: "video/webm"
+                            }),
+                            !m.b.IN_CLIENT &&
+                              q.createElement("source", {
+                                src: t.microtrailer_mp4,
+                                type: "video/mp4"
+                              })
+                          )
+                      )
                     )
                   ),
                   q.createElement(
@@ -40607,7 +40625,7 @@
                   className: $n.a.StoreSaleWidgetEmptyContainer
                 });
           }),
-          t
+          (t = Object(g.c)([te.a], t))
         );
       })(q.Component),
       wp = (function(e) {
@@ -40667,7 +40685,7 @@
             (e.state = {
               bShowContents: !1,
               containerStyle: {
-                maxHeight: "0vh",
+                maxHeight: "0px",
                 overflow: "hidden",
                 transition: "max-height 1s ease-in-out"
               }
@@ -40684,7 +40702,7 @@
                 return e.setState({
                   containerStyle: Object(g.a)(
                     Object(g.a)({}, e.state.containerStyle),
-                    { maxHeight: "100vh" }
+                    { maxHeight: "2000px" }
                   )
                 });
               }, 100);
@@ -40823,7 +40841,7 @@
             (e.state = {
               bShowContents: !1,
               containerStyle: {
-                maxHeight: "0vh",
+                maxHeight: "0px",
                 overflow: "hidden",
                 transition: "max-height 1s ease-in-out"
               }
@@ -40840,7 +40858,7 @@
                 return e.setState({
                   containerStyle: Object(g.a)(
                     Object(g.a)({}, e.state.containerStyle),
-                    { maxHeight: "100vh" }
+                    { maxHeight: "2000px" }
                   )
                 });
               }, 100);
@@ -41253,19 +41271,32 @@
                       }),
                       this.state.isHovered &&
                         e.microtrailer &&
-                        q.createElement("video", {
-                          style: {
-                            position: "absolute",
-                            left: 0,
-                            top: 0,
-                            zIndex: 1
+                        q.createElement(
+                          "video",
+                          {
+                            style: {
+                              position: "absolute",
+                              left: 0,
+                              top: 0,
+                              zIndex: 1,
+                              width: "100%",
+                              display: "block",
+                              pointerEvents: "none"
+                            },
+                            loop: !0,
+                            muted: !0,
+                            autoPlay: !0
                           },
-                          className: $n.a.CapsuleImage,
-                          src: e.microtrailer,
-                          loop: !0,
-                          muted: !0,
-                          autoPlay: !0
-                        })
+                          q.createElement("source", {
+                            src: e.microtrailer,
+                            type: "video/webm"
+                          }),
+                          !m.b.IN_CLIENT &&
+                            q.createElement("source", {
+                              src: e.microtrailer_mp4,
+                              type: "video/mp4"
+                            })
+                        )
                     ),
                     q.createElement(
                       "div",
