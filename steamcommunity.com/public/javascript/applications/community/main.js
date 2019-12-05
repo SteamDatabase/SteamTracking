@@ -48928,6 +48928,21 @@
         return (
           Object(g.d)(t, e),
           (t.prototype.CanTransition = function(e) {
+            if (Xb.BHasEditModel()) {
+              var t = Xb.GetEditModel();
+              if (
+                null != t &&
+                null != t &&
+                t.BIsDirty() &&
+                (t.BHasGid() || t.GetChangeTypes() != qb.type)
+              ) {
+                var n = t.GetStrVanityOrAppID();
+                return (
+                  (e.pathname != on(n) && e.pathname != Mn(n)) ||
+                  Object(_.c)("#EventEditor_UnsavedChanges")
+                );
+              }
+            }
             return !0;
           }),
           (t.prototype.render = function() {
@@ -53502,10 +53517,9 @@
               window.addEventListener("scroll", this.OnScroll, !0);
           }),
           (e.prototype.componentDidUpdate = function(e) {
-            Xb.GetEditModel() && Xb.ResetModel(),
-              this.props.match.params.appid_or_vanity_str !=
-                e.match.params.appid_or_vanity_str &&
-                this.EnsureEventsAreLoaded(),
+            this.props.match.params.appid_or_vanity_str !=
+              e.match.params.appid_or_vanity_str &&
+              this.EnsureEventsAreLoaded(),
               this.m_refScroll && this.m_refScroll.current && this.OnScroll();
           }),
           (e.prototype.componentWillUnmount = function() {
