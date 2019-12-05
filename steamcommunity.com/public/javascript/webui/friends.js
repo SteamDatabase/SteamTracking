@@ -27710,6 +27710,7 @@
             (this.m_strVanity = ""),
             (this.m_webLink = void 0),
             (this.m_bIsLoaded = !1),
+            (this.m_bIsHidden = !1),
             (this.m_clanSteamID = e);
         }
         return (
@@ -27727,6 +27728,7 @@
               (this.m_nFollowers = e.followers || 0),
               (this.m_strVanity = e.vanity || void 0),
               (this.m_webLink = e.weblink),
+              (this.m_bIsHidden = e.hidden || !1),
               e.appids &&
                 e.appids.forEach(function(e) {
                   return t.m_appidList.push(e);
@@ -27759,6 +27761,9 @@
           }),
           (e.prototype.GetNumFollowers = function() {
             return this.m_nFollowers;
+          }),
+          (e.prototype.BIsHidden = function() {
+            return this.m_bIsHidden;
           }),
           (e.prototype.GetURL = function(e) {
             if (this.m_strVanity) {
@@ -27800,7 +27805,8 @@
       })(),
       Le = new ((function() {
         function e() {
-          this.m_mapClanToCreatorHome = new Map();
+          (this.m_mapClanToCreatorHome = new Map()),
+            (this.m_mapAppToCreatorIDList = new Map());
         }
         return (
           (e.prototype.BHasCreatorHomeLoaded = function(e) {
@@ -27868,7 +27874,46 @@
               });
             });
           }),
+          (e.prototype.LoadCreatorHomeListForAppIncludeHiddden = function(
+            i,
+            r
+          ) {
+            return Object(d.b)(this, void 0, void 0, function() {
+              var t, n, o;
+              return Object(d.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return this.m_mapAppToCreatorIDList.has(i)
+                      ? [3, 2]
+                      : ((t = { appid: i }),
+                        (n =
+                          p.c.STORE_BASE_URL +
+                          "events/ajaxgetcreatorhomeidforapp"),
+                        [
+                          4,
+                          b.a.get(n, {
+                            params: t,
+                            cancelToken: r && r.token,
+                            withCredentials: !0
+                          })
+                        ]);
+                  case 1:
+                    (o = e.sent()),
+                      this.m_mapAppToCreatorIDList.set(i, o.data.creator_list),
+                      (e.label = 2);
+                  case 2:
+                    return [2, this.m_mapAppToCreatorIDList.get(i)];
+                }
+              });
+            });
+          }),
+          (e.prototype.GetCreatorHomeListForAppIncludeHidden = function(e) {
+            return this.m_mapAppToCreatorIDList.has(e)
+              ? this.m_mapAppToCreatorIDList.get(e)
+              : [];
+          }),
           Object(d.c)([s.x], e.prototype, "m_mapClanToCreatorHome", void 0),
+          Object(d.c)([s.x], e.prototype, "m_mapAppToCreatorIDList", void 0),
           e
         );
       })())(),

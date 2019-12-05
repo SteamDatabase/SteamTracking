@@ -141,7 +141,7 @@
               {
                 0: "ebf340b3a6216e2d0fa9",
                 1: "16ccacfefe720b74e7d5",
-                3: "cf01f52bfbe9efed9707",
+                3: "506a7ca7d7ef727d1d1e",
                 5: "5e7a1ac0d8b01dcf42cc",
                 6: "6f4d48bb0e21512d37f3",
                 7: "62536f7aa7558d4148ff",
@@ -39466,6 +39466,7 @@
             (this.m_strVanity = ""),
             (this.m_webLink = void 0),
             (this.m_bIsLoaded = !1),
+            (this.m_bIsHidden = !1),
             (this.m_clanSteamID = e);
         }
         return (
@@ -39483,6 +39484,7 @@
               (this.m_nFollowers = e.followers || 0),
               (this.m_strVanity = e.vanity || void 0),
               (this.m_webLink = e.weblink),
+              (this.m_bIsHidden = e.hidden || !1),
               e.appids &&
                 e.appids.forEach(function(e) {
                   return t.m_appidList.push(e);
@@ -39515,6 +39517,9 @@
           }),
           (e.prototype.GetNumFollowers = function() {
             return this.m_nFollowers;
+          }),
+          (e.prototype.BIsHidden = function() {
+            return this.m_bIsHidden;
           }),
           (e.prototype.GetURL = function(e) {
             if (this.m_strVanity) {
@@ -39556,7 +39561,8 @@
       })(),
       gp = new ((function() {
         function e() {
-          this.m_mapClanToCreatorHome = new Map();
+          (this.m_mapClanToCreatorHome = new Map()),
+            (this.m_mapAppToCreatorIDList = new Map());
         }
         return (
           (e.prototype.BHasCreatorHomeLoaded = function(e) {
@@ -39624,7 +39630,46 @@
               });
             });
           }),
+          (e.prototype.LoadCreatorHomeListForAppIncludeHiddden = function(
+            a,
+            i
+          ) {
+            return Object(g.b)(this, void 0, void 0, function() {
+              var t, n, o;
+              return Object(g.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return this.m_mapAppToCreatorIDList.has(a)
+                      ? [3, 2]
+                      : ((t = { appid: a }),
+                        (n =
+                          m.b.STORE_BASE_URL +
+                          "events/ajaxgetcreatorhomeidforapp"),
+                        [
+                          4,
+                          f.a.get(n, {
+                            params: t,
+                            cancelToken: i && i.token,
+                            withCredentials: !0
+                          })
+                        ]);
+                  case 1:
+                    (o = e.sent()),
+                      this.m_mapAppToCreatorIDList.set(a, o.data.creator_list),
+                      (e.label = 2);
+                  case 2:
+                    return [2, this.m_mapAppToCreatorIDList.get(a)];
+                }
+              });
+            });
+          }),
+          (e.prototype.GetCreatorHomeListForAppIncludeHidden = function(e) {
+            return this.m_mapAppToCreatorIDList.has(e)
+              ? this.m_mapAppToCreatorIDList.get(e)
+              : [];
+          }),
           Object(g.c)([W.w], e.prototype, "m_mapClanToCreatorHome", void 0),
+          Object(g.c)([W.w], e.prototype, "m_mapAppToCreatorIDList", void 0),
           e
         );
       })())(),
@@ -61391,6 +61436,7 @@
           (e.prototype.LoadCreatorHome = function() {
             return Object(g.b)(this, void 0, void 0, function() {
               var t,
+                n,
                 o = this;
               return Object(g.e)(this, function(e) {
                 switch (e.label) {
@@ -61399,22 +61445,26 @@
                       this.state.bLoadingCreator ||
                         this.setState({ bLoadingCreator: !0 }),
                       (t = this.props.editModel),
-                      [4, D.EnsureStoreCapsuleInfoLoaded(t.GetAppID())]
+                      D.EnsureStoreCapsuleInfoLoaded(t.GetAppID()),
+                      (n = new Array()),
+                      [
+                        4,
+                        gp.LoadCreatorHomeListForAppIncludeHiddden(
+                          t.GetAppID(),
+                          this.m_cancelSignal
+                        )
+                      ]
                     );
                   case 1:
                     return (
-                      e.sent(),
-                      D.GetStoreCapsuleInfo(t.GetAppID())
-                        .GetAppStoreData()
-                        .creator_list.forEach(function(e) {
-                          var t = E.a.InitFromClanID(e.clan_account_id),
-                            n = new Array();
-                          n.push(gp.LoadCreatorHome(t, o.m_cancelSignal)),
-                            Promise.all(n).then(function(e) {
-                              o.m_cancelSignal.token.reason ||
-                                o.setState({ bLoadingCreator: !1 });
-                            });
-                        }),
+                      e.sent().forEach(function(e) {
+                        var t = E.a.InitFromClanID(e.clan_account_id);
+                        n.push(gp.LoadCreatorHome(t, o.m_cancelSignal));
+                      }),
+                      Promise.all(n).then(function(e) {
+                        o.m_cancelSignal.token.reason ||
+                          o.setState({ bLoadingCreator: !1 });
+                      }),
                       [2]
                     );
                 }
@@ -61442,9 +61492,9 @@
             else {
               var e = this.props.editModel,
                 s = new Cb(e);
-              D.GetStoreCapsuleInfo(e.GetAppID())
-                .GetAppStoreData()
-                .creator_list.forEach(function(t) {
+              gp
+                .GetCreatorHomeListForAppIncludeHidden(e.GetAppID())
+                .forEach(function(t) {
                   var n = gp.GetCreatorHomeByID(t);
                   if (
                     n &&
@@ -61460,6 +61510,9 @@
                             (m.b.IN_CLIENT ? "steam://openurl/" : "") +
                             n.GetURL(t.type)
                         },
+                        n.BIsHidden()
+                          ? Object(_.c)("#EventEmail_CreatorHidden") + " "
+                          : "",
                         n.GetName()
                       ),
                       o = q.createElement(bz, {
