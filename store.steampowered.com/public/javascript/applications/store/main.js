@@ -11894,7 +11894,7 @@
             (e.state = {
               bShowContents: !1,
               containerStyle: {
-                maxHeight: "0vh",
+                maxHeight: "0px",
                 overflow: "hidden",
                 transition: "max-height 1s ease-in-out"
               }
@@ -11911,7 +11911,7 @@
                 return e.setState({
                   containerStyle: Object(v.a)(
                     Object(v.a)({}, e.state.containerStyle),
-                    { maxHeight: "100vh" }
+                    { maxHeight: "2000px" }
                   )
                 });
               }, 100);
@@ -12050,7 +12050,7 @@
             (e.state = {
               bShowContents: !1,
               containerStyle: {
-                maxHeight: "0vh",
+                maxHeight: "0px",
                 overflow: "hidden",
                 transition: "max-height 1s ease-in-out"
               }
@@ -12067,7 +12067,7 @@
                 return e.setState({
                   containerStyle: Object(v.a)(
                     Object(v.a)({}, e.state.containerStyle),
-                    { maxHeight: "100vh" }
+                    { maxHeight: "2000px" }
                   )
                 });
               }, 100);
@@ -12485,9 +12485,11 @@
                             position: "absolute",
                             left: 0,
                             top: 0,
-                            zIndex: 1
+                            zIndex: 1,
+                            width: "100%",
+                            display: "block",
+                            pointerEvents: "none"
                           },
-                          className: Nr.a.CapsuleImage,
                           src: e.microtrailer,
                           loop: !0,
                           muted: !0,

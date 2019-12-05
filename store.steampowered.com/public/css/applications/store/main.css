@@ -1704,7 +1704,9 @@ body.modals_BodyNoScrollDialog_105OB {
   height: 100%;
   z-index: 1;
   opacity: 1;
-  transition: opacity 0.6s; }
+  transition: opacity 0.6s;
+  /* Firefox default behavior is to restart the video on click */
+  pointer-events: none; }
 
 /* Override the EventDetailsBody img style in partnereventdisplay.scss */
 .broadcastwidgets_StoreSaleImage_2LocI.broadcastwidgets_StoreSaleImage_2LocI {
@@ -6652,8 +6654,6 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 /* type extra value needed for css specificity to override default */
 div.apppartnereventspage_EventDetailsBody_3NW5v {
   min-height: 0; }
-  div.apppartnereventspage_EventDetailsBody_3NW5v img {
-    max-height: 50vh; }
 
 .apppartnereventspage_ControlSection_2pA5C {
   position: sticky;
