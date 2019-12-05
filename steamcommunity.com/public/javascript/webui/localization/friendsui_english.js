@@ -203,8 +203,6 @@ LocalizationReady("friendsui", "english", {
     "Friends can't see you (you'll appear offline), but you can see them.",
   PersonaStateInvisibleNote: "Chat and notifications are still on.",
 
-  PersonaStateRemotePlayTogether: "Remote Play Together",
-
   Menu_Help_Capital: "HELP",
   Menu_LogOut: "Sign Out",
   Menu_AddAFriend_Capital: "ADD A FRIEND",
