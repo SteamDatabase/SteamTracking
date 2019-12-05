@@ -8939,6 +8939,9 @@ input.clanimagepicker_SearchInput_lwt4u {
 .partnereventemails_EmailBackground_bEP0P {
   background-color: #25282e; }
 
+.partnereventemails_DevEmailEmailBackground_20Vcu {
+  color: #1748a7; }
+
 .partnereventemails_EmailEditorContent_1nDhB {
   width: 800px;
   flex-grow: 2;
@@ -9035,7 +9038,6 @@ input.partnereventemails_HeadlineInput_2lHX9 {
 .partnereventemails_FullImageCtn_uv6NV {
   width: 100%;
   height: 300px;
-  background-color: #30343b;
   margin-top: 10px;
   margin-bottom: 10px;
   display: flex;

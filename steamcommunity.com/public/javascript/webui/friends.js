@@ -58930,7 +58930,7 @@
   eQUm: function(e, t, n) {
     "use strict";
     n.d(t, "a", function() {
-      return C;
+      return O;
     });
     var o = n("mrSG"),
       u = n("LAqV"),
@@ -58950,11 +58950,12 @@
       b = n("QHER"),
       v = n("bbBM"),
       S = n("yolM"),
-      y = n("yIxU");
-    function C(e, t, n, o) {
-      var i = o ? 758 : 842;
+      y = n("yIxU"),
+      C = !1;
+    function O(e, t, n, o) {
+      var i = !o || C ? 988 : 758;
       Object(d.b)(
-        h.createElement(O, { streamHost: t, bIsHost: o }),
+        h.createElement(I, { streamHost: t, bIsHost: o }),
         n,
         "RemotePlayDialog",
         {
@@ -58965,7 +58966,7 @@
         Object(r.g)(n)
       );
     }
-    var O = (function(t) {
+    var I = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (
@@ -59047,6 +59048,7 @@
           (e.prototype.render = function() {
             var e = this,
               t = this.props.bIsHost;
+            C && (t = !1);
             var n = !1;
             if (t) {
               for (
@@ -59130,7 +59132,7 @@
                           { className: y.StreamPausedContainer },
                           Object(f.c)("#RemotePlay_StreamPaused")
                         ),
-                      !t && h.createElement(I, { currentAppID: l }),
+                      !t && h.createElement(E, { currentAppID: l }),
                       h.createElement(
                         "div",
                         { className: y.GroupingBox },
@@ -59225,12 +59227,12 @@
                   _.b,
                   null,
                   !n &&
-                    h.createElement(E, {
+                    h.createElement(w, {
                       isHost: t,
                       streamHost: this.props.streamHost,
                       showStreamPausedBanner: p
                     }),
-                  n && h.createElement(T, { addFriend: !0 })
+                  n && h.createElement(G, { addFriend: !0 })
                 ),
                 h.createElement(_.j, null)
               )
@@ -59243,7 +59245,7 @@
           (e = Object(o.c)([i.a], e))
         );
       })(h.Component),
-      I = (function(e) {
+      E = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -59273,7 +59275,7 @@
           (t = Object(o.c)([i.a], t))
         );
       })(h.Component),
-      E = (function(e) {
+      w = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -59285,7 +59287,7 @@
               t = !0;
             this.props.isHost ||
               (e.push(
-                h.createElement(w, {
+                h.createElement(D, {
                   key: "player_host",
                   accountid: this.props.streamHost.accountid,
                   isHost: this.props.isHost,
@@ -59305,7 +59307,7 @@
                       })
                     ),
                   e.push(
-                    h.createElement(w, {
+                    h.createElement(D, {
                       key: "player_client_" + o,
                       accountid: i.friend.accountid,
                       isHost: this.props.isHost
@@ -59323,7 +59325,7 @@
           (t = Object(o.c)([i.a], t))
         );
       })(h.Component),
-      w = (function(e) {
+      D = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -59379,7 +59381,7 @@
                   ),
                 !this.props.isHost &&
                   h.createElement("div", { className: y.NegativeSpacer }),
-                h.createElement(D, {
+                h.createElement(M, {
                   player: t,
                   joined: e.bJoined,
                   isHostPlayer: this.props.isHostPlayer
@@ -59391,19 +59393,19 @@
                     h.createElement(
                       "div",
                       { className: y.HorizontalContainer },
-                      h.createElement(M, {
+                      h.createElement(T, {
                         inputType: c.h.k_EClientUsedInputTypeKeyboard,
                         enabled: e.bKeyboardEnabled,
                         usedTime: e.nKeyboardUsedTime,
                         accountID: e.friend.accountid
                       }),
-                      h.createElement(M, {
+                      h.createElement(T, {
                         inputType: c.h.k_EClientUsedInputTypeMouse,
                         enabled: e.bMouseEnabled,
                         usedTime: e.nMouseUsedTime,
                         accountID: e.friend.accountid
                       }),
-                      h.createElement(M, {
+                      h.createElement(T, {
                         inputType: c.h.k_EClientUsedInputTypeController,
                         enabled: e.bControllerEnabled,
                         usedTime: e.nControllerUsedTime,
@@ -59417,7 +59419,7 @@
           (t = Object(o.c)([i.a], t))
         );
       })(h.Component),
-      D = (function(t) {
+      M = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_schInputUsedReset = new g.b()), e;
@@ -59527,7 +59529,7 @@
           (e = Object(o.c)([i.a], e))
         );
       })(h.Component),
-      M = (function(t) {
+      T = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.m_schInputUsedReset = new g.b()), e;
@@ -59611,7 +59613,7 @@
           e
         );
       })(h.PureComponent),
-      T = (function(e) {
+      G = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }

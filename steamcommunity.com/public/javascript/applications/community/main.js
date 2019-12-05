@@ -10827,6 +10827,8 @@
       EmailTabCtn: "partnereventemails_EmailTabCtn_fDsyX",
       EmailInputText: "partnereventemails_EmailInputText_1UcSg",
       EmailBackground: "partnereventemails_EmailBackground_bEP0P",
+      DevEmailEmailBackground:
+        "partnereventemails_DevEmailEmailBackground_20Vcu",
       EmailEditorContent: "partnereventemails_EmailEditorContent_1nDhB",
       EmailIconHeader: "partnereventemails_EmailIconHeader_3LZBl",
       FooterLegal: "partnereventemails_FooterLegal_bJOii",
@@ -17821,6 +17823,7 @@
         background: { width: 1920, height: 622 },
         hero: { width: 0, height: 0 },
         email_full: { width: 800, height: 300 },
+        email_centered: { width: 644, height: 300 },
         broadcast_left: { width: 155, height: 337 },
         broadcast_right: { width: 155, height: 337 },
         sale_header: { width: 0, height: 0, bDisableEnforceDimensions: !0 },
@@ -17950,7 +17953,7 @@
                 ? (t = this.jsondata.localized_capsule_image)
                 : "spotlight" === e
                 ? (t = this.jsondata.localized_spotlight_image)
-                : "email_full" === e
+                : "email_full" === e || "email_centered" === e
                 ? (t = this.jsondata.email_setting
                     ? this.jsondata.email_setting.sections[0].localized_image
                     : [])
@@ -60810,7 +60813,11 @@
             return q.createElement(
               "div",
               {
-                className: Object(re.a)(n, kd.EmailBackground, kd.EmailSection)
+                className: Object(re.a)(
+                  n,
+                  kd.DevEmailEmailBackground,
+                  kd.EmailSection
+                )
               },
               t.BHasHeadline() &&
                 q.createElement(
@@ -60854,7 +60861,8 @@
                     section: t,
                     lang: o,
                     clanSteamID: i,
-                    bEditor: a
+                    bEditor: a,
+                    artworkType: p ? "email_centered" : "email_full"
                   })
                 ),
               t.BHasVideo() &&
@@ -61184,8 +61192,10 @@
               o = e.section,
               a = e.lang,
               i = e.bEditor,
-              r = o.GetImageURLWithFallback(this.state.langOverride, n),
-              p = o.BHasSomeImage();
+              r = e.artworkType,
+              p = o.GetImageURLWithFallback(this.state.langOverride, n),
+              s = o.BHasSomeImage(),
+              c = Ut[r];
             return q.createElement(
               "div",
               { className: kd.ImagePreview },
@@ -61193,14 +61203,19 @@
                 "div",
                 { className: kd.FullImageCtn },
                 q.createElement("img", {
-                  width: r ? Ut.email_full.width : void 0,
-                  height: r ? Ut.email_full.height : void 0,
-                  src: r
+                  width: p ? c.width : void 0,
+                  height: p ? c.height : void 0,
+                  src: p
                 }),
                 Boolean(i) &&
-                  q.createElement(sz, { section: o, clanSteamID: n, lang: a })
+                  q.createElement(sz, {
+                    section: o,
+                    clanSteamID: n,
+                    lang: a,
+                    artworkType: r
+                  })
               ),
-              p &&
+              s &&
                 q.createElement(jl, {
                   clanSteamID: n,
                   langOverride: this.state.langOverride,
@@ -61251,7 +61266,7 @@
                   case 1:
                     return (
                       e.trys.push([1, 3, , 4]),
-                      (t = ["email_full"]),
+                      (t = [this.props.artworkType]),
                       [4, this.m_clanImageUploader.UploadAllFiles(t)]
                     );
                   case 2:
@@ -61289,13 +61304,15 @@
             var t = this;
             if (e && 0 < e.length) {
               var n = this.props.lang,
-                o = ["email_full"];
+                o = [this.props.artworkType];
               Array.from(e).forEach(function(e) {
                 return t.m_clanImageUploader.AddImage(e, n, o);
               });
             }
           }),
           (e.prototype.RenderInstructions = function() {
+            var e = this.props.artworkType,
+              t = Ut[e];
             return q.createElement(
               q.Fragment,
               null,
@@ -61307,7 +61324,7 @@
               q.createElement(
                 "span",
                 null,
-                Object(_.c)("#EventEmail_ImageDimension", 800, 300)
+                Object(_.c)("#EventEmail_ImageDimension", t.width, t.height)
               )
             );
           }),
@@ -61326,7 +61343,7 @@
                             switch (e.label) {
                               case 0:
                                 (t = this.props.lang),
-                                  (n = ["email_full"]),
+                                  (n = [this.props.artworkType]),
                                   (e.label = 1);
                               case 1:
                                 return (
@@ -61390,10 +61407,11 @@
                 })
               );
             var e = this.props.clanSteamID,
-              t = dd.ConstructImageUploadDialogs(
+              t = [this.props.artworkType],
+              n = dd.ConstructImageUploadDialogs(
                 this.m_clanImageUploader,
                 "emailartupload_",
-                ["email_full"]
+                t
               );
             return q.createElement(
               "div",
@@ -61407,7 +61425,7 @@
                   clanSteamID: e,
                   renderDesciption: this.RenderInstructions
                 },
-                q.createElement("div", { className: dl.UploadPreviewCtn }, t),
+                q.createElement("div", { className: dl.UploadPreviewCtn }, n),
                 q.createElement(ld, {
                   clanImageUploader: this.m_clanImageUploader,
                   fnOnUploadImageRequested: this.DoUpload
