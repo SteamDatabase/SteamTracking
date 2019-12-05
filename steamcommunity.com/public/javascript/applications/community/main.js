@@ -46433,7 +46433,7 @@
             return (
               this.m_section.localized_body &&
               this.m_section.localized_body.length > e &&
-              this.m_section.localized_headline[e]
+              this.m_section.localized_body[e]
             );
           }),
           (e.prototype.BHasCallToAction = function() {
