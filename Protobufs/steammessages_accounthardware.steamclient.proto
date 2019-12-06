@@ -3,6 +3,7 @@ import "steammessages_unified_base.steamclient.proto";
 option cc_generic_services = true;
 
 enum EValveIndexComponent {
+	k_EValveIndexComponentUnknown = 0;
 	k_EValveIndexComponentHMD = 1;
 	k_EValveIndexComponentLeftKnuckle = 2;
 	k_EValveIndexComponentRightKnuckle = 3;
@@ -133,7 +134,7 @@ message CAccountHardware_RegisterValveIndexComponent_Request {
 	optional string serial_number = 1;
 	optional string manufacturer_serial_number = 2;
 	optional string component_code = 3;
-	optional .EValveIndexComponent component_type = 4 [default = k_EValveIndexComponentHMD];
+	optional .EValveIndexComponent component_type = 4 [default = k_EValveIndexComponentUnknown];
 	optional int32 estimated_time_registered = 5;
 }
 

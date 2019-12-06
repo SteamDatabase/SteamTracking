@@ -13471,6 +13471,13 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   bottom: 0;
   background-size: cover; }
 
+.appportraithover_NoScreenshotFallbackWrapper_25nyF {
+  position: relative; }
+
+.appportraithover_NoScreenshotFallbackAsset_13_ZZ {
+  height: 100%;
+  width: 100%; }
+
 .appportraithover_NoScreenshotFallback_2I4_R,
 .appportraithover_MiniScreenshot_3yeSS {
   position: absolute;
