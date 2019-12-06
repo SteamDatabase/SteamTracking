@@ -113,7 +113,7 @@
               ".js?chunkhash=" +
               {
                 0: "179d2208bb00c015535b",
-                1: "16ccacfefe720b74e7d5",
+                1: "048c4c6013784afc3282",
                 4: "5186310fc5d82e3c0b9c",
                 5: "ca1901c80c06533d0674",
                 6: "74928b516afe89f63249",
@@ -142,33 +142,33 @@
                 29: "9e0710965ec46982e434",
                 30: "5f04be882e8535c08c6c",
                 31: "5116646722dbdf99de46",
-                32: "e5dee249f43bbfdbbf0b",
-                33: "68776e9f25a08832d9ea",
-                34: "1277e8877c92124c6013",
-                35: "9b153514fcab34c8f1a1",
-                36: "cc4af38baa9db7fcfb58",
-                37: "4ce198c2b94670041451",
-                38: "5f8427cf983f7d61f10c",
-                39: "84136c402574959cb597",
-                40: "bd2ee93965af7fba52ac",
-                41: "a79a7f78540b71333130",
-                42: "9dd1d4d518c8ee9217b4",
-                43: "d671285cde6789bea91d",
-                44: "c379a8159aa362c6771c",
-                45: "e3a192fad41b987f16d3",
-                46: "2f30bde2c4817f14d9d2",
-                47: "1bed09883c07cf43dd39",
-                48: "5dac17dd9865471e5bf4",
-                49: "2808ba00295d729e1d35",
-                50: "16c9d500428267d747c7",
-                51: "58c0c430d1eead9cef01",
-                52: "554d9e45cd5ace855eb4",
-                53: "3d85a9c9123497d56879",
-                54: "6e241afd4f00581e9579",
-                55: "120e333bf0c908e7fabe",
-                56: "2d10318dedb8afd45cd5",
-                57: "142c75f8c5468ac5d874",
-                58: "5a9717c8e9c51c301574"
+                32: "87da607b32609d499a8f",
+                33: "e223ee2a66f91519ec62",
+                34: "2bde8393a80c6137e9ec",
+                35: "99922adf94d50cecc115",
+                36: "98789a64f44b5cc9c39c",
+                37: "5ef674f97ea57bd7d43c",
+                38: "66f2b42220fbd5281815",
+                39: "1097746c7bbf1ebafbec",
+                40: "a8effe7de09cefa6e244",
+                41: "3442c61a9efd91fafd5f",
+                42: "2d57e5a8cea043ca8ff5",
+                43: "949f422d702a7c6a2c03",
+                44: "7a7f69ac080954d22a40",
+                45: "2420a07da947576d9b76",
+                46: "3f7362b4492b7b79a2dd",
+                47: "6beec1c89a25e7d8de6c",
+                48: "8d83c7bbd90c3d147889",
+                49: "caa2ee315e1fc4967748",
+                50: "22c19c7d1b4eea64a5e8",
+                51: "4f7e68c49e0d3be823d1",
+                52: "6cfa8f48485caf7b444c",
+                53: "c0d5cc79549a78320d13",
+                54: "c6b0ce6d4ebb2d161a3c",
+                55: "367721cc0b5b3737ebea",
+                56: "e3fcb4fe14e8f4abf230",
+                57: "842736f7fd45147f58b0",
+                58: "aaccdb01df951935ae15"
               }[e]
             );
           })(a)),
@@ -5366,6 +5366,8 @@
                               c.data.available_linux),
                             (l.m_appStoreData.microtrailer =
                               c.data.microtrailer),
+                            (l.m_appStoreData.microtrailer_mp4 =
+                              c.data.microtrailer_mp4),
                             (l.m_appStoreData.creator_list = new Array());
                           var e = c.data.creator_list;
                           if (e)
@@ -11682,18 +11684,34 @@
                         onFocus: this.OnCapsuleOver,
                         onBlur: this.OnCapsuleOut
                       },
-                      this.state.isHovered && t.microtrailer
-                        ? A.createElement("video", {
-                            className: Nr.a.StoreSaleVideo,
-                            src: t.microtrailer,
-                            loop: !0,
-                            muted: !0,
-                            autoPlay: !0
-                          })
-                        : A.createElement("img", {
-                            className: Nr.a.StoreSaleImage,
-                            src: t.main_capsule || t.capsule
-                          })
+                      A.createElement(
+                        "div",
+                        { style: { position: "relative" } },
+                        A.createElement("img", {
+                          className: Nr.a.StoreSaleImage,
+                          src: t.main_capsule || t.capsule
+                        }),
+                        this.state.isHovered &&
+                          t.microtrailer &&
+                          A.createElement(
+                            "video",
+                            {
+                              className: Nr.a.StoreSaleVideo,
+                              loop: !0,
+                              muted: !0,
+                              autoPlay: !0
+                            },
+                            A.createElement("source", {
+                              src: t.microtrailer,
+                              type: "video/webm"
+                            }),
+                            !M.IN_CLIENT &&
+                              A.createElement("source", {
+                                src: t.microtrailer_mp4,
+                                type: "video/mp4"
+                              })
+                          )
+                      )
                     )
                   ),
                   A.createElement(
@@ -12480,21 +12498,32 @@
                       }),
                       this.state.isHovered &&
                         e.microtrailer &&
-                        A.createElement("video", {
-                          style: {
-                            position: "absolute",
-                            left: 0,
-                            top: 0,
-                            zIndex: 1,
-                            width: "100%",
-                            display: "block",
-                            pointerEvents: "none"
+                        A.createElement(
+                          "video",
+                          {
+                            style: {
+                              position: "absolute",
+                              left: 0,
+                              top: 0,
+                              zIndex: 1,
+                              width: "100%",
+                              display: "block",
+                              pointerEvents: "none"
+                            },
+                            loop: !0,
+                            muted: !0,
+                            autoPlay: !0
                           },
-                          src: e.microtrailer,
-                          loop: !0,
-                          muted: !0,
-                          autoPlay: !0
-                        })
+                          A.createElement("source", {
+                            src: e.microtrailer,
+                            type: "video/webm"
+                          }),
+                          !M.IN_CLIENT &&
+                            A.createElement("source", {
+                              src: e.microtrailer_mp4,
+                              type: "video/mp4"
+                            })
+                        )
                     ),
                     A.createElement(
                       "div",
