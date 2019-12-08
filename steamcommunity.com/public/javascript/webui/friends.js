@@ -26499,7 +26499,7 @@
                     return (
                       (t =
                         p.c.COMMUNITY_BASE_URL +
-                        "/actions/" +
+                        "actions/" +
                         (a ? "AddToWishlist" : "RemoveFromWishlist")),
                       (n = new FormData()).append("appid", "" + r),
                       n.append("sessionid", p.c.SESSIONID),
@@ -28431,13 +28431,15 @@
                     C.createElement(
                       "div",
                       { className: pe.a.StoreSaleWidgetTags },
-                      t.tags.map(function(e) {
-                        return C.createElement(
-                          "div",
-                          { key: e.tagid, className: pe.a.AppTag },
-                          e.name
-                        );
-                      })
+                      t.tags
+                        ? t.tags.map(function(e) {
+                            return C.createElement(
+                              "div",
+                              { key: e.tagid, className: pe.a.AppTag },
+                              e.name
+                            );
+                          })
+                        : void 0
                     ),
                     C.createElement(Qe, {
                       appid: t.appid,

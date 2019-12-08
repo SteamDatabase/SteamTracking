@@ -20491,7 +20491,7 @@
                     return (
                       (t =
                         m.b.COMMUNITY_BASE_URL +
-                        "/actions/" +
+                        "actions/" +
                         (r ? "AddToWishlist" : "RemoveFromWishlist")),
                       (n = new FormData()).append("appid", "" + i),
                       n.append("sessionid", m.b.SESSIONID),
@@ -40518,13 +40518,15 @@
                     q.createElement(
                       "div",
                       { className: $n.a.StoreSaleWidgetTags },
-                      t.tags.map(function(e) {
-                        return q.createElement(
-                          "div",
-                          { key: e.tagid, className: $n.a.AppTag },
-                          e.name
-                        );
-                      })
+                      t.tags
+                        ? t.tags.map(function(e) {
+                            return q.createElement(
+                              "div",
+                              { key: e.tagid, className: $n.a.AppTag },
+                              e.name
+                            );
+                          })
+                        : void 0
                     ),
                     q.createElement(wp, {
                       appid: t.appid,
