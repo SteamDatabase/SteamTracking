@@ -4204,7 +4204,7 @@ Set a category for these games to help you find them quickly and organize your L
 
 
 "Steam_DeviceAuth_Authorized_Notification" "%owner%'s games are now available for you to play on this computer."
-"Steam_DeviceAuth_Deauthorized_Notification" "%owner% has de-authorzied this computer, some games may be unavailable."
+"Steam_DeviceAuth_Deauthorized_Notification" "%owner% has de-authorized this computer, some games may be unavailable."
 "Steam_DeviceAuth_StopPlaying_Notification" "Hey, %owner% needs this shared game back! You have %minutes% minutes of playtime remaining..."
 
 "Steam_DeviceAuth_Shared_Library_Now_Available" "Hooray, %owner%'s shared games are now available for you to play..."

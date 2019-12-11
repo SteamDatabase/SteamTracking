@@ -3883,7 +3883,6 @@
  R typeinfo name for CAppDownloadNotificationManager::CCallback_OnDlcInstalled
  R typeinfo name for CAppDownloadedNotification
  R typeinfo name for CAutoRelease<CJSCallbackFunc>
- R typeinfo name for CAutoRelease<CJSCallbackPromise>
  R typeinfo name for CAvatarOverlayImage
  R typeinfo name for CBoolProperty
  R typeinfo name for CBroadcastApproveBar
@@ -4478,7 +4477,6 @@
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlHandleTable<vgui::BuildGroup, 20>
- R typeinfo name for CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >
  R typeinfo name for CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >
  R typeinfo name for CUtlLinkedList<CHTMLWindow*, int>
  R typeinfo name for CUtlLinkedList<CUtlDict<bool, CDefCaselessStringLess, int>*, int>
@@ -4553,7 +4551,6 @@
  R typeinfo name for CUtlVector<CSteamID, CUtlMemory<CSteamID> >
  R typeinfo name for CUtlVector<CSteamParentalController::UnlockPromise_t, CUtlMemory<CSteamParentalController::UnlockPromise_t> >
  R typeinfo name for CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >
- R typeinfo name for CUtlVector<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t, CUtlMemory<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
  R typeinfo name for CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >
@@ -5007,7 +5004,6 @@
  T CAutoRelease<CJSCallbackFunc>::RecursiveValidate(CValidator&, char const*)
  T CAutoRelease<CJSCallbackFunc>::Reset(CJSCallbackFunc*)
  T CAutoRelease<CJSCallbackFunc>::~CAutoRelease()
- T CAutoRelease<CJSCallbackPromise>::RecursiveValidate(CValidator&, char const*)
  T CAutoRelease<CJSCallbackPromise>::Reset(CJSCallbackPromise*)
  T CAutoRelease<CJSCallbackPromise>::~CAutoRelease()
  T CAutoWipeBuffer::Clear()
@@ -9736,6 +9732,7 @@
  T CRemotePlayController::RegisterForInputUsed(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForPlaceholderStateChanged(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForPlayerInputSettingsChanged(CSmartPtr<CJSCallbackFunc>)
+ T CRemotePlayController::RegisterForRemoteClientLaunchResult(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForRemoteClientStarted(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForRemoteClientStopped(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForSessionJoined(CSmartPtr<CJSCallbackFunc>)
@@ -10044,19 +10041,6 @@
  T CUtlHandleTable<vgui::BuildGroup, 20>::SetHandle(unsigned int, vgui::BuildGroup*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::Validate(CValidator&, char const*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::~CUtlHandleTable()
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::AllocNode()
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::CUtlHashMap()
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::EnsureCapacity(int)
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::Find(CSteamID const&) const
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::IncrementalRehash()
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::InsertOrReplace(CSteamID const&, CSmartPtr<CJSCallbackPromise> const&)
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::Purge()
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::RecursiveValidate(CValidator&, char const*)
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::RehashNodesInBucket(int)
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::RemoveAt(int)
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::RemoveNodeFromBucket(int, int)
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::~CUtlHashMap()
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::AllocNode()
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
  T CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
@@ -10555,10 +10539,6 @@
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t, CUtlMemory<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t, CUtlMemory<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t, CUtlMemory<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
- T CUtlVector<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t, CUtlMemory<CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
@@ -11960,7 +11940,6 @@
  T i2d_X509_SIG
  T i2o_ECPublicKey
  T init_JSON_config
- T int CUtlHashMap<CSteamID, CSmartPtr<CJSCallbackPromise>, CDefEquals<CSteamID>, HashFunctor<CSteamID> >::InsertUnconstructed<CSteamID const&>(CSteamID const&, int*, bool)
  T int CUtlHashMap<CUtlString, CHTMLWindow::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
  T int CUtlHashMap<CUtlString, CHTMLWindowController::JSRegisteredMethod_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
  T int CUtlHashMap<CUtlString, CSteamUIMessagingController::ChannelCallback_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
@@ -16092,7 +16071,6 @@
  T void JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void _ValidateSelectType<CJSCallbackFunc>(CJSCallbackFunc*, CValidator&, char const*, fallback_)
- T void _ValidateSelectType<CJSCallbackPromise>(CJSCallbackPromise*, CValidator&, char const*, fallback_)
  T void std::__1::__insertion_sort_3<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T void std::__1::__sort<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
