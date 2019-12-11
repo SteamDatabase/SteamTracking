@@ -406,11 +406,9 @@ body.v6 .page_content  {
 
 .page_content .box-tags-focus div {
 	column-count: 2;
-	column-gap: 25px;
+	column-gap: 5px;
 	max-height: 160px;
 	max-width: 380px;
-	margin-top: 2px;
-	margin-bottom: 8px;
 }
 
 .page_content .box-tags-focus p {
@@ -463,16 +461,16 @@ body.v6 .page_content  {
 
 .page_content .box-images-small {
 	position: relative;
-	bottom:10px;
+	bottom:20px;
 	width:100%;
 	margin-bottom: 8px;
 }
 
 .page_content .box-images-small img {
 	position: relative;
-	width:calc(50% - 5px);
-	margin-right: 10px;
-	margin-bottom: 10px;
+	width:calc(50% - 3px);
+	margin-right: 6px;
+	margin-bottom: 2px;
 	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
 }
 
@@ -1028,24 +1026,83 @@ round buttons
 
 }
 
-.tag-list-killable:hover { 
-	background-color: rgba(255, 255, 255, .25);
+.tag-crouton .tag-button {
+	opacity: 0;
+	background-color: rgb(255,255,255);
+	color: white;
+	border: none; -webkit-border-radius: 50%; -moz-border-radius: 50%; 
+	border-radius: 5px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	position: relative;
+	top: 3px;
+}
+
+.page_content .tag-crouton .tag-button div {
+	column-count: 1;
+	column-gap: 0px;
+	max-height: 16px;
+	max-width: 16px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	position:relative;
+	bottom:5px;
+	color: rgb(30,132,205);
+}
+
+.tag-crouton {
+	padding: 4px;
+}
+
+.tag-crouton:hover .tag-button {
+	opacity: 1;
+}
+
+.tag-crouton .tag-plus.boosted{
+	opacity: 1;
+}
+
+.tag-crouton .tag-minus.disabled{
+	opacity: 1;
+}
+
+.page_content .tag-crouton .tag-button.tag-minus div {
+	position: relative;
+	font-size: 15px;
+	bottom: 4px;
+	right: 0.5px;
+}
+
+.tag-crouton:hover .tag-minus{
+	display: inline-block;
+}
+
+.tag-crouton:hover {
+	background-color: rgb(30, 132, 205);
 	border-radius: 5px;
 	cursor:pointer;
+}
+
+.tag-list-killable {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-block;
+	max-width: calc(100% - 50px);
+	position: relative;
+	top: 3px;
 }
 
 .tag-list-killable.disabled {
 	text-decoration: line-through;
 }
 
-.tag-list-killable:hover::before { 
-	content: '\2a2f';
-	font-size: 17px;
-	line-height: 12px;
-	font-weight: bolder;
-	opacity: 1.0;
-	color: white;
-	text-decoration: none;
+.tag-list-killable.boosted {
+	font-weight: bold;
 }
 
 .page_content .wishlist_button_short {

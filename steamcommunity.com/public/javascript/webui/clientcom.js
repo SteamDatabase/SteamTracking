@@ -3,43 +3,43 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 !(function(n) {
-  var o = {};
-  function r(t) {
-    if (o[t]) return o[t].exports;
-    var e = (o[t] = { i: t, l: !1, exports: {} });
-    return n[t].call(e.exports, e, e.exports, r), (e.l = !0), e.exports;
+  var r = {};
+  function o(t) {
+    if (r[t]) return r[t].exports;
+    var e = (r[t] = { i: t, l: !1, exports: {} });
+    return n[t].call(e.exports, e, e.exports, o), (e.l = !0), e.exports;
   }
-  (r.m = n),
-    (r.c = o),
-    (r.d = function(t, e, n) {
-      r.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: n });
+  (o.m = n),
+    (o.c = r),
+    (o.d = function(t, e, n) {
+      o.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: n });
     }),
-    (r.r = function(t) {
+    (o.r = function(t) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(t, "__esModule", { value: !0 });
     }),
-    (r.t = function(e, t) {
-      if ((1 & t && (e = r(e)), 8 & t)) return e;
+    (o.t = function(e, t) {
+      if ((1 & t && (e = o(e)), 8 & t)) return e;
       if (4 & t && "object" == typeof e && e && e.__esModule) return e;
       var n = Object.create(null);
       if (
-        (r.r(n),
+        (o.r(n),
         Object.defineProperty(n, "default", { enumerable: !0, value: e }),
         2 & t && "string" != typeof e)
       )
-        for (var o in e)
-          r.d(
+        for (var r in e)
+          o.d(
             n,
-            o,
+            r,
             function(t) {
               return e[t];
-            }.bind(null, o)
+            }.bind(null, r)
           );
       return n;
     }),
-    (r.n = function(t) {
+    (o.n = function(t) {
       var e =
         t && t.__esModule
           ? function() {
@@ -48,34 +48,34 @@
           : function() {
               return t;
             };
-      return r.d(e, "a", e), e;
+      return o.d(e, "a", e), e;
     }),
-    (r.o = function(t, e) {
+    (o.o = function(t, e) {
       return Object.prototype.hasOwnProperty.call(t, e);
     }),
-    (r.p = ""),
-    r((r.s = "x0hG"));
+    (o.p = ""),
+    o((o.s = "x0hG"));
 })({
   "/7KC": function(t, e, n) {
     "use strict";
-    function o(t, e) {
+    function r(t, e) {
       return (
         (t = Math.ceil(t)),
         (e = Math.floor(e)),
         Math.floor(Math.random() * (e - t + 1)) + t
       );
     }
-    function r(t, e, n) {
+    function o(t, e, n) {
       return Math.max(e, Math.min(n, t));
     }
-    function i(t, e, n, o, r) {
-      return o + ((r - o) * (t - e)) / (n - e);
+    function i(t, e, n, r, o) {
+      return r + ((o - r) * (t - e)) / (n - e);
     }
     n.d(e, "b", function() {
-      return o;
+      return r;
     }),
       n.d(e, "a", function() {
-        return r;
+        return o;
       }),
       n.d(e, "c", function() {
         return i;
@@ -84,14 +84,14 @@
   "1n9R": function(t, e, n) {
     "use strict";
     n("mrSG");
-    var o = n("/7KC");
+    var r = n("/7KC");
     function c() {
       return !!window.document;
     }
     n.d(e, "c", function() {
       return u;
     }),
-      n.d(e, "h", function() {
+      n.d(e, "i", function() {
         return s;
       }),
       n.d(e, "a", function() {
@@ -100,19 +100,22 @@
       n.d(e, "b", function() {
         return f;
       }),
-      n.d(e, "e", function() {
+      n.d(e, "f", function() {
         return i;
+      }),
+      n.d(e, "h", function() {
+        return _;
       }),
       n.d(e, "g", function() {
         return p;
       }),
-      n.d(e, "f", function() {
+      n.d(e, "d", function() {
         return d;
       }),
-      n.d(e, "d", function() {
-        return _;
+      n.d(e, "e", function() {
+        return m;
       });
-    var r,
+    var o,
       u = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
@@ -147,7 +150,7 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!c()) return r || (r = i()), r;
+            if (!c()) return o || (o = i()), o;
             var t = (function(t) {
               if (!c() || !window.document.cookie) return null;
               var e = document.cookie.match("(^|; )" + t + "=([^;]*)");
@@ -193,44 +196,44 @@
     function i() {
       var t = (function() {
         for (var t = "", e = 0; e < 24; e++)
-          t += Object(o.b)(0, 35).toString(36);
+          t += Object(r.b)(0, 35).toString(36);
         return t;
       })();
       return (
-        (function(t, e, n, o) {
+        (function(t, e, n, r) {
           if (c()) {
-            o || (o = "/");
-            var r = "";
+            r || (r = "/");
+            var o = "";
             if (void 0 !== n && n) {
               var i = new Date();
               i.setTime(i.getTime() + 864e5 * n),
-                (r = "; expires=" + i.toUTCString());
+                (o = "; expires=" + i.toUTCString());
             }
             document.cookie =
               encodeURIComponent(t) +
               "=" +
               encodeURIComponent(e) +
-              r +
+              o +
               ";path=" +
-              o;
+              r;
           }
         })("sessionid", t, 0),
         t
       );
     }
-    function p(t) {
+    function _(t) {
       void 0 === t && (t = l);
       var e = {},
-        n = d("config", t);
+        n = p("config", t);
       n && (delete n.SESSIONID, Object.assign(u, n), (e.config = !0));
-      var o = d("userinfo", t);
-      o && (Object.assign(s, o), (e.userConfig = !0));
-      var r = d("broadcast", t);
-      r && (Object.assign(a, r), (e.broadcastConfig = !0));
-      var i = d("community", t);
+      var r = p("userinfo", t);
+      r && (Object.assign(s, r), (e.userConfig = !0));
+      var o = p("broadcast", t);
+      o && (Object.assign(a, o), (e.broadcastConfig = !0));
+      var i = p("community", t);
       return i && (Object.assign(f, i), (e.communityConfig = !0)), e;
     }
-    function d(t, e) {
+    function p(t, e) {
       var n;
       if (
         (void 0 === e && (e = l),
@@ -245,7 +248,21 @@
         }
       else console.error("Missing config element #", e);
     }
-    function _() {
+    function d() {
+      var t = window.location.href;
+      return t.startsWith(u.STORE_BASE_URL)
+        ? u.STORE_BASE_URL
+        : t.startsWith(u.COMMUNITY_BASE_URL)
+        ? u.COMMUNITY_BASE_URL
+        : t.startsWith(u.PARTNER_BASE_URL)
+        ? u.PARTNER_BASE_URL
+        : t.startsWith(u.HELP_BASE_URL)
+        ? u.HELP_BASE_URL
+        : t.startsWith(u.STEAMTV_BASE_URL)
+        ? u.STEAMTV_BASE_URL
+        : "";
+    }
+    function m() {
       var t = window.location.href;
       return t.startsWith(u.STORE_BASE_URL)
         ? "store"
@@ -268,8 +285,8 @@
       n.d(e, "b", function() {
         return u;
       });
-    var o = n("tkkQ"),
-      r = { success: !0, result: 1 },
+    var r = n("tkkQ"),
+      o = { success: !0, result: 1 },
       i = (function() {
         function t() {
           (this.m_connection = new c()),
@@ -298,7 +315,7 @@
             var t = this;
             return this.m_connection.Connect().then(
               function() {
-                return r;
+                return o;
               },
               function() {
                 return t.FailureResult();
@@ -331,14 +348,14 @@
             return this.GenericEResultCall(e);
           }),
           (t.prototype.BIsSubscribedApp = function(n) {
-            var o = this;
+            var r = this;
             if (this.m_mapCacheSubscribedApp.has(n))
               return Promise.resolve(this.m_mapCacheSubscribedApp.get(n));
             var t = { message: "IsSubscribedApp", appid: n };
             return this.GenericEResultCall(t).then(function(t) {
               if (!t.connect_failed) {
                 var e = 1 == t.result;
-                return o.m_mapCacheSubscribedApp.set(n, e), e;
+                return r.m_mapCacheSubscribedApp.set(n, e), e;
               }
             });
           }),
@@ -348,8 +365,8 @@
           }),
           (t.prototype.BClientAccountMatches = function() {
             return (
-              !o.d.logged_in ||
-              o.d.accountid == this.m_connection.ClientInfo.unAccountID
+              !r.d.logged_in ||
+              r.d.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }),
           (t.prototype.GenericEResultCall = function(t) {
@@ -359,7 +376,7 @@
               .then(function() {
                 return e.m_bAllowAccountMismatch || e.BClientAccountMatches()
                   ? e.m_connection.SendMsgAndAwaitResponse(t).then(function(t) {
-                      return 1 === t.success ? r : e.FailureResult(t.success);
+                      return 1 === t.success ? o : e.FailureResult(t.success);
                     })
                   : { success: !1, result: 19, account_mismatch: !0 };
               })
@@ -415,12 +432,12 @@
             enumerable: !0,
             configurable: !0
           }),
-          (t.prototype.SendMsgAndAwaitResponse = function(o) {
-            var r = this;
+          (t.prototype.SendMsgAndAwaitResponse = function(r) {
+            var o = this;
             return new Promise(function(t, e) {
-              var n = r.m_iCallSeq++;
-              r.BSendMsg(o, n)
-                ? r.m_mapWaitingCallbacks.set(n, {
+              var n = o.m_iCallSeq++;
+              o.BSendMsg(r, n)
+                ? o.m_mapWaitingCallbacks.set(n, {
                     iSeq: n,
                     fnCallback: t,
                     fnError: e
@@ -432,8 +449,8 @@
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
             var n = Object.assign({}, t, {
-              universe: o.a.EUNIVERSE,
-              accountid: o.d.accountid
+              universe: r.a.EUNIVERSE,
+              accountid: r.d.accountid
             });
             void 0 !== e && (n.sequenceid = e);
             try {
@@ -458,31 +475,31 @@
             }
           }),
           (t.prototype.Connect = function() {
-            var o = this;
+            var r = this;
             if (this.m_bReady && this.m_socket.readyState == WebSocket.OPEN)
               return Promise.resolve();
             if (this.m_promiseConnect) return this.m_promiseConnect;
             var t = new Promise(function(e, n) {
               try {
-                o.m_socket = new WebSocket(
+                r.m_socket = new WebSocket(
                   "ws://127.0.0.1:27060/clientsocket/"
                 );
               } catch (t) {
-                return (o.m_bSecurityException = !0), void n(t);
+                return (r.m_bSecurityException = !0), void n(t);
               }
-              (o.m_socket.onerror = function(t) {
+              (r.m_socket.onerror = function(t) {
                 n();
               }),
-                (o.m_socket.onmessage = o.OnSocketMessage.bind(o)),
-                (o.m_socket.onopen = function(t) {
-                  o.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
+                (r.m_socket.onmessage = r.OnSocketMessage.bind(r)),
+                (r.m_socket.onopen = function(t) {
+                  r.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
                     .then(function(t) {
                       1 == t.success
-                        ? ((o.m_ClientInfo.ulVersion = t.clientversion),
-                          (o.m_ClientInfo.bFriendsUIEnabled = !!t.friendsui),
-                          (o.m_ClientInfo.unAccountID = t.accountid),
+                        ? ((r.m_ClientInfo.ulVersion = t.clientversion),
+                          (r.m_ClientInfo.bFriendsUIEnabled = !!t.friendsui),
+                          (r.m_ClientInfo.unAccountID = t.accountid),
                           t.supported_messages &&
-                            (o.m_ClientInfo.rgSupportedMessages =
+                            (r.m_ClientInfo.rgSupportedMessages =
                               t.supported_messages),
                           e())
                         : n();
@@ -494,11 +511,11 @@
               (this.m_promiseConnect = t),
               this.m_promiseConnect
                 .then(function() {
-                  (o.m_bReady = !0), (o.m_promiseConnect = void 0);
+                  (r.m_bReady = !0), (r.m_promiseConnect = void 0);
                 })
                 .catch(function() {
-                  (o.m_bClientConnectionFailed = !0),
-                    (o.m_promiseConnect = void 0);
+                  (r.m_bClientConnectionFailed = !0),
+                    (r.m_promiseConnect = void 0);
                 }),
               this.m_promiseConnect
             );
@@ -512,7 +529,7 @@
   mrSG: function(t, e, n) {
     "use strict";
     n.d(e, "d", function() {
-      return r;
+      return o;
     }),
       n.d(e, "a", function() {
         return i;
@@ -546,8 +563,8 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-    var o = function(t, e) {
-      return (o =
+    var r = function(t, e) {
+      return (r =
         Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array &&
           function(t, e) {
@@ -557,11 +574,11 @@ and limitations under the License.
           for (var n in e) e.hasOwnProperty(n) && (t[n] = e[n]);
         })(t, e);
     };
-    function r(t, e) {
+    function o(t, e) {
       function n() {
         this.constructor = t;
       }
-      o(t, e),
+      r(t, e),
         (t.prototype =
           null === e
             ? Object.create(e)
@@ -571,72 +588,72 @@ and limitations under the License.
       return (i =
         Object.assign ||
         function(t) {
-          for (var e, n = 1, o = arguments.length; n < o; n++)
-            for (var r in (e = arguments[n]))
-              Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
+          for (var e, n = 1, r = arguments.length; n < r; n++)
+            for (var o in (e = arguments[n]))
+              Object.prototype.hasOwnProperty.call(e, o) && (t[o] = e[o]);
           return t;
         }).apply(this, arguments);
     };
     function c(t, e) {
       var n = {};
-      for (var o in t)
-        Object.prototype.hasOwnProperty.call(t, o) &&
-          e.indexOf(o) < 0 &&
-          (n[o] = t[o]);
+      for (var r in t)
+        Object.prototype.hasOwnProperty.call(t, r) &&
+          e.indexOf(r) < 0 &&
+          (n[r] = t[r]);
       if (null != t && "function" == typeof Object.getOwnPropertySymbols) {
-        var r = 0;
-        for (o = Object.getOwnPropertySymbols(t); r < o.length; r++)
-          e.indexOf(o[r]) < 0 &&
-            Object.prototype.propertyIsEnumerable.call(t, o[r]) &&
-            (n[o[r]] = t[o[r]]);
+        var o = 0;
+        for (r = Object.getOwnPropertySymbols(t); o < r.length; o++)
+          e.indexOf(r[o]) < 0 &&
+            Object.prototype.propertyIsEnumerable.call(t, r[o]) &&
+            (n[r[o]] = t[r[o]]);
       }
       return n;
     }
-    function u(t, e, n, o) {
-      var r,
+    function u(t, e, n, r) {
+      var o,
         i = arguments.length,
         c =
           i < 3
             ? e
-            : null === o
-            ? (o = Object.getOwnPropertyDescriptor(e, n))
-            : o;
+            : null === r
+            ? (r = Object.getOwnPropertyDescriptor(e, n))
+            : r;
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
-        c = Reflect.decorate(t, e, n, o);
+        c = Reflect.decorate(t, e, n, r);
       else
         for (var u = t.length - 1; 0 <= u; u--)
-          (r = t[u]) &&
-            (c = (i < 3 ? r(c) : 3 < i ? r(e, n, c) : r(e, n)) || c);
+          (o = t[u]) &&
+            (c = (i < 3 ? o(c) : 3 < i ? o(e, n, c) : o(e, n)) || c);
       return 3 < i && c && Object.defineProperty(e, n, c), c;
     }
     function s(i, c, u, s) {
       return new (u || (u = Promise))(function(t, e) {
         function n(t) {
           try {
-            r(s.next(t));
+            o(s.next(t));
           } catch (t) {
             e(t);
           }
         }
-        function o(t) {
+        function r(t) {
           try {
-            r(s.throw(t));
+            o(s.throw(t));
           } catch (t) {
             e(t);
           }
         }
-        function r(e) {
+        function o(e) {
           e.done
             ? t(e.value)
             : new u(function(t) {
                 t(e.value);
-              }).then(n, o);
+              }).then(n, r);
         }
-        r((s = s.apply(i, c || [])).next());
+        o((s = s.apply(i, c || [])).next());
       });
     }
-    function a(n, o) {
-      var r,
+    function a(n, r) {
+      var o,
         i,
         c,
         t,
@@ -660,11 +677,11 @@ and limitations under the License.
       function e(e) {
         return function(t) {
           return (function(e) {
-            if (r) throw new TypeError("Generator is already executing.");
+            if (o) throw new TypeError("Generator is already executing.");
             for (; u; )
               try {
                 if (
-                  ((r = 1),
+                  ((o = 1),
                   i &&
                     (c =
                       2 & e[0]
@@ -711,11 +728,11 @@ and limitations under the License.
                     c[2] && u.ops.pop(), u.trys.pop();
                     continue;
                 }
-                e = o.call(n, u);
+                e = r.call(n, u);
               } catch (t) {
                 (e = [6, t]), (i = 0);
               } finally {
-                r = c = 0;
+                o = c = 0;
               }
             if (5 & e[0]) throw e[1];
             return { value: e[0] ? e[1] : void 0, done: !0 };
@@ -726,37 +743,37 @@ and limitations under the License.
     function f() {
       for (var t = 0, e = 0, n = arguments.length; e < n; e++)
         t += arguments[e].length;
-      var o = Array(t),
-        r = 0;
+      var r = Array(t),
+        o = 0;
       for (e = 0; e < n; e++)
-        for (var i = arguments[e], c = 0, u = i.length; c < u; c++, r++)
-          o[r] = i[c];
-      return o;
+        for (var i = arguments[e], c = 0, u = i.length; c < u; c++, o++)
+          r[o] = i[c];
+      return r;
     }
   },
   tkkQ: function(t, e, n) {
     "use strict";
-    var o = n("1n9R");
+    var r = n("1n9R");
     n.d(e, "a", function() {
-      return o.c;
+      return r.c;
     }),
       n.d(e, "d", function() {
-        return o.h;
+        return r.i;
       }),
       n.d(e, "c", function() {
-        return o.g;
+        return r.h;
       }),
       n.d(e, "b", function() {
-        return o.f;
+        return r.g;
       });
   },
   x0hG: function(t, e, n) {
     "use strict";
     n.r(e);
-    var o = n("tkkQ"),
-      r = n("fGPn");
+    var r = n("tkkQ"),
+      o = n("fGPn");
     document.addEventListener("DOMContentLoaded", function() {
-      Object(o.c)(), (window.ClientConnectionAPI = r.b);
+      Object(r.c)(), (window.ClientConnectionAPI = o.b);
     });
   }
 });

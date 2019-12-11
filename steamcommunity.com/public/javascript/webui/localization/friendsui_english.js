@@ -163,6 +163,8 @@ LocalizationReady("friendsui", "english", {
 
   ChatEntryButton_SendSnowfall: "Make it snow!",
   ChatEntryButton_SendConfetti: "Use a party popper!",
+  ChatEntryButton_SendSnowball: "Throw a snowball!",
+  ChatEntryButton_SendFirework: "Launch fireworks!",
   ChatEntryButton_SendSticker: "Send an animated sticker",
 
   MobilePermission_TakePhoto:
@@ -1211,10 +1213,14 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_ReplayRoomEffect: "Replay effect",
   ChatRoom_RoomEffectSnow: "%1$s made it snow!",
   ChatRoom_RoomEffectConfetti: "%1$s used a party popper!",
+  ChatRoom_RoomEffectsSnowball: "%1$s threw a snowball!",
+  ChatRoom_RoomEffectFirework: "%1$s launched fireworks!",
 
   bbcode_community_publishedfile_vote_up: "Rate",
 
   EmoticonPicker_RecentlyUsed: "Recently Used",
+  EmoticonPicker_EffectHeading: "Room effects",
+  EmoticonPicker_StickerHeading: "Animated stickers",
 
   ChatMentionSuggest_MembersMatching: "Chat members matching @%1$s",
   ChatMentionSuggest_NoMatches: "No matches",

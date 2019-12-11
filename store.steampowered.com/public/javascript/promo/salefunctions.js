@@ -166,7 +166,11 @@ function PromoteFeaturedGamesWithinList( TagData, rgTier1, rgTier2 )
 function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 {
 	// process tag sections first, pulling in featured items into the tag blocks we display
-	var rgPersonalizedTagData = GenerateTagBlocks( rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
+	var $TagBlock = $J('#sale_tag_categories');
+	if ( $TagBlock.length )
+	{
+		var rgPersonalizedTagData = GenerateTagBlocks( rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
+	}
 
 	var k_nTier1ItemsMin = 7;
 	var k_nTier1ItemsMax = 11;
@@ -223,13 +227,15 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	var $Tier2 = $J('#tier2_target' );
 	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2,$Tier2  ); } );
 
-	var $TagBlock = $J('#sale_tag_categories');
-	new CScrollOffsetWatcher( $TagBlock, function() {
-		for ( var iTag = 0; iTag < rgPersonalizedTagData.length; iTag++ )
-		{
-			SaleTagBlock( $TagBlock, rgPersonalizedTagData[iTag] );
-		}
-	});
+	if ( $TagBlock.length )
+	{
+		new CScrollOffsetWatcher( $TagBlock, function() {
+			for ( var iTag = 0; iTag < rgPersonalizedTagData.length; iTag++ )
+			{
+				SaleTagBlock( $TagBlock, rgPersonalizedTagData[iTag] );
+			}
+		});
+	}
 
 	var $FranchiseBlock = $J('#franchise_target' );
 	new CScrollOffsetWatcher( $FranchiseBlock, function() {
@@ -244,6 +250,26 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 
 	// NOTE: If we are already using home.js, then we don't need this. Found we were doubling up the streams
 	// GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
+
+	var $UserArea = $J('#home_sale_account_ctn');
+	if ( $UserArea.length )
+	{
+		if ( g_AccountID )
+		{
+			new CScrollOffsetWatcher( $UserArea, function() {
+				$J.get( 'https://store.steampowered.com/default/home_sale_data', {u: g_AccountID } ).done( function( data ) {
+					GStoreItemData.AddStoreItemDataSet( data.StoreItemData );
+					RenderWishlistAndDLCArea( $UserArea, data.rgWishlistOnSale, data.rgDLCOnSale );
+				}).fail( function() {
+					$UserArea.hide();
+				});
+			});
+		}
+		else
+		{
+			$UserArea.hide();
+		}
+	}
 }
 
 function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems, cMaxItems )
@@ -429,6 +455,12 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
 	return $CapCtn;
 }
 
+function SaleTagTexture( suffix )
+{
+	var strStyle = 'background-image: url("https://steamcdn-a.akamaihd.net/store/promo/winter2019/textures/PAPER_TILE_'+suffix+'.png"); background-repeat: repeat;';
+	return strStyle;
+}
+
 function SaleTagGradient( colorsIn )
 {
 	var colors = colorsIn.slice(); // don't want to modify
@@ -458,16 +490,53 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	var rgTagData = rgPersonalizedTagData.TagData;
 	var rgItemsPassingFilter = rgPersonalizedTagData.rgItemsPassingFilter;
 
+	var strTagMethod = rgTagData.method;
+	var focusedAppId = rgTagData.focusedAppId;
+	var rgKeyTags = rgTagData.keyTags;
+
+	var texture = "";
+	var title = "";
+	var noTags = false;
+	if(strTagMethod === "tags") { title = '<b>GAMES</b><br/>SIMILAR TO'; texture = "F";}
+	else if(strTagMethod === "gems") { title = '<b>GEMS</b><br/>SIMILAR TO';  texture = "J";}
+	else if(strTagMethod === "default") { title = '<b>POPULAR GAMES</b><br/>SIMILAR TO'; texture="I";}
+	else {texture="G"; noTags = true;}
+
 	TryPopulateSaleItems( rgItemsPassingFilter, rgTagData.items, 6, 6 );
 
 	var colors = rgTagData.colors;
 	// id, colors, name, items
 	var $Ctn = $J( '<div/>', {'class': 'home_category_ctn'} );
 
-	$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagGradient( colors ) } ).append( $J('<div/>', { 'class': 'home_category_title'}).html( rgTagData.name ) ) );
-
+	var $TitleCtn = $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).append( $J('<div/>', { 'class': 'home_category_title'}).html( title ) );
+	var $FocusCtn = $J('<div/>', { 'class': 'home_category_focus_ctn'} );
+	
+	var focusCap = SaleCap( {"appid":focusedAppId}, 'sale_tag_bucket', 'discount_block_inline' );
+	$FocusCtn.append(focusCap);
+	
+	var $TagsCtn = $J('<div/>', {'class': 'home_category_tags_ctn'} );
+	
+	$TitleCtn.append( $FocusCtn );
+	
+	if(!noTags){
+		$Ctn.append( $TitleCtn );
+	}
+	else{
+		if ( "subtitle" in rgTagData )
+		{
+			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).
+				append( $J('<div/>', { 'class': 'home_category_title'}).html( rgTagData.name ) ).
+				append( $J('<div/>', { 'class': 'home_category_subtitle'}).html( rgTagData.subtitle ) ) );
+		}
+		else
+		{
+			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).append( $J('<div/>', { 'class': 'home_category_title'}).html( rgTagData.name ) ) );
+		}
+	}
+	
+	BindSaleCapAutoSizeEvents( $FocusCtn );
+	
 	var $Games = $J('<div/>', {'class': 'home_category_games_ctn', style: SaleTagBackground( colors ) } );
-
 	var $Row = $J('<div/>', {'class': 'salerow salerow3 multiline' } );
 
 	for ( var iItem = 0; iItem < rgItemsPassingFilter.length; iItem++ )
@@ -720,6 +789,59 @@ function SaleRenderTwoByTwo( $Container, rgItems, strFeature )
 
 	GDynamicStore.DecorateDynamicItems( $Container );
 	BindSaleCapAutoSizeEvents( $Container );
+}
+
+function RenderWishlistAndDLCArea( $Parent, rgWishlistOnSale, rgDLCOnSale )
+{
+	var rgWishlistOnSaleFiltered = GHomepage.FilterItemsForDisplay(
+		rgWishlistOnSale, 'sale', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+	);
+
+	TryPopulateSaleItems( rgWishlistOnSaleFiltered, rgWishlistOnSale, 4, 4 );
+
+
+	var rgDLCOnSaleFiltered = GHomepage.FilterItemsForDisplay(
+		rgDLCOnSale, 'sale', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+	);
+
+	TryPopulateSaleItems( rgDLCOnSaleFiltered, rgDLCOnSale, 4, 4 );
+
+
+	// do we have enough to display?
+	if ( rgWishlistOnSaleFiltered.length < 4 && rgDLCOnSaleFiltered.length < 4 )
+	{
+		$Parent.hide();
+		return;
+	}
+
+	var bSingle = rgWishlistOnSaleFiltered.length < 4 || rgDLCOnSaleFiltered.length < 4;
+
+	if ( rgWishlistOnSaleFiltered.length < 4 )	// TODO
+	{
+		$J('#wishlist_tier').parents('.home_discounts_block').hide();
+	}
+	else
+	{
+		if ( bSingle )
+			$J('#wishlist_tier').addClass( 'single_row' );
+		SaleRenderTwoByTwo( $J('#wishlist_tier' ), rgWishlistOnSaleFiltered, 'sale_fromyourwishlist' );
+		GDynamicStore.MarkAppDisplayed( rgWishlistOnSaleFiltered );
+	}
+
+	if ( rgDLCOnSaleFiltered.length < 4 )	// TODO
+	{
+		$J('#dlc_tier').parents('.home_discounts_block').hide();
+	}
+	else
+	{
+		if ( bSingle )
+			$J('#dlc_tier').addClass( 'single_row' );
+		SaleRenderTwoByTwo( $J('#dlc_tier' ), rgDLCOnSaleFiltered, 'sale_dlcforyou' );
+		GDynamicStore.MarkAppDisplayed( rgDLCOnSaleFiltered );
+	}
+
+	// we load with a fixed height to prevent the page from jumping around.  Eliminate that now.
+	$Parent.css( { minHeight: '' } );
 }
 
 var g_AutoSizeListenerCount = 0;

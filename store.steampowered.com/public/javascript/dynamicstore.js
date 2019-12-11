@@ -1873,6 +1873,14 @@ GStoreItemData = {
 		if ( ApplicableSettings.not_wishlisted && !Settings.not_wishlished && GDynamicStore.BIsAppOnWishlist( appid ) )
 		    return false;
 
+		if ( ApplicableSettings.has_discount && Settings.has_discount )
+		{
+		    if ( !rgAppData.discount_block || rgAppData.discount_block.includes('no_discount') )
+		    {
+		        return false;
+		    }
+        }
+
 		if ( rgAppData.tagids && rgAppData.tagids.length != 0 )
 		{
 			for ( var i = 0; i < rgAppData.tagids.length; ++i )

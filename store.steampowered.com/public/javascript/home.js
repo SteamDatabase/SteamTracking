@@ -23,14 +23,15 @@ GHomepage = {
 	rgFriendRecommendations: [],	// { appid, accountid_friends, time_most_recent_recommendation }
 	rgRecommendedAppsByCreators: [], // { appid, creatorid }
 	rgRecommendedBySteamLabsApps: [],
-	rgRecommendedBySteamLabsApps: [],
 
 	rgCommunityRecommendations: [],
 	rgCommunityRecommendationsByAppID: {},
 	strCommunityRecommendationsPrefLastSaved: false,
 	rgRecommendedBySteamLabsApps: [],
 	rgRecommendedByDeepDiveApps: [],
+	rgRecommendedByDeepDiveKeyTags: [],
 	recommendedByDeepDiveFocusedApp: -1,
+	recommendedByDeepDiveMethod: "",
 
 	rgCuratedAppsData: [],
 	rgCreatorFollowedAppData: [],
@@ -189,6 +190,8 @@ GHomepage = {
 			GHomepage.rgCommunityRecommendations = rgParams.rgCommunityRecommendations || [];
 			GHomepage.strCommunityRecommendationsPrefLastSaved = rgParams.strCommunityRecommendationsPrefLastSaved || false,
 			GHomepage.rgRecommendedByDeepDiveApps = rgParams.rgRecommendedByDeepDiveApps || [];
+			GHomepage.rgRecommendedByDeepDiveKeyTags = rgParams.rgRecommendedByDeepDiveKeyTags || [];
+			GHomepage.recommendedByDeepDiveMethod = rgParams.recommendedByDeepDiveMethod || "";
 			GHomepage.recommendedByDeepDiveFocusedApp = rgParams.recommendedByDeepDiveFocusedApp || -1;
 			GHomepage.nLastIRSettingsUpdate = rgParams.nLastIRSettingsUpdate || 0;
 			GHomepage.rgIRIncludedTags = rgParams.rgIRIncludedTags || [];

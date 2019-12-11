@@ -262,7 +262,7 @@ function FinishFormVerification( bCaptchaIsValid )
 	if ( !bCaptchaIsValid )
 	{
 	
-		errorString += 'Please verify your humanity by re-entering the characters below.<br/>';
+		errorString += 'Bad captcha response. Please re-verify your humanity below.<br/>';
 		rgBadFields.captcha_text = true;
 	}
 

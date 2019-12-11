@@ -13,6 +13,7 @@ var BoxEntry = function() {
 	this.tagEntries = [];
 	this.tagCategories = [];
 	this.disabledTags = [];
+	this.boostedTags = [];
 };
 BoxEntry.__name__ = true;
 BoxEntry.prototype = {
@@ -135,6 +136,26 @@ BoxEntry.prototype = {
 			}
 		}
 	}
+	,disableTag: function(tagid) {
+		if(this.disabledTags.indexOf(tagid) == -1) {
+			this.disabledTags.push(tagid);
+		} else {
+			HxOverrides.remove(this.disabledTags,tagid);
+		}
+		if(this.boostedTags.indexOf(tagid) != -1) {
+			HxOverrides.remove(this.boostedTags,tagid);
+		}
+	}
+	,boostTag: function(tagid) {
+		if(this.boostedTags.indexOf(tagid) == -1) {
+			this.boostedTags.push(tagid);
+		} else {
+			HxOverrides.remove(this.boostedTags,tagid);
+		}
+		if(this.disabledTags.indexOf(tagid) != -1) {
+			HxOverrides.remove(this.disabledTags,tagid);
+		}
+	}
 	,toggleTag: function(tagid) {
 		if(this.disabledTags.indexOf(tagid) == -1) {
 			this.disabledTags.push(tagid);
@@ -193,9 +214,8 @@ BoxEntry.prototype = {
 					}
 					var tagid = allTagIds[i];
 					var disabled = this.disabledTags.indexOf(tagid) != -1;
-					var disabledClass = disabled ? " disabled" : "";
-					var tagListClass = Main.FEATURE_FLAG_KILLABLE_TAGS ? " tag-list-killable" : "";
-					str += "<span class=\"tag-list tag-list-" + i + " tag-id-" + tagid + disabledClass + tagListClass + "\" onclick=\"Main.toggleTag(" + tagid + ")\"> " + name + "&nbsp;</span><br/>";
+					var boosted = this.boostedTags.indexOf(tagid) != -1;
+					str += Render.tagLine(i,tagid,name,disabled,boosted);
 					++lines;
 					++i;
 				}
@@ -204,11 +224,11 @@ BoxEntry.prototype = {
 			}
 		} else {
 			var keyAttributes1 = Main.loc("#labs_deepdive_keytags");
-			var tagListClass1 = "tag-list";
+			var tagListClass = "tag-list";
 			if(Main.FEATURE_FLAG_KILLABLE_TAGS) {
-				tagListClass1 += " tag-list-killable";
+				tagListClass += " tag-list-killable";
 			}
-			return "<em>" + Main.loc("#labs_deepdive_loading") + ("</em><br><p class=\"" + tagListClass1 + "\">") + "<br><br><br><br><br></p>";
+			return "<em>" + Main.loc("#labs_deepdive_loading") + ("</em><br><p class=\"" + tagListClass + "\">") + "<br><br><br><br><br></p>";
 		}
 		return "<em>" + keyAttributes + "</em><br>" + this.getTagHTML2(maxLines);
 	}
@@ -454,6 +474,7 @@ BoxEntry.prototype = {
 		this.tagEntries = this.copyTagEntries(other.tagEntries);
 		this.tagCategories = this.copyTagCategories(other.tagCategories);
 		this.disabledTags = other.disabledTags != null ? other.disabledTags.slice() : [];
+		this.boostedTags = other.boostedTags != null ? other.boostedTags.slice() : [];
 		this.url = other.url;
 		this.shortDescription = other.shortDescription;
 	}
@@ -744,11 +765,28 @@ Data.filterMatches = function(matches) {
 	}
 	return matches.map;
 };
-Data.getMatches = function(appid,recommenders,page,alreadySeen,disabledTags,callback) {
+Data.getMatches = function(appid,recommenders,page,alreadySeen,disabledTags,boostedTags,callback) {
 	var recString = recommenders.join("-");
 	var url = "dbapi/" + appid + "/" + page;
-	if(disabledTags != null && disabledTags.length > 0) {
-		url += "/" + disabledTags.join(",");
+	var allTags = [];
+	if(boostedTags != null) {
+		var _g = 0;
+		while(_g < boostedTags.length) {
+			var boostedTag = boostedTags[_g];
+			++_g;
+			allTags.push(boostedTag);
+		}
+	}
+	if(disabledTags != null) {
+		var _g1 = 0;
+		while(_g1 < disabledTags.length) {
+			var disabledTag = disabledTags[_g1];
+			++_g1;
+			allTags.push("-" + disabledTag);
+		}
+	}
+	if(allTags.length > 0) {
+		url += "/" + allTags.join(",");
 	} else {
 		url += "/_";
 	}
@@ -2176,6 +2214,28 @@ Main.setMicrotrailers = function(b) {
 		el.checked = b;
 	}
 };
+Main.plusTag = $hx_exports["Main"]["plusTag"] = function(tagid) {
+	if(Main.focusedEntry == null) {
+		return;
+	}
+	if(!Main.FEATURE_FLAG_KILLABLE_TAGS) {
+		return;
+	}
+	var strtagid = tagid == null ? "null" : "" + tagid;
+	Main.focusedEntry.boostTag(strtagid);
+	Main.onTagPlusMinus();
+};
+Main.minusTag = $hx_exports["Main"]["minusTag"] = function(tagid) {
+	if(Main.focusedEntry == null) {
+		return;
+	}
+	if(!Main.FEATURE_FLAG_KILLABLE_TAGS) {
+		return;
+	}
+	var strtagid = tagid == null ? "null" : "" + tagid;
+	Main.focusedEntry.disableTag(strtagid);
+	Main.onTagPlusMinus();
+};
 Main.toggleTag = $hx_exports["Main"]["toggleTag"] = function(tagid) {
 	if(Main.focusedEntry == null) {
 		return;
@@ -2185,12 +2245,15 @@ Main.toggleTag = $hx_exports["Main"]["toggleTag"] = function(tagid) {
 	}
 	var strtagid = tagid == null ? "null" : "" + tagid;
 	Main.focusedEntry.toggleTag(strtagid);
+	Main.onTagPlusMinus();
+};
+Main.onTagPlusMinus = function() {
 	var el = window.document.getElementById("box-tags-10");
 	var keyAttributes = Main.loc("#labs_deepdive_keytags");
 	var tagHTML = Main.focusedEntry.getTagHTML3(keyAttributes,6);
 	el.innerHTML = tagHTML;
 	Main.killRefreshHistory();
-	Main.focus(Main.focusedEntry.appid,null,null,Main.focusedEntry.disabledTags);
+	Main.focus(Main.focusedEntry.appid,null,null,Main.focusedEntry.disabledTags,Main.focusedEntry.boostedTags);
 };
 Main.toggleMicrotrailers = $hx_exports["Main"]["toggleMicrotrailers"] = function() {
 	var el = window.document.getElementById("checkbox-microtrailers");
@@ -2218,7 +2281,7 @@ Main.addToWishlist = $hx_exports["Main"]["addToWishlist"] = function(appid) {
 	var button = window.document.getElementById(id);
 	Data.getLinkParam("game-add-to-wishlist-deepdive",function(linkParam) {
 		if(linkParam != null) {
-			AddToWishlistButton(button, appid, linkParam);
+			AddToWishlistButton(button,appid,linkParam);
 		}
 	});
 };
@@ -2374,7 +2437,7 @@ Main.focusFromSearch = $hx_exports["Main"]["focusFromSearch"] = function(appid) 
 	Main.killHistory();
 	Main.focus(appid);
 };
-Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callback,disabledTags) {
+Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callback,disabledTags,boostedTags) {
 	if(Main.focusBusy) {
 		return;
 	}
@@ -2387,6 +2450,9 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	if(disabledTags == null) {
 		disabledTags = [];
 	}
+	if(boostedTags == null) {
+		boostedTags = [];
+	}
 	if(priorApp != appid) {
 		Main.hideHover();
 	}
@@ -2395,6 +2461,7 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	Main.focusedEntry.title = "App(" + appid + ")";
 	Main.focusedEntry.setPrice(1999);
 	Main.focusedEntry.disabledTags = disabledTags.slice();
+	Main.focusedEntry.boostedTags = boostedTags.slice();
 	var disabledTags1 = disabledTags.slice();
 	if(showTheseBoxes == null || showTheseBoxes.length == 0) {
 		if(priorApp != appid) {
@@ -2452,7 +2519,7 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 	if(showTheseBoxes == null || showTheseBoxes.length == 0) {
 		Main.focusBusy = true;
 		var tmp = Main.getPreviousAppIds();
-		Data.getMatches(appid,["reccats","recdefault","recgems"],0,tmp,Main.focusedEntry.disabledTags,function(rawMatches) {
+		Data.getMatches(appid,["reccats","recdefault","recgems"],0,tmp,Main.focusedEntry.disabledTags,Main.focusedEntry.boostedTags,function(rawMatches) {
 			Main.focusBusy = false;
 			if(rawMatches == null || rawMatches.map == null) {
 				Main.handleMatches(appid,null,callback);
@@ -2511,7 +2578,7 @@ Main.displayBoxes = function(showTheseBoxes,callback) {
 	});
 };
 Main.getMoreMatches = function(appid,callback) {
-	Data.getMatches(appid,["reccats","recdefault","recgems"],Main.matchPage + 1,Main.getPreviousAppIds(),Main.focusedEntry.disabledTags,function(rawMatches) {
+	Data.getMatches(appid,["reccats","recdefault","recgems"],Main.matchPage + 1,Main.getPreviousAppIds(),Main.focusedEntry.disabledTags,Main.focusedEntry.boostedTags,function(rawMatches) {
 		rawMatches.map = Main.removeByPreferences(rawMatches.map);
 		Main.addToCurrentMatches(rawMatches);
 		Main.matchPage++;
@@ -3496,6 +3563,15 @@ Render.throbber = function(id,hide,position) {
 Render.throbber2 = function() {
 	var html = "<div class=\"LoadingThrobber\">\r\n\t\t\t<div class=\"Bar Bar1\"></div>\r\n\t\t\t<div class=\"Bar Bar2\"></div>\r\n\t\t\t<div class=\"Bar Bar3\"></div>\r\n\t\t</div>";
 	return html;
+};
+Render.tagLine = function(i,tagid,name,disabled,boosted) {
+	var disabledClass = disabled ? " disabled" : "";
+	var boostedClass = boosted ? " boosted" : "";
+	var tagListClass = Main.FEATURE_FLAG_KILLABLE_TAGS ? " tag-list-killable" : "";
+	var tagPlus = Main.FEATURE_FLAG_KILLABLE_TAGS ? "<span class=\"tag-button tag-plus " + boostedClass + "\" onclick=\"Main.plusTag(" + tagid + ")\"><div>&check;</div></span>" : "";
+	var tagMinus = Main.FEATURE_FLAG_KILLABLE_TAGS ? "<span class=\"tag-button tag-minus " + disabledClass + "\" onclick=\"Main.minusTag(" + tagid + ")\"><div>&mdash;</div></span>" : "";
+	var tagCrouton = Main.FEATURE_FLAG_KILLABLE_TAGS ? "class=\"tag-crouton" : "";
+	return "<span " + tagCrouton + ">\r\n\t\t\t" + tagPlus + "\r\n\t\t\t<span class=\"label tag-list tag-list-" + i + " tag-id-" + tagid + " " + disabledClass + " " + boostedClass + " " + tagListClass + "\">" + name + "&nbsp;</span>\r\n\t\t\t" + tagMinus + "\r\n\t\t</span><br/>";
 };
 Render.box = function(index,entry,sink,first) {
 	if(first == null) {

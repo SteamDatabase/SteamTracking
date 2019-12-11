@@ -89,7 +89,7 @@ LocalizationReady("shared", "english", {
   VoiceTransmissionThresholdOff: "Off",
   VoiceTransmissionThresholdMedium: "Medium",
   VoiceTransmissionThresholdHigh: "High",
-  VoiceTransmissionThresholdRecommended: "(Recommended)",
+  VoiceTransmissionThresholdRecommended: "Recommended",
   VoiceAdvancedSettings: "Advanced Settings",
   VoiceShowAdvancedSettings: "Show Advanced Settings",
   VoiceHideAdvancedSettings: "Hide Advanced Settings",
@@ -243,9 +243,11 @@ LocalizationReady("shared", "english", {
   EventReminder_NotifyByMobile: "Notify me on my Mobile device",
   EventReminder_NotifyByMobile_ttip:
     "Steam will send a push notification to all mobiles you have an install and logged in Steam mobile app when the event starts.",
-  EventReminder_NotifyByEmail_Missing: "No verified email available.",
-  EventReminder_NotifyByEmail_Missing_Add: "Add one here.",
-  EventReminder_NotifyByMobile_Missing: "No mobile app installed.",
+  EventReminder_NotifyByEmail_Missing:
+    "Verify your email address to sign up for email reminders.",
+  EventReminder_NotifyByEmail_Missing_Add: "Verify your email address.",
+  EventReminder_NotifyByMobile_Missing:
+    "Install one of the Steam apps to sign up for mobile reminders. ",
   EventReminder_NotifyByMobile_Install: "View available apps here.",
 
   EventEmail_Subject_NewUpdate: "%1$s, New Update",
@@ -496,6 +498,8 @@ LocalizationReady("shared", "english", {
   Editor_Unordered: "Unordered List",
   Editor_Ordered: "Ordered List",
   Editor_Header: "Header",
+  Editor_Header2: "Header 2",
+  Editor_Header3: "Header 3",
   Editor_Emoticon: "Insert Emoticon",
 
   EventEditor_ConvertHTML_Error: "Failed Converting HTML",
@@ -848,6 +852,7 @@ LocalizationReady("shared", "english", {
   ChatEntryButton_Emoticon: "Emoticon Picker",
   ChatEntryButton_Flair: "Flair Picker",
   ChatEntryButton_SendEmbed: "Send Special",
+  ChatEntryButton_WinterSaleParty: "Start a decoration party",
 
   Store_AddToCart: "Add to Cart",
 
@@ -905,6 +910,19 @@ LocalizationReady("shared", "english", {
   Sale_default_label_RemotePlay_TV: "Play Anywhere - On your TV",
   Sale_default_label_OnYourWishlist: "On Your Wishlist",
   Sale_default_label_RecommendedForYou: "Recommended For You",
+  Sale_default_label_ComingSoon: "Coming Soon",
+  Sale_default_label_JustAnnounced: "Just Announced",
+  Sale_default_label_JustUpdated: "Just Updated",
+  Sale_default_label_FreeWeekend: "Free Weekend",
+  Sale_default_label_FreeWeek: "Free Week",
+  Sale_default_label_PrePurchase: "Pre-Purchase Now",
+  Sale_default_label_NewReleases: "New Releases",
+  Sale_default_label_JustReleased: "Just Released",
+  Sale_default_label_Highlighted: "Highlighted Deals",
+  Sale_default_label_BackCat: "Back Catalogue",
+  Sale_default_label_PlayForFree: "Play for Free!",
+  Sale_defautl_label_FreeToKeep:
+    "For a limited time, install now and keep it forever",
 
   SalePage_WatchForDrop_Minutes_Developer:
     "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
