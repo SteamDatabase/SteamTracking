@@ -42398,16 +42398,30 @@
       ($d[($d.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
       ($d[($d.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
     var ip = (function() {
-        function e() {
+        function r() {
           (this.m_mapClanToUserPermissions = new Map()),
             (this.m_mapAnnounceGIDToVote = new Map()),
             (this.m_mapFollowedCreatorClanID = new Map());
+          var e = l("partnereventpermission", "application_config");
+          if (e && e.clanid) {
+            var t = new rp(e.clanid),
+              n = { result: t, promise: r.RemapToPromise(t) };
+            this.CopyFromResponseToTrack(n, e),
+              this.m_mapClanToUserPermissions.set(e.clanid, n);
+          }
         }
         return (
-          (e.prototype.BIsUserLoggedIn = function() {
+          (r.RemapToPromise = function(t) {
+            return Object(v.b)(this, void 0, void 0, function() {
+              return Object(v.e)(this, function(e) {
+                return [2, t];
+              });
+            });
+          }),
+          (r.prototype.BIsUserLoggedIn = function() {
             return f.logged_in;
           }),
-          (e.prototype.GetPartnerEventPermissions = function(e) {
+          (r.prototype.GetPartnerEventPermissions = function(e) {
             if (!e) return new rp(0);
             var t = e.GetAccountID();
             return (
@@ -42416,22 +42430,22 @@
               this.m_mapClanToUserPermissions.get(t).result
             );
           }),
-          (e.prototype.BFollowsEvent = function(e, t) {
+          (r.prototype.BFollowsEvent = function(e, t) {
             return (
               -1 != this.GetPartnerEventPermissions(e).event_followed.indexOf(t)
             );
           }),
-          (e.prototype.BFollowsEventAndNotifiedBy = function(e, t, n) {
+          (r.prototype.BFollowsEventAndNotifiedBy = function(e, t, n) {
             var r = this.GetPartnerEventPermissions(e),
               i = r.event_followed.indexOf(t);
             return -1 !== i && (r.event_followed_flags[i] & n) == n;
           }),
-          (e.prototype.BIgnoresEvent = function(e, t) {
+          (r.prototype.BIgnoresEvent = function(e, t) {
             return (
               -1 != this.GetPartnerEventPermissions(e).event_ignored.indexOf(t)
             );
           }),
-          (e.prototype.LoadSingleAppEventPermissions = function(r) {
+          (r.prototype.LoadSingleAppEventPermissions = function(r) {
             return Object(v.b)(this, void 0, void 0, function() {
               var t, n;
               return Object(v.e)(this, function(e) {
@@ -42448,25 +42462,39 @@
               });
             });
           }),
-          (e.prototype.InternalLoadSingleAppEventPermissions = function(s) {
+          (r.prototype.CopyFromResponseToTrack = function(e, t) {
+            (e.result.appid = t.appid),
+              (e.result.can_edit = t.can_edit),
+              (e.result.clanid = t.appid),
+              (e.result.event_followed = t.event_followed),
+              (e.result.event_ignored = t.event_ignored),
+              (e.result.event_followed_flags = t.event_followed_flags),
+              (e.result.follows_app = t.follows_app),
+              (e.result.owns_app = t.owns_app),
+              (e.result.support_user = t.support_user),
+              (e.result.valve_admin = t.valve_admin),
+              (e.result.limited_user = t.limited_user);
+          }),
+          (r.prototype.InternalLoadSingleAppEventPermissions = function(c) {
             return Object(v.b)(this, void 0, void 0, function() {
               var t,
                 n,
                 r,
                 i,
                 o,
-                a = this;
+                a,
+                s = this;
               return Object(v.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    (t = null), (n = s.GetAccountID()), (r = !1), (e.label = 1);
+                    (t = null), (n = c.GetAccountID()), (r = !1), (e.label = 1);
                   case 1:
                     return (
                       e.trys.push([1, 3, 4, 5]),
                       (i =
                         M.COMMUNITY_BASE_URL +
                         "/gid/" +
-                        s.ConvertTo64BitString() +
+                        c.ConvertTo64BitString() +
                         "/ajaxgetpartnereventpermissions/"),
                       [4, y.a.get(i, { withCredentials: !0 })]
                     );
@@ -42478,41 +42506,28 @@
                               ke(t.data).strErrorMsg
                           ),
                           (r = !0))
-                        : Object(_.x)(function() {
-                            var e = a.m_mapClanToUserPermissions.get(n);
-                            (e.result.appid = t.data.appid),
-                              (e.result.can_edit = t.data.can_edit),
-                              (e.result.clanid = t.data.appid),
-                              (e.result.event_followed = t.data.event_followed),
-                              (e.result.event_ignored = t.data.event_ignored),
-                              (e.result.event_followed_flags =
-                                t.data.event_followed_flags),
-                              (e.result.follows_app = t.data.follows_app),
-                              (e.result.owns_app = t.data.owns_app),
-                              (e.result.support_user = t.data.support_user),
-                              (e.result.valve_admin = t.data.valve_admin),
-                              (e.result.limited_user = t.data.limited_user);
-                          }),
+                        : ((o = this.m_mapClanToUserPermissions.get(n)),
+                          this.CopyFromResponseToTrack(o, t.data)),
                       [3, 5]
                     );
                   case 3:
                     return (
-                      (o = e.sent()),
-                      (t = o.response),
+                      (a = e.sent()),
+                      (t = a.response),
                       (r = !0),
-                      (o &&
-                        void 0 !== o.response &&
-                        void 0 !== o.response.data &&
-                        void 0 !== o.response.data.success &&
-                        21 == o.response.data.success) ||
-                        console.log(ke(o).strErrorMsg, o),
+                      (a &&
+                        void 0 !== a.response &&
+                        void 0 !== a.response.data &&
+                        void 0 !== a.response.data.success &&
+                        21 == a.response.data.success) ||
+                        console.log(ke(a).strErrorMsg, a),
                       [3, 5]
                     );
                   case 4:
                     return (
                       r &&
                         Object(_.x)(function() {
-                          var e = a.m_mapClanToUserPermissions.get(n);
+                          var e = s.m_mapClanToUserPermissions.get(n);
                           (e.result.appid = t && t.data ? t.data.appid : 0),
                             (e.result.can_edit = !1),
                             (e.result.clanid = t && t.data ? t.data.clanid : 0),
@@ -42533,71 +42548,77 @@
               });
             });
           }),
-          (e.prototype.SetFollowOrUnfollowEvent = function(c, l, d, p, u) {
+          (r.prototype.SetFollowOrUnfollowEvent = function(l, d, p, u, m) {
             return Object(v.b)(this, void 0, void 0, function() {
               var t,
                 n,
                 r,
+                s,
                 i,
                 o,
                 a,
-                s = this;
+                c = this;
               return Object(v.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return (
-                      (t = g() == M.STORE_BASE_URL),
-                      (n =
-                        (t
+                      (t = this.GetPartnerEventPermissions(p)),
+                      (n = t.event_followed.indexOf(u)),
+                      (r = 0),
+                      -1 !== n &&
+                        ((r = t.event_followed_flags[n]),
+                        l ? (m = r & ~m) : (m |= r)),
+                      (s = 0 == m),
+                      (i = g() == M.STORE_BASE_URL),
+                      (o =
+                        (i
                           ? M.STORE_BASE_URL + "events"
                           : M.COMMUNITY_BASE_URL +
                             "/gid/" +
-                            d.ConvertTo64BitString()) +
-                        (c
+                            p.ConvertTo64BitString()) +
+                        (s
                           ? "/unfolloworunignoreevent"
                           : "/followorignoreevent")),
-                      (r = this.GetPartnerEventPermissions(d)),
-                      (i = r.event_followed.indexOf(p)),
-                      (o = 0),
-                      -1 !== i &&
-                        ((o = r.event_followed_flags[i]),
-                        c ? (u = o & ~u) : (u |= o)),
                       (a = new URLSearchParams()).append(
                         "sessionid",
                         M.SESSIONID
                       ),
                       a.append("authwgtoken", f.authwgtoken),
-                      a.append("ignore", "" + l),
-                      a.append("gid", p),
-                      a.append("notification_flag", "" + u),
-                      a.append("clan_accountid", "" + d.GetAccountID()),
-                      [4, y.a.post(n, a, { withCredentials: !0 })]
+                      a.append("ignore", "" + d),
+                      a.append("gid", u),
+                      a.append("notification_flag", "" + m),
+                      a.append("clan_accountid", "" + p.GetAccountID()),
+                      [4, y.a.post(o, a, { withCredentials: !0 })]
                     );
                   case 1:
                     return (
                       e.sent(),
                       Object(_.x)(function() {
-                        var e = s.m_mapClanToUserPermissions.get(
-                            d.GetAccountID()
+                        var e = c.m_mapClanToUserPermissions.get(
+                            p.GetAccountID()
                           ),
                           t = null,
                           n = null,
                           r = null,
                           i = null;
-                        c
-                          ? (t = l
+                        s
+                          ? (t = d
                               ? e.result.event_ignored
                               : e.result.event_followed)
-                          : l
+                          : d
                           ? ((t = e.result.event_followed),
                             (r = e.result.event_followed_flags),
                             (n = e.result.event_ignored))
                           : ((t = e.result.event_ignored),
                             (n = e.result.event_followed),
                             (i = e.result.event_followed_flags));
-                        var o = t.indexOf(p);
-                        (-1 < o && (t.splice(o, 1), r && r.splice(o, 1)), n) &&
-                          (-1 == n.indexOf(p) && (n.push(p), i && i.push(u)));
+                        var o = t.indexOf(u);
+                        if (
+                          (-1 < o && (t.splice(o, 1), r && r.splice(o, 1)), n)
+                        ) {
+                          var a = n.indexOf(u);
+                          -1 == a ? (n.push(u), i && i.push(m)) : (i[a] = m);
+                        }
                       }),
                       [2]
                     );
@@ -42605,7 +42626,7 @@
               });
             });
           }),
-          (e.prototype.Vote = function(o, a, s) {
+          (r.prototype.Vote = function(o, a, s) {
             return Object(v.b)(this, void 0, void 0, function() {
               var t, n, r, i;
               return Object(v.e)(this, function(e) {
@@ -42657,7 +42678,7 @@
               });
             });
           }),
-          (e.prototype.LoadMyVote = function(i, o) {
+          (r.prototype.LoadMyVote = function(i, o) {
             return Object(v.b)(this, void 0, void 0, function() {
               var t, n, r;
               return Object(v.e)(this, function(e) {
@@ -42696,33 +42717,34 @@
               });
             });
           }),
-          (e.prototype.BHasMyVote = function(e) {
+          (r.prototype.BHasMyVote = function(e) {
             return (
               !!e.AnnouncementGID &&
               this.m_mapAnnounceGIDToVote.has(e.AnnouncementGID)
             );
           }),
-          (e.prototype.GetPreviouslyLoadedVote = function(e) {
+          (r.prototype.GetPreviouslyLoadedVote = function(e) {
             return e.AnnouncementGID
               ? this.m_mapAnnounceGIDToVote.has(e.AnnouncementGID)
               : void 0;
           }),
-          (e.prototype.BShowEmailEditorTab = function(e) {
+          (r.prototype.BShowEmailEditorTab = function(e) {
             return (
               !!e.BHasEmailEnabled() ||
               this.GetPartnerEventPermissions(e.clanSteamID).valve_admin
             );
           }),
-          (e.prototype.BShowSaleEditorTab = function(e) {
+          (r.prototype.BShowSaleEditorTab = function(e) {
             return (
               !!e.BHasSaleEnabled() ||
               this.GetPartnerEventPermissions(e.clanSteamID).valve_admin
             );
           }),
-          Object(v.c)([_.v], e.prototype, "m_mapClanToUserPermissions", void 0),
-          Object(v.c)([_.v], e.prototype, "m_mapAnnounceGIDToVote", void 0),
-          Object(v.c)([_.v], e.prototype, "m_mapFollowedCreatorClanID", void 0),
-          e
+          Object(v.c)([_.v], r.prototype, "m_mapClanToUserPermissions", void 0),
+          Object(v.c)([_.v], r.prototype, "m_mapAnnounceGIDToVote", void 0),
+          Object(v.c)([_.v], r.prototype, "m_mapFollowedCreatorClanID", void 0),
+          Object(v.c)([_.f], r.prototype, "CopyFromResponseToTrack", null),
+          r
         );
       })(),
       op = new ip(),
