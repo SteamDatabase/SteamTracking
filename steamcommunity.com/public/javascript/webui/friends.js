@@ -52063,7 +52063,7 @@
                     G.createElement("div", { className: "disconnectBlocker" })
                   )
                 ),
-                G.createElement(It, { chatView: t }),
+                G.createElement(Ot, { chatView: t }),
                 G.createElement(be, {
                   chatView: t,
                   action: this.ScrollToBottom
@@ -53651,8 +53651,7 @@
     var qe = n("ieu3"),
       Ke = n("UN8n"),
       Ye = n.n(Ke),
-      Qe = n("ZLgM"),
-      Je = (function(e) {
+      Qe = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -53665,167 +53664,19 @@
             });
           }),
           (t.prototype.componentDidMount = function() {
-            var l, p, e;
-            this.m_Game = ((l = this.props),
-            (e = {
-              type: Qe.AUTO,
-              parent: "phaser-example",
-              width: 512,
-              height: 768,
-              scale: { mode: Qe.Scale.FIT, autoCenter: Qe.Scale.CENTER_BOTH },
-              physics: { default: "matter", matter: { debug: !0 } },
-              scene: {
-                preload: function() {
-                  this.load.image(
-                    "town",
-                    j.a.COMMUNITY_CDN_ASSET_URL + "winter2019/game_bg.png?v=2"
-                  ),
-                    this.load.json(
-                      "shapes",
-                      j.a.COMMUNITY_CDN_ASSET_URL +
-                        "winter2019/gametest.json?v=2"
-                    );
-                },
-                create: function() {
-                  var t = this;
-                  l.minigameState.RegisterDataCallback(function(e) {
-                    !(function(a, e) {
-                      var t = this;
-                      e.events_by_account().forEach(function(r) {
-                        return Object(R.b)(t, void 0, void 0, function() {
-                          var t, n, o, i;
-                          return Object(R.e)(this, function(e) {
-                            switch (e.label) {
-                              case 0:
-                                return (
-                                  (t = null),
-                                  (n = r.accountid()) ||
-                                    (n = r.events()[0].accountid()),
-                                  (t = L.f.FriendStore.GetPlayer(n)),
-                                  [
-                                    4,
-                                    Object(E.F)(function() {
-                                      return t.persona.m_bInitialized;
-                                    })
-                                  ]
-                                );
-                              case 1:
-                                return (
-                                  e.sent(),
-                                  (o = function() {
-                                    r.events().forEach(function(e) {
-                                      var t = a.matter.add.image(
-                                        e.pos_x(),
-                                        e.pos_y(),
-                                        i
-                                      );
-                                      t.setFrictionAir(0.001),
-                                        t.setBounce(0.6),
-                                        t.setScale(0.2, 0.2),
-                                        p.push(t);
-                                    });
-                                  }),
-                                  (i = "avatar_" + n),
-                                  a.textures.exists(i)
-                                    ? o()
-                                    : (console.log(
-                                        "Loading " +
-                                          i +
-                                          " @ " +
-                                          t.persona.avatar_url_full
-                                      ),
-                                      a.load.image(
-                                        i,
-                                        t.persona.avatar_url_full
-                                      ),
-                                      a.load.start(),
-                                      a.load.once("complete", o)),
-                                  [2]
-                                );
-                            }
-                          });
-                        });
-                      });
-                    })(t, e);
-                  }),
-                    this.matter.world.setBounds(
-                      0,
-                      0,
-                      512,
-                      3500,
-                      32,
-                      !0,
-                      !0,
-                      !1,
-                      !0
-                    ),
-                    this.add
-                      .image(0, 0, "town")
-                      .setOrigin(0)
-                      .setScale(1),
-                    (this.cameras.main.scrollY = 2732);
-                  for (
-                    var e = Qe.Physics.Matter,
-                      n = e.Matter.Body,
-                      o = e.Matter.Composite,
-                      i = Qe.Physics.Matter.PhysicsEditorParser,
-                      r = this.cache.json.get("shapes"),
-                      a = o.create(),
-                      s = 0;
-                    s < r.giftgiving_background.fixtures.length;
-                    s++
-                  ) {
-                    var c = n.create({ isStatic: !0 });
-                    n.setParts(
-                      c,
-                      i.parseFixture(r.giftgiving_background.fixtures[s])
-                    ),
-                      o.addBody(a, c);
-                  }
-                  this.matter.world.add(a),
-                    (p = []),
-                    this.input.on(
-                      "pointerup",
-                      function(e) {
-                        var t,
-                          n = document.querySelector("canvas"),
-                          o = n.getBoundingClientRect(),
-                          i = 0,
-                          r = 0;
-                        (t = e.event),
-                          (r =
-                            t &&
-                            "object" == typeof t &&
-                            "number" == typeof t.clientX
-                              ? ((i = e.event.clientX - o.left),
-                                e.event.clientY - o.top)
-                              : ((i = e.event.touches[0].clientX - o.left),
-                                e.event.touches[0].clientX - o.top)),
-                          (i *= 512 / o.width),
-                          (i += this.cameras.main.scrollX),
-                          (r *= 768 / o.height),
-                          (r += this.cameras.main.scrollY),
-                          l.onClick({ x: i, y: r });
-                      },
-                      this
-                    );
-                },
-                update: function(e, t) {}
-              }
-            }),
-            { m_PhaserGame: new Qe.Game(e) });
+            this.m_Game = (this.props, {});
           }),
           (t.prototype.componentDidUpdate = function(e) {}),
           t
         );
       })(s.a.Component);
-    var Ze = n("s+DT"),
-      Xe = new Ze.a("148618792083695635"),
-      $e = (G.Component, n("hx5d")),
-      et = n("GxRc"),
-      tt = n("/7KC"),
-      nt = n("/ZM5"),
-      ot = (n("t1VO"),
+    var Je = n("s+DT"),
+      Ze = new Je.a("148618792083695635"),
+      Xe = (G.Component, n("hx5d")),
+      $e = n("GxRc"),
+      et = n("/7KC"),
+      tt = n("/ZM5"),
+      nt = (n("t1VO"),
       (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -53881,7 +53732,7 @@
                   m.h.DragDropManager.SetDropConsumed();
                 var i = t.currentTarget.ownerDocument.defaultView;
                 o.sourceContext.group != this.props.groupView.GetGroup() &&
-                  ht(
+                  dt(
                     {
                       invitee: o.friend,
                       chatview: null,
@@ -53983,7 +53834,7 @@
                   s = a.clientWidth,
                   c = a.clientHeight,
                   l = (9 / 16) * s + 50,
-                  p = Object(tt.a)(r, 1, (l / c) * 100);
+                  p = Object(et.a)(r, 1, (l / c) * 100);
                 i.height = p + "%";
               }
             } else (i.width = o ? o + "%" : "66%"), (i.overflowY = "auto");
@@ -54014,7 +53865,7 @@
               i = o ? t.top : t.left,
               r = o ? e.clientY : e.clientX,
               a = o ? n.height : n.width,
-              s = Object(tt.a)(((r - i) / a) * 100, 1, 100),
+              s = Object(et.a)(((r - i) / a) * 100, 1, 100),
               c = o
                 ? "nWatchPartyBroadcastHeightPercentage"
                 : "nWatchPartyBroadcastWidthPercentage";
@@ -54143,7 +53994,7 @@
               s = (a && r) || (!a && !r),
               c = (r && t.isBroadcastShown) || (!r && a),
               l = this.state.dropToInviteFriend
-                ? G.createElement(Ct, {
+                ? G.createElement(St, {
                     chatView: n,
                     friend: this.state.dropToInviteFriend
                   })
@@ -54159,7 +54010,7 @@
                 t.isMinigameShown)
             ) {
               var f = this.CalculateBroadcastSectionStyles(m),
-                _ = G.createElement(bt, {
+                _ = G.createElement(gt, {
                   ref: this.m_refBroadcastContainer,
                   steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                   localSteamID: t.m_strLocalBroadcastId,
@@ -54196,7 +54047,7 @@
                     onMouseDown: this.OnGrabberMouseDown
                   }),
                 d &&
-                  G.createElement(gt, {
+                  G.createElement(_t, {
                     onClick: this.ShowChat,
                     edge: m ? "bottom" : "right"
                   })
@@ -54226,7 +54077,7 @@
               p && (S += " broadcastVisible");
             var I = null;
             this.props.bHideMemberList ||
-              (I = G.createElement(nt.b, {
+              (I = G.createElement(tt.b, {
                 groupView: this.props.groupView,
                 inactive: g
               }));
@@ -54265,7 +54116,7 @@
                       G.createElement(
                         A.TransitionGroup,
                         null,
-                        G.createElement(yt, { groupView: t })
+                        G.createElement(vt, { groupView: t })
                       )
                     ),
                     G.createElement("div", { className: "dropTargetBox" }),
@@ -54275,7 +54126,7 @@
                 )
               );
             if (e.watching_broadcast_steamid && t.isBroadcastShown) {
-              var M = G.createElement($e.a, {
+              var M = G.createElement(Xe.a, {
                 emoticonStore: L.f.ChatStore.EmoticonStore,
                 steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                 broadcastID: "0",
@@ -54318,7 +54169,7 @@
                   G.createElement(
                     "div",
                     { className: C },
-                    G.createElement(nt.a, { groupView: t, inactive: g }),
+                    G.createElement(tt.a, { groupView: t, inactive: g }),
                     G.createElement(
                       "div",
                       {
@@ -54389,7 +54240,7 @@
                   G.createElement(
                     "div",
                     { className: C },
-                    G.createElement(et.a, {
+                    G.createElement($e.a, {
                       position: "center",
                       string: Object(B.c)("#Chat_ChatRoomGroup_Requesting")
                     })
@@ -54422,7 +54273,7 @@
           (e = Object(R.c)([c.a], e))
         );
       })(G.Component)),
-      it = (function(n) {
+      ot = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -54435,7 +54286,7 @@
               dropClanToInvite: void 0,
               speakerLabelWidth: 0
             }),
-            (t.m_friendSteamId = Ze.a
+            (t.m_friendSteamId = Je.a
               .InitFromAccountID(e.chatView.chat.accountid_partner)
               .ConvertTo64BitString()),
             t
@@ -54531,7 +54382,7 @@
                   (this.m_fnUnregisterDropComplete = void 0),
                   this.setState({ dropToInviteFriend: void 0 })),
                   m.h.DragDropManager.SetDropConsumed(),
-                  ht(
+                  dt(
                     { invitee: r, chatview: n, invitedto: i },
                     Object(m.e)(this, t),
                     o
@@ -54551,7 +54402,7 @@
                     (a = L.f.ChatStore.GetChatRoomGroup(
                       s.GetChatGroupIDIfLoaded()
                     )),
-                  ht({ invitee: i, invitedto: a }, Object(m.e)(this, t), o));
+                  dt({ invitee: i, invitedto: a }, Object(m.e)(this, t), o));
             } else if (0 != t.dataTransfer.files.length) {
               var c = t.dataTransfer.files[0];
               n.SetFileToUpload(c);
@@ -54585,7 +54436,7 @@
                   s = a.clientWidth,
                   c = a.clientHeight,
                   l = (9 / 16) * s + 50,
-                  p = Object(tt.a)(r, 1, (l / c) * 100);
+                  p = Object(et.a)(r, 1, (l / c) * 100);
                 i.height = p + "%";
               }
             } else (i.width = o ? o + "%" : "66%"), (i.overflowY = "auto");
@@ -54615,7 +54466,7 @@
               i = o ? t.top : t.left,
               r = o ? e.clientY : e.clientX,
               a = o ? n.height : n.width,
-              s = Object(tt.a)(((r - i) / a) * 100, 1, 100),
+              s = Object(et.a)(((r - i) / a) * 100, 1, 100),
               c = o
                 ? "nWatchPartyBroadcastHeightPercentage"
                 : "nWatchPartyBroadcastWidthPercentage";
@@ -54697,7 +54548,7 @@
                 },
                 G.createElement(k.z, { showChat: !1 })
               ),
-              G.createElement(_t, {
+              G.createElement(ft, {
                 chatView: this.props.chatView,
                 additionalClasses: "broadcastVisible"
               })
@@ -54718,12 +54569,12 @@
               c = a.dropGroupToInviteFriend,
               l = a.dropClanToInvite;
             s
-              ? (e = G.createElement(Ct, {
+              ? (e = G.createElement(St, {
                   chatView: this.props.chatView,
                   friend: this.state.dropToInviteFriend
                 }))
               : (c || l) &&
-                (e = G.createElement(Ot, {
+                (e = G.createElement(Ct, {
                   chatView: this.props.chatView,
                   group: this.state.dropGroupToInviteFriend,
                   clan: this.state.dropClanToInvite
@@ -54737,9 +54588,9 @@
               (u = G.createElement(
                 G.Fragment,
                 null,
-                G.createElement(at, {
+                G.createElement(rt, {
                   ref: this.m_refBroadcastContainer,
-                  steamID: Ze.a
+                  steamID: Je.a
                     .InitFromAccountID(t.accountid_partner)
                     .ConvertTo64BitString(),
                   localSteamID: this.m_strLocalBroadcastId,
@@ -54770,7 +54621,7 @@
                     onMouseDown: this.OnGrabberMouseDown
                   }),
                 d &&
-                  G.createElement(gt, {
+                  G.createElement(_t, {
                     onClick: this.ShowChat,
                     edge: m ? "bottom" : "right"
                   })
@@ -54817,7 +54668,7 @@
                     "div",
                     { className: "displayRow minHeightZero" },
                     r &&
-                      G.createElement(St, {
+                      G.createElement(yt, {
                         chatView: this.props.chatView,
                         friend: t.chat_partner
                       }),
@@ -54833,7 +54684,7 @@
                       })
                     ),
                     !i &&
-                      G.createElement(_t, {
+                      G.createElement(ft, {
                         chatView: this.props.chatView,
                         additionalClasses: void 0
                       }),
@@ -54858,7 +54709,7 @@
               ),
               G.createElement("div", { className: "chatHeader" }),
               this.props.isActive &&
-                G.createElement(rt, {
+                G.createElement(it, {
                   chatView: this.props.chatView,
                   onNameWidthChanged: this.OnNameWidthChanged
                 }),
@@ -54876,7 +54727,7 @@
                     G.createElement(
                       "div",
                       null,
-                      G.createElement(dt, { chatView: this.props.chatView })
+                      G.createElement(mt, { chatView: this.props.chatView })
                     )
                   )
               ),
@@ -54952,7 +54803,7 @@
           (e = Object(R.c)([c.a], e))
         );
       })(G.Component),
-      rt = (function(e) {
+      it = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -54991,7 +54842,7 @@
           (t = Object(R.c)([c.a], t))
         );
       })(G.Component),
-      at = G.forwardRef(function(e, t) {
+      rt = G.forwardRef(function(e, t) {
         var n = e.steamID,
           o = e.localSteamID,
           i = e.watchLocation,
@@ -55022,10 +54873,10 @@
             }),
             G.createElement("div", { className: "videoContainerSizer" })
           ),
-          G.createElement(st, { steamID: n })
+          G.createElement(at, { steamID: n })
         );
       }),
-      st = (function(e) {
+      at = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -55037,7 +54888,7 @@
           }),
           (t.prototype.render = function() {
             var t = this,
-              e = new Ze.a(this.props.steamID),
+              e = new Je.a(this.props.steamID),
               n = L.f.FriendStore.GetPlayer(e.GetAccountID()),
               o = n.persona.GetCurrentGameIconURL(),
               i = n.persona.GetCurrentGameName(),
@@ -55073,10 +54924,10 @@
           (t = Object(R.c)([c.a], t))
         );
       })(G.Component),
-      ct = n("uw3m"),
-      lt = n("fxWM"),
-      pt = n.n(lt),
-      ut = function(e) {
+      st = n("uw3m"),
+      ct = n("fxWM"),
+      lt = n.n(ct),
+      pt = function(e) {
         var t = e.message,
           n = e.name,
           o = e.renderImage,
@@ -55086,69 +54937,69 @@
           Object(R.a)(
             {
               key: "inviteDrop",
-              classNames: Object(R.a)({}, pt.a),
+              classNames: Object(R.a)({}, lt.a),
               timeout: 300
             },
             i
           ),
           s.a.createElement(
             "div",
-            { className: pt.a.ChatModalCover },
+            { className: lt.a.ChatModalCover },
             s.a.createElement(
               "div",
-              { className: pt.a.InviteDropContainer },
+              { className: lt.a.InviteDropContainer },
               s.a.createElement(
                 "span",
-                { className: pt.a.InviteDropImage },
+                { className: lt.a.InviteDropImage },
                 o()
               ),
-              s.a.createElement("span", { className: pt.a.InviteDropName }, n),
+              s.a.createElement("span", { className: lt.a.InviteDropName }, n),
               s.a.createElement(
                 "span",
-                { className: pt.a.InviteDropMessage },
+                { className: lt.a.InviteDropMessage },
                 t
               ),
               s.a.createElement("span", {
-                className: pt.a.InviteDropBackground
+                className: lt.a.InviteDropBackground
               })
             )
           )
         );
       };
     n.d(t, "g", function() {
-      return mt;
+      return ut;
     }),
       n.d(t, "i", function() {
-        return dt;
+        return mt;
       }),
       n.d(t, "k", function() {
-        return ht;
+        return dt;
       }),
       n.d(t, "f", function() {
-        return _t;
+        return ft;
       }),
       n.d(t, "b", function() {
-        return gt;
+        return _t;
       }),
       n.d(t, "a", function() {
-        return bt;
+        return gt;
       }),
       n.d(t, "j", function() {
-        return yt;
+        return vt;
       }),
       n.d(t, "h", function() {
-        return St;
+        return yt;
       }),
       n.d(t, "d", function() {
-        return Ct;
+        return St;
       }),
       n.d(t, "c", function() {
-        return Ot;
+        return Ct;
       }),
       n.d(t, "e", function() {
-        return It;
+        return Ot;
       });
-    var mt = (function(n) {
+    var ut = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
@@ -55303,18 +55154,18 @@
                 o = e instanceof O.b;
               return (
                 (t = n
-                  ? G.createElement(ot, {
+                  ? G.createElement(nt, {
                       groupView: n,
                       isActive: e == r,
                       popup: i.props.popup
                     })
                   : o
-                  ? G.createElement(vt, {
+                  ? G.createElement(bt, {
                       broadcastView: e,
                       isActive: e == r,
                       popup: i.props.popup
                     })
-                  : G.createElement(it, {
+                  : G.createElement(ot, {
                       chatView: e.GetChatView(),
                       isActive: e == r
                     })),
@@ -55366,7 +55217,7 @@
           (e = Object(R.c)([c.a], e))
         );
       })(G.Component),
-      dt = (function(t) {
+      mt = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -55583,7 +55434,7 @@
           (e = Object(R.c)([c.a], e))
         );
       })(G.Component);
-    function ht(e, t, n) {
+    function dt(e, t, n) {
       var o,
         i = !1,
         r = !0;
@@ -55603,7 +55454,7 @@
       }
       r
         ? Object(b.b)(
-            G.createElement(ft, Object(R.a)({}, e)),
+            G.createElement(ht, Object(R.a)({}, e)),
             n,
             "InviteDialog",
             {
@@ -55621,7 +55472,7 @@
             Object(B.c)("#Chat_Actions_DropGroupInvite_Denied_Description")
           );
     }
-    var ft = (function(n) {
+    var ht = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.invitee = t.props.invitee), t;
@@ -55908,7 +55759,7 @@
           (e = Object(R.c)([c.a], e))
         );
       })(G.Component),
-      _t = (function(e) {
+      ft = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -55986,7 +55837,7 @@
           (t = Object(R.c)([c.a], t))
         );
       })(G.Component),
-      gt = function(e) {
+      _t = function(e) {
         var t = e.onClick,
           n = e.edge;
         return G.createElement(
@@ -55999,7 +55850,7 @@
           G.createElement(k.z, { showChat: !0 })
         );
       },
-      bt = G.forwardRef(function(e, t) {
+      gt = G.forwardRef(function(e, t) {
         var n = e.steamID,
           o = e.localSteamID,
           i = e.watchLocation,
@@ -56043,7 +55894,7 @@
           )
         );
       }),
-      vt = (function(e) {
+      bt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -56065,7 +55916,7 @@
           (t = Object(R.c)([c.a], t))
         );
       })(G.Component),
-      yt = (function(e) {
+      vt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -56134,7 +55985,7 @@
           (t = Object(R.c)([c.a], t))
         );
       })(G.Component),
-      St = (function(t) {
+      yt = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
         }
@@ -56212,7 +56063,7 @@
           (e = Object(R.c)([c.a], e))
         );
       })(G.Component),
-      Ct = (function(e) {
+      St = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -56225,7 +56076,7 @@
               o = Object(R.f)(e, ["chatView", "friend"]),
               i = t.chat instanceof f.a;
             return G.createElement(
-              ut,
+              pt,
               Object(R.a)(
                 {
                   message: i
@@ -56233,7 +56084,7 @@
                     : Object(B.c)("#Chat_DropToInvite"),
                   name: n.display_name,
                   renderImage: function() {
-                    return G.createElement(ct.b, {
+                    return G.createElement(st.b, {
                       size: "Large",
                       persona: n.persona
                     });
@@ -56246,7 +56097,7 @@
           (t = Object(R.c)([c.a], t))
         );
       })(G.Component),
-      Ot = (function(e) {
+      Ct = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -56267,7 +56118,7 @@
               );
             var i = (t || n).name;
             return G.createElement(
-              ut,
+              pt,
               Object(R.a)(
                 {
                   message: Object(B.c)("#Chat_DropGroupToInviteFriend"),
@@ -56285,7 +56136,7 @@
           (t = Object(R.c)([c.a], t))
         );
       })(G.Component),
-      It = (function(e) {
+      Ot = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }

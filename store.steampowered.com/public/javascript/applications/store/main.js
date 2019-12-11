@@ -42533,66 +42533,71 @@
               });
             });
           }),
-          (e.prototype.SetFollowOrUnfollowEvent = function(s, c, l, d, p) {
+          (e.prototype.SetFollowOrUnfollowEvent = function(c, l, d, p, u) {
             return Object(v.b)(this, void 0, void 0, function() {
               var t,
                 n,
                 r,
                 i,
                 o,
-                a = this;
+                a,
+                s = this;
               return Object(v.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return (
-                      (t =
-                        M.COMMUNITY_BASE_URL +
-                        "/gid/" +
-                        l.ConvertTo64BitString() +
-                        (s
+                      (t = g() == M.STORE_BASE_URL),
+                      (n =
+                        (t
+                          ? M.STORE_BASE_URL + "events"
+                          : M.COMMUNITY_BASE_URL +
+                            "/gid/" +
+                            d.ConvertTo64BitString()) +
+                        (c
                           ? "/unfolloworunignoreevent"
                           : "/followorignoreevent")),
-                      (n = this.GetPartnerEventPermissions(l)),
-                      (r = n.event_followed.indexOf(d)),
-                      (i = 0),
-                      -1 !== r &&
-                        ((i = n.event_followed_flags[r]),
-                        s ? (p = i & ~p) : (p |= i)),
-                      (o = new URLSearchParams()).append(
+                      (r = this.GetPartnerEventPermissions(d)),
+                      (i = r.event_followed.indexOf(p)),
+                      (o = 0),
+                      -1 !== i &&
+                        ((o = r.event_followed_flags[i]),
+                        c ? (u = o & ~u) : (u |= o)),
+                      (a = new URLSearchParams()).append(
                         "sessionid",
                         M.SESSIONID
                       ),
-                      o.append("authwgtoken", f.authwgtoken),
-                      o.append("ignore", "" + c),
-                      o.append("gid", d),
-                      o.append("notification_flag", "" + p),
-                      [4, y.a.post(t, o, { withCredentials: !0 })]
+                      a.append("authwgtoken", f.authwgtoken),
+                      a.append("ignore", "" + l),
+                      a.append("gid", p),
+                      a.append("notification_flag", "" + u),
+                      a.append("clan_accountid", "" + d.GetAccountID()),
+                      [4, y.a.post(n, a, { withCredentials: !0 })]
                     );
                   case 1:
                     return (
                       e.sent(),
                       Object(_.x)(function() {
-                        var e = a.m_mapClanToUserPermissions.get(
-                            l.GetAccountID()
+                        var e = s.m_mapClanToUserPermissions.get(
+                            d.GetAccountID()
                           ),
                           t = null,
                           n = null,
                           r = null,
                           i = null;
-                        s
-                          ? (t = c
+                        c
+                          ? (t = l
                               ? e.result.event_ignored
                               : e.result.event_followed)
-                          : c
+                          : l
                           ? ((t = e.result.event_followed),
                             (r = e.result.event_followed_flags),
                             (n = e.result.event_ignored))
                           : ((t = e.result.event_ignored),
                             (n = e.result.event_followed),
                             (i = e.result.event_followed_flags));
-                        var o = t.indexOf(d);
+                        var o = t.indexOf(p);
                         (-1 < o && (t.splice(o, 1), r && r.splice(o, 1)), n) &&
-                          (-1 == n.indexOf(d) && (n.push(d), i && i.push(p)));
+                          (-1 == n.indexOf(p) && (n.push(p), i && i.push(u)));
                       }),
                       [2]
                     );
