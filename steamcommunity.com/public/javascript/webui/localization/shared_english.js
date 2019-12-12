@@ -714,6 +714,7 @@ LocalizationReady("shared", "english", {
   PartnerEvent_35: "General In-Game Event",
   PartnerEvent_Other: "Other Event",
   PartnerEvent_SteamAwardNominations: "Steam Award Nomination Request",
+  PartnerEvent_SteamAwardVoteRequest: "Steam Award Vote Request",
 
   SocialMedia_Type_ShortName_1: "Steam",
   SocialMedia_Type_ShortName_2: "Google",
@@ -941,14 +942,19 @@ LocalizationReady("shared", "english", {
   Steam_Settings_Compat_Launch_Whitelisted: "selected by Valve testing.",
 
   SteamAwards_EventMainTitle: "The Steam Awards",
+  SteamAwards_EventMainTitleSecondLine: "Nominee",
   SteamAwards_EventCallToAction: "Coming this December",
   SteamAwards_EventVotingDateTeaser: "December 2019",
+  SteamAwards_EventVoteForGamePrompt:
+    "Click below to vote for %1$s for the category:",
   SteamAwards_EventNominateGamePrompt_Long:
     "Nominate %1$s for the category below as suggested by the developers of this game, or select a different category",
   SteamAwards_EventNominateGamePrompt_NoCategory:
     "Click here to nominate %1$s for a category on the Steam Awards page.",
   SteamAwards_Event_NominationsClosed:
     "Nominations have closed. Vote during the Winter Sale. Winners announced December 31st.",
+  SteamAwards_Event_VotesClosed:
+    "Voting has ended. Click here to see the results.",
   SteamAwards_EventNominateGamePrompt_CategoryPrefix: "Nominate for:",
   SteamAwards_EventNominationAlternativeLinkText: "Or pick another category",
   SteamAward_CategoryTitle_none: "No category",
@@ -981,6 +987,9 @@ LocalizationReady("shared", "english", {
   SteamAward_NominationConflictWarning_Title: "Change your nomination?",
   SteamAward_NominationConflictWarning_Explanation:
     "You can only nominate one game for each category, and you have already nominated %1$s for this one. Would you like to nominate %2$s instead?",
+  SteamAward_VoteConflictWarning_Title: "Change your vote?",
+  SteamAward_VoteConflictWarning_Explanation:
+    "You can only vote for one game for each category, and you have already voted for %1$s for this one. Would you like to change your vote to %2$s?",
 
   shared_dummy: "dont translate"
 });

@@ -3660,6 +3660,7 @@
         "broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU",
       StoreSaleWidgetLeft: "broadcastwidgets_StoreSaleWidgetLeft_20n87",
       StoreSaleWidgetRight: "broadcastwidgets_StoreSaleWidgetRight_1MzBO",
+      TitleCtn: "broadcastwidgets_TitleCtn_X6LtM",
       StoreSalePriceActionWidgetContainer:
         "broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY",
       StoreSaleDiscountBox: "broadcastwidgets_StoreSaleDiscountBox_3uiyX",
@@ -12209,21 +12210,25 @@
                     { className: Ir.a.StoreSaleWidgetRight },
                     A.createElement(
                       "div",
-                      { className: Ir.a.Actions },
+                      { className: Ir.a.TitleCtn },
                       A.createElement(
-                        "a",
-                        {
-                          href: Xr(e.capsule_link),
-                          target: M.IN_CLIENT ? void 0 : "_blank"
-                        },
+                        "div",
+                        { className: Ir.a.Actions },
                         A.createElement(
-                          "div",
-                          { className: Ir.a.StoreSaleWidgetTitle },
-                          e.title
+                          "a",
+                          {
+                            href: Xr(e.capsule_link),
+                            target: M.IN_CLIENT ? void 0 : "_blank"
+                          },
+                          A.createElement(
+                            "div",
+                            { className: Ir.a.StoreSaleWidgetTitle },
+                            e.title
+                          )
                         )
-                      )
+                      ),
+                      A.createElement(ai, { item: e })
                     ),
-                    A.createElement(ai, { item: e }),
                     A.createElement(
                       "div",
                       { className: Ir.a.StoreSaleWidgetRelease },
@@ -52217,7 +52222,10 @@
               s = o.section,
               c = s.links,
               l = s.events;
-            if (s.smart_section && 0 === this.state.dynamicCapsules.length)
+            if (
+              (s.smart_section && 0 === this.state.dynamicCapsules.length) ||
+              ("items" === s.section_type && 0 == s.capsules.length)
+            )
               return null;
             var d = (s.smart_section
                 ? this.state.dynamicCapsules
