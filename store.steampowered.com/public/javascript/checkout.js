@@ -1031,7 +1031,7 @@ function OnInitializeTransactionFailure( detail, result )
 					error_text = 'Your billing name is invalid because it is empty or contains too many numeric characters.';
 					break;
 				case 87:
-					error_text = 'Your order cannot be completed because your cart contains items that you\'ve already purchased, but disabled.  Please visit <a href="https://help.steampowered.com/en/wizard/HelpWithGame">support</a> to re-enable access to your content.';
+					error_text = 'Your order cannot be completed because your cart contains items that you\'ve already purchased, but removed from your account.  Please visit <a href="https://help.steampowered.com/en/wizard/HelpWithGame">support</a> to re-enable access to your content.';
 					break;
 				default:
 					break;
