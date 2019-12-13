@@ -44757,9 +44757,7 @@
           Object(v.d)(e, t),
           (e.prototype.componentWillUnmount = function() {
             this.m_cancelSignal.cancel("GiveawayNextDraw component unmounted"),
-              this.m_intervalID &&
-                (window.clearInterval(this.m_intervalID),
-                (this.m_intervalID = void 0)),
+              this.ClearRefreshInterval(),
               this.ClearCountDown();
           }),
           (e.prototype.componentDidMount = function() {
@@ -44779,16 +44777,27 @@
                     return (
                       (t = e.sent()),
                       this.setState({ info: t }),
-                      (this.m_intervalID = window.setInterval(
-                        this.RefreshData,
-                        1e3
-                      )),
+                      this.SetupRefreshDataInterval(),
                       this.SetupCountDown(),
                       [2]
                     );
                 }
               });
             });
+          }),
+          (e.prototype.SetupRefreshDataInterval = function() {
+            this.ClearRefreshInterval();
+            var e = this.state.info;
+            if (!e.closed) {
+              var t =
+                e.seconds_until_drawing <= 0 && 0 == e.winner_count ? 6e4 : 5e3;
+              this.m_intervalID = window.setInterval(this.RefreshData, t);
+            }
+          }),
+          (e.prototype.ClearRefreshInterval = function() {
+            this.m_intervalID &&
+              (window.clearInterval(this.m_intervalID),
+              (this.m_intervalID = void 0));
           }),
           (e.prototype.RefreshData = function() {
             return Object(v.b)(this, void 0, void 0, function() {
@@ -44919,6 +44928,8 @@
               )
             );
           }),
+          Object(v.c)([z], e.prototype, "SetupRefreshDataInterval", null),
+          Object(v.c)([z], e.prototype, "ClearRefreshInterval", null),
           Object(v.c)([z], e.prototype, "RefreshData", null),
           Object(v.c)([z], e.prototype, "SetupCountDown", null),
           Object(v.c)([z], e.prototype, "UpdateTimer", null),
