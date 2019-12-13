@@ -3576,11 +3576,41 @@ h2.bb_tag + br {
 	padding-left: 8px;
 }
 
-.app_tag_checkbox, .app_tag_report, .app_tag_ban {
+.app_tag_checkbox, .app_tag_adjust, .app_tag_report, .app_tag_ban {
 	float: right;
 	width: 13px;
 	height: 19px;
 	cursor: pointer;
+}
+
+.app_tag_count
+{
+	float: right;
+	margin-right: 4px;
+}
+
+.app_tag_adjust
+{
+	font-weight: bold;
+	text-align: center;
+	color: #384959;
+	margin-right: 4px;
+}
+
+.app_tag_adjust:hover
+{
+	cursor: pointer;
+	color: #779abd;
+}
+
+.app_tag_advanced
+{
+	display: none;
+}
+
+#app_tagging_modal.advanced_enabled .app_tag_advanced
+{
+	display: block;
 }
 
 .app_tag_checkbox {

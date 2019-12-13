@@ -83,6 +83,23 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 	var rgGlobalPopularTags = [];
 	var bYourPopularTagsRequested = false;
 	var bBannedTag = false;
+	var bAppliedTag = false;
+
+	// setup "advanced" admin mode - internal functions
+	var $AdvCheckbox = $J('#app_tagging_show_advanced');
+	$AdvCheckbox.prop( 'checked', !!WebStorage.GetLocal( 'ShowAdvancedTaggingOptions' ) );
+	$AdvCheckbox.on( 'change', function() {
+		if ( $AdvCheckbox.prop('checked') )
+		{
+			WebStorage.SetLocal( 'ShowAdvancedTaggingOptions', 1 );
+			$AppTagModal.addClass( 'advanced_enabled' );
+		}
+		else
+		{
+			WebStorage.RemoveLocal( 'ShowAdvancedTaggingOptions' );
+			$AppTagModal.removeClass( 'advanced_enabled' );
+		}
+	} ).trigger('change');
 
 	var fnUpdateTagButtonState = function() {
 		if ( $AppTagInput.val().length > 0 )
@@ -113,8 +130,21 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		fnApplyTag( tag, bWithdraw, bPopular, 0, tagid );
 	};
 
-	var fnMakeTag = function( tagid, tag, checked, bPopular, bReported, bBrowsable )
+	var fnAdjustClick = function( checkbox, tag, bPopular, tagid )
 	{
+		console.log( rgUserTagsByTagID[ tagid ] );
+		var nCurrentWeight = ( rgUserTagsByTagID[ tagid ] && rgUserTagsByTagID[ tagid ].weight ) || 0;
+		ShowPromptDialog( 'Adjust Tag Weight', 'Enter a new weight for your vote.  Current weight: ' + nCurrentWeight, 'Tag' )
+			.done( function( value ) {
+				var weight = parseInt( value );
+				if ( weight )
+					fnApplyTag( tag, weight < 0, bPopular, 0, tagid, weight );
+			});
+	}
+
+	var fnMakeTag = function( tagid, tagdata, checked, bPopular, bReported, bBrowsable )
+	{
+		var tag = tagdata.name;
 		var $Tag = $J('<div/>', {'class': 'app_tag_control', 'data-tagid': tagid } );
 
 		var $Checkbox = $J('<div/>', {'data-tooltip-text': '', 'class': 'app_tag_checkbox' + ( checked && !bReported ? ' checked' : '' ) }).click( function() { fnCheckboxClick( this, tag, bPopular, tagid ); });
@@ -158,6 +188,14 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 					});
 				}
 			}
+		}
+
+		if ( bShowBanOption )
+		{
+			var $AdjCheckbox = $J('<div/>', {'data-tooltip-text': 'Adjust your applied weight', 'class': 'app_tag_advanced app_tag_adjust' }).click( function() { fnAdjustClick( this, tag, bPopular, tagid ); }).text( "±" );
+			$Tag.append( $AdjCheckbox );
+
+			$Tag.append( $J('<div/>', {'class': 'app_tag_advanced app_tag_count' } ).text( tagdata.count ) );
 		}
 
 		if ( bBrowsable )
@@ -221,7 +259,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		for ( var i = 0; i < rgAppTags.length; i++ )
 		{
 			var tagid = rgAppTags[i].tagid;
-			var $AppTag = fnMakeTag( tagid, rgAppTags[i].name, rgUserTagsByTagID[tagid], true, rgUserTagsByTagID[tagid] && rgUserTagsByTagID[tagid].is_reported, true );
+			var $AppTag = fnMakeTag( tagid, rgAppTags[i], rgUserTagsByTagID[tagid], true, rgUserTagsByTagID[tagid] && rgUserTagsByTagID[tagid].is_reported, true );
 
 			$PopularTags.append( $AppTag );
 		}
@@ -273,7 +311,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 				if ( rgUserTagsByTagID[tagid] && rgUserTagsByTagID[tagid].is_reported )
 					continue;
 
-				var $AppTag = fnMakeTag( tagid, rgUserTags[i].name, rgUserTagsByTagID[tagid], false, false, rgUserTags[i].browseable );
+				var $AppTag = fnMakeTag( tagid, rgUserTags[i], rgUserTagsByTagID[tagid], false, false, rgUserTags[i].browseable );
 
 				$YourTags.append( $AppTag );
 			}
@@ -354,7 +392,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		return false;
 	};
 
-	var fnApplyTag = function( tag, withdraw, bPopularClick, eReportType, unTagID )
+	var fnApplyTag = function( tag, withdraw, bPopularClick, eReportType, unTagID, nWeight )
 	{
 		var rgParams = {
 			appid: appid,
@@ -364,12 +402,20 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 		if ( unTagID )
 			rgParams['tagid'] = unTagID;
 
-		if ( withdraw )
+		if ( nWeight )
+		{
+			rgParams['weight'] = Math.abs( nWeight );
+			if ( nWeight < 0 )
+				rgParams['withdraw'] = 1;
+		}
+		else if ( withdraw )
 			rgParams['withdraw'] = 1;
 		else if ( eReportType )
 			rgParams['reporttype'] = eReportType;
 
 		$J.post( 'https://store.steampowered.com/tagdata/tagapp', rgParams ).done( function( data ) {
+
+			bAppliedTag = true;
 
 			var strControlSelector = '.app_tag_control[data-tagid=' + data.tagid + ']';
 			var $AppTag = $PopularTags.find( strControlSelector );
@@ -382,7 +428,7 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 			if ( !$YourTag.length && !data.withdraw && !data.reported )
 			{
-				$YourTag = fnMakeTag( data.tagid, data.name, false, false, false, data.browseable );
+				$YourTag = fnMakeTag( data.tagid, data, false, false, false, data.browseable );
 				$YourTags.append( $YourTag );
 				$YourTags.children('.no_tags_yet').hide();
 			}
@@ -526,7 +572,9 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 
 			fnUpdateUserTagsOnPage();
 
-			if ( bBannedTag )
+			if ( bAppliedTag && bShowBanOption && typeof FlushApp != 'undefined' )
+				FlushApp( appid );
+			else if ( bBannedTag )
 				window.location.reload();
 			
 			window.history.pushState({}, document.title, changeUrl(window.location.href, "tags", ""));
