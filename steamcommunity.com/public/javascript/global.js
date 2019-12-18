@@ -789,6 +789,7 @@ function ChangeLanguage( strTargetLanguage, bStayOnPage )
 var g_CommunityPreferences = { 'hide_adult_content_sex' : 1, 'hide_adult_content_violence' : 1 };
 var g_UGCWithNoBlur = {};
 var g_bLoadedUGCWithNoBlur = false;
+var g_UGCSkipAdultContentCheckForAppID = false;
 
 function LoadUGCWithNoBlur()
 {
@@ -849,7 +850,25 @@ function ApplyAdultContentPreferences()
 	for ( var i = 0; i < elementsWithAdultContent.length; ++i )
 	{
 		var e = $J( elementsWithAdultContent[i] );
-		ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence );
+		ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, false );
+	}
+}
+
+function ReapplyAdultContentPreferences()
+{
+	var elementsWithAdultContent = $J('.has_adult_content');
+	if ( elementsWithAdultContent.length == 0 )
+	{
+		return;
+	}
+
+	var bGlobalHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
+	var bGlobalHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
+
+	for ( var i = 0; i < elementsWithAdultContent.length; ++i )
+	{
+		var e = $J( elementsWithAdultContent[i] );
+		ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, true );
 	}
 }
 
@@ -860,7 +879,7 @@ function HandleNewDynamicLink( newDynamicLinkElement )
 	{
 		var bGlobalHideAdultContentSex = g_CommunityPreferences['hide_adult_content_sex'] != 0;
 		var bGlobalHideAdultContentViolence = g_CommunityPreferences['hide_adult_content_violence'] != 0;
-		ApplyAdultContentPreferencesHelper( newDynamicLinkElement, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence );
+		ApplyAdultContentPreferencesHelper( newDynamicLinkElement, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, false );
 	}
 }
 
@@ -963,9 +982,9 @@ function UGCAdultContentPreferencesMenu( elSource )
 	}
 }
 
-function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence )
+function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlobalHideAdultContentViolence, bForce )
 {
-	if ( e.data( 'processed_adult_content') )
+	if ( !bForce && ( e.data( 'processed_adult_content') || e.width() == 0 ) )
 	{
 		return;
 	}
@@ -978,7 +997,8 @@ function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlo
 	var bIsAnchor = e.is('a');
 
 	var publishedFileID = e.data( 'publishedfileid' );
-	var bForceDeBlur = publishedFileID && g_UGCWithNoBlur.hasOwnProperty( publishedFileID );
+	var appid = e.data( 'appid' );
+	var bForceDeBlur = ( publishedFileID && g_UGCWithNoBlur.hasOwnProperty( publishedFileID ) ) || ( appid && g_UGCSkipAdultContentCheckForAppID == appid );
 
 	if ( bForceDeBlur )
 	{
@@ -1053,7 +1073,7 @@ function ApplyAdultContentPreferencesHelper( e, bGlobalHideAdultContentSex, bGlo
 			var $elWarning = $J( '<div></div>', {
 				'class': 'ugc_warning'
 			} );
-			if ( e.width() > 200 )
+			if ( e.width() > 350 )
 			{
 				$elWarning.addClass( "large" );
 			}

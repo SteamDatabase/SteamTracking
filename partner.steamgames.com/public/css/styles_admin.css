@@ -1845,12 +1845,17 @@ html, body { height:100%; }
 	display: inline-block;
 }
 
+.Music .SysReqRowLabel
+{
+	width: 160px;
+}
+
 .SysReqRow input
 {
 	width: 390px;
 }
 
-#MinSysReqLangSelect_select, #RecSysReqLangSelect_select
+#MinSysReqLangSelect_select, #RecSysReqLangSelect_select, #MinSysReqLangSelectSoundtrack_select
 {
 	float: right;
 }

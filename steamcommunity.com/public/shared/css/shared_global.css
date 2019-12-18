@@ -1713,7 +1713,7 @@ img.dynamiclink_sketchfab_play_overlay_image
 	opacity: 0.25;
 }
 
-a.ugc.has_adult_content.ugc_show_warning_image::after
+.ugc.has_adult_content.ugc_show_warning_image::after
 {
 	content: "";
 	background: url( https://steamcommunity-a.akamaihd.net/public/shared/images/ico/icon_content_warning.png ) center center no-repeat;
@@ -1724,7 +1724,7 @@ a.ugc.has_adult_content.ugc_show_warning_image::after
 	left: 0;
 	pointer-events: none;
 }
-a.ugc.has_adult_content.dynamiclink_box::after
+.ugc.has_adult_content.dynamiclink_box::after
 {
 	width: 88px;
 }
@@ -1733,7 +1733,7 @@ a.ugc.has_adult_content.dynamiclink_box::after
 {
 	display: none;
 }
-a.ugc.has_adult_content .ugc_warning
+.ugc.has_adult_content .ugc_warning
 {
 	display: block;
 	position: absolute;
@@ -1744,27 +1744,30 @@ a.ugc.has_adult_content .ugc_warning
 	vertical-align: top;
 	text-align: center;
 	color: #ffffff;
+	background-color: rgba(0,0,0,0.25);
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
-a.ugc.has_adult_content .ugc_warning:hover
+.ugc.has_adult_content .ugc_warning:hover
 {
 	color: #ffffff;
 }
-a.ugc.has_adult_content .ugc_warning.large
+.ugc.has_adult_content .ugc_warning.large
 {
-	font-size: 1.5em;
+	font-size: 1.25em;
 }
 
-a.ugc.has_adult_content .ugc_warning .ugc_inline_option
+.ugc.has_adult_content .ugc_warning .ugc_inline_option
 {
 	display: inline-block;
 	text-decoration: underline;
 }
-a.ugc.has_adult_content .ugc_warning .ugc_inline_option:hover
+.ugc.has_adult_content .ugc_warning .ugc_inline_option:hover
 {
 	color: #66C0F4;
 }
 
-a.ugc.has_adult_content .ugc_warning .ugc_warning_image
+.ugc.has_adult_content .ugc_warning .ugc_warning_image
 {
 	margin-top: 5px;
 	background: url( https://steamcommunity-a.akamaihd.net/public/shared/images/ico/icon_content_warning.png ) center center no-repeat;

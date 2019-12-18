@@ -97,6 +97,8 @@ function DisplayWaitingForContent()
 
 function DoneWaitingForContent()
 {
+	ApplyAdultContentPreferences();
+
 	waitingForContent = false;
 	ScrollToLast();
 	if ( !$( 'MoreContentForm' + currentPage ) )
