@@ -1,0 +1,49 @@
+{
+    "name": "IOnlinePlayService",
+    "methods": [
+        {
+            "name": "GetCoPlayStatus",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Get coplay status for two accounts",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Steam ID 1 of request"
+                },
+                {
+                    "name": "steamid2",
+                    "type": "uint64",
+                    "optional": false,
+                    "description": "Steam ID 2 of request"
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "App ID of request"
+                },
+                {
+                    "name": "time_range_begin",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "unix time range begin to check"
+                },
+                {
+                    "name": "time_range_end",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "unix time range end to check"
+                }
+            ]
+        }
+    ]
+}
