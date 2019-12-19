@@ -1748,7 +1748,7 @@ GStoreItemData = {
 	// filtering
 	FilterItemsForDisplay: function( rgItems, Settings, ApplicableSettings, cMaxItemsToDisplay, cMinItemsToDisplay )
 	{
-		var rgGoodItems = [], rgOtherItems = [], rgStrictItems = [];
+		var rgStrictItems = [], rgGoodItems = [], rgOtherItems = [], rgBadItems = [];
 
 		if ( !cMaxItemsToDisplay )
 			cMaxItemsToDisplay = rgItems.length;
@@ -1773,8 +1773,10 @@ GStoreItemData = {
 					rgStrictItems.push(oItem);
 				else if ( GStoreItemData.BAppPassesFilters( unAppID, Settings, ApplicableSettings ) )
 					rgGoodItems.push(oItem);
-				else
+				else if ( !GDynamicStore.BIsAppIgnored( unAppID ) )
 					rgOtherItems.push( oItem );
+				else
+					rgBadItems.push( oItem );
 			}
 			else if ( unPackageID )
 			{
@@ -1782,8 +1784,10 @@ GStoreItemData = {
 					rgStrictItems.push( oItem );
 				else if ( GStoreItemData.BPackagePassesFilters( unPackageID, Settings, ApplicableSettings ) )
 					rgGoodItems.push( oItem );
-				else
+				else if ( !GDynamicStore.BIsPackageIgnored( unPackageID ) )
 					rgOtherItems.push( oItem );
+				else
+					rgBadItems.push( oItem );
 			}
 			else if ( unBundleID )
 			{
@@ -1803,6 +1807,15 @@ GStoreItemData = {
 		{
 			for ( i = 0; rgStrictItems.length < cMinItemsToDisplay && i < rgGoodItems.length; i++ )
 				rgStrictItems.push( rgGoodItems[i] );
+
+			if ( Settings.enforce_minimum )
+			{
+				for ( i = 0; rgStrictItems.length < cMinItemsToDisplay && i < rgOtherItems.length; i++ )
+					rgStrictItems.push( rgOtherItems[i] );
+
+				for ( i = 0; rgStrictItems.length < cMinItemsToDisplay && i < rgBadItems.length; i++ )
+					rgBadItems.push( rgOtherItems[i] );
+			}
 		}
 
 		return rgStrictItems;
@@ -2055,6 +2068,9 @@ var GDynamicStoreHelpers = {
 
 		if( rgOptions.html_before_price )
 			$CapCtn.append( rgOptions.html_before_price );
+
+		if( rgItemData.has_live_broadcast )
+			$CapCtn.append( $J( '<div>').addClass( 'broadcast_live_stream_icon' ).append( 'Live' ) );
 
 		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( rgOptions.discount_class ) : '&nbsp;' ) );
 
@@ -2374,48 +2390,43 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 		return;
 
 	var strTemplate = ' \
-	<div class="summerSale2019_giftActiveBar">	\
-		<div class="summerSale2019_contentContainer"> \
-			<div class="summerSale2019_leftContent"> \
-				<div class="summerSale2019_icon01"> \
-					%embers% \
+	<div class="winterSale2019_giftActiveBar">	\
+		<div class="winterSale2019_contentContainer"> \
+			<div class="winterSale2019_leftContent"> \
+				<div class="winterSale2019_icon01"> \
+					%snow% \
 				</div> \
-				<div class="summerSale2019_title"> \
+				<div class="winterSale2019_title"> \
 					<div class="title">%title%</div> \
-					<div class="subtitle">%header%</div> \
 				</div> \
 			</div> \
-			<div class="summerSale2019_rightContent"> \
-					<div class="summerSale2019_savings">%discount%</div> \
-					<div class="summerSale2019_savings_expiration summerSale2019_savings">%expiration%</div> \
-					<div class="summerSale2019_icon02"> \
-					</div> \
+			<div class="winterSale2019_rightContent"> \
+					<div class="winterSale2019_savings">%discount%</div> \
+					<div class="winterSale2019_savings_expiration winterSale2019_savings">%expiration%</div> \
 				</div> \
 			</div> \
 		</div> \
 	</div> \
 	';
 	
-	var strEmbers = '';
-	var nNumberEmbers = parseInt( Math.random() * 10 ) + 15;
-	for ( var i = 0; i < nNumberEmbers; i++ )
+	var strSnow = '';
+	var nNumberSnowFlakes = parseInt( Math.random() * 20 ) + 30;
+	for ( var i = 0; i < nNumberSnowFlakes; i++ )
 	{
 		var nDelay = parseFloat( Math.random() * 3 ).toFixed(1);
-		var nTop = parseInt( Math.random() * 40 );
-		var nLeft = parseInt( ( Math.random() * 30 ) + 50 );
-		strEmbers += '<div class="summerSale2019_ember" style="animation-delay: %delay%s; top: %top%px; left: %left%px;"></div>'.replace( '%delay%', nDelay ).replace( '%top%', nTop ).replace( '%left%', nLeft );
+		var nTop = parseInt( ( Math.random() * 20 ) ) - 20;
+		var nLeft = parseInt( ( Math.random() * 1000 ) );
+		strSnow += '<div class="winterSale2019_snow" style="animation-delay: %delay%s; top: %top%px; left: %left%px;"></div>'.replace( '%delay%', nDelay ).replace( '%top%', nTop ).replace( '%left%', nLeft );
 	}
 	
 	var strAmount = GStoreItemData.fnFormatCurrency( nCartDiscount );
-	var strTitle = 'Steam Grand Prix Summer Sale';
-	var strHeader = 'Savings Boost Activated!';
-	var strExpiration = 'Good until July 9th @ 10AM PDT';
+	var strTitle = 'Winter Rewards Coupon';
+	var strExpiration = 'Valid until January 2nd, 2020 @ 10:00am PST';
 	var strDiscount = 'Save up to %amount% on your next purchase'.replace( '%amount%', strAmount );
 	strTemplate = strTemplate.replace( '%title%', strTitle );
-	strTemplate = strTemplate.replace( '%header%', strHeader );
 	strTemplate = strTemplate.replace( '%discount%', strDiscount );
 	strTemplate = strTemplate.replace( '%expiration%', strExpiration );
-	strTemplate = strTemplate.replace( '%embers%', strEmbers );
+	strTemplate = strTemplate.replace( '%snow%', strSnow );
 
 	$Elements = $J( '[data-cart-banner-spot]' );
 	for ( var i = 0; i < $Elements.length; i++ )

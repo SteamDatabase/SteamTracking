@@ -764,7 +764,11 @@ html[lang=en] .search_labs_banner_actions
 		font-size: 9px;
 	}
 
-	html[lang=en].responsive .search_labs_banner_actions {
+    html.responsive .labs_label {
+        display: none;
+    }
+
+html[lang=en].responsive .search_labs_banner_actions {
 		top: 10%;
 		bottom: 10%;
 	}
@@ -778,3 +782,36 @@ html[lang=en] .search_labs_banner_actions
 .autocollapse_enabled .search_collapse_block .see_all_expander.nocollapse_only {
 	display: none;
 }
+
+.labs_block_header {
+    position: relative;
+}
+
+.labs_label {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    box-sizing: border-box;
+    border-radius: 80px;
+    height: 54px;
+    width: 54px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background-color: #df4e4b;
+}
+
+.labs_label_left {
+    left: -60px;
+}
+
+.labs_label_text {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    word-break: break-word;
+}
+

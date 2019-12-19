@@ -50083,7 +50083,7 @@
           width: o,
           height: o,
           margin: 30 * t.next() + 15 + "px",
-          filter: "hue-rotate(" + (60 * t.next() - 30) + "deg)"
+          filter: "hue-rotate(" + (90 * t.next() - 30) + "deg) saturate(100%)"
         },
         r = 1 + Math.floor(5 * t.next()),
         a =
@@ -67169,7 +67169,7 @@
               Object(G.e)(o, e.display_name),
               A.createElement(
                 "div",
-                { style: { marginLeft: "auto" } },
+                { style: { marginLeft: "auto", marginRight: "16px" } },
                 A.createElement(
                   ve.w,
                   {

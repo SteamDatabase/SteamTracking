@@ -3224,6 +3224,7 @@ Render.breadcrumbsContent = function(appids,titles) {
 	var crumbs = "";
 	var diveMapTitle = Main.loc("#labs_deepdive_divemaptitle");
 	var diveMapBlurb = Main.loc("#labs_deepdive_divemapblurb");
+	var showMicrotrailers = Main.loc("#labs_deepdive_showmicrotrailers");
 	var prefURL = Main.baseURL + "account/preferences";
 	diveMapBlurb = StringTools.replace(diveMapBlurb,"%s","href=\"" + prefURL + "\" target=\"_blank\"");
 	var hr = "";
@@ -3303,7 +3304,7 @@ Render.breadcrumbsContent = function(appids,titles) {
 		}
 	}
 	var checked = Main.MICROTRAILERS ? "checked" : "";
-	var html = "" + hr + "<p>" + blurb + "</p>\r\n\t\t\t<div class=\"note-preferences\">\r\n\t\t\t\t<p><strong>" + diveMapTitle + "</strong>&nbsp;&nbsp;&nbsp;" + diveMapBlurb + "</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"container-checkbox-microtrailers\">\r\n\t\t\t\t<input type=\"checkbox\" name=\"microtrailers\" value=\"microtrailers\" id=\"checkbox-microtrailers\" onclick=\"Main.toggleMicrotrailers()\" " + checked + ">\r\n\t\t\t\t\t<label class=\"label-checkbox-microtrailers\" for=\"microtrailers\">Show Microtrailers</label>\r\n\t\t\t\t</input>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"breadcrumbbox\">" + crumbs + "</div>";
+	var html = "" + hr + "<p>" + blurb + "</p>\r\n\t\t\t<div class=\"note-preferences\">\r\n\t\t\t\t<p><strong>" + diveMapTitle + "</strong>&nbsp;&nbsp;&nbsp;" + diveMapBlurb + "</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"container-checkbox-microtrailers\">\r\n\t\t\t\t<input type=\"checkbox\" name=\"microtrailers\" value=\"microtrailers\" id=\"checkbox-microtrailers\" onclick=\"Main.toggleMicrotrailers()\" " + checked + ">\r\n\t\t\t\t\t<label class=\"label-checkbox-microtrailers\" for=\"microtrailers\">" + showMicrotrailers + "</label>\r\n\t\t\t\t</input>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"breadcrumbbox\">" + crumbs + "</div>";
 	return html;
 };
 Render.header = function() {

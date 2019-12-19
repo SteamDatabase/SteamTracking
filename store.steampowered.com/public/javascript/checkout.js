@@ -4954,7 +4954,7 @@ function OnPurchaseSuccess( result )
 		if ( result.purchasereceipt.points_earned )
 		{
 			$('lny_tokens').style.display = 'block';
-			$('lny_tokens_text').innerHTML = result.purchasereceipt.points_earned;
+			$('lny_tokens_points').innerHTML = result.purchasereceipt.points_earned;
 		}
 	
 		DisplayReceiptPage();

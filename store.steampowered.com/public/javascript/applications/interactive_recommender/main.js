@@ -247,7 +247,13 @@
       OptionSuggestion: "app_OptionSuggestion_n-65v"
     };
   },
-  Z7Ow: function(e, t, a) {},
+  Z7Ow: function(e, t, a) {
+    e.exports = {
+      EmoticonBow: "shared_svg_library_EmoticonBow_2Llzt",
+      EmoticonBow_st0: "shared_svg_library_EmoticonBow_st0_Fw2WG",
+      EmoticonBow_st1: "shared_svg_library_EmoticonBow_st1_luj0t"
+    };
+  },
   gfbn: function(e, t, a) {
     "use strict";
     a.r(t);

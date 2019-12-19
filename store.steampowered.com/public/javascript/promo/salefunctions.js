@@ -163,8 +163,25 @@ function PromoteFeaturedGamesWithinList( TagData, rgTier1, rgTier2 )
 	}
 }
 
+function HomeSaleFilterHeroes( $Parent )
+{
+	var Settings = { games_already_in_library: false, only_current_platform: true, enforce_minimum: true };
+
+	var $Row = $Parent.find('.hero_row' );
+	GDynamicStorePage.FilterCapsules( 3, 3, $Row.children('.hero_capsule'), $Row, Settings );
+
+	$Row.children('.hero_capsule:not(.hidden)').children('.hero_capsule_img').each( function () {
+		$J(this).attr('src', $J(this).data('src') );
+	});
+
+	$Row.css('minHeight', '' );
+}
+
 function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 {
+	// process heroes
+	HomeSaleFilterHeroes( $J('.hero_parent_ctn') );
+
 	// process tag sections first, pulling in featured items into the tag blocks we display
 	var $TagBlock = $J('#sale_tag_categories');
 	if ( $TagBlock.length )
@@ -172,52 +189,19 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 		var rgPersonalizedTagData = GenerateTagBlocks( rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
 	}
 
-	var k_nTier1ItemsMin = 7;
+	var k_nTier1ItemsMin = 11;
 	var k_nTier1ItemsMax = 11;
 
-	var k_nTier2ItemsMin = 7;
+	var k_nTier2ItemsMin = 11;
 	var k_nTier2ItemsMax = 11;
 
 	var rgTier1 = GHomepage.FilterItemsForDisplay(
-		rgDisplayLists.sale_tier1, 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+		rgDisplayLists.sale_tier1.concat( rgDisplayLists.sale_tier1_fallback ), 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
 
 	var rgTier2 = GHomepage.FilterItemsForDisplay(
-		rgDisplayLists.sale_tier2, 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+		rgDisplayLists.sale_tier2.concat( rgDisplayLists.sale_tier2_fallback ), 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
-
-	var rgItemsPromotedToTier1 = [];
-	if ( rgTier1.length < k_nTier1ItemsMin )
-	{
-		// promote capsules until we're full
-		while ( rgTier2.length && rgTier1.length < k_nTier1ItemsMin )
-		{
-			var item = rgTier2.shift();
-			rgItemsPromotedToTier1.push( item );
-			rgTier1.push( item );
-		}
-
-		TryPopulateSaleItems( rgTier1, rgDisplayLists.sale_tier1, k_nTier1ItemsMin, k_nTier1ItemsMax );
-	}
-
-	if ( rgTier2.length < k_nTier2ItemsMin )
-	{
-		var rgRemainingDisplayList = rgDisplayLists.sale_tier2.slice();
-		for ( var i = 0; i < rgItemsPromotedToTier1.length; i++ )
-		{
-			for ( var j = 0; j < rgRemainingDisplayList.length; j++ )
-			{
-				if ( BIsSameItem( rgItemsPromotedToTier1[i], rgRemainingDisplayList[j] ) )
-				{
-					rgRemainingDisplayList.splice( j, 1 );
-					break;
-				}
-			}
-		}
-
-		TryPopulateSaleItems( rgTier2, rgRemainingDisplayList, k_nTier2ItemsMin, k_nTier2ItemsMax );
-	}
-
 
 	GDynamicStore.MarkAppDisplayed( rgTier1 );
 	GDynamicStore.MarkAppDisplayed( rgTier2 );
@@ -270,6 +254,10 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 			$UserArea.hide();
 		}
 	}
+
+
+	AddMicrotrailersToStaticCaps( $J('.home_topsellers_games_ctn' ) );
+	AddMicrotrailersToStaticCaps( $J('.home_newupcoming_games_ctn') );
 }
 
 function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems, cMaxItems )
@@ -409,7 +397,7 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
 	$CapCtn.append( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( strDiscountClass ) : '' );
 
 	var rgAppInfo = GStoreItemData.rgAppData[ item.appid ];
-	if ( rgAppInfo && rgAppInfo.live_broadcast )
+	if ( rgAppInfo && rgAppInfo.has_live_broadcast )
 	{
 		$CapCtn.append( 
 					$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
@@ -417,42 +405,60 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap )
 		
 	}
 
-	if ( rgItemData.microtrailer )
-	{
-		$CapCtn.addClass( 'with_microtrailer' );
-		$CapCtn.data('hoverDisableScreenshots', true );
-		var $ImgCtn = $CapCtn.children('.sale_capsule_image_ctn');
-		$CapCtn.one( 'mouseenter', function()
-		{
-			var $Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none', muted: 'muted'})
-				.append($J("<source>", {src: rgItemData.microtrailer, type: "video/webm"}));
-			$ImgCtn.append( $Video );
-
-			var playPromise;
-			var fnPlay = function() {
-				$CapCtn.addClass( 'with_microtrailer' );
-				playPromise = $Video[0].play();
-				if ( playPromise )
-				{
-					playPromise.catch( function( e ) {
-						$CapCtn.removeClass( 'with_microtrailer' );
-					} );
-				}
-			};
-			var fnPause = function() {
-				if ( playPromise )
-					playPromise.then( function() {$Video[0].pause() } );
-				else
-					$Video[0].pause();
-			};
-
-			$CapCtn.hover( fnPlay, fnPause );
-
-			window.setTimeout( fnPlay, 1 );
-		});
-	}
+	AddMicrotrailer( $CapCtn, rgItemData.microtrailer );
 
 	return $CapCtn;
+}
+
+function AddMicrotrailer( $CapCtn, microtrailer )
+{
+	if ( !microtrailer )
+		return;
+
+	$CapCtn.addClass( 'with_microtrailer' );
+	$CapCtn.data('hoverDisableScreenshots', true );
+	var $ImgCtn = $CapCtn.children('.sale_capsule_image_ctn');
+	$CapCtn.one( 'mouseenter', function()
+	{
+		var $Video = $J('<video/>', {'class': 'sale_capsule_video', loop: true, preload: 'none', muted: 'muted'})
+			.append($J("<source>", {src: microtrailer, type: "video/webm"}));
+		$ImgCtn.append( $Video );
+
+		var playPromise;
+		var fnPlay = function() {
+			$CapCtn.addClass( 'with_microtrailer' );
+			playPromise = $Video[0].play();
+			if ( playPromise )
+			{
+				playPromise.catch( function( e ) {
+					$CapCtn.removeClass( 'with_microtrailer' );
+				} );
+			}
+		};
+		var fnPause = function() {
+			if ( playPromise )
+				playPromise.then( function() {$Video[0].pause() } );
+			else
+				$Video[0].pause();
+		};
+
+		$CapCtn.hover( fnPlay, fnPause );
+
+		window.setTimeout( fnPlay, 1 );
+	});
+}
+
+function AddMicrotrailersToStaticCaps( $Parent )
+{
+	$Parent.children( '.sale_capsule' ).each( function() {
+		AddMicrotrailer( $J(this), $J(this).data('microtrailer') );
+	});
+}
+
+function TagBoxTopDecoration()
+{
+	var imgStr = '<div class="home_category_top_decoration"><img src="https://steamcdn-a.akamaihd.net/store/promo/winter2019/snow_ceiling.png"/></div>';
+	return imgStr;
 }
 
 function SaleTagTexture( suffix )
@@ -490,6 +496,10 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	var rgTagData = rgPersonalizedTagData.TagData;
 	var rgItemsPassingFilter = rgPersonalizedTagData.rgItemsPassingFilter;
 
+	if ( rgItemsPassingFilter.length <= 0 ) {
+        return;
+    }
+
 	var strTagMethod = rgTagData.method;
 	var focusedAppId = rgTagData.focusedAppId;
 	var rgKeyTags = rgTagData.keyTags;
@@ -497,9 +507,11 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	var texture = "";
 	var title = "";
 	var noTags = false;
-	if(strTagMethod === "tags") { title = '<b>GAMES</b><br/>SIMILAR TO'; texture = "F";}
-	else if(strTagMethod === "gems") { title = '<b>GEMS</b><br/>SIMILAR TO';  texture = "J";}
-	else if(strTagMethod === "default") { title = '<b>POPULAR GAMES</b><br/>SIMILAR TO'; texture="I";}
+
+	
+	if(strTagMethod === "tags") { title='<b>GAMES </b><br/>SIMILAR TO'; texture = "L";}
+	else if(strTagMethod === "gems") { title='<b>GEMS </b><br/>SIMILAR TO'; texture = "J";}
+	else if(strTagMethod === "default") { title='<b>POPULAR GAMES </b><br/>SIMILAR TO'; texture="I";}
 	else {texture="G"; noTags = true;}
 
 	TryPopulateSaleItems( rgItemsPassingFilter, rgTagData.items, 6, 6 );
@@ -511,6 +523,9 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	var $TitleCtn = $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).append( $J('<div/>', { 'class': 'home_category_title'}).html( title ) );
 	var $FocusCtn = $J('<div/>', { 'class': 'home_category_focus_ctn'} );
 	
+	var $TopDecoration = TagBoxTopDecoration();
+	$Ctn.append( $TopDecoration );
+	
 	var focusCap = SaleCap( {"appid":focusedAppId}, 'sale_tag_bucket', 'discount_block_inline' );
 	$FocusCtn.append(focusCap);
 	
@@ -519,7 +534,17 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	$TitleCtn.append( $FocusCtn );
 	
 	if(!noTags){
-		$Ctn.append( $TitleCtn );
+		var keyTagsLine = "";
+		var top3 = [];
+		for(var i = 0; i < rgKeyTags.key.length; i++){
+			var keyTag = rgKeyTags.key[i];
+			top3.push(keyTag.name);
+			if(top3.length >= 3){
+				break;
+			}
+		}
+		keyTagsLine = top3.join(" | ");
+		$Ctn.append( $TitleCtn.append( $J('<div/>', { 'class': 'home_category_subtitle_tags'}).html( keyTagsLine) ) );
 	}
 	else{
 		if ( "subtitle" in rgTagData )
@@ -530,7 +555,8 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 		}
 		else
 		{
-			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).append( $J('<div/>', { 'class': 'home_category_title'}).html( rgTagData.name ) ) );
+			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).
+				append( $J('<div/>', { 'class': 'home_category_title'}).html( rgTagData.name ) ) );
 		}
 	}
 	
@@ -539,8 +565,13 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	var $Games = $J('<div/>', {'class': 'home_category_games_ctn', style: SaleTagBackground( colors ) } );
 	var $Row = $J('<div/>', {'class': 'salerow salerow3 multiline' } );
 
+	if ( "feature_name" in rgTagData )
+	    $FeatureName = rgTagData.feature_name;
+	else
+	    $FeatureName = 'sale_tag_bucket';
+
 	for ( var iItem = 0; iItem < rgItemsPassingFilter.length; iItem++ )
-		$Row.append( SaleCap( rgItemsPassingFilter[iItem], 'sale_tag_bucket', 'discount_block_inline' ) );
+		$Row.append( SaleCap( rgItemsPassingFilter[iItem], $FeatureName, 'discount_block_inline' ) );
 
 	$Games.append( $Row );
 
@@ -548,7 +579,10 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 
 	$Ctn.append( $Games );
 
-	$Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'See more...' ) );
+	if ( $FeatureName == "sale_tag_bucket" )
+	    $Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'See More' ) );
+	else
+        $Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'See more in Steam Labs' ) );
 
 	$Parent.append( $Ctn ).css('height','');
 	GDynamicStore.DecorateDynamicItems( $Parent );
@@ -715,6 +749,7 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 
 		$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url } ) );
 		$Cap.append( $J('<img/>', {'class': 'franchise_background', 'src': FranchiseData.strBackgroundImageURL } ) );
+        $Cap.append( $J('<img/>', {'class': 'franchise_placeholder', 'src': 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/franchise_placeholder.gif' } ) );
 		$Cap.append( $J( '<div/>', {'class': 'franchise_logo_ctn'} ).append( $J('<img/>', {'class': 'franchise_logo', 'src': FranchiseData.strLogoImageURL } ) ) );
 
 		$Cap.append( $J('<div/>', {'class': 'franchise_discount_tag' } ).text( 'Up to {PCT}% Off'.replace( /\{PCT\}/, FranchiseData.nDiscountMax ) ) );

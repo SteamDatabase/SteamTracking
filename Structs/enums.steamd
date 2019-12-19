@@ -3115,6 +3115,7 @@ enum EPersonaStateFlag
 	HasRichPresence = 1;
 	InJoinableGame = 2;
 	Golden = 4;
+	RemotePlayTogether = 8;
 	ClientTypeWeb = 256;
 	ClientTypeMobile = 512;
 	ClientTypeTenfoot = 1024;
@@ -3356,6 +3357,37 @@ enum ERefundSupportAction
 	DeclineRefund_GiftResellerAbuse = 17;
 }
 
+enum ERemoteClientLaunchResult
+{
+	OK = 1;
+	Fail = 2;
+	RequiresUI = 3;
+	RequiresLaunchOption = 4;
+	RequiresEULA = 5;
+	Timeout = 6;
+	StreamTimeout = 7;
+	StreamClientFail = 8;
+	OtherGameRunning = 9;
+	DownloadStarted = 10;
+	DownloadNoSpace = 11;
+	DownloadFiltered = 12;
+	DownloadRequiresUI = 13;
+	AccessDenied = 14;
+	NetworkError = 15;
+	Progress = 16;
+	ParentalUnlockFailed = 17;
+	ScreenLocked = 18;
+	Unsupported = 19;
+	DisabledLocal = 20;
+	DisabledRemote = 21;
+	Broadcasting = 22;
+	Busy = 23;
+	DriversNotInstalled = 24;
+	TransportUnavailable = 25;
+	Canceled = 26;
+	Invisible = 27;
+}
+
 enum EResult
 {
 	OK = 1;
@@ -3594,7 +3626,20 @@ enum EServerType
 	TimeMachine = 111;
 	VACDBMaster = 112;
 	ContentServerConfig = 113;
-	Max = 114;
+	Minigame = 114;
+	MLTrain = 115;
+	VACTest = 116;
+	TaxService = 117;
+	MLInference = 118;
+	UGSAggregate = 119;
+	TURN = 120;
+	RemoteClient = 121;
+	BroadcastOrigin = 122;
+	BroadcastChannel = 123;
+	SteamAR = 124;
+	China = 125;
+	CrashDump = 126;
+	Max = 127;
 }
 
 enum ESetUserCountryError
@@ -3629,6 +3674,20 @@ enum ESteamGuardCodeError
 	InvalidCode = 1;
 }
 
+enum ESteamReviewScore
+{
+	OverwhelminglyPositive = 9;
+	VeryPositive = 8;
+	Positive = 7;
+	MostlyPositive = 6;
+	Mixed = 5;
+	MostlyNegative = 4;
+	Negative = 3;
+	VeryNegative = 2;
+	OverwhelminglyNegative = 1;
+	None = 0;
+}
+
 enum EStoreCuratorRecommendationState
 {
 	Recommended = 0;
@@ -3644,7 +3703,10 @@ enum EStoreDiscoveryQueueType
 	Recommended = 2;
 	EveryNewRelease = 3;
 	MLRecommender = 5;
-	MAX = 6;
+	WishlistOnSale = 6;
+	DLC = 7;
+	DLCOnSale = 8;
+	MAX = 9;
 }
 
 enum EStoreUsabilityEvent
@@ -3915,6 +3977,14 @@ enum GeofencingRegionState
 	Unknown = 0;
 	Inside = 1;
 	Outside = 2;
+}
+
+enum IDerivationState
+{
+	NOT_TRACKING = -1;
+	UP_TO_DATE = 0;
+	POSSIBLY_STALE = 1;
+	STALE = 2;
 }
 
 enum PartnerEventNotificationType

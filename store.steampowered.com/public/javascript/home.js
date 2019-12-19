@@ -681,7 +681,7 @@ GHomepage = {
 			rgAppInfo =  GStoreItemData.rgAppData[ unAppID ];
 		}
 
-		if ( rgAppInfo && rgAppInfo.live_broadcast )
+		if ( rgAppInfo && rgAppInfo.has_live_broadcast )
 		{		
 			$ImgCtn.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
 		}
@@ -1169,11 +1169,13 @@ GHomepage = {
 
 	RenderRecommendedByDeepDiveApps: function()
 	{
-        // Do nothing if deep-dive not loaded
-        if ( GHomepage.recommendedByDeepDiveFocusedApp <= 0 )
-            return;
+		var $DeepDiveSearchText = $J('.deep_dive_search_text');
+
+		// Do nothing if deep-dive not loaded
+		if ( GHomepage.recommendedByDeepDiveFocusedApp <= 0 || $DeepDiveSearchText.length == 0 )
+			return;
 		
-        var rgOptions = $J.extend({
+		var rgOptions = $J.extend({
 			'class': 'store_capsule',
 			'include_title': false,
 			'discount_class': 'discount_block_inline',
@@ -1193,8 +1195,6 @@ GHomepage = {
 		var focusedApp = getItemData(focusedAppID,rgOptions);
 		var focusedAppTitle = (focusedApp !== null ? focusedApp.name : "");
 		focusedAppTitle = $J('<textarea/>').html(focusedAppTitle).text();
-		
-		var $DeepDiveSearchText = $J('.deep_dive_search_text');
 		
 		$DeepDiveSearchText.attr("placeholder",focusedAppTitle);
 		$DeepDiveSearchText.focusin(function(){
@@ -1775,8 +1775,13 @@ GHomepage = {
 
 		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass( rgOptions.discount_class ) : '&nbsp;' ) );
 
+		if( rgItemData.has_live_broadcast )
+		{
+			$ImgCtn.append(	$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
+		}
+
 		var rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
-		if ( rgAppInfo && rgAppInfo.live_broadcast )
+		if ( rgAppInfo && rgAppInfo.has_live_broadcast )
 		{
 			$CapCtn.append( 
 					$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
@@ -2151,7 +2156,7 @@ GHomepage = {
 		$Spotlight.append( $J('<div/>', {'class': 'recommended_spotlight_price' }).html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_spotlight discount_block_large') : '&nbsp;' ) );
 
 		var rgAppInfo = GStoreItemData.rgAppData[ unAppID ];
-		if ( rgAppInfo && rgAppInfo.live_broadcast )
+		if ( rgAppInfo && rgAppInfo.has_live_broadcast )
 			$Spotlight.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
 		$Spotlight.append( $J('<div/>', {'style': 'clear: both;' } ) );
 
@@ -2223,7 +2228,13 @@ GHomepage = {
 
 			$MessageCtn.append ( $MessageImg );
 			if ( rgItemData )
-				$MessageCtn.append ( $J ( '<div/>' ).html ( rgItemData.discount_block ? $J ( rgItemData.discount_block ).addClass ( 'discount_block_inline' ) : '&nbsp;' ) );
+			{
+				if( rgItemData.has_live_broadcast )
+				{
+					$MessageCtn.append( $J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live') );
+				}
+				$MessageCtn.append($J('<div/>').html(rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;'));
+			}
 			else
 				$MessageCtn.append ( $J ( '<div/>' ).addClass ( 'discount_block discount_block_inline' ).append ( $J ( '<div/>' ).addClass ( 'discount_final_price' ).html ( message.title ? message.title : '&nbsp;' ) ) );
 
@@ -2543,6 +2554,14 @@ GSteamCurators = {
 		var $ImgCtn = $J('<div class="capsule headerv5"/>');
 
 		$ImgCtn.append( $J('<img/>', { src: rgItemData.headerv5 } ) );
+
+		if( rgItemData.has_live_broadcast )
+		{
+			$ImgCtn.append(
+				$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
+			);
+		}
+
 		$CapCtn.append( $ImgCtn );
 
 		$Item.append( $CapCtn );
@@ -2607,6 +2626,13 @@ GSteamCurators = {
 		});
 		$ImageCapsule.append( $Image );
 		$ImageCapsule.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_large main_cap_discount') : '&nbsp;' ) );
+
+		if( rgItemData.has_live_broadcast )
+		{
+			$ImageCapsule.append(
+				$J('<div/>', {'class': 'broadcast_live_stream_icon' } ).append( 'Live')
+			);
+		}
 
 		$Item.append( $ImageCapsule );
 

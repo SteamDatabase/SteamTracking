@@ -114,7 +114,7 @@ GSteamBroadcasts = {
 					var rgAppInfo = GStoreItemData.rgAppData[ data.filtered[i].appid ];
 					if ( rgAppInfo )
 					{
-						rgAppInfo.live_broadcast = true;
+						rgAppInfo.has_live_broadcast = true;
 
 						// update all broadcast capsules to have live tag
 						var $Capsules = $J('.broadcast_capsule[data-ds-appid=' + data.filtered[i].appid + ']' ).each( function()

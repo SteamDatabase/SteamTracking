@@ -1066,7 +1066,8 @@ body.v6 .cart_rightcol h2 {
 {
     max-width: 100%;
     max-height: 100%;
-    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
     display: block;
 }
 
@@ -2367,13 +2368,13 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 .lny_tokens_box
 {
 	border: 1px solid #bf7611;
-	background: rgba(0,0,0,.2);
-	padding: 15px 200px 15px 0px;
+	background: #253F53;
+	padding: 15px 15px 15px 15px;
 }
 
 #lny_tokens_text
 {
-	text-align: center;
+	text-align: left;
 	line-height: 16px;
 	color: #f8bc5e;
 	font-size: 14px;
@@ -2384,27 +2385,30 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-		}
+			font-weight: 500;
+}
+
+#lny_tokens_points
+{
+	text-align: right;
+	line-height: 16px;
+	color: #f8bc5e;
+	font-size: 14px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 0px 0 0 0;
+	overflow: hidden;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-weight: 500;
+}
 
 .lny_tokens_button
 {
 	text-align: left;
-	padding-left: 16px;
-}
-
-.lny_tokens_button a, .lny_tokens_button a:hover
-{
-	background-color: rgba(56,50,42,.4);
-	display: inline-block;
-	text-align: center;
-	line-height: 16px;
-	color: #f8bc5e;
-	font-size: 14px;
-	margin-top: 10px;
-	padding: 8px 18px;
-	overflow: hidden;
-	border: 1px solid #bf7611;
-	width: 248px;
+	margin-left: 10px;
+	margin-top: 6px;
 }
 
 

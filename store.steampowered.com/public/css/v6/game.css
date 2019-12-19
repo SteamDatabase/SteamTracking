@@ -4,6 +4,18 @@ body.v6 #game_area_purchase h2.package_group {
 	margin-bottom: 0px;
 }
 
+
+.application_top_info_message {
+	color: #fff;
+	background: #852929;
+	display: block;
+	padding: 5px;
+	text-align: center;
+}
+.application_top_info_message a {
+	text-decoration: underline;
+}
+
 .game_icon {
 	position: relative;
 	float: left;
@@ -3611,6 +3623,11 @@ h2.bb_tag + br {
 #app_tagging_modal.advanced_enabled .app_tag_advanced
 {
 	display: block;
+}
+
+#app_tagging_modal.advanced_enabled .app_tag
+{
+	max_width: 140px;
 }
 
 .app_tag_checkbox {
