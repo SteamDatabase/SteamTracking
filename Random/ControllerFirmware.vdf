@@ -173,4 +173,16 @@
             "bootloadertimestamp"   "58fe69a5"
         }
     }
+
+    "4611"
+    {
+        "0"
+        {
+                "firmwarebinary"        "/firmware/firmware_4611_5dfbb415.bin"
+                "firmwaretimestamp"     "5dfbb415"
+                "minclientpackage"      ""
+                "crc128"        "a0d18f2f15c3f1c7452467d04edb9b0c"
+                "bootloadertimestamp"   "581cfc7e"
+        }
+    }
 }
