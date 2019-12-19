@@ -12394,7 +12394,7 @@
       balloonsDurationS: "2s/s",
       balloonsDurationJitterS: "1s/s",
       balloonsDurationMaxMs: "3000s/s",
-      snowballDurationMs: "203010s/s",
+      snowballDurationMs: "3010s/s",
       snowballSpeed: "1s",
       "animation-container": "chatroomeffects_animation-container_3YOXx",
       Snowflake: "chatroomeffects_Snowflake_380qT",
@@ -43773,7 +43773,11 @@
       }),
       Se = Object(S.a)(function(e) {
         var t = e.size;
-        if ("large" == t && e.clan.BIsOGG() && e.clan.GetOGGAppID()) {
+        if (
+          ("large" == t || "medium" == t) &&
+          e.clan.BIsOGG() &&
+          e.clan.GetOGGAppID()
+        ) {
           var n = _.f.AppInfoStore.GetAppInfo(e.clan.GetOGGAppID());
           return y.createElement(
             "div",
@@ -43816,7 +43820,7 @@
               e = this.props.group;
             if (e && e.BIsClanChatRoom()) {
               var t = _.f.FriendStore.ClanStore.GetClan(e.GetClanID()),
-                o = "large";
+                o = "medium";
               return (
                 this.props.micro
                   ? (o = "micro")
@@ -49807,10 +49811,10 @@
         );
       };
     n.d(t, "a", function() {
-      return A;
+      return G;
     }),
       n.d(t, "b", function() {
-        return G;
+        return j;
       });
     var E = (function() {
         function e(e) {
@@ -50072,8 +50076,27 @@
           }),
           t
         );
-      })(D),
-      A = {
+      })(D);
+    function A(e) {
+      var t = new E(e),
+        n = 0.8 * t.next() + 0.5,
+        o = 10 * (t.next() + e) + 10 + "px",
+        i = {
+          opacity: n,
+          width: o,
+          height: o,
+          margin: 30 * t.next() + 15 + "px",
+          filter: "hue-rotate(" + (60 * t.next() - 30) + "deg)"
+        },
+        r = 1 + Math.floor(5 * t.next()),
+        a =
+          u.c.COMMUNITY_CDN_ASSET_URL +
+          "winter2019/roomeffects/96px/flake_" +
+          r +
+          ".png";
+      return l.createElement("img", { style: i, src: a });
+    }
+    var G = {
         snowball: {
           timeout: parseInt(p.a.snowballDurationMs),
           renderButton: w.getIconImgFn("snowball"),
@@ -50101,25 +50124,26 @@
           buttonToken: "#ChatEntryButton_SendSnowfall",
           locToken: "#ChatRoom_RoomEffectSnow",
           render: function(e) {
-            for (var t = [], n = new E(e.timestamp), o = 0; o < 120; o++) {
-              var i = {
-                left: 100 * n.next() + "%",
-                fontSize: 25 * n.next() + 15 + "px",
-                animationDuration: 3 * n.next() + 4 + "s",
-                animationDelay: 3 * n.next() + "s"
-              };
+            for (var t = [], n = new E(e.timestamp), o = 0; o < 150; o++) {
+              var i = n.next(),
+                r = {
+                  left: 100 * n.next() + "%",
+                  animationDuration: 3 * (1 - i) + 4 + "s",
+                  animationDelay: i + 4 * n.next() + "s"
+                };
               t.push(
                 l.createElement(
                   "div",
                   {
                     key: e.timestamp + "_" + o,
-                    style: i,
+                    style: r,
                     className: Object(m.a)(
                       p.a.Snowflake,
                       p.a["Snowflake-" + (o % 20)]
                     )
                   },
-                  "❄ ❄"
+                  A(i),
+                  A(i + 1)
                 )
               );
             }
@@ -50157,7 +50181,7 @@
           }
         }
       },
-      G = (function(e) {
+      j = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -67124,8 +67148,7 @@
           Object(l.d)(t, e),
           (t.prototype.OnReplayAnimation = function() {
             var e = this.props.args.type;
-            this.props.context.chat.ClearRoomEffects(),
-              this.props.context.chat.AddRoomEffect(e);
+            this.props.context.chat.ActivateRoomEffect(e);
           }),
           (t.prototype.render = function() {
             var e = R.f.FriendStore.GetPlayer(

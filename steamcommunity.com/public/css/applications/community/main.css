@@ -4108,7 +4108,7 @@ textarea:-webkit-autofill:focus,
   padding: 18px 16px;
   padding-top: 0px;
   flex-grow: 1;
-  overflow: scroll; }
+  min-height: 0; }
 
 .multiChatDialog .BroadcastContainer {
   padding: 0;
