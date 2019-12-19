@@ -1242,6 +1242,51 @@ body.v6 .help_refund_request_area h2 a:hover {
 
 }
 
+.refund_sale_points_title {
+	margin-top: 10px;
+}
+
+.refund_item_image {
+	padding: 5px;
+}
+
+.refund_token_balance_name {
+	color: #67c1f5;
+	padding: 0 16px 14px;
+	max-width: 300px;
+}
+.refund_token_balance_amount {
+	color: #c6d4df;
+	vertical-align: top;
+	padding-right: 20px;
+	text-align: right;
+}
+
+.refund_token_balance_hr {
+	height: 0px;
+	margin: 15px;
+	margin-top: 0px;
+	border-top: 1px solid #c6d4df;
+}
+
+.refund_item_header {
+	color: #c6d4df;
+}
+.refund_item_header.title {
+	padding: 0 16px 14px;
+	max-width: 300px;
+	text-align: left;
+}
+.refund_item_header.tokens {
+	vertical-align: top;
+	padding-right: 20px;
+	text-align: right;
+}
+
+.refund_item_image img {
+	max-height: 32px;
+}
+
 .purchase_gift_message_box
 {
 	margin-top: 10px;
@@ -1949,6 +1994,10 @@ a.guide_row {
 
 .help_issue_details.help_section_body.steam_feature {
 	max-width: 940px;
+}
+
+.help_issue_details.help_section_body.steam_saleevent {
+	max-width: 712px;
 }
 
 .help_missingrefund_details b
