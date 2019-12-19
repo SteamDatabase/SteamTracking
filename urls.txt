@@ -140,6 +140,7 @@ https://store.steampowered.com/public/css/promo/summer2019.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter_2015_main.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2018_cottage.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2018.css?__TIME__
+https://store.steampowered.com/public/css/promo/winter2019_sale.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2019_steamtown.css?__TIME__
 https://store.steampowered.com/public/css/styles_aboutv5.css?__TIME__
 https://store.steampowered.com/public/css/styles_hwsurvey.css?__TIME__

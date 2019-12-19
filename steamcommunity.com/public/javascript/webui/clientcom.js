@@ -2,44 +2,44 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-!(function(n) {
-  var r = {};
-  function o(t) {
-    if (r[t]) return r[t].exports;
-    var e = (r[t] = { i: t, l: !1, exports: {} });
-    return n[t].call(e.exports, e, e.exports, o), (e.l = !0), e.exports;
+!(function(t) {
+  var e = {};
+  function n(r) {
+    if (e[r]) return e[r].exports;
+    var o = (e[r] = { i: r, l: !1, exports: {} });
+    return t[r].call(o.exports, o, o.exports, n), (o.l = !0), o.exports;
   }
-  (o.m = n),
-    (o.c = r),
-    (o.d = function(t, e, n) {
-      o.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: n });
+  (n.m = t),
+    (n.c = e),
+    (n.d = function(t, e, r) {
+      n.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: r });
     }),
-    (o.r = function(t) {
+    (n.r = function(t) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(t, "__esModule", { value: !0 });
     }),
-    (o.t = function(e, t) {
-      if ((1 & t && (e = o(e)), 8 & t)) return e;
-      if (4 & t && "object" == typeof e && e && e.__esModule) return e;
-      var n = Object.create(null);
+    (n.t = function(t, e) {
+      if ((1 & e && (t = n(t)), 8 & e)) return t;
+      if (4 & e && "object" == typeof t && t && t.__esModule) return t;
+      var r = Object.create(null);
       if (
-        (o.r(n),
-        Object.defineProperty(n, "default", { enumerable: !0, value: e }),
-        2 & t && "string" != typeof e)
+        (n.r(r),
+        Object.defineProperty(r, "default", { enumerable: !0, value: t }),
+        2 & e && "string" != typeof t)
       )
-        for (var r in e)
-          o.d(
-            n,
+        for (var o in t)
+          n.d(
             r,
-            function(t) {
-              return e[t];
-            }.bind(null, r)
+            o,
+            function(e) {
+              return t[e];
+            }.bind(null, o)
           );
-      return n;
+      return r;
     }),
-    (o.n = function(t) {
+    (n.n = function(t) {
       var e =
         t && t.__esModule
           ? function() {
@@ -48,13 +48,13 @@
           : function() {
               return t;
             };
-      return o.d(e, "a", e), e;
+      return n.d(e, "a", e), e;
     }),
-    (o.o = function(t, e) {
+    (n.o = function(t, e) {
       return Object.prototype.hasOwnProperty.call(t, e);
     }),
-    (o.p = ""),
-    o((o.s = "x0hG"));
+    (n.p = ""),
+    n((n.s = "x0hG"));
 })({
   "/7KC": function(t, e, n) {
     "use strict";
@@ -85,23 +85,23 @@
     "use strict";
     n("mrSG");
     var r = n("/7KC");
-    function c() {
+    function o() {
       return !!window.document;
     }
     n.d(e, "c", function() {
-      return u;
+      return c;
     }),
       n.d(e, "i", function() {
-        return s;
+        return u;
       }),
       n.d(e, "a", function() {
-        return a;
+        return s;
       }),
       n.d(e, "b", function() {
-        return f;
+        return a;
       }),
       n.d(e, "f", function() {
-        return i;
+        return l;
       }),
       n.d(e, "h", function() {
         return _;
@@ -115,8 +115,8 @@
       n.d(e, "e", function() {
         return m;
       });
-    var o,
-      u = {
+    var i,
+      c = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -150,13 +150,13 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!c()) return o || (o = i()), o;
+            if (!o()) return i || (i = l()), i;
             var t = (function(t) {
-              if (!c() || !window.document.cookie) return null;
+              if (!o() || !window.document.cookie) return null;
               var e = document.cookie.match("(^|; )" + t + "=([^;]*)");
               return e && e[2] ? decodeURIComponent(e[2]) : null;
             })("sessionid");
-            t || (t = i());
+            t || (t = l());
             return t;
           })();
         },
@@ -165,7 +165,7 @@
         DEV_MODE: !1,
         OFFLINE_MODE: !1
       },
-      s = {
+      u = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -177,8 +177,8 @@
         is_support: !1,
         short_url: ""
       },
-      a = { steamid: "", clanid: 0, listid: 0 },
-      f = {
+      s = { steamid: "", clanid: 0, listid: 0 },
+      a = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
         ANNOUNCEMENT_GID: "",
@@ -192,8 +192,8 @@
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1
       },
-      l = "webui_config";
-    function i() {
+      f = "webui_config";
+    function l() {
       var t = (function() {
         for (var t = "", e = 0; e < 24; e++)
           t += Object(r.b)(0, 35).toString(36);
@@ -201,19 +201,19 @@
       })();
       return (
         (function(t, e, n, r) {
-          if (c()) {
+          if (o()) {
             r || (r = "/");
-            var o = "";
+            var i = "";
             if (void 0 !== n && n) {
-              var i = new Date();
-              i.setTime(i.getTime() + 864e5 * n),
-                (o = "; expires=" + i.toUTCString());
+              var c = new Date();
+              c.setTime(c.getTime() + 864e5 * n),
+                (i = "; expires=" + c.toUTCString());
             }
             document.cookie =
               encodeURIComponent(t) +
               "=" +
               encodeURIComponent(e) +
-              o +
+              i +
               ";path=" +
               r;
           }
@@ -222,21 +222,21 @@
       );
     }
     function _(t) {
-      void 0 === t && (t = l);
+      void 0 === t && (t = f);
       var e = {},
         n = p("config", t);
-      n && (delete n.SESSIONID, Object.assign(u, n), (e.config = !0));
+      n && (delete n.SESSIONID, Object.assign(c, n), (e.config = !0));
       var r = p("userinfo", t);
-      r && (Object.assign(s, r), (e.userConfig = !0));
+      r && (Object.assign(u, r), (e.userConfig = !0));
       var o = p("broadcast", t);
-      o && (Object.assign(a, o), (e.broadcastConfig = !0));
+      o && (Object.assign(s, o), (e.broadcastConfig = !0));
       var i = p("community", t);
-      return i && (Object.assign(f, i), (e.communityConfig = !0)), e;
+      return i && (Object.assign(a, i), (e.communityConfig = !0)), e;
     }
     function p(t, e) {
       var n;
       if (
-        (void 0 === e && (e = l),
+        (void 0 === e && (e = f),
         (n = "string" == typeof e ? document.getElementById(e) : e))
       )
         try {
@@ -250,29 +250,29 @@
     }
     function d() {
       var t = window.location.href;
-      return t.startsWith(u.STORE_BASE_URL)
-        ? u.STORE_BASE_URL
-        : t.startsWith(u.COMMUNITY_BASE_URL)
-        ? u.COMMUNITY_BASE_URL
-        : t.startsWith(u.PARTNER_BASE_URL)
-        ? u.PARTNER_BASE_URL
-        : t.startsWith(u.HELP_BASE_URL)
-        ? u.HELP_BASE_URL
-        : t.startsWith(u.STEAMTV_BASE_URL)
-        ? u.STEAMTV_BASE_URL
+      return t.startsWith(c.STORE_BASE_URL)
+        ? c.STORE_BASE_URL
+        : t.startsWith(c.COMMUNITY_BASE_URL)
+        ? c.COMMUNITY_BASE_URL
+        : t.startsWith(c.PARTNER_BASE_URL)
+        ? c.PARTNER_BASE_URL
+        : t.startsWith(c.HELP_BASE_URL)
+        ? c.HELP_BASE_URL
+        : t.startsWith(c.STEAMTV_BASE_URL)
+        ? c.STEAMTV_BASE_URL
         : "";
     }
     function m() {
       var t = window.location.href;
-      return t.startsWith(u.STORE_BASE_URL)
+      return t.startsWith(c.STORE_BASE_URL)
         ? "store"
-        : t.startsWith(u.COMMUNITY_BASE_URL)
+        : t.startsWith(c.COMMUNITY_BASE_URL)
         ? "community"
-        : t.startsWith(u.PARTNER_BASE_URL)
+        : t.startsWith(c.PARTNER_BASE_URL)
         ? "partnerweb"
-        : t.startsWith(u.HELP_BASE_URL)
+        : t.startsWith(c.HELP_BASE_URL)
         ? "help"
-        : t.startsWith(u.STEAMTV_BASE_URL)
+        : t.startsWith(c.STEAMTV_BASE_URL)
         ? "steamtv"
         : "";
     }
@@ -347,15 +347,15 @@
             var e = { message: "ShowJoinGameDialog", friend_id: t };
             return this.GenericEResultCall(e);
           }),
-          (t.prototype.BIsSubscribedApp = function(n) {
-            var r = this;
-            if (this.m_mapCacheSubscribedApp.has(n))
-              return Promise.resolve(this.m_mapCacheSubscribedApp.get(n));
-            var t = { message: "IsSubscribedApp", appid: n };
-            return this.GenericEResultCall(t).then(function(t) {
-              if (!t.connect_failed) {
-                var e = 1 == t.result;
-                return r.m_mapCacheSubscribedApp.set(n, e), e;
+          (t.prototype.BIsSubscribedApp = function(t) {
+            var e = this;
+            if (this.m_mapCacheSubscribedApp.has(t))
+              return Promise.resolve(this.m_mapCacheSubscribedApp.get(t));
+            var n = { message: "IsSubscribedApp", appid: t };
+            return this.GenericEResultCall(n).then(function(n) {
+              if (!n.connect_failed) {
+                var r = 1 == n.result;
+                return e.m_mapCacheSubscribedApp.set(t, r), r;
               }
             });
           }),
@@ -432,17 +432,17 @@
             enumerable: !0,
             configurable: !0
           }),
-          (t.prototype.SendMsgAndAwaitResponse = function(r) {
-            var o = this;
-            return new Promise(function(t, e) {
-              var n = o.m_iCallSeq++;
-              o.BSendMsg(r, n)
-                ? o.m_mapWaitingCallbacks.set(n, {
-                    iSeq: n,
-                    fnCallback: t,
-                    fnError: e
+          (t.prototype.SendMsgAndAwaitResponse = function(t) {
+            var e = this;
+            return new Promise(function(n, r) {
+              var o = e.m_iCallSeq++;
+              e.BSendMsg(t, o)
+                ? e.m_mapWaitingCallbacks.set(o, {
+                    iSeq: o,
+                    fnCallback: n,
+                    fnError: r
                   })
-                : e();
+                : r();
             });
           }),
           (t.prototype.BSendMsg = function(t, e) {
@@ -475,32 +475,32 @@
             }
           }),
           (t.prototype.Connect = function() {
-            var r = this;
+            var t = this;
             if (this.m_bReady && this.m_socket.readyState == WebSocket.OPEN)
               return Promise.resolve();
             if (this.m_promiseConnect) return this.m_promiseConnect;
-            var t = new Promise(function(e, n) {
+            var e = new Promise(function(e, n) {
               try {
-                r.m_socket = new WebSocket(
+                t.m_socket = new WebSocket(
                   "ws://127.0.0.1:27060/clientsocket/"
                 );
-              } catch (t) {
-                return (r.m_bSecurityException = !0), void n(t);
+              } catch (e) {
+                return (t.m_bSecurityException = !0), void n(e);
               }
-              (r.m_socket.onerror = function(t) {
+              (t.m_socket.onerror = function(t) {
                 n();
               }),
-                (r.m_socket.onmessage = r.OnSocketMessage.bind(r)),
-                (r.m_socket.onopen = function(t) {
-                  r.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
-                    .then(function(t) {
-                      1 == t.success
-                        ? ((r.m_ClientInfo.ulVersion = t.clientversion),
-                          (r.m_ClientInfo.bFriendsUIEnabled = !!t.friendsui),
-                          (r.m_ClientInfo.unAccountID = t.accountid),
-                          t.supported_messages &&
-                            (r.m_ClientInfo.rgSupportedMessages =
-                              t.supported_messages),
+                (t.m_socket.onmessage = t.OnSocketMessage.bind(t)),
+                (t.m_socket.onopen = function(r) {
+                  t.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
+                    .then(function(r) {
+                      1 == r.success
+                        ? ((t.m_ClientInfo.ulVersion = r.clientversion),
+                          (t.m_ClientInfo.bFriendsUIEnabled = !!r.friendsui),
+                          (t.m_ClientInfo.unAccountID = r.accountid),
+                          r.supported_messages &&
+                            (t.m_ClientInfo.rgSupportedMessages =
+                              r.supported_messages),
                           e())
                         : n();
                     })
@@ -508,14 +508,14 @@
                 });
             });
             return (
-              (this.m_promiseConnect = t),
+              (this.m_promiseConnect = e),
               this.m_promiseConnect
                 .then(function() {
-                  (r.m_bReady = !0), (r.m_promiseConnect = void 0);
+                  (t.m_bReady = !0), (t.m_promiseConnect = void 0);
                 })
                 .catch(function() {
-                  (r.m_bClientConnectionFailed = !0),
-                    (r.m_promiseConnect = void 0);
+                  (t.m_bClientConnectionFailed = !0),
+                    (t.m_promiseConnect = void 0);
                 }),
               this.m_promiseConnect
             );
@@ -621,122 +621,122 @@ and limitations under the License.
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
         c = Reflect.decorate(t, e, n, r);
       else
-        for (var u = t.length - 1; 0 <= u; u--)
+        for (var u = t.length - 1; u >= 0; u--)
           (o = t[u]) &&
-            (c = (i < 3 ? o(c) : 3 < i ? o(e, n, c) : o(e, n)) || c);
-      return 3 < i && c && Object.defineProperty(e, n, c), c;
+            (c = (i < 3 ? o(c) : i > 3 ? o(e, n, c) : o(e, n)) || c);
+      return i > 3 && c && Object.defineProperty(e, n, c), c;
     }
-    function s(i, c, u, s) {
-      return new (u || (u = Promise))(function(t, e) {
-        function n(t) {
+    function s(t, e, n, r) {
+      return new (n || (n = Promise))(function(o, i) {
+        function c(t) {
           try {
-            o(s.next(t));
+            s(r.next(t));
           } catch (t) {
-            e(t);
+            i(t);
           }
         }
-        function r(t) {
+        function u(t) {
           try {
-            o(s.throw(t));
+            s(r.throw(t));
           } catch (t) {
-            e(t);
+            i(t);
           }
         }
-        function o(e) {
-          e.done
-            ? t(e.value)
-            : new u(function(t) {
-                t(e.value);
-              }).then(n, r);
+        function s(t) {
+          t.done
+            ? o(t.value)
+            : new n(function(e) {
+                e(t.value);
+              }).then(c, u);
         }
-        o((s = s.apply(i, c || [])).next());
+        s((r = r.apply(t, e || [])).next());
       });
     }
-    function a(n, r) {
-      var o,
+    function a(t, e) {
+      var n,
+        r,
+        o,
         i,
-        c,
-        t,
-        u = {
+        c = {
           label: 0,
           sent: function() {
-            if (1 & c[0]) throw c[1];
-            return c[1];
+            if (1 & o[0]) throw o[1];
+            return o[1];
           },
           trys: [],
           ops: []
         };
       return (
-        (t = { next: e(0), throw: e(1), return: e(2) }),
+        (i = { next: u(0), throw: u(1), return: u(2) }),
         "function" == typeof Symbol &&
-          (t[Symbol.iterator] = function() {
+          (i[Symbol.iterator] = function() {
             return this;
           }),
-        t
+        i
       );
-      function e(e) {
-        return function(t) {
-          return (function(e) {
-            if (o) throw new TypeError("Generator is already executing.");
-            for (; u; )
+      function u(i) {
+        return function(u) {
+          return (function(i) {
+            if (n) throw new TypeError("Generator is already executing.");
+            for (; c; )
               try {
                 if (
-                  ((o = 1),
-                  i &&
-                    (c =
-                      2 & e[0]
-                        ? i.return
-                        : e[0]
-                        ? i.throw || ((c = i.return) && c.call(i), 0)
-                        : i.next) &&
-                    !(c = c.call(i, e[1])).done)
+                  ((n = 1),
+                  r &&
+                    (o =
+                      2 & i[0]
+                        ? r.return
+                        : i[0]
+                        ? r.throw || ((o = r.return) && o.call(r), 0)
+                        : r.next) &&
+                    !(o = o.call(r, i[1])).done)
                 )
-                  return c;
-                switch (((i = 0), c && (e = [2 & e[0], c.value]), e[0])) {
+                  return o;
+                switch (((r = 0), o && (i = [2 & i[0], o.value]), i[0])) {
                   case 0:
                   case 1:
-                    c = e;
+                    o = i;
                     break;
                   case 4:
-                    return u.label++, { value: e[1], done: !1 };
+                    return c.label++, { value: i[1], done: !1 };
                   case 5:
-                    u.label++, (i = e[1]), (e = [0]);
+                    c.label++, (r = i[1]), (i = [0]);
                     continue;
                   case 7:
-                    (e = u.ops.pop()), u.trys.pop();
+                    (i = c.ops.pop()), c.trys.pop();
                     continue;
                   default:
                     if (
-                      !(c = 0 < (c = u.trys).length && c[c.length - 1]) &&
-                      (6 === e[0] || 2 === e[0])
+                      !(o = (o = c.trys).length > 0 && o[o.length - 1]) &&
+                      (6 === i[0] || 2 === i[0])
                     ) {
-                      u = 0;
+                      c = 0;
                       continue;
                     }
-                    if (3 === e[0] && (!c || (e[1] > c[0] && e[1] < c[3]))) {
-                      u.label = e[1];
+                    if (3 === i[0] && (!o || (i[1] > o[0] && i[1] < o[3]))) {
+                      c.label = i[1];
                       break;
                     }
-                    if (6 === e[0] && u.label < c[1]) {
-                      (u.label = c[1]), (c = e);
+                    if (6 === i[0] && c.label < o[1]) {
+                      (c.label = o[1]), (o = i);
                       break;
                     }
-                    if (c && u.label < c[2]) {
-                      (u.label = c[2]), u.ops.push(e);
+                    if (o && c.label < o[2]) {
+                      (c.label = o[2]), c.ops.push(i);
                       break;
                     }
-                    c[2] && u.ops.pop(), u.trys.pop();
+                    o[2] && c.ops.pop(), c.trys.pop();
                     continue;
                 }
-                e = r.call(n, u);
+                i = e.call(t, c);
               } catch (t) {
-                (e = [6, t]), (i = 0);
+                (i = [6, t]), (r = 0);
               } finally {
-                o = c = 0;
+                n = o = 0;
               }
-            if (5 & e[0]) throw e[1];
-            return { value: e[0] ? e[1] : void 0, done: !0 };
-          })([e, t]);
+            if (5 & i[0]) throw i[1];
+            return { value: i[0] ? i[1] : void 0, done: !0 };
+          })([i, u]);
         };
       }
     }
