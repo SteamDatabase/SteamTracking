@@ -12687,7 +12687,13 @@
       pyroBodyShake: "chatroomeffects_pyroBodyShake_14i7u",
       "pyro-body-shake": "chatroomeffects_pyro-body-shake_2zHTj",
       pyroBodyShake2: "chatroomeffects_pyroBodyShake2_3lDIa",
-      "pyro-body-shake2": "chatroomeffects_pyro-body-shake2_h3pQ-"
+      "pyro-body-shake2": "chatroomeffects_pyro-body-shake2_h3pQ-",
+      "snowball-path-1": "chatroomeffects_snowball-path-1_2BugV",
+      "snowball-path-2": "chatroomeffects_snowball-path-2_3fw-L",
+      "snowball-path-3": "chatroomeffects_snowball-path-3_3ayZg",
+      "snowball-path-4": "chatroomeffects_snowball-path-4_18o8V",
+      "snowball-path-5": "chatroomeffects_snowball-path-5_oz2JV",
+      "snowball-path-6": "chatroomeffects_snowball-path-6_kVPZW"
     };
   },
   Cebd: function(e, t, n) {
@@ -31264,15 +31270,7 @@
             this.m_rectSlider =
               this.m_elSlider.current &&
               this.m_elSlider.current.getBoundingClientRect();
-            var i = t.GetTimeAtMousePosition(e, this.m_rectSlider, n, o);
-            if (i >= t.GetVideoAvailableStartTime()) {
-              var r = this.props.video.GetThumbnailForTimestamp(i);
-              this.setState({
-                nHoverValue: i,
-                hoverX: e - this.m_rectSlider.left,
-                thumbnailURL: r
-              });
-            }
+            t.GetTimeAtMousePosition(e, this.m_rectSlider, n, o);
           }),
           (e.prototype.OnSegmentClick = function(e) {
             this.props.video.Seek(e);
@@ -49527,15 +49525,15 @@
     var i = n("mrSG"),
       l = n("q1tI"),
       s = n.n(l),
+      c = n("/7KC"),
       o = n("okNM"),
       r = n("CX/Z"),
       p = n.n(r),
       u = n("1n9R"),
       m = n("QHER"),
-      c = n("ZO3Q"),
-      d = n("/7KC");
+      d = n("ZO3Q");
     function h(e) {
-      return e[Object(d.b)(0, e.length - 1)];
+      return e[Object(c.b)(0, e.length - 1)];
     }
     var f = [
         ["#ff0012"],
@@ -49585,7 +49583,7 @@
               s.a.Fragment,
               { key: t },
               s.a.createElement(
-                c.animated.path,
+                d.animated.path,
                 Object(i.a)(
                   {
                     strokeWidth: 2,
@@ -49597,7 +49595,7 @@
                 )
               ),
               s.a.createElement(
-                c.animated.path,
+                d.animated.path,
                 Object(i.a)(
                   {
                     strokeWidth: 1,
@@ -49612,7 +49610,7 @@
         );
       },
       g = function(a) {
-        var s = Object(c.useSpring)({
+        var s = Object(d.useSpring)({
           from: { anim: 0 },
           to: { anim: 1 },
           config: { friction: 75 }
@@ -49647,8 +49645,8 @@
         return v(function() {
           for (var e = [], t = 0; t < r; t++) {
             var n = t * a + Math.random() * a,
-              o = Object(d.b)(10, 90),
-              i = Object(d.b)(30, 90);
+              o = Object(c.b)(10, 90),
+              i = Object(c.b)(30, 90);
             0 < t && Math.abs(e[t - 1].x - o) < 15 && (o = 100 - o),
               e.push({ delay: n, x: o, y: i });
           }
@@ -49689,7 +49687,7 @@
           t,
           n,
           o,
-          i = Object(c.useSpring)({
+          i = Object(d.useSpring)({
             anim: 1,
             from: { anim: 0 },
             config: { duration: 8e3 }
@@ -49803,7 +49801,7 @@
             ref: n
           },
           o.map(function(e, t) {
-            return s.a.createElement(c.animated.div, {
+            return s.a.createElement(d.animated.div, {
               key: t,
               style: Object(i.a)(Object(i.a)({}, O), e)
             });
@@ -49811,10 +49809,10 @@
         );
       };
     n.d(t, "a", function() {
-      return G;
+      return j;
     }),
       n.d(t, "b", function() {
-        return j;
+        return k;
       });
     var E = (function() {
         function e(e) {
@@ -49865,19 +49863,21 @@
           t
         );
       })(l.Component),
-      M = (function(n) {
+      M = 0,
+      T = (function(n) {
         function e(e) {
           var t = this;
           return (
-            ((t = n.call(this, e) || this).m_x =
-              Math.floor(50 * Math.random()) + 0 + "%"),
-            (t.m_y = Math.floor(75 * Math.random()) + 10 + "%"),
+            ((t = n.call(this, e) || this).m_x = c.b(0, 70) + "%"),
+            (t.m_y = c.b(0, 70) + "%"),
             (t.m_rotate = Math.floor(90 * Math.random()) - 45 + "deg"),
             (t.m_splatRots = [
               360 * Math.random(),
               360 * Math.random(),
               360 * Math.random()
             ]),
+            (t.m_nPathAnimation = c.b(1, 6)),
+            (t.m_nKeyID = ++M),
             t
           );
         }
@@ -49895,11 +49895,6 @@
                 src: this.getAsset(e),
                 className: o.join(" ")
               })
-            );
-          }),
-          (e.prototype.key = function() {
-            return (
-              this.m_x + this.m_y + this.m_rotate + this.props.effect.timestamp
             );
           }),
           (e.prototype.residue = function() {
@@ -49930,12 +49925,14 @@
             );
           }),
           (e.prototype.render = function() {
+            var e = "snowball-path-" + this.m_nPathAnimation,
+              t = { animationName: p.a[e] };
             return l.createElement(
               l.Fragment,
-              { key: this.key() },
+              { key: "" + this.m_nKeyID },
               l.createElement(
                 "div",
-                { className: p.a["snowball-path"] },
+                { className: p.a["snowball-path"], style: t },
                 l.createElement(
                   "div",
                   {
@@ -49978,7 +49975,7 @@
           e
         );
       })(D),
-      T = (function(e) {
+      R = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -50027,7 +50024,7 @@
           t
         );
       })(D),
-      R = (function(e) {
+      A = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -50077,7 +50074,7 @@
           t
         );
       })(D);
-    function A(e) {
+    function G(e) {
       var t = new E(e),
         n = 0.8 * t.next() + 0.5,
         o = 10 * (t.next() + e) + 10 + "px",
@@ -50096,7 +50093,7 @@
           ".png";
       return l.createElement("img", { style: i, src: a });
     }
-    var G = {
+    var j = {
         snowball: {
           timeout: parseInt(p.a.snowballDurationMs),
           renderButton: w.getIconImgFn("snowball"),
@@ -50104,7 +50101,7 @@
           buttonToken: "#ChatEntryButton_SendSnowball",
           locToken: "#ChatRoom_RoomEffectSnowball",
           render: function(e) {
-            return l.createElement(M, { effect: e });
+            return l.createElement(T, { effect: e });
           }
         },
         balloons: {
@@ -50114,7 +50111,7 @@
           buttonToken: "#ChatEntryButton_SendBalloons",
           locToken: "#ChatRoom_RoomEffectBalloons",
           render: function(e) {
-            return l.createElement(T, { effect: e });
+            return l.createElement(R, { effect: e });
           }
         },
         snow: {
@@ -50142,8 +50139,8 @@
                       p.a["Snowflake-" + (o % 20)]
                     )
                   },
-                  A(i),
-                  A(i + 1)
+                  G(i),
+                  G(i + 1)
                 )
               );
             }
@@ -50167,7 +50164,7 @@
           buttonToken: "#ChatEntryButton_SendGoldfetti",
           locToken: "#ChatRoom_RoomEffectGoldfetti",
           render: function(e) {
-            return l.createElement(R, { effect: e });
+            return l.createElement(A, { effect: e });
           }
         },
         firework: {
@@ -50181,7 +50178,7 @@
           }
         }
       },
-      j = (function(e) {
+      k = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }

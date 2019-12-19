@@ -39546,15 +39546,7 @@
             this.m_rectSlider =
               this.m_elSlider.current &&
               this.m_elSlider.current.getBoundingClientRect();
-            var a = t.GetTimeAtMousePosition(e, this.m_rectSlider, n, o);
-            if (a >= t.GetVideoAvailableStartTime()) {
-              var i = this.props.video.GetThumbnailForTimestamp(a);
-              this.setState({
-                nHoverValue: a,
-                hoverX: e - this.m_rectSlider.left,
-                thumbnailURL: i
-              });
-            }
+            t.GetTimeAtMousePosition(e, this.m_rectSlider, n, o);
           }),
           (e.prototype.OnSegmentClick = function(e) {
             this.props.video.Seek(e);
