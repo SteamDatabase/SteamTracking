@@ -15,7 +15,7 @@ a#store_search_link img {
 
 #logo_holder {
 display: inline-block; width: 176px; height: 44px; 
-background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/promo/winter2019/globalheader_logo.png' );
+background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/globalheader_logo.png' );
 background-size: 176px, 44px;
 }
 
@@ -376,12 +376,17 @@ body.v6.steamtown .page_container {
 .rewards_happymayor_img {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/smiling_mayor.png?v=2');
 	width: 349px;
 	height: 529px;
 	transition-duration: .23s;
 	transition-timing-function: ease-out;
 	z-index: 20;
+}
+.page_container_market .rewards_happymayor_img {
+    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/mayor_market.png?v=1');
+}
+.page_container_quests .rewards_happymayor_img {
+    background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/mayor_quest.png?v=1');
 }
 
 .rewards_mayor_ctn .steamtown_bubble_ctn:hover .rewards_happymayor_img, .rewards_happymayor_img:hover {
@@ -401,7 +406,7 @@ body.v6.steamtown .page_container {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	top: 0;
+	top: 43px;
 	left: 0;
 	z-index: 20;
 }
@@ -1239,7 +1244,7 @@ transform: translateY(-10px);
 
 .dialog_confirm_title {
 	font-size: 22px;
-	font-family: giza-three, serif; 	font-weight: 700;
+	font-family: giza-three, serif; 	font-weight: 500;
 	float: left;
 	margin-left: 10px;
 }
@@ -1257,7 +1262,7 @@ transform: translateY(-10px);
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 43px;
     right: 0;
     z-index: 20;
 }
@@ -1562,6 +1567,10 @@ transform: translateY(-10px);
 .snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
 
 
+html.force_desktop body {
+    min-width: 910px;
+}
+
 @media screen and (max-width: 910px) {
 
 	html.responsive .rewards_happymayor_img {
@@ -1697,7 +1706,7 @@ transform: translateY(-10px);
         align-self: center;
     }
 
-    html.responsive .rewards_tokens_amt {
+    html.responsive .winter2019_quest_actions .rewards_tokens_amt {
         text-align: center;
     }
 
@@ -1707,6 +1716,10 @@ transform: translateY(-10px);
 
     html.responsive .winter2019_quest_desc {
         text-align: center;
+    }
+
+    html.responsive .winter2019_quest_tomorrow {
+        margin: 0;
     }
 
     html.responsive .winter2019_mayor_sidebar {
@@ -1723,6 +1736,9 @@ transform: translateY(-10px);
 @media screen and (max-width: 700px ) {
     html.responsive .rewards_happymayor_img {
         width: 32vw;
+    }
+    html.responsive .rewards_body_ctn {
+        padding: 40px;
     }
 }
 
@@ -1744,5 +1760,9 @@ transform: translateY(-10px);
     }
     html.responsive .steamtown_bubble_ctn.bottom_center:before {
         display: none;
+    }
+
+    html.responsive .rewards_body_ctn {
+        padding: 20px;
     }
 }
