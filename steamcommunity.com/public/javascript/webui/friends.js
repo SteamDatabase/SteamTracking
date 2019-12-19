@@ -77896,7 +77896,7 @@ and limitations under the License.
           }),
           (e.prototype.bIsActive = function() {
             var e = Date.now();
-            return this.timestamp < e && this.expires > e;
+            return this.timestamp <= e && this.expires > e;
           }),
           (e.prototype.iTimeToExpiry = function() {
             return this.expires - Date.now();
