@@ -125,12 +125,13 @@ https://store.steampowered.com/public/css/bigpicture/eventbackground.css?__TIME_
 https://store.steampowered.com/public/css/bigpicture/home.css?__TIME__
 https://store.steampowered.com/public/css/bigpicture/store.css?__TIME__
 https://store.steampowered.com/public/css/bigpicture/subscription.css?__TIME__
+https://store.steampowered.com/public/css/labs_trending_reviews.css?__TIME__
 https://store.steampowered.com/public/css/labs.css?__TIME__
 https://store.steampowered.com/public/css/labs/divingbell.css?__TIME__
-https://store.steampowered.com/public/css/labs_trending_reviews.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2016.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2017.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2018.css?__TIME__
+https://store.steampowered.com/public/css/promo/autumn2019_sale.css?__TIME__
 https://store.steampowered.com/public/css/promo/curator_announce.css?__TIME__
 https://store.steampowered.com/public/css/promo/newstore2016.css?__TIME__
 https://store.steampowered.com/public/css/promo/storev6.css?__TIME__
@@ -139,6 +140,7 @@ https://store.steampowered.com/public/css/promo/summer2019.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter_2015_main.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2018_cottage.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2018.css?__TIME__
+https://store.steampowered.com/public/css/promo/winter2019_steamtown.css?__TIME__
 https://store.steampowered.com/public/css/styles_aboutv5.css?__TIME__
 https://store.steampowered.com/public/css/styles_hwsurvey.css?__TIME__
 https://store.steampowered.com/public/css/styles_parental.css?__TIME__
@@ -189,8 +191,8 @@ https://help.steampowered.com/public/javascript/help.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/admin_monitor.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/admin_publisher.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/admin.js?__TIME__&l=english
-https://partner.steamgames.com/public/javascript/apps.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/apps_workshop.js?__TIME__&l=english
+https://partner.steamgames.com/public/javascript/apps.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/contentdescriptors.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/creatorhome.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/doc_admin.js?__TIME__&l=english
@@ -256,9 +258,9 @@ https://steamcommunity.com/public/javascript/gifts.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/global.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/group_admin_functions.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/group_announcements.js?__TIME__&l=english
-https://steamcommunity.com/public/javascript/group_events_functions.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/group_create_functions.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/group_event_edit_functions.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/group_events_functions.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/group_functions.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/group_members_manage_functions.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/group.js?__TIME__&l=english
@@ -364,8 +366,8 @@ https://store.steampowered.com/public/javascript/curator_recommendations.js?__TI
 https://store.steampowered.com/public/javascript/curators_browse.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/demos.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/discoveryqueue.js?__TIME__&l=english
-https://store.steampowered.com/public/javascript/dynamicstore.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/dynamic_featured_apps.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/dynamicstore.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/emailvalidation.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/game.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/gamehighlightplayer.js?__TIME__&l=english
@@ -374,6 +376,7 @@ https://store.steampowered.com/public/javascript/home.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/hwsurvey.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/itemstore.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/jserrorreport.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/labs/divingbell.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/localization_helper.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/main.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/modal.js?__TIME__&l=english
@@ -393,7 +396,6 @@ https://store.steampowered.com/public/javascript/trending_reviews.js?__TIME__&l=
 https://store.steampowered.com/public/javascript/video_watch.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/wishlist.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/youraccount.js?__TIME__&l=english
-https://store.steampowered.com/public/javascript/labs/divingbell.js?__TIME__&l=english
 
 
 //
