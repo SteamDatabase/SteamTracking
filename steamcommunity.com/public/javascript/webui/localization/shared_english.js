@@ -853,7 +853,6 @@ LocalizationReady("shared", "english", {
   ChatEntryButton_Emoticon: "Emoticon Picker",
   ChatEntryButton_Flair: "Flair Picker",
   ChatEntryButton_SendEmbed: "Send Special",
-  ChatEntryButton_WinterSaleParty: "Start a decoration party",
 
   Store_AddToCart: "Add to Cart",
 
@@ -987,9 +986,22 @@ LocalizationReady("shared", "english", {
   SteamAward_NominationConflictWarning_Title: "Change your nomination?",
   SteamAward_NominationConflictWarning_Explanation:
     "You can only nominate one game for each category, and you have already nominated %1$s for this one. Would you like to nominate %2$s instead?",
+  SteamAward_VoteButton_PromptText: "Vote",
+  SteamAward_VoteButton_AlreadyVotedText: "Vote submitted",
   SteamAward_VoteConflictWarning_Title: "Change your vote?",
   SteamAward_VoteConflictWarning_Explanation:
     "You can only vote for one game for each category, and you have already voted for %1$s for this one. Would you like to change your vote to %2$s?",
+
+  Giveaway_CountDown: "%1$s left until next random draw!",
+  Giveaway_CountDown2: "Time left until next random draw.",
+  Giveaway_KeepWatching: "Keep watching for a chance to win!",
+  Giveaway_RandomDraw: "Random Draw in Progress",
+  Giveaway_Congratulation: "Number of lucky winners so far!",
+  Giveaway_Closed_NoWinnerInfo:
+    "The giveaway is now over, thanks for participating.",
+  Giveaway_Closed:
+    "The giveaway is now over with %1$s lucky winners, thanks for participating.",
+  Giveaway_LearnMore: "Click to learn more about the prizes, winners and rules",
 
   shared_dummy: "dont translate"
 });

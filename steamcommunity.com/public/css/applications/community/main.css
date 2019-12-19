@@ -343,6 +343,20 @@
   max-width: 320px;
   max-height: 320px; }
 
+.shared_svg_library_EmoticonBow_2Llzt {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.shared_svg_library_EmoticonBow_st0_Fw2WG {
+  opacity: 0.4;
+  fill: #231F20; }
+
+.shared_svg_library_EmoticonBow_st1_luj0t {
+  fill: #E41E25; }
+
 .toggle_Toggle_3POJz {
   width: 40px;
   height: 16px;
@@ -1620,8 +1634,7 @@ img.emoticon_emoticon_AB86v {
   stroke: #fff; }
 
 .chatentry_EmoticonPickerButton_Aupsw {
-  margin-right: 1px;
-  overflow: hidden; }
+  margin-right: 1px; }
 
 .chatentry_EmoticonPickerButton_Aupsw:hover {
   background-color: #3d424b; }
@@ -1664,9 +1677,12 @@ img.emoticon_emoticon_AB86v {
 .compactView .chatentry_chatSubmitButton_RVIs8 {
   min-width: 32px; }
 
-.chatEntry.compactView .chatentry_chatSubmitButton_RVIs8 svg {
+.chatEntry.compactView .chatentry_chatSubmitButton_RVIs8 svg:not(.chatentry_EmoticonBow_1Ujs5) {
   width: 20px;
   height: 20px; }
+
+.chatEntry.compactView .chatentry_EmoticonBow_1Ujs5 {
+  top: -13px; }
 
 .ChatMessageEntryVoice {
   /* our layout */

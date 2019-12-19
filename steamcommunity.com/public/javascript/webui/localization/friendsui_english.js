@@ -162,9 +162,11 @@ LocalizationReady("friendsui", "english", {
   ChatEntry_ChooseFromLibrary: "Choose Photo From Library",
 
   ChatEntryButton_SendSnowfall: "Make it snow!",
-  ChatEntryButton_SendConfetti: "Use a party popper!",
+  ChatEntryButton_SendConfetti: "Use confetti!",
   ChatEntryButton_SendSnowball: "Throw a snowball!",
   ChatEntryButton_SendFirework: "Launch fireworks!",
+  ChatEntryButton_SendGoldfetti: "Use gold confetti!",
+  ChatEntryButton_SendBalloons: "Launch balloons!",
   ChatEntryButton_SendSticker: "Send an animated sticker",
 
   MobilePermission_TakePhoto:
@@ -693,6 +695,7 @@ LocalizationReady("friendsui", "english", {
   bbcode_video_description: "%1$s shared a video",
   bbcode_inviteurl_description: "%1$s shared an invite link",
   bbcode_image_description: "%1$s shared an image",
+  bbcode_sticker_description: "%1$s sent a sticker",
 
   Button_OK: "OK",
   Button_Yes: "Yes",
@@ -1026,6 +1029,7 @@ LocalizationReady("friendsui", "english", {
     "Disable push notifications from friends that don't have friend specific settings",
   FriendSettings_Notification_ChatRoomNotificationDesc:
     "Disable all push notifications from group chats",
+  FriendSettings_DisableRoomEffects: "Disable animated room effects",
 
   FriendSettings_ChatFontSize: "Chat Font Size",
   FriendSetting_ChatFontSmall: "Small",
@@ -1212,15 +1216,20 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_New_Messages: "New messages since %1$s",
   ChatRoom_ReplayRoomEffect: "Replay effect",
   ChatRoom_RoomEffectSnow: "%1$s made it snow!",
-  ChatRoom_RoomEffectConfetti: "%1$s used a party popper!",
-  ChatRoom_RoomEffectsSnowball: "%1$s threw a snowball!",
+  ChatRoom_RoomEffectConfetti: "%1$s used confetti!",
+  ChatRoom_RoomEffectGoldfetti: "%1$s used gold confetti!",
+  ChatRoom_RoomEffectSnowball: "%1$s threw a snowball!",
   ChatRoom_RoomEffectFirework: "%1$s launched fireworks!",
+  ChatRoom_RoomEffectBalloons: "%1$s launched balloons!",
 
   bbcode_community_publishedfile_vote_up: "Rate",
 
   EmoticonPicker_RecentlyUsed: "Recently Used",
   EmoticonPicker_EffectHeading: "Room effects",
   EmoticonPicker_StickerHeading: "Animated stickers",
+  EmoticonPicker_GetFestivitiesInTheStore:
+    "Get animated stickers and room effects in the %1$s.",
+  EmoticonPicker_GetFestivitiesLinkText: "Holiday Market",
 
   ChatMentionSuggest_MembersMatching: "Chat members matching @%1$s",
   ChatMentionSuggest_NoMatches: "No matches",

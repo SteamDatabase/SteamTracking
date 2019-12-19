@@ -2414,7 +2414,7 @@ and limitations under the License.
               a.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
                 .then(function(e) {
-                  Object(l.B)(function() {
+                  Object(l.A)(function() {
                     (t.m_bConnectingToClient = !1),
                       (t.m_connectResult = e),
                       console.log(e);

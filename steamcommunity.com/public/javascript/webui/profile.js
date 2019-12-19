@@ -11,7 +11,7 @@
     )
       (n = r[c]), u[n] && a.push(u[n][0]), (u[n] = 0);
     for (t in o) Object.prototype.hasOwnProperty.call(o, t) && (s[t] = o[t]);
-    for (h && h(e); a.length; ) a.shift()();
+    for (p && p(e); a.length; ) a.shift()();
     return m.push.apply(m, i || []), l();
   }
   function l() {
@@ -81,7 +81,7 @@
     r = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var o = 0; o < t.length; o++) e(t[o]);
-  var h = r;
+  var p = r;
   m.push(["WC1h", 0]), l();
 })({
   "/7KC": function(e, t, n) {
@@ -136,10 +136,10 @@
         return m;
       }),
       n.d(t, "i", function() {
-        return h;
+        return p;
       }),
       n.d(t, "j", function() {
-        return p;
+        return h;
       }),
       n.d(t, "l", function() {
         return d;
@@ -242,7 +242,7 @@
       var t = void 0;
       return e && (t = e.ownerDocument.defaultView), t;
     }
-    function h(e) {
+    function p(e) {
       var t = document.createElement("textarea");
       (t.textContent = e),
         (t.style.position = "fixed"),
@@ -256,9 +256,9 @@
         document.body.removeChild(t);
       }
     }
-    function p(e) {
+    function h(e) {
       var t = "steam://openurl/";
-      e.startsWith(t) && (e = e.slice(t.length)), h(e);
+      e.startsWith(t) && (e = e.slice(t.length)), p(e);
     }
     function d(e) {
       return e
@@ -411,10 +411,10 @@
         return m;
       }),
       n.d(t, "i", function() {
-        return h;
+        return p;
       }),
       n.d(t, "j", function() {
-        return p;
+        return h;
       }),
       n.d(t, "l", function() {
         return d;
@@ -441,8 +441,8 @@
       l = 750,
       u = 799,
       m = 7,
-      h = 250820,
-      p = 330050,
+      p = 250820,
+      h = 330050,
       d = 358510,
       f = 366490,
       v = "18446744073709551615",
@@ -685,10 +685,10 @@
         return i;
       }),
       n.d(t, "h", function() {
-        return h;
+        return p;
       }),
       n.d(t, "g", function() {
-        return p;
+        return h;
       }),
       n.d(t, "d", function() {
         return d;
@@ -802,19 +802,19 @@
         e
       );
     }
-    function h(e) {
+    function p(e) {
       void 0 === e && (e = m);
       var t = {},
-        n = p("config", e);
+        n = h("config", e);
       n && (delete n.SESSIONID, Object.assign(a, n), (t.config = !0));
-      var r = p("userinfo", e);
+      var r = h("userinfo", e);
       r && (Object.assign(s, r), (t.userConfig = !0));
-      var o = p("broadcast", e);
+      var o = h("broadcast", e);
       o && (Object.assign(l, o), (t.broadcastConfig = !0));
-      var i = p("community", e);
+      var i = h("community", e);
       return i && (Object.assign(u, i), (t.communityConfig = !0)), t;
     }
-    function p(e, t) {
+    function h(e, t) {
       var n;
       if (
         (void 0 === t && (t = m),
@@ -916,14 +916,14 @@
           (o = c.clientX),
           (i = c.clientY);
       } else r = t;
-      var a = new p(e, r, o, i, n);
+      var a = new h(e, r, o, i, n);
       return a.Show(), a;
     }
     function m(e, t, n, r) {
-      var o = new p(e, t, n, r, { bForcePopup: !0, bScreenCoordinates: !0 });
+      var o = new h(e, t, n, r, { bForcePopup: !0, bScreenCoordinates: !0 });
       return o.Show(), o;
     }
-    var h = (function(n) {
+    var p = (function(n) {
         function e(e) {
           var t = n.call(this) || this;
           return (
@@ -1079,7 +1079,7 @@
           e
         );
       })(s),
-      p = (function(a) {
+      h = (function(a) {
         function s(e, t, n, r, o) {
           var i = a.call(this, t.ownerDocument.defaultView) || this;
           s.sm_iActiveContextMenuInstance &&
@@ -1119,7 +1119,7 @@
           (s.sm_mapEmbeddedMouseOverlays = new l.a("ContextMenuMouseOverlay")),
           s
         );
-      })(h),
+      })(p),
       d = (function(i) {
         function e(e, t, n) {
           var r = i.call(this, n.ownerDocument.defaultView) || this;
@@ -1156,7 +1156,7 @@
           }),
           e
         );
-      })(h);
+      })(p);
   },
   EGkk: function(e, t, n) {
     "use strict";
@@ -1200,8 +1200,8 @@
       o = n("1VtQ"),
       i = n("e2SU"),
       m = n("WpBz"),
-      h = n("oh5H"),
-      p = n("1n9R"),
+      p = n("oh5H"),
+      h = n("1n9R"),
       d = n("7Vyq"),
       f = n.n(d),
       v = n("QHER"),
@@ -1498,13 +1498,13 @@
                 this.props.options.bScreenCoordinates ||
                   ((s += n.screenLeft), (l += n.screenTop)),
                   (r = B.h(n, r));
-                var h = n.screen,
-                  p = 0,
+                var p = n.screen,
+                  h = 0,
                   d = 0;
-                h.availLeft && (p = h.availLeft),
-                  h.availTop && (d = h.availTop),
-                  (u = p + h.availWidth),
-                  (m = d + h.availHeight);
+                p.availLeft && (h = p.availLeft),
+                  p.availTop && (d = p.availTop),
+                  (u = h + p.availWidth),
+                  (m = d + p.availHeight);
               }
               (c.bOverlapHorizontal || c.bOverlapVertical) && (s = l = void 0);
               var f = s || r.left,
@@ -1747,7 +1747,7 @@
                   n.document.execCommand("cut");
                 }
               },
-              Object(h.c)("#ContextMenu_Cut")
+              Object(p.c)("#ContextMenu_Cut")
             )
           ),
         (document.queryCommandEnabled("copy") || o) &&
@@ -1760,10 +1760,10 @@
                   n.document.execCommand("copy");
                 }
               },
-              Object(h.c)("#ContextMenu_Copy")
+              Object(p.c)("#ContextMenu_Copy")
             )
           ),
-        p.c.IN_CLIENT &&
+        h.c.IN_CLIENT &&
           c &&
           t.push(
             a.createElement(
@@ -1774,7 +1774,7 @@
                   i.focus(), n.SteamClient._internal.Paste();
                 }
               },
-              Object(h.c)("#ContextMenu_Paste")
+              Object(p.c)("#ContextMenu_Paste")
             )
           ),
         t.length)
@@ -1925,8 +1925,8 @@
       l = n("WpBz"),
       u = n("1VtQ"),
       m = n("hEDq"),
-      h = n("oh5H"),
-      p = n("1n9R");
+      p = n("oh5H"),
+      h = n("1n9R");
     ((r = s || (s = {}))[(r.Minimized = 1)] = "Minimized"),
       (r[(r.Hidden = 2)] = "Hidden"),
       (r[(r.Tooltip = 4)] = "Tooltip"),
@@ -2036,10 +2036,10 @@
                 o.addEventListener("drop", this.OnDrop),
                 o.addEventListener("dragover", this.OnDragOver),
                 o.addEventListener("message", this.OnMessage),
-                p.c.LANGUAGE &&
+                h.c.LANGUAGE &&
                   o.document.documentElement.setAttribute(
                     "lang",
-                    h.a[p.c.LANGUAGE]
+                    p.a[h.c.LANGUAGE]
                   ),
                 (this.m_popup = o),
                 (this.m_element = i),
@@ -2401,15 +2401,15 @@
             t.html_class && (u = 'class="' + t.html_class + '"');
             var m = "";
             t.body_class && (m = 'class="' + t.body_class + '"');
-            var h =
+            var p =
               "<!DOCTYPE html><html " +
               u +
               "><head><title></title></head><body " +
               m +
               '><div id="popup_target"></div></body></html>';
-            l.document.write(h), (l.document.title = i);
+            l.document.write(p), (l.document.title = i);
             for (
-              var p = l.document.getElementsByTagName("head")[0],
+              var h = l.document.getElementsByTagName("head")[0],
                 d = document.getElementsByTagName("link"),
                 f = 0;
               f < d.length;
@@ -2425,7 +2425,7 @@
                   var y = v.attributes.item(E);
                   _.setAttribute(y.name, y.value);
                 }
-                p.appendChild(_);
+                h.appendChild(_);
               }
             }
             return {
@@ -2622,8 +2622,8 @@
       l = n("2vnA"),
       u = n("vDqi"),
       m = n.n(u),
-      h = { ProfileURL: "" };
-    function p(e) {
+      p = { ProfileURL: "" };
+    function h(e) {
       switch (e) {
         case 1:
           return Object(a.c)("#Privacy_Private");
@@ -2727,7 +2727,7 @@
                 JSON.stringify(this.m_eCommentPermission)
               ),
               m.a
-                .post(h.ProfileURL + "ajaxsetprivacy/", e)
+                .post(p.ProfileURL + "ajaxsetprivacy/", e)
                 .then(function(e) {
                   var t = e.data;
                   if (1 != t.success)
@@ -2743,7 +2743,7 @@
                     n &&
                       n.PrivacySettings &&
                       n.eCommentPermission &&
-                      Object(l.B)(function() {
+                      Object(l.A)(function() {
                         (r.m_PrivacySettings = n.PrivacySettings),
                           (r.m_eCommentPermission = n.eCommentPermission);
                       }),
@@ -2788,7 +2788,7 @@
                 {
                   PrivacyStore: e,
                   strLabel: Object(a.c)("#ProfilePrivacy_BasicDetails"),
-                  strReadOnlySetting: p(3)
+                  strReadOnlySetting: h(3)
                 },
                 Object(a.c)("#ProfilePrivacy_BasicDetails_Desc")
               ),
@@ -2858,12 +2858,12 @@
                     "#ProfilePrivacy_Inventory_Desc",
                     i.createElement(
                       "a",
-                      { href: h.ProfileURL + "inventory/" },
+                      { href: p.ProfileURL + "inventory/" },
                       Object(a.c)("#ProfilePrivacy_Inventory_Inventory")
                     ),
                     i.createElement(
                       "a",
-                      { href: h.ProfileURL + "inventory/#753_6" },
+                      { href: p.ProfileURL + "inventory/#753_6" },
                       Object(a.c)("#ProfilePrivacy_Inventory_TradingCards")
                     )
                   ),
@@ -2898,12 +2898,12 @@
                     "#ProfilePrivacy_UGC_Desc",
                     i.createElement(
                       "a",
-                      { href: h.ProfileURL + "screenshots/" },
+                      { href: p.ProfileURL + "screenshots/" },
                       Object(a.c)("#ProfilePrivacy_UGC_Desc_Screenshots")
                     ),
                     i.createElement(
                       "a",
-                      { href: h.ProfileURL + "myworkshopfiles/" },
+                      { href: p.ProfileURL + "myworkshopfiles/" },
                       Object(a.c)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
                     )
                   )
@@ -2979,7 +2979,7 @@
             );
         }),
         (t.prototype.render = function() {
-          var e = p(
+          var e = h(
             this.props.PrivacyStore.GetPrivacySetting(this.props.PrivacyKey)
           );
           return i.createElement(
@@ -3257,7 +3257,7 @@
       document.addEventListener("DOMContentLoaded", function() {
         var e;
         Object(c.c)(),
-          (e = Object(c.b)("config", "profile_config")) && Object.assign(h, e),
+          (e = Object(c.b)("config", "profile_config")) && Object.assign(p, e),
           (function() {
             for (
               var e = document.querySelectorAll(".ProfileReactRoot"), t = 0;
@@ -3332,226 +3332,224 @@
   },
   e2SU: function(e, t, n) {
     "use strict";
-    n.d(t, "A", function() {
-      return s;
+    n.d(t, "B", function() {
+      return u;
     }),
       n.d(t, "Z", function() {
-        return l;
-      }),
-      n.d(t, "g", function() {
-        return u;
-      }),
-      n.d(t, "j", function() {
         return m;
       }),
-      n.d(t, "o", function() {
-        return h;
-      }),
-      n.d(t, "F", function() {
+      n.d(t, "g", function() {
         return p;
       }),
-      n.d(t, "I", function() {
+      n.d(t, "j", function() {
+        return h;
+      }),
+      n.d(t, "o", function() {
         return d;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "G", function() {
         return f;
       }),
-      n.d(t, "fb", function() {
+      n.d(t, "J", function() {
         return v;
       }),
-      n.d(t, "U", function() {
+      n.d(t, "p", function() {
         return _;
       }),
-      n.d(t, "S", function() {
+      n.d(t, "eb", function() {
         return E;
       }),
-      n.d(t, "qb", function() {
+      n.d(t, "U", function() {
         return y;
       }),
-      n.d(t, "rb", function() {
+      n.d(t, "S", function() {
         return b;
       }),
-      n.d(t, "ob", function() {
+      n.d(t, "pb", function() {
         return g;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "qb", function() {
         return w;
       }),
-      n.d(t, "hb", function() {
+      n.d(t, "nb", function() {
         return k;
       }),
-      n.d(t, "x", function() {
+      n.d(t, "s", function() {
         return S;
       }),
-      n.d(t, "w", function() {
+      n.d(t, "gb", function() {
         return x;
       }),
-      n.d(t, "P", function() {
+      n.d(t, "y", function() {
         return M;
       }),
-      n.d(t, "R", function() {
+      n.d(t, "x", function() {
         return C;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "P", function() {
         return L;
       }),
-      n.d(t, "u", function() {
+      n.d(t, "R", function() {
         return P;
       }),
-      n.d(t, "C", function() {
+      n.d(t, "a", function() {
         return O;
       }),
-      n.d(t, "M", function() {
+      n.d(t, "v", function() {
         return I;
       }),
-      n.d(t, "pb", function() {
+      n.d(t, "D", function() {
         return B;
       }),
-      n.d(t, "L", function() {
-        return R;
-      }),
-      n.d(t, "k", function() {
+      n.d(t, "N", function() {
         return N;
       }),
-      n.d(t, "Q", function() {
+      n.d(t, "ob", function() {
+        return R;
+      }),
+      n.d(t, "M", function() {
         return T;
       }),
-      n.d(t, "O", function() {
+      n.d(t, "k", function() {
         return D;
       }),
-      n.d(t, "cb", function() {
+      n.d(t, "Q", function() {
         return G;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "O", function() {
         return V;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "bb", function() {
         return F;
       }),
-      n.d(t, "f", function() {
-        return H;
-      }),
-      n.d(t, "E", function() {
+      n.d(t, "h", function() {
         return W;
       }),
-      n.d(t, "ib", function() {
+      n.d(t, "l", function() {
+        return H;
+      }),
+      n.d(t, "f", function() {
         return z;
       }),
-      n.d(t, "mb", function() {
+      n.d(t, "F", function() {
         return j;
       }),
-      n.d(t, "B", function() {
+      n.d(t, "hb", function() {
         return A;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "lb", function() {
         return U;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "C", function() {
         return K;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "c", function() {
         return Y;
       }),
-      n.d(t, "gb", function() {
+      n.d(t, "b", function() {
         return q;
       }),
-      n.d(t, "G", function() {
+      n.d(t, "n", function() {
         return X;
       }),
-      n.d(t, "J", function() {
+      n.d(t, "fb", function() {
+        return J;
+      }),
+      n.d(t, "H", function() {
+        return Q;
+      }),
+      n.d(t, "K", function() {
         return Z;
       }),
       n.d(t, "V", function() {
-        return J;
-      }),
-      n.d(t, "T", function() {
-        return Q;
-      }),
-      n.d(t, "jb", function() {
         return $;
       }),
-      n.d(t, "kb", function() {
+      n.d(t, "T", function() {
         return ee;
       }),
-      n.d(t, "Y", function() {
+      n.d(t, "ib", function() {
         return te;
       }),
-      n.d(t, "s", function() {
+      n.d(t, "jb", function() {
         return ne;
       }),
-      n.d(t, "t", function() {
+      n.d(t, "Y", function() {
         return re;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "t", function() {
         return oe;
       }),
-      n.d(t, "H", function() {
+      n.d(t, "u", function() {
         return ie;
       }),
-      n.d(t, "eb", function() {
+      n.d(t, "m", function() {
         return ce;
       }),
-      n.d(t, "db", function() {
+      n.d(t, "I", function() {
         return ae;
       }),
-      n.d(t, "nb", function() {
+      n.d(t, "db", function() {
         return se;
       }),
-      n.d(t, "v", function() {
+      n.d(t, "cb", function() {
         return le;
       }),
-      n.d(t, "W", function() {
+      n.d(t, "mb", function() {
         return ue;
       }),
-      n.d(t, "X", function() {
+      n.d(t, "w", function() {
         return me;
       }),
-      n.d(t, "z", function() {
-        return he;
-      }),
-      n.d(t, "ab", function() {
+      n.d(t, "W", function() {
         return pe;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "X", function() {
+        return he;
+      }),
+      n.d(t, "A", function() {
         return de;
       }),
-      n.d(t, "K", function() {
+      n.d(t, "ab", function() {
         return fe;
       }),
-      n.d(t, "lb", function() {
+      n.d(t, "d", function() {
         return ve;
       }),
-      n.d(t, "D", function() {
+      n.d(t, "L", function() {
         return _e;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "kb", function() {
         return Ee;
       }),
-      n.d(t, "sb", function() {
+      n.d(t, "E", function() {
         return ye;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "r", function() {
         return be;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "rb", function() {
         return ge;
       }),
-      n.d(t, "y", function() {
+      n.d(t, "e", function() {
         return we;
       }),
-      n.d(t, "N", function() {
+      n.d(t, "i", function() {
         return ke;
       }),
-      n.d(t, "bb", function() {
+      n.d(t, "z", function() {
         return Se;
+      }),
+      n.d(t, "q", function() {
+        return xe;
       });
     var r = n("mrSG"),
       o = n("q1tI"),
       i = n("twdX"),
       c = n.n(i),
-      a = n("QHER");
-    n("/7KC"), n("vvG3");
-    function s() {
+      a = n("QHER"),
+      s = (n("/7KC"), n("vvG3")),
+      l = n.n(s);
+    function u() {
       return o.createElement(
         "svg",
         {
@@ -3587,7 +3585,7 @@
         )
       );
     }
-    function l() {
+    function m() {
       return o.createElement(
         "svg",
         {
@@ -3608,7 +3606,7 @@
         })
       );
     }
-    function u() {
+    function p() {
       return o.createElement(
         "svg",
         {
@@ -3630,7 +3628,7 @@
         )
       );
     }
-    function m() {
+    function h() {
       return o.createElement(
         "svg",
         {
@@ -3679,7 +3677,7 @@
         })
       );
     }
-    function h() {
+    function d() {
       return o.createElement(
         "svg",
         {
@@ -3696,7 +3694,7 @@
         })
       );
     }
-    function p() {
+    function f() {
       return o.createElement(
         "svg",
         {
@@ -3724,7 +3722,7 @@
         )
       );
     }
-    function d(e) {
+    function v(e) {
       var t = "SVGIcon_Button SVGIcon_Microphone";
       return (
         e.className && (t += " " + e.className),
@@ -3870,7 +3868,7 @@
         )
       );
     }
-    function f() {
+    function _() {
       return o.createElement(
         "svg",
         {
@@ -3926,7 +3924,7 @@
         })
       );
     }
-    function v() {
+    function E() {
       return o.createElement(
         "svg",
         {
@@ -3955,7 +3953,7 @@
         )
       );
     }
-    function _() {
+    function y() {
       return o.createElement(
         "svg",
         {
@@ -3987,7 +3985,7 @@
         )
       );
     }
-    function E() {
+    function b() {
       return o.createElement(
         "svg",
         {
@@ -4004,7 +4002,7 @@
         })
       );
     }
-    function y(e) {
+    function g(e) {
       return o.createElement(
         "svg",
         Object(r.a)(
@@ -4029,7 +4027,7 @@
         )
       );
     }
-    function b() {
+    function w() {
       return o.createElement(
         "svg",
         {
@@ -4065,7 +4063,7 @@
         })
       );
     }
-    function g(e) {
+    function k(e) {
       return o.createElement(
         "svg",
         {
@@ -4157,7 +4155,7 @@
           )
       );
     }
-    function w() {
+    function S() {
       return o.createElement(
         "svg",
         {
@@ -4206,7 +4204,7 @@
         )
       );
     }
-    function k() {
+    function x() {
       return o.createElement(
         "svg",
         {
@@ -4293,7 +4291,7 @@
         })
       );
     }
-    function S(e) {
+    function M(e) {
       var t = "SVGIcon_Button SVGIcon_Headphones";
       return (
         e.className && (t += " " + e.className),
@@ -4356,7 +4354,7 @@
         )
       );
     }
-    function x() {
+    function C() {
       return o.createElement(
         "svg",
         {
@@ -4380,7 +4378,7 @@
         )
       );
     }
-    function M(e) {
+    function L(e) {
       var t = "SVGIcon_Button SVGIcon_Pin";
       return (
         e.bPinned && (t += " Pinned"),
@@ -4422,7 +4420,7 @@
         )
       );
     }
-    function C(e) {
+    function P(e) {
       return o.createElement(
         "svg",
         {
@@ -4469,7 +4467,7 @@
           })
       );
     }
-    function L() {
+    function O() {
       return o.createElement(
         "svg",
         {
@@ -4503,7 +4501,7 @@
         })
       );
     }
-    function P() {
+    function I() {
       return o.createElement(
         "svg",
         {
@@ -4547,7 +4545,7 @@
         })
       );
     }
-    function O() {
+    function B() {
       return o.createElement(
         "svg",
         {
@@ -4595,7 +4593,7 @@
         )
       );
     }
-    function I() {
+    function N() {
       return o.createElement(
         "svg",
         {
@@ -4619,7 +4617,7 @@
         })
       );
     }
-    function B(e) {
+    function R(e) {
       return o.createElement(
         "svg",
         {
@@ -4691,7 +4689,7 @@
         )
       );
     }
-    function R() {
+    function T() {
       return o.createElement(
         "svg",
         {
@@ -4729,7 +4727,7 @@
         })
       );
     }
-    function N() {
+    function D() {
       return o.createElement(
         "svg",
         {
@@ -4753,7 +4751,7 @@
         )
       );
     }
-    function T() {
+    function G() {
       return o.createElement(
         "svg",
         {
@@ -4774,7 +4772,7 @@
         })
       );
     }
-    function D() {
+    function V() {
       return o.createElement(
         "svg",
         {
@@ -4798,7 +4796,7 @@
         })
       );
     }
-    function G(e) {
+    function F(e) {
       return o.createElement(
         "svg",
         {
@@ -4886,7 +4884,7 @@
         )
       );
     }
-    function V() {
+    function W() {
       return o.createElement(
         "svg",
         {
@@ -4911,7 +4909,7 @@
         })
       );
     }
-    function F(e) {
+    function H(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return o.createElement(
@@ -4991,7 +4989,7 @@
         })
       );
     }
-    function H() {
+    function z() {
       return o.createElement(
         "svg",
         {
@@ -5049,7 +5047,7 @@
         )
       );
     }
-    function W() {
+    function j() {
       return o.createElement(
         "svg",
         {
@@ -5079,7 +5077,7 @@
         })
       );
     }
-    function z(e) {
+    function A(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -5323,7 +5321,7 @@
         )
       );
     }
-    function j() {
+    function U() {
       return o.createElement(
         "svg",
         {
@@ -5348,7 +5346,7 @@
         })
       );
     }
-    function A() {
+    function K() {
       return o.createElement(
         "svg",
         {
@@ -5374,7 +5372,7 @@
         })
       );
     }
-    function U() {
+    function Y() {
       return o.createElement(
         "svg",
         {
@@ -5394,7 +5392,7 @@
         })
       );
     }
-    function K(e) {
+    function q(e) {
       return o.createElement(
         "svg",
         {
@@ -5429,7 +5427,7 @@
         })
       );
     }
-    function Y(e) {
+    function X(e) {
       return o.createElement(
         "svg",
         {
@@ -5465,7 +5463,7 @@
           })
       );
     }
-    function q() {
+    function J() {
       return o.createElement(
         "svg",
         {
@@ -5499,7 +5497,7 @@
         })
       );
     }
-    function X() {
+    function Q() {
       return o.createElement(
         "svg",
         {
@@ -5561,7 +5559,7 @@
         })
       );
     }
-    function J() {
+    function $() {
       return o.createElement(
         "svg",
         {
@@ -5594,7 +5592,7 @@
         })
       );
     }
-    function Q() {
+    function ee() {
       return o.createElement(
         "svg",
         {
@@ -5622,7 +5620,7 @@
         })
       );
     }
-    function $() {
+    function te() {
       return o.createElement(
         "svg",
         {
@@ -5646,7 +5644,7 @@
         })
       );
     }
-    function ee() {
+    function ne() {
       return o.createElement(
         "svg",
         {
@@ -5725,7 +5723,7 @@
         )
       );
     }
-    function te() {
+    function re() {
       return o.createElement(
         "svg",
         {
@@ -5749,7 +5747,7 @@
         )
       );
     }
-    function ne(e) {
+    function oe(e) {
       return o.createElement(
         "svg",
         {
@@ -5770,7 +5768,7 @@
         })
       );
     }
-    function re(e) {
+    function ie(e) {
       return o.createElement(
         "svg",
         {
@@ -5834,7 +5832,7 @@
         )
       );
     }
-    function oe() {
+    function ce() {
       return o.createElement(
         "svg",
         {
@@ -5869,7 +5867,7 @@
         })
       );
     }
-    function ie(e) {
+    function ae(e) {
       return o.createElement(
         "svg",
         {
@@ -5907,7 +5905,7 @@
         })
       );
     }
-    function ce() {
+    function se() {
       return o.createElement(
         "svg",
         {
@@ -6021,7 +6019,7 @@
         )
       );
     }
-    function ae(e) {
+    function le(e) {
       var t = Object(a.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -6055,7 +6053,7 @@
         })
       );
     }
-    function se() {
+    function ue() {
       return o.createElement(
         "svg",
         {
@@ -6083,7 +6081,7 @@
         })
       );
     }
-    function le() {
+    function me() {
       return o.createElement(
         "svg",
         {
@@ -6105,7 +6103,7 @@
         )
       );
     }
-    function ue() {
+    function pe() {
       return o.createElement(
         "svg",
         {
@@ -6142,7 +6140,7 @@
         )
       );
     }
-    function me() {
+    function he() {
       return o.createElement(
         "svg",
         {
@@ -6170,7 +6168,7 @@
         })
       );
     }
-    function he(e) {
+    function de(e) {
       return o.createElement(
         "svg",
         {
@@ -6282,7 +6280,7 @@
         )
       );
     }
-    function pe() {
+    function fe() {
       return o.createElement(
         "svg",
         {
@@ -6349,7 +6347,7 @@
         })
       );
     }
-    function de() {
+    function ve() {
       return o.createElement(
         "svg",
         {
@@ -6370,7 +6368,7 @@
         })
       );
     }
-    function fe() {
+    function _e() {
       return o.createElement(
         "svg",
         {
@@ -6390,7 +6388,7 @@
         })
       );
     }
-    function ve() {
+    function Ee() {
       return o.createElement(
         "svg",
         {
@@ -6414,7 +6412,7 @@
         })
       );
     }
-    function _e() {
+    function ye() {
       return o.createElement(
         "svg",
         {
@@ -6464,7 +6462,7 @@
         })
       );
     }
-    function Ee() {
+    function be() {
       return o.createElement(
         "svg",
         {
@@ -6497,7 +6495,7 @@
         })
       );
     }
-    function ye() {
+    function ge() {
       return o.createElement(
         "svg",
         {
@@ -6517,7 +6515,7 @@
         })
       );
     }
-    function be() {
+    function we() {
       return o.createElement(
         "svg",
         {
@@ -6539,7 +6537,7 @@
         })
       );
     }
-    function ge() {
+    function ke() {
       return o.createElement(
         "svg",
         {
@@ -6573,7 +6571,7 @@
         })
       );
     }
-    function we() {
+    function Se() {
       return o.createElement(
         "svg",
         {
@@ -6643,139 +6641,79 @@
         })
       );
     }
-    function ke() {
-      return o.createElement(
-        "svg",
-        { xmlns: "http://www.w3.org/2000/svg", viewBox: "-8 -8 80 80" },
+    function xe(e) {
+      var t = l.a.EmoticonBow;
+      return (
+        e.className && (t += " " + e.className),
         o.createElement(
-          "g",
-          { id: "Layer_2", "data-name": "Layer 2" },
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 47 63.08",
+            className: t
+          },
           o.createElement(
             "g",
-            { id: "Layer_1-2", "data-name": "Layer 1" },
+            { id: "Layer_2_1_" },
             o.createElement(
               "g",
-              { id: "Layer_2-2", "data-name": "Layer 2" },
-              o.createElement(
-                "g",
-                { id: "Layer_1-2-2", "data-name": "Layer 1-2" },
-                o.createElement("path", {
-                  style: { fill: "#4ef4a8" },
-                  d:
-                    "M.74,10.86l3.4,1.91.78.18L9,13a.92.92,0,0,0,.72-.19l4.56-3.57a1,1,0,0,0,.36-.72l0-2.6a.9.9,0,0,0-.1-.42l-.63-2.89-.5-.56-.84-.4a.92.92,0,0,0-1.25-.33.84.84,0,0,0-.31.31L10.09,1C10,1.22,10.2,2.83,10,2.9L6.73,4a.82.82,0,0,0-.26.14L5.65,5.94c-.15,1.35-.8.91-.8,1l-.61.84c-.28.44-1.52,0-1.95-.33h0A.92.92,0,0,0,1,7.61a1.17,1.17,0,0,0-.15.27l.41.79C1.06,9.2.24,10.69.74,10.86Z"
-                }),
-                o.createElement("path", {
-                  style: { fill: "#4ef4a8" },
-                  d:
-                    "M62.09,44.34,57.51,44s-.62.28-.67.29L53.68,45.7a.88.88,0,0,0-.58.45l-2.72,5.12a.86.86,0,0,0,0,.78l1,2.37a1,1,0,0,0,.33.34l2.93,2.49.08.06.32.22a.92.92,0,0,0,1.27-.26.83.83,0,0,0,.14-.38l.45.47a10.49,10.49,0,0,1,0-2L59.44,53a1.3,1.3,0,0,0,.18-.23l.64-1.88a8.56,8.56,0,0,0-.19-.9l1-1.16a.91.91,0,0,1,1-.77h0a.94.94,0,0,0,1.08-.74,1.09,1.09,0,0,0,0-.18l-.1-1.9a.93.93,0,0,0-.94-.91Z"
-                }),
-                o.createElement("polygon", {
-                  style: { fill: "#4ef4a8" },
-                  points:
-                    "31.35 25.11 17.79 8.15 13.3 10.53 6.82 16.87 10.21 21.98 20.05 34.1 20.1 30.19 23.87 31.08 24.28 27.35 27.78 28.07 27.79 24.43 31.35 25.11"
-                }),
-                o.createElement("polygon", {
-                  style: { fill: "#4ef4a8" },
-                  points:
-                    "51.85 47.94 55.09 42.43 53.48 39.55 39.7 31.6 34.82 31.83 37.15 35.34 33.49 36.69 33.7 39.88 30 40.06 31.01 43.95 47.77 53.28 51.85 47.94"
-                }),
-                o.createElement("path", {
-                  style: { fill: "#f9f9f9" },
-                  d:
-                    "M26.26,45.38h.14a1.14,1.14,0,0,1,1,1.28l-.8,5.9a1.13,1.13,0,1,1-2.25-.3h0l.8-5.93A1.14,1.14,0,0,1,26.26,45.38Z"
-                }),
-                o.createElement("path", {
-                  style: { fill: "#f9f9f9" },
-                  d:
-                    "M13,38.5l6-.58h.14a1.14,1.14,0,1,1,.08,2.27l-5.95.59A1.15,1.15,0,0,1,13,38.51Z"
-                }),
-                o.createElement("path", {
-                  style: { fill: "#f9f9f9" },
-                  d:
-                    "M21.4,44a1.14,1.14,0,0,1,0,1.61h0l-3.89,3.75a1.14,1.14,0,1,1-1.7-1.51l.13-.12L19.76,44a1.17,1.17,0,0,1,1.64,0Z"
-                }),
-                o.createElement("path", {
-                  style: { fill: "#4ef4a8" },
-                  d:
-                    "M63.09,44.25a8.7,8.7,0,0,0-8.42-.15l.21-.36a3.13,3.13,0,0,0-1.1-4.28L39.25,30.88h-.08L39,30.83h-.23l-4.12.33h-.14a.79.79,0,0,0-.55,1,.56.56,0,0,0,0,.12L35.26,35l-3,.25a.77.77,0,0,0-.71.84,1.1,1.1,0,0,0,.06.26l1.25,2.75-3,.25a.77.77,0,0,0-.65,1.1l1.7,3.76a.07.07,0,0,0,.05.06.6.6,0,0,0,.09.13l.12.1.06.06,14.52,8.53A3.13,3.13,0,0,0,50,52l.21-.35a8.53,8.53,0,0,0,4.19,7.31.78.78,0,0,0,1.07-.27c.14-.23.27-.28.79-.38a2.4,2.4,0,0,0,1.78-1.06,2.36,2.36,0,0,0,.1-2.12c-.15-.48-.18-.62,0-.85s.28-.28.79-.38a2.37,2.37,0,0,0,1.8-1.12,2.31,2.31,0,0,0,.1-2.11c-.14-.47-.17-.62,0-.85s.28-.28.79-.37a2.36,2.36,0,0,0,1.75-1.14,2.43,2.43,0,0,0,.1-2.12c-.16-.47-.18-.62,0-.86A.78.78,0,0,0,63.09,44.25ZM49.57,47.08A2.51,2.51,0,0,1,52.9,44l-2.52,4.28A2.48,2.48,0,0,1,49.57,47.08Zm-7.63,2-4.26-2.51a2.52,2.52,0,0,1,4.26,2.51Zm2.48-12a2.17,2.17,0,1,1-2.65-1.55h0A2.17,2.17,0,0,1,44.42,37.11Zm9.24,5.55A4,4,0,0,0,51,42.41a4.08,4.08,0,0,0-1.39,7.25l-.91,1.55a1.57,1.57,0,0,1-2.14.55l-3.24-1.92a4.07,4.07,0,0,0-7-4.11l-4.11-2.42-1.15-2.53,3-.24a.78.78,0,0,0,.75-.81,1,1,0,0,0-.07-.29l-1.24-2.75,3-.22a.75.75,0,0,0,.61-.39.76.76,0,0,0,0-.72L35.9,32.55l2.77-.23L41.48,34h-.09a3.74,3.74,0,1,0,4.55,2.69h0v-.08L53,40.76A1.57,1.57,0,0,1,53.66,42.66Zm8.07,2.64a3,3,0,0,0,.18,1.34c.16.48.18.62,0,.86s-.27.27-.79.37a2.27,2.27,0,0,0-1.9,3.23c.14.47.17.62,0,.85s-.27.28-.79.37a2.41,2.41,0,0,0-1.8,1.12,2.36,2.36,0,0,0-.1,2.12c.15.48.17.62,0,.85s-.28.28-.79.38a2.91,2.91,0,0,0-1.27.49,7,7,0,0,1-1.94-9.22,7.06,7.06,0,0,1,9.09-2.76Z"
-                }),
-                o.createElement("path", {
-                  style: { fill: "#4ef4a8" },
-                  d:
-                    "M.3,9.83a.77.77,0,0,0-.13,1.09,8.45,8.45,0,0,0,5.71,3.19,8.21,8.21,0,0,0,2.1,0l-.33.26a3.13,3.13,0,0,0-.5,4.37l12.56,15.9.06,0,.11.1.14.08.13,0h.3a1,1,0,0,0,.29-.11l.07,0,.05-.06a.52.52,0,0,0,.1-.11l.08-.13a.2.2,0,0,1,0-.14.38.38,0,0,0,0-.15v-.07l-.17-3,2.9.84a.78.78,0,0,0,1-.53,1,1,0,0,0,0-.24l-.17-3,2.89.83a.79.79,0,0,0,1-.8l-.17-3,2.9.83h.37l.14-.05.14-.07h0l.06-.05a.91.91,0,0,0,.1-.13l.08-.14v-.3a.33.33,0,0,0,0-.14.7.7,0,0,0,0-.14,1,1,0,0,0-.08-.14v-.06L19.53,8.85a3.15,3.15,0,0,0-2.09-1.17h0a3.13,3.13,0,0,0-2.3.67l-.33.25A8.54,8.54,0,0,0,13.53.3.8.8,0,0,0,12.42.17c-.2.17-.35.16-.84.08a2.28,2.28,0,0,0-2.85,1.5,2.37,2.37,0,0,0-.09.79c0,.51-.06.65-.27.78s-.35.17-.84.08A2.29,2.29,0,0,0,4.68,4.91a2.35,2.35,0,0,0-.1.79c0,.49,0,.63-.26.78s-.36.16-.84.08A2.35,2.35,0,0,0,1.4,7a2.42,2.42,0,0,0-.82,2C.53,9.52.5,9.66.3,9.83Zm25.24,11a2.17,2.17,0,1,1-1.93-2.39h0A2.19,2.19,0,0,1,25.54,20.86Zm-9,7.21-3.06-3.89a2.5,2.5,0,0,1,3.12.61,2.46,2.46,0,0,1,.56,1.84A2.5,2.5,0,0,1,16.53,28.07Zm-7.9-12.5,7.5-6a1.64,1.64,0,0,1,1.15-.33h0a1.58,1.58,0,0,1,1,.59l5.6,7.07h-.12a3.73,3.73,0,1,0,3.28,4.14h0V21l2.3,2.87-1.56-.47H27.7a.78.78,0,0,0-.57.16.79.79,0,0,0-.31.66l.18,3-2.9-.83a.75.75,0,0,0-.71.13.77.77,0,0,0-.29.66l.08,3-2.89-.84a.78.78,0,0,0-1,.54.59.59,0,0,0,0,.23l.09,1.66-1.9-2.39a4.07,4.07,0,0,0-5-6.36L8.34,17.76A1.55,1.55,0,0,1,8.63,15.57ZM1.8,10.43a2.78,2.78,0,0,0,.33-1.32c0-.49.05-.63.26-.78s.36-.16.84-.08A2.27,2.27,0,0,0,6.07,6.74,2.33,2.33,0,0,0,6.17,6c0-.5.06-.64.26-.78s.36-.17.85-.08a2.35,2.35,0,0,0,2.09-.4,2.41,2.41,0,0,0,.81-1.94c0-.49.06-.64.27-.78s.36-.16.85-.08l.37.06a2.69,2.69,0,0,0,1-.06A7,7,0,0,1,1.76,10.54Z"
-                }),
-                o.createElement("path", {
-                  style: { fill: "#4ef4a8" },
-                  d:
-                    "M11.58,16.28A3.73,3.73,0,1,0,15.71,13,3.72,3.72,0,0,0,11.58,16.28Zm1.56.18a2.16,2.16,0,1,1,1.91,2.39h0a2.18,2.18,0,0,1-1.91-2.38Z"
-                })
-              )
-            ),
-            o.createElement("path", {
-              style: { fill: "#f9f9f9" },
-              d:
-                "M35.25,21.41h-.13a1.13,1.13,0,0,1-1-1.22l.42-5.94a1.13,1.13,0,1,1,2.26.16h0l-.42,6A1.14,1.14,0,0,1,35.25,21.41Z"
-            }),
-            o.createElement("path", {
-              style: { fill: "#f9f9f9" },
-              d:
-                "M48.89,27.43l-5.9,1h-.13a1.14,1.14,0,1,1-.23-2.26l5.9-1a1.14,1.14,0,1,1,.36,2.26Z"
-            }),
-            o.createElement("path", {
-              style: { fill: "#f9f9f9" },
-              d:
-                "M40.2,22.49a1.13,1.13,0,0,1-.08-1.6h0l3.65-4a1.12,1.12,0,0,1,1.59-.2,1.13,1.13,0,0,1,.2,1.6l-.12.13-3.61,4a1.17,1.17,0,0,1-1.63.08Z"
-            }),
-            o.createElement("rect", {
-              style: { fill: "#acfcd2" },
-              x: "19.85",
-              y: "10.23",
-              width: "3.74",
-              height: "16.45",
-              transform: "translate(-6.75 17.12) rotate(-37.67)"
-            }),
-            o.createElement("rect", {
-              style: { fill: "#acfcd2" },
-              x: "42.62",
-              y: "31.13",
-              width: "3.74",
-              height: "16.45",
-              transform: "translate(-11.84 58.21) rotate(-60)"
-            })
+              { id: "Layer_2-2" },
+              o.createElement("polygon", {
+                className: l.a.EmoticonBow_st0,
+                points:
+                  "26.54,63.08 47,38.88 47,50.98 36.77,63.08                               "
+              }),
+              o.createElement("polygon", {
+                className: l.a.EmoticonBow_st1,
+                points:
+                  "23,63.08 47,35.08 47,49.08 35,63.08                            "
+              }),
+              o.createElement("polygon", {
+                className: l.a.EmoticonBow_st0,
+                points:
+                  "42.86,22.41 37.42,16.08 12.84,16.08 0,31.06 0,46.3 25.66,16.36 37.64,30.29 38.78,24.06 \r\n\t\t\t\t\t\t\t\t\t43.58,24.06 44.28,24.06                                "
+              }),
+              o.createElement("polygon", {
+                className: l.a.EmoticonBow_st1,
+                points:
+                  "24.22,16.08 0,44.08 0,30.08 12.11,16.08                    "
+              }),
+              o.createElement("polygon", {
+                className: l.a.EmoticonBow_st1,
+                points:
+                  "34.45,10.49 44.06,21.71 38.45,21.71 37.39,27.36 26.92,15.14 28.76,10.49                        "
+              }),
+              o.createElement("polygon", {
+                className: l.a.EmoticonBow_st1,
+                points:
+                  "27.81,6.41 40.57,0 44.35,0 44.9,11.7 39.23,12.84 35.49,8.17 35.49,8.17 28.83,8                                 "
+              }),
+              o.createElement("polygon", {
+                className: l.a.EmoticonBow_st0,
+                points:
+                  "12.09,16.08 5.15,24.12 9.58,24.08 10.72,30.29 22.99,16.08                               "
+              }),
+              o.createElement("polygon", {
+                className: l.a.EmoticonBow_st1,
+                points:
+                  "14.17,10.49 4.55,21.71 10.16,21.71 11.23,27.36 21.7,15.14 19.86,10.49                                 "
+              }),
+              o.createElement("polygon", {
+                className: l.a.EmoticonBow_st1,
+                points:
+                  "20.71,6.41 7.95,0 4.17,0 3.62,11.7 9.28,12.84 13.02,8.17 13.02,8.17 19.68,8                                 "
+              }),
+              o.createElement("polygon", {
+                className: l.a.EmoticonBow_st1,
+                points:
+                  "25.78,7.22 24.52,7.22 24.05,7.22 22.79,7.22 21.99,8.67 24.05,13.98 24.52,13.98 26.58,8.67                  "
+              })
+            )
           )
-        )
-      );
-    }
-    function Se() {
-      return o.createElement(
-        "svg",
-        {
-          xmlns: "http://www.w3.org/2000/svg",
-          version: "1.1",
-          x: "0px",
-          y: "0px",
-          viewBox: "0 0 92 80",
-          "enable-background": "new 0 0 110 110"
-        },
-        o.createElement(
-          "g",
-          null,
-          o.createElement("path", {
-            fill: "#ffffff",
-            d:
-              "M18.987,47.334c-1.475,0-2.671,1.196-2.671,2.671c0,1.475,1.196,2.671,2.671,2.671h6.563   c1.475,0,2.671-1.196,2.671-2.671c0-1.475-1.196-2.671-2.671-2.671H18.987z"
-          }),
-          o.createElement("circle", {
-            fill: "#ffffff",
-            cx: "32.584",
-            cy: "60.683",
-            r: "2.673"
-          }),
-          o.createElement("path", {
-            fill: "#ffffff",
-            d:
-              "M58.85,36.655h-6.461h-9.295c-0.038-0.002-0.073-0.011-0.111-0.011H29.667   c-1.475,0-2.671,1.196-2.671,2.671c0,1.475,1.196,2.671,2.671,2.671h11.872h1.443h2.602c1.344,0,2.433,1.196,2.433,2.671   s-1.089,2.671-2.433,2.671h-4.045v0h-6.426c-1.475,0-2.671,1.196-2.671,2.671v0c0,1.475,1.196,2.671,2.671,2.671h6.563   c0,0,0,0,0.001,0h4.2c1.344,0,2.433,1.196,2.433,2.671s-1.09,2.671-2.433,2.671h-4.337v0h-0.452c-1.475,0-2.671,1.196-2.671,2.671   c0,1.475,1.196,2.671,2.671,2.671h0.452h12.827h4.484v-0.023h2.209h0h0.305c7.363,0,13.332-5.969,13.332-13.332v0   c0-7.363-5.969-13.332-13.332-13.332h-0.305v-0.012H58.85z"
-          })
         )
       );
     }
@@ -6798,7 +6736,7 @@
         return m;
       }),
       n.d(t, "g", function() {
-        return h;
+        return p;
       }),
       n.d(t, "i", function() {
         return d;
@@ -6911,12 +6849,12 @@
       (u[(u.EBrowserType_Offscreen_FriendsUI = 11)] =
         "EBrowserType_Offscreen_FriendsUI"),
       (u[(u.EBrowserType_MAX = 12)] = "EBrowserType_MAX");
-    var h, p, d, f;
-    ((p = h || (h = {}))[(p.k_EClientUINotificationGroupChatMessage = 1)] =
+    var p, h, d, f;
+    ((h = p || (p = {}))[(h.k_EClientUINotificationGroupChatMessage = 1)] =
       "k_EClientUINotificationGroupChatMessage"),
-      (p[(p.k_EClientUINotificationFriendChatMessage = 2)] =
+      (h[(h.k_EClientUINotificationFriendChatMessage = 2)] =
         "k_EClientUINotificationFriendChatMessage"),
-      (p[(p.k_EClientUINotificationFriendPersonaState = 3)] =
+      (h[(h.k_EClientUINotificationFriendPersonaState = 3)] =
         "k_EClientUINotificationFriendPersonaState"),
       ((f = d || (d = {}))[(f.k_EComputerActiveStateInvalid = 0)] =
         "k_EComputerActiveStateInvalid"),
@@ -7228,10 +7166,10 @@ and limitations under the License.
         return m;
       }),
       n.d(t, "f", function() {
-        return h;
+        return p;
       }),
       n.d(t, "a", function() {
-        return p;
+        return h;
       }),
       n.d(t, "b", function() {
         return d;
@@ -7356,7 +7294,7 @@ and limitations under the License.
           : Object(l.g)([e + "_Plural", t], n)
       );
     }
-    function h(e, t) {
+    function p(e, t) {
       void 0 === t && (t = !1);
       var n = t ? "#TimeInterval_" : "#TimeSince_";
       return e >= 2 * r.b.PerYear
@@ -7391,7 +7329,7 @@ and limitations under the License.
     }
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
-    var p = {
+    var h = {
         english: "en",
         german: "de",
         french: "fr",
@@ -7515,5 +7453,11 @@ and limitations under the License.
       });
     }
   },
-  vvG3: function(e, t, n) {}
+  vvG3: function(e, t, n) {
+    e.exports = {
+      EmoticonBow: "shared_svg_library_EmoticonBow_2ly3o",
+      EmoticonBow_st0: "shared_svg_library_EmoticonBow_st0_HMUMS",
+      EmoticonBow_st1: "shared_svg_library_EmoticonBow_st1_3wZe-"
+    };
+  }
 });
