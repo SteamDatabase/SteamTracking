@@ -276,7 +276,7 @@ function ShowDialog( strTitle, strDescription, rgModalParams )
 /**
  * @returns CModal
  */
-function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButton, rgModalParams )
+function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButton, rgModalParams, defaultValue )
 {
 	if ( !strOKButton )
 		strOKButton = 'OK';
@@ -284,7 +284,7 @@ function ShowPromptDialog( strTitle, strDescription, strOKButton, strCancelButto
 		strCancelButton = 'Cancel';
 
 	var $Body = $J('<form/>');
-	var $Input = $J('<input/>', {type: 'text', 'class': '' } );
+	var $Input = $J('<input/>', {type: 'text', 'class': '' } ).val( defaultValue );
 	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_description' } ).append( strDescription ) );
 	$Body.append( $J('<div/>', {'class': 'newmodal_prompt_input gray_bevel for_text_input fullwidth' } ).append( $Input ) );
 

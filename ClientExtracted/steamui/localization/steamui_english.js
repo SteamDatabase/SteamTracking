@@ -290,6 +290,7 @@
 	"Library_SortBySizeOnDisk": "Size on Disk",
 	"Library_SortByMetacriticScore": "Metacritic Score",
 	"Library_SortByFriendsPlaying": "Friends Playing",
+	"Library_SortBySteamReview": "Steam Review",
 
 	"Library_SortByPctAchievementsComplete_Tag": "%1$s% Complete",
 	"Library_SortByPctAchievementsNoAchievements_Tag": "No Achievements",
@@ -992,5 +993,15 @@
 	"DeleteScreenshot_Failed": "Steam was unable to delete the selected screenshot from your hard disk.",
 
 	"AppDetailsAchievement_Hidden": "Hidden Achievement",
-	"AppDetailsAchievement_HiddenDesc": "Keep playing to discover this achievement."
+	"AppDetailsAchievement_HiddenDesc": "Keep playing to discover this achievement.",
+
+	"SteamReviewScore_9": "Overwhelmingly Positive",
+	"SteamReviewScore_8": "Very Positive",
+	"SteamReviewScore_7": "Positive",
+	"SteamReviewScore_6": "Mostly Positive",
+	"SteamReviewScore_5": "Mixed",
+	"SteamReviewScore_4": "Mostly Negative",
+	"SteamReviewScore_3": "Negative",
+	"SteamReviewScore_2": "Very Negative",
+	"SteamReviewScore_1": "Overwhelmingly Negative"
 }

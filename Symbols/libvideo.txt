@@ -6417,6 +6417,7 @@
  b (anonymous namespace)::EMsgClanAccountFlags_descriptor_
  b (anonymous namespace)::EMsg_descriptor_
  b (anonymous namespace)::EProtoClanEventType_descriptor_
+ b (anonymous namespace)::ESteamReviewScore_descriptor_
  b (anonymous namespace)::PartnerEventNotificationType_descriptor_
  b (anonymous namespace)::_CLEANUP
  b (anonymous namespace)::protobuf_AssignDescriptors_once_

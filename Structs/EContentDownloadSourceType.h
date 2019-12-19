@@ -9,4 +9,5 @@ typedef enum EContentDownloadSourceType
     k_EContentDownloadSourceTypeSLS, // SLS
     k_EContentDownloadSourceTypeSteamCache, // SteamCache
     k_EContentDownloadSourceTypeOpenCache, // OpenCache
+    k_EContentDownloadSourceTypeLANCache, // LANCache
 } EContentDownloadSourceType;
