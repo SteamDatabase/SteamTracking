@@ -1814,7 +1814,7 @@ GStoreItemData = {
 					rgStrictItems.push( rgOtherItems[i] );
 
 				for ( i = 0; rgStrictItems.length < cMinItemsToDisplay && i < rgBadItems.length; i++ )
-					rgBadItems.push( rgOtherItems[i] );
+					rgStrictItems.push( rgBadItems[i] );
 			}
 		}
 
