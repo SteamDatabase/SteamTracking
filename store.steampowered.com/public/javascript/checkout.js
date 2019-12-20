@@ -1266,9 +1266,10 @@ function OnGetFinalPriceSuccess( result )
 			}
 
 			result.priceOfASubChanged ? $J('#checkout_review_cart_message').show() : $('checkout_review_cart_message').hide();
-
 		}
-		
+
+		var method = $('payment_method');
+
 				if ( $('is_external_finalize_transaction').value == 1 )
 		{
 			if ( $('col_right_review_payment_tips') )
@@ -1276,8 +1277,6 @@ function OnGetFinalPriceSuccess( result )
 				$J('#col_right_review_payment_tips').show();
 			}
 		
-			var method = $('payment_method');
-
 			if ( result.externalurl )
 			{
 								var url = result.externalurl.replace( /%/g, '%25' );
@@ -2451,7 +2450,15 @@ function OnGetFinalPriceSuccess( result )
 		}
 		else
 		{
-						SetTabEnabled( 'review' );
+									if ( method.value == 'steamaccount' || g_bUseRemainingSteamAccount )
+			{
+				$J('#checkout_review_cart_loyalty_points_wallet').show();
+			}
+			else
+			{
+				$J('#checkout_review_cart_loyalty_points_wallet').hide();
+			}
+									SetTabEnabled( 'review' );
 		}
 	} 
 	catch(e) 
