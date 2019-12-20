@@ -143,6 +143,11 @@ a#store_search_link img {
 	visibility: hidden;
 }
 
+#logo_holder a {
+    display: inline-block;
+    height: 100%;
+}
+
 #logo_holder {
 display: inline-block; width: 176px; height: 44px; 
 background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/globalheader_logo.png' );
@@ -511,7 +516,7 @@ body.v6 .sale_capsule {
 		}
 
 .home_category_title b {
-	font-size: 48px;
+	font-size: 40px;
 	letter-spacing: 0.03em;
 	line-height: 48px;
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.45);

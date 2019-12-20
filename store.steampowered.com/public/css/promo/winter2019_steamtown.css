@@ -13,6 +13,11 @@ a#store_search_link img {
 	visibility: hidden;
 }
 
+#logo_holder a {
+    display: inline-block;
+    height: 100%;
+}
+
 #logo_holder {
 display: inline-block; width: 176px; height: 44px; 
 background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/globalheader_logo.png' );
@@ -369,7 +374,7 @@ body.v6.steamtown .page_container {
 }
 
 .quests_mayor_ctn {
-    bottom: 0px;
+    bottom: 68px;
     left: 14%;
 }
 
@@ -486,7 +491,6 @@ body.v6.steamtown .page_container {
 	font-size: 22px;
 	text-align: center;
 	color: #EECC75;
-	padding-top: 25px;
 }
 
 .rewards_banner_text {
@@ -497,6 +501,7 @@ body.v6.steamtown .page_container {
 	letter-spacing: 0.05em;
 	color: #FFFFFF;
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-top: 57px;
 }
 
 .rewards_tokens_desc {
@@ -528,13 +533,16 @@ body.v6.steamtown .page_container {
 	display: flex;
 	margin-left: auto;
 	position: absolute;
-	bottom: -64px;
+    bottom: -60px;
 	right: 0;
 	min-width: 270px;
 	height: 128px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/home_coin_button.png?v=2' );
+}
+.page_container_market .rewards_tokens_ctn {
+    bottom: -90px;
 }
 
 .rewards_tokens_col {
@@ -552,6 +560,10 @@ body.v6.steamtown .page_container {
 	min-width: 100px;
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	letter-spacing: 0.02em;
+}
+
+.winter2019_quest_tomorrow .rewards_tokens_amt {
+	margin-top: 10px;
 }
 
 .rewards_tier_header {
@@ -1222,6 +1234,17 @@ transform: translateY(-10px);
 	letter-spacing: 0.0em;
 }
 
+.winter2019_questbanner_tomorrow_highlight_text {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			text-transform: uppercase;
+	padding-top: 14px;
+	font-size: 14px;
+	font-weight: 900;
+	color: #DF4949;
+}
+
 .rewards_faq_answer a {
 	color: #3F3F3F;
 	text-decoration: underline;
@@ -1285,7 +1308,8 @@ transform: translateY(-10px);
 }
 
 .quests_banner_content {
-    margin: 140px 25%;
+    margin: 140px auto 0 auto;
+    max-width: 1100px;
     height: 170px;
     position: relative;
     display: flex;
@@ -1302,6 +1326,7 @@ transform: translateY(-10px);
 	padding-top: 30px;
 	font-family: giza-three, serif;
 	font-size: 56px;
+    line-height: 48px;
 	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -1429,6 +1454,7 @@ transform: translateY(-10px);
 	line-height: 20px;
 	letter-spacing: 0.0em;
 	color: #3F3F3F;
+	max-width: 515px;
 }
 
 .winter2019_questbanner_tomorrow {
@@ -1438,15 +1464,20 @@ transform: translateY(-10px);
 	background-image: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/sm_red_wdecor.png');
 	background-repeat: no-repeat;
 	background-position: center;
-
+	margin-bottom: 30px;
 	text-align: center;
 }
 
 .winter2019_quest_tomorrow, .winter2019_quest_final {
 	font-size: 32px;
-	margin: 34px 0 8px 0;
+	margin: 0px 0 8px 0;
 	letter-spacing: 0.01em;
 	color: #7D7D7D;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.winter2019_quest_text .winter2019_quest_tomorrow {
+	margin-top: 30px;
 }
 
 .winter2019_quest_final {
@@ -1459,9 +1490,8 @@ transform: translateY(-10px);
 }
 
 .winter2019_questbanner_tomorrow_bigtext {
-	margin-top: 78px;
+	margin-top: 74px;
 	white-space: nowrap;
-
 	font-family: giza-three, serif;
 	font-weight: 500;
 	font-style: normal;
@@ -1485,8 +1515,8 @@ transform: translateY(-10px);
 
 			font-size: 12px;
     font-weight: 500;
-	color: #2D3841;
-	margin-top: 2em;
+	color: #fdfdfd;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .winter2019_quest_desc a {
@@ -1539,6 +1569,7 @@ transform: translateY(-10px);
 
 .snowflake {
 	position: absolute;
+	z-index: 500;
 }
 
 .snowflake:after {
@@ -1549,9 +1580,9 @@ transform: translateY(-10px);
 	font-size: 14px;
 }
 
-@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translate3d(0, 0, 100px);transform:translate3d(0, 0, 100px)}50%{-webkit-transform:translate3d(80px, 0, 100px);transform:translate3d(80px, 0, 100px)}}
 @keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
-@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}
+@keyframes snowflakes-shake{0%,100%{transform:translate3d(0, 0, 100px)}50%{transform:translate3d(80px, 0, 100px)}}
 .snowflake{position:fixed;top:-10%;z-index:5;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}
 .snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}
 .snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}
@@ -1580,18 +1611,15 @@ html.force_desktop body {
 
     html.responsive .rewards_header_ctn,
     html.responsive .quests_header_ctn {
-
+		margin-top: -200px;
+		transform: translate3d(0px, 0px, 50px);
     }
 
 	html.responsive .steamtown_bubbles_ctn {
 		position: unset;
 		flex-wrap: wrap;
 		justify-content: center;
-
 	}
-    html.responsive .instructions_ctn {
-        margin-top: -200px;
-    }
 
 	html.responsive .rewards_header_ctn .steamtown_bubble_ctn, html.responsive .quests_header_ctn .steamtown_bubble_ctn {
 		transform: none;
@@ -1635,6 +1663,7 @@ html.force_desktop body {
 	    width: 100%;
 	    height: 100%;
 	    background-size: auto;
+        background-position-y: -110px;
     }
 
 	html.responsive .rewards_banner_content, html.responsive .quests_banner_content {
@@ -1645,6 +1674,7 @@ html.force_desktop body {
 	html.responsive .rewards_tokens_ctn {
 		position: unset;
 		margin:  0;
+        bottom: -95px;
 		background-position: center right;
 	}
 
@@ -1706,10 +1736,6 @@ html.force_desktop body {
         align-self: center;
     }
 
-    html.responsive .winter2019_quest_actions .rewards_tokens_amt {
-        text-align: center;
-    }
-
     html.responsive .winter2019_quest_title {
         text-align: center;
     }
@@ -1730,6 +1756,18 @@ html.force_desktop body {
         display: flex;
         flex-direction: column-reverse;
     }
+    html.responsive .page_container_market .rewards_body_ctn {
+        margin-top: -101px;
+        padding-top: 60px;
+    }
+
+	html.responsive .responsive_store_nav_ctn_spacer {
+		display: none;
+	}
+
+	html.responsive .steamtown_header.layer_1 {
+		background-position: center;
+	}
 
 }
 
@@ -1738,13 +1776,13 @@ html.force_desktop body {
         width: 32vw;
     }
     html.responsive .rewards_body_ctn {
-        padding: 40px;
+        padding: 20px;
     }
 }
 
 @media screen and (max-width: 540px ) {
     html.responsive .instructions_ctn {
-        margin-top: -330px;
+		transform: translate3d(0px, 0px, 50px);
     }
     html.responsive .rewards_happymayor_img {
         display: none;
@@ -1763,6 +1801,6 @@ html.force_desktop body {
     }
 
     html.responsive .rewards_body_ctn {
-        padding: 20px;
+        padding: 10px;
     }
 }
