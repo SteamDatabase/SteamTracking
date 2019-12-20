@@ -16009,70 +16009,112 @@
           (e.prototype.componentDidUpdate = function() {
             this.m_ScrollCoordinator.InvalidateOffsetsAndRecompute();
           }),
-          (e.prototype.renderStickersAndEffectsButtons = function() {
+          (e.prototype.getAvailableEffects = function() {
+            var t = this;
+            return this.props.roomEffectSettings
+              ? this.props.emoticonStore.GetEffectList().filter(function(e) {
+                  return t.props.roomEffectSettings[e.name];
+                })
+              : [];
+          }),
+          (e.prototype.getAvailableStickers = function() {
+            return this.props.emoticonStore.GetStickerList();
+          }),
+          (e.prototype.renderEffectButtons = function() {
+            var t = this;
+            if (!this.props.roomEffectSettings) return null;
+            var e = this.getAvailableEffects();
+            return 0 == e.length
+              ? null
+              : q.createElement(
+                  q.Fragment,
+                  null,
+                  q.createElement(
+                    "div",
+                    { className: Ge.a.EffectHeading },
+                    Object(v.c)("#EmoticonPicker_EffectHeading")
+                  ),
+                  q.createElement(
+                    "div",
+                    { style: { display: "flex", flexWrap: "wrap" } },
+                    e.map(function(e) {
+                      return q.createElement(Ve, {
+                        key: e.name,
+                        effect: e,
+                        onEffectSelected: t.props.onRoomEffectSelected,
+                        roomEffectSettings: t.props.roomEffectSettings
+                      });
+                    })
+                  ),
+                  q.createElement("div", { className: Ge.a.TopDivider })
+                );
+          }),
+          (e.prototype.renderStickerButtons = function() {
             var t = this,
-              e = this.props,
-              n = e.bShowEffects,
-              o = e.bShowStickers,
-              a = e.roomEffectSettings;
-            if (!n && !o) return null;
-            var i = this.props.emoticonStore
-                .GetEffectList()
-                .filter(function(e) {
-                  return !!a && a[e.name];
-                }),
-              r = this.props.emoticonStore.GetStickerList(),
-              p = r.length + i.length == 0,
-              s = f.b.STORE_BASE_URL + "holidaymarket",
-              c = Object(v.f)(
-                "#EmoticonPicker_GetFestivitiesInTheStore",
-                q.createElement(
-                  "a",
-                  { href: s },
-                  Object(v.c)("#EmoticonPicker_GetFestivitiesLinkText")
-                )
-              );
+              e = this.getAvailableStickers();
+            return 0 == e.length
+              ? null
+              : q.createElement(
+                  q.Fragment,
+                  null,
+                  q.createElement(
+                    "div",
+                    { className: Ge.a.EffectHeading },
+                    Object(v.c)("#EmoticonPicker_StickerHeading")
+                  ),
+                  q.createElement(
+                    "div",
+                    null,
+                    e.map(function(e) {
+                      return q.createElement(Ue, {
+                        key: e.name,
+                        stickerName: e.name,
+                        onStickerSelected: t.props.onStickerSelected
+                      });
+                    })
+                  ),
+                  q.createElement("div", { className: Ge.a.BottomDivider })
+                );
+          }),
+          (e.prototype.renderHolidayStoreLink = function() {
+            if (
+              0 <
+              this.getAvailableEffects().length +
+                this.getAvailableStickers().length
+            )
+              return null;
+            var e = f.b.STORE_BASE_URL + "holidaymarket";
             return q.createElement(
-              "div",
+              q.Fragment,
               null,
               q.createElement(
                 "div",
-                { className: Ge.a.EffectHeading },
-                Object(v.c)("#EmoticonPicker_EffectHeading")
-              ),
-              p && q.createElement("div", { className: Ge.a.GetFestive }, c),
-              a &&
-                q.createElement(
-                  "div",
-                  { style: { display: "flex", flexWrap: "wrap" } },
-                  i.map(function(e) {
-                    return q.createElement(Ve, {
-                      key: e.name,
-                      effect: e,
-                      onEffectSelected: t.props.onRoomEffectSelected,
-                      roomEffectSettings: a
-                    });
-                  })
-                ),
-              q.createElement("div", { className: Ge.a.TopDivider }),
-              q.createElement(
-                "div",
-                { className: Ge.a.EffectHeading },
-                Object(v.c)("#EmoticonPicker_StickerHeading")
-              ),
-              q.createElement(
-                "div",
-                null,
-                r.map(function(e) {
-                  return q.createElement(Ue, {
-                    key: e.name,
-                    stickerName: e.name,
-                    onStickerSelected: t.props.onStickerSelected
-                  });
-                })
+                { className: Ge.a.GetFestive },
+                Object(v.f)(
+                  "#EmoticonPicker_GetFestivitiesInTheStore",
+                  q.createElement(
+                    "a",
+                    { href: (f.b.IN_CLIENT ? "steam://openurl/" : "") + e },
+                    Object(v.c)("#EmoticonPicker_GetFestivitiesLinkText")
+                  )
+                )
               ),
               q.createElement("div", { className: Ge.a.BottomDivider })
             );
+          }),
+          (e.prototype.renderStickersAndEffectsButtons = function() {
+            var e = this.props,
+              t = e.bShowEffects,
+              n = e.bShowStickers;
+            return t || n
+              ? q.createElement(
+                  q.Fragment,
+                  null,
+                  this.renderHolidayStoreLink(),
+                  this.renderEffectButtons(),
+                  this.renderStickerButtons()
+                )
+              : null;
           }),
           (e.prototype.render = function() {
             var e = this.props.emoticonStore,

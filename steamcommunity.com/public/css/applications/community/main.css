@@ -1304,19 +1304,14 @@ img.emoticon_emoticon_AB86v {
     margin-top: -14px;
     margin-bottom: -14px; }
 
-.emoticon_EffectHeading_2-uNY {
-  text-transform: uppercase;
-  color: grey;
-  font-size: 10px;
-  padding: 5px;
-  letter-spacing: 1.5px; }
-
+.emoticon_EffectHeading_2-uNY,
 .emoticon_StickerHeading_3-4KS {
   text-transform: uppercase;
   color: grey;
   font-size: 10px;
   padding: 5px;
-  letter-spacing: 1.5px; }
+  letter-spacing: 1.5px;
+  width: 100%; }
 
 .emoticon_GetFestive_1tX6q {
   padding: 5px; }
@@ -10572,8 +10567,8 @@ button.DialogButton.GreenPlay:active:hover {
 button.DialogButton.Secondary.Off {
   box-shadow: inset 1px 1px 4px #0003; }
 
-button.DialogButton:active,
-button.DialogButton:active:hover {
+button.DialogButton:enabled:active,
+button.DialogButton:enabled:active:hover {
   background: #393f49;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
   transition-duration: .04s; }
@@ -10584,8 +10579,8 @@ button.DialogButton.Primary:hover {
   background-size: 330% 100%;
   color: white; }
 
-button.DialogButton.Primary:active,
-button.DialogButton.Primary:hover:active {
+button.DialogButton.Primary:enabled:active,
+button.DialogButton.Primary:enabled:hover:active {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 40%;
   transition-duration: .04s; }
