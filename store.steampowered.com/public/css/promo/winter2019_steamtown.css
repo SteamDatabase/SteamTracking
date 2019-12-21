@@ -1580,6 +1580,12 @@ transform: translateY(-10px);
 	font-size: 14px;
 }
 
+.winterSale2019_rightContent {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
 @-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translate3d(0, 0, 100px);transform:translate3d(0, 0, 100px)}50%{-webkit-transform:translate3d(80px, 0, 100px);transform:translate3d(80px, 0, 100px)}}
 @keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
 @keyframes snowflakes-shake{0%,100%{transform:translate3d(0, 0, 100px)}50%{transform:translate3d(80px, 0, 100px)}}

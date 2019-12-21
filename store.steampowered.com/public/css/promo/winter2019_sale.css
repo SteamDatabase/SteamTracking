@@ -39,7 +39,7 @@ body.v6.winter2019_sale_home .page_background_holder {
     pointer-events: none;
 }
 .mayor_bubble {
-    font-family: giza-five, serif;
+    font-family: giza-three, serif;
     background: linear-gradient(174.19deg, #F4F4F4 6.07%, #D5DDE2 49.65%);
     border-radius: 75px;
     border: 10px solid white;
@@ -107,7 +107,8 @@ body.v6.winter2019_sale_home .page_background_holder {
     text-align: right;
 }
 .token_count {
-    font-family: giza-five, serif;
+    font-family: giza-three, serif;
+	font-weight: 500;
     color: #FFB700;
     font-size: 18px;
     position: relative;
