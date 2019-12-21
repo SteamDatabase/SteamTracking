@@ -76,5 +76,8 @@ public:
     virtual unknown_ret GetPerUserInputSettings(CSteamID, RemoteClientInputSettings_t*) = 0;
     virtual unknown_ret OnClientUsedInput(CSteamID, EClientUsedInputType) = 0;
     virtual unknown_ret OnPlaceholderStateChanged(bool) = 0;
+    virtual unknown_ret OnRemoteClientRemotePlayClearControllers() = 0;
+    virtual unknown_ret OnRemoteClientRemotePlayControllerIndexSet(CSteamID, unsigned int) = 0;
+    virtual unknown_ret OnRemotePlayUIMovedController() = 0;
     virtual unknown_ret ShutdownStreamClients(bool) = 0;
 };

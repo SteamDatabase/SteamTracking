@@ -2040,6 +2040,21 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<RemoteClientRemotePlayTogetherPlayerLeft_t>(RemoteClientRemotePlayTogetherPlayerLeft_t*)"
     },
     {
+        "id": 3335,
+        "size": 1,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientRemotePlayClearControllers_t>(RemoteClientRemotePlayClearControllers_t*)"
+    },
+    {
+        "id": 3336,
+        "size": 12,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientRemotePlayControllerIndexSet_t>(RemoteClientRemotePlayControllerIndexSet_t*)"
+    },
+    {
+        "id": 3337,
+        "size": 1,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientRemotePlayUIMovedController_t>(RemoteClientRemotePlayUIMovedController_t*)"
+    },
+    {
         "id": 3401,
         "size": 280,
         "posted_in": "void CBaseAPIJob::PostAPIResult<SteamUGCQueryCompleted_t>(SteamUGCQueryCompleted_t*)"

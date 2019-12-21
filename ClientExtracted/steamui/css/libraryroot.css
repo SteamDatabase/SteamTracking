@@ -3109,9 +3109,19 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
 .groupMemberList .personanameandstatus_richPresenceLabel_2Ri00 {
   line-height: 13px; }
 
+.Dialog_RemotePlay .ingame .personanameandstatus_playerName_nOdcT,
+.Dialog_RemotePlay .ingame .personanameandstatus_playerNickname_2saJT {
+  margin-top: -20px;
+  width: 235px; }
+
 .Dialog_RemotePlay .personanameandstatus_twoLine_1BbOe {
   margin-top: -44px;
   width: 250px; }
+
+.Dialog_RemotePlay .ingame .personanameandstatus_richPresenceLabel_2Ri00 {
+  margin-top: -15px;
+  width: 250px;
+  visibility: collapse; }
 
 .personanameandstatus_gameIsPrivateIcon_2gBKQ {
   width: 28px;

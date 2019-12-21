@@ -131,6 +131,7 @@ message CAppOverview {
 	optional uint32 review_percentage_with_bombs = 54;
 	optional uint32 review_score_without_bombs = 55;
 	optional uint32 review_percentage_without_bombs = 56;
+	optional string library_id = 57;
 }
 
 message CAppOverview_Change {

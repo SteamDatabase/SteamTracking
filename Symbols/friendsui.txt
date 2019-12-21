@@ -2134,6 +2134,7 @@
  D typeinfo for CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for CJSMethodCallHandler<CRemotePlayController, int, int>
  D typeinfo for CJSMethodCallHandler<CRemotePlayController, int>
  D typeinfo for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -2318,6 +2319,8 @@
  D typeinfo for CRemotePlayController
  D typeinfo for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
+ D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers
+ D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
@@ -3502,6 +3505,7 @@
  D vtable for CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ D vtable for CJSMethodCallHandler<CRemotePlayController, int, int>
  D vtable for CJSMethodCallHandler<CRemotePlayController, int>
  D vtable for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -3683,6 +3687,8 @@
  D vtable for CRemotePlayController
  D vtable for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
+ D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers
+ D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
@@ -4256,6 +4262,7 @@
  R typeinfo name for CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for CJSMethodCallHandler<CRemotePlayController, int, int>
  R typeinfo name for CJSMethodCallHandler<CRemotePlayController, int>
  R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >
@@ -4440,6 +4447,8 @@
  R typeinfo name for CRemotePlayController
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
+ R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers
+ R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayInviteResult
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlaySessionStopped
@@ -7423,8 +7432,10 @@
  T CHintLabel::GetStyleFlags()
  T CHintLabel::PerformLayout()
  T CHintLabel::~CHintLabel()
+ T CIPAddress::BConvertMappedToIPv4()
  T CIPAddress::HasIP() const
  T CIPAddress::IsLoopback() const
+ T CIPAddress::IsMappedIPv4() const
  T CIPAddress::SetFromString(char const*, unsigned short*)
  T CIPAndPort::IsValid() const
  T CIPCToolMachClient::DoKillCommand(char const*)
@@ -7516,6 +7527,7 @@
  T CJSMethodCallHandler<CRemotePlayController, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CRemotePlayController, char const*, bool, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CRemotePlayController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CRemotePlayController, int, int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CRemotePlayController, int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CSharedConnectionController, CSmartPtr<CJSCallbackPromise> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CSharedConnectionController, unsigned int, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
@@ -9693,6 +9705,12 @@
  T CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange::CCallbackInternal_OnRemoteClientInputSettingsChange()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange::~CCallbackInternal_OnRemoteClientInputSettingsChange()
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers::CCallbackInternal_OnRemoteClientRemotePlayClearControllers()
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers::Run(void*)
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayClearControllers::~CCallbackInternal_OnRemoteClientRemotePlayClearControllers()
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet()
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet::Run(void*)
+ T CRemotePlayController::CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet::~CCallbackInternal_OnRemoteClientRemotePlayControllerIndexSet()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime::CCallbackInternal_OnRemoteClientStreamLifetime()
  T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime::Run(void*)
  T CRemotePlayController::CCallbackInternal_OnRemoteClientStreamLifetime::~CCallbackInternal_OnRemoteClientStreamLifetime()
@@ -9720,8 +9738,11 @@
  T CRemotePlayController::GetGameSystemVolume(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetPerUserInputSettings(char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::Initialize()
+ T CRemotePlayController::MoveControllerToSlot(int, int)
  T CRemotePlayController::OnPlaceholderStateChange(PlaceholderStateChanged_t*)
  T CRemotePlayController::OnRemoteClientInputSettingsChange(RemoteClientInputSettingsChange_t*)
+ T CRemotePlayController::OnRemoteClientRemotePlayClearControllers(RemoteClientRemotePlayClearControllers_t*)
+ T CRemotePlayController::OnRemoteClientRemotePlayControllerIndexSet(RemoteClientRemotePlayControllerIndexSet_t*)
  T CRemotePlayController::OnRemoteClientStreamLifetime(RemoteClientStreamLifetime_t*)
  T CRemotePlayController::OnRemotePlayInviteResult(RemotePlayInviteResult_t*)
  T CRemotePlayController::OnRemotePlaySessionStopped(RemoteClientStopStreamSession_t*)
@@ -9729,6 +9750,8 @@
  T CRemotePlayController::OnRemotePlayTogetherPlayerLeft(RemoteClientRemotePlayTogetherPlayerLeft_t*)
  T CRemotePlayController::OnStreamingClientConnected(StreamingClientConnected_t*)
  T CRemotePlayController::OnStreamingClientUsedInput(StreamingClientUsedInput_t*)
+ T CRemotePlayController::RegisterForClearControllers(CSmartPtr<CJSCallbackFunc>)
+ T CRemotePlayController::RegisterForControllerIndexSet(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForInputUsed(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForPlaceholderStateChanged(CSmartPtr<CJSCallbackFunc>)
  T CRemotePlayController::RegisterForPlayerInputSettingsChanged(CSmartPtr<CJSCallbackFunc>)
