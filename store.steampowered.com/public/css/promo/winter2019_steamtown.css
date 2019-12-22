@@ -86,6 +86,7 @@ body.v6.steamtown .page_container {
 	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/header_layer_1.png?v=2' );
 	background-position: center;
 	background-repeat: no-repeat;
+	z-index: 0;
 }
 
 .steamtown_header {
@@ -381,7 +382,7 @@ body.v6.steamtown .page_container {
 .rewards_happymayor_img {
 	background-position: center;
 	background-repeat: no-repeat;
-	width: 349px;
+	width: 394px;
 	height: 529px;
 	transition-duration: .23s;
 	transition-timing-function: ease-out;
