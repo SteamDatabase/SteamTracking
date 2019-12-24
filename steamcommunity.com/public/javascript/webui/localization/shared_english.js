@@ -992,6 +992,9 @@ LocalizationReady("shared", "english", {
   SteamAward_VoteConflictWarning_Explanation:
     "You can only vote for one game for each category, and you have already voted for %1$s for this one. Would you like to change your vote to %2$s?",
 
+  Store_VR_Support_OnlyVR: "VR Only",
+  Store_VR_Support_SupportsVR: "VR Supported",
+
   Giveaway_CountDown: "%1$s left until next random draw!",
   Giveaway_CountDown2: "Time left until next random draw.",
   Giveaway_KeepWatching: "Keep watching for a chance to win!",

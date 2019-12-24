@@ -1995,12 +1995,32 @@ div.bb_quoteauthor {
 }
 
 div.bb_h1, .bb_wysiwyg h1 {
-	font-size: 16px;
+	font-size: 20px;
+	line-height: 23px;
 	color: #5aa9d6;
 	font-weight: normal;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
     clear: both;
 }
+div.bb_h2, .bb_wysiwyg h2 {
+	color: #5aa9d6;
+	margin-bottom: 6px;
+	margin-top: 8px;
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 400;
+	clear:both;
+}
+div.bb_h3, .bb_wysiwyg h3 {
+	color: #5aa9d6;
+	margin-bottom: 6px;
+	margin-top: 8px;
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: 300;
+	clear:both;
+}
+
 
 span.bb_strike {
 	text-decoration: line-through;

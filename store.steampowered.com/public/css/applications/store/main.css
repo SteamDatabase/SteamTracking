@@ -1760,6 +1760,8 @@ body.modals_BodyNoScrollDialog_105OB {
 .broadcastwidgets_StoreSaleWidgetImage_2T_Na {
   padding-right: 16px;
   cursor: pointer; }
+  .broadcastwidgets_StoreSaleWidgetImage_2T_Na.broadcastwidgets_StoreSaleWidgetImageCtn_1JUFq {
+    display: block; }
 
 .broadcastwidgets_StoreSaleWidgetImage_mini_yvW2h {
   cursor: pointer;
@@ -1767,7 +1769,8 @@ body.modals_BodyNoScrollDialog_105OB {
 
 .broadcastwidgets_StoreSaleImage_2LocI {
   width: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+  display: block; }
 
 .broadcastwidgets_StoreSaleImage_mini_1zSsm {
   cursor: pointer;
@@ -1825,8 +1828,8 @@ body.modals_BodyNoScrollDialog_105OB {
   display: inline-block;
   line-height: 19px;
   padding: 0 7px;
-  color: #67c1f5;
-  background-color: rgba(103, 193, 245, 0.2);
+  color: #a5b0b6;
+  background-color: rgba(112, 129, 137, 0.15);
   box-shadow: none;
   margin-right: 2px;
   border-radius: 2px;
@@ -1838,10 +1841,10 @@ body.modals_BodyNoScrollDialog_105OB {
   font-size: 10px; }
   .broadcastwidgets_AppTag_2pNqf:hover {
     text-decoration: none;
-    color: #ffffff;
-    background: #67c1f5;
-    background: linear-gradient(135deg, #67c1f5 0%, #417a9b 100%);
-    /* W3C */ }
+    cursor: default;
+    background-color: rgba(112, 129, 137, 0.15); }
+  .broadcastwidgets_AppTag_2pNqf:nth-child(n+6) {
+    display: none; }
 
 .broadcastwidgets_StoreSaleWidgetShortDesc_2by8B {
   font-size: 12px;
@@ -1875,11 +1878,13 @@ body.modals_BodyNoScrollDialog_105OB {
     flex-direction: row;
     justify-content: space-between; }
 
-.broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY {
-  display: flex;
-  flex-direction: row;
-  padding: 0px;
-  margin-top: 6px; }
+.broadcastwidgets_StoreActionWidgetContainer_2MF6Y {
+  justify-content: space-between; }
+  .broadcastwidgets_StoreActionWidgetContainer_2MF6Y .broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin-top: 6px; }
 
 .broadcastwidgets_StoreSaleDiscountBox_3uiyX {
   font-size: 16px;
@@ -1948,7 +1953,7 @@ body.modals_BodyNoScrollDialog_105OB {
   z-index: 2; }
 
 .broadcastwidgets_CapsulePlatform_1YzDv {
-  padding: 5px 4px;
+  padding: 0px 4px;
   height: 20px; }
 
 .broadcastwidgets_CapsuleImage_XI8fY {
@@ -2072,10 +2077,28 @@ body.modals_BodyNoScrollDialog_105OB {
   .broadcastwidgets_CapsuleMenuButton_2hdaQ > img {
     width: 100%; }
 
-.broadcastwidgets_BundleContent_TGX3I {
-  margin-left: 40px;
-  padding: 4px;
-  zoom: 80%; }
+.broadcastwidgets_BundleContentsCtn_1p28h {
+  background: rgba(0, 0, 0, 0.2);
+  margin-left: -16px;
+  margin-right: -16px;
+  margin-bottom: -16px;
+  padding: 16px 16px 16px 16px;
+  margin-top: 12px; }
+
+.broadcastwidgets_BundleContentItem_1VQWA {
+  margin-bottom: 4px; }
+  .broadcastwidgets_BundleContentItem_1VQWA .broadcastwidgets_StoreSaleWidgetTags_26_Kk,
+  .broadcastwidgets_BundleContentItem_1VQWA .broadcastwidgets_StoreSaleWidgetShortDesc_2by8B {
+    display: none; }
+  .broadcastwidgets_BundleContentItem_1VQWA .broadcastwidgets_StoreSaleWidgetLeft_20n87 {
+    flex-basis: 23%; }
+  .broadcastwidgets_BundleContentItem_1VQWA .broadcastwidgets_StoreSaleWidgetRight_1MzBO {
+    flex-basis: 77%;
+    padding-right: 0px; }
+  .broadcastwidgets_BundleContentItem_1VQWA:hover {
+    background: rgba(255, 255, 255, 0.1); }
+  .broadcastwidgets_BundleContentItem_1VQWA .broadcastwidgets_TitleCtn_X6LtM {
+    margin-top: 10px; }
 
 .broadcastwidgets_ShowContentsButton_1cu3o {
   border-radius: 2px;
@@ -2861,19 +2884,14 @@ img.emoticon_emoticon_AB86v {
     margin-top: -14px;
     margin-bottom: -14px; }
 
-.emoticon_EffectHeading_2-uNY {
-  text-transform: uppercase;
-  color: grey;
-  font-size: 10px;
-  padding: 5px;
-  letter-spacing: 1.5px; }
-
+.emoticon_EffectHeading_2-uNY,
 .emoticon_StickerHeading_3-4KS {
   text-transform: uppercase;
   color: grey;
   font-size: 10px;
   padding: 5px;
-  letter-spacing: 1.5px; }
+  letter-spacing: 1.5px;
+  width: 100%; }
 
 .emoticon_GetFestive_1tX6q {
   padding: 5px; }
@@ -5464,11 +5482,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 
 @media screen and (max-width: 800px) {
   body .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_BlockQuote_2cY7b {
-    width: 100%; }
-  body .eventbbcodeparser_SaleSectionCtn_39HWX img:first-child {
-    width: 168%;
-    max-width: 400%;
-    justify-self: center; } }
+    width: 100%; } }
 
 /* end Game Awards styling hacks */
 
@@ -5696,12 +5710,13 @@ img {
 .creatorhomeembed_DevSummaryWidgetCtn_A2B2V {
   flex-grow: 1;
   flex-basis: 0;
-  background: -webkit-linear-gradient(left, rgba(87, 92, 104, 0.6) 5%, rgba(255, 255, 255, 0.2) 95%);
-  background: linear-gradient(to right, rgba(87, 92, 104, 0.6) 5%, rgba(255, 255, 255, 0.2) 95%);
+  background: radial-gradient(ellipse at top left, rgba(66, 69, 76, 0.8), rgba(37, 40, 46, 0.8));
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px;
   position: relative;
   overflow: hidden; }
+  .creatorhomeembed_SmallFormat_18tLe .creatorhomeembed_DevSummaryWidgetCtn_A2B2V {
+    background-image: radial-gradient(ellipse at top left, #42454c, #25282e); }
 
 .creatorhomeembed_DevSummaryBackground_1TsqA {
   position: absolute;
@@ -5727,10 +5742,12 @@ img {
   .creatorhomeembed_CreatorTitleCtn_2T8Ub .creatorhomeembed_CreatorNameName_8196l {
     padding-bottom: 2px;
     font-size: 21px;
+    line-height: 21px;
     font-weight: 300; }
 
 .creatorhomeembed_CreatorTagline_NX5We {
-  position: relative; }
+  position: relative;
+  padding-bottom: 2px; }
 
 .creatorhomeembed_Title_37vyV {
   text-transform: uppercase;
@@ -5741,10 +5758,11 @@ img {
 .creatorhomeembed_Followers_2ZpFi {
   display: block;
   padding: 0px 6px;
-  font-size: 12px; }
+  font-size: 11px;
+  line-height: 12px; }
   .creatorhomeembed_Followers_2ZpFi span {
     font-size: 15px;
-    line-height: 17px; }
+    line-height: 16px; }
 
 .creatorhomeembed_FollowBtnCtn_2artm {
   display: flex;
@@ -5764,12 +5782,14 @@ img {
 
 .creatorhomeembed_FollowBtnText_1a5dj {
   display: block;
-  margin-left: 4px; }
+  margin-left: 4px;
+  font-size: 12px; }
 
 .creatorhomeembed_SocialContainer_1o1Ds {
   display: flex;
   flex-direction: unset;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-between; }
 
 .creatorhomeembed_SocialImg_2v_K1 {
   width: 20px;
@@ -5791,6 +5811,8 @@ img {
   .creatorhomeembed_SocialLink_3eCVb:hover {
     background-color: #54a5d4;
     color: #000000; }
+  .creatorhomeembed_SmallFormat_18tLe .creatorhomeembed_SocialLink_3eCVb {
+    width: calc(50% - 29px); }
 
 .creatorhomeembed_SocialLink_3eCVb > div {
   padding-top: 0px;
@@ -6290,13 +6312,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   width: 100%;
   top: -22%;
   max-width: 1920px;
-  position: absolute;
-  -webkit-mask-image: url(../../../images/applications/store/2f400342c2a3683b788fdacf946a9430.png);
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%;
-  mask-image: url(../../../images/applications/store/2f400342c2a3683b788fdacf946a9430.png);
-  mask-repeat: no-repeat;
-  mask-size: 100% 100%; }
+  position: absolute; }
   .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImage_17G2y, .partnereventdisplay_InLibraryView_3_SEi
   .partnereventdisplay_EventCoverImageBackground_2-Iyg {
     display: block;
@@ -8362,8 +8378,8 @@ button.DialogButton.GreenPlay:active:hover {
 button.DialogButton.Secondary.Off {
   box-shadow: inset 1px 1px 4px #0003; }
 
-button.DialogButton:active,
-button.DialogButton:active:hover {
+button.DialogButton:enabled:active,
+button.DialogButton:enabled:active:hover {
   background: #393f49;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
   transition-duration: .04s; }
@@ -8374,8 +8390,8 @@ button.DialogButton.Primary:hover {
   background-size: 330% 100%;
   color: white; }
 
-button.DialogButton.Primary:active,
-button.DialogButton.Primary:hover:active {
+button.DialogButton.Primary:enabled:active,
+button.DialogButton.Primary:enabled:hover:active {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 40%;
   transition-duration: .04s; }

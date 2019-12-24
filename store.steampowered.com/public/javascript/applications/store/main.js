@@ -153,8 +153,8 @@
                 40: "b898a894408b33faca1d",
                 41: "f2f46cc3427dc65807fa",
                 42: "2e092430315fecb0a379",
-                43: "da8d268df0a0b8abf4ee",
-                44: "c4a79a8421dc1650e7d5",
+                43: "660073a09d961b9d0cd8",
+                44: "18d82a3b5c59bad24beb",
                 45: "70d6c4f617d76da02ba2",
                 46: "ea704569ca4b4fd272f1",
                 47: "df1437d6a58eebe0684d",
@@ -165,7 +165,7 @@
                 52: "02ace9767d6b7d0ec4c8",
                 53: "9363758023e02b05cb0f",
                 54: "41c9a8bdf13280744df2",
-                55: "35b0b231b1eabc851231",
+                55: "3d34ae8d1a01fafd33d2",
                 56: "25432ec80f9d1fd0327b",
                 57: "119768f630cca3703a79",
                 58: "dacd5ada3483b22558eb"
@@ -2232,6 +2232,7 @@
     e.exports = {
       DevSummaryCtn: "creatorhomeembed_DevSummaryCtn_1k0S-",
       DevSummaryWidgetCtn: "creatorhomeembed_DevSummaryWidgetCtn_A2B2V",
+      SmallFormat: "creatorhomeembed_SmallFormat_18tLe",
       DevSummaryBackground: "creatorhomeembed_DevSummaryBackground_1TsqA",
       DevSummaryContent: "creatorhomeembed_DevSummaryContent_23xa4",
       Avatar: "creatorhomeembed_Avatar_3Jepb",
@@ -3351,6 +3352,7 @@
       StoreSaleWidgetContainer_mini:
         "broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp",
       StoreSaleWidgetImage: "broadcastwidgets_StoreSaleWidgetImage_2T_Na",
+      StoreSaleWidgetImageCtn: "broadcastwidgets_StoreSaleWidgetImageCtn_1JUFq",
       StoreSaleWidgetImage_mini:
         "broadcastwidgets_StoreSaleWidgetImage_mini_yvW2h",
       StoreSaleImage: "broadcastwidgets_StoreSaleImage_2LocI",
@@ -3369,6 +3371,8 @@
       StoreSaleWidgetLeft: "broadcastwidgets_StoreSaleWidgetLeft_20n87",
       StoreSaleWidgetRight: "broadcastwidgets_StoreSaleWidgetRight_1MzBO",
       TitleCtn: "broadcastwidgets_TitleCtn_X6LtM",
+      StoreActionWidgetContainer:
+        "broadcastwidgets_StoreActionWidgetContainer_2MF6Y",
       StoreSalePriceActionWidgetContainer:
         "broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY",
       StoreSaleDiscountBox: "broadcastwidgets_StoreSaleDiscountBox_3uiyX",
@@ -3384,7 +3388,8 @@
       Blue: "broadcastwidgets_Blue_3hfTG",
       LiveIcon: "broadcastwidgets_LiveIcon_1iKjC",
       CapsuleMenuButton: "broadcastwidgets_CapsuleMenuButton_2hdaQ",
-      BundleContent: "broadcastwidgets_BundleContent_TGX3I",
+      BundleContentsCtn: "broadcastwidgets_BundleContentsCtn_1p28h",
+      BundleContentItem: "broadcastwidgets_BundleContentItem_1VQWA",
       ShowContentsButton: "broadcastwidgets_ShowContentsButton_1cu3o"
     };
   },
@@ -11905,7 +11910,10 @@
                         },
                         A.createElement(
                           "div",
-                          { style: { position: "relative" } },
+                          {
+                            style: { position: "relative" },
+                            className: Wr.a.StoreSaleWidgetImageCtn
+                          },
                           A.createElement("img", {
                             className: Wr.a.StoreSaleImage,
                             src: e.main_capsule || e.capsule
@@ -12274,13 +12282,19 @@
               this.state.bShowContents &&
                 A.createElement(
                   "div",
-                  { style: this.state.containerStyle },
+                  {
+                    style: this.state.containerStyle,
+                    className: Wr.a.BundleContentsCtn
+                  },
                   e.packageids.map(function(e) {
                     var t = Qe.GetPackageInfo(e);
                     return t
                       ? A.createElement(
                           "div",
-                          { key: t.appids[0], className: Wr.a.BundleContent },
+                          {
+                            key: t.appids[0],
+                            className: Wr.a.BundleContentItem
+                          },
                           1 === t.appids.length
                             ? A.createElement(ni, { appid: t.appids[0] })
                             : A.createElement(oi, { packageid: e })
@@ -12429,7 +12443,7 @@
                 e.appids.map(function(e) {
                   return A.createElement(
                     "div",
-                    { key: e, className: Wr.a.BundleContent },
+                    { key: e, className: Wr.a.BundleContentItem },
                     A.createElement(ni, { appid: e })
                   );
                 })
@@ -24568,70 +24582,112 @@
           (e.prototype.componentDidUpdate = function() {
             this.m_ScrollCoordinator.InvalidateOffsetsAndRecompute();
           }),
-          (e.prototype.renderStickersAndEffectsButtons = function() {
+          (e.prototype.getAvailableEffects = function() {
+            var t = this;
+            return this.props.roomEffectSettings
+              ? this.props.emoticonStore.GetEffectList().filter(function(e) {
+                  return t.props.roomEffectSettings[e.name];
+                })
+              : [];
+          }),
+          (e.prototype.getAvailableStickers = function() {
+            return this.props.emoticonStore.GetStickerList();
+          }),
+          (e.prototype.renderEffectButtons = function() {
+            var t = this;
+            if (!this.props.roomEffectSettings) return null;
+            var e = this.getAvailableEffects();
+            return 0 == e.length
+              ? null
+              : A.createElement(
+                  A.Fragment,
+                  null,
+                  A.createElement(
+                    "div",
+                    { className: Ko.a.EffectHeading },
+                    ne("#EmoticonPicker_EffectHeading")
+                  ),
+                  A.createElement(
+                    "div",
+                    { style: { display: "flex", flexWrap: "wrap" } },
+                    e.map(function(e) {
+                      return A.createElement(ns, {
+                        key: e.name,
+                        effect: e,
+                        onEffectSelected: t.props.onRoomEffectSelected,
+                        roomEffectSettings: t.props.roomEffectSettings
+                      });
+                    })
+                  ),
+                  A.createElement("div", { className: Ko.a.TopDivider })
+                );
+          }),
+          (e.prototype.renderStickerButtons = function() {
             var t = this,
-              e = this.props,
-              n = e.bShowEffects,
-              r = e.bShowStickers,
-              i = e.roomEffectSettings;
-            if (!n && !r) return null;
-            var a = this.props.emoticonStore
-                .GetEffectList()
-                .filter(function(e) {
-                  return !!i && i[e.name];
-                }),
-              o = this.props.emoticonStore.GetStickerList(),
-              s = o.length + a.length == 0,
-              c = M.STORE_BASE_URL + "holidaymarket",
-              l = re(
-                "#EmoticonPicker_GetFestivitiesInTheStore",
-                A.createElement(
-                  "a",
-                  { href: c },
-                  ne("#EmoticonPicker_GetFestivitiesLinkText")
-                )
-              );
+              e = this.getAvailableStickers();
+            return 0 == e.length
+              ? null
+              : A.createElement(
+                  A.Fragment,
+                  null,
+                  A.createElement(
+                    "div",
+                    { className: Ko.a.EffectHeading },
+                    ne("#EmoticonPicker_StickerHeading")
+                  ),
+                  A.createElement(
+                    "div",
+                    null,
+                    e.map(function(e) {
+                      return A.createElement(ts, {
+                        key: e.name,
+                        stickerName: e.name,
+                        onStickerSelected: t.props.onStickerSelected
+                      });
+                    })
+                  ),
+                  A.createElement("div", { className: Ko.a.BottomDivider })
+                );
+          }),
+          (e.prototype.renderHolidayStoreLink = function() {
+            if (
+              0 <
+              this.getAvailableEffects().length +
+                this.getAvailableStickers().length
+            )
+              return null;
+            var e = M.STORE_BASE_URL + "holidaymarket";
             return A.createElement(
-              "div",
+              A.Fragment,
               null,
               A.createElement(
                 "div",
-                { className: Ko.a.EffectHeading },
-                ne("#EmoticonPicker_EffectHeading")
-              ),
-              s && A.createElement("div", { className: Ko.a.GetFestive }, l),
-              i &&
-                A.createElement(
-                  "div",
-                  { style: { display: "flex", flexWrap: "wrap" } },
-                  a.map(function(e) {
-                    return A.createElement(ns, {
-                      key: e.name,
-                      effect: e,
-                      onEffectSelected: t.props.onRoomEffectSelected,
-                      roomEffectSettings: i
-                    });
-                  })
-                ),
-              A.createElement("div", { className: Ko.a.TopDivider }),
-              A.createElement(
-                "div",
-                { className: Ko.a.EffectHeading },
-                ne("#EmoticonPicker_StickerHeading")
-              ),
-              A.createElement(
-                "div",
-                null,
-                o.map(function(e) {
-                  return A.createElement(ts, {
-                    key: e.name,
-                    stickerName: e.name,
-                    onStickerSelected: t.props.onStickerSelected
-                  });
-                })
+                { className: Ko.a.GetFestive },
+                re(
+                  "#EmoticonPicker_GetFestivitiesInTheStore",
+                  A.createElement(
+                    "a",
+                    { href: (M.IN_CLIENT ? "steam://openurl/" : "") + e },
+                    ne("#EmoticonPicker_GetFestivitiesLinkText")
+                  )
+                )
               ),
               A.createElement("div", { className: Ko.a.BottomDivider })
             );
+          }),
+          (e.prototype.renderStickersAndEffectsButtons = function() {
+            var e = this.props,
+              t = e.bShowEffects,
+              n = e.bShowStickers;
+            return t || n
+              ? A.createElement(
+                  A.Fragment,
+                  null,
+                  this.renderHolidayStoreLink(),
+                  this.renderEffectButtons(),
+                  this.renderStickerButtons()
+                )
+              : null;
           }),
           (e.prototype.render = function() {
             var e = this.props.emoticonStore,
@@ -43592,7 +43648,12 @@
               null,
               A.createElement(
                 "div",
-                { className: wp.DevSummaryCtn },
+                {
+                  className: bt(
+                    wp.DevSummaryCtn,
+                    this.props.bSmallFormat ? wp.SmallFormat : wp.LargeFormat
+                  )
+                },
                 !this.props.bHideCreatorType &&
                   A.createElement("span", { className: wp.Title }, o),
                 A.createElement(
@@ -43654,7 +43715,11 @@
                         ),
                         A.createElement(
                           "div",
-                          { className: pn.FlexRowContainer },
+                          {
+                            className: this.props.bSmallFormat
+                              ? pn.FlexColumnContainer
+                              : pn.FlexRowContainer
+                          },
                           A.createElement(
                             "div",
                             { className: wp.FollowBtnCtn },
@@ -43785,7 +43850,8 @@
                   A.createElement(kp, {
                     creatorID: a || (o || s),
                     eventUserStore: n,
-                    eventModel: r
+                    eventModel: r,
+                    bSmallFormat: !0
                   })
                 )
               );
@@ -46340,7 +46406,8 @@
                       A.createElement(jp, {
                         appid: t.appid,
                         eventUserStore: s,
-                        eventModel: t
+                        eventModel: t,
+                        bSmallFormat: !0
                       })
                     )
                   )

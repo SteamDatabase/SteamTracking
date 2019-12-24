@@ -82,6 +82,16 @@ div.bb_h1 {
 	font-weight: 500;
 }
 
+div.bb_h2 {
+	color: #000;
+	font-weight: 400;
+}
+div.bb_h3 {
+	color: #000;
+	font-weight: 300;
+}
+
+
 .updated_app_date
 {
 	color: #000000;

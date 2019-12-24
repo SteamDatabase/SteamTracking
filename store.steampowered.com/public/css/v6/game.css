@@ -3212,7 +3212,7 @@ div.early_access_announcements .post h2 {
 	line-height: 14px;
 }
 
-div.early_access_announcements .post, div.early_access_announcements .post p, div.early_access_announcements .post ul, div.early_access_announcements .post .bb_h1  {
+div.early_access_announcements .post, div.early_access_announcements .post p, div.early_access_announcements .post ul, div.early_access_announcements .post .bb_h1, div.early_access_announcements .post .bb_h2, div.early_access_announcements .post .bb_h3 {
 	color: #8f98a0;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */

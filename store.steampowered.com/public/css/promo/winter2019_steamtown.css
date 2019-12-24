@@ -64,13 +64,19 @@ div#global_header .submenuitem:hover,
 }
 
 
- body.v6.steamtown {
-	 background-position: center;
-	 font-family: giza-three, serif;
-	 font-weight: 500;
-	 font-style: normal;
-	 font-size: 14px;
- }
+body.v6.steamtown {
+	background-position: center;
+	font-family: giza-three, serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 14px;
+}
+
+body.v6.steamtown .search_suggest {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
 
 body.v6.steamtown .page_container {
 	max-width: 1538px;

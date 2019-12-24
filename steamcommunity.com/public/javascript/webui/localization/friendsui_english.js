@@ -955,6 +955,7 @@ LocalizationReady("friendsui", "english", {
   Tooltip_RemotePlayDisableMouse: "Sharing Host Mouse",
   Tooltip_RemotePlayEnableController: "Controllers Disabled",
   Tooltip_RemotePlayDisableController: "Allowing Controllers",
+  Tooltip_RemotePlayOtherController: "%1$s's Controller",
   RemotePlay_Error: "Remote Play Error",
   RemotePlay_ErrorInviteFailed_ScreenLocked:
     "Remote Play Together invite failed because the screen is locked.",
