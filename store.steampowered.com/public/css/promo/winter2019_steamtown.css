@@ -780,6 +780,10 @@ body.v6.steamtown .page_container {
 	margin-bottom: 25px;
 }
 
+.reward_sticker_ctn .reward_item_img {
+	width: 150px;
+}
+
 .reward_item_ctn.disabled .reward_desc_ctn {
 	position: absolute;
 	bottom: 0px;
