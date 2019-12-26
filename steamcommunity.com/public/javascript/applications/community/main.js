@@ -141,7 +141,7 @@
               {
                 0: "ebf340b3a6216e2d0fa9",
                 1: "2f96672bd2e08296709f",
-                3: "4a2454fec84d0c726078",
+                3: "5b8636988302a5c2907f",
                 5: "0d0c4b00d19ea974b374",
                 6: "0aef7b2ba43d73fb6ef6",
                 7: "388b857f5be86c9ebc8d",
@@ -18611,6 +18611,9 @@
               }),
               n
             );
+          }),
+          (o.prototype.GetSaleLabelAlign = function() {
+            return this.jsondata.sale_label_align || "left";
           }),
           (o.prototype.GetNameWithFallback = function(e) {
             return this.name.get(e) || this.name.get(0);
@@ -53538,7 +53541,8 @@
                               fontFamily: rM(
                                 o.jsondata.sale_font,
                                 this.props.language
-                              )
+                              ),
+                              textAlign: o.GetSaleLabelAlign()
                             }
                           },
                           o.GetNameWithFallback(this.props.language)
@@ -53548,7 +53552,7 @@
                           "div",
                           {
                             style: {
-                              textAlign: "left",
+                              textAlign: o.GetSaleLabelAlign(),
                               fontFamily: rM(
                                 o.jsondata.sale_font,
                                 this.props.language
@@ -54109,7 +54113,8 @@
                   textTransform: t.jsondata.sale_section_disable_capitalize
                     ? "initial"
                     : null,
-                  color: p.label_color
+                  color: p.label_color,
+                  textAlign: t.GetSaleLabelAlign()
                 }
               },
               aM(p, this.props.language)
@@ -65567,6 +65572,11 @@
             (this.props.editModel.GetEventModel().jsondata.sale_font = e.data),
               this.props.editModel.SetDirty(Nb.jsondata_sales);
           }),
+          (e.prototype.OnSaleLabelAlignChange = function(e) {
+            (this.props.editModel.GetEventModel().jsondata.sale_label_align =
+              e.data),
+              this.props.editModel.SetDirty(Nb.jsondata_sales);
+          }),
           (e.prototype.OnCapitalizeSectionChange = function(e) {
             (this.props.editModel.GetEventModel().jsondata.sale_section_disable_capitalize = e),
               this.props.editModel.SetDirty(Nb.jsondata_sales);
@@ -65773,19 +65783,20 @@
           }),
           (e.prototype.render = function() {
             var n = this,
-              e = this.props.editModel.GetEventModel().jsondata,
-              t = e.sale_vanity_id,
-              o = (e.sale_browsemore_text, e.sale_browsemore_url),
-              a = e.sale_browsemore_color,
-              i = e.sale_browsemore_bgcolor,
-              r = (e.sale_background_color, e.sale_font),
-              p = e.sale_section_disable_capitalize,
-              s = e.sale_section_font_size,
-              c = e.sale_vanity_id_valve_approved_for_sale_subpath,
-              b = an.GetPartnerEventPermissions(
+              e = this.props.editModel,
+              t = this.props.editModel.GetEventModel().jsondata,
+              o = t.sale_vanity_id,
+              a = (t.sale_browsemore_text, t.sale_browsemore_url),
+              i = t.sale_browsemore_color,
+              r = t.sale_browsemore_bgcolor,
+              p = (t.sale_background_color, t.sale_font),
+              s = t.sale_section_disable_capitalize,
+              c = t.sale_section_font_size,
+              b = t.sale_vanity_id_valve_approved_for_sale_subpath,
+              l = an.GetPartnerEventPermissions(
                 this.props.editModel.GetClanSteamID()
               ),
-              l = [
+              M = [
                 { label: "Default", data: "" },
                 {
                   label: "Default, Bold",
@@ -65799,6 +65810,24 @@
                 {
                   label: "Kulturista-Web (Remote Play)",
                   data: "'kulturista-web', serif"
+                }
+              ].map(function(e) {
+                return Object(
+                  g.a
+                )(Object(g.a)({}, e), { label: q.createElement("div", { style: { fontFamily: e.data } }, e.label) });
+              }),
+              d = [
+                {
+                  label: Object(v.c)("#Sale_LabelAlignment_Left"),
+                  data: "left"
+                },
+                {
+                  label: Object(v.c)("#Sale_LabelAlignment_Center"),
+                  data: "center"
+                },
+                {
+                  label: Object(v.c)("#Sale_LabelAlignment_Right"),
+                  data: "right"
                 }
               ].map(function(e) {
                 return Object(
@@ -65866,9 +65895,9 @@
                           label: Object(v.c)("#Sale_VanityID"),
                           tooltip: Object(v.c)("#Sale_VanityID_ttip"),
                           onChange: this.OnVanityIDChange,
-                          value: t
+                          value: o
                         }),
-                        t &&
+                        o &&
                           this.state.creatorHome &&
                           q.createElement(
                             "a",
@@ -65877,13 +65906,13 @@
                                 (f.b.IN_CLIENT ? "steam://openurl/" : "") +
                                 this.state.creatorHome.GetURL("publisher") +
                                 "sale/" +
-                                t,
+                                o,
                               target: f.b.IN_CLIENT ? "" : "_blank"
                             },
                             Object(v.c)("#Sale_VanityID_Link")
                           ),
-                        t &&
-                          c &&
+                        o &&
+                          b &&
                           q.createElement(
                             "span",
                             null,
@@ -65895,13 +65924,13 @@
                                   (f.b.IN_CLIENT ? "steam://openurl/" : "") +
                                   f.b.STORE_BASE_URL +
                                   "sale/" +
-                                  t,
+                                  o,
                                 target: f.b.IN_CLIENT ? "" : "_blank"
                               },
                               Object(v.c)("#Sale_VanityID_ValveLink")
                             )
                           ),
-                        Boolean(b.valve_admin) &&
+                        Boolean(l.valve_admin) &&
                           q.createElement(
                             "div",
                             {
@@ -65913,35 +65942,43 @@
                                 "#Sale_ValveTopSalePath_ttip"
                               ),
                               onChange: this.OnValveHostOnTopSalesPathChange,
-                              checked: c
+                              checked: b
                             })
                           ),
                         q.createElement(ne.f, {
                           label: Object(v.c)("#Sale_SaleFont"),
                           strDropDownClassName: Be.a.DropDownScroll,
-                          rgOptions: l,
-                          selectedOption: r,
+                          rgOptions: M,
+                          selectedOption: p,
                           onChange: this.OnSaleFontChange,
+                          contextMenuPositionOptions: { bDisablePopTop: !0 }
+                        }),
+                        q.createElement(ne.f, {
+                          label: Object(v.c)("#Sale_LabelAlignment"),
+                          strDropDownClassName: Be.a.DropDownScroll,
+                          rgOptions: d,
+                          selectedOption: e.GetEventModel().GetSaleLabelAlign(),
+                          onChange: this.OnSaleLabelAlignChange,
                           contextMenuPositionOptions: { bDisablePopTop: !0 }
                         }),
                         q.createElement(ne.i, {
                           type: "text",
                           label: Object(v.c)("#Sale_SectionTitleFontSize"),
                           onChange: this.OnSectionTitleFontSizeChange,
-                          value: s
+                          value: c
                         }),
                         q.createElement(ne.d, {
                           label: Object(v.c)(
                             "#Sale_DontCapitalizeSectionTitles"
                           ),
                           onChange: this.OnCapitalizeSectionChange,
-                          checked: p
+                          checked: s
                         })
                       ),
                       q.createElement(
                         "div",
                         { className: jz.a.RightCol },
-                        Boolean(b.support_user) &&
+                        Boolean(l.support_user) &&
                           q.createElement(
                             "div",
                             {
@@ -65962,7 +65999,7 @@
                               Object(v.c)("#Sale_ImportButton")
                             )
                           ),
-                        Boolean(b.valve_admin) &&
+                        Boolean(l.valve_admin) &&
                           q.createElement(
                             "div",
                             {
@@ -66112,7 +66149,7 @@
                         label: Object(v.c)("#Sale_BrowseMore_URL"),
                         name: "sale_browsemore_url",
                         placeholder: Object(v.c)("#Sale_BrowseMore_URL"),
-                        value: o,
+                        value: a,
                         onChange: this.OnSaleChange
                       }),
                       q.createElement(
@@ -66120,7 +66157,7 @@
                         {
                           onClick: this.OnOpenButtonTextColor,
                           className: Be.a.EventEditorTextTitle,
-                          style: { color: a, backgroundColor: i }
+                          style: { color: i, backgroundColor: r }
                         },
                         Object(v.c)("#Sale_Section_Label_Color")
                       ),
@@ -66129,15 +66166,15 @@
                         {
                           onClick: this.OnOpenButtonBackgroundColor,
                           className: Be.a.EventEditorTextTitle,
-                          style: { color: a, backgroundColor: i }
+                          style: { color: i, backgroundColor: r }
                         },
                         Object(v.c)("#Sale_Section_Background_Color")
                       ),
                       q.createElement(nM, {
                         text: Object(v.c)("#Sale_SeeAllSpecials"),
                         url: "",
-                        color: a,
-                        bgcolor: i
+                        color: i,
+                        bgcolor: r
                       })
                     )
                 )
@@ -66159,6 +66196,7 @@
           Object(g.c)([z.a], e.prototype, "OnBrowseMoreButtonChange", null),
           Object(g.c)([z.a], e.prototype, "OnImportSaleChange", null),
           Object(g.c)([z.a], e.prototype, "OnSaleFontChange", null),
+          Object(g.c)([z.a], e.prototype, "OnSaleLabelAlignChange", null),
           Object(g.c)([z.a], e.prototype, "OnCapitalizeSectionChange", null),
           Object(g.c)(
             [z.a],

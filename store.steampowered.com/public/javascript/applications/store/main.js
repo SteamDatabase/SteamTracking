@@ -39364,6 +39364,9 @@
               n
             );
           }),
+          (r.prototype.GetSaleLabelAlign = function() {
+            return this.jsondata.sale_label_align || "left";
+          }),
           (r.prototype.GetNameWithFallback = function(e) {
             return this.name.get(e) || this.name.get(0);
           }),
@@ -52551,7 +52554,8 @@
                               fontFamily: eg(
                                 r.jsondata.sale_font,
                                 this.props.language
-                              )
+                              ),
+                              textAlign: r.GetSaleLabelAlign()
                             }
                           },
                           r.GetNameWithFallback(this.props.language)
@@ -52561,7 +52565,7 @@
                           "div",
                           {
                             style: {
-                              textAlign: "left",
+                              textAlign: r.GetSaleLabelAlign(),
                               fontFamily: eg(
                                 r.jsondata.sale_font,
                                 this.props.language
@@ -53119,7 +53123,8 @@
                   textTransform: t.jsondata.sale_section_disable_capitalize
                     ? "initial"
                     : null,
-                  color: s.label_color
+                  color: s.label_color,
+                  textAlign: t.GetSaleLabelAlign()
                 }
               },
               (function(e, t) {
