@@ -196,6 +196,13 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	var k_nTier2ItemsMin = 11;
 	var k_nTier2ItemsMax = 11;
 
+	if ( rgDisplayLists.steam_award_winners )
+	{
+		var rgSteamAwardWinners = GHomepage.FilterItemsForDisplay( rgDisplayLists.steam_award_winners, 'home', 8, 8, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: false, enforce_minimum: true } );
+		GDynamicStore.MarkAppDisplayed( rgSteamAwardWinners );
+		HomeSaleBlock( rgSteamAwardWinners, $J('#steamawards_target' ), 'sale_steamawards' );
+	}
+
 	var rgTier1 = GHomepage.FilterItemsForDisplay(
 		rgDisplayLists.sale_tier1.concat( rgDisplayLists.sale_tier1_fallback ), 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
@@ -203,13 +210,6 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	var rgTier2 = GHomepage.FilterItemsForDisplay(
 		rgDisplayLists.sale_tier2.concat( rgDisplayLists.sale_tier2_fallback ), 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
-
-	if ( rgDisplayLists.steam_award_winners )
-	{
-		var rgSteamAwardWinners = GHomepage.FilterItemsForDisplay( rgDisplayLists.steam_award_winners, 'home', 8, 8, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: false, enforce_minimum: true } );
-		GDynamicStore.MarkAppDisplayed( rgSteamAwardWinners );
-		HomeSaleBlock( rgSteamAwardWinners, $J('#steamawards_target' ), 'sale_steamawards' );
-	}
 
 	GDynamicStore.MarkAppDisplayed( rgTier1 );
 	GDynamicStore.MarkAppDisplayed( rgTier2 );
