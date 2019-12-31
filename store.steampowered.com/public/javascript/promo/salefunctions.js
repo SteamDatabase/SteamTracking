@@ -180,7 +180,8 @@ function HomeSaleFilterHeroes( $Parent )
 function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 {
 	// process heroes
-	HomeSaleFilterHeroes( $J('.hero_parent_ctn') );
+	if ( !g_bIsEncore )
+		HomeSaleFilterHeroes( $J('.hero_parent_ctn') );
 
 	// process tag sections first, pulling in featured items into the tag blocks we display
 	var $TagBlock = $J('#sale_tag_categories');
@@ -202,6 +203,13 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	var rgTier2 = GHomepage.FilterItemsForDisplay(
 		rgDisplayLists.sale_tier2.concat( rgDisplayLists.sale_tier2_fallback ), 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
+
+	if ( rgDisplayLists.steam_award_winners )
+	{
+		var rgSteamAwardWinners = GHomepage.FilterItemsForDisplay( rgDisplayLists.steam_award_winners, 'home', 8, 8, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: false, enforce_minimum: true } );
+		GDynamicStore.MarkAppDisplayed( rgSteamAwardWinners );
+		HomeSaleBlock( rgSteamAwardWinners, $J('#steamawards_target' ), 'sale_steamawards' );
+	}
 
 	GDynamicStore.MarkAppDisplayed( rgTier1 );
 	GDynamicStore.MarkAppDisplayed( rgTier2 );
@@ -276,9 +284,12 @@ function TryPopulateSaleItems( rgDisplayedItems, rgOriginalItemList, cMinItems, 
 	}
 }
 
-function HomeSaleBlock( rgItems, $Parent )
+function HomeSaleBlock( rgItems, $Parent, strFeatureContext )
 {
 	var rgRemainingItems = rgItems;
+
+	if ( !strFeatureContext )
+		strFeatureContext = 'sale_dailydeals';
 
 	var bFourRow = true;
 	while( rgRemainingItems.length )
@@ -287,7 +298,7 @@ function HomeSaleBlock( rgItems, $Parent )
 			bFourRow = false;
 		else if ( rgRemainingItems.length == 4 )
 			bFourRow = true;
-		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, bFourRow ? 4 : 3, 'sale_dailydeals', SaleCap );
+		rgRemainingItems = SaleRow( rgRemainingItems, $Parent, bFourRow ? 4 : 3, strFeatureContext, SaleCap );
 		bFourRow = !bFourRow;
 	}
 	BindSaleCapAutoSizeEvents( $Parent );
