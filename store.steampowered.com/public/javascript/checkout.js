@@ -2450,15 +2450,7 @@ function OnGetFinalPriceSuccess( result )
 		}
 		else
 		{
-									if ( method.value == 'steamaccount' || g_bUseRemainingSteamAccount )
-			{
-				$J('#checkout_review_cart_loyalty_points_wallet').show();
-			}
-			else
-			{
-				$J('#checkout_review_cart_loyalty_points_wallet').hide();
-			}
-									SetTabEnabled( 'review' );
+												SetTabEnabled( 'review' );
 		}
 	} 
 	catch(e) 
