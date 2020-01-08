@@ -1995,20 +1995,21 @@
                 })
             );
           }),
-          (e.prototype.InviteToGame = function(e, t) {
-            var n = i.b.Init(u.d, 7005);
-            n.Hdr().set_routing_appid(t),
-              n
+          (e.prototype.InviteToGame = function(e, t, n) {
+            var o = i.b.Init(u.d, 7005);
+            o.Hdr().set_routing_appid(t),
+              o
                 .Body()
                 .set_steam_id_src(
                   this.m_CMInterface.steamid.ConvertTo64BitString()
                 ),
-              n
+              o
                 .Body()
                 .set_steam_id_dest(
                   s.a.InitFromAccountID(e.accountid).ConvertTo64BitString()
                 ),
-              this.m_CMInterface.Send(n);
+              n && o.Body().set_connect_string(n),
+              this.m_CMInterface.Send(o);
           }),
           (e.prototype.InviteToLobby = function(e, t, n) {
             var o = i.b.Init(u.e, 6621);
@@ -12407,7 +12408,7 @@
     e.exports = {
       SaleHeaderContainer: "partnersaledisplay_SaleHeaderContainer_2Kpls",
       SaleSection: "partnersaledisplay_SaleSection_FfzNv",
-      EventSection: "partnersaledisplay_EventSection_3jYUb",
+      CarouselDisplay: "partnersaledisplay_CarouselDisplay_3RDEb",
       SaleOverlay: "partnersaledisplay_SaleOverlay_3PS79",
       AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_i6DFs",
       SaleOuterContainer: "partnersaledisplay_SaleOuterContainer_3xu9l",
@@ -19453,8 +19454,8 @@
               })
               .catch(function() {});
           }),
-          (t.prototype.InviteToGame = function(e) {
-            r.f.FriendStore.InviteToGame(this.props.friend, e);
+          (t.prototype.InviteToGame = function(e, t) {
+            r.f.FriendStore.InviteToGame(this.props.friend, e, t);
           }),
           (t.prototype.InviteToLobby = function(e, t) {
             r.f.FriendStore.InviteToLobby(this.props.friend, e, t);
@@ -19572,8 +19573,8 @@
               S = 2 == u.efriendrelationship,
               C = 4 == u.efriendrelationship,
               O = S || 4 == u.efriendrelationship,
-              I = r.f.FriendStore.self.persona.m_unGamePlayedAppID,
-              M = u.persona.m_unGamePlayedAppID;
+              I = r.f.FriendStore.self.persona.m_unGamePlayedAppID;
+            u.persona.m_unGamePlayedAppID;
             o.chat &&
               (o.chat instanceof w.a
                 ? (e = o.chat).BVoiceActive() && (g = !0)
@@ -19626,25 +19627,25 @@
                     Object(p.c)("#Friend_Menu_SendMessage")
                   )
                 );
-            var T =
+            var M =
                 u.persona.is_online && !e && !S && !C && !h && !u.is_blocked,
-              R = r.f.ChatStore.GetActiveVoiceChat();
+              T = r.f.ChatStore.GetActiveVoiceChat();
             if (
-              (R && R instanceof w.a && R.accountid_partner == u.accountid
+              (T && T instanceof w.a && T.accountid_partner == u.accountid
                 ? a.push(
                     c.createElement(
                       E.d,
                       {
                         key: "voicechat",
                         onSelected: function() {
-                          R.ToggleVoiceChat();
+                          T.ToggleVoiceChat();
                         }
                       },
                       Object(p.c)("#Friend_Menu_StopVoiceChat")
                     )
                   )
-                : T &&
-                  (R instanceof D.a
+                : M &&
+                  (T instanceof D.a
                     ? a.push(
                         c.createElement(
                           E.d,
@@ -19652,7 +19653,7 @@
                             key: "voicechat",
                             className: "contextVoiceInvite",
                             onSelected: function() {
-                              t.InviteToVoice(R, o);
+                              t.InviteToVoice(T, o);
                             }
                           },
                           c.createElement(G.nb, null),
@@ -19799,10 +19800,10 @@
                       )
                     ),
                   l.push(c.createElement(q, { key: "aliases", friend: u }));
-                var A = [],
-                  k = void 0;
+                var R = [],
+                  A = void 0;
                 if (0 == I)
-                  k = c.createElement(
+                  A = c.createElement(
                     "div",
                     { className: "contextMenuGameItem" },
                     c.createElement(
@@ -19812,8 +19813,8 @@
                     )
                   );
                 else {
-                  var j = r.f.AppInfoStore.GetAppInfo(I);
-                  k = c.createElement(
+                  var k = r.f.AppInfoStore.GetAppInfo(I);
+                  A = c.createElement(
                     "div",
                     { className: "contextMenuGameItem" },
                     c.createElement(
@@ -19821,20 +19822,20 @@
                       { className: "contextMenuGameIcon" },
                       c.createElement("img", {
                         className: "GameIcon",
-                        src: j.icon_url
+                        src: k.icon_url
                       })
                     ),
                     c.createElement(
                       "div",
                       { className: "contextMenuGameName" },
-                      j.name
+                      k.name
                     )
                   );
                 }
                 if (
                   (r.f.FriendStore.self.persona.is_ingame &&
                     r.f.BroadcastStore.is_broadcast_capable &&
-                    A.push(
+                    R.push(
                       c.createElement(
                         E.d,
                         {
@@ -19847,46 +19848,44 @@
                         Object(p.c)("#Friend_Menu_InviteToWatch")
                       )
                     ),
-                  0 != I && "0" != r.f.FriendStore.self.persona.m_game_lobby_id
-                    ? A.push(
-                        c.createElement(
-                          E.d,
-                          {
-                            className: "contextMenuGameOptions",
-                            key: "lobbyinvite",
-                            onSelected: function() {
-                              t.InviteToLobby(
-                                I,
-                                r.f.FriendStore.self.persona.m_game_lobby_id
-                              );
-                            }
-                          },
-                          Object(p.c)("#Friend_Menu_InviteToLobby")
-                        )
-                      )
-                    : 0 != I &&
-                      I != M &&
-                      A.push(
-                        c.createElement(
-                          E.d,
-                          {
-                            className: "contextMenuGameOptions",
-                            key: "lobbyinvite",
-                            onSelected: function() {
-                              t.InviteToLobby(
-                                I,
-                                r.f.FriendStore.self.persona.m_game_lobby_id
-                              );
-                            }
-                          },
-                          Object(p.c)("#Friend_Menu_InviteToLobby")
-                        )
-                      ),
-                  r.f.RemotePlayStore.BEnabled())
-                ) {
+                  0 != I && "0" != r.f.FriendStore.self.persona.m_game_lobby_id)
+                )
+                  R.push(
+                    c.createElement(
+                      E.d,
+                      {
+                        className: "contextMenuGameOptions",
+                        key: "lobbyinvite",
+                        onSelected: function() {
+                          t.InviteToLobby(
+                            I,
+                            r.f.FriendStore.self.persona.m_game_lobby_id
+                          );
+                        }
+                      },
+                      Object(p.c)("#Friend_Menu_InviteToLobby")
+                    )
+                  );
+                else if (r.f.FriendStore.self.persona.has_joinable_game_flag) {
+                  var j = r.f.FriendStore.self.persona.connect_string;
+                  R.push(
+                    c.createElement(
+                      E.d,
+                      {
+                        className: "contextMenuGameOptions",
+                        key: "gameinvite",
+                        onSelected: function() {
+                          t.InviteToGame(I, j);
+                        }
+                      },
+                      Object(p.c)("#Friend_Menu_InviteToGame")
+                    )
+                  );
+                }
+                if (r.f.RemotePlayStore.BEnabled()) {
                   var L = this.props.friend;
                   r.f.RemotePlayStore.HasInviteAndSession(L.accountid)
-                    ? A.push(
+                    ? R.push(
                         c.createElement(
                           E.d,
                           {
@@ -19902,7 +19901,7 @@
                     : r.f.RemotePlayStore.HasInviteAndSessionForGameIDOtherThan(
                         String(I)
                       )
-                    ? A.push(
+                    ? R.push(
                         c.createElement(
                           E.d,
                           {
@@ -19916,7 +19915,7 @@
                         )
                       )
                     : this.state.bCanCreateRemotePlayInvite &&
-                      A.push(
+                      R.push(
                         c.createElement(
                           E.d,
                           {
@@ -19930,11 +19929,11 @@
                         )
                       );
                 }
-                A.length > 0 &&
+                R.length > 0 &&
                   a.push(
                     c.createElement(
                       c.Fragment,
-                      null,
+                      { key: "logo" },
                       c.createElement(
                         E.d,
                         {
@@ -19942,12 +19941,12 @@
                             "contextMenuGameTitle contextMenuUnselectable",
                           onSelected: null
                         },
-                        k
+                        A
                       ),
                       c.createElement(
                         "div",
                         { className: "contextMenuSectionContent" },
-                        A
+                        R
                       )
                     )
                   ),
@@ -60297,7 +60296,7 @@
               r.createElement("polygon", {
                 className: l.a.EmoticonBow_st0,
                 points:
-                  "42.86,22.41 37.42,16.08 12.84,16.08 0,31.06 0,46.3 25.66,16.36 37.64,30.29 38.78,24.06 \r\n\t\t\t\t\t\t\t\t\t43.58,24.06 44.28,24.06                                "
+                  "42.86,22.41 37.42,16.08 12.84,16.08 0,31.06 0,46.3 25.66,16.36 37.64,30.29 38.78,24.06\r\n\t\t\t\t\t\t\t\t\t43.58,24.06 44.28,24.06                                "
               }),
               r.createElement("polygon", {
                 className: l.a.EmoticonBow_st1,
@@ -62952,7 +62951,9 @@
           (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
             "k_ERemoteClientLaunchCanceled"),
           (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
-            "k_ERemoteClientLaunchInvisible");
+            "k_ERemoteClientLaunchInvisible"),
+          (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
+            "k_ERemoteClientLaunchRestrictedCountry");
       })(_ || (_ = {}));
   },
   hReu: function(e, t, n) {
@@ -70729,6 +70730,9 @@
             } else {
               var u = "";
               switch (n) {
+                case J.j.k_ERemoteClientLaunchParentalUnlockFailed:
+                  u = "#RemotePlay_ErrorInviteFailed_ParentalUnlockFailed";
+                  break;
                 case J.j.k_ERemoteClientLaunchScreenLocked:
                   u = "#RemotePlay_ErrorInviteFailed_ScreenLocked";
                   break;
@@ -70746,6 +70750,9 @@
                   break;
                 case J.j.k_ERemoteClientLaunchInvisible:
                   u = "#RemotePlay_ErrorInviteFailed_Invisible";
+                  break;
+                case J.j.k_ERemoteClientLaunchRestrictedCountry:
+                  u = "#RemotePlay_ErrorInviteFailed_RestrictedCountry";
                   break;
                 default:
                   u = "#RemotePlay_ErrorInviteFailed_Failed";
@@ -75633,6 +75640,13 @@
         Object.defineProperty(e.prototype, "has_joinable_game_flag", {
           get: function() {
             return 0 != (2 & this.m_unPersonaStateFlags);
+          },
+          enumerable: !0,
+          configurable: !0
+        }),
+        Object.defineProperty(e.prototype, "connect_string", {
+          get: function() {
+            return this.m_mapRichPresence.get("connect");
           },
           enumerable: !0,
           configurable: !0

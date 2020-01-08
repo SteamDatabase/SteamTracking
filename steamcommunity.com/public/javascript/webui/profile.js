@@ -6691,7 +6691,7 @@
               o.createElement("polygon", {
                 className: l.a.EmoticonBow_st0,
                 points:
-                  "42.86,22.41 37.42,16.08 12.84,16.08 0,31.06 0,46.3 25.66,16.36 37.64,30.29 38.78,24.06 \r\n\t\t\t\t\t\t\t\t\t43.58,24.06 44.28,24.06                                "
+                  "42.86,22.41 37.42,16.08 12.84,16.08 0,31.06 0,46.3 25.66,16.36 37.64,30.29 38.78,24.06\r\n\t\t\t\t\t\t\t\t\t43.58,24.06 44.28,24.06                                "
               }),
               o.createElement("polygon", {
                 className: l.a.EmoticonBow_st1,
@@ -6953,7 +6953,9 @@
           (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
             "k_ERemoteClientLaunchCanceled"),
           (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
-            "k_ERemoteClientLaunchInvisible");
+            "k_ERemoteClientLaunchInvisible"),
+          (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
+            "k_ERemoteClientLaunchRestrictedCountry");
       })(v || (v = {}));
   },
   mrSG: function(e, t, n) {

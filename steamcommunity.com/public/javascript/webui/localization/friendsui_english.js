@@ -957,6 +957,8 @@ LocalizationReady("friendsui", "english", {
   Tooltip_RemotePlayDisableController: "Allowing Controllers",
   Tooltip_RemotePlayOtherController: "%1$s's Controller",
   RemotePlay_Error: "Remote Play Error",
+  RemotePlay_ErrorInviteFailed_ParentalUnlockFailed:
+    "Remote Play Together invite failed because this game has not been approved in Family View.",
   RemotePlay_ErrorInviteFailed_ScreenLocked:
     "Remote Play Together invite failed because the screen is locked.",
   RemotePlay_ErrorInviteFailed_Failed:
@@ -973,6 +975,8 @@ LocalizationReady("friendsui", "english", {
     "Remote Play Together invite failed because Remote Play networking is not currently available, try again later.",
   RemotePlay_ErrorInviteFailed_Invisible:
     "Remote Play Together invite can't be sent while you are Invisible.",
+  RemotePlay_ErrorInviteFailed_RestrictedCountry:
+    "Remote Play Together invite failed because this game is not available in your country.",
 
   FriendNotifications_Instructions: "Notification options for %1$s",
   FriendNotifications_UseDefaults: "Use my default notifications settings",

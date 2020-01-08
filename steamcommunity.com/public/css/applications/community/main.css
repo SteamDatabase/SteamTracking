@@ -5009,7 +5009,7 @@ iframe.steamTVLogin {
   margin-right: auto;
   margin-bottom: 20px;
   box-sizing: border-box; }
-  .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_EventSection_2c00B {
+  .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_CarouselDisplay_mntHD {
     max-width: 1020px; }
 
 .partnersaledisplay_SaleOverlay_1sZo8 {
@@ -5052,7 +5052,8 @@ iframe.steamTVLogin {
       background-size: 180%; } }
 
 .partnersaledisplay_SaleSectionSubtext_17Fnl {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  color: #3e5e47; }
 
 .partnersaledisplay_ShowContentsButton_2EjTW {
   border-radius: 2px;
@@ -6785,11 +6786,10 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   width: 100%;
   color: white; }
 
-.partnereventdialog_ErrorStyles_2Sg7W {
+.partnereventdialog_ErrorStyles_2Sg7W, .partnereventdialog_ErrorStylesWithIcon_Lc2PK {
   color: #c44848; }
 
-.partnereventdialog_ErrorStylesBackground_3fVv6 {
-  background-color: #472025;
+.partnereventdialog_ErrorIconLayout_42__6, .partnereventdialog_ErrorStylesBackground_3fVv6, .partnereventdialog_ErrorStylesWithIcon_Lc2PK {
   padding: 10px;
   padding-left: 42px;
   background-image: url(https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/icons/icon_warning.png);
@@ -6797,21 +6797,26 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   background-position-x: 10px;
   background-position-y: 10px; }
 
-.partnereventdialog_ErrorStyles_2Sg7W > div {
+.partnereventdialog_ErrorStylesBackground_3fVv6 {
+  background-color: #472025; }
+
+.partnereventdialog_ErrorStyles_2Sg7W > div, .partnereventdialog_ErrorStylesWithIcon_Lc2PK > div {
   display: inline;
   color: #d78484; }
 
-.partnereventdialog_WarningStyles_3gxgE {
+.partnereventdialog_WarningStyles_3gxgE, .partnereventdialog_WarningStylesWithIcon_1S_uS {
   color: darkgoldenrod; }
 
-.partnereventdialog_WarningStylesBackground_UYrHs {
-  background-color: darkgoldenrod;
+.partnereventdialog_WarningIconLayout_2jM80, .partnereventdialog_WarningStylesBackground_UYrHs, .partnereventdialog_WarningStylesWithIcon_1S_uS {
   padding: 10px;
   padding-left: 42px;
   background-image: url(https://steamcommunity-a.akamaihd.net/public/images//sharedfiles/icons/icon_warning.png);
   background-repeat: no-repeat;
   background-position-x: 10px;
   background-position-y: 10px; }
+
+.partnereventdialog_WarningStylesBackground_UYrHs {
+  background-color: darkgoldenrod; }
 
 .partnereventdialog_Padding_36hma {
   padding-top: 10px; }

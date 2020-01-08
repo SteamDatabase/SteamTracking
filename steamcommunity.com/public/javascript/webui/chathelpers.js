@@ -1886,7 +1886,9 @@
           (e[(e.k_ERemoteClientLaunchCanceled = 26)] =
             "k_ERemoteClientLaunchCanceled"),
           (e[(e.k_ERemoteClientLaunchInvisible = 27)] =
-            "k_ERemoteClientLaunchInvisible");
+            "k_ERemoteClientLaunchInvisible"),
+          (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
+            "k_ERemoteClientLaunchRestrictedCountry");
       })(f || (f = {}));
   },
   mrSG: function(e, t, n) {
