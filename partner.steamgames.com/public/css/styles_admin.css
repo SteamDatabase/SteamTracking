@@ -1475,6 +1475,43 @@ div.image_hover_preview {
 	width: 12em;
 }
 
+.release_checklist_table tr {
+    background: #333333;
+}
+.release_checklist_table td {
+    padding: 4px 6px 4px 4px;
+}
+.release_checklist_table .checklist_box_unchecked {
+    display: block;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #38352e;
+    background-color: #0004;
+    box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
+    border-radius: 2px;
+}
+.release_checklist_table .checklist_box_suggested {
+    display: block;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #38352e;
+    background-color: #0004;
+    box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
+    border-radius: 2px;
+}
+.release_checklist_table .checklist_box_checked {
+    display: block;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #80a206;
+    background-color: #0004;
+    box-shadow: inset 1px 0.5px 3px rgba(1, 1, 1, 0.4);
+    border-radius: 2px;
+    color: #a4d007;
+    line-height: 8px;
+    font-size: 16px;
+}
+
 .checklistItem {
 	padding-top: 2px;
 	padding-bottom: 2px;
@@ -3264,17 +3301,39 @@ span.new {
 
 .checklist_incomplete
 {
-	color: #e24044;
+	/* color: #e24044; */
 }
 
 .checklist_suggested
 {
-	color: orange;
+	/* color: orange; */
 }
 
-.checklist_complete
+.release_checklist_table {
+    width: 100%;
+}
+.release_checklist_table tr.checklist_complete
 {
 	color: #a4d007;
+    background-color: #3e4f03;
+}
+.release_checklist_table tr.checklist_complete a
+{
+    color: #a4d007;
+}
+.release_checklist_table .checklist_ttip {
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    display: inline-block;
+    width: 9px;
+    height: 13px;
+    padding-left: 5px;
+    line-height: 13px;
+    float: right;
+}
+.release_checklist_table .checkbox_ctn {
+    width: 12px;
+    padding: 4px;
 }
 
 .launch_library_placement_tool
