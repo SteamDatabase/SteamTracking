@@ -854,6 +854,9 @@ ProfilePanel #UpperRow
 .friendPlayerLevel.lvl_4700 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_grunge_bp_5-6.png' ); }
 .friendPlayerLevel.lvl_4800 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_grunge_bp_7-8.png' ); }
 .friendPlayerLevel.lvl_4900 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_grunge_bp_9-10.png' ); }
+.friendPlayerLevel.lvl_5000 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_halftone_1-2.png' ); }
+.friendPlayerLevel.lvl_5100 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_halftone_3-4.png' ); }
+.friendPlayerLevel.lvl_5200 { background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/community/bigpicture/levels_halftone_4-5.png' ); }
 
 .friendPlayerLevel.lvl_plus_10 {
 	background-position: 10px -58px;
