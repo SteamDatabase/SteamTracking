@@ -66579,12 +66579,12 @@
           }),
           (e.prototype.UpdateAppSuggestions = function(n) {
             return Object(g.b)(this, void 0, void 0, function() {
-              var r,
+              var p,
                 t = this;
               return Object(g.e)(this, function(e) {
                 return (
-                  (r = n.target.value) &&
-                    0 != r.trim().length &&
+                  (p = n.target.value) &&
+                    0 != p.trim().length &&
                     (window.clearTimeout(this.m_currentRequest),
                     (this.m_currentRequest = window.setTimeout(function() {
                       return Object(g.b)(t, void 0, void 0, function() {
@@ -66592,27 +66592,28 @@
                           n,
                           o,
                           a,
-                          i = this;
+                          i,
+                          r = this;
                         return Object(g.e)(this, function(e) {
                           switch (e.label) {
                             case 0:
-                              return 0 !== r.indexOf("https://")
+                              return 0 !== p.indexOf("https://")
                                 ? [3, 1]
-                                : ((t = r.split("/")),
+                                : ((t = p.split("/")),
                                   (n = t.indexOf("app")),
                                   (o = -1 < n ? t[n + 1] : "") &&
                                     (this.m_searchResultsMenu = Object(Te.a)(
                                       q.createElement(
                                         oe.c,
                                         { className: Xz.a.SearchResults },
-                                        [{ id: o, name: r, type: "game" }].map(
+                                        [{ id: o, name: p, type: "game" }].map(
                                           function(e) {
                                             return q.createElement(
                                               oe.d,
                                               {
                                                 key: e.id,
                                                 onSelected: function() {
-                                                  return i.AddCapsule(e);
+                                                  return r.AddCapsule(e);
                                                 }
                                               },
                                               q.createElement(
@@ -66623,7 +66624,7 @@
                                                     alignItems: "center"
                                                   }
                                                 },
-                                                r
+                                                p
                                               )
                                             );
                                           }
@@ -66639,31 +66640,30 @@
                                     )),
                                   [3, 3]);
                             case 1:
-                              return [
-                                4,
-                                _.a.get(
+                              return (
+                                (a =
                                   f.b.STORE_BASE_URL +
-                                    "events_promotion_admin/ajaxitemsuggest?term=" +
-                                    encodeURIComponent(r) +
-                                    "&cc=" +
-                                    f.b.COUNTRY +
-                                    "&l=" +
-                                    f.b.LANGUAGE
-                                )
-                              ];
+                                  "events_promotion_admin/ajaxitemsuggest?term=" +
+                                  encodeURIComponent(p) +
+                                  "&cc=" +
+                                  f.b.COUNTRY +
+                                  "&l=" +
+                                  f.b.LANGUAGE),
+                                [4, _.a.get(a, { withCredentials: !0 })]
+                              );
                             case 2:
-                              (a = e.sent()),
+                              (i = e.sent()),
                                 (this.m_searchResultsMenu = Object(Te.a)(
                                   q.createElement(
                                     oe.c,
                                     { className: Xz.a.SearchResults },
-                                    a.data.map(function(e) {
+                                    i.data.map(function(e) {
                                       return q.createElement(
                                         oe.d,
                                         {
                                           key: e.id,
                                           onSelected: function() {
-                                            return i.AddCapsule(e);
+                                            return r.AddCapsule(e);
                                           }
                                         },
                                         q.createElement(
