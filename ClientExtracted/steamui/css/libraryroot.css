@@ -678,6 +678,61 @@
 .friendPlayerLevel.lvl_plus_90 {
   background-position: 0 -288px; }
 
+.toggle_Toggle_3POJz {
+  width: 40px;
+  height: 16px;
+  position: relative;
+  cursor: pointer;
+  transition: opacity .2s ease-in-out; }
+  .toggle_Toggle_3POJz.toggle_Disabled_1jIKG {
+    cursor: default;
+    opacity: 0.6; }
+  .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY {
+    height: 10.66667px;
+    width: 36px;
+    border-radius: 5.33333px;
+    box-shadow: inset 1px 1px 1px #0007;
+    position: absolute;
+    left: 2.66667px;
+    top: 2.66667px;
+    background-color: #26292e; }
+    .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY.toggle_Highlight_2FNJu {
+      background-color: #2d5a81;
+      transition: width .2s ease-in-out; }
+      .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY.toggle_Highlight_2FNJu.toggle_On_3N31m {
+        width: 36px; }
+      .toggle_Toggle_3POJz .toggle_ToggleRail_3DiLY.toggle_Highlight_2FNJu.toggle_Off_1Qa-r {
+        width: 0; }
+  .toggle_Toggle_3POJz .toggle_ToggleSwitch_21X4K {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px #000a;
+    position: absolute;
+    left: 0;
+    transition: transform .2s ease-in-out, background-color .2s ease-in-out; }
+    .toggle_Toggle_3POJz .toggle_ToggleSwitch_21X4K.toggle_On_3N31m {
+      background-color: #16a1e1;
+      background-image: linear-gradient(to bottom, #01c7f9, #3066f5);
+      transform: translateX(25.33333px); }
+    .toggle_Toggle_3POJz .toggle_ToggleSwitch_21X4K.toggle_Off_1Qa-r {
+      background-color: #4b525d; }
+
+.toggle_ToggleRow_NnxzA {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: rgba(59, 63, 72, 0.5); }
+  .toggle_ToggleRow_NnxzA .toggle_Label_xK7Vv {
+    color: #dfe3e6;
+    font-size: 14px;
+    font-weight: 300; }
+    .toggle_ToggleRow_NnxzA .toggle_Label_xK7Vv.toggle_Disabled_1jIKG {
+      opacity: 0.3; }
+
 .contextmenu_ContextMenuMouseOverlay_3Knd7 {
   position: fixed;
   top: 0;
@@ -10913,11 +10968,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
         border-image-width: 2px;
         border-image-repeat: stretch;
         border-image-slice: 7;
-        box-shadow: 0 0 12px #00000080;
-        cursor: pointer; }
-        .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_LeftColumn_23WS1 .appdetailssoundtrack_AlbumArt_1R0eE:hover {
-          filter: brightness(1.3);
-          background-color: #0003; }
+        box-shadow: 0 0 12px #00000080; }
       .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_LeftColumn_23WS1 .appdetailssoundtrack_PlayButton_2TWHM {
         margin-bottom: 4px; }
     .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep {
@@ -10956,19 +11007,14 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
           justify-content: space-between;
           padding: 4px 1px;
           padding-left: 0;
-          font-weight: 300;
-          /*
-					&:hover {
-						background-color: #aaa4;
-						border-radius: 3px;
-						cursor: pointer;
-						color: white;
-
-						.TrackNumber {
-							background: linear-gradient( to right, #0002 0%, #0002 100%);
-						}
-					}
-					*/ }
+          font-weight: 300; }
+          .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP:hover {
+            background-color: #aaa4;
+            border-radius: 3px;
+            cursor: pointer;
+            color: white; }
+            .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP:hover .appdetailssoundtrack_TrackNumber_NZZPO {
+              background: linear-gradient(to right, #0002 0%, #0002 100%); }
           .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_TrackListing_2c5PP .appdetailssoundtrack_TrackNumber_NZZPO {
             width: 32px;
             text-align: right;
@@ -17126,7 +17172,7 @@ img {
   padding: 8px 14px 14px; }
 
 .libraryhome_UpdateLoweredPriorityNotice_2Yry4 {
-  padding-left: 12px;
+  padding-left: 6px;
   font-size: 15px;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.5);
@@ -17136,6 +17182,9 @@ img {
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+  white-space: nowrap;
+  margin-left: 8px;
+  margin-right: -8px;
   animation: libraryhome_fadeout_1Qfrn 1s ease-out 1;
   animation-fill-mode: forwards;
   animation-delay: 28s; }
@@ -17628,6 +17677,112 @@ img {
   .LibraryDisplaySizeSmall .libraryhomenewupdates_PartnerEventRowCapsule_3YO5B {
     width: 240px;
     overflow: hidden; }
+
+.libraryhomenewupdates_EventOptions_2-p7s {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: -5px;
+  cursor: pointer;
+  opacity: 0;
+  padding: 5px 5px 0 0;
+  transition: opacity 0.2s, right 0.2s;
+  z-index: 15; }
+
+.libraryhomenewupdates_EventOptions_2-p7s > div {
+  width: 15px;
+  height: 15px;
+  background-color: #e5e5e5;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAFCA9WQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODQ4Mjg5MjM4M0RCMTFFODlBQUU4QTVBRUEzN0JFMUIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODQ4Mjg5MjQ4M0RCMTFFODlBQUU4QTVBRUEzN0JFMUIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4NDgyODkyMTgzREIxMUU4OUFBRThBNUFFQTM3QkUxQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4NDgyODkyMjgzREIxMUU4OUFBRThBNUFFQTM3QkUxQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pk5spocAAACYSURBVHjaYjCw898LEEAM////ZwAIIEYgK4yBgeEZQACBeSBh5o37L9gARW4BBBBM5A4Ig9gsDBAQDqUZAAIIJBsEVRXEBBS4aGgfsANEgzjHzx/c4AGiYQZdA9EAAQay0AAouhWIG4AqZgO1pILYQOwNkpwGZEwH4pdA3APEJUAsDsSZTEDVWVDOJSB+AqXFQeKMILNxAQD6oEHxJrq4qAAAAABJRU5ErkJggg==);
+  background-position: 4px 4px;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 3px #000; }
+
+.libraryhomenewupdates_EventOptions_2-p7s:hover > div {
+  background-color: #67c1f5;
+  color: #fff;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAICAYAAAA1BOUGAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjFFOUI0REY5NERFMTFFNjk0QTY4RTEzNkRDMTY4Q0IiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjFFOUI0RTA5NERFMTFFNjk0QTY4RTEzNkRDMTY4Q0IiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MUU5QjRERDk0REUxMUU2OTRBNjhFMTM2REMxNjhDQiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MUU5QjRERTk0REUxMUU2OTRBNjhFMTM2REMxNjhDQiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PmW8LaMAAABtSURBVHjaYvj///9eIA4CYgYkDOLvBTEMgPgpEKdCJVKhfAOYSmUgvgPEO6A0iM/AxMDAMA2IuYDYCohfQWkusDhQRRgQvwJiG6gpNlB+GMxYFyB+AcRtUBrEZ0B2oTEQX4PSYDFGsAocACDAAKhrkftNoGmaAAAAAElFTkSuQmCC); }
+
+*:hover > .libraryhomenewupdates_EventOptions_2-p7s {
+  opacity: 1;
+  right: 0px; }
+
+.libraryhomenewupdates_SettingsAndUndoContainer_woCAU {
+  display: flex; }
+
+.libraryhomenewupdates_SettingsButton_1eFe5 {
+  box-sizing: border-box;
+  margin-top: 3px;
+  margin-right: -8px;
+  margin-left: 5px;
+  width: 16px;
+  height: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color .12s ease-in-out; }
+  .libraryhomenewupdates_SettingsButton_1eFe5 svg {
+    fill: rgba(255, 255, 255, 0.5);
+    transition: transform .32s ease-in-out; }
+    .libraryhomenewupdates_SettingsButton_1eFe5 svg circle,
+    .libraryhomenewupdates_SettingsButton_1eFe5 svg polyline {
+      stroke: rgba(255, 255, 255, 0.5);
+      transition: stroke .12s ease-in-out; }
+    .libraryhomenewupdates_SettingsButton_1eFe5 svg path {
+      transition: fill .12s ease-in-out; }
+  .libraryhomenewupdates_SettingsButton_1eFe5:hover .SVGIcon_Settings path {
+    fill: white; }
+
+.libraryhomenewupdates_WhatsNewSettingsContainer_2JKpG {
+  background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+  user-select: none; }
+
+.libraryhomenewupdates_WhatsNewSettingsContent_1I-uT {
+  padding: 24px;
+  display: flex;
+  flex-direction: column; }
+
+.libraryhomenewupdates_WhatsNewSettings_1n-sV {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-right: 0px;
+  flex: 1; }
+
+._DialogInputContainer.libraryhomenewupdates_WhatsNewPriorityContainer_25JfL {
+  /* stylelint-disable-line */
+  background-color: #0004;
+  border-radius: 4px; }
+
+.libraryhomenewupdates_WhatsNewGameListSection_VwcCo {
+  margin-top: 8px;
+  padding: 5px;
+  max-height: 75px;
+  overflow-y: scroll; }
+  .libraryhomenewupdates_WhatsNewGameListSection_VwcCo .DialogToggle_Description {
+    padding-top: 2px; }
+  .libraryhomenewupdates_WhatsNewGameListSection_VwcCo .libraryhomenewupdates_WhatsNewGameListRow_2C3-R {
+    display: flex;
+    justify-content: flex-start; }
+  .libraryhomenewupdates_WhatsNewGameListSection_VwcCo .libraryhomenewupdates_WhatsNewSettingsUndoButton_3XBgg {
+    margin-top: 2px;
+    width: 18px;
+    height: 19px;
+    padding: 2px;
+    text-align: center; }
+
+._DialogInputContainer .libraryhomenewupdates_DialogLabelSoft_3Hf53, .DialogLabel.libraryhomenewupdates_DialogLabelSoft_3Hf53 {
+  /* stylelint-disable-line */
+  font-weight: 300;
+  color: #fff6;
+  text-transform: none;
+  line-height: 19px;
+  font-size: 13px;
+  user-select: none;
+  letter-spacing: initial; }
+
+.libraryhomenewupdates_WhatsNewHeaderText_fyxt0 {
+  margin-bottom: 20px !important; }
 
 @media screen and (max-width: 1774px) {
   .LibraryDisplaySizeAutomatic .libraryhomenewupdates_PartnerEventRowCapsule_3YO5B {
@@ -19196,6 +19351,12 @@ button.TextButton:focus {
 
 .DialogButton:disabled .SVGIcon_Button {
   opacity: .1; }
+
+.DialogOnOffToggle_NewUIContainer {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .DialogOnOffToggle_Control {
   float: right;

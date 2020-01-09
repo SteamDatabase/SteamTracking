@@ -700,6 +700,7 @@
  __gxx_personality_v0
  __stack_chk_fail
  __stack_chk_guard
+ __stderrp
  b AudioSinkList::s_AudioSink
  b CMilesAudioDevice::CMilesAudioDevice(CAudioController*, AudioType, int, int, int)::s_nAudioDeviceCounter
  b CUtlSymbol::Initialize()::symbolsInitialized
@@ -769,6 +770,7 @@
  fcntl$UNIX2003
  flock
  floor
+ fprintf
  free
  fstat$INODE64
  g_pMemAllocSteam

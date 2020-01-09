@@ -1001,6 +1001,12 @@ button.TextButton:focus {
 .DialogButton:disabled .SVGIcon_Button {
   opacity: .1; }
 
+.DialogOnOffToggle_NewUIContainer {
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
 .DialogOnOffToggle_Control {
   float: right;
   position: relative;

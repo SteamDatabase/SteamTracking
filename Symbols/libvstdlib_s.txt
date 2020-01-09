@@ -683,6 +683,7 @@
  __moddi3
  __stack_chk_fail
  __stack_chk_guard
+ __stderrp
  __tolower
  __toupper
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
@@ -739,6 +740,7 @@
  fcntl
  fcntl$UNIX2003
  flock
+ fprintf
  free
  fstat$INODE64
  g_VProfManager

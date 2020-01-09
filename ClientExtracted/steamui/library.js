@@ -354,10 +354,10 @@
         return N;
       }),
       r.d(t, "F", function() {
-        return I;
+        return C;
       }),
       r.d(t, "I", function() {
-        return C;
+        return I;
       }),
       r.d(t, "T", function() {
         return G;
@@ -381,13 +381,13 @@
         return D;
       }),
       r.d(t, "cb", function() {
-        return P;
+        return A;
       }),
       r.d(t, "lb", function() {
-        return F;
+        return P;
       }),
       r.d(t, "w", function() {
-        return A;
+        return F;
       }),
       r.d(t, "V", function() {
         return O;
@@ -1540,7 +1540,7 @@
           })
       );
     }
-    function I() {
+    function C() {
       return o.createElement(
         "svg",
         {
@@ -1576,7 +1576,7 @@
         })
       );
     }
-    function C() {
+    function I() {
       return o.createElement(
         "svg",
         {
@@ -1900,7 +1900,7 @@
         })
       );
     }
-    function P(e) {
+    function A(e) {
       var t = Object(i.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -1934,7 +1934,7 @@
         })
       );
     }
-    function F() {
+    function P() {
       return o.createElement(
         "svg",
         {
@@ -1962,7 +1962,7 @@
         })
       );
     }
-    function A() {
+    function F() {
       return o.createElement(
         "svg",
         {
@@ -3227,7 +3227,7 @@
           })
         ),
         Promise.all(e).then(function() {
-          i.b.InitFromObjects(t, null, r, null);
+          i.c.InitFromObjects(t, null, r, null);
         })
       );
     }
@@ -3267,7 +3267,7 @@
             })
           )),
         Promise.all(a).then(function() {
-          i.b.InitFromObjects(r, n, c, o);
+          i.c.InitFromObjects(r, n, c, o);
         })
       );
     }
@@ -3324,50 +3324,53 @@
   },
   TLQK: function(e, t, r) {
     "use strict";
-    r.d(t, "c", function() {
+    r.d(t, "d", function() {
       return h;
     }),
-      r.d(t, "l", function() {
+      r.d(t, "m", function() {
         return i;
       }),
-      r.d(t, "j", function() {
+      r.d(t, "k", function() {
         return m;
       }),
-      r.d(t, "d", function() {
+      r.d(t, "e", function() {
         return f;
       }),
-      r.d(t, "e", function() {
+      r.d(t, "f", function() {
         return d;
       }),
-      r.d(t, "o", function() {
+      r.d(t, "p", function() {
         return p;
       }),
-      r.d(t, "i", function() {
+      r.d(t, "j", function() {
         return E;
       }),
-      r.d(t, "m", function() {
+      r.d(t, "n", function() {
         return _;
       }),
-      r.d(t, "k", function() {
+      r.d(t, "l", function() {
         return k;
       }),
-      r.d(t, "n", function() {
+      r.d(t, "o", function() {
         return x;
       }),
-      r.d(t, "f", function() {
+      r.d(t, "g", function() {
         return w;
       }),
-      r.d(t, "g", function() {
+      r.d(t, "h", function() {
         return b;
       }),
-      r.d(t, "h", function() {
+      r.d(t, "i", function() {
         return N;
       }),
       r.d(t, "a", function() {
-        return C;
+        return P;
       }),
       r.d(t, "b", function() {
-        return G;
+        return F;
+      }),
+      r.d(t, "c", function() {
+        return O;
       });
     var s = r("mrSG"),
       u = r("q1tI"),
@@ -3452,7 +3455,7 @@
     function h(e) {
       for (var n = [], t = 1; t < arguments.length; t++)
         n[t - 1] = arguments[t];
-      var r = G.LocalizeString(e);
+      var r = O.LocalizeString(e);
       return r
         ? (0 < n.length &&
             (r = r.replace(/%(\d+)\$s/g, function(e, t) {
@@ -3468,7 +3471,7 @@
     function i(e) {
       for (var t = [], r = 1; r < arguments.length; r++)
         t[r - 1] = arguments[r];
-      var n = G.LocalizeString(e);
+      var n = O.LocalizeString(e);
       if (!n) return e;
       for (var c, o = [], a = /(.*?)%(\d+)\$s/g, i = 0; (c = a.exec(n)); ) {
         (i += c[0].length), o.push(c[1]);
@@ -3626,7 +3629,7 @@
         : h(r + "LessThanAMinute");
     }
     function E(e) {
-      return new Date(1e3 * e).toLocaleDateString(G.GetPreferredLocales(), {
+      return new Date(1e3 * e).toLocaleDateString(O.GetPreferredLocales(), {
         weekday: "short",
         month: "long",
         day: "numeric",
@@ -3639,7 +3642,7 @@
         n = g.get(r);
       if (n) return n;
       return (
-        (n = t.toLocaleDateString(G.GetPreferredLocales(), {
+        (n = t.toLocaleDateString(O.GetPreferredLocales(), {
           year: "numeric",
           month: "short",
           day: "numeric"
@@ -3649,7 +3652,7 @@
       );
     }
     function k(e) {
-      return new Date(1e3 * e).toLocaleTimeString(G.GetPreferredLocales(), {
+      return new Date(1e3 * e).toLocaleTimeString(O.GetPreferredLocales(), {
         hour: "numeric",
         minute: "numeric"
       });
@@ -3669,13 +3672,13 @@
         i = v.get(a);
       return (
         i ||
-        ((i = n.toLocaleDateString(G.GetPreferredLocales(), o)), v.set(a, i), i)
+        ((i = n.toLocaleDateString(O.GetPreferredLocales(), o)), v.set(a, i), i)
       );
     }
     function w(e) {
       var t = new Date(1e3 * e),
         r = new Date();
-      if (r < t) return l.b(t.getTime() - r.getTime()), I(t);
+      if (r < t) return l.b(t.getTime() - r.getTime()), C(t);
       l.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
       var n = new Date();
       if ((n.setHours(0, 0, 0, 0), n <= t)) return h("#Time_Today");
@@ -3691,7 +3694,7 @@
           Math.floor((c.valueOf() - t.valueOf()) / (1e3 * a.d.PerWeek)) + 1;
         return 1 == o ? h("#TimeSince_1Week") : h("#TimeSince_XWeeks", o);
       }
-      return t.getFullYear() == r.getFullYear() ? M(t) : I(t);
+      return t.getFullYear() == r.getFullYear() ? M(t) : C(t);
     }
     function b(e) {
       var t = new Date(1e3 * e),
@@ -3705,7 +3708,7 @@
           : t.getFullYear() == r.getFullYear()
           ? M(t)
           : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
-          ? I(t)
+          ? C(t)
           : N(t)
       );
     }
@@ -3717,7 +3720,7 @@
       var t = L.get(e.getMonth());
       return (
         t ||
-        ((t = e.toLocaleDateString(G.GetPreferredLocales(), { month: "long" })),
+        ((t = e.toLocaleDateString(O.GetPreferredLocales(), { month: "long" })),
         L.set(e.getMonth(), t),
         t)
       );
@@ -3726,19 +3729,19 @@
       var t = S.get(e.getFullYear());
       return (
         t ||
-        ((t = e.toLocaleDateString(G.GetPreferredLocales(), {
+        ((t = e.toLocaleDateString(O.GetPreferredLocales(), {
           year: "numeric"
         })),
         S.set(e.getFullYear(), t),
         t)
       );
     }
-    function I(e) {
+    function C(e) {
       var t = e.getMonth() + 12 * e.getFullYear(),
         r = y.get(t);
       return (
         r ||
-        ((r = e.toLocaleDateString(G.GetPreferredLocales(), {
+        ((r = e.toLocaleDateString(O.GetPreferredLocales(), {
           month: "long",
           year: "numeric"
         })),
@@ -3746,7 +3749,180 @@
         r)
       );
     }
-    var C = {
+    var I = 44032,
+      G = 55203,
+      T = 588,
+      B = 28,
+      V = 12592,
+      z = [
+        12593,
+        12594,
+        12596,
+        12599,
+        12600,
+        12601,
+        12609,
+        12610,
+        12611,
+        12613,
+        12614,
+        12615,
+        12616,
+        12617,
+        12618,
+        12619,
+        12620,
+        12621,
+        12622
+      ],
+      R = [
+        0,
+        0,
+        0,
+        1,
+        0,
+        4,
+        4,
+        0,
+        0,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        0,
+        0,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      D = [
+        -1,
+        0,
+        1,
+        9,
+        2,
+        12,
+        18,
+        3,
+        5,
+        0,
+        6,
+        7,
+        9,
+        16,
+        17,
+        18,
+        6,
+        7,
+        9,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      A = [
+        -1,
+        0,
+        1,
+        -1,
+        2,
+        -1,
+        -1,
+        3,
+        4,
+        5,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        6,
+        7,
+        8,
+        -1,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        -1
+      ];
+    function P(e, t) {
+      if (0 === e.length) return -1;
+      var r = t.charCodeAt(t.length - 1),
+        n = (function(e) {
+          return e < z[0] || e > z[z.length - 1] ? -1 : A[e - V];
+        })(r);
+      if (!((I <= r && r <= G) || 0 <= n)) return -1;
+      var c = t.slice(0, t.length - 1),
+        o = 0 < c.length ? e.indexOf(c) : 0;
+      if (-1 === o) return -1;
+      for (
+        var a = o, i = e.slice(o, e.length), l = (r - I) % B, s = I + n * T;
+        0 <= o;
+
+      ) {
+        if (i.length < c.length + 1) return -1;
+        var u = i.charCodeAt(c.length),
+          h = !1;
+        if (0 <= n) h = s <= u && u < s + T;
+        else if (r <= u)
+          switch (l) {
+            case 0:
+              h = u - r < B;
+              break;
+            case 1:
+              h = u - r == 2;
+              break;
+            case 4:
+              h = u - r < 3;
+              break;
+            case 8:
+              h = u - r < 8;
+              break;
+            case 17:
+              h = u - r < 2;
+          }
+        else if (i.length >= c.length + 2)
+          if (r - u < B)
+            if ((u - I) % B === R[l]) {
+              var m = D[l];
+              if (0 <= m) {
+                var f = I + m * T,
+                  d = i.charCodeAt(c.length + 1);
+                h = f <= d && d < f + T;
+              }
+            }
+        if (h) return a;
+        if (0 === (i = i.slice(1, i.length)).length) return -1;
+        if (-1 === (o = 0 < c.length ? i.indexOf(c) : 0)) return -1;
+        (a += o + 1), (i = i.slice(o, i.length));
+      }
+      return -1;
+    }
+    var F = {
         english: "en",
         german: "de",
         french: "fr",
@@ -3777,8 +3953,8 @@
         ukrainian: "uk",
         vietnamese: "vn"
       },
-      G = new o();
-    window.LocalizationManager = G;
+      O = new o();
+    window.LocalizationManager = O;
   },
   YyVH: function(e, t, r) {
     "use strict";

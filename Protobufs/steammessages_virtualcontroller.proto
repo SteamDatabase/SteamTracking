@@ -44,7 +44,8 @@ enum EControllerElementType {
 	k_EControllerElementTypeTrackpadLeft = 26;
 	k_EControllerElementTypeTrackpadRight = 27;
 	k_EControllerElementTypeKeyboard = 28;
-	k_EControllerElementTypeMax = 29;
+	k_EControllerElementTypeMagnifyingGlass = 29;
+	k_EControllerElementTypeMax = 30;
 }
 
 message CVirtualControllerElement {
@@ -74,6 +75,8 @@ message CVirtualControllerLayouts {
 	repeated .CVirtualControllerLayout layouts = 1;
 	optional .EInputMode input_mode = 2 [default = k_EInputModeController];
 	optional .EMouseMode mouse_mode = 3 [default = k_EMouseModeUnknown];
+	optional float trackpad_sensitivity = 4 [default = 1];
+	optional bool pinch_zoom_enabled = 5 [default = false];
 }
 
 message CVirtualControllerConfig {
@@ -108,5 +111,11 @@ message CVirtualControllerLayoutPackage {
 	optional uint32 revision = 2;
 	optional .CVirtualControllerConfig config = 3;
 	optional .CVirtualControllerLayouts layouts = 4;
+}
+
+message CVirtualControllerGlobalConfig {
+	optional bool feedback_enabled = 1;
+	optional bool gyroscope_enabled = 2 [default = true];
+	optional bool auto_fade_enabled = 3 [default = true];
 }
 

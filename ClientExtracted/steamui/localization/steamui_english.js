@@ -197,8 +197,8 @@
 	"GameList_View_NothingSelected": "None",
 	"GameList_View_NothingSelected_HelpText": "Nothing matches this view filter.",
 	"GameList_Search_GamesCheckbox_Link": "Show games",
-
 	"GameList_View_GroupSharedLibraries": "Group By Library",
+	"GameList_View_GroupingDisabled_ToolTip": "Grouping is disabled in this view",
 
 	"GameList_View_ReadyToPlay_ToolTip1": "• Installed on this machine",
 	"GameList_View_ReadyToPlay_ToolTip2": "• Can be streamed from another machine",
@@ -243,6 +243,26 @@
 	"LibraryHome_NewUpdates_Undo": "Undo",
 
 	"LibraryHome_RecentFriendsActivity_Empty": "Nothing is new or popular in your friend group right now. This shelf will auto-hide when there is no activity to display.",
+
+	"WhatsNewSettings": "What's New Settings",
+	"WhatsNew":	"What's New",
+	"WhatsNewFeatureExplainer": "What's New is where developers of your games communicate about updates, tournaments, DLC, events, and other game news.  Steam will show the most relevant news for you based on your playtime, prioritizing what you've played recently.",
+	"WhatsNewFeatureExplainer2": "Some games will be automatically excluded from What's New if you never played more than a couple hours and it's been a long time since you last had any activity in the game.",
+
+	"WhatsNewVisibilitySettings": "Visibility Settings",
+	"WhatsNewSettings_ShowOnlyForRecentlyPlayed": "Only show for games I've played in the last 90 days",
+	"WhatsNewSettings_ShowOnlyForRecentlyPlayed_Explainer": "(Individual game frequency can be adjusted by right clicking a news item.)",
+	"WhatsNewSettings_ShowOnlyGameUpdates": "Only show product updates not other types of events and news",
+	"WhatsNewSettings_ShowOnlyGameUpdates_Explainer": "(Individual game frequency can be adjusted by right clicking a news item.)",
+
+	"WhatsNewPrioritySettings": "Priority Settings",
+	"WhatsNewPriorityExplainer": "(Individual games can be tunred to show more or less in What's New, try right clicking an item for options.)",
+	"WhatsNewYouHaveAskedToShowLessFor": "You have asked to Show Less for the following games:",
+	"WhatsNewYouHaveNothingShowingLess": "You haven't asked to Show Less for any games yet.",
+	"WhatsNewYouHaveAskedToShowMoreFor": "You have asked to Show More for the following games:",
+	"WhatsNewYouHaveNothingShowingMore": "You haven't asked to Show More for any games yet.",
+	"WhatsNewYouHaveNItemsHidden": "%1$s games are hidden from your Library and as a result hidden from What's New.",
+
 
 	"Library_FriendsActivity_HotRightNowHeading": "Hot right now",
 	"Library_FriendsActivity_HotRightNowHover": "We're showing you this game because a number of your friends are playing this game right now.",
@@ -803,9 +823,10 @@
 	"AppDetails_Soundtrack_DownloadAlbum": "Download Album",
 	"AppDetails_Soundtrack_AddToQueue": "Add to Queue",
 	"AppDetails_Soundtrack_AddToPlaylist": "Add to Playlist",
-	"AppDetails_Soundtrack_ViewOnDisk": "View on disk",
+	"AppDetails_Soundtrack_ViewOnDisk": "Browse Local Files",
+	"AppDetails_Soundtrack_ViewAdditionalArtwork": "View Additional Artwork",
 	"AppDetails_Soundtrack_ViewStorePage": "View Store Page",
-	"AppDetails_Soundtrack_Support": "Support",
+	"AppDetails_Soundtrack_Support": "View Support Page",
 	"AppDetails_Soundtrack_ParentAppLink": "Soundtrack for %1$s",
 
 	"AppPortraitHover_DownloadStatusTitle": "Downloading",

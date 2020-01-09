@@ -91,6 +91,9 @@ enum EStreamControlMessage {
 	k_EStreamControlSetFlashState = 121;
 	k_EStreamControlPause = 122;
 	k_EStreamControlResume = 123;
+	k_EStreamControlEnableHighResCapture = 124;
+	k_EStreamControlDisableHighResCapture = 125;
+	k_EStreamControlToggleMagnification = 126;
 }
 
 enum EStreamVersion {
@@ -557,6 +560,15 @@ message CPauseMsg {
 }
 
 message CResumeMsg {
+}
+
+message CEnableHighResCaptureMsg {
+}
+
+message CDisableHighResCaptureMsg {
+}
+
+message CToggleMagnificationMsg {
 }
 
 message CQuitRequest {

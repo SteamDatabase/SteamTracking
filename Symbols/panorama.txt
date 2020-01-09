@@ -17622,6 +17622,7 @@
  d TRstdEnt
  d TRxmlDecl
  d TRxmlTok
+ d arrControllers
  d g_bCatchExceptionsInCallbacks
  d k_analogToAction
  d k_buttonToAction
@@ -17924,7 +17925,6 @@
  r CCrypto::Base64Decode(char const*, unsigned int, void*, unsigned int*, bool)::rgchInvBase64
  r IPC::crc32(unsigned int, void const*, unsigned long)::s_crc32
  r IPv6IPToString.hexdigits
- r arrControllers
  r ascii_class
  r base_dither_matrix
  r bmask

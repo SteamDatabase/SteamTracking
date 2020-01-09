@@ -154,6 +154,7 @@
  B __g_CreateCHTMLControllerIHTMLChromeController_reg
  B g_VecLoadedModules
  B g_machClient
+ B g_pFioAsyncFinalize
  B s_NoEscConversion
  B s_StringCharConversion
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
@@ -651,7 +652,6 @@
  OSMemoryBarrier
  Plat_AbsoluteTime
  Plat_CommandLineParamExists
- Plat_CommandLineParamValue
  Plat_FloatTime
  Plat_GetExecutablePathUTF8
  Plat_IsInDebugSession
@@ -936,6 +936,8 @@
  SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
  SteamVProf::CVProfile::OutputReport(int, char const*, int)
  SteamVProf::CVProfile::~CVProfile()
+ T BDeleteFileIfExists(char const*)
+ T BFileExists(char const*)
  T CChromeIPCClient::AbortWaitForPendingData()
  T CChromeIPCClient::BExitMasterCEFProcess()
  T CChromeIPCClient::BIsBrowserEnabled()
@@ -984,6 +986,12 @@
  T CCookie::set_path(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCookie::set_value(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CCookie::~CCookie()
+ T CFileWrapper::BSetFile(char const*)
+ T CFileWrapper::Close()
+ T CFileWrapper::Read(void*, unsigned int, unsigned int*)
+ T CFileWrapper::Seek(unsigned long long, EFioSeekMode, unsigned long long*)
+ T CFileWrapper::Write(void const*, unsigned int)
+ T CFileWrapper::~CFileWrapper()
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CHTMLBaseProtoBufMsg::BDeserializeCrossProc(CUtlBuffer*, EHTMLCommands*, unsigned int*)
  T CHTMLBaseProtoBufMsg::SerializeCrossProc(CUtlBuffer*, EHTMLCommands, unsigned int) const
@@ -3230,7 +3238,15 @@
  T CValidateAutoPushPop::~CValidateAutoPushPop()
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
+ T FioClose(int)
+ T FioCreateFile(char const*, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
+ T FioRead(int, void*, int, int*)
+ T FioRead(int, void*, unsigned long, unsigned long*)
+ T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
+ T FioWrite(int, void const*, int, int*)
+ T FioWrite(int, void const*, unsigned long, unsigned long*)
  T GetCEFWebHelperExePath()
+ T GetFileLength(char const*)
  T GetLanguageICUName(ELanguage)
  T HTMLCommandBuffer_t::Validate(CValidator&, char const*)
  T IPC::BinarySemaphore::Destroy()
@@ -3262,6 +3278,7 @@
  T IPC::PosixSharedMemory::Pointer() const
  T IPC::PosixSharedMemory::~PosixSharedMemory()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
+ T MakeFileWriteable(char const*)
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
@@ -3269,6 +3286,7 @@
  T Sys_GetProcAddress(CSysModule*, char const*)
  T TSLNodeBase_t::operator delete(void*)
  T TSLNodeTemplate_t<HTMLCommandBuffer_t*>::operator delete(void*)
+ T UnlinkFile(char const*)
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T __CreateCHTMLControllerIHTMLChromeController_interface()
  T __clang_call_terminate
@@ -3383,6 +3401,7 @@
  V_FixDoubleSlashes
  V_IsAbsolutePath
  V_RemoveDotSlashes
+ V_StripExtension
  V_StripFilename
  V_StripLastDir
  V_UnqualifiedFileName
@@ -3723,6 +3742,7 @@
  b guard variable for CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
  b k_InvalidClientID
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
+ b s_CmdLineParamCefVerboseLogging
  b s_CmdLineParamClientUI
  b s_CmdLineParamCommunityURL
  b s_CmdLineParamDev
@@ -3734,6 +3754,7 @@
  bootstrap_look_up
  bootstrap_port
  ceilf
+ chmod
  close
  connect
  d s_LanguageNames
@@ -3742,7 +3763,9 @@
  dlsym
  dyld_stub_binder
  fclose
+ fcntl
  fflush
+ flock
  fopen
  fprintf
  free
@@ -3762,6 +3785,8 @@
  launch_data_free
  launch_data_new_string
  launch_msg
+ lseek
+ lstat$INODE64
  mach_msg
  mach_port_allocate
  mach_port_deallocate
@@ -3937,6 +3962,7 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToElementAtPosition_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToFocusedElement_offsets_
  r std::__1::piecewise_construct
+ read
  recvmsg
  sched_yield
  sem_close
@@ -3952,6 +3978,7 @@
  snprintf
  socket
  sprintf
+ stat$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const
@@ -4008,6 +4035,7 @@
  typeinfo for SteamThreadTools::CThread
  typeinfo for std::exception
  typeinfo for std::length_error
+ unlink
  usleep
  vasprintf
  vsnprintf
@@ -4015,3 +4043,4 @@
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  vtable for std::length_error
+ write

@@ -253,6 +253,10 @@
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchBinding" />
           <ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseRegionTouch" />
         </Panel>
+		<Panel class="FieldWrapper" modes="mouseregion" advanced="off" sources="joystick" dependency="capstick">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchBinding" />
+          <ControllerBindingButton class="BindingButtonPropertiesMode" id="MouseRegionStickTouch" />
+        </Panel>
 
         <!-- Mouse Region Mode Advanced -->
         <Panel class="FieldWrapper" modes="mouseregion" advanced="on" gameactions="off">
@@ -330,6 +334,14 @@
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="trackpad">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchBinding" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="AbsMouseTouch" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="joystickmouse" advanced="on" sources="joystick" dependency="capstick">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchBinding" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="AbsMouseStickTouch" />
+				</Panel>
+				<Panel class="FieldWrapper" modes="joystickmove" advanced="on" sources="joystick" dependency="capstick">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_TouchBinding" />
+					<ControllerBindingButton class="BindingButtonPropertiesMode" id="StickTouch_joystickmove" />
 				</Panel>
 				<Panel class="FieldWrapper" modes="absmouse" advanced="on" sources="trackpad gyro">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_MouseTriggerClamp" />
