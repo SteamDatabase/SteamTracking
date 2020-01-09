@@ -718,6 +718,17 @@ div.youraccount_history_home>div.account_wallet {
 	padding: 5px 14px;
 }
 
+.accountTable tr.long_values td {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	word-break: break-word;
+}
+
+.accountTable tr.long_values:hover {
+	color: white;
+}
+
 .account_table th.license_date_col,
 .account_table td.license_date_col {
 	text-align: right;
