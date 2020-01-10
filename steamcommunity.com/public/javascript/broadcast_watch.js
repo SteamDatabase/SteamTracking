@@ -362,10 +362,7 @@ CBroadcastWatch.prototype.GetBroadcastManifest = function(rtStartRequest )
 			_watch.m_nHeartbeatInterval = data.heartbeat_interval;
 
 			// Add a random delay before we start heartbeating. This prevents the thundering herd problem when a broadcast starts up again after a failure
-			setTimeout( () =>
-			{
-				_watch.ScheduleBroadcastHeartbeat();
-			}, Math.random() * 30000 );
+			this.m_timeoutHeartbeat = setTimeout( function() { _watch.BroadcastHeartbeat() }, Math.random() * 10000 );
 
 			if ( _watch.m_chat && _watch.m_bChatEnabled )
 			{
@@ -463,7 +460,7 @@ CBroadcastWatch.prototype.HideLoadingPanel = function()
 	$J( '#PageContents' ).addClass( 'ShowPlayer' );
 };
 
-CBroadcastWatch.prototype.BroadcastHeartbeat= function()
+CBroadcastWatch.prototype.BroadcastHeartbeat = function()
 {
 	var _watch = this;
 	$J.ajax( {
