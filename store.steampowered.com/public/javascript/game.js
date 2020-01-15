@@ -323,8 +323,6 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecSc
 		if ( !rgItemData )
 			continue;
 
-				console.log( `#${i} (${rgRecommendationsToShow[i].orig}): ${rgRecommendationsToShow[i].score} pts - ${rgItemData.name}` );
-
 		var params = {'class': 'small_cap',
 			'data-ds-appid': unAppID,
 			'href': GStoreItemData.GetAppURL( unAppID, strAppURL )

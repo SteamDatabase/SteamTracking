@@ -19,7 +19,8 @@
 	margin-top: 10px;
 }
 
-.game_area_sys_req {
+.game_area_sys_req,
+.album_metadata_chunk_contents {
 	font-size: 12px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
@@ -29,13 +30,18 @@
 	margin-bottom: 10px;
 }
 
-.game_area_sys_req strong {
+.game_area_sys_req strong,
+.album_metadata_chunk_name {
 	font-weight: normal;
 	font-size: 11px;
 	color: #4582A5;
 	text-transform: uppercase;
 	display: inline-block;
 	margin-right: 4px;
+}
+
+.album_metadata_chunk_name {
+	padding-right: 14px;
 }
 
 .game_area_sys_req ul {

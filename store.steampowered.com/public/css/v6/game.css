@@ -652,6 +652,16 @@ background: -webkit-linear-gradient( 30deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 	border-left: 1px solid rgba(255,255,255,0.2);
 }
 
+.game_area_purchase_game_wrapper.bundle_hidden_by_preferences {
+	margin-bottom: 10px;
+}
+.bundle_hidden_by_preferences .game_area_purchase_game {
+	padding: 10px;
+}
+.bundle_hidden_by_preferences a {
+	color: #b0aeac;
+}
+
 .game_area_purchase_game_dropdown_description
 {
 	padding-top: 5px;
@@ -1364,6 +1374,19 @@ body.v6 .game_area_description h2.bb_tag strong {
 	font-size: 11px;
 	margin-bottom: 10px;
 	margin-top: 20px;
+}
+
+.game_area_dlc_excluded_by_preferences {
+	color: #a8b2ba;
+	font-size: 12px;
+	position: relative;
+
+	padding: 4px;
+	margin-bottom: 5px;
+}
+.game_area_dlc_excluded_by_preferences > a {
+	text-decoration: underline;
+	color: #a8b2ba;
 }
 
 .game_area_dlc_section {

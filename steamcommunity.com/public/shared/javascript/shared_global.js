@@ -1905,6 +1905,8 @@ function CAjaxInfiniteScrollingControls( rgSearchData, url )
 	this.m_cPageSize = rgSearchData['pagesize'];
 	this.m_cMaxPages = Math.ceil( this.m_cTotalCount / this.m_cPageSize );
 
+	this.m_iTriggerHeight = rgSearchData['trigger_height'] || 750;	// How many px from the bottom should we trigger a page load.
+
 	this.m_iCooldownTime = 0;       // ms from the epoch when we can next update.
 	this.m_iCooldownInterval = 200; // Minimum time (in ms) between updates
 
@@ -2035,11 +2037,15 @@ CAjaxInfiniteScrollingControls.prototype.OnScroll = function()
 
 	this.m_oScheduledScroll = null;
 
+	// The bottom of our screen is equal to how far we've scrolled, plus the height of our window.
 	var nCurrentScroll = $J(window).scrollTop() + $J(window).height();
 
 	var rows = $J('#' + this.m_StrRowsId);
 	var offset = rows.offset();
-	var nTriggerPoint = rows.height() + offset.top - 750;
+
+	// The bottom of our content is the height of our results, plus its offset from the top of the page.
+	// We want to trigger a load this.m_iTriggerHeight before the user sees that.
+	var nTriggerPoint = rows.height() + offset.top - this.m_iTriggerHeight;
 
 	if ( nCurrentScroll >  nTriggerPoint )
 	{

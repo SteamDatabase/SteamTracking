@@ -3087,7 +3087,7 @@ function UpdatePaymentInfoForm()
 			SetButtonInnerHtml('submit_payment_info_btn', 'Continue' );
 		}
 
-				g_bShowAddressForm = g_bHasBillingStates;
+				g_bShowAddressForm = g_bHasBillingStates || g_bRequireBillingInfo;
 
 		if ( BIsStoredCreditCard() )
 		{
@@ -3217,8 +3217,7 @@ function UpdatePaymentInfoForm()
 		}
 		else if ( method.value == 'steamaccount' )
 		{
-						g_bShowAddressForm = false;
-			$J('#payment_row_eight').show();
+						$J('#payment_row_eight').show();
 			
 						
 			$('external_payment_processor_notice').innerHTML = 'In the event your Steam Wallet balance doesn’t cover the full cost of this transaction, you’ll be asked to cover the remaining balance due with a secondary payment method.';

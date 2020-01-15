@@ -940,6 +940,8 @@ LocalizationReady("shared", "english", {
     "Watch the stream for %1$s hours and get item drops from %2$s when the event is over!",
   SalePage_WatchForDrop_LearnMore: "Learn more about the drops here.",
 
+  SalePage_Admin_SaleEventDay: "View Sales Day %1$s",
+
   Steam_Settings_Compat_Launch_Prefix: "Runs on this computer via",
   Steam_Settings_Compat_Launch_Name: "Steam Play.",
   Steam_Settings_Compat_Launch_Forced: "selected by you for this title.",
@@ -1011,6 +1013,19 @@ LocalizationReady("shared", "english", {
   Giveaway_Closed:
     "The giveaway is now over with %1$s lucky winners, thanks for participating.",
   Giveaway_LearnMore: "Click to learn more about the prizes, winners and rules",
+
+  Lunar2020_CheckBackEachDay:
+    "Check back each day for a new gift from the Emperor!",
+  Lunar2020_FirstGift: "First Gift",
+  Lunar2020_SecondGift: "Second Gift",
+  Lunar2020_ThirdGift: "Third Gift",
+  Lunar2020_FourthGift: "Fourth Gift",
+  Lunar2020_GiftWasOpened: "opened",
+  Lunar2020_GiftCanBeOpenedNow: "open now",
+  Lunar2020_GiftLockedUntilDate: "open %1$s",
+  Lunar2020_ErrorLoadingVideo:
+    "Please use a browser that supports HTML videos to open your envelope.",
+  Lunar2020_LinkFromVideoToMarket: "Visit the market now",
 
   shared_dummy: "dont translate"
 });

@@ -216,7 +216,6 @@ function AjaxSearchResults()
 // history interface, but will *not* appear in the URL.
 function UpdateUrl( rgParameters, oHistoryStash = {}, bPushState = true )
 {
-
 	var fnUpdateState = bPushState ? history.pushState : history.replaceState;
 
 	if ( g_bUseHistoryAPI )
@@ -414,8 +413,14 @@ function BShouldUseInfiniscroll()
 	// InfiniScroll is enabled by default.
 	var bEnable = true;
 
+	var url = new URL( window.location.href );
+
+	// If infinite scroll is forced on, then it's forced on.
+	if ( url.searchParams.get( 'force_infinite' ) )
+		return true;
+
 	// If we see a page number, we'd normally disable InfiniScroll...
-	if ( new URL( window.location.href ).searchParams.get('page') )
+	if ( url.searchParams.get('page') )
 		bEnable = false;
 
 	// But if the user has hit back and originally came from infiniscroll, reanable it.
@@ -576,35 +581,23 @@ function InitInfiniteScroll( rgParameters )
 		self.oController.Stop();
 
 	var oScrollOptions = {
-		"pagesize": self.nScrollSize,
-		"page": parseInt( rgParameters['page'] ),
-		"total_count": 1000,         // Gets filled with real value after our first load.
-		"prefix": "search_results",  // Where to put our results
+		"pagesize": self.nScrollSize,                 // How many results to load per request.
+		"page": parseInt( rgParameters['page'] ) - 1, // InfiniScroll assumes pages count from zero.
+		"total_count": 1000,                          // Placeholder - Filled with real value after our first load.
+		"prefix": "search_results",                   // Where to put our results
+		"trigger_height": 1620,                       // How many px from the bottom before triggering next load
 	};
 
 	self.oController = new CAjaxInfiniteScrollingControls( oScrollOptions, 'https://store.steampowered.com/search/results' );
 
-	// We may have stashed a 'page' param in the URL to make sure we fetch the right page when the user
-	// hits the back button. We remove that now because the pageno usually gets interpreted as paginated
-	// search.
-	
-	var url = new URL( location.href );
-	var params = new URLSearchParams( url.search );
-	
-	if ( params.has('page') )
-	{
-		params.delete('page');
-		url.search = params.toString();
-		history.replaceState( history.state, "", url.toString() );
-		var $reloadNotice = $J("#search_infiniscroll_reload_container");
-		$reloadNotice.show();
-		$reloadNotice.click( function() {
-			location.href = url.toString();
-		});
-	}	
+	// We've committed to infinite scroll, so we'll flip our hidden field on. This later gets stashed in the URL,
+	// so if the user returns using the back button we keep their infinite scroll settings.
+	$J('#force_infinite').val(1);
 
 	// Make sure our backend knows we're infinite scrolling, and don't need a whole page.
 	rgParameters['infinite'] = "1";
+
+	InfiniteCleanupUrlParams();
 
 	// Infinite scroll handler populates our pagination controls, so we don't have to.
 	delete rgParameters['start'];
@@ -673,6 +666,30 @@ function InitInfiniteScroll( rgParameters )
 	self.oController.OnScroll();
 
 	return self.oController;
+}
+
+// Cleans up any params we've stashed in the URL to make sure the user returns to the right spot in their query when
+// using the back button.
+function InfiniteCleanupUrlParams()
+{
+	var url = new URL( location.href );
+	var params = new URLSearchParams( url.search );
+
+	if ( params.has('force_infinite') || params.has('page') )
+	{
+		params.delete('force_infinite');
+		params.delete('page');
+		url.search = params.toString();
+		history.replaceState( history.state, "", url.toString() );
+
+		// We're only here if they've used the back-button with infinite-scroll, so enable the
+		// banner at the top to show results from the start.
+		var $reloadNotice = $J("#search_infiniscroll_reload_container");
+		$reloadNotice.show();
+		$reloadNotice.click( function() {
+			location.href = url.toString();
+		});
+	}
 }
 
 // Decorates the given node with a click handler to support smoothly returning

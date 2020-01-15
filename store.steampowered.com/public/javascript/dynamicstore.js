@@ -222,6 +222,8 @@ GDynamicStore = {
 		}
 		else
 		{
+			GDynamicStore.s_rgExcludedDescIDs[3] = 3;
+
 			// no data to load, just run the callbacks now
 			$J( fnRunOnLoadCallbacks );
 		}
