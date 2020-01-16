@@ -41587,7 +41587,10 @@
                 Array.isArray(t) &&
                 0 < t.length &&
                 "object" == typeof t[0]
-              ) && "string" == typeof t[0].gid
+              ) &&
+              ("string" == typeof t[0].gid ||
+                ("object" == typeof t[0].announcement_body &&
+                  "string" == typeof t[0].announcement_body.gid))
             );
           }),
           (e.prototype.GetClanEventGIDs = function(e) {
@@ -50060,7 +50063,10 @@
                 className: ch.a.OtherEvents_EventCtn
               });
             var s = k(M.LANGUAGE),
-              c = void 0 !== r ? r : n.GetImageURLWithFallback("capsule", s),
+              c =
+                void 0 !== r
+                  ? r
+                  : n.GetImageURLWithFallback("capsule", s, kd.capsule_main),
               l = n.GetNameWithFallback(s),
               d = n.GetCategoryAsString(),
               p = n.GetSummaryWithFallback(s),
@@ -50218,7 +50224,10 @@
                 className: ch.a.OtherEvents_EventCtn
               });
             var a = k(M.LANGUAGE),
-              o = void 0 !== n ? n : t.GetImageURLWithFallback("capsule", a),
+              o =
+                void 0 !== n
+                  ? n
+                  : t.GetImageURLWithFallback("capsule", a, kd.capsule_main),
               s = t.GetNameWithFallback(a),
               c = t.GetCategoryAsString(),
               l = r ? r(t) : i,
