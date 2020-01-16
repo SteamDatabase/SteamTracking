@@ -73,7 +73,7 @@ function handleFile(file) {
 	let bHasUnknownRequest = false;
 	const services = new Map();
 
-	let moduleNames = file.match(/"?([\w\+\/]{4})"?:function\([a-z],[a-z],[a-z]\){"use strict";/g).map((module) => {
+	let moduleNames = file.match(/"?([\w\+\/]{4})"?:function\([a-z],[a-z](,[a-zA-Z])?\){"use strict";/g).map((module) => {
 		return module.match(/"?([\w\+\/]{4})"?:/)[1];
 	});
 
@@ -87,8 +87,8 @@ function handleFile(file) {
 		protoShortNamesToLongNames[currentModuleName] = {};
 		protoShortNamesAliases[currentModuleName] = {};
 
-		(module.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",function\(\){return ([_a-zA-Z]+)}\)/g) || []).forEach((alias) => {
-			let [/*skip*/, aliasName, protoShortName] = alias.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",function\(\){return ([_a-zA-Z]+)}\)/);
+		(module.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",\(?function\(\){return ([_a-zA-Z]+)}\)/g) || []).forEach((alias) => {
+			let [/*skip*/, aliasName, protoShortName] = alias.match(/[a-z]\.[a-z]\([a-z],"([a-zA-Z]+)",\(?function\(\){return ([_a-zA-Z]+)}\)/);
 			protoShortNamesAliases[currentModuleName][aliasName] = protoShortName;
 		});
 
