@@ -3274,7 +3274,7 @@ function UpdatePaymentInfoForm()
 		else
 			$AddressFields.hide();
 
-		var strSaveMyAddressDisplay = bShowSaveMyAddress ? 'block' : 'none';
+		var strSaveMyAddressDisplay = bShowSaveMyAddress || g_bShowAddressForm ? 'block' : 'none';
 		$('payment_row_save_my_address').style.display = strSaveMyAddressDisplay;
 		
 		var strShowStoredPayPalDetails = bShowStoredPayPalDetails ? 'block' : 'none';
