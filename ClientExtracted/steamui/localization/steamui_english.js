@@ -936,6 +936,13 @@
 	"GameList_Search_NoResults_Link": "Search the Steam store",
 
 	"StreamingClient_Select_ThisMachine": "This machine",
+	"StreamingClient_Select_RemotePlayPhone": "Phones",
+	"StreamingClient_Select_RemotePlayTablet": "Tablets",
+	"StreamingClient_Select_RemotePlayMobile": "Mobile devices",
+	"StreamingClient_Select_RemotePlayTV": "TVs",
+	"StreamingClient_Select_RemotePlayTVPhone": "TVs & phones",
+	"StreamingClient_Select_RemotePlayTVTablet": "TVs & tablets",
+	"StreamingClient_Select_RemotePlayTVMobile": "TVs & mobile devices",
 
 	"Beta_BetaTag": "BETA",
 	"Beta_Changelist": "Changelist",

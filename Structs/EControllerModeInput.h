@@ -77,4 +77,6 @@ typedef enum EControllerModeInput
     k_EControllerModeInputButton_macro5, // button_macro5
     k_EControllerModeInputButton_macro6, // button_macro6
     k_EControllerModeInputButton_macro7, // button_macro7
+    k_EControllerModeInputButton_macro1finger, // button_macro1finger
+    k_EControllerModeInputButton_macro2finger, // button_macro2finger
 } EControllerModeInput;

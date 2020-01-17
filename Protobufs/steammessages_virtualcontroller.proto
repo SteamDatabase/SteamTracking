@@ -45,7 +45,9 @@ enum EControllerElementType {
 	k_EControllerElementTypeTrackpadRight = 27;
 	k_EControllerElementTypeKeyboard = 28;
 	k_EControllerElementTypeMagnifyingGlass = 29;
-	k_EControllerElementTypeMax = 30;
+	k_EControllerElementTypeButtonMacro1Finger = 30;
+	k_EControllerElementTypeButtonMacro2Finger = 31;
+	k_EControllerElementTypeMax = 32;
 }
 
 message CVirtualControllerElement {

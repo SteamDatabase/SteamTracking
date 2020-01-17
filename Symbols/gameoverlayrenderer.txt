@@ -662,6 +662,7 @@
  _Block_object_assign
  _Block_object_dispose
  _CGSDefaultConnection
+ _DefaultRuneLocale
  _NSConcreteGlobalBlock
  _NSConcreteStackBlock
  _NSGetExecutablePath

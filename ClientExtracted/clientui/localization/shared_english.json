@@ -452,6 +452,8 @@
 	"Editor_Unordered": "Unordered List",
 	"Editor_Ordered": "Ordered List",
 	"Editor_Header": "Header",
+	"Editor_Header2": "Header 2",
+	"Editor_Header3": "Header 3",
 	"Editor_Emoticon": "Insert Emoticon",
 
 	"EventEditor_ConvertHTML_Error": "Failed Converting HTML",
