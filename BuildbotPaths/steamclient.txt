@@ -841,6 +841,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/p2pnetworkingsession.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/p2pnetworkingsession.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/productbuilder.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remoteclientjobs.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remoteclientjobs.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remoteclientmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientdll/remoteclientmanager.h

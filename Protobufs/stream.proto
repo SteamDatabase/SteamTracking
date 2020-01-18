@@ -608,6 +608,7 @@ message CSetGammaRampMsg {
 message CSetActivityMsg {
 	optional .EStreamActivity activity = 1 [default = k_EStreamActivityIdle];
 	optional uint32 appid = 2;
+	optional uint64 gameid = 3;
 }
 
 message CSystemSuspendMsg {

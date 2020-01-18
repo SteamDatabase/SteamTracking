@@ -147,6 +147,11 @@ message CMsgRemoteDeviceAuthorizationResponse {
 }
 
 message CMsgRemoteDeviceStreamingRequest {
+	message ReservedGamepad {
+		optional uint32 controller_type = 1;
+		optional uint32 controller_subtype = 2;
+	}
+
 	required uint32 request_id = 1;
 	optional int32 maximum_resolution_x = 2;
 	optional int32 maximum_resolution_y = 3;
@@ -163,6 +168,9 @@ message CMsgRemoteDeviceStreamingRequest {
 	repeated .EStreamTransport supported_transport = 14;
 	optional bool restricted = 15;
 	optional .EStreamDeviceFormFactor form_factor = 16 [default = k_EStreamDeviceFormFactorUnknown];
+	optional int32 gamepad_count = 17;
+	repeated .CMsgRemoteDeviceStreamingRequest.ReservedGamepad gamepads = 18;
+	optional uint64 gameid = 19;
 }
 
 message CMsgRemoteDeviceStreamingCancelRequest {
