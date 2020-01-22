@@ -2343,9 +2343,6 @@ function GetScreenshotURL( appid, filename, sizeStr )
 
 function UpdatePricesForAdditionalCartDiscount( $Selector, nCartDiscount )
 {
-	// we don't want to mark down prices
-	return;
-	
 	if ( !nCartDiscount )
 		return;
 
@@ -2392,43 +2389,37 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 		return;
 
 	var strTemplate = ' \
-	<div class="winterSale2019_giftActiveBar">	\
-		<div class="winterSale2019_contentContainer"> \
-			<div class="winterSale2019_leftContent"> \
-				<div class="winterSale2019_icon01"> \
-					%snow% \
-				</div> \
-				<div class="winterSale2019_title"> \
-					<div class="title">%title%</div> \
-				</div> \
+	<div class="placeHolder_lunarSale2019_giftActiveBar">	\
+		<div class="lunarSale2019_contentContainer"> \
+		<div class="lunar_sale_poinks01"> \
+		<div class="lunar_sale_sparkle sparkle01"> \
+			<div class="sparkleStar star1"></div> \
+			<div class="sparkleStar star2"></div> \
+			<div class="sparkleStar star3"></div> \
+		</div> \
+		</div> \
+		<div class="lunar_sale_title"><img src="https://steamstore-a.akamaihd.net/public/images/promo/lunar2019/lny2019_title_en.png"/></div> \
+		<div class="lunar_sale_spacer lunar_leftspacer"></div> \
+		<div class="lunar_sale_supersavings_label"><div class="highlight">%header%</div><div class="subtitle">%discount%</div></div> \
+		<div class="lunar_sale_spacer lunar_rightspacer">\
+		<div class="lunar_sale_poinks02"> \
+			<div class="lunar_sale_sparkle sparkle02"> \
+				<div class="sparkleStar star1"></div> \
+				<div class="sparkleStar star2"></div> \
+				<div class="sparkleStar star3"></div> \
 			</div> \
-			<div class="winterSale2019_rightContent"> \
-					<div class="winterSale2019_savings">%discount%</div> \
-					<div class="winterSale2019_savings_expiration winterSale2019_savings">%expiration%</div> \
-				</div> \
-			</div> \
+		</div> \
+		</div> \
 		</div> \
 	</div> \
 	';
-	
-	var strSnow = '';
-	var nNumberSnowFlakes = parseInt( Math.random() * 20 ) + 30;
-	for ( var i = 0; i < nNumberSnowFlakes; i++ )
-	{
-		var nDelay = parseFloat( Math.random() * 3 ).toFixed(1);
-		var nTop = parseInt( ( Math.random() * 20 ) ) - 20;
-		var nLeft = parseInt( ( Math.random() * 1000 ) );
-		strSnow += '<div class="winterSale2019_snow" style="animation-delay: %delay%s; top: %top%px; left: %left%px;"></div>'.replace( '%delay%', nDelay ).replace( '%top%', nTop ).replace( '%left%', nLeft );
-	}
-	
+
+
 	var strAmount = GStoreItemData.fnFormatCurrency( nCartDiscount );
-	var strTitle = 'Winter Rewards Coupon';
-	var strExpiration = 'Valid until January 2nd, 2020 @ 10:00am PST';
-	var strDiscount = 'Save up to %amount% on your next purchase'.replace( '%amount%', strAmount );
-	strTemplate = strTemplate.replace( '%title%', strTitle );
+	var strHeader = 'Bonus Savings Mode Active';
+	var strDiscount = '%amount% will be taken off your cart!'.replace( '%amount%', strAmount );
+	strTemplate = strTemplate.replace( '%header%', strHeader );
 	strTemplate = strTemplate.replace( '%discount%', strDiscount );
-	strTemplate = strTemplate.replace( '%expiration%', strExpiration );
-	strTemplate = strTemplate.replace( '%snow%', strSnow );
 
 	$Elements = $J( '[data-cart-banner-spot]' );
 	for ( var i = 0; i < $Elements.length; i++ )
@@ -2437,4 +2428,5 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 		$element.replaceWith( $J( strTemplate ) );
 	}
 }
+
 

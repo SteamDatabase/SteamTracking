@@ -923,6 +923,27 @@ CGameGooExchangeDialog = {
 			});
 	}
 
+	function EnableMiniProfileBackground( itemid, enabled )
+	{
+		var rgAJAXParams = {
+			sessionid: g_sessionID,
+			assetid: itemid,
+			enabled: enabled
+		};
+		var strActionURL = g_strProfileURL + "/ajaxenableminiprofilebackground/";
+
+		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
+			if ( enabled )
+				ShowAlertDialog( 'Enabled Mini Profile Background', 'This item has been set as your mini profile hover background.' );
+			else
+				ShowAlertDialog( 'Disabled Mini Profile Background', 'This item has been removed as your mini profile background.' );
+
+			ReloadCommunityInventory();
+		}).fail( function() {
+			ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
+		});
+	}
+
 
 
 CBoosterCreatorPage = {

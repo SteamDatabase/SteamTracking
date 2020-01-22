@@ -152,6 +152,8 @@ LocalizationReady("shared", "english", {
 
   EventDisplay_Events: "Admin Dashboard",
   EventDisplay_SeeOldVersion: "View Current Customer Version",
+  EventDisplay_SalesPage: "View Store Sales Page",
+  EventDisplay_StatsPage: "(VO) Stats Page",
 
   EventDisplay_RightColumnTitle_Game: "Game",
   EventDisplay_RightColumnTitle_Blog: "Blog",
@@ -891,11 +893,16 @@ LocalizationReady("shared", "english", {
   Sale_ShowMore: "Show more",
   Sale_OnWishlist: "On Wishlist",
   Sale_InLibrary: "In Library",
-  Sale_HiddenItems: "%1$s item(s) are hidden due to %2$s",
+  Sale_HiddenItems: "%1$s items are hidden due to %2$s",
+  Sale_HiddenItem_Single: "%1$s item is hidden due to %2$s",
   Sale_StorePreferences: "your store preferences",
   Sale_SeeAllSpecials: "See All Specials",
   Sale_AddToWishlist: "Add to Wishlist",
   Sale_Preferences: "Preferences",
+  Sale_PlaceHolder:
+    "Preview Mode: This section has no capsules. Will not appear on user page if it is empty",
+  Sale_SmartPlaceHolder:
+    "Preview Mode: This smart section has no apps for you. This would not appear on user page if it is empty.",
   Sale_default_label: "(no title)",
   Sale_default_label_OnSale: "On Sale",
   Sale_default_label_TopSellers: "Top Sellers",
@@ -929,6 +936,9 @@ LocalizationReady("shared", "english", {
   Sale_default_label_PlayForFree: "Play for Free!",
   Sale_defautl_label_FreeToKeep:
     "For a limited time, install now and keep it forever",
+
+  SalePage_LoginPrompt:
+    "Sign in to view additional items selected just for you.",
 
   SalePage_WatchForDrop_Minutes_Developer:
     "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
@@ -1026,6 +1036,20 @@ LocalizationReady("shared", "english", {
   Lunar2020_ErrorLoadingVideo:
     "Please use a browser that supports HTML videos to open your envelope.",
   Lunar2020_LinkFromVideoToMarket: "Visit the market now",
+
+  Lunar2020_StoryDayOneHeader: "THE GREAT RACE | DAY 1",
+  Lunar2020_StoryDayTwoHeader: "THE GREAT RACE | DAY 2",
+  Lunar2020_StoryDayThreeHeader: "THE GREAT RACE | DAY 3",
+  Lunar2020_StoryDayFourHeader: "THE GREAT RACE | DAY 4",
+
+  Lunar2020_StoryDayOne:
+    "Clever Rat was the first to arrive in the celestial domain. Not keen on swimming, she'd hitched a ride atop the trusty Ox—excitedly jumping into the Emperor's heavenly garden just before her ride reached shore. Steady Ox crossed the river with ease, unconcerned about the results of the race. Second place suits him, content as he is with his role in Rat's success.",
+  Lunar2020_StoryDayTwo:
+    "Self-sufficient Tiger traveled too carefully to outpace Ox, thinking it better to place third than not at all. Swift rabbit found himself floating nowhere fast. But luck paid off where strategy didn't, and a helpful wind sped him safely on his way. Flying Dragon's vantage revealed others in need, and she stopped to help all she could—even gifting the rabbit a gust across the river. Honor was far more important than victory, and she found fifth place a fine fit.",
+  Lunar2020_StoryDayThree:
+    "Stealthy Snake had little interest in a long-distance effort, so he wound himself unnoticed around Horse's front hoof. As Horse galloped towards the finish line, Snake uncoiled, startling his ride just long enough to slither into sixth place with the skittish Horse trotting in close behind.",
+  Lunar2020_StoryDayFour:
+    "Sheep, Monkey, and Rooster worked together, but let Sheep claim eighth as the backbone of their journey. Monkey earned ninth, and the strutting Rooster crossed tenth, proud that the order was fair. Playful Dog was mostly interested in splashing around, feeling eleventh was a fine trade for all the fun. Then, in twelfth, came Pig, who'd stopped for a snack n' a snooze—wise enough to know that each animal will have their time in the Emperor's favor.",
 
   shared_dummy: "dont translate"
 });

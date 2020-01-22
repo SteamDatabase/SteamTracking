@@ -249,6 +249,7 @@
 
 .search_results.hide_owned    .ds_owned,
 .search_results.hide_ignored  .ds_ignored,
+.search_results.hide_ignored	.ds_excluded_by_preferences,
 .search_results.hide_wishlist .ds_wishlist {
     height: 0;
 	margin: 0;
@@ -581,6 +582,7 @@ div.autocomplete ul li {
 
 	html.responsive .search_results.hide_owned    .ds_owned,
 	html.responsive .search_results.hide_ignored  .ds_ignored,
+	html.responsive .search_results.hide_ignored	.ds_excluded_by_preferences,
 	html.responsive .search_results.hide_wishlist .ds_wishlist {
 		display: none;
 	}

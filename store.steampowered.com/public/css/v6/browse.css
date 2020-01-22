@@ -445,3 +445,20 @@ body.v6 .header_early_access h2 a:hover {
 	height: 1px;
 	margin: 8px;
 }
+
+
+.contenthub_mature_content_notice {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			background: -webkit-linear-gradient( 20deg, rgba(152,128,60,0.4) 5%,rgba(226,244,255,0.4) 95%);
+	background: linear-gradient( 70deg, rgba(152,128,60,0.4) 5%,rgba(226,244,255,0.4) 95%);
+	color: #fff;
+	padding: 16px;
+	margin-top: 8px;
+	font-size: 14px;
+}
+
+.contenthub_mature_content_notice a {
+	text-decoration: underline;
+}

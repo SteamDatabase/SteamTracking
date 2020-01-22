@@ -195,11 +195,25 @@
 }
 
 .miniprofile_top {
+	position: relative;
 	border: 1px solid #333538;
 	padding: 7px 8px;
 background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);
 	background: linear-gradient( to bottom, #33425a 5%, #282f3d 95%);
 ;
+}
+
+.miniprofile_animated_background {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	overflow: hidden;
+}
+.miniprofile_animated_background > video {
+	width: 100%;
+	height: 100%;
 }
 
 .miniprofile_player {

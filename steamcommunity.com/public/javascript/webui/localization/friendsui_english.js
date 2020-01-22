@@ -162,11 +162,15 @@ LocalizationReady("friendsui", "english", {
   ChatEntry_ChooseFromLibrary: "Choose Photo From Library",
 
   ChatEntryButton_SendSnowfall: "Make it snow!",
+  ChatEntryButton_SendSnow: "Make it snow!",
   ChatEntryButton_SendConfetti: "Use confetti!",
   ChatEntryButton_SendSnowball: "Throw a snowball!",
   ChatEntryButton_SendFirework: "Launch fireworks!",
   ChatEntryButton_SendGoldfetti: "Use gold confetti!",
   ChatEntryButton_SendBalloons: "Launch balloons!",
+  ChatEntryButton_SendLny2020_lanterns: "Launch Lunar New Year lanterns!",
+  ChatEntryButton_SendLny2020_firework: "Launch Lunar New Year fireworks!",
+  ChatEntryButton_SendLny2020_confetti: "Use Lunar New Year confetti!",
   ChatEntryButton_SendSticker: "Send an animated sticker",
 
   MobilePermission_TakePhoto:
@@ -1226,6 +1230,9 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_RoomEffectSnowball: "%1$s threw a snowball!",
   ChatRoom_RoomEffectFirework: "%1$s launched fireworks!",
   ChatRoom_RoomEffectBalloons: "%1$s launched balloons!",
+  ChatRoom_RoomEffectLny2020_lanterns: "%1$s released lanterns!",
+  ChatRoom_RoomEffectLny2020_confetti: "%1$s used Lunar New Year confetii!",
+  ChatRoom_RoomEffectLny2020_firework: "%1$s used Lunar New Year fireworks!",
 
   bbcode_community_publishedfile_vote_up: "Rate",
 

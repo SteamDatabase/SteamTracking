@@ -873,6 +873,9 @@
       MenuSectionHeader: "contextmenu_MenuSectionHeader_x3Kot",
       StrongerSeparation: "contextmenu_StrongerSeparation_31Tii",
       UpperCase: "contextmenu_UpperCase_2T9by",
+      SubMenu: "contextmenu_SubMenu_3BzT1",
+      Label: "contextmenu_Label_1D1Dk",
+      Arrow: "contextmenu_Arrow_KJxKr",
       PopoutSubMenu: "contextmenu_PopoutSubMenu_29Zea",
       PopoutSubMenuItems: "contextmenu_PopoutSubMenuItems_1cXx5"
     };
@@ -1353,19 +1356,23 @@
               t = e.label,
               n = (e.children, e.className),
               o = Object(r.f)(e, ["label", "children", "className"]);
-            return (
-              this.state.bActive && (n = (n || "") + " " + v.a.active),
+            return i.createElement(
+              y,
+              Object(r.a)({}, o, {
+                onClick: this.OnClick,
+                className: Object(_.a)(
+                  n,
+                  v.a.SubMenu,
+                  this.state.bActive && v.a.active
+                ),
+                onMouseEnter: this.OnMouseEnter,
+                onSelected: null,
+                bInteractableItem: !0
+              }),
+              i.createElement("div", { className: v.a.Label }, t),
               i.createElement(
-                y,
-                Object(r.a)({}, o, {
-                  onClick: this.OnClick,
-                  className: n,
-                  onMouseEnter: this.OnMouseEnter,
-                  onSelected: null,
-                  bInteractableItem: !0
-                }),
-                t,
-                " ",
+                "div",
+                { className: v.a.Arrow },
                 i.createElement(m.o, null)
               )
             );

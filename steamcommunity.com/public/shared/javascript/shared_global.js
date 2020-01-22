@@ -1016,6 +1016,18 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 					$Hover.css( 'opacity', '' ); //clean up jquery animation
 					fnPositionHover( $Hover, $Target );
 					$Hover.fadeIn( MINIPROFILE_ANIM_SPEED );
+					let videoElem = $Hover.find( 'video' );
+					if ( videoElem.length != 0 )
+					{
+						videoElem.on( "canplay", function() {
+							videoElem.addClass( "can_play" );
+							videoElem[0].play();
+						} );
+						if ( videoElem.hasClass( "can_play" ) )
+						{
+							videoElem[0].play();
+						}
+					}
 				} );
 			}, nDelayBeforeShow );
 		}

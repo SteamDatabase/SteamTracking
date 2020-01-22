@@ -366,6 +366,14 @@ select {
 {
 	width: 300px;
 }
+.review_report_data.review_text
+{
+	width: 300px;
+	max-height: 200px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
 
 @media screen and (max-width: 910px)
 {

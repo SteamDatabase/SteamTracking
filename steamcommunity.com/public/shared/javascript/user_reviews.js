@@ -244,6 +244,8 @@ function UserReview_ShowReportsDialog( recommendationID, baseURL )
 				reportDiv.append( divWasReset );
 				var divTime = $J('<div/>', {'class': 'review_report_data' } ).append( 'Date' );
 				reportDiv.append( divTime );
+				var divReviewText = $J('<div/>', {'class': 'review_report_data review_text' } ).append( 'Review Text At Report Time' );
+				reportDiv.append( divReviewText );
 				var divClear = $J('<div/>', {'style': 'clear: left' } );
 				reportDiv.append( divClear );
 				container.append( reportDiv );
@@ -264,6 +266,8 @@ function UserReview_ShowReportsDialog( recommendationID, baseURL )
 					reportDiv.append( divWasReset );
 					var divTime = $J('<div/>', {'class': 'review_report_data' } ).append( report.time_string );
 					reportDiv.append( divTime );
+					var divReviewText = $J('<div/>', {'class': 'review_report_data review_text' } ).append( report.review_text );
+					reportDiv.append( divReviewText );
 					var divClear = $J('<div/>', {'style': 'clear: left' } );
 					reportDiv.append( divClear );
 				container.append( reportDiv );

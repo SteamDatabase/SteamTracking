@@ -1,4 +1,7 @@
 
+
+
+
 * {
 	padding: 0;
 	margin: 0;
@@ -1077,7 +1080,7 @@ a#store_search_link img {
 
 	font-family: "Motiva Sans", Sans-serif;
 
-	background-image: url( '/public/images/v6/events/lunarsale_2019/redenvelope_blank.png?v=1' );
+	background-image: url( '/public/images/v6/events/lunarsale_2020/redenvelope_blank.png?v=1' );
 	background-size: 100% 100%;
 	
 	color: rgb(255, 212, 26);
@@ -1097,7 +1100,7 @@ a#store_search_link img {
 }
 
 .additional_cart_discount.NowFree {
-	background-image: url( '/public/images/v6/events/lunarsale_2019/redenvelope_free.png?v=1' );
+	background-image: url( '/public/images/v6/events/lunarsale_2020/redenvelope_free.png?v=1' );
 	box-shadow: 0px 0px 16px 0 #ff9c1b;
 }
 
@@ -1231,7 +1234,7 @@ a#store_search_link img {
 	width: calc( 100% + 46px );
 	opacity: .875;
 
-	background-image: url( '/public/images/v6/events/lunarsale_2019/brushstrikeout.png?v=1' );
+	background-image: url( '/public/images/v6/events/lunarsale_2020/brushstrikeout.png?v=1' );
 	background-size: 100% 100%;
 	pointer-events: none;
 	user-select: none;
@@ -1663,6 +1666,9 @@ a#store_search_link img {
 	background: -webkit-linear-gradient(left, rgb(100, 13, 12) 0%,rgb(208,5,1) 45%,rgb(208,5,1) 55%,rgb(100, 13, 12) 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to right, rgb(100, 13, 12) 0%,rgb(208,5,1) 45%,rgb(208,5,1) 55%,rgb(100, 13, 12) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#640D0C', endColorstr='#640D0C',GradientType=1 ); /* IE6-9 */
+
+	background-image: url(/public/images/v6/events/lunarsale_2020/discount_active_background.png?v=2);
+	background-repeat-y: no-repeat;
 }
 
 .lunarSale2019_contentContainer {
@@ -1703,6 +1709,7 @@ a#store_search_link img {
 	pointer-events: none;
 	user-select: none;
 	margin-left: 32px;
+	display: none;
 }
 
 
@@ -1712,7 +1719,7 @@ a#store_search_link img {
 	height: 100%;
 	pointer-events: none;
 	user-select: none;
-	color: rgb(255, 212, 26);
+	color: #FFB321;
 	font-size: 14px;
 }
 
@@ -1722,7 +1729,7 @@ a#store_search_link img {
 	height: 100%;
 	pointer-events: none;
 	user-select: none;
-	color: rgb(255, 212, 26);
+	color: #FFB321;
 	font-size: 14px;
 }
 
@@ -1733,7 +1740,7 @@ a#store_search_link img {
 	position: absolute;
 	top: -34px;
     left: -89px;
-	background-image: url( '/public/images/v6/events/lunarsale_2019/poinks_01.png?v=1' );
+	background-image: url( '/public/images/v6/events/lunarsale_2020/ratcoins_01.png?v=1' );
 	background-size: contain;
 	background-repeat: no-repeat;
 	pointer-events: none;
@@ -1748,7 +1755,7 @@ a#store_search_link img {
     position: absolute;
     top: -13px;
 	left: 73%;
-	background-image: url( '/public/images/v6/events/lunarsale_2019/poinks_02.png?v=1' );
+	background-image: url( '/public/images/v6/events/lunarsale_2020/ratcoins_02.png?v=1' );
 	background-size: contain;
 	background-repeat: no-repeat;
 	pointer-events: none;
@@ -1759,21 +1766,16 @@ a#store_search_link img {
 {
 	width: fit-content;
 	min-width: fit-content;
-	font-family: "Motiva Sans", Sans-serif;
+	font-family: Sigmar One, cursive;
 }
 
 .lunar_sale_supersavings_label .highlight {
-	color: #FFD33B;
+	color: #FFB321;
 	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
 	margin-top: -4px;
 	margin-bottom: -4px;
-	
-	animation-name: savingsModeGlow;
-	animation-duration: 1s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
 }
 
 
@@ -1781,28 +1783,29 @@ a#store_search_link img {
 {
 	0%
 	{
-		color: rgb(248, 173, 34);
-		text-shadow: 0px 0px 4px #FFD33B00, 0px 0px 14px rgba(255, 200, 0, 0);
+		color: #DC9B1D);
+		text-shadow: 0px 0px 4px #FFD33B00, 0px 0px 8px rgba(255, 200, 0, .5);
 	}
 
 	50%
 	{
-		color: #FFD33Bff;
-		text-shadow: 0px 0px 14px rgb(255, 200, 0), 0px 0px 14px rgb(255, 200, 0);
+		color: #FFD990;
+		text-shadow: 0px 0px 14px rgb(255, 217, 44), 0px 0px 8x rgb(248, 173, 34, .9);
 	}
 
 	100%
 	{   
-		color: rgb(248, 173, 34);
-		text-shadow: 0px 0px 4px #FFD33B00, 0px 0px 14px rgba(255, 200, 0, 0);
+		color: #DC9B1D);
+		text-shadow: 0px 0px 4px #FFD33B00, 0px 0px 8px rgba(255, 200, 0, .5);
 	}
 
 }
 
 .lunar_sale_supersavings_label .subtitle {
-	color: rgb(255, 187, 85);
+	color: #ddd;
 	font-weight: 100;
 	font-size: 14px;
+	line-height: 14px;
 	text-align: center;
 }
 
@@ -1817,7 +1820,7 @@ a#store_search_link img {
 	height: 64px;
 	position: absolute;
 	
-	background-image: url( '/public/images/v6/events/lunarsale_2019/poink_sparkle_01.png?v=1' );
+	background-image: url( '/public/images/v6/events/lunarsale_2020/poink_sparkle_01.png?v=1' );
 	background-size: contain;
 	background-repeat: no-repeat;
 	pointer-events: none;
@@ -4251,6 +4254,38 @@ body.v6 .store_nav .popup_menu_subheader, body.v6 #footer_nav .popup_menu_subhea
 	color: #4f94bc;
 }
 
+.popup_menu_twocol {
+	display: flex;
+	flex-direction: row;
+}
+
+.popup_menu_twocol > .popup_menu:not(:first-child)
+{
+	margin-left: 5px;
+	border-left: 1px solid #ffffff;
+	padding-left: 5px;
+}
+
+.popup_menu_twocol > .popup_menu
+{
+	flex: 1;
+	min-width: 0;
+}
+
+@media screen and ( max-width: 420px )
+{
+	html.responsive .popup_menu_twocol
+	{
+		display: block;
+	}
+
+	html.responsive .popup_menu_twocol > .popup_menu:not(:first-child)
+	{
+		margin-left: 0;
+		border-left: none;
+		padding-left: 0;
+	}
+}
 
 /* Large screenshot carousl */
 .screenshot_carousel .carousel_items {

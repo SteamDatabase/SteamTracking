@@ -660,6 +660,21 @@ body.v6 .broadcast_live_stream_icon {
 	margin-left: 10px;
 }
 
+
+
+body.lny2020 #store_nav_area .store_nav_bg {
+	display: none;
+}
+
+body.lny2020 div#store_controls {
+	display: none;
+}
+
+html.force_desktop body.lny2020 {
+    min-width: 910px;
+}
+
+
 @media screen and (max-width: 830px) {
     .react_landing_background {
         background-size: 218vw;
