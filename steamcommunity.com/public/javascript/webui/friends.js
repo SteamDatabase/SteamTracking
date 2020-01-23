@@ -11882,6 +11882,7 @@
       CarouselDisplay: "partnersaledisplay_CarouselDisplay_3RDEb",
       SaleViewAll: "partnersaledisplay_SaleViewAll_qU4Rf",
       SaleSectionLoginPrompt: "partnersaledisplay_SaleSectionLoginPrompt_LzOSG",
+      LoginButton: "partnersaledisplay_LoginButton_Dxxbh",
       SaleOverlayCtn: "partnersaledisplay_SaleOverlayCtn_2dtYu",
       SaleOverlay: "partnersaledisplay_SaleOverlay_3PS79",
       AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_i6DFs",

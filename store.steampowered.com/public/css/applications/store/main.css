@@ -1430,7 +1430,6 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 .login_LoginDialog_2Hj3a {
   background-color: #101114;
   background-image: linear-gradient(to bottom, #101114, #1f2127);
-  margin: 20px;
   min-height: 512px;
   position: relative; }
 
@@ -2168,9 +2167,27 @@ body.modals_BodyNoScrollDialog_105OB {
     padding-top: 5px; }
 
 .partnersaledisplay_SaleSectionLoginPrompt_2-dSB {
-  padding: 64px;
+  padding: 36px 64px;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center; }
+  .partnersaledisplay_SaleSectionLoginPrompt_2-dSB .partnersaledisplay_LoginButton_3h6sH {
+    border-radius: 2px;
+    border: none;
+    padding: 10px 30px;
+    margin: 16px;
+    display: inline-block;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #285b9a;
+    background: rgba(103, 193, 245, 0.9); }
+    .partnersaledisplay_SaleSectionLoginPrompt_2-dSB .partnersaledisplay_LoginButton_3h6sH:hover {
+      color: #fff;
+      background: #417a9b;
+      background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
+      background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%); }
 
 .partnersaledisplay_SaleOverlayCtn_3GTIc {
   width: 100vw;
@@ -2188,7 +2205,7 @@ body.modals_BodyNoScrollDialog_105OB {
   max-width: 100vw; }
   @media screen and (max-width: 920px) {
     .partnersaledisplay_SaleOverlay_1sZo8 {
-      margin-top: 100px; } }
+      margin-top: 12vw; } }
 
 .partnersaledisplay_AppSummaryWidgetCtn_2H8Bm {
   flex-grow: 2;
@@ -7202,24 +7219,6 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
           text-align: center;
           margin-top: 20px;
           text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); }
-      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Opened_28wlX .partnereventdisplay_Envelope_2WNMe {
-        background-image: url(https://steamcdn-a.akamaihd.net/store/promo/lunar2020/redenvelopeback.png); }
-        .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Opened_28wlX .partnereventdisplay_Envelope_2WNMe .partnereventdisplay_GiftLabel_d2D-I {
-          display: none; }
-      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Locked_1uXh_ .partnereventdisplay_Envelope_2WNMe {
-        filter: brightness(0.6); }
-      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Locked_1uXh_ .partnereventdisplay_OpenState_3OVk1 {
-        filter: brightness(0.6); }
-        .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Locked_1uXh_ .partnereventdisplay_OpenState_3OVk1:hover {
-          cursor: default; }
-      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Unlocked_26x3o .partnereventdisplay_OpenState_3OVk1:hover {
-        cursor: pointer; }
-      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Opened_28wlX .partnereventdisplay_OpenState_3OVk1:hover {
-        cursor: pointer; }
-      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Unlocked_26x3o:hover .partnereventdisplay_Envelope_2WNMe {
-        transform: rotateZ(6deg) scale(1.2); }
-      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Opened_28wlX:hover .partnereventdisplay_Envelope_2WNMe, .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Locked_1uXh_:hover .partnereventdisplay_Envelope_2WNMe {
-        /* transform: rotateZ( 1deg ) scale( 1.1 ); */ }
       .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs .partnereventdisplay_OpenState_3OVk1 {
         z-index: 2;
         transform: translateY(-20px);
@@ -7232,13 +7231,26 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
         background: #DD3E3E;
         color: #eeeeeeaa;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3); }
-      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Unlocked_26x3o .partnereventdisplay_OpenState_3OVk1 {
-        color: #eee; }
-        .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Unlocked_26x3o .partnereventdisplay_OpenState_3OVk1:hover {
-          filter: brightness(120%); }
+        .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs .partnereventdisplay_OpenState_3OVk1:hover {
+          cursor: pointer; }
+      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Opened_28wlX .partnereventdisplay_Envelope_2WNMe {
+        background-image: url(https://steamcdn-a.akamaihd.net/store/promo/lunar2020/redenvelopeback.png); }
+        .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Opened_28wlX .partnereventdisplay_Envelope_2WNMe .partnereventdisplay_GiftLabel_d2D-I {
+          display: none; }
       .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Opened_28wlX .partnereventdisplay_OpenState_3OVk1 {
         background: rgba(221, 62, 62, 0.5); }
         .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Opened_28wlX .partnereventdisplay_OpenState_3OVk1:hover {
+          filter: brightness(120%); }
+      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Locked_1uXh_ .partnereventdisplay_Envelope_2WNMe {
+        filter: brightness(0.6); }
+      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Locked_1uXh_ .partnereventdisplay_OpenState_3OVk1 {
+        filter: brightness(0.6); }
+      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Unlocked_26x3o:hover .partnereventdisplay_Envelope_2WNMe {
+        transform: rotateZ(6deg) scale(1.2); }
+      .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Unlocked_26x3o .partnereventdisplay_OpenState_3OVk1, .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_NeedLogin_2F_Xa .partnereventdisplay_OpenState_3OVk1 {
+        color: #eee;
+        filter: none; }
+        .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_Unlocked_26x3o .partnereventdisplay_OpenState_3OVk1:hover, .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_EnvelopeArea_39E2F .partnereventdisplay_EnvelopeContainer_1g0zs.partnereventdisplay_NeedLogin_2F_Xa .partnereventdisplay_OpenState_3OVk1:hover {
           filter: brightness(120%); }
   .partnereventdisplay_LunarNewYearHeader_1g4Yf .partnereventdisplay_BottomMessage_3M82I {
     z-index: 3;

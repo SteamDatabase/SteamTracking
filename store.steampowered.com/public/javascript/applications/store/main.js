@@ -2011,10 +2011,11 @@
       BackingRect: "partnereventdisplay_BackingRect_2V4xV",
       Envelope: "partnereventdisplay_Envelope_2WNMe",
       GiftLabel: "partnereventdisplay_GiftLabel_d2D-I",
+      OpenState: "partnereventdisplay_OpenState_3OVk1",
       Opened: "partnereventdisplay_Opened_28wlX",
       Locked: "partnereventdisplay_Locked_1uXh_",
-      OpenState: "partnereventdisplay_OpenState_3OVk1",
       Unlocked: "partnereventdisplay_Unlocked_26x3o",
+      NeedLogin: "partnereventdisplay_NeedLogin_2F_Xa",
       BottomMessage: "partnereventdisplay_BottomMessage_3M82I",
       VO: "partnereventdisplay_VO_1-pFh",
       LunarNewYearOpenEnvelopeVideoDialog:
@@ -2828,6 +2829,7 @@
       CarouselDisplay: "partnersaledisplay_CarouselDisplay_mntHD",
       SaleViewAll: "partnersaledisplay_SaleViewAll_1bsBz",
       SaleSectionLoginPrompt: "partnersaledisplay_SaleSectionLoginPrompt_2-dSB",
+      LoginButton: "partnersaledisplay_LoginButton_3h6sH",
       SaleOverlayCtn: "partnersaledisplay_SaleOverlayCtn_3GTIc",
       SaleOverlay: "partnersaledisplay_SaleOverlay_1sZo8",
       AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_2H8Bm",
@@ -49145,38 +49147,43 @@
             );
             for (
               var r = oe(ah[t]),
-                i = yp.BIsDoorOpened(t),
-                a = yp.BCanUserOpenDoor(t),
-                o = !0,
-                s = 0;
-              s < t;
-              s++
+                i = !C.logged_in,
+                a = yp.BIsDoorOpened(t),
+                o = yp.BCanUserOpenDoor(t),
+                s = !0,
+                c = 0;
+              c < t;
+              c++
             )
-              o = o && yp.BIsDoorOpened(s);
-            var c = !i && a && o,
-              l = new Date(1e3 * yp.GetRawDoorData()[t].rtime_start),
-              d = i
-                ? oe("#Lunar2020_RereadStory")
-                : c
-                ? oe("#Lunar2020_GiftCanBeOpenedNow")
+              s = s && yp.BIsDoorOpened(c);
+            var l = !a && o && s,
+              d = new Date(1e3 * yp.GetRawDoorData()[t].rtime_start),
+              p = i
+                ? oe("#Login_SignIn")
                 : a
+                ? oe("#Lunar2020_RereadStory")
+                : l
+                ? oe("#Lunar2020_GiftCanBeOpenedNow")
+                : o
                 ? oe("#Lunar2020_GiftCanBeOpenedAfterThePreviousOne")
                 : oe(
                     "#Lunar2020_GiftLockedUntilDate",
-                    l.toLocaleDateString(_e.GetPreferredLocales(), {
+                    d.toLocaleDateString(_e.GetPreferredLocales(), {
                       month: "numeric",
                       day: "numeric"
                     })
                   ),
-              p = Bt(
+              u = i ? Rr : a || l ? this.OpenEnvelope : null,
+              m = Bt(
                 Vm.a.EnvelopeContainer,
-                i && Vm.a.Opened,
-                c && Vm.a.Unlocked,
-                !i && !c && Vm.a.Locked
+                i && Vm.a.NeedLogin,
+                a && Vm.a.Opened,
+                l && Vm.a.Unlocked,
+                !a && !l && Vm.a.Locked
               );
             return A.createElement(
               "div",
-              { className: p },
+              { className: m },
               A.createElement("div", { className: Vm.a.BackingRect }),
               A.createElement(
                 "div",
@@ -49189,14 +49196,11 @@
               ),
               A.createElement(
                 "div",
-                {
-                  className: Vm.a.OpenState,
-                  onClick: i || c ? this.OpenEnvelope : null
-                },
-                d
+                { className: Vm.a.OpenState, onClick: u },
+                p
               ),
               (C.is_support &&
-                i &&
+                a &&
                 ("beta" == w.WEB_UNIVERSE || "dev" == w.WEB_UNIVERSE) &&
                 A.createElement(
                   "div",
@@ -54730,7 +54734,12 @@
           A.createElement(
             "div",
             { className: mi.a.SaleSectionLoginPrompt },
-            oe("#SalePage_LoginPrompt")
+            oe("#SalePage_LoginPrompt"),
+            A.createElement(
+              "button",
+              { onClick: Rr, className: mi.a.LoginButton },
+              oe("#Login_SignIn")
+            )
           )
         );
       },
@@ -55499,9 +55508,9 @@
       };
     }
     function Rg(e, t) {
-      return 12 === t || 19 === t
+      return 12 === t
         ? e.replace("Jolly Lodger", "New Rocker")
-        : 23 === t || 24 === t || 8 === t || 26 === t
+        : 23 === t || 19 === t || 24 === t || 18 === t || 8 === t || 26 === t
         ? e.replace("Sigmar One", "Play")
         : 6 === t
         ? e.replace("Sigmar One", "Noto Serif SC")

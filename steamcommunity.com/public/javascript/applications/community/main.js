@@ -197,7 +197,7 @@
                 58: "13e6daa9ecce278ea943",
                 59: "b6bf04f8cb7612d836bc",
                 60: "877d6e0f7fa9ced9ff2f",
-                61: "58701b86f15c8086b0c7",
+                61: "55e211e0a446db2b6478",
                 62: "6187e37457cdcd0d5f2d",
                 63: "0ecb2cfa8550b1805bed",
                 64: "169534177dc41e463313",
@@ -207,7 +207,7 @@
                 68: "ffcfc6362e87a7716455",
                 69: "cd3f5a2e1344369b1a11",
                 70: "478a35e0f540c79ecce2",
-                71: "b874ba325ee8eef1053c",
+                71: "2b7c3703f7d87ca179e0",
                 72: "bb5e267d4e6326f814d4",
                 73: "fca82e89e80d4515bcc3",
                 74: "4c51da5ff8230c7f909b",
@@ -217,10 +217,10 @@
                 78: "11d3e68bf2cbe9ba1770",
                 79: "c546d870bd2c9817ca26",
                 80: "7369b92d296e949d412d",
-                81: "0f66102787d1b22b6571",
+                81: "7bb9b48bc996f1d6d2ed",
                 82: "83d603a921d907e2d945",
                 83: "7c3f4fa7e858ce6f23f4",
-                84: "64ba601b885b4b37708a",
+                84: "bc82782b531500b50fdb",
                 85: "904ede70c95a7381a6a2",
                 86: "bbc997dbfcea9fb0c17b",
                 87: "f047bbed8e57de38ab6c"
@@ -3611,10 +3611,11 @@
       BackingRect: "partnereventdisplay_BackingRect_2V4xV",
       Envelope: "partnereventdisplay_Envelope_2WNMe",
       GiftLabel: "partnereventdisplay_GiftLabel_d2D-I",
+      OpenState: "partnereventdisplay_OpenState_3OVk1",
       Opened: "partnereventdisplay_Opened_28wlX",
       Locked: "partnereventdisplay_Locked_1uXh_",
-      OpenState: "partnereventdisplay_OpenState_3OVk1",
       Unlocked: "partnereventdisplay_Unlocked_26x3o",
+      NeedLogin: "partnereventdisplay_NeedLogin_2F_Xa",
       BottomMessage: "partnereventdisplay_BottomMessage_3M82I",
       VO: "partnereventdisplay_VO_1-pFh",
       LunarNewYearOpenEnvelopeVideoDialog:
@@ -11686,6 +11687,7 @@
       CarouselDisplay: "partnersaledisplay_CarouselDisplay_mntHD",
       SaleViewAll: "partnersaledisplay_SaleViewAll_1bsBz",
       SaleSectionLoginPrompt: "partnersaledisplay_SaleSectionLoginPrompt_2-dSB",
+      LoginButton: "partnersaledisplay_LoginButton_3h6sH",
       SaleOverlayCtn: "partnersaledisplay_SaleOverlayCtn_3GTIc",
       SaleOverlay: "partnersaledisplay_SaleOverlay_1sZo8",
       AppSummaryWidgetCtn: "partnersaledisplay_AppSummaryWidgetCtn_2H8Bm",
@@ -48498,8 +48500,11 @@
                       { className: fb.a.TokenBalanceContainer },
                       Object(q.c)("#Lunar2020_YourBalancePrefix"),
                       _.createElement(
-                        "div",
-                        { className: fb.a.TokenBalance },
+                        "a",
+                        {
+                          className: fb.a.TokenBalance,
+                          href: E.b.STORE_BASE_URL + "lunarnewyearmarket"
+                        },
                         " ",
                         Object(q.c)("#Lunar2020_BalanceNumberOfTokens", n),
                         " "
@@ -48585,38 +48590,43 @@
             );
             for (
               var o = Object(q.c)(wb[t]),
-                a = es.BIsDoorOpened(t),
-                i = es.BCanUserOpenDoor(t),
-                r = !0,
-                p = 0;
-              p < t;
-              p++
+                a = !E.g.logged_in,
+                i = es.BIsDoorOpened(t),
+                r = es.BCanUserOpenDoor(t),
+                p = !0,
+                s = 0;
+              s < t;
+              s++
             )
-              r = r && es.BIsDoorOpened(p);
-            var s = !a && i && r,
-              c = new Date(1e3 * es.GetRawDoorData()[t].rtime_start),
-              b = a
-                ? Object(q.c)("#Lunar2020_RereadStory")
-                : s
-                ? Object(q.c)("#Lunar2020_GiftCanBeOpenedNow")
+              p = p && es.BIsDoorOpened(s);
+            var c = !i && r && p,
+              b = new Date(1e3 * es.GetRawDoorData()[t].rtime_start),
+              l = a
+                ? Object(q.c)("#Login_SignIn")
                 : i
+                ? Object(q.c)("#Lunar2020_RereadStory")
+                : c
+                ? Object(q.c)("#Lunar2020_GiftCanBeOpenedNow")
+                : r
                 ? Object(q.c)("#Lunar2020_GiftCanBeOpenedAfterThePreviousOne")
                 : Object(q.c)(
                     "#Lunar2020_GiftLockedUntilDate",
-                    c.toLocaleDateString(q.b.GetPreferredLocales(), {
+                    b.toLocaleDateString(q.b.GetPreferredLocales(), {
                       month: "numeric",
                       day: "numeric"
                     })
                   ),
-              l = Object(ie.a)(
+              M = a ? Kn : i || c ? this.OpenEnvelope : null,
+              d = Object(ie.a)(
                 fb.a.EnvelopeContainer,
-                a && fb.a.Opened,
-                s && fb.a.Unlocked,
-                !a && !s && fb.a.Locked
+                a && fb.a.NeedLogin,
+                i && fb.a.Opened,
+                c && fb.a.Unlocked,
+                !i && !c && fb.a.Locked
               );
             return _.createElement(
               "div",
-              { className: l },
+              { className: d },
               _.createElement("div", { className: fb.a.BackingRect }),
               _.createElement(
                 "div",
@@ -48629,14 +48639,11 @@
               ),
               _.createElement(
                 "div",
-                {
-                  className: fb.a.OpenState,
-                  onClick: a || s ? this.OpenEnvelope : null
-                },
-                b
+                { className: fb.a.OpenState, onClick: M },
+                l
               ),
               (E.g.is_support &&
-                a &&
+                i &&
                 ("beta" == E.b.WEB_UNIVERSE || "dev" == E.b.WEB_UNIVERSE) &&
                 _.createElement(
                   "div",
@@ -55076,7 +55083,12 @@
           _.createElement(
             "div",
             { className: Fp.a.SaleSectionLoginPrompt },
-            Object(q.c)("#SalePage_LoginPrompt")
+            Object(q.c)("#SalePage_LoginPrompt"),
+            _.createElement(
+              "button",
+              { onClick: Kn, className: Fp.a.LoginButton },
+              Object(q.c)("#Login_SignIn")
+            )
           )
         );
       },
@@ -55849,9 +55861,9 @@
       };
     }
     function fM(e, t) {
-      return 12 === t || 19 === t
+      return 12 === t
         ? e.replace("Jolly Lodger", "New Rocker")
-        : 23 === t || 24 === t || 8 === t || 26 === t
+        : 23 === t || 19 === t || 24 === t || 18 === t || 8 === t || 26 === t
         ? e.replace("Sigmar One", "Play")
         : 6 === t
         ? e.replace("Sigmar One", "Noto Serif SC")
