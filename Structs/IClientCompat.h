@@ -9,4 +9,5 @@ public:
     virtual unknown_ret GetCompatToolName(unsigned int) = 0;
     virtual unknown_ret GetCompatToolMappingPriority(unsigned int) = 0;
     virtual unknown_ret GetCompatToolDisplayName(char const*) = 0;
+    virtual unknown_ret GetWhitelistedGameList(CUtlVector<AppWhitelistSetting_t, CUtlMemory<AppWhitelistSetting_t> >*) = 0;
 };

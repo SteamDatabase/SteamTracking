@@ -1,4 +1,5 @@
 import "steammessages_unified_base.steamclient.proto";
+import "steammessages_clientserver_friends.proto";
 
 option cc_generic_services = true;
 
@@ -111,6 +112,7 @@ message CChatRoomGroupHeaderState {
 	optional uint32 watching_broadcast_accountid = 20;
 	repeated .CChatPartyBeacon party_beacons = 22;
 	optional uint64 watching_broadcast_channel_id = 23;
+	optional uint64 active_minigame_id = 24;
 }
 
 message CChatRoomMember {
@@ -207,6 +209,24 @@ message CChatRoom_SetChatRoomGroupWatchingBroadcast_Request {
 }
 
 message CChatRoom_SetChatRoomGroupWatchingBroadcast_Response {
+}
+
+message CChatRoom_JoinMiniGameForChatRoomGroup_Request {
+	optional uint64 chat_group_id = 1;
+	optional uint64 chat_id = 2;
+}
+
+message CChatRoom_JoinMiniGameForChatRoomGroup_Response {
+	optional uint64 minigame_id = 1;
+}
+
+message CChatRoom_EndMiniGameForChatRoomGroup_Request {
+	optional uint64 chat_group_id = 1;
+	optional uint64 chat_id = 2;
+	optional uint64 minigame_id = 3;
+}
+
+message CChatRoom_EndMiniGameForChatRoomGroup_Response {
 }
 
 message CChatRoom_MuteUser_Request {
@@ -480,6 +500,7 @@ message CChatRoom_GetChatRoomGroupSummary_Response {
 	optional uint32 appid = 17;
 	repeated .CChatPartyBeacon party_beacons = 18;
 	optional uint64 watching_broadcast_channel_id = 19;
+	optional uint64 active_minigame_id = 20;
 }
 
 message CChatRoomSummaryPair {
@@ -602,10 +623,12 @@ message CChatRoom_DeleteInviteLink_Response {
 message CChatRoom_SetSessionActiveChatRoomGroups_Request {
 	repeated uint64 chat_group_ids = 1;
 	repeated uint64 chat_groups_data_requested = 2;
+	optional int32 virtualize_members_threshold = 3 [(description) = "If a chat room has more members than this threshold, we will opt in to a virtualized list"];
 }
 
 message CChatRoom_SetSessionActiveChatRoomGroups_Response {
 	repeated .CChatRoomGroupState chat_states = 1;
+	repeated uint64 virtualize_members_chat_group_ids = 2;
 }
 
 message CChatRoom_SetUserChatGroupPreferences_Request {
@@ -642,6 +665,17 @@ message CChatRoom_DeleteChatMessages_Request {
 }
 
 message CChatRoom_DeleteChatMessages_Response {
+}
+
+message CChatRoom_UpdateMemberListView_Notification {
+	optional uint64 chat_group_id = 1;
+	optional uint64 view_id = 2 [(description) = "Client-generated ID.  Should send the same value on all requests for the same view"];
+	optional int32 start = 3;
+	optional int32 end = 4;
+	optional int32 client_changenumber = 5 [(description) = "Any updates from this call on will have this changenumber present.  Can be used to guarantee in-order updates."];
+	optional bool delete_view = 6 [(description) = "Indicates this view has been deleted."];
+	repeated int32 persona_subscribe_accountids = 7;
+	repeated int32 persona_unsubscribe_accountids = 8;
 }
 
 message CClanChatRooms_GetClanChatRoomInfo_Request {
@@ -719,6 +753,40 @@ message ChatRoomClient_NotifyChatGroupUserStateChanged_Notification {
 	optional .CUserChatRoomGroupState user_chat_group_state = 2;
 	optional .CChatRoom_GetChatRoomGroupSummary_Response group_summary = 3;
 	optional .EChatRoomMemberStateChange user_action = 4 [default = k_EChatRoomMemberStateChange_Invalid];
+}
+
+message ChatRoomClient_NotifyChatRoomDisconnect_Notification {
+	repeated uint64 chat_group_ids = 1;
+}
+
+message CChatRoomMemberListView {
+	optional int32 start = 3;
+	optional int32 end = 4;
+	optional int32 total_count = 5;
+	optional int32 client_changenumber = 6 [(description) = "Value sent by the client on the last UpdateMemberListView call. "];
+	optional int32 server_changenumber = 7 [(description) = "Value incremented by the server on each MemberListViewUpdated call. "];
+}
+
+message CChatRoomMemberSummaryCounts {
+	optional int32 ingame = 1;
+	optional int32 online = 2;
+	optional int32 offline = 3;
+}
+
+message CChatRoomClient_MemberListViewUpdated_Notification {
+	message MemberListViewEntry {
+		optional int32 rank = 1;
+		optional uint32 accountid = 2;
+		optional .CMsgClientPersonaState.Friend persona = 3;
+	}
+
+	optional uint64 chat_group_id = 1;
+	optional uint64 view_id = 2 [(description) = "Thew view_id supplied when the client created the view. "];
+	optional .CChatRoomMemberListView view = 3;
+	repeated .CChatRoomClient_MemberListViewUpdated_Notification.MemberListViewEntry members = 4;
+	optional uint32 status_flags = 5;
+	optional .CChatRoomMemberSummaryCounts member_summary = 6;
+	repeated .CMsgClientPersonaState.Friend subscribed_personas = 7;
 }
 
 message CChatUsability_ClientUsabilityMetrics_Notification {
@@ -843,6 +911,12 @@ service ChatRoom {
 	rpc SetChatRoomGroupWatchingBroadcast (.CChatRoom_SetChatRoomGroupWatchingBroadcast_Request) returns (.CChatRoom_SetChatRoomGroupWatchingBroadcast_Response) {
 		option (method_description) = "Sets a broadcast that the chat room group is watching";
 	}
+	rpc JoinMiniGameForChatRoomGroup (.CChatRoom_JoinMiniGameForChatRoomGroup_Request) returns (.CChatRoom_JoinMiniGameForChatRoomGroup_Response) {
+		option (method_description) = "Joins the minigame for the chat room group or starts a new one (Winter 2019 sale party game)";
+	}
+	rpc EndMiniGameForChatRoomGroup (.CChatRoom_EndMiniGameForChatRoomGroup_Request) returns (.CChatRoom_EndMiniGameForChatRoomGroup_Response) {
+		option (method_description) = "Ends the minigame in the chat room group";
+	}
 	rpc MuteUserInGroup (.CChatRoom_MuteUser_Request) returns (.CChatRoom_MuteUser_Response) {
 		option (method_description) = "Mute user in group";
 	}
@@ -960,6 +1034,9 @@ service ChatRoom {
 	rpc DeleteChatMessages (.CChatRoom_DeleteChatMessages_Request) returns (.CChatRoom_DeleteChatMessages_Response) {
 		option (method_description) = "Deletes specified chat messages";
 	}
+	rpc UpdateMemberListView (.CChatRoom_UpdateMemberListView_Notification) returns (.NoResponse) {
+		option (method_description) = "A client is indicating it has an active view into the members list.";
+	}
 }
 service ClanChatRooms {
 	option (service_description) = "Methods for getting clan chat information";
@@ -996,6 +1073,12 @@ service ChatRoomClient {
 	}
 	rpc NotifyAckChatMessageEcho (.CChatRoom_AckChatMessage_Notification) returns (.NoResponse) {
 		option (method_description) = "A session acked an unread message, echo to other sessions.";
+	}
+	rpc NotifyChatRoomDisconnect (.ChatRoomClient_NotifyChatRoomDisconnect_Notification) returns (.NoResponse) {
+		option (method_description) = "The ChatRoom server hosting the chat rooms has reconnected to the user's Chat server (may have restarted), client should refresh state.";
+	}
+	rpc NotifyMemberListViewUpdated (.CChatRoomClient_MemberListViewUpdated_Notification) returns (.NoResponse) {
+		option (method_description) = "The list of members for a chat room with virtualized member list has changed on the server (or client requested)";
 	}
 }
 service ChatUsability {

@@ -340,6 +340,20 @@
   max-width: 320px;
   max-height: 320px; }
 
+.shared_svg_library_EmoticonBow_2ly3o {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.shared_svg_library_EmoticonBow_st0_HMUMS {
+  opacity: 0.4;
+  fill: #231F20; }
+
+.shared_svg_library_EmoticonBow_st1_3wZe- {
+  fill: #E41E25; }
+
 /* reset browser styles */
 button.DialogButton {
   -webkit-box-sizing: content-box;
@@ -426,9 +440,7 @@ button.DialogButton::-moz-focus-inner {
   overflow: auto; }
 
 .ModalDialogPopup .DialogContentTransition .DialogBody {
-  overflow-y: scroll;
-  -webkit-mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%);
-  mask: linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, black 16px, black calc( 100% - 8px), rgba(0, 0, 0, 0) 100%); }
+  overflow-y: scroll; }
 
 .DialogInnerBody {
   flex: 1;
@@ -525,10 +537,9 @@ button.DialogButton::-moz-focus-inner {
 .ModalDialogPopup .DialogContentTransition > .DialogContent {
   position: absolute;
   bottom: 0;
-  top: 0; }
-
-:not(.PopupFullWindow) .DialogContentTransition .opacityfade-anim-exit {
-  position: absolute; }
+  top: 0;
+  left: 0;
+  right: 0; }
 
 .DialogContent {
   padding: 24px;
@@ -594,7 +605,6 @@ button.DialogButton::-moz-focus-inner {
   height: 100%; }
 
 .DialogContent._DialogLayout.PagedSettingsDialog_PageContent .DialogHeader {
-  margin-bottom: 16px;
   margin-right: 0; }
 
 .DialogHeader {
@@ -940,8 +950,8 @@ button.DialogButton.GreenPlay:active:hover {
 button.DialogButton.Secondary.Off {
   box-shadow: inset 1px 1px 4px #0003; }
 
-button.DialogButton:active,
-button.DialogButton:active:hover {
+button.DialogButton:enabled:active,
+button.DialogButton:enabled:active:hover {
   background: #393f49;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.6);
   transition-duration: .04s; }
@@ -952,8 +962,8 @@ button.DialogButton.Primary:hover {
   background-size: 330% 100%;
   color: white; }
 
-button.DialogButton.Primary:active,
-button.DialogButton.Primary:hover:active {
+button.DialogButton.Primary:enabled:active,
+button.DialogButton.Primary:enabled:hover:active {
   background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
   background-position: 40%;
   transition-duration: .04s; }
@@ -1626,11 +1636,7 @@ body.in_global_drag .title-area {
   line-height: 18px;
   height: 18px;
   display: flex;
-  position: absolute;
   margin-top: -2px; }
-
-.permissionDetailsPage .DialogBodyNotificationBar {
-  margin-top: -18px; }
 
 .DialogBodyNotificationBar svg {
   height: 13px;

@@ -10,7 +10,7 @@
  B s_NoEscConversion
  B s_StringCharConversion
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
+ CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  CFRelease
  CFStringGetCStringPtr
  CValidator::ClaimArrayMemory(void*)
@@ -53,9 +53,9 @@
  R typeinfo name for CUtlMap<char const*, int, int, CDefCaselessStringLess>
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
- R typeinfo name for CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >
- R typeinfo name for CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int>, CBaseFileSystem::CPackFileEntry>
+ R typeinfo name for CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>
+ R typeinfo name for CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>
  R typeinfo name for CUtlVector<CBaseFileSystem::CFileHandle*, CUtlMemory<CBaseFileSystem::CFileHandle*> >
  R typeinfo name for CUtlVector<CBaseFileSystem::COpenedFile, CUtlMemory<CBaseFileSystem::COpenedFile> >
  R typeinfo name for CUtlVector<CBaseFileSystem::CPathIDInfo*, CUtlMemory<CBaseFileSystem::CPathIDInfo*> >
@@ -82,7 +82,7 @@
  SteamVProf::CVProfNode::ExitScope()
  SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
  SteamVProf::CVProfile::~CVProfile()
- T BCreateDirectory(char const*)
+ T BCreateDirectory(StringView)
  T CBaseFileSystem::AddLoggingFunc(void (*)(char const*, char const*))
  T CBaseFileSystem::AddMapPackFile(char const*, char const*, SearchPathAdd_t)
  T CBaseFileSystem::AddPackFile(char const*, char const*)
@@ -180,9 +180,9 @@
  T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BCurrentIsReadOnly() const
  T CDirIterator::BNextFile()
- T CDirIterator::CDirIterator(char const*)
+ T CDirIterator::CDirIterator(StringView)
  T CDirIterator::CurrentFileName()
- T CDirIterator::Init(char const*)
+ T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
  T CFileSystemStdIODLLValidate::Validate(CValidator&)
@@ -212,16 +212,16 @@
  T CFileSystem_Stdio::Validate(CValidator&, char const*)
  T CFileSystem_Stdio::WaitForResources(char const*)
  T CFileSystem_Stdio::~CFileSystem_Stdio()
- T CPathString::CPathString(char const*, char const*)
+ T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
  T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF32()
- T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCStringConversion::FindConversion(char const*, int*)
- T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCharConversion::FindConversion(char const*, int*)
- T CUtlDict<int, CDefCaselessStringLess, int>::Insert(char const*, int&&)
+ T CUtlCStringConversion::CUtlCStringConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCStringConversion::FindConversion(StringView, int*)
+ T CUtlCharConversion::CUtlCharConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCharConversion::FindConversion(StringView, int*)
+ T CUtlDict<int, CDefCaselessStringLess, int>::Insert(StringView, int&&)
  T CUtlDict<int, CDefCaselessStringLess, int>::RemoveAll()
  T CUtlDict<int, CDefCaselessStringLess, int>::Validate(CValidator&, char const*)
  T CUtlDict<int, CDefCaselessStringLess, int>::~CUtlDict()
@@ -232,24 +232,22 @@
  T CUtlMemoryBase::Purge()
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
- T CUtlNoEscConversion::FindConversion(char const*, int*)
- T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >::Find(CBaseFileSystem::CPackFileEntry const&) const
- T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CBaseFileSystem::CPackFileEntry const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >::Insert(CBaseFileSystem::CPackFileEntry const&, bool)
- T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CStringPoolIndex const&) const
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CStringPoolIndex const&, bool)
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlNoEscConversion::FindConversion(StringView, int*)
+ T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int>, CBaseFileSystem::CPackFileEntry>::Find(CBaseFileSystem::CPackFileEntry const&) const
+ T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int>, CBaseFileSystem::CPackFileEntry>::Insert(CBaseFileSystem::CPackFileEntry const&, bool)
+ T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int>, CBaseFileSystem::CPackFileEntry>::NewNode(bool)
+ T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int>, CBaseFileSystem::CPackFileEntry>::RemoveAll()
+ T CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int>, CBaseFileSystem::CPackFileEntry>::Validate(CValidator&, char const*)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Find(CStringPoolIndex const&) const
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Insert(CStringPoolIndex const&, bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::NewNode(bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::RemoveAll()
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
+ T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
+ T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Validate(CValidator&, char const*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_NextInorder(int, unsigned long, void*) const
@@ -329,9 +327,10 @@
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
  T FillDataStruct(_finddata_t*)
- T FioGetFileData(char const*, SFioFileData*)
+ T FioGetFileData(StringView, SFioFileData*)
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
+ T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
@@ -343,11 +342,13 @@
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
- T int CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<char const*, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess>(char const* const&, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess const&) const
  T int checked_static_cast<int, unsigned long>(unsigned long const&)
  T non-virtual thunk to CBaseFileSystem::Init()
  T non-virtual thunk to CBaseFileSystem::QueryInterface(char const*)
  T non-virtual thunk to CBaseFileSystem::Shutdown()
+ T void CUtlRBTree<CBaseFileSystem::CPackFileEntry, int, CDefLess<CBaseFileSystem::CPackFileEntry>, CDefRBTreeBalanceListener<int>, CBaseFileSystem::CPackFileEntry>::FindInsertionPosition<CBaseFileSystem::CPackFileEntry>(CBaseFileSystem::CPackFileEntry const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::FindInsertionPosition<CStringPoolIndex>(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::FindInsertionPosition<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
  T void Destruct<CBaseFileSystem::FindData_t>(CBaseFileSystem::FindData_t*)
  ThreadGetCurrentId
  ThreadGetCurrentRunningRef

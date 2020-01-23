@@ -302,7 +302,8 @@ message CMsgSteamDatagramP2PSessionRequestBody {
 	optional fixed32 challenge_time = 1;
 	optional fixed64 challenge = 2;
 	optional fixed32 client_connection_id = 3;
-	optional fixed64 peer_steam_id = 4;
+	optional fixed64 legacy_peer_steam_id = 4;
+	optional string peer_identity_string = 11;
 	optional fixed32 peer_connection_id = 5;
 	optional uint32 protocol_version = 8;
 	optional uint32 network_config_version = 9;

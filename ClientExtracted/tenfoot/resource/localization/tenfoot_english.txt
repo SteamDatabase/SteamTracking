@@ -2684,6 +2684,8 @@
 	"Library_ReadyToPlay" "Ready to Play"
 	"Library_LocalMultiplayer" "Local Multiplayer"
 	"Library_RemotePlayOptimized" "Remote Play Optimized"
+	"Library_SteamPlay1" "Steam Play Certified"
+	"Library_SteamPlay2" "Steam Play (Relaxed)"
 	"Library_Unplayed" "Unplayed"
 	"Library_PlatformFilter" "{s:platformname} Games"
 	"Library_ControllerSupported" "Controller Supported"
@@ -2860,6 +2862,7 @@
 	"Notification_ControllerConfigActivated_Text1" "CONFIG LOADED"
 	"Notification_ControllerConfigActivated_Text2" "{s:configname}"
 	"Notification_ControllerConfigActivated_Text3" "Edit it from the Big Picture Overlay"
+	"Notification_LowBattery" "{d:BatteryTime} minutes of battery left"
 
 	"Notification_VirtualHere"			"VirtualHere"
 	"Notification_PurchaseVirtualHere"	"Available in the Steam Store for USB sharing"

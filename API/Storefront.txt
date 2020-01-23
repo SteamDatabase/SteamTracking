@@ -1,7 +1,7 @@
 %s/api/addwalletcredittocart/?cc=%s&l=%s&fx=%s
 %s/api/begincheckout/?cc=%s&l=%s
 %s/api/bpeventbackground/?l=%s&cc=%s
-%s/api/checkoutcountrydata/
+%s/api/checkoutcountrydata2/
 %s/api/createagegatecookie/?month=%d&day=%d&year=%d
 %s/api/featured/?cc=%s&l=%s
 %s/api/featured/?cc=%s&l=%s&f=%s

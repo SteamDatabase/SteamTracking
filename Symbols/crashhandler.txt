@@ -75,11 +75,11 @@
  R typeinfo name for IUniformRandomStream
  T AssertMsgImplementation
  T BBlockingGetMiniDumpLock
- T BCreateDirectory(char const*)
- T BFileExists(char const*)
+ T BCreateDirectory(StringView)
+ T BFileExists(StringView)
  T BGetMiniDumpLock
- T BIsDirectoryWritable(char const*)
- T BIsValidDirectory(char const*)
+ T BIsDirectoryWritable(StringView)
+ T BIsValidDirectory(StringView)
  T BWritingMiniDump
  T Breakpad_SetSteamID
  T CBreakpadFactory::AddCustomInfoEx(char const*, char const*)
@@ -107,12 +107,12 @@
  T CCrashHandler::WriteMinidump(void*, unsigned int, void*)
  T CCrashHandlerScope::~CCrashHandlerScope()
  T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
- T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*)
- T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  T CDirIterator::BNextFile()
- T CDirIterator::CDirIterator(char const*, char const*)
+ T CDirIterator::CDirIterator(StringView, StringView)
  T CDirIterator::CurrentFileName()
- T CDirIterator::Init(char const*)
+ T CDirIterator::Init(StringView)
  T CDirIterator::~CDirIterator()
  T CFilenamesCache::FindOrCreateFilename(char const*)
  T CFilenamesCache::~CFilenamesCache()
@@ -131,7 +131,7 @@
  T CL2Cache::End()
  T CL2Cache::Start()
  T CL2Cache::~CL2Cache()
- T CPathString::CPathString(char const*, char const*)
+ T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
  T CSafeSet::~CSafeSet()
@@ -231,17 +231,17 @@
  T CUniformRandomStream::RandomFloat(float, float)
  T CUniformRandomStream::RandomInt(int, int)
  T CUniformRandomStream::SetSeed(int)
- T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCStringConversion::FindConversion(char const*, int*)
- T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCharConversion::FindConversion(char const*, int*)
+ T CUtlCStringConversion::CUtlCStringConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCStringConversion::FindConversion(StringView, int*)
+ T CUtlCharConversion::CUtlCharConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCharConversion::FindConversion(StringView, int*)
  T CUtlFmtString::CUtlFmtString(char const*, ...)
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
  T CUtlMemoryBase::Grow(int)
  T CUtlMemoryBase::NumAllocated() const
  T CUtlMemoryBase::Purge()
  T CUtlMemoryBase::~CUtlMemoryBase()
- T CUtlNoEscConversion::FindConversion(char const*, int*)
+ T CUtlNoEscConversion::FindConversion(StringView, int*)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
  T CUtlString::VFormat(char const*, __va_list_tag*)
@@ -270,7 +270,7 @@
  T CallFlushLogFunc
  T ClearWritingMiniDump
  T CrashOnPurpose()
- T CreateDirRecursive(char const*)
+ T CreateDirRecursive(StringView)
  T CreateInterface
  T CreateSimpleProcess
  T CreateVProfile
@@ -300,7 +300,7 @@
  T RTANoteFree(void*, char const*)
  T RealGetCallStack
  T RealPrintCallStack
- T SetFileTimestamp(char const*, long long)
+ T SetFileTimestamp(StringView, long long)
  T SetInAssert
  T SetWritingMiniDump(bool)
  T SetWrittenMinidumpForFileLine(char const*, unsigned int)
@@ -351,8 +351,8 @@
  T ThreadIsThreadRunning
  T ThreadSleep
  T ThreadWaitForProcessExit
- T TouchFile(char const*)
- T UnlinkFile(char const*)
+ T TouchFile(StringView)
+ T UnlinkFile(StringView)
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)

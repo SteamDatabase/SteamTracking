@@ -9,7 +9,7 @@
  B s_StringCharConversion
  B s_pAudioController
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
- CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
+ CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -202,8 +202,8 @@
  R typeinfo name for CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
- R typeinfo name for CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >
- R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >
+ R typeinfo name for CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >
  R typeinfo name for CUtlVector<CMilesAudioDevice*, CUtlMemory<CMilesAudioDevice*> >
@@ -442,7 +442,7 @@
  T CIAudioSinkListNull::BIsProfileValid(int, int) const
  T CIAudioSinkListNull::BIsSupported()
  T CIAudioSinkListNull::BStarted()
- T CIAudioSinkListNull::DetermineBestDefaultDevice()
+ T CIAudioSinkListNull::DetermineBestDefaultDevice(CUtlString&, CUtlString&, CUtlString&)
  T CIAudioSinkListNull::GetActiveCodecPassthruForSink(int, bool*, bool*, bool*)
  T CIAudioSinkListNull::GetActiveSink() const
  T CIAudioSinkListNull::GetActiveSinkVolume(int)
@@ -467,7 +467,7 @@
  T CIAudioSinkListNull::SetActiveSink(int)
  T CIAudioSinkListNull::SetActiveSourcePortForSink(int, int)
  T CIAudioSinkListNull::SetActiveVoiceSink(int)
- T CIAudioSinkListNull::SetDefaultDevice(char const*, char const*, char const*)
+ T CIAudioSinkListNull::SetDefaultDevice(CUtlString const&, CUtlString const&, CUtlString const&)
  T CIAudioSinkListNull::SetDefaultVoiceDevice(char const*)
  T CIAudioSinkListNull::Start()
  T CIAudioSinkListNull::Stop()
@@ -583,13 +583,13 @@
  T CMilesWrapper::AIL_set_sample_volume_pan(_SAMPLE*, float, float)
  T CMilesWrapper::AIL_start_sample(_SAMPLE*)
  T CMilesWrapper::AIL_stop_sample(_SAMPLE*)
- T CPathString::CPathString(char const*, char const*)
+ T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
- T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCStringConversion::FindConversion(char const*, int*)
- T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCharConversion::FindConversion(char const*, int*)
+ T CUtlCStringConversion::CUtlCStringConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCStringConversion::FindConversion(StringView, int*)
+ T CUtlCharConversion::CUtlCharConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCharConversion::FindConversion(StringView, int*)
  T CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Validate(CValidator&, char const*)
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
  T CUtlMemoryBase::Grow(int)
@@ -597,17 +597,16 @@
  T CUtlMemoryBase::Purge()
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
- T CUtlNoEscConversion::FindConversion(char const*, int*)
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Find(CStringPoolIndex const&) const
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::FindInsertionPosition(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Insert(CStringPoolIndex const&, bool)
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::NewNode(bool)
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
+ T CUtlNoEscConversion::FindConversion(StringView, int*)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Find(CStringPoolIndex const&) const
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Insert(CStringPoolIndex const&, bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::NewNode(bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::RemoveAll()
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::Find(CUtlSymbol const&) const
+ T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::Insert(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::Validate(CValidator&, char const*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
@@ -663,7 +662,7 @@
  T CreateMilesSoundAudioDevice
  T CreateMilesVoiceAudioDevice
  T FioClose(int)
- T FioCreateFile(char const*, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
+ T FioCreateFile(StringView, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
  T FioGetSize(int, unsigned long long*)
  T FioRead(int, void*, int, int*)
  T FioSeek(int, long long, EFioSeekMode, unsigned long long*)
@@ -676,7 +675,8 @@
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T __CreateCDLLValidateIValidate_interface()
  T __clang_call_terminate
- T int CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CUtlSymbol, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess>(CUtlSymbol const&, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess const&) const
+ T void CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::FindInsertionPosition<CStringPoolIndex>(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::FindInsertionPosition<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t>(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool, int&, bool&, bool&)
  T void _ValidateSelectType<CMilesAudioDevice>(CMilesAudioDevice*, CValidator&, char const*, fallback_)
  V_FixDoubleSlashes
  V_FixSlashes

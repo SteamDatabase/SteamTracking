@@ -16,6 +16,9 @@
 						<Label id="GameName" class="GameName" text="" />
 						<Panel id="NotificationArea" tabindex="auto" selectionpos="auto">
 							<BroadcastOverlay id="BroadcastNotification" />
+
+							<BatteryIndicator id="OverlayBatteryIndicator" class="OverlayBatteryIndicator" />
+
 							<Clock id="Clock" />
 						</Panel>
 					</Panel>

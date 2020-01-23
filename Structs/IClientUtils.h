@@ -15,6 +15,7 @@ public:
     virtual unknown_ret GetCSERIPPort(unsigned int*, unsigned short*) = 0;
     virtual unknown_ret GetNumRunningApps() = 0;
     virtual unknown_ret GetCurrentBatteryPower() = 0;
+    virtual unknown_ret GetBatteryInformation(int*, bool*) = 0;
     virtual unknown_ret SetOfflineMode(bool) = 0;
     virtual unknown_ret GetOfflineMode() = 0;
     virtual unknown_ret SetAppIDForCurrentPipe(unsigned int, bool) = 0;
@@ -83,4 +84,7 @@ public:
     virtual unknown_ret StartRuntimeInformationGathering() = 0;
     virtual unknown_ret GetRuntimeInformation() = 0;
     virtual unknown_ret GetCloudGamingPlatform() = 0;
+    virtual unknown_ret BGetMacAddresses(unsigned long long*, unsigned int, unsigned int*) = 0;
+    virtual unknown_ret BGetDiskSerialNumber(char*, int) = 0;
+    virtual unknown_ret TestHTTP(char const*) = 0;
 };

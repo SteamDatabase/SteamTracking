@@ -8,9 +8,12 @@
 	</styles>
 
 	<BatteryIndicator class="BatteryIndicatorPanel" tabindex="auto" selectionpos="auto">
-		<Panel id="Battery">
-			<Panel id="BatteryLevel" />
+		<Label id="BatteryChargeIndicator" text="🗲" />
+		<Panel id="BatteryContainer">
+			<Panel id="Battery">
+				<Panel id="BatteryLevel" />
+			</Panel>
+			<Panel id="BatteryTip" />
 		</Panel>
-		<Panel id="BatteryTip" />
 	</BatteryIndicator>
 </root>

@@ -1231,7 +1231,7 @@ SelectMousePosition
 	height: 96px;
 }
 
-.CenterPadSplit .CenterTrackpad 
+.DualPadView .CenterTrackpad 
 {
     visibility: collapse;
 }
@@ -1252,7 +1252,7 @@ SelectMousePosition
     visibility: collapse;
 }
 
-.CenterPadSplit .CenterTrackpadHalf 
+.DualPadView .CenterTrackpadHalf 
 {
     visibility: visible;
 }
@@ -1308,18 +1308,18 @@ SelectMousePosition
     background-image: url("file://{images}/library/controller/centerpad_unified.png");
 }
 
-.CenterPadSplit #SwapCenterPadModeToUnified
+.HasUnifiedTrackpad .DualPadView #SwapCenterPadModeToUnified
 {
     visibility: visible;
 }
 
-#SwapCenterPadModeToSplit 
+.HasUnifiedTrackpad #SwapCenterPadModeToSplit 
 {
     visibility: visible;
     background-image: url("file://{images}/library/controller/centerpad_split.png");
 }
 
-.CenterPadSplit #SwapCenterPadModeToSplit
+.DualPadView #SwapCenterPadModeToSplit
 {
     visibility: collapse;
 }
@@ -4957,6 +4957,11 @@ ControllerConfigButton #ControllerType
 }
 
 ControllerConfigButton.ShowAllControllerTypes #ControllerType
+{
+    visibility: visible;
+}
+
+ControllerConfigButton.ForceControllerTypeNameVisible #ControllerType
 {
     visibility: visible;
 }

@@ -4833,6 +4833,10 @@ LibraryFilterGames.ShowHidden #HiddenGames, LibraryFilterGames.ShowFamily #Unblo
 	color: #2F89BDff;
 }
 
+#GamesFilter .Linux {
+    visibility: collapse;
+}
+
 .GameSearchInputHint
 {
 	opacity: 1.0;

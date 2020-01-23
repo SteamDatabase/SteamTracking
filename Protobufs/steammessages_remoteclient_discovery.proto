@@ -14,6 +14,7 @@ enum ERemoteClientBroadcastMsg {
 	k_ERemoteDeviceStreamingCancelRequest = 10;
 	k_ERemoteClientBroadcastMsgClientIDDeconflict = 11;
 	k_ERemoteDeviceStreamTransportSignal = 12;
+	k_ERemoteDeviceStreamingProgress = 13;
 }
 
 enum ERemoteClientService {
@@ -175,6 +176,11 @@ message CMsgRemoteDeviceStreamingRequest {
 
 message CMsgRemoteDeviceStreamingCancelRequest {
 	required uint32 request_id = 1;
+}
+
+message CMsgRemoteDeviceStreamingProgress {
+	required uint32 request_id = 1;
+	optional float progress = 2;
 }
 
 message CMsgRemoteDeviceStreamingResponse {

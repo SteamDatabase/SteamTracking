@@ -3,14 +3,37 @@
 {
 	vertical-align: center;
 	horizontal-align: center;
-	flow-children: right;
-
-	opacity: 0.5;
 }
 
 .BatteryIndicatorPanel.ACPower
 {
 	visibility: collapse;
+}
+
+.BatteryIndicatorPanel.OverlayBatteryIndicator
+{
+	margin-right: 8px;
+}
+
+#BatteryChargeIndicator
+{
+	x: 36px;
+	y: 3px;
+	color: ui_primary_color;
+	font-size: 20px;
+
+	visibility: collapse;
+}
+
+.Charging #BatteryChargeIndicator
+{
+	visibility: visible;
+}
+
+#BatteryContainer
+{
+	flow-children: right;
+	opacity: 0.5;
 }
 
 #Battery

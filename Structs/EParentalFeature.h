@@ -13,4 +13,5 @@ typedef enum EParentalFeature
     k_EParentalFeatureParentalSetup, // ParentalSetup
     k_EParentalFeatureLibrary, // Library
     k_EParentalFeatureTest, // Test
+    k_EParentalFeatureSiteLicense, // SiteLicense
 } EParentalFeature;

@@ -608,6 +608,9 @@ TextInputDualTouch
 
 .TouchKeyHover #TouchKeyLabel,
 .TouchKeyHover .TouchKeyLabel,
+.CapsLock #ShiftImage,
+.CapsLock #ShiftImage2,
+.AltLock #AltImage
 {
 	color: #ffffffff;
 	wash-color: #ffffffff;
@@ -765,6 +768,16 @@ TextInputDualTouch.FriendsUI
 	background-color: #3f643a;
 	width: 50%;
 	visibility: collapse;
+}
+
+.CapsLock #TouchKey_Shift
+{
+	background-color: daisy_petal_selection_color;
+}
+
+.AltLock #TouchKey_Alt
+{
+	background-color: daisy_petal_selection_color;
 }
 
 #TouchKey_Enter,

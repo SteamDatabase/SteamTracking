@@ -49,4 +49,5 @@ typedef enum EAppUpdateError
     k_EAppUpdateErrorCreateProcessFailed, // Create process failed
     k_EAppUpdateErrorSteamClientOutOfDate, // Steam client out of date
     k_EAppUpdateErrorAllowedPlaytimeExceeded, // Allowed playtime exceeded
+    k_EAppUpdateErrorSteamClientFilesCorrupt, // Steam client files corrupt
 } EAppUpdateError;

@@ -836,6 +836,9 @@ This should take less than a minute."
 "SteamUI_ValveSurvey_Summary_ComputerManufacturer"			"Manufacturer:  %s1"
 "SteamUI_ValveSurvey_Summary_ComputerModel"					"Model:  %s1"
 
+"SteamUI_ValveSurvey_Summary_MACAddressHash"				"MAC Address hash: %s1"
+"SteamUI_ValveSurvey_Summary_DiskSerialHash"				"Disk serial number hash: %s1"
+
 "SteamUI_ValveSurvey_Summary_DesktopSystem"					"Form Factor: Desktop"
 "SteamUI_ValveSurvey_Summary_LaptopSystem"					"Form Factor: Laptop"
 

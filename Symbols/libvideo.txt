@@ -39,6 +39,7 @@
  B CLogger::sm_pLogInstance
  B CLogger::sm_vecLogListeners
  B CMemoryPool::g_ReportFunc
+ B CMetricsSymbol::sm_symbolTable
  B CMsgAppRights::default_instance_
  B CMsgAuthTicket::default_instance_
  B CMsgClientAccountInfo::default_instance_
@@ -153,6 +154,9 @@
  B g_CompletionPortManager
  B g_ConVarEnableUDPHistory
  B g_ConVarIOCPThreadCount
+ B g_ConVarMetricsDisabledOperations
+ B g_ConVarMetricsEnabledCatalogs
+ B g_ConVarMetricsEnabledOperations
  B g_ConVarMsgErrorDump
  B g_ConVarNetEncryptionHandshakeWorkMax_HighPri
  B g_ConVarNetEncryptionHandshakeWorkMax_LowPri
@@ -161,6 +165,7 @@
  B g_ConVarUDPSendRetries
  B g_ConVarUPDPingTimeGoodEnoughThreshold
  B g_ConVarUPDPingTimeoutUseGoodEnough
+ B g_LocalSubnetsThisBox
  B g_StackDumpMutex
  B g_TestHarness
  B g_ThreadLocalCoroutineMgr
@@ -180,21 +185,30 @@
  B g_cPendingMsg
  B g_cTrackedAllocs
  B g_cTrackedAllocsMax
- B g_cnIPThisBoxV4
- B g_cnIPThisBoxV6
+ B g_conVarInfluxBlacklistedTags
+ B g_conVarMetricsEnabled
+ B g_conVarMetricsLegacyJobMetrics
  B g_mapAllocations
+ B g_mapInfluxBlacklistedTags
+ B g_mapLegacyJobMetrics
+ B g_mapMetricsDisabledOperations
+ B g_mapMetricsEnabledCatalogs
+ B g_mapMetricsEnabledOperations
  B g_mutexTempTextBuffer
+ B g_nullMetricsFactory
+ B g_nullReporterChain
  B g_pFioAsyncEnqueue
  B g_pFioAsyncFinalize
  B g_pJobCur
+ B g_pNullMetrics
  B g_pThreadLocalHashMapIPWatches
  B g_pThreadLocalHashMapServerTypeWatches
  B g_pThreadLocalHashMapSteamIDWatches
  B g_pThreadLocalHashMapTxnIDWatches
- B g_rgunIPThisBoxV4
- B g_rgunIPThisBoxV6
  B g_unPrivateIPThisBox
  B g_unPublicIPThisBox
+ B g_vecIPv4ThisBox
+ B g_vecIPv6ThisBox
  B g_vecTempTextBuffer
  B k_SysIDNil
  B k_netadrNull
@@ -379,6 +393,7 @@
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<CBIOUtlBufferSinkCallbacks>(int, char const*)::def
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOCallbacks>(int, char const*)::def
  D guard variable for bio_method_st* CBIOCallbacksBase::GetDefinition<COpenSSLConnection::CBIOSinkCallbacks>(int, char const*)::def
+ D guard variable for picojson::last_error_t<bool>::s
  D hmac_asn1_meth
  D hmac_pkey_meth
  D kMadd01
@@ -402,6 +417,8 @@
  D kShufAc3
  D kShuffleMaskARGBToRGB24
  D kYuvConstants
+ D k_rgpchProxyExclusionDelims
+ D picojson::last_error_t<bool>::s
  D rand_ssleay_meth
  D rsa_asn1_meths
  D rsa_pkey_meth
@@ -441,8 +458,12 @@
  D typeinfo for CHTTPRequestHandle
  D typeinfo for CHTTPRequestParam
  D typeinfo for CHTTPResponse
+ D typeinfo for CIPRangeList
  D typeinfo for CKeyValuesSystem
  D typeinfo for CLocalizationToken
+ D typeinfo for CMetrics
+ D typeinfo for CMetricsReporterChain
+ D typeinfo for CMetricsTimer
  D typeinfo for CMsgAppRights
  D typeinfo for CMsgAuthTicket
  D typeinfo for CMsgClientAccountInfo
@@ -474,6 +495,9 @@
  D typeinfo for CNetFilterEncryption
  D typeinfo for CNetFilterWorkItem
  D typeinfo for CNetIOHelperCallback
+ D typeinfo for CNullMetricsFactory
+ D typeinfo for CNullMetricsFactory& ()
+ D typeinfo for CNullMetricsFactory& (*)()
  D typeinfo for COpenSSLCachedSession
  D typeinfo for COpenSSLCertificate
  D typeinfo for COpenSSLConnection
@@ -542,6 +566,7 @@
  D typeinfo for IHTTPStreamingResponseHandler
  D typeinfo for IKeyValuesSystem
  D typeinfo for IMemAlloc
+ D typeinfo for IMetricsFactory
  D typeinfo for IMsgNetPacket
  D typeinfo for INetSSLConnectionCallback
  D typeinfo for IRTMPStream
@@ -558,6 +583,9 @@
  D typeinfo for OSXHelpers::CCompatThread
  D typeinfo for OSXHelpers::CIOPollingHelper::IHelperCallback
  D typeinfo for SteamThreadTools::CThread
+ D typeinfo for std::__1::__function::__base<IMetricsFactory& ()>
+ D typeinfo for std::__1::__function::__base<void (CMetrics&)>
+ D typeinfo for std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>
  D typeinfo for std::__1::bad_function_call
  D v3_akey_id
  D v3_alt
@@ -625,8 +653,12 @@
  D vtable for CHTTPRequestHandle
  D vtable for CHTTPRequestParam
  D vtable for CHTTPResponse
+ D vtable for CIPRangeList
  D vtable for CKeyValuesSystem
  D vtable for CLocalizationToken
+ D vtable for CMetrics
+ D vtable for CMetricsReporterChain
+ D vtable for CMetricsTimer
  D vtable for CMsgAppRights
  D vtable for CMsgAuthTicket
  D vtable for CMsgClientAccountInfo
@@ -657,6 +689,7 @@
  D vtable for CNetFilter
  D vtable for CNetFilterEncryption
  D vtable for CNetIOHelperCallback
+ D vtable for CNullMetricsFactory
  D vtable for COpenSSLCachedSession
  D vtable for COpenSSLCertificate
  D vtable for COpenSSLConnection
@@ -715,6 +748,7 @@
  D vtable for IVideoYUVFrame
  D vtable for OSXHelpers::CCompatThread
  D vtable for SteamThreadTools::CThread
+ D vtable for std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>
  D vtable for std::__1::bad_function_call
  D x509_dir_lookup
  D x509_file_lookup
@@ -723,6 +757,7 @@
  OSAtomicCompareAndSwap32Barrier
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
+ R CMetrics::UNSET_TIMESTAMP
  R DES_SPtrans
  R k_ipv6Bytes_Any
  R k_rgchSystemKey
@@ -734,6 +769,7 @@
  R typeinfo name for CAutoRelease<CCookieContainer>
  R typeinfo name for CAutoRelease<COpenSSLCachedSession>
  R typeinfo name for CAutoRelease<IHTTPRedirectHandler>
+ R typeinfo name for CAutoRelease<IMetricsReporter>
  R typeinfo name for CBaseFrameFunction
  R typeinfo name for CBaseScheduledFunction
  R typeinfo name for CCDDBAppDetailCommon
@@ -772,8 +808,12 @@
  R typeinfo name for CHTTPRequestHandle
  R typeinfo name for CHTTPRequestParam
  R typeinfo name for CHTTPResponse
+ R typeinfo name for CIPRangeList
  R typeinfo name for CKeyValuesSystem
  R typeinfo name for CLocalizationToken
+ R typeinfo name for CMetrics
+ R typeinfo name for CMetricsReporterChain
+ R typeinfo name for CMetricsTimer
  R typeinfo name for CMsgAppRights
  R typeinfo name for CMsgAuthTicket
  R typeinfo name for CMsgClientAccountInfo
@@ -806,12 +846,17 @@
  R typeinfo name for CNetFilterEncryption
  R typeinfo name for CNetFilterWorkItem
  R typeinfo name for CNetIOHelperCallback
+ R typeinfo name for CNullMetricsFactory
+ R typeinfo name for CNullMetricsFactory& ()
+ R typeinfo name for CNullMetricsFactory& (*)()
  R typeinfo name for COpenSSLCachedSession
  R typeinfo name for COpenSSLCertificate
  R typeinfo name for COpenSSLConnection
  R typeinfo name for COpenSSLContext
  R typeinfo name for COpenSSLTicketKeyMgr
  R typeinfo name for CPathString
+ R typeinfo name for CPlainAutoPtr<CMetrics>
+ R typeinfo name for CPoolReference<CMetrics>
  R typeinfo name for CProtoBufNetPacket
  R typeinfo name for CRTMPStream
  R typeinfo name for CRefCountServiceBase<true, CRefMT>
@@ -845,6 +890,10 @@
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >
  R typeinfo name for CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >
+ R typeinfo name for CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >
+ R typeinfo name for CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >
+ R typeinfo name for CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >
+ R typeinfo name for CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >
  R typeinfo name for CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >
  R typeinfo name for CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >
  R typeinfo name for CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t
@@ -877,24 +926,32 @@
  R typeinfo name for CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >
  R typeinfo name for CUtlQueue<WSABUF_S>
  R typeinfo name for CUtlQueueDeprecated<NetPacketToDelete_t>
- R typeinfo name for CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >
- R typeinfo name for CUtlRBTree<unsigned int, unsigned short, CDefLess<unsigned int>, CDefRBTreeBalanceListener<unsigned short> >
+ R typeinfo name for CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*>
+ R typeinfo name for CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CMetricsSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>
+ R typeinfo name for CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::HostLookup_t>
+ R typeinfo name for CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::SSLContextLookup_t>
+ R typeinfo name for CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPRequestHandle*>
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>
+ R typeinfo name for CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>
+ R typeinfo name for CUtlRBTree<unsigned int, unsigned short, CDefLess<unsigned int>, CDefRBTreeBalanceListener<unsigned short>, unsigned int>
  R typeinfo name for CUtlString
+ R typeinfo name for CUtlVector<CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t*> >
  R typeinfo name for CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >
  R typeinfo name for CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >
  R typeinfo name for CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >
  R typeinfo name for CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >
+ R typeinfo name for CUtlVector<CNetMask, CUtlMemory<CNetMask> >
+ R typeinfo name for CUtlVector<CSmartPtr<IMetricsReporter>, CUtlMemory<CSmartPtr<IMetricsReporter> > >
  R typeinfo name for CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >
  R typeinfo name for CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >
  R typeinfo name for CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >
  R typeinfo name for CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t, CUtlMemory<CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
  R typeinfo name for CUtlVector<CVideoFileStream*, CUtlMemory<CVideoFileStream*> >
@@ -904,6 +961,7 @@
  R typeinfo name for CUtlVector<CWorkItem*, CUtlMemory<CWorkItem*> >
  R typeinfo name for CUtlVector<CWorkThread*, CUtlMemory<CWorkThread*> >
  R typeinfo name for CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >
+ R typeinfo name for CUtlVector<IPRange_t, CUtlMemory<IPRange_t> >
  R typeinfo name for CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >
  R typeinfo name for CUtlVector<SteamThreadTools::CThreadMutex*, CUtlMemory<SteamThreadTools::CThreadMutex*> >
  R typeinfo name for CUtlVector<TLSTicketKey_t, CUtlMemory<TLSTicketKey_t> >
@@ -946,6 +1004,7 @@
  R typeinfo name for IHTTPStreamingResponseHandler
  R typeinfo name for IKeyValuesSystem
  R typeinfo name for IMemAlloc
+ R typeinfo name for IMetricsFactory
  R typeinfo name for IMsgNetPacket
  R typeinfo name for INetSSLConnectionCallback
  R typeinfo name for IRTMPStream
@@ -966,6 +1025,9 @@
  R typeinfo name for VideoRepresentation_t
  R typeinfo name for VideoSegmentTemplate_t
  R typeinfo name for VideoSegment_t
+ R typeinfo name for std::__1::__function::__base<IMetricsFactory& ()>
+ R typeinfo name for std::__1::__function::__base<void (CMetrics&)>
+ R typeinfo name for std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>
  R typeinfo name for std::__1::bad_function_call
  SCDynamicStoreCopyProxies
  SCDynamicStoreKeyCreateProxies
@@ -1092,8 +1154,8 @@
  T BBlockingGetMiniDumpLock
  T BCheckIndexSegmentMimeType(CUtlString const&)
  T BConvertYUVtoRGB
- T BCreateDirectory(char const*)
- T BDeleteFileIfExists(char const*)
+ T BCreateDirectory(StringView)
+ T BDeleteFileIfExists(StringView)
  T BF_cbc_encrypt
  T BF_cfb64_encrypt
  T BF_decrypt
@@ -1101,7 +1163,7 @@
  T BF_encrypt
  T BF_ofb64_encrypt
  T BF_set_key
- T BFileExists(char const*)
+ T BFileExists(StringView)
  T BGetBoundAddr(int, CIPAndPort*)
  T BGetMiniDumpLock
  T BHandleTCPMessageData(unsigned char*, unsigned int, CUtlBuffer&, IStreamParser*, IStreamParserMessageCallback*, unsigned int)
@@ -1250,9 +1312,9 @@
  T BReadEbmlNumber(unsigned long long*, CVideoFileStream*)
  T BReadEbmlTag(unsigned int*, CVideoFileStream*)
  T BReadEbmlUInt(unsigned long long*, CVideoFileStream*, int)
- T BRemoveDirectory(char const*)
- T BRemoveDirectoryRecursive(char const*)
- T BRenameFile(char const*, char const*)
+ T BRemoveDirectory(StringView)
+ T BRemoveDirectoryRecursive(StringView)
+ T BRenameFile(StringView, StringView)
  T BScaleImageNV12
  T BScaleImageYUV
  T BUF_MEM_free
@@ -1330,6 +1392,8 @@
  T CAutoRelease<IHTTPResponseHandler>::~CAutoRelease()
  T CAutoRelease<IHTTPStreamingResponseHandler>::Reset(IHTTPStreamingResponseHandler*)
  T CAutoRelease<IHTTPStreamingResponseHandler>::~CAutoRelease()
+ T CAutoRelease<IMetricsReporter>::RecursiveValidate(CValidator&, char const*)
+ T CAutoRelease<IMetricsReporter>::~CAutoRelease()
  T CBIOCallbacksBase::FnCreate(bio_st*)
  T CBIOCallbacksBase::FnCtrl(bio_st*, int, long, void*)
  T CBIOCallbacksBase::FnDestroy(bio_st*)
@@ -1347,6 +1411,12 @@
  T CBaseScheduledFunction::IsScheduled() const
  T CBaseScheduledFunction::Schedule(long long)
  T CBaseScheduledFunction::~CBaseScheduledFunction()
+ T CBaseUtlSymbolTable<CMetricsSymbol>::AddString(char const*)
+ T CBaseUtlSymbolTable<CMetricsSymbol>::CBaseUtlSymbolTable(int, int, bool, int)
+ T CBaseUtlSymbolTable<CMetricsSymbol>::CLess::operator()(CStringPoolIndex const&, CStringPoolIndex const&) const
+ T CBaseUtlSymbolTable<CMetricsSymbol>::RemoveAll()
+ T CBaseUtlSymbolTable<CMetricsSymbol>::Validate(CValidator&, char const*)
+ T CBaseUtlSymbolTable<CMetricsSymbol>::~CBaseUtlSymbolTable()
  T CBaseUtlSymbolTable<CUtlSymbol>::RemoveAll()
  T CBaseUtlSymbolTable<CUtlSymbol>::~CBaseUtlSymbolTable()
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
@@ -1545,8 +1615,8 @@
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*, ...)
  T CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
- T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, char const*)
- T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(char const*)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
+ T CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  T CDebugStatsSystem::DeregisterDebugStat(long long*)
  T CDebugStatsSystem::FindDebugStat(char const*) const
  T CDebugStatsSystem::GetList()
@@ -1558,12 +1628,12 @@
  T CDebugStatsValue::~CDebugStatsValue()
  T CDirIterator::BCurrentIsDir() const
  T CDirIterator::BNextFile()
- T CDirIterator::CDirIterator(char const*)
- T CDirIterator::CDirIterator(char const*, char const*)
+ T CDirIterator::CDirIterator(StringView)
+ T CDirIterator::CDirIterator(StringView, StringView)
  T CDirIterator::CurrentFileLength() const
  T CDirIterator::CurrentFileName()
  T CDirIterator::CurrentFileWriteTime() const
- T CDirIterator::Init(char const*)
+ T CDirIterator::Init(StringView)
  T CDirIterator::IsValid() const
  T CDirIterator::~CDirIterator()
  T CDownloadRate::AddBytes(unsigned long long)
@@ -1581,13 +1651,13 @@
  T CDummyCnxCallback::RecvPkt(CNetPacket*)
  T CFStringCreate_GuessEncoding(void const*, long)
  T CFileReader::BIsOpen() const
- T CFileReader::BOpenFile(char const*, EFioModifiers)
+ T CFileReader::BOpenFile(StringView, EFioModifiers)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
  T CFileReader::Seek(long long, EFioSeekMode)
  T CFileReader::Validate(CValidator&, char const*)
  T CFileReader::~CFileReader()
- T CFileWriter::BOpenFile(char const*, bool, bool)
+ T CFileWriter::BOpenFile(StringView, bool, bool)
  T CFileWriter::CFileWriter(bool)
  T CFileWriter::Close(bool)
  T CFileWriter::Flush()
@@ -1632,10 +1702,15 @@
  T CHTTPClient::AddClientConnectionBackToPool(CHTTPClientConnection*)
  T CHTTPClient::AddrConnectionInfo_t::Validate(CValidator&, char const*)
  T CHTTPClient::BFrameFuncHandleCompletedWorkItems(CReliableTimer&)
+ T CHTTPClient::BUseIPv6ForRequest(CHTTPClientRequest*) const
  T CHTTPClient::CHTTPClient(CHTTPClientMgr*, char const*, unsigned int, char const*, unsigned int, unsigned int, COpenSSLContext*, CWorkThreadPool*, unsigned int)
  T CHTTPClient::CancelRequest(CHTTPRequestHandle*)
+ T CHTTPClient::ClearDisconnectingConnection(CHTTPClientConnection*)
  T CHTTPClient::CreateWorkerThread(CWorkThreadPool*)
  T CHTTPClient::EnablePlatformCertificateVerification()
+ T CHTTPClient::GetDesiredBodyBufferGrowSize()
+ T CHTTPClient::GetDesiredBodyBufferSize()
+ T CHTTPClient::GetDesiredReceiveBufferSize()
  T CHTTPClient::GetSSLContextForClientCert(char const*, char const*)
  T CHTTPClient::HostLookup_t::Validate(CValidator&, char const*)
  T CHTTPClient::HostLookup_t::operator<(CHTTPClient::HostLookup_t const&) const
@@ -1649,6 +1724,7 @@
  T CHTTPClient::SendRequestInternal(CHTTPRequestHandle*, CHTTPClientRequest*, bool)
  T CHTTPClient::Shutdown()
  T CHTTPClient::SubmitThreadWorkItemForRequest(CHTTPRequestHandle*)
+ T CHTTPClient::TrackDisconnectingConnection(CHTTPClientConnection*)
  T CHTTPClient::Validate(CValidator&, char const*)
  T CHTTPClient::~CHTTPClient()
  T CHTTPClientConnection::AbortAbsoluteTimeout()
@@ -1688,11 +1764,11 @@
  T CHTTPClientMgr::Validate(CValidator&, char const*)
  T CHTTPClientRequest::BuildClientRequestLineAndHeaders(CUtlBuffer&) const
  T CHTTPClientRequest::BuildPOSTParams()
- T CHTTPClientRequest::CHTTPClientRequest(CHTTPClientRequest*, char const*, EHTTPStatusCode)
- T CHTTPClientRequest::CHTTPClientRequest(EHTTPMethod, char const*)
- T CHTTPClientRequest::CHTTPClientRequest(EHTTPMethod, char const*, char const*, bool)
+ T CHTTPClientRequest::CHTTPClientRequest(CHTTPClientRequest*, StringView, EHTTPStatusCode)
+ T CHTTPClientRequest::CHTTPClientRequest(EHTTPMethod, StringView)
+ T CHTTPClientRequest::CHTTPClientRequest(EHTTPMethod, StringView, StringView, bool)
  T CHTTPClientRequest::ConstructDefaultMembers(EHTTPMethod)
- T CHTTPClientRequest::ConstructFromAbsoluteURL(char const*)
+ T CHTTPClientRequest::ConstructFromAbsoluteURL(StringView)
  T CHTTPClientRequest::FinalizeRequest()
  T CHTTPClientRequest::GetCookieContainer() const
  T CHTTPClientRequest::RebuildAbsoluteURL()
@@ -1717,15 +1793,16 @@
  T CHTTPDefaultRedirectEnableHandler::BAllowRedirect(CHTTPRequestHandle*, char const*, CUtlString&, KeyValues*)
  T CHTTPDefaultRedirectEnableHandlerInternal::~CHTTPDefaultRedirectEnableHandlerInternal()
  T CHTTPRequest::CHTTPRequest()
- T CHTTPRequest::GetGETParam(char const*, bool) const
- T CHTTPRequest::RetrieveURLEncodedData(char const*, int, CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >&)
- T CHTTPRequest::SetGETParamRaw(char const*, unsigned char const*, unsigned int)
+ T CHTTPRequest::GetGETParam(StringView, bool) const
+ T CHTTPRequest::RetrieveURLEncodedData(StringView, int, CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >&)
+ T CHTTPRequest::SetGETParamRaw(StringView, unsigned char const*, unsigned int)
  T CHTTPRequest::Validate(CValidator&, char const*)
  T CHTTPRequest::~CHTTPRequest()
  T CHTTPRequestCache::AsyncFindValidateAndPopulateFromCachedResponse(CHTTPRequestHandle*)
  T CHTTPRequestCache::AsyncSendRequestThroughCache(CHTTPRequestHandle*)
  T CHTTPRequestCache::BBlockingInitializeIfNeeded()
  T CHTTPRequestCache::BGetInt64CacheControlValue(char const*, char const*, long long&)
+ T CHTTPRequestCache::BIsCacheIOBusy()
  T CHTTPRequestCache::BIsResponseCacheable(CHTTPRequestHandle*, bool*)
  T CHTTPRequestCache::BRunFrame(CReliableTimer&)
  T CHTTPRequestCache::BShouldUseCacheLookup(CHTTPRequestHandle*)
@@ -1755,7 +1832,7 @@
  T CHTTPRequestParam::~CHTTPRequestParam()
  T CHTTPResponse::CHTTPResponse()
  T CHTTPResponse::Clear()
- T CHTTPResponse::SetResponseHeaderValue(char const*, char const*)
+ T CHTTPResponse::SetResponseHeaderValue(StringView, StringView)
  T CHTTPResponse::SetStatusCode(EHTTPStatusCode)
  T CHTTPResponse::Validate(CValidator&, char const*)
  T CHTTPResponse::~CHTTPResponse()
@@ -1764,17 +1841,17 @@
  T CHTTPUtil::BStatusCodeIsRedirect(EHTTPStatusCode)
  T CHTTPUtil::FindNextNonSpaceOrTabStringSection(unsigned char*, int, int, int*, int*)
  T CHTTPUtil::FindStringUntilCRLFStripLWS(unsigned char*, int, int, int*, int*)
- T CHTTPUtil::ResolveRelativeURL(char const*, char const*, char const*, bool)
+ T CHTTPUtil::ResolveRelativeURL(StringView, StringView, StringView, bool)
  T CIMsgNetPacketAutoRelease::~CIMsgNetPacketAutoRelease()
  T CIPAddress::BConvertIPv4ToMapped()
  T CIPAddress::BConvertMappedToIPv4()
- T CIPAddress::BlockingResolveAndSetFromString(char const*, bool, unsigned short*)
+ T CIPAddress::BlockingResolveAndSetFromString(StringView, bool, unsigned short*)
  T CIPAddress::HasIP() const
  T CIPAddress::IsLoopback() const
  T CIPAddress::IsMappedIPv4() const
  T CIPAddress::IsReservedAdr() const
  T CIPAddress::SetFromSockadr(void const*, unsigned long, unsigned short*)
- T CIPAddress::SetFromString(char const*, unsigned short*)
+ T CIPAddress::SetFromString(StringView, unsigned short*)
  T CIPAddress::ToString(char*, unsigned int, unsigned short const*) const
  T CIPAddress::operator<(CIPAddress const&) const
  T CIPAddress::operator==(CIPAddress const&) const
@@ -1783,6 +1860,9 @@
  T CIPAndPort::ToSockadr(void*, unsigned long) const
  T CIPAndPort::ToString(char*, unsigned int, bool) const
  T CIPAndPort::operator<(CIPAndPort const&) const
+ T CIPRangeList::CIPRangeList()
+ T CIPRangeList::Validate(CValidator&, char const*)
+ T CIPRangeList::~CIPRangeList()
  T CJob::BYieldingWaitForWorkItem(char const*, char const*)
  T CJob::BYieldingWaitForWorkItemAcks(char const*, int, char const*)
  T CJob::Continue()
@@ -1887,6 +1967,18 @@
  T CMessageList::TallySendMessage(EMsg, unsigned int)
  T CMessageList::TallySendMessage(MessageInfo_t*, unsigned int)
  T CMessageList::~CMessageList()
+ T CMetrics::CMetrics(CMetricsSymbol, CMetricsSymbol, CMetricsSymbol, CMetricsReporterChain const&, double, unsigned int)
+ T CMetrics::Close()
+ T CMetrics::Dimension(CMetricsSymbol, bool)
+ T CMetrics::IncrementInt(CMetricsSymbol, long long)
+ T CMetrics::Validate(CValidator&, char const*)
+ T CMetrics::~CMetrics()
+ T CMetricsReporterChain::Validate(CValidator&, char const*)
+ T CMetricsReporterChain::~CMetricsReporterChain()
+ T CMetricsSymbol::CMetricsSymbol(char const*)
+ T CMetricsTimer::Stop()
+ T CMetricsTimer::Validate(CValidator&, char const*)
+ T CMetricsTimer::~CMetricsTimer()
  T CMsg<MsgChannelEncryptRequest_t>::CMsg(CIMsgNetPacketAutoRelease&)
  T CMsg<MsgChannelEncryptResult_t>::CMsg(CIMsgNetPacketAutoRelease&)
  T CMsgAppRights::ByteSize() const
@@ -2400,7 +2492,7 @@
  T CNetFilterWorkItem::BCheckFilterIsValid()
  T CNetIOHelperCallback::OnDataStateChanged(int, int, bool, bool)
  T CNetIOHelperCallback::~CNetIOHelperCallback()
- T CNetMask::SetFromString(char const*)
+ T CNetMask::SetFromString(StringView)
  T CNetMask::SetIPAndBits(CIPAddress const&, unsigned int)
  T CNetPacket::AddRef()
  T CNetPacket::CNetPacket()
@@ -2409,6 +2501,12 @@
  T CNetPacket::Release()
  T CNetPacket::ReplaceData(unsigned char*, unsigned int)
  T CNetPacket::~CNetPacket()
+ T CNullMetricsFactory::NewMetrics(CMetricsSymbol, CMetricsSymbol, CMetricsSymbol, double, unsigned int)
+ T CNullMetricsFactory::NewMetrics(CMetricsSymbol, CMetricsSymbol, double, unsigned int)
+ T CNullMetricsFactory::NewMetrics(CMetricsSymbol, double, unsigned int)
+ T CNullMetricsFactory::NullFactory()
+ T CNullMetricsFactory::Validate(CValidator&, char const*)
+ T CNullMetricsFactory::~CNullMetricsFactory()
  T CNumStr::CNumStr(double)
  T CNumStr::CNumStr(unsigned char)
  T CNumStr::CNumStr(unsigned short)
@@ -2481,7 +2579,7 @@
  T COpenSSLWrapper::OpenSSLThreadIDCallback()
  T COpenSSLWrapper::Shutdown()
  T COpenSSLWrapper::ValidateStatics(CValidator&, char const*)
- T CPathString::CPathString(char const*, char const*)
+ T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
  T CPendingMsg::CubPkt(unsigned int)
@@ -2491,6 +2589,10 @@
  T CPendingMsg::PubPkt(unsigned int)
  T CPendingMsg::SendPkt(unsigned int)
  T CPendingMsg::~CPendingMsg()
+ T CPlainAutoPtr<CMetrics>::RecursiveValidate(CValidator&, char const*)
+ T CPlainAutoPtr<CMetrics>::~CPlainAutoPtr()
+ T CPoolReference<CMetrics>::RecursiveValidate(CValidator&, char const*)
+ T CPoolReference<CMetrics>::~CPoolReference()
  T CProtoBufNetPacket::BHasMsgTraceTag() const
  T CProtoBufNetPacket::BHasTargetJobName() const
  T CProtoBufNetPacket::BPacketDecodingFailed() const
@@ -2535,7 +2637,7 @@
  T CRTime::CRTime()
  T CRTime::CSecsPassed() const
  T CRTime::RTime32BeginningOfDay(unsigned int)
- T CRTime::RTime32FromHTTPDateString(char const*)
+ T CRTime::RTime32FromHTTPDateString(StringView)
  T CRTime::RTime32FromRFC3339UTCString(char const*)
  T CRTime::RTime32ToString(unsigned int, bool, bool)
  T CRTime::UpdateRealTime()
@@ -2642,8 +2744,8 @@
  T CScheduler::CScheduler(unsigned long long)
  T CScheduler::Validate(CValidator&, char const*)
  T CScheduler::~CScheduler()
- T CScopedHTTPClientRequest::CScopedHTTPClientRequest(EHTTPMethod, char const*)
- T CScopedHTTPClientRequest::CScopedHTTPClientRequest(EHTTPMethod, char const*, char const*, bool)
+ T CScopedHTTPClientRequest::CScopedHTTPClientRequest(EHTTPMethod, StringView)
+ T CScopedHTTPClientRequest::CScopedHTTPClientRequest(EHTTPMethod, StringView, StringView, bool)
  T CScopedHTTPClientRequest::~CScopedHTTPClientRequest()
  T CScopedHTTPClientResponse::CScopedHTTPClientResponse()
  T CScopedHTTPClientResponse::~CScopedHTTPClientResponse()
@@ -3037,8 +3139,8 @@
  T CUtlBuffer::PutFloat(float)
  T CUtlBuffer::PutInt(int)
  T CUtlBuffer::PutOverflow(int)
- T CUtlBuffer::PutString(char const*)
- T CUtlBuffer::PutStringWithoutNull(char const*)
+ T CUtlBuffer::PutString(StringView)
+ T CUtlBuffer::PutStringWithoutNull(StringView)
  T CUtlBuffer::PutUint8(unsigned char)
  T CUtlBuffer::PutUnsignedInt(unsigned int)
  T CUtlBuffer::PutUnsignedInt64(unsigned long long)
@@ -3052,10 +3154,10 @@
  T CUtlBuffer::VaScanf(char const*, __va_list_tag*)
  T CUtlBuffer::VaScanf(char const*, char*)
  T CUtlBuffer::Validate(CValidator&, char const*)
- T CUtlCStringConversion::CUtlCStringConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCStringConversion::FindConversion(char const*, int*)
- T CUtlCharConversion::CUtlCharConversion(char, char const*, int, CUtlCharConversion::ConversionArray_t*)
- T CUtlCharConversion::FindConversion(char const*, int*)
+ T CUtlCStringConversion::CUtlCStringConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCStringConversion::FindConversion(StringView, int*)
+ T CUtlCharConversion::CUtlCharConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
+ T CUtlCharConversion::FindConversion(StringView, int*)
  T CUtlFmtString::CUtlFmtString(char const*, ...)
  T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::AllocNode()
  T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::CUtlHashMap(int)
@@ -3087,9 +3189,53 @@
  T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::Validate(CValidator&, char const*)
  T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::~CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::AllocNode()
+ T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::EnsureCapacity(int)
+ T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::IncrementalRehash()
+ T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::Purge()
+ T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::~CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::AllocNode()
+ T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::EnsureCapacity(int)
+ T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::FindOrEmplace(CMetricsSymbol)
+ T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::IncrementalRehash()
+ T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::Purge()
+ T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::~CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::Purge()
+ T CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::~CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::AllocNode()
+ T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::EnsureCapacity(int)
+ T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::FindOrEmplace(CMetricsSymbol)
+ T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::IncrementalRehash()
+ T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::Purge()
+ T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::~CUtlHashMap()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::CUtlHashMap()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::Purge()
  T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::~CUtlHashMap()
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::AllocNode()
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&)
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveAll()
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
  T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::AllocNode()
  T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::CUtlHashMap()
  T CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::EnsureCapacity(int)
@@ -3318,7 +3464,7 @@
  T CUtlMemoryBase::Swap(CUtlMemoryBase&)
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
- T CUtlNoEscConversion::FindConversion(char const*, int*)
+ T CUtlNoEscConversion::FindConversion(StringView, int*)
  T CUtlPriorityQueue<CScheduledFunctionMgr::ScheduledItem_t, bool (*)(CScheduledFunctionMgr::ScheduledItem_t const&, CScheduledFunctionMgr::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<CScheduledFunctionMgr::ScheduledItem_t> >::PercolateDown(int)
  T CUtlPriorityQueue<CScheduledFunctionMgr::ScheduledItem_t, bool (*)(CScheduledFunctionMgr::ScheduledItem_t const&, CScheduledFunctionMgr::ScheduledItem_t const&), CDefUtlPriorityQueueSetIndexFunc<CScheduledFunctionMgr::ScheduledItem_t> >::PercolateUp(int)
  T CUtlPriorityQueue<CVideoPlayer*, bool (*)(CVideoPlayer* const&, CVideoPlayer* const&), CDefUtlPriorityQueueSetIndexFunc<CVideoPlayer*> >::PercolateDown(int)
@@ -3341,107 +3487,104 @@
  T CUtlQueueBaseImpl::ImplGrow(int, unsigned char**)
  T CUtlQueueDeprecated<NetPacketToDelete_t>::Validate(CValidator&, char const*)
  T CUtlQueueDeprecated<NetPacketToDelete_t>::~CUtlQueueDeprecated()
- T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::Find(CHTTPClientConnection* const&) const
- T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CHTTPClientConnection* const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::Insert(CHTTPClientConnection* const&, bool)
- T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::RecursiveValidate(CValidator&, char const*)
- T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::Remove(CHTTPClientConnection* const&)
- T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Find(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&) const
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Insert(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*&&, bool)
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::Remove(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&)
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int> >::Find(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >* const&) const
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >* const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int> >::Insert(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*&&, bool)
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int> >::Remove(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >* const&)
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::Find(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >* const&) const
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >* const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::Insert(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*&&, bool)
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::Remove(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >* const&)
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
- T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
- T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RecursiveValidate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RecursiveValidate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RecursiveValidate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
- T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RecursiveValidate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FreeNode(int)
- T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t const&) const
- T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Remove(CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t const&)
- T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<int, int, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<int, int, int, CDefLess<int> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Find(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t const&) const
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Insert(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t&&, bool)
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::Remove(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t const&)
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::Find(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&) const
- T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::FindInsertionPosition(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&, bool, int&, bool&, bool&)
- T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::Insert(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*&&, bool)
- T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::NewNode(bool)
- T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::Remove(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&)
- T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::RemoveAll()
- T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::RemoveAt(int)
- T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int> >::~CUtlRBTree()
- T CUtlRBTree<unsigned int, unsigned short, CDefLess<unsigned int>, CDefRBTreeBalanceListener<unsigned short> >::RemoveAll()
- T CUtlRBTree<unsigned int, unsigned short, CDefLess<unsigned int>, CDefRBTreeBalanceListener<unsigned short> >::Validate(CValidator&, char const*)
+ T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*>::Find(CHTTPClientConnection* const&) const
+ T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*>::Insert(CHTTPClientConnection* const&, bool)
+ T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*>::NewNode(bool)
+ T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*>::RecursiveValidate(CValidator&, char const*)
+ T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*>::Remove(CHTTPClientConnection* const&)
+ T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*>::RemoveAll()
+ T CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*>::RemoveAt(int)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CMetricsSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Find(CStringPoolIndex const&) const
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CMetricsSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Insert(CStringPoolIndex const&, bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CMetricsSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::NewNode(bool)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CMetricsSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::RemoveAll()
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CMetricsSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Validate(CValidator&, char const*)
+ T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::RemoveAll()
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::Find(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&) const
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::Insert(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*&&, bool)
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::NewNode(bool)
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::Remove(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&)
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::RemoveAll()
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::RemoveAt(int)
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::~CUtlRBTree()
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::Find(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >* const&) const
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::Insert(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*&&, bool)
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::NewNode(bool)
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::Remove(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >* const&)
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::RemoveAll()
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::RemoveAt(int)
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::~CUtlRBTree()
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::Find(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >* const&) const
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::Insert(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*&&, bool)
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::NewNode(bool)
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::Remove(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >* const&)
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::RemoveAll()
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::RemoveAt(int)
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::~CUtlRBTree()
+ T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::HostLookup_t>::Find(CHTTPClient::HostLookup_t const&) const
+ T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::HostLookup_t>::FreeNode(int)
+ T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::HostLookup_t>::Insert(CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::HostLookup_t>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::HostLookup_t>::RecursiveValidate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::HostLookup_t>::RemoveAll()
+ T CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::HostLookup_t>::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::SSLContextLookup_t>::Find(CHTTPClient::SSLContextLookup_t const&) const
+ T CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::SSLContextLookup_t>::Insert(CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::SSLContextLookup_t>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::SSLContextLookup_t>::RecursiveValidate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::SSLContextLookup_t>::RemoveAll()
+ T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPRequestHandle*>::Find(CHTTPRequestHandle* const&) const
+ T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPRequestHandle*>::Insert(CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPRequestHandle*>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPRequestHandle*>::RecursiveValidate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPRequestHandle*>::RemoveAll()
+ T CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPRequestHandle*>::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Find(StringView const&) const
+ T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::FreeNode(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Insert(CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RecursiveValidate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
+ T CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Find(StringView const&) const
+ T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::FreeNode(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Insert(CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::Find(CVideoPlayer::InitSegmentKey_t const&) const
+ T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::Insert(CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::Remove(CVideoPlayer::InitSegmentKey_t const&)
+ T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::RemoveAll()
+ T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Insert(CUtlMap<int, int, int, CDefLess<int> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Find(unsigned int const&) const
+ T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Insert(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Find(unsigned long long const&) const
+ T CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Insert(CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RemoveAll()
+ T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Find(void* const&) const
+ T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Insert(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t&&, bool)
+ T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Remove(void* const&)
+ T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::RemoveAll()
+ T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::RemoveAt(int)
+ T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::Find(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&) const
+ T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::Insert(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*&&, bool)
+ T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::NewNode(bool)
+ T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::Remove(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&)
+ T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::RemoveAll()
+ T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::RemoveAt(int)
+ T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::~CUtlRBTree()
+ T CUtlRBTree<unsigned int, unsigned short, CDefLess<unsigned int>, CDefRBTreeBalanceListener<unsigned short>, unsigned int>::RemoveAll()
+ T CUtlRBTree<unsigned int, unsigned short, CDefLess<unsigned int>, CDefRBTreeBalanceListener<unsigned short>, unsigned int>::Validate(CValidator&, char const*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_LinkToParent(int, int, bool, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_NextInorder(int, unsigned long, void*) const
@@ -3449,8 +3592,11 @@
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateLeft(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_RotateRight(int, unsigned long, void*)
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_Unlink(int, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_InsertRebalance(unsigned short, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_LinkToParent(unsigned short, unsigned short, bool, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
+ T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlSortVector<CHTTPRequestCache::CachedFileLRUData_t>::Insert(CHTTPRequestCache::CachedFileLRUData_t const&)
- T CUtlString::Append(char const*, unsigned long)
  T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Clear()
@@ -3475,6 +3621,8 @@
  T CUtlStringBuilder::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::VFormat(char const*, char*)
  T CUtlStringWrap::CUtlStringWrap(char const*)
+ T CUtlSymbolTableMT<CMetricsSymbol>::CUtlSymbolTableMT(int, int, bool)
+ T CUtlSymbolTableMT<CMetricsSymbol>::~CUtlSymbolTableMT()
  T CUtlThreadSafeQueue<CLogEvent*>::AddToTail(CLogEvent* const&)
  T CUtlThreadSafeQueue<CLogEvent*>::BRemoveAtHead(CLogEvent**)
  T CUtlThreadSafeQueue<CLogEvent*>::CUtlThreadSafeQueue(SteamThreadTools::CThreadEvent*)
@@ -3492,6 +3640,10 @@
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::GrowVector(int)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::Remove(int)
  T CUtlVector<CBaseFrameFunction*, CUtlMemory<CBaseFrameFunction*> >::~CUtlVector()
+ T CUtlVector<CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t*> >::AddToTail(CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t* const&)
+ T CUtlVector<CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t*> >::GrowVector(int)
+ T CUtlVector<CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t*> >::Validate(CValidator&, char const*)
+ T CUtlVector<CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CMetricsSymbol>::StringPool_t*> >::~CUtlVector()
  T CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >::~CUtlVector()
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::AddToTail(CCookieContainer::CCookieInfo const&)
  T CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >::Find(CCookieContainer::CCookieInfo const&) const
@@ -3533,9 +3685,15 @@
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::Validate(CValidator&, char const*)
  T CUtlVector<CHTTPRequestParam, CUtlMemory<CHTTPRequestParam> >::~CUtlVector()
  T CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >::GrowVector(int)
+ T CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >::~CUtlVector()
+ T CUtlVector<CNetMask, CUtlMemory<CNetMask> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CNetMask, CUtlMemory<CNetMask> >::~CUtlVector()
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::FastRemove(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::GrowVector(int)
  T CUtlVector<CScheduledFunctionMgr::ScheduledItem_t, CUtlMemory<CScheduledFunctionMgr::ScheduledItem_t> >::~CUtlVector()
+ T CUtlVector<CSmartPtr<IMetricsReporter>, CUtlMemory<CSmartPtr<IMetricsReporter> > >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CSmartPtr<IMetricsReporter>, CUtlMemory<CSmartPtr<IMetricsReporter> > >::RemoveAll()
+ T CUtlVector<CSmartPtr<IMetricsReporter>, CUtlMemory<CSmartPtr<IMetricsReporter> > >::~CUtlVector()
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::AddToTail(CThreadSafeMemoryPool::BlockSet_t const&)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::GrowVector(int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::Validate(CValidator&, char const*)
@@ -3559,7 +3717,24 @@
  T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::HashBucket_t> >::~CUtlVector()
@@ -3629,6 +3804,8 @@
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::Validate(CValidator&, char const*)
  T CUtlVector<ConVar::ConVarChangeCallback_t, CUtlMemory<ConVar::ConVarChangeCallback_t> >::~CUtlVector()
  T CUtlVector<ILogListener*, CUtlMemory<ILogListener*> >::~CUtlVector()
+ T CUtlVector<IPRange_t, CUtlMemory<IPRange_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<IPRange_t, CUtlMemory<IPRange_t> >::~CUtlVector()
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::AddToTail(KeyValues* const&)
  T CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >::GrowVector(int)
  T CUtlVector<MainThreadPlaybackInfo_t::VideoRepresentation_t, CUtlMemory<MainThreadPlaybackInfo_t::VideoRepresentation_t> >::GrowVector(int)
@@ -3850,6 +4027,7 @@
  T CVideoPlayer::SeekToTimeStampThread(long long)
  T CVideoPlayer::SetNextRunFrameFunc(long long)
  T CVideoPlayer::SetPlaybackSpeed(float)
+ T CVideoPlayer::SetPlaybackStartPositionIfNecessary(long long)
  T CVideoPlayer::SetRepeat(bool)
  T CVideoPlayer::SetSeekMode(EVideoPlayerSeekMode)
  T CVideoPlayer::Stop()
@@ -4075,6 +4253,7 @@
  T ConVar::ClearSendDiscardLocalOverride()
  T ConVar::ConVar(char const*, char const*, unsigned long long)
  T ConVar::ConVar(char const*, char const*, unsigned long long, char const*)
+ T ConVar::ConVar(char const*, char const*, unsigned long long, char const*, void (*)(ConVar*, char const*))
  T ConVar::Create(char const*, char const*, unsigned long long, char const*, bool, float, bool, float, void (*)(ConVar*, char const*))
  T ConVar::GetHelpText() const
  T ConVar::GetName() const
@@ -4115,7 +4294,7 @@
  T CrashOnPurpose()
  T CreateAudioFileDecoder
  T CreateAudioResampler
- T CreateDirRecursive(char const*)
+ T CreateDirRecursive(StringView)
  T CreateInterface
  T CreateInterfaceInternal(char const*, int*)
  T CreatePlatformSocket(int, int, int, unsigned int, int*)
@@ -4544,16 +4723,16 @@
  T EVP_sha256
  T EVP_sha384
  T EVP_sha512
- T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, CIPAndPort const&, char const*, ...)
- T EmitSpewMessageHelper(char const*, int, ESpewGroup, SpewType_t, int, int, char const*, ...)
- T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, __va_list_tag*)
- T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, char*)
+ T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, ...)
+ T EmitSpewMessagePrimV(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, __va_list_tag*)
+ T EmitSpewMessagePrimV(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, char*)
+ T EpochNow()
  T Error
  T FillDataStruct(_finddata_t*)
  T FindOrCreateStack(CStack*)
  T FindSpewGroup(char const*, int*)
  T FioClose(int)
- T FioCreateFile(char const*, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
+ T FioCreateFile(StringView, unsigned int, EFioShareFlags, EFioCreateMode, unsigned int, int*)
  T FioFlush(int)
  T FioGetSize(int, unsigned long long*)
  T FioRead(int, void*, int, int*)
@@ -4577,7 +4756,7 @@
  T GetCIPThisBox()
  T GetCPUInformation()
  T GetCchTempTextBuffer_Harmful()
- T GetFileLength(char const*)
+ T GetFileLength(StringView)
  T GetLastNetError()
  T GetMemAlloc
  T GetMessageList()
@@ -4599,6 +4778,7 @@
  T HMAC_Init_ex
  T HMAC_Update
  T HasWrittenMinidumpForFileLine(char const*, unsigned int)
+ T HashFunctor<CUtlString>::operator()(CUtlString const&) const
  T HashItem(CIPAndPort const&)
  T HashStringCaseless(char const*, unsigned long)
  T I420Scale
@@ -4613,6 +4793,9 @@
  T IHTTPRedirectHandler::Release() const
  T IHTTPRedirectHandler::Validate(CValidator&, char const*)
  T IHTTPStreamingResponseHandler::OnRequestTransmitted(CHTTPRequestHandle*)
+ T IMetricsFactory::NullMetrics()
+ T IMetricsFactory::Service()
+ T IMetricsFactory::ValidateGlobals(CValidator&, char const*)
  T IMsgNetPacketFromCNetPacket(CNetPacket*, bool)
  T IPv6AddrToString
  T IPv6IPToString
@@ -4623,27 +4806,28 @@
  T InitializeSpewConfig()
  T Internal_Coroutine_Continue(int, bool, char const*)
  T IsSpewActive
+ T IsSteamRackIPAddress(CIPAddress const&)
  T IsValveIPAddress(CIPAddress const&)
  T KeyValues::CopySubkeys(KeyValues*) const
- T KeyValues::FindKey(char const*) const
- T KeyValues::FindKey(char const*, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
+ T KeyValues::FindKey(StringView) const
+ T KeyValues::FindKey(StringView, bool, CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >*)
  T KeyValues::FindKey(unsigned int) const
  T KeyValues::FindKey(unsigned int, bool)
  T KeyValues::FreeBuffers()
  T KeyValues::GetFirstSubKey() const
- T KeyValues::GetIntFromString(char const*, int, KeyValues::EConversionState*)
+ T KeyValues::GetIntFromString(StringView, int, KeyValues::EConversionState*)
  T KeyValues::GetName() const
  T KeyValues::GetNextKey() const
- T KeyValues::GetUint64FromString(char const*, unsigned long long, KeyValues::EConversionState*)
+ T KeyValues::GetUint64FromString(StringView, unsigned long long, KeyValues::EConversionState*)
  T KeyValues::InternalGetAsString(char*, int, KeyValues*)
  T KeyValues::InternalGetInt(KeyValues*, int, KeyValues::EConversionState*)
- T KeyValues::InternalGetString(KeyValues*, char const*)
+ T KeyValues::InternalGetString(KeyValues*, StringView)
  T KeyValues::InternalGetUint64(KeyValues*, unsigned long long, KeyValues::EConversionState*)
- T KeyValues::InternalSetString(KeyValues*, char const*)
+ T KeyValues::InternalSetString(KeyValues*, StringView)
  T KeyValues::InternalSetWString(KeyValues*, wchar_t const*)
  T KeyValues::InternalZeroStringMemory(KeyValues*)
  T KeyValues::IsEqual(KeyValues const*) const
- T KeyValues::KeyValues(char const*)
+ T KeyValues::KeyValues(StringView)
  T KeyValues::KeyValues(unsigned int)
  T KeyValues::MakeCopyInternal(KeyValues*) const
  T KeyValues::MergeKey(KeyValues const*, bool)
@@ -4656,12 +4840,12 @@
  T KeyValuesAD::~KeyValuesAD()
  T KeyValuesSystemSteam
  T Latin1ToUtf8
- T LoadFileIntoBuffer(char const*, CUtlBuffer&, bool, EFioModifiers)
+ T LoadFileIntoBuffer(StringView, CUtlBuffer&, bool, EFioModifiers)
  T MD5_Final
  T MD5_Init
  T MD5_Transform
  T MD5_Update
- T MakeFileWriteable(char const*)
+ T MakeFileWriteable(StringView)
  T MemAlloc_AllocAligned(unsigned long, unsigned long, char const*, int, bool, bool)
  T MessageInfo_t::~MessageInfo_t()
  T MiniDumpUnlock
@@ -4768,6 +4952,8 @@
  T PchNameFromEResult(int)
  T PchNameFromEUniverse(int)
  T PchSpewGroupName(ESpewGroup)
+ T Plat_AbsoluteTime
+ T Plat_AbsoluteTimeToFloat
  T Plat_CommandLineParamExists
  T Plat_FloatTime
  T Plat_GetExecutablePath
@@ -4935,7 +5121,7 @@
  T SSLv3_method
  T SSLv3_server_method
  T SXNET_add_id_INTEGER
- T SaveBufferToFile(CUtlBuffer const&, char const*, EFileIOFlags)
+ T SaveBufferToFile(CUtlBuffer const&, StringView, EFileIOFlags)
  T ScaleAddRows_C
  T ScalePlane
  T ScalePlaneBilinear
@@ -4943,7 +5129,7 @@
  T ScaleRowDown2Int_SSE2
  T SerializeVaArgs(char const*, __va_list_tag*, CUtlBuffer&)
  T SerializeVaArgs(char const*, char*, CUtlBuffer&)
- T SetFileTimestamp(char const*, long long)
+ T SetFileTimestamp(StringView, long long)
  T SetInAssert
  T SetWritingMiniDump(bool)
  T SetWrittenMinidumpForFileLine(char const*, unsigned int)
@@ -5020,6 +5206,7 @@
  T SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
  T SteamVProf::CVProfNode::MarkFrame()
  T SteamVProf::CVProfNode::Reset()
+ T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
  T SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
  T SteamVProf::CVProfile::CVProfile()
@@ -5104,7 +5291,7 @@
  T UI_set_result
  T UTF8_getc
  T UTF8_putc
- T UnlinkFile(char const*)
+ T UnlinkFile(StringView)
  T Utf8ToUtf8
  T UtlMemory_CalcNewAllocationCount(int, int, int, int)
  T VALVE_CRYPTO_dbg_free(void*)
@@ -5442,6 +5629,7 @@
  T c2i_ASN1_BIT_STRING
  T c2i_ASN1_INTEGER
  T c2i_ASN1_OBJECT
+ T cIntToHexDigit(int)
  T check_defer
  T custom_ext_add
  T custom_ext_init
@@ -5689,6 +5877,12 @@
  T i2v_GENERAL_NAMES
  T int CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::InsertUnconstructed<CIPAndPort const&>(CIPAndPort const&, int*, bool)
  T int CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::InsertUnconstructed<CIPAndPort const&>(CIPAndPort const&, int*, bool)
+ T int CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::Emplace<CMetricsSymbol, char const*>(CMetricsSymbol, char const*)
+ T int CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::InsertUnconstructed<CMetricsSymbol>(CMetricsSymbol&&, int*, bool)
+ T int CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::InsertUnconstructed<CMetricsSymbol>(CMetricsSymbol&&, int*, bool)
+ T int CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::Emplace<CMetricsSymbol, unsigned int>(CMetricsSymbol, unsigned int)
+ T int CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol> >::InsertUnconstructed<CMetricsSymbol>(CMetricsSymbol&&, int*, bool)
+ T int CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
  T int CUtlHashMap<char const*, MessageInfo_t*, CDefCaselessStringEquals, CDefCaselessStringHash>::InsertUnconstructed<char const* const&>(char const* const&, int*, bool)
  T int CUtlHashMap<int, CCompletionPortManager::SAssocEntry, CDefEquals<int>, HashFunctor<int> >::InsertUnconstructed<int const&>(int const&, int*, bool)
  T int CUtlHashMap<unsigned int, MessageInfo_t*, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
@@ -5696,14 +5890,6 @@
  T int CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
  T int CUtlHashMap<unsigned long, OSXHelpers::CIOPollingHelper::IHelperCallback*, CDefEquals<unsigned long>, HashFunctor<unsigned long> >::InsertUnconstructed<unsigned long const&>(unsigned long const&, int*, bool)
  T int CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertUnconstructed<unsigned short const&>(unsigned short const&, int*, bool)
- T int CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CHTTPClient::HostLookup_t, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess>(CHTTPClient::HostLookup_t const&, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CHTTPClient::SSLContextLookup_t, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess>(CHTTPClient::SSLContextLookup_t const&, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CHTTPRequestHandle*, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess>(CHTTPRequestHandle* const&, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CUtlString, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess>(CUtlString const&, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CUtlString, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess>(CUtlString const&, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<CVideoPlayer::InitSegmentKey_t, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess>(CVideoPlayer::InitSegmentKey_t const&, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess>(unsigned int const&, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess const&) const
- T int CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int> >::FindAltKeyType<unsigned long long, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess>(unsigned long long const&, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess const&) const
  T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
  T int_rsa_verify
  T level_add_node
@@ -5989,6 +6175,14 @@
  T ssl_verify_alarm_type
  T ssl_verify_cert_chain
  T ssleay_rand_bytes
+ T std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>::__clone() const
+ T std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>::__clone(std::__1::__function::__base<IMetricsFactory& ()>*) const
+ T std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>::destroy()
+ T std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>::destroy_deallocate()
+ T std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>::operator()()
+ T std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>::target(std::type_info const&) const
+ T std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>::target_type() const
+ T std::__1::__function::__func<CNullMetricsFactory& (*)(), std::__1::allocator<CNullMetricsFactory& (*)()>, IMetricsFactory& ()>::~__func()
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::find<int>(int const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::find<long long>(long long const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__insert_multi<std::__1::__hash_value_type<void*, AllocTracking_t> const&>(std::__1::__hash_value_type<void*, AllocTracking_t> const&)
@@ -6091,6 +6285,8 @@
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, char const*)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >& std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__append_forward_unsafe<char const*>(char const*, char const*)
+ T std::__1::function<IMetricsFactory& ()>::operator()() const
+ T std::__1::function<void (CMetrics&)>::operator()(CMetrics&) const
  T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<int, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<int, char const*>, std::__1::__unordered_map_hasher<int, std::__1::__hash_value_type<int, char const*>, std::__1::hash<int>, true>, std::__1::__unordered_map_equal<int, std::__1::__hash_value_type<int, char const*>, std::__1::equal_to<int>, true>, std::__1::allocator<std::__1::__hash_value_type<int, char const*> > >::__insert_unique<std::__1::pair<int, char const*> >(std::__1::pair<int, char const*>&&)
  T std::__1::pair<std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*>, bool> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::__insert_unique<std::__1::pair<long long, char const*> >(std::__1::pair<long long, char const*>&&)
  T std::__1::pair<std::__1::__tree_iterator<int, std::__1::__tree_node<int, void*>*, int>, bool> std::__1::__tree<int, std::__1::less<int>, std::__1::allocator<int> >::__emplace_unique_key_args<int, int const&>(int const&, int const&)
@@ -6190,12 +6386,29 @@
  T v2i_GENERAL_NAME
  T v2i_GENERAL_NAMES
  T v2i_GENERAL_NAME_ex
+ T void CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*>::FindInsertionPosition<CHTTPClientConnection*>(CHTTPClientConnection* const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CMetricsSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::FindInsertionPosition<CStringPoolIndex>(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
+ T void CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::FindInsertionPosition<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::FindInsertionPosition<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >* const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::FindInsertionPosition<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >* const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::HostLookup_t>::FindInsertionPosition<CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t>(CUtlMap<CHTTPClient::HostLookup_t, CHTTPClient::AddrConnectionInfo_t, int, CDefLess<CHTTPClient::HostLookup_t> >::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t, int, CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPClient::SSLContextLookup_t>::FindInsertionPosition<CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t>(CUtlMap<CHTTPClient::SSLContextLookup_t, COpenSSLContext*, int, CDefLess<CHTTPClient::SSLContextLookup_t> >::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t, int, CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::CKeyLess, CDefRBTreeBalanceListener<int>, CHTTPRequestHandle*>::FindInsertionPosition<CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t>(CUtlMap<CHTTPRequestHandle*, CHTTPRequestCache::RequestWaitingValidationData_t, int, CDefLess<CHTTPRequestHandle*> >::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::FindInsertionPosition<CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t>(CUtlMap<CUtlString, CHTTPRequestCache::CachedFileMapData_t, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::FindInsertionPosition<CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t>(CUtlMap<CUtlString, CUtlVector<CCookieContainer::CCookieInfo, CUtlMemory<CCookieContainer::CCookieInfo> >*, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t, int, CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CVideoPlayer::InitSegmentKey_t>::FindInsertionPosition<CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t>(CUtlMap<CVideoPlayer::InitSegmentKey_t, CVideoFileStream*, int, CDefLess<CVideoPlayer::InitSegmentKey_t> >::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::FindInsertionPosition<CUtlMap<int, int, int, CDefLess<int> >::Node_t>(CUtlMap<int, int, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::FindInsertionPosition<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::FindInsertionPosition<CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t>(CUtlMap<unsigned long long, CUtlVector<CVideoWebMCuesParser::CuePoint_t, CUtlMemory<CVideoWebMCuesParser::CuePoint_t> >*, int, CDefLess<unsigned long long> >::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::FindInsertionPosition<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t>(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::FindInsertionPosition<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&, bool, int&, bool&, bool&)
  T void DeleteHelper<MessageInfo_t*>(MessageInfo_t*)
  T void DeleteHelper<VideoAdaptationSet_t*>(VideoAdaptationSet_t*)
  T void DeleteHelper<VideoRepresentation_t*>(VideoRepresentation_t*)
  T void DeleteHelper<VideoSegment_t*>(VideoSegment_t*)
  T void Destruct<CCookieContainer::CCookieInfo>(CCookieContainer::CCookieInfo*)
  T void Destruct<CHTTPRequestCache::CachedFileLRUData_t>(CHTTPRequestCache::CachedFileLRUData_t*)
+ T void EmitSpewMessageHelper<EMsg, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char>(char const*, int, ESpewGroup, SpewType_t, int, int, CSpewTags const&, char const*, EMsg const&, unsigned char const&, unsigned char const&, unsigned char const&, unsigned char const&, unsigned char const&, unsigned char const&, unsigned char const&, unsigned char const&, unsigned char const&, unsigned char const&, unsigned char const&, unsigned char const&)
  T void RecursiveValidate<CUtlString>(CUtlString const&, CValidator&, char const*)
  T void _ValidateSelectType<CCookieContainer>(CCookieContainer*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CHTTPClientConnection>(CHTTPClientConnection*, CValidator&, char const*, fallback_)
@@ -6203,6 +6416,7 @@
  T void _ValidateSelectType<CHTTPClientResponse>(CHTTPClientResponse*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CHTTPRequestCache>(CHTTPRequestCache*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CHTTPRequestHandle>(CHTTPRequestHandle*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<CMetrics>(CMetrics*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CNetConnection::SSLNetConnectionData_t>(CNetConnection::SSLNetConnectionData_t*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CNetPacket>(CNetPacket*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<COpenSSLCachedSession>(COpenSSLCachedSession*, CValidator&, char const*, fallback_)
@@ -6213,9 +6427,10 @@
  T void _ValidateSelectType<CUDPConnection>(CUDPConnection*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CUtlBuffer>(CUtlBuffer*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CUtlLinkedList<CHTTPRequestHandle*, int> >(CUtlLinkedList<CHTTPRequestHandle*, int>*, CValidator&, char const*, fallback_)
- T void _ValidateSelectType<CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> > >(CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int> >*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*> >(CUtlRBTree<CHTTPClientConnection*, int, CDefLess<CHTTPClientConnection*>, CDefRBTreeBalanceListener<int>, CHTTPClientConnection*>*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CWebSocketConnection>(CWebSocketConnection*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<IHTTPRedirectHandler>(IHTTPRedirectHandler*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<IMetricsReporter>(IMetricsReporter*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<ITCPHostCallback>(ITCPHostCallback*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<IUDPSocketCallback>(IUDPSocketCallback*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<char>(char*, CValidator&, char const*, fallback_)
@@ -6429,6 +6644,17 @@
  b CCrypto::GenerateRandomBlock(void*, int)::s_dev_urandom_fd
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
  b CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
+ b CHTTPClient::SendRequestInternal(CHTTPRequestHandle*, CHTTPClientRequest*, bool)::$_0::operator()() const::sym
+ b CHTTPRequestHandle::CHTTPRequestHandle(CHTTPClientRequest*, CHTTPClient*, CHTTPRequestHandle*)::$_1::operator()() const::sym
+ b CHTTPRequestHandle::CHTTPRequestHandle(CHTTPClientRequest*, CHTTPClient*, CHTTPRequestHandle*)::$_2::operator()() const::sym
+ b CHTTPRequestHandle::CHTTPRequestHandle(CHTTPClientRequest*, CHTTPClient*, CHTTPRequestHandle*)::$_3::operator()() const::sym
+ b CHTTPRequestHandle::DispatchRequest()::$_10::operator()() const::sym
+ b CHTTPRequestHandle::DispatchRequest()::$_4::operator()() const::sym
+ b CHTTPRequestHandle::DispatchRequest()::$_5::operator()() const::sym
+ b CHTTPRequestHandle::DispatchRequest()::$_6::operator()() const::sym
+ b CHTTPRequestHandle::DispatchRequest()::$_7::operator()() const::sym
+ b CHTTPRequestHandle::DispatchRequest()::$_8::operator()() const::sym
+ b CHTTPRequestHandle::DispatchRequest()::$_9::operator()() const::sym
  b CJob::Continue()::s_bCurrentlyProfilingJob
  b CLogInstance::BCleanupOldLogFiles()::fAsserted
  b CLogInstance::BTearOffLogFile()::fAsserted
@@ -6466,6 +6692,11 @@
  b GetProcessorDetailBlob(int*)::DetailBlob
  b GetProcessorVendorId()::VendorID
  b GetVideoLibData()::data
+ b IMetricsFactory::NullMetrics()::$_5::operator()() const::sym
+ b IMetricsFactory::NullMetrics()::$_6::operator()() const::sym
+ b IMetricsFactory::NullMetrics()::$_7::operator()() const::sym
+ b IsSteamRackIPAddress(CIPAddress const&)::maskPrivateRack
+ b IsSteamRackIPAddress(CIPAddress const&)::maskVPN
  b KeyValuesSystem()::s_KeyValuesSystem
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
@@ -6503,6 +6734,7 @@
  b asn1_str2tag.tntmp
  b build_SYS_str_reasons.init
  b build_SYS_str_reasons.strerror_tab
+ b conVarRecordHostnameDimension
  b crypto_lock_rand
  b default_DH_method
  b default_DSA_method
@@ -6547,6 +6779,17 @@
  b guard variable for AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
  b guard variable for CCrypto::GenerateRandomBlock(void*, int)::s_dev_urandom_fd
  b guard variable for CFilenamesCache::FindOrCreateFilename(char const*)::autoMutex__
+ b guard variable for CHTTPClient::SendRequestInternal(CHTTPRequestHandle*, CHTTPClientRequest*, bool)::$_0::operator()() const::sym
+ b guard variable for CHTTPRequestHandle::CHTTPRequestHandle(CHTTPClientRequest*, CHTTPClient*, CHTTPRequestHandle*)::$_1::operator()() const::sym
+ b guard variable for CHTTPRequestHandle::CHTTPRequestHandle(CHTTPClientRequest*, CHTTPClient*, CHTTPRequestHandle*)::$_2::operator()() const::sym
+ b guard variable for CHTTPRequestHandle::CHTTPRequestHandle(CHTTPClientRequest*, CHTTPClient*, CHTTPRequestHandle*)::$_3::operator()() const::sym
+ b guard variable for CHTTPRequestHandle::DispatchRequest()::$_10::operator()() const::sym
+ b guard variable for CHTTPRequestHandle::DispatchRequest()::$_4::operator()() const::sym
+ b guard variable for CHTTPRequestHandle::DispatchRequest()::$_5::operator()() const::sym
+ b guard variable for CHTTPRequestHandle::DispatchRequest()::$_6::operator()() const::sym
+ b guard variable for CHTTPRequestHandle::DispatchRequest()::$_7::operator()() const::sym
+ b guard variable for CHTTPRequestHandle::DispatchRequest()::$_8::operator()() const::sym
+ b guard variable for CHTTPRequestHandle::DispatchRequest()::$_9::operator()() const::sym
  b guard variable for CUDPSocket::ContinueRecv(int, unsigned int, void*)::stimeLastSpew
  b guard variable for DebugStatsSystem::g_DebugStatsSystem
  b guard variable for FindOrCreateStack(CStack*)::autoMutex__
@@ -6559,6 +6802,11 @@
  b guard variable for GetPchTempTextBuffer_Harmful()::s_irgchBuffer
  b guard variable for GetPchTempTextBuffer_Harmful()::s_rgtlsBuffers
  b guard variable for GetVideoLibData()::data
+ b guard variable for IMetricsFactory::NullMetrics()::$_5::operator()() const::sym
+ b guard variable for IMetricsFactory::NullMetrics()::$_6::operator()() const::sym
+ b guard variable for IMetricsFactory::NullMetrics()::$_7::operator()() const::sym
+ b guard variable for IsSteamRackIPAddress(CIPAddress const&)::maskPrivateRack
+ b guard variable for IsSteamRackIPAddress(CIPAddress const&)::maskVPN
  b guard variable for KeyValuesSystem()::s_KeyValuesSystem
  b guard variable for RAND_PosixCryptoGenRandom_bytes(unsigned char*, int)::s_dev_urandom_fd
  b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
@@ -7010,7 +7258,6 @@
  d int_crl_meth
  d int_err_library_number
  d k_prgchJobPauseReason
- d k_rgpchProxyExclusionDelims
  d key_usage_type_table
  d long_pf
  d malloc_ex_func
@@ -7067,8 +7314,11 @@
  d tls12_sigalgs
  d trstandard
  d typeinfo for (anonymous namespace)::CDummySSLConnectionCallback
+ d typeinfo for IMetricsFactory::NullMetrics()::$_8
+ d typeinfo for std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>
  d ui_openssl
  d vtable for (anonymous namespace)::CDummySSLConnectionCallback
+ d vtable for std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>
  d xstandard
  dispatch_get_context
  dispatch_get_global_queue
@@ -7388,6 +7638,8 @@
  r tls1_change_cipher_state.empty
  r two80
  r typeinfo name for (anonymous namespace)::CDummySSLConnectionCallback
+ r typeinfo name for IMetricsFactory::NullMetrics()::$_8
+ r typeinfo name for std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>
  r whitespace
  r zeroes
  read
@@ -7481,6 +7733,11 @@
  sws_scale
  sysctl
  sysctlnametomib
+ t $_0::__invoke(ConVar*, char const*)
+ t $_1::__invoke(ConVar*, char const*)
+ t $_2::__invoke(ConVar*, char const*)
+ t $_3::__invoke(ConVar*, char const*)
+ t $_4::__invoke(ConVar*, char const*)
  t (anonymous namespace)::CDummySSLConnectionCallback::BVerifyCertificate(CNetConnection*, COpenSSLConnection*, COpenSSLCertificate const&)
  t (anonymous namespace)::CDummySSLConnectionCallback::GetSSLContextForNewConnection(CNetConnection*)
  t (anonymous namespace)::CLEANUP::~CLEANUP()
@@ -7493,6 +7750,7 @@
  t BN_from_montgomery_word
  t BN_to_felem
  t BPlayerScheduledBefore(CVideoPlayer* const&, CVideoPlayer* const&)
+ t BuildHashmapFromConvar(CUtlHashMap<CUtlString, bool, CDefEquals<CUtlString>, HashFunctor<CUtlString> >&, ConVar*)
  t CCompletionPortManager::AssociateHandleWithIOCP(int, bool, bool)::$_0::__invoke(void*)
  t CCompletionPortManager::AssociateHandleWithIOCP(int, bool, bool)::$_1::__invoke(void*)
  t CCompletionPortManager::AsyncDispatchHandlerWrapper(void*)::$_5::__invoke(void*)
@@ -7520,7 +7778,7 @@
  t K512
  t K_XX_XX
  t KeyValuesSystem()
- t LoadFileRangeIntoBuffer_Internal(char const*, unsigned long long, unsigned long long, CUtlBuffer&, bool, EFioModifiers)
+ t LoadFileRangeIntoBuffer_Internal(StringView, unsigned long long, unsigned long long, CUtlBuffer&, bool, EFioModifiers)
  t MOD_EXP_CTIME_COPY_FROM_PREBUF
  t MemInputsrc
  t OSXCertFromOpenSSL(x509_st*, OpaqueSecCertificateRef**)
@@ -7605,14 +7863,20 @@
  t _GLOBAL__sub_I_globals.cpp
  t _GLOBAL__sub_I_http.cpp
  t _GLOBAL__sub_I_httpclient.cpp
+ t _GLOBAL__sub_I_httpclient_internal.cpp
  t _GLOBAL__sub_I_httpclientmgr.cpp
  t _GLOBAL__sub_I_interface.cpp
  t _GLOBAL__sub_I_iopollinghelpers_osx.cpp
+ t _GLOBAL__sub_I_iprangelist.cpp
  t _GLOBAL__sub_I_job.cpp
  t _GLOBAL__sub_I_jobmgr.cpp
  t _GLOBAL__sub_I_keypair.cpp
+ t _GLOBAL__sub_I_language.cpp
  t _GLOBAL__sub_I_logger.cpp
  t _GLOBAL__sub_I_memstd.cpp
+ t _GLOBAL__sub_I_metrics.cpp
+ t _GLOBAL__sub_I_metricsfactory.cpp
+ t _GLOBAL__sub_I_metricstimer.cpp
  t _GLOBAL__sub_I_minidump.cpp
  t _GLOBAL__sub_I_msg.cpp
  t _GLOBAL__sub_I_msgprotobuf.cpp
@@ -7645,6 +7909,7 @@
  t _GLOBAL__sub_I_tcphost.cpp
  t _GLOBAL__sub_I_testthread.cpp
  t _GLOBAL__sub_I_threadtools.cpp
+ t _GLOBAL__sub_I_timeutils.cpp
  t _GLOBAL__sub_I_udpconnection.cpp
  t _GLOBAL__sub_I_udphost.cpp
  t _GLOBAL__sub_I_udpsocket.cpp
@@ -7668,6 +7933,7 @@
  t _GLOBAL__sub_I_workthreadpool.cpp
  t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
+ t __cxx_global_var_init15
  t _aesni_decrypt2
  t _aesni_decrypt3
  t _aesni_decrypt4
@@ -8391,6 +8657,14 @@
  t ssleay_rand_seed
  t ssleay_rand_status
  t ssse3_shortcut
+ t std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>::__clone() const
+ t std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>::__clone(std::__1::__function::__base<void (CMetrics&)>*) const
+ t std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>::destroy()
+ t std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>::destroy_deallocate()
+ t std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>::operator()(CMetrics&)
+ t std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>::target(std::type_info const&) const
+ t std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>::target_type() const
+ t std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>::~__func()
  t std::__1::__hash_table<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t>, std::__1::__unordered_map_hasher<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t>, std::__1::hash<AllocTracking_t>, true>, std::__1::__unordered_map_equal<AllocTracking_t, std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t>, std::__1::equal_to<AllocTracking_t>, true>, std::__1::allocator<std::__1::__hash_value_type<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t> > >::__rehash(unsigned long)
  t std::__1::__split_buffer<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t, std::__1::allocator<CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocSpewData_t>&>::~__split_buffer()
  t std::__1::unordered_map<AllocTracking_t, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t, std::__1::hash<AllocTracking_t>, std::__1::equal_to<AllocTracking_t>, std::__1::allocator<std::__1::pair<AllocTracking_t const, CStdMemAlloc::DumpMemTrackingStats(int, int, int, bool)::AllocDetails_t> > >::operator[](AllocTracking_t const&)
@@ -8477,6 +8751,8 @@
  vfprintf
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
+ vtable for __cxxabiv1::__function_type_info
+ vtable for __cxxabiv1::__pointer_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  vtable for std::length_error

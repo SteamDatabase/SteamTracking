@@ -112,4 +112,6 @@ typedef enum EResult
     k_EResultAccountsNotFriends, // Accounts not friends
     k_EResultLimitedUserAccount, // Limited user account
     k_EResultCantRemoveItem, // Cant remove item
+    k_EResultAccountHasBeenDeleted, // Account has been deleted
+    k_EResultAccountHasAnExistingUserCancelledLicense, // Account has an existing user cancelled license
 } EResult;
