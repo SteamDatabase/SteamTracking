@@ -175,15 +175,217 @@
 	color:#e4ca63;
 }
 
+.border_color_offline {
+	border-color:#898989;
+}
+
+.border_color_online {
+	border-color:#57cbde;
+}
+
+.border_color_in-game {
+	border-color:#90ba3c;
+}
+
+.border_color_golden {
+	border-color: #e4ca64;
+}
+
 .miniprofile_hover {
 	position: absolute;
 	top: 0;
 	left: 0;
 	z-index: 1200;
+	font-family: "Motiva Sans", sans-serif;
 }
 
 .miniprofile_hover_inner.shadow_content {
 	margin: 11px;
+}
+
+.miniprofile_container {
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+	overflow: hidden;
+
+	width: 328px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.miniprofile_playersection {
+	display: flex;
+	flex-direction: row;
+
+	z-index: 1;
+	height: 62px;
+	padding: 16px;
+}
+
+.miniprofile_playersection .playersection_avatar {
+	width: 90px;
+	height: 90px;
+	background: none;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+}
+
+.miniprofile_playersection .playersection_avatar img {
+	width: 90px;
+	height: 90px;
+	box-sizing: border-box;
+	background: none;
+}
+
+.miniprofile_playersection .player_content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	padding-left: 16px;
+
+	text-shadow: 1px 1px 4px #000;
+}
+
+.miniprofile_playersection .player_content .persona {
+	font-size: 20px;
+}
+
+.miniprofile_playersection .player_content .persona,
+.miniprofile_playersection .player_content .secondaryname {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 200px;
+}
+
+.miniprofile_playersection .player_content .friend_status_offline {
+	font-size: 10px;
+}
+
+.miniprofile_gamesection {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+
+	min-height: 64px;
+}
+
+.miniprofile_gamesection .game_logo {
+	width: 90px;
+	height: 34px;
+	top: 18px;
+	left: 16px;
+	position: absolute;
+}
+
+.miniprofile_gamesection .game_details {
+	display: flex;
+	flex-direction: column;
+
+	padding: 8px 8px 8px 122px;
+	font-size: 14px;
+
+	align-self: center;
+}
+
+.miniprofile_gamesection .game_details .game_state,
+.miniprofile_gamesection .game_details .rich_presence {
+	font-size: 12px;
+	color: rgb( 98, 129, 59 );
+}
+
+.miniprofile_gamesection .game_details .game_name {
+	color: #90ba3c;
+}
+
+.miniprofile_detailssection {
+	display: flex;
+	flex-direction: column;
+
+	padding: 16px 16px 8px 16px;
+}
+
+.miniprofile_detailssection.not_in_game {
+	padding-top: 24px;
+}
+
+.miniprofile_featuredcontainer {
+	display: flex;
+	flex-direction: row;
+
+	height: 34px;
+	padding-left: 16px;
+	margin-bottom: 8px;
+}
+
+.miniprofile_featuredcontainer .badge_icon {
+	width: 34px;
+	height: 34px;
+	position: relative;
+}
+
+.miniprofile_featuredcontainer .description {
+	margin-left: 12px;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 14px;
+	overflow: hidden;
+	white-space: nowrap;
+
+	font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
+}
+
+.miniprofile_featuredcontainer .description .name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #b1b1b1;
+}
+
+.miniprofile_featuredcontainer .description .xp {
+	font-size: 12px;
+	color: #6b6a6a;
+}
+
+.miniprofile_featuredcontainer .friendPlayerLevel {
+	margin-top: 0;
+}
+
+.miniprofile_background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	z-index: -3;
+	background: radial-gradient( ellipse farthest-corner at 20% 30%, rgb( 76, 80, 91 ) 0%, rgb( 52, 55, 63 ) 50%, rgb( 40, 44, 50 ) 100% );
+
+}
+
+.miniprofile_backgroundblur {
+	width: 380px;
+	height: 380px;
+	filter: blur( 10px ) saturate( 2 );
+	position: absolute;
+	left: -60px;
+	top: -60px;
+	opacity: 0.4;
+	-webkit-mask: radial-gradient( ellipse farthest-corner at 150px 150px, rgba( 0, 0, 0, 1 ) 0%, rgba( 0, 0, 0, 0.6 ) 20%, rgba( 0, 0, 0, 0.3 ) 34%, rgba( 0, 0, 0, 0 ) 64% );
+	mask: radial-gradient( ellipse farthest-corner at 150px 150px, rgba( 0, 0, 0, 1 ) 0%, rgba( 0, 0, 0, 0.6 ) 20%, rgba( 0, 0, 0, 0.3 ) 34%, rgba( 0, 0, 0, 0 ) 64% );
+	mix-blend-mode: screen;
+}
+
+.miniprofile_backdropblur {
+	backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
+}
+
+.miniprofile_backdrop {
+	background: linear-gradient( to bottom, rgba( 24, 26, 30, .7 ) 5%, rgba( 24, 26, 30, .4 ) 95% );
 }
 
 .miniprofile_content {
@@ -192,199 +394,26 @@
 
 	color: #828282;
 	font-size: 14px;
-}
 
-.miniprofile_top {
 	position: relative;
-	border: 1px solid #333538;
-	padding: 7px 8px;
-background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);
-	background: linear-gradient( to bottom, #33425a 5%, #282f3d 95%);
-;
 }
 
-.miniprofile_animated_background {
+.miniprofile_nameplatecontainer {
 	position: absolute;
-	min-width: 100%;
-	min-height: 100%;
-	width: auto;
-	height: auto;
-	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	z-index: -1;
 }
-.miniprofile_animated_background > video {
+
+.miniprofile_nameplate {
 	width: 100%;
 	height: 100%;
+	object-fit: cover;
+	object-position: top right;
 }
-
-.miniprofile_player {
-	position: relative;
-	min-height: 72px;
-}
-
-.miniprofile_player .playerAvatar {
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-.miniprofile_player .player_content {
-	padding-left: 80px;
-	word-wrap: break-word;
-}
-
-.miniprofile_player .playername {
-	font-size: 16px;
-}
-
-.miniprofile_player .playername .nickname,
-.friendBlock.persona .nickname_block
-{
-	color: #9b9b9b;
-}
-
-.miniprofile_favorite_badge {
-	position: relative;
-
-	margin-top: 7px;
-
-	background-color: #282f3e;
-	border: 1px solid #212121;
-	border-radius: 3px;
-	padding: 7px 4px;
-	height: 34px;
-}
-.miniprofile_favorite_badge .favorite_badge_icon {
-	position: absolute;
-	top: 7px;
-	left: 4px;
-}
-.miniprofile_favorite_badge .favorite_badge_icon img.badge_icon.small {
-	width: 34px;
-	height: 34px;
-}
-.miniprofile_favorite_badge .favorite_badge_description {
-	font-size: 12px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	padding-left: 44px;
-	padding-top: 3px;
-}
-
-.miniprofile_ingame {
-	border-left: 1px solid #1f1f1f;
-	border-right: 1px solid #1f1f1f;
-	border-bottom: 1px solid #1f1f1f;
-
-	padding: 8px;
-	min-height: 45px;
-	position: relative;
-
-background: -webkit-linear-gradient( top, #525151 5%, #292827 95%);
-	background: linear-gradient( to bottom, #525151 5%, #292827 95%);
-}
-
-.miniprofile_ingame .game_logo {
-	position: absolute;
-	left: 8px;
-	top: 8px;
-	width: 121px;
-	height: 45px;
-}
-
-.miniprofile_ingame .game_content {
-	padding-left: 128px;
-	padding-top: 2px;
-	overflow: hidden;
-
-	font-size: 12px;
-}
-
-.miniprofile_ingame .game_content .rich_presence {
-	color: rgb( 98, 129, 59 );
-	font-size: 10px;
-	line-height: 12px;
-}
-
-.hover_arrow {
-	position: absolute;
-	top: 30px;
-}
-
-.miniprofile_arrow {
-	border-top: 9px solid transparent;
-	border-bottom: 9px solid transparent;
-	width: 0;
-	height: 0;
-}
-
-.miniprofile_arrow.left {
-	border-right: 8px solid #313f56;
-	left: 4px;
-}
-
-.miniprofile_arrow.right {
-	border-left: 8px solid #313f56;
-	right: 4px;
-}
-
-.miniprofile_arrow_inner {
-	position: absolute;
-	top: -6px;
-	background-repeat: no-repeat;
-	width: 7px;
-	height: 1px;
-}
-
-
-.miniprofile_arrow.left .miniprofile_arrow_inner {
-	left: 2px;
-}
-
-.miniprofile_arrow.right .miniprofile_arrow_inner {
-	right: 2px;
-}
-
-
-.miniprofile_teammember {
-	margin-top: 5px;
-
-	line-height: 45px;
-	height: 45px;
-
-	padding-left: 10px;
-	width: 274px;
-
-	color: #ffffff;
-	font-size: 13px;
-			font-family: "Motiva Sans", Sans-serif;
-		font-weight: normal; /* normal */
-
-		
-	background-repeat: no-repeat;
-	background-position: top left;
-
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
-}
-
-.miniprofile_teammember.team_red {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/promo/summer2014/minip_red.png' );
-}
-.miniprofile_teammember.team_blue {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/promo/summer2014/minip_blue.png' );
-}
-.miniprofile_teammember.team_pink {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/promo/summer2014/minip_pink.png' );
-}
-.miniprofile_teammember.team_green {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/promo/summer2014/minip_green.png' );
-}
-.miniprofile_teammember.team_purple {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/promo/summer2014/minip_purple.png' );
-}
-
 
 /*
  * GENERIC POPUP

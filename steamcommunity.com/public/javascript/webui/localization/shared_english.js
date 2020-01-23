@@ -939,6 +939,8 @@ LocalizationReady("shared", "english", {
 
   SalePage_LoginPrompt:
     "Sign in to view additional items selected just for you.",
+  SalePage_ParentApp_DLC: "DLC For",
+  SalePage_ParentApp_SoundTrack: "Soundtrack For",
 
   SalePage_WatchForDrop_Minutes_Developer:
     "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
@@ -1026,30 +1028,40 @@ LocalizationReady("shared", "english", {
 
   Lunar2020_CheckBackEachDay:
     "Check back each day for a new gift from the Emperor!",
+  Lunar2020_CheckBackEachDayForStory: "Check back each day for a new chapter",
   Lunar2020_FirstGift: "First Gift",
   Lunar2020_SecondGift: "Second Gift",
   Lunar2020_ThirdGift: "Third Gift",
   Lunar2020_FourthGift: "Fourth Gift",
   Lunar2020_GiftWasOpened: "opened",
+  Lunar2020_RereadStory: "show story",
   Lunar2020_GiftCanBeOpenedNow: "open now",
+  Lunar2020_GiftCanBeOpenedAfterThePreviousOne: "open next",
   Lunar2020_GiftLockedUntilDate: "open %1$s",
   Lunar2020_ErrorLoadingVideo:
     "Please use a browser that supports HTML videos to open your envelope.",
+  Lunar2020_LinkBackToSale: "Return to sale",
   Lunar2020_LinkFromVideoToMarket: "Visit the market now",
+  Lunar2020_ReceivedNumberOfTokens: "You've received %1$s tokens",
+  Lunar2020_YourBalancePrefix: "Your balance",
+  Lunar2020_BalanceNumberOfTokens: "%1$s tokens",
 
-  Lunar2020_StoryDayOneHeader: "THE GREAT RACE | DAY 1",
-  Lunar2020_StoryDayTwoHeader: "THE GREAT RACE | DAY 2",
-  Lunar2020_StoryDayThreeHeader: "THE GREAT RACE | DAY 3",
-  Lunar2020_StoryDayFourHeader: "THE GREAT RACE | DAY 4",
+  Lunar2020_StoryTitle: "THE EMPEROR'S GREAT RACE",
+  Lunar2020_StorySubTitle: "The Origin of the Chinese Zodiac",
+
+  Lunar2020_StoryDayOneHeader: "Part I of IV",
+  Lunar2020_StoryDayTwoHeader: "Part II of IV",
+  Lunar2020_StoryDayThreeHeader: "Part III of IV",
+  Lunar2020_StoryDayFourHeader: "Part IV of IV",
 
   Lunar2020_StoryDayOne:
-    "Clever Rat was the first to arrive in the celestial domain. Not keen on swimming, she'd hitched a ride atop the trusty Ox—excitedly jumping into the Emperor's heavenly garden just before her ride reached shore. Steady Ox crossed the river with ease, unconcerned about the results of the race. Second place suits him, content as he is with his role in Rat's success.",
+    "The Jade Emperor summoned all creatures of his kingdom to race to the heavenly palace, declaring the first twelve to arrive would be honored with a place on his new calendar.\n\nClever Rat was the first to cross the river into the celestial domain. No fan of swimming, Rat hitched a ride atop the trusty Ox—excitedly jumping into the Emperor's garden just before the pair were set to reach shore.\n\nSteady Ox crossed the river with ease. Unconcerned with the results of the race, Ox felt content with a role in Rat's success.",
   Lunar2020_StoryDayTwo:
-    "Self-sufficient Tiger traveled too carefully to outpace Ox, thinking it better to place third than not at all. Swift rabbit found himself floating nowhere fast. But luck paid off where strategy didn't, and a helpful wind sped him safely on his way. Flying Dragon's vantage revealed others in need, and she stopped to help all she could—even gifting the rabbit a gust across the river. Honor was far more important than victory, and she found fifth place a fine fit.",
+    "Self-sufficient Tiger traveled too carefully to outpace Ox, thinking it better to arrive third than not at all.\n\nSwift Rabbit hopped a log floating nowhere fast. But luck paid off where strategy didn't, and a helpful wind sped the makeshift boat safely on its way.\n\nFlying Dragon's vantage revealed a village in need, so of course Dragon stopped to help—even gifting Rabbit a gust across the river. Honor was far more important than victory, and Dragon found fifth place a fine fit.",
   Lunar2020_StoryDayThree:
-    "Stealthy Snake had little interest in a long-distance effort, so he wound himself unnoticed around Horse's front hoof. As Horse galloped towards the finish line, Snake uncoiled, startling his ride just long enough to slither into sixth place with the skittish Horse trotting in close behind.",
+    "Stealthy Snake had little interest in a long-distance effort, so it wrapped itself unnoticed around Horse's front hoof.\n\nAs Horse galloped towards the finish line, Snake uncoiled, startling the steed just long enough to slither into sixth—with the skittish Horse trotting close behind.",
   Lunar2020_StoryDayFour:
-    "Sheep, Monkey, and Rooster worked together, but let Sheep claim eighth as the backbone of their journey. Monkey earned ninth, and the strutting Rooster crossed tenth, proud that the order was fair. Playful Dog was mostly interested in splashing around, feeling eleventh was a fine trade for all the fun. Then, in twelfth, came Pig, who'd stopped for a snack n' a snooze—wise enough to know that each animal will have their time in the Emperor's favor.",
+    "Goat, Monkey, and Rooster worked together, but let Goat claim eighth as the backbone of their journey. Cheerful Monkey was next, and the strutting Rooster crossed tenth, proud that the order was fair.\n\nPlayful Dog was mostly interested in splashing around, feeling eleventh a fine trade for all the fun.\n\nLast came Pig, who'd stopped for a snack n' a snooze—wise enough to know that each animal will have their time in the Emperor's favor.",
 
   shared_dummy: "dont translate"
 });

@@ -916,12 +916,7 @@ function InitMiniprofileHovers()
 	var $Hover = $J('<div/>', {'class': 'miniprofile_hover'} );
 	var $HoverContent = $J('<div/>', {'class': 'miniprofile_hover_inner shadow_content'} );
 
-	var $HoverArrowLeft = $J('<div/>', {'class': 'hover_arrow left miniprofile_arrow'} );
-	$HoverArrowLeft.append( '<div class="miniprofile_arrow_inner"></div>' );
-	var $HoverArrowRight = $J('<div/>', {'class': 'hover_arrow right miniprofile_arrow'} );
-	$HoverArrowRight.append( '<div class="miniprofile_arrow_inner"></div>' );
-
-	$Hover.append( $J('<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>'), $HoverContent, $HoverArrowLeft, $HoverArrowRight );
+	$Hover.append( $J('<div class="shadow_ul"></div><div class="shadow_top"></div><div class="shadow_ur"></div><div class="shadow_left"></div><div class="shadow_right"></div><div class="shadow_bl"></div><div class="shadow_bottom"></div><div class="shadow_br"></div>'), $HoverContent );
 
 	$Hover.hide();
 	$J(document.body).append( $Hover );
@@ -1019,13 +1014,11 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 					let videoElem = $Hover.find( 'video' );
 					if ( videoElem.length != 0 )
 					{
-						videoElem.on( "canplay", function() {
-							videoElem.addClass( "can_play" );
-							videoElem[0].play();
-						} );
-						if ( videoElem.hasClass( "can_play" ) )
+						let playPromise = videoElem[0].play();
+						if ( playPromise )
 						{
-							videoElem[0].play();
+							playPromise.catch( function( e ) {
+							} );
 						}
 					}
 				} );
@@ -1092,30 +1085,21 @@ function PositionMiniprofileHover( $Hover, $Target, oParams )
 	if ( !$HoverBox.length )
 		$HoverBox = $J( $Hover.children()[0] );
 
-	var $HoverArrowLeft = $Hover.children( '.hover_arrow.left' );
-	var $HoverArrowRight = $Hover.children( '.hover_arrow.right' );
-
 	var nWindowScrollTop = $J(window).scrollTop();
 	var nWindowScrollLeft = $J(window).scrollLeft();
 	var nViewportWidth = $J(window).width();
 	var nViewportHeight = $J(window).height();
 
-		var $HoverArrow = $HoverArrowRight;
-	var nBoxRightViewport = ( offset.left - nWindowScrollLeft ) + $Target.outerWidth() + $HoverBox.width() + 14;
+		var nBoxRightViewport = ( offset.left - nWindowScrollLeft ) + $Target.outerWidth() + $HoverBox.width() + 14;
 	var nSpaceRight = nViewportWidth - nBoxRightViewport;
 	var nSpaceLeft = offset.left - $Hover.width();
 	if ( ( ( nSpaceLeft > 0 || nSpaceLeft > nSpaceRight ) && !bPreferRightSide ) || ( bPreferRightSide && nSpaceRight < 14 && nSpaceLeft > nSpaceRight ) )
 	{
 				$Hover.css( 'left', ( offset.left - $Hover.width() + nPxArrowOverlap + 3 ) + 'px' );
-		$HoverArrowLeft.hide();
-		$HoverArrowRight.show();
 	}
 	else
 	{
 				$Hover.css( 'left', ( offset.left + $Target.outerWidth() - nPxArrowOverlap ) + 'px' );
-		$HoverArrow = $HoverArrowLeft;
-		$HoverArrowLeft.show();
-		$HoverArrowRight.hide();
 	}
 
 	var nTopAdjustment = 0;
@@ -1139,13 +1123,6 @@ function PositionMiniprofileHover( $Hover, $Target, oParams )
 
 		var nViewportAdjustedHoverTop = offset.top - nViewportAdjustment;
 		$Hover.css( 'top', nViewportAdjustedHoverTop + 'px' );
-
-		// arrow is normally offset 30pixels.  we move it down the same distance we moved the hover up, so it is "fixed" to where it was initially
-		$HoverArrow.css( 'top', ( 30 + nDesiredHoverTop - nViewportAdjustedHoverTop ) + 'px' );
-	}
-	else
-	{
-		$HoverArrow.css( 'top', '' );
 	}
 
 	$Hover.hide();

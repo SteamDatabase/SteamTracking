@@ -3171,6 +3171,10 @@ enum EProductPageAction
 	OpenBroadcastWatchPage = 9;
 	SendChat = 10;
 	AddsAnEmoticonToChat = 11;
+	ShowDailyDeals = 12;
+	ShowInteractiveRecommendDeals = 13;
+	ShowWishlistDeals = 14;
+	ShowDLCDeals = 15;
 }
 
 enum EProductViewAction
@@ -3386,6 +3390,7 @@ enum ERemoteClientLaunchResult
 	TransportUnavailable = 25;
 	Canceled = 26;
 	Invisible = 27;
+	RestrictedCountry = 28;
 }
 
 enum EResult
@@ -3594,7 +3599,7 @@ enum EServerType
 	Steam2Emulator = 79;
 	PublicTest = 80;
 	SolrMgr = 81;
-	BroadcastRelay = 82;
+	BroadcastIngester = 82;
 	BroadcastDirectory = 83;
 	VideoManager = 84;
 	TradeOffer = 85;
