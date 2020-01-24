@@ -399,6 +399,7 @@ CDiscoveryQueue.ShowCustomizeDialog = function( fnOnSettingsChanged )
 			oSettings.exclude_early_access = !$SettingsContent.find('#dqs_exclude_early_access_inverted').prop('checked');
 			oSettings.exclude_software = !$SettingsContent.find('#dqs_exclude_software_inverted').prop('checked');
 			oSettings.exclude_videos = !$SettingsContent.find('#dqs_exclude_videos_inverted').prop('checked');
+			oSettings.exclude_soundtracks = !$SettingsContent.find('#dqs_exclude_soundtracks_inverted').prop('checked');
 			oSettings.include_coming_soon = $SettingsContent.find('#dqs_include_comingsoon').prop('checked');
 
 			oSettings.excluded_tagids = [];

@@ -113,7 +113,7 @@
               ".js?chunkhash=" +
               {
                 0: "ea1700ba64926e9e84ea",
-                1: "e3ed4d243d275bdec0c9",
+                1: "daeb3945a6030fa34baf",
                 4: "93d64bf5e59a2cb57099",
                 5: "ca3d25a0dbb9e95f6232",
                 6: "a09806ead46911cb4761",
@@ -3775,6 +3775,7 @@
         webapi_token: "",
         authwgtoken: "",
         is_support: !1,
+        is_limited: !1,
         short_url: ""
       },
       m = { steamid: "", clanid: 0, listid: 0 },
@@ -49092,15 +49093,15 @@
         }
         return (
           Object(B.d)(t, e),
-          (t.prototype.OpenEnvelope = function(i) {
+          (t.prototype.OpenEnvelope = function(r) {
             return Object(B.b)(this, void 0, void 0, function() {
-              var t, n, r;
+              var t, n;
               return Object(B.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
                     return (
                       (t = yp.BIsDoorOpened(this.props.iDoorIndex)),
-                      (n = lt(i)),
+                      (n = lt(r)),
                       t
                         ? (Tr(
                             A.createElement(
@@ -49115,24 +49116,34 @@
                   case 1:
                     return (
                       e.sent() &&
-                        ((r = function() {
-                          return console.log("TODO: update door store");
-                        }),
                         Tr(
                           A.createElement(
                             lh,
-                            Object(B.a)(
-                              { bIsFirstOpen: !0, closeModal: r },
-                              this.props
-                            )
+                            Object(B.a)({ bIsFirstOpen: !0 }, this.props)
                           ),
                           n
-                        )),
+                        ),
                       [2]
                     );
                 }
               });
             });
+          }),
+          (t.prototype.ShowLimitedUserDialog = function(e) {
+            var t = lt(e),
+              n = A.createElement(
+                "a",
+                { href: w.HELP_BASE_URL },
+                oe("#User_LimitedAccount_UrlInfo")
+              );
+            Tr(
+              A.createElement(yr, {
+                strTitle: oe("#Lunar2020_LimitedUserDialogTitle"),
+                strDescription: se("#User_LimitedAccount", n),
+                bAlertDialog: !0
+              }),
+              t
+            );
           }),
           (t.prototype.VOOnClose = function() {
             C.is_support && yp.OpenDoor(this.props.iDoorIndex, !1);
@@ -49173,7 +49184,13 @@
                       day: "numeric"
                     })
                   ),
-              u = i ? Rr : a || l ? this.OpenEnvelope : null,
+              u = i
+                ? Rr
+                : C.is_limited
+                ? this.ShowLimitedUserDialog
+                : a || l
+                ? this.OpenEnvelope
+                : null,
               m = Bt(
                 Vm.a.EnvelopeContainer,
                 i && Vm.a.NeedLogin,
@@ -49214,6 +49231,7 @@
             );
           }),
           Object(B.c)([D], t.prototype, "OpenEnvelope", null),
+          Object(B.c)([D], t.prototype, "ShowLimitedUserDialog", null),
           Object(B.c)([D], t.prototype, "VOOnClose", null),
           (t = Object(B.c)([Pe.a], t))
         );
@@ -54458,7 +54476,7 @@
                           muted: !0,
                           autoPlay: !0,
                           ref: function(e) {
-                            e && (e.playbackRate = 0.25);
+                            e && (e.playbackRate = 0.9);
                           },
                           className: Bt(
                             mi.a.SaleBackground,
