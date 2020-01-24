@@ -159,6 +159,11 @@ Button.StatusIcon:hover Image
 	margin-right: 8px;	
 }
 
+.VR #Clock
+{
+	visibility: collapse;
+}
+
 // Remote Content
 /////////////////
 

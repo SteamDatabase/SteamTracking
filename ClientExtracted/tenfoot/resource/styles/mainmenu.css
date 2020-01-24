@@ -563,6 +563,10 @@ MainMenu #BodyWrapper #GameRowContents
 	margin-right: 0px;
 }
 
+.VR #Clock
+{
+	visibility: collapse;
+}
 
 #BetaButton
 {

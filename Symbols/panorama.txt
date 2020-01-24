@@ -16395,6 +16395,8 @@
  T void panorama::DispatchEventAsync<panorama::StyleClassesChanged>(panorama::StyleClassesChanged, panorama::IUIPanel const*)
  T void panorama::DispatchEventAsync<panorama::StyleFlagsChanged>(panorama::StyleFlagsChanged, panorama::IUIPanel const*)
  T void panorama::DispatchEventAsync<panorama::TimeoutFastScrollSound>(float, panorama::TimeoutFastScrollSound, panorama::IUIPanel const*)
+ T void panorama::DispatchEventAsync<panorama::WindowHidden, panorama::CTopLevelWindowOpenVROverlay*>(panorama::WindowHidden, panorama::IUIPanel const*, panorama::CTopLevelWindowOpenVROverlay*)
+ T void panorama::DispatchEventAsync<panorama::WindowShown, panorama::CTopLevelWindowOpenVROverlay*>(panorama::WindowShown, panorama::IUIPanel const*, panorama::CTopLevelWindowOpenVROverlay*)
  T void panorama::GetPtrToCallbackArray<bool (CDragStartCallbacks::*)() const>(bool (CDragStartCallbacks::*)() const, v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<bool (panorama::CImageProxySource::*)()>(bool (panorama::CImageProxySource::*)(), v8::Handle<v8::Array>&)
  T void panorama::GetPtrToCallbackArray<bool (panorama::CUIPanel::*)() const>(bool (panorama::CUIPanel::*)() const, v8::Handle<v8::Array>&)
