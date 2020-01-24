@@ -2098,7 +2098,8 @@ body.modals_BodyNoScrollDialog_105OB {
   box-sizing: border-box;
   background: white;
   display: flex;
-  border: 1px solid black; }
+  border: 1px solid black;
+  z-index: 3; }
   .broadcastwidgets_CapsuleMenuButton_2hdaQ:hover {
     background: #67c1f5; }
   .broadcastwidgets_CapsuleMenuButton_2hdaQ > img {

@@ -131,44 +131,44 @@
                 18: "bbc3088c09b9a9886f9b",
                 19: "61548b1a676afda9f809",
                 20: "42f317b9873696a99730",
-                21: "d24c44af145509820d1f",
+                21: "302a26faa6d3ab117ae1",
                 22: "c657ef3e9959ea27416d",
                 23: "b6df2169e71faaa59643",
                 24: "57ac36a701c0bc386200",
-                25: "7ff0f693e06d900df448",
+                25: "6be07af264007650a920",
                 26: "567f0fd9c00451f06d0a",
-                27: "87b22b1925ec4a12d47e",
+                27: "f7fdc103b05618baf3c2",
                 28: "55e2cc163abd94ae7e03",
                 29: "9e6ff8f6877df66dc6a9",
                 30: "0eb4480c740f96b9fe20",
                 31: "5116646722dbdf99de46",
-                32: "105ff5663e8f1ae64a88",
-                33: "6cb4aa56b21ca988d990",
-                34: "c15be073bb4a9c0ddd92",
-                35: "35c79bcffbf4ab51caab",
-                36: "bff5c9140bbcf214622a",
-                37: "45b754d57db7c87a13aa",
-                38: "9e264a7c7419f959130b",
-                39: "d1eedc2f4fcd8250e9b5",
-                40: "ded08fa0d3c19979d883",
-                41: "30ebf2c015ef262ccdfd",
-                42: "2f97f3484622b99caf22",
-                43: "c87705c23141fe0c1ab1",
-                44: "9403612b5af2fbbfd25b",
-                45: "c3d1bcefd31018243965",
-                46: "94cfb71243957ae612f0",
-                47: "466be6f720d65753f943",
-                48: "0914b03fcb3dc937b1e6",
-                49: "e9fb276c433021364701",
-                50: "a11212b6647158a85716",
-                51: "9dc8e7e11e3d2133b54b",
-                52: "fac81e3fc8895f76698a",
-                53: "8c6f1acc9ccab17b0117",
-                54: "53ca72977ccc784c55cf",
-                55: "a947e232988bfa9cb229",
-                56: "0e575650cf484661dd33",
-                57: "d85b385ecd5882eca943",
-                58: "35cb9bc07ea5a67940d6"
+                32: "4a2cd4800445c89acc57",
+                33: "5fd7c3f956cdc3ff5f76",
+                34: "f14ed1c956be8bf3c146",
+                35: "63615619913958f7da83",
+                36: "c513b3fa5b9b376a1068",
+                37: "5d10225d85b5f62abf6b",
+                38: "548736ed9ac46793052a",
+                39: "042a1a526fdad3ccec16",
+                40: "b6dd8a785a3bf7651d97",
+                41: "f92ebf9bb36918a851e5",
+                42: "79282297897ae4bb7ec7",
+                43: "dd851b3e9a984b617474",
+                44: "5cc156615c7fdac5635a",
+                45: "fd0e39b8f184001f2bfe",
+                46: "cdbf5def4f893cdea26d",
+                47: "e93a93208001270035b4",
+                48: "08e81ac0f5e7e07126ab",
+                49: "b82ab8c2ff56888bb8cf",
+                50: "679cf822969596a4c1a5",
+                51: "ff5372598adb9bb7e087",
+                52: "027ab4bf7202aa02e234",
+                53: "a729880d610e3d55ee7a",
+                54: "c224dbb0ed12190101bb",
+                55: "ec817d60f7b4e408140b",
+                56: "9a4a170d1ca5a762cc6d",
+                57: "4d8d44d6885355ebdf7c",
+                58: "7f5ec88eaff0968119f1"
               }[e]
             );
           })(a)),
@@ -49034,15 +49034,24 @@
             yp.GetRawDoorData() || yp.LoadDoorData(), vp.LoadSaleTokenPoints();
           }),
           (t.prototype.render = function() {
-            for (var e = [], t = 0; t < yp.GetDoorCount(); t++)
-              e.push(
+            var e = yp.GetRawDoorData();
+            if (!e) return null;
+            for (
+              var t = e.length - 1,
+                n = Date.now() / 1e3 > e[t].rtime_start,
+                r = [],
+                i = 0;
+              i <= t;
+              i++
+            )
+              r.push(
                 A.createElement(oh, {
-                  key: "envelope-" + t,
-                  iDoorIndex: t,
+                  key: "envelope-" + i,
+                  iDoorIndex: i,
                   strFontFamily: this.props.strFontFamily
                 })
               );
-            var n = vp.GetSaleTokenPoints().points;
+            var a = vp.GetSaleTokenPoints().points;
             return A.createElement(
               fr,
               null,
@@ -49052,7 +49061,7 @@
                 A.createElement(
                   "div",
                   { className: Vm.a.EnvelopeArea },
-                  0 <= n &&
+                  0 <= a &&
                     A.createElement(
                       "div",
                       { className: Vm.a.TokenBalanceContainer },
@@ -49064,17 +49073,18 @@
                           href: w.STORE_BASE_URL + "lunarnewyearmarket"
                         },
                         " ",
-                        oe("#Lunar2020_BalanceNumberOfTokens", n),
+                        oe("#Lunar2020_BalanceNumberOfTokens", a),
                         " "
                       )
                     ),
-                  e
+                  r
                 ),
-                A.createElement(
-                  "div",
-                  { className: Vm.a.BottomMessage },
-                  oe("#Lunar2020_CheckBackEachDay")
-                )
+                !n &&
+                  A.createElement(
+                    "div",
+                    { className: Vm.a.BottomMessage },
+                    oe("#Lunar2020_CheckBackEachDay")
+                  )
               )
             );
           }),
@@ -49262,7 +49272,8 @@
           a =
             w.MEDIA_CDN_URL +
             "store/promo/lunar2020/red_envelope_2020.webm" +
-            (e.bIsFirstOpen ? "" : "#t=5,6");
+            (e.bIsFirstOpen ? "" : "#t=5,6"),
+          o = e.iDoorIndex == yp.GetDoorCount() - 1;
         return A.createElement(
           Ar,
           {
@@ -49324,11 +49335,12 @@
                 { className: Vm.a.StoryPicture },
                 A.createElement("img", { src: yp.GetStoryImage(e.iDoorIndex) })
               ),
-              A.createElement(
-                "div",
-                { className: Vm.a.CheckBackText },
-                oe("#Lunar2020_CheckBackEachDayForStory")
-              )
+              !o &&
+                A.createElement(
+                  "div",
+                  { className: Vm.a.CheckBackText },
+                  oe("#Lunar2020_CheckBackEachDayForStory")
+                )
             )
           ),
           A.createElement(
