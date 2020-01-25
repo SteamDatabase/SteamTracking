@@ -54985,7 +54985,10 @@
                       ? [3, 17]
                       : [4, pg.GetInteractiveRecommendationsOnSale()];
                   case 16:
-                    (b = e.sent()), (e.label = 17);
+                    (b = (b = e.sent()).filter(function(e) {
+                      return !Mn.BOwnsApp(e);
+                    })),
+                      (e.label = 17);
                   case 17:
                     return [3, 18];
                   case 18:

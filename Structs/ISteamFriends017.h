@@ -74,4 +74,5 @@ public:
     virtual unknown_ret IsClanPublic(CSteamID) = 0;
     virtual unknown_ret IsClanOfficialGameGroup(CSteamID) = 0;
     virtual unknown_ret GetNumChatsWithUnreadPriorityMessages() = 0;
+    virtual unknown_ret ActivateGameOverlayRemotePlayTogetherInviteDialog(CSteamID) = 0;
 };

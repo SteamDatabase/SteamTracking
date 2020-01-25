@@ -70,6 +70,7 @@ enum ERemoteDeviceStreamingResult {
 	k_ERemoteDeviceStreamingPINRequired = 11;
 	k_ERemoteDeviceStreamingTransportUnavailable = 12;
 	k_ERemoteDeviceStreamingInvisible = 13;
+	k_ERemoteDeviceStreamingGameLaunchFailed = 14;
 }
 
 message CMsgRemoteClientBroadcastHeader {
@@ -195,10 +196,12 @@ message CMsgRemoteDeviceStreamingResponse {
 
 message CMsgRemoteDeviceProofRequest {
 	required bytes challenge = 1;
+	optional uint32 request_id = 2;
 }
 
 message CMsgRemoteDeviceProofResponse {
 	required bytes response = 1;
+	optional uint32 request_id = 2;
 }
 
 message CMsgRemoteDeviceStreamTransportSignal {

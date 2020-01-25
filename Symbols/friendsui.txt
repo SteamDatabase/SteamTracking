@@ -573,6 +573,7 @@
  D CFriendsDialog::PanelMessageFunc_OnLaunchGame::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OnMenuBarLoaded::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OnOpenSubSettingsVoice::InitVar()::bAdded
+ D CFriendsDialog::PanelMessageFunc_OnRemotePlayTogetherInviteToCurrentGame::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OnRemove::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OnRemoveFriendConfirmed::InitVar()::bAdded
  D CFriendsDialog::PanelMessageFunc_OnRetry::InitVar()::bAdded
@@ -6570,6 +6571,7 @@
  T CFriendsDialog::OnParentalLockChanged(ParentalLockChanged_t*)
  T CFriendsDialog::OnPersonaStateChange(PersonaStateChange_t*)
  T CFriendsDialog::OnPrimaryChatDestinationSet(PrimaryChatDestinationSet_t*)
+ T CFriendsDialog::OnRemotePlayTogetherInviteToCurrentGame(unsigned long long)
  T CFriendsDialog::OnRemove(unsigned long long)
  T CFriendsDialog::OnRemoveFriendConfirmed(unsigned long long)
  T CFriendsDialog::OnRetry(unsigned long long)
@@ -6641,6 +6643,7 @@
  T CFriendsDialog::PanelMessageFunc_OnLaunchGame::InitVar()
  T CFriendsDialog::PanelMessageFunc_OnMenuBarLoaded::InitVar()
  T CFriendsDialog::PanelMessageFunc_OnOpenSubSettingsVoice::InitVar()
+ T CFriendsDialog::PanelMessageFunc_OnRemotePlayTogetherInviteToCurrentGame::InitVar()
  T CFriendsDialog::PanelMessageFunc_OnRemove::InitVar()
  T CFriendsDialog::PanelMessageFunc_OnRemoveFriendConfirmed::InitVar()
  T CFriendsDialog::PanelMessageFunc_OnRetry::InitVar()
@@ -6864,7 +6867,7 @@
  T CFriendsNotification::~CFriendsNotification()
  T CFriendsUIModule::Activate()
  T CFriendsUIModule::ActivateAndFocus(bool)
- T CFriendsUIModule::ActivateFriendInviteDialog(CSteamID)
+ T CFriendsUIModule::ActivateFriendInviteDialog(CSteamID, EInviteDialogType)
  T CFriendsUIModule::ActivateFriendsDialog(bool)
  T CFriendsUIModule::ActivatePlayersDialog()
  T CFriendsUIModule::BHideOfflineFriendsInFriendsList()
@@ -12103,7 +12106,7 @@
  T non-virtual thunk to CFriendsListSectionHeader::OnCollapsed()
  T non-virtual thunk to CFriendsListSectionHeader::OnOpened()
  T non-virtual thunk to CFriendsListSectionHeader::SetColor(Color)
- T non-virtual thunk to CFriendsUIModule::ActivateFriendInviteDialog(CSteamID)
+ T non-virtual thunk to CFriendsUIModule::ActivateFriendInviteDialog(CSteamID, EInviteDialogType)
  T non-virtual thunk to CFriendsUIModule::ActivateFriendsDialog(bool)
  T non-virtual thunk to CFriendsUIModule::ActivatePlayersDialog()
  T non-virtual thunk to CFriendsUIModule::BHideOfflineFriendsInFriendsList()

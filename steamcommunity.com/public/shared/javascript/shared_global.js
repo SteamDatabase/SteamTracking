@@ -1011,10 +1011,10 @@ function BindAJAXHovers( $Hover, $HoverContent, oParams )
 					$Hover.css( 'opacity', '' ); //clean up jquery animation
 					fnPositionHover( $Hover, $Target );
 					$Hover.fadeIn( MINIPROFILE_ANIM_SPEED );
-					let videoElem = $Hover.find( 'video' );
+					var videoElem = $Hover.find( 'video' );
 					if ( videoElem.length != 0 )
 					{
-						let playPromise = videoElem[0].play();
+						var playPromise = videoElem[0].play();
 						if ( playPromise )
 						{
 							playPromise.catch( function( e ) {
