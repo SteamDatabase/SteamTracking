@@ -55,6 +55,13 @@ enum EStreamTransport {
 	k_EStreamTransportUDPRelay_SNS = 6;
 }
 
+enum EStreamInterface {
+	k_EStreamInterfaceDefault = 0;
+	k_EStreamInterfaceRecentGames = 1;
+	k_EStreamInterfaceBigPicture = 2;
+	k_EStreamInterfaceDesktop = 3;
+}
+
 enum ERemoteDeviceStreamingResult {
 	k_ERemoteDeviceStreamingSuccess = 0;
 	k_ERemoteDeviceStreamingUnauthorized = 1;
@@ -173,6 +180,7 @@ message CMsgRemoteDeviceStreamingRequest {
 	optional int32 gamepad_count = 17;
 	repeated .CMsgRemoteDeviceStreamingRequest.ReservedGamepad gamepads = 18;
 	optional uint64 gameid = 19;
+	optional .EStreamInterface stream_interface = 20 [default = k_EStreamInterfaceDefault];
 }
 
 message CMsgRemoteDeviceStreamingCancelRequest {

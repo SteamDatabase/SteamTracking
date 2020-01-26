@@ -119,5 +119,6 @@ message CVirtualControllerGlobalConfig {
 	optional bool feedback_enabled = 1;
 	optional bool gyroscope_enabled = 2 [default = true];
 	optional bool auto_fade_enabled = 3 [default = true];
+	optional bool rumble_enabled = 4 [default = true];
 }
 
