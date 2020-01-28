@@ -3650,7 +3650,7 @@
                             ),
                             onClick: this.ToggleCollapseExpand
                           },
-                          r.createElement(s.P, { bPinned: !i })
+                          r.createElement(s.O, { bPinned: !i })
                         )
                     ),
                     r.createElement("div", { className: "disconnectBlocker" })
@@ -3812,7 +3812,7 @@
                     className: "ChatRoomAddRoomBtn",
                     title: Object(b.c)("#Tooltip_TextChannelCreate")
                   },
-                  r.createElement(s.R, null)
+                  r.createElement(s.Q, null)
                 )
               ),
               n.map(function(n) {
@@ -3888,7 +3888,7 @@
               r.createElement(
                 "div",
                 { className: "chatRoomTextChannelIcon" },
-                r.createElement(s.gb, null)
+                r.createElement(s.fb, null)
               ),
               !o &&
                 r.createElement(
@@ -3961,7 +3961,7 @@
                     className: "ChatRoomAddRoomBtn",
                     title: Object(b.c)("#Tooltip_VoiceChannelCreate")
                   },
-                  r.createElement(s.R, null)
+                  r.createElement(s.Q, null)
                 )
               ),
               n.map(function(n) {
@@ -4177,7 +4177,7 @@
                 r.createElement(
                   "div",
                   { className: "chatRoomVoiceChannelIcon" },
-                  r.createElement(s.nb, null)
+                  r.createElement(s.mb, null)
                 ),
                 !this.props.bRenameActive &&
                   r.createElement(
@@ -4676,7 +4676,7 @@
                           e && e.close();
                         }
                       },
-                      r.createElement(i.qb, null)
+                      r.createElement(i.pb, null)
                     ),
                     !this.props.hideMinMax &&
                       r.createElement(
@@ -4687,8 +4687,8 @@
                             e.SteamClient.Window.ToggleMaximize();
                           }
                         },
-                        this.state.maximized && r.createElement(i.V, null),
-                        !this.state.maximized && r.createElement(i.H, null)
+                        this.state.maximized && r.createElement(i.U, null),
+                        !this.state.maximized && r.createElement(i.G, null)
                       ),
                     !this.props.hideMinMax &&
                       r.createElement(
@@ -4699,7 +4699,7 @@
                             e.SteamClient.Window.Minimize();
                           }
                         },
-                        r.createElement(i.K, null)
+                        r.createElement(i.J, null)
                       )
                   )
               )
@@ -5622,7 +5622,7 @@
             },
             !t && m.createElement(O, null),
             m.createElement("span", null, e.friend.display_name),
-            m.createElement(h.qb, null)
+            m.createElement(h.pb, null)
           )
         )
       );
@@ -19069,7 +19069,7 @@
                               t.InviteToVoice(T, o);
                             }
                           },
-                          c.createElement(G.nb, null),
+                          c.createElement(G.mb, null),
                           Object(p.c)("#Chat_Actions_InviteFriend_VoiceChat")
                         )
                       )
@@ -19551,7 +19551,7 @@
                   c.createElement(
                     "button",
                     { className: t, onClick: this.OnMutingClick },
-                    c.createElement(G.ob, null)
+                    c.createElement(G.nb, null)
                   ),
                   c.createElement(u.z, {
                     min: 0,
@@ -19919,7 +19919,7 @@
                         key: "showinsteam",
                         onSelected: this.ShowInSteam
                       },
-                      c.createElement(G.Q, null),
+                      c.createElement(G.P, null),
                       Object(p.c)("#Friend_Menu_ShowInSteam")
                     )
                   )
@@ -19934,7 +19934,7 @@
                             key: "joinparty",
                             onSelected: this.JoinPartyBeacon
                           },
-                          c.createElement(G.Q, null),
+                          c.createElement(G.P, null),
                           Object(p.c)("#Friend_Menu_JoinFriendPartyBeacon")
                         )
                       )
@@ -19950,7 +19950,7 @@
                             key: "joingame",
                             onSelected: this.JoinGame
                           },
-                          c.createElement(G.Q, null),
+                          c.createElement(G.P, null),
                           Object(p.c)("#Friend_Menu_JoinFriendGame")
                         )
                       ),
@@ -19963,7 +19963,7 @@
                         key: "launchgame",
                         onSelected: this.LaunchGame
                       },
-                      c.createElement(G.Q, null),
+                      c.createElement(G.P, null),
                       Object(p.c)("#Friend_Menu_LaunchFriendGame")
                     )
                   )),
@@ -20579,8 +20579,8 @@
               i.a.createElement(
                 "div",
                 { className: c.a.Throbber },
-                i.a.createElement(a.hb, { className: c.a.base }),
-                i.a.createElement(a.hb, { className: c.a.blur })
+                i.a.createElement(a.gb, { className: c.a.base }),
+                i.a.createElement(a.gb, { className: c.a.blur })
               )
             );
             return i.a.createElement(
@@ -21137,7 +21137,7 @@
                     className: "chatTabOpenFriendsList",
                     onClick: this.ShowFriendsList
                   },
-                  v.createElement(I.x, null),
+                  v.createElement(I.w, null),
                   Object(w.c)("#FriendsList_ExpandButton")
                 ),
               this.props.tabSet.tabCount > 0 &&
@@ -21396,7 +21396,7 @@
                           ? Object(w.c)("#Tooltip_MicStatus_Muted")
                           : Object(w.c)("#Tooltip_MicStatus_Active")
                       },
-                      v.createElement(I.J, null)
+                      v.createElement(I.I, null)
                     ),
                   v.createElement(
                     G.a,
@@ -21436,7 +21436,7 @@
           onClick: e.onClick,
           onMouseDown: e.onMouseDown
         },
-        v.createElement(I.qb, null)
+        v.createElement(I.pb, null)
       );
     }
     var F = (function(e) {
@@ -22995,7 +22995,7 @@
                         i.a.createElement(
                           m.d,
                           {
-                            svgicon: d.v,
+                            svgicon: d.u,
                             className: "watchHowButton",
                             onClick: this.WatchAlone
                           },
@@ -23050,7 +23050,7 @@
                         m.d,
                         {
                           className: "watchHowButton newWatchGroup",
-                          svgicon: d.M,
+                          svgicon: d.L,
                           onClick: function() {
                             return e.CreateWatchParty(!1);
                           }
@@ -23229,7 +23229,7 @@
                       i.a.createElement(
                         "div",
                         { className: "STV_Logo" },
-                        i.a.createElement(d.db, null)
+                        i.a.createElement(d.cb, null)
                       ),
                       i.a.createElement(
                         "div",
@@ -23283,7 +23283,7 @@
       return i.a.createElement(
         "div",
         { className: "BroadcastButton WatchWithFriends", onClick: e.onClick },
-        i.a.createElement(d.mb, null),
+        i.a.createElement(d.lb, null),
         Object(g.c)("#Broadcast_WatchWithFriends")
       );
     }
@@ -23295,7 +23295,7 @@
           title: Object(g.c)("#Broadcast_ToggleChat"),
           onClick: e.onClick
         },
-        i.a.createElement(d.A, { showChat: e.hideIcon })
+        i.a.createElement(d.z, { showChat: e.hideIcon })
       );
     }
     function P() {
@@ -25569,7 +25569,7 @@
                   className: "dash_stat_close_button",
                   onClick: this.HideStats
                 },
-                r.createElement(a.qb, null)
+                r.createElement(a.pb, null)
               ),
               r.createElement(
                 "div",
@@ -27017,7 +27017,7 @@
               i.a.createElement(
                 "div",
                 { className: B.a.LoginPanelBackground },
-                i.a.createElement(a.cb, null)
+                i.a.createElement(a.bb, null)
               ),
               i.a.createElement(
                 "div",
@@ -27278,7 +27278,7 @@
               case q.TwoFactorCode:
                 (n = t.GetTwoFactorCode()),
                   (o = Object(f.c)("#Login_Enter2FA")),
-                  (e = i.a.createElement(a.E, null)),
+                  (e = i.a.createElement(a.D, null)),
                   (r = Object(f.c)("#Login_Enter2FAHelp"));
                 break;
               case q.EmailCode:
@@ -27293,7 +27293,7 @@
                     )
                   )),
                   (r = Object(f.c)("#Login_EnterSteamguard")),
-                  (e = i.a.createElement(a.r, null));
+                  (e = i.a.createElement(a.q, null));
             }
             return i.a.createElement(
               "div",
@@ -29300,7 +29300,7 @@
                 className: "BroadcastVideoUserInputNeeded",
                 onClick: this.OnClick
               },
-              r.createElement(a.Q, null),
+              r.createElement(a.P, null),
               r.createElement(
                 "span",
                 null,
@@ -29698,7 +29698,7 @@
                         className: pt.a.LinkRegionDelete,
                         onClick: this.HandleDelete
                       },
-                      r.createElement(a.qb, null)
+                      r.createElement(a.pb, null)
                     ),
                   !this.props.bDisableLink &&
                     r.createElement(
@@ -29707,7 +29707,7 @@
                         className: pt.a.LinkRegionSettings,
                         onClick: this.OnEditLink
                       },
-                      r.createElement(a.N, null)
+                      r.createElement(a.M, null)
                     ),
                   r.createElement(
                     "div",
@@ -30230,7 +30230,7 @@
                     className: "STV_BroadcastClose",
                     onClick: this.props.onClick
                   },
-                  r.createElement(a.qb, null)
+                  r.createElement(a.pb, null)
                 )
               : null;
           }),
@@ -30264,7 +30264,7 @@
                       "videoControlButton videoControlJump controlFlip",
                     onClick: this.OnJumpBackward
                   },
-                  r.createElement(a.I, {
+                  r.createElement(a.H, {
                     bHidePostArrow: !0,
                     bHidePreArrow: !0,
                     bShowJumpAheadBox: !0,
@@ -30280,7 +30280,7 @@
                     className: "videoControlButton videoControlJump",
                     onClick: this.OnJumpForward
                   },
-                  r.createElement(a.I, {
+                  r.createElement(a.H, {
                     bHidePostArrow: !0,
                     bHidePreArrow: !0,
                     bShowJumpAheadBox: !0,
@@ -30318,7 +30318,7 @@
                     (e ? " isLiveEdge" : ""),
                   onClick: e ? null : this.OnGoLiveClicked
                 },
-                r.createElement(a.I, {
+                r.createElement(a.H, {
                   bHidePreArrow: !0,
                   bHidePostArrow: !0,
                   bFlipHorizontal: !1
@@ -30354,7 +30354,7 @@
                 className: "videoControlButton buttonPlayPause",
                 onClick: this.OnTogglePlayPause
               },
-              e ? r.createElement(a.Q, null) : r.createElement(a.O, null)
+              e ? r.createElement(a.P, null) : r.createElement(a.N, null)
             );
           }),
           Object(o.c)([p.a], t.prototype, "OnTogglePlayPause", null),
@@ -30400,7 +30400,7 @@
                   (this.has_previous_marker ? "" : " noMarkersInDirection"),
                 onClick: this.OnJumpToPreviousMarkerClicked
               },
-              r.createElement(a.I, { bHidePostArrow: !0, bFlipHorizontal: !0 })
+              r.createElement(a.H, { bHidePostArrow: !0, bFlipHorizontal: !0 })
             );
           }),
           Object(o.c)([c.i], t.prototype, "has_previous_marker", null),
@@ -30452,7 +30452,7 @@
                   (this.has_next_marker ? "" : " noMarkersInDirection"),
                 onClick: this.OnJumpToNextMarkerClicked
               },
-              r.createElement(a.I, { bHidePostArrow: !0, bFlipHorizontal: !1 })
+              r.createElement(a.H, { bHidePostArrow: !0, bFlipHorizontal: !1 })
             );
           }),
           Object(o.c)([c.i], t.prototype, "has_next_marker", null),
@@ -30636,7 +30636,7 @@
                   onClick: this.OnVideoControlClick,
                   ref: this.bindSettingsButton
                 },
-                r.createElement(a.Z, null)
+                r.createElement(a.Y, null)
               ),
               r.createElement(Ct, { video: c }),
               l &&
@@ -30772,7 +30772,7 @@
                   r.createElement(
                     "div",
                     { className: o, onClick: this.ToggleMute },
-                    r.createElement(a.ob, null)
+                    r.createElement(a.nb, null)
                   ),
                   r.createElement(Ot, { video: e, onDrag: this.OnChildDrag })
                 )
@@ -30886,7 +30886,7 @@
           r.createElement(
             "div",
             { className: "timelineMarkerIcon" },
-            r.createElement(a.X, null)
+            r.createElement(a.W, null)
           )
         );
       };
@@ -31218,7 +31218,7 @@
                         r.createElement(
                           "div",
                           { className: "STV_timelineGrabberArrow" },
-                          r.createElement(a.W, null)
+                          r.createElement(a.V, null)
                         )
                       )
                     )
@@ -31321,7 +31321,7 @@
                       r.createElement(
                         "div",
                         { className: "BroadcastDetailsHeader_ViewerCount" },
-                        r.createElement(a.mb, null),
+                        r.createElement(a.lb, null),
                         Object(f.c)("#Broadcast_ViewerCount", n)
                       )
                   ),
@@ -33566,42 +33566,38 @@
               r = e.useImg,
               a = [n],
               s = !1;
-            if (
-              (t ? a.push("disabled") : this.BHaveUnseenEmoticons() && (s = !0),
-              o && a.push("ttip"),
-              r)
-            )
-              return i.a.createElement(
-                "span",
-                { onClick: this.OnEmoticonClick },
-                i.a.createElement("img", {
-                  src: this.props.useImg,
-                  className: m.a.apply(void 0, a),
-                  title:
-                    this.props.title ||
-                    Object(u.c)("#ChatEntryButton_Emoticon"),
-                  "data-tooltip-text": o
-                })
-              );
-            var c = this.props.bShowStickers || this.props.bShowEffects;
             return (
-              a.push(h.a.chatSubmitButton, h.a.EmoticonPickerButton),
-              i.a.createElement(
-                "button",
-                {
-                  className: m.a.apply(void 0, a),
-                  type: "button",
-                  onClick: this.OnEmoticonClick,
-                  title:
-                    this.props.title ||
-                    Object(u.c)("#ChatEntryButton_Emoticon"),
-                  disabled: t,
-                  "data-tooltip-text": o
-                },
-                this.props.buttonIcon || i.a.createElement(p.p, null),
-                s && !c && i.a.createElement(l.c, null),
-                s && c && i.a.createElement(p.q, { className: h.a.EmoticonBow })
-              )
+              t ? a.push("disabled") : this.BHaveUnseenEmoticons() && (s = !0),
+              o && a.push("ttip"),
+              r
+                ? i.a.createElement(
+                    "span",
+                    { onClick: this.OnEmoticonClick },
+                    i.a.createElement("img", {
+                      src: this.props.useImg,
+                      className: m.a.apply(void 0, a),
+                      title:
+                        this.props.title ||
+                        Object(u.c)("#ChatEntryButton_Emoticon"),
+                      "data-tooltip-text": o
+                    })
+                  )
+                : (a.push(h.a.chatSubmitButton, h.a.EmoticonPickerButton),
+                  i.a.createElement(
+                    "button",
+                    {
+                      className: m.a.apply(void 0, a),
+                      type: "button",
+                      onClick: this.OnEmoticonClick,
+                      title:
+                        this.props.title ||
+                        Object(u.c)("#ChatEntryButton_Emoticon"),
+                      disabled: t,
+                      "data-tooltip-text": o
+                    },
+                    this.props.buttonIcon || i.a.createElement(p.p, null),
+                    s && i.a.createElement(l.c, null)
+                  ))
             );
           }),
           Object(o.c)([s.a], t.prototype, "OnEmoticonClick", null),
@@ -34524,8 +34520,7 @@
       disabled: "chatentry_disabled_2p2vW",
       Inactive: "chatentry_Inactive_gFWg4",
       AudioLines: "chatentry_AudioLines_3fUht",
-      Active: "chatentry_Active_224Fj",
-      EmoticonBow: "chatentry_EmoticonBow_1r65D"
+      Active: "chatentry_Active_224Fj"
     };
   },
   UMCL: function(e, t, n) {
@@ -41448,7 +41443,7 @@
         return S.createElement(
           "div",
           Object(o.a)({ className: H.a.LeaveButton }, e),
-          S.createElement(I.s, null),
+          S.createElement(I.r, null),
           Object(D.c)("#GroupSettings_Leave_Section")
         );
       },
@@ -41902,7 +41897,7 @@
                           (void 0 === o ? " Disabled" : ""),
                         onClick: o
                       },
-                      S.createElement(I.t, { angle: 0 })
+                      S.createElement(I.s, { angle: 0 })
                     ),
                     S.createElement(
                       "div",
@@ -41912,7 +41907,7 @@
                           (void 0 === i ? " Disabled" : ""),
                         onClick: i
                       },
-                      S.createElement(I.t, { angle: 180 })
+                      S.createElement(I.s, { angle: 180 })
                     )
                   )
             );
@@ -41987,8 +41982,8 @@
                       "div",
                       { className: "_DialogRowLabel" },
                       a
-                        ? S.createElement(I.nb, null)
-                        : S.createElement(I.gb, null),
+                        ? S.createElement(I.mb, null)
+                        : S.createElement(I.fb, null),
                       S.createElement(
                         "div",
                         {
@@ -42055,7 +42050,7 @@
                     O.d,
                     {
                       className: "DialogButtonTall",
-                      svgicon: I.gb,
+                      svgicon: I.fb,
                       onClick: this.OnCreateNewTextChannel,
                       disabled: !n
                     },
@@ -42068,7 +42063,7 @@
                     {
                       className: "DialogButtonTall",
                       svgicon: function() {
-                        return I.nb({});
+                        return I.mb({});
                       },
                       onClick: this.OnCreateNewVoiceChannel,
                       disabled: !n
@@ -42342,7 +42337,7 @@
                               e.MoveRoleUp(n.role_id), t.stopPropagation();
                             }
                           },
-                          S.createElement(I.t, { angle: 0 })
+                          S.createElement(I.s, { angle: 0 })
                         ),
                         S.createElement(
                           "div",
@@ -42354,7 +42349,7 @@
                               e.MoveRoleDown(n.role_id), t.stopPropagation();
                             }
                           },
-                          S.createElement(I.t, { angle: 180 })
+                          S.createElement(I.s, { angle: 180 })
                         )
                       )
                   )
@@ -42457,7 +42452,7 @@
                     {
                       className: "createNewRoleButton",
                       svgicon: function() {
-                        return I.R({ minus: !1, nocircle: !1 });
+                        return I.Q({ minus: !1, nocircle: !1 });
                       },
                       onClick: this.OnCreateRole,
                       disabled: !t.BCanICreateRoles()
@@ -42612,7 +42607,7 @@
                     return i();
                   }
                 },
-                S.createElement(I.fb, null),
+                S.createElement(I.eb, null),
                 Object(D.c)("#GroupSettings_Permissions_BackButton")
               ),
               !l &&
@@ -43352,7 +43347,7 @@
         return S.createElement(
           "div",
           { className: H.a.Notification },
-          S.createElement(I.F, null),
+          S.createElement(I.E, null),
           e.children || Object(D.c)("#Chat_Settings_Permission_Denied")
         );
       },
@@ -43475,7 +43470,7 @@
                               onClick: this.InviteFriend,
                               title: Object(D.c)("#Tooltip_InviteToGroup")
                             },
-                            S.createElement(I.D, null)
+                            S.createElement(I.C, null)
                           ),
                         !r &&
                           S.createElement(
@@ -43488,7 +43483,7 @@
                                 "#Tooltip_InviteToGroup_Denied"
                               )
                             },
-                            S.createElement(I.D, null)
+                            S.createElement(I.C, null)
                           ),
                         S.createElement(
                           "div",
@@ -43608,7 +43603,7 @@
                   S.createElement(
                     "div",
                     { className: "actions", onClick: this.OnRemoveBroadcast },
-                    S.createElement(I.pb, null)
+                    S.createElement(I.ob, null)
                   )
               )
             );
@@ -44165,7 +44160,7 @@
             },
             !t && s.createElement(S, null),
             s.createElement("span", null, e.friend.display_name),
-            s.createElement(_.qb, null)
+            s.createElement(_.pb, null)
           )
         )
       );
@@ -44516,7 +44511,7 @@
                           className: h.a.gameIsPrivateIcon,
                           title: Object(a.c)("#User_GameInfoHidden")
                         },
-                        r.createElement(u.z, null)
+                        r.createElement(u.y, null)
                       ),
                     A
                   ),
@@ -46475,8 +46470,8 @@
               v.createElement(
                 "button",
                 { className: o, onClick: this.ToggleMicrophone, title: r },
-                v.createElement(N.J, null),
-                v.createElement(N.J, { className: "SVGIcon_Shadow" })
+                v.createElement(N.I, null),
+                v.createElement(N.I, { className: "SVGIcon_Shadow" })
               )
             );
           }),
@@ -46508,8 +46503,8 @@
               v.createElement(
                 "button",
                 { className: t, onClick: this.ToggleVoiceOutput, title: n },
-                v.createElement(N.y, null),
-                v.createElement(N.y, { className: "SVGIcon_Shadow" })
+                v.createElement(N.x, null),
+                v.createElement(N.x, { className: "SVGIcon_Shadow" })
               )
             );
           }),
@@ -46534,7 +46529,7 @@
                 onClick: this.EndVoiceChat,
                 title: Object(C.c)("#VoiceChat_Leave")
               },
-              v.createElement(N.nb, null)
+              v.createElement(N.mb, null)
             );
           }),
           Object(o.c)([O.a], t.prototype, "EndVoiceChat", null),
@@ -46811,7 +46806,7 @@
                             ? Object(C.c)("#Tooltip_FriendsListUpdate_VeryOld")
                             : Object(C.c)("#Tooltip_FriendsListUpdate")
                         },
-                        v.createElement(N.T, null)
+                        v.createElement(N.S, null)
                       ),
                     v.createElement(
                       "div",
@@ -46821,7 +46816,7 @@
                         onClick: this.OnSettingsClick,
                         title: Object(C.c)("#Tooltip_Settings")
                       },
-                      v.createElement(N.Z, null)
+                      v.createElement(N.Y, null)
                     )
                   ),
                   v.createElement(
@@ -46916,7 +46911,7 @@
                                             className: "friendSearchClear",
                                             onClick: this.OnClearSearch
                                           },
-                                          v.createElement(N.qb, null)
+                                          v.createElement(N.pb, null)
                                         )
                                       )
                                     )
@@ -46930,7 +46925,7 @@
                                 onClick: this.OnTabSearchClick,
                                 title: Object(C.c)("#Tooltip_SearchFriends")
                               },
-                              v.createElement(N.G, null)
+                              v.createElement(N.F, null)
                             )
                           ),
                           (n || o || i) &&
@@ -46941,7 +46936,7 @@
                                 onClick: this.ToggleViewingIncomingInvites,
                                 title: Object(C.d)("#Tooltip_FriendRequest", a)
                               },
-                              v.createElement(N.v, null),
+                              v.createElement(N.u, null),
                               a > 0 &&
                                 v.createElement(
                                   "div",
@@ -47082,7 +47077,7 @@
                         ? Object(C.c)("#changeLog_Value_Button", t)
                         : Object(C.c)("#changeLog_Button")
                     },
-                    v.createElement(N.Y, null),
+                    v.createElement(N.X, null),
                     e &&
                       v.createElement(
                         "div",
@@ -47907,7 +47902,7 @@
                       onClick: this.OnCreateChatRoom,
                       title: Object(C.c)("#Tooltip_CreateGroupChat")
                     },
-                    v.createElement(N.M, null)
+                    v.createElement(N.L, null)
                   ),
                   v.createElement("div", { className: "disconnectBlocker" })
                 ),
@@ -48406,7 +48401,7 @@
                                   },
                                   title: Object(C.c)("#FriendGroup_Tip_Decline")
                                 },
-                                v.createElement(N.qb, null)
+                                v.createElement(N.pb, null)
                               )
                             ),
                           u &&
@@ -48518,7 +48513,7 @@
                       v.createElement(
                         "div",
                         { className: "ExpandPlusMinus" },
-                        v.createElement(N.R, null)
+                        v.createElement(N.Q, null)
                       ),
                       this.props.group.icon_url &&
                         v.createElement("img", {
@@ -48550,7 +48545,7 @@
                           ? Object(C.c)("#FriendGroup_Tip_SortByRecent")
                           : Object(C.c)("#FriendGroup_Tip_SortByAlphabet")
                       },
-                      v.createElement(N.bb, null)
+                      v.createElement(N.ab, null)
                     )
                 ),
                 v.createElement(
@@ -48880,7 +48875,7 @@
                     v.createElement(
                       "div",
                       { className: "ExpandPlusMinus" },
-                      v.createElement(N.R, null)
+                      v.createElement(N.Q, null)
                     ),
                     L,
                     this.props.group.icon_url &&
@@ -49164,7 +49159,7 @@
                 S = v.createElement(
                   E.b,
                   { persona: e.persona, size: y, statusStyle: h },
-                  this.props.bInVoiceList && b && v.createElement(N.ob, null)
+                  this.props.bInVoiceList && b && v.createElement(N.nb, null)
                 );
               this.props.noActions ||
                 (S = v.createElement(
@@ -49310,7 +49305,7 @@
                     className: "voicestatusIcon voiceStatusMic disabled",
                     title: o
                   },
-                  v.createElement(N.J, null)
+                  v.createElement(N.I, null)
                 ),
                 v.createElement(
                   "div",
@@ -49318,7 +49313,7 @@
                     className: "voicestatusIcon voiceStatusOutput disabled",
                     title: r
                   },
-                  v.createElement(N.y, null)
+                  v.createElement(N.x, null)
                 )
               )
             );
@@ -49448,7 +49443,7 @@
                 v.createElement(
                   "div",
                   { className: "ExpandPlusMinus" },
-                  v.createElement(N.R, null)
+                  v.createElement(N.Q, null)
                 ),
                 Object(C.c)("#FriendGroup_UnreadMessages"),
                 v.createElement(
@@ -51043,7 +51038,7 @@
                 },
                 i
               ),
-              r.createElement(l.L, null)
+              r.createElement(l.K, null)
             ),
           m &&
             r.createElement(
@@ -51060,7 +51055,7 @@
                 },
                 i
               ),
-              r.createElement(l.kb, null)
+              r.createElement(l.jb, null)
             ),
           d &&
             r.createElement(
@@ -51332,7 +51327,7 @@
                     (e = r.createElement(
                       "div",
                       { className: "ChatMessageErrorPermissionDeniedAlert" },
-                      r.createElement(l.F, null),
+                      r.createElement(l.E, null),
                       Object(M.c)("#Chat_ErrorPermissionDenied")
                     ));
                   break;
@@ -52215,7 +52210,7 @@
                 onClick: this.OnDeleteMessages,
                 title: Object(M.c)("#Chat_Actions_Delete")
               },
-              r.createElement(l.jb, null)
+              r.createElement(l.ib, null)
             );
           }),
           Object(o.c)([p.a], t.prototype, "OnMouseEnter", null),
@@ -53270,7 +53265,7 @@
                     src: this.props.fileUploadManager.file_upload_data_url
                   }))
                 : -1 != t.type.indexOf("video") &&
-                  (e = r.createElement(l.lb, null)),
+                  (e = r.createElement(l.kb, null)),
               r.createElement(
                 "div",
                 { className: "chatFileUploadPreviewContainer" },
@@ -53288,7 +53283,7 @@
                     className: "chatFileUploadCancel",
                     onClick: this.OnCancelClick
                   },
-                  r.createElement(l.qb, null)
+                  r.createElement(l.pb, null)
                 ),
                 r.createElement(
                   "button",
@@ -53836,7 +53831,7 @@
                       disabled: !this.state.submitEnabled,
                       title: Object(M.c)("#ChatEntryButton_Submit")
                     },
-                    r.createElement(l.eb, null)
+                    r.createElement(l.db, null)
                   ),
                   r.createElement("input", {
                     type: "file",
@@ -53882,7 +53877,7 @@
                         title: Object(M.c)("#ChatEntryButton_SendEmbed"),
                         disabled: n
                       },
-                      r.createElement(l.N, null)
+                      r.createElement(l.M, null)
                     )
                   ),
                   r.createElement(Ue, { chat: o })
@@ -54032,7 +54027,7 @@
                     r.createElement(
                       "div",
                       { className: "VoiceToggleIconCtn" },
-                      r.createElement(l.nb, null)
+                      r.createElement(l.mb, null)
                     )
                   ),
                   r.createElement(
@@ -54054,7 +54049,7 @@
                             onClick: this.OnSettingsClick,
                             title: Object(M.c)("#Tooltip_VoiceSettings")
                           },
-                          r.createElement(l.Z, null)
+                          r.createElement(l.Y, null)
                         )
                       )
                     )
@@ -54625,7 +54620,7 @@
                           className: "friendSearchClear",
                           onClick: this.OnClearSearch
                         },
-                        r.createElement(l.qb, null)
+                        r.createElement(l.pb, null)
                       )
                     )
                   )
@@ -54916,13 +54911,13 @@
                 r.createElement(
                   "div",
                   { className: "groupIcon" },
-                  r.createElement(l.x, null)
+                  r.createElement(l.w, null)
                 ),
                 this.props.collapsible &&
                   r.createElement(
                     "div",
                     { className: "ExpandPlusMinus" },
-                    r.createElement(l.R, null)
+                    r.createElement(l.Q, null)
                   ),
                 r.createElement(
                   "span",
@@ -55025,7 +55020,7 @@
                   r.createElement(
                     "div",
                     { key: "friendIcon", className: "chatMemberFriendIcon" },
-                    r.createElement(l.u, null)
+                    r.createElement(l.t, null)
                   )
                 );
                 break;
@@ -55034,7 +55029,7 @@
                   r.createElement(
                     "div",
                     { key: "friendIcon", className: "chatMemberFriendIcon" },
-                    r.createElement(l.u, { bPending: !0 })
+                    r.createElement(l.t, { bPending: !0 })
                   )
                 );
             }
@@ -55043,7 +55038,7 @@
                 r.createElement(
                   "div",
                   { key: "playIcon", className: "chatMemberPartyBeaconIcon" },
-                  r.createElement(l.Q, null)
+                  r.createElement(l.P, null)
                 )
               );
             var p = {
@@ -55305,7 +55300,7 @@
                   onClick: this.HideChat,
                   title: Object(M.c)("#Broadcast_View_HideChat")
                 },
-                r.createElement(l.A, { showChat: !1 })
+                r.createElement(l.z, { showChat: !1 })
               ),
               r.createElement(
                 "div",
@@ -55343,7 +55338,7 @@
                         return e.SetGlobalBroadcastChatShown(!0);
                       }
                     },
-                    r.createElement(l.w, null),
+                    r.createElement(l.v, null),
                     r.createElement(
                       "span",
                       { className: "InnerChatTabLabel" },
@@ -55362,7 +55357,7 @@
                       : "#Broadcast_View_ShowBothChats"
                   )
                 },
-                r.createElement(l.ab, null)
+                r.createElement(l.Z, null)
               )
             );
           }),
@@ -55604,7 +55599,7 @@
                                         );
                                       }
                                     },
-                                    r.createElement(l.w, null),
+                                    r.createElement(l.v, null),
                                     r.createElement(
                                       "span",
                                       { className: "InnerChatTabLabel" },
@@ -55932,7 +55927,7 @@
                   onClick: this.HideChat,
                   title: Object(M.c)("#Broadcast_View_HideChat")
                 },
-                r.createElement(l.A, { showChat: !1 })
+                r.createElement(l.z, { showChat: !1 })
               ),
               r.createElement(wt, {
                 chatView: this.props.chatView,
@@ -56790,7 +56785,7 @@
               r.createElement(
                 "div",
                 { className: "VoiceToggleIconCtn" },
-                r.createElement(l.nb, null),
+                r.createElement(l.mb, null),
                 r.createElement(
                   "div",
                   { className: "Sonar" },
@@ -56814,7 +56809,7 @@
                       ? Object(M.c)("#Voice_EndVoice")
                       : Object(M.c)("#Tooltip_DismissVoice")
                   },
-                  r.createElement(l.qb, null)
+                  r.createElement(l.pb, null)
                 )
             );
           }),
@@ -56984,7 +56979,7 @@
                 (p = r.createElement(
                   "div",
                   { className: "displayRow" },
-                  r.createElement(l.nb, null)
+                  r.createElement(l.mb, null)
                 )));
             var v = null,
               S = !0;
@@ -57100,7 +57095,7 @@
                           : r.createElement(
                               "div",
                               { className: "staticX" },
-                              r.createElement(l.qb, null)
+                              r.createElement(l.pb, null)
                             ),
                         p,
                         r.createElement(
@@ -57219,7 +57214,7 @@
                     ? this.AddFriendClick
                     : this.AddFriendClickNotInBeta
                 },
-                r.createElement(l.D, null)
+                r.createElement(l.C, null)
               )
             );
           }),
@@ -57238,7 +57233,7 @@
             onClick: t,
             title: Object(M.c)("#Broadcast_View_ShowChat")
           },
-          r.createElement(l.A, { showChat: !0 })
+          r.createElement(l.z, { showChat: !0 })
         );
       },
       Mt = r.forwardRef(function(e, t) {
@@ -57353,7 +57348,7 @@
                             className: "MinimizeTextChat",
                             onClick: this.OnTextChannelCloseClick
                           },
-                          r.createElement(l.qb, null)
+                          r.createElement(l.pb, null)
                         )
                       ),
                       r.createElement(
@@ -57556,224 +57551,220 @@
   },
   e2SU: function(e, t, n) {
     "use strict";
-    n.d(t, "B", function() {
-      return p;
+    n.d(t, "A", function() {
+      return c;
     }),
-      n.d(t, "Z", function() {
-        return u;
+      n.d(t, "Y", function() {
+        return l;
       }),
       n.d(t, "g", function() {
-        return m;
+        return p;
       }),
       n.d(t, "j", function() {
-        return d;
+        return u;
       }),
       n.d(t, "o", function() {
-        return h;
-      }),
-      n.d(t, "G", function() {
-        return f;
-      }),
-      n.d(t, "J", function() {
-        return _;
-      }),
-      n.d(t, "p", function() {
-        return g;
-      }),
-      n.d(t, "eb", function() {
-        return b;
-      }),
-      n.d(t, "U", function() {
-        return v;
-      }),
-      n.d(t, "S", function() {
-        return y;
-      }),
-      n.d(t, "pb", function() {
-        return S;
-      }),
-      n.d(t, "qb", function() {
-        return C;
-      }),
-      n.d(t, "nb", function() {
-        return O;
-      }),
-      n.d(t, "s", function() {
-        return I;
-      }),
-      n.d(t, "gb", function() {
-        return E;
-      }),
-      n.d(t, "y", function() {
-        return w;
-      }),
-      n.d(t, "x", function() {
-        return D;
-      }),
-      n.d(t, "P", function() {
-        return M;
-      }),
-      n.d(t, "R", function() {
-        return T;
-      }),
-      n.d(t, "a", function() {
-        return R;
-      }),
-      n.d(t, "v", function() {
-        return G;
-      }),
-      n.d(t, "D", function() {
-        return A;
-      }),
-      n.d(t, "N", function() {
-        return j;
-      }),
-      n.d(t, "ob", function() {
-        return k;
-      }),
-      n.d(t, "M", function() {
-        return L;
-      }),
-      n.d(t, "k", function() {
-        return N;
-      }),
-      n.d(t, "Q", function() {
-        return P;
-      }),
-      n.d(t, "O", function() {
-        return B;
-      }),
-      n.d(t, "bb", function() {
-        return F;
-      }),
-      n.d(t, "h", function() {
-        return x;
-      }),
-      n.d(t, "l", function() {
-        return V;
-      }),
-      n.d(t, "f", function() {
-        return U;
+        return m;
       }),
       n.d(t, "F", function() {
-        return H;
-      }),
-      n.d(t, "hb", function() {
-        return W;
-      }),
-      n.d(t, "lb", function() {
-        return z;
-      }),
-      n.d(t, "C", function() {
-        return q;
-      }),
-      n.d(t, "c", function() {
-        return K;
-      }),
-      n.d(t, "b", function() {
-        return Y;
-      }),
-      n.d(t, "n", function() {
-        return Q;
-      }),
-      n.d(t, "fb", function() {
-        return J;
-      }),
-      n.d(t, "H", function() {
-        return Z;
-      }),
-      n.d(t, "K", function() {
-        return X;
-      }),
-      n.d(t, "V", function() {
-        return $;
-      }),
-      n.d(t, "T", function() {
-        return ee;
-      }),
-      n.d(t, "ib", function() {
-        return te;
-      }),
-      n.d(t, "jb", function() {
-        return ne;
-      }),
-      n.d(t, "Y", function() {
-        return oe;
-      }),
-      n.d(t, "t", function() {
-        return re;
-      }),
-      n.d(t, "u", function() {
-        return ie;
-      }),
-      n.d(t, "m", function() {
-        return ae;
+        return d;
       }),
       n.d(t, "I", function() {
-        return se;
+        return h;
+      }),
+      n.d(t, "p", function() {
+        return f;
       }),
       n.d(t, "db", function() {
-        return ce;
+        return _;
       }),
-      n.d(t, "cb", function() {
-        return le;
+      n.d(t, "T", function() {
+        return g;
+      }),
+      n.d(t, "R", function() {
+        return b;
+      }),
+      n.d(t, "ob", function() {
+        return v;
+      }),
+      n.d(t, "pb", function() {
+        return y;
       }),
       n.d(t, "mb", function() {
-        return pe;
-      }),
-      n.d(t, "w", function() {
-        return ue;
-      }),
-      n.d(t, "W", function() {
-        return me;
-      }),
-      n.d(t, "X", function() {
-        return de;
-      }),
-      n.d(t, "A", function() {
-        return he;
-      }),
-      n.d(t, "ab", function() {
-        return fe;
-      }),
-      n.d(t, "d", function() {
-        return _e;
-      }),
-      n.d(t, "L", function() {
-        return ge;
-      }),
-      n.d(t, "kb", function() {
-        return be;
-      }),
-      n.d(t, "E", function() {
-        return ve;
+        return S;
       }),
       n.d(t, "r", function() {
-        return ye;
+        return C;
       }),
-      n.d(t, "rb", function() {
-        return Se;
+      n.d(t, "fb", function() {
+        return O;
       }),
-      n.d(t, "e", function() {
-        return Ce;
+      n.d(t, "x", function() {
+        return I;
       }),
-      n.d(t, "i", function() {
-        return Oe;
+      n.d(t, "w", function() {
+        return E;
+      }),
+      n.d(t, "O", function() {
+        return w;
+      }),
+      n.d(t, "Q", function() {
+        return D;
+      }),
+      n.d(t, "a", function() {
+        return M;
+      }),
+      n.d(t, "u", function() {
+        return T;
+      }),
+      n.d(t, "C", function() {
+        return R;
+      }),
+      n.d(t, "M", function() {
+        return G;
+      }),
+      n.d(t, "nb", function() {
+        return A;
+      }),
+      n.d(t, "L", function() {
+        return j;
+      }),
+      n.d(t, "k", function() {
+        return k;
+      }),
+      n.d(t, "P", function() {
+        return L;
+      }),
+      n.d(t, "N", function() {
+        return N;
+      }),
+      n.d(t, "ab", function() {
+        return P;
+      }),
+      n.d(t, "h", function() {
+        return B;
+      }),
+      n.d(t, "l", function() {
+        return F;
+      }),
+      n.d(t, "f", function() {
+        return x;
+      }),
+      n.d(t, "E", function() {
+        return V;
+      }),
+      n.d(t, "gb", function() {
+        return U;
+      }),
+      n.d(t, "kb", function() {
+        return H;
+      }),
+      n.d(t, "B", function() {
+        return W;
+      }),
+      n.d(t, "c", function() {
+        return z;
+      }),
+      n.d(t, "b", function() {
+        return q;
+      }),
+      n.d(t, "n", function() {
+        return K;
+      }),
+      n.d(t, "eb", function() {
+        return Y;
+      }),
+      n.d(t, "G", function() {
+        return Q;
+      }),
+      n.d(t, "J", function() {
+        return J;
+      }),
+      n.d(t, "U", function() {
+        return Z;
+      }),
+      n.d(t, "S", function() {
+        return X;
+      }),
+      n.d(t, "hb", function() {
+        return $;
+      }),
+      n.d(t, "ib", function() {
+        return ee;
+      }),
+      n.d(t, "X", function() {
+        return te;
+      }),
+      n.d(t, "s", function() {
+        return ne;
+      }),
+      n.d(t, "t", function() {
+        return oe;
+      }),
+      n.d(t, "m", function() {
+        return re;
+      }),
+      n.d(t, "H", function() {
+        return ie;
+      }),
+      n.d(t, "cb", function() {
+        return ae;
+      }),
+      n.d(t, "bb", function() {
+        return se;
+      }),
+      n.d(t, "lb", function() {
+        return ce;
+      }),
+      n.d(t, "v", function() {
+        return le;
+      }),
+      n.d(t, "V", function() {
+        return pe;
+      }),
+      n.d(t, "W", function() {
+        return ue;
       }),
       n.d(t, "z", function() {
-        return Ie;
+        return me;
+      }),
+      n.d(t, "Z", function() {
+        return de;
+      }),
+      n.d(t, "d", function() {
+        return he;
+      }),
+      n.d(t, "K", function() {
+        return fe;
+      }),
+      n.d(t, "jb", function() {
+        return _e;
+      }),
+      n.d(t, "D", function() {
+        return ge;
       }),
       n.d(t, "q", function() {
-        return Ee;
+        return be;
+      }),
+      n.d(t, "qb", function() {
+        return ve;
+      }),
+      n.d(t, "e", function() {
+        return ye;
+      }),
+      n.d(t, "i", function() {
+        return Se;
+      }),
+      n.d(t, "y", function() {
+        return Ce;
       });
     var o = n("mrSG"),
       r = n("q1tI"),
       i = n("twdX"),
       a = n.n(i),
-      s = n("QHER"),
-      c = (n("/7KC"), n("vvG3")),
-      l = n.n(c);
-    function p() {
+      s = n("QHER");
+    n("/7KC"), n("vvG3");
+    function c() {
       return r.createElement(
         "svg",
         {
@@ -57809,7 +57800,7 @@
         )
       );
     }
-    function u() {
+    function l() {
       return r.createElement(
         "svg",
         {
@@ -57830,7 +57821,7 @@
         })
       );
     }
-    function m() {
+    function p() {
       return r.createElement(
         "svg",
         {
@@ -57852,7 +57843,7 @@
         )
       );
     }
-    function d() {
+    function u() {
       return r.createElement(
         "svg",
         {
@@ -57901,7 +57892,7 @@
         })
       );
     }
-    function h() {
+    function m() {
       return r.createElement(
         "svg",
         {
@@ -57918,7 +57909,7 @@
         })
       );
     }
-    function f() {
+    function d() {
       return r.createElement(
         "svg",
         {
@@ -57946,7 +57937,7 @@
         )
       );
     }
-    function _(e) {
+    function h(e) {
       var t = "SVGIcon_Button SVGIcon_Microphone";
       return (
         e.className && (t += " " + e.className),
@@ -58092,7 +58083,7 @@
         )
       );
     }
-    function g() {
+    function f() {
       return r.createElement(
         "svg",
         {
@@ -58148,7 +58139,7 @@
         })
       );
     }
-    function b() {
+    function _() {
       return r.createElement(
         "svg",
         {
@@ -58177,7 +58168,7 @@
         )
       );
     }
-    function v() {
+    function g() {
       return r.createElement(
         "svg",
         {
@@ -58209,7 +58200,7 @@
         )
       );
     }
-    function y() {
+    function b() {
       return r.createElement(
         "svg",
         {
@@ -58226,7 +58217,7 @@
         })
       );
     }
-    function S(e) {
+    function v(e) {
       return r.createElement(
         "svg",
         Object(o.a)(
@@ -58251,7 +58242,7 @@
         )
       );
     }
-    function C() {
+    function y() {
       return r.createElement(
         "svg",
         {
@@ -58287,7 +58278,7 @@
         })
       );
     }
-    function O(e) {
+    function S(e) {
       return r.createElement(
         "svg",
         {
@@ -58379,7 +58370,7 @@
           )
       );
     }
-    function I() {
+    function C() {
       return r.createElement(
         "svg",
         {
@@ -58428,7 +58419,7 @@
         )
       );
     }
-    function E() {
+    function O() {
       return r.createElement(
         "svg",
         {
@@ -58515,7 +58506,7 @@
         })
       );
     }
-    function w(e) {
+    function I(e) {
       var t = "SVGIcon_Button SVGIcon_Headphones";
       return (
         e.className && (t += " " + e.className),
@@ -58578,7 +58569,7 @@
         )
       );
     }
-    function D() {
+    function E() {
       return r.createElement(
         "svg",
         {
@@ -58602,7 +58593,7 @@
         )
       );
     }
-    function M(e) {
+    function w(e) {
       var t = "SVGIcon_Button SVGIcon_Pin";
       return (
         e.bPinned && (t += " Pinned"),
@@ -58644,7 +58635,7 @@
         )
       );
     }
-    function T(e) {
+    function D(e) {
       return r.createElement(
         "svg",
         {
@@ -58691,7 +58682,7 @@
           })
       );
     }
-    function R() {
+    function M() {
       return r.createElement(
         "svg",
         {
@@ -58725,7 +58716,7 @@
         })
       );
     }
-    function G() {
+    function T() {
       return r.createElement(
         "svg",
         {
@@ -58769,7 +58760,7 @@
         })
       );
     }
-    function A() {
+    function R() {
       return r.createElement(
         "svg",
         {
@@ -58817,7 +58808,7 @@
         )
       );
     }
-    function j() {
+    function G() {
       return r.createElement(
         "svg",
         {
@@ -58841,7 +58832,7 @@
         })
       );
     }
-    function k(e) {
+    function A(e) {
       return r.createElement(
         "svg",
         {
@@ -58913,7 +58904,7 @@
         )
       );
     }
-    function L() {
+    function j() {
       return r.createElement(
         "svg",
         {
@@ -58951,7 +58942,7 @@
         })
       );
     }
-    function N() {
+    function k() {
       return r.createElement(
         "svg",
         {
@@ -58975,7 +58966,7 @@
         )
       );
     }
-    function P() {
+    function L() {
       return r.createElement(
         "svg",
         {
@@ -58996,7 +58987,7 @@
         })
       );
     }
-    function B() {
+    function N() {
       return r.createElement(
         "svg",
         {
@@ -59020,7 +59011,7 @@
         })
       );
     }
-    function F(e) {
+    function P(e) {
       return r.createElement(
         "svg",
         {
@@ -59108,7 +59099,7 @@
         )
       );
     }
-    function x() {
+    function B() {
       return r.createElement(
         "svg",
         {
@@ -59133,7 +59124,7 @@
         })
       );
     }
-    function V(e) {
+    function F(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return r.createElement(
@@ -59213,7 +59204,7 @@
         })
       );
     }
-    function U() {
+    function x() {
       return r.createElement(
         "svg",
         {
@@ -59271,7 +59262,7 @@
         )
       );
     }
-    function H() {
+    function V() {
       return r.createElement(
         "svg",
         {
@@ -59301,7 +59292,7 @@
         })
       );
     }
-    function W(e) {
+    function U(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -59545,7 +59536,7 @@
         )
       );
     }
-    function z() {
+    function H() {
       return r.createElement(
         "svg",
         {
@@ -59570,7 +59561,7 @@
         })
       );
     }
-    function q() {
+    function W() {
       return r.createElement(
         "svg",
         {
@@ -59596,7 +59587,7 @@
         })
       );
     }
-    function K() {
+    function z() {
       return r.createElement(
         "svg",
         {
@@ -59616,7 +59607,7 @@
         })
       );
     }
-    function Y(e) {
+    function q(e) {
       return r.createElement(
         "svg",
         {
@@ -59651,7 +59642,7 @@
         })
       );
     }
-    function Q(e) {
+    function K(e) {
       return r.createElement(
         "svg",
         {
@@ -59687,7 +59678,7 @@
           })
       );
     }
-    function J() {
+    function Y() {
       return r.createElement(
         "svg",
         {
@@ -59721,7 +59712,7 @@
         })
       );
     }
-    function Z() {
+    function Q() {
       return r.createElement(
         "svg",
         {
@@ -59757,7 +59748,7 @@
         })
       );
     }
-    function X() {
+    function J() {
       return r.createElement(
         "svg",
         {
@@ -59783,7 +59774,7 @@
         })
       );
     }
-    function $() {
+    function Z() {
       return r.createElement(
         "svg",
         {
@@ -59816,7 +59807,7 @@
         })
       );
     }
-    function ee() {
+    function X() {
       return r.createElement(
         "svg",
         {
@@ -59844,7 +59835,7 @@
         })
       );
     }
-    function te() {
+    function $() {
       return r.createElement(
         "svg",
         {
@@ -59868,7 +59859,7 @@
         })
       );
     }
-    function ne() {
+    function ee() {
       return r.createElement(
         "svg",
         {
@@ -59947,7 +59938,7 @@
         )
       );
     }
-    function oe() {
+    function te() {
       return r.createElement(
         "svg",
         {
@@ -59971,7 +59962,7 @@
         )
       );
     }
-    function re(e) {
+    function ne(e) {
       return r.createElement(
         "svg",
         {
@@ -59992,7 +59983,7 @@
         })
       );
     }
-    function ie(e) {
+    function oe(e) {
       return r.createElement(
         "svg",
         {
@@ -60056,7 +60047,7 @@
         )
       );
     }
-    function ae() {
+    function re() {
       return r.createElement(
         "svg",
         {
@@ -60091,7 +60082,7 @@
         })
       );
     }
-    function se(e) {
+    function ie(e) {
       return r.createElement(
         "svg",
         {
@@ -60129,7 +60120,7 @@
         })
       );
     }
-    function ce() {
+    function ae() {
       return r.createElement(
         "svg",
         {
@@ -60243,7 +60234,7 @@
         )
       );
     }
-    function le(e) {
+    function se(e) {
       var t = Object(s.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -60277,7 +60268,7 @@
         })
       );
     }
-    function pe() {
+    function ce() {
       return r.createElement(
         "svg",
         {
@@ -60305,7 +60296,7 @@
         })
       );
     }
-    function ue() {
+    function le() {
       return r.createElement(
         "svg",
         {
@@ -60327,7 +60318,7 @@
         )
       );
     }
-    function me() {
+    function pe() {
       return r.createElement(
         "svg",
         {
@@ -60364,7 +60355,7 @@
         )
       );
     }
-    function de() {
+    function ue() {
       return r.createElement(
         "svg",
         {
@@ -60392,7 +60383,7 @@
         })
       );
     }
-    function he(e) {
+    function me(e) {
       return r.createElement(
         "svg",
         {
@@ -60504,7 +60495,7 @@
         )
       );
     }
-    function fe() {
+    function de() {
       return r.createElement(
         "svg",
         {
@@ -60571,7 +60562,7 @@
         })
       );
     }
-    function _e() {
+    function he() {
       return r.createElement(
         "svg",
         {
@@ -60592,7 +60583,7 @@
         })
       );
     }
-    function ge() {
+    function fe() {
       return r.createElement(
         "svg",
         {
@@ -60612,7 +60603,7 @@
         })
       );
     }
-    function be() {
+    function _e() {
       return r.createElement(
         "svg",
         {
@@ -60636,7 +60627,7 @@
         })
       );
     }
-    function ve() {
+    function ge() {
       return r.createElement(
         "svg",
         {
@@ -60686,7 +60677,7 @@
         })
       );
     }
-    function ye() {
+    function be() {
       return r.createElement(
         "svg",
         {
@@ -60719,7 +60710,7 @@
         })
       );
     }
-    function Se() {
+    function ve() {
       return r.createElement(
         "svg",
         {
@@ -60739,7 +60730,7 @@
         })
       );
     }
-    function Ce() {
+    function ye() {
       return r.createElement(
         "svg",
         {
@@ -60761,7 +60752,7 @@
         })
       );
     }
-    function Oe() {
+    function Se() {
       return r.createElement(
         "svg",
         {
@@ -60795,7 +60786,7 @@
         })
       );
     }
-    function Ie() {
+    function Ce() {
       return r.createElement(
         "svg",
         {
@@ -60863,82 +60854,6 @@
           x2: "208.507",
           y2: "55.004"
         })
-      );
-    }
-    function Ee(e) {
-      var t = l.a.EmoticonBow;
-      return (
-        e.className && (t += " " + e.className),
-        r.createElement(
-          "svg",
-          {
-            version: "1.1",
-            id: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            x: "0px",
-            y: "0px",
-            viewBox: "0 0 47 63.08",
-            className: t
-          },
-          r.createElement(
-            "g",
-            { id: "Layer_2_1_" },
-            r.createElement(
-              "g",
-              { id: "Layer_2-2" },
-              r.createElement("polygon", {
-                className: l.a.EmoticonBow_st0,
-                points:
-                  "26.54,63.08 47,38.88 47,50.98 36.77,63.08                               "
-              }),
-              r.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "23,63.08 47,35.08 47,49.08 35,63.08                            "
-              }),
-              r.createElement("polygon", {
-                className: l.a.EmoticonBow_st0,
-                points:
-                  "42.86,22.41 37.42,16.08 12.84,16.08 0,31.06 0,46.3 25.66,16.36 37.64,30.29 38.78,24.06\r\n\t\t\t\t\t\t\t\t\t43.58,24.06 44.28,24.06                                "
-              }),
-              r.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "24.22,16.08 0,44.08 0,30.08 12.11,16.08                    "
-              }),
-              r.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "34.45,10.49 44.06,21.71 38.45,21.71 37.39,27.36 26.92,15.14 28.76,10.49                        "
-              }),
-              r.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "27.81,6.41 40.57,0 44.35,0 44.9,11.7 39.23,12.84 35.49,8.17 35.49,8.17 28.83,8                                 "
-              }),
-              r.createElement("polygon", {
-                className: l.a.EmoticonBow_st0,
-                points:
-                  "12.09,16.08 5.15,24.12 9.58,24.08 10.72,30.29 22.99,16.08                               "
-              }),
-              r.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "14.17,10.49 4.55,21.71 10.16,21.71 11.23,27.36 21.7,15.14 19.86,10.49                                 "
-              }),
-              r.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "20.71,6.41 7.95,0 4.17,0 3.62,11.7 9.28,12.84 13.02,8.17 13.02,8.17 19.68,8                                 "
-              }),
-              r.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "25.78,7.22 24.52,7.22 24.05,7.22 22.79,7.22 21.99,8.67 24.05,13.98 24.52,13.98 26.58,8.67                  "
-              })
-            )
-          )
-        )
       );
     }
   },
@@ -63310,7 +63225,7 @@
                     className: i ? "" : O.a.ChatRoomContextNoPermission,
                     onSelected: this.SaveVoiceRoom
                   },
-                  !i && h.createElement(y.F, null),
+                  !i && h.createElement(y.E, null),
                   Object(b.c)("#Chat_Actions_SaveChannel")
                 )
               ),
@@ -63951,7 +63866,7 @@
                   "div",
                   { className: "leftInviteContainer" },
                   a.createElement(k.a, { group: n, small: C, large: O }),
-                  f && a.createElement("div", null, a.createElement(y.nb, null))
+                  f && a.createElement("div", null, a.createElement(y.mb, null))
                 ),
                 a.createElement(
                   "div",
@@ -64515,7 +64430,7 @@
                 a.createElement(
                   "div",
                   { className: "closeButton", onClick: this.DismissInvite },
-                  a.createElement(y.qb, null)
+                  a.createElement(y.pb, null)
                 )
               )
             );
@@ -64675,7 +64590,7 @@
                 a.createElement(
                   "div",
                   { className: "closeButton", onClick: this.OnClose },
-                  a.createElement(y.qb, null)
+                  a.createElement(y.pb, null)
                 )
               )
             );
@@ -65238,7 +65153,7 @@
                 ? a.createElement(
                     De,
                     { href: e },
-                    a.createElement(y.B, null),
+                    a.createElement(y.A, null),
                     o
                   )
                 : a.createElement(
@@ -65466,7 +65381,7 @@
                       "#bbcode_" + this.props.strMediaType + "_tooltip_resize"
                     )
                   },
-                  a.createElement(y.U, null)
+                  a.createElement(y.T, null)
                 ),
                 a.createElement(
                   "div",
@@ -65485,7 +65400,7 @@
                             "_tooltip_collapse"
                         )
                   },
-                  a.createElement(y.pb, null)
+                  a.createElement(y.ob, null)
                 )
               )
             );
@@ -65510,7 +65425,7 @@
           onClick: e.onClick,
           title: e.title
         },
-        a.createElement(y.pb, null)
+        a.createElement(y.ob, null)
       );
     }
     function Ie(e) {
@@ -65536,7 +65451,7 @@
             onClick: e.onClick,
             title: e.titleInfo
           },
-          a.createElement(y.pb, null)
+          a.createElement(y.ob, null)
         )
       );
     }
@@ -65598,7 +65513,7 @@
                 encodeURIComponent(this.GetVideoID());
               return (
                 o && (i += "&t=" + encodeURIComponent(o)),
-                a.createElement(De, { href: i }, a.createElement(y.rb, null), i)
+                a.createElement(De, { href: i }, a.createElement(y.qb, null), i)
               );
             }
             var s = 0;
@@ -65823,7 +65738,7 @@
               a.createElement(
                 De,
                 { href: o, copyText: [i, o], loadFailed: l },
-                a.createElement(y.C, null),
+                a.createElement(y.B, null),
                 u
               )
             );
@@ -66016,7 +65931,7 @@
                     t,
                     S.b(e)
                   )),
-                a.createElement(De, { href: e }, a.createElement(y.lb, null), i)
+                a.createElement(De, { href: e }, a.createElement(y.kb, null), i)
               );
             }
             var s,
@@ -66087,7 +66002,7 @@
                           a.createElement(
                             "div",
                             { className: "playButtonContainer" },
-                            a.createElement(y.Q, null)
+                            a.createElement(y.P, null)
                           )
                         ),
                       a.createElement(
@@ -66097,7 +66012,7 @@
                           href: e,
                           title: Object(p.c)("#bbcode_video_tooltip_link")
                         },
-                        a.createElement(y.S, null)
+                        a.createElement(y.R, null)
                       )
                     )
                   )
@@ -66189,7 +66104,7 @@
                 a.createElement(
                   De,
                   { href: o, copyText: [s, o] },
-                  a.createElement(y.B, null),
+                  a.createElement(y.A, null),
                   s
                 )
               );
@@ -66490,7 +66405,7 @@
                 a.createElement(
                   De,
                   { href: e, copyText: [t, e] },
-                  a.createElement(y.B, null),
+                  a.createElement(y.A, null),
                   s
                 )
               );
@@ -67176,14 +67091,14 @@
                   "#bbcode_disable_embed_inlining_steam_workshop",
                   o
                 ));
-              var m = a.createElement(y.B, null);
+              var m = a.createElement(y.A, null);
               switch (c) {
                 case 4:
-                  m = a.createElement(y.lb, null);
+                  m = a.createElement(y.kb, null);
                   break;
                 case 3:
                 case 5:
-                  m = a.createElement(y.C, null);
+                  m = a.createElement(y.B, null);
               }
               return a.createElement(De, { href: n, copyText: [u, n] }, m, u);
             }
@@ -67414,7 +67329,7 @@
                   context: { chat: n },
                   bLarge: !0
                 }),
-                a.createElement(y.ib, null)
+                a.createElement(y.hb, null)
               ),
               a.createElement(
                 "div",
@@ -68019,7 +67934,7 @@
               return a.createElement(
                 De,
                 { href: t },
-                a.createElement(y.B, null),
+                a.createElement(y.A, null),
                 t
               );
             }
@@ -68346,7 +68261,7 @@
                                     className:
                                       I.a.ChatMessageSteamStore_VideoPlayButton
                                   },
-                                  a.createElement(y.Q, null)
+                                  a.createElement(y.P, null)
                                 )
                               )
                             : a.createElement("img", {
@@ -68392,7 +68307,7 @@
                   a.createElement(
                     "div",
                     { onClick: this.PlayVideoClicked },
-                    a.createElement(y.qb, null)
+                    a.createElement(y.pb, null)
                   )
                 )
               )
@@ -69734,7 +69649,7 @@
                                   onClick: this.OnSettingsClick,
                                   title: Object(p.c)("#Tooltip_VoiceSettings")
                                 },
-                                a.createElement(y.Z, null)
+                                a.createElement(y.Y, null)
                               )
                             ),
                             a.createElement(
@@ -73174,7 +73089,7 @@
                             title: Object(m.c)("#ChatEntryButton_Submit"),
                             onClick: this.SendMessage
                           },
-                          r.createElement(A.eb, null)
+                          r.createElement(A.db, null)
                         )
                       ),
                       r.createElement(
@@ -73527,7 +73442,7 @@
                     u.createElement(
                       "div",
                       { className: "steamTVSubtitle" },
-                      u.createElement(d.db, null),
+                      u.createElement(d.cb, null),
                       ": ",
                       i,
                       " "
@@ -73689,7 +73604,7 @@
               u.createElement(
                 "div",
                 { className: "voiceChannelIcon" },
-                u.createElement(d.nb, null)
+                u.createElement(d.mb, null)
               ),
               t.map(function(e) {
                 return u.createElement(M, {
@@ -73833,7 +73748,7 @@
                 r.createElement(
                   "div",
                   { className: "closeButton", onClick: e.onEscKeypress },
-                  r.createElement(p.qb, null)
+                  r.createElement(p.pb, null)
                 )
               ),
             r.createElement(c.a, null, e.children)
@@ -74625,7 +74540,7 @@
                       className: "DialogInput_ClearAction",
                       onClick: this.OnClearClick
                     },
-                    r.createElement(i.qb, null)
+                    r.createElement(i.pb, null)
                   )
               ),
               f
@@ -75923,7 +75838,7 @@
                       r.createElement(
                         "div",
                         { className: u.join(" "), key: a.title, onClick: p },
-                        m && r.createElement(i.nb, null),
+                        m && r.createElement(i.mb, null),
                         a.title
                       )
                     );
@@ -75980,7 +75895,7 @@
                               r.createElement(
                                 r.Fragment,
                                 null,
-                                r.createElement(i.F, null),
+                                r.createElement(i.E, null),
                                 Object(a.c)("#Chat_Settings_Permission_Denied")
                               )
                           )
@@ -81194,7 +81109,7 @@ and limitations under the License.
               }
             },
             r.a.createElement("span", null, e.friend.display_name),
-            r.a.createElement(p.qb, null)
+            r.a.createElement(p.pb, null)
           )
         );
       };
@@ -82901,7 +82816,7 @@ and limitations under the License.
                                 onClick: this.ClearHotKey,
                                 title: Object(d.c)("#VoiceClearHotKeyTooltip")
                               },
-                              c.createElement(g.qb, null)
+                              c.createElement(g.pb, null)
                             )
                         ),
                         c.createElement(

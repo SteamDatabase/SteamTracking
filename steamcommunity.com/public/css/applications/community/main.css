@@ -1683,12 +1683,9 @@ img.emoticon_emoticon_AB86v {
 .compactView .chatentry_chatSubmitButton_RVIs8 {
   min-width: 32px; }
 
-.chatEntry.compactView .chatentry_chatSubmitButton_RVIs8 svg:not(.chatentry_EmoticonBow_1Ujs5) {
+.chatEntry.compactView .chatentry_chatSubmitButton_RVIs8 svg {
   width: 20px;
   height: 20px; }
-
-.chatEntry.compactView .chatentry_EmoticonBow_1Ujs5 {
-  top: -13px; }
 
 .ChatMessageEntryVoice {
   /* our layout */

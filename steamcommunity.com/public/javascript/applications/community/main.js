@@ -2065,104 +2065,100 @@
   "6TF7": function(e, t, n) {},
   "6Y59": function(e, t, n) {
     "use strict";
-    n.d(t, "w", function() {
-      return c;
+    n.d(t, "v", function() {
+      return p;
     }),
       n.d(t, "f", function() {
-        return b;
+        return s;
       }),
-      n.d(t, "m", function() {
-        return l;
+      n.d(t, "l", function() {
+        return c;
       }),
       n.d(t, "g", function() {
+        return b;
+      }),
+      n.d(t, "x", function() {
+        return l;
+      }),
+      n.d(t, "C", function() {
         return M;
       }),
-      n.d(t, "y", function() {
+      n.d(t, "A", function() {
         return d;
       }),
-      n.d(t, "D", function() {
+      n.d(t, "p", function() {
         return z;
       }),
       n.d(t, "B", function() {
         return O;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "r", function() {
         return u;
       }),
-      n.d(t, "C", function() {
+      n.d(t, "q", function() {
         return A;
       }),
-      n.d(t, "s", function() {
+      n.d(t, "c", function() {
         return m;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "e", function() {
         return h;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "k", function() {
         return g;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "y", function() {
         return f;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "a", function() {
         return _;
       }),
-      n.d(t, "z", function() {
+      n.d(t, "m", function() {
         return q;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "o", function() {
         return v;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "s", function() {
         return W;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "i", function() {
         return y;
       }),
-      n.d(t, "t", function() {
+      n.d(t, "n", function() {
         return E;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "w", function() {
         return B;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "z", function() {
         return S;
       }),
-      n.d(t, "x", function() {
+      n.d(t, "t", function() {
         return R;
       }),
-      n.d(t, "A", function() {
+      n.d(t, "u", function() {
         return L;
       }),
-      n.d(t, "u", function() {
+      n.d(t, "j", function() {
         return C;
       }),
-      n.d(t, "v", function() {
+      n.d(t, "h", function() {
         return T;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "b", function() {
         return N;
       }),
-      n.d(t, "i", function() {
-        return w;
-      }),
-      n.d(t, "b", function() {
-        return I;
-      }),
       n.d(t, "d", function() {
-        return D;
-      }),
-      n.d(t, "h", function() {
-        return F;
+        return w;
       });
     n("mrSG");
     var o = n("q1tI"),
       a = n("2i24"),
       i = n.n(a),
-      r = n("exH9"),
-      p = (n("YyVH"), n("Z7Ow")),
-      s = n.n(p);
-    function c() {
+      r = n("exH9");
+    n("YyVH"), n("Z7Ow");
+    function p() {
       return o.createElement(
         "svg",
         {
@@ -2183,7 +2179,7 @@
         })
       );
     }
-    function b() {
+    function s() {
       return o.createElement(
         "svg",
         {
@@ -2200,7 +2196,7 @@
         })
       );
     }
-    function l() {
+    function c() {
       return o.createElement(
         "svg",
         {
@@ -2228,7 +2224,7 @@
         )
       );
     }
-    function M() {
+    function b() {
       return o.createElement(
         "svg",
         {
@@ -2284,7 +2280,7 @@
         })
       );
     }
-    function d() {
+    function l() {
       return o.createElement(
         "svg",
         {
@@ -2313,7 +2309,7 @@
         )
       );
     }
-    function z() {
+    function M() {
       return o.createElement(
         "svg",
         {
@@ -2349,7 +2345,7 @@
         })
       );
     }
-    function O(e) {
+    function d(e) {
       return o.createElement(
         "svg",
         {
@@ -2441,7 +2437,7 @@
           )
       );
     }
-    function u() {
+    function z() {
       return o.createElement(
         "svg",
         {
@@ -2465,7 +2461,7 @@
         })
       );
     }
-    function A(e) {
+    function O(e) {
       return o.createElement(
         "svg",
         {
@@ -2537,7 +2533,7 @@
         )
       );
     }
-    function m() {
+    function u() {
       return o.createElement(
         "svg",
         {
@@ -2558,7 +2554,7 @@
         })
       );
     }
-    function h() {
+    function A() {
       return o.createElement(
         "svg",
         {
@@ -2582,7 +2578,7 @@
         })
       );
     }
-    function g() {
+    function m() {
       return o.createElement(
         "svg",
         {
@@ -2607,7 +2603,7 @@
         })
       );
     }
-    function f(e) {
+    function h(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return o.createElement(
@@ -2687,7 +2683,7 @@
         })
       );
     }
-    function _() {
+    function g() {
       return o.createElement(
         "svg",
         {
@@ -2717,7 +2713,7 @@
         })
       );
     }
-    function q(e) {
+    function f(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -2961,7 +2957,7 @@
         )
       );
     }
-    function v(e) {
+    function _(e) {
       return o.createElement(
         "svg",
         {
@@ -2996,7 +2992,7 @@
         })
       );
     }
-    function W() {
+    function q() {
       return o.createElement(
         "svg",
         {
@@ -3032,7 +3028,7 @@
         })
       );
     }
-    function y() {
+    function v() {
       return o.createElement(
         "svg",
         {
@@ -3058,7 +3054,7 @@
         })
       );
     }
-    function E() {
+    function W() {
       return o.createElement(
         "svg",
         {
@@ -3091,7 +3087,7 @@
         })
       );
     }
-    function B(e) {
+    function y(e) {
       return o.createElement(
         "svg",
         {
@@ -3112,7 +3108,7 @@
         })
       );
     }
-    function S(e) {
+    function E(e) {
       return o.createElement(
         "svg",
         {
@@ -3150,7 +3146,7 @@
         })
       );
     }
-    function R(e) {
+    function B(e) {
       var t = Object(r.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -3184,7 +3180,7 @@
         })
       );
     }
-    function L() {
+    function S() {
       return o.createElement(
         "svg",
         {
@@ -3212,7 +3208,7 @@
         })
       );
     }
-    function C() {
+    function R() {
       return o.createElement(
         "svg",
         {
@@ -3249,7 +3245,7 @@
         )
       );
     }
-    function T() {
+    function L() {
       return o.createElement(
         "svg",
         {
@@ -3277,7 +3273,7 @@
         })
       );
     }
-    function N() {
+    function C() {
       return o.createElement(
         "svg",
         {
@@ -3327,7 +3323,7 @@
         })
       );
     }
-    function w() {
+    function T() {
       return o.createElement(
         "svg",
         {
@@ -3360,7 +3356,7 @@
         })
       );
     }
-    function I() {
+    function N() {
       return o.createElement(
         "svg",
         {
@@ -3382,7 +3378,7 @@
         })
       );
     }
-    function D() {
+    function w() {
       return o.createElement(
         "svg",
         {
@@ -3414,82 +3410,6 @@
           d:
             "M177.926,173.207c11.431,0,22.338-4.276,30.721-12.036c2.6-2.407,2.754-6.47,0.347-9.068 c-2.41-2.604-6.47-2.757-9.072-0.349c-5.998,5.559-13.812,8.62-21.995,8.62c-17.852,0-32.372-14.524-32.372-32.372 c0-17.849,14.521-32.373,32.372-32.373c8.178,0,15.981,3.055,21.979,8.603c2.604,2.407,6.663,2.25,9.072-0.353 c2.407-2.602,2.25-6.662-0.353-9.068c-8.375-7.751-19.277-12.019-30.694-12.019c-24.932,0-45.209,20.281-45.209,45.209 C132.721,152.93,152.996,173.207,177.926,173.207z"
         })
-      );
-    }
-    function F(e) {
-      var t = s.a.EmoticonBow;
-      return (
-        e.className && (t += " " + e.className),
-        o.createElement(
-          "svg",
-          {
-            version: "1.1",
-            id: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            x: "0px",
-            y: "0px",
-            viewBox: "0 0 47 63.08",
-            className: t
-          },
-          o.createElement(
-            "g",
-            { id: "Layer_2_1_" },
-            o.createElement(
-              "g",
-              { id: "Layer_2-2" },
-              o.createElement("polygon", {
-                className: s.a.EmoticonBow_st0,
-                points:
-                  "26.54,63.08 47,38.88 47,50.98 36.77,63.08                               "
-              }),
-              o.createElement("polygon", {
-                className: s.a.EmoticonBow_st1,
-                points:
-                  "23,63.08 47,35.08 47,49.08 35,63.08                            "
-              }),
-              o.createElement("polygon", {
-                className: s.a.EmoticonBow_st0,
-                points:
-                  "42.86,22.41 37.42,16.08 12.84,16.08 0,31.06 0,46.3 25.66,16.36 37.64,30.29 38.78,24.06\r\n\t\t\t\t\t\t\t\t\t43.58,24.06 44.28,24.06                                "
-              }),
-              o.createElement("polygon", {
-                className: s.a.EmoticonBow_st1,
-                points:
-                  "24.22,16.08 0,44.08 0,30.08 12.11,16.08                    "
-              }),
-              o.createElement("polygon", {
-                className: s.a.EmoticonBow_st1,
-                points:
-                  "34.45,10.49 44.06,21.71 38.45,21.71 37.39,27.36 26.92,15.14 28.76,10.49                        "
-              }),
-              o.createElement("polygon", {
-                className: s.a.EmoticonBow_st1,
-                points:
-                  "27.81,6.41 40.57,0 44.35,0 44.9,11.7 39.23,12.84 35.49,8.17 35.49,8.17 28.83,8                                 "
-              }),
-              o.createElement("polygon", {
-                className: s.a.EmoticonBow_st0,
-                points:
-                  "12.09,16.08 5.15,24.12 9.58,24.08 10.72,30.29 22.99,16.08                               "
-              }),
-              o.createElement("polygon", {
-                className: s.a.EmoticonBow_st1,
-                points:
-                  "14.17,10.49 4.55,21.71 10.16,21.71 11.23,27.36 21.7,15.14 19.86,10.49                                 "
-              }),
-              o.createElement("polygon", {
-                className: s.a.EmoticonBow_st1,
-                points:
-                  "20.71,6.41 7.95,0 4.17,0 3.62,11.7 9.28,12.84 13.02,8.17 13.02,8.17 19.68,8                                 "
-              }),
-              o.createElement("polygon", {
-                className: s.a.EmoticonBow_st1,
-                points:
-                  "25.78,7.22 24.52,7.22 24.05,7.22 22.79,7.22 21.99,8.67 24.05,13.98 24.52,13.98 26.58,8.67                  "
-              })
-            )
-          )
-        )
       );
     }
   },
@@ -7166,7 +7086,7 @@
                       },
                       onClick: this.OnSearchSubmit
                     },
-                    i.a.createElement(A.m, null)
+                    i.a.createElement(A.l, null)
                   )
                 )
               )
@@ -8021,7 +7941,7 @@
                       className: "DialogInput_ClearAction",
                       onClick: this.OnClearClick
                     },
-                    z.createElement(O.D, null)
+                    z.createElement(O.C, null)
                   )
               ),
               l
@@ -11669,8 +11589,7 @@
       disabled: "chatentry_disabled_jaQN2",
       Inactive: "chatentry_Inactive_3G-I9",
       AudioLines: "chatentry_AudioLines_IWaba",
-      Active: "chatentry_Active_37tPt",
-      EmoticonBow: "chatentry_EmoticonBow_1Ujs5"
+      Active: "chatentry_Active_37tPt"
     };
   },
   ZCGQ: function(e, t) {
@@ -14727,7 +14646,7 @@
                 _.createElement(
                   "div",
                   { className: "closeButton", onClick: t.onEscKeypress },
-                  _.createElement(ae.D, null)
+                  _.createElement(ae.C, null)
                 )
               ),
             _.createElement(oe, null, t.children)
@@ -15040,7 +14959,7 @@
                           e && e.close();
                         }
                       },
-                      _.createElement(ae.D, null)
+                      _.createElement(ae.C, null)
                     ),
                     !this.props.hideMinMax &&
                       _.createElement(
@@ -15051,8 +14970,8 @@
                             e.SteamClient.Window.ToggleMaximize();
                           }
                         },
-                        this.state.maximized && _.createElement(ae.t, null),
-                        !this.state.maximized && _.createElement(ae.n, null)
+                        this.state.maximized && _.createElement(ae.s, null),
+                        !this.state.maximized && _.createElement(ae.m, null)
                       ),
                     !this.props.hideMinMax &&
                       _.createElement(
@@ -15063,7 +14982,7 @@
                             e.SteamClient.Window.Minimize();
                           }
                         },
-                        _.createElement(ae.p, null)
+                        _.createElement(ae.o, null)
                       )
                   )
               )
@@ -15278,8 +15197,8 @@
               s.a.createElement(
                 "div",
                 { className: We.a.Throbber },
-                s.a.createElement(ae.z, { className: We.a.base }),
-                s.a.createElement(ae.z, { className: We.a.blur })
+                s.a.createElement(ae.y, { className: We.a.base }),
+                s.a.createElement(ae.y, { className: We.a.blur })
               )
             );
             return s.a.createElement(
@@ -16461,44 +16380,38 @@
               a = e.useImg,
               i = [n],
               r = !1;
-            if (
-              (t ? i.push("disabled") : this.BHaveUnseenEmoticons() && (r = !0),
-              o && i.push("ttip"),
-              a)
-            )
-              return s.a.createElement(
-                "span",
-                { onClick: this.OnEmoticonClick },
-                s.a.createElement("img", {
-                  src: this.props.useImg,
-                  className: ie.a.apply(void 0, i),
-                  title:
-                    this.props.title ||
-                    Object(q.c)("#ChatEntryButton_Emoticon"),
-                  "data-tooltip-text": o
-                })
-              );
-            var p = this.props.bShowStickers || this.props.bShowEffects;
             return (
-              i.push($e.a.chatSubmitButton, $e.a.EmoticonPickerButton),
-              s.a.createElement(
-                "button",
-                {
-                  className: ie.a.apply(void 0, i),
-                  type: "button",
-                  onClick: this.OnEmoticonClick,
-                  title:
-                    this.props.title ||
-                    Object(q.c)("#ChatEntryButton_Emoticon"),
-                  disabled: t,
-                  "data-tooltip-text": o
-                },
-                this.props.buttonIcon || s.a.createElement(ae.g, null),
-                r && !p && s.a.createElement(Ye, null),
-                r &&
-                  p &&
-                  s.a.createElement(ae.h, { className: $e.a.EmoticonBow })
-              )
+              t ? i.push("disabled") : this.BHaveUnseenEmoticons() && (r = !0),
+              o && i.push("ttip"),
+              a
+                ? s.a.createElement(
+                    "span",
+                    { onClick: this.OnEmoticonClick },
+                    s.a.createElement("img", {
+                      src: this.props.useImg,
+                      className: ie.a.apply(void 0, i),
+                      title:
+                        this.props.title ||
+                        Object(q.c)("#ChatEntryButton_Emoticon"),
+                      "data-tooltip-text": o
+                    })
+                  )
+                : (i.push($e.a.chatSubmitButton, $e.a.EmoticonPickerButton),
+                  s.a.createElement(
+                    "button",
+                    {
+                      className: ie.a.apply(void 0, i),
+                      type: "button",
+                      onClick: this.OnEmoticonClick,
+                      title:
+                        this.props.title ||
+                        Object(q.c)("#ChatEntryButton_Emoticon"),
+                      disabled: t,
+                      "data-tooltip-text": o
+                    },
+                    this.props.buttonIcon || s.a.createElement(ae.g, null),
+                    r && s.a.createElement(Ye, null)
+                  ))
             );
           }),
           Object(y.c)([z.a], t.prototype, "OnEmoticonClick", null),
@@ -21995,7 +21908,7 @@
               s.a.createElement(
                 "div",
                 { className: wn.a.LoginPanelBackground },
-                s.a.createElement(ae.x, null)
+                s.a.createElement(ae.w, null)
               ),
               s.a.createElement(
                 "div",
@@ -22256,7 +22169,7 @@
               case Xn.TwoFactorCode:
                 (n = t.GetTwoFactorCode()),
                   (o = Object(q.c)("#Login_Enter2FA")),
-                  (e = s.a.createElement(ae.k, null)),
+                  (e = s.a.createElement(ae.j, null)),
                   (a = Object(q.c)("#Login_Enter2FAHelp"));
                 break;
               case Xn.EmailCode:
@@ -22271,7 +22184,7 @@
                     )
                   )),
                   (a = Object(q.c)("#Login_EnterSteamguard")),
-                  (e = s.a.createElement(ae.i, null));
+                  (e = s.a.createElement(ae.h, null));
             }
             return s.a.createElement(
               "div",
@@ -33077,7 +32990,7 @@
                             title: Object(q.c)("#ChatEntryButton_Submit"),
                             onClick: this.SendMessage
                           },
-                          _.createElement(ae.y, null)
+                          _.createElement(ae.x, null)
                         )
                       ),
                       _.createElement(
@@ -37823,7 +37736,7 @@
                   className: "dash_stat_close_button",
                   onClick: this.HideStats
                 },
-                _.createElement(ae.D, null)
+                _.createElement(ae.C, null)
               ),
               _.createElement(
                 "div",
@@ -38306,7 +38219,7 @@
                 className: "BroadcastVideoUserInputNeeded",
                 onClick: this.OnClick
               },
-              _.createElement(ae.s, null),
+              _.createElement(ae.r, null),
               _.createElement(
                 "span",
                 null,
@@ -38707,7 +38620,7 @@
                           className: ep.a.LinkRegionDelete,
                           onClick: this.HandleDelete
                         },
-                        _.createElement(ae.D, null)
+                        _.createElement(ae.C, null)
                       ),
                     !this.props.bDisableLink &&
                       _.createElement(
@@ -38716,7 +38629,7 @@
                           className: ep.a.LinkRegionSettings,
                           onClick: this.OnEditLink
                         },
-                        _.createElement(ae.q, null)
+                        _.createElement(ae.p, null)
                       ),
                     _.createElement(
                       "div",
@@ -39231,7 +39144,7 @@
                     className: "STV_BroadcastClose",
                     onClick: this.props.onClick
                   },
-                  _.createElement(ae.D, null)
+                  _.createElement(ae.C, null)
                 )
               : null;
           }),
@@ -39265,7 +39178,7 @@
                       "videoControlButton videoControlJump controlFlip",
                     onClick: this.OnJumpBackward
                   },
-                  _.createElement(ae.o, {
+                  _.createElement(ae.n, {
                     bHidePostArrow: !0,
                     bHidePreArrow: !0,
                     bShowJumpAheadBox: !0,
@@ -39281,7 +39194,7 @@
                     className: "videoControlButton videoControlJump",
                     onClick: this.OnJumpForward
                   },
-                  _.createElement(ae.o, {
+                  _.createElement(ae.n, {
                     bHidePostArrow: !0,
                     bHidePreArrow: !0,
                     bShowJumpAheadBox: !0,
@@ -39319,7 +39232,7 @@
                     (e ? " isLiveEdge" : ""),
                   onClick: e ? null : this.OnGoLiveClicked
                 },
-                _.createElement(ae.o, {
+                _.createElement(ae.n, {
                   bHidePreArrow: !0,
                   bHidePostArrow: !0,
                   bFlipHorizontal: !1
@@ -39355,7 +39268,7 @@
                 className: "videoControlButton buttonPlayPause",
                 onClick: this.OnTogglePlayPause
               },
-              e ? _.createElement(ae.s, null) : _.createElement(ae.r, null)
+              e ? _.createElement(ae.r, null) : _.createElement(ae.q, null)
             );
           }),
           Object(y.c)([z.a], t.prototype, "OnTogglePlayPause", null),
@@ -39401,7 +39314,7 @@
                   (this.has_previous_marker ? "" : " noMarkersInDirection"),
                 onClick: this.OnJumpToPreviousMarkerClicked
               },
-              _.createElement(ae.o, { bHidePostArrow: !0, bFlipHorizontal: !0 })
+              _.createElement(ae.n, { bHidePostArrow: !0, bFlipHorizontal: !0 })
             );
           }),
           Object(y.c)([m.h], t.prototype, "has_previous_marker", null),
@@ -39453,7 +39366,7 @@
                   (this.has_next_marker ? "" : " noMarkersInDirection"),
                 onClick: this.OnJumpToNextMarkerClicked
               },
-              _.createElement(ae.o, { bHidePostArrow: !0, bFlipHorizontal: !1 })
+              _.createElement(ae.n, { bHidePostArrow: !0, bFlipHorizontal: !1 })
             );
           }),
           Object(y.c)([m.h], t.prototype, "has_next_marker", null),
@@ -39637,7 +39550,7 @@
                   onClick: this.OnVideoControlClick,
                   ref: this.bindSettingsButton
                 },
-                _.createElement(ae.w, null)
+                _.createElement(ae.v, null)
               ),
               _.createElement(lp, { video: r }),
               p &&
@@ -39772,7 +39685,7 @@
                   _.createElement(
                     "div",
                     { className: o, onClick: this.ToggleMute },
-                    _.createElement(ae.C, null)
+                    _.createElement(ae.B, null)
                   ),
                   _.createElement(Mp, { video: e, onDrag: this.OnChildDrag })
                 )
@@ -39886,7 +39799,7 @@
           _.createElement(
             "div",
             { className: "timelineMarkerIcon" },
-            _.createElement(ae.v, null)
+            _.createElement(ae.u, null)
           )
         );
       };
@@ -40218,7 +40131,7 @@
                         _.createElement(
                           "div",
                           { className: "STV_timelineGrabberArrow" },
-                          _.createElement(ae.u, null)
+                          _.createElement(ae.t, null)
                         )
                       )
                     )
@@ -40321,7 +40234,7 @@
                       _.createElement(
                         "div",
                         { className: "BroadcastDetailsHeader_ViewerCount" },
-                        _.createElement(ae.A, null),
+                        _.createElement(ae.z, null),
                         Object(q.c)("#Broadcast_ViewerCount", n)
                       )
                   ),
@@ -53317,7 +53230,7 @@
                       className: Object(ie.a)(Dl.a.CloseButton, Dl.a.AnimIn),
                       onClick: this.Close
                     },
-                    _.createElement(ae.D, null)
+                    _.createElement(ae.C, null)
                   ),
                   _.createElement(
                     "div",
@@ -53329,7 +53242,7 @@
                       ),
                       onClick: this.ScrollToPrevEvent
                     },
-                    _.createElement(ae.j, { angle: 0 })
+                    _.createElement(ae.i, { angle: 0 })
                   ),
                   _.createElement(
                     "div",
@@ -53341,7 +53254,7 @@
                       ),
                       onClick: this.ScrollToNextEvent
                     },
-                    _.createElement(ae.j, { angle: 180 })
+                    _.createElement(ae.i, { angle: 180 })
                   ),
                   this.props.onAppIconClick &&
                     _.createElement(
@@ -57931,8 +57844,8 @@
                     },
                     " ",
                     this.props.bIsMinimized
-                      ? _.createElement(ae.n, null)
-                      : _.createElement(ae.p, null)
+                      ? _.createElement(ae.m, null)
+                      : _.createElement(ae.o, null)
                   )
               ),
               !this.props.bIsMinimized &&
@@ -60933,7 +60846,7 @@
                     return n(o);
                   }
                 },
-                _.createElement(ae.D, null)
+                _.createElement(ae.C, null)
               ),
               _.createElement(
                 "div",
@@ -69134,7 +69047,7 @@
                           return n.RemoveSection(n.props.index);
                         }
                       },
-                      _.createElement(ae.D, null)
+                      _.createElement(ae.C, null)
                     )
                   )
                 )
@@ -70822,8 +70735,8 @@
           },
           " ",
           e.bIsMinimized
-            ? _.createElement(ae.n, null)
-            : _.createElement(ae.p, null)
+            ? _.createElement(ae.m, null)
+            : _.createElement(ae.o, null)
         );
       },
       bO = (function(n) {

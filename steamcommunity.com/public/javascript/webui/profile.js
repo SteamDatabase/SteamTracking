@@ -3355,224 +3355,220 @@
   },
   e2SU: function(e, t, n) {
     "use strict";
-    n.d(t, "B", function() {
-      return u;
+    n.d(t, "A", function() {
+      return s;
     }),
-      n.d(t, "Z", function() {
-        return m;
+      n.d(t, "Y", function() {
+        return l;
       }),
       n.d(t, "g", function() {
-        return p;
+        return u;
       }),
       n.d(t, "j", function() {
-        return h;
+        return m;
       }),
       n.d(t, "o", function() {
-        return d;
-      }),
-      n.d(t, "G", function() {
-        return f;
-      }),
-      n.d(t, "J", function() {
-        return v;
-      }),
-      n.d(t, "p", function() {
-        return _;
-      }),
-      n.d(t, "eb", function() {
-        return E;
-      }),
-      n.d(t, "U", function() {
-        return y;
-      }),
-      n.d(t, "S", function() {
-        return b;
-      }),
-      n.d(t, "pb", function() {
-        return g;
-      }),
-      n.d(t, "qb", function() {
-        return w;
-      }),
-      n.d(t, "nb", function() {
-        return k;
-      }),
-      n.d(t, "s", function() {
-        return S;
-      }),
-      n.d(t, "gb", function() {
-        return x;
-      }),
-      n.d(t, "y", function() {
-        return M;
-      }),
-      n.d(t, "x", function() {
-        return C;
-      }),
-      n.d(t, "P", function() {
-        return L;
-      }),
-      n.d(t, "R", function() {
-        return P;
-      }),
-      n.d(t, "a", function() {
-        return O;
-      }),
-      n.d(t, "v", function() {
-        return I;
-      }),
-      n.d(t, "D", function() {
-        return B;
-      }),
-      n.d(t, "N", function() {
-        return N;
-      }),
-      n.d(t, "ob", function() {
-        return R;
-      }),
-      n.d(t, "M", function() {
-        return T;
-      }),
-      n.d(t, "k", function() {
-        return D;
-      }),
-      n.d(t, "Q", function() {
-        return G;
-      }),
-      n.d(t, "O", function() {
-        return V;
-      }),
-      n.d(t, "bb", function() {
-        return F;
-      }),
-      n.d(t, "h", function() {
-        return W;
-      }),
-      n.d(t, "l", function() {
-        return H;
-      }),
-      n.d(t, "f", function() {
-        return z;
+        return p;
       }),
       n.d(t, "F", function() {
-        return j;
-      }),
-      n.d(t, "hb", function() {
-        return A;
-      }),
-      n.d(t, "lb", function() {
-        return U;
-      }),
-      n.d(t, "C", function() {
-        return K;
-      }),
-      n.d(t, "c", function() {
-        return Y;
-      }),
-      n.d(t, "b", function() {
-        return q;
-      }),
-      n.d(t, "n", function() {
-        return X;
-      }),
-      n.d(t, "fb", function() {
-        return J;
-      }),
-      n.d(t, "H", function() {
-        return Q;
-      }),
-      n.d(t, "K", function() {
-        return Z;
-      }),
-      n.d(t, "V", function() {
-        return $;
-      }),
-      n.d(t, "T", function() {
-        return ee;
-      }),
-      n.d(t, "ib", function() {
-        return te;
-      }),
-      n.d(t, "jb", function() {
-        return ne;
-      }),
-      n.d(t, "Y", function() {
-        return re;
-      }),
-      n.d(t, "t", function() {
-        return oe;
-      }),
-      n.d(t, "u", function() {
-        return ie;
-      }),
-      n.d(t, "m", function() {
-        return ce;
+        return h;
       }),
       n.d(t, "I", function() {
-        return ae;
+        return d;
+      }),
+      n.d(t, "p", function() {
+        return f;
       }),
       n.d(t, "db", function() {
-        return se;
+        return v;
       }),
-      n.d(t, "cb", function() {
-        return le;
+      n.d(t, "T", function() {
+        return _;
+      }),
+      n.d(t, "R", function() {
+        return E;
+      }),
+      n.d(t, "ob", function() {
+        return y;
+      }),
+      n.d(t, "pb", function() {
+        return b;
       }),
       n.d(t, "mb", function() {
-        return ue;
-      }),
-      n.d(t, "w", function() {
-        return me;
-      }),
-      n.d(t, "W", function() {
-        return pe;
-      }),
-      n.d(t, "X", function() {
-        return he;
-      }),
-      n.d(t, "A", function() {
-        return de;
-      }),
-      n.d(t, "ab", function() {
-        return fe;
-      }),
-      n.d(t, "d", function() {
-        return ve;
-      }),
-      n.d(t, "L", function() {
-        return _e;
-      }),
-      n.d(t, "kb", function() {
-        return Ee;
-      }),
-      n.d(t, "E", function() {
-        return ye;
+        return g;
       }),
       n.d(t, "r", function() {
-        return be;
+        return w;
       }),
-      n.d(t, "rb", function() {
-        return ge;
+      n.d(t, "fb", function() {
+        return k;
       }),
-      n.d(t, "e", function() {
-        return we;
+      n.d(t, "x", function() {
+        return S;
       }),
-      n.d(t, "i", function() {
-        return ke;
+      n.d(t, "w", function() {
+        return x;
+      }),
+      n.d(t, "O", function() {
+        return M;
+      }),
+      n.d(t, "Q", function() {
+        return C;
+      }),
+      n.d(t, "a", function() {
+        return L;
+      }),
+      n.d(t, "u", function() {
+        return P;
+      }),
+      n.d(t, "C", function() {
+        return O;
+      }),
+      n.d(t, "M", function() {
+        return I;
+      }),
+      n.d(t, "nb", function() {
+        return B;
+      }),
+      n.d(t, "L", function() {
+        return R;
+      }),
+      n.d(t, "k", function() {
+        return N;
+      }),
+      n.d(t, "P", function() {
+        return T;
+      }),
+      n.d(t, "N", function() {
+        return D;
+      }),
+      n.d(t, "ab", function() {
+        return G;
+      }),
+      n.d(t, "h", function() {
+        return V;
+      }),
+      n.d(t, "l", function() {
+        return F;
+      }),
+      n.d(t, "f", function() {
+        return W;
+      }),
+      n.d(t, "E", function() {
+        return H;
+      }),
+      n.d(t, "gb", function() {
+        return z;
+      }),
+      n.d(t, "kb", function() {
+        return j;
+      }),
+      n.d(t, "B", function() {
+        return A;
+      }),
+      n.d(t, "c", function() {
+        return U;
+      }),
+      n.d(t, "b", function() {
+        return K;
+      }),
+      n.d(t, "n", function() {
+        return Y;
+      }),
+      n.d(t, "eb", function() {
+        return q;
+      }),
+      n.d(t, "G", function() {
+        return X;
+      }),
+      n.d(t, "J", function() {
+        return J;
+      }),
+      n.d(t, "U", function() {
+        return Q;
+      }),
+      n.d(t, "S", function() {
+        return Z;
+      }),
+      n.d(t, "hb", function() {
+        return $;
+      }),
+      n.d(t, "ib", function() {
+        return ee;
+      }),
+      n.d(t, "X", function() {
+        return te;
+      }),
+      n.d(t, "s", function() {
+        return ne;
+      }),
+      n.d(t, "t", function() {
+        return re;
+      }),
+      n.d(t, "m", function() {
+        return oe;
+      }),
+      n.d(t, "H", function() {
+        return ie;
+      }),
+      n.d(t, "cb", function() {
+        return ce;
+      }),
+      n.d(t, "bb", function() {
+        return ae;
+      }),
+      n.d(t, "lb", function() {
+        return se;
+      }),
+      n.d(t, "v", function() {
+        return le;
+      }),
+      n.d(t, "V", function() {
+        return ue;
+      }),
+      n.d(t, "W", function() {
+        return me;
       }),
       n.d(t, "z", function() {
-        return Se;
+        return pe;
+      }),
+      n.d(t, "Z", function() {
+        return he;
+      }),
+      n.d(t, "d", function() {
+        return de;
+      }),
+      n.d(t, "K", function() {
+        return fe;
+      }),
+      n.d(t, "jb", function() {
+        return ve;
+      }),
+      n.d(t, "D", function() {
+        return _e;
       }),
       n.d(t, "q", function() {
-        return xe;
+        return Ee;
+      }),
+      n.d(t, "qb", function() {
+        return ye;
+      }),
+      n.d(t, "e", function() {
+        return be;
+      }),
+      n.d(t, "i", function() {
+        return ge;
+      }),
+      n.d(t, "y", function() {
+        return we;
       });
     var r = n("mrSG"),
       o = n("q1tI"),
       i = n("twdX"),
       c = n.n(i),
-      a = n("QHER"),
-      s = (n("/7KC"), n("vvG3")),
-      l = n.n(s);
-    function u() {
+      a = n("QHER");
+    n("/7KC"), n("vvG3");
+    function s() {
       return o.createElement(
         "svg",
         {
@@ -3608,7 +3604,7 @@
         )
       );
     }
-    function m() {
+    function l() {
       return o.createElement(
         "svg",
         {
@@ -3629,7 +3625,7 @@
         })
       );
     }
-    function p() {
+    function u() {
       return o.createElement(
         "svg",
         {
@@ -3651,7 +3647,7 @@
         )
       );
     }
-    function h() {
+    function m() {
       return o.createElement(
         "svg",
         {
@@ -3700,7 +3696,7 @@
         })
       );
     }
-    function d() {
+    function p() {
       return o.createElement(
         "svg",
         {
@@ -3717,7 +3713,7 @@
         })
       );
     }
-    function f() {
+    function h() {
       return o.createElement(
         "svg",
         {
@@ -3745,7 +3741,7 @@
         )
       );
     }
-    function v(e) {
+    function d(e) {
       var t = "SVGIcon_Button SVGIcon_Microphone";
       return (
         e.className && (t += " " + e.className),
@@ -3891,7 +3887,7 @@
         )
       );
     }
-    function _() {
+    function f() {
       return o.createElement(
         "svg",
         {
@@ -3947,7 +3943,7 @@
         })
       );
     }
-    function E() {
+    function v() {
       return o.createElement(
         "svg",
         {
@@ -3976,7 +3972,7 @@
         )
       );
     }
-    function y() {
+    function _() {
       return o.createElement(
         "svg",
         {
@@ -4008,7 +4004,7 @@
         )
       );
     }
-    function b() {
+    function E() {
       return o.createElement(
         "svg",
         {
@@ -4025,7 +4021,7 @@
         })
       );
     }
-    function g(e) {
+    function y(e) {
       return o.createElement(
         "svg",
         Object(r.a)(
@@ -4050,7 +4046,7 @@
         )
       );
     }
-    function w() {
+    function b() {
       return o.createElement(
         "svg",
         {
@@ -4086,7 +4082,7 @@
         })
       );
     }
-    function k(e) {
+    function g(e) {
       return o.createElement(
         "svg",
         {
@@ -4178,7 +4174,7 @@
           )
       );
     }
-    function S() {
+    function w() {
       return o.createElement(
         "svg",
         {
@@ -4227,7 +4223,7 @@
         )
       );
     }
-    function x() {
+    function k() {
       return o.createElement(
         "svg",
         {
@@ -4314,7 +4310,7 @@
         })
       );
     }
-    function M(e) {
+    function S(e) {
       var t = "SVGIcon_Button SVGIcon_Headphones";
       return (
         e.className && (t += " " + e.className),
@@ -4377,7 +4373,7 @@
         )
       );
     }
-    function C() {
+    function x() {
       return o.createElement(
         "svg",
         {
@@ -4401,7 +4397,7 @@
         )
       );
     }
-    function L(e) {
+    function M(e) {
       var t = "SVGIcon_Button SVGIcon_Pin";
       return (
         e.bPinned && (t += " Pinned"),
@@ -4443,7 +4439,7 @@
         )
       );
     }
-    function P(e) {
+    function C(e) {
       return o.createElement(
         "svg",
         {
@@ -4490,7 +4486,7 @@
           })
       );
     }
-    function O() {
+    function L() {
       return o.createElement(
         "svg",
         {
@@ -4524,7 +4520,7 @@
         })
       );
     }
-    function I() {
+    function P() {
       return o.createElement(
         "svg",
         {
@@ -4568,7 +4564,7 @@
         })
       );
     }
-    function B() {
+    function O() {
       return o.createElement(
         "svg",
         {
@@ -4616,7 +4612,7 @@
         )
       );
     }
-    function N() {
+    function I() {
       return o.createElement(
         "svg",
         {
@@ -4640,7 +4636,7 @@
         })
       );
     }
-    function R(e) {
+    function B(e) {
       return o.createElement(
         "svg",
         {
@@ -4712,7 +4708,7 @@
         )
       );
     }
-    function T() {
+    function R() {
       return o.createElement(
         "svg",
         {
@@ -4750,7 +4746,7 @@
         })
       );
     }
-    function D() {
+    function N() {
       return o.createElement(
         "svg",
         {
@@ -4774,7 +4770,7 @@
         )
       );
     }
-    function G() {
+    function T() {
       return o.createElement(
         "svg",
         {
@@ -4795,7 +4791,7 @@
         })
       );
     }
-    function V() {
+    function D() {
       return o.createElement(
         "svg",
         {
@@ -4819,7 +4815,7 @@
         })
       );
     }
-    function F(e) {
+    function G(e) {
       return o.createElement(
         "svg",
         {
@@ -4907,7 +4903,7 @@
         )
       );
     }
-    function W() {
+    function V() {
       return o.createElement(
         "svg",
         {
@@ -4932,7 +4928,7 @@
         })
       );
     }
-    function H(e) {
+    function F(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return o.createElement(
@@ -5012,7 +5008,7 @@
         })
       );
     }
-    function z() {
+    function W() {
       return o.createElement(
         "svg",
         {
@@ -5070,7 +5066,7 @@
         )
       );
     }
-    function j() {
+    function H() {
       return o.createElement(
         "svg",
         {
@@ -5100,7 +5096,7 @@
         })
       );
     }
-    function A(e) {
+    function z(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -5344,7 +5340,7 @@
         )
       );
     }
-    function U() {
+    function j() {
       return o.createElement(
         "svg",
         {
@@ -5369,7 +5365,7 @@
         })
       );
     }
-    function K() {
+    function A() {
       return o.createElement(
         "svg",
         {
@@ -5395,7 +5391,7 @@
         })
       );
     }
-    function Y() {
+    function U() {
       return o.createElement(
         "svg",
         {
@@ -5415,7 +5411,7 @@
         })
       );
     }
-    function q(e) {
+    function K(e) {
       return o.createElement(
         "svg",
         {
@@ -5450,7 +5446,7 @@
         })
       );
     }
-    function X(e) {
+    function Y(e) {
       return o.createElement(
         "svg",
         {
@@ -5486,7 +5482,7 @@
           })
       );
     }
-    function J() {
+    function q() {
       return o.createElement(
         "svg",
         {
@@ -5520,7 +5516,7 @@
         })
       );
     }
-    function Q() {
+    function X() {
       return o.createElement(
         "svg",
         {
@@ -5556,7 +5552,7 @@
         })
       );
     }
-    function Z() {
+    function J() {
       return o.createElement(
         "svg",
         {
@@ -5582,7 +5578,7 @@
         })
       );
     }
-    function $() {
+    function Q() {
       return o.createElement(
         "svg",
         {
@@ -5615,7 +5611,7 @@
         })
       );
     }
-    function ee() {
+    function Z() {
       return o.createElement(
         "svg",
         {
@@ -5643,7 +5639,7 @@
         })
       );
     }
-    function te() {
+    function $() {
       return o.createElement(
         "svg",
         {
@@ -5667,7 +5663,7 @@
         })
       );
     }
-    function ne() {
+    function ee() {
       return o.createElement(
         "svg",
         {
@@ -5746,7 +5742,7 @@
         )
       );
     }
-    function re() {
+    function te() {
       return o.createElement(
         "svg",
         {
@@ -5770,7 +5766,7 @@
         )
       );
     }
-    function oe(e) {
+    function ne(e) {
       return o.createElement(
         "svg",
         {
@@ -5791,7 +5787,7 @@
         })
       );
     }
-    function ie(e) {
+    function re(e) {
       return o.createElement(
         "svg",
         {
@@ -5855,7 +5851,7 @@
         )
       );
     }
-    function ce() {
+    function oe() {
       return o.createElement(
         "svg",
         {
@@ -5890,7 +5886,7 @@
         })
       );
     }
-    function ae(e) {
+    function ie(e) {
       return o.createElement(
         "svg",
         {
@@ -5928,7 +5924,7 @@
         })
       );
     }
-    function se() {
+    function ce() {
       return o.createElement(
         "svg",
         {
@@ -6042,7 +6038,7 @@
         )
       );
     }
-    function le(e) {
+    function ae(e) {
       var t = Object(a.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -6076,7 +6072,7 @@
         })
       );
     }
-    function ue() {
+    function se() {
       return o.createElement(
         "svg",
         {
@@ -6104,7 +6100,7 @@
         })
       );
     }
-    function me() {
+    function le() {
       return o.createElement(
         "svg",
         {
@@ -6126,7 +6122,7 @@
         )
       );
     }
-    function pe() {
+    function ue() {
       return o.createElement(
         "svg",
         {
@@ -6163,7 +6159,7 @@
         )
       );
     }
-    function he() {
+    function me() {
       return o.createElement(
         "svg",
         {
@@ -6191,7 +6187,7 @@
         })
       );
     }
-    function de(e) {
+    function pe(e) {
       return o.createElement(
         "svg",
         {
@@ -6303,7 +6299,7 @@
         )
       );
     }
-    function fe() {
+    function he() {
       return o.createElement(
         "svg",
         {
@@ -6370,7 +6366,7 @@
         })
       );
     }
-    function ve() {
+    function de() {
       return o.createElement(
         "svg",
         {
@@ -6391,7 +6387,7 @@
         })
       );
     }
-    function _e() {
+    function fe() {
       return o.createElement(
         "svg",
         {
@@ -6411,7 +6407,7 @@
         })
       );
     }
-    function Ee() {
+    function ve() {
       return o.createElement(
         "svg",
         {
@@ -6435,7 +6431,7 @@
         })
       );
     }
-    function ye() {
+    function _e() {
       return o.createElement(
         "svg",
         {
@@ -6485,7 +6481,7 @@
         })
       );
     }
-    function be() {
+    function Ee() {
       return o.createElement(
         "svg",
         {
@@ -6518,7 +6514,7 @@
         })
       );
     }
-    function ge() {
+    function ye() {
       return o.createElement(
         "svg",
         {
@@ -6538,7 +6534,7 @@
         })
       );
     }
-    function we() {
+    function be() {
       return o.createElement(
         "svg",
         {
@@ -6560,7 +6556,7 @@
         })
       );
     }
-    function ke() {
+    function ge() {
       return o.createElement(
         "svg",
         {
@@ -6594,7 +6590,7 @@
         })
       );
     }
-    function Se() {
+    function we() {
       return o.createElement(
         "svg",
         {
@@ -6662,82 +6658,6 @@
           x2: "208.507",
           y2: "55.004"
         })
-      );
-    }
-    function xe(e) {
-      var t = l.a.EmoticonBow;
-      return (
-        e.className && (t += " " + e.className),
-        o.createElement(
-          "svg",
-          {
-            version: "1.1",
-            id: "Layer_1",
-            xmlns: "http://www.w3.org/2000/svg",
-            x: "0px",
-            y: "0px",
-            viewBox: "0 0 47 63.08",
-            className: t
-          },
-          o.createElement(
-            "g",
-            { id: "Layer_2_1_" },
-            o.createElement(
-              "g",
-              { id: "Layer_2-2" },
-              o.createElement("polygon", {
-                className: l.a.EmoticonBow_st0,
-                points:
-                  "26.54,63.08 47,38.88 47,50.98 36.77,63.08                               "
-              }),
-              o.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "23,63.08 47,35.08 47,49.08 35,63.08                            "
-              }),
-              o.createElement("polygon", {
-                className: l.a.EmoticonBow_st0,
-                points:
-                  "42.86,22.41 37.42,16.08 12.84,16.08 0,31.06 0,46.3 25.66,16.36 37.64,30.29 38.78,24.06\r\n\t\t\t\t\t\t\t\t\t43.58,24.06 44.28,24.06                                "
-              }),
-              o.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "24.22,16.08 0,44.08 0,30.08 12.11,16.08                    "
-              }),
-              o.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "34.45,10.49 44.06,21.71 38.45,21.71 37.39,27.36 26.92,15.14 28.76,10.49                        "
-              }),
-              o.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "27.81,6.41 40.57,0 44.35,0 44.9,11.7 39.23,12.84 35.49,8.17 35.49,8.17 28.83,8                                 "
-              }),
-              o.createElement("polygon", {
-                className: l.a.EmoticonBow_st0,
-                points:
-                  "12.09,16.08 5.15,24.12 9.58,24.08 10.72,30.29 22.99,16.08                               "
-              }),
-              o.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "14.17,10.49 4.55,21.71 10.16,21.71 11.23,27.36 21.7,15.14 19.86,10.49                                 "
-              }),
-              o.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "20.71,6.41 7.95,0 4.17,0 3.62,11.7 9.28,12.84 13.02,8.17 13.02,8.17 19.68,8                                 "
-              }),
-              o.createElement("polygon", {
-                className: l.a.EmoticonBow_st1,
-                points:
-                  "25.78,7.22 24.52,7.22 24.05,7.22 22.79,7.22 21.99,8.67 24.05,13.98 24.52,13.98 26.58,8.67                  "
-              })
-            )
-          )
-        )
       );
     }
   },
