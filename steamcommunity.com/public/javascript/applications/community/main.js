@@ -20545,30 +20545,30 @@
       (nn[(nn.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
       (nn[(nn.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
     var an = new ((function() {
-        function o() {
+        function b() {
           (this.m_mapClanToUserPermissions = new Map()),
             (this.m_mapAnnounceGIDToVote = new Map()),
             (this.m_mapFollowedCreatorClanID = new Map());
           var e = Object(E.e)("partnereventpermission", "application_config");
           if (e && e.clanid) {
             var t = new on(e.clanid),
-              n = { result: t, promise: o.RemapToPromise(t) };
+              n = { result: t, promise: b.RemapToPromise(t) };
             this.CopyFromResponseToTrack(n, e),
               this.m_mapClanToUserPermissions.set(e.clanid, n);
           }
         }
         return (
-          (o.RemapToPromise = function(t) {
+          (b.RemapToPromise = function(t) {
             return Object(y.b)(this, void 0, void 0, function() {
               return Object(y.e)(this, function(e) {
                 return [2, t];
               });
             });
           }),
-          (o.prototype.BIsUserLoggedIn = function() {
+          (b.prototype.BIsUserLoggedIn = function() {
             return E.g.logged_in;
           }),
-          (o.prototype.GetPartnerEventPermissions = function(e) {
+          (b.prototype.GetPartnerEventPermissions = function(e) {
             if (!e) return new on(0);
             var t = e.GetAccountID();
             return (
@@ -20577,22 +20577,22 @@
               this.m_mapClanToUserPermissions.get(t).result
             );
           }),
-          (o.prototype.BFollowsEvent = function(e, t) {
+          (b.prototype.BFollowsEvent = function(e, t) {
             return (
               -1 != this.GetPartnerEventPermissions(e).event_followed.indexOf(t)
             );
           }),
-          (o.prototype.BFollowsEventAndNotifiedBy = function(e, t, n) {
+          (b.prototype.BFollowsEventAndNotifiedBy = function(e, t, n) {
             var o = this.GetPartnerEventPermissions(e),
               a = o.event_followed.indexOf(t);
             return -1 !== a && (o.event_followed_flags[a] & n) == n;
           }),
-          (o.prototype.BIgnoresEvent = function(e, t) {
+          (b.prototype.BIgnoresEvent = function(e, t) {
             return (
               -1 != this.GetPartnerEventPermissions(e).event_ignored.indexOf(t)
             );
           }),
-          (o.prototype.LoadSingleAppEventPermissions = function(o) {
+          (b.prototype.LoadSingleAppEventPermissions = function(o) {
             return Object(y.b)(this, void 0, void 0, function() {
               var t, n;
               return Object(y.e)(this, function(e) {
@@ -20609,7 +20609,7 @@
               });
             });
           }),
-          (o.prototype.CopyFromResponseToTrack = function(e, t) {
+          (b.prototype.CopyFromResponseToTrack = function(e, t) {
             (e.result.appid = t.appid),
               (e.result.can_edit = t.can_edit),
               (e.result.clanid = t.appid),
@@ -20622,7 +20622,7 @@
               (e.result.valve_admin = t.valve_admin),
               (e.result.limited_user = t.limited_user);
           }),
-          (o.prototype.InternalLoadSingleAppEventPermissions = function(s) {
+          (b.prototype.InternalLoadSingleAppEventPermissions = function(c) {
             return Object(y.b)(this, void 0, void 0, function() {
               var t,
                 n,
@@ -20630,51 +20630,62 @@
                 a,
                 i,
                 r,
-                p = this;
+                p,
+                s = this;
               return Object(y.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    (t = null), (n = s.GetAccountID()), (o = !1), (e.label = 1);
+                    (t = null),
+                      (n = c.GetAccountID()),
+                      (o = !Boolean(E.g.logged_in)),
+                      this.m_mapClanToUserPermissions.has(n) ||
+                        ((a = new on(c.GetAccountID())),
+                        this.m_mapClanToUserPermissions.set(n, {
+                          result: a,
+                          promise: b.RemapToPromise(a)
+                        })),
+                      (e.label = 1);
                   case 1:
                     return (
-                      e.trys.push([1, 3, 4, 5]),
-                      (a =
-                        E.b.COMMUNITY_BASE_URL +
-                        "/gid/" +
-                        s.ConvertTo64BitString() +
-                        "/ajaxgetpartnereventpermissions/"),
-                      [4, g.a.get(a, { withCredentials: !0 })]
+                      e.trys.push([1, 4, 5, 6]),
+                      Boolean(E.g.logged_in)
+                        ? ((i =
+                            E.b.COMMUNITY_BASE_URL +
+                            "gid/" +
+                            c.ConvertTo64BitString() +
+                            "/ajaxgetpartnereventpermissions/"),
+                          [4, g.a.get(i, { withCredentials: !0 })])
+                        : [3, 3]
                     );
                   case 2:
-                    return (
-                      1 != (t = e.sent()).data.success
-                        ? (console.log(
-                            "Partner Events Failed Load:" +
-                              B(t.data).strErrorMsg
-                          ),
-                          (o = !0))
-                        : ((i = this.m_mapClanToUserPermissions.get(n)),
-                          this.CopyFromResponseToTrack(i, t.data)),
-                      [3, 5]
-                    );
+                    1 != (t = e.sent()).data.success
+                      ? (console.log(
+                          "Partner Events Failed Load:" + B(t.data).strErrorMsg
+                        ),
+                        (o = !0))
+                      : ((r = this.m_mapClanToUserPermissions.get(n)),
+                        this.CopyFromResponseToTrack(r, t.data)),
+                      (e.label = 3);
                   case 3:
-                    return (
-                      (r = e.sent()),
-                      (t = r.response),
-                      (o = !0),
-                      (r &&
-                        void 0 !== r.response &&
-                        void 0 !== r.response.data &&
-                        void 0 !== r.response.data.success &&
-                        21 == r.response.data.success) ||
-                        console.log(B(r).strErrorMsg, r),
-                      [3, 5]
-                    );
+                    return [3, 6];
                   case 4:
+                    return (
+                      (p = e.sent()),
+                      (t = p.response),
+                      (o = !0),
+                      (p &&
+                        void 0 !== p.response &&
+                        void 0 !== p.response.data &&
+                        void 0 !== p.response.data.success &&
+                        21 == p.response.data.success) ||
+                        console.log(B(p).strErrorMsg, p),
+                      [3, 6]
+                    );
+                  case 5:
                     return (
                       o &&
                         Object(m.z)(function() {
-                          var e = p.m_mapClanToUserPermissions.get(n);
+                          var e = s.m_mapClanToUserPermissions.get(n);
                           (e.result.appid = t && t.data ? t.data.appid : 0),
                             (e.result.can_edit = !1),
                             (e.result.clanid = t && t.data ? t.data.clanid : 0),
@@ -20689,13 +20700,13 @@
                         }),
                       [7]
                     );
-                  case 5:
+                  case 6:
                     return [2, this.m_mapClanToUserPermissions.get(n).result];
                 }
               });
             });
           }),
-          (o.prototype.SetFollowOrUnfollowEvent = function(c, b, l, M, d) {
+          (b.prototype.SetFollowOrUnfollowEvent = function(c, b, l, M, d) {
             return Object(y.b)(this, void 0, void 0, function() {
               var t,
                 n,
@@ -20773,7 +20784,7 @@
               });
             });
           }),
-          (o.prototype.Vote = function(i, r, p) {
+          (b.prototype.Vote = function(i, r, p) {
             return Object(y.b)(this, void 0, void 0, function() {
               var t, n, o, a;
               return Object(y.e)(this, function(e) {
@@ -20826,7 +20837,7 @@
               });
             });
           }),
-          (o.prototype.LoadMyVote = function(a, i) {
+          (b.prototype.LoadMyVote = function(a, i) {
             return Object(y.b)(this, void 0, void 0, function() {
               var t, n, o;
               return Object(y.e)(this, function(e) {
@@ -20865,34 +20876,34 @@
               });
             });
           }),
-          (o.prototype.BHasMyVote = function(e) {
+          (b.prototype.BHasMyVote = function(e) {
             return (
               !!e.AnnouncementGID &&
               this.m_mapAnnounceGIDToVote.has(e.AnnouncementGID)
             );
           }),
-          (o.prototype.GetPreviouslyLoadedVote = function(e) {
+          (b.prototype.GetPreviouslyLoadedVote = function(e) {
             return e.AnnouncementGID
               ? this.m_mapAnnounceGIDToVote.has(e.AnnouncementGID)
               : void 0;
           }),
-          (o.prototype.BShowEmailEditorTab = function(e) {
+          (b.prototype.BShowEmailEditorTab = function(e) {
             return (
               !!e.BHasEmailEnabled() ||
               this.GetPartnerEventPermissions(e.clanSteamID).valve_admin
             );
           }),
-          (o.prototype.BShowSaleEditorTab = function(e) {
+          (b.prototype.BShowSaleEditorTab = function(e) {
             return (
               !!e.BHasSaleEnabled() ||
               this.GetPartnerEventPermissions(e.clanSteamID).valve_admin
             );
           }),
-          Object(y.c)([m.w], o.prototype, "m_mapClanToUserPermissions", void 0),
-          Object(y.c)([m.w], o.prototype, "m_mapAnnounceGIDToVote", void 0),
-          Object(y.c)([m.w], o.prototype, "m_mapFollowedCreatorClanID", void 0),
-          Object(y.c)([m.f], o.prototype, "CopyFromResponseToTrack", null),
-          o
+          Object(y.c)([m.w], b.prototype, "m_mapClanToUserPermissions", void 0),
+          Object(y.c)([m.w], b.prototype, "m_mapAnnounceGIDToVote", void 0),
+          Object(y.c)([m.w], b.prototype, "m_mapFollowedCreatorClanID", void 0),
+          Object(y.c)([m.f], b.prototype, "CopyFromResponseToTrack", null),
+          b
         );
       })())(),
       rn = function() {
@@ -22628,24 +22639,64 @@
               (this.m_chatVisibility =
                 "hide" === this.GetChatVisibility() ? "show" : "hide");
           }),
-          (e.prototype.HintLoadEmbeddableStreams = function(r) {
+          (e.prototype.HintLoadEmbeddablePreviewStreams = function(a) {
             return Object(y.b)(this, void 0, void 0, function() {
-              var t, n, o, a, i;
+              var t, n, o;
               return Object(y.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    (this.m_settings = r),
+                    (this.m_settings = a),
                       (t = null),
                       (n = {
-                        appid: r.appid,
-                        promotionname: r.bIsPreview
+                        eventid: a.event ? a.event.GID : void 0,
+                        previewAccounts: Boolean(a.bIsPreview && a.accountIDs)
+                          ? a.accountIDs.join(",")
+                          : void 0
+                      }),
+                      (e.label = 1);
+                  case 1:
+                    return (
+                      e.trys.push([1, 3, , 4]),
+                      [
+                        4,
+                        g.a.get(
+                          E.b.STORE_BASE_URL +
+                            "broadcast/ajaxgetstreamersforpreview",
+                          { params: n }
+                        )
+                      ]
+                    );
+                  case 2:
+                    return (t = e.sent()), [3, 4];
+                  case 3:
+                    return (o = e.sent()), console.error(o), [3, 4];
+                  case 4:
+                    return [2, this.HandleHintLoadBroadcastResponse(t)];
+                }
+              });
+            });
+          }),
+          (e.prototype.HintLoadEmbeddableStreams = function(a) {
+            return Object(y.b)(this, void 0, void 0, function() {
+              var t, n, o;
+              return Object(y.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    (this.m_settings = a),
+                      (t = null),
+                      (n = {
+                        appid: a.appid,
+                        promotionname: a.bIsPreview
                           ? "preview"
-                          : r.promotionname,
-                        clanid: r.clanid,
-                        listid: r.listid,
-                        subid: r.subid,
-                        bundleid: r.bundleid,
-                        eventid: r.event ? r.event.GID : void 0,
+                          : a.promotionname,
+                        clanid: a.clanid,
+                        listid: a.listid,
+                        subid: a.subid,
+                        bundleid: a.bundleid,
+                        eventid: a.event ? a.event.GID : void 0,
+                        previewAccounts: Boolean(a.bIsPreview && a.accountIDs)
+                          ? a.accountIDs.join(",")
+                          : void 0,
                         test: !1,
                         cc: E.b.COUNTRY,
                         l: E.b.LANGUAGE
@@ -22668,15 +22719,27 @@
                   case 3:
                     return (o = e.sent()), console.error(o), [3, 4];
                   case 4:
-                    return t
-                      ? ((this.m_mapDynamicStoreData = t.data.rgAppData),
-                        (a = !1),
-                        (t &&
-                          t.data &&
-                          t.data.filtered &&
-                          t.data.filtered.length) ||
+                    return [2, this.HandleHintLoadBroadcastResponse(t)];
+                }
+              });
+            });
+          }),
+          (e.prototype.HandleHintLoadBroadcastResponse = function(o) {
+            return Object(y.b)(this, void 0, void 0, function() {
+              var t, n;
+              return Object(y.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return o
+                      ? ((this.m_mapDynamicStoreData = o.data.rgAppData),
+                        (t = !1),
+                        console.log(" worolld ;", o.data),
+                        (o &&
+                          o.data &&
+                          o.data.filtered &&
+                          o.data.filtered.length) ||
                           !this.m_settings.bIsPreview ||
-                          ((t.data = {
+                          ((o.data = {
                             filtered: [{}],
                             success: 1,
                             total_count: 1,
@@ -22684,22 +22747,22 @@
                             broadcast_chat_visibility: "hide",
                             rgAppData: null
                           }),
-                          (a = !0)),
-                        (this.m_streams = t.data.filtered),
-                        (i = this.GetPrimaryStream()),
-                        t.data.broadcast_chat_visibility &&
+                          (t = !0)),
+                        (this.m_streams = o.data.filtered),
+                        (n = this.GetPrimaryStream()),
+                        o.data.broadcast_chat_visibility &&
                           (this.m_chatVisibility =
-                            t.data.broadcast_chat_visibility),
-                        a
-                          ? [2, (this.m_playReadyStream = i)]
-                          : i
-                          ? [4, this.AttemptToPlayStream(i)]
-                          : [3, 6])
+                            o.data.broadcast_chat_visibility),
+                        t
+                          ? [2, (this.m_playReadyStream = n)]
+                          : n
+                          ? [4, this.AttemptToPlayStream(n)]
+                          : [3, 2])
                       : [2, null];
-                  case 5:
-                    e.sent(), (e.label = 6);
-                  case 6:
-                    return [2, i];
+                  case 1:
+                    e.sent(), (e.label = 2);
+                  case 2:
+                    return [2, n];
                 }
               });
             });
@@ -22807,6 +22870,12 @@
           Object(y.c)([m.w], e.prototype, "m_settings", void 0),
           Object(y.c)([m.w], e.prototype, "m_chatVisibility", void 0),
           Object(y.c)([m.w], e.prototype, "m_bHideBroadcast", void 0),
+          Object(y.c)(
+            [m.f],
+            e.prototype,
+            "HintLoadEmbeddablePreviewStreams",
+            null
+          ),
           Object(y.c)([m.f], e.prototype, "HintLoadEmbeddableStreams", null),
           Object(y.c)([m.f], e.prototype, "AttemptToPlayStream", null),
           Object(y.c)([m.f], e.prototype, "GetAppDetailsForBroadcast", null),
@@ -40888,7 +40957,12 @@
                           this.props.event.clanSteamID,
                           this.m_cancelSignal
                         ),
-                      [4, fo.HintLoadEmbeddableStreams(this.props)]
+                      [
+                        4,
+                        this.props.bIsPreview && this.props.accountIDs
+                          ? fo.HintLoadEmbeddablePreviewStreams(this.props)
+                          : fo.HintLoadEmbeddableStreams(this.props)
+                      ]
                     );
                   case 2:
                     return (
@@ -47225,18 +47299,30 @@
                         t.GetSubTitle(n)
                       )
                   ),
+                  t.BHasBroadcastEnabled() &&
+                    _.createElement(
+                      "div",
+                      {
+                        style: {
+                          width: "100%",
+                          margin: "0 auto",
+                          maxWidth: "940px"
+                        }
+                      },
+                      _.createElement(yp, {
+                        event: this.props.event,
+                        bIsPreview: this.props.previewMode,
+                        accountIDs: this.props.previewMode
+                          ? this.props.event.jsondata.broadcast_whitelist
+                          : void 0
+                      })
+                    ),
                   _.createElement(
                     "div",
                     { className: fb.a.EventColumns },
                     _.createElement(
                       "div",
                       { className: fb.a.EventDetailsDescription },
-                      t.BHasBroadcastEnabled() &&
-                        _.createElement(
-                          "div",
-                          null,
-                          _.createElement(yp, { event: this.props.event })
-                        ),
                       _.createElement(
                         oe,
                         null,

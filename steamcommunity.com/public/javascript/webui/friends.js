@@ -27582,9 +27582,46 @@
               (this.m_chatVisibility =
                 "hide" === this.GetChatVisibility() ? "show" : "hide");
           }),
+          (e.prototype.HintLoadEmbeddablePreviewStreams = function(e) {
+            return Object(o.b)(this, void 0, void 0, function() {
+              var t, n, r;
+              return Object(o.e)(this, function(o) {
+                switch (o.label) {
+                  case 0:
+                    (this.m_settings = e),
+                      (t = null),
+                      (n = {
+                        eventid: e.event ? e.event.GID : void 0,
+                        previewAccounts: Boolean(e.bIsPreview && e.accountIDs)
+                          ? e.accountIDs.join(",")
+                          : void 0
+                      }),
+                      (o.label = 1);
+                  case 1:
+                    return (
+                      o.trys.push([1, 3, , 4]),
+                      [
+                        4,
+                        I.a.get(
+                          u.c.STORE_BASE_URL +
+                            "broadcast/ajaxgetstreamersforpreview",
+                          { params: n }
+                        )
+                      ]
+                    );
+                  case 2:
+                    return (t = o.sent()), [3, 4];
+                  case 3:
+                    return (r = o.sent()), console.error(r), [3, 4];
+                  case 4:
+                    return [2, this.HandleHintLoadBroadcastResponse(t)];
+                }
+              });
+            });
+          }),
           (e.prototype.HintLoadEmbeddableStreams = function(e) {
             return Object(o.b)(this, void 0, void 0, function() {
-              var t, n, r, i, a;
+              var t, n, r;
               return Object(o.e)(this, function(o) {
                 switch (o.label) {
                   case 0:
@@ -27600,6 +27637,9 @@
                         subid: e.subid,
                         bundleid: e.bundleid,
                         eventid: e.event ? e.event.GID : void 0,
+                        previewAccounts: Boolean(e.bIsPreview && e.accountIDs)
+                          ? e.accountIDs.join(",")
+                          : void 0,
                         test: !1,
                         cc: u.c.COUNTRY,
                         l: u.c.LANGUAGE
@@ -27622,15 +27662,27 @@
                   case 3:
                     return (r = o.sent()), console.error(r), [3, 4];
                   case 4:
-                    return t
-                      ? ((this.m_mapDynamicStoreData = t.data.rgAppData),
-                        (i = !1),
-                        (t &&
-                          t.data &&
-                          t.data.filtered &&
-                          t.data.filtered.length) ||
+                    return [2, this.HandleHintLoadBroadcastResponse(t)];
+                }
+              });
+            });
+          }),
+          (e.prototype.HandleHintLoadBroadcastResponse = function(e) {
+            return Object(o.b)(this, void 0, void 0, function() {
+              var t, n;
+              return Object(o.e)(this, function(o) {
+                switch (o.label) {
+                  case 0:
+                    return e
+                      ? ((this.m_mapDynamicStoreData = e.data.rgAppData),
+                        (t = !1),
+                        console.log(" worolld ;", e.data),
+                        (e &&
+                          e.data &&
+                          e.data.filtered &&
+                          e.data.filtered.length) ||
                           !this.m_settings.bIsPreview ||
-                          ((t.data = {
+                          ((e.data = {
                             filtered: [{}],
                             success: 1,
                             total_count: 1,
@@ -27638,22 +27690,22 @@
                             broadcast_chat_visibility: "hide",
                             rgAppData: null
                           }),
-                          (i = !0)),
-                        (this.m_streams = t.data.filtered),
-                        (a = this.GetPrimaryStream()),
-                        t.data.broadcast_chat_visibility &&
+                          (t = !0)),
+                        (this.m_streams = e.data.filtered),
+                        (n = this.GetPrimaryStream()),
+                        e.data.broadcast_chat_visibility &&
                           (this.m_chatVisibility =
-                            t.data.broadcast_chat_visibility),
-                        i
-                          ? ((this.m_playReadyStream = a), [2, a])
-                          : a
-                          ? [4, this.AttemptToPlayStream(a)]
-                          : [3, 6])
+                            e.data.broadcast_chat_visibility),
+                        t
+                          ? ((this.m_playReadyStream = n), [2, n])
+                          : n
+                          ? [4, this.AttemptToPlayStream(n)]
+                          : [3, 2])
                       : [2, null];
-                  case 5:
-                    o.sent(), (o.label = 6);
-                  case 6:
-                    return [2, a];
+                  case 1:
+                    o.sent(), (o.label = 2);
+                  case 2:
+                    return [2, n];
                 }
               });
             });
@@ -27761,6 +27813,12 @@
           Object(o.c)([c.x], e.prototype, "m_settings", void 0),
           Object(o.c)([c.x], e.prototype, "m_chatVisibility", void 0),
           Object(o.c)([c.x], e.prototype, "m_bHideBroadcast", void 0),
+          Object(o.c)(
+            [c.g],
+            e.prototype,
+            "HintLoadEmbeddablePreviewStreams",
+            null
+          ),
           Object(o.c)([c.g], e.prototype, "HintLoadEmbeddableStreams", null),
           Object(o.c)([c.g], e.prototype, "AttemptToPlayStream", null),
           Object(o.c)([c.g], e.prototype, "GetAppDetailsForBroadcast", null),
