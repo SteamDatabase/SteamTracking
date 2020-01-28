@@ -192,5 +192,13 @@
             "crc128"    "ff3fa20ba60e61aa4d6d1eb7da32096b"
             "bootloadertimestamp"    "581cfc7e"
         }
+        "2"
+        {
+            "firmwarebinary"    "/firmware/firmware_4611_5e2f3da8.bin"
+            "firmwaretimestamp"    "5e2f3da8"
+            "minclientpackage"    ""
+            "crc128"    "0473024e75703890e83dfe1015688956"
+            "bootloadertimestamp"    "581cfc7e"
+        }
     }
 }
