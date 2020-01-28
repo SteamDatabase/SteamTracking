@@ -5916,24 +5916,64 @@
               (this.m_chatVisibility =
                 "hide" === this.GetChatVisibility() ? "show" : "hide");
           }),
-          (e.prototype.HintLoadEmbeddableStreams = function(o) {
+          (e.prototype.HintLoadEmbeddablePreviewStreams = function(i) {
             return Object(B.b)(this, void 0, void 0, function() {
-              var t, n, r, i, a;
+              var t, n, r;
               return Object(B.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    (this.m_settings = o),
+                    (this.m_settings = i),
                       (t = null),
                       (n = {
-                        appid: o.appid,
-                        promotionname: o.bIsPreview
+                        eventid: i.event ? i.event.GID : void 0,
+                        previewAccounts: Boolean(i.bIsPreview && i.accountIDs)
+                          ? i.accountIDs.join(",")
+                          : void 0
+                      }),
+                      (e.label = 1);
+                  case 1:
+                    return (
+                      e.trys.push([1, 3, , 4]),
+                      [
+                        4,
+                        v.a.get(
+                          w.STORE_BASE_URL +
+                            "broadcast/ajaxgetstreamersforpreview",
+                          { params: n }
+                        )
+                      ]
+                    );
+                  case 2:
+                    return (t = e.sent()), [3, 4];
+                  case 3:
+                    return (r = e.sent()), console.error(r), [3, 4];
+                  case 4:
+                    return [2, this.HandleHintLoadBroadcastResponse(t)];
+                }
+              });
+            });
+          }),
+          (e.prototype.HintLoadEmbeddableStreams = function(i) {
+            return Object(B.b)(this, void 0, void 0, function() {
+              var t, n, r;
+              return Object(B.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    (this.m_settings = i),
+                      (t = null),
+                      (n = {
+                        appid: i.appid,
+                        promotionname: i.bIsPreview
                           ? "preview"
-                          : o.promotionname,
-                        clanid: o.clanid,
-                        listid: o.listid,
-                        subid: o.subid,
-                        bundleid: o.bundleid,
-                        eventid: o.event ? o.event.GID : void 0,
+                          : i.promotionname,
+                        clanid: i.clanid,
+                        listid: i.listid,
+                        subid: i.subid,
+                        bundleid: i.bundleid,
+                        eventid: i.event ? i.event.GID : void 0,
+                        previewAccounts: Boolean(i.bIsPreview && i.accountIDs)
+                          ? i.accountIDs.join(",")
+                          : void 0,
                         test: !1,
                         cc: w.COUNTRY,
                         l: w.LANGUAGE
@@ -5956,15 +5996,27 @@
                   case 3:
                     return (r = e.sent()), console.error(r), [3, 4];
                   case 4:
-                    return t
-                      ? ((this.m_mapDynamicStoreData = t.data.rgAppData),
-                        (i = !1),
-                        (t &&
-                          t.data &&
-                          t.data.filtered &&
-                          t.data.filtered.length) ||
+                    return [2, this.HandleHintLoadBroadcastResponse(t)];
+                }
+              });
+            });
+          }),
+          (e.prototype.HandleHintLoadBroadcastResponse = function(r) {
+            return Object(B.b)(this, void 0, void 0, function() {
+              var t, n;
+              return Object(B.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return r
+                      ? ((this.m_mapDynamicStoreData = r.data.rgAppData),
+                        (t = !1),
+                        console.log(" worolld ;", r.data),
+                        (r &&
+                          r.data &&
+                          r.data.filtered &&
+                          r.data.filtered.length) ||
                           !this.m_settings.bIsPreview ||
-                          ((t.data = {
+                          ((r.data = {
                             filtered: [{}],
                             success: 1,
                             total_count: 1,
@@ -5972,22 +6024,22 @@
                             broadcast_chat_visibility: "hide",
                             rgAppData: null
                           }),
-                          (i = !0)),
-                        (this.m_streams = t.data.filtered),
-                        (a = this.GetPrimaryStream()),
-                        t.data.broadcast_chat_visibility &&
+                          (t = !0)),
+                        (this.m_streams = r.data.filtered),
+                        (n = this.GetPrimaryStream()),
+                        r.data.broadcast_chat_visibility &&
                           (this.m_chatVisibility =
-                            t.data.broadcast_chat_visibility),
-                        i
-                          ? [2, (this.m_playReadyStream = a)]
-                          : a
-                          ? [4, this.AttemptToPlayStream(a)]
-                          : [3, 6])
+                            r.data.broadcast_chat_visibility),
+                        t
+                          ? [2, (this.m_playReadyStream = n)]
+                          : n
+                          ? [4, this.AttemptToPlayStream(n)]
+                          : [3, 2])
                       : [2, null];
-                  case 5:
-                    e.sent(), (e.label = 6);
-                  case 6:
-                    return [2, a];
+                  case 1:
+                    e.sent(), (e.label = 2);
+                  case 2:
+                    return [2, n];
                 }
               });
             });
@@ -6095,6 +6147,12 @@
           Object(B.c)([b.v], e.prototype, "m_settings", void 0),
           Object(B.c)([b.v], e.prototype, "m_chatVisibility", void 0),
           Object(B.c)([b.v], e.prototype, "m_bHideBroadcast", void 0),
+          Object(B.c)(
+            [b.f],
+            e.prototype,
+            "HintLoadEmbeddablePreviewStreams",
+            null
+          ),
           Object(B.c)([b.f], e.prototype, "HintLoadEmbeddableStreams", null),
           Object(B.c)([b.f], e.prototype, "AttemptToPlayStream", null),
           Object(B.c)([b.f], e.prototype, "GetAppDetailsForBroadcast", null),
@@ -36892,7 +36950,12 @@
                           this.props.event.clanSteamID,
                           this.m_cancelSignal
                         ),
-                      [4, nt.HintLoadEmbeddableStreams(this.props)]
+                      [
+                        4,
+                        this.props.bIsPreview && this.props.accountIDs
+                          ? nt.HintLoadEmbeddablePreviewStreams(this.props)
+                          : nt.HintLoadEmbeddableStreams(this.props)
+                      ]
                     );
                   case 2:
                     return (
@@ -43560,30 +43623,30 @@
       (Lp[(Lp.k_ENotifyFlagByEmail = 1)] = "k_ENotifyFlagByEmail"),
       (Lp[(Lp.k_ENotifyFlagByPush = 2)] = "k_ENotifyFlagByPush");
     var Np = (function() {
-        function r() {
+        function d() {
           (this.m_mapClanToUserPermissions = new Map()),
             (this.m_mapAnnounceGIDToVote = new Map()),
             (this.m_mapFollowedCreatorClanID = new Map());
           var e = l("partnereventpermission", "application_config");
           if (e && e.clanid) {
             var t = new zp(e.clanid),
-              n = { result: t, promise: r.RemapToPromise(t) };
+              n = { result: t, promise: d.RemapToPromise(t) };
             this.CopyFromResponseToTrack(n, e),
               this.m_mapClanToUserPermissions.set(e.clanid, n);
           }
         }
         return (
-          (r.RemapToPromise = function(t) {
+          (d.RemapToPromise = function(t) {
             return Object(B.b)(this, void 0, void 0, function() {
               return Object(B.e)(this, function(e) {
                 return [2, t];
               });
             });
           }),
-          (r.prototype.BIsUserLoggedIn = function() {
+          (d.prototype.BIsUserLoggedIn = function() {
             return C.logged_in;
           }),
-          (r.prototype.GetPartnerEventPermissions = function(e) {
+          (d.prototype.GetPartnerEventPermissions = function(e) {
             if (!e) return new zp(0);
             var t = e.GetAccountID();
             return (
@@ -43592,22 +43655,22 @@
               this.m_mapClanToUserPermissions.get(t).result
             );
           }),
-          (r.prototype.BFollowsEvent = function(e, t) {
+          (d.prototype.BFollowsEvent = function(e, t) {
             return (
               -1 != this.GetPartnerEventPermissions(e).event_followed.indexOf(t)
             );
           }),
-          (r.prototype.BFollowsEventAndNotifiedBy = function(e, t, n) {
+          (d.prototype.BFollowsEventAndNotifiedBy = function(e, t, n) {
             var r = this.GetPartnerEventPermissions(e),
               i = r.event_followed.indexOf(t);
             return -1 !== i && (r.event_followed_flags[i] & n) == n;
           }),
-          (r.prototype.BIgnoresEvent = function(e, t) {
+          (d.prototype.BIgnoresEvent = function(e, t) {
             return (
               -1 != this.GetPartnerEventPermissions(e).event_ignored.indexOf(t)
             );
           }),
-          (r.prototype.LoadSingleAppEventPermissions = function(r) {
+          (d.prototype.LoadSingleAppEventPermissions = function(r) {
             return Object(B.b)(this, void 0, void 0, function() {
               var t, n;
               return Object(B.e)(this, function(e) {
@@ -43624,7 +43687,7 @@
               });
             });
           }),
-          (r.prototype.CopyFromResponseToTrack = function(e, t) {
+          (d.prototype.CopyFromResponseToTrack = function(e, t) {
             (e.result.appid = t.appid),
               (e.result.can_edit = t.can_edit),
               (e.result.clanid = t.appid),
@@ -43637,7 +43700,7 @@
               (e.result.valve_admin = t.valve_admin),
               (e.result.limited_user = t.limited_user);
           }),
-          (r.prototype.InternalLoadSingleAppEventPermissions = function(c) {
+          (d.prototype.InternalLoadSingleAppEventPermissions = function(l) {
             return Object(B.b)(this, void 0, void 0, function() {
               var t,
                 n,
@@ -43645,51 +43708,62 @@
                 i,
                 a,
                 o,
-                s = this;
+                s,
+                c = this;
               return Object(B.e)(this, function(e) {
                 switch (e.label) {
                   case 0:
-                    (t = null), (n = c.GetAccountID()), (r = !1), (e.label = 1);
+                    (t = null),
+                      (n = l.GetAccountID()),
+                      (r = !Boolean(C.logged_in)),
+                      this.m_mapClanToUserPermissions.has(n) ||
+                        ((i = new zp(l.GetAccountID())),
+                        this.m_mapClanToUserPermissions.set(n, {
+                          result: i,
+                          promise: d.RemapToPromise(i)
+                        })),
+                      (e.label = 1);
                   case 1:
                     return (
-                      e.trys.push([1, 3, 4, 5]),
-                      (i =
-                        w.COMMUNITY_BASE_URL +
-                        "/gid/" +
-                        c.ConvertTo64BitString() +
-                        "/ajaxgetpartnereventpermissions/"),
-                      [4, v.a.get(i, { withCredentials: !0 })]
+                      e.trys.push([1, 4, 5, 6]),
+                      Boolean(C.logged_in)
+                        ? ((a =
+                            w.COMMUNITY_BASE_URL +
+                            "gid/" +
+                            l.ConvertTo64BitString() +
+                            "/ajaxgetpartnereventpermissions/"),
+                          [4, v.a.get(a, { withCredentials: !0 })])
+                        : [3, 3]
                     );
                   case 2:
-                    return (
-                      1 != (t = e.sent()).data.success
-                        ? (console.log(
-                            "Partner Events Failed Load:" +
-                              Ye(t.data).strErrorMsg
-                          ),
-                          (r = !0))
-                        : ((a = this.m_mapClanToUserPermissions.get(n)),
-                          this.CopyFromResponseToTrack(a, t.data)),
-                      [3, 5]
-                    );
+                    1 != (t = e.sent()).data.success
+                      ? (console.log(
+                          "Partner Events Failed Load:" + Ye(t.data).strErrorMsg
+                        ),
+                        (r = !0))
+                      : ((o = this.m_mapClanToUserPermissions.get(n)),
+                        this.CopyFromResponseToTrack(o, t.data)),
+                      (e.label = 3);
                   case 3:
-                    return (
-                      (o = e.sent()),
-                      (t = o.response),
-                      (r = !0),
-                      (o &&
-                        void 0 !== o.response &&
-                        void 0 !== o.response.data &&
-                        void 0 !== o.response.data.success &&
-                        21 == o.response.data.success) ||
-                        console.log(Ye(o).strErrorMsg, o),
-                      [3, 5]
-                    );
+                    return [3, 6];
                   case 4:
+                    return (
+                      (s = e.sent()),
+                      (t = s.response),
+                      (r = !0),
+                      (s &&
+                        void 0 !== s.response &&
+                        void 0 !== s.response.data &&
+                        void 0 !== s.response.data.success &&
+                        21 == s.response.data.success) ||
+                        console.log(Ye(s).strErrorMsg, s),
+                      [3, 6]
+                    );
+                  case 5:
                     return (
                       r &&
                         Object(b.x)(function() {
-                          var e = s.m_mapClanToUserPermissions.get(n);
+                          var e = c.m_mapClanToUserPermissions.get(n);
                           (e.result.appid = t && t.data ? t.data.appid : 0),
                             (e.result.can_edit = !1),
                             (e.result.clanid = t && t.data ? t.data.clanid : 0),
@@ -43704,13 +43778,13 @@
                         }),
                       [7]
                     );
-                  case 5:
+                  case 6:
                     return [2, this.m_mapClanToUserPermissions.get(n).result];
                 }
               });
             });
           }),
-          (r.prototype.SetFollowOrUnfollowEvent = function(l, d, p, u, m) {
+          (d.prototype.SetFollowOrUnfollowEvent = function(l, d, p, u, m) {
             return Object(B.b)(this, void 0, void 0, function() {
               var t,
                 n,
@@ -43788,7 +43862,7 @@
               });
             });
           }),
-          (r.prototype.Vote = function(a, o, s) {
+          (d.prototype.Vote = function(a, o, s) {
             return Object(B.b)(this, void 0, void 0, function() {
               var t, n, r, i;
               return Object(B.e)(this, function(e) {
@@ -43840,7 +43914,7 @@
               });
             });
           }),
-          (r.prototype.LoadMyVote = function(i, a) {
+          (d.prototype.LoadMyVote = function(i, a) {
             return Object(B.b)(this, void 0, void 0, function() {
               var t, n, r;
               return Object(B.e)(this, function(e) {
@@ -43879,34 +43953,34 @@
               });
             });
           }),
-          (r.prototype.BHasMyVote = function(e) {
+          (d.prototype.BHasMyVote = function(e) {
             return (
               !!e.AnnouncementGID &&
               this.m_mapAnnounceGIDToVote.has(e.AnnouncementGID)
             );
           }),
-          (r.prototype.GetPreviouslyLoadedVote = function(e) {
+          (d.prototype.GetPreviouslyLoadedVote = function(e) {
             return e.AnnouncementGID
               ? this.m_mapAnnounceGIDToVote.has(e.AnnouncementGID)
               : void 0;
           }),
-          (r.prototype.BShowEmailEditorTab = function(e) {
+          (d.prototype.BShowEmailEditorTab = function(e) {
             return (
               !!e.BHasEmailEnabled() ||
               this.GetPartnerEventPermissions(e.clanSteamID).valve_admin
             );
           }),
-          (r.prototype.BShowSaleEditorTab = function(e) {
+          (d.prototype.BShowSaleEditorTab = function(e) {
             return (
               !!e.BHasSaleEnabled() ||
               this.GetPartnerEventPermissions(e.clanSteamID).valve_admin
             );
           }),
-          Object(B.c)([b.v], r.prototype, "m_mapClanToUserPermissions", void 0),
-          Object(B.c)([b.v], r.prototype, "m_mapAnnounceGIDToVote", void 0),
-          Object(B.c)([b.v], r.prototype, "m_mapFollowedCreatorClanID", void 0),
-          Object(B.c)([b.f], r.prototype, "CopyFromResponseToTrack", null),
-          r
+          Object(B.c)([b.v], d.prototype, "m_mapClanToUserPermissions", void 0),
+          Object(B.c)([b.v], d.prototype, "m_mapAnnounceGIDToVote", void 0),
+          Object(B.c)([b.v], d.prototype, "m_mapFollowedCreatorClanID", void 0),
+          Object(B.c)([b.f], d.prototype, "CopyFromResponseToTrack", null),
+          d
         );
       })(),
       Dp = new Np(),
@@ -47741,18 +47815,30 @@
                         t.GetSubTitle(n)
                       )
                   ),
+                  t.BHasBroadcastEnabled() &&
+                    A.createElement(
+                      "div",
+                      {
+                        style: {
+                          width: "100%",
+                          margin: "0 auto",
+                          maxWidth: "940px"
+                        }
+                      },
+                      A.createElement(Ul, {
+                        event: this.props.event,
+                        bIsPreview: this.props.previewMode,
+                        accountIDs: this.props.previewMode
+                          ? this.props.event.jsondata.broadcast_whitelist
+                          : void 0
+                      })
+                    ),
                   A.createElement(
                     "div",
                     { className: Vm.a.EventColumns },
                     A.createElement(
                       "div",
                       { className: Vm.a.EventDetailsDescription },
-                      t.BHasBroadcastEnabled() &&
-                        A.createElement(
-                          "div",
-                          null,
-                          A.createElement(Ul, { event: this.props.event })
-                        ),
                       A.createElement(
                         fr,
                         null,
