@@ -175,6 +175,7 @@
         webapi_token: "",
         authwgtoken: "",
         is_support: !1,
+        is_limited: !1,
         short_url: ""
       },
       s = { steamid: "", clanid: 0, listid: 0 },

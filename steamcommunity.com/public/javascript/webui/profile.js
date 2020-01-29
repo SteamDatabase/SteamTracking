@@ -123,16 +123,16 @@
       n.d(t, "a", function() {
         return a;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "m", function() {
         return s;
       }),
       n.d(t, "h", function() {
         return l;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "p", function() {
         return u;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "o", function() {
         return m;
       }),
       n.d(t, "i", function() {
@@ -141,13 +141,13 @@
       n.d(t, "j", function() {
         return h;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "n", function() {
         return d;
       }),
       n.d(t, "b", function() {
         return f;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "q", function() {
         return v;
       }),
       n.d(t, "g", function() {
@@ -155,6 +155,12 @@
       }),
       n.d(t, "f", function() {
         return E;
+      }),
+      n.d(t, "k", function() {
+        return y;
+      }),
+      n.d(t, "l", function() {
+        return b;
       });
     var r = n("UqDm");
     n("XaMz");
@@ -381,6 +387,19 @@
         e
       );
     })();
+    function y(e, t, n) {
+      for (var r = t.parentElement; r && r !== e && !r.hasAttribute(n); )
+        r = r.parentElement;
+      return r || e;
+    }
+    function b(e, t) {
+      for (var n = [], r = [e]; r.length > 0; )
+        for (var o = r.pop().children, i = 0; i < o.length; ++i) {
+          var c = o[i];
+          c.hasAttribute(t) ? n.push(c) : r.push(c);
+        }
+      return n;
+    }
   },
   "0N1H": function(e, t, n) {
     "use strict";
@@ -759,6 +778,7 @@
         webapi_token: "",
         authwgtoken: "",
         is_support: !1,
+        is_limited: !1,
         short_url: ""
       },
       s = { steamid: "", clanid: 0, listid: 0 },
@@ -1739,7 +1759,7 @@
     }
     function x(e) {
       var t = [],
-        n = l.n(e),
+        n = l.p(e),
         r = n.getSelection(),
         o = r && r.rangeCount > 0 && r.toString().length > 0,
         c = e.target,
@@ -2558,10 +2578,10 @@
   },
   UqDm: function(e, t, n) {
     "use strict";
-    n.d(t, "f", function() {
+    n.d(t, "g", function() {
       return r;
     }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return o;
       }),
       n.d(t, "c", function() {
@@ -2576,11 +2596,14 @@
       n.d(t, "a", function() {
         return s;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return l;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return u;
+      }),
+      n.d(t, "e", function() {
+        return m;
       });
     n("XaMz");
     function r(e) {
@@ -2631,6 +2654,13 @@
     function u(e, t, n) {
       var r = l(e, t, n);
       e.splice(r + 1, 0, t);
+    }
+    function m(e, t) {
+      if (t)
+        for (var n = e.length - 1; n >= 0; --n) {
+          var r = e[n];
+          if (t(r, n, e)) return r;
+        }
     }
   },
   WC1h: function(e, t, n) {

@@ -3510,3 +3510,14 @@ img.category_icon {
 {
 	width: 315px;
 }
+
+.textarea_over_limit
+{
+	background: rgba( 255, 0, 0, 0.3 );
+}
+
+.length_error_msg
+{
+	color: red;
+	font-weight: bold;
+}

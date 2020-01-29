@@ -121,7 +121,13 @@ LocalizationReady("shared", "english", {
   EventBrowse_RecentEvents: "Recent Events & Announcements",
 
   EventCalendar_Title: "Steam news & events",
-  EventCalendar_FilterSubSection_Announcements: "Steam announcements",
+  EventCalendar_FilterSubSection_EventTypeGroups: "Show these event types",
+  EventCalendar_FilterSubSection_GameSources: "Show events for these games",
+  EventCalendar_EmptyCalendar:
+    "No events found. Try selecting different search criteria in the sidebar.",
+  EventCalendar_DisabledFilter_LoginPrompt:
+    "Sign in to enable these categories",
+
   EventCalendar_LiveAndRecentEventsHeader: "Live and recent",
   EventCalendar_LiveNow: "live now",
   EventCalendar_TimeLeft: "ends in %1$s",
@@ -136,11 +142,36 @@ LocalizationReady("shared", "english", {
   EventCalendar_ThisMonth: "this month",
   EventCalendar_MuchLater: "much later",
 
-  EventCalender_Type_Global: "global",
-  EventCalender_Type_Recommended: "recommended",
+  EventCalendar_EventTypeGroup_news: "News",
+  EventCalendar_EventTypeGroup_ttip_news: "Include general news",
+  EventCalendar_EventTypeGroup_events: "Events",
+  EventCalendar_EventTypeGroup_ttip_events:
+    "Include in-game, online/chat, and real-world events",
+  EventCalendar_EventTypeGroup_streaming: "Streaming",
+  EventCalendar_EventTypeGroup_ttip_streaming:
+    "Include broadcast events, liek tournaments and play-alongs",
+  EventCalendar_EventTypeGroup_updates: "Updates",
+  EventCalendar_EventTypeGroup_ttip_updates:
+    "Include news about new game content, expansions, DLC, and bug fixes",
+  EventCalendar_EventTypeGroup_releases: "Releases",
+  EventCalendar_EventTypeGroup_ttip_releases:
+    "Include new game, beta, season, or DLC release schedules.",
+  EventCalendar_EventTypeGroup_sales: "Sales",
+  EventCalendar_EventTypeGroup_ttip_sales:
+    "Include discounts, promotions, and free trials",
 
-  EventCalender_Show: "show",
-  EventCalender_Show_All: "all",
+  EventCalendar_GameSource_library: "Library",
+  EventCalendar_GameSource_ttip_library:
+    "Include post about games in your library",
+  EventCalendar_GameSource_wishlist: "wishlist",
+  EventCalendar_GameSource_ttip_wishlist:
+    "Include post about games on your wishlist",
+  EventCalendar_GameSource_following: "following",
+  EventCalendar_GameSource_ttip_following:
+    "Include post about games that you follow",
+  EventCalendar_GameSource_recommended: "recommended",
+  EventCalendar_GameSource_ttip_recommended:
+    "Include post about games we think you would like",
 
   EventDisplay_Admin_Title: "Admin tools:",
 
@@ -1045,6 +1076,8 @@ LocalizationReady("shared", "english", {
   Lunar2020_ReceivedNumberOfTokens: "You've received %1$s tokens",
   Lunar2020_YourBalancePrefix: "Your balance",
   Lunar2020_BalanceNumberOfTokens: "%1$s tokens",
+
+  Lunar2020_LimitedUserDialogTitle: "Unable to open envelope",
 
   Lunar2020_StoryTitle: "THE EMPEROR'S GREAT RACE",
   Lunar2020_StorySubTitle: "The Origin of the Chinese Zodiac",

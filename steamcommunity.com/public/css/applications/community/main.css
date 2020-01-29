@@ -2607,7 +2607,8 @@ textarea:-webkit-autofill:focus,
   box-sizing: border-box;
   background: white;
   display: flex;
-  border: 1px solid black; }
+  border: 1px solid black;
+  z-index: 3; }
   .broadcastwidgets_CapsuleMenuButton_2hdaQ:hover {
     background: #67c1f5; }
   .broadcastwidgets_CapsuleMenuButton_2hdaQ > img {
@@ -6469,6 +6470,13 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
     opacity: 0.3;
     left: 0; }
 
+.partnereventdisplay_EventBroadcastCtn_1Ph1i {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 940px; }
+
 .partnereventdisplay_EventColumns_1PEIf {
   display: flex;
   position: relative;
@@ -10183,6 +10191,42 @@ input.partnereventemails_HeadlineInput_2lHX9 {
     padding: 16px;
     margin-top: 16px;
     background-color: #2e3138; }
+    .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_DefaultTitlePicker_1Rgup {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px; }
+      .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_DefaultTitlePicker_1Rgup .DialogInputLabelGroup {
+        flex: 1;
+        margin: 0 8px; }
+        .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_DefaultTitlePicker_1Rgup .DialogInputLabelGroup .Disabled {
+          color: #6d6d6d;
+          box-shadow: none; }
+    .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_SectionTypePicker_3Tjtf {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px; }
+      .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_SectionTypePicker_3Tjtf .partnereventsale_SectionTypePrompt_2yqih {
+        padding: 8px 0px; }
+      .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_SectionTypePicker_3Tjtf .DialogInputLabelGroup {
+        flex: 1;
+        margin: 0 8px; }
+    .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_CrossTabWarning_2iLl5 {
+      background-color: darkred;
+      font-weight: bold;
+      text-align: center;
+      padding: 12px; }
+    .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_CrossTabLink_VkuQf {
+      text-align: center;
+      padding: 12px;
+      display: block;
+      text-decoration: underline; }
+    .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_UploadLinkRow_zoWy8 {
+      flex: 1;
+      padding-right: 24px; }
+      .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_UploadLinkRow_zoWy8 .partnereventsale_UploadLinkImageButton_3lofP {
+        margin-left: auto; }
+        .partnereventsale_SaleSection_SOMqO .partnereventsale_EditorCtn_1SyQQ .partnereventsale_UploadLinkRow_zoWy8 .partnereventsale_UploadLinkImageButton_3lofP .DialogButton {
+          padding: 0px 8px; }
 
 .partnereventsale_SmallText_1SKHf {
   color: gray;
@@ -10199,38 +10243,24 @@ input.partnereventemails_HeadlineInput_2lHX9 {
   overflow: scroll;
   max-height: 300px; }
 
-.partnereventsale_AddTitleButton_1i6s- {
+.partnereventsale_AddTitleButton_1i6s-, .partnereventsale_RemoveTitleButton_3rCfB {
   width: 100px; }
-
-.partnereventsale_CustomTitleCtn_3xf_h {
-  padding-top: 8px;
-  padding-bottom: 4px; }
-
-.partnereventsale_LanguageContainer_3JNbe {
-  width: 300px; }
-  .partnereventsale_LanguageContainer_3JNbe > div {
-    margin-bottom: 0px; }
+  .partnereventsale_AddTitleButton_1i6s- button.DialogButton:disabled,
+  .partnereventsale_AddTitleButton_1i6s- button.DialogButton:disabled:hover, .partnereventsale_RemoveTitleButton_3rCfB button.DialogButton:disabled,
+  .partnereventsale_RemoveTitleButton_3rCfB button.DialogButton:disabled:hover {
+    color: lightgray;
+    background-color: #65646f; }
 
 .partnereventsale_customTitleOptionsCtn_18Ftt {
   margin-top: 10px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  padding-left: 20px;
-  border-left: #399aec 1px solid; }
-  .partnereventsale_customTitleOptionsCtn_18Ftt .partnereventsale_TitleRowCtn_3FgfJ {
-    background: rgba(59, 63, 72, 0.5);
-    color: #dfe3e6;
-    font-size: 14px;
-    font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    margin-bottom: 4px;
-    padding: 4px 8px;
-    border: none;
-    border-radius: 3px;
-    box-shadow: inset 0px 0px 0px #0000;
-    transition: all .2s ease-in-out; }
-    .partnereventsale_customTitleOptionsCtn_18Ftt .partnereventsale_TitleRowCtn_3FgfJ:hover {
-      background: rgba(67, 73, 83, 0.6); }
+  margin-bottom: 15px; }
+  .partnereventsale_customTitleOptionsCtn_18Ftt .partnereventsale_CustomTitleCtn_3xf_h {
+    padding-top: 8px;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center; }
+    .partnereventsale_customTitleOptionsCtn_18Ftt .partnereventsale_CustomTitleCtn_3xf_h .partnereventsale_LanguageInput_9Ojz4 {
+      flex: 1; }
 
 .partnereventsale_SettingCtn_32UTR {
   box-shadow: 0px 0px 20px black;
@@ -11428,7 +11458,7 @@ button.TextButton:focus {
   filter: saturate(0.35);
   box-shadow: none; }
 
-.DialogCheckbox_Container:hover .DialogCheckbox,
+.DialogCheckbox_Container:hover .DialogCheckbox:not(.Disabled),
 .DialogCheckbox:hover:not(.Disabled) {
   background-color: #1e1f23; }
 

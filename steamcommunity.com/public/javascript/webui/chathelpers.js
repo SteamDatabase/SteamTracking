@@ -486,6 +486,7 @@
         webapi_token: "",
         authwgtoken: "",
         is_support: !1,
+        is_limited: !1,
         short_url: ""
       },
       u = { steamid: "", clanid: 0, listid: 0 },
@@ -1294,10 +1295,10 @@
   },
   UqDm: function(e, t, n) {
     "use strict";
-    n.d(t, "f", function() {
+    n.d(t, "g", function() {
       return r;
     }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return o;
       }),
       n.d(t, "c", function() {
@@ -1312,11 +1313,14 @@
       n.d(t, "a", function() {
         return u;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return c;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return l;
+      }),
+      n.d(t, "e", function() {
+        return p;
       });
     n("XaMz");
     function r(e) {
@@ -1367,6 +1371,13 @@
     function l(e, t, n) {
       var r = c(e, t, n);
       e.splice(r + 1, 0, t);
+    }
+    function p(e, t) {
+      if (t)
+        for (var n = e.length - 1; n >= 0; --n) {
+          var r = e[n];
+          if (t(r, n, e)) return r;
+        }
     }
   },
   WpBz: function(e, t, n) {

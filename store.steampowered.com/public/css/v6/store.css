@@ -1763,16 +1763,23 @@ a#store_search_link img {
 {
 	width: fit-content;
 	min-width: fit-content;
-	font-family: ;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			text-transform: uppercase;
+	font-size: 15px;
+	padding-top: 0px;
+
 }
 
 .lunar_sale_supersavings_label .highlight {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			text-transform: uppercase;
 	color: #FFB321;
-	font-size: 20px;
 	font-weight: bold;
 	text-align: center;
-	margin-top: -4px;
-	margin-bottom: -4px;
 }
 
 
@@ -2427,6 +2434,11 @@ span.platform_img.valveindex {
 	background-image: url( '/public/images/v6/icon_platform_valveindex.png' );
 	width: 26px;
 }
+
+span.platform_img.music {
+	background-image: url( '/public/images/v6/icon_platform_music.png' );
+}
+
 span.vr_supported,
 span.vr_required {
     vertical-align: top;
@@ -4265,7 +4277,6 @@ body.v6 .store_nav .popup_menu_subheader, body.v6 #footer_nav .popup_menu_subhea
 
 .popup_menu_twocol > .popup_menu
 {
-	flex: 1;
 	min-width: 0;
 }
 
@@ -4275,6 +4286,11 @@ body.v6 .store_nav .popup_menu_subheader, body.v6 #footer_nav .popup_menu_subhea
 	{
 		display: block;
 	}
+	html.responsive .popup_menu_twocol > .popup_menu
+	{
+		flex: 1;
+	}
+
 
 	html.responsive .popup_menu_twocol > .popup_menu:not(:first-child)
 	{
