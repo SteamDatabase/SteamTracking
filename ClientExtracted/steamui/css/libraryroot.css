@@ -11254,13 +11254,13 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
       border-image-repeat: stretch;
       border-image-slice: 7;
       background: radial-gradient(100% 80% at 64% 95%, rgba(153, 174, 204, 0.3) 0%, rgba(125, 150, 184, 0.13) 40%, rgba(83, 104, 104, 0.1) 100%);
-      box-shadow: 0 0 12px #00000025; }
+      box-shadow: 0 0 12px #00000025;
+      margin-bottom: 20px; }
       .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq {
         display: flex;
         flex-direction: column;
         align-self: stretch;
         padding: 6px;
-        padding-bottom: 86px;
         max-width: 1024px;
         border-radius: 3px; }
         .appdetailssoundtrack_SoundtrackContainer_1c7FW .appdetailssoundtrack_Content_22Q27 .appdetailssoundtrack_RightColumn_1s3Ep .appdetailssoundtrack_TrackListContainer_1Rrhq .appdetailssoundtrack_Disc_17Yl1 {

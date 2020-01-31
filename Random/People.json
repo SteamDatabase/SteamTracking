@@ -248,7 +248,10 @@
     },
     {
         "name": "Dennis Geels",
-        "bio": "I grew up in Saint Louis, MO, went off to school at Rice University in Houston and Cal (UC Berkeley), then moved to the lovely Pacific Northwest in 2006. Here, I spent a decade at Google, mostly building application servers and infrastructure. After an intervening gig as PE at a smaller big data company, I joined Valve and the Steam team in 2018."
+        "bio": "I grew up in Saint Louis, MO, went off to school at Rice University in Houston and Cal (UC Berkeley), then moved to the lovely Pacific Northwest in 2006. Here, I spent a decade at Google, mostly building application servers and infrastructure. After an intervening gig as PE at a smaller big data company, I joined Valve and the Steam team in 2018.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Dennis Geels"
+        ]
     },
     {
         "name": "Dhabih Eng",
@@ -276,19 +279,8 @@
         ]
     },
     {
-        "name": "Eddie Parker",
-        "bio": "Rogue generalist engineer.  Happy to be here: I think you might be too!",
-        "links": [
-            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Eddie Parker"
-        ]
-    },
-    {
-        "name": "Elizabeth Ratto",
-        "bio": "How did a Portuguese-speaking, farm girl from Oakdale, Ca. wind up doing HR benefits and payroll administration for a video game company in Bellevue, WA?  It probably had to do with her switch from accounting to HR management at Chico State; and those stints at a legal\/econ consulting firm and at Gracenote, Sony's music tech company; and the transition from San Francisco to Seattle; and that former colleague who knew somebody who knew somebody who worked for Valve. But you know what? We don't really care how Lizzie wound up at Valve. We just thank the gods she's here. Twice a month.. When we get those paychecks. Like clockwork."
-    },
-    {
         "name": "Emily Kent",
-        "bio": "Emily works on the UI for Steam; community, support, sales, and security. Prior to Valve, Emily spent time working at Xbox, a mobile start up, frog, Jackson Fish Market, and Microsoft's Pioneer Studios. Emily wants you to protect your account with the Steam Guard Mobile Authenticator."
+        "bio": "Emily works on the UI for Steam; library, mobile apps, community, support, sales, and security. Prior to Valve, Emily spent time working at Xbox, a mobile start up, frog, Jackson Fish Market, and Microsoft's Pioneer Studios. Emily wants you to protect your account with the Steam Guard Mobile Authenticator."
     },
     {
         "name": "Eric Hope",
@@ -347,13 +339,6 @@
         "links": [
             "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Greg Coomer",
             "http:\/\/steamcommunity.com\/id\/greg"
-        ]
-    },
-    {
-        "name": "Howard Chung",
-        "bio": "Howard spent three years at Microsoft after graduating from Duke University, simultaneously co-founded the OpenDota project, and now engineers various things at Valve.",
-        "links": [
-            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Howard Chung"
         ]
     },
     {
@@ -445,12 +430,8 @@
         ]
     },
     {
-        "name": "Jennifer Paine",
-        "bio": "Computer whisperer, Jane of All Trades, gamer, geek. Proud support main. You're welcome. Off-tank for hire, will peel for pocket."
-    },
-    {
         "name": "Jeremy Selan",
-        "bio": "Jeremy is a software developer working on hardware. He loves pixels. Except for the crappy ones.He\u2019s excited about the future of VR, worried about AI, and otherwise an optimist. He formerly had unrealistic expectations for pixels in the visual effects industry, and regularly overcomes zeroth-world problems.",
+        "bio": "Jeremy is a software developer working on hardware. He loves pixels. Except for the crappy ones. He\u2019s excited about the future of VR, concerned about AI, and otherwise an optimist. He formerly had unrealistic expectations for pixels in the visual effects industry, and regularly overcomes zeroth-world problems.",
         "links": [
             "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Jeremy Selan"
         ]
@@ -502,7 +483,7 @@
     },
     {
         "name": "Johnny Deng",
-        "bio": "Electrical Engineer with experience in Signal Integrity and Semiconductor product development. I work a lot in the lab.",
+        "bio": "Electrical Engineer with experience in Signal Integrity and Semiconductor product development, test. I work a lot in the lab.",
         "links": [
             "https:\/\/steamcommunity.com\/id\/diredesire\/"
         ]
@@ -518,6 +499,13 @@
     {
         "name": "Karen Prell",
         "bio": "Karen performed for 16 years as a puppeteer with Jim Henson and the Muppets before becoming a computer animator. She worked at Pixar and several other animation companies before joining Valve, where she continues to apply her puppet acting experience towards animating an exciting mix of heroes, creatures and robots."
+    },
+    {
+        "name": "Keith Miron",
+        "bio": "Keith joined Valve from Blizzard, where he was the Lead Gameplay Engineer on Overwatch working on the game from concept to ship.  Prior to that, he was the Technical Director at inXile entertainment, working on Hunted: The Demon's Forge.  Now he's happy to be working on solving all sorts of features at Valve.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Keith Miron"
+        ]
     },
     {
         "name": "Kelly Thornton",
@@ -755,7 +743,10 @@
     },
     {
         "name": "Teryn Bence",
-        "bio": "After graduating from UCLA, Teryn joined Valve in 2015 to ship things \u2013 literally. She started resolving customers' shipping issues with the Support Team during the launch of the Steam Controller and Steam Link. Using that experience, Teryn now manages logistics for Steam Hardware, including overseeing our shipments, sales, promotions, and warehouses."
+        "bio": "After graduating from UCLA, Teryn joined Valve in 2015 to ship things - literally. Using experience from overseeing customer support during the launch of Steam Hardware, Teryn works on logistics and business development for all Valve hardware products, as well as improvements for the Steam PC Cafe Program.",
+        "links": [
+            "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Teryn Bence"
+        ]
     },
     {
         "name": "Tim Larkin",
@@ -805,13 +796,6 @@
         "bio": "Tristan earned a degree in transportation design. After a dipping a toe into industrial design, he found his way into making models for games, eventually landing at Valve to help with Half Life 2, Episode 2.  Since then He's been delighted to get away with building all sorts of models and art for Portal 2, Left 4 Dead, Team fortress 2, among others.  Outside of Valve, Tristan enjoys the decision paralysis that comes from making art and models in the real world where there is no Ctrl Z.",
         "links": [
             "https:\/\/www.valvesoftware.com\/en\/contact?contact-person=Tristan Reidford"
-        ]
-    },
-    {
-        "name": "Vince Xarya",
-        "bio": "[They promised me cake][It's been well over 3 years now][Neurotoxins, Yes]",
-        "links": [
-            "https:\/\/steamcommunity.com\/profiles\/76561198289613080\/"
         ]
     },
     {

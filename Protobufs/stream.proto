@@ -358,6 +358,7 @@ message CStreamingClientCaps {
 	optional bool disable_intel_hardware_encoding = 8;
 	optional bool disable_amd_hardware_encoding = 9;
 	optional bool disable_nvidia_hardware_encoding = 10;
+	optional int32 form_factor = 11;
 }
 
 message CStreamingClientConfig {

@@ -7,7 +7,7 @@ public:
     virtual unknown_ret ProcessStreamAvailable(unsigned int, unsigned int) = 0;
     virtual unknown_ret ProcessStreamShutdown(unsigned int) = 0;
     virtual unknown_ret UpdateStreamClientResolution(unsigned int, int, int) = 0;
-    virtual unknown_ret ProcessStreamClientConnected(unsigned int) = 0;
+    virtual unknown_ret ProcessStreamClientConnected(unsigned int, ESteamDeviceFormFactor) = 0;
     virtual unknown_ret ProcessStreamClientDisconnected(unsigned int) = 0;
     virtual unknown_ret BGetStreamTransportSignal(unsigned int, CUtlBuffer*) = 0;
     virtual unknown_ret SendStreamTransportSignal(unsigned int, CUtlBuffer const*) = 0;
