@@ -5497,3 +5497,8 @@ body.v6 .page_content.notes {
 .music_album_track_name_other_language {
     display: inline;
 }
+
+.music_album_track_name_other_language {
+    color: #93b0bb;
+    font-size: 10px;
+}

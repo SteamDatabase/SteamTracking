@@ -13,21 +13,7 @@
 	overflow: hidden;
 }
 
-@media all and (max-width: 1224px) {
-    body.responsive_page .home_page_body_ctn.has_takeover .fullscreen-bg__video {
-        width: 150vw;
-    }
-    body.responsive_page .page_background_holder {
-        height: 29vw !important;
-        background-size: cover !important;
-    }
-    body.responsive_page .home_page_body_ctn.has_takeover .home_page_takeover_sizer {
-        height: 29vw !important;
-    }
-    body.responsive_page .home_page_body_ctn.has_takeover .home_page_takeover_sizer img {
-        height: 29vw !important;
-    }
-}
+
 
 .page_background_holder {
 	position: absolute;
@@ -37,6 +23,79 @@
 	left: 0;
 	background-repeat: no-repeat;
 	background-position: center top;
+}
+
+.page_background_holder_mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: none;
+}
+
+.home_page_takeover_sizer_mobile {
+    display: none;
+}
+
+/* Hide mobile versions by default */
+html.responsive .fullscreen-bg__video_mobile {
+    display: none;
+}
+
+@media all and (max-width: 910px) {
+    body.responsive_page .home_page_body_ctn.has_takeover .fullscreen-bg__video {
+        height: 46vw;
+    }
+    /* takeovers should now scale down based on the center ~960 pixels */
+    body.responsive_page .page_background_holder {
+        height: 46vw !important;
+        background-size: cover !important;
+    }
+    body.responsive_page .home_page_body_ctn.has_takeover .home_page_takeover_sizer {
+        height: 46vw !important;
+    }
+    body.responsive_page .home_page_body_ctn.has_takeover .home_page_takeover_sizer img {
+        height: 46vw !important;
+    }
+}
+
+@media screen and (max-width: 500px ) {
+
+    /* if mobile video exists, show it and hide desktop video and static */
+    html.responsive div.mobile_video_set .fullscreen-bg__video_mobile {
+        display: block;
+        height: 70vw !important;
+        background-size: cover;
+    }
+    html.responsive div.mobile_video_set .fullscreen-bg__video {
+        display: none;
+    }
+
+    /* if no mobile video, but static mobile image, show static */
+    html.responsive div.mobile_static_set:not(.mobile_video_set) .fullscreen-bg__video_mobile,
+    html.responsive div.mobile_static_set:not(.mobile_video_set) .fullscreen-bg__video {
+        display: none;
+    }
+    html.responsive div.mobile_static_set:not(.mobile_video_set) .page_background_holder_mobile {
+        display: block;
+        height: 70vw !important;
+        background-size: cover;
+    }
+
+    /* set height on sizer if either mobile version exist */
+    html.responsive .home_page_body_ctn.has_takeover.mobile_static_set .home_page_takeover_sizer,
+    html.responsive .home_page_body_ctn.has_takeover.mobile_video_set .home_page_takeover_sizer {
+        height: 70vw !important;
+    }
+    html.responsive .mobile_static_set .page_background_holder_mobile .home_header_textimage_ctn a,
+    html.responsive .mobile_video_set .page_background_holder_mobile .home_header_textimage_ctn a {
+        height: auto;
+    }
+
+
 }
 
 .home_page_takeover_link {
