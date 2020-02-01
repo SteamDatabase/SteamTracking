@@ -57370,10 +57370,7 @@
                           4,
                           Promise.all([
                             I.EnsureStoreCapsuleInfoLoaded(t),
-                            Kt.LoadOGGClanInfoForAppID(t),
-                            Kt.LoadOGGClanInfoForIdentifier(
-                              this.props.match.params.appid_or_vanity_str
-                            ),
+                            Kt.LoadOGGClanInfoForClanSteamID(n),
                             zl.LoadEditorModel(
                               n,
                               this.props.match.params.gid,
