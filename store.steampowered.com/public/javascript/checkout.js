@@ -3051,6 +3051,7 @@ function UpdatePaymentInfoForm()
 		
 		var bShowCVV = false;
 		var bShowCreditCardNumberExp = false;
+		var bShowPhoneNumber = false;
 		var bShowCountryVerification = false;
 		var bShowBankAccountForm = false;
 		var bShowMobileForm = false;
@@ -3099,12 +3100,14 @@ function UpdatePaymentInfoForm()
 			
 						g_bShowAddressForm = true;
 			bShowCreditCardNumberExp = true;
+			bShowPhoneNumber = true;
 						bShowCVV = !card_is_stored; 
 			bShowSaveMyAddress = !g_bIsUpdateBillingInfoForm;
 		}
 		else if ( method.value == 'paypal' )
 		{
 						g_bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
+			bShowPhoneNumber = g_bShowAddressForm;
 			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
 			bShowSaveMyAddress = g_bEnableCachedPayPalCredentials && !g_bIsUpdateBillingInfoForm;
 			
@@ -3113,6 +3116,7 @@ function UpdatePaymentInfoForm()
 		else if ( method.value == 'updatepaypal' )
 		{
 						g_bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
+			bShowPhoneNumber = g_bShowAddressForm;
 			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
 			
 			$('external_payment_processor_notice').innerHTML = 'Your PayPal transaction is initializing, please wait a moment before continuing...';
@@ -3270,7 +3274,13 @@ function UpdatePaymentInfoForm()
 
 		var $AddressFields = $J('#payment_row_address, #payment_header_title');
 		if ( g_bShowAddressForm )
+		{
 			$AddressFields.show();
+			if ( bShowPhoneNumber )
+				$J('#payment_row_phone').show();
+			else
+				$J('#payment_row_phone').hide();
+		}
 		else
 			$AddressFields.hide();
 
@@ -3679,27 +3689,28 @@ function SubmitPaymentInfoForm()
 				}
 			}
 	
-	
-			if ( $( 'billing_phone' ).value.length < 3 )
+						if ( $( 'billing_phone' ).visible() )
 			{
-				errorString += 'Please enter your billing phone number, including area code.<br/>';
-				rgBadFields.billing_phone = true;
-			}
-			else if  ( $( 'billing_country' ).value == 'US' )
-			{
-				// Expect 10 digits if in the US, we'll make sure we at least have that many digits
-				var num = $( 'billing_phone').value;
-				var digitsFound = 0;
-				for ( i = 0; i < num.length; ++i )
-				{
-					var c = num.charAt(i);
-					if ( c >= '0' && c <= '9' )
-						++digitsFound;
-				}
-				if ( digitsFound < 10 )
+				if ( $( 'billing_phone' ).value.length < 3 )
 				{
 					errorString += 'Please enter your billing phone number, including area code.<br/>';
 					rgBadFields.billing_phone = true;
+				}
+				else if  ( $( 'billing_country' ).value == 'US' )
+				{
+										var num = $( 'billing_phone').value;
+					var digitsFound = 0;
+					for ( i = 0; i < num.length; ++i )
+					{
+						var c = num.charAt(i);
+						if ( c >= '0' && c <= '9' )
+							++digitsFound;
+					}
+					if ( digitsFound < 10 )
+					{
+						errorString += 'Please enter your billing phone number, including area code.<br/>';
+						rgBadFields.billing_phone = true;
+					}
 				}
 			}
 				
