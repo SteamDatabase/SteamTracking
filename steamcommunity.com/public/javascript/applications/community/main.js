@@ -3452,6 +3452,7 @@
         "partnereventdisplay_EventDetailsDescription_2orfV",
       EventDetailsBody: "partnereventdisplay_EventDetailsBody_A_A2B",
       EventDetailsGame: "partnereventdisplay_EventDetailsGame_1JqXp",
+      EventDetailsAvatar: "partnereventdisplay_EventDetailsAvatar_2U_20",
       GameActions: "partnereventdisplay_GameActions_bGROT",
       Ownership: "partnereventdisplay_Ownership_2VkXp",
       EventDetailsType: "partnereventdisplay_EventDetailsType_2u9c-",
@@ -47371,7 +47372,7 @@
                 "a",
                 { href: Kt.GetCreatorStoreURL(e) },
                 _.createElement("div", {
-                  className: Ob.a.EventDetailsGame,
+                  className: Ob.a.EventDetailsAvatar,
                   style: { backgroundImage: "url(" + t.avatar_full_url + ")" }
                 })
               )

@@ -1111,7 +1111,7 @@ function ShowHeaderImageHandle( )
 	$container.append( elOverlay );
 
 
-	var elOptions = $J('<form class="edit_options"><p>'+"Pick a .jpg or .png file to set as your background. Maximum 3MB file size. For best results, use an image with height of 220px and 1500px wide.<br><br>Images must be appropriate for all audiences and not contain offensive or illegal content."+'</p></form>');
+	var elOptions = $J('<form class="edit_options"><p>'+"Pick a .jpg or .png file to set as your background. Maximum 3MB file size. For best results, use an image sized 1500px wide and 220px tall.<br><br>Images must be appropriate for all audiences and not contain offensive or illegal content."+'</p></form>');
 
 	var elSelectImage = $J("\r\n\t\t<select name=\"selectimage\">\r\n\t\t\t<option value=\"none\">None<\/option>\r\n\t\t<\/select>\r\n\t");
 	var elUpload = $J("<input type=\"file\" name=\"clanimage\" value=\"@Upload\">");

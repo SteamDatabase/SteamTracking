@@ -3002,6 +3002,11 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
 
 }
 
+/* Valve Index Banner */
+
+.home_index_banner {
+	margin: 40px auto 0px auto;
+}
 
 /* Big Blue Buttons */
 
