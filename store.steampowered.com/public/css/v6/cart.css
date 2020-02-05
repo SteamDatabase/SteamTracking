@@ -18,14 +18,6 @@ body.v6 {
     background: rgba(255,255,255,0.5);
 }
 
-#billing_tt_tax {
-    display: none;
-}
-#billing_tt_reporting {
-    display: none;
-}
-
-
 body.v6.checkout .page_header_ctn {
 	padding-bottom: 47px;
 	margin-bottom: -50px;
