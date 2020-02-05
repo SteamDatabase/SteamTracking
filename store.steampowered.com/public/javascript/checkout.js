@@ -3795,7 +3795,7 @@ function SubmitPaymentInfoForm()
 				}
 			}
 	
-						if ( $J( '#payment_row_phone' ).visible() )
+						if ( $( 'payment_row_phone' ).visible() )
 			{
 				if ( $( 'billing_phone' ).value.length < 3 )
 				{
