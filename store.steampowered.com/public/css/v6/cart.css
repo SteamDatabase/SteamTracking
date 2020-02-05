@@ -6,6 +6,26 @@ body.v6 {
 
 		}
 
+.tooltip_q_ctn {
+    background: rgba(255,255,255,0.4);
+    color: white;
+    border-radius: 10px;
+    font-size: 11px;
+    padding: 1px 4px 1px 6px;
+    cursor: default;
+}
+.tooltip_q_ctn:hover {
+    background: rgba(255,255,255,0.5);
+}
+
+#billing_tt_tax {
+    display: none;
+}
+#billing_tt_reporting {
+    display: none;
+}
+
+
 body.v6.checkout .page_header_ctn {
 	padding-bottom: 47px;
 	margin-bottom: -50px;

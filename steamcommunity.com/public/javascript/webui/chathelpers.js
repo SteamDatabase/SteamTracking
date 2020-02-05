@@ -255,6 +255,7 @@
         (e[(e.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
         (e[(e.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
         (e[(e.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
+        (e[(e.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
         (e[(e.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
         (e[(e.k_EESportTournamentStreamEvent = 17)] =
           "k_EESportTournamentStreamEvent"),

@@ -3521,3 +3521,15 @@ img.category_icon {
 	color: red;
 	font-weight: bold;
 }
+
+.loc_download_list
+{
+	column-count: 2
+}
+
+.loc_download_present
+{
+	color: green;
+	font-weight: bold;
+}
+

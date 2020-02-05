@@ -4280,17 +4280,20 @@ body.v6 .store_nav .popup_menu_subheader, body.v6 #footer_nav .popup_menu_subhea
 	min-width: 0;
 }
 
+@media screen and ( max-width: 910px )
+{
+	html.responsive .popup_menu_twocol > .popup_menu
+	{
+		flex: 1;
+	}
+}
+
 @media screen and ( max-width: 420px )
 {
 	html.responsive .popup_menu_twocol
 	{
 		display: block;
 	}
-	html.responsive .popup_menu_twocol > .popup_menu
-	{
-		flex: 1;
-	}
-
 
 	html.responsive .popup_menu_twocol > .popup_menu:not(:first-child)
 	{

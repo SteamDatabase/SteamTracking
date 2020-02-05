@@ -981,6 +981,9 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 .browse_content .recommendation:hover {
 	background: rgba( 255, 255, 255, 0.1);
 }
+.browse_content .recommendation .recommendation_link {
+    width: 100%;
+}
 
 .browse_content .recommendation .recommendation_midcol {
 	flex-grow: 1;

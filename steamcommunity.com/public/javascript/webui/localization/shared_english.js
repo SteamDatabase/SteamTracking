@@ -9,6 +9,7 @@ LocalizationReady("shared", "english", {
   Button_Copy: "Copy",
   Button_CopyClipboard: "Copy to Clipboard",
   Button_CopyLink: "Copy Link",
+  Button_Continue: "Continue",
   Button_Create: "Create",
   Button_Delete: "Delete",
   Button_Discuss: "Discuss",
@@ -127,7 +128,13 @@ LocalizationReady("shared", "english", {
     "No events found. Try selecting different search criteria in the sidebar.",
   EventCalendar_DisabledFilter_LoginPrompt:
     "Sign in to enable these categories",
+  EventCalendar_MainLoginPrompt: "Sign in to see your personal event calendar",
+  EventCalendar_NoMoreFutureEvents: "No more matching events scheduled yet",
+  EventCalendar_NoMorePastEvents: "No older matching events found",
+  EventCalendar_FailedToLoadMoreEvents: "Error loading events",
 
+  EventCalendar_FutureEventsHint: "Scroll up to see what's coming next",
+  EventCalendar_FutureEventsHeader: "Coming soon",
   EventCalendar_LiveAndRecentEventsHeader: "Live and recent",
   EventCalendar_LiveNow: "live now",
   EventCalendar_TimeLeft: "ends in %1$s",
@@ -163,15 +170,23 @@ LocalizationReady("shared", "english", {
   EventCalendar_GameSource_library: "Library",
   EventCalendar_GameSource_ttip_library:
     "Include post about games in your library",
+  EventCalendar_GameSource_EventExplanation_ttip_library:
+    "This game is in your library",
   EventCalendar_GameSource_wishlist: "wishlist",
   EventCalendar_GameSource_ttip_wishlist:
     "Include post about games on your wishlist",
+  EventCalendar_GameSource_EventExplanation_ttip_wishlist:
+    "This game is on your wishlist",
   EventCalendar_GameSource_following: "following",
   EventCalendar_GameSource_ttip_following:
     "Include post about games that you follow",
+  EventCalendar_GameSource_EventExplanation_ttip_following:
+    "This is a game that you follow",
   EventCalendar_GameSource_recommended: "recommended",
   EventCalendar_GameSource_ttip_recommended:
     "Include post about games we think you would like",
+  EventCalendar_GameSource_EventExplanation_ttip_recommended:
+    "This is a game we think you would like",
 
   EventDisplay_Admin_Title: "Admin tools:",
 
@@ -225,6 +240,8 @@ LocalizationReady("shared", "english", {
   EventDisplay_TimeBeginsOn_StartAndEnd_Past: "Past Event Started",
   EventDisplay_TimeEndsOn: "Ends",
   EventDisplay_TimeEndsOn_Past: "Ended",
+  EventDisplay_RunsForDuration: "Runs %1$s",
+  EventDisplay_TimeLeft: "Ends in %1$s",
   EventDisplay_TimeEndsOn_Ran: "Ran",
   EventDisplay_TimeRange: "Event Time",
   EventDisplay_TimeInPast: "Posted",
@@ -407,6 +424,7 @@ LocalizationReady("shared", "english", {
   TimeSince_ThisWeek: "This week",
 
   Time_Today: "Today",
+  Time_Tomorrow: "Tomorrow",
   Time_Yesterday: "Yesterday",
   Time_Recent: "Recent",
 

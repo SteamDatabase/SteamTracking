@@ -675,9 +675,9 @@ html.force_desktop body.lny2020 {
 }
 
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 768px) {
     .react_landing_background {
-        background-size: 218vw;
+        background-size: 180%;
     }
 }
 

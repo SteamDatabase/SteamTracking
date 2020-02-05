@@ -528,6 +528,100 @@ function AnimateSubmitGiftNoteButton()
 	}
 }
 
+function OnSaveBillingAddressSuccess()
+{
+	var form = document.createElement( 'form' );
+	document.body.appendChild( form );
+	form.method = 'post';
+	if ( $('cache_return_url') )
+		form.action = $('cache_return_url').value;
+	else
+		form.action = 'https://store.steampowered.com/account/';	
+
+	var address = { 
+		'FirstName' : $('first_name').value,
+		'LastName' : $('last_name').value,
+		'Address' : $('billing_address').value,
+		'AddressTwo' : $('billing_address_two').value,
+		'Country' : $('billing_country').value,
+		'City' : $('billing_city').value,
+		'State' : ( g_bHasBillingStates ? $('billing_state_select').value : $('billing_state_text').value),
+		'PostalCode' : $('billing_postal_code').value,
+		'Phone' : $('billing_phone').value,
+		'sessionid' : g_sessionID
+	}
+
+	for ( var key in address )
+	{
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = key;
+        input.value = address[key];
+        form.appendChild(input);
+	}	
+	
+	form.submit();
+}
+
+function SaveBillingAddress()
+{
+		if ( !$('save_my_address').checked )
+	{
+		OnSaveBillingAddressSuccess();
+		return;
+	}
+
+	try 
+	{
+		new Ajax.Request('https://store.steampowered.com/checkout/updatebillingaddress/',
+		{
+		    method:'post',
+		    parameters: { 
+				'FirstName' : $('first_name').value,
+				'LastName' : $('last_name').value,
+				'Address' : $('billing_address').value,
+				'AddressTwo' : $('billing_address_two').value,
+				'Country' : $('billing_country').value,
+				'City' : $('billing_city').value,
+				'State' : ( g_bHasBillingStates ? $('billing_state_select').value : $('billing_state_text').value),
+				'PostalCode' : $('billing_postal_code').value,
+				'Phone' : $('billing_phone').value,
+				'sessionid' : g_sessionID
+			},
+		    onSuccess: function(transport){
+				if ( transport.responseText ){
+					try {
+						var result = transport.responseText.evalJSON(true);
+		      		} catch ( e ) {
+		      			// Failure
+		      			OnInitializeTransactionFailure( 0 );
+		      		}
+		      	   	// Success...
+		      	   	if ( result.success == 1 )
+		      	   	{
+						OnSaveBillingAddressSuccess();
+						return;
+		      	   	}
+		      	   	else
+		      	   	{
+		      	   		OnInitializeTransactionFailure( 0 );
+		      	   		return;
+		      	   	}
+			  	}
+			  	
+								OnInitializeTransactionFailure( 0  );
+		    },
+		    onFailure: function(){
+				OnInitializeTransactionFailure( 0  );
+			}
+		});
+	} 
+	catch(e) 
+	{
+		ReportCheckoutJSError( 'Failed gathering form data and calling UpdateBillingAddress', e );
+	}
+}
+
 var g_bInitTransactionCallRunning = false;
 function InitializeTransaction()
 {
@@ -545,6 +639,12 @@ function InitializeTransaction()
 	
 		$('is_external_finalize_transaction').value = 0;
 	
+		if ( g_bIsUpdateBillingInfoForm && g_bUpdateBillingFormAddressOnly )
+	{
+		SaveBillingAddress();
+		return;
+	}
+
 		if ( g_bIsUpdateBillingInfoForm && BIsStoredCreditCard() )
 	{
 		var result = new Object();
@@ -3056,7 +3156,6 @@ function UpdatePaymentInfoForm()
 		var bShowBankAccountForm = false;
 		var bShowMobileForm = false;
 		var bShowPaymentSpecificNote = false;
-		var bShowSaveMyAddress = false;
 		var bShowStoredPayPalDetails = false;
 		var bDisabledPaymentMethod = false;
 		var bShowBankSelection = false;
@@ -3071,7 +3170,15 @@ function UpdatePaymentInfoForm()
 						$('submit_payment_info_btn').href = "javascript:SubmitPaymentInfoForm();";
 			$( 'payment_info_form' ).onsubmit = function() { SubmitPaymentInfoForm(); return false; };
 			SetButtonInnerHtml('submit_payment_info_btn', 'Save' );
-			$('payment_header').innerHTML = 'Update cached payment method';
+			if ( g_bUpdateBillingFormAddressOnly )
+			{
+				$J('#payment_row_one').hide();
+				$('payment_header').innerHTML = 'Update billing address';
+			}
+			else
+			{
+				$('payment_header').innerHTML = 'Update cached payment method';
+			}
 			$('payment_info_method_label').innerHTML = 'Select your existing cached payment method or enter a new payment method for future purchases and subscription renewals.';
 		}
 		else if ( g_bPurchaseContainsSubscription )
@@ -3102,14 +3209,12 @@ function UpdatePaymentInfoForm()
 			bShowCreditCardNumberExp = true;
 			bShowPhoneNumber = true;
 						bShowCVV = !card_is_stored; 
-			bShowSaveMyAddress = !g_bIsUpdateBillingInfoForm;
 		}
 		else if ( method.value == 'paypal' )
 		{
 						g_bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
 			bShowPhoneNumber = g_bShowAddressForm;
 			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
-			bShowSaveMyAddress = g_bEnableCachedPayPalCredentials && !g_bIsUpdateBillingInfoForm;
 			
 			$('external_payment_processor_notice').innerHTML = 'Your PayPal transaction is initializing, please wait a moment before continuing...';
 		}
@@ -3284,7 +3389,8 @@ function UpdatePaymentInfoForm()
 		else
 			$AddressFields.hide();
 
-		var strSaveMyAddressDisplay = bShowSaveMyAddress || g_bShowAddressForm ? 'block' : 'none';
+		var bShowSaveMyAddress = g_bShowAddressForm && ( !g_bIsUpdateBillingInfoForm || g_bUpdateBillingFormAddressOnly );
+		var strSaveMyAddressDisplay = bShowSaveMyAddress && g_bShowAddressForm ? 'block' : 'none';
 		$('payment_row_save_my_address').style.display = strSaveMyAddressDisplay;
 		
 		var strShowStoredPayPalDetails = bShowStoredPayPalDetails ? 'block' : 'none';

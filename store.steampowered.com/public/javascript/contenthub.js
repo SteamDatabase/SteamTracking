@@ -246,9 +246,9 @@ GContentHub = {
 		var rgDisplayListCombined = GContentHub.ZipLists(
 			//this.FilterSeenCapsules( GContentHub.oDisplayLists.popular_new_releases ), true,
 			this.FilterSeenCapsules( GContentHub.oDisplayLists.featured_recommended || [] ), true,
-			this.FilterSeenCapsules( GContentHub.oDisplayLists.top_sellers ), true, // Top new releases
-			this.FilterSeenCapsules( GContentHub.oDisplayLists.specials ) , true,
-			this.FilterSeenCapsules( GContentHub.oDisplayLists.concurrent ), true
+			this.FilterSeenCapsules( GContentHub.oDisplayLists.top_sellers || [] ), true, // Top new releases
+			this.FilterSeenCapsules( GContentHub.oDisplayLists.specials || [] ) , true,
+			this.FilterSeenCapsules( GContentHub.oDisplayLists.concurrent || [] ), true
 		);
 		rgDisplayListCombined = GContentHub.MergeLists(GContentHub.oDisplayLists.featured, false, rgDisplayListCombined, true);
 		// Filter out bundles
@@ -270,7 +270,6 @@ GContentHub = {
 
 	GetRecommendationReason: function( rgCreatorsShown, rgCuratorsShown, oItem )
 	{
-
 		var rgItemData = GStoreItemData.GetCapParams( '', oItem.appid, oItem.packageid, oItem.bundleid, {});
 
 		// See if we have a high tag overlap first
@@ -334,11 +333,11 @@ GContentHub = {
 
 
 		$J.each({
-			'top_seller' : GContentHub.oDisplayLists.top_sellers,
-			'popular_new': GContentHub.oDisplayLists.popular_new_releases,
-			'specials': GContentHub.oDisplayLists.specials,
-			'concurrent': GContentHub.oDisplayLists.concurrent,
-			'featured' : GContentHub.oDisplayLists.featured
+		    'top_seller' : GContentHub.oDisplayLists.top_sellers || [],
+			'popular_new': GContentHub.oDisplayLists.popular_new_releases || [],
+			'specials': GContentHub.oDisplayLists.specials || [],
+			'concurrent': GContentHub.oDisplayLists.concurrent || [],
+			'featured' : GContentHub.oDisplayLists.featured || []
 		},function(strDisplayList, rgItems){
 			for( var i=0; i<rgItems.length; i++)
 			{

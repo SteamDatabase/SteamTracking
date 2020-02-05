@@ -1630,7 +1630,7 @@ GStoreItemData = {
 	{
 		var rgItemData = null;
 		if( unAppID )
-			rgItemData = GStoreItemData.rgAppData[ unAppID];
+			rgItemData = GStoreItemData.rgAppData[ unAppID ];
 		else if( unPackageID )
 			rgItemData = GStoreItemData.rgPackageData[ unPackageID ];
 		else if( unBundleID )

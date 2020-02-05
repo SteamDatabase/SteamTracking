@@ -547,6 +547,7 @@
         (e[(e.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
         (e[(e.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
         (e[(e.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
+        (e[(e.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
         (e[(e.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
         (e[(e.k_EESportTournamentStreamEvent = 17)] =
           "k_EESportTournamentStreamEvent"),
@@ -1564,14 +1565,14 @@
                 O = P > 0,
                 I = (c.bPreferPopTop || !O) && L && !c.bDisablePopTop;
               if (!L && !O) {
-                var B =
+                var R =
                   void 0 !== c.bShiftToFitWindow
                     ? c.bShiftToFitWindow
                     : c.bFitToWindow && !c.bOverlapHorizontal;
                 (I = C > P),
-                  B && (I ? (a.menuTop = 4) : (a.menuBottom = 4)),
+                  R && (I ? (a.menuTop = 4) : (a.menuBottom = 4)),
                   c.bFitToWindow &&
-                    (B ? (M = Math.min(M, p - 8)) : (M += I ? C : P),
+                    (R ? (M = Math.min(M, p - 8)) : (M += I ? C : P),
                     (a.menuHeight = M - 8));
               }
               void 0 === a.menuBottom &&
@@ -3458,10 +3459,10 @@
         return I;
       }),
       n.d(t, "nb", function() {
-        return B;
+        return R;
       }),
       n.d(t, "L", function() {
-        return R;
+        return B;
       }),
       n.d(t, "k", function() {
         return N;
@@ -4666,7 +4667,7 @@
         })
       );
     }
-    function B(e) {
+    function R(e) {
       return o.createElement(
         "svg",
         {
@@ -4738,7 +4739,7 @@
         )
       );
     }
-    function R() {
+    function B() {
       return o.createElement(
         "svg",
         {

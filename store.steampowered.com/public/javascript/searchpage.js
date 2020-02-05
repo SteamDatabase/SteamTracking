@@ -660,6 +660,12 @@ function InitInfiniteScroll( rgParameters )
 				}
 			}
 		});
+
+		// Re-fire our scroll-handler on the next tick, because after client-side filtering there may not be enough results to fill the screen.
+		// This will only load more results if our list isn't long enough, and respects the rate-limit we've got in place for scrolling.
+		setTimeout( function() {
+			self.oController.OnScroll();
+		}, 1 );
 	});
 
 	// Kick off an infinite scroll check immediately, in case the user is on a high-res screen and doesn't have a scrollbar.

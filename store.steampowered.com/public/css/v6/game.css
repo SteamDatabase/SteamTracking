@@ -367,8 +367,6 @@ img.game_header_image_full {
 }
 
 .game_area_bubble {
-	max-width: 616px;
-
 	margin-bottom: 2px;
 	font-size: 13px;
 			font-family: "Motiva Sans", Sans-serif;
@@ -1587,7 +1585,15 @@ body.v6 .game_area_description h2.bb_tag strong {
 
 .details_block {
 
+}
+.details_block a {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
 
+		    color: #67c1f5;
+}
+.details_block a:hover {
+    color: #ffffff;
 }
 
 .game_area_play_stats .details_block a {
@@ -5477,6 +5483,7 @@ body.v6 .page_content.notes {
 		    display: flex;
     flex-direction: column;
     font-size: 14px;
+    color: #d0d4d7;
 }
 .music_album_track_ctn {
     display: flex;
@@ -5499,6 +5506,5 @@ body.v6 .page_content.notes {
 }
 
 .music_album_track_name_other_language {
-    color: #93b0bb;
-    font-size: 10px;
+    color: #9aa8b7;
 }
