@@ -9307,6 +9307,25 @@
               });
             });
           }),
+          (t.prototype.SearchMembersForMention = function(e, t) {
+            return Object(o.b)(this, void 0, void 0, function() {
+              var n;
+              return Object(o.e)(this, function(o) {
+                switch (o.label) {
+                  case 0:
+                    return [4, this.SearchMembers(e, t)];
+                  case 1:
+                    return (
+                      (n = o.sent()),
+                      this.m_parentGroupView
+                        .GetGroup()
+                        .AddMetaMentionsToResults(e, n),
+                      [2, n]
+                    );
+                }
+              });
+            });
+          }),
           (t.prototype.BIsMemberNameAmbiguous = function(e) {
             return this.m_parentGroupView.BIsMemberNameAmbiguous(e);
           }),
@@ -34861,7 +34880,7 @@
       y = n("XaMz"),
       S = (function() {
         function e(t) {
-          (this.m_listMembers = m.x.array()),
+          (this.m_mapMembers = m.x.map()),
             (this.m_mapPersonaStates = m.x.map()),
             (this.m_ulChatRoomGroupID = t),
             (this.m_nClientChangenumber = 0),
@@ -34881,7 +34900,7 @@
               n++
             ) {
               var r = o[n];
-              t || (this.m_listMembers[r.rank()] = r.accountid()),
+              t || this.m_mapMembers.set(r.rank(), r.accountid()),
                 r.persona() &&
                   this.UpdatePersonaState(
                     r.accountid(),
@@ -34897,7 +34916,7 @@
               (this.m_cMemberSummaryInGame = i.ingame()));
           }),
           (e.prototype.GetAccountIDAt = function(e) {
-            return e < this.m_listMembers.length ? this.m_listMembers[e] : null;
+            return this.m_mapMembers.has(e) ? this.m_mapMembers.get(e) : null;
           }),
           (e.prototype.GetMember = function(e) {
             return this.m_mapPersonaStates.get(e);
@@ -34949,47 +34968,45 @@
           }),
           (e.prototype.PerformSearch = function(e, t, n) {
             return Object(o.b)(this, void 0, void 0, function() {
-              var r,
-                i,
-                a = this;
+              var e,
+                r,
+                i = this;
               return Object(o.e)(this, function(o) {
                 return (
-                  (r = n.toLocaleLowerCase()),
-                  (i = h.b.Init(f.J))
+                  (e = n.toLocaleLowerCase()),
+                  (r = h.b.Init(f.J))
                     .Body()
                     .set_chat_group_id(this.m_ulChatRoomGroupID),
-                  i.Body().set_search_id(t),
-                  i.Body().set_search_text(r),
+                  r.Body().set_search_id(t),
+                  r.Body().set_search_text(e),
                   [
                     2,
                     f.X.SearchMembers(
                       g.f.CMInterface.GetServiceTransport(),
-                      i
+                      r
                     ).then(function(t) {
-                      var n = [];
-                      e.AddMetaMentionsToResults(r, n);
                       for (
-                        var o = 0, i = t.Body().matching_members();
-                        o < i.length;
+                        var n = [], o = 0, r = t.Body().matching_members();
+                        o < r.length;
                         o++
                       ) {
-                        var s = i[o];
-                        s.persona() &&
-                          a.UpdatePersonaState(
-                            s.accountid(),
+                        var a = r[o];
+                        a.persona() &&
+                          i.UpdatePersonaState(
+                            a.accountid(),
                             t.Body().status_flags(),
-                            s.persona()
+                            a.persona()
                           );
-                        var c = a.m_mapPersonaStates.get(s.accountid());
+                        var s = i.m_mapPersonaStates.get(a.accountid());
                         if (
-                          (Object(y.a)(c, "Missing persona in member matches"),
-                          c)
+                          (Object(y.a)(s, "Missing persona in member matches"),
+                          s)
                         ) {
-                          var l = c.MatchSearchString(r);
+                          var c = s.MatchSearchString(e);
                           n.push({
-                            friend: c,
-                            iMatchOffset: l.iOffset,
-                            bNicknameMatch: 2 == l.match
+                            friend: s,
+                            iMatchOffset: c.iOffset,
+                            bNicknameMatch: 2 == c.match
                           });
                         }
                       }
@@ -36709,7 +36726,7 @@
               ? ""
               : Object(d.c)("#ChatMentionSuggest_NoPermission");
             "online".startsWith(e) &&
-              t.push({
+              t.unshift({
                 friend: null,
                 iMatchOffset: 0,
                 bNicknameMatch: !1,
@@ -36717,7 +36734,7 @@
                 strNotSelectable: n
               }),
               "all".startsWith(e) &&
-                t.push({
+                t.unshift({
                   friend: null,
                   iMatchOffset: 0,
                   bNicknameMatch: !1,
@@ -36853,6 +36870,7 @@
             (o.m_bShowGlobalChat = !1),
             (o.m_bMemberSearchActive = !1),
             (o.m_strMemberSearchString = ""),
+            (o.m_bSearchError = !1),
             (o.m_tabset = t),
             (o.m_group = n),
             o.m_group.BIsValid() && o.SelectChat(o.m_group.GetDefaultChatID()),
@@ -36868,6 +36886,20 @@
         }
         return (
           Object(o.d)(t, e),
+          Object.defineProperty(t.prototype, "search_results", {
+            get: function() {
+              return this.m_rgSearchResults;
+            },
+            enumerable: !0,
+            configurable: !0
+          }),
+          Object.defineProperty(t.prototype, "has_search_error", {
+            get: function() {
+              return this.m_bSearchError;
+            },
+            enumerable: !0,
+            configurable: !0
+          }),
           (t.prototype.GetGroup = function() {
             return this.m_group;
           }),
@@ -37061,14 +37093,27 @@
           (t.prototype.GetUnreadMessageCount = function() {
             return this.m_group.hasUnreadChatMessage ? 1 : 0;
           }),
-          (t.prototype.SetMemberSearchEnabled = function(e) {
+          (t.prototype.UpdateMemberSearch = function(e) {
+            var t = this;
             (this.m_bMemberSearchActive && this.m_strMemberSearchString == e) ||
               ((this.m_bMemberSearchActive = !0),
-              (this.m_strMemberSearchString = e || ""));
+              (this.m_strMemberSearchString = e || ""),
+              e
+                ? this.SearchMembers(e, 200).then(
+                    function(e) {
+                      (t.m_rgSearchResults = e), (t.m_bSearchError = !1);
+                    },
+                    function(e) {
+                      console.warn("Failed to filter members: " + e),
+                        (t.m_bSearchError = !0);
+                    }
+                  )
+                : (this.m_rgSearchResults = void 0));
           }),
           (t.prototype.ClearMemberSearch = function() {
             (this.m_bMemberSearchActive = !1),
-              (this.m_strMemberSearchString = "");
+              (this.m_strMemberSearchString = ""),
+              (this.m_rgSearchResults = void 0);
           }),
           (t.prototype.IsMemberSearchActive = function() {
             return this.m_bMemberSearchActive;
@@ -37273,6 +37318,8 @@
           Object(o.c)([m.x], t.prototype, "m_bShowGlobalChat", void 0),
           Object(o.c)([m.x], t.prototype, "m_bMemberSearchActive", void 0),
           Object(o.c)([m.x], t.prototype, "m_strMemberSearchString", void 0),
+          Object(o.c)([m.x.ref], t.prototype, "m_rgSearchResults", void 0),
+          Object(o.c)([m.x], t.prototype, "m_bSearchError", void 0),
           Object(o.c)(
             [m.x],
             t.prototype,
@@ -37311,9 +37358,8 @@
           Object(o.c)([m.g], t.prototype, "StartRoomRename", null),
           Object(o.c)([m.g], t.prototype, "EndRoomRename", null),
           Object(o.c)([m.g], t.prototype, "OnTabClosed", null),
-          Object(o.c)([m.g], t.prototype, "SetMemberSearchEnabled", null),
+          Object(o.c)([m.g], t.prototype, "UpdateMemberSearch", null),
           Object(o.c)([m.g], t.prototype, "ClearMemberSearch", null),
-          Object(o.c)([m.i], t.prototype, "normalizedMemberSearch", null),
           Object(o.c)([m.i], t.prototype, "isMemberListExpanded", null),
           Object(o.c)([m.i], t.prototype, "isChannelListCollapsed", null),
           t
@@ -53106,7 +53152,7 @@
                     r.createElement("div", { className: "disconnectBlocker" })
                   )
                 ),
-                r.createElement(Ft, { chatView: t }),
+                r.createElement(Vt, { chatView: t }),
                 r.createElement(ye, {
                   chatView: t,
                   action: this.ScrollToBottom
@@ -54393,15 +54439,13 @@
           (t.prototype.performSearch = function(e) {
             return Object(o.b)(this, void 0, void 0, function() {
               return Object(o.e)(this, function(t) {
-                switch (t.label) {
-                  case 0:
-                    return [
-                      4,
-                      this.props.chatView.SearchMembers(e, Number.MAX_VALUE)
-                    ];
-                  case 1:
-                    return [2, t.sent()];
-                }
+                return [
+                  2,
+                  this.props.chatView.SearchMembersForMention(
+                    e,
+                    Number.MAX_VALUE
+                  )
+                ];
               });
             });
           }),
@@ -54859,7 +54903,7 @@
             );
           }),
           (t.prototype.GetMembersMatchingSearch = function(e) {
-            var t = ut(
+            var t = dt(
               this.props.groupView.GetGroup().memberList.member_list,
               e
             );
@@ -54871,7 +54915,7 @@
             );
           }),
           (t.prototype.OnSearchInput = function(e) {
-            this.props.groupView.SetMemberSearchEnabled(e.currentTarget.value);
+            this.props.groupView.UpdateMemberSearch(e.currentTarget.value);
           }),
           (t.prototype.OnSearchSubmit = function(e) {
             e.preventDefault();
@@ -54893,7 +54937,7 @@
             this.props.groupView.ClearMemberSearch();
           }),
           (t.prototype.OnSearchFocus = function() {
-            this.props.groupView.SetMemberSearchEnabled();
+            this.props.groupView.UpdateMemberSearch();
           }),
           (t.prototype.OnSearchBlur = function() {
             0 == this.props.groupView.GetMemberSearch().length &&
@@ -54951,27 +54995,36 @@
                         onBlur: this.OnSearchBlur,
                         autoComplete: "off"
                       }),
-                      r.createElement(
-                        "div",
-                        {
-                          className: "friendSearchClear",
-                          onClick: this.OnClearSearch
-                        },
-                        r.createElement(l.pb, null)
-                      )
+                      e.has_search_error
+                        ? r.createElement(
+                            "div",
+                            {
+                              className: "friendSearchError",
+                              title: Object(M.c)("#SearchError")
+                            },
+                            r.createElement(l.f, { color: "red" })
+                          )
+                        : r.createElement(
+                            "div",
+                            {
+                              className: "friendSearchClear",
+                              onClick: this.OnClearSearch
+                            },
+                            r.createElement(l.pb, null)
+                          )
                     )
                   )
                 ),
                 r.createElement(
                   "div",
-                  { style: { display: "flex", flex: 1 } },
+                  { style: { display: "flex", flex: 1, position: "relative" } },
                   e.GetGroup().BIsMemberListVirtualized()
                     ? r.createElement(ct, {
                         groupView: this.props.groupView,
                         inactive: this.props.inactive,
                         context: this.GetFriendRenderContext()
                       })
-                    : r.createElement(mt, {
+                    : r.createElement(ht, {
                         groupView: this.props.groupView,
                         inactive: this.props.inactive,
                         context: this.GetFriendRenderContext()
@@ -54999,40 +55052,63 @@
           Object(o.d)(t, e),
           (t.prototype.render = function() {
             var e = this,
-              t = this.props.groupView.GetVirtualizedMemberListView(),
-              n = this.props,
-              i = n.groupView,
-              a = n.context,
-              s = i.GetGroup().memberCountTotal;
+              t = void 0 !== this.props.groupView.search_results;
             return r.createElement(at, null, function(n) {
-              var c = n.height,
-                l = n.width;
-              return r.createElement(
-                et.a,
-                {
-                  width: l,
-                  height: c,
-                  itemCount: s,
-                  itemSize: 36,
-                  overscanCount: 10,
-                  onItemsRendered: e.OnItemsRendered,
-                  itemKey: function(e) {
-                    return t.GetAccountIDAt(e) || e;
-                  },
-                  style: { overflowX: "hidden" }
-                },
-                function(e) {
-                  return r.createElement(
+              var i = n.height,
+                a = n.width;
+              return t
+                ? r.createElement(
+                    pt,
+                    Object(o.a)({}, e.props, { width: a, height: i })
+                  )
+                : r.createElement(
                     lt,
-                    Object(o.a)({}, e, {
-                      virtualizer: t,
-                      groupView: i,
-                      context: a
-                    })
+                    Object(o.a)({}, e.props, { width: a, height: i })
                   );
-                }
-              );
             });
+          }),
+          (t = Object(o.c)([w.a], t))
+        );
+      })(r.Component),
+      lt = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          Object(o.d)(t, e),
+          (t.prototype.render = function() {
+            var e = this.props,
+              t = e.width,
+              n = e.height,
+              i = e.groupView,
+              a = e.context,
+              s = i.GetGroup().memberCountTotal,
+              c = this.props.groupView.GetVirtualizedMemberListView();
+            return r.createElement(
+              et.a,
+              {
+                width: t,
+                height: n,
+                itemCount: s,
+                itemSize: 36,
+                overscanCount: 10,
+                onItemsRendered: this.OnItemsRendered,
+                itemKey: function(e) {
+                  return c.GetAccountIDAt(e) || e;
+                },
+                style: { overflowX: "hidden" }
+              },
+              function(e) {
+                return r.createElement(
+                  ut,
+                  Object(o.a)({}, e, {
+                    virtualizer: c,
+                    groupView: i,
+                    context: a
+                  })
+                );
+              }
+            );
           }),
           (t.prototype.OnItemsRendered = function(e) {
             this.props.groupView
@@ -55043,7 +55119,48 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      lt = (function(e) {
+      pt = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          Object(o.d)(t, e),
+          (t.prototype.render = function() {
+            var e = this.props,
+              t = e.width,
+              n = e.height,
+              i = e.groupView,
+              a = e.context,
+              s = i.search_results.length;
+            return r.createElement(
+              et.a,
+              {
+                width: t,
+                height: n,
+                itemCount: s,
+                itemSize: 36,
+                overscanCount: 10,
+                itemKey: function(e) {
+                  return i.search_results[e].friend.accountid;
+                },
+                style: { overflowX: "hidden" }
+              },
+              function(e) {
+                return r.createElement(
+                  mt,
+                  Object(o.a)({}, e, {
+                    player: i.search_results[e.index].friend,
+                    groupView: i,
+                    context: a
+                  })
+                );
+              }
+            );
+          }),
+          (t = Object(o.c)([w.a], t))
+        );
+      })(r.Component),
+      ut = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -55060,7 +55177,7 @@
             if (!s) return null;
             var c = o.GetMember(s);
             return c
-              ? r.createElement(pt, {
+              ? r.createElement(mt, {
                   player: c,
                   groupView: i,
                   style: n,
@@ -55071,7 +55188,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      pt = (function(e) {
+      mt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -55091,7 +55208,7 @@
                 style: Object(o.a)(Object(o.a)({}, t), { height: "36px" }),
                 className: a
               },
-              r.createElement(ht, {
+              r.createElement(_t, {
                 friend: n,
                 bHideGameName: s,
                 groupView: i,
@@ -55102,12 +55219,12 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component);
-    function ut(e, t) {
+    function dt(e, t) {
       return e.filter(function(e) {
         return e.BMatchesSearchString(t, !1);
       });
     }
-    var mt = (function(e) {
+    var ht = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -55133,7 +55250,7 @@
           (t.prototype.BuildFilteredBuckets = function(e, t) {
             for (var n = [], o = 0, r = e; o < r.length; o++) {
               var i = r[o],
-                a = ut(i.member_list, t);
+                a = dt(i.member_list, t);
               if (a.length > 0) {
                 var s = new tt.a(
                   i.id,
@@ -55162,7 +55279,7 @@
             var p = function(e, t, n) {
                 var o = c[e],
                   s = o.id === tt.c ? "partybeacon" : "regular";
-                return r.createElement(pt, {
+                return r.createElement(mt, {
                   style: n,
                   className: "chatroomBucket_" + s,
                   bHideGameName: o.BIsGameGroup(),
@@ -55174,7 +55291,7 @@
               u = function(t, n) {
                 var i = c[t],
                   a = s[i.id];
-                return r.createElement(dt, {
+                return r.createElement(ft, {
                   collapsible: c.length > 1,
                   collapsed: a,
                   memberCount: i.member_list.length,
@@ -55212,7 +55329,7 @@
                     var t = e.width,
                       n = e.height;
                     return r.createElement(
-                      ft,
+                      gt,
                       {
                         width: t,
                         height: n,
@@ -55238,7 +55355,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      dt = (function(e) {
+      ft = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -55290,7 +55407,7 @@
           t
         );
       })(r.PureComponent),
-      ht = (function(e) {
+      _t = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -55410,7 +55527,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      ft = (function(e) {
+      gt = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.m_memoizedIndices = {}), (t.m_ref = r.createRef()), t;
@@ -55573,8 +55690,8 @@
           t
         );
       })(r.Component),
-      _t = n("cKXq"),
-      gt = (function(e) {
+      bt = n("cKXq"),
+      vt = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -55629,7 +55746,7 @@
                   g.h.DragDropManager.SetDropConsumed();
                 var r = t.currentTarget.ownerDocument.defaultView;
                 o.sourceContext.group != this.props.groupView.GetGroup() &&
-                  Tt(
+                  At(
                     {
                       invitee: o.friend,
                       chatview: null,
@@ -55888,7 +56005,7 @@
               m = (p && c) || (!p && !c),
               d = (c && t.isBroadcastShown) || (!c && p),
               h = this.state.dropToInviteFriend
-                ? r.createElement(Pt, {
+                ? r.createElement(Ft, {
                     chatView: n,
                     friend: this.state.dropToInviteFriend
                   })
@@ -55903,7 +56020,7 @@
               e.watching_broadcast_steamid && t.isBroadcastShown)
             ) {
               var O = this.CalculateBroadcastSectionStyles(b),
-                I = r.createElement(jt, {
+                I = r.createElement(Lt, {
                   ref: this.m_refBroadcastContainer,
                   steamID: e.watching_broadcast_steamid.ConvertTo64BitString(),
                   localSteamID: t.m_strLocalBroadcastId,
@@ -55940,7 +56057,7 @@
                     onMouseDown: this.OnGrabberMouseDown
                   }),
                 S &&
-                  r.createElement(Gt, {
+                  r.createElement(kt, {
                     onClick: this.ShowChat,
                     edge: b ? "bottom" : "right"
                   })
@@ -56004,7 +56121,7 @@
                       _.f.UIStore.show_winter_sale_ui &&
                         !_.f.SettingsStore.FriendsSettings
                           .bDisableRoomEffects &&
-                        r.createElement(_t.b, {
+                        r.createElement(bt.b, {
                           effectManager: a.RoomEffectManager()
                         }),
                       r.createElement(be, {
@@ -56014,7 +56131,7 @@
                       r.createElement(
                         s.TransitionGroup,
                         null,
-                        r.createElement(Lt, { groupView: t })
+                        r.createElement(Pt, { groupView: t })
                       )
                     ),
                     r.createElement("div", { className: "dropTargetBox" }),
@@ -56167,8 +56284,8 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      bt = n("s+DT"),
-      vt = (function(e) {
+      yt = n("s+DT"),
+      St = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -56181,7 +56298,7 @@
               dropClanToInvite: void 0,
               speakerLabelWidth: 0
             }),
-            (n.m_friendSteamId = bt.a
+            (n.m_friendSteamId = yt.a
               .InitFromAccountID(t.chatView.chat.accountid_partner)
               .ConvertTo64BitString()),
             n
@@ -56277,7 +56394,7 @@
                   (this.m_fnUnregisterDropComplete = void 0),
                   this.setState({ dropToInviteFriend: void 0 })),
                   g.h.DragDropManager.SetDropConsumed(),
-                  Tt(
+                  At(
                     { invitee: i, chatview: n, invitedto: r },
                     Object(g.e)(this, t),
                     o
@@ -56297,7 +56414,7 @@
                     (a = _.f.ChatStore.GetChatRoomGroup(
                       s.GetChatGroupIDIfLoaded()
                     )),
-                  Tt({ invitee: r, invitedto: a }, Object(g.e)(this, t), o));
+                  At({ invitee: r, invitedto: a }, Object(g.e)(this, t), o));
             } else if (0 != t.dataTransfer.files.length) {
               var c = t.dataTransfer.files[0];
               n.SetFileToUpload(c);
@@ -56443,7 +56560,7 @@
                 },
                 r.createElement(l.z, { showChat: !1 })
               ),
-              r.createElement(At, {
+              r.createElement(jt, {
                 chatView: this.props.chatView,
                 additionalClasses: "broadcastVisible"
               })
@@ -56464,12 +56581,12 @@
               u = l.dropGroupToInviteFriend,
               m = l.dropClanToInvite;
             p
-              ? (e = r.createElement(Pt, {
+              ? (e = r.createElement(Ft, {
                   chatView: this.props.chatView,
                   friend: this.state.dropToInviteFriend
                 }))
               : (u || m) &&
-                (e = r.createElement(Bt, {
+                (e = r.createElement(xt, {
                   chatView: this.props.chatView,
                   group: this.state.dropGroupToInviteFriend,
                   clan: this.state.dropClanToInvite
@@ -56483,9 +56600,9 @@
               (h = r.createElement(
                 r.Fragment,
                 null,
-                r.createElement(St, {
+                r.createElement(Ot, {
                   ref: this.m_refBroadcastContainer,
-                  steamID: bt.a
+                  steamID: yt.a
                     .InitFromAccountID(t.accountid_partner)
                     .ConvertTo64BitString(),
                   localSteamID: this.m_strLocalBroadcastId,
@@ -56516,7 +56633,7 @@
                     onMouseDown: this.OnGrabberMouseDown
                   }),
                 g &&
-                  r.createElement(Gt, {
+                  r.createElement(kt, {
                     onClick: this.ShowChat,
                     edge: f ? "bottom" : "right"
                   })
@@ -56563,7 +56680,7 @@
                     "div",
                     { className: "displayRow minHeightZero" },
                     c &&
-                      r.createElement(Nt, {
+                      r.createElement(Bt, {
                         chatView: this.props.chatView,
                         friend: t.chat_partner
                       }),
@@ -56573,7 +56690,7 @@
                       _.f.UIStore.show_winter_sale_ui &&
                         !_.f.SettingsStore.FriendsSettings
                           .bDisableRoomEffects &&
-                        r.createElement(_t.b, {
+                        r.createElement(bt.b, {
                           effectManager: t.RoomEffectManager()
                         }),
                       r.createElement(be, {
@@ -56584,7 +56701,7 @@
                       })
                     ),
                     !a &&
-                      r.createElement(At, {
+                      r.createElement(jt, {
                         chatView: this.props.chatView,
                         additionalClasses: void 0
                       }),
@@ -56609,7 +56726,7 @@
               ),
               r.createElement("div", { className: "chatHeader" }),
               this.props.isActive &&
-                r.createElement(yt, {
+                r.createElement(Ct, {
                   chatView: this.props.chatView,
                   onNameWidthChanged: this.OnNameWidthChanged
                 }),
@@ -56627,7 +56744,7 @@
                     r.createElement(
                       "div",
                       null,
-                      r.createElement(Mt, { chatView: this.props.chatView })
+                      r.createElement(Rt, { chatView: this.props.chatView })
                     )
                   )
               ),
@@ -56703,7 +56820,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      yt = (function(e) {
+      Ct = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -56742,7 +56859,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      St = r.forwardRef(function(e, t) {
+      Ot = r.forwardRef(function(e, t) {
         var n = e.steamID,
           i = e.localSteamID,
           a = e.watchLocation,
@@ -56773,10 +56890,10 @@
             }),
             r.createElement("div", { className: "videoContainerSizer" })
           ),
-          r.createElement(Ct, { steamID: n })
+          r.createElement(It, { steamID: n })
         );
       }),
-      Ct = (function(e) {
+      It = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -56788,7 +56905,7 @@
           }),
           (t.prototype.render = function() {
             var e = this,
-              t = new bt.a(this.props.steamID),
+              t = new yt.a(this.props.steamID),
               n = _.f.FriendStore.GetPlayer(t.GetAccountID()),
               o = n.persona.GetCurrentGameIconURL(),
               i = n.persona.GetCurrentGameName(),
@@ -56824,10 +56941,10 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      Ot = n("uw3m"),
-      It = n("fxWM"),
-      Et = n.n(It),
-      wt = function(e) {
+      Et = n("uw3m"),
+      wt = n("fxWM"),
+      Dt = n.n(wt),
+      Mt = function(e) {
         var t = e.message,
           n = e.name,
           r = e.renderImage,
@@ -56837,69 +56954,69 @@
           Object(o.a)(
             {
               key: "inviteDrop",
-              classNames: Object(o.a)({}, Et.a),
+              classNames: Object(o.a)({}, Dt.a),
               timeout: 300
             },
             a
           ),
           i.a.createElement(
             "div",
-            { className: Et.a.ChatModalCover },
+            { className: Dt.a.ChatModalCover },
             i.a.createElement(
               "div",
-              { className: Et.a.InviteDropContainer },
+              { className: Dt.a.InviteDropContainer },
               i.a.createElement(
                 "span",
-                { className: Et.a.InviteDropImage },
+                { className: Dt.a.InviteDropImage },
                 r()
               ),
-              i.a.createElement("span", { className: Et.a.InviteDropName }, n),
+              i.a.createElement("span", { className: Dt.a.InviteDropName }, n),
               i.a.createElement(
                 "span",
-                { className: Et.a.InviteDropMessage },
+                { className: Dt.a.InviteDropMessage },
                 t
               ),
               i.a.createElement("span", {
-                className: Et.a.InviteDropBackground
+                className: Dt.a.InviteDropBackground
               })
             )
           )
         );
       };
     n.d(t, "g", function() {
-      return Dt;
+      return Tt;
     }),
       n.d(t, "i", function() {
-        return Mt;
+        return Rt;
       }),
       n.d(t, "k", function() {
-        return Tt;
-      }),
-      n.d(t, "f", function() {
         return At;
       }),
-      n.d(t, "b", function() {
-        return Gt;
-      }),
-      n.d(t, "a", function() {
+      n.d(t, "f", function() {
         return jt;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "b", function() {
+        return kt;
+      }),
+      n.d(t, "a", function() {
         return Lt;
       }),
-      n.d(t, "h", function() {
-        return Nt;
-      }),
-      n.d(t, "d", function() {
+      n.d(t, "j", function() {
         return Pt;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "h", function() {
         return Bt;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "d", function() {
         return Ft;
+      }),
+      n.d(t, "c", function() {
+        return xt;
+      }),
+      n.d(t, "e", function() {
+        return Vt;
       });
-    var Dt = (function(e) {
+    var Tt = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -57054,18 +57171,18 @@
                 a = n instanceof G.b;
               return (
                 (o = i
-                  ? r.createElement(gt, {
+                  ? r.createElement(vt, {
                       groupView: i,
                       isActive: n == t,
                       popup: e.props.popup
                     })
                   : a
-                  ? r.createElement(kt, {
+                  ? r.createElement(Nt, {
                       broadcastView: n,
                       isActive: n == t,
                       popup: e.props.popup
                     })
-                  : r.createElement(vt, {
+                  : r.createElement(St, {
                       chatView: n.GetChatView(),
                       isActive: n == t
                     })),
@@ -57117,7 +57234,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      Mt = (function(e) {
+      Rt = (function(e) {
         function t(t) {
           return e.call(this, t) || this;
         }
@@ -57334,7 +57451,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component);
-    function Tt(e, t, n) {
+    function At(e, t, n) {
       var i,
         a = !1,
         s = !0;
@@ -57354,7 +57471,7 @@
       }
       s
         ? Object(I.b)(
-            r.createElement(Rt, Object(o.a)({}, e)),
+            r.createElement(Gt, Object(o.a)({}, e)),
             n,
             "InviteDialog",
             {
@@ -57372,7 +57489,7 @@
             Object(M.c)("#Chat_Actions_DropGroupInvite_Denied_Description")
           );
     }
-    var Rt = (function(e) {
+    var Gt = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (n.invitee = n.props.invitee), n;
@@ -57659,7 +57776,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      At = (function(e) {
+      jt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -57737,7 +57854,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      Gt = function(e) {
+      kt = function(e) {
         var t = e.onClick,
           n = e.edge;
         return r.createElement(
@@ -57750,7 +57867,7 @@
           r.createElement(l.z, { showChat: !0 })
         );
       },
-      jt = r.forwardRef(function(e, t) {
+      Lt = r.forwardRef(function(e, t) {
         var n = e.steamID,
           i = e.localSteamID,
           a = e.watchLocation,
@@ -57794,7 +57911,7 @@
           )
         );
       }),
-      kt = (function(e) {
+      Nt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -57816,7 +57933,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      Lt = (function(e) {
+      Pt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -57885,7 +58002,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      Nt = (function(e) {
+      Bt = (function(e) {
         function t(t) {
           return e.call(this, t) || this;
         }
@@ -57963,7 +58080,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      Pt = (function(e) {
+      Ft = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -57976,7 +58093,7 @@
               i = Object(o.f)(e, ["chatView", "friend"]),
               a = t.chat instanceof m.a;
             return r.createElement(
-              wt,
+              Mt,
               Object(o.a)(
                 {
                   message: a
@@ -57984,7 +58101,7 @@
                     : Object(M.c)("#Chat_DropToInvite"),
                   name: n.display_name,
                   renderImage: function() {
-                    return r.createElement(Ot.b, {
+                    return r.createElement(Et.b, {
                       size: "Large",
                       persona: n.persona
                     });
@@ -57997,7 +58114,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      Bt = (function(e) {
+      xt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -58018,7 +58135,7 @@
               );
             var a = (t || n).name;
             return r.createElement(
-              wt,
+              Mt,
               Object(o.a)(
                 {
                   message: Object(M.c)("#Chat_DropGroupToInviteFriend"),
@@ -58036,7 +58153,7 @@
           (t = Object(o.c)([w.a], t))
         );
       })(r.Component),
-      Ft = (function(e) {
+      Vt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -59718,7 +59835,8 @@
         })
       );
     }
-    function x() {
+    function x(e) {
+      var t = e.color || "#020202";
       return r.createElement(
         "svg",
         {
@@ -59736,7 +59854,7 @@
           "g",
           { className: "triangle" },
           r.createElement("path", {
-            stroke: "#020202",
+            stroke: t,
             strokeWidth: "16",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -59744,7 +59862,7 @@
           }),
           r.createElement("path", {
             fill: "none",
-            stroke: "#020202",
+            stroke: t,
             strokeWidth: "11",
             strokeLinecap: "round",
             strokeLinejoin: "round",
@@ -59752,14 +59870,14 @@
             d:
               "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606"
           }),
-          r.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
+          r.createElement("path", { fill: t, d: "M127.9,208.12" })
         ),
         r.createElement(
           "g",
           { className: "exclamation" },
           r.createElement("line", {
             fill: "none",
-            stroke: "#020202",
+            stroke: t,
             strokeWidth: "16",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -59769,7 +59887,7 @@
             y2: "160.07"
           }),
           r.createElement("path", {
-            fill: "#020202",
+            fill: t,
             d:
               "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12"
           })
@@ -69029,10 +69147,29 @@
         return (
           Object(o.d)(t, e),
           (t.prototype.GetString = function(e) {
-            return SteamClient.Storage.GetString(e).then(function(t) {
-              if (t) return t;
-              var n = localStorage.getItem(e);
-              return n && SteamClient.Storage.SetString(e, n), n;
+            return Object(o.b)(this, void 0, void 0, function() {
+              return Object(o.e)(this, function(t) {
+                switch (t.label) {
+                  case 0:
+                    return (
+                      t.trys.push([0, 2, , 3]),
+                      [
+                        4,
+                        SteamClient.Storage.GetString(e).then(function(t) {
+                          if (t) return t;
+                          var n = localStorage.getItem(e);
+                          return n && SteamClient.Storage.SetString(e, n), n;
+                        })
+                      ]
+                    );
+                  case 1:
+                    return [2, t.sent()];
+                  case 2:
+                    return t.sent(), [2, null];
+                  case 3:
+                    return [2];
+                }
+              });
             });
           }),
           (t.prototype.StoreString = function(e, t) {

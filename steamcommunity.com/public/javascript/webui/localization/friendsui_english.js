@@ -55,6 +55,7 @@ LocalizationReady("friendsui", "english", {
 
   SearchFriends: "Search Friends",
   SearchByName: "Filter by Name",
+  SearchError: "An error occurred while searching",
 
   Broadcast_Watching: "Watching:",
   Broadcast_NowWatching: "Now watching:",

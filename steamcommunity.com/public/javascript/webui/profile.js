@@ -5039,7 +5039,8 @@
         })
       );
     }
-    function W() {
+    function W(e) {
+      var t = e.color || "#020202";
       return o.createElement(
         "svg",
         {
@@ -5057,7 +5058,7 @@
           "g",
           { className: "triangle" },
           o.createElement("path", {
-            stroke: "#020202",
+            stroke: t,
             strokeWidth: "16",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -5065,7 +5066,7 @@
           }),
           o.createElement("path", {
             fill: "none",
-            stroke: "#020202",
+            stroke: t,
             strokeWidth: "11",
             strokeLinecap: "round",
             strokeLinejoin: "round",
@@ -5073,14 +5074,14 @@
             d:
               "M128.001,226.606c42.507,0,81.538,0,87.756,0c31.222,0,36.95-14.974,24.045-34.771c-6.921-10.617-78.297-122.962-89.163-140.254\tC141.859,37.613,138.542,29.393,128,29.393l0,0c-10.543,0-13.86,8.222-22.639,22.189C94.495,68.874,23.119,181.219,16.198,191.836 c-12.905,19.797-7.175,34.771,24.045,34.771C46.463,226.606,85.494,226.606,128.001,226.606"
           }),
-          o.createElement("path", { fill: "#020202", d: "M127.9,208.12" })
+          o.createElement("path", { fill: t, d: "M127.9,208.12" })
         ),
         o.createElement(
           "g",
           { className: "exclamation" },
           o.createElement("line", {
             fill: "none",
-            stroke: "#020202",
+            stroke: t,
             strokeWidth: "16",
             strokeLinecap: "round",
             strokeMiterlimit: "10",
@@ -5090,7 +5091,7 @@
             y2: "160.07"
           }),
           o.createElement("path", {
-            fill: "#020202",
+            fill: t,
             d:
               "M127.9,208.12c-6.377,0-11.548-5.17-11.548-11.548c0-6.377,5.17-11.547,11.548-11.547 c6.377,0,11.547,5.17,11.547,11.547C139.447,202.95,134.277,208.12,127.9,208.12"
           })
