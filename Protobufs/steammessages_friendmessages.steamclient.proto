@@ -102,6 +102,7 @@ service FriendMessages {
 		option (method_description) = "See if a friend is in the friendsui beta.";
 	}
 }
+
 service FriendMessagesClient {
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
 	rpc IncomingMessage (.CFriendMessages_IncomingMessage_Notification) returns (.NoResponse) {
@@ -111,3 +112,4 @@ service FriendMessagesClient {
 		option (method_description) = "A session acked an unread message, echo to other sessions.";
 	}
 }
+

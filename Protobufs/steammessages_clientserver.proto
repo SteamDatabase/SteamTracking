@@ -959,7 +959,6 @@ message CMsgClientAppInfoRequest {
 }
 
 message CMsgClientAppInfoResponse {
-	option (msgpool_soft_limit) = 0;
 	option (msgpool_hard_limit) = 0;
 	message App {
 		message Section {
@@ -1044,7 +1043,6 @@ message CMsgClientPICSProductInfoRequest {
 }
 
 message CMsgClientPICSProductInfoResponse {
-	option (msgpool_soft_limit) = 0;
 	option (msgpool_hard_limit) = 0;
 	message AppInfo {
 		optional uint32 appid = 1;

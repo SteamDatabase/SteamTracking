@@ -61,3 +61,4 @@ service GameServers {
 		option (method_description) = "Gets a list of server IP addresses given a list of SteamIDs";
 	}
 }
+

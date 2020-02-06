@@ -35,6 +35,7 @@ service TestSteamClient {
 		option (method_description) = "Some description - NotifyClient.";
 	}
 }
+
 service TestServerFromClient {
 	rpc MessageToServer (.CMsgTest_MessageToServer_Request) returns (.CMsgTest_MessageToServer_Response) {
 		option (method_description) = "Some description - MessageToServer.";
@@ -43,3 +44,4 @@ service TestServerFromClient {
 		option (method_description) = "Some description - NotifyServer.";
 	}
 }
+

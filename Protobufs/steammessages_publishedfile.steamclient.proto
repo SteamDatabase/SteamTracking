@@ -615,6 +615,7 @@ service PublishedFile {
 		option (method_description) = "Get user vote summary";
 	}
 }
+
 service PublishedFileClient {
 	option (service_description) = "Published file client notifications";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
@@ -628,3 +629,4 @@ service PublishedFileClient {
 		option (method_description) = "Notification from the server when a published file is deleted";
 	}
 }
+

@@ -122,3 +122,4 @@ service PartnerApps {
 	}
 	rpc Download (.CPartnerApps_Download_Request) returns (.CPartnerApps_Download_Response);
 }
+

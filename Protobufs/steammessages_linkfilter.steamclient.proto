@@ -43,3 +43,4 @@ service CommunityLinkFilter {
 		option (method_description) = "Get a list of hashes describing the version of each chunk of the requested size.";
 	}
 }
+

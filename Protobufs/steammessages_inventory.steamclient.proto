@@ -185,6 +185,7 @@ service Inventory {
 		option (method_description) = "Finalizes a purchase for the user";
 	}
 }
+
 service InventoryClient {
 	option (service_description) = "Client notifications inventory service events";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
@@ -192,3 +193,4 @@ service InventoryClient {
 		option (method_description) = "Notify client that the user received new items";
 	}
 }
+

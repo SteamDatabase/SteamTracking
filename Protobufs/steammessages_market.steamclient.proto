@@ -22,3 +22,4 @@ service EconMarket {
 		option (method_description) = "Checks whether or not the authed account is allowed to use the market";
 	}
 }
+

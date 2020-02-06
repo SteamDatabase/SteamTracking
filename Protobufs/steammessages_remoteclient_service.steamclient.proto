@@ -39,6 +39,7 @@ service RemoteClient {
 		option (method_description) = "Send a Remote Play Together packet to a Steam client";
 	}
 }
+
 service RemoteClientSteamClient {
 	option (service_description) = "Methods for Steam remote client operations";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
@@ -61,3 +62,4 @@ service RemoteClientSteamClient {
 		option (method_description) = "Send a Remote Play Together packet to a Steam client";
 	}
 }
+

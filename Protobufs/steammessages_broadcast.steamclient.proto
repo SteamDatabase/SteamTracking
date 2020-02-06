@@ -426,13 +426,13 @@ message CBroadcast_GetBroadcastUploadStats_Request {
 
 message CBroadcast_GetBroadcastUploadStats_Response {
 	message UploadStats {
-		optional uint32 upload_result = 1;
+		optional uint32 upload_result = 1 [(description) = ""];
 		optional uint32 time_stopped = 2 [(description) = "time broadcast upload stopped"];
 		optional uint32 seconds_uploaded = 3 [(description) = "seconds of vido uploaded"];
 		optional uint32 max_viewers = 4 [(description) = "max concurrent viewers"];
 		optional uint32 resolution_x = 5 [(description) = "horizontal resultion"];
 		optional uint32 resolution_y = 6 [(description) = "vertical resultion"];
-		optional uint32 avg_bandwidth = 7;
+		optional uint32 avg_bandwidth = 7 [(description) = ""];
 		optional uint64 total_bytes = 8 [(description) = "total byte uploaded by broadcaster"];
 		optional uint32 app_id = 9 [(description) = "game broadcasted"];
 		optional uint32 total_unique_viewers = 10 [(description) = "total unique viewers seen"];
@@ -658,6 +658,7 @@ service Broadcast {
 		option (method_description) = "Gets viewer stats for given broadcast";
 	}
 }
+
 service BroadcastClient {
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
 	rpc NotifyBroadcastViewerState (.CBroadcast_BroadcastViewerState_Notification) returns (.NoResponse) {
@@ -700,3 +701,4 @@ service BroadcastClient {
 		option (method_description) = "Notification from server to client about a broadcast viewer WebRTC ICE candidate";
 	}
 }
+

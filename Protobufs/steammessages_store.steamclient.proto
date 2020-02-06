@@ -80,6 +80,7 @@ service Store {
 		option (method_description) = "Returns the desired ratings board and maximum rating to show on the store";
 	}
 }
+
 service StoreClient {
 	option (service_description) = "Steam store to client notifications";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
@@ -87,3 +88,4 @@ service StoreClient {
 		option (method_description) = "Notification from server to client that the user's store preferences have changed";
 	}
 }
+

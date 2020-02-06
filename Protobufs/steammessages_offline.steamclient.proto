@@ -32,3 +32,4 @@ service Offline {
 		option (method_description) = "Get an unsigned offline logon ticket for the current user";
 	}
 }
+

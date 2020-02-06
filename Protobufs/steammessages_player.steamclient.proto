@@ -422,6 +422,7 @@ service Player {
 		option (method_description) = "Get gameplay duration control settings.";
 	}
 }
+
 service PlayerClient {
 	option (service_description) = "Steam player data client notifications";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
@@ -444,3 +445,4 @@ service PlayerClient {
 		option (method_description) = "Notification from server that privacy settings changed";
 	}
 }
+

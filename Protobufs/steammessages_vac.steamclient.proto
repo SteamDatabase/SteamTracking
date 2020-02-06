@@ -24,3 +24,4 @@ service FileVerification {
 		option (method_description) = "File signature check was performed";
 	}
 }
+

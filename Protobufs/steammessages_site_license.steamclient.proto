@@ -98,6 +98,7 @@ service SiteManagerClient {
 		option (method_description) = "Rack informing site manager of existing tracked payments";
 	}
 }
+
 service SiteLicense {
 	option (service_description) = "Site License service";
 	rpc InitiateAssociation (.CSiteLicense_InitiateAssociation_Request) returns (.CSiteLicense_InitiateAssociation_Response) {
@@ -116,3 +117,4 @@ service SiteLicense {
 		option (method_description) = "Client is requesting the number of currently available seats";
 	}
 }
+

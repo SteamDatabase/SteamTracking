@@ -134,6 +134,7 @@ service GameNotifications {
 		option (method_description) = "Updates whether a user allows game notifications for a specific app";
 	}
 }
+
 service GameNotificationsClient {
 	option (service_description) = "Client notifications";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
@@ -144,3 +145,4 @@ service GameNotificationsClient {
 		option (method_description) = "Notification that the user's status has changed";
 	}
 }
+

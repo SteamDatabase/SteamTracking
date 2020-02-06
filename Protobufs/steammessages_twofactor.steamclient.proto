@@ -132,3 +132,4 @@ service TwoFactor {
 		option (method_description) = "Validate (and consume) a token";
 	}
 }
+

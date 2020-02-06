@@ -85,3 +85,4 @@ service Parties {
 		option (method_description) = "Delete the Beacon.";
 	}
 }
+

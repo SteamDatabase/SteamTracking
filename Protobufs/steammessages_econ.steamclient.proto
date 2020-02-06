@@ -99,3 +99,4 @@ service Econ {
 		option (method_description) = "Returns description information about the passed in asset classes";
 	}
 }
+

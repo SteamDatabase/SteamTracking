@@ -174,3 +174,4 @@ service AccountHardware {
 		option (method_description) = "Registers a valve index component to a customer";
 	}
 }
+

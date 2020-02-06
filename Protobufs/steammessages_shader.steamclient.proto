@@ -55,3 +55,4 @@ service Shader {
 		option (method_description) = "Client wants to know the manifest ID to fetch (if any) for a bucket's depot";
 	}
 }
+

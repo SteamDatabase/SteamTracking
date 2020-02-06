@@ -60,3 +60,4 @@ service STAR {
 		option (method_description) = "processes a generic message";
 	}
 }
+

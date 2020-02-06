@@ -891,6 +891,7 @@ service Chat {
 		option (method_description) = "Request to be notified of online friend persona state information.  Responses sent via CMsgClientPersonaState.";
 	}
 }
+
 service ChatRoom {
 	option (service_description) = "Service for joining, managing, and using multi-user chat rooms";
 	rpc CreateChatRoomGroup (.CChatRoom_CreateChatRoomGroup_Request) returns (.CChatRoom_CreateChatRoomGroup_Response) {
@@ -1038,6 +1039,7 @@ service ChatRoom {
 		option (method_description) = "A client is indicating it has an active view into the members list.";
 	}
 }
+
 service ClanChatRooms {
 	option (service_description) = "Methods for getting clan chat information";
 	rpc GetClanChatRoomInfo (.CClanChatRooms_GetClanChatRoomInfo_Request) returns (.CClanChatRooms_GetClanChatRoomInfo_Response) {
@@ -1047,6 +1049,7 @@ service ClanChatRooms {
 		option (method_description) = "Set a clan chat room to be members only (or public)";
 	}
 }
+
 service ChatRoomClient {
 	option (service_description) = "Client notifications for chat events";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
@@ -1081,12 +1084,14 @@ service ChatRoomClient {
 		option (method_description) = "The list of members for a chat room with virtualized member list has changed on the server (or client requested)";
 	}
 }
+
 service ChatUsability {
 	option (service_description) = "Client notifications for chat events";
 	rpc NotifyClientUsabilityMetrics (.CChatUsability_ClientUsabilityMetrics_Notification) returns (.NoResponse) {
 		option (method_description) = "Incoming metrics from the client";
 	}
 }
+
 service ChatUsabilityClient {
 	option (service_description) = "Client notifications for chat usability";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
@@ -1094,3 +1099,4 @@ service ChatUsabilityClient {
 		option (method_description) = "Request client send usability metrics";
 	}
 }
+

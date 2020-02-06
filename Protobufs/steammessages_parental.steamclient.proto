@@ -156,6 +156,7 @@ service Parental {
 		option (method_description) = "Attempt a recovery unlock on the specified account";
 	}
 }
+
 service ParentalClient {
 	option (service_description) = "Parental settings client notifications";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
@@ -169,3 +170,4 @@ service ParentalClient {
 		option (method_description) = "Notification from server to client that a lock has occurred in a browser";
 	}
 }
+

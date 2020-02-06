@@ -105,6 +105,7 @@ service QueuedMatchmaking {
 		option (method_description) = "Search for a game";
 	}
 }
+
 service QueuedMatchmakingGameHost {
 	option (service_description) = "Queued matchmaking host service";
 	rpc SearchForPlayers (.CQueuedMatchmakingGameHost_SearchForPlayers_Request) returns (.CQueuedMatchmakingGameHost_SearchForPlayers_Response) {
@@ -117,3 +118,4 @@ service QueuedMatchmakingGameHost {
 		option (method_description) = "EndGame";
 	}
 }
+

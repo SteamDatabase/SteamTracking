@@ -186,3 +186,4 @@ service DeviceAuth {
 		option (method_description) = "Get list played games as borrower";
 	}
 }
+
