@@ -3161,6 +3161,7 @@ function UpdatePaymentInfoForm()
 		var bShowBankSelection = false;
 		var bPaymentMethodRefundable = rgPaymentMethodProperties[ method.value ].refundable;
 		var bShowCafeFundedInstructions = false;
+		var bShowSaveMyAddressOverride = false;
 		
 		$J('#payment_row_one').show();
 		$J('#payment_row_eight').hide();
@@ -3215,6 +3216,7 @@ function UpdatePaymentInfoForm()
 						g_bShowAddressForm = !g_bSkipAddressRequirementForPayPal;
 			bShowPhoneNumber = g_bShowAddressForm;
 			bShowCountryVerification = g_bSkipAddressRequirementForPayPal;
+			bShowSaveMyAddressOverride = g_bEnableCachedPayPalCredentials;
 			
 			$('external_payment_processor_notice').innerHTML = 'Your PayPal transaction is initializing, please wait a moment before continuing...';
 		}
@@ -3389,8 +3391,8 @@ function UpdatePaymentInfoForm()
 		else
 			$AddressFields.hide();
 
-		var bShowSaveMyAddress = g_bShowAddressForm && ( !g_bIsUpdateBillingInfoForm || g_bUpdateBillingFormAddressOnly );
-		var strSaveMyAddressDisplay = bShowSaveMyAddress && g_bShowAddressForm ? 'block' : 'none';
+		var bShowSaveMyAddress = ( g_bShowAddressForm || bShowSaveMyAddressOverride ) && ( !g_bIsUpdateBillingInfoForm || g_bUpdateBillingFormAddressOnly );
+		var strSaveMyAddressDisplay = bShowSaveMyAddress ? 'block' : 'none';
 		$('payment_row_save_my_address').style.display = strSaveMyAddressDisplay;
 		
 		var strShowStoredPayPalDetails = bShowStoredPayPalDetails ? 'block' : 'none';
