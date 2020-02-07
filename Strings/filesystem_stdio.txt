@@ -1,0 +1,310 @@
+(
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+__gcc_except_tab__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+@
+__got
+__DATA
+H
+d
+__nl_symbol_ptr
+__DATA
+m
+__la_symbol_ptr
+__DATA
+o
+__mod_init_func
+__DATA
+(
+__const
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__common
+__DATA
+H
+__LINKEDIT
+
+@
+@loader_path/filesystem_stdio.dylib
+"
+@
+X
+P
+r
+
+8
+@loader_path/libtier0_s.dylib
+8
+@loader_path/libvstdlib_s.dylib
+h
+>
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+X
+/System/Library/Frameworks/IOKit.framework/Versions/A/IOKi
+15CBaseFileSystem
+11IFileSystem
+15IBaseFileSystem
+10IAppSystem
+10CUtlVectorIPFvPKcS1_E10CUtlMemoryIS3_EE
+10CUtlVectorIP7__sFILE10CUtlMemoryIS1_EE
+10CUtlVectorIN15CBaseFileSystem10FindData_tE10CUtlMemoryIS1_EE
+10CUtlVectorIc10CUtlMemoryIcEE
+10CUtlVectorIPi10CUtlMemoryIS0_EE
+7CUtlMapIPKcii22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorIN15CBaseFileSystem11CSearchPathE10CUtlMemoryIS1_EE
+10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLessIS1_E25CDefRBTreeBalanceListenerIiES1_E
+10CUtlVectorIPN15CBaseFileSystem11CPathIDInfoE10CUtlMemoryIS2_EE
+10CUtlVectorIN15CBaseFileSystem11COpenedFileE10CUtlMemoryIS1_EE
+10CUtlVectorIPN15CBaseFileSystem11CFileHandleE10CUtlMemoryIS2_EE
+10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
+10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+17CFileSystem_Stdio
+27CFileSystemStdIODLLValidate
+9IValidate
+11CPathString
+10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
+21CUtlCStringConversion
+18CUtlCharConversion
+19CUtlNoEscConversion
+14CUtlMemoryBase
+Assertion Failed: 0
+-fs_log
+Log file system accesses
+-fs_target
+Set target syntax
+-fs_logbins
+Log the binaries we load during operation
+fs_debug
+w
+@echo off
+setlocal
+set fs_target="%s"
+if "%%fs_target%%" == "" goto error
+@echo on
+set binsrc="%s"
+mkdir "%%fs_target%%"
+copy "%%binsrc%%\hl2.exe" "%%fs_target%%"
+copy "%%binsrc%%\hl2.dat" "%%fs_target%%"
+mkdir "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\*.asi" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\materialsystem.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\shaderapidx9.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\filesystem_stdio.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\soundemittersystem.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\stdshader*.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\shader_nv*.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\launcher.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\engine.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\mss32.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\tier0.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\vgui2.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\vguimatsurface.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\voice_miles.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\vphysics.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\vstdlib.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\bin\studiorender.dll" "%%fs_target%%\bin"
+copy "%%binsrc%%\hl2\resource\*.ttf" "%%fs_target%%\hl2\resource"
+copy "%%binsrc%%\hl2\bin\gameui.dll" "%%fs_target%%\hl2\bin"
+goto done
+:error
+echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo ERROR: must set fs_target=targetpath (ie. "set fs_target=u:\destdir")!
+:done
+---FS:  %s %s
+open
+---FS:  close %s %p %i
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/filesystem/BaseFileSystem.cpp
+Tried to close unknown file pointer %p
+---FS:  read %s %llu %p
+Tried to read %llu bytes from unknown file pointer %p
+---FS:  write %s %llu %p
+Tried to write %llu bytes from unknown file pointer %p
+File %s was never closed
+%s%s
+rb
+Assertion Failed: packfile.m_bIsPackFile
+Assertion Failed: packfile.m_hPackFile
+Assertion Failed: foundEndOfCentralDirRecord
+Assertion Failed: fileHeader.signature == 0x02014b50
+Assertion Failed: fileHeader.compressionMethod == 0
+Assertion Failed: localFileHeader.signature == 0x04034b50
+%s is not a packfile
+%s has %i files
+zip%i.zip
+Couldn't open .bsp %s for embedded pack file check
+---------------
+Paths:
+"%s" "%s"
+.bsp
+Requested non-existent write path %s!
+DEFAULT_WRITE_PATH
+.\
+\
+copy "%s" "%s"
+mkdir "%s"
+fs_debug: %s
+FS_stat on file %s which appeared to exist failed!!!
+Assertion Failed: false
+FS:  Specified two path IDs (%s, %s).
+CBaseFileSystem::Open
+CBaseFileSystem::Close
+FS:  Tried to Close NULL file handle!
+FS:  Tried to Close NULL file pointer inside valid file handle!
+CBaseFileSystem::Seek
+Tried to Seek NULL file handle!
+FS:  Tried to Seek NULL file pointer inside valid file handle!
+CBaseFileSystem::Tell
+FS:  Tried to Tell NULL file handle!
+FS:  Tried to Tell NULL file pointer inside valid file handle!
+CBaseFileSystem::Size
+FS:  Tried to Size NULL file handle!
+FS:  Tried to Size NULL file pointer inside valid file handle!
+FS:  Tried to Size NULL filename!
+stat
+FS:  Tried to EndOfFile NULL file handle!
+FS:  Tried to EndOfFile NULL file pointer inside valid file handle!
+CBaseFileSystem::Read
+FS:  Tried to Read NULL file handle!
+FS:  Tried to Read NULL file pointer inside valid file handle!
+Assertion Failed: nBytesRead <= INT_MAX
+CBaseFileSystem::Write
+FS:  Tried to Write NULL file handle!
+FS:  Tried to Write NULL file pointer inside valid file handle!
+Assertion Failed: nBytesWritten <= INT_MAX
+CBaseFileSystem::FPrintf
+FS:  Tried to FPrintf NULL file handle!
+FS:  Tried to FPrintf NULL file pointer inside valid file handle!
+Assertion Failed: len <= INT_MAX
+FS:  Tried to IsOk NULL file handle!
+FS:  Tried to IsOk NULL file pointer inside valid file handle!
+CBaseFileSystem::Flush
+FS:  Tried to Flush NULL file handle!
+FS:  Tried to Flush NULL file pointer inside valid file handle!
+Assertion Failed: pPathID
+CBaseFileSystem::ReadLine
+FS:  Tried to ReadLine NULL file handle!
+FS:  Tried to ReadLine NULL file pointer inside valid file handle!
+CBaseFileSystem::GetFileTime
+filetime
+CBaseFileSystem::FileExists
+Assertion Failed: pathID
+CBaseFileSystem::FindFirst
+Assertion Failed: pWildCard
+Assertion Failed: pHandle
+CBaseFileSystem::FindNext
+Unable to remove %s!
+Assertion Failed: pOldPath && pNewPath
+Assertion Failed: pOldPathId
+Unable to rename %s to %s!
+???
+EXECUTABLE_PATH
+Assertion Failed: !m_LogFuncs.IsValidIndex(m_LogFuncs.Find(logFunc))
+CBaseFileSystem
+m_LogFuncs
+m_PackFileHandles
+m_FindData
+m_FindData[ iFind ].wildCardString
+m_FindData[ iFind ].m_VisitedSearchPaths
+m_FindData[ iFind ].m_VisitedFiles
+m_SearchPaths
+m_SearchPaths[ iPath ].m_PackFiles
+m_PathIDInfos
+m_OpenedFiles
+m_OpenedFileHandles
+m_FileNames
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
+Assertion Failed: m_pvOrigNameAddress
+Assertion Failed: m_pParent
+Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+Assertion Failed: static_cast<_in>( ret ) == i
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/dbg.h
+Assertion Failed: ( i < 0 ) == ( ret < 0 )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
+Assertion Failed: (unsigned)elem <= (unsigned)m_Size
+Assertion Failed: IsValidIndex(elem)
+Assertion Failed: (elem == Count()) || IsValidIndex(elem)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
+m_Memory
+CUtlDict
+m_Elements
+m_Tree
+CUtlSymbolTable
+m_StringPools
+m_Lookup
+Assertion Failed: !m_bMounted
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
+Assertion Failed: !strchr(filename, '\n') && !strchr(filename, '\r')
+VFileSystem013
+VBaseFileSystem007
+CFileSystem_Stdio
+IVALIDATE001
+Filesystem
+g_FileSystem_Stdio
+g_PathIDTable
+CUtlSymbol::ValidateGlobals
+.
+V_RemoveDotSlashes failed for "%s".
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
+*
+%s%c%s
+/
+..
+*.*
+CPathString
+.dylib
+%s/%s%s
+Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
+.cpl
+%s
+g_VecLoadedModules
+Assertion Failed: g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+CreateInterface
+"
+Assertion Failed: info.m_pReplacementString == 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+n
+t
+v
+b
+r
+f
+a
+?
+'
+Assertion Failed: m_unSizeOfElements > 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+Assertion Failed: nGrowSize >= 0
+nBytesItem is %d in UtlMemory_CalcNewAllocationCount
+Assertion Failed: num > 0
+Assertion Failed: s_bAllowStaticSymbolTable
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+s_pSymbolTable
+@
+@
+
+=
+@
+=
+@

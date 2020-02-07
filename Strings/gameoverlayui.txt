@@ -1,0 +1,7992 @@
+!
+__TEXT
+p8
+p8
+__text
+__TEXT
+s
+s
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__cstring
+__TEXT
+#
+__gcc_except_tab__TEXT
+__const
+__TEXT
+__objc_methname
+__TEXT
+,x.
+,x.
+__unwind_info
+__TEXT
+<}.
+<}.
+__eh_frame
+__TEXT
+__DATA
+p8
+p8
+__nl_symbol_ptr
+__DATA
+p8
+p8
+__got
+__DATA
+__la_symbol_ptr
+__DATA
+@q8
+0
+@q8
+__mod_init_func
+__DATA
+p~8
+p~8
+__const
+__DATA
+__cfstring
+__DATA
+__objc_imageinfo__DATA
+__objc_selrefs
+__DATA
+__objc_classrefs__DATA
+x
+__data
+__DATA
+__bss
+__DATA
+qA
+__common
+__DATA
+H
+__LINKEDIT
+@M
+
+@
+@loader_path/gameoverlayui.dylib
+"
+(!M
+,Z
+X.S
+P
+FX
+
+8
+@loader_path/libtier0_s.dylib
+8
+@loader_path/libvstdlib_s.dylib
+@
+@loader_path/libSDL2-2.0.0.dylib
+8
+@loader_path/vgui2_s.dylib
+8
+/usr/lib/libiconv.2.dylib
+0
+/usr/lib/libz.1.dylib
+h
+>
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+X
+/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+h
+/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+`
+X
+/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
+`
+/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+h
+/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+X
+/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
+X
+/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa
+0
+x
+/usr/lib/libc++.1.dylib
+8
+/usr/lib/libSystem.B.dylib
+X
+-
+/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
+p
+0
+/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
+h
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+8
+/usr/lib/libobjc.A.dylib
+&
+@6M
+)
+@$d
+C
+14CParentalCache
+23IClientParentalSettings
+N14CParentalCache35CCallback_OnParentalLockChangeBeginE
+9CCallbackI14CParentalCache25ParentalLockChangeBegin_tLb0EE
+13CCallbackImplILi1EE
+N20CBroadcastLiveBanner35CCallback_OnBroadcastSettingsLoadedE
+9CCallbackI20CBroadcastLiveBanner25BroadcastSettingsLoaded_tLb0EE
+N20CBroadcastLiveBanner37CCallback_OnBroadcastMicrophoneStatusE
+9CCallbackI20CBroadcastLiveBanner27BroadcastMicrophoneStatus_tLb0EE
+13CCallbackImplILi2EE
+N20CBroadcastLiveBanner33CCallback_OnBroadcastUploadStatusE
+9CCallbackI20CBroadcastLiveBanner23BroadcastUploadStatus_tLb0EE
+13CCallbackImplILi20EE
+N20CBroadcastLiveBanner27CCallback_OnBroadcastStatusE
+9CCallbackI20CBroadcastLiveBanner17BroadcastStatus_tLb0EE
+13CCallbackImplILi24EE
+N4vgui12IClientPanelE
+20CFriendsImageManager
+N4vgui9RGBAImageE
+N4vgui6IImageE
+7CUtlMapIiPN4vgui6IImageEi8CDefLessIiEE
+10CUtlRBTreeIN7CUtlMapIiPN4vgui6IImageEi8CDefLessIiEE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
+15CEmoticonButton
+17CItemImageManager
+10CUtlString
+8GridMenu
+10CHTTPImage
+11CCallResultI10CHTTPImage22HTTPRequestCompleted_tE
+11CCallResultI17CItemImageManager22HTTPRequestCompleted_tE
+10CUtlVectorIi10CUtlMemoryIiEE
+7CUtlMapIPKcii22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
+10CUtlVectorIN17CItemImageManager18ImagesToDownload_tE10CUtlMemoryIS1_EE
+N19CRefreshLoginDialog24CCallback_OnLogonSuccessE
+9CCallbackI19CRefreshLoginDialog23SteamServersConnected_tLb0EE
+N19CRefreshLoginDialog24CCallback_OnLogonFailureE
+9CCallbackI19CRefreshLoginDialog27SteamServerConnectFailure_tLb0EE
+13CCallbackImplILi8EE
+21CSettingsSubBroadcast
+N21CSettingsSubBroadcast27CCallback_OnBroadcastStatusE
+9CCallbackI21CSettingsSubBroadcast17BroadcastStatus_tLb0EE
+19CSettingsSubBrowser
+19CSettingsSubFriends
+N19CSettingsSubFriends30CCallback_OnPersonaStateChangeE
+9CCallbackI19CSettingsSubFriends20PersonaStateChange_tLb0EE
+13CCallbackImplILi12EE
+11CCallResultI19CSettingsSubFriends24SetPersonaNameResponse_tE
+18CSettingsSubInGame
+A
+17CSettingsSubMusic
+N17CSettingsSubMusic28CCallback_OnVolumeHasChangedE
+9CCallbackI17CSettingsSubMusic18VolumeHasChanged_tLb0EE
+13CCallbackImplILi4EE
+N17CSettingsSubMusic41CCallback_OnLocalLibraryCrawlingWillStartE
+9CCallbackI17CSettingsSubMusic31LocalLibraryCrawlingWillStart_tLb0EE
+N17CSettingsSubMusic43CCallback_OnLocalLibraryCrawlingInterruptedE
+9CCallbackI17CSettingsSubMusic33LocalLibraryCrawlingInterrupted_tLb0EE
+N17CSettingsSubMusic40CCallback_OnLocalLibraryCrawlingFinishedE
+9CCallbackI17CSettingsSubMusic30LocalLibraryCrawlingFinished_tLb0EE
+N17CSettingsSubMusic44CCallback_OnLocalLibraryDatabaseHasBeenResetE
+9CCallbackI17CSettingsSubMusic34LocalLibraryDatabaseHasBeenReset_tLb0EE
+C
+G
+?17CSettingsSubVoice
+N17CSettingsSubVoice35CCallback_OnVoiceInputDeviceChangedE
+9CCallbackI17CSettingsSubVoice25VoiceInputDeviceChanged_tLb0EE
+18CSoundSystemSelect
+16CSteamAuthedHTML
+21CSteamAuthedHTMLPopup
+N16CSteamAuthedHTML35CCallback_OnParentalWebTokenChangedE
+9CCallbackI16CSteamAuthedHTML25ParentalWebTokenChanged_tLb0EE
+10CUtlVectorIN4vgui4HTML18CustomURLHandler_tE10CUtlMemoryIS2_EE
+10CUtlVectorIN4vgui4HTML19CustomCursorCache_tE10CUtlMemoryIS2_EE
+10CUtlVectorI9CSmartPtrI15CJSCallbackFuncE10CUtlMemoryIS2_EE
+20CMultipleCallResultsI16CSteamAuthedHTML26SupportSystemReportReady_tE
+10CUtlRBTreeIyi8CDefLessIyE25CDefRBTreeBalanceListenerIiEyE
+20CJSMethodCallHandlerI16CSteamAuthedHTMLJ9CSmartPtrI15CJSCallbackFuncEEE
+20IJSMethodCallHandler
+12CTradeDialog
+11CURLManager
+7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIPKcN11CURLManager5URL_tEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+20CMultipleCallResultsI15COverlayVRState24GameStatsSessionIssued_tE
+25CBroadcastFirstTimeDialog
+18CMusicLibraryPanel
+24CMusicPage_Details_Album
+15CTrackItemPanel
+N24CMusicPage_Details_Album28CCallback_OnAlbumCoverLoadedE
+9CCallbackI24CMusicPage_Details_Album18AlbumCoverLoaded_tLb0EE
+N24CMusicPage_Details_Album40CCallback_OnTrackListDataEntryForAlbumIDE
+9CCallbackI24CMusicPage_Details_Album30TrackListDataEntryForAlbumID_tLb0EE
+13CCallbackImplILi3092EE
+11CTrackLabel
+10CUtlVectorIP15CTrackItemPanel10CUtlMemoryIS1_EE
+26CMusicPage_Details_Content
+N26CMusicPage_Details_Content31CCallback_OnArtistListDataEntryE
+9CCallbackI26CMusicPage_Details_Content21ArtistListDataEntry_tLb0EE
+13CCallbackImplILi2056EE
+N26CMusicPage_Details_Content30CCallback_OnAlbumListDataEntryE
+9CCallbackI26CMusicPage_Details_Content20AlbumListDataEntry_tLb0EE
+13CCallbackImplILi4120EE
+N26CMusicPage_Details_Content33CCallback_OnPlaylistListDataEntryE
+9CCallbackI26CMusicPage_Details_Content23PlaylistListDataEntry_tLb0EE
+13CCallbackImplILi2080EE
+N26CMusicPage_Details_Content41CCallback_OnLocalLibraryCrawlingWillStartE
+9CCallbackI26CMusicPage_Details_Content31LocalLibraryCrawlingWillStart_tLb0EE
+N26CMusicPage_Details_Content40CCallback_OnLocalLibraryCrawlingFinishedE
+9CCallbackI26CMusicPage_Details_Content30LocalLibraryCrawlingFinished_tLb0EE
+N26CMusicPage_Details_Content43CCallback_OnLocalLibraryCrawlingInterruptedE
+9CCallbackI26CMusicPage_Details_Content33LocalLibraryCrawlingInterrupted_tLb0EE
+N26CMusicPage_Details_Content39CCallback_OnLocalLibraryCrawlingMessageE
+9CCallbackI26CMusicPage_Details_Content29LocalLibraryCrawlingMessage_tLb0EE
+N26CMusicPage_Details_Content44CCallback_OnLocalLibraryDatabaseHasBeenResetE
+9CCallbackI26CMusicPage_Details_Content34LocalLibraryDatabaseHasBeenReset_tLb0EE
+N26CMusicPage_Details_Content34CCallback_OnPlaylistNameHasChangedE
+9CCallbackI26CMusicPage_Details_Content24PlaylistNameHasChanged_tLb0EE
+13CCallbackImplILi1028EE
+N26CMusicPage_Details_Content25CCallback_OnPlaylistAddedE
+9CCallbackI26CMusicPage_Details_Content15PlaylistAdded_tLb0EE
+N26CMusicPage_Details_Content27CCallback_OnPlaylistDeletedE
+9CCallbackI26CMusicPage_Details_Content17PlaylistDeleted_tLb0EE
+N26CMusicPage_Details_Content25CCallback_OnPlaylistMovedE
+9CCallbackI26CMusicPage_Details_Content15PlaylistMoved_tLb0EE
+10CUtlVectorIP24CMusicPage_Details_Album10CUtlMemoryIS1_EE
+10CUtlVectorIP27CMusicPage_Details_Playlist10CUtlMemoryIS1_EE
+10CUtlVectorIN26CMusicPage_Details_Content14PlaylistData_tE10CUtlMemoryIS1_EE
+27CMusicPage_Details_Playlist
+18CPlaylistItemPanel
+N27CMusicPage_Details_Playlist28CCallback_OnAlbumCoverLoadedE
+9CCallbackI27CMusicPage_Details_Playlist18AlbumCoverLoaded_tLb0EE
+N27CMusicPage_Details_Playlist43CCallback_OnTrackListDataEntryForPlaylistIDE
+9CCallbackI27CMusicPage_Details_Playlist33TrackListDataEntryForPlaylistID_tLb0EE
+13CCallbackImplILi3096EE
+N27CMusicPage_Details_Playlist34CCallback_OnPlaylistNameHasChangedE
+9CCallbackI27CMusicPage_Details_Playlist24PlaylistNameHasChanged_tLb0EE
+N27CMusicPage_Details_Playlist36CCallback_OnPlaylistEntriesHaveMovedE
+9CCallbackI27CMusicPage_Details_Playlist26PlaylistEntriesHaveMoved_tLb0EE
+N27CMusicPage_Details_Playlist34CCallback_OnPlaylistEntriesDeletedE
+9CCallbackI27CMusicPage_Details_Playlist24PlaylistEntriesDeleted_tLb0EE
+N27CMusicPage_Details_Playlist37CCallback_OnPlaylistAllEntriesDeletedE
+9CCallbackI27CMusicPage_Details_Playlist27PlaylistAllEntriesDeleted_tLb0EE
+N27CMusicPage_Details_Playlist38CCallback_OnPlaylistEntriesHaveChangedE
+9CCallbackI27CMusicPage_Details_Playlist28PlaylistEntriesHaveChanged_tLb0EE
+18CPlaylistItemLabel
+17CMusicPlayerLabel
+17CMusicPlayerPanel
+N17CMusicPlayerPanel39CCallback_OnCurrentQueueEntryHasChangedE
+9CCallbackI17CMusicPlayerPanel29CurrentQueueEntryHasChanged_tLb0EE
+N17CMusicPlayerPanel35CCallback_OnQueueEntriesHaveChangedE
+9CCallbackI17CMusicPlayerPanel25QueueEntriesHaveChanged_tLb0EE
+N17CMusicPlayerPanel36CCallback_OnPlaybackStatusHasChangedE
+9CCallbackI17CMusicPlayerPanel26PlaybackStatusHasChanged_tLb0EE
+N17CMusicPlayerPanel50CCallback_OnCurrentQueueEntrySecondsElapsedChangedE
+9CCallbackI17CMusicPlayerPanel40CurrentQueueEntrySecondsElapsedChanged_tLb0EE
+N17CMusicPlayerPanel32CCallback_OnGameOverlayActivatedE
+9CCallbackI17CMusicPlayerPanel22GameOverlayActivated_tLb0EE
+N17CMusicPlayerPanel41CCallback_OnPlayingRepeatStatusHasChangedE
+9CCallbackI17CMusicPlayerPanel31PlayingRepeatStatusHasChanged_tLb0EE
+N17CMusicPlayerPanel37CCallback_OnPlayingShuffledHasChangedE
+9CCallbackI17CMusicPlayerPanel27PlayingShuffledHasChanged_tLb0EE
+N17CMusicPlayerPanel28CCallback_OnVolumeHasChangedE
+9CCallbackI17CMusicPlayerPanel18VolumeHasChanged_tLb0EE
+N17CMusicPlayerPanel28CCallback_OnAlbumCoverLoadedE
+9CCallbackI17CMusicPlayerPanel18AlbumCoverLoaded_tLb0EE
+19CMusicSeekBarSlider
+23CMusicPlayerVolumePanel
+13CVolumeSlider
+21CDialogParentalUnlock
+N21CDialogParentalUnlock45CCallback_OnParentalLockChangeAttemptCompleteE
+9CCallbackI21CDialogParentalUnlock35ParentalLockChangeAttemptComplete_tLb0EE
+NSt3__117bad_function_callE
+Y@
+23CScreenshotDeleteDialog
+24CScreenshotLoadingThread
+18CScreenshotManager
+18ScreenshotToLoad_t
+23CScreenshotCaptionEntry
+23CScreenshotGameSelector
+7CUtlMapI7CGameIDii8CDefLessIS0_EE
+10CUtlRBTreeIN7CUtlMapI7CGameIDii8CDefLessIS1_EE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+13CCallbackImplILi16EE
+13CCallbackImplILi608EE
+23CScreenshotUploadDialog
+11CCallResultI23CScreenshotUploadDialog25ScreenshotBatchComplete_tE
+9CCallbackI23CScreenshotUploadDialog26ScreenshotUploadProgress_tLb0EE
+26CScreenshotImageClickPanel
+7CUtlPtrIN4vgui9RGBAImageEE
+11CCallResultI23CScreenshotDeleteDialog25ScreenshotBatchComplete_tE
+9CCallbackI18CScreenshotManager19ScreenshotWritten_tLb0EE
+9CCallbackI18CScreenshotManager20ScreenshotUploaded_tLb0EE
+9CCallbackI18CScreenshotManager19ScreenshotDeleted_tLb0EE
+10CUtlVectorIP26CScreenshotImageClickPanel10CUtlMemoryIS1_EE
+7CUtlMapIjii8CDefLessIjEE
+10CUtlRBTreeIN7CUtlMapIjii8CDefLessIjEE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
+9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
+N3IPC15BinarySemaphoreE
+N3IPC10PosixMutexE
+N3IPC6IMutexE
+N3IPC11ISyncObjectE
+N3IPC10PosixEventE
+N3IPC6IEventE
+N3IPC17PosixSharedMemoryE
+N3IPC10ISharedMemE
+10IMemStream
+16CSharedMemStream
+aE
+https://www.google.com
+O
+v
+e
+r
+l
+a
+y
+S
+t
+o
+r
+e
+B
+r
+o
+w
+s
+e
+r
+=
+%
+u
+;
+50COverlayNeedWorkshopLegalAgreementAcceptanceDialog
+19COverlayCDKeyDialog
+23CScreenshotNotification
+10CBasePanel
+39CSteamInputControllerConfigNotification
+NSt3__110__function6__funcIZN10CBasePanel30OnGameOverlayActivateRequestedEPK30GameOverlayActivateRequested_tE3$_1NS_9allocatorIS6_EEFvvEEE
+ZN10CBasePanel30OnGameOverlayActivateRequestedEPK30GameOverlayActivateRequested_tE3$_1
+NSt3__110__function6__funcIZN10CBasePanel21OnMicroTxnAuthRequestEPK29MicroTxnAuthRequestCallback_tE3$_2NS_9allocatorIS6_EEFvvEEE
+ZN10CBasePanel21OnMicroTxnAuthRequestEPK29MicroTxnAuthRequestCallback_tE3$_2
+NSt3__110__function6__funcIZN10CBasePanel21OnMicroTxnAuthRequestEPK29MicroTxnAuthRequestCallback_tE3$_3NS_9allocatorIS6_EEFvvEEE
+ZN10CBasePanel21OnMicroTxnAuthRequestEPK29MicroTxnAuthRequestCallback_tE3$_3
+N4vgui12SimpleDialogE
+N4vgui17NotificationFrameE
+14COverlaySplash
+25COverlayCDKeyNotification
+N10CBasePanel31CCallback_OnMicroTxnAuthRequestE
+9CCallbackI10CBasePanelK29MicroTxnAuthRequestCallback_tLb0EE
+N10CBasePanel40CCallback_OnGameOverlayActivateRequestedE
+9CCallbackI10CBasePanelK30GameOverlayActivateRequested_tLb0EE
+13CCallbackImplILi8216EE
+N10CBasePanel22CCallback_OnLowBatteryE
+9CCallbackI10CBasePanel17LowBatteryPower_tLb0EE
+N10CBasePanel33CCallback_OnLegacyCDKeyRegisteredE
+9CCallbackI10CBasePanel23LegacyCDKeyRegistered_tLb0EE
+13CCallbackImplILi520EE
+N10CBasePanel21CCallback_OnLoggedOffE
+9CCallbackI10CBasePanel26SteamServersDisconnected_tLb0EE
+N10CBasePanel30CCallback_OnPersonaStateChangeE
+9CCallbackI10CBasePanel20PersonaStateChange_tLb0EE
+N10CBasePanel29CCallback_OnScreenshotWrittenE
+9CCallbackI10CBasePanel19ScreenshotWritten_tLb0EE
+N10CBasePanel25CCallback_OnFilePublishedE
+9CCallbackI10CBasePanel32RemoteStoragePublishFileResult_tLb0EE
+N10CBasePanel32CCallback_OnPublishedFileUpdatedE
+9CCallbackI10CBasePanel40RemoteStorageUpdatePublishedFileResult_tLb0EE
+N10CBasePanel39CCallback_OnAsyncNotificationsRequestedE
+9CCallbackI10CBasePanel35NotifyAsyncNotificationsRequested_tLb0EE
+N10CBasePanel37CCallback_OnBroadcastShowFirstTimeDlgE
+9CCallbackI10CBasePanel27BroadcastShowFirstTimeDlg_tLb0EE
+N10CBasePanel27CCallback_OnBroadcastStatusE
+9CCallbackI10CBasePanel17BroadcastStatus_tLb0EE
+N10CBasePanel35CCallback_OnBroadcastSettingsLoadedE
+9CCallbackI10CBasePanel25BroadcastSettingsLoaded_tLb0EE
+N10CBasePanel34CCallback_OnBroadcastRecorderErrorE
+9CCallbackI10CBasePanel24BroadcastRecorderError_tLb0EE
+N10CBasePanel36CCallback_OnBroadcastUploadsDisabledE
+9CCallbackI10CBasePanel26BroadcastUploadsDisabled_tLb0EE
+N10CBasePanel27CCallback_OnDurationControlE
+9CCallbackI10CBasePanel17DurationControl_tLb0EE
+13CCallbackImplILi32EE
+19CBaseDashboardPanel
+17CBaseDesktopPanel
+26CBroadcastAvailableToWatch
+36CRemotePlayTogetherAvailableToInvite
+28CDurationControlNotification
+N4vgui16EasyNotificationE
+18COverlayLowBattery
+37COverlayLoggedInElsewhereNotification
+33CBroadcastUploadErrorNotification
+16CIngameFPSBanner
+41COverlayAsyncNotificationsRequestedDialog
+17CLambdaCallResultI17DurationControl_tE
+17CPanelHideWrapperI24COverlay_Details_FriendsE
+N17CPanelHideWrapperI24COverlay_Details_FriendsE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperI24COverlay_Details_FriendsE21ParentalLockChanged_tLb0EE
+17CPanelHideWrapperI29COverlay_Details_AchievementsE
+N17CPanelHideWrapperI29COverlay_Details_AchievementsE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperI29COverlay_Details_AchievementsE21ParentalLockChanged_tLb0EE
+20CMultipleCallResultsI29COverlay_Details_Achievements35GlobalAchievementPercentagesReady_tE
+13CCallbackImplILi148EE
+21COverlay_Details_News
+17CPanelHideWrapperI21COverlay_Details_NewsE
+N17CPanelHideWrapperI21COverlay_Details_NewsE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperI21COverlay_Details_NewsE21ParentalLockChanged_tLb0EE
+11CCallResultI21COverlay_Details_News22HTTPRequestCompleted_tE
+17CPanelHideWrapperI34COverlay_Details_Screenshots_PanelE
+N17CPanelHideWrapperI34COverlay_Details_Screenshots_PanelE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperI34COverlay_Details_Screenshots_PanelE21ParentalLockChanged_tLb0EE
+17CPanelHideWrapperI29COverlay_Details_Guides_PanelE
+N17CPanelHideWrapperI29COverlay_Details_Guides_PanelE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperI29COverlay_Details_Guides_PanelE21ParentalLockChanged_tLb0EE
+17CPanelHideWrapperI35COverlay_Details_CommunityHub_PanelE
+N17CPanelHideWrapperI35COverlay_Details_CommunityHub_PanelE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperI35COverlay_Details_CommunityHub_PanelE21ParentalLockChanged_tLb0EE
+11CCallResultI35COverlay_Details_CommunityHub_Panel22HTTPRequestCompleted_tE
+17CPanelHideWrapperI43COverlay_Details_CommunityDiscussions_PanelE
+N17CPanelHideWrapperI43COverlay_Details_CommunityDiscussions_PanelE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperI43COverlay_Details_CommunityDiscussions_PanelE21ParentalLockChanged_tLb0EE
+11CCallResultI43COverlay_Details_CommunityDiscussions_Panel22HTTPRequestCompleted_tE
+17CPanelHideWrapperI29COverlayDetailsBroadcastPanelE
+N17CPanelHideWrapperI29COverlayDetailsBroadcastPanelE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperI29COverlayDetailsBroadcastPanelE21ParentalLockChanged_tLb0EE
+17CPanelHideWrapperIN4vgui10ImagePanelEE
+N17CPanelHideWrapperIN4vgui10ImagePanelEE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperIN4vgui10ImagePanelEE21ParentalLockChanged_tLb0EE
+17CPanelHideWrapperIN4vgui8URLLabelEE
+N17CPanelHideWrapperIN4vgui8URLLabelEE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperIN4vgui8URLLabelEE21ParentalLockChanged_tLb0EE
+17CPanelHideWrapperIN4vgui6ButtonEE
+N17CPanelHideWrapperIN4vgui6ButtonEE31CCallback_OnParentalLockChangedE
+9CCallbackI17CPanelHideWrapperIN4vgui6ButtonEE21ParentalLockChanged_tLb0EE
+NSt3__110__function6__baseIFvvEEE
+16AppModalQueryBox
+12CMainOverlay
+N4vgui20IVGUIHostApplicationE
+10IAppSystem
+21ICommonOverlayHelpers
+16CHostOfflineMode
+N4vgui16IHostOfflineModeE
+15CConVarAccessor
+23IConCommandBaseAccessor
+22SerializedOverlayPumps
+15IOverlayOSPumps
+9CCallbackI22SerializedOverlayPumps21ScreenshotTriggered_tLb0EE
+StoreAddFundsMicroTxnPage
+StoreAddCachedPmtMethodPage
+24CMicroTxnAuthorizeDialog
+N24CMicroTxnAuthorizeDialog23CCallback_OnAuthDismissE
+9CCallbackI24CMicroTxnAuthorizeDialog29MicroTxnAuthDismissCallback_tLb0EE
+20CMultipleCallResultsI24CMicroTxnAuthorizeDialog22MicroTxnAuthResponse_tE
+20CMultipleCallResultsI24CMicroTxnAuthorizeDialog21MicroTxnInfoUpdated_tE
+29COverlay_Details_Achievements
+22CAchievementImagePanel
+21CAchievementInfoPanel
+N22CAchievementImagePanel32CCallback_OnAchievementIconReadyE
+9CCallbackI22CAchievementImagePanel28UserAchievementIconFetched_tLb0EE
+13CCallbackImplILi144EE
+13CCallbackBase
+N29COverlay_Details_Achievements29CCallback_OnUserStatsReceivedE
+9CCallbackI29COverlay_Details_Achievements19UserStatsReceived_tLb0EE
+N29COverlay_Details_Achievements27CCallback_OnUserAchievementE
+9CCallbackI29COverlay_Details_Achievements23UserAchievementStored_tLb0EE
+29COverlayDetailsBroadcastPanel
+27COverlayBroadcastChatDialog
+20CBroadcastChatBanner
+N29COverlayDetailsBroadcastPanel27CCallback_OnBroadcastStatusE
+9CCallbackI29COverlayDetailsBroadcastPanel17BroadcastStatus_tLb0EE
+N27COverlayBroadcastChatDialog27CCallback_OnBroadcastStatusE
+9CCallbackI27COverlayBroadcastChatDialog17BroadcastStatus_tLb0EE
+N27COverlayBroadcastChatDialog32CCallback_OnBroadcastChatMessageE
+9CCallbackI27COverlayBroadcastChatDialog22BroadcastChatMessage_tLb0EE
+13CCallbackImplILi296EE
+N20CBroadcastChatBanner32CCallback_OnBroadcastChatMessageE
+9CCallbackI20CBroadcastChatBanner22BroadcastChatMessage_tLb0EE
+43COverlay_Details_CommunityDiscussions_Panel
+35COverlay_Details_CommunityHub_Panel
+24COverlay_Details_Friends
+38COverlayFriendChangeConfirmationDialog
+9CCallbackI24COverlay_Details_Friends20PersonaStateChange_tLb0EE
+9CCallbackI38COverlayFriendChangeConfirmationDialog20PersonaStateChange_tLb0EE
+15CGuideItemPanel
+29COverlay_Details_Guides_Panel
+11CCallResultI15CGuideItemPanel32RemoteStorageDownloadUGCResult_tE
+11CCallResultI29COverlay_Details_Guides_Panel24SteamUGCQueryCompleted_tE
+14CNewsItemPanel
+34COverlay_Details_Screenshots_Panel
+22COverlaySettingsDialog
+33COverlayInGameVoiceSettingsDialog
+https://www.google.com
+22COverlayWebBrowserHTML
+18COverlayWebBrowser
+N18COverlayWebBrowser31CCallback_OnParentalLockChangedE
+9CCallbackI18COverlayWebBrowser21ParentalLockChanged_tLb0EE
+14CUtlLinkedListI17BrowserPosition_tiE
+14CRunGameEngine
+14IRunGameEngine
+14IBaseInterface
+17CScreenshotThread
+N6google8protobuf14FatalExceptionE
+N6google8protobuf7ClosureE
+N6google8protobuf8internal16FunctionClosure0E
+N6google8protobuf8internal15ExtensionFinderE
+N6google8protobuf8internal24GeneratedExtensionFinderE
+N6google8protobuf11MessageLiteE
+
+
+N6google8protobuf8internal12FieldSkipperE
+N6google8protobuf2io19ZeroCopyInputStreamE
+N6google8protobuf2io20ZeroCopyOutputStreamE
+N6google8protobuf2io16ArrayInputStreamE
+N6google8protobuf2io17ArrayOutputStreamE
+N6google8protobuf2io18StringOutputStreamE
+!
+!
+!
+!
+1
+!
+A
+9
+!
+
+
+N6google8protobuf12_GLOBAL__N_123AggregateErrorCollectorE
+N6google8protobuf17DescriptorBuilder17OptionInterpreter21AggregateOptionFinderE
+(
+@
+P
+`
+x
+8
+P
+h
+$
+8
+(
+0
+@
+<
+H
+8
+(
+8
+(
+0
+0
+8
+@
+A
+B
+D
+H
+C
+h
+i
+j
+P
+H
+I
+J
+0
+0
+4
+5
+6
+8
+7
+@
+H
+I
+0
+H
+0
+H
+0
+H
+0
+0
+8
+@
+H
+P
+X
+0
+H
+P
+N6google8protobuf17FileDescriptorSetE
+N6google8protobuf19FileDescriptorProtoE
+N6google8protobuf30DescriptorProto_ExtensionRangeE
+N6google8protobuf15DescriptorProtoE
+N6google8protobuf20FieldDescriptorProtoE
+N6google8protobuf20OneofDescriptorProtoE
+N6google8protobuf19EnumDescriptorProtoE
+N6google8protobuf24EnumValueDescriptorProtoE
+N6google8protobuf22ServiceDescriptorProtoE
+N6google8protobuf21MethodDescriptorProtoE
+N6google8protobuf11FileOptionsE
+N6google8protobuf14MessageOptionsE
+N6google8protobuf12FieldOptionsE
+N6google8protobuf11EnumOptionsE
+N6google8protobuf16EnumValueOptionsE
+N6google8protobuf14ServiceOptionsE
+N6google8protobuf13MethodOptionsE
+N6google8protobuf28UninterpretedOption_NamePartE
+N6google8protobuf19UninterpretedOptionE
+N6google8protobuf23SourceCodeInfo_LocationE
+N6google8protobuf14SourceCodeInfoE
+N6google8protobuf18DescriptorDatabaseE
+N6google8protobuf25EncodedDescriptorDatabaseE
+N6google8protobuf14DynamicMessageE
+N6google8protobuf21DynamicMessageFactoryE
+N6google8protobuf8internal29DescriptorPoolExtensionFinderE
+N6google8protobuf8internal26GeneratedMessageReflectionE
+N6google8protobuf7MessageE
+N6google8protobuf10ReflectionE
+N6google8protobuf14MessageFactoryE
+N6google8protobuf12_GLOBAL__N_123GeneratedMessageFactoryE
+!
+N6google8protobuf10TextFormat6FinderE
+N6google8protobuf10TextFormat17FieldValuePrinterE
+N6google8protobuf10TextFormat6Parser10ParserImpl20ParserErrorCollectorE
+N6google8protobuf12_GLOBAL__N_129FieldValuePrinterUtf8EscapingE
+N6google8protobuf8internal27UnknownFieldSetFieldSkipperE
+A
+=
+A
+0
+1
+(
+1
+*
+1
+-
+!
+1
+$
+A
+4
+1
+)
+A
+>
+1
+'
+A
+<
+!
+1
+/
+N6google8protobuf2io14ErrorCollectorE
+>!h
+?"N
+#;
+@&LH
+A':
+QC,A
+TF<)
+VGy#
+KNQ
+M0@
+a\">
+c]$8
+eaFO
+hd=<
+c]^7
+if1R
+kh9F
+gc^A
+okOP
+pm"U
+
+
+
+
+
+
+!
+"
+#
+
+&
+%
+'
+
+$
+(
+-
+#
+)
+,
+.
+!
+"
+*
++
+/
+0
+
+*
+)
++
+(
+,
+5
+
+'
+-
+4
+6
+!
+&
+.
+3
+7
+<
+"
+%
+/
+2
+8
+;
+=
+#
+$
+0
+1
+9
+:
+>
+?
+?
+
+C
+
+!
+(
+0
+)
+"
+
+#
+*
+1
+8
+9
+2
++
+$
+%
+,
+3
+:
+;
+4
+-
+&
+'
+.
+5
+<
+=
+6
+/
+7
+>
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+
+!
+(
+0
+)
+"
+
+#
+*
+1
+2
++
+$
+%
+,
+3
+4
+-
+&
+.
+5
+6
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+
+!
+(
+)
+"
+
+#
+*
++
+$
+%
+,
+-
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+
+!
+"
+#
+$
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+\b(?=\w)
+\b(?<=\w)
+@
+`
+@
+*
++
+,
+-
+7
+8
+9
+:
+D
+E
+F
+G
+Q
+R
+S
+T
+^
+_
+`
+a
+j
+k
+l
+m
+MARK
+ACCEPT
+COMMIT
+F
+FAIL
+PRUNE
+SKIP
+THEN
+alpha
+lower
+upper
+alnum
+ascii
+blank
+cntrl
+digit
+graph
+print
+punct
+space
+word
+xdigit
+:
+;
+<
+=
+>
+?
+@
+\
+]
+^
+_
+`
+
+
+no error
+\ at end of pattern
+\c at end of pattern
+unrecognized character follows \
+numbers out of order in {} quantifier
+number too big in {} quantifier
+missing terminating ] for character class
+invalid escape sequence in character class
+range out of order in character class
+nothing to repeat
+operand of unlimited repeat could match the empty string
+internal error: unexpected repeat
+unrecognized character after (? or (?-
+POSIX named classes are supported only within a class
+missing )
+reference to non-existent subpattern
+erroffset passed as NULL
+unknown option bit(s) set
+missing ) after comment
+parentheses nested too deeply
+regular expression is too large
+failed to get memory
+unmatched parentheses
+internal error: code overflow
+unrecognized character after (?<
+lookbehind assertion is not fixed length
+malformed number or name after (?(
+conditional group contains more than two branches
+assertion expected after (?(
+(?R or (?[+-]digits must be followed by )
+unknown POSIX class name
+POSIX collating elements are not supported
+this version of PCRE is compiled without UTF support
+spare error
+character value in \x{} or \o{} is too large
+invalid condition (?(0)
+\C not allowed in lookbehind assertion
+PCRE does not support \L, \l, \N{name}, \U, or \u
+number after (?C is > 255
+closing ) for (?C expected
+recursive call could loop indefinitely
+unrecognized character after (?P
+syntax error in subpattern name (missing terminator)
+two named subpatterns have the same name
+invalid UTF-8 string
+support for \P, \p, and \X has not been compiled
+malformed \P or \p sequence
+unknown property name after \P or \p
+subpattern name is too long (maximum 32 characters)
+too many named subpatterns (maximum 10000)
+repeated subpattern is too long
+octal value is greater than \377 in 8-bit non-UTF-8 mode
+internal error: overran compiling workspace
+internal error: previously-checked referenced subpattern not found
+DEFINE group contains more than one branch
+repeating a DEFINE group is not allowed
+inconsistent NEWLINE options
+\g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number
+a numbered reference must not be zero
+an argument is not allowed for (*ACCEPT), (*FAIL), or (*COMMIT)
+(*VERB) not recognized or malformed
+number is too big
+subpattern name expected
+digit expected after (?+
+] is an invalid data character in JavaScript compatibility mode
+different names for subpatterns of the same number are not allowed
+(*MARK) must have an argument
+this version of PCRE is not compiled with Unicode property support
+\c must be followed by an ASCII character
+\k is not followed by a braced, angle-bracketed, or quoted name
+internal error: unknown opcode in find_fixedlength()
+\N is not supported in a class
+too many forward references
+disallowed Unicode code point (>= 0xd800 && <= 0xdfff)
+invalid UTF-16 string
+name is too long in (*MARK), (*PRUNE), (*SKIP), or (*THEN)
+character value in \u.... sequence is too large
+invalid UTF-32 string
+setting UTF is disabled by the application
+non-hex character in \x{} (closing brace missing?)
+non-octal character in \o{} (closing brace missing?)
+missing opening brace after \o
+parentheses are too deeply nested
+invalid range in character class
+group name must start with a non-digit
+parentheses are too deeply nested (stack check)
+
+/
+_
+0
+
+(
+)
+>
+~
+x
+&z
+0u
+UUUUUUUUUUUUUUUU0123456789ABCDEF22CJSCallbackFunc_HTMLJS
+0C
+0E
+0C
+0E15CJSCallbackFunc
+11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
+20CRefCountServiceBaseILb1E6CRefMTE
+$
+$
+(
+$
+(
+$
+(
+,
+$
+$
+(
+@
+,
+A
+0
+4
+8
+B
+H
+D
+P
+T
+C
+X
+`
+@
+(
+(
+P
+(
+0
+8
+@
+H
+$
+(
+$
+(
+(
+$
+(
+$
+(
+,
+$
+(
+,
+$
+%
+(
+(
+,
+0
+-
+!
+(
+$
+0
+"
+(
+@
+(
+(
+(
+0
+,
+$
+(
+$
+$
+(
+,
+0
+4
+8
+(
+,
+0
+4
+(
+0
+,
+0
+8
+(
+0
+$
+(
+$
+8
+(
+0
+$
+(
+,
+0
+4
+$
+(
+,
+0
+(
+,
+-
+$
+(
+$
+0
+(
+(
+(
+0
+8
+<
+=
+(
+0
+8
+$
+(
+0
+%
+8
+$
+(
+,
+0
+4
+8
+<
+@
+$
+h
+(
+0
+i
+8
+j
+P
+8
+8
+(
+(
+0
+(
+(
+@
+(
+0
+$
+(
+$
+(
+9CMsgKeyUp
+11CMsgKeyDown
+11CMsgKeyChar
+13CMsgMouseDown
+11CMsgMouseUp
+17CMsgMouseDblClick
+14CMsgMouseWheel
+13CMsgMouseMove
+14CMsgMouseLeave
+17CMsgBrowserCreate
+25CMsgBrowserCreateResponse
+17CMsgBrowserRemove
+46CMsgSetLocalFileRequestMapping_AdditionalRoute
+30CMsgSetLocalFileRequestMapping
+23CMsgBrowserErrorStrings
+15CMsgBrowserSize
+21CMsgBrowserSetMinSize
+19CMsgBrowserPosition
+18CMsgBrowserResized
+11CMsgPostURL
+13CMsgAddHeader
+12CMsgStopLoad
+10CMsgReload
+13CMsgGoForward
+10CMsgGoBack
+13CMsgWasHidden
+16CMsgClearHistory
+24CMsgClearAllBrowsingData
+8CMsgCopy
+9CMsgPaste
+21CMsgExecuteJavaScript
+12CMsgSetFocus
+27CMsgHorizontalScrollBarSize
+35CMsgHorizontalScrollBarSizeResponse
+25CMsgVerticalScrollBarSize
+33CMsgVerticalScrollBarSizeResponse
+8CMsgFind
+12CMsgStopFind
+23CMsgSetHorizontalScroll
+21CMsgSetVerticalScroll
+16CMsgSetZoomLevel
+14CMsgViewSource
+16CMsgBrowserReady
+14CMsgURLChanged
+11CHTMLHeader
+21CHTMLPageSecurityInfo
+19CMsgFinishedRequest
+17CMsgLoadedRequest
+16CMsgPageSecurity
+16CMsgStartRequest
+24CMsgStartRequestResponse
+13CMsgShowPopup
+13CMsgHidePopup
+13CMsgSizePopup
+14CMsgOpenNewTab
+19CMsgPopupHTMLWindow
+27CMsgPopupHTMLWindowResponse
+16CMsgSetHTMLTitle
+19CMsgLoadingResource
+14CMsgStatusText
+13CMsgSetCursor
+18CMsgFileLoadDialog
+26CMsgFileLoadDialogResponse
+15CMsgShowToolTip
+17CMsgUpdateToolTip
+15CMsgHideToolTip
+17CMsgSearchResults
+9CMsgClose
+25CMsgSetSharedPaintBuffers
+25CMsgAckSharedPaintBuffers
+14CMsgNeedsPaint
+19CMsgComboNeedsPaint
+27CMsgNeedsSharedTexturePaint
+27CMsgGameOverlayTexturePaint
+11CMsgGetZoom
+19CMsgGetZoomResponse
+18CMsgLinkAtPosition
+26CMsgLinkAtPositionResponse
+27CMsgZoomToElementAtPosition
+35CMsgZoomToElementAtPositionResponse
+20CMsgScalePageToValue
+27CMsgForcePopupsToDirectHWND
+28CMsgScalePageToValueResponse
+18CMsgSavePageToJPEG
+26CMsgSavePageToJPEGResponse
+11CMsgJSAlert
+13CMsgJSConfirm
+20CMsgJSDialogResponse
+23CMsgCanGoBackAndForward
+16CMsgOpenSteamURL
+13CMsgSetCookie
+22CMsgSetTargetFrameRate
+16CMsgPauseRepaint
+15CMsgFullRepaint
+21CMsgRequestFullScreen
+18CMsgExitFullScreen
+26CMsgToggleFindInPageDialog
+22CMsgSetPIDShuttingDown
+31CMsgDisableBackgroundThrottling
+22CMsgAckPIDShuttingDown
+20CMsgGetCookiesForURL
+7CCookie
+28CMsgGetCookiesForURLResponse
+16CMsgNodeHasFocus
+24CMsgZoomToFocusedElement
+30CMsgCloseFullScreenFlashIfOpen
+35CMsgPauseFullScreenFlashMovieIfOpen
+19CMsgFocusedNodeText
+27CMsgFocusedNodeTextResponse
+11CMsgBuildID
+16CMsgOpenDevTools
+17CMsgCloseDevTools
+14CMsgUnlockH264
+28CMsgScreenInformationChanged
+19CMsgClearAllCookies
+13CMsgScreenDPI
+22CMsgAuthedSteamDomains
+19CMsgSteamAuthNeeded
+23CMsgSteamAuthCookiesSet
+20CMsgJSRegisterMethod
+17CJSMethodArgument
+28CMsgJSValue_JSObjectProperty
+11CMsgJSValue
+16CMsgJSMethodCall
+21CMsgJSExecuteCallback
+21CMsgJSReleaseCallback
+20CMsgJSRaiseException
+20CMsgLoadLocalization
+16CMsgJumpListLink
+18CMSgJumpListMRUApp
+15CMsgSetJumpList
+28CMsgSetGameOverlayTargetPIDs
+30CMsgGameOverlayTargetTextureID
+42CMsgDraggableRegionsChanged_DraggableRects
+27CMsgDraggableRegionsChanged
+21CMsgResizeGripChanged
+21CMsgSetWindowPosition
+14CMsgShowWindow
+14CMsgHideWindow
+22CMsgBringWindowToFront
+23CMsgSetForegroundWindow
+25CMsgMaximizeRestoreWindow
+18CMsgMinimizeWindow
+26CMsgShowBrowserContextMenu
+21CMsgImeSetComposition
+17CMsgImeCommitText
+24CMsgImeCancelComposition
+30CMsgImeCompositionRangeChanged
+18CMsgInspectElement
+13CMsgDisableF5
+17CMsgStartDownload
+N4vgui19AnimatingImagePanelE
+10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
+N4vgui19AnimationControllerE
+25CPanelAnimationDictionary
+7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIPKcN25CPanelAnimationDictionary32PanelAnimationMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorI22PanelAnimationMapEntry10CUtlMemoryIS0_EE
+10CUtlVectorIN4vgui19AnimationController14AnimSequence_tE10CUtlMemoryIS2_EE
+10CUtlVectorIN4vgui19AnimationController13AnimCommand_tE10CUtlMemoryIS2_EE
+10CUtlVectorIN4vgui19AnimationController17ActiveAnimation_tE10CUtlMemoryIS2_EE
+10CUtlVectorIN4vgui19AnimationController15PostedMessage_tE10CUtlMemoryIS2_EE
+S
+e
+l
+e
+c
+t
+i
+o
+n
+:
+%
+s
+e
+l
+e
+c
+t
+i
+o
+n
+_
+n
+a
+m
+e
+%
+/
+%
+s
+e
+l
+e
+c
+t
+i
+o
+n
+_
+c
+l
+a
+s
+s
+%
+C
+o
+n
+t
+a
+i
+n
+e
+r
+:
+%
+c
+o
+n
+t
+a
+i
+n
+e
+r
+%
+%
+f
+i
+l
+e
+%
+P
+l
+e
+a
+s
+e
+c
+l
+i
+c
+k
+o
+n
+a
+v
+g
+u
+i
+p
+a
+n
+e
+l
+t
+o
+m
+a
+k
+e
+a
+s
+e
+l
+e
+c
+t
+i
+o
+n
+17LayoutDebugDialog
+N4vgui12AppRootPanelE
+N
+o
+n
+-
+w
+r
+a
+p
+p
+i
+n
+g
+l
+a
+b
+e
+l
+T
+h
+i
+s
+i
+s
+o
+n
+l
+y
+a
+t
+e
+s
+t
+.
+H
+a
+d
+t
+h
+i
+s
+b
+e
+e
+n
+a
+n
+a
+c
+t
+u
+a
+l
+n
+e
+w
+l
+i
+n
+e
+
+e
+m
+e
+r
+g
+e
+n
+c
+y
+,
+e
+t
+c
+.
+T
+h
+i
+s
+i
+s
+a
+t
+e
+s
+t
+o
+f
+t
+h
+e
+e
+m
+e
+r
+g
+e
+n
+c
+y
+b
+r
+o
+a
+d
+c
+a
+s
+t
+s
+y
+s
+t
+e
+m
+.
+N4vgui20IDebugOverlayPainterE
+N4vgui21IPanelInputForwardingE
+9ZooDialog
+N9ZooDialog15ZooPropertyPageE
+N4vgui17CBitmapImagePanelE
+15CUtlHandleTableIN4vgui10BuildGroupELi20EE
+10CUtlVectorIN15CUtlHandleTableIN4vgui10BuildGroupELi20EE11EntryType_tE10CUtlMemoryIS4_EE
+19CUtlQueueDeprecatedIiE
+N4vgui6ButtonE
+N4vgui11CheckButtonE
+N4vgui15CheckButtonListE
+N4vgui14ComboBoxButtonE
+N4vgui8ComboBoxE
+N4vgui21DirectorySelectDialogE
+17DirectoryTreeView
+21CreateDirectoryDialog
+14CUtlLinkedListIiiE
+N4vgui7DividerE
+N4vgui23CNotificationClickPanelE
+N4vgui13EditablePanelE
+7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIPKcN4vgui13CLayoutRegionEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorIN4vgui11layoutcmd_tE10CUtlMemoryIS1_EE
+10CUtlVectorIs10CUtlMemoryIsEE
+7CUtlMapIjbs8CDefLessIjEE
+10CUtlRBTreeIN7CUtlMapIjbs8CDefLessIjEE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
+*
+N4vgui18FileCompletionEditE
+N4vgui14FileOpenDialogE
+F
+i
+l
+e
+N4vgui18FileCompletionMenuE
+N4vgui18CFileOpenListPanelE
+N4vgui13FocusNavGroupE
+333@N4vgui5FrameE
+N4vgui9GripPanelE
+N4vgui16CaptionGripPanelE
+N4vgui10FrameTitleE
+N4vgui11FrameButtonE
+N4vgui19FrameMinimizeButtonE
+10CUtlVectorIPN4vgui6ButtonE10CUtlMemoryIS2_EE
+N4vgui19FrameMaximizeButtonE
+N4vgui16FrameCloseButtonE
+N4vgui17FrameSystemButtonE
+N4vgui10GraphPanelE
+14CUtlLinkedListIN4vgui10GraphPanel8Sample_tEiE
+10CUtlVectorIf10CUtlMemoryIfEE
+N4vgui11HotKeyEntryE
+N4vgui22HotkeyEntryClearButtonE
+@
+16HTMLComboBoxHost
+N4vgui4HTMLE
+N4vgui4HTML12CHTMLFindBarE
+14IHTMLResponses
+7IHTMLJS
+16CHTMLProtoBufMsgI15CMsgFullRepaintE
+20CHTMLBaseProtoBufMsg
+16CHTMLProtoBufMsgI19CMsgBrowserPositionE
+16CHTMLProtoBufMsgI28CMsgScreenInformationChangedE
+16CHTMLProtoBufMsgI11CMsgPostURLE
+16CHTMLProtoBufMsgI12CMsgStopLoadE
+16CHTMLProtoBufMsgI10CMsgReloadE
+16CHTMLProtoBufMsgI10CMsgGoBackE
+16CHTMLProtoBufMsgI13CMsgGoForwardE
+16CHTMLProtoBufMsgI13CMsgWasHiddenE
+16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
+16CHTMLProtoBufMsgI13CMsgMouseDownE
+16CHTMLProtoBufMsgI11CMsgMouseUpE
+16CHTMLProtoBufMsgI17CMsgMouseDblClickE
+16CHTMLProtoBufMsgI11CMsgKeyCharE
+16CHTMLProtoBufMsgI16CMsgOpenDevToolsE
+16CHTMLProtoBufMsgI11CMsgKeyDownE
+16CHTMLProtoBufMsgI9CMsgKeyUpE
+16CHTMLProtoBufMsgI14CMsgMouseWheelE
+16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
+16CHTMLProtoBufMsgI17CMsgImeCommitTextE
+16CHTMLProtoBufMsgI24CMsgImeCancelCompositionE
+16CHTMLProtoBufMsgI13CMsgScreenDPIE
+16CHTMLProtoBufMsgI15CMsgBrowserSizeE
+16CHTMLProtoBufMsgI13CMsgAddHeaderE
+16CHTMLProtoBufMsgI12CMsgSetFocusE
+16CHTMLProtoBufMsgI13CMsgMouseMoveE
+16CHTMLProtoBufMsgI14CMsgMouseLeaveE
+16CHTMLProtoBufMsgI14CMsgViewSourceE
+16CHTMLProtoBufMsgI8CMsgCopyE
+16CHTMLProtoBufMsgI9CMsgPasteE
+16CHTMLProtoBufMsgI18CMsgInspectElementE
+16CHTMLProtoBufMsgI26CMsgFileLoadDialogResponseE
+16CHTMLProtoBufMsgI8CMsgFindE
+16CHTMLProtoBufMsgI12CMsgStopFindE
+16CHTMLProtoBufMsgI23CMsgBrowserErrorStringsE
+16CHTMLProtoBufMsgI16CMsgPauseRepaintE
+16CHTMLProtoBufMsgI24CMsgStartRequestResponseE
+16CHTMLProtoBufMsgI13CMsgHidePopupE
+16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
+16CHTMLProtoBufMsgI18CMsgLinkAtPositionE
+16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
+16CHTMLProtoBufMsgI18CMsgExitFullScreenE
+16CHTMLProtoBufMsgI30CMsgSetLocalFileRequestMappingE
+16CHTMLProtoBufMsgI21CMsgJSExecuteCallbackE
+16CHTMLProtoBufMsgI21CMsgJSReleaseCallbackE
+16CHTMLProtoBufMsgI20CMsgJSRaiseExceptionE
+N4vgui9HTMLPopupE
+N4vgui9HTMLPopup9PopupHTMLE
+N4vgui5ImageE
+N4vgui11CStyleImageE
+N4vgui9ImageListE
+10BlankImage
+N4vgui10ImagePanelE
+N4vgui18ThrobberImagePanelE
+%
+i
+%
+l
+s
+N4vgui9CIMEPanelE
+N4vgui11InputDialogE
+N4vgui5LabelE
+10CUtlVectorIN4vgui5Label10TImageInfoE10CUtlMemoryIS2_EE
+N4vgui17ListPanelCheckBoxE
+N4vgui18CTypingJumpHandler17ITypingJumpClientE
+N4vgui17ListPanelInteriorE
+27ListPanelColumnSelectButton
+N4vgui22ListPanelSectionHeaderE
+N4vgui25ListPanelSectionCollapserE
+14CUtlLinkedListIN4vgui9ListPanel8column_tEhE
+14CUtlLinkedListIPN4vgui13ListPanelItemEiE
+14CUtlLinkedListIP8CUtlDictIb22CDefCaselessStringLessiEiE
+10CUtlVectorIN4vgui9ListPanel9section_tE10CUtlMemoryIS2_EE
+10CUtlVectorIh10CUtlMemoryIhEE
+7CUtlMapIPKcbi22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIPKcbi22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorIPN4vgui8URLLabelE10CUtlMemoryIS2_EE
+N4vgui21ListPanelColumnHeaderE
+N4vgui13ListPanelItemE
+16ListPanelDragger
+N4vgui9ListPanelE
+N4vgui22ListPanelCollapserBaseE
+N4vgui13ListViewPanelE
+N4vgui12ListViewItemE
+14CUtlLinkedListIPN4vgui12ListViewItemEiE
+N4vgui4MenuE
+N4vgui13MenuSeparatorE
+14CUtlLinkedListIPN4vgui8MenuItemEiE
+10CUtlVectorIPN4vgui13MenuSeparatorE10CUtlMemoryIS2_EE
+N4vgui7MenuBarE
+10CUtlVectorIPN4vgui10MenuButtonE10CUtlMemoryIS2_EE
+N4vgui10MenuButtonE
+N4vgui8MenuItemE
+N4vgui18MenuItemCheckImageE
+N4vgui10MessageBoxE
+%
+s
+%
+S
+[
+%
+i
+]
+N4vgui5PanelE
+14CFloatProperty
+N4vgui32IPanelAnimationPropertyConverterE
+26CProportionalFloatProperty
+12CIntProperty
+24CProportionalIntProperty
+14CColorProperty
+13CBoolProperty
+15CStringProperty
+14CHFontProperty
+18CTextureIdProperty
+10CUtlVectorIP9KeyValues10CUtlMemoryIS1_EE
+10CUtlVectorIN4vgui7PHandleE10CUtlMemoryIS1_EE
+26CPanelMessageMapDictionary
+7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIPKcN26CPanelMessageMapDictionary30PanelMessageMapDictionaryEntryEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorIN4vgui16MessageMapItem_tE10CUtlMemoryIS1_EE
+10CUtlVectorIm10CUtlMemoryImEE
+N4vgui11ProgressBarE
+N4vgui14PropertyDialogE
+N4vgui12PropertyPageE
+N4vgui13PropertySheetE
+N4vgui7PageTabE
+N4vgui12ContextLabelE
+N4vgui14TabCloseButtonE
+N4vgui13PageDragFrameE
+N4vgui13PageDragPanelE
+10CUtlVectorIN4vgui13PropertySheet6Page_tE10CUtlMemoryIS2_EE
+N4vgui8QueryBoxE
+N4vgui11RadioButtonE
+@@
+<
+b
+>
+<
+/
+b
+>
+<
+s
+t
+r
+o
+n
+g
+>
+<
+/
+s
+t
+r
+o
+n
+g
+>
+<
+i
+>
+<
+/
+i
+>
+<
+e
+m
+>
+<
+/
+e
+m
+>
+N4vgui8RichTextE
+N4vgui16RichTextInteriorE
+N4vgui10ClickPanelE
+N4vgui15CFontWidthCacheE
+11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS2_E28HashFunctorUnpaddedStructureIS2_EE
+10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_EE12HashBucket_tE10CUtlMemoryIS9_EE
+10CUtlVectorIw10CUtlMemoryIwEE
+10CUtlVectorIN4vgui8RichText13TFormatStreamE10CUtlMemoryIS2_EE
+10CUtlVectorIN4vgui8RichText11LineBreak_tE10CUtlMemoryIS2_EE
+10CUtlVectorIPN4vgui10ClickPanelE10CUtlMemoryIS2_EE
+7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIPKcN4vgui13StyleHandle_tEi22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+N4vgui9ScrollBarE
+N12_GLOBAL__N_115ScrollBarButtonE
+N4vgui6SliderE
+@
+.
+.
+.
+E
+N
+N4vgui9TextEntryE
+"
+"
+"
+"
+10CHintLabel
+N4vgui20TextEntryClearButtonE
+N4vgui9TextImageE
+10CUtlVectorIPw10CUtlMemoryIS0_EE
+10CUtlVectorIN4vgui9TextImage22PerLineTrncationData_tE10CUtlMemoryIS2_EE
+N4vgui12ToggleButtonE
+N4vgui7TooltipE
+N4vgui13TooltipWindowE
+N4vgui10ToolWindowE
+N4vgui9ToolPanelE
+N4vgui18IToolWindowFactoryE
+N4vgui8TreeNodeE
+N4vgui8TreeViewE
+N4vgui13TreeNodeImageE
+N4vgui12TreeNodeTextE
+N4vgui16TreeViewSubPanelE
+10CUtlVectorIPN4vgui8TreeNodeE10CUtlMemoryIS2_EE
+14CUtlLinkedListIP10CUtlRBTreeIPvi8CDefLessIS1_E25CDefRBTreeBalanceListenerIiES1_EiE
+14CUtlLinkedListIPN4vgui8TreeNodeEiE
+19CUtlQueueDeprecatedIP10CUtlRBTreeIPvi8CDefLessIS1_E25CDefRBTreeBalanceListenerIiES1_EE
+N4vgui20CTreeViewListControlE
+N4vgui18CTypingJumpHandlerE
+N4vgui8URLLabelE
+N4vgui9WrapPanelE
+7CUtlMapIiPN4vgui5PanelEi8CDefLessIiEE
+10CUtlRBTreeIN7CUtlMapIiPN4vgui5PanelEi8CDefLessIiEE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEiE
+_
+convar_
+14ConCommandBase
+6ConVar
+11CDirWatcher
+19CDirContentsWatcher
+11CPathString
+14CUtlLinkedListI10CUtlStringiE
+7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessIS0_EE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringN19CDirContentsWatcher13FileWatchDataEi8CDefLessIS1_EE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+t
+r
+u
+e
+f
+a
+l
+s
+e
+%
+f
+%
+d
+%
+l
+l
+u
+%
+l
+l
+d
+21CUtlCStringConversion
+18CUtlCharConversion
+19CUtlNoEscConversion
+14CUtlMemoryBase
+NSt3__115basic_stringbufIwNS_11char_traitsIwEENS_9allocatorIwEEEE
+-friendsui
+-nofriendsui
+-no-browser
+unconditionally disables CEF
+Assertion Failed: GetCPUInformation().m_bSSE2
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
+GetBootstrapperVersion
+Assertion Failed: !bSuccess || bufOutput.TellPut() == width*height*3
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/imageloadwrapper.cpp
+Assertion Failed: !bSuccess || bufOutput.TellPut() == width*height*4
+Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+Assertion Failed: (elem == Count()) || IsValidIndex(elem)
+Assertion Failed: row_stride_out >= row_stride
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader.cpp
+Assertion Failed: row_stride == (int)( nImageWidth * jpegInfo.output_components )
+Assertion Failed: nImageHeight == nOutputHeight
+BResizeImageRGBA
+Assertion Failed: pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 4) || pDest > pSrc + (srcWidth * srcHeight * 3)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
+Assertion Failed: pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 3) || pDest > pSrc + (srcWidth * srcHeight * 4)
+Assertion Failed: nWidth >= 0 && nHeight >= 0
+Assertion Failed: bufRGB.TellPut() == nWidth*nHeight*3
+Assertion Failed: bufRGBA.TellPut() == nWidth*nHeight * 4
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
+Assertion Failed: m_pvOrigNameAddress
+Assertion Failed: m_pParent
+log_files_always_flush
+0
+%s
+Steam
+en_US
+HOME
+r
+%s/%s
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+com.valvesoftware.steam.ipctool
+ipcserver restart: expected: %d, got: %d
+StopJob
+Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+1.5.26
+PNG load error %s
+PNG load warning %s
+[S_API FAIL] SteamAPI_Init() failed; steam path (%s) missing directory separator
+[S_API FAIL] SteamAPI_Init() failed; steam found, but process is dead.
+[S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
+[S_API FAIL] SteamAPI_Init() failed; ipcserver GetSteamPath failed.
+CLIENTENGINE_INTERFACE_VERSION005
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
+ClientAPI_Init(GlobalInstance): GetIClientUser returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUserStats returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientRemoteStorage returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientScreenshots returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameCoordinator returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientAppManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientConfigStore returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientHTTP returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientAudio returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMusic returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameStats returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUnifiedMessages returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientController returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientParentalSettings returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientDeviceAuth returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientRemoteClientManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUGC returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientStreamClient returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientShortcuts returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientVR returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientHTMLSurface returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientVideo returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameNotifications returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
+ClientAPI_Init: InternalAPI_Init_Internal failed.
+ClientAPI_Init(GlobalInstance): GetIClientRemotePlay returned NULL.
+ClientAPI_RunCallbacks
+CreateInterface
+CParentalCache::OnParentalLockChangeBegin
+BroadcastLiveBanner
+LiveImage
+DebugLine
+MicrophoneImage
+videosendkbps
+videosendfps
+numviewers
+numrequests
+resource/layout/broadcast_livebanner.layout
+RequestsText
+RequestsImage
+ViewersText
+ViewersImage
+DebugText
+LiveBannerStyleNormal
+LiveBannerStyleDesktop
+NotificationClickPanel
+graphics/broadcast/icon_mic_disabled
+graphics/broadcast/icon_mic_off
+graphics/broadcast/icon_mic_on
+DebugLineStyleGreen
+DebugLineStyleYellow
+DebugLineStyleRed
+graphics/broadcast/broadcast_live_red
+graphics/broadcast/broadcast_live_grey
+open
+steam://settings/broadcast
+CBroadcastLiveBanner
+vgui::EditablePanel
+OverlayHidden
+OverlayShown
+CBroadcastLiveBanner::OnBroadcastSettingsLoaded
+CBroadcastLiveBanner::OnBroadcastMicrophoneStatus
+CBroadcastLiveBanner::OnBroadcastUploadStatus
+CBroadcastLiveBanner::OnBroadcastStatus
+CNotificationClickPanel
+Panel
+EditablePanel
+graphics/avatarBorderOffline
+graphics/avatarBorderOnline
+graphics/avatarBorderInGame
+graphics/avatarBorderGolden
+Friends.InGameColor
+Friends.OnlineColor
+Friends.OfflineColor
+Friends.GoldenColor
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/FriendsImageManager.cpp
+common/name
+Invalid image panel position %d %d
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/Image.h
+Invalid image panel size %d %d
+m_mapSteamImageToRGBAImage
+m_Tree
+m_Elements
+economy/emoticon/%s
+/inventory/#
+/inventory#
+id/
+profiles/
+%llu
+%u_%llu_%llu
+%seconomy/%s/%u/%llu/%llu/?l=%s&o=%llu
+%seconomy/%s/%u/%llu/%llu/?l=%s&o_url=%s
+%seconomy/%s/%u/%llu/%llu/?l=%s
+item
+/emoticon/
+/emoticonhover/
+?client=1&l=%s
+itemhover
+m_vecChatImages
+m_dictURLToImageID
+m_vecChatImagesToInsert
+m_vecImageDownloadQueue
+m_strBaseURL
+m_strLanguage
+InsertString
+string
+EmoticonMenuItemStyle
+economy/emoticonhover/%s?client=1&l=%s
+Assertion Failed: !pszString || pszString[nChars] == '\0'
+Menu
+MenuButton
+ToggleButton
+Button
+Label
+CEmoticonButton
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
+m_Memory
+CUtlDict
+RefreshLoginDialog
+#Steam_RefreshLogin_Title
+ErrorInfoLabel
+UserNameEdit
+PasswordEdit
+TwoFactorEdit
+TwoFactorLabel
+#Steam_Twofactor_Code
+SavePasswordCheck
+LoginButton
+Login
+public/RefreshLoginDialog.res
+#Steam_AccountAlreadyLoggedInNeedPassword
+#Steam_AccountAlreadyLoggedInNeedShutdown
+#Steam_RefreshEnterTwoFactorCode
+#Steam_RefreshLogin_RateLimited
+#Steam_RefreshLogin_InvalidPassword
+OnLogonFailure: %u
+#Steam_Login_NeedTwoFactorTitle
+#Steam_ErrorLoginNeedTwoFactor
+#Steam_Login_TwoFactorErrorTitle
+#Steam_ErrorLoginBadTwoFactor
+#Steam_Login_ErrorTitle
+#Steam_ErrorLoginFailed
+Quit
+CRefreshLoginDialog
+vgui::Frame
+CRefreshLoginDialog::OnLogonSuccess
+CRefreshLoginDialog::OnLogonFailure
+Frame
+#Steam_Settings_Broadcast_Disabled
+#Steam_Settings_Broadcast_FriendsApprove
+#Steam_Settings_Broadcast_FriendsAllowed
+#Steam_Settings_Broadcast_FriendsPublic
+#Steam_Settings_Broadcast_Bitrate3500
+#Steam_Settings_Broadcast_Bitrate3000
+#Steam_Settings_Broadcast_Bitrate2500
+#Steam_Settings_Broadcast_Bitrate2000
+#Steam_Settings_Broadcast_Bitrate1500
+#Steam_Settings_Broadcast_Bitrate1000
+#Steam_Settings_Broadcast_Bitrate750
+#Steam_Settings_Broadcast_1080p
+1920x1080
+#Steam_Settings_Broadcast_720p
+1280x720
+#Steam_Settings_Broadcast_480p
+854x480
+#Steam_Settings_Broadcast_360p
+640x360
+#Steam_Settings_Broadcast_EncoderQuality
+#Steam_Settings_Broadcast_EncoderPerformance
+#Steam_Settings_Broadcast_ShowChat_Off
+#Steam_Settings_Broadcast_ShowChat_LeftTop
+#Steam_Settings_Broadcast_ShowChat_RightTop
+#Steam_Settings_Broadcast_ShowChat_RightBottom
+#Steam_Settings_Broadcast_ShowChat_LeftBottom
+SettingsSubBroadcast
+BroadcastStatus
+#Steam_Settings_Broadcast_StatusNotBroadcast
+steam://url/SteamIDBroadcastPage/%llu
+BroadcastDisabledSupportURL
+Permissions
+value
+BitrateLimit
+Dimensions
+EncoderSetting
+IncludeDesktop
+#Steam_Settings_Broadcast_IncludeDesktop
+RecordSystemAudio
+#Steam_Settings_Broadcast_RecordSystemAudio
+RecordMic
+#Steam_Settings_Broadcast_RecordMic
+ShowDebugInfo
+#Steam_Settings_Broadcast_ShowDebugInfo
+ShowReminder
+#Steam_Settings_Broadcast_ShowReminderBanner
+ShowChatCombo
+resource/layout/settingssubbroadcast.layout
+HideWhenDisabled
+#Steam_Settings_Broadcast_StatusBroadcast
+ShowWhenDisabled
+HideWhenUnavailable
+BroadcastDisabledLabel
+#Steam_Settings_Broadcast_Disabled_System
+#Steam_Settings_Broadcast_Disabled_Overlay
+#Steam_Settings_Broadcast_Disabled_User
+%dx%d
+FirstTimeComplete
+MaxKbps
+OutputWidth
+OutputHeight
+ShowChat
+CSettingsSubBroadcast
+vgui::PropertyPage
+CSettingsSubBroadcast::OnBroadcastStatus
+TextChanged
+PropertyPage
+Page
+PropertyPageControls
+SettingsSubBrowser
+OverlayHomePage
+ClientBrowserAuthHomePage
+#Steam_ClientBrowserAuth_AllowBrowserAuth
+resource/layout/subpaneloptionsbrowser.layout
+GameOverlayHomePage
+https://www.google.com
+about:blank
+GameOverlaySettingsChanged
+ClearWebCache
+#Steam_Settings_Browser_ClearWebCacheTitle
+#Steam_Settings_Browser_ClearWebCacheMsg
+Command
+command
+ReallyClearWebCache
+ClearCookies
+#Steam_Settings_Browser_DeleteTitle
+#Steam_Settings_Browser_DeleteMsg
+ReallyClearCookies
+CSettingsSubBrowser
+Software\Valve\Steam\ClientBrowserAuth
+JoinGameNotifyCheck
+Notifications_ShowIngame
+JoinGamePlaySoundCheck
+Sounds_PlayIngame
+FriendOnlineNotifyCheck
+Notifications_ShowOnline
+FriendOnlinePlaySoundCheck
+Sounds_PlayOnline
+ReceiveMessageNotifyCheck
+Notifications_ShowMessage
+ReceiveMessagePlaySoundCheck
+Sounds_PlayMessage
+AutoSignIntoFriendsCheck
+AutoSignIntoFriends
+ShowTimeInChatLogCheck
+HighVisibilityMode
+HighVisibilityModeVR
+AlwaysNewChatCheck
+AlwaysNewChatWindow
+EventsAndAnnouncementsNotifyCheck
+Notifications_EventsAndAnnouncements
+EventsAndAnnouncementsPlaySoundCheck
+Sounds_EventsAndAnnouncements
+HighVisibilityModeScale
+HighVisibilityModeVRScale
+FlashModeAlways
+Always
+FlashModeMinimized
+Minimized
+FlashModeNever
+Never
+ImageAvatar
+ImageAvatarOverlay
+URLLabel2
+steam/cached/SettingsSubFriends.res
+NameEntry
+ChatFlashMode
+Assertion Failed: !m_callbackSetPersonaNameResponse.IsActive()
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/SettingsSubFriends.cpp
+#Friends_NameTooShort_Title
+#Friends_NameTooShort_Info
+#Friends_NameChangeFailed_Info
+#Friends_NameChangeThrottled_Info
+#Friends_NameChangeFailed_Title
+CSettingsSubFriends
+CSettingsSubFriends::OnPersonaStateChange
+EnableOverlayCheck
+HotKeySelector
+ScreenshotHotKeySelector
+ScreenshotLabel
+ScreenshotNotifyCheck
+ScreenshotPlaySoundCheck
+ScreenshotSaveUncompressedCheck
+SetScreenshotFolderButton
+ShowIngameFPSCornerCombo
+ShowIngameFPSContrastCheck
+PingRateCombo
+PingRate
+%d
+resource/layout/subpaneloptionsingame.layout
+Software\Valve\Steam\Rate
+values
+PingsPerMin
+Steam_ServerBrowserPingRateDefault
+Software\Valve\Steam\MaxServerBrowserPingsPerMin
+EnableGameOverlay
+EnableSCTenFootOverlayCheckNew
+DisableLaunchInVR
+InGameOverlayShortcutKey
+InGameOverlayScreenshotHotKey
+InGameOverlayScreenshotNotification
+InGameOverlayScreenshotPlaySound
+InGameOverlayScreenshotSaveUncompressed
+InGameOverlayShowFPSCorner
+InGameOverlayShowFPSContrast
+InGameOverlayScreenshotSaveUncompressedPath
+#Overlay_SetScreenshotFolder_InvalidFolder
+#Overlay_SetScreenshotFolder_NoDriveRoot
+SetScreenshotFolder
+#Overlay_SetScreenshotFolder
+Screenshots
+CSettingsSubInGame
+DirectorySelected
+dir
+LibraryList
+AddLibraryButton
+RemoveLibraryButton
+StartCrawlingButton
+ResetDatabaseButton
+DatabaseInfoLabel
+DatabaseCrawlAtStartup
+DatabaseCrawlSteamInstallFolders
+VolumeSlider
+PauseMusicWhenStartingApplicationCheckbox
+PauseMusicWhenVoiceChatCheckbox
+LoggingCrawlingCheckbox
+AdditionalFilesHighQualityCheckbox
+NotificationPlaylistNowPlayingCheckbox
+EnableMediaKeysCheckbox
+resource/layout/settingssubmusic.layout
+directory
+Entry
+#Music_Settings_Database_BuildingMusicLibrary
+albumcount
+trackcount
+#Music_Settings_Database_NoAlbum
+#Music_Settings_Database_OneAlbum
+#Music_Settings_Database_XAlbumsWithYTracks
+Music\MusicVolume
+#Music_Settings_Database_StopCrawling
+#Music_Settings_Library_StartCrawling
+Music\CrawlAtStartup
+Music\CrawlSteamInstallFolders
+Music\PauseOnAppStartedProcess
+Music\PauseOnVoiceChat
+Music\LogCrawling
+Music\DownloadHighQualityAudioSoundtracks
+Music\PlaylistNowPlayingNotification
+Music\EnableMediaKeys
+AddEntryToLibraryAction
+RemoveSelectedEntryFromLibraryAction
+ResetDatabaseAction
+ReallyResetDatabase
+StartCrawlingAction
+#Music_Settings__SelectDirectory_Title
+#Music_Settings_ResetDatabase_Title
+#Music_Settings_ResetDatabase_Text
+CSettingsSubMusic
+SliderMoved
+position
+CSettingsSubMusic::OnVolumeHasChanged
+CSettingsSubMusic::OnLocalLibraryCrawlingWillStart
+CSettingsSubMusic::OnLocalLibraryCrawlingInterrupted
+CSettingsSubMusic::OnLocalLibraryCrawlingFinished
+CSettingsSubMusic::OnLocalLibraryDatabaseHasBeenReset
+SettingsSubVoice
+MicMeter
+MicMeter2
+SpeakerLabel
+#Friends_Voice_Speaker_Volume
+SpeakerVolume
+MicrophoneLabel
+#Friends_Voice_Microphone_Volume
+MicrophoneVolume
+MicBoost
+#Friends_Voice_BoostMicrophone
+TestMicrophone
+#Friends_Voice_TestMicrophone
+ReinitAudio
+#Friends_Voice_ReinitAudio
+ChangeDeviceButton
+#Friends_Voice_ChangeDevice
+ChangeDevice
+PushToTalkKeyEntry
+TransmitMethodRadioButton1
+TransmitMethodRadioButton2
+TransmitMethodRadioButton3
+steam/cached/SettingsSubVoice.res
+VoiceReceiveVolume
+DeviceName
+#Friends_Voice_NoDeviceDetected
+pushtotalk
+PushToTalkKeyLabel
+#Friends_Voice_StopTestMicrophone
+CSettingsSubVoice::OnThink()
+Lost Voice calibration, resetting
+CSettingsSubVoice
+CheckButtonChecked
+state
+RadioButtonChecked
+CSettingsSubVoice::OnVoiceInputDeviceChanged
+SoundSystemSelect
+SoundOptions
+#Friends_NoSoundSystems
+name
+#Friends_SoundSystemName
+System
+steam/cached/soundsystemselect.res
+CSoundSystemSelect
+Set
+ResetData
+RequestSupportSystemReport
+HelpFrontPage
+
+vdf
+zipped_content_base64
+data:text/html
+ParentalBlocked
+steambrowserredirect
+/
++
+%2B
+StoreFrontPage
+steamparental
+CommunityFrontPage
+htmlpopupchild
+CSteamAuthedHTML
+vgui::HTML
+CSteamAuthedHTML::OnParentalWebTokenChanged
+Assertion Failed: m_iRefs > 0 && m_iRefs < 0x1000000
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/refcount.h
+Assertion Failed: nBytes
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+CSteamAuthedHTMLPopup
+vgui::HTMLPopup
+HTML
+m_CustomURLHandlers
+m_sCurrentURL
+m_sLastSearchString
+m_sDragURL
+m_sPendingURLLoad
+m_sPendingPostData
+m_vecHCursor
+m_vecStyleChangedCallbacks
+m_DirWatcherClient
+CIMEPanel
+HTMLPopup
+Assertion Failed: m_iRefs >= 0 && m_iRefs < 0x0ffffff
+Assertion Failed: m_pObj == NULL
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+Assertion Failed: IsValidIndex( elem )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
+Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
+m_mapAPICalls
+%s requires %d arguments; only %d given
+%s call had invalid argument (arg %d)
+#steam_tradedialog_title
+-dev
+steam://close
+steam/cached/tradedialog.layout
+url
+CTradeDialog
+OnSetHTMLTitle
+title
+OnCloseWindow
+CustomURL
+vars
+urls
+method
+filter
+external
+trade
+^
+\%p1\%
+.+
+\%p2\%
+http\:
+https?\:
+%%p%d%%
+%store%
+Assertion Failed: strURL != "%store%"
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/urlmanager.cpp
+m_dictURLs
+m_pkvVars
+m_dictURLs[i].m_sURL
+m_vecAllWGAuthedURLs
+m_vecAllWGAuthedURLs[i]
+LauncherFrontPage
+Chat
+steam://
+steambeta://
+checkout_return
+paypal_success
+try { OnPayPalSuccess( %llu ); } catch (e) {}
+paypal_cancel
+try { OnPayPalCancel( %llu ); } catch (e) {}
+clickandbuy_success
+'
+try { OnClickAndBuySuccess( '%s', '%s', '%s', '%s' ); } catch(e) {}
+clickandbuy_cancel
+try { OnClickAndBuyCancel(); } catch(e) {}
+Assertion Failed: 0
+LoadTGA: Only type 2 and 10 targa RGB images supported
+Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
+-community
+Set the community URL
+/usr/bin/open
+http://
+https://
+https://%s.valve.org/community/
+https://beta.steamcommunity.com/
+https://community.csgo.com.cn/
+https://steamcommunity.com/
+https://steam-chat.com/
+https://%s.valve.org/help/
+https://help.beta.steampowered.com/
+https://help.steampowered.com/
+%s/
+https://steamcommunity-a.akamaihd.net/
+://
+VRModeBegin
+VRModeEnd with no matching begin.
+VRModeEnd after %d seconds
+Ending VR Mode because the game exited
+OpenVRSessionDetails
+GameAppID
+UserIpd
+ModelNumberID
+SerialNumber
+Unable to add OpenVRSessionDetails row: %s
+%s/filesystem_%s
+steam
+stdio
+%s/vgui2_s
+%s/chromehtml
+VGUI_Setup001
+BroadcastFirstTimeDialog
+Assertion Failed: pFriendsUI
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/broadcast_firsttime.cpp
+#Broadcast_FirstTime_Title
+PermissionDisabled
+PermissionAccept
+PermissionFriends
+PermissionPublic
+NextButton
+ConfigurationLink
+resource/layout/broadcast_firsttime.layout
+intro
+ContinuePressed
+ViewerAvatar
+friend
+gamename
+activating
+complete
+CBroadcastFirstTimeDialog
+steamtrack:///
+%d:%02d
+%d:%02d:%02d
+CMusicLibraryPanel
+#Music_Library_WindowTitle
+MusicPage_Details_Content
+library_search
+library_music_menu
+music_nav_menu
+MusicNavMenuAlbums
+#Music_Nav_Menu_Albums
+SetMusicNavDisplayMode
+nMode
+MusicNavMenuArtists
+#Music_Nav_Menu_Artists
+MusicNavMenuPlaylists
+#Music_Nav_Menu_Playlists
+library_music_add_button
+AddMusicButtonPressed
+library_music_player_icon
+PlayerMusicButtonPressed
+resource/layout/musiclibrarypanel.layout
+music/CMusicLibraryPanel
+musicnavdisplaymodelibrary
+music_add_button
+OpenOverlayMusicPlayerPanel
+steam://open/musicplayer
+TextEscape
+AlbumTitleLabel
+Album
+ArtistLabel
+Artist
+TracksInfoLabel
+CoverImage
+PlayTracksButton
+#Music_Album_Details_PlayTracks
+AddTracksToQueueButton
+#Music_Album_Details_AddTracksToQueue
+AddTracksToPlaylistButton
+#Music_Album_Details_AddTracksToPlaylist
+PlayAlbumButton
+#Music_Album_Details_Play
+AddAlbumToQueueButton
+#Music_Album_Details_AddToQueue
+AddAlbumToPlaylistButton
+#Music_Album_Details_AddToPlaylist
+ShowAlbumButton
+#Music_Album_Details_ShowAlbum
+resource/layout/musicpage_details_album.layout
+AlbumID
+TrackCount
+DiscNumber
+MultipleArtist
+AlbumName
+ArtistName
+%s (%d)
+#Music_Album_Details_NoTracks
+graphics/music_placeholder_album0.png
+MusicPageDetailsTrack
+TrackStyle
+#Music_Album_Details_OneTrack
+tracksduration
+#Music_Album_Details_MultipleTracks
+trackscount
+graphics/music_placeholder_album%d.png
+MusicPlaylistCreateMenu
+CreatePlaylistBasedOnArtistTracks
+nAlbumID
+pchArtistName
+Music_ArtistTracks_Details_Menu_CreatePlaylist
+#Music_ArtistTracks_Details_Menu_CreatePlaylist
+AlbumPlayAction
+AlbumPlayNextAction
+AlbumAddToQueueAction
+AlbumAddToPlaylistAction
+AlbumShowAlbumInSystemAction
+AlbumPlayTracksAction
+AlbumPlayTracksNextAction
+AlbumAddTracksToQueueAction
+AlbumAddTracksToPlaylistAction
+AlbumShowAction
+ShowMusicPlayerIfWanted
+CMusicPage_Details_Album
+m_strAlbum
+m_strArtist
+m_strArtistFilter
+m_vecTracks
+PositionLabel
+TrackLabel
+resource/layout/musicpage_details_playlistitem.layout
+CTrackItemPanel
+m_strArtistname
+m_strTrackKey
+MusicListContextMenu
+Music_Track_Menu_Play_Subsequent
+#Music_Menu_Play
+PlayTrack
+nTrackIndex
+nSubsequent
+Music_Track_Menu_AddToQueue
+#Music_Track_Menu_AddToQueue
+TrackAddToQueue
+#Music_Track_Menu_AddToPlaylist
+Music_Track_Menu_ShowAlbumInUI
+#Music_Track_Menu_ShowAlbumInUI
+ShowAlbumInUI
+PlayTrackNext
+ShowAlbumInSystem
+CMusicPage_Details_Album::OnAlbumCoverLoaded
+CMusicPage_Details_Album::OnTrackListDataEntryForAlbumID
+CTrackLabel
+vgui::Label
+SortName
+Position
+BackgroundImageA
+BackgroundImageB
+BackgroundImageMask
+AlbumList
+ArtistList
+PlaylistList
+EmptyDatabaseText
+CrawlingText
+resource/layout/musicpage_details_content.layout
+graphics/music_details_mask.png
+AlbumOrArtistListStyle
+#Music_Column
+#Music_NoMusicOfThisAlbum
+#Music_NoMusicOfThisArtist
+#Music_NoMusicOfThisPlaylist
+#Music_NoLibrary_Text
+#Music_Crawling_Text
+CMusicPage_Details_Content
+m_strFilter
+m_strCurrentlySelectedArtist
+m_vecAlbumPanels
+m_vecPlaylistPanels
+m_vecPlaylistCache
+CMusicPage_Details_Content::UpdateDetailsData
+ItemSelected
+panel
+PlaylistID
+PlaylistName
+Tag
+TotalTime
+PlayCount
+LastPlayedTime
+CMusicPage_Details::OnItemSelected
+MusicPageDetailsAlbum
+AlbumCount
+MusicPageDetailsPlaylist
+Music_Album_Details_Menu_Play
+#Music_Album_Details_Menu_Play
+PlayAlbum
+Music_Album_Details_Menu_AddToQueue
+#Music_Album_Details_Menu_AddToQueue
+AddAlbumToQueue
+#Music_Album_Details_Menu_AddToPlaylist
+Music_Artist_Details_Menu_Play
+#Music_Artist_Details_Menu_Play
+PlayArtist
+Music_Artist_Details_Menu_AddToQueue
+#Music_Artist_Details_Menu_AddToQueue
+AddArtistToQueue
+#Music_Artist_Details_Menu_AddToPlaylist
+Music_Playlist_Details_Menu_Play
+#Music_Playlist_Details_Menu_Play
+PlayPlaylist
+nPlaylistID
+Music_Playlist_Details_Menu_AddToQueue
+#Music_Playlist_Details_Menu_AddToQueue
+AddPlaylistToQueue
+MusicPlaylistMoveMenu
+Music_Playlist_Details_Menu_MoveBegin
+#Music_Playlist_Details_Menu_MoveBegin
+MovePlaylistUp
+nPosition
+nStep
+Music_Playlist_Details_Menu_MoveUp
+#Music_Playlist_Details_Menu_MoveUp
+#Music_Playlist_Details_Menu_MoveDown
+MovePlaylistDown
+Music_Playlist_Details_Menu_MoveEnd
+#Music_Playlist_Details_Menu_MoveEnd
+#Music_Playlist_Details_Menu_Move
+Music_Playlist_Details_Menu_Rename
+#Music_Playlist_Details_Menu_Rename
+RenamePlaylist
+Music_Playlist_Details_Menu_Delete
+#Music_Playlist_Details_Menu_Delete
+DeletePlaylist
+Music_Playlist_Details_Menu_Duplicate
+#Music_Playlist_Details_Menu_Duplicate
+CreatePlaylistBasedOnPlaylist
+nSourcePlaylistID
+Music_Playlist_Details_Menu_Add
+#Music_Playlist_Details_Menu_Add
+AddPlaylist
+steam://settings/music
+#Music_Playlist_RenameDialog_Title
+#Music_Playlist_RenameDialog_Prompt
+playlistname
+ContextValues
+ItemID
+#Music_Playlist_DeleteDialog_Title
+#Music_Playlist_DeleteDialog_Prompt
+ReallyDeletePlaylist
+#Music_Playlist_Defaultname
+#Music_Playlist_AddDialog_Title
+#Music_Playlist_AddDialog_Prompt
+text
+Unknown command: %s %s
+OnInputCompleted
+Music_Album_Details_Menu_CreatePlaylist
+#Music_Album_Details_Menu_CreatePlaylist
+CreatePlaylistBasedOnAlbum
+Playlist
+AddAlbumToPlaylist
+Music_Artist_Details_Menu_CreatePlaylist
+#Music_Artist_Details_Menu_CreatePlaylist
+CreatePlaylistBasedOnArtist
+AddArtistToPlaylist
+AddArtistTracksToPlaylist
+Music_Track_Menu_CreatePlaylist
+#Music_Track_Menu_CreatePlaylist
+CreatePlaylistBasedOnTrack
+pchTrackKey
+AddTrackToPlaylist
+AddPlaylistToPlaylist
+alpha
+graphics/music_background_%d.png
+Buffer to ApplyHeaderImage is incorrect size given passed width/height
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/musicpage_details_content.cpp
+PlayAlbumNext
+PlayArtistNext
+SetDisplayMode
+PlayPlaylistNext
+AddRandomTracks
+OpenContextMenu
+InputCanceled
+InputCompleted
+CMusicPage_Details_Content::OnArtistListDataEntry
+CMusicPage_Details_Content::OnAlbumListDataEntry
+CMusicPage_Details_Content::OnPlaylistListDataEntry
+CMusicPage_Details_Content::OnLocalLibraryCrawlingWillStart
+CMusicPage_Details_Content::OnLocalLibraryCrawlingFinished
+CMusicPage_Details_Content::OnLocalLibraryCrawlingInterrupted
+CMusicPage_Details_Content::OnLocalLibraryCrawlingMessage
+CMusicPage_Details_Content::OnLocalLibraryDatabaseHasBeenReset
+CMusicPage_Details_Content::OnPlaylistNameHasChanged
+CMusicPage_Details_Content::OnPlaylistAdded
+CMusicPage_Details_Content::OnPlaylistDeleted
+CMusicPage_Details_Content::OnPlaylistMoved
+PlaylistTitleLabel
+#Music_TracksInfoLabel_NoTracks
+PlayPlaylistButton
+#Music_Playlist_Details_Play
+AddPlaylistToQueueButton
+#Music_Playlist_Details_AddToQueue
+AddRandomTracksToPlaylistButton
+#Music_Playlist_Details_AddRandomTrack
+resource/layout/musicpage_details_playlist.layout
+#TracksInfoLabel_NoTracks
+MusicPageDetailsPlaylistTrack
+#Music_TracksInfoLabel_OneTrack
+playlistduration
+#Music_TracksInfoLabel_MultipleTracks
+playlisttrackcount
+PlaylistPlayAction
+PlaylistPlayNextAction
+PlaylistAddToQueueAction
+PlaylistAddRandomTracksAction
+#Music_Playlist_DeleteAllTracksDialog_Title
+#Music_Playlist_DeleteAllTracksDialog_Prompt
+ReallyDeleteAllPlaylistTrack
+CMusicPage_Details_Playlist
+CPlaylistTrackLabel
+PlaylistPlayTrack
+nPlaylistPosition
+PlaylistTrackAddToQueue
+MovePlaylistTrackUp
+MovePlaylistTrackDown
+DeletePlaylistTrack
+Music_Playlist_Details_Menu_DeleteAll
+#Music_Playlist_Details_Menu_DeleteAll
+DeleteAllPlaylistTrack
+PlaylistPlayTrackNext
+CMusicPage_Details_Playlist::OnAlbumCoverLoaded
+CMusicPage_Details_Playlist::OnTrackListDataEntryForPlaylistID
+CMusicPage_Details_Playlist::OnPlaylistNameHasChanged
+CMusicPage_Details_Playlist::OnPlaylistEntriesHaveMoved
+CMusicPage_Details_Playlist::OnPlaylistEntriesDeleted
+CMusicPage_Details_Playlist::OnPlaylistAllEntriesDeleted
+CMusicPage_Details_Playlist::OnPlaylistEntriesHaveChanged
+CPlaylistItemPanel
+CPlaylistItemLabel
+QueueID
+CMusicPlayerPanel
+#Music_Player_WindowTitle
+CurrentAlbumImage
+CurrentStatusLabel
+CurrentTrackLabel
+CurrentArtistLabel
+RepeatButton
+ShuffleButton
+PreviousButton
+PlayPauseButton
+VolumeButton
+BrowseButton
+InfoLabel
+NoTracksLabel
+SeekBar
+TrackList
+CompleteName
+ElapsedSeconds
+SpacerColumn
+resource/layout/musicplayerpanel.layout
+music/CMusicPlayerPanel
+Music\MusicPlayerVisible
+MusicPlayerContextMenu
+PauseEntry
+#Music_Queue_Pause_Entry
+nEntry
+PlayEntry
+#Music_Queue_Play_Entry
+RemoveEntry
+#Music_Queue_Remove_Track_From_Queue
+ShowEntryInSystem
+#Music_Queue_Show_Track_In_System
+RemoveEntries
+#Music_Queue_Remove_Tracks_From_Queue
+ClearQueue
+#Music_Queue_Clear_Queue
+CreateNewPlaylistBasedOnQueue
+#Music_Queue_Menu_CreatePlaylist
+TogglePlayPause
+ShowCurrentAlbum
+ToggleRepeat
+ToggleShuffle
+PreviousTrack
+NextTrack
+Volume
+BrowseMusic
+OpenOverlayMusicLibraryPanel
+steam://nav/music/details
+steam://nav/games/details/%u
+%s
+OnGameOverlayActivated
+RepeatButtonStyle
+#Music_Tooltip_Repeat
+RepeatOnceButtonStyle
+#Music_Tooltip_RepeatOnce
+%s - %s
+TrackName
+TrackKey
+LengthInMilliseconds
+#Music_Status_Playing
+#Music_Status_Paused
+currentqueueentry
+queuecount
+queueduration
+#Music_Transport_No_Tracks
+#Music_Transport_X_Track
+#Music_Transport_X_Tracks
+#Music_Transport_X_Of_Y
+graphics/music_player_placeholder_album
+graphics/music_placeholder_album%d_50.png
+PauseButtonStyle
+PlayButtonStyle
+MuteVolumeButtonActiveStyle
+VolumeButtonActiveStyle
+MuteVolumeButtonStyle
+VolumeButtonStyle
+MusicPlaylistReplaceMenu
+MusicPlaylistAppendMenu
+MusicPlaylistLoadMenu
+AppendPlaylistFromQueue
+bReplace
+LoadPlaylistIntoQueue
+%s %d
+#Music_Queue_AddPlaylist_Dialog_Title
+#Music_Queue_AddPlaylist_Dialog_Prompt
+CMusicPlayerLabel
+nItemID
+VolumePanelClosed
+CMusicPlayerPanel::OnCurrentQueueEntryHasChanged
+CMusicPlayerPanel::OnQueueEntriesHaveChanged
+CMusicPlayerPanel::OnPlaybackStatusHasChanged
+CMusicPlayerPanel::OnCurrentQueueEntrySecondsElapsedChanged
+CMusicPlayerPanel::OnGameOverlayActivated
+CMusicPlayerPanel::OnPlayingRepeatStatusHasChanged
+CMusicPlayerPanel::OnPlayingShuffledHasChanged
+CMusicPlayerPanel::OnVolumeHasChanged
+CMusicPlayerPanel::OnAlbumCoverLoaded
+Slider
+CMusicPlayerVolumePanel
+resource/layout/musicplayervolumepanel.layout
+CVolumeSlider
+vgui::Slider
+Password
+Recovery
+resource/layout/parentalunlockdialog.layout
+#Steam_Parental_ForgotPIN
+steam://url/ParentalRecovery
+Close
+DoParentalUnlock
+ShowRecoveryDialog
+#Steam_Parental_NoRecoveryEmail
+#Steam_Parental_NoRecoveryEmail_Instructions
+#Steam_Parental_UnlockFailureExceeded
+#Steam_Parental_UnlockFailure
+#Steam_Parental_UnlockFailureTitle
+CDialogParentalUnlock
+CDialogParentalUnlock::OnParentalLockChangeAttemptComplete
+sCommunityShareScreenshotLink
+https://www.facebook.com/dialog/feed?app_id=105386699540688
+common/ReleaseState
+common/ReleaseStateOverride
+CommunitySingleScreenshot
+#Overlay_ScreenshotOnSteamNamed
+%gamename%
+DeleteFromCloudBox
+resource/layout/screenshotdeletedialog.layout
+delete_screenshot_count
+WarningText
+#steam_are_you_sure_delete_screenshots
+Delete
+#Overlay_Publish_Error_Title
+#Overlay_Delete_Screenshot_Error
+Assertion Failed: pScreenshot->m_pOwner != NULL
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/screenshotmanager.cpp
+CScreenshotManager
+#Overlay_Screenshots_Title
+grid
+details_button
+view_local_library_button
+details_caption
+SSDetails
+publish_caption
+spoiler_checkbox
+publish_button
+delete_button
+publish_charsleft
+no_screenshots
+game_selector
+multiselect_button
+resource/layout/screenshotmanager.layout
+#Overlay_Publish_Offline
+gameid
+timesince
+multi_img
+multi_img_count
+multi_img_selected
+multi_img_upload_size
+multi_img_upload_size_info
+multi_img_storage_remaining
+multi_img_storage_remaining_info
+multi_img_delete
+multi_img_upload
+selected_screenshot_count
+instr_no_selection
+instr_no_selection_title
+file_not_loaded_label
+SSDate
+SSSize
+SSSizeOriginal
+selected_ss_date
+selected_ss_size
+selected_ss_size_original
+file_not_loaded_filename
+steam://url/CommunityScreenshots
+steam://url/CommunitySingleScreenshot/%llu
+#Overlay_Publish_Error_Quota
+#Overlay_Publish_Error_Quota_Plural
+ScreenshotUploadDialog
+ScreenshotDeleteDialog
+Adding screenshot unnecessarily
+SS%d
+screenshot_caption_charsleft
+publishcharsleft
+publishcharsleft_toomanychars
+screenshot_hotkey
+#steam_screenshots_deselect_all
+#steam_screenshots_select_all
+screenshot_remaining_storage
+screenshot_upload_size
+m_sortvecSelectedPanels
+m_mapHandleToItemID
+FCVAR_NEVER_AS_STRING
+CScreenshotDeleteDialog
+DeleteScreenshot
+Cancel
+m_strFullFilename
+m_imgPreview.m_bufData
+m_imgThumb.m_bufData
+MultiSelect
+ViewScreenshots
+ViewSelectedScreenshot
+ViewLocalLibrary
+AskPublishScreenshot
+AskDeleteScreenshot
+GameOverlayScreenshotKeyChanged
+PanelClicked
+code
+WrapPanelItemVisibility
+visible
+DeleteDialogClosed
+EndDrag
+#Overlay_Add_Caption
+CScreenshotCaptionEntry
+vgui::TextEntry
+TextEntry
+CScreenshotGameSelector
+vgui::ComboBox
+ComboBox
+m_mapGameItems
+ThumbnailUploaded
+ThumbnailUnpublished
+ThumbnailSelected
+#steam_screenshotsupload_title
+visibility_options
+privacy
+#steam_private
+#steam_friendsonly
+#steam_public
+upload_progress
+shared_to_facebook_ok_label
+shared_to_facebook_no_multi_label
+shared_to_facebook_no_private_label
+limited_user_upload_label
+facebook_logo
+graphics/facebookLogo12
+share_to_facebook_check_button
+resource/layout/screenshotsuploaddialog.layout
+upload_screenshot_count
+upload_question
+#steam_upload_screenshots
+upload_info
+#steam_screenshots_upload_info
+CScreenshotUploadDialog
+UploadProgress
+ScreenshotsErrors
+SlimProgressBarError
+#steam_screenshots_error_info
+#steam_screenshots_error_accountban
+error_info
+Upload
+changesharetofacebook
+upload_button
+upload_size
+storage_remaining
+upload_size_info
+storage_remaining_info
+visiblity_label
+#steam_screenshotsuploading_title
+CScreenshotUploadDialog::UploadScreenshotsComplete() could not get the panel. Is the handle correct?
+loading_img_throbber
+graphics/minithrobber
+ScreenshotLoadingThrobber
+%s_thumb
+CScreenshotImageClickPanel
+vgui::Panel
+ScreenshotImageClickPanel
+m_pImagePreview
+m_strCaption
+cloud_icon
+steam/cached/icon_cloud_enabled_dark_bg
+resource/icon_warning
+Assertion Failed: (unsigned)elem <= (unsigned)m_Size
+Assertion Failed: IsValidIndex(elem)
+Steam_BGetCallback
+Steam_FreeLastCallback
+Steam_GetAPICallResult
+Fatal on Lock(): Locked the floor, couldn't release the ceiling: %s
+Fatal on Release(): Locked the ceiling, couldn't release the floor: %s
+/BSem/%x
+%s.2
+Failed to create BinarySemaphore: %s - %s
+Fatal on Lock(): Locked the floor, couldn't post the ceiling: %s
+Took lock, but old thread id != 0!!!
+Error on Release(): Not the lock owner: %s
+Fatal on Release(): errno %d: %s
+Fatal on Release(): Thread not marked as mine: %s
+/MTX/%x
+Tried to create PosixMutex but was already around: %s - %s
+Failed to create PosixMutex: %s - %s
+Failed to post that I was waiting for an event
+/Evt/%x
+%s.BinSemLock
+Failed to force create PosixEvent: %s - %s, m_pLock:%p, m_pPending:%p
+Failed to create PosixAutoResetEvent: %s - %s, m_pLock:%p, m_pPending:%p
+false
+Bad Access flag on shared mem create: %s: %u
+/Shm/%x
+/dev/null
+%s_mutex
+%s_written
+Failed creating write event %s
+%s_avail
+Failed creating read event %s
+%s_mem
+Failed creating file mapping %s
+Failed creating view of file for %s
+Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
+Warning: Memory was locked for put while destructing!
+CSharedMemStream::Clear()
+Warning: Blocking wait on mutex failed in Clear: %d
+CSharedMemStream::Get()
+CSharedMemStream has memory already locked for put. Don't write with memory locked.
+Timed out waiting for mutex in GetInternal()
+Failed to take mutex in GetInternal()
+SHMemStream header is corrupt in GetInternal()
+Assertion Failed: m_dwReadAheadBufferBegin <= m_dwReadAheadBufferEnd
+CSharedMemStream::Put()
+CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory
+Timed out waiting for mutex in PutInternal()
+m_pMutex->Wait() failed in ShMemStream::PutInternal
+SHMemStream header is corrupt in PutInternal()
+PutInternal: Not enough space for put when locked
+Asked to unlock memory for write.. but wasn't locked
+steam://url/CommunityFilePage/%llu
+OverlayCDKeyDialog
+KeyList
+Name
+#Overlay_CDKeyDialog_NameColumn
+Key
+#Overlay_CDKeyDialog_KeyColumn
+#Steam_RequestingLegacyKey
+steam/cached/OverlayCDKeyDialog.res
+%d\OverlayCDKeyDisable
+DontShowAgainCheck
+ReasonLabel
+#Overlay_CDKeyNotification_MessageApp
+#Overlay_CDKeyNotification_Message
+ScreenshotNotification
+LabelInfo
+LabelGame
+ScreenshotImage
+public/ScreenshotNotification.res
+screenshots
+#Friends_ScreenshotNotification_Info_Multiple
+BaseGameOverlayUIPanel
+Fatal Assertion Failed: m_pOverlaySurface
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/BasePanel.cpp
+BaseDashboardPanel
+BaseDesktopPanel
+TaskbarPanel
+FriendsDetailPanel
+AchievementsDetailPanel
+NewsDetailPanel
+ScreenshotsDetailPanel
+GuidesDetailPanel
+CommunityHubDetailPanel
+CommunityDiscussionsDetailPanel
+BroadcastDetailPanel
+GameName
+Clock
+ClockSuffix
+TwoWeeksText
+ForeverText
+SteamLogo
+SettingsButton
+OpenOverlaySettingsDialog
+WebBrowserButton
+OpenOverlayWebBrowserDialog
+view_friends
+#Steam_ViewFriends
+OpenFriendsDialog
+MusicPlayerButton
+FriendsButton
+PlayersButton
+OpenOverlayPlayersDialog
+AchievementsButton
+ViewAchievements
+ScreenshotsButton
+OpenOverlayScreenshotsDialog
+GameGroupsButton
+GameHubButton
+ChatRoomButton
+DLCButton
+#Overlay_Taskbar_DLC
+OpenDlcDialog
+GuideButton
+#Overlay_Taskbar_Guide
+ViewGuide
+LegacyCDKeyButton
+#Overlay_Taskbar_legacycdkey
+ShowLegacyCDKey
+WebSiteButton
+ForumsButton
+RecommendButton
+WorkshopButton
+GuidesButton
+ForceQuitButton
+InitiateForceQuit
+EditControllerConfig
+CloseButton
+DelayedClose
+PowerMeterDim
+PowerMeterBright
+resource/layout/overlaydashboard.layout
+#Overlay_Taskbar_CloseApp
+#Overlay_Taskbar_Close
+resource/layout/overlaydesktop.layout
+resource/layout/overlaytaskbar.layout
+friends_online
+ShowFriendsPanelInOverlay
+-gameid
+Got gameid on commandline: %llu
+public/url_list.txt
+%steamID%
+%mystuff%
+profiles/%llu
+%language%
+extended/StorefrontURL
+http://storefront.steampowered.com
+http://store.steampowered.com
+%storehttps%
+Steam_Language
+%community%
+%communityhttps%
+%chat%
+%buildid%
+extended/newsurl
+%news%
+http://store.steampowered.com/news/
+%help%
+#Overlay_MicroTxnCancelDlgTitle
+#Overlay_MicroTxnCancelDlgText
+#Overlay_MicroTxnCancelDlgOK
+CancelMicroTxn
+#Overlay_MicroTxnCancelDlgCancel
+CloseImmediately
+resource/layout/overlaydashboard_lores.layout
+resource/layout/overlaydesktop_lores.layout
+am
+pm
+CBasePanel::ShellExecuteHook
+friends/
+FriendsCommand
+data
+url/
+openexternalforpid/
+checkout_return/
+RunStoreJavascript
+javascript
+settings
+connect
+viewfriendsgame
+joinlobby
+#Overlay_LobbyInvite_WrongGame_Title
+#Overlay_LobbyInvite_WrongGame_Message
+open_external
+open_external/
+http:
+https:
+www.
+openurl
+openurl/
+about:
+opening url: %s
+gamewebcallback
+rungame
+completetxn
+broadcast
+watch
+SteamIDBroadcastPage
+TradeDialog
+SteamIDAchievementsPage/%u
+AppNewsPage/%u
+StoreDlcPage
+#Overlay_ForceQuit_Title
+#Overlay_ForceQuit_Description
+ForceQuit
+steamIDControlPage
+EducationPage
+WebBrowser
+ParentalUnlockDialog
+hotkey
+#Broadcast_Notification_AvailableToWatch_Friends
+#Broadcast_Notification_AvailableToWatch_Public
+BroadcastPublicStateNotification
+#RemotePlayTogether_Notification_AvailableToInvite
+SteamInputControllerConnectedNotification
+OverlaySplashScreen
+#SteamChina_Overlay_DurationControl_MessageA
+#SteamChina_Overlay_DurationControl_ExitSoon_3h
+#SteamChina_Overlay_DurationControl_ExitSoon_5h
+-longtoast
+BResizeImageRGB failed
+BConvertRGBToRGBA failed
+resource/camera1.wav
+Assertion Failed: m_GameID.IsSteamApp()
+Assertion Failed: nSize < (128 * 1024)
+Assertion Failed: nSize <= buffer.SizeAllocated()
+parent
+extended
+EducationPageStore
+steam://url/GameHubDiscussions/%u
+steam://url/CommunityGroupSearch/%s
+steam://url/GameHub/%u
+ListOfDLC
+DLCAvailableOnStore
+GuideAppID
+homepage
+steam://url/RecommendGame/%u
+steam://url/SteamWorkshopPage/%u
+common/workshop_visible
+1
+steam://url/GameHubGuides/%u
+InstructionText
+#Overlay_Screenshots_Press_HotkeyApp
+#Overlay_Screenshots_Press_Hotkey
+OverlayCDKeyNotification
+Assertion Failed: false
+lobbyinvite
+remoteplaytogetherinvite
+voicesettings
+friendadd
+friendremove
+friendrequestaccept
+friendrequestignore
+friends
+players
+community
+Achievements
+UserAchievementsPage/%llu/%u
+jointrade
+JoinTrade/%llu
+Stats
+UserStatsPage/%llu/%u
+leaderboards
+UserLeaderboardsPage/%llu/%u
+GlobalLeaderboardsPage/%u
+OfficialGameGroup
+OfficialGameGroupPage/%d
+chat/
+steamid/
+SteamIDPage/%llu
+GroupSteamIDPage/%llu
+chat
+chatroomgroup/
+chatroomgroup/%llu/%llu
+tradeinvite
+steamid
+store
+MinimalProfileEdit
+MinimalProfileEdit/%llu
+%u
+StoreAppPageAddToCart
+StoreAppPage
+X-Steam-OverlayStoreBrowser
+steam/cached/OverlaySplash.res
+steam/cached/OverlayCDKeyNotification.res
+cdkey
+LabelMessage
+LabelKey
+#Overlay_CDKeyNotification_Message_MultipleKeyApp
+#Overlay_CDKeyNotification_Message_MultipleKey
+OverlayLowBattery
+LoggedInElsewhere
+steamLogin
+steamLoginSecure
+handle
+BroadcastUploadErrorNotification
+reason
+Broadcast_Upload_Result_%u
+#Broadcast_RecordingError_General
+#Broadcast_RecordingError_URL_General
+#Broadcast_RecordingError_Razer
+#Broadcast_RecordingError_URL_Razer
+#Broadcast_RecordingError_Title
+#Broadcast_RecordingError_URL_Text
+#Overlay_Current_Session
+minutes_session
+hours_twoweeks
+minutes_twoweeks
+hours_forever
+minutes_forever
+#Overlay_Playtime_TwoWeeksHours
+#Overlay_Playtime_TwoWeeksMinutes
+#Overlay_Playtime_ForeverHours
+#Overlay_Playtime_ForeverMinutes
+COverlayCDKeyDialog
+NotificationFrame
+CScreenshotNotification
+vgui::NotificationFrame
+CBasePanel
+vgui::AppRootPanel
+ViewNews
+OpenOverlayCommunityDialog
+MouseClick
+WebSteamURL
+cmd
+referrer
+OpenSteamDialog
+OpenBroadcastChatDialog
+AddActionSignalTarget
+vpanel
+CBasePanel::OnMicroTxnAuthRequest
+ActivateModule
+moduleIndex
+CBasePanel::OnGameOverlayActivateRequested
+CBasePanel::OnLowBattery
+CBasePanel::OnLegacyCDKeyRegistered
+CBasePanel::OnLoggedOff
+CBasePanel::OnPersonaStateChange
+CBasePanel::OnScreenshotWritten
+CBasePanel::OnFilePublished
+CBasePanel::OnPublishedFileUpdated
+CBasePanel::OnAsyncNotificationsRequested
+CBasePanel::OnBroadcastShowFirstTimeDlg
+CBasePanel::OnBroadcastStatus
+CBasePanel::OnBroadcastSettingsLoaded
+CBasePanel::OnBroadcastRecorderError
+CBasePanel::OnBroadcastUploadsDisabled
+CBasePanel::OnDurationControl
+CBaseDashboardPanel
+CloseMenu
+CBaseDesktopPanel
+Assertion Failed: !m_data.HasError()
+CIPAndPort::GetIPv4 called on IPv6 address
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h
+LabelTitle
+BroadcastImageBlue
+BroadcastImageRed
+friends/broadcastpublicstatenotification.res
+#Broadcast_Notification_AvailableToWatch_Title
+CBroadcastAvailableToWatch
+friends/remotenplaytogetheravailableotification.res
+CRemotePlayTogetherAvailableToInvite
+config_name
+controller_steamcontroller
+controller_xbox_360
+controller_xbox_one
+ControllerImage
+tenfoot/resource/images/controller_icon_%s
+public/SteamInputControllerConfigNotification.res
+CSteamInputControllerConfigNotification
+DurationControlNotification
+steam/cached/durationcontrolnotification.layout
+CDurationControlNotification
+#Overlay_Publish_NeedWorkshopLegalAgreementAcceptance_Desc
+EasyNotification
+LabelBody
+resource/EasyNotification.res
+NeedWorkshopLegalAgreementAcceptanceDialog
+OKButton
+ViewItem
+steam/cached/NeedWorkshopLegalAgreementAcceptance.res
+SimpleDialog
+FireButton
+iButton
+COverlayNeedWorkshopLegalAgreementAcceptanceDialog
+vgui::SimpleDialog
+COverlaySplash
+COverlayCDKeyNotification
+steam/cached/OverlayBatteryNotification.res
+batteryTime
+COverlayLowBattery
+steam/cached/loggedinelsewherenotification.res
+COverlayLoggedInElsewhereNotification
+friends/broadcastuploaderrornotification.res
+CBroadcastUploadErrorNotification
+IngameFPSBanner
+TextLabel
+99
+resource/layout/ingamefpsbanner.layout
+CIngameFPSBanner
+HighContrast
+LowContrast
+CounterTextSmall
+CounterTextLarge
+CounterTextMedium
+AsyncNotificatoinsRequestedDialog
+EnableNotifications
+CancelButton
+DisableNotifications
+steam/cached/AsyncNotificationsRequestedDialog.res
+COverlayAsyncNotificationsRequestedDialog
+%u FPS
+AppRootPanel
+CPanelHideWrapper< TPanel >::OnParentalLockChanged
+COverlay_Details_Friends
+COverlay_Details_Achievements
+COverlay_Details_News
+COverlay_Details_Screenshots_Panel
+COverlay_Details_Guides_Panel
+COverlay_Details_CommunityHub_Panel
+COverlay_Details_CommunityDiscussions_Panel
+COverlayDetailsBroadcastPanel
+ImagePanel
+URLLabel
+m_sURL
+m_pkvCommand
+developer
+-steampid
+Steam pid that launched us
+VGUI_Application_001
+OK
+Jan 30 2020
+17:25:41
+crashhandler003
+gameoverlayui
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
+Fatal Assertion Failed: ClientAPI_Init()
+BuildID: %u
+GAMEOVERLAY
+VFileSystem013
+Fatal Assertion Failed: ::g_pFileSystem
+PLATFORM
+EXECUTABLE_PATH
+%s/config
+CONFIG
+steam_dev.cfg
+Assertion Failed: pszArg0 && *pszArg0
+Falling back to find steam path: argv[0] == %s, made absolute to: %s
+Steam Path: %s
+No -steampid command line param to gameoverlayui
+VGUI_ivgui007
+SerializedSurface requires the vgui::IVGui system to run!
+VGUI_InputInternal001
+SerializedSurface requires the vgui::IInput system to run!
+%s%c%s
+csgolauncher
+SKIN
+HKEY_CURRENT_USER\Software\Valve\Steam\SkinV5
+%s/skins/%s
+resource/styles/gameoverlay.styles
+resource/SteamScheme.res
+Platform
+public/steamui_%language%.txt
+resource/platform_%language%.txt
+resource/vgui_%language%.txt
+resource/overlay_%language%.txt
+friends/trackerui_%language%.txt
+resource/csgolauncher_%language%.txt
+DialogConfigOverlay_%dx%d.vdf
+VGuiModuleLoader004
+Assertion Failed: g_pVGuiModuleLoader
+Failed to load platform modules (friends, server browser, etc...)
+FriendsUIInterfaceV001
+ServerBrowser003
+Assertion Failed: g_pFriendsUI
+Assertion Failed: g_pServerBrowserUI
+GameOverlayUI Thread
+Main Frame Loop
+Sleep for overlay FPS limiting
+ClientAPI_RunCallbacks()
+g_pVGuiModuleLoader->RunFrame()
+BasePanel()->RunFrame()
+vgui::RunFrame()
+vgui::UpdateAnimations()
+vgui::surface()->SolveTraverse()
+vgui::surface()->PaintTraverseEx()
+Shutting down overlay
+Assertion Failed: nSize < (128*1024)
+/tmp/gameoverlayui.log.last
+/tmp/gameoverlayui.log
+w
+a
+%a %b %d %H:%M:%S %Y UTC
+AppModalQueryBox
+QueryBox
+WARNING: unable to link %s and %s because one or more is a ConCommand.
+Library/Application Support/Steam
+Unable to get home directory
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/../common/clientdirectories.h
+SteamUniverse
+%s/%s%s
+WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
+MessageBox
+-pid
+Pid that we should be watching for
+-manuallyclearframes
+Should the overlay be manually clearing frames to black (because the game doesn't clear the entire screen?)
+-enablemovies
+Should prototype movie code be enabled
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main_serialized.cpp
+GameOverlay process started: pid: %d
+GameOverlay exiting due to missing PID argument
+GameOverlay exiting due to missing manuallyclearframes argument
+Manually clearing frames for this game
+GameOverlay process connecting to: pid: %d
+Global\Steam_GameOverlayInjector_%s
+GameOverlay_GameExitingEvent_%s
+Failed finding game exiting event %s
+GameOverlay_InputEventStream_%s
+GameOverlayRender_PaintCmdStream_%s
+GameOverlay_InGameRenderingCompleted_%s
+Failed creating/finding in game rendering event: %d
+GameOverlay_VGUIPaintingCompleted_%s
+Failed creating/finding vgui paint event: %d
+GameOverlay_SerializedWorkQueued_%s
+Failed creating/finding serialized work event: %d
+IgnoreChildProcesses
+GameOverlay_ScreenshotStream_%s
+ScreenshotThread
+Checking for game crash
+Detected possibly crashed/killed game, exiting
+main.cpp::MessagePump()
+SendHotKeyAndVisibilityState()
+SendPerGameConfiguration()
+ProcessInputEvents()
+SwappingStreamBuffers
+InitializingRenderStream()
+SetEvent failed for paint event
+Failed during internal/external buffer swapping
+Failed putting data into external buffer during swapping
+FinalizingRenderStream
+Failed to init Mach IPC client
+BRunFrame()
+Waiting on game
+Game Exit Event signaled.
+Warning: The game hasn't rendered a frame from us in over 10 seconds
+Warning: Tried to clear, but game started reading right as we would have done so
+Warning: Game claimed to have rendered after extra time, but render stream is not empty.
+Warning: Game claims to have rendered, but render stream is not empty.
+MicroTxnAuthorizeDialog
+#Overlay_MicroTxnAuth_Title
+AuthorizeButton
+#Overlay_MicroTxnAuth_Authorize
+AuthorizeTransaction
+UpdateBillingInfoButton
+#Overlay_MicroTxnAuth_UpdateBillingInformation
+UpdateBillingInfo
+ConvertedTotalLabel
+#Overlay_MicroTxnAuth_ConvertedTotalLabel
+ConvertedTotalAmtLabel
+#Overlay_MicroTxnAuth_ConvertedTotalValue
+#Overlay_MicroTxnAuth_Cancel
+RefundText
+SubscriptionText
+#Overlay_MicroTxnAuth_SubscriptionText
+ItemList
+Qty
+#Overlay_MicroTxnAuth_header_Quantity
+#Overlay_MicroTxnAuth_Header_Name
+Price
+#Overlay_MicroTxnAuth_Header_Price
+resource/layout/overlay_microtxn_authdialog.layout
+%llu %s
+game
+total
+converted_total
+currency
+#Overlay_MicroTxnSubscriptionGame
+#Overlay_MicroTxnSubscription
+%cost%
+%d %s
+#Overlay_MicroTxnSubscriptionDays
+#Overlay_MicroTxnSubscriptionWeeks
+#Overlay_MicroTxnSubscriptionMonths
+#Overlay_MicroTxnSubscriptionYears
+%time%
+#Overlay_MicroTxnAuth_Tax
+#Overlay_MicroTxnAuth_RefundPeriod
+#Overlay_MicroTxnAuth_NotRefundable
+RefundTextLinkStyle
+balance
+#Overlay_MicroTxnAuth_AccountIneligible
+#Overlay_MicroTxnAuth_AddFunds
+#Overlay_MicroTxnAuth_PayWithWallet
+CMicroTxnAuthorizeDialog
+URLClicked
+CMicroTxnAuthorizeDialog::OnAuthDismiss
+WebBrowserClose
+imagepanel
+icon
+caption
+resource/layout/overlay_achievement_item.layout
+desc
+ViewAchievementsButton
+achievement
+progressbarimage
+progressbackground
+resource/layout/overlay_achievementsdetails.layout
+#Overlay_Achievement_Recent
+#Overlay_Achievement_Soon
+Assertion Failed: uAppID != k_uAppIdInvalid
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlayachievements.cpp
+percent
+earned
+hidden
+CAchievementImagePanel
+CAchievementImagePanel::OnAchievementIconReady
+CAchievementInfoPanel
+COverlay_Details_Achievements::OnUserStatsReceived
+COverlay_Details_Achievements::OnUserAchievement
+resource/layout/overlay_broadcastpanel.layout
+SteamIDBroadcastPage/%llu
+BroadcastChatDialog
+ChatHistory
+EmoticonButton
+resource/layout/overlay_broadcastchat.layout
+friends_chat_name_ingame
+friends_chat_name
+:
+friends_chat_text_self
+friends_chat_text
+friends_chat_url
+#Broadcast_Chat_Muted
+#Broadcast_Chat_Joined
+#Broadcast_Chat_Left
+ChatUserContext
+#Broadcast_Chat_Show_Profile
+ShowUserProfile
+#Broadcast_Chat_Mute_User
+MuteChatUser
+steam://url/SteamIDPage/%llu
+BroadcastChatBanner
+ChatLine%d
+resource/layout/broadcast_chatbanner.layout
+COverlayDetailsBroadcastPanel::OnBroadcastStatus
+ShowBroadcast
+ShowSettings
+StopBroadcast
+COverlayBroadcastChatDialog
+COverlayBroadcastChatDialog::OnBroadcastStatus
+COverlayBroadcastChatDialog::OnBroadcastChatMessage
+PostMessage
+TextClicked
+vgui::MenuButton
+CBroadcastChatBanner
+CBroadcastChatBanner::OnBroadcastChatMessage
+resource/layout/overlay_communitydiscussionspanel.layout
+num_discussions
+%sactions/DiscussionsCount/%d/
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlaycommunitydiscussionspanel.cpp
+count
+ViewCommunityDiscussions
+resource/layout/overlay_communityhubpanel.layout
+num_contributions
+%sactions/ContributionCount/%d/
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlaycommunityhubpanel.cpp
+ViewCommunityHub
+TextThisManyFriends
+AllFriendsButton
+ViewPlayersButton
+resource/layout/overlay_friendsdetails.layout
+Assertion Failed: m_bPendingTick
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlayfriends.cpp
+#Friends_NotAvailableInOfflineMode
+numfriends
+#Overlay_Friends_ThisManyInThisGame
+#Overlay_Friends_ThisManyOnline
+FriendChangeConfirmationDialog
+#Overlay_FriendChangeConfirmation_Title
+ConfirmButton
+Confirm
+resource/layout/overlay_friendchangeconfirmationdialog.layout
+#Overlay_FriendChangeConfirmation_Reason_Add
+#Overlay_FriendChangeConfirmation_Button_Add
+#Overlay_FriendChangeConfirmation_Reason_Remove
+#Overlay_FriendChangeConfirmation_Button_Remove
+#Overlay_FriendChangeConfirmation_Reason_RequestAccept
+#Overlay_FriendChangeConfirmation_Button_RequestAccept
+#Overlay_FriendChangeConfirmation_Reason_RequestIgnore
+#Overlay_FriendChangeConfirmation_Button_RequestIgnore
+[unknown]
+persona
+COverlayFriendChangeConfirmationDialog
+Assertion Failed: count >= 0
+Background
+resource/layout/overlay_guide_item.layout
+resource/icon_community_preview
+guideitem
+resource/layout/overlay_guidespanel.layout
+num_guides
+CGuideItemPanel
+ViewGuides
+newsitem_title
+newsitem_dateandauthor
+resource/layout/overlay_news_item.layout
+ViewNewsButton
+newsitem
+resource/layout/overlay_newsdetails.layout
+%snews/newsforapp/v0002/
+Cache-Control
+max-stale=111600
+appid
+3
+maxlength
+300
+format
+Assertion Failed: ClientHTTP()->SetHTTPRequestContextValue( hRequest, m_uAppID )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/overlaynews.cpp
+HTTP request failed sending? API error, shouldn't happen
+appnews
+newsitems
+date
+feedlabel
+author
+CNewsItemPanel
+resource/layout/overlay_screenshotspanel.layout
+SetShortcut
+OverlaySettingsDialog
+#Friends_Settings_TabTitle
+#Steam_Settings_BroadcastTitle
+#Steam_Settings_Browser
+#Music_Settings_TabTitle
+common/type
+Application
+#Overlay_SettingsTabTitleApp
+#Overlay_SettingsTabTitle
+Label2
+#Overlay_SettingsDescriptionApp
+#Overlay_SettingsDescription
+#Overlay_SettingsEnableApp
+#Overlay_SettingsEnable
+#Overlay_SettingsSCTenfootEnable
+#Voice_Settings_NewTabTitle
+steam/OverlaySettingsDialog
+#Overlay_Settings_Title
+voice
+ingame
+browser
+#Voice_Settings_TabTitle
+COverlaySettingsDialog
+vgui::PropertyDialog
+COverlayInGameVoiceSettingsDialog
+PropertyDialog
+PageLoadThrobber
+graphics/rampDown_4
+URLBar
+URLStatusImage
+EVCert
+StatusText
+HTMLField
+#Overlay_WebBrowserTitleApp
+#Overlay_WebBrowserTitle
+resource/layout/OverlayWebBrowser.layout
+OverlayWebBrowserNew
+Count of overlay web browsers out of sync?
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/OverlayWebBrowser.cpp
+StopButton
+BackButton
+ForwardButton
+postdata
+ispageload
+ReloadButton
+secure
+isevcert
+certerror
+certname
+URLBarSecure
+graphics/html_lock_broken
+URLBarBrokenSecure
+graphics/html_lock
+store.steampowered.com
+://store.beta.steampowered.com
+/store
+graphics/loop_
+graphics/rampDown_
+%s%d
+COverlayWebBrowser
+vgui::ToolPanel
+OnURLChanged
+OnFinishRequest
+SecurityStatus
+WebBack
+WebForward
+WebStop
+WebReload
+WebHome
+TextNewLine
+Go
+HTMLBackRequested
+HTMLForwardRequested
+HTMLCanGoBackAndForward
+PageHide
+PageShow
+PageTitleChange
+OnSetStatusText
+status
+COverlayWebBrowser::OnParentalLockChanged
+#Overlay_WebBrowser_OpenInNewTab
+newtab
+COverlayWebBrowserHTML
+ToolPanel
+TabbedWebBrowser
+Assertion Failed: m_TotalElements != InvalidIndex()
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
+%s overflow!
+Assertion Failed: IsInList(after)
+RunGameEngine007
+Assertion Failed: m_pStream->BWaitForDataToGet()
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/screenshotthread.cpp
+CScreenshotThread::Run - Screenshot that wasn't processed in time by the main thread
+CScreenshotThread::Run - Error reading screenshot stream. Clearing any remaining data.
+Timeout waiting on input stream for a frame
+Overlay disable requested by game
+Overlay enable requested by game
+WM_ACTIVATE received before BasePanel() knows about the game ID
+Unhandled serialized input msg(%d)
+Error in the serialized input stream! clearing remaining stream, which may lose events
+Last %d input commands (most recent first):
+%d
+google/protobuf/stubs/common.cc
+This program requires version
+of the Protocol Buffer runtime library, but the installed version is
+.  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+".)
+This program was compiled against version
+of the Protocol Buffer runtime library, which is not compatible with the installed version (
+).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+%d.%d.%d
+INFO
+WARNING
+FATAL
+[libprotobuf %s %s:%d] %s
+pthread_mutex_lock:
+pthread_mutex_unlock:
+google/protobuf/extension_set.cc
+CHECK failed: !iter->second.is_repeated:
+CHECK failed: ((iter->second).is_repeated ? REPEATED : OPTIONAL) == (OPTIONAL):
+CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: ((*extension).is_repeated ? REPEATED : OPTIONAL) == (OPTIONAL):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT32):
+CHECK failed: iter != extensions_.end():
+Index out-of-bounds (field is empty).
+CHECK failed: ((iter->second).is_repeated ? REPEATED : OPTIONAL) == (REPEATED):
+CHECK failed: ((*extension).is_repeated ? REPEATED : OPTIONAL) == (REPEATED):
+CHECK failed: (extension->is_packed) == (packed):
+CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_INT64):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_INT64):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_INT64):
+CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT32):
+CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_UINT64):
+CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_FLOAT):
+CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_DOUBLE):
+CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_BOOL):
+CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_ENUM):
+CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_STRING):
+CHECK failed: (cpp_type((iter->second).type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type((*extension).type)) == (WireFormatLite::CPPTYPE_MESSAGE):
+CHECK failed: extension->is_repeated:
+CHECK failed: cpp_type(extension->type) == WireFormatLite::CPPTYPE_MESSAGE:
+CHECK failed: (extension->type) == (other_extension.type):
+CHECK failed: (extension->is_packed) == (other_extension.is_packed):
+CHECK failed: !extension->is_repeated:
+CHECK failed: is_repeated:
+CHECK failed: type > 0 && type <= WireFormatLite::MAX_FIELD_TYPE:
+google/protobuf/message_lite.cc
+CHECK failed: !coded_out.HadError():
+serialize
+parse
+Can't
+message of type "
+" because it is missing required fields:
+CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization):
+Protocol message was modified concurrently during serialization.
+CHECK failed: (bytes_produced_by_serialization) == (byte_size_before_serialization):
+Byte size calculation and serialization were inconsistent.  This may indicate a bug in protocol buffers or it may be caused by concurrent modification of the message.
+This shouldn't be called if all the sizes are equal.
+google/protobuf/wire_format_lite.cc
+CHECK failed: value.size() <= kint32max:
+CHECK failed: (end - target) == (size):
+google/protobuf/io/coded_stream.cc
+The total number of bytes read was
+A protocol message was rejected because it was too big (more than
+bytes).  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+CHECK failed: (0) == (BufferSize()):
+Reading dangerously large protocol message.  If the message turns out to be larger than
+bytes, parsing will be halted for security reasons.  To increase the limit (or to disable these warnings), see CodedInputStream::SetTotalBytesLimit() in google/protobuf/io/coded_stream.h.
+CHECK failed: (buffer_size) >= (0):
+CHECK failed: (str.size()) <= (kuint32max):
+google/protobuf/io/zero_copy_stream.cc
+This ZeroCopyOutputStream doesn't support aliasing. Reaching here usually means a ZeroCopyOutputStream implementation bug.
+google/protobuf/io/zero_copy_stream_impl_lite.cc
+CHECK failed: (last_returned_size_) > (0):
+BackUp() can only be called after a successful Next().
+CHECK failed: (count) <= (last_returned_size_):
+CHECK failed: (count) >= (0):
+Cannot allocate buffer larger than kint32max for
+StringOutputStream.
+CHECK failed: (count) <= (target_->size()):
+google/protobuf/stubs/strutil.cc
+CHECK failed: errors == NULL:
+Error reporting not implemented.
+\x%02x
+\%03o
+CHECK failed: (len) >= (0):
+CHECK failed: (digits) < (100):
+-inf
+%.*g
+CHECK failed: snprintf_result > 0 && snprintf_result < kDoubleToBufferSize:
+CHECK failed: snprintf_result > 0 && snprintf_result < kFloatToBufferSize:
+0123456789abcdef
+hex_digit_to_int
+isxdigit(c)
+allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
+CHECK failed: result != NULL:
+google/protobuf/stubs/substitute.cc
+strings::Substitute format string invalid: asked for "$
+", but only
+args were given.  Full format string was: "
+Invalid strings::Substitute() format string: "
+CHECK failed: (target - output->data()) == (output->size()):
+ERROR
+double
+int64
+uint64
+int32
+fixed64
+fixed32
+message
+bytes
+uint32
+enum
+sfixed32
+sfixed64
+sint32
+sint64
+required
+repeated
+google/protobuf/descriptor.cc
+CHECK failed: checkpoints_.empty():
+CHECK failed: !checkpoints_.empty():
+CHECK failed: generated_database_->Add(encoded_file_descriptor, size):
+CHECK failed: has_default_value():
+No default value
+Messages can't have default values!
+Can't get here: failed to get default value as string
+extend .$0 {
+{
+$0  message $1
+$0  extensions $1 to $2;
+$0  }
+$0  extend .$1 {
+$0}
+$0$1$2 $3 = $4
+[default = $0
+[
+;
+$0 oneof $1 {
+$0enum $1 {
+$0$1 = $2
+[$0]
+Invalid proto descriptor for file "
+":
+" is not defined.
+" seems to be defined in "
+", which is not imported by "
+".  To use it here, please add the necessary import.
+" is resolved to "
+", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., ".
+") to start from the outermost scope.
+" is already defined (as something other than a package) in file "
+".
+Missing name.
+" is not a valid identifier.
+.dummy
+->
+Import "
+" was listed twice.
+" has not been loaded.
+" was not found or had errors.
+Missing field: FileDescriptorProto.name.
+A file with this name is already in the pool.
+Invalid public dependency index.
+Invalid weak dependency index.
+Extension range $0 to $1 includes field "$2" ($3).
+Extension range $0 to $1 overlaps with already-defined range $2 to $3.
+Message extensions cannot have required fields.
+Repeated fields can't have default values.
+inf
+nan
+Boolean default must be true or false.
+Messages can't have default values.
+Couldn't parse default value "
+Field numbers must be positive integers.
+Field numbers cannot be greater than $0.
+Field numbers $0 through $1 are reserved for the protocol buffer library implementation.
+FieldDescriptorProto.extendee not set for extension field.
+FieldDescriptorProto.oneof_index should not be set for extensions.
+FieldDescriptorProto.extendee set for non-extension field.
+FieldDescriptorProto.oneof_index $0 is out of range for type "$1".
+Extension numbers must be positive integers.
+Extension range end number must be greater than start number.
+Enums must contain at least one value.
+the global scope
+Note that enum values use C++ scoping rules, meaning that enum values are siblings of their type, not children of it.  Therefore, "
+" must be unique within
+, not just within "
+Oneof must have at least one field.
+" is not a message type.
+"$0" does not declare $1 as an extension number.
+Fields of oneofs must themselves have label LABEL_OPTIONAL.
+" is not a type.
+" is not an enum type.
+Default value for an enum field must be an identifier.
+Enum type "
+" has no value named "
+Field with primitive type has type_name.
+Field with message or enum type missing type_name.
+Extension number $0 has already been used in "$1" by extension "$2".
+Field number $0 has already been used in "$1" by field "$2".
+Extension number $0 has already been used in "$1" by extension "$2" defined in $3.
+Files that do not use optimize_for = LITE_RUNTIME cannot import files which do use this option.  This file is not lite, but it imports "
+" which is.
+Extension numbers cannot be greater than $0.
+[lazy = true] can only be specified for submessage fields.
+[packed = true] can only be specified for repeated primitive fields.
+Extensions of MessageSets must be optional messages.
+MessageSets cannot have fields, only extensions.
+Extensions to non-lite types can only be declared in non-lite files.  Note that you cannot extend a non-lite type to contain a lite type, but the reverse is allowed.
+" uses the same enum value as "
+". If this is intended, set 'option allow_alias = true;' to the enum definition.
+Files with optimize_for = LITE_RUNTIME cannot define services unless you set both options cc_generic_services and java_generic_sevices to false.
+map type is only allowed for repeated fields.
+map type is only allowed for fields with a message type.
+Could not find field type.
+Could not find field named "
+" in type "
+map_key must not name a repeated field.
+map key must name a scalar or string field.
+CHECK failed: builder_:
+uninterpreted_option
+CHECK failed: options_descriptor:
+Option "
+" is resolved to "(
+)", which is not defined. The innermost scope is searched first in name resolution. Consider using a leading '.'(i.e., "(.
+" unknown.
+Option field "
+" is not a field or extension of message "
+" is an atomic type, not a message.
+" is a repeated message. Repeated message options must be initialized using an aggregate value.
+CHECK failed: !out.HadError():
+Unexpected failure while serializing option submessage
+Invalid wire type for CPPTYPE_MESSAGE:
+CHECK failed: field != NULL:
+" was already set.
+Value out of range for int32 option "
+Value must be integer for int32 option "
+Value out of range for int64 option "
+Value must be integer for int64 option "
+Value out of range for uint32 option "
+Value must be non-negative integer for uint32 option "
+Value must be non-negative integer for uint64 option "
+Value must be number for float option "
+Value must be number for double option "
+Value must be identifier for boolean option "
+Value must be "true" or "false" for boolean option "
+Value must be identifier for enum-valued option "
+" for option "
+". This appears to be a value from a sibling type.
+Value must be quoted string for string option "
+" is a message. To set the entire message, use syntax like "
+= { <proto text format> }". To set fields within it, use syntax like "
+.foo = value".
+CHECK failed: dynamic.get() != NULL:
+Could not create an instance of
+Error while parsing option value for "
+":
+CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP):
+Invalid wire type for CPPTYPE_INT32:
+Invalid wire type for CPPTYPE_INT64:
+Invalid wire type for CPPTYPE_UINT32:
+Invalid wire type for CPPTYPE_UINT64:
+Warning: Unused import: "
+" imports "
+" which is not used.
+GetEmptyStringAlreadyInited
+./google/protobuf/generated_message_util.h
+empty_string_ != NULL
+set_label
+./google/protobuf/descriptor.pb.h
+::google::protobuf::FieldDescriptorProto_Label_IsValid(value)
+set_type
+::google::protobuf::FieldDescriptorProto_Type_IsValid(value)
+$0option $1;
+(.
+=
+./google/protobuf/repeated_field.h
+CHECK failed: (index) >= (0):
+CHECK failed: (index) < (size()):
+" not previously defined in symbols_by_name_, but was defined in symbols_by_parent_; this shouldn't be possible.
+" is already defined.
+" is already defined in "
+" is already defined in file "
+.placeholder.proto
+.PLACEHOLDER_VALUE
+CHECK failed: uninterpreted_options_field != NULL:
+No field named "uninterpreted_option" in the Options proto.
+CHECK failed: original_uninterpreted_options_field != NULL:
+CHECK failed: options->ParseFromString(buf):
+Protocol message serialized itself in invalid fashion.
+length_delimited
+./google/protobuf/unknown_field_set.h
+type() == TYPE_LENGTH_DELIMITED
+operator->
+ptr_ != NULL
+operator*
+google/protobuf/descriptor.proto
+google/protobuf/descriptor.pb.cc
+package
+dependency
+extendee
+type_name
+default_value
+input_type
+output_type
+java_package
+java_outer_classname
+go_package
+experimental_map_key
+name_part
+identifier_value
+aggregate_value
+leading_comments
+trailing_comments
+set_optimize_for
+::google::protobuf::FileOptions_OptimizeMode_IsValid(value)
+set_ctype
+::google::protobuf::FieldOptions_CType_IsValid(value)
+CHECK failed: (size()) < (Capacity()):
+google/protobuf/descriptor_database.cc
+Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
+File already exists in database:
+Invalid symbol name:
+Symbol name "
+" conflicts with the existing symbol "
+Extension conflicts with extension already in database: extend
+}
+google/protobuf/dynamic_message.cc
+CHECK failed: is_prototype():
+operator[]
+i >= 0
+array_ != NULL
+google/protobuf/extension_set_heavy.cc
+CHECK failed: ((iter->second).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
+CHECK failed: (cpp_type((iter->second).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: (cpp_type(extension->type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_OPTIONAL):
+CHECK failed: (cpp_type((*extension).type)) == (FieldDescriptor::CPPTYPE_MESSAGE):
+CHECK failed: ((*extension).is_repeated ? FieldDescriptor::LABEL_REPEATED : FieldDescriptor::LABEL_OPTIONAL) == (FieldDescriptor::LABEL_REPEATED):
+CHECK failed: prototype != NULL:
+CHECK failed: output->message_prototype != NULL:
+Extension factory's GetPrototype() returned NULL for extension:
+Non-primitive types can't be packed.
+CHECK failed: type > 0 && type <= FieldDescriptor::MAX_TYPE:
+google/protobuf/generated_message_reflection.cc
+Unimplemented type:
+CHECK failed: (message1->GetReflection()) == (this):
+First argument to Swap() (of type "
+") is not compatible with this reflection object (which is for type "
+").  Note that the exact same class is required; not just the same descriptor.
+CHECK failed: (message2->GetReflection()) == (this):
+Second argument to Swap() (of type "
+First argument to SwapFields() (of type "
+Second argument to SwapFields() (of type "
+HasField
+Field does not match message type.
+Field is repeated; the method requires a singular field.
+FieldSize
+Field is singular; the method requires a repeated field.
+Can't get here.
+ClearField
+RemoveLast
+ReleaseLast
+Swap
+GetInt32
+SetInt32
+GetRepeatedInt32
+SetRepeatedInt32
+AddInt32
+GetInt64
+SetInt64
+GetRepeatedInt64
+SetRepeatedInt64
+AddInt64
+GetUInt32
+SetUInt32
+GetRepeatedUInt32
+SetRepeatedUInt32
+AddUInt32
+GetUInt64
+SetUInt64
+GetRepeatedUInt64
+SetRepeatedUInt64
+AddUInt64
+GetFloat
+SetFloat
+GetRepeatedFloat
+SetRepeatedFloat
+AddFloat
+GetDouble
+SetDouble
+GetRepeatedDouble
+SetRepeatedDouble
+AddDouble
+GetBool
+SetBool
+GetRepeatedBool
+SetRepeatedBool
+AddBool
+GetString
+GetStringReference
+GetRepeatedString
+GetRepeatedStringReference
+SetRepeatedString
+AddString
+GetEnum
+Value
+is not valid for field
+of type
+SetEnum
+GetRepeatedEnum
+SetRepeatedEnum
+AddEnum
+GetMessage
+SetAllocatedMessage
+ReleaseMessage
+GetRepeatedMessage
+MutableRepeatedMessage
+AddMessage
+"MutableRawRepeatedField"
+MutableRawRepeatedField
+CHECK failed: (field->options().ctype()) == (ctype):
+subtype mismatch
+CHECK failed: (field->message_type()) == (desc):
+wrong submessage type
+Protocol Buffer reflection usage error:  Method      : google::protobuf::Reflection::
+Message type:
+Field       :
+Problem     :
+Problem     : Field is not the right type for this message:    Expected  :
+Field type:
+INVALID_CPPTYPE
+CPPTYPE_INT32
+CPPTYPE_INT64
+CPPTYPE_UINT32
+CPPTYPE_UINT64
+CPPTYPE_DOUBLE
+CPPTYPE_FLOAT
+CPPTYPE_BOOL
+CPPTYPE_ENUM
+CPPTYPE_STRING
+CPPTYPE_MESSAGE
+Problem     : Enum value did not match field type:    Expected  :
+Actual    :
+CHECK failed: (extensions_offset_) != (-1):
+CHECK failed: (current_size_) > (0):
+google/protobuf/message.cc
+CHECK failed: (from.GetDescriptor()) == (descriptor):
+: Tried to merge from a message with a different type.  to:
+, from:
+: Tried to copy from a message with a different type. to:
+CHECK failed: IsInitialized():
+File appears to be in generated pool but wasn't registered:
+Type appears to be in generated pool but wasn't
+registered:
+File is already registered:
+CHECK failed: (descriptor->file()->pool()) == (DescriptorPool::generated_pool()):
+Tried to register a non-generated type with the generated type registry.
+Type is already registered:
+down_cast
+./google/protobuf/stubs/common.h
+f == NULL || dynamic_cast<To>(f) != NULL
+google/protobuf/reflection_ops.cc
+CHECK failed: (&from) != (to):
+CHECK failed: (to->GetDescriptor()) == (descriptor):
+Tried to merge messages of different types
+(merge
+to
+google/protobuf/text_format.cc
+Message missing required fields:
+{
+}
+CHECK failed: output:
+output specified is NULL
+: [
+]
+CHECK failed: field->is_repeated() || (index == -1):
+Index must be -1 for non-repeated fields
+CHECK failed: (field->type()) == (FieldDescriptor::TYPE_BYTES):
+: 0x
+: "
+Warning parsing text-format
+Extension "
+" is not defined or is not an extension of "
+Message type "
+" has no field named "
+CHECK failed: allow_unknown_field_:
+Non-repeated field "
+" is specified multiple times.
+Field "
+" is specified along with field "
+", another member of oneof "
+text format contains deprecated field "
+Expected "
+", found "
+infinity
+Invalid float number:
+True
+False
+Invalid value for boolean field "
+". Value: "
+Unknown enumeration value of "
+" for field "
+Reached an unintended state: CPPTYPE_MESSAGE
+Error parsing text-format
+Outdent() without matching Indent().
+google/protobuf/unknown_field_set.cc
+CHECK failed: fields_ != NULL:
+CHECK failed: (TYPE_LENGTH_DELIMITED) == (type()):
+google/protobuf/wire_format.cc
+CHECK failed: (output->ByteCount()) == (expected_endpoint):
+: Protocol message serialized to a size different from what was originally expected.  Perhaps it was modified by another thread during serialization?
+parsing
+serializing
+'%s'
+String field
+contains invalid
+UTF-8 data when
+a protocol
+buffer. Use the 'bytes' type if you intend to send raw
+bytes.
+varint
+type() == TYPE_VARINT
+type() == TYPE_FIXED32
+type() == TYPE_FIXED64
+type() == TYPE_GROUP
+%.1f
+google/protobuf/io/strtod.cc
+CHECK failed: (temp[0]) == ('1'):
+CHECK failed: (temp[size-1]) == ('5'):
+CHECK failed: (size) <= (6):
+Interpreting non ascii codepoint %d.
+google/protobuf/io/tokenizer.cc
+Tokenizer::ParseInteger() passed text that could not have been tokenized as an integer:
+Tokenizer::ParseFloat() passed text that could not have been tokenized as a float:
+Tokenizer::ParseStringAppend() passed text that could not have been tokenized as a string:
+\U%08x
+OPENSSL_ia32cap
+%lli
+:
+"
+\
+\\
+;
+,
+true
+no
+Bogus message code %d
+ALIGN_TYPE is wrong, please fix
+MAX_ALLOC_CHUNK is wrong, please fix
+Bogus buffer control mode
+Invalid component ID %d in SOS
+Invalid crop request
+DCT coefficient out of range
+DCT scaled block size %dx%d not supported
+Component index %d: mismatching sampling ratio %d:%d, %d:%d, %c
+Bogus Huffman table definition
+Bogus input colorspace
+Bogus JPEG colorspace
+Bogus marker length
+Wrong JPEG library version: library is %d, caller expects %d
+Sampling factors too large for interleaved scan
+Invalid memory pool code %d
+Unsupported JPEG data precision %d
+Invalid progressive parameters Ss=%d Se=%d Ah=%d Al=%d
+Invalid progressive parameters at scan script entry %d
+Bogus sampling factors
+Invalid scan script at entry %d
+Improper call to JPEG library in state %d
+JPEG parameter struct mismatch: library thinks size is %u, caller expects %u
+Bogus virtual array access
+Buffer passed to JPEG library is too small
+Suspension not allowed here
+CCIR601 sampling not implemented yet
+Too many color components: %d, max %d
+Unsupported color conversion request
+Bogus DAC index %d
+Bogus DAC value 0x%x
+Bogus DHT index %d
+Bogus DQT index %d
+Empty JPEG image (DNL not supported)
+Read from EMS failed
+Write to EMS failed
+Didn't expect more than one scan
+Input file read error
+Output file write error --- out of disk space?
+Fractional sampling not implemented yet
+Huffman code size table overflow
+Missing Huffman code table entry
+Maximum supported image dimension is %u pixels
+Empty input file
+Premature end of input file
+Cannot transcode due to multiple use of quantization table %d
+Scan script does not transmit all data
+Invalid color quantization mode change
+Not implemented yet
+Requested feature was omitted at compile time
+Arithmetic table 0x%02x was not defined
+Backing store not supported
+Huffman table 0x%02x was not defined
+JPEG datastream contains no image
+Quantization table 0x%02x was not defined
+Not a JPEG file: starts with 0x%02x 0x%02x
+Insufficient memory (case %d)
+Cannot quantize more than %d color components
+Cannot quantize to fewer than %d colors
+Cannot quantize to more than %d colors
+Invalid JPEG file structure: two SOF markers
+Invalid JPEG file structure: missing SOS marker
+Unsupported JPEG process: SOF type 0x%02x
+Invalid JPEG file structure: two SOI markers
+Invalid JPEG file structure: SOS before SOF
+Failed to create temporary file %s
+Read failed on temporary file
+Seek failed on temporary file
+Write failed on temporary file --- out of disk space?
+Application transferred too few scanlines
+Unsupported marker type 0x%02x
+Virtual array controller messed up
+Image too wide for this implementation
+Read from XMS failed
+Write to XMS failed
+Copyright (C) 2010, Thomas G. Lane, Guido Vollbeding
+8b  16-May-2010
+Caution: quantization tables are too coarse for baseline JPEG
+Adobe APP14 marker: version %d, flags 0x%04x 0x%04x, transform %d
+Unknown APP0 marker (not JFIF), length %u
+Unknown APP14 marker (not Adobe), length %u
+Define Arithmetic Table 0x%02x: 0x%02x
+Define Huffman Table 0x%02x
+Define Quantization Table %d  precision %d
+Define Restart Interval %u
+Freed EMS handle %u
+Obtained EMS handle %u
+End Of Image
+%3d %3d %3d %3d %3d %3d %3d %3d
+JFIF APP0 marker: version %d.%02d, density %dx%d  %d
+Warning: thumbnail image size does not match data length %u
+JFIF extension marker: type 0x%02x, length %u
+with %d x %d thumbnail image
+Miscellaneous marker 0x%02x, length %u
+Unexpected marker 0x%02x
+%4u %4u %4u %4u %4u %4u %4u %4u
+Quantizing to %d = %d*%d*%d colors
+Quantizing to %d colors
+Selected %d colors for quantization
+At marker 0x%02x, recovery action %d
+RST%d
+Smoothing not supported with nonstandard sampling ratios
+Start Of Frame 0x%02x: width=%u, height=%u, components=%d
+Component %d: %dhx%dv q=%d
+Start of Image
+Start Of Scan: %d components
+Component %d: dc=%d ac=%d
+Ss=%d, Se=%d, Ah=%d, Al=%d
+Closed temporary file %s
+Opened temporary file %s
+JFIF extension marker: JPEG-compressed thumbnail image, length %u
+JFIF extension marker: palette thumbnail image, length %u
+JFIF extension marker: RGB thumbnail image, length %u
+Unrecognized component IDs %d %d %d, assuming YCbCr
+Freed XMS handle %u
+Obtained XMS handle %u
+Unknown Adobe color transform code %d
+Corrupt JPEG data: bad arithmetic code
+Inconsistent progression sequence for component %d coefficient %d
+Corrupt JPEG data: %u extraneous bytes before marker 0x%02x
+Corrupt JPEG data: premature end of data segment
+Corrupt JPEG data: bad Huffman code
+Warning: unknown JFIF revision number %d.%02d
+Premature end of JPEG file
+Corrupt JPEG data: found marker 0x%02x instead of RST%d
+Invalid SOS parameters for sequential JPEG
+Application transferred too many scanlines
+JPEGMEM
+%ld%c
+UTF8)
+UTF)
+UCP)
+NO_AUTO_POSSESS)
+NO_START_OPT)
+LIMIT_MATCH=
+LIMIT_RECURSION=
+CR)
+LF)
+CRLF)
+ANY)
+ANYCRLF)
+BSR_ANYCRLF)
+BSR_UNICODE)
+[:<:]]
+[:>:]]
+Q\E
+DEFINE
+Error text not found (please report)
+(?:
+)\z
+Replace
+pcrecpp.cc
+vec[0] >= 0
+vec[1] >= 0
+GlobalReplace
+matchstart >= start
+matchend >= matchstart
+\0
+DoMatchImpl
+(1 + n) * 3 <= vecsize
+matches >= 0
+DoMatch
+n >= 0
+NumberOfCapturingGroups
+pcre_retval == 0
+NewlineMode
+NULL == "Unexpected return value from pcre_config(NEWLINE)"
+Potential overflow in png_zalloc()
+Application built with libpng-
+but running with
+Ignoring invalid time value
+Ignoring attempt to set negative chromaticity value
+Invalid cHRM white point
+Invalid cHRM red point
+Invalid cHRM green point
+Invalid cHRM blue point
+Ignoring attempt to set cHRM RGB triangle with zero area
+extreme cHRM chunk cannot be converted to tristimulus values
+internal error in png_XYZ_from_xy
+Image width is zero in IHDR
+Invalid image width in IHDR
+Image width exceeds user limit in IHDR
+Image height is zero in IHDR
+Invalid image height in IHDR
+Image height exceeds user limit in IHDR
+Invalid bit depth in IHDR
+Invalid color type in IHDR
+Invalid color type/bit depth combination in IHDR
+Unknown interlace method in IHDR
+Unknown compression method in IHDR
+MNG features are not allowed in a PNG datastream
+Unknown filter method in IHDR
+Invalid filter method in IHDR
+Invalid IHDR data
+gamma table being rebuilt
+Out of range gamma value ignored
+Invalid palette size, hIST allocation skipped
+Insufficient memory for hIST chunk data
+pCAL: invalid purpose keyword
+Invalid pCAL equation type
+Invalid format for pCAL parameter
+Insufficient memory for pCAL purpose
+Insufficient memory for pCAL units
+Insufficient memory for pCAL params
+Insufficient memory for pCAL parameter
+Invalid sCAL unit
+Invalid sCAL width
+Invalid sCAL height
+Memory allocation failed while processing sCAL
+Invalid palette length
+iCCP: invalid keyword
+Insufficient memory to process iCCP chunk
+Insufficient memory to process iCCP profile
+too many text chunks
+text compression mode is out of range
+invalid text keyword
+Ignoring invalid num_trans value
+tRNS chunk has out-of-range samples for bit_depth
+No memory for sPLT palettes
+sPLT: invalid keyword
+Out of memory while processing sPLT chunk
+Out of memory while processing unknown chunk
+PNG unsigned integer out of range
+Not a PNG file
+PNG file corrupted by ASCII conversion
+CRC error
+invalid chunklength
+Exceeded size limit while expanding chunk
+png_inflate logic error
+Not enough memory to decompress chunk
+Unknown compression type @1
+Out of place IHDR
+Invalid IHDR chunk
+Missing IHDR before PLTE
+Invalid PLTE after IDAT
+Duplicate PLTE chunk
+Ignoring PLTE chunk in grayscale PNG
+Invalid palette chunk
+Truncating incorrect tRNS chunk length
+Truncating incorrect info tRNS chunk length
+No image in file
+Incorrect IEND chunk length
+Missing IHDR before gAMA
+Invalid gAMA after IDAT
+Out of place gAMA chunk
+Duplicate gAMA chunk
+Incorrect gAMA chunk length
+Ignoring gAMA chunk with out of range gamma
+Ignoring incorrect gAMA value @1 when sRGB is also present
+Missing IHDR before sBIT
+Invalid sBIT after IDAT
+Out of place sBIT chunk
+Duplicate sBIT chunk
+Incorrect sBIT chunk length
+Missing IHDR before cHRM
+Invalid cHRM after IDAT
+Out of place cHRM chunk
+Duplicate cHRM chunk
+Incorrect cHRM chunk length
+Ignoring cHRM chunk with negative chromaticities
+Ignoring incorrect cHRM white(@1,@2) r(@3,@4)g(@5,@6)b(@7,@8) when sRGB is also present
+internal error handling cHRM coefficients
+internal error handling cHRM->XYZ
+Missing IHDR before sRGB
+Invalid sRGB after IDAT
+Out of place sRGB chunk
+Duplicate sRGB chunk
+Incorrect sRGB chunk length
+Unknown sRGB intent
+Ignoring incorrect cHRM value when sRGB is also present
+Missing IHDR before iCCP
+Invalid iCCP after IDAT
+Out of place iCCP chunk
+Duplicate iCCP chunk
+Malformed iCCP chunk
+Ignoring nonzero compression type in iCCP chunk
+Profile size field missing from iCCP chunk
+Ignoring iCCP chunk with declared size = @1 and actual length = @2
+No space in chunk cache for sPLT
+Missing IHDR before sPLT
+Invalid sPLT after IDAT
+malformed sPLT chunk
+sPLT chunk has bad length
+sPLT chunk requires too much memory
+Missing IHDR before tRNS
+Invalid tRNS after IDAT
+Duplicate tRNS chunk
+Incorrect tRNS chunk length
+Missing PLTE before tRNS
+Zero length tRNS chunk
+tRNS chunk not allowed with alpha channel
+Missing IHDR before bKGD
+Invalid bKGD after IDAT
+Missing PLTE before bKGD
+Duplicate bKGD chunk
+Incorrect bKGD chunk length
+Incorrect bKGD chunk index value
+Missing IHDR before hIST
+Invalid hIST after IDAT
+Missing PLTE before hIST
+Duplicate hIST chunk
+Incorrect hIST chunk length
+Missing IHDR before pHYs
+Invalid pHYs after IDAT
+Duplicate pHYs chunk
+Incorrect pHYs chunk length
+Missing IHDR before oFFs
+Invalid oFFs after IDAT
+Duplicate oFFs chunk
+Incorrect oFFs chunk length
+Missing IHDR before pCAL
+Invalid pCAL after IDAT
+Duplicate pCAL chunk
+No memory for pCAL purpose
+Invalid pCAL data
+Invalid pCAL parameters for equation type
+Unrecognized equation type for pCAL chunk
+No memory for pCAL params
+Missing IHDR before sCAL
+Invalid sCAL after IDAT
+Duplicate sCAL chunk
+sCAL chunk too short
+Out of memory while processing sCAL chunk
+Invalid sCAL ignored: invalid unit
+Invalid sCAL chunk ignored: bad width format
+Invalid sCAL chunk ignored: non-positive width
+Invalid sCAL chunk ignored: bad height format
+Invalid sCAL chunk ignored: non-positive height
+Out of place tIME chunk
+Duplicate tIME chunk
+Incorrect tIME chunk length
+No space in chunk cache for tEXt
+Missing IHDR before tEXt
+No memory to process text chunk
+Not enough memory to process text chunk
+Insufficient memory to process text chunk
+No space in chunk cache for zTXt
+Missing IHDR before zTXt
+Out of memory processing zTXt chunk
+Truncated zTXt chunk
+Unknown compression type in zTXt chunk
+Not enough memory to process zTXt chunk
+Insufficient memory to store zTXt chunk
+No space in chunk cache for iTXt
+Missing IHDR before iTXt
+No memory to process iTXt chunk
+Truncated iTXt chunk
+invalid iTXt compression flag
+unknown iTXt compression type
+Malformed iTXt chunk
+Not enough memory to process iTXt chunk
+Insufficient memory to store iTXt chunk
+No space in chunk cache for unknown chunk
+unknown critical chunk
+error in user chunk
+invalid chunk type
+internal row logic error
+internal row size calculation error
+internal row width error
+invalid user transform pixel depth
+Decompression Error
+Extra compression data
+Row has too many bytes to allocate in memory
+Buffer error in compressed datastream
+Data error in compressed datastream
+Incomplete compressed datastream
+1.2.5
+zlib memory error
+zlib stream error
+zlib version error
+Unknown zlib error
+Missing IHDR before IDAT
+Missing PLTE before IDAT
+Invalid attempt to read row data
+Not enough image data
+Extra compressed data
+Decompression error
+bad adaptive filter value
+sequential row overflow
+internal sequential row size calculation error
+Interlace handling should be turned on when using png_read_image
+Read palette index exceeding num_palette
+Too many IDATs found
+Call to NULL read function
+Read Error
+Can't set both read_data_fn and write_data_fn in the same structure
+libpng does not support gamma+background+rgb_to_gray
+invalid background gamma type
+Palette is NULL in indexed image
+NULL row buffer
+Uninitialized row
+png_do_rgb_to_gray found nongray pixel
+png_do_quantize returned rowbytes=0
+png_do_encode_alpha: unexpected call
+Out of Memory
+0123456789ABCDEF
+123456789
+libpng error: %s
+undefined
+libpng warning: %s
+%lld
+htmlmessages.proto
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlmessages.pb.cc
+CHECK failed: file != NULL:
+CHECK failed: (&from) != (this):
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
+CHECK failed: (&other) != (this):
+CUIProtoBufMsg::SerializeCrossProc
+Assertion Failed: unSize < 128 * 1024 * 1024
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
+Assertion Failed: eCmd > 0 && eCmd < eHTMLCommands_None
+Assertion Failed: pBuffer->TellPut() == 0
+AnimatingImagePanel
+frames
+, string image
+m_Frames
+size
+fgcolor
+bgcolor
+xpos
+ypos
+wide
+tall
+Couldn't find script file %s
+northwest
+north
+northeast
+west
+center
+east
+southwest
+south
+southeast
+nw
+n
+ne
+c
+e
+sw
+s
+se
+event
+Couldn't parse script file: expected 'event', found '%s'
+Couldn't parse script file: expected <event name>, found nothing
+{
+Couldn't parse script sequence '%s': expected '{', found '%s'
+animate
+Accel
+Deaccel
+Spline
+Pulse
+Flicker
+runevent
+stopevent
+StopPanelAnimations
+stopanimation
+SetFont
+SetTexture
+SetString
+Couldn't parse script sequence '%s': expected <anim command>, found '%s'
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/AnimationController.cpp
+Assertion Failed: panel != NULL
+AnimationController
+m_Sequences
+m_Sequences[ iSequence ].cmdList
+m_ActiveAnimations
+m_PostedMessages
+vgui::
+vgui::CPanelAnimationDictionary
+m_AnimationMaps
+m_AnimationMaps[ iAnimationMap ].map->entries
+m_PanelAnimationMapPool
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
+vgui layout debugger
+debug_selection
+debug_container
+debug_containerfile
+debug_noselection
+containerlabel
+#debug_container
+selectionlabel
+#debug_noselection
+fileurl
+#debug_containerfile
+tabs
+styles_tab
+Styles
+details_tab
+resource/layout/layoutdebugdialog_details.layout
+Details
+layout_tab
+Layout
+groups_tab
+languages_tab
+Localization
+error_tab
+Errors
+panel_list
+pos
+#
+param
+parameters
+groups_list
+group
+No control groups specified
+file
+style
+file_url
+style_list
+details
+no control selected
+style_flags
+StyleFlagFilter
+styleflags
+all styles
+base style
+hover
+focus
+active
+selected
+disabled
+scrollbar
+framefocus
+empty
+error_text
+resource/layout/layoutdebugdialog.layout
+no layout script for this panel
+no associated editable control
+container
+%s / %s
+< no direct container >
+selection_name
+selection_class
+#debug_selection
+no selected control
+parent_list
+ResizeColumnToContents
+column
+no style configured
+vgui editor - "%s"
+%s is currently read-only.Did you wish to check out file from P4?
+Check out
+OpenFileForEdit
+opening file for edit %s
+p4
+edit %s
+CheckForLayoutFilesChanges
+ZooDialog
+LayoutDebugDialog
+%s="%s"
+%s="..."
+HotKeyPressed
+modifiers
+Frame (vgui panel zoo)
+leftPanel
+PropertySheet
+PageTab
+PageTab (empty)
+Divider
+Divider2
+Button (disabled)
+CheckButton (disabled)
+ComboBox scrollbar
+MenuBar
+MenuItem
+MenuItem (disabled)
+MenuItem (with check)
+MenuItem (cascade)
+MenuButton2
+MenuButton3
+CheckButtonList
+ListPanel
+ListPanelColumnHeader
+Score
+Time
+player
+RichText
+GraphPanel
+PanelGrid
+item%d
+Grid item #%d
+ZooPropertyPage
+CBitmapImagePanel
+imagecolor
+imageAlignment
+preserveAspectRatio
+filtered
+, string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
+BitmapImagePanel
+CBuildFactoryHelper:  Factory for '%s' already exists!!!!
+Assertion Failed: func
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/BuildFactoryHelper.cpp
+Assertion Failed: className
+Assertion Failed: panel
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/BuildGroup.cpp
+Assertion Failed: m_pkvSettings
+[%s] applying key '%s', has changed from '%s' to '%s'
+Assertion Failed: controlKeys
+vgui::BuildGroup
+_panelDar
+m_strResourceName
+m_list
+m_unused
+.layout
+controls
+CUtlHandleTable
+url
+CanBeDefaultButton
+GetCommand
+, string command, int default
+_actionMessage
+PressButton
+CheckButton
+CheckButton::OnThink()
+vgui::CheckButton
+CheckButtonList.CheckButton
+CheckButtonListControls
+ComboMenu
+ComboBtn
+u
+ButtonClicked
+ComboBoxButton
+ActivateItem
+Assertion Failed: s_pFileSystemInterface
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/controls.cpp
+en_US.UTF-8
+VGUI_Panel010
+VGUI_Surface039
+VGUI_NotificationManager002
+VGUI_Scheme010
+VGUI_System010
+VGUI_Input005
+VGUI_Localize003
+DirTree
+DriveCombo
+SelectButton
+#VGui_Select
+CreateButton
+#VGui_CreateFolder
+Select
+Create
+resource/icon_folder
+resource/icon_folder_selected
+drive
+root
+Image
+SelectedImage
+Expand
+#vgui_CreateDirectoryFail_Title
+#vgui_CreateDirectoryFail_AlreadyExists
+#vgui_CreateDirectoryFail_Info
+DirectorySelectDialog
+TreeViewItemSelected
+CreateDirectory
+DirectoryTreeView
+TreeView
+#vgui_choosedirectoryname
+#vgui_ok
+#vgui_cancel
+CreateDirectoryDialog
+Hotkey
+ControlFactory
+PanelPtr
+SetText
+SetState
+GetState
+GetText
+Assertion Failed: m_nSuppressDialogVariablesMessages >= 1
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/EditablePanel.cpp
+EditablePanel::PerformLayout()
+%s:hscroll
+%s:vscroll
+EditablePanel::LayoutCmd_CreateRegion()
+Invalid parent region %s specified for region %s in panel %s
+EditablePanel::LayoutCmd_Place()
+Empty
+Assertion Failed: cChildren <= SHRT_MAX
+unable to find control '%s'
+resource/layout/%s_%s.layout
+resource/layout/%s.layout
+m_sConfigName
+m_pBuildGroup
+m_pDialogVariables
+m_dictRegions
+m_sLayoutFile
+m_vecLayoutCmds
+m_vecLayoutCmds[i].m_vecControls
+m_sParserWarning
+m_mapGroupsVisible
+ScrollBarSliderMoved
+LoadDefaultControlSettings
+FileOpenDialog
+FullPathEdit
+FileList
+FileNameEdit
+FileTypeCombo
+OpenButton
+#FileOpenDialog_Open
+#FileOpenDialog_Save
+#FileOpenDialog_Cancel
+FolderUpButton
+#FileOpenDialog_ToolTip_Up
+NewFolderButton
+#FileOpenDialog_ToolTip_NewFolder
+LookInLabel
+#FileOpenDialog_Look_in
+FileNameLabel
+#FileOpenDialog_File_name
+FileTypeLabel
+#FileOpenDialog_File_type
+FolderIcon
+resource/FileOpenDialog.res
+OnOpen
+OnFolderUp
+OnNewFolder
+PopulateFileList
+PopulateDriveList
+resource/icon_folderup
+resource/icon_newfolder
+resource/icon_file
+#FileOpenDialog_NewFolder_InputTitle
+#FileOpenDialog_NewFolderPrompt
+#FileOpenDialog_NewFolder_DefaultName
+NewFolder
+filterinfo
+Couldn't format time value %llu
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/FileOpenDialog.cpp
+Assertion Failed: curFilter[0] == '*' && curFilter[1] == '.'
+.app
+FileCompletionEdit
+PopulateFileNameCompletion
+ListItemSelected
+CFileOpenListPanel
+#FileOpenDialog_Col_Name
+filesize
+#FileOpenDialog_Col_Size
+type
+#FileOpenDialog_Col_Type
+modified
+#FileOpenDialog_Col_DateModified
+created
+#FileOpenDialog_Col_DateCreated
+attributes
+#FileOpenDialog_Col_Attributes
+filesize64
+modified64
+created64
+#FileOpenDialog_FileType_Folder
+frame_captiongrip
+topGrip
+bottomGrip
+leftGrip
+rightGrip
+tlGrip
+trGrip
+blGrip
+frame_brGrip
+FrameBRGripPanel
+frame_title
+#Frame_Untitled
+frame_minimize
+Minimize
+frame_maximize
+Maximize
+frame_mintosystray
+MinimizeToSysTray
+frame_close
+CloseFrameButtonPressed
+frame_menu
+BgColor
+Assertion Failed: title
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/Frame.cpp
+Frame::SetTitle - vgui::localize not initialized
+BaseControls
+FrameTitleBar.SmallFont
+FrameTitleBar.Font
+Frame.TransitionEffectTime
+Frame.FocusTransitionEffectTime
+Frame.OnDragAlphaDelayTime
+Frame.OnDragAlphaMultiplier
+Frame.ClientInsetX
+Frame.ClientInsetY
+Frame.UsesAlphaBlending
+LayoutTemplates
+Frame::ApplyLayoutTemplate() : couldn't find subpanel '%s' as specified in template '%s'
+settitlebarvisible
+frametitle
+framesettitlebarvisible
+closeonescape
+maximizebuttonvisible
+sizeable
+, string title
+CloseModal
+#SysMenu_Minimize
+#SysMenu_Maximize
+#SysMenu_Close
+FlashWindow
+CloseFrameHotKeyPressed
+FrameRestoreButton
+Activate
+CloseExternal
+WindowRestored
+SetTitle
+OnTaskBarChanged
+OnAppShutdown
+WindowMaximized
+GripPanel
+CaptionGripPanel
+IsResizeBorder
+Frame.AutoSnapRange
+IsPointInCaptureRegion
+SnapRange
+CaptionGripPanel::OnThink()
+AppleActionOnDoubleClick
+AppleMiniaturizeOnDoubleClick
+Assertion Failed: wide > 0
+Assertion Failed: tall > 0
+Assertion Failed: boundWide >= 0
+Assertion Failed: boundTall >= 0
+FrameTitle
+FrameButton
+FrameMinimizeButton
+m_pFriendButtons
+FrameMaximizeButton
+FrameCloseButton
+FrameSystemButton
+FrameSystemButton.Icon
+FrameSystemButton.DisabledIcon
+Assertion Failed: lowRange < highRange
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/GraphPanel.cpp
+m_Samples
+m_RangeList
+clearbutton
+TextEntry.CursorColor
+Assertion Failed: nSize > 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/HotKeyEntry.cpp
+Ctrl
+Alt
+Shift
+Win
+HotKeyEntry
+resource/icon_clear_field
+HotkeyEntryClearButton
+resource/webkit.css
+ComboBoxHost
+contextmenu
+#vgui_HTMLBack
+back
+#vgui_HTMLForward
+forward
+#vgui_HTMLReload
+reload
+#vgui_HTMLStop
+stop
+#vgui_HTMLCopyUrl
+copyurl
+#vgui_HTMLCopyLink
+copylink
+#TextEntry_Copy
+copy
+#TextEntry_Paste
+paste
+#vgui_HTMLViewSource
+viewsource
+#vgui_HTMLOpenDevTools
+toggledevtools
+#vgui_HTMLInspectElement
+inspectelement
+#Steam_Browser_Disabled_NoBrowser
+#Steam_Browser_Disabled
+BrowserDisabledMessage
+BrowserDisabledKBLink
+#Steam_Browser_Disabled_KB
+#Steam_Browser_Disabled_KB_URL
+HTML::Paint()
+HTML.SearchInsetY
+HTML.SearchInsetX
+HTML.SearchTall
+HTML.SearchWide
+%s%s.html
+steam\cached\offline_
+%senglish.html
+file://%s
+AcceptPanel
+HTMLFramelessWrapper
+html-findbar
+HTML.SearchAnimationTime
+DeletePanel
+FindBar
+Assertion Failed: ulPlatformParentWindow == 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
+FindEntry
+FindCount
+resource/layout/htmlfindbar.layout
+close
+previous
+next
+#vgui_Webkit_error_title
+#vgui_Webkit_error_header
+#vgui_Webkit_cachemiss
+#vgui_Webkit_badurl
+#vgui_Webkit_connectionproblem
+#vgui_Webkit_proxyconnectionproblem
+#vgui_Webkit_unknown
+Assertion Failed: m_iHTMLTextureID
+Assertion Failed: !m_pSharedPaintBuffers->BLockedForRead()
+glTextureRangeAPPLE
+_blank
+_new
+OnStartRequest
+isredirect
+*%s
+findcount
+findactive
+DismissJSDialog
+result
+profile_on triggered by F1
+profile_off triggered by F2
+SDL_VIDEO_MINIMIZE_ON_FOCUS_LOSS
+SDL_TIMER_RESOLUTION
+Steam HTML FullScreen
+SDL_CreateWindow failed
+SDL_GetWindowWMInfo failed
+SDL_GetWindowWMInfo returned an unsupported subsystem (we require Cocoa)
+SDL_GL_CreateContext failed
+glGenTextures failed %d
+BrowserExitFullScreen
+Skipping js method registration, already exists: %s
+Unknown method: %s
+Method call failed: %s
+BrowserDraggableRegionsChanged
+BrowserResizeGripChanged
+BrowserSetWindowPosition
+width
+height
+BrowserHideWindow
+BrowserShowWindow
+BrowserBringWindowToFront
+BrowserSetForegroundWindow
+BrowserMaximizeRestoreWindow
+BrowserMinimizeWindow
+css
+map
+Detected file change in %s
+SetCursor
+cursor
+KeyCodeUnhandled
+FileSelected
+fullpath
+FileSelectionCancelled
+@import
+ftp:
+steam:
+data:image/
+HTMLComboBoxHost
+CHTMLFindBar
+Assertion Failed: m_nLockedIdx >= 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/html/ihtmlchrome.h
+Assertion Failed: m_nLockedIdx == -1
+Assertion Failed: iNewReadIndex != 3
+HtmlPopup
+resource/layout/htmlpopup.layout
+PopupHTML
+m_Images
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/ImagePanel.cpp
+image
+fillcolor
+gradientStart
+gradientEnd
+gradientVertical
+appearance
+fit
+image-width-only
+image-height-only
+scaling
+left
+right
+horizontal-align
+top
+bottom
+vertical-align
+Unknown scaling '%s'; valid values are none, panel, image, fit
+scaleImage
+%d %d %d %d
+, int zpos, string image, string border, string fillcolor, bool scaleImage, bool gradientVertical, color gradientStart, color gradientEnd
+m_sImageName
+m_sColorName
+m_sGradientStart
+m_sGradientEnd
+%s%02d
+ThrobberImagePanel
+m_sLoopImagePrefix
+m_sRampUpImagePrefix
+m_sRampDownImagePrefix
+m_sNoActivityImage
+m_sLastImageSet
+candidate
+IMECandidatesMenu
+menuname
+handleValue
+IMECandidateSelected
+IMECandidate
+ImeCompositionString
+ImeCommitString
+ImeCancelComposition
+IMECandidateList
+ShowIMECandidates
+HideIMECandidates
+UpdateIMECandidates
+Prompt
+Text
+#VGui_Cancel
+#VGui_OK
+InputDialog
+LabelDull
+LabelBright
+Label::Paint()
+Assertion Failed: _imageDar.IsValidIndex( index )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/Label.cpp
+labelText
+north-west
+north-east
+south-west
+south-east
+textAlignment
+associate
+wrap
+labeltext
+textalignment
+#var_%s
+dulltext
+brighttext
+, string labelText, string associate, alignment textAlignment, int wrap, string font, string flow_right
+_textImage
+_imageDar
+_associateName
+m_sTextSetting
+vgui::ListPanelColumnHeader
+vgui::ListPanelItem
+m_pKV
+ListPanelCheckBox
+OpenColumnChoiceMenu
+uparrow
+CheckAllItems
+ColumnResized
+HorizScrollBar
+VertScrollBar
+ListImage
+ListPanelInterior
+ColumnSelectButton
+Assertion Failed: minWidth <= width
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/ListPanel.cpp
+Assertion Failed: maxWidth >= width
+Check
+ListPanel::AddColumnHeader() can only have one checkable column, which must be called 'check'
+ListPanel column does not support both CUSTOMPANEL and CHECKABLE at the same time
+SetSortColumn
+Assertion Failed: m_pImageList
+ListPanel::AddItem
+imageSelected
+check
+ItemsChecked
+itemid
+Assertion Failed: m_vecSections.IsValidIndex(iSection)
+ListPanel::ApplyItemChanges
+ListPanel::RemoveItem
+ItemDeselected
+Assertion Failed: !m_SelectedItems.HasElement( itemID )
+%s_url
+Assertion Failed: m_pTextImage
+Assertion Failed: m_pImagePanel
+ListPanel::PerformLayout()
+Assertion Failed: m_VisibleItems.Count() == m_vecVisibleItemsYPos.Count()
+ListPanel::UpdateColumnWidths()
+ListPanel::CalculateVisibleRowPositions()
+ListPanel::PaintInterior()
+CustomStyle
+cellcolor
+Assertion Failed: m_VisibleItems.IsValidIndex( iItem )
+rowheight
+ListPanel.TextColor
+ListPanel.DisabledTextColor
+ListPanel.SelectedTextColor
+ListPanel.DisabledSelectedTextColor
+ListPanel.SelectedBgColor
+ListPanel.SelectedOutOfFocusBgColor
+ListPanel.PostSectionLeading
+Assertion Failed: col < m_CurrentColumns.Count()
+ListPanel::SortList()
+ContextMenu
+ToggleColumnVisible
+col
+%s_hidden
+%s_collapsed
+sort_column
+sort_column_secondary
+sort_column_asc
+sort_column_secondary_asc
+ListPanel::OnCheckButtonChecked sanity
+Assertion Failed: bPanelFound
+vgui::ListPanel
+m_ColumnsData
+m_ColumnsData[ iColumn ].m_strCustomStyle
+m_vecSections
+m_vecSections[i].m_sName
+m_CurrentColumns
+m_DataItems
+m_DataItems[ iData ]
+queueAsList
+queueAsList[ iData ]
+m_VisibleItems
+m_vecVisibleItemsYPos
+m_pTextImage
+m_SelectedItems
+m_pImagePanel
+m_VecURLLabels
+m_jumpHandler
+m_pImageList
+ListPanelDragger
+ListPanelColumnSelectButton
+ListPanelSectionHeader
+ListPanelSectionCollapser
+ListPanelCollapserBase
+CollapserChanged
+section
+ListPanelCheckBox::OnThink()
+different KV data types in a single list column
+ListPanelCollapserBase::OnAppearanceChanged()
+ListViewPanel
+Assertion Failed: font
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/ListViewPanel.cpp
+ListViewItemSelected
+ListPanel.BgColor
+ListViewItem
+ListPanel.TextBgColor
+Assertion Failed: m_SeparatorPanels.Count() == 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/Menu.cpp
+Assertion Failed: m_MenuItems.IsValidIndex(itemID)
+Assertion Failed: child
+Assertion Failed: startItem >= 0
+MenuItemSelected
+MenuScrollBar
+KeyModeSet
+Assertion Failed: itemNum >= 0
+MenuItemHighlight
+itemID
+Assertion Failed: row != -1
+MenuSeparator
+Assertion Failed: m_MenuItems.IsValidIndex( itemID )
+Assertion Failed: parent
+Assertion Failed: menu
+Assertion Failed: relative
+vgui::Menu
+m_MenuItems
+m_SortedItems
+m_SeparatorPanels
+m_Separators
+m_VisibleSortedItems
+CursorEnteredMenuItem
+CursorExitedMenuItem
+Assertion Failed: m_bCheckable
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
+menu
+menubar
+Failed to load menu file %s
+divider
+shellcmd
+checkable
+checked
+autocheck
+MenuBarLoaded
+m_vecMenuButtons
+m_sMenuFile
+vgui::MenuBar
+ShellCmd
+downarrow
+MenuClose
+CursorEnteredMenuButton
+VPanel
+showDownArrow
+, int showDownArrow
+Assertion Failed: !(cascadeMenu && checkable)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/MenuItem.cpp
+rightarrow
+Menu.TextInset
+vgui::MenuItem
+m_pUserData
+ArmItem
+DisarmItem
+graphics/chk_menu_item
+MessageBoxText
+#MessageBox_OK
+MessageBox.ButtonHeight
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/Panel.cpp
+OnScreenSizeChanged
+oldwide
+oldtall
+LayoutFileChanged
+LocalizationFileChanged
+Assertion Failed: IsVisible()
+SetAlpha
+Assertion Failed: IsTriplePressAllowed()
+KeyCodePressed
+Assertion Failed: binding
+Assertion Failed: IsValidKeyBindingsContext()
+Assertion Failed: !IsValidKeyBindingsContext() || handle == GetKeyBindingsContext()
+KeyCodeTyped
+KeyTyped
+unichar
+KeyCodeReleased
+Panel::OnThink
+DropContext
+MouseScrolled
+delta
+KeyFocusTicked
+OnMouseFocusTicked
+Panel::IsWithinTraverse
+Panel::LocalToScreen
+Panel::ScreenToLocal
+Panel::ParentLocalToScreen
+OnRequestFocus
+subFocus
+Assertion Failed: buildGroup != NULL
+Panel::InternalPerformLayout()
+DragDrop.DragFrame
+DragDrop.DropFrame
+DefaultVerySmall
+Tooltip.Delay
+Tooltip.Anchor
+Cursor
+Parent
+Assertion Failed: pScheme
+ApplySchemeSettings did not chain back to base class: %s
+Assertion Failed: GetVParent()
+max
+AutoResize
+PinCorner
+PinnedCornerOffsetX
+PinnedCornerOffsetY
+UnpinnedCornerOffsetX
+UnpinnedCornerOffsetY
+enabled
+zpos
+mouseinputenabled
+keyboardinputenabled
+tooltiptext
+tooltipdelay
+tooltipanchor
+IgnoreScheme
+fieldName
+ControlName
+r%d
+c%d
+tabPosition
+paintbackground
+string fieldName, int xpos, int ypos, int wide, int tall, bool visible, bool enabled, int tabPosition, corner pinCorner, autoresize autoResize, string tooltiptext, string appearance
+ClearSchemeSettings
+RequestFocus
+direction
+Assertion Failed: !("No handler for vgui message function")
+Message '%s', sent to '%s', has invalid parameter types
+Assertion Failed: !("Invalid number of parameters")
+-vguimessages
+set to see debug vgiui2 messages
+Message '%s', sent to '%s', has an invalid parameter type
+Message '%s' not handled by panel '%s'
+Assertion Failed: target
+Already have converter for type %s, ignoring...
+float
+int
+Color
+bool
+char
+HFont
+vgui::HFont
+proportional_float
+proportional_int
+textureid
+Assertion Failed: outputData
+Assertion Failed: inputData
+Assertion Failed: scriptname
+Assertion Failed: m_pDragDrop->m_bDragging
+screenx
+screeny
+x
+y
+Assertion Failed: m_pDragDrop->m_DragData.Count()
+Assertion Failed: m_pDragDrop
+DragDrop
+m_pTooltips
+_actionSignalTargetDar
+Assertion Failed: pChild
+m_pDragDrop
+%s%s=%s
+Assertion Failed: format
+Assertion Failed: !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+Repaint
+MouseCaptureLost
+SetFocus
+KillFocus
+Tick
+OnCursorMoved
+CursorMoved
+CursorEntered
+CursorExited
+CursorEnteredChild
+CursorExitedChild
+MousePressed
+MouseDoublePressed
+MouseTriplePressed
+MouseReleased
+MouseFocusTicked
+Invalidate
+Move
+KEY_NONE
+KEY_0
+KEY_1
+KEY_2
+2
+KEY_3
+KEY_4
+4
+KEY_5
+5
+KEY_6
+6
+KEY_7
+7
+KEY_8
+8
+KEY_9
+9
+KEY_A
+A
+KEY_B
+B
+KEY_C
+KEY_D
+D
+KEY_E
+E
+KEY_F
+F
+KEY_G
+G
+KEY_H
+H
+KEY_I
+I
+KEY_J
+J
+KEY_K
+K
+KEY_L
+L
+KEY_M
+M
+KEY_N
+N
+KEY_O
+O
+KEY_P
+P
+KEY_Q
+Q
+KEY_R
+KEY_S
+S
+KEY_T
+T
+KEY_U
+U
+KEY_V
+V
+KEY_W
+W
+KEY_X
+X
+KEY_Y
+Y
+KEY_Z
+Z
+KEY_PAD_0
+Key Pad 0
+KEY_PAD_1
+Key Pad 1
+KEY_PAD_2
+Key Pad 2
+KEY_PAD_3
+Key Pad 3
+KEY_PAD_4
+Key Pad 4
+KEY_PAD_5
+Key Pad 5
+KEY_PAD_6
+Key Pad 6
+KEY_PAD_7
+Key Pad 7
+KEY_PAD_8
+Key Pad 8
+KEY_PAD_9
+Key Pad 9
+KEY_PAD_DIVIDE
+Key Pad /
+KEY_PAD_MULTIPLY
+Key Pad *
+KEY_PAD_MINUS
+Key Pad -
+KEY_PAD_PLUS
+Key Pad +
+KEY_PAD_ENTER
+Key Pad Enter
+KEY_PAD_DECIMAL
+Key Pad .
+KEY_PAD_EQUAL
+Key Pad =
+KEY_CLEAR
+Clear
+KEY_LBRACKET
+[
+KEY_RBRACKET
+]
+KEY_SEMICOLON
+;
+KEY_APOSTROPHE
+KEY_BACKQUOTE
+`
+KEY_COMMA
+KEY_PERIOD
+KEY_SLASH
+KEY_BACKSLASH
+KEY_MINUS
+-
+KEY_EQUAL
+KEY_ENTER
+Enter
+KEY_SPACE
+Space
+KEY_BACKSPACE
+Backspace
+KEY_TAB
+Tab
+KEY_CAPSLOCK
+Caps Lock
+KEY_NUMLOCK
+Num Lock
+KEY_ESCAPE
+Escape
+KEY_SCROLLLOCK
+Scroll Lock
+KEY_INSERT
+Ins
+KEY_DELETE
+Del
+KEY_HOME
+Home
+KEY_END
+End
+KEY_PAGEUP
+PgUp
+KEY_PAGEDOWN
+PgDn
+KEY_BREAK
+Break
+KEY_LSHIFT
+KEY_RSHIFT
+KEY_LALT
+KEY_RALT
+KEY_LCONTROL
+KEY_RCONTROL
+KEY_LWIN
+KEY_RWIN
+KEY_APP
+App
+KEY_UP
+Up
+KEY_LEFT
+Left
+KEY_DOWN
+KEY_RIGHT
+Right
+KEY_F1
+F1
+KEY_F2
+F2
+KEY_F3
+F3
+KEY_F4
+F4
+KEY_F5
+F5
+KEY_F6
+F6
+KEY_F7
+F7
+KEY_F8
+F8
+KEY_F9
+F9
+KEY_F10
+F10
+KEY_F11
+F11
+KEY_F12
+F12
+KEY_F13
+F13
+KEY_F14
+F14
+KEY_F15
+F15
+KEY_F16
+F16
+KEY_F17
+F17
+KEY_F18
+F18
+KEY_F19
+F19
+KEY_F20
+F20
+KEY_F21
+F21
+KEY_F22
+F22
+KEY_F23
+F23
+KEY_F24
+F24
+KEY_CAPSLOCKTOGGLE
+Caps Lock Toggle
+KEY_NUMLOCKTOGGLE
+Num Lock Toggle
+KEY_SCROLLLOCKTOGGLE
+Scroll Lock Toggle
+KEY_TILDE
+~
+KEY_EXCLAMATION
+!
+KEY_AT
+@
+KEY_HASH
+KEY_DOLLAR
+KEY_PERCENT
+%
+KEY_CARET
+KEY_AMPERSAND
+&
+KEY_MULTIPLY
+KEY_LPAREN
+(
+KEY_RPAREN
+)
+KEY_UNDERSCORE
+_
+KEY_PLUS
+KEY_LCURLY
+KEY_RCURLY
+}
+KEY_BAR
+|
+KEY_COLON
+KEY_DQUOTE
+KEY_LESS
+KEY_GREATER
+KEY_QUESTION
+MOUSE_LEFT
+Mouse Left
+MOUSE_RIGHT
+Mouse Right
+MOUSE_MIDDLE
+Mouse 3
+MOUSE_4
+Mouse 4
+MOUSE_5
+Mouse 5
+MOUSE_LAST
++%s
+Can't add Keybindings Context for unnamed panels
+Assertion Failed: entry
+vgui::DragDrop_t
+m_DragData
+m_DragPanels
+vgui::CPanelMessageMapDictionary
+m_MessageMaps
+m_MessageMaps[ iMessageMap ].map->entries
+m_PanelMessageMapPool
+Assertion Failed: nIndex < ( unsigned int )m_list.Count()
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
+Assertion Failed: scheme
+ProgressBar
+progress
+continuous
+barinset
+variable
+, string progress, string variable
+SetProgress
+DialogVariables
+Sheet
+#PropertyDialog_OK
+PropertyDialogButton
+#PropertyDialog_Cancel
+ApplyButton
+#PropertyDialog_Apply
+Apply
+#overlay_game
+#overlay_game_lowercase
+apptype
+apptypelower
+ApplyButtonEnable
+ApplyChanges
+PageTabActivated
+AddTabButton
+TabMenuButton
+Assertion Failed: tab
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/PropertySheet.cpp
+tab
+TabMenuButtonFlash
+FindDefaultButton
+PropertySheet.TransitionEffectTime
+PropertySheet.TabGap
+PropertySheet.FlashTabColor
+tabMenuMenu
+OpenTabPage
+TabMenuItemFlash
+Alpha
+page
+propertypage
+tabname
+toolpanelgroup
+vgui::PropertySheet
+m_Pages
+TabPressed
+TabClosed
+Context
+TabPageCloseButton
+ContextLabel
+ShowContextMenu
+TabCloseButton
+Assertion Failed: m_pParent->IsDraggableTab()
+PageDragFrame
+DragPropertySheet
+resource/layout/pagedragframe.layout
+PageDragPanel
+#QueryBox_Cancel
+RadioButton
+RadioButton::OnThink()
+tabposition
+subtabposition
+SubTabPosition
+TabPosition
+, int SubTabPosition
+ScrollBar
+RichText.InsetX
+RichText.InsetY
+RichText::DrawString
+Assertion Failed: startIndex < m_TextStream.Count()
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/RichText.cpp
+RichText::OnThink()
+RichText::RecalculateLineBreaks
+EditMenu
+DoCopySelected
+#TextEntry_SelectAll
+DoSelectAll
+#TextEntry_CopyAllToClipboard
+DoCopyAllText
+Assertion Failed: m_pEditMenu
+RichTextReceivedUnneededFocus
+Assertion Failed: m_FormatStream[i].textStreamIndex > cullPos
+Cut
+Copy
+maxchars
+textfile
+rt
+RichText: textfile parameter '%s' not found.
+, string text, bool scrollbar
+bold
+emphasis
+RichText::ParseTextStringForURL
+<a
+<a
+href=
+</a>
+TextBlock
+pixelsindent
+textclickable
+textstreamindex
+clickabletextaction
+sections
+lineheight
+Assertion Failed: cchCharBlock <= m_TextStream.Count()
+vgui::RichText
+m_TextStream
+m_FormatStream
+m_LineBreaks
+_clickableTextPanels
+m_dictStyles
+m_pFontWidthCache
+DoCutSelected
+ClickPanel
+index
+RichTextInterior
+ftp://
+mailto:
+m_mapCharToWidth
+Assertion Failed: elem >= 0 && num >= 0 && INT_MAX - elem >= num
+Assertion Failed: elem + num <= Count()
+ScrollBar_Vertical
+ScrollBar_Horizontal
+ScrollBarSlider
+ScrollBarButton
+ScrollBarButton.Up
+ScrollBarButton.Down
+ScrollBarButton.Left
+ScrollBarButton.Right
+ScrollBarSlider.Horizontal
+ScrollBar.Horizontal
+ScrollBar.Wide
+ScrollButtonPressed
+ScrollBarHandle
+SliderHoriz
+leftText
+rightText
+showticks
+showbar
+thumbwidth
+, string leftText, string rightText
+_leftCaption
+_rightCaption
+TextEntry.IMEBGColor
+TextEntry.IMEFGColor
+TextKillFocus
+TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/TextEntry.cpp
+#TextEntry_Cut
+DoDeleteThenPaste
+Resource\warning.wav
+DoPaste
+DragDroppedText
+ClearButton
+textHidden
+editable
+NumericInputOnly
+unicode
+hintText
+, bool textHidden, bool editable, bool unicode, bool NumericInputOnly, int maxchars, string font
+replace
+#TextEntry_ReplaceText
+append
+#TextEntry_AppendText
+prepend
+#TextEntry_PrependText
+propertysheet
+m_UndoTextStream
+shortname
+flags
+LanguageMenu
+DoLanguageChanged
+#TextEntry_Language
+ConversionModeMenu
+ConversionMode
+DoConversionModeChanged
+#TextEntry_ConversionMode
+SentenceModeMenu
+SentenceMode
+#TextEntry_SentenceMode
+DoSentenceModeChanged
+IMELanguageList
+IMEConversionModes
+IMESentenceModes
+TextEntryClearButton
+TextImage::Paint()
+Assertion Failed: echar >= schar
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/TextImage.cpp
+Assertion Failed: wordStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
+Assertion Failed: wordStartIndex >= _utext
+Assertion Failed: lineStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
+Assertion Failed: lineStartIndex >= _utext
+Assertion Failed: nNumChars >= 0
+Assertion Failed: pLineEnd >= pLineStart
+vgui::TextImage
+m_PerLineEllipses
+ButtonToggled
+tooltip
+m_sText
+m_sHeadlineText
+m_pkvDialogVariables
+tooltip_label
+TooltipWindow
+tooltip_headline
+TooltipHTML
+ToolWindow
+ToolWindowSheet
+InsertTabImage
+steam/cached/icon_tab_placement_arrow
+resource/layout/toolwindow.layout
+Assertion Failed: page->m_pToolWindow == this
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/ToolWindow.cpp
+tabtitle
+Assertion Failed: pToolWindow
+PageChanged
+AddNewTab
+PageCountChanged
+TreeNode
+TreeImage
+TreeNodeText
+Assertion Failed: m_pTreeView->IsLabelEditingAllowed()
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/TreeView.cpp
+original
+changed
+color
+Assertion Failed: m_pTreeView->m_pFilter
+Assertion Failed: parentItemIndex == -1 || m_NodeList.IsValidIndex(parentItemIndex)
+droppable
+drophoverdelay
+Assertion Failed: m_pRootNode == NULL
+Assertion Failed: m_NodeList.IsValidIndex(itemIndex)
+Assertion Failed: m_NodeList.IsValidIndex( endItem )
+Assertion Failed: sel
+itemIndex
+Assertion Failed: IsLabelEditingAllowed()
+Assertion Failed: sel->IsLabelEditingAllowed()
+vgui::TreeView
+m_NodeList
+m_ExpandStateQueue
+LabelChanged
+TreeViewSubPanel
+vgui::TreeNode
+m_pExpandImage
+m_AllChildren
+m_pkvData
+m_pChildren
+m_List
+CTreeViewListControl
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/TreeViewListControl.cpp
+m_vecJumpWChars
+URLText
+, string URLText
+DefaultUnderline
+SetURL
+WrapPanel::PerformLayout()
+WrapPanelItem
+justify
+alignment
+interiorspacing
+wheelpct
+WrapPanel::Repaint
+Assertion Failed: m_bSorted
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vgui2/controls/wrappanel.cpp
+m_vecSortedContents
+m_Contents
+WrapPanel
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+Assertion Failed: resizeNumBits >= 0
+Assertion Failed: !m_pInt
+Assertion Failed: GetInts()
+CVariableBitStringBase
+{}()'
+{}()':
+Assertion Failed: pName
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
+Assertion Failed: m_vecCallbacks.Count() == 0 || !callback
+Assertion Failed: m_pParent == this
+ConVar::InternalSetValue: called with NULL
+%f
+Assertion Failed: !( m_nFlags & FCVAR_NEVER_AS_STRING )
+Assertion Failed: m_vecCallbacks.Count() == 0
+%lf
+Assertion Failed: pDefaultValue
+console
+Attempted to change replicated CVar when you are not the GM
+ConCommand '%s' not currently supported in config file
+Bad expression token: %c at %d in %s
+Bad expression token: %c %c
+.
+V_RemoveDotSlashes failed for "%s".
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s
+flock LOCK_EX request but file is not opened for writing, ignoring: %s
+flock %s %s failed. errno = %d
+LOCK_EX
+LOCK_SH
+fcntl failed to set F_NOCACHE
+*
+rb
+unReadAheadChunkSize should be zero when using bUnbuffered = true
+Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
+unsupported flags 0x%x passed to CFileReader::BOpenFile
+Assertion Failed: cubBytesToRead < INT32_MAX
+Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
+Seeking to a position which is not sector aligned will break unbuffered io
+..
+Assertion Failed: !"Failed to CFStringCreateWithCString watcher path"
+m_listChangedFiles
+File change notification for %s but no file contents changed based on hash
+m_strWatchPath
+m_mapFileWatchData
+m_mapFileWatchData.Key( i )
+Assertion Failed: cbActual < (uint32)nBufSizeWithTerminator
+*.*
+Assertion Failed: IsInList(before)
+Element( i )
+CPathString
+.dylib
+Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
+.cpl
+0123456789abcdef
+%%%d
+]:%u
+port
+ReadToken overflow
+Assertion Failed: filesystem
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
+"
+{
+KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
+}
+
+]
+GetIntFromString() did not get correct peCS parameter
+GetUint64FromString() did not get correct peCS parameter
+GetFloatFromString() did not get correct peCS parameter
+can't convert uint64 to int32 (data loss)
+can't convert int64 to uint64 (negative number)
+RGBA: %.2X %.2X %.2X %.2X
+%f %f %f %f
+$0
+$1
+WINDOWS
+WIN32
+WIN64
+VISTA
+WIN7
+OSX
+OSX1010
+POSIX
+LINUX
+LINUX32
+LINUX64
+ANDROID
+ANDROID32
+ANDROID64
+X360
+Assertion Failed: buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
+#include
+#include is NULL
+KeyValues don't support #include anymore, file "%s"
+LoadFromBuffer: missing {   (current key: '%s')
+Error while parsing text KeyValues for resource %s
+Assertion Failed: pKeyValuesTextParser
+RecursiveLoadFromBuffer:  got EOF instead of keyname
+RecursiveLoadFromBuffer:  got empty keyname
+RecursiveLoadFromBuffer:  got NULL key
+RecursiveLoadFromBuffer:  got } in key
+RecursiveLoadFromBuffer:  got conditional between key and value
+KeyValues::WriteAsBinary() called with a text buffer
+KeyValues::WriteAsBinary() called with an invalid buffer
+KeyValues::WriteAsBinary() overflowed buffer (%d bytes)
+KeyValues::ReadAsBinary() stack depth > 100
+<empty>
+KeyValues
+NULL
+Assertion Failed: m_errorIndex>=0
+Assertion Failed: stackLevel >= 0 && stackLevel < m_errorIndex
+KeyValues Error: %s in file %s [offset: %d]
+,
+(*
+*),
+0123456789ABCDEF
+Assertion Failed: context.m_vecStack.Count() <= 1
+%.18g
+Memory leak: mempool blocks left in memory: %d
+CMemoryPool::AddNewBlob: mode == GROW_NONE
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/mempool.cpp
+Fatal Assertion Failed: pBlob
+CMemoryPool::Alloc: ran out of memory
+Assertion Failed: k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
+CMemoryPool
+loopback
+%i.%i.%i.%i
+%i.%i.%i.%i:%i
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
+%d.%d.%d.%d:%d
+Assertion Failed: m_usType == k_EIPTypeV6
+Assertion Failed: pvecAddressesOut != nullptr || pSingleOutput != nullptr
+about to perform blocking dns call from the main thread.  consider refactoring.
+Assertion Failed: info.m_pReplacementString == 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+CUtlBuffer::GetStringFast: binary buffers only
+CUtlBuffer::GetStringFast: no string termination
+Expected %lld but got %lld!
+Assertion Failed: pConv && pConv->GetDelimiterLength() > 0
+Assertion Failed: pFmt
+Assertion Failed: nSize >= 0
+Assertion Failed: m_Put >= 0
+Assertion Failed: offset >= 0
+Assertion Failed: offset >= -m_Put && offset <= INT_MAX-m_Put
+Assertion Failed: offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+t
+v
+b
+f
+?
+Assertion Failed: m_unSizeOfElements > 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+Assertion Failed: nGrowSize >= 0
+Assertion Failed: m_unSizeOfElements == mem.m_unSizeOfElements
+nBytesItem is %d in UtlMemory_CalcNewAllocationCount
+Assertion Failed: num > 0
+Assertion Failed: IsPowerOfTwo( nNewCapacity )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
+Assertion Failed: nPreSplit > 0 && nPreSplit + nPostSplit == nCount
+Assertion Failed: ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
+Assertion Failed: cActualReplacements == cReplacements
+Assertion failed: length > k_cchMaxString
+Assertion Failed: nMinCapacity > Capacity()
+Assertion Failed: nMinCapacity >= nChars
+Assertion Failed: nMinCapacity <= k_nMaxStringSize
+Assertion Failed: len > 0 || HasError()
+Assertion Failed: pstrNew == pszString
+Assertion Failed: pstrNew == pstrDestination
+Assertion Failed: PrepareBuffer( nNewLength ) == pstrNew
+Error State on string being set.
+Assertion Failed: s_bAllowStaticSymbolTable
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+%02d/%02d/%02d
+00:00:00
+01/01/00
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/rtime.cpp
+Assertion Failed: V_strlen( pchTime ) == 25
+Infinite time value
+Nil time value
+Invalid time value
+NIL
+%04u%02u%02u
+%04u-%02u-%02u
+%04u%02u%02u%02u%02u%02u
+%04u-%02u-%02u %02u:%02u:%02u
+%s %s
+$
+CHF
+R$
+Rp
+RM
+S$
+TL
+Mex$
+C$
+A$
+NZ$
+kr
+CLP$
+S/.
+COL$
+R
+HK$
+NT$
+SR
+AED
+ARS$
+Br
+KD
+QR
+$U
+Unknown currency code %d
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.cpp
+%s%s
+stream::imbue() failed with locale: '%s', exception: %s
+C
+Unimplemented rounding method %d. Rounding half up!
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/amount.h
+steamclient.dylib
+#Steam_Settings_Ingame_ShowFPS_Off
+#Steam_Settings_Ingame_ShowFPS_LeftTop
+#Steam_Settings_Ingame_ShowFPS_RightTop
+#Steam_Settings_Ingame_ShowFPS_RightBottom
+#Steam_Settings_Ingame_ShowFPS_LeftBottom
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
+CCrypto::Base64Encode
+NULL output buffer with non-zero size passed to Base64Encode
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required, plus linebreaks)
+Missing String for %s (%d)
+EResult
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
+Unknown
+unknown
+cs
+EUniverse
+ECurrencyCode
+EControllerType
+Failure
+No Connection
+Invalid Password
+Logged In Elsewhere
+Invalid Protocol
+Invalid Parameter
+File Not Found
+Busy
+Invalid State
+Invalid Name
+Invalid Email
+Duplicate Name
+Access Denied
+Timeout
+Banned
+Account Not Found
+Invalid Steam ID
+Service Unavailable
+Not Logged On
+Pending
+Encryption Failure
+Insufficient Privilege
+Limit exceeded
+Request revoked
+License expired
+Already Redeemed
+Duplicated Request
+Already Owned
+IP Address Not Found
+Persistence Failed
+Locking Failed
+Session Replaced
+Connection Failed
+Handshake Failed
+I/O Operation Failed
+Disconnected By Remote Host
+Shopping Cart Not Found
+Blocked
+Ignored
+No match
+Account Disabled
+Service Read Only
+Account Not Featured
+Administrator OK
+Content Version
+Try another CM
+Password required to kick session
+Already Logged In Elsewhere
+Request suspended/paused
+Request has been canceled
+Corrupted or unrecoverable data error
+Not enough free disk space
+Remote call failed
+Password is not set
+External Account is not linked to a Steam account
+PSN Ticket is invalid
+External Account linked to another Steam account
+Remote File Conflict
+Illegal password
+Same as previous value
+Account Logon Denied
+Cannot Use Old Password
+Invalid Login Auth Code
+Account Logon Denied no mail sent
+Hardware not capable of IPT
+IPT init error
+Operation failed due to parental control restrictions for current user
+Facebook query returned an error
+Expired Login Auth Code
+IP Login Restriction Failed
+Account Locked Down
+Account Logon Denied Verified Email Required
+No matching URL
+Bad response
+Password reentry required
+Value is out of range
+Unexpected error
+Feature Disabled
+Invalid CEG Submission
+Restricted device
+Region Locked
+Rate Limit Exceeded
+Account logon denied, need two-factor code
+Item or entry has been deleted
+Too many logon attempts
+Two-factor code mismatch
+Two-factor activation code mismatch
+Account associated with multiple players
+Not Modified
+No mobile device available
+Time is out of sync
+SMS code failed
+Too many accounts access this resource
+Too many changes to this account
+Too many changes to this phone number
+You must refund this transaction to wallet
+Sending of an email failed
+Purchase not yet settled
+Needs captcha
+Gameserver login token denied
+Gameserver login token owner denied
+Invalid item type
+IP Address Banned
+Gameserver login token expired
+Insufficient funds
+Too many pending
+No site licenses found
+Network send exceeded
+Accounts not friends
+Limited user account
+Cant remove item
+Account has been deleted
+Account has an existing user cancelled license
+Invalid
+Public
+Beta
+Internal
+Dev
+None
+Groups
+Language
+=
+>
+<
+stats
+vac
+drm
+USD
+GBP
+EUR
+RUB
+PLN
+BRL
+JPY
+NOK
+IDR
+MYR
+PHP
+SGD
+THB
+VND
+KRW
+TRY
+UAH
+MXN
+CAD
+AUD
+NZD
+CNY
+INR
+CLP
+PEN
+COP
+ZAR
+HKD
+TWD
+SAR
+SEK
+ARS
+ILS
+BYN
+KZT
+KWD
+QAR
+CRC
+UYU
+Down
+default
+none
+en
+de
+fr
+it
+ko
+es
+ru
+th
+ja
+pt
+pl
+da
+nl
+fi
+sv
+hu
+ro
+tr
+pt-br
+bg
+el
+uk
+vi
+generic
+httpclient
+unavailable
+prerelease
+preloadonly
+released
+music
+Default
+Store
+Community
+Profile
+Friends
+News
+Trading
+Settings
+Console
+Browser
+ParentalSetup
+Library
+Test
+SiteLicense
+client
+controller_none
+controller_unknown
+controller_steamcontroller_unknown
+controller_steamcontroller_gordon
+controller_steamcontroller_headcrab
+controller_generic
+controller_xbox360
+controller_xboxone
+controller_ps3
+controller_ps4
+controller_wii
+controller_apple
+controller_android
+controller_switch_pro
+controller_switch_joycon_left
+controller_switch_joycon_right
+controller_switch_joycon_pair
+controller_mobile_touch
+controller_front_panel_board
+controller_keyboard_generic
+controller_mouse_generic
+controller_switch_pro_generic
+optional
+Windows
+PS3
+LoadFileIntoBuffer: NULL parameters
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
+publish
+bootstrap
+startup
+service
+fileop
+system
+smtp
+account
+job
+crypto
+network
+content
+cloud
+logon
+clping
+threads
+test
+filetx
+srvping
+guestpass
+license
+p2p
+datacoll
+svcm
+httpserver
+networkmgr
+parental
+vr
+inventory
+input
+streaming
+controller
+controller_ui
+metrics
+Invalid spew group
+Assertion Failed: !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/language.cpp
+zh_CN
+English
+english
+#SteamUI_Selection_English
+#Panorama_Selection_English
+#Panorama_Lang_English
+German
+german
+#SteamUI_Selection_German
+#Panorama_Selection_German
+#Panorama_Lang_German
+de_DE
+French
+french
+#SteamUI_Selection_French
+#Panorama_Selection_French
+#Panorama_Lang_French
+fr_FR
+Italian
+italian
+#SteamUI_Selection_Italian
+#Panorama_Selection_Italian
+#Panorama_Lang_Italian
+it_IT
+Korean
+koreana
+#SteamUI_Selection_Korean
+#Panorama_Selection_Korean
+#Panorama_Lang_Korean
+ko_KR
+Spanish
+spanish
+#SteamUI_Selection_Spanish
+#Panorama_Selection_Spanish
+#Panorama_Lang_Spanish
+es_ES
+Simplified_Chinese
+schinese
+#SteamUI_Selection_Simplified_Chinese
+#Panorama_Selection_Simplified_Chinese
+#Panorama_Lang_Simplified_Chinese
+zh-cn
+Traditional_Chinese
+tchinese
+#SteamUI_Selection_Traditional_Chinese
+#Panorama_Selection_Traditional_Chinese
+#Panorama_Lang_Traditional_Chinese
+zh_TW
+zh-tw
+Russian
+russian
+#SteamUI_Selection_Russian
+#Panorama_Selection_Russian
+#Panorama_Lang_Russian
+ru_RU
+Thai
+thai
+#SteamUI_Selection_Thai
+#Panorama_Selection_Thai
+#Panorama_Lang_Thai
+th_TH
+Japanese
+japanese
+#SteamUI_Selection_Japanese
+#Panorama_Selection_Japanese
+#Panorama_Lang_Japanese
+ja_JP
+Portuguese
+portuguese
+#SteamUI_Selection_Portuguese
+#Panorama_Selection_Portuguese
+#Panorama_Lang_Portuguese
+pt_PT
+Polish
+polish
+#SteamUI_Selection_Polish
+#Panorama_Selection_Polish
+#Panorama_Lang_Polish
+pl_PL
+Danish
+danish
+#SteamUI_Selection_Danish
+#Panorama_Selection_Danish
+#Panorama_Lang_Danish
+da_DK
+Dutch
+dutch
+#SteamUI_Selection_Dutch
+#Panorama_Selection_Dutch
+#Panorama_Lang_Dutch
+nl_NL
+Finnish
+finnish
+#SteamUI_Selection_Finnish
+#Panorama_Selection_Finnish
+#Panorama_Lang_Finnish
+fi_FI
+Norwegian
+norwegian
+#SteamUI_Selection_Norwegian
+#Panorama_Selection_Norwegian
+#Panorama_Lang_Norwegian
+no_NO
+Swedish
+swedish
+#SteamUI_Selection_Swedish
+#Panorama_Selection_Swedish
+#Panorama_Lang_Swedish
+sv_SE
+Hungarian
+hungarian
+#SteamUI_Selection_Hungarian
+#Panorama_Selection_Hungarian
+#Panorama_Lang_Hungarian
+hu_HU
+Czech
+czech
+#SteamUI_Selection_Czech
+#Panorama_Selection_Czech
+#Panorama_Lang_Czech
+cs_CZ
+Romanian
+romanian
+#SteamUI_Selection_Romanian
+#Panorama_Selection_Romanian
+#Panorama_Lang_Romanian
+ro_RO
+Turkish
+turkish
+#SteamUI_Selection_Turkish
+#Panorama_Selection_Turkish
+#Panorama_Lang_Turkish
+tr_TR
+Brazilian
+brazilian
+#SteamUI_Selection_Brazilian
+#Panorama_Selection_Brazilian
+#Panorama_Lang_Brazilian
+pt_BR
+Bulgarian
+bulgarian
+#SteamUI_Selection_Bulgarian
+#Panorama_Selection_Bulgarian
+#Panorama_Lang_Bulgarian
+bg_BG
+Greek
+greek
+#SteamUI_Selection_Greek
+#Panorama_Selection_Greek
+#Panorama_Lang_Greek
+el_GR
+Arabic
+arabic
+#SteamUI_Selection_Arabic
+#Panorama_Selection_Arabic
+#Panorama_Lang_Arabic
+ar_AE
+ar
+Ukrainian
+ukrainian
+#SteamUI_Selection_Ukrainian
+#Panorama_Selection_Ukrainian
+#Panorama_Lang_Ukrainian
+uk_UA
+Latam_Spanish
+latam
+#SteamUI_Selection_Latam_Spanish
+#Panorama_Selection_Latam_Spanish
+#Panorama_Lang_Latam_Spanish
+es_419
+es-419
+Vietnamese
+vietnamese
+#SteamUI_Selection_Vietnamese
+#Panorama_Selection_Vietnamese
+#Panorama_Lang_Vietnamese
+vi_VN
+@bEnableSpewThrottle
+@bEnableLogTearOff
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logger.cpp
+Assertion Failed: pLogInstance == sm_pLogInstance
+Assertion Failed: sm_cRef > 0
+Assertion Failed: sm_bShuttingDown
+Assertion Failed: ThreadInMainThread()
+CLogger::PublishLogEvent
+%s\%s
+CLogger::EmitEventInternal
+Hit absolute maximum emit event queue size -- NOT adding this event
+Assertion Failed: pLogEvent
+CLogger::FlushEventQueue
+Log event queue grew unreasonably large in a short time!
+Assertion Failed: sm_bShuttingDown && sm_pLogInstance
+Failed to remove log event from threadsafe queue!
+CLogger::GeneratePrefixFromLogWatchParam
+Assertion Failed: pchMsg
+%s [%s]%-*s
+[%s]%-*s
+[IP:%s]
+[ID:%s]
+[TXN:%llu]
+Assertion Failed: *pchMsg && *pchMsg == '%'
+Logger does not handle * char as used for a width specifier (where width is a param)
+Stop using I64/I32 - use lld or d, respectively
+Unsupported format qualifier %c%c
+(null)
+Unrecognized character code (%c) in format string, ignoring
+CLogger::DeserializeVaArgs
+stop using I64/I32, use lld or d respectively
+Unsupported format qualifier z%c
+Unsupported format qualifier l%c
+Unrecognized character code '%c' in format string, ignoring
+Assertion Failed: pch[cub - 1] != '\0' && pch[cub] == '\0'
+Assertion Failed: 1 == ret
+CLogInstance::WriteToLog
+Failed to close logfile with prefix %s during BTearOffLogFile call!
+Assertion Failed: NULL == m_pFile
+Assertion Failed: 0 != m_rgchPrefixFileName[0]
+%s.current.txt
+Log started.
+%s-%d
+Log stopped.
+.current.txt
+%s.*.txt
+%s.%%u.txt
+%s.%10u.txt
+Persistent logfile %s is past the keep until date - cleaning up
+Failed to find time in logfile name
+Persistent Logfiles created which have no cleanup limit specified!
+CLogInstance::EmitEventNow
+...
+Last Message Repeated %d times.%s
+Logger
+Assertion Failed: bitNum >= 0 && bitNum < this->Size()
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+Assertion Failed: m_cReentrancyCount >= 0
+m_vecHashBuckets
+m_memNodes
+m_bitsMigratedBuckets
+@nSpewThrottlePeriodMs
+1000
+@nSpewThrottleTriggerThreshold
+10
+@nSpewThrottleResumeThreshold
+@nSpewThrottleUnconditionalTriggerCount
+50
+@nSpewThrottleUnconditionalResumeMs
+5000
+@nSpewThrottleNagFrequencyMs
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp
+[A:%u:%u:%u]
+[G:%u:%u]
+[M:%u:%u:%u]
+[P:%u:%u]
+[C:%u:%u]
+[g:%u:%u]
+[c:%u:%u]
+[L:%u:%u]
+[T:%u:%u]
+[I:%u:%u]
+[U:%u:%u]
+[a:%u:%u]
+[i:%u:%u]
+Assertion Failed: steamIDClan.GetEAccountType() == k_EAccountTypeClan
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
+Jan
+Feb
+Mar
+Apr
+May
+Jun
+Jul
+Aug
+Sep
+Oct
+Nov
+Dec
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
+e'
+Y'
+u'
+$&
+0
+p
+p
+0
+7&
+7'
+C
+C
+'
+'
+'
+'
+)7
+'
+'
+'
+&
+7
+7
+7
+x&
+!
+!
+j"
+&
+&
+0
+p
+%
+8
+8
+8
+&
+&
+#6
+B
+B
+B
+B
+&
+8
+B
+$
+"
+%
+%
+$
+UA
+^$
+C$
+$
+$
+d
+$
+4
+4
+
+
+
+
+
+
+[#
+W#
+p
+0
+0
+p
+0
+0
+p
+0
+0
+p
+0
+0
+(#
+p
+0
+p
+0
+p
+0
+p
+0
+0
+p
+0
+0
+p
+0
+p
+p
+p
+p
+p
+0
+/
+#
+#
+@
+=
+#
+
+0
+3
+3
+9
+A
+#
+#
+8"
+`@
+"
+"
+"
+"
+"
+"
+"
+"
+{"
+Hi
+t!
+s!
+s!
+j!
+-!
++!
+!
+!
+0
+p
+I
+I
+DA
+BA
+!
+!
+!
+!
+!
+!
+$
+@
+@
+=
+@
+@
+?
+?
+A
+Hc
+=
+mB
+mB
+[B
+L95[IB
+B
+B
+Hc
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+?
+SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
+SHA1 multi-block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
+A3
+@
+6
+AES for x86_64, CRYPTOGAMS by <appro@openssl.org>
+@
+@
+AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
+AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
+AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
+pppp
+pp
+,,
+'''W
+WW
+##
+kk
+WWWE
+EE
+OO
+kkk|
+||
+EEE>
+>>
+^^
+99
+NNN]
+]]
+eeeZ
+ZZ
+QQ
+ll
+|||t
+tt
+++
+44
+___v
+vv
+^^^m
+mm
+::
+22
+]]]S
+SS
+zz
+QQQ$
+$$
+lll`
+``
+MMMi
+ii
+fffb
+bb
+TT
+---d
+dd
+u
+uu
+444s
+ss
+mmmR
+RR
+oo
+cc
+))
+//
+222x
+xx
+qq
+rr
+66
+**
+zzz<
+<<
+$$$@
+@@
+CC
+iiiw
+ww
+''
+55
+AA
+!!
+NN
+ddde
+ee
+00
+__
+GG
+==
+VV
+MM
+
+\\\f
+ff
+--
+JJJ
+sssL
+LL
+~~
+1
+11
+RRRX
+XX
+aa
+;;;"
+""
+DD
+...P
+PP
+yyy}
+}}
+[[
+HH
+??
+xxx\
+\\
+JJ
+jjj3
+33
+gg
+qqq
+
+%%%&
+&&
+77
+BBB;
+;;
+KK
+..
+rrry
+yy
+nn
+Y
+YY
+IIIj
+jj
+***F
+FF
+<<<%
+%%
+888B
+BB
+(((U
+UU
+{{{
+
+II
+hh
+CCC8
+88
+((
+{{
+88
+AA
+AXXX
+vv
+vggg
+``
+rr
+uu
+WW
+''
+':::
+II
+I{{{
+CC
+Cqqq
+\\
+\___
+>>
+gg
+g|||
+nn
+//
+
+MMM
+SS
+ee
+--
+kk
+++
+66
+MM
+33
+ff
+faaa
+XX
+XZZZ
+::
+:$$$
+xx
+xccc
+BB
+B333
+&&
+aa
+ahhh
+??
+;;
+;
+
+,,
+,ttt
+oo
+o666
+NN
+N,,,
+yy
+yDDD
+
+""
+YY
+==
+=###
+tt
+tQQQ
+TT
+00
+~~
+((
+(UUU
+UU
+hh
+hAAA
+PP
+11
+1///
+**
+pp
+22
+ii
+i
+bb
+b
+$$
+$GGG
+EE
+ss
+mm
+JJ
+..
+%%
+%!!!
+HH
+Hfff
+{{
+qq
+))
+)777
+ll
+lLLL
+dd
+dnnn
+cc
+cvvv
+KK
+__
+FF
+F???
+77
+7yyy
+^^
+GG
+GRRR
+[[
+[^^^
+ZZ
+<<
+<111
+LL
+55
+##
+]]
+jj
+jJJJ
+!!
+DD
+DEEE
+QQ
+}}
+99
+||
+ww
+wYYY
+VV
+44
+4xxx
+RR
+PPP
+zz
+@@
+@===
+OO
+%
+@
+@8
+`$
+AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
+%
+=
+Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
+=
+#e+;
+i[
+i[
+Mc}
+Hc]
+HcU
+
+
+
+
+?
+?
+?
+
+?
+?
+?
+
+?
+?
+?
+0
+#
+i[
+~
+B
+?
+@
+0
+@
+P
+N
+(
+=
+,
+p
+C
+0=
+@
+0
+P
+8
+5
+U
+HcE
+HcE
+@
+@
+\
+@
+\
+@
+9
+E
+=
+4
+@
+R
+(
+G
+<
+T
+6
+*
+>
+0
+;
+K
+B
+?
+:
+A
+:
++
+'
+)
+&
+1
+-
+0
+#
+@
+0
+0
+p
+p
+=
+=
+@
+0
+P
+%
+"
+
+0
+0
+0
+=.
+=/
+=_
+=
+0
+0
+=.
+=_
+=
+0
+tC=_
+t<=
+0
+p
+0
+p
+@
+=
+p
+P
+=
+@
+@
+?
+@
+@
+?
+@
+@
+?
+@
+@
+?
+`
+`
+!
+A
+@
+@
+@
+P
+@
+`
+`
+`
+`
+=
+@
+`
+`
+@
+`
+`
+,
+@
+@
+@
+|
+|
+"
+3
+D
+6
+6
+6
+'
+@
+&
+4
+4
+4
+%
+>$
+
+
+#
+1
+d
+W
+
+
+
+
+
+O+
+
++
++
++
+
+8+
+&
+&
+
+
+t=
+=
+=
+@
+
+Q*
+7,
+uV%
+
+
+?)
+E
+-
+
+
+
+e(
+)
+@
+?
+@
+@
+&
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+=
+
+
+y
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+E'
+.
+.
+.
+.
+.
+.
+d
+'
+'
+'
+'
+d
+d
+=
+
+R&
+=
+@
+}&
+=
+@
+h
+@
+@
+@
+@
+@
+@
+@
+@
+0
+E
+v
+e
+A
+9%
+p

@@ -1,0 +1,1181 @@
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__const
+__TEXT
+__cstring
+__TEXT
+__gcc_except_tab__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+0
+__got
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__mod_init_func
+__DATA
+__const
+__DATA
+__data
+__DATA
+__bss
+__DATA
+__common
+__DATA
+xC
+H
+__LINKEDIT
+
+8
+@loader_path/steamconsole.dylib
+"
+X
+@
+P
+
+8
+@loader_path/libtier0_s.dylib
+8
+@loader_path/libvstdlib_s.dylib
+h
+>
+/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+X
+/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+h
+/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+`
+0
+x
+/usr/lib/libc++.1.dylib
+8
+/usr/lib/libSystem.B.dylib
+h
+/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+&
+)
+@-
+public
+local
+anonymous
+9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
+13CCallbackImplILi16EE
+9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
+0C
+0E
+0C
+0E
+Y@
+N@N11CAppUpdater25CCallback_OnAppInfoUpdateE
+9CCallbackI11CAppUpdater23AppInfoUpdateComplete_tLb0EE
+13CCallbackImplILi12EE
+N11CAppUpdater40CCallback_OnCheckAppBetaPasswordResponseE
+9CCallbackI11CAppUpdater30CheckAppBetaPasswordResponse_tLb0EE
+13CCallbackImplILi72EE
+N12CAppLauncher29CCallback_OnAppLifetimeNoticeE
+9CCallbackI12CAppLauncher19AppLifetimeNotice_tLb0EE
+10CSteamUser
+N10CSteamUser36CCallbackInternal_OnShutdownLauncherE
+13CCallbackImplILi2EE
+13CCallbackBase
+N10CSteamUser22CCallback_OnSteamLogonE
+9CCallbackI10CSteamUser23SteamServersConnected_tLb0EE
+13CCallbackImplILi1EE
+N10CSteamUser21CCallback_OnLoggedOffE
+9CCallbackI10CSteamUser26SteamServersDisconnected_tLb0EE
+13CCallbackImplILi4EE
+N10CSteamUser24CCallback_OnLogonFailureE
+9CCallbackI10CSteamUser27SteamServerConnectFailure_tLb0EE
+13CCallbackImplILi8EE
+N10CSteamUser26CCallback_OnPostLogonStateE
+9CCallbackI10CSteamUser16PostLogonState_tLb0EE
+13CCallbackImplILi7EE
+N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedClientE
+9CCallbackI25CControllerConfigUploader30RemoteStorageAppSyncedClient_tLb0EE
+N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedServerE
+9CCallbackI25CControllerConfigUploader30RemoteStorageAppSyncedServer_tLb0EE
+20CMultipleCallResultsI25CControllerConfigUploader24SteamUGCQueryCompleted_tE
+10CUtlRBTreeIyi8CDefLessIyE25CDefRBTreeBalanceListenerIiEyE
+20CMultipleCallResultsI25CControllerConfigUploader32RemoteStoragePublishFileResult_tE
+20CMultipleCallResultsI25CControllerConfigUploader40RemoteStorageUpdatePublishedFileResult_tE
+N17CAppDepotsUpdater25CCallback_OnAppInfoUpdateE
+9CCallbackI17CAppDepotsUpdater23AppInfoUpdateComplete_tLb0EE
+N20CAppInstallerBuilder27CCallback_OnAppBackupStatusE
+9CCallbackI20CAppInstallerBuilder17AppBackupStatus_tLb0EE
+13CCallbackImplILi40EE
+19CConsoleInputThread
+25SteamClientConVarAccessor
+23IConCommandBaseAccessor
+20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
+20CMultipleCallResultsI19CPreDepotOperations27InstallScriptSignResponse_tE
+20CMultipleCallResultsI19CPreDepotOperations17DRMWrapResponse_tE
+N20CWorkshopItemBuilder25CCallback_OnAppInfoUpdateE
+9CCallbackI20CWorkshopItemBuilder23AppInfoUpdateComplete_tLb0EE
+N26CWorkshopItemBuilderLegacy25CCallback_OnAppInfoUpdateE
+9CCallbackI26CWorkshopItemBuilderLegacy23AppInfoUpdateComplete_tLb0EE
+N23CWorkshopItemDownloader25CCallback_OnAppInfoUpdateE
+9CCallbackI23CWorkshopItemDownloader23AppInfoUpdateComplete_tLb0EE
+N23CWorkshopItemDownloader30CCallback_OnDownloadItemResultE
+9CCallbackI23CWorkshopItemDownloader20DownloadItemResult_tLb0EE
+_
+convar_
+14ConCommandBase
+10ConCommand
+6ConVar
+10CUtlString
+11CFileWriter
+11CPathString
+17CFileWriterThread
+N17CFileWriterThread16FileWriterItem_tE
+10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
+t
+r
+u
+e
+f
+a
+l
+s
+e
+21CUtlCStringConversion
+18CUtlCharConversion
+19CUtlNoEscConversion
+14CUtlMemoryBase
+console
+generic
+publish
+bootstrap
+startup
+service
+fileop
+system
+smtp
+account
+job
+crypto
+network
+vac
+client
+content
+cloud
+clping
+threads
+test
+filetx
+stats
+srvping
+friends
+chat
+guestpass
+license
+p2p
+datacoll
+drm
+svcm
+httpclient
+httpserver
+networkmgr
+music
+parental
+vr
+inventory
+input
+streaming
+controller
+controller_ui
+metrics
+Invalid spew group
+[S_API FAIL] SteamAPI_Init() failed; steam path (%s) missing directory separator
+[S_API FAIL] SteamAPI_Init() failed; steam found, but process is dead.
+[S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
+[S_API FAIL] SteamAPI_Init() failed; ipcserver GetSteamPath failed.
+CLIENTENGINE_INTERFACE_VERSION005
+ClientAPI_InitGlobalInstance: InternalAPI_Init_Internal failed, most likely because you are missing a 32-bit dependency of steamclient.dylib (the Steam client is a 32-bit app).
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
+ClientAPI_Init(GlobalInstance): GetIClientUser returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientFriends returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientBilling returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUtils returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientNetworkDeviceManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMatchmaking returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientApps returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMatchmakingServers returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUserStats returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientRemoteStorage returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientScreenshots returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameCoordinator returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientProductBuilder returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientDepotBuilder returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientAppManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientConfigStore returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientHTTP returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientAudio returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientMusic returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameStats returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUnifiedMessages returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientController returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientParentalSettings returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientDeviceAuth returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientRemoteClientManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientUGC returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientStreamClient returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientShortcuts returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientVR returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientHTMLSurface returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientVideo returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientGameNotifications returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientBluetoothManager returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
+ClientAPI_RunCallbacks
+com.valvesoftware.steam.ipctool
+ipcserver restart: expected: %d, got: %d
+StopJob
+CreateInterface
+Missing String for %s (%d)
+Unknown
+Assertion Failed: 0
+Steam_BGetCallback
+Steam_FreeLastCallback
+Steam_GetAPICallResult
+%s_dir.vpk
+Unknown version %d for vpk %s
+.vpk
+%s_%03d.vpk
+/../
+fread() failed
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/vpklib/packedstore.cpp
+Assertion Failed: nRead == nNumBytes
+rb
+Exceeded limit of number of vpk files supported (%d)!
+.%s
+%s/
+%s%s%s crc=0x%x metadatasz=%d
+fnumber=%d ofs=0x%x sz=%d
+/
+Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+Assertion Failed: count >= 0
+Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+Assertion Failed: (elem == Count()) || IsValidIndex(elem)
+appid
+1
+stopping
+reconfiguring
+preallocating
+downloading
+staging
+committing
+validating
+running
+unknown
+Update state (0x%X) : Timed out waiting for update to start, bailing.
+Update state (0x%X) %s, progress: %.2f (%llu / %llu)
+validate
+beta
+betapassword
+language
+ERROR! AppInfo request for AppId %d returned error %d.
+ERROR! Password check for AppId %d failed to start.
+ERROR! Password check for AppId %d returned error %s.
+betakey
+ERROR! Unknown app '%u'
+ERROR! Failed to install app '%u' (%s)
+Success! App '%u' already up to date.
+Error! App '%u' state is 0x%X after update job.
+Success! App '%u' fully installed.
+Updating Workshop items for App '%u'.
+app_update <appid> [-validate] [-language <lang>] [-beta <betaname>] [-betapassword <pwd>] make sure a Steam application is up-to-date
+app_uninstall
+[-complete] <appId>
+app_run
+<appId> [LaunchOptionIndex] [Arguments]
+app_info_request
+<AppID> - Issue an appinfo request for the given appid. Does not wait for results from the server.
+force_install_dir
+force_install_dir <directory>
+app_set_config
+<AppID> <key> <value> - sets a config value for given app.
+app_license_request
+<AppID> - Requests a free licenses for this app if not already owned.
+app_install_script
+<AppID> [uninstall:0|1]- Runs app install script.
+CAppUpdater::OnAppInfoUpdate
+CAppUpdater::OnCheckAppBetaPasswordResponse
+-complete
+CAppLauncher::OnAppLifetimeNotice
+ERROR! AppId %u launch failed (%s)
+App info request sent.
+ERROR! Failed to request AppInfo for appID %d.
+Usage: force_install_dir <directory>
+AppID %u already owned.
+Requesting license for AppID %u ...
+Success.
+ERROR! Failed getting license for appID %u (%s).
+english
+ERROR! Failed running install script for appID %u.
+ERROR! Failed to request AppInfo update, not online or not logged in to Steam.
+ERROR! Timed out waiting for AppInfo update.
+ERROR! Timed out waiting for password check.
+@NoPromptForPassword
+anonymous
+logon
+see 'login'
+login
+<username> [<password>] [<Steam guard code>] - login to Steam
+set_steam_guard_code
+<code> - authorize this computer by adding the Steam Guard email code
+info
+Dump various Steam info
+logoff
+Disconnect from Steam
+logout
+CSteamUser::OnShutdownLauncher
+Assertion Failed: m_pvOrigNameAddress
+CSteamUser::OnSteamLogon
+CSteamUser::OnLoggedOff
+CSteamUser::OnLogonFailure
+Extended
+CSteamUser::OnPostLogonState
+m_strAccountName
+Logging in user '%s' to Steam %s ...
+This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and enter the Steam Guard code from that message.You can also enter this code at any time using 'set_steam_guard_code' at the console.Steam Guard code:
+Enter the current code from your Steam Guard Mobile Authenticator appTwo-factor code:
+FAILED login with result code %s
+Logging of current session...
+password:
+Waiting for user info...
+Connecting anonymously to Steam %s...
+Account: %s
+SteamID: %s
+Email: %s %s
+(Validated)
+Logon state: %s
+Language: %s
+Persona Name: %s
+Persona State: %s
+Direct Friends: %d
+Groups Friends: %d
+InstallPath: %s
+Universe: %s
+Server Time: %s
+IPCountry: %s
+Offline Mode: %s
+yes
+no
+CellID: %u
+FAILED login with invalid cached credentials
+This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and usethe command 'set_steam_guard_code' to enter the code here.
+Logged in OK
+Retrying. . .
+Login Failure: No cached credentials and @NoPromptForPassword is set, failing.
+OK
+FAILED. Timed out.
+upload_controller_config
+upload_controller_config <appid> <filename> : upload controller config to cloud
+Usage: <appid> <filename>
+Cloud save write error
+CControllerConfigUploader::OnRemoteStorageAppSyncedClient
+CControllerConfigUploader::OnRemoteStorageAppSyncedServer
+Failed to publish file (1a)
+version_%d
+Failed to publish file (1b)
+Failed to publish file (1c)
+Assertion Failed: IsValidIndex( elem )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+Assertion Failed: _IsValidIndex( elem, unNodeSize, pMemBase )
+Assertion Failed: _IsValidIndex( y, unNodeSize, pMemBase )
+m_mapAPICalls
+m_Elements
+Failed to publish file (3a)
+User needs to accept workshop legal agreement (3a)
+Successfully uploaded, file id: %llu
+Failed to publish file (2a)
+User needs to accept workshop legal agreement (2a)
+%s/controller_configs/workshop/%u/%llu.vdf
+Must be logged in to continue.
+File %s doesn't exist.
+Error loading file %s.
+localization
+Not valid controller config file or localization file: %s.
+/controller_config/%u/
+%s.vdf
+~
+%s%s
+Assertion Failed: IsText()
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+@DepotBuilderConfigRoot
+./depotscripts
+@DepotBuilderContentRoot
+@DepotBuilderOutputRoot
+@DepotBuilderNoReslist
+0
+@DepotBuilderAppInfoTimeout
+120
+@DepotBuilderProgressTimeout
+1000
+%s%capp_build_%u.log
+[%s]:
+
+%s
+preview
+setpublic
+nobaseline
+mergebaseline
+previewfast
+buildvpk
+enablelzma
+disablelzma
+nocegsniff
+enablesymlinks
+Preparing update...
+Building file mapping...
+Scanning content
+Updating local CS
+Uploading content
+Signing install script
+.
+app_build_all_depots
+app_build_all_depots [-desc <text>] -depotconfigpath <folder> -contentroot <folder> -buildoutput <folder> <appid>  : Build all depots for one app
+ERROR! Not logged on.
+run_app_build
+run_app_build [-preview] [-desc <text>] <appbuildfile> : run app depot build as specified in appbuildfile
+run_app_build_http
+run_app_build_http : alias for run_app_build
+build_installer
+<project file> <target folder> [beta key] [beta pwd]
+build_backup
+<appid> <target folder> [max folder size MB]
+verify_chunk_store
+verify_chunk_store <appid> <depotid> <datafile> : run app depot build as specified in appbuildfile
+verify_vpk
+verify_vpk <datafile> : verifies content of given VPK
+download_depot
+download_depot <appid> <depotid> [<target manifestid>] [<delta manifestid>] [<depot flags filter>]: download a single depot
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+desc
+depotconfigpath
+contentroot
+buildoutput
+CAppDepotsUpdater::OnAppInfoUpdate
+Assertion Failed: m_pParent
+%s/%u
+ERROR! Depot config root folder does not exist: %s.
+ERROR! Content root folder does not exist: %s.
+ERROR! Failed to request app info for appID %d.
+ERROR! Timeout requesting app info for appID %d.
+ERROR! Failed to get application info for app %d (check login and subscription)
+ERROR! Empty depot section for app %d (you must add at least one depot)
+Warning! Application info is very large for app %d. This can be resolved by disabling or deleting private branches.
+ERROR! Failed to parse application info for app %d
+depotfromapp
+workshopdepot
+ERROR! No depots defined for appID %d.
+%s%cdepot_build_%d.vdf
+Building depot %u from '%s'.
+ERROR! Depot config file does not exist %s.
+manifest
+ERROR! Depot config file has invalid format: %s.
+DepotID
+ERROR! Depot config file specifies wrong DepotID: %s.
+ContentRoot
+ERROR! Build for depot %u failed : %s
+ERROR! Failed to commit build for appid %u : %s
+Successfully finished appID %u build (BuildID %d).
+ERROR! App build file does not exist: %s.
+appbuild
+ERROR! App build file  has invalid format: %s.
+ERROR! App build file %s has invalid appid.
+setlive
+local
+depots
+ERROR! App build file %s has no depots section.
+ERROR! Invalid depot ID: %s.
+ERROR! Depot config file does not exist: %s.
+localcspath
+ERROR! No valid depot specified for appID %u
+Starting appID %u build (flags 0x%x).
+Assertion Failed: m_vecDepotConfigKVs.Count() == m_vecDepotIDs.Count()
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/depotbuilder.cpp
+Building depot %u...
+CAppInstallerBuilder::OnAppBackupStatus
+ERROR! Failed to begin installer build
+ERROR! Installer build failed (%s)
+ERROR! Failed to begin backup build
+ERROR! Backup build failed (%s)
+Chunk store "%s" successfully verified. %u of %u chunks failed
+Failed to verify chunk store "%s".
+Invalid number of parameters
+Empty VPK
+Failed reading %s
+Failed CRC for %s
+ERROR! Failed to parse parameters
+-globaluser
+@ShutdownOnFailedCommand
+Exit steamcmd immediately upon any failed build-related command
+@LogFileFolderName
+Use something other than 'logs' as the folder for log files
+@bSiteLicenseServer
+@bSiteLicenseServerGUI
+@sStartupScript
+Exec contents of this convar as a script at startup
+-- Logging in to Steam --Connecting to your Steam account using steamcmd is similar to using the regular Steam client UI. You can login, logout, and set your Steam Guard email code. Any other account management should be done using the Steam client UI.The first time logging in to a given account on this machine, you'll need to specify the password. For subsequent sessions you can omit the password; using the 'logout' command will clear those cached credentials (your password is never stored locally) and require a password on the next login. If the password is required but not supplied as part of the 'login' command, you will be prompted for a password. To disable this prompt, first set the '@NoPromptForPassword' ConVar to 1 (see the help topic 'convars' for more info). If the prompt is disabled and the password is required, the login command will fail.Note: you may login anonymously using "login anonymous" if the content you wish to download is available for anonymous access.Common commands:               login : Login to Steam              logout : Disconnect from Steamset_steam_guard_code : Enter the Steam Guard code that was emailed to you for authorizing this machine
+You can use the 'runscript' command to execute a text-file script. The file should have each desired command listed sequentially on a new line. The filename and extension do not matter; you only need 'read' access to the file. Each line of the file will be executed sequentially.
+-- Console Variables --ConVars are variables used to set options and program behavior. Often, but not always, Steam client ConVars are named beginning with the '@' character. The '@' character is simply part of their name, it is not a directive itself.To see the current value of a ConVar, simply type its name into the console and hit enter. To change the value, type the name of the ConVar followed by the desired value, and hit enter.
+-- Building Steam Applications --Full documentation of this process is beyond the scope of this little 'help' system, and so it is provided as part of the Steam SDK.If you are a licensed Steam Application Developer, then you will be using this tool to 'build' your game or application and create update patches in the Steam system. In that case, the 'app_build' command is the one you're looking for.
+-- Downloading and updating Steam applications installed on the local machine --Use the 'app_update' command to download and update Steam games and applications on this computer. This is generally intended for game dedicated server installations, and will only work for games that have been converted to the new Steam HTTP download system - for games that haven't been converted yet, you should use the older 'HldsUpdateTool' (Windows) / 'steam' (linux) command-line tool.By default, the game is downloaded to the folder "./SteamApps/common/<gamename>". To change this location, use the 'force_install_dir' command to set the target directory BEFORE running app_update. Note: Steam will create a directory within the target directory for storing state information and temporary files; the name of this folder will be a string of numbers and letters 40 characters long.You will first need to login to Steam using an account which has access to the game, or anonymously - type 'help login' for more information.It's likely you'll want to put all of the necessary calls into a script file (see "runscript"); here is an example file:  @ShutdownOnFailedCommand 1 @NoPromptForPassword 1 force_install_dir ../Ricochet/ login anonymous app_update 60 validate quit
+commandline
+scripts
+convars
+app_build
+app_update
+No specific help topic found for '%s', returning 'find' results. . .
+%20s : %s
+Logging in to Steam
+Executing a sequence of commands via a script file
+Executing commands directly via the OS command line
+Options and settings that affect this program session
+Building Steam application content (only for licensed Steam application developers)
+Installing/updating a Steam application on the local filesystem (EG dedicated servers)
+Command not found: %s
+Non-user command %s received at console; ignoring
+"%s" = "%s"
+//
+%s
+Failed to load script file '%s'
+SteamExe::RunFrame()
+ConVars:
+%40s
+"%s"
+= %-12s : %s
+Commands:
+%40s
+: %s
+set_spew
+<group> <level> <loglevel> set spew levels for the given group
+find
+find substrings in console commands
+set_spew_level
+<SpewLevel LogLevel> Sets spew and log level for all groups
+quit
+Stops Steam client console
+help
+Show help information
+exit
+runscript
+<scriptfile> - runs a console command script
+api_logging
+api_logging <enabled> <verbose> : enable/disable verbose API logging in steamcmd
+http_test
+<optional_url> test HTTP connectivity via specified URL
+profile
+<seconds> profile for N seconds
+FCVAR_NEVER_AS_STRING
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
+runscript <scriptfile> - runs console script file
+Usage: api_logging <enabled> <verbose>
+Logging set (%s/%s).
+enabled
+disabled
+verbose
+brief
+https://www.example.com/
+-help
+--help
+-h
+/h
+Loading Steam API...
+steam_dev.cfg
+steamconsole.cfg
+STEAM_CLIENT_LOG_FOLDER
+-sitelicense
+-gui
+SITE_SERVER_GUI
+SteamAppId
+steam_appid.txt
++quit
+Running as Site License provider
+-attachui
+../siteserverui/linux64/siteserverui
+Failed to launch GUI
+Could not find GUI file
+You must login to Steam for the Site License functionality to work.
+Steam>
+-nodebug
+running profile for %d seconds...
+Help topics - type "help <topic>" or run with "--help <topic>" for more information:
+You can also type "find <string>" to see a list of all commands and convars that contain or reference <string>.
+Steam Console Client (c) Valve Corporation
+-- type 'quit' to exit --
+OK.
+FAILED.
+sign_install_script
+sign_install_script <appid> <input filename> <output filename> : upload install script to back end for signing
+drm_wrap
+drm_wrap <appid> <input filename> <output filename> <toolname> <flags> : upload executable to back end for DRM wrapping
+ceg_wrap
+ceg_wrap <appid> <orig filename> <stripped filename> <strips filename> : upload executable to back end for CEG wrapping
+Install script signing completed; output is in %s
+Install script signing failed with EResult %d (%s)
+DRM wrap completed; output is in %s
+DRM wrap failed with EResult %d (%s)
+CEG wrap completed successfully
+CEG wrap failed with EResult %d (%s)
+Usage: sign_install_script <appid> <filename> <output filename>
+Usage: drm_wrap <appid> <filename> <output filename> <toolname> <flags>
+Usage: ceg_wrap <appid> <orig filename> <stripped filename> <strips filename>
+workshop_build_item
+workshop_build_item <build config filename> : build a workshop item
+workshop_create_legacy_item
+workshop_create_legacy_item <appid> <workshop file> : build a legacy workshop item
+workshop_download_item
+workshop_download_item <appid> <PublishedFileId> : download a workshop item
+CWorkshopItemBuilder::OnAppInfoUpdate
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+ERROR! Failed to load build config file "%s".
+workshopitem
+ERROR! Failed to parse build config file "%s".
+ERROR! Missing AppID in build config file "%s".
+publishedfileid
+filetype
+ERROR! Failed to create new workshop item (%s).
+Create new workshop item ( PublishFileID %llu).
+title
+description
+visibility
+previewfile
+contentfolder
+changenote
+Preparing content...
+Uploading content...
+Uploading preview image...
+Committing update...
+ERROR! Failed to update new workshop item.
+ERROR! Failed to update workshop item (%s).
+Success.
+CWorkshopItemBuilderLegacy::OnAppInfoUpdate
+ERROR! Invalid appID.
+ERROR! ClientRemoteStorage()->FileWrite failed (%s).
+ERROR! ClientRemoteStorage()->FileShare() failed (%s).
+Uploaded from steamcmd
+ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed (%s).
+Success. Created new item, PublishedFileId %llu
+CWorkshopItemDownloader::OnAppInfoUpdate
+CWorkshopItemDownloader::OnDownloadItemResult
+ERROR! Failed to start downloading item %llu.
+Downloading item %llu ...
+ERROR! Timeout downloading item %llu
+Success. Downloaded item %llu to "%s" (%llu bytes)
+ERROR! Failed to get install info for item %llu.
+ERROR! Download item %llu failed (%s).
+ERROR! Failed to create new workshop item.
+ERROR! ClientRemoteStorage()->FileShare() failed.
+ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed.
+ERROR! Missing build config file.
+ERROR! Not logged on.
+ERROR! Missing parameters.
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+Assertion Failed: resizeNumBits >= 0
+Assertion Failed: !m_pInt
+Assertion Failed: GetInts()
+{}()'
+{}()':
+Assertion Failed: pName
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/convar.cpp
+Assertion Failed: m_fnCompletionCallback
+Assertion Failed: m_vecCallbacks.Count() == 0 || !callback
+Assertion Failed: m_pParent == this
+ConVar::InternalSetValue: called with NULL
+%f
+Assertion Failed: !( m_nFlags & FCVAR_NEVER_AS_STRING )
+Assertion Failed: m_vecCallbacks.Count() == 0
+%d
+%lld
+%llu
+%lf
+Assertion Failed: pDefaultValue
+Attempted to change replicated CVar when you are not the GM
+ConCommand '%s' not currently supported in config file
+Assertion Failed: false
+Assertion Failed: !pszString || pszString[nChars] == '\0'
+Bad expression token: %c at %d in %s
+Bad expression token: %c %c
+V_RemoveDotSlashes failed for "%s".
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s
+flock LOCK_EX request but file is not opened for writing, ignoring: %s
+flock %s %s failed. errno = %d
+LOCK_EX
+LOCK_SH
+fcntl failed to set F_NOCACHE
+Assertion Failed: ret != 0
+*
+flock LOCK_EX %s failed, errno = %d
+Assertion Failed: written == count
+%s%c%s
+unReadAheadChunkSize should be zero when using bUnbuffered = true
+Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
+unsupported flags 0x%x passed to CFileReader::BOpenFile
+Assertion Failed: cubBytesToRead < INT32_MAX
+Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
+Seeking to a position which is not sector aligned will break unbuffered io
+Assertion Failed: cubData < INT32_MAX
+Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
+..
+Assertion Failed: cbActual < (uint32)nBufSizeWithTerminator
+CFileWriterThread
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/tslist.h
+Assertion Failed: m_Count == 0
+Assertion Failed: pNode && pNode->Next == QueueEnd()
+%s.async%u.tmp
+Invalid FileWriterItem_t
+m_buffer
+CUtlBuffer
+m_Memory
+m_queueItemsPending
+m_vecRegisteredWriters
+static_cast<Node_t*>(pNode)->elem
+Assertion Failed: s_bExit
+Assertion Failed: m_queueItemsPending.Count() == 0
+Assertion Failed: m_vecRegisteredWriters.Count() == 0
+CFileWriterThread already exited
+Assertion Failed: pFile
+Assertion Failed: cubData < FIO_MAX_IO_BYTES
+Assertion Failed: pFile->m_hFileDest != INVALID_OSFILEHANDLE
+Assertion Failed: m_vecRegisteredWriters.HasElement( pFile )
+*.*
+CPathString
+.dylib
+%s/%s%s
+Assertion Failed: strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/interface.cpp
+.cpl
+0123456789abcdef
+%%%d
+]:%u
+ReadToken overflow
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+"
+{
+KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
+}
+GetIntFromString() did not get correct peCS parameter
+GetUint64FromString() did not get correct peCS parameter
+can't convert uint64 to int32 (data loss)
+can't convert int64 to uint64 (negative number)
+RGBA: %.2X %.2X %.2X %.2X
+$0
+$1
+WINDOWS
+WIN32
+WIN64
+VISTA
+WIN7
+OSX
+OSX1010
+POSIX
+LINUX
+LINUX32
+LINUX64
+ANDROID
+ANDROID32
+ANDROID64
+X360
+Assertion Failed: buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
+#include
+#include is NULL
+KeyValues don't support #include anymore, file "%s"
+LoadFromBuffer: missing {   (current key: '%s')
+Error while parsing text KeyValues for resource %s
+Assertion Failed: pKeyValuesTextParser
+RecursiveLoadFromBuffer:  got EOF instead of keyname
+RecursiveLoadFromBuffer:  got empty keyname
+RecursiveLoadFromBuffer:  got NULL key
+RecursiveLoadFromBuffer:  got } in key
+RecursiveLoadFromBuffer:  got conditional between key and value
+KeyValues::ReadAsBinary() stack depth > 100
+NULL
+Assertion Failed: m_errorIndex>=0
+Assertion Failed: stackLevel >= 0 && stackLevel < m_errorIndex
+KeyValues Error: %s in file %s [offset: %d]
+,
+(*
+*),
+loopback
+%i.%i.%i.%i
+%i.%i.%i.%i:%i
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/netadr.cpp
+"
+Assertion Failed: info.m_pReplacementString == 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+CUtlBuffer::GetStringFast: binary buffers only
+CUtlBuffer::GetStringFast: no string termination
+Expected %lld but got %lld!
+Assertion Failed: pConv && pConv->GetDelimiterLength() > 0
+Assertion Failed: pFmt
+Assertion Failed: nSize >= 0
+Assertion Failed: m_Put >= 0
+Assertion Failed: offset >= 0
+Assertion Failed: offset >= -m_Put && offset <= INT_MAX-m_Put
+Assertion Failed: offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
+%u
+n
+t
+v
+b
+r
+f
+a
+\
+?
+'
+%.18g
+Assertion Failed: m_unSizeOfElements > 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+Assertion Failed: nGrowSize >= 0
+nBytesItem is %d in UtlMemory_CalcNewAllocationCount
+Assertion Failed: num > 0
+Assertion Failed: IsPowerOfTwo( nNewCapacity )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
+Assertion Failed: nPreSplit > 0 && nPreSplit + nPostSplit == nCount
+Assertion Failed: ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
+Assertion Failed: cActualReplacements == cReplacements
+Assertion failed: length > k_cchMaxString
+Assertion Failed: nMinCapacity > Capacity()
+Assertion Failed: nMinCapacity >= nChars
+Assertion Failed: nMinCapacity <= k_nMaxStringSize
+Assertion Failed: len > 0 || HasError()
+Error State on string being set.
+%02d:%02d:%02d
+%02d/%02d/%02d
+00:00:00
+01/01/00
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/rtime.cpp
+Assertion Failed: V_strlen( pchTime ) == 25
+Infinite time value
+Nil time value
+Invalid time value
+NIL
+%04u%02u%02u
+%04u-%02u-%02u
+%04u%02u%02u%02u%02u%02u
+%04u-%02u-%02u %02u:%02u:%02u
+steamclient.dylib
+EResult
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
+EUniverse
+false
+true
+EPersonaState
+EAppUpdateError
+ELogonState
+Failure
+No Connection
+Invalid Password
+Logged In Elsewhere
+Invalid Protocol
+Invalid Parameter
+File Not Found
+Busy
+Invalid State
+Invalid Name
+Invalid Email
+Duplicate Name
+Access Denied
+Timeout
+Banned
+Account Not Found
+Invalid Steam ID
+Service Unavailable
+Not Logged On
+Pending
+Encryption Failure
+Insufficient Privilege
+Limit exceeded
+Request revoked
+License expired
+Already Redeemed
+Duplicated Request
+Already Owned
+IP Address Not Found
+Persistence Failed
+Locking Failed
+Session Replaced
+Connection Failed
+Handshake Failed
+I/O Operation Failed
+Disconnected By Remote Host
+Shopping Cart Not Found
+Blocked
+Ignored
+No match
+Account Disabled
+Service Read Only
+Account Not Featured
+Administrator OK
+Content Version
+Try another CM
+Password required to kick session
+Already Logged In Elsewhere
+Request suspended/paused
+Request has been canceled
+Corrupted or unrecoverable data error
+Not enough free disk space
+Remote call failed
+Password is not set
+External Account is not linked to a Steam account
+PSN Ticket is invalid
+External Account linked to another Steam account
+Remote File Conflict
+Illegal password
+Same as previous value
+Account Logon Denied
+Cannot Use Old Password
+Invalid Login Auth Code
+Account Logon Denied no mail sent
+Hardware not capable of IPT
+IPT init error
+Operation failed due to parental control restrictions for current user
+Facebook query returned an error
+Expired Login Auth Code
+IP Login Restriction Failed
+Account Locked Down
+Account Logon Denied Verified Email Required
+No matching URL
+Bad response
+Password reentry required
+Value is out of range
+Unexpected error
+Feature Disabled
+Invalid CEG Submission
+Restricted device
+Region Locked
+Rate Limit Exceeded
+Account logon denied, need two-factor code
+Item or entry has been deleted
+Too many logon attempts
+Two-factor code mismatch
+Two-factor activation code mismatch
+Account associated with multiple players
+Not Modified
+No mobile device available
+Time is out of sync
+SMS code failed
+Too many accounts access this resource
+Too many changes to this account
+Too many changes to this phone number
+You must refund this transaction to wallet
+Sending of an email failed
+Purchase not yet settled
+Needs captcha
+Gameserver login token denied
+Gameserver login token owner denied
+Invalid item type
+IP Address Banned
+Gameserver login token expired
+Insufficient funds
+Too many pending
+No site licenses found
+Network send exceeded
+Accounts not friends
+Limited user account
+Cant remove item
+Account has been deleted
+Account has an existing user cancelled license
+Invalid
+Public
+Beta
+Internal
+Dev
+Offline
+Online
+Away
+Snooze
+Looking to Play
+Looking to Trade
+Invisible
+No Error
+Unspecified Error
+Paused
+Canceled
+Suspended
+No subscription
+No connection
+Connection timeout
+Missing decryption key
+Missing configuration
+Disk read failure
+Disk write failure
+Not enough disk space
+Corrupt game files
+Waiting for disk
+Invalid install path
+Application running
+Dependency failure
+Not installed
+Update required
+Still busy
+No connection to content servers
+Invalid application configuration
+Invalid content configuration
+Manifest unavailable
+Not released
+Region restricted
+Corrupt depot cache
+Missing executable
+Invalid platform
+Invalid file system
+Corrupt update files
+Download disabled
+Shared library locked
+Purchase pending
+Other session playing
+Corrupt download
+Corrupt disk
+Missing file permissions
+File locked
+Content unavailable
+Requires 64bit operating system
+Missing update files
+Not enough disk quota
+Site License locked
+Parental control blocked
+Create process failed
+Steam client out of date
+Allowed playtime exceeded
+Steam client files corrupt
+Logged Off
+Logging On
+Logging Off
+Logged On
+broadcast
+PS3
+@bEnableSpewThrottle
+@bEnableLogTearOff
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/logger.cpp
+Assertion Failed: pLogInstance == sm_pLogInstance
+Assertion Failed: sm_cRef > 0
+Assertion Failed: sm_bShuttingDown
+Assertion Failed: ThreadInMainThread()
+CLogger::PublishLogEvent
+%s\%s
+CLogger::EmitEventInternal
+Hit absolute maximum emit event queue size -- NOT adding this event
+Assertion Failed: pLogEvent
+CLogger::FlushEventQueue
+Log event queue grew unreasonably large in a short time!
+Assertion Failed: sm_bShuttingDown && sm_pLogInstance
+Failed to remove log event from threadsafe queue!
+CLogger::GeneratePrefixFromLogWatchParam
+Assertion Failed: pchMsg
+%s [%s]%-*s
+[%s]%-*s
+[IP:%s]
+[ID:%s]
+[TXN:%llu]
+Assertion Failed: *pchMsg && *pchMsg == '%'
+Logger does not handle * char as used for a width specifier (where width is a param)
+Stop using I64/I32 - use lld or d, respectively
+Unsupported format qualifier %c%c
+(null)
+Unrecognized character code (%c) in format string, ignoring
+CLogger::DeserializeVaArgs
+stop using I64/I32, use lld or d respectively
+Unsupported format qualifier z%c
+Unsupported format qualifier l%c
+Unrecognized character code '%c' in format string, ignoring
+Assertion Failed: pch[cub - 1] != '\0' && pch[cub] == '\0'
+Assertion Failed: 1 == ret
+CLogInstance::WriteToLog
+Failed to close logfile with prefix %s during BTearOffLogFile call!
+Assertion Failed: NULL == m_pFile
+Assertion Failed: 0 != m_rgchPrefixFileName[0]
+%s.current.txt
+w
+Log started.
+%s-%d
+Log stopped.
+.current.txt
+%s.*.txt
+%s.%%u.txt
+%s.%10u.txt
+Persistent logfile %s is past the keep until date - cleaning up
+Failed to find time in logfile name
+Persistent Logfiles created which have no cleanup limit specified!
+CLogInstance::EmitEventNow
+...
+Last Message Repeated %d times.%s
+Assertion Failed: eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
+CIPAndPort::GetIPv4 called on IPv6 address
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h
+Logger
+Assertion Failed: nBytes
+Assertion Failed: bitNum >= 0 && bitNum < this->Size()
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/threadtools.h
+Assertion Failed: m_cReentrancyCount >= 0
+Assertion Failed: (unsigned)elem <= (unsigned)m_Size
+@nSpewThrottlePeriodMs
+@nSpewThrottleTriggerThreshold
+10
+@nSpewThrottleResumeThreshold
+3
+@nSpewThrottleUnconditionalTriggerCount
+50
+@nSpewThrottleUnconditionalResumeMs
+5000
+@nSpewThrottleNagFrequencyMs
+[A:%u:%u:%u]
+[G:%u:%u]
+[M:%u:%u:%u]
+[P:%u:%u]
+[C:%u:%u]
+[g:%u:%u]
+[c:%u:%u]
+[L:%u:%u]
+[T:%u:%u]
+[I:%u:%u]
+[U:%u:%u]
+[a:%u:%u]
+[i:%u:%u]
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
+E
+@
+@
+@
+o
+D
+
+=
+@
+@
+@
+@
+@
+@
+@
+@
+@
+X
+v
+v
+c
+c

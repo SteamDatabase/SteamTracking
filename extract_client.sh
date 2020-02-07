@@ -67,6 +67,7 @@ do
 	name=$(basename "$file" .dylib);
 
 	strings "$file" | grep "/buildbot/" | sed "s/^[^\/]*\//\//" | sed "s/\:[0-9]*$//" | sort -u > "$DIR/BuildbotPaths/$name.txt"
+	./macho-strings/macho-strings -binary "$file" > "$DIR/Strings/$name.txt"
 
 	./nm-with-macho -C -p "$file" | grep -Evi "GCC_except_table|google::protobuf|steam_rel_osx_builder" | awk '{$1=""; print $0}' | sort -u > "$DIR/Symbols/$name.txt"
 done <   <(find bins/ -name '*.dylib' -print0)

@@ -1,0 +1,3894 @@
+__TEXT
+__text
+__TEXT
+__const_coal
+__TEXT
+sW
+__symbol_stub
+__TEXT
+__stub_helper
+__TEXT
+__gcc_except_tab__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__unwind_info
+__TEXT
+__eh_frame
+__TEXT
+__DATA
+__dyld
+__DATA
+__nl_symbol_ptr
+__DATA
+__la_symbol_ptr
+__DATA
+__mod_init_func
+__DATA
+__data
+__DATA
+__const
+__DATA
+__gcc_except_tab__DATA
+__common
+__DATA
+__bss
+__DATA
+@c*
+8
+__LINKEDIT
+`*
+
+4
+@loader_path/libsteam.dylib
+8
+P
+tb.
+`*
+4
+/usr/lib/libSystem.B.dylib
+4
+4
+/usr/lib/libstdc++.6.dylib
+4
+/usr/lib/libgcc_s.1.dylib
+&
+$tI
+?
+0C
+5
+a
+0
+
+`
+5
+a
+0
+
+`
+Y@
+0E
+0C
+0E
+0C
+0E
+0C
+0E
+0E
+0C
+0E
+0C
+0E
+0C
+0E
+0C
+0E
+0C
+0E
+0C5
+a
+0
+
+`
+@
+6
+L
+,
+l
+\
+<
+|
+B
+"
+b
+R
+2
+r
+
+J
+*
+j
+Z
+:
+z
+F
+&
+f
+V
+6
+v
+N
+.
+n
+^
+>
+~
+A
+!
+a
+Q
+1
+q
+I
+)
+i
+Y
+9
+y
+E
+%
+e
+U
+5
+u
+
+M
+-
+m
+]
+=
+}
+S
+3
+s
+K
++
+k
+[
+;
+{
+G
+'
+g
+W
+7
+w
+O
+/
+o
+_
+?
+
+@
+`
+P
+0
+p
+H
+(
+h
+X
+8
+x
+D
+$
+d
+T
+4
+t
+C
+#
+c
+
+
+
+
+
+
+
+(
+0
+8
+@
+P
+`
+p
+0
+@
+`
+0
+@
+`
+
+
+
+
+#
++
+3
+;
+C
+S
+c
+s
+p
+p
+
+!
+1
+A
+a
+
+
+
+
+N6common15IAssertObserverE
+DebugAssert
+N6common11CLogContextE
+N6common9CLogGroupE
+%.7s
+%.4s
+%.8s.%.3hu
+%.3lf
+[%u]
+%*s
+strlen(szBuffer) < EBufSize
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Logging/Src/Log.cpp
+N6common8CLogFileE
+a
+Failed to open logfile
+string
+binary
+unsigned number
+CMultiFieldBlob: Failed to flush changes to memory mapped file
+m_pKey
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/BlobRegistry.cpp
+String:
+Number: 0x%8.8x
+szFmtBuf
+%2.2x
+The registry is in use by another process, timeout expired
+Value "
+\
+" does not exist
+Type mismatch on value "
+", expected
+but got
+N6common18CBlobValueIteratorE
+pOtherBlobSubkKeyIterator
+N6common19CBlobSubKeyIteratorE
+(SetEvent(m_hFileMutex)) != 0
+(CloseHandle(m_hFileMutex)) != 0
+(CloseHandle(m_hFileSignal)) != 0
+N6common13CBlobRegistryE
+NonNullValueName
+Failed to query key
+for value info
+CallerBufSizeNonZero
+NonNullCallerBytesPtr
+NonNullCallersNumberPtr
+NonNullCallerDataPtr
+PositiveLength
+NonNullSubKeyName
+NonNullNewSubKeyName
+Can only rename immediate subkeys
+key is in use
+Failed to rename key
+Details:
+N6common8CBlobKeyE
+Cannot open blob archive file:
+File does not exist:
+: unknown error
+TopKey
+!m_bWatchdogThreadRunning
+Cannot delete root key
+key is already open
+subkey already exists
+BlobRegistry Watchdog
+dwRet != 0
+dwRet <= 1024
+BlobRegistryMutex_
+BlobRegistrySignal_
+Failed to create file access mutex
+NoTrailingSlash
+NoDoubleSlashes
+Failed to delete key
+key has subkeys
+Failed to open key
+Failed to create key
+Details:
+18CBlockingUDPSocket
+N6common16CExceptionHolderE
+N6common13CRuntimeErrorE
+N6common9CBadAllocE
+yes
+1
+N6common15CConfigDatabaseE
+N6common19CMainConfigDatabaseE
+Failed to open config file %s
+pResult != 0
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/ConfigDatabase.cpp
+N6common11CConfigTreeE
+NoMachineSpecificPassphraseAvailable
+, errno
+"
+"
+%s %s
+(m_FinishedEvent.Set()) != false
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/EventLoopThread.cpp
+(m_apSignalWaitEventsModifiedEvent->Set()) != false
+Failed to create OS thread
+pEventLoopThread
+%s (%u) Finished called without ever being started
+(pEventLoopThread->m_FinishedEvent.Set()) != false
+%s (%u) Starting
+wait failed
+pEventLoopThread->m_cbAllowAlertableWait
+(pEventLoopThread->m_SignalFinishEvent.Set()) != false
+%s (%u) Told to exit
+!bInPause
+bInPause
+uEventIdx < pEventLoopThread->m_vec_pair_Handle_tsrcpEventFunctor.size()
+Unknown exception
+(m_SignalFinishEvent.Set()) != false
+(ResumeThread( hThread )) != (static_cast<DWORD>(~0))
+%s (%u) BEING TERMINATED
+(CloseHandle( hThread )) != 0
+(ResumeThread( m_hThread )) != (static_cast<DWORD>(~0))
+N6common16CEventLoopThreadE
+N6common9CFindFileE
+?;*<>|:\//"
+con
+prn
+aux
+clock$
+nul
+com1
+com2
+com3
+com4
+com5
+com6
+com7
+com8
+com9
+lpt1
+lpt2
+lpt3
+lpt4
+lpt5
+lpt6
+lpt7
+lpt8
+lpt9
+*
+.
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/FileUtil.cpp
+%s/%s
+Failed to remove file "
+cszDirName
+%s/*.*
+Failed to remove file
+(_findclose( hFile )) == 0
+Failed to remove directory
+GetSteamInstallDir
+Failed to set file attributes
+Failed to create directory
+Cannot delete file
+error
+Cannot Remove Directory, Error is
+expected to be a file but isn't
+CMultiFieldBlob: Unable to grow blob
+CMultiFieldBlob: Attempt to update a field that has a registered child
+N6common15CMultiFieldBlobE
+m_eCacheState == eCachedMallocedPlaintextVersion || m_eCacheState == eCachePtrIsCopyOnWritePlaintextVersion
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/MultiFieldBlob.cpp
+RecursivelyCheckAllChildrenAreCollapsed()
+m_eCacheState != eCachedMallocedPlaintextVersion && m_eCacheState != eCachePtrIsCopyOnWritePlaintextVersion
+( !(m_uNumRegisteredChildren) || (( m_eCacheState == eCachedMallocedPlaintextVersion || m_eCacheState == eCachePtrIsCopyOnWritePlaintextVersion ) && RecursivelyCheckAllChildrenAreCollapsed()) )
+m_uSizeOfBlobBufferIncludingUnusedAreaAtEnd >= GetSizeOfCachedSerializedBlobInCachedBlobHeader() + GetSizeOfCachedSpareCapacityInCachedBlobHeader()
+nSizeOfFieldsToMove >= 0
+! m_pParentBlob
+CMultiFieldBlob::RecursivelyEnsureSizeOfSpareCapacity(): attempt to grow eFixedSizeUnowned blob
+CMultiFieldBlob::RecursivelyEnsureSizeOfSpareCapacity(): realloc() failed
+m_pSerializedBlob == pReallocedBlob
+CMultiFieldBlob::RecursivelyEnsureSizeOfSpareCapacity(): malloc() failed
+m_pParentBlob
+false
+uExtractedSizeOfFieldData <= uSizeOfSwapFieldDataBuffer
+uNewExtractedSizeOfFieldName == uExtractedSizeOfFieldName
+uNewExtractedSizeOfFieldData == uNewSizeOfFieldData
+m_pCachedSerializedBlob && m_uSizeOfCacheIncludingUnusedAreaAtEnd >= sizeof( TBlobHeader ) && m_uSizeOfCacheIncludingUnusedAreaAtEnd == GetSizeOfCachedSerializedBlobInCachedBlobHeader() + GetSizeOfCachedSpareCapacityInCachedBlobHeader() + m_uSizeOfUnusedCacheAfterEndOfBlob && reinterpret_cast<TBlobHeader *>( m_pCachedSerializedBlob )->m_u8PreprocessedFormatCode == ePlaintext && GetSizeOfSerializedBlobInBlobHeader() == GetSizeOfCachedSerializedBlobInCachedBlobHeader() && GetSizeOfSpareCapacityInBlobHeader() == GetSizeOfCachedSpareCapacityInCachedBlobHeader() && ( 0 == memcmp( m_pSerializedBlob, m_pCachedSerializedBlob, GetSizeOfSerializedBlobInBlobHeader() ) )
+( !(m_eMemoryOwnership != eChildBlobReferingToMemoryInParent) || (m_pSerializedBlob && m_uSizeOfBlobBufferIncludingUnusedAreaAtEnd == GetSizeOfSerializedBlobInBlobHeader() + GetSizeOfSpareCapacityInBlobHeader() + m_uSizeOfUnusedAreaAfterEndOfBlob) )
+m_eCacheState == eCacheEmpty
+CMultiFieldBlob(pSerialized): Failed to malloc plaintext version of encrypted blob
+m_uNumRegisteredChildren == 0
+CMultiFieldBlob(pSerialized): No decryption key supplied for encrypted blob
+CMultiFieldBlob(pSerialized): Bad EncryptedBlob header
+CMultiFieldBlob(pSerialized): Bad AES128 encryption header
+CMultiFieldBlob(pSerialized): Bad encryption header
+m_eAutoPreprocessCode == eAES128
+CMultiFieldBlob(pSerialized): decrypted blob failed MAC
+uSizeOfWrapperBlob >= u32SizeOfPlaintext
+CMultiFieldBlob::UnpreprocessBlob(): realloc() failed
+CMultiFieldBlob(pSerialized): Corrupt decrypted BlobHeader
+CMultiFieldBlob(pSerialized): Bad CompressedBlob header #1
+CMultiFieldBlob(pSerialized): Bad CompressedBlob header #2
+CMultiFieldBlob(pSerialized): Bad CompressedBlob header #3
+uSizeOfWrapperBlob < u32SizeOfPlaintext
+ZLib decompression failed
+CMultiFieldBlob(pSerialized): Corrupt decompressed BlobHeader
+CMultiFieldBlob(pSerialized): Invalid m_u8PreprocessedFormatCode
+m_pCachedSerializedBlob
+m_uSizeOfCacheIncludingUnusedAreaAtEnd >= sizeof( TBlobHeader ) && m_uSizeOfCacheIncludingUnusedAreaAtEnd == GetSizeOfCachedSerializedBlobInCachedBlobHeader() + GetSizeOfCachedSpareCapacityInCachedBlobHeader() + m_uSizeOfUnusedCacheAfterEndOfBlob
+( !(m_eCacheState == eCachePtrIsCopyOnWritePlaintextVersion) || (m_eMemoryOwnership == eTakeOwnershipOfMallocedSerializedBlob) )
+m_pSerializedBlob
+( !(m_eMemoryOwnership != eChildBlobReferingToMemoryInParent) || (m_uSizeOfBlobBufferIncludingUnusedAreaAtEnd == GetSizeOfSerializedBlobInBlobHeader() + GetSizeOfSpareCapacityInBlobHeader() + m_uSizeOfUnusedAreaAfterEndOfBlob) )
+m_eCacheState == eCachedMallocedPlaintextVersion
+m_uSizeOfBlobBufferIncludingUnusedAreaAtEnd == 0
+m_uSizeOfUnusedAreaAfterEndOfBlob == 0
+m_uSizeOfCacheIncludingUnusedAreaAtEnd >= (std::max) ( GetSizeOfSerializedBlobInBlobHeader() + GetSizeOfSpareCapacityInBlobHeader(), GetSizeOfCachedSerializedBlobInCachedBlobHeader() + GetSizeOfCachedSpareCapacityInCachedBlobHeader() )
+uSizeOfCachedSerializedBlob == GetSizeOfCachedSerializedBlobInCachedBlobHeader() + GetSizeOfCachedSpareCapacityInCachedBlobHeader()
+uExtractedSizeOfFieldData == GetSizeOfSerializedBlobInBlobHeader() + GetSizeOfSpareCapacityInBlobHeader()
+! m_pSerializedBlob
+CMultiFieldBlob(other): Failed to malloc copy of other blob
+m_eMemoryOwnership == eCopyOnWrite
+CMultiFieldBlob(pSerialized): Null pSerialized
+CMultiFieldBlob(pSerialized): Invalid ExpectedSizeOfSerializedImage
+CMultiFieldBlob(pSerialized): Invalid BinaryFormatCode
+CMultiFieldBlob(pSerialized): BlobHeader says larger than SizeOfBlobBufferIncludingUnusedGrowthArea
+CMultiFieldBlob(pSerialized): Bad BlobHeader doesn't match ExpectedSizeOfSerializedImage
+CMultiFieldBlob(pSerialized): Partial field header at end of record
+CMultiFieldBlob(pSerialized): Bad field - extends past end of blob
+CMultiFieldBlob(pSerialized): FieldId defined twice
+m_eMemoryOwnership == eChildBlobReferingToMemoryInParent
+m_eCacheState == eCachedMallocedPreprocessedVersion || m_eCacheState == eCachePtrIsCopyOnWritePreprocessedVersion
+CMultiFieldBlob(pParent,FieldName): Field does not exist
+pSerializeField == m_pSerializedBlob + GetSizeOfSerializedBlobInBlobHeader() + uSizeOfNewFields
+CMultiFieldBlob::AddFields(): duplicate field name
+CMultiFieldBlob::AddField(): Field already exists
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/MultiFieldBlob.h
+m_eMemoryOwnership == eTakeOwnershipOfMallocedSerializedBlob || m_eMemoryOwnership == eMemoryMappedFile || m_eMemoryOwnership == eFixedSizeUnowned
+uSizeOfPreprocessedVersion >= uSizeOfPlaintext
+CMultiFieldBlob::PreprocessBlob(): realloc() failed
+static_cast<size_t>( m_pCachedSerializedBlob + m_uSizeOfCacheIncludingUnusedAreaAtEnd - pData ) >= uSizeOfEncryptedData + MAC_t::DIGESTSIZE
+(sDecryptedData.length() == uSizeOfPlaintext && sDecryptedData.compare ( 0, uSizeOfPlaintext, reinterpret_cast<char *>( m_pSerializedBlob ), uSizeOfPlaintext ) == 0) != false
+(mac2.Verify( pData )) != false
+m_u16AutoZLibCompressionLevel >= 1 && m_u16AutoZLibCompressionLevel <= 9
+ZLib compression failed
+m_uSizeOfCacheIncludingUnusedAreaAtEnd >= GetSizeOfCachedSerializedBlobInCachedBlobHeader() + GetSizeOfCachedSpareCapacityInCachedBlobHeader()
+m_uSizeOfUnusedCacheAfterEndOfBlob == m_uSizeOfCacheIncludingUnusedAreaAtEnd
+m_uSizeOfCacheIncludingUnusedAreaAtEnd >= sizeof(TBlobHeader) && m_uSizeOfCacheIncludingUnusedAreaAtEnd == GetSizeOfCachedSerializedBlobInCachedBlobHeader() + GetSizeOfCachedSpareCapacityInCachedBlobHeader() + m_uSizeOfUnusedCacheAfterEndOfBlob
+( !(m_eCacheState == eCachePtrIsCopyOnWritePreprocessedVersion) || (m_eMemoryOwnership == eTakeOwnershipOfMallocedSerializedBlob) )
+m_eCacheState == eCachedMallocedPreprocessedVersion
+GetSizeOfSerializedBlobInBlobHeader() == GetSizeOfCachedSerializedBlobInCachedBlobHeader() && GetSizeOfSpareCapacityInBlobHeader() == GetSizeOfCachedSpareCapacityInCachedBlobHeader() && ( 0 == memcmp( m_pSerializedBlob, m_pCachedSerializedBlob, GetSizeOfSerializedBlobInBlobHeader() ) )
+GetSizeOfCachedSpareCapacityInCachedBlobHeader() == 0
+m_pParentBlob->GetSizeOfSpareCapacityInBlobHeader() >= static_cast<size_t>( uSizeOfSpareCapacityCreatedByCompression )
+m_pParentBlob->m_uNumRegisteredChildren > 0
+! iterCurr->m_pChildBlob
+uSizeOfExistingFieldData == uNewSizeOfFieldData
+uExtractedSizeOfFieldData == pNewChildBlob->GetSizeOfSerializedBlobInBlobHeader() + pNewChildBlob->GetSizeOfSpareCapacityInBlobHeader()
+CMultiFieldBlob::UpdateField(pNewChild): duplicate field name
+nTrimmedSizeOfFile <= 2147483647L
+eMemoryMappedFileAccessMode == eReadOnly
+CMultiFieldBlob(mem-mapped file): Failed to open existing file
+CMultiFieldBlob(mem-mapped file): Existing file too short or long to be a blob
+CMultiFieldBlob(mem-mapped file): Failed to read blob header
+CMultiFieldBlob(mem-mapped file): Bad blob header
+m_uSizeOfBlobBufferIncludingUnusedAreaAtEnd == m_uSizeOfExistingFile
+CMultiFieldBlob(mem-mapped file): File does not exist and eReadOnly specified
+CMultiFieldBlob(mem-mapped file): File does not exist and failed to create new file
+CMultiFieldBlob(mem-mapped file): Failed to open file
+CMultiFieldBlob(mem-mapped file): Failed to MapViewOfFile
+m_uSizeOfBlobBufferIncludingUnusedAreaAtEnd - m_uSizeOfUnusedAreaAfterEndOfBlob == GetSizeOfSerializedBlobInBlobHeader() + GetSizeOfSpareCapacityInBlobHeader()
+Bad HierarhicalNamedArgs namespace name: %s
+!
+Tried to read undefined arg name:
+on
+Missing end-quote in:
+insertResult.second
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/NamedArgs.cpp
+=
+! IsDefined(sName)
+Failed to insert
+- already defined to:
+Failed to store named arg
+"'
+Missing key/value separator ('=') in line:
+Missing value in line:
+Badly formed '%' value (only one '%') in line:
+Badly formed '%' value (missing ,Default) in line:
+N6common9IRegistryE
+N6common19ISubKeyIteratorImplE
+N6common18IValueIteratorImplE
+N6common4IKeyE
+String
+UnsignedNumber
+Binary
+N6common14CValueIteratorE
+N6common15CSubKeyIteratorE
+GenerateByteChecksumFromStart(): Bad NumBits
+ReversiblyObfusticateBitsFromStart(): Bad NumBits
+Not enough bits in CSimpleBitString
+Idx < m_rSimpleBitString.m_vecU8.size()
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/SimpleBitString.cpp
+Bad number string: '%s' is not a signed number
+Bad number string: '%s' is not a unsigned number
+N6common12CStringTableE
+N6common12CStringTable5CImplE
+N6common16CThreadLocalBaseE
+Thread is already running
+Failed to create thread
+pthread_setname_np
+(CloseHandle(m_hThread)) != 0
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/Thread.cpp
+Wait for thread error
+unknown error
+(SetEvent( pThis->m_hThreadExitEvent )) != 0
+CThread
+N6common40CThreadSafeAutoSeededRandomPoolSingletonE
+UsedAuthenticatorTimestampsCache::EntryNotFoundException
+UsedAuthenticatorTimestampsCache::LoginRateTooHighException
+UsedAuthenticatorTimestampsCache::ReusedAuthenticatorException
+iterClientUsageInfo->first.m_ExternalIPAddr == u32ClientObservedExternalIPAddr && iterClientUsageInfo->first.m_LocalIPAddr == u32ClientClaimedLocalIPAddr
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/UsedAuthenticatorTimestampsCache.cpp
+vecRecentAuthenticatorTimestamps.empty()
+! vecRecentAuthenticatorTimestamps.empty()
+/
+Invalid uSizeOfSerializedIPAddrPorts
+m_uNextIncompleteSendOrReceiveWSABUFIdx <= m_uCurrentOrFinalPreparedWSABUFIdx
+m_vecWSABUF[ m_uNextIncompleteSendOrReceiveWSABUFIdx ].iov_base && m_vecWSABUF[ m_uNextIncompleteSendOrReceiveWSABUFIdx ].iov_len > 0
+! rWSABUFInfo.m_pMsgCursor
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Network/WinSockHelperFunctions.cpp
+rWSABUFInfo.m_pMsgCursor
+CWSABUFWrapper() failed to realloc() pMallocedDataBuffer
+pMsgCursor == pMsgEnd
+DoBlockingConnectionShutdown() : shutdown() failed
+DoBlockingConnectionShutdown() : recv() failed
+Connection Reset
+Receive Failure
+Connection Closed by Peer
+Send Failure
+Failed to connect
+m_vecWSABUF[ m_uNextIncompleteSendOrReceiveWSABUFIdx ].iov_base && m_vecWSABUF[ m_uNextIncompleteSendOrReceiveWSABUFIdx ].iov_len > 0 && m_vecWSABUFInfo[ m_uNextIncompleteSendOrReceiveWSABUFIdx ].m_pMsgCursor == reinterpret_cast<u8*>( m_vecWSABUF[ m_uNextIncompleteSendOrReceiveWSABUFIdx ].iov_base ) && m_vecWSABUFInfo[ m_uNextIncompleteSendOrReceiveWSABUFIdx ].m_pMsgEnd == m_vecWSABUFInfo[ m_uNextIncompleteSendOrReceiveWSABUFIdx ].m_pMsgCursor
+m_eState == eCompleteLengthPrefixedMsgAlreadyInBuffer
+network receive aborted by caller
+DoBlockingSend() : send() succeeded but transferred 0 bytes.
+network send aborted by caller
+select failed:
+WSASocket() failed to create session socket
+failed to bind outgoing socket to %s
+Failed to set socket to non-blocking
+socket() failed to create session socket
+GetIPAddrFromString(): gethostname() failed
+GetIPAddrFromString(): No addresses returned by gethostname()
+INADDR_ANY
+Bad sIPAddr:
+Invalid port:
+IP:port doesn't specify an IP addr: %s
+m_u32IPAddr == u32DefaultIPAddrIfNotProvided
+IP:port doesn't specify a port: %s
+m_u16Port == u16DefaultPortIfNotProvided
+Software\Valve\Steam\Caches\
+Software\Valve\Steam\Apps\
+_Apps
+_Users
+_Caches
+Steam.dll
+GeneralDirectoryServer_FindServerIPAddrPorts
+172.16.3.31
+172.16.3.32
+Beta
+Universe
+Public
+SteamInstallPath
+HOME
+Unable to get home directory
+public
+%s/Library/Application Support/Steam%s
+Unable to write to the current Steam application folder.Please move Steam to a folder where you have write privileges.
+N4Grid21IManifestIteratorImplE
+N4Grid27CClientAuthenticationTicketE
+N4Grid20CClientContentTicketE
+GetNumericFieldName(): not numeric
+ExtractNext(ptr,len): Not enough data in raw buffer
+ExtractGap(): Not enough data in raw buffer
+Bad eVersionNum field CClientAuthenticationTicket
+Bad eUniqueAccountName field CClientAuthenticationTicket
+Bad eAccountUserName field CClientAuthenticationTicket
+Bad eSteamInstanceID field in CClientAuthenticationTicket
+Bad eSteamLocalUserID field in CClientAuthenticationTicket
+Bad eClientExternalIPAddr field in CClientAuthenticationTicket
+Bad eClientLocalIPAddr field in CClientAuthenticationTicket
+Bad eUserIDTicketValidationServerIPAddr1 field in CClientAuthenticationTicket
+Bad eUserIDTicketValidationServerPort1 field in CClientAuthenticationTicket
+Bad eUserIDTicketValidationServerIPAddr2 field in CClientAuthenticationTicket
+Bad eUserIDTicketValidationServerPort2 field in CClientAuthenticationTicket
+Bad eClientToServerAESSessionKey field in CClientAuthenticationTicket
+Bad eTicketCreationTime field CClientAuthenticationTicket
+Bad TicketValidUntilTime field in CClientAuthenticationTicket
+Bad ServerReadablePart field in CClientAuthenticationTicket
+Missing field in CClientAuthenticationTicket:
+Bad ContentServerId field CClientContentTicket
+Bad AppId field CClientContentTicket
+Bad PublicContentIPAddrPort field CClientContentTicket
+Bad ClientContentIPAddrPort field in CClientContentTicket
+Missing field in CClientContentTicket:
+uSizeOfFieldData == sizeof( ExtractedFieldData )
+ExtractNext(u16): Not enough data in raw buffer
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Network/SocketHelperFunctions.h
+ExtractNext(u32): Not enough data in raw buffer
+Out of date TGT VersionNum
+old TGT version
+30819d300d06092a864886f70d010101050003818b00308187028181009525173d72e87cbbcbdc86146587aebaa883ad448a6f814dd259bff97507c5e000cdc41eed27d81f476d56bd6b83a4dc186fa18002ab29717aba2441ef483af3970345618d4060392f63ae15d6838b2931c7951fc7e1a48d261301a88b0260336b8b54ab28554fb91b699cc1299ffe414bc9c1e86240aa9e16cae18b950f900f020111
+Bad ServerReadableTGTSignature
+<
+>
+</
+>
+&amp;
+GetFieldDataAsCString() zero-length or not null-terminated
+GetFieldDataAsCString(s,p) zero-length or not null-terminated
+but required to be
+VersionNum
+Decompression error
+Bad TEncryptFileCompressionHdr
+pHdr->m_u32UncompressedSize == *puUncompressedLen
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Src/CompressionAlgs.cpp
+Unknown compression type
+ConfigServerIPAddrPort
+18ObjScopeGuardImpl0IN12_GLOBAL__N_127CConfigServerIPAddressCacheEMN4Grid19IServerAddressCacheEFvvEE
+18ObjScopeGuardImpl1IN12_GLOBAL__N_127CConfigServerIPAddressCacheEMS1_FvPN6common21CCommandStatusControlEES4_E
+N12_GLOBAL__N_127CConfigServerIPAddressCacheE
+ProtocolError - Not enough data for ExtractNext(u8)
+ProtocolError - Not enough data for ExtractNext(ptr,len)
+(0 == SetSocketToAbortWhenClosed(Socket)) != false
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Src/ConfigServerClientCommands.cpp
+((((__uint16_t)(__builtin_constant_p(*pReceiveData) ? ((__uint16_t)((((__uint16_t)(*pReceiveData) & 0xff00) >> 8) | (((__uint16_t)(*pReceiveData) & 0x00ff) << 8))) : _OSSwapInt16(*pReceiveData))) >> 8) & 0xFF) == ((*pReceiveData >> 0) & 0xFF) && ((((__uint16_t)(__builtin_constant_p(*pReceiveData) ? ((__uint16_t)((((__uint16_t)(*pReceiveData) & 0xff00) >> 8) | (((__uint16_t)(*pReceiveData) & 0x00ff) << 8))) : _OSSwapInt16(*pReceiveData))) >> 0) & 0xFF) == ((*pReceiveData >> 8) & 0xFF)
+No ConfigServers are online
+Failed to get local IP address of SocketToServer
+ConfigServer unacceptable protocol version
+CMallocedBlock(): realloc failed
+="
+" >
+basic_string::_S_create
+NoCost
+BillOnceOnly
+BillMonthly
+ProofOfPrepurchaseOnly
+GuestPass
+HardwarePromo
+Gift
+AutoGrant
+OEMTicket
+RecurringOption
+Bad BillingType value
+Bad field in AppSubscriptionIdsRecord
+SubscriptionId
+Bad field in CSubscriptionAppIdsRecord
+AppId
+Bad field in CAppVersionLaunchOptionIdsRecord
+LaunchOptionId
+Bad Limit field in CRateLimitRecord
+Limit
+Bad PeriodInMinutes field in CRateLimitRecord
+PeriodInMinutes
+Missing field in CRateLimitRecord:
+Empty Name in CDiscountQualifierRecord
+Name
+Bad SubscriptionId field in CDiscountQualifierRecord
+SubRequired
+Bad IsDisqualifier field in CDiscountQualifierRecord
+IsDisqualifier
+Missing field in CDiscountQualifierRecord:
+MountName
+Bad eAppId field in CAppFilesystemRecord
+Bad IsOptional field in CAppFilesystemRecord
+IsOptional
+ValidOSList
+Missing field in CAppFilesystemRecord:
+Empty description in CAppLaunchOption
+Description
+Empty command-line in CAppLaunchOption
+CommandLine
+Bad AppIconIdx field in CAppLaunchOption
+AppIconIdx
+Bad bNoDesktopShortcut field in CAppLaunchOption
+bNoDesktopShortcut
+Bad bStartMenuDesktopShortcut field in CAppLaunchOption
+bNoStartMenuShortcut
+Bad bLongRunningUnattended field in CAppLaunchOption
+bLongRunningUnattended
+Missing field in CAppLaunchOption:
+" >0x
+Bad field in CAllAppsEncryptedPrivateKeysRecord
+AppPrivateKeyData
+KeyIdx
+Bad field in CAllAppsPublicKeysRecord
+AppPublicKeyData
+Bad field in CAppIconsRecord
+AppIconData
+IconIdx
+basic_string::append
+Empty IndexAppIdToSubscriptionIdsRecord
+AppSubscriptionIdsRecord
+Empty CAllDiscountQualifiersRecord
+DiscountQualifierRecord
+QualifierId
+Empty Name in CDiscountRecord
+Bad DiscountInCents field in CDiscountRecord
+DiscountInCents
+AllDiscountQualifiersRecord
+Missing field in CDiscountRecord:
+DiscountRecord
+DiscountId
+FilesystemRecord
+FilesystemIdx
+Empty description in CAppVersionInfoRecord
+Bad VersionId field in CAppVersionInfoRecord
+VersionId
+Bad bIsNotAvailable field in CAppVersionInfoRecord
+bIsNotAvailable
+LaunchOptionIdsRecord
+Bad field size for DepotEncryptionKey in CAppVersionInfoRecord
+DepotEncryptionKey
+Bad bIsEncryptionKeyAvailable field in CAppVersionInfoRecord
+bIsEncryptionKeyAvailable
+Bad bIsRebased field in CAppVersionInfoRecord
+bIsRebased
+Bad eOptionalIsLongVersionRoll field in CAppVersionInfoRecord
+bIsLongVersionRoll
+Missing field in CAppVersionInfoRecord:
+Empty CAppVersionsRecord
+AppVersionRecord
+AppLaunchOptionRecord
+LaunchOptionIdx
+Bad SubscriptionId field in CSubscriptionRecord
+Empty Name in CSubscriptionRecord
+Bad eBillingType field CSubscriptionRecord
+BillingType
+Bad CostInCents field in CSubscriptionRecord
+CostInCents
+SubscriptionAppIdsRecord
+Bad OnSubscribeRunAppId field in CSubscriptionRecord
+OnSubscribeRunAppId
+Bad OnSubscribeRunLaunchOption field in CSubscriptionRecord
+OnSubscribeRunLaunchOptionIdx
+OptionalRateLimitRecord
+AllDiscountsRecord
+Bad OptionalIsPreorder field in CSubscriptionRecord
+IsPreorder
+Bad OptionalRequiresShippingAddress field in CSubscriptionRecord
+RequiresShippingAddress
+Bad DomesticShippingCost field in CSubscriptionRecord
+DomesticShippingCost
+Bad InternationalShippingCost field in CSubscriptionRecord
+InternationalShippingCost
+Bad RequiredKeyType field in CSubscriptionRecord
+RequiredKeyType
+Bad IsCyberCafe field in CSubscriptionRecord
+IsCyberCafe
+Bad GameCode field in CSubscriptionRecord
+GameCode
+Empty GameCodeDesc in CSubscriptionRecord
+GameCodeDesc
+Bad OptionalIsDisabled field in CSubscriptionRecord
+IsDisabled
+Bad OptionalRequiresCD field in CSubscriptionRecord
+RequiresCD
+Bad OptionalTerritoryCode field in CSubscriptionRecord
+TerritoryCode
+Bad OptionalIsSteam3Subscription field in CSubscriptionRecord
+IsSteam3Subscription
+ExtendedInfoRecord
+Missing field in CSubscriptionRecord:
+Empty CAllSubscriptionsRecord
+SubscriptionRecord
+MustOwnAppToPurchase
+CountryList
+AppUserDefinedRecord
+FilesystemsRecord
+Missing field in CAppRegionRecord:
+AppRegionRecord
+Idx
+uSizeOfFieldData == sizeof( uAppId )
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Src/ContentDescriptionDBKeyRecord.cpp
+Not a manifest only cache
+Bad AppId in CAppRecord
+Empty Description in CAppRecord
+Empty InstallDirName in CAppRecord
+InstallDirName
+Empty LegacyInstallDirName in CAppRecord
+LegacyInstallDirName
+Bad MinCacheFileSizeMB field in CAppRecord
+MinCacheFileSizeMB
+Bad MaxCacheFileSizeMB field in CAppRecord
+MaxCacheFileSizeMB
+AppLaunchOptionsRecord
+AppIconsRecord
+Bad OnFirstLaunch field in CAppRecord
+OnFirstLaunch
+Bad IsBandwidthGreedy field in CAppRecord
+IsBandwidthGreedy
+AppVersionsRecord
+Bad CurrentVersionId in CAppRecord
+CurrentVersionId
+CurrentVersionId does not reference a valid version info record
+Bad TrickleVersionId in CAppRecord
+TrickleVersionId
+Bad BetaVersionId in CAppRecord
+BetaVersionId
+Empty BetaVersionPassword in CAppRecord
+BetaVersionPassword
+Bad SkipMFPOverwrite field in CAppRecord
+SkipMFPOverwrite
+Bad UseFilesystemDvr field in CAppRecord
+UseFilesystemDvr
+Bad ManifestOnlyApp field in CAppRecord
+ManifestOnlyApp
+Bad AppOfManifestOnlyCache field in CAppRecord
+AppOfManifestOnlyCache
+RegionSpecificRecord
+Missing field in CAppRecord:
+Empty CAllAppsRecord
+AppRecord
+basic_string::erase
+basic_string::resize
+Bad VersionNum field in CContentDescriptionRecord
+ContentDescriptionRecord is version
+AllAppsRecord
+AllSubscriptionsRecord
+IndexAppIdToSubscriptionIdsRecord
+Bad LastChangedExistingAppOrSubscriptionTime field in CContentDescriptionRecord
+LastChangedExistingAppOrSubscriptionTime
+AllAppsPublicKeysRecord
+Excess field in StrippedDown CContentDescriptionRecord
+AllAppsEncryptedPrivateKeysRecord
+Missing field in ContentDescriptionRecord:
+ContentDescriptionRecord
+N4Grid21CManifestBinExceptionE
+ContentServerDirectoryServerIPAddrPort
+18ObjScopeGuardImpl0IN12_GLOBAL__N_119CCSDSIPAddressCacheEMN4Grid19IServerAddressCacheEFvvEE
+N12_GLOBAL__N_119CCSDSIPAddressCacheE
+ProtocolError - Not enough data for ExtractNext(u16)
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Network/WinSockHelperFunctions.h
+((((__uint16_t)(__builtin_constant_p(data) ? ((__uint16_t)((((__uint16_t)(data) & 0xff00) >> 8) | (((__uint16_t)(data) & 0x00ff) << 8))) : _OSSwapInt16(data))) >> 8) & 0xFF) == ((data >> 0) & 0xFF) && ((((__uint16_t)(__builtin_constant_p(data) ? ((__uint16_t)((((__uint16_t)(data) & 0xff00) >> 8) | (((__uint16_t)(data) & 0x00ff) << 8))) : _OSSwapInt16(data))) >> 0) & 0xFF) == ((data >> 8) & 0xFF)
+No ContentServerDirectoryServers are online
+Protocol version not support by CSDS
+Bad NumOfContentServers from CSDS
+m_uSizeOfLengthPrefixedMsg != 0 && m_uSizeOfLengthPrefixedMsg <= rWSABUFInfo.m_uSizeOfMallocedDataBuffer
+m_eState == eReset || ( m_eState == eFinishedExtractingLengthPrefixedMsg && m_pReceivedEnd && rWSABUFInfo.m_pMsgCursor == m_pReceivedEnd && rWSABUFInfo.m_pMsgEnd == rWSABUFInfo.m_pMsgCursor )
+m_eState == eFinishedExtractingLengthPrefixedMsg
+CSERServerIPAddrPort
+N4Grid23CCSERServerAddressCacheE
+Serialized FileIdChecksumTable is corrupt
+FileId out of range
+FileId does not exist in checksum table
+m_pu8Signature == (m_SerializedBlock.get() + m_SerializedBlock.GetSize() - common::cuSizeofDigitalSignature)
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Src/FileIdChecksumTable.cpp
+Failed to find Master AuthenticationServer
+aborted
+Failed to connect to any GeneralDirectoryServer
+N4Grid12CManifestBinE
+Error serializing manifest
+Manifest checksum failed
+..
+Error reading manifest header from file
+Manifest format error (from file): u32MstVersion = %u (appid=%u, ver=%u, size=%u)
+Failed to read manifest binary
+Manifest format error: NULL pu8Bin!
+Manifest format error: zero-length serialized manifest!
+Manifest format error: u32MstVersion = %u (appid=%u, ver=%u, size=%u)
+Illegal character in CD-key
+Missing '-' in CD-key
+Bad CD-key check-digit
+CD-key too long
+Invalid CD-key
+ABCDEFGHIJKLMN2PQRST3VWXYZ456789
+m_cAsciiToCodonTable[ (u8)sc_cCodonToAsciiTable[Codon] ] == 0xFF
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Src/NewValveCDKeyGenerator.cpp
+PublicContentServer: unacceptable protocol version
+N4Grid19IServerAddressCacheE
+ClientLocalIPAddress
+ClientExternalIPAddress
+CMallocedBlock(): constructed with zero size block
+SteamServerAddressCache
+_timestamp
+uBytes
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Src/ServerAddressCache.cpp
+AccountBillingInfo
+Bad field in CDerivedSubscribedAppsRecord
+Bad field in CUserAppAccessRightsRecord
+Bad ExternalAccountName field in CAccountPaymentCardInfoRecord
+ExternalAccountName
+Bad ExternalAccountPassword field in CAccountPaymentCardInfoRecord
+ExternalAccountPassword
+Unknown field in CAccountExternalBillingInfoRecord
+Missing field in CAccountExternalBillingInfoRecord:
+Bad TypeOfProofOfPurchase field in CAccountPrepurchaseReceiptRecord
+TypeOfProofOfPurchase
+AStoBBSTxnId
+Unknown field in CAccountPrepurchaseInfoRecord
+Missing field in CAccountPrepurchaseReceiptRecord:
+Bad PaymentCardType field in CAccountPaymentCardReceiptRecord
+PaymentCardType
+Bad CardNumber field in CAccountPaymentCardReceiptRecord
+CardNumber
+Bad CardHolderName field in CAccountPaymentCardReceiptRecord
+CardHolderName
+Bad BillingAddress1 field in CAccountPaymentCardReceiptRecord
+BillingAddress1
+BillingAddress2
+Bad BillingCity field in CAccountPaymentCardReceiptRecord
+BillingCity
+Bad BillingZip field in CAccountPaymentCardReceiptRecord
+BillingZip
+Bad BillingState field in CAccountPaymentCardReceiptRecord
+BillingState
+Bad BillingCountry field in CAccountPaymentCardReceiptRecord
+BillingCountry
+CCApprovalCode
+Bad PriceBeforeTax field CAccountPaymentCardReceiptRecord
+PriceBeforeTax
+Bad TaxAmount field CAccountPaymentCardReceiptRecord
+TaxAmount
+TransDate
+TransTime
+Bad ShippingCost field CAccountPaymentCardReceiptRecord
+ShippingCost
+Unknown field in CAccountPaymentCardInfoRecord
+Missing field in CAccountPaymentCardReceiptRecord:
+Bad ShipName field in CShippingInfoRecord
+ShipName
+Bad ShipAddress1 field in CShippingInfoRecord
+ShipAddress1
+ShipAddress2
+Bad ShipCity field in CShippingInfoRecord
+ShipCity
+Bad ShipZip field in CShippingInfoRecord
+ShipZip
+Bad ShipState field in CShippingInfoRecord
+ShipState
+Bad ShipCountry field in CShippingInfoRecord
+ShipCountry
+ShipPhone
+Bad ShipCancelledFlag field in CShippingInfoRecord
+ShipCancelledFlag
+Bad ShipCanxHandledFlag field in CShippingInfoRecord
+ShipCanxHandledFlag
+ShipCanxReason
+ShipTrackingNum
+ShipTrackingURL
+ShipMethod
+Bad ShipTime field in CShippingInfoRecord
+ShipTime
+Bad ShipStatus field in CShippingInfoRecord
+ShipStatus
+Bad ShippingCost field CShippingInfoRecord
+Unknown field in CShippingInfoRecord
+Missing field in CShippingInfoRecord:
+Bad eSubscribedDate field CAccountSubscriptionRecord
+SubscribedDate
+Bad UnsubscribedDate field in CAccountSubscriptionRecord
+UnsubscribedDate
+Bad eSubscriptionStatus field CAccountSubscriptionRecord
+SubscriptionStatus
+Bad eStatusChangeFlag field CAccountSubscriptionRecord
+StatusChangeFlag
+Bad ePreviousSubscriptionState field CAccountSubscriptionRecord
+PreviousSubscriptionState
+Bad eOptionalBillingStatus field CAccountSubscriptionRecord
+BillingStatus
+Empty UserIP in CAccountSubscriptionRecord
+UserIP
+Unexpected size for UserCountryCode in CAccountSubscriptionRecord
+UserCountryCode
+Missing field in CAccountSubscriptionRecord:
+Bad PaymentCardType field in CAccountPaymentCardInfoRecord
+Bad CardNumber field in CAccountPaymentCardInfoRecord
+Bad CardHolderName field in CAccountPaymentCardInfoRecord
+Bad CardExpYear field in CAccountPaymentCardInfoRecord
+CardExpYear
+Bad CardExpMonth field in CAccountPaymentCardInfoRecord
+CardExpMonth
+Bad CardCVV2 field in CAccountPaymentCardInfoRecord
+CardCVV2
+Bad BillingAddress1 field in CAccountPaymentCardInfoRecord
+Bad BillingCity field in CAccountPaymentCardInfoRecord
+Bad BillingZip field in CAccountPaymentCardInfoRecord
+Bad BillingState field in CAccountPaymentCardInfoRecord
+Bad BillingCountry field in CAccountPaymentCardInfoRecord
+BillingPhone
+BillingEmailAddress
+Bad CCApprovalDate field CAccountSubscriptionRecord
+CCApprovalDate
+Bad CDenialDate field CAccountSubscriptionRecord
+CDenialDate
+CCDenialCode
+Bad UseAVS field in CAccountPaymentCardInfoRecord
+UseAVS
+Bad PriceBeforeTax field CAccountSubscriptionRecord
+Bad TaxAmount field CAccountSubscriptionRecord
+Bad TransactionType field in CAccountPaymentCardInfoRecord
+TransactionType
+AuthSource
+AVSResponse
+PS2000Data
+SettlementDate
+SettlementCode
+Bad CCTSResponseCode field in CAccountPaymentCardInfoRecord
+CCTSResponseCode
+AuthComments
+AuthStatus
+SettlementBatchId
+SettlementBatchSeq
+SettlementApprovalCode
+SettlementComments
+SettlementStatus
+SubsId
+AcctName
+CustSupportName
+ChargebackCaseNumber
+Bad CC1TimeChargeTxnSeq field CAccountSubscriptionRecord
+CC1TimeChargeTxnSeq
+Bad GetCreditForceTxnSeq field CAccountSubscriptionRecord
+GetCreditForceTxnSeq
+ShippingInfoRecord
+CVV2Response
+Missing field in CAccountPaymentCardInfoRecord:
+AccountSubscriptionRecord
+Bad UserType field in CAccountUserRecord
+Administrator
+Base
+UserType
+UserAppAccessRightsRecord
+Bad SteamLocalUserID field in CAccountUserRecord
+SteamLocalUserID
+Missing field in CAccountUserRecord:
+Empty AccountUsersRecord
+AccountUserRecord
+UserName
+>0x
+Bad TypeOfProofOfPurchase field in CAccountPrepurchaseInfoRecord
+BinaryProofOfPurchaseToken
+Bad TokenRejectionReason field in CAccountPrepurchaseInfoRecord
+TokenRejectionReason
+Missing field in CAccountPrepurchaseInfoRecord:
+Bad SaltedPassphraseDigest field in CAccountUserPasswordRecord
+SaltedPassphraseDigest
+Bad PassphraseSalt field in CAccountUserPasswordRecord
+PassphraseSalt
+Bad PersonalQuestion field in CAccountUserPasswordRecord
+PersonalQuestion
+Bad SaltedAnswerToQuestionDigest field in CAccountUserPasswordRecord
+SaltedAnswerToQuestionDigest
+Bad AnswerToQuestionSalt field in CAccountUserPasswordRecord
+AnswerToQuestionSalt
+Missing field in CAccountUserPasswordRecord:
+Empty AccountUserPasswordsRecord
+AccountUserPasswordRecord
+Bad SubscriptionBillingInfoType field in AccountSubscriptionBillingInfoRecord
+Missing SubscriptionBillingInfo field in CAccountSubscriptionBillingInfoRecord
+AccountPaymentCardInfoRecord field left in stripped in CAccountSubscriptionBillingInfoRecord
+AccountPaymentCardInfoRecord
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Src/SubscriberAccountDBKeyRecord.cpp
+AccountPrepurchasedInfoRecord field left in stripped in CAccountSubscriptionBillingInfoRecord
+AccountPrepurchaseInfoRecord
+ExternalBillingRecord field left in stripped in CAccountSubscriptionBillingInfoRecord
+AccountExternalBillingInfoRecord
+AccountBillingInfoRecord field left in stripped in CAccountSubscriptionBillingInfoRecord
+AccountPaymentCardReceiptRecord
+AccountPrepurchaseReceiptRecord
+EmptyReceiptRecord
+AccountEmptyReceiptRecord
+Bad SubscriptionBillingInfoType field in CAccountSubscriptionBillingInfoRecord
+AccountSubscriptionBillingInfoRecord
+AccountSubscriptionsRecord
+AccountSubscriptionsBillingInfoRecord
+UniqueAccountName
+AccountCreationTime
+AccountEmailAddress
+AccountStatus
+AccountLastModifiedTime
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Inc/SubscriberAccountDBKeyRecord.h
+sizeof(u8) == SizeOfFieldData
+SubscriberAccountRecord is version
+Bad VersionNum field in CSubscriberAccountRecord
+Bad VersionNum field after upgrade in CSubscriberAccountRecord
+Out of date VersioNum after upgrade in CSubscriberAccountRecord
+Empty UniqueAccountName in CSubscriberAccountRecord
+Bad AccountCreationTime field in CSubscriberAccountRecord
+Empty OptionalAccountCreationKey in CSubscriberAccountRecord
+OptionalAccountCreationKey
+OptionalBillingInfoRecord field left in stripped in CSubscriberAccountRecord
+OptionalAccountBillingInfoRecord
+AccountUserPasswordsRecord field left in stripped in CSubscriberAccountRecord
+AccountUserPasswordsRecord
+AccountUsersRecord
+DerivedSubscribedAppsRecord
+Bad LastRecalcDerivedSubscribedAppsTimefield in CSubscriberAccountRecord
+LastRecalcDerivedSubscribedAppsTime
+Bad CellId field in CSubscriberAccountRecord
+CellId
+Empty Account Email Address in CSubscriberAccountRecord
+Bad AccountStatus field in CAccountUserRecord
+Bad eAccountLastModifiedTime field in CSubscriberAccountRecord
+Missing field in CSubscriberAccountRecord:
+Steam_BGetCallback
+Steam_FreeLastCallback
+Steam_GetAPICallResult
+steamclient.dylib
+CreateInterface
+SteamClient010
+SteamAppId
+72.165.61.189:27030 72.165.61.190:27030 69.28.151.178:27038 69.28.153.82:27038 87.248.196.194:27038 68.142.72.250:27038
+Unknown Exception
+AppendGap() Not enough space in raw buffer
+Append(u16) Not enough space in raw buffer
+Append(u32) Not enough space in raw buffer
+30819d300d06092a864886f70d010101050003818b0030818702818100d3bb0de9bbab4becf8efc894c0723c54c3d7f8ff7bcef9f4d9c810668ca1cad7a292017c537bab1a68db17f8bd9a94751c2e37f30a7fab23c6a0443edd2d6896c1f5fcc89bb4e32291a44044777eb72c5e1ff1a9c113c75b49abdfd5bdc732c7807a18c836944279d63ef9bb4a38f50805b157ad32556e07e6575a112ca346ff020111
+CUnpackedTime exception
+CUnpackedTime out of range (year %1, month %2, day %3, hour %4, minute %5, second %6, millisecond %7, microsecond %8)
+Steam is busy, please try again later
+RootDir
+CacheDir
+PreventCacheLoading
+RunOnFirstLaunch
+AccountRecordData
+TimeLastUpdatedAccountRecordData
+CurrentVersion
+AppDependencies
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../../ThirdPartyCode/BSL/BSLTime.h
+(ReleaseMutex(m_hMutex)) != 0
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/Account.cpp
+pFieldData
+eStateUnavailable
+eStateComingSoonNoPreload
+eStatePreloadOnly
+eStatePreorderOrPreload
+eStatePreorderThenPreload
+eStateJustReleased
+eStateAvailable
+eStateTool
+eStateAvailablePreloadable
+eStateThirdPartyMod
+InsertRet.second
+steamconsole.dll
+Steam2_GetSteamLocalUserPipe
+STEAM2BRIDGE_INTERFACE_VERSION002
+STEAMAPPS_INTERFACE_VERSION004
+Destroy preloader
+Handle fingerprint mismatch thread
+Remove FS Thread
+OnCreatePreloaderFail called for AppId %d
+Handle CreatePreloader Failure
+Null icon data field
+!(uBlobSize % sizeof(TSteamAppDependencyInfo))
+removing program files
+uSizeOfFieldData == sizeof( CurrentStatus )
+fake@fakemail.com
+unknown
+gamestatecountries
+state
+Software\Valve\Steam\Beta
+Software\Valve\Steam\InternalBeta
+InhibitCacheUpdates
+SOFTWARE\Valve\Steam
+cafeserver
+InhibitAutoVersionRoll
+ProhibitDownloadInCountries
+ClientAppPublishedVersionNum
+ClientAppVersionNum
+Installation of this game is prohibited from the current location
+Setting version to use for '
+'
+Detected AppId %d as preload-enabled
+ChangeSelectedAppVersion( uNewAppVersion = %d ) on AppId %d
+Considering creating preloader (2) for AppId %d
+GetAppUpdateStats for AppId %d reports %s/%s bytes total/present
+CreatePreloader on AppId %d
+primarycache
+Create Preloader
+m_SubscribedIds.empty()
+m_SubscribedAppsMap.empty()
+CacheServerSessions
+cacheserversessions
+CacheMaxQueueDepth
+cachemaxqueuedepth
+checkpkgstate
+checkpkgownedstate
+Failed app scan for appid %d
+Considering creating preloader (1) for AppId %d with %d fs records
+CreatePreloader for AppId %d
+Launching '
+!"CacheKeysNotAvailable"
+DE
+m_Steam3LicenseMap.find( *itSub ) != m_Steam3LicenseMap.end()
+de
+--
+Cannot play while purchase pending
+Logging out '
+Error(s) when logging out: .
+Already logged in
+Account:SetUser:error causing relogin
+N4Grid8CAccount5CImplE
+RunSteam3Callbacks
+Account
+SteamBetaPassword
+(CloseHandle(m_ObjectMutex)) != 0
+N4Grid12CActivityLog15CAssertObserverE
+, File:
+, Expr:
+, Line:
+, Name:
+
+%s%s%s
+ActivityLogContext
+%s%s
+ActivityLogGroup
+N4Grid12CActivityLogE
+disable
+ActivityLogDate
+ActivityLogTimestamp
+ActivityLogElapsedTime
+ActivityLogThreadId
+ActivityLogGroupNameWidth
+ActivityLogContextNameWidth
+BuiltIn
+Start
+Stop
+Logging started
+ActivityLogFile
+steam.log
+ActivityLogEnable
+ActivityLogCreateMode
+append
+ActivityLogFlushMode
+ActivityLogConsoleOutput
+Logging stopped
+MountPaths
+DLCForAppID
+vector::_M_range_check
+App %d observed download for (%d,%d) of %u bytes
+No Apps observed download for (%d,%d) of %u bytes
+u64BytesPresent
+_
+u64BytesTotal
+EncryptedFiles
+rgunDependencies
+NotPresent
+rgunInstalledDLC
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/AppStatus.cpp
+Setting DLC Unistalled for App %d, cache %d
+Setting DLC Downloaded for App %d, cache %d
+Saving AppStatus for App %d: %lld total, %lld present
+App %d observed cache %d version change
+No Apps observed cache %d version change
+Clearing dependencies for App %d
+Setting cache dependencies for App %d ( %s)
+Adding dependency for App %d: (%d,%d)
+N4Grid10CAppStatusE
+AppUpdateStats.blob
+PreLoader
+AppStatus
+18ObjScopeGuardImpl0IN12_GLOBAL__N_139CMasterAuthenticationServerAddressCacheEMN4Grid19IServerAddressCacheEFvvEE
+The account does not exist, or the password that you entered was not correct.
+A server error occurred. Please try again.
+N4Grid24CLocalClockSkewExceptionE
+vector::_M_fill_insert
+MasterAuthenticationServerIPAddrPort_
+SlaveAuthenticationServerIPAddrPort_
+N12_GLOBAL__N_139CMasterAuthenticationServerAddressCacheE
+N12_GLOBAL__N_138CSlaveAuthenticationServerAddressCacheE
+m_AddressCache.size() == 1
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/AuthenticationServerCommands.cpp
+The account is disabled.
+A new version of Steam is available. Please shut-down Steam and restart it to obtain the new version.
+Your clock differs too much from the servers time of UTC
+Login failed. This account does not exist, or the password is incorrect.
+Append(pData,len) Not enough space in raw buffer
+uSizeOfFieldData == sizeof( common::aesSessionKey_t )
+((((__uint16_t)(__builtin_constant_p(uLengthOfString) ? ((__uint16_t)((((__uint16_t)(uLengthOfString) & 0xff00) >> 8) | (((__uint16_t)(uLengthOfString) & 0x00ff) << 8))) : _OSSwapInt16(uLengthOfString))) >> 8) & 0xFF) == ((uLengthOfString >> 0) & 0xFF) && ((((__uint16_t)(__builtin_constant_p(uLengthOfString) ? ((__uint16_t)((((__uint16_t)(uLengthOfString) & 0xff00) >> 8) | (((__uint16_t)(uLengthOfString) & 0x00ff) << 8))) : _OSSwapInt16(uLengthOfString))) >> 0) & 0xFF) == ((uLengthOfString >> 8) & 0xFF)
+sha1Hasher.DigestSize() == sizeof( ClientIPAddrDigest )
+wrappedWSABUF.GetCurrentAppendOfst() - uStartOfMACWholeRequestMsgProtectedBufferOfst == u16SizeOfMACProtectedRequestMsg
+sizeof(Payload_aesSessionKey) <= rsaShortMsgEncryptor.MaxPlainTextLength()
+static_cast<size_t>( pMsgEnd - pMsgStart ) == u16SizeOfWholeMsg
+(0 == SetSocketToAbortWhenClosed(s)) != false
+Command aborted
+Bad error code from AuthenticationServer: %u
+TicketCreationTime < TicketValidUntilTime
+Unexpected return code from AuthenticateAndRequestTGT command: %u
+Incompatible TGT VersionNum
+Protocol Error: Bad u16SizeOfPlaintextClientReadableTGT
+Protocol Error: Bad u16SizeOfAESEncryptedClientReadableTGT
+Protocol Error: Bad u16SizeOfServerReadableTGT
+Protocol Error: Bad u32SizeOfAccountRecord
+wrappedWSABUF.GetCurrentExtractionPoint() - pStartOfMACCheckedMsg == static_cast<int>( uSizeOfTGTMsg ) - MAC_t::DIGESTSIZE
+Protocol Error: Bad macWholeMsg: Incorrect Passphrase or corrupt TGT
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/BinaryLogFile.cpp
+nCloseRet == 0
+enable
+flush
+true
+N4Grid12CBufferTableE
+pBuf
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/BufferTable.cpp
+Bad handle
+pFsBuffer.get()
+pmbAppOwnershipTicket->GetSize() <= 0xFFFF
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/BuildContentServerLoginMessage.cpp
+!cszOptionalBetaPassword
+!bUseSessionToken
+!u8SizeOfAppOwnershipTicket
+
+GameValidation.log
+m_bUseAlertableWait
+dwWaitRet == ((DWORD) 0x000000C0)
+(ReleaseSemaphore( m_hSemaphore, static_cast<LONG>( uReleaseCount ), & lPreviousCount )) != 0
+lPreviousCount >= 0 && lPreviousCount < static_cast<LONG>(m_uMaxCount)
+hSession != (u32)~0
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/Cache.cpp
+Cache file does not match the current build of the server depot
+Cache object already instantiated
+N4Grid6ICache23ICacheCompletionHandlerE
+N4Grid6ICacheE
+s_HandleSet.end() == s_HandleSet.find( m_Handle )
+N4Grid14CCacheBatBlockE
+Internal Cache Error
+Signature check failed for Checksum block
+pu8ChecksumData
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CacheFileFixedChecksumBlock.cpp
+uSizeOfData == m_u32SizeOfChecksumTable
+N4Grid23CCacheFileFixedChecksumE
+pChecksumSignature
+SkipChecksumFileSignatureCheck
+N4Grid15CCacheDataBlockE
+Cache File Corrupted
+N4Grid15CCacheDescBlockE
+Cache Write Failure
+N4Grid24CCacheFileFixedDirectoryE
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CacheFileFixedDirectory.cpp
+DirEntry.IsValid()
+PrevEntry.IsValid()
+DirEntry.GetPrevEntry() != m_uMaxEntries
+TmpEntry.IsValid()
+uOffset + uLength <= uStartOffset
+!((( uOffset >= uEntryOffset) && ( uOffset < (uEntryOffset+uEntryLength))) || (((uOffset+uLength) > uEntryOffset) && ((uOffset+uLength) <= (uEntryOffset+uEntryLength))) || (( uOffset < uEntryOffset) && ((uOffset+uLength) >= (uEntryOffset+uEntryLength))))
+( !((m_uMaxEntries<=0xFFFF)) || (m_uMaxEntries == m_MiniEntries.size()) )
+( !((m_uMaxEntries> 0xFFFF)) || (m_uMaxEntries == m_FullEntries.size()) )
+Invalid node
+N4Grid21CCacheFileFixedFsTreeE
+Unsupported format version in FsTree block
+Invalid cache pointer
+N4Grid23ICacheGroupIteratorImplE
+uCacheIdx < m_vecNodeGroup.size()
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CacheGroup.cpp
+uIdx < m_vecCaches.size()
+N4Grid11CCacheGroupE
+(iter->AdvanceToChild()) != false
+pu64BytesTotal
+pu64BytesPresent
+u64FileSize >= u64BytesNotPresent
+m_sAppDir.length()
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CacheManifestOnly.cpp
+rb
+r+b
+Cache Open Failed
+Not Found in Cache
+CacheManifestOnly::WorkThreadProc
+pImpl
+dwWaitRet == 0 || dwWaitRet == ((DWORD) 0x000000C0) || dwWaitRet == 258
+(pImpl->m_pCacheQueue->GetEntryData(uQueueHandle, &QueueEntry)) != false
+QueueEntry.GetOffset() % 0x10000 == 0
+QueueEntry.GetOffset() + QueueEntry.GetLength() <= iterManifest->GetFileSize()
+wb
+uRequestBlkSize >= pImpl->m_pCacheFsTreeBlock->GetCompressionBlkSize() * 2
+Cache(%u) directory %s is in our way - removing
+Cache(%u) Request(%d), Ix=%d, Off=%12.12llu Len=%8.8llu QueueHandle=%u File=%s
+CacheWorkThread(%d) Error - Handle %d: %s
+CacheWorkThread(%d) Error - Handle %d: Fingerprint mismatch
+CacheWorkThread(%d) Error - Handle %d: Unknown error
+u64Offset % uCompressionBlkSize == 0
+Checksum mismatch for file: %s
+Cache(%d) failed to decrypt data for file %s
+CacheRequestList.size()
+! CacheRequestList[uIndex].m_bInCache
+Unexpected request
+Cache(%d) - Unexpected number of bytes returned.  Received %8.8u, expected %12.12llu for file %s
+Unexpected number of bytes returned
+iter->IsValid()
+Cache(%d) Receive(%d), Off=%12.12llu Len=%8.8llu QueueHandle=%u File=%s
+CacheCompletionHandler(%d) could not get file pointer for handle %d
+Failed to get file pointer
+CacheCompletionHandler(%d) unexpected offset for handle %d. Got %llu, expected %llu
+Unexpected offset received
+CacheCompletionHandler(%d) failed to write to local file for handle %d
+Failed to write to file
+User aborted
+Cache(%d) decrypting file %s
+Failed to seek
+Failed to read
+Failed to write
+Cache(%d) failed to decrypt file %s
+Cache(%d) deleting local file %s
+\Copy of
+Cache(%d) could not delete local file %s
+Cache(%d) failed to read checksum data for file %s
+Cache(%d) - File has already been updated.  Skipping flush: %s
+Invalid buffer size
+User aborted cache(%d) validation
+Validation failure:
+Serializing(%d)
+Failed to serialize(%d)
+Cache(%d) upgrading from version %d to %d
+Cache(%d) fingerprint does not match with server
+pNewCacheFsTreeBlock.get()
+Cache(%d) - Downloading checksum table for version: %u
+Depot key does not match with cache.  Purging all files.
+Cache(%d) - Version change was unsuccessful: %s
+Cache(%d) - Version change was unsuccessful: Unknown error
+Cache(%d) - Version change successfully completed
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/semaphore.h
+Failed to create semaphore
+Error
+ServerRequest
+sBinaryEncryptionKey.size() == sizeof(aesSessionKey_t)
+Cache(%d) Corrupt FsTree or Checksum block
+Cache(%d) upgrading internal AppId from(%d)
+Cache(%d) is signaling long startup
+uServerFingerprint == m_pCacheFsTreeBlock->GetFingerPrint()
+Downloading checksum table for App %d
+Failed to create new cache(%d) file
+Failed to create cache(%d) from existing file: %s
+Failed to create cache(%d) from existing file: unknown exception
+Failed to create a new cache(%d): unknown exception
+Cache(%d) successfully added file chunk, Off=%12.12llu Len=%8.8llu File=%s
+Cache(%d) skipping add file chunk, Off=%12.12llu Len=%8.8llu File=%s
+Cache(%d) failed to add file chunk, Off=%12.12llu Len=%8.8llu File=%s
+CacheFixUpMode
+disable
+Cache(%d) - Beginning validation
+Cache(%d) - Cancelling handle %d
+Cache(%d) - Performing read validation on file %s
+Failed to create Event handle
+(WaitForSingleObject( WaitEvent.GetHandle(), (DWORD)-1 )) == (0)
+(m_pImpl->m_pCacheQueue->GetEntryResults(uQueueHandle, pu64BytesRead, pu64UncachedBytes, pu64SizeOfUncompressedServerRead, pu64SizeOfCompressedServerRead)) != false
+pFile
+N4Grid18CCacheManifestOnlyE
+Cache(%d) is shutting down
+(iterManifest->IsValid()) != false
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CacheNone.cpp
+iterManifest->IsFile()
+N4Grid10CCacheNoneE
+uPreOff % uCompressionBlkSize == 0
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CacheOneFileFixedBlock.cpp
+iterManifest->IsValid()
+Resource failed verification check
+pChecksumTable
+Checksum not found for file: %s
+Cache(%d) failed to decrypt file %s.  Trying to validate data...
+Cache Read Failure
+Specified resource is not a file
+Specified offset is beyond end of resource
+Cache file created for a different application
+Cache needs decryption
+Cache does not support files over 4GB
+Deleting local file %s
+Copy*
+\Copy (
+) of
+Could not delete local file %s
+\*.*
+Cache(%d), Off=%8.8llu Len=%8.8llu File=%s
+Cache(%d) read failed
+Invalid session handle
+Cache(%d) Request(%d), Off=%8.8llu Len=%8.8llu QueueHandle=%u File=%s
+uPrevEntry <= uMaxEntries
+uNextEntry <= uMaxEntries
+uPrevEntry == uMaxEntries
+Cache(%d) flushing cache file %s
+RemoveEntry.IsValid()
+Cache(%d) mismatch in block uMaxEntries
+Cache(%d): Correcting mismatch in block uMaxEntries
+m_pCacheDescBlock->GetCacheWriteFlag()
+uEntry < uMaxEntries
+PrevDirEntry.IsValid()
+PrevDirEntry.GetCompressionType() == uCompressionType
+PrevDirEntry.GetOffset() + PrevDirEntry.GetLen() == uPreOff
+!bFirstInChain
+NewDirEntry.GetOffset() + NewDirEntry.GetLen() <= PrevDirEntry.GetOffset()
+Could not add to cache(%d)
+Cache(%d), Off=%8.8llu Len=%8.8u File=%s
+uBatSrc < uMaxEntries
+uBatDest < uMaxEntries
+uBatSrc > uBatDest
+uSrcNext < uMaxEntries || uSrcNext == Grid::uEOC
+uDestNext <= uMaxEntries || uDestNext == Grid::uEOC
+! CacheRequestList[uIndex].m_bDataRdy
+Cache(%d) Receive(%d), Off=%8.8u Len=%8.8u QueueHandle=%u File=%s
+Unknown read exception
+Cache(%d) - Unexpected number of bytes returned.  Received %8.8u, expected %8.8llu for file %s
+pu8AppBuf
+CacheCompletionHandler(%d) caught error for handle %d: %s
+CacheCompletionHandler(%d) caught unknown error for handle %d
+(uPreLength + uPostLength) <= (2*uCompressionBlkSize)
+(TFileReq.m_u64BlkOffset % uCompressionBlkSize) == 0
+( !(((uSvrOffset+uSvrLength) < uFileSize)) || ((TFileReq.m_u64BlkLen % uCompressionBlkSize) == 0) )
+(TReq.m_u64BlkOffset % uCompressionBlkSize) == 0
+( !(((uSvrOffset+uSvrLength) < uFileSize)) || ((TReq.m_u64BlkLen % uCompressionBlkSize) == 0) )
+uAppId
+Item=%d Off=%8.8llu Len=%8.8llu InCache=Y
+Item=%d Off=%8.8llu Len=%8.8llu InCache=N SvrOff=%12.12llu SvrLen=%8.8llu
+Cache(%d) - Starting defrag operation
+uPrevOffset+uPrevLength <= DirEntry.GetOffset()
+NextEntry.IsValid()
+DirEntry.GetPrevEntry() == uMaxEntries
+cBlks == uBlksInEntry
+uEntry == uFirstEntry
+uPrevOffset+uPrevLength == DirEntry.GetOffset()
+uPrevOffset+uPrevLength < DirEntry.GetOffset()
+vecBatNodes[ uBat ].m_uNode == cu32InvalidManifestNode
+uNumConsecutiveBlks == uBlksInEntry
+bFound
+User aborted cache(%d) defrag
+Cache(%d) - Successfully completed defrag operation
+Cache(%d) - Defrag was unsuccessful: %s
+Cache(%d) - Defrag was unsuccessful: Unknown error
+array_only
+Validating data for cache(%d)
+Flushing file:
+Cache(%d) successfully added file chunk, Off=%8.8llu Len=%8.8llu File=%s
+Cache(%d) failed to add file chunk, Off=%8.8llu Len=%8.8llu File=%s
+Found pak file: %s
+Error reading pack file
+Failed to make pack directory map
+.pak
+Failed to open file: %s
+Failed to open file
+Converting local file: %s
+failed to seek into file
+Converting pack file: %s
+User aborted load from dir
+Failed to read file: %s
+Failed to add file: %s
+Validating data...
+Cache(%d), Handle=%d, Off=%8.8llu Len=%8.8llu File=%s
+(CloseHandle( m_hSemaphore )) != 0
+N4Grid23CCacheOneFileFixedBlockE
+CacheOneFileFixedBlock::WorkThreadProc
+pWorkEvent
+QueueEntry.GetLength() && QueueEntry.GetLength() <= (2147483647 * 2U + 1U)
+cTime != 0
+(uOldDataStart - uDataStart) % cuDataBlockSize == 0
+u64TotalFixedSize + ((u64)uNumEntries * (u64)cuDataBlockSize) <= u64CacheFileSize
+Configuring cache(%d) for FAT32
+%s__%d.gcf
+__*.gcf
+uNextBat <= uOldMaxEntries || uNextBat == Grid::uEOC
+DirEntry.GetBatEntry() < uNewMaxEntries
+uKey <= uNewMaxEntries
+((uNewDataStart - uOldDataStart) % uDataBlockSize) == 0
+uBatEntry < uMaxEntries
+uNextBat < uMaxEntries || uNextBat == Grid::uEOC
+( !(uMaxEntries >= uNumBlocks) || (uNewBatEntry < uMaxEntries) )
+( !(uMaxEntries < uNumBlocks) || (uNumBlocks + uBatEntry) )
+pNewCacheBatBlock->GetNext(uNewBatEntry) == uMaxEntries
+DirEntry.GetBatEntry() < uMaxEntries
+((uOldDataStart - uNewDataStart) % uDataBlockSize) == 0
+uNewBatEntry < uMaxEntries
+uNewDataStart + (uNewNumEntries * uDataBlockSize) <= u64NewFileSize
+Resizing cache(%d) from %llu to %llu
+Cache(%d) resize was unsuccessful
+Failed to resize cache(%d) file
+Cache(%d) resize successfully completed
+Converting cache(%d) to current version
+(m_pCacheDataBlock->GetDataStart() - uNewDataStart) % uDataBlockSize == 0
+m_pCacheBatBlock->GetNext(uIndex) == uMaxEntries
+Cache conversion was unsuccessful
+Cache conversion successfully completed
+Cache(%d) - Downloading new manifest
+uServerFingerprint == pNewCacheFsTreeBlock->GetFingerPrint()
+Cache(%d) - Downloading manifest changes between versions: %u : %u
+(MallocedBlockToReceiveData.GetSize() % sizeof(u32)) == 0
+Cache(%d) - Validation complete
+Cache
+Status
+ServerComplete
+RequestList
+ReadRequest
+ReadComplete
+CacheRequest
+CacheComplete
+AddRequest
+AddComplete
+Flush
+Cache file version mismatch for App %d
+Cache(%d) manifest error: %s
+Cache(%d) HashBlock BadFormatVersion error
+Failed to read cache fixed data for App %d
+AppId(%d) does not match with cache file(%d)
+Previous cache(%d) was not shut down properly.  Checking cache state...
+Cache(%d) internal error during recovery
+Cache(%d) recovery complete
+ManifestFingerprintCheck
+Successfully created cache(%d) from existing cache file
+ForceCacheValidateAtStartup
+Creating new cache(%d) file
+Downloading manifest for App %d
+u32PreCalculatedManifestFingerprint == m_pCacheFsTreeBlock->GetFingerPrint()
+InitializeCacheFileToZeros
+Failed to initialize cache file
+Failed to create a new cache(%d): %s
+!m_pImpl
+N4Grid15CCachePreLoaderE
+vector::reserve
+!!! Failed preload %12.12llu,%8.8llu,%s !!!
+due to exception: %s
+Off=%12.12llu Len=%8.8llu File=%s
+ReadHandlerProc: couldn't find queue entry with token (%d)
+(m_hCompletionEvent.Set()) != false
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CachePreLoader.cpp
+(m_hThreadDoneEvent.Set()) != false
+puToken
+iter->IsValid() && iter->IsFile()
+dwWaitRet == 0 || dwWaitRet == 258
+due to unknown exception
+Failed GetNextResource due to exception: %s
+Failed GetNextResource due to unknown exception
+(m_hWakePreloaderThreadEvent.Set()) != false
+Thread shutdown improperly (%d)
+Thread resume requested (%d)
+Thread resume completed (%d)
+Thread pause requested (%d)
+Thread pause completed (%d)
+Start (%d)
+iterManifest->IsValid() && iterManifest->IsDir()
+File not found
+eCurThreadMode <= eExit
+Thread accepted pause request (%d)
+Thread accepted run request (%d)
+Thread accepted exit request (%d)
+Exit (%d)
+Preloader Thread - App
+ThreadLifetime
+PreLoadMisc
+PreLoadStart
+PreLoadFinish
+UserReadRequest
+UserReadComplete
+CachePreLoaderMode
+N4Grid16CCacheQueueEntryE
+itCur->InUse()
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CacheQueueManager.cpp
+(m_WorkThreadEvent.Set()) != false
+(m_ShutdownEvent.Set()) != false
+Resubmitting handle=%d
+Handle=%d
+N12_GLOBAL__N_121CQueueExceptionHolderE
+(pos->m_EItemState == eInitializing) || (((pos->m_EItemState == eComplete) || (pos->m_EItemState == eError) || (pos->m_EItemState == eCancel)) && pos->m_bServiceComplete)
+(m_hQueueEvent.Set()) != false
+pos->m_EItemState != eCancel
+!pos->m_hHandler
+(pos->m_pCallerEvent->Set()) != false
+Error calling CompleteRead for handle=%d
+pos->m_EItemState >= eWorking || pos->m_EItemState == ePending
+Worker thread completed for handle=%d
+EItemState=%d, Handle=%d
+pos->m_EItemState >= eWorking
+Server read completed for handle=%d, Blk=%d, Size=%d, State=%d
+Ignoring COperationCancelledException error for handle=%d, State=%d, error=%s
+uBlockIdx < ReqList.size()
+uBytesReadFromServer == 0
+uBytesRead == ReqList[uBlockIdx].m_u64BlkLen
+uBytesReadFromServer
+Error calling ReadProgress for handle=%d
+Restarting handle=%d
+m_pu8Buffer == __null
+m_QueueBuffer.size() <= m_uMaxQueueSize
+Timeout exceeded while waiting for queue opening
+CacheQueue
+AddItem
+RemoveItem
+CompleteItem
+CancelItem
+Failed to create cache work thread.
+N4Grid18CCacheQueueManagerE
+LatestClientServerClockSkew
+uBytesRead == sizeof(BSL::sigword64)
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/ClientClockSkew.cpp
+ClientRegistry.blob
+N12_GLOBAL__N_112ICommandBaseE
+N4Grid13ICommandStateE
+N12_GLOBAL__N_114CNullOperationE
+N12_GLOBAL__N_117CUninstallCommandE
+NullOperation
+N12_GLOBAL__N_138CGetNumAccountsWithEmailAddressCommandE
+N12_GLOBAL__N_135CRequestAccountsByCdKeyEmailCommandE
+N12_GLOBAL__N_142CRequestAccountsByEmailAddressEmailCommandE
+N12_GLOBAL__N_131CChangeForgottenPasswordCommandE
+N12_GLOBAL__N_137CGenerateSuggestedAccountNamesCommandE
+N12_GLOBAL__N_126CIsAccountNameInUseCommandE
+N12_GLOBAL__N_121CCreateAccountCommandE
+N12_GLOBAL__N_137CRequestForgottenPasswordEmailCommandE
+vector::_M_insert_aux
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CommandStates.cpp
+N12_GLOBAL__N_114CCommandThreadE
+!m_pCommandThread
+ICommandState::GetThreadPool - NULL s_pCommandThreadPool! Called before Initialize()
+N12_GLOBAL__N_121CSetAppVersionCommandE
+N12_GLOBAL__N_123CSetAppCacheSizeCommandE
+N12_GLOBAL__N_125CGetAppUpdateStatsCommandE
+N12_GLOBAL__N_115CMoveAppCommandE
+N12_GLOBAL__N_131CRefreshMinimumFootprintCommandE
+N12_GLOBAL__N_124CLoadCacheFromDirCommandE
+N12_GLOBAL__N_120CDefragCachesCommandE
+N12_GLOBAL__N_129CGetCacheFragmentationCommandE
+N12_GLOBAL__N_129CRepairOrDecryptCachesCommandE
+N12_GLOBAL__N_118CFlushCacheCommandE
+N12_GLOBAL__N_119CStopLoadingCommandE
+N12_GLOBAL__N_120CStartLoadingCommandE
+N12_GLOBAL__N_114CLaunchCommandE
+N12_GLOBAL__N_131CWaitForAppReadyToLaunchCommandE
+N12_GLOBAL__N_137CUpdateSubscriptionBillingInfoCommandE
+N12_GLOBAL__N_132CUpdateAccountBillingInfoCommandE
+N12_GLOBAL__N_125CChangeAccountNameCommandE
+N12_GLOBAL__N_144CRequestEmailAddressVerificationEmailCommandE
+N12_GLOBAL__N_126CVerifyEmailAddressCommandE
+N12_GLOBAL__N_126CChangeEmailAddressCommandE
+N12_GLOBAL__N_124CChangePersonalQACommandE
+N12_GLOBAL__N_122CChangePasswordCommandE
+N12_GLOBAL__N_130CAckSubscriptionReceiptCommandE
+N12_GLOBAL__N_119CUnsubscribeCommandE
+N12_GLOBAL__N_117CSubscribeCommandE
+N12_GLOBAL__N_126CRefreshAccountInfoCommandE
+N12_GLOBAL__N_120CRefreshLoginCommandE
+N12_GLOBAL__N_116CSetUser2CommandE
+N12_GLOBAL__N_115CSetUserCommandE
+N12_GLOBAL__N_129CCreateCachePreloadersCommandE
+N12_GLOBAL__N_114CLogoutCommandE
+N12_GLOBAL__N_113CLoginCommandE
+N12_GLOBAL__N_121CDeleteAccountCommandE
+N12_GLOBAL__N_124CWaitForResourcesCommandE
+Starting validation of
+Nothing to validate
+Validation complete:
+Total Files,
+Failed Validation
+Cache keys not available
+MinFootprintAutoRefresh
+m_puNumSuggestedChars
+m_pSuggestedNamesBuf
+Test failure case
+Worker thread (0x%p): started
+Worker thread (0x%p): running command %s
+Worker thread (0x%p): completed command %s
+Worker thread (0x%p) exiting
+CommandState worker thread
+CommandThreadPool
+Trace
+__null == s_pCommandThreadPool
+Handles Exhausted
+ICommandState::NewHandle -- there's already an object in the list at this handle value! WTF!
+Uninstall
+SetAppVersion
+SetAppCacheSize
+GetAppUpdateStats
+MoveApp
+RefreshMinimumFootprint
+LoadCacheFromDir
+DefragCaches
+GetCacheFragmentation
+RepairOrDecryptCaches
+FlushCache
+StopLoadingCache
+StartLoadingCache
+LaunchApp
+WaitForAppReadyToLaunch
+UpdateSubscriptionBillingInfo
+UpdateAccountBillingInfo
+ChangeAccountName
+RequestEmailAddressVerificationEmail
+VerifyEmailAddress
+ChangeEmailAddress
+ChangePersonalQA
+ChangePassword
+GetNumAccountsWithEmailAddress
+RequestAccountsByCdKeyEmail
+RequestAccountsByEmailAddressEmail
+RequestForgottenPasswordEmail
+ChangeForgottenPassword
+AckSubscriptionReceipt
+Unsubscribe
+Subscribe
+RefreshAccountInfo
+RefreshLogin
+Setuser2
+Setuser
+CreateCachePreloaders
+Logout
+DeleteAccount
+GenerateSuggestedAccountNames
+IsAccountNameInUse
+CreateAccount
+WaitForResources
+steam.cfg
+STEAM_CLIENT_CONFIG_FILE
+ActivityLogEnable=enableActivityLogCreateMode=appendActivityLogFlushMode=flushActivityLogDate=enableActivityLogGroupCache=enableActivityLogContextCacheStatus=enableActivityLogContextCacheError=enableActivityLogGroupSteamAPI=enableActivityLogContextSteamAPIAppDependencies=enableActivityLogGroupCsComm=enableActivityLogContextCsCommConnectionPool=enableActivityLogContextCsCommConnection=enableActivityLogContextCsCommSession=enable
+DepotKey_
+AppState_
+AppKeys.cfg
+Bad AppKeys.cfg - %s
+sdkapp
+SDK_NotOwnedByDefault
+SdkContentServerAdrs
+No AllAppsRecord!
+No AllSubscriptionsRecord!
+Field does not exist
+ContentServerCDDBIPAddrPort
+18ObjScopeGuardImpl0IN12_GLOBAL__N_130CContentServerCDDBAddressCacheEMN4Grid19IServerAddressCacheEFvvEE
+N12_GLOBAL__N_130CContentServerCDDBAddressCacheE
+(0 == SetSocketToAbortWhenClosed(hSocket)) != false
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CSClient.cpp
+SdkContentServerAdrs
+ContentServer rejected client's protocol version
+No ContentServers are online
+N4Grid8CSClient18ICompletionHandlerE
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CSClientCompletionHandlers.cpp
+(m_CompleteEvent.Set()) != false
+dwWaitRet == 0 || dwWaitRet == ((DWORD) 0x000000C0)
+N4Grid8CSClient26IBlockingCompletionHandlerE
+ContentServer rejected client protocol version
+N12_GLOBAL__N_131CCommandStatusObjectWithTimeoutE
+Data
+ClientBandwidthStats
+TimeLastUploaded
+m_NumActiveTransfers
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CSClientConnection.cpp
+m_eState == ePreparingToReceiveLengthPrefixedMsg || m_eState == eDonePartialReceiveLengthPrefixedMsg
+%u.%u.%u.%u%c%u
+{Cnx=%u,%u,%s} : thread stopped
+ProtocolError - Not enough data for ExtractNext(u32)
+ProtocolError - Not enough data for ExtractGap()
+Failed to connect to
+ProtocolError - Bad message LengthPrefix (%u > %u)
+m_eState == eDonePartialReceiveLengthPrefixedMsg
+GetBoundSession failed for hSession=%u
+TranslateServerToClientSessionHandle failed for hServerSession=%u
+SetSocketToNonBlockingMode failed
+SetSocketToBlockingMode failed
+{Cnx=%u,%u,%s} : Aborting on error: %s
+{Cnx=%u,%u,%s} : cannot schedule destruction with pending IO count of %u
+{Cnx=%u,%u,%s} : sending keep-alive
+unknown exception completing keep-alive send
+{Cnx=%u,%u,%s} : completing send of %u bytes
+successful send completion, but failed connection detected
+unknown exception completing send
+SelectedConnectWithTimeout
+Attempts
+connect aborted
+pSendCompletionDemuxInfo->m_pSession->m_tsrcpConnection.get()
+failed connection detected when ready to issue body receive
+unknown exception waiting for session ready to recv
+WSAGetLastError() != 36
+successful header recv completion, but failed connection detected
+{Cnx=%u,%u,%s} : Received message header {Ssn=%u,Txn=%u}
+{Cnx=%u,%u,%s} : Completed partial receive of % bytes for message header
+unknown exception completing header recv
+(m_RecvMsgHeaderWrappedWSABUF.PrepareToReceive ( sizeof( common::ClientSessionHandle_t ) + sizeof( NetworkTransactionId_t ) )) != false
+successful body recv completion, but failed connection detected
+{Cnx=%u,%u,%s} : Completed receive of %u data bytes {Ssn=%u,Txn=%u}
+{Cnx=%u,%u,%s} : Completed partial receive of %u bytes for message data
+unknown exception completing data recv
+{Cnx=%u,%u,%s} : thread started - issuing initial read
+{Cnx=%u,%u,%s} : sending %u bytes
+{Cnx=%u,%u,%s} : Unbinding client session handle %u to server session handle %u
+{Cnx=%u,%u,%s} : Removing session %u
+(m_setSessionAppIds.erase( uAppId )) == (1)
+{Cnx=%u,%u,%s} : Session not found: %u
+{Cnx=%u,%u,%s} : Binding client session handle %u to server session handle %u
+(m_ServerToClientSessionHandleMap.insert( std::make_pair( hServerSession, hClientSession ) ).second) != false
+m_ContentServerId == uContentServerId
+AddSession to broken connection
+{Cnx=%u,%u,%s} : Adding session %u
+(m_Sessions.insert( std::make_pair( pSession->Handle(), pSession ) ).second) != false
+(m_setSessionAppIds.insert( pSession->AppId() ).second) != false
+Recv Worker
+{Cnx=%u,%u,%s} : Attempting new connection
+Failed to create session socket
+(WrappedWSABUF.PrepareToReceive( sizeof(bClientProtocolVersionIsAcceptable) )) != false
+(WrappedWSABUF.PrepareToReceive( sizeof(uLoginSucceeded) )) != false
+Timed out connecting to ContentServer
+(WrappedWSABUF.PrepareToReceive( sizeof(uSponsorUrlLength) )) != false
+(WrappedWSABUF.PrepareToReceive( uSponsorUrlLength )) != false
+{Cnx=%u,%u,%s} : connected
+{Cnx=%u,%u,%s} : disconnected
+Disconnect(%u)
+(m_Connections.erase( tsrcpConnection->Handle() )) == (1)
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CSClientConnectionPool.cpp
+%u:%I64u
+nNumChars >= 0
+tsrcpCurConnectionToEval.get()
+Found existing connection %u,%s for %s
+Attempting new connection %u,%s for %s
+connection attempt failed: %s
+N4Grid8CSClient14IProtocolStateE
+CSendSessionLoginRequestState
+N4Grid8CSClient9CLoginFSM29CSendSessionLoginRequestStateE
+CRecvSessionLoginReplyStatusState
+N4Grid8CSClient9CLoginFSM33CRecvSessionLoginReplyStatusStateE
+CRecvSessionLoginReplyArgsState
+N4Grid8CSClient9CLoginFSM31CRecvSessionLoginReplyArgsStateE
+CSendSessionLogoutRequestState
+N4Grid8CSClient10CLogoutFSM30CSendSessionLogoutRequestStateE
+CRecvSessionLogoutReplyState
+N4Grid8CSClient10CLogoutFSM28CRecvSessionLogoutReplyStateE
+CSendRequestState
+N4Grid8CSClient16CReadManifestFSM17CSendRequestStateE
+CRecvInitialReplyState
+N4Grid8CSClient16CReadManifestFSM22CRecvInitialReplyStateE
+CRecvDataChunkHeaderState
+N4Grid8CSClient16CReadManifestFSM25CRecvDataChunkHeaderStateE
+CRecvDataChunkState
+N4Grid8CSClient16CReadManifestFSM19CRecvDataChunkStateE
+N4Grid8CSClient25CReadFileChecksumTableFSM17CSendRequestStateE
+N4Grid8CSClient25CReadFileChecksumTableFSM22CRecvInitialReplyStateE
+N4Grid8CSClient25CReadFileChecksumTableFSM25CRecvDataChunkHeaderStateE
+N4Grid8CSClient25CReadFileChecksumTableFSM19CRecvDataChunkStateE
+N4Grid8CSClient17CReadPurgeListFSM17CSendRequestStateE
+N4Grid8CSClient17CReadPurgeListFSM22CRecvInitialReplyStateE
+N4Grid8CSClient17CReadPurgeListFSM25CRecvDataChunkHeaderStateE
+N4Grid8CSClient17CReadPurgeListFSM19CRecvDataChunkStateE
+N4Grid8CSClient12CReadFileFSM17CSendRequestStateE
+N4Grid8CSClient12CReadFileFSM22CRecvInitialReplyStateE
+CRecvSizeOfNextCompressedBlockState
+N4Grid8CSClient12CReadFileFSM35CRecvSizeOfNextCompressedBlockStateE
+CRecvSizeOfNextCompressedBlockChunkState
+N4Grid8CSClient12CReadFileFSM40CRecvSizeOfNextCompressedBlockChunkStateE
+CRecvNextCompressedBlockChunkState
+N4Grid8CSClient12CReadFileFSM34CRecvNextCompressedBlockChunkStateE
+Operation cancelled
+ProtocolError - Message not fully consumed
+CWSABUFWrapper::SetExternalReceiveAreaAndSize: buffer has unconsumed data
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : completing send
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s} : aborted
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s} : cancelled
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s} : finished
+N4Grid8CSClient12IProtocolFSME
+N4Grid8CSClient17CReadPurgeListFSME
+cpu8Data == FSM.m_pu8IntoReceiveBlock
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CSClientFSM.cpp
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : completing recv for %u bytes
+N4Grid8CSClient25CReadFileChecksumTableFSME
+FSM.m_uCurrentDataChunkSize <= FSM.m_uExpectedTotalSizeOfDataToReceive
+FSM.m_uDataBytesReceived <= FSM.m_uExpectedTotalSizeOfDataToReceive
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : completing recv
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s} : started
+Compression Failure
+N4Grid8CSClient12CReadFileFSME
+cpu8ReceivedData == FSM.m_pu8IntoReceiveBlock
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : completing chunk recv of %u bytes
+FSM.IsRunning() || FSM.IsCancelled()
+FSM.m_uCurRecvBufIdx < FSM.m_uNumRecvBufs
+FSM.m_uBytesWrittenToCurRecvBuf < uCurRecvBufLen
+uBytesToCopyThisPass <= uBytesLeftToCopyThisBlock
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : completing recv, %u bytes in next chunk
+FSM.m_uSizeOfNextCompressedBlockChunk <= FSM.m_uSizeOfNextCompressedBlock
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : completing recv, expecting chunk of %u bytes
+N4Grid8CSClient16CReadManifestFSME
+N4Grid8CSClient9CLoginFSME
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : completing recv, %u bytes in next incoming block
+FSM.m_uSizeOfNextCompressedBlock <= (2*cuCompressionBlkSize)
+Server returned error response to ReadPurgeList request
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : expecting %u total bytes
+Server returned invalid response to ReadPurgeList request
+received unknown compression type
+received bad response code
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : completing recv, %u blocks to receive
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : completing recv, expecting %u total bytes
+received error response code
+Unexpected HandleCompletedRecv() in state
+Unexpected HandleCompletedSend() in state
+%u:%u:%u
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Inc/SteamGlobalUserIDHelperFunctions.h
+(m_ReadyToRecvSynchEvent.Set()) != false
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : initiating recv for %u bytes
+(m_RecvBufWrapper.PrepareToReceive( uSize )) != false
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : initiating recv
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : FileId=%u StartBlock=%u NumBlocks=%u
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : sending request
+N4Grid8CSClient10CLogoutFSME
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s.%s} : User=%s(%s) App=%u Ver=%u
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s} : restart
+CWSABUFWrapper() failed to malloc() pMallocedDataBuffer
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s} : created
+ReadPurgeList
+ReadFileChecksumTable
+{Cnx=%u,Ssn=%u,App=%u,Txn=%u,%s} : destroyed
+ReadFile
+m_RecvBufVector.at(i).m_pu8
+m_RecvBufVector.at(i).m_uLen
+ReadManifest
+Login
+FindSession(%u) failed
+m_pLogContextSession
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CSClientService.cpp
+Reconnect failed: %s
+Reconnect failed: unknown exception
+QueueReconnect(%u)
+(m_ReconnectEvent.Set()) != false
+m_pLogContextGetPerfStatsAPI
+GetPerfStats(%u)
+GetPerfStats()
+CancelPendingCalls(%u)
+CancelPendingCall(%u,%u)
+m_pLogContextReadFileAPI
+ReadFile(%u,%u,%u,%d)
+m_pLogContextReadPurgeListAPI
+ReadVersionChangeFileIdPurgeList(%u,%u)
+m_pLogContextReadChecksumsAPI
+ReadFileChecksumTable(%u)
+m_pLogContextReadManifestAPI
+ReadManifest(%u)
+GetContentServerInfo(%u)=%u,0x%x
+GetSponsorUrl(%u)=%s
+DestroySession(%u)
+(m_Sessions.erase( hSession )) == (1)
+CreateSession(%s,%u,%u)=%u attempt %u
+(m_Sessions.insert( std::make_pair( hSession, tsrcpSession ) ).second) != false
+CreateSession(%s,%u,%u)=%u attempt %u succeeded, CS #%u
+CreateSession(%s,%u,%u)=%u attempt %u failed: %s
+CreateSession(%s,%u,%u)=%u attempt %u failed with unknown exception
+CsComm
+ConnectionPool
+Connection
+ConnectionSend
+ConnectionRecv
+Session
+GetPerfStatsAPI
+ReadManifestAPI
+ReadChecksumsAPI
+ReadPurgeListAPI
+ReadFileAPI
+LoginLogoutFSM
+ReadManifestFSM
+ReadChecksumsFSM
+ReadPurgeListFSM
+ReconnectThread
+Session destroyed
+Server rejected session login
+Manifest fingerprint mismatch on reconnect
+(m_ActiveFSMsMap.erase( uTxnId )) == (1)
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/CSClientSession.cpp
+(m_ActiveFSMsMap.insert( std::make_pair( tsrcpFSM->GetTransactionId(), tsrcpFSM ) ).second) != false
+m_apCloneableException.get()
+{Cnx=%u,Ssn=%u,App=%u} : StartNewFSM for %s failed with exception: %s
+Unknown exception caught
+{Cnx=%u,Ssn=%u,App=%u} : StartNewFSM for %s failed with unknown exception
+{Cnx=%u,Ssn=%u,App=%u} : Abort all FSMs (%s)
+Failed to reconnect session
+{Cnx=%u,Ssn=%u,App=%u} : Reconnect() attempt %u
+{Cnx=%u,Ssn=%u,App=%u} : Reconnect() attempt %u aborted as DestroySession detected
+{Cnx=%u,Ssn=%u,App=%u} : Reconnect() attempt %u succeeded, CS #%u
+{Cnx=%u,Ssn=%u,App=%u} : Reconnect() attempt %u failed: %s
+{Cnx=%u,Ssn=%u,App=%u} : Reconnect() attempt %u failed: unknown exception
+UnknownException
+{Cnx=%u,Ssn=%u,App=%u} : HandleConnectionFailed: %s
+{Cnx=%u,Ssn=%u,App=%u} : Aborting found LoginFSM
+{Cnx=%u,Ssn=%u,App=%u} : queuing reconnect for failed connection (%s)
+m_ActiveFSMsMap.size() == 1
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Inc/EngineReturnBuffer.h
+uRet <= uKeyLength
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/EngineClientConnection.cpp
+pReceiveSizeOfEncryptedTicket
+nBytes <= uSizeOfOutputBuffer
+puWasDeleted
+puBootstrapperVersion
+puClientVersion
+puAppId
+pAppStats
+(uBufSize >= m_pCommandChannel->RecvData(szUrl, uBufSize)) != false
+(uBufSize >= m_pCommandChannel->RecvData(szEmail, uBufSize)) != false
+uRet <= (255)
+(uBufSize >= m_pCommandChannel->RecvData(szPathBuf, uBufSize)) != false
+(*puValueLen >= m_pCommandChannel->RecvData(szValueBuf, *puValueLen)) != false
+(uBytes >= m_pCommandChannel->RecvData(puIds, uBytes)) != false
+cszAppName
+pAppVersion
+uRet <= pAppVersion->uMaxLabelChars
+puSizeOfIconData
+pLaunchOption
+uRet <= pLaunchOption->uMaxDescChars
+uRet <= pLaunchOption->uMaxCmdLineChars
+(uBufSize >= m_pCommandChannel->RecvData(szCountryBuf, uBufSize)) != false
+pParentAppId
+pApp
+uRet <= pApp->uMaxNameChars
+uRet <= pApp->uMaxInstallDirNameChars
+uRet <= pApp->uMaxLatestVersionLabelChars
+uRet <= pApp->uMaxCurrentVersionLabelChars
+pDiscountQualifier
+pDiscount
+pSubscription
+uRet <= pSubscription->uMaxNameChars
+uRet <= (pSubscription->uMaxAppIds*sizeof(unsigned int))
+(uBufSize >= m_pCommandChannel->RecvData(szUser, uBufSize)) != false
+nRead == nRet*uSize
+s_ReturnBufferTable.find(nRet) == s_ReturnBufferTable.end()
+puPctFragmentation
+uRet <= sizeof(buf)
+((255) >= m_pCommandChannel->RecvData(szUser, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szAnswerToQuestion, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szEmailVerificationKey, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szNewPassphrase, (255))) != false
+((1024) >= m_pCommandChannel->RecvData(szArgs, (1024))) != false
+(cubRecord >= m_pCommandChannel->RecvData(mbRecord.get(), cubRecord)) != false
+uRet <= cubDataChunk
+((255) >= m_pCommandChannel->RecvData(szKey, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szPassword, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szPassphrase, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szAccountNameToSelectMasterAS, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szGenerateNamesLikeAccountName, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szAccountName, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szEmailAddress, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szCreationKey, (255))) != false
+((255) >= m_pCommandChannel->RecvData(szPersonalQuestion, (255))) != false
+uRet <= sizeof(szMasterList)
+uRet <= sizeof(szName)
+uRet <= sizeof(szPattern)
+uRet <= (uSize*uCount)
+uRet <= sizeof(szMode)
+(cszRelPath >= szName)
+static_cast<unsigned int>(cszRelPath - szName) < (255)
+uiBufSz <= (255)
+uRecv <= (255)
+client disconnected
+CEngineConnection: bad command code
+client callback thread error
+N4Grid17CEngineConnectionE
+ClientCallbackAgent
+CClientConnection - could not create event
+(SetEvent(m_hCallbackThreadExitEvent)) != 0
+(CloseHandle(m_hCallbackThreadExitEvent)) != 0
+(CloseHandle(m_hCommandEvent)) != 0
+pCallbackSignal
+N4Grid17CClientConnectionE
+SteamEngineInstance
+SteamEngineLock
+N4Grid14CClientManagerE
+N4Grid18CClientAgentThreadE
+EngineClientCommandAgent
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/EngineClientManager.cpp
+ShutdownEngineOnLastClientExit
+(ResetEvent(m_hSingleInstanceFlag)) != 0
+mstr
+(SetEvent(m_hSingleInstanceFlag)) != 0
+Client connect timed out
+(SetEvent(m_hMasterPipeLock)) != 0
+Invalid client connect code
+cmd
+cbk
+sce-%x%x%x
+nRet <= sizeof(buf)
+Invalid client connect ACK code
+PipeComm
+Exception caught on line %d: (%s)
+Unknown exception caught on line %d
+(CloseHandle(hInstanceFlag)) != 0
+Timed out waiting for Engine to start
+Failed to open master pipe lock
+failed to take master pipe connection lock
+dwMyPid == dwEchoedProcessId
+dwMyTid == dwEchoedThreadId
+Failed to create event handle
+Exception caught on line %d, re-throwing
+N4Grid14CClientManager5CImplE
+EngineMasterConnectionListener
+EngineClientAgentMonitor
+CClientManager - could not instance event
+(CloseHandle(m_hSingleInstanceFlag)) != 0
+A Steam Engine Instance already exists
+CClientManager - could not create master pipe mutex
+CClientManager - could not create event
+(SetEvent(m_hMasterChannelExitEvent)) != 0
+Shutting down. . .
+%d
+(SetEvent(m_hAgentMonitorExitEvent)) != 0
+(CloseHandle(m_hMasterPipeLock)) != 0
+(CloseHandle(m_hMasterChannelExitEvent)) != 0
+(CloseHandle(m_hAgentMonitorExitEvent)) != 0
+N4Grid17CReturnBufferDataE
+N4Grid22CReturnBufferAggregateE
+pComm
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/EngineReturnBuffer.cpp
+CellIDBestResponseTime
+TimeLastUpdatedCellId
+Afghanistan
+AF
+Aland Islands
+AX
+Albania
+AL
+Algeria
+DZ
+American Samoa
+AS
+Andorra
+AD
+Angola
+AO
+Anguilla
+AI
+Antarctica
+AQ
+Antigua and Barbuda
+AG
+Argentina
+AR
+Armenia
+AM
+Aruba
+AW
+Australia
+AU
+Austria
+AT
+Azerbaijan
+AZ
+Bahamas
+BS
+Bahrain
+BH
+Bangladesh
+BD
+Barbados
+BB
+Belarus
+BY
+Belgium
+BE
+Belize
+BZ
+Benin
+BJ
+Bermuda
+BM
+Bhutan
+BT
+Bolivia
+BO
+Bosnia and Herzegovina
+BA
+Botswana
+BW
+Bouvet Island
+BV
+Brazil
+BR
+British Indian Ocean Territory
+IO
+Brunei Darussalam
+BN
+Bulgaria
+BG
+Burkina Faso
+BF
+Burundi
+BI
+Cambodia
+KH
+Cameroon
+CM
+Canada
+CA
+Cape Verde
+CV
+Cayman Islands
+KY
+Central African Republic
+CF
+Chad
+TD
+Chile
+CL
+China
+CN
+Christmas Island
+CX
+Cocos (Keeling) Islands
+CC
+Colombia
+CO
+Comoros
+KM
+Congo
+CG
+Congo, the Democratic Republic of the
+CD
+Cook Islands
+CK
+Costa Rica
+CR
+Cote d'Ivoire
+CI
+Croatia
+HR
+Cyprus
+CY
+Czech Republic
+CZ
+Denmark
+DK
+Djibouti
+DJ
+Dominica
+DM
+Dominican Republic
+DO
+Ecuador
+EC
+Egypt
+EG
+El Salvador
+SV
+Equatorial Guinea
+GQ
+Eritrea
+ER
+Estonia
+EE
+Ethiopia
+ET
+Falkland Islands (Malvinas)
+FK
+Faroe Islands
+FO
+Fiji
+FJ
+Finland
+FI
+France
+FR
+French Guiana
+GF
+French Polynesia
+PF
+French Southern Territories
+TF
+Gabon
+GA
+Gambia
+GM
+Georgia
+GE
+Germany
+Ghana
+GH
+Gibraltar
+GI
+Greece
+GR
+Greenland
+GL
+Grenada
+GD
+Guadeloupe
+GP
+Guam
+GU
+Guatemala
+GT
+Guinea
+GN
+Guinea-Bissau
+GW
+Guernsey
+GG
+Guyana
+GY
+Haiti
+HT
+Heard and Mc Donald Islands
+HM
+Holy See(Vatican City State)
+VA
+Honduras
+HN
+Hong Kong
+HK
+Hungary
+HU
+Iceland
+IS
+India
+IN
+Indonesia
+ID
+Iraq
+IQ
+Iran
+IR
+Ireland
+IE
+Isle of Man
+IM
+Israel
+IL
+Italy
+IT
+Jamaica
+JM
+Japan
+JP
+Jersey
+JE
+Jordan
+JO
+Kazakhstan
+KZ
+Kenya
+KE
+Kiribati
+KI
+Korea, Republic of
+KR
+Kuwait
+KW
+Kyrgyzstan
+KG
+Lao People's Democratic Republic
+LA
+Latvia
+LV
+Lebanon
+LB
+Lesotho
+LS
+Liberia
+LR
+Liechtenstein
+LI
+Lithuania
+LT
+Luxembourg
+LU
+Macau
+MO
+Macedonia, the former Yugoslav Republic of
+MK
+Madagascar
+MG
+Malawi
+MW
+Malaysia
+MY
+Maldives
+MV
+Mali
+ML
+Malta
+MT
+Marshall Islands
+MH
+Martinique
+MQ
+Mauritania
+MR
+Mauritius
+MU
+Mayotte
+YT
+Mexico
+MX
+Micronesia, Federated States of
+FM
+Moldova, Republic of
+MD
+Monaco
+MC
+Mongolia
+MN
+Montserrat
+MS
+Morocco
+MA
+Mozambique
+MZ
+Myanmar
+MM
+Namibia
+NA
+Nauru
+NR
+Nepal
+NP
+Netherlands
+NL
+Netherlands Antilles
+AN
+New Caledonia
+NC
+New Zealand
+NZ
+Nicaragua
+NI
+Niger
+NE
+Nigeria
+NG
+Niue
+NU
+Norfolk Island
+NF
+Northern Mariana Islands
+MP
+Norway
+NO
+Oman
+OM
+Pakistan
+PK
+Palau
+PW
+Palestinian Territory, Occupied
+PS
+Panama
+PA
+Papua New Guinea
+PG
+Paraguay
+PY
+Peru
+PE
+Philippines
+PH
+Pitcairn
+PN
+Poland
+PL
+Portugal
+PT
+Puerto Rico
+PR
+Qatar
+QA
+Reunion
+RE
+Romania
+RO
+Russian Federation
+RU
+Rwanda
+RW
+Saint Helena
+SH
+Saint Kitts and Nevis
+KN
+Saint Lucia
+LC
+Saint Pierre and Miquelon
+PM
+Saint Vincent and the Grenadines
+VC
+Samoa
+WS
+San Marino
+SM
+Sao Tome and Principe
+ST
+Saudi Arabia
+SA
+Senegal
+SN
+Serbia and Montenegro
+CS
+Seychelles
+SC
+Sierra Leone
+SL
+Singapore
+SG
+Slovakia
+SK
+Slovenia
+SI
+Solomon Islands
+SB
+Somalia
+SO
+South Africa
+ZA
+South Georgia and the South Sandwich Islands
+GS
+Spain
+ES
+Sri Lanka
+LK
+Suriname
+SR
+Svalbard and Jan Mayen
+SJ
+Swaziland
+SZ
+Sweden
+SE
+Switzerland
+CH
+Taiwan, Province of China
+TW
+Tajikistan
+TJ
+Tanzania, United Republic of
+TZ
+Thailand
+TH
+Timor-Leste
+TL
+Togo
+TG
+Tokelau
+TK
+Tonga
+TO
+Trinidad and Tobago
+TT
+Tunisia
+TN
+Turkey
+TR
+Turkmenistan
+TM
+Turks and Caicos Islands
+TC
+Tuvalu
+TV
+Uganda
+UG
+Ukraine
+UA
+United Arab Emirates
+AE
+United Kingdom
+GB
+United States
+US
+United States Minor Outlying Islands
+UM
+Uruguay
+UY
+Uzbekistan
+UZ
+Vanuatu
+VU
+Venezuela
+VE
+Viet Nam
+VN
+Virgin Islands, British
+VG
+Virgin Islands, U.S.
+VI
+Wallis and Futuna
+WF
+Western Sahara
+EH
+Yemen
+YE
+Zambia
+ZM
+Zimbabwe
+ZW
+CellIDManagerThread
+gds1.steampowered.com:27030 gds2.steampowered.com:27030 gds3.steampowered.com:27030 gds4.steampowered.com:27038
+No IP:ports provided for GeneralDirectoryServers
+GeneralDirectoryServer_UseDNSFallbacks
+gds1.steampowered.com:27030 gds2.steampowered.com:27030
+18ObjScopeGuardImpl1IN12_GLOBAL__N_132CResourceLoadCompletionCollectorEMS1_FvjEjE
+EnableCacheLoading
+CacheSize
+Not implemented
+not implemented
+OptionalDLC
+DecryptionKeyForAppId
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Inc/ContentDescriptionDBKeyRecord.h
+uSizeOfFieldData == sizeof( u8 )
+uCacheIdx < m_vecResourceFileInfo.size()
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/Fs.cpp
+AlternateAppId
+Cache needs repair
+it != m_mapTokensHandles.end()
+FileInfo.iterManifest->GetCacheIndex() < m_vecResourceFileInfo.size()
+/SteamApps
+.ncf
+.gcf
+deprecated.gcf
+cache path contains invalid characters
+pos != std::string::npos
+app path contains invalid characters
+/common/
+The path to the app dir is too long - set a new root dir path
+pAppRecordEnclosing->IsManifestOnlyApp()
+foo
+TestCacheSize
+CacheSignatureCheck
+ExternallyUpdated
+vecMountPaths.size() == 1
+Failed to resize the cache file
+N12_GLOBAL__N_132CResourceLoadCompletionCollectorE
+m_mapTokensHandles.find(uToken) == m_mapTokensHandles.end()
+Downloading resources
+Downloading resources. . .
+CMallocedBlock(): malloc failed
+The command was aborted
+failed to open file
+failed to write local app file
+*.*
+Can't convert an app to loose-files if it uses GCFs!
+DisableManifestIteration
+@reslists/
+/precache.lst
+@reslists/precache.lst
+/preload.lst
+@reslists/preload.lst
+Updating Minimum Footprint files
+(iter->IsValid()) != false
+LoadAllBeforeLaunch
+reslists/
+wa
+0 == uCacheSizeMB
+!bPreserveFilesOnDisk
+Failed to delete cache file
+A different version of this FS is already in use
+App has no cache file
+This operation cannot be performed while the Application's FS is mounted
+App provided bad argument to Steam API
+Non-UserConfig file cannot be written to
+End of file
+Read failure
+Invalid handle value
+File seek error
+Access denied
+The mount path does not exist
+Not found
+Unknown filesystem error
+Filesystem configuration error
+m_uPos < m_uBytes
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/FsBuffer.cpp
+pReadBuf
+m_pBuf != 0
+u64MaxToRead > 0
+m_uBytes != 0
+uBytesRemaining == 0
+uBytesRead == uBytesToRead
+pWriteBuf
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/FsCacheGroup.cpp
+a+rwbtcn
+b
+not found File=%s
+failed path create to File=%s
+Access violation=%s
+File or path not found=%s
+open failure on File=%s
+Cache read failed
+write failure on File=%s
+File=%s
+GetFileOffset(uHandle) == 0
+pu8Buf
+Off=%8.8lld Len=%8.8d File=%s
+bFileExists && !FileInfo.bIsDir
+Off=%8.8lld Len=%8.8d Kbps=%d File=%s
+<tmpfile>
+w+b
+IsLocalFile(uFileHandle)
+N4Grid13CFsCacheGroupE
+eFilter <= eSteamFindAll
+FsCacheGroup
+StatRequest
+StatComplete
+WriteRequest
+WriteComplete
+CreateLocalFileRequest
+CreateLocalFileComplete
+N4Grid11IFsStrategyE
+N4Grid8CFsTableE
+@reslists\
+\precache.lst
+@reslists\precache.lst
+\preload.lst
+@reslists\preload.lst
+N12_GLOBAL__N_110CMountImplE
+0 == it->second->GetUseCount()
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/FsTable.cpp
+m_pCache.get()
+clientInfo.m_pCacheGroup.get()
+clientInfo.m_pFsStrategy.get()
+clientInfo.m_pFs
+it->second.get()
+N4Grid8CFsTable5CImplE
+Timed out taking cache locks
+(0 == setenv( itMap->first.c_str(), itMap->second.c_str(), 1 )) != false
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/Launcher.cpp
+(0 == setenv( sKey.c_str(), sTempValue.c_str(), 1 )) != false
+path
+Failed to get environment strings
+%1024[^=]=%1024[^=]
+__STEAM_BOOTSTRAPPER_ICON_ID__
+HTML_OFFLINE_DIR
+SteamAppUser
+SteamAppVersionId
+SteamUser
+ValvePlatformMutex
+%s=%s
+Environment too large!
+PATH
+Failed to get path environment variable
+:
+Invalid CWD created '%s'
+%s"%s" %s
+Failed to launch application process (%s)
+uSizeOfFieldData == sizeof( ReturnValue )
+UseCleanEnvironment
+CWDOverride
+Command-line parameters too long
+uLaunchOption < AppLaunchOptionsRecord.GetNumFields()
+!m_pSteam3Interface || AppLaunchOptionRecord.IsValidForOS( m_pSteam3Interface->GetPlatformName(__null) )
+vacmodulefilename
+vacmacmodulecache
+vacmodulecache
+N4Grid9CLauncherE
+Adding new resource manifest %d:
+Cache %d, Node %d
+%s
+MasterResourceList
+Add
+SteamIsOffline
+SteamStayOffline
+ForceOfflineMode
+eState < eInvalidState
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/OfflineStatus.cpp
+eNextState < eInvalidState
+s_eCurrentState < eInvalidState
+(m_hReadPipe != __null) != false
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/PipeComm.cpp
+pData
+pipe read to
+failed
+- remote process
+(!"CPipeComm::Read - ReadFile failed, remote process is me") != false
+is me
+(!"CPipeComm::Read - ReadFile failed, remote process exists") != false
+seems alive
+seems dead
+receive buffer too small
+(m_hWritePipe != __null) != false
+pipe write
+(!"CPipeComm::Write - WriteFile failed, remote process is me") != false
+(!"CPipeComm::Write - WriteFile failed, remote process exists") != false
+dwBytesWritten
+remote process no longer exists
+peek of pipe from
+failed:
+(CloseHandle(m_hReadPipe)) != 0
+(CloseHandle(m_hWritePipe)) != 0
+(m_hReadPipe == __null) != false
+(m_hWritePipe == __null) != false
+cs
+(!dwLastError) != false
+sc
+Failed create pipe:
+N4Grid9CPipeCommE
+steam-%s-%x-%x-%x
+steam-%s
+LOGNAME
+!"Couldn't determine username by getpwuid(getuid()) or getenv('LOGNAME')"
+/tmp/%s-%s-%%s
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/ResourceFile.cpp
+getting %s
+uBytesRead == m_u64Size
+%s received
+m_pu8Contents
+ResourceFile
+Load
+GetNext
+N4Grid13IResourceListE
+N4Grid18CResourceListNodesE
+N4Grid20CResourceListStringsE
+N4Grid17CResourceListFileE
+"%260[^"]",%llu,%llu
+%260[^,],%llu,%llu
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/ResourceList.cpp
+Failed to find file from reslist: %s
+Failed to find file by name: %s
+ResourceList
+Failed to find reslist file: %s
+nRet
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/Steam.cpp
+...
+) failed with error
+:
+?
+Failed to SetUser
+SteamCheckAppOwnership
+%u,0x%p,0x%p,0x%p
+Not available
+SteamChangeAccountName
+%s,%s,0x%p
+******
+SteamUnsubscribe
+%u,0x%p
+SteamDeleteAccount
+0x%p
+SteamGetAppDLCStatus
+%u, %u, 0x%p=%s, 0x%p
+SteamForceCellId
+SteamWasBlobRegistryDeleted
+0x%p,0x%p
+GetLocalClientVersion
+0x%p,0x%p,0x%p
+SteamGetCurrentAppId
+SteamGetTotalUpdateStats
+0x%x,0x%p
+SteamGetAppUpdateStats
+%d, %d, 0x%x, 0x%p
+SteamUpdateSubscriptionBillingInfo
+%d,0x%x,0x%p
+SteamUpdateAccountBillingInfo
+SteamRequestEmailAddressVerificationEmail
+SteamVerifyEmailAddress
+%s,0x%p
+SteamChangeEmailAddress
+SteamGetCurrentEmailAddress
+0x%x=%s,%u,0x%x,0x%p
+SteamGetContentServerInfo
+%u,0x%x,0x%x,0x%p
+SteamGetSponsorUrl
+%u,0x%p=%s,%u,*0x%x=%u,0x%p
+SteamChangePersonalQA
+%s,%s,%s,0x%p
+SteamChangePassword
+GetNumAccountsWithEmailAddress
+SteamRequestAccountsByCdKeyEmail
+SteamRequestAccountsByEmailAddressEmail
+SteamRequestForgottenPasswordEmail
+SteamChangeForgottenPassword
+%s,%s,%s,%s,*0x%p=%s,0x%p
+SteamSetNotificationCallback
+SteamUninstall
+SteamSetAppVersion
+%u,%u,0x%p
+SteamReleaseCacheFiles
+SteamSetAppCacheSize
+SteamGetAppCacheSize
+%u,0x%p,0x%p
+SteamMoveApp
+%u,0x%p="%s",0x%p
+SteamGetAppDir
+SteamSetCacheDefaultDirectory
+*0x%p="%s",0x%p
+SteamGetCacheDefaultDirectory
+SteamRefreshMinimumFootprint
+SteamGetCacheDecryptionKey
+%u,0x%p,%u,0x%p,0x%p
+SteamLoadFileToApp
+%u,%s,0x%p,%u,%llu,0x%p
+SteamLoadFileToCache
+SteamIsFileNeededByApp
+%u,%s,%llu,0x%p,0x%p
+SteamIsFileNeededByCache
+%u,%s,%llu,0x%p
+SteamLoadCacheFromDir
+%u,%s,0x%p
+SteamDefragCaches
+SteamGetCachePercentFragmentation
+SteamRepairOrDecryptCaches
+SteamFlushCache
+SteamStopLoadingCache
+SteamStartLoadingCache
+SteamGetCurrentCellID
+0x%p=%u,0x%p=%u,0x%p
+SteamIsCacheLoadingEnabled
+%u,*0x%p=%s,0x%p
+SteamGetCacheFilePath
+%u,0x%p=%s,%u,0x%p,0x%p
+SteamCreateCachePreloaders
+SteamLaunchApp
+%u,%u,"%s",0x%p
+SteamWaitForAppReadyToLaunch
+SteamGetAppUserDefinedInfo
+%u,%s,0x%p,%u,0x%p,0x%p
+SteamGetAppDependencies
+%u,0x%p,%u,%d,0x%p
+SteamFindApp
+0x%p=%s,0x%p,0x%p
+SteamRemoveAppDependency
+SteamInsertAppDependency
+%u,%u,0x%p,0x%p
+SteamEnumerateAppDependency
+SteamEnumerateAppIcon
+%u,%u,0x%p,%u,0x%p,0x%p
+SteamEnumerateAppLaunchOption
+SteamEnumerateAppVersion
+SteamGetSubscriptionPurchaseCountry
+%d,0x%x=%s,%u,0x%x
+SteamGetAppPurchaseCountry
+SteamEnumerateApp
+SteamGetAppIds
+0x%p,%u,0x%p
+SteamGetAppStats
+SteamGetSubscriptionExtendedInfo
+SteamEnumerateSubscriptionDiscountQualifier
+%u,%u,%u,0x%p,0x%p
+SteamEnumerateSubscriptionDiscount
+SteamEnumerateSubscription
+SteamGetSubscriptionIds
+SteamGetSubscriptionStats
+SteamIsAppSubscribed
+%u,*0x%p=%s,*0x%p=%s,0x%p
+SteamIsSubscribed
+%u,*0x%p=%s,*0x%p=%s,,0x%p
+SteamAckSubscriptionReceipt
+SteamGetSubscriptionReceipt
+SteamSubscribe
+SteamRefreshAccountInfo
+SteamVerifyPassword
+SteamGetAccountStatus
+SteamGetUserType
+SteamRefreshLogin
+SteamIsSecureComputer
+SteamLogout
+SteamLogin
+SteamGetUser
+0x%p=%s,%u,0x%p,0x%p,0x%p
+SteamSetUser2
+SteamSetUser
+%s,*0x%p=%s,0x%p
+SteamIsLoggedIn
+*0x%p=%s,0x%p
+SteamGenerateSuggestedAccountNames
+%s,%s,0x%p,%u,0x%p,0x%p
+SteamIsAccountNameInUse
+%s,0x%p,0x%p
+SteamCreateAccount
+%s,%s,%s,%s,%s,%s,*0x%p=%s,0x%p
+SteamSetMaxStallCount
+Illegal game launch detected
+SteamGetEncryptedUserIDTicket
+SteamWaitForAppResources
+SteamWaitForResources
+SteamResumeCachePreloading
+SteamPauseCachePreloading
+SteamForgetAllHints
+SteamHintResourceNeed
+%s,%d,0x%p
+SteamGetLocalFileCopy
+SteamGetFileAttributeFlags
+SteamUnmountFilesystem
+SteamUnmountAppFilesystem
+SteamMountFilesystem
+%u,0x%p=%s,0x%p
+SteamMountAppFilesystem
+SteamChangeOfflineStatus
+SteamGetOfflineStatus
+SteamNumSteamAppsRunning
+SteamIsUsingSdkContentServer
+SteamGetAppUserDefinedRecord
+SteamBlockingCall
+0x%x,%u,0x%p
+SteamAbortCall
+SteamProcessCall
+0x%x,0x%p,0x%p
+SteamIsFileImmediatelyAvailable
+SteamFindClose
+SteamFlushFile
+SteamFindNext64
+SteamFindNext
+SteamFindFirst64
+%s,%d,0x%p,0x%p
+SteamFindFirst
+SteamSizeFile64
+SteamSizeFile
+SteamTellFile64
+SteamTellFile
+SteamSeekFile64
+%u,%lld,%d,0x%p
+SteamSeekFile
+%u,%ld,%d,0x%p
+nul:
+w
+failed to open dev/null
+dev/null error
+vsnprintf mismatch
+SteamPrintFile
+%u,0x%p,%s
+SteamPutc
+SteamGetc
+SteamWriteFile
+0x%p,%u,%u,%u,0x%p
+SteamReadFile
+SteamCloseFile
+SteamOpenFile2
+%u,%s,%s,0x%x,0x%p,0x%p,0x%p
+SteamOpenFile
+%u,%s,%s,0x%p
+tempfile
+SteamOpenTmpFile
+SteamOpenFile64
+%u,%s,%s,0x%p,0x%p
+(SteamSeekFile(hFile, nOffset, eSteamSeekMethodSet,pError)==0) != false
+SteamSetvBuf
+0x%x,0x%p,%d,%u,0x%p
+SteamStat64
+SteamStat
+s_uNumStartupCalls < 0xFFFF
+SteamCleanup
+SteamAppId
+SteamAppVersionId
+SteamAppUser
+SteamApp.cfg
+SteamInstallPath
+(setenv( cszLaunchParamInstallPath, sInstallPath.c_str(), 1 )) == 0
+SteamUserPassphrase
+EngineInSameProcessAsClient
+g_pBufTable
+SteamStartup
+nCount > 0 && static_cast<uint>(nCount) < sizeof(cszBuffer)
+(SafeSnprintf( szVersion, uVersionBufSize, szFormat, uFileMaj, uFileMin, uFileRev, uFileBld)) == (nCount)
+checksum failed on file read
+No Steam Content Servers are available
+Cannot perform this operation while offline
+An operation is currently pending on this Account
+Connection to the local Steam Service lost
+The local Steam Service is not running
+The command could not be completed
+Not subscribed
+Not logged in
+User's ticket has expired
+Bad launch configuration
+Unknown internal error occurred
+-
+Steam library already initialized
+App provided invalid TSteamError pointer to Steam API
+Steam Library has not been initialized
+N12_GLOBAL__N_118ISteamInterface003E
+N12_GLOBAL__N_118CSteamInterface003E
+N12_GLOBAL__N_118ISteamInterface004E
+N12_GLOBAL__N_118CSteamInterface004E
+N12_GLOBAL__N_118ISteamInterface005E
+N12_GLOBAL__N_118CSteamInterface005E
+N12_GLOBAL__N_118CSteamInterface006E
+Steam003
+Steam004
+Steam005
+Steam006
+SteamDLLAppsystem001
+N7sigslot12_connection2IN12_GLOBAL__N_130CClientCallbackSignalConnectorE31ESteamNotificationCallbackEventjNS_20multi_threaded_localEEE
+N12_GLOBAL__N_130CClientCallbackSignalConnectorE
+NullLogContextPtr
+%s(%.512s) succeeded
+failed with error: input TSteamError pointer is null
+Args: (
+)
+(
+InternalSteamGetCrrentCellID
+%u, 0x%p=%u, 0x%p=%u, 0x%p
+SteamSetMaxStallCount
+%u,0x%x
+InternalSteamNumClientsConnectedToEngine
+0x%x
+InternalSteamGetAppDLCStatus
+%u, %u, 0x%p=%s, 0x%p
+(*it).second.get()
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/SteamInternal.cpp
+No entry found for this Client (
+SteamGetCurrentAppId
+0x%x,0x%x
+m_uUseCount != 0
+(*it).second->m_pAccountEntry->m_pAccount.get()
+No Account object found for this Client (
+InternalSteamForceCellId
+%u,0x%p
+_sentinel
+InternalSteamWasBlobRegistryDeleted
+0x%p,0x%p
+0
+BootStrapperVersionNum
+SteamGetLocalClientVersion
+0x%p,0x%p,0x%p
+SteamGetTotalUpdateStats
+SteamGetAppUpdateStats
+%d, %d, 0x%x,0x%x
+bRet.second
+SteamUpdateSubscriptionBillingInfo
+%d,0x%x,0x%x
+SteamUpdateAccountBillingInfo
+SteamUnmountFilesystem
+%u,0x%x,0x%x
+Client %u disconnected
+it != s_ClientAccountMap.end()
+%u connections from Client %u
+pClientInfo.get()
+Removed entry for client %u
+InternalSteamEndClient
+%u
+SteamUnmountAppFilesystem
+The Account is currently in use by another process
+it2 != s_AccountList.end()
+s_PendingAccountsMap.find(bRet) == s_PendingAccountsMap.end()
+Added handle 0x%x, for client %u, to pending list
+SteamChangeAccountName
+%s,%s,0x%x
+SteamRequestEmailAddressVerificationEmail
+SteamVerifyEmailAddress
+%s,0x%x
+SteamChangeEmailAddress
+SteamGetCurrentEmailAddress
+0x%x=%s,%u,*0x%x=%u,0x%x
+SteamGetContentServerInfo
+%u,0x%x,0x%x,0x%x
+SteamGetSponsorUrl
+%u,0x%x=%s,%u,*0x%x=%u,0x%x
+SteamChangePersonalQA
+%s,%s,%s,0x%x
+SteamChangePassword
+SteamGetNumAccountsWithEmailAddress
+SteamRequestAccountsByCdKeyEmail
+SteamRequestAccountsByEmailAddressEmail
+SteamRequestForgottenPasswordEmail
+SteamChangeForgottenPassword
+%s,%s,%s,%s,*0x%x=%s,0x%x
+SteamUninstall
+SteamSetAppVersion
+%u,%u,0x%x
+SteamSetAppCacheSize
+SteamGetAppCacheSize
+SteamMoveApp
+%u,0x%x="%s",0x%x
+SteamGetAppDir
+SteamSetCacheDefaultDirectory
+*0x%x="%s",0x%x
+SteamGetCacheDefaultDirectory
+SteamRefreshMinimumFootprint
+InternalSteamGetCacheDecryptionKey
+%u,0x%p,%u,0x%p,0x%p
+pAccount.get()
+InternalSteamLoadFileToCache
+%u,%s,0x%p,%u,%llu,0x%p
+InternalSteamIsFileNeededByApp
+%u,%s,%llu,0x%p,0x%p
+InternalSteamIsFileNeededByCache
+%u,%s,%llu,0x%p
+SteamLoadCacheFromDir
+%u,%s,0x%x
+SteamDefragCaches
+SteamGetCachePercentFragmentation
+SteamRepairOrDecryptCaches
+SteamFlushCache
+SteamStopLoadingCache
+SteamStartLoadingCache
+SteamIsCacheLoadingEnabled
+%u,*0x%x=%s,0x%x
+SteamGetCacheFilePath
+SteamCreateCachePreloaders
+SteamLaunchApp
+%u,%u,"%s",0x%x
+SteamWaitForAppReadyToLaunch
+SteamGetAppUserDefinedRecord
+SteamGetAppUserDefinedInfo
+%u,%s,0x%x,%u,0x%x,0x%x
+SteamGetAppDependencies
+%u,0x%x,%u,%d,0x%x
+SteamFindApp
+%u,0x%x=%s,0x%x,0x%x
+SteamRemoveAppDependency
+SteamInsertAppDependency
+%u,%u,%d,%d,%s,0x%x
+SteamEnumerateAppDependency
+%u,%u,0x%x,0x%x
+SteamEnumerateAppIcon
+%u,%u,0x%x,%u,0x%x,0x%x
+SteamEnumerateAppLaunchOption
+SteamEnumerateAppVersion
+SteamGetSubscriptionPurchaseCountry
+%d,0x%x=%s,%u,0x%x
+SteamGetAppPurchaseCountry
+SteamGetDepotParent
+SteamEnumerateApp
+SteamGetAppIds
+0x%x,%u,0x%x
+SteamGetAppStats
+SteamGetSubscriptionExtendedInfo
+SteamEnumerateSubscriptionDiscountQualifier
+%u,%u,%u,0x%x,0x%x
+SteamEnumerateSubscriptionDiscount
+SteamEnumerateSubscription
+SteamGetSubscriptionIds
+SteamGetSubscriptionStats
+SteamIsAppSubscribed
+%u,*0x%x=%s,*0x%x=%s,0x%x
+SteamIsSubscribed
+SteamAckSubscriptionReceipt
+SteamGetSubscriptionReceipt
+SteamUnsubscribe
+SteamSubscribe
+SteamRefreshAccountInfo
+SteamVerifyPassword
+%d,0x%x=%s,0x%x,0x%x
+SteamGetAccountStatus
+SteamGetUserType
+SteamRefreshLogin
+SteamIsSecureComputer
+s_PendingAccountsMap.find(nRet) == s_PendingAccountsMap.end()
+SteamLogout
+pClientAccountInfo->m_pAccountEntry->m_pAccount.get()
+pClientAccountInfo->m_pAccountEntry->m_pAccount->IsLoggedIn()
+SteamIsLoggedIn
+*0x%x=%s,0x%x
+Removed handle 0x%x from pending list
+pClientAccountInfo.get()
+pClientAccountInfo->m_pAccountEntry.get()
+it3 != s_ClientAccountMap.end()
+Removed entry for client %u, user %s, Login/SetUser failed
+s_AccountList.find(pClientAccountInfo->m_sUser) == s_AccountList.end()
+it2 != s_ClientAccountMap.end()
+Removed entry for client %u, user %s, logout succeeded
+User '%s' already set for client %d, refreshing login
+SteamLogin
+Disassociating User '%s' from client %d
+pAccountEntry->m_pAccount.get()
+pAccountEntry->m_pAccount->IsLoggedIn()
+Associating pre-existing CAccount for user '%s' to client %d, refreshing login
+Creating new CAccount for User '%s' for client %d
+s_AccountList.find(sUser) == s_AccountList.end()
+SteamGetUser
+0x%x=%s,%u,*0x%x=%u,0x%x,0x%x
+SteamSetUser2
+User '%s' already set for client %d
+SteamSetUser
+%s,*0x%x=%s,0x%x
+Associating pre-existing CAccount for user '%s' to client %d
+Creating new CAccount for user '%s' for client %d
+SteamDeleteAccount
+SteamGenerateSuggestedAccountNames
+%s,%s,0x%x,%u,0x%x,0x%x
+SteamIsAccountNameInUse
+%s,*0x%x=%s,*0x%x
+SteamCreateAccount
+%s,%s,%s,%s,%s,%s,*0x%x=%s,0x%x
+SteamBlockingCall
+SteamAbortCall
+SteamProcessCall
+0x%x,0x%x,0x%x
+SteamGetEncryptedUserIDTicket
+Buffer too small
+AS command error
+SteamWaitForResources
+SteamResumeCachePreloading
+SteamPauseCachePreloading
+SteamForgetAllHints
+SteamHintResourceNeed
+%u,%u,%s,%d,0x%x
+SteamIsFileImmediatelyAvailable
+SteamFindClose
+SteamFindNext
+SteamFindFirst
+%u,%s,%d,0x%x,0x%x
+SteamGetLocalFileCopy
+SteamSizeFile
+SteamTellFile
+SteamSeekFile
+%u,%lld,%d,0x%x
+SteamPutc
+SteamGetc
+SteamWriteFile
+0x%x,%u,%u,%u,0x%x
+SteamReadFile
+0x%x,%u,%u,%u,%llu,0x%x
+0x%x,%u,%u,%u,%u,0x%x
+SteamCloseFile
+SteamOpenTmpFile
+SteamOpenFile64
+%u,%s,%s,0x%x,0x%p,0x%p,0x%p
+SteamOpenFile2
+SteamOpenFile
+%u, %s,%s,0x%x
+SteamFlushFile
+SteamStat
+%u,%s,0x%x,0x%x
+SteamMountFilesystem
+%u,%u,0x%x=%s,0x%x
+No default filesystems for this App
+SteamMountAppFilesystem
+SteamChangeOfflineStatus
+SteamGetOfflineStatus
+Client %u connected
+common
+(*it).second->m_pAccount.get()
+Added entry for client %u, user %s, default user
+SteamShutdownEngine
+InternalSteamShouldShutdownEngine
+SteamShutdownSteamBridgeInterface
+SteamAppId
+SteamAPI
+Misc
+AsyncCall
+Filesystem
+UserId
+AcctMgmt
+SteamStartEngine
+ExtractNext(u8): Not enough data in raw buffer
+FinishedExtracting(): More data left in raw buffer
+pValidationContext->m_pMsgBufferCursor == pValidationContext->m_RSAandAESDecryptionBuffer
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/SteamValidateUserIDTickets.cpp
+pValidationContext->m_pMsgBufferEnd > pValidationContext->m_pMsgBufferCursor && pValidationContext->m_pMsgBufferEnd <= & pValidationContext->m_RSAandAESDecryptionBuffer[ sizeof( pValidationContext->m_RSAandAESDecryptionBuffer ) ]
+pValidationContext->m_u32UserIDTicketValidationServerIPAddr2 != pValidationContext->m_u32UserIDTicketValidationServerIPAddr1
+pValidationContext->m_eState == TValidationContext::eFree
+static_cast<size_t>( pValidationContext->m_pMsgBufferCursor - pValidationContext->m_AESEncryptedPayloadAndNetworkIOBuffer ) == sizeof( uSizeOfWholeMsg ) + uSizeOfWholeMsg
+sizeof( pValidationContext->m_RSAandAESDecryptionBuffer ) >= pValidationContext->m_RSAClientMsgDecryptor.MaxPlainTextLength()
+pszOptionalPrivateDecryptionKeyFilename
+Mary had a little lamb
+Keys read from files do not work
+30819d300d06092a864886f70d010101050003818b0030818702818100bc265d3402562c8afb78904e7ec84ee5b6662a09216b6b50da4205094c54f8b09d211bdeb8219ca4df67e39d2349bcbe9cb3b0d1e18b23cf33b5b51cabbeaa529a27e2b3928bdbe1c5c5a7de6bee7e87aecfa26f82286cad35df7ee53fe12adb2d1e81e98ca5faa6db509de8c4f482fa3c4fcf875ce21d443ed635bbdcb425db020111
+ValidateTicketServerIPAddrPort
+N4Grid18CVTSIPAddressCacheE
+Key
+Phrase
+SteamUserPassphrase
+ClockSkewTolerance
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../Common/Inc/ClientAuthenticationTickets.h
+uTicketBlobSize == TicketBlob.GetSize()
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/Src/TicketCache.cpp
+pu8Blob == ( TicketBlob.get() + TicketBlob.GetSize() )
+INADDR_ANY%c%u
+EndAccess for app %u
+Successfully serialized dirty tickets for app %u
+Failed to serialize dirty tickets for app %u: %s
+Failed to serialize content tickets:
+Failed to serialize dirty tickets for app %u
+Failed to serialize content tickets: unknown error
+RemoveCurrentTicket removed content ticket for AppId %u matching IP %s
+Could not find app %u ticket with for server %s
+Cannot find content ticket
+RemoveCurrentTicket removed content ticket for AppId %u
+RemoveCurrentTicket attempt to remove content ticket for AppId %u, but none present
+Clear user %s
+BeginAccess for app %u tickets to be loaded
+Loaded %u tickets for app %u from storage
+Throwing out expired ticket for %s
+BeginAccess for app %u tickets loaded previous session
+Clearing content tickets for %s
+iterActiveApp != m_ActiveAppMap.end()
+LoadFromTGS - User ticket has expired - attempting renewal with cached password
+User ticket has been successfully renewed
+LoadFromTGS - User ticket has expired - no cached password
+m_rcpTGT.get()
+SpecifiedContentServerIdForAppId
+Requesting CS #%u for AppId #%u
+Failed to get CS list for AppId #%u
+No CS online with App %u Ver %u
+GetCurrentTicket for app %u
+Found valid app %u ticket with for server %s
+Rejecting TGS Query
+TGS Query, window opens %s
+Call to TGS for new tickets failed for app %u: %s
+Retrieved %u new tickets from TGS for app %u
+Rate-limiting request for App %d tickets
+Clearing TGT and passphrase for %s
+Logout user %s
+SetUser2(%s) first call
+Ticket format error, throwing it out
+No ticket found
+Failed to read user ticket: %s
+SetUser:User offline - make offline ticket
+SetUser(%s) first call
+Failed ticket decryption, throwing it out
+Old unencrypted TGT found
+uBytesRead
+uBytesRead == uBufSz
+Loaded cached password
+Password is not cached
+Cached password is corrupt: length=%d
+SetUser(%s) again
+SetUser:Failed to aquire ticket with get
+Forcing local logout because user ticket invalid
+SetUser:Failed - user ticket not valid
+SetUser:Success - user ticket valid
+TicketCache
+User
+Content
+(CloseHandle(m_hThreadExitEvent)) != 0
+//
+/Users/buildbot/buildslave_steam/steam2_main_integration_osx/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/PosixWin32.cpp
+!"WaitNamedPipe not implemented"
+setrlimit( 8, &lim ) == 0
+getrlimit( 8, &lim ) == 0 && lim.rlim_cur == 4096
+lpName != __null
+%xe%%s%s
+Local\
+Global\
+m
+steampid
+!"ReleaseSemaphoreInternal called on an anonymous semaphore object - code bug"
+lReleaseCount >= 1
+pSem->m_pPThreadSem->m_cSem > 0
+ReleaseSemaphore: pthread_cond_broadcast returned %d, errno %d (%s)
+SetEvent: pthread_cond_broadcast returned %d, errno %d (%s)
+!"attempting to reset an uninialized pthread event"
+pM->m_pSemaphore == -1
+!"attempting to wait on an uninialized pthread event"
+lpcbTransfer
+!"AcquireSemaphoreInternal called on an anonymous semaphore object - code bug"
+!"attempting to acquire an uninitialized pthread semaphore"
+pSem->m_pPThreadSem->m_cSem >= 0
+removing stale semaphore last operated on by process %d with name %s
+"Create semaphore failed in CreateSemaphoreInternal" && !pchErr
+lpSecurityAttributes == __null
+lMaximumCount == 1 || lMaximumCount == 2147483647L
+strlen(lpName) < 1024
+%xs%s
+!"pthread_mutex_init failed"
+!"pthread_mutex_lock failed"
+strlen(pszName) < 1024
+%xm%s
+%s-steam-
+/tmp
+/tmp/%s
+0esce-%x%x%x
+unlinked %d orphaned pipes
+!"non-0 return from pthread_mutex_init"
+!"non-0 return from pthread_create"
+ret != 22
+lpOverlapped == __null
+lpProtocolInfo == __null
+g == __null
+dwFlags == 0 || dwFlags == 0x0004
+!"mmap failed" && pchErr
+!pFile->m_bDelayedOpen
+hFile != __null
+lpAttributes == __null
+lpName == __null
+dwMaximumSizeHigh == 0
+ret >= 0
+pFile->m_fd == -1
+"open failed in WriteFile" && !pchErr
+"fcntl F_GETFL failed in WriteFile" && !pchErr
+"fcntl F_SETFL failed in WriteFile" && !pchErr
+!( fcntl( fd, 3 ) & 0x0004 )
+"WriteFileFailed" && !pchErr
+pFile->m_nBufferBytesValid == 0
+!"Error"
+"select failed in ReadFile" && !pchErr
+!pFile->m_bFirstRead
+nNumberOfBytesToRead >= pFile->m_nBufferBytesValid
+"read failed in ReadFile" && !pchErr
+nBufferSize <= 4
+!pchErr
+AsyncIOWorker
+!"AcquireSemaphore returned WAIT_FAILED"
+nBytesIOd == paio->aio_nbytes
+CAsyncIOManager(%p) send on fd %d failed with errno %d (%s)
+!"unhandled aio_lio_opcode"
+CAsyncIOManager(%p) missing completion event for thread %p callback wait
+CAsyncIOManager: creating I/O worker thread
+STEAM_ASYNCIO_THREADS
+async i/o manager using %d threads
+!"NULL overlapped struct passed into completion queue"
+!"NULL completion func passed into completion queue"
+pHandle != __null
+!"underflow!"
+ret != ((DWORD) 0xFFFFFFFF)
+s > 0
+dwBufferCount == 1
+( dwPipeMode == 0x00000000 ) || ( dwPipeMode & 0x00000000 )
+nMaxInstances == 1 || nMaxInstances == 255
+nDefaultTimeOut == (DWORD)-1
+"open failed in CreateNamedPipe" && !pchErr
+"fcntl F_GETFL failed in CreateNamedPipe" && !pchErr
+"fcntl F_SETFL failed in CreateNamedPipe" && !pchErr
+!"Opening a FIFO O_RDWR has undefined behavior"
+dwShareMode == 0
+hTemplateFile == __null
+"open for read failed in CreateFile" && !pchErr
+"fcntl F_GETFL failed in CreateFile" && !pchErr
+"fcntl F_SETFL failed in CreateFile" && !pchErr
+"open for write failed in CreateFile" && !pchErr
+!"opening a FIFO O_RDWR is undefined"
+"open for read/write failed in CreateFile" && !pchErr
+!"unhandled dwDesiredAccess value"
+!"MoveFileEx with MOVE_FILE_COPY_ALLOWED not implemented"
+!"Unhandled Handle type passed to CloseHandle"
+CAsyncIOManager: %d threads terminating.  %ld reads, %ld writes, %ld deferrals.
+CAsyncIOManager: %u single object sleeps, %u multi object sleeps
+CAsyncIOManager: %u single object alertable sleeps, %u multi object alertable sleeps
+bAbsolutePath
+pchDirStart && pchDirEnd
+pchNameStart && pchNameEnd
+N3arg17generic_referenceE
+[Source file
+, line
+]
+N3BSL10CExceptionE
+The specified time precision is invalid (%1)
+CUnpackedTime: conversion from string %1 failed at position %2
+CUnpackedTime: conversion from string %1 failed - string has invalid length (should be %2)
+CUnpackedTime: conversion from string %1 failed - invalid character at position %2
+CTime: time packing exception
+CTime: time to pack is negative
+CTime: time out of range (day from origin %1, hour %2, minute %3, second %4, millisecond %5, microsecond %6
+BSLTime.cpp
+{20,24,27}
+0123456789abcdef
+AES_PHM_Decryption: Invalid Ciphertext or Key
+N8CryptoPP18AES_PHM_DecryptionE
+N8CryptoPP18AES_PHM_EncryptionE
+N8CryptoPP17DERGeneralEncoderE
+N8CryptoPP17BERGeneralDecoderE
+N8CryptoPP18CBCPaddedDecryptorE
+N8CryptoPP18CBCPaddedEncryptorE
+BufferedTransformation: cannot flush buffer
+BufferedTransformation: data integrity check failed
+BufferedTransformation: invalid data format
+BufferedTransformation: cannot write to output device
+BufferedTransformation: unknown error
+N8CryptoPP11PK_VerifierE
+N8CryptoPP23PK_FixedLengthDecryptorE
+N8CryptoPP26PK_FixedLengthCryptoSystemE
+N8CryptoPP22BufferedTransformationE
+N8CryptoPP24HashModuleWithTruncationE
+N8CryptoPP10HashModuleE
+N8CryptoPP21RandomNumberGeneratorE
+N8CryptoPP12StreamCipherE
+FileSink: error writing file
+FileStore: error reading file
+FileStore: error opening file for reading:
+FileSink: error opening file for writing:
+N8CryptoPP8FileSinkE
+N8CryptoPP9FileStoreE
+N8CryptoPP11StringStoreE
+N8CryptoPP5StoreE
+N8CryptoPP10HashFilterE
+N8CryptoPP23FilterWithBufferedInputE
+N8CryptoPP6FilterE
+N8CryptoPP10HexDecoderE
+N8CryptoPP10HexEncoderE
+0123456789ABCDEF
+0123456789abcdef
+Integer: division by zero
+N8CryptoPP24MontgomeryRepresentationE
+N8CryptoPP17ModularArithmeticE
+N8CryptoPP12AbstractRingINS_7IntegerEEE
+N8CryptoPP12AbstractRingINS_7IntegerEE20MultiplicativeGroupTE
+N8CryptoPP13AbstractGroupINS_7IntegerEEE
+N8CryptoPP16IteratedHashBaseImEE
+N8CryptoPP3MD5E
+N8CryptoPP13CFBDecryptionE
+N8CryptoPP13CFBEncryptionE
+N8CryptoPP12MessageQueueE
+/dev/urandom
+NonblockingRng: could not open /dev/urandom
+BlockingRng: error reading from /dev/random
+/dev/random
+BlockingRng: could not open /dev/random
+NonblockingRng: error reading from /dev/urandom
+N8CryptoPP11BlockingRngE
+N8CryptoPP14NonblockingRngE
+N8CryptoPP9ByteQueueE
+N8CryptoPP9ByteQueue6WalkerE
+N8CryptoPP10RandomPoolE
+N8CryptoPP18RijndaelDecryptionE
+N8CryptoPP18RijndaelEncryptionE
+BER decode error
+N8CryptoPP17EncryptorTemplateINS_4OAEPINS_3SHAENS_10P1363_MGF1IS2_EEXadL_ZNS_14OAEP_P_DEFAULTEEELj0EEENS_11RSAFunctionEEE
+N8CryptoPP17DecryptorTemplateINS_4OAEPINS_3SHAENS_10P1363_MGF1IS2_EEXadL_ZNS_14OAEP_P_DEFAULTEEELj0EEENS_21InvertibleRSAFunctionEEE
+N8CryptoPP22DigestVerifierTemplateINS_27PKCS_SignaturePaddingSchemeENS_11RSAFunctionEEE
+N8CryptoPP21InvertibleRSAFunctionE
+N8CryptoPP11RSAFunctionE
+N8CryptoPP6SHA256E
+N8CryptoPP3SHAE
+1.1.4
+stream end
+file error
+stream error
+data error
+insufficient memory
+buffer error
+incompatible version
+unknown compression method
+invalid window size
+incorrect header check
+need dictionary
+incorrect data check
+invalid block type
+invalid stored block lengths
+too many length or distance symbols
+invalid bit length repeat
+oversubscribed dynamic bit lengths tree
+incomplete dynamic bit lengths tree
+oversubscribed literal/length tree
+incomplete literal/length tree
+oversubscribed distance tree
+incomplete distance tree
+empty distance tree with lengths
+invalid literal/length code
+invalid distance code
+
+@
+@
+@
+@
+$
+$
+C
+>
+
+
+'
+'
+'
+'
+=
+'
+'
+
+"
+*
+2
+:
+B
+J
+R
+Z
+v
+_
+5
+
+[
+[
+[
+]
+d
+#$
+3
+Y
+l
+F
+
+.
+H
+U
+;
+b
+$
+$
+$
+|
+@
+W
+!
+y$=
+@
+
+(
+(
+(
+(
+=
+D
+=
+=
+Y
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+
+
+=
+=
+
+
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+p
+x
+=
+=
+=
+=
+1
+1
+D
+Y
+1
+Y
+v
+V
+T
+1
+
+
+
+
+
+H
+@
+@
+@
+@
+=
+y
+#
+(
+!
+"
+%
+$
+=
+=
+=
+=
+@
+&
+\
+i
+
+
+n
+b
+r
