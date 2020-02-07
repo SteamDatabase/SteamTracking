@@ -153,4 +153,3 @@ message CMsgClientChallengeRequest {
 message CMsgClientChallengeResponse {
 	optional fixed64 challenge = 1;
 }
-

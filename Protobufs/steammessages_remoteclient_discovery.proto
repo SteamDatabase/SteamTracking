@@ -216,4 +216,3 @@ message CMsgRemoteDeviceStreamTransportSignal {
 	optional bytes token = 1;
 	optional bytes payload = 2;
 }
-

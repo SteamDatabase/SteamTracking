@@ -2,6 +2,7 @@ import "google/protobuf/descriptor.proto";
 
 option optimize_for = SPEED;
 option cc_generic_services = true;
+option (force_php_generation) = true;
 
 extend .google.protobuf.MessageOptions {
 	optional int32 msgpool_soft_limit = 50000 [default = 32];
@@ -97,6 +98,7 @@ message CMsgProtoBufHeader {
 	optional uint32 cm_sysid = 28;
 	optional string wg_token = 30;
 	optional uint32 launcher_type = 31 [default = 0];
+
 	oneof ip_addr {
 		uint32 ip = 15;
 		bytes ip_v6 = 29;
@@ -239,4 +241,3 @@ message CClanEventData {
 	optional fixed64 forum_topic_id = 23;
 	optional uint32 rtime32_last_modified = 24;
 }
-

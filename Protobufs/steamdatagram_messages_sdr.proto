@@ -484,4 +484,3 @@ message CMsgSteamDatagramP2PBadRouteRouterToRouter {
 	optional fixed32 from_relay_session_id = 1;
 	optional fixed64 kludge_pad = 99;
 }
-

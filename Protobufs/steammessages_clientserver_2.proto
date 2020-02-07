@@ -1173,4 +1173,3 @@ message CMsgBadgeCraftedNotification {
 	optional uint32 appid = 1;
 	optional uint32 badge_level = 2;
 }
-

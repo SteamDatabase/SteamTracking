@@ -131,27 +131,35 @@ message CEmbeddedClient_AuthorizeDevice_Response {
 
 service UserAccount {
 	option (service_description) = "A service to get user account information";
+
 	rpc GetAccountLinkStatus (.CUserAccount_GetAccountLinkStatus_Request) returns (.CUserAccount_GetAccountLinkStatus_Response) {
 		option (method_description) = "Fetches account link status";
 	}
+
 	rpc CancelLicenseForApp (.CUserAccount_CancelLicenseForApp_Request) returns (.CUserAccount_CancelLicenseForApp_Response) {
 		option (method_description) = "Cancels a free license for a user";
 	}
+
 	rpc CreateFriendInviteToken (.CUserAccount_CreateFriendInviteToken_Request) returns (.CUserAccount_CreateFriendInviteToken_Response) {
 		option (method_description) = "Create a limited-use token that can be used to create a friend request";
 	}
+
 	rpc GetFriendInviteTokens (.CUserAccount_GetFriendInviteTokens_Request) returns (.CUserAccount_GetFriendInviteTokens_Response) {
 		option (method_description) = "Get the set of active tokens for the user";
 	}
+
 	rpc ViewFriendInviteToken (.CUserAccount_ViewFriendInviteToken_Request) returns (.CUserAccount_ViewFriendInviteToken_Response) {
 		option (method_description) = "View details about an invite token ";
 	}
+
 	rpc RedeemFriendInviteToken (.CUserAccount_RedeemFriendInviteToken_Request) returns (.CUserAccount_RedeemFriendInviteToken_Response) {
 		option (method_description) = "Create a friend relationship using the given invite token";
 	}
+
 	rpc RevokeFriendInviteToken (.CUserAccount_RevokeFriendInviteToken_Request) returns (.CUserAccount_RevokeFriendInviteToken_Response) {
 		option (method_description) = "Revoke an active friend invite token";
 	}
+
 	rpc RegisterCompatTool (.CUserAccount_RegisterCompatTool_Request) returns (.CUserAccount_RegisterCompatTool_Response) {
 		option (method_description) = "Register intended account usage of a tool";
 	}
@@ -159,6 +167,7 @@ service UserAccount {
 
 service AccountLinking {
 	option (service_description) = "A service to manage and link to external accounts";
+
 	rpc GetLinkedAccountInfo (.CAccountLinking_GetLinkedAccountInfo_Request) returns (.CAccountLinking_GetLinkedAccountInfo_Response) {
 		option (method_description) = "List all my active linked external accounts; may be requested to return the access token";
 	}
@@ -166,8 +175,8 @@ service AccountLinking {
 
 service EmbeddedClient {
 	option (service_description) = "Service to authorize and manage Steam functions directly embedded in games";
+
 	rpc AuthorizeCurrentDevice (.CEmbeddedClient_AuthorizeCurrentDevice_Request) returns (.CEmbeddedClient_AuthorizeDevice_Response) {
 		option (method_description) = "Use a logged-in (password/etc) session to create a durable access token";
 	}
 }
-

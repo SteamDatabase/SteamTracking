@@ -900,4 +900,3 @@ message CMsgStartDownload {
 	optional uint32 browser_handle = 1;
 	optional string url = 2;
 }
-

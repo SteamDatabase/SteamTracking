@@ -121,4 +121,3 @@ message CVirtualControllerGlobalConfig {
 	optional bool auto_fade_enabled = 3 [default = true];
 	optional bool rumble_enabled = 4 [default = true];
 }
-

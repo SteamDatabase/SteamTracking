@@ -86,18 +86,23 @@ message CFriendMessages_IncomingMessage_Notification {
 
 service FriendMessages {
 	option (service_description) = "A service for relaying and logging friend messages (user-to-user chats and offline messaging)";
+
 	rpc GetRecentMessages (.CFriendMessages_GetRecentMessages_Request) returns (.CFriendMessages_GetRecentMessages_Response) {
 		option (method_description) = "Get a log of recent chat messages between two users";
 	}
+
 	rpc GetActiveMessageSessions (.CFriendsMessages_GetActiveMessageSessions_Request) returns (.CFriendsMessages_GetActiveMessageSessions_Response) {
 		option (method_description) = "Get information about recent offline messages and chats";
 	}
+
 	rpc SendMessage (.CFriendMessages_SendMessage_Request) returns (.CFriendMessages_SendMessage_Response) {
 		option (method_description) = "Send a chat message to a friend";
 	}
+
 	rpc AckMessage (.CFriendMessages_AckMessage_Notification) returns (.NoResponse) {
 		option (method_description) = "Acknowledge that we have seen the most recent message from a friend";
 	}
+
 	rpc IsInFriendsUIBeta (.CFriendMessages_IsInFriendsUIBeta_Request) returns (.CFriendMessages_IsInFriendsUIBeta_Response) {
 		option (method_description) = "See if a friend is in the friendsui beta.";
 	}
@@ -105,11 +110,12 @@ service FriendMessages {
 
 service FriendMessagesClient {
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
+
 	rpc IncomingMessage (.CFriendMessages_IncomingMessage_Notification) returns (.NoResponse) {
 		option (method_description) = "New chat message from a friend.";
 	}
+
 	rpc NotifyAckMessageEcho (.CFriendMessages_AckMessage_Notification) returns (.NoResponse) {
 		option (method_description) = "A session acked an unread message, echo to other sessions.";
 	}
 }
-

@@ -100,6 +100,7 @@ message CHIDMessageToRemote {
 	}
 
 	optional uint32 request_id = 1;
+
 	oneof command {
 		.CHIDMessageToRemote.DeviceOpen device_open = 2;
 		.CHIDMessageToRemote.DeviceClose device_close = 3;
@@ -151,4 +152,3 @@ message CHIDMessageFromRemote {
 		.CHIDMessageFromRemote.CloseAllDevices close_all_devices = 5;
 	}
 }
-

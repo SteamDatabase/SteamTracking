@@ -545,72 +545,95 @@ message CPublishedFile_FileDeleted_Client_Notification {
 
 service PublishedFile {
 	option (service_description) = "A service to access published file data";
+
 	rpc Subscribe (.CPublishedFile_Subscribe_Request) returns (.CPublishedFile_Subscribe_Response) {
 		option (method_description) = "Subscribes the user to the published file";
 	}
+
 	rpc Unsubscribe (.CPublishedFile_Unsubscribe_Request) returns (.CPublishedFile_Unsubscribe_Response) {
 		option (method_description) = "Unsubscribes the user from the published file";
 	}
+
 	rpc CanSubscribe (.CPublishedFile_CanSubscribe_Request) returns (.CPublishedFile_CanSubscribe_Response) {
 		option (method_description) = "Check if the user can subscribe to the published file";
 	}
+
 	rpc Publish (.CPublishedFile_Publish_Request) returns (.CPublishedFile_Publish_Response) {
 		option (method_description) = "Publishes a clouded user file to the Workshop.";
 	}
+
 	rpc GetDetails (.CPublishedFile_GetDetails_Request) returns (.CPublishedFile_GetDetails_Response) {
 		option (method_description) = "Retrieves information about a set of published files.";
 	}
+
 	rpc GetItemInfo (.CPublishedFile_GetItemInfo_Request) returns (.CPublishedFile_GetItemInfo_Response) {
 		option (method_description) = "Retrieves information about a set of published files.";
 	}
+
 	rpc GetUserFiles (.CPublishedFile_GetUserFiles_Request) returns (.CPublishedFile_GetUserFiles_Response) {
 		option (method_description) = "Retrieves files published by a user.";
 	}
+
 	rpc AreFilesInSubscriptionList (.CPublishedFile_AreFilesInSubscriptionList_Request) returns (.CPublishedFile_AreFilesInSubscriptionList_Response) {
 		option (method_description) = "Determines which files in the given list are in a user's subscription list";
 	}
+
 	rpc Update (.CPublishedFile_Update_Request) returns (.CPublishedFile_Update_Response) {
 		option (method_description) = "Updates information about a published file.";
 	}
+
 	rpc GetChangeHistoryEntry (.CPublishedFile_GetChangeHistoryEntry_Request) returns (.CPublishedFile_GetChangeHistoryEntry_Response) {
 		option (method_description) = "Returns data on a specific change history entry for a published file";
 	}
+
 	rpc GetChangeHistory (.CPublishedFile_GetChangeHistory_Request) returns (.CPublishedFile_GetChangeHistory_Response) {
 		option (method_description) = "Returns data on the change history for a published file";
 	}
+
 	rpc RefreshVotingQueue (.CPublishedFile_RefreshVotingQueue_Request) returns (.CPublishedFile_RefreshVotingQueue_Response) {
 		option (method_description) = "Refresh the voting queue for the user";
 	}
+
 	rpc QueryFiles (.CPublishedFile_QueryFiles_Request) returns (.CPublishedFile_QueryFiles_Response) {
 		option (method_description) = "Performs a search query for published files";
 	}
+
 	rpc AddAppRelationship (.CPublishedFile_AddAppRelationship_Request) returns (.CPublishedFile_AddAppRelationship_Response) {
 		option (method_description) = "Adds a relationship between the published file and the given app";
 	}
+
 	rpc RemoveAppRelationship (.CPublishedFile_RemoveAppRelationship_Request) returns (.CPublishedFile_RemoveAppRelationship_Response) {
 		option (method_description) = "Remove a relationship between the published file and the given app";
 	}
+
 	rpc GetAppRelationships (.CPublishedFile_GetAppRelationships_Request) returns (.CPublishedFile_GetAppRelationships_Response) {
 		option (method_description) = "Returns the list of app relationships for this published file";
 	}
+
 	rpc StartPlaytimeTracking (.CPublishedFile_StartPlaytimeTracking_Request) returns (.CPublishedFile_StartPlaytimeTracking_Response) {
 		option (method_description) = "Start usage tracking for a given set of published files";
 	}
+
 	rpc StopPlaytimeTracking (.CPublishedFile_StopPlaytimeTracking_Request) returns (.CPublishedFile_StopPlaytimeTracking_Response) {
 		option (method_description) = "Stops usage tracking for a given set of published files";
 	}
+
 	rpc StopPlaytimeTrackingForAllAppItems (.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request) returns (.CPublishedFile_StopPlaytimeTrackingForAllAppItems_Response) {
 		option (method_description) = "Stops usage tracking for all items currently tracked for the specified app";
 	}
+
 	rpc SetPlaytimeForControllerConfigs (.CPublishedFile_SetPlaytimeForControllerConfigs_Request) returns (.CPublishedFile_SetPlaytimeForControllerConfigs_Response) {
 		option (method_description) = "Stops usage tracking all controller configs for the given app and set the usage time for the for the given controller configs";
 	}
+
 	rpc AddChild (.CPublishedFile_AddChild_Request) returns (.CPublishedFile_AddChild_Response) {
 		option (method_description) = "Adds a parent->child relationship between the given items.";
 	}
+
 	rpc RemoveChild (.CPublishedFile_RemoveChild_Request) returns (.CPublishedFile_RemoveChild_Response) {
 		option (method_description) = "Removes parent->child relationship between the given items.";
 	}
+
 	rpc GetUserVoteSummary (.CPublishedFile_GetUserVoteSummary_Request) returns (.CPublishedFile_GetUserVoteSummary_Response) {
 		option (method_description) = "Get user vote summary";
 	}
@@ -619,14 +642,16 @@ service PublishedFile {
 service PublishedFileClient {
 	option (service_description) = "Published file client notifications";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
+
 	rpc NotifyFileSubscribed (.CPublishedFile_FileSubscribed_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from the server when a user subscribes to a file";
 	}
+
 	rpc NotifyFileUnsubscribed (.CPublishedFile_FileUnsubscribed_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from the server when a user unsubscribes from a file";
 	}
+
 	rpc NotifyFileDeleted (.CPublishedFile_FileDeleted_Client_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from the server when a published file is deleted";
 	}
 }
-

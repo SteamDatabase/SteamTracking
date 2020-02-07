@@ -36,4 +36,3 @@ message CMsgSteamDatagramCertificateSigned {
 message CMsgSteamDatagramCertificateRequest {
 	optional .CMsgSteamDatagramCertificate cert = 1;
 }
-

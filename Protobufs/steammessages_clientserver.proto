@@ -869,6 +869,7 @@ message CMsgClientUFSGetFileListForApp {
 message CMsgClientUFSGetFileListForAppResponse {
 	option (msgpool_soft_limit) = 8;
 	option (msgpool_hard_limit) = 16;
+
 	message File {
 		optional uint32 app_id = 1;
 		optional string file_name = 2;
@@ -960,6 +961,7 @@ message CMsgClientAppInfoRequest {
 
 message CMsgClientAppInfoResponse {
 	option (msgpool_hard_limit) = 0;
+
 	message App {
 		message Section {
 			optional uint32 section_id = 1;
@@ -1044,6 +1046,7 @@ message CMsgClientPICSProductInfoRequest {
 
 message CMsgClientPICSProductInfoResponse {
 	option (msgpool_hard_limit) = 0;
+
 	message AppInfo {
 		optional uint32 appid = 1;
 		optional uint32 change_number = 2;
@@ -1215,4 +1218,3 @@ message CMsgClientUnsignedInstallScript {
 	optional uint64 manifest_id = 6;
 	optional uint32 file_flags = 7;
 }
-

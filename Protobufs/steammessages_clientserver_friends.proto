@@ -253,4 +253,3 @@ message CMsgClientEmoticonList {
 	repeated .CMsgClientEmoticonList.Sticker stickers = 2;
 	repeated .CMsgClientEmoticonList.Effect effects = 3;
 }
-

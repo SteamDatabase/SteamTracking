@@ -139,8 +139,8 @@ message CRemotePlayTogether_Notification {
 	}
 
 	optional fixed64 steamid = 1;
+
 	oneof Message {
 		.CRemotePlayTogether_Notification.GroupUpdated group_updated = 2;
 	}
 }
-

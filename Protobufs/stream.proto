@@ -761,4 +761,3 @@ message CTransportSignalMsg {
 	optional .CTransportSignalMsg.WebRTCMessage webrtc = 1;
 	repeated bytes sdr = 2;
 }
-

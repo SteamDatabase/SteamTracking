@@ -148,4 +148,3 @@ message CAppBootstrapData {
 message CLibraryBootstrapData {
 	repeated .CAppBootstrapData app_data = 1;
 }
-

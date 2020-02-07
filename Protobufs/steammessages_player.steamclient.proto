@@ -352,72 +352,95 @@ message CPlayer_PrivacySettingsChanged_Notification {
 
 service Player {
 	option (service_description) = "A service for accessing Steam player data";
+
 	rpc GetMutualFriendsForIncomingInvites (.CPlayer_GetMutualFriendsForIncomingInvites_Request) returns (.CPlayer_GetMutualFriendsForIncomingInvites_Response) {
 		option (method_description) = "Get me the mutual friends for each of my pending incoming invites (individuals and clans).";
 	}
+
 	rpc GetFriendsGameplayInfo (.CPlayer_GetFriendsGameplayInfo_Request) returns (.CPlayer_GetFriendsGameplayInfo_Response) {
 		option (method_description) = "Get a list of friends who are playing, have played, own, or want a game";
 	}
+
 	rpc GetFriendsAppsActivity (.CPlayer_GetFriendsAppsActivity_Request) returns (.CPlayer_GetFriendsAppsActivity_Response) {
 		option (method_description) = "Get lists of apps friends are active in, in a variety of ways";
 	}
+
 	rpc GetGameBadgeLevels (.CPlayer_GetGameBadgeLevels_Request) returns (.CPlayer_GetGameBadgeLevels_Response) {
 		option (method_description) = "Returns the Steam Level of a user, the Badge level for the game, and if it's foil";
 	}
+
 	rpc GetEmoticonList (.CPlayer_GetEmoticonList_Request) returns (.CPlayer_GetEmoticonList_Response) {
 		option (method_description) = "Gets a list of the emoticons a user has with metadata";
 	}
+
 	rpc GetAchievementsProgress (.CPlayer_GetAchievementsProgress_Request) returns (.CPlayer_GetAchievementsProgress_Response) {
 		option (method_description) = "Gets the achievement completion stats for the specified list of apps.";
 	}
+
 	rpc PostStatusToFriends (.CPlayer_PostStatusToFriends_Request) returns (.CPlayer_PostStatusToFriends_Response) {
 		option (method_description) = "Posts custom status text into the blotter";
 	}
+
 	rpc GetPostedStatus (.CPlayer_GetPostedStatus_Request) returns (.CPlayer_GetPostedStatus_Response) {
 		option (method_description) = "Gets a posted status text for a user by id";
 	}
+
 	rpc DeletePostedStatus (.CPlayer_DeletePostedStatus_Request) returns (.CPlayer_DeletePostedStatus_Response) {
 		option (method_description) = "Deletes a posted status text for a user by id";
 	}
+
 	rpc ClientGetLastPlayedTimes (.CPlayer_GetLastPlayedTimes_Request) returns (.CPlayer_GetLastPlayedTimes_Response) {
 		option (method_description) = "Gets the last-played times for the account";
 	}
+
 	rpc AcceptSSA (.CPlayer_AcceptSSA_Request) returns (.CPlayer_AcceptSSA_Response) {
 		option (method_description) = "User is accepting the SSA";
 	}
+
 	rpc GetNicknameList (.CPlayer_GetNicknameList_Request) returns (.CPlayer_GetNicknameList_Response) {
 		option (method_description) = "Gets the list of nicknames this user has for other users";
 	}
+
 	rpc GetPerFriendPreferences (.CPlayer_GetPerFriendPreferences_Request) returns (.CPlayer_GetPerFriendPreferences_Response) {
 		option (method_description) = "Gets the list of per-friend preferences this user has set for other users";
 	}
+
 	rpc SetPerFriendPreferences (.CPlayer_SetPerFriendPreferences_Request) returns (.CPlayer_SetPerFriendPreferences_Response) {
 		option (method_description) = "Sets the logged in user's per-friend preferences for the given user";
 	}
+
 	rpc AddFriend (.CPlayer_AddFriend_Request) returns (.CPlayer_AddFriend_Response) {
 		option (method_description) = "Invites another Steam user to be a friend";
 	}
+
 	rpc RemoveFriend (.CPlayer_RemoveFriend_Request) returns (.CPlayer_RemoveFriend_Response) {
 		option (method_description) = "Removes a friend or ignores a friend suggestion";
 	}
+
 	rpc IgnoreFriend (.CPlayer_IgnoreFriend_Request) returns (.CPlayer_IgnoreFriend_Response) {
 		option (method_description) = "Blocks or unblocks communication with the user.  Despite name, can be a non-friend.";
 	}
+
 	rpc GetCommunityPreferences (.CPlayer_GetCommunityPreferences_Request) returns (.CPlayer_GetCommunityPreferences_Response) {
 		option (method_description) = "Returns the player's community preferences";
 	}
+
 	rpc SetCommunityPreferences (.CPlayer_SetCommunityPreferences_Request) returns (.CPlayer_SetCommunityPreferences_Response) {
 		option (method_description) = "Sets the player's community preferences";
 	}
+
 	rpc GetNewSteamAnnouncementState (.CPlayer_GetNewSteamAnnouncementState_Request) returns (.CPlayer_GetNewSteamAnnouncementState_Response) {
 		option (method_description) = "Calculates and returns what to display for UI that renders new steam announcement available";
 	}
+
 	rpc UpdateSteamAnnouncementLastRead (.CPlayer_UpdateSteamAnnouncementLastRead_Request) returns (.CPlayer_UpdateSteamAnnouncementLastRead_Response) {
 		option (method_description) = "Marks latest announcement timestamp read by user";
 	}
+
 	rpc GetPrivacySettings (.CPlayer_GetPrivacySettings_Request) returns (.CPlayer_GetPrivacySettings_Response) {
 		option (method_description) = "Get current privacy settings.";
 	}
+
 	rpc GetDurationControl (.CPlayer_GetDurationControl_Request) returns (.CPlayer_GetDurationControl_Response) {
 		option (method_description) = "Get gameplay duration control settings.";
 	}
@@ -426,23 +449,28 @@ service Player {
 service PlayerClient {
 	option (service_description) = "Steam player data client notifications";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
+
 	rpc NotifyLastPlayedTimes (.CPlayer_LastPlayedTimes_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server to client of more recent play time";
 	}
+
 	rpc NotifyFriendNicknameChanged (.CPlayer_FriendNicknameChanged_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server to client that a friend's nickname has changed";
 	}
+
 	rpc NotifyNewSteamAnnouncementState (.CPlayer_NewSteamAnnouncementState_Notification) returns (.NoResponse) {
 		option (method_description) = "Notifies client of changes to steam announcement state for user";
 	}
+
 	rpc NotifyCommunityPreferencesChanged (.CPlayer_CommunityPreferencesChanged_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server to client that their community preferences have changed";
 	}
+
 	rpc NotifyPerFriendPreferencesChanged (.CPlayer_PerFriendPreferencesChanged_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server that per-friend preferences have changed";
 	}
+
 	rpc NotifyPrivacyPrivacySettingsChanged (.CPlayer_PrivacySettingsChanged_Notification) returns (.NoResponse) {
 		option (method_description) = "Notification from server that privacy settings changed";
 	}
 }
-

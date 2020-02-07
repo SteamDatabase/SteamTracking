@@ -231,6 +231,10 @@ message CMsgAnimationFrameData {
 }
 
 message CMsgPointWithTransition {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgPointWithTransition.AnimationFrameData animation_frame_data = 1012;
+	}
+
 	message AnimationFrameData {
 		optional .CMsgPoint data = 1;
 	}
@@ -243,6 +247,10 @@ message CMsgPointWithTransition {
 }
 
 message CMsgColor {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgColor.AnimationFrameData animation_frame_data = 1001;
+	}
+
 	message AnimationFrameData {
 		optional uint32 data = 1;
 	}
@@ -316,6 +324,10 @@ message CMsgFillBrush {
 }
 
 message CMsgFillBrushCollection {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgFillBrushCollection.AnimationFrameData animation_frame_data = 1007;
+	}
+
 	message AnimationFrameData {
 		repeated .CMsgFillBrush data = 1;
 	}
@@ -332,6 +344,10 @@ message CMsgRenderFillBrushCollection {
 }
 
 message CMsgPanelPosition {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgPanelPosition.AnimationFrameData animation_frame_data = 1011;
+	}
+
 	message AnimationFrameData {
 		optional .CMsgPoint data = 1;
 	}
@@ -348,6 +364,10 @@ message CMsgPanelPosition {
 }
 
 message CMsgOpacity {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgOpacity.AnimationFrameData animation_frame_data = 1004;
+	}
+
 	message AnimationFrameData {
 		optional double data = 1;
 	}
@@ -360,6 +380,10 @@ message CMsgOpacity {
 }
 
 message CMsgRotate2D {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgRotate2D.AnimationFrameData animation_frame_data = 1014;
+	}
+
 	message AnimationFrameData {
 		optional double data = 1;
 	}
@@ -377,6 +401,10 @@ message CMsgOpacityMaskData {
 }
 
 message CMsgOpacityMask {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgOpacityMask.AnimationFrameData animation_frame_data = 1013;
+	}
+
 	message AnimationFrameData {
 		optional .CMsgOpacityMaskData data = 1;
 	}
@@ -389,6 +417,10 @@ message CMsgOpacityMask {
 }
 
 message CMsgHueShift {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgHueShift.AnimationFrameData animation_frame_data = 1019;
+	}
+
 	message AnimationFrameData {
 		optional double data = 1;
 	}
@@ -401,6 +433,10 @@ message CMsgHueShift {
 }
 
 message CMsgSaturation {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgSaturation.AnimationFrameData animation_frame_data = 1005;
+	}
+
 	message AnimationFrameData {
 		optional double data = 1;
 	}
@@ -413,6 +449,10 @@ message CMsgSaturation {
 }
 
 message CMsgBrightness {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgBrightness.AnimationFrameData animation_frame_data = 1020;
+	}
+
 	message AnimationFrameData {
 		optional double data = 1;
 	}
@@ -425,6 +465,10 @@ message CMsgBrightness {
 }
 
 message CMsgContrast {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgContrast.AnimationFrameData animation_frame_data = 1021;
+	}
+
 	message AnimationFrameData {
 		optional double data = 1;
 	}
@@ -443,6 +487,10 @@ message CMsgGaussianValues {
 }
 
 message CMsgGaussianBlur {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgGaussianBlur.AnimationFrameData animation_frame_data = 1008;
+	}
+
 	message AnimationFrameData {
 		optional .CMsgGaussianValues data = 1;
 	}
@@ -461,6 +509,10 @@ message CMsgMotionBlurValues {
 }
 
 message CMsgMotionBlur {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgMotionBlur.AnimationFrameData animation_frame_data = 1022;
+	}
+
 	message AnimationFrameData {
 		optional .CMsgMotionBlurValues data = 1;
 	}
@@ -473,6 +525,10 @@ message CMsgMotionBlur {
 }
 
 message CMsg3DTransformPerspective {
+	extend .CMsgAnimationFrameData {
+		optional .CMsg3DTransformPerspective.AnimationFrameData animation_frame_data = 1003;
+	}
+
 	message AnimationFrameData {
 		optional double data = 1;
 	}
@@ -485,6 +541,10 @@ message CMsg3DTransformPerspective {
 }
 
 message CMsg3DTransformPerspectiveOrigin {
+	extend .CMsgAnimationFrameData {
+		optional .CMsg3DTransformPerspectiveOrigin.AnimationFrameData animation_frame_data = 1002;
+	}
+
 	message AnimationFrameData {
 		optional .CMsgPoint data = 1;
 	}
@@ -505,6 +565,10 @@ message CMsgTransformOriginData {
 }
 
 message CMsg3DTransformOrigin {
+	extend .CMsgAnimationFrameData {
+		optional .CMsg3DTransformOrigin.AnimationFrameData animation_frame_data = 1015;
+	}
+
 	message AnimationFrameData {
 		optional .CMsgTransformOriginData data = 1;
 	}
@@ -517,6 +581,10 @@ message CMsg3DTransformOrigin {
 }
 
 message CMsg3DTransformMatrix {
+	extend .CMsgAnimationFrameData {
+		optional .CMsg3DTransformMatrix.AnimationFrameData animation_frame_data = 1000;
+	}
+
 	message AnimationFrameData {
 		optional .CMsgMatrix4x4 data = 1;
 	}
@@ -529,6 +597,10 @@ message CMsg3DTransformMatrix {
 }
 
 message CMsgBorderRadius {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgBorderRadius.AnimationFrameData animation_frame_data = 1006;
+	}
+
 	message AnimationFrameData {
 		optional .CRadiusData data = 1;
 	}
@@ -541,6 +613,10 @@ message CMsgBorderRadius {
 }
 
 message CMsgBorder {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgBorder.AnimationFrameData animation_frame_data = 1009;
+	}
+
 	message AnimationFrameData {
 		optional .CBorderData data = 1;
 	}
@@ -553,6 +629,10 @@ message CMsgBorder {
 }
 
 message CMsgBoxShadow {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgBoxShadow.AnimationFrameData animation_frame_data = 1010;
+	}
+
 	message AnimationFrameData {
 		optional .CBoxShadowData data = 1;
 	}
@@ -565,6 +645,10 @@ message CMsgBoxShadow {
 }
 
 message CMsgTextShadow {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgTextShadow.AnimationFrameData animation_frame_data = 1017;
+	}
+
 	message AnimationFrameData {
 		optional .CTextShadowData data = 1;
 	}
@@ -577,6 +661,10 @@ message CMsgTextShadow {
 }
 
 message CMsgClip {
+	extend .CMsgAnimationFrameData {
+		optional .CMsgClip.AnimationFrameData animation_frame_data = 1018;
+	}
+
 	message AnimationFrameData {
 		optional .CMsgClipData data = 1;
 	}
@@ -803,4 +891,3 @@ message CMsgRequestRenderCallback {
 	optional .CMsgPoint bottom_right_padding = 5;
 	optional bool needs_redraw_every_frame = 6;
 }
-

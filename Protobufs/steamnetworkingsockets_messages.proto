@@ -118,4 +118,3 @@ message CMsgSteamDatagramConnectionQuality {
 	optional .CMsgSteamDatagramLinkInstantaneousStats instantaneous = 1;
 	optional .CMsgSteamDatagramLinkLifetimeStats lifetime = 2;
 }
-

@@ -75,4 +75,3 @@ message CMsgSteamSockets_UDP_Stats {
 	optional fixed32 from_connection_id = 10;
 	optional uint32 seq_num = 4;
 }
-

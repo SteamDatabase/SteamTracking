@@ -143,35 +143,44 @@ message CAccountHardware_RegisterValveIndexComponent_Response {
 
 service AccountHardware {
 	option (service_description) = "A service to use account hardware related methods";
+
 	rpc RegisterSteamController (.CAccountHardware_RegisterSteamController_Request) returns (.CAccountHardware_RegisterSteamController_Response) {
 		option (method_description) = "Records a serial number and the calling user's account info for warranty purposes.";
 	}
+
 	rpc CompleteSteamControllerRegistration (.CAccountHardware_CompleteSteamControllerRegistration_Request) returns (.CAccountHardware_CompleteSteamControllerRegistration_Response) {
 		option (method_description) = "Marks a controller's registration as complete";
 	}
+
 	rpc QueryAccountsRegisteredToController (.CAccountHardware_QueryAccountsRegisteredToSerial_Request) returns (.CAccountHardware_QueryAccountsRegisteredToSerial_Response) {
 		option (method_description) = "Sends back a list of accounts registered to a controller.";
 	}
+
 	rpc SetDesiredControllerConfigForApp (.CAccountHardware_SteamControllerSetConfig_Request) returns (.CAccountHardware_SteamControllerSetConfig_Response) {
 		option (method_description) = "Sets a desired controller config for an app";
 	}
+
 	rpc GetDesiredControllerConfigForApp (.CAccountHardware_SteamControllerGetConfig_Request) returns (.CAccountHardware_SteamControllerGetConfig_Response) {
 		option (method_description) = "Gets a desired controller config for an app";
 	}
+
 	rpc DeRegisterSteamController (.CAccountHardware_DeRegisterSteamController_Request) returns (.CAccountHardware_DeRegisterSteamController_Response) {
 		option (method_description) = "De registers a controller";
 	}
+
 	rpc SetControllerPersonalizationFile (.CAccountHardware_SetPersonalizationFile_Request) returns (.CAccountHardware_SetPersonalizationFile_Response) {
 		option (method_description) = "Stores the file ID of the personalization file";
 	}
+
 	rpc GetControllerPersonalizationFile (.CAccountHardware_GetPersonalizationFile_Request) returns (.CAccountHardware_GetPersonalizationFile_Response) {
 		option (method_description) = "Gets the file ID of the personalization file";
 	}
+
 	rpc VRCompatibilityCheck (.CAccountHardware_VRCompatibilityCheck_Request) returns (.CAccountHardware_VRCompatibilityCheck_Response) {
 		option (method_description) = "Check system info for compatibility with VR";
 	}
+
 	rpc RegisterValveIndexComponent (.CAccountHardware_RegisterValveIndexComponent_Request) returns (.CAccountHardware_RegisterValveIndexComponent_Response) {
 		option (method_description) = "Registers a valve index component to a customer";
 	}
 }
-

@@ -20,8 +20,8 @@ message CFileVerification_SignatureCheck_Response {
 
 service FileVerification {
 	option (service_description) = "File verification services";
+
 	rpc SignatureCheck (.CFileVerification_SignatureCheck_Request) returns (.CFileVerification_SignatureCheck_Response) {
 		option (method_description) = "File signature check was performed";
 	}
 }
-

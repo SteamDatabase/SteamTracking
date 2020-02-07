@@ -5,36 +5,47 @@ option cc_generic_services = true;
 
 service RemoteClient {
 	option (service_description) = "Methods for Steam remote client operations";
+
 	rpc GetPairingInfo (.CRemoteClient_GetPairingInfo_Request) returns (.CRemoteClient_GetPairingInfo_Response) {
 		option (method_description) = "Get pairing info for an entered PIN";
 	}
+
 	rpc NotifyOnline (.CRemoteClient_Online_Notification) returns (.NoResponse) {
 		option (method_description) = "Let the service know we're available for status listeners";
 	}
+
 	rpc NotifyReplyPacket (.CRemoteClient_ReplyPacket_Notification) returns (.NoResponse) {
 		option (method_description) = "Send a reply to a remote client";
 	}
+
 	rpc AllocateTURNServer (.CRemoteClient_AllocateTURNServer_Request) returns (.CRemoteClient_AllocateTURNServer_Response) {
 		option (method_description) = "Allocate a TURN server for a streaming session";
 	}
+
 	rpc AllocateRelayServer (.CRemoteClient_AllocateRelayServer_Request) returns (.CRemoteClient_AllocateRelayServer_Response) {
 		option (method_description) = "Allocate a UDP relay server for a streaming session";
 	}
+
 	rpc AllocateSDR (.CRemoteClient_AllocateSDR_Request) returns (.CRemoteClient_AllocateSDR_Response) {
 		option (method_description) = "Allocate SDR resources for an app";
 	}
+
 	rpc SendSteamBroadcastPacket (.CRemoteClient_SteamBroadcast_Notification) returns (.NoResponse) {
 		option (method_description) = "Broadcast a packet to remote Steam clients";
 	}
+
 	rpc SendSteamToSteamPacket (.CRemoteClient_SteamToSteam_Notification) returns (.NoResponse) {
 		option (method_description) = "Send a packet to a remote Steam client";
 	}
+
 	rpc SendRemotePlaySessionStarted (.CRemotePlay_SessionStarted_Request) returns (.CRemotePlay_SessionStarted_Response) {
 		option (method_description) = "Let the server know that we started a Remote Play session";
 	}
+
 	rpc SendRemotePlaySessionStopped (.CRemotePlay_SessionStopped_Notification) returns (.NoResponse) {
 		option (method_description) = "Let the server know that we stopped a Remote Play session";
 	}
+
 	rpc SendRemotePlayTogetherPacket (.CRemotePlayTogether_Notification) returns (.NoResponse) {
 		option (method_description) = "Send a Remote Play Together packet to a Steam client";
 	}
@@ -43,23 +54,28 @@ service RemoteClient {
 service RemoteClientSteamClient {
 	option (service_description) = "Methods for Steam remote client operations";
 	option (service_execution_site) = k_EProtoExecutionSiteSteamClient;
+
 	rpc NotifyRegisterStatusUpdate (.CRemoteClient_RegisterStatusUpdate_Notification) returns (.NoResponse) {
 		option (method_description) = "Register for status updates with a Steam client";
 	}
+
 	rpc NotifyUnregisterStatusUpdate (.CRemoteClient_UnregisterStatusUpdate_Notification) returns (.NoResponse) {
 		option (method_description) = "Unregister for status updates with a Steam client";
 	}
+
 	rpc NotifyRemotePacket (.CRemoteClient_RemotePacket_Notification) returns (.NoResponse) {
 		option (method_description) = "Send a packet to a Steam client";
 	}
+
 	rpc NotifySteamBroadcastPacket (.CRemoteClient_SteamBroadcast_Notification) returns (.NoResponse) {
 		option (method_description) = "Broadcast a packet to remote Steam clients";
 	}
+
 	rpc NotifySteamToSteamPacket (.CRemoteClient_SteamToSteam_Notification) returns (.NoResponse) {
 		option (method_description) = "Send a packet to a Steam client from a remote Steam client";
 	}
+
 	rpc NotifyRemotePlayTogetherPacket (.CRemotePlayTogether_Notification) returns (.NoResponse) {
 		option (method_description) = "Send a Remote Play Together packet to a Steam client";
 	}
 }
-
