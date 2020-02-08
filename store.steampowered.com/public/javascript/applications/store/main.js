@@ -6010,7 +6010,11 @@
                         promotionname: i.bIsPreview
                           ? "preview"
                           : i.promotionname,
-                        clanid: i.clanid,
+                        clanid: i.clanid
+                          ? i.clanid
+                          : i.event
+                          ? i.event.clanSteamID.GetAccountID()
+                          : void 0,
                         listid: i.listid,
                         subid: i.subid,
                         bundleid: i.bundleid,

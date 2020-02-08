@@ -22345,7 +22345,11 @@
                         promotionname: a.bIsPreview
                           ? "preview"
                           : a.promotionname,
-                        clanid: a.clanid,
+                        clanid: a.clanid
+                          ? a.clanid
+                          : a.event
+                          ? a.event.clanSteamID.GetAccountID()
+                          : void 0,
                         listid: a.listid,
                         subid: a.subid,
                         bundleid: a.bundleid,

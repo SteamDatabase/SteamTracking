@@ -2707,7 +2707,8 @@ textarea:-webkit-autofill:focus,
   font-size: 12px;
   padding: 3px 6px 3px 20px;
   box-shadow: 0 0 7px #a94847;
-  border-radius: 9px; }
+  border-radius: 9px;
+  z-index: 2; }
 
 .broadcast_embeddable_bordered_corner_container_3IBcN {
   float: right;
@@ -5091,7 +5092,7 @@ iframe.steamTVLogin {
   border-radius: 4px; }
 
 .partnersaledisplay_SaleBroadcastCtn_1SFMh {
-  z-index: 2;
+  z-index: 3;
   position: relative;
   width: 100%;
   margin: 0 auto;
