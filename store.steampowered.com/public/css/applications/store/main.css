@@ -1978,6 +1978,8 @@ body.modals_BodyNoScrollDialog_105OB {
   transition: all 0.2s ease-out; }
   .broadcastwidgets_CapsuleContainer_1gET8:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+  .broadcastwidgets_CapsuleContainer_1gET8.broadcastwidgets_InCarouselWidget_17Zd1 {
+    margin: 9px; }
 
 .broadcastwidgets_Muted_2ksIf {
   opacity: 0.3; }
@@ -8268,6 +8270,9 @@ h4 {
   /* Override default styles from store */ }
   .carousel .slide {
     background: none; }
+    .carousel .slide img {
+      width: unset;
+      vertical-align: unset; }
   .carousel .slider {
     background: initial;
     border-radius: initial;

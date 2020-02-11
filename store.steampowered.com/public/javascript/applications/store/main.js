@@ -3553,6 +3553,7 @@
       StoreOrignalPrice: "broadcastwidgets_StoreOrignalPrice_1fpRU",
       StoreSalePriceButton: "broadcastwidgets_StoreSalePriceButton_3lydG",
       CapsuleContainer: "broadcastwidgets_CapsuleContainer_1gET8",
+      InCarouselWidget: "broadcastwidgets_InCarouselWidget_17Zd1",
       Muted: "broadcastwidgets_Muted_2ksIf",
       CapsuleBottomBar: "broadcastwidgets_CapsuleBottomBar_2ygf4",
       CapsulePlatform: "broadcastwidgets_CapsulePlatform_1YzDv",
@@ -14036,7 +14037,12 @@
               },
               S.createElement(
                 "div",
-                { className: Oi.a.CapsuleContainer },
+                {
+                  className: Lt(
+                    Oi.a.CapsuleContainer,
+                    this.props.bInCarousel ? Oi.a.InCarouselWidget : ""
+                  )
+                },
                 S.createElement("img", {
                   className: Oi.a.CapsuleImage,
                   src: r
@@ -14124,7 +14130,12 @@
               },
               S.createElement(
                 "div",
-                { className: Oi.a.CapsuleContainer },
+                {
+                  className: Lt(
+                    Oi.a.CapsuleContainer,
+                    this.props.bInCarousel ? Oi.a.InCarouselWidget : ""
+                  )
+                },
                 S.createElement("img", {
                   className: Oi.a.CapsuleImage,
                   src: r
@@ -14298,7 +14309,12 @@
                 },
                 S.createElement(
                   "div",
-                  { className: Oi.a.CapsuleContainer },
+                  {
+                    className: Lt(
+                      Oi.a.CapsuleContainer,
+                      this.props.bInCarousel ? Oi.a.InCarouselWidget : ""
+                    )
+                  },
                   !l &&
                     c &&
                     S.createElement(
@@ -57477,7 +57493,8 @@
                         ? t
                           ? S.createElement(Ji, {
                               key: e.id,
-                              bundleInfo: ct.GetBundleInfo(e.id)
+                              bundleInfo: ct.GetBundleInfo(e.id),
+                              bInCarousel: r.show_as_carousel
                             })
                           : S.createElement(
                               "div",
@@ -57491,7 +57508,8 @@
                         ? t
                           ? S.createElement(Ki, {
                               key: e.id,
-                              packageInfo: st.GetPackageInfo(e.id)
+                              packageInfo: st.GetPackageInfo(e.id),
+                              bInCarousel: r.show_as_carousel
                             })
                           : S.createElement(
                               "div",
@@ -57505,7 +57523,8 @@
                         ? S.createElement($i, {
                             key: e.type + "_" + e.id,
                             appInfo: Fi.GetAppLinkInfo(e.id),
-                            bShowParentApp: n.bShowParentApp
+                            bShowParentApp: n.bShowParentApp,
+                            bInCarousel: r.show_as_carousel
                           })
                         : S.createElement(
                             "div",

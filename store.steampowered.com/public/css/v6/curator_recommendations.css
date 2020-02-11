@@ -982,7 +982,7 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 	background: rgba( 255, 255, 255, 0.1);
 }
 .browse_content .recommendation .recommendation_link {
-    width: 100%;
+    flex-grow: 1;
 }
 
 .browse_content .recommendation .recommendation_midcol {
@@ -1225,7 +1225,7 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 
 .recommendation_readmore a {
 	color: #fff;
-	right: 0px;
+	right: 22px;
 	bottom: -8px;
 	display: block;
 	position: absolute;
