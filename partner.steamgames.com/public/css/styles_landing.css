@@ -670,6 +670,9 @@ p {
 	.landingTable tr.app_DLC td, .landingTable .tr.app_DLC .td {
 		color: #a159a3;
 	}
+    .landingTable tr.app_Music td, .landingTable .tr.app_Music .td {
+		color: #3b91aa;
+	}
 	.landingTable tr.app_Game td, .landingTable .tr.app_Game .td {
 		color: #E7E8E9;
 	}
