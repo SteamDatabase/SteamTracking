@@ -2308,10 +2308,16 @@ span.partnersaledisplay_vr_required_1P__h {
   align-items: center;
   padding: 12px; }
   .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumCoverImage_2JfUA {
-    height: 100px; }
+    height: 100px;
+    cursor: pointer; }
+    .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumCoverImage_2JfUA:hover {
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5); }
   .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumTitle_keaMw {
     font-size: 20px;
-    padding: 12px; }
+    padding: 12px;
+    cursor: pointer; }
+    .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumTitle_keaMw:hover {
+      text-decoration: underline; }
 
 /* Other events, shown at the bottom of event page */
 .eventrow_OtherEventsCtn_9H6b5 {
