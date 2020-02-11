@@ -936,7 +936,7 @@
     },
     {
         "id": 985,
-        "size": 132,
+        "size": 388,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRHMDHardwareDetected_t>(VRHMDHardwareDetected_t*)"
     },
     {
@@ -1651,7 +1651,7 @@
     },
     {
         "id": 2904,
-        "size": 1,
+        "size": 4,
         "posted_in": "CUser::LockParentalLock()"
     },
     {

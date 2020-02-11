@@ -2062,6 +2062,7 @@
  D typeinfo for CConVarAccessor
  D typeinfo for CCookie
  D typeinfo for CDialogParentalUnlock
+ D typeinfo for CDialogParentalUnlock::CCallbackInternal_OnParentalWebTokenChanged
  D typeinfo for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
  D typeinfo for CDirContentsWatcher
  D typeinfo for CDirWatcher
@@ -3353,6 +3354,7 @@
  D vtable for CConVarAccessor
  D vtable for CCookie
  D vtable for CDialogParentalUnlock
+ D vtable for CDialogParentalUnlock::CCallbackInternal_OnParentalWebTokenChanged
  D vtable for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
  D vtable for CDirContentsWatcher
  D vtable for CDirWatcher
@@ -4070,6 +4072,7 @@
  R typeinfo name for CConVarAccessor
  R typeinfo name for CCookie
  R typeinfo name for CDialogParentalUnlock
+ R typeinfo name for CDialogParentalUnlock::CCallbackInternal_OnParentalWebTokenChanged
  R typeinfo name for CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete
  R typeinfo name for CDirContentsWatcher
  R typeinfo name for CDirWatcher
@@ -4956,7 +4959,7 @@
  T CBasePanel::ShowLegacyCDKey()
  T CBasePanel::ShowLegacyCDKeyIfNotIgnored()
  T CBasePanel::ShowMinimalModePanel(vgui::Panel*)
- T CBasePanel::ShowParentalUnlockDialog(std::__1::function<void ()>, std::__1::function<void ()>)
+ T CBasePanel::ShowParentalUnlockDialog(std::__1::function<void ()>, std::__1::function<void ()>, std::__1::function<void ()>)
  T CBasePanel::ShowRemotePlayTogetherAvailableNotification()
  T CBasePanel::ShowSplash()
  T CBasePanel::UpdatePlaytimeStats()
@@ -5595,6 +5598,9 @@
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
  T CDefOps<CScreenshotImageClickPanel*>::LessFuncCtx(CScreenshotImageClickPanel* const&, CScreenshotImageClickPanel* const&, void*)
  T CDefOps<int>::LessFunc(int const&, int const&)
+ T CDialogParentalUnlock::CCallbackInternal_OnParentalWebTokenChanged::CCallbackInternal_OnParentalWebTokenChanged()
+ T CDialogParentalUnlock::CCallbackInternal_OnParentalWebTokenChanged::Run(void*)
+ T CDialogParentalUnlock::CCallbackInternal_OnParentalWebTokenChanged::~CCallbackInternal_OnParentalWebTokenChanged()
  T CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete::Run(void*)
  T CDialogParentalUnlock::CCallback_OnParentalLockChangeAttemptComplete::~CCallback_OnParentalLockChangeAttemptComplete()
  T CDialogParentalUnlock::CDialogParentalUnlock(vgui::Panel*, char const*)
@@ -5610,7 +5616,8 @@
  T CDialogParentalUnlock::OnClose()
  T CDialogParentalUnlock::OnCommand(char const*)
  T CDialogParentalUnlock::OnParentalLockChangeAttemptComplete(ParentalLockChangeAttemptComplete_t*)
- T CDialogParentalUnlock::SetCallbacks(std::__1::function<void ()>, std::__1::function<void ()>)
+ T CDialogParentalUnlock::OnParentalWebTokenChanged(ParentalWebTokenChanged_t*)
+ T CDialogParentalUnlock::SetCallbacks(std::__1::function<void ()>, std::__1::function<void ()>, std::__1::function<void ()>)
  T CDialogParentalUnlock::~CDialogParentalUnlock()
  T CDirContentsWatcher::AddFileToChangeList(char const*)
  T CDirContentsWatcher::PopulateFileWatchData(char const*)

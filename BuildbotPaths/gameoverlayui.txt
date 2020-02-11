@@ -50,6 +50,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/broadcast_firsttime.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/musicpage_details_content.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/parental/parentalunlockdialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/screenshotmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp

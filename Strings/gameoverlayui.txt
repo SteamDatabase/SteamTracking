@@ -4,26 +4,25 @@ p8
 p8
 __text
 __TEXT
-s
-s
+j
+j
 __stubs
 __TEXT
 __stub_helper
 __TEXT
+X(
+X(
 __cstring
 __TEXT
-#
 __gcc_except_tab__TEXT
 __const
 __TEXT
+PD-
+PD-
 __objc_methname
 __TEXT
-,x.
-,x.
 __unwind_info
 __TEXT
-<}.
-<}.
 __eh_frame
 __TEXT
 __DATA
@@ -67,11 +66,11 @@ __LINKEDIT
 @
 @loader_path/gameoverlayui.dylib
 "
-(!M
-,Z
-X.S
+0!M
+6Z
 P
-FX
+PX
+8!S
 
 8
 @loader_path/libtier0_s.dylib
@@ -119,9 +118,8 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-@6M
+H6M
 )
-@$d
 C
 14CParentalCache
 23IClientParentalSettings
@@ -294,6 +292,7 @@ N17CMusicPlayerPanel28CCallback_OnAlbumCoverLoadedE
 21CDialogParentalUnlock
 N21CDialogParentalUnlock45CCallback_OnParentalLockChangeAttemptCompleteE
 9CCallbackI21CDialogParentalUnlock35ParentalLockChangeAttemptComplete_tLb0EE
+N21CDialogParentalUnlock43CCallbackInternal_OnParentalWebTokenChangedE
 NSt3__117bad_function_callE
 Y@
 23CScreenshotDeleteDialog
@@ -3006,6 +3005,8 @@ resource/layout/parentalunlockdialog.layout
 #Steam_Parental_ForgotPIN
 steam://url/ParentalRecovery
 Close
+Assertion Failed: pfnOnUnlock == NULL || pfnOnWebTokenChanged == NULL
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/parental/parentalunlockdialog.cpp
 DoParentalUnlock
 ShowRecoveryDialog
 #Steam_Parental_NoRecoveryEmail
@@ -3015,6 +3016,7 @@ ShowRecoveryDialog
 #Steam_Parental_UnlockFailureTitle
 CDialogParentalUnlock
 CDialogParentalUnlock::OnParentalLockChangeAttemptComplete
+CDialogParentalUnlock::OnParentalWebTokenChanged
 sCommunityShareScreenshotLink
 https://www.facebook.com/dialog/feed?app_id=105386699540688
 common/ReleaseState
@@ -3602,8 +3604,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Jan 30 2020
-17:25:41
+Feb 10 2020
+14:37:20
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -7217,74 +7219,58 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-e'
-Y'
-u'
-$&
+$L
+j'
+^'
+z'
+)&
 0
 p
 p
 0
-7&
-7'
+<&
+<'
+C
+'
+27
+C
+C
+C
+C
 C
 C
 '
-'
-'
-'
-)7
-'
-'
-'
-&
-7
-7
-7
-x&
-!
-!
-j"
-&
+}&
+o"
 &
 0
 p
-%
-8
-8
-8
+,6
 &
 &
-#6
-B
-B
-B
-B
-&
-8
-B
+$
+$
 $
 "
 %
+^A
 %
-$
-UA
-^$
-C$
-$
-$
+%
+%
+%
+%
+4$
+"$
 d
-$
-4
-4
+B7
+)
 
 
 
 
 
 
-[#
-W#
+>#
 p
 0
 0
@@ -7297,7 +7283,6 @@ p
 p
 0
 0
-(#
 p
 0
 p
@@ -7318,6 +7303,7 @@ p
 p
 p
 0
+#
 /
 #
 #
@@ -7327,37 +7313,38 @@ p
 
 0
 3
-3
 9
-A
+h"
 #
 #
-8"
-`@
+3"
+*"
+6@
+O@
 "
 "
 "
-"
-"
-"
-"
-"
-{"
+7
+>
+>
+>
+>
 Hi
-t!
-s!
-s!
-j!
--!
-+!
+B
+B
+B
+B
+lF
 !
 !
 0
 p
 I
 I
-DA
-BA
+i!
+A
+`
+:!
 !
 !
 !
@@ -7375,13 +7362,14 @@ $
 A
 Hc
 =
-mB
-mB
-[B
-L95[IB
+0B
+!B
+B
 B
 B
 Hc
+!
+1
 ?
 ?
 ?
@@ -7701,7 +7689,9 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
-#e+;
+#%B;
+#E?;
+#e(;
 i[
 i[
 Mc}
@@ -7726,6 +7716,7 @@ HcU
 #
 i[
 ~
+%
 B
 ?
 @
@@ -7857,62 +7848,69 @@ P
 @
 |
 |
+6
+6
+6
+6
+6
 "
 3
 D
-6
-6
-6
-'
+l5
 @
 &
-4
-4
-4
+&
+<4
+?4
+%4
 %
->$
+$
+B$
+2
+2
 
 
-#
-1
 d
+,
 W
 
 
 
 
 
-O+
 
 +
 +
 +
++
 
-8+
 &
 &
+
+
 
 
 t=
 =
 =
 @
+w*
 
-Q*
-7,
 uV%
+*
 
 
-?)
+
 E
--
+1
 
 
 
-e(
-)
 @
-?
+C
+(
+(
+R(
 @
 @
 &
@@ -7952,7 +7950,7 @@ y
 @
 @
 @
-E'
+''
 .
 .
 .
@@ -7960,23 +7958,23 @@ E'
 .
 .
 d
-'
-'
-'
-'
 d
 d
 =
 
-R&
 =
 @
-}&
 =
 @
 h
 @
 @
+&
+&
+&
+&
+&
+&
 @
 @
 @
@@ -7988,5 +7986,5 @@ E
 v
 e
 A
-9%
+%
 p

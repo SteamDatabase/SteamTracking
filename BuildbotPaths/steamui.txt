@@ -233,6 +233,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/modmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/musicpage_details_content.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/overlay/overlaymanager.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/parental/parentalunlockdialog.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/refreshloginpanel.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/refreshloginpanel.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamUI/remotesteamapp.cpp
