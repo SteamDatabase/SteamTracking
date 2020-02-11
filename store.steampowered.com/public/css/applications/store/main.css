@@ -44,6 +44,15 @@
   position: relative;
   letter-spacing: 1px; }
 
+.broadcast_embeddable_bordered_subtitle_3tYei {
+  color: #a8a8a8;
+  font-size: 12px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 250;
+  position: relative;
+  letter-spacing: 1px;
+  padding-left: 70px; }
+
 .broadcast_embeddable_bordered_live_stream_icon_bEEAJ {
   position: relative;
   display: inline-block;
@@ -2291,6 +2300,16 @@ span.partnersaledisplay_vr_required_1P__h {
 .partnersaledisplay_fullscreen_bg__video_FXgrB {
   margin-left: 50%;
   transform: translateX(-50%); }
+
+.partnersaledisplay_SalePageBroadcastContextHover_hbVdl {
+  display: flex;
+  align-items: center;
+  padding: 12px; }
+  .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumCoverImage_2JfUA {
+    height: 100px; }
+  .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumTitle_keaMw {
+    font-size: 20px;
+    padding: 12px; }
 
 /* Other events, shown at the bottom of event page */
 .eventrow_OtherEventsCtn_9H6b5 {
@@ -5128,6 +5147,73 @@ iframe.steamTVLogin {
   vertical-align: middle;
   display: table-cell; }
 
+.broadcastplayer_BroadcastPlayerLite_SAxf3 {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box; }
+
+.broadcastplayer_BroadcastPlayerLiteVideo_yCd0z {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #18191d;
+  background-color: black; }
+
+.broadcastplayer_BroadcastContext_3TnYL {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, rgba(29, 30, 35, 0) 100%);
+  overflow: hidden;
+  z-index: 5;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(0%);
+  opacity: 1; }
+  .HidePlayerControls .broadcastplayer_BroadcastContext_3TnYL {
+    transform: translateY(-50%);
+    opacity: 0; }
+
+.tooltip_TextToolTip_2FxbH {
+  box-sizing: border-box;
+  font-size: 13px;
+  background-color: #696773;
+  border-radius: 2px;
+  color: #e0e1e6;
+  padding: 6px 8px;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  max-width: 300px;
+  user-select: none; }
+
+.tooltip_ToolTipCustom_3XGRk {
+  box-sizing: border-box;
+  font-size: 13px;
+  background-color: #696773;
+  border-radius: 2px;
+  color: #e0e1e6;
+  padding: 6px 8px;
+  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
+  max-width: 300px;
+  user-select: none; }
+  .tooltip_ToolTipCustom_3XGRk .tooltip_ToolTipTitle_1LhVf {
+    color: #e0e1e6; }
+    .tooltip_ToolTipCustom_3XGRk .tooltip_ToolTipTitle_1LhVf.tooltip_Center_2ZDqE {
+      text-align: center; }
+  .tooltip_ToolTipCustom_3XGRk .tooltip_ToolTipInsetContent_i4LuY {
+    color: #aaacb6;
+    margin: 6px 4px; }
+
 .eventreminder_FlexColumnContainer_15ufN {
   display: flex;
   flex-direction: column; }
@@ -5648,35 +5734,6 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   background-color: hotpink;
   border: 1px solid;
   padding: 10px; }
-
-.tooltip_TextToolTip_2FxbH {
-  box-sizing: border-box;
-  font-size: 13px;
-  background-color: #696773;
-  border-radius: 2px;
-  color: #e0e1e6;
-  padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
-  max-width: 300px;
-  user-select: none; }
-
-.tooltip_ToolTipCustom_3XGRk {
-  box-sizing: border-box;
-  font-size: 13px;
-  background-color: #696773;
-  border-radius: 2px;
-  color: #e0e1e6;
-  padding: 6px 8px;
-  box-shadow: 1px 1px 8px #0005, 2px 2px 16px 1px #0005;
-  max-width: 300px;
-  user-select: none; }
-  .tooltip_ToolTipCustom_3XGRk .tooltip_ToolTipTitle_1LhVf {
-    color: #e0e1e6; }
-    .tooltip_ToolTipCustom_3XGRk .tooltip_ToolTipTitle_1LhVf.tooltip_Center_2ZDqE {
-      text-align: center; }
-  .tooltip_ToolTipCustom_3XGRk .tooltip_ToolTipInsetContent_i4LuY {
-    color: #aaacb6;
-    margin: 6px 4px; }
 
 .localdateandtime_DateAndTime_2V6GL {
   display: flex;
