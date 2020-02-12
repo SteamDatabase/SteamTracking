@@ -67908,20 +67908,20 @@
                   for (
                     var t = new Array(),
                       n = new lM(e),
-                      o = n.GetSectionObj(1),
-                      a = xt(e.GetClanSteamID().GetAccountID()),
+                      o = xt(e.GetClanSteamID().GetAccountID()),
+                      a = n.GetSectionObj(o ? 0 : 1),
                       i = 0;
                     i < 29;
                     ++i
                   ) {
                     var r = 0;
-                    o.GetHeadline(i) &&
-                      0 < o.GetHeadline(i).trim().length &&
+                    a.GetHeadline(i) &&
+                      0 < a.GetHeadline(i).trim().length &&
                       (r += 1),
-                      o.GetBody(i) &&
-                        0 < o.GetBody(i).trim().length &&
+                      a.GetBody(i) &&
+                        0 < a.GetBody(i).trim().length &&
                         (r += 1),
-                      a ||
+                      o ||
                         (1 != r && (2 == r || 0 !== i)) ||
                         t.push(
                           _.createElement(
@@ -67941,7 +67941,7 @@
                         );
                   }
                   return (
-                    a
+                    o
                       ? (0 <
                           n.GetSectionObjects().filter(function(e) {
                             return (
@@ -67999,9 +67999,9 @@
                               )
                             )
                           ),
-                        void 0 === o.GetRawVideoURL() ||
-                          "" === o.GetRawVideoURL() ||
-                          o.BHasValidVideoURL() ||
+                        void 0 === a.GetRawVideoURL() ||
+                          "" === a.GetRawVideoURL() ||
+                          a.BHasValidVideoURL() ||
                           t.push(
                             _.createElement(
                               "li",
@@ -68018,57 +68018,61 @@
                 })(e),
                 n = (function(e) {
                   for (
-                    var t = new Array(), n = new lM(e), o = new Array(), a = 0;
-                    a < 29;
-                    ++a
+                    var t = new Array(),
+                      n = new lM(e),
+                      o = xt(e.GetClanSteamID().GetAccountID()),
+                      a = new Array(),
+                      i = 0;
+                    i < 29;
+                    ++i
                   ) {
-                    var i = 0,
-                      r = n.GetSectionObj(1);
-                    r.GetHeadline(a) &&
-                      0 < r.GetHeadline(a).trim().length &&
-                      (i += 1),
-                      r.GetBody(a) &&
-                        0 < r.GetBody(a).trim().length &&
-                        (i += 1),
-                      2 == i &&
-                        0 != a &&
+                    var r = 0,
+                      p = n.GetSectionObj(o ? 0 : 1);
+                    p.GetHeadline(i) &&
+                      0 < p.GetHeadline(i).trim().length &&
+                      (r += 1),
+                      p.GetBody(i) &&
+                        0 < p.GetBody(i).trim().length &&
+                        (r += 1),
+                      2 == r &&
+                        0 != i &&
                         void 0 ===
-                          n.GetSectionObj(0).GetImageHashAndExtRaw(a) &&
-                        o.push(a);
+                          n.GetSectionObj(0).GetImageHashAndExtRaw(i) &&
+                        a.push(i);
                   }
                   return (
-                    0 < o.length &&
-                      (1 == o.length
+                    0 < a.length &&
+                      (1 == a.length
                         ? t.push(
                             _.createElement(
                               "li",
                               {
-                                key: "EventEmail_Warning_ImageLanguage_1" + o[0]
+                                key: "EventEmail_Warning_ImageLanguage_1" + a[0]
                               },
                               _.createElement(
                                 "div",
                                 { className: LM.a.WarningStyles },
                                 Object(q.c)(
                                   "#EventEmail_Warning_ImageLanguage_1",
-                                  Object(q.c)("#Language_" + Object(B.b)(o[0]))
+                                  Object(q.c)("#Language_" + Object(B.b)(a[0]))
                                 )
                               )
                             )
                           )
-                        : 2 == o.length
+                        : 2 == a.length
                         ? t.push(
                             _.createElement(
                               "li",
                               {
-                                key: "EventEmail_Warning_ImageLanguage_2" + o[0]
+                                key: "EventEmail_Warning_ImageLanguage_2" + a[0]
                               },
                               _.createElement(
                                 "div",
                                 { className: LM.a.WarningStyles },
                                 Object(q.c)(
                                   "#EventEmail_Warning_ImageLanguage_2",
-                                  Object(q.c)("#Language_" + Object(B.b)(o[0])),
-                                  Object(q.c)("#Language_" + Object(B.b)(o[1]))
+                                  Object(q.c)("#Language_" + Object(B.b)(a[0])),
+                                  Object(q.c)("#Language_" + Object(B.b)(a[1]))
                                 )
                               )
                             )
@@ -68077,16 +68081,16 @@
                             _.createElement(
                               "li",
                               {
-                                key: "EventEmail_Warning_ImageLanguage_n" + o[0]
+                                key: "EventEmail_Warning_ImageLanguage_n" + a[0]
                               },
                               _.createElement(
                                 "div",
                                 { className: LM.a.WarningStyles },
                                 Object(q.c)(
                                   "#EventEmail_Warning_ImageLanguage_n",
-                                  Object(q.c)("#Language_" + Object(B.b)(o[0])),
-                                  Object(q.c)("#Language_" + Object(B.b)(o[1])),
-                                  o.length - 2
+                                  Object(q.c)("#Language_" + Object(B.b)(a[0])),
+                                  Object(q.c)("#Language_" + Object(B.b)(a[1])),
+                                  a.length - 2
                                 )
                               )
                             )
