@@ -10830,7 +10830,12 @@
                   (i = new n.m_accumulatorType());
               else if (3 == e.type) {
                 var l = a && a.pop();
-                if (l && l.node.tag === e.text && s[l.node.tag]) {
+                if (
+                  l &&
+                  l.node.tag === e.text &&
+                  s.hasOwnProperty(l.node.tag) &&
+                  s[l.node.tag]
+                ) {
                   var p = s[l.node.tag],
                     u = a.map(function(e) {
                       return e.node.tag;
@@ -11925,6 +11930,7 @@
       StoreOrignalPrice: "broadcastwidgets_StoreOrignalPrice_pmxKl",
       StoreSalePriceButton: "broadcastwidgets_StoreSalePriceButton_2rtnv",
       CapsuleContainer: "broadcastwidgets_CapsuleContainer_18Ts-",
+      InCarouselWidget: "broadcastwidgets_InCarouselWidget_22zlI",
       Muted: "broadcastwidgets_Muted_1dCO9",
       CapsuleBottomBar: "broadcastwidgets_CapsuleBottomBar_1gdPZ",
       CapsulePlatform: "broadcastwidgets_CapsulePlatform_TcgCB",
@@ -12426,6 +12432,8 @@
                 e.library_asset_setup_complete),
               (this.m_appStoreData.item_id = e.item_id),
               (this.m_appStoreData.icon_url = e.icon_url),
+              (this.m_appStoreData.cover_image_asset_url =
+                e.cover_image_asset_url),
               (this.m_appStoreData.tags = e.tags),
               (this.m_appStoreData.content_descriptors = e.content_descriptors),
               (this.m_appStoreData.available_windows = e.available_windows),
@@ -31886,7 +31894,7 @@
       i = n("hEDq"),
       a = n("4HGb"),
       s = n("1n9R"),
-      c = n("lqmi"),
+      c = n("yovy"),
       l = n("XaMz"),
       p = (function() {
         function e(e) {
@@ -32922,15 +32930,6 @@
             var t = this.GetPerContextChatData(e);
             return !t.BUsePopups() || t.IsFriendsListSingleWindow();
           }),
-          (e.prototype.SetFriendsListSingleWindowMode = function(e, t) {
-            var n = this.GetPerContextChatData(e);
-            n.BUsePopups() &&
-              n.IsFriendsListSingleWindow() != t &&
-              (t
-                ? p.f.UIStore.ConvertDefaultTabSetToEmbedded(n.browser_context)
-                : p.f.UIStore.ConvertDefaultTabSetToPopup(n.browser_context),
-              n.SetFriendsListSingleWindowMode(t));
-          }),
           (e.prototype.BIsFriendsListCollapsed = function(e) {
             var t = this.GetPerContextChatData(e);
             return t.IsFriendsListSingleWindow() && t.IsFriendsListCollapsed();
@@ -33232,6 +33231,13 @@
                 (this.m_bRestoredPopupState = !0),
                 this.m_chatStore.OnRestorePopupsComplete();
             }
+          }),
+          (e.prototype.RestorePopupStateForMobile = function() {
+            (this.m_bRestoringPopups = !0),
+              this.GetPerContextChatData(p.a).SetFriendsListSingleWindowMode(
+                !0
+              ),
+              (this.m_bRestoringPopups = !1);
           }),
           (e.prototype.FillInChatUsabilityMetrics = function(e) {
             var t = this.GetPerContextChatData(p.a);
@@ -52691,28 +52697,22 @@
     var _e = n("syWt"),
       ge = !1,
       be = (function(e) {
-        function t(t) {
-          var n = e.call(this, t) || this;
+        function t() {
+          var t = (null !== e && e.apply(this, arguments)) || this;
           return (
-            (n.m_bInitialized = !1),
-            (n.LOG = L.b.create(function() {
-              return n.props.chatView.GetUniqueID();
+            (t.state = { chatSubscribed: null }),
+            (t.LOG = L.b.create(function() {
+              return t.props.chatView.GetUniqueID();
             }, ge)),
-            (n.m_bLoadHistoryInProgress = !1),
-            (n.m_bLoadingOperationInProgress = !1),
-            (n.m_bHasPendedLoadOlder = !1),
-            (n.m_nIgnoreScrollUpUntilTime = 0),
-            (n.state = { speakerLabelWidth: -1 }),
-            t.isActive && n.InitForChatView(t.chatView),
-            n
+            (t.m_bLoadHistoryInProgress = !1),
+            (t.m_bLoadingOperationInProgress = !1),
+            (t.m_bHasPendedLoadOlder = !1),
+            (t.m_nIgnoreScrollUpUntilTime = 0),
+            t
           );
         }
         return (
           Object(o.d)(t, e),
-          (t.prototype.InitForChatView = function(e) {
-            e.AddOnChatFrameChangedCallback(this.OnFrameChanged),
-              (this.m_bInitialized = !0);
-          }),
           (t.prototype.GetScrollTop = function() {
             return (
               this.LOG(
@@ -52945,6 +52945,7 @@
           (t.prototype.componentDidMount = function() {
             if (
               (this.LOG("ComponentDidMount"),
+              this.UpdateChatViewCallback(),
               this.m_elHistoryScroll &&
                 this.props.chatView.is_scrolled_to_bottom)
             ) {
@@ -52963,31 +52964,37 @@
                 );
             }
           }),
-          (t.prototype.componentDidUpdate = function(e) {
-            var t = this.props,
-              n = t.chatView,
-              o = (t.isActive, this.GetScrollInfo()),
-              r = o.scrollTop,
-              i = o.scrollHeight,
-              a = o.clientHeight,
-              s = n.lastScrollTop,
-              c = n.lastScrollHeight;
-            if (0 != a) {
-              var l = r;
-              i == c ? (l = s) : i - r <= a && (l = i - a),
+          (t.prototype.componentDidUpdate = function() {
+            var e = this.props.chatView;
+            this.UpdateChatViewCallback();
+            var t = this.GetScrollInfo(),
+              n = t.scrollTop,
+              o = t.scrollHeight,
+              r = t.clientHeight,
+              i = e.lastScrollTop,
+              a = e.lastScrollHeight;
+            if (0 != r) {
+              var s = n;
+              o == a ? (s = i) : o - n <= r && (s = o - r),
                 this.LogScrollInfo("componentDidUpdate"),
-                this.DelayedScrollTo(l);
+                this.DelayedScrollTo(s);
             } else this.LOG("componentDidUpdate clientHeight == 0, ignoring");
           }),
-          (t.prototype.componentWillReceiveProps = function(e) {
-            e.chatView != this.props.chatView &&
+          (t.prototype.UpdateChatViewCallback = function() {
+            var e = this.state.chatSubscribed;
+            this.props.chatView != e &&
               (this.props.chatView.RemoveOnChatFrameChangedCallback(
                 this.OnFrameChanged
               ),
-              (this.m_bInitialized = !1)),
-              !this.m_bInitialized &&
-                e.isActive &&
-                this.InitForChatView(e.chatView);
+              (e = null)),
+              !e &&
+                this.props.isActive &&
+                (this.props.chatView.AddOnChatFrameChangedCallback(
+                  this.OnFrameChanged
+                ),
+                (e = this.props.chatView)),
+              this.state.chatSubscribed != e &&
+                this.setState({ chatSubscribed: e });
           }),
           (t.prototype.componentWillUnmount = function() {
             this.m_window &&
@@ -53073,12 +53080,12 @@
             e.stopPropagation(), e.preventDefault();
           }),
           (t.prototype.render = function() {
-            if (!this.m_bInitialized) return null;
             var e = this.props,
               t = e.chatView,
               n = e.speakerLabelWidth,
-              o = e.blockInteraction,
-              i = t.chat,
+              o = e.blockInteraction;
+            if (!t || t != this.state.chatSubscribed) return null;
+            var i = t.chat,
               a = this.GetFriendRenderContext(),
               s = n && Math.max(Math.min(n, 120), 50);
             this.LOG("Render"), i.LoadChatLogs();
@@ -61895,6 +61902,7 @@
                   "div",
                   Object(o.a)(
                     {
+                      key: t.GetAccountID(),
                       className: Object(f.a)(
                         this.props.className,
                         g.a.miniProfile
@@ -77559,17 +77567,11 @@
   },
   lqmi: function(e, t, n) {
     "use strict";
-    n.d(t, "c", function() {
-      return m;
+    n.d(t, "d", function() {
+      return d;
     }),
-      n.d(t, "a", function() {
-        return d;
-      }),
-      n.d(t, "d", function() {
-        return h;
-      }),
       n.d(t, "b", function() {
-        return f;
+        return h;
       });
     var o = n("mrSG"),
       r = n("1n9R"),
@@ -77580,15 +77582,8 @@
       l = n("OTLo"),
       p = n("Gp1o"),
       u = n("oh5H"),
-      m = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
-    function d(e, t) {
-      var n = ".jpg";
-      "0000000000000000000000000000000000000000" === e && (e = m),
-        44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
-      var o = r.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
-      return (o += e.substr(0, 2) + "/" + e), t && (o += "_" + t), (o += n);
-    }
-    function h(e) {
+      m = n("yovy");
+    function d(e) {
       var t = "offline";
       return (
         e.is_golden && e.is_online
@@ -77602,7 +77597,13 @@
         t
       );
     }
-    var f = (function() {
+    n.d(t, "c", function() {
+      return m.b;
+    }),
+      n.d(t, "a", function() {
+        return m.a;
+      });
+    var h = (function() {
       function e(e) {
         (this.m_bInitialized = !1),
           (this.m_ePersonaState = 0),
@@ -77610,7 +77611,7 @@
           (this.m_gameid = "0"),
           (this.m_unPersonaStateFlags = 0),
           (this.m_strPlayerName = ""),
-          (this.m_strAvatarHash = m),
+          (this.m_strAvatarHash = m.b),
           (this.m_rtLastSeenOnline = 0),
           (this.m_strGameExtraInfo = ""),
           (this.m_unGameServerIP = 0),
@@ -77662,7 +77663,7 @@
               o = !0;
             if (n) {
               for (var r = 0; r < n.length && o; r++) o = !n[r];
-              this.m_strAvatarHash = o ? m : Object(s.a)(n);
+              this.m_strAvatarHash = o ? m.b : Object(s.a)(n);
             }
           }
           if (
@@ -77919,25 +77920,25 @@
           configurable: !0
         }),
         (e.prototype.BHasAvatarSet = function() {
-          return this.m_strAvatarHash != m;
+          return this.m_strAvatarHash != m.b;
         }),
         Object.defineProperty(e.prototype, "avatar_url", {
           get: function() {
-            return d(this.m_strAvatarHash);
+            return Object(m.a)(this.m_strAvatarHash);
           },
           enumerable: !0,
           configurable: !0
         }),
         Object.defineProperty(e.prototype, "avatar_url_medium", {
           get: function() {
-            return d(this.m_strAvatarHash, "medium");
+            return Object(m.a)(this.m_strAvatarHash, "medium");
           },
           enumerable: !0,
           configurable: !0
         }),
         Object.defineProperty(e.prototype, "avatar_url_full", {
           get: function() {
-            return d(this.m_strAvatarHash, "full");
+            return Object(m.a)(this.m_strAvatarHash, "full");
           },
           enumerable: !0,
           configurable: !0
@@ -84982,6 +84983,24 @@ and limitations under the License.
           (t = Object(o.c)([p.a], t))
         );
       })(u.b);
+  },
+  yovy: function(e, t, n) {
+    "use strict";
+    n.d(t, "b", function() {
+      return r;
+    }),
+      n.d(t, "a", function() {
+        return i;
+      });
+    var o = n("1n9R"),
+      r = "fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb";
+    function i(e, t) {
+      var n = ".jpg";
+      "0000000000000000000000000000000000000000" === e && (e = r),
+        44 == e.length && ((n = e.substr(-4)), (e = e.substr(0, 40)));
+      var i = o.c.MEDIA_CDN_COMMUNITY_URL + "images/avatars/";
+      return (i += e.substr(0, 2) + "/" + e), t && (i += "_" + t), (i += n);
+    }
   },
   ywG3: function(e, t, n) {
     "use strict";

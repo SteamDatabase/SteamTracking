@@ -596,6 +596,7 @@ body.v6 .cart_rightcol h2 {
 .review_row .review_row_value {
 	padding-left: 135px;
 	color: #C6D4DF;
+	min-height: 14px;
 }
 
 

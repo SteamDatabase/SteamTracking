@@ -15,6 +15,7 @@ LocalizationReady("shared", "english", {
   Button_Discuss: "Discuss",
   Button_Dismiss: "Dismiss",
   Button_Edit: "Edit",
+  Button_Learn: "Learn more here",
   Button_Publish: "Publish",
   Button_Post: "Post",
   Button_OK: "OK",
@@ -148,6 +149,8 @@ LocalizationReady("shared", "english", {
   EventCalendar_ThisWeek: "this week",
   EventCalendar_ThisMonth: "this month",
   EventCalendar_MuchLater: "much later",
+  EventCalendar_MuteApp: "Mute App",
+  EventCalendar_ManageMutedApps: "Manage Muted Apps",
 
   EventCalendar_EventTypeGroup_news: "News",
   EventCalendar_EventTypeGroup_ttip_news: "Include general news",
@@ -209,6 +212,10 @@ LocalizationReady("shared", "english", {
   EventDisplay_PostedBy: "by ",
 
   EventDisplay_Reminder_SetReminder: "Set a reminder",
+  EventDisplay_Reminder_GetNotification_Via: "Get a notification",
+  EventDisplay_Reminder_ViaEmail: "via email",
+  EventDisplay_Reminder_ViaMobileApp: "via mobile app",
+
   EventDisplay_Reminder_FollowEvent: "Follow Event",
   EventDisplay_Reminder_FollowEvent_ttip:
     "Follow an event to be notified when the event starts.",
@@ -246,6 +253,7 @@ LocalizationReady("shared", "english", {
   EventDisplay_TimeRange: "Event Time",
   EventDisplay_TimeInPast: "Posted",
   EventDisplay_TimeUpcoming: "Event Starts",
+  EventDisplay_EventUpcoming_WithDateAndTime: "Event starts %1$s at %2$s",
   EventDisplay_TimeEventActive: "Event is running now",
   EventDisplay_TimeEventOnNow: "On now!",
 
@@ -298,7 +306,7 @@ LocalizationReady("shared", "english", {
     "Steam will send an email notification to your account when the event starts.",
   EventReminder_NotifyByMobile: "Notify me on my Mobile device",
   EventReminder_NotifyByMobile_ttip:
-    "Steam will send a push notification to all mobiles you have an install and logged in Steam mobile app when the event starts.",
+    "Steam will push a notification when the event starts to all devices where you have installed and logged into the Steam mobile app.",
   EventReminder_NotifyByEmail_Missing:
     "Verify your email address to sign up for email reminders.",
   EventReminder_NotifyByEmail_Missing_Add: "Verify your email address.",

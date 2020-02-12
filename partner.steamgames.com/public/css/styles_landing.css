@@ -1111,7 +1111,6 @@ input[type="text"]:disabled {
 
 .fancyCheckboxLabel {
 	margin-left: 5px;
-	display: inline-block;
 	vertical-align: top;
 }
 
@@ -2625,11 +2624,13 @@ input#enablevac:disabled {
 /* App transfers */
 .landing_pending_apptransfer {
 	color: #ffffff;
-	padding: 10px;
+	padding: 10px !important;
 	background-color: #40a4dd;
 	border: 1px solid #67c1f5;
 	font-size: 15px;
-	margin-top: 8px;
+	margin: 10px 0;
+	display: flex;
+	align-items: center;
 }
 
 .landing_pending_apptransfer div {
@@ -2639,8 +2640,14 @@ input#enablevac:disabled {
 .landing_pending_apptransfer a {
 	color: #ffffff;
 }
+
 .landing_pending_apptransfer a:hover {
 	color: #000000;
+}
+
+.landing_pending_apptransfer img {
+	width: 33px;
+	height: 25px;
 }
 
 .AppTransferMain .section.highlight {

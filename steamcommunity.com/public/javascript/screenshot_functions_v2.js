@@ -147,6 +147,10 @@ function ConfirmBatchAction( action ) {
 			{
 				$('batchModalPrivacyType').innerHTML = 'Private';
 			}
+			else if ( action == 'unlisted' )
+			{
+				$('batchModalPrivacyType').innerHTML = 'Unlisted';
+			}
 			$('batchModal_h1_delete').hide();
 			$('modalWarningText_delete').hide();
 			$('batchModal_h1_privacy').show();

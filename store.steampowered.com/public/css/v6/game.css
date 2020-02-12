@@ -343,15 +343,12 @@ img.game_header_image_full {
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
 }
-.item_store .game_description_snippet
+
+.item .item_description_snippet
 {
-	font-size: 14px;
-}
-.item .game_description_snippet
-{
-	max-height: 300px;
 	margin-bottom: 20px;
 	font-size: 15px;
+	overflow: hidden;
 }
 
 .glance_details p {
@@ -417,7 +414,26 @@ img.game_header_image_full {
     background: -ms-linear-gradient(-60deg,  rgba(72,23,70,0.8) 10%,rgba(165,84,177,0.8) 100%); /* IE10+ */
     background: linear-gradient(135deg,  rgba(72,23,70,0.8) 10%,rgba(165,84,177,0.8) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc481746', endColorstr='#cca554b1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
 
+.game_area_soundtrack_bubble {
+    background: -webkit-linear-gradient( 30deg, #9d2f52 5%,#ce7e94 95%);
+	background: linear-gradient( 60deg, #9d2f52 5%,#ce7e94 95%);
+}
+.game_area_soundtrack_bubble h1 {
+    color: #f6e0e0;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+.game_area_soundtrack_bubble p {
+    color: #eec4c4;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.25);
+}
+.game_area_soundtrack_bubble p a {
+    color: #eec4c4;
+    text-decoration: underline;
+}
+.game_area_soundtrack_bubble p a:hover {
+    color: white;
 }
 
 .game_area_mod_bubble {

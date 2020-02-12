@@ -2473,6 +2473,8 @@ textarea:-webkit-autofill:focus,
   transition: all 0.2s ease-out; }
   .broadcastwidgets_CapsuleContainer_1gET8:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+  .broadcastwidgets_CapsuleContainer_1gET8.broadcastwidgets_InCarouselWidget_17Zd1 {
+    margin: 9px; }
 
 .broadcastwidgets_Muted_2ksIf {
   opacity: 0.3; }
@@ -5245,10 +5247,16 @@ span.partnersaledisplay_vr_required_1P__h {
   align-items: center;
   padding: 12px; }
   .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumCoverImage_2JfUA {
-    height: 100px; }
+    height: 100px;
+    cursor: pointer; }
+    .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumCoverImage_2JfUA:hover {
+      box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5); }
   .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumTitle_keaMw {
     font-size: 20px;
-    padding: 12px; }
+    padding: 12px;
+    cursor: pointer; }
+    .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumTitle_keaMw:hover {
+      text-decoration: underline; }
 
 /* Other events, shown at the bottom of event page */
 .eventrow_OtherEventsCtn_9H6b5 {
@@ -5447,112 +5455,54 @@ span.partnersaledisplay_vr_required_1P__h {
   right: 0;
   top: 15px; }
 
-.eventreminder_FlexColumnContainer_15ufN {
+.localdateandtime_DateAndTime_2V6GL, .localdateandtime_DateAndTimeInline_HZ6b2 {
   display: flex;
-  flex-direction: column; }
+  white-space: nowrap; }
+  .localdateandtime_DateAndTime_2V6GL span.localdateandtime_At_Fn5EU, .localdateandtime_DateAndTimeInline_HZ6b2 span.localdateandtime_At_Fn5EU {
+    margin: 0px 4px;
+    color: #6c767f; }
 
-.eventreminder_ReminderDialog_3YUEY.eventreminder_ReminderOptions_1Tp8K {
-  width: 300px;
-  padding: 0px;
-  background: transparent; }
+.localdateandtime_DateAndTimeInline_HZ6b2 {
+  display: inline-flex; }
 
-.eventreminder_ReminderBackground_TNf9_ {
-  background: #444850;
-  padding: 0px;
-  border-radius: 2px;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2); }
+.localdateandtime_ActiveEvent_rT7Ek {
+  color: #a3cf06;
+  display: flex; }
+  .localdateandtime_ActiveEvent_rT7Ek .localdateandtime_ActiveEventCallOut_2pJft {
+    background: #a3cf06;
+    font-size: 11px;
+    color: #222222;
+    padding: 0px 5px;
+    border-radius: 2px;
+    display: table;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-right: 4px;
+    margin-top: 1px; }
 
-.eventreminder_ReminderOption_26nnh {
-  padding: 8px 8px 0 8px;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 22px; }
-  .eventreminder_ReminderOption_26nnh:hover {
-    background: rgba(255, 255, 255, 0.2); }
-  .eventreminder_ReminderOption_26nnh a {
-    color: #a4d5ff;
-    padding-left: 4px;
-    padding-bottom: 12px; }
-    .eventreminder_ReminderOption_26nnh a:hover {
-      text-decoration: underline; }
-  .eventreminder_ReminderOption_26nnh .eventreminder_ReminderMissing_Title_1KvVx {
-    color: #999ea8;
-    padding-left: 6px; }
-
-.eventreminder_ReminderCheckBox_vPo2j {
-  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%);
-  display: flex;
-  flex-direction: row;
-  font-size: 14px; }
-
-.eventreminder_ReminderCheckBox_vPo2j:hover {
-  cursor: pointer;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
-
-.eventreminder_ReminderDefault_19p2Q {
-  padding: 8px;
-  color: #ffffff;
-  flex: 1;
-  flex-grow: 100;
-  border-right: 1px solid rgba(0, 0, 0, 0.5); }
-
-.eventreminder_ReminderDefault_19p2Q:hover {
-  background-color: rgba(57, 154, 236, 0.5); }
-
-.eventreminder_ReminderOptions_1Tp8K,
-.eventreminder_ReminderOpennedOptions_vBuhk {
-  flex: 1;
-  flex-basis: 32px;
-  background-repeat: no-repeat;
-  background-position: 9px 10px;
-  width: 35px;
-  height: 32px;
-  border-left: 1px solid rgba(255, 255, 255, 0.15); }
-
-.eventreminder_ReminderOptions_1Tp8K {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0M1MEE4RDkxREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0M1MEE4REExREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQzUwQThENzFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQzUwQThEODFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkFcBtEAAADkSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAgIiIAIgAACizAyMgpABf8wICsBAYAAYsQQAGIeIGaB8j+Aybdv3/6HGYoBAAIIwwx0ADYL6AwRoDGvkSWEhYVFgdQbdGeJoNtF0AqAACKogImBAGCEOpQHi9wXoOl/wAqAPviNLgv0BStIAciKPyAOuiQ45NHDBBqksHBmIOQBsAIWQqoAAoxgOBACTAwUAlhkcwA9+J1YTcBQ4gRSP8DpFZpoYYYJoKcaLCnoAyyI0Q1AdhWKQegaUaIBTyCCDOJAjjds0TTwsQAAEO5yLEGNvDIAAAAASUVORK5CYII=); }
-
-.eventreminder_ReminderOpennedOptions_vBuhk {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjA2NkUxRjYzNDdEMTFFOUI5MzlCM0IwNDk1OTEzMjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjA2NkUxRjczNDdEMTFFOUI5MzlCM0IwNDk1OTEzMjAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MDY2RTFGNDM0N0QxMUU5QjkzOUIzQjA0OTU5MTMyMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MDY2RTFGNTM0N0QxMUU5QjkzOUIzQjA0OTU5MTMyMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Puj4W0sAAADSSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAjD27dvQSwWgABigIuAOEDAiCQABgABhCGAohwkCWKwAA38DdOBoQUggHCaAQfIzgC5De4+qBzYBJAXsGkWEhJiJGgFQAARVMDEQCLgwOEBMBCB+kAEWQETkuRraDS8RlbECDIWKPgd3S5hYWFOoAk/KPcFQIARjgsCgImBUoDDBSxowcaCTR88MTAyMiJrFIAFKVqoiQKpD0D8B9limAE4NeIyCKjvD7oBHNicigWANP5AMWBAYwEAUl+ORKnWwrgAAAAASUVORK5CYII=); }
-
-.eventreminder_ReminderOptions_1Tp8K:hover {
-  background-color: rgba(57, 154, 236, 0.5); }
-
-.eventreminder_ReminderOptionsHeader_2oOZC {
+.localdateandtime_RightSideTitles_4LAnP {
+  font-size: 12px;
+  font-weight: 200;
   color: #b1b4b9;
-  font-size: 11px;
   text-transform: uppercase;
-  padding-left: 8px;
-  margin-top: 8px; }
+  letter-spacing: 1px;
+  margin-bottom: 4px; }
 
-.eventreminder_ReminderCalendarOptions_VO6FS {
-  padding: 8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
+.localdateandtime_DateToolTip_2E5LH {
+  z-index: 2000;
+  padding: 3px 8px;
+  border-radius: 2px;
+  background-color: #5e6068;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3); }
 
-.eventreminder_ReminderSettings_2Pn59 {
-  margin-top: 12px;
-  border-top: 1px solid #5b616b;
-  padding: 8px; }
-
-.eventreminder_ReminderCalendarOptions_VO6FS .eventreminder_ReminderOption_26nnh {
-  padding: 2px 8px; }
-
-.eventreminder_ReminderCalendarOptions_VO6FS .eventreminder_ReminderSpacer_3n3uJ {
-  padding: 2px 0px;
-  text-align: center; }
-
-.eventreminder_ReminderNotes_3qE0w {
-  padding: 8px;
-  color: #e1c48a;
-  font-size: 12px; }
-
-.eventreminder_RemindCheck_2qaPr {
-  width: 26px;
-  height: 26px;
-  padding-top: 5px;
-  padding-left: 4px; }
+.localdateandtime_ShortDateAndTime_MBkkh {
+  margin: 0px 4px;
+  text-transform: initial;
+  color: #868f98;
+  letter-spacing: normal; }
 
 .eventbbcodeparser_BlockQuote_2cY7b {
   border: 1px solid #56707f;
@@ -5724,6 +5674,152 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 
 /* end Game Awards styling hacks */
 
+.eventreminder_FlexColumnContainer_15ufN {
+  display: flex;
+  flex-direction: column; }
+
+.eventreminder_FullStartTime_1YLHW {
+  color: #a4d5ff;
+  padding: 8px 10px;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.eventreminder_ReminderDialog_3YUEY.eventreminder_ReminderOptions_1Tp8K {
+  width: 300px;
+  padding: 0px;
+  background: transparent;
+  border-left: none; }
+
+.eventreminder_ReminderBackground_TNf9_ {
+  position: relative;
+  background: #2f2f33;
+  padding: 0px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  width: max-content; }
+  .eventreminder_ReminderBackground_TNf9_.eventreminder_ReminderExpandsLeft_38Xly {
+    position: absolute;
+    right: 0; }
+
+.eventreminder_ReminderOption_26nnh {
+  padding: 4px;
+  margin: 0px 8px 2px 8px;
+  background: #444850;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center; }
+  .eventreminder_ReminderOption_26nnh:not(.eventreminder_Unverified_1dcmA):hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+  .eventreminder_ReminderOption_26nnh.eventreminder_Unverified_1dcmA {
+    color: #777777; }
+  .eventreminder_ReminderOption_26nnh a {
+    color: #a4d5ff;
+    padding: 0 4px; }
+    .eventreminder_ReminderOption_26nnh a:hover {
+      text-decoration: underline; }
+  .eventreminder_ReminderOption_26nnh .DialogCheckbox_Container {
+    margin-bottom: 0px;
+    padding: 0 8px 0 0; }
+    .eventreminder_ReminderOption_26nnh .DialogCheckbox_Container .DialogCheckbox {
+      margin: 3px;
+      width: 16px;
+      height: 16px; }
+      .eventreminder_ReminderOption_26nnh .DialogCheckbox_Container .DialogCheckbox .SVGIcon_DialogCheck {
+        margin: 0 0 2px 0;
+        width: 16px;
+        height: 16px; }
+    .eventreminder_ReminderOption_26nnh .DialogCheckbox_Container .DialogToggle_Label {
+      margin-left: 28px; }
+
+.eventreminder_ReminderOptionTooltip_2SNqE {
+  z-index: 2000; }
+
+.eventreminder_ReminderCheckBox_vPo2j {
+  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%);
+  display: flex;
+  flex-direction: row;
+  font-size: 14px; }
+
+.eventreminder_ReminderCheckBox_vPo2j:hover {
+  cursor: pointer;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+
+.eventreminder_ReminderDefault_19p2Q {
+  padding: 8px;
+  color: #ffffff;
+  flex: 1;
+  flex-grow: 100;
+  border-right: 1px solid rgba(0, 0, 0, 0.5); }
+
+.eventreminder_ReminderDefault_19p2Q:hover {
+  background-color: rgba(57, 154, 236, 0.5); }
+
+.eventreminder_ReminderOptions_1Tp8K,
+.eventreminder_ReminderOpennedOptions_vBuhk {
+  flex: 1;
+  flex-basis: 32px;
+  background-repeat: no-repeat;
+  background-position: 9px 10px;
+  width: 35px;
+  height: 32px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15); }
+
+.eventreminder_ReminderOptions_1Tp8K {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0M1MEE4RDkxREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0M1MEE4REExREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQzUwQThENzFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQzUwQThEODFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkFcBtEAAADkSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAgIiIAIgAACizAyMgpABf8wICsBAYAAYsQQAGIeIGaB8j+Aybdv3/6HGYoBAAIIwwx0ADYL6AwRoDGvkSWEhYVFgdQbdGeJoNtF0AqAACKogImBAGCEOpQHi9wXoOl/wAqAPviNLgv0BStIAciKPyAOuiQ45NHDBBqksHBmIOQBsAIWQqoAAoxgOBACTAwUAlhkcwA9+J1YTcBQ4gRSP8DpFZpoYYYJoKcaLCnoAyyI0Q1AdhWKQegaUaIBTyCCDOJAjjds0TTwsQAAEO5yLEGNvDIAAAAASUVORK5CYII=); }
+
+.eventreminder_ReminderOpennedOptions_vBuhk {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjA2NkUxRjYzNDdEMTFFOUI5MzlCM0IwNDk1OTEzMjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjA2NkUxRjczNDdEMTFFOUI5MzlCM0IwNDk1OTEzMjAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MDY2RTFGNDM0N0QxMUU5QjkzOUIzQjA0OTU5MTMyMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MDY2RTFGNTM0N0QxMUU5QjkzOUIzQjA0OTU5MTMyMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Puj4W0sAAADSSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAjD27dvQSwWgABigIuAOEDAiCQABgABhCGAohwkCWKwAA38DdOBoQUggHCaAQfIzgC5De4+qBzYBJAXsGkWEhJiJGgFQAARVMDEQCLgwOEBMBCB+kAEWQETkuRraDS8RlbECDIWKPgd3S5hYWFOoAk/KPcFQIARjgsCgImBUoDDBSxowcaCTR88MTAyMiJrFIAFKVqoiQKpD0D8B9limAE4NeIyCKjvD7oBHNicigWANP5AMWBAYwEAUl+ORKnWwrgAAAAASUVORK5CYII=); }
+
+.eventreminder_ReminderOptions_1Tp8K:hover {
+  background-color: rgba(57, 154, 236, 0.5); }
+
+.eventreminder_ReminderOptionsHeader_2oOZC {
+  color: #b1b4b9;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 8px 10px 4px; }
+
+.eventreminder_ReminderCalendarOptions_VO6FS {
+  padding: 0px 8px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.eventreminder_ReminderSettings_2Pn59 {
+  margin-top: 12px;
+  border-top: 1px solid #5b616b;
+  padding: 8px; }
+
+.eventreminder_ReminderCalendarOptions_VO6FS .eventreminder_ReminderOption_26nnh {
+  padding: 4px 8px;
+  margin: 0 2px 0;
+  flex-basis: 25%;
+  display: inline;
+  text-align: center; }
+
+.eventreminder_ReminderNotes_3qE0w {
+  padding: 8px;
+  color: #e1c48a;
+  font-size: 12px; }
+
+.eventreminder_RemindCheck_2qaPr {
+  width: 26px;
+  height: 26px;
+  padding-top: 5px;
+  padding-left: 4px; }
+
+.eventreminder_RpcThrobber_3F3aB {
+  position: absolute;
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
 .partnereventstats_StatsTitle_3YLaB {
   display: flex;
   flex-direction: row;
@@ -5779,51 +5875,6 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   .partnereventstats_StatsCtn_hWCs4.partnereventstats_SmallStatsMode_2A2-p .partnereventstats_StatsRightSection_1yibD {
     width: 100%;
     margin-top: 20px; }
-
-.localdateandtime_DateAndTime_2V6GL {
-  display: flex;
-  white-space: nowrap; }
-  .localdateandtime_DateAndTime_2V6GL span.localdateandtime_At_Fn5EU {
-    margin: 0px 4px;
-    color: #6c767f; }
-
-.localdateandtime_ActiveEvent_rT7Ek {
-  color: #a3cf06;
-  display: flex; }
-  .localdateandtime_ActiveEvent_rT7Ek .localdateandtime_ActiveEventCallOut_2pJft {
-    background: #a3cf06;
-    font-size: 11px;
-    color: #222222;
-    padding: 0px 5px;
-    border-radius: 2px;
-    display: table;
-    position: relative;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-right: 4px;
-    margin-top: 1px; }
-
-.localdateandtime_RightSideTitles_4LAnP {
-  font-size: 12px;
-  font-weight: 200;
-  color: #b1b4b9;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 4px; }
-
-.localdateandtime_DateToolTip_2E5LH {
-  z-index: 2000;
-  padding: 3px 8px;
-  border-radius: 2px;
-  background-color: #5e6068;
-  color: white;
-  text-transform: uppercase;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3); }
-
-.localdateandtime_ShortDateAndTime_MBkkh {
-  margin: 0px 4px;
-  text-transform: initial;
-  color: #868f98; }
 
 body {
   color: #969696;
@@ -7597,19 +7648,27 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
 .apppartnereventspage_DirectionState_Bv96j {
   margin: 10px 0px 0px 0px; }
 
-.apppartnereventspage_TimeandPostedBy_2WwG2 {
+.apppartnereventspage_EventTypeAndTimeRow_3bWTO {
   display: flex;
-  flex-wrap: wrap;
-  font-size: 12px;
-  margin-bottom: 0;
-  color: #6c767f; }
-  .apppartnereventspage_TimeandPostedBy_2WwG2 .apppartnereventspage_EventType_Udzrp {
-    text-transform: uppercase;
-    font-weight: 500;
-    color: #289cff; }
-  .apppartnereventspage_TimeandPostedBy_2WwG2.apppartnereventspage_TimeandPostedBy_2WwG2 {
-    color: #6c767f;
-    margin-bottom: 0px; }
+  align-items: center; }
+  .apppartnereventspage_EventTypeAndTimeRow_3bWTO.apppartnereventspage_WithReminder_1C5Dv {
+    padding: 6px;
+    border-radius: 6px;
+    background-color: rgba(30, 33, 38, 0.5);
+    margin-bottom: 6px; }
+  .apppartnereventspage_EventTypeAndTimeRow_3bWTO .apppartnereventspage_TimeandPostedBy_2WwG2 {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    margin: 0px 12px 0px 0px;
+    color: #6c767f; }
+    .apppartnereventspage_EventTypeAndTimeRow_3bWTO .apppartnereventspage_TimeandPostedBy_2WwG2 .apppartnereventspage_EventType_Udzrp {
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #289cff; }
+  .apppartnereventspage_EventTypeAndTimeRow_3bWTO .apppartnereventspage_ReminderContainer_3Vf2M {
+    margin-left: auto;
+    flex: none; }
 
 .carousel .control-arrow, .carousel.carousel-slider .control-arrow {
   -webkit-transition: all .25s ease-in;
@@ -7876,6 +7935,9 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   /* Override default styles from store */ }
   .carousel .slide {
     background: none; }
+    .carousel .slide img {
+      width: unset;
+      vertical-align: unset; }
   .carousel .slider {
     background: initial;
     border-radius: initial;
@@ -12569,16 +12631,6 @@ select option {
 .DialogContent.ArtworkSelectorDialog > .DialogContent_InnerWidth {
   max-width: unset;
   padding-right: 20px; }
-
-.ReminderDialog .DialogCheckbox_Container {
-  margin: 0px;
-  padding: 8px; }
-
-.ReminderDialog .DialogCheckbox_Container .DialogToggle_Label span:nth-child(2) {
-  float: right; }
-
-.ReminderDialog .DialogCheckbox_Container .DialogToggle_Label {
-  margin-top: 2px; }
 
 .sharedFilePreviewYouTubeVideo {
   overflow: unset; }

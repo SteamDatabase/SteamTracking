@@ -872,9 +872,11 @@ function SelectItemVisibility( publishedfileid, value )
 	.done( function( rgResult ) {
 		$J('#visibilityNotificationPrivate').hide();
 		$J('#visibilityNotificationFriendsOnly').hide();
+		$J('#visibilityNotificationUnlisted').hide();
 		$J('#visibilityselect_option_0_check').css( 'visibility', 'hidden' );
 		$J('#visibilityselect_option_1_check').css( 'visibility', 'hidden' );
 		$J('#visibilityselect_option_2_check').css( 'visibility', 'hidden' );
+		$J('#visibilityselect_option_3_check').css( 'visibility', 'hidden' );
 
 		switch ( value )
 		{
@@ -888,6 +890,10 @@ function SelectItemVisibility( publishedfileid, value )
 			case '2':
 				$J('#visibilityNotificationPrivate').show();
 				$J('#visibilityselect_option_2_check').css( 'visibility', 'visible' );
+				break;
+			case '3':
+				$J('#visibilityNotificationUnlisted').show();
+				$J('#visibilityselect_option_3_check').css( 'visibility', 'visible' );
 				break;
 		}
 	} )

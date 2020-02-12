@@ -817,3 +817,17 @@ html[lang=en].responsive .search_labs_banner_actions {
     word-break: break-word;
 }
 
+.labs__new {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    box-sizing: border-box;
+    height: 54px;
+    width: 54px;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	background-color: #66bff2;
+	background: url('/public/images//v6/search/new.svg' ) bottom center no-repeat;
+}
