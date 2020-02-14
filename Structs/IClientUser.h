@@ -143,6 +143,8 @@ public:
     virtual unknown_ret GetMicroTxnAppID(unsigned long long) = 0;
     virtual unknown_ret GetMicroTxnOrderID(unsigned long long) = 0;
     virtual unknown_ret BGetMicroTxnPrice(unsigned long long, CAmount*, CAmount*, bool*, CAmount*) = 0;
+    virtual unknown_ret BGetMicroTxnBillingAddressValue(unsigned long long, char const*, char*, unsigned int) = 0;
+    virtual unknown_ret BGetMicroTxnBillingAddressRequirements(unsigned long long, bool*, bool*) = 0;
     virtual unknown_ret GetMicroTxnLineItemCount(unsigned long long) = 0;
     virtual unknown_ret BGetMicroTxnLineItem(unsigned long long, unsigned int, CAmount*, unsigned int*, char*, unsigned int, int*, unsigned char*, CAmount*, bool*) = 0;
     virtual unknown_ret BIsSandboxMicroTxn(unsigned long long, bool*) = 0;

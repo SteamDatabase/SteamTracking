@@ -1,7 +1,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindow.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/clientui/htmlwindowcontroller.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/commonkeycode.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp

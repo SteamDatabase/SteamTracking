@@ -8,7 +8,7 @@ public:
     virtual unknown_ret RemoveUninstallEntry(int) = 0;
     virtual unknown_ret AddToFirewall(char const*, char const*) = 0;
     virtual unknown_ret RemoveFromFirewall(char const*) = 0;
-    virtual unknown_ret RegisterSteamProtocolHandler(bool) = 0;
+    virtual unknown_ret RegisterSteamProtocolHandler(EUniverse, ESteamRealm) = 0;
     virtual unknown_ret AddInstallScriptToWhiteList(char const*, char const*) = 0;
     virtual unknown_ret RunInstallScript(char const*, unsigned int, bool) = 0;
     virtual unknown_ret GetInstallScriptExitCode() = 0;

@@ -3713,6 +3713,7 @@
 	"SettingsInterface_Search_Custom"	"Custom (Advanced)"
 	"SettingsInterface_SearchProvider" "Default search engine:"
 	"SettingsInterface_SearchProvider_Custom" "Enter URL:"
+	"SettingsInterface_TouchMode"	"Enable touch interface mode"
 
 	"Overlay_EnterGameText"	"Enter text to send to the game"
 	"Overlay_OpenKeyboard"	"Open Keyboard"

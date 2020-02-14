@@ -231,6 +231,7 @@ message CPlayer_AddFriend_Request {
 message CPlayer_AddFriend_Response {
 	optional bool invite_sent = 1 [(description) = "True if the operation was successful, false otherwise."];
 	optional uint32 friend_relationship = 2 [(description) = "the resulting relationship.  Depending on state, may move directly to friends rather than invite sent"];
+	optional int32 result = 3;
 }
 
 message CPlayer_RemoveFriend_Request {

@@ -7,6 +7,7 @@ __stub_helper
 __TEXT
 __const
 __TEXT
+7
 __objc_methname
 __TEXT
 __cstring
@@ -17,7 +18,6 @@ __objc_methtype
 __TEXT
 __unwind_info
 __TEXT
-d*
 __eh_frame
 __TEXT
 __DATA
@@ -55,18 +55,13 @@ __common
 __DATA
 H
 __LINKEDIT
-p
-
 
 8
 @loader_path/vgui2_s.dylib
 "
-
 8
-
 X
-x
-h8
+xH
 P
 
 8
@@ -114,8 +109,10 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-8
+0H
 H
+0G
+05
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
@@ -218,8 +215,8 @@ N4vgui16layoutcmd_base_tE
 7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessIS1_EE
 10CUtlRBTreeIN7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessIS2_EE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
 7CUtlPtrI16CStyleAppearanceE
-11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS3_9StyleHashEE
-10CUtlVectorIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashEE12HashBucket_tE10CUtlMemoryIS8_EE
+11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS3_9StyleHashES2_E
+10CUtlVectorIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlRBTreeIji8CDefLessIjE25CDefRBTreeBalanceListenerIiEjE
 10CUtlVectorI5Color10CUtlMemoryIS0_EE
 10CUtlVectorIN16CStyleAppearance8DrawOp_tE10CUtlMemoryIS1_EE
@@ -288,8 +285,8 @@ N4vgui15IOverlaySurfaceE
 12CBaseSurface
 N4vgui8ISurfaceE
 14CUtlLinkedListIN4vgui16TextColorRange_tEiE
-11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessE
-10CUtlVectorIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessE12HashBucket_tE10CUtlMemoryIS8_EE
+11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS0_E
+10CUtlVectorIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tE10CUtlMemoryIS8_EE
 10CUtlRBTreeIN4vgui7TextureEi8CDefLessIS1_E25CDefRBTreeBalanceListenerIiES1_E
 10CUtlVectorIN4vgui16TextColorRange_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN12CBaseSurface16TraversalEntry_tE10CUtlMemoryIS1_EE
@@ -1031,6 +1028,7 @@ Assertion Failed: !"Impl template <class T> CBaseOSXSurface<T>::SetAsToolBar"
 WindowRestored
 Move
 template <class T> CBaseOSXSurface<T>::IsWithin
+resource/warning.wav
 WindowMaximized
 onOrderIn
 onOrderOut
@@ -1774,9 +1772,10 @@ Seconds
 @
 =
 0
-%
+1
 
 =
+i
 8
 <
 :
@@ -1814,10 +1813,10 @@ P
 
 =
 @
-u
+G
 @
 @
-3
+W
 @
 @
 @

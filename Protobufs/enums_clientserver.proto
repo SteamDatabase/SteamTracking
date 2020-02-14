@@ -496,7 +496,6 @@ enum EMsg {
 	k_EMsgDPBlockingStats = 1607;
 	k_EMsgDPNatTraversalStats = 1608;
 	k_EMsgDPCloudStats = 1612;
-	k_EMsgDPAchievementStats = 1613;
 	k_EMsgDPGetPlayerCount = 1615;
 	k_EMsgDPGetPlayerCountResponse = 1616;
 	k_EMsgDPGameServersPlayersStats = 1617;
@@ -1265,8 +1264,6 @@ enum EMsg {
 	k_EMsgUCMPublishedFilePreviewAddResponse = 7342;
 	k_EMsgUCMPublishedFilePreviewRemove = 7343;
 	k_EMsgUCMPublishedFilePreviewRemoveResponse = 7344;
-	k_EMsgClientUCMPublishedFileSubscribed = 7347;
-	k_EMsgClientUCMPublishedFileUnsubscribed = 7348;
 	k_EMsgUCMPublishedFileSubscribed = 7349;
 	k_EMsgUCMPublishedFileUnsubscribed = 7350;
 	k_EMsgUCMPublishFile = 7351;
@@ -1282,7 +1279,6 @@ enum EMsg {
 	k_EMsgClientUCMSetUserPublishedFileActionResponse = 7365;
 	k_EMsgClientUCMEnumeratePublishedFilesByUserAction = 7366;
 	k_EMsgClientUCMEnumeratePublishedFilesByUserActionResponse = 7367;
-	k_EMsgClientUCMPublishedFileDeleted = 7368;
 	k_EMsgUCMGetUserSubscribedFiles = 7369;
 	k_EMsgUCMGetUserSubscribedFilesResponse = 7370;
 	k_EMsgUCMFixStatsPublishedFile = 7371;
@@ -1388,8 +1384,6 @@ enum EMsg {
 	k_EMsgCREUpdateUserPublishedItemVoteResponse = 8508;
 	k_EMsgCREGetUserPublishedItemVoteDetails = 8509;
 	k_EMsgCREGetUserPublishedItemVoteDetailsResponse = 8510;
-	k_EMsgCREEnumeratePublishedFiles = 8511;
-	k_EMsgCREEnumeratePublishedFilesResponse = 8512;
 	k_EMsgCREPublishedFileVoteAdded = 8513;
 	k_EMsgSecretsBase = 8600;
 	k_EMsgSecretsRequestCredentialPair = 8600;

@@ -1405,7 +1405,7 @@ button.TextButton:focus {
   filter: saturate(0.35);
   box-shadow: none; }
 
-.DialogCheckbox_Container:hover .DialogCheckbox,
+.DialogCheckbox_Container:hover .DialogCheckbox:not(.Disabled),
 .DialogCheckbox:hover:not(.Disabled) {
   background-color: #1e1f23; }
 

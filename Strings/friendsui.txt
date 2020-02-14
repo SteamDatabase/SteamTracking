@@ -1,9 +1,8 @@
 __TEXT
 __text
 __TEXT
-L
-1S-
-L
+S
+S
 __stubs
 __TEXT
 __stub_helper
@@ -15,9 +14,13 @@ __const
 __TEXT
 __unwind_info
 __TEXT
+-8
+-8
 __eh_frame
 __TEXT
-h+
+W9
+x-
+W9
 __DATA
 __got
 __DATA
@@ -31,15 +34,15 @@ __const
 __DATA
 __cfstring
 __DATA
-XbM
-XbM
 __data
 __DATA
+cM
+cM
 __common
 __DATA
 __bss
 __DATA
-Qn
+An
 H
 __LINKEDIT
 PY
@@ -47,11 +50,9 @@ PY
 8
 @loader_path/friendsui.dylib
 "
-lY
-^c
+8lY
+kc
 P
-za
-za
 c
 
 8
@@ -83,6 +84,9 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
+HjY
+E-
+M
 25CFriendSettingsController
 13IUIController
 N25CFriendSettingsController41CCallbackInternal_OnClientSettingsChangedE
@@ -2005,8 +2009,8 @@ N4vgui8RichTextE
 N4vgui16RichTextInteriorE
 N4vgui10ClickPanelE
 N4vgui15CFontWidthCacheE
-11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS2_E28HashFunctorUnpaddedStructureIS2_EE
-10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_EE12HashBucket_tE10CUtlMemoryIS9_EE
+11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS2_E28HashFunctorUnpaddedStructureIS2_ES2_E
+10CUtlVectorIN11CUtlHashMapIN4vgui15CFontWidthCache5key_tEf10CDefEqualsIS3_E28HashFunctorUnpaddedStructureIS3_ES3_E12HashBucket_tE10CUtlMemoryIS9_EE
 10CUtlVectorIw10CUtlMemoryIwEE
 10CUtlVectorIN4vgui8RichText13TFormatStreamE10CUtlMemoryIS2_EE
 10CUtlVectorIN4vgui8RichText11LineBreak_tE10CUtlMemoryIS2_EE
@@ -2094,6 +2098,9 @@ d
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
+24CCryptoKeyBase_RawBuffer
+11CRSAKeyBase
+13CRSAPublicKey
 12CDynamicFuncIPFPN2vr9IVRSystemEPNS0_12EVRInitErrorENS0_18EVRApplicationTypeEEE
 16IDynamicFunction
 12CDynamicFuncIPFjPN2vr12EVRInitErrorENS0_18EVRApplicationTypeEEE
@@ -2101,10 +2108,7 @@ d
 12CDynamicFuncIPFbvEE
 12CDynamicFuncIPFPKcN2vr12EVRInitErrorEEE
 12CDynamicFuncIPFPvPKcPN2vr12EVRInitErrorEEE
-24CCryptoKeyBase_RawBuffer
-11CRSAKeyBase
-13CRSAPublicKey
-kvsignatures
+jjjjjjjjjjjjjjjjkvsignatures
 kvsign2
 Software\Valve\Steam\FriendsUI\FriendsUIJSON
 featuresEnabled
@@ -2422,6 +2426,10 @@ gamingheads.com
 reddit.com
 community.csgo.com.cn
 https://steamloopback.host
+steam://
+steamchina://
+steambeta://
+steamchinabeta://
 Assertion Failed: 0
 broadcastid
 nViewers
@@ -2922,7 +2930,7 @@ EditFriendsGroupsDialog
 CommunityInventory/%llu
 m_mapNameUseCount
 m_mapNameUseCount.Key(i)
-&mapObservers
+mapObservers
 mapObservers[j]
 m_mapUsersToIgnoreUntilTime
 m_vecChatInviteDialogs
@@ -3324,7 +3332,6 @@ ftp://
 mailto:
 http://%s
 %s?url=
-steam://
 URLWarningDialog
 OpenUntrustedURL
 domain
@@ -3684,7 +3691,6 @@ invite_code
 CloseChatDialog
 SetPersonaState
 persona_state
-steambeta://
 bPushToMute
 vkHotKey
 strKeyName
@@ -5524,6 +5530,7 @@ id-GostR3411-94-with-GostR3410-2001-cc
 GOST R 34.11-94 with GOST R 34.10-2001 Cryptocom
 id-GostR3410-2001-ParamSet-cc
 GOST R 3410-2001 Parameter Set Cryptocom
+HMAC
 hmac
 LocalKeySet
 Microsoft Local Key set
@@ -6558,6 +6565,7 @@ PRNG not seeded
 RAND_get_rand_method
 RAND_init_fips
 SSLEAY_RAND_BYTES
+/dev/urandom
 /dev/random
 /dev/srandom
 /var/run/egd-pool
@@ -10250,6 +10258,37 @@ Assertion Failed: !m_data.HasError()
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
+CCrypto::GenerateSHA1Digest
+Assertion Failed: pOutDigest
+Fatal Assertion Failed: SHA1_Init( &c )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
+Assertion Failed: pubData
+Assertion Failed: rsaKey.IsValid()
+Assertion Failed: pubSignature
+CCrypto::RSAVerifySignature
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
+CCrypto::HexDecode
+Assertion Failed: pchData
+Assertion Failed: pDecodedData
+Assertion Failed: pcubDecodedData
+Assertion Failed: *pcubDecodedData
+CCrypto::HexDecode: insufficient output buffer (input length %u, output size %u)
+CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d
+CCrypto::Base64Encode
+NULL output buffer with non-zero size passed to Base64Encode
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required, plus linebreaks)
+CCrypto::Base64Decode
+NULL output buffer with non-zero size passed to Base64Decode
+CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
+BEGIN
+END
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keypair.cpp
+Key type %d doesn't know how to load from buffer
+PRIVATE KEY
+Assertion Failed: eKeyType == k_ECryptoKeyTypeRSAPublic
+PUBLIC KEY
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
@@ -10505,35 +10544,6 @@ KEY_SCROLLLOCKTOGGLE
 Scroll Lock Toggle
 Assertion Failed: ( pDesc->macKeyCode & 0xff ) == 0xff || s_pVirtualKeyToKeyCode[pDesc->macKeyCode] == 0 || pDesc->keyCode == KEY_LSHIFT || pDesc->macKeyCode == 1 || pDesc->keyCode == KEY_LALT || pDesc->keyCode == KEY_LCONTROL || pDesc->keyCode == KEY_PAD_ENTER
 Assertion Failed: s_pKeyCodeToVirtualKey[keyMap[i].keyCode] == 0
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
-Assertion Failed: pubData
-Assertion Failed: rsaKey.IsValid()
-Assertion Failed: pubSignature
-CCrypto::RSAVerifySignature
-CCrypto::GenerateSHA1Digest
-Assertion Failed: pOutDigest
-Fatal Assertion Failed: SHA1_Init( &c )
-/dev/urandom
-Fatal Assertion Failed: s_dev_urandom_fd >= 0
-Fatal Assertion Failed: urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
-HMAC
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
-CCrypto::HexDecode
-Assertion Failed: pchData
-Assertion Failed: pDecodedData
-Assertion Failed: pcubDecodedData
-Assertion Failed: *pcubDecodedData
-CCrypto::HexDecode: insufficient output buffer (input length %u, output size %u)
-CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d
-CCrypto::Base64Encode
-NULL output buffer with non-zero size passed to Base64Encode
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required, plus linebreaks)
-CCrypto::Base64Decode
-NULL output buffer with non-zero size passed to Base64Decode
-CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
-BEGIN
-END
 Missing String for %s (%d)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
 Unknown
@@ -10578,11 +10588,6 @@ optional
 Windows
 LoadFileIntoBuffer: NULL parameters
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keypair.cpp
-Key type %d doesn't know how to load from buffer
-PRIVATE KEY
-Assertion Failed: eKeyType == k_ECryptoKeyTypeRSAPublic
-PUBLIC KEY
 COpenSSLContext
 COpenSSLConnection
 OpenSSL random number system reports not enough entropy
@@ -10594,20 +10599,24 @@ Assertion Failed: k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 30819D300D06092A864886F70D010101050003818B0030818702818100B1260881BDFE84463D88C6AB8DB914A2E593893C10508B8A5ABDF692E9A5419A3EDBAE86A052849983B75E3B425C18178B260003D857DF0B6505C6CF9C84F5859FCE3B63F1FB2D4818501F6C5FA4AD1430EEB081A74ABD74CD1F4AA1FCCA3B88DD0548AED34443CEB52444EAE9099AA4FE66B2E6224D02381C248025C7044079020111
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819d300d06092a864886f70d010101050003818b0030818702818100baeee6ba4093c07f86fb34fa2ed0c9660484dd02e2d7b4e2dbc0a7b80f088f42c34dffd633b4f79fd4956aa6b901d480da5d5f783fefd681b9fc517804b00451dfc3ecc7e16b11dcb0379dc1f9d00d0a7ab8f5d6aba57115f12256ed0c9e9bd4bf994dbbdd42cd019c5b023b3fd0005430c5305bdd46cce39a492753b0b5b355020111
-7U3
-PU3
-C
+U3
+E-
+M
+%-
+"
+)
+-
 png
 png
-Z,
-p
-C1
+0
 0
 p
-\,
+,
+^,
+0
+p
 p
 0
-2,
 0
 p
 0
@@ -10619,6 +10628,13 @@ p
 ,
 ,
 ,
+,
+0
+p
+0
+p
+$
+$
 0
 p
 0
@@ -10627,10 +10643,7 @@ p
 p
 0
 p
-0
-p
-0
-p
+=/
 
 /
 /
@@ -10639,19 +10652,10 @@ p
 /
 /
 /
-/
-/
-/
-/
-/
-/
-!+
-[K
-+
-iV
-cV
-K
-K
+(
+9+
+eV
+A
 K
 K
 K
@@ -10660,8 +10664,7 @@ K
 +
 +
 +
-V
-&
++
 0
 p
 0
@@ -10675,21 +10678,20 @@ p
 @
 @
 @
+%
 K
-K
 
 
 
-!
 0
 0
 0
 p
 0
-.
-.
 p
 0
+.
+.
 0
 p
 p
@@ -10712,103 +10714,85 @@ I#E
 p
 0
 p
-i$
 p
 0
 0
 p
 0
 0
-;)
 
-,)
 J
 *
 *
-*
-*
 J
 -
 -
 -
 -
-m)
--
--
-J
-J
--
-J
-J
-J
-J
--
-J
-J
--
-J
-J
-J
-J
--
+)
+)
+a)
+C)
 p
+K,
 )
 )
 )
 )
-)
-)
-T
+$
+$
 0
 p
+M
 p
-p
-0
-0
+m,
 p
 0
 0
 p
 0
+0
+Y,
+p
+0
 p
 0
 0
+p
+0
+0
+p
+0
+0
+0
+0
+p
+0
+0
+0
+p
+0
+p
+0
+0
+p
+0
+0
+0
+0
+p
 ,
-m>
-p
-0
-0
-p
-0
-0
-0
+,
+,
+,
 0
 p
-0
-0
-0
-p
-0
-p
-0
-0
-p
-0
-0
-0
-0
-p
-0
-p
--
 0
 p
 0
 p
 (
 (
-(
-K
 K
 K
 K
@@ -10817,15 +10801,18 @@ K
 K
 0
 p
-#
 0
 p
-W+
+='
+,'
 p
 0
 p
 0
 p
+?
++
+.,
 p
 p
 p
@@ -10838,8 +10825,7 @@ p
 p
 p
 p
-'
-'
+&'
 p
 0
 0
@@ -10853,28 +10839,31 @@ p
 0
 p
 @
-$&
 0
 p
 p
 0
 E
+*
 0
 p
 p
-;K
-s&
+x&
+m&
+*
 *
 p
+*
+*
+*
+*
+*
 &
 &
 &
 &
-&
 0
 p
-%
-%
 0
 p
 0
@@ -10886,12 +10875,6 @@ p
 p
 0
 p
-m%
-J)
-)
-)
-)
-)
 )
 )
 )
@@ -10906,43 +10889,41 @@ $
 @
 ?
 ?
-v$
-+
-+
-+
-U$
+h$
+c$
+e(
 A
 $
 $
 $
-(
 Hc
 =
-GN
+s#
+H#
 #
-M)
-L95@kM
-TM
-+"
-L95z0M
-"
-"
+#
+(
+p;
+G"
+T;
+L95_NM
+L95J/M
 "
 M
+;
 M
 M
-G!
 8!
+4!
 Hc
-+'
-'
-&
+C:
+7
+7
+%
+%
+;$
 $
 $
-$
-&
-?
-&
 ?
 ?
 ?
@@ -10957,6 +10938,8 @@ $
 ?
 ?
 ?
+?
+bJ
 .
 0
 @
@@ -11273,10 +11256,8 @@ I;E
 ,
 H
 H
-/
-/
-/
-/
+r@
+o@
 
 
 
@@ -11304,10 +11285,12 @@ HcU
 #
 i[
 ~
+)
 B
 ?
 `
 `
+(
 !
 A
 @
@@ -11392,63 +11375,52 @@ P
 "
 3
 D
-s;
-n;
+r;
+m;
 D;
 >;
+x;
 @
-(
-+:
-)
-S8
-4
-Y'
+*
+*
+Z:
 '
 '
-'
-u&
-&
-&
-H6
+L95,@7
+$7
 d
 
 
-06
 
-v1
-1
-1
-1
+3
+3
+0
 
-=1
 
 &
 &
-%
-%
-%
-%
-
 t=
 =
 =
 @
+0
+(0
+0
+0
+0
+0
+
 
 uV%
+$
 
 
-D&
 E
-&
 
 
 
-0
-0
-0
-0
-0
 @
+
 @
 @
 &
@@ -11465,7 +11437,8 @@ E
 @
 @
 =
-z
+4-
+}
 @
 @
 @
@@ -11486,8 +11459,6 @@ z
 @
 @
 @
--
--
 .
 .
 .
@@ -11495,9 +11466,7 @@ z
 .
 .
 d
--
--
--
+:
 =
 
 =
@@ -11507,21 +11476,18 @@ d
 ,
 @
 @
--
 @
 @
 @
 @
 @
 @
-S
 &
 =
 @
 @
 @
 @
-
 @
 p
 p

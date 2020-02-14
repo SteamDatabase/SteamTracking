@@ -6041,6 +6041,34 @@ ParentalButton #ParentalLockImageLocked
 	opacity: 0.0;
 }
 
+#ControllerOrderMsgBoxBodyRegion
+{
+    width: 960px;
+}
+
+.ControllerOrderImage
+{
+    width: 48px;
+	height: 48px;
+    margin-bottom: 12px;
+    margin-right: 200px;
+    horizontal-align:left;
+    color: ui_primary_color;
+	padding-top: 0px;
+	margin: 0px;
+	margin-left: 0px;
+
+	margin-top: -1px;
+	font-size: 20px;
+//	border-style: solid;
+//	border-width: 3px;
+//    border-color: #ffffffff;
+	background-repeat: no-repeat;
+	background-size: 48px 48px;
+    background-position: center;    
+    wash-color: #ffffffff;
+}
+
 .ControllerOrderContainer
 {
 	height: 52px;
@@ -6054,49 +6082,49 @@ ParentalButton #ParentalLockImageLocked
 
 	background-repeat: no-repeat;
 	background-size: 48px 48px;
-    background-position: 80% 5%;
+    background-position: 70% 5%;
     wash-color: #ffffffff;
 
 }
 
-.ControllerOrderContainer.controller_steamcontroller_gordon
+.ControllerOrderImage.controller_steamcontroller_gordon
 {
 	background-image: url( "file://{images}/controller_icon_steamcontroller.png" );
 }
 
-.ControllerOrderContainer.controller_ps4
+.ControllerOrderImage.controller_ps4
 {
 	background-image: url( "file://{images}/controller_icon_ps4.png" );
 }
 
-.ControllerOrderContainer.controller_switch_pro,
-.ControllerOrderContainer.controller_switch_pro_generic,
+.ControllerOrderImage.controller_switch_pro,
+.ControllerOrderImage.controller_switch_pro_generic,
 {
     background-image: url( "file://{images}/controller_icon_switch_pro.png" );
 }
 
-.ControllerOrderContainer.controller_ps3 
+.ControllerOrderImage.controller_ps3 
 {
     background-image: url( "file://{images}/controller_icon_ps3.png" );
 }
 
-.ControllerOrderContainer.controller_xbox360
+.ControllerOrderImage.controller_xbox360
 {
 	background-image: url( "file://{images}/controller_icon_xbox_360.png" );
 }
 
-.ControllerOrderContainer.controller_xboxone
+.ControllerOrderImage.controller_xboxone
 {
 	background-image: url( "file://{images}/controller_icon_xbox_one.png" );
 }
 
-.ControllerOrderContainer.controller_generic,
-.ControllerOrderContainer.controller_apple
+.ControllerOrderImage.controller_generic,
+.ControllerOrderImage.controller_apple
 {
 	background-image: url( "file://{images}/controller_generic_nobattery.png" );
 }
 
-.ControllerOrderContainer.controller_mobile_touch
+.ControllerOrderImage.controller_mobile_touch
 {
 	background-image: url( "file://{images}/controller_icon_mobile_touch.png" );
 }
@@ -6108,7 +6136,7 @@ ParentalButton #ParentalLockImageLocked
 
 .ControllerOrderButtonContainer
 {
-    width: 112px;
+    width: 270px;
     height: 52px;
     horizontal-align: right;
     padding: 0px;
@@ -6135,12 +6163,23 @@ ChangeControllerXInputOrder #ButtonCancel
 
 #ControllerListContainer .ControllerOrderButton.Button
 {
-    width: 50%;
+    width: 64px;
     background-position: center;
     background-size: 40px;
     background-repeat: no-repeat;
     padding: 0px;
-    margin: 0px;
+    margin: 3px;
+    margin-left: 64px;
+}
+
+#ControllerListContainer .ControllerIdentifyButton.Button
+{
+    width: 64px;
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    padding: 0px;
+    margin: 3px;
 }
 
 #ControllerListContainer .ControllerOrderButtonDown
@@ -6152,7 +6191,15 @@ ChangeControllerXInputOrder #ButtonCancel
 #ControllerListContainer .ControllerOrderButtonUp.Button
 {
     background-image: url( "file://{images}/library/controller/binding_icons/ghost_045_move_0407.png" );
-    horizontal-align: right;
+    horizontal-align: left;
+    margin-left: 134px;
+}
+
+#ControllerListContainer .ControllerIdentifyButton.Button
+{
+    background-image: url( "file://{images}/library/controller/binding_icons/ghost_035_magic_0300.png" );
+    horizontal-align: left;
+    margin-left: 204px;
 }
 
 #ControllerListContainer .ControllerOrderButton.Button.Disabled

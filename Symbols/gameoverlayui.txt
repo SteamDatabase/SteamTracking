@@ -4440,7 +4440,7 @@
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlHandleTable<vgui::BuildGroup, 20>
- R typeinfo name for CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >
+ R typeinfo name for CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>
  R typeinfo name for CUtlLinkedList<BrowserPosition_t, int>
  R typeinfo name for CUtlLinkedList<CUtlDict<bool, CDefCaselessStringLess, int>*, int>
  R typeinfo name for CUtlLinkedList<CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int>, void*>*, int>
@@ -4493,7 +4493,7 @@
  R typeinfo name for CUtlVector<CSmartPtr<CJSCallbackFunc>, CUtlMemory<CSmartPtr<CJSCallbackFunc> > >
  R typeinfo name for CUtlVector<CTrackItemPanel*, CUtlMemory<CTrackItemPanel*> >
  R typeinfo name for CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >
- R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
  R typeinfo name for CUtlVector<KeyValues*, CUtlMemory<KeyValues*> >
  R typeinfo name for CUtlVector<PanelAnimationMapEntry, CUtlMemory<PanelAnimationMapEntry> >
@@ -4726,9 +4726,6 @@
  SteamVProf::CVProfile::OutputReport(int, char const*, int)
  SteamVProf::CVProfile::~CVProfile()
  StringAfterPrefix
- T AES_cbc_encrypt
- T AES_decrypt
- T AES_encrypt
  T AppModalQueryBox::AppModalQueryBox(wchar_t const*, wchar_t const*, CVGUIApplicationOverlay*)
  T AppModalQueryBox::ChainToAnimationMap()
  T AppModalQueryBox::ChainToMap()
@@ -8857,9 +8854,9 @@
  T CParentalSettingsInterpreter::BIsParentalLockLocked() const
  T CParentalSettingsInterpreter::BSerializeToBuffer(CUtlBuffer*) const
  T CParentalSettingsInterpreter::CParentalSettingsInterpreter()
- T CParentalSettingsInterpreter::DeserializeMapFromBuffer(CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >&, CUtlBuffer*)
+ T CParentalSettingsInterpreter::DeserializeMapFromBuffer(CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>&, CUtlBuffer*)
  T CParentalSettingsInterpreter::Reset()
- T CParentalSettingsInterpreter::SerializeMapToBuffer(CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> > const&, CUtlBuffer*)
+ T CParentalSettingsInterpreter::SerializeMapToBuffer(CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int> const&, CUtlBuffer*)
  T CParentalSettingsInterpreter::~CParentalSettingsInterpreter()
  T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
@@ -9525,83 +9522,77 @@
  T CUtlHandleTable<vgui::BuildGroup, 20>::SetHandle(unsigned int, vgui::BuildGroup*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::Validate(CValidator&, char const*)
  T CUtlHandleTable<vgui::BuildGroup, 20>::~CUtlHandleTable()
- T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::CUtlHashMap()
- T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::Purge()
- T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::~CUtlHashMap()
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::AllocNode()
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::CUtlHashMap()
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::EnsureCapacity(int)
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Find(CUtlString const&) const
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::FindInBucket(int, CUtlString const&) const
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::IncrementalRehash()
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertOrReplace(CUtlString const&, vgui::HTML::JSMethodRegistration_t const&)
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::Purge()
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RehashNodesInBucket(int)
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::RemoveAll()
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::~CUtlHashMap()
- T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::CUtlHashMap()
- T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::Purge()
- T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::~CUtlHashMap()
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::AllocNode()
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap()
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::EnsureCapacity(int)
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::IncrementalRehash()
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertOrReplace(unsigned int const&, bool const&)
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveAll()
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::~CUtlHashMap()
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::AllocNode()
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CUtlHashMap()
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::CopyFullHashMap(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >&) const
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::EnsureCapacity(int)
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Find(unsigned int const&) const
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::IncrementalRehash()
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertOrReplace(unsigned int const&, int const&)
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::Purge()
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RehashNodesInBucket(int)
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::RemoveAll()
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::~CUtlHashMap()
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::AllocNode()
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::CUtlHashMap()
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::CopyFullHashMap(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >&) const
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::EnsureCapacity(int)
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Find(unsigned long long const&) const
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::IncrementalRehash()
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertOrReplace(unsigned long long const&, int const&)
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::Purge()
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RehashNodesInBucket(int)
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::RemoveAll()
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::~CUtlHashMap()
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::AllocNode()
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::CUtlHashMap()
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::CopyFullHashMap(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >&) const
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::EnsureCapacity(int)
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::Find(unsigned short const&) const
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::IncrementalRehash()
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertOrReplace(unsigned short const&, int const&)
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::Purge()
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RehashNodesInBucket(int)
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::RemoveAll()
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::~CUtlHashMap()
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::AllocNode()
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::CUtlHashMap()
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::EnsureCapacity(int)
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Find(vgui::CFontWidthCache::key_t const&) const
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::FindInBucket(int, vgui::CFontWidthCache::key_t const&) const
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::IncrementalRehash()
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertOrReplace(vgui::CFontWidthCache::key_t const&, float const&)
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Purge()
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::RehashNodesInBucket(int)
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::Validate(CValidator&, char const*)
- T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::~CUtlHashMap()
+ T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor, CMsgSpewThrottle::SpewLocation_t>::CUtlHashMap()
+ T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor, CMsgSpewThrottle::SpewLocation_t>::Purge()
+ T CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor, CMsgSpewThrottle::SpewLocation_t>::~CUtlHashMap()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::AllocNode()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::CUtlHashMap()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::EnsureCapacity(int)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Find(StringView const&) const
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::FindInBucket(int, StringView const&) const
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::IncrementalRehash()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::Purge()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RehashNodesInBucket(int)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::RemoveAll()
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::~CUtlHashMap()
+ T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*>, char const*>::CUtlHashMap()
+ T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*>, char const*>::Purge()
+ T CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*>, char const*>::~CUtlHashMap()
+ T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::AllocNode()
+ T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::CUtlHashMap()
+ T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::EnsureCapacity(int)
+ T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::Find(unsigned int const&) const
+ T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::IncrementalRehash()
+ T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::Purge()
+ T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RehashNodesInBucket(int)
+ T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RemoveAll()
+ T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::~CUtlHashMap()
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::AllocNode()
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::CUtlHashMap()
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::CopyFullHashMap(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>&) const
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::EnsureCapacity(int)
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::Find(unsigned int const&) const
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::IncrementalRehash()
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::Purge()
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RehashNodesInBucket(int)
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::RemoveAll()
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::~CUtlHashMap()
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::AllocNode()
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::CUtlHashMap()
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::CopyFullHashMap(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>&) const
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::EnsureCapacity(int)
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::Find(unsigned long long const&) const
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::IncrementalRehash()
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::Purge()
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RehashNodesInBucket(int)
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::RemoveAll()
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::~CUtlHashMap()
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::AllocNode()
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::CUtlHashMap()
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::CopyFullHashMap(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>&) const
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::EnsureCapacity(int)
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::Find(unsigned short const&) const
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::IncrementalRehash()
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::Purge()
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::RehashNodesInBucket(int)
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::RemoveAll()
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::~CUtlHashMap()
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::AllocNode()
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::CUtlHashMap()
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::EnsureCapacity(int)
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::Find(vgui::CFontWidthCache::key_t const&) const
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::FindInBucket(int, vgui::CFontWidthCache::key_t const&) const
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::IncrementalRehash()
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::Purge()
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::RehashNodesInBucket(int)
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::Validate(CValidator&, char const*)
+ T CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::~CUtlHashMap()
  T CUtlLinkedList<BrowserPosition_t, int>::AllocInternal(bool)
  T CUtlLinkedList<BrowserPosition_t, int>::Free(int)
  T CUtlLinkedList<BrowserPosition_t, int>::LinkAfter(int, int)
@@ -9671,13 +9662,17 @@
  T CUtlLinkedList<vgui::TreeNode*, int>::Unlink(int)
  T CUtlLinkedList<vgui::TreeNode*, int>::Validate(CValidator&, char const*)
  T CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Validate(CValidator&, char const*)
- T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Insert(CUtlString const&, CDirContentsWatcher::FileWatchData const&)
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Insert(CUtlString&&, CDirContentsWatcher::FileWatchData const&)
+ T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t::~Node_t()
  T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Validate(CValidator&, char const*)
- T CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Insert(CUtlString const&, CUtlString&&)
+ T CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Insert(CUtlString&&, CUtlString&&)
+ T CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t::~Node_t()
  T CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
- T CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Insert(char const* const&)
+ T CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Insert(char const*&&)
+ T CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Node_t::~Node_t()
  T CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
+ T CUtlMap<char const*, CUtlString, unsigned short, CDefCaselessStringLess>::Node_t::~Node_t()
  T CUtlMap<char const*, bool, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, int, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
@@ -9711,76 +9706,61 @@
  T CUtlQueueBaseImpl::ImplGrow(int, unsigned char**)
  T CUtlQueueDeprecated<CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int>, void*>*>::Validate(CValidator&, char const*)
  T CUtlQueueDeprecated<int>::Validate(CValidator&, char const*)
- T CUtlRBTree<BestMatch_t, int, CDefLess<BestMatch_t>, CDefRBTreeBalanceListener<int>, BestMatch_t>::Insert(BestMatch_t const&, bool)
  T CUtlRBTree<BestMatch_t, int, CDefLess<BestMatch_t>, CDefRBTreeBalanceListener<int>, BestMatch_t>::NewNode(bool)
  T CUtlRBTree<BestMatch_t, int, CDefLess<BestMatch_t>, CDefRBTreeBalanceListener<int>, BestMatch_t>::RemoveAll()
  T CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, CDefLess<CKeyBindingsMgr::KBContext_t>, CDefRBTreeBalanceListener<int>, CKeyBindingsMgr::KBContext_t>::Find(CKeyBindingsMgr::KBContext_t const&) const
  T CUtlRBTree<CKeyBindingsMgr::KBContext_t, int, CDefLess<CKeyBindingsMgr::KBContext_t>, CDefRBTreeBalanceListener<int>, CKeyBindingsMgr::KBContext_t>::RemoveAll()
  T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Find(CStringPoolIndex const&) const
- T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Insert(CStringPoolIndex const&, bool)
  T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::NewNode(bool)
  T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::RemoveAll()
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::Find(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&) const
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::Insert(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*&&, bool)
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::NewNode(bool)
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::Remove(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&)
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::RemoveAll()
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::RemoveAt(int)
- T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::~CUtlRBTree()
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::Find(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >* const&) const
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::Insert(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*&&, bool)
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::NewNode(bool)
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::Remove(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >* const&)
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::RemoveAll()
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::RemoveAt(int)
- T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::~CUtlRBTree()
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::Find(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >* const&) const
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::Insert(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*&&, bool)
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::NewNode(bool)
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::Remove(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >* const&)
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::RemoveAll()
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::RemoveAt(int)
- T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::~CUtlRBTree()
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>::Find(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>* const&) const
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>::NewNode(bool)
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>::Remove(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>* const&)
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>::RemoveAll()
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>::RemoveAt(int)
+ T CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>::~CUtlRBTree()
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>::Find(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>* const&) const
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>::NewNode(bool)
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>::Remove(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>* const&)
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>::RemoveAll()
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>::RemoveAt(int)
+ T CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>::~CUtlRBTree()
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::Find(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>* const&) const
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::NewNode(bool)
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::Remove(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>* const&)
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::RemoveAll()
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::RemoveAt(int)
+ T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::~CUtlRBTree()
  T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int>, CGameID>::Find(CGameID const&) const
- T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int>, CGameID>::Insert(CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int>, CGameID>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int>, CGameID>::RemoveAll()
  T CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int>, CGameID>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Find(StringView const&) const
- T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::FreeNode(int)
- T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Insert(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
  T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAt(int)
  T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Insert(CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::Find(CUtlSymbol const&) const
- T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::Insert(CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::RemoveAll()
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::RemoveAt(int)
  T CUtlRBTree<CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Validate(CValidator&, char const*)
@@ -9789,71 +9769,58 @@
  T CUtlRBTree<CUtlMap<char const*, bool, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, bool, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
  T CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Find(int const&) const
- T CUtlRBTree<CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Insert(CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::NewNode(bool)
  T CUtlRBTree<CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::RemoveAll()
  T CUtlRBTree<CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Find(int const&) const
- T CUtlRBTree<CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Insert(CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::NewNode(bool)
  T CUtlRBTree<CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::RemoveAll()
  T CUtlRBTree<CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::RemoveAt(int)
  T CUtlRBTree<CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Validate(CValidator&, char const*)
- T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned int>::Insert(CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned int>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned int>::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned int>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Find(unsigned int const&) const
- T CUtlRBTree<CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Insert(CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::RemoveAt(int)
  T CUtlRBTree<CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Find(unsigned long long const&) const
- T CUtlRBTree<CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Insert(CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long>::Find(unsigned long const&) const
- T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long>::Insert(CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long>::Remove(unsigned long const&)
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long>::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long>::RemoveAt(int)
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::Find(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&) const
- T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::Insert(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*&&, bool)
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::NewNode(bool)
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::Remove(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&)
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::RemoveAll()
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::RemoveAt(int)
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::~CUtlRBTree()
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::Find(unsigned long long const&) const
- T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::Insert(unsigned long long const&, bool)
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::NewNode(bool)
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::Remove(unsigned long long const&)
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::RemoveAll()
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::RemoveAt(int)
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::Validate(CValidator&, char const*)
  T CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int>, void*>::Find(void* const&) const
- T CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int>, void*>::Insert(void*&&, bool)
  T CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int>, void*>::NewNode(bool)
  T CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int>, void*>::RemoveAll()
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_InsertRebalance(int, unsigned long, void*)
@@ -9972,27 +9939,27 @@
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t, CUtlMemory<CUtlHandleTable<vgui::BuildGroup, 20>::EntryType_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor>::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::HashBucket_t> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor, CMsgSpewThrottle::SpewLocation_t>::HashBucket_t, CUtlMemory<CUtlHashMap<CMsgSpewThrottle::SpewLocation_t, CMsgSpewThrottle::SpewThrottleEntry_t, CDefEquals<CMsgSpewThrottle::SpewLocation_t>, CMsgSpewThrottle::SpewLocationHashFunctor, CMsgSpewThrottle::SpewLocation_t>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*>, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, int, CDefEquals<char const*>, HashFunctor<char const*>, char const*>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::HashBucket_t, CUtlMemory<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t, CUtlMemory<CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::Find(CUtlString const&) const
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::GrowVector(int)
@@ -10276,15 +10243,10 @@
  T CallbackMgr_RunCallbacks(int, bool)
  T CallbackMgr_UnregisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_UnregisterCallback(CCallbackBase*)
- T Camellia_DecryptBlock
- T Camellia_DecryptBlock_Rounds
- T Camellia_Ekeygen
- T Camellia_EncryptBlock
- T Camellia_EncryptBlock_Rounds
- T Camellia_cbc_encrypt
  T CaselessStringLessThan(char const* const&, char const* const&)
  T ChatIDFromClanID(CSteamID const&)
  T CheckDirectoryForChanges(char const*, CDirWatcher*, bool)
+ T CheckSteamURLProtocol(char const*, bool, EUniverse*, ESteamRealm*)
  T ClientAPI_Init()
  T ClientAPI_RunCallbacks()
  T ClientAPI_Shutdown()
@@ -10458,7 +10420,6 @@
  T HTMLComboBoxHost::PerformLayout()
  T HTMLComboBoxHost::~HTMLComboBoxHost()
  T HTMLWatchSDLEvents(void*, SDL_Event*)
- T HashFunctor<CUtlString>::operator()(CUtlString const&) const
  T IHTMLResponses::~IHTMLResponses()
  T IPC::BinarySemaphore::Destroy()
  T IPC::BinarySemaphore::Init(char const*, bool, bool*, bool)
@@ -10700,9 +10661,9 @@
  T SteamPID()
  T SteamThreadTools::CThreadLocal<long long>::~CThreadLocal()
  T SteamThreadTools::CThreadLocalInt<long long>::~CThreadLocalInt()
- T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> > >::~CThreadLocalPtr()
- T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> > >::~CThreadLocalPtr()
- T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> > >::~CThreadLocalPtr()
+ T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int> >::~CThreadLocalPtr()
+ T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long> >::~CThreadLocalPtr()
+ T SteamThreadTools::CThreadLocalPtr<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short> >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> > >::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalPtr<unsigned long long>::~CThreadLocalPtr()
  T SteamThreadTools::CThreadLocalStackCounter<long long>::CThreadLocalStackCounter(SteamThreadTools::CThreadLocal<long long>&)
@@ -10781,77 +10742,50 @@
  T _pcre_valid_utf
  T _pcre_was_newline
  T _pcre_xclass
- T aesni_cbc_encrypt
- T aesni_cbc_sha1_enc
- T aesni_cbc_sha256_enc
- T aesni_ccm64_decrypt_blocks
- T aesni_ccm64_encrypt_blocks
- T aesni_ctr32_encrypt_blocks
- T aesni_decrypt
- T aesni_ecb_encrypt
- T aesni_encrypt
- T aesni_gcm_decrypt
- T aesni_gcm_encrypt
- T aesni_multi_cbc_decrypt
- T aesni_multi_cbc_encrypt
- T aesni_set_decrypt_key
- T aesni_set_encrypt_key
- T aesni_xts_decrypt
- T aesni_xts_encrypt
- T asm_AES_cbc_encrypt
- T asm_AES_decrypt
- T asm_AES_encrypt
- T bn_GF2m_mul_2x2
- T bn_from_montgomery
- T bn_gather5
- T bn_get_bits5
- T bn_mul_mont
- T bn_mul_mont_gather5
- T bn_power5
- T bn_scatter5
- T bn_sqr8x_internal
- T bn_sqrx8x_internal
  T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(IHTMLJS*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
  T bool BResolveHostString<CIPAddress>(char const*, bool, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
- T bsaes_cbc_encrypt
- T bsaes_ctr32_encrypt_blocks
- T bsaes_xts_decrypt
- T bsaes_xts_encrypt
  T delete_JSON_parser
- T ecp_nistz256_add
- T ecp_nistz256_avx2_select_w7
- T ecp_nistz256_div_by_2
- T ecp_nistz256_from_mont
- T ecp_nistz256_mul_by_2
- T ecp_nistz256_mul_by_3
- T ecp_nistz256_mul_mont
- T ecp_nistz256_neg
- T ecp_nistz256_point_add
- T ecp_nistz256_point_add_affine
- T ecp_nistz256_point_double
- T ecp_nistz256_select_w5
- T ecp_nistz256_select_w7
- T ecp_nistz256_sqr_mont
- T ecp_nistz256_sub
- T ecp_nistz256_to_mont
- T gcm_ghash_4bit
- T gcm_ghash_avx
- T gcm_ghash_clmul
- T gcm_gmult_4bit
- T gcm_gmult_avx
- T gcm_gmult_clmul
- T gcm_init_avx
- T gcm_init_clmul
  T init_JSON_config
- T int CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString> >::InsertUnconstructed<CUtlString const&>(CUtlString const&, int*, bool)
- T int CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
- T int CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
- T int CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
- T int CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >::InsertUnconstructed<unsigned short const&>(unsigned short const&, int*, bool)
- T int CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t> >::InsertUnconstructed<vgui::CFontWidthCache::key_t const&>(vgui::CFontWidthCache::key_t const&, int*, bool)
+ T int CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::FindOrInsert_Internal<CUtlString, vgui::HTML::JSMethodRegistration_t>(CUtlString&&, vgui::HTML::JSMethodRegistration_t&&, CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::ReplaceExisting)
+ T int CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::InsertUnconstructed<CUtlString>(CUtlString&&, int*, bool)
+ T int CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::FindOrInsert_Internal<unsigned int const&, bool const&>(unsigned int const&, bool const&, CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::ReplaceExisting)
+ T int CUtlHashMap<unsigned int, bool, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
+ T int CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::FindOrInsert_Internal<unsigned int const&, int const&>(unsigned int const&, int const&, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::ReplaceExisting)
+ T int CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>::InsertUnconstructed<unsigned int const&>(unsigned int const&, int*, bool)
+ T int CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::FindOrInsert_Internal<unsigned long long const&, int const&>(unsigned long long const&, int const&, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::ReplaceExisting)
+ T int CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>::InsertUnconstructed<unsigned long long const&>(unsigned long long const&, int*, bool)
+ T int CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::FindOrInsert_Internal<unsigned short const&, int const&>(unsigned short const&, int const&, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::ReplaceExisting)
+ T int CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>::InsertUnconstructed<unsigned short const&>(unsigned short const&, int*, bool)
+ T int CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::FindOrInsert_Internal<vgui::CFontWidthCache::key_t const&, float const&>(vgui::CFontWidthCache::key_t const&, float const&, CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::ReplaceExisting)
+ T int CUtlHashMap<vgui::CFontWidthCache::key_t, float, CDefEquals<vgui::CFontWidthCache::key_t>, HashFunctorUnpaddedStructure<vgui::CFontWidthCache::key_t>, vgui::CFontWidthCache::key_t>::InsertUnconstructed<vgui::CFontWidthCache::key_t const&>(vgui::CFontWidthCache::key_t const&, int*, bool)
+ T int CUtlRBTree<BestMatch_t, int, CDefLess<BestMatch_t>, CDefRBTreeBalanceListener<int>, BestMatch_t>::Insert_Internal<BestMatch_t const&>(BestMatch_t const&, bool)
+ T int CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>::Insert_Internal<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*&&, bool)
+ T int CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>::Insert_Internal<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*&&, bool)
+ T int CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::Insert_Internal<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*&&, bool)
+ T int CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int>, CGameID>::Insert_Internal<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t>(CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Insert_Internal<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t>(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Insert_Internal<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t>(CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::Insert_Internal<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t>(CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, CHTTPImage*, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, int, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, int, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, vgui::CLayoutRegion, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, vgui::IPanelAnimationPropertyConverter*, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, vgui::StyleHandle_t, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Insert_Internal<CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Node_t>(CUtlMap<int, vgui::IImage*, int, CDefLess<int> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Insert_Internal<CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::Node_t>(CUtlMap<int, vgui::Panel*, int, CDefLess<int> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Insert_Internal<CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, int, int, CDefLess<unsigned int> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Insert_Internal<CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t>(CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long>::Insert_Internal<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t>(CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::Insert_Internal<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*&&, bool)
+ T int CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::Insert_Internal<unsigned long long const&>(unsigned long long const&, bool)
+ T int CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int>, void*>::Insert_Internal<void*>(void*&&, bool)
  T int RoundToIntegerType<int>(double, ERoundingMethod)
  T int V_sprintf_safe<1024ul>(char (&) [1024ul], char const*, ...)
  T int V_sprintf_safe<16ul>(char (&) [16ul], char const*, ...)
@@ -11233,30 +11167,12 @@
  T png_warning_parameter_unsigned
  T png_zalloc
  T png_zfree
- T private_AES_set_decrypt_key
- T private_AES_set_encrypt_key
  T protobuf_AddDesc_htmlmessages_2eproto()
  T protobuf_AssignDesc_htmlmessages_2eproto()
  T protobuf_ShutdownFile_htmlmessages_2eproto()
- T rsaz_1024_gather5_avx2
- T rsaz_1024_mul_avx2
- T rsaz_1024_norm2red_avx2
- T rsaz_1024_red2norm_avx2
- T rsaz_1024_scatter5_avx2
- T rsaz_1024_sqr_avx2
- T rsaz_512_gather4
- T rsaz_512_mul
- T rsaz_512_mul_by_one
- T rsaz_512_mul_gather4
- T rsaz_512_mul_scatter4
- T rsaz_512_scatter4
- T rsaz_512_sqr
- T rsaz_avx2_eligible
  T sha1_block_data_order
- T sha1_multi_block
  T sha256_block_data_order
- T sha256_multi_block
- T sha512_block_data_order
+ T short CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned int>::Insert_Internal<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t&&, bool)
  T std::__1::__split_buffer<char const*, std::__1::allocator<char const*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<char const*>&)
  T std::__1::__split_buffer<int, std::__1::allocator<int>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<int>&)
  T std::__1::__split_buffer<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&>::__split_buffer(unsigned long, unsigned long, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >*>&)
@@ -11358,6 +11274,7 @@
  T unsigned int std::__1::__sort5<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T unsigned int std::__1::__sort5<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, int*, int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T unsigned int std::__1::__sort5<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
+ T unsigned short CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::Insert_Internal<CStringPoolIndex const&>(CStringPoolIndex const&, bool)
  T vgui::AnimatingImagePanel::AddImage(vgui::IImage*)
  T vgui::AnimatingImagePanel::AnimatingImagePanel(vgui::Panel*, char const*)
  T vgui::AnimatingImagePanel::ApplySettings(KeyValues*)
@@ -14665,9 +14582,9 @@
  T virtual thunk to std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >::~basic_ostringstream()
  T void CUtlRBTree<BestMatch_t, int, CDefLess<BestMatch_t>, CDefRBTreeBalanceListener<int>, BestMatch_t>::FindInsertionPosition<BestMatch_t>(BestMatch_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::FindInsertionPosition<CStringPoolIndex>(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
- T void CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>::FindInsertionPosition<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >*>(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int> >* const&, bool, int&, bool&, bool&)
- T void CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>::FindInsertionPosition<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >*>(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long> >* const&, bool, int&, bool&, bool&)
- T void CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>::FindInsertionPosition<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >*>(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short> >* const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*, int, CDefLess<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>::FindInsertionPosition<CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>*>(CUtlHashMap<unsigned int, int, CDefEquals<unsigned int>, HashFunctor<unsigned int>, unsigned int>* const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*, int, CDefLess<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>::FindInsertionPosition<CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>*>(CUtlHashMap<unsigned long long, int, CDefEquals<unsigned long long>, HashFunctor<unsigned long long>, unsigned long long>* const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::FindInsertionPosition<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>(CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>* const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t, int, CUtlMap<CGameID, int, int, CDefLess<CGameID> >::CKeyLess, CDefRBTreeBalanceListener<int>, CGameID>::FindInsertionPosition<CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t>(CUtlMap<CGameID, int, int, CDefLess<CGameID> >::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::FindInsertionPosition<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t>(CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::FindInsertionPosition<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t>(CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t const&, bool, int&, bool&, bool&)
@@ -14712,11 +14629,6 @@
  T void std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__push_back_slow_path<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T void std::__1::vector<void (*)(), std::__1::allocator<void (*)()> >::__push_back_slow_path<void (* const&)()>(void (* const&)())
  T void std::__1::vector<void*, std::__1::allocator<void*> >::__push_back_slow_path<void* const&>(void* const&)
- T vpaes_cbc_encrypt
- T vpaes_decrypt
- T vpaes_encrypt
- T vpaes_set_decrypt_key
- T vpaes_set_encrypt_key
  Test_IsActive
  Test_SetFailed
  ThreadGetCurrentId
@@ -15922,8 +15834,6 @@
  t IPC::crc32(unsigned int, void const*, unsigned long)
  t InitStreamLocale(std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >&, ELanguage, long long, ECurrencyCode)
  t K256
- t K256_shaext
- t K512
  t KVJSONParserCallback(void*, int, JSON_value_struct const*)
  t KVJSONParserCreateNewSubNode(KVJSONParserContext_t*, bool)
  t K_XX_XX
@@ -16012,7 +15922,9 @@
  t _GLOBAL__sub_I_client_api.cpp
  t _GLOBAL__sub_I_constants.cpp
  t _GLOBAL__sub_I_controls.cpp
- t _GLOBAL__sub_I_crypto.cpp
+ t _GLOBAL__sub_I_crypto_digest_openssl.cpp
+ t _GLOBAL__sub_I_crypto_passwordhash.cpp
+ t _GLOBAL__sub_I_crypto_scrypt.cpp
  t _GLOBAL__sub_I_crypto_textencode.cpp
  t _GLOBAL__sub_I_descriptor.cc
  t _GLOBAL__sub_I_descriptor.pb.cc
@@ -16026,7 +15938,6 @@
  t _GLOBAL__sub_I_ipcposix.cpp
  t _GLOBAL__sub_I_itemimagemanager.cpp
  t _GLOBAL__sub_I_jpegloader.cpp
- t _GLOBAL__sub_I_keypair.cpp
  t _GLOBAL__sub_I_language.cpp
  t _GLOBAL__sub_I_logfile.cpp
  t _GLOBAL__sub_I_logger.cpp
@@ -16081,76 +15992,17 @@
  t _GLOBAL__sub_I_vgui_controls.cpp
  t _GLOBAL__sub_I_wrappanel.cpp
  t __cxx_global_array_dtor
- t _aesni_set_encrypt_key
- t _bn_post4x_internal
- t _bn_postx4x_internal
- t _bn_sqr8x_internal
- t _bn_sqr8x_reduction
- t _bn_sqrx8x_internal
- t _bn_sqrx8x_reduction
- t _ecp_nistz256_add_toq
- t _ecp_nistz256_add_tox
- t _ecp_nistz256_mul_by_2q
- t _ecp_nistz256_mul_by_2x
- t _ecp_nistz256_mul_montq
- t _ecp_nistz256_mul_montx
- t _ecp_nistz256_sqr_montq
- t _ecp_nistz256_sqr_montx
- t _ecp_nistz256_sub_fromq
- t _ecp_nistz256_sub_fromx
- t _ecp_nistz256_subq
- t _ecp_nistz256_subx
- t _rsaz_512_mul
- t _rsaz_512_mulx
- t _rsaz_512_reduce
- t _rsaz_512_reducex
- t _rsaz_512_subtract
  t access_virt_barray
  t access_virt_sarray
  t add_to_class
  t adjust_recurse
- t aesni_cbc_sha1_enc_avx
- t aesni_cbc_sha1_enc_shaext
- t aesni_cbc_sha1_enc_ssse3
- t aesni_cbc_sha256_enc_avx
- t aesni_cbc_sha256_enc_avx2
- t aesni_cbc_sha256_enc_shaext
- t aesni_cbc_sha256_enc_xop
- t aesni_ctr32_6x
- t aesni_ctr32_ghash_6x
- t aesni_decrypt2
- t aesni_decrypt3
- t aesni_decrypt4
- t aesni_decrypt6
- t aesni_decrypt8
- t aesni_encrypt2
- t aesni_encrypt3
- t aesni_encrypt4
- t aesni_encrypt6
- t aesni_encrypt8
- t aesni_multi_cbc_decrypt_avx
- t aesni_multi_cbc_encrypt_avx
  t alloc_barray
  t alloc_large
  t alloc_sarray
  t alloc_small
  t arith_decode
  t avx2_shortcut
- t avx_cbc_dec_shortcut
- t avx_cbc_enc_shortcut
  t avx_shortcut
- t bn_from_mont8x
- t bn_mul4x_mont
- t bn_mul4x_mont_gather5
- t bn_mulx4x_mont
- t bn_mulx4x_mont_gather5
- t bn_powerx5
- t bn_sqr8x_mont
- t bsaes_const
- t bsaes_decrypt8
- t bsaes_encrypt8
- t bsaes_encrypt8_bitslice
- t bsaes_key_convert
  t check_escape
  t check_posix_syntax
  t color_quantize
@@ -16172,10 +16024,6 @@
  t decompress_onepass
  t decompress_smooth_data
  t dummy_consume_data
- t ecp_nistz256_avx2_select_w5
- t ecp_nistz256_point_add_affinex
- t ecp_nistz256_point_addx
- t ecp_nistz256_point_doublex
  t emit_message
  t error_exit
  t examine_app0
@@ -16209,9 +16057,6 @@
  t match
  t merged_1v_upsample
  t merged_2v_upsample
- t mul4x_internal
- t mul_1x1
- t mulx4x_internal
  t new_color_map_1_quant
  t new_color_map_2_quant
  t next_marker
@@ -16258,19 +16103,10 @@
  t sha1_block_data_order_avx2
  t sha1_block_data_order_shaext
  t sha1_block_data_order_ssse3
- t sha1_multi_block_avx
- t sha1_multi_block_avx2
- t sha1_multi_block_shaext
  t sha256_block_data_order_avx
  t sha256_block_data_order_avx2
  t sha256_block_data_order_shaext
  t sha256_block_data_order_ssse3
- t sha256_multi_block_avx
- t sha256_multi_block_avx2
- t sha256_multi_block_shaext
- t sha512_block_data_order_avx
- t sha512_block_data_order_avx2
- t sha512_block_data_order_xop
  t shaext_shortcut
  t skip_variable
  t ssse3_shortcut
@@ -16316,23 +16152,6 @@
  t void std::__1::__inplace_merge<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, long)
  t void std::__1::__stable_sort<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*, long)
  t void std::__1::__stable_sort_move<vgui::ListPanel::SortList()::$_0&, int*>(int*, int*, vgui::ListPanel::SortList()::$_0&, std::__1::iterator_traits<int*>::difference_type, std::__1::iterator_traits<int*>::value_type*)
- t vpaes_consts
- t vpaes_decrypt_core
- t vpaes_encrypt_core
- t vpaes_preheat
- t vpaes_schedule_192_smear
- t vpaes_schedule_core
- t vpaes_schedule_low_round
- t vpaes_schedule_mangle
- t vpaes_schedule_round
- t vpaes_schedule_transform
- t x86_64_AES_decrypt
- t x86_64_AES_decrypt_compact
- t x86_64_AES_encrypt
- t x86_64_AES_encrypt_compact
- t x86_64_AES_set_encrypt_key
- t x86_64_Camellia_decrypt
- t x86_64_Camellia_encrypt
  t ycc_rgb_convert
  t ycck_cmyk_convert
  time

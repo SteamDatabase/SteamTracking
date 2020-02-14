@@ -209,7 +209,6 @@
 "vgui_Webkit_error_title" "Error"
 "vgui_Webkit_error_header" "Error Code: "
 "vgui_Webkit_pagetypeunsupported" "Unable to load page, unsupported page format"
-"vgui_Webkit_pagetypeunsupported" "Unable to load page, unsupported page format"
 "vgui_Webkit_cachemiss" "Your form request has expired. Click reload to re-submit the form data."
 "vgui_Webkit_badurl" "Unable to load URL, bad hostname or format"
 "vgui_Webkit_connectionproblem" "Unable to connect to server. Server may be offline or you may not be connected to the internet."

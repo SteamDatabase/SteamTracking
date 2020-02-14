@@ -289,6 +289,7 @@
  T RealPrintRawCallStack
  T ReapChildProcesses(int)
  T ReleaseThreadHandle
+ T SecureRandomBytes
  T SetAssertDumpStack
  T SetAssertFailedNotifyFunc
  T SetFlushLogFunc
@@ -494,6 +495,7 @@
  T ThreadTerminateProcessCode
  T ThreadWaitForProcessExit
  T V_pretifymem(float, int, bool)
+ T V_tier0_strncpy
  T ValidateSpew
  T Warning
  T WriteMiniDump
@@ -629,6 +631,7 @@
  b Plat_IsSteamConsoleMode::bInited
  b Plat_IsSteamConsoleMode::bIsSteamConsole
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
+ b SecureRandomBytes::s_dev_urandom_fd
  b SetWritingMiniDump(bool)::fAsserted
  b SteamThreadTools::ThreadShellExecuteInternal(char const*, char const*, char const*, char const*, bool)::bInstalledSignalHandler
  b SteamThreadTools::g_ThreadMainThreadID
@@ -660,6 +663,7 @@
  b guard variable for GetMiniDumpMutex()::ThreadMutexMiniDump
  b guard variable for GetMinidumpsWritten()::s_MinidumpsWritten
  b guard variable for RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
+ b guard variable for SecureRandomBytes::s_dev_urandom_fd
  b guard variable for _SpewMessageType::autoMutex__
  b s_AssertFailedNotifyFunc
  b s_DefaultLevel
@@ -724,6 +728,8 @@
  munmap$UNIX2003
  nanosleep
  nanosleep$UNIX2003
+ open
+ open$UNIX2003
  operator delete(void*)
  operator delete[](void*)
  operator new(unsigned long)
@@ -766,10 +772,15 @@
  pthread_mutexattr_init
  pthread_mutexattr_settype
  pthread_self
+ pthread_setschedparam
  pthread_setspecific
  r SteamVProf::g_ColorLookup
  r crc32(unsigned int, void const*, unsigned long)::s_crc32
+ read
+ read$UNIX2003
  realloc
+ sched_get_priority_max
+ sched_get_priority_min
  sched_yield
  semctl
  semctl$UNIX2003

@@ -66,7 +66,7 @@
  R typeinfo name for CUniformRandomStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
- R typeinfo name for CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>
+ R typeinfo name for CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>
  R typeinfo name for CUtlLinkedList<CCoroutine, int>
  R typeinfo name for CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>
  R typeinfo name for CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >
@@ -79,7 +79,7 @@
  R typeinfo name for CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >
- R typeinfo name for CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlString, CUtlMemory<CUtlString> >
  R typeinfo name for CUtlVector<int, CUtlMemory<int> >
  R typeinfo name for CVStdLibDLLValidate
@@ -209,18 +209,17 @@
  T CUtlCharConversion::FindConversion(StringView, int*)
  T CUtlDict<CUtlString, CDefCaselessStringLess, int>::Insert(StringView, CUtlString&&)
  T CUtlFmtString::CUtlFmtString(char const*, ...)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::AllocNode()
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::CUtlHashMap()
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::EnsureCapacity(int)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::Find(char const* const&) const
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::FindInBucket(int, char const* const&) const
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::IncrementalRehash()
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::InsertOrReplace(char const* const&, bool const&)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::Purge()
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::RehashNodesInBucket(int)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::UnlinkNodeFromBucket(int, int)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::Validate(CValidator&, char const*)
- T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::~CUtlHashMap()
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::AllocNode()
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::CUtlHashMap()
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::EnsureCapacity(int)
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::Find(char const* const&) const
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::FindInBucket(int, char const* const&) const
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::IncrementalRehash()
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::Purge()
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::RehashNodesInBucket(int)
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::UnlinkNodeFromBucket(int, int)
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::Validate(CValidator&, char const*)
+ T CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::~CUtlHashMap()
  T CUtlLinkedList<CCoroutine, int>::AllocInternal(bool)
  T CUtlLinkedList<CCoroutine, int>::Free(int)
  T CUtlLinkedList<CCoroutine, int>::InsertBefore(int)
@@ -235,7 +234,8 @@
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::RemoveAll()
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Unlink(int)
  T CUtlLinkedList<SteamStdLib::CCommandLine::CommandLineParam_t, int>::Validate(CValidator&, char const*)
- T CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Insert(char const* const&, CUtlString&&)
+ T CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Insert(char const*&&, CUtlString&&)
+ T CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t::~Node_t()
  T CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMap<void*, int, int, CDefLess<void*> >::Validate(CValidator&, char const*)
  T CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Validate(CValidator&, char const*)
@@ -254,27 +254,21 @@
  T CUtlNoEscConversion::FindConversion(StringView, int*)
  T CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::RemoveAll()
  T CUtlRBTree<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Find(char const* const&) const
- T CUtlRBTree<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
- T CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert(CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::NewNode(bool)
- T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Insert(CUtlMap<int, int, int, CDefLess<int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::NewNode(bool)
  T CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Find(unsigned int const&) const
- T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Insert(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Find(void* const&) const
- T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Insert(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::NewNode(bool)
  T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Remove(void* const&)
  T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::RemoveAll()
  T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::RemoveAt(int)
  T CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::Find(wchar_t const&) const
- T CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::Insert(CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t&&, bool)
  T CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::NewNode(bool)
  T CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::RemoveAll()
  T CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::Validate(CValidator&, char const*)
@@ -313,10 +307,10 @@
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::Remove(int)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::Validate(CValidator&, char const*)
  T CUtlVector<CCoroutineMgr*, CUtlMemory<CCoroutineMgr*> >::~CUtlVector()
- T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::GrowVector(int)
- T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t const*)
- T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::Validate(CValidator&, char const*)
- T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t> >::GrowVector(int)
+ T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t const*)
+ T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t, CUtlMemory<CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddMultipleToTail(int, CUtlString const*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString const&)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::AddToTail(CUtlString&&)
@@ -642,7 +636,14 @@
  T _strlwr
  T _strupr
  T cIntToHexDigit(int)
- T int CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless>::InsertUnconstructed<char const* const&>(char const* const&, int*, bool)
+ T int CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::FindOrInsert_Internal<char const* const&, bool>(char const* const&, bool&&, CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::ReplaceExisting)
+ T int CUtlHashMap<char const*, bool, CDefCaselessStringEquals, HashFunctorStringCaseless, char const*>::InsertUnconstructed<char const* const&>(char const* const&, int*, bool)
+ T int CUtlRBTree<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t>(CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Insert_Internal<CUtlMap<int, int, int, CDefLess<int> >::Node_t>(CUtlMap<int, int, int, CDefLess<int> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Insert_Internal<CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, bool, int, CDefLess<unsigned int> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t, int, CUtlMap<void*, int, int, CDefLess<void*> >::CKeyLess, CDefRBTreeBalanceListener<int>, void*>::Insert_Internal<CUtlMap<void*, int, int, CDefLess<void*> >::Node_t>(CUtlMap<void*, int, int, CDefLess<void*> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::Insert_Internal<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t>(CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t&&, bool)
  T int SplitNumbers<CUtlVector<int, CUtlMemory<int> > >(char const*, char, CUtlVector<int, CUtlMemory<int> >&)
  T int SplitNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char const*, char, CUtlVector<unsigned int, CUtlMemory<unsigned int> >&)
  T uint128::operator*(uint128)

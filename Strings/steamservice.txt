@@ -2,8 +2,8 @@ x
 __TEXT
 __text
 __TEXT
-A
-A
+=
+=
 __stubs
 __TEXT
 __stub_helper
@@ -15,9 +15,11 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-o
+,p
 __eh_frame
 __TEXT
+"!
+"!
 __DATA
 __got
 __DATA
@@ -30,12 +32,12 @@ __DATA
 __const
 __DATA
 __objc_imageinfo__DATA
-H9&
-H9&
+X9&
+X9&
 __data
 __DATA
-P9&
-P9&
+`9&
+`9&
 __common
 __DATA
 __bss
@@ -47,8 +49,8 @@ __LINKEDIT
 8
 @loader_path/steamservice.dylib
 "
-XK'
-s)
+`K'
+Hs)
 P
 g
 
@@ -74,15 +76,15 @@ h
 &
 p*'
 )
-+yT'
-S'
-@'
-Hi
+`
+$
 '
+'
+'
+'
+'
+Hi
 H=
-&
-&
-&
 10CUtlString
 N10CIPCServer13CThreadClientE
 10CIPCServer
@@ -743,7 +745,7 @@ W
 ,7~5d
 ggen
 @@
-jjjjjjjjjjjjjjjj
+6666666666666666jjjjjjjjjjjjjjjj
 @
 @
 N11SteamStdLib12CCommandLineE
@@ -771,6 +773,9 @@ _12CStdMemAlloc
 0C
 0EN16SteamThreadTools7CThreadE
 Y@
+24CCryptoKeyBase_RawBuffer
+11CRSAKeyBase
+13CRSAPublicKey
 18CBaseFrameFunction
 14CHTTPClientMgr
 10CUtlVectorIP11CHTTPClient10CUtlMemoryIS1_EE
@@ -780,18 +785,14 @@ N10OSXHelpers13CCompatThreadE
 10CUtlVectorI8CNetMask10CUtlMemoryIS0_EE
 14CFrameFunctionI7CJobMgrE
 14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE
-14CCryptoKeyBase
-24CCryptoKeyBase_RawBuffer
-11CRSAKeyBase
-13CRSAPublicKey
 kvsignatures
 kvsign2
-11CUtlHashMapI14CMetricsSymbol10CUtlString10CDefEqualsIS0_E11HashFunctorIS0_EE
-10CUtlVectorIN11CUtlHashMapI14CMetricsSymbol10CUtlString10CDefEqualsIS1_E11HashFunctorIS1_EE12HashBucket_tE10CUtlMemoryIS8_EE
-11CUtlHashMapI14CMetricsSymbolx10CDefEqualsIS0_E11HashFunctorIS0_EE
-10CUtlVectorIN11CUtlHashMapI14CMetricsSymbolx10CDefEqualsIS1_E11HashFunctorIS1_EE12HashBucket_tE10CUtlMemoryIS7_EE
-11CUtlHashMapI14CMetricsSymbold10CDefEqualsIS0_E11HashFunctorIS0_EE
-10CUtlVectorIN11CUtlHashMapI14CMetricsSymbold10CDefEqualsIS1_E11HashFunctorIS1_EE12HashBucket_tE10CUtlMemoryIS7_EE
+11CUtlHashMapI14CMetricsSymbol10CUtlString10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
+10CUtlVectorIN11CUtlHashMapI14CMetricsSymbol10CUtlString10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS8_EE
+11CUtlHashMapI14CMetricsSymbolx10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
+10CUtlVectorIN11CUtlHashMapI14CMetricsSymbolx10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
+11CUtlHashMapI14CMetricsSymbold10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
+10CUtlVectorIN11CUtlHashMapI14CMetricsSymbold10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
 NSt3__110__function6__funcIZN15IMetricsFactory11NullMetricsEvE3$_8NS_9allocatorIS3_EEFvR8CMetricsEEE
 ZN15IMetricsFactory11NullMetricsEvE3$_8
 15IMetricsFactory
@@ -851,9 +852,10 @@ D
 `
 H
 d
-x
-h
 p
+h
+x
+t
 (
 0
 4
@@ -2862,6 +2864,7 @@ id-GostR3411-94-with-GostR3410-2001-cc
 GOST R 34.11-94 with GOST R 34.10-2001 Cryptocom
 id-GostR3410-2001-ParamSet-cc
 GOST R 3410-2001 Parameter Set Cryptocom
+HMAC
 hmac
 LocalKeySet
 Microsoft Local Key set
@@ -6074,13 +6077,14 @@ Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 Assert( %s ):%s:%d
 MacOS
+Frameworks
 crashhandler003
 crashhandler002
 crashhandler.dylib
 CreateInterface
 1.0
-Feb 11 2020
-11:26:31
+Feb 13 2020
+14:00:35
 Jan
 Feb
 Mar
@@ -6098,6 +6102,10 @@ Dec
 CatchAndWriteContext_t::Invoke with bogus argc/argv
 CatchAndWriteContext_t::Invoke with bogus void *ptr
 CatchAndWriteContext_t::Set w/o a function pointer!
+/dev/urandom
+Fatal Assertion Failed: s_dev_urandom_fd >= 0
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
+Fatal Assertion Failed: urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 MainThrd
 pthread_setname_np
 r
@@ -6184,6 +6192,37 @@ TenFoot
 Assertion Failed: m_CounterNames[n]
 Assertion Failed: m_pBudgetGroups
 Assertion Failed: eGroup < VPROF_BUDGETGROUP_MAX
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
+CCrypto::GenerateSHA1Digest
+Assertion Failed: pOutDigest
+Fatal Assertion Failed: SHA1_Init( &c )
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
+Assertion Failed: pubData
+Assertion Failed: rsaKey.IsValid()
+Assertion Failed: pubSignature
+CCrypto::RSAVerifySignature
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
+CCrypto::HexDecode
+Assertion Failed: pchData
+Assertion Failed: pDecodedData
+Assertion Failed: pcubDecodedData
+Assertion Failed: *pcubDecodedData
+CCrypto::HexDecode: insufficient output buffer (input length %u, output size %u)
+CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d
+CCrypto::Base64Encode
+NULL output buffer with non-zero size passed to Base64Encode
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
+CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required, plus linebreaks)
+CCrypto::Base64Decode
+NULL output buffer with non-zero size passed to Base64Decode
+CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
+BEGIN
+END
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keypair.cpp
+Key type %d doesn't know how to load from buffer
+PRIVATE KEY
+Assertion Failed: eKeyType == k_ECryptoKeyTypeRSAPublic
+PUBLIC KEY
 %02d/%02d/%02d
 00:00:00
 01/01/00
@@ -6213,34 +6252,6 @@ Async I/O on closed handle %d
 Closing closed handle %d
 Finalization timeout waiting for processing of %d to complete
 Pipe write failed
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
-Assertion Failed: pubData
-Assertion Failed: rsaKey.IsValid()
-Assertion Failed: pubSignature
-CCrypto::RSAVerifySignature
-CCrypto::GenerateSHA1Digest
-Assertion Failed: pOutDigest
-Fatal Assertion Failed: SHA1_Init( &c )
-CCrypto::GenerateRandomBlock
-Fatal Assertion Failed: cubDest >= 0
-HMAC
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
-CCrypto::HexDecode
-Assertion Failed: pchData
-Assertion Failed: pDecodedData
-Assertion Failed: pcubDecodedData
-Assertion Failed: *pcubDecodedData
-CCrypto::HexDecode: insufficient output buffer (input length %u, output size %u)
-CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d
-CCrypto::Base64Encode
-NULL output buffer with non-zero size passed to Base64Encode
-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
-CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required, plus linebreaks)
-CCrypto::Base64Decode
-NULL output buffer with non-zero size passed to Base64Decode
-CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
-BEGIN
-END
 enums_clientserver.proto
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enums_clientserver.pb.cc
 CHECK failed: file != NULL:
@@ -6366,11 +6377,6 @@ Assertion Failed: m_MapJob[iJob]->GetPauseReason() == k_EJobPauseReasonYield
 Assertion Failed: m_MapJob[iJob]->GetPauseReason() == k_EJobPauseReasonSleepForTime
 CJobMgr::CheckForJobTimeouts
 name
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/keypair.cpp
-Key type %d doesn't know how to load from buffer
-PRIVATE KEY
-Assertion Failed: eKeyType == k_ECryptoKeyTypeRSAPublic
-PUBLIC KEY
 @bEnableSpewThrottle
 1
 @bEnableLogTearOff
@@ -6493,9 +6499,6 @@ COpenSSLContext
 COpenSSLConnection
 OpenSSL random number system reports not enough entropy
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
-/dev/urandom
-Fatal Assertion Failed: s_dev_urandom_fd >= 0
-Fatal Assertion Failed: urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 nBufferCount > %d not supported in %s
 AsyncSocketWrite
@@ -6612,16 +6615,16 @@ Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 UNKNOWN
 Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
+Work thread is marked exited, but we could not immediately join prior to deleting -- proceeding without join
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
-+yT'
-S'
-@'
-Hi
+$
 '
+'
+'
+'
+'
+Hi
 H=
-&
-&
-&
 @
 @
 =
@@ -6633,12 +6636,8 @@ A
 Hc
 =
 N
-y#
-#
-#
-L95^P"
-L958C"
-"
+L95m6"
+N"
 Hc
 ?
 ?
@@ -6966,9 +6965,12 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 
+
+
 3
 3
-L
+N
+
 
 IcE
 I;E
@@ -6993,7 +6995,6 @@ P
 @
 @
 &
-k
 7
 H=
 &
@@ -7004,8 +7005,6 @@ H=
 @
 Hi
 E
-
-
 $
 (
 0
@@ -7044,5 +7043,7 @@ i
 @
 @
 @
-'
+@
+?
+1
 Hi

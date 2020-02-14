@@ -3,7 +3,6 @@ class IClientFriends
 public:
     virtual unknown_ret GetPersonaName() = 0;
     virtual unknown_ret SetPersonaName(char const*) = 0;
-    virtual unknown_ret SetPersonaNameEx(char const*, bool) = 0;
     virtual unknown_ret IsPersonaNameSet() = 0;
     virtual unknown_ret GetPersonaState() = 0;
     virtual unknown_ret SetPersonaState(EPersonaState) = 0;

@@ -44,6 +44,7 @@ public:
     virtual unknown_ret BIsStreamingSessionActive() = 0;
     virtual unknown_ret BIsStreamingSessionActiveForGame(CGameID) = 0;
     virtual unknown_ret BIsStreamingClientConnected() = 0;
+    virtual unknown_ret BStreamingClientWantsRecentGames() = 0;
     virtual unknown_ret StopStreamingSession(unsigned int) = 0;
     virtual unknown_ret LaunchAppResult(unsigned int, ERemoteClientLaunchResult) = 0;
     virtual unknown_ret BIsStreamStartInProgress(unsigned long long, unsigned int) = 0;

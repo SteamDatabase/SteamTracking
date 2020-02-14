@@ -6,7 +6,7 @@
 	</styles>
 
 	<TenfootMsgBox defaultfocus="ButtonOk" tabindex="auto" selectionpos="auto" >
-		<Panel id="MsgBoxBodyRegion" class="MsgBoxBodyRegion" oncancel="SelectionCancelled()">
+		<Panel id="ControllerOrderMsgBoxBodyRegion" class="MsgBoxBodyRegion" oncancel="SelectionCancelled()">
 			<Panel id="MsgBoxHeader" class="MsgBoxHeader">
 				<Label id="MsgBoxTitle" class="MsgBoxTitle" text="#Library_ControllerChangeOrder" />
 			</Panel>

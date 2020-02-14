@@ -5,7 +5,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/clientdirectories.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enum_names.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/enums_clientserver.pb.cc
@@ -50,6 +51,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/memstd.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/minidump.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/validator.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier0/valobject.cpp

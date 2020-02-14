@@ -366,6 +366,7 @@
  T V_snprintf
  T V_strncat_length
  T V_strncpy
+ T V_tier0_strncpy
  T V_vsnprintf
  T WeakRandomUint32
  T WriteMiniDump

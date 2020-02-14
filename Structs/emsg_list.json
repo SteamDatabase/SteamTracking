@@ -2005,16 +2005,6 @@
         "server_type": 45
     },
     {
-        "emsg": 7347,
-        "flags": 2,
-        "server_type": -1
-    },
-    {
-        "emsg": 7348,
-        "flags": 2,
-        "server_type": -1
-    },
-    {
         "emsg": 7360,
         "flags": 6,
         "server_type": 45
@@ -2043,11 +2033,6 @@
         "emsg": 7367,
         "flags": 6,
         "server_type": 45
-    },
-    {
-        "emsg": 7368,
-        "flags": 2,
-        "server_type": -1
     },
     {
         "emsg": 7378,
@@ -2231,16 +2216,6 @@
     },
     {
         "emsg": 8510,
-        "flags": 6,
-        "server_type": 53
-    },
-    {
-        "emsg": 8511,
-        "flags": 6,
-        "server_type": 53
-    },
-    {
-        "emsg": 8512,
         "flags": 6,
         "server_type": 53
     },

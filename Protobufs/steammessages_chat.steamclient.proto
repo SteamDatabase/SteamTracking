@@ -678,6 +678,23 @@ message CChatRoom_UpdateMemberListView_Notification {
 	repeated int32 persona_unsubscribe_accountids = 8;
 }
 
+message CChatRoom_SearchMembers_Request {
+	optional uint64 chat_group_id = 1;
+	optional uint64 search_id = 2 [(description) = "Client-supplied id.  For find-as-you-type searches, as search narrows the server will not return persona states previously returned for a given searchid."];
+	optional string search_text = 3;
+	optional int32 max_results = 4;
+}
+
+message CChatRoom_SearchMembers_Response {
+	message MemberMatch {
+		optional int32 accountid = 1;
+		optional .CMsgClientPersonaState.Friend persona = 2;
+	}
+
+	repeated .CChatRoom_SearchMembers_Response.MemberMatch matching_members = 1;
+	optional uint32 status_flags = 2;
+}
+
 message CClanChatRooms_GetClanChatRoomInfo_Request {
 	optional fixed64 steamid = 1;
 	optional bool autocreate = 2 [default = true, (description) = "Create a default chat room if none has been created before."];
@@ -1086,6 +1103,10 @@ service ChatRoom {
 
 	rpc UpdateMemberListView (.CChatRoom_UpdateMemberListView_Notification) returns (.NoResponse) {
 		option (method_description) = "A client is indicating it has an active view into the members list.";
+	}
+
+	rpc SearchMembers (.CChatRoom_SearchMembers_Request) returns (.CChatRoom_SearchMembers_Response) {
+		option (method_description) = "Search chat room members by name.";
 	}
 }
 

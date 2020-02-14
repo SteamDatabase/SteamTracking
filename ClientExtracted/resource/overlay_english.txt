@@ -232,7 +232,6 @@
 "Overlay_SetScreenshotFolder" "Select external screenshots folder"
 
 
-"Overlay_SetScreenshotFolder" "Select external screenshots folder"
 "Overlay_SetScreenshotFolder_NoDriveRoot" "You may not select the root of a drive"
 "Overlay_SetScreenshotFolder_InvalidFolder" "You must select a valid screenshots folder"
 

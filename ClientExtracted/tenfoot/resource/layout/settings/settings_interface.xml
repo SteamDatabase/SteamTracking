@@ -13,6 +13,7 @@
 					<ToggleButton class="CheckBox NonSteamOSButton" id="SettingsAccount_BPM" text="#SettingsAccount_StartBPM"  onactivate="ToggleInterfaceSetting()" />
 					<ToggleButton class="CheckBox NonSteamOSButton" id="SettingsAccount_Windowed" text="#SettingsAccount_StartWindowed"  onactivate="ToggleInterfaceSetting()" />					
 					<ToggleButton class="CheckBox" id="Settings_OfflineModeShortcutsEnable" text="#SettingsInterface_OfflineModeShortcutsEnable"  onactivate="ToggleInterfaceSetting()" />
+					<ToggleButton class="CheckBox" id="SettingsAccount_TouchMode" text="#SettingsInterface_TouchMode"  onactivate="ToggleInterfaceSetting()" />
           
           <Panel id="SettingsEnableScreenSaverTimePanel" class="SettingsScreensaverPanels SettingsController FlowDown">
 						<Label class="SettingsLabel" text="#SettingsInterface_ScreensaverTimeout" />
