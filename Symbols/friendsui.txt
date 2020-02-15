@@ -9741,6 +9741,7 @@
  T CRemotePlayController::CreateInviteAndSession(char const*, char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetGameSystemVolume(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetPerUserInputSettings(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::IdentifyController(int)
  T CRemotePlayController::Initialize()
  T CRemotePlayController::MoveControllerToSlot(int, int)
  T CRemotePlayController::OnPlaceholderStateChange(PlaceholderStateChanged_t*)
