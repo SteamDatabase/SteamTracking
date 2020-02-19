@@ -47,7 +47,7 @@ function StartCreationSession()
 			}
 			else if ( data.success == 101 )
 			{
-				new Effect.Morph( 'captcha_text', {style: 'border-color: #FF9900', duration: 0.5 } );
+				new Effect.Morph( 'captcha_text', {style: 'border: 1px solid #FF9900', duration: 0.5 } );
 			}
 
 			ShowError( strError );
@@ -68,7 +68,7 @@ function StartCreationSessionParentalConsent()
 	if ( email == '' || !email_regex.test(email) )
 	{
 		strError = 'Please enter a valid email address.<br/>';
-		new Effect.Morph( 'parental_email', {style: 'border-color: #FF9900', duration: 0.5 } );
+		new Effect.Morph( 'parental_email', {style: 'border: 1px solid #FF9900', duration: 0.5 } );
 		ShowError( strError );
 		return;
 	}
@@ -92,7 +92,7 @@ function StartCreationSessionParentalConsent()
                 if ( data.success == 62 )
                 {
                     strError = 'This e-mail address must be different from your own.';
-                    new Effect.Morph( 'parental_email', {style: 'border-color: #FF9900', duration: 0.5 } );
+                    new Effect.Morph( 'parental_email', {style: 'border: 1px solid #FF9900', duration: 0.5 } );
                 }
                 else if ( data.success == 13 )
                 {
@@ -104,7 +104,7 @@ function StartCreationSessionParentalConsent()
                 }
                 else if ( data.success == 101 )
 				{
-					new Effect.Morph( 'captcha_text', {style: 'border-color: #FF9900', duration: 0.5 } );
+					new Effect.Morph( 'captcha_text', {style: 'border: 1px solid #FF9900', duration: 0.5 } );
 				}
 
 				ShowError( strError );
@@ -234,7 +234,7 @@ function FinishFormVerification( bCaptchaIsValid )
 		email: false,
 		reenter_email: false,
 		captcha_text: false,
-		ssa_body: false
+		ssa_box: false
 	}
 
 	var email = $('email').value;
@@ -272,16 +272,16 @@ function FinishFormVerification( bCaptchaIsValid )
 		if ( !ssa_check.checked )
 		{
 			errorString += 'You must agree to the Steam Subscriber Agreement to continue.<br/>';
-			rgBadFields.ssa_body = true;
+			rgBadFields.ssa_box = true;
 		}
 	}
 
 		for ( var key in rgBadFields )
 	{
 		if ( rgBadFields[key] )
-			new Effect.Morph( key, {style: 'border-color: #FF9900', duration: 0.5 } )
+			$J( '#' + key ).css( 'border', '1px solid #FF9900' );
 		else
-			$(key).style.borderColor = '#82807C';
+			$(key).style.border = 'none';
 	}
 
 		if ( errorString != '' )
@@ -378,7 +378,6 @@ function ParentalConsentRequested()
 
 	$J( '.insert_verification_email' ).text( $J( '#email' ).val() );
 	$strDialogContent.show();
-	g_parentalConsentDialog.SetRemoveContentOnDismissal( false );
 	g_parentalConsentDialog.AdjustSizing();
 }
 
@@ -457,7 +456,7 @@ function AccountPasswordFormVerification(  )
 		for ( var key in rgBadFields )
 	{
 		if ( rgBadFields[key] )
-			new Effect.Morph( key, {style: 'border-color: #FF9900', duration: 0.5 } )
+			new Effect.Morph( key, {style: 'border: 1px solid #FF9900', duration: 0.5 } )
 		else
 			$(key).style.borderColor = '#82807C';
 	}
@@ -594,15 +593,15 @@ function CheckAccountNameAvailability()
 
 	      	if ( result && result.bAvailable )
 	      	{
-	      	  span.innerHTML = 'Available!';
-	      	  span.style.color = "#6C8942";
+	      	  span.innerHTML = 'Available';
+	      	  span.style.color = "#7ABF08";
 	      	  $('form_row_choose_suggested_name').style.display = 'none';
 	      	  g_bAccountNameAvailable = true;
 	      	}
 	      	else
 	      	{
-	      	  span.innerHTML = 'Not available!';
-	      	  span.style.color = "#FF7B00";
+	      	  span.innerHTML = 'Not Available';
+	      	  span.style.color = "#DE3F3F";
 	      	  g_bAccountNameAvailable = false;
 	      	  if ( result.rgSuggestions.length > 0 )
 	      	  {
@@ -676,6 +675,7 @@ function SetPasswordTag( strTagID, strClass, strText )
 {
 	if ( strText.length == 0 )
 	{
+		$J( strTagID ).hide();
 		$J( strTagID ).removeClass( 'visible' );
 		return;
 	}
@@ -684,6 +684,7 @@ function SetPasswordTag( strTagID, strClass, strText )
 	$J( strTagID ).removeClass( 'error warning' );
 	$J( strTagID ).addClass( strClass );
 	$J( strTagID ).addClass( 'visible' );
+	$J( strTagID ).show();
 }
 
 function CheckPasswordAvail()

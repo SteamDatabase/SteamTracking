@@ -283,6 +283,7 @@ body{
 
 .landingPartnerName button {
 	margin-left: 15px;
+    vertical-align: bottom;
 }
 
 /* Utility styles */
@@ -1398,6 +1399,7 @@ span.icon_star { display: inline-block;}
 span.icon_actual_authority { display: inline-block;}
 .icon_finances.user_pub_rights { width: 13px; height: 12px; background-position: center center; background-repeat: no-repeat;}
 span.icon_finances.user_pub_rights { display: inline-block; }
+.icon_email.user_pub_rights { background-position: center center; background-repeat: no-repeat; }
 
 .icon_edit.icon_inline,
 .icon_download.icon_inline
@@ -2753,6 +2755,10 @@ ul.transfer_rights li {
 	background-color: #47218a;
 }
 
+.cdkey_request.priority {
+	border-left: 3px solid #FFFF00;
+}
+
 .cdkey_request:hover {
 	background-color: #4d4d4d;
 }
@@ -3002,8 +3008,8 @@ div .cdkey_request_details_row
 	color: #fff;
 }
 
-#requestkeys_table td {
-	padding: 2px 6px 2px 6px;
+#requestkeys_table td,th {
+	padding: 4px 6px 4px 6px;
 }
 
 #requestkeys_table .packageTagsArrow {
@@ -3013,10 +3019,6 @@ div .cdkey_request_details_row
 #requestkeys_table tr.checkerboard1,
 #legend_table tr.checkerboard1{
 	background: #385a88;
-}
-
-#requestkeys_table tr.claimed{
-	background-color: #47218a;
 }
 
 #legend_table td {

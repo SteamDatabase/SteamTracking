@@ -378,6 +378,10 @@ html.responsive body {
 	vertical-align: middle;
 }
 
+.responsive_header .responsive_header_logo a {
+	display: inline-block;
+}
+
 .localmenu_content {
 	padding: 16px;
 }

@@ -1341,40 +1341,6 @@ td.wht_total {
 	margin-top: -2px;
 }
 
-.newaccount_email_verified_container {
-	text-align: center;
-	background: rgba( 0, 0, 0, 0.2 );
-	padding: 30px;
-}
-
-.newaccount_email_verified_header {
-	color: #5eafde;
-	font-size: 30px;
-	padding-top: 40px;
-}
-
-.newaccount_email_verified_ruler {
-	border-bottom: 1px solid #FFF;
-	margin: 20px auto;
-	width: 80%;
-	height: 0;
-	padding: 0;
-	text-align: center;
-}
-
-.newaccount_email_verified_text {
-	font-size: 18px;
-}
-
-.newaccount_email_verified_text.error {
-	color: #ff7b00;
-}
-
-.newaccount_email_verified_note {
-	margin-top: 30px;
-	font-size: 12px;
-}
-
 .opt_out_description {
 	font-size: 12px;
 	padding-left: 17px;

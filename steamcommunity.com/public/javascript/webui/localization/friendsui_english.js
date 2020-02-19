@@ -555,10 +555,20 @@ LocalizationReady("friendsui", "english", {
     "%1$s changed the group chat avatar",
   ChatRoom_ServerMessage_Invited: "%1$s has been invited by %2$s",
   ChatRoom_ServerMessage_Invited_Multiple: "%1$s have been invited by %2$s",
-  ChatRoom_ServerMessage_Joined: "%1$s has joined the chat",
-  ChatRoom_ServerMessage_Joined_Multiple: "%1$s and %2$s have joined the chat",
-  ChatRoom_ServerMessage_Parted: "%1$s has left the chat",
-  ChatRoom_ServerMessage_Parted_Multiple: "%1$s and %2$s have left the chat",
+  ChatRoom_ServerMessage_Joined: "%1$s joined the chat",
+  ChatRoom_ServerMessage_Joined_Multiple: "%1$s and %2$s joined the chat",
+  ChatRoom_ServerMessage_Joined_Number: "%1$s people joined the chat",
+  ChatRoom_ServerMessage_Parted: "%1$s left the chat",
+  ChatRoom_ServerMessage_Parted_Multiple: "%1$s and %2$s left the chat",
+  ChatRoom_ServerMessage_Parted_Number: "%1$s people left the chat",
+  ChatRoom_ServerMessage_SingleJoined_SingleParted:
+    "%1$s joined the chat and %2$s left the chat",
+  ChatRoom_ServerMessage_SingleJoined_MultipleParted:
+    "%1$s joined the chat and %2$s people left the chat",
+  ChatRoom_ServerMessage_MultipleJoined_SingleParted:
+    "%1$s people joined the chat and %2$s left the chat",
+  ChatRoom_ServerMessage_MultipleJoined_MultipleParted:
+    "%1$s people joined the chat and %2$s people left the chat",
   ChatRoom_ServerMessage_Kicked: "%1$s was kicked from the chat by %2$s",
   ChatRoom_ServerMessage_Unhandled: "Unknown Server Message format",
   ChatRoom_ServerMessageMultiple_Separator: ", ",
@@ -789,6 +799,22 @@ LocalizationReady("friendsui", "english", {
     "There was a problem removing %1$s from your friends list.",
   Friend_CancelInvitation_Error:
     "There was a problem canceling your invitation to %1$s.",
+
+  Friend_InviteError_LimitExceeded:
+    "%1$s cannot be added to your friends list as your friends list is full.",
+  Friend_InviteError_AccessDenied:
+    "There was an error adding %1$s to your friends list. Their friends list is full.",
+  Friend_InviteError_Blocked:
+    "There was an error adding %1$s to your friends list. Communication between you and this user has been blocked.",
+  Friend_InviteError_InvalidState:
+    "You are blocking all communication with %1$s. Before communicating with this user, you must unblock them by visiting their Steam Community Profile.",
+  Friend_InviteError_RateLimitExceeded:
+    "It looks like you've sent too many friend invites recently. To prevent spam, you'll have to wait before you can invite more friends. Please note that other players can still add you during this time.",
+  Friend_InviteError_LimitedUser:
+    "Your account does not meet the requirements to use this feature.",
+  Friend_InviteError_LimitedUserLink:
+    "Your account does not meet the requirements to use this feature. %1$s for more information.",
+  Friend_InviteError_VisitSteamSupport: "Visit Steam Support",
 
   Friend_IgnoreIncomingInvite_Success:
     "The friend request from %1$s has been ignored.",

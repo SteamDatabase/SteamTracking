@@ -5886,13 +5886,20 @@
             (t.prototype.set_friend_relationship = function(e) {
               s.Message.setField(this, 2, e);
             }),
+            (t.prototype.result = function() {
+              return s.Message.getField(this, 3);
+            }),
+            (t.prototype.set_result = function(e) {
+              s.Message.setField(this, 3, e);
+            }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
             (t.toObject = function(e, t) {
               var i = {
                 invite_sent: s.Message.getField(t, 1),
-                friend_relationship: s.Message.getField(t, 2)
+                friend_relationship: s.Message.getField(t, 2),
+                result: s.Message.getField(t, 3)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -5910,6 +5917,9 @@
                   case 2:
                     e.set_friend_relationship(t.readUint32());
                     break;
+                  case 3:
+                    e.set_result(t.readInt32());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -5924,7 +5934,8 @@
               var i;
               void 0 !== (i = s.Message.getField(e, 1)) && t.writeBool(1, i),
                 void 0 !== (i = s.Message.getField(e, 2)) &&
-                  t.writeUint32(2, i);
+                  t.writeUint32(2, i),
+                void 0 !== (i = s.Message.getField(e, 3)) && t.writeInt32(3, i);
             }),
             (t.prototype.getClassName = function() {
               return "CPlayer_AddFriend_Response";
@@ -6823,6 +6834,18 @@
             (t.prototype.set_seconds_today = function(e) {
               s.Message.setField(this, 3, e);
             }),
+            (t.prototype.is_steamchina_account = function() {
+              return s.Message.getField(this, 4);
+            }),
+            (t.prototype.set_is_steamchina_account = function(e) {
+              s.Message.setField(this, 4, e);
+            }),
+            (t.prototype.is_age_verified = function() {
+              return s.Message.getField(this, 5);
+            }),
+            (t.prototype.set_is_age_verified = function(e) {
+              s.Message.setField(this, 5, e);
+            }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
@@ -6830,7 +6853,9 @@
               var i = {
                 is_enabled: s.Message.getField(t, 1),
                 seconds: s.Message.getField(t, 2),
-                seconds_today: s.Message.getField(t, 3)
+                seconds_today: s.Message.getField(t, 3),
+                is_steamchina_account: s.Message.getField(t, 4),
+                is_age_verified: s.Message.getField(t, 5)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -6851,6 +6876,12 @@
                   case 3:
                     e.set_seconds_today(t.readInt32());
                     break;
+                  case 4:
+                    e.set_is_steamchina_account(t.readBool());
+                    break;
+                  case 5:
+                    e.set_is_age_verified(t.readBool());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -6865,7 +6896,9 @@
               var i;
               void 0 !== (i = s.Message.getField(e, 1)) && t.writeBool(1, i),
                 void 0 !== (i = s.Message.getField(e, 2)) && t.writeInt32(2, i),
-                void 0 !== (i = s.Message.getField(e, 3)) && t.writeInt32(3, i);
+                void 0 !== (i = s.Message.getField(e, 3)) && t.writeInt32(3, i),
+                void 0 !== (i = s.Message.getField(e, 4)) && t.writeBool(4, i),
+                void 0 !== (i = s.Message.getField(e, 5)) && t.writeBool(5, i);
             }),
             (t.prototype.getClassName = function() {
               return "CPlayer_GetDurationControl_Response";

@@ -150,7 +150,12 @@ LocalizationReady("shared", "english", {
   EventCalendar_ThisMonth: "this month",
   EventCalendar_MuchLater: "much later",
   EventCalendar_MuteApp: "Mute App",
+  EventCalendar_MuteApp_ttip:
+    "Remove this game from your calendar and block future communications.",
+  EventCalendar_MuteApp_details:
+    "Remove '%1$s' from appearing in your calendar and all block future communications. Muted content decisions are always reverseable by visiting this page:",
   EventCalendar_ManageMutedApps: "Manage Muted Apps",
+  EventCalendar_MuteApp_Unknown: "Unknown",
 
   EventCalendar_EventTypeGroup_news: "News",
   EventCalendar_EventTypeGroup_ttip_news: "Include general news",
@@ -192,6 +197,8 @@ LocalizationReady("shared", "english", {
     "This is a game we think you would like",
 
   EventDisplay_Admin_Title: "Admin tools:",
+  EventDisplay_ViewInLibrary: "View in Library",
+  EventDisplay_ViewStorePage: "View Store Page",
 
   EventDisplay_CallToAction_LearnMore: "Learn More",
   EventDisplay_CallToAction_InLibrary: "In Library",
@@ -1121,6 +1128,9 @@ LocalizationReady("shared", "english", {
     "Stealthy Snake had little interest in a long-distance effort, so it wrapped itself unnoticed around Horse's front hoof.\n\nAs Horse galloped towards the finish line, Snake uncoiled, startling the steed just long enough to slither into sixth—with the skittish Horse trotting close behind.",
   Lunar2020_StoryDayFour:
     "Goat, Monkey, and Rooster worked together, but let Goat claim eighth as the backbone of their journey. Cheerful Monkey was next, and the strutting Rooster crossed tenth, proud that the order was fair.\n\nPlayful Dog was mostly interested in splashing around, feeling eleventh a fine trade for all the fun.\n\nLast came Pig, who'd stopped for a snack n' a snooze—wise enough to know that each animal will have their time in the Emperor's favor.",
+
+  Legal_Footer_WithYear:
+    "© %1$s Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.",
 
   shared_dummy: "dont translate"
 });

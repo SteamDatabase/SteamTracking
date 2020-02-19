@@ -982,7 +982,7 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 	background: rgba( 255, 255, 255, 0.1);
 }
 .browse_content .recommendation .recommendation_link {
-    flex-grow: 1;
+    flex-grow: 0;
 }
 
 .browse_content .recommendation .recommendation_midcol {
@@ -1213,6 +1213,22 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 	margin-top: 4px;
 	font-size: 12px;
 	line-height: 14px;
+    font-weight: normal;
+    position: relative;
+}
+.recommendation_desc:before {
+    content: '“';
+    font-size: 34px;
+    position: absolute;
+    left: -11px;
+    top: 4px;
+    color: rgba(255, 255, 255, 0.4);
+}
+.recommendation_desc:after {
+    content: '”';
+    font-size: 24px;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .recommendation_readmore {
