@@ -1,3 +1,4 @@
+h
 __TEXT
 __text
 __TEXT
@@ -16,9 +17,10 @@ __eh_frame
 __TEXT
 __DATA
 0
-__got
-__DATA
+
 __nl_symbol_ptr
+__DATA
+__got
 __DATA
 __la_symbol_ptr
 __DATA
@@ -27,6 +29,10 @@ __DATA
 __const
 __DATA
 __data
+__DATA
+__thread_vars
+__DATA
+__thread_bss
 __DATA
 __bss
 __DATA
@@ -1166,6 +1172,7 @@ D
 
 =
 @
+i
 @
 @
 @
@@ -1174,8 +1181,5 @@ D
 @
 @
 @
-X
-v
-v
-c
-c
+~
+]
