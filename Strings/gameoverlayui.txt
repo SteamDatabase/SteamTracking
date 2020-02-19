@@ -1,16 +1,16 @@
 !
 __TEXT
-5
-5
 __text
 __TEXT
-D,$
+@w
+@w
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __cstring
 __TEXT
+h
 __gcc_except_tab__TEXT
 __const
 __TEXT
@@ -20,17 +20,13 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
+0*,
+0*,
 __DATA
-5
-5
 __nl_symbol_ptr
 __DATA
-5
-5
 __got
 __DATA
-5
-5
 __la_symbol_ptr
 __DATA
 0
@@ -47,24 +43,29 @@ __objc_classrefs__DATA
 x
 __data
 __DATA
+__thread_vars
+__DATA
+__thread_bss
+__DATA
+QI
 __bss
 __DATA
-qA
+UI
+q=
 __common
 __DATA
 H
 __LINKEDIT
-PI
+`I
 
 @
 @loader_path/gameoverlayui.dylib
 "
-PI
-P~I
-xY
+`I
+zY
 P
-3W
-3W
+4W
+4W
 _
 
 8
@@ -2107,7 +2108,6 @@ Friends.InGameColor
 Friends.OnlineColor
 Friends.OfflineColor
 Friends.GoldenColor
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/FriendsImageManager.cpp
 common/name
 Invalid image panel position %d %d
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/vgui_controls/Image.h
@@ -3603,8 +3603,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Feb 14 2020
-17:19:34
+Feb 18 2020
+14:42:43
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -7216,11 +7216,14 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-^(&
-v(&
-2$
+y<&
+N8&
+f8&
 $
 $
+$
+$
+$
 @
 @
 @
@@ -7230,6 +7233,12 @@ $
 @
 @
 @
+@
+@
+@
+@
+$
+$
 $
 $
 $
@@ -7240,34 +7249,37 @@ $
 p
 p
 0
-XH
-H
+y#
 "
+{"
+l#
+P?
 #
-;#
+,#
 3
-3
-0G
 !
 !
 !
 0
 p
-n"
 "
 "
+I2
 "
-0>
+:>
 "
-(!
-@!
+t!
+W!
+U!
+1
 !
 !
+u!
 1
 1
 1
 d
-(
+c
 
 
 
@@ -7305,20 +7317,20 @@ p
 p
 p
 p
+0
 0
 /
 @
 =
 
 0
-g>
 9
-h<
-f=
+<
 Hi
 C
 C
 C
+N>
 0
 p
 I
@@ -7330,17 +7342,18 @@ $
 =
 @
 @
-2
 ?
 ?
 A
 Hc
 =
+V
 ?
 ?
-?
-0
-L95`Y>
+L95Vf>
+L950Y>
+/
+/
 Hc
 ?
 ?
@@ -7357,7 +7370,6 @@ Hc
 ?
 ?
 ?
-4;
 SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 i[
 i[
@@ -7383,6 +7395,7 @@ HcU
 #
 i[
 ~
+%
 B
 ?
 @
@@ -7401,7 +7414,6 @@ C
 P
 8
 5
-9
 U
 HcE
 HcE
@@ -7469,7 +7481,6 @@ P
 tC=_
 t<=
 0
-#
 p
 0
 p
@@ -7516,33 +7527,42 @@ P
 @
 |
 |
-66
+6
+6
+6
+6
+6
 "
+"6
 3
 D
 6
 6
 6
 '
+'
 @
-'5
 &
 &
 &
-J4
-&
-14
+94
 4
 4
 4
+%
+b$
+2
+2
+
 #
-i#
-1
+L95
+8#
+(#
 d
 
+'
 W
-3"
-&
+g
 
 
 
@@ -7555,6 +7575,7 @@ W
 
 &
 &
+^!
 t=
 =
 =
@@ -7565,17 +7586,14 @@ uV%
 
 (
 (
-A+
 E
 
 
-=*
 
-i(
 @
 (
 (
-l(
+D(
 @
 @
 &
@@ -7614,6 +7632,7 @@ l(
 @
 @
 @
+$'
 .
 .
 .
@@ -7621,6 +7640,10 @@ l(
 .
 .
 d
+'
+'
+'
+'
 '
 '
 '
@@ -7631,6 +7654,7 @@ d
 d
 =
 
+Z&
 =
 @
 =

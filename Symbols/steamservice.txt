@@ -3856,6 +3856,7 @@
  __tolower
  _dispatch_source_type_read
  _exit
+ _tlv_bootstrap
  abort
  accept
  alphasort$INODE64
@@ -4143,7 +4144,6 @@
  b s_objNullSendOp
  b s_pFileName
  b s_pSpewGroups
- b selectBuf
  b sm_bAssertDumpStack
  b ssl_cipher_methods
  b ssl_digest_methods
@@ -4274,6 +4274,7 @@
  d X9_62_FIELDID_adbtbl
  d X9_62_FIELDID_seq_tt
  d X9_62_PENTANOMIAL_seq_tt
+ d _ZL9selectBuf$tlv$init
  d _bignum_nist_p_224
  d _bignum_nist_p_521
  d aes_128_cbc
@@ -4420,6 +4421,7 @@
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  d s_pUniformStream
+ d selectBuf
  d sha1_md
  d sha224_md
  d sha256_md

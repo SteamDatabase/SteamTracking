@@ -5686,7 +5686,7 @@
  T CFriendsImageManager::CFriendsImageManager()
  T CFriendsImageManager::ClearImages()
  T CFriendsImageManager::GetOverlayImageForPersonaState(EPersonaState, bool, int)
- T CFriendsImageManager::GetVGuiImageForSteamImage(int)
+ T CFriendsImageManager::GetVGuiImageForSteamImage(int, int, int)
  T CFriendsImageManager::LoadSchemeColors()
  T CFriendsImageManager::Validate(CValidator&, char const*)
  T CFriendsImageManager::~CFriendsImageManager()
@@ -14734,6 +14734,7 @@
  __stack_chk_guard
  __stderrp
  __tolower
+ _tlv_bootstrap
  abort
  alphasort$INODE64
  atoi
@@ -15248,7 +15249,6 @@
  b s_pSortContext
  b s_pWrapPanelSorting
  b s_pfnBootstrapperVersion
- b selectBuf
  b vec2_invalid
  b vec2_origin
  b vgui::EditablePanel::GetControlString(char const*, char const*)::buf
@@ -15312,6 +15312,7 @@
  d .memset_pattern
  d GetShowFPSCornerOption(int)::k_rgShowFPSCorner
  d VTT for (anonymous namespace)::ScrollBarButton
+ d _ZL9selectBuf$tlv$init
  d boolconverter
  d colorconverter
  d construction vtable for vgui::Button-in-(anonymous namespace)::ScrollBarButton
@@ -15338,6 +15339,7 @@
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  d s_rgchWGAuthedURLs
+ d selectBuf
  d stringconverter
  d textureidconverter
  d typeinfo for (anonymous namespace)::ScrollBarButton

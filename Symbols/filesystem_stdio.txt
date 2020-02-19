@@ -382,6 +382,7 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
+ _tlv_bootstrap
  alphasort$INODE64
  b CUtlSymbol::Initialize()::symbolsInitialized
  b g_CleanupSymbolTable
@@ -389,10 +390,11 @@
  b s_FSTargetParam
  b s_LogBinsParam
  b s_pScratchFileName
- b selectBuf
  chmod
+ d _ZL9selectBuf$tlv$init
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
+ d selectBuf
  dlclose
  dlopen
  dlsym

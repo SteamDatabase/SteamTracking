@@ -9148,6 +9148,7 @@
  __stack_chk_guard
  __stderrp
  __tolower
+ _tlv_bootstrap
  alphasort$INODE64
  atoi
  atoll
@@ -9601,7 +9602,6 @@
  b s_netadrResolveCache
  b s_netadrResolveCacheCounter
  b s_netadrResolveCacheMutexEnforceConstruction
- b selectBuf
  b vec2_invalid
  b vec2_origin
  b vgui::EditablePanel::GetControlString(char const*, char const*)::buf
@@ -9654,6 +9654,7 @@
  closedir
  cos
  d VTT for (anonymous namespace)::ScrollBarButton
+ d _ZL9selectBuf$tlv$init
  d boolconverter
  d colorconverter
  d construction vtable for vgui::Button-in-(anonymous namespace)::ScrollBarButton
@@ -9667,6 +9668,7 @@
  d p_intconverter
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
+ d selectBuf
  d stringconverter
  d textureidconverter
  d typeinfo for (anonymous namespace)::ScrollBarButton

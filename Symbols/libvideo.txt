@@ -6510,6 +6510,7 @@
  _dispatch_source_type_read
  _dispatch_source_type_write
  _exit
+ _tlv_bootstrap
  abort
  accept
  accept$UNIX2003
@@ -6891,7 +6892,6 @@
  b s_pManager
  b s_pSpewGroups
  b savsig
- b selectBuf
  b sm_bAssertDumpStack
  b ssl_cipher_methods
  b ssl_digest_methods
@@ -7124,6 +7124,7 @@
  d X9_62_FIELDID_adbtbl
  d X9_62_FIELDID_seq_tt
  d X9_62_PENTANOMIAL_seq_tt
+ d _ZL9selectBuf$tlv$init
  d _bignum_nist_p_224
  d _bignum_nist_p_521
  d aes_128_cbc
@@ -7293,6 +7294,7 @@
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  d s_pUniformStream
+ d selectBuf
  d sha1_md
  d sha224_md
  d sha256_md

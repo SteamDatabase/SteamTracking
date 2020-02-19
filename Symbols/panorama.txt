@@ -16655,6 +16655,7 @@
  __vsnprintf_chk
  _dispatch_source_type_read
  _exit
+ _tlv_bootstrap
  abort
  acos
  alphasort$INODE64
@@ -17788,7 +17789,6 @@
  b s_objNullSendOp
  b s_unKeyCodeToKey
  b s_unVirtualKeyToKeyCode
- b selectBuf
  b texturetolinear
  b v8::base::(anonymous namespace)::g_hard_abort
  b v8::base::TimeTicks::HighResolutionNow()::info
@@ -17823,6 +17823,7 @@
  d TRstdEnt
  d TRxmlDecl
  d TRxmlTok
+ d _ZL9selectBuf$tlv$init
  d arrControllers
  d g_bCatchExceptionsInCallbacks
  d k_analogToAction
@@ -17848,6 +17849,7 @@
  d s_flMatrixIdentity
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
+ d selectBuf
  d typeinfo for IMetricsFactory::NullMetrics()::$_8
  d typeinfo for std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>
  d vtable for std::__1::__function::__func<IMetricsFactory::NullMetrics()::$_8, std::__1::allocator<IMetricsFactory::NullMetrics()::$_8>, void (CMetrics&)>

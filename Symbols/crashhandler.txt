@@ -451,6 +451,7 @@
  __umoddi3
  _dyld_get_image_name
  _exit
+ _tlv_bootstrap
  alphasort$INODE64
  atoi
  b AssertMsgImplementation::s_ThreadLocalAssertMsgGuardStatic
@@ -510,7 +511,6 @@
  b s_bSetSigHandler
  b s_pFileName
  b s_pSpewGroups
- b selectBuf
  b sm_bAssertDumpStack
  backtrace
  backtrace_symbols
@@ -520,11 +520,13 @@
  d CHandlerContext::Init(char const*, char const*, char const*, char const*, void*, void (*)(void*))::keys
  d GetOSType::eOSVersion
  d TestForAppleGraphicsUpdateInstalled()::attribs
+ d _ZL9selectBuf$tlv$init
  d g_CrashHandlerSingleton
  d s_SpewOutputFunc
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
  d s_pUniformStream
+ d selectBuf
  dladdr
  dlclose
  dlopen

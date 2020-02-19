@@ -282,7 +282,7 @@
 	position: absolute;
 }
 
-.miniprofile_gamesection .game_details {
+.miniprofile_gamesection .miniprofile_game_details {
 	display: flex;
 	flex-direction: column;
 
@@ -292,13 +292,13 @@
 	align-self: center;
 }
 
-.miniprofile_gamesection .game_details .game_state,
-.miniprofile_gamesection .game_details .rich_presence {
+.miniprofile_gamesection .miniprofile_game_details .game_state,
+.miniprofile_gamesection .miniprofile_game_details .rich_presence {
 	font-size: 12px;
 	color: rgb( 98, 129, 59 );
 }
 
-.miniprofile_gamesection .game_details .game_name {
+.miniprofile_gamesection .miniprofile_game_details .miniprofile_game_name {
 	color: #90ba3c;
 }
 

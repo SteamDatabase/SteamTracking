@@ -4960,6 +4960,8 @@
  T BN_value_one
  T BParseOpenDevTools(CUtlString*, unsigned int*, CUtlString*, char const*)
  T BParsePEMHeaderOrFooter(char const*&, char const*, char const*, char const*)
+ T BResizeImageInternal(CUtlBuffer&, int, int, int&, int&, bool, bool)
+ T BResizeImageRGBA(CUtlBuffer&, int, int, int&, int&, bool)
  T BUF_MEM_grow_clean
  T BUF_memdup
  T BUF_reverse
@@ -6738,7 +6740,7 @@
  T CFriendsImageManager::CreateCompositeVGuiImageForAvatar(int, EPersonaState, bool, int)
  T CFriendsImageManager::GetColorForPersonaState(EPersonaState, bool, int)
  T CFriendsImageManager::GetOverlayImageForPersonaStateRelationship(EPersonaState, bool, EFriendRelationship, int)
- T CFriendsImageManager::GetVGuiImageForSteamImage(int)
+ T CFriendsImageManager::GetVGuiImageForSteamImage(int, int, int)
  T CFriendsImageManager::LoadSchemeColors()
  T CFriendsImageManager::Validate(CValidator&, char const*)
  T CFriendsImageManager::~CFriendsImageManager()
@@ -10009,6 +10011,7 @@
  T CUtlBuffer::SeekGet(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SeekPut(CUtlBuffer::SeekType_t, int)
  T CUtlBuffer::SetBufferType(bool, bool)
+ T CUtlBuffer::Swap(CUtlBuffer&)
  T CUtlBuffer::VaScanf(char const*, __va_list_tag*)
  T CUtlCStringConversion::CUtlCStringConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCStringConversion::FindConversion(StringView, int*)
@@ -10297,6 +10300,7 @@
  T CUtlMemoryBase::IsExternallyAllocated() const
  T CUtlMemoryBase::NumAllocated() const
  T CUtlMemoryBase::Purge()
+ T CUtlMemoryBase::Swap(CUtlMemoryBase&)
  T CUtlMemoryBase::Validate(CValidator&, char const*)
  T CUtlMemoryBase::~CUtlMemoryBase()
  T CUtlNoEscConversion::FindConversion(StringView, int*)
@@ -16234,6 +16238,7 @@
  __stack_chk_guard
  __stderrp
  __tolower
+ _tlv_bootstrap
  abort
  alphasort$INODE64
  atexit
@@ -16769,7 +16774,6 @@
  b s_netadrResolveCache
  b s_netadrResolveCacheMutexEnforceConstruction
  b s_pfnBootstrapperVersion
- b selectBuf
  b ssl_cipher_methods
  b ssl_digest_methods
  b ssl_mac_secret_size
@@ -16960,6 +16964,7 @@
  d X9_62_FIELDID_adbtbl
  d X9_62_FIELDID_seq_tt
  d X9_62_PENTANOMIAL_seq_tt
+ d _ZL9selectBuf$tlv$init
  d _bignum_nist_p_224
  d _bignum_nist_p_521
  d aes_128_cbc
@@ -17121,6 +17126,7 @@
  d s_EControllerType
  d s_pConversionArrays_NoEscConversion
  d s_pConversionArrays_StringCharConversion
+ d selectBuf
  d sha1_md
  d sha224_md
  d sha256_md

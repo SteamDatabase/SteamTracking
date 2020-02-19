@@ -13,7 +13,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamid.cpp
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/steamui/FriendsImageManager.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/external/protobuf-2.6.1/src/google/protobuf/repeated_field.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/AppDownloadNotification.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/friendsUI/ChatRoomDlg.cpp
