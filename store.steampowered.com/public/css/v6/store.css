@@ -116,6 +116,10 @@ body.v6 #footer {
         float: left;
         padding-top: 2px;
     }
+    body.v6 #footer #footer_logo img {
+        height: 25px;
+        width: auto;
+    }
 	body.v6 #footer #footer_logo_steam {
 		float: right;
 		padding-top: 2px;
@@ -2512,7 +2516,7 @@ span.platform_img.hmd_separator {
 
 div.game_hover {
 	position: absolute;
-	z-index: 400;
+	z-index: 1526;
 	top: 40px;
 	left: 400px;
 	padding: 5px 12px 0 12px;

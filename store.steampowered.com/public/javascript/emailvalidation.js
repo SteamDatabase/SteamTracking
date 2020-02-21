@@ -138,7 +138,7 @@ function CheckEmailUpdateForm()
 	else if ( !$('reenter_email_input').value )
 	{
 		bValid = false;
-		strError = ( strError ? strError + '<br>' : '' ) + 'Please fill in the Re-enter email address field.';
+		strError = ( strError ? strError + '<br>' : '' ) + 'Please fill in the Confirm email address field.';
 		ValidationMarkFieldBad( $('reenter_email_input' ) );
 	}
 	else if ( $('reenter_email_input').value != $('email_input').value )
