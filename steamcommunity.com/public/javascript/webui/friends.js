@@ -8841,122 +8841,103 @@
           }),
           (e.prototype.InternalSendActiveChatRoomGroupsToServer = function() {
             return Object(o.b)(this, void 0, void 0, function() {
-              var e,
-                t,
-                n = this;
-              return Object(o.e)(this, function(o) {
-                switch (o.label) {
-                  case 0:
-                    return (t = !1)
-                      ? [4, u.f.Storage.GetString("_devVirtualizeMemberList")]
-                      : [3, 2];
-                  case 1:
-                    (t = !!o.sent()), (o.label = 2);
-                  case 2:
-                    return (
-                      (e = t),
-                      [
-                        2,
-                        new Promise(function(t) {
-                          var o = [],
-                            a = i.b.Init(c.O);
-                          n.m_mapActiveChatGroupsToRefCount.forEach(function(
-                            t,
-                            r
-                          ) {
-                            if (
-                              (Object(A.a)(
-                                t > 0,
-                                "SendActiveChatRoomGroupsToServer found invalid ref count for chat group."
-                              ),
-                              !(t <= 0))
-                            ) {
-                              a.Body().add_chat_group_ids(r);
-                              var i = n.m_mapChatGroups.get(r);
-                              (i && i.readyToRender) ||
-                                a.Body().add_chat_groups_data_requested(r),
-                                e &&
-                                  a.Body().set_virtualize_members_threshold(10),
-                                i &&
-                                  i.BIsClanChatRoom() &&
-                                  o.push(i.GetClanID());
-                            }
-                          });
-                          var s = function(e) {
-                              m.a.IN_CLIENT &&
-                                SteamClient.WebChat.SetActiveClanChatIDs(o),
-                                e && void 0 !== l && ClearBackgroundTimeout(l),
-                                (n.m_bSendingActiveGroups = !1),
-                                n.m_bSendActiveGroupsQueued ? t(!1) : t(e);
-                            },
-                            l = SetBackgroundTimeout(function() {
-                              (n.m_bSendActiveGroupsQueued = !0), s(!1);
-                            }, 1e4);
-                          (n.m_bSendActiveGroupsQueued = !1),
-                            (n.m_bSendingActiveGroups = !0),
-                            c.X.SetSessionActiveChatRoomGroups(
-                              n.m_CMInterface.GetServiceTransport(),
-                              a
-                            )
-                              .then(
-                                function(e) {
-                                  var t = !1;
-                                  return (
-                                    Object(r.A)(function() {
-                                      if (1 == e.GetEResult()) {
-                                        for (
-                                          var r = 0, i = e.Body().chat_states();
-                                          r < i.length;
-                                          r++
-                                        ) {
-                                          var a = i[r];
-                                          if (
-                                            (l = n.m_mapChatGroups.get(
-                                              a.header_state().chat_group_id()
-                                            ))
-                                          )
-                                            try {
-                                              l.UpdateGroupState(a),
-                                                l.BIsClanChatRoom() &&
-                                                  -1 ===
-                                                    o.indexOf(l.GetClanID()) &&
-                                                  o.push(l.GetClanID());
-                                            } catch (e) {
-                                              (t = !0),
-                                                console.error(
-                                                  "exception processing group update for group " +
-                                                    l.GetGroupID(),
-                                                  e
-                                                );
-                                            }
-                                        }
-                                        for (
-                                          var s = 0,
-                                            c = e
-                                              .Body()
-                                              .virtualize_members_chat_group_ids();
-                                          s < c.length;
-                                          s++
-                                        ) {
-                                          var l,
-                                            p = c[s];
-                                          (l = n.m_mapChatGroups.get(p)) &&
-                                            l.SetMemberListVirtualized(!0);
-                                        }
-                                      } else t = !0;
-                                    }),
-                                    !t
-                                  );
-                                },
-                                function() {
-                                  return !1;
-                                }
-                              )
-                              .then(s);
-                        })
-                      ]
-                    );
-                }
+              var e = this;
+              return Object(o.e)(this, function(t) {
+                return [
+                  2,
+                  new Promise(function(t) {
+                    var n = [],
+                      o = i.b.Init(c.O);
+                    e.m_mapActiveChatGroupsToRefCount.forEach(function(t, r) {
+                      if (
+                        (Object(A.a)(
+                          t > 0,
+                          "SendActiveChatRoomGroupsToServer found invalid ref count for chat group."
+                        ),
+                        !(t <= 0))
+                      ) {
+                        o.Body().add_chat_group_ids(r);
+                        var i = e.m_mapChatGroups.get(r);
+                        (i && i.readyToRender) ||
+                          o.Body().add_chat_groups_data_requested(r),
+                          u.f.SettingsStore.BClientHasFeatureOrOnWeb(
+                            "ServerVirtualizedMemberLists"
+                          ) && o.Body().set_virtualize_members_threshold(100),
+                          i && i.BIsClanChatRoom() && n.push(i.GetClanID());
+                      }
+                    });
+                    var a = function(o) {
+                        m.a.IN_CLIENT &&
+                          SteamClient.WebChat.SetActiveClanChatIDs(n),
+                          o && void 0 !== s && ClearBackgroundTimeout(s),
+                          (e.m_bSendingActiveGroups = !1),
+                          e.m_bSendActiveGroupsQueued ? t(!1) : t(o);
+                      },
+                      s = SetBackgroundTimeout(function() {
+                        (e.m_bSendActiveGroupsQueued = !0), a(!1);
+                      }, 1e4);
+                    (e.m_bSendActiveGroupsQueued = !1),
+                      (e.m_bSendingActiveGroups = !0),
+                      c.X.SetSessionActiveChatRoomGroups(
+                        e.m_CMInterface.GetServiceTransport(),
+                        o
+                      )
+                        .then(
+                          function(t) {
+                            var o = !1;
+                            return (
+                              Object(r.A)(function() {
+                                if (1 == t.GetEResult()) {
+                                  for (
+                                    var r = 0, i = t.Body().chat_states();
+                                    r < i.length;
+                                    r++
+                                  ) {
+                                    var a = i[r];
+                                    if (
+                                      (l = e.m_mapChatGroups.get(
+                                        a.header_state().chat_group_id()
+                                      ))
+                                    )
+                                      try {
+                                        l.UpdateGroupState(a),
+                                          l.BIsClanChatRoom() &&
+                                            -1 === n.indexOf(l.GetClanID()) &&
+                                            n.push(l.GetClanID());
+                                      } catch (e) {
+                                        (o = !0),
+                                          console.error(
+                                            "exception processing group update for group " +
+                                              l.GetGroupID(),
+                                            e
+                                          );
+                                      }
+                                  }
+                                  for (
+                                    var s = 0,
+                                      c = t
+                                        .Body()
+                                        .virtualize_members_chat_group_ids();
+                                    s < c.length;
+                                    s++
+                                  ) {
+                                    var l,
+                                      p = c[s];
+                                    (l = e.m_mapChatGroups.get(p)) &&
+                                      l.SetMemberListVirtualized(!0);
+                                  }
+                                } else o = !0;
+                              }),
+                              !o
+                            );
+                          },
+                          function() {
+                            return !1;
+                          }
+                        )
+                        .then(a);
+                  })
+                ];
               });
             });
           }),
