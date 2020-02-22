@@ -12637,43 +12637,44 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     display: block;
     font-size: 13px;
     width: 100%; }
-    .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm {
-      position: absolute;
-      padding: 4px 20px 4px 0px;
-      margin-right: 24px; }
-      .NavArea .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm {
-        margin-right: 8px; }
-      .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm:last-child {
-        padding-right: 0px; }
-      .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY {
-        box-sizing: border-box;
-        text-align: center;
-        padding: 2px 12px 4px 12px;
-        border-radius: 2px;
-        transition: 0.1s all;
-        transition: all 0.2s ease-out; }
-        .NavArea .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY {
-          outline: none; }
-          .NavArea .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY .appdetailsprimarylinkssection_Text_2sNDj {
-            outline: none; }
-        .FocusGroup .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY:focus-within {
-          color: white;
-          outline: none;
-          box-shadow: 0px 0px 2px 2px #1472ff, 0px 0px 0px 2px #0066ff;
-          background-color: #3d8bff;
-          color: white; }
-          .FocusGroup .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY:focus-within .appdetailsprimarylinkssection_Text_2sNDj {
-            color: white; }
-        .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY:hover {
-          background-color: rgba(101, 113, 128, 0.356);
-          cursor: pointer; }
-          .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY:hover .appdetailsprimarylinkssection_Text_2sNDj {
-            color: white; }
-      .appdetailsprimarylinkssection_LinksSection_3-V8v .appdetailsprimarylinkssection_Links_DgVQa .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Text_2sNDj {
-        align-self: center;
-        color: rgba(255, 255, 255, 0.32);
-        text-decoration: none;
-        white-space: nowrap; }
+
+.appdetailsprimarylinkssection_LinkInner_7k4qm {
+  position: absolute;
+  padding: 4px 20px 4px 0px;
+  margin-right: 24px; }
+  .NavArea .appdetailsprimarylinkssection_LinkInner_7k4qm {
+    margin-right: 8px; }
+  .appdetailsprimarylinkssection_LinkInner_7k4qm:last-child {
+    padding-right: 0px; }
+  .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 2px 12px 4px 12px;
+    border-radius: 2px;
+    transition: 0.1s all;
+    transition: all 0.2s ease-out; }
+    .NavArea .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY {
+      outline: none; }
+      .NavArea .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY .appdetailsprimarylinkssection_Text_2sNDj {
+        outline: none; }
+    .FocusGroup .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY:focus-within {
+      color: white;
+      outline: none;
+      box-shadow: 0px 0px 2px 2px #1472ff, 0px 0px 0px 2px #0066ff;
+      background-color: #3d8bff;
+      color: white; }
+      .FocusGroup .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY:focus-within .appdetailsprimarylinkssection_Text_2sNDj {
+        color: white; }
+    .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY:hover {
+      background-color: rgba(101, 113, 128, 0.356);
+      cursor: pointer; }
+      .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY:hover .appdetailsprimarylinkssection_Text_2sNDj {
+        color: white; }
+  .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Text_2sNDj {
+    align-self: center;
+    color: rgba(255, 255, 255, 0.32);
+    text-decoration: none;
+    white-space: nowrap; }
 
 .appdetailsprimarylinkssection_NavButton_2NqVq {
   box-sizing: border-box;
@@ -13046,6 +13047,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   display: flex;
   justify-content: space-between; }
 
+/* stylelint-disable */
+
+/* stylelint-enable */
 .appdetailsspotlight_AppDetailsSpotlight_gh6du {
   margin-top: 20px; }
 
@@ -13142,6 +13146,55 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 
 .appdetailsspotlight_GotItMessage_1dq9v:hover {
   background: #3ba2b9; }
+
+.appdetailsspotlight_AppDetailsSpotlightDemoWrapper_1RXqe {
+  width: 100%;
+  overflow: hidden; }
+
+.appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd {
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: radial-gradient(100% 80% at 64% 95%, rgba(153, 174, 204, 0.3) 0%, rgba(125, 150, 184, 0.13) 40%, rgba(83, 104, 104, 0.1) 100%); }
+  .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_Header_FHKza {
+    width: 300px;
+    max-width: 50%;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    bottom: inherit;
+    flex: 0 0 auto; }
+  .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_HeaderArt_3WXTt {
+    width: 100%; }
+  .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_Info_1AazH {
+    flex: 1 0 auto;
+    display: block;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 0px 10px; }
+    div.NarrowRightPanel .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_Info_1AazH {
+      font-size: 12px; }
+    div.UltraNarrowRightPanel .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_Info_1AazH {
+      font-size: 14px; }
+    .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_Info_1AazH .appdetailsspotlight_Title_2rPfS {
+      font-size: 24px;
+      color: white; }
+      div.NarrowRightPanel .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_Info_1AazH .appdetailsspotlight_Title_2rPfS {
+        font-size: 18px; }
+      div.UltraNarrowRightPanel .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_Info_1AazH .appdetailsspotlight_Title_2rPfS {
+        font-size: 24px; }
+    .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_Info_1AazH .appdetailsspotlight_Buttons_3f3yV {
+      padding-top: 10px;
+      height: 34px; }
+      div.NarrowRightPanel .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_Info_1AazH .appdetailsspotlight_Buttons_3f3yV {
+        padding-top: 5px; }
+      div.UltraNarrowRightPanel .appdetailsspotlight_AppDetailsSpotlightDemo_xYbDd .appdetailsspotlight_Info_1AazH .appdetailsspotlight_Buttons_3f3yV {
+        padding-top: 10px; }
+
+.appdetailsspotlight_SpotlightButton_1fSOe {
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .spotlight_ReadMoreLink_2mvgc {
   color: white;
@@ -13734,6 +13787,10 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
       width: calc( 67% - 42px);
       padding: 0px 0px 0px 10px;
       box-sizing: border-box; }
+      div.UltraNarrowRightPanel .appdetailsoverview_Container_27RcN .appdetailsoverview_Spotlights_11kuV.appdetailsoverview_SpotlightLeftColumn_3wbnd {
+        display: block;
+        width: 100%;
+        padding: 0px 10px 0px 10px; }
   .appdetailsoverview_Container_27RcN .appdetailsoverview_LeftColumn_1sZgB {
     box-sizing: border-box;
     flex: none; }

@@ -475,6 +475,9 @@
  B g_pThreadLocalHashMapServerTypeWatches
  B g_pThreadLocalHashMapSteamIDWatches
  B g_pThreadLocalHashMapTxnIDWatches
+ B g_pfnSteam_BGetCallback
+ B g_pfnSteam_FreeLastCallback
+ B g_pfnSteam_GetAPICallResult
  B g_unPrivateIPThisBox
  B g_unPublicIPThisBox
  B g_vecIPv4ThisBox
@@ -1248,6 +1251,8 @@
  D typeinfo for CCallbackImpl<16>
  D typeinfo for CCallbackImpl<4>
  D typeinfo for CCallbackImpl<80>
+ D typeinfo for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
+ D typeinfo for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
  D typeinfo for CClanEventData
  D typeinfo for CClanEventUserNewsTuple
  D typeinfo for CClanMatchEventByRange
@@ -1957,6 +1962,8 @@
  D vtable for CCallbackImpl<16>
  D vtable for CCallbackImpl<4>
  D vtable for CCallbackImpl<80>
+ D vtable for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
+ D vtable for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
  D vtable for CClanEventData
  D vtable for CClanEventUserNewsTuple
  D vtable for CClanMatchEventByRange
@@ -2670,6 +2677,8 @@
  R typeinfo name for CCallbackImpl<16>
  R typeinfo name for CCallbackImpl<4>
  R typeinfo name for CCallbackImpl<80>
+ R typeinfo name for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
+ R typeinfo name for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
  R typeinfo name for CClanEventData
  R typeinfo name for CClanEventUserNewsTuple
  R typeinfo name for CClanMatchEventByRange
@@ -3909,11 +3918,14 @@
  T CCallbackImpl<80>::GetCallbackSizeBytes()
  T CCallbackImpl<80>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<80>::~CCallbackImpl()
+ T CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>::~CCallbackManual()
+ T CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallbackManual()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::OnSteamAPICallCompleted(SteamAPICallCompleted_t*)
+ T CCallbackMgr::RegisterCallResult(CCallbackBase*, unsigned long long)
  T CCallbackMgr::RegisterInterfaceFuncs(void*)
  T CCallbackMgr::RunCallbacks(int, bool)
  T CCallbackMgr::Unregister(CCallbackBase*)

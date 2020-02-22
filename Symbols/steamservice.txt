@@ -982,6 +982,7 @@
  T CCrypto::Base64Encode(void const*, unsigned int, char*, unsigned int*, char const*)
  T CCrypto::Base64EncodeMaxOutput(unsigned int, char const*)
  T CCrypto::Base64Encode_Legacy(void const*, unsigned int, char*, unsigned int, bool)
+ T CCrypto::GenerateRandomBlock(void*, unsigned long)
  T CCrypto::GenerateSHA1Digest(void const*, unsigned long, unsigned char (*) [20])
  T CCrypto::HexDecode(char const*, void*, unsigned int*)
  T CCrypto::LocatePEMBody(char const*, unsigned int*, char const*)
@@ -3970,7 +3971,7 @@
  b OPENSSL_init.done
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
- b OneTimeCryptoInitOpenSSL()::threadonce_335_42
+ b OneTimeCryptoInitOpenSSL()::threadonce_324_42
  b PchGetRegPath(ERegKeyRoot, char const*, StringView)::szRegLocation
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b RegistryEmulatorManager()::s_PosixRegMgr

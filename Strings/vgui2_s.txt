@@ -63,6 +63,7 @@ __LINKEDIT
 X
 xH
 P
+$
 
 8
 @loader_path/libtier0_s.dylib

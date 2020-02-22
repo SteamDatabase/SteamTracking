@@ -10,4 +10,5 @@ public:
     virtual unknown_ret GetCompatToolMappingPriority(unsigned int) = 0;
     virtual unknown_ret GetCompatToolDisplayName(char const*) = 0;
     virtual unknown_ret GetWhitelistedGameList(CUtlVector<AppWhitelistSetting_t, CUtlMemory<AppWhitelistSetting_t> >*) = 0;
+    virtual unknown_ret GetControllerConfigOverrides(CUtlVector<AppControllerConfigOverride_t, CUtlMemory<AppControllerConfigOverride_t> >*) = 0;
 };

@@ -2,8 +2,9 @@
 __TEXT
 __text
 __TEXT
-@w
-@w
+@u
+T-$
+@u
 __stubs
 __TEXT
 __stub_helper
@@ -20,8 +21,6 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-0*,
-0*,
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -47,11 +46,9 @@ __thread_vars
 __DATA
 __thread_bss
 __DATA
-QI
 __bss
 __DATA
-UI
-q=
+a=
 __common
 __DATA
 H
@@ -62,10 +59,9 @@ __LINKEDIT
 @loader_path/gameoverlayui.dylib
 "
 `I
-zY
 P
-4W
-4W
+?W
+?W
 _
 
 8
@@ -114,7 +110,6 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-xD
 )
 C
 14CParentalCache
@@ -313,7 +308,9 @@ Y@
 10CUtlVectorIP26CScreenshotImageClickPanel10CUtlMemoryIS1_EE
 7CUtlMapIjii8CDefLessIjEE
 10CUtlRBTreeIN7CUtlMapIjii8CDefLessIjEE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
+15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 N3IPC15BinarySemaphoreE
 N3IPC10PosixMutexE
@@ -3603,8 +3600,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Feb 18 2020
-14:42:43
+Feb 21 2020
+11:41:40
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -7216,29 +7213,6 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-y<&
-N8&
-f8&
-$
-$
-$
-$
-$
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-$
-$
 $
 $
 $
@@ -7249,37 +7223,38 @@ $
 p
 p
 0
-y#
-"
-{"
-l#
-P?
-#
-,#
+=#
+R?
 3
-!
-!
-!
+3
+pG
 0
 p
+1"
 "
+K2
 "
-I2
-"
-:>
+<>
+'"
+$"
 "
 t!
-W!
-U!
-1
+Q!
+3!
 !
 !
-u!
-1
-1
-1
+!
+=
 d
-c
+m
+V
+E
+E
+E
+E
+E
+E
+E
 
 
 
@@ -7317,6 +7292,9 @@ p
 p
 p
 p
+0
+0
+0
 0
 0
 /
@@ -7324,19 +7302,27 @@ p
 =
 
 0
-9
-<
+3
+W?
+r:
 Hi
 C
 C
 C
-N>
+C
+C
+C
+6.
+?>
 0
 p
 I
 I
+a-
+D"
 "
 $
+Y,
 @
 @
 =
@@ -7347,14 +7333,12 @@ $
 A
 Hc
 =
-V
 ?
 ?
-L95Vf>
-L950Y>
-/
-/
+L95~h>
+L95X[>
 Hc
+7<
 ?
 ?
 ?
@@ -7371,6 +7355,7 @@ Hc
 ?
 ?
 SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
+(&
 i[
 i[
 Mc}
@@ -7395,7 +7380,6 @@ HcU
 #
 i[
 ~
-%
 B
 ?
 @
@@ -7423,6 +7407,7 @@ HcE
 @
 \
 @
+~4
 9
 E
 =
@@ -7533,67 +7518,66 @@ P
 6
 6
 "
-"6
 3
 D
-6
-6
-6
-'
-'
 @
-&
-&
-&
-94
+K4
 4
-4
-4
+8%
+_%
 %
-b$
+%
+$
 2
 2
-
 #
-L95
-8#
-(#
 d
+}0
+7,
+,
+0
 
-'
 W
-g
 
 
 
 
 
-+
-+
 +
 +
 
 &
 &
-^!
 t=
 =
 =
 @
 
+a*
+j,
+G,
 uV%
 
 
-(
-(
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+Q)
+"
 E
 
 
+**
 
+h(
 @
-(
-(
-D(
 @
 @
 &
@@ -7632,7 +7616,6 @@ D(
 @
 @
 @
-$'
 .
 .
 .
@@ -7640,27 +7623,18 @@ $'
 .
 .
 d
-'
-'
-'
-'
-'
-'
-'
-'
-'
-'
 d
 d
 =
 
-Z&
 =
 @
 =
 @
 @
 @
+&
+&
 @
 @
 @
@@ -7669,7 +7643,7 @@ Z&
 @
 0
 E
-h
+Y
 '
-%
+>%
 p

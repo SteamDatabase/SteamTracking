@@ -241,6 +241,9 @@
  B g_pRunGameEngine
  B g_pSteamUI
  B g_pSteamVGuiModule
+ B g_pfnSteam_BGetCallback
+ B g_pfnSteam_FreeLastCallback
+ B g_pfnSteam_GetAPICallResult
  B g_vecTempTextBuffer
  B obj_cleanup_defer
  B s_ClientNewVRChat
@@ -1900,6 +1903,8 @@
  D typeinfo for CCallbackImpl<80>
  D typeinfo for CCallbackImpl<88>
  D typeinfo for CCallbackImpl<8>
+ D typeinfo for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
+ D typeinfo for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
  D typeinfo for CChatActionsButton
  D typeinfo for CChatIntroductionDialog
  D typeinfo for CChatInviteNotification
@@ -3273,6 +3278,8 @@
  D vtable for CCallbackImpl<80>
  D vtable for CCallbackImpl<88>
  D vtable for CCallbackImpl<8>
+ D vtable for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
+ D vtable for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
  D vtable for CChatActionsButton
  D vtable for CChatIntroductionDialog
  D vtable for CChatInviteNotification
@@ -4028,6 +4035,8 @@
  R typeinfo name for CCallbackImpl<80>
  R typeinfo name for CCallbackImpl<88>
  R typeinfo name for CCallbackImpl<8>
+ R typeinfo name for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
+ R typeinfo name for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
  R typeinfo name for CChatActionsButton
  R typeinfo name for CChatIntroductionDialog
  R typeinfo name for CChatInviteNotification
@@ -5643,11 +5652,14 @@
  T CCallbackImpl<8>::GetCallbackSizeBytes()
  T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<8>::~CCallbackImpl()
+ T CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>::~CCallbackManual()
+ T CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallbackManual()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::OnSteamAPICallCompleted(SteamAPICallCompleted_t*)
+ T CCallbackMgr::RegisterCallResult(CCallbackBase*, unsigned long long)
  T CCallbackMgr::RegisterInterfaceFuncs(void*)
  T CCallbackMgr::RunCallbacks(int, bool)
  T CCallbackMgr::Unregister(CCallbackBase*)
@@ -16588,7 +16600,7 @@
  b KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)::fAsserted
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OneTimeCryptoInitOpenSSL()::threadonce_335_42
+ b OneTimeCryptoInitOpenSSL()::threadonce_324_42
  b SHA1.m
  b SYS_str_reasons
  b add_lock_callback
@@ -17778,6 +17790,7 @@
  t _GLOBAL__sub_I_commonkeycode.cpp
  t _GLOBAL__sub_I_constants.cpp
  t _GLOBAL__sub_I_controls.cpp
+ t _GLOBAL__sub_I_crypto.cpp
  t _GLOBAL__sub_I_crypto_digest_openssl.cpp
  t _GLOBAL__sub_I_crypto_passwordhash.cpp
  t _GLOBAL__sub_I_crypto_rsa_openssl.cpp

@@ -1023,6 +1023,9 @@
 	"AppDetailsAchievement_Hidden": "Hidden Achievement",
 	"AppDetailsAchievement_HiddenDesc": "Keep playing to discover this achievement.",
 
+	"Demo_SpotlightIntro": "Check out the full game",
+	"Demo_VisitStorePage": "Visit Store Page",
+
 	"SteamReviewScore_9": "Overwhelmingly Positive",
 	"SteamReviewScore_8": "Very Positive",
 	"SteamReviewScore_7": "Positive",
