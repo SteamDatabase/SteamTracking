@@ -28,7 +28,6 @@ a, a:visited {
 color: #07d1da;	
 }
 
-
 a:hover {
 color: #fff;		
 }
@@ -156,9 +155,9 @@ color: #fff;
 }
 .capsule-banner img {
     border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+	border-top-right-radius: 4px;
     width: 560px;
-    height: auto;
+    height: 240px;
     transition: transform 0.4s ease-out;
 }
 
@@ -590,3 +589,25 @@ a.ultracast_now_playing_link:hover .ds_options {
 	transform: scale(1.03);
 }
 
+.shipped
+{
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center#;
+	padding-left: 45px;
+	padding-right: 45px;
+	margin-top: -26px;
+	padding-top: 0px;
+	width: inherit;
+	font-size: 17px;
+	font-kerning: 0.23em;
+	width: 300px;
+	height: 26px;
+	color: black;
+	transform: rotate(-45deg) translateX(-147px) translateY(-45px);
+	z-index:1;
+	background-color: #08eaf4;
+	box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.35);
+}

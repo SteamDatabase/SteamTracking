@@ -680,7 +680,7 @@ div.autocomplete ul li {
 {
 	position: relative;
 	display: block;
-	height: 62px;
+	margin-bottom: 10px;
 }
 
 .search_remote_play_banner
@@ -817,13 +817,13 @@ html[lang=en].responsive .search_labs_banner_actions {
     word-break: break-word;
 }
 
-.labs__new {
+.labs_new {
     position: absolute;
-    top: -15px;
-    right: -20px;
+    top: -5px;
+    right: -10px;
     box-sizing: border-box;
-    height: 54px;
-    width: 54px;
+    height: 26px;
+    width: 26px;
     padding: 6px;
     display: flex;
     align-items: center;
