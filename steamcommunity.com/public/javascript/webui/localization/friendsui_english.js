@@ -1023,6 +1023,8 @@ LocalizationReady("friendsui", "english", {
     "Invalid profile name. Please choose another name and try again.",
   Friends_NameChangeThrottled_Info:
     "Very frequent changes to  profile names are not allowed. Please try again in a few minutes.",
+  Friends_NameChangeDenied_Info:
+    "Invalid profile name. Please choose another name and try again.",
 
   Settings: "Settings",
   Settings_Capital: "SETTINGS",

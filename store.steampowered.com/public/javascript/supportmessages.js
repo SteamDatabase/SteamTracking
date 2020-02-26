@@ -72,6 +72,7 @@ function CloseSupportMessageWindow()
 		new Ajax.Request( 'https://store.steampowered.com/supportmessages/ackmessages',
 			{
 			method: 'post',
+			parameters: { 'sessionid' : g_sessionID },
 			onSuccess: function( transport ) {
 				if ( transport.responseJSON )
 				{

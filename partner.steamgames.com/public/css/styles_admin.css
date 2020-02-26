@@ -2113,6 +2113,21 @@ html, body { height:100%; }
 	cursor: move;
 }
 
+.rowDragHandle {
+	width: 18px;
+	height: 18px;
+	cursor: move;
+}
+
+.landingTable .tr.highlightHover.ui-sortable-helper:hover .visibleHover {
+	visibility: hidden;
+}
+
+.bundle_save_options
+{
+	padding: 4px 0;
+}
+
 .dragAndDropHighlight {
 	border: 2px dashed #666;
 	background-color: #333;

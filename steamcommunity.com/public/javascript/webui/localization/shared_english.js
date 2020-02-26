@@ -134,6 +134,10 @@ LocalizationReady("shared", "english", {
   EventCalendar_NoMorePastEvents: "No older matching events found",
   EventCalendar_FailedToLoadMoreEvents: "Error loading events",
 
+  SteamLabs: "Steam Labs",
+  SteamLabs_ExperimentNumber: "Experiment %1$s",
+  SteamLabs_DiscussionLink: "Discuss this experiment",
+
   EventCalendar_FutureEventsHint: "Scroll up to see what's coming next",
   EventCalendar_FutureEventsHeader: "Coming soon",
   EventCalendar_LiveAndRecentEventsHeader: "Live and recent",
@@ -153,7 +157,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_MuteApp_ttip:
     "Remove this game from your calendar and block future communications.",
   EventCalendar_MuteApp_details:
-    "Remove '%1$s' from appearing in your calendar and all block future communications. Muted content decisions are always reverseable by visiting this page:",
+    "Remove '%1$s' from appearing in your calendar and block all future communications. Muted content decisions are always reverseable by visiting this page:",
   EventCalendar_ManageMutedApps: "Manage Muted Apps",
   EventCalendar_MuteApp_Unknown: "Unknown",
 
@@ -195,10 +199,16 @@ LocalizationReady("shared", "english", {
     "Include post about games we think you would like",
   EventCalendar_GameSource_EventExplanation_ttip_recommended:
     "This is a game we think you would like",
+  EventCalendar_GameSource_steam: "steam",
+  EventCalendar_GameSource_ttip_steam:
+    "Include news events posted about the Steam platform",
+  EventCalendar_GameSource_EventExplanation_ttip_steam:
+    "This is a news item about Steam",
 
   EventDisplay_Admin_Title: "Admin tools:",
   EventDisplay_ViewInLibrary: "View in Library",
   EventDisplay_ViewStorePage: "View Store Page",
+  EventDisplay_ViewCommunityPage: "View Community Page",
 
   EventDisplay_CallToAction_LearnMore: "Learn More",
   EventDisplay_CallToAction_InLibrary: "In Library",
@@ -362,11 +372,14 @@ LocalizationReady("shared", "english", {
   EventDashBoard_Summary_Community_Shown: "Impressions of event summary:",
   EventDashBoard_Summary_Community_Read:
     "Clicks on event summary to view details:",
+  EventDashBoard_Summary_NewsHub_Shown: "Impressions of event in news hub:",
+  EventDashBoard_Summary_NewsHub_Read: "Clicks on event to view details:",
   EventDashBoard_Location_LibraryHome: "Library Home Page",
   EventDashBoard_Location_LibraryDetail: "Library Game Page",
   EventDashBoard_Location_StoreDetail: "Store Game Page",
   EventDashBoard_Location_CommunityDetail: "Community App Hub",
   EventDashBoard_Location_PopUpViews: "Views of event pop-up",
+  EventDashBoard_Location_NewsHubDetail: "News Hub",
 
   AddToWishlist: "Add to your Wishlist",
   Wishlisted: "On your Wishlist",
@@ -758,29 +771,37 @@ LocalizationReady("shared", "english", {
   PartnerEvent_7: "Sports Event",
   PartnerEvent_8: "Live Trip Event",
   PartnerEvent_9: "Chat",
+  PartnerEvent_9_editor: "A Chat or AMA Session",
   PartnerEvent_10: "Game Release",
+  PartnerEvent_10_editor: "Game is Releasing Now!",
   PartnerEvent_11: "Live-Stream / Broadcast",
-  PartnerEvent_12: "Small Updates/Patches",
-  PartnerEvent_13: "Update",
+  PartnerEvent_12: "Small Update (Patch Notes)",
+  PartnerEvent_13: "Regular Update",
   PartnerEvent_14: "Major Update",
   PartnerEvent_15: "DLC Release",
   PartnerEvent_16: "Upcoming Release",
+  PartnerEvent_16_editor: "Game is Releasing on a Specific Date",
   PartnerEvent_17: "ESport Tournament Broadcast",
   PartnerEvent_18: "Dev Stream Broadcast",
   PartnerEvent_19: "Famous Broadcast",
-  PartnerEvent_20: "Game Sales",
-  PartnerEvent_21: "In-game Item Discounts",
-  PartnerEvent_22: "Bonus XP",
+  PartnerEvent_20: "Game Discount",
+  PartnerEvent_20_editor: "Discount on This Game",
+  PartnerEvent_21: "Item or DLC Discount",
+  PartnerEvent_21_editor: "Discount on In-Game Items or DLC",
+  PartnerEvent_22: "XP Boost",
   PartnerEvent_23: "Loot Event",
   PartnerEvent_24: "Perks Event",
   PartnerEvent_25: "Challenge Event",
-  PartnerEvent_26: "Contest Event",
+  PartnerEvent_26: "Contest",
   PartnerEvent_27: "IRL Event",
+  PartnerEvent_27_editor: "Attending an Expo, Meetup, or Convention",
   PartnerEvent_28: "News",
+  PartnerEvent_28_editor: "Announcement / News",
   PartnerEvent_29: "Beta Release",
+  PartnerEvent_29_editor: "Beta Invitation / News",
   PartnerEvent_30: "In-Game Content Updated",
   PartnerEvent_31: "Free Trial",
-  PartnerEvent_32: "New DLC or Season Launch",
+  PartnerEvent_32: "Season or Battle Pass Release",
   PartnerEvent_33: "Season Update",
   PartnerEvent_34: "Cross Promotion",
   PartnerEvent_35: "General In-Game Event",
@@ -1128,6 +1149,9 @@ LocalizationReady("shared", "english", {
     "Stealthy Snake had little interest in a long-distance effort, so it wrapped itself unnoticed around Horse's front hoof.\n\nAs Horse galloped towards the finish line, Snake uncoiled, startling the steed just long enough to slither into sixth—with the skittish Horse trotting close behind.",
   Lunar2020_StoryDayFour:
     "Goat, Monkey, and Rooster worked together, but let Goat claim eighth as the backbone of their journey. Cheerful Monkey was next, and the strutting Rooster crossed tenth, proud that the order was fair.\n\nPlayful Dog was mostly interested in splashing around, feeling eleventh a fine trade for all the fun.\n\nLast came Pig, who'd stopped for a snack n' a snooze—wise enough to know that each animal will have their time in the Emperor's favor.",
+
+  SteamChina_PendingPersonaName:
+    "Profile changes will take effect after review",
 
   Legal_Footer_WithYear:
     "© %1$s Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.",

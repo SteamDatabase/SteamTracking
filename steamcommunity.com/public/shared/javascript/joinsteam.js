@@ -249,7 +249,7 @@ function FinishFormVerification( bCaptchaIsValid )
 	var reenter_email = $('reenter_email').value;
 	if ( reenter_email == '' )
 	{
-		errorString += 'Please fill in the Re-enter email address field.<br/>';
+		errorString += 'Please fill in the Confirm email address field.<br/>';
 		rgBadFields.reenter_email = true;
 	}
 	else if ( email != reenter_email )

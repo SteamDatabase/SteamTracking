@@ -45206,6 +45206,12 @@
             (t.prototype.set_override_limits = function(e) {
               a.Message.setField(this, 7, e);
             }),
+            (t.prototype.client_message_id = function() {
+              return a.Message.getField(this, 8);
+            }),
+            (t.prototype.set_client_message_id = function(e) {
+              a.Message.setField(this, 8, e);
+            }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
@@ -45217,7 +45223,8 @@
                 contains_bbcode: a.Message.getField(t, 4),
                 echo_to_sender: a.Message.getField(t, 5),
                 low_priority: a.Message.getField(t, 6),
-                override_limits: a.Message.getField(t, 7)
+                override_limits: a.Message.getField(t, 7),
+                client_message_id: a.Message.getField(t, 8)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -45250,6 +45257,9 @@
                   case 7:
                     e.set_override_limits(t.readBool());
                     break;
+                  case 8:
+                    e.set_client_message_id(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -45270,7 +45280,9 @@
                 void 0 !== (i = a.Message.getField(e, 4)) && t.writeBool(4, i),
                 void 0 !== (i = a.Message.getField(e, 5)) && t.writeBool(5, i),
                 void 0 !== (i = a.Message.getField(e, 6)) && t.writeBool(6, i),
-                void 0 !== (i = a.Message.getField(e, 7)) && t.writeBool(7, i);
+                void 0 !== (i = a.Message.getField(e, 7)) && t.writeBool(7, i),
+                void 0 !== (i = a.Message.getField(e, 8)) &&
+                  t.writeString(8, i);
             }),
             (t.prototype.getClassName = function() {
               return "CFriendMessages_SendMessage_Request";
