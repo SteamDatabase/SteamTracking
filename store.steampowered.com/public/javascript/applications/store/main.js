@@ -113,7 +113,7 @@
               ".js?chunkhash=" +
               {
                 0: "ea1700ba64926e9e84ea",
-                1: "05af582e412ed976c655",
+                1: "a3d13af7df6eba4d535c",
                 4: "93d64bf5e59a2cb57099",
                 5: "ca3d25a0dbb9e95f6232",
                 6: "a09806ead46911cb4761",
@@ -18302,14 +18302,14 @@
         }
         return (
           Object(z.d)(e, t),
-          (e.prototype.ShowContents = function() {
-            var e = this;
-            this.setState({ bShowContents: !0 }),
+          (e.prototype.ShowContents = function(e) {
+            var t = this;
+            this.setState({ bShowContents: e }),
               window.setTimeout(function() {
-                return e.setState({
+                return t.setState({
                   containerStyle: Object(z.a)(
-                    Object(z.a)({}, e.state.containerStyle),
-                    { maxHeight: "2000px" }
+                    Object(z.a)({}, t.state.containerStyle),
+                    { maxHeight: "120000px" }
                   )
                 });
               }, 100);
@@ -18318,18 +18318,19 @@
             Dr.LoadBundleInfo([this.props.bundleid]);
           }),
           (e.prototype.render = function() {
-            var e = Dr.GetBundleInfo(this.props.bundleid);
-            if (!e) return null;
-            var t = $i.a.StoreSaleWidgetContainer + " " + $i.a.Bundle,
-              n = $i.a.StoreSaleWidgetImage,
-              r = $i.a.StoreSaleImage,
-              a = $i.a.StoreSaleWidgetShortDesc;
+            var e = this,
+              t = Dr.GetBundleInfo(this.props.bundleid);
+            if (!t) return null;
+            var n = $i.a.StoreSaleWidgetContainer + " " + $i.a.Bundle,
+              r = $i.a.StoreSaleWidgetImage,
+              a = $i.a.StoreSaleImage,
+              i = $i.a.StoreSaleWidgetShortDesc;
             return A.createElement(
               A.Fragment,
               null,
               A.createElement(
                 "div",
-                { className: t },
+                { className: n },
                 A.createElement(
                   "div",
                   { className: $i.a.Actions },
@@ -18343,10 +18344,10 @@
                     },
                     A.createElement(
                       "div",
-                      { className: n },
+                      { className: r },
                       A.createElement("img", {
-                        className: r,
-                        src: e.header_image_url
+                        className: a,
+                        src: t.header_image_url
                       })
                     )
                   )
@@ -18368,14 +18369,14 @@
                       A.createElement(
                         "div",
                         { className: $i.a.StoreSaleWidgetTitle },
-                        e.name
+                        t.name
                       )
                     )
                   ),
                   A.createElement(
                     "div",
-                    { className: a },
-                    se("#Sale_BundleSave", e.packageids.length)
+                    { className: i },
+                    se("#Sale_BundleSave", t.packageids.length)
                   ),
                   A.createElement(
                     "div",
@@ -18383,18 +18384,18 @@
                     A.createElement(
                       "div",
                       { className: $i.a.StoreSalePriceActionWidgetContainer },
-                      e.discount_percentage
+                      t.discount_percentage
                         ? A.createElement(
                             "div",
                             { className: $i.a.StoreSaleDiscountBox },
-                            "-" + e.discount_percentage + "%"
+                            "-" + t.discount_percentage + "%"
                           )
                         : null,
-                      e.formatted_final_price
+                      t.formatted_final_price
                         ? A.createElement(
                             "div",
                             { className: $i.a.StoreSalePriceBox },
-                            e.formatted_final_price
+                            t.formatted_final_price
                           )
                         : null
                     ),
@@ -18410,7 +18411,9 @@
                 A.createElement(
                   "div",
                   {
-                    onClick: this.ShowContents,
+                    onClick: function() {
+                      return e.ShowContents(!0);
+                    },
                     style: { display: "flex", justifyContent: "center" }
                   },
                   A.createElement(
@@ -18426,7 +18429,7 @@
                     style: this.state.containerStyle,
                     className: $i.a.BundleContentsCtn
                   },
-                  e.packageids.map(function(e) {
+                  t.packageids.map(function(e) {
                     var t = Ir.GetPackageInfo(e);
                     return t
                       ? A.createElement(
@@ -18441,6 +18444,21 @@
                         )
                       : null;
                   })
+                ),
+              Boolean(this.state.bShowContents && 10 < t.packageids.length) &&
+                A.createElement(
+                  "div",
+                  {
+                    onClick: function() {
+                      return e.ShowContents(!1);
+                    },
+                    style: { display: "flex", justifyContent: "center" }
+                  },
+                  A.createElement(
+                    "button",
+                    { className: $i.a.ShowContentsButton },
+                    se("#Sale_ShowLess")
+                  )
                 )
             );
           }),
