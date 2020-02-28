@@ -4182,6 +4182,7 @@
         B.k_ESmallUpdateEvent,
         B.k_ERegularUpdateEvent,
         B.k_EMajorUpdateEvent,
+        B.k_EDLCReleaseEvent,
         B.k_EFutureReleaseEvent,
         B.k_EESportTournamentStreamEvent,
         B.k_EDevStreamEvent,
