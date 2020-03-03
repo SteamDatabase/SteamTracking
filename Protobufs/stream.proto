@@ -94,6 +94,9 @@ enum EStreamControlMessage {
 	k_EStreamControlEnableHighResCapture = 124;
 	k_EStreamControlDisableHighResCapture = 125;
 	k_EStreamControlToggleMagnification = 126;
+	k_EStreamControlSetCapslock = 127;
+	k_EStreamControlSetKeymap = 128;
+	k_EStreamControlStopRequest = 129;
 }
 
 enum EStreamVersion {
@@ -570,6 +573,33 @@ message CDisableHighResCaptureMsg {
 }
 
 message CToggleMagnificationMsg {
+}
+
+message CSetCapslockMsg {
+	optional bool pressed = 1;
+}
+
+message CStreamingKeymapEntry {
+	optional int32 scancode = 1;
+	optional int32 normal_keycode = 2;
+	optional int32 shift_keycode = 3;
+	optional int32 capslock_keycode = 4;
+	optional int32 shift_capslock_keycode = 5;
+	optional int32 altgr_keycode = 6;
+	optional int32 altgr_shift_keycode = 7;
+	optional int32 altgr_capslock_keycode = 8;
+	optional int32 altgr_shift_capslock_keycode = 9;
+}
+
+message CStreamingKeymap {
+	repeated .CStreamingKeymapEntry entries = 1;
+}
+
+message CSetKeymapMsg {
+	optional .CStreamingKeymap keymap = 1;
+}
+
+message CStopRequest {
 }
 
 message CQuitRequest {

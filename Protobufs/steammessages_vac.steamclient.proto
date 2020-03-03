@@ -18,10 +18,25 @@ message CFileVerification_SignatureCheck_Response {
 	optional bool deny_operation = 1;
 }
 
+message CFileVerification_SteamServiceCheck_Request {
+	optional uint32 service_status = 2;
+	optional uint32 client_package_version = 3;
+	optional uint32 launcher_type = 4;
+	optional uint32 os_type = 5;
+}
+
+message CFileVerification_SteamServiceCheck_Response {
+	optional bool attempt_repair = 1;
+}
+
 service FileVerification {
 	option (service_description) = "File verification services";
 
 	rpc SignatureCheck (.CFileVerification_SignatureCheck_Request) returns (.CFileVerification_SignatureCheck_Response) {
 		option (method_description) = "File signature check was performed";
+	}
+
+	rpc SteamServiceCheck (.CFileVerification_SteamServiceCheck_Request) returns (.CFileVerification_SteamServiceCheck_Response) {
+		option (method_description) = "Steam Service check was performed";
 	}
 }

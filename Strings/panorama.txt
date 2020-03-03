@@ -51,14 +51,13 @@ H
 __LINKEDIT
 p
 N
-Pm
+`m
 
 8
 @loader_path/panorama.dylib
 "
 N
-?N
-@AN
+HAN
 0_
 Vm
 P
@@ -87,6 +86,8 @@ P
 @
 @loader_path/libpangoft2-1.0.dylib
 @
+
+
 @loader_path/libSDL2-2.0.0.dylib
 8
 @executable_path/libv8.dylib
@@ -5010,8 +5011,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Feb 21 2020
-11:43:32
+Mar  2 2020
+17:06:16
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost

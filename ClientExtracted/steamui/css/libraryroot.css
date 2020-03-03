@@ -1527,7 +1527,7 @@ body.modals_BodyNoScrollDialog_105OB {
   width: 100%; }
 
 .smartscrollcontainer_ScrollToTopButton_1J21t {
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
@@ -1555,9 +1555,7 @@ body.modals_BodyNoScrollDialog_105OB {
     padding: 4px 32px 4px 32px;
     background: linear-gradient(to bottom, rgba(20, 93, 219, 0.9) 0, #292d32 100%);
     text-transform: uppercase;
-    letter-spacing: 1px;
-    position: absolute;
-    left: 0%; }
+    letter-spacing: 1px; }
   .smartscrollcontainer_ScrollToTopButton_1J21t.smartscrollcontainer_Visible_28ZR8 {
     opacity: 1;
     transform: translateY(0px);

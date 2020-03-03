@@ -239,4 +239,5 @@ public:
     virtual unknown_ret BIsAnyGameOrServiceAppRunning() = 0;
     virtual unknown_ret BGetAppArrayMinutesPlayed(unsigned int*, int, int*, int*) = 0;
     virtual unknown_ret BGetAppsLastPlayedTime(unsigned int*, int, unsigned int*) = 0;
+    virtual unknown_ret SendSteamServiceStatusUpdate(EResult) = 0;
 };

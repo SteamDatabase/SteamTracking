@@ -132,10 +132,17 @@ message CRemotePlay_SessionStopped_Notification {
 }
 
 message CRemotePlayTogether_Notification {
+	message ControllerSlots {
+		optional uint32 slotid = 1;
+		optional fixed64 steamid = 2;
+	}
+
 	message GroupUpdated {
 		optional fixed64 host_steamid = 1;
 		optional fixed64 host_clientid = 2;
 		repeated fixed64 players = 3;
+		optional fixed64 host_gameid = 4;
+		repeated .CRemotePlayTogether_Notification.ControllerSlots controller_slots = 5;
 	}
 
 	optional fixed64 steamid = 1;

@@ -79,6 +79,7 @@ public:
     virtual unknown_ret OnPlaceholderStateChanged(bool) = 0;
     virtual unknown_ret OnRemoteClientRemotePlayClearControllers() = 0;
     virtual unknown_ret OnRemoteClientRemotePlayControllerIndexSet(CSteamID, unsigned int) = 0;
+    virtual unknown_ret UpdateRemotePlayTogetherSession() = 0;
     virtual unknown_ret OnRemotePlayUIMovedController() = 0;
     virtual unknown_ret OnSendRemotePlayTogetherInvite(CSteamID, unsigned int) = 0;
     virtual unknown_ret ShutdownStreamClients(bool) = 0;
