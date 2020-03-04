@@ -83601,7 +83601,33 @@ and limitations under the License.
               this.setState({ bFadeOutComplete: !0 });
           }),
           (t.prototype.render = function() {
-            return this.state.bFadeOutComplete, null;
+            if (this.state.bFadeOutComplete) return null;
+            var e = D.a.throbberContainer;
+            return (
+              this.props.fadeOut &&
+                (e += " " + D.a["throbberContainer-exit-active"]),
+              p.createElement(
+                "div",
+                {
+                  className: e,
+                  onTransitionEnd: this.OnTransitionEnd,
+                  ref: this.m_refElement
+                },
+                p.createElement(
+                  "div",
+                  { className: "WaitingForInterFaceReadyContainer" },
+                  p.createElement(
+                    "div",
+                    { className: "WaitingForInterFaceReadyThrobber" },
+                    p.createElement(I.a, {
+                      className: "Throbber_Blur",
+                      size: "xlarge"
+                    }),
+                    p.createElement(I.a, { size: "xlarge" })
+                  )
+                )
+              )
+            );
           }),
           Object(o.c)([d.a], t.prototype, "OnTransitionEnd", null),
           t
