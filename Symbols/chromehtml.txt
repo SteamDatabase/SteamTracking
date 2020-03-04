@@ -3751,6 +3751,7 @@
  b s_CmdLineParamDisableHighDPI
  b s_CmdLineParamDisableSandbox
  b s_CmdLineParamDisableWinH264
+ b s_CmdLineParamEnableKeyring
  b s_CmdLineParamStoreURL
  b s_HTMLController
  bootstrap_look_up

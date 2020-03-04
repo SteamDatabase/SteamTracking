@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+@9
+@9
 __stubs
 __TEXT
 __stub_helper
@@ -41,7 +43,7 @@ __LINKEDIT
 @loader_path/chromehtml.dylib
 "
 x
-|
+}
 P
 
 8
@@ -809,6 +811,8 @@ disables high-DPI support in CEF
 -dev
 -cef-verbose-logging
 enables verbose logging from CEF
+-enable-keyring
+enables CEF usage of the Chromium keyring
 -store
 -community
 -clientui
@@ -1727,14 +1731,13 @@ vi
 
 
 
-|
+~
 "
+Y
 3
 D
 @
-x
-
-
+c
 
 
 H
@@ -1758,6 +1761,9 @@ $
 A
 Hc
 =
+x
+\
+L95ec
 
 Hc
 i

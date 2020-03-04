@@ -1733,7 +1733,7 @@ function UpdateFormattedNumber( element, delta )
 	$Element.text( v_numberformat( parseInt( $Element.text().replace( /,/, '' ) ) + delta ) );
 }
 
-function RateAnnouncement( rateURL, gid, bVoteUp )
+function RateAnnouncement( rateURL, gid, bVoteUp, clanID )
 {
 	if ( bVoteUp && $J('#VoteUpBtn_' + gid).hasClass( "btn_active" ) )
 	{
@@ -1747,6 +1747,7 @@ function RateAnnouncement( rateURL, gid, bVoteUp )
 	rateURL = rateURL + gid;
 	$J.post( rateURL, {
 			'voteup' : bVoteUp,
+			'clanid' : clanID,
 			'sessionid' : g_sessionID
 		}
 	).done( function( json ) {

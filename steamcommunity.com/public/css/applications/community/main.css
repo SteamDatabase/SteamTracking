@@ -3,6 +3,12 @@
 
 
 
+
+
+
+
+
+
 @import url(https://p.typekit.net/p.css?s=1&k=sxp5lha&ht=tk&f=1785.1786.24726&a=8491078&app=typekit&e=css);
 
 .throbber_LoadingWrapper_2wAKy {
@@ -1962,6 +1968,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .login_AccountPasswordPanel_2LBKJ .DialogCheckbox_Container .DialogToggle_Label {
   color: #969696;
   font-size: 12px;
+  line-height: 22px;
   font-weight: 300; }
 
 .login_LoginPanelBackground_3Xp1H {
@@ -2007,6 +2014,11 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     color: #bfc6d4;
     box-sizing: content-box;
     background: #32353c; }
+    @media screen and (max-width: 700px) {
+      .login_AccountPasswordForm_2Mp7X .DialogTextInputBase {
+        font-size: 18px;
+        height: 20px;
+        width: 70vw; } }
     .login_AuthenticationPanel_ApHu0 .login_AccountPasswordForm_2Mp7X .DialogTextInputBase {
       text-transform: uppercase; }
     .login_AccountPasswordForm_2Mp7X .DialogTextInputBase:hover {
@@ -2033,6 +2045,9 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
       font-size: 19px;
       padding-top: 10px;
       padding-bottom: 10px; }
+    @media screen and (max-width: 700px) {
+      .login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8 {
+        font-size: 19px; } }
   .login_AccountPasswordForm_2Mp7X input:-webkit-autofill,
   .login_AccountPasswordForm_2Mp7X input:-webkit-autofill:hover,
   .login_AccountPasswordForm_2Mp7X input:-webkit-autofill:focus
@@ -2100,9 +2115,19 @@ textarea:-webkit-autofill:focus,
   color: #bfc6d4;
   margin-top: 28px;
   margin-bottom: 12px; }
+  @media screen and (max-width: 700px) {
+    .login_SigningInAccountName_2Tg37,
+    .login_SigninTitle_xJ2mR {
+      margin-top: 0px; } }
 
 .login_RememberMeCheck_1caeW {
   margin-top: -8px; }
+  .login_RememberMeCheck_1caeW._DialogLayout {
+    padding-left: 0px; }
+    .login_RememberMeCheck_1caeW._DialogLayout .DialogCheckbox {
+      background: #32353c; }
+    .login_RememberMeCheck_1caeW._DialogLayout:hover > .DialogCheckbox:not(.Disabled) {
+      background: #3a3e46; }
 
 .login_SteamUpsellContainer_2Ge6a {
   user-select: none;
@@ -5504,6 +5529,15 @@ iframe.steamTVLogin {
   color: #868f98;
   letter-spacing: normal; }
 
+.localdateandtime_ShortDateRange_3CN6I {
+  display: flex; }
+  @media screen and (max-width: 500px) {
+    .localdateandtime_ShortDateRange_3CN6I {
+      flex-direction: column; } }
+  .localdateandtime_ShortDateRange_3CN6I .localdateandtime_RightSideTitles_4LAnP {
+    display: flex;
+    flex-wrap: wrap; }
+
 .eventbbcodeparser_BlockQuote_2cY7b {
   border: 1px solid #56707f;
   border-radius: 3px;
@@ -6931,8 +6965,7 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventDetailTimeInfo_2KsEb {
     font-size: 12px;
     margin-bottom: 0;
-    color: #868f98;
-    margin-left: 4px; }
+    color: #868f98; }
     .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventDetailTimeInfo_2KsEb div {
       display: flex; }
 
@@ -6966,11 +6999,13 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap; }
+  @media screen and (max-width: 910px) {
+    .partnereventdisplay_AppSummaryCtn_Wk21c .partnereventdisplay_EventBodyPosition_3lIxP {
+      display: block; } }
 
 .partnereventdisplay_AppSummaryWidgetTitleCtn_jJFfo {
   flex-grow: 2;
   flex-basis: 0;
-  min-width: 400px;
   display: flex;
   flex-direction: column; }
   .partnereventdisplay_AppSummaryWidgetTitleCtn_jJFfo .partnereventdisplay_Title_2gsoD {
@@ -6987,6 +7022,11 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
   background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px; }
+  @media screen and (max-width: 910px) {
+    .partnereventdisplay_AppSummaryWidgetCtn_2jRJR {
+      width: 100%;
+      box-sizing: border-box;
+      margin-right: 0; } }
 
 .partnereventdisplay_DisplayAdminPanel_XshNh {
   padding-top: 50px; }
@@ -7507,7 +7547,6 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
 
 .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
   width: 100%;
-  height: 80px;
   background-color: #3d424c;
   background-image: radial-gradient(ellipse at bottom center, rgba(255, 255, 255, 0.1) 10%, rgba(255, 255, 255, 0) 80%);
   display: flex;
@@ -7518,40 +7557,64 @@ iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed
     font-weight: 100;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
     color: white; }
+    @media screen and (max-width: 700px) {
+      .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerTitle_1iqjH {
+        font-size: 24px; } }
+    @media screen and (max-width: 500px) {
+      .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerTitle_1iqjH {
+        font-size: 20px; } }
   .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLogoCtn_2EV_W {
     padding: 3px;
     border-radius: 3px;
     background: rgba(0, 0, 0, 0.2);
-    height: 60px;
+    height: 66px;
+    box-sizing: border-box;
     display: block;
-    margin-right: 15px; }
+    grid-row-end: span 2; }
   .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLogo_dGGTg {
     height: 60px;
     margin: 0px;
     display: block; }
   .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerGroup_qexk- {
     max-width: 866px;
-    width: 100%;
     margin: 0px auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%; }
+    width: 100%;
+    height: 100%;
+    padding: 7px;
+    box-sizing: border-box;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 134px 1fr;
+    grid-template-rows: 42px 24px;
+    grid-column-gap: 15px; }
   .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppTitleGroup_2ttnb {
-    margin: auto 0px; }
+    align-self: center; }
   .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLinks_D1bMm {
-    display: flex; }
+    display: flex;
+    align-self: end; }
   .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLink_3Yoms {
-    margin-right: 20px;
+    padding: 2px 12px 2px 0;
     color: #c5cedf; }
     .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLink_3Yoms:hover {
       color: white; }
+  @media screen and (max-width: 500px) {
+    .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerGroup_qexk- {
+      grid-template-rows: 66px 24px; }
+    .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLogoCtn_2EV_W {
+      grid-row-end: span 1; }
+    .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLinks_D1bMm {
+      margin: auto;
+      grid-column-end: span 2; } }
 
 @media screen and (max-width: 910px) {
   .apppartnereventspage_AppPartnerEventsBody_1XLRr,
   .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
     position: relative;
-    top: 63px; } }
+    top: 63px; }
+    body.events_hub.v6 .apppartnereventspage_AppPartnerEventsBody_1XLRr, body.events_hub.v6
+    .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
+      /* stylelint-disable-line selector-class-pattern */
+      top: 0; } }
 
 .apppartnereventspage_AppPartnerEventsContainer_3GCEy {
   padding: 0px 20px;
@@ -7710,6 +7773,9 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
     border-radius: 6px;
     background-color: rgba(30, 33, 38, 0.5);
     margin-bottom: 6px; }
+    @media screen and (max-width: 700px) {
+      .apppartnereventspage_EventTypeAndTimeRow_3bWTO.apppartnereventspage_WithReminder_1C5Dv {
+        flex-direction: column; } }
   .apppartnereventspage_EventTypeAndTimeRow_3bWTO .apppartnereventspage_TimeandPostedBy_2WwG2 {
     display: flex;
     flex-wrap: wrap;
@@ -7720,6 +7786,8 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
       text-transform: uppercase;
       font-weight: 500;
       color: #289cff; }
+    .apppartnereventspage_EventTypeAndTimeRow_3bWTO .apppartnereventspage_TimeandPostedBy_2WwG2 .apppartnereventspage_PostedBy_2VqeQ {
+      margin: 0px 6px; }
   .apppartnereventspage_EventTypeAndTimeRow_3bWTO .apppartnereventspage_ReminderContainer_3Vf2M {
     margin-left: auto;
     flex: none; }

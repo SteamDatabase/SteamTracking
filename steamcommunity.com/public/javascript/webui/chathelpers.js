@@ -291,6 +291,7 @@
       i.k_ESmallUpdateEvent,
       i.k_ERegularUpdateEvent,
       i.k_EMajorUpdateEvent,
+      i.k_EDLCReleaseEvent,
       i.k_EFutureReleaseEvent,
       i.k_EESportTournamentStreamEvent,
       i.k_EDevStreamEvent,
@@ -1902,6 +1903,23 @@
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
       })(f || (f = {}));
+    var v;
+    !(function(e) {
+      (e[(e.k_ENetworkDeviceStateNotPresent = 0)] =
+        "k_ENetworkDeviceStateNotPresent"),
+        (e[(e.k_ENetworkDeviceStateFailed = 1)] =
+          "k_ENetworkDeviceStateFailed"),
+        (e[(e.k_ENetworkDeviceStateDisconnected = 2)] =
+          "k_ENetworkDeviceStateDisconnected"),
+        (e[(e.k_ENetworkDeviceStateDisconnecting = 3)] =
+          "k_ENetworkDeviceStateDisconnecting"),
+        (e[(e.k_ENetworkDeviceStateConnecting = 4)] =
+          "k_ENetworkDeviceStateConnecting"),
+        (e[(e.k_ENetworkDeviceStateConnected = 5)] =
+          "k_ENetworkDeviceStateConnected"),
+        (e[(e.k_ENetworkDeviceStateRetrying = 6)] =
+          "k_ENetworkDeviceStateRetrying");
+    })(v || (v = {}));
   },
   mrSG: function(e, t, n) {
     "use strict";
@@ -2709,8 +2727,8 @@ and limitations under the License.
       );
     }
     window.AssertMsg = u.a;
-    var g,
-      k,
+    var k,
+      g,
       C,
       I = new a.a();
     function L(e) {
@@ -2745,18 +2763,18 @@ and limitations under the License.
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (g = n) : "shared" == e && (k = n);
+          "friendsui" == e ? (k = n) : "shared" == e && (g = n);
         else if ("shared" == e) C = n;
         else {
           var r = void 0,
             o = null,
             i = void 0,
             a = null;
-          void 0 !== g ? ((r = g), (o = n)) : (r = n),
-            void 0 !== k ? ((i = k), (a = C)) : (i = C),
+          void 0 !== k ? ((r = k), (o = n)) : (r = n),
+            void 0 !== g ? ((i = g), (a = C)) : (i = C),
             s.b.InitFromObjects(r, o, i, a),
-            (g = void 0),
             (k = void 0),
+            (g = void 0),
             (C = void 0);
         }
       });

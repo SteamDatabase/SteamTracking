@@ -583,6 +583,7 @@
       i.k_ESmallUpdateEvent,
       i.k_ERegularUpdateEvent,
       i.k_EMajorUpdateEvent,
+      i.k_EDLCReleaseEvent,
       i.k_EFutureReleaseEvent,
       i.k_EESportTournamentStreamEvent,
       i.k_EDevStreamEvent,
@@ -1565,14 +1566,14 @@
                 O = P > 0,
                 I = (c.bPreferPopTop || !O) && L && !c.bDisablePopTop;
               if (!L && !O) {
-                var B =
+                var N =
                   void 0 !== c.bShiftToFitWindow
                     ? c.bShiftToFitWindow
                     : c.bFitToWindow && !c.bOverlapHorizontal;
                 (I = C > P),
-                  B && (I ? (a.menuTop = 4) : (a.menuBottom = 4)),
+                  N && (I ? (a.menuTop = 4) : (a.menuBottom = 4)),
                   c.bFitToWindow &&
-                    (B ? (M = Math.min(M, p - 8)) : (M += I ? C : P),
+                    (N ? (M = Math.min(M, p - 8)) : (M += I ? C : P),
                     (a.menuHeight = M - 8));
               }
               void 0 === a.menuBottom &&
@@ -3459,13 +3460,13 @@
         return I;
       }),
       n.d(t, "N", function() {
-        return B;
+        return N;
       }),
       n.d(t, "ob", function() {
         return R;
       }),
       n.d(t, "M", function() {
-        return N;
+        return B;
       }),
       n.d(t, "l", function() {
         return T;
@@ -4664,7 +4665,7 @@
         )
       );
     }
-    function B() {
+    function N() {
       return o.createElement(
         "svg",
         {
@@ -4760,7 +4761,7 @@
         )
       );
     }
-    function N() {
+    function B() {
       return o.createElement(
         "svg",
         {
@@ -6937,6 +6938,23 @@
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
       })(v || (v = {}));
+    var _;
+    !(function(e) {
+      (e[(e.k_ENetworkDeviceStateNotPresent = 0)] =
+        "k_ENetworkDeviceStateNotPresent"),
+        (e[(e.k_ENetworkDeviceStateFailed = 1)] =
+          "k_ENetworkDeviceStateFailed"),
+        (e[(e.k_ENetworkDeviceStateDisconnected = 2)] =
+          "k_ENetworkDeviceStateDisconnected"),
+        (e[(e.k_ENetworkDeviceStateDisconnecting = 3)] =
+          "k_ENetworkDeviceStateDisconnecting"),
+        (e[(e.k_ENetworkDeviceStateConnecting = 4)] =
+          "k_ENetworkDeviceStateConnecting"),
+        (e[(e.k_ENetworkDeviceStateConnected = 5)] =
+          "k_ENetworkDeviceStateConnected"),
+        (e[(e.k_ENetworkDeviceStateRetrying = 6)] =
+          "k_ENetworkDeviceStateRetrying");
+    })(_ || (_ = {}));
   },
   mrSG: function(e, t, n) {
     "use strict";

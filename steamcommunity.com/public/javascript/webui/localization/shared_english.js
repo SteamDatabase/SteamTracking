@@ -122,17 +122,16 @@ LocalizationReady("shared", "english", {
   EventBrowse_RecentUpdates: "Recent Updates",
   EventBrowse_RecentEvents: "Recent Events & Announcements",
 
-  EventCalendar_Title: "Steam news & events",
-  EventCalendar_FilterSubSection_EventTypeGroups: "Show these event types",
-  EventCalendar_FilterSubSection_GameSources: "Show events for these games",
+  EventCalendar_Title: "Steam%1$sNews Hub",
+  EventCalendar_FilterSubSection_EventTypeGroups: "Show these types of posts",
+  EventCalendar_FilterSubSection_GameSources: "Show posts from these sources",
   EventCalendar_EmptyCalendar:
-    "No events found. Try selecting different search criteria in the sidebar.",
+    "No posts found. Try selecting different search criteria in the sidebar.",
   EventCalendar_DisabledFilter_LoginPrompt:
     "Sign in to enable these categories",
-  EventCalendar_MainLoginPrompt: "Sign in to see your personal event calendar",
-  EventCalendar_NoMoreFutureEvents: "No more matching events scheduled yet",
-  EventCalendar_NoMorePastEvents: "No older matching events found",
-  EventCalendar_FailedToLoadMoreEvents: "Error loading events",
+  EventCalendar_MainLoginPrompt: "Sign in to see your personal News Hub",
+  EventCalendar_NoMoreFutureEvents: "No more matching posts scheduled yet",
+  EventCalendar_NoMorePastEvents: "No older matching posts found",
 
   SteamLabs: "Steam Labs",
   SteamLabs_ExperimentNumber: "Experiment %1$s",
@@ -154,56 +153,71 @@ LocalizationReady("shared", "english", {
   EventCalendar_ThisMonth: "this month",
   EventCalendar_MuchLater: "much later",
   EventCalendar_MuteApp: "Mute App",
+  EventCalendar_MuteApp_Title: "Mute %1$s",
   EventCalendar_MuteApp_ttip:
-    "Remove this game from your calendar and block future communications.",
+    "Remove this game from your News Hub and block future communications.",
   EventCalendar_MuteApp_details:
-    "Remove '%1$s' from appearing in your calendar and block all future communications. Muted content decisions are always reverseable by visiting this page:",
+    "Remove '%1$s' from appearing in your News Hub and block all future communications. Muted content decisions are always reverseable by visiting this page:",
   EventCalendar_ManageMutedApps: "Manage Muted Apps",
   EventCalendar_MuteApp_Unknown: "Unknown",
+  EVentCalendar_Hide_EventType: "Hide all '%1$s' type posts",
+  EventCalender_Reason_library: "This game is in your library",
+  EventCalender_Reason_following: "You are following this game",
+  EventCalender_Reason_wishlist: "This game is in your wishlist",
+  EventCalender_Reason_recommended: "This game is recommended for you",
+  EventCalender_Reason_steam: "This post is from the Steam Platform",
+  EventCalender_Hide_Reason_library: "Hide posts from games in your library",
+  EventCalender_Hide_Reason_following:
+    "Hide posts from games you are following",
+  EventCalender_Hide_Reason_wishlist: "Hide posts from games in your wishlist",
+  EventCalender_Hide_Reason_recommended:
+    "Hide posts from games recommended for you",
+  EventCalender_Hide_Reason_steam: "Hide posts from the Steam Platform",
 
   EventCalendar_EventTypeGroup_news: "News",
-  EventCalendar_EventTypeGroup_ttip_news: "Include general news",
+  EventCalendar_EventTypeGroup_ttip_news:
+    "Includes general news, dev blogs, and announcements",
   EventCalendar_EventTypeGroup_events: "Events",
   EventCalendar_EventTypeGroup_ttip_events:
-    "Include in-game, online/chat, and real-world events",
-  EventCalendar_EventTypeGroup_streaming: "Streaming",
+    "Includes in-game, online/chat, and real-world events",
+  EventCalendar_EventTypeGroup_streaming: "Live-Streams",
   EventCalendar_EventTypeGroup_ttip_streaming:
-    "Include broadcast events, liek tournaments and play-alongs",
-  EventCalendar_EventTypeGroup_updates: "Updates",
+    "Includes developer live-streams such as tournaments and play-alongs",
+  EventCalendar_EventTypeGroup_updates: "Content Updates",
   EventCalendar_EventTypeGroup_ttip_updates:
-    "Include news about new game content, expansions, DLC, and bug fixes",
+    "Includes news about new game content, expansions, DLC, and bug fixes",
   EventCalendar_EventTypeGroup_releases: "Releases",
   EventCalendar_EventTypeGroup_ttip_releases:
-    "Include new game, beta, season, or DLC release schedules.",
+    "Includes new game, beta, season, or DLC release schedules.",
   EventCalendar_EventTypeGroup_sales: "Sales",
   EventCalendar_EventTypeGroup_ttip_sales:
-    "Include discounts, promotions, and free trials",
+    "Includes discounts, promotions, and free trials",
 
   EventCalendar_GameSource_library: "Library",
   EventCalendar_GameSource_ttip_library:
-    "Include post about games in your library",
+    "Include posts about games in your library",
   EventCalendar_GameSource_EventExplanation_ttip_library:
     "This game is in your library",
   EventCalendar_GameSource_wishlist: "wishlist",
   EventCalendar_GameSource_ttip_wishlist:
-    "Include post about games on your wishlist",
+    "Include posts about games on your wishlist",
   EventCalendar_GameSource_EventExplanation_ttip_wishlist:
     "This game is on your wishlist",
   EventCalendar_GameSource_following: "following",
   EventCalendar_GameSource_ttip_following:
-    "Include post about games that you follow",
+    "Include posts about games that you follow",
   EventCalendar_GameSource_EventExplanation_ttip_following:
     "This is a game that you follow",
   EventCalendar_GameSource_recommended: "recommended",
+  EventCalendar_GameSource_recommended_Verbose: "Recommended Game",
   EventCalendar_GameSource_ttip_recommended:
-    "Include post about games we think you would like",
+    "Include posts about games we think you would like",
   EventCalendar_GameSource_EventExplanation_ttip_recommended:
     "This is a game we think you would like",
   EventCalendar_GameSource_steam: "steam",
-  EventCalendar_GameSource_ttip_steam:
-    "Include news events posted about the Steam platform",
+  EventCalendar_GameSource_ttip_steam: "Include posts about the Steam platform",
   EventCalendar_GameSource_EventExplanation_ttip_steam:
-    "This is a news item about Steam",
+    "This is a post about Steam",
 
   EventDisplay_Admin_Title: "Admin tools:",
   EventDisplay_ViewInLibrary: "View in Library",
@@ -949,6 +963,8 @@ LocalizationReady("shared", "english", {
 
   Store_AddToCart: "Add to Cart",
 
+  YouTubePlayer_Loading: "Loading Youtube...",
+
   home_page_live_broadcast: "Live",
   StoreBroadcast_Hide_Tooltip: "Show/hide the live broadcast",
   StoreBroadcast_Detault_popout_Title: "Now Broadcasting",
@@ -976,6 +992,7 @@ LocalizationReady("shared", "english", {
   Sale_PackageSave: "Includes %1$s items.",
   Sale_ShowContents: "Show contents",
   Sale_ShowMore: "Show more",
+  Sale_ShowLess: "Show less",
   Sale_OnWishlist: "On Wishlist",
   Sale_InLibrary: "In Library",
   Sale_HiddenItems: "%1$s items are hidden due to %2$s",
@@ -983,6 +1000,7 @@ LocalizationReady("shared", "english", {
   Sale_StorePreferences: "your store preferences",
   Sale_SeeAllSpecials: "See All Specials",
   Sale_AddToWishlist: "Add to Wishlist",
+  Sale_RemoveFromWishlist: "Remove From Wishlist",
   Sale_Preferences: "Preferences",
   Sale_PlaceHolder:
     "Preview Mode: This section has no capsules. Will not appear on user page if it is empty",

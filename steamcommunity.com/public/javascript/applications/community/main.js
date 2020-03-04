@@ -140,34 +140,34 @@
               ".js?chunkhash=" +
               {
                 0: "ebf340b3a6216e2d0fa9",
-                1: "05af582e412ed976c655",
+                1: "9afbb3fd129e006b15c1",
                 3: "1b344efe18860c0f5717",
-                5: "0c64ae96b5378e1aee01",
-                6: "f2af4da561c87cd68950",
+                5: "84efc71e36a8d08275b4",
+                6: "3fd4217722249cbe7bf3",
                 7: "4af3a094a6b6b19718c4",
-                8: "d782e17f56a288fc8eba",
-                9: "a624400cba8a841bdaaf",
+                8: "66422e70df43d25fc990",
+                9: "b7109865034b01f98314",
                 10: "b79c1c75898dac765292",
-                11: "cd59057e76ec7e098d99",
+                11: "3ab1083b0e8767bf2744",
                 12: "51c521d0c698513bd755",
-                13: "b444425784ccea96d624",
-                14: "9c3bd0b6220f119ccc19",
+                13: "abb6984ad2c708cd80a8",
+                14: "efc9196509d40731fa3f",
                 15: "39d29f723e47da5f2f00",
-                16: "f634eaf9e517cf5d414a",
+                16: "82bd121aca249174b94e",
                 17: "b98dba6600055d561e32",
                 18: "47ccb22d71b268d5d33b",
                 19: "8a7edc979d9648b334de",
-                20: "c45f5d9a6f76faa6ad92",
-                21: "e259dbb53e2552a3e1f1",
+                20: "a43b1a52738934eddace",
+                21: "dbdc8a1b3280cb9742a8",
                 22: "b6bc4965a0052aca621f",
-                23: "11fd73db696447b00ed1",
-                24: "6fdfd14cec7aaa49cde5",
-                25: "e77e176b5eea07aaacd4",
+                23: "c5f8be7b572b2f2a2fc9",
+                24: "ed77dc4bc09c032d413b",
+                25: "27687c3300b0ce6a36fc",
                 26: "aa3f98bcbaa3ce68a667",
-                27: "45a42d87e70e8b96f59f",
-                28: "6924f61d62de7889483e",
+                27: "b32f8eff31f54c474478",
+                28: "3ba96b77b56fb6407007",
                 29: "938b7069161c53047155",
-                30: "879c09466e0b68c378a3",
+                30: "85b8d53817187e053fe5",
                 31: "423af27a9f613c5043a8",
                 33: "1389b6bab9c4895d521d",
                 34: "c52e24f5ecd5dc9a0946",
@@ -197,33 +197,33 @@
                 58: "13e6daa9ecce278ea943",
                 59: "b6bf04f8cb7612d836bc",
                 60: "877d6e0f7fa9ced9ff2f",
-                61: "ff0b00813ae592a44406",
-                62: "98a328719877bbbcbfe8",
-                63: "b0f6db3b1f4f7ee6f82c",
-                64: "5ce60b89dc7ae36fc2a0",
-                65: "b6dd14c6e89854d714b2",
-                66: "6e35c6829247344d8a6b",
-                67: "8e36fa9efc67ead1d1e8",
-                68: "c074b3f85356cd2b5e1c",
-                69: "411df742bfe27d0da975",
-                70: "405d903510d14ae3a0f1",
-                71: "8adf79c8da5d1043b55f",
-                72: "f9cdfa1b32765b72f20f",
-                73: "1efc2ae635e3814629f2",
-                74: "19b2450e33158d61955a",
-                75: "ebf7b8770c32a835231a",
-                76: "cfea7da818f490c2af73",
-                77: "6c87229fac408dbb7841",
-                78: "f2afa35ad27ae1071212",
-                79: "f4262447abc28d8a6ab3",
-                80: "15b7e15fb24110cfe051",
-                81: "04a4bac3f18560921e77",
-                82: "6a231d21336345c1362b",
-                83: "3e8b0503143a18ae5384",
-                84: "2bc5263f965920594768",
-                85: "43c72e01afbf8f92bc8d",
-                86: "fdf4af5557da2f85098b",
-                87: "161303cd8fd2739467cf"
+                61: "94bedcb38d0240eb9bb8",
+                62: "1a2800cf4644d23cab4e",
+                63: "a108de8bebe2c170dd69",
+                64: "0a46844bef0e9230dab1",
+                65: "b9ccabe43fe999b9b9db",
+                66: "08c36afcebc9fd05c6d5",
+                67: "cac9b157201c7b6d6f4f",
+                68: "5b8e0daaa5d5b7d5aa6f",
+                69: "140812a66950fa4c36ae",
+                70: "7668382415f93bff70a4",
+                71: "3abedd4ccef24c687a99",
+                72: "45285eb8ae86334bcb77",
+                73: "bbba4fc70fe351a492c7",
+                74: "23e9ecc6f3f2e3b773d4",
+                75: "72af30b573808375a9f1",
+                76: "d488dc6437439b986c52",
+                77: "ddc4c8cf2954e7d28204",
+                78: "2913fc2abb00f4185114",
+                79: "438736eecae57fc7ccde",
+                80: "00dc6d2f3175ce01a579",
+                81: "19d1fe6db56938b0f4e3",
+                82: "f63779506548d9e0c977",
+                83: "3f8d3e913c2bd20e44f2",
+                84: "11773abe74a37ecdf3fe",
+                85: "af69ec4b3d342cf5f50b",
+                86: "fb8c3b159c72535f3d28",
+                87: "8c914e815b20134d0108"
               }[e]
             );
           })(i)),
@@ -3896,7 +3896,8 @@
       ActiveEventCallOut: "localdateandtime_ActiveEventCallOut_2pJft",
       RightSideTitles: "localdateandtime_RightSideTitles_4LAnP",
       DateToolTip: "localdateandtime_DateToolTip_2E5LH",
-      ShortDateAndTime: "localdateandtime_ShortDateAndTime_MBkkh"
+      ShortDateAndTime: "localdateandtime_ShortDateAndTime_MBkkh",
+      ShortDateRange: "localdateandtime_ShortDateRange_3CN6I"
     };
   },
   FdXL: function(e, t, n) {
@@ -3970,6 +3971,7 @@
       WithReminder: "apppartnereventspage_WithReminder_1C5Dv",
       TimeandPostedBy: "apppartnereventspage_TimeandPostedBy_2WwG2",
       EventType: "apppartnereventspage_EventType_Udzrp",
+      PostedBy: "apppartnereventspage_PostedBy_2VqeQ",
       ReminderContainer: "apppartnereventspage_ReminderContainer_3Vf2M"
     };
   },
@@ -17053,6 +17055,8 @@
           Object(L.c)([v.w], o.prototype, "vecTags", void 0),
           Object(L.c)([v.w], o.prototype, "last_update_steamid", void 0),
           Object(L.c)([v.w], o.prototype, "rtime32_last_modified", void 0),
+          Object(L.c)([v.w], o.prototype, "video_preview_type", void 0),
+          Object(L.c)([v.w], o.prototype, "video_preview_id", void 0),
           Object(L.c)([v.w], o.prototype, "m_overrideCurrentDay", void 0),
           o
         );
@@ -20885,6 +20889,9 @@
               b.s_EventUserStore
             );
           }),
+          (b.IsInitialized = function() {
+            return !!b.s_EventUserStore;
+          }),
           (b.InitGlobal = function() {
             return Object(L.b)(this, void 0, void 0, function() {
               var t;
@@ -20913,31 +20920,45 @@
             return Object(L.b)(this, void 0, void 0, function() {
               var t,
                 n,
-                o,
-                a,
-                i = this;
+                o = this;
               return Object(L.e)(this, function(e) {
                 return (
                   (t = Object(C.e)(
-                    "partnereventpermission",
+                    "partnereventpermissions",
                     "application_config"
-                  )) &&
-                    t.clanid &&
-                    ((n = new Un(t.clanid)),
-                    (o = { result: n, promise: b.RemapToPromise(n) }),
-                    this.CopyFromResponseToTrack(o, t),
-                    this.m_mapClanToUserPermissions.set(t.clanid, o)),
-                  (a = Object(C.e)("uservotes", "application_config")) &&
+                  )),
+                  this.ValidateStoreDefault(t) &&
                     Object(v.z)(function() {
-                      a.forEach(function(e) {
+                      t.forEach(function(e) {
+                        var t = new Un(e.clanid),
+                          n = { result: t, promise: b.RemapToPromise(t) };
+                        o.CopyFromResponseToTrack(n, e),
+                          o.m_mapClanToUserPermissions.set(e.clanid, n);
+                      });
+                    }),
+                  (n = Object(C.e)("uservotes", "application_config")) &&
+                    Object(v.z)(function() {
+                      n.forEach(function(e) {
                         var t = !!e.voted_up || (!e.voted_down && void 0);
-                        i.m_mapAnnounceGIDToVote.set(e.clanAnnouncementGID, t);
+                        o.m_mapAnnounceGIDToVote.set(e.clanAnnouncementGID, t);
                       });
                     }),
                   [2]
                 );
               });
             });
+          }),
+          (b.prototype.ValidateStoreDefault = function(e) {
+            var t = e;
+            return (
+              !!(
+                t &&
+                Array.isArray(t) &&
+                0 < t.length &&
+                "object" == typeof t[0]
+              ) &&
+              ("number" == typeof t[0].clanid && "number" == typeof t[0].appid)
+            );
           }),
           (b.prototype.RecordEventShown = function(e, t) {
             e &&
@@ -21239,6 +21260,7 @@
                       ),
                       o.append("wgauthtoken", C.g.authwgtoken),
                       o.append("voteup", p ? "1" : "0"),
+                      o.append("clanid", "" + r.clanSteamID.GetAccountID()),
                       o.append("ajax", "1"),
                       (a = { withCredentials: !0, cancelToken: s.token }),
                       [4, g.a.post(t, o, a)]
@@ -43088,14 +43110,14 @@
         }
         return (
           Object(L.d)(e, t),
-          (e.prototype.ShowContents = function() {
-            var e = this;
-            this.setState({ bShowContents: !0 }),
+          (e.prototype.ShowContents = function(e) {
+            var t = this;
+            this.setState({ bShowContents: e }),
               window.setTimeout(function() {
-                return e.setState({
+                return t.setState({
                   containerStyle: Object(L.a)(
-                    Object(L.a)({}, e.state.containerStyle),
-                    { maxHeight: "2000px" }
+                    Object(L.a)({}, t.state.containerStyle),
+                    { maxHeight: "120000px" }
                   )
                 });
               }, 100);
@@ -43104,18 +43126,19 @@
             Ro.LoadBundleInfo([this.props.bundleid]);
           }),
           (e.prototype.render = function() {
-            var e = Ro.GetBundleInfo(this.props.bundleid);
-            if (!e) return null;
-            var t = ha.a.StoreSaleWidgetContainer + " " + ha.a.Bundle,
-              n = ha.a.StoreSaleWidgetImage,
-              o = ha.a.StoreSaleImage,
-              a = ha.a.StoreSaleWidgetShortDesc;
+            var e = this,
+              t = Ro.GetBundleInfo(this.props.bundleid);
+            if (!t) return null;
+            var n = ha.a.StoreSaleWidgetContainer + " " + ha.a.Bundle,
+              o = ha.a.StoreSaleWidgetImage,
+              a = ha.a.StoreSaleImage,
+              i = ha.a.StoreSaleWidgetShortDesc;
             return _.createElement(
               _.Fragment,
               null,
               _.createElement(
                 "div",
-                { className: t },
+                { className: n },
                 _.createElement(
                   "div",
                   { className: ha.a.Actions },
@@ -43129,10 +43152,10 @@
                     },
                     _.createElement(
                       "div",
-                      { className: n },
+                      { className: o },
                       _.createElement("img", {
-                        className: o,
-                        src: e.header_image_url
+                        className: a,
+                        src: t.header_image_url
                       })
                     )
                   )
@@ -43154,14 +43177,14 @@
                       _.createElement(
                         "div",
                         { className: ha.a.StoreSaleWidgetTitle },
-                        e.name
+                        t.name
                       )
                     )
                   ),
                   _.createElement(
                     "div",
-                    { className: a },
-                    Object(q.c)("#Sale_BundleSave", e.packageids.length)
+                    { className: i },
+                    Object(q.c)("#Sale_BundleSave", t.packageids.length)
                   ),
                   _.createElement(
                     "div",
@@ -43169,18 +43192,18 @@
                     _.createElement(
                       "div",
                       { className: ha.a.StoreSalePriceActionWidgetContainer },
-                      e.discount_percentage
+                      t.discount_percentage
                         ? _.createElement(
                             "div",
                             { className: ha.a.StoreSaleDiscountBox },
-                            "-" + e.discount_percentage + "%"
+                            "-" + t.discount_percentage + "%"
                           )
                         : null,
-                      e.formatted_final_price
+                      t.formatted_final_price
                         ? _.createElement(
                             "div",
                             { className: ha.a.StoreSalePriceBox },
-                            e.formatted_final_price
+                            t.formatted_final_price
                           )
                         : null
                     ),
@@ -43196,7 +43219,9 @@
                 _.createElement(
                   "div",
                   {
-                    onClick: this.ShowContents,
+                    onClick: function() {
+                      return e.ShowContents(!0);
+                    },
                     style: { display: "flex", justifyContent: "center" }
                   },
                   _.createElement(
@@ -43212,7 +43237,7 @@
                     style: this.state.containerStyle,
                     className: ha.a.BundleContentsCtn
                   },
-                  e.packageids.map(function(e) {
+                  t.packageids.map(function(e) {
                     var t = So.GetPackageInfo(e);
                     return t
                       ? _.createElement(
@@ -43227,6 +43252,21 @@
                         )
                       : null;
                   })
+                ),
+              Boolean(this.state.bShowContents && 10 < t.packageids.length) &&
+                _.createElement(
+                  "div",
+                  {
+                    onClick: function() {
+                      return e.ShowContents(!1);
+                    },
+                    style: { display: "flex", justifyContent: "center" }
+                  },
+                  _.createElement(
+                    "button",
+                    { className: ha.a.ShowContentsButton },
+                    Object(q.c)("#Sale_ShowLess")
+                  )
                 )
             );
           }),
@@ -44499,9 +44539,30 @@
         function e() {
           (this.m_bValidatedEmail = !1),
             (this.m_nMobileDeviceCount = 0),
-            (this.m_bIsLoaded = !1);
+            (this.m_bIsLoaded = !1),
+            (this.m_bLoadedFromConfig = !1);
         }
         return (
+          (e.prototype.LazyInit = function() {
+            var e = this;
+            if (!this.m_bLoadedFromConfig) {
+              var t = Object(C.e)("notificationstore", "application_config");
+              this.ValidateStoreDefault(t) &&
+                Object(v.z)(function() {
+                  (e.m_bIsLoaded = !0),
+                    (e.m_bValidatedEmail = t.email_validated),
+                    (e.m_nMobileDeviceCount = t.mobile_device_count);
+                }),
+                (this.m_bLoadedFromConfig = !0);
+            }
+          }),
+          (e.prototype.ValidateStoreDefault = function(e) {
+            return (
+              e &&
+              "object" == typeof e &&
+              "number" == typeof e.mobile_device_count
+            );
+          }),
           (e.prototype.BIsLoaded = function() {
             return this.m_bIsLoaded;
           }),
@@ -44515,8 +44576,13 @@
             return Object(L.b)(this, void 0, void 0, function() {
               return Object(L.e)(this, function(e) {
                 return (
-                  this.m_promise || (this.m_promise = this.InternalLoad()),
-                  [2, this.m_promise]
+                  this.LazyInit(),
+                  this.m_bIsLoaded
+                    ? [2, 1]
+                    : C.g.logged_in
+                    ? (this.m_promise || (this.m_promise = this.InternalLoad()),
+                      [2, this.m_promise])
+                    : [2, 1]
                 );
               });
             });
@@ -44874,7 +44940,12 @@
               { rtFullDate: n, stylesmodule: rc.a },
               b
             );
-            return _.createElement("div", null, s, z);
+            return _.createElement(
+              "div",
+              { className: rc.a.ShortDateRange },
+              s,
+              z
+            );
           }),
           (t = Object(L.c)([oe.a], t))
         );
@@ -50227,6 +50298,10 @@
               (a.vecTags = new Array()),
               (a.last_update_steamid = t.last_update_steamid),
               (a.rtime32_last_modified = t.rtime32_last_modified),
+              (a.video_preview_type = t.video_preview_type),
+              (a.video_preview_id = t.video_preview_id),
+              (a.has_live_stream = t.has_live_stream),
+              (a.live_stream_viewer_count = t.live_stream_viewer_count),
               t.announcement_body)
             ) {
               var n = t.announcement_body;
@@ -53255,6 +53330,9 @@
               });
             });
           }),
+          (t.Get = function() {
+            return t.sm_Instance || (t.sm_Instance = new t()), t.sm_Instance;
+          }),
           t
         );
       })(Yl),
@@ -56158,9 +56236,15 @@
                       "div",
                       { className: ZM.a.TimeandPostedBy },
                       _.createElement("span", { className: ZM.a.EventType }, d),
-                      _.createElement(Cl, { event: t }),
-                      Object(q.c)("#EventDisplay_PostedBy"),
-                      m
+                      _.createElement(
+                        "span",
+                        { className: ZM.a.PostedBy },
+                        " ",
+                        Object(q.c)("#EventDisplay_PostedBy"),
+                        m,
+                        " "
+                      ),
+                      _.createElement(Cl, { event: t })
                     ),
                     h &&
                       _.createElement(
@@ -56498,29 +56582,29 @@
                   className: ZM.a.AppBannerTitle
                 },
                 a
+              )
+            ),
+            _.createElement(
+              "div",
+              { className: ZM.a.AppBannerLinks },
+              n,
+              _.createElement(
+                "a",
+                {
+                  className: ZM.a.AppBannerLink,
+                  href: la((C.b.IN_CLIENT ? "steam://openurl/" : "") + i),
+                  target: C.b.IN_CLIENT ? void 0 : "_blank"
+                },
+                Object(q.c)("#EventDisplay_ViewStorePage")
               ),
               _.createElement(
-                "div",
-                { className: ZM.a.AppBannerLinks },
-                n,
-                _.createElement(
-                  "a",
-                  {
-                    className: ZM.a.AppBannerLink,
-                    href: la((C.b.IN_CLIENT ? "steam://openurl/" : "") + i),
-                    target: C.b.IN_CLIENT ? void 0 : "_blank"
-                  },
-                  Object(q.c)("#EventDisplay_ViewStorePage")
-                ),
-                _.createElement(
-                  "a",
-                  {
-                    className: ZM.a.AppBannerLink,
-                    href: la((C.b.IN_CLIENT ? "steam://openurl/" : "") + r),
-                    target: C.b.IN_CLIENT ? void 0 : "_blank"
-                  },
-                  Object(q.c)("#EventDisplay_ViewCommunityPage")
-                )
+                "a",
+                {
+                  className: ZM.a.AppBannerLink,
+                  href: la((C.b.IN_CLIENT ? "steam://openurl/" : "") + r),
+                  target: C.b.IN_CLIENT ? void 0 : "_blank"
+                },
+                Object(q.c)("#EventDisplay_ViewCommunityPage")
               )
             )
           )
@@ -77516,6 +77600,20 @@
         "k_ERemoteClientLaunchInvisible"),
       (u[(u.k_ERemoteClientLaunchRestrictedCountry = 28)] =
         "k_ERemoteClientLaunchRestrictedCountry");
+    var m, A;
+    ((A = m || (m = {}))[(A.k_ENetworkDeviceStateNotPresent = 0)] =
+      "k_ENetworkDeviceStateNotPresent"),
+      (A[(A.k_ENetworkDeviceStateFailed = 1)] = "k_ENetworkDeviceStateFailed"),
+      (A[(A.k_ENetworkDeviceStateDisconnected = 2)] =
+        "k_ENetworkDeviceStateDisconnected"),
+      (A[(A.k_ENetworkDeviceStateDisconnecting = 3)] =
+        "k_ENetworkDeviceStateDisconnecting"),
+      (A[(A.k_ENetworkDeviceStateConnecting = 4)] =
+        "k_ENetworkDeviceStateConnecting"),
+      (A[(A.k_ENetworkDeviceStateConnected = 5)] =
+        "k_ENetworkDeviceStateConnected"),
+      (A[(A.k_ENetworkDeviceStateRetrying = 6)] =
+        "k_ENetworkDeviceStateRetrying");
   },
   lkRc: function(e, t, n) {
     "use strict";
@@ -77978,6 +78076,7 @@
       o.k_ESmallUpdateEvent,
       o.k_ERegularUpdateEvent,
       o.k_EMajorUpdateEvent,
+      o.k_EDLCReleaseEvent,
       o.k_EFutureReleaseEvent,
       o.k_EESportTournamentStreamEvent,
       o.k_EDevStreamEvent,

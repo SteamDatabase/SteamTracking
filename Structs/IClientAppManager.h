@@ -97,4 +97,5 @@ public:
     virtual unknown_ret GetSystemIconFile(unsigned int, char*, int, unsigned int*) = 0;
     virtual unknown_ret SetUseHTTPSForDownloads(bool) = 0;
     virtual unknown_ret GetUseHTTPSForDownloads() = 0;
+    virtual unknown_ret SetAppPlatformOverride(unsigned int, char const*, char const*) = 0;
 };

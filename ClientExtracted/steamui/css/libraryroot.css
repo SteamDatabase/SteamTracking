@@ -9131,6 +9131,7 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
 .appactivityday_TradingCardSection_2IS7Z {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 8px 0 0 8px; }
 
 .appactivityday_TradingCard_2uUyK {

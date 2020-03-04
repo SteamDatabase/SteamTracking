@@ -354,18 +354,6 @@ function RenderMoreLikeThisBlock( rgRecommendedAppIDs, bUseShuffle )
 	RenderRecommendBlock( rgRecommendedAppIDs, 'recommended', $J('#recommended_block_content'), bUseShuffle ? ShuffleRecScore : DefaultRecScoreFactory( 15 ) );
 }
 
-function RenderSuccessorRankedAppsBlock( rgSuccessorAppIDs )
-{
-	if ( !rgSuccessorAppIDs || !rgSuccessorAppIDs.length > 0 || !$J('#successor_ranked_apps_block_block_content').length )
-	{
-		$J('#recommended_ranked_played_after').hide();
-		return;
-	}
-
-	RenderRecommendBlock( rgSuccessorAppIDs, 'recommended_ranked_played', $J('#successor_ranked_apps_block_block_content') );
-}
-
-
 function RenderFranchiseAppBlock( rgFranchiseAppIDs )
 {
 	if( !rgFranchiseAppIDs || !rgFranchiseAppIDs.length > 0 || !$J('#franchise_app_block_content').length )

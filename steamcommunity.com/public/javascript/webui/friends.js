@@ -4590,6 +4590,7 @@
       i.k_ESmallUpdateEvent,
       i.k_ERegularUpdateEvent,
       i.k_EMajorUpdateEvent,
+      i.k_EDLCReleaseEvent,
       i.k_EFutureReleaseEvent,
       i.k_EESportTournamentStreamEvent,
       i.k_EDevStreamEvent,
@@ -63075,34 +63076,34 @@
           (e.prototype.GetFriendLastChatTime = function(e) {
             return this.m_mapLastChatTimeByFriend.get(e) || 0;
           }),
-          (e.prototype.AddFriendPushNotificationData = function(e) {
-            var t = new s.a(e.steamid_friend()).GetAccountID();
+          (e.prototype.AddFriendPushNotificationData = function(e, t) {
+            var n = new s.a(e.steamid_friend()).GetAccountID();
             if (1 == e.chat_entry_type()) {
-              var n = e.local_echo()
+              var o = e.local_echo()
                   ? this.m_ChatStore.FriendStore.self.persona.m_steamid.GetAccountID()
-                  : t,
-                o = this.GetFriendChat(t, !1);
-              if (!o) return;
+                  : n,
+                r = this.GetFriendChat(n, !1);
+              if (!r) return;
               if (
                 e.local_echo() &&
-                o.HasClientMessageInFlight(e.client_message_id())
+                r.HasClientMessageInFlight(e.client_message_id())
               )
                 return;
               if (
-                !o.HasChatMessage(
+                !r.HasChatMessage(
                   e.previous_message_timestamp(),
                   e.previous_message_ordinal()
                 )
               )
                 return;
-              o.AppendChatMsg(
-                n,
+              r.AppendChatMsg(
+                o,
                 e.current_message_timestamp(),
                 e.current_message_ordinal(),
                 e.message()
               ),
                 this.m_mapLastChatTimeByFriend.set(
-                  t,
+                  n,
                   e.current_message_timestamp()
                 );
             }
@@ -64625,6 +64626,23 @@
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
       })(_ || (_ = {}));
+    var g;
+    !(function(e) {
+      (e[(e.k_ENetworkDeviceStateNotPresent = 0)] =
+        "k_ENetworkDeviceStateNotPresent"),
+        (e[(e.k_ENetworkDeviceStateFailed = 1)] =
+          "k_ENetworkDeviceStateFailed"),
+        (e[(e.k_ENetworkDeviceStateDisconnected = 2)] =
+          "k_ENetworkDeviceStateDisconnected"),
+        (e[(e.k_ENetworkDeviceStateDisconnecting = 3)] =
+          "k_ENetworkDeviceStateDisconnecting"),
+        (e[(e.k_ENetworkDeviceStateConnecting = 4)] =
+          "k_ENetworkDeviceStateConnecting"),
+        (e[(e.k_ENetworkDeviceStateConnected = 5)] =
+          "k_ENetworkDeviceStateConnected"),
+        (e[(e.k_ENetworkDeviceStateRetrying = 6)] =
+          "k_ENetworkDeviceStateRetrying");
+    })(g || (g = {}));
   },
   hReu: function(e, t, n) {
     "use strict";
@@ -64780,7 +64798,7 @@
       V = Object(r.h)(function(e, t, n) {
         Object(
           P.b
-        )(a.createElement(W, Object(o.a)({}, e, { bIsInviteDialog: !0 })), n, "InviteDialog", { strTitle: "Invite", popupWidth: 540, popupHeight: 260 }, Pt(n));
+        )(a.createElement(W, Object(o.a)({}, e, { bIsInviteDialog: !0 })), n, "InviteDialog", { strTitle: "Invite", popupWidth: 540, popupHeight: 260 }, Bt(n));
       }),
       U = (function(e) {
         function t() {
@@ -64793,7 +64811,7 @@
               n = v.p(e);
             r.f.ChatStore.InviteStore.AcceptInvite(
               this.props.invite,
-              Lt(this, e)
+              Nt(this, e)
             ).then(function(e) {
               t.HandleJoinResult(n, e);
             });
@@ -65243,7 +65261,7 @@
             this.props.gameInvite.DismissInvite();
           }),
           (t.prototype.OnShowGameContextMenu = function(e) {
-            Object(q.b)(Lt(this, e), this.props.gameInvite.appID, e);
+            Object(q.b)(Nt(this, e), this.props.gameInvite.appID, e);
           }),
           (t.prototype.render = function() {
             var e = r.f.AppInfoStore.GetAppInfo(this.props.gameInvite.appID);
@@ -65545,7 +65563,7 @@
             ) {
               var t =
                   "steam://broadcast/watch/" + this.props.broadcaster.steamid64,
-                n = Lt(this, e);
+                n = Nt(this, e);
               SteamClient.WebChat.OpenURLInClient(t, n.m_unPID, !1);
             } else {
               var o =
@@ -65828,7 +65846,7 @@
             ) {
               var t =
                   "steam://broadcast/watch/" + this.props.broadcaster.steamid64,
-                n = Lt(this, e);
+                n = Nt(this, e);
               SteamClient.WebChat.OpenURLInClient(t, n.m_unPID, !1);
             } else {
               var o =
@@ -65907,22 +65925,24 @@
       })(a.Component),
       $ = n("tY0L"),
       ee = n("7sd/"),
-      te = n("UqDm");
+      te = n("UqDm"),
+      ne = n("uuth"),
+      oe = n("QHER");
     !(function(e) {
       (e[(e.NotLoaded = 0)] = "NotLoaded"),
         (e[(e.Loading = 1)] = "Loading"),
         (e[(e.Loaded = 2)] = "Loaded");
     })(x || (x = {}));
-    var ne = x.NotLoaded,
-      oe = [];
-    function re() {
-      ne = x.Loaded;
-      for (var e = 0, t = oe; e < t.length; e++) {
+    var re = x.NotLoaded,
+      ie = [];
+    function ae() {
+      re = x.Loaded;
+      for (var e = 0, t = ie; e < t.length; e++) {
         (0, t[e])();
       }
-      oe = [];
+      ie = [];
     }
-    var ie = (function(e) {
+    var se = (function(e) {
         function t(n) {
           var o = e.call(this, n) || this;
           return (
@@ -65939,7 +65959,7 @@
           Object(o.d)(t, e),
           (t.prototype.componentWillUnmount = function() {
             var e;
-            this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), te.c(oe, e);
+            this.DestroyPlayer(), (e = this.OnYoutubeScriptsReady), te.c(ie, e);
           }),
           (t.prototype.shouldComponentUpdate = function(e, t) {
             if (!this.m_player) return !1;
@@ -65951,6 +65971,8 @@
               ? (this.CreatePlayer(e), !1)
               : ((n.width == e.width && n.height == e.height) ||
                   (this.m_bPlayerReady &&
+                    e.width &&
+                    e.height &&
                     this.m_player.setSize(e.width, e.height)),
                 !1);
           }),
@@ -65970,17 +65992,17 @@
               this.DestroyPlayer(),
               this.m_playerContainer &&
                 (function(e) {
-                  if (ne != x.Loaded) {
-                    if (ne == x.NotLoaded) {
+                  if (re != x.Loaded) {
+                    if (re == x.NotLoaded) {
                       var t = document.createElement("script");
                       t.src = "https://www.youtube.com/iframe_api";
                       var n = document.getElementsByTagName("script")[0];
                       n.parentNode.insertBefore(t, n),
-                        (window.onYouTubeIframeAPIReady = re);
+                        (window.onYouTubeIframeAPIReady = ae);
                     }
-                    oe.findIndex(function(t) {
+                    ie.findIndex(function(t) {
                       return e == t;
-                    }) < 0 && oe.push(e);
+                    }) < 0 && ie.push(e);
                   } else e();
                 })(this.OnYoutubeScriptsReady));
           }),
@@ -65994,8 +66016,8 @@
                 o = !0 === e.controls ? 1 : 0,
                 r = !0 === e.showFullscreenBtn ? 1 : 0,
                 i = {
-                  width: String(e.width),
-                  height: String(e.height),
+                  width: void 0 !== e.width ? String(e.width) : void 0,
+                  height: void 0 !== e.height ? String(e.height) : void 0,
                   videoId: e.video,
                   playerVars: {
                     autoplay: t,
@@ -66028,7 +66050,9 @@
                 t.video_id && (n.strVideoID = t.video_id),
                 this.props.onVideoInfoChanged(n);
             }
-            this.m_player.setSize(this.props.width, this.props.height),
+            this.props.width &&
+              this.props.height &&
+              this.m_player.setSize(this.props.width, this.props.height),
               this.props.onPlayerReady && this.props.onPlayerReady();
           }),
           (t.prototype.OnPlayerStateChange = function(e) {
@@ -66046,16 +66070,29 @@
             console.log("Youtube: Playback failed", e),
               this.props.onError && this.props.onError(e);
           }),
+          (t.prototype.OnPlayerLeftView = function() {
+            this.props.autopause &&
+              this.m_player &&
+              this.m_bPlayerReady &&
+              this.m_player.pauseVideo();
+          }),
           (t.prototype.render = function() {
-            return a.createElement(
+            var e = a.createElement(
               "div",
               {
                 key: this.m_strPlayerID,
                 ref: this.BindPlayerContainer,
-                className: "YoutubePlayer"
+                className: Object(oe.a)("YoutubePlayer", this.props.classnames)
               },
-              a.createElement("div", null, "Loading Youtube...")
+              a.createElement(
+                "div",
+                null,
+                "Localize( '#YouTubePlayer_Loading' )"
+              )
             );
+            return this.props.autopause
+              ? a.createElement(ne.a, { onLeave: this.OnPlayerLeftView }, e)
+              : e;
           }),
           (t.s_nPlayerIndex = 0),
           Object(o.c)([L.a], t.prototype, "BindPlayerContainer", null),
@@ -66064,12 +66101,13 @@
           Object(o.c)([L.a], t.prototype, "OnPlayerReady", null),
           Object(o.c)([L.a], t.prototype, "OnPlayerStateChange", null),
           Object(o.c)([L.a], t.prototype, "OnError", null),
+          Object(o.c)([L.a], t.prototype, "OnPlayerLeftView", null),
           t
         );
       })(a.Component),
-      ae = n("adxy"),
-      se = n("s+DT"),
-      ce = function(e) {
+      ce = n("adxy"),
+      le = n("s+DT"),
+      pe = function(e) {
         var t = e.children;
         return s.a.createElement(
           F.b,
@@ -66081,10 +66119,9 @@
           )
         );
       },
-      le = n("QHER"),
-      pe = n("SOfK"),
-      ue = n.n(pe),
-      me = (function(e) {
+      ue = n("SOfK"),
+      me = n.n(ue),
+      de = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -66128,7 +66165,7 @@
               s.a.createElement(
                 "pre",
                 {
-                  className: Object(le.a)("prettyprint", ue.a.CodeMessage),
+                  className: Object(oe.a)("prettyprint", me.a.CodeMessage),
                   ref: this.BindRef
                 },
                 this.props.children
@@ -66139,51 +66176,51 @@
           t
         );
       })(s.a.Component),
-      de = function(e) {
+      he = function(e) {
         var t = e.children;
         return s.a.createElement(
           "div",
           null,
-          s.a.createElement("pre", { className: ue.a.PreMessage }, t)
+          s.a.createElement("pre", { className: me.a.PreMessage }, t)
         );
       },
-      he = function(e) {
+      fe = function(e) {
         var t = e.children;
-        return s.a.createElement("div", { className: ue.a.QuoteMessage }, t);
+        return s.a.createElement("div", { className: me.a.QuoteMessage }, t);
       },
-      fe = n("Jdiq"),
-      _e = n("9Cmb"),
-      ge = n("LGkA"),
-      be = n("ljid");
-    function ve() {
+      _e = n("Jdiq"),
+      ge = n("9Cmb"),
+      be = n("LGkA"),
+      ve = n("ljid");
+    function ye() {
       return {
-        url: Se,
-        youtube: we,
-        filteredurl: ot,
-        emoticon: it,
-        img: Me,
-        video: Ge,
-        og: Le,
-        tweet: Ne,
-        inviteurl: qe,
-        publishedfile: Xe,
-        tradeofferlink: $e,
-        econitem: nt,
-        steamstore: at,
-        broadcast: tt,
-        oembed: Pe,
-        spoiler: Fe,
-        plusone: xe,
-        flip: Ve,
-        random: Ue,
-        quote: He,
-        pre: We,
-        code: ze,
-        roomeffect: st,
-        sticker: ct
+        url: Ce,
+        youtube: De,
+        filteredurl: rt,
+        emoticon: at,
+        img: Te,
+        video: je,
+        og: Ne,
+        tweet: Pe,
+        inviteurl: Ke,
+        publishedfile: $e,
+        tradeofferlink: et,
+        econitem: ot,
+        steamstore: st,
+        broadcast: nt,
+        oembed: Be,
+        spoiler: xe,
+        plusone: Ve,
+        flip: Ue,
+        random: He,
+        quote: We,
+        pre: ze,
+        code: qe,
+        roomeffect: ct,
+        sticker: lt
       };
     }
-    function ye(e) {
+    function Se(e) {
       if ("string" == typeof e) return e;
       var t = "";
       return (
@@ -66198,7 +66235,7 @@
         t
       );
     }
-    var Se = (function(e) {
+    var Ce = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -66215,7 +66252,7 @@
               r.f.SettingsStore.FriendsSettings.bDisableEmbedInlining &&
               "string" != typeof t
                 ? a.createElement(
-                    De,
+                    Me,
                     { href: e },
                     a.createElement(y.B, null),
                     o
@@ -66230,7 +66267,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(ee.b),
-      Ce = (function(e) {
+      Oe = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this,
             o = r.f.ChatStore.EmbedStore.GetCollapsedState(
@@ -66277,7 +66314,7 @@
             this.setState(
               { nResizedWidth: o, bMinimized: !1, bIsMinimizing: !0 },
               function() {
-                (t.m_animationCollapse = new ae.b(
+                (t.m_animationCollapse = new ce.b(
                   t,
                   { nResizedWidth: i },
                   {
@@ -66309,7 +66346,7 @@
             this.state.bResized &&
               (this.m_animationCollapse && this.m_animationCollapse.Cancel(),
               this.setState({ bIsRestoring: !0 }, function() {
-                (t.m_animationCollapse = new ae.b(
+                (t.m_animationCollapse = new ce.b(
                   t,
                   { nResizedWidth: t.m_frameDefaultWidth },
                   {
@@ -66481,7 +66518,7 @@
         );
       })(a.Component);
     a.Component;
-    function Oe(e) {
+    function Ie(e) {
       return a.createElement(
         "div",
         {
@@ -66492,7 +66529,7 @@
         a.createElement(y.pb, null)
       );
     }
-    function Ie(e) {
+    function Ee(e) {
       var t = e.titleInfo ? e.titleInfo : "",
         n = Object(p.c)("#bbcode_" + e.mediaType + "_minimized");
       Object(p.c)("#bbcode_" + e.mediaType + "_tooltip_restore");
@@ -66519,8 +66556,8 @@
         )
       );
     }
-    var Ee,
-      we = (function(e) {
+    var we,
+      De = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (n.state = { strTitle: "", strAuthor: "", strVideoID: "" }), n;
@@ -66577,7 +66614,7 @@
                 encodeURIComponent(this.GetVideoID());
               return (
                 o && (i += "&t=" + encodeURIComponent(o)),
-                a.createElement(De, { href: i }, a.createElement(y.rb, null), i)
+                a.createElement(Me, { href: i }, a.createElement(y.rb, null), i)
               );
             }
             var s = 0;
@@ -66593,7 +66630,7 @@
               F.b,
               { style: "block", text: [t, n] },
               a.createElement(
-                Ce,
+                Oe,
                 {
                   className: "BBCodeYouTubeComponent",
                   unAccountIDSender: this.props.context.unAccountIDSender,
@@ -66608,7 +66645,7 @@
                     className:
                       "BBCodeYouTubeComponent_Sizer BBCodeResizableElement"
                   },
-                  a.createElement(ie, {
+                  a.createElement(se, {
                     video: this.GetVideoID(),
                     startSeconds: s,
                     width: 640,
@@ -66652,7 +66689,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(ee.b);
-    function De(e) {
+    function Me(e) {
       var t = e.copyText;
       null == t && (t = e.href);
       var n = "NonInlinedEmbed";
@@ -66673,8 +66710,8 @@
       (e[(e.Loading = 1)] = "Loading"),
         (e[(e.Loaded = 2)] = "Loaded"),
         (e[(e.Error = 3)] = "Error");
-    })(Ee || (Ee = {}));
-    var Me = (function(e) {
+    })(we || (we = {}));
+    var Te = (function(e) {
       function t(t) {
         var n = e.call(this, t) || this;
         (n.k_nUnknownImageWidth = 300),
@@ -66688,7 +66725,7 @@
           a = parseInt(n.GetArgument("height"));
         return (
           (n.state = {
-            eLoadingState: Ee.Loading,
+            eLoadingState: we.Loading,
             bCollapsed: o,
             nMediaWidth: i,
             nMediaHeight: a
@@ -66722,7 +66759,7 @@
         (t.prototype.OnImageLoad = function(e) {
           var t = e.currentTarget;
           this.setState({
-            eLoadingState: Ee.Loaded,
+            eLoadingState: we.Loaded,
             nMediaWidth: t.naturalWidth,
             nMediaHeight: t.naturalHeight
           }),
@@ -66730,7 +66767,7 @@
               this.props.context.onLoad("BBCodeImage " + this.props.args.src);
         }),
         (t.prototype.OnImageError = function() {
-          this.setState({ eLoadingState: Ee.Error });
+          this.setState({ eLoadingState: we.Error });
         }),
         (t.prototype.ShowModal = function(e, t) {
           var n = parseInt(this.GetArgument("width")),
@@ -66739,11 +66776,11 @@
             i = C.a(o || 800, 0.5 * r.screen.height, 0.7 * r.screen.height),
             s = C.a(n || 600, 0.5 * r.screen.width, 0.7 * r.screen.width);
           Object(P.b)(
-            a.createElement(Ae, { imageUrl: t, ownerWin: r }),
+            a.createElement(Ge, { imageUrl: t, ownerWin: r }),
             r,
             "ImageModal",
             { strTitle: "", popupHeight: i, popupWidth: s },
-            Pt(r)
+            Bt(r)
           );
         }),
         (t.prototype.OnContextMenu = function(e) {
@@ -66765,14 +66802,14 @@
             i = this.GetArgument("title"),
             s = this.state.eLoadingState,
             c = this.IsGiphy(),
-            l = s == Ee.Error;
+            l = s == we.Error;
           if (
             (c && (e = "/giphy " + this.GetArgument("giphy_search")),
             l || r.f.SettingsStore.FriendsSettings.bDisableEmbedInlining)
           ) {
             if (c)
               return a.createElement(
-                De,
+                Me,
                 { href: o, copyText: [e, o], loadFailed: l },
                 a.createElement("div", {
                   className: "NonInlinedEmbedLogo NonInlinedEmbedLogo_Giphy"
@@ -66800,7 +66837,7 @@
                   S.b(o)
                 )),
               a.createElement(
-                De,
+                Me,
                 { href: o, copyText: [i, o], loadFailed: l },
                 a.createElement(y.C, null),
                 u
@@ -66808,7 +66845,7 @@
             );
           }
           if (this.IsEmbeddedInOtherTag())
-            return a.createElement(je, {
+            return a.createElement(ke, {
               className: "embeddedImg",
               context: this.props.context,
               src: t,
@@ -66816,7 +66853,7 @@
               onError: this.OnImageError
             });
           if (this.state.bCollapsed)
-            return a.createElement(Ie, {
+            return a.createElement(Ee, {
               onClick: this.OnToggleCollapse,
               mediaType: "image"
             });
@@ -66844,7 +66881,7 @@
                 "div",
                 { className: h },
                 a.createElement(
-                  Te,
+                  Re,
                   {
                     className: "BBCodeImageWrapper",
                     width: m,
@@ -66861,11 +66898,11 @@
                     onClick: this.OnClick
                   }),
                   c &&
-                    a.createElement(Re, {
+                    a.createElement(Ae, {
                       strLink: o,
                       searchText: this.GetArgument("giphy_search")
                     }),
-                  a.createElement(Oe, {
+                  a.createElement(Ie, {
                     onClick: this.OnToggleCollapse,
                     title: f
                   })
@@ -66883,7 +66920,7 @@
         (t = Object(o.c)([E.a], t))
       );
     })(ee.b);
-    function Te(e) {
+    function Re(e) {
       var t = e.height / e.width,
         n = {
           height: 0,
@@ -66905,7 +66942,7 @@
         )
       );
     }
-    function Re(e) {
+    function Ae(e) {
       var t = Object(p.c)("#bbcode_image_tooltip_link_giphy", e.searchText);
       return a.createElement(
         a.Fragment,
@@ -66928,7 +66965,7 @@
         )
       );
     }
-    var Ae = (function(e) {
+    var Ge = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -66951,7 +66988,7 @@
           t
         );
       })(a.Component),
-      Ge = (function(e) {
+      je = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (n.state = { bSeeking: !1, bPlay: !1, bError: !1 }), n;
@@ -66995,7 +67032,7 @@
                     t,
                     S.b(e)
                   )),
-                a.createElement(De, { href: e }, a.createElement(y.lb, null), i)
+                a.createElement(Me, { href: e }, a.createElement(y.lb, null), i)
               );
             }
             var s,
@@ -67026,7 +67063,7 @@
                     F.b,
                     { style: "block", text: [t, e] },
                     a.createElement(
-                      Ce,
+                      Oe,
                       {
                         className: "chatVideoContainer",
                         strMediaType: "video",
@@ -67091,7 +67128,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(ee.b),
-      je = (function(e) {
+      ke = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -67115,7 +67152,7 @@
           t
         );
       })(a.Component);
-    function ke(e) {
+    function Le(e) {
       var t = e.context,
         n = e.width,
         r = e.height,
@@ -67124,14 +67161,14 @@
         c = i + "?s=" + n + "x" + r,
         l = c + "dpx2x";
       return a.createElement(
-        je,
+        ke,
         Object(o.a)({ context: t }, s, {
           src: c,
           srcSet: c + " 1x, " + l + " 2x"
         })
       );
     }
-    var Le = (function(e) {
+    var Ne = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -67166,7 +67203,7 @@
                     i
                   )),
                 a.createElement(
-                  De,
+                  Me,
                   { href: o, copyText: [s, o] },
                   a.createElement(y.B, null),
                   s
@@ -67198,7 +67235,7 @@
                     a.createElement(
                       K.b,
                       { className: "OpenGraphImgContainer", href: o },
-                      a.createElement(ke, {
+                      a.createElement(Le, {
                         width: 256,
                         height: 140,
                         context: this.props.context,
@@ -67275,7 +67312,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(ee.b),
-      Ne = (function(e) {
+      Pe = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -67347,7 +67384,7 @@
                   }
                 }
               return a.createElement(
-                De,
+                Me,
                 { href: s, copyText: [m, s] },
                 a.createElement("div", {
                   className: "NonInlinedEmbedLogo NonInlinedEmbedLogo_Twitter"
@@ -67435,7 +67472,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(ee.b),
-      Pe = (function(e) {
+      Be = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (n.state = { bActivated: !1 }), n;
@@ -67467,7 +67504,7 @@
                     e
                   )),
                 a.createElement(
-                  De,
+                  Me,
                   { href: e, copyText: [t, e] },
                   a.createElement(y.B, null),
                   s
@@ -67512,7 +67549,7 @@
                   href: e,
                   style: { display: "flex", flexDirection: "column" }
                 },
-                a.createElement(Be, {
+                a.createElement(Fe, {
                   width: d,
                   height: h,
                   src: m,
@@ -67548,7 +67585,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(ee.b);
-    function Be(e) {
+    function Fe(e) {
       var t = e.strProviderName,
         n = e.src,
         o = e.width,
@@ -67569,38 +67606,14 @@
         allowFullScreen: "Vimeo" === t || void 0
       });
     }
-    var Fe = (function(e) {
+    var xe = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
           Object(o.d)(t, e),
           (t.prototype.render = function() {
-            return a.createElement(ce, null, this.props.children);
-          }),
-          t
-        );
-      })(ee.b),
-      xe = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
-        }
-        return (
-          Object(o.d)(t, e),
-          (t.prototype.render = function() {
-            var e = this.props.context,
-              t = e.bAnimate,
-              n = e.onAnimationStart,
-              o = e.onAnimationEnd;
-            return a.createElement(
-              "div",
-              {
-                className: Object(le.a)(I.a.plusOne, t && I.a.MsgAnimating),
-                onAnimationStart: n,
-                onAnimationEnd: o
-              },
-              "+1"
-            );
+            return a.createElement(pe, null, this.props.children);
           }),
           t
         );
@@ -67615,11 +67628,35 @@
             var e = this.props.context,
               t = e.bAnimate,
               n = e.onAnimationStart,
+              o = e.onAnimationEnd;
+            return a.createElement(
+              "div",
+              {
+                className: Object(oe.a)(I.a.plusOne, t && I.a.MsgAnimating),
+                onAnimationStart: n,
+                onAnimationEnd: o
+              },
+              "+1"
+            );
+          }),
+          t
+        );
+      })(ee.b),
+      Ue = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          Object(o.d)(t, e),
+          (t.prototype.render = function() {
+            var e = this.props.context,
+              t = e.bAnimate,
+              n = e.onAnimationStart,
               o = e.onAnimationEnd,
               r = this.props.children,
               i = this.GetArgument("result"),
-              s = Object(le.a)(I.a.flipCoinAndResult, t && I.a.MsgAnimating),
-              c = Object(le.a)(I.a.flipCoinContainer, i);
+              s = Object(oe.a)(I.a.flipCoinAndResult, t && I.a.MsgAnimating),
+              c = Object(oe.a)(I.a.flipCoinContainer, i);
             return a.createElement(
               F.b,
               { text: r },
@@ -67651,7 +67688,7 @@
           t
         );
       })(ee.b),
-      Ue = (function(e) {
+      He = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -67769,7 +67806,7 @@
               a.createElement(
                 "div",
                 {
-                  className: Object(le.a)(I.a.randomMsg, u && I.a.MsgAnimating),
+                  className: Object(oe.a)(I.a.randomMsg, u && I.a.MsgAnimating),
                   onAnimationStart: m,
                   onAnimationEnd: d
                 },
@@ -67789,18 +67826,6 @@
           t
         );
       })(ee.b),
-      He = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
-        }
-        return (
-          Object(o.d)(t, e),
-          (t.prototype.render = function() {
-            return a.createElement(he, null, this.props.children);
-          }),
-          t
-        );
-      })(ee.b),
       We = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -67808,7 +67833,7 @@
         return (
           Object(o.d)(t, e),
           (t.prototype.render = function() {
-            return a.createElement(de, null, this.props.children);
+            return a.createElement(fe, null, this.props.children);
           }),
           t
         );
@@ -67820,12 +67845,24 @@
         return (
           Object(o.d)(t, e),
           (t.prototype.render = function() {
-            return a.createElement(me, null, this.props.children);
+            return a.createElement(he, null, this.props.children);
           }),
           t
         );
       })(ee.b),
       qe = (function(e) {
+        function t() {
+          return (null !== e && e.apply(this, arguments)) || this;
+        }
+        return (
+          Object(o.d)(t, e),
+          (t.prototype.render = function() {
+            return a.createElement(de, null, this.props.children);
+          }),
+          t
+        );
+      })(ee.b),
+      Ke = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (n.state = { invite: void 0 }), n;
@@ -67850,7 +67887,7 @@
           t
         );
       })(ee.b),
-      Ke = (function(e) {
+      Ye = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -67893,7 +67930,7 @@
           t
         );
       })(ee.b),
-      Ye = (function(e) {
+      Qe = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -67942,7 +67979,7 @@
           t
         );
       })(ee.b),
-      Qe = (function(e) {
+      Je = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -67990,7 +68027,7 @@
           t
         );
       })(ee.b),
-      Je = (function(e) {
+      Ze = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -68029,7 +68066,7 @@
           t
         );
       })(ee.b),
-      Ze = (function(e) {
+      Xe = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -68068,7 +68105,7 @@
           t
         );
       })(ee.b),
-      Xe = (function(e) {
+      $e = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -68164,7 +68201,7 @@
                 case 5:
                   m = a.createElement(y.C, null);
               }
-              return a.createElement(De, { href: n, copyText: [u, n] }, m, u);
+              return a.createElement(Me, { href: n, copyText: [u, n] }, m, u);
             }
             var d,
               h = parseInt(this.GetArgument("num_comments_public")),
@@ -68200,7 +68237,7 @@
                   a.createElement(
                     K.b,
                     { className: "ChatLargeImageContainer", href: n },
-                    a.createElement(je, {
+                    a.createElement(ke, {
                       context: this.props.context,
                       className: "ChatLargeImageContainer_Image",
                       src: s,
@@ -68265,7 +68302,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(ee.b),
-      $e = (function(e) {
+      et = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -68345,7 +68382,7 @@
           t
         );
       })(ee.b),
-      et = (function(e) {
+      tt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -68374,7 +68411,7 @@
             var e = this.GetArgument("id"),
               t = parseInt(this.GetArgument("sender"));
             if (!e && this.GetArgument("url"))
-              return a.createElement($e, Object(o.a)({}, this.props));
+              return a.createElement(et, Object(o.a)({}, this.props));
             var n = this.props.context.chat,
               r = n.self.accountid == t,
               i = a.createElement(
@@ -68453,7 +68490,7 @@
           t
         );
       })(ee.b),
-      tt = (function(e) {
+      nt = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (n.state = { broadcaster: void 0 }), n;
@@ -68461,7 +68498,7 @@
         return (
           Object(o.d)(t, e),
           (t.getDerivedStateFromProps = function(e, t) {
-            var n = new se.a(e.args.broadcaster);
+            var n = new le.a(e.args.broadcaster);
             return { broadcaster: r.f.FriendStore.GetPlayer(n.GetAccountID()) };
           }),
           (t.prototype.render = function() {
@@ -68470,7 +68507,7 @@
           t
         );
       })(ee.b),
-      nt = (function(e) {
+      ot = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -68604,7 +68641,7 @@
                       a.createElement(
                         K.b,
                         { className: "OpenGraphImgContainer", href: t },
-                        a.createElement(je, {
+                        a.createElement(ke, {
                           context: this.props.context,
                           className: "ChatMessageOpenGraph_Image",
                           src: h,
@@ -68764,7 +68801,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(ee.b),
-      ot = (function(e) {
+      rt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -68794,7 +68831,7 @@
           t
         );
       })(ee.b),
-      rt = (function(e) {
+      it = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -68839,7 +68876,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(ee.b),
-      it = (function(e) {
+      at = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -68862,7 +68899,7 @@
               e
                 ? a.createElement($.a, {
                     emoticon: e,
-                    emoticonHoverStore: fe.b,
+                    emoticonHoverStore: _e.b,
                     large: this.props.context.bUseLargeEmoticons
                   })
                 : null
@@ -68871,7 +68908,7 @@
           t
         );
       })(ee.b),
-      at = (function(e) {
+      st = (function(e) {
         function t(t) {
           var n = e.call(this, t) || this;
           return (
@@ -68902,7 +68939,7 @@
             return {
               name: t,
               is_free: n,
-              description: Object(_e.c)(o),
+              description: Object(ge.c)(o),
               header_image: r,
               developer: i && i[0],
               screenshot: a && a[0] && a[0].path_thumbnail,
@@ -68994,9 +69031,9 @@
           (t.prototype.render = function() {
             var e = this;
             if (r.f.SettingsStore.FriendsSettings.bDisableEmbedInlining) {
-              var t = ye(this.props.children);
+              var t = Se(this.props.children);
               return a.createElement(
-                De,
+                Me,
                 { href: t },
                 a.createElement(y.B, null),
                 t
@@ -69006,7 +69043,7 @@
               var n = r.f.FriendStore.GetPlayer(
                   this.props.context.unAccountIDSender
                 ).display_name,
-                o = ((t = ye(this.props.children)),
+                o = ((t = Se(this.props.children)),
                 a.createElement("span", { className: I.a.senderName }, n)),
                 i = a.createElement("span", { className: I.a.URLSent }, t),
                 s = a.createElement(
@@ -69128,7 +69165,7 @@
             return a.createElement(
               "div",
               {
-                className: Object(le.a)(
+                className: Object(oe.a)(
                   I.a.ChatMessageSteamStore,
                   E ? I.a.ChatMessagesSteamStore_FilteredContent : null
                 )
@@ -69155,7 +69192,7 @@
                         Object(p.c)("#bbcode_steam_store_embed_Image_Filtered")
                       ),
                     a.createElement("img", {
-                      className: Object(le.a)(
+                      className: Object(oe.a)(
                         I.a.ChatMessageSteamStore_HeaderImage,
                         I.a.Blurred
                       ),
@@ -69254,7 +69291,7 @@
                               a.createElement(
                                 "div",
                                 {
-                                  className: Object(le.a)(
+                                  className: Object(oe.a)(
                                     I.a.ChatMessageSteamStore_Pricing_Final,
                                     A ? I.a.hasDiscount : null
                                   )
@@ -69308,7 +69345,7 @@
                         a.createElement(
                           "div",
                           {
-                            className: Object(le.a)(
+                            className: Object(oe.a)(
                               I.a.ChatMessageSteamStore_VideoThumbnail,
                               j ? I.a.videoPlaying : null
                             ),
@@ -69355,7 +69392,7 @@
                 a.createElement(
                   "div",
                   {
-                    className: Object(le.a)(
+                    className: Object(oe.a)(
                       I.a.ChatMessageSteamStore_VideoLargeContainer,
                       j ? I.a.videoPlaying : null
                     ),
@@ -69387,7 +69424,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(ee.b),
-      st = (function(e) {
+      ct = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.state = { bDisabled: !1 }), t;
@@ -69432,7 +69469,7 @@
                 "div",
                 { style: { marginLeft: "auto", marginRight: "16px" } },
                 a.createElement(
-                  be.w,
+                  ve.w,
                   {
                     disabled: this.state.bDisabled,
                     style: { padding: "0px 8px" },
@@ -69450,14 +69487,14 @@
           (t = n = Object(o.c)([E.a], t))
         );
       })(ee.b),
-      ct = (function(e) {
+      lt = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
             (t.m_canvasRef = a.createRef()),
             (t.m_imageRef = a.createRef()),
             (t.state = {
-              imageURL: Object(ge.a)(M.a.COMMUNITY_CDN_URL, t.props.args.type),
+              imageURL: Object(be.a)(M.a.COMMUNITY_CDN_URL, t.props.args.type),
               bIsHovered: !1,
               bIsTimerPending: !1
             }),
@@ -69545,7 +69582,7 @@
           t
         );
       })(ee.b),
-      lt = (function() {
+      pt = (function() {
         function e() {}
         return (
           (e.prototype.GetObject = function(e) {
@@ -69575,7 +69612,7 @@
           e
         );
       })(),
-      pt = (function(e) {
+      ut = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -69615,8 +69652,8 @@
           }),
           t
         );
-      })(lt),
-      ut = (function(e) {
+      })(pt),
+      mt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -69633,12 +69670,12 @@
           }),
           t
         );
-      })(lt),
-      mt = n("2vnA"),
-      dt = n("JtU4"),
-      ht = n("MB4Y"),
-      ft = n("Oefq"),
-      _t = (function() {
+      })(pt),
+      dt = n("2vnA"),
+      ht = n("JtU4"),
+      ft = n("MB4Y"),
+      _t = n("Oefq"),
+      gt = (function() {
         function e() {
           (this.m_mapBrowserInfo = new Map()),
             (this.m_hOverlayChatBrowserInfoChanged = null);
@@ -69702,7 +69739,7 @@
           }),
           (e.prototype.OverlayBrowserCreated = function(e, t, n) {
             r.f.UIStore.OnOverlayBrowserCreated(e, t, n),
-              ln.ShowPopupFriendsList(e, !1, !1),
+              pn.ShowPopupFriendsList(e, !1, !1),
               r.f.SetDefaultPopupContext(e);
           }),
           (e.prototype.OverlayBrowserClosed = function(e) {
@@ -69715,7 +69752,7 @@
                 e.m_unPID,
                 e.m_nBrowserID
               ),
-              dt.d.ClosePopupsOwnedByBrowser(e),
+              ht.d.ClosePopupsOwnedByBrowser(e),
               r.f.UIStore.SetSuppressBrowserContextBroadcasting(!1),
               r.f.UIStore.OnOverlayBrowserClosed(e);
           }),
@@ -69728,7 +69765,7 @@
           e
         );
       })(),
-      gt = (function() {
+      bt = (function() {
         function e(e) {
           this.m_FriendStore = e;
         }
@@ -69754,7 +69791,7 @@
           e
         );
       })(),
-      bt = (function(e) {
+      vt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -69815,8 +69852,8 @@
           }),
           t
         );
-      })(gt),
-      vt = (function(e) {
+      })(bt),
+      yt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -69851,8 +69888,8 @@
           }),
           t
         );
-      })(gt),
-      yt = (function() {
+      })(bt),
+      St = (function() {
         function e() {
           (this.m_mapPlaybackObjs = new Map()),
             (this.m_bVoiceActive = !1),
@@ -69918,7 +69955,7 @@
                 "(CAudioPlaybackManager) web audio playback requested: " + e
               ),
               this.CreateContextIfNeeded();
-            var n = new St(this, e, t);
+            var n = new Ct(this, e, t);
             return this.m_mapPlaybackObjs.set(n, !0), n;
           }),
           (e.prototype.PlaybackFinished = function(e) {
@@ -70004,9 +70041,9 @@
                   this.m_Context.state
               );
           }),
-          Object(o.c)([mt.x], e.prototype, "m_nLastObservedSampleRate", void 0),
+          Object(o.c)([dt.x], e.prototype, "m_nLastObservedSampleRate", void 0),
           Object(o.c)(
-            [mt.x],
+            [dt.x],
             e.prototype,
             "m_bSupportsAudioWorkletProcessors",
             void 0
@@ -70018,7 +70055,7 @@
             null
           ),
           Object(o.c)(
-            [mt.g.bound],
+            [dt.g.bound],
             e.prototype,
             "OnAudioContextStateChange",
             null
@@ -70026,7 +70063,7 @@
           e
         );
       })(),
-      St = (function() {
+      Ct = (function() {
         function e(e, t, n) {
           var o = this;
           (this.m_Source = void 0),
@@ -70102,12 +70139,12 @@
               (this.m_Source = void 0),
               this.m_Manager.PlaybackFinished(this);
           }),
-          Object(o.c)([mt.g.bound], e.prototype, "OnFailure", null),
-          Object(o.c)([mt.g.bound], e.prototype, "OnPlaybackEnded", null),
+          Object(o.c)([dt.g.bound], e.prototype, "OnFailure", null),
+          Object(o.c)([dt.g.bound], e.prototype, "OnPlaybackEnded", null),
           e
         );
       })(),
-      Ct = (function() {
+      Ot = (function() {
         function e() {
           this.m_rgActivityCallbacks = [];
         }
@@ -70145,7 +70182,7 @@
           e
         );
       })(),
-      Ot = (function(e) {
+      It = (function(e) {
         function t() {
           var t = e.call(this) || this;
           return (
@@ -70214,8 +70251,8 @@
           Object(o.c)([L.a], t.prototype, "OnUserAction", null),
           t
         );
-      })(Ct),
-      It = (function(e) {
+      })(Ot),
+      Et = (function(e) {
         function t() {
           var t = e.call(this) || this;
           return (
@@ -70256,13 +70293,13 @@
           Object(o.c)([L.a], t.prototype, "UpdateStillActive", null),
           t
         );
-      })(Ot),
-      Et = n("E7zH"),
-      wt = n("XaMz"),
-      Dt = (function() {
+      })(It),
+      wt = n("E7zH"),
+      Dt = n("XaMz"),
+      Mt = (function() {
         function e() {
           (this.m_bDropConsumed = !1),
-            (this.m_onDropCompleteCallbacks = new Et.a()),
+            (this.m_onDropCompleteCallbacks = new wt.a()),
             (this.m_vecClasses = []);
         }
         return (
@@ -70271,7 +70308,7 @@
           }),
           (e.prototype.StartDrag = function(e) {
             var t, n;
-            Object(wt.a)(
+            Object(Dt.a)(
               !this.m_data,
               "second drag started, existing data discarded",
               this.m_data
@@ -70283,7 +70320,7 @@
               void 0 !== e.source &&
                 this.m_vecClasses.push("drag_source_" + e.source);
             for (
-              var o = 0, r = Array.from(dt.d.GetPopups());
+              var o = 0, r = Array.from(ht.d.GetPopups());
               o < r.length;
               o++
             ) {
@@ -70307,7 +70344,7 @@
               (this.m_data = void 0),
               (this.m_bDropConsumed = void 0);
             for (
-              var n = 0, o = Array.from(dt.d.GetPopups());
+              var n = 0, o = Array.from(ht.d.GetPopups());
               n < o.length;
               n++
             ) {
@@ -70332,7 +70369,7 @@
             return this.m_bDropConsumed;
           }),
           (e.prototype.SetDropConsumed = function() {
-            Object(wt.a)(
+            Object(Dt.a)(
               this.BInDrag(),
               "Asked to set drop consumed but no active drag"
             ),
@@ -70344,16 +70381,16 @@
           e
         );
       })(),
-      Mt = n("8o0Y"),
-      Tt = n("HAz9"),
-      Rt = n("OJz+"),
-      At = n("RBVV"),
-      Gt = 3,
-      jt = (function() {
+      Tt = n("8o0Y"),
+      Rt = n("HAz9"),
+      At = n("OJz+"),
+      Gt = n("RBVV"),
+      jt = 3,
+      kt = (function() {
         return function(e) {
           var t = this;
-          (this.m_UsabilityHandler = Object(Rt.c)(
-            At.Z.NotifyRequestClientUsabilityMetricsHandler,
+          (this.m_UsabilityHandler = Object(At.c)(
+            Gt.Z.NotifyRequestClientUsabilityMetricsHandler,
             function(e) {
               return Object(o.b)(t, void 0, void 0, function() {
                 var t;
@@ -70361,17 +70398,17 @@
                   switch (n.label) {
                     case 0:
                       return (
-                        (t = R.b.Init(At.S))
+                        (t = R.b.Init(Gt.S))
                           .Body()
                           .set_metrics_run_id(e.Body().metrics_run_id()),
-                        t.Body().set_metrics_version(Gt),
+                        t.Body().set_metrics_version(jt),
                         t.Body().set_client_build(M.a.BUILD_TIMESTAMP),
                         t.Body().set_in_web(!M.a.IN_CLIENT),
                         r.f.ready_to_render
                           ? [3, 2]
                           : [
                               4,
-                              Object(mt.E)(function() {
+                              Object(dt.E)(function() {
                                 return r.f.ready_to_render;
                               })
                             ]
@@ -70417,7 +70454,7 @@
                       n.sent(), (n.label = 9);
                     case 9:
                       return (
-                        At.ab.NotifyClientUsabilityMetrics(
+                        Gt.ab.NotifyClientUsabilityMetrics(
                           r.f.CMInterface.GetServiceTransport(),
                           t
                         ),
@@ -70431,26 +70468,26 @@
             (this.m_fnFillAppUsabilityMetrics = e);
         };
       })(),
-      kt = n("8JTq");
-    function Lt(e, t) {
+      Lt = n("8JTq");
+    function Nt(e, t) {
       var n = Object(v.p)(t);
       if (!n && e) {
         var o = c.findDOMNode(e);
         o && o.ownerDocument && (n = o.ownerDocument.defaultView);
       }
       return (
-        Object(wt.a)(
+        Object(Dt.a)(
           n,
           "Couldn't find owning window to determine browser context"
         ),
-        Nt(n)
+        Pt(n)
       );
     }
-    function Nt(e) {
-      var t = kt.a;
+    function Pt(e) {
+      var t = Lt.a;
       return (
         e &&
-          (Object(wt.a)(
+          (Object(Dt.a)(
             e.__FriendsUIBrowserContext,
             "FriendsUI Browser context missing from owner window"
           ),
@@ -70458,25 +70495,25 @@
         t
       );
     }
-    function Pt(e) {
-      var t = Nt(e);
+    function Bt(e) {
+      var t = Pt(e);
       return t &&
-        t.m_unPID != kt.a.m_unPID &&
-        t.m_nBrowserID != kt.a.m_nBrowserID
+        t.m_unPID != Lt.a.m_unPID &&
+        t.m_nBrowserID != Lt.a.m_nBrowserID
         ? t
         : null;
     }
-    var Bt = n("ha6C"),
-      Ft = n("FkUk"),
-      xt = n("VZeO"),
-      Vt = n("29iz"),
-      Ut = n("yolM"),
-      Ht = n("yIxU"),
-      Wt = !1;
-    function zt(e, t, n, o) {
-      var r = !o || Wt ? 988 : 758;
+    var Ft = n("ha6C"),
+      xt = n("FkUk"),
+      Vt = n("VZeO"),
+      Ut = n("29iz"),
+      Ht = n("yolM"),
+      Wt = n("yIxU"),
+      zt = !1;
+    function qt(e, t, n, o) {
+      var r = !o || zt ? 988 : 758;
       Object(P.b)(
-        a.createElement(qt, { streamHost: t, bIsHost: o, browserContext: e }),
+        a.createElement(Kt, { streamHost: t, bIsHost: o, browserContext: e }),
         n,
         "RemotePlayDialog",
         {
@@ -70484,10 +70521,10 @@
           popupWidth: 512,
           popupHeight: r
         },
-        Pt(n)
+        Bt(n)
       );
     }
-    var qt = (function(e) {
+    var Kt = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
@@ -70508,7 +70545,7 @@
                 switch (n.label) {
                   case 0:
                     return M.a.IN_CLIENT
-                      ? Object(Bt.a)("RemotePlay.GetGameSystemVolume")
+                      ? Object(Ft.a)("RemotePlay.GetGameSystemVolume")
                         ? [4, SteamClient.RemotePlay.GetGameSystemVolume()]
                         : [3, 2]
                       : [3, 3];
@@ -70516,7 +70553,7 @@
                     if (((e = n.sent()), this.bUnmounted)) return [2];
                     this.setState({ gameVolumeNumber: e }), (n.label = 2);
                   case 2:
-                    Object(Bt.a)("RemotePlay.RegisterForRemoteClientStopped") &&
+                    Object(Ft.a)("RemotePlay.RegisterForRemoteClientStopped") &&
                       SteamClient.RemotePlay.RegisterForRemoteClientStopped(
                         function(e) {
                           return t.RemoteClientStopped(e);
@@ -70547,7 +70584,7 @@
           }),
           (t.prototype.OnGameVolumeChanged = function(e) {
             M.a.IN_CLIENT &&
-              Object(Bt.a)("RemotePlay.SetGameSystemVolume") &&
+              Object(Ft.a)("RemotePlay.SetGameSystemVolume") &&
               (SteamClient.RemotePlay.SetGameSystemVolume(e),
               this.setState({ gameVolumeNumber: e }));
           }),
@@ -70555,13 +70592,13 @@
             r.f.VoiceStore.SetVoiceInputGain(
               r.f.VoiceStore.ConvertSliderToGainValue(
                 e,
-                xt.a.k_MaxInputOutputGainValue
+                Vt.a.k_MaxInputOutputGainValue
               )
             );
           }),
           (t.prototype.OnSettingsClick = function(e) {
-            Object(Ut.a)(
-              Lt(this, e),
+            Object(Ht.a)(
+              Nt(this, e),
               e.currentTarget.ownerDocument.defaultView,
               "voice"
             );
@@ -70569,7 +70606,7 @@
           (t.prototype.render = function() {
             var e = this,
               t = this.props.bIsHost;
-            if ((Wt && (t = !1), t)) {
+            if ((zt && (t = !1), t)) {
               for (
                 var n = 0, o = 0;
                 o < r.f.RemotePlayStore.player_props_count;
@@ -70584,14 +70621,14 @@
             var i = !0,
               s = this.state.gameVolumeNumber;
             s < 0 && (i = !1);
-            Object(le.a)(Ht.remotePlayIcon, Ht.IconAllowDesktop);
+            Object(oe.a)(Wt.remotePlayIcon, Wt.IconAllowDesktop);
             this.state.bAllowDesktopStream
-              ? Ht.accessEnabled
-              : Ht.accessDisabled;
+              ? Wt.accessEnabled
+              : Wt.accessDisabled;
             var c = r.f.VoiceStore.IsAnyVoiceActive(),
               l = r.f.VoiceStore.ConvertGainValueToSliderValue(
                 r.f.VoiceStore.GetVoiceInputGain(),
-                xt.a.k_MaxInputOutputGainValue
+                Vt.a.k_MaxInputOutputGainValue
               );
             0 == this.nCurrentAppID &&
               (this.nCurrentAppID = this.props.streamHost.persona.m_unGamePlayedAppID);
@@ -70614,44 +70651,44 @@
             return a.createElement(
               P.a,
               {
-                className: Object(le.a)(
-                  Ht.Dialog_RemotePlay,
+                className: Object(oe.a)(
+                  Wt.Dialog_RemotePlay,
                   "Dialog_RemotePlay"
                 )
               },
               a.createElement(
-                be.h,
+                ve.h,
                 { classNameContent: "RemotePlayDialog" },
                 a.createElement(
-                  be.m,
+                  ve.m,
                   {
-                    className: Object(le.a)(Ht.NoRightMargin, Ht.BottomMargin)
+                    className: Object(oe.a)(Wt.NoRightMargin, Wt.BottomMargin)
                   },
                   Object(p.c)("#Friend_Menu_RemotePlay"),
                   !1,
                   a.createElement(
-                    be.c,
+                    ve.c,
                     null,
                     a.createElement(
                       "div",
-                      { className: Ht.VerticalContainer },
+                      { className: Wt.VerticalContainer },
                       a.createElement(
                         "div",
                         {
-                          className: Object(le.a)(
-                            Ht.EndStreamContainer,
-                            t && Ht.EndStreamContainerHost,
+                          className: Object(oe.a)(
+                            Wt.EndStreamContainer,
+                            t && Wt.EndStreamContainerHost,
                             !r.f.RemotePlayStore.bIsShowingPlaceholder &&
-                              Ht.EndStreamContainerUnpaused
+                              Wt.EndStreamContainerUnpaused
                           )
                         },
                         a.createElement(
                           "div",
                           {
-                            className: Object(le.a)(
-                              Ht.TextButton,
-                              Ht.FitContent,
-                              Ht.AlignRight
+                            className: Object(oe.a)(
+                              Wt.TextButton,
+                              Wt.FitContent,
+                              Wt.AlignRight
                             ),
                             onClick: function() {
                               return e.props.closeModal();
@@ -70667,25 +70704,25 @@
                       d &&
                         a.createElement(
                           "div",
-                          { className: Ht.StreamPausedContainer },
+                          { className: Wt.StreamPausedContainer },
                           Object(p.c)("#RemotePlay_StreamPaused")
                         ),
-                      !t && a.createElement(Kt, { currentAppID: u }),
+                      !t && a.createElement(Yt, { currentAppID: u }),
                       a.createElement(
                         "div",
-                        { className: Ht.GroupingBox },
+                        { className: Wt.GroupingBox },
                         i &&
                           a.createElement(
                             "div",
-                            { className: Ht.HorizontalContainer },
+                            { className: Wt.HorizontalContainer },
                             a.createElement("div", {
-                              className: Ht.IconSpeaker,
+                              className: Wt.IconSpeaker,
                               title: Object(p.c)("#RemotePlay_GameMasterVolume")
                             }),
                             a.createElement(
                               "div",
-                              { className: Ht.VolumeSlider },
-                              a.createElement(be.z, {
+                              { className: Wt.VolumeSlider },
+                              a.createElement(ve.z, {
                                 min: 0,
                                 max: 100,
                                 value: s,
@@ -70695,18 +70732,18 @@
                           ),
                         !!c &&
                           a.createElement("div", {
-                            className: Ht.MediumSpacer
+                            className: Wt.MediumSpacer
                           }),
                         !!c &&
                           a.createElement(
                             "div",
-                            { className: Ht.HorizontalContainer },
+                            { className: Wt.HorizontalContainer },
                             a.createElement(
                               "div",
                               {
-                                className: Object(le.a)(
-                                  Ht.SmallAvatarContainer,
-                                  Ht.HorizontalContainer,
+                                className: Object(oe.a)(
+                                  Wt.SmallAvatarContainer,
+                                  Wt.HorizontalContainer,
                                   "OneOnOneVoiceMembers"
                                 )
                               },
@@ -70723,7 +70760,7 @@
                             ),
                             a.createElement(
                               "div",
-                              { className: Ht.MicSettingsContainer },
+                              { className: Wt.MicSettingsContainer },
                               a.createElement(
                                 "div",
                                 {
@@ -70737,8 +70774,8 @@
                             ),
                             a.createElement(
                               "div",
-                              { className: Ht.VolumeSlider },
-                              a.createElement(be.z, {
+                              { className: Wt.VolumeSlider },
+                              a.createElement(ve.z, {
                                 min: 0,
                                 max: 100,
                                 value: l,
@@ -70747,7 +70784,7 @@
                             )
                           ),
                         t &&
-                          a.createElement(Zt, {
+                          a.createElement(Xt, {
                             player: m,
                             accountid: r.f.FriendStore.self.accountid,
                             isHost: t
@@ -70755,21 +70792,21 @@
                         t && !1
                       )
                     ),
-                    a.createElement("div", { className: Ht.Spacer }),
+                    a.createElement("div", { className: Wt.Spacer }),
                     a.createElement(
                       "div",
-                      { className: Ht.PlayerSectionTitle },
+                      { className: Wt.PlayerSectionTitle },
                       Object(p.c)("#RemotePlay_Players")
                     )
                   )
                 ),
-                a.createElement(Yt, {
+                a.createElement(Qt, {
                   isHost: t,
                   streamHost: this.props.streamHost,
                   showStreamPausedBanner: d,
                   browserContext: this.props.browserContext
                 }),
-                a.createElement(be.j, null)
+                a.createElement(ve.j, null)
               )
             );
           }),
@@ -70780,7 +70817,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(a.Component),
-      Kt = (function(e) {
+      Yt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -70796,13 +70833,13 @@
             return a.createElement(
               "div",
               {
-                className: Ht.ActiveGameButton,
+                className: Wt.ActiveGameButton,
                 onClick: this.OnGameImageClick,
                 title: Object(p.c)(e.name)
               },
               a.createElement("img", {
                 src: e.header_image_url,
-                className: Ht.ProductImage
+                className: Wt.ProductImage
               })
             );
           }),
@@ -70810,7 +70847,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(a.Component),
-      Yt = (function(e) {
+      Qt = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (t.state = { dragOver: !1 }), t;
@@ -70836,7 +70873,7 @@
             );
           }),
           (t.prototype.OnDragEnter = function(e) {
-            Object(wt.a)(
+            Object(Dt.a)(
               e && "friend" == e.type,
               "Invalid data type passed to ToggleInputButton.OnDragEnter",
               e.type
@@ -70848,7 +70885,7 @@
             this.setState({ dragOver: !1 });
           }),
           (t.prototype.OnDrop = function(e, t) {
-            Object(wt.a)(
+            Object(Dt.a)(
               e && "friend" == e.type,
               "Invalid data type passed to ToggleInputButton.OnDrop",
               e.type
@@ -70860,17 +70897,17 @@
                 r.f.FriendStore.self.persona.m_gameid,
                 this.props.browserContext
               ),
-              ln.DragDropManager.SetDropConsumed()),
+              pn.DragDropManager.SetDropConsumed()),
               this.setState({ dragOver: !1 });
           }),
           (t.prototype.render = function() {
-            var e = Object(le.a)(Ht.InvitedPlayersBody);
+            var e = Object(oe.a)(Wt.InvitedPlayersBody);
             return (
-              this.state.dragOver && (e += " " + Ht.dragOver),
+              this.state.dragOver && (e += " " + Wt.dragOver),
               a.createElement(
-                Vt.a,
+                Ut.a,
                 Object(o.a)({ className: e }, this.GetDragDropProps()),
-                a.createElement(Qt, {
+                a.createElement(Jt, {
                   isHost: this.props.isHost,
                   streamHost: this.props.streamHost,
                   showStreamPausedBanner: this.props.showStreamPausedBanner,
@@ -70885,7 +70922,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(a.Component),
-      Qt = (function(e) {
+      Jt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -70897,7 +70934,7 @@
               t = !0;
             this.props.isHost ||
               (e.push(
-                a.createElement(Jt, {
+                a.createElement(Zt, {
                   key: "player_host",
                   accountid: this.props.streamHost.accountid,
                   isHost: this.props.isHost,
@@ -70913,11 +70950,11 @@
                     e.push(
                       a.createElement("div", {
                         key: "spacer_" + n + "_" + o,
-                        className: Ht.Spacer
+                        className: Wt.Spacer
                       })
                     ),
                   e.push(
-                    a.createElement(Jt, {
+                    a.createElement(Zt, {
                       key: "player_client_" + o + "_" + n,
                       accountid: i.friend.accountid,
                       isHost: this.props.isHost
@@ -70925,17 +70962,17 @@
                   ),
                   (t = !1));
               }
-            var s = Object(le.a)(Ht.HeightLimited);
+            var s = Object(oe.a)(Wt.HeightLimited);
             return (
               this.props.showStreamPausedBanner &&
-                (s += " " + Ht.HeightLimitedPaused),
+                (s += " " + Wt.HeightLimitedPaused),
               a.createElement("div", { className: s }, e)
             );
           }),
           (t = Object(o.c)([E.a], t))
         );
       })(a.Component),
-      Jt = (function(e) {
+      Zt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -70959,23 +70996,23 @@
               });
             var t = e.friend;
             return a.createElement(
-              be.c,
+              ve.c,
               { className: "NoBottomMargin" },
               a.createElement(
                 "div",
-                { className: Ht.GroupingBox },
-                a.createElement("div", { className: Ht.SmallSpacer }),
+                { className: Wt.GroupingBox },
+                a.createElement("div", { className: Wt.SmallSpacer }),
                 this.props.isHost &&
                   a.createElement(
                     "div",
-                    { className: Ht.KickPlayerContainer },
+                    { className: Wt.KickPlayerContainer },
                     a.createElement(
                       "div",
                       {
-                        className: Object(le.a)(
-                          Ht.TextButton,
-                          Ht.FitContent,
-                          Ht.AlignRight
+                        className: Object(oe.a)(
+                          Wt.TextButton,
+                          Wt.FitContent,
+                          Wt.AlignRight
                         ),
                         onClick: function() {
                           return r.f.RemotePlayStore.CancelInviteAndSession(
@@ -70991,8 +71028,8 @@
                     )
                   ),
                 !this.props.isHost &&
-                  a.createElement("div", { className: Ht.NegativeSpacer }),
-                a.createElement(Xt, {
+                  a.createElement("div", { className: Wt.NegativeSpacer }),
+                a.createElement($t, {
                   player: t,
                   joined: e.bJoined,
                   isHost: this.props.isHost,
@@ -71001,25 +71038,25 @@
                 this.props.isHost &&
                   a.createElement(
                     "div",
-                    { className: Ht.SharedInputContainer },
+                    { className: Wt.SharedInputContainer },
                     a.createElement(
                       "div",
-                      { className: Ht.HorizontalContainer },
-                      a.createElement($t, {
+                      { className: Wt.HorizontalContainer },
+                      a.createElement(en, {
                         inputType: J.h.k_EClientUsedInputTypeKeyboard,
                         enabled: e.bKeyboardEnabled,
                         usedTime: e.nKeyboardUsedTime,
                         accountID: e.friend.accountid,
                         isHost: this.props.isHost
                       }),
-                      a.createElement($t, {
+                      a.createElement(en, {
                         inputType: J.h.k_EClientUsedInputTypeMouse,
                         enabled: e.bMouseEnabled,
                         usedTime: e.nMouseUsedTime,
                         accountID: e.friend.accountid,
                         isHost: this.props.isHost
                       }),
-                      a.createElement(Zt, {
+                      a.createElement(Xt, {
                         player: e,
                         accountid: this.props.accountid,
                         isHost: this.props.isHost
@@ -71029,11 +71066,11 @@
                 !this.props.isHost &&
                   a.createElement(
                     "div",
-                    { className: Ht.SharedInputContainer },
+                    { className: Wt.SharedInputContainer },
                     a.createElement(
                       "div",
-                      { className: Ht.HorizontalContainer },
-                      a.createElement(Zt, {
+                      { className: Wt.HorizontalContainer },
+                      a.createElement(Xt, {
                         player: e,
                         accountid: this.props.accountid,
                         isHost: this.props.isHost
@@ -71046,7 +71083,7 @@
           (t = Object(o.c)([E.a], t))
         );
       })(a.Component),
-      Zt = (function(e) {
+      Xt = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -71072,7 +71109,7 @@
                 (i = !1),
                 c === this.props.accountid
                   ? e.push(
-                      a.createElement($t, {
+                      a.createElement(en, {
                         key: n,
                         inputType: J.h.k_EClientUsedInputTypeController,
                         enabled: this.props.player.bControllerEnabled,
@@ -71084,7 +71121,7 @@
                       })
                     )
                   : e.push(
-                      a.createElement($t, {
+                      a.createElement(en, {
                         key: n,
                         inputType: J.h.k_EClientUsedInputTypeController,
                         enabled: !0,
@@ -71103,7 +71140,7 @@
               (c = r.f.RemotePlayStore.GetPlayerInControllerSlot(n)) ===
                 this.props.accountid &&
                 (e.push(
-                  a.createElement($t, {
+                  a.createElement(en, {
                     key: n,
                     inputType: J.h.k_EClientUsedInputTypeController,
                     enabled: this.props.player.bControllerEnabled,
@@ -71116,21 +71153,21 @@
                 ),
                 s++);
             }
-            var l = Ht.BasicHorizontalContainer;
+            var l = Wt.BasicHorizontalContainer;
             return (
               (this.props.isHost &&
                 this.props.accountid !== r.f.FriendStore.self.accountid) ||
-                (l += " " + Ht.HostControllers),
-              a.createElement("div", { className: Object(le.a)(l) }, e)
+                (l += " " + Wt.HostControllers),
+              a.createElement("div", { className: Object(oe.a)(l) }, e)
             );
           }),
           (t = Object(o.c)([E.a], t))
         );
       })(a.Component),
-      Xt = (function(e) {
+      $t = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
-          return (t.m_schInputUsedReset = new Et.b()), t;
+          return (t.m_schInputUsedReset = new wt.b()), t;
         }
         return (
           Object(o.d)(t, e),
@@ -71140,7 +71177,7 @@
               t,
               r.f.VoiceStore.ConvertSliderToGainValue(
                 e,
-                xt.a.k_MaxPerUserGainMultiplier
+                Vt.a.k_MaxPerUserGainMultiplier
               )
             );
           }),
@@ -71157,21 +71194,21 @@
             var e = this,
               t = r.f.VoiceStore.ConvertGainValueToSliderValue(
                 r.f.VoiceStore.GetPerUserGainLevel(this.props.player.accountid),
-                xt.a.k_MaxPerUserGainMultiplier
+                Vt.a.k_MaxPerUserGainMultiplier
               ),
               n = r.f.VoiceStore.GetPerUserMuting(this.props.player.accountid),
               o = this.props.isHostPlayer || this.props.joined || !1,
-              i = Object(le.a)(Ht.HorizontalContainer, Ht.playerVoiceContainer);
+              i = Object(oe.a)(Wt.HorizontalContainer, Wt.playerVoiceContainer);
             return (
               this.props.isHost ||
-                (i += " " + Ht.streamingClientVoiceContainer),
+                (i += " " + Wt.streamingClientVoiceContainer),
               a.createElement(
                 "div",
                 {
-                  className: Object(le.a)(
-                    Ht.HorizontalContainer,
+                  className: Object(oe.a)(
+                    Wt.HorizontalContainer,
                     "OneOnOneVoiceMembers",
-                    Ht.AvatarContainer
+                    Wt.AvatarContainer
                   )
                 },
                 a.createElement(q.c, {
@@ -71186,9 +71223,9 @@
                     "div",
                     { className: i },
                     a.createElement(
-                      be.d,
+                      ve.d,
                       {
-                        className: Ht.BasicButton,
+                        className: Wt.BasicButton,
                         onClick: function() {
                           return e.OnMutingToggleClick(
                             e.props.player.accountid
@@ -71201,23 +71238,23 @@
                         )
                       },
                       a.createElement("div", {
-                        className: Object(le.a)(
-                          Ht.remotePlayIcon,
-                          Ht.IconSpeaker
+                        className: Object(oe.a)(
+                          Wt.remotePlayIcon,
+                          Wt.IconSpeaker
                         )
                       }),
                       n &&
                         a.createElement("div", {
-                          className: Object(le.a)(
-                            Ht.remotePlayIcon,
-                            Ht.Slashout
+                          className: Object(oe.a)(
+                            Wt.remotePlayIcon,
+                            Wt.Slashout
                           )
                         })
                     ),
                     a.createElement(
                       "div",
-                      { className: Ht.ShortVolumeSlider },
-                      a.createElement(be.z, {
+                      { className: Wt.ShortVolumeSlider },
+                      a.createElement(ve.z, {
                         min: 0,
                         max: 100,
                         value: t,
@@ -71233,7 +71270,7 @@
                 !o &&
                   a.createElement(
                     "div",
-                    { className: Ht.InviteSentContainer },
+                    { className: Wt.InviteSentContainer },
                     Object(p.c)("#RemotePlay_Invited")
                   )
               )
@@ -71245,11 +71282,11 @@
           (t = Object(o.c)([E.a], t))
         );
       })(a.Component),
-      $t = (function(e) {
+      en = (function(e) {
         function t() {
           var t = (null !== e && e.apply(this, arguments)) || this;
           return (
-            (t.m_schInputUsedReset = new Et.b()),
+            (t.m_schInputUsedReset = new wt.b()),
             (t.state = { dragOver: !1 }),
             t
           );
@@ -71279,7 +71316,7 @@
                     !this.props.enabled
                   ),
                   M.a.IN_CLIENT &&
-                    Object(Bt.a)("RemotePlay.IdentifyController") &&
+                    Object(Ft.a)("RemotePlay.IdentifyController") &&
                     SteamClient.RemotePlay.IdentifyController(
                       this.props.controllerID
                     );
@@ -71303,22 +71340,22 @@
             );
           }),
           (t.prototype.OnDragStart = function(e) {
-            ln.DragDropManager.StartDrag({
+            pn.DragDropManager.StartDrag({
               type: "rptcontroller",
               controllerID: this.props.controllerID
             }),
               M.a.IN_CLIENT &&
-                Object(Bt.a)("RemotePlay.IdentifyController") &&
+                Object(Ft.a)("RemotePlay.IdentifyController") &&
                 SteamClient.RemotePlay.IdentifyController(
                   this.props.controllerID
                 );
           }),
           (t.prototype.OnDragEnd = function(e) {
-            ln.DragDropManager.EndDrag();
+            pn.DragDropManager.EndDrag();
           }),
           (t.prototype.OnDragEnter = function(e) {
             return (
-              Object(wt.a)(
+              Object(Dt.a)(
                 e && "rptcontroller" == e.type,
                 "Invalid data type passed to ToggleInputButton.OnDragEnter",
                 e.type
@@ -71326,7 +71363,7 @@
               e.controllerID !== this.props.controllerID &&
                 (this.setState({ dragOver: !0 }),
                 M.a.IN_CLIENT &&
-                  Object(Bt.a)("RemotePlay.IdentifyController") &&
+                  Object(Ft.a)("RemotePlay.IdentifyController") &&
                   SteamClient.RemotePlay.IdentifyController(
                     this.props.controllerID
                   )),
@@ -71338,7 +71375,7 @@
           }),
           (t.prototype.OnDragOver = function(e) {}),
           (t.prototype.OnDrop = function(e, t) {
-            Object(wt.a)(
+            Object(Dt.a)(
               e && "rptcontroller" == e.type,
               "Invalid data type passed to ToggleInputButton.OnDrop",
               e.type
@@ -71346,51 +71383,51 @@
             var n = e;
             n.controllerID !== this.props.controllerID &&
               (M.a.IN_CLIENT &&
-                Object(Bt.a)("RemotePlay.MoveControllerToSlot") &&
+                Object(Ft.a)("RemotePlay.MoveControllerToSlot") &&
                 SteamClient.RemotePlay.MoveControllerToSlot(
                   n.controllerID,
                   this.props.controllerID
                 ),
               M.a.IN_CLIENT &&
-                Object(Bt.a)("RemotePlay.IdentifyController") &&
+                Object(Ft.a)("RemotePlay.IdentifyController") &&
                 (SteamClient.RemotePlay.IdentifyController(n.controllerID),
                 SteamClient.RemotePlay.IdentifyController(
                   this.props.controllerID
                 )),
-              ln.DragDropManager.SetDropConsumed()),
+              pn.DragDropManager.SetDropConsumed()),
               this.setState({ dragOver: !1 });
           }),
           (t.prototype.render = function() {
             var e = this,
               t = performance.now(),
-              n = Ht.remotePlayIconHolder,
-              i = Ht.ControllerNumber,
-              s = Ht.remotePlayIcon,
+              n = Wt.remotePlayIconHolder,
+              i = Wt.ControllerNumber,
+              s = Wt.remotePlayIcon,
               c = "";
             switch (this.props.inputType) {
               case J.h.k_EClientUsedInputTypeKeyboard:
-                (s += " " + Ht.IconKeyboard),
+                (s += " " + Wt.IconKeyboard),
                   (c = this.props.enabled
                     ? "#Tooltip_RemotePlayDisableKeyboard"
                     : "#Tooltip_RemotePlayEnableKeyboard");
                 break;
               case J.h.k_EClientUsedInputTypeMouse:
-                (s += " " + Ht.IconMouse),
+                (s += " " + Wt.IconMouse),
                   (c = this.props.enabled
                     ? "#Tooltip_RemotePlayDisableMouse"
                     : "#Tooltip_RemotePlayEnableMouse");
                 break;
               case J.h.k_EClientUsedInputTypeController:
-                (s += " " + Ht.IconController),
+                (s += " " + Wt.IconController),
                   (c = this.props.enabled
                     ? "#Tooltip_RemotePlayDisableController"
                     : "#Tooltip_RemotePlayEnableController");
             }
-            !0 === this.props.dropSlot && (s += " " + Ht.dropSlot),
+            !0 === this.props.dropSlot && (s += " " + Wt.dropSlot),
               this.state.dragOver &&
-                ((s += " " + Ht.dragOver), (i += " " + Ht.dragOver)),
+                ((s += " " + Wt.dragOver), (i += " " + Wt.dragOver)),
               t - this.props.usedTime < 800 &&
-                ((s += " " + Ht.wiggleIcon),
+                ((s += " " + Wt.wiggleIcon),
                 this.m_schInputUsedReset.Cancel(),
                 this.m_schInputUsedReset.Schedule(900, function() {
                   e.forceUpdate();
@@ -71408,70 +71445,70 @@
                         ) + 1) %
                         16) +
                       1),
-                    (s += " " + Ht.Filled),
-                    (i += " " + Ht.Filled),
+                    (s += " " + Wt.Filled),
+                    (i += " " + Wt.Filled),
                     !0 !== this.props.dropSlot && this.props.isHost
                       ? 0 === l && (c = "")
                       : (c = "#Tooltip_RemotePlayOtherController"))),
               u)
             ) {
               case 0:
-                i += " " + Ht.ColorNumber0;
+                i += " " + Wt.ColorNumber0;
                 break;
               case 1:
-                i += " " + Ht.ColorNumber1;
+                i += " " + Wt.ColorNumber1;
                 break;
               case 2:
-                i += " " + Ht.ColorNumber2;
+                i += " " + Wt.ColorNumber2;
                 break;
               case 3:
-                i += " " + Ht.ColorNumber3;
+                i += " " + Wt.ColorNumber3;
                 break;
               case 4:
-                i += " " + Ht.ColorNumber4;
+                i += " " + Wt.ColorNumber4;
                 break;
               case 5:
-                i += " " + Ht.ColorNumber5;
+                i += " " + Wt.ColorNumber5;
                 break;
               case 6:
-                i += " " + Ht.ColorNumber6;
+                i += " " + Wt.ColorNumber6;
                 break;
               case 7:
-                i += " " + Ht.ColorNumber7;
+                i += " " + Wt.ColorNumber7;
                 break;
               case 8:
-                i += " " + Ht.ColorNumber8;
+                i += " " + Wt.ColorNumber8;
                 break;
               case 9:
-                i += " " + Ht.ColorNumber9;
+                i += " " + Wt.ColorNumber9;
                 break;
               case 10:
-                i += " " + Ht.ColorNumber10;
+                i += " " + Wt.ColorNumber10;
                 break;
               case 11:
-                i += " " + Ht.ColorNumber11;
+                i += " " + Wt.ColorNumber11;
                 break;
               case 12:
-                i += " " + Ht.ColorNumber12;
+                i += " " + Wt.ColorNumber12;
                 break;
               case 13:
-                i += " " + Ht.ColorNumber13;
+                i += " " + Wt.ColorNumber13;
                 break;
               case 14:
-                i += " " + Ht.ColorNumber14;
+                i += " " + Wt.ColorNumber14;
                 break;
               case 15:
-                i += " " + Ht.ColorNumber15;
+                i += " " + Wt.ColorNumber15;
                 break;
               case 16:
-                i += " " + Ht.ColorNumber16;
+                i += " " + Wt.ColorNumber16;
             }
             var m = r.f.FriendStore.GetPlayer(this.props.owningAccountID);
             return !0 === this.props.dropSlot
               ? a.createElement(
-                  Vt.a,
+                  Ut.a,
                   Object(o.a)(
-                    { className: Ht.BasicButton },
+                    { className: Wt.BasicButton },
                     this.GetDragDropProps(!1),
                     {
                       title: Object(p.c)(
@@ -71485,12 +71522,12 @@
                       "div",
                       { className: n },
                       a.createElement("div", {
-                        className: Object(le.a)(s, "RemotePlay_DropSlot")
+                        className: Object(oe.a)(s, "RemotePlay_DropSlot")
                       }),
                       a.createElement(
                         "div",
                         {
-                          className: Object(le.a)(
+                          className: Object(oe.a)(
                             i,
                             "RemotePlay_ControllerNumber"
                           )
@@ -71502,12 +71539,12 @@
                     a.createElement("div", { className: s })
                 )
               : a.createElement(
-                  Vt.a,
+                  Ut.a,
                   Object(o.a)({}, this.GetDragDropProps(!0)),
                   a.createElement(
-                    be.d,
+                    ve.d,
                     {
-                      className: Ht.BasicButton,
+                      className: Wt.BasicButton,
                       onClick: function() {
                         return e.ToggleButton();
                       },
@@ -71524,7 +71561,7 @@
                         a.createElement(
                           "div",
                           {
-                            className: Object(le.a)(
+                            className: Object(oe.a)(
                               i,
                               "RemotePlay_ControllerNumber"
                             )
@@ -71536,7 +71573,7 @@
                       a.createElement("div", { className: s }),
                     !this.props.enabled &&
                       a.createElement("div", {
-                        className: Object(le.a)(Ht.remotePlayIcon, Ht.Slashout)
+                        className: Object(oe.a)(Wt.remotePlayIcon, Wt.Slashout)
                       })
                   )
                 );
@@ -71551,39 +71588,39 @@
           t
         );
       })(a.Component),
-      en = n("kQil");
+      tn = n("kQil");
     n.d(t, "b", function() {
-      return nn;
+      return on;
     }),
       n.d(t, "c", function() {
-        return sn;
-      }),
-      n.d(t, "d", function() {
         return cn;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "d", function() {
         return ln;
       }),
+      n.d(t, "h", function() {
+        return pn;
+      }),
       n.d(t, "g", function() {
-        return Pt;
+        return Bt;
       }),
       n.d(t, "f", function() {
-        return Nt;
+        return Pt;
       }),
       n.d(t, "e", function() {
-        return Lt;
+        return Nt;
       }),
       n.d(t, "a", function() {
-        return kt.a;
+        return Lt.a;
       });
-    var tn = (function(e) {
+    var nn = (function(e) {
         function t(t, n, o) {
           var r =
             e.call(this, "", {
               title: "",
               bIgnoreSavedDimensions: !0,
               dimensions: { width: 1, height: 1, left: t, top: n },
-              eCreationFlags: dt.c.Tooltip
+              eCreationFlags: ht.c.Tooltip
             }) || this;
           return (r.m_fnOnRender = o), r;
         }
@@ -71597,8 +71634,8 @@
           }),
           t
         );
-      })(dt.a),
-      nn = (function(e) {
+      })(ht.a),
+      on = (function(e) {
         function t(t) {
           var n = e.call(this) || this;
           return (n.m_window = t), n;
@@ -71662,7 +71699,7 @@
           t
         );
       })(r.c),
-      on = (function(e) {
+      rn = (function(e) {
         function t(t) {
           var n = e.call(this) || this;
           return (n.m_popup = t), n;
@@ -71674,7 +71711,7 @@
               return (
                 !this.m_container &&
                   this.m_popup.window &&
-                  (this.m_container = new nn(this.m_popup.window)),
+                  (this.m_container = new on(this.m_popup.window)),
                 this.m_container
               );
             },
@@ -71704,7 +71741,7 @@
           t
         );
       })(r.e),
-      rn = {
+      an = {
         nChatRoomListHeightPx: 224,
         bChatRoomListCollapsed: !1,
         bDontShowVoiceAlert: !1,
@@ -71712,17 +71749,17 @@
         bFavoritesHintDismissed: !1,
         nChangeLogDismissed: 0
       },
-      an = (function() {
+      sn = (function() {
         function e(e, t) {
           var n = this;
-          (this.m_FriendHoverStore = new ht.c()),
-            (this.m_DragDropManager = new Dt()),
-            (this.m_OverlayStore = new _t()),
-            (this.m_UsabilityMetricsStore = new jt(
+          (this.m_FriendHoverStore = new ft.c()),
+            (this.m_DragDropManager = new Mt()),
+            (this.m_OverlayStore = new gt()),
+            (this.m_UsabilityMetricsStore = new kt(
               this.FillInChatUsabilityMetrics.bind(this)
             )),
             (this.m_mapFriendsListPopups = new Map()),
-            (this.m_UIDisplayPrefs = rn),
+            (this.m_UIDisplayPrefs = an),
             (this.m_bUpdatedBuildAvailable = !1),
             (this.m_nSecondsOutOfDate = 0),
             (this.m_strLoaderWindowRestoreDetails = void 0),
@@ -71740,12 +71777,12 @@
                     "message",
                     this.HandleWebLoaderPostMessage
                   ))
-                : (Object(wt.a)(
+                : (Object(Dt.a)(
                     !M.a.IN_CLIENT,
                     "Config.IN_CLIENT set but SteamClient globals not available"
                   ),
                   window.addEventListener("message", this.HandlePostMessage)),
-              Object(Bt.a)("Messaging.RegisterForMessages") &&
+              Object(Ft.a)("Messaging.RegisterForMessages") &&
                 (SteamClient.Messaging.RegisterForMessages(
                   "LibraryCommands",
                   this.HandleLibraryCommandMessage
@@ -71758,9 +71795,9 @@
                   "PersonaState",
                   this.HandlePersonaStateMessage
                 )),
-              this.InstrumentWindow(window, kt.a),
-              dt.d.AddPopupCreatedCallback(function(e) {
-                n.InstrumentWindow(e.window, e.browser_info || kt.a);
+              this.InstrumentWindow(window, Lt.a),
+              ht.d.AddPopupCreatedCallback(function(e) {
+                n.InstrumentWindow(e.window, e.browser_info || Lt.a);
               }));
         }
         return (
@@ -71806,17 +71843,17 @@
             var o = this;
             if ("ShowFriendContextMenu" == t) {
               var i = JSON.parse(n),
-                a = new se.a(i.steamid);
+                a = new le.a(i.steamid);
               if (
                 a.GetAccountID() ==
                 this.m_FriendsUIApp.FriendStore.self.steamid.GetAccountID()
               )
                 return void this.OnCloseFakeContextMenu(i.steamid);
-              var s = new tn(i.x, i.y, function(e, t) {
+              var s = new nn(i.x, i.y, function(e, t) {
                 var n = r.f.FriendStore.GetFriend(a.GetAccountID());
                 n
-                  ? ((o.m_LibraryFriendContextMenu = Object(Mt.b)(
-                      Object(Ft.e)(
+                  ? ((o.m_LibraryFriendContextMenu = Object(Tt.b)(
+                      Object(xt.e)(
                         o.m_FriendsUIApp.GetDefaultBrowserContext(),
                         { chatContext: "friendslist" },
                         n,
@@ -71843,7 +71880,7 @@
                 this.m_LibraryFriendContextMenu.Hide();
           }),
           (e.prototype.SendPersonaUpdateToLibrary = function(e) {
-            Object(Bt.a)("Messaging.PostMessage") &&
+            Object(Ft.a)("Messaging.PostMessage") &&
               SteamClient.Messaging.PostMessage(
                 "PersonaState",
                 "PersonaUpdate",
@@ -71913,7 +71950,7 @@
                 );
                 break;
               case "ShowFriendChatDialog":
-                var n = new se.a(t.steamid),
+                var n = new le.a(t.steamid),
                   o = 0 != t.btakefocus;
                 n.BIsValid()
                   ? n.BIsIndividualAccount()
@@ -71931,7 +71968,7 @@
                   : this.ShowChatUnreadMessages(e);
                 break;
               case "CloseChatDialog":
-                if ((n = new se.a(t.steamid)).BIsIndividualAccount()) {
+                if ((n = new le.a(t.steamid)).BIsIndividualAccount()) {
                   var r = this.m_FriendsUIApp.ChatStore.GetFriendChat(
                     n.GetAccountID(),
                     !1
@@ -71983,7 +72020,7 @@
                 );
                 break;
               case "ShowWatchBroadcast":
-                var u = new se.a(t.steamid);
+                var u = new le.a(t.steamid);
                 this.m_FriendsUIApp.UIStore.ShowOrActivateBroadcast(
                   e,
                   u.GetAccountID(),
@@ -71996,19 +72033,19 @@
               r = [],
               i = this.m_FriendsUIApp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                 "UIDisplayPrefs",
-                rn
+                an
               ).then(function(e) {
-                Object(mt.A)(function() {
+                Object(dt.A)(function() {
                   o.m_UIDisplayPrefs = e;
                 });
               });
             if (
               (r.push(i),
               e.RunWhenLoggedOn(function() {
-                dt.d.SetCurrentLoggedInAccountID(e.steamid.GetAccountID());
+                ht.d.SetCurrentLoggedInAccountID(e.steamid.GetAccountID());
               }),
               (this.m_WebLogonManager = n),
-              (Mt.c.GetBrowserInfoForPopup = Pt),
+              (Tt.c.GetBrowserInfoForPopup = Bt),
               t && this.m_OverlayStore.Init(e),
               window.addEventListener(
                 "dragover",
@@ -72044,7 +72081,7 @@
                     }
                   }
                   return t
-                    ? Object(mt.E)(function() {
+                    ? Object(dt.E)(function() {
                         return void 0 !== o.m_strLoaderWindowRestoreDetails;
                       })
                     : Promise.resolve();
@@ -72119,11 +72156,11 @@
                 )),
                   this.m_mapFriendsListPopups.set(e.m_unPID, a),
                   a.Show(!t && n, o);
-                var s = new on(a),
+                var s = new rn(a),
                   c = this.m_FriendsUIApp.UIStore.GetPerContextChatData(e);
                 c.SetFriendsListWindow(s.container),
                   this.m_FriendsUIApp.UIStore.SerializePopupState(),
-                  Object(en.c)(s.GetWindow()).SetUsePopups(c.BUsePopups());
+                  Object(tn.c)(s.GetWindow()).SetUsePopups(c.BUsePopups());
               }
             }
           }),
@@ -72148,7 +72185,7 @@
                   this.m_FriendsUIApp.UIStore.MergeTabSets(t),
                   (n = o.friends_list_window))
                 ) {
-                  if (n instanceof nn)
+                  if (n instanceof on)
                     (r = n.GetWindow()).SteamClient.Window.ResizeTo(
                       1280,
                       r.innerHeight
@@ -72160,13 +72197,13 @@
                 (n = o.friends_list_window))
               ) {
                 var r;
-                if (n instanceof nn)
+                if (n instanceof on)
                   (r = n.GetWindow()).SteamClient.Window.ResizeTo(
-                    ln.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
+                    pn.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
                     r.innerHeight
                   );
               } else {
-                var i = ln.UIDisplayPrefs.nFriendsListSingleWindowWidthPx;
+                var i = pn.UIDisplayPrefs.nFriendsListSingleWindowWidthPx;
                 this.ShowPopupFriendsList(t, !1, !0, !0, { width: i });
               }
             }
@@ -72175,10 +72212,10 @@
             e.ui_state().set_friends_list_group_chats_height(
               this.UIDisplayPrefs.nChatRoomListHeightPx
             );
-            var t = this.m_FriendsUIApp.UIStore.GetPerContextChatData(kt.a),
+            var t = this.m_FriendsUIApp.UIStore.GetPerContextChatData(Lt.a),
               n = t.friends_list_window;
             n &&
-              n instanceof nn &&
+              n instanceof on &&
               (e.ui_state().set_friends_list_width(n.GetWindow().outerWidth),
               e.ui_state().set_friends_list_height(n.GetWindow().outerHeight));
             for (
@@ -72226,25 +72263,25 @@
               i = !1;
             this.m_mapFriendsListPopups.size > 0 &&
               this.m_mapFriendsListPopups.forEach(function(t, a) {
-                var s = Nt(t.window);
-                ((!o && s != kt.a) ||
+                var s = Pt(t.window);
+                ((!o && s != Lt.a) ||
                   (o && r.f.RemotePlayStore.HasContextWaitingForResults(s))) &&
-                  (zt(s, e, t.window, n), (i = !0));
+                  (qt(s, e, t.window, n), (i = !0));
               }),
-              i || zt(kt.a, e, t, n),
+              i || qt(Lt.a, e, t, n),
               r.f.RemotePlayStore.ClearContextsWaitingForResults();
           }),
-          Object(o.c)([mt.x], e.prototype, "m_UIDisplayPrefs", void 0),
-          Object(o.c)([mt.x], e.prototype, "m_bUpdatedBuildAvailable", void 0),
-          Object(o.c)([mt.x], e.prototype, "m_nSecondsOutOfDate", void 0),
+          Object(o.c)([dt.x], e.prototype, "m_UIDisplayPrefs", void 0),
+          Object(o.c)([dt.x], e.prototype, "m_bUpdatedBuildAvailable", void 0),
+          Object(o.c)([dt.x], e.prototype, "m_nSecondsOutOfDate", void 0),
           Object(o.c)(
-            [mt.x],
+            [dt.x],
             e.prototype,
             "m_strLoaderWindowRestoreDetails",
             void 0
           ),
           Object(o.c)(
-            [mt.x],
+            [dt.x],
             e.prototype,
             "m_bShowFriendsListOnLoadFromLoader",
             void 0
@@ -72256,38 +72293,38 @@
           Object(o.c)([L.a], e.prototype, "HandlePersonaStateMessage", null),
           Object(o.c)([L.a], e.prototype, "HandleWebLoaderPostMessage", null),
           Object(o.c)([r.g], e.prototype, "SetUserPersonaStateWhenReady", null),
-          Object(o.c)([mt.i], e.prototype, "UIDisplayPrefs", null),
-          Object(o.c)([mt.g], e.prototype, "SetUIDisplayPref", null),
+          Object(o.c)([dt.i], e.prototype, "UIDisplayPrefs", null),
+          Object(o.c)([dt.g], e.prototype, "SetUIDisplayPref", null),
           Object(o.c)([r.g], e.prototype, "ShowPopupFriendsList", null),
           Object(o.c)([r.g], e.prototype, "ShowChatUnreadMessages", null),
           e
         );
       })(),
-      sn = (function(e) {
+      cn = (function(e) {
         function t() {
           var t =
             e.call(
               this,
               M.a.IN_CLIENT && void 0 !== SteamClient.Storage
-                ? new pt()
-                : new ut()
+                ? new ut()
+                : new mt()
             ) || this;
           return (
-            (t.m_AudioPlaybackManager = new yt()),
-            (t.m_IdleTracker = M.a.IN_CLIENT ? new It() : new Ot()),
-            (t.m_DesktopApp = ln = new an(t, !1)),
+            (t.m_AudioPlaybackManager = new St()),
+            (t.m_IdleTracker = M.a.IN_CLIENT ? new Et() : new It()),
+            (t.m_DesktopApp = pn = new sn(t, !1)),
             (t.m_ChatRoomBBCodeParser = new ee.d(
-              Object.assign(ve(), { mention: rt }),
+              Object.assign(ye(), { mention: it }),
               ee.c
             )),
             (t.m_FriendChatBBCodeParser = new ee.d(
-              Object.assign(ve(), {
-                invite: Ke,
-                gameinvite: Ye,
-                lobbyinvite: Qe,
-                tradeoffer: et,
-                broadcastinvite: Je,
-                broadcastviewrequest: Ze
+              Object.assign(ye(), {
+                invite: Ye,
+                gameinvite: Qe,
+                lobbyinvite: Je,
+                tradeoffer: tt,
+                broadcastinvite: Ze,
+                broadcastviewrequest: Xe
               }),
               ee.c
             )),
@@ -72302,21 +72339,21 @@
             })),
             (t.m_ChatRoomEffectSettings = T.a),
             M.a.IN_CLIENT &&
-              Object(Bt.a)("RemotePlay.RegisterForRemoteClientStarted") &&
+              Object(Ft.a)("RemotePlay.RegisterForRemoteClientStarted") &&
               SteamClient.RemotePlay.RegisterForRemoteClientStarted(function(
                 e
               ) {
                 return t.RemoteClientStarted(e);
               }),
             M.a.IN_CLIENT &&
-              Object(Bt.a)("RemotePlay.RegisterForRemoteClientLaunchResult") &&
+              Object(Ft.a)("RemotePlay.RegisterForRemoteClientLaunchResult") &&
               SteamClient.RemotePlay.RegisterForRemoteClientLaunchResult(
                 function(e, n, o, r) {
                   return t.RemoteClientLaunchResult(e, n, o, r);
                 }
               ),
-            (ln = t.m_DesktopApp),
-            Object(wt.a)(
+            (pn = t.m_DesktopApp),
+            Object(Dt.a)(
               !M.a.IN_MOBILE,
               "DesktopApp initialized in mobile context"
             ),
@@ -72326,7 +72363,7 @@
         return (
           Object(o.d)(t, e),
           (t.prototype.Init = function(t, n, o) {
-            var r = n ? new vt(this.m_FriendStore) : new bt(this.m_FriendStore),
+            var r = n ? new yt(this.m_FriendStore) : new vt(this.m_FriendStore),
               i = this.m_DesktopApp.Init(t, n, o);
             e.prototype.InitInternal.call(this, t, r, i);
           }),
@@ -72339,7 +72376,7 @@
                     return [4, this.UIStore.RestorePopupState()];
                   case 1:
                     o.sent(),
-                      (e = dt.d.GetRestoreDetails(
+                      (e = ht.d.GetRestoreDetails(
                         "PopupFriendsListDimensions"
                       )) &&
                         window.parent.postMessage(
@@ -72356,7 +72393,7 @@
                       )) &&
                         (n = JSON.parse(t)) &&
                         n.command &&
-                        this.m_DesktopApp.ExecuteCommand(kt.a, n.command),
+                        this.m_DesktopApp.ExecuteCommand(Lt.a, n.command),
                         window.sessionStorage.removeItem(
                           "oFriendsUIStartupParam"
                         );
@@ -72398,27 +72435,27 @@
             configurable: !0
           }),
           (t.prototype.AddPopupManagerShutdownCallback = function(e) {
-            dt.d.AddShutdownCallback(e);
+            ht.d.AddShutdownCallback(e);
           }),
           (t.prototype.CreateChatPopup = function(e, t, n, o, r, a) {
             var s = new i.a(e, t, n, this.m_ChatStore, o, r, a),
-              c = new on(s);
-            return new ft.a(c, s);
+              c = new rn(s);
+            return new _t.a(c, s);
           }),
           (t.prototype.ShowPopupFriendsListAtStartup = function(e) {
             var t = e;
             if (
-              (void 0 !== ln.m_bShowFriendsListOnLoadFromLoader &&
-                (t = ln.m_bShowFriendsListOnLoadFromLoader),
+              (void 0 !== pn.m_bShowFriendsListOnLoadFromLoader &&
+                (t = pn.m_bShowFriendsListOnLoadFromLoader),
               t)
             ) {
-              var n = !0 === ln.m_bShowFriendsListOnLoadFromLoader;
-              r.f.GetDefaultBrowserContext() != kt.a &&
+              var n = !0 === pn.m_bShowFriendsListOnLoadFromLoader;
+              r.f.GetDefaultBrowserContext() != Lt.a &&
                 (console.log(
                   "Blocked taking focus in root context during ShowPopupFriendsList, because other context is primary"
                 ),
                 (n = !1)),
-                r.f.ShowPopupFriendsList(kt.a, !1, n);
+                r.f.ShowPopupFriendsList(Lt.a, !1, n);
             }
           }),
           (t.prototype.ShowPopupFriendsList = function(e, t, n) {
@@ -72428,14 +72465,14 @@
             this.m_DesktopApp.OnFriendsListClosed(e);
           }),
           (t.prototype.RemoteClientStarted = function(e) {
-            var t = new se.a(e).GetAccountID();
+            var t = new le.a(e).GetAccountID();
             if (0 != t && t != r.f.FriendStore.self.accountid) {
               var n = r.f.FriendStore.GetPlayer(t);
               this.m_DesktopApp.CreateRemotePlayDialogs(n, window, !1);
             }
           }),
           (t.prototype.RemoteClientLaunchResult = function(e, t, n, o) {
-            var i = new se.a(e).GetAccountID(),
+            var i = new le.a(e).GetAccountID(),
               a = r.f.FriendStore.GetPlayer(i);
             if (n === J.j.k_ERemoteClientLaunchOK) {
               var s = 2 == a.efriendrelationship,
@@ -72511,7 +72548,7 @@
           (t.prototype.ShowCloseActiveVoiceConfirmation = function(e, t) {
             if (!this.m_DesktopApp.UIDisplayPrefs.bDontShowVoiceAlert) {
               var n = t.popup;
-              Object(Tt.b)(n.GetWindow());
+              Object(Rt.b)(n.GetWindow());
             }
           }),
           (t.prototype.SignOutOfFriends = function(e) {
@@ -72534,10 +72571,10 @@
           t
         );
       })(r.d);
-    function cn() {
-      return (ln = new an(new sn(), !1));
+    function ln() {
+      return (pn = new sn(new cn(), !1));
     }
-    var ln = void 0;
+    var pn = void 0;
   },
   ha6C: function(e, t, n) {
     "use strict";

@@ -3206,7 +3206,7 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 .home_page_content.special_offers {
 	margin-bottom: 20px;
 	position: relative;
-	z-index: 1;
+	z-index: auto;
 }
 
 /* Fix left when gutter is visible */

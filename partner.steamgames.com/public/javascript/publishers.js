@@ -176,10 +176,10 @@ function HeaderToGuidelinesKey( strHeader )
 	switch(strHeader)
 	{
 		case 'CIS - USD':
-			return 'cis_china';
+			return 'usd_cis';
 
 		case 'SASIA - USD':
-			return 'usd_soasia';
+			return 'usd_sasia';
 
 		default:
 			if( strHeader.indexOf('-') !== -1 )
