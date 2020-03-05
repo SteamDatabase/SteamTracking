@@ -8,171 +8,177 @@
       a < r.length;
       a++
     )
-      (n = r[a]), p[n] && s.push(p[n][0]), (p[n] = 0);
+      (n = r[a]), m[n] && s.push(m[n][0]), (m[n] = 0);
     for (t in o) Object.prototype.hasOwnProperty.call(o, t) && (c[t] = o[t]);
-    for (h && h(e); s.length; ) s.shift()();
+    for (d && d(e); s.length; ) s.shift()();
     return u.push.apply(u, i || []), l();
   }
   function l() {
     for (var e, t = 0; t < u.length; t++) {
       for (var n = u[t], r = !0, o = 1; o < n.length; o++) {
         var i = n[o];
-        0 !== p[i] && (r = !1);
+        0 !== m[i] && (r = !1);
       }
-      r && (u.splice(t--, 1), (e = m((m.s = n[0]))));
+      r && (u.splice(t--, 1), (e = h((h.s = n[0]))));
     }
     return e;
   }
   var n = {},
-    s = { 6: 0 },
-    p = { 6: 0 },
+    p = { 9: 0 },
+    m = { 9: 0 },
     u = [];
-  function m(e) {
+  function h(e) {
     if (n[e]) return n[e].exports;
     var t = (n[e] = { i: e, l: !1, exports: {} });
-    return c[e].call(t.exports, t, t.exports, m), (t.l = !0), t.exports;
+    return c[e].call(t.exports, t, t.exports, h), (t.l = !0), t.exports;
   }
-  (m.e = function(u) {
+  (h.e = function(u) {
     var e = [];
-    s[u]
-      ? e.push(s[u])
-      : 0 !== s[u] &&
-        { 3: 1, 4: 1, 5: 1, 63: 1 }[u] &&
+    p[u]
+      ? e.push(p[u])
+      : 0 !== p[u] &&
+        { 1: 1, 2: 1, 5: 1, 6: 1, 7: 1, 8: 1, 66: 1 }[u] &&
         e.push(
-          (s[u] = new Promise(function(e, r) {
+          (p[u] = new Promise(function(e, r) {
             for (
               var t =
                   "..\\..\\..\\css\\applications\\store\\" +
                   ({
-                    1: "main_english-json",
-                    2: "shared_english-json",
-                    3: "store_common",
-                    4: "eventcomponents",
-                    5: "interactiverecommender",
-                    7: "main_brazilian-json",
-                    8: "main_bulgarian-json",
-                    9: "main_czech-json",
-                    10: "main_danish-json",
-                    11: "main_dutch-json",
-                    12: "main_finnish-json",
-                    13: "main_french-json",
-                    14: "main_german-json",
-                    15: "main_greek-json",
-                    16: "main_hungarian-json",
-                    17: "main_italian-json",
-                    18: "main_japanese-json",
-                    19: "main_koreana-json",
-                    20: "main_latam-json",
-                    21: "main_norwegian-json",
-                    22: "main_polish-json",
-                    23: "main_portuguese-json",
-                    24: "main_romanian-json",
-                    25: "main_russian-json",
-                    26: "main_schinese-json",
-                    27: "main_spanish-json",
-                    28: "main_swedish-json",
-                    29: "main_tchinese-json",
-                    30: "main_thai-json",
-                    31: "main_turkish-json",
-                    32: "main_ukrainian-json",
-                    33: "main_vietnamese-json",
-                    34: "shared_arabic-json",
-                    35: "shared_brazilian-json",
-                    36: "shared_bulgarian-json",
-                    37: "shared_czech-json",
-                    38: "shared_danish-json",
-                    39: "shared_dutch-json",
-                    40: "shared_finnish-json",
-                    41: "shared_french-json",
-                    42: "shared_german-json",
-                    43: "shared_greek-json",
-                    44: "shared_hungarian-json",
-                    45: "shared_italian-json",
-                    46: "shared_japanese-json",
-                    47: "shared_koreana-json",
-                    48: "shared_latam-json",
-                    49: "shared_norwegian-json",
-                    50: "shared_polish-json",
-                    51: "shared_portuguese-json",
-                    52: "shared_romanian-json",
-                    53: "shared_russian-json",
-                    54: "shared_schinese-json",
-                    55: "shared_spanish-json",
-                    56: "shared_swedish-json",
-                    57: "shared_tchinese-json",
-                    58: "shared_thai-json",
-                    59: "shared_turkish-json",
-                    60: "shared_ukrainian-json",
-                    61: "shared_vietnamese-json",
-                    62: "topsellers",
-                    63: "vendors~eventcomponents"
+                    1: "store_common",
+                    2: "broadcast~eventcomponents",
+                    3: "main_english-json",
+                    4: "shared_english-json",
+                    5: "broadcast",
+                    6: "eventcomponents",
+                    7: "interactiverecommender",
+                    8: "loyaltystore",
+                    10: "main_brazilian-json",
+                    11: "main_bulgarian-json",
+                    12: "main_czech-json",
+                    13: "main_danish-json",
+                    14: "main_dutch-json",
+                    15: "main_finnish-json",
+                    16: "main_french-json",
+                    17: "main_german-json",
+                    18: "main_greek-json",
+                    19: "main_hungarian-json",
+                    20: "main_italian-json",
+                    21: "main_japanese-json",
+                    22: "main_koreana-json",
+                    23: "main_latam-json",
+                    24: "main_norwegian-json",
+                    25: "main_polish-json",
+                    26: "main_portuguese-json",
+                    27: "main_romanian-json",
+                    28: "main_russian-json",
+                    29: "main_schinese-json",
+                    30: "main_spanish-json",
+                    31: "main_swedish-json",
+                    32: "main_tchinese-json",
+                    33: "main_thai-json",
+                    34: "main_turkish-json",
+                    35: "main_ukrainian-json",
+                    36: "main_vietnamese-json",
+                    37: "shared_arabic-json",
+                    38: "shared_brazilian-json",
+                    39: "shared_bulgarian-json",
+                    40: "shared_czech-json",
+                    41: "shared_danish-json",
+                    42: "shared_dutch-json",
+                    43: "shared_finnish-json",
+                    44: "shared_french-json",
+                    45: "shared_german-json",
+                    46: "shared_greek-json",
+                    47: "shared_hungarian-json",
+                    48: "shared_italian-json",
+                    49: "shared_japanese-json",
+                    50: "shared_koreana-json",
+                    51: "shared_latam-json",
+                    52: "shared_norwegian-json",
+                    53: "shared_polish-json",
+                    54: "shared_portuguese-json",
+                    55: "shared_romanian-json",
+                    56: "shared_russian-json",
+                    57: "shared_schinese-json",
+                    58: "shared_spanish-json",
+                    59: "shared_swedish-json",
+                    60: "shared_tchinese-json",
+                    61: "shared_thai-json",
+                    62: "shared_turkish-json",
+                    63: "shared_ukrainian-json",
+                    64: "shared_vietnamese-json",
+                    65: "topsellers",
+                    66: "vendors~eventcomponents"
                   }[u] || u) +
                   ".css?chunkhash=" +
                   {
-                    1: "d732c82adaf4ded20c36",
-                    2: "4c6510be544195547888",
-                    3: "04e88aa3564c495de990",
-                    4: "3ce976284f3d9aa0457a",
-                    5: "c7a82234ce9963fbcb23",
-                    7: "4c144c52a7ce686ea3a0",
-                    8: "e66b949aa854b2c4b2ab",
-                    9: "d6bd2764882fc3ec13e4",
-                    10: "f592d59c2b2474e0f447",
-                    11: "459aa166364b7433a65d",
-                    12: "c6f62b8417fe67579270",
-                    13: "0c2b6ee3df51085df892",
-                    14: "53eec1de47f14a799231",
-                    15: "49a7f769e7cfd100da08",
-                    16: "f49b7c31e47533bf7810",
-                    17: "c9c2c25c9fe13ad8a913",
-                    18: "3e70fcf707e1a3429288",
-                    19: "926a42db409082d5f6b1",
-                    20: "55a18df091690f7ae451",
-                    21: "30d3086e0a1b6d904ecd",
-                    22: "dd8bf41f5c77a4e93d07",
-                    23: "f355c38172cc4cc511a4",
-                    24: "9ee0e77ac10ad2919dee",
-                    25: "be5d932bff986392f11c",
-                    26: "d1a58fb5b6153b550241",
-                    27: "29a04beb6779cf88b017",
-                    28: "ead3fb45d48f81d804cf",
-                    29: "e3f9a7c31432de3a821e",
-                    30: "2367c2c8462feaa2fd8d",
-                    31: "048c65a6e8b13529adc6",
-                    32: "4817156e1ffe437d3446",
-                    33: "84301d33ac9b3555e428",
-                    34: "f205e5bee77220ba603e",
-                    35: "a1410d137123525fd584",
-                    36: "f5da053bdd90c5dab311",
-                    37: "61e503bb70e8c579ee81",
-                    38: "80a7abecf651ab269ddd",
-                    39: "aa35f836a530be0f08cc",
-                    40: "b426cd7cebd22872b46b",
-                    41: "eb1d32e6bdf39086cab7",
-                    42: "a6f84594b75e2b02902f",
-                    43: "7b239654b06ce3420357",
-                    44: "75aba95e03c986d27491",
-                    45: "6a4316b20c179fa88faa",
-                    46: "708010cfb06f91de7855",
-                    47: "07ea62f34e561d65c0f9",
-                    48: "ce3625a6e5f8444ed892",
-                    49: "19565e96bc710044bc78",
-                    50: "981134d983fd02eae8d5",
-                    51: "111606964e164a5404b9",
-                    52: "07cce8760ff4c66c964b",
-                    53: "7b77c58051cc1d6de128",
-                    54: "439ea49959a518c1e87d",
-                    55: "641bbfa2637fb228a33d",
-                    56: "60896037483b7b9b7f6d",
-                    57: "c3e10a1c1b1cfa26648e",
-                    58: "bda8d4c2fe4eafc7cd23",
-                    59: "fd8e7faffc8479f38942",
-                    60: "04e6a652d095fc30a33e",
-                    61: "a8ef140f3b33ee47e383",
-                    62: "78e148b93411a5d550cb",
-                    63: "5cd6767309be4ddba16e"
+                    1: "9795c7cd7ca8b6dbdf66",
+                    2: "ac37ca0b9fd07cc47aca",
+                    3: "12ddae0337b07fd825e2",
+                    4: "c6eafe40583485a54d68",
+                    5: "ec55b6652029cc31c069",
+                    6: "e1320b2bcecf0aa9773d",
+                    7: "6c5b1fd6a3b3b22eb8f3",
+                    8: "49c4d593be4d5d78660c",
+                    10: "c1633a369a4e671e02d9",
+                    11: "4311330a9c50ef2b549f",
+                    12: "390debe2ba7adc1babc6",
+                    13: "931df20e90158d197f98",
+                    14: "f01501f112e2fbf9565e",
+                    15: "50bffd233d4cc282e9a2",
+                    16: "2fe918648657675798ec",
+                    17: "2ff4255afda12daf9fa9",
+                    18: "917c49f8f17661107d91",
+                    19: "793348a6ac646c8765f6",
+                    20: "9d5457ae4d3107b61f56",
+                    21: "1c7040a6d553d62413ac",
+                    22: "76e03a2402555741db4c",
+                    23: "ac92b9e790c47e4f543a",
+                    24: "51014333ad393d925a89",
+                    25: "5358a96e84ead85a640d",
+                    26: "8d11d055660f25b6d9f0",
+                    27: "10613b8947431adcda53",
+                    28: "195c5397ad8cb011dca2",
+                    29: "325e10355c0c8fd97740",
+                    30: "643edc6cef4de56f53dd",
+                    31: "8a9991c6cb862210bfa6",
+                    32: "04ba15760d9ce0cee557",
+                    33: "f5eef9db22d74cf492f8",
+                    34: "30518a0ce0dd60aa2b45",
+                    35: "3c35c9cfded8e64210e3",
+                    36: "e32dcccc1634ebaf51ee",
+                    37: "060932bb29588ac70a32",
+                    38: "ef2329f00b9b1685d290",
+                    39: "f5f7da223f44ece8a246",
+                    40: "4e053cf435ff6efd829e",
+                    41: "d604cbc008efe18439d9",
+                    42: "335ac03e0b390c65dd6f",
+                    43: "3654f2033bbc109354d6",
+                    44: "e608f8c62306bdc9afc4",
+                    45: "08982edb55a6ef5bedf5",
+                    46: "a71ff09166620cc60eb3",
+                    47: "05e996f88391192c1950",
+                    48: "a0257cf85b2b6c395aff",
+                    49: "329c2219caffb42cadf3",
+                    50: "055f40c02332c78aeb7d",
+                    51: "6bf83d6ecf26177b753e",
+                    52: "e5d8645120799f93f64f",
+                    53: "5e8d7dad148123fe0902",
+                    54: "5b5b2ec39f2062240d04",
+                    55: "afa4b24224dd8f049e53",
+                    56: "6647ba16b7de5d6f3bd4",
+                    57: "e180933fa3eb5550e049",
+                    58: "6c4258cad6889e9e04d1",
+                    59: "7c6dfe4cbdac43e4d1f7",
+                    60: "5dacbb7b715784562345",
+                    61: "f4cf37143c40acd25c41",
+                    62: "9e14a9e8aaf62f30e84f",
+                    63: "b01b38971a912b5679c8",
+                    64: "0a359ef01008b3b88962",
+                    65: "269e0869b2d62181fc7e",
+                    66: "2e828feb3a37ce0a5f67"
                   }[u],
-                o = m.p + t,
+                o = h.p + t,
                 n = document.getElementsByTagName("link"),
                 i = 0;
               i < n.length;
@@ -197,20 +203,24 @@
                   n = new Error(
                     "Loading CSS chunk " + u + " failed.\n(" + t + ")"
                   );
-                (n.request = t), r(n);
+                (n.code = "CSS_CHUNK_LOAD_FAILED"),
+                  (n.request = t),
+                  delete p[u],
+                  l.parentNode.removeChild(l),
+                  r(n);
               }),
               (l.href = o),
               document.getElementsByTagName("head")[0].appendChild(l);
           }).then(function() {
-            s[u] = 0;
+            p[u] = 0;
           }))
         );
-    var n = p[u];
+    var n = m[u];
     if (0 !== n)
       if (n) e.push(n[2]);
       else {
         var t = new Promise(function(e, t) {
-          n = p[u] = [e, t];
+          n = m[u] = [e, t];
         });
         e.push((n[2] = t));
         var r,
@@ -218,145 +228,151 @@
           i = document.createElement("script");
         (i.charset = "utf-8"),
           (i.timeout = 120),
-          m.nc && i.setAttribute("nonce", m.nc),
+          h.nc && i.setAttribute("nonce", h.nc),
           (i.src = (function(e) {
             return (
-              m.p +
+              h.p +
               "" +
               ({
-                1: "main_english-json",
-                2: "shared_english-json",
-                3: "store_common",
-                4: "eventcomponents",
-                5: "interactiverecommender",
-                7: "main_brazilian-json",
-                8: "main_bulgarian-json",
-                9: "main_czech-json",
-                10: "main_danish-json",
-                11: "main_dutch-json",
-                12: "main_finnish-json",
-                13: "main_french-json",
-                14: "main_german-json",
-                15: "main_greek-json",
-                16: "main_hungarian-json",
-                17: "main_italian-json",
-                18: "main_japanese-json",
-                19: "main_koreana-json",
-                20: "main_latam-json",
-                21: "main_norwegian-json",
-                22: "main_polish-json",
-                23: "main_portuguese-json",
-                24: "main_romanian-json",
-                25: "main_russian-json",
-                26: "main_schinese-json",
-                27: "main_spanish-json",
-                28: "main_swedish-json",
-                29: "main_tchinese-json",
-                30: "main_thai-json",
-                31: "main_turkish-json",
-                32: "main_ukrainian-json",
-                33: "main_vietnamese-json",
-                34: "shared_arabic-json",
-                35: "shared_brazilian-json",
-                36: "shared_bulgarian-json",
-                37: "shared_czech-json",
-                38: "shared_danish-json",
-                39: "shared_dutch-json",
-                40: "shared_finnish-json",
-                41: "shared_french-json",
-                42: "shared_german-json",
-                43: "shared_greek-json",
-                44: "shared_hungarian-json",
-                45: "shared_italian-json",
-                46: "shared_japanese-json",
-                47: "shared_koreana-json",
-                48: "shared_latam-json",
-                49: "shared_norwegian-json",
-                50: "shared_polish-json",
-                51: "shared_portuguese-json",
-                52: "shared_romanian-json",
-                53: "shared_russian-json",
-                54: "shared_schinese-json",
-                55: "shared_spanish-json",
-                56: "shared_swedish-json",
-                57: "shared_tchinese-json",
-                58: "shared_thai-json",
-                59: "shared_turkish-json",
-                60: "shared_ukrainian-json",
-                61: "shared_vietnamese-json",
-                62: "topsellers",
-                63: "vendors~eventcomponents"
+                1: "store_common",
+                2: "broadcast~eventcomponents",
+                3: "main_english-json",
+                4: "shared_english-json",
+                5: "broadcast",
+                6: "eventcomponents",
+                7: "interactiverecommender",
+                8: "loyaltystore",
+                10: "main_brazilian-json",
+                11: "main_bulgarian-json",
+                12: "main_czech-json",
+                13: "main_danish-json",
+                14: "main_dutch-json",
+                15: "main_finnish-json",
+                16: "main_french-json",
+                17: "main_german-json",
+                18: "main_greek-json",
+                19: "main_hungarian-json",
+                20: "main_italian-json",
+                21: "main_japanese-json",
+                22: "main_koreana-json",
+                23: "main_latam-json",
+                24: "main_norwegian-json",
+                25: "main_polish-json",
+                26: "main_portuguese-json",
+                27: "main_romanian-json",
+                28: "main_russian-json",
+                29: "main_schinese-json",
+                30: "main_spanish-json",
+                31: "main_swedish-json",
+                32: "main_tchinese-json",
+                33: "main_thai-json",
+                34: "main_turkish-json",
+                35: "main_ukrainian-json",
+                36: "main_vietnamese-json",
+                37: "shared_arabic-json",
+                38: "shared_brazilian-json",
+                39: "shared_bulgarian-json",
+                40: "shared_czech-json",
+                41: "shared_danish-json",
+                42: "shared_dutch-json",
+                43: "shared_finnish-json",
+                44: "shared_french-json",
+                45: "shared_german-json",
+                46: "shared_greek-json",
+                47: "shared_hungarian-json",
+                48: "shared_italian-json",
+                49: "shared_japanese-json",
+                50: "shared_koreana-json",
+                51: "shared_latam-json",
+                52: "shared_norwegian-json",
+                53: "shared_polish-json",
+                54: "shared_portuguese-json",
+                55: "shared_romanian-json",
+                56: "shared_russian-json",
+                57: "shared_schinese-json",
+                58: "shared_spanish-json",
+                59: "shared_swedish-json",
+                60: "shared_tchinese-json",
+                61: "shared_thai-json",
+                62: "shared_turkish-json",
+                63: "shared_ukrainian-json",
+                64: "shared_vietnamese-json",
+                65: "topsellers",
+                66: "vendors~eventcomponents"
               }[e] || e) +
               ".js?chunkhash=" +
               {
-                1: "d732c82adaf4ded20c36",
-                2: "4c6510be544195547888",
-                3: "04e88aa3564c495de990",
-                4: "3ce976284f3d9aa0457a",
-                5: "c7a82234ce9963fbcb23",
-                7: "4c144c52a7ce686ea3a0",
-                8: "e66b949aa854b2c4b2ab",
-                9: "d6bd2764882fc3ec13e4",
-                10: "f592d59c2b2474e0f447",
-                11: "459aa166364b7433a65d",
-                12: "c6f62b8417fe67579270",
-                13: "0c2b6ee3df51085df892",
-                14: "53eec1de47f14a799231",
-                15: "49a7f769e7cfd100da08",
-                16: "f49b7c31e47533bf7810",
-                17: "c9c2c25c9fe13ad8a913",
-                18: "3e70fcf707e1a3429288",
-                19: "926a42db409082d5f6b1",
-                20: "55a18df091690f7ae451",
-                21: "30d3086e0a1b6d904ecd",
-                22: "dd8bf41f5c77a4e93d07",
-                23: "f355c38172cc4cc511a4",
-                24: "9ee0e77ac10ad2919dee",
-                25: "be5d932bff986392f11c",
-                26: "d1a58fb5b6153b550241",
-                27: "29a04beb6779cf88b017",
-                28: "ead3fb45d48f81d804cf",
-                29: "e3f9a7c31432de3a821e",
-                30: "2367c2c8462feaa2fd8d",
-                31: "048c65a6e8b13529adc6",
-                32: "4817156e1ffe437d3446",
-                33: "84301d33ac9b3555e428",
-                34: "f205e5bee77220ba603e",
-                35: "a1410d137123525fd584",
-                36: "f5da053bdd90c5dab311",
-                37: "61e503bb70e8c579ee81",
-                38: "80a7abecf651ab269ddd",
-                39: "aa35f836a530be0f08cc",
-                40: "b426cd7cebd22872b46b",
-                41: "eb1d32e6bdf39086cab7",
-                42: "a6f84594b75e2b02902f",
-                43: "7b239654b06ce3420357",
-                44: "75aba95e03c986d27491",
-                45: "6a4316b20c179fa88faa",
-                46: "708010cfb06f91de7855",
-                47: "07ea62f34e561d65c0f9",
-                48: "ce3625a6e5f8444ed892",
-                49: "19565e96bc710044bc78",
-                50: "981134d983fd02eae8d5",
-                51: "111606964e164a5404b9",
-                52: "07cce8760ff4c66c964b",
-                53: "7b77c58051cc1d6de128",
-                54: "439ea49959a518c1e87d",
-                55: "641bbfa2637fb228a33d",
-                56: "60896037483b7b9b7f6d",
-                57: "c3e10a1c1b1cfa26648e",
-                58: "bda8d4c2fe4eafc7cd23",
-                59: "fd8e7faffc8479f38942",
-                60: "04e6a652d095fc30a33e",
-                61: "a8ef140f3b33ee47e383",
-                62: "78e148b93411a5d550cb",
-                63: "5cd6767309be4ddba16e"
+                1: "9795c7cd7ca8b6dbdf66",
+                2: "ac37ca0b9fd07cc47aca",
+                3: "12ddae0337b07fd825e2",
+                4: "c6eafe40583485a54d68",
+                5: "ec55b6652029cc31c069",
+                6: "e1320b2bcecf0aa9773d",
+                7: "6c5b1fd6a3b3b22eb8f3",
+                8: "49c4d593be4d5d78660c",
+                10: "c1633a369a4e671e02d9",
+                11: "4311330a9c50ef2b549f",
+                12: "390debe2ba7adc1babc6",
+                13: "931df20e90158d197f98",
+                14: "f01501f112e2fbf9565e",
+                15: "50bffd233d4cc282e9a2",
+                16: "2fe918648657675798ec",
+                17: "2ff4255afda12daf9fa9",
+                18: "917c49f8f17661107d91",
+                19: "793348a6ac646c8765f6",
+                20: "9d5457ae4d3107b61f56",
+                21: "1c7040a6d553d62413ac",
+                22: "76e03a2402555741db4c",
+                23: "ac92b9e790c47e4f543a",
+                24: "51014333ad393d925a89",
+                25: "5358a96e84ead85a640d",
+                26: "8d11d055660f25b6d9f0",
+                27: "10613b8947431adcda53",
+                28: "195c5397ad8cb011dca2",
+                29: "325e10355c0c8fd97740",
+                30: "643edc6cef4de56f53dd",
+                31: "8a9991c6cb862210bfa6",
+                32: "04ba15760d9ce0cee557",
+                33: "f5eef9db22d74cf492f8",
+                34: "30518a0ce0dd60aa2b45",
+                35: "3c35c9cfded8e64210e3",
+                36: "e32dcccc1634ebaf51ee",
+                37: "060932bb29588ac70a32",
+                38: "ef2329f00b9b1685d290",
+                39: "f5f7da223f44ece8a246",
+                40: "4e053cf435ff6efd829e",
+                41: "d604cbc008efe18439d9",
+                42: "335ac03e0b390c65dd6f",
+                43: "3654f2033bbc109354d6",
+                44: "e608f8c62306bdc9afc4",
+                45: "08982edb55a6ef5bedf5",
+                46: "a71ff09166620cc60eb3",
+                47: "05e996f88391192c1950",
+                48: "a0257cf85b2b6c395aff",
+                49: "329c2219caffb42cadf3",
+                50: "055f40c02332c78aeb7d",
+                51: "6bf83d6ecf26177b753e",
+                52: "e5d8645120799f93f64f",
+                53: "5e8d7dad148123fe0902",
+                54: "5b5b2ec39f2062240d04",
+                55: "afa4b24224dd8f049e53",
+                56: "6647ba16b7de5d6f3bd4",
+                57: "e180933fa3eb5550e049",
+                58: "6c4258cad6889e9e04d1",
+                59: "7c6dfe4cbdac43e4d1f7",
+                60: "5dacbb7b715784562345",
+                61: "f4cf37143c40acd25c41",
+                62: "9e14a9e8aaf62f30e84f",
+                63: "b01b38971a912b5679c8",
+                64: "0a359ef01008b3b88962",
+                65: "269e0869b2d62181fc7e",
+                66: "2e828feb3a37ce0a5f67"
               }[e]
             );
           })(u)),
           (r = function(e) {
             (i.onerror = i.onload = null), clearTimeout(a);
-            var t = p[u];
+            var t = m[u];
             if (0 !== t) {
               if (t) {
                 var n = e && ("load" === e.type ? "missing" : e.type),
@@ -366,7 +382,7 @@
                   );
                 (o.type = n), (o.request = r), t[1](o);
               }
-              p[u] = void 0;
+              m[u] = void 0;
             }
           });
         var a = setTimeout(function() {
@@ -376,28 +392,28 @@
       }
     return Promise.all(e);
   }),
-    (m.m = c),
-    (m.c = n),
-    (m.d = function(e, t, n) {
-      m.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
+    (h.m = c),
+    (h.c = n),
+    (h.d = function(e, t, n) {
+      h.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
     }),
-    (m.r = function(e) {
+    (h.r = function(e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (m.t = function(t, e) {
-      if ((1 & e && (t = m(t)), 8 & e)) return t;
+    (h.t = function(t, e) {
+      if ((1 & e && (t = h(t)), 8 & e)) return t;
       if (4 & e && "object" == typeof t && t && t.__esModule) return t;
       var n = Object.create(null);
       if (
-        (m.r(n),
+        (h.r(n),
         Object.defineProperty(n, "default", { enumerable: !0, value: t }),
         2 & e && "string" != typeof t)
       )
         for (var r in t)
-          m.d(
+          h.d(
             n,
             r,
             function(e) {
@@ -406,7 +422,7 @@
           );
       return n;
     }),
-    (m.n = function(e) {
+    (h.n = function(e) {
       var t =
         e && e.__esModule
           ? function() {
@@ -415,20 +431,20 @@
           : function() {
               return e;
             };
-      return m.d(t, "a", t), t;
+      return h.d(t, "a", t), t;
     }),
-    (m.o = function(e, t) {
+    (h.o = function(e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (m.p = ""),
-    (m.oe = function(e) {
+    (h.p = ""),
+    (h.oe = function(e) {
       throw (console.error(e), e);
     });
   var t = (window.webpackJsonp = window.webpackJsonp || []),
     r = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var o = 0; o < t.length; o++) e(t[o]);
-  var h = r;
+  var d = r;
   u.push(["gfbn", 0]), l();
 })({
   "+jbA": function(e, t, n) {
@@ -481,20 +497,20 @@
         RemotePlayTogether: function() {
           return "/together/";
         },
+        CreatorSaleLandingPage: function() {
+          return "/(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?";
+        },
         CuratorPage: function() {
           return "/curator/:curatorPageName/(list)?/:listid?";
         },
         CreatorPage: function() {
           return "/(publisher|pub|dev|developer|franchise)/:creatorPageName/(list)?/:listid?";
         },
-        CreatorSaleLandingPage: function() {
-          return "/(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?";
-        },
-        EventCalendar: function() {
-          return "/events";
-        },
         NewsHub: function() {
-          return "/newshub";
+          return "/(newshub|events)";
+        },
+        NewsHubApp: function(e, t) {
+          return "/(newshub|events)/app/" + e + "/" + t;
         },
         EventView: function(e, t, n) {
           return "/events/app/" + e + "/view/" + t + "/" + n;
@@ -510,6 +526,9 @@
         },
         TopSellers: function() {
           return "/topsellers/:date?";
+        },
+        LoyaltyStore: function() {
+          return "/rewards/";
         },
         DiagData: function() {
           return "/:anything*/diagdata";
@@ -2024,34 +2043,34 @@
   },
   AvbV: function(e, t, r) {
     var o = {
-      "./main_brazilian.json": ["TFAN", 7],
-      "./main_bulgarian.json": ["c2SO", 8],
-      "./main_czech.json": ["peP3", 9],
-      "./main_danish.json": ["0bnV", 10],
-      "./main_dutch.json": ["wcLc", 11],
-      "./main_english.json": ["/rNK", 1],
-      "./main_finnish.json": ["iywU", 12],
-      "./main_french.json": ["Xnpc", 13],
-      "./main_german.json": ["pmKi", 14],
-      "./main_greek.json": ["mTRv", 15],
-      "./main_hungarian.json": ["WkHb", 16],
-      "./main_italian.json": ["Jz5U", 17],
-      "./main_japanese.json": ["3Dk9", 18],
-      "./main_koreana.json": ["neQD", 19],
-      "./main_latam.json": ["6oHD", 20],
-      "./main_norwegian.json": ["2OvS", 21],
-      "./main_polish.json": ["3pwE", 22],
-      "./main_portuguese.json": ["hY40", 23],
-      "./main_romanian.json": ["Q95+", 24],
-      "./main_russian.json": ["bsPT", 25],
-      "./main_schinese.json": ["B/Zz", 26],
-      "./main_spanish.json": ["U6iL", 27],
-      "./main_swedish.json": ["4uPU", 28],
-      "./main_tchinese.json": ["rgC9", 29],
-      "./main_thai.json": ["87dp", 30],
-      "./main_turkish.json": ["yMpO", 31],
-      "./main_ukrainian.json": ["zTWm", 32],
-      "./main_vietnamese.json": ["wqiy", 33]
+      "./main_brazilian.json": ["TFAN", 10],
+      "./main_bulgarian.json": ["c2SO", 11],
+      "./main_czech.json": ["peP3", 12],
+      "./main_danish.json": ["0bnV", 13],
+      "./main_dutch.json": ["wcLc", 14],
+      "./main_english.json": ["/rNK", 3],
+      "./main_finnish.json": ["iywU", 15],
+      "./main_french.json": ["Xnpc", 16],
+      "./main_german.json": ["pmKi", 17],
+      "./main_greek.json": ["mTRv", 18],
+      "./main_hungarian.json": ["WkHb", 19],
+      "./main_italian.json": ["Jz5U", 20],
+      "./main_japanese.json": ["3Dk9", 21],
+      "./main_koreana.json": ["neQD", 22],
+      "./main_latam.json": ["6oHD", 23],
+      "./main_norwegian.json": ["2OvS", 24],
+      "./main_polish.json": ["3pwE", 25],
+      "./main_portuguese.json": ["hY40", 26],
+      "./main_romanian.json": ["Q95+", 27],
+      "./main_russian.json": ["bsPT", 28],
+      "./main_schinese.json": ["B/Zz", 29],
+      "./main_spanish.json": ["U6iL", 30],
+      "./main_swedish.json": ["4uPU", 31],
+      "./main_tchinese.json": ["rgC9", 32],
+      "./main_thai.json": ["87dp", 33],
+      "./main_turkish.json": ["yMpO", 34],
+      "./main_ukrainian.json": ["zTWm", 35],
+      "./main_vietnamese.json": ["wqiy", 36]
     };
     function n(t) {
       var n = o[t];
@@ -3220,10 +3239,10 @@
   M1X1: function(e, t, n) {},
   Mgs7: function(e, t, n) {
     "use strict";
-    var h = n("mrSG"),
-      d = n("q1tI"),
-      f = n("6Y59"),
-      _ = n("TLQK"),
+    var d = n("mrSG"),
+      f = n("q1tI"),
+      _ = n("6Y59"),
+      b = n("TLQK"),
       r = n("bxiW"),
       c = n("exH9"),
       o = (n("umRa"), C("DialogHeader")),
@@ -3236,19 +3255,19 @@
       m = C("DialogThreeColLayout _DialogColLayout");
     C("DialogTwoThirdColLayout _DialogColLayout"),
       C("DialogColumn _DialogLayout");
-    function b(e) {
+    function h(e) {
       var t = e.children,
         n = e.bCenterVertically,
-        r = Object(h.f)(e, ["children", "bCenterVertically"]),
+        r = Object(d.f)(e, ["children", "bCenterVertically"]),
         o =
           "DialogContent _DialogLayout" +
           (e.className ? " " + e.className : "");
       return (
         n && (o += " _DialogCenterVertically"),
-        d.createElement(
+        f.createElement(
           "div",
-          Object(h.a)({}, r, { className: o }),
-          d.createElement("div", { className: "DialogContent_InnerWidth" }, t)
+          Object(d.a)({}, r, { className: o }),
+          f.createElement("div", { className: "DialogContent_InnerWidth" }, t)
         )
       );
     }
@@ -3257,46 +3276,46 @@
         return (null !== e && e.apply(this, arguments)) || this;
       }
       return (
-        Object(h.d)(t, e),
+        Object(d.d)(t, e),
         (t.prototype.OnSubmit = function(e) {
           e.preventDefault(), this.props.onSubmit && this.props.onSubmit(e);
         }),
         (t.prototype.render = function() {
-          return d.createElement(
+          return f.createElement(
             "form",
-            Object(h.a)({}, this.props, { onSubmit: this.OnSubmit })
+            Object(d.a)({}, this.props, { onSubmit: this.OnSubmit })
           );
         }),
-        Object(h.c)([r.a], t.prototype, "OnSubmit", null),
+        Object(d.c)([r.a], t.prototype, "OnSubmit", null),
         t
       );
-    })(d.Component);
+    })(f.Component);
     function g(e) {
       var t = e.classNameContent,
         n = e.bCenterVertically,
-        r = Object(h.f)(e, ["classNameContent", "bCenterVertically"]);
-      return d.createElement(
-        b,
+        r = Object(d.f)(e, ["classNameContent", "bCenterVertically"]);
+      return f.createElement(
+        h,
         { className: t, bCenterVertically: n },
-        d.createElement(v, Object(h.a)({}, r))
+        f.createElement(v, Object(d.a)({}, r))
       );
     }
     function E(e) {
       e.svgicon;
       var t,
-        n = Object(h.f)(e, ["svgicon"]),
+        n = Object(d.f)(e, ["svgicon"]),
         r =
           "DialogButton _DialogLayout Primary" +
           (e.className ? " " + e.className : ""),
         o = void 0 !== e.svgicon;
       return (
         o && ((r += " hasSVGIcon"), (t = e.svgicon)),
-        d.createElement(
+        f.createElement(
           "button",
-          Object(h.a)({ type: e.onClick ? "button" : "submit" }, n, {
+          Object(d.a)({ type: e.onClick ? "button" : "submit" }, n, {
             className: r
           }),
-          o && d.createElement(t, null),
+          o && f.createElement(t, null),
           e.children
         )
       );
@@ -3304,58 +3323,58 @@
     function y(e) {
       e.svgicon;
       var t,
-        n = Object(h.f)(e, ["svgicon"]),
+        n = Object(d.f)(e, ["svgicon"]),
         r =
           "DialogButton _DialogLayout Secondary" +
           (e.className ? " " + e.className : ""),
         o = void 0 !== e.svgicon;
       return (
         o && ((r += " hasSVGIcon"), (t = e.svgicon)),
-        d.createElement(
+        f.createElement(
           "button",
-          Object(h.a)({ type: "button" }, n, { className: r }),
-          o && d.createElement(t, null),
+          Object(d.a)({ type: "button" }, n, { className: r }),
+          o && f.createElement(t, null),
           e.children
         )
       );
     }
     function w(e) {
-      return d.createElement(
+      return f.createElement(
         p,
         null,
-        d.createElement(
+        f.createElement(
           E,
           { onClick: e.onOK, disabled: e.bOKDisabled },
-          e.strOKText || Object(_.c)("#Button_Confirm"),
+          e.strOKText || Object(b.c)("#Button_Confirm"),
           " "
         ),
-        d.createElement(
+        f.createElement(
           y,
           { onClick: e.onCancel },
-          e.strCancelText || Object(_.c)("#Button_Cancel")
+          e.strCancelText || Object(b.c)("#Button_Cancel")
         )
       );
     }
     function S(e) {
-      return d.createElement(
+      return f.createElement(
         m,
         null,
-        d.createElement(
+        f.createElement(
           E,
           { onClick: e.onOK, disabled: e.bOKDisabled },
-          e.strOKText || Object(_.c)("#Button_Confirm"),
+          e.strOKText || Object(b.c)("#Button_Confirm"),
           " "
         ),
-        d.createElement(
+        f.createElement(
           E,
           { onClick: e.onUpdate, disabled: e.bUpdateDisabled },
-          e.strUpdateText || Object(_.c)("#Button_Update"),
+          e.strUpdateText || Object(b.c)("#Button_Update"),
           " "
         ),
-        d.createElement(
+        f.createElement(
           y,
           { onClick: e.onCancel },
-          e.strCancelText || Object(_.c)("#Button_Cancel")
+          e.strCancelText || Object(b.c)("#Button_Cancel")
         )
       );
     }
@@ -3365,7 +3384,7 @@
           return (t.state = { checked: e.checked, disabled: e.disabled }), t;
         }
         return (
-          Object(h.d)(e, n),
+          Object(d.d)(e, n),
           (e.prototype.componentDidUpdate = function(e) {
             e.checked != this.props.checked &&
               this.props.checked != this.state.checked &&
@@ -3402,23 +3421,23 @@
             32 == e.keyCode &&
               (this.Toggle(), e.preventDefault(), e.stopPropagation());
           }),
-          Object(h.c)([r.a], e.prototype, "Toggle", null),
-          Object(h.c)([r.a], e.prototype, "KeyDown", null),
+          Object(d.c)([r.a], e.prototype, "Toggle", null),
+          Object(d.c)([r.a], e.prototype, "KeyDown", null),
           e
         );
-      })(d.Component),
+      })(f.Component),
       D = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(h.d)(t, e),
+          Object(d.d)(t, e),
           (t.prototype.render = function() {
             var e = "DialogCheckbox" + (this.state.checked ? " Active" : "");
             return (
               1 == this.state.disabled && (e += " Disabled"),
               this.props.label
-                ? d.createElement(
+                ? f.createElement(
                     "div",
                     {
                       className:
@@ -3427,41 +3446,41 @@
                       tabIndex: this.props.tabIndex || 0,
                       onClick: this.Toggle
                     },
-                    d.createElement(
+                    f.createElement(
                       "div",
                       { className: e },
-                      d.createElement(f.f, {
+                      f.createElement(_.f, {
                         color: this.props.color,
                         highlightColor: this.props.highlightColor
                       })
                     ),
-                    d.createElement(
+                    f.createElement(
                       "div",
                       { className: "DialogToggle_Label" },
-                      d.createElement("span", null, this.props.label),
+                      f.createElement("span", null, this.props.label),
                       this.props.tooltip &&
-                        d.createElement(
+                        f.createElement(
                           "span",
                           { "data-tooltip-text": this.props.tooltip },
                           " (?)"
                         )
                     ),
-                    d.createElement("div", { style: { clear: "left" } }),
+                    f.createElement("div", { style: { clear: "left" } }),
                     this.props.description &&
-                      d.createElement(
+                      f.createElement(
                         "div",
                         { className: "DialogToggle_Description" },
                         this.props.description
                       )
                   )
-                : d.createElement(
+                : f.createElement(
                     "div",
                     {
                       className: e,
                       onClick: this.Toggle,
                       tabIndex: this.props.tabIndex || 0
                     },
-                    d.createElement(f.f, null)
+                    f.createElement(_.f, null)
                   )
             );
           }),
@@ -3471,7 +3490,7 @@
     function C(n) {
       return function(e) {
         var t = n + (e.className ? " " + e.className : "");
-        return d.createElement("div", Object(h.a)({}, e, { className: t }));
+        return f.createElement("div", Object(d.a)({}, e, { className: t }));
       };
     }
     var O = n("hJxo"),
@@ -3495,7 +3514,7 @@
           );
         }
         return (
-          Object(h.d)(e, n),
+          Object(d.d)(e, n),
           (e.prototype.componentDidUpdate = function(e) {
             this.CheckProps(this.props);
           }),
@@ -3599,166 +3618,177 @@
             var e = this.props,
               t = e.label,
               n = e.explainer,
-              r = e.bShowCopyAction,
+              r = (e.requiredLabel, e.bShowCopyAction),
               o = e.bShowClearAction,
               i = e.bAlwaysShowClearAction,
-              a = (e.tooltip,
-              Object(h.f)(e, [
+              a = e.bIsPassword,
+              s = (e.rangeMin,
+              e.rangeMax,
+              e.mustBeNumeric,
+              e.mustBeURL,
+              e.mustBeEmail,
+              e.focusOnMount,
+              e.tooltip,
+              Object(d.f)(e, [
                 "label",
                 "explainer",
+                "requiredLabel",
                 "bShowCopyAction",
                 "bShowClearAction",
                 "bAlwaysShowClearAction",
+                "bIsPassword",
+                "rangeMin",
+                "rangeMax",
+                "mustBeNumeric",
+                "mustBeURL",
+                "mustBeEmail",
+                "focusOnMount",
                 "tooltip"
               ])),
-              s =
+              c =
                 "DialogInput DialogInputPlaceholder DialogTextInputBase" +
-                (a.className ? " " + a.className : ""),
-              c = "copiedAnimation",
-              l = this.state.m_bCompletedCopiedAnimation;
-            this.m_CopiedAnimation && (c = "copiedAnimation animationPlaying"),
-              l && (c = "copiedAnimation animationComplete");
-            var u = {};
+                (s.className ? " " + s.className : ""),
+              l = "copiedAnimation",
+              u = this.state.m_bCompletedCopiedAnimation;
+            this.m_CopiedAnimation && (l = "copiedAnimation animationPlaying"),
+              u && (l = "copiedAnimation animationComplete");
+            var p = {};
             void 0 !== this.state.m_CopiedYPos &&
-              (u.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
-            var p = void 0;
+              (p.transform = "translateY(" + this.state.m_CopiedYPos + "px)");
+            var m = void 0;
             n &&
-              (p = d.createElement(
+              (m = f.createElement(
                 "div",
                 { className: "DialogLabelExplainer" },
                 n
               ));
-            var m = d.createElement(
-              d.Fragment,
+            var h = f.createElement(
+              f.Fragment,
               null,
-              d.createElement(
+              f.createElement(
                 "div",
                 { className: "DialogInput_Wrapper _DialogLayout" },
-                d.createElement(
+                f.createElement(
                   "input",
-                  Object(h.a)(
-                    { type: a.bIsPassword ? "password" : "text" },
-                    a,
-                    {
-                      className: s,
-                      ref: this.OnInputRef,
-                      onChange: this.OnChanged
-                    }
-                  )
+                  Object(d.a)({ type: a ? "password" : "text" }, s, {
+                    className: c,
+                    ref: this.OnInputRef,
+                    onChange: this.OnChanged
+                  })
                 ),
                 r &&
-                  d.createElement(
+                  f.createElement(
                     "div",
                     { className: "displayRow" },
-                    d.createElement(
+                    f.createElement(
                       y,
                       {
                         className: "DialogInput_CopyAction Primary",
                         onClick: this.OnCopyClick
                       },
-                      Object(_.c)("#Button_CopyLink")
+                      Object(b.c)("#Button_CopyLink")
                     ),
-                    d.createElement(
+                    f.createElement(
                       "div",
-                      { style: u, className: c },
+                      { style: p, className: l },
                       "Link Copied"
                     )
                   ),
-                (i || (o && a.value)) &&
-                  d.createElement(
+                (i || (o && s.value)) &&
+                  f.createElement(
                     "div",
                     {
                       className: "DialogInput_ClearAction",
                       onClick: this.OnClearClick
                     },
-                    d.createElement(f.G, null)
+                    f.createElement(_.G, null)
                   )
               ),
-              p
+              m
             );
             return t
-              ? d.createElement(
+              ? f.createElement(
                   "div",
                   { className: "DialogInputLabelGroup _DialogLayout " },
-                  d.createElement(
+                  f.createElement(
                     "label",
                     null,
-                    d.createElement(
+                    f.createElement(
                       "div",
                       { className: "DialogLabel" },
                       t,
                       " ",
                       this.props.tooltip &&
-                        d.createElement(
+                        f.createElement(
                           "span",
                           { "data-tooltip-text": this.props.tooltip },
                           " (?)"
                         ),
-                      d.createElement(
+                      f.createElement(
                         "span",
                         { className: "DialogInputRequirementLabel" },
                         this.props.requiredLabel
                       ),
                       " "
                     ),
-                    m,
+                    h,
                     this.state.m_bNumberBelowMinRange
-                      ? d.createElement(
+                      ? f.createElement(
                           "div",
                           null,
                           " ",
-                          Object(_.c)("#Input_Error_NumberTooSmall"),
+                          Object(b.c)("#Input_Error_NumberTooSmall"),
                           " "
                         )
                       : null,
                     this.state.m_bNumberAboveMaxRange
-                      ? d.createElement(
+                      ? f.createElement(
                           "div",
                           null,
                           " ",
-                          Object(_.c)("#Input_Error_NumberTooLarge"),
+                          Object(b.c)("#Input_Error_NumberTooLarge"),
                           " "
                         )
                       : null,
                     this.state.m_bIsInvalidURL
-                      ? d.createElement(
+                      ? f.createElement(
                           "div",
                           null,
                           " ",
-                          Object(_.c)("#Input_Error_MustBeURL"),
+                          Object(b.c)("#Input_Error_MustBeURL"),
                           " "
                         )
                       : null,
                     this.state.m_bIsInvalidEmail
-                      ? d.createElement(
+                      ? f.createElement(
                           "div",
                           null,
                           " ",
-                          Object(_.c)("#Input_Error_MustBeEmail"),
+                          Object(b.c)("#Input_Error_MustBeEmail"),
                           " "
                         )
                       : null,
                     this.state.m_bIsNotNumeric
-                      ? d.createElement(
+                      ? f.createElement(
                           "div",
                           null,
                           " ",
-                          Object(_.c)("#Input_Error_MustBeNumber"),
+                          Object(b.c)("#Input_Error_MustBeNumber"),
                           " "
                         )
                       : null
                   )
                 )
-              : m;
+              : h;
           }),
-          Object(h.c)([r.a], e.prototype, "OnInputRef", null),
-          Object(h.c)([r.a], e.prototype, "OnChanged", null),
-          Object(h.c)([r.a], e.prototype, "OnCopyClick", null),
-          Object(h.c)([r.a], e.prototype, "OnClearClick", null),
+          Object(d.c)([r.a], e.prototype, "OnInputRef", null),
+          Object(d.c)([r.a], e.prototype, "OnChanged", null),
+          Object(d.c)([r.a], e.prototype, "OnCopyClick", null),
+          Object(d.c)([r.a], e.prototype, "OnClearClick", null),
           e
         );
-      })(d.PureComponent),
-      M = (d.Component, n("TtDX")),
+      })(f.PureComponent),
+      M = (f.Component, n("TtDX")),
       I = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -3771,7 +3801,7 @@
           );
         }
         return (
-          Object(h.d)(e, n),
+          Object(d.d)(e, n),
           (e.prototype.FindAndSetActiveOption = function(e) {
             var t = this.FindActiveOptionIndex(e);
             t !== this.state.iSelectedOption &&
@@ -3860,7 +3890,7 @@
               var e = "DialogMenuPosition";
               this.props.strDropDownClassName &&
                 (e += " " + this.props.strDropDownClassName);
-              var t = Object(h.a)(
+              var t = Object(d.a)(
                 {
                   bOverlapHorizontal: !0,
                   bMatchWidth: !0,
@@ -3871,7 +3901,7 @@
                 this.props.contextMenuPositionOptions
               );
               (this.m_iMenuInstance = Object(M.a)(
-                d.createElement(T, {
+                f.createElement(T, {
                   rgOptions: this.props.rgOptions,
                   fnOnItemSelected: this.OnItemSelected,
                   strDropDownItemClassName: this.props.strDropDownItemClassName,
@@ -3899,33 +3929,33 @@
             this.state.bOpened && (n += " Active"),
               this.props.disabled && (n += " Disabled"),
               this.props.strClassName && (r += " " + this.props.strClassName);
-            var o = d.createElement(
-              d.Fragment,
+            var o = f.createElement(
+              f.Fragment,
               null,
               this.props.postDropdownElement,
               !this.props.disabled &&
-                d.createElement(
+                f.createElement(
                   "div",
                   { className: "DialogDropDown_Arrow" },
-                  d.createElement(f.h, null)
+                  f.createElement(_.h, null)
                 ),
               this.props.postOptionElement,
-              d.createElement(
+              f.createElement(
                 "div",
                 { className: "DialogDropDown_CurrentDisplay" },
                 t
               )
             );
-            return d.createElement(
+            return f.createElement(
               "div",
               { className: r },
               this.props.label &&
-                d.createElement(
+                f.createElement(
                   "div",
                   { className: "DialogLabel" },
                   this.props.label,
                   Boolean(this.props.tooltip) &&
-                    d.createElement(
+                    f.createElement(
                       "span",
                       { "data-tooltip-text": this.props.tooltip },
                       " (?)"
@@ -3939,7 +3969,7 @@
                     htmlElementRef: this.OnInputRef,
                     children: o
                   })
-                : d.createElement(
+                : f.createElement(
                     "div",
                     {
                       className: n,
@@ -3951,21 +3981,21 @@
                   )
             );
           }),
-          Object(h.c)([r.a], e.prototype, "OnInputRef", null),
-          Object(h.c)([r.a], e.prototype, "ToggleMenu", null),
-          Object(h.c)([r.a], e.prototype, "OnItemSelected", null),
-          Object(h.c)([r.a], e.prototype, "ShowMenu", null),
-          Object(h.c)([r.a], e.prototype, "HideMenu", null),
+          Object(d.c)([r.a], e.prototype, "OnInputRef", null),
+          Object(d.c)([r.a], e.prototype, "ToggleMenu", null),
+          Object(d.c)([r.a], e.prototype, "OnItemSelected", null),
+          Object(d.c)([r.a], e.prototype, "ShowMenu", null),
+          Object(d.c)([r.a], e.prototype, "HideMenu", null),
           e
         );
-      })(d.Component),
+      })(f.Component),
       T = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (t.state = { iFocus: 0 }), t;
         }
         return (
-          Object(h.d)(e, n),
+          Object(d.d)(e, n),
           (e.prototype.OnItemClicked = function(e) {
             var t = parseInt(
               e.currentTarget.getAttribute("data-dropdown-index")
@@ -3982,7 +4012,7 @@
               (r += " " + this.props.strDropDownItemClassName);
             var o = this.props.renderMenuItem || "div",
               e = this.props.rgOptions.map(function(e, t) {
-                return d.createElement(
+                return f.createElement(
                   o,
                   {
                     className: r + " " + e.strOptionClass,
@@ -3994,22 +4024,22 @@
                 );
               }),
               t = this.props.renderMenuContainer || "div";
-            return d.createElement(
+            return f.createElement(
               t,
               { className: "DialogDropDownMenu _DialogInputContainer" },
               e
             );
           }),
-          Object(h.c)([r.a], e.prototype, "OnItemClicked", null),
+          Object(d.c)([r.a], e.prototype, "OnItemClicked", null),
           e
         );
-      })(d.Component),
+      })(f.Component),
       R = n("2vnA"),
       j = n("sUmc"),
       N = n("Kw0F"),
       P = n("YyVH"),
       A = n("UPxs");
-    d.Component;
+    f.Component;
     function B(e, t, n, r) {
       return r
         ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
@@ -4045,7 +4075,7 @@
                 e.props.className,
                 !!this.m_activeDropRegion && "DraggedOverActiveDrop"
               ),
-              n = d.cloneElement(e, { ref: this.OnDragGhostRef, className: t });
+              n = f.cloneElement(e, { ref: this.OnDragGhostRef, className: t });
             this.m_embeddedElement.ShowElement(
               this.m_activeDraggable.GetDragDocument(),
               n,
@@ -4168,7 +4198,7 @@
                   this.m_activeDraggable
                 );
           }),
-          Object(h.c)([r.a], e.prototype, "OnDragGhostRef", null),
+          Object(d.c)([r.a], e.prototype, "OnDragGhostRef", null),
           e
         );
       })(),
@@ -4186,12 +4216,12 @@
               startHeight: void 0,
               ownerWin: void 0
             }),
-            (e.m_divRef = d.createRef()),
+            (e.m_divRef = f.createRef()),
             e
           );
         }
         return (
-          Object(h.d)(e, t),
+          Object(d.d)(e, t),
           (e.prototype.GetDragDocument = function() {
             return (
               this.m_DragInfo.ownerWin && this.m_DragInfo.ownerWin.document
@@ -4322,7 +4352,7 @@
               e.className),
               r = e.strActiveClassName,
               o = e.children,
-              i = Object(h.f)(e, [
+              i = Object(d.f)(e, [
                 "coordinator",
                 "data",
                 "bEnableHTMLDrag",
@@ -4355,9 +4385,9 @@
                         onMouseDown: this.OnMouseDown,
                         onTouchStart: this.OnTouchStart
                       }),
-              d.createElement(
+              f.createElement(
                 "div",
-                Object(h.a)({ ref: this.m_divRef, className: s }, a, i, {
+                Object(d.a)({ ref: this.m_divRef, className: s }, a, i, {
                   draggable: t
                 }),
                 o
@@ -4367,12 +4397,12 @@
           (e.prototype.renderDropGhost = function() {
             return this.props.fnRenderDropGhost
               ? this.props.fnRenderDropGhost()
-              : d.createElement(H, { elContent: this.GetClone() });
+              : f.createElement(H, { elContent: this.GetClone() });
           }),
           (e.prototype.renderDragGhost = function() {
             return this.props.fnRenderDragGhost
               ? this.props.fnRenderDragGhost()
-              : d.createElement(U, {
+              : f.createElement(U, {
                   elContent: this.GetClone(),
                   offsetX: this.m_DragInfo.startOffsetX,
                   offsetY: this.m_DragInfo.startOffsetY,
@@ -4393,36 +4423,36 @@
               }
             return e;
           }),
-          Object(h.c)([r.a], e.prototype, "ProcessDragMove", null),
-          Object(h.c)([r.a], e.prototype, "OnMouseDown", null),
-          Object(h.c)([r.a], e.prototype, "OnMouseUp", null),
-          Object(h.c)([r.a], e.prototype, "OnTouchStart", null),
-          Object(h.c)([r.a], e.prototype, "OnTouchEnd", null),
-          Object(h.c)([R.action], e.prototype, "ResetDragState", null),
-          Object(h.c)([r.a], e.prototype, "OnHTMLDragStart", null),
-          Object(h.c)([r.a], e.prototype, "OnHTMLDragEnd", null),
+          Object(d.c)([r.a], e.prototype, "ProcessDragMove", null),
+          Object(d.c)([r.a], e.prototype, "OnMouseDown", null),
+          Object(d.c)([r.a], e.prototype, "OnMouseUp", null),
+          Object(d.c)([r.a], e.prototype, "OnTouchStart", null),
+          Object(d.c)([r.a], e.prototype, "OnTouchEnd", null),
+          Object(d.c)([R.action], e.prototype, "ResetDragState", null),
+          Object(d.c)([r.a], e.prototype, "OnHTMLDragStart", null),
+          Object(d.c)([r.a], e.prototype, "OnHTMLDragEnd", null),
           e
         );
-      })(d.Component),
+      })(f.Component),
       H = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(h.d)(t, e),
+          Object(d.d)(t, e),
           (t.prototype.OnRef = function(e) {
             e && e.appendChild(this.props.elContent);
           }),
           (t.prototype.render = function() {
-            return d.createElement("div", {
+            return f.createElement("div", {
               className: "DialogDraggable_DropGhost",
               ref: this.OnRef
             });
           }),
-          Object(h.c)([r.a], t.prototype, "OnRef", null),
+          Object(d.c)([r.a], t.prototype, "OnRef", null),
           t
         );
-      })(d.Component),
+      })(f.Component),
       U = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
@@ -4438,7 +4468,7 @@
           );
         }
         return (
-          Object(h.d)(e, t),
+          Object(d.d)(e, t),
           (e.prototype.OnRef = function(e) {
             e && e.appendChild(this.props.elContent);
           }),
@@ -4453,7 +4483,7 @@
               void 0 === this.state.clientX ||
               void 0 === this.state.clientY
             )
-              return d.createElement("div", null);
+              return f.createElement("div", null);
             var e = {
                 left: this.state.clientX - (this.props.offsetX || 0),
                 top: this.state.clientY - (this.props.offsetY || 0),
@@ -4479,22 +4509,22 @@
                 filter: "brightness(" + t + ")"
               },
               r = this.props.className || "DialogDraggable_DragGhost";
-            return d.createElement(
+            return f.createElement(
               "div",
               { className: r, style: e },
-              d.createElement("div", { ref: this.OnRef, style: n })
+              f.createElement("div", { ref: this.OnRef, style: n })
             );
           }),
-          Object(h.c)([r.a], e.prototype, "OnRef", null),
+          Object(d.c)([r.a], e.prototype, "OnRef", null),
           e
         );
-      })(d.Component),
+      })(f.Component),
       W = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
         return (
-          Object(h.d)(t, e),
+          Object(d.d)(t, e),
           (t.prototype.BDraggableInRegion = function(e, t, n) {
             var r = this.GetClientRect();
             return (
@@ -4511,10 +4541,10 @@
         (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
-            return (t.m_divRef = d.createRef()), (t.state = {}), t;
+            return (t.m_divRef = f.createRef()), (t.state = {}), t;
           }
           return (
-            Object(h.d)(e, n),
+            Object(d.d)(e, n),
             (e.prototype.componentDidMount = function() {
               this.props.coordinator.RegisterDropRegion(this);
             }),
@@ -4567,7 +4597,7 @@
                 e.className),
                 n = e.strActiveClassName,
                 r = e.children,
-                o = Object(h.f)(e, [
+                o = Object(d.f)(e, [
                   "coordinator",
                   "fnBAcceptDraggable",
                   "fnOnDrop",
@@ -4581,9 +4611,9 @@
                   t || "DialogDropRegion",
                   this.state.bDraggableActive && (n || "Active")
                 );
-              return d.createElement(
+              return f.createElement(
                 A.a,
-                Object(h.a)(
+                Object(d.a)(
                   {
                     navStop: !!o.onClick,
                     htmlElementRef: this.m_divRef,
@@ -4597,15 +4627,15 @@
             }),
             e
           );
-        })(d.Component)
+        })(f.Component)
       ),
       V = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
-        return Object(h.d)(t, e), t;
-      })(d.Component);
-    d.Component, d.Component;
+        return Object(d.d)(t, e), t;
+      })(f.Component);
+    f.Component, f.Component;
     n.d(t, "h", function() {
       return o;
     }),
@@ -6362,16 +6392,15 @@
       s = u.n(o);
     u("JMS6");
     var h = u("TLQK"),
-      c = u("oFFJ"),
-      l = u("jKe7"),
-      d = u("2INN"),
-      f = (u("AAD4"), u("6TF7")),
-      _ = u.n(f),
-      b = u("1fPh"),
-      v = u("kyHq"),
-      g = u("Jqb/"),
-      E = u("r64O"),
-      y = (function(e) {
+      c = u("55Ip"),
+      l = u("Ty5D"),
+      d = (u("AAD4"), u("6TF7")),
+      f = u.n(d),
+      _ = u("1fPh"),
+      b = u("kyHq"),
+      v = u("Jqb/"),
+      g = u("r64O"),
+      E = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -6386,7 +6415,7 @@
                 e.toLocaleLowerCase().startsWith("data-") &&
                   (n.push(i.createElement("h1", { key: "header-" + e }, e)),
                   n.push(
-                    i.createElement(w, {
+                    i.createElement(y, {
                       key: "body-" + e,
                       data: JSON.parse(t.getAttribute(e))
                     })
@@ -6398,7 +6427,7 @@
           t
         );
       })(i.Component),
-      w = (function(e) {
+      y = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -6418,14 +6447,14 @@
           t
         );
       })(i.Component);
-    function S(o) {
+    function w(o) {
       return function(t) {
         var e = Object(i.useState)(null),
           n = e[0],
           r = e[1];
         return (
           n ||
-          (Promise.all([u.e(0), u.e(3), u.e(63), u.e(4)])
+          (Promise.all([u.e(0), u.e(1), u.e(66), u.e(2), u.e(6)])
             .then(u.bind(null, "Wym2"))
             .then(function(e) {
               r(a.a.createElement(e[o], t));
@@ -6434,19 +6463,26 @@
         );
       };
     }
-    var k = S("EventModerationLanding"),
-      D = S("EventBackfillLanding"),
-      C = S("EventSaleDisplay"),
-      O = S("EventCalendar"),
-      L = S("EventDetailView"),
-      x = S("BroadcastEmbeddable"),
-      M = S("Events"),
-      I = (a.a.lazy(function() {
-        return u.e(62).then(u.bind(null, "jHcm"));
+    var S = w("EventModerationLanding"),
+      k = w("EventBackfillLanding"),
+      D = w("EventSaleDisplay"),
+      C = w("EventCalendar"),
+      O = w("EventDetailView"),
+      L = w("Events"),
+      x = (a.a.lazy(function() {
+        return u.e(65).then(u.bind(null, "jHcm"));
       }),
       a.a.lazy(function() {
-        return Promise.all([u.e(0), u.e(3), u.e(5)]).then(u.bind(null, "3WEt"));
+        return Promise.all([u.e(0), u.e(1), u.e(7)]).then(u.bind(null, "3WEt"));
       })),
+      M = a.a.lazy(function() {
+        return u.e(8).then(u.bind(null, "iTQh"));
+      }),
+      I = a.a.lazy(function() {
+        return Promise.all([u.e(0), u.e(1), u.e(2), u.e(5)]).then(
+          u.bind(null, "NIbt")
+        );
+      }),
       T = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
@@ -6456,51 +6492,51 @@
           (t.prototype.render = function() {
             var t = this;
             return (
-              Object(E.a)(
+              Object(g.a)(
                 null == window.Prototype,
                 "Should not include prototypejs."
               ),
               a.a.createElement(
                 c.a,
-                { basename: Object(b.a)() },
+                { basename: Object(_.a)() },
                 a.a.createElement(
                   "div",
-                  { className: _.a.App },
+                  { className: f.a.App },
                   !1,
                   a.a.createElement(
                     a.a.Suspense,
                     { fallback: a.a.createElement("div", null) },
                     a.a.createElement(
-                      l.a,
+                      l.d,
                       null,
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.AppStorePage(),
+                        path: _.b.AppStorePage(),
                         render: function(e) {
                           return t.props.bEventsMode
-                            ? a.a.createElement(M, {
+                            ? a.a.createElement(L, {
                                 appid: e.match.params.appid
                               })
                             : a.a.createElement(
-                                x,
+                                I,
                                 Object(p.a)({}, e, {
                                   appid: e.match.params.appid
                                 })
                               );
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.SaleLandingPage(),
+                        path: _.b.SaleLandingPage(),
                         render: function(e) {
                           return t.props.bSaleMode
-                            ? a.a.createElement(C, {
+                            ? a.a.createElement(D, {
                                 promotionname:
                                   "sale_" + e.match.params.salePageName,
-                                language: Object(v.e)(m.c.LANGUAGE)
+                                language: Object(b.f)(m.c.LANGUAGE)
                               })
                             : a.a.createElement(
-                                x,
+                                I,
                                 Object(p.a)({}, e, {
                                   promotionname:
                                     "sale_" + e.match.params.salePageName
@@ -6508,41 +6544,41 @@
                               );
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.CreatorSaleLandingPage(),
+                        path: _.b.CreatorSaleLandingPage(),
                         render: function(e) {
-                          return a.a.createElement(C, {
+                          return a.a.createElement(D, {
                             promotionname:
                               "sale_" + e.match.params.salePageName,
-                            language: Object(v.e)(m.c.LANGUAGE)
+                            language: Object(b.f)(m.c.LANGUAGE)
                           });
                         }
                       }),
-                      a.a.createElement(d.a, {
-                        path: b.b.RemotePlay(),
+                      a.a.createElement(l.b, {
+                        path: _.b.RemotePlay(),
                         render: function(e) {
-                          return a.a.createElement(C, {
+                          return a.a.createElement(D, {
                             promotionname: "remoteplaylanding",
-                            language: Object(v.e)(m.c.LANGUAGE)
+                            language: Object(b.f)(m.c.LANGUAGE)
                           });
                         }
                       }),
-                      a.a.createElement(d.a, {
-                        path: b.b.RemotePlayTogether(),
+                      a.a.createElement(l.b, {
+                        path: _.b.RemotePlayTogether(),
                         render: function(e) {
-                          return a.a.createElement(C, {
+                          return a.a.createElement(D, {
                             promotionname: "sale_together",
-                            language: Object(v.e)(m.c.LANGUAGE)
+                            language: Object(b.f)(m.c.LANGUAGE)
                           });
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.CuratorPage(),
+                        path: _.b.CuratorPage(),
                         render: function(e) {
                           return a.a.createElement(
-                            x,
+                            I,
                             Object(p.a)({}, e, {
                               clanid: m.a.clanid,
                               listid: m.a.listid
@@ -6550,12 +6586,12 @@
                           );
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.CreatorPage(),
+                        path: _.b.CreatorPage(),
                         render: function(e) {
                           return a.a.createElement(
-                            x,
+                            I,
                             Object(p.a)({}, e, {
                               clanid: m.a.clanid,
                               listid: m.a.listid
@@ -6563,89 +6599,98 @@
                           );
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.PackageStorePage(),
+                        path: _.b.PackageStorePage(),
                         render: function(e) {
-                          return a.a.createElement(x, {
+                          return a.a.createElement(I, {
                             subid: e.match.params.subid
                           });
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.BundleStorePage(),
+                        path: _.b.BundleStorePage(),
                         render: function(e) {
-                          return a.a.createElement(x, {
+                          return a.a.createElement(I, {
                             bundleid: e.match.params.bundleid
                           });
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.EventCalendar(),
+                        path: _.b.NewsHub(),
                         render: function(e) {
-                          return a.a.createElement(O, null);
+                          return a.a.createElement(C, null);
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.NewsHub(),
+                        path: _.b.NewsHubApp(":appid(\\d+)", ":vanity?"),
                         render: function(e) {
-                          return a.a.createElement(O, null);
+                          return a.a.createElement(C, {
+                            filter_to_appids: [e.match.params.appid]
+                          });
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.EventView(
+                        path: _.b.EventView(
                           ":appid(\\d+)",
                           ":event_gid(\\d+)",
                           ":vanity?"
                         ),
                         render: function(e) {
-                          return a.a.createElement(L, {
+                          return a.a.createElement(O, {
                             key: e.match.params.gid,
                             appid: e.match.params.appid,
                             gid: e.match.params.event_gid
                           });
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.EventBackfill(),
+                        path: _.b.EventBackfill(),
                         render: function(e) {
-                          return a.a.createElement(D, Object(p.a)({}, e));
+                          return a.a.createElement(k, Object(p.a)({}, e));
                         }
                       }),
-                      a.a.createElement(d.a, {
-                        path: b.b.EventModeration(),
+                      a.a.createElement(l.b, {
+                        path: _.b.EventModeration(),
                         render: function(e) {
                           return a.a.createElement(
-                            k,
+                            S,
                             Object(p.a)({}, e, { appid: e.match.params.appid })
                           );
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.InteractiveRecommender(),
+                        path: _.b.InteractiveRecommender(),
                         render: function(e) {
-                          return a.a.createElement(I, null);
+                          return a.a.createElement(x, null);
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.TopSellers(),
+                        path: _.b.TopSellers(),
                         render: function(e) {
                           return !1;
                         }
                       }),
-                      a.a.createElement(d.a, {
+                      a.a.createElement(l.b, {
                         exact: !0,
-                        path: b.b.DiagData(),
+                        path: _.b.LoyaltyStore(),
+                        render: function(e) {
+                          return a.a.createElement(M, null);
+                        }
+                      }),
+                      a.a.createElement(l.b, {
+                        exact: !0,
+                        path: _.b.DiagData(),
                         render: function(e) {
                           return a.a.createElement(
-                            y,
+                            E,
                             Object(p.a)({}, e, {
                               key: e.match.params.gid,
                               strConfigID: "application_config"
@@ -6653,10 +6698,10 @@
                           );
                         }
                       }),
-                      a.a.createElement(d.a, null, !1)
+                      a.a.createElement(l.b, null, !1)
                     )
                   ),
-                  a.a.createElement(g.a, { ModalManager: Object(g.e)(window) })
+                  a.a.createElement(v.a, { ModalManager: Object(v.e)(window) })
                 )
               )
             );
@@ -6713,8 +6758,8 @@
                               : [
                                   4,
                                   Promise.all([
-                                    u.e(2).then(u.t.bind(null, "TYjx", 3)),
-                                    u.e(1).then(u.t.bind(null, "/rNK", 3))
+                                    u.e(4).then(u.t.bind(null, "TYjx", 3)),
+                                    u.e(3).then(u.t.bind(null, "/rNK", 3))
                                   ])
                                 ]
                           );
@@ -6914,6 +6959,9 @@
     }),
       n.d(t, "a", function() {
         return m;
+      }),
+      n.d(t, "e", function() {
+        return g;
       });
     n("mrSG");
     var r = n("mgoM");
@@ -6923,7 +6971,7 @@
       n.d(t, "d", function() {
         return r.b;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return r.e;
       });
     n("2vnA");
@@ -7031,7 +7079,7 @@
         "k_ERemoteClientLaunchInvisible"),
       (_[(_.k_ERemoteClientLaunchRestrictedCountry = 28)] =
         "k_ERemoteClientLaunchRestrictedCountry");
-    var b, v;
+    var b, v, g, E;
     ((v = b || (b = {}))[(v.k_ENetworkDeviceStateNotPresent = 0)] =
       "k_ENetworkDeviceStateNotPresent"),
       (v[(v.k_ENetworkDeviceStateFailed = 1)] = "k_ENetworkDeviceStateFailed"),
@@ -7044,7 +7092,11 @@
       (v[(v.k_ENetworkDeviceStateConnected = 5)] =
         "k_ENetworkDeviceStateConnected"),
       (v[(v.k_ENetworkDeviceStateRetrying = 6)] =
-        "k_ENetworkDeviceStateRetrying");
+        "k_ENetworkDeviceStateRetrying"),
+      ((E = g || (g = {}))[(E.k_ESteamRealmUnknown = 0)] =
+        "k_ESteamRealmUnknown"),
+      (E[(E.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+      (E[(E.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
   },
   lkRc: function(e, t, n) {
     "use strict";
@@ -7630,35 +7682,35 @@
   },
   rCDf: function(e, t, r) {
     var o = {
-      "./shared_arabic.json": ["d1TB", 34],
-      "./shared_brazilian.json": ["Pg9r", 35],
-      "./shared_bulgarian.json": ["ENge", 36],
-      "./shared_czech.json": ["Ts6V", 37],
-      "./shared_danish.json": ["9oiU", 38],
-      "./shared_dutch.json": ["nxN4", 39],
-      "./shared_english.json": ["TYjx", 2],
-      "./shared_finnish.json": ["NuB8", 40],
-      "./shared_french.json": ["bOPj", 41],
-      "./shared_german.json": ["svuF", 42],
-      "./shared_greek.json": ["eJKB", 43],
-      "./shared_hungarian.json": ["T7i2", 44],
-      "./shared_italian.json": ["w96W", 45],
-      "./shared_japanese.json": ["XQ4S", 46],
-      "./shared_koreana.json": ["4hyI", 47],
-      "./shared_latam.json": ["3qrw", 48],
-      "./shared_norwegian.json": ["XA4Q", 49],
-      "./shared_polish.json": ["TpXn", 50],
-      "./shared_portuguese.json": ["Q8UV", 51],
-      "./shared_romanian.json": ["Eme1", 52],
-      "./shared_russian.json": ["BUiO", 53],
-      "./shared_schinese.json": ["3UpY", 54],
-      "./shared_spanish.json": ["4Fxc", 55],
-      "./shared_swedish.json": ["0JhB", 56],
-      "./shared_tchinese.json": ["OYRc", 57],
-      "./shared_thai.json": ["lhAZ", 58],
-      "./shared_turkish.json": ["RSoU", 59],
-      "./shared_ukrainian.json": ["lNXI", 60],
-      "./shared_vietnamese.json": ["RSmC", 61]
+      "./shared_arabic.json": ["d1TB", 37],
+      "./shared_brazilian.json": ["Pg9r", 38],
+      "./shared_bulgarian.json": ["ENge", 39],
+      "./shared_czech.json": ["Ts6V", 40],
+      "./shared_danish.json": ["9oiU", 41],
+      "./shared_dutch.json": ["nxN4", 42],
+      "./shared_english.json": ["TYjx", 4],
+      "./shared_finnish.json": ["NuB8", 43],
+      "./shared_french.json": ["bOPj", 44],
+      "./shared_german.json": ["svuF", 45],
+      "./shared_greek.json": ["eJKB", 46],
+      "./shared_hungarian.json": ["T7i2", 47],
+      "./shared_italian.json": ["w96W", 48],
+      "./shared_japanese.json": ["XQ4S", 49],
+      "./shared_koreana.json": ["4hyI", 50],
+      "./shared_latam.json": ["3qrw", 51],
+      "./shared_norwegian.json": ["XA4Q", 52],
+      "./shared_polish.json": ["TpXn", 53],
+      "./shared_portuguese.json": ["Q8UV", 54],
+      "./shared_romanian.json": ["Eme1", 55],
+      "./shared_russian.json": ["BUiO", 56],
+      "./shared_schinese.json": ["3UpY", 57],
+      "./shared_spanish.json": ["4Fxc", 58],
+      "./shared_swedish.json": ["0JhB", 59],
+      "./shared_tchinese.json": ["OYRc", 60],
+      "./shared_thai.json": ["lhAZ", 61],
+      "./shared_turkish.json": ["RSoU", 62],
+      "./shared_ukrainian.json": ["lNXI", 63],
+      "./shared_vietnamese.json": ["RSmC", 64]
     };
     function n(t) {
       var n = o[t];

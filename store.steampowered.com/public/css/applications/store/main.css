@@ -9,12 +9,10 @@
 
 
 
-.app_App_2uHYt.app_App_2uHYt.app_App_2uHYt {
-  font-family: "Motiva Sans", Arial, Helvetica, sans-serif; }
-
 body.events_hub.v6 {
   /* stylelint-disable-line selector-class-pattern */
-  background-color: #171a21; }
+  background-color: #171a21;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif; }
   @media screen and (max-width: 400px) {
     body.events_hub.v6 {
       scrollbar-width: none;
