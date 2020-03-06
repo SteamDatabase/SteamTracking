@@ -3536,6 +3536,8 @@ function OnVerifyShippingAddressSuccess( result )
 		ValidationMarkFieldOk( $('shipping_address') );
 		ValidationMarkFieldOk( $('shipping_address_two') );
 		ValidationMarkFieldOk( $('shipping_postal_code') );
+		ValidationMarkFieldOk( $('shipping_city') );
+		ValidationMarkFieldOk( $('shipping_phone') );
 		
 				if ( result.eShippingAddressVerificationDetail != 0 )
 		{
@@ -3545,6 +3547,17 @@ function OnVerifyShippingAddressSuccess( result )
 			{
 				case 4:
 					error_text = 'We cannot ship to the address you\'ve provided because parts of your address is missing or look invalid.';
+					if ( $('shipping_address' ).value == '' )
+						ValidationMarkFieldBad( $('shipping_address') );
+
+					if ( $('shipping_phone' ).value == '' )
+						ValidationMarkFieldBad( $('shipping_phone') );
+
+					if ( $('shipping_city' ).value == '' )
+						ValidationMarkFieldBad( $('shipping_city') );
+
+					if ( $('shipping_postal_code' ).value == '' )
+						ValidationMarkFieldBad( $('shipping_postal_code') );						
 					break;
 
 				case 3:
