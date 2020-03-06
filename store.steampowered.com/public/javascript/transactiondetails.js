@@ -146,7 +146,7 @@ function OnVerifyShippingAddressSuccess( result )
 					break;
 
 				case 7:
-					error_text = 'We cannot ship to the address you\'ve provided because it appears that your postal code is in a special region that we cannot ship to.';
+					error_text = 'Due to the Coronovirus, carriers currently will not deliver shipments to your location.  As a result, we are unable to process your order.';
 					break;
 
 				case 2:
