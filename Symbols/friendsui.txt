@@ -1884,12 +1884,12 @@
  D typeinfo for CCallbackImpl<148>
  D typeinfo for CCallbackImpl<160>
  D typeinfo for CCallbackImpl<16>
- D typeinfo for CCallbackImpl<17>
  D typeinfo for CCallbackImpl<184>
  D typeinfo for CCallbackImpl<1>
  D typeinfo for CCallbackImpl<20>
  D typeinfo for CCallbackImpl<24584>
  D typeinfo for CCallbackImpl<24>
+ D typeinfo for CCallbackImpl<25>
  D typeinfo for CCallbackImpl<264>
  D typeinfo for CCallbackImpl<268>
  D typeinfo for CCallbackImpl<288>
@@ -3259,12 +3259,12 @@
  D vtable for CCallbackImpl<148>
  D vtable for CCallbackImpl<160>
  D vtable for CCallbackImpl<16>
- D vtable for CCallbackImpl<17>
  D vtable for CCallbackImpl<184>
  D vtable for CCallbackImpl<1>
  D vtable for CCallbackImpl<20>
  D vtable for CCallbackImpl<24584>
  D vtable for CCallbackImpl<24>
+ D vtable for CCallbackImpl<25>
  D vtable for CCallbackImpl<264>
  D vtable for CCallbackImpl<268>
  D vtable for CCallbackImpl<288>
@@ -4016,12 +4016,12 @@
  R typeinfo name for CCallbackImpl<148>
  R typeinfo name for CCallbackImpl<160>
  R typeinfo name for CCallbackImpl<16>
- R typeinfo name for CCallbackImpl<17>
  R typeinfo name for CCallbackImpl<184>
  R typeinfo name for CCallbackImpl<1>
  R typeinfo name for CCallbackImpl<20>
  R typeinfo name for CCallbackImpl<24584>
  R typeinfo name for CCallbackImpl<24>
+ R typeinfo name for CCallbackImpl<25>
  R typeinfo name for CCallbackImpl<264>
  R typeinfo name for CCallbackImpl<268>
  R typeinfo name for CCallbackImpl<288>
@@ -5595,9 +5595,6 @@
  T CCallbackImpl<16>::GetCallbackSizeBytes()
  T CCallbackImpl<16>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<16>::~CCallbackImpl()
- T CCallbackImpl<17>::GetCallbackSizeBytes()
- T CCallbackImpl<17>::Run(void*, bool, unsigned long long)
- T CCallbackImpl<17>::~CCallbackImpl()
  T CCallbackImpl<184>::GetCallbackSizeBytes()
  T CCallbackImpl<184>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<184>::~CCallbackImpl()
@@ -5613,6 +5610,9 @@
  T CCallbackImpl<24>::GetCallbackSizeBytes()
  T CCallbackImpl<24>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<24>::~CCallbackImpl()
+ T CCallbackImpl<25>::GetCallbackSizeBytes()
+ T CCallbackImpl<25>::Run(void*, bool, unsigned long long)
+ T CCallbackImpl<25>::~CCallbackImpl()
  T CCallbackImpl<264>::GetCallbackSizeBytes()
  T CCallbackImpl<264>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<264>::~CCallbackImpl()

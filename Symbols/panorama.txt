@@ -4303,6 +4303,7 @@
  T CLocalizationToken::mutable_localized_string()
  T CLocalizationToken::set_localized_string(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  T CLocalizationToken::~CLocalizationToken()
+ T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()

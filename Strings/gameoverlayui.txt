@@ -2,9 +2,8 @@
 __TEXT
 __text
 __TEXT
-@u
-T-$
-@u
+@t
+@t
 __stubs
 __TEXT
 __stub_helper
@@ -60,8 +59,8 @@ __LINKEDIT
 "
 `I
 P
-?W
-?W
+@W
+@W
 _
 
 8
@@ -3602,8 +3601,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Mar  3 2020
-12:54:21
+Mar  6 2020
+16:23:01
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -7215,41 +7214,64 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
+^6&
+v6&
 $
 $
 $
 $
 $
 $
+$
+$
+"$
 0
 p
 p
 0
-=#
-R?
+4
+u#
+S#
+S?
+/#
+#
+E#
+#
+"
+"
+)#
 3
 3
-pG
+qG
 0
 p
-1"
+k"
+L2
+B"
 "
-K2
-"
-<>
-'"
-$"
-"
-t!
-Q!
-3!
+=>
+o!
+g
 !
 !
 !
+!
+!
+!
+v!
 =
 d
-m
-V
+!
+!
+!
+d
+)
+E
+E
+E
+E
+E
+E
 E
 E
 E
@@ -7294,37 +7316,29 @@ p
 p
 p
 p
-0
-0
-0
 0
 0
 /
+0
 @
 =
 
 0
-3
-W?
-r:
+[<
+1=
 Hi
 C
 C
 C
 C
 C
-C
-6.
-?>
 0
 p
 I
 I
-a-
-D"
-"
 $
-Y,
+A
+A
 @
 @
 =
@@ -7335,12 +7349,13 @@ Y,
 A
 Hc
 =
+9
 ?
 ?
-L95~h>
-L95X[>
+L95.i>
+I/
+>
 Hc
-7<
 ?
 ?
 ?
@@ -7357,7 +7372,6 @@ Hc
 ?
 ?
 SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
-(&
 i[
 i[
 Mc}
@@ -7409,7 +7423,6 @@ HcE
 @
 \
 @
-~4
 9
 E
 =
@@ -7519,32 +7532,37 @@ P
 6
 6
 6
+6
+6
 "
+#6
 3
 D
+u5
 @
-K4
+5
+5
 4
-8%
-_%
 %
 %
+"3
+d$
 $
-2
-2
+$
 #
+#
+:#
+Z1
+*#
 d
-}0
-7,
-,
-0
-
 W
+f
 
 
 
 
-
++
++
 +
 +
 
@@ -7555,31 +7573,19 @@ W
 =
 @
 
-a*
-j,
-G,
 uV%
 
 
 *
 *
-*
-*
-*
-*
-*
-*
-*
-*
-Q)
-"
 E
 
 
-**
+)*
 
-h(
+n(
 @
+m(
 @
 @
 &
@@ -7598,6 +7604,8 @@ h(
 =
 
 
+
+
 @
 @
 @
@@ -7625,6 +7633,10 @@ h(
 .
 .
 d
+'
+'
+'
+'
 d
 d
 =
@@ -7635,7 +7647,6 @@ d
 @
 @
 @
-&
 &
 @
 @
@@ -7645,7 +7656,4 @@ d
 @
 0
 E
-Y
-'
->%
 p

@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+`J
+`J
 __stubs
 __TEXT
 __stub_helper
@@ -3237,6 +3239,8 @@ Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
+4(
+}!
 0
 p
 0
@@ -3253,15 +3257,8 @@ p
 p
 0
 p
-Hc5
-n'
-"
-Q'
 0
 p
-"
-"
-"
 F
 $
 @

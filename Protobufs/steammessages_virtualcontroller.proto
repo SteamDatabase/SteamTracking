@@ -79,6 +79,11 @@ message CVirtualControllerLayouts {
 	optional .EMouseMode mouse_mode = 3 [default = k_EMouseModeUnknown];
 	optional float trackpad_sensitivity = 4 [default = 1];
 	optional bool pinch_zoom_enabled = 5 [default = false];
+	optional float pinch_zoom_x = 6 [default = 0];
+	optional float pinch_zoom_y = 7 [default = 0];
+	optional float pinch_zoom_scale = 8 [default = 1];
+	optional bool shaken = 9;
+	optional bool mouse_offscreen = 10;
 }
 
 message CVirtualControllerConfig {
@@ -120,4 +125,5 @@ message CVirtualControllerGlobalConfig {
 	optional bool gyroscope_enabled = 2 [default = true];
 	optional bool auto_fade_enabled = 3 [default = true];
 	optional bool rumble_enabled = 4 [default = true];
+	optional bool shake_fade_enabled = 5;
 }

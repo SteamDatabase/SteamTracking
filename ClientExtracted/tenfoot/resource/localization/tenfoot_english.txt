@@ -2596,8 +2596,6 @@
 	"Library_WaitingOnGamesCancel"		"CANCEL"
 	"Library_JoinDialog_InstallScript"	"Performing first time setup"
 	"Library_JoinDialog_InstallScriptDetailed"	"Performing first time setup\n\nInstalling {S:stepname} (step {d:step} of {d:steptotal})"
-	"Library_JoinDialog_RemoteProgress"			"Remote computer is performing first time setup"
-	"Library_JoinDialog_RemoteProgressDetailed"	"Remote computer is performing first time setup\n\n{s:detail}"
 	"Library_Details_ManageAccount"		"Manage Account"
 	"Library_ExternalSignupTitle"		"{s:gamename} Account"
 	"Library_ExternalSignupDesc"		"To complete installation you need to link your Steam purchase with your {s:gamename} account.\n\nVisit their official web site now to login to your existing {s:gamename} account or to create a new one."

@@ -4592,8 +4592,6 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_StreamingIntro2"			"Your experience may vary depending on your hardware and home network. To improve performance, visit Remote Play settings."
 "SteamUI_StreamLaunch_ProgressTitle"		"%game% - Streaming Launch"
 "SteamUI_StreamLaunch_ServerProgress"			"Preparing to stream %game%..."
-"SteamUI_StreamLaunch_RemoteProgress"			"Remote computer is performing first time setup..."
-"SteamUI_StreamLaunch_RemoteProgressDetailed"	"Remote computer is performing first time setup...\n\n%detail%"
 "SteamUI_StreamLaunch_RemoteStart"				"Preparing to stream %game%..."
 
 "SteamUI_RemoteDeviceAuthorization_Title"		"Authorize Device"

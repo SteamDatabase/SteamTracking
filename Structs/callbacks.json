@@ -326,7 +326,7 @@
     },
     {
         "id": 715,
-        "size": 16,
+        "size": 8,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<FocusedSteamWindowChanged_t>(FocusedSteamWindowChanged_t*)"
     },
     {
@@ -995,6 +995,11 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<HideRecentGamesOptimizedForRemotePlay_t>(HideRecentGamesOptimizedForRemotePlay_t*)"
     },
     {
+        "id": 998,
+        "size": 1,
+        "posted_in": "CClientJobSendSteamServiceCheck::BYieldingRunAPIJob()"
+    },
+    {
         "id": 1001,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppInfoChanged_t>(AppInfoChanged_t*)"
@@ -1640,6 +1645,11 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerPlayerNumberChanged_t>(ControllerPlayerNumberChanged_t*)"
     },
     {
+        "id": 2736,
+        "size": 20,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerActionSetLayerChanged_t>(ControllerActionSetLayerChanged_t*)"
+    },
+    {
         "id": 2901,
         "size": 1,
         "posted_in": "CUser::NotifyParentalLockChanged()"
@@ -1921,12 +1931,12 @@
     },
     {
         "id": 3308,
-        "size": 17,
+        "size": 25,
         "posted_in": "void CRemoteClientStream::PostCallbackToUI<RemoteClientStreamLifetime_t>(RemoteClientStreamLifetime_t*)"
     },
     {
         "id": 3309,
-        "size": 8,
+        "size": 272,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<RemoteClientStartStreamProgress_t>(RemoteClientStartStreamProgress_t*)"
     },
     {

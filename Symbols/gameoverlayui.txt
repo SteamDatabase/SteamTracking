@@ -5956,6 +5956,7 @@
  T CLambdaCallResult<DurationControl_t>::Run(void*)
  T CLambdaCallResult<DurationControl_t>::Run(void*, bool, unsigned long long)
  T CLambdaCallResult<DurationControl_t>::~CLambdaCallResult()
+ T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()

@@ -23,6 +23,7 @@ message CFileVerification_SteamServiceCheck_Request {
 	optional uint32 client_package_version = 3;
 	optional uint32 launcher_type = 4;
 	optional uint32 os_type = 5;
+	optional uint32 service_repair = 6;
 }
 
 message CFileVerification_SteamServiceCheck_Response {

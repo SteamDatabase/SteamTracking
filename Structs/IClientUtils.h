@@ -44,7 +44,7 @@ public:
     virtual unknown_ret GamepadTextInputClosed(int, bool, char const*) = 0;
     virtual unknown_ret SetSpew(int, int, int) = 0;
     virtual unknown_ret BDownloadsDisabled() = 0;
-    virtual unknown_ret SetFocusedWindow(CGameID, unsigned long long, bool) = 0;
+    virtual unknown_ret SetFocusedWindow(CGameID, bool) = 0;
     virtual unknown_ret GetSteamUILanguage() = 0;
     virtual unknown_ret CheckSteamReachable() = 0;
     virtual unknown_ret SetLastGameLaunchMethod(EGameLaunchMethod) = 0;

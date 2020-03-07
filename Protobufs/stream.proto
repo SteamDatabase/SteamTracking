@@ -97,6 +97,8 @@ enum EStreamControlMessage {
 	k_EStreamControlSetCapslock = 127;
 	k_EStreamControlSetKeymap = 128;
 	k_EStreamControlStopRequest = 129;
+	k_EStreamControlTouchActionSetLayerAdded = 130;
+	k_EStreamControlTouchActionSetLayerRemoved = 131;
 }
 
 enum EStreamVersion {
@@ -162,31 +164,6 @@ enum EStreamMouseWheelDirection {
 	k_EStreamMouseWheelRight = 4;
 }
 
-enum EStreamGamepadInputType {
-	k_EStreamGamepadInputInvalid = 0;
-	k_EStreamGamepadInputDPadUp = 1;
-	k_EStreamGamepadInputDPadDown = 2;
-	k_EStreamGamepadInputDPadLeft = 4;
-	k_EStreamGamepadInputDPadRight = 8;
-	k_EStreamGamepadInputStart = 16;
-	k_EStreamGamepadInputBack = 32;
-	k_EStreamGamepadInputLeftThumb = 64;
-	k_EStreamGamepadInputRightThumb = 128;
-	k_EStreamGamepadInputLeftShoulder = 256;
-	k_EStreamGamepadInputRightShoulder = 512;
-	k_EStreamGamepadInputGuide = 1024;
-	k_EStreamGamepadInputA = 4096;
-	k_EStreamGamepadInputB = 8192;
-	k_EStreamGamepadInputX = 16384;
-	k_EStreamGamepadInputY = 32768;
-	k_EStreamGamepadInputLeftThumbX = 65536;
-	k_EStreamGamepadInputLeftThumbY = 131072;
-	k_EStreamGamepadInputRightThumbX = 262144;
-	k_EStreamGamepadInputRightThumbY = 524288;
-	k_EStreamGamepadInputLeftTrigger = 1048576;
-	k_EStreamGamepadInputRightTrigger = 2097152;
-}
-
 enum EStreamFramerateLimiter {
 	k_EStreamFramerateSlowCapture = 1;
 	k_EStreamFramerateSlowConvert = 2;
@@ -201,6 +178,7 @@ enum EStreamActivity {
 	k_EStreamActivityIdle = 1;
 	k_EStreamActivityGame = 2;
 	k_EStreamActivityDesktop = 3;
+	k_EStreamActivitySecureDesktop = 4;
 }
 
 enum EStreamDataMessage {
@@ -379,6 +357,7 @@ message CStreamingClientConfig {
 	optional int32 audio_channels = 12 [default = 2];
 	optional bool enable_video_hevc = 13 [default = false];
 	optional bool enable_performance_icons = 14 [default = true];
+	optional bool enable_microphone_streaming = 15 [default = false];
 }
 
 message CStreamingServerConfig {
@@ -687,6 +666,16 @@ message CSaveTouchConfigLayoutMsg {
 }
 
 message CTouchActionSetActiveMsg {
+	optional uint32 appid = 1;
+	optional int32 actionset_id = 2;
+}
+
+message CTouchActionSetLayerAddedMsg {
+	optional uint32 appid = 1;
+	optional int32 actionset_id = 2;
+}
+
+message CTouchActionSetLayerRemovedMsg {
 	optional uint32 appid = 1;
 	optional int32 actionset_id = 2;
 }

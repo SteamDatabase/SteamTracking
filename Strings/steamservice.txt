@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-=
-=
+<
+<
 __stubs
 __TEXT
 __stub_helper
@@ -14,7 +14,7 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-Tp
+Xp
 __eh_frame
 __TEXT
 ("!
@@ -53,9 +53,10 @@ __LINKEDIT
 8
 @loader_path/steamservice.dylib
 "
+"
 P
 g
-Hl)
+Xl)
 
 `
 h
@@ -82,7 +83,7 @@ h
 $
 Hi
 H=
-O$
+U$
 10CUtlString
 N10CIPCServer13CThreadClientE
 10CIPCServer
@@ -6081,8 +6082,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 1.0
-Mar  3 2020
-12:49:57
+Mar  6 2020
+16:19:20
 Jan
 Feb
 Mar
@@ -6618,7 +6619,7 @@ CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 $
 Hi
 H=
-O$
+U$
 @
 @
 =
@@ -6630,7 +6631,10 @@ A
 Hc
 =
 N
-L95c4$
+X$
+"
+"
+"
 Hc
 ?
 ?
@@ -6945,7 +6949,6 @@ zz
 @@
 @===
 OO
-
 I3E
 %
 @
@@ -6957,14 +6960,12 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
-M
-
 
 
 3
 3
-N
-k
+P
+
 
 IcE
 I;E
@@ -7017,6 +7018,9 @@ p
 x
 i
 |
+
+
+
 @
 @
 @
@@ -7038,6 +7042,6 @@ i
 @
 @
 @
-?
+>
 1
 Hi
