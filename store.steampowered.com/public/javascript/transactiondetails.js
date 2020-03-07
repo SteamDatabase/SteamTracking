@@ -129,11 +129,11 @@ function OnVerifyShippingAddressSuccess( result )
 			switch ( result.eShippingAddressVerificationDetail )
 			{
 				case 4:
-					error_text = 'We cannot ship to the address you\'ve provided because parts of your address is missing or look invalid.';
+					error_text = 'We cannot ship to the address you\'ve provided because part of your address is missing or looks invalid.';
 					break;
 
 				case 3:
-					error_text = 'We cannot ship to the address you\'ve provided because parts of your address is too long.  Your combined name and each of the address fields can only be up to 35 characters long.';
+					error_text = 'We cannot ship to the address you\'ve provided because part of your address is too long.  Your combined name and each of the address fields can only be up to 35 characters long.';
 					break;
 
 				case 1:
@@ -146,7 +146,7 @@ function OnVerifyShippingAddressSuccess( result )
 					break;
 
 				case 7:
-					error_text = 'Due to the Coronovirus, carriers currently will not deliver shipments to your location.  As a result, we are unable to process your order.';
+					error_text = 'Due to the Coronavirus, carriers currently will not deliver shipments to your location.  As a result, we are unable to process your order.';
 					break;
 
 				case 2:
