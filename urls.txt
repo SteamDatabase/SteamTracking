@@ -188,16 +188,20 @@ https://store.steampowered.com/public/css/v6/wishlist.css?__TIME__
 //
 // Javascript
 //
+https://help.steampowered.com/public/javascript/agents.js?__TIME__&l=english
 https://help.steampowered.com/public/javascript/help.js?__TIME__&l=english
+https://help.steampowered.com/public/javascript/ticketmaster.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/admin_monitor.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/admin_publisher.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/admin.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/apps_workshop.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/apps.js?__TIME__&l=english
+https://partner.steamgames.com/public/javascript/appsharing.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/contentdescriptors.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/creatorhome.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/doc_admin.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/doc.js?__TIME__&l=english
+https://partner.steamgames.com/public/javascript/externalapptesting.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/game_admin.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/game_edit_broadcast.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/key_wizard.js?__TIME__&l=english
@@ -205,6 +209,7 @@ https://partner.steamgames.com/public/javascript/marketing.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/newpartner.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/newsadmin.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/packages.js?__TIME__&l=english
+https://partner.steamgames.com/public/javascript/playtesting.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/publishers.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/storeadmin.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/useradmin.js?__TIME__&l=english
@@ -287,6 +292,7 @@ https://steamcommunity.com/public/javascript/modal.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/modalContent.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/modalv2.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/news.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/notes.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/playerstats_css_functions.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/playerstats_generic_functions.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/playerstats_l4d_functions.js?__TIME__&l=english
@@ -383,6 +389,7 @@ https://store.steampowered.com/public/javascript/main.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/modal.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/news.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/nothingtoseehere.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/playtesting.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/promo/salefunctions.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/promo/summer2019_grandprix.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/promo/winter2018_cottage.js?__TIME__&l=english
