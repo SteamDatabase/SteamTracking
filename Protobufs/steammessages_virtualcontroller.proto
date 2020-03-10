@@ -47,7 +47,10 @@ enum EControllerElementType {
 	k_EControllerElementTypeMagnifyingGlass = 29;
 	k_EControllerElementTypeButtonMacro1Finger = 30;
 	k_EControllerElementTypeButtonMacro2Finger = 31;
-	k_EControllerElementTypeMax = 32;
+	k_EControllerElementTypeRecordInput = 32;
+	k_EControllerElementTypePlaybackInput = 33;
+	k_EControllerElementTypePaste = 34;
+	k_EControllerElementTypeMax = 35;
 }
 
 message CVirtualControllerElement {

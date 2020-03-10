@@ -4574,6 +4574,13 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_AudioChannel_Min2" "Stereo"
 "Steam_Settings_Streaming_AudioChannel_Min4" "Quadraphonic"
 "Steam_Settings_Streaming_AudioChannel_Min6" "5.1"
+"Steam_Settings_Streaming_ControllerOverlayHotkey"	"Controller Overlay button (hold to activate)"
+"Steam_Settings_Streaming_ControllerOverlayHotkeyAuto"	"Auto Detect"
+"Steam_Settings_Streaming_ControllerOverlayHotkeyStart"	"Start Button"
+"Steam_Settings_Streaming_ControllerOverlayHotkeyBack"	"Back Button"
+"Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Guide Button"
+"Steam_Settings_Streaming_ControllerOverlayHotkeyY"	"Y Button"
+"Steam_Settings_Streaming_ControllerOverlayHotkeyNone"	"Disabled"
 
 "Steam_Settings_Streaming_StreamingSupport"	"View support information"
 

@@ -19,6 +19,9 @@
 		"AudioChannelsLabel" { ControlName="Label" associate="AudioChannelSelect" labelText="#Steam_Settings_Streaming_AudioChannelSelect" }
 		"AudioChannelSelect" { ControlName="ComboBox" fieldName="AudioChannelSelect" editable="0" }
 
+		"ControllerOverlayHotkeyLabel" { ControlName="Label" associate="ControllerOverlayHotkeyLimit" labelText="#Steam_Settings_Streaming_ControllerOverlayHotkey" }
+		"ControllerOverlayHotkey" { ControlName="ComboBox" fieldName="ControllerOverlayHotkey" style="ControllerOverlayHotkey" editable="0" }
+
 		"PerformanceOverlayLabel" { ControlName="Label" associate="PerformanceOverlay" labelText="#Steam_Settings_Streaming_PerformanceOverlay" }
 		"PerformanceOverlay" { ControlName="ComboBox" fieldName="PerformanceOverlay" editable="0" }
 
@@ -49,7 +52,7 @@
 
 		place
 		{
-			control="BandwidthLabel,BandwidthLimit,ResolutionLabel,ResolutionLimit,AudioChannelsLabel,AudioChannelSelect,PerformanceOverlayLabel,PerformanceOverlay,EnableHardwareDecoding"
+			control="BandwidthLabel,BandwidthLimit,ResolutionLabel,ResolutionLimit,AudioChannelsLabel,AudioChannelSelect,ControllerOverlayHotkeyLabel,ControllerOverlayHotkey,PerformanceOverlayLabel,PerformanceOverlay,EnableHardwareDecoding"
 			dir=down
 			width=max
 			margin-left=20

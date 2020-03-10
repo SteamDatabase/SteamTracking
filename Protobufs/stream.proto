@@ -358,6 +358,7 @@ message CStreamingClientConfig {
 	optional bool enable_video_hevc = 13 [default = false];
 	optional bool enable_performance_icons = 14 [default = true];
 	optional bool enable_microphone_streaming = 15 [default = false];
+	optional string controller_overlay_hotkey = 16;
 }
 
 message CStreamingServerConfig {
@@ -418,6 +419,29 @@ message CStartVideoDataMsg {
 }
 
 message CStopVideoDataMsg {
+}
+
+message CRecordedInput {
+	optional .EStreamControlMessage type = 1 [default = k_EStreamControlAuthenticationRequest];
+	optional uint32 timestamp = 2;
+
+	oneof data {
+		.CInputTouchFingerDownMsg finger_down = 3;
+		.CInputTouchFingerMotionMsg finger_motion = 4;
+		.CInputTouchFingerUpMsg finger_up = 5;
+		.CInputMouseMotionMsg mouse_motion = 6;
+		.CInputMouseWheelMsg mouse_wheel = 7;
+		.CInputMouseDownMsg mouse_down = 8;
+		.CInputMouseUpMsg mouse_up = 9;
+		.CInputKeyDownMsg key_down = 10;
+		.CInputKeyUpMsg key_up = 11;
+		.CInputTextMsg text = 12;
+		.CRemoteHIDMsg hid = 13;
+	}
+}
+
+message CRecordedInputStream {
+	repeated .CRecordedInput entries = 1;
 }
 
 message CInputLatencyTestMsg {

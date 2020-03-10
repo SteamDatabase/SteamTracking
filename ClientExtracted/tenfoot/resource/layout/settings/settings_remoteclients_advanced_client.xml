@@ -39,12 +39,24 @@
 					</Panel>
 					<Panel class="Spacer" />
 					<Panel class="VertContainer">
-						<Label id="AudioChannelsHeader" class="SettingsLabel" text="#Steam_Settings_Streaming_AudioChannelSelect" />
+						<Label id="AudioChannelsHeader" class="SettingsLabel" text="#Settings_RemoteClients_Streaming_AudioChannelSelect" />
 						<DropDown id="AudioChannels" class="Filter" tabindex="auto">
-							<Label id="0" text="#Steam_Settings_Streaming_AudioChannelAuto_Channels" />
-							<Label id="2" text="#Steam_Settings_Streaming_AudioChannel2" />
-							<Label id="4" text="#Steam_Settings_Streaming_AudioChannel4" />
-							<Label id="6" text="#Steam_Settings_Streaming_AudioChannel6" />
+							<Label id="0" text="#Settings_RemoteClients_Streaming_AudioChannelAuto_Channels" />
+							<Label id="2" text="#Settings_RemoteClients_Streaming_AudioChannel2" />
+							<Label id="4" text="#Settings_RemoteClients_Streaming_AudioChannel4" />
+							<Label id="6" text="#Settings_RemoteClients_Streaming_AudioChannel6" />
+						</DropDown>
+					</Panel>
+					<Panel class="Spacer" />
+					<Panel class="VertContainer">
+						<Label class="SettingsLabel" text="#Settings_RemoteClients_Streaming_ControllerOverlayHotkey" />
+						<DropDown id="ControllerOverlayHotkey" class="Filter" tabindex="auto">
+							<Label id="auto" text="#Settings_RemoteClients_Streaming_ControllerOverlayHotkeyAuto" />
+							<Label id="start" text="#Settings_RemoteClients_Streaming_ControllerOverlayHotkeyStart" />
+							<Label id="back" text="#Settings_RemoteClients_Streaming_ControllerOverlayHotkeyBack" />
+							<Label id="guide" text="#Settings_RemoteClients_Streaming_ControllerOverlayHotkeyGuide" />
+							<Label id="y" text="#Settings_RemoteClients_Streaming_ControllerOverlayHotkeyY" />
+							<Label id="none" text="#Settings_RemoteClients_Streaming_ControllerOverlayHotkeyNone" />
 						</DropDown>
 					</Panel>
 					<Panel class="Spacer" />
