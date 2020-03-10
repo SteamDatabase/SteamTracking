@@ -48,7 +48,6 @@ function UpdateShippingAddress()
 	try
 	{
 		errorString = Shipping_VerifyAddressFields( rgBadFields );
-
 	} 
 	catch( e ) 
 	{
@@ -77,13 +76,12 @@ function UpdateShippingAddress()
 	}
 }
 
-
 var g_bVerifyShippingAddressCallRunning = false;
 function VerifyShippingAddress()
 {
 		if( g_bVerifyShippingAddressCallRunning )
 		return;
-	
+
 	try 
 	{
 				g_bVerifyShippingAddressCallRunning = true;
@@ -240,13 +238,13 @@ function SubmitUpdateShippingAddress()
 				'shippingaddress2' : $('shipping_address_two').value,
 				'shippingcountry' : $('shipping_country').value,
 				'shippingcity' : $('shipping_city').value,
-				'shippingstate' : ($('shipping_country').value == 'US' ? $('shipping_state_select').value : $('shipping_state_text').value),
+				'shippingstate' : (g_bHasBillingStates ? $('shipping_state_select').value : $('shipping_state_text').value),
 				'shippingpostalcode' : $('shipping_postal_code').value,
 				'shippingphone' : $('shipping_phone').value,
 			    'sessionid': g_sessionID
 			},
 		    onSuccess: function(transport){
-		    	g_bUpdateShippingAddress = false;
+				g_bUpdateShippingAddress = false;
 					if ( transport.responseText ){
 					try {
 						var result = transport.responseText.evalJSON(true);
