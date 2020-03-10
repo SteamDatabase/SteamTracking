@@ -6,6 +6,14 @@ body{
 	 height: 100%;
 }
 
+span.motd {
+	font-size: 32px;
+	display:table;
+	margin-left: auto;
+	margin-right: auto;
+	color: #ca5029;
+}
+
 #pageContainer {
 	position: relative;
 	min-height: calc( 100vh - 388px );
