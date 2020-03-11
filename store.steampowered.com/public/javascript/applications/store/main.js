@@ -24,8 +24,8 @@
     return e;
   }
   var n = {},
-    p = { 9: 0 },
-    d = { 9: 0 },
+    p = { 8: 0 },
+    d = { 8: 0 },
     u = [];
   function m(e) {
     if (n[e]) return n[e].exports;
@@ -37,7 +37,7 @@
     p[u]
       ? e.push(p[u])
       : 0 !== p[u] &&
-        { 1: 1, 2: 1, 5: 1, 6: 1, 7: 1, 8: 1, 66: 1 }[u] &&
+        { 1: 1, 2: 1, 5: 1, 6: 1, 7: 1, 65: 1 }[u] &&
         e.push(
           (p[u] = new Promise(function(e, r) {
             for (
@@ -51,132 +51,130 @@
                     5: "broadcast",
                     6: "eventcomponents",
                     7: "interactiverecommender",
-                    8: "loyaltystore",
-                    10: "main_brazilian-json",
-                    11: "main_bulgarian-json",
-                    12: "main_czech-json",
-                    13: "main_danish-json",
-                    14: "main_dutch-json",
-                    15: "main_finnish-json",
-                    16: "main_french-json",
-                    17: "main_german-json",
-                    18: "main_greek-json",
-                    19: "main_hungarian-json",
-                    20: "main_italian-json",
-                    21: "main_japanese-json",
-                    22: "main_koreana-json",
-                    23: "main_latam-json",
-                    24: "main_norwegian-json",
-                    25: "main_polish-json",
-                    26: "main_portuguese-json",
-                    27: "main_romanian-json",
-                    28: "main_russian-json",
-                    29: "main_schinese-json",
-                    30: "main_spanish-json",
-                    31: "main_swedish-json",
-                    32: "main_tchinese-json",
-                    33: "main_thai-json",
-                    34: "main_turkish-json",
-                    35: "main_ukrainian-json",
-                    36: "main_vietnamese-json",
-                    37: "shared_arabic-json",
-                    38: "shared_brazilian-json",
-                    39: "shared_bulgarian-json",
-                    40: "shared_czech-json",
-                    41: "shared_danish-json",
-                    42: "shared_dutch-json",
-                    43: "shared_finnish-json",
-                    44: "shared_french-json",
-                    45: "shared_german-json",
-                    46: "shared_greek-json",
-                    47: "shared_hungarian-json",
-                    48: "shared_italian-json",
-                    49: "shared_japanese-json",
-                    50: "shared_koreana-json",
-                    51: "shared_latam-json",
-                    52: "shared_norwegian-json",
-                    53: "shared_polish-json",
-                    54: "shared_portuguese-json",
-                    55: "shared_romanian-json",
-                    56: "shared_russian-json",
-                    57: "shared_schinese-json",
-                    58: "shared_spanish-json",
-                    59: "shared_swedish-json",
-                    60: "shared_tchinese-json",
-                    61: "shared_thai-json",
-                    62: "shared_turkish-json",
-                    63: "shared_ukrainian-json",
-                    64: "shared_vietnamese-json",
-                    65: "topsellers",
-                    66: "vendors~eventcomponents"
+                    9: "main_brazilian-json",
+                    10: "main_bulgarian-json",
+                    11: "main_czech-json",
+                    12: "main_danish-json",
+                    13: "main_dutch-json",
+                    14: "main_finnish-json",
+                    15: "main_french-json",
+                    16: "main_german-json",
+                    17: "main_greek-json",
+                    18: "main_hungarian-json",
+                    19: "main_italian-json",
+                    20: "main_japanese-json",
+                    21: "main_koreana-json",
+                    22: "main_latam-json",
+                    23: "main_norwegian-json",
+                    24: "main_polish-json",
+                    25: "main_portuguese-json",
+                    26: "main_romanian-json",
+                    27: "main_russian-json",
+                    28: "main_schinese-json",
+                    29: "main_spanish-json",
+                    30: "main_swedish-json",
+                    31: "main_tchinese-json",
+                    32: "main_thai-json",
+                    33: "main_turkish-json",
+                    34: "main_ukrainian-json",
+                    35: "main_vietnamese-json",
+                    36: "shared_arabic-json",
+                    37: "shared_brazilian-json",
+                    38: "shared_bulgarian-json",
+                    39: "shared_czech-json",
+                    40: "shared_danish-json",
+                    41: "shared_dutch-json",
+                    42: "shared_finnish-json",
+                    43: "shared_french-json",
+                    44: "shared_german-json",
+                    45: "shared_greek-json",
+                    46: "shared_hungarian-json",
+                    47: "shared_italian-json",
+                    48: "shared_japanese-json",
+                    49: "shared_koreana-json",
+                    50: "shared_latam-json",
+                    51: "shared_norwegian-json",
+                    52: "shared_polish-json",
+                    53: "shared_portuguese-json",
+                    54: "shared_romanian-json",
+                    55: "shared_russian-json",
+                    56: "shared_schinese-json",
+                    57: "shared_spanish-json",
+                    58: "shared_swedish-json",
+                    59: "shared_tchinese-json",
+                    60: "shared_thai-json",
+                    61: "shared_turkish-json",
+                    62: "shared_ukrainian-json",
+                    63: "shared_vietnamese-json",
+                    64: "topsellers",
+                    65: "vendors~eventcomponents"
                   }[u] || u) +
                   ".css?chunkhash=" +
                   {
-                    1: "9a5996e92fed5bf1e4b9",
-                    2: "daa0b24da0ee6668b1b8",
+                    1: "070c35896faecf2b8358",
+                    2: "cf9fb0e281dad2b9d932",
                     3: "12ddae0337b07fd825e2",
                     4: "caf195f2d936b22af2c1",
-                    5: "faef0bb24fa9bd76ce00",
-                    6: "81c956ce20b8df7fec73",
-                    7: "6c5b1fd6a3b3b22eb8f3",
-                    8: "49c4d593be4d5d78660c",
-                    10: "c1633a369a4e671e02d9",
-                    11: "4311330a9c50ef2b549f",
-                    12: "390debe2ba7adc1babc6",
-                    13: "931df20e90158d197f98",
-                    14: "f01501f112e2fbf9565e",
-                    15: "50bffd233d4cc282e9a2",
-                    16: "2fe918648657675798ec",
-                    17: "2ff4255afda12daf9fa9",
-                    18: "917c49f8f17661107d91",
-                    19: "793348a6ac646c8765f6",
-                    20: "9d5457ae4d3107b61f56",
-                    21: "1c7040a6d553d62413ac",
-                    22: "76e03a2402555741db4c",
-                    23: "ac92b9e790c47e4f543a",
-                    24: "51014333ad393d925a89",
-                    25: "5358a96e84ead85a640d",
-                    26: "8d11d055660f25b6d9f0",
-                    27: "10613b8947431adcda53",
-                    28: "195c5397ad8cb011dca2",
-                    29: "325e10355c0c8fd97740",
-                    30: "643edc6cef4de56f53dd",
-                    31: "8a9991c6cb862210bfa6",
-                    32: "04ba15760d9ce0cee557",
-                    33: "f5eef9db22d74cf492f8",
-                    34: "30518a0ce0dd60aa2b45",
-                    35: "3c35c9cfded8e64210e3",
-                    36: "e32dcccc1634ebaf51ee",
-                    37: "060932bb29588ac70a32",
-                    38: "7dacf97cdbfa2decb5b4",
-                    39: "47c12c1db912d68d6ac8",
-                    40: "59e8ba0a0a6550f8a568",
-                    41: "3d072725e82162815fa6",
-                    42: "b461d3f95f7c69b1686b",
-                    43: "bcbfeee021e936fbf3de",
-                    44: "18e82c941efa68f88b35",
-                    45: "0b1883169abf52f8e022",
-                    46: "cc05df01d1f34c0454d3",
-                    47: "aa826329373ad19d6a29",
-                    48: "14b2554bd80905715646",
-                    49: "e51f20ccc3348a727128",
-                    50: "1c9af182d67985158908",
-                    51: "2d1f9e3406ff8dff4929",
-                    52: "4ca42919534ecaaf5bc9",
-                    53: "40b561b34e5effc51cbe",
-                    54: "4f6be7aee3525c7c5c76",
-                    55: "e54483af5a1945915c56",
-                    56: "3d954bfb0a3691db5c46",
-                    57: "72d5e8c5e1787fa58954",
-                    58: "3046464cb7df63670d50",
-                    59: "9a470df800159d9a3c5c",
-                    60: "59d72fbbd23d6ab52946",
-                    61: "e3e8b12174bd856e91bc",
-                    62: "5c46239121530e3ba302",
-                    63: "1f5cab88f85835d049f5",
-                    64: "61c9c8f990e7ea53b368",
-                    65: "269e0869b2d62181fc7e",
-                    66: "2e828feb3a37ce0a5f67"
+                    5: "83a375cb50a618b91095",
+                    6: "4e6331e79aa8ca0257fc",
+                    7: "8c1f9aaa46648d59081f",
+                    9: "10360cc77171c4cab019",
+                    10: "461a5a628876392e25b0",
+                    11: "d03d6c94ddde7f04843f",
+                    12: "5c6474c630f32a8c46e9",
+                    13: "61698f9e0654073361b5",
+                    14: "acbc96b4d608296b7354",
+                    15: "cce0b6aeb6e1bc1b5436",
+                    16: "9db4d968dd8af6ab7a58",
+                    17: "91d1b7d743b7251720dc",
+                    18: "c1225a8a60fa1f358848",
+                    19: "4b0ccb18b9eba2adcd01",
+                    20: "74300b6c3436c3c86b45",
+                    21: "7f6623e0c25757a005bc",
+                    22: "203afd451d89250724fc",
+                    23: "3493586dda19fb61bd8d",
+                    24: "a06c56f32524bb6e9412",
+                    25: "ba87e93a40b63667d6f9",
+                    26: "41c233fd068b2317fc3b",
+                    27: "e547531ca3c25e2ab8a6",
+                    28: "c0503956cdc5d76e1d8f",
+                    29: "2826ee98ccd752df0304",
+                    30: "2f79e596c5ede3533bcc",
+                    31: "69906aac5c9982d87d01",
+                    32: "3da8ea8d96f71de7e943",
+                    33: "6253368189ef53511bdd",
+                    34: "de3f30981cc5ef729afd",
+                    35: "f889425af5f4080d1f26",
+                    36: "96a583ba2c5a91130d49",
+                    37: "fcf2c40747b264bfc664",
+                    38: "3d7d9445490d0d373c26",
+                    39: "8ebdf1918c8f00b4bbb5",
+                    40: "8f6346d0bb1a111633b4",
+                    41: "b3ba319618423bc91634",
+                    42: "1435b040fe7517dcf7ed",
+                    43: "06dd582ef07785854a21",
+                    44: "676b3faf93780da85b68",
+                    45: "9c93626f30e75f6fbcd1",
+                    46: "fe0405a3a8b6c6b1c823",
+                    47: "bdf429f484a091186fd1",
+                    48: "1380bdfae5824660de79",
+                    49: "5c3217bccf79e044f2f6",
+                    50: "73c0b117c5f022096c89",
+                    51: "20b03e26dac6a6290ae3",
+                    52: "96d30f39fe1a47768cf7",
+                    53: "484ab2e0bb125718aff6",
+                    54: "54d4603479721467fce1",
+                    55: "f91e9ca2f9037ba9a342",
+                    56: "e7e232c365ff227fa509",
+                    57: "b8d3c8fa52428f95cfe5",
+                    58: "950425a7f1dd76553b9b",
+                    59: "d5b82c16cb63e262fa7b",
+                    60: "8d78d50b60faae823f3e",
+                    61: "11caf5fed5f77498005c",
+                    62: "8553d8cb7fa804efba5b",
+                    63: "552051705beb9c1897d5",
+                    64: "6607db79bdf2eec9437a",
+                    65: "02866372267cf223bcb7"
                   }[u],
                 o = m.p + t,
                 n = document.getElementsByTagName("link"),
@@ -241,132 +239,130 @@
                 5: "broadcast",
                 6: "eventcomponents",
                 7: "interactiverecommender",
-                8: "loyaltystore",
-                10: "main_brazilian-json",
-                11: "main_bulgarian-json",
-                12: "main_czech-json",
-                13: "main_danish-json",
-                14: "main_dutch-json",
-                15: "main_finnish-json",
-                16: "main_french-json",
-                17: "main_german-json",
-                18: "main_greek-json",
-                19: "main_hungarian-json",
-                20: "main_italian-json",
-                21: "main_japanese-json",
-                22: "main_koreana-json",
-                23: "main_latam-json",
-                24: "main_norwegian-json",
-                25: "main_polish-json",
-                26: "main_portuguese-json",
-                27: "main_romanian-json",
-                28: "main_russian-json",
-                29: "main_schinese-json",
-                30: "main_spanish-json",
-                31: "main_swedish-json",
-                32: "main_tchinese-json",
-                33: "main_thai-json",
-                34: "main_turkish-json",
-                35: "main_ukrainian-json",
-                36: "main_vietnamese-json",
-                37: "shared_arabic-json",
-                38: "shared_brazilian-json",
-                39: "shared_bulgarian-json",
-                40: "shared_czech-json",
-                41: "shared_danish-json",
-                42: "shared_dutch-json",
-                43: "shared_finnish-json",
-                44: "shared_french-json",
-                45: "shared_german-json",
-                46: "shared_greek-json",
-                47: "shared_hungarian-json",
-                48: "shared_italian-json",
-                49: "shared_japanese-json",
-                50: "shared_koreana-json",
-                51: "shared_latam-json",
-                52: "shared_norwegian-json",
-                53: "shared_polish-json",
-                54: "shared_portuguese-json",
-                55: "shared_romanian-json",
-                56: "shared_russian-json",
-                57: "shared_schinese-json",
-                58: "shared_spanish-json",
-                59: "shared_swedish-json",
-                60: "shared_tchinese-json",
-                61: "shared_thai-json",
-                62: "shared_turkish-json",
-                63: "shared_ukrainian-json",
-                64: "shared_vietnamese-json",
-                65: "topsellers",
-                66: "vendors~eventcomponents"
+                9: "main_brazilian-json",
+                10: "main_bulgarian-json",
+                11: "main_czech-json",
+                12: "main_danish-json",
+                13: "main_dutch-json",
+                14: "main_finnish-json",
+                15: "main_french-json",
+                16: "main_german-json",
+                17: "main_greek-json",
+                18: "main_hungarian-json",
+                19: "main_italian-json",
+                20: "main_japanese-json",
+                21: "main_koreana-json",
+                22: "main_latam-json",
+                23: "main_norwegian-json",
+                24: "main_polish-json",
+                25: "main_portuguese-json",
+                26: "main_romanian-json",
+                27: "main_russian-json",
+                28: "main_schinese-json",
+                29: "main_spanish-json",
+                30: "main_swedish-json",
+                31: "main_tchinese-json",
+                32: "main_thai-json",
+                33: "main_turkish-json",
+                34: "main_ukrainian-json",
+                35: "main_vietnamese-json",
+                36: "shared_arabic-json",
+                37: "shared_brazilian-json",
+                38: "shared_bulgarian-json",
+                39: "shared_czech-json",
+                40: "shared_danish-json",
+                41: "shared_dutch-json",
+                42: "shared_finnish-json",
+                43: "shared_french-json",
+                44: "shared_german-json",
+                45: "shared_greek-json",
+                46: "shared_hungarian-json",
+                47: "shared_italian-json",
+                48: "shared_japanese-json",
+                49: "shared_koreana-json",
+                50: "shared_latam-json",
+                51: "shared_norwegian-json",
+                52: "shared_polish-json",
+                53: "shared_portuguese-json",
+                54: "shared_romanian-json",
+                55: "shared_russian-json",
+                56: "shared_schinese-json",
+                57: "shared_spanish-json",
+                58: "shared_swedish-json",
+                59: "shared_tchinese-json",
+                60: "shared_thai-json",
+                61: "shared_turkish-json",
+                62: "shared_ukrainian-json",
+                63: "shared_vietnamese-json",
+                64: "topsellers",
+                65: "vendors~eventcomponents"
               }[e] || e) +
               ".js?chunkhash=" +
               {
-                1: "9a5996e92fed5bf1e4b9",
-                2: "daa0b24da0ee6668b1b8",
+                1: "070c35896faecf2b8358",
+                2: "cf9fb0e281dad2b9d932",
                 3: "12ddae0337b07fd825e2",
                 4: "caf195f2d936b22af2c1",
-                5: "faef0bb24fa9bd76ce00",
-                6: "81c956ce20b8df7fec73",
-                7: "6c5b1fd6a3b3b22eb8f3",
-                8: "49c4d593be4d5d78660c",
-                10: "c1633a369a4e671e02d9",
-                11: "4311330a9c50ef2b549f",
-                12: "390debe2ba7adc1babc6",
-                13: "931df20e90158d197f98",
-                14: "f01501f112e2fbf9565e",
-                15: "50bffd233d4cc282e9a2",
-                16: "2fe918648657675798ec",
-                17: "2ff4255afda12daf9fa9",
-                18: "917c49f8f17661107d91",
-                19: "793348a6ac646c8765f6",
-                20: "9d5457ae4d3107b61f56",
-                21: "1c7040a6d553d62413ac",
-                22: "76e03a2402555741db4c",
-                23: "ac92b9e790c47e4f543a",
-                24: "51014333ad393d925a89",
-                25: "5358a96e84ead85a640d",
-                26: "8d11d055660f25b6d9f0",
-                27: "10613b8947431adcda53",
-                28: "195c5397ad8cb011dca2",
-                29: "325e10355c0c8fd97740",
-                30: "643edc6cef4de56f53dd",
-                31: "8a9991c6cb862210bfa6",
-                32: "04ba15760d9ce0cee557",
-                33: "f5eef9db22d74cf492f8",
-                34: "30518a0ce0dd60aa2b45",
-                35: "3c35c9cfded8e64210e3",
-                36: "e32dcccc1634ebaf51ee",
-                37: "060932bb29588ac70a32",
-                38: "7dacf97cdbfa2decb5b4",
-                39: "47c12c1db912d68d6ac8",
-                40: "59e8ba0a0a6550f8a568",
-                41: "3d072725e82162815fa6",
-                42: "b461d3f95f7c69b1686b",
-                43: "bcbfeee021e936fbf3de",
-                44: "18e82c941efa68f88b35",
-                45: "0b1883169abf52f8e022",
-                46: "cc05df01d1f34c0454d3",
-                47: "aa826329373ad19d6a29",
-                48: "14b2554bd80905715646",
-                49: "e51f20ccc3348a727128",
-                50: "1c9af182d67985158908",
-                51: "2d1f9e3406ff8dff4929",
-                52: "4ca42919534ecaaf5bc9",
-                53: "40b561b34e5effc51cbe",
-                54: "4f6be7aee3525c7c5c76",
-                55: "e54483af5a1945915c56",
-                56: "3d954bfb0a3691db5c46",
-                57: "72d5e8c5e1787fa58954",
-                58: "3046464cb7df63670d50",
-                59: "9a470df800159d9a3c5c",
-                60: "59d72fbbd23d6ab52946",
-                61: "e3e8b12174bd856e91bc",
-                62: "5c46239121530e3ba302",
-                63: "1f5cab88f85835d049f5",
-                64: "61c9c8f990e7ea53b368",
-                65: "269e0869b2d62181fc7e",
-                66: "2e828feb3a37ce0a5f67"
+                5: "83a375cb50a618b91095",
+                6: "4e6331e79aa8ca0257fc",
+                7: "8c1f9aaa46648d59081f",
+                9: "10360cc77171c4cab019",
+                10: "461a5a628876392e25b0",
+                11: "d03d6c94ddde7f04843f",
+                12: "5c6474c630f32a8c46e9",
+                13: "61698f9e0654073361b5",
+                14: "acbc96b4d608296b7354",
+                15: "cce0b6aeb6e1bc1b5436",
+                16: "9db4d968dd8af6ab7a58",
+                17: "91d1b7d743b7251720dc",
+                18: "c1225a8a60fa1f358848",
+                19: "4b0ccb18b9eba2adcd01",
+                20: "74300b6c3436c3c86b45",
+                21: "7f6623e0c25757a005bc",
+                22: "203afd451d89250724fc",
+                23: "3493586dda19fb61bd8d",
+                24: "a06c56f32524bb6e9412",
+                25: "ba87e93a40b63667d6f9",
+                26: "41c233fd068b2317fc3b",
+                27: "e547531ca3c25e2ab8a6",
+                28: "c0503956cdc5d76e1d8f",
+                29: "2826ee98ccd752df0304",
+                30: "2f79e596c5ede3533bcc",
+                31: "69906aac5c9982d87d01",
+                32: "3da8ea8d96f71de7e943",
+                33: "6253368189ef53511bdd",
+                34: "de3f30981cc5ef729afd",
+                35: "f889425af5f4080d1f26",
+                36: "96a583ba2c5a91130d49",
+                37: "fcf2c40747b264bfc664",
+                38: "3d7d9445490d0d373c26",
+                39: "8ebdf1918c8f00b4bbb5",
+                40: "8f6346d0bb1a111633b4",
+                41: "b3ba319618423bc91634",
+                42: "1435b040fe7517dcf7ed",
+                43: "06dd582ef07785854a21",
+                44: "676b3faf93780da85b68",
+                45: "9c93626f30e75f6fbcd1",
+                46: "fe0405a3a8b6c6b1c823",
+                47: "bdf429f484a091186fd1",
+                48: "1380bdfae5824660de79",
+                49: "5c3217bccf79e044f2f6",
+                50: "73c0b117c5f022096c89",
+                51: "20b03e26dac6a6290ae3",
+                52: "96d30f39fe1a47768cf7",
+                53: "484ab2e0bb125718aff6",
+                54: "54d4603479721467fce1",
+                55: "f91e9ca2f9037ba9a342",
+                56: "e7e232c365ff227fa509",
+                57: "b8d3c8fa52428f95cfe5",
+                58: "950425a7f1dd76553b9b",
+                59: "d5b82c16cb63e262fa7b",
+                60: "8d78d50b60faae823f3e",
+                61: "11caf5fed5f77498005c",
+                62: "8553d8cb7fa804efba5b",
+                63: "552051705beb9c1897d5",
+                64: "6607db79bdf2eec9437a",
+                65: "02866372267cf223bcb7"
               }[e]
             );
           })(u)),
@@ -469,74 +465,80 @@
   "1fPh": function(e, t, n) {
     "use strict";
     n.d(t, "b", function() {
-      return o;
+      return a;
     }),
       n.d(t, "a", function() {
-        return i;
+        return s;
       });
-    var r = n("lkRc"),
-      o = {
-        Home: function() {
-          return "/";
-        },
-        AppStorePage: function() {
-          return "/app/:appid(\\d+)/:gamename?";
-        },
-        PackageStorePage: function() {
-          return "/sub/:subid(\\d+)/:packagename?";
-        },
-        BundleStorePage: function() {
-          return "/bundle/:bundleid(\\d+)/:bundlename?";
-        },
-        SaleLandingPage: function() {
-          return "/sale/:salePageName";
-        },
-        RemotePlay: function() {
-          return "/remoteplay_hub/";
-        },
-        RemotePlayTogether: function() {
-          return "/together/";
-        },
-        CreatorSaleLandingPage: function() {
-          return "/(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?";
-        },
-        CuratorPage: function() {
-          return "/curator/:curatorPageName/(list)?/:listid?";
-        },
-        CreatorPage: function() {
-          return "/(publisher|pub|dev|developer|franchise)/:creatorPageName/(list)?/:listid?";
-        },
-        NewsHub: function() {
-          return "/(newshub|events)";
-        },
-        NewsHubApp: function(e, t) {
-          return "/(newshub|events)/app/" + e + "/" + t;
-        },
-        EventView: function(e, t, n) {
-          return "/events/app/" + e + "/view/" + t + "/" + n;
-        },
-        EventModeration: function() {
-          return "/events_admin/(moderate)?/:appid(\\d+)?/";
-        },
-        EventBackfill: function() {
-          return "/events_admin/backfill/";
-        },
-        InteractiveRecommender: function() {
-          return "/recommender/:steamid(\\d+)?/";
-        },
-        TopSellers: function() {
-          return "/topsellers/:date?";
-        },
-        LoyaltyStore: function() {
-          return "/rewards/";
-        },
-        DiagData: function() {
-          return "/:anything*/diagdata";
+    var r = n("mrSG"),
+      o = n("lkRc"),
+      i = {},
+      a = Object(r.a)(
+        Object(r.a)(
+          {
+            Home: function() {
+              return "/";
+            },
+            AppStorePage: function() {
+              return "/app/:appid(\\d+)/:gamename?";
+            },
+            PackageStorePage: function() {
+              return "/sub/:subid(\\d+)/:packagename?";
+            },
+            BundleStorePage: function() {
+              return "/bundle/:bundleid(\\d+)/:bundlename?";
+            },
+            SaleLandingPage: function() {
+              return "/sale/:salePageName";
+            },
+            RemotePlay: function() {
+              return "/remoteplay_hub/";
+            },
+            RemotePlayTogether: function() {
+              return "/together/";
+            },
+            CreatorSaleLandingPage: function() {
+              return "/(curator|publisher|pub|dev|developer|franchise)/:creatorPageName/sale/:salePageName?";
+            },
+            CuratorPage: function() {
+              return "/curator/:curatorPageName/(list)?/:listid?";
+            },
+            CreatorPage: function() {
+              return "/(publisher|pub|dev|developer|franchise)/:creatorPageName/(list)?/:listid?";
+            },
+            NewsHub: function() {
+              return "/(newshub|events)";
+            },
+            NewsHubApp: function(e, t) {
+              return "/(newshub|events)/app/" + e + "/" + t;
+            },
+            EventView: function(e, t, n) {
+              return "/events/app/" + e + "/view/" + t + "/" + n;
+            },
+            EventModeration: function() {
+              return "/events_admin/(moderate)?/:appid(\\d+)?/";
+            },
+            EventBackfill: function() {
+              return "/events_admin/backfill/";
+            },
+            InteractiveRecommender: function() {
+              return "/recommender/:steamid(\\d+)?/";
+            },
+            TopSellers: function() {
+              return "/topsellers/:date?";
+            }
+          },
+          i
+        ),
+        {
+          DiagData: function() {
+            return "/:anything*/diagdata";
+          }
         }
-      };
-    function i() {
+      );
+    function s() {
       var e = document.createElement("a");
-      e.href = r.c.STORE_BASE_URL;
+      e.href = o.c.STORE_BASE_URL;
       var t = e.pathname;
       return t.endsWith("/") || (t += "/"), t;
     }
@@ -2043,34 +2045,34 @@
   },
   AvbV: function(e, t, r) {
     var o = {
-      "./main_brazilian.json": ["TFAN", 10],
-      "./main_bulgarian.json": ["c2SO", 11],
-      "./main_czech.json": ["peP3", 12],
-      "./main_danish.json": ["0bnV", 13],
-      "./main_dutch.json": ["wcLc", 14],
+      "./main_brazilian.json": ["TFAN", 9],
+      "./main_bulgarian.json": ["c2SO", 10],
+      "./main_czech.json": ["peP3", 11],
+      "./main_danish.json": ["0bnV", 12],
+      "./main_dutch.json": ["wcLc", 13],
       "./main_english.json": ["/rNK", 3],
-      "./main_finnish.json": ["iywU", 15],
-      "./main_french.json": ["Xnpc", 16],
-      "./main_german.json": ["pmKi", 17],
-      "./main_greek.json": ["mTRv", 18],
-      "./main_hungarian.json": ["WkHb", 19],
-      "./main_italian.json": ["Jz5U", 20],
-      "./main_japanese.json": ["3Dk9", 21],
-      "./main_koreana.json": ["neQD", 22],
-      "./main_latam.json": ["6oHD", 23],
-      "./main_norwegian.json": ["2OvS", 24],
-      "./main_polish.json": ["3pwE", 25],
-      "./main_portuguese.json": ["hY40", 26],
-      "./main_romanian.json": ["Q95+", 27],
-      "./main_russian.json": ["bsPT", 28],
-      "./main_schinese.json": ["B/Zz", 29],
-      "./main_spanish.json": ["U6iL", 30],
-      "./main_swedish.json": ["4uPU", 31],
-      "./main_tchinese.json": ["rgC9", 32],
-      "./main_thai.json": ["87dp", 33],
-      "./main_turkish.json": ["yMpO", 34],
-      "./main_ukrainian.json": ["zTWm", 35],
-      "./main_vietnamese.json": ["wqiy", 36]
+      "./main_finnish.json": ["iywU", 14],
+      "./main_french.json": ["Xnpc", 15],
+      "./main_german.json": ["pmKi", 16],
+      "./main_greek.json": ["mTRv", 17],
+      "./main_hungarian.json": ["WkHb", 18],
+      "./main_italian.json": ["Jz5U", 19],
+      "./main_japanese.json": ["3Dk9", 20],
+      "./main_koreana.json": ["neQD", 21],
+      "./main_latam.json": ["6oHD", 22],
+      "./main_norwegian.json": ["2OvS", 23],
+      "./main_polish.json": ["3pwE", 24],
+      "./main_portuguese.json": ["hY40", 25],
+      "./main_romanian.json": ["Q95+", 26],
+      "./main_russian.json": ["bsPT", 27],
+      "./main_schinese.json": ["B/Zz", 28],
+      "./main_spanish.json": ["U6iL", 29],
+      "./main_swedish.json": ["4uPU", 30],
+      "./main_tchinese.json": ["rgC9", 31],
+      "./main_thai.json": ["87dp", 32],
+      "./main_turkish.json": ["yMpO", 33],
+      "./main_ukrainian.json": ["zTWm", 34],
+      "./main_vietnamese.json": ["wqiy", 35]
     };
     function n(t) {
       var n = o[t];
@@ -8137,7 +8139,7 @@
           r = e[1];
         return (
           n ||
-          (Promise.all([u.e(0), u.e(1), u.e(66), u.e(2), u.e(6)])
+          (Promise.all([u.e(0), u.e(1), u.e(65), u.e(2), u.e(6)])
             .then(u.bind(null, "Wym2"))
             .then(function(e) {
               r(a.a.createElement(e[o], t));
@@ -8153,20 +8155,17 @@
       D = w("EventDetailView"),
       O = w("Events"),
       F = (a.a.lazy(function() {
-        return u.e(65).then(u.bind(null, "jHcm"));
+        return u.e(64).then(u.bind(null, "jHcm"));
       }),
       a.a.lazy(function() {
         return Promise.all([u.e(0), u.e(1), u.e(7)]).then(u.bind(null, "3WEt"));
       })),
       I = a.a.lazy(function() {
-        return u.e(8).then(u.bind(null, "iTQh"));
-      }),
-      x = a.a.lazy(function() {
         return Promise.all([u.e(0), u.e(1), u.e(2), u.e(5)]).then(
           u.bind(null, "NIbt")
         );
       }),
-      L = (function(e) {
+      x = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -8201,7 +8200,7 @@
                                 appid: e.match.params.appid
                               })
                             : a.a.createElement(
-                                x,
+                                I,
                                 Object(p.a)({}, e, {
                                   appid: e.match.params.appid
                                 })
@@ -8219,7 +8218,7 @@
                                 language: Object(_.f)(o.c.LANGUAGE)
                               })
                             : a.a.createElement(
-                                x,
+                                I,
                                 Object(p.a)({}, e, {
                                   promotionname:
                                     "sale_" + e.match.params.salePageName
@@ -8261,7 +8260,7 @@
                         path: g.b.CuratorPage(),
                         render: function(e) {
                           return a.a.createElement(
-                            x,
+                            I,
                             Object(p.a)({}, e, {
                               clanid: o.a.clanid,
                               listid: o.a.listid
@@ -8274,7 +8273,7 @@
                         path: g.b.CreatorPage(),
                         render: function(e) {
                           return a.a.createElement(
-                            x,
+                            I,
                             Object(p.a)({}, e, {
                               clanid: o.a.clanid,
                               listid: o.a.listid
@@ -8286,7 +8285,7 @@
                         exact: !0,
                         path: g.b.PackageStorePage(),
                         render: function(e) {
-                          return a.a.createElement(x, {
+                          return a.a.createElement(I, {
                             subid: e.match.params.subid
                           });
                         }
@@ -8295,7 +8294,7 @@
                         exact: !0,
                         path: g.b.BundleStorePage(),
                         render: function(e) {
-                          return a.a.createElement(x, {
+                          return a.a.createElement(I, {
                             bundleid: e.match.params.bundleid
                           });
                         }
@@ -8361,13 +8360,7 @@
                           return !1;
                         }
                       }),
-                      a.a.createElement(m.b, {
-                        exact: !0,
-                        path: g.b.LoyaltyStore(),
-                        render: function(e) {
-                          return a.a.createElement(I, null);
-                        }
-                      }),
+                      !1,
                       a.a.createElement(m.b, {
                         exact: !0,
                         path: g.b.DiagData(),
@@ -8392,9 +8385,9 @@
           t
         );
       })(a.a.Component),
-      R = u("X3Ds");
+      L = u("X3Ds");
     u("xnZ7"), u("idvb"), u("M1X1");
-    R.o(function() {
+    L.o(function() {
       return Object(p.b)(this, void 0, void 0, function() {
         return Object(p.e)(this, function(e) {
           switch (e.label) {
@@ -8469,17 +8462,17 @@
                 e.sent(),
                 document.getElementById("application_root") &&
                   r.a.render(
-                    a.a.createElement(L, {}),
+                    a.a.createElement(x, {}),
                     document.getElementById("application_root")
                   ),
                 document.getElementById("events_root") &&
                   r.a.render(
-                    a.a.createElement(L, { bEventsMode: !0 }),
+                    a.a.createElement(x, { bEventsMode: !0 }),
                     document.getElementById("events_root")
                   ),
                 document.getElementById("sale_root") &&
                   r.a.render(
-                    a.a.createElement(L, { bSaleMode: !0 }),
+                    a.a.createElement(x, { bSaleMode: !0 }),
                     document.getElementById("sale_root")
                   ),
                 [2]
@@ -9593,35 +9586,35 @@
   },
   rCDf: function(e, t, r) {
     var o = {
-      "./shared_arabic.json": ["d1TB", 37],
-      "./shared_brazilian.json": ["Pg9r", 38],
-      "./shared_bulgarian.json": ["ENge", 39],
-      "./shared_czech.json": ["Ts6V", 40],
-      "./shared_danish.json": ["9oiU", 41],
-      "./shared_dutch.json": ["nxN4", 42],
+      "./shared_arabic.json": ["d1TB", 36],
+      "./shared_brazilian.json": ["Pg9r", 37],
+      "./shared_bulgarian.json": ["ENge", 38],
+      "./shared_czech.json": ["Ts6V", 39],
+      "./shared_danish.json": ["9oiU", 40],
+      "./shared_dutch.json": ["nxN4", 41],
       "./shared_english.json": ["TYjx", 4],
-      "./shared_finnish.json": ["NuB8", 43],
-      "./shared_french.json": ["bOPj", 44],
-      "./shared_german.json": ["svuF", 45],
-      "./shared_greek.json": ["eJKB", 46],
-      "./shared_hungarian.json": ["T7i2", 47],
-      "./shared_italian.json": ["w96W", 48],
-      "./shared_japanese.json": ["XQ4S", 49],
-      "./shared_koreana.json": ["4hyI", 50],
-      "./shared_latam.json": ["3qrw", 51],
-      "./shared_norwegian.json": ["XA4Q", 52],
-      "./shared_polish.json": ["TpXn", 53],
-      "./shared_portuguese.json": ["Q8UV", 54],
-      "./shared_romanian.json": ["Eme1", 55],
-      "./shared_russian.json": ["BUiO", 56],
-      "./shared_schinese.json": ["3UpY", 57],
-      "./shared_spanish.json": ["4Fxc", 58],
-      "./shared_swedish.json": ["0JhB", 59],
-      "./shared_tchinese.json": ["OYRc", 60],
-      "./shared_thai.json": ["lhAZ", 61],
-      "./shared_turkish.json": ["RSoU", 62],
-      "./shared_ukrainian.json": ["lNXI", 63],
-      "./shared_vietnamese.json": ["RSmC", 64]
+      "./shared_finnish.json": ["NuB8", 42],
+      "./shared_french.json": ["bOPj", 43],
+      "./shared_german.json": ["svuF", 44],
+      "./shared_greek.json": ["eJKB", 45],
+      "./shared_hungarian.json": ["T7i2", 46],
+      "./shared_italian.json": ["w96W", 47],
+      "./shared_japanese.json": ["XQ4S", 48],
+      "./shared_koreana.json": ["4hyI", 49],
+      "./shared_latam.json": ["3qrw", 50],
+      "./shared_norwegian.json": ["XA4Q", 51],
+      "./shared_polish.json": ["TpXn", 52],
+      "./shared_portuguese.json": ["Q8UV", 53],
+      "./shared_romanian.json": ["Eme1", 54],
+      "./shared_russian.json": ["BUiO", 55],
+      "./shared_schinese.json": ["3UpY", 56],
+      "./shared_spanish.json": ["4Fxc", 57],
+      "./shared_swedish.json": ["0JhB", 58],
+      "./shared_tchinese.json": ["OYRc", 59],
+      "./shared_thai.json": ["lhAZ", 60],
+      "./shared_turkish.json": ["RSoU", 61],
+      "./shared_ukrainian.json": ["lNXI", 62],
+      "./shared_vietnamese.json": ["RSmC", 63]
     };
     function n(t) {
       var n = o[t];
