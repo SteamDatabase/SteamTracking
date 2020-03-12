@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5750122";
+var CLSTAMP = "5751697";
 !(function(e) {
   function t(t) {
     for (
@@ -26568,17 +26568,21 @@ var CLSTAMP = "5750122";
     }
     var B = new ((function() {
       function e() {
-        var e = this;
         (this.m_mapAppLinkInfo = new Map()),
           (this.m_mapMissingApps = new Map()),
-          Object(c.A)(function() {
+          (this.m_bLoadedFromConfig = !1);
+      }
+      return (
+        (e.prototype.LazyInit = function() {
+          var e = this;
+          if (!this.m_bLoadedFromConfig) {
             var t = Object(p.f)("applinkinfo", "application_config");
-            e.ValidateStoreDefault(t) &&
+            this.ValidateStoreDefault(t) &&
               t.forEach(function(t) {
                 return e.m_mapAppLinkInfo.set(Number(t.appid), t);
               });
             var n = Object(p.f)("additional_applinks", "application_config");
-            e.ValidateStoreDefault(n) &&
+            this.ValidateStoreDefault(n) &&
               n.forEach(function(t) {
                 var n = Number(t.appid);
                 e.m_mapAppLinkInfo.has(n) || e.m_mapAppLinkInfo.set(n, t);
@@ -26587,10 +26591,10 @@ var CLSTAMP = "5750122";
             P(o) &&
               o.forEach(function(t) {
                 return e.m_mapMissingApps.set(t, !0);
-              });
-          });
-      }
-      return (
+              }),
+              (this.m_bLoadedFromConfig = !0);
+          }
+        }),
         (e.prototype.ValidateStoreDefault = function(e) {
           var t = e;
           return (
@@ -26603,7 +26607,7 @@ var CLSTAMP = "5750122";
           );
         }),
         (e.prototype.GetAppLinkInfo = function(e) {
-          return this.m_mapAppLinkInfo.get(e);
+          return this.LazyInit(), this.m_mapAppLinkInfo.get(e);
         }),
         (e.prototype.LoadAppLinkInfo = function(e, t) {
           return Object(o.b)(this, void 0, void 0, function() {
@@ -26618,6 +26622,7 @@ var CLSTAMP = "5750122";
               switch (o.label) {
                 case 0:
                   return (
+                    this.LazyInit(),
                     (n = []),
                     e.forEach(function(e) {
                       l.m_mapAppLinkInfo.has(e) ||
@@ -26654,6 +26659,7 @@ var CLSTAMP = "5750122";
           });
         }),
         Object(o.c)([c.x], e.prototype, "m_mapAppLinkInfo", void 0),
+        Object(o.c)([c.g], e.prototype, "LazyInit", null),
         e
       );
     })())();

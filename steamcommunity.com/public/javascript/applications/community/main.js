@@ -2536,36 +2536,40 @@
       return r;
     });
     var s = n("mrSG"),
-      a = n("2vnA"),
-      o = n("vDqi"),
-      M = n.n(o),
+      o = n("2vnA"),
+      a = n("vDqi"),
+      M = n.n(a),
       l = n("lkRc"),
       p = n("9f3B"),
       r = new ((function() {
         function e() {
-          var o = this;
           (this.m_mapAppLinkInfo = new Map()),
             (this.m_mapMissingApps = new Map()),
-            Object(a.z)(function() {
-              var e = Object(l.e)("applinkinfo", "application_config");
-              o.ValidateStoreDefault(e) &&
-                e.forEach(function(e) {
-                  return o.m_mapAppLinkInfo.set(Number(e.appid), e);
-                });
-              var t = Object(l.e)("additional_applinks", "application_config");
-              o.ValidateStoreDefault(t) &&
-                t.forEach(function(e) {
-                  var t = Number(e.appid);
-                  o.m_mapAppLinkInfo.has(t) || o.m_mapAppLinkInfo.set(t, e);
-                });
-              var n = Object(l.e)("appunknown", "application_config");
-              Object(p.a)(n) &&
-                n.forEach(function(e) {
-                  return o.m_mapMissingApps.set(e, !0);
-                });
-            });
+            (this.m_bLoadedFromConfig = !1);
         }
         return (
+          (e.prototype.LazyInit = function() {
+            var n = this;
+            if (!this.m_bLoadedFromConfig) {
+              var e = Object(l.e)("applinkinfo", "application_config");
+              this.ValidateStoreDefault(e) &&
+                e.forEach(function(e) {
+                  return n.m_mapAppLinkInfo.set(Number(e.appid), e);
+                });
+              var t = Object(l.e)("additional_applinks", "application_config");
+              this.ValidateStoreDefault(t) &&
+                t.forEach(function(e) {
+                  var t = Number(e.appid);
+                  n.m_mapAppLinkInfo.has(t) || n.m_mapAppLinkInfo.set(t, e);
+                });
+              var o = Object(l.e)("appunknown", "application_config");
+              Object(p.a)(o) &&
+                o.forEach(function(e) {
+                  return n.m_mapMissingApps.set(e, !0);
+                }),
+                (this.m_bLoadedFromConfig = !0);
+            }
+          }),
           (e.prototype.ValidateStoreDefault = function(e) {
             var t = e;
             return (
@@ -2578,7 +2582,7 @@
             );
           }),
           (e.prototype.GetAppLinkInfo = function(e) {
-            return this.m_mapAppLinkInfo.get(e);
+            return this.LazyInit(), this.m_mapAppLinkInfo.get(e);
           }),
           (e.prototype.LoadAppLinkInfo = function(c, b) {
             return Object(s.b)(this, void 0, void 0, function() {
@@ -2593,6 +2597,7 @@
                 switch (e.label) {
                   case 0:
                     return (
+                      this.LazyInit(),
                       (t = []),
                       c.forEach(function(e) {
                         i.m_mapAppLinkInfo.has(e) ||
@@ -2629,7 +2634,8 @@
               });
             });
           }),
-          Object(s.c)([a.w], e.prototype, "m_mapAppLinkInfo", void 0),
+          Object(s.c)([o.w], e.prototype, "m_mapAppLinkInfo", void 0),
+          Object(s.c)([o.f], e.prototype, "LazyInit", null),
           e
         );
       })())();
@@ -31314,7 +31320,6 @@
       })(),
       Ha = (function() {
         function e() {
-          var o = this;
           (this.m_mapExistingEvents = new Map()),
             (this.m_mapAnnouncementBodyToEvent = new Map()),
             (this.m_mapClanToGIDs = new Map()),
@@ -31325,9 +31330,14 @@
             (this.m_rgQueuedEventsClanIDs = new Array()),
             (this.m_rgQueuedEventsUniqueIDs = new Array()),
             (this.m_QueuedEventTimeout = new s.b()),
-            Object(W.z)(function() {
+            (this.m_bLoadedFromConfig = !1);
+        }
+        return (
+          (e.prototype.Init = function() {
+            var o = this;
+            if (!this.m_bLoadedFromConfig) {
               var e = Ga("PartnerEventStore");
-              o.ValidateStoreDefault(e) &&
+              this.ValidateStoreDefault(e) &&
                 e.forEach(function(e) {
                   var t = new K.a(e.clan_steamid),
                     n = o.InsertEventModelFromClanEventData(t, e);
@@ -31335,27 +31345,28 @@
                     o.m_mapExistingEvents.set(yt + e.announcement_body.gid, n);
                 });
               var t = Object(C.e)("partnereventstore", "application_config");
-              o.ValidateStoreDefault(t) &&
+              this.ValidateStoreDefault(t) &&
                 t.forEach(function(e) {
                   var t = new K.a(e.clan_steamid),
                     n = o.InsertEventModelFromClanEventData(t, e);
                   e.announcement_body &&
+                    !o.m_mapExistingEvents.has(yt + e.announcement_body.gid) &&
                     o.m_mapExistingEvents.set(yt + e.announcement_body.gid, n);
                 });
               var n = Object(C.e)(
                 "partnereventadjacents",
                 "application_config"
               );
-              o.ValidateAdjacentEvent(n) &&
+              this.ValidateAdjacentEvent(n) &&
                 n.forEach(function(e) {
                   o.m_mapAdjacentAnnouncementGIDs.set(
                     e.announcementGID,
                     e.adjacents
                   );
-                });
-            });
-        }
-        return (
+                }),
+                (this.m_bLoadedFromConfig = !0);
+            }
+          }),
           (e.prototype.ValidateStoreDefault = function(e) {
             var t = e;
             return (
@@ -32301,12 +32312,22 @@
                           lang_list: n,
                           last_modified_time: O || 0
                         }),
-                        (a = { params: o, withCredentials: !1 }),
-                        (p = C.b.STORE_BASE_URL),
-                        C.g.is_support || d
-                          ? ((p += "events/ajaxgetpartnereventforedit"),
-                            (a = { params: o, withCredentials: !0 }))
-                          : (p += "events/ajaxgetpartnerevent"),
+                        (p = a = null),
+                        (a =
+                          C.g.is_support || d
+                            ? ("community" === Object(C.d)()
+                                ? ((p = C.b.COMMUNITY_BASE_URL),
+                                  (p += s
+                                    ? "gid/" + s.ConvertTo64BitString()
+                                    : "ogg/" + M),
+                                  (p += "/"))
+                                : (p = C.b.STORE_BASE_URL + "events/"),
+                              (p += "ajaxgetpartnereventforedit"),
+                              { params: o, withCredentials: !0 })
+                            : ((p =
+                                C.b.STORE_BASE_URL +
+                                "events/ajaxgetpartnerevent"),
+                              { params: o, withCredentials: !1 })),
                         [4, g.a.get(p, a)]
                       );
                     case 1:
@@ -32631,6 +32652,7 @@
           Object(L.c)([W.w], e.prototype, "m_mapClanToGIDs", void 0),
           Object(L.c)([W.w], e.prototype, "m_mapAppIDToGIDs", void 0),
           Object(L.c)([W.w], e.prototype, "m_mapUpdatedApps", void 0),
+          Object(L.c)([W.f], e.prototype, "Init", null),
           Object(L.c)([W.f], e.prototype, "RegisterClanEvents", null),
           Object(L.c)(
             [W.f],
@@ -34466,7 +34488,9 @@
             });
           }),
           (t.Get = function() {
-            return t.sm_Instance || (t.sm_Instance = new t()), t.sm_Instance;
+            return (
+              t.sm_Instance || (t.sm_Instance = new t()).Init(), t.sm_Instance
+            );
           }),
           t
         );
@@ -58414,6 +58438,8 @@
               return (
                 e.sent(),
                 rr.a.Init(new js.a(C.b.WEBAPI_BASE_URL)),
+                Pa.Init(),
+                hp.Init(),
                 document.getElementById("application_root") &&
                   n.a.render(
                     c.a.createElement(ws, {}),
