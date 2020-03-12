@@ -6738,9 +6738,13 @@
                 return e.stack && e.stack.match(_)
                   ? (function(e, t) {
                       void 0 === t && (t = 0);
-                      return e.stack.split("\n").filter(function(e) {
-                        return !!e.match(_);
-                      })[t];
+                      var n = e.stack.split("\n").filter(function(e) {
+                          return !!e.match(_);
+                        })[t],
+                        o = n.lastIndexOf("?");
+                      if (-1 === o) return n;
+                      var a = n.slice(o).indexOf(":");
+                      return -1 === a ? n : n.slice(0, o) + n.slice(o + a);
                     })(e, t)
                   : e.stack && e.stack.match(W)
                   ? (function(e, t) {
