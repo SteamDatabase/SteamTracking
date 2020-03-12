@@ -111,68 +111,68 @@
                   }[u] || u) +
                   ".css?chunkhash=" +
                   {
-                    1: "070c35896faecf2b8358",
-                    2: "cf9fb0e281dad2b9d932",
-                    3: "12ddae0337b07fd825e2",
-                    4: "caf195f2d936b22af2c1",
+                    1: "a09ace4e326a626af54c",
+                    2: "4bbbb4cdc3e7be573838",
+                    3: "a4211d3e1fddbc20f7ca",
+                    4: "04b8438d11bb67e29a95",
                     5: "83a375cb50a618b91095",
-                    6: "4e6331e79aa8ca0257fc",
-                    7: "8c1f9aaa46648d59081f",
-                    9: "10360cc77171c4cab019",
+                    6: "4fc306c9ec87a14b1e15",
+                    7: "3f725c7a4bb9c4f206ce",
+                    9: "614b8b3fe9176b72fb2d",
                     10: "461a5a628876392e25b0",
-                    11: "d03d6c94ddde7f04843f",
-                    12: "5c6474c630f32a8c46e9",
-                    13: "61698f9e0654073361b5",
-                    14: "acbc96b4d608296b7354",
-                    15: "cce0b6aeb6e1bc1b5436",
-                    16: "9db4d968dd8af6ab7a58",
-                    17: "91d1b7d743b7251720dc",
-                    18: "c1225a8a60fa1f358848",
-                    19: "4b0ccb18b9eba2adcd01",
-                    20: "74300b6c3436c3c86b45",
-                    21: "7f6623e0c25757a005bc",
-                    22: "203afd451d89250724fc",
-                    23: "3493586dda19fb61bd8d",
-                    24: "a06c56f32524bb6e9412",
-                    25: "ba87e93a40b63667d6f9",
-                    26: "41c233fd068b2317fc3b",
-                    27: "e547531ca3c25e2ab8a6",
-                    28: "c0503956cdc5d76e1d8f",
-                    29: "2826ee98ccd752df0304",
-                    30: "2f79e596c5ede3533bcc",
-                    31: "69906aac5c9982d87d01",
-                    32: "3da8ea8d96f71de7e943",
-                    33: "6253368189ef53511bdd",
-                    34: "de3f30981cc5ef729afd",
-                    35: "f889425af5f4080d1f26",
+                    11: "0a43cfd6a1980cafcbcc",
+                    12: "8ef1035ecdb01574b50b",
+                    13: "88fa274c2d24653c2d2d",
+                    14: "73782b390f68b484d46b",
+                    15: "7a5407ab03b775378660",
+                    16: "80187719d3535dd39f3d",
+                    17: "befbfa595ce0e0cd9955",
+                    18: "8f6804eac79b177c2b6d",
+                    19: "1d2b11ded639ddd4d543",
+                    20: "0958b977633753384075",
+                    21: "0c58eb34609650e884b3",
+                    22: "ad5ba6f5da350b0d6ef9",
+                    23: "59c317cf2a3f68727af8",
+                    24: "cab503ff4cf635fa590a",
+                    25: "10545eab6d37df197a94",
+                    26: "9b94e63dee06232b6368",
+                    27: "9a5882f405e8a97212d7",
+                    28: "7d56de1a97d33fd58ba6",
+                    29: "1f58b3964a2328df9019",
+                    30: "f66c717783b04ea24e7b",
+                    31: "1f6ae80ea5098619a24a",
+                    32: "7129859a628b85565b3c",
+                    33: "82646b671a163da5a3dc",
+                    34: "e4e77b776396c69e7a5b",
+                    35: "fbbd1760388e8debba3a",
                     36: "96a583ba2c5a91130d49",
-                    37: "fcf2c40747b264bfc664",
-                    38: "3d7d9445490d0d373c26",
-                    39: "8ebdf1918c8f00b4bbb5",
-                    40: "8f6346d0bb1a111633b4",
-                    41: "b3ba319618423bc91634",
-                    42: "1435b040fe7517dcf7ed",
-                    43: "06dd582ef07785854a21",
-                    44: "676b3faf93780da85b68",
-                    45: "9c93626f30e75f6fbcd1",
-                    46: "fe0405a3a8b6c6b1c823",
-                    47: "bdf429f484a091186fd1",
-                    48: "1380bdfae5824660de79",
-                    49: "5c3217bccf79e044f2f6",
-                    50: "73c0b117c5f022096c89",
-                    51: "20b03e26dac6a6290ae3",
-                    52: "96d30f39fe1a47768cf7",
-                    53: "484ab2e0bb125718aff6",
-                    54: "54d4603479721467fce1",
-                    55: "f91e9ca2f9037ba9a342",
-                    56: "e7e232c365ff227fa509",
-                    57: "b8d3c8fa52428f95cfe5",
-                    58: "950425a7f1dd76553b9b",
-                    59: "d5b82c16cb63e262fa7b",
-                    60: "8d78d50b60faae823f3e",
-                    61: "11caf5fed5f77498005c",
-                    62: "8553d8cb7fa804efba5b",
-                    63: "552051705beb9c1897d5",
+                    37: "78f2aa53c381761c6510",
+                    38: "2bec6d4ce3b9cbf2d634",
+                    39: "d66109404185358dd5fc",
+                    40: "865ba2aaa5dac7c7a35e",
+                    41: "dcf9f39b27c582befb4d",
+                    42: "be677d7ef2ebb59094c4",
+                    43: "86c4fc2b7145d932fb9a",
+                    44: "cddf6d0d6a143a9a426c",
+                    45: "04f2ad693fcf89175e66",
+                    46: "67f39626220fe2cd4d81",
+                    47: "0a09199a9ec9adf533e7",
+                    48: "53b627188fb3ea85f645",
+                    49: "e08f9d058488073aff2c",
+                    50: "7d7e68556e0393d20817",
+                    51: "d350b7575782a3c7d5bf",
+                    52: "3825205198c9123f409f",
+                    53: "801f79d765ffe29d4929",
+                    54: "c21e0db920c5a0d8e59d",
+                    55: "9f276b75e7ea9ad676fe",
+                    56: "4865b8e2b7eac56893e4",
+                    57: "488c95de288046d41217",
+                    58: "08292975d5a5d7527a59",
+                    59: "74f0ef866fe8702698f7",
+                    60: "bdcccf504502d42318a2",
+                    61: "73d57acf561a5e9bee2b",
+                    62: "9f94af74a6a1d34afb8c",
+                    63: "928e319a26d36e37cdbb",
                     64: "6607db79bdf2eec9437a",
                     65: "02866372267cf223bcb7"
                   }[u],
@@ -299,68 +299,68 @@
               }[e] || e) +
               ".js?chunkhash=" +
               {
-                1: "070c35896faecf2b8358",
-                2: "cf9fb0e281dad2b9d932",
-                3: "12ddae0337b07fd825e2",
-                4: "caf195f2d936b22af2c1",
+                1: "a09ace4e326a626af54c",
+                2: "4bbbb4cdc3e7be573838",
+                3: "a4211d3e1fddbc20f7ca",
+                4: "04b8438d11bb67e29a95",
                 5: "83a375cb50a618b91095",
-                6: "4e6331e79aa8ca0257fc",
-                7: "8c1f9aaa46648d59081f",
-                9: "10360cc77171c4cab019",
+                6: "4fc306c9ec87a14b1e15",
+                7: "3f725c7a4bb9c4f206ce",
+                9: "614b8b3fe9176b72fb2d",
                 10: "461a5a628876392e25b0",
-                11: "d03d6c94ddde7f04843f",
-                12: "5c6474c630f32a8c46e9",
-                13: "61698f9e0654073361b5",
-                14: "acbc96b4d608296b7354",
-                15: "cce0b6aeb6e1bc1b5436",
-                16: "9db4d968dd8af6ab7a58",
-                17: "91d1b7d743b7251720dc",
-                18: "c1225a8a60fa1f358848",
-                19: "4b0ccb18b9eba2adcd01",
-                20: "74300b6c3436c3c86b45",
-                21: "7f6623e0c25757a005bc",
-                22: "203afd451d89250724fc",
-                23: "3493586dda19fb61bd8d",
-                24: "a06c56f32524bb6e9412",
-                25: "ba87e93a40b63667d6f9",
-                26: "41c233fd068b2317fc3b",
-                27: "e547531ca3c25e2ab8a6",
-                28: "c0503956cdc5d76e1d8f",
-                29: "2826ee98ccd752df0304",
-                30: "2f79e596c5ede3533bcc",
-                31: "69906aac5c9982d87d01",
-                32: "3da8ea8d96f71de7e943",
-                33: "6253368189ef53511bdd",
-                34: "de3f30981cc5ef729afd",
-                35: "f889425af5f4080d1f26",
+                11: "0a43cfd6a1980cafcbcc",
+                12: "8ef1035ecdb01574b50b",
+                13: "88fa274c2d24653c2d2d",
+                14: "73782b390f68b484d46b",
+                15: "7a5407ab03b775378660",
+                16: "80187719d3535dd39f3d",
+                17: "befbfa595ce0e0cd9955",
+                18: "8f6804eac79b177c2b6d",
+                19: "1d2b11ded639ddd4d543",
+                20: "0958b977633753384075",
+                21: "0c58eb34609650e884b3",
+                22: "ad5ba6f5da350b0d6ef9",
+                23: "59c317cf2a3f68727af8",
+                24: "cab503ff4cf635fa590a",
+                25: "10545eab6d37df197a94",
+                26: "9b94e63dee06232b6368",
+                27: "9a5882f405e8a97212d7",
+                28: "7d56de1a97d33fd58ba6",
+                29: "1f58b3964a2328df9019",
+                30: "f66c717783b04ea24e7b",
+                31: "1f6ae80ea5098619a24a",
+                32: "7129859a628b85565b3c",
+                33: "82646b671a163da5a3dc",
+                34: "e4e77b776396c69e7a5b",
+                35: "fbbd1760388e8debba3a",
                 36: "96a583ba2c5a91130d49",
-                37: "fcf2c40747b264bfc664",
-                38: "3d7d9445490d0d373c26",
-                39: "8ebdf1918c8f00b4bbb5",
-                40: "8f6346d0bb1a111633b4",
-                41: "b3ba319618423bc91634",
-                42: "1435b040fe7517dcf7ed",
-                43: "06dd582ef07785854a21",
-                44: "676b3faf93780da85b68",
-                45: "9c93626f30e75f6fbcd1",
-                46: "fe0405a3a8b6c6b1c823",
-                47: "bdf429f484a091186fd1",
-                48: "1380bdfae5824660de79",
-                49: "5c3217bccf79e044f2f6",
-                50: "73c0b117c5f022096c89",
-                51: "20b03e26dac6a6290ae3",
-                52: "96d30f39fe1a47768cf7",
-                53: "484ab2e0bb125718aff6",
-                54: "54d4603479721467fce1",
-                55: "f91e9ca2f9037ba9a342",
-                56: "e7e232c365ff227fa509",
-                57: "b8d3c8fa52428f95cfe5",
-                58: "950425a7f1dd76553b9b",
-                59: "d5b82c16cb63e262fa7b",
-                60: "8d78d50b60faae823f3e",
-                61: "11caf5fed5f77498005c",
-                62: "8553d8cb7fa804efba5b",
-                63: "552051705beb9c1897d5",
+                37: "78f2aa53c381761c6510",
+                38: "2bec6d4ce3b9cbf2d634",
+                39: "d66109404185358dd5fc",
+                40: "865ba2aaa5dac7c7a35e",
+                41: "dcf9f39b27c582befb4d",
+                42: "be677d7ef2ebb59094c4",
+                43: "86c4fc2b7145d932fb9a",
+                44: "cddf6d0d6a143a9a426c",
+                45: "04f2ad693fcf89175e66",
+                46: "67f39626220fe2cd4d81",
+                47: "0a09199a9ec9adf533e7",
+                48: "53b627188fb3ea85f645",
+                49: "e08f9d058488073aff2c",
+                50: "7d7e68556e0393d20817",
+                51: "d350b7575782a3c7d5bf",
+                52: "3825205198c9123f409f",
+                53: "801f79d765ffe29d4929",
+                54: "c21e0db920c5a0d8e59d",
+                55: "9f276b75e7ea9ad676fe",
+                56: "4865b8e2b7eac56893e4",
+                57: "488c95de288046d41217",
+                58: "08292975d5a5d7527a59",
+                59: "74f0ef866fe8702698f7",
+                60: "bdcccf504502d42318a2",
+                61: "73d57acf561a5e9bee2b",
+                62: "9f94af74a6a1d34afb8c",
+                63: "928e319a26d36e37cdbb",
                 64: "6607db79bdf2eec9437a",
                 65: "02866372267cf223bcb7"
               }[e]
@@ -513,7 +513,10 @@
               return "/(newshub|events)/app/" + e + "/" + t;
             },
             EventView: function(e, t, n) {
-              return "/events/app/" + e + "/view/" + t + "/" + n;
+              return "/(newshub|events)/app/" + e + "/view/" + t + "/" + n;
+            },
+            OldAnnouncementView: function(e, t, n) {
+              return "/(newshub|events)/app/" + e + "/old_view/" + t + "/" + n;
             },
             EventModeration: function() {
               return "/events_admin/(moderate)?/:appid(\\d+)?/";
@@ -652,10 +655,10 @@
         return C;
       }),
       n.d(t, "z", function() {
-        return D;
+        return O;
       }),
       n.d(t, "D", function() {
-        return O;
+        return D;
       }),
       n.d(t, "y", function() {
         return F;
@@ -1657,7 +1660,7 @@
         })
       );
     }
-    function D(e) {
+    function O(e) {
       var t = Object(a.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
@@ -1691,7 +1694,7 @@
         })
       );
     }
-    function O() {
+    function D() {
       return r.createElement(
         "svg",
         {
@@ -2018,7 +2021,7 @@
         },
         r.createElement("path", {
           d:
-            "M109.9,96.2H302c16.3,0,29.6,13,29.6,29v101.4c0,16-13.2,29-29.6,29h-90.1l-57.6,57.9L138,255.6h-28.1\r\n        \t\tc-16.3,0-29.6-13-29.6-29V125.2C80.4,109.2,93.6,96.2,109.9,96.2z"
+            "M109.9,96.2H302c16.3,0,29.6,13,29.6,29v101.4c0,16-13.2,29-29.6,29h-90.1l-57.6,57.9L138,255.6h-28.1\r\n\t\t\t\tc-16.3,0-29.6-13-29.6-29V125.2C80.4,109.2,93.6,96.2,109.9,96.2z"
         })
       );
     }
@@ -2038,7 +2041,7 @@
         },
         r.createElement("path", {
           d:
-            "M225.1,328.8c-12.6,0-15.3-1.9-29.5-5.3c-18.7-4.8-35.3-6.3-51-5.3c-3.5,0.5-7.1,0.5-10.6,1l-7.6,1\r\n                c-2.5,0.5-4.5-1-5.6-3.4c-12.6-36.2-16.6-74.7-11.6-117.6c0-2.4,2-3.9,4.5-4.3l4.5-0.5c3.5-0.5,6.6-1,10.1-1c5-0.5,9.6-2.9,13.1-7.2\r\n                l0.5-1c0.5-0.5,1-1.4,1.5-2.4c9.1-14.5,22.2-25.6,36.8-37.6c7.6-6.3,14.1-12.5,20.2-18.3c6.6-7.2,10.1-16.4,10.6-27\r\n                c0-9.6,5.6-15.4,16.1-16.4c13.6-1,22.7,3.9,27.8,15.9c7.6,16.4-4.4,33.3-13.9,50.6c-2,3.9-4.5,7.2-7.1,10.6c-1,1.4-2,2.9-3,4.3\r\n                l-3.5,4.8c-1.5,1.9-3,3.9-4.5,6.3c4,0,7.6,0,11.6,0c11.1-0.5,34.6-0.5,46.7,1.4c7.6,1,13.6,4.8,17.7,10.1c3.5,4.8,4.5,11.1,3,17.8\r\n                c-0.5,2.9-2,5.8-5,9.2c-1.5,1.9-14.4,3.9-16.5,5.3h10.9c2.5,1.9,5,3.9,7.1,6.3c4,4.3,5.6,9.2,5,14.9c-0.5,5.3-3,10.6-7.6,14\r\n                c-2.5,1.9-16,3.9-18.5,5.3c5,5.3,18,12.1,16.5,19.3c-2,9.6-7.6,15.4-18.2,17.8c2.5,3.9,3,8.7,1.5,13.5c-0.5,2.4-1.5,4.3-2.5,6.3\r\n                c-2.5,5.3-6.6,8.2-13.1,9.6C253.2,327.8,233.7,328.8,225.1,328.8z"
+            "M225.1,328.8c-12.6,0-15.3-1.9-29.5-5.3c-18.7-4.8-35.3-6.3-51-5.3c-3.5,0.5-7.1,0.5-10.6,1l-7.6,1\r\n\t\t\t\tc-2.5,0.5-4.5-1-5.6-3.4c-12.6-36.2-16.6-74.7-11.6-117.6c0-2.4,2-3.9,4.5-4.3l4.5-0.5c3.5-0.5,6.6-1,10.1-1c5-0.5,9.6-2.9,13.1-7.2\r\n\t\t\t\tl0.5-1c0.5-0.5,1-1.4,1.5-2.4c9.1-14.5,22.2-25.6,36.8-37.6c7.6-6.3,14.1-12.5,20.2-18.3c6.6-7.2,10.1-16.4,10.6-27\r\n\t\t\t\tc0-9.6,5.6-15.4,16.1-16.4c13.6-1,22.7,3.9,27.8,15.9c7.6,16.4-4.4,33.3-13.9,50.6c-2,3.9-4.5,7.2-7.1,10.6c-1,1.4-2,2.9-3,4.3\r\n\t\t\t\tl-3.5,4.8c-1.5,1.9-3,3.9-4.5,6.3c4,0,7.6,0,11.6,0c11.1-0.5,34.6-0.5,46.7,1.4c7.6,1,13.6,4.8,17.7,10.1c3.5,4.8,4.5,11.1,3,17.8\r\n\t\t\t\tc-0.5,2.9-2,5.8-5,9.2c-1.5,1.9-14.4,3.9-16.5,5.3h10.9c2.5,1.9,5,3.9,7.1,6.3c4,4.3,5.6,9.2,5,14.9c-0.5,5.3-3,10.6-7.6,14\r\n\t\t\t\tc-2.5,1.9-16,3.9-18.5,5.3c5,5.3,18,12.1,16.5,19.3c-2,9.6-7.6,15.4-18.2,17.8c2.5,3.9,3,8.7,1.5,13.5c-0.5,2.4-1.5,4.3-2.5,6.3\r\n\t\t\t\tc-2.5,5.3-6.6,8.2-13.1,9.6C253.2,327.8,233.7,328.8,225.1,328.8z"
         })
       );
     }
@@ -2556,63 +2559,156 @@
         return e.SendNotification("ClientMetrics.ReportClientError#1", t);
       });
     var f,
-      g = (function() {
-        function e() {
-          (this.m_transport = null), (this.m_rgErrorQueue = []);
-        }
-        return (
-          (e.prototype.Init = function(e, t) {
+      g = [],
+      _ = function(e, t) {
+        return g.push({ error: e, cCallsitesToIgnore: t });
+      },
+      b = console.assert;
+    console.assert = function(e, t) {
+      for (var n = [], r = 2; r < arguments.length; r++)
+        n[r - 2] = arguments[r];
+      e || _(new Error(E.apply(void 0, Object(i.g)([t], n))), 2),
+        b.apply(console, Object(i.g)([e, t], n));
+    };
+    var v = console.error;
+    (console.error = function(e) {
+      for (var t = [], n = 1; n < arguments.length; n++)
+        t[n - 1] = arguments[n];
+      _(new Error(E.apply(void 0, Object(i.g)([e], t))), 1),
+        v.apply(console, Object(i.g)([e], t));
+    }),
+      (f = window.setTimeout(function() {
+        (g = []), (_ = function() {});
+      }, 3e4));
+    var y = (function() {
+      function e(e) {
+        var r = this;
+        void 0 === e && (e = !0),
+          (this.m_transport = null),
+          (this.m_rgErrorQueue = []),
+          (this.m_bEnabled = !0),
+          (this.m_bInitialized = !1),
+          (_ = e
+            ? (g.forEach(function(e) {
+                var t = e.error,
+                  n = e.cCallsitesToIgnore;
+                return r.ReportError(t, n);
+              }),
+              function(e, t) {
+                return r.ReportError(e, t);
+              })
+            : function() {}),
+          (g = []),
+          clearTimeout(f),
+          window.setTimeout(function() {
+            r.m_bInitialized || ((r.m_bEnabled = !1), (r.m_rgErrorQueue = []));
+          }, 3e4);
+      }
+      return (
+        (e.prototype.Init = function(e, t, n) {
+          (this.m_bInitialized = !0),
             (this.m_strProduct = e),
-              (this.m_transport = t),
-              this.m_rgErrorQueue.length &&
-                (this.SendErrorReports(this.m_rgErrorQueue),
-                (this.m_rgErrorQueue = []));
-          }),
-          (e.prototype.ReportError = function(e) {
-            var t = { identifier: e.stack, message: e.stack };
-            this.SendErrorReport(t);
-          }),
-          (e.prototype.SendErrorReport = function(e) {
-            this.m_transport
-              ? this.SendErrorReports([e])
-              : this.m_rgErrorQueue.push(e);
-          }),
-          (e.prototype.SendErrorReports = function(e) {
-            if (e && e.length) {
-              var t = c.a.Init(m),
-                i = e.reduce(function(e, t) {
-                  return (
-                    e[t.identifier]
-                      ? e[t.identifier].count++
-                      : (e[t.identifier] = { report: t, count: 1 }),
-                    e
-                  );
-                }, {}),
-                n = Object.keys(i).map(function(e) {
-                  var t = i[e],
-                    n = t.report,
-                    r = t.count,
-                    o = new h();
-                  return (
-                    o.set_count(r),
-                    o.set_identifier(n.identifier),
-                    o.set_message(n.message),
-                    o
-                  );
-                });
-              t.Body().set_product(this.m_strProduct),
-                t.Body().set_version("unknown"),
-                t.Body().set_errors(n),
-                r.ReportClientError(this.m_transport, t);
+            (this.m_strVersion = t),
+            (this.m_transport = n),
+            this.m_bEnabled ||
+              (console.error(
+                "Error reporting was initialized after being disabled, possibly dropping errors."
+              ),
+              (this.m_bEnabled = !0)),
+            this.m_rgErrorQueue.length &&
+              (this.SendErrorReports(this.m_rgErrorQueue),
+              (this.m_rgErrorQueue = []));
+        }),
+        (e.prototype.ReportError = function(e, t) {
+          if ((void 0 === t && (t = 0), this.m_bEnabled)) {
+            0;
+            var n = (function(e, t) {
+              void 0 === t && (t = 0);
+              try {
+                return e.stack && e.stack.match(M)
+                  ? (function(e, t) {
+                      void 0 === t && (t = 0);
+                      return e.stack.split("\n").filter(function(e) {
+                        return !!e.match(M);
+                      })[t];
+                    })(e, t)
+                  : e.stack && e.stack.match(k)
+                  ? (function(e, t) {
+                      void 0 === t && (t = 0);
+                      return null;
+                    })(0, t)
+                  : null;
+              } catch (e) {
+                return (
+                  console.warn("Failed to normalize error stack: " + e), null
+                );
+              }
+            })(e, t);
+            if (n) {
+              var r = { identifier: n, message: e.stack };
+              this.SendErrorReport(r);
             }
-          }),
-          e
-        );
-      })();
+          }
+        }),
+        (e.prototype.SendErrorReport = function(e) {
+          this.m_transport
+            ? this.SendErrorReports([e])
+            : this.m_rgErrorQueue.push(e);
+        }),
+        (e.prototype.SendErrorReports = function(e) {
+          if (e && e.length) {
+            var t = c.a.Init(m),
+              i = e.reduce(function(e, t) {
+                return (
+                  e[t.identifier]
+                    ? e[t.identifier].count++
+                    : (e[t.identifier] = { report: t, count: 1 }),
+                  e
+                );
+              }, {}),
+              n = Object.keys(i).map(function(e) {
+                var t = i[e],
+                  n = t.report,
+                  r = t.count,
+                  o = new h();
+                return (
+                  o.set_count(r),
+                  o.set_identifier(n.identifier),
+                  o.set_message(n.message),
+                  o
+                );
+              });
+            t.Body().set_product(this.m_strProduct),
+              t.Body().set_version(this.m_strVersion),
+              t.Body().set_errors(n),
+              r.ReportClientError(this.m_transport, t);
+          }
+        }),
+        e
+      );
+    })();
+    function E(e) {
+      for (var t = [], n = 1; n < arguments.length; n++)
+        t[n - 1] = arguments[n];
+      return "string" == typeof e && 0 === t.length
+        ? e
+        : Object(i.g)([e], t)
+            .map(function(e) {
+              try {
+                return String(e);
+              } catch (e) {
+                return "[Stringify Error]";
+              }
+            })
+            .join(", ");
+    }
+    var w,
+      M = /^\s*at .*(\S+:\d+|\(native\))/m,
+      k = /(^|@)\S+:\d+/;
     n.d(t, "a", function() {
-      return _;
+      return S;
     });
-    var _ = (function(t) {
+    var S = (function(t) {
         function e() {
           var e = (null !== t && t.apply(this, arguments)) || this;
           return (e.state = {}), e;
@@ -2620,7 +2716,7 @@
         return (
           Object(i.d)(e, t),
           (e.prototype.componentDidCatch = function(e, t) {
-            var n = (f || (f = new g()), f);
+            var n = (w || (w = new y()), w);
             n
               ? n.ReportError(e)
               : console.warn("No ErrorReportingStore to report errors with!"),
@@ -2639,14 +2735,14 @@
                 ? "function" == typeof n
                   ? n(r.error)
                   : n
-                : a.createElement(b, { error: r, onDismiss: this.Reset })
+                : a.createElement(C, { error: r, onDismiss: this.Reset })
               : t;
           }),
           Object(i.c)([s.a], e.prototype, "Reset", null),
           e
         );
       })(a.Component),
-      b = function(e) {
+      C = function(e) {
         var t = e.error,
           n = e.onDismiss,
           r = t.error ? t.error.stack : "Stack missing",
@@ -3861,6 +3957,13 @@
             enumerable: !0,
             configurable: !0
           }),
+          (e.prototype.GetElementProps = function() {
+            return {
+              tabIndex: this.props.tabIndex || 0,
+              onClick: this.Toggle,
+              onKeyDown: this.KeyDown
+            };
+          }),
           (e.prototype.Toggle = function() {
             if (!this.props.disabled) {
               var e = !this.state.checked;
@@ -3890,13 +3993,14 @@
               this.props.label
                 ? f.createElement(
                     "div",
-                    {
-                      className:
-                        "DialogCheckbox_Container _DialogLayout " +
-                        (this.props.classname ? this.props.classname : ""),
-                      tabIndex: this.props.tabIndex || 0,
-                      onClick: this.Toggle
-                    },
+                    Object(h.a)(
+                      {
+                        className:
+                          "DialogCheckbox_Container _DialogLayout " +
+                          (this.props.classname ? this.props.classname : "")
+                      },
+                      this.GetElementProps()
+                    ),
                     f.createElement(
                       "div",
                       { className: e },
@@ -3926,11 +4030,7 @@
                   )
                 : f.createElement(
                     "div",
-                    {
-                      className: e,
-                      onClick: this.Toggle,
-                      tabIndex: this.props.tabIndex || 0
-                    },
+                    Object(h.a)({ className: e }, this.GetElementProps()),
                     f.createElement(g.f, null)
                   )
             );
@@ -3944,8 +4044,8 @@
         return f.createElement("div", Object(h.a)({}, e, { className: t }));
       };
     }
-    var D = n("hJxo"),
-      O = n("r64O"),
+    var O = n("hJxo"),
+      D = n("r64O"),
       F = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
@@ -4034,7 +4134,7 @@
                   this.m_CopiedAnimation && this.m_CopiedAnimation.Cancel();
                 this.setState({ m_bCompletedCopiedAnimation: !1 }),
                   this.setState({ m_CopiedYPos: -4 }, function() {
-                    (t.m_CopiedAnimation = new D.b(
+                    (t.m_CopiedAnimation = new O.b(
                       t,
                       { m_CopiedYPos: -24 },
                       {
@@ -4060,7 +4160,7 @@
               ));
           }),
           (e.prototype.CheckProps = function(e) {
-            Object(O.a)(
+            Object(D.a)(
               !(e.bShowClearAction || e.bAlwaysShowClearAction) || e.onChange,
               "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input."
             );
@@ -7177,9 +7277,9 @@
                 k++
               ) {
                 var C,
-                  D = V((C = S[k])),
-                  O = (void 0, (v = N(E, D)), Math.sqrt(x(v, v)));
-                O < w && ((w = O), (M = C));
+                  O = V((C = S[k])),
+                  D = (void 0, (v = N(E, O)), Math.sqrt(x(v, v)));
+                D < w && ((w = D), (M = C));
               }
               if (M) return { htmlElement: M, pos: V(M) };
             }
@@ -7245,12 +7345,12 @@
                   var k = h[o],
                     S = E[o].min,
                     C = E[o].max,
-                    D = k < S ? k - S : C < k ? k - C : 0;
+                    O = k < S ? k - S : C < k ? k - C : 0;
                   if (t) if (!G(s, { min: S, max: C })) continue;
-                  var O = { x: 0, y: 0 };
-                  (O[u] = E[u][i]), (O[o] = k + D);
-                  var F = N(h, O),
-                    I = (M * M + D * D) / Math.abs(F[u]);
+                  var D = { x: 0, y: 0 };
+                  (D[u] = E[u][i]), (D[o] = k + O);
+                  var F = N(h, D),
+                    I = (M * M + O * O) / Math.abs(F[u]);
                   I < _ && ((_ = I), (g = j)), b.push({ score: I, element: j });
                 }
               }
@@ -8152,8 +8252,8 @@
       k = w("EventBackfillLanding"),
       S = w("EventSaleDisplay"),
       C = w("EventCalendar"),
-      D = w("EventDetailView"),
-      O = w("Events"),
+      O = w("EventDetailView"),
+      D = w("Events"),
       F = (a.a.lazy(function() {
         return u.e(64).then(u.bind(null, "jHcm"));
       }),
@@ -8196,14 +8296,20 @@
                         path: g.b.AppStorePage(),
                         render: function(e) {
                           return t.props.bEventsMode
-                            ? a.a.createElement(O, {
+                            ? a.a.createElement(D, {
+                                key: "appeventrow" + e.match.params.appid,
                                 appid: e.match.params.appid
                               })
                             : a.a.createElement(
                                 I,
-                                Object(p.a)({}, e, {
-                                  appid: e.match.params.appid
-                                })
+                                Object(p.a)(
+                                  {
+                                    key:
+                                      "appbroadcastcast_" + e.match.params.appid
+                                  },
+                                  e,
+                                  { appid: e.match.params.appid }
+                                )
                               );
                         }
                       }),
@@ -8213,16 +8319,25 @@
                         render: function(e) {
                           return t.props.bSaleMode
                             ? a.a.createElement(S, {
+                                key: "sale_" + e.match.params.salePageName,
                                 promotionname:
                                   "sale_" + e.match.params.salePageName,
                                 language: Object(_.f)(o.c.LANGUAGE)
                               })
                             : a.a.createElement(
                                 I,
-                                Object(p.a)({}, e, {
-                                  promotionname:
-                                    "sale_" + e.match.params.salePageName
-                                })
+                                Object(p.a)(
+                                  {
+                                    key:
+                                      "broadcastsale_" +
+                                      e.match.params.salePageName
+                                  },
+                                  e,
+                                  {
+                                    promotionname:
+                                      "sale_" + e.match.params.salePageName
+                                  }
+                                )
                               );
                         }
                       }),
@@ -8231,6 +8346,11 @@
                         path: g.b.CreatorSaleLandingPage(),
                         render: function(e) {
                           return a.a.createElement(S, {
+                            key:
+                              "salecreator_" +
+                              e.match.params.creatorPageName +
+                              "_" +
+                              e.match.params.salePageName,
                             promotionname:
                               "sale_" + e.match.params.salePageName,
                             language: Object(_.f)(o.c.LANGUAGE)
@@ -8241,6 +8361,7 @@
                         path: g.b.RemotePlay(),
                         render: function(e) {
                           return a.a.createElement(S, {
+                            key: "sale_remoteplaylanding",
                             promotionname: "remoteplaylanding",
                             language: Object(_.f)(o.c.LANGUAGE)
                           });
@@ -8250,6 +8371,7 @@
                         path: g.b.RemotePlayTogether(),
                         render: function(e) {
                           return a.a.createElement(S, {
+                            key: "sale_together",
                             promotionname: "sale_together",
                             language: Object(_.f)(o.c.LANGUAGE)
                           });
@@ -8261,10 +8383,17 @@
                         render: function(e) {
                           return a.a.createElement(
                             I,
-                            Object(p.a)({}, e, {
-                              clanid: o.a.clanid,
-                              listid: o.a.listid
-                            })
+                            Object(p.a)(
+                              {
+                                key:
+                                  "curatorbroadcast_" +
+                                  o.a.clanid +
+                                  "_" +
+                                  o.a.listid
+                              },
+                              e,
+                              { clanid: o.a.clanid, listid: o.a.listid }
+                            )
                           );
                         }
                       }),
@@ -8274,10 +8403,17 @@
                         render: function(e) {
                           return a.a.createElement(
                             I,
-                            Object(p.a)({}, e, {
-                              clanid: o.a.clanid,
-                              listid: o.a.listid
-                            })
+                            Object(p.a)(
+                              {
+                                key:
+                                  "creatorbroadcast_" +
+                                  o.a.clanid +
+                                  "_" +
+                                  o.a.listid
+                              },
+                              e,
+                              { clanid: o.a.clanid, listid: o.a.listid }
+                            )
                           );
                         }
                       }),
@@ -8286,6 +8422,7 @@
                         path: g.b.PackageStorePage(),
                         render: function(e) {
                           return a.a.createElement(I, {
+                            key: "packagebroadcast_" + e.match.params.subid,
                             subid: e.match.params.subid
                           });
                         }
@@ -8295,23 +8432,8 @@
                         path: g.b.BundleStorePage(),
                         render: function(e) {
                           return a.a.createElement(I, {
+                            key: "bundlebroadcast_" + e.match.params.bundleid,
                             bundleid: e.match.params.bundleid
-                          });
-                        }
-                      }),
-                      a.a.createElement(m.b, {
-                        exact: !0,
-                        path: g.b.NewsHub(),
-                        render: function(e) {
-                          return a.a.createElement(C, null);
-                        }
-                      }),
-                      a.a.createElement(m.b, {
-                        exact: !0,
-                        path: g.b.NewsHubApp(":appid(\\d+)", ":vanity?"),
-                        render: function(e) {
-                          return a.a.createElement(C, {
-                            filter_to_appids: [e.match.params.appid]
                           });
                         }
                       }),
@@ -8323,11 +8445,65 @@
                           ":vanity?"
                         ),
                         render: function(e) {
-                          return a.a.createElement(D, {
-                            key: e.match.params.gid,
-                            appid: e.match.params.appid,
-                            gid: e.match.params.event_gid
-                          });
+                          return a.a.createElement(
+                            O,
+                            Object(p.a)(
+                              { key: "detailview_" + e.match.params.event_gid },
+                              e,
+                              {
+                                appid: e.match.params.appid,
+                                gid: e.match.params.event_gid
+                              }
+                            )
+                          );
+                        }
+                      }),
+                      a.a.createElement(m.b, {
+                        exact: !0,
+                        path: g.b.OldAnnouncementView(
+                          ":appid(\\d+)",
+                          ":announcement_gid(\\d+)",
+                          ":vanity?"
+                        ),
+                        render: function(e) {
+                          return a.a.createElement(
+                            O,
+                            Object(p.a)(
+                              {
+                                key:
+                                  "detailoldview_" +
+                                  e.match.params.announcement_gid
+                              },
+                              e,
+                              {
+                                appid: e.match.params.appid,
+                                announcement_gid:
+                                  e.match.params.announcement_gid
+                              }
+                            )
+                          );
+                        }
+                      }),
+                      a.a.createElement(m.b, {
+                        exact: !0,
+                        path: g.b.NewsHubApp(":appid(\\d+)", ":vanity?"),
+                        render: function(e) {
+                          return a.a.createElement(
+                            C,
+                            Object(p.a)({ key: e.match.params.appid }, e, {
+                              filter_to_appids: [e.match.params.appid]
+                            })
+                          );
+                        }
+                      }),
+                      a.a.createElement(m.b, {
+                        exact: !0,
+                        path: g.b.NewsHub(),
+                        render: function(e) {
+                          return a.a.createElement(
+                            C,
+                            Object(p.a)({ key: "global" }, e)
+                          );
                         }
                       }),
                       a.a.createElement(m.b, {
@@ -8368,7 +8544,7 @@
                           return a.a.createElement(
                             y,
                             Object(p.a)({}, e, {
-                              key: e.match.params.gid,
+                              key: "diab_data_" + e.match.params.gid,
                               strConfigID: "application_config"
                             })
                           );
@@ -10064,19 +10240,19 @@
                 S = o.height;
               a.bMatchHeight && ((S = k - M), (s.menuHeight = S));
               var C = (a.bOverlapVertical ? k : M) - S,
-                D = 0 < C,
-                O = p - (a.bOverlapVertical ? M : k) - S,
-                F = 0 < O,
-                I = (a.bPreferPopTop || !F) && D && !a.bDisablePopTop;
-              if (!D && !F) {
+                O = 0 < C,
+                D = p - (a.bOverlapVertical ? M : k) - S,
+                F = 0 < D,
+                I = (a.bPreferPopTop || !F) && O && !a.bDisablePopTop;
+              if (!O && !F) {
                 var x =
                   void 0 !== a.bShiftToFitWindow
                     ? a.bShiftToFitWindow
                     : a.bFitToWindow && !a.bOverlapHorizontal;
-                (I = O < C),
+                (I = D < C),
                   x && (I ? (s.menuTop = 4) : (s.menuBottom = 4)),
                   a.bFitToWindow &&
-                    (x ? (S = Math.min(S, p - 8)) : (S += I ? C : O),
+                    (x ? (S = Math.min(S, p - 8)) : (S += I ? C : D),
                     (s.menuHeight = S - 8));
               }
               void 0 === s.menuBottom &&

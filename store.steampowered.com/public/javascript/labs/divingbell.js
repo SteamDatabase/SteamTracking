@@ -947,8 +947,9 @@ Data.shuffle = function(list) {
 	return list;
 };
 Data.getDetailsFullFat = function(appid,callback) {
-	if(appid == "") {
+	if(appid == "" || appid == null) {
 		callback(null);
+		return;
 	}
 	Data.request("dbdetailsfullfat/" + appid,[],function(data) {
 		var json = JSON.parse(data);
@@ -958,8 +959,9 @@ Data.getDetailsFullFat = function(appid,callback) {
 	});
 };
 Data.getDetails = function(appid,callback) {
-	if(appid == "") {
+	if(appid == "" || appid == null) {
 		callback(null);
+		return;
 	}
 	Data.request("dbdetails/" + appid,[],function(data) {
 		var json = JSON.parse(data);
@@ -2579,12 +2581,14 @@ Main.displayBoxes = function(showTheseBoxes,callback) {
 };
 Main.getMoreMatches = function(appid,callback) {
 	Data.getMatches(appid,["reccats","recdefault","recgems"],Main.matchPage + 1,Main.getPreviousAppIds(),Main.focusedEntry.disabledTags,Main.focusedEntry.boostedTags,function(rawMatches) {
-		rawMatches.map = Main.removeByPreferences(rawMatches.map);
-		Main.addToCurrentMatches(rawMatches);
-		Main.matchPage++;
-		if(Main.LOGGED_IN) {
-			Main.wishlist = rawMatches.wishlist;
-			Main.tempWishlist = [];
+		if(rawMatches != null) {
+			rawMatches.map = Main.removeByPreferences(rawMatches.map);
+			Main.addToCurrentMatches(rawMatches);
+			Main.matchPage++;
+			if(Main.LOGGED_IN) {
+				Main.wishlist = rawMatches.wishlist;
+				Main.tempWishlist = [];
+			}
 		}
 		if(callback != null) {
 			callback();
@@ -3008,6 +3012,10 @@ Main.afterUpdateBoxes = function(justThese) {
 		EggTimer.runOnce(1000,function() {
 			Main.getMoreMatches(Main.focusedEntry.appid,function() {
 				var result = Main.isContentStarved();
+				if(Main.focusedEntry.keyTags == null) {
+					Main.focusedEntry.keyTags = Main.currMatches.keyTags;
+					Main.renderFocusedBox(Main.focusedEntry.appid);
+				}
 			});
 			return true;
 		});
@@ -3373,7 +3381,6 @@ Render.microtrailer = function(index,entry,className,id,containerClass,empty) {
 	if(containerClass == "") {
 		containerClass = "box-microtrailer hide-fancy";
 	}
-	var screenshot = entry.screenshot;
 	var html = "<div class=\"" + containerClass + "\" id=\"" + boxMicrotrailerId + "\" >";
 	if(!empty) {
 		html += Render._microtrailerContent(entry,className,index);
@@ -3540,7 +3547,9 @@ Render.focusBoxContent = function(entry,enableBack,enableRefresh) {
 		var screenshot1 = entry.screenshots[i];
 		if(screenshot1 != null) {
 			var imageClass = "box-images-" + i;
+			screenShots += "<a href=\"" + screenshot1 + "\" target=\"_blank\">";
 			screenShots += "<img src=\"" + screenshot1 + "\" class=\"" + imageClass + "\"/>";
+			screenShots += "</a>";
 		}
 	}
 	screenShots += "</div>";
@@ -3550,7 +3559,7 @@ Render.focusBoxContent = function(entry,enableBack,enableRefresh) {
 	var isOwned = Main.LOGGED_IN && Main.isOwned(appid);
 	var wishlistBtn = Main.LOGGED_IN ? Render.wishlistButton(appid,onWishlist,isOwned) : "";
 	var detailsBtn = Render.detailsButton(appid,entry.url);
-	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">\r\n\t\t\t\t\r\n\t\t\t\t<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">\r\n\t\t\t\t\t<p>" + selectToExplore + "</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"games-like\">" + gamesLike + "</div>\r\n\t\t\t\t\t<div id=\"search-wrapper\">\r\n\t\t\t\t\t\t<div class=\"search-container\" id=\"search-container\">\r\n\t\t\t\t\t\t\t<a href=\"javascript:Main.onClickFocusSearch();\">\r\n\t\t\t\t\t\t\t\t<h2>" + title + "</h2>\r\n\t\t\t\t\t\t\t\t<button id=\"button-search\" class=\"button-search-focus button-round\" onclick=\"trySearch()\">\r\n\t\t\t\t\t\t\t\t\t<img src=\"" + searchSvg + "\" class=\"search-icon-focus\"/>\r\n\t\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<hr>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-doodads\" id=\"" + doodadId + "\">" + discountBlock + "</div>\r\n\t\t\t\t<div class=\"box-buttons\" id=\"" + boxButtonsId1 + "\">\r\n\t\t\t\t\t" + wishlistBtn + "\r\n\t\t\t\t\t" + detailsBtn + "\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-tags-focus hide-fancy\" id=\"" + boxTagsId + "\">\r\n\t\t\t\t\t" + tagHTML + "\r\n\t\t\t\t</div>\r\n\t\t\t\t" + screenShots + "\r\n\t\t\t</div>";
+	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">\r\n\t\t\t\t\r\n\t\t\t\t<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">\r\n\t\t\t\t\t<p>" + selectToExplore + "</p>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"games-like\">" + gamesLike + "</div>\r\n\t\t\t\t\t<div id=\"search-wrapper\">\r\n\t\t\t\t\t\t<div class=\"search-container\" id=\"search-container\">\r\n\t\t\t\t\t\t\t<h2><a href=\"" + Std.string(entry) + ".url\">" + title + "</a></h2>\r\n\t\t\t\t\t\t\t<a href=\"javascript:Main.onClickFocusSearch();\">\r\n\t\t\t\t\t\t\t\t<h2 class=\"search-cursor\">&nbsp;</h2>\r\n\t\t\t\t\t\t\t\t<button id=\"button-search\" class=\"button-search-focus button-round\" onclick=\"trySearch()\">\r\n\t\t\t\t\t\t\t\t\t<img src=\"" + searchSvg + "\" class=\"search-icon-focus\"/>\r\n\t\t\t\t\t\t\t\t</button>\r\n\t\t\t\t\t\t\t</a>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t\t<hr>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-doodads\" id=\"" + doodadId + "\">" + discountBlock + "</div>\r\n\t\t\t\t<div class=\"box-buttons\" id=\"" + boxButtonsId1 + "\">\r\n\t\t\t\t\t" + wishlistBtn + "\r\n\t\t\t\t\t" + detailsBtn + "\r\n\t\t\t\t</div>\r\n\t\t\t\t<div class=\"box-tags-focus hide-fancy\" id=\"" + boxTagsId + "\">\r\n\t\t\t\t\t" + tagHTML + "\r\n\t\t\t\t</div>\r\n\t\t\t\t" + screenShots + "\r\n\t\t\t</div>";
 	return html;
 };
 Render.throbber = function(id,hide,position) {

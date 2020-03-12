@@ -2008,11 +2008,11 @@ HardwareRMA = {
 			switch ( result.eShippingAddressVerificationDetail )
 			{
 				case 4:
-					error_text = 'We cannot ship to the address you\'ve provided because parts of your address is missing or look invalid.';
+					error_text = 'We cannot ship to the address you\'ve provided because part of your address is missing or looks invalid.';
 					break;
 
 				case 3:
-					error_text = 'We cannot ship to the address you\'ve provided because parts of your address is too long.  Your combined name and each of the address fields can only be up to 35 characters long.';
+					error_text = 'We cannot ship to the address you\'ve provided because part of your address is too long.  Your combined name and each of the address fields can only be up to 35 characters long.';
 					break;
 
 				case 1:

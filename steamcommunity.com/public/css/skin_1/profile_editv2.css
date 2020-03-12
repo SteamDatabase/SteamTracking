@@ -331,6 +331,15 @@
 	margin: 10px 0;
 }
 
+.personaNameDisabledError {
+	color:#ff3333;
+	text-align: center;
+}
+
+.personaNameBanTimeEnd {
+	margin: 10px 0;
+}
+
 /* react-based profile privacy page */
 .ProfilePrivacyRoot
 {

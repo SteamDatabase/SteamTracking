@@ -2,6 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
+var CLSTAMP = "5749515";
 !(function(e) {
   function t(t) {
     for (
@@ -401,31 +402,28 @@
     function o() {
       return !!window.document;
     }
-    n.d(t, "c", function() {
+    n.d(t, "b", function() {
       return a;
     }),
-      n.d(t, "i", function() {
+      n.d(t, "h", function() {
         return s;
       }),
       n.d(t, "a", function() {
         return u;
       }),
-      n.d(t, "b", function() {
-        return c;
-      }),
-      n.d(t, "f", function() {
+      n.d(t, "e", function() {
         return p;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "g", function() {
         return m;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "f", function() {
         return h;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "c", function() {
         return _;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "d", function() {
         return d;
       });
     var i,
@@ -811,10 +809,10 @@
                 i.addEventListener("drop", this.OnDrop),
                 i.addEventListener("dragover", this.OnDragOver),
                 i.addEventListener("message", this.OnMessage),
-                m.c.LANGUAGE &&
+                m.b.LANGUAGE &&
                   i.document.documentElement.setAttribute(
                     "lang",
-                    p.a[m.c.LANGUAGE]
+                    p.a[m.b.LANGUAGE]
                   ),
                 (this.m_popup = i),
                 (this.m_element = a),
@@ -1903,7 +1901,7 @@
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
       })(f || (f = {}));
-    var v;
+    var v, E;
     !(function(e) {
       (e[(e.k_ENetworkDeviceStateNotPresent = 0)] =
         "k_ENetworkDeviceStateNotPresent"),
@@ -1919,7 +1917,12 @@
           "k_ENetworkDeviceStateConnected"),
         (e[(e.k_ENetworkDeviceStateRetrying = 6)] =
           "k_ENetworkDeviceStateRetrying");
-    })(v || (v = {}));
+    })(v || (v = {})),
+      (function(e) {
+        (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+          (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+          (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+      })(E || (E = {}));
   },
   mrSG: function(e, t, n) {
     "use strict";
@@ -2222,9 +2225,9 @@ and limitations under the License.
           (e.prototype.GetELanguageFallbackOrder = function() {
             var e = new Array();
             return (
-              e.push(Object(a.c)(s.c.LANGUAGE)),
-              (s.c.SUPPORTED_LANGUAGES || []).forEach(function(t) {
-                t.value != s.c.LANGUAGE && e.push(Object(a.c)(t.value));
+              e.push(Object(a.c)(s.b.LANGUAGE)),
+              (s.b.SUPPORTED_LANGUAGES || []).forEach(function(t) {
+                t.value != s.b.LANGUAGE && e.push(Object(a.c)(t.value));
               }),
               e
             );
@@ -2575,7 +2578,7 @@ and limitations under the License.
                   )
                 : e.account_mismatch
                 ? r.createElement(
-                    y,
+                    k,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     r.createElement(
                       "div",
@@ -2633,7 +2636,7 @@ and limitations under the License.
                     )
                   )
                 : r.createElement(
-                    y,
+                    k,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     r.createElement(
                       "div",
@@ -2694,7 +2697,7 @@ and limitations under the License.
           t
         );
       })(r.Component);
-    function y(e) {
+    function k(e) {
       return r.createElement(
         "div",
         { className: "ChatMessageInvite" },
@@ -2727,7 +2730,7 @@ and limitations under the License.
       );
     }
     window.AssertMsg = u.a;
-    var k,
+    var y,
       g,
       C,
       I = new a.a();
@@ -2763,17 +2766,17 @@ and limitations under the License.
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (k = n) : "shared" == e && (g = n);
+          "friendsui" == e ? (y = n) : "shared" == e && (g = n);
         else if ("shared" == e) C = n;
         else {
           var r = void 0,
             o = null,
             i = void 0,
             a = null;
-          void 0 !== k ? ((r = k), (o = n)) : (r = n),
+          void 0 !== y ? ((r = y), (o = n)) : (r = n),
             void 0 !== g ? ((i = g), (a = C)) : (i = C),
             s.b.InitFromObjects(r, o, i, a),
-            (k = void 0),
+            (y = void 0),
             (g = void 0),
             (C = void 0);
         }
@@ -2801,10 +2804,10 @@ and limitations under the License.
         }
         return (
           (e.InitFromAccountID = function(t) {
-            return new e(Number(t), a.c.EUNIVERSE, 1, i.n);
+            return new e(Number(t), a.b.EUNIVERSE, 1, i.n);
           }),
           (e.InitFromClanID = function(t) {
-            return new e(Number(t), a.c.EUNIVERSE, 7, 0);
+            return new e(Number(t), a.b.EUNIVERSE, 7, 0);
           }),
           (e.prototype.GetAccountID = function() {
             return this.m_ulSteamID.getLowBitsUnsigned();
@@ -2933,16 +2936,16 @@ and limitations under the License.
     "use strict";
     var r = n("1n9R");
     n.d(t, "a", function() {
-      return r.c;
+      return r.b;
     }),
       n.d(t, "d", function() {
-        return r.i;
-      }),
-      n.d(t, "c", function() {
         return r.h;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "c", function() {
         return r.g;
+      }),
+      n.d(t, "b", function() {
+        return r.f;
       });
   },
   ujHl: function(e, t, n) {

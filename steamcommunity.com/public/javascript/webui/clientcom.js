@@ -2,6 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
+var CLSTAMP = "5749515";
 !(function(t) {
   var e = {};
   function n(r) {
@@ -88,31 +89,28 @@
     function o() {
       return !!window.document;
     }
-    n.d(e, "c", function() {
+    n.d(e, "b", function() {
       return c;
     }),
-      n.d(e, "i", function() {
+      n.d(e, "h", function() {
         return u;
       }),
       n.d(e, "a", function() {
         return s;
       }),
-      n.d(e, "b", function() {
-        return a;
-      }),
-      n.d(e, "f", function() {
+      n.d(e, "e", function() {
         return l;
       }),
-      n.d(e, "h", function() {
+      n.d(e, "g", function() {
         return _;
       }),
-      n.d(e, "g", function() {
+      n.d(e, "f", function() {
         return p;
       }),
-      n.d(e, "d", function() {
+      n.d(e, "c", function() {
         return d;
       }),
-      n.d(e, "e", function() {
+      n.d(e, "d", function() {
         return m;
       });
     var i,
@@ -756,16 +754,16 @@ and limitations under the License.
     "use strict";
     var r = n("1n9R");
     n.d(e, "a", function() {
-      return r.c;
+      return r.b;
     }),
       n.d(e, "d", function() {
-        return r.i;
-      }),
-      n.d(e, "c", function() {
         return r.h;
       }),
-      n.d(e, "b", function() {
+      n.d(e, "c", function() {
         return r.g;
+      }),
+      n.d(e, "b", function() {
+        return r.f;
       });
   },
   x0hG: function(t, e, n) {

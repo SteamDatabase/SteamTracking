@@ -2722,6 +2722,61 @@ html, body { height:100%; }
 	overflow-y: auto;
 }
 
+.micro_trailer_wrapper
+{
+	overflow: auto;
+}
+
+.micro_trailer_area
+{
+	background-color: #323233;
+	border: 1px solid #373737;
+	display: inline-block;
+	padding: 8px;
+	overflow: auto;
+}
+
+.micro_trailer_label
+{
+	margin-bottom: 4px;
+	color: #67c1f5;
+	font-family: Tahoma,Arial,Sans-serif;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.micro_trailer_video_and_text
+{
+	width: 180px;
+	float: left;
+	margin: 0px 10px 10px 10px;
+}
+
+.micro_trailer_video
+{
+	width: 180px;
+	height: 101px;
+	color: #67c1f5;
+	position: relative;
+	background-color: #333333;
+	border: 2px dashed #67c1f5;
+	box-shadow: inset 0px 0px 16px 0px #67c1f5;
+}
+
+.micro_trailer_checkbox_container
+{
+	position: absolute;
+	top: 1px;
+	left: 1px;
+	margin: 2px;
+	background-color: #000000;
+}
+
+.micro_trailer_checkbox
+{
+	visibility: hidden;
+}
+
 .add_dlc_msg
 {
 

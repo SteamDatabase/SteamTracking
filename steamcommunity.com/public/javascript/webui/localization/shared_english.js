@@ -132,6 +132,13 @@ LocalizationReady("shared", "english", {
   EventCalendar_MainLoginPrompt: "Sign in to see your personal News Hub",
   EventCalendar_NoMoreFutureEvents: "No more matching posts scheduled yet",
   EventCalendar_NoMorePastEvents: "No older matching posts found",
+  EventCalendar_GameSearch: "Games Search",
+  EventCalendar_GameSearch_NoneFound: "No Matches Found",
+  EventCalendar_GlobalCalendar_Action: "Return to News Hub",
+  EventCalendar_SpecificCalendar: "%1$s %2$s News Hub",
+  EventCalendar_Goto_SpecificCalendar: "Go to %1$s News Hub",
+  EventCalendar_SingleAppIsMuted:
+    "Note: This game is muted and will not show up in your personalized news hub.",
 
   SteamLabs: "Steam Labs",
   SteamLabs_ExperimentNumber: "Experiment %1$s",
@@ -154,11 +161,22 @@ LocalizationReady("shared", "english", {
   EventCalendar_MuchLater: "much later",
   EventCalendar_MuteApp: "Mute App",
   EventCalendar_MuteApp_Title: "Mute %1$s",
+  EventCalendar_Ignore: "Ignore",
+  EventCalendar_IgnoreApp: "Ignore %1$s",
+  EventCalendar_IgnoreApp_ttip:
+    "Ignored titles will not be recommended to you and will not appear in featured areas.",
+  EventCalendar_IgnoreApp_newhub:
+    "The News Hub will apply your ignore settings and prevent games ignored on the store from appearing your news hub. You can manage ignored games here:",
+  EventCalendar_UnignoreApp: "Unignore %1$s",
+  EventCalendar_UnMuteApp_Title: "Unmute %1$s",
   EventCalendar_MuteApp_ttip:
-    "Remove this game from your News Hub and block future communications.",
+    "Removes this game from your News Hub and block future communications.",
+  EventCalendar_UnMuteApp_ttip:
+    "Restore this game to your News Hub and unblock future communications.",
   EventCalendar_MuteApp_details:
-    "Remove '%1$s' from appearing in your News Hub and block all future communications. Muted content decisions are always reverseable by visiting this page:",
+    "Remove '%1$s' from appearing in your News Hub and block all future communications. Muted content decisions are always reversible by visiting this page:",
   EventCalendar_ManageMutedApps: "Manage Muted Apps",
+  EventCalendar_ManageStorePref: "Manage Store Preferences",
   EventCalendar_MuteApp_Unknown: "Unknown",
   EVentCalendar_Hide_EventType: "Hide all '%1$s' type posts",
   EventCalender_Reason_library: "This game is in your library",
@@ -166,6 +184,7 @@ LocalizationReady("shared", "english", {
   EventCalender_Reason_wishlist: "This game is in your wishlist",
   EventCalender_Reason_recommended: "This game is recommended for you",
   EventCalender_Reason_steam: "This post is from the Steam Platform",
+  EventCalender_Reason_topx: "Game is in the Top Sellers",
   EventCalender_Hide_Reason_library: "Hide posts from games in your library",
   EventCalender_Hide_Reason_following:
     "Hide posts from games you are following",
@@ -173,6 +192,10 @@ LocalizationReady("shared", "english", {
   EventCalender_Hide_Reason_recommended:
     "Hide posts from games recommended for you",
   EventCalender_Hide_Reason_steam: "Hide posts from the Steam Platform",
+  EventCalender_Hide_Reason_topx: "Hide posts from the Top Sellers",
+
+  EventCalendar_ForceDesktopView: "Request desktop view",
+  EventCalendar_ShowResponsiveView: "Request responsive view",
 
   EventCalendar_EventTypeGroup_news: "News",
   EventCalendar_EventTypeGroup_ttip_news:
@@ -216,6 +239,9 @@ LocalizationReady("shared", "english", {
     "This is a game we think you would like",
   EventCalendar_GameSource_steam: "steam",
   EventCalendar_GameSource_ttip_steam: "Include posts about the Steam platform",
+  EventCalendar_GameSource_topx: "Top Sellers",
+  EventCalendar_GameSource_ttip_topx:
+    "Include posts about games from the regional top sellers lists",
   EventCalendar_GameSource_EventExplanation_ttip_steam:
     "This is a post about Steam",
 
@@ -322,6 +348,8 @@ LocalizationReady("shared", "english", {
   EventDisplay_DeleteEvent_Comment:
     "Also delete the discussion forum comment thread for this event?",
   EventDisplay_SocialTitle: "More About This Game",
+  EventDisplay_Sketchfab: "Sketchfab Model",
+  EventDisplay_SketchFab_Error_Network: "Could not contact Sketchfab",
 
   EventEditor_Publish_VisibleNow: "Make Visible Now",
   EventEditor_Publish_VisibleNow_ttip:
@@ -963,7 +991,7 @@ LocalizationReady("shared", "english", {
 
   Store_AddToCart: "Add to Cart",
 
-  YouTubePlayer_Loading: "Loading Youtube...",
+  YouTubePlayer_Loading: "Loading YouTube...",
 
   home_page_live_broadcast: "Live",
   StoreBroadcast_Hide_Tooltip: "Show/hide the live broadcast",

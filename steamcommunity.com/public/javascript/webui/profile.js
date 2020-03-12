@@ -2,6 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
+var CLSTAMP = "5749515";
 !(function(e) {
   function t(t) {
     for (
@@ -693,31 +694,28 @@
     function o() {
       return !!window.document;
     }
-    n.d(t, "c", function() {
+    n.d(t, "b", function() {
       return c;
     }),
-      n.d(t, "i", function() {
+      n.d(t, "h", function() {
         return a;
       }),
       n.d(t, "a", function() {
         return s;
       }),
-      n.d(t, "b", function() {
-        return l;
-      }),
-      n.d(t, "f", function() {
+      n.d(t, "e", function() {
         return m;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "g", function() {
         return p;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "f", function() {
         return h;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "c", function() {
         return d;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "d", function() {
         return f;
       });
     var i,
@@ -1796,7 +1794,7 @@
               Object(h.c)("#ContextMenu_Copy")
             )
           ),
-        d.c.IN_CLIENT &&
+        d.b.IN_CLIENT &&
           s &&
           t.push(
             i.createElement(
@@ -2070,10 +2068,10 @@
                 i.addEventListener("drop", this.OnDrop),
                 i.addEventListener("dragover", this.OnDragOver),
                 i.addEventListener("message", this.OnMessage),
-                p.c.LANGUAGE &&
+                p.b.LANGUAGE &&
                   i.document.documentElement.setAttribute(
                     "lang",
-                    m.a[p.c.LANGUAGE]
+                    m.a[p.b.LANGUAGE]
                   ),
                 (this.m_popup = i),
                 (this.m_element = c),
@@ -3748,31 +3746,35 @@
         })
       );
     }
-    function h() {
-      return o.createElement(
-        "svg",
-        {
-          xmlns: "http://www.w3.org/2000/svg",
-          className: "SVGIcon_Button SVGIcon_MagnifyingGlass",
-          version: "1.1",
-          x: "0px",
-          y: "0px",
-          viewBox: "0 0 100 100"
-        },
+    function h(e) {
+      var t = "SVGIcon_Button SVGIcon_MagnifyingGlass";
+      return (
+        e.className && (t += " " + e.className),
         o.createElement(
-          "g",
-          { transform: "translate(0,-952.36218)" },
-          o.createElement("path", {
-            className: "ColorSelector",
-            d:
-              "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
-            fill: "#ffffff",
-            fillOpacity: "1",
-            stroke: "none",
-            visibility: "visible",
-            display: "inline",
-            overflow: "visible"
-          })
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: t,
+            version: "1.1",
+            x: "0px",
+            y: "0px",
+            viewBox: "0 0 100 100"
+          },
+          o.createElement(
+            "g",
+            { transform: "translate(0,-952.36218)" },
+            o.createElement("path", {
+              className: "ColorSelector",
+              d:
+                "m 40.99855,964.36216 c -15.9798,0 -28.9986,13.01864 -28.9986,28.99862 0,15.97992 13.0188,28.99862 28.9986,28.99862 6.9189,0 13.2881,-2.4349 18.2803,-6.4997 l 23.5927,23.6239 c 1.1714,1.1714 3.0784,1.1715 4.2498,0 1.1716,-1.1715 1.1716,-3.0783 0,-4.2498 l -23.6239,-23.5926 c 4.0649,-4.9923 6.4997,-11.3615 6.4997,-18.28042 0,-15.97998 -13.0187,-28.99862 -28.9986,-28.99862 z m 0,5.99972 c 12.7374,0 22.9989,10.26145 22.9989,22.9989 0,12.73732 -10.2615,22.99892 -22.9989,22.99892 -12.7374,0 -22.9989,-10.2616 -22.9989,-22.99892 0,-12.73745 10.2615,-22.9989 22.9989,-22.9989 z",
+              fill: "#ffffff",
+              fillOpacity: "1",
+              stroke: "none",
+              visibility: "visible",
+              display: "inline",
+              overflow: "visible"
+            })
+          )
         )
       );
     }
@@ -6938,7 +6940,7 @@
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
       })(v || (v = {}));
-    var _;
+    var _, E;
     !(function(e) {
       (e[(e.k_ENetworkDeviceStateNotPresent = 0)] =
         "k_ENetworkDeviceStateNotPresent"),
@@ -6954,7 +6956,12 @@
           "k_ENetworkDeviceStateConnected"),
         (e[(e.k_ENetworkDeviceStateRetrying = 6)] =
           "k_ENetworkDeviceStateRetrying");
-    })(_ || (_ = {}));
+    })(_ || (_ = {})),
+      (function(e) {
+        (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+          (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+          (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+      })(E || (E = {}));
   },
   mrSG: function(e, t, n) {
     "use strict";
@@ -7257,9 +7264,9 @@ and limitations under the License.
           (e.prototype.GetELanguageFallbackOrder = function() {
             var e = new Array();
             return (
-              e.push(Object(c.c)(a.c.LANGUAGE)),
-              (a.c.SUPPORTED_LANGUAGES || []).forEach(function(t) {
-                t.value != a.c.LANGUAGE && e.push(Object(c.c)(t.value));
+              e.push(Object(c.c)(a.b.LANGUAGE)),
+              (a.b.SUPPORTED_LANGUAGES || []).forEach(function(t) {
+                t.value != a.b.LANGUAGE && e.push(Object(c.c)(t.value));
               }),
               e
             );
@@ -7392,16 +7399,16 @@ and limitations under the License.
     "use strict";
     var r = n("1n9R");
     n.d(t, "a", function() {
-      return r.c;
+      return r.b;
     }),
       n.d(t, "d", function() {
-        return r.i;
-      }),
-      n.d(t, "c", function() {
         return r.h;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "c", function() {
         return r.g;
+      }),
+      n.d(t, "b", function() {
+        return r.f;
       });
   },
   twdX: function(e, t, n) {

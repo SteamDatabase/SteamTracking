@@ -668,6 +668,15 @@ a.chat_ban_admin {
 	margin: 10px 0;
 }
 
+.personaNameDisabledError {
+	color:#ff3333;
+	text-align: center;
+}
+
+.personaNameBanTimeEnd {
+	margin: 10px 0;
+}
+
 @media screen and (max-width: 500px)
 {
 	html.responsive .formRow .formRowTitle {

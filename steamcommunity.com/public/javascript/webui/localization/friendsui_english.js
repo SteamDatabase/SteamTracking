@@ -1025,6 +1025,8 @@ LocalizationReady("friendsui", "english", {
     "Very frequent changes to  profile names are not allowed. Please try again in a few minutes.",
   Friends_NameChangeDenied_Info:
     "Invalid profile name. Please choose another name and try again.",
+  Friends_NameChangeCooldown_Info:
+    "You are currently unable to set a profile name.",
 
   Settings: "Settings",
   Settings_Capital: "SETTINGS",
