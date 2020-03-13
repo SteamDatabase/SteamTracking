@@ -62792,9 +62792,9 @@
     var r = n("mrSG"),
       o = n("vDqi"),
       i = n.n(o),
-      c = n("2vnA"),
-      b = n("lkRc"),
-      s = (function() {
+      a = n("2vnA"),
+      c = n("lkRc"),
+      b = (function() {
         function e(e) {
           (this.m_appidList = new Array()),
             (this.m_socialList = new Array()),
@@ -62865,17 +62865,17 @@
               switch (e) {
                 case "publisher":
                   return (
-                    b.b.STORE_BASE_URL + "publisher/" + this.m_strVanity + "/"
+                    c.b.STORE_BASE_URL + "publisher/" + this.m_strVanity + "/"
                   );
                 case "franchise":
                   return (
-                    b.b.STORE_BASE_URL + "franchise/" + this.m_strVanity + "/"
+                    c.b.STORE_BASE_URL + "franchise/" + this.m_strVanity + "/"
                   );
               }
-              return b.b.STORE_BASE_URL + "developer/" + this.m_strVanity + "/";
+              return c.b.STORE_BASE_URL + "developer/" + this.m_strVanity + "/";
             }
             return (
-              b.b.STORE_BASE_URL +
+              c.b.STORE_BASE_URL +
               "curator/" +
               this.m_clanSteamID.GetAccountID() +
               "/"
@@ -62893,16 +62893,16 @@
           (e.prototype.AdjustFollower = function(e) {
             this.m_nFollowers += e;
           }),
-          Object(r.c)([c.w], e.prototype, "m_appidList", void 0),
-          Object(r.c)([c.w], e.prototype, "m_nFollowers", void 0),
+          Object(r.c)([a.w], e.prototype, "m_appidList", void 0),
+          Object(r.c)([a.w], e.prototype, "m_nFollowers", void 0),
           e
         );
       })(),
-      M = n("kLLr");
+      s = n("kLLr");
     n.d(t, "a", function() {
-      return a;
+      return p;
     });
-    var a = new ((function() {
+    var p = new ((function() {
       function p() {
         (this.m_mapClanToCreatorHome = new Map()),
           (this.m_mapAppToCreatorIDList = new Map()),
@@ -62911,20 +62911,26 @@
       return (
         (p.prototype.LazyInit = function() {
           var a = this;
-          this.m_bLoadedFromConfig ||
-            (Object(c.z)(function() {
-              var e = Object(b.e)("creatorhome", "application_config");
-              a.ValidateStoreDefault(e) &&
-                e.forEach(function(e) {
-                  var t = Number(e.creator_clan_id),
-                    n = M.a.InitFromClanID(t),
-                    o = new s(n);
-                  o.Initialize(e),
-                    (o.m_promise = p.GetAsPromise(o)),
-                    a.m_mapClanToCreatorHome.set(t, o);
-                });
-            }),
-            (this.m_bLoadedFromConfig = !0));
+          if (!this.m_bLoadedFromConfig) {
+            var e = Object(c.e)("creatorhome", "application_config");
+            this.ValidateStoreDefault(e) &&
+              e.forEach(function(e) {
+                var t = Number(e.creator_clan_id),
+                  n = s.a.InitFromClanID(t),
+                  o = new b(n);
+                o.Initialize(e),
+                  (o.m_promise = p.GetAsPromise(o)),
+                  a.m_mapClanToCreatorHome.set(t, o);
+              });
+            var t = Object(c.e)("creatorhomeforapp", "application_config");
+            this.ValidateStoreDefaultAppList(t) &&
+              t.forEach(function(e) {
+                a.m_mapAppToCreatorIDList.has(e.appid) ||
+                  a.m_mapAppToCreatorIDList.set(e.appid, new Array()),
+                  a.m_mapAppToCreatorIDList.get(e.appid).push(e);
+              }),
+              (this.m_bLoadedFromConfig = !0);
+          }
         }),
         (p.GetAsPromise = function(t) {
           return Object(r.b)(this, void 0, void 0, function() {
@@ -62945,6 +62951,21 @@
             ("string" == typeof t[0].name &&
               ("string" == typeof t[0].creator_clan_id ||
                 "number" == typeof t[0].creator_clan_id))
+          );
+        }),
+        (p.prototype.ValidateStoreDefaultAppList = function(e) {
+          var t = e;
+          return (
+            !!(
+              t &&
+              Array.isArray(t) &&
+              0 < t.length &&
+              "object" == typeof t[0]
+            ) &&
+            ("number" == typeof t[0].clan_account_id &&
+              0 < t[0].clan_account_id &&
+              "number" == typeof t[0].appid &&
+              0 < t[0].appid)
           );
         }),
         (p.prototype.BHasCreatorHomeLoaded = function(e) {
@@ -62969,7 +62990,7 @@
                     this.LazyInit(),
                     this.m_mapClanToCreatorHome.has(n.GetAccountID())
                       ? [3, 2]
-                      : (((t = new s(n)).m_promise = this.InternalCreatorHome(
+                      : (((t = new b(n)).m_promise = this.InternalCreatorHome(
                           t,
                           o
                         )),
@@ -62995,9 +63016,9 @@
               switch (e.label) {
                 case 0:
                   return (
-                    (t = { get_appids: !0, l: b.b.LANGUAGE }),
+                    (t = { get_appids: !0, l: c.b.LANGUAGE }),
                     (n =
-                      b.b.STORE_BASE_URL +
+                      c.b.STORE_BASE_URL +
                       "curator/" +
                       a.GetClanAccountID() +
                       "/ajaxgetcreatorhomeinfo"),
@@ -63021,7 +63042,7 @@
                       ? [3, 2]
                       : ((t = { appid: a }),
                         (n =
-                          b.b.STORE_BASE_URL +
+                          c.b.STORE_BASE_URL +
                           "events/ajaxgetcreatorhomeidforapp"),
                         [
                           4,
@@ -63047,12 +63068,13 @@
             ? this.m_mapAppToCreatorIDList.get(e)
             : [];
         }),
-        Object(r.c)([c.w], p.prototype, "m_mapClanToCreatorHome", void 0),
-        Object(r.c)([c.w], p.prototype, "m_mapAppToCreatorIDList", void 0),
+        Object(r.c)([a.w], p.prototype, "m_mapClanToCreatorHome", void 0),
+        Object(r.c)([a.w], p.prototype, "m_mapAppToCreatorIDList", void 0),
+        Object(r.c)([a.f], p.prototype, "LazyInit", null),
         p
       );
     })())();
-    window.g_CreatorHomeStore = a;
+    window.g_CreatorHomeStore = p;
   },
   umRa: function(e, t, n) {
     e.exports = {
