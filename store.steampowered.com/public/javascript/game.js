@@ -605,6 +605,12 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 				RequestCurrentUserRecommendationVotes( recommendationIDs );
 			}
 		}
+		else
+		{
+			ShowAlertDialog( 'Error', 'There was an error trying to process your request: ' + data.error );
+			$J( "#Reviews_" + context ).show();
+			$J( "#LoadingMoreReviews" + context ).remove();
+		}
 	} );
 }
 
