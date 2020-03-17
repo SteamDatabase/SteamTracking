@@ -1462,6 +1462,9 @@ function ShowFilteredReviews()
 {
 	UpdateActiveFilters();
 
+	if ( $J( "#review_appid" ).length == 0 )
+		return;
+
 	var appid = $J( "#review_appid" ).val();
 	var context = $J( "#review_context" ).val();
 	var defaultDayRange = $J( "#review_default_day_range" ).val();
