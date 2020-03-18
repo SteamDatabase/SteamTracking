@@ -34,15 +34,15 @@
 				<Panel id="ParentalBlockPanel" class="ParentalBlockPanel" tabindex="auto" selectionpos="auto">
 					<ParentalGridItem />
 				</Panel>
-				<CommunityHubContentPanel id="CommunityContentAllPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
-				<CommunityHubContentPanel id="CommunityContentScreenshotsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
-				<CommunityHubContentPanel id="CommunityContentArtworkPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
-				<CommunityHubContentPanel id="CommunityContentVideosPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
-				<CommunityHubContentPanel id="CommunityContentBroadcastsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
-				<CommunityHubContentPanel id="CommunityContentWorkshopPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
-				<CommunityHubContentPanel id="CommunityContentNewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
-				<CommunityHubContentPanel id="CommunityContentGuidesPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
-				<CommunityHubContentPanel id="CommunityContentReviewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentAllPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="false" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentScreenshotsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="false" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentArtworkPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="false" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentVideosPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="false" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentBroadcastsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="false" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentWorkshopPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="false" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentNewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="false" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentGuidesPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="false" oncancel="LibraryDetailsFocusMenuRow();" />
+				<CommunityHubContentPanel id="CommunityContentReviewsPanel" class="LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="false" oncancel="LibraryDetailsFocusMenuRow();" />
 
 				<Panel id="ContentsRow" class="ContentsRow LibraryDetailsSectionPanel" tabindex="auto" selectionpos="auto" rememberchildfocus="true" oncancel="LibraryDetailsFocusMenuRow();"  >
 					<Panel class="LibraryDetailsScrollableArea" overscroll-y="150">

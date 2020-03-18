@@ -158,7 +158,7 @@ This should take less than a minute."
 "SteamUI_CreatingAccount"	"Creating account..."
 
 "SteamUI_InstallServiceTitle" "Steam Service Error"
-"SteamUI_InstallServiceText" "The Steam service component is not working properly on this computer.\nReinstalling the Steam service requires administrator privileges."
+"SteamUI_InstallServiceText" "The Steam Service on your machine requires some maintanence.\nThis service helps Steam install or update games, enables anti-cheat detection in some titles and assists with other system level tasks.\nReinstalling the Steam service requires administrator privileges."
 "SteamUI_InstallServiceOk" "Install Service"
 "SteamUI_InstallServiceCancel" "Cancel"
 
@@ -4575,7 +4575,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_AudioChannel_Min4" "Quadraphonic"
 "Steam_Settings_Streaming_AudioChannel_Min6" "5.1"
 "Steam_Settings_Streaming_ControllerOverlayHotkey"	"Controller Overlay button (hold to activate)"
-"Steam_Settings_Streaming_ControllerOverlayHotkeyAuto"	"Auto Detect"
+"Steam_Settings_Streaming_ControllerOverlayHotkeyAuto"	"Default Button"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyStart"	"Start Button"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyBack"	"Back Button"
 "Steam_Settings_Streaming_ControllerOverlayHotkeyGuide"	"Guide Button"
