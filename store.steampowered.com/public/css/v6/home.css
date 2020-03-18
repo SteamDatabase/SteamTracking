@@ -2466,6 +2466,32 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
     flex-direction: row;
 }
 
+@media screen and (max-width: 910px) {
+    html.responsive .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+        padding-bottom: 50px;
+    }
+    html.responsive .labs_cluster.home_ctn {
+        display: none;
+    }
+}
+@media screen and (max-width: 700px)
+{
+
+    html.responsive .recommended_by_steam_labs_ctn .lower_block {
+        flex-direction: column;
+    }
+    html.responsive body.v6 .recommended_by_steam_labs_ctn .header_inline_reason {
+        float: left;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        font-size: 12px;
+    }
+    html.responsive .recommended_by_steam_labs_ctn .lower_right_block {
+        margin-bottom: 6px;
+    }
+
+}
+
 .recommended_by_steam_labs_ctn .lower_left_block {
     padding-top: 8px;
 	flex-grow: 1;
