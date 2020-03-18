@@ -107,6 +107,11 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	clear: left;	/* in responsive mode, will drop below the game logo */
 }
 
+
+.review_box .content.failed_content_check {
+	font-style: italic;
+}
+
 .review_box .posted {
 	font-size: 10px;
 	font-style: italic;

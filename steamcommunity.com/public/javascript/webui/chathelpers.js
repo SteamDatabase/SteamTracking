@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5757552";
+var CLSTAMP = "5762109";
 !(function(e) {
   function t(t) {
     for (
@@ -1901,28 +1901,36 @@ var CLSTAMP = "5757552";
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
       })(f || (f = {}));
-    var v, E;
+    var v, E, b, S;
     !(function(e) {
-      (e[(e.k_ENetworkDeviceStateNotPresent = 0)] =
-        "k_ENetworkDeviceStateNotPresent"),
-        (e[(e.k_ENetworkDeviceStateFailed = 1)] =
-          "k_ENetworkDeviceStateFailed"),
-        (e[(e.k_ENetworkDeviceStateDisconnected = 2)] =
-          "k_ENetworkDeviceStateDisconnected"),
-        (e[(e.k_ENetworkDeviceStateDisconnecting = 3)] =
-          "k_ENetworkDeviceStateDisconnecting"),
-        (e[(e.k_ENetworkDeviceStateConnecting = 4)] =
-          "k_ENetworkDeviceStateConnecting"),
-        (e[(e.k_ENetworkDeviceStateConnected = 5)] =
-          "k_ENetworkDeviceStateConnected"),
-        (e[(e.k_ENetworkDeviceStateRetrying = 6)] =
-          "k_ENetworkDeviceStateRetrying");
+      (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
+        (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+        (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
     })(v || (v = {})),
       (function(e) {
-        (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
-          (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-          (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-      })(E || (E = {}));
+        (e[(e.Unknown = 0)] = "Unknown"),
+          (e[(e.Wired = 1)] = "Wired"),
+          (e[(e.Wireless = 2)] = "Wireless");
+      })(E || (E = {})),
+      (function(e) {
+        (e[(e.NotPresent = 0)] = "NotPresent"),
+          (e[(e.Failed = 1)] = "Failed"),
+          (e[(e.Disconnected = 2)] = "Disconnected"),
+          (e[(e.Disconnecting = 3)] = "Disconnecting"),
+          (e[(e.Connecting = 4)] = "Connecting"),
+          (e[(e.Connected = 5)] = "Connected"),
+          (e[(e.Retrying = 6)] = "Retrying");
+      })(b || (b = {})),
+      (function(e) {
+        (e[(e.None = 0)] = "None"),
+          (e[(e.StaticWep = 1)] = "StaticWep"),
+          (e[(e.DynamicWep = 2)] = "DynamicWep"),
+          (e[(e.Wpa = 4)] = "Wpa"),
+          (e[(e.WpaEnterprise = 8)] = "WpaEnterprise"),
+          (e[(e.Wpa2 = 16)] = "Wpa2"),
+          (e[(e.Wpa2Enterprise = 32)] = "Wpa2Enterprise"),
+          (e[(e.Unsupported = 32768)] = "Unsupported");
+      })(S || (S = {}));
   },
   mrSG: function(e, t, n) {
     "use strict";
@@ -2578,7 +2586,7 @@ and limitations under the License.
                   )
                 : e.account_mismatch
                 ? r.createElement(
-                    k,
+                    y,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     r.createElement(
                       "div",
@@ -2636,7 +2644,7 @@ and limitations under the License.
                     )
                   )
                 : r.createElement(
-                    k,
+                    y,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     r.createElement(
                       "div",
@@ -2697,7 +2705,7 @@ and limitations under the License.
           t
         );
       })(r.Component);
-    function k(e) {
+    function y(e) {
       return r.createElement(
         "div",
         { className: "ChatMessageInvite" },
@@ -2730,8 +2738,8 @@ and limitations under the License.
       );
     }
     window.AssertMsg = u.a;
-    var y,
-      g,
+    var g,
+      k,
       C,
       I = new a.a();
     function L(e) {
@@ -2766,18 +2774,18 @@ and limitations under the License.
       }),
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
-          "friendsui" == e ? (y = n) : "shared" == e && (g = n);
+          "friendsui" == e ? (g = n) : "shared" == e && (k = n);
         else if ("shared" == e) C = n;
         else {
           var r = void 0,
             o = null,
             i = void 0,
             a = null;
-          void 0 !== y ? ((r = y), (o = n)) : (r = n),
-            void 0 !== g ? ((i = g), (a = C)) : (i = C),
+          void 0 !== g ? ((r = g), (o = n)) : (r = n),
+            void 0 !== k ? ((i = k), (a = C)) : (i = C),
             s.b.InitFromObjects(r, o, i, a),
-            (y = void 0),
             (g = void 0),
+            (k = void 0),
             (C = void 0);
         }
       });

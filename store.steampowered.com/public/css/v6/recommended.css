@@ -2058,6 +2058,9 @@ html.touch .similar_grid_item .buttons {
 .china_needs_approval.review_box .content {
 	font-style: italic;
 }
+.failed_content_check.review_box .content {
+	font-style: italic;
+}
 
 
 .review_box .content b {
@@ -2150,6 +2153,12 @@ html.touch .similar_grid_item .buttons {
 	font-size: 11px;
 	font-style: normal;
 	color: #AB9569;
+}
+.review_box .receivedCompensation {
+	margin: 0px 0px 8px;
+	font-size: 11px;
+	font-style: normal;
+	color: ##DD8763;
 }
 
 .review_box .hr {

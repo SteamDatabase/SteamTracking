@@ -4077,6 +4077,13 @@ ul.attached_file_list {
 	color: #66c0f4;
 }
 
+.help_important_info_box {
+	border:1px solid rgb(204, 81, 99);
+	background-color: #1d2a3b;
+	padding: 10px;
+	margin-top: 10px;
+}
+
 #validate_email_error_contents {
 	color: red;
 }

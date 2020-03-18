@@ -140,6 +140,10 @@ select {
 
 		}
 
+.review_area_content.failed_content_check {
+	font-style: italic;
+}
+
 #ReviewEdit {
 	margin-right: 6px;
 }
@@ -179,6 +183,12 @@ select {
 .received_compensation {
 	font-size: 11px;
 	color: #AB9569;
+	margin-top: 5px;
+}
+
+.ratingSummaryBlock .refunded {
+	font-size: 11px;
+	color: #DD8763;
 	margin-top: 5px;
 }
 
@@ -331,7 +341,8 @@ select {
 	border-color: #4c2c2a;
 }
 
-.notification.flagged_by_developer
+.notification.flagged_by_developer,
+.notification.failed_content_check
 {
 	color: #ffffff;
 	background-color: #c69c5f;

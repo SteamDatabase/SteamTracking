@@ -2759,7 +2759,7 @@ html, body { height:100%; }
 	color: #67c1f5;
 	position: relative;
 	background-color: #333333;
-	border: 2px dashed #67c1f5;
+	border: 2px solid #67c1f5;
 	box-shadow: inset 0px 0px 16px 0px #67c1f5;
 }
 

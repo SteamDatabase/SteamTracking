@@ -130,8 +130,8 @@ LocalizationReady("shared", "english", {
   EventCalendar_DisabledFilter_LoginPrompt:
     "Sign in to enable these categories",
   EventCalendar_MainLoginPrompt: "Sign in to see your personal News Hub",
-  EventCalendar_NoMoreFutureEvents: "No more matching posts scheduled yet",
-  EventCalendar_NoMorePastEvents: "No older matching posts found",
+  EventCalendar_NoMoreFutureEvents: "No later posts found",
+  EventCalendar_NoMorePastEvents: "No older posts found",
   EventCalendar_GameSearch: "Games Search",
   EventCalendar_GameSearch_NoneFound: "No Matches Found",
   EventCalendar_GlobalCalendar_Action: "Return to News Hub",

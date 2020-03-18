@@ -183,7 +183,7 @@ CLoginPromptManager.prototype.HighlightFailure = function( msg )
 };
 
 
-//Refresh the catpcha image 
+//Refresh the catpcha image
 CLoginPromptManager.prototype.RefreshCaptcha = function()
 {
 	var _this = this;
@@ -367,7 +367,11 @@ CLoginPromptManager.prototype.OnRSAKeyResponse = function( results )
 	{
 		if ( results.message )
 		{
-			this.HighlightFailure( results.message );
+			ShowAlertDialog( 'Error', results.message );
+		}
+		else
+		{
+			ShowAlertDialog( 'Error', 'There was a problem communicating with the Steam servers.  Please try again later.' );
 		}
 
 		$J('#login_btn_signin').show();

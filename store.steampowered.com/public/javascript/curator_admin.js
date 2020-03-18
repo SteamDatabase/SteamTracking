@@ -1215,6 +1215,11 @@ function CustomizeCreatedApps( elForm )
 	CallFunctionFromForm( elForm, [ 'appid', 'blurb', 'link_url' ], UpdateCustomizationCreatedApp );
 }
 
+function ManageRSSFeed( elForm )
+{
+	CallFunctionFromForm( elForm, [ 'lang', 'rss_url' ], UpdateRSSFeed );
+}
+
 function UnlinkedAppFromCreatorHomeAjaxAction( appid )
 {
 	$J.ajax ( {
@@ -1321,6 +1326,32 @@ function UpdateCustomizationCreatedApp( appid, blurb, link_url )
 		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, errorText ) );
 	});
 
+}
+
+function UpdateRSSFeed( lang, rss_url )
+{
+	$J.ajax ( {
+		url: g_strCuratorAdminURL + 'ajaxmanagerssfeed/',
+		data: {
+			lang: lang,
+			rss_url: rss_url,
+			sessionid: g_sessionID
+		},
+		dataType: 'json',
+		type: 'POST'
+	} ).done( function ( data )
+	{
+		$J( '#creatorhome_managemygame_success' ).text( 'Save successful.' ).show().delay(5000).fadeOut();
+	}).fail( function( data ){
+		var errorText = "";
+		try {
+			response = JSON.parse(data.responseText);
+			errorText = response.success;
+		} catch ( SyntaxError ) {
+			errorText = data.responseText;
+		}
+		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, errorText ) );
+	});
 }
 
 function CloneList()

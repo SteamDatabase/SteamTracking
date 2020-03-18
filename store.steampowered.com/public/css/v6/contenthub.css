@@ -79,6 +79,57 @@ body.tag_page .content_hub h2.pageheader {
 	display: block;
 }
 
+.page_background_holder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.content_page_takeover_link {
+    position: relative;
+}
+.content_page_takeover_link a {
+    display: block;
+}
+
+@media screen and (max-width: 910px)
+{
+    body.responsive_page .contenthub_page_background.has_takeover .fullscreen-bg__video {
+        height: 46vw;
+    }
+    body.responsive_page .page_background_holder {
+        height: 46vw !important;
+        background-size: cover !important;
+    }
+    .contenthub_page_background.has_takeover .contenthub_page_takeover_sizer {
+        height: 46vw !important;
+    }
+    .contenthub_page_body_ctn.has_takeover .contenthub_page_takeover_sizer img {
+        height: 46vw !important;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+    html.responsive div.mobile_video_set .fullscreen-bg__video_mobile {
+        display: block;
+        height: 70vw !important;
+        background-size: cover;
+    }
+    html.responsive div.mobile_video_set .fullscreen-bg__video {
+        display: none;
+    }
+    html.responsive .contenthub_page_background.has_takeover.mobile_static_set .contenthub_page_takeover_sizer, html.responsive .contenthub_page_background.has_takeover.mobile_video_set .contenthub_page_takeover_sizer {
+        height: 70vw !important;
+    }
+
+}
+
+
 .contenthub_page .tabbar_ctn {
 	box-shadow: 0 5px 0 -1px #214b6b;
 	margin-bottom: 9px;

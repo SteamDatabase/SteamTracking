@@ -1130,19 +1130,14 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
     padding-top: 10px;
     padding-bottom: 10px; }
   .login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8 {
-    font-size: 62px;
-    padding-top: 6px;
-    padding-bottom: 14px; }
+    font-size: 36px;
+    font-family: monospace; }
     .login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8.login_MedPass_2pUx4 {
-      font-size: 32px;
-      padding-top: 10px;
-      padding-bottom: 10px; }
+      font-size: 32px; }
     .login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8.login_LargePass_3268n {
-      font-size: 19px;
-      padding-top: 10px;
-      padding-bottom: 10px; }
+      font-size: 19px; }
     @media screen and (max-width: 700px) {
-      .login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8 {
+      .login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8, .login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8.login_MedPass_2pUx4, .login_AccountPasswordForm_2Mp7X .login_PasswordDots_1Xbz8.login_LargePass_3268n {
         font-size: 19px; } }
   .login_AccountPasswordForm_2Mp7X input:-webkit-autofill,
   .login_AccountPasswordForm_2Mp7X input:-webkit-autofill:hover,

@@ -1562,6 +1562,9 @@ Main.getCurrentHistoryPath = function(useAsFocusedApp,useAsBreadcrumbs) {
 	} else {
 		history = Main.originalHistory;
 	}
+	if(history == "") {
+		history = "#";
+	}
 	return history;
 };
 Main.recordOriginalHistoryPath = function(vars) {
@@ -1607,9 +1610,19 @@ Main.base64Decode = function(str) {
 	return value | 0;
 };
 Main.onHashChange = function(event) {
-	console.log("onHashChange() " + window.location.hash);
+	if(window.location.hash == "") {
+		Main.clickBreadcrumb(-1);
+	}
+};
+Main.clearHistoryStates = function() {
+	Main.ignorePopStateEvents = true;
+	var len = window.history.length;
+	Main.ignorePopStateEvents = false;
 };
 Main.onPopState = function(event) {
+	if(Main.ignorePopStateEvents) {
+		return;
+	}
 	if(!Main.justClickedAppBack && !Main.justClickedBreadcrumb) {
 		Main.back();
 	} else {
@@ -2058,7 +2071,9 @@ Main.firstLoadApp = function(appid) {
 		while(_g < states.length) {
 			var state = states[_g];
 			++_g;
-			window.history.pushState(null,"",state);
+			if(state == "" || state == null) {
+				continue;
+			}
 		}
 		currApp = apps.shift();
 		Main.breadcrumbs = apps.slice();
@@ -2337,25 +2352,74 @@ Main.back = $hx_exports["Main"]["back"] = function() {
 		if(clearInstead) {
 			Main.onClickFocusSearch();
 			window.history.back();
-			if(Main.allBlank(Main.STARTER_APPS)) {
-				Main.STARTER_APPS = [];
-				Main.STARTER_BOXES = [];
-			}
-			if(Main.STARTER_BOXES.length == 0) {
-				Main.getStarterApps(function(appids,details) {
-					Main.getBoxEntriesFor(appids,details,["","","","","","","",""],function(entries) {
-						Main.STARTER_BOXES = entries;
-						Main.focus("",Main.STARTER_BOXES);
-					});
-				});
-			} else {
-				Main.focus("",Main.STARTER_BOXES);
-			}
+			Main.performClear();
 		}
 	} else {
 		var boxes = Main.refreshHistory.pop();
 		Main.focus(Main.focusedEntry.appid,boxes);
 	}
+};
+Main.performClear = function(killHistoryAfterFocus) {
+	if(killHistoryAfterFocus == null) {
+		killHistoryAfterFocus = false;
+	}
+	if(Main.allBlank(Main.STARTER_APPS)) {
+		Main.STARTER_APPS = [];
+		Main.STARTER_BOXES = [];
+	}
+	if(Main.STARTER_BOXES.length == 0) {
+		console.log("get starter apps");
+		Main.getStarterApps(function(appids,details) {
+			Main.getBoxEntriesFor(appids,details,["","","","","","","",""],function(entries) {
+				Main.STARTER_BOXES = entries;
+				Main.focus("",Main.STARTER_BOXES);
+				if(killHistoryAfterFocus) {
+					Main.killHistory();
+				}
+			});
+		});
+	} else {
+		var needFocus = true;
+		var i = 0;
+		var matchAll = true;
+		var _g = 0;
+		while(_g < 9) {
+			var i1 = _g++;
+			var boxWrapper = window.document.getElementById("box-wrapper-" + (i1 + 1));
+			if(boxWrapper == null) {
+				continue;
+			}
+			var dataDsAppid = boxWrapper.getAttribute("data-ds-appid");
+			if(Main.searchArray(Main.STARTER_APPS,dataDsAppid) == -1) {
+				matchAll = false;
+				break;
+			}
+		}
+		if(matchAll) {
+			if(Main.focusedEntry == null || Main.focusedEntry.appid == "") {
+				needFocus = false;
+			}
+		}
+		if(needFocus) {
+			Main.clearHistoryStates();
+			window.history.replaceState({ },"","");
+			Main.focus("",Main.STARTER_BOXES,function() {
+				Main.killHistory();
+				Main.clearHistoryStates();
+			});
+		}
+	}
+};
+Main.searchArray = function(arr,value) {
+	var _g1 = 0;
+	var _g = arr.length;
+	while(_g1 < _g) {
+		var i = _g1++;
+		if(arr[i] == value) {
+			return i;
+		}
+	}
+	return -1;
 };
 Main.refresh = $hx_exports["Main"]["refresh"] = function() {
 	if(Main.focusedEntry == null) {
@@ -2394,10 +2458,7 @@ Main.clickBreadcrumb = $hx_exports["Main"]["clickBreadcrumb"] = function(i) {
 	Main.justClickedBreadcrumb = true;
 	if(i == -1) {
 		Main.killHistory();
-		Main.focus("",Main.STARTER_BOXES.slice(),function() {
-			Main.renderBreadcrumbs();
-			Main.renderBackRefreshButtons();
-		});
+		Main.performClear(true);
 		return;
 	}
 	if(i >= Main.breadcrumbs.length) {
@@ -2433,13 +2494,35 @@ Main.saveBreadcrumbs = function(appid,title,currBoxEntries) {
 };
 Main.saveHistory = function() {
 	var state = Main.getCurrentHistoryPath();
-	window.history.pushState(null,"",state);
+	if(state != null && state != "" && state != "#") {
+		window.history.pushState({ },"",state);
+	}
 };
 Main.focusFromSearch = $hx_exports["Main"]["focusFromSearch"] = function(appid) {
 	Main.killHistory();
 	Main.focus(appid);
 };
 Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callback,disabledTags,boostedTags) {
+	if(appid == "" || appid == null) {
+		var allNull = false;
+		if(showTheseBoxes != null && showTheseBoxes.length > 0) {
+			allNull = true;
+			var _g = 0;
+			while(_g < showTheseBoxes.length) {
+				var box = showTheseBoxes[_g];
+				++_g;
+				if(box == null) {
+					continue;
+				}
+				if(box.appid != "" && box.appid != null) {
+					allNull = false;
+				}
+			}
+		}
+		if(allNull) {
+			return;
+		}
+	}
 	if(Main.focusBusy) {
 		return;
 	}
@@ -2477,7 +2560,8 @@ Main.focus = $hx_exports["Main"]["focus"] = function(appid,showTheseBoxes,callba
 		Main.lastMatchCount = -1;
 	}
 	Main.saveHistory();
-	window.history.replaceState(null,"",Main.getCurrentHistoryPath());
+	var currentHistory = Main.getCurrentHistoryPath();
+	window.history.replaceState({ },"",currentHistory);
 	if(appid == "") {
 		Main.focusedEntry = null;
 		Main.renderFocusedBox();
@@ -3012,7 +3096,7 @@ Main.afterUpdateBoxes = function(justThese) {
 		EggTimer.runOnce(1000,function() {
 			Main.getMoreMatches(Main.focusedEntry.appid,function() {
 				var result = Main.isContentStarved();
-				if(Main.focusedEntry.keyTags == null) {
+				if(Main.focusedEntry != null && Main.focusedEntry.keyTags == null) {
 					Main.focusedEntry.keyTags = Main.currMatches.keyTags;
 					Main.renderFocusedBox(Main.focusedEntry.appid);
 				}
@@ -3686,7 +3770,7 @@ Render.boxContent = function(index,entry,sink,first) {
 	var detailsBtn = Render.detailsButton(appid,url);
 	var headerURL = entry.header;
 	var throbberStr = Render.throbber("throbber-" + index,true);
-	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\">" + ("<a class=\"box-link\" href=\"javascript:Main.focus(" + appid + ")\"></a>") + ("<div class=\"box-image\" id=\"" + boxImageId + "\">") + throbberStr + ("<img src=\"" + headerURL + "\" alt=\"" + title + "\" title=\"" + title + "\">") + Render.microtrailer(index,entry,"microtrailer","","",true) + "</div>" + ("<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">") + ("<p>" + selectToExplore + "</p>") + "</div>" + ("<div class=\"box-doodads\" id=\"" + doodadId + "\">") + discountBlock + "</div>" + ("<div class=\"box-buttons\" id=\"" + boxButtonsId + "\">") + wishlistBtn + detailsBtn + "</div>" + ("<div class=\"box-tags hide-fancy\" id=\"" + boxTagsId + "\">") + ("<em class=\"key-tags-line\">" + keyThings + "<br></em>") + tagHTML + "</div>" + "</div>";
+	var html = "<div class=\"" + wrapperClass + "\" id=\"" + wrapperId + "\" data-ds-appid=\"" + appid + "\">" + ("<a class=\"box-link\" href=\"javascript:Main.focus(" + appid + ")\"></a>") + ("<div class=\"box-image\" id=\"" + boxImageId + "\">") + throbberStr + ("<img src=\"" + headerURL + "\" alt=\"" + title + "\" title=\"" + title + "\">") + Render.microtrailer(index,entry,"microtrailer","","",true) + "</div>" + ("<div class=\"box-prompt hide-fancy\" id=\"" + boxPromptId + "\">") + ("<p>" + selectToExplore + "</p>") + "</div>" + ("<div class=\"box-doodads\" id=\"" + doodadId + "\">") + discountBlock + "</div>" + ("<div class=\"box-buttons\" id=\"" + boxButtonsId + "\">") + wishlistBtn + detailsBtn + "</div>" + ("<div class=\"box-tags hide-fancy\" id=\"" + boxTagsId + "\">") + ("<em class=\"key-tags-line\">" + keyThings + "<br></em>") + tagHTML + "</div>" + "</div>";
 	return html;
 };
 Render.detailsButton = function(appid,url) {
@@ -4831,6 +4915,7 @@ Main.columnHeaders = ["reccats","recdefault","recgems"];
 Main.FEATURE_FLAG_KILLABLE_TAGS = false;
 Main.FEATURE_FLAG_ML_RECOMMENDER = false;
 Main.baseMap = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567889+*";
+Main.ignorePopStateEvents = false;
 js_Boot.__toStr = ({ }).toString;
 Main.main();
 })(typeof exports != "undefined" ? exports : typeof window != "undefined" ? window : typeof self != "undefined" ? self : this, typeof window != "undefined" ? window : typeof global != "undefined" ? global : typeof self != "undefined" ? self : this);

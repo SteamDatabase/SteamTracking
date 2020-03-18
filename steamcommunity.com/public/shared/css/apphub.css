@@ -1325,6 +1325,10 @@ a.apphub_more_friends_who_play:hover
 	font-size: 11px;
 	color: #AB9569;
 }
+.apphub_CardContentMain .apphub_CardTextContent .refunded {
+	font-size: 11px;
+	color: #DD8763;
+}
 
 .apphub_CardContentMain .hr {
 	height: 2px;

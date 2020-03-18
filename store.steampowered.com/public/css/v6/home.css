@@ -2466,20 +2466,45 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
     flex-direction: row;
 }
 
-.recommended_by_steam_labs_ctn .lower_left_block
-{
+.recommended_by_steam_labs_ctn .lower_left_block {
     padding-top: 8px;
-    flex-grow: 1;
+	flex-grow: 1;
 }
 
-.recommended_by_steam_labs_ctn .lower_pad_block
-{
-    width: 10%;
+
+.recommended_by_steam_labs_ctn .lower_left_block h1 {
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 2px;
+    	font-weight: normal;
+	padding-top: 2px;
+	padding-bottom: 10px;
+}
+
+body.v6 .recommended_by_steam_labs_ctn .header_inline_reason {
+	color: #9099a1;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+	font-size: 14px;
+	text-transform:uppercase;	
+	letter-spacing: 1px;
+    	font-weight: normal;
+	padding-top: 2px;
+	padding-bottom: 10px;
+	padding-right: 8px;
+	float: right;
+}
+
+.recommended_by_steam_labs_ctn .lower_pad_block {
+    
 }
 
 .recommended_by_steam_labs_ctn .lower_right_block {
     width: auto;
-    justify-content: right;
+	justify-content: right;
+	padding-top: 5px;
 }
 
 .recommended_by_steam_labs_ctn .flex-container
@@ -2530,7 +2555,7 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 }
 
 .recommended_by_steam_labs_ctn.home_ctn.ir_ctn .btnv6_white_transparent { 
-		margin-top: 26px;
+		margin-top: 32px;
 }
 
 .community_recommendations_by_steam_labs_ctn .carousel_container {
