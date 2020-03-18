@@ -186,6 +186,7 @@ select {
 	margin-top: 5px;
 }
 
+.review_box .refunded,
 .ratingSummaryBlock .refunded {
 	font-size: 11px;
 	color: #DD8763;
