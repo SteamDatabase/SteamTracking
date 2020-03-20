@@ -278,6 +278,7 @@
  D typeinfo for CCrossProcessPipe
  D typeinfo for CCryptoKeyBase
  D typeinfo for CCryptoKeyBase_RawBuffer
+ D typeinfo for CCumulativeTimer<unsigned long long, 1000000ull>
  D typeinfo for CCuratorPreferences
  D typeinfo for CDebugStatsSystem
  D typeinfo for CFrameFunction<CJobMgr>
@@ -324,6 +325,7 @@
  D typeinfo for CRefCountServiceBase<true, CRefMT>
  D typeinfo for CRefCounted<CRefCountServiceBase<false, CRefST> >
  D typeinfo for CRefCounted<CRefCountServiceBase<true, CRefMT> >
+ D typeinfo for CSTimeCumulativeTimer
  D typeinfo for CScheduledFunction<CIPCServer>
  D typeinfo for CScheduledFunction<ClientProcessMonitor::CClientProcessMonitor>
  D typeinfo for CServiceEngine
@@ -426,6 +428,7 @@
  D vtable for CPipeEventCallbackHelper
  D vtable for CPipeWaiter
  D vtable for CRSAPublicKey
+ D vtable for CSTimeCumulativeTimer
  D vtable for CScheduledFunction<CIPCServer>
  D vtable for CScheduledFunction<ClientProcessMonitor::CClientProcessMonitor>
  D vtable for CServiceEngine
@@ -485,6 +488,7 @@
  R typeinfo name for CCrossProcessPipe
  R typeinfo name for CCryptoKeyBase
  R typeinfo name for CCryptoKeyBase_RawBuffer
+ R typeinfo name for CCumulativeTimer<unsigned long long, 1000000ull>
  R typeinfo name for CCuratorPreferences
  R typeinfo name for CDebugStatsSystem
  R typeinfo name for CFrameFunction<CJobMgr>
@@ -531,6 +535,7 @@
  R typeinfo name for CRefCountServiceBase<true, CRefMT>
  R typeinfo name for CRefCounted<CRefCountServiceBase<false, CRefST> >
  R typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefMT> >
+ R typeinfo name for CSTimeCumulativeTimer
  R typeinfo name for CScheduledFunction<CIPCServer>
  R typeinfo name for CScheduledFunction<ClientProcessMonitor::CClientProcessMonitor>
  R typeinfo name for CServiceEngine
@@ -996,6 +1001,14 @@
  T CCryptoKeyBase_RawBuffer::Validate(CValidator&, char const*) const
  T CCryptoKeyBase_RawBuffer::Wipe()
  T CCryptoKeyBase_RawBuffer::~CCryptoKeyBase_RawBuffer()
+ T CCumulativeTimer<unsigned long long, 1000000ull>::Accumulate(unsigned long long)
+ T CCumulativeTimer<unsigned long long, 1000000ull>::Get() const
+ T CCumulativeTimer<unsigned long long, 1000000ull>::GetCurrentSegment() const
+ T CCumulativeTimer<unsigned long long, 1000000ull>::GetPreviousSegments() const
+ T CCumulativeTimer<unsigned long long, 1000000ull>::IsRunning() const
+ T CCumulativeTimer<unsigned long long, 1000000ull>::Reset()
+ T CCumulativeTimer<unsigned long long, 1000000ull>::Start()
+ T CCumulativeTimer<unsigned long long, 1000000ull>::Stop()
  T CCuratorPreferences::ByteSize() const
  T CCuratorPreferences::CCuratorPreferences()
  T CCuratorPreferences::Clear()
@@ -1681,6 +1694,10 @@
  T CSTime::SetCurrentServerTime(unsigned long long)
  T CSTime::SetFromServerTime(long long)
  T CSTime::SetToServerTime()
+ T CSTimeCumulativeTimer::InternalGetCurrentSegment() const
+ T CSTimeCumulativeTimer::InternalReset()
+ T CSTimeCumulativeTimer::InternalStart()
+ T CSTimeCumulativeTimer::~CSTimeCumulativeTimer()
  T CSafeSet::~CSafeSet()
  T CScheduledFunction<CIPCServer>::CScheduledFunction(CIPCServer*, void (CIPCServer::*)())
  T CScheduledFunction<CIPCServer>::Run()

@@ -980,6 +980,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_symmetric_opensslevp.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cryptoworkitem.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/cumulativetimer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/depotbuildbase.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/depotbuildbase.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/encrypted_app_ticket.pb.cc

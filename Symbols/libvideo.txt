@@ -436,6 +436,7 @@
  D typeinfo for CClanMatchEventByRange
  D typeinfo for CClientStructNetPacket
  D typeinfo for CCommunity_ClanAnnouncementInfo
+ D typeinfo for CCumulativeTimer<unsigned long long, 1000000ull>
  D typeinfo for CCuratorPreferences
  D typeinfo for CDebugStatsSystem
  D typeinfo for CDummyCnxCallback
@@ -510,6 +511,7 @@
  D typeinfo for CRefCounted1<CHTTPDefaultRedirectEnableHandler, CRefCountServiceBase<true, CRefMT> >
  D typeinfo for CRefCounted1<IHTTPStreamingResponseHandler, CRefCountServiceBase<true, CRefMT> >
  D typeinfo for CRefCounted<CRefCountServiceBase<true, CRefMT> >
+ D typeinfo for CSTimeCumulativeTimer
  D typeinfo for CScheduledFunction<CHTTPClientConnection>
  D typeinfo for CScheduledFunction<CNetConnection>
  D typeinfo for CScheduledFunction<COpenSSLConnection>
@@ -698,6 +700,7 @@
  D vtable for CPathString
  D vtable for CProtoBufNetPacket
  D vtable for CRTMPStream
+ D vtable for CSTimeCumulativeTimer
  D vtable for CScheduledFunction<CHTTPClientConnection>
  D vtable for CScheduledFunction<CNetConnection>
  D vtable for CScheduledFunction<COpenSSLConnection>
@@ -780,6 +783,7 @@
  R typeinfo name for CCommunity_ClanAnnouncementInfo
  R typeinfo name for CCompletionPortManager
  R typeinfo name for CCookieContainer::CCookieInfo
+ R typeinfo name for CCumulativeTimer<unsigned long long, 1000000ull>
  R typeinfo name for CCuratorPreferences
  R typeinfo name for CCustomAVIOReadContext
  R typeinfo name for CDebugStatsSystem
@@ -863,6 +867,7 @@
  R typeinfo name for CRefCounted1<CHTTPDefaultRedirectEnableHandler, CRefCountServiceBase<true, CRefMT> >
  R typeinfo name for CRefCounted1<IHTTPStreamingResponseHandler, CRefCountServiceBase<true, CRefMT> >
  R typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefMT> >
+ R typeinfo name for CSTimeCumulativeTimer
  R typeinfo name for CScheduledFunction<CHTTPClientConnection>
  R typeinfo name for CScheduledFunction<CNetConnection>
  R typeinfo name for CScheduledFunction<COpenSSLConnection>
@@ -1589,6 +1594,14 @@
  T CCrypto::SymmetricDecryptRecoverIV(unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char*, unsigned int, unsigned char const*, unsigned int, bool)
  T CCrypto::SymmetricEncryptChosenIV(unsigned char const*, unsigned int, unsigned char const*, unsigned int, unsigned char*, unsigned int*, unsigned char const*, unsigned int)
  T CCrypto::ValidateStatics(CValidator&, char const*)
+ T CCumulativeTimer<unsigned long long, 1000000ull>::Accumulate(unsigned long long)
+ T CCumulativeTimer<unsigned long long, 1000000ull>::Get() const
+ T CCumulativeTimer<unsigned long long, 1000000ull>::GetCurrentSegment() const
+ T CCumulativeTimer<unsigned long long, 1000000ull>::GetPreviousSegments() const
+ T CCumulativeTimer<unsigned long long, 1000000ull>::IsRunning() const
+ T CCumulativeTimer<unsigned long long, 1000000ull>::Reset()
+ T CCumulativeTimer<unsigned long long, 1000000ull>::Start()
+ T CCumulativeTimer<unsigned long long, 1000000ull>::Stop()
  T CCuratorPreferences::ByteSize() const
  T CCuratorPreferences::CCuratorPreferences()
  T CCuratorPreferences::Clear()
@@ -2718,6 +2731,10 @@
  T CSTime::CServerMicroSecsPassed() const
  T CSTime::SetFromServerTime(long long)
  T CSTime::SetToServerTime()
+ T CSTimeCumulativeTimer::InternalGetCurrentSegment() const
+ T CSTimeCumulativeTimer::InternalReset()
+ T CSTimeCumulativeTimer::InternalStart()
+ T CSTimeCumulativeTimer::~CSTimeCumulativeTimer()
  T CSafeSet::~CSafeSet()
  T CScheduledFunction<CHTTPClientConnection>::CScheduledFunction(CHTTPClientConnection*, void (CHTTPClientConnection::*)())
  T CScheduledFunction<CHTTPClientConnection>::Run()

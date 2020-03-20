@@ -13049,9 +13049,6 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 /* stylelint-disable */
 
 /* stylelint-enable */
-.appdetailsspotlight_AppDetailsSpotlight_gh6du {
-  margin-top: 20px; }
-
 .appdetailsspotlight_NewDLCContainer_3Exow {
   position: relative;
   background: linear-gradient(to bottom, transparent 0px, rgba(81, 76, 123, 0.3) 84px, rgba(81, 76, 123, 0.4) 121px, rgba(0, 0, 0, 0.2) 172px, transparent 130px); }
@@ -13360,8 +13357,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 .spotlight_MajorEvent_Ctn_2_kU7 {
   position: relative;
   display: flex;
-  flex-direction: column;
-  margin-top: -20px; }
+  flex-direction: column; }
 
 .spotlight_AppDetailsSpotlightContainer_1zDJ1 {
   box-shadow: 1px 2px 12px 1px #00000055; }
