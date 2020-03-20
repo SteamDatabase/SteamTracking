@@ -152,7 +152,7 @@ input.custom_form_text.right_hint
 
 
 }
-	
+
 
 .help_site_button {
 	display: inline-block;
@@ -1890,13 +1890,13 @@ a.guide_row {
 .help_microtxn_info.price_strikeout .refund_value
 {
 	text-decoration: line-through;
-	color: #9cacba;	
+	color: #9cacba;
 }
 
 .help_purchase_package.price_strikeout .refund_value span,
 .help_microtxn_info.price_strikeout .refund_value span
 {
-	color: #67c1f5;	
+	color: #67c1f5;
 }
 
 .help_microtxn_info{
@@ -2204,7 +2204,7 @@ a.guide_row {
 }
 
 #form_submit_search_error div {
-	padding: 0 0 20px 0;
+	padding: 0 0 0px 0;
 }
 
 #search_error_title {
@@ -2223,8 +2223,26 @@ a.guide_row {
 	float: right;
 }
 
+.search_error_know_account {
+	margin-top: 0px;
+}
+
+.search_error_know_account a {
+	margin-top: 8px;
+}
+
 .search_error_tip_prefix {
 	color: #66c0f4;
+}
+
+.search_error_tip_container {
+	margin-top: 20px;
+}
+
+.search_error_hr {
+	margin: 20px auto 20px auto;
+	width: 95%;
+	border-bottom: 3px solid rgba( 0, 0, 0, 0.2 );
 }
 
 #recovery_code_resent {
@@ -2290,6 +2308,10 @@ a.guide_row {
 .account_select_row
 {
 	margin-top: 6px;
+}
+
+.account_select_first_button {
+	margin-top: 40px;
 }
 
 .player_avatar,
@@ -3960,7 +3982,7 @@ ul.attached_file_list {
     color: #c6d4df;
     font-size: 18px;
 }
-	
+
 .no_vac_bans_header {
 	color: #8fca1d;
 	font-size: 16px;
@@ -4232,7 +4254,7 @@ ul.attached_file_list {
 	color: #ffffff;
 	font-size: 20px;
 	margin-bottom: 10px;
-	
+
 }
 
 .data_removed_box {

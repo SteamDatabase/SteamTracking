@@ -259,7 +259,7 @@ function SubmitReplyForm_Internal( form, strExraParams )
 	}
 
 		$Form.find( 'button' ).addClass( 'btn_disabled' ).prop( 'disabled', true );
-	
+
 		var strData = $Form.serialize() + "&" + $J.param( { reply_body: strReply } );
 	if ( strExraParams )
 		strData = strData + "&" + strExraParams;
@@ -329,7 +329,7 @@ function SubmitReview( form )
 	console.log( 'Submit review' );
 	var $Form = $J( form );
 	var strData = $Form.serialize();
-	
+
 	var elState = $Form.find("input[name='state']:checked");
 	if ( !elState.length )
 	{
@@ -588,7 +588,7 @@ function AppNameSelectedForQuickTextEditor( $Input, $Selection )
 	var unAppID = 0;
 	if ( $Selection != null )
 		unAppID = $Selection.data('appid');
-	
+
 	$Input.prev( 'input[name="appid[]"]' ).val( unAppID );
 }
 
@@ -685,7 +685,7 @@ function InsertQuickText( elButton, strText, unQuickTextID, bRequiresUpdate )
 		if ( unQuickTextID != -1 )
 			$Form.find( 'input[name="quicktext_id"]' ).val( unQuickTextID );
     };
-    
+
     var fnInsertEnglish = function( cancel )
     {
 		// if close button, do nothing.
@@ -1078,7 +1078,7 @@ function DoSearch( last_key_up, funcLinkGenerator, strLanguage )
     {
 		if ( strSearch != $J('#quicktext_search').val() )
 			return;
-		
+
         var result_div = $J('#request_type_search');
         var links = new Array();
         data.quicktext.forEach(function ( quicktext )
@@ -1201,9 +1201,9 @@ function CTextAutoComplete( elTarget, rgPlaceholders, strLanguage, strDeskproLan
 	this.m_$Target.on( 'keyup.autocomplete', function( event ) { _this.OnInputKeyUp( event ); } );
 	this.m_$Target.on( 'blur.autocomplete', function( event ) { _this.OnInputBlur( event ); } );
 	this.m_$Target.on( 'paste.autocomplete', function( event ) { _this.OnPaste( event ); } );
-	
+
 	// Try to capture selection events - but the user may lift the mouse outside of our area, so we need to listen on the document.
-	$J(document).on( 'mouseup.autocomplete', function( event ) { if ( _this.m_$Target.is(':focus') ) _this.OnMouseUp() } );
+	$J(document).on( 'mouseup.autocomplete', function( event ) { _this.OnMouseUp() } );
 
 		this.m_$Target.on( 'click.links', 'a', function( event )
 	{
@@ -1491,6 +1491,10 @@ CTextAutoComplete.prototype.OnInputBlur = function( event )
 
 CTextAutoComplete.prototype.OnMouseUp = function( event )
 {
+	var elTarget = this.m_$Target.get( 0 );
+	if ( !elTarget || elTarget != document.activeElement )
+		return;
+
 	this.SaveSelection();
 }
 
