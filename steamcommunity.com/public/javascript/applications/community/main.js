@@ -43823,6 +43823,9 @@
           (t.prototype.OnSteamBlog = function() {
             this.props.editModel.ToggleTag("steam_blog");
           }),
+          (t.prototype.OnGameTeamBlog = function() {
+            this.props.editModel.ToggleTag("blog");
+          }),
           (t.prototype.OnSteamLibraryBeta = function() {
             this.props.editModel.ToggleTag("steam_library_beta");
           }),
@@ -44019,6 +44022,13 @@
                             description:
                               "Shows the spotlight artwork in the 'Whats New' section at the top of the library home for all owners."
                           }),
+                          q.createElement(he.m, {
+                            onChange: this.OnGameTeamBlog,
+                            label: "(VO) Mark as Blog for Valve Game Teams",
+                            checked: t.GetEventModel().BHasTag("blog"),
+                            description:
+                              "Add the 'blog' tag to this post. Allowing game team website to filter news posts intended for their blog."
+                          }),
                           t.GetAppID() == zt &&
                             q.createElement(he.m, {
                               onChange: this.OnSteamBlog,
@@ -44059,6 +44069,7 @@
           ),
           Object(L.c)([M.a], t.prototype, "OnModsHideStoreChange", null),
           Object(L.c)([M.a], t.prototype, "OnSteamBlog", null),
+          Object(L.c)([M.a], t.prototype, "OnGameTeamBlog", null),
           Object(L.c)([M.a], t.prototype, "OnSteamLibraryBeta", null),
           (t = Object(L.c)([Q.a], t))
         );
