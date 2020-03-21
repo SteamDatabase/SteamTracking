@@ -107,7 +107,7 @@ GHomepage = {
 
 		InitHorizontalAutoSliders();
 
-		$J(window).one('scroll', GHomepage.OnHomeActivate.bind(this) );
+		new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this) );
 
 		if ( window.Responsive_ReparentItemsInResponsiveMode )
 		{
@@ -182,8 +182,6 @@ GHomepage = {
 
 			GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
 			GHomepage.rgUserNewsFriendsPurchased = rgParams.rgUserNewsFriendsPurchased || {};
-			GHomepage.rgTopSteamCurators = rgParams.rgTopSteamCurators || [];
-			GHomepage.nNumIgnoredCurators = rgParams.nNumIgnoredCurators || 0;
 			GHomepage.rgFriendRecommendations = v_shuffle(rgParams.rgFriendRecommendations) || [];
 			GHomepage.rgRecommendedAppsByCreators = v_shuffle(rgParams.rgRecommendedAppsByCreators) || [];
 			GHomepage.rgRecommendedBySteamLabsApps = rgParams.rgRecommendedBySteamLabsApps || [];
@@ -237,13 +235,13 @@ GHomepage = {
 				$J.ajax( {
 					url: "https:\/\/store.steampowered.com\/default\/home_additional\/",
 					data: {
-
+						bNeedRecommendedCurators: GSteamCurators.bNeedRecommendedCurators ? 1 : 0
 					},
 					dataType: 'json',
 					type: 'GET'
 				}).done(function( data ) {
 
-					GStoreItemData.AddStoreItemData( data.item_data, {} )
+					GStoreItemData.AddStoreItemDataSet( data.item_data )
 
 					GHomepage.oAdditionalData = data;
 					GHomepage.OnAdditionalDataReady();
@@ -258,6 +256,13 @@ GHomepage = {
 	{
 		try {
 			GHomepage.RenderRecentlyUpdatedV2();
+		} catch( e ) { OnHomepageException(e); }
+
+		try {
+			if ( GHomepage.oAdditionalData.strCuratorHTML )
+			{
+				GSteamCurators.RenderRecommendedCurators( GHomepage.oAdditionalData.strCuratorHTML );
+			}
 		} catch( e ) { OnHomepageException(e); }
 	},
 
@@ -308,7 +313,7 @@ GHomepage = {
 
 		// CURATORS ( Must be initialized before the main cluster)
 		try {
-			GSteamCurators.Init( GHomepage.rgTopSteamCurators, GHomepage.rgCuratedAppsData, GHomepage.nNumIgnoredCurators );
+			GSteamCurators.Init( GHomepage.rgCuratedAppsData );
 		} catch( e ) { OnHomepageException(e); }
 
 		// mark index as displayed so it doesn't appear in main cap; it is always below main cap
@@ -2464,68 +2469,13 @@ function GetScreenshotURL( appid, filename, sizeStr )
 
 GSteamCurators = {
 	rgAppsRecommendedByCurators: [],
-	rgSteamCurators: [],
-	nNumIgnoredCurators: 0,
+	bNeedRecommendedCurators: true,	// we default to true so if the scroll event fires before we've run, we'll load (to be safe)
 
-	Init: function( rgSteamCurators, rgApps, nNumIgnoredCurators )
+	Init: function( rgApps )
 	{
-		GSteamCurators.rgSteamCurators = rgSteamCurators;
 		GSteamCurators.rgAppsRecommendedByCurators = rgApps;
-		GSteamCurators.nNumIgnoredCurators = nNumIgnoredCurators;
 
 		GSteamCurators.Render();
-	},
-
-	BuildHomePageHeaderCap: function( strFeatureContext, oItem )
-	{
-		var unAppID = oItem.appid;
-		var unPackageID = 0;
-		var params = { 'class': 'curated_app_link' };
-		if ( oItem.rgCurators.length > 0 )
-		{
-			params['curator_clanid'] = oItem.rgCurators[0];
-		}
-		var rgItemData = GStoreItemData.GetCapParamsForItem( strFeatureContext, oItem, params );
-		if ( !rgItemData )
-			return null;
-
-		var $Item = $J('<div/>', {'class': 'curated_app_item'} );
-		GStoreItemData.BindHoverEvents( $Item, unAppID, unPackageID );
-
-		// href
-		var $CapCtn = $J('<a/>', params );
-		$Item.append( $CapCtn );
-
-		// app image
-		var $Image = $J('<img/>', { src: rgItemData.headerv5 } );
-		$CapCtn.append( $Image );
-
-		// show up to 3 curators per app
-		var curatorsCache = GSteamCurators.rgAppsRecommendedByCurators.curators;
-		var $Curators = $J('<div/>', {'class': 'curated_app_curators'} );
-		var numCuratorsAdded = 0;
-		for ( var j = 0; j < oItem.rgCurators.length && numCuratorsAdded < 3; ++j )
-		{
-			var clanID = oItem.rgCurators[j];
-			if ( curatorsCache.hasOwnProperty( clanID ) )
-			{
-				var curator = curatorsCache[clanID];
-				var $Curator =  $J('<div/>', {'class': 'steam_curator_for_app tooltip', 'onclick': "top.location.href='" + curator.link + "'", "data-tooltip-text": curator.name } );
-				var $CuratorImg = $J('<img/>', {'class': 'steam_curator_for_app_img', 'src': GetAvatarURL( curator.strAvatarHash, '' ) });
-				$Curator.append( $CuratorImg );
-
-				$Curators.append( $Curator );
-				++numCuratorsAdded;
-			}
-		}
-		$Curators.append( $J('<div/>', {'style': 'clear: left'} ) );
-		$Item.append( $Curators );
-
-		// pricing info
-		$CapCtn.append( $J('<div/>', {'class': 'home_headerv5_title ellipsis' } ).html( rgItemData.name ) );
-		$CapCtn.append( $J('<div/>').html( rgItemData.discount_block ? $J(rgItemData.discount_block).addClass('discount_block_inline') : '&nbsp;' ) );
-
-		return $Item;
 	},
 
 	BuildHomePageGenericCap: function( oItem, strFeatureContext )
@@ -2715,22 +2665,7 @@ GSteamCurators = {
 
 			if ( rgRecommendedApps.length >= 5 )
 			{
-				// v1
-				$J('.apps_recommended_by_curators_ctn').show();
-				var $RecommendedApps = $J('#apps_recommended_by_curators');
-
-				for ( var i = 0; i < rgRecommendedApps.length; i++ )
-				{
-					var oItem = rgRecommendedApps[i];
-					var $Item = GSteamCurators.BuildHomePageHeaderCap( 'curated_app', oItem );
-					if ( $Item )
-					{
-						$RecommendedApps.append( $Item );
-					}
-				}
-				$RecommendedApps.InstrumentLinks();
-				$RecommendedApps.trigger('v_contentschanged');	// update our horizontal scrollbars if needed
-				GDynamicStore.DecorateDynamicItems( $RecommendedApps );
+				GSteamCurators.bNeedRecommendedCurators = false;	// we don't need to ajax in curator recommendations
 
 				// v2
 				$J('.apps_recommended_by_curators_ctn').show();
@@ -2798,30 +2733,16 @@ GSteamCurators = {
 				return;
 			}
 		}
+	},
 
+	RenderRecommendedCurators: function( strCuratorHTML )
+	{
+		// if we rendered recommended apps above, there's no need to render recommended curators
+		if ( !GSteamCurators.bNeedRecommendedCurators )
+			return;
+
+		$J('#steam_curators_not_empty').html( strCuratorHTML ).show();
 		$J('.steam_curators_ctn').show();
-		// if no apps, then curators
-		if ( GSteamCurators.rgSteamCurators && GSteamCurators.rgSteamCurators.length != 0 )
-		{
-			$J('#steam_curators_not_empty').show();
-			var $Curators = $J('#steam_curators');
-
-			for ( var i = 0; i < GSteamCurators.rgSteamCurators.length; i++ )
-			{
-				var curator = GSteamCurators.rgSteamCurators[i];
-				var $Item = GSteamCurators.BuildCuratorItem( curator, i + 1 );
-				$Curators.append( $Item );
-			}
-		}
-		else if ( GSteamCurators.nNumIgnoredCurators == 0 )
-		{
-			$J('#steam_curators_not_empty').hide();
-			$J('#steam_curators_empty').show();
-		}
-		else
-		{
-			$J('#steam_curators_not_empty').show();
-		}
 	}
 };
 
