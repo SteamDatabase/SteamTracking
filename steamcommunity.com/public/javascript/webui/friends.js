@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5763211";
+var CLSTAMP = "5773326";
 !(function(e) {
   function t(t) {
     for (
@@ -54302,28 +54302,45 @@ var CLSTAMP = "5763211";
             return Object(o.b)(this, void 0, void 0, function() {
               var t;
               return Object(o.e)(this, function(n) {
-                switch (n.label) {
+                return (
+                  this.m_mapSuggestions || (this.m_mapSuggestions = new Map()),
+                  (t = e.trim()),
+                  this.m_mapSuggestions.has(t) ||
+                    this.m_mapSuggestions.set(e, this.loadSearchFromStore(t)),
+                  [2, this.m_mapSuggestions.get(t)]
+                );
+              });
+            });
+          }),
+          (t.prototype.loadSearchFromStore = function(e) {
+            return Object(o.b)(this, void 0, void 0, function() {
+              var t, n;
+              return Object(o.e)(this, function(o) {
+                switch (o.label) {
                   case 0:
-                    return [
-                      4,
-                      ze.a.get(
-                        u.a.STORE_BASE_URL +
-                          "search/suggest?term=" +
-                          encodeURIComponent(e) +
-                          "&f=json&cc=" +
-                          u.a.COUNTRY +
-                          "&l=" +
-                          u.a.LANGUAGE
-                      )
-                    ];
+                    return (
+                      (t = {
+                        term: e,
+                        f: "json",
+                        cc: u.a.COUNTRY,
+                        l: u.a.LANGUAGE,
+                        origin: self.origin
+                      }),
+                      [
+                        4,
+                        ze.a.get(u.a.STORE_BASE_URL + "search/suggest", {
+                          params: t
+                        })
+                      ]
+                    );
                   case 1:
                     return (
-                      (t = n.sent()),
+                      (n = o.sent()),
                       [
                         2,
-                        t.data.filter(function(e) {
+                        n.data.filter(function(e) {
                           return "game" === e.type || "software" === e.type;
-                        })
+                        }) || []
                       ]
                     );
                 }
