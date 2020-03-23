@@ -96,6 +96,17 @@ body.tag_page .content_hub h2.pageheader {
     display: block;
 }
 
+.page_background_holder_mobile {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-position: center top;
+	display: none;
+}
+
 @media screen and (max-width: 910px)
 {
     body.responsive_page .contenthub_page_background.has_takeover .fullscreen-bg__video {
@@ -115,18 +126,42 @@ body.tag_page .content_hub h2.pageheader {
 
 @media screen and (max-width: 500px)
 {
-    html.responsive div.mobile_video_set .fullscreen-bg__video_mobile {
-        display: block;
-        height: 70vw !important;
-        background-size: cover;
-    }
-    html.responsive div.mobile_video_set .fullscreen-bg__video {
-        display: none;
-    }
-    html.responsive .contenthub_page_background.has_takeover.mobile_static_set .contenthub_page_takeover_sizer, html.responsive .contenthub_page_background.has_takeover.mobile_video_set .contenthub_page_takeover_sizer {
-        height: 70vw !important;
-    }
+	/* if mobile video exists, show it and hide desktop video and static */
+	html.responsive div.mobile_video_set .fullscreen-bg__video_mobile {
+		display: block;
+		height: 70vw !important;
+		background-size: cover;
+	}
+	html.responsive div.mobile_video_set .fullscreen-bg__video {
+		display: none;
+	}
 
+	/* if no mobile video, but static mobile image, show static */
+	html.responsive div.mobile_static_set:not(.mobile_video_set) .fullscreen-bg__video_mobile,
+	html.responsive div.mobile_static_set:not(.mobile_video_set) .fullscreen-bg__video {
+		display: none;
+	}
+	html.responsive div.mobile_static_set:not(.mobile_video_set) .page_background_holder_mobile {
+		display: block;
+		height: 70vw !important;
+		background-size: cover;
+	}
+
+	/* set height on sizer if either mobile version exist */
+	html.responsive .home_page_body_ctn.has_takeover.mobile_static_set .home_page_takeover_sizer,
+	html.responsive .home_page_body_ctn.has_takeover.mobile_video_set .home_page_takeover_sizer {
+		height: 70vw !important;
+	}
+	html.responsive .mobile_static_set .page_background_holder_mobile .home_header_textimage_ctn a,
+	html.responsive .mobile_video_set .page_background_holder_mobile .home_header_textimage_ctn a {
+		height: auto;
+	}
+
+}
+
+.contenthub_page_background.has_takeover .page_contenthub_content {
+	position: relative;
+	z-index: 1;
 }
 
 
