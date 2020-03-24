@@ -274,7 +274,7 @@
               {
                 1: "59f0cae2e200124d9a01",
                 2: "1f57a7247a0695d6e43c",
-                3: "7731680e1f7e1c599171",
+                3: "cf2ee9e63914959a8fab",
                 4: "9566fecacae1e0d6e06c",
                 6: "9023e4ae803362b71b14",
                 7: "c2a22bef77328f5a673a",
@@ -7558,6 +7558,9 @@
       customTitleOptionsCtn: "partnereventsale_customTitleOptionsCtn_18Ftt",
       CustomTitleCtn: "partnereventsale_CustomTitleCtn_3xf_h",
       LanguageInput: "partnereventsale_LanguageInput_9Ojz4",
+      CustomImageTitle: "partnereventsale_CustomImageTitle_1Y-jG",
+      PromptText: "partnereventsale_PromptText_2YG1P",
+      UploadImageButton: "partnereventsale_UploadImageButton_3Jjrh",
       SettingCtn: "partnereventsale_SettingCtn_32UTR",
       Title: "partnereventsale_Title_11Euz",
       Columns: "partnereventsale_Columns_1uTkj",
@@ -24365,6 +24368,7 @@
         events: [],
         links: [],
         localized_label: new Array(29),
+        localized_label_image: new Array(29),
         default_label: "#Sale_default_label",
         section_type: "items"
       };
@@ -24477,6 +24481,11 @@
           bDisableEnforceDimensions: !0
         },
         sale_section_background: {
+          width: 0,
+          height: 0,
+          bDisableEnforceDimensions: !0
+        },
+        sale_section_title: {
           width: 0,
           height: 0,
           bDisableEnforceDimensions: !0
@@ -24646,7 +24655,8 @@
                 : "localized_image_group" === e ||
                   "link_capsule" === e ||
                   "product_banner_override" === e ||
-                  "product_mobile_banner_override" === e
+                  "product_mobile_banner_override" === e ||
+                  "sale_section_title" === e
                 ? (t = ce.GetLocalizedImageGroupForEditAsImgArray(
                     this.clanSteamID
                   ))
@@ -34066,7 +34076,8 @@
                   this.SetDirty(ep.jsondata_image))
                 : "link_capsule" === e ||
                   "product_banner_override" === e ||
-                  "product_mobile_banner_override" === e
+                  "product_mobile_banner_override" === e ||
+                  "sale_section_title" === e
                 ? (a &&
                     0 == ce.GetAllLocalizedGroupImages().length &&
                     ce.SetPrimaryImageForImageGroup(t, e),
@@ -39320,7 +39331,7 @@
           a = q.createElement(
             "div",
             { className: ye.a.SaleSectionHeader, style: Ur(t, n, o) },
-            Hr(t, o)
+            Hr(t, o, n.clanSteamID.GetAccountID())
           );
         return q.createElement(
           "div",
@@ -39346,7 +39357,7 @@
           p = q.createElement(
             "div",
             { className: ye.a.SaleSectionHeader, style: Ur(t, n, o) },
-            Hr(t, o)
+            Hr(t, o, n.clanSteamID.GetAccountID())
           );
         return (
           t.label_link &&
@@ -40055,7 +40066,7 @@
               z = q.createElement(
                 "div",
                 { className: ye.a.SaleSectionHeader, style: Ur(r, t, o) },
-                Hr(r, o)
+                Hr(r, o, t.clanSteamID.GetAccountID())
               );
             return (
               l &&
@@ -40154,14 +40165,17 @@
         }
       return C.b.STORE_BASE_URL + e + n;
     }
-    function Hr(e, t) {
-      var n = e.localized_label[t] || e.localized_label[0];
-      return (
-        n ||
-        ("#Sale_default_label" === e.default_label
+    function Hr(e, t, n, o) {
+      var a =
+        e.localized_label[t] ||
+        e.localized_label[0] ||
+        "#Sale_default_label" === e.default_label
           ? ""
-          : Object(f.c)(e.default_label))
-      );
+          : Object(f.c)(e.default_label);
+      if (o || !e.localized_label_image) return a;
+      var p = e.localized_label_image[t] || e.localized_label_image[0],
+        r = C.b.MEDIA_CDN_COMMUNITY_URL + "images/clans/" + n + "/" + p;
+      return q.createElement("img", { src: r, alt: a });
     }
     function Pr(e, t) {
       return {
@@ -42114,7 +42128,9 @@
                   )
               );
             } else
-              "localized_image_group" === n || "link_capsule" === n
+              "localized_image_group" === n ||
+              "link_capsule" === n ||
+              "sale_section_title" === n
                 ? (r = q.createElement(
                     q.Fragment,
                     null,
@@ -42791,7 +42807,8 @@
                     "localized_image_group" === n ||
                       "link_capsule" === n ||
                       "product_mobile_banner_override" === n ||
-                      "product_banner_override" === n
+                      "product_banner_override" === n ||
+                      "sale_section_title" === n
                   ) &&
                     q.createElement("img", {
                       className: Ei.previewimg,
@@ -53141,6 +53158,26 @@
               this.setState({ strCustomTitle: "" }),
               this.props.editModel.SetDirty(ep.jsondata_sales);
           }),
+          (e.prototype.OnShowTitleImageUpload = function(e, n) {
+            e.preventDefault(),
+              e.stopPropagation(),
+              Object(qe.d)(
+                q.createElement(Zb, {
+                  loc_images: n.localized_label_image,
+                  fnSetImage: function(e, t) {
+                    (n.localized_label_image = Object(oe.f)(
+                      n.localized_label_image || [],
+                      29,
+                      null
+                    )),
+                      (n.localized_label_image[e] = t);
+                  },
+                  editModel: this.props.editModel,
+                  artworkType: "sale_section_title"
+                }),
+                window
+              );
+          }),
           (e.prototype.OnSaleSectionColorChange = function(e, t, n) {
             (e[n] =
               "rgba(" +
@@ -53318,10 +53355,10 @@
             );
           }),
           (e.prototype.render = function() {
-            var e = this,
-              t = this.props,
-              n = t.editModel,
-              o = t.saleSection,
+            var t = this,
+              e = this.props,
+              n = e.editModel,
+              o = e.saleSection,
               a = h
                 .Get()
                 .GetPartnerEventPermissions(
@@ -53385,337 +53422,388 @@
               M =
                 !!this.props.saleSection.localized_label[
                   this.props.editLanguage
-                ] || !!this.props.saleSection.localized_label[0];
-            return q.createElement(
-              "div",
-              {
-                id: "SaleSection_" + o.unique_id,
-                className: Object(We.a)(Ib.SaleSection, Ib.InEditor),
-                style: Object(L.a)(Object(L.a)({}, Pr(o, n.GetEventModel())), {
-                  opacity: this.state.bIsExiting ? 0 : 1,
-                  transition: "opacity 500ms"
-                })
-              },
+                ] || !!this.props.saleSection.localized_label[0],
+              l = 0;
+            return (
+              o.localized_label_image &&
+                o.localized_label_image.forEach(function(e) {
+                  l += e ? 1 : 0;
+                }),
               q.createElement(
                 "div",
                 {
-                  className: Ee.SaleSectionHeader,
-                  onDoubleClick: this.props.fnToggleMinimize,
-                  style: {
-                    fontFamily: c,
-                    fontSize: b,
-                    textTransform: s ? "initial" : null,
-                    color: this.props.saleSection.label_color
-                  }
-                },
-                Hr(o, this.props.editLanguage) ||
-                  Object(f.c)("#Sale_Section_Header", this.props.index + 1),
-                q.createElement(
-                  "div",
-                  { className: Object(We.a)(Ee.CloseSectionTools) },
-                  q.createElement(
-                    "div",
-                    { className: Ee.FlexRowContainer },
-                    q.createElement(
-                      he.c,
-                      {
-                        "data-tooltip-text": Object(f.c)(
-                          "#Sale_Section_Reorder_Title"
-                        ),
-                        disabled: 0 == this.props.index,
-                        onClick: function() {
-                          return e.MoveSection(!1);
-                        }
-                      },
-                      q.createElement(Jt.a, { angle: 0 })
-                    ),
-                    q.createElement(
-                      he.c,
-                      {
-                        "data-tooltip-text": Object(f.c)(
-                          "#Sale_Section_Reorder_Title"
-                        ),
-                        disabled:
-                          this.props.index + 1 == n.GetSaleSectionCount(),
-                        onClick: function() {
-                          return e.MoveSection(!0);
-                        }
-                      },
-                      q.createElement(Jt.a, { angle: 180 })
-                    ),
-                    q.createElement(Qb, {
-                      bIsMinimized: this.props.bIsMinimized,
-                      fnToggleMinimize: this.props.fnToggleMinimize
-                    }),
-                    q.createElement(
-                      he.c,
-                      {
-                        "data-tooltip-text": Object(f.c)("#Button_Remove"),
-                        onClick: function() {
-                          return e.RemoveSection(e.props.index);
-                        }
-                      },
-                      q.createElement(Jt.C, null)
-                    )
-                  )
-                )
-              ),
-              !this.props.bIsMinimized &&
-                q.createElement(
-                  "div",
-                  { className: Ib.EditorCtn },
-                  q.createElement(
-                    "div",
-                    { className: Ee.EventEditorTextTitle },
-                    Object(f.c)("#Sale_Section_SectionTitle_Title")
-                  ),
-                  q.createElement(
-                    "div",
+                  id: "SaleSection_" + o.unique_id,
+                  className: Object(We.a)(Ib.SaleSection, Ib.InEditor),
+                  style: Object(L.a)(
+                    Object(L.a)({}, Pr(o, n.GetEventModel())),
                     {
-                      className: Object(We.a)(
-                        Ee.FlexColumnContainer,
-                        Ee.EventDefaultRowContainer
-                      )
-                    },
-                    q.createElement(
-                      "div",
-                      {
-                        className: Ib.DefaultTitlePicker,
-                        title: M
-                          ? Object(f.c)("#Sale_option_title_disabled_tooltip")
-                          : null
-                      },
-                      Object(f.c)("#Sale_option_title"),
-                      q.createElement(
-                        he.f,
-                        {
-                          rgOptions: p,
-                          strDropDownClassName: Ee.DropDownScroll,
-                          selectedOption:
-                            this.props.saleSection.default_label || p[0].data,
-                          onChange: this.OnTitleChange,
-                          contextMenuPositionOptions: { bDisablePopTop: !0 },
-                          disabled: M
-                        },
-                        " "
-                      )
-                    ),
-                    q.createElement(
-                      "div",
-                      null,
-                      Object(f.c)("#Sale_option_customtitle"),
-                      q.createElement(Wp, null)
-                    ),
-                    q.createElement(
-                      "div",
-                      { className: Ib.customTitleOptionsCtn },
-                      q.createElement(
-                        "div",
-                        {
-                          className: Object(We.a)(
-                            Ee.FlexRowContainer,
-                            Ib.CustomTitleCtn
-                          )
-                        },
-                        q.createElement(
-                          "div",
-                          { className: Ib.LanguageInput },
-                          q.createElement(he.i, {
-                            placeholder: Object(f.c)("#Broadcast_use_custom"),
-                            onChange: this.OnCustomTitleChange,
-                            value: this.state.strCustomTitle
-                          })
-                        ),
-                        q.createElement(
-                          "div",
-                          { className: Ib.AddTitleButton },
-                          q.createElement(
-                            he.n,
-                            {
-                              onClick: function() {
-                                return e.AddTitle();
-                              },
-                              disabled:
-                                (this.props.saleSection.localized_label[
-                                  this.props.editLanguage
-                                ] || "") == this.state.strCustomTitle
-                            },
-                            Object(f.c)("#Broadcast_save_title")
-                          )
-                        ),
-                        q.createElement(
-                          "div",
-                          { className: Ib.RemoveTitleButton },
-                          q.createElement(
-                            he.n,
-                            {
-                              onClick: function() {
-                                return e.RemoveTitle();
-                              },
-                              disabled:
-                                null ==
-                                this.props.saleSection.localized_label[
-                                  this.props.editLanguage
-                                ]
-                            },
-                            Object(f.c)("#Broadcast_remove_title")
-                          )
-                        )
-                      )
-                    ),
-                    q.createElement(he.i, {
-                      label: Object(f.c)("#Sale_LinkURL"),
-                      tooltip: Object(f.c)("#Sale_LinkURL_title_hint"),
-                      placeholder: Object(f.c)("#Sale_LinkURL"),
-                      onChange: this.OnTitleLinkChange,
-                      value: this.props.saleSection.label_link
-                    })
-                  ),
+                      opacity: this.state.bIsExiting ? 0 : 1,
+                      transition: "opacity 500ms"
+                    }
+                  )
+                },
+                q.createElement(
+                  "div",
+                  {
+                    className: Ee.SaleSectionHeader,
+                    onDoubleClick: this.props.fnToggleMinimize,
+                    style: {
+                      fontFamily: c,
+                      fontSize: b,
+                      textTransform: s ? "initial" : null,
+                      color: this.props.saleSection.label_color
+                    }
+                  },
+                  Hr(
+                    o,
+                    this.props.editLanguage,
+                    n.GetClanSteamID().GetAccountID()
+                  ) ||
+                    Object(f.c)("#Sale_Section_Header", this.props.index + 1),
                   q.createElement(
                     "div",
-                    { className: Ee.EventEditorTextTitle },
-                    Object(f.c)("#Sale_Section_Background_Title")
-                  ),
-                  q.createElement(
-                    "div",
-                    { style: { display: "flex" } },
+                    { className: Object(We.a)(Ee.CloseSectionTools) },
                     q.createElement(
                       "div",
-                      { className: Ee.HalfColumn },
+                      { className: Ee.FlexRowContainer },
                       q.createElement(
                         he.c,
                         {
-                          onClick: this.OpenLabelColorSelector,
-                          className: Ee.EventEditorTextTitle,
-                          style: { color: this.props.saleSection.label_color }
+                          "data-tooltip-text": Object(f.c)(
+                            "#Sale_Section_Reorder_Title"
+                          ),
+                          disabled: 0 == this.props.index,
+                          onClick: function() {
+                            return t.MoveSection(!1);
+                          }
                         },
-                        Object(f.c)("#Sale_Section_Label_Color")
+                        q.createElement(Jt.a, { angle: 0 })
                       ),
                       q.createElement(
                         he.c,
                         {
-                          onClick: this.OpenBackgroundTopSelector,
-                          className: Ee.EventEditorTextTitle,
-                          style: {
-                            color: this.props.saleSection.label_color,
-                            background:
-                              "linear-gradient(0deg, " +
-                              (this.props.saleSection
-                                .background_gradient_bottom || "transparent") +
-                              " 0%, " +
-                              (this.props.saleSection.background_gradient_top ||
-                                "transparent") +
-                              " 100%)"
+                          "data-tooltip-text": Object(f.c)(
+                            "#Sale_Section_Reorder_Title"
+                          ),
+                          disabled:
+                            this.props.index + 1 == n.GetSaleSectionCount(),
+                          onClick: function() {
+                            return t.MoveSection(!0);
                           }
                         },
-                        Object(f.c)("#Sale_Section_Background_Top")
+                        q.createElement(Jt.a, { angle: 180 })
                       ),
-                      q.createElement(
-                        he.c,
-                        {
-                          onClick: this.OpenBackgroundBottomSelector,
-                          className: Ee.EventEditorTextTitle,
-                          style: {
-                            color: this.props.saleSection.label_color,
-                            background:
-                              "linear-gradient(0deg, " +
-                              (this.props.saleSection
-                                .background_gradient_bottom || "transparent") +
-                              " 0%, " +
-                              (this.props.saleSection.background_gradient_top ||
-                                "transparent") +
-                              " 100%)"
-                          }
-                        },
-                        Object(f.c)("#Sale_Section_Background_Bottom")
-                      )
-                    ),
-                    q.createElement(
-                      "div",
-                      { className: Ee.HalfColumn },
-                      q.createElement(gc, {
-                        bAllowPreviousClanImages: !0,
-                        onDropFiles: this.OnDropFiles,
-                        clanSteamID: this.props.editModel.GetClanSteamID()
+                      q.createElement(Qb, {
+                        bIsMinimized: this.props.bIsMinimized,
+                        fnToggleMinimize: this.props.fnToggleMinimize
                       }),
                       q.createElement(
                         he.c,
                         {
-                          onClick: this.OnSectionOverrideBanner,
-                          "data-tooltip-text": Object(f.c)(
-                            "#Sale_Seciton_BannerImage_Override_ttip"
-                          ),
-                          className: Ee.EventEditorTextTitle
+                          "data-tooltip-text": Object(f.c)("#Button_Remove"),
+                          onClick: function() {
+                            return t.RemoveSection(t.props.index);
+                          }
                         },
-                        Object(f.c)("#Sale_Seciton_BannerImage_Override")
-                      ),
-                      q.createElement(
-                        he.c,
-                        {
-                          onClick: this.OnSectionOverrideMobileBanner,
-                          "data-tooltip-text": Object(f.c)(
-                            "#Sale_Seciton_BannerImage_Override_ttip"
-                          ),
-                          className: Ee.EventEditorTextTitle
-                        },
-                        Object(f.c)("#Sale_Seciton_MobileBannerImage_Override")
-                      ),
-                      Boolean(
-                        void 0 !== o.localized_sale_product_banner_override ||
-                          void 0 !==
-                            o.localized_sale_product_mobile_banner_override
-                      ) &&
-                        q.createElement(
-                          he.c,
-                          {
-                            onClick: this.OnSectionBannerOverrideClear,
-                            className: Ee.EventEditorTextTitle
-                          },
-                          Object(f.c)("#Sale_Section_BannerImage_Clear")
-                        ),
-                      q.createElement(
-                        he.c,
-                        {
-                          onClick: this.OnSectionBackgroundClear,
-                          className: Ee.EventEditorTextTitle
-                        },
-                        Object(f.c)("#Sale_Section_Background_Clear")
+                        q.createElement(Jt.C, null)
                       )
                     )
                   )
                 ),
-              !this.props.bIsMinimized &&
-                q.createElement(
-                  "div",
-                  {
-                    className: Ib.EditorCtn,
-                    id: "salesection_item_" + this.props.index
-                  },
+                !this.props.bIsMinimized &&
                   q.createElement(
                     "div",
-                    { className: Ib.SectionTypePicker },
+                    { className: Ib.EditorCtn },
                     q.createElement(
                       "div",
-                      { className: Ib.SectionTypePrompt },
-                      " ",
-                      Object(f.c)("#Sale_SectionContents"),
-                      " "
+                      { className: Ee.EventEditorTextTitle },
+                      Object(f.c)("#Sale_Section_SectionTitle_Title")
                     ),
                     q.createElement(
-                      he.f,
+                      "div",
                       {
-                        rgOptions: r,
-                        strDropDownClassName: Ee.DropDownScroll,
-                        selectedOption:
-                          this.props.saleSection.section_type || r[0].data,
-                        onChange: this.OnSaleSectionTypeChange,
-                        contextMenuPositionOptions: { bDisablePopTop: !0 }
+                        className: Object(We.a)(
+                          Ee.FlexColumnContainer,
+                          Ee.EventDefaultRowContainer
+                        )
                       },
-                      " "
+                      q.createElement(
+                        "div",
+                        {
+                          className: Ib.DefaultTitlePicker,
+                          title: M
+                            ? Object(f.c)("#Sale_option_title_disabled_tooltip")
+                            : null
+                        },
+                        Object(f.c)("#Sale_option_title"),
+                        q.createElement(
+                          he.f,
+                          {
+                            rgOptions: p,
+                            strDropDownClassName: Ee.DropDownScroll,
+                            selectedOption:
+                              this.props.saleSection.default_label || p[0].data,
+                            onChange: this.OnTitleChange,
+                            contextMenuPositionOptions: { bDisablePopTop: !0 },
+                            disabled: M
+                          },
+                          " "
+                        )
+                      ),
+                      q.createElement(
+                        "div",
+                        null,
+                        Object(f.c)("#Sale_option_customtitle"),
+                        q.createElement(Wp, null)
+                      ),
+                      q.createElement(
+                        "div",
+                        { className: Ib.customTitleOptionsCtn },
+                        q.createElement(
+                          "div",
+                          {
+                            className: Object(We.a)(
+                              Ee.FlexRowContainer,
+                              Ib.CustomTitleCtn
+                            )
+                          },
+                          q.createElement(
+                            "div",
+                            { className: Ib.LanguageInput },
+                            q.createElement(he.i, {
+                              placeholder: Object(f.c)("#Broadcast_use_custom"),
+                              onChange: this.OnCustomTitleChange,
+                              value: this.state.strCustomTitle
+                            })
+                          ),
+                          q.createElement(
+                            "div",
+                            { className: Ib.AddTitleButton },
+                            q.createElement(
+                              he.n,
+                              {
+                                onClick: function() {
+                                  return t.AddTitle();
+                                },
+                                disabled:
+                                  (this.props.saleSection.localized_label[
+                                    this.props.editLanguage
+                                  ] || "") == this.state.strCustomTitle
+                              },
+                              Object(f.c)("#Broadcast_save_title")
+                            )
+                          ),
+                          q.createElement(
+                            "div",
+                            { className: Ib.RemoveTitleButton },
+                            q.createElement(
+                              he.n,
+                              {
+                                onClick: function() {
+                                  return t.RemoveTitle();
+                                },
+                                disabled:
+                                  null ==
+                                  this.props.saleSection.localized_label[
+                                    this.props.editLanguage
+                                  ]
+                              },
+                              Object(f.c)("#Broadcast_remove_title")
+                            )
+                          )
+                        )
+                      ),
+                      Boolean(a.valve_admin) &&
+                        q.createElement(
+                          "div",
+                          {
+                            className: Object(We.a)(
+                              Ee.ValveOnlyBackground,
+                              Ib.CustomImageTitle
+                            )
+                          },
+                          q.createElement(
+                            "span",
+                            { className: Ib.PromptText },
+                            Object(f.c)("#Sale_option_title_image")
+                          ),
+                          q.createElement(
+                            "div",
+                            { className: Ib.UploadImageButton },
+                            q.createElement(
+                              he.n,
+                              {
+                                onClick: function(e) {
+                                  return t.OnShowTitleImageUpload(e, o);
+                                }
+                              },
+                              0 < l
+                                ? Object(f.e)(
+                                    "#selectimage_managing_n_existing_title",
+                                    l
+                                  )
+                                : Object(f.c)("#selectimage_uploading_title")
+                            )
+                          )
+                        ),
+                      q.createElement(he.i, {
+                        label: Object(f.c)("#Sale_LinkURL"),
+                        tooltip: Object(f.c)("#Sale_LinkURL_title_hint"),
+                        placeholder: Object(f.c)("#Sale_LinkURL"),
+                        onChange: this.OnTitleLinkChange,
+                        value: this.props.saleSection.label_link
+                      })
+                    ),
+                    q.createElement(
+                      "div",
+                      { className: Ee.EventEditorTextTitle },
+                      Object(f.c)("#Sale_Section_Background_Title")
+                    ),
+                    q.createElement(
+                      "div",
+                      { style: { display: "flex" } },
+                      q.createElement(
+                        "div",
+                        { className: Ee.HalfColumn },
+                        q.createElement(
+                          he.c,
+                          {
+                            onClick: this.OpenLabelColorSelector,
+                            className: Ee.EventEditorTextTitle,
+                            style: { color: this.props.saleSection.label_color }
+                          },
+                          Object(f.c)("#Sale_Section_Label_Color")
+                        ),
+                        q.createElement(
+                          he.c,
+                          {
+                            onClick: this.OpenBackgroundTopSelector,
+                            className: Ee.EventEditorTextTitle,
+                            style: {
+                              color: this.props.saleSection.label_color,
+                              background:
+                                "linear-gradient(0deg, " +
+                                (this.props.saleSection
+                                  .background_gradient_bottom ||
+                                  "transparent") +
+                                " 0%, " +
+                                (this.props.saleSection
+                                  .background_gradient_top || "transparent") +
+                                " 100%)"
+                            }
+                          },
+                          Object(f.c)("#Sale_Section_Background_Top")
+                        ),
+                        q.createElement(
+                          he.c,
+                          {
+                            onClick: this.OpenBackgroundBottomSelector,
+                            className: Ee.EventEditorTextTitle,
+                            style: {
+                              color: this.props.saleSection.label_color,
+                              background:
+                                "linear-gradient(0deg, " +
+                                (this.props.saleSection
+                                  .background_gradient_bottom ||
+                                  "transparent") +
+                                " 0%, " +
+                                (this.props.saleSection
+                                  .background_gradient_top || "transparent") +
+                                " 100%)"
+                            }
+                          },
+                          Object(f.c)("#Sale_Section_Background_Bottom")
+                        )
+                      ),
+                      q.createElement(
+                        "div",
+                        { className: Ee.HalfColumn },
+                        q.createElement(gc, {
+                          bAllowPreviousClanImages: !0,
+                          onDropFiles: this.OnDropFiles,
+                          clanSteamID: this.props.editModel.GetClanSteamID()
+                        }),
+                        q.createElement(
+                          he.c,
+                          {
+                            onClick: this.OnSectionOverrideBanner,
+                            "data-tooltip-text": Object(f.c)(
+                              "#Sale_Seciton_BannerImage_Override_ttip"
+                            ),
+                            className: Ee.EventEditorTextTitle
+                          },
+                          Object(f.c)("#Sale_Seciton_BannerImage_Override")
+                        ),
+                        q.createElement(
+                          he.c,
+                          {
+                            onClick: this.OnSectionOverrideMobileBanner,
+                            "data-tooltip-text": Object(f.c)(
+                              "#Sale_Seciton_BannerImage_Override_ttip"
+                            ),
+                            className: Ee.EventEditorTextTitle
+                          },
+                          Object(f.c)(
+                            "#Sale_Seciton_MobileBannerImage_Override"
+                          )
+                        ),
+                        Boolean(
+                          void 0 !== o.localized_sale_product_banner_override ||
+                            void 0 !==
+                              o.localized_sale_product_mobile_banner_override
+                        ) &&
+                          q.createElement(
+                            he.c,
+                            {
+                              onClick: this.OnSectionBannerOverrideClear,
+                              className: Ee.EventEditorTextTitle
+                            },
+                            Object(f.c)("#Sale_Section_BannerImage_Clear")
+                          ),
+                        q.createElement(
+                          he.c,
+                          {
+                            onClick: this.OnSectionBackgroundClear,
+                            className: Ee.EventEditorTextTitle
+                          },
+                          Object(f.c)("#Sale_Section_Background_Clear")
+                        )
+                      )
                     )
                   ),
-                  q.createElement(Hb, Object(L.a)({}, this.props))
-                )
+                !this.props.bIsMinimized &&
+                  q.createElement(
+                    "div",
+                    {
+                      className: Ib.EditorCtn,
+                      id: "salesection_item_" + this.props.index
+                    },
+                    q.createElement(
+                      "div",
+                      { className: Ib.SectionTypePicker },
+                      q.createElement(
+                        "div",
+                        { className: Ib.SectionTypePrompt },
+                        " ",
+                        Object(f.c)("#Sale_SectionContents"),
+                        " "
+                      ),
+                      q.createElement(
+                        he.f,
+                        {
+                          rgOptions: r,
+                          strDropDownClassName: Ee.DropDownScroll,
+                          selectedOption:
+                            this.props.saleSection.section_type || r[0].data,
+                          onChange: this.OnSaleSectionTypeChange,
+                          contextMenuPositionOptions: { bDisablePopTop: !0 }
+                        },
+                        " "
+                      )
+                    ),
+                    q.createElement(Hb, Object(L.a)({}, this.props))
+                  )
+              )
             );
           }),
           Object(L.c)([M.a], e.prototype, "RemoveSection", null),
@@ -53725,6 +53813,7 @@
           Object(L.c)([M.a], e.prototype, "OnTitleLinkChange", null),
           Object(L.c)([M.a], e.prototype, "AddTitle", null),
           Object(L.c)([M.a], e.prototype, "RemoveTitle", null),
+          Object(L.c)([M.a], e.prototype, "OnShowTitleImageUpload", null),
           Object(L.c)([M.a], e.prototype, "OnSaleSectionColorChange", null),
           Object(L.c)([M.a], e.prototype, "OnSaleSectionTypeChange", null),
           Object(L.c)([M.a], e.prototype, "MoveSection", null),
@@ -55348,7 +55437,7 @@
               }),
               c.GetSaleSections().forEach(function(e, t) {
                 var n =
-                    Hr(e, i.GetCurEditLanguage()) ||
+                    Hr(e, i.GetCurEditLanguage(), null, !0) ||
                     Object(f.c)("#Sale_Section_Header", t + 1),
                   o = Object(L.a)(
                     Object(L.a)({}, Pr(e, c)),

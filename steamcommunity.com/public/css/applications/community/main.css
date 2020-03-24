@@ -994,6 +994,8 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   color: #FFFFFF;
   margin-bottom: 10px;
   text-transform: uppercase; }
+  .partnereventshared_SaleSectionHeader_2WMiQ img {
+    max-width: 100%; }
 
 .partnereventshared_SaleSectionContainer_3gb3J {
   grid-template-columns: repeat(1, minmax(0px, 1fr)); }
@@ -8386,6 +8388,26 @@ input.partnereventemails_HeadlineInput_2lHX9 {
     align-items: center; }
     .partnereventsale_customTitleOptionsCtn_18Ftt .partnereventsale_CustomTitleCtn_3xf_h .partnereventsale_LanguageInput_9Ojz4 {
       flex: 1; }
+    .partnereventsale_customTitleOptionsCtn_18Ftt .partnereventsale_CustomTitleCtn_3xf_h .partnereventsale_UploadLinkImageButton_3lofP {
+      margin-left: auto;
+      min-width: 200px; }
+      .partnereventsale_customTitleOptionsCtn_18Ftt .partnereventsale_CustomTitleCtn_3xf_h .partnereventsale_UploadLinkImageButton_3lofP .DialogButton {
+        padding: 0px 8px; }
+
+.partnereventsale_CustomImageTitle_1Y-jG {
+  display: flex;
+  align-items: center;
+  padding: 2px 8px;
+  margin-bottom: 8px;
+  box-sizing: border-box; }
+  .partnereventsale_CustomImageTitle_1Y-jG .partnereventsale_PromptText_2YG1P {
+    margin-right: 8px; }
+  .partnereventsale_CustomImageTitle_1Y-jG .partnereventsale_UploadImageButton_3Jjrh {
+    margin-left: auto;
+    min-width: 200px; }
+    .partnereventsale_CustomImageTitle_1Y-jG .partnereventsale_UploadImageButton_3Jjrh .DialogButton {
+      padding: 0px 8px;
+      box-sizing: border-box; }
 
 .partnereventsale_SettingCtn_32UTR {
   box-shadow: 0px 0px 20px black;
