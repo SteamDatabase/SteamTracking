@@ -176,6 +176,7 @@ message CMsgClientGamesPlayed {
 
 	repeated .CMsgClientGamesPlayed.GamePlayed games_played = 1;
 	optional uint32 client_os_type = 2;
+	optional uint32 cloud_gaming_platform = 3;
 }
 
 message CMsgGSApprove {
