@@ -30797,39 +30797,40 @@
         var b = o || N.a.VANITY_ID;
         c = (e.appid ? "/games/" + b : "/groups/" + b) + "/";
       }
-      switch (
-        (t === mo.k_eView && (t = p ? mo.k_eCommunityView : mo.k_eStoreView), t)
-      ) {
+      t === mo.k_eView && (t = p ? mo.k_eCommunityView : mo.k_eStoreView);
+      var s = e.GID ? e.GID : "",
+        M = e.AnnouncementGID ? e.AnnouncementGID : "";
+      switch (t) {
         case mo.k_eCommunityPublish:
           return (
             c +
             (e.bOldAnnouncement
-              ? "partnerevents/migrate_announcement/" + e.AnnouncementGID
-              : "partnerevents/publish/" + e.GID)
+              ? "partnerevents/migrate_announcement/" + M
+              : "partnerevents/publish/" + s)
           );
         case mo.k_eCommunityEdit:
           return (
             c +
             (e.bOldAnnouncement
-              ? "partnerevents/migrate_announcement/" + e.AnnouncementGID
-              : "partnerevents/edit/" + e.GID)
+              ? "partnerevents/migrate_announcement/" + M
+              : "partnerevents/edit/" + s)
           );
         case mo.k_eCommunityEditBroadcast:
           return (
             c +
             (e.bOldAnnouncement
-              ? "partnerevents/migrate_announcement/" + e.AnnouncementGID
-              : "partnerevents/edit/" + e.GID) +
+              ? "partnerevents/migrate_announcement/" + M
+              : "partnerevents/edit/" + s) +
             "?tab=broadcast"
           );
         case mo.k_eCommunityMigrate:
-          return c + "partnerevents/migrate_announcement/" + e.AnnouncementGID;
+          return c + "partnerevents/migrate_announcement/" + M;
         case mo.k_eCommunityPreview:
           return (
             c +
             (e.bOldAnnouncement
-              ? "partnerevents/preview_old_announcement/" + e.AnnouncementGID
-              : "partnerevents/preview/" + e.GID)
+              ? "partnerevents/preview_old_announcement/" + M
+              : "partnerevents/preview/" + s)
           );
         case mo.k_eCommunityAdminPage:
           return c + "partnerevents";
@@ -30859,8 +30860,8 @@
           return (
             c +
             (e.bOldAnnouncement
-              ? "announcements/detail/" + e.AnnouncementGID
-              : "partnerevents/view/" + e.GID)
+              ? "announcements/detail/" + M
+              : "partnerevents/view/" + s)
           );
         case mo.k_eStoreView:
           return (
@@ -30870,9 +30871,7 @@
               ? "app/" + e.appid
               : "group/" + e.clanSteamID.GetAccountID()) +
             "/" +
-            (e.bOldAnnouncement
-              ? "old_view/" + e.AnnouncementGID
-              : "view/" + e.GID)
+            (e.bOldAnnouncement ? "old_view/" + M : "view/" + s)
           );
         default:
           return Object(G.a)(!1, "Unknown route specified for link"), "";
