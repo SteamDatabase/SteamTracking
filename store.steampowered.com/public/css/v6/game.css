@@ -1694,8 +1694,14 @@ a.communitylink_achievement.communitylink_achivement_plusmore {
 
 			color: #67c1f5;
 	text-align: center;
-	padding-top: 14px;
-	height: 50px;
+    height: 64px;
+    padding: 0 4px;
+    margin-right: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    line-height: 14px;
 }
 a.communitylink_achievement.communitylink_achivement_plusmore:hover {
     color: #ffffff;
@@ -5240,6 +5246,10 @@ body.v6 .agegate_wizard .subtitle a {
 	color: #acb2b8;
 	font-size: 14px;
 	line-height: 22px;
+}
+
+.rightcol.game_meta_data .block.recommendation_noinfo a {
+    margin-bottom: 4px;
 }
 
 .rightcol.game_meta_data .block.recommendation_noinfo p:not(:first-child) {

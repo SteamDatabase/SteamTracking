@@ -126,6 +126,15 @@ body.tag_page .content_hub h2.pageheader {
 
 @media screen and (max-width: 500px)
 {
+
+    /* if any mobile format exists, switch scaling to hard code height */
+    body.responsive_page .mobile_static_set .page_background_holder {
+        display: none;
+    }
+    body.responsive_page .mobile_static_set .page_background_holder_mobile {
+        display: block;
+    }
+
 	/* if mobile video exists, show it and hide desktop video and static */
 	html.responsive div.mobile_video_set .fullscreen-bg__video_mobile {
 		display: block;
@@ -148,12 +157,12 @@ body.tag_page .content_hub h2.pageheader {
 	}
 
 	/* set height on sizer if either mobile version exist */
-	html.responsive .home_page_body_ctn.has_takeover.mobile_static_set .home_page_takeover_sizer,
-	html.responsive .home_page_body_ctn.has_takeover.mobile_video_set .home_page_takeover_sizer {
+	html.responsive .contenthub_page_background.has_takeover.mobile_static_set .contenthub_page_takeover_sizer,
+	html.responsive .contenthub_page_background.has_takeover.mobile_video_set .contenthub_page_takeover_sizer {
 		height: 70vw !important;
 	}
-	html.responsive .mobile_static_set .page_background_holder_mobile .home_header_textimage_ctn a,
-	html.responsive .mobile_video_set .page_background_holder_mobile .home_header_textimage_ctn a {
+	html.responsive .mobile_static_set .page_background_holder_mobile .contenthub_header_textimage_ctn a,
+	html.responsive .mobile_video_set .page_background_holder_mobile .contenthub_header_textimage_ctn a {
 		height: auto;
 	}
 

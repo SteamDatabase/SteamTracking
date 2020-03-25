@@ -3159,6 +3159,19 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   font-size: 92%;
   font-style: italic; }
 
+.eventbbcodeparser_PullQuote_UZBJN {
+  width: 33%;
+  min-width: 200px;
+  float: right;
+  border-radius: 3px;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  display: table;
+  word-break: break-word;
+  line-height: 28px;
+  padding: 10px; }
+
 .eventbbcodeparser_Code_1zoQP {
   border: 1px solid #535354;
   border-radius: 3px;
@@ -3342,7 +3355,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     position: absolute;
     right: 0; }
 
-.eventreminder_ReminderOption_26nnh {
+.eventreminder_ReminderOption_26nnh, a.eventreminder_ReminderOption_26nnh {
   padding: 4px;
   margin: 0px 8px 2px 8px;
   background: #444850;
@@ -3351,28 +3364,30 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   line-height: 22px;
   display: flex;
   align-items: center; }
-  .eventreminder_ReminderOption_26nnh:not(.eventreminder_Unverified_1dcmA):hover {
+  .eventreminder_ReminderOption_26nnh:not(.eventreminder_Unverified_1dcmA):hover, a.eventreminder_ReminderOption_26nnh:not(.eventreminder_Unverified_1dcmA):hover {
     background-color: rgba(255, 255, 255, 0.2); }
-  .eventreminder_ReminderOption_26nnh.eventreminder_Unverified_1dcmA {
+  .eventreminder_ReminderOption_26nnh.eventreminder_Unverified_1dcmA, a.eventreminder_ReminderOption_26nnh.eventreminder_Unverified_1dcmA {
     color: #777777; }
-  .eventreminder_ReminderOption_26nnh a {
+  .eventreminder_ReminderOption_26nnh a, a.eventreminder_ReminderOption_26nnh a {
     color: #a4d5ff;
     padding: 0 4px; }
-    .eventreminder_ReminderOption_26nnh a:hover {
+    .eventreminder_ReminderOption_26nnh a:hover, a.eventreminder_ReminderOption_26nnh a:hover {
       text-decoration: underline; }
-  .eventreminder_ReminderOption_26nnh .DialogCheckbox_Container {
-    margin-bottom: 0px;
-    padding: 0 8px 0 0; }
-    .eventreminder_ReminderOption_26nnh .DialogCheckbox_Container .DialogCheckbox {
-      margin: 3px;
-      width: 16px;
-      height: 16px; }
-      .eventreminder_ReminderOption_26nnh .DialogCheckbox_Container .DialogCheckbox .SVGIcon_DialogCheck {
-        margin: 0 0 2px 0;
+  .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE {
+    flex: 1; }
+    .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container {
+      margin-bottom: 0px;
+      padding: 0 8px 0 0; }
+      .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox {
+        margin: 3px;
         width: 16px;
         height: 16px; }
-    .eventreminder_ReminderOption_26nnh .DialogCheckbox_Container .DialogToggle_Label {
-      margin-left: 28px; }
+        .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox .SVGIcon_DialogCheck, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox .SVGIcon_DialogCheck {
+          margin: 0 0 2px 0;
+          width: 16px;
+          height: 16px; }
+      .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogToggle_Label, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogToggle_Label {
+        margin-left: 28px; }
 
 .eventreminder_ReminderOptionTooltip_2SNqE {
   z-index: 2000; }
@@ -7334,8 +7349,7 @@ input.clanimagepicker_SearchInput_lwt4u {
 .spotlight_MajorEvent_Ctn_2_kU7 {
   position: relative;
   display: flex;
-  flex-direction: column;
-  margin-top: -20px; }
+  flex-direction: column; }
 
 .spotlight_AppDetailsSpotlightContainer_1zDJ1 {
   box-shadow: 1px 2px 12px 1px #00000055; }

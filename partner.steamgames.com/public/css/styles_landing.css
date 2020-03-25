@@ -2451,6 +2451,16 @@ ul.actualUL {
 	color: #808285;
 }
 
+.releaseProgressContainer .covid19_warning {
+	font-size: 14px;
+	margin-bottom: 10px;
+	color: #e2c58b;
+
+	padding: 5px 10px 10px 10px;
+	border: 1px solid #e2c58b;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
 .releaseStep > .content {
 	padding: 5px 10px 10px 10px;
 }

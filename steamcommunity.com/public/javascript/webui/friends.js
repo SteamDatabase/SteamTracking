@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5774505";
+var CLSTAMP = "5775760";
 !(function(e) {
   function t(t) {
     for (
@@ -8357,7 +8357,7 @@ var CLSTAMP = "5774505";
                   o.AddNewServerMsg(
                     r.GetAccountID(),
                     n.timestamp(),
-                    n.ordinal(),
+                    n.ordinal() || 0,
                     n.server_message().message(),
                     n.message(),
                     n.server_message().string_param(),
@@ -8379,7 +8379,7 @@ var CLSTAMP = "5774505";
                     o.AddNewChatMsgAndNotify(
                       r.GetAccountID(),
                       n.timestamp(),
-                      n.ordinal(),
+                      n.ordinal() || 0,
                       n.message(),
                       n.message_no_bbcode(),
                       s
@@ -11642,6 +11642,7 @@ var CLSTAMP = "5774505";
         "list",
         "olist",
         "quote",
+        "pullquote",
         "code",
         "table",
         "tr",
@@ -12619,7 +12620,8 @@ var CLSTAMP = "5774505";
                         appid: this.m_appid,
                         feature: e,
                         cc: s.b.COUNTRY || "US",
-                        l: s.b.LANGUAGE
+                        l: s.b.LANGUAGE,
+                        origin: self.origin
                       }),
                         (n =
                           s.b.STORE_BASE_URL +
@@ -12763,7 +12765,7 @@ var CLSTAMP = "5774505";
         }),
         (e.prototype.LoadDLCForAppID = function(e, t) {
           return Object(o.b)(this, void 0, void 0, function() {
-            var n, r, a, l;
+            var n, r, a, l, p;
             return Object(o.e)(this, function(o) {
               switch (o.label) {
                 case 0:
@@ -12773,25 +12775,30 @@ var CLSTAMP = "5774505";
                 case 1:
                   return (
                     o.trys.push([1, 3, , 4]),
-                    (n = s.b.STORE_BASE_URL + "dlc/" + e + "/ajaxgetdlclist"),
-                    [4, i.a.get(n, { cancelToken: t.token })]
+                    (n = {
+                      origin: self.origin,
+                      cc: s.b.COUNTRY || "US",
+                      l: s.b.LANGUAGE
+                    }),
+                    (r = s.b.STORE_BASE_URL + "dlc/" + e + "/ajaxgetdlclist"),
+                    [4, i.a.get(r, { params: n, cancelToken: t.token })]
                   );
                 case 2:
                   return (
-                    (r = o.sent()),
-                    (a = Array()),
-                    r.data.dlcs &&
-                      r.data.dlcs.forEach(function(e) {
-                        a.push({ appid: e.appid, name: e.name });
+                    (a = o.sent()),
+                    (l = Array()),
+                    a.data.dlcs &&
+                      a.data.dlcs.forEach(function(e) {
+                        l.push({ appid: e.appid, name: e.name });
                       }),
-                    this.m_mapAppIDToDLCs.set(e, a),
+                    this.m_mapAppIDToDLCs.set(e, l),
                     [3, 4]
                   );
                 case 3:
                   return (
-                    (l = o.sent()),
-                    console.log(Object(c.a)(l)),
-                    console.error(l),
+                    (p = o.sent()),
+                    console.log(Object(c.a)(p)),
+                    console.error(p),
                     [3, 4]
                   );
                 case 4:
@@ -26635,7 +26642,8 @@ var CLSTAMP = "5774505";
                           appids: n.join(","),
                           cc: u.b.COUNTRY || "US",
                           l: u.b.LANGUAGE,
-                          feature: t
+                          feature: t,
+                          origin: self.origin
                         }),
                         [
                           4,
@@ -26739,7 +26747,8 @@ var CLSTAMP = "5774505";
                               params: {
                                 packageids: t.join(","),
                                 cc: u.b.COUNTRY || "US",
-                                l: u.b.LANGUAGE
+                                l: u.b.LANGUAGE,
+                                origin: self.origin
                               }
                             }
                           )
@@ -26839,7 +26848,8 @@ var CLSTAMP = "5774505";
                               params: {
                                 bundleids: t.join(","),
                                 cc: u.b.COUNTRY || "US",
-                                l: u.b.LANGUAGE
+                                l: u.b.LANGUAGE,
+                                origin: self.origin
                               }
                             }
                           )
@@ -62598,6 +62608,7 @@ var CLSTAMP = "5774505";
             }
             return n;
           }),
+          (t.prototype.OnNewChatMsgAdded = function(e, t, n, o, r) {}),
           (t.prototype.GetBBCodeParser = function() {
             return this.m_ChatStore.FriendChatBBCodeParser;
           }),
@@ -79717,6 +79728,18 @@ and limitations under the License.
           (t.prototype.GetBBCodeParser = function() {
             return this.m_ChatStore.ChatRoomBBCodeParser;
           }),
+          (t.prototype.OnNewChatMsgAdded = function(e, t, n, o, r) {
+            "undefined" != typeof SteamClient &&
+              SteamClient.WebChat.OnNewGroupChatMsgAdded(
+                this.m_ulGroupID,
+                this.m_ulChatID,
+                e,
+                t,
+                n,
+                o,
+                r
+              );
+          }),
           (t.prototype.AckChatMsgOnServer = function(e) {
             var t = i.b.Init(a.c);
             t.Body().set_chat_group_id(this.m_ulGroupID),
@@ -81531,7 +81554,8 @@ and limitations under the License.
             var a = this.AppendChatMsg(e, t, n, o);
             a.Mentions = i;
             var s = void 0 !== r;
-            this.CheckShouldNotify(a, s ? r : o, o),
+            this.OnNewChatMsgAdded(e, t, n, o, r || o),
+              this.CheckShouldNotify(a, s ? r : o, o),
               this.AddRoomEffectIfNeeded(a.strMessage);
           }),
           (e.prototype.AddRoomEffectIfNeeded = function(e) {

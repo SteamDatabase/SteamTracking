@@ -2979,7 +2979,16 @@ div.graph_toggle_icon.down {
 	html.responsive .review_box .leftcol {
 		float: left;
 		width: 184px;
+        margin-top: 0px;
 	}
+
+    html.responsive .friend_reviews .review_box .leftcol {
+        width: auto;
+    }
+    .friend_reviews .review_box a.vote_header {
+        margin-left: unset;
+        width: 100%;
+    }
 
 	html.responsive .review_box .leftcol .review_box .persona_name {
 		width: auto;

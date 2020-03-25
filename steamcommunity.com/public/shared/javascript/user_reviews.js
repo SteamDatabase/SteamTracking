@@ -277,6 +277,58 @@ function UserReview_ShowReportsDialog( recommendationID, baseURL )
 	} );
 }
 
+function UserReview_ShowContentCheckResultsDialog( recommendationID, baseURL )
+{
+	$J.get( baseURL + '/userreviews/ajaxgetcontentcheckresults/' + recommendationID )
+	.done( function( data ) {
+		if ( data.success == 1 )
+		{
+			var container = $J('<div/>', {'class': 'review_reports' } );
+
+			{
+				var reportDiv = $J('<div/>', {'class': 'review_report header' } );
+					var divProvider = $J('<div/>', {'class': 'review_report_data' } ).append( 'Provider' );
+					reportDiv.append( divProvider );
+					var divResult = $J('<div/>', {'class': 'review_report_data' } ).append( 'Result' );
+					reportDiv.append( divResult );
+					var divScore = $J('<div/>', {'class': 'review_report_data' } ).append( 'Score' );
+					reportDiv.append( divScore );
+					var divProviderResponse = $J('<div/>', {'class': 'review_report_data description' } ).append( 'Provider Response' );
+					reportDiv.append( divProviderResponse );
+					var divReviewText = $J('<div/>', {'class': 'review_report_data review_text' } ).append( 'Review Text At Eval Time' );
+					reportDiv.append( divReviewText );
+					var divTime = $J('<div/>', {'class': 'review_report_data' } ).append( 'Date' );
+					reportDiv.append( divTime );
+					var divClear = $J('<div/>', {'style': 'clear: left' } );
+					reportDiv.append( divClear );
+				container.append( reportDiv );
+			}
+
+			for ( var i = 0; i < data.results.length; ++i )
+			{
+				var r = data.results[i];
+				var reportDiv = $J('<div/>', {'class': 'review_report' } );
+					var divProvider = $J('<div/>', {'class': 'review_report_data' } ).append( r.provider == 1 ? 'Google' : 'Unknown' );
+					reportDiv.append( divProvider );
+					var divResult = $J('<div/>', {'class': 'review_report_data' } ).append( r.ban_check_result_string );
+					reportDiv.append( divResult );
+					var divScore = $J('<div/>', {'class': 'review_report_data' } ).append( r.score );
+					reportDiv.append( divScore );
+					var divProviderResponse = $J('<div/>', {'class': 'review_report_data description' } ).append( r.provider_response );
+					reportDiv.append( divProviderResponse );
+					var divReviewText = $J('<div/>', {'class': 'review_report_data review_text' } ).append( r.review_text );
+					reportDiv.append( divReviewText );
+			var divTime = $J('<div/>', {'class': 'review_report_data' } ).append( r.timestamp_evaluated_string );
+			reportDiv.append( divTime );
+					var divClear = $J('<div/>', {'style': 'clear: left' } );
+					reportDiv.append( divClear );
+				container.append( reportDiv );
+			}
+			var dialog = ShowAlertDialog( 'Automatic Content Check Results', container );
+		}
+	} );
+}
+
 function UserReview_ShowClearReportsDialog( recommendationID, baseURL, callback )
 {
 	var dialog = ShowConfirmDialog( 'Clear Reports', 'Are you sure you want to clear all reports? This cannot be undone!' );

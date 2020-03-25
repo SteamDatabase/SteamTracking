@@ -2466,31 +2466,7 @@ background: -webkit-linear-gradient( left, #223b4f 5%,#25435b 95%);
     flex-direction: row;
 }
 
-@media screen and (max-width: 910px) {
-    html.responsive .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
-        padding-bottom: 50px;
-    }
-    html.responsive .labs_cluster.home_ctn {
-        display: none;
-    }
-}
-@media screen and (max-width: 700px)
-{
 
-    html.responsive .recommended_by_steam_labs_ctn .lower_block {
-        flex-direction: column;
-    }
-    html.responsive body.v6 .recommended_by_steam_labs_ctn .header_inline_reason {
-        float: left;
-        padding-bottom: 0px;
-        padding-right: 0px;
-        font-size: 12px;
-    }
-    html.responsive .recommended_by_steam_labs_ctn .lower_right_block {
-        margin-bottom: 6px;
-    }
-
-}
 
 .recommended_by_steam_labs_ctn .lower_left_block {
     padding-top: 8px;
@@ -4204,8 +4180,6 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	height: 0px;
 }
 
-
-
 /* Responsive */
 @media screen and (max-width: 910px)
 {
@@ -4213,6 +4187,22 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	html.responsive .home_rightcol{
 		display: none;
 	}
+
+    html.responsive .recommended_by_steam_labs_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+        padding-bottom: 50px;
+    }
+    html.responsive .best_selling_vr_ctn {
+        margin-top: 20px;
+    }
+    html.responsive .best_selling_vr_ctn .carousel_container.paging_capsules .carousel_items:not(.no_paging) {
+        padding-bottom: 30px;
+    }
+    html.responsive .carousel_container .carousel_items > *.focus {
+        width: auto;
+    }
+    html.responsive .labs_cluster.home_ctn {
+        display: none;
+    }
 
 	html.responsive body.v6 .friends_recently_purchased h2,
 	html.responsive body.v6 .discovery_queue_ctn h2,
@@ -4394,6 +4384,24 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	html.responsive .home_page_body_ctn.has_takeover .page_background_holder {
 		background-color: inherit;
 	}
+}
+
+@media screen and (max-width: 700px)
+{
+
+    html.responsive .recommended_by_steam_labs_ctn .lower_block {
+        flex-direction: column;
+    }
+    html.responsive body.v6 .recommended_by_steam_labs_ctn .header_inline_reason {
+        float: left;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        font-size: 12px;
+    }
+    html.responsive .recommended_by_steam_labs_ctn .lower_right_block {
+        margin-bottom: 6px;
+    }
+
 }
 
 .labs_banner

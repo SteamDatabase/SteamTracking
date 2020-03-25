@@ -357,7 +357,7 @@ select {
 /* view reports */
 .review_reports
 {
-	width: 600px;
+	min-width: 600px;
 }
 .review_report
 {

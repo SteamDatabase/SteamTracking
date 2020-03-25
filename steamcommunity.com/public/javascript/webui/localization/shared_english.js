@@ -292,8 +292,11 @@ LocalizationReady("shared", "english", {
   EventDisplay_Reminder_Toast: "Steam Desktop Toast at Start",
   EventDisplay_Reminder_AddToCalendar: "Add to calendar",
   EventDisplay_Reminder_AddToApple: "Add to Apple Calendar",
+  EventDisplay_Reminder_AppleCalendar_Short: "Apple",
   EventDisplay_Reminder_AddToGoogle: "Add to Google Calendar",
+  EventDisplay_Reminder_GoogleCalendar_Short: "Google",
   EventDisplay_Reminder_AddToOutlook: "Add to Outlook Calendar",
+  EventDisplay_Reminder_OutlookCalendar_Short: "Outlook",
   EventDisplay_Reminder_AddToYahoo: "Add to Yahoo Calendar",
   EventDisplay_Reminder_Preferences: "Edit Reminder Preferences...",
 
@@ -380,6 +383,8 @@ LocalizationReady("shared", "english", {
   EventEmail_Subject_SpecialOffer: "%1$s Special Offer",
   EventEmail_Subject_Tournament_Now: "%1$s Tournament, Tune in Now",
   EventEmail_Subject_LiveStream_Now: "%1$s Live Stream, Tune in Now",
+  Email_Wishlist_NewReleaseEA_Subject:
+    "%1$s is now available in Early Access on Steam!",
   EventEmail_Button_ClickForMoreDetails: "Read More",
   EventEmail_Button_PrepurchaseNow: "Prepurchase now!",
   EventEmail_Button_BuyNow: "Buy now!",
