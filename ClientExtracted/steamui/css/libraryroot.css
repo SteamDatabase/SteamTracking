@@ -8793,6 +8793,15 @@ a.appdetailsbroadcastsection_ViewBroadcastOnWeb_1Z3B4 {
         margin-top: -10%;
         margin-bottom: -11%; }
 
+.appactivityday_PartnerEventPlaceholder_23WVg {
+  min-height: 182px;
+  margin-bottom: 26px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #94a1a6;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
 .appactivityday_PartnerEventLargeImage_Container_Libri {
   background: radial-gradient(100% 80% at 64% 95%, rgba(107, 115, 127, 0.3) 0%, rgba(62, 70, 80, 0.5) 20%, rgba(36, 40, 47, 0.5) 100%);
   transition: all 0.2s ease-out; }

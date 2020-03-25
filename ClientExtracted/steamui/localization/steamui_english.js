@@ -383,6 +383,8 @@
 	"AppDetails_InOfflineMode": "Steam is currently in Offline Mode.  In Offline Mode, many features of your Steam library, such as Activity and Friends, will be unavailable. Go online to view this content.",
 	"AppDetails_GoOnline": "Go Online",
 
+	"AppDetails_PartnerEventFailedLoad": "Failed to load this event",
+
 	"GameAction_Stop": "Stop",
 	"GameAction_Cancel": "Cancel",
 	"GameAction_Install": "Install",
