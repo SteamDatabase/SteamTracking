@@ -2988,6 +2988,9 @@ function UpdateStateSelectState()
 
 function BIsCreditCardMethod( method )
 {
+  if ( g_bUpdateBillingFormAddressOnly )
+    return false;
+    
 	return method == 'mastercard' || method == 'visa' 
 			|| method == 'amex' || method == 'jcb' 
 			|| method == 'discover' || method == 'cartebleue' 
