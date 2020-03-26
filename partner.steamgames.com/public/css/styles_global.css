@@ -644,7 +644,7 @@ input.radio {
 }
 
 .outputSuccess {
-	color: green;
+	color: #7fc146;
 }
 
 .outputFailure {

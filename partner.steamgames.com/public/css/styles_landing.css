@@ -1713,6 +1713,31 @@ a.btn_download:hover {
 	vertical-align: top;
 }
 
+.publish_confirmation_notes {
+    padding-top: 10px;
+}
+.publish_confirmation_notes span {
+    color: grey;
+}
+.publish_confirmation_success {
+    border: 6px solid #7fc146;
+    padding: 16px;
+background: -webkit-linear-gradient( 45deg, #3b5c1f 5%,#4c7728 95%);
+	background: linear-gradient( 45deg, #3b5c1f 5%,#4c7728 95%);
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 4px;
+}
+.publish_confirmation_success_title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.publish_confirmation_success_desc {
+    margin-bottom; 14px;
+}
+
 .largeTextArea {
 	margin: 0px;
 	background-color: #565658;
