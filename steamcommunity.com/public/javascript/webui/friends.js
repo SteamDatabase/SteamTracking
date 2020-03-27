@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5776248";
+var CLSTAMP = "5781731";
 !(function(e) {
   function t(t) {
     for (
@@ -79729,16 +79729,22 @@ and limitations under the License.
             return this.m_ChatStore.ChatRoomBBCodeParser;
           }),
           (t.prototype.OnNewChatMsgAdded = function(e, t, n, o, r) {
-            "undefined" != typeof SteamClient &&
-              SteamClient.WebChat.OnNewGroupChatMsgAdded(
-                this.m_ulGroupID,
-                this.m_ulChatID,
-                e,
-                t,
-                n,
-                o,
-                r
-              );
+            if ("undefined" != typeof SteamClient)
+              try {
+                SteamClient.WebChat.OnNewGroupChatMsgAdded(
+                  this.m_ulGroupID,
+                  this.m_ulChatID,
+                  e,
+                  t,
+                  n,
+                  o,
+                  r
+                );
+              } catch (e) {
+                console.warn(
+                  "Error while calling OnNewGroupChatMsgAdded: " + e
+                );
+              }
           }),
           (t.prototype.AckChatMsgOnServer = function(e) {
             var t = i.b.Init(a.c);
