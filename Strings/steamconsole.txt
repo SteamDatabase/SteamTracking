@@ -2,6 +2,8 @@ h
 __TEXT
 __text
 __TEXT
+P3
+P3
 __stubs
 __TEXT
 __stub_helper
@@ -11,6 +13,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+|4
 __unwind_info
 __TEXT
 __eh_frame
@@ -36,9 +39,9 @@ __thread_bss
 __DATA
 __bss
 __DATA
+!2
 __common
 __DATA
-xC
 H
 __LINKEDIT
 
@@ -74,8 +77,10 @@ h
 public
 local
 anonymous
+15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
+15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 0C
 0E
@@ -307,6 +312,8 @@ Error! App '%u' state is 0x%X after update job.
 Success! App '%u' fully installed.
 Updating Workshop items for App '%u'.
 app_update <appid> [-validate] [-language <lang>] [-beta <betaname>] [-betapassword <pwd>] make sure a Steam application is up-to-date
+set_app_beta_password
+set_app_beta_password <appid> -betapassword <pwd>  -- opt-in to the app beta with the given password
 app_uninstall
 [-complete] <appId>
 app_run
@@ -323,6 +330,7 @@ app_install_script
 <AppID> [uninstall:0|1]- Runs app install script.
 CAppUpdater::OnAppInfoUpdate
 CAppUpdater::OnCheckAppBetaPasswordResponse
+%s
 -complete
 CAppLauncher::OnAppLifetimeNotice
 ERROR! AppId %u launch failed (%s)
@@ -438,7 +446,6 @@ Assertion Failed: IsText()
 %s%capp_build_%u.log
 [%s]:
 
-%s
 preview
 setpublic
 nobaseline
@@ -1167,8 +1174,7 @@ E
 @
 @
 @
-o
-D
+>
 
 =
 @
@@ -1181,5 +1187,4 @@ i
 @
 @
 @
-~
-]
+r

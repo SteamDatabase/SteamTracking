@@ -68,6 +68,9 @@
  B g_pThreadLocalHashMapSteamIDWatches
  B g_pThreadLocalHashMapTxnIDWatches
  B g_pfnDefaultSpewFunc
+ B g_pfnSteam_BGetCallback
+ B g_pfnSteam_FreeLastCallback
+ B g_pfnSteam_GetAPICallResult
  B g_szConsoleInput
  B g_szConsoleInputReady
  B g_vecTempTextBuffer
@@ -135,6 +138,8 @@
  D typeinfo for CCallbackImpl<72>
  D typeinfo for CCallbackImpl<7>
  D typeinfo for CCallbackImpl<8>
+ D typeinfo for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
+ D typeinfo for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
  D typeinfo for CConsoleInputThread
  D typeinfo for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
  D typeinfo for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedServer
@@ -197,6 +202,8 @@
  D vtable for CCallbackImpl<72>
  D vtable for CCallbackImpl<7>
  D vtable for CCallbackImpl<8>
+ D vtable for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
+ D vtable for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
  D vtable for CConsoleInputThread
  D vtable for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
  D vtable for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedServer
@@ -274,6 +281,8 @@
  R typeinfo name for CCallbackImpl<72>
  R typeinfo name for CCallbackImpl<7>
  R typeinfo name for CCallbackImpl<8>
+ R typeinfo name for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>
+ R typeinfo name for CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>
  R typeinfo name for CConsoleInputThread
  R typeinfo name for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedClient
  R typeinfo name for CControllerConfigUploader::CCallback_OnRemoteStorageAppSyncedServer
@@ -478,11 +487,14 @@
  T CCallbackImpl<8>::GetCallbackSizeBytes()
  T CCallbackImpl<8>::Run(void*, bool, unsigned long long)
  T CCallbackImpl<8>::~CCallbackImpl()
+ T CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, false>::~CCallbackManual()
+ T CCallbackManual<CCallbackMgr, SteamAPICallCompleted_t, true>::~CCallbackManual()
  T CCallbackMgr::CCallbackMgr()
  T CCallbackMgr::DispatchCallback(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackNoTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::DispatchCallbackTryCatch(CallbackMsg_t&, bool)
  T CCallbackMgr::OnSteamAPICallCompleted(SteamAPICallCompleted_t*)
+ T CCallbackMgr::RegisterCallResult(CCallbackBase*, unsigned long long)
  T CCallbackMgr::RegisterInterfaceFuncs(void*)
  T CCallbackMgr::RunCallbacks(int, bool)
  T CCallbackMgr::Unregister(CCallbackBase*)
@@ -544,6 +556,7 @@
  T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
  T CIPCToolMachClient::Init()
  T CKeyErrorContext::~CKeyErrorContext()
+ T CLogEvent::CLogEvent()
  T CLogEvent::operator=(CLogEvent const&)
  T CLogEvent::operator==(CLogEvent const&) const
  T CLogEvent::~CLogEvent()
@@ -1425,6 +1438,7 @@
  b s_convarSiteLicenseServerGUI
  b s_netadrResolveCache
  b s_netadrResolveCacheMutexEnforceConstruction
+ b set_app_beta_password_command
  b set_spew_command
  b set_spew_level_command
  b set_steam_guard_code_command
@@ -1597,6 +1611,7 @@
  t run_app_build(void*, ConParams&, ConCommand&)
  t run_app_build_http(void*, ConParams&, ConCommand&)
  t runscript(void*, ConParams&, ConCommand&)
+ t set_app_beta_password(void*, ConParams&, ConCommand&)
  t set_spew(void*, ConParams&, ConCommand&)
  t set_spew_level(void*, ConParams&, ConCommand&)
  t set_steam_guard_code(void*, ConParams&, ConCommand&)
