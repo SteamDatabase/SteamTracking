@@ -7008,7 +7008,7 @@
   JMS6: function(e, t, n) {
     "use strict";
     n.d(t, "b", function() {
-      return c;
+      return b;
     }),
       n.d(t, "a", function() {
         return d;
@@ -7016,18 +7016,18 @@
       n.d(t, "c", function() {
         return A;
       });
-    var c,
+    var b,
       o,
       a = n("mrSG"),
       p = n("2vnA"),
       r = n("i8i4"),
       i = n("Kw0F"),
-      b = n("D4wO"),
+      c = n("D4wO"),
       s = n("bxiW"),
       M = n("kyHq"),
       l = n("TLQK"),
       z = n("lkRc");
-    ((o = c || (c = {}))[(o.Minimized = 1)] = "Minimized"),
+    ((o = b || (b = {}))[(o.Minimized = 1)] = "Minimized"),
       (o[(o.Hidden = 2)] = "Hidden"),
       (o[(o.Tooltip = 4)] = "Tooltip"),
       (o[(o.ContextMenu = 8)] = "ContextMenu"),
@@ -7095,60 +7095,66 @@
             void 0 === e && (e = !0),
               void 0 === t && (t = !1),
               window.SteamClient &&
-                (this.m_rgParams.eCreationFlags |= c.Hidden),
-              this.m_rgParams.eCreationFlags & c.Tooltip && (e = !1),
+                (this.m_rgParams.eCreationFlags |= b.Hidden),
+              this.m_rgParams.eCreationFlags & b.Tooltip && (e = !1),
               this.BIsValid() &&
                 (this.BIsClosed()
                   ? ((this.m_popup = void 0), (this.m_element = void 0))
                   : e && this.Focus(t));
-            var a,
-              p,
-              r,
-              i = A.GetExistingPopup(this.m_strName);
-            (i && !this.m_rgParams.replace_existing_popup) ||
-              ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-              i
-                ? ((p = i.m_element),
-                  (a = i.m_popup),
-                  i.ReleasePopup(),
-                  (r = i.m_renderWhenReady),
-                  A.RemoveTrackedPopup(i),
-                  a.removeEventListener("beforeunload", i.OnBeforeUnloadEvent),
-                  a.removeEventListener("unload", i.OnUnload),
-                  a.removeEventListener("resize", i.OnResizeEvent),
-                  a.removeEventListener("focus", this.OnFocusInternal),
-                  a.removeEventListener("blur", this.OnBlurInternal),
-                  a.removeEventListener("drop", i.OnDrop),
-                  a.removeEventListener("dragover", i.OnDragOver),
-                  a.removeEventListener("message", this.OnMessage))
-                : ((a = (n = u.CreatePopup(this.m_strName, this.m_rgParams))
-                    .popup),
-                  (p = n.element),
-                  (r = new O(a, p))),
-              a &&
-                p &&
-                ((a.document.title = this.m_strTitle),
-                a.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-                a.addEventListener("unload", this.OnUnload),
-                a.addEventListener("resize", this.OnResizeEvent),
-                a.addEventListener("focus", this.OnFocusInternal),
-                a.addEventListener("blur", this.OnBlurInternal),
-                a.addEventListener("drop", this.OnDrop),
-                a.addEventListener("dragover", this.OnDragOver),
-                a.addEventListener("message", this.OnMessage),
-                z.b.LANGUAGE &&
-                  a.document.documentElement.setAttribute(
-                    "lang",
-                    l.a[z.b.LANGUAGE]
-                  ),
-                (this.m_popup = a),
-                (this.m_element = p),
-                (this.m_renderWhenReady = r),
-                this.m_renderWhenReady.SetTarget(function() {
-                  return o.RenderInternal(o.m_popup, o.m_element, e);
-                })),
-              A.AddTrackedPopup(this),
-              i && e && this.Focus());
+            var a = A.GetExistingPopup(this.m_strName);
+            if (!a || this.m_rgParams.replace_existing_popup) {
+              var p, r, i;
+              if (
+                ((this.m_rgParams = this.UpdateParamsBeforeShow(
+                  this.m_rgParams
+                )),
+                a
+                  ? ((r = a.m_element),
+                    (p = a.m_popup),
+                    a.ReleasePopup(),
+                    (i = a.m_renderWhenReady),
+                    A.RemoveTrackedPopup(a),
+                    p.removeEventListener(
+                      "beforeunload",
+                      a.OnBeforeUnloadEvent
+                    ),
+                    p.removeEventListener("unload", a.OnUnload),
+                    p.removeEventListener("resize", a.OnResizeEvent),
+                    p.removeEventListener("focus", this.OnFocusInternal),
+                    p.removeEventListener("blur", this.OnBlurInternal),
+                    p.removeEventListener("drop", a.OnDrop),
+                    p.removeEventListener("dragover", a.OnDragOver),
+                    p.removeEventListener("message", this.OnMessage))
+                  : ((p = (n = u.CreatePopup(this.m_strName, this.m_rgParams))
+                      .popup),
+                    (r = n.element),
+                    (i = new O(p, r))),
+                p && r)
+              ) {
+                if (
+                  ((p.document.title = this.m_strTitle),
+                  p.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+                  p.addEventListener("unload", this.OnUnload),
+                  p.addEventListener("resize", this.OnResizeEvent),
+                  p.addEventListener("focus", this.OnFocusInternal),
+                  p.addEventListener("blur", this.OnBlurInternal),
+                  p.addEventListener("drop", this.OnDrop),
+                  p.addEventListener("dragover", this.OnDragOver),
+                  p.addEventListener("message", this.OnMessage),
+                  z.b.LANGUAGE)
+                ) {
+                  var c = "koreana" == z.b.LANGUAGE ? "korean" : z.b.LANGUAGE;
+                  p.document.documentElement.setAttribute("lang", l.a[c]);
+                }
+                (this.m_popup = p),
+                  (this.m_element = r),
+                  (this.m_renderWhenReady = i),
+                  this.m_renderWhenReady.SetTarget(function() {
+                    return o.RenderInternal(o.m_popup, o.m_element, e);
+                  });
+              }
+              A.AddTrackedPopup(this), a && e && this.Focus();
+            }
           }),
           (e.prototype.RemoveEventListeners = function() {
             this.window.removeEventListener(
@@ -7529,7 +7535,7 @@
             }
           }),
           Object(a.c)(
-            [s.a, Object(b.a)(100)],
+            [s.a, Object(c.a)(100)],
             e.prototype,
             "DebouncedSaveSavedDimensionStore",
             null

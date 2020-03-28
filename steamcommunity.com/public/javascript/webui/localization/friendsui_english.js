@@ -644,6 +644,7 @@ LocalizationReady("friendsui", "english", {
   bbcode_image_tooltip_link_giphy: "Open giphy in new window",
   bbcode_video_tooltip_link: "Open video in new window",
   bbcode_image_link_giphy: "/GIPHY %1$s",
+  bbcode_image_popout: "Image Popout",
   bbcode_image_tooltip_collapse: "Hide image in chat",
   bbcode_video_tooltip_collapse: "Hide video in chat",
   bbcode_image_tooltip_uncollapse: "Unhide image in chat",

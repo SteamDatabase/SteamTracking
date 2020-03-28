@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5781731";
+var CLSTAMP = "5782837";
 !(function(e) {
   function t(t) {
     for (
@@ -22875,54 +22875,60 @@ var CLSTAMP = "5781731";
                 (this.BIsClosed()
                   ? ((this.m_popup = void 0), (this.m_element = void 0))
                   : e && this.Focus(t));
-            var i,
-              a,
-              s,
-              c = g.GetExistingPopup(this.m_strName);
-            (c && !this.m_rgParams.replace_existing_popup) ||
-              ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-              c
-                ? ((a = c.m_element),
-                  (i = c.m_popup),
-                  c.ReleasePopup(),
-                  (s = c.m_renderWhenReady),
-                  g.RemoveTrackedPopup(c),
-                  i.removeEventListener("beforeunload", c.OnBeforeUnloadEvent),
-                  i.removeEventListener("unload", c.OnUnload),
-                  i.removeEventListener("resize", c.OnResizeEvent),
-                  i.removeEventListener("focus", this.OnFocusInternal),
-                  i.removeEventListener("blur", this.OnBlurInternal),
-                  i.removeEventListener("drop", c.OnDrop),
-                  i.removeEventListener("dragover", c.OnDragOver),
-                  i.removeEventListener("message", this.OnMessage))
-                : ((i = (n = _.CreatePopup(this.m_strName, this.m_rgParams))
-                    .popup),
-                  (a = n.element),
-                  (s = new d(i, a))),
-              i &&
-                a &&
-                ((i.document.title = this.m_strTitle),
-                i.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-                i.addEventListener("unload", this.OnUnload),
-                i.addEventListener("resize", this.OnResizeEvent),
-                i.addEventListener("focus", this.OnFocusInternal),
-                i.addEventListener("blur", this.OnBlurInternal),
-                i.addEventListener("drop", this.OnDrop),
-                i.addEventListener("dragover", this.OnDragOver),
-                i.addEventListener("message", this.OnMessage),
-                m.b.LANGUAGE &&
-                  i.document.documentElement.setAttribute(
-                    "lang",
-                    u.a[m.b.LANGUAGE]
-                  ),
-                (this.m_popup = i),
-                (this.m_element = a),
-                (this.m_renderWhenReady = s),
-                this.m_renderWhenReady.SetTarget(function() {
-                  return r.RenderInternal(r.m_popup, r.m_element, e);
-                })),
-              g.AddTrackedPopup(this),
-              c && e && this.Focus());
+            var i = g.GetExistingPopup(this.m_strName);
+            if (!i || this.m_rgParams.replace_existing_popup) {
+              var a, s, c;
+              if (
+                ((this.m_rgParams = this.UpdateParamsBeforeShow(
+                  this.m_rgParams
+                )),
+                i
+                  ? ((s = i.m_element),
+                    (a = i.m_popup),
+                    i.ReleasePopup(),
+                    (c = i.m_renderWhenReady),
+                    g.RemoveTrackedPopup(i),
+                    a.removeEventListener(
+                      "beforeunload",
+                      i.OnBeforeUnloadEvent
+                    ),
+                    a.removeEventListener("unload", i.OnUnload),
+                    a.removeEventListener("resize", i.OnResizeEvent),
+                    a.removeEventListener("focus", this.OnFocusInternal),
+                    a.removeEventListener("blur", this.OnBlurInternal),
+                    a.removeEventListener("drop", i.OnDrop),
+                    a.removeEventListener("dragover", i.OnDragOver),
+                    a.removeEventListener("message", this.OnMessage))
+                  : ((a = (n = _.CreatePopup(this.m_strName, this.m_rgParams))
+                      .popup),
+                    (s = n.element),
+                    (c = new d(a, s))),
+                a && s)
+              ) {
+                if (
+                  ((a.document.title = this.m_strTitle),
+                  a.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+                  a.addEventListener("unload", this.OnUnload),
+                  a.addEventListener("resize", this.OnResizeEvent),
+                  a.addEventListener("focus", this.OnFocusInternal),
+                  a.addEventListener("blur", this.OnBlurInternal),
+                  a.addEventListener("drop", this.OnDrop),
+                  a.addEventListener("dragover", this.OnDragOver),
+                  a.addEventListener("message", this.OnMessage),
+                  m.b.LANGUAGE)
+                ) {
+                  var l = "koreana" == m.b.LANGUAGE ? "korean" : m.b.LANGUAGE;
+                  a.document.documentElement.setAttribute("lang", u.a[l]);
+                }
+                (this.m_popup = a),
+                  (this.m_element = s),
+                  (this.m_renderWhenReady = c),
+                  this.m_renderWhenReady.SetTarget(function() {
+                    return r.RenderInternal(r.m_popup, r.m_element, e);
+                  });
+              }
+              g.AddTrackedPopup(this), i && e && this.Focus();
+            }
           }),
           (e.prototype.RemoveEventListeners = function() {
             this.window.removeEventListener(
@@ -66109,16 +66115,22 @@ var CLSTAMP = "5781731";
         (t.prototype.ShowModal = function(e, t) {
           var n = parseInt(this.GetArgument("width")),
             o = parseInt(this.GetArgument("height")),
-            r = e.currentTarget.ownerDocument.defaultView,
-            i = C.a(o || 800, 0.5 * r.screen.height, 0.7 * r.screen.height),
-            s = C.a(n || 600, 0.5 * r.screen.width, 0.7 * r.screen.width);
-          Object(P.b)(
-            a.createElement(je, { imageUrl: t, ownerWin: r }),
-            r,
-            "ImageModal",
-            { strTitle: "", popupHeight: i, popupWidth: s },
-            Bt(r)
-          );
+            r = n / o,
+            i = e.currentTarget.ownerDocument.defaultView,
+            s = C.a(n || 600, 0.5 * i.screen.width, 0.85 * i.screen.width),
+            c = C.a(o || 800, 0.5 * i.screen.height, 0.85 * i.screen.height);
+          r >= 1 ? (c = (s - 50) / r + 50) : (s = (c - 50) * r + 50),
+            Object(P.b)(
+              a.createElement(je, { imageUrl: t, ownerWin: i }),
+              i,
+              "ImageModal",
+              {
+                strTitle: Object(p.c)("#bbcode_image_popout"),
+                popupHeight: c,
+                popupWidth: s
+              },
+              Bt(i)
+            );
         }),
         (t.prototype.OnContextMenu = function(e) {
           Object(K.d)(e, this.GetArgument("src"));

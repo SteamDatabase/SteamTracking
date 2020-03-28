@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5781731";
+var CLSTAMP = "5782837";
 !(function(e) {
   function t(t) {
     for (
@@ -2033,54 +2033,60 @@ var CLSTAMP = "5781731";
                 (this.BIsClosed()
                   ? ((this.m_popup = void 0), (this.m_element = void 0))
                   : e && this.Focus(t));
-            var i,
-              c,
-              a,
-              s = _.GetExistingPopup(this.m_strName);
-            (s && !this.m_rgParams.replace_existing_popup) ||
-              ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-              s
-                ? ((c = s.m_element),
-                  (i = s.m_popup),
-                  s.ReleasePopup(),
-                  (a = s.m_renderWhenReady),
-                  _.RemoveTrackedPopup(s),
-                  i.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
-                  i.removeEventListener("unload", s.OnUnload),
-                  i.removeEventListener("resize", s.OnResizeEvent),
-                  i.removeEventListener("focus", this.OnFocusInternal),
-                  i.removeEventListener("blur", this.OnBlurInternal),
-                  i.removeEventListener("drop", s.OnDrop),
-                  i.removeEventListener("dragover", s.OnDragOver),
-                  i.removeEventListener("message", this.OnMessage))
-                : ((i = (n = v.CreatePopup(this.m_strName, this.m_rgParams))
-                    .popup),
-                  (c = n.element),
-                  (a = new h(i, c))),
-              i &&
-                c &&
-                ((i.document.title = this.m_strTitle),
-                i.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-                i.addEventListener("unload", this.OnUnload),
-                i.addEventListener("resize", this.OnResizeEvent),
-                i.addEventListener("focus", this.OnFocusInternal),
-                i.addEventListener("blur", this.OnBlurInternal),
-                i.addEventListener("drop", this.OnDrop),
-                i.addEventListener("dragover", this.OnDragOver),
-                i.addEventListener("message", this.OnMessage),
-                p.b.LANGUAGE &&
-                  i.document.documentElement.setAttribute(
-                    "lang",
-                    m.a[p.b.LANGUAGE]
-                  ),
-                (this.m_popup = i),
-                (this.m_element = c),
-                (this.m_renderWhenReady = a),
-                this.m_renderWhenReady.SetTarget(function() {
-                  return o.RenderInternal(o.m_popup, o.m_element, e);
-                })),
-              _.AddTrackedPopup(this),
-              s && e && this.Focus());
+            var i = _.GetExistingPopup(this.m_strName);
+            if (!i || this.m_rgParams.replace_existing_popup) {
+              var c, a, s;
+              if (
+                ((this.m_rgParams = this.UpdateParamsBeforeShow(
+                  this.m_rgParams
+                )),
+                i
+                  ? ((a = i.m_element),
+                    (c = i.m_popup),
+                    i.ReleasePopup(),
+                    (s = i.m_renderWhenReady),
+                    _.RemoveTrackedPopup(i),
+                    c.removeEventListener(
+                      "beforeunload",
+                      i.OnBeforeUnloadEvent
+                    ),
+                    c.removeEventListener("unload", i.OnUnload),
+                    c.removeEventListener("resize", i.OnResizeEvent),
+                    c.removeEventListener("focus", this.OnFocusInternal),
+                    c.removeEventListener("blur", this.OnBlurInternal),
+                    c.removeEventListener("drop", i.OnDrop),
+                    c.removeEventListener("dragover", i.OnDragOver),
+                    c.removeEventListener("message", this.OnMessage))
+                  : ((c = (n = v.CreatePopup(this.m_strName, this.m_rgParams))
+                      .popup),
+                    (a = n.element),
+                    (s = new h(c, a))),
+                c && a)
+              ) {
+                if (
+                  ((c.document.title = this.m_strTitle),
+                  c.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+                  c.addEventListener("unload", this.OnUnload),
+                  c.addEventListener("resize", this.OnResizeEvent),
+                  c.addEventListener("focus", this.OnFocusInternal),
+                  c.addEventListener("blur", this.OnBlurInternal),
+                  c.addEventListener("drop", this.OnDrop),
+                  c.addEventListener("dragover", this.OnDragOver),
+                  c.addEventListener("message", this.OnMessage),
+                  p.b.LANGUAGE)
+                ) {
+                  var l = "koreana" == p.b.LANGUAGE ? "korean" : p.b.LANGUAGE;
+                  c.document.documentElement.setAttribute("lang", m.a[l]);
+                }
+                (this.m_popup = c),
+                  (this.m_element = a),
+                  (this.m_renderWhenReady = s),
+                  this.m_renderWhenReady.SetTarget(function() {
+                    return o.RenderInternal(o.m_popup, o.m_element, e);
+                  });
+              }
+              _.AddTrackedPopup(this), i && e && this.Focus();
+            }
           }),
           (e.prototype.RemoveEventListeners = function() {
             this.window.removeEventListener(
@@ -3461,10 +3467,10 @@ var CLSTAMP = "5781731";
         return R;
       }),
       n.d(t, "ob", function() {
-        return B;
+        return N;
       }),
       n.d(t, "M", function() {
-        return N;
+        return B;
       }),
       n.d(t, "l", function() {
         return T;
@@ -4691,7 +4697,7 @@ var CLSTAMP = "5781731";
         })
       );
     }
-    function B(e) {
+    function N(e) {
       return o.createElement(
         "svg",
         {
@@ -4763,7 +4769,7 @@ var CLSTAMP = "5781731";
         )
       );
     }
-    function N() {
+    function B() {
       return o.createElement(
         "svg",
         {

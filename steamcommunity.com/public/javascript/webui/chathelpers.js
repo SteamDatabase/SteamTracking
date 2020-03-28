@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5781731";
+var CLSTAMP = "5782837";
 !(function(e) {
   function t(t) {
     for (
@@ -774,54 +774,60 @@ var CLSTAMP = "5781731";
                 (this.BIsClosed()
                   ? ((this.m_popup = void 0), (this.m_element = void 0))
                   : e && this.Focus(t));
-            var i,
-              a,
-              s,
-              u = v.GetExistingPopup(this.m_strName);
-            (u && !this.m_rgParams.replace_existing_popup) ||
-              ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-              u
-                ? ((a = u.m_element),
-                  (i = u.m_popup),
-                  u.ReleasePopup(),
-                  (s = u.m_renderWhenReady),
-                  v.RemoveTrackedPopup(u),
-                  i.removeEventListener("beforeunload", u.OnBeforeUnloadEvent),
-                  i.removeEventListener("unload", u.OnUnload),
-                  i.removeEventListener("resize", u.OnResizeEvent),
-                  i.removeEventListener("focus", this.OnFocusInternal),
-                  i.removeEventListener("blur", this.OnBlurInternal),
-                  i.removeEventListener("drop", u.OnDrop),
-                  i.removeEventListener("dragover", u.OnDragOver),
-                  i.removeEventListener("message", this.OnMessage))
-                : ((i = (n = f.CreatePopup(this.m_strName, this.m_rgParams))
-                    .popup),
-                  (a = n.element),
-                  (s = new h(i, a))),
-              i &&
-                a &&
-                ((i.document.title = this.m_strTitle),
-                i.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-                i.addEventListener("unload", this.OnUnload),
-                i.addEventListener("resize", this.OnResizeEvent),
-                i.addEventListener("focus", this.OnFocusInternal),
-                i.addEventListener("blur", this.OnBlurInternal),
-                i.addEventListener("drop", this.OnDrop),
-                i.addEventListener("dragover", this.OnDragOver),
-                i.addEventListener("message", this.OnMessage),
-                m.b.LANGUAGE &&
-                  i.document.documentElement.setAttribute(
-                    "lang",
-                    p.a[m.b.LANGUAGE]
-                  ),
-                (this.m_popup = i),
-                (this.m_element = a),
-                (this.m_renderWhenReady = s),
-                this.m_renderWhenReady.SetTarget(function() {
-                  return o.RenderInternal(o.m_popup, o.m_element, e);
-                })),
-              v.AddTrackedPopup(this),
-              u && e && this.Focus());
+            var i = v.GetExistingPopup(this.m_strName);
+            if (!i || this.m_rgParams.replace_existing_popup) {
+              var a, s, u;
+              if (
+                ((this.m_rgParams = this.UpdateParamsBeforeShow(
+                  this.m_rgParams
+                )),
+                i
+                  ? ((s = i.m_element),
+                    (a = i.m_popup),
+                    i.ReleasePopup(),
+                    (u = i.m_renderWhenReady),
+                    v.RemoveTrackedPopup(i),
+                    a.removeEventListener(
+                      "beforeunload",
+                      i.OnBeforeUnloadEvent
+                    ),
+                    a.removeEventListener("unload", i.OnUnload),
+                    a.removeEventListener("resize", i.OnResizeEvent),
+                    a.removeEventListener("focus", this.OnFocusInternal),
+                    a.removeEventListener("blur", this.OnBlurInternal),
+                    a.removeEventListener("drop", i.OnDrop),
+                    a.removeEventListener("dragover", i.OnDragOver),
+                    a.removeEventListener("message", this.OnMessage))
+                  : ((a = (n = f.CreatePopup(this.m_strName, this.m_rgParams))
+                      .popup),
+                    (s = n.element),
+                    (u = new h(a, s))),
+                a && s)
+              ) {
+                if (
+                  ((a.document.title = this.m_strTitle),
+                  a.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+                  a.addEventListener("unload", this.OnUnload),
+                  a.addEventListener("resize", this.OnResizeEvent),
+                  a.addEventListener("focus", this.OnFocusInternal),
+                  a.addEventListener("blur", this.OnBlurInternal),
+                  a.addEventListener("drop", this.OnDrop),
+                  a.addEventListener("dragover", this.OnDragOver),
+                  a.addEventListener("message", this.OnMessage),
+                  m.b.LANGUAGE)
+                ) {
+                  var c = "koreana" == m.b.LANGUAGE ? "korean" : m.b.LANGUAGE;
+                  a.document.documentElement.setAttribute("lang", p.a[c]);
+                }
+                (this.m_popup = a),
+                  (this.m_element = s),
+                  (this.m_renderWhenReady = u),
+                  this.m_renderWhenReady.SetTarget(function() {
+                    return o.RenderInternal(o.m_popup, o.m_element, e);
+                  });
+              }
+              v.AddTrackedPopup(this), i && e && this.Focus();
+            }
           }),
           (e.prototype.RemoveEventListeners = function() {
             this.window.removeEventListener(
