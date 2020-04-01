@@ -283,7 +283,13 @@ p.blurb2 {
 .chartKey { height: 30px; flow-children: right; position: absolute; top: 130px; left: 6px; width: 240px; }
 .legendChild { margin-left: 10px; float: left; }
 .legendColor { height: 8px; width: 8px; float: left; margin-right: 4px;}
-.legendText { color: #7092a5; font-size: 10px; float: left; }
+.legendText 
+{ 
+	color: #7092a5; 
+	font-size: 10px; 
+	float: left; 
+	text-transform: uppercase;
+}
 .chartLegend { top:40px; left: 250px; position:absolute; }
 .legendLabel div { font-size: 11px; margin-top: 4px; }
 
@@ -344,6 +350,10 @@ p.blurb2 {
 .data_row {
 	color:#cccccc;
 	padding-top:6px;
+}
+
+.total_row {
+	padding-top: 20px;
 }
 
 .appdata_row {

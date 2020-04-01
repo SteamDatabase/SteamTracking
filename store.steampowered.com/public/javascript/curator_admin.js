@@ -1217,7 +1217,12 @@ function CustomizeCreatedApps( elForm )
 
 function ManageRSSFeed( elForm )
 {
-	CallFunctionFromForm( elForm, [ 'lang', 'rss_url' ], UpdateRSSFeed );
+	CallFunctionFromForm( elForm, [ 'lang', 'rss_url', 'gid' ], UpdateRSSFeed );
+}
+
+function CheckRSSFeed( elForm )
+{
+	CallFunctionFromForm( elForm, [  'gid' ], CheckRSSFeedAction );
 }
 
 function UnlinkedAppFromCreatorHomeAjaxAction( appid )
@@ -1328,13 +1333,14 @@ function UpdateCustomizationCreatedApp( appid, blurb, link_url )
 
 }
 
-function UpdateRSSFeed( lang, rss_url )
+function UpdateRSSFeed( lang, rss_url, gid )
 {
 	$J.ajax ( {
 		url: g_strCuratorAdminURL + 'ajaxmanagerssfeed/',
 		data: {
 			lang: lang,
 			rss_url: rss_url,
+			gid: gid,
 			sessionid: g_sessionID
 		},
 		dataType: 'json',
@@ -1342,6 +1348,31 @@ function UpdateRSSFeed( lang, rss_url )
 	} ).done( function ( data )
 	{
 		$J( '#creatorhome_managemygame_success' ).text( 'Save successful.' ).show().delay(5000).fadeOut();
+	}).fail( function( data ){
+		var errorText = "";
+		try {
+			response = JSON.parse(data.responseText);
+			errorText = response.success;
+		} catch ( SyntaxError ) {
+			errorText = data.responseText;
+		}
+		ShowAlertDialog( "Oops!", "We were unable to save your changes ( %1$s )".replace(/%1\$s/, errorText ) );
+	});
+}
+
+function CheckRSSFeedAction( $gid )
+{
+	$J.ajax ( {
+		url: g_strCuratorAdminURL + 'ajaxcheckfornews/',
+		data: {
+			gid: $gid,
+			sessionid: g_sessionID
+		},
+		dataType: 'json',
+		type: 'POST'
+	} ).done( function ( data )
+	{
+		$J( '#creatorhome_managemygame_success' ).text( 'Request Succesfully Queued' ).show().delay(5000).fadeOut();
 	}).fail( function( data ){
 		var errorText = "";
 		try {

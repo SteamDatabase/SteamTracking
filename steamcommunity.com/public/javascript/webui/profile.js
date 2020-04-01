@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5782837";
+var CLSTAMP = "5786609";
 !(function(e) {
   function t(t) {
     for (
@@ -779,7 +779,8 @@ var CLSTAMP = "5782837";
         authwgtoken: "",
         is_support: !1,
         is_limited: !1,
-        short_url: ""
+        short_url: "",
+        country_code: ""
       },
       s = { steamid: "", clanid: 0, listid: 0 },
       l = {
@@ -7307,7 +7308,7 @@ and limitations under the License.
       var r = d.LocalizeString(e);
       return r
         ? (t.length > 0 &&
-            (r = r.replace(/%(\d+)\$s/g, function(e, n) {
+            (r = r.replace(/%(?:(\d+)\$)?s/g, function(e, n) {
               if (n <= t.length && n >= 1) {
                 var r = t[n - 1];
                 return String(null == r ? "" : r);

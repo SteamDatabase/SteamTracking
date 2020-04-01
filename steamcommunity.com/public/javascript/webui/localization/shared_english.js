@@ -179,12 +179,15 @@ LocalizationReady("shared", "english", {
   EventCalendar_ManageStorePref: "Manage Store Preferences",
   EventCalendar_MuteApp_Unknown: "Unknown",
   EVentCalendar_Hide_EventType: "Hide all '%1$s' type posts",
+  EventCalender_LastPlayed: "Last played %1$s",
+  EventCalender_Reason_recent: "This game has been played recently",
   EventCalender_Reason_library: "This game is in your library",
   EventCalender_Reason_following: "You are following this game",
   EventCalender_Reason_wishlist: "This game is in your wishlist",
   EventCalender_Reason_recommended: "This game is recommended for you",
   EventCalender_Reason_steam: "This post is from the Steam Platform",
   EventCalender_Reason_topx: "Game is in the Top Sellers",
+  EventCalender_Hide_Reason_recent: "Hide posts from recently played games",
   EventCalender_Hide_Reason_library: "Hide posts from games in your library",
   EventCalender_Hide_Reason_following:
     "Hide posts from games you are following",
@@ -216,6 +219,11 @@ LocalizationReady("shared", "english", {
   EventCalendar_EventTypeGroup_ttip_sales:
     "Includes discounts, promotions, and free trials",
 
+  EventCalendar_GameSource_recent: "Recently Played",
+  EventCalendar_GameSource_ttip_recent:
+    "Include posts about games you have played or purchased in the past six months",
+  EventCalendar_GameSource_EventExplanation_ttip_recent:
+    "You have played this game in the past six months",
   EventCalendar_GameSource_library: "Library",
   EventCalendar_GameSource_ttip_library:
     "Include posts about games in your library",

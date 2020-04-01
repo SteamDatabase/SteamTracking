@@ -199,6 +199,14 @@ function ClearReviewReports( id )
 	);
 }
 
+function ClearContentCheckFlag( id )
+{
+	$J.post( 'https://steamcommunity.com/userreviews/clearcontentcheckresults/' + id, { sessionid: g_sessionID } )
+	.done( function( data ) {
+		$J( "#ban_check_result_" + id ).text( 'Reset' );
+	});
+}
+
 function ViewReviewReports( id )
 {
 	UserReview_ShowReportsDialog( id, 'https://steamcommunity.com' );
@@ -222,6 +230,11 @@ function SelectedReviews_ClearReports()
 function SelectedReviews_ClearReviewDevFlag()
 {
 	ApplyFuncOnSelectedItems( ClearReviewDevFlag );
+}
+
+function SelectedReviews_ClearContentCheckResult()
+{
+	ApplyFuncOnSelectedItems( ClearContentCheckFlag );
 }
 
 function ResetProfileAndGroupContent( steamID )

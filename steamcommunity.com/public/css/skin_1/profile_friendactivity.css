@@ -739,6 +739,10 @@ a.nohover, a.nohover:hover
 	max-width: 640px;
 }
 
+.blotter_group_announcement_content img.sharedFilePreviewYouTubeVideo {
+    display: none;
+}
+
 .blotter_group_announcement_rating_controls
 {
 	padding-top: 10px;

@@ -944,27 +944,6 @@ CGameGooExchangeDialog = {
 		});
 	}
 
-	function EnableAvatarFrame( itemid, enabled )
-	{
-		var rgAJAXParams = {
-			sessionid: g_sessionID,
-			assetid: itemid,
-			enabled: enabled
-		};
-		var strActionURL = g_strProfileURL + "/ajaxenableavatarframe/";
-
-		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
-			if ( enabled )
-				ShowAlertDialog( 'Enabled Avatar Profile Frame', 'This item has been set as your avatar frame on your profile and mini profile.' );
-			else
-				ShowAlertDialog( 'Disabled Avatar Profile Frame', 'This item has been removed as your avatar frame on your profile and mini profile.' );
-
-			ReloadCommunityInventory();
-		}).fail( function() {
-			ShowAlertDialog( 'Action Failed', 'There was an error communicating with the network. Please try again later.' );
-		});
-	}
-
 
 
 CBoosterCreatorPage = {

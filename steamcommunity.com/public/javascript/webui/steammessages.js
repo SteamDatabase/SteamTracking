@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5782837";
+var CLSTAMP = "5786609";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -30942,6 +30942,12 @@ var CLSTAMP = "5782837";
             (t.prototype.set_message = function(e) {
               s.Message.setField(this, 3, e);
             }),
+            (t.prototype.echo_to_sender = function() {
+              return s.Message.getField(this, 4);
+            }),
+            (t.prototype.set_echo_to_sender = function(e) {
+              s.Message.setField(this, 4, e);
+            }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
@@ -30949,7 +30955,8 @@ var CLSTAMP = "5782837";
               var i = {
                 chat_group_id: s.Message.getField(t, 1),
                 chat_id: s.Message.getField(t, 2),
-                message: s.Message.getField(t, 3)
+                message: s.Message.getField(t, 3),
+                echo_to_sender: s.Message.getField(t, 4)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -30970,6 +30977,9 @@ var CLSTAMP = "5782837";
                   case 3:
                     e.set_message(t.readString());
                     break;
+                  case 4:
+                    e.set_echo_to_sender(t.readBool());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -30987,7 +30997,8 @@ var CLSTAMP = "5782837";
                 void 0 !== (i = s.Message.getField(e, 2)) &&
                   t.writeUint64String(2, i),
                 void 0 !== (i = s.Message.getField(e, 3)) &&
-                  t.writeString(3, i);
+                  t.writeString(3, i),
+                void 0 !== (i = s.Message.getField(e, 4)) && t.writeBool(4, i);
             }),
             (t.prototype.getClassName = function() {
               return "CChatRoom_SendChatMessage_Request";
@@ -31021,6 +31032,12 @@ var CLSTAMP = "5782837";
             (t.prototype.set_ordinal = function(e) {
               s.Message.setField(this, 3, e);
             }),
+            (t.prototype.message_without_bb_code = function() {
+              return s.Message.getField(this, 4);
+            }),
+            (t.prototype.set_message_without_bb_code = function(e) {
+              s.Message.setField(this, 4, e);
+            }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
@@ -31028,7 +31045,8 @@ var CLSTAMP = "5782837";
               var i = {
                 modified_message: s.Message.getField(t, 1),
                 server_timestamp: s.Message.getField(t, 2),
-                ordinal: s.Message.getField(t, 3)
+                ordinal: s.Message.getField(t, 3),
+                message_without_bb_code: s.Message.getField(t, 4)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -31049,6 +31067,9 @@ var CLSTAMP = "5782837";
                   case 3:
                     e.set_ordinal(t.readUint32());
                     break;
+                  case 4:
+                    e.set_message_without_bb_code(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -31065,7 +31086,9 @@ var CLSTAMP = "5782837";
                 void 0 !== (i = s.Message.getField(e, 2)) &&
                   t.writeUint32(2, i),
                 void 0 !== (i = s.Message.getField(e, 3)) &&
-                  t.writeUint32(3, i);
+                  t.writeUint32(3, i),
+                void 0 !== (i = s.Message.getField(e, 4)) &&
+                  t.writeString(4, i);
             }),
             (t.prototype.getClassName = function() {
               return "CChatRoom_SendChatMessage_Response";
@@ -45722,6 +45745,12 @@ var CLSTAMP = "5782837";
             (t.prototype.set_ordinal = function(e) {
               a.Message.setField(this, 3, e);
             }),
+            (t.prototype.message_without_bb_code = function() {
+              return a.Message.getField(this, 4);
+            }),
+            (t.prototype.set_message_without_bb_code = function(e) {
+              a.Message.setField(this, 4, e);
+            }),
             (t.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), t.toObject(e, this);
             }),
@@ -45729,7 +45758,8 @@ var CLSTAMP = "5782837";
               var i = {
                 modified_message: a.Message.getField(t, 1),
                 server_timestamp: a.Message.getField(t, 2),
-                ordinal: a.Message.getField(t, 3)
+                ordinal: a.Message.getField(t, 3),
+                message_without_bb_code: a.Message.getField(t, 4)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -45750,6 +45780,9 @@ var CLSTAMP = "5782837";
                   case 3:
                     e.set_ordinal(t.readUint32());
                     break;
+                  case 4:
+                    e.set_message_without_bb_code(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -45766,7 +45799,9 @@ var CLSTAMP = "5782837";
                 void 0 !== (i = a.Message.getField(e, 2)) &&
                   t.writeUint32(2, i),
                 void 0 !== (i = a.Message.getField(e, 3)) &&
-                  t.writeUint32(3, i);
+                  t.writeUint32(3, i),
+                void 0 !== (i = a.Message.getField(e, 4)) &&
+                  t.writeString(4, i);
             }),
             (t.prototype.getClassName = function() {
               return "CFriendMessages_SendMessage_Response";

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5782837";
+var CLSTAMP = "5786609";
 !(function(e) {
   function t(t) {
     for (
@@ -5257,7 +5257,8 @@ var CLSTAMP = "5782837";
         authwgtoken: "",
         is_support: !1,
         is_limited: !1,
-        short_url: ""
+        short_url: "",
+        country_code: ""
       },
       c = { steamid: "", clanid: 0, listid: 0 },
       l = {
@@ -11633,6 +11634,7 @@ var CLSTAMP = "5782837";
         "h3",
         "b",
         "u",
+        "hr",
         "i",
         "img",
         "strike",
@@ -12685,7 +12687,8 @@ var CLSTAMP = "5782837";
               NODE_ENV: "production",
               STEAM_BUILD: "buildbot",
               VALVE_BUILD: "false"
-            }).MOBILE_BUILD
+            }).MOBILE_BUILD &&
+            !s.b.IN_CLIENT
           ) {
             var t = Object(s.f)("appcapsulestore", "application_config");
             this.ValidateAppConfig(t) &&
@@ -28696,7 +28699,7 @@ var CLSTAMP = "5782837";
           }),
           (t.prototype.BIsFreeApp = function() {
             var e = V.a.GetStoreCapsuleInfo(this.props.appid).GetAppStoreData();
-            return e.is_free && "0" == e.price;
+            return e.is_free && ("" == e.price || "0" == e.price);
           }),
           (t.prototype.OnAddToCart = function(e) {
             if (this.props.packageid)
@@ -33409,13 +33412,17 @@ var CLSTAMP = "5782837";
         }
         return (
           (e.prototype.Init = function() {
+            var e = this;
             (this.m_disposePersonaStateChanged = s.f.FriendStore.AddPersonaStateChangedCallback(
               this.OnPersonaStateChanged
             )),
               (this.m_disposePlayerGameChanged = s.f.FriendStore.AddPlayerGameChangedCallback(
                 this.OnPlayerGameChanged
               )),
-              s.f.SettingsStore.RunOnReady(this.ListenForSettingsChanges);
+              s.f.SettingsStore.RunOnReady(this.ListenForSettingsChanges),
+              s.f.CMInterface.AddOnDisconnectCallback(function() {
+                e.Reset();
+              }, 102);
           }),
           (e.prototype.ListenForSettingsChanges = function() {
             var e = this;
@@ -33430,14 +33437,17 @@ var CLSTAMP = "5782837";
                   );
                 },
                 function() {
-                  e.m_mapGroupBuckets.forEach(function(t, n) {
-                    (t.bFlatList = void 0),
-                      e.PerformInitialPopulate(n),
-                      e.FireMemberListChanged(t);
-                  }),
-                    e.ListenForSettingsChanges();
+                  e.Reset(), e.ListenForSettingsChanges();
                 }
               );
+          }),
+          (e.prototype.Reset = function() {
+            var e = this;
+            this.m_mapGroupBuckets.forEach(function(t, n) {
+              (t.bFlatList = void 0),
+                e.PerformInitialPopulate(n),
+                e.FireMemberListChanged(t);
+            });
           }),
           (e.prototype.RegisterForGroupMemberList = function(e, t) {
             var n = this;
@@ -52789,27 +52799,20 @@ var CLSTAMP = "5782837";
               a = this.GetFriendRenderContext(),
               s = n && Math.max(Math.min(n, 120), 50);
             this.LOG("Render"), i.LoadChatLogs();
-            var c = null;
-            if (i instanceof m.a) {
-              var l = "currentTextChannelName";
-              i.IsDefaultRoomForGroup() && (l += " DefaultChatRoom"),
-                (c = r.createElement("div", { className: l }, "#", i.name));
-            }
-            var p = _.f.SettingsStore.FriendsSettings.nChatFontSize,
-              u = "ChatHistoryContainer";
+            var c = _.f.SettingsStore.FriendsSettings.nChatFontSize,
+              l = "ChatHistoryContainer";
             return (
-              p == P.a.k_EChatFontSizeSmall
-                ? (u += " smallChatFont")
-                : p == P.a.k_EChatFontSizeLarge && (u += " largeChatFont"),
+              c == P.a.k_EChatFontSizeSmall
+                ? (l += " smallChatFont")
+                : c == P.a.k_EChatFontSizeLarge && (l += " largeChatFont"),
               r.createElement(
                 "div",
-                { className: u },
+                { className: l },
                 o &&
                   r.createElement("div", {
                     className: "interactionBlocker",
                     onClick: this.Swallow
                   }),
-                c,
                 r.createElement(Se.b, null),
                 r.createElement(Ie, { chatHistory: this, chatView: t }),
                 r.createElement(
@@ -62614,7 +62617,7 @@ var CLSTAMP = "5782837";
             }
             return n;
           }),
-          (t.prototype.OnNewChatMsgAdded = function(e, t, n, o, r) {}),
+          (t.prototype.OnNewChatMsgAdded = function(e, t, n, o) {}),
           (t.prototype.GetBBCodeParser = function() {
             return this.m_ChatStore.FriendChatBBCodeParser;
           }),
@@ -66117,17 +66120,20 @@ var CLSTAMP = "5782837";
             o = parseInt(this.GetArgument("height")),
             r = n / o,
             i = e.currentTarget.ownerDocument.defaultView,
-            s = C.a(n || 600, 0.5 * i.screen.width, 0.85 * i.screen.width),
-            c = C.a(o || 800, 0.5 * i.screen.height, 0.85 * i.screen.height);
-          r >= 1 ? (c = (s - 50) / r + 50) : (s = (c - 50) * r + 50),
+            s = 0.85 * i.screen.height,
+            c = C.a(n || 600, 0.5 * i.screen.width, 0.85 * i.screen.width),
+            l = C.a(o || 800, 0.5 * i.screen.height, s);
+          r >= 1
+            ? (l = (c - 50) / r + 50) > s && (c = ((l = s) - 50) * r + 50)
+            : (c = (l - 50) * r + 50),
             Object(P.b)(
               a.createElement(je, { imageUrl: t, ownerWin: i }),
               i,
               "ImageModal",
               {
                 strTitle: Object(p.c)("#bbcode_image_popout"),
-                popupHeight: c,
-                popupWidth: s
+                popupHeight: l,
+                popupWidth: c
               },
               Bt(i)
             );
@@ -78957,7 +78963,7 @@ and limitations under the License.
       var o = h.LocalizeString(e);
       return o
         ? (t.length > 0 &&
-            (o = o.replace(/%(\d+)\$s/g, function(e, n) {
+            (o = o.replace(/%(?:(\d+)\$)?s/g, function(e, n) {
               if (n <= t.length && n >= 1) {
                 var o = t[n - 1];
                 return String(null == o ? "" : o);
@@ -79740,7 +79746,21 @@ and limitations under the License.
           (t.prototype.GetBBCodeParser = function() {
             return this.m_ChatStore.ChatRoomBBCodeParser;
           }),
-          (t.prototype.OnNewChatMsgAdded = function(e, t, n, o, r) {
+          (t.prototype.ConvertBBCodeMessageContentToPlainTextMessageContent = function(
+            e
+          ) {
+            return (e = (e = (e = (e = (e = e.replace(
+              /\[emoticon\](.+?)\[\/emoticon\]/g,
+              ":$1:"
+            )).replace(/\[url=(.*?)\]\1\[\/url\]/g, "$1")).replace(
+              /\[url=(.*?)\](.*?)\[\/url\]/g,
+              "$1 ($2)"
+            )).replace(/[^\\]\[\/?.+?\]/g, "")).replace(/\\\[/g, "["));
+          }),
+          (t.prototype.OnNewChatMsgAdded = function(e, t, n, o) {
+            var r = this.ConvertBBCodeMessageContentToPlainTextMessageContent(
+              o
+            );
             if ("undefined" != typeof SteamClient)
               try {
                 SteamClient.WebChat.OnNewGroupChatMsgAdded(
@@ -81295,7 +81315,10 @@ and limitations under the License.
                                         (e.unOrdinal = i.Body().ordinal() || 0),
                                         l.OnUserChatEcho(
                                           e.rtTimestamp,
-                                          e.unOrdinal
+                                          e.unOrdinal,
+                                          e.strMessage,
+                                          i.Body().message_without_bb_code() ||
+                                            e.strMessage
                                         );
                                       var t = i.Body().modified_message();
                                       return (
@@ -81570,10 +81593,9 @@ and limitations under the License.
           }),
           (e.prototype.AddNewChatMsgAndNotify = function(e, t, n, o, r, i) {
             var a = this.AppendChatMsg(e, t, n, o);
-            a.Mentions = i;
+            (a.Mentions = i), this.OnNewChatMsgAdded(e, t, n, o);
             var s = void 0 !== r;
-            this.OnNewChatMsgAdded(e, t, n, o, r || o),
-              this.CheckShouldNotify(a, s ? r : o, o),
+            this.CheckShouldNotify(a, s ? r : o, o),
               this.AddRoomEffectIfNeeded(a.strMessage);
           }),
           (e.prototype.AddRoomEffectIfNeeded = function(e) {
@@ -81663,8 +81685,9 @@ and limitations under the License.
             if (Object(s.j)(o)) {
               var l = new s.d(e, t, n, r, o, i, a);
               11 == l.eServerMsgType &&
-                this.SetupAppCustomServerMsg(l).then(function(e) {
-                  c.CheckShouldNotify(l, e, l.strServerMsgAppCustomLocalized);
+                this.SetupAppCustomServerMsg(l).then(function(o) {
+                  c.OnNewChatMsgAdded(e, t, n, r),
+                    c.CheckShouldNotify(l, o, l.strServerMsgAppCustomLocalized);
                 }),
                 this.InternalAppendChatMsg(l);
             }
@@ -81675,10 +81698,16 @@ and limitations under the License.
               (this.AckChatMsgOnServer(e),
               (this.m_rtLastServerAckedChatMsg = e));
           }),
-          (e.prototype.OnUserChatEcho = function(e, t) {
+          (e.prototype.OnUserChatEcho = function(e, t, n, o) {
             e >= this.m_rtLastAckedChatMsg &&
               ((this.m_rtLastMessageReceived = e),
-              this.UpdateLastAckTimeFromServer(e));
+              this.UpdateLastAckTimeFromServer(e)),
+              this.OnNewChatMsgAdded(
+                this.m_FriendStore.self.accountid,
+                e,
+                t,
+                n
+              );
           }),
           (e.prototype.UpdateLastAckTimeFromServer = function(e) {
             this.m_rtLastServerAckedChatMsg <= e &&

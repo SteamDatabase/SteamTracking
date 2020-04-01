@@ -1929,11 +1929,9 @@ GHomepage = {
 			}
 
 			var $Content = $Review.append( $J( '<div>', { class: 'content', text: '"' + review.review_text + '"' } ) );
-			if ( review.review_text_truncated )
-			{
-				var $ViewMore = $J( '<div class="view_more"><a href="' + review.review_link + '" target="_blank">Read Entire Review</a></div>' );
-				$Content.append( $ViewMore );
-			}
+
+			var $ViewMore = $J( '<div class="view_more"><a href="' + review.review_link + '" target="_blank">Read Entire Review</a></div>' );
+			$Content.append( $ViewMore );
 
 			var reviewer = GStoreItemData.GetAccountData( null, review.accountid );
 			if ( reviewer )

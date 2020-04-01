@@ -3649,3 +3649,37 @@ img.category_icon {
 	font-weight: bold;
 }
 
+.revision_change_notes_view_link
+{
+	float: right;
+	visibility: hidden;
+}
+
+.revision_change_notes_col {
+	cursor: pointer;
+}
+
+.revision_change_notes_col:hover .revision_change_notes_view_link
+{
+	visibility: visible;
+}
+
+.revision_change_notes_ctn
+{
+	max-width: 250px;
+}
+
+.revision_change_notes
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.revision_change_notes, .revision_change_notes_popup
+{
+	white-space: pre-line;
+}

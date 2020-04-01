@@ -3210,6 +3210,12 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   font-weight: 300;
   clear: both; }
 
+.eventbbcodeparser_HR_2IENn {
+  border: none;
+  height: 1px;
+  color: #6e7577;
+  background-color: #6e7577; }
+
 .eventbbcodeparser_Link_29bMZ {
   color: #969696;
   text-decoration: underline; }
@@ -3308,10 +3314,6 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 .eventbbcodeparser_SaleSectionCtn_39HWX {
   color: #C3C4D9;
   font-size: 14px; }
-  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Header1_SPYFj {
-    color: #C53577;
-    font-size: 13px;
-    display: inline; }
   .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_ReminderCtn_25AZk {
     width: 300px;
     margin: 0 auto; }
@@ -3320,6 +3322,11 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     width: 60%;
     max-width: 640px;
     margin: 0 auto; }
+  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80 {
+    font-size: 14px; }
+  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_TableRow_sc_Sn,
+  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_TableData_1skQk {
+    border: none; }
   .eventbbcodeparser_SaleSectionCtn_39HWX img {
     max-width: 100%; }
 
@@ -6307,7 +6314,7 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   width: 1056px;
   flex-grow: 2;
   padding-top: 20px;
-  margin: 0 auto; }
+  margin: 0 5%; }
 
 .partnereventeditor_SteamAwardCategoryPicker_2cp5b .partnereventeditor_SteamAwardCategoryOptions_oF5r1 {
   background: #355a5f;
@@ -6445,13 +6452,16 @@ span.partnereventeditor_RequiredFieldLabel_11TnL {
     margin-bottom: 20px; }
 
 .partnereventeditor_EventEditBelowTopBarContainer_2sTiY {
-  align-items: center; }
+  margin: 0 5%; }
+  .partnereventeditor_EventEditBelowTopBarContainer_2sTiY span {
+    font-weight: 300;
+    color: #a7aeb4; }
 
 .partnereventeditor_EventEditBelowTopBarGameName_2mDt_ {
   padding-top: 24px;
   font-size: 14px;
   text-transform: uppercase;
-  color: lightblue; }
+  color: #a7aeb4; }
 
 .partnereventeditor_EventEditBelowTopBarCategoryChoice_1GRf_ {
   font-size: 24px;

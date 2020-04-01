@@ -112,11 +112,11 @@
                   ".css?chunkhash=" +
                   {
                     1: "5d8c9f5ef983409fcc8c",
-                    2: "350243a96c44598451d1",
+                    2: "53ef6f6046d82402c709",
                     3: "a4211d3e1fddbc20f7ca",
-                    4: "1c5f3d9f565ddc7ea820",
+                    4: "d16fceed9dd9b01f7d60",
                     5: "5045709e440ad348342e",
-                    6: "158e38c87443ace1eb88",
+                    6: "30cdd9f521515c6ac6d6",
                     7: "4e47d10202470f727b99",
                     9: "ef1681f18fe40cb77285",
                     10: "461a5a628876392e25b0",
@@ -146,33 +146,33 @@
                     34: "e4e77b776396c69e7a5b",
                     35: "fbbd1760388e8debba3a",
                     36: "96a583ba2c5a91130d49",
-                    37: "cee83335e722efbb7cd4",
-                    38: "967e11a98e868a6f5335",
-                    39: "d55de282524ab0f03c5a",
-                    40: "21c6131bd643bbb3c9a1",
-                    41: "33afa2f19406fc7ff0c2",
-                    42: "5afb238b5cdaa578f90b",
-                    43: "05139be7354adb2b770a",
-                    44: "309ccc1012f5b00b6383",
-                    45: "abd6a74e005106679256",
-                    46: "2c5a318f553bca22d099",
-                    47: "000b2a0dbb8d08752fdf",
-                    48: "2c895caee0861e584c29",
-                    49: "4856d44249afa875be5a",
-                    50: "404246f23aa2354d3084",
-                    51: "1fbc94266dc3ff00b77f",
-                    52: "6814e0d15d99059b2099",
-                    53: "166048ce4b86d4b37ade",
-                    54: "f8377531969061f55472",
-                    55: "2f76e5a2961395bd2b4a",
-                    56: "a8feeda8249b0d0ee71a",
-                    57: "614683b5c920564cf6c7",
-                    58: "3278f8031e896447100b",
-                    59: "3d2a15c5cc0361c2f8cd",
-                    60: "f604d53ffc6692e4c367",
-                    61: "63738f2dc3db646f31b7",
-                    62: "f9920be8fb4046d4afe9",
-                    63: "6215fe90a6579d679c8c",
+                    37: "56a2a2965803904d9ab4",
+                    38: "41978ddd638cac35c03d",
+                    39: "f25c6e35ed47641c222d",
+                    40: "8220d88fe84b53b6826c",
+                    41: "5991d5df1bfd3be5d8f4",
+                    42: "99a75066c3d2043536f5",
+                    43: "b7f23fa162d4c5695cc5",
+                    44: "f635f4d2e8acfa7a97b2",
+                    45: "d9b4dbad3b3c0973f9f9",
+                    46: "ae0c0d44a6aac4b04936",
+                    47: "87faba708f42522e7e4b",
+                    48: "8c664df2cb545cd27d3b",
+                    49: "a3bee504f1b512863085",
+                    50: "a7e6f6285333e106752b",
+                    51: "5016dd2bb279abf5180a",
+                    52: "647316fcef8f2ac9ef5a",
+                    53: "148579c8b7f8ae57098d",
+                    54: "f54f9f431bc736af4eb0",
+                    55: "3a692778645b8bf3933e",
+                    56: "a7590b7c0afb6f065348",
+                    57: "6ddb1fe30138501fbaab",
+                    58: "f1324b9d89e194c3e70b",
+                    59: "df070ed16d1c98d96668",
+                    60: "d527899e9c3f5e02f722",
+                    61: "c1f5d8e29373c4935473",
+                    62: "9bed15e3b78cccc71a9f",
+                    63: "3f70648257a1eb57f717",
                     64: "a5a62321dc2454486370",
                     65: "02866372267cf223bcb7"
                   }[u],
@@ -300,11 +300,11 @@
               ".js?chunkhash=" +
               {
                 1: "5d8c9f5ef983409fcc8c",
-                2: "350243a96c44598451d1",
+                2: "53ef6f6046d82402c709",
                 3: "a4211d3e1fddbc20f7ca",
-                4: "1c5f3d9f565ddc7ea820",
+                4: "d16fceed9dd9b01f7d60",
                 5: "5045709e440ad348342e",
-                6: "158e38c87443ace1eb88",
+                6: "30cdd9f521515c6ac6d6",
                 7: "4e47d10202470f727b99",
                 9: "ef1681f18fe40cb77285",
                 10: "461a5a628876392e25b0",
@@ -334,33 +334,33 @@
                 34: "e4e77b776396c69e7a5b",
                 35: "fbbd1760388e8debba3a",
                 36: "96a583ba2c5a91130d49",
-                37: "cee83335e722efbb7cd4",
-                38: "967e11a98e868a6f5335",
-                39: "d55de282524ab0f03c5a",
-                40: "21c6131bd643bbb3c9a1",
-                41: "33afa2f19406fc7ff0c2",
-                42: "5afb238b5cdaa578f90b",
-                43: "05139be7354adb2b770a",
-                44: "309ccc1012f5b00b6383",
-                45: "abd6a74e005106679256",
-                46: "2c5a318f553bca22d099",
-                47: "000b2a0dbb8d08752fdf",
-                48: "2c895caee0861e584c29",
-                49: "4856d44249afa875be5a",
-                50: "404246f23aa2354d3084",
-                51: "1fbc94266dc3ff00b77f",
-                52: "6814e0d15d99059b2099",
-                53: "166048ce4b86d4b37ade",
-                54: "f8377531969061f55472",
-                55: "2f76e5a2961395bd2b4a",
-                56: "a8feeda8249b0d0ee71a",
-                57: "614683b5c920564cf6c7",
-                58: "3278f8031e896447100b",
-                59: "3d2a15c5cc0361c2f8cd",
-                60: "f604d53ffc6692e4c367",
-                61: "63738f2dc3db646f31b7",
-                62: "f9920be8fb4046d4afe9",
-                63: "6215fe90a6579d679c8c",
+                37: "56a2a2965803904d9ab4",
+                38: "41978ddd638cac35c03d",
+                39: "f25c6e35ed47641c222d",
+                40: "8220d88fe84b53b6826c",
+                41: "5991d5df1bfd3be5d8f4",
+                42: "99a75066c3d2043536f5",
+                43: "b7f23fa162d4c5695cc5",
+                44: "f635f4d2e8acfa7a97b2",
+                45: "d9b4dbad3b3c0973f9f9",
+                46: "ae0c0d44a6aac4b04936",
+                47: "87faba708f42522e7e4b",
+                48: "8c664df2cb545cd27d3b",
+                49: "a3bee504f1b512863085",
+                50: "a7e6f6285333e106752b",
+                51: "5016dd2bb279abf5180a",
+                52: "647316fcef8f2ac9ef5a",
+                53: "148579c8b7f8ae57098d",
+                54: "f54f9f431bc736af4eb0",
+                55: "3a692778645b8bf3933e",
+                56: "a7590b7c0afb6f065348",
+                57: "6ddb1fe30138501fbaab",
+                58: "f1324b9d89e194c3e70b",
+                59: "df070ed16d1c98d96668",
+                60: "d527899e9c3f5e02f722",
+                61: "c1f5d8e29373c4935473",
+                62: "9bed15e3b78cccc71a9f",
+                63: "3f70648257a1eb57f717",
                 64: "a5a62321dc2454486370",
                 65: "02866372267cf223bcb7"
               }[e]
@@ -2747,7 +2747,7 @@
   JMS6: function(e, t, n) {
     "use strict";
     n.d(t, "b", function() {
-      return c;
+      return l;
     }),
       n.d(t, "a", function() {
         return f;
@@ -2755,18 +2755,18 @@
       n.d(t, "c", function() {
         return _;
       });
-    var c,
+    var l,
       r,
       i = n("mrSG"),
       o = n("2vnA"),
       a = n("i8i4"),
       s = n("Kw0F"),
-      l = n("D4wO"),
+      c = n("D4wO"),
       u = n("bxiW"),
       p = n("kyHq"),
       d = n("TLQK"),
       m = n("lkRc");
-    ((r = c || (c = {}))[(r.Minimized = 1)] = "Minimized"),
+    ((r = l || (l = {}))[(r.Minimized = 1)] = "Minimized"),
       (r[(r.Hidden = 2)] = "Hidden"),
       (r[(r.Tooltip = 4)] = "Tooltip"),
       (r[(r.ContextMenu = 8)] = "ContextMenu"),
@@ -2834,60 +2834,66 @@
             void 0 === e && (e = !0),
               void 0 === t && (t = !1),
               window.SteamClient &&
-                (this.m_rgParams.eCreationFlags |= c.Hidden),
-              this.m_rgParams.eCreationFlags & c.Tooltip && (e = !1),
+                (this.m_rgParams.eCreationFlags |= l.Hidden),
+              this.m_rgParams.eCreationFlags & l.Tooltip && (e = !1),
               this.BIsValid() &&
                 (this.BIsClosed()
                   ? ((this.m_popup = void 0), (this.m_element = void 0))
                   : e && this.Focus(t));
-            var i,
-              o,
-              a,
-              s = _.GetExistingPopup(this.m_strName);
-            (s && !this.m_rgParams.replace_existing_popup) ||
-              ((this.m_rgParams = this.UpdateParamsBeforeShow(this.m_rgParams)),
-              s
-                ? ((o = s.m_element),
-                  (i = s.m_popup),
-                  s.ReleasePopup(),
-                  (a = s.m_renderWhenReady),
-                  _.RemoveTrackedPopup(s),
-                  i.removeEventListener("beforeunload", s.OnBeforeUnloadEvent),
-                  i.removeEventListener("unload", s.OnUnload),
-                  i.removeEventListener("resize", s.OnResizeEvent),
-                  i.removeEventListener("focus", this.OnFocusInternal),
-                  i.removeEventListener("blur", this.OnBlurInternal),
-                  i.removeEventListener("drop", s.OnDrop),
-                  i.removeEventListener("dragover", s.OnDragOver),
-                  i.removeEventListener("message", this.OnMessage))
-                : ((i = (n = g.CreatePopup(this.m_strName, this.m_rgParams))
-                    .popup),
-                  (o = n.element),
-                  (a = new h(i, o))),
-              i &&
-                o &&
-                ((i.document.title = this.m_strTitle),
-                i.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
-                i.addEventListener("unload", this.OnUnload),
-                i.addEventListener("resize", this.OnResizeEvent),
-                i.addEventListener("focus", this.OnFocusInternal),
-                i.addEventListener("blur", this.OnBlurInternal),
-                i.addEventListener("drop", this.OnDrop),
-                i.addEventListener("dragover", this.OnDragOver),
-                i.addEventListener("message", this.OnMessage),
-                m.c.LANGUAGE &&
-                  i.document.documentElement.setAttribute(
-                    "lang",
-                    d.a[m.c.LANGUAGE]
-                  ),
-                (this.m_popup = i),
-                (this.m_element = o),
-                (this.m_renderWhenReady = a),
-                this.m_renderWhenReady.SetTarget(function() {
-                  return r.RenderInternal(r.m_popup, r.m_element, e);
-                })),
-              _.AddTrackedPopup(this),
-              s && e && this.Focus());
+            var i = _.GetExistingPopup(this.m_strName);
+            if (!i || this.m_rgParams.replace_existing_popup) {
+              var o, a, s;
+              if (
+                ((this.m_rgParams = this.UpdateParamsBeforeShow(
+                  this.m_rgParams
+                )),
+                i
+                  ? ((a = i.m_element),
+                    (o = i.m_popup),
+                    i.ReleasePopup(),
+                    (s = i.m_renderWhenReady),
+                    _.RemoveTrackedPopup(i),
+                    o.removeEventListener(
+                      "beforeunload",
+                      i.OnBeforeUnloadEvent
+                    ),
+                    o.removeEventListener("unload", i.OnUnload),
+                    o.removeEventListener("resize", i.OnResizeEvent),
+                    o.removeEventListener("focus", this.OnFocusInternal),
+                    o.removeEventListener("blur", this.OnBlurInternal),
+                    o.removeEventListener("drop", i.OnDrop),
+                    o.removeEventListener("dragover", i.OnDragOver),
+                    o.removeEventListener("message", this.OnMessage))
+                  : ((o = (n = g.CreatePopup(this.m_strName, this.m_rgParams))
+                      .popup),
+                    (a = n.element),
+                    (s = new h(o, a))),
+                o && a)
+              ) {
+                if (
+                  ((o.document.title = this.m_strTitle),
+                  o.addEventListener("beforeunload", this.OnBeforeUnloadEvent),
+                  o.addEventListener("unload", this.OnUnload),
+                  o.addEventListener("resize", this.OnResizeEvent),
+                  o.addEventListener("focus", this.OnFocusInternal),
+                  o.addEventListener("blur", this.OnBlurInternal),
+                  o.addEventListener("drop", this.OnDrop),
+                  o.addEventListener("dragover", this.OnDragOver),
+                  o.addEventListener("message", this.OnMessage),
+                  m.c.LANGUAGE)
+                ) {
+                  var c = "koreana" == m.c.LANGUAGE ? "korean" : m.c.LANGUAGE;
+                  o.document.documentElement.setAttribute("lang", d.a[c]);
+                }
+                (this.m_popup = o),
+                  (this.m_element = a),
+                  (this.m_renderWhenReady = s),
+                  this.m_renderWhenReady.SetTarget(function() {
+                    return r.RenderInternal(r.m_popup, r.m_element, e);
+                  });
+              }
+              _.AddTrackedPopup(this), i && e && this.Focus();
+            }
           }),
           (e.prototype.RemoveEventListeners = function() {
             this.window.removeEventListener(
@@ -3268,7 +3274,7 @@
             }
           }),
           Object(i.c)(
-            [u.a, Object(l.a)(100)],
+            [u.a, Object(c.a)(100)],
             e.prototype,
             "DebouncedSaveSavedDimensionStore",
             null
@@ -6354,7 +6360,7 @@
       var n = D.LocalizeString(e);
       return n
         ? (0 < r.length &&
-            (n = n.replace(/%(\d+)\$s/g, function(e, t) {
+            (n = n.replace(/%(?:(\d+)\$)?s/g, function(e, t) {
               if (t <= r.length && 1 <= t) {
                 var n = r[t - 1];
                 return String(null == n ? "" : n);
@@ -9346,7 +9352,8 @@
         authwgtoken: "",
         is_support: !1,
         is_limited: !1,
-        short_url: ""
+        short_url: "",
+        country_code: ""
       },
       f = { steamid: "", clanid: 0, listid: 0 },
       g = {

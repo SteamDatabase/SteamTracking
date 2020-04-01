@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5782837";
+var CLSTAMP = "5786609";
 !(function(t) {
   var e = {};
   function n(r) {
@@ -174,7 +174,8 @@ var CLSTAMP = "5782837";
         authwgtoken: "",
         is_support: !1,
         is_limited: !1,
-        short_url: ""
+        short_url: "",
+        country_code: ""
       },
       s = { steamid: "", clanid: 0, listid: 0 },
       a = {

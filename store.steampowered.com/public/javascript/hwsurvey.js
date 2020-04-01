@@ -104,11 +104,7 @@ function ChartPlot( chartDiv, chartLegend, chartKey, series ) {
 			show: true,
 			container: legendContainer,
 			labelFormatter: legendFormatter,
-			sorted: function(a, b) {
-				return a.label == b.label ? 0 : (
-					parseFloat(a.label) > parseFloat(b.label) ? -1 : 1
-				)
-			}
+			sorted: "reverse"
 		},
 		yaxis: {
 			min: 0,
