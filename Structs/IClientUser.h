@@ -143,8 +143,6 @@ public:
     virtual unknown_ret GetMicroTxnAppID(unsigned long long) = 0;
     virtual unknown_ret GetMicroTxnOrderID(unsigned long long) = 0;
     virtual unknown_ret BGetMicroTxnPrice(unsigned long long, CAmount*, CAmount*, bool*, CAmount*) = 0;
-    virtual unknown_ret BGetMicroTxnBillingAddressValue(unsigned long long, char const*, char*, unsigned int) = 0;
-    virtual unknown_ret BGetMicroTxnBillingAddressRequirements(unsigned long long, bool*, bool*) = 0;
     virtual unknown_ret GetMicroTxnLineItemCount(unsigned long long) = 0;
     virtual unknown_ret BGetMicroTxnLineItem(unsigned long long, unsigned int, CAmount*, unsigned int*, char*, unsigned int, int*, unsigned char*, CAmount*, bool*) = 0;
     virtual unknown_ret BIsSandboxMicroTxn(unsigned long long, bool*) = 0;
@@ -179,6 +177,8 @@ public:
     virtual unknown_ret GetEmailDomainFromLogonFailure(char*, int) = 0;
     virtual unknown_ret GetDurationControl() = 0;
     virtual unknown_ret GetDurationControlForApp(unsigned int) = 0;
+    virtual unknown_ret BSetDurationControlOnlineState(EDurationControlOnlineState) = 0;
+    virtual unknown_ret BSetDurationControlOnlineStateForApp(EDurationControlOnlineState, unsigned int) = 0;
     virtual unknown_ret BIsSubscribedApp(unsigned int) = 0;
     virtual unknown_ret GetSubscribedApps(unsigned int*, unsigned int, bool) = 0;
     virtual unknown_ret RegisterActivationCode(char const*) = 0;
@@ -240,4 +240,9 @@ public:
     virtual unknown_ret BGetAppArrayMinutesPlayed(unsigned int*, int, int*, int*) = 0;
     virtual unknown_ret BGetAppsLastPlayedTime(unsigned int*, int, unsigned int*) = 0;
     virtual unknown_ret SendSteamServiceStatusUpdate(EResult, ESteamServiceStatusUpdate) = 0;
+    virtual unknown_ret RequestSteamGroupChatMessageNotifications(unsigned long long, unsigned long long, EChatNotificationFormat) = 0;
+    virtual unknown_ret RequestSteamGroupChatMessageHistory(unsigned long long, unsigned long long, unsigned int) = 0;
+    virtual unknown_ret RequestSendSteamGroupChatMessage(unsigned long long, unsigned long long, unsigned int, char const*) = 0;
+    virtual unknown_ret OnNewGroupChatMsgAdded(unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*, char const*) = 0;
+    virtual unknown_ret OnReceivedGroupChatSubscriptionResponse(unsigned long long, unsigned long long, bool) = 0;
 };

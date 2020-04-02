@@ -580,6 +580,13 @@ StoreAddCachedPmtMethodPage
 	filter		"store"
 }
 
+StoreWebMicroTxnPage
+{
+	url			"%store%/checkout/approvetxn/%p1%/?returnurl=steam"
+	method		"internal"
+	filter		"store"
+}
+
 StoreJoinPage
 {
 	url			"%store%/join/?l=%language%"

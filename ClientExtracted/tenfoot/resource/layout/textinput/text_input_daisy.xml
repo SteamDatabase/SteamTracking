@@ -12,58 +12,58 @@
 
 			<Panel id="PINPad">
 				<Panel id="PINTop" class="PINRow" >
-					<Panel id="LBPIN" class="PINButton PINButtonLeft">
+					<Panel id="LBPIN" class="PINButton PINButtonLeft" onactivate="DaisyWheelButtonClicked(48);">
 						<Label text="1" class="PINButtonText" />
 						<Label id="LBPIN_btn" class="PINButtonIcon TriggerButtonBox" text="#UI_LeftBumper_Short" />
 					</Panel>
-					<Panel id="YPIN" class="PINButton PINButtonMiddle">
+					<Panel id="YPIN" class="PINButton PINButtonMiddle" onactivate="DaisyWheelButtonClicked(64);">
 						<Label text="2" class="PINButtonText" />
 						<Panel id="YPIN_Wrapper" class="Y_Wrapper">
 							<Label id="YPIN_btn_s" class="PINButtonBox YButtonBox" text="#UI_YButton" />
 						</Panel>
 					</Panel>
-					<Panel id="RBPIN" class="PINButton PINButtonRight">
+					<Panel id="RBPIN" class="PINButton PINButtonRight" onactivate="DaisyWheelButtonClicked(49);">
 						<Label text="3" class="PINButtonText" />
 						<Label id="RBPIN_btn" class="PINButtonIcon TriggerButtonBox" text="#UI_RightBumper_Short" />
 					</Panel>
 				</Panel>
 
 				<Panel id="PINMiddle" class="PINRow" >
-					<Panel id="LTPIN" class="PINButton PINButtonLeft">
+					<Panel id="LTPIN" class="PINButton PINButtonLeft" onactivate="DaisyWheelButtonClicked(46);">
 						<Label text="4" class="PINButtonText" />
 						<Label id="LTPIN_btn" class="PINButtonIcon TriggerButtonBox" text="#UI_LeftTrigger_Short" />
 					</Panel>
-					<Panel id="XPIN" class="PINButton PINButtonMiddle">
+					<Panel id="XPIN" class="PINButton PINButtonMiddle" onactivate="DaisyWheelButtonClicked(63);">
 						<Label text="5" class="PINButtonText" />
 						<Panel id="XPIN_Wrapper" class="X_Wrapper">
 							<Label id="XPIN_btn_s" class="PINButtonBox XButtonBox" text="#UI_XButton" />
 						</Panel>
 					</Panel>
-					<Panel id="RTPIN" class="PINButton PINButtonRight">
+					<Panel id="RTPIN" class="PINButton PINButtonRight" onactivate="DaisyWheelButtonClicked(47);">
 						<Label text="6" class="PINButtonText" />
 						<Label id="RTPIN_btn" class="PINButtonIcon TriggerButtonBox" text="#UI_RightTrigger_Short" />
 					</Panel>
 				</Panel>
 
 				<Panel id="PINBottom" class="PINRow" >
-					<Panel id="LeftPIN" class="PINButton PINButtonLeft">
+					<Panel id="LeftPIN" class="PINButton PINButtonLeft" onactivate="DaisyWheelButtonClicked(68);">
 						<Label text="7" class="PINButtonText" />
 						<Image class="PINButtonIcon DPadButtonBox" src="file://{images}/gamepad_digital_left.png" />
 						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/grid/grid_0.png" />
 					</Panel>
-					<Panel id="UpPIN" class="PINButton PINButtonMiddle">
+					<Panel id="UpPIN" class="PINButton PINButtonMiddle" onactivate="DaisyWheelButtonClicked(65);">
 						<Label text="8" class="PINButtonText" />
 						<Image class="PINButtonIcon DPadButtonBox" src="file://{images}/gamepad_digital_up.png" />
 						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/grid/grid_1.png" />
 					</Panel>
-					<Panel id="RightPIN" class="PINButton PINButtonRight">
+					<Panel id="RightPIN" class="PINButton PINButtonRight" onactivate="DaisyWheelButtonClicked(66);">
 						<Label text="9" class="PINButtonText" />
 						<Image class="PINButtonIcon DPadButtonBox" src="file://{images}/gamepad_digital_right.png" />
 						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/grid/grid_2.png" />
 					</Panel>
 				</Panel>
 				<Panel id="PINZero" class="PINRow" >
-					<Panel id="DownPIN" class="PINButton PINButtonMiddle">
+					<Panel id="DownPIN" class="PINButton PINButtonMiddle" onactivate="DaisyWheelButtonClicked(67);">
 						<Label text="0" class="PINButtonText" />
 						<Image class="PINButtonIcon DPadButtonBox" src="file://{images}/gamepad_digital_down.png" />
 						<Image class="PINButtonIcon SteamPadGridBox" src="file://{images}/grid/grid_3.png" />
@@ -71,15 +71,15 @@
 				</Panel>
 
 				<Panel id="PINFooter">
-					<Panel id="APIN_Wrapper" class="A_Wrapper">
+					<Panel id="APIN_Wrapper" class="A_Wrapper" onactivate="DaisyWheelButtonClicked(61);">
 						<Label id="APIN_btn_s" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
 						<Label id="APIN_txt" class="LegendText AButtonText" text="#UI_InputDone" />
 					</Panel>
-					<Panel id="BPIN_Wrapper" class="B_Wrapper">
+					<Panel id="BPIN_Wrapper" class="B_Wrapper" onactivate="DaisyWheelButtonClicked(62);">
 						<Label id="BPIN_btn_s" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
 						<Label id="BPIN_txt" class="LegendText BButtonText" text="#UI_Dismiss" />
 					</Panel>
-					<Panel id="BKPIN_Wrapper" class="B_Wrapper">
+					<Panel id="BKPIN_Wrapper" class="B_Wrapper" onactivate="DaisyWheelButtonClicked(53);">
 						<Image id="BkspPIN_btn" class="PINButtonIcon BkspButtonBox" src="file://{images}/textinput/textinput_footer_cancel.tga" />
 						<Label id="BkspPIN_btn_txt" class="LegendText BkspButtonText" text="#UI_Backspace" />			
 					</Panel>		
@@ -150,7 +150,7 @@
 									<Label id="B_btn_s" class="LegendButtonBox BButtonBox" text="#UI_BButton" />
 									<Label id="B_txt" class="LegendText BButtonText" text="#UI_Dismiss" />
 								</Panel>
-								<Panel id="A_Wrapper" class="A_Wrapper">
+								<Panel id="A_Wrapper" class="A_Wrapper" >
 									<Label id="A_btn_s" class="LegendButtonBox AButtonBox" text="#UI_AButton" />
 									<Label id="A_txt" class="LegendText AButtonText" text="#UI_InputDone" />
 								</Panel>

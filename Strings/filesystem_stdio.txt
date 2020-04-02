@@ -263,19 +263,20 @@ f
 a
 ?
 '
-Assertion Failed: m_unSizeOfElements > 0
+Assertion Failed: nSizeOfType > 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
-nBytesItem is %d in UtlMemory_CalcNewAllocationCount
+Assertion Failed: m_nAllocationCount >= 0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
 @
 @
-v
 
-L
+r
+
 =
 @
 =

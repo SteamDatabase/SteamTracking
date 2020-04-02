@@ -2132,6 +2132,7 @@
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, int>
+ D typeinfo for CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*, char const*>
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat>
  D typeinfo for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackFunc> >
@@ -3505,6 +3506,7 @@
  D vtable for CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>
  D vtable for CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CFriendsWebChat, int>
+ D vtable for CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*, char const*>
  D vtable for CJSMethodCallHandler<CFriendsWebChat>
  D vtable for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackFunc> >
@@ -4264,6 +4266,7 @@
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, int>
+ R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*, char const*>
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat>
  R typeinfo name for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackFunc> >
@@ -4444,6 +4447,8 @@
  R typeinfo name for CParentalCache
  R typeinfo name for CParentalCache::CCallback_OnParentalLockChangeBegin
  R typeinfo name for CPathString
+ R typeinfo name for CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >
+ R typeinfo name for CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >
  R typeinfo name for CPlayersDialog
  R typeinfo name for CPlayersSubCurrentPlayers
  R typeinfo name for CPlayersSubRecentPlayers
@@ -4521,6 +4526,7 @@
  R typeinfo name for CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >
  R typeinfo name for CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >*, int, bool (*)(CUtlString const&, CUtlString const&)>
+ R typeinfo name for CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >
  R typeinfo name for CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>
  R typeinfo name for CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>
@@ -4535,6 +4541,7 @@
  R typeinfo name for CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >
  R typeinfo name for CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >
  R typeinfo name for CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >
+ R typeinfo name for CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMemoryBase
  R typeinfo name for CUtlNoEscConversion
  R typeinfo name for CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>
@@ -4548,6 +4555,7 @@
  R typeinfo name for CUtlRBTree<CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::Node_t, int, CUtlMap<CSteamID, vgui::PHandle, int, CDefLess<CSteamID> >::CKeyLess, CDefRBTreeBalanceListener<int>, CSteamID>
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >*, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >*, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlString>
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>
  R typeinfo name for CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>
@@ -4562,6 +4570,7 @@
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CSmartPtr<CJSCallbackPromise>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Node_t, short, CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned int>
+ R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>
  R typeinfo name for CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >
@@ -7034,6 +7043,7 @@
  T CFriendsWebChat::OnClientUINotification(ClientUINotification_t*)
  T CFriendsWebChat::OnClientUINotificationResponse(ClientUINotificationResponse_t*)
  T CFriendsWebChat::OnComputerActiveStateChange(ComputerActiveStateChange_t*)
+ T CFriendsWebChat::OnNewGroupChatMsgAdded(unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*, char const*)
  T CFriendsWebChat::OnOpenURLInClient(OpenURLInClient_t*)
  T CFriendsWebChat::OnOverlayChatBrowserInfoChanged(OverlayChatBrowserInfoChanged_t*)
  T CFriendsWebChat::OnSetPersonaNameResponse(SetPersonaNameResponse_t*, bool)
@@ -7537,6 +7547,7 @@
  T CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, int>::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*, char const*>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CRemotePlayController, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
@@ -9598,6 +9609,10 @@
  T CPathString::GetUTF8Path() const
  T CPathString::Validate(CValidator&, char const*)
  T CPathString::~CPathString()
+ T CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >::Delete()
+ T CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >::RecursiveValidate(CValidator&, char const*)
+ T CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >::Delete()
+ T CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >::RecursiveValidate(CValidator&, char const*)
  T CPlayersDialog::ActivateCurrentPlayers()
  T CPlayersDialog::ActivateRecentPlayers()
  T CPlayersDialog::CPlayersDialog()
@@ -10283,6 +10298,8 @@
  T CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >*, int, bool (*)(CUtlString const&, CUtlString const&)>::Validate(CValidator&, char const*)
  T CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Insert(CUtlString&&, CUtlString&&)
  T CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t::~Node_t()
+ T CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t::~Node_t()
+ T CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::RecursiveValidate(CValidator&, char const*)
  T CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CPanelKeyBindingMapDictionary::PanelKeyBindingMapDictionaryEntry, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
@@ -10303,6 +10320,7 @@
  T CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t::operator=(CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Node_t&&)
  T CUtlMap<unsigned int, CUtlPtr<CSharedConnectionController::SharedConnectionInfo_t>, int, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, bool, short, CDefLess<unsigned int> >::Validate(CValidator&, char const*)
+ T CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::RecursiveValidate(CValidator&, char const*)
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
  T CUtlMemoryBase::CUtlMemoryBase(int, void*, int)
  T CUtlMemoryBase::ConvertToGrowableMemory(int)
@@ -10366,6 +10384,8 @@
  T CUtlRBTree<CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >*, int, bool (*)(CUtlString const&, CUtlString const&)>::Node_t, int, CUtlMap<CUtlString, CUtlMap<CSteamID, CCopyableUtlVector<vgui::PHandle, CUtlMemory<vgui::PHandle> >, int, CDefLess<CSteamID> >*, int, bool (*)(CUtlString const&, CUtlString const&)>::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlString>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
+ T CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RecursiveValidate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::Find(CUtlSymbol const&) const
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::RemoveAll()
@@ -10443,6 +10463,8 @@
  T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Find(unsigned int const&) const
  T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, unsigned int, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RecursiveValidate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RemoveAll()
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::Find(unsigned long long const&) const
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::NewNode(bool)
  T CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>::Remove(unsigned long long const&)
@@ -10474,6 +10496,7 @@
  T CUtlString::Format(char const*, ...)
  T CUtlString::Replace(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
+ T CUtlString::SetValue(char const*)
  T CUtlString::VAppendFormat(char const*, __va_list_tag*)
  T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::Access()
@@ -10606,7 +10629,6 @@
  T CUtlVector<char const*, CUtlMemory<char const*> >::GrowVector(int)
  T CUtlVector<char const*, CUtlMemory<char const*> >::Remove(int)
  T CUtlVector<char const*, CUtlMemory<char const*> >::~CUtlVector()
- T CUtlVector<char*, CUtlMemory<char*> >::PurgeAndDeleteElements()
  T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
  T CUtlVector<char, CUtlMemory<char> >::AddMultipleToTail(int, char const*)
  T CUtlVector<char, CUtlMemory<char> >::GrowVector(int)
@@ -11682,7 +11704,7 @@
  T Sys_UnloadModule(CSysModule*)
  T Sys_ValidateModules(CValidator*, bool)
  T URLLabel_Factory()
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T VALVE_CRYPTO_dbg_free(void*)
  T VALVE_CRYPTO_dbg_malloc(unsigned long, char const*, int)
  T VALVE_CRYPTO_dbg_realloc(void*, unsigned long, char const*, int)
@@ -11773,6 +11795,7 @@
  T bool BConvertMsgJSValue<char const*>(IHTMLJS*, CMsgJSValue const*, char const**)
  T bool BConvertMsgJSValue<int>(IHTMLJS*, CMsgJSValue const*, int*)
  T bool BConvertMsgJSValue<unsigned int>(IHTMLJS*, CMsgJSValue const*, unsigned int*)
+ T bool BConvertMsgJSValue<unsigned long long>(IHTMLJS*, CMsgJSValue const*, unsigned long long*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T bsaes_cbc_encrypt
  T bsaes_ctr32_encrypt_blocks
@@ -16126,6 +16149,8 @@
  T void JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1>, std::__1::tuple<char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void JSMethodCallTuple_Helper<CSteamUIStorageController, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >, char const*, char const*, CSmartPtr<CJSCallbackPromise>, 0, 1, 2>(CSteamUIStorageController*, void (CSteamUIStorageController::*)(char const*, char const*, CSmartPtr<CJSCallbackPromise>), index_tuple<0, 1, 2>, std::__1::tuple<char const*, char const*, CSmartPtr<CJSCallbackPromise> >&)
  T void _ValidateSelectType<CJSCallbackFunc>(CJSCallbackFunc*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >(CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >(CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >*, CValidator&, char const*, fallback_)
  T void std::__1::__insertion_sort_3<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T void std::__1::__sort<CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&, FriendAlias_t*>(FriendAlias_t*, FriendAlias_t*, CUtlVector<FriendAlias_t, CUtlMemory<FriendAlias_t> >::Sort_s(void*, int (*)(void*, FriendAlias_t const*, FriendAlias_t const*))::{lambda(FriendAlias_t const&, FriendAlias_t const&)#1}&)
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
@@ -16173,8 +16198,7 @@
  V_ParseURLQueryString
  V_RemoveDotSlashes
  V_SetExtension
- V_SplitString
- V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
+ V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  V_StrSubstInPlace
  V_StripLastDir
  V_StripPrecedingAndTrailingWhitespace

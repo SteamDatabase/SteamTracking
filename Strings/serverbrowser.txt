@@ -1,8 +1,8 @@
 __TEXT
+"
+"
 __text
 __TEXT
-`J
-`J
 __stubs
 __TEXT
 __stub_helper
@@ -17,13 +17,21 @@ __TEXT
 __eh_frame
 __TEXT
 __DATA
+"
+"
 @
 __nl_symbol_ptr
 __DATA
+"
+"
 __got
 __DATA
+"
+"
 __la_symbol_ptr
 __DATA
+"
+"
 __mod_init_func
 __DATA
 __const
@@ -36,33 +44,34 @@ __thread_vars
 __DATA
 __thread_bss
 __DATA
-@D,
+@4,
 __bss
 __DATA
-@H,
+@8,
 __common
 __DATA
 H
 __LINKEDIT
-P,
+@,
 
 @
 @loader_path/serverbrowser.dylib
 "
-P,
-pf,
+@,
+pV,
+hv,
 @
+P|0
 P
-d;
-d;
-f;
+i;
+i;
+k;
 
 8
 @loader_path/libtier0_s.dylib
 8
 @loader_path/libvstdlib_s.dylib
 @
-
 
 @loader_path/libSDL2-2.0.0.dylib
 h
@@ -86,7 +95,7 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
-`o
+Po
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -3220,27 +3229,31 @@ a
 ?
 '
 %.18g
-Assertion Failed: m_unSizeOfElements > 0
+Assertion Failed: nSizeOfType > 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
-nBytesItem is %d in UtlMemory_CalcNewAllocationCount
+Assertion Failed: m_nAllocationCount >= 0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
+Assertion Failed: num >= 0
+CUtlString::SetValue
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::ReplaceInternal
 Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
 Assertion Failed: cActualReplacements == cReplacements
 Assertion failed: length > k_cchMaxString
 0123456789ABCDEF
+CUtlStringBuilder::InternalPrepareBuffer
 Assertion Failed: nMinCapacity > Capacity()
 Assertion Failed: nMinCapacity >= nChars
 Assertion Failed: nMinCapacity <= k_nMaxStringSize
 Error State on string being set.
+CUtlStringBuilder::Data::MoveToHeap
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
-4(
-}!
 0
 p
 0
@@ -3259,7 +3272,6 @@ p
 p
 0
 p
-F
 $
 @
 @
@@ -3270,8 +3282,14 @@ $
 ?
 A
 Hc
+)
+)
+)
+)
 =
-L95u;'
+L95oz'
+L95Z['
+L9550'
 Hc
 ?
 ?
@@ -3288,38 +3306,36 @@ Hc
 ?
 ?
 ?
-[$
-&$
 "
+$
 3
+$
+$
+$
+$
+($
 D
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
+x#
 @
-E#
-"
-"
-c!
+
+
+
+
+
+
+
+
+3"
+=
 d
 
+
+!
+
 3
 
 &
 &
-;
 t=
 =
 =
@@ -3328,8 +3344,6 @@ uV%
 
 
 E
-{
-S
 
 
 
@@ -3337,6 +3351,7 @@ S
 @
 @
 &
+a
 @
 @
 @
@@ -3381,6 +3396,7 @@ d
 @
 =
 @
+G
 @
 @
 @

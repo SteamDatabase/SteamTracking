@@ -42,6 +42,7 @@
  D typeinfo for IValidate
  D typeinfo for SteamStdLib::CCommandLine
  D typeinfo for SteamStdLib::ICommandLine
+ D typeinfo for std::__1::bad_function_call
  D vtable for CDebugStatsSystem
  D vtable for CDefaultCvar
  D vtable for CKeyValuesSystem
@@ -52,6 +53,7 @@
  D vtable for CUtlNoEscConversion
  D vtable for CVStdLibDLLValidate
  D vtable for SteamStdLib::CCommandLine
+ D vtable for std::__1::bad_function_call
  Error
  Gestalt
  Is64BitOS
@@ -90,6 +92,7 @@
  R typeinfo name for IValidate
  R typeinfo name for SteamStdLib::CCommandLine
  R typeinfo name for SteamStdLib::ICommandLine
+ R typeinfo name for std::__1::bad_function_call
  SteamThreadTools::CThreadEvent::CThreadEvent(bool)
  SteamThreadTools::CThreadEvent::Set()
  SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
@@ -282,6 +285,7 @@
  T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
+ T CUtlString::SetValue(char const*)
  T CUtlString::VAppendFormat(char const*, __va_list_tag*)
  T CUtlString::VAppendFormat(char const*, char*)
  T CUtlString::VFormat(char const*, __va_list_tag*)
@@ -433,12 +437,13 @@
  T SteamThreadTools::CRWLockAutoWrite<SteamThreadTools::CThreadRWLock>::~CRWLockAutoWrite()
  T SteamThreadTools::CThreadLocalPtr<CCoroutineMgr>::~CThreadLocalPtr()
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
+ T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T StringAfterPrefix
  T StringAfterPrefixCaseSensitive
  T StringFindSuffix
  T Sys_GetFactoryThis()
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T VStdLib_GetICVarFactory
  T V_AggressiveStripPrecedingAndTrailingWhitespace
  T V_AggressiveStripPrecedingAndTrailingWhitespaceW
@@ -482,6 +487,7 @@
  T V_IsValidURLCharacter
  T V_JoinNumbers
  T V_JoinNumbersUint
+ T V_JoinNumbersUint64
  T V_MakeAbsolutePath
  T V_MakeFileSafeName
  T V_MakeRelativePath
@@ -501,11 +507,9 @@
  T V_SetURLParam
  T V_SplitNumbers
  T V_SplitNumbersUint
- T V_SplitString
- T V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
- T V_SplitString2
- T V_SplitString2(char const*, char const* const*, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  T V_SplitString3(char const*, char const* const*, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&)
+ T V_SplitStringInternal
+ T V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  T V_StrLeft
  T V_StrReplaceChar
  T V_StrRight
@@ -646,6 +650,7 @@
  T int CUtlRBTree<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t, int, CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, wchar_t>::Insert_Internal<CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t>(CUtlMap<wchar_t, wchar_t const*, int, CDefLess<wchar_t> >::Node_t&&, bool)
  T int SplitNumbers<CUtlVector<int, CUtlMemory<int> > >(char const*, char, CUtlVector<int, CUtlMemory<int> >&)
  T int SplitNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char const*, char, CUtlVector<unsigned int, CUtlMemory<unsigned int> >&)
+ T std::__1::bad_function_call::~bad_function_call()
  T uint128::operator*(uint128)
  T void CUtlRBTree<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::FindInsertionPosition<CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t>(CUtlMap<char const*, CUtlString, int, CDefCaselessStringLess>::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t, int, CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::FindInsertionPosition<CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t>(CUtlMap<char const*, char const*, int, bool (*)(char const* const&, char const* const&)>::Node_t const&, bool, int&, bool&, bool&)
@@ -656,6 +661,7 @@
  T void Destruct<CUtlString>(CUtlString*)
  T void JoinNumbers<CUtlVector<int, CUtlMemory<int> > >(char, CUtlVector<int, CUtlMemory<int> > const&, CUtlString&)
  T void JoinNumbers<CUtlVector<unsigned int, CUtlMemory<unsigned int> > >(char, CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&, CUtlString&)
+ T void JoinNumbers<CUtlVector<unsigned long long, CUtlMemory<unsigned long long> > >(char, CUtlVector<unsigned long long, CUtlMemory<unsigned long long> > const&, CUtlString&)
  T vstdlib_wcsicmp
  T vstdlib_wcsnicmp
  T vstdlib_wcstoi64
@@ -799,6 +805,8 @@
  snprintf
  sprintf
  sscanf
+ std::exception::what() const
+ std::exception::~exception()
  std::terminate()
  strchr
  strcmp
@@ -862,6 +870,7 @@
  t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::LinguisticToUpperFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
  t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towlower32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towlower32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
  t int (anonymous namespace)::UnicodeConvertT<true, wchar_t, wchar_t, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towupper32>, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32> >(wchar_t const*, int, wchar_t*, int, EStringConvertErrorPolicy, (anonymous namespace)::WrapSimpleCaseMapFunctor<wchar_t, &(anonymous namespace)::V_UTF32ToUChar32, V_towupper32>&, (anonymous namespace)::EncodeLenFuncAdapter<&(anonymous namespace)::V_UChar32ToUTF32Len>&, (anonymous namespace)::EncodeFuncAdapter<wchar_t, &(anonymous namespace)::V_UChar32ToUTF32>&)
+ typeinfo for std::exception
  unlink
  vasprintf
  vsnprintf

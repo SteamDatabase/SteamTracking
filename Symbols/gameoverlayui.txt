@@ -464,6 +464,11 @@
  D CIngameFPSBanner::KB_ChainToMap()::chained
  D CIngameFPSBanner::PanelMessageFunc_OnOverlayHidden::InitVar()::bAdded
  D CIngameFPSBanner::PanelMessageFunc_OnOverlayShown::InitVar()::bAdded
+ D CMicroTxnAuthorizeBase::ChainToAnimationMap()::chained
+ D CMicroTxnAuthorizeBase::ChainToMap()::chained
+ D CMicroTxnAuthorizeBase::GetKBMap()::s_pMap
+ D CMicroTxnAuthorizeBase::GetMessageMap()::s_pMap
+ D CMicroTxnAuthorizeBase::KB_ChainToMap()::chained
  D CMicroTxnAuthorizeDialog::ChainToAnimationMap()::chained
  D CMicroTxnAuthorizeDialog::ChainToMap()::chained
  D CMicroTxnAuthorizeDialog::GetKBMap()::s_pMap
@@ -474,6 +479,14 @@
  D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnURLClicked::InitVar()::bAdded
  D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnUpdateBillingInfo::InitVar()::bAdded
  D CMicroTxnAuthorizeDialog::PanelMessageFunc_OnWebBrowserClose::InitVar()::bAdded
+ D CMicroTxnAuthorizeHandler::ChainToAnimationMap()::chained
+ D CMicroTxnAuthorizeHandler::ChainToMap()::chained
+ D CMicroTxnAuthorizeHandler::GetKBMap()::s_pMap
+ D CMicroTxnAuthorizeHandler::GetMessageMap()::s_pMap
+ D CMicroTxnAuthorizeHandler::KB_ChainToMap()::chained
+ D CMicroTxnAuthorizeHandler::PanelMessageFunc_OnAddFunds::InitVar()::bAdded
+ D CMicroTxnAuthorizeHandler::PanelMessageFunc_OnCustomURL::InitVar()::bAdded
+ D CMicroTxnAuthorizeHandler::PanelMessageFunc_OnWebBrowserClose::InitVar()::bAdded
  D CMusicLibraryPanel::ChainToAnimationMap()::chained
  D CMusicLibraryPanel::ChainToMap()::chained
  D CMusicLibraryPanel::GetKBMap()::s_pMap
@@ -938,7 +951,9 @@
  D VTT for CGuideItemPanel
  D VTT for CHintLabel
  D VTT for CIngameFPSBanner
+ D VTT for CMicroTxnAuthorizeBase
  D VTT for CMicroTxnAuthorizeDialog
+ D VTT for CMicroTxnAuthorizeHandler
  D VTT for CMusicLibraryPanel
  D VTT for CMusicPage_Details_Album
  D VTT for CMusicPage_Details_Content
@@ -1113,6 +1128,8 @@
  D ZooDialog::ZooPropertyPage::GetKBMap()::s_pMap
  D ZooDialog::ZooPropertyPage::GetMessageMap()::s_pMap
  D ZooDialog::ZooPropertyPage::KB_ChainToMap()::chained
+ D construction vtable for CMicroTxnAuthorizeBase-in-CMicroTxnAuthorizeDialog
+ D construction vtable for CMicroTxnAuthorizeBase-in-CMicroTxnAuthorizeHandler
  D construction vtable for COverlayDetailsBroadcastPanel-in-CPanelHideWrapper<COverlayDetailsBroadcastPanel>
  D construction vtable for COverlay_Details_Achievements-in-CPanelHideWrapper<COverlay_Details_Achievements>
  D construction vtable for COverlay_Details_CommunityDiscussions_Panel-in-CPanelHideWrapper<COverlay_Details_CommunityDiscussions_Panel>
@@ -1169,7 +1186,9 @@
  D construction vtable for vgui::EditablePanel-in-CDurationControlNotification
  D construction vtable for vgui::EditablePanel-in-CGuideItemPanel
  D construction vtable for vgui::EditablePanel-in-CIngameFPSBanner
+ D construction vtable for vgui::EditablePanel-in-CMicroTxnAuthorizeBase
  D construction vtable for vgui::EditablePanel-in-CMicroTxnAuthorizeDialog
+ D construction vtable for vgui::EditablePanel-in-CMicroTxnAuthorizeHandler
  D construction vtable for vgui::EditablePanel-in-CMusicLibraryPanel
  D construction vtable for vgui::EditablePanel-in-CMusicPage_Details_Album
  D construction vtable for vgui::EditablePanel-in-CMusicPage_Details_Content
@@ -1250,7 +1269,9 @@
  D construction vtable for vgui::Frame-in-AppModalQueryBox
  D construction vtable for vgui::Frame-in-CBroadcastFirstTimeDialog
  D construction vtable for vgui::Frame-in-CDialogParentalUnlock
+ D construction vtable for vgui::Frame-in-CMicroTxnAuthorizeBase
  D construction vtable for vgui::Frame-in-CMicroTxnAuthorizeDialog
+ D construction vtable for vgui::Frame-in-CMicroTxnAuthorizeHandler
  D construction vtable for vgui::Frame-in-CMusicLibraryPanel
  D construction vtable for vgui::Frame-in-CMusicPlayerPanel
  D construction vtable for vgui::Frame-in-CMusicPlayerVolumePanel
@@ -1362,7 +1383,9 @@
  D construction vtable for vgui::Panel-in-CGuideItemPanel
  D construction vtable for vgui::Panel-in-CHintLabel
  D construction vtable for vgui::Panel-in-CIngameFPSBanner
+ D construction vtable for vgui::Panel-in-CMicroTxnAuthorizeBase
  D construction vtable for vgui::Panel-in-CMicroTxnAuthorizeDialog
+ D construction vtable for vgui::Panel-in-CMicroTxnAuthorizeHandler
  D construction vtable for vgui::Panel-in-CMusicLibraryPanel
  D construction vtable for vgui::Panel-in-CMusicPage_Details_Album
  D construction vtable for vgui::Panel-in-CMusicPage_Details_Content
@@ -1592,8 +1615,12 @@
  D guard variable for CHostOfflineMode::IsOfflineMode()::s_bIsOfflineMode
  D guard variable for CIngameFPSBanner::GetKBMap()::s_pMap
  D guard variable for CIngameFPSBanner::GetMessageMap()::s_pMap
+ D guard variable for CMicroTxnAuthorizeBase::GetKBMap()::s_pMap
+ D guard variable for CMicroTxnAuthorizeBase::GetMessageMap()::s_pMap
  D guard variable for CMicroTxnAuthorizeDialog::GetKBMap()::s_pMap
  D guard variable for CMicroTxnAuthorizeDialog::GetMessageMap()::s_pMap
+ D guard variable for CMicroTxnAuthorizeHandler::GetKBMap()::s_pMap
+ D guard variable for CMicroTxnAuthorizeHandler::GetMessageMap()::s_pMap
  D guard variable for CMusicLibraryPanel::GetKBMap()::s_pMap
  D guard variable for CMusicLibraryPanel::GetMessageMap()::s_pMap
  D guard variable for CMusicPage_Details_Album::GetKBMap()::s_pMap
@@ -1972,6 +1999,7 @@
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  D typeinfo for CCallback<CDialogParentalUnlock, ParentalLockChangeAttemptComplete_t, false>
  D typeinfo for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
+ D typeinfo for CCallback<CMicroTxnAuthorizeHandler, MicroTxnAuthDismissCallback_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
  D typeinfo for CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>
@@ -2138,8 +2166,11 @@
  D typeinfo for CLambdaCallResult<DurationControl_t>
  D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CMainOverlay
+ D typeinfo for CMicroTxnAuthorizeBase
  D typeinfo for CMicroTxnAuthorizeDialog
  D typeinfo for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
+ D typeinfo for CMicroTxnAuthorizeHandler
+ D typeinfo for CMicroTxnAuthorizeHandler::CCallback_OnAuthDismiss
  D typeinfo for CMsgAckPIDShuttingDown
  D typeinfo for CMsgAckSharedPaintBuffers
  D typeinfo for CMsgAddHeader
@@ -2288,6 +2319,7 @@
  D typeinfo for CMsgZoomToFocusedElement
  D typeinfo for CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnAuthResponse_t>
  D typeinfo for CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnInfoUpdated_t>
+ D typeinfo for CMultipleCallResults<CMicroTxnAuthorizeHandler, MicroTxnAuthResponse_t>
  D typeinfo for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  D typeinfo for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
  D typeinfo for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
@@ -3267,6 +3299,7 @@
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  D vtable for CCallback<CDialogParentalUnlock, ParentalLockChangeAttemptComplete_t, false>
  D vtable for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
+ D vtable for CCallback<CMicroTxnAuthorizeHandler, MicroTxnAuthDismissCallback_t, false>
  D vtable for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  D vtable for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
  D vtable for CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>
@@ -3431,8 +3464,11 @@
  D vtable for CLambdaCallResult<DurationControl_t>
  D vtable for CMSgJumpListMRUApp
  D vtable for CMainOverlay
+ D vtable for CMicroTxnAuthorizeBase
  D vtable for CMicroTxnAuthorizeDialog
  D vtable for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
+ D vtable for CMicroTxnAuthorizeHandler
+ D vtable for CMicroTxnAuthorizeHandler::CCallback_OnAuthDismiss
  D vtable for CMsgAckPIDShuttingDown
  D vtable for CMsgAckSharedPaintBuffers
  D vtable for CMsgAddHeader
@@ -3581,6 +3617,7 @@
  D vtable for CMsgZoomToFocusedElement
  D vtable for CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnAuthResponse_t>
  D vtable for CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnInfoUpdated_t>
+ D vtable for CMultipleCallResults<CMicroTxnAuthorizeHandler, MicroTxnAuthResponse_t>
  D vtable for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  D vtable for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
  D vtable for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
@@ -3986,6 +4023,7 @@
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
  R typeinfo name for CCallback<CDialogParentalUnlock, ParentalLockChangeAttemptComplete_t, false>
  R typeinfo name for CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>
+ R typeinfo name for CCallback<CMicroTxnAuthorizeHandler, MicroTxnAuthDismissCallback_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Album, TrackListDataEntryForAlbumID_t, false>
  R typeinfo name for CCallback<CMusicPage_Details_Content, AlbumListDataEntry_t, false>
@@ -4152,8 +4190,11 @@
  R typeinfo name for CLambdaCallResult<DurationControl_t>
  R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CMainOverlay
+ R typeinfo name for CMicroTxnAuthorizeBase
  R typeinfo name for CMicroTxnAuthorizeDialog
  R typeinfo name for CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss
+ R typeinfo name for CMicroTxnAuthorizeHandler
+ R typeinfo name for CMicroTxnAuthorizeHandler::CCallback_OnAuthDismiss
  R typeinfo name for CMsgAckPIDShuttingDown
  R typeinfo name for CMsgAckSharedPaintBuffers
  R typeinfo name for CMsgAddHeader
@@ -4302,6 +4343,7 @@
  R typeinfo name for CMsgZoomToFocusedElement
  R typeinfo name for CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnAuthResponse_t>
  R typeinfo name for CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnInfoUpdated_t>
+ R typeinfo name for CMultipleCallResults<CMicroTxnAuthorizeHandler, MicroTxnAuthResponse_t>
  R typeinfo name for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  R typeinfo name for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
  R typeinfo name for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
@@ -5227,6 +5269,10 @@
  T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Register(CMicroTxnAuthorizeDialog*, void (CMicroTxnAuthorizeDialog::*)(MicroTxnAuthDismissCallback_t*))
  T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::Run(void*)
  T CCallback<CMicroTxnAuthorizeDialog, MicroTxnAuthDismissCallback_t, false>::~CCallback()
+ T CCallback<CMicroTxnAuthorizeHandler, MicroTxnAuthDismissCallback_t, false>::CCallback(CMicroTxnAuthorizeHandler*, void (CMicroTxnAuthorizeHandler::*)(MicroTxnAuthDismissCallback_t*))
+ T CCallback<CMicroTxnAuthorizeHandler, MicroTxnAuthDismissCallback_t, false>::Register(CMicroTxnAuthorizeHandler*, void (CMicroTxnAuthorizeHandler::*)(MicroTxnAuthDismissCallback_t*))
+ T CCallback<CMicroTxnAuthorizeHandler, MicroTxnAuthDismissCallback_t, false>::Run(void*)
+ T CCallback<CMicroTxnAuthorizeHandler, MicroTxnAuthDismissCallback_t, false>::~CCallback()
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::CCallback(CMusicPage_Details_Album*, void (CMusicPage_Details_Album::*)(AlbumCoverLoaded_t*))
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::Register(CMusicPage_Details_Album*, void (CMusicPage_Details_Album::*)(AlbumCoverLoaded_t*))
  T CCallback<CMusicPage_Details_Album, AlbumCoverLoaded_t, false>::Run(void*)
@@ -6017,8 +6063,20 @@
  T CMemoryPool::Clear()
  T CMemoryPool::Validate(CValidator&, char const*)
  T CMemoryPool::~CMemoryPool()
+ T CMicroTxnAuthorizeBase::CMicroTxnAuthorizeBase(vgui::Panel*, char const*)
+ T CMicroTxnAuthorizeBase::ChainToAnimationMap()
+ T CMicroTxnAuthorizeBase::ChainToMap()
+ T CMicroTxnAuthorizeBase::GetAnimMap()
+ T CMicroTxnAuthorizeBase::GetClassSize() const
+ T CMicroTxnAuthorizeBase::GetKBMap()
+ T CMicroTxnAuthorizeBase::GetMessageMap()
+ T CMicroTxnAuthorizeBase::GetPanelClassName()
+ T CMicroTxnAuthorizeBase::GetPanelTopClassName() const
+ T CMicroTxnAuthorizeBase::KB_ChainToMap()
+ T CMicroTxnAuthorizeBase::~CMicroTxnAuthorizeBase()
  T CMicroTxnAuthorizeDialog::AuthorizeTransaction()
  T CMicroTxnAuthorizeDialog::BAddFunds()
+ T CMicroTxnAuthorizeDialog::BCanClose()
  T CMicroTxnAuthorizeDialog::BLoadTransaction()
  T CMicroTxnAuthorizeDialog::BUpdateWalletAmount()
  T CMicroTxnAuthorizeDialog::CCallback_OnAuthDismiss::Run(void*)
@@ -6055,6 +6113,35 @@
  T CMicroTxnAuthorizeDialog::PanelMessageFunc_OnWebBrowserClose::InitVar()
  T CMicroTxnAuthorizeDialog::RequestMicroTxnInfo()
  T CMicroTxnAuthorizeDialog::~CMicroTxnAuthorizeDialog()
+ T CMicroTxnAuthorizeHandler::AuthorizeTransaction()
+ T CMicroTxnAuthorizeHandler::BCanClose()
+ T CMicroTxnAuthorizeHandler::CCallback_OnAuthDismiss::Run(void*)
+ T CMicroTxnAuthorizeHandler::CCallback_OnAuthDismiss::~CCallback_OnAuthDismiss()
+ T CMicroTxnAuthorizeHandler::CMicroTxnAuthorizeHandler(unsigned long long)
+ T CMicroTxnAuthorizeHandler::CancelTransaction()
+ T CMicroTxnAuthorizeHandler::ChainToAnimationMap()
+ T CMicroTxnAuthorizeHandler::ChainToMap()
+ T CMicroTxnAuthorizeHandler::CloseBrowser()
+ T CMicroTxnAuthorizeHandler::CompleteTxn(unsigned long long)
+ T CMicroTxnAuthorizeHandler::GetAnimMap()
+ T CMicroTxnAuthorizeHandler::GetClassSize() const
+ T CMicroTxnAuthorizeHandler::GetKBMap()
+ T CMicroTxnAuthorizeHandler::GetMessageMap()
+ T CMicroTxnAuthorizeHandler::GetPanelClassName()
+ T CMicroTxnAuthorizeHandler::GetPanelTopClassName() const
+ T CMicroTxnAuthorizeHandler::KB_ChainToMap()
+ T CMicroTxnAuthorizeHandler::OnAddFunds()
+ T CMicroTxnAuthorizeHandler::OnAuthDismiss(MicroTxnAuthDismissCallback_t*)
+ T CMicroTxnAuthorizeHandler::OnAuthorizeCompleted(MicroTxnAuthResponse_t*, bool)
+ T CMicroTxnAuthorizeHandler::OnClose()
+ T CMicroTxnAuthorizeHandler::OnCustomURL(KeyValues*)
+ T CMicroTxnAuthorizeHandler::OnWebBrowserClose()
+ T CMicroTxnAuthorizeHandler::OpenBrowserToFullURL(char const*)
+ T CMicroTxnAuthorizeHandler::OpenBrowserToPage(char const*)
+ T CMicroTxnAuthorizeHandler::PanelMessageFunc_OnAddFunds::InitVar()
+ T CMicroTxnAuthorizeHandler::PanelMessageFunc_OnCustomURL::InitVar()
+ T CMicroTxnAuthorizeHandler::PanelMessageFunc_OnWebBrowserClose::InitVar()
+ T CMicroTxnAuthorizeHandler::~CMicroTxnAuthorizeHandler()
  T CMsgAckPIDShuttingDown::ByteSize() const
  T CMsgAckPIDShuttingDown::CMsgAckPIDShuttingDown()
  T CMsgAckPIDShuttingDown::Clear()
@@ -7951,6 +8038,11 @@
  T CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnInfoUpdated_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnInfoUpdated_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CMicroTxnAuthorizeDialog, MicroTxnInfoUpdated_t>::~CMultipleCallResults()
+ T CMultipleCallResults<CMicroTxnAuthorizeHandler, MicroTxnAuthResponse_t>::GetCallbackSizeBytes()
+ T CMultipleCallResults<CMicroTxnAuthorizeHandler, MicroTxnAuthResponse_t>::Run(void*)
+ T CMultipleCallResults<CMicroTxnAuthorizeHandler, MicroTxnAuthResponse_t>::Run(void*, bool, unsigned long long)
+ T CMultipleCallResults<CMicroTxnAuthorizeHandler, MicroTxnAuthResponse_t>::Validate(CValidator&, char const*)
+ T CMultipleCallResults<CMicroTxnAuthorizeHandler, MicroTxnAuthResponse_t>::~CMultipleCallResults()
  T CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>::GetCallbackSizeBytes()
  T CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>::Run(void*)
  T CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>::Run(void*, bool, unsigned long long)
@@ -8873,6 +8965,8 @@
  T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
+ T CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >::Delete()
+ T CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >::Delete()
  T CPlaylistItemLabel::CPlaylistItemLabel(vgui::Panel*, char const*, char const*)
  T CPlaylistItemLabel::ChainToAnimationMap()
  T CPlaylistItemLabel::ChainToMap()
@@ -9679,6 +9773,7 @@
  T CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Validate(CValidator&, char const*)
  T CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Insert(CUtlString&&, CUtlString&&)
  T CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t::~Node_t()
+ T CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t::~Node_t()
  T CUtlMap<char const*, CPanelAnimationDictionary::PanelAnimationMapDictionaryEntry, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CPanelMessageMapDictionary::PanelMessageMapDictionaryEntry, int, CDefCaselessStringLess>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CURLManager::URL_t, int, CDefCaselessStringLess>::Insert(char const*&&)
@@ -9754,6 +9849,7 @@
  T CUtlRBTree<CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CDirContentsWatcher::FileWatchData, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlString, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
+ T CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::Find(CUtlSymbol const&) const
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, KeyValues const*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::RemoveAll()
@@ -9815,6 +9911,7 @@
  T CUtlRBTree<CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Find(unsigned long long const&) const
  T CUtlRBTree<CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CUtlBuffer*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RemoveAll()
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long>::Find(unsigned long const&) const
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::Node_t, int, CUtlMap<unsigned long, vgui::EModalQueryBoxState, int, CDefLess<unsigned long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long>::Remove(unsigned long const&)
@@ -9856,10 +9953,10 @@
  T CUtlString::AppendFormat(char const*, ...)
  T CUtlString::AssertStringTooLong()
  T CUtlString::BStartsWithCaseless(char const*) const
- T CUtlString::CUtlString(CUtlString const&)
  T CUtlString::Format(char const*, ...)
  T CUtlString::Replace(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
+ T CUtlString::SetValue(char const*)
  T CUtlString::VAppendFormat(char const*, __va_list_tag*)
  T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::Access()
@@ -10016,7 +10113,6 @@
  T CUtlVector<char const*, CUtlMemory<char const*> >::~CUtlVector()
  T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
  T CUtlVector<char*, CUtlMemory<char*> >::GrowVector(int)
- T CUtlVector<char*, CUtlMemory<char*> >::PurgeAndDeleteElements()
  T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
  T CUtlVector<char, CUtlMemory<char> >::AddMultipleToTail(int, char const*)
  T CUtlVector<char, CUtlMemory<char> >::GrowVector(int)
@@ -10700,7 +10796,7 @@
  T URLLabel_Factory()
  T UnlinkFile(StringView)
  T UpdateProfilingState()
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T V_strstr(char const*, char const*)
  T WinAppMain
  T ZooDialog::ChainToAnimationMap()
@@ -14671,7 +14767,7 @@
  V_RemoveDotSlashes
  V_SetExtension
  V_SplitNumbers
- V_SplitString
+ V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  V_StrSkipArticles
  V_StrSubstInPlace
  V_StripFilename
@@ -15115,6 +15211,7 @@
  b g_Divider_Helper
  b g_EditablePanel_Helper
  b g_EnableMovies
+ b g_EnableWebMicrotxn
  b g_GraphPanel_Helper
  b g_ImagePanel_Helper
  b g_KBMgr
@@ -15504,6 +15601,7 @@
  r k_rgchAddCachedPmtMethodPage
  r k_rgchAddFundsPage
  r k_rgchDefaultHomePage
+ r k_rgchWebCheckoutPage
  r onebppswaptable
  r opcode_possessify
  r png_combine_row.display_mask
@@ -15958,6 +16056,7 @@
  t _GLOBAL__sub_I_main.cpp
  t _GLOBAL__sub_I_main_serialized.cpp
  t _GLOBAL__sub_I_microtxnauthdialog.cpp
+ t _GLOBAL__sub_I_microtxnauthhandler.cpp
  t _GLOBAL__sub_I_msgspewthrottle.cpp
  t _GLOBAL__sub_I_musichelper.cpp
  t _GLOBAL__sub_I_musiclibrarypanel.cpp

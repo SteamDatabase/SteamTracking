@@ -1,8 +1,10 @@
 __TEXT
+pC
+pC
 __text
 __TEXT
-G
-G
+O
+O
 __stubs
 __TEXT
 __stub_helper
@@ -14,22 +16,26 @@ __const
 __TEXT
 __unwind_info
 __TEXT
--8
--8
 __eh_frame
 __TEXT
-0Y9
-`/
-0Y9
+3
 __DATA
+pC
+pC
 __nl_symbol_ptr
 __DATA
+pC
+pC
 __got
 __DATA
 __la_symbol_ptr
 __DATA
+XqC
+XqC
 __mod_init_func
 __DATA
+p|C
+p|C
 __const
 __DATA
 __cfstring
@@ -42,27 +48,27 @@ __thread_bss
 __DATA
 __bss
 __DATA
-1j
+Aj
 __common
 __DATA
+85
 H
 __LINKEDIT
-PY
+0Y
 
 8
 @loader_path/friendsui.dylib
 "
-plY
+xLY
 P
 c
-b
+/b
 
 8
 @loader_path/libtier0_s.dylib
 8
 @loader_path/libvstdlib_s.dylib
 @
-
 
 @loader_path/libSDL2-2.0.0.dylib
 0
@@ -552,6 +558,7 @@ N15CFriendsWebChat36CCallbackInternal_OnChatRoomDlgCloseE
 20CJSMethodCallHandlerI15CFriendsWebChatJEE
 20CJSMethodCallHandlerI15CFriendsWebChatJPKc9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI15CFriendsWebChatJP10CUtlVectorIj10CUtlMemoryIjEEEE
+20CJSMethodCallHandlerI15CFriendsWebChatJyyjjjPKcS2_EE
 18CLimitedUserDialog
 24CPlayersSubRecentPlayers
 25CPlayersSubCurrentPlayers
@@ -2069,6 +2076,12 @@ N4vgui8URLLabelE
 _
 14ConCommandBase
 6ConVar
+13CPlainAutoPtrI7CUtlMapIybi8CDefLessIyEEE
+7CUtlMapIybi8CDefLessIyEE
+10CUtlRBTreeIN7CUtlMapIybi8CDefLessIyEE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessIS1_EEE
+7CUtlMapI10CUtlStringbi8CDefLessIS0_EE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessIS1_EE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 11CDirWatcher
 19CDirContentsWatcher
@@ -2189,11 +2202,11 @@ function %s
 Assertion Failed: BGameOverlayBrowser( m_eBrowserType )
 Assertion Failed: false
 Assertion Failed: BGameOverlayBrowser( m_eBrowserType)
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 Assertion Failed: m_pvOrigNameAddress
 Assertion Failed: m_pParent
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Assertion Failed: bitNum >= 0 && bitNum < this->Size()
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 Assertion Failed: (elem == Count()) || IsValidIndex(elem)
@@ -3702,6 +3715,10 @@ strKeyName
 #Friends_NameChangeFailed_Info
 #Friends_NameChangeThrottled_Info
 #Friends_NameChangeInvalid_Info
+#Friends_NameChangeDenied_Info
+#Friends_NameChangeCooldown_Info
+eResult
+strMessageToken
 Unexpected error
 FriendsWebChatVguiFrame
 Web Chat Container
@@ -3750,6 +3767,7 @@ WebChat.GetCurrentUserAccountID
 WebChat.SetVoiceChatActive
 WebChat.SetNumChatsWithUnreadPriorityMessages
 OpenVR.GetWebSecret
+WebChat.OnNewGroupChatMsgAdded
 LimitedUserDialog
 public/LimitedUserDialog.res
 LimitedFeature
@@ -10094,8 +10112,12 @@ console
 Attempted to change replicated CVar when you are not the GM
 ConVar
 m_configOverride
+m_pVecUlValue
+m_pVecStringValue
 m_vecCallbacks
 FCVAR_NEVER_AS_STRING
+m_p
+Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
@@ -10241,25 +10263,34 @@ f
 a
 ?
 '
-Assertion Failed: m_unSizeOfElements > 0
+Assertion Failed: nSizeOfType > 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
+Assertion Failed: m_nAllocationCount >= 0
 Assertion Failed: m_unSizeOfElements == mem.m_unSizeOfElements
-nBytesItem is %d in UtlMemory_CalcNewAllocationCount
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
+Assertion Failed: num >= 0
+CUtlString::SetValue
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
+CUtlString::VAppendFormat
+CUtlString::ReplaceInternal
 Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
 Assertion Failed: cActualReplacements == cReplacements
 Assertion failed: length > k_cchMaxString
 0123456789abcdef
+CUtlStringBuilder::InternalPrepareBuffer
 Assertion Failed: nMinCapacity > Capacity()
 Assertion Failed: nMinCapacity >= nChars
 Assertion Failed: nMinCapacity <= k_nMaxStringSize
 Assertion Failed: len > 0 || HasError()
+CUtlStringBuilder::ReplaceInternal
 Assertion Failed: pstrNew == pszString
 Assertion Failed: pstrNew == pstrDestination
 Assertion Failed: PrepareBuffer( nNewLength ) == pstrNew
 Error State on string being set.
+CUtlStringBuilder::Data::MoveToHeap
 Assertion Failed: !m_data.HasError()
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
@@ -10605,26 +10636,25 @@ Assertion Failed: k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 30819D300D06092A864886F70D010101050003818B0030818702818100B1260881BDFE84463D88C6AB8DB914A2E593893C10508B8A5ABDF692E9A5419A3EDBAE86A052849983B75E3B425C18178B260003D857DF0B6505C6CF9C84F5859FCE3B63F1FB2D4818501F6C5FA4AD1430EEB081A74ABD74CD1F4AA1FCCA3B88DD0548AED34443CEB52444EAE9099AA4FE66B2E6224D02381C248025C7044079020111
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819d300d06092a864886f70d010101050003818b0030818702818100baeee6ba4093c07f86fb34fa2ed0c9660484dd02e2d7b4e2dbc0a7b80f088f42c34dffd633b4f79fd4956aa6b901d480da5d5f783fefd681b9fc517804b00451dfc3ecc7e16b11dcb0379dc1f9d00d0a7ab8f5d6aba57115f12256ed0c9e9bd4bf994dbbdd42cd019c5b023b3fd0005430c5305bdd46cce39a492753b0b5b355020111
-'U3
-@U3
-u0
-)
-"
+g33
+,/3
+D/3
 -
-png
-png
-0
-0
+-
+g,
+f,
+tW
+p
 0
 p
+<,
+p
+0
+L
 ,
-\,
-0
-p
-p
-0
-E,
-(W
+,
+,
+,
 0
 p
 0
@@ -10644,32 +10674,18 @@ p
 0
 p
 
-/
-/
-/
-@+
-/
-/
-y+
-(
-d+
-&+
-K
+8+
++
+4#
 K
 +
-+
-+
-+
-+
-+
-i.
+K
+a*
 0
 p
+>.
 0
 p
-M.
-;
-Y
 @
 @
 @
@@ -10678,22 +10694,20 @@ Y
 @
 @
 @
-K
-K
 
 
 
-)
-0
-0
-0
-p
-0
 V
+0
+0
+0
+0
+p
 p
 0
 0
 p
+[*
 p
 0
 0
@@ -10712,10 +10726,9 @@ p
 p
 I#E
 p
+=)
 0
 p
-c$
-JU
 p
 0
 0
@@ -10723,73 +10736,39 @@ p
 0
 0
 
-@
-z-
-J
-*
--
--
--
--
--
--
--
--
--
--
--
--
 )
-)
-*K
+t-
+%
+%
+%
+-
+-
+-
+r$
+`$
+*)
 p
-)
-)
-)
-)
-)
-)
-)
-)
-T
-T
-T
-T
-T
-T
+s,
+$
 @
 @
-)I
+@
+G
 0
 p
-M
 p
-p
-0
-0
-p
-0
-0
-d
-p
-0
 p
 0
 0
 p
 0
 0
+@
+,
 p
 0
-0
-0
-0
 p
-f(
 0
-0
-0
-p
 0
 p
 0
@@ -10800,12 +10779,27 @@ p
 0
 0
 p
+0
+y$
+,
+,
 ,
 ,
 0
+0
 p
--
--
+0
+p
+0
+0
+p
+0
+0
+0
+0
+p
+0
+p
 0
 p
 0
@@ -10813,30 +10807,32 @@ p
 (
 (
 (
+(
 K
-K
-K
-K
-t+
+j+
 0
 p
-0
-p
-I
-p
-0
-j!
-p
-0
 +
-:,
++
++
+0
 p
++'
+p
+0
+p
+0
+?
 ?
 p
+0,
+',
+p
 p
 p
 p
 
++
 p
 p
 p
@@ -10844,6 +10840,10 @@ p
 p
 p
 p
+;"
+:"
+'
+'
 p
 0
 0
@@ -10862,89 +10862,97 @@ p
 p
 0
 E
-*
-*
-*
-0
-p
-p
-l&
-R
-r&
-*
-*
-*
-*
-*
-0<
-p
-*
-*
-*
-*
-*
-*
-*
-DK
-&
-&
-&
-&
-0
-p
-0
-p
-0
-0
-p
-p
-0
-p
-p
-0
-p
-?)
-)
-)
-)
-%
-$
-@
-@
-=
-@
-@
-?
-z$
-?
-s(
-+
-A
-$
-$
-$
-(
-Hc
-=
-.#
-#
-N
-w;
-P&
 "
-Hc
-7
-7
-7
-%
-%
-W
-z$
-C$
-M$
-$
-$
+"
+*
+*
+*
+!
+0
+p
+*
+*
+p
+*
+*
+*
+9*
+p
+*
+*
+*
+*
+*
+*
+*
+K>
 &
+&
+&
+&
+&
+0
+p
+0
+p
+0
+0
+p
+p
+0
+p
+p
+0
+p
+p>
+M;
+)
+)
+$
+@
+@
+=
+@
+@
+w(
+?
+?
++
++
++
+>$
+A
+*
+$
+$
+$
+$
+$
+$
+$
+Hc
+=
+O
+k#
+$N
+#
+L95+
+N
+S"
+"
+"
+L95`{M
+;
+M
+Hc
+!
+t
+'
+y$
+&
+&
+$
+$
 ?
 ?
 ?
@@ -10960,6 +10968,7 @@ $
 ?
 ?
 ?
+)J
 .
 0
 @
@@ -11271,20 +11280,17 @@ Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@o
 =
 3
 3
-#ZB
-#-WB
-#M@B
-A
+#mQB
+#MBB
+#-?B
 IcE
 I;E
 ,
-Q@
 H
 H
-/
-/
+:@
+7@
 
-v@
 
 
 i[
@@ -11391,63 +11397,83 @@ P
 |
 |
 "
+<
+<
+<
 3
-<
-<
 D
-;
-r;
-)
+{;
+v;
+e;
+S;
+@;
 @
-::
-5:
+})
+":
+)
 '
-C8
-
-
-'
-'
-U7
+m9
+(
+8
 &
+$
 d
-x
 
 
+6
+!
 
 
-
-
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
 0
 
 
+u4
 &
 &
-(
 t=
 =
 =
 @
+
 0
 0
 0
 0
+
+
+
+
 $
-#
 uV%
 
 
-/
-/
+r#
 E
-*/
+s/
+/
+/
+/
 /
 
 
-g0
 
-e"
 @
-9
+1
+
 
 @
 @
@@ -11465,7 +11491,6 @@ e"
 @
 @
 =
-}
 @
 @
 @
@@ -11493,8 +11518,7 @@ e"
 .
 .
 d
-"
-:
+n!
 =
 
 =
@@ -11509,8 +11533,8 @@ d
 @
 @
 @
-,
-,
+|
+
 &
 =
 @

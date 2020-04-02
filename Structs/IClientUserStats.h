@@ -50,4 +50,6 @@ public:
     virtual unknown_ret GetGlobalStat(CGameID, char const*, double*) = 0;
     virtual unknown_ret GetGlobalStatHistory(CGameID, char const*, long long*, unsigned int) = 0;
     virtual unknown_ret GetGlobalStatHistory(CGameID, char const*, double*, unsigned int) = 0;
+    virtual unknown_ret GetAchievementProgressLimits(CGameID, char const*, int*, int*) = 0;
+    virtual unknown_ret GetAchievementProgressLimits(CGameID, char const*, float*, float*) = 0;
 };

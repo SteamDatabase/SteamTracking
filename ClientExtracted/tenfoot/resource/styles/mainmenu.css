@@ -112,6 +112,16 @@ MainMenu.SlideAwayToRight
 	wash-color: #00000066;
 }
 
+#EscapeButton
+{
+    visibility: collapse;
+}
+
+.ShowEscape #EscapeButton
+{
+    visibility: visible;
+}
+
 .FriendsInputTextEntry.BehindTextInputHandler #BodyWrapper
 {
 	saturation: 1.0;

@@ -505,7 +505,6 @@ enum EMsg {
 	k_EMsgClientDPSendSpecialSurveyResponseReply = 1623;
 	k_EMsgDPStoreSaleStatistics = 1624;
 	k_EMsgClientDPUpdateAppJobReport = 1625;
-	k_EMsgDPUpdateContentEvent = 1626;
 	k_EMsgClientDPUnsignedInstallScript = 1627;
 	k_EMsgDPPartnerMicroTxns = 1628;
 	k_EMsgDPPartnerMicroTxnsResponse = 1629;
@@ -763,8 +762,6 @@ enum EMsg {
 	k_EMsgAMGetUserCurrentGameInfoResponse = 4270;
 	k_EMsgAMGetGSPlayerList = 4271;
 	k_EMsgAMGetGSPlayerListResponse = 4272;
-	k_EMsgAMGetGameMembers = 4276;
-	k_EMsgAMGetGameMembersResponse = 4277;
 	k_EMsgAMGetSteamIDForMicroTxn = 4278;
 	k_EMsgAMGetSteamIDForMicroTxnResponse = 4279;
 	k_EMsgAMSetPartnerMember = 4280;

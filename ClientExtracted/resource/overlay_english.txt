@@ -178,6 +178,10 @@
 "Overlay_MicroTxnAuth_ConvertedTotalValue"	"%converted_total%"
 "Overlay_MicroTxnAuth_RefundPeriod" "Steam offers refunds for these items within 48 hours of purchase if they have not been consumed, modified, or transferred. <a href=http://store.steampowered.com/steam_refunds>Learn More</a>"
 "Overlay_MicroTxnAuth_NotRefundable" "These items are not eligible for a refund. <a href=http://store.steampowered.com/steam_refunds>Learn More</a>"
+"Overlay_MicroTxnAuth_ConnectionError" "Connection Error"
+"Overlay_MicroTxnAuth_ConnectionError_Info" "Your transaction could not be completed because was a problem communication with Steam."
+"Overlay_MicroTxnAuth_Insufficient_Funds" "Insufficient Funds"
+"Overlay_MicroTxnAuth_Insufficient_Funds_Info" "You do not have enough funds in your Steam Wallet to complete your purchase.  Would you like to add more funds to continue?"
 
 "Overlay_Screenshots_Title" "Screenshot Uploader"
 "Overlay_Screenshots_Panel_Title" "Screenshots"

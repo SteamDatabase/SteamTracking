@@ -83,6 +83,7 @@
  B g_loggingMutexCreated
  B g_machClient
  B g_nGameID
+ B g_nOverlayGameID
  B g_pGameExitingEvent
  B g_pInGameRenderingEvent
  B g_pInputStreamOutOfGame

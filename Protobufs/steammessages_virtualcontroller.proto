@@ -102,6 +102,10 @@ message CVirtualControllerConfig {
 		optional string icon_foreground = 9;
 		optional string icon_background = 10;
 		optional bool input_toggle = 11;
+		optional int32 input_activate_stick_or_trackpad = 12;
+		optional int32 activation_type = 13;
+		optional int32 long_press_ms = 14;
+		optional int32 double_press_ms = 15;
 	}
 
 	message ActionSet {

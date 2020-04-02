@@ -1,16 +1,17 @@
 !
 __TEXT
+5
+5
 __text
 __TEXT
-@t
-@t
+@v
+@v
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __cstring
 __TEXT
-h
 __gcc_except_tab__TEXT
 __const
 __TEXT
@@ -21,10 +22,16 @@ __TEXT
 __eh_frame
 __TEXT
 __DATA
+5
+5
 __nl_symbol_ptr
 __DATA
+5
+5
 __got
 __DATA
+5
+5
 __la_symbol_ptr
 __DATA
 0
@@ -47,20 +54,18 @@ __thread_bss
 __DATA
 __bss
 __DATA
-a=
+q=
 __common
 __DATA
+pH
 H
 __LINKEDIT
-`I
+0J
 
 @
 @loader_path/gameoverlayui.dylib
 "
-`I
 P
-@W
-@W
 _
 
 8
@@ -68,7 +73,6 @@ _
 8
 @loader_path/libvstdlib_s.dylib
 @
-
 
 @loader_path/libSDL2-2.0.0.dylib
 8
@@ -465,10 +469,16 @@ N4vgui16IHostOfflineModeE
 StoreAddFundsMicroTxnPage
 StoreAddCachedPmtMethodPage
 24CMicroTxnAuthorizeDialog
+22CMicroTxnAuthorizeBase
 N24CMicroTxnAuthorizeDialog23CCallback_OnAuthDismissE
 9CCallbackI24CMicroTxnAuthorizeDialog29MicroTxnAuthDismissCallback_tLb0EE
 20CMultipleCallResultsI24CMicroTxnAuthorizeDialog22MicroTxnAuthResponse_tE
 20CMultipleCallResultsI24CMicroTxnAuthorizeDialog21MicroTxnInfoUpdated_tE
+StoreWebMicroTxnPage
+25CMicroTxnAuthorizeHandler
+N25CMicroTxnAuthorizeHandler23CCallback_OnAuthDismissE
+9CCallbackI25CMicroTxnAuthorizeHandler29MicroTxnAuthDismissCallback_tLb0EE
+20CMultipleCallResultsI25CMicroTxnAuthorizeHandler22MicroTxnAuthResponse_tE
 29COverlay_Details_Achievements
 22CAchievementImagePanel
 21CAchievementInfoPanel
@@ -2006,7 +2016,6 @@ en_US
 HOME
 r
 %s/%s
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 com.valvesoftware.steam.ipctool
 ipcserver restart: expected: %d, got: %d
 StopJob
@@ -2139,6 +2148,7 @@ InsertString
 string
 EmoticonMenuItemStyle
 economy/emoticonhover/%s?client=1&l=%s
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Assertion Failed: !pszString || pszString[nChars] == '\0'
 Menu
 MenuButton
@@ -2598,6 +2608,7 @@ activating
 complete
 CBroadcastFirstTimeDialog
 steamtrack:///
+0:00
 %d:%02d
 %d:%02d:%02d
 CMusicLibraryPanel
@@ -3221,6 +3232,8 @@ m_pMutex->Wait() failed in ShMemStream::PutInternal
 SHMemStream header is corrupt in PutInternal()
 PutInternal: Not enough space for put when locked
 Asked to unlock memory for write.. but wasn't locked
+-webmicrotxn
+Should we use the web microtxn path
 steam://url/CommunityFilePage/%llu
 OverlayCDKeyDialog
 KeyList
@@ -3601,8 +3614,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Mar 26 2020
-15:50:01
+Apr  1 2020
+16:03:43
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -3764,10 +3777,24 @@ balance
 #Overlay_MicroTxnAuth_AccountIneligible
 #Overlay_MicroTxnAuth_AddFunds
 #Overlay_MicroTxnAuth_PayWithWallet
+CMicroTxnAuthorizeBase
 CMicroTxnAuthorizeDialog
 URLClicked
 CMicroTxnAuthorizeDialog::OnAuthDismiss
 WebBrowserClose
+MicroTxnAuthorizeHandler
+AddFundsButton
+AddFunds
+ErrorLabel
+#Overlay_MicroTxnAuth_ConnectionError_Info
+#Overlay_MicroTxnAuth_ConnectionError
+resource/layout/overlay_microtxn_authmessagebox.layout
+steam://close/authorize
+steam://close/cancel
+#Overlay_MicroTxnAuth_Insufficient_Funds
+#Overlay_MicroTxnAuth_Insufficient_Funds_Info
+CMicroTxnAuthorizeHandler
+CMicroTxnAuthorizeHandler::OnAuthDismiss
 imagepanel
 icon
 caption
@@ -6163,7 +6190,6 @@ KEY_APOSTROPHE
 KEY_BACKQUOTE
 `
 KEY_COMMA
-,
 KEY_PERIOD
 KEY_SLASH
 KEY_BACKSLASH
@@ -6608,6 +6634,7 @@ Assertion Failed: pDefaultValue
 console
 Attempted to change replicated CVar when you are not the GM
 ConCommand '%s' not currently supported in config file
+,
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
@@ -6745,28 +6772,37 @@ b
 f
 \
 ?
-Assertion Failed: m_unSizeOfElements > 0
+Assertion Failed: nSizeOfType > 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
+Assertion Failed: m_nAllocationCount >= 0
 Assertion Failed: m_unSizeOfElements == mem.m_unSizeOfElements
-nBytesItem is %d in UtlMemory_CalcNewAllocationCount
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
+Assertion Failed: num >= 0
 Assertion Failed: IsPowerOfTwo( nNewCapacity )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 Assertion Failed: nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 Assertion Failed: ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
+CUtlString::SetValue
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
+CUtlString::VAppendFormat
+CUtlString::ReplaceInternal
 Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
 Assertion Failed: cActualReplacements == cReplacements
 Assertion failed: length > k_cchMaxString
+CUtlStringBuilder::InternalPrepareBuffer
 Assertion Failed: nMinCapacity > Capacity()
 Assertion Failed: nMinCapacity >= nChars
 Assertion Failed: nMinCapacity <= k_nMaxStringSize
 Assertion Failed: len > 0 || HasError()
+CUtlStringBuilder::ReplaceInternal
 Assertion Failed: pstrNew == pszString
 Assertion Failed: pstrNew == pstrDestination
 Assertion Failed: PrepareBuffer( nNewLength ) == pstrNew
 Error State on string being set.
+CUtlStringBuilder::Data::MoveToHeap
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
@@ -6948,6 +6984,7 @@ Limited user account
 Cant remove item
 Account has been deleted
 Account has an existing user cancelled license
+Denied due to community cooldown
 Invalid
 Public
 Beta
@@ -7214,131 +7251,140 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-^6&
-v6&
-$
-$
-$
-$
-$
-$
-$
-$
-"$
-0
-p
-p
-0
-4
-u#
-S#
-S?
-/#
 #
-E#
-#
-"
-"
-)#
-3
-3
-qG
-0
-p
-k"
-L2
-B"
-"
-=>
-o!
-g
-!
-!
-!
-!
-!
-!
-v!
-=
-d
-!
-!
-!
-d
-)
-E
-E
-E
-E
-E
-E
-E
-E
-E
-E
-E
-E
-E
-
-
-
-
-
-
-p
-0
-0
-p
-0
-0
-p
-0
-0
-p
-0
-0
-p
-0
-p
-0
-p
-0
-p
-0
-0
-p
-0
-0
-p
+$
+I
+I
+I
+I
+I
+I
+I
+I
+$
+$
+$
+$
+$
 0
 p
 p
-p
-p
-p
-0
-0
-/
 0
 @
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+"
+"
+\H
+{#
+7#
+7#
+0#
+#
+n4
+m4
+#
+0
+p
+K
+}"
+"
+"
+k
+a!
+!
+!
+!
+!
+4
+4
+1
+1
+d
+^
+X
+!E
+
+
+
+
+
+
+n
+p
+0
+0
+n
+p
+0
+0
+p
+0
+0
+p
+0
+0
+j
+p
+0
+p
+0
+p
+0
+p
+0
+0
+p
+0
+0
+p
+0
+p
+p
+p
+p
+p
+0
+E
+@
 =
+e=
 
 0
-[<
-1=
+t;
+>
+g
+M>
+Z=
+>
+>
+>
+>
+>
+?
 Hi
-C
-C
-C
-C
-C
+O2
 0
 p
 I
 I
+*>
+'>
+>
+>
+>
+>
+"B
 $
-A
-A
 @
 @
 =
@@ -7349,12 +7395,9 @@ A
 A
 Hc
 =
-9
 ?
 ?
-L95.i>
-I/
->
+0
 Hc
 ?
 ?
@@ -7474,6 +7517,7 @@ P
 =
 0
 0
+Y#
 =.
 =_
 =
@@ -7481,6 +7525,7 @@ P
 tC=_
 t<=
 0
+#
 p
 0
 p
@@ -7527,65 +7572,76 @@ P
 @
 |
 |
-6
-6
-6
-6
-6
-6
-6
+U6
+C6
 "
-#6
 3
+,6
 D
-u5
+N6
+I6
+D6
+6
+6
+6
+6
+6
+6
+6
+6
+6
+6
 @
-5
-5
-4
+P5
+[&
+}%
 %
-%
-"3
-d$
+k$
 $
 $
+
+
 #
-#
-:#
-Z1
-*#
+^"
+b
+1
+1
+1
 d
-W
-f
+(
 
 
+9,
+!
 
-
-+
-+
-+
-+
 
 &
 &
+
+V+
+,
+,
+&
+&
+:
 t=
 =
 =
+(+
 @
+
 
 uV%
 
 
-*
-*
+4*
 E
 
 
-)*
 
-n(
+D*
+C*
 @
-m(
 @
 @
 &
@@ -7602,8 +7658,7 @@ m(
 @
 @
 =
-
-
+P(
 
 
 @
@@ -7633,13 +7688,11 @@ m(
 .
 .
 d
-'
-'
-'
-'
 d
 d
 =
+'
+'
 
 =
 @
@@ -7647,7 +7700,6 @@ d
 @
 @
 @
-&
 @
 @
 @

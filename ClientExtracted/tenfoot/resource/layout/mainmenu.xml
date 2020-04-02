@@ -35,6 +35,10 @@
                         </Panel>
 
 					</Button>
+					<Button id="EscapeButton" class="Button TopRowButton" onactivate="EscapeBP();" selectionpos="auto" tabindex="auto" >
+                        			<Panel class="background_box" />
+                        			<Image class="EscapeImage" src="file://{images}/systemmenu/icon_home.png" />
+					</Button>	
 					<Button id="ControllerBatteryButton" class="Button TopRowButton" onactivate="ControllerSendLowBatteryIndication();" selectionpos="auto" tabindex="auto" >
                         <Panel class="background_box" />
                         <Panel id="BatteryImages" >

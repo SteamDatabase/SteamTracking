@@ -633,6 +633,7 @@
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b SecureRandomBytes::s_dev_urandom_fd
  b SetWritingMiniDump(bool)::fAsserted
+ b SteamThreadTools::ThreadSetPriority::__executeCount
  b SteamThreadTools::ThreadShellExecuteInternal(char const*, char const*, char const*, char const*, bool)::bInstalledSignalHandler
  b SteamThreadTools::g_ThreadMainThreadID
  b SteamVProf::CVProfile::FindOrCreateCounter(char const*, SteamVProf::CounterGroup_t)::dummy

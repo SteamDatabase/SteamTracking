@@ -62,19 +62,19 @@
     <Panel id="RowOfBindings" tabindex="auto" selectionpos="-15,0">
       <Panel id="VirtualMouse" tabindex="auto" selectionpos="-15,0">
         <Button id="mouse_left_button" selectionpos="200,1" onmoveup="DoNothing();" onmovedown="SetInputFocus( mouse_back_button );" onactivate="SetBinding( mouse_button, left );" onmoveleft="SetInputFocus( button_b );" >
-          <Label text="L" />
+          <Label text="#ChooseBinding_LeftMouseInitial" />
         </Button>
         <Button id="mouse_scroll_up" selectionpos="201,0" onactivate="SetBinding( mouse_button, scroll_up );">
           <Label text="^" />
         </Button>
         <Button id="mouse_middle_button" selectionpos="201,1" onactivate="SetBinding( mouse_button, middle );">
-          <Label text="M" />
+          <Label text="#ChooseBinding_MiddleMouseInitial" />
         </Button>
         <Button id="mouse_scroll_down" selectionpos="201,2" onmoveright="SetInputFocus( mouse_right_button );" onmoveleft="SetInputFocus( mouse_left_button );" onmovedown="DoNothing();" onactivate="SetBinding( mouse_button, scroll_down );">
           <Label text="^" />
         </Button>
         <Button id="mouse_right_button" selectionpos="202,1" onmoveright="SetInputFocus( kb_key_esc );" onmoveup="DoNothing();" onmovedown="SetInputFocus( mouse_forward_button );" onactivate="SetBinding( mouse_button, right );">
-          <Label text="R" />
+          <Label text="#ChooseBinding_RightMouseInitial" />
         </Button>
         <Button id="mouse_back_button" selectionpos="200,3" onmoveup="SetInputFocus( mouse_left_button );" onactivate="SetBinding( mouse_button, back );" onmoveright="SetInputFocus( mouse_forward_button );" onmoveleft="SetInputFocus( button_b );">
           <Label text="4" />
@@ -134,25 +134,25 @@
             </Panel>
             <Panel id="VKBCol2" selectionpos="30,0">
               <Button id="kb_key_volup" selectionpos="-2,0" onactivate="SetBinding( key_press, volumeup );" onmoveup="SetInputFocus( show_keyboard );">
-                <Label text="vol+" />
+                <Label text="#ChooseBinding_VolumeUp" />
               </Button>
               <Button id="kb_key_voldown" selectionpos="-1,0" onactivate="SetBinding( key_press, volumedown );" onmoveup="SetInputFocus( screenshot );">
-                <Label text="vol-" />
+                <Label text="#ChooseBinding_VolumeDown" />
               </Button>
               <Button id="kb_key_mute" selectionpos="0,0" onmoveright="SetInputFocus( kb_key_play );" onmoveup="SetInputFocus( mouse_position );" onactivate="SetBinding( key_press, mute );">
-                <Label text="mute" />
+                <Label text="#ChooseBinding_VolumeMute" />
               </Button>
               <Button id="kb_key_play" selectionpos="1,0" onmovedown="SetInputFocus( kb_key_numlock );" onmoveup="SetInputFocus( toggle_magnifier );" onactivate="SetBinding( key_press, play );">
-                <Label text="play" />
+                <Label text="#ChooseBinding_MusicPlay" />
               </Button>
               <Button id="kb_key_stop" selectionpos="2,0" onmovedown="SetInputFocus( kb_key_pad_forwardslash );" onmoveup="SetInputFocus( power_options );" onactivate="SetBinding( key_press, stop );">
-                <Label text="stop" />
+                <Label text="#ChooseBinding_MusicStop" />
               </Button>
               <Button id="kb_key_next" selectionpos="3,0" onmovedown="SetInputFocus( kb_key_pad_asterisk );" onmoveright="SetInputFocus( kb_key_previous );" onmoveup="SetInputFocus( set_led );" onactivate="SetBinding( key_press, next );">
-                <Label text="next" />
+                <Label text="#ChooseBinding_MusicNextTrack" />
               </Button>
               <Button id="kb_key_previous" selectionpos="4,0" onmovedown="SetInputFocus( kb_key_pad_dash );" onmoveright="SetInputFocus( left_trigger );" onmoveup="SetInputFocus( steammusic_options );" onactivate="SetBinding( key_press, prev );">
-                <Label text="prev" />
+                <Label text="#ChooseBinding_MusicPrevTrack" />
               </Button>
             </Panel>
           </Panel>
@@ -198,18 +198,18 @@
                 <Label text="=" />
               </Button>
               <Button id="kb_key_backspace" selectionpos="0,1" onactivate="SetBinding( key_press, backspace );">
-                <Label text="backsp" />
+                <Label text="#ChooseBinding_Backspace" />
               </Button>
             </Panel>
             <Panel id="VKBCol2" selectionpos="30,0">
               <Button id="kb_key_insert" selectionpos="-2,1" onactivate="SetBinding( key_press, insert );">
-                <Label text="ins" />
+                <Label text="#ChooseBinding_Insert" />
               </Button>
               <Button id="kb_key_home" selectionpos="-1,1" onactivate="SetBinding( key_press, home );">
-                <Label text="hom" />
+                <Label text="#ChooseBinding_Home" />
               </Button>
               <Button id="kb_key_pageup" selectionpos="0,1" onactivate="SetBinding( key_press, pageup );">
-                <Label text="pgu" />
+                <Label text="#ChooseBinding_PageUp" />
               </Button>
             </Panel>
             <Panel id="VKBCol3" selectionpos="45,0">
@@ -230,7 +230,7 @@
           <Panel id="VKBRow3" selectionpos="0,2">
             <Panel id="VKBCol1" selectionpos="15,0">
               <Button id="kb_key_tab" selectionpos="-13,2" onactivate="SetBinding( key_press, tab );">
-                <Label text="tab" />
+                <Label text="#ChooseBinding_Tab" />
               </Button>
               <Button id="kb_key_q" selectionpos="-12,2" onactivate="SetBinding( key_press, q );">
                 <Label text="Q" />
@@ -274,13 +274,13 @@
             </Panel>
             <Panel id="VKBCol2" selectionpos="30,0">
               <Button id="kb_key_delete" selectionpos="-2,2" onactivate="SetBinding( key_press, delete );" onmovedown="SetInputFocus( kb_key_left );">
-                <Label text="del" />
+                <Label text="#ChooseBinding_Delete" />
               </Button>
               <Button id="kb_key_end" selectionpos="-1,2" onactivate="SetBinding( key_press, end );" onmovedown="SetInputFocus( kb_key_up );">
-                <Label text="end" />
+                <Label text="#ChooseBinding_End" />
               </Button>
               <Button id="kb_key_pagedown" selectionpos="0,2" onactivate="SetBinding( key_press, pagedown );" onmovedown="SetInputFocus( kb_key_right );">
-                <Label text="pgd" />
+                <Label text="#ChooseBinding_PageDown" />
               </Button>
             </Panel>
             <Panel id="VKBCol3" selectionpos="45,0">
@@ -301,7 +301,7 @@
           <Panel id="VKBRow4" selectionpos="0,3">
             <Panel id="VKBCol1" selectionpos="15,0">
               <Button id="kb_key_capslock" selectionpos="-13,3" onactivate="SetBinding( key_press, capslock );">
-                <Label text="caps" />
+                <Label text="#ChooseBinding_Capslock" />
               </Button>
               <Button id="kb_key_a" selectionpos="-12,3" onactivate="SetBinding( key_press, a );">
                 <Label text="A" />
@@ -337,7 +337,7 @@
                 <Label text="'" />
               </Button>
               <Button id="kb_key_enter" selectionpos="-1,3" onactivate="SetBinding( key_press, enter );" onmoveright="SetInputFocus( kb_key_pad_4 );" ontabforward="SetInputFocus( kb_key_pad_4 );">
-                <Label text="enter" />
+                <Label text="#ChooseBinding_Enter" />
               </Button>
             </Panel>
             <Panel id="VKBCol2">
@@ -360,7 +360,7 @@
           <Panel id="VKBRow5" selectionpos="0,4">
             <Panel id="VKBCol1" selectionpos="15,0">
               <Button id="kb_key_lshift" selectionpos="-13,4" onactivate="SetBinding( key_press, lshift );">
-                <Label text="shift" />
+                <Label text="#ChooseBinding_Shift" />
               </Button>
               <Button id="kb_key_z" selectionpos="-12,4" onactivate="SetBinding( key_press, z );">
                 <Label text="Z" />
@@ -393,7 +393,7 @@
                 <Label text="/" />
               </Button>
               <Button id="kb_key_rshift" selectionpos="-2,4" onactivate="SetBinding( key_press, rshift );">
-                <Label text="shift" />
+                <Label text="#ChooseBinding_Shift" />
               </Button>
             </Panel>
             <Panel id="VKBCol2" selectionpos="30,0">
@@ -414,29 +414,29 @@
                 <Label text="3" />
               </Button>
               <Button id="kb_key_pad_enter" selectionpos="0,4" onmoveup="SetInputFocus( kb_key_pad_plus );" onactivate="SetBinding( key_press, pad_enter );">
-                <Label text="ent" />
+                <Label text="ChooseBinding_EnterKeyPad" />
               </Button>
             </Panel>
           </Panel>
           <Panel id="VKBRow6" selectionpos="0,5">
             <Panel id="VKBCol1" selectionpos="15,0">
               <Button id="kb_key_lcontrol" selectionpos="-13,5" onactivate="SetBinding( key_press, lcontrol );">
-                <Label text="ctrl" />
+                <Label text="#ChooseBinding_Control" />
               </Button>
               <Button id="kb_key_lwin" selectionpos="-12,5" onactivate="SetBinding( key_press, lwin );">
-                <Label text="win" />
+                <Label text="#ChooseBinding_Windows" />
               </Button>
               <Button id="kb_key_lalt" selectionpos="-11,5" onactivate="SetBinding( key_press, lalt );">
-                <Label text="alt" />
+                <Label text="#ChooseBinding_Alt" />
               </Button>
               <Button id="kb_key_space" selectionpos="-10,5" onactivate="SetBinding( key_press, space );">
-                <Label text="space" />
+                <Label text="#ChooseBinding_Space" />
               </Button>
               <Button id="kb_key_ralt" selectionpos="-3,5" onactivate="SetBinding( key_press, ralt );">
-                <Label text="alt" />
+                <Label text="#ChooseBinding_Alt" />
               </Button>
               <Button id="kb_key_rcontrol" selectionpos="-2,5" onactivate="SetBinding( key_press, rcontrol );">
-                <Label text="ctrl" />
+                <Label text="#ChooseBinding_Control" />
               </Button>
             </Panel>
             <Panel id="VKBCol2" selectionpos="30,0">

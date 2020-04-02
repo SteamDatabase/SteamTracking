@@ -209,6 +209,8 @@ message CBroadcast_PostChatMessage_Request {
 	optional fixed64 chat_id = 1;
 	optional string message = 2;
 	optional uint32 instance_id = 3;
+	optional uint32 language = 4 [default = 0, (description) = "ELanguage of the user posting the message, default is english"];
+	optional string country_code = 5 [(description) = "The two letter country code"];
 }
 
 message CBroadcast_PostChatMessage_Response {

@@ -1,6 +1,7 @@
  AES_decrypt
  AssertMsgImplementation
  B AutoReloadFailedLayoutReloads::symbol
+ B CBilling_Address::default_instance_
  B CBorderData::default_instance_
  B CBorderData_CBorderSide::default_instance_
  B CBoxShadowData::default_instance_
@@ -467,7 +468,6 @@
  B g_mutexTempTextBuffer
  B g_nInFullscreenSwitch
  B g_nullMetricsFactory
- B g_nullReporterChain
  B g_pFioAsyncEnqueue
  B g_pFioAsyncFinalize
  B g_pNullMetrics
@@ -1241,6 +1241,7 @@
  D panorama::WindowShown::pchEvent
  D picojson::last_error_t<bool>::s
  D s_LogWatchesAllWithType
+ D typeinfo for CBilling_Address
  D typeinfo for CBorderData
  D typeinfo for CBorderData_CBorderSide
  D typeinfo for CBoxShadowData
@@ -1274,7 +1275,6 @@
  D typeinfo for CLocalizationToken
  D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CMetrics
- D typeinfo for CMetricsReporterChain
  D typeinfo for CMetricsTimer
  D typeinfo for CMsg3DTransformMatrix
  D typeinfo for CMsg3DTransformMatrix_AnimationFrameData
@@ -1949,10 +1949,15 @@
  D typeinfo for panorama::SDLOGLSurfaceNameSpace::CCompositionLayer
  D typeinfo for panorama::V8ArrayBufferAllocator
  D typeinfo for std::__1::__function::__base<void (CMetrics&)>
+ D typeinfo for std::__1::__function::__base<void (CPoolReference<CMetrics>&)>
+ D typeinfo for std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>
  D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D typeinfo for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D typeinfo for v8::ArrayBuffer::Allocator
+ D typeinfo for void (*)(CPoolReference<CMetrics>)
+ D typeinfo for void (CPoolReference<CMetrics>)
+ D vtable for CBilling_Address
  D vtable for CBorderData
  D vtable for CBorderData_CBorderSide
  D vtable for CBoxShadowData
@@ -1985,7 +1990,6 @@
  D vtable for CLocalizationToken
  D vtable for CMSgJumpListMRUApp
  D vtable for CMetrics
- D vtable for CMetricsReporterChain
  D vtable for CMetricsTimer
  D vtable for CMsg3DTransformMatrix
  D vtable for CMsg3DTransformMatrix_AnimationFrameData
@@ -2595,6 +2599,7 @@
  D vtable for panorama::RequestRenderCallbackCommand_t
  D vtable for panorama::SDLOGLSurfaceNameSpace::CCompositionLayer
  D vtable for panorama::V8ArrayBufferAllocator
+ D vtable for std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>
  D vtable for std::__1::bad_function_call
  D vtable for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  D vtable for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
@@ -2645,8 +2650,6 @@
  OBJC_CLASS_$_NSWorkspace
  OSAtomicCompareAndSwap64Barrier
  OSMemoryBarrier
- Plat_AbsoluteTime
- Plat_AbsoluteTimeToFloat
  Plat_FloatTime
  Plat_GetExecutablePath
  Plat_GetExecutablePathUTF8
@@ -2666,7 +2669,8 @@
  R jpeg_natural_order5
  R jpeg_natural_order6
  R jpeg_natural_order7
- R typeinfo name for CAutoRelease<IMetricsReporter>
+ R typeinfo name for CAutoRelease<CMetricsString>
+ R typeinfo name for CBilling_Address
  R typeinfo name for CBorderData
  R typeinfo name for CBorderData_CBorderSide
  R typeinfo name for CBoxShadowData
@@ -2700,7 +2704,6 @@
  R typeinfo name for CLocalizationToken
  R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CMetrics
- R typeinfo name for CMetricsReporterChain
  R typeinfo name for CMetricsTimer
  R typeinfo name for CMsg3DTransformMatrix
  R typeinfo name for CMsg3DTransformMatrix_AnimationFrameData
@@ -2999,7 +3002,7 @@
  R typeinfo name for CUIFontPackage
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
- R typeinfo name for CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
+ R typeinfo name for CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>
@@ -3161,13 +3164,12 @@
  R typeinfo name for CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >
  R typeinfo name for CUtlVector<CMsgPushClipLayer, CUtlMemory<CMsgPushClipLayer> >
  R typeinfo name for CUtlVector<CNetMask, CUtlMemory<CNetMask> >
- R typeinfo name for CUtlVector<CSmartPtr<IMetricsReporter>, CUtlMemory<CSmartPtr<IMetricsReporter> > >
  R typeinfo name for CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >
  R typeinfo name for CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >
  R typeinfo name for CUtlVector<CUtlAbstractDelegate, CUtlMemory<CUtlAbstractDelegate> >
  R typeinfo name for CUtlVector<CUtlDelegate<void (EVideoPlayerEvent)>, CUtlMemory<CUtlDelegate<void (EVideoPlayerEvent)> > >
  R typeinfo name for CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >
- R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::HashBucket_t, CUtlMemory<CUtlHashMap<CUtlString, int, CDefCaselessStringEquals, HashFunctorUtlStringCaseless, CUtlString>::HashBucket_t> >
@@ -3654,11 +3656,15 @@
  R typeinfo name for panorama::StyleFromFile_t
  R typeinfo name for panorama::V8ArrayBufferAllocator
  R typeinfo name for std::__1::__function::__base<void (CMetrics&)>
+ R typeinfo name for std::__1::__function::__base<void (CPoolReference<CMetrics>&)>
+ R typeinfo name for std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>
  R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  R typeinfo name for std::__1::basic_stringbuf<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
  R typeinfo name for v8::ArrayBuffer::Allocator
  R typeinfo name for v8::Persistent<v8::Function, v8::NonCopyablePersistentTraits<v8::Function> >*
+ R typeinfo name for void (*)(CPoolReference<CMetrics>)
+ R typeinfo name for void (CPoolReference<CMetrics>)
  R typeinfo name for vr::EVRState
  R typeinfo name for vr::VREvent_t*
  R v8::platform::DefaultPlatform::kMaxThreadPoolSize
@@ -3812,8 +3818,8 @@
  T BufferedIStream_ResetBuf
  T BuildGammaTable(float, float, float, int)
  T BuildStyleFileList(CSmartPtr<panorama::CStyleFile>, CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >&)
- T CAutoRelease<IMetricsReporter>::RecursiveValidate(CValidator&, char const*)
- T CAutoRelease<IMetricsReporter>::~CAutoRelease()
+ T CAutoRelease<CMetricsString>::RecursiveValidate(CValidator&, char const*)
+ T CAutoRelease<CMetricsString>::~CAutoRelease()
  T CAutoRelease<panorama::CJSFile>::Reset(panorama::CJSFile*)
  T CAutoRelease<panorama::CJSFile>::~CAutoRelease()
  T CAutoRelease<panorama::CLayoutFile>::Reset(panorama::CLayoutFile*)
@@ -3835,6 +3841,37 @@
  T CBaseUtlSymbolTable<CUtlSymbol>::Validate(CValidator&, char const*)
  T CBaseUtlSymbolTable<CUtlSymbol>::~CBaseUtlSymbolTable()
  T CBezierCurve<Vector2D, 3>::SetControlPoints(Vector2D const*)
+ T CBilling_Address::ByteSize() const
+ T CBilling_Address::CBilling_Address()
+ T CBilling_Address::Clear()
+ T CBilling_Address::GetCachedSize() const
+ T CBilling_Address::GetMetadata() const
+ T CBilling_Address::IsInitialized() const
+ T CBilling_Address::MergeFrom(CBilling_Address const&)
+ T CBilling_Address::New() const
+ T CBilling_Address::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CBilling_Address::SetCachedSize(int) const
+ T CBilling_Address::SharedCtor()
+ T CBilling_Address::SharedDtor()
+ T CBilling_Address::mutable_address1()
+ T CBilling_Address::mutable_address2()
+ T CBilling_Address::mutable_city()
+ T CBilling_Address::mutable_country_code()
+ T CBilling_Address::mutable_first_name()
+ T CBilling_Address::mutable_last_name()
+ T CBilling_Address::mutable_phone()
+ T CBilling_Address::mutable_postcode()
+ T CBilling_Address::mutable_us_state()
+ T CBilling_Address::set_address1(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CBilling_Address::set_address2(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CBilling_Address::set_city(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CBilling_Address::set_country_code(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CBilling_Address::set_first_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CBilling_Address::set_last_name(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CBilling_Address::set_phone(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CBilling_Address::set_postcode(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CBilling_Address::set_us_state(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CBilling_Address::~CBilling_Address()
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
  T CBorderData::ByteSize() const
@@ -4357,13 +4394,10 @@
  T CMemoryPool::Free(void*)
  T CMemoryPool::Validate(CValidator&, char const*)
  T CMemoryPool::~CMemoryPool()
- T CMetrics::CMetrics(CMetricsSymbol, CMetricsSymbol, CMetricsSymbol, CMetricsReporterChain const&, double, unsigned int)
- T CMetrics::Close()
+ T CMetrics::CMetrics(CMetricsSymbol, CMetricsSymbol, CMetricsSymbol, double, unsigned int)
  T CMetrics::IncrementInt(CMetricsSymbol, long long)
  T CMetrics::Validate(CValidator&, char const*)
  T CMetrics::~CMetrics()
- T CMetricsReporterChain::Validate(CValidator&, char const*)
- T CMetricsReporterChain::~CMetricsReporterChain()
  T CMetricsSymbol::CMetricsSymbol(char const*)
  T CMetricsTimer::Stop()
  T CMetricsTimer::Validate(CValidator&, char const*)
@@ -7949,6 +7983,11 @@
  T CPathString::Validate(CValidator&, char const*)
  T CPathString::~CPathString()
  T CPlainAutoPtr<CMetrics>::~CPlainAutoPtr()
+ T CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >::Delete()
+ T CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >::Delete()
+ T CPoolReference<CMetrics>::CPoolReference(CMetrics&, std::__1::function<void (CMetrics&)> const&)
+ T CPoolReference<CMetrics>::CPoolReference(CPoolReference<CMetrics> const&)
+ T CPoolReference<CMetrics>::DoNothing(CPoolReference<CMetrics>)
  T CPoolReference<CMetrics>::~CPoolReference()
  T CRC32_ProcessSingleBuffer(void const*, int)
  T CRTime::CRTime()
@@ -8451,10 +8490,10 @@
  T CUtlDict<panorama::CStyleDefine, CDefCaselessStringLess, short>::Validate(CValidator&, char const*)
  T CUtlDict<panorama::CStyleDefine, CDefCaselessStringLess, short>::~CUtlDict()
  T CUtlFmtString::CUtlFmtString(char const*, ...)
- T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::CUtlHashMap()
- T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::Purge()
- T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::RecursiveValidate(CValidator&, char const*)
- T CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::~CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::Purge()
+ T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::RecursiveValidate(CValidator&, char const*)
+ T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::~CUtlHashMap()
  T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::CUtlHashMap()
  T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::Purge()
  T CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::~CUtlHashMap()
@@ -8837,6 +8876,7 @@
  T CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::Insert(CUtlString&&, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*&&)
  T CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::Node_t::~Node_t()
  T CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::Validate(CValidator&, char const*)
+ T CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t::~Node_t()
  T CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::Insert(CUtlString&&, panorama::CLocalizationStringDialogVariables*&&)
  T CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::Node_t::~Node_t()
  T CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::Validate(CValidator&, char const*)
@@ -9037,6 +9077,7 @@
  T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
  T CUtlRBTree<CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, CUtlVector<CUtlString, CUtlMemory<CUtlString> >*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
  T CUtlRBTree<CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::Find(StringView const&) const
  T CUtlRBTree<CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, panorama::CLocalizationStringDialogVariables*, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
@@ -9406,10 +9447,10 @@
  T CUtlSortVector<CUtlString>::Insert(CUtlString const&)
  T CUtlSortVector<panorama::CStyleKeyFrame*>::Insert(panorama::CStyleKeyFrame* const&)
  T CUtlString::AssertStringTooLong()
- T CUtlString::Clear()
  T CUtlString::Format(char const*, ...)
  T CUtlString::Replace(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
+ T CUtlString::SetValue(char const*)
  T CUtlString::Swap(CUtlStringBuilder&)
  T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlString::~CUtlString()
@@ -9463,9 +9504,6 @@
  T CUtlVector<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, CUtlMemory<CRefCounted<CRefCountServiceBase<true, CRefMT> >*> >::GrowVector(int)
  T CUtlVector<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, CUtlMemory<CRefCounted<CRefCountServiceBase<true, CRefMT> >*> >::InsertMultipleBefore(int, int, CRefCounted<CRefCountServiceBase<true, CRefMT> >* const*)
  T CUtlVector<CRefCounted<CRefCountServiceBase<true, CRefMT> >*, CUtlMemory<CRefCounted<CRefCountServiceBase<true, CRefMT> >*> >::~CUtlVector()
- T CUtlVector<CSmartPtr<IMetricsReporter>, CUtlMemory<CSmartPtr<IMetricsReporter> > >::RecursiveValidate(CValidator&, char const*)
- T CUtlVector<CSmartPtr<IMetricsReporter>, CUtlMemory<CSmartPtr<IMetricsReporter> > >::RemoveAll()
- T CUtlVector<CSmartPtr<IMetricsReporter>, CUtlMemory<CSmartPtr<IMetricsReporter> > >::~CUtlVector()
  T CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >::AddToTail(CSmartPtr<panorama::CStyleFile> const&)
  T CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >::GrowVector(int)
  T CUtlVector<CSmartPtr<panorama::CStyleFile>, CUtlMemory<CSmartPtr<panorama::CStyleFile> > >::RemoveAll()
@@ -9501,8 +9539,8 @@
  T CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >::GrowVector(int)
  T CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >::~CUtlVector()
- T CUtlVector<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
- T CUtlVector<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CUtlString, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
@@ -9644,7 +9682,6 @@
  T CUtlVector<char const*, CUtlMemory<char const*> >::~CUtlVector()
  T CUtlVector<char*, CUtlMemory<char*> >::AddToTail(char*&&)
  T CUtlVector<char*, CUtlMemory<char*> >::GrowVector(int)
- T CUtlVector<char*, CUtlMemory<char*> >::PurgeAndDeleteElements()
  T CUtlVector<char*, CUtlMemory<char*> >::~CUtlVector()
  T CUtlVector<char, CUtlMemory<char> >::AddMultipleToTail(int, char const*)
  T CUtlVector<char, CUtlMemory<char> >::AddToTail(char&&)
@@ -10185,7 +10222,6 @@
  T EXKeyEquivalent(panorama::GamePadCode)
  T EmitSpewMessagePrim(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, ...)
  T EmitSpewMessagePrimV(char const*, int, ESpewGroup, SpewType_t, int, int, CSteamID const&, CIPAndPort const&, unsigned long long const&, char const*, __va_list_tag*)
- T EpochNow()
  T EvaluateExpression(bool&, char const*, bool (*)(char const*))
  T FillDataStruct(_finddata_t*)
  T FindInputPanel(panorama::IUIPanel*)
@@ -10463,7 +10499,7 @@
  T UI_Font_New_Face_Override
  T UnlinkFile(StringView)
  T Utf8ToUtf8
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T V8FatalErrorHandler(char const*, char const*)
  T V8_Fatal
  T VMatrix::GetIdentityMatrix()
@@ -11389,7 +11425,6 @@
  T panorama::CLocalizationStringSimple::AppendText(char const*)
  T panorama::CLocalizationStringSimple::BContainsDialogVariable(panorama::CPanelKeyValue const&)
  T panorama::CLocalizationStringSimple::CLocalizationStringSimple(char const*, panorama::IUIPanel const*, unsigned int, panorama::EStringTruncationStyle, panorama::EStringTransformStyle, bool)
- T panorama::CLocalizationStringSimple::Create(char const*)
  T panorama::CLocalizationStringSimple::GetMaxChars() const
  T panorama::CLocalizationStringSimple::GetOwningPanel() const
  T panorama::CLocalizationStringSimple::GetTransformStyle() const
@@ -15923,6 +15958,14 @@
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::clear()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::end()
  T std::__1::__deque_base<v8::Task*, std::__1::allocator<v8::Task*> >::~__deque_base()
+ T std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>::__clone() const
+ T std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>::__clone(std::__1::__function::__base<void (CPoolReference<CMetrics>&)>*) const
+ T std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>::destroy()
+ T std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>::destroy_deallocate()
+ T std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>::operator()(CPoolReference<CMetrics>&)
+ T std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>::target(std::type_info const&) const
+ T std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>::target_type() const
+ T std::__1::__function::__func<void (*)(CPoolReference<CMetrics>), std::__1::allocator<void (*)(CPoolReference<CMetrics>)>, void (CPoolReference<CMetrics>&)>::~__func()
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<long long, char const*>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<long long, char const*>, std::__1::__unordered_map_hasher<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::hash<long long>, true>, std::__1::__unordered_map_equal<long long, std::__1::__hash_value_type<long long, char const*>, std::__1::equal_to<long long>, true>, std::__1::allocator<std::__1::__hash_value_type<long long, char const*> > >::find<long long>(long long const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::__insert_multi<std::__1::__hash_value_type<void*, AllocTracking_t> const&>(std::__1::__hash_value_type<void*, AllocTracking_t> const&)
  T std::__1::__hash_iterator<std::__1::__hash_node<std::__1::__hash_value_type<void*, AllocTracking_t>, void*>*> std::__1::__hash_table<std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::__unordered_map_hasher<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::hash<void*>, true>, std::__1::__unordered_map_equal<void*, std::__1::__hash_value_type<void*, AllocTracking_t>, std::__1::equal_to<void*>, true>, std::__1::allocator<std::__1::__hash_value_type<void*, AllocTracking_t> > >::find<void*>(void* const&)
@@ -16025,7 +16068,10 @@
  T std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> >::~deque()
  T std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>::function(std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)> const&)
  T std::__1::function<int (panorama::IUIPanelClient*, panorama::IUIPanelClient*)>::operator()(panorama::IUIPanelClient*, panorama::IUIPanelClient*) const
+ T std::__1::function<void (CMetrics&)>::function(std::__1::function<void (CMetrics&)> const&)
  T std::__1::function<void (CMetrics&)>::operator()(CMetrics&) const
+ T std::__1::function<void (CPoolReference<CMetrics>&)>::function(std::__1::function<void (CPoolReference<CMetrics>&)> const&)
+ T std::__1::function<void (CPoolReference<CMetrics>&)>::operator()(CPoolReference<CMetrics>&) const
  T std::__1::map<v8::Isolate*, std::__1::queue<v8::Task*, std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> > >, std::__1::less<v8::Isolate*>, std::__1::allocator<std::__1::pair<v8::Isolate* const, std::__1::queue<v8::Task*, std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> > > > > >::__construct_node_with_key(v8::Isolate* const&)
  T std::__1::map<v8::Isolate*, std::__1::queue<v8::Task*, std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> > >, std::__1::less<v8::Isolate*>, std::__1::allocator<std::__1::pair<v8::Isolate* const, std::__1::queue<v8::Task*, std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> > > > > >::__find_equal_key(std::__1::__tree_node_base<void*>*&, v8::Isolate* const&)
  T std::__1::map<v8::Isolate*, std::__1::queue<v8::Task*, std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> > >, std::__1::less<v8::Isolate*>, std::__1::allocator<std::__1::pair<v8::Isolate* const, std::__1::queue<v8::Task*, std::__1::deque<v8::Task*, std::__1::allocator<v8::Task*> > > > > >::operator[](v8::Isolate* const&)
@@ -16248,10 +16294,10 @@
  T void GetRenderCmdDataAnimation<CTextShadowData const*, CMsgTextShadow>(CTextShadowData const**, CMsgTextShadow const&, int, int)
  T void SWAP<CBitString>(CBitString&, CBitString&)
  T void USE<int>(int)
+ T void _ValidateSelectType<CMetricsString>(CMetricsString*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CTCPConnection>(CTCPConnection*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CUDPConnection>(CUDPConnection*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CWebSocketConnection>(CWebSocketConnection*, CValidator&, char const*, fallback_)
- T void _ValidateSelectType<IMetricsReporter>(IMetricsReporter*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<ITCPHostCallback>(ITCPHostCallback*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<IUDPSocketCallback>(IUDPSocketCallback*, CValidator&, char const*, fallback_)
  T void panorama::CPanelStyle::FillRenderData<panorama::CStylePropertyBackgroundColor, panorama::FillBrushCollectionWithTransition_t>(panorama::FillBrushCollectionWithTransition_t&, panorama::CRenderCommandList&, void*)
@@ -16521,6 +16567,7 @@
  T void std::__1::__insertion_sort_3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T void std::__1::__insertion_sort_move<bool (*&)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&), panorama::CUIAnimationEngine::RenderOperation_t**>(panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, std::__1::iterator_traits<panorama::CUIAnimationEngine::RenderOperation_t**>::value_type*, bool (*&)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&))
  T void std::__1::__insertion_sort_move<bool (*&)(panorama::CUIAnimationEngineNew::RenderOperation_t* const&, panorama::CUIAnimationEngineNew::RenderOperation_t* const&), panorama::CUIAnimationEngineNew::RenderOperation_t**>(panorama::CUIAnimationEngineNew::RenderOperation_t**, panorama::CUIAnimationEngineNew::RenderOperation_t**, std::__1::iterator_traits<panorama::CUIAnimationEngineNew::RenderOperation_t**>::value_type*, bool (*&)(panorama::CUIAnimationEngineNew::RenderOperation_t* const&, panorama::CUIAnimationEngineNew::RenderOperation_t* const&))
+ T void std::__1::__invoke_void_return_wrapper<void>::__call<void (*&)(CPoolReference<CMetrics>), CPoolReference<CMetrics>&>(void (*&)(CPoolReference<CMetrics>), CPoolReference<CMetrics>&)
  T void std::__1::__merge_move_assign<bool (*&)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&), panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**>(panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, bool (*&)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&))
  T void std::__1::__merge_move_assign<bool (*&)(panorama::CUIAnimationEngineNew::RenderOperation_t* const&, panorama::CUIAnimationEngineNew::RenderOperation_t* const&), panorama::CUIAnimationEngineNew::RenderOperation_t**, panorama::CUIAnimationEngineNew::RenderOperation_t**, panorama::CUIAnimationEngineNew::RenderOperation_t**>(panorama::CUIAnimationEngineNew::RenderOperation_t**, panorama::CUIAnimationEngineNew::RenderOperation_t**, panorama::CUIAnimationEngineNew::RenderOperation_t**, panorama::CUIAnimationEngineNew::RenderOperation_t**, panorama::CUIAnimationEngineNew::RenderOperation_t**, bool (*&)(panorama::CUIAnimationEngineNew::RenderOperation_t* const&, panorama::CUIAnimationEngineNew::RenderOperation_t* const&))
  T void std::__1::__merge_move_construct<bool (*&)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&), panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**>(panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, panorama::CUIAnimationEngine::RenderOperation_t**, std::__1::iterator_traits<panorama::CUIAnimationEngine::RenderOperation_t**>::value_type*, bool (*&)(panorama::CUIAnimationEngine::RenderOperation_t* const&, panorama::CUIAnimationEngine::RenderOperation_t* const&))
@@ -16585,8 +16632,7 @@
  V_IsAbsolutePath
  V_MakeAbsolutePath
  V_RemoveDotSlashes
- V_SplitString
- V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
+ V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  V_StrTrim
  V_StripFilename
  V_StripLastDir
@@ -16675,6 +16721,8 @@
  atan2f
  atoi
  atoll
+ b (anonymous namespace)::CBilling_Address_descriptor_
+ b (anonymous namespace)::CBilling_Address_reflection_
  b (anonymous namespace)::CBorderData_CBorderSide_descriptor_
  b (anonymous namespace)::CBorderData_CBorderSide_reflection_
  b (anonymous namespace)::CBorderData_descriptor_
@@ -18457,6 +18505,7 @@
  r protobuf_AssignDesc_renderer_2frendermessages_2eproto()::CRadiusData_CCornerRadius_offsets_
  r protobuf_AssignDesc_renderer_2frendermessages_2eproto()::CRadiusData_offsets_
  r protobuf_AssignDesc_renderer_2frendermessages_2eproto()::CTextShadowData_offsets_
+ r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CBilling_Address_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CCDDBAppDetailCommon_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanEventData_offsets_
  r protobuf_AssignDesc_steammessages_5fbase_2eproto()::CClanEventUserNewsTuple_offsets_
@@ -19294,6 +19343,8 @@
  virtual thunk to std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >::~basic_ostream()
  vsnprintf
  vtable for __cxxabiv1::__class_type_info
+ vtable for __cxxabiv1::__function_type_info
+ vtable for __cxxabiv1::__pointer_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
  vtable for std::length_error

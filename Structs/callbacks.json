@@ -1526,7 +1526,7 @@
     },
     {
         "id": 2703,
-        "size": 16,
+        "size": 24,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<LoadControllerConfigResult_t>(LoadControllerConfigResult_t*)"
     },
     {
@@ -2447,7 +2447,7 @@
     {
         "id": 4629,
         "size": 1,
-        "posted_in": "CClientVideo::WebRTCSetAnswer(char const*)"
+        "posted_in": "CBroadcastClient_WebRTCAnswer_Job::YieldingRunMethod(CUser*, CBroadcast_WebRTCSetAnswer_Notification const&)"
     },
     {
         "id": 4630,
@@ -2568,5 +2568,25 @@
         "id": 5702,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<SteamRemotePlaySessionDisconnected_t>(SteamRemotePlaySessionDisconnected_t*)"
+    },
+    {
+        "id": 5901,
+        "size": 20,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<RequestGroupChatMessageNotificationsResponse_t>(RequestGroupChatMessageNotificationsResponse_t*)"
+    },
+    {
+        "id": 5902,
+        "size": 20,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<RequestGroupChatMessageHistoryNotification_t>(RequestGroupChatMessageHistoryNotification_t*)"
+    },
+    {
+        "id": 5903,
+        "size": 24,
+        "posted_in": "void CBaseAPIJob::PostAPIResult<RequestSendSteamGroupChatMessageNotification_t>(RequestSendSteamGroupChatMessageNotification_t*)"
+    },
+    {
+        "id": 5904,
+        "size": 548,
+        "posted_in": "CUser::OnNewGroupChatMsgAdded(unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*, char const*)"
     }
 ]

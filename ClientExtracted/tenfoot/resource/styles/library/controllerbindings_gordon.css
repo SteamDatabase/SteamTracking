@@ -1868,6 +1868,43 @@ ControllerBindingButton.BindingButton.Right
     flow-children: down;
 }
 
+#ActivateStickOrTrackpadFullPress
+{
+    // HACK
+    //visibility: collapse;
+    height: 0px;
+}
+
+.controller_mobile_touch #ActivateStickOrTrackpadFullPress
+{
+    //visibility: visible;
+    height: fit-children;
+}
+
+#ActivateStickOrTrackpadLongPress
+{
+    //visibility: collapse;
+    height: 0px;
+}
+
+.controller_mobile_touch #ActivateStickOrTrackpadLongPress
+{
+    //visibility: visible;
+    height: fit-children;
+}
+
+#ActivateStickOrTrackpadDoublePress
+{
+    //visibility: collapse;
+    height: 0px;
+}
+
+.controller_mobile_touch #ActivateStickOrTrackpadDoublePress
+{
+    //visibility: visible;
+    height: fit-children;
+}
+
 ControllerBindingButton.BindingButton.WideMacroButton
 {
     width: 415px;

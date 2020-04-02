@@ -15,6 +15,7 @@
  CValidator::IsClaimed(void*)
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
+ CreateVProfile
  D CUtlSymbol::s_bAllowStaticSymbolTable
  D g_DLLValidate
  D pModuleExtension
@@ -216,8 +217,14 @@
  R typeinfo name for IAudioSound
  R typeinfo name for IDynamicFunction
  R typeinfo name for IValidate
+ SteamThreadTools::CThreadLocalBase::Get() const
+ SteamThreadTools::CThreadLocalBase::Set(void*)
  SteamThreadTools::CThreadMutex::CThreadMutex()
  SteamThreadTools::CThreadMutex::~CThreadMutex()
+ SteamVProf::CVProfNode::EnterScope(void*)
+ SteamVProf::CVProfNode::ExitScope()
+ SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
+ SteamVProf::CVProfile::~CVProfile()
  T AudioSinkList
  T CAudioController::BIsDormant()
  T CAudioController::CAudioController()
@@ -445,6 +452,7 @@
  T CIAudioSinkListNull::DetermineBestDefaultDevice(CUtlString&, CUtlString&, CUtlString&)
  T CIAudioSinkListNull::GetActiveCodecPassthruForSink(int, bool*, bool*, bool*)
  T CIAudioSinkListNull::GetActiveSink() const
+ T CIAudioSinkListNull::GetActiveSinkMasterVolume()
  T CIAudioSinkListNull::GetActiveSinkVolume(int)
  T CIAudioSinkListNull::GetActiveVoiceSink() const
  T CIAudioSinkListNull::GetSink(int) const
@@ -615,6 +623,7 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
+ T CUtlString::SetValue(char const*)
  T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlString::VFormat(char const*, char*)
  T CUtlSymbol::CUtlSymbol(char const*)
@@ -667,10 +676,13 @@
  T FreeAudioDevice
  T GetMilesFunctionsList()
  T InterfaceReg::InterfaceReg(void* (*)(), char const*)
+ T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
+ T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
+ T SteamVProf::CVProfileThreadEntry::DeleteProfile()
  T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T __CreateCDLLValidateIValidate_interface()
  T __clang_call_terminate
  T int CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::Insert_Internal<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t>(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t&&, bool)
@@ -678,6 +690,10 @@
  T void CUtlRBTree<CStringPoolIndex, unsigned short, CBaseUtlSymbolTable<CUtlSymbol>::CLess, CDefRBTreeBalanceListener<unsigned short>, CStringPoolIndex>::FindInsertionPosition<CStringPoolIndex>(CStringPoolIndex const&, bool, unsigned short&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t, int, CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::CKeyLess, CDefRBTreeBalanceListener<int>, CUtlSymbol>::FindInsertionPosition<CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t>(CUtlMap<CUtlSymbol, void*, int, CDefLess<CUtlSymbol> >::Node_t const&, bool, int&, bool&, bool&)
  T void _ValidateSelectType<CMilesAudioDevice>(CMilesAudioDevice*, CValidator&, char const*, fallback_)
+ ThreadGetCurrentId
+ ThreadGetCurrentRunningRef
+ ThreadInterlockedDecrement
+ ThreadIsThreadRunning
  V_FixDoubleSlashes
  V_FixSlashes
  V_IsAbsolutePath
@@ -773,6 +789,9 @@
  fprintf
  free
  fstat$INODE64
+ g_VProfManager
+ g_VProfProfilesRunningCount
+ g_VProfile
  g_pMemAllocSteam
  getcwd
  lseek

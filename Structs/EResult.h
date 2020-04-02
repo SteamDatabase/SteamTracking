@@ -114,4 +114,5 @@ typedef enum EResult
     k_EResultCantRemoveItem, // Cant remove item
     k_EResultAccountHasBeenDeleted, // Account has been deleted
     k_EResultAccountHasAnExistingUserCancelledLicense, // Account has an existing user cancelled license
+    k_EResultDeniedDueToCommunityCooldown, // Denied due to community cooldown
 } EResult;

@@ -244,6 +244,7 @@
  T CUtlNoEscConversion::FindConversion(StringView, int*)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
+ T CUtlString::SetValue(char const*)
  T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlString::VFormat(char const*, char*)
  T CUtlStringBuilder::AppendChar(char)
@@ -331,6 +332,7 @@
  T SteamVProf::CVProfNode::ExitScope()
  T SteamVProf::CVProfNode::GetSubNode(char const*, int, EVProfBugdetGroup, int)
  T SteamVProf::CVProfNode::Reset()
+ T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
  T SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
  T SteamVProf::CVProfile::CVProfile()
  T SteamVProf::CVProfile::CreateBudgetGroups()
@@ -353,7 +355,7 @@
  T ThreadWaitForProcessExit
  T TouchFile(StringView)
  T UnlinkFile(StringView)
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*)
  T V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned long, char const*)
  T V_FixDoubleSlashes

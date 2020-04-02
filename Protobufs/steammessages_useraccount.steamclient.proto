@@ -20,6 +20,26 @@ enum EExternalAccountType {
 	k_EExternalFacebookPage = 7;
 }
 
+message CUserAccount_GetAvailableValveDiscountPromotions_Request {
+	optional string country_code = 1;
+}
+
+message CUserAccount_GetAvailableValveDiscountPromotions_Response {
+	message ValveDiscountPromotionDetails {
+		optional uint32 promotionid = 1;
+		optional string promotion_description = 2;
+		optional int64 minimum_cart_amount = 3;
+		optional int64 minimum_cart_amount_for_display = 4;
+		optional int64 discount_amount = 5;
+		optional int32 currency_code = 6;
+		optional int32 available_use_count = 7;
+		optional int32 promotional_discount_type = 8;
+		optional int32 loyalty_reward_id = 9;
+	}
+
+	repeated .CUserAccount_GetAvailableValveDiscountPromotions_Response.ValveDiscountPromotionDetails promotions = 1;
+}
+
 message CUserAccount_GetAccountLinkStatus_Request {
 }
 
@@ -131,6 +151,10 @@ message CEmbeddedClient_AuthorizeDevice_Response {
 
 service UserAccount {
 	option (service_description) = "A service to get user account information";
+
+	rpc GetAvailableValveDiscountPromotions (.CUserAccount_GetAvailableValveDiscountPromotions_Request) returns (.CUserAccount_GetAvailableValveDiscountPromotions_Response) {
+		option (method_description) = "Gets the available promotional discounts available to the user";
+	}
 
 	rpc GetAccountLinkStatus (.CUserAccount_GetAccountLinkStatus_Request) returns (.CUserAccount_GetAccountLinkStatus_Response) {
 		option (method_description) = "Fetches account link status";

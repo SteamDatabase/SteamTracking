@@ -118,4 +118,5 @@ typedef enum EControllerSetting
     k_EControllerSettingPressurejoystick_min_pressure, // pressurejoystick_min_pressure
     k_EControllerSettingPressurejoystick_max_pressure, // pressurejoystick_max_pressure
     k_EControllerSettingPressurejoystick_enable_pressure, // pressurejoystick_enable_pressure
+    k_EControllerSettingActivate_stick_or_trackpad, // activate_stick_or_trackpad
 } EControllerSetting;

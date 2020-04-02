@@ -52,6 +52,13 @@ TextInputDaisy
 	flow-children: none;
 }
 
+TextInputDaisy.HalfWidth
+{
+	width: 50%;
+	height: 100%;
+	flow-children: none;
+}
+
 #BodyContainer
 {
 	width: 948px;

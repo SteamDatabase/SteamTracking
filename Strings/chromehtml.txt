@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-@9
-@9
+`9
+`9
 __stubs
 __TEXT
 __stub_helper
@@ -43,7 +43,6 @@ __LINKEDIT
 @loader_path/chromehtml.dylib
 "
 x
-}
 P
 
 8
@@ -1506,18 +1505,24 @@ a
 \
 ?
 '
-Assertion Failed: m_unSizeOfElements > 0
+Assertion Failed: nSizeOfType > 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
-nBytesItem is %d in UtlMemory_CalcNewAllocationCount
+Assertion Failed: m_nAllocationCount >= 0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
+Assertion Failed: num >= 0
+CUtlString::SetValue
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
+CUtlStringBuilder::InternalPrepareBuffer
 Assertion Failed: nMinCapacity > Capacity()
 Assertion Failed: nMinCapacity >= nChars
 Assertion Failed: nMinCapacity <= k_nMaxStringSize
 Assertion Failed: len > 0 || HasError()
 Error State on string being set.
+CUtlStringBuilder::Data::MoveToHeap
 no
 Assertion Failed: !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/language.cpp
@@ -1731,26 +1736,33 @@ vi
 
 
 
-~
+t
 "
-Y
 3
 D
+1
+*
 @
-c
+h
 
 
+
+O
 H
 D
+
 
 3
 !
 "
-}
+0
+$
+.
 Hi
 `
-$
 
+
+$
 @
 @
 =
@@ -1761,12 +1773,10 @@ $
 A
 Hc
 =
-x
-\
-L95ec
+L95Uh
+
 
 Hc
-i
 ?
 ?
 ?

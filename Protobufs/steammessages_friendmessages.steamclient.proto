@@ -50,12 +50,14 @@ message CFriendMessages_SendMessage_Request {
 	optional bool contains_bbcode = 4;
 	optional bool echo_to_sender = 5;
 	optional bool low_priority = 6;
+	optional string client_message_id = 8;
 }
 
 message CFriendMessages_SendMessage_Response {
 	optional string modified_message = 1;
 	optional uint32 server_timestamp = 2;
 	optional uint32 ordinal = 3;
+	optional string message_without_bb_code = 4;
 }
 
 message CFriendMessages_AckMessage_Notification {

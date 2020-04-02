@@ -1,0 +1,4070 @@
+"controller_mappings"
+{
+	"version"		"3"
+	"revision"		"88"
+	"title"		"#Library_ControllerSaveDefaultTitle"
+	"description"		"#SettingsController_AutosaveDescription"
+	"creator"		"-1"
+	"controller_type"		"controller_neptune"
+	"major_revision"		"0"
+	"minor_revision"		"0"
+	"Timestamp"		"1553222716"
+	"actions"
+	{
+		"Default"
+		{
+			"title"		"#Set_Default"
+			"legacy_set"		"0"
+			"StickPadGyro"
+			{
+				"Cursor"
+				{
+					"title"		"#Action_Cursor"
+					"input_mode"		"absolute_mouse"
+					"os_mouse"		"1"
+				}
+			}
+			"Button"
+			{
+				"A"		"#Action_Select"
+				"B"		"#Action_Cancel"
+				"x"		"#Action_Action1"
+				"y"		"#Action_Action2"
+				"SELECT"		"#Action_Action3"
+				"START"		"#Action_Action4"
+				"LSHOULDER"		"#Action_LSilo"
+				"RSHOULDER"		"#Action_RSilo"
+				"LTRIGGER"		"#Action_LCycle"
+				"RTRIGGER"		"#Action_RCycle"
+				"LEFTSTICK_UP"		"#Action_Up"
+				"LEFTSTICK_DOWN"		"#Action_Down"
+				"LEFTSTICK_LEFT"		"#Action_Left"
+				"LEFTSTICK_RIGHT"		"#Action_Right"
+				"CursorSelect"		"#Action_CursorSelect"
+			}
+		}
+		"WebBrowser"
+		{
+			"title"		"#Set_WebBrowser"
+			"legacy_set"		"0"
+			"StickPadGyro"
+			{
+				"Cursor"
+				{
+					"title"		"#Action_Cursor"
+					"input_mode"		"absolute_mouse"
+				}
+				"Scroll"
+				{
+					"title"		"#Action_Scroll"
+					"input_mode"		"absolute_mouse"
+				}
+				"zoom"
+				{
+					"title"		"#Action_Zoom"
+					"input_mode"		"absolute_mouse"
+				}
+			}
+			"Button"
+			{
+				"BrowserSelect"		"#Action_Select"
+				"BrowserDoubleSelect"		"#Action_DoubleSelect"
+				"BrowserForward"		"#Action_Forward"
+				"BrowserBack"		"#Action_Back"
+				"BrowserReload"		"#Action_Reload"
+				"BrowserZoom"		"#Action_Zoom"
+				"BrowserAddToFavorites"		"#Action_AddToFavorites"
+				"BrowserGoToFavorites"		"#Action_OpenFavorites"
+				"BrowserMoreMenu"		"#Action_OpenContextMenu"
+				"BrowserOpenInNewTab"		"#Action_OpenInNewTab"
+				"BrowserCloseTab"		"#Action_CloseTab"
+				"BrowserShowKeyboard"		"#Action_ShowKeyboard"
+				"LEFTSTICK_UP"		"#Action_Up"
+				"LEFTSTICK_DOWN"		"#Action_Down"
+				"LEFTSTICK_LEFT"		"#Action_Left"
+				"LEFTSTICK_RIGHT"		"#Action_Right"
+				"A"		"#Action_Confirm"
+				"B"		"#Action_Cancel"
+				"LSHOULDER"		"#Action_LSilo"
+				"RSHOULDER"		"#Action_RSilo"
+				"BrowserMoveTabLeft"		"#Action_TabLeft"
+				"BrowserMoveTabRight"		"#Action_TabRight"
+				"FriendsUISubmit"		"#Action_Submit"
+				"FriendsUIShowEmoticonPicker"		"#Action_ShowEmoticonPicker"
+				"FriendsUIAcceptGameInvite"		"#Action_AcceptGameInvite"
+				"FriendsUIInviteToGame"		"#Action_InviteToGame"
+				"FriendsUIToggleVoiceChat"		"#Action_ToggleVoiceChat"
+				"FriendsUIToggleFriendsList"		"#Action_ToggleFriendsList"
+			}
+		}
+		"Mouse"
+		{
+			"title"		"#Set_Mouse"
+			"legacy_set"		"0"
+			"StickPadGyro"
+			{
+				"Cursor"
+				{
+					"title"		"#Action_Cursor"
+					"input_mode"		"absolute_mouse"
+					"os_mouse"		"1"
+				}
+			}
+			"Button"
+			{
+				"A"		"#Action_Select"
+				"B"		"#Action_Cancel"
+			}
+		}
+		"Keyboard"
+		{
+			"title"		"#Set_Keyboard"
+			"legacy_set"		"0"
+			"StickPadGyro"
+			{
+				"RIGHTPAD_ANALOG"
+				{
+					"title"		"#Action_Cursor_Right"
+					"input_mode"		"joystick_move"
+				}
+				"LEFTPAD_ANALOG"
+				{
+					"title"		"#Action_Cursor_Left"
+					"input_mode"		"joystick_move"
+				}
+			}
+			"Button"
+			{
+				"A"		"#Action_Select"
+				"B"		"#Action_Cancel"
+				"x"		"#Action_Contextual"
+				"y"		"#Action_Password"
+				"SELECT"		"#Action_SwitchLanguage"
+				"START"		"#Action_Submit"
+				"LSHOULDER"		"#Action_Backspace"
+				"RSHOULDER"		"#Action_Space"
+				"LTRIGGER"		"#Action_LeftKey"
+				"RTRIGGER"		"#Action_RightKey"
+				"LEFTSTICK_UP"		"#Action_Up"
+				"LEFTSTICK_DOWN"		"#Action_Down"
+				"LEFTSTICK_LEFT"		"#Action_Left"
+				"LEFTSTICK_RIGHT"		"#Action_Right"
+				"LBACK"		"#Action_Shift"
+				"RBACK"		"#Action_Alt"
+			}
+		}
+	}
+	"action_layers"
+	{
+		"WebBrowserChat"
+		{
+			"title"		"Chat"
+			"legacy_set"		"1"
+			"set_layer"		"1"
+			"parent_set_name"		"WebBrowser"
+		}
+	}
+	"localization"
+	{
+		"english"
+		{
+			"title"		"Official Configuration for Big Picture Mode"
+			"Chat"		"Chat"
+			"Set_Default"		"Default"
+			"Set_WebBrowser"		"Web Browser"
+			"Set_Mouse"		"Select Mouse Position"
+			"Set_Keyboard"		"On Screen Keyboard"
+			"Action_Back"		"Navigate Back"
+			"Action_Forward"		"Navigate Forward"
+			"Action_Reload"		"Reload"
+			"Action_EditURL"		"Edit URL"
+			"Action_CopyURL"		"Copy URL"
+			"Action_Cursor"		"Mouse Cursor"
+			"Action_Scroll"		"Scroll"
+			"Action_Select"		"Select"
+			"Action_DoubleSelect"		"Double-click"
+			"Action_Zoom"		"Zoom"
+			"Action_AddToFavorites"		"Add to Favorites"
+			"Action_OpenFavorites"		"Open Favorites"
+			"Action_OpenContextMenu"		"Open Menu"
+			"Action_OpenEmptyTab"		"Open empty new tab"
+			"Action_OpenInNewTab"		"Open link in new tab"
+			"Action_CloseTab"		"Close current tab"
+			"Action_ShowKeyboard"		"Show On Screen Keyboard"
+			"Action_Confirm"		"Confirm"
+			"Action_Cancel"		"Back"
+			"Action_Action1"		"UI Action 1"
+			"Action_Action2"		"UI Action 2"
+			"Action_Action3"		"UI Action 3"
+			"Action_Action4"		"UI Action 4"
+			"Action_LSilo"		"Switch Tab Left"
+			"Action_RSilo"		"Switch Tab Right"
+			"Action_LCycle"		"Skip Back"
+			"Action_RCycle"		"Skip Forward"
+			"Action_Up"		"Move Up"
+			"Action_Down"		"Move Down"
+			"Action_Left"		"Move Left"
+			"Action_Right"		"Move Right"
+			"Action_TabLeft"		"Switch Tab Left"
+			"Action_TabRight"		"Switch Tab Right"
+			"Action_SwitchLanguage"		"Switch Language"
+			"Action_Submit"		"Submit Text"
+			"Action_Password"		"Toggle Password Visibility"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Space"
+			"Action_LeftKey"		"Press Left Key"
+			"Action_RightKey"		"Press Right Key"
+			"Action_Cursor_Right"		"Right Cursor"
+			"Action_Cursor_Left"		"Left Cursor"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Contextual Action"
+			"Action_CursorSelect"		"Mouse Cursor Select"
+			"Action_ShowEmoticonPicker"		"Show Emoticon Picker"
+			"Action_AcceptGameInvite"		"Accept Game Invite"
+			"Action_InviteToGame"		"Invite to Game"
+			"Action_ToggleVoiceChat"		"Toggle Voice Chat"
+			"Action_ToggleFriendsList"		"Show/Hide Friends List"
+		}
+		"brazilian"
+		{
+			"title"		"Configuração oficial para o modo Big Picture"
+			"Chat"		"Conversa"
+			"Set_Default"		"Padrão"
+			"Set_WebBrowser"		"Navegador web"
+			"Set_Mouse"		"Selecionar posição do mouse"
+			"Set_Keyboard"		"Teclado virtual"
+			"Action_Back"		"Voltar"
+			"Action_Forward"		"Avançar"
+			"Action_Reload"		"Recarregar"
+			"Action_EditURL"		"Editar URL"
+			"Action_CopyURL"		"Copiar URL"
+			"Action_Cursor"		"Cursor do mouse"
+			"Action_Scroll"		"Rolar"
+			"Action_Select"		"Selecionar"
+			"Action_DoubleSelect"		"Clique duplo"
+			"Action_Zoom"		"Zoom"
+			"Action_AddToFavorites"		"Adicionar aos favoritos"
+			"Action_OpenFavorites"		"Abrir favoritos"
+			"Action_OpenContextMenu"		"Abrir o menu"
+			"Action_OpenEmptyTab"		"Abrir nova aba"
+			"Action_OpenInNewTab"		"Abrir link em nova aba"
+			"Action_CloseTab"		"Fechar aba atual"
+			"Action_ShowKeyboard"		"Exibir teclado virtual"
+			"Action_Confirm"		"Confirmar"
+			"Action_Cancel"		"Voltar"
+			"Action_Action1"		"Ação de interface 1"
+			"Action_Action2"		"Ação de interface 2"
+			"Action_Action3"		"Ação de interface 3"
+			"Action_Action4"		"Ação de interface 4"
+			"Action_LSilo"		"Ir p/ aba à esq."
+			"Action_RSilo"		"Ir p/ aba à dir."
+			"Action_LCycle"		"Anterior"
+			"Action_RCycle"		"Avançar"
+			"Action_Up"		"Mover p/ cima"
+			"Action_Down"		"Mover p/ baixo"
+			"Action_Left"		"Mover p/ esquerda"
+			"Action_Right"		"Mover p/ direita"
+			"Action_TabLeft"		"Ir p/ aba à esq."
+			"Action_TabRight"		"Ir p/ aba à dir."
+			"Action_SwitchLanguage"		"Alterar idioma"
+			"Action_Submit"		"Enviar texto"
+			"Action_Password"		"Alternar visibilidade da senha"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Espaço"
+			"Action_LeftKey"		"Pressionar tecla esquerda"
+			"Action_RightKey"		"Pressionar tecla direita"
+			"Action_Cursor_Right"		"Clique direito"
+			"Action_Cursor_Left"		"Clique esquerdo"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Ação contextual"
+			"Action_CursorSelect"		"Seleção do cursor do mouse"
+			"Action_ShowEmoticonPicker"		"Exibir menu de emoticons"
+			"Action_AcceptGameInvite"		"Aceitar convite para partida"
+			"Action_InviteToGame"		"Convidar para jogar"
+			"Action_ToggleVoiceChat"		"(Des)ativar conversa por voz"
+			"Action_ToggleFriendsList"		"Exibir/ocultar lista de amigos"
+		}
+		"portuguese"
+		{
+			"title"		"Configuração oficial para o Modo Big Picture"
+			"Chat"		"Chat"
+			"Set_Default"		"Predefinição"
+			"Set_WebBrowser"		"Browser da Web"
+			"Set_Mouse"		"Posição do rato"
+			"Set_Keyboard"		"Teclado virtual"
+			"Action_Back"		"Retroceder"
+			"Action_Forward"		"Avançar"
+			"Action_Reload"		"Recarregar"
+			"Action_EditURL"		"Editar URL"
+			"Action_CopyURL"		"Copiar URL"
+			"Action_Cursor"		"Cursor do rato"
+			"Action_Scroll"		"Scroll"
+			"Action_Select"		"Selecionar"
+			"Action_DoubleSelect"		"Clique duplo"
+			"Action_Zoom"		"Zoom"
+			"Action_AddToFavorites"		"Adicionar aos Favoritos"
+			"Action_OpenFavorites"		"Abrir Favoritos"
+			"Action_OpenContextMenu"		"Abrir menu"
+			"Action_OpenEmptyTab"		"Abrir separador novo"
+			"Action_OpenInNewTab"		"Abrir link num separador novo"
+			"Action_CloseTab"		"Fechar separador atual"
+			"Action_ShowKeyboard"		"Mostrar teclado virtual"
+			"Action_Confirm"		"Confirmar"
+			"Action_Cancel"		"Voltar"
+			"Action_Action1"		"Ação da interface 1"
+			"Action_Action2"		"Ação da interface 2"
+			"Action_Action3"		"Ação da interface 3"
+			"Action_Action4"		"Ação da interface 4"
+			"Action_LSilo"		"Separador à esquerda"
+			"Action_RSilo"		"Separador à direita"
+			"Action_LCycle"		"Para trás"
+			"Action_RCycle"		"Para a frente"
+			"Action_Up"		"Mover p/ cima"
+			"Action_Down"		"Mover p/ baixo"
+			"Action_Left"		"Mover p/ esquerda"
+			"Action_Right"		"Mover p/ direita"
+			"Action_TabLeft"		"Separador à esquerda"
+			"Action_TabRight"		"Separador à direita"
+			"Action_SwitchLanguage"		"Alterar idioma"
+			"Action_Submit"		"Enviar texto"
+			"Action_Password"		"Revelar/ocultar palavra-passe"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Espaço"
+			"Action_LeftKey"		"Pressionar tecla esquerda"
+			"Action_RightKey"		"Pressionar tecla direita"
+			"Action_Cursor_Right"		"Cursor direito"
+			"Action_Cursor_Left"		"Cursor esquerdo"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Ação contextual"
+			"Action_CursorSelect"		"Selecionar com cursor do rato"
+			"Action_ShowEmoticonPicker"		"Mostrar menu de emoticons"
+			"Action_AcceptGameInvite"		"Aceitar convite p/ jogo"
+			"Action_InviteToGame"		"Convidar para jogar"
+			"Action_ToggleVoiceChat"		"Ativar/desativar chat de voz"
+			"Action_ToggleFriendsList"		"Mostrar/ocultar lista de amigos"
+		}
+		"bulgarian"
+		{
+			"title"		"Официална конфигурация за режима „Голям екран“"
+			"Chat"		"Чат"
+			"Set_Default"		"По подразбиране"
+			"Set_WebBrowser"		"Уеб браузър"
+			"Set_Mouse"		"Избиране на позиция за мишката"
+			"Set_Keyboard"		"Екранна клавиатура"
+			"Action_Back"		"Придвижване назад"
+			"Action_Forward"		"Придвижване напред"
+			"Action_Reload"		"Презареждане"
+			"Action_EditURL"		"Редактиране на адреса"
+			"Action_CopyURL"		"Копиране на адреса"
+			"Action_Cursor"		"Курсор на мишката"
+			"Action_Scroll"		"Скролиране"
+			"Action_Select"		"Избиране"
+			"Action_DoubleSelect"		"Двоен клик"
+			"Action_Zoom"		"Приближаване"
+			"Action_AddToFavorites"		"Добавяне към любими"
+			"Action_OpenFavorites"		"Отваряне на любими"
+			"Action_OpenContextMenu"		"Отваряне на менюто"
+			"Action_OpenEmptyTab"		"Отваряне на нов празен раздел"
+			"Action_OpenInNewTab"		"Отваряне на връзката в нов раздел"
+			"Action_CloseTab"		"Затваряне на текущия раздел"
+			"Action_ShowKeyboard"		"Показване на екранната клавиатура"
+			"Action_Confirm"		"Потвърждаване"
+			"Action_Cancel"		"Назад"
+			"Action_Action1"		"Действие в интерфейса 1"
+			"Action_Action2"		"Действие в интерфейса 2"
+			"Action_Action3"		"Действие в интерфейса 3"
+			"Action_Action4"		"Действие в интерфейса 4"
+			"Action_LSilo"		"Превключване към раздел наляво"
+			"Action_RSilo"		"Превключване към раздел надясно"
+			"Action_LCycle"		"Прескачане назад"
+			"Action_RCycle"		"Прескачане напред"
+			"Action_Up"		"Преместване нагоре"
+			"Action_Down"		"Преместване надолу"
+			"Action_Left"		"Преместване наляво"
+			"Action_Right"		"Преместване надясно"
+			"Action_TabLeft"		"Превключване към раздел наляво"
+			"Action_TabRight"		"Превключване към раздел надясно"
+			"Action_SwitchLanguage"		"Превключване на езика"
+			"Action_Submit"		"Подаване на текст"
+			"Action_Password"		"Превключване на видимостта за паролата"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Space"
+			"Action_LeftKey"		"Натискане на левия клавиш"
+			"Action_RightKey"		"Натискане на десния клавиш"
+			"Action_Cursor_Right"		"Десен курсор"
+			"Action_Cursor_Left"		"Ляв курсор"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Контекстуално действие"
+			"Action_CursorSelect"		"Избиране на курсор за мишката"
+			"Action_ShowEmoticonPicker"		"Показване на подбора за емотикони"
+			"Action_AcceptGameInvite"		"Приемане на игрална покана"
+			"Action_InviteToGame"		"Покана към игра"
+			"Action_ToggleVoiceChat"		"Превключване на гласовия чат"
+			"Action_ToggleFriendsList"		"Показване/Скриване на списъка с приятели"
+		}
+		"schinese"
+		{
+			"title"		"大屏幕模式官方配置"
+			"Chat"		"聊天"
+			"Set_Default"		"默认"
+			"Set_WebBrowser"		"网页浏览器"
+			"Set_Mouse"		"选择鼠标位置"
+			"Set_Keyboard"		"屏幕键盘"
+			"Action_Back"		"向后导航"
+			"Action_Forward"		"向前导航"
+			"Action_Reload"		"重新载入"
+			"Action_EditURL"		"编辑 URL"
+			"Action_CopyURL"		"复制 URL"
+			"Action_Cursor"		"鼠标光标"
+			"Action_Scroll"		"滚动"
+			"Action_Select"		"选择"
+			"Action_DoubleSelect"		"双击"
+			"Action_Zoom"		"缩放"
+			"Action_AddToFavorites"		"添加至收藏夹"
+			"Action_OpenFavorites"		"打开收藏夹"
+			"Action_OpenContextMenu"		"打开菜单"
+			"Action_OpenEmptyTab"		"打开空的新标签页"
+			"Action_OpenInNewTab"		"在新标签页中打开链接"
+			"Action_CloseTab"		"关闭当前标签页"
+			"Action_ShowKeyboard"		"显示屏幕键盘"
+			"Action_Confirm"		"确认"
+			"Action_Cancel"		"返回"
+			"Action_Action1"		"UI 操作 1"
+			"Action_Action2"		"UI 操作 2"
+			"Action_Action3"		"UI 操作 3"
+			"Action_Action4"		"UI 操作 4"
+			"Action_LSilo"		"切换标签页至左边"
+			"Action_RSilo"		"切换标签页至右边"
+			"Action_LCycle"		"向后跳过"
+			"Action_RCycle"		"向前跳过"
+			"Action_Up"		"上移"
+			"Action_Down"		"下移"
+			"Action_Left"		"左移"
+			"Action_Right"		"右移"
+			"Action_TabLeft"		"切换标签页至左边"
+			"Action_TabRight"		"切换标签页至右边"
+			"Action_SwitchLanguage"		"切换语言"
+			"Action_Submit"		"提交文本"
+			"Action_Password"		"密码显示开关"
+			"Action_Backspace"		"退格键"
+			"Action_Space"		"空格键"
+			"Action_LeftKey"		"按左键"
+			"Action_RightKey"		"按右键"
+			"Action_Cursor_Right"		"右光标"
+			"Action_Cursor_Left"		"左光标"
+			"Action_Shift"		"Shift 键"
+			"Action_Alt"		"Alt 键"
+			"Action_Contextual"		"上下文操作"
+			"Action_CursorSelect"		"鼠标光标选择"
+			"Action_ShowEmoticonPicker"		"显示表情选取器"
+			"Action_AcceptGameInvite"		"接受游戏邀请"
+			"Action_InviteToGame"		"邀请加入游戏"
+			"Action_ToggleVoiceChat"		"语音聊天开关"
+			"Action_ToggleFriendsList"		"显示/隐藏好友列表"
+		}
+		"tchinese"
+		{
+			"title"		"Big Picture 模式官方配置"
+			"Chat"		"聊天"
+			"Set_Default"		"預設"
+			"Set_WebBrowser"		"網頁瀏覽器"
+			"Set_Mouse"		"選擇滑鼠位置"
+			"Set_Keyboard"		"螢幕鍵盤"
+			"Action_Back"		"往回"
+			"Action_Forward"		"往前"
+			"Action_Reload"		"重新載入"
+			"Action_EditURL"		"編輯網址"
+			"Action_CopyURL"		"複製網址"
+			"Action_Cursor"		"滑鼠游標"
+			"Action_Scroll"		"捲動"
+			"Action_Select"		"選擇"
+			"Action_DoubleSelect"		"雙擊"
+			"Action_Zoom"		"縮放"
+			"Action_AddToFavorites"		"加入我的最愛"
+			"Action_OpenFavorites"		"打開我的最愛"
+			"Action_OpenContextMenu"		"打開選單"
+			"Action_OpenEmptyTab"		"打開空的新分頁"
+			"Action_OpenInNewTab"		"在新分頁中打開連結"
+			"Action_CloseTab"		"關閉目前的分頁"
+			"Action_ShowKeyboard"		"顯示螢幕鍵盤"
+			"Action_Confirm"		"確認"
+			"Action_Cancel"		"返回"
+			"Action_Action1"		"使用者介面操作 1"
+			"Action_Action2"		"使用者介面操作 2"
+			"Action_Action3"		"使用者介面操作 3"
+			"Action_Action4"		"使用者介面操作 4"
+			"Action_LSilo"		"切換至左分頁"
+			"Action_RSilo"		"切換至右分頁"
+			"Action_LCycle"		"倒轉跳過"
+			"Action_RCycle"		"快轉跳過"
+			"Action_Up"		"上移"
+			"Action_Down"		"下移"
+			"Action_Left"		"左移"
+			"Action_Right"		"右移"
+			"Action_TabLeft"		"切換至左分頁"
+			"Action_TabRight"		"切換至右分頁"
+			"Action_SwitchLanguage"		"切換語言"
+			"Action_Submit"		"提交文字"
+			"Action_Password"		"是否顯示密碼"
+			"Action_Backspace"		"退格鍵"
+			"Action_Space"		"空格鍵"
+			"Action_LeftKey"		"點擊左鍵"
+			"Action_RightKey"		"點擊右鍵"
+			"Action_Cursor_Right"		"右游標"
+			"Action_Cursor_Left"		"左游標"
+			"Action_Shift"		"Shift 鍵"
+			"Action_Alt"		"Alt 鍵"
+			"Action_Contextual"		"內容操作"
+			"Action_CursorSelect"		"滑鼠游標選擇"
+			"Action_ShowEmoticonPicker"		"顯示表情符號列表"
+			"Action_AcceptGameInvite"		"接受遊戲邀請"
+			"Action_InviteToGame"		"邀請一同遊戲"
+			"Action_ToggleVoiceChat"		"切換語音聊天"
+			"Action_ToggleFriendsList"		"顯示 / 隱藏好友名單"
+		}
+		"czech"
+		{
+			"title"		"Oficiální nastavení pro režim Big Picture"
+			"Chat"		"Konverzace"
+			"Set_Default"		"Výchozí"
+			"Set_WebBrowser"		"Prohlížeč"
+			"Set_Mouse"		"Výběr pozice myši"
+			"Set_Keyboard"		"Klávesnice"
+			"Action_Back"		"Přechod zpět"
+			"Action_Forward"		"Přechod vpřed"
+			"Action_Reload"		"Obnovení"
+			"Action_EditURL"		"Úprava URL"
+			"Action_CopyURL"		"Zkopírování URL"
+			"Action_Cursor"		"Kurzor myši"
+			"Action_Scroll"		"Posun"
+			"Action_Select"		"Výběr"
+			"Action_DoubleSelect"		"Dvojí kliknutí"
+			"Action_Zoom"		"Zoom"
+			"Action_AddToFavorites"		"Přidání do oblíbených"
+			"Action_OpenFavorites"		"Otevření oblíbených"
+			"Action_OpenContextMenu"		"Otevření nabídky"
+			"Action_OpenEmptyTab"		"Otevření nové záložky"
+			"Action_OpenInNewTab"		"Otevření odkazu v nové záložce"
+			"Action_CloseTab"		"Zavření aktuální žáložky"
+			"Action_ShowKeyboard"		"Klávesnice na obrazovce"
+			"Action_Confirm"		"Potvrzení"
+			"Action_Cancel"		"Zpět"
+			"Action_Action1"		"Akce rozhraní 1"
+			"Action_Action2"		"Akce rozhraní 2"
+			"Action_Action3"		"Akce rozhraní 3"
+			"Action_Action4"		"Akce rozhraní 4"
+			"Action_LSilo"		"Přepnutí na záložku vlevo"
+			"Action_RSilo"		"Přepnutí na záložku vpravo"
+			"Action_LCycle"		"Skok zpět"
+			"Action_RCycle"		"Skok vpřed"
+			"Action_Up"		"Pohyb nahoru"
+			"Action_Down"		"Pohybu dolů"
+			"Action_Left"		"Pohyb doleva"
+			"Action_Right"		"Pohyb doprava"
+			"Action_TabLeft"		"Přepnutí na záložku vlevo"
+			"Action_TabRight"		"Přepnutí na záložku vpravo"
+			"Action_SwitchLanguage"		"Přepnutí jazyka"
+			"Action_Submit"		"Odeslání textu"
+			"Action_Password"		"Změna viditelnosti hesla"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Mezerník"
+			"Action_LeftKey"		"Stisk klávesy vlevo"
+			"Action_RightKey"		"Stisk klávesy vpravo"
+			"Action_Cursor_Right"		"Pravý kurzor"
+			"Action_Cursor_Left"		"Levý kurzor"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Kontextová akce"
+			"Action_CursorSelect"		"Výběr oblasti kurzoru"
+			"Action_ShowEmoticonPicker"		"Otevření emotikonů"
+			"Action_AcceptGameInvite"		"Přijetí pozvánky do hry"
+			"Action_InviteToGame"		"Pozvánka do hry"
+			"Action_ToggleVoiceChat"		"Hlasová konverzace"
+			"Action_ToggleFriendsList"		"Seznam přátel"
+		}
+		"danish"
+		{
+			"title"		"Officiel konfiguration til Big Picture-tilstand"
+			"Chat"		"Chat"
+			"Set_Default"		"Standard"
+			"Set_WebBrowser"		"Webbrowser"
+			"Set_Mouse"		"Vælg museposition"
+			"Set_Keyboard"		"Skærmtastatur"
+			"Action_Back"		"Gå tilbage"
+			"Action_Forward"		"Gå frem"
+			"Action_Reload"		"Genindlæs"
+			"Action_EditURL"		"Rediger URL"
+			"Action_CopyURL"		"Kopier URL"
+			"Action_Cursor"		"Musemarkør"
+			"Action_Scroll"		"Rul"
+			"Action_Select"		"Vælg"
+			"Action_DoubleSelect"		"Dobbeltklik"
+			"Action_Zoom"		"Zoom"
+			"Action_AddToFavorites"		"Føj til foretrukne"
+			"Action_OpenFavorites"		"Åbn foretrukne"
+			"Action_OpenContextMenu"		"Åbn menu"
+			"Action_OpenEmptyTab"		"Åbn en ny tom fane"
+			"Action_OpenInNewTab"		"Åbn link i en ny fane"
+			"Action_CloseTab"		"Luk denne fane"
+			"Action_ShowKeyboard"		"Vis skærmtastatur"
+			"Action_Confirm"		"Bekræft"
+			"Action_Cancel"		"Tilbage"
+			"Action_Action1"		"Grænsefladehandling 1"
+			"Action_Action2"		"Grænsefladehandling 2"
+			"Action_Action3"		"Grænsefladehandling 3"
+			"Action_Action4"		"Grænsefladehandling 4"
+			"Action_LSilo"		"Flyt fanen til venstre"
+			"Action_RSilo"		"Flyt fanen til højre"
+			"Action_LCycle"		"Spring tilbage"
+			"Action_RCycle"		"Spring frem"
+			"Action_Up"		"Flyt op"
+			"Action_Down"		"Flyt ned"
+			"Action_Left"		"Flyt til venstre"
+			"Action_Right"		"Flyt til højre"
+			"Action_TabLeft"		"Flyt fanen til venstre"
+			"Action_TabRight"		"Flyt fanen til højre"
+			"Action_SwitchLanguage"		"Skift sprog"
+			"Action_Submit"		"Indsend tekst"
+			"Action_Password"		"Vis/skjul adgangskode"
+			"Action_Backspace"		"Tilbage"
+			"Action_Space"		"Mellemrum"
+			"Action_LeftKey"		"Tryk på venstre tast"
+			"Action_RightKey"		"Tryk på højre tast"
+			"Action_Cursor_Right"		"Højre markør"
+			"Action_Cursor_Left"		"Venstre markør"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Kontekstuelle handlinger"
+			"Action_CursorSelect"		"Vælg musemarkøren"
+			"Action_ShowEmoticonPicker"		"Vis emotikonvælger"
+			"Action_AcceptGameInvite"		"Accepter spilinvitation"
+			"Action_InviteToGame"		"Inviter til spil"
+			"Action_ToggleVoiceChat"		"Slå stemmechat til/fra"
+			"Action_ToggleFriendsList"		"Vis/skjul venneliste"
+		}
+		"dutch"
+		{
+			"title"		"Officiële configuratie voor de Big Picture-modus"
+			"Chat"		"Chat"
+			"Set_Default"		"Standaard"
+			"Set_WebBrowser"		"Webbrowser"
+			"Set_Mouse"		"Muispositie selecteren"
+			"Set_Keyboard"		"Schermtoetsenbord"
+			"Action_Back"		"Terug navigeren"
+			"Action_Forward"		"Vooruit navigeren"
+			"Action_Reload"		"Opnieuw laden"
+			"Action_EditURL"		"URL bewerken"
+			"Action_CopyURL"		"URL kopiëren"
+			"Action_Cursor"		"Muiscursor"
+			"Action_Scroll"		"Scrollen"
+			"Action_Select"		"Selecteren"
+			"Action_DoubleSelect"		"Dubbelklikken"
+			"Action_Zoom"		"Zoomen"
+			"Action_AddToFavorites"		"Aan favorieten toevoegen"
+			"Action_OpenFavorites"		"Favorieten openen"
+			"Action_OpenContextMenu"		"Menu openen"
+			"Action_OpenEmptyTab"		"Nieuw tabblad openen"
+			"Action_OpenInNewTab"		"Link in nieuw tabblad openen"
+			"Action_CloseTab"		"Huidig tabblad sluiten"
+			"Action_ShowKeyboard"		"Schermtoetsenbord weergeven"
+			"Action_Confirm"		"Bevestigen"
+			"Action_Cancel"		"Terug"
+			"Action_Action1"		"UI-actie 1"
+			"Action_Action2"		"UI-actie 2"
+			"Action_Action3"		"UI-actie 3"
+			"Action_Action4"		"UI-actie 4"
+			"Action_LSilo"		"Tabblad naar links verplaatsen"
+			"Action_RSilo"		"Tabblad naar rechts verplaatsen"
+			"Action_LCycle"		"Terugspringen"
+			"Action_RCycle"		"Vooruitspringen"
+			"Action_Up"		"Omhoog"
+			"Action_Down"		"Omlaag"
+			"Action_Left"		"Naar links"
+			"Action_Right"		"Naar rechts"
+			"Action_TabLeft"		"Tabblad naar links verplaatsen"
+			"Action_TabRight"		"Tabblad naar rechts verplaatsen"
+			"Action_SwitchLanguage"		"Taal wisselen"
+			"Action_Submit"		"Tekst verzenden"
+			"Action_Password"		"Wachtwoord weergeven/verbergen"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Spatie"
+			"Action_LeftKey"		"Linkertoets indrukken"
+			"Action_RightKey"		"Rechtertoets indrukken"
+			"Action_Cursor_Right"		"Rechtercursor"
+			"Action_Cursor_Left"		"Linkercursor"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Contextuele actie"
+			"Action_CursorSelect"		"Muiscursor selecteren"
+			"Action_ShowEmoticonPicker"		"Emoticonkiezer weergeven"
+			"Action_AcceptGameInvite"		"Speluitnodiging accepteren"
+			"Action_InviteToGame"		"Uitnodigen om te spelen"
+			"Action_ToggleVoiceChat"		"Voicechat (de)activeren"
+			"Action_ToggleFriendsList"		"Vriendenlijst weergeven/verbergen"
+		}
+		"finnish"
+		{
+			"title"		"Televisiotilan viralliset määritykset"
+			"Chat"		"Chat"
+			"Set_Default"		"Oletus"
+			"Set_WebBrowser"		"Verkkoselain"
+			"Set_Mouse"		"Valitse hiiren sijainti"
+			"Set_Keyboard"		"Näyttönäppäimistö"
+			"Action_Back"		"Siirry taaksepäin"
+			"Action_Forward"		"Siirry eteenpäin"
+			"Action_Reload"		"Lataa uudelleen"
+			"Action_EditURL"		"Muokkaa URL-osoitetta"
+			"Action_CopyURL"		"Kopioi URL-osoite"
+			"Action_Cursor"		"Hiiren kursori"
+			"Action_Scroll"		"Vieritä"
+			"Action_Select"		"Valitse"
+			"Action_DoubleSelect"		"Tuplaklikkaa"
+			"Action_Zoom"		"Zoomaus"
+			"Action_AddToFavorites"		"Lisää suosikkeihin"
+			"Action_OpenFavorites"		"Avaa suosikit"
+			"Action_OpenContextMenu"		"Avaa valikko"
+			"Action_OpenEmptyTab"		"Avaa uusi tyhjä välilehti"
+			"Action_OpenInNewTab"		"Avaa linkki uudessa välilehdessä"
+			"Action_CloseTab"		"Sulje nykyinen välilehti"
+			"Action_ShowKeyboard"		"Näytä näyttönäppäimistöllä"
+			"Action_Confirm"		"Vahvista"
+			"Action_Cancel"		"Takaisin"
+			"Action_Action1"		"Käyttöliittymätapahtuma 1"
+			"Action_Action2"		"Käyttöliittymätapahtuma 2"
+			"Action_Action3"		"Käyttöliittymätapahtuma 3"
+			"Action_Action4"		"Käyttöliittymätapahtuma 4"
+			"Action_LSilo"		"Siirrä välilehti vasemmalle"
+			"Action_RSilo"		"Siirrä välilehti oikealle"
+			"Action_LCycle"		"Kelaa taaksepäin"
+			"Action_RCycle"		"Kelaa eteenpäin"
+			"Action_Up"		"Siirry ylös"
+			"Action_Down"		"Siirry alas"
+			"Action_Left"		"Siirry vasemmalle"
+			"Action_Right"		"Siirry oikealle"
+			"Action_TabLeft"		"Siirrä välilehti vasemmalle"
+			"Action_TabRight"		"Siirrä välilehti oikealle"
+			"Action_SwitchLanguage"		"Vaihda kieli"
+			"Action_Submit"		"Lähetä teksti"
+			"Action_Password"		"Salasana näkyvissä ON/OFF"
+			"Action_Backspace"		"Askelpalautin"
+			"Action_Space"		"Välilyönti"
+			"Action_LeftKey"		"Paina vasenta näppäintä"
+			"Action_RightKey"		"Paina oikeata näppäintä"
+			"Action_Cursor_Right"		"Oikea kohdistin"
+			"Action_Cursor_Left"		"Vasen kursori"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Tilannekohtainen toiminto"
+			"Action_CursorSelect"		"Hiiren kursorin valinta"
+			"Action_ShowEmoticonPicker"		"Näytä hymiövalitsin"
+			"Action_AcceptGameInvite"		"Hyväksy pelikutsu"
+			"Action_InviteToGame"		"Kutsu peliin"
+			"Action_ToggleVoiceChat"		"Puhelu ON/OFF"
+			"Action_ToggleFriendsList"		"Näytä/piilota kaveriluettelo"
+		}
+		"french"
+		{
+			"title"		"Configuration officielle du mode Big Picture"
+			"Chat"		"Chat"
+			"Set_Default"		"Par défaut"
+			"Set_WebBrowser"		"Navigateur internet"
+			"Set_Mouse"		"Sélectionner la position du curseur"
+			"Set_Keyboard"		"Clavier virtuel"
+			"Action_Back"		"Précédent"
+			"Action_Forward"		"Suivant"
+			"Action_Reload"		"Recharger"
+			"Action_EditURL"		"Modifier l'URL"
+			"Action_CopyURL"		"Copier l'URL"
+			"Action_Cursor"		"Curseur de la souris"
+			"Action_Scroll"		"Faire défiler"
+			"Action_Select"		"Sélectionner"
+			"Action_DoubleSelect"		"Double clic"
+			"Action_Zoom"		"Zoomer"
+			"Action_AddToFavorites"		"Ajouter aux favoris"
+			"Action_OpenFavorites"		"Ouvrir les favoris"
+			"Action_OpenContextMenu"		"Ouvrir le menu"
+			"Action_OpenEmptyTab"		"Ouvrir un nouvel onglet"
+			"Action_OpenInNewTab"		"Ouvrir le lien dans un nouvel onglet"
+			"Action_CloseTab"		"Fermer l’onglet actuel"
+			"Action_ShowKeyboard"		"Afficher le clavier virtuel"
+			"Action_Confirm"		"Confirmer"
+			"Action_Cancel"		"Retour"
+			"Action_Action1"		"Action n°1"
+			"Action_Action2"		"Action n°2"
+			"Action_Action3"		"Action n°3"
+			"Action_Action4"		"Action n°4"
+			"Action_LSilo"		"Passer à l'onglet de gauche"
+			"Action_RSilo"		"Passer à l'onglet de droite"
+			"Action_LCycle"		"Retour rapide"
+			"Action_RCycle"		"Avance rapide"
+			"Action_Up"		"Déplacer vers le haut"
+			"Action_Down"		"Déplacer vers le bas"
+			"Action_Left"		"Déplacer vers la gauche"
+			"Action_Right"		"Déplacer vers la droite"
+			"Action_TabLeft"		"Passer à l'onglet de gauche"
+			"Action_TabRight"		"Passer à l'onglet de droite"
+			"Action_SwitchLanguage"		"Changer de langue"
+			"Action_Submit"		"Envoyer le texte"
+			"Action_Password"		"Afficher/masquer le mot de passe"
+			"Action_Backspace"		"Retour arrière"
+			"Action_Space"		"Espace"
+			"Action_LeftKey"		"Flèche gauche"
+			"Action_RightKey"		"Flèche droite"
+			"Action_Cursor_Right"		"Curseur droit"
+			"Action_Cursor_Left"		"Curseur gauche"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Action contextuelle"
+			"Action_CursorSelect"		"Sélectionner le curseur de la souris"
+			"Action_ShowEmoticonPicker"		"Afficher le sélecteur d'émoticônes"
+			"Action_AcceptGameInvite"		"Accepter l'invitation à jouer"
+			"Action_InviteToGame"		"Inviter à jouer"
+			"Action_ToggleVoiceChat"		"Activer/désactiver le chat vocal"
+			"Action_ToggleFriendsList"		"Afficher/masquer la liste d'amis"
+		}
+		"german"
+		{
+			"title"		"Offizielle Konfiguration für den Big Picture-Modus"
+			"Chat"		"Chat"
+			"Set_Default"		"Standard"
+			"Set_WebBrowser"		"Webbrowser"
+			"Set_Mouse"		"Mausposition auswählen"
+			"Set_Keyboard"		"Bildschirmtastatur"
+			"Action_Back"		"Zurück navigieren"
+			"Action_Forward"		"Vorwärts navigieren"
+			"Action_Reload"		"Neu laden"
+			"Action_EditURL"		"URL bearbeiten"
+			"Action_CopyURL"		"URL kopieren"
+			"Action_Cursor"		"Mauscursor"
+			"Action_Scroll"		"Scrollen"
+			"Action_Select"		"Auswählen"
+			"Action_DoubleSelect"		"Doppelklick"
+			"Action_Zoom"		"Zoomen"
+			"Action_AddToFavorites"		"Zu Favoriten hinzufügen"
+			"Action_OpenFavorites"		"Favoriten öffnen"
+			"Action_OpenContextMenu"		"Menü öffnen"
+			"Action_OpenEmptyTab"		"Neuen Tab öffnen"
+			"Action_OpenInNewTab"		"Link in neuem Tab öffnen"
+			"Action_CloseTab"		"Aktuellen Tab schließen"
+			"Action_ShowKeyboard"		"Bildschirmtastatur anzeigen"
+			"Action_Confirm"		"Bestätigen"
+			"Action_Cancel"		"Zurück"
+			"Action_Action1"		"UI-Aktion 1"
+			"Action_Action2"		"UI-Aktion 2"
+			"Action_Action3"		"UI-Aktion 3"
+			"Action_Action4"		"UI-Aktion 4"
+			"Action_LSilo"		"Tab nach links verschieben"
+			"Action_RSilo"		"Tab nach rechts verschieben"
+			"Action_LCycle"		"Zurückspringen"
+			"Action_RCycle"		"Vorwärts springen"
+			"Action_Up"		"Nach oben"
+			"Action_Down"		"Nach unten"
+			"Action_Left"		"Nach links"
+			"Action_Right"		"Nach rechts"
+			"Action_TabLeft"		"Tab nach links verschieben"
+			"Action_TabRight"		"Tab nach rechts verschieben"
+			"Action_SwitchLanguage"		"Sprache wechseln"
+			"Action_Submit"		"Text absenden"
+			"Action_Password"		"Passwort anzeigen/ausblenden"
+			"Action_Backspace"		"Rücktaste"
+			"Action_Space"		"Leertaste"
+			"Action_LeftKey"		"Linke Taste drücken"
+			"Action_RightKey"		"Rechte Taste drücken"
+			"Action_Cursor_Right"		"Rechter Cursor"
+			"Action_Cursor_Left"		"Linker Cursor"
+			"Action_Shift"		"Umschalttaste"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Kontextbezogene Aktion"
+			"Action_CursorSelect"		"Mauscursor auswählen"
+			"Action_ShowEmoticonPicker"		"Emoticonauswahl anzeigen"
+			"Action_AcceptGameInvite"		"Spieleinladung annehmen"
+			"Action_InviteToGame"		"Zum Spiel einladen"
+			"Action_ToggleVoiceChat"		"Sprachchat (de)aktivieren"
+			"Action_ToggleFriendsList"		"Freundesliste ein-/ausblenden"
+		}
+		"greek"
+		{
+			"title"		"Επίσημη διαμόρφωση για λειτουργία Big Picture"
+			"Chat"		"Συνομιλία"
+			"Set_Default"		"Προεπιλογή"
+			"Set_WebBrowser"		"Περιηγητής διαδικτύου"
+			"Set_Mouse"		"Επιλογή θέσης ποντικιού"
+			"Set_Keyboard"		"Πληκτρολόγιο οθόνης"
+			"Action_Back"		"Πλοήγηση πίσω"
+			"Action_Forward"		"Πλοήγηση μπροστά"
+			"Action_Reload"		"Επαναφόρτωση"
+			"Action_EditURL"		"Επεξεργασία URL"
+			"Action_CopyURL"		"Αντιγραφή URL"
+			"Action_Cursor"		"Κέρσορας ποντικιού"
+			"Action_Scroll"		"Κύλιση"
+			"Action_Select"		"Επιλογή"
+			"Action_DoubleSelect"		"Διπλό κλικ"
+			"Action_Zoom"		"Μεγέθυνση"
+			"Action_AddToFavorites"		"Προσθήκη στα αγαπημένα"
+			"Action_OpenFavorites"		"Άνοιγμα αγαπημένων"
+			"Action_OpenContextMenu"		"Άνοιγμα μενού"
+			"Action_OpenEmptyTab"		"Άνοιγμα νέας κενής καρτέλας"
+			"Action_OpenInNewTab"		"Άνοιγμα συνδέσμου σε νέα καρτέλα"
+			"Action_CloseTab"		"Κλείσιμο τρέχουσας καρτέλας"
+			"Action_ShowKeyboard"		"Εμφάνιση πληκτρολογίου οθόνης"
+			"Action_Confirm"		"Επιβεβαίωση"
+			"Action_Cancel"		"Πίσω"
+			"Action_Action1"		"Δράση διεπαφής 1"
+			"Action_Action2"		"Δράση διεπαφής 2"
+			"Action_Action3"		"Δράση διεπαφής 3"
+			"Action_Action4"		"Δράση διεπαφής 4"
+			"Action_LSilo"		"Εναλλαγή καρτέλας αριστερά"
+			"Action_RSilo"		"Εναλλαγή καρτέλας δεξιά"
+			"Action_LCycle"		"Μεταπήδηση πίσω"
+			"Action_RCycle"		"Μεταπήδηση μπροστά"
+			"Action_Up"		"Μετακίνηση πάνω"
+			"Action_Down"		"Μετακίνηση κάτω"
+			"Action_Left"		"Μετακίνηση αριστερά"
+			"Action_Right"		"Μετακίνηση δεξιά"
+			"Action_TabLeft"		"Εναλλαγή καρτέλας αριστερά"
+			"Action_TabRight"		"Εναλλαγή καρτέλας δεξιά"
+			"Action_SwitchLanguage"		"Αλλαγή γλώσσας"
+			"Action_Submit"		"Υποβολή κειμένου"
+			"Action_Password"		"Εναλλαγή ορατότητας κωδικού"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Διάστημα"
+			"Action_LeftKey"		"Αριστερό βελάκι"
+			"Action_RightKey"		"Δεξί βελάκι"
+			"Action_Cursor_Right"		"Δεξιά κέρσορα"
+			"Action_Cursor_Left"		"Αριστερά κέρσορα"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Συναφής ενέργεια"
+			"Action_CursorSelect"		"Επιλογή κέρσορα"
+			"Action_ShowEmoticonPicker"		"Εμφάνιση επιλογέα emoticon"
+			"Action_AcceptGameInvite"		"Αποδοχή πρόσκλησης παιχνιδιού"
+			"Action_InviteToGame"		"Πρόσκληση για παιχνίδι"
+			"Action_ToggleVoiceChat"		"Εναλλαγή φωνητικής συνομιλίας"
+			"Action_ToggleFriendsList"		"Εμφάνιση/απόκρυψη λίστας φίλων"
+		}
+		"hungarian"
+		{
+			"title"		"Hivatalos konfiguráció a Nagy Kép módhoz"
+			"Chat"		"Csevegés"
+			"Set_Default"		"Alapértelmezett"
+			"Set_WebBrowser"		"Webböngésző"
+			"Set_Mouse"		"Egérpozíció kiválasztása"
+			"Set_Keyboard"		"Képernyő-billentyűzet"
+			"Action_Back"		"Vissza"
+			"Action_Forward"		"Előre"
+			"Action_Reload"		"Újratöltés"
+			"Action_EditURL"		"URL szerkesztése"
+			"Action_CopyURL"		"URL másolása"
+			"Action_Cursor"		"Egérkurzor"
+			"Action_Scroll"		"Görgetés"
+			"Action_Select"		"Kiválasztás"
+			"Action_DoubleSelect"		"Dupla kattintás"
+			"Action_Zoom"		"Nagyítás"
+			"Action_AddToFavorites"		"Kedvencekhez adás"
+			"Action_OpenFavorites"		"Kedvencek megnyitása"
+			"Action_OpenContextMenu"		"Menü megnyitása"
+			"Action_OpenEmptyTab"		"Új üres fül"
+			"Action_OpenInNewTab"		"Hivatkozás megnyitása új fülön"
+			"Action_CloseTab"		"Jelenlegi fül bezárása"
+			"Action_ShowKeyboard"		"Képernyő-billentyűzet mutatása"
+			"Action_Confirm"		"Megerősítés"
+			"Action_Cancel"		"Vissza"
+			"Action_Action1"		"1. kezelőfelület-művelet"
+			"Action_Action2"		"2. kezelőfelület-művelet"
+			"Action_Action3"		"3. kezelőfelület-művelet"
+			"Action_Action4"		"4. kezelőfelület-művelet"
+			"Action_LSilo"		"Fülváltás balra"
+			"Action_RSilo"		"Fülváltás jobbra"
+			"Action_LCycle"		"Visszaugrás"
+			"Action_RCycle"		"Előreugrás"
+			"Action_Up"		"Mozgás fel"
+			"Action_Down"		"Mozgás le"
+			"Action_Left"		"Mozgás balra"
+			"Action_Right"		"Mozgás jobbra"
+			"Action_TabLeft"		"Fülváltás balra"
+			"Action_TabRight"		"Fülváltás jobbra"
+			"Action_SwitchLanguage"		"Nyelvválasztás"
+			"Action_Submit"		"Szöveg elküldése"
+			"Action_Password"		"Jelszóláthatóság be/ki"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Szóköz"
+			"Action_LeftKey"		"Bal billentyű lenyomása"
+			"Action_RightKey"		"Jobb billentyű lenyomása"
+			"Action_Cursor_Right"		"Jobb kurzor"
+			"Action_Cursor_Left"		"Bal kurzor"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Környezetfüggő művelet"
+			"Action_CursorSelect"		"Egérkurzoros választás"
+			"Action_ShowEmoticonPicker"		"Hangulatjel-választó mutatása"
+			"Action_AcceptGameInvite"		"Játékmeghívás elfogadása"
+			"Action_InviteToGame"		"Meghívás játékra"
+			"Action_ToggleVoiceChat"		"Hangos csevegés be/ki"
+			"Action_ToggleFriendsList"		"Barátlista mutatása/elrejtése"
+		}
+		"italian"
+		{
+			"title"		"Configurazione ufficiale per la modalità Big Picture"
+			"Chat"		"Chat"
+			"Set_Default"		"Predefinito"
+			"Set_WebBrowser"		"Browser web"
+			"Set_Mouse"		"Seleziona la posizione del mouse"
+			"Set_Keyboard"		"Tastiera virtuale"
+			"Action_Back"		"Vai indietro"
+			"Action_Forward"		"Vai avanti"
+			"Action_Reload"		"Ricarica"
+			"Action_EditURL"		"Modifica URL"
+			"Action_CopyURL"		"Copia URL"
+			"Action_Cursor"		"Cursore del mouse"
+			"Action_Scroll"		"Scorri"
+			"Action_Select"		"Seleziona"
+			"Action_DoubleSelect"		"Doppio clic"
+			"Action_Zoom"		"Zoom"
+			"Action_AddToFavorites"		"Aggiungi ai preferiti"
+			"Action_OpenFavorites"		"Apri i preferiti"
+			"Action_OpenContextMenu"		"Apri il menu"
+			"Action_OpenEmptyTab"		"Apri una nuova scheda"
+			"Action_OpenInNewTab"		"Apri collegamento in una nuova scheda"
+			"Action_CloseTab"		"Chiudi questa scheda"
+			"Action_ShowKeyboard"		"Visualizza la tastiera virtuale"
+			"Action_Confirm"		"Conferma"
+			"Action_Cancel"		"Indietro"
+			"Action_Action1"		"Azione interfaccia 1"
+			"Action_Action2"		"Azione interfaccia 2"
+			"Action_Action3"		"Azione interfaccia 3"
+			"Action_Action4"		"Azione interfaccia 4"
+			"Action_LSilo"		"Sposta scheda a sinistra"
+			"Action_RSilo"		"Sposta scheda a destra"
+			"Action_LCycle"		"Torna indietro"
+			"Action_RCycle"		"Vai avanti "
+			"Action_Up"		"Sposta in alto"
+			"Action_Down"		"Sposta in basso"
+			"Action_Left"		"Sposta a sinistra"
+			"Action_Right"		"Sposta a destra"
+			"Action_TabLeft"		"Sposta scheda a sinistra"
+			"Action_TabRight"		"Sposta scheda a destra"
+			"Action_SwitchLanguage"		"Modifica lingua"
+			"Action_Submit"		"Invia testo"
+			"Action_Password"		"Mostra/nascondi la password"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Spazio"
+			"Action_LeftKey"		"Premi tasto sinistro"
+			"Action_RightKey"		"Premi tasto destro"
+			"Action_Cursor_Right"		"Cursore destro"
+			"Action_Cursor_Left"		"Cursore sinistro"
+			"Action_Shift"		"Maiusc"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Azione contestuale"
+			"Action_CursorSelect"		"Seleziona cursore del mouse"
+			"Action_ShowEmoticonPicker"		"Mostra menu emoticon"
+			"Action_AcceptGameInvite"		"Accetta l'invito al gioco"
+			"Action_InviteToGame"		"Invita al gioco"
+			"Action_ToggleVoiceChat"		"Attiva/disattiva la chat vocale"
+			"Action_ToggleFriendsList"		"Mostra/nascondi la lista amici"
+		}
+		"japanese"
+		{
+			"title"		"Big Pictureモードの公式設定"
+			"Chat"		"チャット"
+			"Set_Default"		"デフォルト"
+			"Set_WebBrowser"		"Webブラウザ"
+			"Set_Mouse"		"マウスの位置を選択"
+			"Set_Keyboard"		"オンスクリーンキーボード"
+			"Action_Back"		"前に戻る"
+			"Action_Forward"		"次へ進む"
+			"Action_Reload"		"リロード"
+			"Action_EditURL"		"URLを編集"
+			"Action_CopyURL"		"URLをコピー"
+			"Action_Cursor"		"マウスカーソル"
+			"Action_Scroll"		"スクロール"
+			"Action_Select"		"選択"
+			"Action_DoubleSelect"		"ダブルクリック"
+			"Action_Zoom"		"ズーム"
+			"Action_AddToFavorites"		"お気に入りに追加"
+			"Action_OpenFavorites"		"お気に入りを開く"
+			"Action_OpenContextMenu"		"メニューを開く"
+			"Action_OpenEmptyTab"		"新規に空のタブを開く"
+			"Action_OpenInNewTab"		"新規タブでリンクを開く"
+			"Action_CloseTab"		"現在のタブを閉じる"
+			"Action_ShowKeyboard"		"オンスクリーンキーボードを表示"
+			"Action_Confirm"		"確定"
+			"Action_Cancel"		"戻る"
+			"Action_Action1"		"UIアクション1"
+			"Action_Action2"		"UIアクション2"
+			"Action_Action3"		"UIアクション3"
+			"Action_Action4"		"UIアクション4"
+			"Action_LSilo"		"タブを左に切り替え"
+			"Action_RSilo"		"タブを右に切り替え"
+			"Action_LCycle"		"早戻し"
+			"Action_RCycle"		"早送り"
+			"Action_Up"		"上に移動"
+			"Action_Down"		"下に移動"
+			"Action_Left"		"左に移動"
+			"Action_Right"		"右に移動"
+			"Action_TabLeft"		"タブを左に切り替え"
+			"Action_TabRight"		"タブを右に切り替え"
+			"Action_SwitchLanguage"		"言語を変更"
+			"Action_Submit"		"テキストを送信"
+			"Action_Password"		"パスワードの表示を切り替え"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Space"
+			"Action_LeftKey"		"左キーを押す"
+			"Action_RightKey"		"右キーを押す"
+			"Action_Cursor_Right"		"右カーソル"
+			"Action_Cursor_Left"		"左カーソル"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"コンテクスチュアル・アクション"
+			"Action_CursorSelect"		"マウスカーソル選択"
+			"Action_ShowEmoticonPicker"		"絵文字ピッカーを表示"
+			"Action_AcceptGameInvite"		"ゲーム招待の承認"
+			"Action_InviteToGame"		"ゲームに招待"
+			"Action_ToggleVoiceChat"		"ボイスチャットの切り替え"
+			"Action_ToggleFriendsList"		"フレンドリストの表示／非表示"
+		}
+		"koreana"
+		{
+			"title"		"Big Picture 모드의 공식 설정"
+			"Chat"		"채팅"
+			"Set_Default"		"기본값"
+			"Set_WebBrowser"		"웹 브라우저"
+			"Set_Mouse"		"마우스 위치 선택하기"
+			"Set_Keyboard"		"온스크린 키보드"
+			"Action_Back"		"뒤로 이동하기"
+			"Action_Forward"		"앞으로 이동하기"
+			"Action_Reload"		"다시 불러오기"
+			"Action_EditURL"		"URL 편집하기"
+			"Action_CopyURL"		"URL 복사하기"
+			"Action_Cursor"		"마우스 커서"
+			"Action_Scroll"		"스크롤"
+			"Action_Select"		"선택"
+			"Action_DoubleSelect"		"더블 클릭"
+			"Action_Zoom"		"확대"
+			"Action_AddToFavorites"		"즐겨찾기에 추가"
+			"Action_OpenFavorites"		"즐겨찾기 열기"
+			"Action_OpenContextMenu"		"메뉴 열기"
+			"Action_OpenEmptyTab"		"새 탭 열기"
+			"Action_OpenInNewTab"		"새 탭에서 링크 열기"
+			"Action_CloseTab"		"현재 탭 닫기"
+			"Action_ShowKeyboard"		"온스크린 키보드 표시"
+			"Action_Confirm"		"확인"
+			"Action_Cancel"		"뒤로 가기"
+			"Action_Action1"		"UI 동작 1"
+			"Action_Action2"		"UI 동작 2"
+			"Action_Action3"		"UI 동작 3"
+			"Action_Action4"		"UI 동작 4"
+			"Action_LSilo"		"왼쪽으로 탭 전환"
+			"Action_RSilo"		"오른쪽으로 탭 전환"
+			"Action_LCycle"		"뒤로 건너뛰기"
+			"Action_RCycle"		"앞으로 건너뛰기"
+			"Action_Up"		"위로 이동하기"
+			"Action_Down"		"아래로 이동하기"
+			"Action_Left"		"왼쪽으로 이동하기"
+			"Action_Right"		"오른쪽으로 이동하기"
+			"Action_TabLeft"		"왼쪽으로 탭 전환"
+			"Action_TabRight"		"오른쪽으로 탭 전환"
+			"Action_SwitchLanguage"		"언어 바꾸기"
+			"Action_Submit"		"텍스트 입력"
+			"Action_Password"		"비밀번호 표시 전환"
+			"Action_Backspace"		"백스페이스"
+			"Action_Space"		"스페이스"
+			"Action_LeftKey"		"왼쪽 키 누르기"
+			"Action_RightKey"		"오른쪽 키 누르기"
+			"Action_Cursor_Right"		"오른쪽 커서"
+			"Action_Cursor_Left"		"왼쪽 커서"
+			"Action_Shift"		"Shift 키"
+			"Action_Alt"		"Alt 키"
+			"Action_Contextual"		"상황별 동작"
+			"Action_CursorSelect"		"마우스 커서 선택"
+			"Action_ShowEmoticonPicker"		"이모티콘 선택 도구 표시하기"
+			"Action_AcceptGameInvite"		"게임 초대 수락하기"
+			"Action_InviteToGame"		"게임에 초대하기"
+			"Action_ToggleVoiceChat"		"음성 채팅 전환하기"
+			"Action_ToggleFriendsList"		"친구 목록 표시하기 또는 숨기기"
+		}
+		"norwegian"
+		{
+			"title"		"Offisiell konfigurasjon for Big Picture-modus"
+			"Chat"		"Samtale"
+			"Set_Default"		"Standard"
+			"Set_WebBrowser"		"Nettleser"
+			"Set_Mouse"		"Velg museposisjon"
+			"Set_Keyboard"		"Skjermtastatur"
+			"Action_Back"		"Gå tilbake"
+			"Action_Forward"		"Gå fremover"
+			"Action_Reload"		"Last inn på nytt"
+			"Action_EditURL"		"Rediger nettadresse"
+			"Action_CopyURL"		"Kopier nettadresse"
+			"Action_Cursor"		"Musepeker"
+			"Action_Scroll"		"Rull"
+			"Action_Select"		"Velg"
+			"Action_DoubleSelect"		"Dobbeltklikk"
+			"Action_Zoom"		"Zoom"
+			"Action_AddToFavorites"		"Legg til i favoritter"
+			"Action_OpenFavorites"		"Åpne favoritter"
+			"Action_OpenContextMenu"		"Åpne meny"
+			"Action_OpenEmptyTab"		"Åpne ny fane"
+			"Action_OpenInNewTab"		"Åpne lenke i ny fane"
+			"Action_CloseTab"		"Lukk gjeldende fane"
+			"Action_ShowKeyboard"		"Vis skjermtastatur"
+			"Action_Confirm"		"Bekreft"
+			"Action_Cancel"		"Tilbake"
+			"Action_Action1"		"Grensesnitthandling 1"
+			"Action_Action2"		"Grensesnitthandling 2"
+			"Action_Action3"		"Grensesnitthandling 3"
+			"Action_Action4"		"Grensesnitthandling 4"
+			"Action_LSilo"		"Bytt fane mot venstre"
+			"Action_RSilo"		"Bytt fane mot høyre"
+			"Action_LCycle"		"Hopp tilbake"
+			"Action_RCycle"		"Hopp fremover"
+			"Action_Up"		"Flytt opp"
+			"Action_Down"		"Flytt ned"
+			"Action_Left"		"Flytt til venstre"
+			"Action_Right"		"Flytt til høyre"
+			"Action_TabLeft"		"Bytt fane mot venstre"
+			"Action_TabRight"		"Bytt fane mot høyre"
+			"Action_SwitchLanguage"		"Bytt språk"
+			"Action_Submit"		"Send tekst"
+			"Action_Password"		"Vis/skjul passord"
+			"Action_Backspace"		"Rettetast"
+			"Action_Space"		"Mellomrom"
+			"Action_LeftKey"		"Trykk venstre tast"
+			"Action_RightKey"		"Trykk høyre tast"
+			"Action_Cursor_Right"		"Høyre markør"
+			"Action_Cursor_Left"		"Venstre markør"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Kontekstuell handling"
+			"Action_CursorSelect"		"Velg med musepeker"
+			"Action_ShowEmoticonPicker"		"Vis uttrykksikonvelger"
+			"Action_AcceptGameInvite"		"Godta spillinvitasjon"
+			"Action_InviteToGame"		"Inviter til spill"
+			"Action_ToggleVoiceChat"		"Slå av/på stemmesamtale"
+			"Action_ToggleFriendsList"		"Vis/skjul venneliste"
+		}
+		"polish"
+		{
+			"title"		"Oficjalna konfiguracja dla trybu Big Picture"
+			"Chat"		"Czat"
+			"Set_Default"		"Domyślny"
+			"Set_WebBrowser"		"Przeglądarka internetowa"
+			"Set_Mouse"		"Wybierz pozycję myszy"
+			"Set_Keyboard"		"Klawiatura ekranowa"
+			"Action_Back"		"Przejdź wstecz"
+			"Action_Forward"		"Przejdź do przodu"
+			"Action_Reload"		"Odśwież"
+			"Action_EditURL"		"Edytuj URL"
+			"Action_CopyURL"		"Kopiuj URL"
+			"Action_Cursor"		"Kursor myszy"
+			"Action_Scroll"		"Przewiń"
+			"Action_Select"		"Wybierz"
+			"Action_DoubleSelect"		"Kliknij dwukrotnie"
+			"Action_Zoom"		"Przybliż"
+			"Action_AddToFavorites"		"Dodaj do ulubionych"
+			"Action_OpenFavorites"		"Otwórz ulubione"
+			"Action_OpenContextMenu"		"Otwórz menu"
+			"Action_OpenEmptyTab"		"Otwórz nową pustą kartę"
+			"Action_OpenInNewTab"		"Otwórz link w nowej karcie"
+			"Action_CloseTab"		"Zamknij obecną kartę"
+			"Action_ShowKeyboard"		"Pokaż klawiaturę ekranową"
+			"Action_Confirm"		"Potwierdź"
+			"Action_Cancel"		"Wstecz"
+			"Action_Action1"		"Działanie interfejsu 1"
+			"Action_Action2"		"Działanie interfejsu 2"
+			"Action_Action3"		"Działanie interfejsu 3"
+			"Action_Action4"		"Działanie interfejsu 4"
+			"Action_LSilo"		"Przełącz na lewą kartę"
+			"Action_RSilo"		"Przełącz na prawą kartę"
+			"Action_LCycle"		"Skocz wstecz"
+			"Action_RCycle"		"Skocz do przodu"
+			"Action_Up"		"Ruch w górę"
+			"Action_Down"		"Ruch w dół"
+			"Action_Left"		"Ruch w lewo"
+			"Action_Right"		"Ruch w prawo"
+			"Action_TabLeft"		"Przełącz na lewą kartę"
+			"Action_TabRight"		"Przełącz na prawą kartę"
+			"Action_SwitchLanguage"		"Przełącz język"
+			"Action_Submit"		"Prześlij tekst"
+			"Action_Password"		"Pokaż hasło"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Spacja"
+			"Action_LeftKey"		"Wciśnij lewy klawisz"
+			"Action_RightKey"		"Wciśnij prawy klawisz"
+			"Action_Cursor_Right"		"Prawy kursor"
+			"Action_Cursor_Left"		"Lewy kursor"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Działanie kontekstowe"
+			"Action_CursorSelect"		"Wybór kursora myszy"
+			"Action_ShowEmoticonPicker"		"Pokaż wybór emotikony"
+			"Action_AcceptGameInvite"		"Przyjmij zaproszenie do gry"
+			"Action_InviteToGame"		"Zaproś do gry"
+			"Action_ToggleVoiceChat"		"Przełącz czat głosowy"
+			"Action_ToggleFriendsList"		"Pokaż/ukryj listę znajomych"
+		}
+		"romanian"
+		{
+			"title"		"Configurarea oficială pentru modul Big Picture"
+			"Chat"		"Chat"
+			"Set_Default"		"Implicită"
+			"Set_WebBrowser"		"Browser web"
+			"Set_Mouse"		"Selectează poziția cursorului"
+			"Set_Keyboard"		"Tastatură vizuală"
+			"Action_Back"		"Navighează înapoi"
+			"Action_Forward"		"Navighează înainte"
+			"Action_Reload"		"Reîncarcă"
+			"Action_EditURL"		"Editează URL-ul"
+			"Action_CopyURL"		"Copiază URL-ul"
+			"Action_Cursor"		"Cursor de mouse"
+			"Action_Scroll"		"Derulează"
+			"Action_Select"		"Selectează"
+			"Action_DoubleSelect"		"Dublu clic"
+			"Action_Zoom"		"Mărește"
+			"Action_AddToFavorites"		"Adaugă la preferate"
+			"Action_OpenFavorites"		"Deschide preferatele"
+			"Action_OpenContextMenu"		"Deschide meniul"
+			"Action_OpenEmptyTab"		"Deschide o filă goală nouă"
+			"Action_OpenInNewTab"		"Deschide linkul într-o filă nouă"
+			"Action_CloseTab"		"Închide fila curentă"
+			"Action_ShowKeyboard"		"Arată tastatura vizuală"
+			"Action_Confirm"		"Confirmă"
+			"Action_Cancel"		"Înapoi"
+			"Action_Action1"		"Acțiunea de interfață 1"
+			"Action_Action2"		"Acțiunea de interfață 2"
+			"Action_Action3"		"Acțiunea de interfață 3"
+			"Action_Action4"		"Acțiunea de interfață 4"
+			"Action_LSilo"		"Comută fila spre stânga"
+			"Action_RSilo"		"Comută fila spre dreapta"
+			"Action_LCycle"		"Salt înapoi"
+			"Action_RCycle"		"Salt înainte"
+			"Action_Up"		"Mută în sus"
+			"Action_Down"		"Mută în jos"
+			"Action_Left"		"Mută la stânga"
+			"Action_Right"		"Mută la dreapta"
+			"Action_TabLeft"		"Comută fila spre stânga"
+			"Action_TabRight"		"Comută fila spre dreapta"
+			"Action_SwitchLanguage"		"Schimbă limba"
+			"Action_Submit"		"Trimite textul"
+			"Action_Password"		"Comută vizibilitatea parolei"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Spațiu"
+			"Action_LeftKey"		"Apasă tasta stângă"
+			"Action_RightKey"		"Apasă tasta dreaptă"
+			"Action_Cursor_Right"		"Cursorul drept"
+			"Action_Cursor_Left"		"Cursorul stâng"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Acțiune contextuală"
+			"Action_CursorSelect"		"Selectează cursorul de mouse"
+			"Action_ShowEmoticonPicker"		"Arată meniul de emoticonuri"
+			"Action_AcceptGameInvite"		"Acceptă invitația la joacă"
+			"Action_InviteToGame"		"Invită la joacă"
+			"Action_ToggleVoiceChat"		"Comută chatul vocal"
+			"Action_ToggleFriendsList"		"Arată/ascunde lista de prieteni"
+		}
+		"russian"
+		{
+			"title"		"Официальные настройки управления в режиме Big Picture"
+			"Chat"		"Чат"
+			"Set_Default"		"По умолчанию"
+			"Set_WebBrowser"		"Браузер"
+			"Set_Mouse"		"Выбрать позицию мыши"
+			"Set_Keyboard"		"Экранная клавиатура"
+			"Action_Back"		"Предыдущая страница"
+			"Action_Forward"		"Следующая страница"
+			"Action_Reload"		"Обновить"
+			"Action_EditURL"		"Изменить URL-адрес"
+			"Action_CopyURL"		"Скопировать URL-адрес"
+			"Action_Cursor"		"Курсор мыши"
+			"Action_Scroll"		"Прокрутить"
+			"Action_Select"		"Выбрать"
+			"Action_DoubleSelect"		"Нажатие дважды"
+			"Action_Zoom"		"Приблизить"
+			"Action_AddToFavorites"		"Добавить в избранное"
+			"Action_OpenFavorites"		"Открыть избранное"
+			"Action_OpenContextMenu"		"Открыть меню"
+			"Action_OpenEmptyTab"		"Открыть новую вкладку"
+			"Action_OpenInNewTab"		"Открыть ссылку в новой вкладке"
+			"Action_CloseTab"		"Закрыть текущую вкладку"
+			"Action_ShowKeyboard"		"Показать экранную клавиатуру"
+			"Action_Confirm"		"Подтвердить"
+			"Action_Cancel"		"Назад"
+			"Action_Action1"		"Действие интерфейса 1"
+			"Action_Action2"		"Действие интерфейса 2"
+			"Action_Action3"		"Действие интерфейса 3"
+			"Action_Action4"		"Действие интерфейса 4"
+			"Action_LSilo"		"Перейти на вкладку левее"
+			"Action_RSilo"		"Перейти на вкладку правее"
+			"Action_LCycle"		"Перейти назад"
+			"Action_RCycle"		"Перейти вперёд"
+			"Action_Up"		"Переместиться вверх"
+			"Action_Down"		"Переместиться вниз"
+			"Action_Left"		"Переместиться влево"
+			"Action_Right"		"Переместиться вправо"
+			"Action_TabLeft"		"Перейти на вкладку левее"
+			"Action_TabRight"		"Перейти на вкладку правее"
+			"Action_SwitchLanguage"		"Изменить язык"
+			"Action_Submit"		"Отправить текст"
+			"Action_Password"		"Изменить видимость пароля"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Пробел"
+			"Action_LeftKey"		"Нажатие левой клавиши"
+			"Action_RightKey"		"Нажатие правой клавиши"
+			"Action_Cursor_Right"		"Правый курсор"
+			"Action_Cursor_Left"		"Левый курсор"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Контекстное действие"
+			"Action_CursorSelect"		"Выбрать курсором мыши"
+			"Action_ShowEmoticonPicker"		"Показать смайлики"
+			"Action_AcceptGameInvite"		"Принять приглашение в игру"
+			"Action_InviteToGame"		"Пригласить в игру"
+			"Action_ToggleVoiceChat"		"Включить/выключить голосовой чат"
+			"Action_ToggleFriendsList"		"Показать/скрыть список друзей"
+		}
+		"latam"
+		{
+			"title"		"Configuración oficial para el modo Big Picture"
+			"Chat"		"Chat"
+			"Set_Default"		"Predeterminado"
+			"Set_WebBrowser"		"Navegador web"
+			"Set_Mouse"		"Selecciona la posición del mouse"
+			"Set_Keyboard"		"Teclado en pantalla"
+			"Action_Back"		"Navegar hacia atrás"
+			"Action_Forward"		"Navegar hacia adelante"
+			"Action_Reload"		"Recargar"
+			"Action_EditURL"		"Editar URL"
+			"Action_CopyURL"		"Copiar URL"
+			"Action_Cursor"		"Cursor del mouse"
+			"Action_Scroll"		"Desplazarse"
+			"Action_Select"		"Seleccionar"
+			"Action_DoubleSelect"		"Doble clic"
+			"Action_Zoom"		"Zoom"
+			"Action_AddToFavorites"		"Añadir a Favoritos"
+			"Action_OpenFavorites"		"Abrir Favoritos"
+			"Action_OpenContextMenu"		"Abrir el menú"
+			"Action_OpenEmptyTab"		"Abrir nueva pestaña"
+			"Action_OpenInNewTab"		"Abrir enlace en una nueva pestaña"
+			"Action_CloseTab"		"Cerrar la pestaña actual"
+			"Action_ShowKeyboard"		"Mostrar teclado en pantalla"
+			"Action_Confirm"		"Confirmar"
+			"Action_Cancel"		"Atrás"
+			"Action_Action1"		"Acción IU 1"
+			"Action_Action2"		"Acción IU 2"
+			"Action_Action3"		"Acción IU 3"
+			"Action_Action4"		"Acción IU 4"
+			"Action_LSilo"		"Cambiar pestaña a la izquierda"
+			"Action_RSilo"		"Cambiar pestaña a la derecha"
+			"Action_LCycle"		"Saltar hacia atrás"
+			"Action_RCycle"		"Saltar hacia adelante"
+			"Action_Up"		"Subir"
+			"Action_Down"		"Bajar"
+			"Action_Left"		"Mover hacia la izquierda"
+			"Action_Right"		"Mover hacia la derecha"
+			"Action_TabLeft"		"Cambiar pestaña a la izquierda"
+			"Action_TabRight"		"Cambiar pestaña a la derecha"
+			"Action_SwitchLanguage"		"Cambiar idioma"
+			"Action_Submit"		"Enviar texto"
+			"Action_Password"		"Cambiar la visibilidad de la contraseña"
+			"Action_Backspace"		"Retroceso"
+			"Action_Space"		"Espacio"
+			"Action_LeftKey"		"Presiona la tecla izquierda"
+			"Action_RightKey"		"Presiona la tecla derecha"
+			"Action_Cursor_Right"		"Cursor derecho"
+			"Action_Cursor_Left"		"Cursor izquierdo"
+			"Action_Shift"		"Mayús."
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Acción contextual"
+			"Action_CursorSelect"		"Seleccionar cursor del mouse"
+			"Action_ShowEmoticonPicker"		"Mostrar el selector de emoticonos"
+			"Action_AcceptGameInvite"		"Aceptar invitación a jugar"
+			"Action_InviteToGame"		"Invitar a jugar"
+			"Action_ToggleVoiceChat"		"Activar/desactivar chat de voz"
+			"Action_ToggleFriendsList"		"Mostrar/ocultar lista de amigos"
+		}
+		"spanish"
+		{
+			"title"		"Configuración oficial para el modo Big Picture"
+			"Chat"		"Chat"
+			"Set_Default"		"Predeterminado"
+			"Set_WebBrowser"		"Navegador web"
+			"Set_Mouse"		"Selecciona la posición del ratón"
+			"Set_Keyboard"		"Teclado en pantalla"
+			"Action_Back"		"Ir atrás"
+			"Action_Forward"		"Ir adelante"
+			"Action_Reload"		"Recargar"
+			"Action_EditURL"		"Editar URL"
+			"Action_CopyURL"		"Copiar URL"
+			"Action_Cursor"		"Cursor del ratón"
+			"Action_Scroll"		"Desplazarse"
+			"Action_Select"		"Seleccionar"
+			"Action_DoubleSelect"		"Doble clic"
+			"Action_Zoom"		"Zoom"
+			"Action_AddToFavorites"		"Añadir a Favoritos"
+			"Action_OpenFavorites"		"Abrir Favoritos"
+			"Action_OpenContextMenu"		"Abrir el menú"
+			"Action_OpenEmptyTab"		"Abrir nueva pestaña"
+			"Action_OpenInNewTab"		"Abrir enlace en una nueva pestaña"
+			"Action_CloseTab"		"Cerrar la pestaña actual"
+			"Action_ShowKeyboard"		"Mostrar teclado en pantalla"
+			"Action_Confirm"		"Confirmar"
+			"Action_Cancel"		"Atrás"
+			"Action_Action1"		"Acción IU 1"
+			"Action_Action2"		"Acción IU 2"
+			"Action_Action3"		"Acción IU 3"
+			"Action_Action4"		"Acción IU 4"
+			"Action_LSilo"		"Cambiar pestaña a la izquierda"
+			"Action_RSilo"		"Cambiar pestaña a la derecha"
+			"Action_LCycle"		"Saltar hacia atrás"
+			"Action_RCycle"		"Saltar hacia adelante"
+			"Action_Up"		"Subir"
+			"Action_Down"		"Bajar"
+			"Action_Left"		"Ir a la izquierda"
+			"Action_Right"		"Ir a la derecha"
+			"Action_TabLeft"		"Cambiar pestaña a la izquierda"
+			"Action_TabRight"		"Cambiar pestaña a la derecha"
+			"Action_SwitchLanguage"		"Cambiar idioma"
+			"Action_Submit"		"Enviar texto"
+			"Action_Password"		"Cambiar la visibilidad de la contraseña"
+			"Action_Backspace"		"Retroceso"
+			"Action_Space"		"Espacio"
+			"Action_LeftKey"		"Presiona la tecla izquierda"
+			"Action_RightKey"		"Presiona la tecla derecha"
+			"Action_Cursor_Right"		"Cursor derecho"
+			"Action_Cursor_Left"		"Cursor izquierdo"
+			"Action_Shift"		"Mayús."
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Acción contextual"
+			"Action_CursorSelect"		"Seleccionar cursor del ratón"
+			"Action_ShowEmoticonPicker"		"Mostrar el selector de emoticonos"
+			"Action_AcceptGameInvite"		"Aceptar invitación a jugar"
+			"Action_InviteToGame"		"Invitar a jugar"
+			"Action_ToggleVoiceChat"		"Activar/desactivar chat de voz"
+			"Action_ToggleFriendsList"		"Mostrar/ocultar lista de amigos"
+		}
+		"swedish"
+		{
+			"title"		"Officiell konfiguration för storbildsläget"
+			"Chat"		"Chatt"
+			"Set_Default"		"Standard"
+			"Set_WebBrowser"		"Webbläsare"
+			"Set_Mouse"		"Välj musposition"
+			"Set_Keyboard"		"Skärmtangentbord"
+			"Action_Back"		"Navigera tillbaka"
+			"Action_Forward"		"Navigera framåt"
+			"Action_Reload"		"Uppdatera"
+			"Action_EditURL"		"Redigera URL"
+			"Action_CopyURL"		"Kopiera URL"
+			"Action_Cursor"		"Muspekare"
+			"Action_Scroll"		"Scrolla"
+			"Action_Select"		"Välj"
+			"Action_DoubleSelect"		"Dubbelklicka"
+			"Action_Zoom"		"Zooma"
+			"Action_AddToFavorites"		"Lägg till i favoriter"
+			"Action_OpenFavorites"		"Öppna favoriter"
+			"Action_OpenContextMenu"		"Öppna meny"
+			"Action_OpenEmptyTab"		"Öppna tom ny flik"
+			"Action_OpenInNewTab"		"Öppna länk i ny flik"
+			"Action_CloseTab"		"Stäng nuvarande flik"
+			"Action_ShowKeyboard"		"Visa skärmtangentbordet"
+			"Action_Confirm"		"Bekräfta"
+			"Action_Cancel"		"Tillbaka"
+			"Action_Action1"		"Gränssnittsåtgärd 1"
+			"Action_Action2"		"Gränssnittsåtgärd 2"
+			"Action_Action3"		"Gränssnittsåtgärd 3"
+			"Action_Action4"		"Gränssnittsåtgärd 4"
+			"Action_LSilo"		"Byt till fliken till vänster"
+			"Action_RSilo"		"Byt till fliken till höger"
+			"Action_LCycle"		"Hoppa tillbaka"
+			"Action_RCycle"		"Hoppa framåt"
+			"Action_Up"		"Flytta upp"
+			"Action_Down"		"Flytta ned"
+			"Action_Left"		"Flytta vänster"
+			"Action_Right"		"Flytta höger"
+			"Action_TabLeft"		"Byt till fliken till vänster"
+			"Action_TabRight"		"Byt till fliken till höger"
+			"Action_SwitchLanguage"		"Byt språk"
+			"Action_Submit"		"Skicka text"
+			"Action_Password"		"Växla lösenordssynlighet"
+			"Action_Backspace"		"Backsteg"
+			"Action_Space"		"Mellanslag"
+			"Action_LeftKey"		"Tryck på vänster knapp"
+			"Action_RightKey"		"Tryck på höger knapp"
+			"Action_Cursor_Right"		"Höger pekare"
+			"Action_Cursor_Left"		"Vänster pekare"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Kontextuell åtgärd"
+			"Action_CursorSelect"		"Välj med muspekare"
+			"Action_ShowEmoticonPicker"		"Visa uttryckssymboler"
+			"Action_AcceptGameInvite"		"Acceptera spelinbjudan"
+			"Action_InviteToGame"		"Bjud in till spel"
+			"Action_ToggleVoiceChat"		"Växla röstchatt"
+			"Action_ToggleFriendsList"		"Visa/dölj vänlista"
+		}
+		"thai"
+		{
+			"title"		"การกำหนดค่าอย่างเป็นทางการสำหรับโหมด Big Picture"
+			"Chat"		"แชท"
+			"Set_Default"		"ค่าเริ่มต้น"
+			"Set_WebBrowser"		"เว็บเบราว์เซอร์"
+			"Set_Mouse"		"เลือกตำแหน่งเมาส์"
+			"Set_Keyboard"		"คีย์บอร์ดบนหน้าจอ"
+			"Action_Back"		"นำทางย้อนกลับ"
+			"Action_Forward"		"นำทางไปข้างหน้า"
+			"Action_Reload"		"รีโหลด"
+			"Action_EditURL"		"แก้ไข URL"
+			"Action_CopyURL"		"คัดลอก URL"
+			"Action_Cursor"		"เคอร์เซอร์เมาส์"
+			"Action_Scroll"		"เลื่อน"
+			"Action_Select"		"เลือก"
+			"Action_DoubleSelect"		"ดับเบิลคลิก"
+			"Action_Zoom"		"ซูม"
+			"Action_AddToFavorites"		"เพิ่มในรายการโปรด"
+			"Action_OpenFavorites"		"เปิดรายการโปรด"
+			"Action_OpenContextMenu"		"เปิดเมนู"
+			"Action_OpenEmptyTab"		"เปิดแท็บใหม่ที่ว่าง"
+			"Action_OpenInNewTab"		"เปิดลิงก์ในแท็บใหม่"
+			"Action_CloseTab"		"ปิดแท็บปัจจุบัน"
+			"Action_ShowKeyboard"		"แสดงคีย์บอร์ดบนหน้าจอ"
+			"Action_Confirm"		"ยืนยัน"
+			"Action_Cancel"		"ย้อนกลับ"
+			"Action_Action1"		"คำสั่ง UI 1"
+			"Action_Action2"		"คำสั่ง UI 2"
+			"Action_Action3"		"คำสั่ง UI 3"
+			"Action_Action4"		"คำสั่ง UI 4"
+			"Action_LSilo"		"สลับแท็บไปทางซ้าย"
+			"Action_RSilo"		"สลับแท็บไปทางขวา"
+			"Action_LCycle"		"ข้ามย้อนกลับ"
+			"Action_RCycle"		"ข้ามไปข้างหน้า"
+			"Action_Up"		"เคลื่อนขึ้น"
+			"Action_Down"		"เคลื่อนลง"
+			"Action_Left"		"เคลื่อนซ้าย"
+			"Action_Right"		"เคลื่อนขวา"
+			"Action_TabLeft"		"สลับแท็บไปทางซ้าย"
+			"Action_TabRight"		"สลับแท็บไปทางขวา"
+			"Action_SwitchLanguage"		"สลับภาษา"
+			"Action_Submit"		"ส่งข้อความ"
+			"Action_Password"		"สลับการมองเห็นรหัสผ่าน"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"เว้นวรรค"
+			"Action_LeftKey"		"กดปุ่มซ้าย"
+			"Action_RightKey"		"กดปุ่มขวา"
+			"Action_Cursor_Right"		"เคอร์เซอร์ขวา"
+			"Action_Cursor_Left"		"เคอร์เซอร์ซ้าย"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"คำสั่งตามบริบท"
+			"Action_CursorSelect"		"ตัวเลือกเคอร์เซอร์เมาส์"
+			"Action_ShowEmoticonPicker"		"แสดงตัวใช้เลือกอีโมติคอน"
+			"Action_AcceptGameInvite"		"ยอมรับคำเชิญเข้าร่วมกลุ่ม"
+			"Action_InviteToGame"		"เชิญเข้าร่วมเกม"
+			"Action_ToggleVoiceChat"		"สลับการแชทด้วยเสียง"
+			"Action_ToggleFriendsList"		"แสดง/ซ่อนรายชื่อเพื่อน"
+		}
+		"turkish"
+		{
+			"title"		"Geniş Ekran Modu İçin Resmî Yapılandırma"
+			"Chat"		"Sohbet"
+			"Set_Default"		"Varsayılan"
+			"Set_WebBrowser"		"İnternet Tarayıcısı"
+			"Set_Mouse"		"Fare Pozisyonunu Seç"
+			"Set_Keyboard"		"Ekran Klavyesi"
+			"Action_Back"		"Geri Git"
+			"Action_Forward"		"İleri Git"
+			"Action_Reload"		"Yeniden Yükle"
+			"Action_EditURL"		"URL'yi Düzenle"
+			"Action_CopyURL"		"URL'yi Kopyala"
+			"Action_Cursor"		"Fare İmleci"
+			"Action_Scroll"		"Kaydır"
+			"Action_Select"		"Seç"
+			"Action_DoubleSelect"		"Çift Tıkla"
+			"Action_Zoom"		"Yakınlaştır"
+			"Action_AddToFavorites"		"Favorilere Ekle"
+			"Action_OpenFavorites"		"Favorileri Aç"
+			"Action_OpenContextMenu"		"Menü'yü Aç"
+			"Action_OpenEmptyTab"		"Yeni ve boş sekme aç"
+			"Action_OpenInNewTab"		"Bağlantıyı yeni sekmede aç"
+			"Action_CloseTab"		"Mevcut sekmeyi kapat"
+			"Action_ShowKeyboard"		"Ekran Klavyesini Göster"
+			"Action_Confirm"		"Onayla"
+			"Action_Cancel"		"Geri"
+			"Action_Action1"		"UI Eylemi 1"
+			"Action_Action2"		"UI Eylemi 2"
+			"Action_Action3"		"UI Eylemi 3"
+			"Action_Action4"		"UI Eylemi 4"
+			"Action_LSilo"		"Sol Sekmeye Geç"
+			"Action_RSilo"		"Sağ Sekmeye Geç"
+			"Action_LCycle"		"Geri Sar"
+			"Action_RCycle"		"İleri Sar"
+			"Action_Up"		"Yukarı İlerle"
+			"Action_Down"		"Aşağı İlerle"
+			"Action_Left"		"Sola İlerle"
+			"Action_Right"		"Sağa İlerle"
+			"Action_TabLeft"		"Sol Sekmeye Geç"
+			"Action_TabRight"		"Sağ Sekmeye Geç"
+			"Action_SwitchLanguage"		"Dili Değiştir"
+			"Action_Submit"		"Metni Gönder"
+			"Action_Password"		"Parola Görünürlüğünü Aç/Kapat"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Boşluk"
+			"Action_LeftKey"		"Sol Tuşa Bas"
+			"Action_RightKey"		"Sağ Tuşa Bas"
+			"Action_Cursor_Right"		"Sağ İmleç"
+			"Action_Cursor_Left"		"Sol İmleç"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Bağlamsal Eylem"
+			"Action_CursorSelect"		"Fare İmleci Seçimi"
+			"Action_ShowEmoticonPicker"		"İfade Seçimini Göster"
+			"Action_AcceptGameInvite"		"Oyun Davetini Kabul Et"
+			"Action_InviteToGame"		"Oyuna Davet Et"
+			"Action_ToggleVoiceChat"		"Sesli Sohbeti Aç/Kapat"
+			"Action_ToggleFriendsList"		"Arkadaş Listesini Göster/Gizle"
+		}
+		"ukrainian"
+		{
+			"title"		"Офіційне налаштування для режиму Big Picture"
+			"Chat"		"Чат"
+			"Set_Default"		"Типово"
+			"Set_WebBrowser"		"Веб-браузер"
+			"Set_Mouse"		"Виберіть положення миші"
+			"Set_Keyboard"		"Екранна клавіатура"
+			"Action_Back"		"Назад"
+			"Action_Forward"		"Уперед"
+			"Action_Reload"		"Перезавантажити"
+			"Action_EditURL"		"Редагувати посилання"
+			"Action_CopyURL"		"Скопіювати посилання"
+			"Action_Cursor"		"Вказівник миші"
+			"Action_Scroll"		"Прокрутити"
+			"Action_Select"		"Вибрати"
+			"Action_DoubleSelect"		"Клацнути двічі"
+			"Action_Zoom"		"Масштабувати"
+			"Action_AddToFavorites"		"Додати у вибране"
+			"Action_OpenFavorites"		"Відкрити вподобання"
+			"Action_OpenContextMenu"		"Відкрити меню"
+			"Action_OpenEmptyTab"		"Відкрити нову порожню сторінку"
+			"Action_OpenInNewTab"		"Відкрити посилання у новій вкладці"
+			"Action_CloseTab"		"Закрити поточну вкладку"
+			"Action_ShowKeyboard"		"Показати екранну клавіатуру"
+			"Action_Confirm"		"Підтвердити"
+			"Action_Cancel"		"Скасувати"
+			"Action_Action1"		"Дія 1"
+			"Action_Action2"		"Дія 2"
+			"Action_Action3"		"Дія 3"
+			"Action_Action4"		"Дія 4"
+			"Action_LSilo"		"Перемкнути вкладку ліворуч"
+			"Action_RSilo"		"Перемкнути вкладку праворуч"
+			"Action_LCycle"		"Повернутися"
+			"Action_RCycle"		"Перейти вперед"
+			"Action_Up"		"Рухатися вгору"
+			"Action_Down"		"Рухатися вниз"
+			"Action_Left"		"Рухатися ліворуч"
+			"Action_Right"		"Рухатися праворуч"
+			"Action_TabLeft"		"Перемкнути вкладку ліворуч"
+			"Action_TabRight"		"Перемкнути вкладку праворуч"
+			"Action_SwitchLanguage"		"Перемкнути мову"
+			"Action_Submit"		"Підтвердити текст"
+			"Action_Password"		"Показати пароль"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Пробіл"
+			"Action_LeftKey"		"Натисніть ліву клавішу"
+			"Action_RightKey"		"Натисніть праву клавішу"
+			"Action_Cursor_Right"		"Правий курсор"
+			"Action_Cursor_Left"		"Лівий курсор"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Контекстне меню"
+			"Action_CursorSelect"		"Вибрати вказівник миші"
+			"Action_ShowEmoticonPicker"		"Показати вибір смайлика"
+			"Action_AcceptGameInvite"		"Прийняти ігрове запрошення"
+			"Action_InviteToGame"		"Запросити до гри"
+			"Action_ToggleVoiceChat"		"Показати голосовий чат"
+			"Action_ToggleFriendsList"		"Показати/приховати список друзів"
+		}
+		"vietnamese"
+		{
+			"title"		"Thiết lập chính thức cho chế độ Big Picture"
+			"Chat"		"Tán gẫu"
+			"Set_Default"		"Mặc định"
+			"Set_WebBrowser"		"Trình duyệt"
+			"Set_Mouse"		"Chọn vị trí chuột"
+			"Set_Keyboard"		"Bàn phím trên màn hình"
+			"Action_Back"		"Định vị trở lại"
+			"Action_Forward"		"Định vị tới trước"
+			"Action_Reload"		"Tải lại"
+			"Action_EditURL"		"Chỉnh URL"
+			"Action_CopyURL"		"Sao chép URL"
+			"Action_Cursor"		"Con trỏ chuột"
+			"Action_Scroll"		"Cuộn"
+			"Action_Select"		"Chọn"
+			"Action_DoubleSelect"		"Nhấp đúp chuột"
+			"Action_Zoom"		"Phóng to"
+			"Action_AddToFavorites"		"Thêm vào yêu thích"
+			"Action_OpenFavorites"		"Mở yêu thích"
+			"Action_OpenContextMenu"		"Mở menu"
+			"Action_OpenEmptyTab"		"Mở một thẻ trống mới"
+			"Action_OpenInNewTab"		"Mở đường dẫn trong thẻ mới"
+			"Action_CloseTab"		"Đóng thẻ hiện tại"
+			"Action_ShowKeyboard"		"Hiện bàn phím trên màn hình"
+			"Action_Confirm"		"Xác nhận"
+			"Action_Cancel"		"Quay lại"
+			"Action_Action1"		"Hành động UI 1"
+			"Action_Action2"		"Hành động UI 2"
+			"Action_Action3"		"Hành động UI 3"
+			"Action_Action4"		"Hành động UI 4"
+			"Action_LSilo"		"Chuyển thẻ sang trái"
+			"Action_RSilo"		"Chuyển thẻ sang phải"
+			"Action_LCycle"		"Bỏ qua trở lại"
+			"Action_RCycle"		"Bỏ tới trước"
+			"Action_Up"		"Đi lên"
+			"Action_Down"		"Đi xuống"
+			"Action_Left"		"Đi sang trái"
+			"Action_Right"		"Đi sang phải"
+			"Action_TabLeft"		"Chuyển thẻ sang trái"
+			"Action_TabRight"		"Chuyển thẻ sang phải"
+			"Action_SwitchLanguage"		"Đổi ngôn ngữ"
+			"Action_Submit"		"Gửi nội dung"
+			"Action_Password"		"Bật/tắt hiển thị mật khẩu"
+			"Action_Backspace"		"Backspace"
+			"Action_Space"		"Space"
+			"Action_LeftKey"		"Nhấn phím trái"
+			"Action_RightKey"		"Nhấn phím phải"
+			"Action_Cursor_Right"		"Chuột phải"
+			"Action_Cursor_Left"		"Chuột trái"
+			"Action_Shift"		"Shift"
+			"Action_Alt"		"Alt"
+			"Action_Contextual"		"Hành động theo ngữ cảnh"
+			"Action_CursorSelect"		"Chọn con trỏ chuột"
+			"Action_ShowEmoticonPicker"		"Chọn cảm xúc"
+			"Action_AcceptGameInvite"		"Chấp nhận lời mời chơi"
+			"Action_InviteToGame"		"Mời chơi"
+			"Action_ToggleVoiceChat"		"Bật/tắt đàm thoại"
+			"Action_ToggleFriendsList"		"Hiện/Ẩn danh sách bạn bè"
+		}
+	}
+	"group"
+	{
+		"id"		"0"
+		"mode"		"four_buttons"
+		"inputs"
+		{
+			"button_a"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser A, Confirm"
+						}
+					}
+				}
+			}
+			"button_b"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser B, Back"
+						}
+					}
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserOpenInNewTab, Open link in new tab"
+						}
+					}
+				}
+			}
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserGoToFavorites, Open Favorites"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"1"
+		"mode"		"dpad"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"2"
+		"mode"		"dpad"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"deadzone"		"2000"
+		}
+	}
+	"group"
+	{
+		"id"		"3"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"4"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LTRIGGER"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"5"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default RTRIGGER"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"6"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserOpenInNewTab, Open link in new tab"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+			"friction"		"1"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Scroll"
+		}
+	}
+	"group"
+	{
+		"id"		"7"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserCloseTab, Close current tab"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+			"sensitivity"		"200"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Cursor"
+		}
+	}
+	"group"
+	{
+		"id"		"8"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+			"sensitivity"		"250"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"zoom"
+		}
+	}
+	"group"
+	{
+		"id"		"9"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"sensitivity"		"150"
+		}
+	}
+	"group"
+	{
+		"id"		"10"
+		"mode"		"four_buttons"
+		"inputs"
+		{
+			"button_a"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default A"
+						}
+					}
+				}
+			}
+			"button_b"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default B, Back"
+						}
+					}
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default x"
+						}
+					}
+				}
+			}
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default y"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"11"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_UP, Move Up"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_DOWN, Move Down"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_RIGHT"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_LEFT"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+			"layout"		"3"
+			"deadzone"		"17000"
+		}
+	}
+	"group"
+	{
+		"id"		"12"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserMoreMenu, Open Menu"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"13"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserSelect, Select"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"14"
+		"mode"		"four_buttons"
+		"inputs"
+		{
+			"button_a"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Mouse A"
+						}
+					}
+				}
+			}
+			"button_b"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Mouse B"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"18"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser LEFTSTICK_UP, Move Up"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser LEFTSTICK_DOWN, Move Down"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser LEFTSTICK_RIGHT, Move Right"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser LEFTSTICK_LEFT, Move Left"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"19"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"21"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LTRIGGER, Press Left Key"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"22"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard RTRIGGER, Press Right Key"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"23"
+		"mode"		"trigger"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"24"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Mouse A, Select"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"25"
+		"mode"		"joystick_move"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard RTRIGGER, Press Right Key"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"26"
+		"mode"		"joystick_move"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LTRIGGER, Press Left Key"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"27"
+		"mode"		"joystick_move"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LTRIGGER, Press Left Key"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+			"haptic_intensity"		"0"
+			"deadzone_outer_radius"		"32000"
+			"deadzone_shape"		"1"
+		}
+		"gameactions"
+		{
+			"Keyboard"		"LEFTPAD_ANALOG"
+		}
+	}
+	"group"
+	{
+		"id"		"28"
+		"mode"		"joystick_move"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard RTRIGGER, Press Right Key"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+			"haptic_intensity"		"0"
+			"deadzone_outer_radius"		"32000"
+		}
+		"gameactions"
+		{
+			"Keyboard"		"RIGHTPAD_ANALOG"
+		}
+	}
+	"group"
+	{
+		"id"		"29"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press UP_ARROW"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press DOWN_ARROW"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press RIGHT_ARROW"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"key_press LEFT_ARROW"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"30"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"31"
+		"mode"		"four_buttons"
+		"inputs"
+		{
+			"button_a"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard A, Select"
+						}
+					}
+				}
+			}
+			"button_b"
+			{
+				"activators"
+				{
+					"release"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard B, Back"
+						}
+					}
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard x, Contextual Action"
+						}
+					}
+				}
+			}
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard y, Toggle Password Visibility"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"33"
+		"mode"		"four_buttons"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"34"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button RIGHT"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"35"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"36"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"37"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"39"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserShowKeyboard, Show On Screen Keyboard"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+			"sensitivity"		"249"
+			"rotation"		"16"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Cursor"
+		}
+	}
+	"group"
+	{
+		"id"		"40"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"zoom"
+		}
+	}
+	"group"
+	{
+		"id"		"41"
+		"mode"		"four_buttons"
+		"inputs"
+		{
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUIAcceptGameInvite, Accept Game Invite"
+						}
+					}
+				}
+			}
+			"button_y"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUIToggleVoiceChat, Toggle Voice Chat"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"42"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserMoreMenu, Open Menu"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"43"
+		"mode"		"trigger"
+		"inputs"
+		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserSelect, Select"
+						}
+					}
+					"Double_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserDoubleSelect, Double-click"
+						}
+						"settings"
+						{
+							"double_tap_time"		"442"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"44"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUIInviteToGame, Invite to Game"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserCloseTab, Close current tab"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserMoveTabRight, Switch Tab Right"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserMoveTabLeft, Switch Tab Left"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"45"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Soft_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUIToggleFriendsList, Show/Hide Friends List"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+			"sensitivity"		"124"
+			"rotation"		"28"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Scroll"
+		}
+	}
+	"group"
+	{
+		"id"		"46"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+			"layer"		"1"
+			"sensitivity"		"114"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Cursor"
+		}
+	}
+	"group"
+	{
+		"id"		"47"
+		"mode"		"dpad"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"48"
+		"mode"		"single_button"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"49"
+		"mode"		"four_buttons"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"50"
+		"mode"		"absolute_mouse"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"51"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_UP, Move Up"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_DOWN, Move Down"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_RIGHT, Move Right"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_LEFT, Move Left"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"52"
+		"mode"		"joystick_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"output_joystick"		"2"
+		}
+		"gameactions"
+		{
+			"Default"		"Cursor"
+		}
+	}
+	"group"
+	{
+		"id"		"53"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default RTRIGGER, Avance rapide"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"54"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_UP, Move Up"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_DOWN, Move Down"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_RIGHT, Move Right"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LEFTSTICK_LEFT, Move Left"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"55"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserOpenInNewTab, Open link in new tab"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"56"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LEFTSTICK_UP, #Action_Up"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LEFTSTICK_DOWN, #Action_Down"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LEFTSTICK_RIGHT, #Action_Right"
+						}
+					}
+				}
+			}
+			"dpad_west"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LEFTSTICK_LEFT, #Action_Left"
+						}
+					}
+				}
+			}
+			"click"
+			{
+				"activators"
+				{
+				}
+			}
+		}
+		"settings"
+		{
+			"requires_click"		"0"
+		}
+	}
+	"group"
+	{
+		"id"		"57"
+		"mode"		"dpad"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUIToggleFriendsList, Show/Hide Friends List"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"group"
+	{
+		"id"		"58"
+		"mode"		"joystick_mouse"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserCloseTab, Close current tab"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+			"output_joystick"		"2"
+			"sensitivity"		"200"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Cursor"
+		}
+	}
+	"group"
+	{
+		"id"		"59"
+		"mode"		"joystick_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"virtual_mode"		"1"
+			"output_joystick"		"2"
+			"sensitivity"		"250"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"zoom"
+		}
+	}
+	"group"
+	{
+		"id"		"60"
+		"mode"		"joystick_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"output_joystick"		"2"
+			"sensitivity"		"150"
+		}
+	}
+	"group"
+	{
+		"id"		"61"
+		"mode"		"joystick_move"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard RTRIGGER, Press Right Key"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"deadzone_outer_radius"		"32000"
+		}
+	}
+	"group"
+	{
+		"id"		"62"
+		"mode"		"joystick_mouse"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserShowKeyboard, Show On Screen Keyboard"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+			"sensitivity"		"249"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"Cursor"
+		}
+	}
+	"group"
+	{
+		"id"		"63"
+		"mode"		"joystick_mouse"
+		"inputs"
+		{
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+		"gameactions"
+		{
+			"WebBrowser"		"zoom"
+		}
+	}
+	"group"
+	{
+		"id"		"15"
+		"mode"		"switches"
+		"inputs"
+		{
+			"button_escape"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default START"
+						}
+					}
+				}
+			}
+			"button_menu"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default SELECT"
+						}
+					}
+				}
+			}
+			"left_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default LSHOULDER"
+						}
+					}
+				}
+			}
+			"right_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default RSHOULDER"
+						}
+					}
+				}
+			}
+			"button_back_left_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default B, Back"
+						}
+					}
+				}
+			}
+			"button_back_right_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Default y, UI Action 2"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"16"
+		"mode"		"switches"
+		"inputs"
+		{
+			"button_escape"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserMoveTabRight, Switch Tab Right"
+						}
+					}
+				}
+			}
+			"button_menu"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserMoveTabLeft, Switch Tab Left"
+						}
+					}
+				}
+			}
+			"left_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser LSHOULDER, Left Group"
+						}
+					}
+				}
+			}
+			"right_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser RSHOULDER, Right Group"
+						}
+					}
+				}
+			}
+			"button_back_left"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserBack, Navigate Back"
+						}
+					}
+				}
+			}
+			"button_back_right"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserForward, Navigate Forward"
+						}
+					}
+				}
+			}
+			"button_back_left_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser B, Back"
+						}
+					}
+				}
+			}
+			"button_back_right_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserGoToFavorites, Open Favorites"
+						}
+					}
+				}
+			}
+			"left_click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mode_shift right_trackpad 8"
+						}
+					}
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mode_shift right_joystick 59"
+						}
+						"settings"
+						{
+							"interruptable"		"0"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"17"
+		"mode"		"switches"
+		"inputs"
+		{
+			"button_back_left_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Mouse B, Back"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"20"
+		"mode"		"switches"
+		"inputs"
+		{
+			"button_escape"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard START, Submit Text"
+						}
+					}
+				}
+			}
+			"button_menu"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard SELECT, Switch Language"
+						}
+					}
+				}
+			}
+			"left_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LSHOULDER, Backspace"
+						}
+					}
+				}
+			}
+			"right_bumper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard RSHOULDER, Space"
+						}
+					}
+				}
+			}
+			"button_back_left"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LBACK, Shift"
+						}
+					}
+				}
+			}
+			"button_back_right"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard RBACK, Alt"
+						}
+					}
+				}
+			}
+			"button_back_left_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard B, Back"
+						}
+					}
+				}
+			}
+			"button_back_right_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard y, Toggle Password Visibility"
+						}
+					}
+				}
+			}
+		}
+	}
+	"group"
+	{
+		"id"		"32"
+		"mode"		"switches"
+		"inputs"
+		{
+		}
+	}
+	"group"
+	{
+		"id"		"38"
+		"mode"		"switches"
+		"inputs"
+		{
+			"button_escape"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUISubmit, Submit Text"
+						}
+					}
+				}
+			}
+			"button_menu"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUIShowEmoticonPicker, Show Emoticon Picker"
+						}
+					}
+				}
+			}
+			"button_back_left"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserMoveTabLeft, Switch Tab Left"
+						}
+					}
+				}
+			}
+			"button_back_right"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser BrowserMoveTabRight, Switch Tab Right"
+						}
+					}
+				}
+			}
+			"button_back_right_upper"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action WebBrowser FriendsUIToggleVoiceChat, Toggle Voice Chat"
+						}
+					}
+				}
+			}
+		}
+		"settings"
+		{
+			"layer"		"1"
+		}
+	}
+	"preset"
+	{
+		"id"		"0"
+		"name"		"Default"
+		"group_source_bindings"
+		{
+			"15"		"switch active"
+			"19"		"right_trackpad inactive"
+			"10"		"button_diamond active"
+			"4"		"left_trigger active"
+			"5"		"right_trigger active"
+			"11"		"joystick active"
+			"49"		"left_trackpad inactive"
+			"50"		"left_trackpad inactive"
+			"51"		"left_trackpad active"
+			"47"		"center_trackpad inactive"
+			"48"		"center_trackpad inactive"
+			"52"		"dpad inactive"
+			"53"		"dpad inactive"
+			"54"		"dpad active"
+		}
+	}
+	"preset"
+	{
+		"id"		"1"
+		"name"		"WebBrowser"
+		"group_source_bindings"
+		{
+			"16"		"switch active"
+			"7"		"right_trackpad active"
+			"8"		"right_trackpad active modeshift"
+			"58"		"right_joystick active"
+			"59"		"right_joystick active modeshift"
+			"0"		"button_diamond active"
+			"12"		"left_trigger active"
+			"13"		"right_trigger active"
+			"18"		"joystick active"
+			"6"		"left_trackpad active"
+			"55"		"dpad active"
+		}
+	}
+	"preset"
+	{
+		"id"		"2"
+		"name"		"Mouse"
+		"group_source_bindings"
+		{
+			"17"		"switch active"
+			"9"		"right_trackpad active"
+			"60"		"right_joystick active"
+			"14"		"button_diamond active"
+			"23"		"left_trigger active"
+			"24"		"right_trigger active"
+		}
+	}
+	"preset"
+	{
+		"id"		"3"
+		"name"		"Keyboard"
+		"group_source_bindings"
+		{
+			"20"		"switch active"
+			"25"		"right_trackpad inactive"
+			"28"		"right_trackpad active"
+			"61"		"right_joystick inactive"
+			"30"		"button_diamond inactive"
+			"31"		"button_diamond active"
+			"21"		"left_trigger active"
+			"22"		"right_trigger active"
+			"29"		"joystick active"
+			"26"		"left_trackpad inactive"
+			"27"		"left_trackpad active"
+			"56"		"dpad active"
+		}
+	}
+	"preset"
+	{
+		"id"		"4"
+		"name"		"WebBrowserChat"
+		"group_source_bindings"
+		{
+			"38"		"switch active"
+			"39"		"right_trackpad active"
+			"40"		"right_trackpad active modeshift"
+			"62"		"right_joystick active"
+			"63"		"right_joystick active modeshift"
+			"41"		"button_diamond active"
+			"42"		"left_trigger active"
+			"43"		"right_trigger active"
+			"44"		"joystick active"
+			"45"		"left_trackpad active"
+			"57"		"dpad active"
+			"46"		"gyro active"
+		}
+	}
+	"settings"
+	{
+		"action_set_trigger_cursor_show"		"0"
+		"action_set_trigger_cursor_hide"		"0"
+	}
+}

@@ -7,7 +7,6 @@ __stub_helper
 __TEXT
 __const
 __TEXT
-7
 __objc_methname
 __TEXT
 __cstring
@@ -53,15 +52,15 @@ __bss
 __DATA
 __common
 __DATA
+<
 H
 __LINKEDIT
 
 8
 @loader_path/vgui2_s.dylib
 "
-8
-X
-xH
+x
+p
 P
 
 8
@@ -108,11 +107,12 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
+0>
 )
-0H
+XI
 H
-0G
-05
+Q
+@5
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
@@ -322,6 +322,13 @@ N4vgui6IPanelE
 &z
 0u
 UUUUUUUUUUUUUUUU0123456789ABCDEF
+13CPlainAutoPtrI7CUtlMapIybi8CDefLessIyEEE
+7CUtlMapIybi8CDefLessIyEE
+10CUtlRBTreeIN7CUtlMapIybi8CDefLessIyEE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+13CPlainAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessIS1_EEE
+7CUtlMapI10CUtlStringbi8CDefLessIS0_EE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessIS1_EE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
 11CDirWatcher
 11CPathString
 14CUtlLinkedListI10CUtlStringiE
@@ -352,7 +359,6 @@ Assertion Failed: !"Unable to get home directory"
 %s/Applications
 r
 %s/%s
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 1.5.26
@@ -714,6 +720,7 @@ m_dictColors
 m_vecBaseStyleSets
 m_mapStyleLists
 m_kvSettings
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 font-outerglow-filtersize
 textcolor
 bgcolor
@@ -1385,7 +1392,10 @@ CVariableBitStringBase
 Convars
 ConVar
 m_configOverride
+m_pVecUlValue
+m_pVecStringValue
 m_vecCallbacks
+m_p
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
@@ -1490,21 +1500,27 @@ a
 \
 ?
 '
-Assertion Failed: m_unSizeOfElements > 0
+Assertion Failed: nSizeOfType > 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
+Assertion Failed: m_nAllocationCount >= 0
 Assertion Failed: m_unSizeOfElements == mem.m_unSizeOfElements
-nBytesItem is %d in UtlMemory_CalcNewAllocationCount
-Assertion Failed: num > 0
 Assertion Failed: numElements >= 0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+Assertion Failed: num > 0
+Assertion Failed: num >= 0
 Assertion Failed: numElements <= m_nAllocationCount
 Assertion Failed: m_pMemory
+CUtlString::SetValue
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
+CUtlStringBuilder::InternalPrepareBuffer
 Assertion Failed: nMinCapacity > Capacity()
 Assertion Failed: nMinCapacity >= nChars
 Assertion Failed: nMinCapacity <= k_nMaxStringSize
 Error State on string being set.
+CUtlStringBuilder::Data::MoveToHeap
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
@@ -1770,12 +1786,14 @@ Seconds
 @
 @
 @
+7
 =
 0
-1
 
+9
 =
-i
+9
+M
 8
 <
 :
@@ -1816,10 +1834,12 @@ P
 G
 @
 @
-W
+w
+v
 @
 @
 @
 @
 @
 @
+.

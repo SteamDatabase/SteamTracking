@@ -671,6 +671,7 @@ message CRemoteHIDMsg {
 message CTouchConfigActiveMsg {
 	optional uint32 appid = 1;
 	optional uint32 revision = 2;
+	optional uint64 creator = 3;
 }
 
 message CGetTouchConfigDataMsg {
@@ -682,6 +683,7 @@ message CSetTouchConfigDataMsg {
 	optional uint32 revision = 2;
 	optional bytes data = 3;
 	optional bytes layout = 4;
+	optional uint64 creator = 5;
 }
 
 message CSaveTouchConfigLayoutMsg {

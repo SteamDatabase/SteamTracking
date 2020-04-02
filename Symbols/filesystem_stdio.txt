@@ -332,7 +332,7 @@
  T Sys_LoadModule(char const*, Sys_Flags)
  T Sys_UnloadModule(CSysModule*)
  T Sys_ValidateModules(CValidator*, bool)
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T __CreateCFileSystemStdIODLLValidateIValidate_interface()
  T __CreateCFileSystem_StdioIBaseFileSystem_interface()
  T __CreateCFileSystem_StdioIFileSystem_interface()

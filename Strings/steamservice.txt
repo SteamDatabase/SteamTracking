@@ -3,8 +3,8 @@ __TEXT
 %
 __text
 __TEXT
-9
-9
+@
+@
 __stubs
 __TEXT
 __stub_helper
@@ -16,10 +16,11 @@ __const
 __TEXT
 __unwind_info
 __TEXT
+Hk
 __eh_frame
 __TEXT
-h$!
-h$!
+h>!
+h>!
 __DATA
 %
 %
@@ -29,23 +30,19 @@ __DATA
 %
 __got
 __DATA
-%
-%
 __la_symbol_ptr
 __DATA
-%
-%
 __mod_init_func
 __DATA
 __const
 __DATA
 __objc_imageinfo__DATA
-XI&
-XI&
+(j&
+(j&
 __data
 __DATA
-`I&
-`I&
+0j&
+0j&
 __thread_vars
 __DATA
 __thread_bss
@@ -56,17 +53,20 @@ __common
 __DATA
 H
 __LINKEDIT
-)
+@)
 '
 
 8
 @loader_path/steamservice.dylib
 "
 '
-"
+P:'
+(;'
+H|'
+e"
 P
 g
-1!
+u!
 
 `
 h
@@ -89,12 +89,10 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
-Z'
-0`
-$
+p`
 Hi
 H=
-h$
+L
 10CUtlString
 N10CIPCServer13CThreadClientE
 10CIPCServer
@@ -774,6 +772,7 @@ N11SteamStdLib12ICommandLineE
 0@
 zD
 6ConVar
+11CPathString
 21CUtlCStringConversion
 18CUtlCharConversion
 19CUtlNoEscConversion
@@ -789,6 +788,7 @@ Y@
 11CRSAKeyBase
 13CRSAPublicKey
 18CBaseFrameFunction
+NSt3__117bad_function_callE
 14CHTTPClientMgr
 10CUtlVectorIP11CHTTPClient10CUtlMemoryIS1_EE
 N10OSXHelpers13CCompatThreadE
@@ -799,8 +799,9 @@ N10OSXHelpers13CCompatThreadE
 14CUtlLinkedListIN7CJobMgr13JobYielding_tEiE
 kvsignatures
 kvsign2
-11CUtlHashMapI14CMetricsSymbol10CUtlString10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
-10CUtlVectorIN11CUtlHashMapI14CMetricsSymbol10CUtlString10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS8_EE
+11CUtlHashMapI14CMetricsSymbol9CSmartPtrI14CMetricsStringE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
+10CUtlVectorIN11CUtlHashMapI14CMetricsSymbol9CSmartPtrI14CMetricsStringE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryISA_EE
+12CAutoReleaseI14CMetricsStringE
 11CUtlHashMapI14CMetricsSymbolx10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 10CUtlVectorIN11CUtlHashMapI14CMetricsSymbolx10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
 11CUtlHashMapI14CMetricsSymbold10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
@@ -809,10 +810,11 @@ NSt3__110__function6__funcIZN15IMetricsFactory11NullMetricsEvE3$_8NS_9allocatorI
 ZN15IMetricsFactory11NullMetricsEvE3$_8
 15IMetricsFactory
 19CNullMetricsFactory
-21CMetricsReporterChain
-10CUtlVectorI9CSmartPtrI16IMetricsReporterE10CUtlMemoryIS2_EE
-12CAutoReleaseI16IMetricsReporterE
 NSt3__110__function6__baseIFvR8CMetricsEEE
+NSt3__110__function6__funcIPFv14CPoolReferenceI8CMetricsEENS_9allocatorIS6_EEFvRS4_EEE
+NSt3__110__function6__baseIFvR14CPoolReferenceI8CMetricsEEEE
+PFv14CPoolReferenceI8CMetricsEE
+Fv14CPoolReferenceI8CMetricsEE
 13CMetricsTimer
 6CTHashIP18IUDPSocketCallbackjE
 6CTHashIP16ITCPHostCallbackjE
@@ -883,6 +885,14 @@ h
 x
 t
 u
+(
+0
+8
+@
+H
+P
+`
+X
 13CMsgIPAddress
 19CMsgIPAddressBucket
 18CMsgProtoBufHeader
@@ -897,6 +907,7 @@ u
 22CClanMatchEventByRange
 31CCommunity_ClanAnnouncementInfo
 14CClanEventData
+16CBilling_Address
 0
 (
 $
@@ -988,7 +999,6 @@ Last
 %-20.20s %-40.40s %-10u %-10u %-10u
 Assertion Failed: m_pvOrigNameAddress
 Assertion Failed: m_pParent
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 -single_core
 Force Steam to run on your primary CPU only
@@ -5873,10 +5883,12 @@ p
 0123456789ABCDEF
 Assertion Failed: str != NULL
 Assertion Failed: prefix != NULL
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: nBytes
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 %u
+%llu
 invalid input pointer
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp
@@ -5895,6 +5907,7 @@ Assertion Failed: m_vecCallbacks.Count() == 0
 Assertion Failed: pDefaultValue
 Attempted to change replicated CVar when you are not the GM
 FCVAR_NEVER_AS_STRING
+Assertion Failed: m_p == NULL
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/fileio.cpp
@@ -5910,7 +5923,9 @@ TMPDIR
 /var/tmp/
 %s/steamXXXXXX
 flock LOCK_EX %s failed, errno = %d
+write %s failed, errno = %d
 Assertion Failed: written == count
+fsync %s failed, errno = %d
 %s%c%s
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
@@ -6016,7 +6031,6 @@ Assertion Failed: m_Put >= 0
 Assertion Failed: offset >= 0
 Assertion Failed: offset >= -m_Put && offset <= INT_MAX-m_Put
 Assertion Failed: offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-%llu
 %f
 n
 t
@@ -6026,24 +6040,32 @@ f
 a
 '
 %.18g
-Assertion Failed: m_unSizeOfElements > 0
+Assertion Failed: nSizeOfType > 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
+Assertion Failed: m_nAllocationCount >= 0
 Assertion Failed: m_unSizeOfElements == mem.m_unSizeOfElements
-nBytesItem is %d in UtlMemory_CalcNewAllocationCount
+Assertion Failed: numElements >= 0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
+Assertion Failed: num >= 0
 Assertion Failed: IsPowerOfTwo( nNewCapacity )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 Assertion Failed: nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 Assertion Failed: ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
+CUtlString::SetValue
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
+CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
 0123456789abcdef
+CUtlStringBuilder::InternalPrepareBuffer
 Assertion Failed: nMinCapacity > Capacity()
 Assertion Failed: nMinCapacity >= nChars
 Assertion Failed: nMinCapacity <= k_nMaxStringSize
 Assertion Failed: len > 0 || HasError()
 Error State on string being set.
+CUtlStringBuilder::Data::MoveToHeap
 %s %i %s
 -noassert
 -nocrashdialog
@@ -6098,8 +6120,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 1.0
-Mar 26 2020
-15:45:56
+Apr  1 2020
+15:56:40
 Jan
 Feb
 Mar
@@ -6204,6 +6226,7 @@ ServerMain
 Streaming
 ThreadWorkItem
 TenFoot
+tier1
 Assertion Failed: m_CounterNames[n]
 Assertion Failed: m_pBudgetGroups
 Assertion Failed: eGroup < VPROF_BUDGETGROUP_MAX
@@ -6360,9 +6383,9 @@ accept-charset
 user-agent
 Transfer-Encoding
 Set-Cookie
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 m_pObj
 m_vecpHTTPClients
 Unexpected thread race for CIOPollingHelper construction
@@ -6466,14 +6489,12 @@ Comma separated list of metrics operations - disable list
 steamid
 Comma separated list of tag names known to cause cardinality problems for Influx.  We drop those tags but emit the others per-metrics.
 @metricsLegacyJobMetrics
-CInfluxClient::SendCurrentBatchAsync,UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CMMSJobCreateLobby::CMMSJobCreateLobby,CMMSJobJoinLobby::CMMSJobJoinLobby,CMMSJobLeaveLobby::CMMSJobLeaveLobby,CMMSJobSendLobbyChatMsg::CMMSJobSendLobbyChatMsg,CMMSJobSetLobbyGameServer::CMMSJobSetLobbyGameServer,CMMSJobSetLobbyOwner::CMMSJobSetLobbyOwner,CMMSJobSetLobbyLinked::CMMSJobSetLobbyLinked,CMMSJobSetLobbyData::CMMSJobSetLobbyData,CMMSJobGetLobbyData::CMMSJobGetLobbyData,CMMSJobGetLobbyList::CMMSJobGetLobbyList,CMMSJobInviteToLobby::CMMSJobInviteToLobby,CMMSJobGetLobbyStatus::CMMSJobGetLobbyStatus,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,MMS.LobbyMatchmaking.CreateLobby#1,GetIRAppRankForAccounts,email_monitor
+CInfluxClient::SendCurrentBatchAsync,UpdateAppJobReport,perf,ExternalStorageTransferReport,ChatRoom.RelaySendChatMessage#1,DownloadRates,DownloadRatesPerServer,AppBranchUpdateStats,Trust.FullAccountUpdate#1,Trust.OnAccountChanged#1,Trust.OnAccountLabeled#1,Trust.OnAccountLicenseAdded#1,PlayerStatsVOD,PlayerStatsBroadcast,CurrentPlayers,matchmaking,AppTransfers,DownloadRatesISP,DownloadRatesISPPerServer,ExternalTransferStats,BroadcastFetchStats,Transaction,DataTransfer,ContentServerStats,SteamPipeCDNWeights,RegionDirectives,BroadcastCDNWeights,China.ListPersonaNames#1,China.RestrictVisibility#1,GetInteractiveRecommendations,PlayerStallReportBroadcast,PlayerStallReportVOD,AddAnnouncementImage,GetIRAppRankForAccounts,email_monitor
 Comma separated list of Operation names that predate preaggregated job metrics.
-m_Reporters
 null catalog
 null program
 null operation
 totaltime
-Assertion Failed: m_p == NULL
 @bMsgErrorDump
 @nSpewThrottlePeriodMs
 @nSpewThrottleTriggerThreshold
@@ -6632,10 +6653,8 @@ Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 Work thread is marked exited, but we could not immediately join prior to deleting -- proceeding without join
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
-$
 Hi
 H=
-h$
 @
 @
 =
@@ -6644,17 +6663,13 @@ h$
 ?
 ?
 A
+d"
 Hc
-"
-"
-"
-"
 =
 N
-(!
-$
-$
-$
+!
+!
+L95Ce$
 Hc
 ?
 ?
@@ -6969,7 +6984,6 @@ zz
 @@
 @===
 OO
-
 I3E
 %
 @
@@ -6981,13 +6995,13 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
-?
+
 
 
 
 3
 3
-R
+m
 IcE
 I;E
 ,
@@ -7010,7 +7024,7 @@ P
 @
 @
 @
-&
+Z
 7
 H=
 &
@@ -7039,29 +7053,27 @@ p
 x
 i
 |
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
+@
 
-
-
-
 @
 @
 @
 @
 @
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
-@
+5
 Hi

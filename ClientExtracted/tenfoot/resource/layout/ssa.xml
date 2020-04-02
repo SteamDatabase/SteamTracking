@@ -14,10 +14,10 @@
 
             <Panel class="FlowRight HorzCenter" selectionpos="auto">
                 <Button id="SSAAccept" onactivate="AcceptSSA();" class="Button">
-                    <Label class="LongDesc" text="Accept" />
+                    <Label class="LongDesc" text="#SSA_Accept" />
                 </Button>
                 <Button id="SSADecline" onactivate="DeclineSSA();" class="Button">
-                    <Label class="LongDesc" text="Decline" />
+                    <Label class="LongDesc" text="#SSA_Decline" />
                 </Button>
                 <!-- <Button id="SSARefresh" onactivate="RefreshSSA();" class="Button LittleRoomPlease">
                     <Label class="LongDesc" text="Refresh" />

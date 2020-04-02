@@ -229,6 +229,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/interfaceadapters_isteamapplist.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/interfaceadapters_isteamapps.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/interfaceadapters_isteamappticket.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/interfaceadapters_isteamchat.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/interfaceadapters_isteamclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/interfaceadapters_isteamcontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/interfaceadapters_isteamfriends.o
@@ -525,6 +526,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/interfaceadapters_isteamapplist.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/interfaceadapters_isteamapps.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/interfaceadapters_isteamappticket.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/interfaceadapters_isteamchat.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/interfaceadapters_isteamclient.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/interfaceadapters_isteamcontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/interfaceadapters_isteamfriends.o
@@ -1049,7 +1051,6 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/metrics/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/metrics/metrics.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/metrics/metricsfactory.h
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/metrics/metricsreporterchain.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/metrics/metricssymbol.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/metrics/metricstimer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/msg.cpp

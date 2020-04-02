@@ -422,12 +422,14 @@ message CChatRoom_SendChatMessage_Request {
 	optional uint64 chat_group_id = 1;
 	optional uint64 chat_id = 2;
 	optional string message = 3;
+	optional bool echo_to_sender = 4;
 }
 
 message CChatRoom_SendChatMessage_Response {
 	optional string modified_message = 1;
 	optional uint32 server_timestamp = 2;
 	optional uint32 ordinal = 3;
+	optional string message_without_bb_code = 4;
 }
 
 message CChatRoom_JoinVoiceChat_Request {

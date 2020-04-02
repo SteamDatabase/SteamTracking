@@ -193,6 +193,7 @@
  D typeinfo for IVGuiModuleLoader
  D typeinfo for IValidate
  D typeinfo for VPanelWrapper
+ D typeinfo for std::__1::bad_function_call
  D typeinfo for vgui::Bitmap
  D typeinfo for vgui::CBaseOSXSurface<CBaseSurface>
  D typeinfo for vgui::COSXSurface
@@ -239,6 +240,7 @@
  D vtable for CVGui
  D vtable for CVGuiSystemModuleLoader
  D vtable for VPanelWrapper
+ D vtable for std::__1::bad_function_call
  D vtable for vgui::Bitmap
  D vtable for vgui::CBaseOSXSurface<CBaseSurface>
  D vtable for vgui::COSXSurface
@@ -329,6 +331,8 @@
  R typeinfo name for CLocalizedStringTable
  R typeinfo name for CNotificationManager
  R typeinfo name for CPathString
+ R typeinfo name for CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >
+ R typeinfo name for CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >
  R typeinfo name for CScheme
  R typeinfo name for CSchemeManager
  R typeinfo name for CSerializedIME
@@ -352,12 +356,14 @@
  R typeinfo name for CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >
  R typeinfo name for CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >
  R typeinfo name for CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >
+ R typeinfo name for CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >
  R typeinfo name for CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >
  R typeinfo name for CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>
  R typeinfo name for CUtlMap<char const*, Color, int, CDefCaselessStringLess>
  R typeinfo name for CUtlMap<char const*, bool, int, CDefStringLessFilename>
  R typeinfo name for CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>
  R typeinfo name for CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >
+ R typeinfo name for CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >
@@ -372,12 +378,14 @@
  R typeinfo name for CUtlRBTree<CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::Node_t, int, CUtlMap<CFontManager::CFontAttributes, CFontManager::CFontInfo, int, CDefLess<CFontManager::CFontAttributes> >::CKeyLess, CDefRBTreeBalanceListener<int>, CFontManager::CFontAttributes>
  R typeinfo name for CUtlRBTree<CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >::Node_t, int, CUtlMap<CLayoutFile::AppearanceKey_t, CUtlPtr<CStyleAppearance>, int, CDefLess<CLayoutFile::AppearanceKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CLayoutFile::AppearanceKey_t>
  R typeinfo name for CUtlRBTree<CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Node_t, int, CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CSchemeManager::FontKey_t>
+ R typeinfo name for CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>
  R typeinfo name for CUtlRBTree<CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Node_t, int, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, HotKey_t>
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, Color, int, CDefCaselessStringLess>::Node_t, int, CUtlMap<char const*, Color, int, CDefCaselessStringLess>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>
+ R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Node_t, short, CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned long long>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::Node_t, int, CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned short>
@@ -427,6 +435,7 @@
  R typeinfo name for IValidate
  R typeinfo name for KeyValuesAD
  R typeinfo name for VPanelWrapper
+ R typeinfo name for std::__1::bad_function_call
  R typeinfo name for style_t
  R typeinfo name for vgui::Bitmap
  R typeinfo name for vgui::CBaseOSXSurface<CBaseSurface>
@@ -927,6 +936,8 @@
  T CPathString::CPathString(StringView, StringView)
  T CPathString::Clear()
  T CPathString::Validate(CValidator&, char const*)
+ T CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >::RecursiveValidate(CValidator&, char const*)
+ T CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >::RecursiveValidate(CValidator&, char const*)
  T CRC32_ProcessSingleBuffer(void const*, int)
  T CRTime::CRTime()
  T CRTime::UpdateRealTime()
@@ -1350,12 +1361,14 @@
  T CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Insert(CSchemeManager::FontKey_t const&, unsigned long const&)
  T CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Node_t::~Node_t()
  T CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Validate(CValidator&, char const*)
+ T CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::RecursiveValidate(CValidator&, char const*)
  T CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Validate(CValidator&, char const*)
  T CUtlMap<char const*, CLayoutFile*, int, CDefStringLessFilename>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, Color, int, CDefCaselessStringLess>::RecursiveValidate(CValidator&, char const*)
  T CUtlMap<char const*, bool, int, CDefStringLessFilename>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::RecursiveValidate(CValidator&, char const*)
  T CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::Validate(CValidator&, char const*)
@@ -1412,6 +1425,7 @@
  T CUtlRBTree<CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Node_t, int, CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CSchemeManager::FontKey_t>::NewNode(bool)
  T CUtlRBTree<CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Node_t, int, CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CSchemeManager::FontKey_t>::RemoveAll()
  T CUtlRBTree<CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::Node_t, int, CUtlMap<CSchemeManager::FontKey_t, unsigned long, int, CDefLess<CSchemeManager::FontKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, CSchemeManager::FontKey_t>::Validate(CValidator&, char const*)
+ T CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RecursiveValidate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Node_t, int, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, HotKey_t>::Find(HotKey_t const&) const
  T CUtlRBTree<CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Node_t, int, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, HotKey_t>::NewNode(bool)
  T CUtlRBTree<CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::Node_t, int, CUtlMap<HotKey_t, vgui::VPanel*, int, CDefLess<HotKey_t> >::CKeyLess, CDefRBTreeBalanceListener<int>, HotKey_t>::Remove(HotKey_t const&)
@@ -1445,6 +1459,7 @@
  T CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RecursiveValidate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t, int, CUtlMap<unsigned long long, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Find(unsigned long long const&) const
  T CUtlRBTree<CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t, int, CUtlMap<unsigned long long, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t, int, CUtlMap<unsigned long long, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Remove(unsigned long long const&)
@@ -1509,6 +1524,7 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_Unlink(unsigned short, unsigned long, void*)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
+ T CUtlString::SetValue(char const*)
  T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
@@ -1883,7 +1899,7 @@
  T Sys_GetFactoryThis()
  T Sys_GetProcAddress(CSysModule*, char const*)
  T Sys_ValidateModules(CValidator*, bool)
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T VPanelWrapper::AdditionalWindowHandle(unsigned long long, void*)
  T VPanelWrapper::Client(unsigned long long)
  T VPanelWrapper::DeletePanel(unsigned long long)
@@ -2156,6 +2172,7 @@
  T png_zalloc
  T png_zfree
  T short CUtlRBTree<CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Node_t, short, CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned long long>::Insert_Internal<CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Node_t>(CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Node_t&&, bool)
+ T std::__1::bad_function_call::~bad_function_call()
  T style_t::Validate(CValidator&, char const*)
  T unsigned short CUtlRBTree<CFontTextureCache::CacheStringEntry_t, unsigned short, CDefLess<CFontTextureCache::CacheStringEntry_t>, CDefRBTreeBalanceListener<unsigned short>, CFontTextureCache::CacheStringEntry_t>::Insert_Internal<CFontTextureCache::CacheStringEntry_t const&>(CFontTextureCache::CacheStringEntry_t const&, bool)
  T unsigned short CUtlRBTree<COSXFont::abc_cache_t, unsigned short, bool (*)(COSXFont::abc_cache_t const&, COSXFont::abc_cache_t const&), CDefRBTreeBalanceListener<unsigned short>, COSXFont::abc_cache_t>::Insert_Internal<COSXFont::abc_cache_t const&>(COSXFont::abc_cache_t const&, bool)
@@ -2343,6 +2360,8 @@
  T void Destruct<vgui::layoutcmd_base_t>(vgui::layoutcmd_base_t*)
  T void RecursiveValidate<CUtlString>(CUtlString const&, CValidator&, char const*)
  T void _ValidateSelectType<CStyleAppearance>(CStyleAppearance*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >(CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >*, CValidator&, char const*, fallback_)
+ T void _ValidateSelectType<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >(CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<CUtlVector<style_t, CUtlMemory<style_t> > >(CUtlVector<style_t, CUtlMemory<style_t> >*, CValidator&, char const*, fallback_)
  T void _ValidateSelectType<char const>(char const*, CValidator&, char const*, fallback_)
  ThreadGetCurrentId
@@ -2358,7 +2377,7 @@
  V_IsAbsolutePath
  V_MakeAbsolutePath
  V_RemoveDotSlashes
- V_SplitString(char const*, char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
+ V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  V_StripExtension
  V_StripTrailingSlash
  V_UTF16ToUTF32
@@ -2621,6 +2640,8 @@
  snprintf
  sscanf
  stat$INODE64
+ std::exception::what() const
+ std::exception::~exception()
  std::terminate()
  strchr
  strcmp
@@ -2784,6 +2805,7 @@
  t png_read_filter_row_up
  t vgui::InitKeyTranslation()
  time
+ typeinfo for std::exception
  unlink
  vasprintf
  vtable for __cxxabiv1::__class_type_info

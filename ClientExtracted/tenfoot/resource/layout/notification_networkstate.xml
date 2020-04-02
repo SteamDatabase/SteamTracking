@@ -7,6 +7,6 @@
 	<Panel class="NotificationRoot">
 		<Panel class="NotificationFrame" />
 		<Image class="SteamCog" src="file://{images}/overlay/notification_steamcog.png"/>
-		<Label id="NotificationTextLabel" class="NotificationOneLabelBody" text="Network state changed" />
+		<Label id="NotificationTextLabel" class="NotificationOneLabelBody" text="#Notification_NetworkStateChange" />
 	</Panel>
 </root>

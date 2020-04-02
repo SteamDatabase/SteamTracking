@@ -165,7 +165,7 @@ public:
     virtual unknown_ret GetLastActiveControllerPID() = 0;
     virtual unknown_ret LoadControllerPersonalizationFile(unsigned int, char const*, bool, bool) = 0;
     virtual unknown_ret SaveControllerPersonalizationFile(unsigned int, unsigned int, ControllerIdentity_t*) = 0;
-    virtual unknown_ret BGetTouchConfigData(unsigned int, unsigned int, unsigned int*, CUtlBuffer*, CUtlBuffer*) = 0;
+    virtual unknown_ret BGetTouchConfigData(unsigned int, unsigned int, unsigned long long*, unsigned int*, CUtlBuffer*, CUtlBuffer*) = 0;
     virtual unknown_ret BSaveTouchConfigLayout(unsigned int, unsigned int, CUtlBuffer const*) = 0;
     virtual unknown_ret SetGyroOn(unsigned int, unsigned long long) = 0;
     virtual unknown_ret CursorVisibilityChanged(bool) = 0;

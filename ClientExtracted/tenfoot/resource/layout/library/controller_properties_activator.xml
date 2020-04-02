@@ -25,7 +25,11 @@
 				<Panel class="FieldWrapper" activators="fullpress">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ActivatorBinding" />
 					<ControllerBindingButton class="BindingButtonPropertiesMode" id="FullPress_Binding" />
-				</Panel>				
+				</Panel>
+				<Panel id="ActivateStickOrTrackpadFullPress" class="FieldWrapper" activators="fullpress">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ActivateStickOrTrackpad" />
+					<DropDown id="FullPress_ActivateStickOrTrackpad" />
+				</Panel>
 				<!-- Long Press -->
 				<Panel class="FieldWrapper" activators="longpress">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ActivatorBinding" />
@@ -34,7 +38,11 @@
 				<Panel class="FieldWrapper" activators="longpress">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_LongPressTime" />
 					<Slider id="LongPress_LongPressTime" direction="horizontal" />
-				</Panel>				
+				</Panel>
+				<Panel id="ActivateStickOrTrackpadLongPress" class="FieldWrapper" activators="longpress">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ActivateStickOrTrackpad" />
+					<DropDown id="LongPress_ActivateStickOrTrackpad" />
+				</Panel>
 				<!-- Double Press -->
 				<Panel class="FieldWrapper" activators="doublepress">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ActivatorBinding" />
@@ -43,7 +51,11 @@
 				<Panel class="FieldWrapper" activators="doublepress">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_DoubleTapTime" />
 					<Slider id="DoublePress_DoubleTapTime" direction="horizontal" />
-				</Panel>				
+				</Panel>
+				<Panel id="ActivateStickOrTrackpadDoublePress" class="FieldWrapper" activators="doublepress">
+					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ActivateStickOrTrackpad" />
+					<DropDown id="DoublePress_ActivateStickOrTrackpad" />
+				</Panel>
 				<!-- Release Press -->
 				<Panel class="FieldWrapper" activators="release">
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_ActivatorBinding" />

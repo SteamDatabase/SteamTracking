@@ -185,6 +185,9 @@ message CMsgSteamDatagramConnectionClosed {
 	optional string debug = 5;
 	optional uint32 reason_code = 6;
 	optional fixed64 routing_secret = 14;
+	optional uint32 not_primary_session = 16;
+	optional .CMsgSteamDatagramConnectionQuality quality_relay = 17;
+	optional .CMsgSteamDatagramConnectionQuality quality_e2e = 18;
 }
 
 message CMsgSteamDatagramNoConnection {
@@ -196,8 +199,11 @@ message CMsgSteamDatagramNoConnection {
 	optional string from_identity_string = 7;
 	optional fixed64 legacy_from_steam_id = 3;
 	optional bool end_to_end = 4;
-	optional fixed32 dummy_pad = 1023;
+	optional uint32 not_primary_session = 12;
+	optional .CMsgSteamDatagramConnectionQuality quality_relay = 13;
+	optional .CMsgSteamDatagramConnectionQuality quality_e2e = 14;
 	optional fixed64 routing_secret = 11;
+	optional fixed32 dummy_pad = 1023;
 }
 
 message CMsgSteamDatagramGameserverSessionRequest {
@@ -224,6 +230,7 @@ message CMsgSteamDatagramConnectionStatsClientToRouter {
 		ACK_REQUEST_RELAY = 1;
 		ACK_REQUEST_E2E = 2;
 		ACK_REQUEST_IMMEDIATE = 4;
+		NOT_PRIMARY_SESSION = 8;
 	}
 
 	optional .CMsgSteamDatagramConnectionQuality quality_relay = 1;
@@ -360,6 +367,7 @@ message CMsgSteamDatagramConnectionStatsP2PClientToRouter {
 		ACK_REQUEST_RELAY = 1;
 		ACK_REQUEST_E2E = 2;
 		ACK_REQUEST_IMMEDIATE = 4;
+		NOT_PRIMARY_SESSION = 8;
 	}
 
 	optional .CMsgSteamDatagramConnectionQuality quality_relay = 1;
@@ -449,6 +457,7 @@ message CMsgSteamDatagramRouterHealth {
 	}
 
 	optional float cpu_load = 1;
+	optional float cpu_load_raw = 10;
 	optional uint32 active_sessions = 2;
 	optional uint32 data_pkts_sec = 3;
 	optional uint32 other_pkts_sec = 4;

@@ -27,7 +27,6 @@ public:
     virtual unknown_ret GetFriendGamePlayedExtraInfo(CSteamID) = 0;
     virtual unknown_ret GetFriendGameServer(CSteamID) = 0;
     virtual unknown_ret GetFriendPersonaStateFlags(CSteamID) = 0;
-    virtual unknown_ret IsFriendGameOnConsole(CSteamID) = 0;
     virtual unknown_ret GetFriendSessionStateInfo(CSteamID) = 0;
     virtual unknown_ret GetFriendRestrictions(CSteamID) = 0;
     virtual unknown_ret GetFriendBroadcastID(CSteamID) = 0;

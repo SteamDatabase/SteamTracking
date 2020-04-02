@@ -3218,6 +3218,7 @@
  T CUtlRBTreeBase<int, CDefRBTreeBalanceListener<int> >::_Unlink(int, unsigned long, void*)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
+ T CUtlString::SetValue(char const*)
  T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
@@ -3288,7 +3289,7 @@
  T TSLNodeBase_t::operator delete(void*)
  T TSLNodeTemplate_t<HTMLCommandBuffer_t*>::operator delete(void*)
  T UnlinkFile(StringView)
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T __CreateCHTMLControllerIHTMLChromeController_interface()
  T __clang_call_terminate
  T int CUtlRBTree<CUtlMap<unsigned int, CHTMLController::BrowserDetails_t, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CHTMLController::BrowserDetails_t, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Insert_Internal<CUtlMap<unsigned int, CHTMLController::BrowserDetails_t, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, CHTMLController::BrowserDetails_t, int, CDefLess<unsigned int> >::Node_t&&, bool)
