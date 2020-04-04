@@ -1961,6 +1961,8 @@
 	"Library_Details_ControllerBindingsGordon_AddAdditionalOn"	"TOGGLE MULTI-BUTTON ON"
 	"Library_Details_ControllerBindingsGordon_AddAdditionalOff"	"TOGGLE MULTI-BUTTON OFF"
 	"Library_Details_ControllerBindingsGordon_ResetToDefault"	"RESET TO DEFAULT"
+	"Library_Details_ControllerBindingsGordon_CopySettings"	"COPY SETTINGS"
+	"Library_Details_ControllerBindingsGordon_PasteSettings"	"PASTE SETTINGS"
 	"Library_Details_ControllerBindingsGordon_ToggleLegacyOn"	"LEGACY KEYS"
 	"Library_Details_ControllerBindingsGordon_ToggleLegacyOff"	"IN-GAME ACTIONS"
 	"Library_Details_ControllerBindingsGordonMode_ToggleLegacyOn"	"ADVANCED SETTINGS"

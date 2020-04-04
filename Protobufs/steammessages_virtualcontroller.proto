@@ -122,9 +122,11 @@ message CVirtualControllerConfig {
 
 message CVirtualControllerLayoutPackage {
 	optional uint32 appid = 1;
-	optional uint32 revision = 2;
-	optional .CVirtualControllerConfig config = 3;
-	optional .CVirtualControllerLayouts layouts = 4;
+	optional uint64 creator = 2;
+	optional uint32 initial_revision = 3;
+	optional uint32 saved_revision = 4;
+	optional .CVirtualControllerConfig config = 5;
+	optional .CVirtualControllerLayouts layouts = 6;
 }
 
 message CVirtualControllerGlobalConfig {

@@ -653,6 +653,7 @@
  B panorama::CloseDebuggerWindow::symbol
  B panorama::CloseModalDialog::symbol
  B panorama::ContextMenu::symbol
+ B panorama::CopySettings::symbol
  B panorama::CopyStringToClipboard::symbol
  B panorama::CreateDebuggerWindow::symbol
  B panorama::DeletePanel::symbol
@@ -729,6 +730,7 @@
  B panorama::PageUp::symbol
  B panorama::PanelLoaded::symbol
  B panorama::PanelStyleChanged::symbol
+ B panorama::PasteSettings::symbol
  B panorama::PlaySoundEffect::symbol
  B panorama::PollingForSteamClientUpdate::symbol
  B panorama::ProfileOff::symbol
@@ -1052,6 +1054,7 @@
  D panorama::CloseDebuggerWindow::pchEvent
  D panorama::CloseModalDialog::pchEvent
  D panorama::ContextMenu::pchEvent
+ D panorama::CopySettings::pchEvent
  D panorama::CopyStringToClipboard::pchEvent
  D panorama::CreateDebuggerWindow::pchEvent
  D panorama::DeletePanel::pchEvent
@@ -1129,6 +1132,7 @@
  D panorama::PanelHandle_t::InvalidHandle()::s_invalid
  D panorama::PanelLoaded::pchEvent
  D panorama::PanelStyleChanged::pchEvent
+ D panorama::PasteSettings::pchEvent
  D panorama::PlaySoundEffect::pchEvent
  D panorama::PollingForSteamClientUpdate::pchEvent
  D panorama::ProfileOff::pchEvent
@@ -14883,6 +14887,9 @@
  T panorama::ContextMenu::FormatEventArgs(char const*)
  T panorama::ContextMenu::MakeEvent(panorama::IUIPanelClient const*, panorama::EPanelEventSource_t)
  T panorama::ConvertRGBA8ToA8(CUtlBuffer&, CUtlBuffer&, unsigned int, unsigned int)
+ T panorama::CopySettings::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::CopySettings::FormatEventArgs(char const*)
+ T panorama::CopySettings::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::CopyStringToClipboard::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
  T panorama::CopyStringToClipboard::FormatEventArgs(char const*)
  T panorama::CopyStringToClipboard::GetEventType()
@@ -15021,6 +15028,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::CloseDebuggerWindow>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::CloseModalDialog>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ContextMenu, panorama::EPanelEventSource_t>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::CopySettings>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::CopyStringToClipboard, char const*, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::CreateDebuggerWindow>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::DeletePanel>(panorama::IUIPanel*, char const*, char const**)
@@ -15081,6 +15089,7 @@
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PageUp>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PanelLoaded>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PanelStyleChanged>(panorama::IUIPanel*, char const*, char const**)
+ T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PasteSettings>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PlaySoundEffect, char const*>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::PollingForSteamClientUpdate>(panorama::IUIPanel*, char const*, char const**)
  T panorama::IUIEvent* panorama::UIEvent::CreateEventFromString<panorama::ProfileOff>(panorama::IUIPanel*, char const*, char const**)
@@ -15348,6 +15357,9 @@
  T panorama::PanoramaTypeToV8ParamJSObject(panorama::IUIJSObject*, void*, v8::Handle<v8::Value>*)
  T panorama::ParseUIEventParamHelper(CUtlBuffer&, char const*, char const**)
  T panorama::ParticleSystem_t::CopyFrom(panorama::ParticleSystem_t const&, panorama::CRenderCommandList&)
+ T panorama::PasteSettings::CreateEventFromString(panorama::IUIPanel*, char const*, char const**)
+ T panorama::PasteSettings::FormatEventArgs(char const*)
+ T panorama::PasteSettings::MakeEvent(panorama::IUIPanelClient const*)
  T panorama::PchNameFromEAnimationTimingFunction(int)
  T panorama::PchNameFromEBackgroundRepeat(int)
  T panorama::PchNameFromEContextUIPosition(panorama::EContextUIPosition)
