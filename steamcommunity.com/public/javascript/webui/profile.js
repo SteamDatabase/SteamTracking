@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5786609";
+var CLSTAMP = "5799115";
 !(function(e) {
   function t(t) {
     for (
@@ -791,6 +791,8 @@ var CLSTAMP = "5786609";
         APPID: 0,
         VANITY_ID: "",
         IS_CREATOR_HOME: !1,
+        IS_CURATOR: !1,
+        CAN_UPLOAD_IMAGES: !1,
         HEADER_IMAGE: "",
         APP_NAME: "",
         HAS_ADULT_CONTENT: !1,
@@ -1129,22 +1131,17 @@ var CLSTAMP = "5786609";
           Object(r.d)(t, e),
           (t.prototype.Show = function() {
             this.m_options.bDisableMouseOverlay ||
-              t.sm_mapEmbeddedMouseOverlays.ShowElement(
-                this.m_ownerWindow.document,
-                o.createElement(c.f),
-                this
-              ),
+              ((this.m_embeddedElementInstanceOverlay = Object(a.b)(
+                this.m_ownerWindow.document
+              )),
+              this.m_embeddedElementInstanceOverlay.Show(o.createElement(c.f))),
               e.prototype.Show.call(this);
           }),
           (t.prototype.Hide = function() {
-            this.m_options.bDisableMouseOverlay ||
-              t.sm_mapEmbeddedMouseOverlays.HideElement(
-                this.m_ownerWindow.document,
-                this
-              ),
+            this.m_embeddedElementInstanceOverlay &&
+              this.m_embeddedElementInstanceOverlay.Hide(0),
               e.prototype.Hide.call(this);
           }),
-          (t.sm_mapEmbeddedMouseOverlays = new a.a("ContextMenuMouseOverlay")),
           t
         );
       })(p),
@@ -1557,7 +1554,7 @@ var CLSTAMP = "5786609";
                   : (a.menuRight = m - (c.bOverlapHorizontal ? _ : v));
               var S = u || r.top,
                 x = u || r.bottom,
-                M = o.height;
+                M = e.scrollHeight;
               c.bMatchHeight && ((M = x - S), (a.menuHeight = M));
               var C = (c.bOverlapVertical ? x : S) - M,
                 L = C > 0,
@@ -7234,37 +7231,24 @@ and limitations under the License.
             (this.m_mapFallbackTokens = new Map());
         }
         return (
-          (e.prototype.InitFromObjects = function(e, t, n, r, o) {
-            var i = this;
-            o || this.m_mapTokens.clear(),
-              n &&
-                Object.keys(n).forEach(function(e, t) {
-                  i.m_mapTokens.set(e, n[e]);
-                }),
-              Object.keys(e).forEach(function(t, n) {
-                i.m_mapTokens.set(t, e[t]);
-              }),
-              t &&
-                Object.keys(t).forEach(function(e, n) {
-                  i.m_mapTokens.has(e) || i.m_mapTokens.set(e, t[e]),
-                    i.m_mapFallbackTokens.set(e, t[e]);
-                }),
-              r &&
-                Object.keys(r).forEach(function(e, t) {
-                  i.m_mapTokens.has(e) || i.m_mapTokens.set(e, r[e]),
-                    i.m_mapFallbackTokens.has(e) ||
-                      i.m_mapFallbackTokens.set(e, r[e]);
-                });
+          (e.prototype.InitFromObjects = function(e, t, n, o, i) {
+            i || this.m_mapTokens.clear();
+            var c = Object(r.a)(Object(r.a)({}, n || {}), e),
+              a = Object(r.a)(Object(r.a)({}, o || {}), t || {});
+            this.AddTokens(c, a);
           }),
           (e.prototype.InitDirect = function(e, t) {
-            var n = this;
             this.m_mapTokens.clear(),
               this.m_mapFallbackTokens.clear(),
-              Object.keys(e).forEach(function(t, r) {
-                n.m_mapTokens.set(t, e[t]);
-              }),
+              this.AddTokens(e, t);
+          }),
+          (e.prototype.AddTokens = function(e, t) {
+            var n = this;
+            Object.keys(e).forEach(function(t) {
+              n.m_mapTokens.set(t, e[t]);
+            }),
               t &&
-                Object.keys(t).forEach(function(e, r) {
+                Object.keys(t).forEach(function(e) {
                   n.m_mapTokens.has(e) || n.m_mapTokens.set(e, t[e]),
                     n.m_mapFallbackTokens.set(e, t[e]);
                 });

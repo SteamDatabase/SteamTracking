@@ -45,6 +45,10 @@ a.tooltip {
 .promo_item_list {
 	font-size: 0px;
 	line-height: normal;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .promo_item_store_list {
     margin-right: 16px;

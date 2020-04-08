@@ -217,6 +217,7 @@
 		}
 
 .miniprofile_playersection {
+	position: relative;
 	display: flex;
 	flex-direction: row;
 
@@ -237,6 +238,19 @@
 	width: 90px;
 	height: 90px;
 	box-sizing: border-box;
+	background: none;
+}
+
+.miniprofile_playersection .playersection_avatar_frame {
+	position: absolute;
+	z-index: 1;
+	width: 90px;
+	height: 90px;
+	pointer-events: none;
+}
+.miniprofile_playersection .playersection_avatar_frame > img {
+	width: 100%;
+	height: 100%;
 	background: none;
 }
 

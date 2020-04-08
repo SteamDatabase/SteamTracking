@@ -468,7 +468,7 @@ body.v6 .page_content  {
 	margin-bottom: 8px;
 }
 
-.page_content .box-images-small a {
+.page_content .box-images-small a:nth-child(2n+1) {
 	margin-right: 6px;
 }
 

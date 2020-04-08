@@ -29,7 +29,7 @@ function OnLocationChange ( elIgnored, hash )
 
 // This sorts our tags by frequency (tag facet) or explicitly (forced top)
 g_TagMap = null;
-function PopulateTagFacetData( rgTagFacetData, rgForcedTop )
+function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
 {
 	var $Container = $J('#TagFilter_Container');
 	var $Tags = $Container.children('div').detach();
@@ -69,8 +69,14 @@ function PopulateTagFacetData( rgTagFacetData, rgForcedTop )
 			continue;
 
 		rgDisplayedTags[ tagid ] = true;
+		var textCount = v_numberformat( count );
+		
+		if(bHydrate){
+			textCount += "+";
+		}
+		
 		var $Tag = g_TagMap[tagid];
-		$Tag.find('.tab_filter_control_count').text( v_numberformat( count ) ).css( {display: '' });
+		$Tag.find('.tab_filter_control_count').text( textCount ).css( {display: '' });
 		$Container.append( $Tag );
 		if ( nIndex++ > 15 )
 			$Tag.hide();

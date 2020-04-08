@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5786609";
+var CLSTAMP = "5799115";
 !(function(e) {
   function t(t) {
     for (
@@ -499,6 +499,8 @@ var CLSTAMP = "5786609";
         APPID: 0,
         VANITY_ID: "",
         IS_CREATOR_HOME: !1,
+        IS_CURATOR: !1,
+        CAN_UPLOAD_IMAGES: !1,
         HEADER_IMAGE: "",
         APP_NAME: "",
         HAS_ADULT_CONTENT: !1,
@@ -2195,37 +2197,24 @@ and limitations under the License.
             (this.m_mapFallbackTokens = new Map());
         }
         return (
-          (e.prototype.InitFromObjects = function(e, t, n, r, o) {
-            var i = this;
-            o || this.m_mapTokens.clear(),
-              n &&
-                Object.keys(n).forEach(function(e, t) {
-                  i.m_mapTokens.set(e, n[e]);
-                }),
-              Object.keys(e).forEach(function(t, n) {
-                i.m_mapTokens.set(t, e[t]);
-              }),
-              t &&
-                Object.keys(t).forEach(function(e, n) {
-                  i.m_mapTokens.has(e) || i.m_mapTokens.set(e, t[e]),
-                    i.m_mapFallbackTokens.set(e, t[e]);
-                }),
-              r &&
-                Object.keys(r).forEach(function(e, t) {
-                  i.m_mapTokens.has(e) || i.m_mapTokens.set(e, r[e]),
-                    i.m_mapFallbackTokens.has(e) ||
-                      i.m_mapFallbackTokens.set(e, r[e]);
-                });
+          (e.prototype.InitFromObjects = function(e, t, n, o, i) {
+            i || this.m_mapTokens.clear();
+            var a = Object(r.a)(Object(r.a)({}, n || {}), e),
+              s = Object(r.a)(Object(r.a)({}, o || {}), t || {});
+            this.AddTokens(a, s);
           }),
           (e.prototype.InitDirect = function(e, t) {
-            var n = this;
             this.m_mapTokens.clear(),
               this.m_mapFallbackTokens.clear(),
-              Object.keys(e).forEach(function(t, r) {
-                n.m_mapTokens.set(t, e[t]);
-              }),
+              this.AddTokens(e, t);
+          }),
+          (e.prototype.AddTokens = function(e, t) {
+            var n = this;
+            Object.keys(e).forEach(function(t) {
+              n.m_mapTokens.set(t, e[t]);
+            }),
               t &&
-                Object.keys(t).forEach(function(e, r) {
+                Object.keys(t).forEach(function(e) {
                   n.m_mapTokens.has(e) || n.m_mapTokens.set(e, t[e]),
                     n.m_mapFallbackTokens.set(e, t[e]);
                 });

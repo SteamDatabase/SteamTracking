@@ -96,7 +96,7 @@ h4 {
 .uploadTable {
     width: 100%;
     background: rgba(59, 63, 72, 0.5);
-    border-radius: 4px;
+    border-collapse: collapse;
 
 }
 .uploadTable p {
@@ -104,12 +104,10 @@ h4 {
 }
 .uploadTable > thead > tr {
     background-color: rgba(55, 65, 78, 0.6);
-    border-left: 1px solid #4d4b49;
-    border-right: 1px solid #4d4b49;
 }
 
 .uploadTable th {
-    color: #82807c;
+    color: #8F98A0;
     font-size: 11px;
     text-transform: uppercase;
     font-weight: normal;
@@ -118,21 +116,36 @@ h4 {
 }
 
 .uploadTable > tbody > tr {
-    border-top: 1px solid #000;
-    border-left: 1px solid #4d4b49;
-    border-right: 1px solid #4d4b49;
+    border: none;
 }
 
 .uploadTable > tbody > tr:last-child {
     border-bottom: 1px solid #4d4b49;
 }
 
+.session_summary {
+background: -webkit-linear-gradient( top, #373b43 5%, #2d3037 95%);
+	background: linear-gradient( to bottom, #373b43 5%, #2d3037 95%);
+}
+.session_summary td {
+    border-top: 1px solid #07BFFF;
+    height: 30px;
+    padding-left: 14px;
+}
+.session_summary_spacer td {
+    height: 30px;
+}
+
+.session_end {
+    width: 168px;
+}
+.upload_start {
+    width: 160px;
+}
+
 
 .uploadTable td {
     padding: 5px 14px;
-}
-.uploadHistory td {
-	padding: 0px 0px;
 }
 
 #UploadInfoDelay
