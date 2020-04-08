@@ -1,0 +1,392 @@
+__TEXT
+__text
+__TEXT
+__stubs
+__TEXT
+__stub_helper
+__TEXT
+__gcc_except_tab__TEXT
+__cstring
+__TEXT
+__const
+__TEXT
+__objc_methname
+__TEXT
+__unwind_info
+__TEXT
+__DATA
+__nl_symbol_ptr
+__DATA
+M
+__got
+__DATA
+h
+O
+__la_symbol_ptr
+__DATA
+\
+__mod_init_func
+__DATA
+__const
+__DATA
+H
+__cfstring
+__DATA
+NSt3__119basic_istringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+NSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+N4Json12RuntimeErrorE
+N4Json10LogicErrorE
+NSt3__119basic_ostringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE
+bin
+vrclient.dylib
+VRClientCoreFactory
+IVRClientCore_003
+IVRDashboardManager_001
+IVRControlPanel_004
+IVRCompositorSystemInternal_001
+IVRRenderModelsInternal_001
+IVRTrackedCameraInternal_001
+IVRVirtualDisplay_002
+IVROculusDirect_001
+ILiquidVR_001
+IVRPaths_001
+IVROverlayView_002
+IVRSceneGraph_001
+true
+false
+No Error (0)
+Installation Not Found (100)
+Installation Corrupt (101)
+vrclient Shared Lib Not Found (102)
+File Not Found (103)
+Factory Function Not Found (104)
+Interface Not Found (105)
+Invalid Interface (106)
+User Config Directory Invalid (107)
+Hmd Not Found (108)
+Not Initialized (109)
+Installation path could not be located (110)
+Config path could not be located (111)
+Log path could not be located (112)
+Unable to write path registry (113)
+App info manager init failed (114)
+Internal Retry (115)
+User Canceled Init (116)
+Another app was already launching (117)
+Settings manager init failed (118)
+VR system shutting down (119)
+Too many tracked objects (120)
+Not starting vrserver for background app (121)
+The requested interface is incompatible with the compositor and the compositor is running (122)
+This interface is not available to utility applications (123)
+vrserver internal error (124)
+Hmd DriverId is invalid (125)
+Hmd Not Found Presence Failed (126)
+VR Monitor Not Found (127)
+VR Monitor startup failed (128)
+Low Power Watchdog Not Supported (129)
+Invalid Application Type (130)
+Not available to watchdog apps (131)
+Watchdog disabled in settings (132)
+VR Dashboard Not Found (133)
+VR Dashboard startup failed (134)
+VR Home Not Found (135)
+VR home startup failed (136)
+Rebooting In Progress (137)
+Firmware Update In Progress (138)
+Firmware Recovery In Progress (139)
+USB Service Busy (140)
+Driver Failed (200)
+Driver Not Known (201)
+HMD Not Known (202)
+Driver Not Loaded (203)
+Driver runtime is out of date (204)
+HMD already in use by another application (205)
+Device is not calibrated (206)
+Device Calibration is invalid (207)
+HMD detected over USB, but Monitor not found (208)
+Driver Tracked Device Interface unknown (209)
+Hmd DriverId is our of bounds (211)
+HMD detected over USB, but Monitor may be mirrored instead of extended (212)
+On laptop, HMD detected over USB, but Monitor not found (213)
+VR Server Init Failed (300)
+Connect to VR Server Failed (301)
+Shared IPC State Init Failed (302)
+Shared IPC Compositor Init Failed (303)
+Shared IPC Mutex Init Failed (304)
+Shared IPC Failed (305)
+Shared IPC Compositor Connect Failed (306)
+Shared IPC Compositor Invalid Connect Response (307)
+Shared IPC Connect Failed After Multiple Attempts (308)
+Shared IPC Connect Failed After Target Exited (309)
+Shared IPC Namespace Unavailable (310)
+Compositor failed to initialize (400)
+Compositor failed to find DX11 hardware (401)
+Compositor requires mandatory firmware update (402)
+Compositor initialization succeeded, but overlay init failed (403)
+Compositor initialization succeeded, but screenshot init failed (404)
+Compositor unable to create graphics device (405)
+Unable to connect to Oculus Runtime (1000)
+Unable to connect to Oculus Runtime, possible bad install (1114)
+HMD found, but can not open device (1101)
+HMD found, but unable to request config (1102)
+HMD found, but no stored config (1103)
+HMD found, but failed configuration check (1113)
+HMD found, but config too big (1104)
+HMD found, but config too small (1105)
+HMD found, but unable to init ZLib (1106)
+HMD found, but problems with the data (1107)
+HMD found, but problems with the data (1108)
+HMD found, but problems with the data (1109)
+HMD found, but problems with the data (1110)
+HMD found, but problems with the data (1111)
+HMD found, but problems with the data (1112)
+Unable to find Steam installation (2000)
+VRInitError_None
+VRInitError_Unknown
+VRInitError_Init_InstallationNotFound
+VRInitError_Init_InstallationCorrupt
+VRInitError_Init_VRClientDLLNotFound
+VRInitError_Init_FileNotFound
+VRInitError_Init_FactoryNotFound
+VRInitError_Init_InterfaceNotFound
+VRInitError_Init_InvalidInterface
+VRInitError_Init_UserConfigDirectoryInvalid
+VRInitError_Init_HmdNotFound
+VRInitError_Init_NotInitialized
+VRInitError_Init_PathRegistryNotFound
+VRInitError_Init_NoConfigPath
+VRInitError_Init_NoLogPath
+VRInitError_Init_PathRegistryNotWritable
+VRInitError_Init_AppInfoInitFailed
+VRInitError_Init_Retry
+VRInitError_Init_InitCanceledByUser
+VRInitError_Init_AnotherAppLaunching
+VRInitError_Init_SettingsInitFailed
+VRInitError_Init_ShuttingDown
+VRInitError_Init_TooManyObjects
+VRInitError_Init_NoServerForBackgroundApp
+VRInitError_Init_NotSupportedWithCompositor
+VRInitError_Init_NotAvailableToUtilityApps
+VRInitError_Init_Internal
+VRInitError_Init_HmdDriverIdIsNone
+VRInitError_Init_HmdNotFoundPresenceFailed
+VRInitError_Init_VRMonitorNotFound
+VRInitError_Init_VRMonitorStartupFailed
+VRInitError_Init_LowPowerWatchdogNotSupported
+VRInitError_Init_InvalidApplicationType
+VRInitError_Init_NotAvailableToWatchdogApps
+VRInitError_Init_WatchdogDisabledInSettings
+VRInitError_Init_VRDashboardNotFound
+VRInitError_Init_VRDashboardStartupFailed
+VRInitError_Init_VRHomeNotFound
+VRInitError_Init_VRHomeStartupFailed
+VRInitError_Init_RebootingBusy
+VRInitError_Init_FirmwareUpdateBusy
+VRInitError_Init_FirmwareRecoveryBusy
+VRInitError_Init_USBServiceBusy
+VRInitError_Init_VRWebHelperStartupFailed
+VRInitError_Init_TrackerManagerInitFailed
+VRInitError_Init_AlreadyRunning
+VRInitError_Init_FailedForVrMonitor
+VRInitError_Init_PropertyManagerInitFailed
+VRInitError_Driver_Failed
+VRInitError_Driver_Unknown
+VRInitError_Driver_HmdUnknown
+VRInitError_Driver_NotLoaded
+VRInitError_Driver_RuntimeOutOfDate
+VRInitError_Driver_HmdInUse
+VRInitError_Driver_NotCalibrated
+VRInitError_Driver_CalibrationInvalid
+VRInitError_Driver_HmdDisplayNotFound
+VRInitError_Driver_TrackedDeviceInterfaceUnknown
+VRInitError_Driver_HmdDriverIdOutOfBounds
+VRInitError_Driver_HmdDisplayMirrored
+VRInitError_Driver_HmdDisplayNotFoundLaptop
+VRInitError_IPC_ServerInitFailed
+VRInitError_IPC_ConnectFailed
+VRInitError_IPC_SharedStateInitFailed
+VRInitError_IPC_CompositorInitFailed
+VRInitError_IPC_MutexInitFailed
+VRInitError_IPC_Failed
+VRInitError_IPC_CompositorConnectFailed
+VRInitError_IPC_CompositorInvalidConnectResponse
+VRInitError_IPC_ConnectFailedAfterMultipleAttempts
+VRInitError_IPC_ConnectFailedAfterTargetExited
+VRInitError_IPC_NamespaceUnavailable
+VRInitError_Compositor_Failed
+VRInitError_Compositor_D3D11HardwareRequired
+VRInitError_Compositor_FirmwareRequiresUpdate
+VRInitError_Compositor_OverlayInitFailed
+VRInitError_Compositor_ScreenshotsInitFailed
+VRInitError_Compositor_UnableToCreateDevice
+VRInitError_Compositor_SharedStateIsNull
+VRInitError_Compositor_NotificationManagerIsNull
+VRInitError_Compositor_ResourceManagerClientIsNull
+VRInitError_Compositor_MessageOverlaySharedStateInitFailure
+VRInitError_Compositor_PropertiesInterfaceIsNull
+VRInitError_Compositor_CreateFullscreenWindowFailed
+VRInitError_Compositor_SettingsInterfaceIsNull
+VRInitError_Compositor_FailedToShowWindow
+VRInitError_Compositor_DistortInterfaceIsNull
+VRInitError_Compositor_DisplayFrequencyFailure
+VRInitError_Compositor_RendererInitializationFailed
+VRInitError_Compositor_DXGIFactoryInterfaceIsNull
+VRInitError_Compositor_DXGIFactoryCreateFailed
+VRInitError_Compositor_DXGIFactoryQueryFailed
+VRInitError_Compositor_InvalidAdapterDesktop
+VRInitError_Compositor_InvalidHmdAttachment
+VRInitError_Compositor_InvalidOutputDesktop
+VRInitError_Compositor_InvalidDeviceProvided
+VRInitError_Compositor_D3D11RendererInitializationFailed
+VRInitError_Compositor_FailedToFindDisplayMode
+VRInitError_Compositor_FailedToCreateSwapChain
+VRInitError_Compositor_FailedToGetBackBuffer
+VRInitError_Compositor_FailedToCreateRenderTarget
+VRInitError_Compositor_FailedToCreateDXGI2SwapChain
+VRInitError_Compositor_FailedtoGetDXGI2BackBuffer
+VRInitError_Compositor_FailedToCreateDXGI2RenderTarget
+VRInitError_Compositor_FailedToGetDXGIDeviceInterface
+VRInitError_Compositor_SelectDisplayMode
+VRInitError_Compositor_FailedToCreateNvAPIRenderTargets
+VRInitError_Compositor_NvAPISetDisplayMode
+VRInitError_Compositor_FailedToCreateDirectModeDisplay
+VRInitError_Compositor_InvalidHmdPropertyContainer
+VRInitError_Compositor_UpdateDisplayFrequency
+VRInitError_Compositor_CreateRasterizerState
+VRInitError_Compositor_CreateWireframeRasterizerState
+VRInitError_Compositor_CreateSamplerState
+VRInitError_Compositor_CreateClampToBorderSamplerState
+VRInitError_Compositor_CreateAnisoSamplerState
+VRInitError_Compositor_CreateOverlaySamplerState
+VRInitError_Compositor_CreatePanoramaSamplerState
+VRInitError_Compositor_CreateFontSamplerState
+VRInitError_Compositor_CreateNoBlendState
+VRInitError_Compositor_CreateBlendState
+VRInitError_Compositor_CreateAlphaBlendState
+VRInitError_Compositor_CreateBlendStateMaskR
+VRInitError_Compositor_CreateBlendStateMaskG
+VRInitError_Compositor_CreateBlendStateMaskB
+VRInitError_Compositor_CreateDepthStencilState
+VRInitError_Compositor_CreateDepthStencilStateNoWrite
+VRInitError_Compositor_CreateDepthStencilStateNoDepth
+VRInitError_Compositor_CreateFlushTexture
+VRInitError_Compositor_CreateDistortionSurfaces
+VRInitError_Compositor_CreateConstantBuffer
+VRInitError_Compositor_CreateHmdPoseConstantBuffer
+VRInitError_Compositor_CreateHmdPoseStagingConstantBuffer
+VRInitError_Compositor_CreateSharedFrameInfoConstantBuffer
+VRInitError_Compositor_CreateOverlayConstantBuffer
+VRInitError_Compositor_CreateSceneTextureIndexConstantBuffer
+VRInitError_Compositor_CreateReadableSceneTextureIndexConstantBuffer
+VRInitError_Compositor_CreateLayerGraphicsTextureIndexConstantBuffer
+VRInitError_Compositor_CreateLayerComputeTextureIndexConstantBuffer
+VRInitError_Compositor_CreateLayerComputeSceneTextureIndexConstantBuffer
+VRInitError_Compositor_CreateComputeHmdPoseConstantBuffer
+VRInitError_Compositor_CreateGeomConstantBuffer
+VRInitError_Compositor_CreatePanelMaskConstantBuffer
+VRInitError_Compositor_CreatePixelSimUBO
+VRInitError_Compositor_CreateMSAARenderTextures
+VRInitError_Compositor_CreateResolveRenderTextures
+VRInitError_Compositor_CreateComputeResolveRenderTextures
+VRInitError_Compositor_CreateDriverDirectModeResolveTextures
+VRInitError_Compositor_OpenDriverDirectModeResolveTextures
+VRInitError_Compositor_CreateFallbackSyncTexture
+VRInitError_Compositor_ShareFallbackSyncTexture
+VRInitError_Compositor_CreateOverlayIndexBuffer
+VRInitError_Compositor_CreateOverlayVertextBuffer
+VRInitError_Compositor_CreateTextVertexBuffer
+VRInitError_Compositor_CreateTextIndexBuffer
+VRInitError_Compositor_CreateMirrorTextures
+VRInitError_Compositor_CreateLastFrameRenderTexture
+VRInitError_Compositor_CreateMirrorOverlay
+VRInitError_Compositor_FailedToCreateVirtualDisplayBackbuffer
+VRInitError_VendorSpecific_UnableToConnectToOculusRuntime
+VRInitError_VendorSpecific_WindowsNotInDevMode
+VRInitError_VendorSpecific_OculusRuntimeBadInstall
+VRInitError_VendorSpecific_HmdFound_CantOpenDevice
+VRInitError_VendorSpecific_HmdFound_UnableToRequestConfigStart
+VRInitError_VendorSpecific_HmdFound_NoStoredConfig
+VRInitError_VendorSpecific_HmdFound_ConfigFailedSanityCheck
+VRInitError_VendorSpecific_HmdFound_ConfigTooBig
+VRInitError_VendorSpecific_HmdFound_ConfigTooSmall
+VRInitError_VendorSpecific_HmdFound_UnableToInitZLib
+VRInitError_VendorSpecific_HmdFound_CantReadFirmwareVersion
+VRInitError_VendorSpecific_HmdFound_UnableToSendUserDataStart
+VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataStart
+VRInitError_VendorSpecific_HmdFound_UnableToGetUserDataNext
+VRInitError_VendorSpecific_HmdFound_UserDataAddressRange
+VRInitError_VendorSpecific_HmdFound_UserDataError
+VRInitError_Steam_SteamInstallationNotFound
+Unknown error (%d)
+rb
+.openvr
+VR_PATHREG_OVERRIDE
+openvrpaths.vrpath
+Unable to determine VR Path Registry filename
+Unable to read VR Path Registry from %s
+Unable to parse %s: %s
+runtime
+config
+log
+external_drivers
+OpenVR
+VR Path Registry node %s is not an array
+VR_OVERRIDE
+VR_CONFIG_PATH
+VR_LOG_PATH
+A valid JSON document must be either an array or an object value.
+Exceeded stackLimit in readValue().
+Syntax error: value, object or array expected.
+rue
+alse
+ull
+Missing ':' after object member name
+Missing ',' or '}' in object declaration
+Missing '}' or object member name
+Missing ',' or ']' in array declaration
+'
+' is not a number.
+Empty escape sequence in string
+Bad escape sequence in string
+additional six characters expected to parse unicode surrogate pair.
+expecting another \u token to begin the second half of a unicode surrogate pair
+Bad unicode escape sequence in string: four digits expected.
+Bad unicode escape sequence in string: hexadecimal digit expected.
+Line %d, Column %d
+*
+See
+for detail.
+assert json failed
+in Json::Value::setComment(): Comments must start with /
+in Json::Value::operator[](ArrayIndex): requires arrayValue
+in Json::Value::operator[](int index): index cannot be negative
+in Json::Value::operator[](ArrayIndex)const: requires arrayValue
+in Json::Value::resolveReference(key, end): requires objectValue
+in Json::Value::find(key, end, found): requires objectValue or nullValue
+in Json::Value::duplicateStringValue(): Failed to allocate string value buffer
+in Json::Value::duplicateAndPrefixStringValue(): length too big for prefixing
+in Json::Value::duplicateAndPrefixStringValue(): Failed to allocate string value buffer
+%%.%dg
+NaN
+null
+-Infinity
+-1e+9999
+Infinity
+1e+9999
+
+:
+=
+@
+S
+&
+&
+j
+"
+>
+>
+>
+>
+>
+?
+?

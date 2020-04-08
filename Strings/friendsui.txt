@@ -3,8 +3,8 @@ pC
 pC
 __text
 __TEXT
-O
-O
+P
+P
 __stubs
 __TEXT
 __stub_helper
@@ -51,7 +51,7 @@ __DATA
 Aj
 __common
 __DATA
-85
+(5
 H
 __LINKEDIT
 0Y
@@ -62,7 +62,7 @@ __LINKEDIT
 xLY
 P
 c
-/b
+.b
 
 8
 @loader_path/libtier0_s.dylib
@@ -10336,16 +10336,15 @@ VR_ShutdownInternal
 VR_IsHmdPresent
 VR_GetStringForHmdError
 VR_GetGenericInterface
-IVRSystem_020
+IVRSystem_021
 IVRChaperone_003
-IVRCompositor_022
-IVROverlay_019
+IVRCompositor_026
+IVROverlay_024
 IVRRenderModels_006
-IVRControlPanel_001
-IVRDashboardManager_001
-IVRApplications_006
+IVRSteamPrivate_001
+IVRApplications_007
 IVRNotifications_002
-IVRSettings_002
+IVRSettings_003
 IVRExternalEventSource_001
 Assertion Failed: m_pModule
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/interface.h
@@ -10636,22 +10635,21 @@ Assertion Failed: k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 30819D300D06092A864886F70D010101050003818B0030818702818100B1260881BDFE84463D88C6AB8DB914A2E593893C10508B8A5ABDF692E9A5419A3EDBAE86A052849983B75E3B425C18178B260003D857DF0B6505C6CF9C84F5859FCE3B63F1FB2D4818501F6C5FA4AD1430EEB081A74ABD74CD1F4AA1FCCA3B88DD0548AED34443CEB52444EAE9099AA4FE66B2E6224D02381C248025C7044079020111
 30819D300D06092A864886F70D010101050003818B003081870281810093AFCC20E2393BFD1234FC5552E9A9D5610ECC4AC6891EBCC77C28018FCB31404C09A5DC11636CD97C1A022188AB680CFF063C830BA693A0F1A90E9A3E21E33EE731BD5B6AAB09B40A1A951C21ECD6B11CAB63B4840894F4F2F0CC9D24924DF7DB216FE7D9C0C5914A88DF501EF27ACB00D08101CC2AEC32DFAD498289DCF4BD020111
 30819d300d06092a864886f70d010101050003818b0030818702818100baeee6ba4093c07f86fb34fa2ed0c9660484dd02e2d7b4e2dbc0a7b80f088f42c34dffd633b4f79fd4956aa6b901d480da5d5f783fefd681b9fc517804b00451dfc3ecc7e16b11dcb0379dc1f9d00d0a7ab8f5d6aba57115f12256ed0c9e9bd4bf994dbbdd42cd019c5b023b3fd0005430c5305bdd46cce39a492753b0b5b355020111
-g33
-,/3
-D/3
+G43
+$03
+`43
 -
 -
-g,
 f,
-tW
+e,
+sW
 p
 0
 p
-<,
 p
 0
 L
-,
+L
 ,
 ,
 ,
@@ -10676,14 +10674,14 @@ p
 
 8+
 +
+8+
 4#
-K
 +
 K
 a*
+Q.
 0
 p
->.
 0
 p
 @
@@ -10697,7 +10695,6 @@ p
 
 
 
-V
 0
 0
 0
@@ -10707,7 +10704,6 @@ p
 0
 0
 p
-[*
 p
 0
 0
@@ -10737,22 +10733,19 @@ p
 0
 
 )
-t-
+U
 %
 %
 %
+J
 -
 -
 -
 r$
+@)
 `$
-*)
 p
-s,
 $
-@
-@
-@
 G
 0
 p
@@ -10763,7 +10756,6 @@ p
 p
 0
 0
-@
 ,
 p
 0
@@ -10777,6 +10769,7 @@ p
 0
 0
 0
+f(
 0
 p
 0
@@ -10800,6 +10793,7 @@ p
 p
 0
 p
+-(
 0
 p
 0
@@ -10808,8 +10802,6 @@ p
 (
 (
 (
-K
-j+
 0
 p
 +
@@ -10822,11 +10814,8 @@ p
 0
 p
 0
-?
-?
+k'
 p
-0,
-',
 p
 p
 p
@@ -10838,6 +10827,7 @@ p
 p
 p
 p
+)'
 p
 p
 ;"
@@ -10877,6 +10867,7 @@ p
 *
 *
 9*
+B&
 p
 *
 *
@@ -10885,7 +10876,8 @@ p
 *
 *
 *
-K>
+*
+J>
 &
 &
 &
@@ -10904,8 +10896,9 @@ p
 p
 0
 p
-p>
-M;
+n%
+o>
+L;
 )
 )
 $
@@ -10914,13 +10907,14 @@ $
 =
 @
 @
-w(
+t(
 ?
 ?
 +
 +
-+
->$
+\$
+U(
+S(
 A
 *
 $
@@ -10932,26 +10926,26 @@ $
 $
 Hc
 =
-O
-k#
-$N
+@'
+!#
+#N
 #
-L95+
+'
 N
-S"
+N
+6"
+J&
+3&
 "
 "
-L95`{M
+"
+L95`zM
 ;
-M
+Z%
 Hc
 !
-t
 '
-y$
-&
-&
-$
+^$
 $
 ?
 ?
@@ -10968,7 +10962,8 @@ $
 ?
 ?
 ?
-)J
+(J
+J
 .
 0
 @
@@ -11280,16 +11275,17 @@ Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@o
 =
 3
 3
-#mQB
-#MBB
-#-?B
+#}PB
+#]PB
+#=AB
 IcE
 I;E
 ,
 H
 H
-:@
-7@
+9@
+6@
+|@
 
 
 
@@ -11321,6 +11317,7 @@ B
 ?
 `
 `
+(
 !
 A
 @
@@ -11399,51 +11396,47 @@ P
 "
 <
 <
-<
 3
 D
-{;
-v;
-e;
-S;
-@;
+;
+z;
+u;
+d;
+R;
+?;
 @
-})
-":
-)
-'
-m9
+|)
 (
+!:
+(
+)
+l9
+'
+'
+'
 8
+8
+7
+7
 &
-$
+~$
 d
 
 
 6
+6
+6
 !
+h
 
-
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
-1
 0
 
 
-u4
+t4
 &
 &
+1
+1
 t=
 =
 =
@@ -11453,17 +11446,30 @@ u4
 0
 0
 0
+0
+0
+q
+0
+0
+&
 
 
 
 
-$
 uV%
 
 
-r#
+/
+/
+/
+/
+/
+/
+q#
 E
-s/
+r/
+/
+/
 /
 /
 /
@@ -11472,7 +11478,7 @@ s/
 
 
 @
-1
+V
 
 
 @
@@ -11518,13 +11524,17 @@ s/
 .
 .
 d
-n!
+m!
 =
 
 =
 @
 =
 @
+,
+,
+,
+,
 @
 @
 @
@@ -11533,8 +11543,8 @@ n!
 @
 @
 @
-|
 
+\
 &
 =
 @

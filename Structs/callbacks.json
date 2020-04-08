@@ -2280,21 +2280,6 @@
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRPathChanged_t>(VRPathChanged_t*)"
     },
     {
-        "id": 4204,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRApplicationTransitionStarted_t>(VRApplicationTransitionStarted_t*)"
-    },
-    {
-        "id": 4205,
-        "size": 1,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRApplicationTransitionAborted_t>(VRApplicationTransitionAborted_t*)"
-    },
-    {
-        "id": 4206,
-        "size": 8,
-        "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRApplicationTransitionNewAppStarted_t>(VRApplicationTransitionNewAppStarted_t*)"
-    },
-    {
         "id": 4207,
         "size": 4,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<VRProcessQuit_t>(VRProcessQuit_t*)"
@@ -2572,17 +2557,17 @@
     {
         "id": 5901,
         "size": 20,
-        "posted_in": "void CBaseAPIJob::PostAPIResult<RequestGroupChatMessageNotificationsResponse_t>(RequestGroupChatMessageNotificationsResponse_t*)"
+        "posted_in": "CClientJobRequestChatRoomSubscriptionPermission::ResolveAndPostCallback(EResult)"
     },
     {
         "id": 5902,
         "size": 20,
-        "posted_in": "void CBaseAPIJob::PostAPIResult<RequestGroupChatMessageHistoryNotification_t>(RequestGroupChatMessageHistoryNotification_t*)"
+        "posted_in": "CClientJobChatRoomGetMessageHistory::BYieldingRunAPIJob()"
     },
     {
         "id": 5903,
         "size": 24,
-        "posted_in": "void CBaseAPIJob::PostAPIResult<RequestSendSteamGroupChatMessageNotification_t>(RequestSendSteamGroupChatMessageNotification_t*)"
+        "posted_in": "CClientJobChatRoomSendSubscribedChatMessage::BYieldingRunAPIJob()"
     },
     {
         "id": 5904,

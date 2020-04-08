@@ -131,6 +131,7 @@ public:
     virtual unknown_ret NumGamesRunning() = 0;
     virtual unknown_ret GetRunningGameID(int) = 0;
     virtual unknown_ret GetRunningGamePID(int) = 0;
+    virtual unknown_ret RaiseWindowForGame(CGameID) = 0;
     virtual unknown_ret GetAccountSecurityPolicyFlags() = 0;
     virtual unknown_ret SetClientStat(EClientStat, long long, unsigned int, unsigned int, unsigned int) = 0;
     virtual unknown_ret VerifyPassword(char const*) = 0;

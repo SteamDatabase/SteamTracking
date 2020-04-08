@@ -4122,6 +4122,8 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_46"		"create process failed"
 "Steam_AppUpdateError_47"		"Steam client outdated"
 "Steam_AppUpdateError_48"		"allowed playtime exceeded"
+"Steam_AppUpdateError_49"		"Steam files corrupt"
+"Steam_AppUpdateError_50"		"missing content files"
 
 
 "steam_subnav_featured"		"Featured"

@@ -1,14 +1,12 @@
-
- .objc_class_name_NSAutoreleasePool
- .objc_class_name_NSBundle
- .objc_class_name_NSFileManager
- .objc_class_name_NSString
  B vr::g_pLiquidVR
  B vr::g_pVRCompositorSystemInternal
  B vr::g_pVRControlPanel
  B vr::g_pVRDashboardManager
  B vr::g_pVROculusDirect
+ B vr::g_pVROverlayView
+ B vr::g_pVRPaths
  B vr::g_pVRRenderModelsInternal
+ B vr::g_pVRSceneGraph
  B vr::g_pVRTrackedCameraInternal
  B vr::g_pVRVirtualDisplay
  D VTT for std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
@@ -101,7 +99,6 @@
  T Json::Value::swapPayload(Json::Value&)
  T Json::Value::~Value()
  T Json::throwRuntimeError(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
- T Json::valueToString(double)
  T Json::valueToString(double, bool, unsigned int)
  T Json::valueToString(long long)
  T Json::valueToString(unsigned long long)
@@ -118,15 +115,20 @@
  T VRControlPanel
  T VRDashboardManager
  T VROculusDirect
+ T VROverlayView
+ T VRPaths
  T VRRenderModelsInternal
+ T VRSceneGraph
  T VRTrackedCameraInternal
  T VRVirtualDisplay
  T VR_GetGenericInterface
  T VR_GetInitToken
+ T VR_GetRuntimePath
  T VR_GetStringForHmdError
  T VR_GetVRInitErrorAsEnglishDescription
  T VR_GetVRInitErrorAsSymbol
  T VR_InitInternal
+ T VR_InitInternal2
  T VR_IsHmdPresent
  T VR_IsInterfaceVersionValid
  T VR_IsRuntimeInstalled
@@ -144,13 +146,9 @@
  T std::__1::__split_buffer<Json::Value**, std::__1::allocator<Json::Value**>&>::push_back(Json::Value**&&)
  T std::__1::__split_buffer<Json::Value**, std::__1::allocator<Json::Value**>&>::push_front(Json::Value** const&)
  T std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::destroy(std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*)
- T std::__1::__tree_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, int> std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__insert_unique<std::__1::pair<Json::Value::CZString const, Json::Value> const&>(std::__1::__tree_const_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, int>, std::__1::pair<Json::Value::CZString const, Json::Value> const&)
- T std::__1::__tree_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, int> std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__insert_unique<std::__1::pair<Json::Value::CZString const, Json::Value>&>(std::__1::__tree_const_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, int>, std::__1::pair<Json::Value::CZString const, Json::Value>&)
- T std::__1::__tree_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, int> std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::find<Json::Value::CZString>(Json::Value::CZString const&)
  T std::__1::__tree_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long> std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__insert_unique<std::__1::pair<Json::Value::CZString const, Json::Value> const&>(std::__1::__tree_const_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>, std::__1::pair<Json::Value::CZString const, Json::Value> const&)
  T std::__1::__tree_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long> std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__insert_unique<std::__1::pair<Json::Value::CZString const, Json::Value>&>(std::__1::__tree_const_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>, std::__1::pair<Json::Value::CZString const, Json::Value>&)
  T std::__1::__tree_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long> std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::find<Json::Value::CZString>(Json::Value::CZString const&)
- T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__find_equal<std::__1::__value_type<Json::Value::CZString, Json::Value> >(std::__1::__tree_const_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, int>, std::__1::__tree_node_base<void*>*&, std::__1::__value_type<Json::Value::CZString, Json::Value> const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__find_equal<std::__1::__value_type<Json::Value::CZString, Json::Value> >(std::__1::__tree_const_iterator<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>*, long>, std::__1::__tree_node_base<void*>*&, std::__1::__value_type<Json::Value::CZString, Json::Value> const&)
  T std::__1::__tree_node_base<void*>*& std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__find_equal<std::__1::__value_type<Json::Value::CZString, Json::Value> >(std::__1::__tree_node_base<void*>*&, std::__1::__value_type<Json::Value::CZString, Json::Value> const&)
  T std::__1::basic_istream<char, std::__1::char_traits<char> >& std::__1::getline<char, std::__1::char_traits<char>, std::__1::allocator<char> >(std::__1::basic_istream<char, std::__1::char_traits<char> >&, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >&, char)
@@ -169,7 +167,6 @@
  T std::__1::deque<Json::Reader::ErrorInfo, std::__1::allocator<Json::Reader::ErrorInfo> >::__add_back_capacity()
  T std::__1::deque<Json::Reader::ErrorInfo, std::__1::allocator<Json::Reader::ErrorInfo> >::__add_back_capacity(unsigned long)
  T std::__1::deque<Json::Reader::ErrorInfo, std::__1::allocator<Json::Reader::ErrorInfo> >::__append(unsigned long)
- T std::__1::deque<Json::Reader::ErrorInfo, std::__1::allocator<Json::Reader::ErrorInfo> >::__erase_to_end(std::__1::__deque_iterator<Json::Reader::ErrorInfo, Json::Reader::ErrorInfo const*, Json::Reader::ErrorInfo const&, Json::Reader::ErrorInfo const* const*, int, 146>)
  T std::__1::deque<Json::Reader::ErrorInfo, std::__1::allocator<Json::Reader::ErrorInfo> >::__erase_to_end(std::__1::__deque_iterator<Json::Reader::ErrorInfo, Json::Reader::ErrorInfo const*, Json::Reader::ErrorInfo const&, Json::Reader::ErrorInfo const* const*, long, 73l>)
  T std::__1::deque<Json::Reader::ErrorInfo, std::__1::allocator<Json::Reader::ErrorInfo> >::resize(unsigned long)
  T std::__1::deque<Json::Value*, std::__1::allocator<Json::Value*> >::__add_back_capacity()
@@ -177,10 +174,12 @@
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*> > > > std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__construct_node<std::__1::pair<Json::Value::CZString const, Json::Value> const&>(std::__1::pair<Json::Value::CZString const, Json::Value> const&)
  T std::__1::unique_ptr<std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*>, std::__1::__tree_node_destructor<std::__1::allocator<std::__1::__tree_node<std::__1::__value_type<Json::Value::CZString, Json::Value>, void*> > > > std::__1::__tree<std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::__map_value_compare<Json::Value::CZString, std::__1::__value_type<Json::Value::CZString, Json::Value>, std::__1::less<Json::Value::CZString>, true>, std::__1::allocator<std::__1::__value_type<Json::Value::CZString, Json::Value> > >::__construct_node<std::__1::pair<Json::Value::CZString const, Json::Value>&>(std::__1::pair<Json::Value::CZString const, Json::Value>&)
  T std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::reserve(unsigned long)
+ T strcpy_safe(char*, unsigned long, char const*)
  T virtual thunk to std::__1::basic_istringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_istringstream()
  T virtual thunk to std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >::~basic_ostringstream()
  T void std::__1::__tree_balance_after_insert<std::__1::__tree_node_base<void*>*>(std::__1::__tree_node_base<void*>*, std::__1::__tree_node_base<void*>*)
  T void std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >::__push_back_slow_path<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&>(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T vr::CleanupInternalInterfaces()
  T vr::VR_LoadHmdSystemInternal()
  _Unwind_Resume
  __CFConstantStringClassReference
@@ -190,8 +189,6 @@
  __cxa_begin_catch
  __cxa_end_catch
  __cxa_free_exception
- __cxa_guard_acquire
- __cxa_guard_release
  __cxa_rethrow
  __cxa_throw
  __gxx_personality_v0
@@ -199,13 +196,10 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
- __udivdi3
- __umoddi3
- b GetEnglishStringForHmdError(vr::EVRInitError)::buf
  b GetIDForVRInitError(vr::EVRInitError)::buf
- b guard variable for vr::VR_RuntimePath::sRuntimePath
  b stackDepth_g
- b vr::VR_RuntimePath::sRuntimePath
+ b vr::VR_RuntimePath::rchBuffer
+ b vr::g_mutexSystem
  b vr::g_nVRToken
  b vr::g_pHmdSystem
  b vr::g_pVRModule
@@ -215,14 +209,12 @@
  dyld_stub_binder
  fclose
  fopen
- fopen$UNIX2003
  fprintf
  fread
  free
  fseek
  ftell
  fwrite
- fwrite$UNIX2003
  getenv
  malloc
  memcmp
@@ -250,14 +242,11 @@
  std::__1::basic_ostream<char, std::__1::char_traits<char> >::~basic_ostream()
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::basic_streambuf()
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::imbue(std::__1::locale const&)
- std::__1::basic_streambuf<char, std::__1::char_traits<char> >::setbuf(char*, int)
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::setbuf(char*, long)
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::showmanyc()
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::sync()
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::uflow()
- std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsgetn(char*, int)
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsgetn(char*, long)
- std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, int)
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::xsputn(char const*, long)
  std::__1::basic_streambuf<char, std::__1::char_traits<char> >::~basic_streambuf()
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)
@@ -282,14 +271,20 @@
  std::__1::ios_base::init(void*)
  std::__1::locale::use_facet(std::__1::locale::id&) const
  std::__1::locale::~locale()
+ std::__1::recursive_mutex::lock()
+ std::__1::recursive_mutex::recursive_mutex()
+ std::__1::recursive_mutex::unlock()
+ std::__1::recursive_mutex::~recursive_mutex()
  std::__1::to_string(int)
  std::exception::~exception()
  std::terminate()
  strlen
+ strncpy
  t Json::codePointToUTF8(unsigned int)
  t Json::duplicateAndPrefixStringValue(char const*, unsigned int)
  t Json::normalizeEOL(char const*, char const*)
  t ParseStringListFromJson(std::__1::vector<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >, std::__1::allocator<std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > > >*, Json::Value const&, char const*)
+ t _GLOBAL__sub_I_openvr_api.tmp.steamvr_rel_osx_builder.92564.ii
  typeinfo for std::__1::basic_istream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >

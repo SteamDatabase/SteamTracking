@@ -265,13 +265,12 @@
  B vrapi::g_VRApplications
  B vrapi::g_VRChaperone
  B vrapi::g_VRCompositor
- B vrapi::g_VRControlPanel
- B vrapi::g_VRDashboardManager
  B vrapi::g_VRExternalEventSource
  B vrapi::g_VRNotifications
  B vrapi::g_VROverlay
  B vrapi::g_VRRenderModels
  B vrapi::g_VRSettings
+ B vrapi::g_VRSteamPrivate
  B vrapi::g_VRSystem
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
