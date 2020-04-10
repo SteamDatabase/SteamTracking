@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5799115";
+var CLSTAMP = "5804920";
 !(function(e) {
   function t(t) {
     for (
@@ -79756,13 +79756,7 @@ and limitations under the License.
           (t.prototype.ConvertBBCodeMessageContentToPlainTextMessageContent = function(
             e
           ) {
-            return (e = (e = (e = (e = (e = e.replace(
-              /\[emoticon\](.+?)\[\/emoticon\]/g,
-              ":$1:"
-            )).replace(/\[url=(.*?)\]\1\[\/url\]/g, "$1")).replace(
-              /\[url=(.*?)\](.*?)\[\/url\]/g,
-              "$1 ($2)"
-            )).replace(/(?<!\\)\[\/?.+?\]/g, "")).replace(/\\\[/g, "["));
+            return e;
           }),
           (t.prototype.OnNewChatMsgAdded = function(e, t, n, o) {
             var r = this.ConvertBBCodeMessageContentToPlainTextMessageContent(
