@@ -863,6 +863,10 @@ LocalizationReady("shared", "english", {
   PartnerEvent_Other: "Other Event",
   PartnerEvent_SteamAwardNominations: "Steam Award Nomination Request",
   PartnerEvent_SteamAwardVoteRequest: "Steam Award Vote Request",
+  PartnerEvent_SteamGameFestival_ArtistState:
+    "Steam Game Festival Artists Statement",
+  PartnerEvent_SteamGameFestival_Broadcast: "Steam Game Festival Live Stream",
+  PartnerEvent_SteamGameFestival_OfficeHour: "Steam Game Festival Office Hours",
 
   SocialMedia_Type_ShortName_1: "Steam",
   SocialMedia_Type_ShortName_2: "Google",
