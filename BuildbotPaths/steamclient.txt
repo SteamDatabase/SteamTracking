@@ -383,6 +383,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_shared.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_snp.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_stats.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_thinker.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamnetworkingsockets_udp.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamp2pnattypeprobecontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/i386/steamp2pvoice.o
@@ -680,6 +681,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_shared.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_snp.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_stats.o
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_thinker.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamnetworkingsockets_udp.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamp2pnattypeprobecontroller.o
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/buildbot_osx.build/Release/steamclient_client.build/Objects-normal/x86_64/steamp2pvoice.o
@@ -1924,6 +1926,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/../steamnetworking_stats.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/../steamnetworking_statsutils.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/../steamnetworkingsockets_internal.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/../steamnetworkingsockets_thinker.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingmessages.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/clientlib/csteamnetworkingsockets.h
@@ -1959,6 +1962,8 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworkingsockets_internal.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworkingsockets_shared.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworkingsockets_stats.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworkingsockets_thinker.cpp
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamnetworkingsockets/steamnetworkingsockets_thinker.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/bitstring.cpp

@@ -1044,6 +1044,7 @@ message CMsgClientPICSProductInfoRequest {
 	repeated .CMsgClientPICSProductInfoRequest.AppInfo apps = 2;
 	optional bool meta_data_only = 3;
 	optional uint32 num_prev_failed = 4;
+	optional uint32 supports_package_tokens = 5;
 }
 
 message CMsgClientPICSProductInfoResponse {

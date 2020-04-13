@@ -53,10 +53,10 @@
         i.d(t, "b", function() {
           return o;
         }),
-        ((s = r || (r = {}))[(s.Hover = 0)] = "Hover"),
+        ((s = r = r || {})[(s.Hover = 0)] = "Hover"),
         (s[(s.ClickPopup = 1)] = "ClickPopup"),
         (s[(s.ClickSurroundingRegion = 2)] = "ClickSurroundingRegion"),
-        ((a = n || (n = {}))[(a.Chat = 0)] = "Chat"),
+        ((a = n = n || {})[(a.Chat = 0)] = "Chat"),
         (a[(a.Notification = 1)] = "Notification"),
         (a[(a.Error = 2)] = "Error");
       var o = (function() {
@@ -4234,7 +4234,7 @@
             r
           );
         })(c.Message);
-      ((F = S || (S = {})).BeginBroadcastSession = function(e, t) {
+      ((F = S = S || {}).BeginBroadcastSession = function(e, t) {
         return e.SendMsg("Broadcast.BeginBroadcastSession#1", t, d, {});
       }),
         (F.EndBroadcastSession = function(e, t) {
@@ -4352,7 +4352,7 @@
             bConstMethod: !0
           });
         }),
-        ((w = B || (B = {})).NotifyBroadcastViewerStateHandler = {
+        ((w = B = B || {}).NotifyBroadcastViewerStateHandler = {
           name: "BroadcastClient.NotifyBroadcastViewerState#1",
           request: M
         }),
@@ -8680,7 +8680,7 @@
             r
           );
         })(c.Message);
-      ((ye = be || (be = {})).CreateBroadcastChannel = function(e, t) {
+      ((ye = be = be || {}).CreateBroadcastChannel = function(e, t) {
         return e.SendMsg("SteamTV.CreateBroadcastChannel#1", t, ve, {});
       }),
         (ye.GetBroadcastChannelID = function(e, t) {
@@ -11409,11 +11409,13 @@
                       d.a.GetBroadcastList(i.props.overview.appid).broadcasts ||
                       [],
                     t = i.state.broadcast;
-                  t &&
-                    (t = e.find(function(e) {
+                  !(t =
+                    t &&
+                    e.find(function(e) {
                       return e.unAccountId == t.unAccountId;
-                    })),
-                    !t && 0 < e.length && (t = e[0]),
+                    })) &&
+                    0 < e.length &&
+                    (t = e[0]),
                     i.state.broadcast != t && i.setState({ broadcast: t });
                 }));
             }),
@@ -12172,7 +12174,7 @@
             e
           );
         })();
-      ((B = F || (F = {}))[(B.None = 0)] = "None"),
+      ((B = F = F || {})[(B.None = 0)] = "None"),
         (B[(B.Append = 1)] = "Append"),
         (B[(B.Remove = 2)] = "Remove");
       var C,
@@ -13679,7 +13681,7 @@
           );
         })(),
         q = i("CdLH");
-      ((O = C || (C = {}))[(O.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
+      ((O = C = C || {})[(O.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
         (O[(O.HAVE_METADATA = 1)] = "HAVE_METADATA"),
         (O[(O.HAVE_CURRENT_DATA = 2)] = "HAVE_CURRENT_DATA"),
         (O[(O.HAVE_FUTURE_DATA = 3)] = "HAVE_FUTURE_DATA"),
@@ -15186,7 +15188,7 @@
           return ae;
         });
       var K, Q;
-      ((Q = K || (K = {}))[(Q.None = 0)] = "None"),
+      ((Q = K = K || {})[(Q.None = 0)] = "None"),
         (Q[(Q.Loading = 1)] = "Loading"),
         (Q[(Q.Ready = 2)] = "Ready"),
         (Q[(Q.Error = 3)] = "Error");
@@ -15879,7 +15881,7 @@
             e
           );
         })();
-      ((ee = Z || (Z = {}))[(ee.Timeline = 1)] = "Timeline"),
+      ((ee = Z = Z || {})[(ee.Timeline = 1)] = "Timeline"),
         (ee[(ee.Minimap = 2)] = "Minimap");
       var ne = (function() {
           function e(e, t, i, r) {
@@ -16907,7 +16909,7 @@
         k = i("Mgs7"),
         j = i("FdXL"),
         D = i.n(j);
-      ((M = v || (v = {})).topleft = "topleft"),
+      ((M = v = v || {}).topleft = "topleft"),
         (M.top = "top"),
         (M.topright = "topright"),
         (M.left = "left"),

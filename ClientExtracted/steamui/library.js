@@ -6,7 +6,9 @@
       i < n.length;
       i++
     )
-      (r = n[i]), m[r] && a.push(m[r][0]), (m[r] = 0);
+      (r = n[i]),
+        Object.prototype.hasOwnProperty.call(m, r) && m[r] && a.push(m[r][0]),
+        (m[r] = 0);
     for (t in c) Object.prototype.hasOwnProperty.call(c, t) && (l[t] = c[t]);
     for (p && p(e); a.length; ) a.shift()();
     return u.push.apply(u, o || []), s();
@@ -119,6 +121,7 @@
                 n = e && e.target && e.target.src;
               (o.message =
                 "Loading chunk " + u + " failed.\n(" + r + ": " + n + ")"),
+                (o.name = "ChunkLoadError"),
                 (o.type = r),
                 (o.request = n),
                 t[1](o);
@@ -392,10 +395,10 @@
         return F;
       }),
       r.d(t, "mb", function() {
-        return W;
+        return O;
       }),
       r.d(t, "y", function() {
-        return O;
+        return W;
       }),
       r.d(t, "W", function() {
         return P;
@@ -1964,7 +1967,7 @@
         })
       );
     }
-    function W() {
+    function O() {
       return o.createElement(
         "svg",
         {
@@ -1992,7 +1995,7 @@
         })
       );
     }
-    function O() {
+    function W() {
       return o.createElement(
         "svg",
         {
@@ -4002,13 +4005,13 @@
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!i()) return c || (c = u()), c;
+            if (!i()) return (c = c || u());
             var e = (function(e) {
               if (!i() || !window.document.cookie) return null;
               var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
               return t && t[2] ? decodeURIComponent(t[2]) : null;
             })("sessionid");
-            e || (e = u());
+            e = e || u();
             return e;
           })();
         },
@@ -4055,7 +4058,7 @@
       return (
         (function(e, t, r, n) {
           if (i()) {
-            n || (n = "/");
+            n = n || "/";
             var c = "";
             if (void 0 !== r && r) {
               var o = new Date();
@@ -4323,7 +4326,7 @@
           return t;
       }
     }
-    ((i = o || (o = {}))[(i.k_EOtherEvent = 1)] = "k_EOtherEvent"),
+    ((i = o = o || {})[(i.k_EOtherEvent = 1)] = "k_EOtherEvent"),
       (i[(i.k_EGameEvent = 2)] = "k_EGameEvent"),
       (i[(i.k_EPartyEvent = 3)] = "k_EPartyEvent"),
       (i[(i.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
@@ -4391,8 +4394,7 @@
       o.k_ESeasonRelease,
       o.k_ECrosspostEvent,
       o.k_EInGameEventGeneral;
-    ((w = x || (x = {}))[(w.k_ELaunchSource_None = 0)] =
-      "k_ELaunchSource_None"),
+    ((w = x = x || {})[(w.k_ELaunchSource_None = 0)] = "k_ELaunchSource_None"),
       (w[(w.k_ELaunchSource_2ftLibraryDetails = 100)] =
         "k_ELaunchSource_2ftLibraryDetails"),
       (w[(w.k_ELaunchSource_2ftLibraryListView = 101)] =

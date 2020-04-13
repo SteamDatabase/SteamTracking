@@ -3577,6 +3577,7 @@
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyGuide"	"Guide Button"
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyY"	"Y Button"
 	"Settings_RemoteClients_Streaming_ControllerOverlayHotkeyNone"	"Disabled"
+	"Settings_RemoteClients_EnableTouchController"	"Enable Touch Controls"
 	"Settings_RemoteClients_StreamingSupport"	"View support info"
 
 	"Settings_RemoteClients_Connected" "Computer connected"
@@ -6849,7 +6850,7 @@
 	"controller_android"								"Android Controller"
 	"controller_switch_pro"								"Nintendo Switch Pro Controller"
 	"controller_switch_joycon_pair"						"Nintendo Switch Joy-Con Pair"
-	"controller_mobile_touch"							"Steam Link Touch Controller"
+	"controller_mobile_touch"							"Remote Play Touch Controller"
 	
 	"controller_xinput"									"XInput Controller"
 	"controller_ps2"									"PlayStation 2 Controller"

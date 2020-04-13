@@ -52,7 +52,7 @@ __bss
 __DATA
 __common
 __DATA
-<
+0<
 H
 __LINKEDIT
 
