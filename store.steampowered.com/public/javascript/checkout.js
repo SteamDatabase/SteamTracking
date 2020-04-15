@@ -3744,7 +3744,7 @@ function SubmitPaymentInfoForm()
 		}
 		else if ( ( !g_bSkipAddressRequirementForPayPal && ( method.value == 'paypal' || method.value == 'updatepaypal' ) ) || BIsCreditCardMethod( method.value ) || g_bShowAddressForm )
 		{
-			errorString += BillingAddress_VerifyAddressFields( rgBadFields );
+			errorString += BillingAddress_VerifyAddressFields( rgBadFields, g_bHasBillingStates );
 		}
 		
 		if ( method.value == 'giropay' )
