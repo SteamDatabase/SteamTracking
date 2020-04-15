@@ -2499,6 +2499,45 @@ body.v6 .recommended_by_steam_labs_ctn .header_inline_reason {
 	float: right;
 }
 
+body.v6 .deep_dive_key_tags {
+	color: #acdbf5;
+	line-height: 15px;
+	font-size: 12px;
+	height: 70px;
+	border-top: 1px solid #2a3e59;
+	padding: 8px;
+}
+
+
+body.v6 .deep_dive_tag {
+	display: inline-block;
+	line-height: 11px;
+	padding: 2px 7px 2px 7px;
+	color: #67c1f5;
+	background-color: rgba( 103, 193, 245, 0.2 );
+	box-shadow: none;
+	margin-right: 2px;
+	border-radius: 2px;
+	cursor: pointer;
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative;
+	top: -4px;
+	margin-bottom: 2px;
+}
+
+body.v6 .recommended_by_steam_labs_ctn .recommended_by_deep_dive_method {
+	color: #9099a1;
+	float:unset;
+}
+
+body.v6 .recommended_by_deep_dive_method {
+	color: #9099a1;
+	float:unset;
+}
+
 .recommended_by_steam_labs_ctn .lower_pad_block {
     
 }

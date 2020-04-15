@@ -244,8 +244,10 @@
 .miniprofile_playersection .playersection_avatar_frame {
 	position: absolute;
 	z-index: 1;
-	width: 90px;
-	height: 90px;
+	width: 107px;
+	height: 107px;
+	top: 8px;
+	left: 8px;
 	pointer-events: none;
 }
 .miniprofile_playersection .playersection_avatar_frame > img {

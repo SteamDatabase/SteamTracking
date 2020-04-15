@@ -475,6 +475,7 @@ body.iframe #ChatWindow {
 .sale_page_block {
 	margin-right: 16px;
 	margin-bottom: 16px;
+    width: 100%;
 }
 .sale_page_release_date {
 	color: #c6d4df;

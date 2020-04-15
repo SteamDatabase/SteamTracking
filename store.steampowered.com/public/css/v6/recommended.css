@@ -1324,8 +1324,8 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .similar_grid_item .similar_grid_capsule img {
-	width: 292px;
-	height: 136px;
+	width: 100%;
+	display: block;
 }
 
 .similar_grid_item .similar_grid_capsule.ds_flagged:not(.ds_wishlist) img {
@@ -1350,7 +1350,36 @@ html.touch .similar_grid_item .buttons {
 	clear: left;
 }
 
+.app_page_morelike .similar_grid_item
+{
+	height: auto;
+}
 
+.app_page_morelike .similar_grid_item > *
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+}
+
+.app_page_morelike .similar_grid_item .similar_grid_capsule {
+	width: 200px;
+	height: auto;
+}
+
+.app_page_morelike .similar_grid_item .similar_grid_price {
+	margin-bottom: 8px;
+}
+
+.app_page_morelike_ctn
+{
+	padding: 20px 0;
+}
+
+.review_ctn
+{
+	margin-bottom: 32px;
+}
 
 /* new */
 

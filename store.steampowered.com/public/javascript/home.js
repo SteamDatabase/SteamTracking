@@ -30,6 +30,7 @@ GHomepage = {
 	rgRecommendedBySteamLabsApps: [],
 	rgRecommendedByDeepDiveApps: [],
 	rgRecommendedByDeepDiveKeyTags: [],
+	rgRecommendedByDeepDiveAppTags: [],
 	recommendedByDeepDiveFocusedApp: -1,
 	recommendedByDeepDiveMethod: "",
 
@@ -189,6 +190,7 @@ GHomepage = {
 			GHomepage.strCommunityRecommendationsPrefLastSaved = rgParams.strCommunityRecommendationsPrefLastSaved || false,
 			GHomepage.rgRecommendedByDeepDiveApps = rgParams.rgRecommendedByDeepDiveApps || [];
 			GHomepage.rgRecommendedByDeepDiveKeyTags = rgParams.rgRecommendedByDeepDiveKeyTags || [];
+			GHomepage.rgRecommendedByDeepDiveAppTags = rgParams.rgRecommendedByDeepDiveAppTags || [];
 			GHomepage.recommendedByDeepDiveMethod = rgParams.recommendedByDeepDiveMethod || "";
 			GHomepage.recommendedByDeepDiveFocusedApp = rgParams.recommendedByDeepDiveFocusedApp || -1;
 			GHomepage.nLastIRSettingsUpdate = rgParams.nLastIRSettingsUpdate || 0;
@@ -334,6 +336,18 @@ GHomepage = {
 			GHomepage.RenderTopNewReleases();
 		} catch ( e ) { OnHomepageException(e); }
 
+		// Logged in
+		// Recommended by Steam Labs
+		try {
+			GHomepage.RenderRecommendedBySteamLabsApps();
+		} catch ( e ) { OnHomepageException(e); }
+
+		// Logged in
+		// Recommended by Deep Dive
+		try {
+			GHomepage.RenderRecommendedByDeepDiveCarousel();
+		} catch ( e ) { OnHomepageException(e); }
+
 		// under10
 		try {
 			GHomepage.RenderUnder10();
@@ -364,20 +378,10 @@ GHomepage = {
 		try {
 			GHomepage.RenderRecommendedCreatorApps();
 		} catch( e ) { OnHomepageException(e); }
-
-		// Logged in
-        // Recommended by Steam Labs
-        try {
-		    GHomepage.RenderRecommendedBySteamLabsApps();
-        } catch ( e ) { OnHomepageException(e); }
-
+		
 		// Community Recommendations - Steam Labs
 		try {
 			GHomepage.RenderCommunityRecommendations();
-		} catch ( e ) { OnHomepageException(e); }
-
-		try {
-			GHomepage.RenderRecommendedByDeepDiveApps();
 		} catch ( e ) { OnHomepageException(e); }
 
 		// Sidebar
@@ -1171,14 +1175,17 @@ GHomepage = {
 			},	'creator_recommendations', 4
 		);
 	},
-
-	RenderRecommendedByDeepDiveApps: function()
+	
+	RenderRecommendedByDeepDiveCarousel: function()
 	{
-		var $DeepDiveSearchText = $J('.deep_dive_search_text');
-
-		// Do nothing if deep-dive not loaded
-		if ( GHomepage.recommendedByDeepDiveFocusedApp <= 0 || $DeepDiveSearchText.length == 0 )
-			return;
+		var focusedAppID = GHomepage.recommendedByDeepDiveFocusedApp;
+		
+		//If we don't have a focused app id, we're either not logged in or have
+		//no play time, either way, bail out now:
+		if(focusedAppID < 0) return;
+		
+		var $DeepDive =  $J('.deep_dive_block' );
+		var $RecommendedByDeepDiveTitle = $J('.recommended_by_deep_dive_title');
 		
 		var rgOptions = $J.extend({
 			'class': 'store_capsule',
@@ -1189,92 +1196,71 @@ GHomepage = {
 			'lazy': false
 		}, rgOptions ? rgOptions : {} );
 		
+		//Get the id of the similarity algorithm we used and use it to build the
+		//proper SNR code
+		var focusedMethod = GHomepage.recommendedByDeepDiveMethod;
+		var snrCode = "recommended_by_deep_dive_carousel_"+focusedMethod;
+		
 		var getItemData = function(appid,rgOptions){
 			var nDepth = 0;
 			var params = { 'class': 'store_capsule deepdive_capsule' };
-			var rgItemData = GStoreItemData.GetCapParams( 'recommended_by_deep_dive' , appid, null, null, params, nDepth );
+			var rgItemData = GStoreItemData.GetCapParams( snrCode , appid, null, null, params, nDepth );
 			return rgItemData;
 		};
 		
-		var focusedAppID = GHomepage.recommendedByDeepDiveFocusedApp;
+		//Get the focused app, its title, its tags, and the tags of the apps
 		var focusedApp = getItemData(focusedAppID,rgOptions);
 		var focusedAppTitle = (focusedApp !== null ? focusedApp.name : "");
-		focusedAppTitle = $J('<textarea/>').html(focusedAppTitle).text();
+		var keyTags = GHomepage.rgRecommendedByDeepDiveKeyTags.key;
+		var appTags = GHomepage.rgRecommendedByDeepDiveAppTags;
 		
-		$DeepDiveSearchText.attr("placeholder",focusedAppTitle);
-		$DeepDiveSearchText.focusin(function(){
-			$DeepDiveSearchText.attr("placeholder","");
-		});
-		$DeepDiveSearchText.focusout(function(){
-			$DeepDiveSearchText.attr("placeholder",focusedAppTitle);
-		});
+		//TODO: Make double-plus sure to check this for XSS vulns
+		focusedAppTitle = 'Because You Played <strong>%s</strong>'.replace( "%s", focusedAppTitle);
 		
-		var bottomText = "";
-		if(g_AccountID == 0){
-			bottomText = 'EXPLORE MORE LIKE THIS POPULAR GAME<br/>IN STEAM LABS DEEP DIVE';
-		}else{
-			bottomText = 'EXPLORE MORE LIKE THIS RECENTLY PLAYED GAME<br/>IN STEAM LABS DEEP DIVE';
-		}
+		$RecommendedByDeepDiveTitle.html(focusedAppTitle);
 		
-		var $DeepDiveBottomText = $J('.deep_dive_bottom_text');
-		$DeepDiveBottomText.append('<strong>'+bottomText+'</strong>');
+		var rgCapsules = GHomepage.FilterItemsForDisplay(
+			GHomepage.rgRecommendedByDeepDiveApps, 'home', 4, 12,
+			{
+				games_already_in_library: false,
+				dlc: false,
+				localized: true,
+				not_wishlisted: false,
+				displayed_elsewhere: false
+			}
+		);
 		
-		var deepDiveTracking = GStoreItemData.rgNavParams["recommended_by_deep_dive"];
-		
-		var $DeepDiveLink = $J('.deep_dive_link');
-		var url = ('https://store.steampowered.com/labs/divingbell/' + '?snr=' + deepDiveTracking + '#' + focusedAppID);
-		
-		$DeepDiveLink.attr("href",url);
-		
-		var $DeepDiveContainerLink = $J('.deep_dive_container_link');
-		$DeepDiveContainerLink.attr("href",url);
-		
-		var $DeepDiveWhiteBox = $J('.deep_dive_white_box');
-		$DeepDiveWhiteBox.attr("href",url);
-		
-		var $RecommendedByDeepDive = $J('.deep_dive_capsule_container');
-		var rgCapsules = GHomepage.rgRecommendedByDeepDiveApps;
-		
-		for(var i = 0; i < rgCapsules.length; i++){
-			var app = rgCapsules[i];
-			if(app == null) continue;
-			
-			var rgItemData = getItemData(app.appid,rgOptions);
-		
-			var capsule = "";
-			try{ capsule = rgItemData.headerv5;}catch(e){
-				try{capsule = rgItemData.headerv;}catch(e){
-					capsule = "";
+		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $DeepDive,
+			function( oItem, strFeature, rgOptions, nDepth )
+			{
+				var strKeyTags = "";
+				var appid = oItem.appid;
+				var appKeyTags = appTags[appid];
+				
+				//Build the tag block
+				for(var i = 0; i < appKeyTags.length; i++)
+				{
+					var tag = appKeyTags[i];
+					strKeyTags += "<span class='deep_dive_tag'>"+tag.name + "</span><br>";
+					if(i >= 3) break; //only show 4
 				}
-			}
-			
-			if(capsule != "" && capsule != null){
-				$RecommendedByDeepDive.append('<img src="'+capsule+'">');
-			}
-		}
-		injectSearch("deep_dive_search_text", "deep_dive_searchterm_options", "deep_dive_search_suggestion_contents");
+				
+				var $CapCtn = GHomepage.BuildHomePageGenericCap ( strFeature, oItem.appid, null, null, rgOptions, nDepth );
+				$CapCtn.append ( $J ( '<div/>', { 'class': 'deep_dive_key_tags' } ).html ( strKeyTags ) );
+				
+				return $CapCtn;
+			},	snrCode, 4
+		);
 		
-		var mutateCallback = function(mutationsList, observer){
-			for(let mutation of mutationsList){
-				if(mutation.type === 'childList'){
-					var el = document.getElementById('deep_dive_search_suggestion_contents');
-					var children = el.children;
-					var count = children.length;
-					for(var i = 0; i < count; i++){
-						var child = children.item(i);
-						var appid = child.getAttribute("data-ds-appid");
-						child.setAttribute("href",'https://store.steampowered.com/labs/divingbell/#'+appid);
-						var url = child.getAttribute("href");
-					}
-				}
-			}
-		}
+		//Save the focusedAppID and method, try for a different one next time.
+		//If Deep Dive logic in homepage_loaders.php is set to random for either
+		//focusedAppID or method, it will read this cookie and try not to return 
+		//the same result for either field twice in a row. This should help keep
+		//the homepage feeling fresh.
 		
-		var searchSuggestionContents = document.getElementById('deep_dive_search_suggestion_contents');
-		var observer = new MutationObserver(mutateCallback);
-		var config = {attributes: true, childList: true, subtree: true};
-		observer.observe(searchSuggestionContents, config);
-    },
+		V_SetCookie ( 'deep_dive_carousel_focused_app', focusedAppID );
+		V_SetCookie ( 'deep_dive_carousel_method', focusedMethod );
+	},
 
     RenderRecommendedBySteamLabsApps: function()
     {

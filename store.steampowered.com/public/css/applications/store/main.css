@@ -642,38 +642,128 @@ body.modals_BodyNoScrollDialog_105OB {
       flex-grow: 1;
       display: flex;
       flex-direction: column; }
-      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_AppSelector_1pgZO {
-        flex-grow: 1; }
-      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppAndModelSelectorSection_13pjM {
-        display: flex;
-        flex-direction: row; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppAndModelSelectorSection_13pjM .labssandbox_Spacer_tDH9c {
-          width: 40px; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppAndModelSelectorSection_13pjM .labssandbox_ModelSelector_1FZI- {
-          flex-grow: 1; }
-      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApp_2PsH- {
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I h1 {
+        font-size: 16px;
+        text-transform: uppercase; }
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 {
         display: flex;
         flex-direction: row;
-        margin: 3px; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
-          font-size: 16px;
-          color: #c6d4df; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApp_2PsH- .labssandbox_LogoImage_3dAyv {
-          width: 80px;
-          height: 30px;
-          flex-shrink: 0; }
-      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_PrimaryApp_2B1Jx {
-        display: flex;
-        flex-direction: column; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_PrimaryApp_2B1Jx h1 {
-          font-size: 16px;
-          text-transform: uppercase; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_PrimaryApp_2B1Jx .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
-          font-size: 18px;
-          color: #c6d4df; }
+        margin-bottom: 20px; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_SelectedApp_2J5jo {
+          width: 50%;
+          margin-right: 10px; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_SelectedApp_2J5jo .labssandbox_SimilarApp_2PsH- {
+            display: flex;
+            flex-direction: row;
+            margin: 3px;
+            background-color: #161d1f; }
+            .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_SelectedApp_2J5jo .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
+              font-size: 16px;
+              color: #c6d4df;
+              margin: 4px; }
+            .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_SelectedApp_2J5jo .labssandbox_SimilarApp_2PsH- .labssandbox_LogoImage_3dAyv {
+              width: 80px;
+              height: 30px;
+              flex-shrink: 0; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_AppSelector_1pgZO {
+          flex-direction: column;
+          flex-grow: 1;
+          position: relative; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_AppSelector_1pgZO .labssandbox_StoreSuggestResults_1c_ZO {
+            position: absolute; }
       .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 {
         display: flex;
         flex-direction: column; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- {
+          display: flex;
+          flex-direction: row;
+          width: 50%;
+          margin: 3px;
+          background-color: #161d1f; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
+            font-size: 16px;
+            color: #c6d4df;
+            margin: 4px; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_LogoImage_3dAyv {
+            width: 80px;
+            height: 30px;
+            flex-shrink: 0; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_Spacer_tDH9c {
+            flex-grow: 1; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_Score_1lIfF {
+            margin: 4px;
+            width: 10%;
+            text-align: right;
+            font-size: 14px;
+            color: #40AEE5; }
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k h1 {
+        font-size: 16px;
+        text-transform: uppercase; }
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 {
+        display: flex;
+        flex-direction: column; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- {
+          display: flex;
+          flex-direction: row;
+          width: 50%;
+          margin: 3px;
+          background-color: #161d1f; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
+            font-size: 16px;
+            color: #c6d4df;
+            margin: 4px; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_LogoImage_3dAyv {
+            width: 80px;
+            height: 30px;
+            flex-shrink: 0; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_Spacer_tDH9c {
+            flex-grow: 1; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_Score_1lIfF {
+            margin: 4px;
+            width: 10%;
+            text-align: right;
+            font-size: 14px;
+            color: #40AEE5; }
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 {
+        display: flex;
+        flex-direction: row;
+        margin: 4px;
+        height: 40px; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_OperatorSelect_2X8ZZ {
+          width: 80px;
+          margin: 3px; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_SimilarApp_2PsH- {
+          display: flex;
+          flex-direction: row;
+          flex-grow: 1;
+          margin: 3px;
+          background-color: #161d1f;
+          width: 30%; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
+            font-size: 16px;
+            color: #c6d4df;
+            margin: 4px; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_SimilarApp_2PsH- .labssandbox_LogoImage_3dAyv {
+            width: 80px;
+            height: 30px;
+            flex-shrink: 0; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_AppSelector_1pgZO {
+          flex-direction: column;
+          flex-grow: 1;
+          position: relative;
+          margin: 3px;
+          width: 30%; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_AppSelector_1pgZO .labssandbox_StoreSuggestResults_1c_ZO {
+            position: absolute; }
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_AddOperand_2Boka {
+        width: 100px;
+        justify-content: center;
+        text-align: center;
+        background-color: #404080;
+        border-color: #606090;
+        border-radius: 3px;
+        font-size: 20px;
+        margin: 20px; }
 
 /* stylelint-disable */
 .storesuggest_SuggestContainer_2gBFq .DialogInputLabelGroup {
@@ -1014,7 +1104,6 @@ button.DialogButton::-moz-focus-inner {
   flex-grow: 1; }
 
 .PopupFullWindow .ModalPosition_Content > div:not(.ModalPosition_TopBar):not(.ModalPosition_Dismiss) {
-  min-height: initial;
   flex: 1; }
 
 .DialogContent,
@@ -1084,6 +1173,7 @@ button.DialogButton::-moz-focus-inner {
 .DialogContent_InnerWidth > form {
   display: flex;
   flex-direction: column;
+  min-height: 0;
   flex: 1; }
 
 .ModalPosition_TopBar {

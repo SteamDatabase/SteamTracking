@@ -573,43 +573,20 @@ function SaveBillingAddress()
 
 	try 
 	{
-		new Ajax.Request('https://store.steampowered.com/checkout/updatebillingaddress/',
+		BillingAddress_SaveBillingAddress( g_sessionID, 'https://store.steampowered.com/checkout/updatebillingaddress/',
 		{
-		    method:'post',
-		    parameters: { 
-				'FirstName' : $('first_name').value,
-				'LastName' : $('last_name').value,
-				'Address' : $('billing_address').value,
-				'AddressTwo' : $('billing_address_two').value,
-				'Country' : $('billing_country').value,
-				'City' : $('billing_city').value,
-				'State' : ( g_bHasBillingStates ? $('billing_state_select').value : $('billing_state_text').value),
-				'PostalCode' : $('billing_postal_code').value,
-				'Phone' : $('billing_phone').value,
-				'sessionid' : g_sessionID
-			},
-		    onSuccess: function(transport){
-				if ( transport.responseText ){
-					try {
-						var result = transport.responseText.evalJSON(true);
-		      		} catch ( e ) {
-		      			// Failure
-		      			OnInitializeTransactionFailure( 0 );
-		      		}
-		      	   	// Success...
-		      	   	if ( result.success == 1 )
-		      	   	{
-						OnSaveBillingAddressSuccess();
-						return;
-		      	   	}
-		      	   	else
-		      	   	{
-		      	   		OnInitializeTransactionFailure( 0 );
-		      	   		return;
-		      	   	}
-			  	}
-			  	
-								OnInitializeTransactionFailure( 0  );
+		    onSuccess: function(result){
+				// Success...
+				if ( result.success == 1 )
+				{
+					OnSaveBillingAddressSuccess();
+					return;
+				}
+				else
+				{
+					OnInitializeTransactionFailure( 0 );
+					return;
+				}
 		    },
 		    onFailure: function(){
 				OnInitializeTransactionFailure( 0  );
@@ -3767,90 +3744,7 @@ function SubmitPaymentInfoForm()
 		}
 		else if ( ( !g_bSkipAddressRequirementForPayPal && ( method.value == 'paypal' || method.value == 'updatepaypal' ) ) || BIsCreditCardMethod( method.value ) || g_bShowAddressForm )
 		{
-			
-			if ( $( 'first_name' ).value.length < 1 )
-			{
-				errorString += 'Please enter a first name for your billing information.<br/>';
-				rgBadFields.first_name = true;
-			}
-			
-			if ( $( 'last_name' ).value.length < 1 )
-			{
-				errorString += 'Please enter a last name for your billing information.<br/>';
-				rgBadFields.last_name = true;
-			}
-			
-			if ( $( 'billing_address' ).value.length < 1 )
-			{
-				errorString += 'Please enter your billing address.<br/>';
-				rgBadFields.billing_address = true;
-			}
-				
-			
-			if ( $( 'billing_city' ).value.length < 1 )
-			{
-				errorString += 'Please enter your billing city.<br/>';
-				rgBadFields.billing_city = true;
-			}
-			
-						if  ( g_bHasBillingStates )
-			{
-				if ( $('billing_state_select').value.length < 1 )
-				{
-					errorString += 'Please enter a State or Province.<br/>';
-					rgBadFields.billing_state_select_trigger = true;
-				}
-								if ( $('billing_country').value == 'US' )
-				{
-					if ( $('billing_state_select').value == 'AE' || $('billing_state_select').value == 'AP' || $('billing_state_select').value == 'AA' )
-					{
-						if ( $('billing_city').value != 'APO' && $('billing_city').value != 'FPO' && $('billing_city').value != 'DPO' )
-						{
-							errorString += 'Please enter a valid military address.<br/>';
-							rgBadFields.billing_city = true;
-						}
-					}
-				}
-			}
-	
-						if ( $( 'payment_row_phone' ).visible() )
-			{
-				if ( $( 'billing_phone' ).value.length < 3 )
-				{
-					errorString += 'Please enter your billing phone number, including area code.<br/>';
-					rgBadFields.billing_phone = true;
-				}
-				else if  ( $( 'billing_country' ).value == 'US' )
-				{
-										var num = $( 'billing_phone').value;
-					var digitsFound = 0;
-					for ( i = 0; i < num.length; ++i )
-					{
-						var c = num.charAt(i);
-						if ( c >= '0' && c <= '9' )
-							++digitsFound;
-					}
-					if ( digitsFound < 10 )
-					{
-						errorString += 'Please enter your billing phone number, including area code.<br/>';
-						rgBadFields.billing_phone = true;
-					}
-				}
-			}
-				
-			if ( $( 'billing_country' ).value == 'US' )
-			{
-				if ( $( 'billing_postal_code' ).value.length < 5 )
-				{
-					errorString += 'Please enter your zip or postal code.<br/>';
-					rgBadFields.billing_postal_code = true;
-				}
-			}
-			else if ( $( 'billing_postal_code' ).value.length < 1 )
-			{
-				errorString += 'Please enter your zip or postal code.<br/>';
-				rgBadFields.billing_postal_code = true;
-			}
+			errorString += BillingAddress_VerifyAddressFields( rgBadFields );
 		}
 		
 		if ( method.value == 'giropay' )

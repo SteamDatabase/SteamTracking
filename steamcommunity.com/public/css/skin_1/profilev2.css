@@ -154,6 +154,18 @@ body.profile_page.flat_page #footer_spacer {
 	height: 100%;
 	pointer-events: none;
 }
+.profile_header .playerAvatar .profile_avatar_frame {
+	width: 200px;
+	height: 200px;
+	left: -17px;
+	top: -17px;
+}
+.profile_small_header_avatar .playerAvatar .profile_avatar_frame {
+	width: 80px;
+	height: 80px;
+	left: -7px;
+	top: -7px;
+}
 .profile_header .playerAvatar .profile_avatar_frame > img,
 .profile_small_header_avatar .playerAvatar .profile_avatar_frame > img {
 	width: 100%;
@@ -246,6 +258,14 @@ body.profile_page.flat_page #footer_spacer {
 		max-width: none;
 		width: 125px;
 		height: 125px;
+	}
+
+	html.responsive .profile_header .playerAvatar .profile_avatar_frame {
+		max-width: none;
+		width: 149px;
+		height: 149px;
+		left: -12px;
+		top: -12px;
 	}
 }
 

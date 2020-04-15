@@ -55,18 +55,16 @@
 #HeaderUserAvatar .profile_avatar_frame {
 	position: absolute;
 	z-index: 1;
-	width: 100%;
-	height: 100%;
+	width: 80px;
+	height: 80px;
+	left: -7px;
+	top: -7px;
 	pointer-events: none;
 }
 #HeaderUserAvatar .profile_avatar_frame > img {
 	width: 100%;
 	height: 100%;
 	background: none;
-}
-#HeaderUserAvatar .avatarIcon_48 a > img {
-	width: 64px;
-	height: 64px;
 }
 
 #HeaderUserInfo {
