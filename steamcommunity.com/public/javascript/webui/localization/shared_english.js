@@ -187,6 +187,7 @@ LocalizationReady("shared", "english", {
   EventCalender_Reason_recommended: "This game is recommended for you",
   EventCalender_Reason_steam: "This post is from the Steam Platform",
   EventCalender_Reason_topx: "Game is in the Top Sellers",
+  EventCalender_Reason_featured: "This is a featured post",
   EventCalender_Hide_Reason_recent: "Hide posts from recently played games",
   EventCalender_Hide_Reason_library: "Hide posts from games in your library",
   EventCalender_Hide_Reason_following:
@@ -196,6 +197,7 @@ LocalizationReady("shared", "english", {
     "Hide posts from games recommended for you",
   EventCalender_Hide_Reason_steam: "Hide posts from the Steam Platform",
   EventCalender_Hide_Reason_topx: "Hide posts from the Top Sellers",
+  EventCalender_Hide_Reason_featured: "Hide featured posts",
 
   EventCalendar_ForceDesktopView: "Request desktop view",
   EventCalendar_ShowResponsiveView: "Request responsive view",
@@ -247,11 +249,14 @@ LocalizationReady("shared", "english", {
     "This is a game we think you would like",
   EventCalendar_GameSource_steam: "steam",
   EventCalendar_GameSource_ttip_steam: "Include posts about the Steam platform",
+  EventCalendar_GameSource_EventExplanation_ttip_steam:
+    "This is a post about Steam",
   EventCalendar_GameSource_topx: "Top Sellers",
   EventCalendar_GameSource_ttip_topx:
     "Include posts about games from the regional top sellers lists",
-  EventCalendar_GameSource_EventExplanation_ttip_steam:
-    "This is a post about Steam",
+  EventCalendar_GameSource_featured: "Featured",
+  EventCalendar_GameSource_ttip_featured:
+    "Include featured posts, such as those from top selling games",
 
   EventDisplay_Admin_Title: "Admin tools:",
   EventDisplay_ViewInLibrary: "View in Library",
@@ -568,12 +573,12 @@ LocalizationReady("shared", "english", {
   Language_italian: "Italian",
   Language_korean: "Korean",
   Language_spanish: "Spanish - Spain",
-  Language_schinese: "Simplified Chinese",
-  Language_tchinese: "Traditional Chinese",
+  Language_schinese: "Chinese - Simplified",
+  Language_tchinese: "Chinese - Traditional",
   Language_russian: "Russian",
   Language_thai: "Thai",
   Language_japanese: "Japanese",
-  Language_portuguese: "Portuguese",
+  Language_portuguese: "Portuguese - Portugal",
   Language_polish: "Polish",
   Language_danish: "Danish",
   Language_dutch: "Dutch",
@@ -684,6 +689,29 @@ LocalizationReady("shared", "english", {
   EventEditor_Comments: "Comments",
   EventEditor_UpVotes: "Up Votes",
   EventEditor_DownVotes: "Down Votes",
+
+  RSSManager_PostEvent_FeedTilte: "Create/Update News Feed Settings",
+  RSSManager_PostEvent_Tilte: "Post News to Steam",
+  RSSManager_PostEvent_CreateFeed_DuringPost:
+    "The RSS feed being preview doesn't match current setting. We need to update to this as a current feed to psot the event. By default the RSS feed automation will be disabled. This can be changed later.",
+  RSSManager_PostEvent_CreateFeed_Desc:
+    "Create/Update feed to this RSS URL?: '%1$s'",
+  RSSManager_PostEvent_Failure: "Failed to complete the feed creation or post",
+  RSSManager_PostEvent_CreatePost: "Post a new event to Steam with title?:",
+  RSSManager_PostEvent_CreatePost_Draft: "Save as Draft Mode",
+  RSSManager_PostEvent_CreatePost_Draft_tooltip:
+    "When checked, creates the events but does not publish it. Allows you to make changes before it goes live.",
+  RSSManager_PostEvent_InFlight:
+    "Please wait for Steam server to complete action.",
+  RSSManager_PostEvent_Success_feed: "Feed has been sucessful created/updated",
+  RSSManager_PostEvent_Success:
+    "Post has been successfully created. To edit event further go here",
+  RSSManager_PostEvent_EventLink: "Edit Event Here",
+  RSSManager_CreateFeed_Permissions_v1:
+    "I agree that I am authorized to provide this rss feed to be stored and redistributed via Steam.",
+  RSSManager_CreateFeed_Conduct_v1:
+    "confirm that the contents of this rss feed that are redistributed through Steam will comply with the Steam Online Conduct Rules.",
+  RSSManager_CreateFeed_Conduct_Link: "Read Steam Online Conduct Rules here.",
 
   Error_Message: "Error Message",
   Warning_Message: "Warning Message",
@@ -867,6 +895,8 @@ LocalizationReady("shared", "english", {
     "Steam Game Festival Artists Statement",
   PartnerEvent_SteamGameFestival_Broadcast: "Steam Game Festival Live Stream",
   PartnerEvent_SteamGameFestival_OfficeHour: "Steam Game Festival Office Hours",
+  PartnerEvent_Curator_Group_Members: "Curator Group Announcement",
+  PartnerEvent_Curator_Public: "Curator Public News Post",
 
   SocialMedia_Type_ShortName_1: "Steam",
   SocialMedia_Type_ShortName_2: "Google",

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5807368";
+var CLSTAMP = "5810362";
 !(function(t) {
   var e = {};
   function n(r) {
@@ -99,7 +99,7 @@ var CLSTAMP = "5807368";
         return s;
       }),
       n.d(e, "e", function() {
-        return l;
+        return f;
       }),
       n.d(e, "g", function() {
         return _;
@@ -148,13 +148,13 @@ var CLSTAMP = "5807368";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!o()) return i || (i = l()), i;
+            if (!o()) return i || (i = f()), i;
             var t = (function(t) {
               if (!o() || !window.document.cookie) return null;
               var e = document.cookie.match("(^|; )" + t + "=([^;]*)");
               return e && e[2] ? decodeURIComponent(e[2]) : null;
             })("sessionid");
-            t || (t = l());
+            t || (t = f());
             return t;
           })();
         },
@@ -194,8 +194,8 @@ var CLSTAMP = "5807368";
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1
       },
-      f = "webui_config";
-    function l() {
+      l = "webui_config";
+    function f() {
       var t = (function() {
         for (var t = "", e = 0; e < 24; e++)
           t += Object(r.b)(0, 35).toString(36);
@@ -224,7 +224,7 @@ var CLSTAMP = "5807368";
       );
     }
     function _(t) {
-      void 0 === t && (t = f);
+      void 0 === t && (t = l);
       var e = {},
         n = p("config", t);
       n && (delete n.SESSIONID, Object.assign(c, n), (e.config = !0));
@@ -238,7 +238,7 @@ var CLSTAMP = "5807368";
     function p(t, e) {
       var n;
       if (
-        (void 0 === e && (e = f),
+        (void 0 === e && (e = l),
         (n = "string" == typeof e ? document.getElementById(e) : e))
       )
         try {
@@ -279,7 +279,7 @@ var CLSTAMP = "5807368";
         : "";
     }
   },
-  fGPn: function(t, e, n) {
+  Ezvv: function(t, e, n) {
     "use strict";
     n.d(e, "a", function() {
       return i;
@@ -287,7 +287,7 @@ var CLSTAMP = "5807368";
       n.d(e, "b", function() {
         return u;
       });
-    var r = n("tkkQ"),
+    var r = n("1n9R"),
       o = { success: !0, result: 1 },
       i = (function() {
         function t() {
@@ -365,10 +365,13 @@ var CLSTAMP = "5807368";
             var e = { message: "ViewGameInfoForSteamID", steamid: t };
             return this.GenericEResultCall(e);
           }),
+          (t.prototype.OpenFriendsDialog = function() {
+            return this.GenericEResultCall({ message: "OpenFriendsDialog" });
+          }),
           (t.prototype.BClientAccountMatches = function() {
             return (
-              !r.d.logged_in ||
-              r.d.accountid == this.m_connection.ClientInfo.unAccountID
+              !r.h.logged_in ||
+              r.h.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }),
           (t.prototype.GenericEResultCall = function(t) {
@@ -451,8 +454,8 @@ var CLSTAMP = "5807368";
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
             var n = Object.assign({}, t, {
-              universe: r.a.EUNIVERSE,
-              accountid: r.d.accountid
+              universe: r.b.EUNIVERSE,
+              accountid: r.h.accountid
             });
             void 0 !== e && (n.sequenceid = e);
             try {
@@ -549,7 +552,7 @@ var CLSTAMP = "5807368";
         return a;
       }),
       n.d(e, "g", function() {
-        return f;
+        return l;
       });
     /*! *****************************************************************************
 Copyright (c) Microsoft Corporation. All rights reserved.
@@ -742,7 +745,7 @@ and limitations under the License.
         };
       }
     }
-    function f() {
+    function l() {
       for (var t = 0, e = 0, n = arguments.length; e < n; e++)
         t += arguments[e].length;
       var r = Array(t),
@@ -773,7 +776,7 @@ and limitations under the License.
     "use strict";
     n.r(e);
     var r = n("tkkQ"),
-      o = n("fGPn");
+      o = n("Ezvv");
     document.addEventListener("DOMContentLoaded", function() {
       Object(r.c)(), (window.ClientConnectionAPI = o.b);
     });

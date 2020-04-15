@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5807368";
+var CLSTAMP = "5810362";
 !(function(e) {
   function t(t) {
     for (
@@ -6944,17 +6944,18 @@ var CLSTAMP = "5807368";
           (e[(e.k_ERemoteClientLaunchRestrictedCountry = 28)] =
             "k_ERemoteClientLaunchRestrictedCountry");
       })(v || (v = {}));
-    var _, E, y, b;
+    var _;
     !(function(e) {
       (e[(e.k_ESteamRealmUnknown = 0)] = "k_ESteamRealmUnknown"),
         (e[(e.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
         (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    })(_ || (_ = {})),
-      (function(e) {
-        (e[(e.Unknown = 0)] = "Unknown"),
-          (e[(e.Wired = 1)] = "Wired"),
-          (e[(e.Wireless = 2)] = "Wireless");
-      })(E || (E = {})),
+    })(_ || (_ = {}));
+    var E, y, b;
+    !(function(e) {
+      (e[(e.Unknown = 0)] = "Unknown"),
+        (e[(e.Wired = 1)] = "Wired"),
+        (e[(e.Wireless = 2)] = "Wireless");
+    })(E || (E = {})),
       (function(e) {
         (e[(e.NotPresent = 0)] = "NotPresent"),
           (e[(e.Failed = 1)] = "Failed"),
