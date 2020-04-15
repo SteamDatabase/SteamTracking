@@ -83,6 +83,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(scheduledfunction.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(scheduler.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(scrypt_VALVE.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(sharedchatfilter.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(socket.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(stat.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/build/Release/libsteamcommon_client.a(steamid.o)
@@ -1096,6 +1097,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduledjob.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/scheduler.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/serverbrowser/serverbrowserconstants.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/sharedchatfilter.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/singleprocesspipe_any.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/socket.cpp
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/socket.h
@@ -1657,6 +1659,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libopus.a(x86cpu.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_chartables.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_compile.o)
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_config.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_exec.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_fullinfo.o)
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/lib/osx32/release/libpcre.a(libpcre_la-pcre_globals.o)

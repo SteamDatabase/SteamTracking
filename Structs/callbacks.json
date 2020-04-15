@@ -2572,6 +2572,6 @@
     {
         "id": 5904,
         "size": 548,
-        "posted_in": "CUser::OnNewGroupChatMsgAdded(unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*, char const*)"
+        "posted_in": "CUser::OnNewGroupChatMsgAdded(unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*)"
     }
 ]
