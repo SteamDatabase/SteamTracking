@@ -6,8 +6,8 @@
 		<include src="file://{resources}/styles/library/controllerbindings_gordon.css" />
 	</styles>
 		<SelectMousePosition class="TenfootMsgBox" defaultfocus="">
-		<Button class="FullScreenButton" onactivate="SelectMousePosition();">
-		</Button>
+		<Image id="FullScreenButton" class="FullScreenButton" onactivate="SelectMousePosition();">
+		</Image>
 		<Panel class="MsgBoxBodyRegion" tabindex="auto" selectionpos="auto">
 			<Label class="StdTitle" text="#Library_SelectMousePosition_Title" />
 			<Label id="SelectPositionBody" class="SubTitle" text="#Library_SelectMousePosition_CodeLabel" />

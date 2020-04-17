@@ -31,29 +31,57 @@
 	vertical-align: center;
 }
 
-.TenfootControllerPadCalibrationPopupBody
-{
-	padding: 40px 40px 30px 40px;
+.TenfootControllerPadCalibrationPopupBody {
+    padding: 40px 40px 30px 40px;
+    flow-children: down;
+    horizontal-align: center;
+    vertical-align: center;
+    width: 620px;
+    height: fit-children;
+    opacity: 1.0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: ui_common_control_border;
+    box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+    color: #000000ff;
+    background-color: dialog_bg_color;
+    transition-property: transform;
+    transition-duration: 0.4s;
+    transition-timing-function: bigpicture-ease-in-out;
+}
 
-	flow-children: down;
-	horizontal-align: center;
-	vertical-align: center;
-	width: 620px;
-	height: 620px;
+.row {
+    horizontal-align: center;
+    flow-children: right;
+    visibility: visible;
+    width: 300px;
+    height: 50%;
+    margin-left: -15px;
+    overflow: hidden;
+}
 
-	opacity: 1.0;
+.quarter {
+    display: inline-block;
+    width: 130px;
+    height: 150px;
+}
 
-	border-width: 5px;
-	border-style: solid;
-	border-color: ui_common_control_border;
-	box-shadow: box_shadow_on_color -4.5px -4.5px 16px 9px;
+#q1 {
+    background-color: #f00;
+    opacity: 0;
+}
 
-	color: #000000ff;
-	background-color: dialog_bg_color;
+#q2 {
+    background-color: ui_common_control_border;
+}
 
-	transition-property: transform;
-	transition-duration: 0.4s;
-	transition-timing-function: bigpicture-ease-in-out;
+#q3 {
+    background-color: ui_common_control_border;
+}
+
+#q4 {
+    background-color: #0ff;
+    opacity: 0;
 }
 
 #ButtonPanel
@@ -154,6 +182,83 @@ Slider:Selected
 }
 
 #IMUMsg
+{
+    visibility: collapse;
+}
+
+.StickDeadzone
+{
+    visibility: visible;
+    width: 120px;
+    height: 120px;
+    background-color: black;
+    border-radius: 50%;
+    border: 3px;
+    border-style: solid;
+}
+
+.StickDeadzone.RightStick
+{
+    margin-left: 290px;
+}
+
+.StickImage
+{
+    visibility: visible;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    border: 7px;
+    border-style: solid;
+    border-color: ui_primary_color;
+    margin-bottom: 30px;
+    overflow: hidden;
+    flow-children: down;
+}
+
+.StickImage.RightStick
+{
+    margin-left: 290px;
+}
+
+
+.StickDeadzone.BadCal
+{
+    border-color: red;
+    background-color: red;
+}
+
+.StickCursor
+{
+    visibility: visible;
+    width: 10px;
+    height: 10px;
+    margin-top: 114px;
+    background-color: #07213588;
+    border-radius: 50%;
+    border: 1px;
+    border-style: solid;
+    border-color: ui_primary_color;
+    margin-left: 3px;
+    z-index: 3;
+}
+
+.StickCursor.RightStick
+{
+    margin-left: 292.5px;
+}
+
+#LockJoystickButton
+{
+    visibility: collapse;
+}
+
+#LockJoystickButton .JoystickCalibration
+{
+    visibility: visible;
+}
+
+#StickVisualization
 {
     visibility: collapse;
 }

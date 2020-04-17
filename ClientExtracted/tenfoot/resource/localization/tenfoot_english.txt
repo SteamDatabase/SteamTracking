@@ -975,7 +975,8 @@
 	"ControllerCalibration_Right"			"Right"
 	"ControllerCalibration_Left_Deadzone"	"Left Stick Deadzone"
 	"ControllerCalibration_Right_Deadzone"	"Right Stick Deadzone"
-
+	"ControllerCalibration_LockSticks"		"LOCK OUT JOYSTICK NAVIGATION"
+	
 	// Controller Pairing
 	"ControllerPairing_Header"			"Enter Validation Code"
 	"ControllerPairing_Failure"			"Validation Failed"

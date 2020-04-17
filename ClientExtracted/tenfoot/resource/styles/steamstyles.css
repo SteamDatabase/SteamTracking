@@ -1959,6 +1959,13 @@ LibraryAppDetails #ReadyToDownload
 	background-image: url( "file://{images}/store/icon_keyboard_storefront.png" );
 }
 
+.PartialController #GridControllerSupport
+{
+    visibility: visible;
+    background-image: url( "file://{images}/store/icon_partial_controller_new.png" );
+    pre-transform-scale2d: 1.35;
+}
+
 .FullController #GridControllerSupport,
 .SteamPad .FullController #GridControllerSupport
 .VR .VRSupportsXInputController #GridControllerSupport,

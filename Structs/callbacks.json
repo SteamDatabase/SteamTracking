@@ -1216,7 +1216,7 @@
     },
     {
         "id": 1298,
-        "size": 528,
+        "size": 4294967295,
         "posted_in": "CClientJobP2PConnectionInfo::BYieldingRunClientJob(IMsgNetPacket*)"
     },
     {

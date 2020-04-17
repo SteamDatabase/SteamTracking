@@ -599,6 +599,12 @@ CSGOAccountLinkPage
 	method		"internal"
 }
 
+CSGOAccountIDVerifyPage
+{
+	url			"%applauncher%/join/pwlink_csgo/?l=%language%&method=verify"
+	method		"internal"
+}
+
 GiftActivationPage
 {
 	url			"%community%/actions/RedeemGift"

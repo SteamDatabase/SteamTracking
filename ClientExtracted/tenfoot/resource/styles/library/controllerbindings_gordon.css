@@ -242,9 +242,9 @@ SelectMousePosition
 
 .FullScreenButton
  {
-	min-height: 1920px;
-	height: 1080px;
-    opacity: 0.4;
+	width: 100%;
+	height: 100%;
+    opacity: 0.01;
 	color: detailsdatalabel;
 	font-size: deffontsize;
 	font-family: platformfont;
@@ -5441,4 +5441,9 @@ ControllerConfigBrowser.SelectFriendsBindings.RequiresMoreTimeForPublic #Require
 {
 	horizontal-align: center;
 	vertical-align: center;
+}
+
+.ShowingScreenshot .FullScreenButton
+{
+    opacity: 1.0;
 }

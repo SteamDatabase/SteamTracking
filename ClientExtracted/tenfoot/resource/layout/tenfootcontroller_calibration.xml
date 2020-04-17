@@ -11,6 +11,32 @@
 			<Label id="JoystickMsg" class="TextFont" text="#ControllerCalibration_Joystick_Instructions" />
       <Label id="IMUMsg" class="TextFont" text="#ControllerCalibration_IMU_Instructions" />
       <Panel id="ButtonPanel">
+        <Panel id="StickVisualization">
+          <Panel id="LeftStickImage" class="StickImage">
+            <Panel class="row">
+              <Panel id="q1" class="quarter"></Panel>
+              <Panel id="q2" class="quarter"></Panel>
+            </Panel>
+            <Panel class="row">
+              <Panel id="q3" class="quarter"></Panel>
+              <Panel id="q4" class="quarter"></Panel>
+            </Panel>
+          </Panel>
+          <Panel id="LeftStickDeadzone" class="StickDeadzone"></Panel>
+          <Panel id="LeftStickCursor" class="StickCursor"></Panel>
+          <Panel id="RightStickImage" class="StickImage RightStick">
+            <Panel class="row RightStick">
+              <Panel id="q1" class="quarter"></Panel>
+              <Panel id="q2" class="quarter"></Panel>
+            </Panel>
+            <Panel class="row RightStick">
+              <Panel id="q3" class="quarter"></Panel>
+              <Panel id="q4" class="quarter"></Panel>
+            </Panel>
+          </Panel>
+          <Panel id="RightStickDeadzone" class="StickDeadzone RightStick"></Panel>
+          <Panel id="RightStickCursor" class="StickCursor RightStick"></Panel>
+        </Panel>
         <Panel class="CalibrationButton LeftStick">
           <Label class="SliderLabel" text="#ControllerCalibration_Left_Deadzone" />
           <Slider id="ControllerCalibration_Left_Deadzone" direction="horizontal" />
@@ -19,13 +45,16 @@
           <Label class="SliderLabel" text="#ControllerCalibration_Right_Deadzone" />
           <Slider id="ControllerCalibration_Right_Deadzone" direction="horizontal" />
         </Panel>
+        <Button id="LockJoystickButton" class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CalibrationLockJoysticks()">
+          <Label id="CalibrationStatusText" class="CalibrationButtonText" text="#ControllerCalibration_LockSticks" />
+        </Button>
         <Button class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CalibrationStart()">
           <Label id="CalibrationStatusText" class="CalibrationButtonText" text="#ControllerCalibration_Start" />
         </Button>
         <Button id="GyroButton" class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="GyroCalibrationStart()">
           <Label class="CalibrationButtonText" text="#ControllerCalibration_Gyro" />
         </Button>
-        <Button class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CancelButton()">
+        <Button class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="AcceptButton()">
           <Label class="CalibrationButtonText" text="#UI_OK" />
         </Button>
       </Panel>
