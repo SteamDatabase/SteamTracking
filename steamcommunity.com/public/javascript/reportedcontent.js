@@ -192,7 +192,7 @@ function ClearReviewDevFlag( id )
 
 function ClearReviewReports( id )
 {
-	UserReview_ShowClearReportsDialog( id, 'https://steamcommunity.com',
+	UserReview_Moderate( id, { 'clear_reports' : 1 }, 'https://steamcommunity.com',
 		function( results ) {
 			$( 'report_score_' + id ).update( '0' );
 		}
