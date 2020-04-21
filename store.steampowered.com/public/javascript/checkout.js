@@ -2976,6 +2976,9 @@ function BIsCreditCardMethod( method )
 
 function BIsStoredCreditCard()
 {
+	if ( g_bUpdateBillingFormAddressOnly )
+		return false;
+
 	var method = $('payment_method');
 	
 	return method.value == 'storedcreditcard';
