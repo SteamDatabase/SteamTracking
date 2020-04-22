@@ -2088,6 +2088,11 @@ span.bb_strike {
 	text-decoration: line-through;
 }
 
+div.bb_pullquote {
+    font-size: 18px;
+    font-weight: 600;
+}
+
 span.bb_link_host {
 	font-size: 10px;
 	color: #7e8391;

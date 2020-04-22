@@ -49,6 +49,10 @@
 	width: 250px;
 }
 
+.customization_controls_nextprev {
+	display: inline;
+}
+
 .showcase_style_select_ctn {
 	margin-bottom: 4px;
 }

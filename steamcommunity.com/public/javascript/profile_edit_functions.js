@@ -56,6 +56,7 @@ function BindAvatarUploadControls()
 }
 
 g_rgShowcasePreviews = {};
+g_rgShowcaseStyles = {};
 g_rgShowcaseSelects = [];
 function InitShowcaseEditors( cSlots )
 {
@@ -64,6 +65,7 @@ function InitShowcaseEditors( cSlots )
 	$J('#showcase_previews').children().each( function() {
 		var eShowcaseType = this.getAttribute( 'data-eshowcasetype' );
 		g_rgShowcasePreviews[eShowcaseType] = this;
+		g_rgShowcaseStyles[eShowcaseType] = $J(this).children('.showcase_style_select_ctn').detach();
 	});
 
 	// bind all the select and next/previous events
@@ -86,10 +88,11 @@ function InitShowcaseEditor( strSelectID, iSlot )
 	var $Select = $J( strSelectID + '_select' );
 	var $PrevButton = $J( strSelectID + '_prev' );
 	var $NextButton = $J( strSelectID + '_next' );
+	var $StyleCtn = $J( strSelectID + '_style' );
 	var $Previews = $J( strSelectID + '_previews' );
 	var $PreviewsNone = $J( strSelectID + '_previews_none' );
 
-	var fnOnSelectChange = function() { OnSelectChange( $Previews, $PreviewsNone, $Select, iSlot ); };
+	var fnOnSelectChange = function() { OnSelectChange( $Previews, $PreviewsNone, $StyleCtn, $Select, iSlot ); };
 	$Select.change( fnOnSelectChange );
 	$PrevButton.click( function( event ) {
 		ChangeSelectedIndex( $Select, -1 );
@@ -106,9 +109,10 @@ function InitShowcaseEditor( strSelectID, iSlot )
 	$Select.data( 'lastval', -1 );
 }
 
-function OnSelectChange( $Previews, $PreviewsNone, $Select, iSlot )
+function OnSelectChange( $Previews, $PreviewsNone, $StyleCtn, $Select, iSlot )
 {
 	$Previews.children().detach();
+	$StyleCtn.children().detach();
 
 	var eShowcase = $Select.val();
 	var eShowcasePrevious = $Select.data( 'lastval' );
@@ -135,6 +139,7 @@ function OnSelectChange( $Previews, $PreviewsNone, $Select, iSlot )
 		else
 		{
 			$Previews.append( g_rgShowcasePreviews[ eShowcase ] );
+			$StyleCtn.append( g_rgShowcaseStyles[ eShowcase ] );
 
 			$PreviewsNone.hide();
 			$Previews.show();
@@ -221,6 +226,7 @@ function PreviewShowcaseConfig( eShowcase, rgSlotData )
 	$J.post( g_rgProfileData['url'] + 'ajaxpreviewshowcase', rgParams)
 	.done( function( data ) {
 		$J(g_rgShowcasePreviews[ eShowcase ]).html( data );
+		g_rgShowcaseStyles[eShowcase] = $J(g_rgShowcasePreviews[ eShowcase ]).children('.showcase_style_select_ctn').detach();
 	} ).fail( function() {
 		ShowAlertDialog( 'Error', 'There was an error communicating with the network. Please try again later.');
 	} );

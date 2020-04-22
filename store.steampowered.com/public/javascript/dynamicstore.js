@@ -431,18 +431,24 @@ GDynamicStore = {
 		}
 	},
 
-	MarkAppDisplayed: function( rgDisplayList )
+	MarkAppDisplayed: function( rgDisplayList, cItemsToMark )
 	{
-		for( var key in rgDisplayList )
-			if( rgDisplayList[key].appid )
-				GDynamicStore.s_rgDisplayedApps.push( rgDisplayList[key].appid )
-
+		// jquery map takes care of arrays as well as array-ish
+		GDynamicStore.MarkAppIDsAsDisplayed( $J.map( rgDisplayList, function ( item ) { return item.appid; } ), cItemsToMark );
 	},
 
-	MarkAppIDsAsDisplayed: function( rgAppIDs )
+	MarkAppIDsAsDisplayed: function( rgAppIDs, cItemsToMark )
 	{
 		for ( var i = 0; i < rgAppIDs.length; i++ )
-			GDynamicStore.s_rgDisplayedApps.push( rgAppIDs[i] );
+		{
+			if ( rgAppIDs[i] )
+			{
+				GDynamicStore.s_rgDisplayedApps.push( rgAppIDs[i] );
+
+				if ( cItemsToMark !== undefined && --cItemsToMark == 0 )
+					break;
+			}
+		}
 	},
 
 	HandleClusterChange: function( cluster ) {

@@ -22,6 +22,7 @@ LocalizationReady("shared", "english", {
   Button_Overwrite: "Overwrite",
   Button_Retry: "Retry",
   Button_Remove: "Remove",
+  Button_Revert: "Revert",
   Button_Save: "Save",
   Button_Saved: "Saved",
   Button_Share: "Share",
@@ -123,6 +124,9 @@ LocalizationReady("shared", "english", {
   EventBrowse_RecentEvents: "Recent Events & Announcements",
 
   EventCalendar_Title: "Steam%1$sNews Hub",
+  EventCalendar_TabTitle_Global: "Steam News Hub",
+  EventCalendar_TabTitle_GroupHub: "%1$s - Steam News Hub",
+  EventCalendar_TabTitle_GroupNameAndEventDetail: "%1$s - %2$s - Steam News",
   EventCalendar_FilterSubSection_EventTypeGroups: "Show these types of posts",
   EventCalendar_FilterSubSection_GameSources: "Show posts from these sources",
   EventCalendar_EmptyCalendar:
@@ -690,33 +694,50 @@ LocalizationReady("shared", "english", {
   EventEditor_UpVotes: "Up Votes",
   EventEditor_DownVotes: "Down Votes",
 
-  RSSManager_PostEvent_FeedTilte: "Create/Update News Feed Settings",
-  RSSManager_PostEvent_Tilte: "Post News to Steam",
+  RSSManager_PostEvent_CreateFeedTitle: "Create News Feed Settings",
+  RSSManager_PostEvent_UpdateFeedTitle: "Update News Feed Settings",
+  RSSManager_PostEvent_Tilte: "Post News to Steam?",
+  RSSManager_CreateFeed_Review:
+    "Please review the following requirement before continuing:",
   RSSManager_PostEvent_CreateFeed_DuringPost:
     "The RSS feed being preview doesn't match current setting. We need to update to this as a current feed to psot the event. By default the RSS feed automation will be disabled. This can be changed later.",
   RSSManager_PostEvent_CreateFeed_Desc:
     "Create/Update feed to this RSS URL?: '%1$s'",
-  RSSManager_PostEvent_Failure: "Failed to complete the feed creation or post",
-  RSSManager_PostEvent_CreatePost: "Post a new event to Steam with title?:",
-  RSSManager_PostEvent_CreatePost_Draft: "Save as Draft Mode",
-  RSSManager_PostEvent_CreatePost_Draft_tooltip:
-    "When checked, creates the events but does not publish it. Allows you to make changes before it goes live.",
+  RSSManager_PostEvent_Failure:
+    "Failed to complete the feed creation/update and/or news posting action",
+  RSSManager_PostEvent_CreatePost: "Would you like to post this item to Steam?",
+  RSSManager_PostEvent_CreatePost_Draft:
+    "Save as a draft? - Instead of posting immediately, this will create an announcement as hidden an unpublished. You may then make changes before publishing in your Announcements Dashboard.",
   RSSManager_PostEvent_InFlight:
     "Please wait for Steam server to complete action.",
-  RSSManager_PostEvent_Success_feed: "Feed has been sucessful created/updated",
+  RSSManager_PostEvent_Success_feed: "RSS Feed has been successfully updated",
   RSSManager_PostEvent_Success:
-    "Post has been successfully created. To edit event further go here",
+    "Your announcement has been successfully created. To edit further go here: ",
   RSSManager_PostEvent_EventLink: "Edit Event Here",
   RSSManager_CreateFeed_Permissions_v1:
     "I agree that I am authorized to provide this rss feed to be stored and redistributed via Steam.",
   RSSManager_CreateFeed_Conduct_v1:
     "confirm that the contents of this rss feed that are redistributed through Steam will comply with the Steam Online Conduct Rules.",
   RSSManager_CreateFeed_Conduct_Link: "Read Steam Online Conduct Rules here.",
+  RSSManager_Status_Automation_Desc:
+    "Automatically create news announcements from RSS Feed",
+  RSSManager_Status_Automation_Activate: "Activate RSS Feed",
+  RSSManager_Status_Automation_DisableFailed:
+    "Failed to deactivate feed. Please try again later.",
+  RSSManager_EventDashBoard: "Open events dashboard",
+  RSSManager_PostEvent_ViewEvent: "View Event",
+  RSSManager_PostEvent_EditEvent: "Edit Event",
+  RSSManager_PostEvent_Draft: "Saved as a draft",
+  RSSManager_PostEvent_Staged:
+    "Saved as a draft, staged to automatically publish %1$s",
+  RSSManager_PostEvent_PostedDate: "Posted on %1$s",
+  RSSManager_PostEvent_ViewRaw: "View Raw RSS",
+  RSSManager_PreviewInfo: "Showing content for RSS url '%1$s':",
 
   Error_Message: "Error Message",
   Warning_Message: "Warning Message",
   Informational_Message: "Informational Message",
-  Error_Description: "Error (code: %1$s) occured with details: (%2$s)",
+  Error_Description: "Error (code: %1$s) occurred with details: (%2$s)",
   Error_FailureNotice: "Failure",
   Error_GenericFailureDescription: "Sorry, that didn't work.",
 
@@ -1248,6 +1269,22 @@ LocalizationReady("shared", "english", {
 
   Legal_Footer_WithYear:
     "© %1$s Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.",
+
+  Sale_Subscription_SelectPlan: "Select a plan",
+  Sale_Subscription_AlreadyOwnedPackage: "Your current plan",
+  Sale_Subscription_AlreadyOwnedApp: "Already a member",
+  Sale_Subscription_Save: "Save %2$s",
+  Sale_Subscription_Annual_Price: "%1$s/year",
+  Sale_Subscription_Annual_Body:
+    "Pay for one year of access and save %2$s off your subscription",
+  Sale_Subscription_Annual_Button: "Subscribe Annually",
+  Sale_Subscription_Monthly_Price: "%1$s/month",
+  Sale_Subscription_Monthly_Body: "Pay month-to-month and cancel any time",
+  Sale_Subscription_Monthly_Button: "Subscribe Monthly",
+  Sale_Subscription_Quarterly_Price: "%1$s/quarter",
+  Sale_Subscription_Quarterly_Body:
+    "Pay every three months and cancel any time",
+  Sale_Subscription_Quarterly_Button: "Subscribe Quarterly",
 
   shared_dummy: "dont translate"
 });

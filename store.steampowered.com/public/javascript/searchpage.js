@@ -69,9 +69,31 @@ function PopulateTagFacetData( rgTagFacetData, rgForcedTop, bHydrate=false)
 			continue;
 
 		rgDisplayedTags[ tagid ] = true;
+		
 		var textCount = v_numberformat( count );
 		
 		if(bHydrate){
+			if(count > 500)
+			{
+				//500+: round to the nearest 100
+				count = Math.floor(count/100) * 100;
+			}
+			else if(count > 100)
+			{
+				//101-500: round to the nearest 50
+				count = Math.floor(count/50) * 50;
+			}
+			else if(count > 50)
+			{
+				//51-100: round to the nearest 10
+				count = Math.floor(count/10) * 10;
+			}
+			else if(count > 10)
+			{
+				//10-50: round to the nearest 5
+				count = Math.floor(count/5) * 5;
+			}
+			textCount = v_numberformat( count );
 			textCount += "+";
 		}
 		
@@ -748,11 +770,8 @@ function AddSearchTag( strParam, strValue, strLabel, fnOnClick, strIcon = null )
 
 function ExpandOptions( e, target )
 {
-	/*var el = $J('#'+target),
-	 curHeight = el.height(),
-	 autoHeight = el.css('height', 'auto').height();
-	 el.height(curHeight).animate({height: autoHeight}, 1000);*/
-	$J('#'+target).css({height: 'auto'});
+	var options = $J('#' + target);
+	options.css( { 'max-height': '', 'height': 'auto' } );
 	$J(e).hide();
 }
 

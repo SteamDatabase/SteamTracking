@@ -1274,6 +1274,7 @@ img.emoticon {
 	position: relative;
 	font-size: 12px;
     border-bottom: 1px solid #444;
+    user-select: text;
 }
 
 .tagrow.tagrow_header {

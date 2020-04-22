@@ -33,7 +33,10 @@
 }
 
 .recommended_creators_ctn .carousel_container .arrow {
-	top: 27px;
+	top: 65px;
+}
+.recommended_creators_ctn .carousel_container#recommended_creators_carousel .arrow {
+    top: 27px;
 }
 
 .recommended_creators_ctn .recommended_creators_container {

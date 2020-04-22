@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5810362";
+var CLSTAMP = "5821393";
 !(function(e) {
   function t(t) {
     for (
@@ -1566,7 +1566,7 @@ var CLSTAMP = "5810362";
                   void 0 !== c.bShiftToFitWindow
                     ? c.bShiftToFitWindow
                     : c.bFitToWindow && !c.bOverlapHorizontal;
-                (I = C > P),
+                (I = C > P && !c.bDisablePopTop),
                   R && (I ? (a.menuTop = 4) : (a.menuBottom = 4)),
                   c.bFitToWindow &&
                     (R ? (M = Math.min(M, p - 8)) : (M += I ? C : P),
@@ -1592,12 +1592,12 @@ var CLSTAMP = "5810362";
                     a.menuTop && (a.menuTop += n.scrollY),
                     a.menuBottom &&
                       (a.menuBottom +=
-                        n.document.body.scrollHeight -
+                        n.document.body.clientHeight -
                         n.scrollY -
                         n.innerHeight),
                     a.menuRight &&
                       (a.menuRight +=
-                        n.document.body.scrollWidth -
+                        n.document.body.clientWidth -
                         n.scrollX -
                         n.innerWidth)),
                 (a.menuLeft === this.state.menuLeft &&
@@ -7361,37 +7361,37 @@ and limitations under the License.
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
     var h = {
-        english: "en",
-        german: "de",
-        french: "fr",
-        italian: "it",
-        korean: "ko",
-        latam: "es-419",
-        spanish: "es",
-        schinese: "zh-cn",
-        tchinese: "zh-tw",
-        russian: "ru",
-        thai: "th",
-        japanese: "ja",
-        brazilian: "pt-br",
-        portuguese: "pt",
-        polish: "pl",
-        danish: "da",
-        dutch: "nl",
-        finnish: "fi",
-        norwegian: "no",
-        swedish: "sv",
-        hungarian: "hu",
-        czech: "cs",
-        romanian: "ro",
-        turkish: "tr",
-        arabic: "ar",
-        bulgarian: "bg",
-        greek: "el",
-        ukrainian: "uk",
-        vietnamese: "vn"
-      },
-      d = new s();
+      english: "en",
+      german: "de",
+      french: "fr",
+      italian: "it",
+      korean: "ko",
+      latam: "es-419",
+      spanish: "es",
+      schinese: "zh-cn",
+      tchinese: "zh-tw",
+      russian: "ru",
+      thai: "th",
+      japanese: "ja",
+      brazilian: "pt-br",
+      portuguese: "pt",
+      polish: "pl",
+      danish: "da",
+      dutch: "nl",
+      finnish: "fi",
+      norwegian: "no",
+      swedish: "sv",
+      hungarian: "hu",
+      czech: "cs",
+      romanian: "ro",
+      turkish: "tr",
+      arabic: "ar",
+      bulgarian: "bg",
+      greek: "el",
+      ukrainian: "uk",
+      vietnamese: "vn"
+    };
+    var d = new s();
     window.LocalizationManager = d;
   },
   "s4p+": function(e, t, n) {},

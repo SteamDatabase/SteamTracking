@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5810362";
+var CLSTAMP = "5821393";
 !(function(e) {
   function t(t) {
     for (
@@ -2330,37 +2330,37 @@ and limitations under the License.
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
     var h = {
-        english: "en",
-        german: "de",
-        french: "fr",
-        italian: "it",
-        korean: "ko",
-        latam: "es-419",
-        spanish: "es",
-        schinese: "zh-cn",
-        tchinese: "zh-tw",
-        russian: "ru",
-        thai: "th",
-        japanese: "ja",
-        brazilian: "pt-br",
-        portuguese: "pt",
-        polish: "pl",
-        danish: "da",
-        dutch: "nl",
-        finnish: "fi",
-        norwegian: "no",
-        swedish: "sv",
-        hungarian: "hu",
-        czech: "cs",
-        romanian: "ro",
-        turkish: "tr",
-        arabic: "ar",
-        bulgarian: "bg",
-        greek: "el",
-        ukrainian: "uk",
-        vietnamese: "vn"
-      },
-      _ = new u();
+      english: "en",
+      german: "de",
+      french: "fr",
+      italian: "it",
+      korean: "ko",
+      latam: "es-419",
+      spanish: "es",
+      schinese: "zh-cn",
+      tchinese: "zh-tw",
+      russian: "ru",
+      thai: "th",
+      japanese: "ja",
+      brazilian: "pt-br",
+      portuguese: "pt",
+      polish: "pl",
+      danish: "da",
+      dutch: "nl",
+      finnish: "fi",
+      norwegian: "no",
+      swedish: "sv",
+      hungarian: "hu",
+      czech: "cs",
+      romanian: "ro",
+      turkish: "tr",
+      arabic: "ar",
+      bulgarian: "bg",
+      greek: "el",
+      ukrainian: "uk",
+      vietnamese: "vn"
+    };
+    var _ = new u();
     window.LocalizationManager = _;
   },
   "qM/t": function(e, t, n) {

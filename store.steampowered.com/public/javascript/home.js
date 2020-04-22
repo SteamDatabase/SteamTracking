@@ -348,23 +348,29 @@ GHomepage = {
 			GHomepage.RenderRecommendedByDeepDiveCarousel();
 		} catch ( e ) { OnHomepageException(e); }
 
-		// under10
+		// Community Recommendations - Steam Labs
 		try {
-			GHomepage.RenderUnder10();
+			GHomepage.RenderCommunityRecommendations();
+		} catch ( e ) { OnHomepageException(e); }
+
+		try {
+			GSteamCurators.Render();
 		} catch( e ) { OnHomepageException(e); }
+
+		// Logged in
+		// Recommended Curators
+		try {
+			GHomepage.RenderRecommendedCreatorApps();
+		} catch( e ) { OnHomepageException(e); }
+
 
 		try {
 			GHomepage.RenderTopVRApps();
-		} catch( e ) { OnHomepageException(e); }			
+		} catch( e ) { OnHomepageException(e); }
 
 		// Tabs
 		try {
 			GHomepage.FilterTabs();
-		} catch( e ) { OnHomepageException(e); }
-
-		// Marketing Messages
-		try {
-			GHomepage.RenderMarketingMessages();
 		} catch( e ) { OnHomepageException(e); }
 
 		// Logged in
@@ -372,17 +378,16 @@ GHomepage = {
 		try {
 			GHomepage.RenderFriendsRecentlyPurchased();
 		} catch( e ) { OnHomepageException(e); }
-			
-		// Logged in
-		// Recommended Curators
+
+		// under10
 		try {
-			GHomepage.RenderRecommendedCreatorApps();
+			GHomepage.RenderUnder10();
 		} catch( e ) { OnHomepageException(e); }
-		
-		// Community Recommendations - Steam Labs
+
+		// Marketing Messages
 		try {
-			GHomepage.RenderCommunityRecommendations();
-		} catch ( e ) { OnHomepageException(e); }
+			GHomepage.RenderMarketingMessages();
+		} catch( e ) { OnHomepageException(e); }
 
 		// Sidebar
 		// Recommended tags
@@ -557,8 +562,7 @@ GHomepage = {
 			return;
 		}
 
-		GDynamicStore.MarkAppDisplayed( rgMainCaps );
-
+		GDynamicStore.MarkAppDisplayed( rgMainCaps, 3 );	
 		if ( GHomepage.bShuffleInMainLegacy )
 			rgMainCaps = v_shuffle( rgMainCaps );
 
@@ -1363,23 +1367,23 @@ GHomepage = {
 	{
 		var Settings = GHomepage.oSettings['home'] || {};
 		var ApplicableSettings = GHomepage.oApplicableSettings['home'] || {};
-		
-		var rgFeaturedApps = {};
+
+		var cSpotlightsShown = 0, cDailyDealsShown = 0;
 		$J('.home_area_spotlight').each( function( i, j){
 
 			var $elem = $J(j);
 			var unAppId = $elem.data('ds-appid');
 
-			if ( !unAppId )
-				return;
-
-			if ( !GStoreItemData.BAppPassesFilters( unAppId, Settings, ApplicableSettings ) )
+			if ( unAppId && !GStoreItemData.BAppPassesFilters( unAppId, Settings, ApplicableSettings ) )
 			{
 				$elem.replaceWith( '<div><div class="specials_target"></div><div class="specials_target"></div></div>');
 				return;
 			}
 
-			rgFeaturedApps[unAppId] = { appid: unAppId };
+			cSpotlightsShown++;
+
+			if ( unAppId && cSpotlightsShown < 3 )
+				GDynamicStore.MarkAppIDsAsDisplayed( [unAppId] );
 		});
 
 
@@ -1389,9 +1393,6 @@ GHomepage = {
 			var unAppId = $elem.data('ds-appid');
 			var unBundleId = $elem.data('ds-bundleid');
 
-			if ( !unAppId && !unBundleId )
-				return;
-
 			if ( unBundleId )
 			{
 				if ( !GStoreItemData.BBundlePassesFilters( unBundleId, Settings, ApplicableSettings ) )
@@ -1400,16 +1401,17 @@ GHomepage = {
 					return;
 				}
 			}
-			else if ( !GStoreItemData.BAppPassesFilters( unAppId, Settings, ApplicableSettings ) )
+			else if ( unAppId && !GStoreItemData.BAppPassesFilters( unAppId, Settings, ApplicableSettings ) )
 			{
 				$elem.replaceWith( '<div class="specials_target"></div>');
 				return;
 			}
 
-			rgFeaturedApps[unAppId] = { appid: unAppId };
-		});
+			cDailyDealsShown++;
 
-		GDynamicStore.MarkAppDisplayed(rgFeaturedApps);
+			if ( unAppId && ( cSpotlightsShown * 2 + cDailyDealsShown ) < 6 )
+				GDynamicStore.MarkAppIDsAsDisplayed( [unAppId] );
+		});
 
 		var nSpecials = $J('.specials_target').length;
 
@@ -1433,7 +1435,7 @@ GHomepage = {
 		if( !rgCapsules || rgCapsules.length < 1 )
 			return;
 
-		GDynamicStore.MarkAppDisplayed ( rgCapsules );
+		GDynamicStore.MarkAppDisplayed ( rgCapsules, Math.max( 0, 6 - ( cSpotlightsShown * 2 + cDailyDealsShown ) ) );
 
 
 		$J('.specials_target').each(function(i,j){
@@ -1472,7 +1474,7 @@ GHomepage = {
 			GHomepage.oDisplayLists.top_new_releases, 'home', 4, 12, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true  }
 		);
 
-		GDynamicStore.MarkAppDisplayed( rgCapsules.slice( 0, 4 ) );
+		GDynamicStore.MarkAppDisplayed( rgCapsules, 4 );
 
 		GHomepage.FillPagedCapsuleCarousel( rgCapsules, $TopNewReleasesCarousel,
 			function( oItem, strFeature, rgOptions, nDepth )
@@ -1635,7 +1637,7 @@ GHomepage = {
 			return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth);
 		} , 'sale_fromyourwishlist', 4 );
 
-		GDynamicStore.MarkAppDisplayed ( rgItems.slice( 0, 4 ) );
+		GDynamicStore.MarkAppDisplayed ( rgItems, 4 );
 	},
 
 
@@ -2458,8 +2460,6 @@ GSteamCurators = {
 	Init: function( rgApps )
 	{
 		GSteamCurators.rgAppsRecommendedByCurators = rgApps;
-
-		GSteamCurators.Render();
 	},
 
 	BuildHomePageGenericCap: function( oItem, strFeatureContext )
@@ -2645,8 +2645,7 @@ GSteamCurators = {
 				apps, 'home', 5, 9, { games_already_in_library: false, displayed_elsewhere: false, only_current_platform: true }
 			);
 
-			GDynamicStore.MarkAppDisplayed( rgRecommendedApps );
-
+			GDynamicStore.MarkAppDisplayed( rgRecommendedApps, 5 ); 
 			if ( rgRecommendedApps.length >= 5 )
 			{
 				GSteamCurators.bNeedRecommendedCurators = false;	// we don't need to ajax in curator recommendations

@@ -109,67 +109,67 @@
                   }[u] || u) +
                   ".css?chunkhash=" +
                   {
-                    1: "dfa06a6fe472570e2819",
-                    2: "680866f91e1c58ede384",
-                    3: "fb65b1c28e75f4dc67fd",
-                    5: "00c53f773124a25815dc",
-                    6: "9118c8a6a191dd89ac05",
-                    7: "6439ac7955590a8c1cd5",
-                    8: "6bed9b7b7a9450947029",
-                    9: "725a842af2d21d98ddd6",
-                    10: "a7b2f63bfe4abdfc23b4",
-                    11: "a0d74b85cd66c6839893",
-                    12: "91aeb5e25a06a7ba52e9",
-                    13: "fafe68fd143c9c5ea3b8",
-                    14: "5a73c5bb53556663ba98",
-                    15: "70407638302d9de6d789",
-                    16: "623be3e100efb5457c25",
-                    17: "56c2520573f3fd59e63f",
-                    18: "dfe9aa6fbdd9e6b363e7",
-                    19: "81f7253dac9a12310cb4",
-                    20: "e2908ce25bfb3a09aada",
-                    21: "a4f34a1caccbbf1bcf30",
-                    22: "c013478bb3ddb9336163",
-                    23: "cf5dabcac0b0460f4b1d",
-                    24: "cc44c2ae62e8216c1dd5",
-                    25: "432f4c2e45eff3111ae0",
-                    26: "00adbd4792498356a83e",
-                    27: "538f82ee20caf72d9ffb",
-                    28: "118b099f90ba5a91880c",
-                    29: "99f0c26b53ab23a0f8f9",
-                    30: "418ea1b03e0510382767",
-                    31: "9824add69ce2762bcc33",
-                    32: "ff822db209be2025074c",
-                    33: "31c74ee4a1ecdc06ef81",
+                    1: "2cf4b0f7e20ded039b45",
+                    2: "bfe2795201d05091d6f9",
+                    3: "c32f2923f8a0c106f7cd",
+                    5: "9693ff5081e311a28834",
+                    6: "b465018d32381d48d193",
+                    7: "9c44a8ad325566baf2b8",
+                    8: "5530f384aa994a0b2b9c",
+                    9: "f2739b054c504a474af4",
+                    10: "5d4a86d4a06fbd7274f3",
+                    11: "adfdcbe9e9285ced13bd",
+                    12: "e8e37882b34d36017888",
+                    13: "2345f30e9903ac6baad9",
+                    14: "ec93525fee4fdd02a3ed",
+                    15: "0a0ea7519138a35da03a",
+                    16: "fc9f4c52b1ccd0634189",
+                    17: "b634c8125584fda7e803",
+                    18: "e4aba7fe0096502113ac",
+                    19: "392e4f0de7ac2eb2da17",
+                    20: "43b76916441ca79cb32f",
+                    21: "537c2a2f01e1f392252c",
+                    22: "05ed19c19f72fda83d5b",
+                    23: "6678182edd70a67eb742",
+                    24: "25dd9e5afa95d04ccfba",
+                    25: "ae35b39bcc7c8468e03f",
+                    26: "271571eb6c89a5af6d7e",
+                    27: "af42416fb17523409262",
+                    28: "6bd63f066a0ef0ba38c4",
+                    29: "38e35e619e2b8891bda6",
+                    30: "3ed07e9f3cac5c7ca1d3",
+                    31: "df943a32e665aed80f12",
+                    32: "e394d8d694a821cc3ae7",
+                    33: "b936ac75c429fa883162",
                     61: "02ecafcb6b89b9a45e93",
-                    62: "789be5e1ad7408e46c0d",
-                    63: "713e66f32ebb64c5a8a5",
-                    64: "a844bb2fba57fcd95973",
-                    65: "ec30fd6199b40ae0e4fe",
-                    66: "e95b7b58bf6d61f269c0",
-                    67: "651f817f858e24ee04b1",
-                    68: "d019ddb100f9da91cbb4",
-                    69: "32dbca9d4d10d57ee60e",
-                    70: "0997ec5123af581f80dd",
-                    71: "7fafe716633ecd0bf1e6",
-                    72: "c866812b35561c9a29ae",
-                    73: "fba990bf1ae09f3dba23",
-                    74: "bcdcbd213d2b7ec07c44",
-                    75: "a9e006f945319a2d6271",
-                    76: "715bddc6d87c7a2f11fd",
-                    77: "a5df376e89a9d9a41bdd",
-                    78: "8c060d8ac25bf9904e76",
-                    79: "4efc1aa7bff21c3288e7",
-                    80: "6ea05217b0b84b1430cc",
-                    81: "aea5e4398d17b35fa970",
-                    82: "7487d6a52f3750c40a23",
-                    83: "a69add4fa25a764b1578",
-                    84: "9f3dd9e08b86c3f22e16",
-                    85: "196260a1703646a1aac3",
-                    86: "f6bc6c17a47d43e46da3",
-                    87: "955d96639d08d379c8d5",
-                    88: "b700332c457a1a2b9ce1",
-                    91: "8a034f238efe6c01f50b",
+                    62: "ce1f5bc4b9f1512ddc52",
+                    63: "9930f1f43d0e742cc274",
+                    64: "6522aa2c73db6c0ba600",
+                    65: "84aac49f391658853cb4",
+                    66: "62f2c1252c62a65b5d62",
+                    67: "6d86ff2e42df1f801d74",
+                    68: "6db5175151aba79b8f74",
+                    69: "de993f66da7baec405cc",
+                    70: "4b642a24ca3c604e02c1",
+                    71: "4a3db84b209d30ec41b2",
+                    72: "0d72b056be461657ea96",
+                    73: "72601c6a4a00fa67e9e2",
+                    74: "d3c92c80e9690d129ac5",
+                    75: "3a84c1d66a22dfe5bbe1",
+                    76: "03b9eb89dc13f59bdac1",
+                    77: "e43fa5290560ea699498",
+                    78: "6aa2a9656a90a4787f3c",
+                    79: "f77f8b9e6cd286ef4d36",
+                    80: "d03b00820e59c4848f51",
+                    81: "97943c2dfced0d9f226f",
+                    82: "ef83561ce8e90b8711be",
+                    83: "66e08f583b4f3e119acd",
+                    84: "61f56def6d00b03ee618",
+                    85: "d8738d77d930eab69531",
+                    86: "64325527a752371c1a2c",
+                    87: "fc715b57c1d9bd3b7306",
+                    88: "959332969a296bb81238",
+                    91: "f92addad9199064130b9",
                     92: "02db113f865ed074cdf0"
                   }[u],
                 i = h.p + t,
@@ -292,67 +292,67 @@
               }[e] || e) +
               ".js?chunkhash=" +
               {
-                1: "dfa06a6fe472570e2819",
-                2: "680866f91e1c58ede384",
-                3: "fb65b1c28e75f4dc67fd",
-                5: "00c53f773124a25815dc",
-                6: "9118c8a6a191dd89ac05",
-                7: "6439ac7955590a8c1cd5",
-                8: "6bed9b7b7a9450947029",
-                9: "725a842af2d21d98ddd6",
-                10: "a7b2f63bfe4abdfc23b4",
-                11: "a0d74b85cd66c6839893",
-                12: "91aeb5e25a06a7ba52e9",
-                13: "fafe68fd143c9c5ea3b8",
-                14: "5a73c5bb53556663ba98",
-                15: "70407638302d9de6d789",
-                16: "623be3e100efb5457c25",
-                17: "56c2520573f3fd59e63f",
-                18: "dfe9aa6fbdd9e6b363e7",
-                19: "81f7253dac9a12310cb4",
-                20: "e2908ce25bfb3a09aada",
-                21: "a4f34a1caccbbf1bcf30",
-                22: "c013478bb3ddb9336163",
-                23: "cf5dabcac0b0460f4b1d",
-                24: "cc44c2ae62e8216c1dd5",
-                25: "432f4c2e45eff3111ae0",
-                26: "00adbd4792498356a83e",
-                27: "538f82ee20caf72d9ffb",
-                28: "118b099f90ba5a91880c",
-                29: "99f0c26b53ab23a0f8f9",
-                30: "418ea1b03e0510382767",
-                31: "9824add69ce2762bcc33",
-                32: "ff822db209be2025074c",
-                33: "31c74ee4a1ecdc06ef81",
+                1: "2cf4b0f7e20ded039b45",
+                2: "bfe2795201d05091d6f9",
+                3: "c32f2923f8a0c106f7cd",
+                5: "9693ff5081e311a28834",
+                6: "b465018d32381d48d193",
+                7: "9c44a8ad325566baf2b8",
+                8: "5530f384aa994a0b2b9c",
+                9: "f2739b054c504a474af4",
+                10: "5d4a86d4a06fbd7274f3",
+                11: "adfdcbe9e9285ced13bd",
+                12: "e8e37882b34d36017888",
+                13: "2345f30e9903ac6baad9",
+                14: "ec93525fee4fdd02a3ed",
+                15: "0a0ea7519138a35da03a",
+                16: "fc9f4c52b1ccd0634189",
+                17: "b634c8125584fda7e803",
+                18: "e4aba7fe0096502113ac",
+                19: "392e4f0de7ac2eb2da17",
+                20: "43b76916441ca79cb32f",
+                21: "537c2a2f01e1f392252c",
+                22: "05ed19c19f72fda83d5b",
+                23: "6678182edd70a67eb742",
+                24: "25dd9e5afa95d04ccfba",
+                25: "ae35b39bcc7c8468e03f",
+                26: "271571eb6c89a5af6d7e",
+                27: "af42416fb17523409262",
+                28: "6bd63f066a0ef0ba38c4",
+                29: "38e35e619e2b8891bda6",
+                30: "3ed07e9f3cac5c7ca1d3",
+                31: "df943a32e665aed80f12",
+                32: "e394d8d694a821cc3ae7",
+                33: "b936ac75c429fa883162",
                 61: "02ecafcb6b89b9a45e93",
-                62: "789be5e1ad7408e46c0d",
-                63: "713e66f32ebb64c5a8a5",
-                64: "a844bb2fba57fcd95973",
-                65: "ec30fd6199b40ae0e4fe",
-                66: "e95b7b58bf6d61f269c0",
-                67: "651f817f858e24ee04b1",
-                68: "d019ddb100f9da91cbb4",
-                69: "32dbca9d4d10d57ee60e",
-                70: "0997ec5123af581f80dd",
-                71: "7fafe716633ecd0bf1e6",
-                72: "c866812b35561c9a29ae",
-                73: "fba990bf1ae09f3dba23",
-                74: "bcdcbd213d2b7ec07c44",
-                75: "a9e006f945319a2d6271",
-                76: "715bddc6d87c7a2f11fd",
-                77: "a5df376e89a9d9a41bdd",
-                78: "8c060d8ac25bf9904e76",
-                79: "4efc1aa7bff21c3288e7",
-                80: "6ea05217b0b84b1430cc",
-                81: "aea5e4398d17b35fa970",
-                82: "7487d6a52f3750c40a23",
-                83: "a69add4fa25a764b1578",
-                84: "9f3dd9e08b86c3f22e16",
-                85: "196260a1703646a1aac3",
-                86: "f6bc6c17a47d43e46da3",
-                87: "955d96639d08d379c8d5",
-                88: "b700332c457a1a2b9ce1",
-                91: "8a034f238efe6c01f50b",
+                62: "ce1f5bc4b9f1512ddc52",
+                63: "9930f1f43d0e742cc274",
+                64: "6522aa2c73db6c0ba600",
+                65: "84aac49f391658853cb4",
+                66: "62f2c1252c62a65b5d62",
+                67: "6d86ff2e42df1f801d74",
+                68: "6db5175151aba79b8f74",
+                69: "de993f66da7baec405cc",
+                70: "4b642a24ca3c604e02c1",
+                71: "4a3db84b209d30ec41b2",
+                72: "0d72b056be461657ea96",
+                73: "72601c6a4a00fa67e9e2",
+                74: "d3c92c80e9690d129ac5",
+                75: "3a84c1d66a22dfe5bbe1",
+                76: "03b9eb89dc13f59bdac1",
+                77: "e43fa5290560ea699498",
+                78: "6aa2a9656a90a4787f3c",
+                79: "f77f8b9e6cd286ef4d36",
+                80: "d03b00820e59c4848f51",
+                81: "97943c2dfced0d9f226f",
+                82: "ef83561ce8e90b8711be",
+                83: "66e08f583b4f3e119acd",
+                84: "61f56def6d00b03ee618",
+                85: "d8738d77d930eab69531",
+                86: "64325527a752371c1a2c",
+                87: "fc715b57c1d9bd3b7306",
+                88: "959332969a296bb81238",
+                91: "f92addad9199064130b9",
                 92: "02db113f865ed074cdf0"
               }[e]
             );
@@ -3030,7 +3030,7 @@
                   h.b.LANGUAGE)
                 ) {
                   var c = "koreana" == h.b.LANGUAGE ? "korean" : h.b.LANGUAGE;
-                  o.document.documentElement.setAttribute("lang", d.a[c]);
+                  o.document.documentElement.setAttribute("lang", d.b[c]);
                 }
                 (this.m_popup = o),
                   (this.m_element = s),
@@ -3620,7 +3620,7 @@
                 "bAlertDialog",
                 "children"
               ]),
-              c = r || Object(p.c)("#Button_Close");
+              c = r || Object(p.d)("#Button_Close");
             return u.createElement(
               E,
               Object(l.a)({}, a),
@@ -3700,8 +3700,8 @@
           (t.prototype.render = function() {
             var e = Object(l.a)(
               {
-                strTitle: Object(p.c)("#Error_FailureNotice"),
-                strDescription: Object(p.c)("#Error_GenericFailureDescription"),
+                strTitle: Object(p.d)("#Error_FailureNotice"),
+                strDescription: Object(p.d)("#Error_GenericFailureDescription"),
                 bAlertDialog: !0,
                 bDestructiveWarning: !0,
                 onOK: function() {},
@@ -3732,17 +3732,27 @@
           (t.prototype.componentWillUnmount = function() {
             this.props.ModalManager.UnregisterOverlay(this);
           }),
+          (t.prototype.OnActiveRef = function(e) {
+            if (e) {
+              var t = e.firstChild;
+              t && t.focus && t.focus();
+            }
+          }),
           (t.prototype.render = function() {
-            var e = this.props.ModalManager.modals;
+            var i = this,
+              e = this.props.ModalManager.modals;
             if (!e || !e.length) return null;
-            var r = this.props.ModalManager.active_modal,
+            var o = this.props.ModalManager.active_modal,
               t = e.map(function(e, t) {
-                var n = e == r ? "active" : "inactive";
+                var n = e == o,
+                  r = n ? "active" : "inactive";
                 return u.createElement(
                   "div",
                   {
-                    className: Object(c.a)("ModalOverlayContent", n),
-                    key: n + "-" + t
+                    className: Object(c.a)("ModalOverlayContent", r),
+                    key: "modal-" + t,
+                    ref: n ? i.OnActiveRef : null,
+                    tabIndex: -1
                   },
                   e.element
                 );
@@ -4076,13 +4086,13 @@
         f.createElement(
           S,
           { onClick: e.onOK, disabled: e.bOKDisabled },
-          e.strOKText || Object(g.c)("#Button_Confirm"),
+          e.strOKText || Object(g.d)("#Button_Confirm"),
           " "
         ),
         f.createElement(
           k,
           { onClick: e.onCancel },
-          e.strCancelText || Object(g.c)("#Button_Cancel")
+          e.strCancelText || Object(g.d)("#Button_Cancel")
         )
       );
     }
@@ -4093,19 +4103,19 @@
         f.createElement(
           S,
           { onClick: e.onOK, disabled: e.bOKDisabled },
-          e.strOKText || Object(g.c)("#Button_Confirm"),
+          e.strOKText || Object(g.d)("#Button_Confirm"),
           " "
         ),
         f.createElement(
           S,
           { onClick: e.onUpdate, disabled: e.bUpdateDisabled },
-          e.strUpdateText || Object(g.c)("#Button_Update"),
+          e.strUpdateText || Object(g.d)("#Button_Update"),
           " "
         ),
         f.createElement(
           k,
           { onClick: e.onCancel },
-          e.strCancelText || Object(g.c)("#Button_Cancel")
+          e.strCancelText || Object(g.d)("#Button_Cancel")
         )
       );
     }
@@ -4294,7 +4304,7 @@
                             "DialogOnOffToggle_Option Off" +
                             (this.state.checked ? "" : " Active")
                         },
-                        Object(g.c)("#Dialog_Off")
+                        Object(g.d)("#Dialog_Off")
                       ),
                       f.createElement(
                         "div",
@@ -4303,7 +4313,7 @@
                             "DialogOnOffToggle_Option On" +
                             (this.state.checked ? " Active" : "")
                         },
-                        Object(g.c)("#Dialog_On")
+                        Object(g.d)("#Dialog_On")
                       )
                     )
               )
@@ -4513,7 +4523,7 @@
                         className: "DialogInput_CopyAction Primary",
                         onClick: this.OnCopyClick
                       },
-                      Object(g.c)("#Button_CopyLink")
+                      Object(g.d)("#Button_CopyLink")
                     ),
                     f.createElement(
                       "div",
@@ -4564,7 +4574,7 @@
                           "div",
                           null,
                           " ",
-                          Object(g.c)("#Input_Error_NumberTooSmall"),
+                          Object(g.d)("#Input_Error_NumberTooSmall"),
                           " "
                         )
                       : null,
@@ -4573,7 +4583,7 @@
                           "div",
                           null,
                           " ",
-                          Object(g.c)("#Input_Error_NumberTooLarge"),
+                          Object(g.d)("#Input_Error_NumberTooLarge"),
                           " "
                         )
                       : null,
@@ -4582,7 +4592,7 @@
                           "div",
                           null,
                           " ",
-                          Object(g.c)("#Input_Error_MustBeURL"),
+                          Object(g.d)("#Input_Error_MustBeURL"),
                           " "
                         )
                       : null,
@@ -4591,7 +4601,7 @@
                           "div",
                           null,
                           " ",
-                          Object(g.c)("#Input_Error_MustBeEmail"),
+                          Object(g.d)("#Input_Error_MustBeEmail"),
                           " "
                         )
                       : null,
@@ -4600,7 +4610,7 @@
                           "div",
                           null,
                           " ",
-                          Object(g.c)("#Input_Error_MustBeNumber"),
+                          Object(g.d)("#Input_Error_MustBeNumber"),
                           " "
                         )
                       : null
@@ -4748,10 +4758,11 @@
             var r = this.props,
               i = r.label,
               o = r.explainer,
-              s = (Object(m.f)(r, ["label", "explainer"]), void 0);
+              s = r.tooltip,
+              a = (Object(m.f)(r, ["label", "explainer", "tooltip"]), void 0);
             return (
               o &&
-                (s = f.createElement(
+                (a = f.createElement(
                   "div",
                   { className: "DialogLabelExplainer" },
                   o
@@ -4765,7 +4776,18 @@
                   onKeyDown: this.OnKeyDown,
                   tabIndex: this.props.tabIndex || 0
                 },
-                i && f.createElement("div", { className: "DialogLabel" }, i),
+                i &&
+                  f.createElement(
+                    "div",
+                    { className: "DialogLabel" },
+                    i,
+                    Boolean(s) &&
+                      f.createElement(
+                        "span",
+                        { "data-tooltip-text": s },
+                        " (?)"
+                      )
+                  ),
                 f.createElement(
                   "div",
                   {
@@ -4789,7 +4811,7 @@
                       this.state.value
                     )
                   : null,
-                s
+                a
               )
             );
           }),
@@ -7112,32 +7134,35 @@
   },
   TLQK: function(e, t, n) {
     "use strict";
-    n.d(t, "c", function() {
+    n.d(t, "d", function() {
       return a;
     }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return c;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return p;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return d;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return h;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return m;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return f;
       }),
-      n.d(t, "a", function() {
+      n.d(t, "b", function() {
         return g;
       }),
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return v;
+      }),
+      n.d(t, "c", function() {
+        return b;
       });
     var l = n("mrSG"),
       u = n("q1tI"),
@@ -7208,7 +7233,7 @@
     function a(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = v.LocalizeString(e);
+      var n = b.LocalizeString(e);
       return n
         ? (0 < r.length &&
             (n = n.replace(/%(?:(\d+)\$)?s/g, function(e, t) {
@@ -7224,7 +7249,7 @@
     function c(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = v.LocalizeString(e);
+      var r = b.LocalizeString(e);
       if (!r) return e;
       for (var i, o = [], s = /(.*?)%(\d+)\$s/g, a = 0; (i = s.exec(r)); ) {
         (a += i[0].length), o.push(i[1]);
@@ -7286,7 +7311,7 @@
         day: "numeric",
         year: t ? void 0 : "numeric"
       };
-      return new Date(1e3 * e).toLocaleDateString(v.GetPreferredLocales(), n);
+      return new Date(1e3 * e).toLocaleDateString(b.GetPreferredLocales(), n);
     }
     function m(e) {
       var t = new Date(1e3 * e),
@@ -7294,7 +7319,7 @@
         r = _.get(n);
       if (r) return r;
       return (
-        (r = t.toLocaleDateString(v.GetPreferredLocales(), {
+        (r = t.toLocaleDateString(b.GetPreferredLocales(), {
           year: "numeric",
           month: "short",
           day: "numeric"
@@ -7304,7 +7329,7 @@
       );
     }
     function f(e) {
-      return new Date(1e3 * e).toLocaleTimeString(v.GetPreferredLocales(), {
+      return new Date(1e3 * e).toLocaleTimeString(b.GetPreferredLocales(), {
         hour: "numeric",
         minute: "numeric"
       });
@@ -7313,38 +7338,42 @@
     new Map();
     new Map(), new Map(), new Map(), new Map();
     var g = {
-        english: "en",
-        german: "de",
-        french: "fr",
-        italian: "it",
-        korean: "ko",
-        latam: "es-419",
-        spanish: "es",
-        schinese: "zh-cn",
-        tchinese: "zh-tw",
-        russian: "ru",
-        thai: "th",
-        japanese: "ja",
-        brazilian: "pt-br",
-        portuguese: "pt",
-        polish: "pl",
-        danish: "da",
-        dutch: "nl",
-        finnish: "fi",
-        norwegian: "no",
-        swedish: "sv",
-        hungarian: "hu",
-        czech: "cs",
-        romanian: "ro",
-        turkish: "tr",
-        arabic: "ar",
-        bulgarian: "bg",
-        greek: "el",
-        ukrainian: "uk",
-        vietnamese: "vn"
-      },
-      v = new s();
-    window.LocalizationManager = v;
+      english: "en",
+      german: "de",
+      french: "fr",
+      italian: "it",
+      korean: "ko",
+      latam: "es-419",
+      spanish: "es",
+      schinese: "zh-cn",
+      tchinese: "zh-tw",
+      russian: "ru",
+      thai: "th",
+      japanese: "ja",
+      brazilian: "pt-br",
+      portuguese: "pt",
+      polish: "pl",
+      danish: "da",
+      dutch: "nl",
+      finnish: "fi",
+      norwegian: "no",
+      swedish: "sv",
+      hungarian: "hu",
+      czech: "cs",
+      romanian: "ro",
+      turkish: "tr",
+      arabic: "ar",
+      bulgarian: "bg",
+      greek: "el",
+      ukrainian: "uk",
+      vietnamese: "vn"
+    };
+    function v() {
+      var e = "koreana" == o.b.LANGUAGE ? "korean" : o.b.LANGUAGE;
+      return g[e] || null;
+    }
+    var b = new s();
+    window.LocalizationManager = b;
   },
   TtDX: function(e, t, n) {
     "use strict";
@@ -9120,13 +9149,13 @@
                           case 6:
                             for (
                               l = u,
-                                C.b.InitFromObjects(o, a, s, l),
+                                C.c.InitFromObjects(o, a, s, l),
                                 p = 0,
                                 d = F;
                               p < d.length;
                               p++
                             )
-                              (h = d[p]), C.b.AddTokens(h);
+                              (h = d[p]), C.c.AddTokens(h);
                             return (F = void 0), [2];
                         }
                       });
@@ -9151,7 +9180,7 @@
     var F = [];
     window.LocalizationManifestReady = function(e, t, n) {
       Object(D.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
-        void 0 !== F ? F.push(n) : C.b.AddTokens(n);
+        void 0 !== F ? F.push(n) : C.c.AddTokens(n);
     };
   },
   hJxo: function(e, t, n) {
@@ -10706,7 +10735,7 @@
                   void 0 !== s.bShiftToFitWindow
                     ? s.bShiftToFitWindow
                     : s.bFitToWindow && !s.bOverlapHorizontal;
-                (I = D < k),
+                (I = D < k && !s.bDisablePopTop),
                   x && (I ? (a.menuTop = 4) : (a.menuBottom = 4)),
                   s.bFitToWindow &&
                     (x ? (S = Math.min(S, p - 8)) : (S += I ? k : D),
@@ -10732,12 +10761,12 @@
                     a.menuTop && (a.menuTop += n.scrollY),
                     a.menuBottom &&
                       (a.menuBottom +=
-                        n.document.body.scrollHeight -
+                        n.document.body.clientHeight -
                         n.scrollY -
                         n.innerHeight),
                     a.menuRight &&
                       (a.menuRight +=
-                        n.document.body.scrollWidth -
+                        n.document.body.clientWidth -
                         n.scrollX -
                         n.innerWidth)),
                 (a.menuLeft === this.state.menuLeft &&
@@ -10916,7 +10945,7 @@
                   n.document.execCommand("cut");
                 }
               },
-              Object(d.c)("#ContextMenu_Cut")
+              Object(d.d)("#ContextMenu_Cut")
             )
           ),
         (document.queryCommandEnabled("copy") || i) &&
@@ -10929,7 +10958,7 @@
                   n.document.execCommand("copy");
                 }
               },
-              Object(d.c)("#ContextMenu_Copy")
+              Object(d.d)("#ContextMenu_Copy")
             )
           ),
         h.b.IN_CLIENT &&
@@ -10943,7 +10972,7 @@
                   o.focus(), n.SteamClient._internal.Paste();
                 }
               },
-              Object(d.c)("#ContextMenu_Paste")
+              Object(d.d)("#ContextMenu_Paste")
             )
           ),
         t.length)

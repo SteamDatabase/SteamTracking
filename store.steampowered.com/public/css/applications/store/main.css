@@ -606,6 +606,76 @@ body.modals_BodyNoScrollDialog_105OB {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1500; }
 
+.labssandbox_AppSelector_1pgZO {
+  background-color: #161d1f;
+  width: 400px;
+  position: relative;
+  display: flex;
+  font-size: 16px;
+  color: #c6d4df;
+  margin: 2px; }
+  .labssandbox_AppSelector_1pgZO .labssandbox_AppDisplay_2XO4P {
+    display: flex;
+    flex-direction: row; }
+    .labssandbox_AppSelector_1pgZO .labssandbox_AppDisplay_2XO4P .labssandbox_LogoImage_3dAyv {
+      width: 80px;
+      height: 30px;
+      flex-shrink: 0;
+      margin: 2px;
+      border-radius: 3px; }
+    .labssandbox_AppSelector_1pgZO .labssandbox_AppDisplay_2XO4P .labssandbox_AppName_hmKFR {
+      flex-grow: 1;
+      margin: 4px; }
+  .labssandbox_AppSelector_1pgZO .labssandbox_AppSelect_3-kXB {
+    flex-direction: column;
+    width: 100%; }
+    .labssandbox_AppSelector_1pgZO .labssandbox_AppSelect_3-kXB .labssandbox_Suggestions_2MtdO {
+      position: absolute;
+      z-index: 5;
+      font-size: 14px;
+      background-color: black;
+      margin: 5px;
+      border-radius: 5px; }
+      .labssandbox_AppSelector_1pgZO .labssandbox_AppSelect_3-kXB .labssandbox_Suggestions_2MtdO .labssandbox_Suggestion_tpLtW {
+        display: flex;
+        flex-direction: row;
+        margin: 2px;
+        background-color: #202040; }
+        .labssandbox_AppSelector_1pgZO .labssandbox_AppSelect_3-kXB .labssandbox_Suggestions_2MtdO .labssandbox_Suggestion_tpLtW .labssandbox_LogoImage_3dAyv {
+          width: 80px;
+          height: 30px;
+          flex-shrink: 0;
+          margin: 2px;
+          border-radius: 3px; }
+        .labssandbox_AppSelector_1pgZO .labssandbox_AppSelect_3-kXB .labssandbox_Suggestions_2MtdO .labssandbox_Suggestion_tpLtW .labssandbox_AppName_hmKFR {
+          flex-grow: 1;
+          margin: 4px; }
+
+.labssandbox_SimilarApp_2PsH- {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin: 2px;
+  background-color: #161d1f; }
+  .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
+    font-size: 16px;
+    color: #c6d4df;
+    margin: 4px; }
+  .labssandbox_SimilarApp_2PsH- .labssandbox_LogoImage_3dAyv {
+    width: 80px;
+    height: 30px;
+    flex-shrink: 0;
+    margin: 2px;
+    border-radius: 3px; }
+  .labssandbox_SimilarApp_2PsH- .labssandbox_Spacer_tDH9c {
+    flex-grow: 1; }
+  .labssandbox_SimilarApp_2PsH- .labssandbox_Score_1lIfF {
+    margin: 4px;
+    width: 10%;
+    text-align: right;
+    font-size: 14px;
+    color: #40AEE5; }
+
 .labssandbox_App_1VZYE {
   margin: 0px auto;
   height: 3840px;
@@ -642,88 +712,60 @@ body.modals_BodyNoScrollDialog_105OB {
       flex-grow: 1;
       display: flex;
       flex-direction: column; }
-      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I h1 {
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_Spacer_tDH9c {
+        height: 30px; }
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarGames_lEu0I h1 {
         font-size: 16px;
         text-transform: uppercase; }
-      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 {
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarGames_lEu0I .labssandbox_AppSelection_iMFZ7 {
         display: flex;
         flex-direction: row;
         margin-bottom: 20px; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_SelectedApp_2J5jo {
-          width: 50%;
-          margin-right: 10px; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_SelectedApp_2J5jo .labssandbox_SimilarApp_2PsH- {
-            display: flex;
-            flex-direction: row;
-            margin: 3px;
-            background-color: #161d1f; }
-            .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_SelectedApp_2J5jo .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
-              font-size: 16px;
-              color: #c6d4df;
-              margin: 4px; }
-            .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_SelectedApp_2J5jo .labssandbox_SimilarApp_2PsH- .labssandbox_LogoImage_3dAyv {
-              width: 80px;
-              height: 30px;
-              flex-shrink: 0; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_AppSelector_1pgZO {
-          flex-direction: column;
-          flex-grow: 1;
-          position: relative; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_AppSelection_iMFZ7 .labssandbox_AppSelector_1pgZO .labssandbox_StoreSuggestResults_1c_ZO {
-            position: absolute; }
-      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 {
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarGames_lEu0I .labssandbox_SimilarApps_3FIt6 {
         display: flex;
         flex-direction: column; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- {
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I {
+        display: flex;
+        flex-direction: row; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_HorizontalSpacer_eu_96 {
+          flex-grow: 1; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_Score_1lIfF {
+          width: auto;
+          font-size: 18px; }
+      .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsPathfinder_3tOWu {
+        display: flex;
+        flex-direction: column; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsPathfinder_3tOWu h1 {
+          font-size: 16px;
+          text-transform: uppercase; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsPathfinder_3tOWu .labssandbox_SelectEndpoints_1tLfT {
           display: flex;
-          flex-direction: row;
-          width: 50%;
-          margin: 3px;
-          background-color: #161d1f; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
-            font-size: 16px;
-            color: #c6d4df;
-            margin: 4px; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_LogoImage_3dAyv {
-            width: 80px;
-            height: 30px;
-            flex-shrink: 0; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_Spacer_tDH9c {
-            flex-grow: 1; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsSimilarity_1ws_I .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_Score_1lIfF {
-            margin: 4px;
-            width: 10%;
-            text-align: right;
-            font-size: 14px;
-            color: #40AEE5; }
+          flex-direction: row; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsPathfinder_3tOWu .labssandbox_ComputeButton_1T-bu {
+          width: 200px;
+          background-color: #161d1f;
+          border-color: #404080;
+          text-align: center;
+          border-radius: 5px;
+          border-width: 3px;
+          font-size: 18px;
+          margin: 4px; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsPathfinder_3tOWu .labssandbox_ComputeButton_1T-bu :hover {
+            background-color: #404080; }
+          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsPathfinder_3tOWu .labssandbox_ComputeButton_1T-bu .labssandbox_Disabled_2-44k {
+            color: #2d2d2d; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsPathfinder_3tOWu .labssandbox_ProgressMessage_20sjY {
+          font-size: 18px;
+          margin: 4px; }
+        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsPathfinder_3tOWu .labssandbox_Path_3B3IN {
+          display: flex;
+          flex-direction: column; }
       .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k h1 {
         font-size: 16px;
         text-transform: uppercase; }
       .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 {
         display: flex;
         flex-direction: column; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- {
-          display: flex;
-          flex-direction: row;
-          width: 50%;
-          margin: 3px;
-          background-color: #161d1f; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
-            font-size: 16px;
-            color: #c6d4df;
-            margin: 4px; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_LogoImage_3dAyv {
-            width: 80px;
-            height: 30px;
-            flex-shrink: 0; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_Spacer_tDH9c {
-            flex-grow: 1; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_SimilarApps_3FIt6 .labssandbox_SimilarApp_2PsH- .labssandbox_Score_1lIfF {
-            margin: 4px;
-            width: 10%;
-            text-align: right;
-            font-size: 14px;
-            color: #40AEE5; }
       .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 {
         display: flex;
         flex-direction: row;
@@ -732,29 +774,6 @@ body.modals_BodyNoScrollDialog_105OB {
         .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_OperatorSelect_2X8ZZ {
           width: 80px;
           margin: 3px; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_SimilarApp_2PsH- {
-          display: flex;
-          flex-direction: row;
-          flex-grow: 1;
-          margin: 3px;
-          background-color: #161d1f;
-          width: 30%; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_SimilarApp_2PsH- .labssandbox_AppName_hmKFR {
-            font-size: 16px;
-            color: #c6d4df;
-            margin: 4px; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_SimilarApp_2PsH- .labssandbox_LogoImage_3dAyv {
-            width: 80px;
-            height: 30px;
-            flex-shrink: 0; }
-        .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_AppSelector_1pgZO {
-          flex-direction: column;
-          flex-grow: 1;
-          position: relative;
-          margin: 3px;
-          width: 30%; }
-          .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_Operand_gFTV8 .labssandbox_AppSelector_1pgZO .labssandbox_StoreSuggestResults_1c_ZO {
-            position: absolute; }
       .labssandbox_App_1VZYE .labssandbox_Container_6h9Y0 .labssandbox_SandboxSection_8ubor .labssandbox_LabsMixer_GNX0k .labssandbox_AddOperand_2Boka {
         width: 100px;
         justify-content: center;
@@ -764,38 +783,6 @@ body.modals_BodyNoScrollDialog_105OB {
         border-radius: 3px;
         font-size: 20px;
         margin: 20px; }
-
-/* stylelint-disable */
-.storesuggest_SuggestContainer_2gBFq .DialogInputLabelGroup {
-  margin-bottom: 2px; }
-  .storesuggest_SuggestContainer_2gBFq .DialogInputLabelGroup input {
-    font-size: 16px; }
-
-.storesuggest_SuggestContainer_2gBFq .storesuggest_Results_3eXNg {
-  overflow-y: auto;
-  background: #3a404a;
-  width: 100%;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  border-radius: 0px 0px 4px 4px; }
-  .storesuggest_SuggestContainer_2gBFq .storesuggest_Results_3eXNg .storesuggest_ResultRow_16oSf {
-    display: flex;
-    align-items: center;
-    padding: 6px;
-    border-bottom: 1px solid #474e59; }
-    .storesuggest_SuggestContainer_2gBFq .storesuggest_Results_3eXNg .storesuggest_ResultRow_16oSf:hover {
-      cursor: pointer;
-      background: #5c6472; }
-    .storesuggest_SuggestContainer_2gBFq .storesuggest_Results_3eXNg .storesuggest_ResultRow_16oSf:last-child {
-      border-bottom: none; }
-    .storesuggest_SuggestContainer_2gBFq .storesuggest_Results_3eXNg .storesuggest_ResultRow_16oSf .storesuggest_AvatarImage_3dr2A {
-      width: 80px;
-      height: 30px;
-      flex-shrink: 0; }
-    .storesuggest_SuggestContainer_2gBFq .storesuggest_Results_3eXNg .storesuggest_ResultRow_16oSf .storesuggest_GameName_3CWrp {
-      padding: 0px 8px;
-      letter-spacing: 0px;
-      text-transform: none; }
 
 body {
   color: #969696;
