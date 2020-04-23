@@ -14931,6 +14931,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   border-right: unset;
   position: relative;
   padding-right: unset;
+  user-select: text;
   max-width: unset; }
 
 .partnereventdisplay_EventDetailsBody_A_A2B img {

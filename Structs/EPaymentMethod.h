@@ -132,6 +132,7 @@ typedef enum EPaymentMethod
     k_EPaymentMethodValve, // Valve
     k_EPaymentMethodSteamPressMaster, // Steam/Press Master
     k_EPaymentMethodStorePromotion, // Store Promotion
+    k_EPaymentMethodMasterSubscription = 134, // Master Subscription
     k_EPaymentMethodOEMTicket = 256, // OEM Ticket
     k_EPaymentMethodSplit = 512, // Split
     k_EPaymentMethodComplimentary = 1024, // Complimentary

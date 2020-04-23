@@ -130,17 +130,46 @@ ControllerBindingsGordon.ScreenSaverMode
     visibility: collapse;
 }
 
+#ListingForBindWatermark.ListeningForKey
+{
+    visibility: visible;
+    opacity: 100%;
+    z-index: 1001;
+    color: white;
+    blur: gaussian( 0.25 );
+    horizontal-align: center;
+    vertical-align: middle;
+    height: fit-children;
+    width: 66%;
+    flow-children: down;
+}
+
+#ListingForBindWatermarkLabel
+{
+    font-family: platformfont;
+    font-size: 24px;
+    text-wrap: normal;
+    width: 75%;
+}
+
+#ListingForBindWatermarkLabelTitle
+{
+    font-family: platformfont;
+    font-size: 48px;
+    overflow: squish squish;     
+    flow-children: down;
+    height: 100px;
+}
+
 #PreviewWaterMark.Preview
 {
     visibility: visible;
     opacity: 1%;
-	//transform-origin: 50% 50% initial;
-	//transform: rotatez( -15deg );
-	font-family: platformfont;
+    font-family: platformfont;
     font-size: 200px;
     z-index: 1000;
     color: #75c7fd85;
-	blur: gaussian( 0.25 );
+    blur: gaussian( 0.25 );
     horizontal-align: center;
     vertical-align: top;
     padding-top: 220px;
