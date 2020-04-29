@@ -2,8 +2,6 @@ h
 __TEXT
 __text
 __TEXT
-P3
-P3
 __stubs
 __TEXT
 __stub_helper
@@ -13,7 +11,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-|4
+(3
 __unwind_info
 __TEXT
 __eh_frame
@@ -39,7 +37,7 @@ __thread_bss
 __DATA
 __bss
 __DATA
-!2
+A2
 __common
 __DATA
 H
@@ -48,8 +46,6 @@ __LINKEDIT
 8
 @loader_path/steamconsole.dylib
 "
-X
-@
 P
 
 8
@@ -73,7 +69,6 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
-@-
 public
 local
 anonymous
@@ -82,13 +77,13 @@ anonymous
 13CCallbackImplILi16EE
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb1EE
-0C
-0E
-0C
-0E
 Y@
-N@N11CAppUpdater25CCallback_OnAppInfoUpdateE
-9CCallbackI11CAppUpdater23AppInfoUpdateComplete_tLb0EE
+N@
+0C
+0E
+0C
+0EN15CAppInfoUpdater25CCallback_OnAppInfoUpdateE
+9CCallbackI15CAppInfoUpdater23AppInfoUpdateComplete_tLb0EE
 13CCallbackImplILi12EE
 N11CAppUpdater40CCallback_OnCheckAppBetaPasswordResponseE
 9CCallbackI11CAppUpdater30CheckAppBetaPasswordResponse_tLb0EE
@@ -119,8 +114,6 @@ N25CControllerConfigUploader40CCallback_OnRemoteStorageAppSyncedServerE
 10CUtlRBTreeIyi8CDefLessIyE25CDefRBTreeBalanceListenerIiEyE
 20CMultipleCallResultsI25CControllerConfigUploader32RemoteStoragePublishFileResult_tE
 20CMultipleCallResultsI25CControllerConfigUploader40RemoteStorageUpdatePublishedFileResult_tE
-N17CAppDepotsUpdater25CCallback_OnAppInfoUpdateE
-9CCallbackI17CAppDepotsUpdater23AppInfoUpdateComplete_tLb0EE
 N20CAppInstallerBuilder27CCallback_OnAppBackupStatusE
 9CCallbackI20CAppInstallerBuilder17AppBackupStatus_tLb0EE
 13CCallbackImplILi40EE
@@ -130,12 +123,6 @@ N20CAppInstallerBuilder27CCallback_OnAppBackupStatusE
 20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations27InstallScriptSignResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations17DRMWrapResponse_tE
-N20CWorkshopItemBuilder25CCallback_OnAppInfoUpdateE
-9CCallbackI20CWorkshopItemBuilder23AppInfoUpdateComplete_tLb0EE
-N26CWorkshopItemBuilderLegacy25CCallback_OnAppInfoUpdateE
-9CCallbackI26CWorkshopItemBuilderLegacy23AppInfoUpdateComplete_tLb0EE
-N23CWorkshopItemDownloader25CCallback_OnAppInfoUpdateE
-9CCallbackI23CWorkshopItemDownloader23AppInfoUpdateComplete_tLb0EE
 N23CWorkshopItemDownloader30CCallback_OnDownloadItemResultE
 9CCallbackI23CWorkshopItemDownloader20DownloadItemResult_tLb0EE
 _
@@ -143,7 +130,7 @@ convar_
 14ConCommandBase
 10ConCommand
 6ConVar
-10CUtlString
+NSt3__117bad_function_callE
 11CFileWriter
 11CPathString
 17CFileWriterThread
@@ -162,6 +149,7 @@ e
 18CUtlCharConversion
 19CUtlNoEscConversion
 14CUtlMemoryBase
+10CUtlString
 console
 generic
 publish
@@ -284,7 +272,6 @@ Assertion Failed: (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size
 Assertion Failed: count >= 0
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 Assertion Failed: (elem == Count()) || IsValidIndex(elem)
-appid
 1
 stopping
 reconfiguring
@@ -301,7 +288,6 @@ validate
 beta
 betapassword
 language
-ERROR! AppInfo request for AppId %d returned error %d.
 ERROR! Password check for AppId %d failed to start.
 ERROR! Password check for AppId %d returned error %s.
 betakey
@@ -328,7 +314,12 @@ app_license_request
 <AppID> - Requests a free licenses for this app if not already owned.
 app_install_script
 <AppID> [uninstall:0|1]- Runs app install script.
-CAppUpdater::OnAppInfoUpdate
+Assertion Failed: m_eAppInfoResult != k_EResultPending
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/steamconsole/appupdater.cpp
+CAppInfoUpdater::OnAppInfoUpdate
+Assertion Failed: m_pvOrigNameAddress
+Assertion Failed: m_pParent
+ERROR! AppInfo request for AppId %d returned error %s.
 CAppUpdater::OnCheckAppBetaPasswordResponse
 %s
 -complete
@@ -360,7 +351,6 @@ logoff
 Disconnect from Steam
 logout
 CSteamUser::OnShutdownLauncher
-Assertion Failed: m_pvOrigNameAddress
 CSteamUser::OnSteamLogon
 CSteamUser::OnLoggedOff
 CSteamUser::OnLogonFailure
@@ -439,8 +429,6 @@ Assertion Failed: IsText()
 @DepotBuilderOutputRoot
 @DepotBuilderNoReslist
 0
-@DepotBuilderAppInfoTimeout
-120
 @DepotBuilderProgressTimeout
 1000
 %s%capp_build_%u.log
@@ -456,13 +444,13 @@ enablelzma
 disablelzma
 nocegsniff
 enablesymlinks
+.
 Preparing update...
 Building file mapping...
 Scanning content
 Updating local CS
 Uploading content
 Signing install script
-.
 app_build_all_depots
 app_build_all_depots [-desc <text>] -depotconfigpath <folder> -contentroot <folder> -buildoutput <folder> <appid>  : Build all depots for one app
 ERROR! Not logged on.
@@ -480,18 +468,13 @@ verify_vpk
 verify_vpk <datafile> : verifies content of given VPK
 download_depot
 download_depot <appid> <depotid> [<target manifestid>] [<delta manifestid>] [<depot flags filter>]: download a single depot
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 desc
 depotconfigpath
 contentroot
 buildoutput
-CAppDepotsUpdater::OnAppInfoUpdate
-Assertion Failed: m_pParent
 %s/%u
 ERROR! Depot config root folder does not exist: %s.
 ERROR! Content root folder does not exist: %s.
-ERROR! Failed to request app info for appID %d.
-ERROR! Timeout requesting app info for appID %d.
 ERROR! Failed to get application info for app %d (check login and subscription)
 ERROR! Empty depot section for app %d (you must add at least one depot)
 Warning! Application info is very large for app %d. This can be resolved by disabling or deleting private branches.
@@ -599,6 +582,8 @@ http_test
 profile
 <seconds> profile for N seconds
 FCVAR_NEVER_AS_STRING
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier0/vprof.h
 runscript <scriptfile> - runs console script file
 Usage: api_logging <enabled> <verbose>
@@ -658,11 +643,10 @@ workshop_create_legacy_item
 workshop_create_legacy_item <appid> <workshop file> : build a legacy workshop item
 workshop_download_item
 workshop_download_item <appid> <PublishedFileId> : download a workshop item
-CWorkshopItemBuilder::OnAppInfoUpdate
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 ERROR! Failed to load build config file "%s".
 workshopitem
 ERROR! Failed to parse build config file "%s".
+appid
 ERROR! Missing AppID in build config file "%s".
 publishedfileid
 filetype
@@ -681,14 +665,12 @@ Committing update...
 ERROR! Failed to update new workshop item.
 ERROR! Failed to update workshop item (%s).
 Success.
-CWorkshopItemBuilderLegacy::OnAppInfoUpdate
 ERROR! Invalid appID.
 ERROR! ClientRemoteStorage()->FileWrite failed (%s).
 ERROR! ClientRemoteStorage()->FileShare() failed (%s).
 Uploaded from steamcmd
 ERROR! ClientRemoteStorage()->PublishWorkshopFile() failed (%s).
 Success. Created new item, PublishedFileId %llu
-CWorkshopItemDownloader::OnAppInfoUpdate
 CWorkshopItemDownloader::OnDownloadItemResult
 ERROR! Failed to start downloading item %llu.
 Downloading item %llu ...
@@ -739,7 +721,9 @@ fcntl failed to set F_NOCACHE
 Assertion Failed: ret != 0
 *
 flock LOCK_EX %s failed, errno = %d
+write %s failed, errno = %d
 Assertion Failed: written == count
+fsync %s failed, errno = %d
 %s%c%s
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 Assertion Failed: unReadAheadChunkSize < INT32_MAX/2
@@ -859,24 +843,31 @@ a
 ?
 '
 %.18g
-Assertion Failed: m_unSizeOfElements > 0
+Assertion Failed: nSizeOfType > 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 Assertion Failed: nGrowSize >= 0
-nBytesItem is %d in UtlMemory_CalcNewAllocationCount
+Assertion Failed: m_nAllocationCount >= 0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 Assertion Failed: num > 0
+Assertion Failed: num >= 0
 Assertion Failed: IsPowerOfTwo( nNewCapacity )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 Assertion Failed: nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 Assertion Failed: ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
+CUtlString::SetValue
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+CUtlString::VFormat
+CUtlString::ReplaceInternal
 Assertion Failed: pstrNew + nNewLength == pstrDestination + 1
 Assertion Failed: cActualReplacements == cReplacements
 Assertion failed: length > k_cchMaxString
+CUtlStringBuilder::InternalPrepareBuffer
 Assertion Failed: nMinCapacity > Capacity()
 Assertion Failed: nMinCapacity >= nChars
 Assertion Failed: nMinCapacity <= k_nMaxStringSize
 Assertion Failed: len > 0 || HasError()
 Error State on string being set.
+CUtlStringBuilder::Data::MoveToHeap
 %02d:%02d:%02d
 %02d/%02d/%02d
 00:00:00
@@ -1013,6 +1004,7 @@ Limited user account
 Cant remove item
 Account has been deleted
 Account has an existing user cancelled license
+Denied due to community cooldown
 Invalid
 Public
 Beta
@@ -1075,6 +1067,7 @@ Create process failed
 Steam client out of date
 Allowed playtime exceeded
 Steam client files corrupt
+Missing game files
 Logged Off
 Logging On
 Logging Off
@@ -1174,11 +1167,12 @@ E
 @
 @
 @
->
+U
 
 =
 @
-i
+
+a
 @
 @
 @
@@ -1187,4 +1181,3 @@ i
 @
 @
 @
-r

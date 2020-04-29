@@ -77,7 +77,6 @@
  B s_NoEscConversion
  B s_SpewConfig
  B s_StringCharConversion
- B s_convarDepotBuilderAppInfoTimeout
  B s_convarDepotBuilderConfigRoot
  B s_convarDepotBuilderContentRoot
  B s_convarDepotBuilderNoReslist
@@ -106,15 +105,13 @@
  D k_pszSteamClientModuleName
  D pModuleExtension
  D s_LogWatchesAllWithType
- D typeinfo for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
+ D typeinfo for CAppInfoUpdater::CCallback_OnAppInfoUpdate
  D typeinfo for CAppInstallerBuilder::CCallback_OnAppBackupStatus
  D typeinfo for CAppLauncher::CCallback_OnAppLifetimeNotice
- D typeinfo for CAppUpdater::CCallback_OnAppInfoUpdate
  D typeinfo for CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse
- D typeinfo for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
+ D typeinfo for CCallback<CAppInfoUpdater, AppInfoUpdateComplete_t, false>
  D typeinfo for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
  D typeinfo for CCallback<CAppLauncher, AppLifetimeNotice_t, false>
- D typeinfo for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
  D typeinfo for CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D typeinfo for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
@@ -124,9 +121,6 @@
  D typeinfo for CCallback<CSteamUser, SteamServerConnectFailure_t, false>
  D typeinfo for CCallback<CSteamUser, SteamServersConnected_t, false>
  D typeinfo for CCallback<CSteamUser, SteamServersDisconnected_t, false>
- D typeinfo for CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>
- D typeinfo for CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>
- D typeinfo for CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>
  D typeinfo for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  D typeinfo for CCallbackBase
  D typeinfo for CCallbackImpl<12>
@@ -162,24 +156,20 @@
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlNoEscConversion
- D typeinfo for CWorkshopItemBuilder::CCallback_OnAppInfoUpdate
- D typeinfo for CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate
- D typeinfo for CWorkshopItemDownloader::CCallback_OnAppInfoUpdate
  D typeinfo for CWorkshopItemDownloader::CCallback_OnDownloadItemResult
  D typeinfo for ConCommand
  D typeinfo for ConCommandBase
  D typeinfo for ConVar
  D typeinfo for IConCommandBaseAccessor
  D typeinfo for SteamClientConVarAccessor
- D vtable for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
+ D typeinfo for std::__1::bad_function_call
+ D vtable for CAppInfoUpdater::CCallback_OnAppInfoUpdate
  D vtable for CAppInstallerBuilder::CCallback_OnAppBackupStatus
  D vtable for CAppLauncher::CCallback_OnAppLifetimeNotice
- D vtable for CAppUpdater::CCallback_OnAppInfoUpdate
  D vtable for CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse
- D vtable for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
+ D vtable for CCallback<CAppInfoUpdater, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
  D vtable for CCallback<CAppLauncher, AppLifetimeNotice_t, false>
- D vtable for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  D vtable for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
@@ -189,9 +179,6 @@
  D vtable for CCallback<CSteamUser, SteamServerConnectFailure_t, false>
  D vtable for CCallback<CSteamUser, SteamServersConnected_t, false>
  D vtable for CCallback<CSteamUser, SteamServersDisconnected_t, false>
- D vtable for CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>
- D vtable for CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>
- D vtable for CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>
  D vtable for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  D vtable for CCallbackImpl<12>
  D vtable for CCallbackImpl<16>
@@ -226,13 +213,11 @@
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlNoEscConversion
- D vtable for CWorkshopItemBuilder::CCallback_OnAppInfoUpdate
- D vtable for CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate
- D vtable for CWorkshopItemDownloader::CCallback_OnAppInfoUpdate
  D vtable for CWorkshopItemDownloader::CCallback_OnDownloadItemResult
  D vtable for ConCommand
  D vtable for ConVar
  D vtable for SteamClientConVarAccessor
+ D vtable for std::__1::bad_function_call
  Error
  GetOSType
  GetSpewOutputFunc
@@ -249,15 +234,13 @@
  R k_rgchAnonymousUser
  R k_rgchLocalManifest
  R k_rgchPublicManifest
- R typeinfo name for CAppDepotsUpdater::CCallback_OnAppInfoUpdate
+ R typeinfo name for CAppInfoUpdater::CCallback_OnAppInfoUpdate
  R typeinfo name for CAppInstallerBuilder::CCallback_OnAppBackupStatus
  R typeinfo name for CAppLauncher::CCallback_OnAppLifetimeNotice
- R typeinfo name for CAppUpdater::CCallback_OnAppInfoUpdate
  R typeinfo name for CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse
- R typeinfo name for CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>
+ R typeinfo name for CCallback<CAppInfoUpdater, AppInfoUpdateComplete_t, false>
  R typeinfo name for CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>
  R typeinfo name for CCallback<CAppLauncher, AppLifetimeNotice_t, false>
- R typeinfo name for CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>
  R typeinfo name for CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, false>
  R typeinfo name for CCallback<CCallbackMgr, SteamAPICallCompleted_t, true>
@@ -267,9 +250,6 @@
  R typeinfo name for CCallback<CSteamUser, SteamServerConnectFailure_t, false>
  R typeinfo name for CCallback<CSteamUser, SteamServersConnected_t, false>
  R typeinfo name for CCallback<CSteamUser, SteamServersDisconnected_t, false>
- R typeinfo name for CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>
- R typeinfo name for CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>
- R typeinfo name for CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>
  R typeinfo name for CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>
  R typeinfo name for CCallbackBase
  R typeinfo name for CCallbackImpl<12>
@@ -309,15 +289,13 @@
  R typeinfo name for CUtlRBTree<unsigned long long, int, CDefLess<unsigned long long>, CDefRBTreeBalanceListener<int>, unsigned long long>
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CFileWriter const*, CUtlMemory<CFileWriter const*> >
- R typeinfo name for CWorkshopItemBuilder::CCallback_OnAppInfoUpdate
- R typeinfo name for CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate
- R typeinfo name for CWorkshopItemDownloader::CCallback_OnAppInfoUpdate
  R typeinfo name for CWorkshopItemDownloader::CCallback_OnDownloadItemResult
  R typeinfo name for ConCommand
  R typeinfo name for ConCommandBase
  R typeinfo name for ConVar
  R typeinfo name for IConCommandBaseAccessor
  R typeinfo name for SteamClientConVarAccessor
+ R typeinfo name for std::__1::bad_function_call
  SpewAndLogActivate
  SpewOutputFunc
  SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
@@ -357,17 +335,18 @@
  T BFileExists(StringView)
  T BIsValidDirectory(StringView)
  T BRenameFile(StringView, StringView)
+ T BRunAppInfoUpdate(unsigned int)
  T BWaitForAppUpdate(IClientAppManager*, unsigned int, bool)
  T CAppContentBuilder::BInit(unsigned int, char const*, char const*, char const*, char const*, unsigned int)
  T CAppContentBuilder::BRunBuild()
- T CAppContentBuilder::CAppContentBuilder()
  T CAppDepotBuilderHttp::BInit(char const*, KeyValues*)
  T CAppDepotBuilderHttp::BRunBuild()
  T CAppDepotsUpdater::BRunUpdate(unsigned int)
  T CAppDepotsUpdater::CAppDepotsUpdater()
- T CAppDepotsUpdater::CCallback_OnAppInfoUpdate::Run(void*)
- T CAppDepotsUpdater::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
- T CAppDepotsUpdater::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
+ T CAppInfoUpdater::BUpdateAppInfo(unsigned int)
+ T CAppInfoUpdater::CCallback_OnAppInfoUpdate::Run(void*)
+ T CAppInfoUpdater::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
+ T CAppInfoUpdater::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CAppInstallerBuilder::BBuildBackup(unsigned int, unsigned long long, char const*)
  T CAppInstallerBuilder::BBuildInstaller(char const*, char const*, char const*, char const*)
  T CAppInstallerBuilder::CCallback_OnAppBackupStatus::Run(void*)
@@ -382,20 +361,17 @@
  T CAppUpdater::BRunPasswordCheck()
  T CAppUpdater::BRunWorkshopUpdate()
  T CAppUpdater::CAppUpdater()
- T CAppUpdater::CCallback_OnAppInfoUpdate::Run(void*)
- T CAppUpdater::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
  T CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse::Run(void*)
  T CAppUpdater::CCallback_OnCheckAppBetaPasswordResponse::~CCallback_OnCheckAppBetaPasswordResponse()
- T CAppUpdater::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CAppUpdater::OnCheckAppBetaPasswordResponse(CheckAppBetaPasswordResponse_t*)
  T CBaseUtlSymbolTable<CUtlSymbol>::RemoveAll()
  T CBaseUtlSymbolTable<CUtlSymbol>::~CBaseUtlSymbolTable()
  T CBitStringT<CVariableBitStringBase>::GetBit(int) const
  T CBitStringT<CVariableBitStringBase>::SetBit(int)
- T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppDepotsUpdater*, void (CAppDepotsUpdater::*)(AppInfoUpdateComplete_t*))
- T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::Register(CAppDepotsUpdater*, void (CAppDepotsUpdater::*)(AppInfoUpdateComplete_t*))
- T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::Run(void*)
- T CCallback<CAppDepotsUpdater, AppInfoUpdateComplete_t, false>::~CCallback()
+ T CCallback<CAppInfoUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppInfoUpdater*, void (CAppInfoUpdater::*)(AppInfoUpdateComplete_t*))
+ T CCallback<CAppInfoUpdater, AppInfoUpdateComplete_t, false>::Register(CAppInfoUpdater*, void (CAppInfoUpdater::*)(AppInfoUpdateComplete_t*))
+ T CCallback<CAppInfoUpdater, AppInfoUpdateComplete_t, false>::Run(void*)
+ T CCallback<CAppInfoUpdater, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::CCallback(CAppInstallerBuilder*, void (CAppInstallerBuilder::*)(AppBackupStatus_t*))
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::Register(CAppInstallerBuilder*, void (CAppInstallerBuilder::*)(AppBackupStatus_t*))
  T CCallback<CAppInstallerBuilder, AppBackupStatus_t, false>::Run(void*)
@@ -404,10 +380,6 @@
  T CCallback<CAppLauncher, AppLifetimeNotice_t, false>::Register(CAppLauncher*, void (CAppLauncher::*)(AppLifetimeNotice_t*))
  T CCallback<CAppLauncher, AppLifetimeNotice_t, false>::Run(void*)
  T CCallback<CAppLauncher, AppLifetimeNotice_t, false>::~CCallback()
- T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::CCallback(CAppUpdater*, void (CAppUpdater::*)(AppInfoUpdateComplete_t*))
- T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Register(CAppUpdater*, void (CAppUpdater::*)(AppInfoUpdateComplete_t*))
- T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::Run(void*)
- T CCallback<CAppUpdater, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>::CCallback(CAppUpdater*, void (CAppUpdater::*)(CheckAppBetaPasswordResponse_t*))
  T CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>::Register(CAppUpdater*, void (CAppUpdater::*)(CheckAppBetaPasswordResponse_t*))
  T CCallback<CAppUpdater, CheckAppBetaPasswordResponse_t, false>::Run(void*)
@@ -444,18 +416,6 @@
  T CCallback<CSteamUser, SteamServersDisconnected_t, false>::Register(CSteamUser*, void (CSteamUser::*)(SteamServersDisconnected_t*))
  T CCallback<CSteamUser, SteamServersDisconnected_t, false>::Run(void*)
  T CCallback<CSteamUser, SteamServersDisconnected_t, false>::~CCallback()
- T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::CCallback(CWorkshopItemBuilder*, void (CWorkshopItemBuilder::*)(AppInfoUpdateComplete_t*))
- T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::Register(CWorkshopItemBuilder*, void (CWorkshopItemBuilder::*)(AppInfoUpdateComplete_t*))
- T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::Run(void*)
- T CCallback<CWorkshopItemBuilder, AppInfoUpdateComplete_t, false>::~CCallback()
- T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::CCallback(CWorkshopItemBuilderLegacy*, void (CWorkshopItemBuilderLegacy::*)(AppInfoUpdateComplete_t*))
- T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::Register(CWorkshopItemBuilderLegacy*, void (CWorkshopItemBuilderLegacy::*)(AppInfoUpdateComplete_t*))
- T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::Run(void*)
- T CCallback<CWorkshopItemBuilderLegacy, AppInfoUpdateComplete_t, false>::~CCallback()
- T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::CCallback(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(AppInfoUpdateComplete_t*))
- T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::Register(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(AppInfoUpdateComplete_t*))
- T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::Run(void*)
- T CCallback<CWorkshopItemDownloader, AppInfoUpdateComplete_t, false>::~CCallback()
  T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::CCallback(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(DownloadItemResult_t*))
  T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::Register(CWorkshopItemDownloader*, void (CWorkshopItemDownloader::*)(DownloadItemResult_t*))
  T CCallback<CWorkshopItemDownloader, DownloadItemResult_t, false>::Run(void*)
@@ -636,6 +596,8 @@
  T CPathString::GetUTF8Path() const
  T CPathString::Validate(CValidator&, char const*)
  T CPathString::~CPathString()
+ T CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >::Delete()
+ T CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >::Delete()
  T CPreDepotOperations::CEGWrap(ConParams&)
  T CPreDepotOperations::CPreDepotOperations()
  T CPreDepotOperations::DRMWrap(ConParams&)
@@ -775,6 +737,7 @@
  T CUtlLinkedList<CLogWatchParam, int>::RemoveAll()
  T CUtlLinkedList<CWatchingLog, int>::RemoveAll()
  T CUtlLinkedList<CWatchingLog, int>::~CUtlLinkedList()
+ T CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t::~Node_t()
  T CUtlMemoryBase::CUtlMemoryBase(int, int, int)
  T CUtlMemoryBase::ConvertToGrowableMemory(int)
  T CUtlMemoryBase::Count() const
@@ -812,7 +775,9 @@
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::RemoveAll()
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::RemoveAt(int)
  T CUtlRBTree<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*, int, CDefLess<CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>, CDefRBTreeBalanceListener<int>, CUtlHashMap<unsigned short, int, CDefEquals<unsigned short>, HashFunctor<unsigned short>, unsigned short>*>::~CUtlRBTree()
+ T CUtlRBTree<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::Node_t, int, CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> >::CKeyLess, CDefRBTreeBalanceListener<int>, StringView>::RemoveAll()
  T CUtlRBTree<CUtlMap<int, CUtlStringList*, int, CDefLess<int> >::Node_t, int, CUtlMap<int, CUtlStringList*, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RemoveAll()
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::Find(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&) const
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::NewNode(bool)
  T CUtlRBTree<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*, int, CDefLess<CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>, CDefRBTreeBalanceListener<int>, CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >*>::Remove(CUtlVector<ModuleAddressRange_t, CUtlMemory<ModuleAddressRange_t> >* const&)
@@ -839,6 +804,7 @@
  T CUtlString::Format(char const*, ...)
  T CUtlString::Replace(char const*, char const*)
  T CUtlString::ReplaceInternal(char const*, char const*, char const* (*)(char const*, char const*))
+ T CUtlString::SetValue(char const*)
  T CUtlString::VFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
@@ -924,22 +890,12 @@
  T CWatchingLog::~CWatchingLog()
  T CWorkshopItemBuilder::BInit(char const*)
  T CWorkshopItemBuilder::BRunBuild()
- T CWorkshopItemBuilder::CCallback_OnAppInfoUpdate::Run(void*)
- T CWorkshopItemBuilder::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
- T CWorkshopItemBuilder::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemBuilderLegacy::BInit(unsigned int, char const*)
  T CWorkshopItemBuilderLegacy::BRunBuild()
- T CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate::Run(void*)
- T CWorkshopItemBuilderLegacy::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
  T CWorkshopItemBuilderLegacy::CWorkshopItemBuilderLegacy()
- T CWorkshopItemBuilderLegacy::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemDownloader::BDownloadItem()
- T CWorkshopItemDownloader::CCallback_OnAppInfoUpdate::Run(void*)
- T CWorkshopItemDownloader::CCallback_OnAppInfoUpdate::~CCallback_OnAppInfoUpdate()
  T CWorkshopItemDownloader::CCallback_OnDownloadItemResult::Run(void*)
  T CWorkshopItemDownloader::CCallback_OnDownloadItemResult::~CCallback_OnDownloadItemResult()
- T CWorkshopItemDownloader::CWorkshopItemDownloader()
- T CWorkshopItemDownloader::OnAppInfoUpdate(AppInfoUpdateComplete_t*)
  T CWorkshopItemDownloader::OnDownloadItemResult(DownloadItemResult_t*)
  T CallbackMgr_RegisterCallResult(CCallbackBase*, unsigned long long)
  T CallbackMgr_RegisterCallback(CCallbackBase*, int)
@@ -1171,7 +1127,7 @@
  T TSLNodeTemplate_t<CFileWriterThread::FileWriterItem_t*>::operator delete(void*)
  T TimeCompare(unsigned int const*, unsigned int const*)
  T UnlinkFile(StringView)
- T UtlMemory_CalcNewAllocationCount(int, int, int, int)
+ T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
  T V_strstr(char const*, char const*)
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
@@ -1205,6 +1161,7 @@
  T std::__1::__tree_iterator<std::__1::__value_type<int, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<int, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<int, CCallbackBase*>, std::__1::__map_value_compare<int, std::__1::__value_type<int, CCallbackBase*>, std::__1::less<int>, true>, std::__1::allocator<std::__1::__value_type<int, CCallbackBase*> > >::find<int>(int const&)
  T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::__insert_multi<std::__1::pair<unsigned long long const, CCallbackBase*>&>(std::__1::pair<unsigned long long const, CCallbackBase*>&)
  T std::__1::__tree_iterator<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__tree_node<std::__1::__value_type<unsigned long long, CCallbackBase*>, void*>*, long> std::__1::__tree<std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::__map_value_compare<unsigned long long, std::__1::__value_type<unsigned long long, CCallbackBase*>, std::__1::less<unsigned long long>, true>, std::__1::allocator<std::__1::__value_type<unsigned long long, CCallbackBase*> > >::find<unsigned long long>(unsigned long long const&)
+ T std::__1::bad_function_call::~bad_function_call()
  T unsigned int std::__1::__sort3<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
  T unsigned int std::__1::__sort3<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
  T unsigned int std::__1::__sort4<CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&, char**>(char**, char**, char**, char**, CUtlVector<char*, CUtlMemory<char*> >::Sort(int (*)(char* const*, char* const*))::{lambda(char* const&, char* const&)#1}&)
@@ -1533,6 +1490,8 @@
  sprintf
  sscanf
  stat$INODE64
+ std::exception::what() const
+ std::exception::~exception()
  std::terminate()
  strcasecmp
  strchr
@@ -1626,6 +1585,7 @@
  tcsetattr
  time
  typeinfo for SteamThreadTools::CThread
+ typeinfo for std::exception
  unlink
  usleep
  vasprintf
