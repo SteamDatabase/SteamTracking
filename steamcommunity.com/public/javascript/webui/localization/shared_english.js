@@ -180,6 +180,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_MuteApp_details:
     "Remove '%1$s' from appearing in your News Hub and block all future communications. Muted content decisions are always reversible by visiting this page:",
   EventCalendar_ManageMutedApps: "Manage Muted Apps",
+  EventCalendar_ManageMutedSources: "Manage Muted Sources",
   EventCalendar_ManageStorePref: "Manage Store Preferences",
   EventCalendar_MuteApp_Unknown: "Unknown",
   EVentCalendar_Hide_EventType: "Hide all '%1$s' type posts",
@@ -708,6 +709,8 @@ LocalizationReady("shared", "english", {
   RSSManager_PostEvent_CreatePost: "Would you like to post this item to Steam?",
   RSSManager_PostEvent_CreatePost_Draft:
     "Save as a draft? - Instead of posting immediately, this will create an announcement as hidden an unpublished. You may then make changes before publishing in your Announcements Dashboard.",
+  RSSManager_PostEvent_UpdatePost:
+    "This event already exists in Steam. Would you like to updates its content from the RSS item? Useful if RSS item content has changed. This will remove any customization done using the editor",
   RSSManager_PostEvent_InFlight:
     "Please wait for Steam server to complete action.",
   RSSManager_PostEvent_Success_feed: "RSS Feed has been successfully updated",
@@ -727,6 +730,7 @@ LocalizationReady("shared", "english", {
   RSSManager_EventDashBoard: "Open events dashboard",
   RSSManager_PostEvent_ViewEvent: "View Event",
   RSSManager_PostEvent_EditEvent: "Edit Event",
+  RSSManager_PostEvent_UpdateEvent: "Update Event from RSS",
   RSSManager_PostEvent_Draft: "Saved as a draft",
   RSSManager_PostEvent_Staged:
     "Saved as a draft, staged to automatically publish %1$s",
@@ -745,6 +749,8 @@ LocalizationReady("shared", "english", {
   Image_Error_msg1: "Check that the path to the image is correct.",
   Image_Error_msg2:
     "Check if server hosting the image supports anonymous access. The browser console may indicate an error related Access-Control-Allow-Origin if it doesn't.",
+  Image_Error_msg3:
+    "Ensure the URL to the image starts with https:// not http://. We expect access to images over an encrypted transfer.",
   Image_Error_suggestion:
     "You can always upload the image to Steam to host the content for free.",
 
@@ -1085,8 +1091,11 @@ LocalizationReady("shared", "english", {
   Broadcast_default_title_speed: "Now broadcasting: Watch this speedrun",
 
   Sale_BundleSave: "Includes %1$s items.",
+  Sale_BundleSave_WithDiscount:
+    "Buy this bundle to save %1$s off all %2$s items!",
   Sale_PackageSave: "Includes %1$s items.",
   Sale_ShowContents: "Show contents",
+  Sale_ShowBundleContent: "Show all %1$s items in bundle",
   Sale_ShowMore: "Show more",
   Sale_ShowLess: "Show less",
   Sale_OnWishlist: "On Wishlist",
@@ -1097,6 +1106,8 @@ LocalizationReady("shared", "english", {
   Sale_SeeAllSpecials: "See All Specials",
   Sale_AddToWishlist: "Add to Wishlist",
   Sale_RemoveFromWishlist: "Remove From Wishlist",
+  Sale_AddToLibrary: "+ Add to Library",
+  Sale_PlayNow: "Play Now",
   Sale_Preferences: "Preferences",
   Sale_PlaceHolder:
     "Preview Mode: This section has no capsules. Will not appear on user page if it is empty",
@@ -1285,6 +1296,17 @@ LocalizationReady("shared", "english", {
   Sale_Subscription_Quarterly_Body:
     "Pay every three months and cancel any time",
   Sale_Subscription_Quarterly_Button: "Subscribe Quarterly",
+
+  GotSteam_Title: "Got Steam?",
+  GotSteam_PromptWithDownloadLink:
+    "You need to have the %1$s installed before you can install and launch %2$s. Do you have Steam installed on this computer?",
+  GotSteam_DownloadLinkText: "Steam desktop application",
+  GotSteam_Yes: "Yes, Steam is installed",
+  GotSteam_Yes_Play: "Play this game now",
+  GotSteam_No: "No, I need Steam",
+  GotSteam_No_Download: "Read about and download Steam",
+  GotSteam_Blurb:
+    "Steam is the premiere desktop gaming platform. It's free to join and easy to use.",
 
   shared_dummy: "dont translate"
 });

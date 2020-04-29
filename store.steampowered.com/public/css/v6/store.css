@@ -139,7 +139,7 @@ body.v6 #footer {
     }
     body.v6 #footer .rule{
         height: 8px;
-		border-top: 1px solid #29363d;
+		border-top: 1px solid #363c44;
     }
     body.v6 #footer .valve_links {
         margin-top: 8px;
@@ -159,6 +159,10 @@ body.v6 #footer {
 	body.v6 #footer .valve_links img {
 		vertical-align: bottom;
 	}
+    body.v6 #footer_nav .pulldown {
+        color: #969eab !important;
+        background: rgba(150, 158, 171, 0.3);
+    }
 
 
 

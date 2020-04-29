@@ -85,6 +85,12 @@
                     "type": "uint32",
                     "optional": false,
                     "description": "if set, restricts result set to the passed in apps"
+                },
+                {
+                    "name": "include_free_sub",
+                    "type": "bool",
+                    "optional": false,
+                    "description": "Some games are in the free sub, which are excluded by default."
                 }
             ]
         },

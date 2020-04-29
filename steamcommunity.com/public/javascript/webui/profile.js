@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5823084";
+var CLSTAMP = "5833606";
 !(function(e) {
   function t(t) {
     for (
@@ -2555,6 +2555,7 @@ var CLSTAMP = "5823084";
         );
       })(),
       _ = new v();
+    window.g_PopupManager = _;
   },
   QHER: function(e, t, n) {
     "use strict";
@@ -3385,7 +3386,7 @@ var CLSTAMP = "5823084";
   },
   Y3TG: function(e, t, n) {
     "use strict";
-    n("vDqi"), n("JtU4");
+    n("vDqi");
   },
   e2SU: function(e, t, n) {
     "use strict";
@@ -7203,94 +7204,51 @@ and limitations under the License.
   },
   oh5H: function(e, t, n) {
     "use strict";
-    n.d(t, "c", function() {
-      return l;
-    }),
-      n.d(t, "e", function() {
-        return u;
-      }),
-      n.d(t, "d", function() {
-        return m;
-      }),
-      n.d(t, "f", function() {
-        return p;
-      }),
-      n.d(t, "a", function() {
-        return h;
-      }),
-      n.d(t, "b", function() {
-        return d;
-      });
     var r = n("mrSG"),
       o = n("q1tI"),
-      i = (n("Gp1o"), n("XaMz"), n("ujHl")),
-      c = n("0N1H"),
-      a = n("1n9R"),
-      s = (function() {
-        function e() {
-          (this.m_mapTokens = new Map()),
-            (this.m_mapFallbackTokens = new Map());
-        }
-        return (
-          (e.prototype.InitFromObjects = function(e, t, n, o, i) {
-            i || this.m_mapTokens.clear();
-            var c = Object(r.a)(Object(r.a)({}, n || {}), e),
-              a = Object(r.a)(Object(r.a)({}, o || {}), t || {});
-            this.AddTokens(c, a);
-          }),
-          (e.prototype.InitDirect = function(e, t) {
-            this.m_mapTokens.clear(),
-              this.m_mapFallbackTokens.clear(),
-              this.AddTokens(e, t);
-          }),
-          (e.prototype.AddTokens = function(e, t) {
-            var n = this;
-            Object.keys(e).forEach(function(t) {
-              n.m_mapTokens.set(t, e[t]);
-            }),
-              t &&
-                Object.keys(t).forEach(function(e) {
-                  n.m_mapTokens.has(e) || n.m_mapTokens.set(e, t[e]),
-                    n.m_mapFallbackTokens.set(e, t[e]);
-                });
-          }),
-          (e.prototype.GetPreferredLocales = function() {
-            return this.m_rgLocalesToUse
-              ? this.m_rgLocalesToUse
-              : navigator && navigator.languages
-              ? navigator.languages
-              : ["en-US"];
-          }),
-          (e.prototype.GetELanguageFallbackOrder = function() {
-            var e = new Array();
-            return (
-              e.push(Object(c.c)(a.b.LANGUAGE)),
-              (a.b.SUPPORTED_LANGUAGES || []).forEach(function(t) {
-                t.value != a.b.LANGUAGE && e.push(Object(c.c)(t.value));
-              }),
-              e
-            );
-          }),
-          (e.prototype.SetPreferredLocales = function(e) {
-            this.m_rgLocalesToUse = e;
-          }),
-          (e.prototype.LocalizeString = function(e) {
-            if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-            var t = this.m_mapTokens.get(e.substring(1));
-            return void 0 === t ? "" : t;
-          }),
-          (e.prototype.LocalizeStringFromFallback = function(e) {
-            if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-            var t = this.m_mapFallbackTokens.get(e.substring(1));
-            return void 0 === t ? "" : t;
-          }),
-          e
-        );
-      })();
+      i = n("0N1H"),
+      c = n("1n9R"),
+      a = (n("XaMz"), n("ujHl"));
+    n("Gp1o");
+    function s(e, t) {
+      void 0 === t && (t = !1);
+      var n = t ? "#TimeInterval_" : "#TimeSince_";
+      return e >= 2 * a.b.PerYear
+        ? l(n + "XYears", Math.floor(e / a.b.PerYear))
+        : e >= a.b.PerYear
+        ? (e -= a.b.PerYear) >= 2 * a.b.PerMonth
+          ? l(n + "1YearXMonths", Math.floor(e / a.b.PerMonth))
+          : l(n + "1Year")
+        : e >= 2 * a.b.PerMonth
+        ? l(n + "XMonths", Math.floor(e / a.b.PerMonth))
+        : e >= 2 * a.b.PerWeek
+        ? l(n + "XWeeks", Math.floor(e / a.b.PerWeek))
+        : e >= a.b.PerWeek
+        ? l(n + "1Week", Math.floor(e / a.b.PerWeek))
+        : e >= 2 * a.b.PerDay
+        ? l(n + "XDays", Math.floor(e / a.b.PerDay))
+        : e >= a.b.PerDay
+        ? (e -= a.b.PerDay) >= 2 * a.b.PerHour
+          ? l(n + "1DayXHours", Math.floor(e / a.b.PerHour))
+          : l(n + "1Day")
+        : e >= 2 * a.b.PerHour
+        ? l(n + "XHours", Math.floor(e / a.b.PerHour))
+        : e >= a.b.PerHour
+        ? (e -= a.b.PerHour) >= 2 * a.b.PerMinute
+          ? l(n + "1HourXMinutes", Math.floor(e / a.b.PerMinute))
+          : l(n + "1Hour")
+        : e >= 2 * a.b.PerMinute
+        ? l(n + "XMinutes", Math.floor(e / a.b.PerMinute))
+        : e >= a.b.PerMinute
+        ? l(n + "1Minute")
+        : l(n + "LessThanAMinute");
+    }
+    new Map(), new Map();
+    new Map(), new Map(), new Map(), new Map();
     function l(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = d.LocalizeString(e);
+      var r = h.LocalizeString(e);
       return r
         ? (t.length > 0 &&
             (r = r.replace(/%(?:(\d+)\$)?s/g, function(e, n) {
@@ -7306,7 +7264,7 @@ and limitations under the License.
     function u(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var i = d.LocalizeString(e);
+      var i = h.LocalizeString(e);
       if (!i) return e;
       for (var c, a = [], s = /(.*?)%(\d+)\$s/g, l = 0; (c = s.exec(i)); ) {
         (l += c[0].length), a.push(c[1]);
@@ -7325,42 +7283,25 @@ and limitations under the License.
         ? l.apply(void 0, Object(r.g)([e, t], n))
         : l.apply(void 0, Object(r.g)([e + "_Plural", t], n));
     }
-    function p(e, t) {
-      void 0 === t && (t = !1);
-      var n = t ? "#TimeInterval_" : "#TimeSince_";
-      return e >= 2 * i.b.PerYear
-        ? l(n + "XYears", Math.floor(e / i.b.PerYear))
-        : e >= i.b.PerYear
-        ? (e -= i.b.PerYear) >= 2 * i.b.PerMonth
-          ? l(n + "1YearXMonths", Math.floor(e / i.b.PerMonth))
-          : l(n + "1Year")
-        : e >= 2 * i.b.PerMonth
-        ? l(n + "XMonths", Math.floor(e / i.b.PerMonth))
-        : e >= 2 * i.b.PerWeek
-        ? l(n + "XWeeks", Math.floor(e / i.b.PerWeek))
-        : e >= i.b.PerWeek
-        ? l(n + "1Week", Math.floor(e / i.b.PerWeek))
-        : e >= 2 * i.b.PerDay
-        ? l(n + "XDays", Math.floor(e / i.b.PerDay))
-        : e >= i.b.PerDay
-        ? (e -= i.b.PerDay) >= 2 * i.b.PerHour
-          ? l(n + "1DayXHours", Math.floor(e / i.b.PerHour))
-          : l(n + "1Day")
-        : e >= 2 * i.b.PerHour
-        ? l(n + "XHours", Math.floor(e / i.b.PerHour))
-        : e >= i.b.PerHour
-        ? (e -= i.b.PerHour) >= 2 * i.b.PerMinute
-          ? l(n + "1HourXMinutes", Math.floor(e / i.b.PerMinute))
-          : l(n + "1Hour")
-        : e >= 2 * i.b.PerMinute
-        ? l(n + "XMinutes", Math.floor(e / i.b.PerMinute))
-        : e >= i.b.PerMinute
-        ? l(n + "1Minute")
-        : l(n + "LessThanAMinute");
-    }
-    new Map(), new Map();
-    new Map(), new Map(), new Map(), new Map();
-    var h = {
+    n.d(t, "c", function() {
+      return l;
+    }),
+      n.d(t, "e", function() {
+        return u;
+      }),
+      n.d(t, "d", function() {
+        return m;
+      }),
+      n.d(t, "a", function() {
+        return p;
+      }),
+      n.d(t, "b", function() {
+        return h;
+      }),
+      n.d(t, "f", function() {
+        return s;
+      });
+    var p = {
       english: "en",
       german: "de",
       french: "fr",
@@ -7391,8 +7332,67 @@ and limitations under the License.
       ukrainian: "uk",
       vietnamese: "vn"
     };
-    var d = new s();
-    window.LocalizationManager = d;
+    var h = new ((function() {
+      function e() {
+        (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
+      }
+      return (
+        (e.prototype.InitFromObjects = function(e, t, n, o, i) {
+          i || this.m_mapTokens.clear();
+          var c = Object(r.a)(Object(r.a)({}, n || {}), e),
+            a = Object(r.a)(Object(r.a)({}, o || {}), t || {});
+          this.AddTokens(c, a);
+        }),
+        (e.prototype.InitDirect = function(e, t) {
+          this.m_mapTokens.clear(),
+            this.m_mapFallbackTokens.clear(),
+            this.AddTokens(e, t);
+        }),
+        (e.prototype.AddTokens = function(e, t) {
+          var n = this;
+          Object.keys(e).forEach(function(t) {
+            n.m_mapTokens.set(t, e[t]);
+          }),
+            t &&
+              Object.keys(t).forEach(function(e) {
+                n.m_mapTokens.has(e) || n.m_mapTokens.set(e, t[e]),
+                  n.m_mapFallbackTokens.set(e, t[e]);
+              });
+        }),
+        (e.prototype.GetPreferredLocales = function() {
+          return this.m_rgLocalesToUse
+            ? this.m_rgLocalesToUse
+            : navigator && navigator.languages
+            ? navigator.languages
+            : ["en-US"];
+        }),
+        (e.prototype.GetELanguageFallbackOrder = function() {
+          var e = new Array();
+          return (
+            e.push(Object(i.c)(c.b.LANGUAGE)),
+            (c.b.SUPPORTED_LANGUAGES || []).forEach(function(t) {
+              t.value != c.b.LANGUAGE && e.push(Object(i.c)(t.value));
+            }),
+            e
+          );
+        }),
+        (e.prototype.SetPreferredLocales = function(e) {
+          this.m_rgLocalesToUse = e;
+        }),
+        (e.prototype.LocalizeString = function(e) {
+          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
+          var t = this.m_mapTokens.get(e.substring(1));
+          return void 0 === t ? "" : t;
+        }),
+        (e.prototype.LocalizeStringFromFallback = function(e) {
+          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
+          var t = this.m_mapFallbackTokens.get(e.substring(1));
+          return void 0 === t ? "" : t;
+        }),
+        e
+      );
+    })())();
+    window.LocalizationManager = h;
   },
   "s4p+": function(e, t, n) {},
   tkkQ: function(e, t, n) {

@@ -1548,6 +1548,10 @@ background: -webkit-linear-gradient( top, rgba(0,0,0,0) 5%, #1b2838 95%);
 	position: relative;
 	z-index: 3;
 }
+.curator_header_area_ctn_hideme {
+	display:none;
+}
+
 body.v6 .page_content.curator_header_ctn.creator_announcement_browse_adjustment {
 	transform: translateX(-160px);
 }

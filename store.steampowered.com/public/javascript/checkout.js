@@ -4523,7 +4523,6 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('review_subtotal_value').innerHTML = price_data.formattedSubTotal;
 			else
 				$('review_subtotal_value').innerHTML = '';
-			
 			// deal with promotion elements
 			var promotionNodes = document.getElementsByClassName('cart_total_row_promotion');
 
@@ -4531,15 +4530,21 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 			{
 				promotionNodes[i].parentNode.removeChild(element);
 			}
-			
+
 			if ( price_data.promotions )
 			{
+				var oldElements = document.getElementsByClassName('cart_row_promotion');
+
+				while(oldElements[0])
+				{
+					oldElements[0].parentNode.removeChild(oldElements[0]);
+				}
+
 				var insertNode = $( 'cart_price_summary' );
-				
 				for ( var i = 0; i < price_data.promotions.length; i++ )
 				{
 					var newElement = document.createElement('div');
-					newElement.className = 'cart_total_row cart_total_row_promotion';
+					newElement.className = 'cart_total_row cart_total_row_promotion cart_row_promotion';
 					newElement.setAttribute( 'id', 'cart_price_summary_text' );
 					
 					var newPrice = document.createElement('div');
@@ -4674,6 +4679,7 @@ function NewSetTabEnabledClosure( a_tab_name )
 
 function SetTabEnabled( tab_name, bResetTab )
 {
+
 		if ( bResetTab == undefined )
 		bResetTab = true;
 		
@@ -4976,11 +4982,13 @@ function OnPurchaseSuccess( result )
 				window.location = 'https://store.steampowered.com/account/';
 			return true;
 		}
-	
+
 		$('receipt_total_price').innerHTML = result.purchasereceipt.formattedTotal;
 		$('receipt_confirmation_code').innerHTML = result.purchasereceipt.transactionid;
 		$('receipt_track_img').innerHTML = result.strReceiptPageHTML;
 		
+		$('reward_points_balance').innerHTML = result.purchasereceipt.rewardPointsBalance;
+
 		if ( result.purchasereceipt.points_earned )
 		{
 			$('lny_tokens').style.display = 'block';
@@ -5876,5 +5884,4 @@ function ConfirmRescheduleCancel()
 		UnsendGift();
 	});
 }
-
 

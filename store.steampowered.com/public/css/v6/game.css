@@ -2576,7 +2576,7 @@ img.package_header {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			width: 940px;
+			max-width: 908px;
 	background: -webkit-linear-gradient( 20deg, rgba(152,128,60,0.3) 5%,rgba(226,244,255,0.3) 95%);
 	background: linear-gradient( 70deg, rgba(152,128,60,0.3) 5%,rgba(226,244,255,0.3) 95%);
 	color: #fff;

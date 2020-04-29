@@ -30,8 +30,25 @@
 	max-width: 636px;
 }
 
+select.gray_bevel {
+    background-color: #3d4450;
+    border-radius: 2px;
+    border: 0px solid rgba( 91, 132, 181, 0.2 );
+    box-shadow: 0px 0px 0px #000000;
+    color: #dfe3e6;
+    margin-bottom: 6px;
+    outline: none;
+    padding: 0px;
+    line-height: 32px;
+    height: 27px;
+	font-size: 14px;
+	text-align: center;
+}
+
 .customization_edit_area {
 	margin-bottom: 48px;
+	padding: 20px;
+    background: rgba(58, 62, 71, 0.5);
 }
 
 .customization_controls {

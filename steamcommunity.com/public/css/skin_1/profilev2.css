@@ -1985,7 +1985,7 @@ html.responsive .localmenu_content .profile_badges_badge img {
 }
 
 .profile_small_header_bg {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg.png' );
+	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg.png' );*/
 	max-width: 1010px;
 	height: 215px;
 	margin: 0 auto -98px auto;
@@ -1993,7 +1993,8 @@ html.responsive .localmenu_content .profile_badges_badge img {
 }
 
 .profile_small_header_texture {
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg_texture.jpg' );
+	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_header_small_bg_texture.jpg' );*/
+	background: rgba(58, 62, 71, 0.5);
 	max-width: 978px;
 	height: 102px;
 	margin: 0 auto;

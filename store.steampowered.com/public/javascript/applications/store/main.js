@@ -112,18 +112,18 @@
                   }[u] || u) +
                   ".css?chunkhash=" +
                   {
-                    1: "b1c8dbb0617999549fe3",
-                    2: "6302ce471d33763ecdb3",
-                    3: "4588f95d837ce8222b09",
-                    4: "2ca372d2ea5c20d0a938",
+                    1: "f7684976056de464a080",
+                    2: "ffe35258fe9aaa0375ee",
+                    3: "15ffb242f035b0ffc744",
+                    4: "fe30d00ad9caf40dfd56",
                     5: "d653b6ffc60bd2889972",
-                    6: "63b20aadcc08dd5b37d1",
-                    7: "d6e0826a270642d47179",
-                    8: "e3e5da5feb95c23facbc",
-                    9: "aca22d7f843ea108e28f",
+                    6: "a047a340760811701958",
+                    7: "fc41085a60e652bbddeb",
+                    8: "2f32be06a79b0018124d",
+                    9: "950c0773dd42d219e8dc",
                     11: "6c96dc86b144b1c8f064",
                     12: "7da729cfe3d2c031e356",
-                    13: "500eaa4717ea2713ea2b",
+                    13: "99c9f110ce62603d1946",
                     14: "a39cfba36adf7fb3b82b",
                     15: "971c563be8d68ffb1067",
                     16: "dbf724d001a3d5c334f0",
@@ -133,50 +133,50 @@
                     20: "005825b981ab0b08156c",
                     21: "e450b11b9656046b4b69",
                     22: "a675a4734509d79551c1",
-                    23: "c4f77e8266c2b403eb3f",
+                    23: "4ffb7cbea6a7d0debaed",
                     24: "760c41851040022a0f88",
                     25: "0ecd3178517307108994",
                     26: "6b55602d0a9d76d836b9",
                     27: "d05d0d07bfd7c152f29c",
                     28: "2932920e197ee1946bb4",
-                    29: "3206e4cab29c22785e48",
-                    30: "1af0bb7e9cdbcd1e1600",
+                    29: "ac562434404f2cf31058",
+                    30: "2081293e2c7113cb2c88",
                     31: "1fe839d52af11601709e",
                     32: "09fbc91ac6f499c2ae45",
                     33: "f6ba8496ad38d379faee",
                     34: "e3d75943af0cbe997051",
-                    35: "cd5e228a5d58dcc5feea",
+                    35: "18ffc697c4ee6e73ce4a",
                     36: "cd5d2d42f8a8b282a400",
-                    37: "7291596ff914534a6348",
+                    37: "0441bac8fac2ffe74ca8",
                     38: "43c2af207842bed42b2d",
-                    39: "6e9903d11a5842f413c2",
-                    40: "9fd3cb144d7a5b393522",
-                    41: "67d7d3e0dd99dd2c6bc0",
-                    42: "ae4a7f12e7eb9b763fce",
-                    43: "31701ced8019d84e7ea0",
-                    44: "64b72ac96b592d27f75d",
-                    45: "48c516d6efdfceffb076",
-                    46: "72c2f0b9b0951ad8259c",
-                    47: "029db35ad19a947b9137",
-                    48: "533b79688530f3bff854",
-                    49: "f0005bc16e7f734696b7",
-                    50: "c2c6c778b974aca493d7",
-                    51: "4c3fc34354362d179b1e",
-                    52: "85647388c10a3a1a7f6b",
-                    53: "8fe8e0d522aedd1f064a",
-                    54: "70baa1f5303b4fede3b8",
-                    55: "5965941ee30cf02ba846",
-                    56: "5568772bb064f782b535",
-                    57: "78aa9616dda03c0044c1",
-                    58: "b51166d284539d787616",
-                    59: "df7a2c8f5d236d2ff3a0",
-                    60: "a80ddab533304a05e2c9",
-                    61: "449ca4dd9d6e7e1cd579",
-                    62: "2be50200e13c1b675330",
-                    63: "4e4253919d521ddd5a12",
-                    64: "2bc28368f85ccf4a3184",
-                    65: "c5d03a4155a5b53cd8c3",
-                    66: "67fd066568f7f760e6b1"
+                    39: "7ec39edc2ef2115dd734",
+                    40: "9aacbdcfec4be8b60475",
+                    41: "e090fe33b53a30d34775",
+                    42: "39feeadc4c4abc0c9a05",
+                    43: "2f4b80676148c6b5ef4b",
+                    44: "5340e91d52f040d90ba9",
+                    45: "2f1c2c3f5fc2e5e0115e",
+                    46: "601a3bfa4b9befaaa512",
+                    47: "95956db701e79defab7d",
+                    48: "925793c8c866638923ad",
+                    49: "fc5c51207f901b4fc1dc",
+                    50: "e965bdad0e493bc58fa1",
+                    51: "ccf4beb1cffceeeb7962",
+                    52: "e0c36dc12d1cb2a7a0af",
+                    53: "5b0be2a77449c4b4e7fd",
+                    54: "eaa4eb71d7f59dd0ee17",
+                    55: "a02bdceb97ec9afb36e3",
+                    56: "675dd3147d1c2548ed0d",
+                    57: "959cbb4635edb146ac8e",
+                    58: "3294296b2e062b08be86",
+                    59: "e08be8fed1a9ebafd48e",
+                    60: "2dff34398a71b2ea029e",
+                    61: "fb57e0e67156fcf3d43e",
+                    62: "ef33ce12c793eac687ec",
+                    63: "5ba4628763c4567f3e89",
+                    64: "664d3f9a09b630bfc920",
+                    65: "850b9ea89434616a3af4",
+                    66: "b22caf11e761c1852355"
                   }[u],
                 i = m.p + t,
                 n = document.getElementsByTagName("link"),
@@ -302,18 +302,18 @@
               }[e] || e) +
               ".js?chunkhash=" +
               {
-                1: "b1c8dbb0617999549fe3",
-                2: "6302ce471d33763ecdb3",
-                3: "4588f95d837ce8222b09",
-                4: "2ca372d2ea5c20d0a938",
+                1: "f7684976056de464a080",
+                2: "ffe35258fe9aaa0375ee",
+                3: "15ffb242f035b0ffc744",
+                4: "fe30d00ad9caf40dfd56",
                 5: "d653b6ffc60bd2889972",
-                6: "63b20aadcc08dd5b37d1",
-                7: "d6e0826a270642d47179",
-                8: "e3e5da5feb95c23facbc",
-                9: "aca22d7f843ea108e28f",
+                6: "a047a340760811701958",
+                7: "fc41085a60e652bbddeb",
+                8: "2f32be06a79b0018124d",
+                9: "950c0773dd42d219e8dc",
                 11: "6c96dc86b144b1c8f064",
                 12: "7da729cfe3d2c031e356",
-                13: "500eaa4717ea2713ea2b",
+                13: "99c9f110ce62603d1946",
                 14: "a39cfba36adf7fb3b82b",
                 15: "971c563be8d68ffb1067",
                 16: "dbf724d001a3d5c334f0",
@@ -323,50 +323,50 @@
                 20: "005825b981ab0b08156c",
                 21: "e450b11b9656046b4b69",
                 22: "a675a4734509d79551c1",
-                23: "c4f77e8266c2b403eb3f",
+                23: "4ffb7cbea6a7d0debaed",
                 24: "760c41851040022a0f88",
                 25: "0ecd3178517307108994",
                 26: "6b55602d0a9d76d836b9",
                 27: "d05d0d07bfd7c152f29c",
                 28: "2932920e197ee1946bb4",
-                29: "3206e4cab29c22785e48",
-                30: "1af0bb7e9cdbcd1e1600",
+                29: "ac562434404f2cf31058",
+                30: "2081293e2c7113cb2c88",
                 31: "1fe839d52af11601709e",
                 32: "09fbc91ac6f499c2ae45",
                 33: "f6ba8496ad38d379faee",
                 34: "e3d75943af0cbe997051",
-                35: "cd5e228a5d58dcc5feea",
+                35: "18ffc697c4ee6e73ce4a",
                 36: "cd5d2d42f8a8b282a400",
-                37: "7291596ff914534a6348",
+                37: "0441bac8fac2ffe74ca8",
                 38: "43c2af207842bed42b2d",
-                39: "6e9903d11a5842f413c2",
-                40: "9fd3cb144d7a5b393522",
-                41: "67d7d3e0dd99dd2c6bc0",
-                42: "ae4a7f12e7eb9b763fce",
-                43: "31701ced8019d84e7ea0",
-                44: "64b72ac96b592d27f75d",
-                45: "48c516d6efdfceffb076",
-                46: "72c2f0b9b0951ad8259c",
-                47: "029db35ad19a947b9137",
-                48: "533b79688530f3bff854",
-                49: "f0005bc16e7f734696b7",
-                50: "c2c6c778b974aca493d7",
-                51: "4c3fc34354362d179b1e",
-                52: "85647388c10a3a1a7f6b",
-                53: "8fe8e0d522aedd1f064a",
-                54: "70baa1f5303b4fede3b8",
-                55: "5965941ee30cf02ba846",
-                56: "5568772bb064f782b535",
-                57: "78aa9616dda03c0044c1",
-                58: "b51166d284539d787616",
-                59: "df7a2c8f5d236d2ff3a0",
-                60: "a80ddab533304a05e2c9",
-                61: "449ca4dd9d6e7e1cd579",
-                62: "2be50200e13c1b675330",
-                63: "4e4253919d521ddd5a12",
-                64: "2bc28368f85ccf4a3184",
-                65: "c5d03a4155a5b53cd8c3",
-                66: "67fd066568f7f760e6b1"
+                39: "7ec39edc2ef2115dd734",
+                40: "9aacbdcfec4be8b60475",
+                41: "e090fe33b53a30d34775",
+                42: "39feeadc4c4abc0c9a05",
+                43: "2f4b80676148c6b5ef4b",
+                44: "5340e91d52f040d90ba9",
+                45: "2f1c2c3f5fc2e5e0115e",
+                46: "601a3bfa4b9befaaa512",
+                47: "95956db701e79defab7d",
+                48: "925793c8c866638923ad",
+                49: "fc5c51207f901b4fc1dc",
+                50: "e965bdad0e493bc58fa1",
+                51: "ccf4beb1cffceeeb7962",
+                52: "e0c36dc12d1cb2a7a0af",
+                53: "5b0be2a77449c4b4e7fd",
+                54: "eaa4eb71d7f59dd0ee17",
+                55: "a02bdceb97ec9afb36e3",
+                56: "675dd3147d1c2548ed0d",
+                57: "959cbb4635edb146ac8e",
+                58: "3294296b2e062b08be86",
+                59: "e08be8fed1a9ebafd48e",
+                60: "2dff34398a71b2ea029e",
+                61: "fb57e0e67156fcf3d43e",
+                62: "ef33ce12c793eac687ec",
+                63: "5ba4628763c4567f3e89",
+                64: "664d3f9a09b630bfc920",
+                65: "850b9ea89434616a3af4",
+                66: "b22caf11e761c1852355"
               }[e]
             );
           })(u)),
@@ -2127,13 +2127,13 @@
       r = n("q1tI"),
       g = n.n(r),
       _ = n("NcpY"),
-      o = n("Mgs7"),
+      a = n("Mgs7"),
       c = n("kyHq"),
       l = n("qD+2"),
       i = n("WBba"),
       u = n("lkRc"),
-      s = n("2vnA"),
-      a = n("bxiW"),
+      o = n("2vnA"),
+      s = n("bxiW"),
       p = n("vDqi"),
       d = n.n(p),
       m = (function() {
@@ -2276,9 +2276,9 @@
               });
             });
           }),
-          Object(y.c)([s.observable], e.prototype, "rgModelNames", void 0),
-          Object(y.c)([a.a], e.prototype, "GetNeighbors", null),
-          Object(y.c)([a.a], e.prototype, "EstimateCosts", null),
+          Object(y.c)([o.observable], e.prototype, "rgModelNames", void 0),
+          Object(y.c)([s.a], e.prototype, "GetNeighbors", null),
+          Object(y.c)([s.a], e.prototype, "EstimateCosts", null),
           e
         );
       })(),
@@ -2468,14 +2468,13 @@
       })(),
       v = new m();
     window.g_LabsSandbox = v;
-    var h = n("okNM"),
+    var h = n("TyAF"),
       w = n("ZApo"),
       f = n("exH9"),
       E = (function(n) {
         function e(e) {
           var t = n.call(this, e) || this;
           return (
-            (t.m_currentRequest = 0),
             (t.state = {
               appid: 0,
               appinfo: null,
@@ -2483,6 +2482,18 @@
               strSearch: "",
               rgSuggestions: []
             }),
+            (t.m_currentRequest = 0),
+            t.props.appidInitial &&
+              (l.a
+                .EnsureAppInfoForAppIDs([t.props.appidInitial])
+                .then(function() {
+                  l.a.GetAppInfo(t.props.appidInitial);
+                  t.setState({
+                    appid: t.props.appidInitial,
+                    appinfo: l.a.GetAppInfo(t.props.appidInitial)
+                  });
+                }),
+              (t.state.appid = t.props.appidInitial)),
             t
           );
         }
@@ -2546,7 +2557,7 @@
                                           {
                                             className: _.Suggestion,
                                             key: "suggestion-" + e.id,
-                                            onClick: function() {
+                                            onClickCapture: function() {
                                               return s.SetSelectedApp(
                                                 parseInt(e.id)
                                               );
@@ -2587,6 +2598,7 @@
             var t = this;
             e && 0 != e
               ? l.a.EnsureAppInfoForAppIDs([e]).then(function() {
+                  l.a.GetAppInfo(e);
                   t.setState({
                     appid: e,
                     appinfo: l.a.GetAppInfo(e),
@@ -2596,39 +2608,45 @@
                 })
               : this.setState({ appid: 0, appinfo: null, mode: "display" });
           }),
+          (e.prototype.OnKeyUp = function(e) {
+            27 == e.keyCode && this.setState({ mode: "display" });
+          }),
           (e.prototype.render = function() {
             var e,
-              t =
+              t,
+              n =
                 null !== (e = this.props.classOverride) && void 0 !== e
                   ? e
                   : _.AppSelector,
-              n = null;
+              r = null,
+              i = g.a.createElement(a.j, {
+                type: "text",
+                onChange: this.UpdateAppSuggestions
+              });
             if ("display" == this.state.mode) {
-              var r = this.state.appinfo
+              var o = this.state.appinfo
                 ? this.state.appinfo.name +
                   (this.props.showAppIds ? " (" + this.state.appid + ")" : "")
-                : "...";
-              n = g.a.createElement(
+                : null !== (t = this.props.strPrompt) && void 0 !== t
+                ? t
+                : "Select game";
+              r = g.a.createElement(
                 "div",
-                { className: _.AppDisplay, onClick: this.OnDisplayClicked },
+                { className: _.AppDisplay },
                 this.state.appinfo &&
                   g.a.createElement("img", {
                     src: this.state.appinfo.header_image_url,
                     className: _.LogoImage
                   }),
-                g.a.createElement("div", { className: _.AppName }, r)
+                g.a.createElement("div", { className: _.AppName }, o)
               );
             } else if ("select" == this.state.mode) {
-              var i = 0 < this.state.strSearch.length;
-              n = g.a.createElement(
+              var s = 0 < this.state.strSearch.length;
+              r = g.a.createElement(
                 "div",
                 { className: _.AppSelect },
-                g.a.createElement(o.j, {
-                  type: "text",
-                  onChange: this.UpdateAppSuggestions,
-                  bAlwaysShowClearAction: i
-                }),
-                i &&
+                i,
+                s &&
                   g.a.createElement(
                     "div",
                     { className: _.Suggestions },
@@ -2636,10 +2654,19 @@
                   )
               );
             }
-            return g.a.createElement("div", { className: t }, n);
+            return g.a.createElement(
+              "div",
+              {
+                className: n,
+                onClick: this.OnDisplayClicked,
+                onKeyUpCapture: this.OnKeyUp
+              },
+              r
+            );
           }),
-          Object(y.c)([a.a], e.prototype, "OnDisplayClicked", null),
-          Object(y.c)([a.a], e.prototype, "UpdateAppSuggestions", null),
+          Object(y.c)([s.a], e.prototype, "OnDisplayClicked", null),
+          Object(y.c)([s.a], e.prototype, "UpdateAppSuggestions", null),
+          Object(y.c)([s.a], e.prototype, "OnKeyUp", null),
           e
         );
       })(g.a.Component),
@@ -2708,6 +2735,9 @@
         }
         return (
           Object(y.d)(e, t),
+          (e.prototype.componentDidMount = function() {
+            this.OnAppSelected();
+          }),
           (e.prototype.OnAppSelected = function() {
             var t = this;
             if (
@@ -2741,7 +2771,9 @@
               g.a.createElement(E, {
                 fnOnSelection: this.OnAppSelected,
                 ref: this.ref_app_a,
-                key: "app_a"
+                showAppIds: !0,
+                appidInitial: 268500,
+                key: "similar_app_a"
               }),
               g.a.createElement("div", { className: _.HorizontalSpacer }),
               g.a.createElement("div", { className: _.Score }, e),
@@ -2749,11 +2781,13 @@
               g.a.createElement(E, {
                 fnOnSelection: this.OnAppSelected,
                 ref: this.ref_app_b,
-                key: "app_b"
+                showAppIds: !0,
+                appidInitial: 200510,
+                key: "similar_app_b"
               })
             );
           }),
-          Object(y.c)([a.a], e.prototype, "OnAppSelected", null),
+          Object(y.c)([s.a], e.prototype, "OnAppSelected", null),
           e
         );
       })(g.a.Component),
@@ -2772,6 +2806,10 @@
         }
         return (
           Object(y.d)(e, n),
+          (e.prototype.componentDidMount = function() {
+            this.app_selector_ref.current &&
+              this.SetSelectedApp(this.app_selector_ref.current.state.appid);
+          }),
           (e.prototype.OnSelectedApp = function(e) {
             e && this.SetSelectedApp(e);
           }),
@@ -2843,18 +2881,19 @@
               g.a.createElement(E, {
                 fnOnSelection: this.OnSelectedApp,
                 ref: this.app_selector_ref,
+                appidInitial: 268500,
                 showAppIds: !0
               }),
               g.a.createElement("div", { className: _.SimilarApps }, t)
             );
           }),
-          Object(y.c)([s.observable], e.prototype, "selected_app", void 0),
-          Object(y.c)([s.observable], e.prototype, "similar_apps", void 0),
-          Object(y.c)([s.observable], e.prototype, "similarity_scores", void 0),
-          Object(y.c)([s.observable], e.prototype, "similarity_model", void 0),
-          Object(y.c)([a.a], e.prototype, "OnSelectedApp", null),
-          Object(y.c)([a.a], e.prototype, "SetSelectedApp", null),
-          Object(y.c)([a.a], e.prototype, "OnModelChanged", null),
+          Object(y.c)([o.observable], e.prototype, "selected_app", void 0),
+          Object(y.c)([o.observable], e.prototype, "similar_apps", void 0),
+          Object(y.c)([o.observable], e.prototype, "similarity_scores", void 0),
+          Object(y.c)([o.observable], e.prototype, "similarity_model", void 0),
+          Object(y.c)([s.a], e.prototype, "OnSelectedApp", null),
+          Object(y.c)([s.a], e.prototype, "SetSelectedApp", null),
+          Object(y.c)([s.a], e.prototype, "OnModelChanged", null),
           (e = Object(y.c)([h.observer], e))
         );
       })(g.a.Component),
@@ -2903,10 +2942,10 @@
               g.a.createElement(E, { fnOnSelection: this.OnSelectedApp })
             );
           }),
-          Object(y.c)([s.observable], e.prototype, "selected_app", void 0),
-          Object(y.c)([s.observable], e.prototype, "selected_operator", void 0),
-          Object(y.c)([a.a], e.prototype, "OnSelectedApp", null),
-          Object(y.c)([a.a], e.prototype, "OnSelectedOperator", null),
+          Object(y.c)([o.observable], e.prototype, "selected_app", void 0),
+          Object(y.c)([o.observable], e.prototype, "selected_operator", void 0),
+          Object(y.c)([s.a], e.prototype, "OnSelectedApp", null),
+          Object(y.c)([s.a], e.prototype, "OnSelectedOperator", null),
           (e = Object(y.c)([h.observer], e))
         );
       })(g.a.Component),
@@ -3082,13 +3121,13 @@
               g.a.createElement("div", { className: _.SimilarApps }, p)
             );
           }),
-          Object(y.c)([s.observable], e.prototype, "operands", void 0),
-          Object(y.c)([s.observable], e.prototype, "similarity_model", void 0),
-          Object(y.c)([s.observable], e.prototype, "similar_apps", void 0),
-          Object(y.c)([s.observable], e.prototype, "similarity_scores", void 0),
-          Object(y.c)([a.a], e.prototype, "OnModelChanged", null),
-          Object(y.c)([a.a], e.prototype, "OnAddOperand", null),
-          Object(y.c)([a.a], e.prototype, "OnOperandChanged", null),
+          Object(y.c)([o.observable], e.prototype, "operands", void 0),
+          Object(y.c)([o.observable], e.prototype, "similarity_model", void 0),
+          Object(y.c)([o.observable], e.prototype, "similar_apps", void 0),
+          Object(y.c)([o.observable], e.prototype, "similarity_scores", void 0),
+          Object(y.c)([s.a], e.prototype, "OnModelChanged", null),
+          Object(y.c)([s.a], e.prototype, "OnAddOperand", null),
+          Object(y.c)([s.a], e.prototype, "OnOperandChanged", null),
           (e = Object(y.c)([h.observer], e))
         );
       })(g.a.Component),
@@ -3201,9 +3240,13 @@
                 "div",
                 { className: _.SelectEndpoints },
                 g.a.createElement(E, {
-                  fnOnSelection: this.OnSelectedStartApp
+                  fnOnSelection: this.OnSelectedStartApp,
+                  strPrompt: "Select start game"
                 }),
-                g.a.createElement(E, { fnOnSelection: this.OnSelectedEndApp })
+                g.a.createElement(E, {
+                  fnOnSelection: this.OnSelectedEndApp,
+                  strPrompt: "Select end game"
+                })
               ),
               g.a.createElement(
                 "div",
@@ -3214,20 +3257,20 @@
               g.a.createElement("div", { className: _.Path }, r)
             );
           }),
-          Object(y.c)([s.observable], e.prototype, "app_start", void 0),
-          Object(y.c)([s.observable], e.prototype, "app_end", void 0),
-          Object(y.c)([s.observable], e.prototype, "in_progress", void 0),
+          Object(y.c)([o.observable], e.prototype, "app_start", void 0),
+          Object(y.c)([o.observable], e.prototype, "app_end", void 0),
+          Object(y.c)([o.observable], e.prototype, "in_progress", void 0),
           Object(y.c)(
-            [s.observable],
+            [o.observable],
             e.prototype,
             "progress_iteration",
             void 0
           ),
-          Object(y.c)([s.observable], e.prototype, "found_path", void 0),
-          Object(y.c)([a.a], e.prototype, "IterationCallback", null),
-          Object(y.c)([a.a], e.prototype, "Pathfind", null),
-          Object(y.c)([a.a], e.prototype, "OnSelectedStartApp", null),
-          Object(y.c)([a.a], e.prototype, "OnSelectedEndApp", null),
+          Object(y.c)([o.observable], e.prototype, "found_path", void 0),
+          Object(y.c)([s.a], e.prototype, "IterationCallback", null),
+          Object(y.c)([s.a], e.prototype, "Pathfind", null),
+          Object(y.c)([s.a], e.prototype, "OnSelectedStartApp", null),
+          Object(y.c)([s.a], e.prototype, "OnSelectedEndApp", null),
           (e = Object(y.c)([h.observer], e))
         );
       })(g.a.Component),
@@ -4136,9 +4179,6 @@
     }),
       n.d(t, "a", function() {
         return f;
-      }),
-      n.d(t, "c", function() {
-        return _;
       });
     var l,
       r,
@@ -4668,6 +4708,7 @@
         );
       })(),
       _ = new g();
+    window.g_PopupManager = _;
   },
   Jnrd: function(e, t, n) {
     "use strict";
@@ -4738,7 +4779,7 @@
       o = n("IjL/"),
       r = n("bxiW"),
       s = n("6Y59"),
-      a = n("okNM"),
+      a = n("TyAF"),
       c = n("exH9"),
       m = n("JJA/"),
       h = n.n(m),
@@ -10427,116 +10468,169 @@
   },
   TLQK: function(e, t, n) {
     "use strict";
-    n.d(t, "d", function() {
-      return p;
-    }),
-      n.d(t, "j", function() {
-        return a;
-      }),
-      n.d(t, "m", function() {
-        return d;
-      }),
-      n.d(t, "h", function() {
-        return m;
-      }),
-      n.d(t, "k", function() {
-        return h;
-      }),
-      n.d(t, "i", function() {
-        return f;
-      }),
-      n.d(t, "l", function() {
-        return b;
-      }),
-      n.d(t, "e", function() {
-        return v;
-      }),
-      n.d(t, "f", function() {
-        return O;
-      }),
-      n.d(t, "g", function() {
-        return S;
-      }),
-      n.d(t, "b", function() {
-        return C;
-      }),
-      n.d(t, "a", function() {
-        return j;
-      }),
-      n.d(t, "c", function() {
-        return B;
-      });
     var l = n("mrSG"),
       u = n("q1tI"),
-      c = n("Gp1o"),
-      s = (n("r64O"), n("CdLH")),
       r = n("mgoM"),
       i = n("lkRc"),
-      o = (function() {
-        function e() {
-          (this.m_mapTokens = new Map()),
-            (this.m_mapFallbackTokens = new Map());
-        }
-        return (
-          (e.prototype.InitFromObjects = function(e, t, n, r, i) {
-            i || this.m_mapTokens.clear();
-            var o = Object(l.a)(Object(l.a)({}, n || {}), e),
-              s = Object(l.a)(Object(l.a)({}, r || {}), t || {});
-            this.AddTokens(o, s);
-          }),
-          (e.prototype.InitDirect = function(e, t) {
-            this.m_mapTokens.clear(),
-              this.m_mapFallbackTokens.clear(),
-              this.AddTokens(e, t);
-          }),
-          (e.prototype.AddTokens = function(t, n) {
-            var r = this;
-            Object.keys(t).forEach(function(e) {
-              r.m_mapTokens.set(e, t[e]);
-            }),
-              n &&
-                Object.keys(n).forEach(function(e) {
-                  r.m_mapTokens.has(e) || r.m_mapTokens.set(e, n[e]),
-                    r.m_mapFallbackTokens.set(e, n[e]);
-                });
-          }),
-          (e.prototype.GetPreferredLocales = function() {
-            return this.m_rgLocalesToUse
-              ? this.m_rgLocalesToUse
-              : navigator && navigator.languages
-              ? navigator.languages
-              : ["en-US"];
-          }),
-          (e.prototype.GetELanguageFallbackOrder = function() {
-            var t = new Array();
-            return (
-              t.push(Object(r.e)(i.c.LANGUAGE)),
-              (i.c.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-                e.value != i.c.LANGUAGE && t.push(Object(r.e)(e.value));
-              }),
-              t
-            );
-          }),
-          (e.prototype.SetPreferredLocales = function(e) {
-            this.m_rgLocalesToUse = e;
-          }),
-          (e.prototype.LocalizeString = function(e) {
-            if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-            var t = this.m_mapTokens.get(e.substring(1));
-            return void 0 === t ? "" : t;
-          }),
-          (e.prototype.LocalizeStringFromFallback = function(e) {
-            if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-            var t = this.m_mapFallbackTokens.get(e.substring(1));
-            return void 0 === t ? "" : t;
-          }),
-          e
-        );
-      })();
+      s = (n("r64O"), n("CdLH")),
+      c = n("Gp1o");
+    function o(e, t) {
+      void 0 === t && (t = !1);
+      var n = t ? "#TimeInterval_" : "#TimeSince_";
+      return e >= 2 * s.d.PerYear
+        ? F(n + "XYears", Math.floor(e / s.d.PerYear))
+        : e >= s.d.PerYear
+        ? (e -= s.d.PerYear) >= 2 * s.d.PerMonth
+          ? F(n + "1YearXMonths", Math.floor(e / s.d.PerMonth))
+          : F(n + "1Year")
+        : e >= 2 * s.d.PerMonth
+        ? F(n + "XMonths", Math.floor(e / s.d.PerMonth))
+        : e >= 2 * s.d.PerWeek
+        ? F(n + "XWeeks", Math.floor(e / s.d.PerWeek))
+        : e >= s.d.PerWeek
+        ? F(n + "1Week", Math.floor(e / s.d.PerWeek))
+        : e >= 2 * s.d.PerDay
+        ? F(n + "XDays", Math.floor(e / s.d.PerDay))
+        : e >= s.d.PerDay
+        ? (e -= s.d.PerDay) >= 2 * s.d.PerHour
+          ? F(n + "1DayXHours", Math.floor(e / s.d.PerHour))
+          : F(n + "1Day")
+        : e >= 2 * s.d.PerHour
+        ? F(n + "XHours", Math.floor(e / s.d.PerHour))
+        : e >= s.d.PerHour
+        ? (e -= s.d.PerHour) >= 2 * s.d.PerMinute
+          ? F(n + "1HourXMinutes", Math.floor(e / s.d.PerMinute))
+          : F(n + "1Hour")
+        : e >= 2 * s.d.PerMinute
+        ? F(n + "XMinutes", Math.floor(e / s.d.PerMinute))
+        : e >= s.d.PerMinute
+        ? F(n + "1Minute")
+        : F(n + "LessThanAMinute");
+    }
+    function a(e, t) {
+      var n = {
+        weekday: "short",
+        month: "long",
+        day: "numeric",
+        year: t ? void 0 : "numeric"
+      };
+      return new Date(1e3 * e).toLocaleDateString(j.GetPreferredLocales(), n);
+    }
     function p(e) {
+      var t = new Date(1e3 * e),
+        n = t.setHours(0, 0, 0, 0),
+        r = m.get(n);
+      if (r) return r;
+      return (
+        (r = t.toLocaleDateString(j.GetPreferredLocales(), {
+          year: "numeric",
+          month: "short",
+          day: "numeric"
+        })),
+        m.set(n, r),
+        r
+      );
+    }
+    function d(e) {
+      return new Date(1e3 * e).toLocaleTimeString(j.GetPreferredLocales(), {
+        hour: "numeric",
+        minute: "numeric"
+      });
+    }
+    var m = new Map(),
+      h = new Map();
+    function f(e, t) {
+      var n = new Date(),
+        r = new Date(1e3 * e);
+      if (r.getFullYear() != n.getFullYear()) return p(e);
+      c.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
+      var i = new Date();
+      if ((i.setHours(0, 0, 0, 0), i <= r)) {
+        if ((i.setDate(i.getDate() + 1), r < i)) return F("#Time_Today");
+        if ((i.setDate(i.getDate() + 1), r < i)) return F("#Time_Tomorrow");
+      } else if ((i.setDate(i.getDate() - 1), i <= r))
+        return F("#Time_Yesterday");
+      var o = { month: t ? "long" : "short", day: "numeric" },
+        s = r.setHours(0, 0, 0, 0) + o.month,
+        a = h.get(s);
+      return (
+        a ||
+        ((a = r.toLocaleDateString(j.GetPreferredLocales(), o)), h.set(s, a), a)
+      );
+    }
+    function g(e) {
+      var t = new Date(1e3 * e),
+        n = new Date();
+      if (n < t) return c.b(t.getTime() - n.getTime()), O(t);
+      c.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
+      var r = new Date();
+      if ((r.setHours(0, 0, 0, 0), r <= t)) return F("#Time_Today");
+      if ((r.setDate(r.getDate() - 1), r <= t)) return F("#Time_Yesterday");
+      if ((r.setDate(r.getDate() - 5), r <= t)) return F("#TimeSince_ThisWeek");
+      var i = new Date(r);
+      if (
+        (r.setDate(r.getDate() - 21),
+        r <= t ||
+          (t.getMonth() == n.getMonth() && t.getFullYear() == n.getFullYear()))
+      ) {
+        var o =
+          Math.floor((i.valueOf() - t.valueOf()) / (1e3 * s.d.PerWeek)) + 1;
+        return 1 == o ? F("#TimeSince_1Week") : F("#TimeSince_XWeeks", o);
+      }
+      return t.getFullYear() == n.getFullYear() ? w(t) : O(t);
+    }
+    var _ = new Map(),
+      b = new Map(),
+      v = new Map(),
+      y = new Map();
+    function M(e) {
+      var t = _.get(e.getDay());
+      return (
+        t ||
+        ((t = e.toLocaleDateString(j.GetPreferredLocales(), {
+          weekday: "long"
+        })),
+        _.set(e.getDay(), t),
+        t)
+      );
+    }
+    function w(e) {
+      var t = b.get(e.getMonth());
+      return (
+        t ||
+        ((t = e.toLocaleDateString(j.GetPreferredLocales(), { month: "long" })),
+        b.set(e.getMonth(), t),
+        t)
+      );
+    }
+    function E(e) {
+      var t = v.get(e.getFullYear());
+      return (
+        t ||
+        ((t = e.toLocaleDateString(j.GetPreferredLocales(), {
+          year: "numeric"
+        })),
+        v.set(e.getFullYear(), t),
+        t)
+      );
+    }
+    function O(e) {
+      var t = e.getMonth() + 12 * e.getFullYear(),
+        n = y.get(t);
+      return (
+        n ||
+        ((n = e.toLocaleDateString(j.GetPreferredLocales(), {
+          month: "long",
+          year: "numeric"
+        })),
+        y.set(t, n),
+        n)
+      );
+    }
+    function F(e) {
       for (var r = [], t = 1; t < arguments.length; t++)
         r[t - 1] = arguments[t];
-      var n = B.LocalizeString(e);
+      var n = j.LocalizeString(e);
       return n
         ? (0 < r.length &&
             (n = n.replace(/%(?:(\d+)\$)?s/g, function(e, t) {
@@ -10549,10 +10643,10 @@
           n)
         : e;
     }
-    function a(e) {
+    function S(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      var r = B.LocalizeString(e);
+      var r = j.LocalizeString(e);
       if (!r) return e;
       for (var i, o = [], s = /(.*?)%(\d+)\$s/g, a = 0; (i = s.exec(r)); ) {
         (a += i[0].length), o.push(i[1]);
@@ -10564,160 +10658,46 @@
         u.createElement.apply(u, Object(l.g)([u.Fragment, null], o))
       );
     }
-    function d(e, t) {
-      void 0 === t && (t = !1);
-      var n = t ? "#TimeInterval_" : "#TimeSince_";
-      return e >= 2 * s.d.PerYear
-        ? p(n + "XYears", Math.floor(e / s.d.PerYear))
-        : e >= s.d.PerYear
-        ? (e -= s.d.PerYear) >= 2 * s.d.PerMonth
-          ? p(n + "1YearXMonths", Math.floor(e / s.d.PerMonth))
-          : p(n + "1Year")
-        : e >= 2 * s.d.PerMonth
-        ? p(n + "XMonths", Math.floor(e / s.d.PerMonth))
-        : e >= 2 * s.d.PerWeek
-        ? p(n + "XWeeks", Math.floor(e / s.d.PerWeek))
-        : e >= s.d.PerWeek
-        ? p(n + "1Week", Math.floor(e / s.d.PerWeek))
-        : e >= 2 * s.d.PerDay
-        ? p(n + "XDays", Math.floor(e / s.d.PerDay))
-        : e >= s.d.PerDay
-        ? (e -= s.d.PerDay) >= 2 * s.d.PerHour
-          ? p(n + "1DayXHours", Math.floor(e / s.d.PerHour))
-          : p(n + "1Day")
-        : e >= 2 * s.d.PerHour
-        ? p(n + "XHours", Math.floor(e / s.d.PerHour))
-        : e >= s.d.PerHour
-        ? (e -= s.d.PerHour) >= 2 * s.d.PerMinute
-          ? p(n + "1HourXMinutes", Math.floor(e / s.d.PerMinute))
-          : p(n + "1Hour")
-        : e >= 2 * s.d.PerMinute
-        ? p(n + "XMinutes", Math.floor(e / s.d.PerMinute))
-        : e >= s.d.PerMinute
-        ? p(n + "1Minute")
-        : p(n + "LessThanAMinute");
-    }
-    function m(e, t) {
-      var n = {
-        weekday: "short",
-        month: "long",
-        day: "numeric",
-        year: t ? void 0 : "numeric"
-      };
-      return new Date(1e3 * e).toLocaleDateString(B.GetPreferredLocales(), n);
-    }
-    function h(e) {
-      var t = new Date(1e3 * e),
-        n = t.setHours(0, 0, 0, 0),
-        r = g.get(n);
-      if (r) return r;
-      return (
-        (r = t.toLocaleDateString(B.GetPreferredLocales(), {
-          year: "numeric",
-          month: "short",
-          day: "numeric"
-        })),
-        g.set(n, r),
-        r
-      );
-    }
-    function f(e) {
-      return new Date(1e3 * e).toLocaleTimeString(B.GetPreferredLocales(), {
-        hour: "numeric",
-        minute: "numeric"
+    n.d(t, "d", function() {
+      return F;
+    }),
+      n.d(t, "j", function() {
+        return S;
+      }),
+      n.d(t, "b", function() {
+        return k;
+      }),
+      n.d(t, "a", function() {
+        return C;
+      }),
+      n.d(t, "c", function() {
+        return j;
+      }),
+      n.d(t, "e", function() {
+        return g;
+      }),
+      n.d(t, "f", function() {
+        return M;
+      }),
+      n.d(t, "g", function() {
+        return E;
+      }),
+      n.d(t, "h", function() {
+        return a;
+      }),
+      n.d(t, "i", function() {
+        return d;
+      }),
+      n.d(t, "k", function() {
+        return p;
+      }),
+      n.d(t, "l", function() {
+        return f;
+      }),
+      n.d(t, "m", function() {
+        return o;
       });
-    }
-    var g = new Map(),
-      _ = new Map();
-    function b(e, t) {
-      var n = new Date(),
-        r = new Date(1e3 * e);
-      if (r.getFullYear() != n.getFullYear()) return h(e);
-      c.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
-      var i = new Date();
-      if ((i.setHours(0, 0, 0, 0), i <= r)) {
-        if ((i.setDate(i.getDate() + 1), r < i)) return p("#Time_Today");
-        if ((i.setDate(i.getDate() + 1), r < i)) return p("#Time_Tomorrow");
-      } else if ((i.setDate(i.getDate() - 1), i <= r))
-        return p("#Time_Yesterday");
-      var o = { month: t ? "long" : "short", day: "numeric" },
-        s = r.setHours(0, 0, 0, 0) + o.month,
-        a = _.get(s);
-      return (
-        a ||
-        ((a = r.toLocaleDateString(B.GetPreferredLocales(), o)), _.set(s, a), a)
-      );
-    }
-    function v(e) {
-      var t = new Date(1e3 * e),
-        n = new Date();
-      if (n < t) return c.b(t.getTime() - n.getTime()), k(t);
-      c.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
-      var r = new Date();
-      if ((r.setHours(0, 0, 0, 0), r <= t)) return p("#Time_Today");
-      if ((r.setDate(r.getDate() - 1), r <= t)) return p("#Time_Yesterday");
-      if ((r.setDate(r.getDate() - 5), r <= t)) return p("#TimeSince_ThisWeek");
-      var i = new Date(r);
-      if (
-        (r.setDate(r.getDate() - 21),
-        r <= t ||
-          (t.getMonth() == n.getMonth() && t.getFullYear() == n.getFullYear()))
-      ) {
-        var o =
-          Math.floor((i.valueOf() - t.valueOf()) / (1e3 * s.d.PerWeek)) + 1;
-        return 1 == o ? p("#TimeSince_1Week") : p("#TimeSince_XWeeks", o);
-      }
-      return t.getFullYear() == n.getFullYear() ? F(t) : k(t);
-    }
-    var y = new Map(),
-      M = new Map(),
-      w = new Map(),
-      E = new Map();
-    function O(e) {
-      var t = y.get(e.getDay());
-      return (
-        t ||
-        ((t = e.toLocaleDateString(B.GetPreferredLocales(), {
-          weekday: "long"
-        })),
-        y.set(e.getDay(), t),
-        t)
-      );
-    }
-    function F(e) {
-      var t = M.get(e.getMonth());
-      return (
-        t ||
-        ((t = e.toLocaleDateString(B.GetPreferredLocales(), { month: "long" })),
-        M.set(e.getMonth(), t),
-        t)
-      );
-    }
-    function S(e) {
-      var t = w.get(e.getFullYear());
-      return (
-        t ||
-        ((t = e.toLocaleDateString(B.GetPreferredLocales(), {
-          year: "numeric"
-        })),
-        w.set(e.getFullYear(), t),
-        t)
-      );
-    }
-    function k(e) {
-      var t = e.getMonth() + 12 * e.getFullYear(),
-        n = E.get(t);
-      return (
-        n ||
-        ((n = e.toLocaleDateString(B.GetPreferredLocales(), {
-          month: "long",
-          year: "numeric"
-        })),
-        E.set(t, n),
-        n)
-      );
-    }
-    var C = {
+    var k = {
       english: "en",
       german: "de",
       french: "fr",
@@ -10748,12 +10728,71 @@
       ukrainian: "uk",
       vietnamese: "vn"
     };
-    function j() {
+    function C() {
       var e = "koreana" == i.c.LANGUAGE ? "korean" : i.c.LANGUAGE;
-      return C[e] || null;
+      return k[e] || null;
     }
-    var B = new o();
-    window.LocalizationManager = B;
+    var j = new ((function() {
+      function e() {
+        (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
+      }
+      return (
+        (e.prototype.InitFromObjects = function(e, t, n, r, i) {
+          i || this.m_mapTokens.clear();
+          var o = Object(l.a)(Object(l.a)({}, n || {}), e),
+            s = Object(l.a)(Object(l.a)({}, r || {}), t || {});
+          this.AddTokens(o, s);
+        }),
+        (e.prototype.InitDirect = function(e, t) {
+          this.m_mapTokens.clear(),
+            this.m_mapFallbackTokens.clear(),
+            this.AddTokens(e, t);
+        }),
+        (e.prototype.AddTokens = function(t, n) {
+          var r = this;
+          Object.keys(t).forEach(function(e) {
+            r.m_mapTokens.set(e, t[e]);
+          }),
+            n &&
+              Object.keys(n).forEach(function(e) {
+                r.m_mapTokens.has(e) || r.m_mapTokens.set(e, n[e]),
+                  r.m_mapFallbackTokens.set(e, n[e]);
+              });
+        }),
+        (e.prototype.GetPreferredLocales = function() {
+          return this.m_rgLocalesToUse
+            ? this.m_rgLocalesToUse
+            : navigator && navigator.languages
+            ? navigator.languages
+            : ["en-US"];
+        }),
+        (e.prototype.GetELanguageFallbackOrder = function() {
+          var t = new Array();
+          return (
+            t.push(Object(r.e)(i.c.LANGUAGE)),
+            (i.c.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+              e.value != i.c.LANGUAGE && t.push(Object(r.e)(e.value));
+            }),
+            t
+          );
+        }),
+        (e.prototype.SetPreferredLocales = function(e) {
+          this.m_rgLocalesToUse = e;
+        }),
+        (e.prototype.LocalizeString = function(e) {
+          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
+          var t = this.m_mapTokens.get(e.substring(1));
+          return void 0 === t ? "" : t;
+        }),
+        (e.prototype.LocalizeStringFromFallback = function(e) {
+          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
+          var t = this.m_mapFallbackTokens.get(e.substring(1));
+          return void 0 === t ? "" : t;
+        }),
+        e
+      );
+    })())();
+    window.LocalizationManager = j;
   },
   TtDX: function(e, t, n) {
     "use strict";
@@ -11028,7 +11067,7 @@
     "use strict";
     var c = n("mrSG"),
       l = n("q1tI"),
-      r = n("okNM"),
+      r = n("TyAF"),
       u = n("exH9"),
       i = n("bxiW"),
       A = { x: "y", y: "x" };
@@ -12732,7 +12771,6 @@
       i = c("lkRc"),
       a = c("vDqi"),
       u = c.n(a);
-    c("JMS6");
     var p = c("TLQK"),
       d = c("55Ip"),
       m = c("Ty5D"),
@@ -12874,6 +12912,7 @@
         return (
           Object(l.d)(t, e),
           (t.prototype.render = function() {
+            if ("dev" !== i.c.WEB_UNIVERSE) return null;
             var t = document.getElementById(this.props.strConfigID);
             if (!t) return null;
             var n = new Array();
@@ -14931,11 +14970,12 @@
                 (n = !1),
                 t.forEach(function(e) {
                   var t = r.m_mapAppInfo.get(e);
-                  t ||
-                    ((t = new u(e)),
-                    r.m_mapAppInfo.set(e, t),
-                    r.QueueAppInfoRequest(e),
-                    (n = !0));
+                  t
+                    ? t.is_valid || (n = !0)
+                    : ((t = new u(e)),
+                      r.m_mapAppInfo.set(e, t),
+                      r.QueueAppInfoRequest(e),
+                      (n = !0));
                 }),
                 n && void 0 !== this.m_PendingAppInfoPromise
                   ? [2, this.m_PendingAppInfoPromise]
@@ -15483,7 +15523,7 @@
         return E;
       });
     var s = n("mrSG"),
-      r = n("okNM"),
+      r = n("TyAF"),
       a = n("q1tI"),
       c = n("i8i4"),
       l = n("TtDX"),
