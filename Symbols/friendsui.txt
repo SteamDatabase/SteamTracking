@@ -2131,6 +2131,7 @@
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, int>
+ D typeinfo for CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned int, int>
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*>
  D typeinfo for CJSMethodCallHandler<CFriendsWebChat>
  D typeinfo for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
@@ -3505,6 +3506,7 @@
  D vtable for CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>
  D vtable for CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  D vtable for CJSMethodCallHandler<CFriendsWebChat, int>
+ D vtable for CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned int, int>
  D vtable for CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*>
  D vtable for CJSMethodCallHandler<CFriendsWebChat>
  D vtable for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
@@ -4265,6 +4267,7 @@
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, int>
+ R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned int, int>
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*>
  R typeinfo name for CJSMethodCallHandler<CFriendsWebChat>
  R typeinfo name for CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >
@@ -7042,6 +7045,7 @@
  T CFriendsWebChat::OnClientUINotification(ClientUINotification_t*)
  T CFriendsWebChat::OnClientUINotificationResponse(ClientUINotificationResponse_t*)
  T CFriendsWebChat::OnComputerActiveStateChange(ComputerActiveStateChange_t*)
+ T CFriendsWebChat::OnGroupChatUserStateChange(unsigned long long, unsigned int, int)
  T CFriendsWebChat::OnNewGroupChatMsgAdded(unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*)
  T CFriendsWebChat::OnOpenURLInClient(OpenURLInClient_t*)
  T CFriendsWebChat::OnOverlayChatBrowserInfoChanged(OverlayChatBrowserInfoChanged_t*)
@@ -7546,6 +7550,7 @@
  T CJSMethodCallHandler<CFriendsWebChat, char const*, int, bool>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, int, char const*, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, int>::~CJSMethodCallHandler()
+ T CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned int, int>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat, unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CFriendsWebChat>::~CJSMethodCallHandler()
  T CJSMethodCallHandler<CHTMLWindow, CSmartPtr<CJSCallbackFunc> >::~CJSMethodCallHandler()

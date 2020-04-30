@@ -245,5 +245,6 @@ public:
     virtual unknown_ret RequestSteamGroupChatMessageHistory(unsigned long long, unsigned long long, unsigned int) = 0;
     virtual unknown_ret RequestSendSteamGroupChatMessage(unsigned long long, unsigned long long, unsigned int, char const*) = 0;
     virtual unknown_ret OnNewGroupChatMsgAdded(unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*) = 0;
+    virtual unknown_ret OnGroupChatUserStateChange(unsigned long long, unsigned int, int) = 0;
     virtual unknown_ret OnReceivedGroupChatSubscriptionResponse(unsigned long long, unsigned long long, bool) = 0;
 };

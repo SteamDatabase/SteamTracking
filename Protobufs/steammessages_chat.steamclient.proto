@@ -526,6 +526,17 @@ message CChatRoom_GetChatRoomGroupSummary_Request {
 	optional uint64 chat_group_id = 1;
 }
 
+message CChatRoom_SetChatRoomGroupActiveState_Request {
+	optional uint64 chat_group_id = 1;
+	optional uint32 requesting_app_id = 2;
+	optional bool is_active = 3;
+}
+
+message CChatRoom_SetChatRoomGroupActiveState_Response {
+	optional uint32 result = 1;
+	repeated uint32 accounts_in_channel = 2;
+}
+
 message CChatRoom_AckChatMessage_Notification {
 	optional uint64 chat_group_id = 1;
 	optional uint64 chat_id = 2;
@@ -1057,6 +1068,10 @@ service ChatRoom {
 
 	rpc GetChatRoomGroupSummary (.CChatRoom_GetChatRoomGroupSummary_Request) returns (.CChatRoom_GetChatRoomGroupSummary_Response) {
 		option (method_description) = "Get basic information about a chat room group";
+	}
+
+	rpc SetChatRoomGroupActiveState (.CChatRoom_SetChatRoomGroupActiveState_Request) returns (.CChatRoom_SetChatRoomGroupActiveState_Response) {
+		option (method_description) = "Force/unforce a group chat to be considered active on the server for this suer";
 	}
 
 	rpc AckChatMessage (.CChatRoom_AckChatMessage_Notification) returns (.NoResponse) {

@@ -3745,6 +3745,7 @@
  b guard variable for CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
  b k_InvalidClientID
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
+ b s_CmdLineParamCefForce32Bit
  b s_CmdLineParamCefVerboseLogging
  b s_CmdLineParamClientUI
  b s_CmdLineParamCommunityURL

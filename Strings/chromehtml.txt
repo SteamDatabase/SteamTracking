@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-`9
-`9
 __stubs
 __TEXT
 __stub_helper
@@ -812,6 +810,8 @@ disables high-DPI support in CEF
 enables verbose logging from CEF
 -enable-keyring
 enables CEF usage of the Chromium keyring
+-cef-force-32bit
+forces usage of 32-bit steamwebhelper when available
 -store
 -community
 -clientui
@@ -1736,18 +1736,17 @@ vi
 
 
 
-t
 "
 3
+M
 D
-1
-*
+6
+/
+(
 @
-h
+t
 
 
-
-O
 H
 D
 
@@ -1757,7 +1756,6 @@ D
 "
 0
 $
-.
 Hi
 `
 
@@ -1773,8 +1771,6 @@ $
 A
 Hc
 =
-L95Uh
-
 
 Hc
 ?

@@ -4986,10 +4986,7 @@ function OnPurchaseSuccess( result )
 		$('receipt_total_price').innerHTML = result.purchasereceipt.formattedTotal;
 		$('receipt_confirmation_code').innerHTML = result.purchasereceipt.transactionid;
 		$('receipt_track_img').innerHTML = result.strReceiptPageHTML;
-		
-		$('reward_points_balance').innerHTML = result.purchasereceipt.rewardPointsBalance;
-
-		if ( result.purchasereceipt.points_earned )
+				if ( result.purchasereceipt.points_earned )
 		{
 			$('lny_tokens').style.display = 'block';
 			$('lny_tokens_points').innerHTML = result.purchasereceipt.points_earned;

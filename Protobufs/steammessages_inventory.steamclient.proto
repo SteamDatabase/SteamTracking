@@ -132,6 +132,12 @@ message CInventory_PurchaseFinalize_Request {
 	optional uint64 orderid = 3;
 }
 
+message CInventory_InspectItem_Request {
+	optional uint64 itemdefid = 1;
+	optional fixed64 itemid = 2;
+	optional string tags = 3;
+}
+
 message CInventoryClient_NewItems_Notification {
 	optional uint32 appid = 1;
 	optional .CInventory_Response inventory_response = 2;
@@ -198,6 +204,10 @@ service Inventory {
 
 	rpc PurchaseFinalize (.CInventory_PurchaseFinalize_Request) returns (.CInventory_Response) {
 		option (method_description) = "Finalizes a purchase for the user";
+	}
+
+	rpc InspectItem (.CInventory_InspectItem_Request) returns (.CInventory_Response) {
+		option (method_description) = "Get item detail given a valid inspection token";
 	}
 }
 

@@ -36,4 +36,5 @@ public:
     virtual unknown_ret SetProperty(unsigned long long, unsigned long long, char const*, long long) = 0;
     virtual unknown_ret SetProperty(unsigned long long, unsigned long long, char const*, float) = 0;
     virtual unknown_ret SubmitUpdateProperties(unsigned long long, int*) = 0;
+    virtual unknown_ret InspectItem(int*, char const*) = 0;
 };

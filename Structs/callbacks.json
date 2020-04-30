@@ -2557,7 +2557,7 @@
     {
         "id": 5901,
         "size": 20,
-        "posted_in": "CClientJobRequestChatRoomSubscriptionPermission::ResolveAndPostCallback(EResult)"
+        "posted_in": "CClientJobRequestChatRoomSubscription::ResolveAndPostCallback(EResult)"
     },
     {
         "id": 5902,
@@ -2573,5 +2573,15 @@
         "id": 5904,
         "size": 548,
         "posted_in": "CUser::OnNewGroupChatMsgAdded(unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*)"
+    },
+    {
+        "id": 5905,
+        "size": 28,
+        "posted_in": "CUser::OnGroupChatUserStateChange(unsigned long long, unsigned int, int)"
+    },
+    {
+        "id": 5906,
+        "size": 540,
+        "posted_in": "CClientJobRequestChatRoomSubscription::PostInitialUsersInChannelCallback(CChatRoom_SetChatRoomGroupActiveState_Response const&)"
     }
 ]

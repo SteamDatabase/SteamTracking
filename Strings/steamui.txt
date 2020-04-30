@@ -6445,6 +6445,7 @@ NonFriendMessageHandling
 NewVoiceHotKeyState
 PersonaNotifications
 ServerVirtualizedMemberLists
+SteamworksChatAPI
 m_Memory
 Assertion Failed: m_iRefs > 0 && m_iRefs < 0x1000000
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/refcount.h
@@ -13926,9 +13927,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-Apr 27 2020
+Apr 30 2020
 build_time
-15:00:45
+11:51:25
 package_version
 local
 SteamClient020
@@ -19568,9 +19569,7 @@ steam/cached/InstallSubChooseApps.res
 steam/cached/InstallSubChooseApps_SingleApp.res
 #Steam_ScanCDKey_RetailProductFound
 #Steam_ScanCDKey_NoRetailProduct
-%d MB
 DriveSpaceLabel
-%lld MB
 InstallSizeLabel
 DriveSpace
 InstallSize
@@ -21766,7 +21765,7 @@ ChatInvitationNotification
 GameInviteNotification
 TradeInviteNotification
 steam/cached/aboutdialog.res
-15:02:22
+11:53:15
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -31356,6 +31355,7 @@ Yp
 @
 @
 @
+`
 @
 @
 @
@@ -31423,6 +31423,7 @@ o
 @
 @
 @
+B~
 yn
 @
 @
@@ -31493,6 +31494,7 @@ n
 @
 @
 @
+^}
 @
 @
 @
@@ -31537,6 +31539,7 @@ n
 @
 @
 @
+{
 @
 @
 @
@@ -31590,7 +31593,6 @@ m
 @
 @
 #l
-n|
 @
 @
 @
@@ -31598,6 +31600,7 @@ n|
 @
 @
 @
+7|
 z
 z
 @
@@ -31614,11 +31617,11 @@ l
 j
 0
 p
-vx
 m
 p
 0
 0
+s{
 <k
 @
 @
@@ -31761,7 +31764,6 @@ PW
 @
 @
 @
-}v
 @
 @
 @
@@ -31822,6 +31824,7 @@ D
 y
 y
 x
+y
 y
 y
 y
@@ -31918,7 +31921,6 @@ h
 @
 @
 @
-<x
 @
 @
 @
@@ -31979,6 +31981,7 @@ h
 @
 L
 L
+Gw
 @
 @
 @
@@ -32040,9 +32043,8 @@ p
 p
 0
 b
-ov
+Ov
 6P
-%v
 0
 p
 We
@@ -32078,7 +32080,6 @@ c
 @
 @
 @
-Hu
 @
 @
 @
@@ -32110,10 +32111,9 @@ p
 @
 @
 @
-}t
 @
 @
-Tt
+Gt
 W
 @
 @
@@ -32178,6 +32178,7 @@ c
 @
 @
 @
+'r
 @
 @
 @
@@ -32200,7 +32201,6 @@ s
 Uy
 C
 x
-Dr
 E
 F
 9
@@ -32395,6 +32395,7 @@ _
 @
 @
 @
+Wk
 P
 @
 @
@@ -32471,6 +32472,7 @@ u
 @
 @
 @
+*o
 @
 @
 o
@@ -32579,6 +32581,7 @@ m
 @
 @
 :p
+Um
 @
 @
 @
@@ -32678,7 +32681,7 @@ GY
 E@
 0
 p
-]l
+\l
 o
 o
 :
@@ -32697,14 +32700,12 @@ l
 6
 Z
 p
-ek
 @
 @
 @
 @
 @
 @
-+k
 p
 0
 >
@@ -32722,10 +32723,10 @@ Y
 >
 3
 =
+Vj
 9
 ?X
 [
-j
 j
 X
 X
@@ -32741,9 +32742,14 @@ X
 EW
 .W
 i
+Yk
 =
 =
 {
+3g
+rh
+3V
+*h
 6
 6
 V
@@ -32755,9 +32761,6 @@ c
 /
 6
 6
-dU
-tg
-y9
 @
 p
 0
@@ -32770,41 +32773,38 @@ U
 @
 g
 
-N.
+?f
 T
 T
 T
 T
-T
+.
 .
 I
 f
 f
 f
 f
-V8
+f
+f
+f
 0
 p
 3
 3
-R2
 l
 .
 S
-S
 IcE
-e
-g
-d
-d
-d
->R
+zR
 3
+R
 ,
 ,
 6
 6
 6
+d
 d
 d
 d
@@ -32824,6 +32824,7 @@ I#E
 I#E
 A#u
 I#E
+-c
 e
 2
 c
@@ -32838,12 +32839,15 @@ c
 0
 p
 [4
+\b
 /
 /
 /
+^\
 /
 /
 /
+<[
 [
 [
 [
@@ -32854,7 +32858,6 @@ I-
 @
 @
 @
-u`
 0
 p
 0
@@ -32867,8 +32870,6 @@ p
 p
 0
 p
-:`
-8`
 
 
 =
@@ -32885,14 +32886,12 @@ Hc
 =
 @
 A1
-O_
-O_
 1
 ,L
 d
 _
+$Y
 2
-x^
 sK
 H=
 H=
@@ -32935,19 +32934,19 @@ p
 0
 p
 ]
+LY
 e#
 0
 p
 mI
-}\
 .
-W\
 I
 I
 @
+3\
 tM=
 R$
-eU
+vU
 xH
 Z
 Z
@@ -32958,7 +32957,6 @@ p
 0
 H
 H
-LU
 [
 [
 \
@@ -32992,6 +32990,7 @@ p
 ;*
 S
 S
+S
 *
 *
 *
@@ -33000,6 +32999,7 @@ S
 *
 {/
 vQ
+"X
 X
 X
 0
@@ -33010,6 +33010,7 @@ Q
 Q
 p
 0
+?Q
 =
 U
 U
@@ -33017,7 +33018,8 @@ U
 @
 )
 X
-sP
+VW
+EW
 @
 @
 BC
@@ -33036,6 +33038,8 @@ p
 0
 p
 @
+V
+V
 O%
 =B
 @
@@ -33048,6 +33052,7 @@ I
 Q
 I
 R
+nN
 @
 0
 p
@@ -33056,6 +33061,7 @@ p
 p
 0
 &&
+=U
 0
 p
 P
@@ -33101,7 +33107,6 @@ L
 3%
 +
 N
-DT
 >@
 6@
 $@
@@ -33113,7 +33118,7 @@ T
 0
 p
 Y
-nS
+;S
 @
 @
 =
@@ -33126,7 +33131,6 @@ Hc
 R
 =
 N
-$K
 `=
 =
 =
@@ -33187,6 +33191,7 @@ BM
 
 
 `
+j8
 8
 8
 @
@@ -33198,6 +33203,7 @@ H
 (
 (
 37
+;7
 ?
 @
 8
@@ -33623,6 +33629,7 @@ D
 2,
 +,
 @
+r8
 +
 +
 8
@@ -33653,6 +33660,7 @@ d
 &
 
 
+U2
 0
 
 2
@@ -33666,6 +33674,7 @@ $
 =
 =
 @
+X0
 K#
 #
 #
@@ -33680,12 +33689,11 @@ C"
 v6
 E
 g6
-G.
+F.
 ?!
 .
 .
 6
-/.
 !
 !
 .
@@ -33697,7 +33705,6 @@ G.
 5
 .
 @
-v
 \
 @
 @
@@ -33717,7 +33724,6 @@ v
 @
 =
 a3
-e+
 
 
 @
@@ -33752,6 +33758,7 @@ d
 d
 d
 =
+|)
 
 =
 =
@@ -33764,7 +33771,6 @@ d
 7
 @
 @
-D(
 P
 P
 @
@@ -33791,6 +33797,7 @@ n0
 0
 0
 /
+n'
 E
 ./
 `
@@ -33829,6 +33836,7 @@ i
 @
 @
 t
+z%
 @
 @
 @
@@ -33867,6 +33875,7 @@ t
 [
 @
 @
+xw
 @
 @
 @
@@ -34083,6 +34092,7 @@ U
 @
 @
 @
+nr
 @
 @
 @
@@ -34193,7 +34203,7 @@ $
 @
 @
 c
-|j
+7j
 j
 j
 b
@@ -34209,11 +34219,17 @@ b
 @
 @
 @
-L95$#
+L95
+>
+L954#
+L95
 N
 K
 x
 ~
+9j
+Y}
+X}
 @
 @
 @
@@ -34245,7 +34261,6 @@ x
 @
 @
 g
-3
 @
 @
 @
@@ -34318,17 +34333,14 @@ g
 @
 @
 @
-h{
 @
 @
 @
 @
 @
 @
-}{
 @
 @
-b{
 @
 @
 @
@@ -34339,7 +34351,6 @@ b{
 @
 @
 @
-Z{
 @
 @
 @
@@ -34398,7 +34409,6 @@ Z{
 @
 @
 @
-/{
 @
 @
 @
@@ -34446,7 +34456,6 @@ Z{
 @
 @
 @
-Fe
 @
 @
 @
@@ -34547,6 +34556,7 @@ Fe
 @
 @
 @
+e
 @
 @
 @
@@ -34597,11 +34607,8 @@ e
 @
 @
 @
-.}
+[y
 p
-y
-y
-y
 y
 y
 y
