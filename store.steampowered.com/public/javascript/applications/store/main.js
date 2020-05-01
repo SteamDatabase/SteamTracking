@@ -115,67 +115,67 @@
                     1: "f7684976056de464a080",
                     2: "ffe35258fe9aaa0375ee",
                     3: "15ffb242f035b0ffc744",
-                    4: "fe30d00ad9caf40dfd56",
+                    4: "b26cd8df231b02a2f633",
                     5: "d653b6ffc60bd2889972",
                     6: "a047a340760811701958",
                     7: "fc41085a60e652bbddeb",
-                    8: "2f32be06a79b0018124d",
+                    8: "982ae67fe7962f3659ba",
                     9: "950c0773dd42d219e8dc",
-                    11: "6c96dc86b144b1c8f064",
+                    11: "9c3020e4be5c8c95978e",
                     12: "7da729cfe3d2c031e356",
-                    13: "99c9f110ce62603d1946",
-                    14: "a39cfba36adf7fb3b82b",
-                    15: "971c563be8d68ffb1067",
-                    16: "dbf724d001a3d5c334f0",
-                    17: "4c3e97a0287477437120",
-                    18: "37ca952a197d33a6f1e1",
-                    19: "0c6fc89b4d254bca5bef",
-                    20: "005825b981ab0b08156c",
-                    21: "e450b11b9656046b4b69",
-                    22: "a675a4734509d79551c1",
-                    23: "4ffb7cbea6a7d0debaed",
-                    24: "760c41851040022a0f88",
-                    25: "0ecd3178517307108994",
-                    26: "6b55602d0a9d76d836b9",
-                    27: "d05d0d07bfd7c152f29c",
-                    28: "2932920e197ee1946bb4",
-                    29: "ac562434404f2cf31058",
-                    30: "2081293e2c7113cb2c88",
-                    31: "1fe839d52af11601709e",
-                    32: "09fbc91ac6f499c2ae45",
-                    33: "f6ba8496ad38d379faee",
-                    34: "e3d75943af0cbe997051",
-                    35: "18ffc697c4ee6e73ce4a",
-                    36: "cd5d2d42f8a8b282a400",
-                    37: "0441bac8fac2ffe74ca8",
+                    13: "82a6dba0fc68ac24b22c",
+                    14: "ec51a2f3be7a929ee9d3",
+                    15: "345513637b35b4a6997e",
+                    16: "63d73c6d7084a77df061",
+                    17: "9a21a24a3708057a4218",
+                    18: "a201b11b60b67fc92803",
+                    19: "5f303f4f47a0375a77ff",
+                    20: "2ea1ed285aec66edc112",
+                    21: "ef84fb303c6d6edbe208",
+                    22: "d215e5aae5c959291d9b",
+                    23: "ea5d71ae21b5dfcbdbae",
+                    24: "44c0db053cddd9340bb2",
+                    25: "86a9f984442835a21f1f",
+                    26: "1d85149ad460f4746201",
+                    27: "1a4d31ff14e9a5b78041",
+                    28: "19c7191bc21567e04269",
+                    29: "b8929fe9a22890f92a80",
+                    30: "8b05b59c14d4da74da19",
+                    31: "2273db9506ed99814928",
+                    32: "0031a2647541d2f10403",
+                    33: "5500ff91ce176a7d21be",
+                    34: "9e26c811ef206a6ee5b1",
+                    35: "825f14407c00e187a7fe",
+                    36: "a163663d8e39d7ae4fe7",
+                    37: "6127c7d8c16e1aa76158",
                     38: "43c2af207842bed42b2d",
-                    39: "7ec39edc2ef2115dd734",
-                    40: "9aacbdcfec4be8b60475",
-                    41: "e090fe33b53a30d34775",
-                    42: "39feeadc4c4abc0c9a05",
-                    43: "2f4b80676148c6b5ef4b",
-                    44: "5340e91d52f040d90ba9",
-                    45: "2f1c2c3f5fc2e5e0115e",
-                    46: "601a3bfa4b9befaaa512",
-                    47: "95956db701e79defab7d",
-                    48: "925793c8c866638923ad",
-                    49: "fc5c51207f901b4fc1dc",
-                    50: "e965bdad0e493bc58fa1",
-                    51: "ccf4beb1cffceeeb7962",
-                    52: "e0c36dc12d1cb2a7a0af",
-                    53: "5b0be2a77449c4b4e7fd",
-                    54: "eaa4eb71d7f59dd0ee17",
-                    55: "a02bdceb97ec9afb36e3",
-                    56: "675dd3147d1c2548ed0d",
-                    57: "959cbb4635edb146ac8e",
-                    58: "3294296b2e062b08be86",
-                    59: "e08be8fed1a9ebafd48e",
-                    60: "2dff34398a71b2ea029e",
-                    61: "fb57e0e67156fcf3d43e",
-                    62: "ef33ce12c793eac687ec",
-                    63: "5ba4628763c4567f3e89",
-                    64: "664d3f9a09b630bfc920",
-                    65: "850b9ea89434616a3af4",
+                    39: "f4a447d3ce287a1d9daf",
+                    40: "bd777524ae8b97caa89c",
+                    41: "fb726e600c9de3296150",
+                    42: "40add5775ed51cf52aa2",
+                    43: "437ac59fcf82b0ff6e2f",
+                    44: "b98b30c5c63cedae536a",
+                    45: "e49f84b01d00bbc3e8fb",
+                    46: "805e9d6ae9efdced5574",
+                    47: "9b91522acbfbe5521421",
+                    48: "d1d9cf02899cba1bd012",
+                    49: "59e2234acd620792e170",
+                    50: "4874be3a36f23d7de4f9",
+                    51: "0e94e8cb478f001d8e05",
+                    52: "1d9c31bf4cd3d55c62bd",
+                    53: "87436b25ec692ecc9481",
+                    54: "77d897fdfe03283eaefd",
+                    55: "01da49bf55f2fdbb5d9d",
+                    56: "60428a2f1f413d883ae8",
+                    57: "7a335c3b72443c3ea382",
+                    58: "fa01cf221c459b455251",
+                    59: "1ddd187715cb8be16609",
+                    60: "ff42bae345e99a561bcf",
+                    61: "59cef27dbe8415b8af13",
+                    62: "304a0819c67afc903c50",
+                    63: "430bea47bbcca9e0c038",
+                    64: "0984c0e66caf07284557",
+                    65: "ddee54ad7ecb233c3e9e",
                     66: "b22caf11e761c1852355"
                   }[u],
                 i = m.p + t,
@@ -305,67 +305,67 @@
                 1: "f7684976056de464a080",
                 2: "ffe35258fe9aaa0375ee",
                 3: "15ffb242f035b0ffc744",
-                4: "fe30d00ad9caf40dfd56",
+                4: "b26cd8df231b02a2f633",
                 5: "d653b6ffc60bd2889972",
                 6: "a047a340760811701958",
                 7: "fc41085a60e652bbddeb",
-                8: "2f32be06a79b0018124d",
+                8: "982ae67fe7962f3659ba",
                 9: "950c0773dd42d219e8dc",
-                11: "6c96dc86b144b1c8f064",
+                11: "9c3020e4be5c8c95978e",
                 12: "7da729cfe3d2c031e356",
-                13: "99c9f110ce62603d1946",
-                14: "a39cfba36adf7fb3b82b",
-                15: "971c563be8d68ffb1067",
-                16: "dbf724d001a3d5c334f0",
-                17: "4c3e97a0287477437120",
-                18: "37ca952a197d33a6f1e1",
-                19: "0c6fc89b4d254bca5bef",
-                20: "005825b981ab0b08156c",
-                21: "e450b11b9656046b4b69",
-                22: "a675a4734509d79551c1",
-                23: "4ffb7cbea6a7d0debaed",
-                24: "760c41851040022a0f88",
-                25: "0ecd3178517307108994",
-                26: "6b55602d0a9d76d836b9",
-                27: "d05d0d07bfd7c152f29c",
-                28: "2932920e197ee1946bb4",
-                29: "ac562434404f2cf31058",
-                30: "2081293e2c7113cb2c88",
-                31: "1fe839d52af11601709e",
-                32: "09fbc91ac6f499c2ae45",
-                33: "f6ba8496ad38d379faee",
-                34: "e3d75943af0cbe997051",
-                35: "18ffc697c4ee6e73ce4a",
-                36: "cd5d2d42f8a8b282a400",
-                37: "0441bac8fac2ffe74ca8",
+                13: "82a6dba0fc68ac24b22c",
+                14: "ec51a2f3be7a929ee9d3",
+                15: "345513637b35b4a6997e",
+                16: "63d73c6d7084a77df061",
+                17: "9a21a24a3708057a4218",
+                18: "a201b11b60b67fc92803",
+                19: "5f303f4f47a0375a77ff",
+                20: "2ea1ed285aec66edc112",
+                21: "ef84fb303c6d6edbe208",
+                22: "d215e5aae5c959291d9b",
+                23: "ea5d71ae21b5dfcbdbae",
+                24: "44c0db053cddd9340bb2",
+                25: "86a9f984442835a21f1f",
+                26: "1d85149ad460f4746201",
+                27: "1a4d31ff14e9a5b78041",
+                28: "19c7191bc21567e04269",
+                29: "b8929fe9a22890f92a80",
+                30: "8b05b59c14d4da74da19",
+                31: "2273db9506ed99814928",
+                32: "0031a2647541d2f10403",
+                33: "5500ff91ce176a7d21be",
+                34: "9e26c811ef206a6ee5b1",
+                35: "825f14407c00e187a7fe",
+                36: "a163663d8e39d7ae4fe7",
+                37: "6127c7d8c16e1aa76158",
                 38: "43c2af207842bed42b2d",
-                39: "7ec39edc2ef2115dd734",
-                40: "9aacbdcfec4be8b60475",
-                41: "e090fe33b53a30d34775",
-                42: "39feeadc4c4abc0c9a05",
-                43: "2f4b80676148c6b5ef4b",
-                44: "5340e91d52f040d90ba9",
-                45: "2f1c2c3f5fc2e5e0115e",
-                46: "601a3bfa4b9befaaa512",
-                47: "95956db701e79defab7d",
-                48: "925793c8c866638923ad",
-                49: "fc5c51207f901b4fc1dc",
-                50: "e965bdad0e493bc58fa1",
-                51: "ccf4beb1cffceeeb7962",
-                52: "e0c36dc12d1cb2a7a0af",
-                53: "5b0be2a77449c4b4e7fd",
-                54: "eaa4eb71d7f59dd0ee17",
-                55: "a02bdceb97ec9afb36e3",
-                56: "675dd3147d1c2548ed0d",
-                57: "959cbb4635edb146ac8e",
-                58: "3294296b2e062b08be86",
-                59: "e08be8fed1a9ebafd48e",
-                60: "2dff34398a71b2ea029e",
-                61: "fb57e0e67156fcf3d43e",
-                62: "ef33ce12c793eac687ec",
-                63: "5ba4628763c4567f3e89",
-                64: "664d3f9a09b630bfc920",
-                65: "850b9ea89434616a3af4",
+                39: "f4a447d3ce287a1d9daf",
+                40: "bd777524ae8b97caa89c",
+                41: "fb726e600c9de3296150",
+                42: "40add5775ed51cf52aa2",
+                43: "437ac59fcf82b0ff6e2f",
+                44: "b98b30c5c63cedae536a",
+                45: "e49f84b01d00bbc3e8fb",
+                46: "805e9d6ae9efdced5574",
+                47: "9b91522acbfbe5521421",
+                48: "d1d9cf02899cba1bd012",
+                49: "59e2234acd620792e170",
+                50: "4874be3a36f23d7de4f9",
+                51: "0e94e8cb478f001d8e05",
+                52: "1d9c31bf4cd3d55c62bd",
+                53: "87436b25ec692ecc9481",
+                54: "77d897fdfe03283eaefd",
+                55: "01da49bf55f2fdbb5d9d",
+                56: "60428a2f1f413d883ae8",
+                57: "7a335c3b72443c3ea382",
+                58: "fa01cf221c459b455251",
+                59: "1ddd187715cb8be16609",
+                60: "ff42bae345e99a561bcf",
+                61: "59cef27dbe8415b8af13",
+                62: "304a0819c67afc903c50",
+                63: "430bea47bbcca9e0c038",
+                64: "0984c0e66caf07284557",
+                65: "ddee54ad7ecb233c3e9e",
                 66: "b22caf11e761c1852355"
               }[e]
             );
@@ -548,10 +548,10 @@
         return _;
       }),
       n.d(t, "c", function() {
-        return b;
+        return v;
       }),
       n.d(t, "f", function() {
-        return v;
+        return b;
       }),
       n.d(t, "m", function() {
         return y;
@@ -1024,7 +1024,7 @@
         })
       );
     }
-    function b() {
+    function v() {
       return r.createElement(
         "svg",
         {
@@ -1049,7 +1049,7 @@
         })
       );
     }
-    function v(e) {
+    function b(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return r.createElement(
@@ -2174,7 +2174,7 @@
                       (s = Math.acos(p)),
                       [
                         4,
-                        new b(
+                        new v(
                           function(o) {
                             return Object(y.b)(c, void 0, void 0, function() {
                               var t, n, r, i;
@@ -2358,7 +2358,7 @@
           e
         );
       })(),
-      b = (function() {
+      v = (function() {
         function e(e, t, n, r) {
           (this.m_fnGetNeighbors = e),
             (this.m_fnEstimateCosts = t),
@@ -2366,7 +2366,7 @@
             (this.m_fnIterationCallback = r);
         }
         return (
-          (e.prototype.FindPath = function(_, b, v) {
+          (e.prototype.FindPath = function(_, v, b) {
             return Object(y.b)(this, void 0, void 0, function() {
               var o, s, a, c, l, t, n, u, r, i, p, d, m, h, f, g;
               return Object(y.e)(this, function(e) {
@@ -2381,7 +2381,7 @@
                       (a = new Map()),
                       (c = new Map()),
                       (l = new Map()),
-                      [4, this.m_fnEstimateCosts([_], b)]
+                      [4, this.m_fnEstimateCosts([_], v)]
                     );
                   case 1:
                     (t = e.sent()[0]),
@@ -2390,8 +2390,8 @@
                       (n = 0),
                       (e.label = 2);
                   case 2:
-                    if (!(0 < o.length && n < v)) return [3, 6];
-                    if (((u = o.Pop()), this.m_fnEquality(u.node, b))) {
+                    if (!(0 < o.length && n < b)) return [3, 6];
+                    if (((u = o.Pop()), this.m_fnEquality(u.node, v))) {
                       for (r = [], i = u.node; l.has(i); )
                         r.push(i), (i = l.get(i));
                       for (p = [], g = r.length - 1; 0 <= g; g--)
@@ -2407,7 +2407,7 @@
                             d.map(function(e) {
                               return e.node;
                             }),
-                            b
+                            v
                           )
                         ]
                       : [3, 5];
@@ -2466,8 +2466,8 @@
           e
         );
       })(),
-      v = new m();
-    window.g_LabsSandbox = v;
+      b = new m();
+    window.g_LabsSandbox = b;
     var h = n("TyAF"),
       w = n("ZApo"),
       f = n("exH9"),
@@ -2864,7 +2864,7 @@
                 })
               );
             }
-            for (var o = [], s = 0, a = v.rgModelNames; s < a.length; s++) {
+            for (var o = [], s = 0, a = b.rgModelNames; s < a.length; s++) {
               var c = a[s],
                 l = { label: g.a.createElement("div", { key: c }, c), data: c };
               o.push(l);
@@ -3062,7 +3062,7 @@
             }
           }),
           (e.prototype.render = function() {
-            for (var e = [], t = 0, n = v.rgModelNames; t < n.length; t++) {
+            for (var e = [], t = 0, n = b.rgModelNames; t < n.length; t++) {
               var r = n[t],
                 i = { label: g.a.createElement("div", { key: r }, r), data: r };
               e.push(i);
@@ -3154,7 +3154,7 @@
               ((this.in_progress = !0),
               (this.progress_iteration = 0),
               (this.found_path = void 0),
-              v
+              b
                 .ComputePathBetweenApps(
                   this.app_start,
                   this.app_end,
@@ -3282,7 +3282,7 @@
         return (
           Object(y.d)(e, t),
           (e.prototype.componentDidMount = function() {
-            v.Init(), this.setState({ ready_to_run: !0 });
+            b.Init(), this.setState({ ready_to_run: !0 });
           }),
           (e.prototype.render = function() {
             return this.state.ready_to_run
@@ -3917,25 +3917,25 @@
       });
     var g,
       _ = [],
-      b = function(e, t) {
+      v = function(e, t) {
         return _.push({ error: e, cCallsitesToIgnore: t });
       },
-      v = console.assert;
+      b = console.assert;
     console.assert = function(e, t) {
       for (var n = [], r = 2; r < arguments.length; r++)
         n[r - 2] = arguments[r];
-      e || b(new Error(w.apply(void 0, Object(i.g)([t], n))), 2),
-        v.apply(console, Object(i.g)([e, t], n));
+      e || v(new Error(w.apply(void 0, Object(i.g)([t], n))), 2),
+        b.apply(console, Object(i.g)([e, t], n));
     };
     var y = console.error;
     (console.error = function(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
-      b(new Error(w.apply(void 0, Object(i.g)([e], t))), 1),
+      v(new Error(w.apply(void 0, Object(i.g)([e], t))), 1),
         y.apply(console, Object(i.g)([e], t));
     }),
       (g = window.setTimeout(function() {
-        (_ = []), (b = function() {});
+        (_ = []), (v = function() {});
       }, 3e4));
     var M = (function() {
       function e(e) {
@@ -3945,7 +3945,7 @@
           (this.m_rgErrorQueue = []),
           (this.m_bEnabled = !0),
           (this.m_bInitialized = !1),
-          (b = e
+          (v = e
             ? (_.forEach(function(e) {
                 var t = e.error,
                   n = e.cCallsitesToIgnore;
@@ -4608,12 +4608,12 @@
               var g = h[f];
               if ("stylesheet" == g.rel) {
                 for (
-                  var _ = l.document.createElement("link"), b = 0;
-                  b < g.attributes.length;
-                  b++
+                  var _ = l.document.createElement("link"), v = 0;
+                  v < g.attributes.length;
+                  v++
                 ) {
-                  var v = g.attributes.item(b);
-                  _.setAttribute(v.name, v.value);
+                  var b = g.attributes.item(v);
+                  _.setAttribute(b.name, b.value);
                 }
                 m.appendChild(_);
               }
@@ -4757,10 +4757,10 @@
         return _;
       }),
       n.d(t, "b", function() {
-        return b;
+        return v;
       }),
       n.d(t, "c", function() {
-        return v;
+        return b;
       }),
       n.d(t, "d", function() {
         return y;
@@ -4864,7 +4864,7 @@
           e
         );
       })(u.Component),
-      b = (function(e) {
+      v = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -4892,7 +4892,7 @@
               ]),
               c = r || Object(p.d)("#Button_Close");
             return u.createElement(
-              v,
+              b,
               Object(l.a)({}, a),
               u.createElement(d.i, null, " ", t, " "),
               u.createElement(
@@ -4918,7 +4918,7 @@
           (t = Object(l.c)([a.observer], t))
         );
       })(u.Component),
-      v = (function(e) {
+      b = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -4979,7 +4979,7 @@
               },
               this.props
             );
-            return u.createElement(b, Object(l.a)({}, e));
+            return u.createElement(v, Object(l.a)({}, e));
           }),
           (t = Object(l.c)([a.observer], t))
         );
@@ -6267,7 +6267,7 @@
           r
         );
       })(o.Message)),
-      b = (o.Message,
+      v = (o.Message,
       (function(n) {
         function r(e) {
           void 0 === e && (e = null);
@@ -6379,7 +6379,7 @@
           r
         );
       })(o.Message)),
-      v = (o.Message,
+      b = (o.Message,
       (function(n) {
         function r(e) {
           void 0 === e && (e = null);
@@ -7830,10 +7830,10 @@
         return e.SendMsg("Community.DeleteCommentFromThread#1", t, _, {});
       }),
       (a.RateCommentThread = function(e, t) {
-        return e.SendMsg("Community.RateCommentThread#1", t, b, {});
+        return e.SendMsg("Community.RateCommentThread#1", t, v, {});
       }),
       (a.GetCommentThreadRatings = function(e, t) {
-        return e.SendMsg("Community.GetCommentThreadRatings#1", t, v, {});
+        return e.SendMsg("Community.GetCommentThreadRatings#1", t, b, {});
       }),
       (a.RateClanAnnouncement = function(e, t) {
         return e.SendMsg("Community.RateClanAnnouncement#1", t, M, {});
@@ -7936,8 +7936,8 @@
       p = R("DialogLabel _DialogLayout"),
       d = R("DialogBodyText"),
       m = R("DialogBody"),
-      b = (R("DialogInnerBody"), R("DialogBodyNotificationBar")),
-      v = R("DialogTwoColLayout _DialogColLayout"),
+      v = (R("DialogInnerBody"), R("DialogBodyNotificationBar")),
+      b = R("DialogTwoColLayout _DialogColLayout"),
       y = R("DialogThreeColLayout _DialogColLayout");
     R("DialogTwoThirdColLayout _DialogColLayout"),
       R("DialogColumn _DialogLayout");
@@ -8026,7 +8026,7 @@
     }
     function S(e) {
       return f.createElement(
-        v,
+        b,
         null,
         f.createElement(
           O,
@@ -10580,8 +10580,8 @@
       return t.getFullYear() == n.getFullYear() ? w(t) : O(t);
     }
     var _ = new Map(),
-      b = new Map(),
       v = new Map(),
+      b = new Map(),
       y = new Map();
     function M(e) {
       var t = _.get(e.getDay());
@@ -10595,22 +10595,22 @@
       );
     }
     function w(e) {
-      var t = b.get(e.getMonth());
+      var t = v.get(e.getMonth());
       return (
         t ||
         ((t = e.toLocaleDateString(j.GetPreferredLocales(), { month: "long" })),
-        b.set(e.getMonth(), t),
+        v.set(e.getMonth(), t),
         t)
       );
     }
     function E(e) {
-      var t = v.get(e.getFullYear());
+      var t = b.get(e.getFullYear());
       return (
         t ||
         ((t = e.toLocaleDateString(j.GetPreferredLocales(), {
           year: "numeric"
         })),
-        v.set(e.getFullYear(), t),
+        b.set(e.getFullYear(), t),
         t)
       );
     }
@@ -11122,7 +11122,7 @@
     function _(e, t) {
       e && ("function" == typeof e ? e(t) : (e.current = t));
     }
-    function b(e, t, n) {
+    function v(e, t, n) {
       var r = e,
         i = null != r.getAttribute("data-nav"),
         o = i ? r.getAttribute("data-nav-scroll-axes") : void 0;
@@ -11154,7 +11154,7 @@
       ((p = U || (U = {})).Area = "area"),
       (p.Group = "group"),
       (p.Stop = "stop");
-    var v = (function() {
+    var b = (function() {
         function t() {}
         return (
           Object.defineProperty(t, "IsNavEnabled", {
@@ -11202,7 +11202,7 @@
           (e.prototype.FocusableElementAttributes = function(e) {
             var t = {};
             return (
-              v.IsNavEnabled && e.navStop && (t.tabIndex = -2),
+              b.IsNavEnabled && e.navStop && (t.tabIndex = -2),
               "number" == typeof e.tabStop && (t.tabIndex = e.tabStop),
               !0 === e.tabStop && (t.tabIndex = 0),
               t
@@ -11217,7 +11217,7 @@
           (e.Attributes = function(e, t) {
             var n = {};
             if (
-              (v.IsNavEnabled &&
+              (b.IsNavEnabled &&
                 (e.navStop && (n["data-nav"] = U.Stop),
                 e.preferredNavStop && (n["data-nav-preferred"] = "true"),
                 e.scrollToX && (n["data-nav-scroll-x"] = e.scrollToX),
@@ -11230,7 +11230,7 @@
           }),
           Object.defineProperty(e, "navStopClass", {
             get: function() {
-              return v.IsNavEnabled ? d : void 0;
+              return b.IsNavEnabled ? d : void 0;
             },
             enumerable: !0,
             configurable: !0
@@ -11269,7 +11269,7 @@
                 "className",
                 "children"
               ]));
-            return null != this.context && v.IsNavEnabled
+            return null != this.context && b.IsNavEnabled
               ? Object(c.a)(
                   Object(c.a)(
                     Object(c.a)({}, w.Attributes(this.props, this.context)),
@@ -11326,7 +11326,7 @@
         return (
           Object(c.d)(e, n),
           ((B = e).FocusWithin = function(e) {
-            if (v.IsNavEnabled) {
+            if (b.IsNavEnabled) {
               var t = B.sm_navAreaStack;
               if (0 !== t.length) {
                 var n = t[t.length - 1],
@@ -11433,12 +11433,12 @@
                 g < _.length;
                 g++
               ) {
-                var b = n * H((S = _[g]))[t][m];
-                b < f && ((f = b), (h = S));
+                var v = n * H((S = _[g]))[t][m];
+                v < f && ((f = v), (h = S));
               }
               if (null !== h) return { htmlElement: h, pos: V(h) };
             }
-            var v,
+            var b,
               y = Object(D.d)(p, function(e) {
                 return null !== e.m_focusPos;
               });
@@ -11454,7 +11454,7 @@
               ) {
                 var S,
                   k = V((S = F[O])),
-                  C = (void 0, (v = T(M, k)), Math.sqrt(R(v, v)));
+                  C = (void 0, (b = T(M, k)), Math.sqrt(R(b, b)));
                 C < w && ((w = C), (E = S));
               }
               if (E) return { htmlElement: E, pos: V(E) };
@@ -11503,13 +11503,13 @@
                 f = null,
                 g = null,
                 _ = 1 / 0,
-                b = [],
-                v = 0,
+                v = [],
+                b = 0,
                 y = Object(G.k)(c, "data-nav");
-              v < y.length;
-              v++
+              b < y.length;
+              b++
             ) {
-              if ((L = y[v]) !== e && L.getAttribute("data-nav") !== U.Area) {
+              if ((L = y[b]) !== e && L.getAttribute("data-nav") !== U.Area) {
                 n &&
                   null === f &&
                   "true" === L.getAttribute("data-nav-preferred") &&
@@ -11527,7 +11527,7 @@
                   (C[u] = M[u][o]), (C[i] = O + k);
                   var j = T(h, C),
                     B = (E * E + k * k) / Math.abs(j[u]);
-                  B < _ && ((_ = B), (g = L)), b.push({ score: B, element: L });
+                  B < _ && ((_ = B), (g = L)), v.push({ score: B, element: L });
                 }
               }
             }
@@ -11555,12 +11555,12 @@
             if (g) {
               var D;
               if ((D = R(g))) return D;
-              b.sort(function(e, t) {
+              v.sort(function(e, t) {
                 return e.score - t.score;
               });
-              for (var I = 0; I < b.length; ++I) {
+              for (var I = 0; I < v.length; ++I) {
                 var L;
-                if ((L = b[I].element) !== g) {
+                if ((L = v[I].element) !== g) {
                   var x = R(L);
                   if (x) return x;
                 }
@@ -11581,11 +11581,11 @@
               if (null !== a) return a;
               if (s === e) return null;
               for (var c = o.parentElement; c && c !== s; ) {
-                if (b(c, r, i) === m.Scrollable) return null;
+                if (v(c, r, i) === m.Scrollable) return null;
                 c = c.parentElement;
               }
               if (!c) return null;
-              if (c === s && b(c, r, i) === m.Scrollable) return null;
+              if (c === s && v(c, r, i) === m.Scrollable) return null;
               o = s;
             }
           }),
@@ -11641,7 +11641,7 @@
             return null;
           }),
           (e.prototype.HandleKeyDown = function(e) {
-            if (v.IsNavEnabled) {
+            if (b.IsNavEnabled) {
               var t = this.m_navAreaDivRef.current;
               if (t) {
                 var n = B.k_KeyNavigationDirections[e.key];
@@ -11668,7 +11668,7 @@
             }
           }),
           (e.HandleDocumentKeyDown = function(e) {
-            if (v.IsNavEnabled) {
+            if (b.IsNavEnabled) {
               var t = B.sm_navAreaStack;
               if (0 !== t.length) {
                 var n = t[t.length - 1],
@@ -11752,7 +11752,7 @@
             }
           }),
           (e.prototype.componentDidMount = function() {
-            if (v.IsNavEnabled) {
+            if (b.IsNavEnabled) {
               if (!this.m_navAreaDivRef.current) return;
               var e = this.m_navAreaDivRef.current.ownerDocument;
               if (!e) return;
@@ -11792,8 +11792,8 @@
                 "onHome",
                 "focusController"
               ]),
-              o = v.IsNavEnabled,
-              s = v.IsPointerVisible,
+              o = b.IsNavEnabled,
+              s = b.IsPointerVisible,
               a = o
                 ? {
                     onKeyDown: this.HandleKeyDown,
@@ -12061,7 +12061,7 @@
         return _;
       }),
       n.d(t, "k", function() {
-        return b;
+        return v;
       });
     var r = n("Kw0F");
     n("r64O");
@@ -12245,7 +12245,7 @@
         r = r.parentElement;
       return r || e;
     }
-    function b(e, t) {
+    function v(e, t) {
       for (var n = [], r = [e]; 0 < r.length; )
         for (var i = r.pop().children, o = 0; o < i.length; ++o) {
           var s = i[o];
@@ -12904,8 +12904,8 @@
           }
         }
       );
-    var b = c("kyHq"),
-      v = (function(e) {
+    var v = c("kyHq"),
+      b = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -13187,7 +13187,7 @@
                         path: _.DiagData(),
                         render: function(e) {
                           return s.a.createElement(
-                            v,
+                            b,
                             Object(l.a)({}, e, {
                               key: "diab_data_" + e.match.params.gid,
                               strConfigID: "application_config"
@@ -13226,7 +13226,7 @@
                                 key: "sale_" + e.match.params.salePageName,
                                 promotionname:
                                   "sale_" + e.match.params.salePageName,
-                                language: Object(b.f)(i.c.LANGUAGE)
+                                language: Object(v.f)(i.c.LANGUAGE)
                               })
                             : s.a.createElement(
                                 x,
@@ -13262,7 +13262,7 @@
                               e.match.params.salePageName,
                             promotionname:
                               "sale_" + e.match.params.salePageName,
-                            language: Object(b.f)(i.c.LANGUAGE)
+                            language: Object(v.f)(i.c.LANGUAGE)
                           });
                         }
                       }),
@@ -13272,7 +13272,7 @@
                           return s.a.createElement(S, {
                             key: "sale_remoteplaylanding",
                             promotionname: "remoteplaylanding",
-                            language: Object(b.f)(i.c.LANGUAGE)
+                            language: Object(v.f)(i.c.LANGUAGE)
                           });
                         }
                       }),
@@ -13282,7 +13282,7 @@
                           return s.a.createElement(S, {
                             key: "sale_together",
                             promotionname: "sale_together",
-                            language: Object(b.f)(i.c.LANGUAGE)
+                            language: Object(v.f)(i.c.LANGUAGE)
                           });
                         }
                       }),
@@ -13902,13 +13902,13 @@
         "k_ERemoteClientLaunchInvisible"),
       (g[(g.k_ERemoteClientLaunchRestrictedCountry = 28)] =
         "k_ERemoteClientLaunchRestrictedCountry");
-    var _, b;
-    ((b = _ || (_ = {}))[(b.k_ESteamRealmUnknown = 0)] =
+    var _, v;
+    ((v = _ || (_ = {}))[(v.k_ESteamRealmUnknown = 0)] =
       "k_ESteamRealmUnknown"),
-      (b[(b.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
-      (b[(b.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
-    var v, y, M, w, E, O;
-    ((y = v || (v = {}))[(y.Unknown = 0)] = "Unknown"),
+      (v[(v.k_ESteamRealmGlobal = 1)] = "k_ESteamRealmGlobal"),
+      (v[(v.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
+    var b, y, M, w, E, O;
+    ((y = b || (b = {}))[(y.Unknown = 0)] = "Unknown"),
       (y[(y.Wired = 1)] = "Wired"),
       (y[(y.Wireless = 2)] = "Wireless"),
       ((w = M || (M = {}))[(w.NotPresent = 0)] = "NotPresent"),
@@ -15505,10 +15505,10 @@
       return _;
     }),
       n.d(t, "d", function() {
-        return b;
+        return v;
       }),
       n.d(t, "b", function() {
-        return v;
+        return b;
       }),
       n.d(t, "f", function() {
         return y;
@@ -15566,7 +15566,7 @@
           t
         );
       })(a.PureComponent),
-      b = (function(e) {
+      v = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -15618,7 +15618,7 @@
           t
         );
       })(a.PureComponent),
-      v = (function(e) {
+      b = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -15631,7 +15631,7 @@
               r = e.className,
               i = Object(s.f)(e, ["bChecked", "children", "className"]);
             return a.createElement(
-              b,
+              v,
               Object(s.a)({}, i, {
                 className: Object(g.a)(r, t && "menuChecked")
               }),
@@ -15776,16 +15776,16 @@
                 g = c || r.right,
                 _ = i.width;
               s.bMatchWidth && ((_ = g - f), (a.menuWidth = _));
-              var b = (s.bOverlapHorizontal ? g : f) - _,
-                v = 0 < b,
+              var v = (s.bOverlapHorizontal ? g : f) - _,
+                b = 0 < v,
                 y = u - (s.bOverlapHorizontal ? f : g) - _,
                 M = 0 < y,
-                w = (s.bPreferPopLeft || !M) && v;
-              v ||
+                w = (s.bPreferPopLeft || !M) && b;
+              b ||
                 M ||
-                ((w = M < v),
-                s.bFitToWindow && ((_ += (w ? b : y) - 8), (a.menuWidth = _))),
-                (!s.bPreferPopLeft && M) || !v
+                ((w = M < b),
+                s.bFitToWindow && ((_ += (w ? v : y) - 8), (a.menuWidth = _))),
+                (!s.bPreferPopLeft && M) || !b
                   ? (a.menuLeft = s.bOverlapHorizontal ? f : g)
                   : (a.menuRight = u - (s.bOverlapHorizontal ? g : f));
               var E = l || r.top,
@@ -16005,7 +16005,7 @@
         (n.document.queryCommandEnabled("cut") || (i && s)) &&
           t.push(
             a.createElement(
-              b,
+              v,
               {
                 key: "cut",
                 onSelected: function() {
@@ -16018,7 +16018,7 @@
         (document.queryCommandEnabled("copy") || i) &&
           t.push(
             a.createElement(
-              b,
+              v,
               {
                 key: "copy",
                 onSelected: function() {
@@ -16032,7 +16032,7 @@
           s &&
           t.push(
             a.createElement(
-              b,
+              v,
               {
                 key: "paste",
                 onSelected: function() {
