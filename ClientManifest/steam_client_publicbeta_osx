@@ -1,6 +1,6 @@
 "osx"
 {
-	"version"		"1588284127"
+	"version"		"1588352775"
 	"tenfoot_misc_all"
 	{
 		"file"		"tenfoot_misc_all.zip.1ca83d76835b4613170f5cead778b176b11f2b0c"
@@ -123,19 +123,19 @@
 	}
 	"bins_osx"
 	{
-		"file"		"bins_osx.zip.5c4a4a87a847a82ebf7ab92eaf994918d91aecd3"
-		"size"		"25991612"
-		"sha2"		"08fd1080a5d1890b3b38430a81b2e73e0570764399338ad6a7a103786a55ff4d"
-		"zipvz"		"bins_osx.zip.vz.80cfdb64f042314b7dad71d73e5e921446d6c568_13875395"
-		"sha2vz"		"19a59329881607454786c2621e537489ec0d4214245176b4d4e7546b51d0b45a"
+		"file"		"bins_osx.zip.e2a9ee25377a8309b2f77a3f53c6b5cdcdc47367"
+		"size"		"25991601"
+		"sha2"		"0ff3f88668264a5e08089a061dc7a2615d56032fed3329d39fb564329cc7d416"
+		"zipvz"		"bins_osx.zip.vz.cb338b5b73bc91ea3d47f71fb32e3ec16b299e90_13862839"
+		"sha2vz"		"0fdc55067c499072b3a90f59512c1bce290abfe13ff2c89f3301a9911936bb74"
 	}
 	"bins_client_osx"
 	{
-		"file"		"bins_client_osx.zip.265244dec8f64f2a5d06af0c7b5c5c2e5eb4a861"
-		"size"		"21994873"
-		"sha2"		"4c3c2b03d528f6b54dcf5de0e2bfe194dd69f7ccb4a42129edc432a86f7d915b"
-		"zipvz"		"bins_client_osx.zip.vz.155dcfdb105067ffa5dd5e27906165812779af29_13865962"
-		"sha2vz"		"b84320da4e973bbdeaea540c49f1eeba69c543a54e9307af11648f66b22d7578"
+		"file"		"bins_client_osx.zip.38817e0f4936b176e4d909dff0042cc1888d4074"
+		"size"		"21995572"
+		"sha2"		"65cab92fde623d040ef90153b0d3211d76a05ac063cd52340b88e7dd4a9d5a5f"
+		"zipvz"		"bins_client_osx.zip.vz.53f0090ca9aa2e6971fc53950cf5bc849de09f2c_13874507"
+		"sha2vz"		"5d35c7c290061e28f866baad4966ba809a825dca86b365ae2160af7a8791d21b"
 	}
 	"bins_codecs_osx"
 	{
@@ -147,11 +147,11 @@
 	}
 	"bins_misc_osx"
 	{
-		"file"		"bins_misc_osx.zip.838b87c95d890ddcabaa9b1cdf637eb899e6bd58"
-		"size"		"23238585"
-		"sha2"		"93067369567945350260a21cef4886c248d9a5b333d9857368e8c630a2ca1be9"
-		"zipvz"		"bins_misc_osx.zip.vz.7e107787e57aa98dbcff6dce98fb9664ac957897_12861265"
-		"sha2vz"		"6f4f6ab8f7e094922fec573412cd4e2d9d43a65de13a6fdd645e72cca145d737"
+		"file"		"bins_misc_osx.zip.98b5582df3a06959a03483f23992f87982ebec34"
+		"size"		"23238527"
+		"sha2"		"474a32477415fe664c9f229c6e9bf2a345f41b4b9d6253f4a9b51f70c6d97137"
+		"zipvz"		"bins_misc_osx.zip.vz.a344d6cb6dbfe9a72b3f0395afa2b062dff973fa_12861307"
+		"sha2vz"		"be067e98f3a149018e3127de53cb4e97a5564d6fbaca2697d04aa4901bc71c98"
 	}
 	"bins_panorama_osx"
 	{
@@ -178,11 +178,11 @@
 		"sha2vz"		"1a9320638bd5c5e35eccc29b07828f13e87fd744c05108add84f117cc8202913"
 		"macos109"
 		{
-			"file"		"webhelpers_osx_macos109.zip.21b2bbbbf347f77dd2dd35a93348114f671a57d5"
-			"size"		"2975557"
-			"sha2"		"46cf7ec0866969d87b8f376cd884b7c9b9414be700f9b53b719fb8decde0b439"
-			"zipvz"		"webhelpers_osx_macos109.zip.vz.39e4f1bcf93272b5290755310747eee3af329d57_1287199"
-			"sha2vz"		"93a15cccf30d458f1f4f76bed532924552e25fb6c212b237fea07e1d3e38e049"
+			"file"		"webhelpers_osx_macos109.zip.9a72801b8d543eb810eb16231d5534c01a4b4b59"
+			"size"		"2975591"
+			"sha2"		"9abdf895cb159ab45d93534ce37bfce4e85c77ec79deb7aa70b3f3d56da1b0b8"
+			"zipvz"		"webhelpers_osx_macos109.zip.vz.80a5d542ce2857f64466069f00fae241a0540b3d_1288980"
+			"sha2vz"		"25cff69a68c9ebb78647f6f3302fc0953722ee4bee5719d96cd54db221a83f29"
 		}
 	}
 	"webkit_osx"
@@ -233,9 +233,9 @@
 }
 "kvsign2"
 {
-	"osx"		"efc5762fd4bfa9d5b88a78249d2e1259b9e72581fedbaa39c2581b3508ca8f5323edba7fcb997cf7692564a577aca581f74a111e01e6e8852dd2b3ec47158705"
+	"osx"		"c9f4b6777ae5c0dea78db4965bead8b5880fcd397076c791cd86d0577e018fc98816146caeff029689f9d7898afefad706c983aa016a57309b91b57e89ffa00e"
 }
 "kvsignatures"
 {
-	"osx"		"3812c6b57ade866a246ae82541a8be0038299a9979557df65190ec63fe9b777c16523286701148c313b6ef33f0e8f4287dc7a1622069bfacb5b4eb329706bcae3d7c42ebebcf15f3dd292e3dc769f3caad2bb87a5affcbb3f0ae8eb59c3d8563f090a78932f337f7491a5206f1c1e038f3a8db941fa9ddfd5d71a821e1c0d823"
+	"osx"		"72ac0c67db41c08d1f6d7749f02af30a5a5059ccb1d667173d38626e0e16c9b1184a74e0ac0bfa35b64762144a8cad64bcc2f4155afa3588ef03ac541499f86b6a983ed1d7fc9180b45173fe1f1082736d69357737c86f1c785394715cd56a920a6c2c36bfa21760f918503e5a0ceb39b75d55294fe9cbbed5b7c75e6c40a719"
 }
