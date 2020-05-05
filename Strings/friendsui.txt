@@ -66,7 +66,6 @@ __LINKEDIT
 P
 c
 7b
-$
 
 8
 @loader_path/libtier0_s.dylib

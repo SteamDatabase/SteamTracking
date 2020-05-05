@@ -158,7 +158,6 @@ public:
     virtual unknown_ret ResetControllerEnableCache() = 0;
     virtual unknown_ret GetControllerEnableSupport(unsigned int) = 0;
     virtual unknown_ret BShouldShowThirdPartyRemapperWarning(unsigned int) = 0;
-    virtual unknown_ret SetInputGenerated(bool, int) = 0;
     virtual unknown_ret BInputGenerated() = 0;
     virtual unknown_ret GetControllerActivityByType(EControllerType) = 0;
     virtual unknown_ret GetLastActiveControllerVID() = 0;

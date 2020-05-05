@@ -526,15 +526,19 @@ message CChatRoom_GetChatRoomGroupSummary_Request {
 	optional uint64 chat_group_id = 1;
 }
 
-message CChatRoom_SetChatRoomGroupActiveState_Request {
+message CChatRoom_SetAppChatRoomGroupForceActive_Request {
 	optional uint64 chat_group_id = 1;
 	optional uint32 requesting_app_id = 2;
-	optional bool is_active = 3;
 }
 
-message CChatRoom_SetChatRoomGroupActiveState_Response {
+message CChatRoom_SetAppChatRoomGroupForceActive_Response {
 	optional uint32 result = 1;
 	repeated uint32 accounts_in_channel = 2;
+}
+
+message CChatRoom_SetAppChatRoomGroupStopForceActive_Notification {
+	optional uint64 chat_group_id = 1;
+	optional uint32 requesting_app_id = 2;
 }
 
 message CChatRoom_AckChatMessage_Notification {
@@ -1070,8 +1074,12 @@ service ChatRoom {
 		option (method_description) = "Get basic information about a chat room group";
 	}
 
-	rpc SetChatRoomGroupActiveState (.CChatRoom_SetChatRoomGroupActiveState_Request) returns (.CChatRoom_SetChatRoomGroupActiveState_Response) {
-		option (method_description) = "Force/unforce a group chat to be considered active on the server for this suer";
+	rpc SetAppChatRoomGroupForceActive (.CChatRoom_SetAppChatRoomGroupForceActive_Request) returns (.CChatRoom_SetAppChatRoomGroupForceActive_Response) {
+		option (method_description) = "Force a group chat to be considered active on the server for this user";
+	}
+
+	rpc SetAppChatRoomGroupStopForceActive (.CChatRoom_SetAppChatRoomGroupStopForceActive_Notification) returns (.NoResponse) {
+		option (method_description) = "If a group chat is forced active (see SetAppChatRoomGroupForceActive), decrement the force count";
 	}
 
 	rpc AckChatMessage (.CChatRoom_AckChatMessage_Notification) returns (.NoResponse) {

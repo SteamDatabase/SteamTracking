@@ -151,26 +151,29 @@ h
 &
 pY
 )
+R3
 
 
 
 
 
 
-oM
+}M
+C3
+kM
 "
 (
 (
 3
-UM
-hL
+TM
+dL
 D
 6
 6
-3
-NL
-IL
-!M
+6
+GM
+ML
+HL
 @
 8
 HC
@@ -5049,8 +5052,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-Apr 30 2020
-19:21:41
+May  5 2020
+14:20:32
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -7595,81 +7598,85 @@ Assertion Failed: q.IsValid()
 Assertion Failed: angles.IsValid()
 SSE and SSE2 are required.
 Assertion Failed: src.IsValid()
+R3
 
 
 
 
 
 
-oM
+}M
+C3
+kM
 "
 (
 (
 3
-UM
-hL
+TM
+dL
 D
 6
 6
-3
-NL
-IL
-!M
-q(
-)
+6
+GM
+ML
+HL
+M
+#L
+t(
 @
-!"
-#
-0J
+G2
+M"
+A#
 (
 (
 (
-#
+2
+2
+"
 "
 "
 "
 I
-_K
-L95blJ
--'
-"
-K
-K
-1
-H
-!
-!
 '
 !
-pJ
-vH
+&
+k!
+p&
+PJ
+IJ
 !
-!
-!
-J
+=H
+&
 J
 &
 H
-G
-G%
-cH
-L950#H
+4%
+I
+_I
+<%
 %
-+$
+%
+%
+#H
+$
+O$
+\F
+3$
 H
-H
-D-
--
--
--
+P)
+?-
 -
 -
 -
 -
 2
+:0
+50
 2
 t1Mcu
 ?
+2
 %
 ,
 ,

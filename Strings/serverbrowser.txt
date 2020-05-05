@@ -3,6 +3,8 @@ __TEXT
 "
 __text
 __TEXT
+pD
+pD
 __stubs
 __TEXT
 __stub_helper
@@ -3254,6 +3256,8 @@ Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
+,
+,
 0
 p
 0
@@ -3270,8 +3274,7 @@ p
 p
 0
 p
-n'
-e'
+X'
 0
 p
 $
@@ -3284,14 +3287,11 @@ $
 ?
 A
 Hc
-)
-)
-)
-)
 =
-L95z'
-L95j['
-L95E0'
+L95?{'
+L95*\'
+L95p@'
+'
 Hc
 ?
 ?
@@ -3308,10 +3308,9 @@ Hc
 ?
 ?
 ?
-$$
+)$
+@$
 "
-$
-2$
 3
 $
 $
@@ -3320,22 +3319,13 @@ $
 $
 $
 D
-$
+y#
 @
-L"
+Y#
 
-
-
-
-
-
-
-
-.
-d!
-X!
-~
-e
+"
+"
+L95f'"
 d
 
 
@@ -3360,7 +3350,6 @@ E
 @
 @
 &
-a
 @
 @
 @
@@ -3405,9 +3394,9 @@ d
 @
 =
 @
-G
 @
 @
+W
 @
 @
 @

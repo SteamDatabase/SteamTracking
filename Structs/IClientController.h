@@ -55,6 +55,7 @@ public:
     virtual unknown_ret GetControllerBindingRevision(unsigned int, unsigned long long, int*, int*) = 0;
     virtual unknown_ret GetRemotePlaySessionID(unsigned long long) = 0;
     virtual unknown_ret CursorVisibilityChanged(bool) = 0;
+    virtual unknown_ret SetInputGenerated(bool, int) = 0;
     virtual unknown_ret Validate(CValidator&, char const*) = 0;
     virtual unknown_ret GetNumConnectedControllers() = 0;
     virtual unknown_ret GetControllerDetails(unsigned int) = 0;
@@ -81,7 +82,6 @@ public:
     virtual unknown_ret BAllowAppConfigForController(unsigned int, unsigned int) = 0;
     virtual unknown_ret ResetControllerEnableCache() = 0;
     virtual unknown_ret BShouldShowThirdPartyRemapperWarning(unsigned int) = 0;
-    virtual unknown_ret SetInputGenerated(bool, int) = 0;
     virtual unknown_ret BInputGenerated() = 0;
     virtual unknown_ret GetCurrentActionSetHandleForRunningApp(unsigned int, unsigned int) = 0;
     virtual unknown_ret CreateBindingInstanceFromVDFString(CControllerMappingCreateData const*) = 0;

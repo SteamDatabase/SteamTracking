@@ -1616,7 +1616,7 @@
     },
     {
         "id": 2729,
-        "size": 8,
+        "size": 16,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerActionTriggered_t>(ControllerActionTriggered_t*)"
     },
     {
@@ -1648,6 +1648,11 @@
         "id": 2736,
         "size": 20,
         "posted_in": "void CSteamEngine::PostCallbackToAllUI<ControllerActionSetLayerChanged_t>(ControllerActionSetLayerChanged_t*)"
+    },
+    {
+        "id": 2737,
+        "size": 4,
+        "posted_in": "void CSteamEngine::PostCallbackToAllUI<GuideButtonsPressedChange_t>(GuideButtonsPressedChange_t*)"
     },
     {
         "id": 2901,
@@ -2582,6 +2587,6 @@
     {
         "id": 5906,
         "size": 540,
-        "posted_in": "CClientJobRequestChatRoomSubscription::PostInitialUsersInChannelCallback(CChatRoom_SetChatRoomGroupActiveState_Response const&)"
+        "posted_in": "CClientJobRequestChatRoomSubscription::PostInitialUsersInChannelCallback(CChatRoom_SetAppChatRoomGroupForceActive_Response const&)"
     }
 ]
