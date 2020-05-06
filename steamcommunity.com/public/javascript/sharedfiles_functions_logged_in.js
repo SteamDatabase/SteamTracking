@@ -902,4 +902,29 @@ function SelectItemVisibility( publishedfileid, value )
 	} );
 }
 
+function ShowPublicComments()
+{
+	var commentsPublic = document.getElementById( 'PublicComments' );
+	var commentsDev = document.getElementById( 'DeveloperComments' );
+	commentsPublic.style.display = "block";
+	commentsDev.style.display = "none";
+
+	var commentsTabPublic = document.getElementById( 'PublicCommentsTab' );
+	var commentsTabDev = document.getElementById( 'DeveloperCommentsTab' );
+	commentsTabPublic.className = "commentsTab active";
+	commentsTabDev.className = "commentsTab";
+}
+
+function ShowDeveloperComments()
+{
+	var commentsPublic = document.getElementById( 'PublicComments' );
+	var commentsDev = document.getElementById( 'DeveloperComments' );
+	commentsPublic.style.display = "none";
+	commentsDev.style.display = "block";
+
+	var commentsTabPublic = document.getElementById( 'PublicCommentsTab' );
+	var commentsTabDev = document.getElementById( 'DeveloperCommentsTab' );
+	commentsTabPublic.className = "commentsTab";
+	commentsTabDev.className = "commentsTab active";
+}
 

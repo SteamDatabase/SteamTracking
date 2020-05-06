@@ -1995,6 +1995,7 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 	padding: 0px 12px;
 	margin-left: 9px;
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .commentsTab.active {

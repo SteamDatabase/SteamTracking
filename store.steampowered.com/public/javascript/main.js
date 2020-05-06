@@ -15,15 +15,15 @@ function PageTab( tab, delta, max, params )
 {
 	if ( tabTransition[tab] )
 		return;
-	
+
 	if ( !tabStart[tab] )
 		tabStart[tab] = 0;
 	if ( !tabMax[tab] )
 		tabMax[tab] = 0;
-	
+
 	if ( tabStart[tab] + delta >= max )
 		return;
-	
+
 	tabStart[tab] += delta;
 	tabTransition[tab] = true;
 	if ( tabStart[tab] > tabMax[tab] )
@@ -33,18 +33,18 @@ function PageTab( tab, delta, max, params )
 		params.tab = tab;
 		params.start = tabStart[tab];
 		params.count = delta;
-		new Ajax.Updater( 
-				'tab_' + tab + '_items', 
+		new Ajax.Updater(
+				'tab_' + tab + '_items',
 				'https://store.steampowered.com/search/tab',
 				{ parameters: params, method: 'get', insertion: 'bottom', onComplete: TabCompletionClosure( tab, delta, max ) } );
 		tabMax[tab] = tabStart[tab];
 	}
-	else 
+	else
 	{
 		RollTab( tab, delta );
 		TabUpdateCounts( tab, delta, max );
 	}
-	
+
 }
 
 function TabCompletionClosure( tab, delta, max )
@@ -52,11 +52,11 @@ function TabCompletionClosure( tab, delta, max )
 	var tab_closure = tab;
 	var delta_closure = delta;
 	var max_closure = max;
-	return function() { 
+	return function() {
 		RollTab( tab_closure, delta_closure );
-		TabUpdateCounts( tab_closure, delta_closure, max_closure ); 
+		TabUpdateCounts( tab_closure, delta_closure, max_closure );
 	};
-	
+
 }
 
 function RollTab( tab, delta )
@@ -83,8 +83,8 @@ function TabScrollFinishClosure( tab, delta )
 {
 	var tab_closure = tab;
 	var delta_closure = delta;
-	return function() { 
-		tabTransition[tab_closure] = false; 
+	return function() {
+		tabTransition[tab_closure] = false;
 	};
 }
 
@@ -103,7 +103,7 @@ function TabUpdateCounts( tab, delta, max )
 		$('tab_' + tab + '_prev').style.visibility='visible';
 	else
 		$('tab_' + tab + '_prev').style.visibility='hidden';
-	
+
 	if ( tabStart[tab] + delta >= max )
 		$('tab_' + tab + '_next').style.visibility='hidden';
 	else
@@ -166,13 +166,13 @@ function InitTabDefaults()
 }
 
 function ScrollSmallCaps( name, delta, pageSize, totalCount, params )
-{	
+{
 	var targetid = 'sm_cap_' + name + '_scroll';
 	var elem = $( targetid );
 	if ( elem.effect )
 		return;
-	
-	if ( !elem.curPos ) 
+
+	if ( !elem.curPos )
 	{
 		elem.curPos = 0;
 	}
@@ -180,22 +180,22 @@ function ScrollSmallCaps( name, delta, pageSize, totalCount, params )
 	{
 		elem.maxLoaded = 0;
 	}
-	
+
 	elem.curPos += delta;
-	
+
 	if ( elem.curPos > elem.maxLoaded )
 	{
 		elem.effect = true;
 		elem.maxLoaded++;
 		elem.style.width = ( ( elem.maxLoaded + 2 ) * 614 ) + 'px';
-		
+
 		if ( !params )
 			params = {};
 		params.name = name;
 		params.start = elem.curPos * pageSize + pageSize; // we are always loading one page ahead
 		params.count = pageSize;
-		new Ajax.Updater( 
-				targetid, 
+		new Ajax.Updater(
+				targetid,
 				'https://store.steampowered.com/search/smallcapscroll',
 				{ parameters: params, method: 'get', insertion: 'bottom', onComplete: UpdateSmallCapControl.bind( window, targetid, delta, pageSize, totalCount ) } );
 	}
@@ -211,14 +211,14 @@ function ScrollStaticSmallCaps( targetid, delta, pageSize, totalCount )
 	var elem = $( targetid );
 	if ( elem.effect )
 		return;
-	
-	if ( !elem.curPos ) 
+
+	if ( !elem.curPos )
 	{
 		elem.curPos = 0;
 	}
-	
+
 	elem.curPos += delta;
-	
+
 	UpdateSmallCapControl( targetid, delta, pageSize, totalCount );
 }
 
@@ -227,28 +227,28 @@ function ScrollCarouselSmallCaps( targetid, delta, pageSize, totalCount )
 	var elem = $( targetid );
 	if ( elem.effect )
 		return;
-	
-	if ( !elem.curPos ) 
+
+	if ( !elem.curPos )
 	{
 		elem.curPos = 0;
 	}
-	
+
 	elem.curPos += delta;
-	
+
 	var max = Math.ceil( totalCount / pageSize ) - 1;
 
 	var nextLink = targetid + '_next';
 	var prevLink = targetid + '_prev';
 	if ( elem.curPos >= max )
 		$(nextLink).addClassName('disabled');
-	else 
+	else
 		$(nextLink).removeClassName('disabled');
-	
+
 	if ( elem.curPos <= 0 )
 		$(prevLink).addClassName('disabled');
 	else
 		$(prevLink).removeClassName('disabled');
-				
+
 
 	var cb = function( targetid ) {
 		var elem = $( targetid );
@@ -275,22 +275,22 @@ function UpdateSmallCapControl( targetid, delta, pageSize, totalCount )
 	var prevLink = targetid + '_prev';
 	if ( elem.curPos >= max )
 		$(nextLink).hide();
-	else 
+	else
 		$(nextLink).show();
-	
+
 	if ( elem.curPos <= 0 )
 		$(prevLink).hide();
 	else
 		$(prevLink).show();
-	
+
 	var pageStart = elem.curPos * pageSize + 1;
 	var pageEnd = pageStart + ( pageSize - 1 );
 	if ( $( targetid + '_page_start' ) )
 		$( targetid + '_page_start' ).update( pageStart );
 	if ( $( targetid + '_page_end' ) )
 		$( targetid + '_page_end' ).update( Math.min( pageEnd, totalCount ) );
-	
-	
+
+
 	elem.effect = new Effect.Move( elem, {x: -width * delta, afterFinish: function() { elem.effect = false; }, duration: 0.4 } );
 
 }
@@ -320,13 +320,13 @@ function GameHover( elem, event, divHover, rgHoverData )
 	var bNewHoverSpeed = typeof ( g_bNewHoverSpeed) != 'undefined' && g_bNewHoverSpeed;
 
 	var oElemState = GetHoverState( $Elem );
-	
+
 	if ( !$Hover.length )
 	{
 				$Hover = $J("\t\t<div class=\"hover game_hover\" id=\"global_hover\" style=\"display: none; left: 0; top: 0;\">\r\n\t\t\t<div class=\"game_hover_box hover_box\">\r\n\t\t\t\t<div class=\"content\" id=\"global_hover_content\">\r\n\t\t\t\t<\/div>\r\n\t\t\t<\/div>\r\n\t\t\t<div class=\"hover_arrow_left\"><\/div>\r\n\t\t\t<div class=\"hover_arrow_right\"><\/div>\r\n\t\t<\/div>");
 		$J(document.body).append( $Hover );
 	}
-	
+
 	if ( g_HoverState.hiding && $Hover.is(':visible') && g_HoverState.target == $Elem[0] )
 	{
 		ShowWithFade( $Hover );
@@ -362,7 +362,7 @@ function GameHover( elem, event, divHover, rgHoverData )
 		{
 			strUrlTarget += '?review_score_preference=' + ( !GDynamicStore.s_preferences['review_score_preference'] ? 0 : GDynamicStore.s_preferences['review_score_preference'] );
 		}
-			
+
 		var targetId = strTargetPrefix + rgHoverData['id'];
 		var $HoverData = $JFromIDOrElement( targetId );
 		var params = rgHoverData['params'] || {};
@@ -410,12 +410,10 @@ function GameHover( elem, event, divHover, rgHoverData )
 			}, bNewHoverSpeed ? 100 : 300 );
 		}
 	}
-	
 }
 
 function HideGameHover( elem, event, divHover )
 {
-	
 	var $Elem = $JFromIDOrElement( elem );
 	var $Hover = $JFromIDOrElement( divHover );
 
@@ -428,7 +426,7 @@ function HideGameHover( elem, event, divHover )
 	var reltarget = $J( (event.relatedTarget) ? event.relatedTarget : event.toElement );
 	if ( reltarget.length && $J.contains( $Elem[0], reltarget[0] ) )
 		return;
-	
+
 	if ( oElemState.timer )
 	{
 		window.clearTimeout( oElemState.timer );
@@ -438,12 +436,10 @@ function HideGameHover( elem, event, divHover )
 	oElemState.bReadyForHover = false;
 
 	HideWithFade( divHover, 200 );
-	
 }
 
 function ShowGameHover( elem, divHover, targetContent, params, speed )
 {
-	
 	var $Elem = $JFromIDOrElement( elem );
 	var $Hover = $JFromIDOrElement( divHover );
 	var $Target = $JFromIDOrElement( targetContent );
@@ -457,7 +453,7 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 	$Target.show();
 
 	g_HoverState.target = $Elem[0];
-	
+
 	var $Toparea = $Target.find( '.hover_top_area' );
 	if ( params && params.top_area_content )
 	{
@@ -532,9 +528,8 @@ function ShowGameHover( elem, divHover, targetContent, params, speed )
 
 	$Hover.hide();
 	$Hover.css( 'visibility', '' );
-	
+
 	ShowWithFade( $Hover, speed );
-	
 }
 
 function AddToWishlist( appid, divToHide, divToShowSuccess, divToShowError, navref, divToHide2 )
@@ -623,7 +618,7 @@ function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, la
 	var url = 'https://store.steampowered.com/friends/recommendgame';
 	if ( navref )
 		MakeNavCookie( navref, url );
-	
+
 	$J.post( url, {appid: appid, steamworksappid: steamworksappid, comment: comment, rated_up: rated_up, is_public: is_public, language: language, received_compensation: received_compensation, disable_comments: bDisableComments, sessionid: g_sessionID} )
 		.done( function( data ) {
 			if ( data && data.success )
@@ -652,7 +647,7 @@ function RecommendGame( appid, steamworksappid, comment, rated_up, is_public, la
 function HideRecommendation( type, itemid, divBtn, elemContainer )
 {
 	var parameters = { sessionid: g_sessionID };
-	
+
 	if ( type == 'app' )
 		parameters.appid = itemid;
 	else if ( type == 'sub' )
@@ -662,9 +657,9 @@ function HideRecommendation( type, itemid, divBtn, elemContainer )
 		// invalid arguments
 		return false;
 	}
-	
+
 	$(divBtn).hide();
-	
+
 	new Ajax.Request( 'https://store.steampowered.com/recommended/ignorerecommendation/', {
 		method: 'post',
 		parameters: parameters,
@@ -837,7 +832,7 @@ function AnimateSpotlightTransition( iCurSpotlight, iNextSpotlight )
 	var $elSpotlights = $J('#spotlight_scroll').children();
 	var $Spotlight = $J( $elSpotlights[iCurSpotlight] );
 	var $NextSpotlight = $J( $elSpotlights[iNextSpotlight] );
-	
+
 	var $Scroll = $JFromIDOrElement('spotlight_scroll');
 	$Scroll.stop();
 	var curHeight = $Scroll.height();
@@ -893,7 +888,7 @@ function UpdateSpotlightControls( cMaxSpotlights )
 		$JFromIDOrElement('spotlight_scroll_next').removeClass( 'disabled' );
 	else
 		$JFromIDOrElement('spotlight_scroll_next').addClass( 'disabled' );
-	
+
 	if ( g_iActiveSpotlight > 0 )
 		$JFromIDOrElement('spotlight_scroll_prev').removeClass( 'disabled' );
 	else
@@ -916,7 +911,7 @@ var CCountdownManager = {
 	rgCountdowns: [],
 	nIntervalId: null,
 	bRefreshOnTimerEnd: false,
-	
+
 	tsInit: 0,
 	bReadyForRefresh: false,
 	bTriggeredRefresh: false,
@@ -1880,11 +1875,12 @@ function removeFromCart( gid )
 			}
 }
 
-function dropdownSelectOption( dropdownName, subId, inCart )
+function GamePurchaseDropdownSelectOption( dropdownName, subId, inCart )
 {
 		$J('#add_to_cart_' + dropdownName + '_value').val( subId );
 	$J('#add_to_cart_' + dropdownName + '_selected_text').html( $J('#add_to_cart_' + dropdownName + '_menu_option_' + subId).html() );
-	$J('#add_to_cart_' + dropdownName + '_description_text').html( $J('#add_to_cart_' + dropdownName + '_menu_option_description_' + subId).html() );
+
+	$J('#add_to_cart_' + dropdownName + '_select_option').hide();
 	if ( inCart )
 	{
 		$J('#add_to_cart_' + dropdownName + '_add_button').hide();
@@ -1895,14 +1891,14 @@ function dropdownSelectOption( dropdownName, subId, inCart )
 		$J('#add_to_cart_' + dropdownName + '_add_button').show();
 		$J('#add_to_cart_' + dropdownName + '_in_cart_button').hide();
 	}
-	HideMenu('add_to_cart_' + dropdownName + '_pulldown', 'add_to_cart_' + dropdownName + '_menu');
+	HideMenu('game_purchase_dropdown_' + dropdownName + '_region', 'add_to_cart_' + dropdownName + '_menu');
 }
 
-function dropdownAddToCart( dropdownName )
+function GamePurchaseDropdownAddToCart( dropdownName )
 {
 		if ( $J('#add_to_cart_' + dropdownName + '_value').val() == '')
 	{
-		ShowMenu( 'add_to_cart_' + dropdownName + '_pulldown', 'add_to_cart_' + dropdownName + '_menu' );
+		ShowGamePurchaseDropdown( 'game_purchase_dropdown_' + dropdownName + '_region', 'add_to_cart_' + dropdownName + '_menu' );
 	}
 	else
 	{
@@ -1910,6 +1906,16 @@ function dropdownAddToCart( dropdownName )
 	}
 }
 
+function ShowGamePurchaseDropdown( elemLink, elemPopup )
+{
+	var $Link = $JFromIDOrElement(elemLink);
+	var $Popup = $JFromIDOrElement(elemPopup);
+
+	var nWidth = $Link.outerWidth();
+	$Popup.css( 'min-width', nWidth );
+
+	ShowMenu( elemLink, elemPopup, 'left', 'bottom' );
+}
 
 function AgeGateClear()
 {

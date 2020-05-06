@@ -789,8 +789,28 @@ function ListManage_DeleteList( elRow, unListId, strListName )
 	});
 }
 
+// Reload the page if we are landing on the manage rss and have prototype defined. We cannot run reactjs code with prototype.
+function ManageRSS_Load()
+{
+	if( window.Prototype !== undefined )
+	{
+		var url = window.location.href;
+		window.location = url.substring( 0, url.indexOf( '/admin/') ) + '/admin/manage_rss';
+		return;
+	}
+}
+
 function ReviewsManage_Load()
 {
+	// Now that we are mixing reactjs and regular javascript, the list paging requires prototype, and prototype does bad things
+	// with arrays breaking much of reactjs code. So we have the curator code selectively load the prototype library. If we don't
+	// have it here, then reload this page.
+	if( window.Prototype === undefined )
+	{
+		var url = window.location.href;
+		window.location = url.substring( 0, url.indexOf( '/admin/') ) + '/admin/reviews_manage';
+		return;
+	}
 
 	var rgData = {
 		sessionid: g_sessionID
@@ -1073,6 +1093,16 @@ function ListEdit_Onload( listid, listDetails )
 function ListManage_Load(  )
 {
 	var pageSize = 100;
+
+	// Now that we are mixing reactjs and regular javascript, the list paging requires prototype, and prototype does bad things
+	// with arrays breaking much of reactjs code. So we have the curator code selectively load the prototype library. If we don't
+	// have it here, then reload this page.
+	if( window.Prototype === undefined )
+	{
+		var url = window.location.href;
+		window.location = url.substring( 0, url.indexOf( '/admin/') ) + '/admin/lists_manage';
+		return;
+	}
 
 	var rgData = {
 		'start': 0,

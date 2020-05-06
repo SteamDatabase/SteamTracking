@@ -725,8 +725,7 @@ background: -webkit-linear-gradient( 30deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
     		font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
-			min-width: 200px;
-	cursor: pointer;
+			cursor: pointer;
 	float: left;
 	position: relative;
 	height: 34px;
@@ -749,14 +748,15 @@ background: -webkit-linear-gradient( 30deg, rgba(217, 245, 173,0.5) 5%,rgba(255,
 	background-color: #546270;
 	border-radius: 3px;
 	margin-top: 0px;
-	margin-left: 10px;
+	margin-left: 0px;
 	padding: 3px;
-    box-shadow: 0 0 10px #000;
+	box-shadow: 0 0 10px #000;
+	box-sizing: border-box;
 }
 
 .game_area_purchase_game_dropdown_menu_items_container
 {
-	min-width: 315px;
+	width: 100%;
 }
 
 .game_area_purchase_game_dropdown_menu_items_container_background

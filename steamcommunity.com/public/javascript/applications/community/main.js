@@ -2392,7 +2392,7 @@
                 n = e.fallback,
                 r = this.state.error;
               return r
-                ? n
+                ? void 0 !== n
                   ? "function" == typeof n
                     ? n(r.error)
                     : n
@@ -3503,7 +3503,7 @@
             console.error(
               "array should be defined for us to fill in the missing indexes"
             ),
-          e.concat(Array(t - e.length).fill(n))
+          e.length < t ? e.concat(Array(t - e.length).fill(n)) : e
         );
       }
       function u(e, t) {
@@ -8635,37 +8635,37 @@
         }, "");
       };
     },
-    gfbn: function(e, t, f) {
+    gfbn: function(e, t, p) {
       "use strict";
-      f.r(t);
+      p.r(t);
       var n,
-        _ = f("mrSG"),
-        r = f("q1tI"),
-        i = f.n(r),
-        o = f("55Ip"),
-        s = f("Ty5D"),
-        a = f("eDP5"),
-        c = f("Jqb/"),
-        l = f("lkRc"),
-        u = f("sUmc"),
-        p = i.a.lazy(function() {
-          return Promise.all([f.e(0), f.e(2), f.e(92)]).then(
-            f.bind(null, "GEPe")
+        d = p("mrSG"),
+        r = p("q1tI"),
+        i = p.n(r),
+        o = p("55Ip"),
+        s = p("Ty5D"),
+        a = p("eDP5"),
+        c = p("Jqb/"),
+        l = p("lkRc"),
+        u = p("sUmc"),
+        h = i.a.lazy(function() {
+          return Promise.all([p.e(0), p.e(2), p.e(92)]).then(
+            p.bind(null, "GEPe")
           );
         }),
-        d = i.a.lazy(function() {
-          return Promise.all([f.e(0), f.e(93), f.e(2), f.e(7)]).then(
-            f.bind(null, "IY+y")
+        m = i.a.lazy(function() {
+          return Promise.all([p.e(0), p.e(93), p.e(2), p.e(7)]).then(
+            p.bind(null, "IY+y")
           );
         }),
-        h = function() {
+        f = function() {
           return l.a.IS_CREATOR_HOME || l.a.IS_CURATOR ? "groups" : "games";
         },
-        m = function() {
-          return "/" + h() + "/:anything*/diagdata";
+        _ = function() {
+          return "/" + f() + "/:anything*/diagdata";
         },
         g = function(e) {
-          return "/" + h() + "/" + e + "/(partnerevents|events|announcements)";
+          return "/" + f() + "/" + e + "/(partnerevents|events|announcements)";
         },
         v = function(e) {
           return "/app/" + e + "(/workshop/)?";
@@ -8684,7 +8684,7 @@
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
-            Object(_.d)(t, e),
+            Object(d.d)(t, e),
             (t.prototype.componentDidMount = function() {
               n ||
                 (n = Object(u.b)(document)).Show(
@@ -8711,11 +8711,11 @@
                     null,
                     i.a.createElement(s.c, {
                       exact: !0,
-                      path: m(),
+                      path: _(),
                       render: function(e) {
                         return i.a.createElement(
                           a.a,
-                          Object(_.a)({}, e, {
+                          Object(d.a)({}, e, {
                             key: e.match.params.gid,
                             strConfigID: "application_config"
                           })
@@ -8725,31 +8725,31 @@
                     i.a.createElement(s.c, {
                       path: g(":appid_or_vanity_str"),
                       render: function(e) {
-                        return i.a.createElement(d, null);
+                        return i.a.createElement(m, null);
                       }
                     }),
                     i.a.createElement(s.c, {
                       path: v(":appid"),
                       render: function(e) {
-                        return i.a.createElement(d, null);
+                        return i.a.createElement(m, null);
                       }
                     }),
                     i.a.createElement(s.c, {
                       path: b(":groupid_or_vanity_str"),
                       render: function(e) {
-                        return i.a.createElement(d, null);
+                        return i.a.createElement(m, null);
                       }
                     }),
                     i.a.createElement(s.c, {
                       path: y(":vanity_url"),
                       render: function(e) {
-                        return i.a.createElement(p, Object(_.a)({}, e));
+                        return i.a.createElement(h, Object(d.a)({}, e));
                       }
                     }),
                     i.a.createElement(s.c, {
                       path: E(":steamid"),
                       render: function(e) {
-                        return i.a.createElement(p, Object(_.a)({}, e));
+                        return i.a.createElement(h, Object(d.a)({}, e));
                       }
                     }),
                     i.a.createElement(s.c, { component: w })
@@ -8763,76 +8763,80 @@
       function w(e) {
         return i.a.createElement(s.b, { push: !0, to: l.b.COMMUNITY_BASE_URL });
       }
-      var O = f("i8i4"),
-        S = f.n(O),
-        k = (f("mRR+"), f("TLQK")),
-        C = f("r64O");
+      var O = p("i8i4"),
+        S = p.n(O),
+        k = (p("mRR+"), p("TLQK"));
+      p("mgoM");
+      var C = p("r64O");
       document.addEventListener("DOMContentLoaded", function() {
-        return Object(_.b)(this, void 0, void 0, function() {
-          return Object(_.e)(this, function(e) {
+        return Object(d.b)(this, void 0, void 0, function() {
+          return Object(d.e)(this, function(e) {
             switch (e.label) {
               case 0:
                 return (
                   document.getElementById("application_config")
                     ? Object(l.f)("application_config")
                     : Object(l.f)(),
-                  (f.p =
+                  (p.p =
                     l.b.COMMUNITY_CDN_URL +
                     "public/javascript/applications/community/"),
                   [
                     4,
-                    (function(m) {
-                      return Object(_.b)(this, void 0, void 0, function() {
-                        var t, n, r, i, o, s, a, c, l, u, p, d, h;
-                        return Object(_.e)(this, function(e) {
+                    (function(u) {
+                      return Object(d.b)(this, void 0, void 0, function() {
+                        var t, n, r, i, o, s, a, c, l;
+                        return Object(d.e)(this, function(e) {
                           switch (e.label) {
                             case 0:
-                              return (
-                                (t = f("rCDf")("./shared_" + m + ".json").then(
-                                  function(e) {
-                                    return e.default;
-                                  }
-                                )),
-                                (n = f("AvbV")("./main_" + m + ".json").then(
-                                  function(e) {
-                                    return e.default;
-                                  }
-                                )),
-                                "english" !== m &&
-                                  ((r = f
-                                    .e(1)
-                                    .then(f.t.bind(null, "TYjx", 3))
-                                    .then(function(e) {
-                                      return e.default;
-                                    })),
-                                  (i = f
-                                    .e(3)
-                                    .then(f.t.bind(null, "/rNK", 3))
-                                    .then(function(e) {
-                                      return e.default;
-                                    }))),
-                                [4, n]
-                              );
+                              return [3, 2];
                             case 1:
-                              return (o = e.sent()), [4, t];
+                              return e.sent(), [3, 4];
                             case 2:
-                              return (s = e.sent()), (c = i) ? [4, i] : [3, 4];
+                              return (
+                                (t = "english" === u),
+                                [
+                                  4,
+                                  Promise.all([
+                                    p("rCDf")("./shared_" + u + ".json").then(
+                                      function(e) {
+                                        return e.default;
+                                      }
+                                    ),
+                                    p("AvbV")("./main_" + u + ".json").then(
+                                      function(e) {
+                                        return e.default;
+                                      }
+                                    ),
+                                    t
+                                      ? {}
+                                      : p
+                                          .e(1)
+                                          .then(p.t.bind(null, "TYjx", 3))
+                                          .then(function(e) {
+                                            return e.default;
+                                          }),
+                                    t
+                                      ? {}
+                                      : p
+                                          .e(3)
+                                          .then(p.t.bind(null, "/rNK", 3))
+                                          .then(function(e) {
+                                            return e.default;
+                                          })
+                                  ])
+                                ]
+                              );
                             case 3:
-                              (c = e.sent()), (e.label = 4);
+                              (n = e.sent()),
+                                (r = n[0]),
+                                (i = n[1]),
+                                (o = n[2]),
+                                (s = n[3]),
+                                k.c.InitFromObjects(i, s, r, o),
+                                (e.label = 4);
                             case 4:
-                              return (a = c), (u = r) ? [4, r] : [3, 6];
-                            case 5:
-                              (u = e.sent()), (e.label = 6);
-                            case 6:
-                              for (
-                                l = u,
-                                  k.c.InitFromObjects(o, a, s, l),
-                                  p = 0,
-                                  d = D;
-                                p < d.length;
-                                p++
-                              )
-                                (h = d[p]), k.c.AddTokens(h);
+                              for (a = 0, c = D; a < c.length; a++)
+                                (l = c[a]), k.c.AddTokens(l);
                               return (D = void 0), [2];
                           }
                         });

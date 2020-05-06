@@ -1613,6 +1613,60 @@ input.filter_search_box:focus {
 	color: white;
 }
 
+.market_multibuy_row
+{
+	display: flex;
+	align-items: flex-start;
+	padding-bottom: 15px;
+	margin-right: 20%;
+}
+
+.market_dialog_row
+{
+	display: flex;
+	align-items: flex-start;
+	padding-bottom: 15px;
+}
+
+.market_dialog_left_column
+{
+	width: 150px;
+}
+
+.market_dialog_right_column
+{
+	flex: 1;
+}
+
+.market_dialog_billing_address_row
+{
+	display: flex;
+	align-self: start;
+}
+
+.market_dialog_billing_address_row .label
+{
+	font-size: 12px;
+	color: #616467;
+}
+
+.market_dialog_billing_address_full_column
+{
+	width: 100%;
+}
+
+.market_dialog_billing_address_left_column
+{
+	width: 50%;
+}
+
+.market_dialog_billing_address_right_column
+{
+	margin-left: 10px;
+	flex: 1;
+	width: 50%;
+}
+
 #market_buynow_dialog_accept_ssa,
 #market_buyorder_dialog_accept_ssa,
 #market_multi_accept_ssa
@@ -1628,7 +1682,7 @@ input.filter_search_box:focus {
 }
 
 #market_buynow_dialog_purchase, #market_buynow_dialog_addfunds, #market_buynow_dialog_purchase_throbber,
-#market_buyorder_dialog_purchase, #market_buyorder_dialog_addfunds, #market_buyorder_dialog_purchase_throbber {
+#market_buyorder_dialog_purchase, #market_buyorder_dialog_disabled, #market_buyorder_dialog_addfunds, #market_buyorder_dialog_purchase_throbber {
 	float: right;
 	margin-left: 15px;
 	bottom: 18px;
@@ -2119,6 +2173,190 @@ input.filter_search_box:focus {
 	text-align: center;
 	font-size: 18px;
 	color: #60acde;
+}
+
+/* DSelect */
+.dropcontainer ul {
+	list-style-type:none;
+	line-height: 22px;
+	margin:0;
+	position:absolute;
+	top:0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+	overflow-x: hidden;
+
+	box-shadow: 0 0 5px 0 #000000;
+	background: #417A9B;
+}
+.dropdownhidden{
+	display: none;
+}
+.dropdownvisible{
+	display: block;
+}
+.dropcontainer ul li {
+	padding: 0;
+	margin: 0;
+}
+.dropcontainer ul li.emptyvalue {
+	font-style: italic;
+}
+.dropcontainer ul a {
+	padding: 0 10px;
+	display:block;
+	text-decoration:none;
+	color: #e5e4dc;
+
+	white-space: nowrap;
+}
+
+.dropcontainer{
+	position:relative;
+}
+
+.dselect_container {
+	font-size: 12px;
+}
+
+.dselect_container {
+	position: relative;
+
+}
+.dselect_container a.trigger, .dselect_container a.activetrigger {
+	display: block;
+	color: #67c1f5;
+	padding: 0 30px 0 8px;
+	font-size: 12px;
+	line-height: 21px;
+	border: 0;
+	border-radius: 3px;
+	text-decoration: none;
+
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	position:relative;
+}
+
+.dselect_container a.trigger {
+	background: rgba( 103, 193, 245, 0.1 );
+}
+
+.dselect_container a.activetrigger, .dselect_container a.activetrigger:hover {
+	color: #ffffff;
+	background: #67c1f5;
+}
+
+
+.dselect_container a.activetrigger {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	z-index: 91;
+	position: relative;
+}
+
+.dselect_container a.trigger::after, .dselect_container a.activetrigger::after {
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 20px;
+	background: url('https://steamcommunity-a.akamaihd.net/public/images/economy/market/ico_arrow_dn_for_select.png') no-repeat left center;
+	content: '';
+}
+
+.dselect_container a.trigger:hover,
+.dselect_container .dropcontainer a.highlighted_selection
+{
+	color: #ffffff;
+	background-color: #67c1f5; /* Old browsers */
+	background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
+	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+}
+
+.market_dialog_content .dselect_container {
+	width: 100%;
+	padding: 0;
+	display: inline-block;
+}
+
+.market_dialog_content .dselect_container a.trigger {
+	color: #ffffff;
+	background: rgba( 0, 0, 0, 0.4);
+}
+
+.dselect_container a.trigger:hover
+{
+	background-color: #67c1f5; /* Old browsers */
+background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
+	background: linear-gradient( -60deg, #417a9b 5%,#67c1f5 95%);
+}
+
+.market_dialog_content .dselect_container a,
+.market_dialog_content .dselect_container a:hover,
+.market_dialog_content .dselect_container a:active,
+.market_dialog_content .dselect_container a:visited
+{
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.market_dialog_content .trigger {
+	display:block;
+	padding-left:2px;
+	padding-right:2px;
+	overflow: hidden;
+}
+
+.market_dialog_content input[type="text"],
+.market_dialog_content select,
+.market_dialog_content textarea,
+.market_dialog_content .dselect_container a.trigger
+{
+	background-color: rgba( 0, 0, 0, 0.4);
+	color: #fff;
+	border: 1px solid #000;
+	border-radius: 3px;
+	box-shadow: 1px 1px 0px #45556c;
+	width: 98%;
+	max-width: calc( 100% - 12px );
+	padding: 3px;
+	margin-top: 3px;
+	margin-bottom: 10px;
+	text-align: start !important;
+
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.market_dialog_content .dselect_container a.trigger.activetrigger
+{
+	color: #ffffff;
+	background: #67c1f5;
+}
+
+.dropcontainer ul {
+    list-style-type: none;
+    line-height: 22px;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    overflow: auto;
+    overflow-x: hidden;
+    box-shadow: 0 0 5px 0 #000000;
+    background: #417A9B;
+}
+
+.dropdownvisible
+{
+	max-height: 225px;
+	overflow-y: auto;
+	z-index: 1001;
 }
 
 @media screen and (max-width: 910px) {

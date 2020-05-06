@@ -847,6 +847,10 @@ body.v6.creatorhome .page_content.browse_reviews {
 	transform: translateX(0px);
 }
 
+body.v6.curator .page_content.browse_reviews{
+    transform: translateX(0px);
+}
+
 
 
 

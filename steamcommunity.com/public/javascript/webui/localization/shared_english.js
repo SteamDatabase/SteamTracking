@@ -143,12 +143,15 @@ LocalizationReady("shared", "english", {
   EventCalendar_Goto_SpecificCalendar: "Go to %1$s News Hub",
   EventCalendar_SingleAppIsMuted:
     "Note: This game is muted and will not show up in your personalized news hub.",
+  EventCalendar_WatchYouTubeVideo: "Watch YouTube Video",
+  EventCalendar_WatchLiveBroadcast: "Watch Live Broadcast",
 
   SteamLabs: "Steam Labs",
   SteamLabs_ExperimentNumber: "Experiment %1$s",
   SteamLabs_DiscussionLink: "Discuss this experiment",
 
   EventCalendar_FutureEventsHint: "Scroll up to see what's coming next",
+  EventCalendar_FutureEventsLink: "See all upcoming",
   EventCalendar_FutureEventsHeader: "Coming soon",
   EventCalendar_LiveAndRecentEventsHeader: "Live and recent",
   EventCalendar_LiveNow: "live now",
@@ -160,8 +163,8 @@ LocalizationReady("shared", "english", {
   EventCalendar_WillStartAfterDuration: "Starting in %1$s",
   EventCalendar_LaterToday: "later today",
   EventCalendar_Tomorrow: "tomorrow",
-  EventCalendar_ThisWeek: "this week",
-  EventCalendar_ThisMonth: "this month",
+  EventCalendar_NextWeek: "next week",
+  EventCalendar_LaterThisMonth: "later this month",
   EventCalendar_MuchLater: "much later",
   EventCalendar_MuteApp: "Mute App",
   EventCalendar_MuteApp_Title: "Mute %1$s",
@@ -267,6 +270,7 @@ LocalizationReady("shared", "english", {
   EventDisplay_ViewInLibrary: "View in Library",
   EventDisplay_ViewStorePage: "View Store Page",
   EventDisplay_ViewCommunityPage: "View Community Page",
+  EventDisplay_ViewRssFeed: "View RSS Feed",
 
   EventDisplay_CallToAction_LearnMore: "Learn More",
   EventDisplay_CallToAction_InLibrary: "In Library",
@@ -1092,7 +1096,7 @@ LocalizationReady("shared", "english", {
 
   Sale_BundleSave: "Includes %1$s items.",
   Sale_BundleSave_WithDiscount:
-    "Buy this bundle to save %1$s off all %2$s items!",
+    "Buy this bundle to save %1$s% off all %2$s items!",
   Sale_PackageSave: "Includes %1$s items.",
   Sale_ShowContents: "Show contents",
   Sale_ShowBundleContent: "Show all %1$s items in bundle",

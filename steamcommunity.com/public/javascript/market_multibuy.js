@@ -1,4 +1,27 @@
 
+function ValidationMarkFieldBad( elem )
+{
+	if ( $(elem) )
+	{
+		if ( $(elem).hasClassName( 'highlight_on_error' ) )
+			new Effect.Morph( elem, {style: 'color: #FF9900', duration: 0.5 } );
+		else
+			new Effect.Morph( elem, {style: 'border-color: #FF9900', duration: 0.5 } )
+	}
+}
+
+function ValidationMarkFieldOk( elem )
+{
+	if ( $(elem) )
+	{
+		if ( $(elem).hasClassName( 'highlight_on_error' ) )
+			$(elem).style.color='';
+		else
+			$(elem).style.borderColor = '';
+	}
+
+}
+
 function CBuyOrder( iName, price_total, qty )
 {
 	this.m_llNameId = g_rgItemNameIds[iName];
@@ -32,6 +55,16 @@ CBuyOrder.prototype.PlaceOrder = function()
 	this.m_cCreateOrderAttempts++;
 	var thisOrder = this;
 
+	var first_name = $J('#first_name') ? $J('#first_name').val() : '';
+	var last_name = $J('#last_name') ? $J('#last_name').val() : '';
+	var billing_address = $J('#billing_address') ? $J('#billing_address').val() : '';
+	var billing_address_two = $J('#billing_address_two') ? $J('#billing_address_two').val() : '';
+	var billing_country = $J('#billing_country') ? $J('#billing_country').val() : '';
+	var billing_city = $J('#billing_city') ? $J('#billing_city').val() : '';
+	var billing_state = g_bHasBillingStates ? ( $J('#billing_state_select') ? $J('#billing_state_select').val() : '' ) : '';
+	var billing_postal_code = $J('#billing_postal_code') ? $J('#billing_postal_code').val() : '';
+	var save_my_address = $J('#save_my_address') ? $J('#save_my_address').prop('checked') : false;
+
 	var ajax = $J.ajax( {
 		url: 'https://steamcommunity.com/market/createbuyorder/',
 		type: 'POST',
@@ -41,7 +74,16 @@ CBuyOrder.prototype.PlaceOrder = function()
 			appid: g_unAppId,
 			market_hash_name: this.m_strMarketHashName,
 			price_total: this.m_nPriceTotal,
-			quantity: this.m_nQuantity
+			quantity: this.m_nQuantity,
+			first_name: first_name,
+			last_name: last_name,
+			billing_address: billing_address,
+			billing_address_two: billing_address_two,
+			billing_country: billing_country,
+			billing_city: billing_city,
+			billing_state: billing_state,
+			billing_postal_code: billing_postal_code,
+			save_my_address: save_my_address ? '1' : '0'
 		},
 		crossDomain: true,
 		xhrFields: { withCredentials: true }
@@ -426,11 +468,43 @@ function MultiBuyStartPurchase()
 	{
 		return;
 	}
-
+	
 		if ( !$J('#market_multi_accept_ssa') || !$J('#market_multi_accept_ssa').prop('checked') )
 	{
 		ShowAlertDialog( 'Cannot place order', 'You must agree to the terms of the Steam Subscriber Agreement to complete this transaction.', 'OK' );
 		return;
+	}
+
+		if ( g_bRequiresBillingInfo )
+	{
+		var rgBadFields = { 
+			first_name : false,
+			last_name : false,
+			billing_address : false,
+			security_code : false,
+			billing_city : false,
+			billing_state_text : false,
+			billing_phone : false,
+			billing_postal_code : false,
+			billing_state_select_trigger : false
+		}
+
+		var errorString = '';
+		errorString = BillingAddress_VerifyAddressFields( rgBadFields, g_bHasBillingStates );
+
+		for ( var key in rgBadFields )
+		{
+			if ( rgBadFields[key] )
+				ValidationMarkFieldBad( key );
+			else
+				ValidationMarkFieldOk( key );
+		}
+
+		if ( errorString != '' )
+		{
+			ShowAlertDialog( 'Cannot place order', errorString, 'OK' );
+			return;
+		}
 	}
 
 	if ( !window.g_rgWalletInfo )

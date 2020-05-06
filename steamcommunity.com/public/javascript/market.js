@@ -1,4 +1,27 @@
 
+function ValidationMarkFieldBad( elem )
+{
+	if ( $(elem) )
+	{
+		if ( $(elem).hasClassName( 'highlight_on_error' ) )
+			new Effect.Morph( elem, {style: 'color: #FF9900', duration: 0.5 } );
+		else
+			new Effect.Morph( elem, {style: 'border-color: #FF9900', duration: 0.5 } )
+	}
+}
+
+function ValidationMarkFieldOk( elem )
+{
+	if ( $(elem) )
+	{
+		if ( $(elem).hasClassName( 'highlight_on_error' ) )
+			$(elem).style.color='';
+		else
+			$(elem).style.borderColor = '';
+	}
+
+}
+
 function BIsTwoFactorEnabled()
 {
 	var bEnabled = $J( document.body).hasClass( "two_factor_sale_enabled" );
@@ -364,6 +387,38 @@ CreateBuyOrderDialog = {
 			return;
 		}
 
+				if ( g_bRequiresBillingInfo )
+		{
+			var rgBadFields = { 
+				first_name : false,
+				last_name : false,
+				billing_address : false,
+				security_code : false,
+				billing_city : false,
+				billing_state_text : false,
+				billing_phone : false,
+				billing_postal_code : false,
+				billing_state_select_trigger : false
+			}
+
+			var errorString = '';
+			errorString = BillingAddress_VerifyAddressFields( rgBadFields, g_bHasBillingStates );
+
+			for ( var key in rgBadFields )
+			{
+				if ( rgBadFields[key] )
+					ValidationMarkFieldBad( key );
+				else
+					ValidationMarkFieldOk( key );
+			}
+			
+			if ( errorString != '' )
+			{
+				this.DisplayError( errorString );
+				return;
+			}
+		}
+
 		new Effect.BlindUp( 'market_buyorder_dialog_paymentinfo_frame_container', { duration: 0.25 } );
 		new Effect.BlindDown( 'market_buyorder_dialog_placing_order', { duration: 0.25 } );
 
@@ -376,6 +431,16 @@ CreateBuyOrderDialog = {
 		var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
 		var price_total = Math.round( currency * quantity );
+
+		var first_name = $J('#first_name') ? $J('#first_name').val() : '';
+		var last_name = $J('#last_name') ? $J('#last_name').val() : '';
+		var billing_address = $J('#billing_address') ? $J('#billing_address').val() : '';
+		var billing_address_two = $J('#billing_address_two') ? $J('#billing_address_two').val() : '';
+		var billing_country = $J('#billing_country') ? $J('#billing_country').val() : '';
+		var billing_city = $J('#billing_city') ? $J('#billing_city').val() : '';
+		var billing_state = g_bHasBillingStates ? ( $J('#billing_state_select') ? $J('#billing_state_select').val() : '' ) : '';
+		var billing_postal_code = $J('#billing_postal_code') ? $J('#billing_postal_code').val() : '';
+		var save_my_address = $J('#save_my_address') ? $J('#save_my_address').prop('checked') : false;
 
 		// we'll want to refresh the page behind us when done
 		this.m_bPageNeedsRefresh = true;
@@ -390,7 +455,16 @@ CreateBuyOrderDialog = {
 				appid: this.m_unAppId,
 				market_hash_name: this.m_strMarketHashName,
 				price_total: price_total,
-				quantity: quantity
+				quantity: quantity,
+				first_name: first_name,
+				last_name: last_name,
+				billing_address: billing_address,
+				billing_address_two: billing_address_two,
+				billing_country: billing_country,
+				billing_city: billing_city,
+				billing_state: billing_state,
+				billing_postal_code: billing_postal_code,
+				save_my_address: save_my_address ? '1' : '0'			
 			},
 			crossDomain: true,
 			xhrFields: { withCredentials: true }
@@ -794,6 +868,38 @@ BuyItemDialog = {
 			return;
 		}
 
+				if ( g_bRequiresBillingInfo )
+		{
+			var rgBadFields = { 
+				first_name : false,
+				last_name : false,
+				billing_address : false,
+				security_code : false,
+				billing_city : false,
+				billing_state_text : false,
+				billing_phone : false,
+				billing_postal_code : false,
+				billing_state_select_trigger : false
+			}
+
+			var errorString = '';
+			errorString = BillingAddress_VerifyAddressFields( rgBadFields, g_bHasBillingStates, '_buynow' );
+
+			for ( var key in rgBadFields )
+			{
+				if ( rgBadFields[key] )
+					ValidationMarkFieldBad( key + '_buynow' );
+				else
+					ValidationMarkFieldOk( key + '_buynow' );
+			}
+
+			if ( errorString != '' )
+			{
+				this.DisplayError( errorString );
+				return;
+			}
+		}
+
 		this.m_bPurchaseClicked = true;
 		$('market_buynow_dialog_error').hide();
 
@@ -804,6 +910,16 @@ BuyItemDialog = {
 
 		var listingid = this.m_ulListingId;
 
+		var first_name = $J('#first_name_buynow') ? $J('#first_name_buynow').val() : '';
+		var last_name = $J('#last_name_buynow') ? $J('#last_name_buynow').val() : '';
+		var billing_address = $J('#billing_address_buynow') ? $J('#billing_address_buynow').val() : '';
+		var billing_address_two = $J('#billing_address_two_buynow') ? $J('#billing_address_two_buynow').val() : '';
+		var billing_country = $J('#billing_country_buynow') ? $J('#billing_country_buynow').val() : '';
+		var billing_city = $J('#billing_city_buynow') ? $J('#billing_city_buynow').val() : '';
+		var billing_state = g_bHasBillingStates ? ( $J('#billing_state_select_buynow') ? $J('#billing_state_select_buynow').val() : '' ) : '';
+		var billing_postal_code = $J('#billing_postal_code_buynow') ? $J('#billing_postal_code_buynow').val() : '';
+		var save_my_address = $J('#save_my_address_buynow') ? $J('#save_my_address_buynow').prop('checked'): false;
+
 		$J.ajax( {
 			url: 'https://steamcommunity.com/market/buylisting/' + listingid,
 			type: 'POST',
@@ -813,7 +929,16 @@ BuyItemDialog = {
 				subtotal: this.m_nSubtotal,
 				fee: this.m_nFeeAmount,
 				total: this.m_nTotal,
-				quantity: 1
+				quantity: 1,
+				first_name: first_name,
+				last_name: last_name,
+				billing_address: billing_address,
+				billing_address_two: billing_address_two,
+				billing_country: billing_country,
+				billing_city: billing_city,
+				billing_state: billing_state,
+				billing_postal_code: billing_postal_code,
+				save_my_address: save_my_address ? '1' : '0'
 			},
 			crossDomain: true,
 			xhrFields: { withCredentials: true }
