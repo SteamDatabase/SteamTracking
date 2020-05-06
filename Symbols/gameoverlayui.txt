@@ -4869,6 +4869,7 @@
  T CBasePanel::ActivateVoiceSettings()
  T CBasePanel::AppDrivenFriendChange(CBasePanel::EFriendChangeType, CSteamID const&)
  T CBasePanel::BBringWindowsToFrontInsteadOfOverlay()
+ T CBasePanel::BInMinimalPanelMode(vgui::Panel*)
  T CBasePanel::CBasePanel()
  T CBasePanel::CCallback_OnAsyncNotificationsRequested::Run(void*)
  T CBasePanel::CCallback_OnAsyncNotificationsRequested::~CCallback_OnAsyncNotificationsRequested()
@@ -8637,6 +8638,7 @@
  T COverlayVRState::~COverlayVRState()
  T COverlayWebBrowser::AddCustomURLHandler(char const*, vgui::Panel*)
  T COverlayWebBrowser::AddHeader(char const*, char const*)
+ T COverlayWebBrowser::AllowRegisteredGameProtocol()
  T COverlayWebBrowser::CCallback_OnParentalLockChanged::Run(void*)
  T COverlayWebBrowser::CCallback_OnParentalLockChanged::~CCallback_OnParentalLockChanged()
  T COverlayWebBrowser::COverlayWebBrowser(vgui::Panel*, char const*)
@@ -8674,6 +8676,7 @@
  T COverlayWebBrowser::OnSecurityStatus(KeyValues*)
  T COverlayWebBrowser::OnSetSecurityStatus(bool, bool, bool, char const*)
  T COverlayWebBrowser::OnSetStatusText(char const*)
+ T COverlayWebBrowser::OnStartHTMLRequest(char const*, char const*, char const*, bool)
  T COverlayWebBrowser::OnTick()
  T COverlayWebBrowser::OnURLChanged(KeyValues*)
  T COverlayWebBrowser::OnWebBack()
@@ -10794,6 +10797,7 @@
  T TimeCompare(unsigned int const*, unsigned int const*)
  T URLEncode(char const*)
  T URLLabel_Factory()
+ T URLParts_t::~URLParts_t()
  T UnlinkFile(StringView)
  T UpdateProfilingState()
  T UtlMemory_CalcNewAllocationCount(int, int, int, unsigned long)
@@ -12445,6 +12449,7 @@
  T vgui::HTML::SendScreenDimensionsToCEF()
  T vgui::HTML::SetBrowserHidden(bool)
  T vgui::HTML::SetContextMenuEnabled(bool)
+ T vgui::HTML::SetStartRequestHook(CUtlDelegate<bool (char const*, char const*, char const*, bool)>)
  T vgui::HTML::SetViewSourceEnabled(bool)
  T vgui::HTML::ShowFindDialog()
  T vgui::HTML::StopFind()
@@ -14778,6 +14783,7 @@
  V_URLCracker
  V_URLDecodeRaw
  V_URLEncode
+ V_URLParse
  V_UTF16ToUTF32
  V_UTF16ToUTF8
  V_UTF32CharsToUTF8

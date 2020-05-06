@@ -10877,7 +10877,7 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
 	}*/ }
   .NavArea .appportrait_LibraryItemBox_WYgDg {
     transform-style: initial; }
-  .appportrait_LibraryItemBox_WYgDg:active, .appportrait_LibraryItemBox_WYgDg.appportrait_InRecentGames_biTV-:active {
+  .appportrait_LibraryItemBox_WYgDg:active, .appportrait_LibraryItemBox_WYgDg.appportrait_InRecentGames_biTV-:active, .appportrait_LibraryItemBox_WYgDg.appportrait_InPlayNext_L3xTn:active {
     transition-duration: 0.05s;
     transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
     filter: brightness(1.2); }
@@ -10938,10 +10938,10 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     .appportrait_LibraryItemBox_WYgDg.appportrait_Landscape_3VOR2 img {
       transition-duration: 0.6s;
       transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1); }
-  .appportrait_LibraryItemBox_WYgDg.appportrait_InRecentGames_biTV-, .appportrait_LibraryItemBox_WYgDg.appportrait_InFriendsActivity_3ngZC {
+  .appportrait_LibraryItemBox_WYgDg.appportrait_InRecentGames_biTV-, .appportrait_LibraryItemBox_WYgDg.appportrait_InPlayNext_L3xTn, .appportrait_LibraryItemBox_WYgDg.appportrait_InFriendsActivity_3ngZC {
     transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1); }
-    .appportrait_LibraryItemBox_WYgDg.appportrait_InRecentGames_biTV- .appportrait_LibraryItemBoxTitle_1tO8p, .appportrait_LibraryItemBox_WYgDg.appportrait_InFriendsActivity_3ngZC .appportrait_LibraryItemBoxTitle_1tO8p {
+    .appportrait_LibraryItemBox_WYgDg.appportrait_InRecentGames_biTV- .appportrait_LibraryItemBoxTitle_1tO8p, .appportrait_LibraryItemBox_WYgDg.appportrait_InPlayNext_L3xTn .appportrait_LibraryItemBoxTitle_1tO8p, .appportrait_LibraryItemBox_WYgDg.appportrait_InFriendsActivity_3ngZC .appportrait_LibraryItemBoxTitle_1tO8p {
       display: none; }
   .appportrait_LibraryItemBox_WYgDg.appportrait_InFriendsActivity_3ngZC {
     border-radius: initial; }
@@ -16855,6 +16855,56 @@ div.NarrowRightPanel .libraryhomefriendsactivity_LibraryAutomatic_3AWBh .library
     height: 14px; }
 
 .libraryhomerecentgames_RecentGameMediaContainer_2XftM {
+  position: relative;
+  margin-top: 6px; }
+
+/* stylelint-disable */
+
+/* stylelint-enable */
+/* stylelint-disable */
+
+/* stylelint-enable */
+.libraryhomeplaynext_PlayNextSubHead_1kdin {
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 100;
+  color: #fff6;
+  line-height: 14px;
+  letter-spacing: 1px; }
+
+.libraryhomeplaynext_PlayNextNoResults_2mfXm {
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-weight: 100;
+  color: #fff6;
+  line-height: 14px;
+  letter-spacing: 1px; }
+
+.libraryhomeplaynext_PlayNextSuggestions_3iXvg {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  min-width: 0px;
+  margin-bottom: 0px;
+  margin-top: 4px; }
+
+.libraryhomeplaynext_PlayNextSuggestion_2a9Sn {
+  flex: none;
+  user-select: none; }
+  .libraryhomeplaynext_PlayNextSuggestion_2a9Sn:not(:last-child) {
+    margin-right: 16px; }
+  .libraryhomeplaynext_PlayNextSuggestion_2a9Sn .libraryhomeplaynext_AddedDate_1Nfcb {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 100;
+    color: #fff6;
+    line-height: 14px;
+    letter-spacing: 1px; }
+  .libraryhomeplaynext_PlayNextSuggestion_2a9Sn .libraryhomeplaynext_EmptyDate_2VW21 {
+    height: 14px; }
+
+.libraryhomeplaynext_PlayNextSuggestionMediaContainer_2AcrN {
   position: relative;
   margin-top: 6px; }
 

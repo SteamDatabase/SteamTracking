@@ -243,4 +243,6 @@ public:
     virtual unknown_ret SetFriendsUIActiveClanChatList(unsigned int*, int) = 0;
     virtual unknown_ret GetNumChatsWithUnreadPriorityMessages() = 0;
     virtual unknown_ret SetNumChatsWithUnreadPriorityMessages(int) = 0;
+    virtual unknown_ret RegisterProtocolInOverlayBrowser(char const*) = 0;
+    virtual unknown_ret HandleProtocolForOverlayBrowser(unsigned int, char const*) = 0;
 };

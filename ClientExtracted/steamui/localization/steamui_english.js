@@ -237,6 +237,9 @@
 	"LibraryHome_NewUpdates": "What's New",
 	"LibraryHome_YourCollection": "Your Complete Library",
 	"LibraryHome_RecentFriendsActivity": "Recent Friend Activity",
+	"LibraryHome_PlayNext": "Play Next",
+	"LibraryHome_PlayNextSubHead": "Players like you love these games you've yet to try",
+	"LibraryHome_PlayNextNoResults": "You don't have any unplayed games in your library that are strongly recommended for you",
 
 	"LibraryHome_NewUpdates_LoweredPriority": "Now showing fewer updates for %1$s.",
 	"LibraryHome_NewUpdates_RaisedPriority": "Now showing more updates for %1$s.",
@@ -925,6 +928,7 @@
 	"Showcase_AllCollections": "Collections View",
 	"Showcase_RecentGames": "Recent Games",
 	"Showcase_DoneReordering": "Done",
+	"Showcase_PlayNext": "Play Next",
 
 	"Playtime_TwoWeeks_Minutes": "%1$s mins played recently",
 	"Playtime_TwoWeeks_Hours": "%1$s hrs played recently",

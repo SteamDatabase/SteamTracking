@@ -215,6 +215,11 @@
         "posted_in": "CUserFriends::SetNumChatsWithUnreadPriorityMessages(int)"
     },
     {
+        "id": 349,
+        "size": 1024,
+        "posted_in": "CUserFriends::HandleProtocolForOverlayBrowser(unsigned int, char const*)"
+    },
+    {
         "id": 404,
         "size": 4136,
         "posted_in": "PostPurchaseCallback(CUser*, EResult, EPurchaseResultDetail, CPurchaseReceiptInfo&)"

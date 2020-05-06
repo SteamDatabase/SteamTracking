@@ -4,8 +4,6 @@ __TEXT
 5
 __text
 __TEXT
-v
-v
 __stubs
 __TEXT
 __stub_helper
@@ -34,7 +32,7 @@ __DATA
 5
 __la_symbol_ptr
 __DATA
-0
+8
 __mod_init_func
 __DATA
 __const
@@ -65,8 +63,10 @@ __LINKEDIT
 @
 @loader_path/gameoverlayui.dylib
 "
+Z
 P
 _
+"X
 
 8
 @loader_path/libtier0_s.dylib
@@ -3614,8 +3614,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-May  5 2020
-14:18:22
+May  6 2020
+12:03:42
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -3983,6 +3983,16 @@ store.steampowered.com
 graphics/loop_
 graphics/rampDown_
 %s%d
+http
+https
+chrome
+file
+ftp
+sftp
+imap
+mailto
+rtmp
+ssh
 COverlayWebBrowser
 vgui::ToolPanel
 OnURLChanged
@@ -5267,7 +5277,6 @@ parameters
 groups_list
 group
 No control groups specified
-file
 style
 file_url
 style_list
@@ -7251,17 +7260,9 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-i &
 #
 $
-I
-I
-I
-I
-I
-I
-I
-I
+$
 I
 I
 I
@@ -7270,57 +7271,65 @@ $
 $
 $
 $
-&@
+$
+$
 0
 p
 p
 0
-1?
-@
-@
-@
-@
-@
-@
-@
-@
-`#
+v#
 "
-"
-]H
-.H
+@#
 #
 #
+#
+#
+}?
+#
+#
+#
+#
+#
+#
+H
 u"
 0
 p
 K
-"
-"
-"
-N"
-k
-b>
-)>
-X
+;"
+6"
+L"
+:"
+7"
+<"
+r!
+k!
 !
 !
 !
 !
 4
-4
-'!
 1
 1
 1
 d
 ^
+>
+!
+!
+!
+!
+!
+!
+!
+!
 
 
 
 
 
 
+r
 p
 0
 0
@@ -7353,27 +7362,38 @@ p
 p
 p
 0
-@
 @
 =
+#
 
+UD
 0
 >
 g
-N>
->
->
-?
+"D
+=
+=
+=
+=
+=
+=
+=
+-=
 Hi
+pC
+U2
 0
 p
-L>
 I
 I
+1>
+/>
 >
 >
 >
 >
+;B
+"
 $
 @
 @
@@ -7385,10 +7405,10 @@ $
 A
 Hc
 =
-L?
-?
-?
-L9536?
+J+
+J?
+0
+/
 Hc
 ?
 ?
@@ -7515,7 +7535,6 @@ P
 tC=_
 t<=
 0
-#
 p
 0
 p
@@ -7562,15 +7581,13 @@ P
 @
 |
 |
-N6
-6
+S6
 "
+<6
 3
-46
 D
 N6
 I6
-D6
 6
 6
 6
@@ -7584,47 +7601,45 @@ D6
 6
 6
 6
-%6
+'
+'
 @
-5
-5
-w3
+h4
+L95Rh4
+4
+4
 %
-$
-$
-$
 
 
-
-2
-#
-C1
-C"
-1
-1
+'#
 d
 
-
-0,
+t,
+'
+%
 !
+m"
 
 
-&
 
-x+
-,
-,
+w+
 &
 &
 t=
 =
 =
 @
+!
 
-
+-
+-
+!
+$
 uV%
 
 
+*
+*
 E
 
 
@@ -7678,8 +7693,6 @@ d
 d
 d
 =
-'
-'
 
 =
 @
@@ -7694,6 +7707,9 @@ d
 @
 @
 0
-E
 !&
+E
+#&
+$&
++
 p
