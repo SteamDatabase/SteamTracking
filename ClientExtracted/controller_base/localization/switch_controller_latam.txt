@@ -1,0 +1,11 @@
+﻿"SwitchController"
+{
+"origin_switch_button_a"	"Botón A"
+"[english]origin_switch_button_a"	"A Button"
+"origin_switch_button_b"	"Botón B"
+"[english]origin_switch_button_b"	"B Button"
+"origin_switch_button_x"	"Botón X"
+"[english]origin_switch_button_x"	"X Button"
+"origin_switch_button_y"	"Botón Y"
+"[english]origin_switch_button_y"	"Y Button"
+}

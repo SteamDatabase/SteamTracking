@@ -1,0 +1,15 @@
+﻿"Language" "turkish"
+
+"Tokens"
+{  
+	"SteamClean_Title" "Steam Silme İşlemi"
+	"[english]SteamClean_Title" "Deleting Steam?" 
+	"SteamClean_Message" "Steam %@ içinde depolanmış oyun içeriğine sahip.  Steam'in bunları silmesini istiyor musunuz?"
+	"[english]SteamClean_Message" "Steam still has game content stored in %@.  Do you want Steam to delete them now?" 
+	"SteamClean_Delete" "DOSYALARI SİL"
+	"[english]SteamClean_Delete" "Delete files" 
+	"SteamClean_Keep" "DOSYALARI TUT"
+	"[english]SteamClean_Keep" "Keep files" 
+	"SteamClean_ShowInFinder" "BULUCUDA GÖSTER"
+	"[english]SteamClean_ShowInFinder" "Show in Finder"
+}  
