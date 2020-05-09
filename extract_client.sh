@@ -45,6 +45,7 @@ dotnet ~/ProtobufDumper/ProtobufDumper.dll bins/steamui.dylib "$DIR/Protobufs/" 
 dotnet ~/ProtobufDumper/ProtobufDumper.dll bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
 
 node ../protobufdumper.js "$DIR/ClientExtracted/steamui/libraryroot.js" > ~/ValveProtobufs/webui/steamui_libraryroot.proto
+node ../protobufdumper.js "$DIR/ClientExtracted/steamui/broadcast.js" > ~/ValveProtobufs/webui/steamui_broadcast.proto
 
 ~/ValveProtobufs/update.sh
 

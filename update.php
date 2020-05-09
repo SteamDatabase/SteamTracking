@@ -311,9 +311,16 @@
 
 				$this->ETags[ $HashPath ] = $Hash;
 
-				if( $OriginalFile === 'steamcommunity.com/public/javascript/webui/steammessages.js' )
+				$WebProtobufs =
+				[
+					'steamcommunity.com/public/javascript/webui/steammessages.js' => 'friends',
+					'steamcommunity.com/public/javascript/applications/community/main.js' => 'community',
+					'store.steampowered.com/public/javascript/applications/store/main.js' => 'store',
+				];
+
+				if( isset( $WebProtobufs[ $OriginalFile ] ) )
 				{
-					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > ../ValveProtobufs/webui/friends.proto && ../ValveProtobufs/update.sh' );
+					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > ' . escapeshellarg( '../ValveProtobufs/webui/' . $WebProtobufs[ $OriginalFile ] . '.proto' ) . ' && ../ValveProtobufs/update.sh' );
 				}
 				else if( $OriginalFile === 'Scripts/WebUI/steammobile_android.js' )
 				{
@@ -572,3 +579,4 @@
 			echo $Log;
 		}
 	}
+
