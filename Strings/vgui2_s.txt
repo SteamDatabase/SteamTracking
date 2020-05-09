@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+Pk
+Pk
 __stubs
 __TEXT
 __stub_helper
@@ -9,9 +11,11 @@ __const
 __TEXT
 __objc_methname
 __TEXT
+="
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
+Q
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -52,14 +56,13 @@ __bss
 __DATA
 __common
 __DATA
-0<
+`<
 H
 __LINKEDIT
 
 8
 @loader_path/vgui2_s.dylib
 "
-x
 p
 P
 
@@ -107,11 +110,9 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-0>
 )
-XI
 H
-Q
+R
 @5
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
@@ -122,7 +123,6 @@ Q
 10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
 7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessItEE
 10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessItEE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE
-10CUtlRBTreeIN8COSXFont11abc_cache_tEtPFbRKS1_S3_E25CDefRBTreeBalanceListenerItES1_E
 N4vgui6BitmapE
 N4vgui6IImageE
 14CUtlLinkedListIN17CFontTextureCache15CacheLRUEntry_tEiE
@@ -386,6 +386,7 @@ Lucida Grande
 Tahoma
 Helvetica
 Monaco
+#Fallback
 CFontManager
 m_FontAmalgams
 m_FontAmalgams[iFont]

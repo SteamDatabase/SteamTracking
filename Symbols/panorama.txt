@@ -2634,6 +2634,7 @@
  OBJC_CLASS_$_NSColorSpace
  OBJC_CLASS_$_NSEvent
  OBJC_CLASS_$_NSFileManager
+ OBJC_CLASS_$_NSFont
  OBJC_CLASS_$_NSLocale
  OBJC_CLASS_$_NSProcessInfo
  OBJC_CLASS_$_NSRunningApplication

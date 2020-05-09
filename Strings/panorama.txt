@@ -6,8 +6,8 @@ __text
 __TEXT
 __stubs
 __TEXT
-xh4
-xh4
+Xh4
+Xh4
 __stub_helper
 __TEXT
 __cstring
@@ -15,8 +15,6 @@ __TEXT
 __const
 __TEXT
 __gcc_except_tab__TEXT
-8=:
-8=:
 __objc_methname
 __TEXT
 __unwind_info
@@ -51,11 +49,12 @@ __DATA
 p.M
 p.M
 __objc_classrefs__DATA
-h0M
-x
-h0M
+x0M
+x0M
 __data
 __DATA
+1M
+1M
 __thread_vars
 __DATA
 __thread_bss
@@ -67,18 +66,17 @@ __DATA
 H
 __LINKEDIT
 @P
-0|
+`|
 
 8
 @loader_path/panorama.dylib
 "
-8
+H
 P
 Gj
 Gj
 
 Qj
-hvU
 
 8
 @loader_path/libtier0_s.dylib
@@ -158,22 +156,22 @@ R3
 
 
 
-}M
 C3
-kM
+yM
 "
 (
 (
+_M
 3
-TM
-dL
+MM
 D
 6
 6
 6
-GM
-ML
-HL
+QL
+LL
+GL
+$M
 @
 8
 HC
@@ -5052,8 +5050,8 @@ linux
 Linux;tenfoot
 X-ValveUserAgent
 panorama %s %s
-May  7 2020
-16:26:42
+May  8 2020
+16:26:23
 X-SteamClientVersion
 Assertion Failed: hostName
 Assertion Failed: pchRemoteHost
@@ -7605,63 +7603,64 @@ R3
 
 
 
-}M
 C3
-kM
+yM
 "
 (
 (
+_M
 3
-TM
-dL
+MM
 D
 6
 6
 6
-GM
-ML
-HL
-M
-#L
+QL
+LL
+GL
+$M
 t(
+L
 @
 G2
 M"
 A#
+[J
 (
 (
 (
 2
 2
+L
 "
 "
 "
 "
 I
+L952mJ
 '
 !
+I
 &
 k!
+qJ
 p&
-PJ
-IJ
 !
-=H
 &
-J
 &
 H
 4%
 I
-_I
+`F
 <%
+L95
+$H
 %
 %
 %
-#H
 $
+kF
 O$
-\F
 3$
 H
 P)
@@ -7678,6 +7677,7 @@ t1Mcu
 ?
 2
 %
+D
 ,
 ,
 @'
@@ -7689,14 +7689,16 @@ t1Mcu
 @
 @
 E
-zE
+|E
 yE
 +
 b
 -
+|A
 +
 &
 &
+aA
 &
 &
 &
@@ -7711,7 +7713,6 @@ C
 @
 @
 *
-A
 A
 @
 @
@@ -7741,6 +7742,7 @@ e(
 -
 @
 o'
+y?
 $
 @
 @
@@ -7757,29 +7759,27 @@ $
 @
 @
 @
-A
-A
+QA
+EA
 M&
 @
 @
 @
 @
-M?
 @
 @
 &
 &
 &
 &
-1@
-,@
+)?
 %
 %
 %
 %
 .%
-X=
 %
+?
 $
 $
 $
@@ -7792,17 +7792,15 @@ $
 @
 @
 @
-L95Q5=
 @
 @
 @
 =
 =
-=
 @
 =
 @
-L95lA<
+<
 @
 k"
 P
@@ -7822,7 +7820,6 @@ A
 "
 "
 #%
-;;
 @
 s!
 n!
@@ -7846,38 +7843,39 @@ A
 !
 !
 :
-:
 L
 L
+?;
 I
+<;
 E
-9;
-3;
-u9
+|9
 G#
 D#
 #
-&:
 o
 0
 p
+g7
 8
+o7
+\7
+M7
 7
+6
 @
 @
 w
-i5
-h5
-a5
 0
 p
 ?
-F4
+f2
+H4
 D
+~3
 2
 Hi
-1
-1
+i1
 1
 1
 1
@@ -7887,6 +7885,7 @@ Hi
 @
 
 
+L95;20
 
 
 
@@ -7896,6 +7895,7 @@ Hi
 .
 @
 @
+&+
 @
 @
 @
@@ -8188,7 +8188,6 @@ Hi
 @
 @
 @
-.*
 @
 @
 @
@@ -8238,12 +8237,13 @@ Hi
 @
 @
 @
-a,
+$,
+o,
 ,
 ,
 ,
 @
-T*
+P(
 ,
 @
 @
@@ -8251,7 +8251,6 @@ T*
 )
 @
 @
-J)
 =
 =
 @
@@ -8310,6 +8309,7 @@ J)
 @
 @
 @
+)
 )
 )
 '
@@ -8322,18 +8322,19 @@ J)
 ?
 ?
 A
+2%
 Hc
 =
 [
 G
 #
 
-r&
-r&
-`&
-L95[N&
+/%
 %
+L95P &
 &
+'
+'
 '
 '
 Hc
@@ -8419,7 +8420,7 @@ P
 v
 H=
 =
-Hc%
+Hce
 
 =
 @

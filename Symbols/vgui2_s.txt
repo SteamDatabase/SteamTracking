@@ -143,6 +143,8 @@
  CGLayerRelease
  CGMainDisplayID
  CGWindowLevelForKey
+ CTFontCreateWithName
+ CTFontGetPlatformFont
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)
  CValidator::IsClaimed(void*)
@@ -289,6 +291,7 @@
  OBJC_CLASS_$_NSDictionary
  OBJC_CLASS_$_NSEvent
  OBJC_CLASS_$_NSFileManager
+ OBJC_CLASS_$_NSFont
  OBJC_CLASS_$_NSGraphicsContext
  OBJC_CLASS_$_NSImage
  OBJC_CLASS_$_NSLocale
@@ -1876,6 +1879,7 @@
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
  T OSXHelpers::BIsNSWindowOnActiveSpace(void*)
  T OSXHelpers::GetMainBundle()
+ T OSXHelpers::GetNSFontDisplayName(CUtlString)
  T OSXHelpers::GetScreenResolution(int&, int&, char const*)
  T OSXHelpers::OSX_MyAudioServicesSystemSoundCompletionProc(unsigned int, void*)
  T OSXHelpers::PlaySoundFile(char const*)
