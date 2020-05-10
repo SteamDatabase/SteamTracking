@@ -316,6 +316,7 @@
 					'steamcommunity.com/public/javascript/webui/steammessages.js' => 'friends',
 					'steamcommunity.com/public/javascript/applications/community/main.js' => 'community',
 					'store.steampowered.com/public/javascript/applications/store/main.js' => 'store',
+					'store.steampowered.com/public/javascript/applications/store/curator_admin.js' => 'curator_admin',
 				];
 
 				if( isset( $WebProtobufs[ $OriginalFile ] ) )
