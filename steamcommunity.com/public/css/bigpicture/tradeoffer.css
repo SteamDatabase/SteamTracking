@@ -1,0 +1,956 @@
+
+#TradeOffer,
+#TradeOffers
+{
+	width: 100%;
+	height: 948px;
+	vertical-align: bottom;
+	padding-bottom: 120px;  // Leave room for footer
+//	background-color: backgroundgray;
+
+//	background-image: url( "file://{images}/profile/activity_bg_wash.png" );
+	background-size: 100% 100%;
+//	box-shadow: #000000aa -4px -4px 8px 8px;
+
+	flow-children: right;
+}
+
+#TradeOffers
+{
+	flow-children: none;
+}
+
+.TradeOfferWrapper
+{
+	width: 100%;
+	height: 100%;
+}
+
+.TopLevelColumn
+{
+	height: 100%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.TopLevelColumnInner
+{
+	height: 100%;
+	width: 100%;
+	flow-children: down;
+}
+
+#YourColumn .TopLevelColumnInner
+{
+	margin-left: 70px;
+}
+
+#TheirColumn .TopLevelColumnInner
+{
+	margin-right: 70px;
+}
+
+.TopLevelColumn Label
+{
+	align: left top;
+}
+
+.TradeHeaderWrapper
+{
+	width: 100%;
+	flow-children: right;
+}
+
+.TradeHeaderWrapper .TradeOfferAvatar
+{
+	margin-right: 10px;
+}
+
+.LabelWrapper
+{
+	width: 100%;
+}
+
+.LabelWrapper Label
+{
+	transition-property: opacity;
+	transition-duration: 0.4s;
+	opacity: 0.0;
+}
+
+.OffersLoading .LabelWrapper .Counted
+{
+	opacity: 0.0;
+}
+
+.OffersLoading .LabelWrapper .Uncounted,
+.LabelWrapper .Counted
+ {
+	 opacity: 1.0;
+ }
+
+.Header
+{
+	font-size: 32px;
+	color: tcstatictext;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#InProgressThrobber
+{
+	horizontal-align: center;
+	vertical-align: center;
+	margin-top: 0px;
+	y: -120px;
+	z-index: 100;
+	opacity: 0.0;
+}
+
+.InProgress #InProgressThrobber
+{
+	opacity: 1.0;
+}
+
+.InProgress .TradePage
+{
+	desaturation: 0.2;
+	blur: gaussian( 1.5 );
+	wash-color: #00000066;
+}
+
+#YourColumn
+{
+	width: 634px;
+}
+
+#ActionColumn
+{
+	width: fill-parent-flow( 1.0 );
+	height: 80%;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+#TheirColumn
+{
+	width: 634px;
+}
+
+#ActionColumn .ButtonWrapper
+{
+	align: center bottom;
+	flow-children: down;
+	width: 100%;
+	opacity: 1.0;
+
+	margin-bottom: 15px;
+
+	transition-property: opacity;
+	transition-duration: 0.23s;
+}
+
+#ActionColumn .Button,
+#ActionColumn #Or
+{
+	transition-property: opacity, blur, background-color, color, transform, box-shadow;
+	transition-duration: 0.4s;
+	transition-timing-function: ease-out;
+}
+
+.OffersLoading #ActionColumn .ButtonWrapper
+{
+	opacity: 0.0;
+}
+
+#ConfirmButton
+{
+	margin-bottom: 40px;
+	padding: 10px;
+	height: fit-children;
+}
+
+#ConfirmButton Label
+{
+	width: 100%;
+}
+
+#ConfirmButton .LabelWrapper
+{
+	width: 100%;
+}
+
+#ConfirmButton:disabled .Active,
+#ConfirmButton .Inactive,
+.InProgress #ConfirmButton:disabled .Inactive
+{
+	opacity: 0.0;
+}
+
+.InProgress #ConfirmButton .Active,
+#ConfirmButton .Active
+{
+	opacity: 1.0;
+}
+#ConfirmButton:disabled .Inactive
+{
+	opacity: 0.35;
+}
+
+#ConfirmButton:disabled .TickBox
+{
+	visibility: collapse;
+}
+
+#ConfirmButton Label
+{
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+#ConfirmButton .TickBox,
+.InProgress #ConfirmButton:disabled .TickBox
+{
+	visibility: visible;
+}
+
+
+#Or
+{
+	color: applabelsolid;
+	font-size: 34;
+	font-weight: light;
+	horizontal-align: center;
+	margin-bottom: 40px;
+}
+
+#ChangeOffer
+{
+	margin-bottom: 30px;
+}
+
+/* Manage visibility of buttons in middle column based on trade state */
+.NewOffer #Or,
+.NewOffer #ChangeOffer,
+.NewOffer #AcceptOffer,
+.NewOffer #DeclineOffer
+{
+	//	visibility: collapse;
+	opacity: 0.0;
+}
+
+.Counteroffer #Or,
+.Counteroffer #ChangeOffer
+ {
+	 opacity: 0.0;
+ }
+
+.Counteroffer #AcceptOffer,
+.Counteroffer #DeclineOffer
+{
+	visibility: collapse;
+}
+
+.ViewOffer #MakeOffer,
+.ViewOffer #AcceptOffer
+{
+	visibility: collapse;
+	//opacity: 0.0;
+}
+
+.ViewOffer.Confirmed #Or,
+.ViewOffer.Confirmed #ChangeOffer
+ {
+	 opacity: 0.0;
+ }
+
+.ViewOffer.Confirmed #DeclineOffer
+{
+	visibility: collapse;
+	//opacity: 0.0;
+}
+
+.ViewOffer.Confirmed #AcceptOffer
+{
+	visibility: visible;
+}
+
+
+.ActionColumnButton,
+.AddButton
+{
+	width: 100%;
+	
+	margin: 0px;
+	padding: 0px;
+
+	align: center center;
+}
+
+ToggleButton.ActionColumnButton:disabled
+{
+	background-color: simplebuttonsolid_vertical;
+	opacity: 1.0;
+}
+
+ToggleButton.ActionColumnButton:disabled Label
+{
+	background-color: transparent;
+}
+
+.AddButton
+{
+	width: 60px;
+	height: 60px;
+	vertical-align: center;
+	horizontal-align: left;
+	margin-left: 5px;
+	margin-right: 5px;
+
+	z-index: 5;
+}
+
+#TheirColumn .AddButton
+{
+	horizontal-align: right;
+}
+
+.AddButton:focus
+{
+	width: fit-children;
+}
+
+.AddButton:focus Label
+{
+//	transform: none;
+}
+
+.AddButton .Collapsed
+{
+	align: center center;
+}
+
+.AddButton .Expanded,
+.AddButton:focus .Collapsed
+{
+	visibility: collapse;
+}
+
+.AddButton:focus .Expanded
+{
+	visibility: visible;
+	padding-right: 20px;
+}
+
+.AddButton:disabled
+{
+	opacity: 0.0;
+}
+
+.OffersLoading .AddButton
+{
+	opacity: 0.0;
+}
+
+.ActionColumnButton Label,
+.AddButton Label
+{
+	vertical-align: center;
+	font-size: 34;
+	font-weight: light;
+	text-overflow: clip;
+	flow-children: down;
+
+	width: 100%;
+	text-align: center;
+}
+
+.AddButton Label
+{
+	width: fit-children;
+}
+
+
+#ActionColumn #MessageWrapper
+{
+	flow-children: down;
+	height: 300px;
+	width: 100%;
+}
+
+#AddMessage,
+#IncludedMessage
+{
+	width: 100%;
+	height: 100%;
+}
+
+#AddMessage
+{
+	white-space: normal;
+}
+
+#IncludedMessage
+{
+	font-size: 24;
+	font-style: italic;
+	color: detailsdatalabel;
+}
+
+#IncludedMessageHeader,
+#IncludedMessage,
+#AddMessageHeader,
+#AddMessage
+{
+	visibility: collapse;
+}
+
+.ViewOffer #IncludedMessageHeader,
+.ViewOffer #IncludedMessage
+ {
+	 visibility: visible;
+ }
+
+.NewOffer #AddMessageHeader,
+.NewOffer #AddMessage,
+.Counteroffer #AddMessageHeader,
+.Counteroffer #AddMessage
+ {
+	 visibility: visible;
+ }
+
+
+.ActionColumnButton:disabled
+{
+}
+
+.ItemsGridWrapper
+{
+	width: 100%;
+	height: 100%;
+
+	border: 5px solid #2f668244;
+}
+
+.ItemsGridWrapper .EmptyTradeLabel
+{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 150px;
+	align: center top;
+	color: tcstatictext;
+	font-size: 28px;
+	opacity: 0.0;
+}
+
+.ItemsGridWrapper.Empty .EmptyTradeLabel
+{
+	opacity: 1.0;
+}
+
+.OffersLoading .ItemsGridWrapper .EmptyTradeLabel,
+.OffersLoading .ItemsGrid
+{
+	opacity: 0.0;
+}
+
+.ItemsGridWrapper LoadingThrobber
+{
+	margin: 0px;
+	horizontal-align: center;
+	vertical-align: center;
+	opacity: 0.0;
+}
+
+.OffersLoading .ItemsGridWrapper LoadingThrobber
+{
+	opacity: 1.0;
+}
+
+.ItemsGrid
+{
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+
+	padding: 30px 50px 0px 14px;
+	margin-bottom: -135px;
+}
+
+.ItemsGrid #RightMouseScrollRegion
+{
+	position: 0px -10px 0px;
+}
+
+
+.TradePage,
+.InventoryListingWrapper
+ {
+	 transition-property: transform, opacity;
+	 transition-duration: 0.4s;
+	 transition-timing-function: ease-out;
+ }
+
+#TradeOffer
+{
+}
+
+.YourItemsVisible #TradeOffer,
+.ItemDetailView.YourItemsVisible #TradeOffer
+{
+	transform: translatex( 1920px );
+}
+
+.TheirItemsVisible #TradeOffer,
+.ItemDetailView.TheirItemsVisible #TradeOffer
+{
+	transform: translatex( -1920px );
+}
+
+.ItemDetailView #TradeOffer
+{
+	transform: translatey( 1080px );
+}
+
+#YourInventoryListingWrapper
+{
+	transform: translatex( -1920px );
+}
+
+.YourItemsVisible #YourInventoryListingWrapper
+{
+	transform: translatex( 0px );
+}
+
+
+#TheirInventoryListingWrapper
+{
+	transform: translatex( 1920px );
+}
+
+.TheirItemsVisible #TheirInventoryListingWrapper
+{
+	transform: translatex( 0px );
+}
+
+.InventoryItem .SelectionOverlay
+{
+//	opacity: 0.0;
+    margin: 0px 10px 10px 0px;
+	horizontal-align: right;
+	vertical-align: bottom;
+
+	height: 60px;
+	width: 60px;
+
+	color: applabelsolid;
+
+
+	background-color: blue;
+
+	transition-property: box-shadow, opacity, desaturation;
+	transition-duration: shortmedduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0s;
+}
+
+.InventoryItem.Selected .SelectionOverlay
+{
+	opacity: 1.0;
+
+	background-image: url( "file://{images}/store/Icon_CheckDefault.png" );
+	background-repeat: no-repeat no-repeat;
+	background-size: 100% 100%;
+}
+
+
+#TradeOfferList
+{
+	height: 100%;
+	width: 50%;
+	horizontal-align: center;
+	margin-top: 50px;
+	flow-children: down;
+
+	overflow: squish scroll;
+	padding: 5px;
+	padding-right: 20px;
+}
+
+.TradeOffer
+{
+	width: 100%;
+	flow-children: down;
+	border: 2px solid blue;
+	margin-bottom: 20px;
+	background-color: transparent_module;
+
+	padding: 10px;
+}
+
+.TradeOffer:focus
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+.TradeOfferHeader
+{
+	color: applabelnofade;
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+.TradeOfferMessage
+{
+	font-size: 28px;
+	font-style: italic;
+	border: 2px solid black;
+	padding: 4px;
+	margin-bottom: 10px;
+	color: detailsdatalabel;
+}
+
+.TradeOfferItems
+{
+	flow-children: down;
+	margin-bottom: 10px;
+}
+
+#TheirItems
+{
+	margin-bottom: 20px;
+}
+
+.TradeOfferItemsHeaderWrapper
+{
+	flow-children: right;
+	margin-bottom: 15px;
+}
+
+.TradeOfferItemsHeader
+{
+	color: applabelnofade;
+	font-size: 28px;
+}
+
+.TradeOfferItemList
+{
+	flow-children: right-wrap;
+}
+
+.TradeOfferItemImageWrapper
+{
+	height: 100px;
+	width: 100px;
+	horizontal-align: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	background-color: #222222ff;
+	border: 2px solid transparent;
+}
+
+.FraudWarningIcon
+{
+	width: 20%;
+	height: 20%;
+	margin-top: 4px;
+	margin-left: 4px;
+	z-index: 2;
+	opacity: 0.0;
+}
+
+.FraudWarning .FraudWarningIcon
+{
+	opacity: 1.0;
+}
+
+.TradeOfferItemImageWrapper .Amount
+{
+	opacity: 0.0;
+	vertical-align: bottom;
+	horizontal-align: center;
+	color: applabelsolid;
+	font-size: 20;
+	margin-bottom: 3px;
+}
+
+.TradeOfferItemImageWrapper.Stackable .Amount
+{
+	opacity: 1.0;
+}
+
+.TradeOfferAvatar
+{
+	border-width: 2px;
+	border-style: solid;
+	margin-right: 5px;
+}
+
+.TradeOfferAvatar.online
+{
+	border-color: friendsonline_solid;
+}
+
+.TradeOfferAvatar.offline
+{
+	border-color: friendsoffline_solid;
+}
+
+.TradeOfferAvatar.in-game
+{
+	border-color: friendsingame_solid;
+}
+
+.Expiration
+{
+	font-size: 20px;
+	color: foregroundgray;
+}
+
+#ReceiptPopup
+{
+	width: 100%;
+	height: 100%;
+	z-index: msgbox_zindex;
+}
+
+#ReceiptPopup.Destructing
+{
+	opacity: 0.0;
+
+	animation-name: msg-box-disappear;
+	animation-duration: 0.4s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+}
+
+#ReceiptPopup #DialogInner
+{
+	width: 100%;
+	height: 100%;
+	vertical-align: center;
+	horizontal-align: center;
+	padding: 30px;
+	padding-bottom: 130px;
+}
+ 
+#ReceiptPopup LoadingThrobber
+{
+	horizontal-align: center;
+	vertical-align: center;
+
+	transition-property: opacity;
+	transition-timing-function: ease-out;
+	transition-duration: 0.5s;
+}
+
+#ReceiptPopup.LoadComplete LoadingThrobber
+{
+	opacity: 0.0;
+}
+
+#ReceiptPopup HTML
+{
+	transition-property: opacity;
+	transition-timing-function: ease-out;
+	transition-duration: 0.5s;
+
+	width: 100%;
+	height: 100%;
+
+	opacity: 0.0;
+}
+
+#ReceiptPopup.LoadComplete HTML
+{
+	opacity: 1.0;
+}
+
+#CountSelectorPopup
+{
+	height: 100%;
+	width: 100%;
+	z-index: msgbox_zindex;
+}
+
+#CountSelectorPopup #InnerContent
+{
+	height: 30%;
+	width: 50%;
+	align: center center;
+
+	flow-children: down;
+
+ 	background-color: transparent_module;
+
+	padding: 20px;
+}
+
+#CountSelectorPopup TextEntry
+{
+	width: 25%;
+	horizontal-align: center;
+}
+
+#CountSelectorPopup Slider
+{
+	width: 50%;
+	height: 20px;
+	horizontal-align: center;
+	margin-top: 20px;
+}
+
+#CountSelectorPopup Slider:focus #SliderThumb
+{
+	background-color: white;
+}
+
+#TradePartnerInfo
+{
+	transition-property: opacity, transform;
+	transition-duration: mediumduration;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.0s;
+	
+	width: 100%;
+	height: 100%;
+
+	transform: translatey( 1080px );
+	opacity: 0.0;
+}
+
+.TradePartnerInfoView #TradePartnerInfo
+{
+	transform: translatey( 0px );
+	opacity: 1.0;
+}
+
+.TradePartnerInfoWrapper
+{
+	width: 100%;
+	height: 80%;
+	flow-children: down;
+	padding-top: 100px;
+}
+
+.TradePartnerInfoWrapper .ActionColumnButton
+{
+	width: 200px;
+	vertical-align: bottom;
+	horizontal-align: center;
+}
+
+.TradePartnerHeadline
+{
+	flow-children: right;
+	border: 2px solid white;
+	padding: 15px 15px 15px 15px;
+	width: 100%;
+	margin-right: 40px;
+	margin-left: 40px;
+	flow-children: down;
+	horizontal-align: center;
+}
+
+.TradePartnerHeadlineStart
+{
+	font-size: 36px;
+	color: tcstatictext;
+}
+
+.TradePartnerHeadlineSub
+{
+	font-size: 30px;
+	color: applabelsolid;
+}
+
+.TradePartnerRecentlyChangedName
+{
+	margin-top: 5px;
+	color: #ff0000ff;
+	font-size: 24px;
+}
+
+.FriendName
+{
+	color: applabelsolid;
+}
+
+#TradePartnerInfoLine2
+{
+	flow-children: right;
+	horizontal-align: center;
+	width: 100%;
+	margin-top: 20px;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.TradePartnerInfoBlock
+{
+	flow-children: right;
+	border: 2px solid white;
+	padding: 15px;
+	height: 150px;
+	margin-left: 10px;
+	width: fill-parent-flow( 1.0 );
+}
+
+.TradePartnerFriendBlock
+{
+	margin-left: 0px;
+}
+
+.TradePartnerFriendBlock Label,
+.TradePartnerServiceBlock Label,
+.TradePartnerGroupBlock Label,
+.TradePartnerLevelBlock .LabelText
+ {
+	 font-size: 24px;
+	 color: tcstatictext;
+	 vertical-align: center;
+ }
+
+.friendLevel
+{
+	padding-top: 15px;
+	vertical-align: center;
+	margin-right: 10px;
+}
+
+.TradePartnerFriendBlock Image,
+.TradePartnerGroupBlock Image
+{
+	vertical-align: center;
+	height: 60px;
+	width: 60px;
+}
+
+.TradePartnerServiceBlock Image,
+.TradePartnerGroupBlock Image
+{
+	margin-right: 10px;
+	vertical-align: center;
+}
+
+.TradePartnerServiceBlock .MemberSince
+{
+	margin-left: 5px;
+}
+
+.ProfileBackground
+{
+	height: 100%;
+	width: 100%;
+	background-image: url( "file://{images}/panel_background.png" );
+}
+
+.ItemColumnLower
+{
+	height: 100%;
+	width: 100%;
+}

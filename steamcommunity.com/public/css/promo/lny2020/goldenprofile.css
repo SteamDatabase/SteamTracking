@@ -1,0 +1,634 @@
+
+.golden_profile
+{
+	padding: 0 25px;
+}
+
+body {	
+color: #dddddd;
+}
+
+.profile_header_content,
+.favoritegroup_showcase_group .favoritegroup_namerow {
+	color: #dddddd;
+}
+
+body.profile_page,
+div.profile_page {
+	font-family: "Motiva Sans", Sans-serif;
+}
+
+.profile_header_bg_texture {
+box-shadow: none;
+}
+
+.profile_golden_wrapper {
+	position: relative;
+	overflow: hidden;
+	background-color: rgb( 0, 0, 0 );
+}
+
+div.profile_page.golden_profile
+{
+	position: relative;
+}
+
+div.profile_page {
+	background: none;
+}
+
+.golden_profile_header {
+	position: absolute;
+	left: -5px;
+	top: -10px;
+	width: 100%;
+	height: 192px;
+}
+
+.profile_header_bg_texture:after
+{
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 65px;
+	left: 0;
+	bottom: 0px;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.golden_profile .profile_customization_snow
+{
+	width: 100%;
+	height: 41px;
+
+}
+
+a, .whiteLink, .profile_golden_wrapper .commentthread_pagelink:not( .active ) {
+	color:	#D5AD6D;
+}
+
+.achievement_progress_bar_ctn {
+	width: 150px;
+	background-color: #00000000;
+}
+
+.recent_game .game_info_stats, .favoritegame_showcase .game_info_stats {
+	border-top: none;
+	background-color: #00000000;
+	padding-left: 0px;
+
+}
+
+.profile_header_bg_texture {
+	max-width: 976px;
+	min-height: 224px;
+	margin: 0 auto;
+	background: none;
+}
+
+#snow_floor3
+{
+	position: absolute;
+	width: 674px;
+	height: 42px;
+
+	top: 895px;
+	left: -158px;
+	z-index:1;
+}
+
+.w19_sides_position
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	max-width: 1000px;
+	background: rgba( 0, 0, 0, .6 );
+}
+
+html.client .profile_w19_wrapper
+{
+	top: 0;
+	padding-top: 0;
+}
+
+html.client div.profile_page.golden_profile
+{
+	padding-top: 10px;
+}
+
+html.client .w19_sides_position
+{
+	top: 10px;
+}
+
+.w19_sides_position .w19_side
+{
+	position: absolute;
+	width: 133px;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+	pointer-events: none;
+}
+
+.w19_side_background {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 167px;
+	bottom: 0;
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2020/goldenprofile/lny2020_side.png' ) center top repeat-y;
+	filter: drop-shadow (0px 0px 5px 2px #2b2b2b)
+}
+
+.w19_side.right .w19_side_background {
+
+}
+
+.w19_sides_position .w19_side.left
+{
+	left: -68px;
+	transform: scaleX(-1);
+}
+
+.w19_sides_position .w19_side.right
+{
+	right: -68px;
+}
+
+
+
+.golden_profile .profile_background_holder_content
+{
+	display: none;
+}
+
+.golden_profile .showcase_content_bg,
+.golden_profile .profile_content.has_profile_background,
+.golden_profile .profile_content
+{
+	
+	background-size: 50px 50px;
+	margin-top: 0;
+	clear: both;
+}
+
+.golden_profile .profile_content.has_profile_background {
+	background: none;	
+}
+
+.showcase_content_bg,
+html.responsive .responsive_status_info {
+	background-color: rgba( 0, 0, 0, 0.0 );
+	padding-left: 0px;
+	padding-left: 0px;
+}
+
+.showcase_stat.favoritegroup_inchat,
+.workshop_showcase_details_content,
+.myworkshop_showcase_header.guides,
+.recent_game,
+.recent_game_now_playing .content,
+.screenshot_showcase_smallscreenshot.screenshot_count,
+.myguide_showcase_item_ctn,
+.profile_comment_area .commentthread_header, .profile_leftcol_header,
+.profile_comment_area .commentthread_entry_quotebox,
+.profile_comment_area .commentthread_textarea,
+.profile_background_overlay_content,
+.game_info_badge_border,
+.game_info_stats_rule {
+	background-color: #00000000;
+}
+
+.showcase_achievement.plus_more {
+	box-shadow: none;
+	background-color: #00000000;
+	border: none;
+}
+
+.screenshot_showcase_primary,
+.screenshot_showcase_screenshot:hover,
+.item_showcase_item {
+	border: 0px;
+}
+
+#group_invite_modal_list,
+.recent_game_content {
+	padding-left: 0px;
+}
+
+.profile_comment_area .commentthread_header .commentthread_allcommentslink,
+#NamePopup  {
+	font-family: "Motiva Sans", Sans-serif;
+	-webkit-text-fill-color: initial;
+}
+
+.golden_profile .profile_comment_area .commentthread_header,
+.golden_profile .profile_leftcol_header
+{
+	font-size: 21px;
+	font-weight: 900;
+	padding-left: 0px;
+
+}
+
+.profile_header_badge {
+	background-image: none;
+	background-color: #00000000;
+}
+
+.profile_header_badgeinfo {
+	margin-right: -12px;
+}
+
+.profile_customization {
+	background-image: none;
+}
+
+.profile_content {
+	background-image: none;
+}
+
+.profile_customization.customization_edit.none_selected {
+	background-color: #00000000;
+	border: none;
+}
+
+.golden_gradient_textm, .commentthread_count_label {
+	color:	#D5AD6D; /*if no support for background-clip*/
+	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 21px;
+	font-weight: 900;
+}
+
+.profile_customization{
+	padding-left: 0px;
+}
+
+
+.commentthread_entry {
+	padding-left: 0px;
+}
+
+.golden_profile .commentthread_comment_text {
+	overflow: hidden;
+}
+
+.golden_profile .profile_leftcol_header h2
+{
+	color:	#D5AD6D; /*if no support for background-clip*/
+	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 21px;
+	font-weight: 900;
+
+}
+
+.golden_profile .recent_game
+{
+	background: rgba(60, 24, 2, 0.00);
+}
+
+.golden_profile .profile_header_bg {
+	padding-bottom: 0;
+}
+
+.golden_profile .profile_comment_area .commentthread_paging
+{
+	background: rgba( 0, 0, 0, 0.0 );
+	padding: 0 4px;
+	border-radius: 4px;
+}
+
+.w19_top
+{
+	position: absolute;
+	top: 0;
+	width: 203px;
+	height: 123px;
+
+}
+
+.w19_side.left .w19_top
+{
+	right: 0;
+	transform: scaleX(-1);
+}
+.w19_side.right .w19_top
+{
+	left: 0;
+	transform: scaleX(-1);
+}
+
+.w19_pig
+{
+	position: absolute;
+	background: none;
+	width: 203px;
+	height: 123px;
+	top: -10px;
+	transform: scaleX(-1);
+
+}
+
+.w19_side.left .w19_pig
+{
+	left: 44px;
+}
+
+.w19_side.right .w19_pig
+{
+	left: 44px;
+}
+
+.w19_pendulum
+{
+	padding-top: 97px;
+	display: inline-block;
+	position: absolute;
+	transform-origin: center top;
+	animation-name: anim_w19_swing;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	top: 14px;
+}
+
+@keyframes anim_w19_swing {
+	from {
+		transform: rotate( 15deg );
+	}
+	50% {
+		transform: rotate( -15deg );
+	}
+	to {
+		transform: rotate( 15deg );
+	}
+}
+
+.w19_side.left .w19_pendulum
+{
+	left: 78px;
+}
+
+.w19_side.right .w19_pendulum
+{
+	right: -94px;
+	animation-delay: -1s;
+}
+
+.w19_strings
+{
+
+	height: 117px;
+	width: 8px;
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.favoritegame_showcase .game_info_stats
+{
+	background-color: #25363c00;
+	border-top: 2px solid #48626d00;
+	border-radius: 0;
+
+}
+
+.published_file_icon 
+{
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    margin-right: 4px;
+    background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/winter2019/goldenprofile/icons_content.png' );
+    background-position: center;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.w19_side.right .w19_strings
+{
+	transform: scaleX(-1);
+}
+
+.profile_customization_header {
+
+	color:	#D5AD6D; /*if no support for background-clip*/
+	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin-bottom: 10px;
+	font-size: 21px;
+	font-weight: 900;
+}
+
+.profile_header .playerAvatar.profile_header_size {
+	margin-bottom: 20px;
+	overflow: hidden;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+	position: relative;
+	width: 174px;
+	height: 174px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: none;
+}
+
+.golden_profile .playerAvatar.profile_header_size .playerAvatarAutoSizeInner {
+	position: unset;
+	width: 166px;
+	height: 166px;
+}
+
+.golden_profile .goldenAvatarOverlay {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2020/goldenprofile/lny_2020_avatar_frame.png' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.playerAvatar.golden,
+.friend_block_holder.friend_status_golden .friend_block_avatar,
+.friend_activity.friend_status_golden .friend_block_avatar,
+.appHubIconHolder.golden,
+.avatar_block_status_golden {
+	background-color: rgba(0, 0, 0, 0);
+
+	background: -webkit-linear-gradient( 350deg, #00000000 0%,#ffe2a900 0%,#ba995c00 0%,#ba995c00 0%,#d5bf6a55 30%);
+	background: linear-gradient( 100deg, #00000000 0%,#ffe2a900 0%,#ba995c00 0%,#ba995c00 0%,#d5bf6a55 30%);
+;
+	
+}
+
+.golden_profile .profile_header_centered_persona .persona_name
+{
+	color:	#D5AD6D; /*if no support for background-clip*/
+	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 900;
+}
+
+.profile_header {
+	padding-top: 40px;
+}
+
+.profile_header_bg:before {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2020/goldenprofile/lny2020_header.png' );
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 170px;
+	position: absolute;
+	content: " ";
+	filter: drop-shadow (0px 0px 5px 2px #2b2b2b);
+}
+
+.screenshot_showcase_screenshot{
+	border: none;
+}
+
+.golden_profile .profile_header_bg_texture
+{
+
+	background-repeat: repeat;
+	background-size: 50px 50px;
+	background-color: #384c5400;
+	background-position: bottom;
+	padding-bottom: 0px;
+}
+
+.golden_profile .profile_customization
+{	
+	border-top: 20px solid goldenrod;
+	background-color: rgba(0, 0, 0, .4 );
+	border-image-source: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2020/goldenprofile/lny2020_border_tile.png');
+	border-image-slice: 20 22;
+	border-image-repeat: round;
+	backdrop-filter: blur(6px);
+	padding-left: 10px;
+}
+
+.golden_profile .recent_games, .golden_profile .profile_recentgame_header, .golden_profile .commentthread_area {
+	backdrop-filter: blur(6px);
+	padding-left: 15px;
+	background-color: rgba(0, 0, 0, .4 );
+}
+
+.golden_profile .profile_rightcol {
+	backdrop-filter: blur(5px);
+	background: rgba( 0,0,0, .3 );
+	padding: 15px 0 0 15px;
+}
+
+.golden_profile .profile_header_badge
+{
+	background: rgba( 0, 0, 0, 0.0 );
+	border: none;
+	box-shadow: none;
+}
+
+.profile_header_badge_instructions,
+.favorite_badge  {
+	padding-left: 0px;
+}
+
+.snowflake {
+	position: absolute;
+}
+
+.snowflake:after {
+	content: "\2744";
+	color: #FFFFFF;
+	font-family: Arial, sans-serif;
+	text-shadow: 0 0 5px #000;
+	font-size: 14px;
+}
+
+.favoritegroup_showcase_group .favoritegroup_namerow .favoritegroup_name {
+	font-weight: 400;
+}
+
+.profile_golden_wrapper .persona, .profile_golden_wrapper a.persona, .profile_golden_wrapper .persona a, .friend_status_offline, .profile_golden_wrapper .friend_status_offline div, .profile_golden_wrapper .friend_status_offline a, .profile_in_game .persona .offline {
+	color: #cccccc;
+}
+
+.profile_golden_wrapper .persona, .profile_golden_wrapper a.persona, .profile_golden_wrapper .persona a, .friend_status_online, .profile_golden_wrapper .friend_status_online div, .profile_golden_wrapper .friend_status_online a, .profile_in_game .persona .online {
+	color: #57cbde;
+}
+
+
+.profile_in_game_header, .profile_count_link_total, .showcase_stat .label, .favorite_game_playtime {
+
+	color: #ccc;
+}
+
+.golden_profile .profile_summary {
+	padding-bottom: 0px;
+}	
+
+@keyframes slide {
+	0% {transform:rotatez(-360deg);}
+	100% {transform:rotatez(360deg);}
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}
+@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}
+@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+
+@media screen and ( max-width: 910px )
+{
+	html.responsive .w19_side {
+		display: none;
+	}
+
+	html.responsive .golden_profile
+	{
+		padding: 0;
+	}
+
+	html.responsive .profile_golden_wrapper {
+		top: 0;
+		padding-top: 0;
+	}
+
+	html.responsive .profile_header {
+		padding-top: 100px;
+	}
+
+	html.responsive .profile_header_summary {
+		padding: 20px 0;
+		padding-left: 0px;
+	}
+
+
+}
+
+
+@media screen and (max-width: 700px)
+{
+	html.responsive .golden_profile .profile_header_bg_texture {
+		background-size: auto;
+	}
+}

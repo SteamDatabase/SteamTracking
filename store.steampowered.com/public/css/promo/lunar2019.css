@@ -1,0 +1,549 @@
+
+ body.v6.lunar2019 {
+	 background: url( "/public/images/promo/lny2019/landing/bg.jpg" );
+	 background-repeat: no-repeat;
+	 background-position: center top;
+	 background-color: #190000;
+	color: #ededed;
+	 		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		 }
+
+ .golden_gradient_text {
+	 color:	#D5AD6D; /*if no support for background-clip*/
+	 background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	 background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+ }
+
+ .rewards_header_ctn {
+	 display: flex;
+	 flex: 1 100%;
+	 margin: 150px 0 100px 0;
+	 flex-wrap: wrap;
+ }
+
+ .rewards_header_left {
+	 max-width: 50%;
+ }
+
+ .rewards_header_left img {
+	 max-height: 90px;
+	 width: auto;
+ }
+
+ .rewards_header_right {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+	 position: relative;
+	 margin: 90px 0 0 40px;
+ }
+
+ .rewards_open_envlope {
+	 position: absolute;
+	 font-size: 24px;
+	 font-weight: 900;
+	 text-transform: uppercase;
+	 cursor: pointer;
+	 z-index: 200;
+	 padding: 10px;
+	 border: 3px solid #D5AD6D;
+	 line-height: 28px;
+	 color: #D5AD6D;
+	 max-width: 300px;
+	 text-align: center;
+ }
+
+ .rewards_open_envlope:hover {
+	 color: #FFF;
+ }
+
+ .rewards_envelope_video {
+	 width: 400px;
+ }
+
+ .envenlope_img {
+	 z-index: -1;
+	 top: -200px;
+	 position: absolute;
+ }
+
+ .reward_img {
+	 width: 60px;
+	 height: 60px;
+	 margin: 0 auto;
+	 padding: 15px;
+	 margin-bottom: 10px;
+ }
+
+ .reward_profile {
+	 background: url( "https://steamcommunity.com/public/images/badges/35_lny2019_goldenprofile/1_80.png" );
+	 background-size: 100%;
+	 background-repeat: no-repeat;
+ }
+
+ .reward_badge {
+	 background: url( "https://steamcommunity.com/public/images/badges/34_lny2019/1_80.png" );
+	 background-size: 100%;
+	 background-repeat: no-repeat;
+ }
+
+ .reward_savings {
+	 background: url( "/public/images/promo/lny2019/landing/SuperSavings_icn.png" );
+	 background-size: 100%;
+	 background-repeat: no-repeat;
+ }
+
+
+ .lny_logo {
+	 width: 480px;
+	 height: 110px;
+	 background: url( "/public/images/promo/lny2019/landing/wordmark-placehold.png" );
+	 background-size: 100%;
+	 background-repeat: no-repeat;
+ }
+
+.rewards_header_txt {
+	font-size: 48px;
+	font-weight: 700;
+	letter-spacing: 3px;
+	line-height: 60px;
+	text-transform: uppercase;
+}
+
+.rewards_header_subtext {
+	 font-size: 30px;
+	 margin: 20px 0;
+ }
+
+ .rewards_header_desc_ctn {
+	 margin-bottom: 20px;
+	 font-size: 20px;
+	 font-weight: 300;
+ }
+
+.rewards_header_desc_ctn span {
+	font-weight: 700;
+}
+ .rewards_points_ctn{
+	 z-index: 100;
+	 text-align: center;
+	 position: absolute;
+	 width: 210px;
+	 right: 20px;
+	 top: 43%;
+ }
+
+.rewards_current_points {
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.rewards_points_subtext {
+	 font-size: 10px;
+	 color: #FFFFFF;
+	 text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+ }
+
+ .rewards_body_ctn {
+	 display: flex;
+	 flex: 1 100%;
+	 flex-wrap: wrap;
+	 justify-content: space-evenly;
+ }
+
+ .rewards_points_row{
+	 display: flex;
+	 justify-content: space-between;
+	 width: 100%;
+	 font-size: 23px;
+	 letter-spacing: 2px;
+	 text-transform: uppercase;
+	 font-weight: 500;
+ }
+
+ .rewards_points_row a {
+	 font-size: 14px;
+	 text-decoration: underline;
+	 text-transform: none;
+	 letter-spacing: 0px;
+	 cursor: pointer;
+	 font-weight: 300;
+	 color: #8a8272;
+	 vertical-align: center;
+ }
+
+ .rewards_points_count span {
+
+ }
+
+ .redemption_option_ctn {
+	 padding: 15px;
+	 width: 260px;
+	 background-color: #252525;
+	 text-align: center;
+	 margin-bottom: 15px;
+ }
+
+ .redemtion_option_ctn:hover {
+	 background: red;
+	 border-width: 3px;
+	 border-style: solid;
+	 border-image: linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+ }
+
+ .redemption_option_ctn.premium_reward {
+	 min-height: 400px;
+ }
+
+ .rewards_tier_header {
+	 text-transform: uppercase;
+	 text-align: center;
+	 width: 100%;
+	 color: #FFF;
+	 font-size: 16px;
+	 letter-spacing: 2px;
+	 font-weight: 500;
+	 margin: 20px 0;
+	 margin-top: 50px;
+ }
+
+ .redemption_option_header {
+	 font-size: 28px;
+	 text-transform: uppercase;
+	 font-weight: 900;
+	 line-height: 28px;
+ }
+
+.redemption_option_header .small_header {
+	font-size: 22px;
+}
+
+.redemption_desc_text{
+	margin: 10px 0;
+	font-size: 16px;
+	color: #efd5a9;
+	font-weight: 300;
+}
+
+
+.redemption_button {
+	padding: 12px 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	font-size: 12px;
+	color: #ffffff;
+	border: solid 2px #4d4d4d;
+	transition: ease 0.3s;
+	margin: 15px auto;
+	text-align: center;
+	cursor: pointer;
+}
+
+.redemption_button:hover:not( .disabled )  {
+	background-color: #4d4d4d;
+	box-shadow: 1px 1px 20px rgba(211,164,64,0.25);
+}
+
+.redemption_button:hover:not( .disabled ) .coin-img {
+	transform: translateY(-5px);
+}
+
+.coin-img {
+	width: 20px;
+	height: 20px;
+	float: right;
+	transition: ease 0.3s;
+	background: url( "/public/images/promo/lny2019/landing/btn-coin.png" );
+	background-size: 100%;
+	background-repeat: none;
+}
+
+.redemption_button.disabled svg {
+	width: 16px;
+	height: 16px;
+	vertical-align: sub;
+	fill:#665E7A;
+}
+
+.redemption_divider {
+	border-bottom: 3px solid gray;
+	margin: 30px 0;
+}
+
+.redemption_level2.disabled, .redemption_option_level.disabled, .redemption_button.disabled {
+	opacity: .3;
+	cursor: default;
+}
+
+.redemption_option_level.disabled .redemption_button {
+	cursor: default;
+}
+
+.dialog_confirm_ctn p {
+	margin-top: 10px;
+}
+
+.dialog_confirm_image {
+	float: left;
+	max-width: 133px;
+	max-height: 83px;
+}
+
+.dialog_confirm_title {
+	font-size: 22px;
+	font-weight: 700;
+	float: left;
+	margin-left: 10px;
+}
+
+.dialog_confirm_text {
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.rewards_spend_tokens a {
+	display: inline-block;
+}
+
+.homepage_red_envelope_ctn {
+	background-repeat: no-repeat;
+	z-index: 100;
+	width: 441px;
+	height: 213px;
+	position: absolute;
+	bottom: 0;
+	right: -130px;
+	text-align: center;
+	cursor: pointer;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.homepage_red_envelope_ctn.open {
+	background-image: url( '/public/images//promo/lunar2019/LNY_BannerPip_Opened.png' );
+}
+
+.homepage_red_envelope_ctn.closed {
+	background-image: url( '/public/images//promo/lunar2019/LNY_BannerPip_Closed.png' );
+}
+
+.homepage_red_envelope_txt {
+	max-width: 200px;
+	margin: 100px 0 0 110px;
+}
+
+.homepage_red_envelope_ctn .your_tokens {
+	font-size: 12px;
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 2px;
+	padding-top: 10px;
+}
+
+.homepage_red_envelope_txt .rewards_current_points {
+	margin: -5px;
+	font-size: 24px;
+	padding: 5px 0;
+}
+
+.homepage_red_envelope_ctn .redeem {
+	font-size: 14px;
+	color: #efd5a9;
+	text-decoration: underline;
+}
+
+.homepage_red_envelope_ctn .redeem:hover {
+	color: #FFF;
+}
+
+.homepage_header_ctn {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	font-weight: normal;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	bottom: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.homepage_header_ctn a {
+	padding-bottom: 50px;
+}
+
+.homepage_header_ctn img {
+	height: 90px;
+	width: auto;
+	margin: 0 auto;
+}
+
+.lny_expiration_time {
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #bc9950;
+	font-weight: 800;
+	margin-bottom: 10px;
+}
+
+.lny_sale_offer {
+	color: #fbf7d9;
+	font-size: 20px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 3px #440000, 1px 1px 32px #330000;
+	max-width: 100%;
+	margin: 10px auto 0 auto;
+	line-height: 24px;
+}
+
+.lny_sale_offer:hover, .lny_visit_sale:hover, .rewards_visit_sale:hover {
+	color: #FFF;
+}
+
+.lny_visit_sale {
+	color: #bc9950;
+	font-size: 16px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-shadow: 1px 1px 3px #440000, 1px 1px 32px #330000;
+	max-width: 60%;
+	margin: 10px auto 0 auto;
+}
+
+.rewards_visit_sale {
+	color: #bc9950;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-decoration: underline;
+	margin-bottom: 5px;
+}
+
+/* FAQ SECTION */
+.rewards_faq_ctn {
+	display: flex;
+	flex: 1 100%;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+}
+
+.lnysale .rewards_faq_header {
+	text-transform: uppercase;
+}
+
+.rewards_faq_header {
+	width: 100%;
+	font-size: 22px;
+	text-align: center;
+	margin: 50px 0 20px 0;
+}
+
+.rewards_faq_block {
+	width: calc( 50% - 20px );
+	margin: 10px 0;
+	font-size: 14px;
+}
+
+.rewards_faq_question {
+	font-weight: 700;
+	color: rgb(255, 130, 58);
+}
+
+.salepage_header_ctn {
+	font-weight: normal;
+	text-align: center;
+	width: 100%;
+	display: flex;
+	bottom: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 50px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.salepage_header_ctn img {
+	max-height: 120px;
+	width: auto;
+}
+
+.salepage_learn_more {
+	color: #bc9950;
+	text-decoration: underline;
+	text-transform: uppercase;
+	margin-top: 20px;
+	font-size: 12px;
+}
+
+.sale_faq_block {
+	font-size: 14px;
+	text-align: center;
+}
+
+.homepage_steamawards_ctn {
+	background-color: #272d3e;
+	height: 134px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.homepage_steamawards_ctn a {
+	display: block;
+}
+
+@media screen and ( max-width: 910px )
+{
+	html.responsive .redemption_option_ctn {
+		margin-bottom: 15px;
+	}
+
+	html.responsive .homepage_red_envelope_ctn {
+		transform: scale(0.4);
+		transform-origin: bottom center;
+	}
+
+	html.responsive .lny_sale_offer {
+		max-width: 80%;
+	}
+
+	html.responsive .homepage_header_ctn {
+		transform: scale(0.7);
+	}
+
+	html.responsive .rewards_header_right {
+		margin: 50px 0 0 0;
+	}
+	html.responsive .rewards_header_left {
+		max-width: 100%;
+	}
+
+	html.responsive .rewards_header_left img, html.responsive .homepage_header_ctn img {
+		max-height: 70px;
+	}
+
+	html.responsive .salepage_header_ctn img {
+		transform: scale(0.5);
+	}
+}

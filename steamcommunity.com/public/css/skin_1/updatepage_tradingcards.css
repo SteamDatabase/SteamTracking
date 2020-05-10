@@ -1,0 +1,255 @@
+
+body
+{
+	background: none;
+	background-color: #181716;
+}
+
+.main_content
+{
+	position: relative;
+	min-height: 600px;
+	text-align: left;
+	font-size: 16px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			overflow: hidden;
+}
+
+.top_navigation_bar
+{
+	position: relative;
+	z-index: 3;
+	width: 950px;
+	background-color: #5491cf;
+	color: white;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 18px;
+	-moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+.navigation_link
+{
+	line-height: 42px;
+	float: right;
+	padding-right: 20px;
+}
+
+.section
+{
+	position: relative;
+	width: 950px;
+	margin: 0px auto;
+}
+
+.section_bg
+{
+	min-width: 950px;
+}
+
+.section.intro
+{
+	padding-top: 10px;
+	height: 1012px;
+}
+.section_bg.intro
+{
+	background-image:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/updates/tradingcards/bg_1.jpg');
+	height: 1422px;
+}
+
+.section.rewards
+{
+	background-image:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/updates/tradingcards/bg_2.png?v=2');
+	height: 1474px;
+}
+.section_bg.rewards
+{
+	background-image:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/updates/tradingcards/bg_2.png');
+	height: 1474px;
+}
+
+.section.profile_customization
+{
+	background-image:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/updates/tradingcards/bg_3.png');
+	height: 1329px;
+}
+.section_bg.profile_customization
+{
+	background-image:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/updates/tradingcards/bg_3.png');
+	height: 1329px;
+}
+
+.section.footer
+{
+	height: 466px;
+}
+.section_bg.footer
+{
+	background-image:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/updates/tradingcards/bg_1.jpg');
+	height: 466px;
+}
+
+.info_text .super_title
+{
+	font-size: 13px;
+	color: #878787;
+}
+
+.info_text .main_title
+{
+	font-size: 29px;
+	color: #ffffff;
+	line-height: 30px;
+}
+
+.info_text .title
+{
+	font-size: 24px;
+	color: #5491cf;
+	position: relative;
+}
+
+.info_text .sub_title
+{
+	font-size: 18px;
+}
+
+.info_text
+{
+	font-size: 14px;
+	color: #ffffff;
+	line-height: 24px;
+	width: 292px;
+	position: absolute;
+	z-index: 2;
+}
+
+.info_text.info_text_wide
+{
+	width: 480px;
+}
+
+.info_text.craft_game_badges
+{
+	width: 476px;
+}
+
+.info_text a
+{
+	text-decoration: underline;
+}
+
+.positioned_image
+{
+	position: absolute;
+}
+
+.image1
+{
+	top: 46px;
+	right: -79px;
+	background-image:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/updates/tradingcards/01.png?v=6');
+	width: 1108px;
+	height: 660px;
+}
+
+.image2
+{
+	top: 566px;
+}
+
+.image3
+{
+	top: 850px;
+	right: 0px;
+}
+
+div.group_link
+{
+	background-image:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/updates/tradingcards/button.png');
+	width: 209px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 47px;
+	height: 47px;
+	padding: 16px 16px 17px 15px;
+}
+
+/* FAQ */
+
+#TradingCardsFAQ
+{
+	background:url('https://steamcdn-a.akamaihd.net/steamcommunity/public/updates/tradingcards/bg_1.jpg');
+}
+
+#TradingCardsFAQ .main_content
+{
+	width: 950px;
+	margin: 0px auto;
+}
+
+.faq_title
+{
+	padding-top: 25px;
+	font-size: 30px;
+	color: #ffffff;
+}
+
+.faq_title.blue
+{
+	padding-top: 0px;
+	padding-bottom: 25px;
+	color: #5491cf;
+}
+
+.faq_column
+{
+	width: 625px;
+}
+
+.right_column
+{
+	width: 292px;
+	color: #ffffff;
+	float: right;
+	position: relative;
+	padding-top: 125px;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.right_column a
+{
+	text-decoration: underline;
+}
+
+.group_link a
+{
+	text-decoration: none;
+}
+
+.question
+{
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #ffffff;
+	font-size: 18px;
+}
+
+.answer
+{
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			font-size: 14px;
+	color: #b5b5b5;
+	line-height: 24px;
+	padding-bottom: 20px;
+}

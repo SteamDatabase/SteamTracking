@@ -1,0 +1,1012 @@
+
+body.v6.remote_play_together {
+	 background: #192A3F;
+}
+
+body.v6.remote_play_together .page_content {
+	font-size: 18px;
+	color: #eee;
+	width: 100%;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.remoteplay_section_header {
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #eeeeee;
+}
+
+.remoteplay_section_header span {
+	font-size: 36px;
+	line-height: 110%;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.rpt_game_content {
+	margin: 0 100px 0 auto;
+}
+
+.rpt_game_content div {
+	margin: 5px 0;
+}
+
+.rpt_desc_text {
+	margin: 10px 0;
+}
+
+.rpt_desc_text a {
+	text-decoration: underline;
+}
+
+/* PREAMBLE SECTION */
+
+.remoteplay_preamble_section {
+	margin: 80px auto 0 auto;
+	max-width: 1100px;
+
+}
+
+.preamble_subheader {
+	margin-left: 100px;
+	padding-bottom: 6px;
+	letter-spacing: 0.023em;
+}
+
+.preamble_subheader.remoteplay_section_header span {
+	font-size: 48px;
+	line-height: 120%;
+}
+
+.preamble_box_ctn {
+	display: flex;
+	margin: 20px 0;
+	justify-content: space-evenly;
+}
+
+.preamble_box {
+	background: linear-gradient(90deg, #184B88 -12.35%, rgba(24, 75, 136, 0) 102.47%);
+	padding: 20px 35px;
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+}
+
+.preamble_box:hover {
+	background: linear-gradient(90deg, #195BAB -12.35%, rgba(24, 75, 136, 0) 102.47%);
+}
+
+.preamble_box_image {
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 80px;
+	width: 80px;
+	margin-right: 25px;
+	opacity: 85%;
+}
+
+.preamble_box_image.together {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_icon.svg?v=2' );
+}
+
+.preamble_box_image.remote {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpa_icon.svg?v=2' );
+}
+
+.preamble_box_header {
+	text-transform: uppercase;
+	letter-spacing: 0.07em;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.preamble_box_desc {
+	font-size: 14px;
+}
+
+/* SALE CALLOUT */
+
+.sale_callout {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+    align-items: flex-end;
+	top: 0;
+	right: -5%;
+}
+
+.rpt_sale {
+	display: flex;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 50%;
+	width: 175px;
+	height: 175px;
+}
+
+.sale_callout .remoteplay_section_header {
+	margin-bottom: 56px;
+	margin-right: 10px;
+	text-align: right;
+	line-height: 90%;
+
+}
+
+.sale_callout .remoteplay_section_header span {
+	font-size: 18px;
+	color: #ed6393;
+}
+
+
+
+/* HEADER SECTION */
+
+.rpt_section1_container {
+	background: linear-gradient(180deg, rgba(24, 75, 136, 0.33) 0%, #184B88 19.27%, #184B88 100%);
+	margin: 0 auto;
+	max-width: 1100px;
+	margin-bottom: 100px;
+	padding: 100px 0;
+	position: relative;
+}
+
+.remoteplay_header_section {
+	display: flex;
+	max-width: 1100px;
+	padding: 0 100px;
+	margin: 0 auto;
+}
+
+.remoteplay_header_section div {
+	display: flex;
+	flex-direction: column;
+}
+
+.remoteplay_header_section .header_left_col {
+}
+
+.remoteplay_header_section .header_right_col {
+	justify-content: flex-end;
+	max-width: 30%;
+	margin-left: 5%;
+}
+
+.remoteplay_header_section .header_text {
+	font-size: 21px;
+	text-transform: uppercase;
+}
+
+.remoteplay_header_section .header_btn_desc {
+	font-size: 14px;
+	text-align: right;
+}
+
+.remoteplay_header_section .header_body_text {
+	font-size: 18px;
+	margin-top: 25px;
+	margin-bottom: -3px;
+}
+
+.header_new {
+	font-size: 18px;
+	line-height: 30px;
+	color: #3CA2F0;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.remote_play_btn span {
+	color: #eeeeee;
+	font-size: 20px;
+	padding: 5px 15px;
+	line-height: 34px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.remote_play_btn span img {
+	vertical-align: top;
+	margin-right: 15px;
+	width: 35px;
+	height: 35px;
+}
+
+.overcooked_logo_ctn {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/overcooked.jpg?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 51px;
+	width: 126px;
+	margin-left: auto;
+}
+
+.rpt_video {
+	max-width: 600px;
+	margin-top: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* HOW TO SECTION */
+
+.remoteplay_howto_section {
+	position: relative;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_towerfall_bg.png?v=2' );
+	background-position: top right;
+	background-repeat: no-repeat;
+	padding: 150px 0;
+	display: flex;
+	justify-content: space-between;
+}
+
+.remoteplay_howto_overlay {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_controllers.png?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 825px;
+	height: 1146px;
+	position: absolute;
+	top: -5%;
+	left: -35%;
+}
+
+.remoteplay_circle {
+	border-radius: 50%;
+	width: 600px;
+	height: 600px;
+	background: #111D2C;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.remoteplay_circle_ctn {
+	padding: 20% 15%;
+	margin-left: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.blue_circle {
+	background: linear-gradient(270deg, #3B9FEF 1.05%, #3CA2F0 100%);
+	border-radius: 50%;
+	height: 32px;
+	width: 32px;
+	text-align: center;
+	font-size: 25px;
+	margin: 5px;
+	line-height: 30px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.howto_step {
+	font-size: 21px;
+	display: flex;
+	line-height: 129.2%;
+	margin: 20px 0;
+	margin-bottom: 10px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.howto_step_hint {
+	font-size: 18px;
+	line-height: 26px;
+	color: #E9E6E6;
+	flex: 1 100%;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.rpt_towerfall_ctn {
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	padding-right: 10%;
+	min-height: 600px;
+	flex-wrap: wrap;
+}
+
+.rpt_towerfall_content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	max-width: 400px;
+	margin-top: 20px;
+}
+
+.rpt_towerfall_content div {
+	margin: 3px 0 3px  auto;
+	text-align: right;
+}
+
+.rpt_towerfall_gif {
+	position: absolute;
+	top: 0;
+	right: -10%;
+}
+
+.rpt_towerfall_capsule {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/towerfall.png?v=2' );
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: contain;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	width: 138px;
+	height: 52px;
+}
+
+/* OVERCOOKED SECTION */
+
+.remoteplay_overcooked_section {
+	margin: 0 auto;
+	margin-top: 50px;
+	max-width: 1100px;
+	min-height: 480px;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_overcooked.png?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: flex;
+	align-items: flex-end;
+}
+
+.rpt_overcooked_capsule {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/overcooked.jpg?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	width: 138px;
+	height: 52px;
+}
+
+/* FRIENDS SECTION */
+
+.remoteplay_friends_content {
+	margin: 0 auto;
+	max-width: 1100px;
+	padding: 0 100px;
+}
+
+.remoteplay_friends_columns {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.friends_left_col {
+	display: flex;
+	flex-direction: column;
+	max-width: 40%;
+	justify-content: flex-end;
+}
+
+.friends_btn_desc {
+	font-size: 14px;
+	text-align: left;
+}
+
+.towerfall_logo_ctn {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/towerfall.png?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 52px;
+	width: 138px;
+}
+
+.towerfall_gif {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/towerfall_invite2.gif?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 366px;
+	width: 490px;
+	margin: 40px 0;
+	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.40);
+}
+
+
+.session_ui_image {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/remote_play_session_ui.png?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 450px;
+	height: 579px;
+	margin: 0 auto;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.session_ui_blocks_ctn {
+	margin-bottom: 20px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.session_ui_block {
+	background: #111D2C;
+	padding: 15px;
+	font-size: 14px;
+	max-width: calc( 450px - 30px );
+}
+
+/* TOGETHER SECTION */
+
+.remoteplay_together_section {
+	margin: 50px auto;
+	max-width: 1000px;
+}
+
+.together_feature_blocks {
+	display: flex;
+	margin-top: 50px;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.together_block_outer {
+	position: relative;
+}
+
+.together_block {
+	max-width: 180px;
+	background: #111D2C;
+	padding: 15px;
+	font-size: 14px;
+	min-height: 215px;
+	line-height: 174.1%;
+	position: relative;
+	z-index: 10;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.together_block_title {
+	text-transform: uppercase;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.together_circle {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	position: absolute;
+	left: -20px;
+	top: -20px;
+}
+
+.blue_block .together_circle {
+	background: #3B9FEF;
+	opacity: 0.6;
+}
+
+.blue_block .together_block_title {
+	color: #3B9FEF;
+}
+
+.green_block .together_circle {
+	background: #06DEC5;
+	opacity: 0.6;
+}
+
+.green_block .together_block_title {
+	color: #06DEC5;
+}
+
+.pink_block .together_circle {
+	background: #FE4D95;
+	opacity: 0.6;
+}
+
+.pink_block .together_block_title {
+	color: #FE4D95;
+}
+
+.yellow_block .together_circle {
+	background: #DCC02E;
+	opacity: 0.6;
+}
+
+.yellow_block .together_block_title {
+	color: #DCC02E;
+}
+
+
+/* SECTION 2 */
+
+.rpt_section2_container {
+	background-color: #1E2D61;
+	max-width: 1100px;
+	padding: 100px 0;
+	margin: 10px auto;
+}
+
+.rpt_anywhere_header_ctn {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 50px;
+}
+
+.rpt_downhill_capsule {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/downhill.jpg?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	width: 138px;
+	height: 52px;
+}
+
+.rpt_anywhere_header_left {
+	position: relative;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpa_cyclist.png?v=2' );
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: contain;
+	display: flex;
+	align-items: flex-end;
+	flex: 1 1 50%;
+	min-height: 400px;
+}
+
+.rpt_hands {
+	position: absolute;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/Remote_mobile_hands.png?v=2' );
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	top: -15%;
+	left: -15%;
+	height: 120%;
+	width: 110%;
+}
+
+.rpt_anywhere_header_right {
+	margin-right: 5%;
+	flex: 0 1 15%;
+	min-width: 30%;
+}
+
+.rpt_downhill_content {
+	margin-left: 25%;
+	z-index: 10;
+}
+
+.rpt_downhill_content div {
+	margin: 5px 0;
+}
+
+.rpt_anywhere_header_right .header_body_text {
+	margin: 25px 0;
+}
+
+.rpt_anywhere_header_right .remoteplay_section_header span {
+	font-size: 60px;
+}
+
+/* ANYWHERE HOW TO */
+
+.rpt_anywhere_how_ctn {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpa_lifeisstrange.png?v=2' );
+	background-position: center right;
+	background-repeat: no-repeat;
+	display: flex;
+	padding-top: 100px;
+}
+
+.rpt_anywhere_how_ctn .remoteplay_circle {
+	margin: 0;
+}
+
+.rpt_anywhere_apps_ctn {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.rpt_anywhere_apps_header {
+	font-size: 18px;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+	color: #FFFFFF;
+	text-align: left;
+	min-height: 80px;
+}
+
+.rpt_anywhere_apps_header.steamlink {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/steamlink.png?v=2' );
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 100px;
+}
+
+.rpt_appstore_logo_ctn {
+	margin: 15px 0;
+	display: block;
+}
+
+.rpt_appstore_logo {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 237px;
+	height: 70px;
+}
+
+.rpt_appstore_desc {
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+}
+
+.rpt_appstore_logo.google {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/google.png?v=2' );
+}
+
+.rpt_appstore_logo.pi {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/pi.png?v=2' );
+}
+
+.rpt_appstore_logo.apple {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/apple.png?v=2' );
+}
+
+/* LIFE IS STRANGE */
+
+.rpt_lifeisstrange_ctn {
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.rpt_lifeisstrange_capsule {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/lifeisstrange.jpg?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 51px;
+	width: 126px;
+	margin-left: auto;
+}
+
+.rpt_lifeisstrange_col {
+	max-width: 40%;
+	margin-right: 5%;
+}
+
+.rpt_tablet_img {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpa_tablet.png?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	min-height: 397px;
+	width: 899px;
+	top: -10%;
+	left: -35%;
+}
+
+.rpt_lifeisstrange_col .header_body_text {
+	margin: 25px 0;
+}
+
+/* MONSTER HUNTER */
+
+.rpt_monsterhunter_ctn {
+	display: flex;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpa_monsterhunter.png?v=2' );
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	padding-top: 50px;
+}
+
+.rpt_monsterhunter_capsule {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/monsterhunter.jpg?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 51px;
+	width: 126px;
+}
+
+.rpt_monsterhunter_left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 5%;
+}
+
+.rpt_monsterhunter_ctn .rpt_game_content {
+	margin: 0;
+}
+
+.rpt_monsterhunter_right {
+	margin-top: 100px;
+}
+
+/* SECTION 3 */
+
+.rpt_section3_container {
+	background-color: #111D2C;
+	max-width: 900px;
+	padding: 100px 100px 15vw 100px;
+	margin: 50px auto;
+	position: relative;
+}
+
+.rpt_section3_container .remoteplay_section_header span {
+	font-size: 60px;
+}
+
+.rpt_steamchat_img {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/steamchat.png?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 86px;
+	width: 86px;
+}
+
+.rpt_chat_container {
+	margin-top: 100px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.rpt_chat_right_col {
+	max-width: 50%;
+}
+
+.rpt_chat_container .rpt_anywhere_apps_ctn {
+	margin: 0;
+	align-items: normal;
+}
+
+.rpt_circles_img {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_and_a_circles2.png?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 50%;
+	position: absolute;
+	bottom: -25%;
+	left: 0;
+}
+
+
+/* TECH SECTION */
+
+.rpt_section4_container {
+	background-color: #D9D9DF;
+	max-width: 900px;
+	padding: 100px;
+	margin: 300px auto 100px  auto;
+	position: relative;
+	color: #000000;
+}
+
+.rpt_tech_header {
+	font-size: 34px;
+	text-transform: uppercase;
+	margin-bottom: 50px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.rpt_tech_subheader {
+	max-width: 70%;
+	font-size: 24px;
+	word-wrap: normal;
+	margin-bottom: 70px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.rpt_tech_desc {
+	margin: 20px 0;
+	max-width: 70%;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.rpt_tech_desc a:not(:hover) {
+	color: #000000;
+	text-decoration: underline;
+}
+
+.rpt_tech_anywhere_footer {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/remote_play_together/rpt_and_a_icon.svg?v=2' );
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 133px;
+	height: 133px;
+	border-radius: 50%;
+	background-color: #3B9FEF;
+	position: absolute;
+	bottom: -4vw;
+	right: 25%;
+}
+
+@media screen and ( max-width: 910px )
+{
+	html.responsive .howto_controller_img {
+		display: none;
+	}
+
+	html.responsive .preamble_box {
+		margin: 10px 0;
+	}
+
+	html.responsive .rpt_section1_container {
+		padding: 200px 0 100px 0;
+	}
+
+	html.responsive .remoteplay_header_section {
+		padding: 0 15px;
+		flex-wrap: wrap;
+	}
+
+	html.responsive .rpt_video {
+		width: 100%;
+	}
+
+	html.responsive .remoteplay_header_section .header_right_col {
+		max-width: 100%;
+	}
+
+	html.responsive .remoteplay_howto_section {
+		justify-content: center;
+		background-position: bottom right;
+		padding: 100px 0;
+		flex-wrap: wrap;
+	}
+
+	html.responsive .rpt_towerfall_gif {
+		right: unset;
+		height: auto;
+	}
+
+	html.responsive .remoteplay_howto_overlay {
+		display: none;
+	}
+
+
+	html.responsive .remoteplay_friends_content {
+		padding: 0 10px;
+	}
+
+	html.responsive .remoteplay_together_section {
+		margin: 0;
+		padding: 0 15px;
+	}
+
+	html.responsive .friends_left_col {
+		max-width: 100%;
+		margin-bottom: 15px;
+	}
+
+	html.responsive .together_feature_blocks {
+		justify-content: center;
+	}
+
+	html.responsive .together_block_outer {
+		margin: 15px;
+	}
+
+	html.responsive .rpt_anywhere_header_right {
+		margin: 50px 0 0 15px;
+		min-width: 100%;
+	}
+
+	html.responsive .rpt_anywhere_how_ctn {
+		background-position: bottom right;
+		padding: 0;
+		flex-wrap: wrap;
+	}
+
+	html.responsive .rpt_anywhere_apps_ctn {
+		margin-top: 30px;
+	}
+
+	html.responsive .rpt_tablet_img {
+		display: none;
+	}
+
+	html.responsive .rpt_lifeisstrange_col {
+		max-width: 100%;
+		margin: 50px 15px;
+	}
+
+	html.responsive .rpt_monsterhunter_ctn {
+		background-position: center 25%;
+		background-size: contain;
+		flex-wrap: wrap;
+		padding: 0;
+		margin-top: 25px;
+	}
+
+	html.responsive .rpt_section3_container {
+		padding: 100px 15px 30vw 15px;
+	}
+
+	html.responsive .rpt_chat_container {
+		justify-content: center;
+		margin-top: 50px;
+	}
+
+	html.responsive .rpt_chat_right_col {
+		max-width: 100%;
+		margin-top: 25px;
+	}
+
+	html.responsive .rpt_section4_container {
+		padding: 15px;
+	}
+
+	html.responsive .rpt_section4_container div {
+		max-width: 100%;
+	}
+
+	html.responsive .rpt_tech_anywhere_footer {
+		width: 12vw;
+		height: 12vw;
+		bottom: -8vw;
+	}
+
+	html.responsive .remoteplay_overcooked_section {
+		margin: 0 0 50px 0;
+		min-height: 80vw;
+		padding: 0 15px;
+	}
+
+	html.responsive .preamble_subheader {
+		margin-left: 0;
+	}
+
+	html.responsive .preamble_box_ctn {
+		flex-wrap: wrap;
+	}
+
+	html.responsive .session_ui_image {
+		width: 100%;
+		box-shadow: none;
+	}
+
+	html.responsive .remoteplay_friends_columns {
+		justify-content: center;
+	}
+
+	html.responsive .remote_play_btn span {
+		font-size: 15px;
+	}
+
+	html.responsive .rpt_game_content {
+		margin: 0;
+	}
+}
+
+@media screen and ( max-width: 600px ) {
+
+	html.responsive .remoteplay_circle {
+		width: 100vw;
+		max-width: 600px;
+		border-radius: unset;
+	}
+}

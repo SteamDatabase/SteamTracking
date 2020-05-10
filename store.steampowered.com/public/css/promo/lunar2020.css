@@ -1,0 +1,1073 @@
+
+#store_nav_area .store_nav_bg, .home_page_body_ctn.has_takeover #store_nav_area .store_nav_bg {
+    background: #7b907dcc;
+}
+.searchbox {
+    background-color: #3A4148;
+}
+a#store_search_link img {
+
+}
+
+#logo_holder img {
+	visibility: hidden;
+}
+
+#logo_holder a {
+    display: inline-block;
+    height: 100%;
+}
+
+#logo_holder {
+display: inline-block; width: 176px; height: 44px; 
+background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/globalheader_logo.png' );
+background-size: 176px, 44px;
+}
+
+body.v6 {
+	background-color: #0A1E33;
+	color: #dddddd;
+}
+
+body.v6 .supernav_content, body.v6 #global_header, body.v6 #global_header .content 
+{
+	background: linear-gradient( to bottom, #561816 5%, #300E0C 95%);
+}
+
+div#global_header .submenuitem {
+	color: rgb(171, 181, 182);
+}
+
+div#global_header .menuitem, div#global_header .pulldown.global_action_link {
+	color: #A93737;
+}
+
+div#global_actions,
+div#global_actions a.global_action_link,
+div#global_actions a.global_action_menu,
+div.admin_actions {
+	color: #1C263A;	
+}
+
+div#global_actions a.global_action_link:active,
+div#global_actions a.global_action_link:hover,
+div#global_actions a.global_action_menu:active,
+div#global_actions a.global_action_menu:hover,
+div#global_actions .global_action_link:active,
+div#global_actions .global_action_link:hover,
+div#global_header .menuitem:active,
+div#global_header .menuitem:hover,
+div#global_header .submenuitem:active,
+div#global_header .submenuitem:hover, 
+#languaage_pulldown:active,
+#languaage_pulldown:hover,
+#language_pulldown.focus,
+#account_pulldown:active,
+#account_pulldown:hover,
+#account_pulldown.focus {
+	color: #DF4949;
+}
+
+.market_header {
+	background-image:  url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/store_home_animated.png?v=2' );
+    background-position-x: center;
+	background-repeat: no-repeat;
+    background-size: cover;
+    height: 28vw;
+    max-height: 450px;
+    min-height: 340px;
+    max-width: 1836px;
+	position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.market_header .market_header_text_ctn {
+    align-self: center;
+    text-align: center;
+    top: 50px;
+	position: relative;
+	animation-name: slide-in-blurred-top;
+	animation-duration: .5s;
+        animation-delay: 0.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: once;
+	animation-fill-mode: both;
+}
+.market_subtitle {
+    margin-top: -4px;
+    text-align: center;
+    font-size: 23px;
+    line-height: 23px;
+    color: #eda947;
+    text-shadow: 0 0 10px black;
+}
+.market_subtitle a {
+    text-decoration: underline;
+    color: #eda947;
+}
+.market_subtitle a:hover {
+    color: white;
+}
+.market_subtitle span {
+    font-size: 15px;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		    letter-spacing: 1px;
+}
+@media screen and ( max-width: 1600px )
+{
+    html.responsive .market_header .market_header_text_ctn {
+        height: 10vw;
+        top: 2vw;
+    }
+}
+@media screen and ( max-width: 1210px )
+{
+    html.responsive .market_header {
+        background-position-x: calc(100% + 98px);
+    }
+    html.responsive .market_header .market_header_text_ctn {
+        height: 125px;
+        top: 25px;
+    }
+}
+@media screen and ( max-width: 660px )
+{
+    html.responsive .market_header img {
+        width: 90vw;
+        height: auto;
+    }
+    html.responsive .market_header {
+        height: 40vw;
+        min-height: auto;
+        background-position-x: calc(100% + 65px);
+    }
+    html.responsive .market_subtitle {
+        margin-top: -13px;
+        font-size: 14px;
+        line-height: 15px;
+        max-width: 80vw;
+    }
+    html.responsive .market_subtitle span {
+        font-size: 12px;
+    }
+}
+@media screen and ( max-width: 500px ) {
+    html.responsive .market_header {
+        background-image:  url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/mobile_main_header.jpg?v=2' );
+        background-position-x: unset;
+        height: 70vw;
+    }
+}
+
+body.v6.steamtown {
+	background-position: center;
+	font-family: Sigmar One, cursive;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 14px;
+}
+
+body.v6.steamtown .search_suggest {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+body.v6.steamtown .page_container {
+	max-width: 1420px	;
+	margin: 0 auto;
+	background-image: none;
+	background: linear-gradient(180deg, rgb(87, 26, 37) 0%, #2F3F4F 2.74%, #0D1824 83.06%);
+  background-position-x: center;
+	padding-bottom: 150px;
+}
+
+/* REWARDS SECTION */
+
+
+.rewards_body_ctn {
+
+    max-width: 1080px;
+	margin: 0 auto;
+	box-shadow: none;
+}
+
+.rewards_tier_header {
+	font-size: 36px;
+    line-height: 32px;
+	color: #DF4949;
+	font-weight: 500;
+	margin-top: 30px;
+	margin-left: 40px;
+}
+
+.rewards_tier_desc	{
+	font-size: 14px;
+	font-weight: 500;
+	color: #dddddd;
+	margin: 10px 0;
+	margin-left: 40px;
+	max-width: 700px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.reward_redeem_btn {
+	display: inline-block;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
+}
+
+.reward_redeem_btn span {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-size: 14px;
+	color: #FDF7F7;
+	text-transform: uppercase;
+	user-select: none;
+	line-height: 44px;
+	padding-right: 10px;
+}
+
+.reward_coins {
+	width: 46px;
+	height: 46px;
+	padding-left: 4px;
+	padding-top: 4px;	
+	margin-bottom: -8px;
+	vertical-align: bottom;
+}
+
+.reward_redeem_btn:hover {
+	background: #FFFFFF;
+}
+
+.reward_redeem_btn img {
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
+}
+
+.reward_redeem_btn:hover img {
+	transform: translateY(-7px);
+}
+
+.reward_item_ctn.disabled .reward_redeem_btn, .rewards_profile_tier.disabled .reward_redeem_btn {
+	cursor: default;
+	filter: grayscale(80%);
+	box-shadow: none;
+}
+.reward_item_ctn.disabled .reward_redeem_btn img, .reward_item_ctn.disabled:hover .reward_redeem_btn img  {
+		filter: contrast(60%);
+}
+
+.reward_item_ctn img {
+	filter: grayscale(0%);
+}
+
+.reward_item_ctn.disabled img, .rewards_profile_tier.disabled img {
+	filter: grayscale(80%);
+	transform: translateY(0px);
+}
+
+.reward_item_ctn.disabled:hover img, .rewards_profile_tier.disabledHover img, .reward_item_ctn.disabled:hover img, .reward_item_ctn.disabled:hover .reward_item_img_ctn, .reward_item_ctn.disabled:hover .reward_item_img {
+	filter: grayscale(0%);
+	transform: translateY(0px);
+}
+
+.reward_item_ctn.disabled .reward_redeem_btn:hover, .rewards_profile_tier.disabled .reward_redeem_btn:hover  {
+	background: linear-gradient(64.03deg, #BE4040 41.49%, #E73E3E 102.29%);
+}
+.reward_discount_ctn {
+	position: relative;
+	padding-bottom: 40px;
+	background: linear-gradient(180deg, #2F3F4F 0%, #342525 100%);
+	margin: 50px 0 100px 0;
+	padding-top: 50px;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/coupon_bg.png?v=2' );
+	background-size: 100%;
+	background-blend-mode: overlay;
+	background-color: #465059dd;
+}
+
+.reward_items_ctn {
+	margin-bottom: 70px;
+	padding-top: 15px;
+	-webkit-filter: drop-shadow(0 2px 2px #33333350);
+	filter: drop-shadow(0 2px 2px #33333350);
+	background: linear-gradient(180deg, rgb(87, 26, 37, 0.5) 0%, rgb(87, 26, 37, 0.2) 100%);
+	padding-bottom: 50px;
+	
+}
+
+.reward_discount_ctn img {
+	transition-duration: .23s;
+	transition-timing-function: ease-out;
+}
+
+.reward_discount_desc {
+	text-align: center;
+	color: #fefefe;
+	font-size: 14px;
+	letter-spacing: 0.01em;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	width: 100%;
+	padding-top: 6px;
+	padding-bottom: 4px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			transition-duration: .23s;
+	transition-timing-function: ease-out;
+}
+
+.reward_discount_img {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/lny2020_coupon.png?v=2' );
+	max-width: 627px;
+	height: 242px;
+	border-radius: 4px;
+	margin:0 auto;
+	padding-bottom: 14px;
+	filter: drop-shadow(0 4px 8px #33333355);
+	transition-duration: .23s;
+	transition-timing-function: ease-out;
+}
+
+.reward_discount_ctn:hover .reward_discount_img,
+.reward_discount_ctn:hover .reward_discount_desc {
+	transform: translateY(-20px);
+}
+
+
+.reward_discount_ctn:hover .reward_discount_desc {
+	transform:  translateY(-20px);
+}
+
+.reward_discount_disabled.disabled {
+	flex-direction: row;
+	justify-content: flex-start;
+	padding: 20px;
+}
+
+.reward_discount_disabled.disabled .reward_discount_desc {
+	text-align: left;
+}
+
+
+.reward_discount_disabled .reward_discount_img {
+	width: 265px;
+	height: 102px;
+	background-size: contain;
+	margin: 0 25px 0 0;
+}
+
+.reward_redeem_btn {
+	background: linear-gradient(64.03deg, #BE4040 41.49%, #E73E3E 102.29%);
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.45);
+	border-radius: 3px;
+	padding: 0 22px;
+	padding-right: 8px;
+	min-width: 100px;
+	max-width: 300px;
+	height: 44px;
+	text-align: center;
+	cursor: pointer;
+	transition-property: background-color;
+	transition-duration: .23s;
+    transition-timing-function: ease-out;
+
+}
+.reward_redeem_btn:hover,
+.reward_redeem_btn:active {
+	background: linear-gradient(64.03deg, #D83D3D 41.49%, #FF8787 102.29%);
+	transition-duration: .23s;
+    transition-timing-function: ease-out;
+}
+
+.reward_grid_ctn {
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.reward_item_ctn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 10px 0 10px;
+	background-color: #C4C4C4;
+	min-width: 145px;
+	position: relative;
+	margin: 15px 10px;
+	background-blend-mode: overlay;
+
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/coupon_bg.png?v=2' );
+}
+
+
+.reward_emoticons_ctn.disabled .reward_item_img {
+	margin-bottom: 25px;
+}
+
+.reward_sticker_ctn .reward_item_img {
+	width: 150px;
+}
+
+
+.reward_sticker_ctn {
+	background-color: rgba(90, 147, 190, .5);
+	width: 165px;
+	height: 254px;
+}
+
+.reward_sticker_ctn .reward_item_img_ctn {
+	min-height: 160px;
+}
+
+.reward_desc_ctn {
+	text-transform: uppercase;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			transition-duration: 0.23s;
+	transition-timing-function: ease-out;
+	margin: 15px 0 35px 0;
+	width: 100%;
+	user-select: none;
+	padding-bottom: 10px;
+}
+
+.reward_item_title {
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	text-align: center;
+	color: #FEFEFE;
+}
+
+.reward_uses_text {
+	font-size: 12px;
+	text-align: center;
+	letter-spacing: 0.07em;
+	color: rgba(254, 254, 254, 0.5);
+	margin-top: 5px;
+}
+
+.market_overview_ctn {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    width: calc(100% - 40px);
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.reward_sale_banner_link {
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 160px;
+	background-size: cover;
+	margin: 50px auto;
+	display: block;
+}
+
+.reward_sale_banner_link:hover {
+	box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@media screen and ( max-width: 900px )
+{
+    html.responsive .market_overview_ctn {
+        flex-direction: column;
+    }
+}
+
+.market_overview {
+    color: #39c0e0;
+    line-height: 17px;
+    margin-right: 40px;
+}
+
+.rewards_points_ctn {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.rewards_points_label {
+	margin-right: 15px;
+}
+
+.reward_item_img, .rewards_profile_img, .reward_badge, .rewards_tokens_img {
+	-webkit-filter: drop-shadow(2px 4px 6px #33333366);
+	filter: drop-shadow(2px 4px 6px #33333366);
+}
+
+.reward_item_ctn:hover:not( .disabled ) .reward_item_content, .reward_badge:hover {
+	transform: translateY(-10px);
+}
+
+.reward_item_content {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition-duration: 0.23s;
+	transition-timing-function: ease-out;
+}
+
+.rewards_profile_tier.disabled .rewards_profile_img, .rewards_profile_tier.disabled  .rewards_profile_box {
+filter: grayscale(0.8);
+}
+
+.rewards_profile_tier.disabled:hover .rewards_profile_img, .rewards_profile_tier.disabled:hover .rewards_profile_box  {
+	filter: grayscale(0.0);
+	}
+
+.rewards_profile_tier.disabled:hover .rewards_profile_img
+{
+	transform: translateY(0px);
+}
+
+.reward_item_img.animated {
+	display: none;
+}
+
+.reward_item_img.still {
+	display: block;
+}
+
+.reward_backgrounds_ctn {
+	height: 280px;
+	width: 264px;
+	background-color: #8F7DC4;
+}
+
+.reward_backgrounds_ctn .reward_item_img {
+	max-width: 233px;
+	max-height: 137px;
+}
+
+.reward_animatedbackgrounds_ctn {
+	padding-top: 15px;
+}
+
+.reward_animatedbackgrounds_ctn .reward_item_img {
+	width: 450px;
+}
+
+.reward_emoticons_ctn {
+	background-color: #9D61A7;
+	width: 160px;
+	height: 180px;
+}
+
+.reward_effect_ctn {
+	background-color: #41A374;
+	width: 280px;
+	height: 358px;
+}
+
+.reward_effect_ctn .reward_item_img {
+	max-width: 232px;
+	max-height: 232px;
+	position: relative;
+}
+
+.reward_miniprofile_ctn {
+	min-height: 300px;
+}
+
+.reward_miniprofile_ctn .reward_item_img {
+	min-width: 328px;
+	min-height: 178px;
+	position: relative;
+}
+
+.reward_item_ctn .reward_price_ctn {
+	margin-bottom: 10px;
+}
+
+.rewards_profile_ctn {
+	display: flex;
+	justify-content: space-between;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.rewards_profile_box {
+	background: linear-gradient(100.37deg, #14647D 10.5%, #203D69 58.68%, #2C2C2C00 96.2%);
+	width: 283px;
+	height: 50px;
+	display: flex;
+	font-size: 16px;
+	color: #E9B735;
+	padding: 15px;
+	margin-top: 40px;
+	position: absolute;
+	bottom: 10px;
+	left: 0;
+	transition-duration: .23s;
+	transition-timing-function: ease-in-out;
+}
+
+.rewards_profile_avatar {
+	width: 48px;
+	height: 48px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border: 2px solid #E9B735;
+	border-radius: 2px;
+	margin-right: 10px;
+}
+
+.rewards_profile_personadetails {
+	overflow: hidden;
+}
+
+.rewards_profile_persona {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.rewards_profile_personastate {
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+.rewards_badge_ctn {
+	display: flex;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.reward_bg_1 {
+	background-color: #5B3E3E;
+}
+
+.reward_bg_2 {
+	background-color: #465059;
+}
+
+.reward_bg_3 {
+	background-color: #5B3E3E;
+}
+
+.reward_bg_4 {
+	background-color: #465059;
+}
+
+.reward_bg_5 {
+	background-color: #5B3E3E;
+}
+
+.reward_item_date_ctn {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 60px 60px 0 0;
+	border-color: #DF4949 transparent transparent transparent;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.reward_date {
+	font-size: 14px;
+	text-align: center;
+	color: #FFFFFF;
+	top: -35px;
+	left: 6px;
+	position: relative;
+	transform: rotate(-45deg);
+	letter-spacing: 0.05em;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.reward_item_quantity_ctn {
+	border-radius: 50%;
+	position: absolute;
+	top: -15px;
+	left: -20px;
+	background-color: #ED9C00;
+	color: #F0F0F0;
+	font-size: 14px;
+	border: 4px solid #F7F7F7;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.reward_item_quantity_ctn.checked {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/winter2019/owned_check.png?v=2' );
+	padding: 15px;
+}
+
+.reward_item_quantity_ctn span {
+	padding: 10px 13px;
+	display: inline-block;
+	min-width: 16px;
+	min-height: 16px;
+	text-align: center;
+}
+
+.chat_effects_remaining {
+	text-align: left;
+	margin: 0 auto 20px 40px;
+	font-size: 12px;
+	letter-spacing: 0.05em;
+	color: #F3F3F3;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.rewards_profile_tier {
+	display: flex;
+	color: #000000;
+    justify-content: center;
+	padding: 25px;
+	margin-top: 20px;
+	position: relative;
+	margin-left: 40px;
+	margin-right: 40px;
+	background-blend-mode: overlay;
+}
+
+.reward_profile_header {
+	width: 100%;
+	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.rewards_profile_col1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	width: 100%;
+}
+
+.rewards_profile_col1 a {
+	width: 100%;
+}
+
+.rewards_profile_col2 {
+	max-width: 40%;
+	margin: 10px 0 20px 20px;
+	padding-top: 20px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #dddddd;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	position: relative;
+  transition-duration: .23s;
+  transition-timing-function: ease-out;
+}
+
+.rewards_profile_ctn .reward_item_btn_ctn {
+	bottom: -17px;
+}
+
+.rewards_profile_tier .rewards_profile_img {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/lunar2020/golden_profile.png?v=2' );
+	max-width: 527px;
+	width: 100%;
+	height: 281px;
+	margin: 10px 0;
+	background-size: contain;
+  transition-duration: .23s;
+  transition-timing-function: ease-out;
+}
+
+.reward_item_btn_ctn {
+	position: absolute;
+	bottom: -10px;
+	text-align: center;
+	left: 0;
+	right: 0;
+}
+
+/* BADGE */
+
+.reward_badge {
+	width: 120px;
+	height: 120px;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: auto;
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	margin-bottom: 8px;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.23s;
+}
+
+.reward_badge_level_ctn {
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 0.07em;
+	color: #FEFEFE;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.reward_badge_title {
+	font-size: 18px;
+	text-align: left;
+	color: #fefefe;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	margin-right: auto;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.reward_badge_header_ctn {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0 25px 5px;
+}
+
+.reward_badge_desc {
+	text-align: center;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FEFEFE;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.rewards_badge_levelup_ctn {
+	width: 100%;
+	padding: 15px 30px;
+	position: relative;
+}
+
+.badge_alllevels_ctn {
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax( 125px, auto));
+	grid-column-gap: 40px;
+	grid-row-gap: 30px;
+	margin: 0 auto;
+}
+
+/* FAQ */
+
+.rewards_faq_ctn {
+	background: linear-gradient(180deg, #2F3F4F 0%, #2F3F4F55 100%);
+	margin: 0px auto;
+	padding: 20px 40px;
+	max-width: 1000px;
+	padding-bottom: 100px;
+	margin-bottom: 100px;
+}
+
+.rewards_faq_ctn .rewards_tier_header {
+	margin-left: 0px;
+	padding-top: 20px;
+}
+
+.faq_section {
+	font-family: Sigmar One, cursive;
+	font-size: 24px;
+	padding-top: 20px;
+	padding-bottom: 4px;
+	color: #DF4949;
+	max-width: 600px;
+}
+
+.rewards_faq_question {
+	font-family: Sigmar One, cursive;
+	font-size: 18px;
+	padding-top: 8px;
+	padding-bottom: 4px;
+	color: #ddd;
+}
+
+.rewards_faq_answer {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
+	font-weight: 500;
+	padding-bottom: 10px;
+	line-height: 20px;
+	color: #B3B3B3cc;
+	letter-spacing: 0.0em;
+}
+
+.rewards_faq_answer a {
+	color: #B3B3B3;
+	text-decoration: underline;
+}
+.rewards_faq_answer a:hover {
+	color: #DF4949;
+}
+
+/* DIALOGS */
+
+.dialog_confirm_ctn p {
+	margin-top: 10px;
+}
+
+.dialog_confirm_image {
+	float: left;
+	max-width: 133px;
+	max-height: 83px;
+}
+
+.dialog_confirm_title {
+	font-size: 22px;
+	font-weight: 500;
+	float: left;
+	margin-left: 10px;
+}
+
+.dialog_confirm_text {
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+@-webkit-keyframes slide-in-blurred-top {
+	0% {
+	  -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+			  transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+	  -webkit-transform-origin: 50% 0%;
+			  transform-origin: 50% 0%;
+	  -webkit-filter: blur(40px);
+			  filter: blur(40px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+			  transform: translateY(0) scaleY(1) scaleX(1);
+	  -webkit-transform-origin: 50% 50%;
+			  transform-origin: 50% 50%;
+	  -webkit-filter: blur(0);
+			  filter: blur(0);
+	  opacity: 1;
+	}
+  }
+  @keyframes slide-in-blurred-top {
+	0% {
+	  -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+			  transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+	  -webkit-transform-origin: 50% 0%;
+			  transform-origin: 50% 0%;
+	  -webkit-filter: blur(40px);
+			  filter: blur(40px);
+	  opacity: 0;
+	}
+	100% {
+	  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+			  transform: translateY(0) scaleY(1) scaleX(1);
+	  -webkit-transform-origin: 50% 50%;
+			  transform-origin: 50% 50%;
+	  -webkit-filter: blur(0);
+			  filter: blur(0);
+	  opacity: 1;
+	}
+  }
+
+html.force_desktop body {
+    min-width: 910px;
+}
+
+@media screen and (max-width: 910px) {
+
+    html.responsive .rewards_header_ctn {
+		margin-top: -200px;
+		transform: translate3d(0px, 0px, 50px);
+    }
+
+    html.responsive .rewards_profile_tier {
+        flex-direction: column;
+    }
+
+	html.responsive .rewards_profile_col2 {
+		width: 100%;
+		margin: 0;
+		max-width: 100%;
+	}
+
+	html.responsive .rewards_profile_box {
+		position: unset;
+		width: 90%;
+	}
+
+	html.responsive .reward_badge_header_ctn {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	html.responsive .rewards_tokens_ctn {
+		position: unset;
+		margin:  0;
+        bottom: -95px;
+		background-position: center right;
+	}
+
+    html.responsive .page_container_market .rewards_body_ctn {
+        margin-top: -101px;
+        padding-top: 60px;
+    }
+
+	html.responsive .responsive_store_nav_ctn_spacer {
+		display: none;
+	}
+
+	html.responsive .reward_sale_banner_link {
+		background-size: contain;
+	}
+
+	html.responsive .reward_animatedbackgrounds_ctn .reward_item_img {
+		width: 100%;
+	}
+
+	html.responsive .reward_animatedbackgrounds_ctn {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 700px ) {
+
+    html.responsive .rewards_body_ctn {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 540px ) {
+
+    html.responsive .rewards_body_ctn {
+        padding: 10px;
+    }
+}
+
+

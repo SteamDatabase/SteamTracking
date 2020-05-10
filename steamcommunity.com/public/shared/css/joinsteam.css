@@ -1,0 +1,420 @@
+
+@media screen and (max-width: 910px) {
+	html.responsive .rightcol {
+		display: none;
+	}
+
+	html.responsive	.form_notes, html.responsive .form_area, html.responsive .join_form select#country {
+		width: 100%;
+		margin-left: 0;
+	}
+
+	html.responsive .ssa_box {
+		line-height: normal;
+	}
+
+	html.responsive .joinsteam input[type="text"] {
+		width: 100%;
+	}
+
+	html.responsive .password_tag:before {
+		display: none;
+	}
+
+	html.responsive .password_tag {
+		margin: 0;
+	}
+
+	html.responsive #createAccountButton {
+		display: block;
+		width: 100%;
+		text-align: center;
+		float: none;
+	}
+
+	html.responsive .page_content, html.responsive .page_content_client {
+		max-width: 100%;
+		width: auto;
+		margin: 0 2%;
+	}
+
+	html.responsive #create_account input, #create_account select {
+		max-width: 100%;
+		padding: 8px 0 8px 6px;
+	}
+
+	html.responsive .joinsteam .password_tag {
+		max-width: 100%;
+	}
+}
+
+body.v6.joinsteam {
+	color: #E9E9E9;
+	background: #18181D ;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #1D1D1D;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: #1D1D1D;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #7D7D7D;
+}
+
+.accountlink_csgo
+{
+    max-width: 450px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.accountlink_csgo, .accountlink_csgo div
+{
+    display:inline-block;
+    text-align: center;
+}
+
+.login div p
+{
+    margin-top: 2px;
+}
+
+.csgopwbuttonclass{
+    border:0px solid #8A66F4; -webkit-border-radius: 5px; -moz-border-radius: 5px;border-radius: 5px;font-size:15px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
+    background-color: #2D749B; background-image: -webkit-gradient(linear, right, left, from(#2D749B), to(#2D749B));
+    background-image: -webkit-linear-gradient(left, #2D749B, #2D749B);
+    background-image: -moz-linear-gradient(left, #2D749B, #2D749B);
+    background-image: -ms-linear-gradient(left, #2D749B, #2D749B);
+    background-image: -o-linear-gradient(left, #2D749B, #2D749B);
+    background-image: linear-gradient(to left, #2D749B, #2D749B);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#2D749B, endColorstr=#2D749B);
+}
+
+.csgopwbuttonclass:hover{
+    border:0px solid #9174ED;
+    background-color: #225673; background-image: -webkit-gradient(linear, right, left, from(#225673), to(#388DB5));
+    background-image: -webkit-linear-gradient(left, #225673, #388DB5);
+    background-image: -moz-linear-gradient(left, #225673, #388DB5);
+    background-image: -ms-linear-gradient(left, #225673, #388DB5);
+    background-image: -o-linear-gradient(left, #225673, #388DB5);
+    background-image: linear-gradient(to left, #225673, #388DB5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#225673, endColorstr=#388DB5);
+}
+
+p .csgoheadline{
+	font-size: 32px;
+}
+
+.csgo .btnv6_blue_hoverfade {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #67c1f5 !important;
+    background: rgba( 103, 193, 245, 0.2 );
+}
+
+.csgo .btn_medium > span, input.btn_medium {
+    padding: 0 15px;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.csgo .btnv6_blue_hoverfade > span {
+    border-radius: 2px;
+    display: block;
+    background: transparent;
+}
+
+/*these styles are in login.css - hoping that by placing them here they will magically overide for the cs:go account creation/linking pages*/
+
+.header_text.game_name {
+	font-size: 24px;
+}
+
+.header_text.game_name div {
+	line-height: 40px;
+}
+
+.csgo .header_text {
+	position: relative;
+	width: 616px;
+	padding-bottom: 16px;
+	color: #d6d7d8;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.csgo .join_form {
+    padding: 20px 16px;
+    position: relative;
+    background-color: #0e141c;
+    border-color: #202d48;
+}
+
+.csgo .join_form input[type="text"], .join_form input[type="password"] {
+    height: 18px;
+    background-color: #0e141c;
+    border-color: #202d48;
+}
+
+.csgo .ssa_box {
+    height: 337px;
+    overflow: auto;
+    border: 1px solid #4d4b49;
+    padding: 9px;
+    line-height: 15px;
+    background-color: #121214;
+}
+
+/* this block is found in in store.css */
+
+/* this block is from buttons.css */
+
+.csgo .btnv6_blue_hoverfade {
+    border-radius: 2px;
+    border: none;
+    padding: 1px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    background: rgba( 49, 126, 168, 0.9 );
+    text-transform: uppercase;
+}
+
+.email_verification_header {
+    margin-bottom: 20px;
+    color: #67c1f5;
+    font-size: 22px;
+}
+
+.email_verification_header_container {
+    background-color: rgba( 0, 0, 0, .3 );
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px
+}
+
+.email_verification_subheader {
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.email_verification_container {
+    max-width: 750px;
+}
+
+.email_verification_troubleshooting li {
+    margin: 10px 40px;
+    list-style-type: decimal;
+}
+
+.email_verification_troubleshooting ul {
+    margin: 10px 0;
+}
+
+.email_verification_troubleshooting {
+    font-size: 14px;
+}
+
+.email_verification_changeemail {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.email_verification_changeemail:hover {
+    color: #FFF;
+}
+
+#create_account input, #create_account select {
+    max-width: 300px;
+	background: #32353C;
+	border-radius: 3px;
+	color: #E9E9E9;
+	padding: 8px 6px;
+	display: block;
+	box-shadow: none;
+	border: none;
+	width: 100%;
+	transition: border ease-in-out .5s;
+}
+
+#create_account input[type="checkbox"] {
+	display: inline;
+	width: 18px;
+	height: 18px;
+	background: #32353C;
+}
+
+.joinsteam label {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.joinsteam .checkout_content_box, .joinsteam .block_content_inner {
+	background: #18181D;
+}
+
+.joinsteam .ssa_box {
+	background-color: #121214;
+	color: #E9E9E9;
+	padding: 15px;
+	border: none;
+}
+
+.joinsteam p {
+	color: #B3B3B3;
+	font-size: 14px;
+}
+
+.joinsteam .form_row {
+	margin: 15px 0;
+}
+
+.joinsteam .game_name {
+	text-transform: uppercase;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.joinsteam_header_ctn {
+	margin-bottom: 10px;
+}
+
+.joinsteam #instructions {
+	color: #E9E9E9;
+}
+
+.joinsteam #priv_and_sub {
+	margin-top: 25px;
+}
+
+.joinsteam .password_tag {
+	margin-top: 15px;
+	opacity: 1;
+	transition-duration: 1s;
+	transition-timing-function: ease-in-out;
+	transition-property: all;
+	max-width: 300px;
+}
+
+.joinsteam .steam .checkout_content_box {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/joinsteam/steam_logo.svg' );
+	background-repeat: no-repeat;
+	background-position-x: -100px;
+	background-position-y: -50px;
+	background-size: contain;
+}
+
+.joinsteam #ssa_agree {
+	margin-top: 30px;
+}
+
+.joinsteam #ssa_agree label {
+	font-size: 14px;
+	text-transform: none;
+	vertical-align: top;
+	cursor: pointer;
+}
+
+.joinsteam .join_form .rule {
+	border: 1px solid #363636;
+	margin: 0;
+}
+
+.joinsteam .btn_medium span {
+	padding: 4px 30px;
+}
+
+.joinsteam .form_note {
+	color: #B3B3B3;
+}
+
+.email_used_body {
+    margin: 15px 0;
+}
+
+#error_display {
+    border: 2px solid #b44040;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background-color: rgba( 0, 0, 0, .5 );
+}
+
+#error_display > div {
+    margin-bottom: 10px;
+}
+
+.joinsteam #createAccountButton {
+	float: right;
+}
+
+.joinsteam #privacy_link {
+	margin-top: 15px;
+}
+
+	/* VERIFY EMAIL*/
+
+body.joinsteam.verify_email {
+	background: #18181D;
+	color: #BEC2CD;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+}
+
+.newaccount_email_verified_container {
+	text-align: center;
+	background: rgba( 0, 0, 0, 0.2 );
+	padding: 30px;
+}
+
+.newaccount_email_verified_header {
+	margin: 40px 0;
+}
+
+.newaccount_email_header_text {
+	font-size: 30px;
+	line-height: 35px;
+	letter-spacing: 0.05em;
+	color: #BEC2CD;
+	text-transform: uppercase;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.newaccount_email_verified_ruler {
+	border-bottom: 1px solid #FFF;
+	margin: 20px auto;
+	width: 80%;
+	height: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.newaccount_email_verified_text {
+	font-size: 14px;
+}
+
+.newaccount_email_verified_text.error {
+	color: #ff7b00;
+}
+
+.newaccount_email_verified_note {
+	margin-top: 30px;
+	font-size: 14px;
+}

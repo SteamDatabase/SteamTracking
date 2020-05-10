@@ -1,0 +1,395 @@
+
+body
+{
+	background: transparent;
+	background-color: #0d0d0d;
+}
+
+.page_wrapper
+{
+	position: relative;
+	min-width: 948px;
+	text-align: left;
+	color: white;
+	font-size: 16px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+.left_bg
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/top_left.jpg');
+	width: 349px;
+	height: 936px;
+	position: absolute;
+	left: -349px;
+}
+
+.right_bg
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/top_right.jpg');
+	width: 349px;
+	height: 936px;
+	position: absolute;
+	right: -349px;
+}
+
+.main_content
+{
+	position: relative;
+	width: 948px;
+	text-align: left;
+	color: white;
+	font-size: 16px;
+	margin: 0px auto;
+}
+
+.dear_steam_community
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/live/top_dearcommunity.jpg');
+	width: 948px;
+	height: 700px;
+}
+
+.violator
+{
+	position: absolute;
+	right: 0px;
+	width: 348px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+.violator.live
+{
+	width: 260px;
+	height: 78px;
+	right: 25px;
+	top: 20px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/live/violator_live.png');
+}
+
+.violator.live:hover
+{
+	background-position: 0px -78px;
+}
+
+.num_content
+{
+	font-size: 150px;
+	padding-top: 300px;
+}
+
+.day_buttons
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/bg_buttons.jpg');
+	background-repeat: no-repeat;
+	width: 948px;
+	height: 275px;
+	padding-top: 10px;
+	text-align: center;
+}
+
+.day_button_spacer
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.day_button
+{
+	display: inline-block;
+	width: 174px;
+	height: 120px;
+}
+
+.day_button:hover
+{
+	background-position: 0px 120px;
+}
+
+.day_button.inactive:hover
+{
+	background-position: 0px 0px;
+}
+
+.day_button.day1
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/openbeta/btn_day1.png');
+}
+.day_button.day2
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/openbeta/btn_day2.png');
+}
+.day_button.day3
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/openbeta/btn_day3.png');
+}
+.day_button.day4
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/openbeta/btn_day4.png');
+}
+.day_button.day5
+{
+	width: 152px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/openbeta/btn_openbeta.png');
+}
+
+.day_section
+{
+	margin-bottom: 100px;
+}
+
+.day_content
+{
+	color: #9f9f9f;
+	font-size: 14px;
+	position: relative;
+	padding: 23px;
+}
+
+.day_desc
+{
+	font-size: 16px;
+}
+
+.feature_section
+{
+	position: absolute;
+	width: 300px;
+}
+
+.feature_section.wide
+{
+	width: 380px;
+}
+
+.feature_section.right
+{
+	left: 530px;
+	width: 315px;
+}
+
+.feature_title
+{
+	position: relative;
+	color: white;
+	font-size: 22px;
+	padding-bottom: 5px;
+}
+
+.feature_desc
+{
+
+}
+
+.feature_image
+{
+	position: absolute;
+}
+
+.growable_image
+{
+	-moz-box-shadow: 0px 0px 27px #466289;
+	-webkit-box-shadow: 0px 0px 27px #466289;
+	box-shadow: 0px 0px 27px #466289;
+}
+
+.client_bottom_bar
+{
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/client_footer.png');
+	width: 404px;
+	height: 30px;
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+}
+
+.bottom_section
+{
+	position: relative;
+	margin-top: 30px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/live/bottom_live.jpg');
+	width: 948px;
+	height: 636px;
+}
+
+.bottom_section_text
+{
+	padding-left: 22px;
+}
+
+.bottom_section_text a
+{
+	text-decoration: underline;
+}
+
+.bottom_section_live
+{
+	position: absolute;
+	right: 43px;
+	bottom: 110px;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/updates/communitycontent/live/footer_live.png');
+	width: 348px;
+	height: 114px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 60px;
+}
+
+.bottom_section_live:hover
+{
+	background-position: 0px -114px;
+}
+
+.flipContainer {
+	margin: -20px 0 0 20px;
+}
+
+.flipDigit .d0, .flipDigit .d1, .flipDigit .d2 {
+	width: 84px;
+	height: 75.4%;
+	float: left;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	margin: 0px 0px;
+}
+.flipDigit .d0 {
+	margin-left: 23px;
+}
+
+.flipDigit {
+	position: relative;
+	width: 300px;
+	height: 204px;
+	float: left;
+
+}
+
+.flipDigit .bottom {
+	width: 300px;
+	top: 102px;
+	overflow: hidden;
+	height: 102px;
+	position: absolute;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-image:url(https://steamcommunity-a.akamaihd.net/public/images/flip/bottom.png);
+}
+
+.flipDigit .flipBottom {
+	ffbox-shadow: 0px 0px 55px 15px #000;
+	width: 300px;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+	height: 102px;
+	position: absolute;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-image:url(https://steamcommunity-a.akamaihd.net/public/images/flip/bottom.png);
+}
+
+.flipDigit .top, .flipDigit .flipTop {
+	width: 300px;
+	bottom: 102px;
+	height: 102px;
+	position: absolute;
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-image:url(https://steamcommunity-a.akamaihd.net/public/images/flip/top.png);
+}
+
+.flipDigit .top > .d0, .flipDigit .flipTop > .d0 {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+
+.flipDigit .top > .d1, .flipDigit .flipTop > .d1 {
+	position: absolute;
+	bottom: 0px;
+	left: 107px;
+}
+
+.flipDigit .top > .d2, .flipDigit .flipTop > .d2 {
+	position: absolute;
+	bottom: 0px;
+	left: 192px;
+}
+
+.flipDigit .flipTop, .flipDigit .flipBottom {
+	z-index: 10;
+}
+
+.flipShadow {
+	top: 102px;
+	left: 5px;
+	position: absolute;
+	width: 289px;
+	height: 83px;
+	background-image:url(https://steamcommunity-a.akamaihd.net/public/images/flip/bottom_shadow.png);
+	z-index: 5;
+}
+
+.bottom .digit0 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/bottom/00.png' );
+}
+.bottom .digit1 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/bottom/01.png' );
+}
+.bottom .digit2 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/bottom/02.png' );
+}
+.bottom .digit3 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/bottom/03.png' );
+}
+.bottom .digit4 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/bottom/04.png' );
+}
+.bottom .digit5 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/bottom/05.png' );
+}
+.bottom .digit6 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/bottom/06.png' );
+}
+.bottom .digit7 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/bottom/07.png' );
+}
+.bottom .digit8 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/bottom/08.png' );
+}
+.bottom .digit9 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/bottom/09.png' );
+}
+
+.top .digit0, .flipTop .digit0 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/top/00.png' );
+}
+.top .digit1, .flipTop .digit1 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/top/01.png' );
+}
+.top .digit2, .flipTop .digit2 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/top/02.png' );
+}
+.top .digit3, .flipTop .digit3 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/top/03.png' );
+}
+.top .digit4, .flipTop .digit4 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/top/04.png' );
+}
+.top .digit5, .flipTop .digit5 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/top/05.png' );
+}
+.top .digit6, .flipTop .digit6 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/top/06.png' );
+}
+.top .digit7, .flipTop .digit7 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/top/07.png' );
+}
+.top .digit8, .flipTop .digit8 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/top/08.png' );
+}
+.top .digit9, .flipTop .digit9 {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/flip/top/09.png' );
+}

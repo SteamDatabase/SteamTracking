@@ -1,0 +1,60 @@
+
+#PriceChartPopup
+{
+	width: 100%;
+	height: 100%;
+
+	z-index: msgbox_zindex;
+}
+
+#PriceChartPopup.Destructing
+{
+	opacity: 0.0;
+
+	animation-name: msg-box-disappear;
+	animation-duration: MessageBoxAnimationDuration;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+}
+
+#PriceChartPopup #DialogInner
+{
+	width: 100%;
+	height: 100%;
+	vertical-align: center;
+	horizontal-align: center;
+	padding: 30px;
+	padding-bottom: 130px;
+}
+ 
+#PriceChartPopup LoadingThrobber
+{
+	horizontal-align: center;
+	vertical-align: center;
+
+	transition-property: opacity;
+	transition-timing-function: ease-out;
+	transition-duration: 0.5s;
+}
+
+#PriceChartPopup.LoadComplete LoadingThrobber
+{
+	opacity: 0.0;
+}
+
+#PriceChartPopup HTML
+{
+	transition-property: opacity;
+	transition-timing-function: ease-out;
+	transition-duration: 0.5s;
+
+	width: 100%;
+	height: 100%;
+
+	opacity: 0.0;
+}
+
+#PriceChartPopup.LoadComplete HTML
+{
+	opacity: 1.0;
+}

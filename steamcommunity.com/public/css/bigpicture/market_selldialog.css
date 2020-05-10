@@ -1,0 +1,465 @@
+
+@define detailsdatalabel: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ef ), to( #cbcbcbce ) );
+@define detailsdatalabelfocus: gradient( linear, 0% 0%, 0% 100%, from( #f2f2f2ff ), to( #cbcbcbde ) );
+
+@keyframes 'links-and-more-button-focus'
+{
+	from
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	}
+
+	50%
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdff ), to( #bdbfbfff ) );
+	}
+
+	to
+	{
+		background-color: gradient( linear, -15% 0%, 100% 0%, from( #fdfdfdee ), to( #adafafe0 ) );
+	}
+}
+
+.CommunityMarketSellDialog,
+.CommunityMarketBuyDialog
+{
+	background-image: url( "file://{images}/profile/activity_bg_wash.png" );
+	background-size: 100% 100%;
+	box-shadow: #000000aa -4px -4px 8px 8px;
+}
+
+#ItemBackgroundImage, #Contents
+{
+	position: 0px 0px 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#ItemBackgroundImage
+{
+	desaturation: 1.0;
+	opacity: 0.20;
+}
+
+#CommunityMarketContent
+{
+	flow-children: down;
+	width: 100%;
+	height: 100%;
+}
+
+#Contents
+{
+	flow-children: right;
+}
+
+#TopBar
+{
+	margin-top: 30px;
+	padding-left: 55px;
+
+	width: 100%;
+
+	flow-children: right;
+}
+
+#TopBar .PageTitle
+{
+	width: fit-children;
+}
+
+
+#LeftOptions
+{
+	width: 50%;
+	height: 100%;
+
+	padding: 0px 30px 0px 55px;
+}
+
+#LeftInner
+{
+	width: 100%;
+	vertical-align: top;
+	flow-children: down;
+
+	font-weight: normal;
+	font-size: 26;
+	color: #dde1e3;
+}
+
+#InfoPanel
+{
+	width: 100%;
+	height: 223px;
+	vertical-align: bottom;
+}
+
+#InfoPanel Label
+{
+	width: 100%;
+	height: 100%;
+}
+
+.ErrorText
+{
+	
+	color: #FF0000;
+
+	opacity: 0.0;
+
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in-out;
+}
+
+.InfoText
+{
+	font-size: 22px;
+	color: foregroundgray;
+}
+
+.ErrorTextVisible .ErrorText
+{
+	opacity: 1.0;
+}
+
+.ErrorTextVisible .InfoText,
+.ErrorTextVisible #OrderTables
+{
+	opacity: 0.0;
+}
+
+
+.PricePanel, #SSA, #DialogActions
+{
+	padding: 10px 0px;
+	margin: 10px 0px;
+	width: 100%;
+	flow-children: right;
+}
+
+.PricePanel
+{
+	margin-top: 0px;
+}
+
+#SSAButton
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#SSAButton Label
+{
+
+}
+
+.PricePanel Panel
+{
+	width: 50%;
+	flow-children: down;
+}
+
+.PricePanel TextEntry
+{
+	width:90%;
+}
+
+#LeftOptions Button
+{
+	width: 100%;
+
+	transition-property: border, background-color, color, box-shadow, transform;
+	transition-timing-function: ease-in-out;
+}
+
+#LeftOptions Button Label
+{
+	width: 100%;
+
+}
+
+#LeftOptions .FailedValidation
+{
+	background-color: error_bgcolor;
+	color: #3c3c3cff;
+}
+
+#RightDetail
+{
+	width: 50%;
+	height: 100%;
+
+	margin: 10px 90px 140px 30px;
+
+	background-color: gradient( linear, 0% 0%, 120% 150%, from( #0000009f ), to ( #2f44627f ) );
+
+	overflow: squish scroll;
+}
+
+#RightInner
+{
+	width: 100%;
+	overflow: squish noclip;
+}
+
+#RightDetail:descendantfocus
+{
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+
+.ItemDetailImage
+{
+	width: 250px;
+	height: 250px;
+}
+
+.ItemDetailInner Label.ItemName, .ItemDetailInner .ItemDescriptions Label
+{
+	width: 498px;
+}
+
+.CommunityMarketBuyDialog .PricePanel
+{
+	flow-children: down;
+}
+
+.CommunityMarketBuyDialog .PricePanel .Line2
+{
+	margin-top: 10px;
+	flow-children: right;
+}
+
+.CommunityMarketBuyDialog #TotalPanel
+{
+	margin-left: 40px;
+}
+
+.CommunityMarketBuyDialog #Total
+{
+	width: 90%;
+	height: 48px;
+	color: #888888ff;
+	padding: 8px 8px;
+}
+
+
+.BuyItemPriceBreakdown Panel
+{
+	flow-children: right;
+	width: 100%;
+}
+
+.BuyItemPriceBreakdown .Value
+{
+	horizontal-align: right;
+}
+
+.BuyItemPriceBreakdown .HorizontalRule
+{
+	margin-top: 5px;
+}
+
+#FeeTo
+{
+	font-size: 16px;
+}
+
+.Inactive #SSA
+{
+	opacity: 0.0;
+}
+
+.Inactive #PlaceButton
+{
+	opacity: 0.0;
+}
+
+.Inactive .ErrorText
+{
+	opacity: 1.0;
+}
+
+
+.Underfunded #PlaceButton
+{
+	visibility: collapse;
+}
+
+.Underfunded #SSA
+{
+	opacity: 0.0;
+}
+
+#AddFundsButton
+{
+	visibility: collapse;
+}
+
+.Underfunded #AddFundsButton
+{
+	visibility: visible;
+}
+
+#AddFundsButton Label
+{
+}
+
+#MarketPollPopup
+{
+	opacity: 0.0;
+}
+
+#MarketPollPopup.Visible
+{
+	opacity: 1.0;
+}
+
+#MarketPollPanelPopout
+{
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	vertical-align: center;
+}
+
+#MarketPollPanelPopout #DetailText
+{
+	visibility: collapse;
+}
+
+.Purchased #MarketPollPanelPopout #DetailText
+{
+	visibility: visible;
+}
+
+#MarketPollPanelPopout #PollStatus,
+#MarketPollPanelPopout #DetailText
+{
+	width: 100%;
+	font-size: 28;
+	color: detailsdatalabel;
+	font-weight: lighter;
+	text-align: center;
+	margin-bottom: 60px;
+}
+
+#MarketPollPopup.Error #PollStatus
+{
+	color: red;
+}
+
+#MarketPollPanelPopout #Loading
+{
+	background-color: transparent;
+	opacity: 1.0;
+	animation-name: none;
+	border-color: transparent;
+}
+
+#MarketPollPopup #MarketPollPopupOK,
+#MarketPollPopup.Complete #Loading
+{
+	visibility: collapse;
+}
+
+#MarketPollPopup.Complete #MarketPollPopupOK,
+#MarketPollPopup #Loading
+{
+	visibility: visible;
+}
+
+#MarketPollPopupButtons
+{
+	width: fit-children;
+	flow-children: right;
+	horizontal-align: center;
+}
+
+#MarketPollPopupButtons Button
+{
+	visibility: collapse;
+}
+
+.Complete #MarketPollPopupButtons Button
+{
+	visibility: visible;
+}
+
+.MarketSellOrderDialog #MarketPollPanelPopout #DetailText
+{
+	visibility: visible;
+}
+
+.MarketSellOrderDialog #MarketPollPanelPopout #DetailText
+{
+	visibility: visible;
+	margin-bottom: 0px;
+}
+
+
+.MarketSellOrderDialog.Complete #MarketPollPanelPopout #DetailText
+{
+	margin-bottom: 60px;
+}
+
+#OrderTables
+{
+	flow-children: right;
+	width: 100%;
+	height: 100%;
+}
+
+#OrderTables .OrdersTable
+{
+	height: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 0px;
+}
+
+#InfoPanel .OrdersTableRow Label
+{
+	width: 50%;
+}
+
+#InfoPanel #SellOrderSummary,
+#InfoPanel #BuyOrderSummary
+{
+	visibility: collapse;
+	height: fit-children;
+	width: 100%;
+}
+
+#OrderTables .OrderTableTitle
+{
+	width: 100%;
+	height: fit-children;
+	color: #5c96be;
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+#InfoPanel #ListingData
+{
+	height: 100%;
+	width: 100%;
+	flow-children: down;
+	padding-top: 100px; 
+}
+
+#InfoPanel #ListingData Label
+{
+	height: fit-children;
+	color: tcstatictext;
+	margin-bottom: 10px;
+}
+

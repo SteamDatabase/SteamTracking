@@ -1,0 +1,748 @@
+
+body.v6.spring2019 {
+	background-color: #1B2838;
+    		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+body.v6.spring2019 .page_content {
+	max-width: 1200px;
+    width: 100%;
+	line-height: 28px;
+    margin-top: -88px;
+    z-index: 3;
+    position: relative;
+}
+
+.page_bg_ctn {
+	background: linear-gradient(-16deg, #3d3c44 60%,  #F5D2D2 60.1% );
+	background-repeat: no-repeat;
+	background-color: #1B2838;
+	max-width: 1920px;
+	margin: 0 auto;
+    padding-bottom: 16px;
+}
+
+.header_menu_ctn {
+	background: #958CB5;
+}
+
+body.v6.spring2019 .header_menu_ctn #store_header {
+	margin: 0;
+}
+
+.page_content_ctn {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.spring_cleaning_header_ctn {
+	position: relative;
+	background: linear-gradient(to top, #F5D2D2 50%, #958CB5 50% );
+}
+
+.spring_cleaning_bg_img {
+	width: 100%;
+	max-width: 110%;
+    margin-top: -60px;
+}
+
+.spring_cleaning_bg_img.mobile {
+	display: none;
+}
+
+.logo_header_ctn {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    height: 100%;
+}
+.logo_header_position {
+    width: 87%;
+    min-width: 891px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.spring_cleaning_header_logo.desktop {
+	display: block;
+}
+
+.spring_cleaning_header_logo.mobile {
+	display: none;
+}
+
+.spring_cleaning_header_logo {
+	max-width: 28%;
+	position: absolute;
+}
+
+.spring_cleaning_trophy_ctn {
+
+}
+
+.spring_cleaning_trophy_ctn.row1 {
+    position: absolute;
+    top: 22px;
+    width: 100%;
+}
+
+.spring_cleaning_trophy_ctn.row2 {
+    position: absolute;
+    top: 22px;
+    width: 100%;
+}
+
+.spring_cleaning_trophy {
+    width: 100%;
+    max-width: 110%;
+    position: absolute;
+    top: 0;
+}
+/*
+.trophy_364 {
+    width: 100%;
+    max-width: 110%;
+}
+
+.trophy_368 {
+	position: absolute;
+	bottom: 0;
+	height: 90%;
+	left: 0;
+}
+
+.trophy_363 {
+	bottom: 0;
+	right: 5%;
+	height: 90%;
+	position: absolute;
+}
+
+.trophy_367 {
+	bottom: 0;
+	height: 90%;
+	left: 0;
+	position: absolute;
+}
+
+.trophy_358 {
+	bottom: 0;
+	height: 90%;
+	right: 28%;
+	position: absolute;
+}
+
+.trophy_362 {
+	bottom: 0;
+	height: 90%;
+	right: 57%;
+	position: absolute;
+}
+
+.trophy_354 {
+	position: absolute;
+	bottom: 0;
+	height: 90%;
+	right: 28%;
+}
+
+.trophy_350 {
+	position: absolute;
+	bottom: 0;
+	height: 90%;
+	right: 56%;
+}
+*/
+
+.spring_cleaning_progress_ctn {
+	position: relative;
+    width: calc(100% - 70px);
+    height: 200px;
+    margin: 60px 15px 0 15px;
+    display: flex;
+    flex-direction: column;
+background: -webkit-linear-gradient( 106deg, #8275a9 15%,#958ab5 85%);
+	background: linear-gradient( -16deg, #8275a9 15%,#958ab5 85%);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.unearned {
+	filter: grayscale(1);
+}
+
+.spring_cleaning_level1 {
+	position: absolute;
+	top: 33px;
+	left: calc( 33% - 75px );
+	width: 120px;
+}
+
+.spring_cleaning_level2 {
+	position: absolute;
+	top: 33px;
+	left: calc( 67% - 95px );
+	width: 120px;
+}
+
+.spring_cleaning_level3 {
+	position: absolute;
+	top: 33px;
+	left: calc( 100% - 110px );
+	width: 120px;
+}
+
+.spring_cleaning_bar {
+	background: #FFFFFF;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.4) inset;
+	border-radius: 10px;
+    width: calc(100% - 20px);
+	height: 15px;
+    margin: 67px 0 0 0;
+}
+
+.spring_cleaning_bar_progress {
+	background: #91c93a ;
+    box-shadow: 0 0 10px #91C93A;
+	border-radius: 10px;
+	height: 100%;
+}
+
+.level_text {
+    color: rgba(255,255,255,0.7);
+	font-size: 12px;
+	line-height: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.spring_cleaning_info_ctn {
+	text-align: center;
+}
+
+.spring_cleaning_info_header {
+	 text-transform: uppercase;
+	 color: #437EA4;
+	 font-size: 26px;
+	 		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		    margin: 0px auto;
+    width: 80%;
+ }
+
+.spring_cleaning_info_subheader {
+	font-size: 20px;
+	color: #1b2838;
+    margin: 28px auto;
+    width: 80%;
+}
+
+.spring_cleaning_info_subheader > span {
+	font-weight: 700;
+}
+
+.spring_cleaning_progress {
+	font-size: 20px;
+	color: #ffffff;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		    text-transform: uppercase;
+}
+.bar_ctn {
+    position: relative;
+}
+
+.spring_cleaning_progress span {
+    color: #91c93a;
+}
+
+.spring_cleaning_dailytasks_ctn {
+	padding-top: 100px;
+}
+
+.spring_cleaning_section_header {
+	text-transform: uppercase;
+	color: #437EA4;
+	font-size: 48px;
+	margin-bottom: 20px;
+	text-align: center;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		}
+
+.spring_cleaning_section_subheader {
+	color: #1b2838;
+	font-size: 20px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+.spring_cleaning_section_subheader.projects {
+	color: #FFF;
+}
+
+.spring_cleaning_task_ctn {
+	display: flex;
+    flex-direction: row;
+    height: 166px;
+	line-height: 22px;
+	margin: 0 15px 12px 15px;
+
+    background: -webkit-linear-gradient( 106deg, #2E5069 15%,#243e52 85%);
+	background: linear-gradient( -16deg, #2E5069 15%,#243e52 85%);
+    box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+}
+.spring_cleaning_task_ctn.unlocked {
+    background: -webkit-linear-gradient( 106deg, #4b6e86 15%,#243e52 85%);
+	background: linear-gradient( -16deg, #4b6e86 15%,#243e52 85%);
+}
+
+.right_content {
+    display: flex;
+    flex-direction: row;
+    height: 166px;
+    flex-grow: 1;
+}
+
+.medal_img {
+	width: 166px;
+	height: 166px;
+	position: relative;
+}
+.medal_img .task_img_mobile {
+    display: none;
+}
+.medal_img:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3000px rgba(21, 80, 122, 0.4) inset;
+}
+.spring_cleaning_task_ctn.unlocked .medal_img:before {
+    box-shadow: unset;
+}
+
+.medal_img .checked_img {
+	width: 42px;
+	fill: #91C93A;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.spring_cleaning_task_details {
+    flex-grow: 1;
+	padding: 20px 20px 20px 20px;
+	text-align: left;
+	width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spring_cleaning_apps_ctn {
+	margin: auto;
+	display: flex;
+	max-width: 510px;
+    min-width: 495px;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 12px;
+    position: relative;
+}
+
+.spring_cleaning_apps_ctn .spring_game,
+.spring_cleaning_task_viewmore .more_bg_ctn {
+	margin: 5px;
+    width: 155px;
+	position: relative;
+}
+.spring_cleaning_apps_ctn .spring_game a {
+    display: block;
+
+}
+
+.spring_cleaning_apps_ctn .spring_game a img,
+.spring_cleaning_task_viewmore .more_bg_ctn img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+}
+.spring_cleaning_apps_ctn .spring_game a:hover img {
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.6);
+}
+
+.spring_cleaning_task_viewmore {
+	cursor: pointer;
+    position: relative;
+}
+.spring_cleaning_task_viewmore .more_text {
+	position: absolute;
+	z-index: 2;
+	top: 22px;
+	left: 38px;
+}
+.spring_cleaning_task_viewmore .more_bg_ctn {
+    position: relative;
+    top: 0;
+}
+
+.spring_cleaning_task_viewmore .more_bg_ctn:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 3000px #1b2838 inset;
+}
+
+.spring_cleaning_task_viewmore:hover .more_bg_ctn img {
+    color: #66C0F0;
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.6);
+}
+.spring_cleaning_task_viewmore svg:hover {
+	color: #66C0F0;
+}
+
+.spring_cleaning_task_viewmore svg {
+	width: 22px;
+	vertical-align: middle;
+	padding-right: 5px;
+	fill: currentColor;
+}
+
+.app_description {
+    display: block;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.task_completed_ctn {
+    padding: 32px;
+    font-size: 14px;
+}
+
+.spring_cleaing_days_ctn {
+	display: flex;
+}
+
+.spring_cleainin_task_title {
+	font-size: 26px;
+	text-transform: uppercase;
+	color: #FFF;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		}
+
+.spring_cleaning_day {
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #1B2838;
+	padding: 0 10px;
+	background: #4b6374;
+	margin-right: 8px;
+	text-align: center;
+	cursor: default;
+}
+
+.spring_cleaning_day.completed {
+	background: #91C93A;
+    box-shadow: 0 0 10px #91C93A;
+}
+
+.spring_cleaning_task_desc {
+	margin: 12px 0 16px 0;
+	font-size: 15px;
+    line-height: 18px;
+    font-weight: 200;
+	color: #FFF;
+}
+
+.checkbox_image {
+	width: 50px;
+	height: 50px;
+	vertical-align: center;
+	margin: auto 36px auto 24px;
+}
+
+.newmodal_content .spring_cleaning_dialog_ctn {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.spring_cleaning_dialog_ctn {
+	display: none;
+	max-width: 800px;
+}
+
+.spring_cleaning_dialog_ctn .spring_game {
+	margin: 5px;
+	position: relative;
+}
+
+.spring_cleaning_noapps_ctn {
+	margin: auto 15px;
+	text-align: center;
+    flex-grow: 1;
+}
+
+.spring_cleaning_noapps_ctn button {
+	margin-top: 10px;
+}
+
+.spring_cleaning_freeweekend_ctn {
+	text-align: center;
+	font-size: 48px;
+	color: #FFFFFF;
+	text-transform: uppercase;
+background: -webkit-linear-gradient( 106deg, #2E5069 15%,#243e52 85%);
+	background: linear-gradient( -16deg, #2E5069 15%,#243e52 85%);
+	padding: 50px;
+	margin: 160px 15px;
+	line-height: normal;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		    box-shadow: -2px 2px 10px rgba(0,0,0,0.2);
+}
+
+.spring_cleaning_freeweekend_apps_ctn {
+	display: flex;
+	margin: 40px 0;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+
+}
+
+.spring_cleaning_freeweekend_apps_ctn .spring_game {
+	margin: 5px;
+}
+
+.login_button {
+	margin: auto 50px;
+}
+
+.level_badge.mobile {
+	display: none;
+}
+
+@media screen and (max-width: 1100px)
+{
+    html.responsive .spring_cleaning_task_desc {
+        font-size: 13px;
+    }
+    html.responsive .spring_cleaning_apps_ctn {
+        max-width: unset;
+        min-width: unset;
+        width: 345px;
+
+    }
+    html.responsive .spring_cleaning_task_viewmore {
+        width: 47%;
+        bottom: 12px;
+        right: 13px;
+        position: absolute;
+
+    }
+    html.responsive .spring_cleaning_task_viewmore .more_bg_ctn {
+        width: calc(100% - 10px);
+        position: relative;
+    }
+    html.responsive .spring_cleaning_apps_ctn .spring_game {
+        width: 47%;
+    }
+    html.responsive .spring_cleaning_apps_ctn .spring_game:nth-child(5),
+    html.responsive .spring_cleaning_apps_ctn .spring_game:nth-child(6) {
+        display: none;
+    }
+}
+
+
+
+
+@media screen and ( max-width: 910px ) {
+
+    html.responsive .spring_cleaning_header_ctn {
+        background: #958CB5;
+        padding-top: 43vw;
+    }
+	html.responsive .spring_cleaning_task_ctn {
+		height: auto;
+
+	}
+	html.responsive .spring_cleaning_apps_ctn {
+		max-width: unset;
+		width: calc(100% - 24px);
+	}
+	html.responsive .spring_cleaning_apps_ctn .spring_game {
+		width: 31%;
+	}
+    html.responsive .spring_cleaning_task_viewmore {
+        bottom: unset;
+        right: unset;
+    }
+    html.responsive .spring_cleaning_task_viewmore .more_bg_ctn {
+        width: 100%;
+    }
+	html.responsive .medal_img {
+		height: 332px;
+        width: 20vw;
+		background: #6f6f6f;
+	}
+	html.responsive .spring_cleaning_task_ctn.unlocked .medal_img {
+		background: #f3f2de;
+	}
+	html.responsive .right_content {
+		display: flex;
+		flex-direction: column;
+		height: 332px;
+		width: calc(100% - 166px);
+	}
+	html.responsive .spring_cleaning_task_details {
+		width: unset;
+	}
+	html.responsive .spring_cleaning_apps_ctn .spring_game:nth-child(5),
+	html.responsive .spring_cleaning_apps_ctn .spring_game:nth-child(6) {
+		display: block;
+	}
+
+	html.responsive .spring_cleaning_bg_img.desktop {
+		/* display: none; */
+        width: 218%;
+        max-width: unset;
+        left: -95%;
+        position: absolute;
+	}
+
+	html.responsive .spring_cleaning_trophy_ctn.row2 {
+		/* right: 13%;
+		bottom: 14.5%; */
+        width: 218%;
+        left: -95%;
+        margin-top: -60px;
+        position: absolute;
+	}
+
+	html.responsive .spring_cleaning_trophy_ctn.row1 {
+		/* bottom: 31.5%;
+		right: 5%; */
+        width: 218%;
+        left: -95%;
+        margin-top: -60px;
+        position: absolute;
+	}
+
+	html.responsive .spring_cleaning_trophy_ctn {
+		position: absolute;
+		width: 79%;
+		height: 15%;
+		top: auto;
+	}
+
+
+	html.responsive .spring_cleaning_header_logo.desktop {
+		display: none;
+	}
+
+	html.responsive .spring_cleaning_header_logo.mobile {
+		display: block;
+	}
+
+	html.responsive .spring_cleaning_header_logo {
+		max-width: 70%;
+		top: 5%;
+		left: 19%;
+		position: absolute;
+	}
+
+    html.responsive .logo_header_ctn {
+        position: absolute;
+        top: 4vw;
+        width: 100%;
+        height: 100%;
+    }
+
+    html.responsive .medal_img .task_img_desktop {
+        display: none;
+    }
+
+    html.responsive .medal_img .task_img_mobile {
+        display: block;
+        width: 100%;
+    }
+
+    html.responsive .page_content {
+        top: 66vw;
+    }
+
+    html.responsive .spring_cleaning_task_viewmore {
+	    width: 31%;
+        position: relative;
+    }
+
+    html.responsive .level_badge.mobile {
+	    display: inline;
+    }
+
+	html.responsive .level_badge.desktop {
+		display: none;
+	}
+
+	html.responsive .spring_cleaning_level3 {
+		left: 83%;
+	}
+
+	html.responsive .spring_cleaning_level2 {
+		left: 50%;
+	}
+
+	html.responsive .spring_cleaning_level1 {
+		left: 25%;
+	}
+
+
+	html.responsive .badge_ctn {
+		top: 45px;
+		width: 100px;
+	}
+
+}
+
+@media screen and (max-width: 720px) {
+    html.responsive .spring_cleaning_task_desc {
+        font-size: 13px;
+    }
+    html.responsive .spring_cleaning_apps_ctn {
+        max-width: unset;
+        min-width: unset;
+        width: 62vw;
+
+    }
+    html.responsive .spring_cleaning_task_viewmore {
+        width: 46%;
+        position: relative;
+
+    }
+    html.responsive .spring_cleaning_task_viewmore .more_bg_ctn {
+        position: relative;
+    }
+    html.responsive .spring_cleaning_apps_ctn .spring_game {
+        width: 46%;
+    }
+    html.responsive .spring_cleaning_apps_ctn .spring_game:nth-child(4),
+    html.responsive .spring_cleaning_apps_ctn .spring_game:nth-child(5),
+    html.responsive .spring_cleaning_apps_ctn .spring_game:nth-child(6) {
+        display: none;
+    }
+}

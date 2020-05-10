@@ -1,0 +1,275 @@
+
+.golden_profile
+{
+	padding: 0 25px;
+}
+
+.profile_golden_wrapper
+{
+	position: relative;
+	padding-top: 10px;
+	top: -10px;
+	overflow: hidden;
+}
+
+div.profile_page.golden_profile
+{
+	position: relative;
+}
+
+.golden_profile_header
+{
+	height: 62px;
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/top_gold_desktop.png') center top no-repeat;
+}
+
+.lny_pig_center
+{
+	display: none;
+	margin: auto;
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/middle_top_pig.png' ) center center no-repeat;
+	width: 78px;
+	height: 62px;
+}
+
+.lny_sides_position
+{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+html.client .profile_lny_wrapper
+{
+	top: 0;
+	padding-top: 0;
+}
+
+html.client div.profile_page.lnyprofile
+{
+	padding-top: 10px;
+}
+
+html.client .lny_sides_position
+{
+	top: 10px;
+}
+
+.lny_sides_position .lny_side
+{
+	position: absolute;
+	width: 25px;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+}
+
+.lny_side_background {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/side_gold.jpg' ) center top repeat-y;
+}
+
+.lny_side.right .lny_side_background {
+	transform: scaleX(-1);
+}
+
+.lny_sides_position .lny_side.left
+{
+	left: 0;
+}
+
+.lny_sides_position .lny_side.right
+{
+	right: 0;
+}
+
+.golden_profile .profile_background_holder_content
+{
+	display: none;
+}
+
+.golden_profile .showcase_content_bg,
+.golden_profile .profile_content.has_profile_background,
+.golden_profile .profile_content
+{
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/LNY_bg_pattern.jpg' );
+	background-size: 100px 100px;
+}
+
+.golden_profile .profile_comment_area .commentthread_header,
+.golden_profile .profile_leftcol_header
+{
+	background: rgba(251, 214, 10, 0.75);
+	color: #3c1802;
+}
+
+.golden_profile .profile_leftcol_header h2
+{
+	color: #3c1802;
+}
+
+.golden_profile .recent_game
+{
+	background: rgba(60, 24, 2, 0.75);
+}
+
+.golden_profile .profile_comment_area .commentthread_paging
+{
+	background: rgba( 0, 0, 0, 0.75 );
+	padding: 0 4px;
+	border-radius: 4px;
+}
+
+.lny_top
+{
+	position: absolute;
+	top: 0;
+	width: 51px;
+	height: 148px;
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/corner_gold.png' ) no-repeat top center;
+}
+
+.lny_side.left .lny_top
+{
+	right: 0;
+}
+.lny_side.right .lny_top
+{
+	left: 0;
+	transform: scaleX(-1);
+}
+
+.lny_pig
+{
+	position: absolute;
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/side_pig.png' ) no-repeat top right;
+	width: 91px;
+	height: 94px;
+	top: -10px;
+
+}
+
+.lny_side.left .lny_pig
+{
+	left: -95px;
+}
+
+.lny_side.right .lny_pig
+{
+	right: -95px;
+	transform: scaleX(-1);
+}
+
+.lny_pendulum
+{
+	padding-top: 42px;
+	display: inline-block;
+	position: absolute;
+	transform-origin: center top;
+	animation-name: anim_lny_swing;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+	animation-timing-function: ease-in-out;
+	top: 49px;
+}
+
+@keyframes anim_lny_swing {
+	from {
+		transform: rotate( 15deg );
+	}
+	50% {
+		transform: rotate( -15deg );
+	}
+	to {
+		transform: rotate( 15deg );
+	}
+}
+
+.lny_side.left .lny_pendulum
+{
+	left: -107px;
+}
+
+.lny_side.right .lny_pendulum
+{
+	right: -143px;
+	animation-delay: -1s;
+}
+
+.lny_strings
+{
+	background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/strings.png' ) no-repeat top right;
+	height: 60px;
+	width: 13px;
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.lny_side.right .lny_strings
+{
+	transform: scaleX(-1);
+}
+
+.golden_profile .profile_header .persona_name
+{
+	color:#e4ca63;
+}
+
+.golden_profile .profile_header_bg_texture
+{
+	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/profile_header_bg_texture_gold.jpg' );
+	background-position: bottom;
+}
+
+.golden_profile .profile_customization
+{
+	background-image: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/showcase_bg_gold.png' );
+	background-color: #0b0c0e;
+}
+
+.golden_profile .profile_customization_header
+{
+	color:#e4ca63;
+}
+
+.golden_profile .profile_header_badge
+{
+	background: rgba( 0, 0, 0, 0.25 );
+	border: 1px solid rgba( 228, 202, 99, 0.5 );
+}
+
+@media screen and ( max-width: 910px )
+{
+	html.responsive .lny_side {
+		display: none;
+	}
+
+	html.responsive .golden_profile
+	{
+		padding: 0;
+	}
+
+	html.responsive .golden_profile_header {
+		background: url( 'https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/lny2019/goldenprofile/top_gold_mobile.png') center top no-repeat;
+		background-size: contain;
+
+		height: 0;
+		padding-top: 8.9%;	/* 700px x 62px, 700/62 = 0.0885 */
+	}
+
+	html.responsive .profile_golden_wrapper {
+		top: 0;
+		padding-top: 0;
+	}
+}

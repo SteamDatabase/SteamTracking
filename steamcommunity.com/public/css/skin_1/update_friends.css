@@ -1,0 +1,889 @@
+
+
+
+body {
+	background-color: #121518;
+	--transition-speed: 600ms;
+}
+
+html.responsive.touch .friends_update .responsive_page_frame.with_header div.responsive_page_content {
+	padding-top: 0;
+}
+
+html.responsive.touch .responsive_page_frame.with_header div.responsive_page_content .page_content {
+	margin-top: 0;
+}
+
+.friends_list .page_content{
+	width: 1140px;
+}
+
+.responsive_page_template_content {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		;
+	background-color: #121518;
+	font-weight: 400;
+}
+
+div.page_content {
+	max-width: 940px;
+	width: auto;
+
+}
+
+.heading {
+	margin: 0 0 15px 0;
+	text-transform: uppercase;
+	font-size: 30px;
+	letter-spacing: 4px;
+	font-weight: 100;
+	color: #cce4fc;
+	line-height: 36px;
+}
+
+.heading2 {
+	margin: 0 0 15px 0;
+	text-transform: uppercase;
+	font-size: 30px;
+	letter-spacing: 4px;
+	font-weight: 100;
+	color: #0ab8ff;
+	line-height: 36px;
+}
+
+.heading3 {
+	color: #cce4fd;
+	margin: 0 0 15px 0;
+	text-transform: uppercase;
+	font-size: 32px;
+	letter-spacing: 4px;
+	font-weight: 100;
+	line-height: 36px;
+	text-align: left;
+}
+
+ p {
+	 color:#6d85a4;
+ }
+
+/* Hero art/header */
+
+html.responsive.touch .friends_update .responsive_page_frame.with_header div.responsive_page_content.hero {
+	padding-top: 50px;
+}
+
+.hero {
+	padding-top: 50px;
+	background-color: white;
+	overflow: hidden;
+}
+
+.hero div.page_content {
+	background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/friends_announce/bg_hero.jpg) top right no-repeat;
+	background-size: 610px 585px;
+	min-height: 455px;
+	color: #505050;
+	font-weight: 500;
+	width: 1240px;
+	max-width: inherit;
+}
+
+.hero .wrapper {
+	padding: 0 630px 60px 30px;
+	min-height: 540px;
+}
+
+.hero .heading {
+	margin: 0 0 41px 0;
+	padding-top: 85px;
+	text-transform: uppercase;
+	font-size: 48px;
+	font-weight: 400;
+	color: #4e4e4e;
+}
+
+.hero .subheading {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.hero .subheading2 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	color: #0ab8ff;
+}
+
+.hero blockquote {
+	padding-left: 10px;
+	margin: 15px 0 65px 0 ;
+	font-size: 16px;
+	border-left: 2px solid #00b9fa;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 400;
+	line-height: 24px;
+}
+
+.hero p {
+	padding-right: 20px;
+}
+
+.hero a {
+	color: #00b9fa;
+}
+
+a.button {
+	display: inline-block;
+	margin-top: 37px;
+	padding: 7px 25px;
+	text-transform: uppercase;
+	color: #fff;
+	background: transparent;
+	transition: all 0.3s ease-out;
+	background: linear-gradient( to right, #11aaff 1%, #3366ff 20% );
+	background-position: 1% 100%;
+	background-size: 300% 300%;
+	border-radius: 2px;
+}
+
+a.button:hover {
+	background: linear-gradient( to right, #11aaff 1%, #3366ff 60% );
+	background-position: 100% 50%;
+	box-shadow: 0 8px 16px 0 rgba( 0, 0, 0, 0.26 );
+}
+
+/* ===== Friends trifold =====  */
+.friends_list {
+	background-image: linear-gradient(rgba(38, 68, 145, 1) 2%, rgba(27, 65, 100, 1) 20%, rgba(27, 40, 56, 1) 90%);
+	padding-bottom: 60px;
+}
+
+.heading.center {
+	text-align: center;
+	color: #ffffff;
+}
+
+.heading2.center {
+	text-align: center;
+	color: #a6b4d0;
+	font-size: 16px;
+}
+
+
+.spacer {
+	height: 50px;
+}
+
+.spacer2 {
+	height: 100px;
+}
+
+.friendslist_first .title, .friendslist_first p {
+	text-align: right;
+}
+
+.friends_hover_ctn {
+	display: flex;
+	justify-content: center;
+}
+
+.friends_hover_ctn > div {
+	flex: 1 1;
+	max-width: 540px;
+	position: relative;
+}
+
+.friends_hover_ctn > div.friendslist_media{
+
+	position: relative;
+	min-height: 968px;
+	font-size: 0px;
+	max-width: 305px;
+	padding: 0 25px;
+
+}
+
+.friendslist_media img, .friendslist_media video{
+	box-shadow: 0px 10px 60px rgba(0, 0, 0, .5);
+	opacity: 0;
+	transition: opacity var(--transition-speed);
+	pointer-events: none;
+}
+
+.friendslist_media > div {
+	width: 0px;
+	overflow: visible;
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	left: 25px;
+}
+
+.friendslist_media .focus img, .friendslist_media .focus video {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.friendslist_media > * {
+	/*width: 100%;*/
+}
+
+.friends_list_bg {
+	/*background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/friends_announce/bg_friends.jpg) top center no-repeat;*/
+	padding-bottom: 40px;
+}
+
+.friendsfeature {
+	position: absolute;
+	line-height: 18px;
+	color: #a4aab3;
+	cursor: pointer;
+	width: 100%;
+	background: rgba(0,0,0,0.2);
+	transition: all var(--transition-speed);
+	font-size: 14px;
+}
+
+.friendsfeature.focus {
+	background: rgba(27,40,56,1);
+	color: #a4aab3;
+	box-shadow: 0px 10px 60px rgba(0, 0, 0, .6);
+	border: none;
+
+}
+
+.friendsfeature p, .friendsfeature span, .friendsfeature ul, .friendsfeature li, .friendsfeature img  {
+	opacity: 1;
+	display: block;
+	max-height: 150px;
+	overflow: hidden;
+	transition: all var(--transition-speed);
+
+}
+
+.friendsfeature:not(.focus) p, .friendsfeature:not(.focus) span, .friendsfeature:not(.focus) ul, .friendsfeature:not(.focus) li, .friendsfeature:not(.focus) img  {
+	opacity: 0;
+	max-height: 0px !important;
+	margin: 0;
+	padding: 0;
+}
+
+.friendsfeature_ctn {
+	padding: 30px;
+	position: relative;
+	text-align: right;
+}
+
+.friendslist_second .friendsfeature_ctn {
+	text-align: left;
+}
+
+.friendsfeature .title {
+	color: #81a5c9;
+	font-weight: 200;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-size: 16px;
+	transition: color  var(--transition-speed);
+}
+
+
+
+.friendsfeature.focus .title {
+	color: white;
+
+}
+
+.friendsfeature .highlight {
+	height: 6px;
+	opacity: 0;
+	background: linear-gradient(90deg, rgba(38, 68, 146) 0%, rgba(5, 185, 239) 100%);
+	transition: opacity var(--transition-speed);
+}
+
+.friendsfeature.focus .highlight {
+	opacity: 1;
+}
+
+
+
+.friendsfeature .pip {
+	opacity: 0;
+	transition: opacity var(--transition-speed);
+
+	position: absolute;
+	right: -25px;
+	width: 25px;
+	height: 1px;
+	top: 50%;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+.friendsfeature .pip.left {
+
+	left: -25px;
+
+}
+
+.friendsfeature .pip:after {
+	height: 1px;
+	width: 25px;
+
+	background-color: #7fadde;
+	display: block;
+	content: ' ';
+}
+
+.friendsfeature.focus .pip {
+	opacity: 1;
+}
+/* specific offsets */
+.friendsfeature.favorites {
+	top: 25px;
+}
+
+.friendsfeature.nicknames {
+	top: 421px;
+}
+
+.friendsfeature.chatroom {
+	top: 750px;
+}
+
+.friendsfeature.grouped {
+	top: 150px;
+}
+
+.friendsfeature.byparty {
+	top: 450px;
+}
+
+.friendsfeature.rp {
+	top: 350px;
+}
+
+.friendsfeature .mobileview {
+	display: none;
+}
+
+
+
+
+.friends_thumbs {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.friends_thumbs .thumb_ctn{
+	padding: 10px;
+	cursor: pointer;
+}
+
+.friends_thumbs .thumb {
+	--thumb-size: 12px;
+
+	width: var(--thumb-size);
+	height: var(--thumb-size);
+	border-radius: var(--thumb-size);
+	border: 2px solid #5f80a6;
+	margin: 10px;
+}
+
+.friends_thumbs .focus .thumb {
+	background-color: #5f80a6;
+}
+
+.friends_thumbs .thumb_ctn:hover .thumb {
+	background-color: #5f80a6;
+}
+
+/* Chat 1on1 */
+.responsive_page_content.padded {
+	max-width: 1400px;
+	padding: 40px;
+	margin: 30px auto 15px auto;
+}
+
+.chat_content_bg{
+	/*background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/friends_announce/page_bg_generated_v6b.jpg) top center no-repeat;*/
+	padding: 80px 0;
+	background-color: #1c202a;
+}
+
+.chat_content_bg2{
+	background: linear-gradient(45deg, rgba(26, 40, 66, 1) 2%, rgba(26, 40, 66, 0) 20%, rgba(26, 40, 66, 0) 90%, rgba(26, 40, 66, 1));
+	padding: 100px 0;
+}
+
+.chat_content_bg img, .chat_content_bg video{
+	box-shadow: 0px 10px 60px rgba(0, 0, 0, .6);
+}
+
+.chat_subheading {
+	color: #cae1f9;
+	font-size: 24px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 100;
+}
+
+.friends_update .full {
+	width: 100%;
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, .75);
+}
+
+.sidebyside {
+	display: flex;
+	padding-bottom: 80px;
+}
+
+.sidebyside > div {
+	flex: 1 1;
+}
+
+.sidebyside .left{
+	margin-right: 30px;
+	text-align: right;
+}
+
+.paddedbox {
+
+	padding: 15px;
+	margin: 10px;
+}
+
+/* Footer */
+.tryit:before {
+	content: ' ';
+	height: 10px;
+	display: block;
+	width: 100%;
+	background: -webkit-linear-gradient( left, #274492 5%,#00cbfe 95%);
+	background: linear-gradient( to right, #274492 5%,#00cbfe 95%);
+}
+
+.tryit {
+	background-color: #1b2838;
+	text-align: center;
+	padding-bottom: 50px;
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, .75);
+
+}
+
+.tryit p {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.tryit .heading {
+	padding-top: 35px;
+	color: #c3dbf2;
+}
+
+.tryit .button {
+	margin-top: 0px;
+	display: inline-block;
+
+}
+
+.tryit .page_content {
+	//background: url(https://steamcdn-a.akamaihd.net/steamcommunity/public/assets/friends_announce/asset01_tophero.PNG) top right no-repeat;
+	background-size: contain;
+	min-height: 455px;
+	color: #505050;
+	font-weight: 500;
+}
+
+
+.noteheader {
+	color: #81a5c9;
+	font-weight: 700;
+	font-size: 19px;
+	text-transform: uppercase;
+}
+
+.note {
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.note_outofbeta {
+	color: #0ab8ff;
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-bottom: 15px;
+}
+
+.tryit p.note2 {
+
+	font-weight: 400;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	display: inline-block;
+	color: #c3dbf2;
+}
+
+.tryit p.note_outofbeta {
+
+	font-weight: 400;
+	font-size: 18px;
+	text-transform: uppercase;
+	text-decoration: line-through;
+	display: inline-block;
+	color: #c3dbf2;
+}
+
+
+/** Responsive **/
+.responsive_friendslist_second {
+	display: none;
+}
+
+.flex_sidebyside {
+	display: flex;
+	flex-direction: row;
+}
+
+.tryit p a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+
+.flex_sidebyside > div > img, .flex_sidebyside > div > video {
+	width: 100%;
+}
+
+.flex_sidebyside > div.extended {
+	flex: 3 1;
+}
+
+.flex_sidebyside > div:not(.extended) {
+	flex: 1 1;
+	justify-content: flex-start;
+	padding: 0 15px 15px 30px;
+}
+
+.flex_sidebyside .heading, .sidebyside .heading {
+	padding-top :0;
+}
+
+.button_container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+.button_container > div {
+	display: flex;
+	align-items: center;
+	margin: 0 15px;
+}
+
+.button_container2 {
+	display: flex;
+}
+
+.button_container2 .button{
+	margin-top: 10px;
+}
+
+.button_container2 > div {
+	display: flex;
+	align-items: center;
+	margin-right: 15px;
+}
+
+.lb_grad {
+	background: -webkit-linear-gradient( top, #2c3643 5%, #1c202a 95%);
+	background: linear-gradient( to bottom, #2c3643 5%, #1c202a 95%);
+}
+
+.lb_grad .page_content {
+	padding-bottom: 40px;
+	padding-top: 40px;
+}
+
+.mb {
+	background-color: #1c202b;
+}
+.mb .heading:not(.center) {
+	/*color: #80aedf;*/
+}
+
+.db {
+	background-color: #121619;
+}
+
+.db .page_content {
+	padding-top: 40px;
+}
+
+.bb_grad {
+	background: -webkit-linear-gradient( top, #2c3643 5%, #121518 95%);
+	background: linear-gradient( to bottom, #2c3643 5%, #121518 95%);
+;
+	padding-top: 80px;
+}
+
+.friends_update .bb_grad img{
+	box-shadow: none;
+}
+
+.newmodal_content, html.responsive .newmodal_content {
+	padding: 0;
+
+}
+
+.allowmodal {
+	cursor: pointer;
+}
+
+.hero_image {
+	display: none;
+}
+
+.vcenter {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.vcenter p{
+	margin-top: 0px;
+}
+
+.changelist .heading {
+	color: #81adde;
+}
+.voice_inset {
+	margin-left: 72px;
+	margin-right: 104px;
+	z-index: 3;
+}
+
+.friends_update .full.voice_video {
+	box-shadow: none;
+	margin-left: 88px;
+	width: 120%;
+}
+
+.cl_heading {
+	color: #cce4fd;
+	margin: 0 0 15px 0;
+	text-transform: uppercase;
+	font-size: 22px;
+	letter-spacing: 4px;
+	font-weight: 100;
+	line-height: 36px;
+	text-align: left;
+}
+.steamlogotiny {
+	height: 19px;
+	vertical-align: text-top;
+	margin-right: 5px;
+}
+
+
+
+@media screen and ( min-width: 1150px )
+{
+	.flex_sidebyside {
+		width: 120%;
+		margin-left: -10%;
+	}
+
+	.friends_list .page_content {
+		max-width: 90%;
+		width: 90%;
+	}
+
+
+}
+
+.padtop {
+	padding-top: 15px;
+}
+
+@media screen and ( max-width: 910px )
+{
+	div.page_content {
+		margin-top: 15px;
+	}
+
+	.responsive_friendslist_second {
+		display: flex;
+		flex-direction: column;
+	}
+
+	body.friends_update  div.friendsfeature {
+		position: relative;
+		margin-top: 15px;
+		top: auto;
+	}
+
+	.friendsfeature.focus .pip {
+		display: none;
+	}
+
+	.friendslist_second {
+		display: none;
+	}
+
+	.friends_list .page_content {
+		width: 100%;
+		margin-top: 0;
+	}
+
+	html.responsive .responsive_page_frame.with_header div.responsive_page_content.carousel{
+		padding-top: 0;
+	}
+
+
+	.friendslist_media > div img, .friendslist_media > div video {
+		max-height: calc( 95vh - 65px);
+		max-width: 45vw;
+	}
+
+	.friends_thumbs {
+		display: none;
+	}
+
+	.heading, .heading3, p, .cl_heading {
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+
+	.friendsfeature p {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.voice_inset {
+		margin-left: -80px;
+		margin-right: 0;
+	}
+	
+	.friends_update .full.voice_video
+	{
+		width: 100%;
+		margin-left: 0;
+	}
+
+}
+
+@media screen and ( max-width: 768px )
+{
+
+}
+
+@media screen and ( max-width: 660px )
+{
+
+	.friendslist_media > div {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 65px;
+		text-align: right;
+		max-height: calc( 95vh - 65px);
+
+	}
+
+	.sidebyside, .flex_sidebyside  {
+		flex-direction: column;
+	}
+
+	.sidebyside, .flex_sidebyside > *:first-child {
+		margin-bottom: 25px;
+	}
+
+	.sidebyside .left{
+		margin-right: 0;
+		margin-bottom: 25px;
+		text-align: left;
+	}
+
+	.voice_inset {
+		margin-left: 0px;
+	}
+
+	.page_content.sidebyside > div {
+		margin: 0;
+	}
+	.page_content.sidebyside > div.left {
+		margin-top: 35px;
+	}
+
+	.responsive_page_content.hero .page_content {
+		width: auto;
+	}
+
+	.responsive_page_content.hero .wrapper {
+		padding: 0 25px 25px 25px;
+	}
+
+	.hero div.page_content {
+		background-image: none;
+	}
+
+	.hero_image {
+		display: block;
+		width: 100%;
+	}
+
+
+
+	.hero .heading {
+		padding-top: 0;
+	}
+
+	html.responsive .responsive_page_frame.with_header div.responsive_page_content.hero {
+		padding-top: 0;
+	}
+
+}
+
+@media screen and ( max-width: 450px )
+{
+	.button_container {
+		flex-direction: column;
+
+	}
+	.button_container > div {
+		text-align: center;
+		display: block;
+	}
+
+	.friendslist_media {
+		display: none;
+	}
+
+	.friendsfeature .mobileview {
+		display: block;
+		width: 100%;
+		max-height: 500px;
+
+	}
+
+	.hero .heading {
+		line-height: 48px;
+	}
+
+}

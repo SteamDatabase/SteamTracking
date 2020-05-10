@@ -1,0 +1,310 @@
+
+body {
+	background: #091a29;
+}
+
+/* header */
+
+#header {
+	background: url(https://steamcommunity-a.akamaihd.net/public/images/broadcast/announce/top_title_bg.jpg) top center no-repeat;
+	text-align: center;
+	height: 276px;
+}
+
+#header .intro {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 500; /* medium */
+
+			color: #427899;
+	font-size: 14px;
+	font-style: italic;
+	padding-top: 46px;
+	/*text-transform: uppercase;*/
+}
+
+#header .title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
+	color: #fff;
+	font-size: 48px;
+	margin-top: 12px;
+}
+
+
+#header .sub {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
+	color: #8f98a0;
+	font-size: 18px;
+	margin-top: 18px;
+}
+
+/* header image section */
+
+#header_hero {
+	background: url(https://steamcommunity-a.akamaihd.net/public/images/broadcast/announce/top_hero_img.jpg) top center no-repeat;
+	text-align: center;
+	height: 650px;
+}
+
+#header_hero .sub {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
+	color: #8f98a0;
+	font-size: 18px;
+	padding-top: 565px;
+	width: 610px;
+	margin: 0 auto;
+}
+
+#mid {
+	background: url(https://steamcommunity-a.akamaihd.net/public/images/broadcast/announce/mid_bg.jpg) top center no-repeat;
+	text-align: center;
+	height: 795px;
+}
+
+#mid .title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
+	color: #fff;
+	font-size: 48px;
+	padding-top: 75px;
+	line-height: 48px;
+}
+
+#mid .live {
+	display: inline-block;
+}
+
+#mid .how {
+	width: 940px;
+	height: 570px;
+	margin: 25px auto 0;
+	position: relative;
+	text-align: left;
+}
+
+#mid .how > img {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+}
+
+#mid .how .title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
+	color: #fff;
+	font-size: 30px;
+	padding-top: 15px;
+	padding-left: 25px;
+}
+
+#mid .how .desc {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #427899;
+	font-size: 18px;
+	margin-top: 10px;
+	width: 500px;
+	padding-left: 25px;
+	/*text-transform: uppercase;*/
+}
+
+#lower {
+	background: url(https://steamcommunity-a.akamaihd.net/public/images/broadcast/announce/lower_bg.jpg) top center no-repeat;
+	text-align: center;
+	/* height: 600px; */
+	padding-bottom: 50px;
+}
+
+#lower .title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
+	color: #fff;
+	font-size: 48px;
+	padding-top: 65px;
+}
+
+#lower .desc {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
+	color: #8f98a0;
+	font-size: 18px;
+	padding-top: 5px;
+	width: 830px;
+	margin: 0 auto 40px auto;
+}
+
+#lower .count {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			width: 940px;
+	margin: 0 auto;
+	background: rgba(0,0,0,0.2);
+	color: #427899;
+	font-size: 18px;
+	padding: 15px;
+	/*text-transform: uppercase;*/
+}
+
+
+#lower .list {
+	width: 940px;
+	margin: 15px auto;
+	padding: 15px;
+	background-color: rgba(0,0,0,0.2);
+	border: 1px solid #22211f;
+	border-radius: 2px;
+}
+
+.friend_block {
+	width: 229px;
+
+	display: inline-block;
+	text-align: left;
+}
+
+.friend_info {
+	display: inline-block;
+	color: #90ba3c;
+	font-size: 14px;
+	vertical-align: top;
+	margin-left: 5px;
+	width: 170px;
+}
+
+#lower .list .hr {
+	height: 1px;
+	width: 840px;
+	background-color: #092332;
+	margin: 15px auto;
+}
+
+#lower .list .sign_in > div {
+	color: #8f98a0;
+	font-size: 15px;
+	margin: 25px 0;
+}
+
+.friend_block .btn {
+	margin-top: 8px;
+}
+
+.friend_block .playerAvatar {
+	display: inline-block;
+	width: 47px;
+	height: 47px;
+}
+.friend_block .playerAvatar img {
+	width: 45px;
+	height: 45px;
+}
+
+.friend_join_game_link {
+	cursor: pointer;
+}
+
+
+
+#lower .more {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			margin: 50px auto 5px auto;
+	color: #427899;
+	font-size: 18px;
+	/*text-transform: uppercase;*/
+}
+
+#bottom {
+	background: url(https://steamcommunity-a.akamaihd.net/public/images/broadcast/announce/bottom_bg.jpg) top center no-repeat;
+	overflow: auto; /* Prevent CSS margin collapse */
+}
+
+#bottom .block {
+	width: 900px; /* + 40px L/R padding -> 940px */
+	padding: 33px 20px;
+	margin: 50px auto;
+	background-color: rgba(0,0,0,0.2);
+}
+
+#bottom .block .col {
+	display: inline-block;
+	width: 415px;
+	vertical-align: top;
+	text-align: left;
+}
+
+#bottom .block .col:first-child {
+	margin-right: 55px
+}
+
+#bottom .block.main .title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
+	color: #fff;
+	font-size: 30px;
+}
+
+#bottom .block .desc {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			color: #427899;
+	font-size: 18px;
+	margin: 20px 0;
+	/*text-transform: uppercase;*/
+}
+
+#bottom .block a, #lower .more a {
+	color: #57a2cf;
+	text-decoration: underline;
+}
+
+#bottom .block.sub .title {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
+	color: #57a2cf;
+	font-size: 30px;
+}
+
+#UnsupportedBrowser {
+	border: 1px solid #4e9dbe;
+	background: rgba(0,0,0,0.2);
+	padding: 15px;
+	margin: 25px auto;
+	width: 940px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			font-style: italic;
+	color: #8f98a0;
+	font-size: 18px;
+	/*text-transform: uppercase;*/
+}
+
+#UnsupportedBrowser a {
+	color: #8f98a0;
+	text-decoration: underline;
+}

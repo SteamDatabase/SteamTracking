@@ -1,0 +1,210 @@
+
+body {
+	background-color: #091a29;
+	font-size: 14px;
+}
+
+.new_page_bg {
+	background:  url(/public/images/promo/streaming/bg.jpg) no-repeat;
+	background-position: center 0px;
+	height: 1401px;
+	min-width: 1125px;
+}
+
+.new_page_bg p {
+	line-height: 19px;
+}
+
+.colcontainer {
+	width: 1125px;
+	margin: 0 auto;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.left_col {
+	width: 784px;
+	display: inline-block;
+	vertical-align: top;
+	color: #e8e8e8;
+}
+
+.right_col {
+	background-color: rgba(0,23,45,0.4);
+	display: inline-block;
+	width: 341px;
+	margin-top: 72px;
+	vertical-align: top;
+}
+
+div#footer {
+	background-color: transparent;
+}
+
+.streaming_header {
+	text-transform: uppercase;
+	font-size: 36px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			color: #cdd7d9;
+	margin-top: 152px;
+	margin-left: 185px;
+}
+
+.streaming_header .intro {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
+}
+
+.streaming_header .tag {
+	font-size: 44px;
+	color: #15e1fe;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-weight: bold;
+	line-height: 40px;
+	letter-spacing:-2px
+}
+
+.play_anywhere {
+	margin-top: 65px;
+	margin-left: 355px;
+	width: 400px;
+}
+
+.play_gaming_pc {
+	margin-top: 90px;
+	margin-left: 115px;
+	width: 210px;
+}
+
+.play_controller {
+	margin-top: 130px;
+	margin-left: 495px;
+	width: 210px;
+}
+
+
+.play_quote {
+	margin-top: 30px;
+	margin-left: 75px;
+	font-size: 21px;
+	color: #15e1fe;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-style: italic;
+}
+
+.bquo {
+	font-size:  30px;
+	line-height: 23px;
+}
+
+
+.play_quote .attribution {
+	margin-top: 25px;
+	text-align: right;
+	margin-right: 45px;
+	font-size: 14px;
+	color: #cdd7d9;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		
+}
+
+.play_quote .subtext {
+	margin-top: 25px;
+	font-size: 14px;
+	color: #cdd7d9;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		
+}
+
+h1 {
+	font-size: 14px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			color: #18d3ee;
+	margin: 0 0 5px 0;
+	text-transform: uppercase;
+	line-height: 19px;
+}
+
+.right_col .text {
+	padding: 35px;
+	color: #d3d3d3;
+}
+
+.right_col .text p {
+	margin-bottom: 20px;
+}
+
+.col_h1 {
+	color: #ced1d4;
+	font-size: 18px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			text-transform: uppercase;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+.christenblue {
+	color: #15e1fe;
+}
+
+.colcontainer a, .colcontainer  a:hover, .colcontainer  a:visited {
+	color: #15e1fe;
+	text-decoration: none;
+}
+
+.coolbannerthing {
+	background-color: #0c6a85;
+	margin: 0 0 0 35px;
+	padding: 15px 13px;
+	font-size: 14px;
+	color: #e8e8e8;
+	text-transform: uppercase;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.hackybullet {
+	background-color: #09435c;
+	width: 22px;
+	height: 22px;
+	border-radius: 22px;
+	text-align: center;
+	line-height: 22px;
+	color: #15e1fe;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			display: inline-block;
+	margin-right: 10px;
+	vertical-align: top;
+}
+
+.bullettext {
+	display: inline-block;
+	width: 230px;
+	vertical-align: top;
+	margin-bottom: 15px;
+	line-height: 22px;
+}
+
+.note {
+	font-size: 11px;
+}

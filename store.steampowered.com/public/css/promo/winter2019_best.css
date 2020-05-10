@@ -1,0 +1,139 @@
+
+body.v6 {
+	background: url('https://steamcdn-a.akamaihd.net/store/promo/winter2019/best/background.jpg') #bcc3c4 top center no-repeat;
+	
+
+}
+
+body.v6 #footer {
+	background-color: rgba(0,0,0,0.95);
+}
+
+.best_title, .best_title_sub, .best_title_desc {
+	text-align: center;
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
+.best_title {
+	color: #000;
+	font-size: 48px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.best_title_sub {
+	margin-top: -10px;
+	color: #000;
+	font-size: 27px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.best_title_desc {
+	margin: 10px 0 35px 0;
+	font-size: 13.47px;
+	color: #58626a;
+	font-style: italic;
+	letter-spacing:2px;
+}
+
+body.v6 h2 {
+	font-size: 14.89px;
+	margin: 15px 0;
+	color: #58626a;
+	letter-spacing:2px;
+	text-align: center;
+	text-transform: uppercase;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		}
+
+.best_button_container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+}
+
+.best_button_container > a {
+	color: #000;
+	text-transform: uppercase;
+
+	width: calc( 50% - 26px );
+	flex-shrink: 1;
+	height: 220px;
+
+	border-radius: 3px;
+	border: 1px solid transparent;
+	box-shadow: 1px 1px 7px #000;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	margin: 0 12px 24px 12px;
+	font-size: 35px;
+	line-height: 100%;
+	text-align: center;
+
+    background-image: radial-gradient( ellipse at top left, rgba(255, 255, 255, 0.8), rgba(201, 238, 221, 0.5) );
+
+	transition: box-shadow 50ms;
+
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 900; /* black */
+
+		}
+
+
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .best_button_container > a {
+		font-size: 40px;
+		height: 140px;
+	}
+}
+
+@media screen and (max-width: 700px)
+{
+	html.responsive .best_button_container > a {
+		width: calc( 100% - 12px );
+	}
+}
+
+@media screen and ( max-width: 480px )
+{
+	html.responsive .best_button_container > a {
+		font-size: 32px;
+		height: 120px;
+	}
+}
+
+.best_button_container > a:hover {
+	background-size: 110%;
+	box-shadow: 1px 1px 15px #ffffff;
+	border: 1px solid #b4d5d1;
+
+}
+
+.best_button_container > a span {
+	display: block;
+	font-size: .5em;
+	line-height: 100%;
+
+	font-weight: bold;
+}
+
+
+
+.best_button_container > a.small {
+	height: 173px;
+}
+
+.page_spacer {
+	height: 200px;
+}

@@ -1,0 +1,221 @@
+
+div#main, div#footer, body {
+	background-color: #262627;
+}
+
+div#main {
+	background-image: url(/public/images/promo/earlyaccess/bg.png);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+}
+
+div#main_content {
+	width: 978px;
+	padding-top: 0;
+	margin: 0 auto;
+	position: relative;
+
+}
+
+#header_callout {
+	width: 978px;
+	height: 101px;
+	background-image: url(/public/images/promo/earlyaccess/header_splash.png);
+	box-shadow: 0px 3px 8px -3px #000;
+	z-index: 10;
+	position: relative;
+}
+
+	#header_callout > * {
+		margin-left: 20px;
+		color: #eff8ff;
+	}
+
+	#header_callout h1 {
+		font-size: 42px;
+		padding-top: 10px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+			}
+
+	#header_callout h2 {
+		font-size: 20px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			}
+
+
+#screenshots {
+	width: 949px;
+	height: 267px;
+	margin: 0 15px;
+	background-image: url(/public/images/promo/earlyaccess/screenshots.jpg);
+}
+
+	#screenshots .info {
+		background-color: #000;
+		box-shadow: 0 0 10px 1px #000;
+		color: #fff;
+		position: absolute;
+		right: 100px;
+		top: 202px;
+		padding: 15px;
+		border-radius: 3px;
+	}
+
+		#screenshots .info > span {
+				font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+					font-size: 20px;
+			color: #dfdfdf;
+			margin-right: 15px;
+			line-height: 36px;
+		}
+
+#content {
+	background-color: #141414;
+	width: 919px;
+	margin: 0 15px;
+	padding: 20px 15px;
+
+	color: #b6b6b6;
+	font-size: 17px;
+}
+
+	#content h1 {
+		font-size: 36px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+				color: #fff;
+		font-weight: normal;
+	}
+
+	#content h2 {
+		font-size: 24px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+				color: #fff;
+		margin-top: 30px;
+		margin-bottom: 3px;
+		font-weight: normal;
+	}
+
+	#content h3 {
+		font-size: 19px;
+		margin-top: 20px;
+		margin-bottom: 3px;
+		font-weight: normal;
+	}
+
+	#content em {
+		font-weight: normal;
+		color: #59a8ef;
+		font-style: normal;
+	}
+
+	#content p {
+		padding: 5px 0 15px 0;
+	}
+
+	#content a, a:hover {
+		color: inherit;
+		text-decoration: underline;
+	}
+
+	#content blockquote {
+		padding: 0 40px;
+	}
+
+		#content blockquote p {
+			font-size: 13px;
+		}
+
+	#content .leftcol {
+		width: 615px;
+	}
+
+	#content .rightcol {
+		width: 275px;
+		padding-left: 15px;
+	}
+
+		#content .rightcol .box {
+			position: relative;
+			margin-top: 20px;
+			width: 275px;
+			height: 101px;
+			background: #141414 url(/public/images/promo/earlyaccess/icons_bg.png) bottom left no-repeat;
+		}
+
+			#content .rightcol .box > div.icon {
+				background-image: url(/public/images/promo/earlyaccess/ico_sprite.png);
+			}
+
+			#content .rightcol .box > span {
+				position: absolute;
+				display: block;
+				left: 80px;
+				top: 30px;
+				width: 165px;
+			}
+
+#main_footer {
+	background-color: #1c1c1c;
+	margin: 0 15px;
+}
+
+	#main_footer h1 {
+		font-size: 14px;
+		font-weight: normal;
+		font-style: normal;
+		text-transform: uppercase;
+		margin: 15px 0 20px;
+		color: #529cde;
+	}
+
+	#main_footer p {
+		font-size: 12px;
+		color: #797979;
+	}
+
+		#main_footer p.strong {
+			color: #fff;
+			margin-bottom: 4px;
+		}
+
+	#main_footer .box, #main_footer .divider {
+		display: inline-block;
+		height: 162px;
+		vertical-align: top;
+	}
+
+	#main_footer .box {
+		padding: 0 15px;
+		width: 185px;
+	}
+
+	#main_footer .divider {
+		width: 1px;
+		margin: 15px 0 0 0;
+		background-color: #262627;
+	}
+
+.hr {
+	height: 5px;
+	background-color: #529cde;
+	margin: 0 15px;
+}
+
+.box .sprite_ico_mouse{ background-position: 0 0; width: 93px; height: 101px; }
+.box .sprite_ico_speech{ background-position: 0 -111px; width: 93px; height: 101px; }
+.box .sprite_icon_bug{ background-position: 0 -222px; width: 102px; height: 101px; }
+.box .sprite_icon_build{ background-position: 0 -333px; width: 95px; height: 101px; }
+.box .sprite_icon_update{ background-position: 0 -444px; width: 106px; height: 101px; }
+
+.inset { text-shadow: -1px -1px 0px rgba(0,0,0,0.4) }
+.clear { clear: both; }

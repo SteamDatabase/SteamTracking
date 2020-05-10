@@ -1,0 +1,961 @@
+
+body.steamawards_page, .steamawards_page {
+	 width: 100%;
+	 		font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			 background-image: -moz-linear-gradient( -90deg, rgb(58,47,63) 0%, rgb(11,11,12) 5%);
+	 background-image: -webkit-linear-gradient( -90deg, rgb(58,47,63) 0%, rgb(11,11,12) 5%);
+	 background-image: -ms-linear-gradient( -90deg, rgb(58,47,63) 0%, rgb(11,11,12) 5%);
+	 background-color: rgb(11,11,12);
+ }
+
+
+
+.steamawards_card {
+	width: 300px;
+	background-color: #252525;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	position: relative;
+}
+
+.steamawards_card a {
+	text-decoration: none;
+}
+
+.steamawards_card svg {
+	fill:#665E7A;
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	margin-top: 10px;
+	margin-left: calc( 100% - 40px );
+}
+
+#scroll_card {
+	background: none;
+	cursor: pointer;
+	max-width: 300px;
+}
+
+.scroll-arrow {
+	fill:#464647;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.steamaward_card_background {
+	width: 300px;
+	height: auto;
+	background-position: -10% 15%;
+	background-size: 100%;
+	opacity: 0;
+	display: block;
+	position: absolute;
+	-webkit-transition: 0.5s;
+	-moz-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+}
+
+.award_card_voted {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: normal;
+	margin-top: 15px;
+}
+
+.award_card_youvoted_txt {
+	font-weight: 600;
+}
+
+#award_card_26 {
+    background: linear-gradient(to right,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.2) 50%,
+    rgba(0,0,0,0) 100%),
+    url("/public/images/promo/steamawards2018/award-goty.jpg");
+}
+
+#award_card_27 {
+    background: linear-gradient(to right,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.7) 50%,
+    rgba(0,0,0,0.2) 100%),
+    url("/public/images/promo/steamawards2018/award-bvr.jpg");
+}
+
+#award_card_28 {
+    background: linear-gradient(to right,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.7) 50%,
+    rgba(0,0,0,0.2) 100%),
+    url("/public/images/promo/steamawards2018/award-lol.jpg");
+}
+/*rgba(0,0,0,0.98) 25%,*/
+#award_card_29 {
+    background: linear-gradient(to right,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.7) 50%,
+    rgba(0,0,0,0.2) 100%),
+    url("/public/images/promo/steamawards2018/award-bd.jpg");
+}
+
+#award_card_30 {
+    background: linear-gradient(to right,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.7) 50%,
+    rgba(0,0,0,0.2) 100%),
+    url("/public/images/promo/steamawards2018/award-be.jpg");
+}
+
+#award_card_31 {
+    background: linear-gradient(to right,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.7) 50%,
+    rgba(0,0,0,0.2) 100%),
+    url("/public/images/promo/steamawards2018/award-bwf.jpg");
+}
+
+#award_card_32 {
+    background: linear-gradient(to right,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.7) 50%,
+    rgba(0,0,0,0.2) 100%),
+    url("/public/images/promo/steamawards2018/award-bah.jpg");
+}
+
+#award_card_33 {
+    background: linear-gradient(to right,
+    rgba(0,0,0,1) 0%,
+    rgba(0,0,0,0.7) 50%,
+    rgba(0,0,0,0.2) 100%),
+    url("/public/images/promo/steamawards2018/award-fwm.jpg");
+}
+
+.award_title {
+	font-size: 30px;
+	font-weight: 900;
+	color: #ffffff;
+	letter-spacing: 0.2px;
+	line-height: 32px;
+}
+.award_title.small {
+    font-size: 22px;
+    line-height: 25px;
+}
+
+.award_card_title {
+	margin-bottom: 15px;
+	padding: 20px 30px;
+	display: block;
+	z-index: 5;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	position: relative;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	overflow-wrap: break-word;
+}
+
+#scroll_card_title {
+	font-size: 26px;
+	font-weight: 900;
+	color: #464646;
+	letter-spacing: 0.2px;
+	line-height: 30px;
+	margin-bottom: 30px;
+	padding: 50px 0px 0px 30px;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+#scroll_card_title div {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+#scroll_card:hover div {
+	color: #665e7a;
+}
+
+#scroll_card:hover .scroll-arrow {
+	fill: #665e7a;
+}
+
+.award_year {
+    color: #665e7a;
+    font-size: 23px;
+	font-weight: 900;
+}
+
+.award_card_year {
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+}
+
+.steamawards_card button {
+	border: solid 1px #808080;
+	background-color: #252525;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #ffffff;
+	letter-spacing: 1.8px;
+	padding: 12px 15px;
+	font-weight: 600;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+	transition: 0.3s;
+	margin-top: 15px;
+}
+
+.steamawards_card:hover {
+	transform: translateY(-3px);
+}
+
+.steamawards_card:hover .steamaward_card_background {
+	opacity: 0.8;
+	background-position: 60% 60%;
+	width: 300px;
+	height: 100%;
+}
+
+.steamawards_card:hover .award_card_title {
+	/*text-shadow: -10px 2px 20px #000000, -10px 2px 20px #000000;*/
+	text-shadow: -4px 4px 0px #000000, -10px 2px 20px #000000;
+}
+
+.steamawards_card:hover .award_card_btn {
+	background-color: #ffffff;
+	border: solid 1px #ffffff;
+	box-shadow: -5px 5px rgba(102, 94, 122, 0.92);
+	color: #000000;
+	cursor: pointer;
+}
+
+.steamawards_card:hover .award_year {
+	color: #ffffff;
+	text-shadow: none;
+}
+
+#sectionTitle {
+    font-size: 23px;
+    letter-spacing: 5px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+	text-transform: uppercase;
+}
+
+.steamawards_header_ctn {
+    color: #ffffff;
+    background-image: url('/public/images/promo/steamawards2018/bg-shine.png');
+    background-position: right;
+    background-repeat: no-repeat;
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 40px 20px 50px 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.steamawards_header_text {
+	margin: 0 20px 0 0;
+	max-width: 40%;
+}
+
+.steamawards_header_video {
+	max-width: 544px;
+	margin-top: 60px;
+}
+
+.steamawards_header_title {
+    font-size: 70px;
+    color: #c6d4df;
+    font-weight: 900;
+    line-height: 62px;
+	text-transform: uppercase;
+}
+
+.purple_title {
+	color:  #665e7a;
+	font-size: 56px;
+}
+
+.steamawards_header_desc {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 200;
+}
+.steamawards_header_desc_intro {
+	font-size: 24px;
+	line-height: 34px;
+	padding-bottom: 10px;
+}
+
+.steamawards_header_desc div {
+	margin-top: 15px;
+}
+
+.steamawards_header_desc div span {
+	font-weight: bold;
+}
+
+.steamawards_header_trophy {
+    width: 210px;
+    height: 500px;
+    position: relative;
+    padding-top: 60px;
+    transform: translatey(0px);
+    animation: float 5s ease-in-out infinite;
+	margin: 0 auto;
+
+}
+
+.steamawards_header_trophy img {
+	width: 100%;
+}
+
+@keyframes float {
+    0% {
+        /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+        transform: translatey(0px);
+    }
+    50% {
+        /*box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);*/
+        transform: translatey(-20px);
+    }
+    100% {
+        /*box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);*/
+        transform: translatey(0px);
+    }
+}
+
+.steamawards_shortcuts_ctn {
+	max-width: 930px;
+	margin: 0 auto;
+	display: flex;
+	flex: 1 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.category_year {
+	color: #665e7a;
+	font-size: 23px;
+}
+
+.category_nominations_ctn {
+	display: flex;
+	flex: 1 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.steamaward_categories_ctn {
+}
+
+.category_top_row {
+	display: flex;
+	flex: 1 100%;
+}
+
+.vote_category_ctn {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 20px 40px 20px;
+}
+
+.category_title {
+	font-size: 50px;
+	line-height: 50px;
+	text-transform: uppercase;
+}
+
+.vote_category_ctn video {
+	width: 100%;
+}
+
+.category_title_ctn {
+	flex-basis: 30%;
+	margin-right: 10px;
+}
+
+.category_video_ctn {
+	flex-basis: 70%;
+}
+
+.category_winner_ctn {
+	position: relative;
+	width: 460px;
+	margin-left: 50px;
+}
+
+.winner_description_ctn {
+    background-color: #252525;
+	padding: 15px;
+}
+
+.category_winner_ctn .winner_header {
+	background: #FFFFFF;
+	color: #000000;
+	padding: 2px 5px;
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.category_winner_ctn .winner_name {
+	color: #FFFFFF;
+	font-size: 28px;
+	margin-top: 10px;
+}
+
+.category_winner_trophy {
+	width: 90%;
+	position: absolute;
+	z-index: 1000;
+	top: -10px;
+	left: 310px;
+}
+
+.category_nomination {
+	max-width: 179px;
+	text-align: center;
+	padding: 10px 1px 1px 1px;
+	transition: all 0.2s linear;
+}
+
+.category_nomination img:not(.currently_featured_app) {
+	width: 100%;
+	height: auto;
+	padding-bottom: 0px;
+}
+.category_nomination img {
+	width: 100%;
+	height: auto;
+	padding-bottom: 30px;
+}
+
+.category_nomination:not(.currently_featured_app) {
+	padding-top: 40px;
+	transition: all 0.2s linear;
+}
+
+.category_nomination button > span, .active_vote {
+	text-transform: uppercase;
+	letter-spacing: 1.8px;
+	font-weight: 600;
+	line-height: 22px;
+	padding: 5px 10px;
+}
+
+.category_desc {
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 200;
+	line-height: 24px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+.vote_category_bg {
+	padding: 250px 0 0 0;
+	margin: 200px 0;
+	opacity: 0.9;
+}
+
+.grayed_out_nomination {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+
+.active_vote {
+	background: #ffffff;
+	color: #252525;
+	cursor: default;
+	border: 1px solid rgba(255,255,255,0.4);
+	border-radius: 2px;
+}
+
+.active_vote svg {
+	width: 16px;
+	height: 16px;
+	vertical-align: sub;
+}
+
+.user_nominated_app {
+	margin-top: 10px;
+	color: #FFF;
+}
+
+.category_youvoted_choice {
+	font-size: 20px;
+	text-align: center;
+	max-width: 50%;
+}
+
+.category_youvoted_choice span {
+	font-weight: 600;
+	color: #FFF;
+}
+
+.category_nominations_footer {
+	display: flex;
+	justify-content: space-between;
+	flex: 1 100%;
+	margin-top: 60px;
+}
+
+.btn_scrollto_voteid, .btn_scrollto_top {
+	margin-left: auto;
+}
+
+.btn_scrollto_voteid > span, .btn_scrollto_top > span {
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 11px;
+	letter-spacing: 1.8px;
+}
+
+.btn_scrollto_voteid span span {
+	font-weight: 600;
+}
+
+.category_nomination button, .category_nomination .active_vote {
+	margin-top: 8px;
+}
+
+.bestdeveloper_footnote {
+	margin-top: 30px;
+}
+
+.video_currently_playing_label {
+	height: 14px;
+}
+
+#vote_category_26 {
+	background-image: linear-gradient(to top right,
+	rgba(11,11,12,1) 0%,
+	rgba(11,11,12,0.9) 70%,
+	rgba(11,11,12,0 ) 100%),
+	url('/public/images/promo/steamawards2018/bg/bg-goty.jpg');
+	background-position: center;
+}
+
+#vote_category_27 {
+	background: linear-gradient(to top right,
+	rgba(11,11,12,1) 0%,
+	rgba(11,11,12,0.9) 70%,
+	rgba(11,11,12,0.2) 100%),
+	url('/public/images/promo/steamawards2018/bg/bg-bvr.jpg');
+	background-position: center;
+}
+#vote_category_28 {
+	background: linear-gradient(to top right,
+	rgba(11,11,12,1) 0%,
+	rgba(11,11,12,0.9) 50%,
+	rgba(11,11,12,0.2) 100%),
+	url('/public/images/promo/steamawards2018/bg/bg-lol.jpg');
+	background-position: center;
+}
+
+#vote_category_29 {
+	background: linear-gradient(to top right,
+	rgba(11,11,12,1) 0%,
+	rgba(11,11,12,0.9) 50%,
+	rgba(11,11,12,0.2) 100%),
+	url('/public/images/promo/steamawards2018/bg/bg-bd.jpg');
+	background-position: center;
+}
+
+#vote_category_30 {
+	background: linear-gradient(to top right,
+	rgba(11,11,12,1) 0%,
+	rgba(11,11,12,0.9) 50%,
+	rgba(11,11,12,0.2) 100%),
+	url('/public/images/promo/steamawards2018/bg/bg-be.jpg');
+	background-position: center;
+}
+
+#vote_category_31 {
+	background: linear-gradient(to top right,
+	rgba(11,11,12,1) 0%,
+	rgba(11,11,12,0.9) 50%,
+	rgba(11,11,12,0.2) 100%),
+	url('/public/images/promo/steamawards2018/bg/bg-bwf.jpg');
+	background-position: center;
+}
+
+#vote_category_32 {
+	background: linear-gradient(to top right,
+	rgba(11,11,12,1) 0%,
+	rgba(11,11,12,0.9) 50%,
+	rgba(11,11,12,0.2) 100%),
+	url('/public/images/promo/steamawards2018/bg/bg-bah.jpg');
+	background-position: center;
+}
+
+#vote_category_33 {
+	background: linear-gradient(to right,
+	rgba(11,11,12,1) 0%,
+	rgba(11,11,12,0.9) 50%,
+	rgba(11,11,12,0.2) 100%),
+	url('/public/images/promo/steamawards2018/bg/bg-fwm.jpg');
+	background-position: center;
+}
+
+.steamawards_app_banner_ctn {
+	background: url('/public/images/promo/steamawards2018/StoreBanner-plain.jpg');
+	border: 2px solid #3c3c4f;
+	display: flex;
+    flex-direction: column;
+	padding: 20px;
+	margin-bottom: 20px;
+	max-width: calc( 616px - 40px );
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+.steamawards_app_banner_contents {
+    display: flex;
+    flex-direction: row;
+}
+
+.steamawards_app_banner_winner {
+	background-color: #665e7a;
+	color: #FFF;
+	padding: 2px 6px;
+	font-weight: 700;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.steamawards_app_banner_header {
+	margin: 10px 0;
+	text-transform: uppercase;
+}
+
+.steamawards_app_banner_header span {
+	color: #665e7a;
+}
+
+.steamawards_app_banner_appname {
+	font-size: 20px;
+	color: #FFF;
+}
+
+.steamawards_app_banner_left {
+	max-width: 70%;
+}
+
+.steamawards_app_banner_right {
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 15px;
+	margin-left: 20px;
+	width: 200px;
+}
+
+.steamawards_app_banner_right img {
+	height: 150px;
+}
+
+.steamawards_app_banner_event {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.steamawards_app_banner_2018 {
+	color: #665e7a;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 15px;
+}
+
+.steamawards_app_banner_awardstitle {
+	color: #FFF;
+	text-transform: uppercase;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 15px;
+}
+
+@media screen and (max-width: 910px) {
+	html.responsive .steamawards_shortcuts_ctn {
+		justify-content: center;
+	}
+
+	html.responsive .steamawards_header_trophy {
+		display: none;
+	}
+
+	html.responsive .category_top_row {
+		flex-direction: column;
+	}
+
+	html.responsive .category_nominations_footer {
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	html.responsive .btn_scrollto_voteid {
+		margin-top: 10px;
+	}
+
+	html.responsive .developer_category img {
+		width: 70%;
+	}
+
+	html.responsive #sectionTitle, html.responsive .steamawards_shortcuts_ctn {
+		display: none;
+	}
+
+	html.responsive .vote_category_bg {
+		margin: 0 0 100px 0;
+		padding: 150px 0 0 0;
+	}
+
+	html.responsive .category_youvoted_choice {
+		font-size: 16px;
+		max-width: 100%;
+	}
+
+	html.responsive .category_video_ctn {
+		margin-top: 40px;
+	}
+
+	html.responsive .category_nomination {
+		margin-top: 20px;
+	}
+
+	html.responsive .category_nomination:not(.currently_featured_app) {
+		padding: 0;
+		transition: none;
+	}
+
+	html.responsive .category_nomination img {
+		padding: 0;
+	}
+
+	html.responsive .btn_scrollto_voteid, html.responsive .btn_scrollto_top {
+		margin: 10px 0 0 0;
+	}
+
+	html.responsive .category_winner_ctn {
+		margin: 20px 0 0 0;
+	}
+
+	html.responsive .category_winner_trophy {
+		display: none;
+	}
+}
+
+/*
+---------------------
+FAQ SECTION
+---------------------
+*/
+.faq_qa_intro {
+	text-align: center;
+	margin-bottom: 48px;
+}
+
+.steamaward_header_title_rule {
+	width: 60px;
+	height: 1px;
+	margin: 8px auto 0 auto;
+	background: rgba( 255, 255, 255, 0.2 );
+	margin-bottom: 8px;
+}
+
+.badge_tasks_left, .badge_tasks_right {
+	float: left;
+	width: calc( 50% - 20px );
+}
+
+.badge_task {
+	margin-bottom: 14px;
+	line-height: 17px;
+}
+
+.badge_tasks_left {
+	margin-right: 40px;
+}
+
+@media screen and (max-width: 600px )
+{
+	html.responsive .badge_tasks_left,
+	html.responsive .badge_tasks_right {
+		float: none;
+		width: auto;
+	}
+}
+
+.faq_q {
+	color: #ffffff;
+	font-size: 15px;
+}
+
+.faq_a {
+	font-size: 13px;
+	line-height: 18px;
+	margin-top: 4px;
+	color: #c6d4df;
+}
+
+.faqentry {
+	margin-bottom: 50px;
+}
+
+.faq_background {
+	background-color: #000a1a;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/faqbg.jpg' );
+	height: 750px;
+}
+
+body.steamaward_nominations_faq div#store_header {
+	margin-bottom: 0;
+}
+
+body.steamaward_nominations_faq {
+	color: #9eb3cc;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+.faq_sale_title {
+	background-position: center top;
+	background-repeat: no-repeat;
+	height: 101px;
+	margin-bottom: 150px;
+}
+
+.faq_content {
+	padding: 0 18px;
+}
+
+
+.page_content_gallery {
+	max-width: 940px;
+	width: auto;
+	margin: -82px auto 0 auto;
+}
+
+.gallery_ctn {
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/autumn2017/gallery_bg.jpg' ) no-repeat;
+	margin-left: -121px;
+	margin-right: -123px;
+	height: 1031px;
+}
+
+.gallery_ctn .gallery_ctn_title {
+	font-size: 62px;
+	color: #000;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			margin-left: 124px;
+	margin-right: 159px;
+	padding-top: 76px;
+	height: 108px;
+}
+
+@media screen and (max-width: 580px) {
+	.faq_sale_title {
+		background-size: 160% auto ;
+	}
+}
+
+@media screen and ( max-width: 910px )
+{
+	html.responsive .gallery_ctn {
+		margin: 0 auto;
+		height: auto;
+		background-position: center top;
+		background-size: 140%;
+	}
+	html.responsive .gallery_ctn .faq_content {
+		padding-top: 2%;
+		padding-bottom: 3%;
+	}
+}
+
+img.faq_section_title {
+	max-width: 100%;
+}
+
+.gallery_ctn .faq_content {
+	padding-left: 118px;
+	padding-top: 26px;
+	margin-bottom: 39px;
+}
+
+.gallery_ctn img.faq_section_title {
+}
+
+.faq_intro {
+	max-width: 552px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+		}
+
+.faq_section {
+	padding: 48px 0;
+}
+
+.faq_section.purple {
+	background: -webkit-linear-gradient( 320deg, #3b3040 0%,#1a2737 100%);
+	background: linear-gradient( 130deg, #3b3040 0%,#1a2737 100%);
+}
+
+.faq_section.blue {
+	background: -webkit-linear-gradient( 320deg, #203f54 0%,#1a2737 100%);
+	background: linear-gradient( 130deg, #203f54 0%,#1a2737 100%);
+}
+
+.faq_section.yellow {
+	background: -webkit-linear-gradient( 320deg, #323834 0%,#1a2737 100%);
+	background: linear-gradient( 130deg, #323834 0%,#1a2737 100%);
+
+ .faq_section.blue h3 {
+     		font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+		     text-transform: uppercase;
+     font-size: 16px;
+     color: #62bbd9;
+     letter-spacing: 1px;
+     margin-bottom: 16px;
+ }
+/*
+---------------------
+END FAQ SECTION
+---------------------
+*/

@@ -1,0 +1,235 @@
+
+
+#mainBG {
+	width:958px;
+	margin:0;
+	padding:0;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_bottom.gif');
+	background-repeat:repeat-y;
+	text-align:left;
+	background-color:transparent;
+}
+
+#headerContents {
+	width:958px;
+	height:98px;
+	padding:0;
+	margin:0;
+	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/skin_1/bg_top.gif');
+	background-repeat:no-repeat;
+}
+
+#headerContents h2 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	font-size: 26px;
+	color: #898989;
+	padding-top: 53px;
+	margin-top: 0px;
+	margin-left: 17px;
+}
+
+.greyText {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			margin:0;
+	padding:0;
+	color:#acb2b8;
+	font-size:13px;
+}
+
+.blueText {
+	color:#89ADBA;
+}
+
+label {
+	font-weight:bold;
+	margin-left:100px;
+}
+
+#content {
+	margin:0;
+	padding:0;
+	padding-top:16px;
+	width:700px;
+}
+
+.indent {
+	margin-left:117px;
+	color:#8bc53f;
+}
+
+#groupName_results, #groupLink_results, #abbreviation_results {
+	font-weight:bold;
+	color:#e1e1e1;
+}
+
+#errMsg {
+	font-weight:bold;
+	padding:6px;
+	background-color:#000000;
+	border:solid white 1px;
+	color:#f26c4f;
+	font-size:12px;
+}
+
+.confirmItem {
+	font-weight:bold;
+	color:#e1e1e1;
+	font-size: 15px;
+}
+
+label {
+	display:block;
+	width:107px;
+	float: left;
+	text-align: right;
+	margin:0;
+	padding: 6px 10px 0px 0px;
+	color: #e1e1e1;
+}
+.confirm {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			color:#acb2b8;
+	font-size: 15px;
+	line-height: 23px;
+}
+.whiteText {
+	margin:0;
+	padding:0;
+	color:#e1e1e1;
+}
+
+.smallForm {
+	margin:0;
+	padding:0;
+}
+
+.formRow {
+	width:808px;
+	margin-bottom:2px;
+}
+
+.formRowTitle {
+	width:180px;
+	text-align:right;
+	padding-right:4px;
+	font-size:13px;
+	color:#acb2b8;
+	font-weight:normal;
+	padding-top:5px;
+}
+
+.titleSubtext {
+	color:#525252;
+	font-size:10px;
+}
+
+.formRowFields {
+	float:right;
+	width:618px;
+	text-align:left;
+	font-size: 13px;
+	line-height: 14px;
+	color:#acb2b8;
+}
+.formRowFields a {
+	line-height: 20px;
+}
+.formRowFields a:hover {
+	color: #66c0f4;
+}
+
+.urlText {
+	float:left;
+	padding-top:6px;
+}
+
+input, select {
+	background-color:#1d1d1d;
+	color:#e1e1e1;
+	font-size:11px;
+	border: 1px #777777 solid;
+}
+
+input {
+	width:160px;
+}
+
+.autoWidth {
+	width:auto;
+}
+
+.inputDate {
+	width:100px;
+}
+
+.dynSave {
+	width:auto;
+}
+
+.whiteText {
+	color:#e1e1e1;
+}
+.whiteText.title {
+	font-size: 13px;
+	color: #acb2b8;
+	margin-bottom: 10px;
+	margin-top: 16px;
+	display: block;
+}
+
+.noPadding {
+	padding:0;
+	margin:0;
+}
+
+.extendedInfo {
+	padding-left:50px;
+	font-size:11px;
+	color: #acb2b8;
+	display:none;
+}
+
+.resultsRow {
+	margin-top:9px;
+	margin-bottom:0;
+}
+
+.createButton {
+	border:0;
+	width:104px;
+	height:25px;
+	padding:0;
+	margin:0;
+}
+
+.imageInput {
+	width:auto;
+	height:auto;
+	border:0;
+	padding:0;
+	margin:0;
+}
+
+.profile_subpage_column .maincontent, body.migrated_profile_page .profile_subpage_column #BG_bottom.maincontent {
+	background: none;
+}
+
+input[type=text], input[type=password], select {
+	border: 1px solid #417b9c;
+	color: #fff;
+	height: 17px;
+	font-size: 13px;
+	width: 250px;
+}
+#abbreviation {
+	width: 100px;
+}
+.profile_small_header_text {
+	left: 51px;
+}

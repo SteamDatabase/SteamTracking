@@ -1,0 +1,1501 @@
+#CommunityHome,
+#CommunityGameHub,
+#CommunityWorkshopItem
+{
+	background-image: url( "file://{images}/profile/activity_bg_wash.png" );
+	background-size: 100% 100%;
+	box-shadow: #000000aa -4px -4px 8px 8px;
+
+	padding-left: 100px;
+	margin-left: -100px;
+}
+
+#CommunityContent
+{
+	flow-children: down;
+}
+
+
+#AppHubPageTitle
+{
+	width: 100%;
+	horizontal-align: left;
+	font-weight: thin;
+	color: #5c96be;
+	font-size: 32px;
+
+	margin-top: 25px;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-bottom: 20px;
+}
+
+#AppHubPageTitle Label
+{
+	text-transform: uppercase;
+	color: carousel_title;
+	font-size: 56px;
+	font-family: platformfont;
+	font-weight: light;
+	line-height: 70px;
+}
+
+.HubText
+{
+	color: white;
+}
+
+#AppHubMenuRow
+{
+	flow-children: down;
+
+	width: 100%;
+	margin-left: 90px;
+	margin-right: 100px;
+	padding-top: 5px;
+}
+
+#AppHubMenuRowButtons
+{
+	flow-children: right;
+	overflow: scroll squish;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-bottom: -5px;
+	margin-top: -5px;
+}
+
+#AppHubMenuRowButtons HorizontalScrollBar
+{
+	opacity: 0.0;
+}
+
+.ButtonLabel
+{
+	color: #72899e;
+	font-size: 28;
+	font-weight: thin;
+	text-overflow: clip;
+	flow-children: down;
+	transition-property: color;
+}
+
+#AppHubMenuRowButtons .ButtonSpacer
+{
+	margin-right: 30px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.ButtonSpacer:hover .ButtonLabel
+{
+	color: #cccccc;
+}
+
+#AppHubMenuRowButtons .Button
+{
+	background-color: transparent;
+
+	padding-right: 20px;
+	padding-left: 5px;
+	horizontal-align: center;
+}
+
+#AppHubMenuRowButtons.FirstFocusDone .Button:focus
+{
+	background-color: button_focus_color;
+
+	animation-name: button-focus;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#AppHubMenuRowButtons.FirstFocusDone .Button:focus Label
+{
+	color: black;
+}
+
+.Button.Selected .ButtonLabel
+{
+	color: #cccccc;
+}
+
+.Button:focus .ButtonLabel
+{
+	color: #ffffffff;
+}
+
+
+
+#AppHubContent
+{
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+}
+
+#AppHubContent.AgeGateVisible
+{
+	visibility: collapse;
+}
+#AgeGatePanel
+{
+	visibility: collapse;
+}
+#AgeGatePanel.AgeGateVisible
+{
+	visibility: visible;
+	margin: 0px;
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+
+	flow-children: down;
+}
+.AgeGateBackground
+{
+	width: 100%;
+	height: 100%;
+
+	background-color: #00000044;
+	margin: 40px 0px 0px 10px;
+
+	flow-children: down;
+}
+.AgeGateWarning
+{
+	font-size: 32px;
+	color: #ffffff;
+	padding-top: 350px;
+	padding-bottom: 30px;
+	//horizontal-align: center;
+	margin-left: 200px;
+	width: 60%;
+}
+#AgeGateButton
+{
+	//horizontal-align: center;
+	margin-left: 200px;
+}
+.AgeGateButton Label
+{
+
+}
+
+#ThrobberPanel
+{
+	width: 1400px;
+	height: 756px;
+	z-index: 10;
+	opacity: 1.0;
+
+	transition-property: opacity;
+	transition-duration: shortduration;
+}
+
+#ThrobberPanel.ContentLoaded
+{
+	opacity: 0.0;
+}
+
+#ThrobberPanel LoadingThrobber
+{
+	vertical-align: center;
+	horizontal-align: center;
+	margin-top: 0px;
+	
+	opacity: 0.7;
+}
+
+#ThrobberPanel.First LoadingThrobber
+{
+	margin-right: 0px;
+	horizontal-align: center;
+}
+
+#AppHubNoContent
+{
+	opacity: 0.0;
+	font-size: largefontsize;
+	margin-top: 200px;
+	width: 100%;
+	height: 100%;	
+}
+
+#AppHubNoContent Label
+{
+	width: 100%;
+	text-align: center;
+	color: tcstatictext;
+}
+
+.NoContent #AppHubNoContent
+{
+	opacity: 1.0;
+}
+
+#AppHubItems
+{
+	flow-children: down;
+	width: 100%;
+	height: 100%;
+
+	overflow: squish scroll;
+	padding: 32px 10px 140px 10px;
+}
+
+#SectionWrapper .NxRightContentContainer
+{
+	margin: 0px;
+}
+
+#AppHubItems HorizontalScrollBar
+{
+	opacity: 0.0;
+}
+
+.AppHubPagePanel
+{
+	width: 100%;
+	flow-children: down;
+	margin: -10px;
+	padding: 10px;
+	z-index: -1;
+}
+
+.AppHubPagePanel.OutOfView .AppHubItemRow, .AppHubPagePanel.OutOfView Image
+{
+	opacity: 0.0;
+}
+
+.AppHubItem
+{
+	font-family: platformfont;
+	font-size: 22px;
+	color: #72899e;
+	background-color: transparent_module;
+
+	box-shadow: module_shadow;
+
+	opacity: 0.85;
+	desaturation: 0.2;
+
+	margin-left: 0px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+
+	/*pre-transform-scale2d: 0.9; */
+
+	transition-property: border, blur, box-shadow, opacity, desaturation, pre-transform-scale2d;
+	transition-timing-function: ease-out;
+	transition-duration: shortmedduration;
+
+	z-index: 1;
+}
+
+.AppHubItem:descendantfocus
+{
+	background-color: action_module;
+}
+
+.AppHubItemWide
+{
+	width: 850px; /* ( 415 * 2 + 20 ) */
+	height: 100%;
+}
+.AppHubItemSmall
+{
+	width: 415px;
+	height: 100%;
+}
+.AppHubItemUltraWide
+{
+	width: 1285px; /* ( 415 * 3 + 20 * 2 ) */
+	height: 100%;
+}
+
+.AppHubItemRow
+{
+	flow-children: right;
+	width: 100%;
+	height: 248px;
+	padding-left: 0px;
+}
+#CommunityContentSuggested .AppHubItemRow {
+	margin-left: 25px;
+}
+#CommunityContentSuggested .AppHubSection .AppHubItemRow {
+	margin-left: 15px;
+}
+
+
+/* When viewing just news, make each panel larger */
+#CommunityContentNewsPanel .AppHubItemRow {
+	height: 480px;
+}
+/* When viewing just reviews, make each panel larger */
+#ApplicationPageBody #reviews .AppHubItemRow {
+	height: 380px;
+}
+
+
+//
+// Stuff for cards
+//
+.AppHubCardContent
+{
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+}
+
+.AppHubItemWide .AppHubCardContent
+{
+	background-size: cover;
+}
+
+.AppHubContentPlayVideoIcon
+{
+	horizontal-align: center;
+	margin-top: 85px;
+	opacity: 1.0;
+}
+
+.Broadcast.AppHubItem .AppHubCardContent,
+{
+	background-position: center center;
+}
+
+.Video .AppHubCardContent
+{
+	background-size: cover;
+}
+
+.AppHubCardRatingPanel
+{
+	flow-children: right;
+	padding-right: 5px;
+}
+
+.AppHubCardRatingPanel Image
+{
+
+}
+
+.AppHubCardContent Panel
+{
+	transition-property: opacity;
+	transition-duration: shortmedduration;
+	transition-timing-function: ease-out;
+}
+
+.AppHubCardTitlePanel
+{
+	vertical-align: bottom;
+	flow-children: right;
+	width: 100%;
+	padding-bottom: 5px;
+
+	color: white;
+	font-size: 26px;
+}
+
+.AppHubCardAuthor
+{
+	flow-children: right;
+	width: 100%;
+	white-space: nowrap;
+}
+
+.AppHubCardType
+{
+	vertical-align: top;
+	opacity: 0.0;
+}
+
+.AppHubItemSubscribed {
+	width: 48px;
+	padding: 2px;
+	margin: 0px;
+	horizontal-align: right;
+	visibility: collapse;
+}
+.AppHubItem:descendantfocus .AppHubItemSubscribed,
+.AppHubItem:hover .AppHubItemSubscribed,
+.AppHubItemSubscribed:selected
+{
+	visibility: visible;
+}
+
+.AppHubItemSubscribed .TickBox {
+	horizontal-align: center;
+}
+
+.BehindMessageBox .AppHubPopout .AppHubItem:hover,
+.BehindMessageBox .AppHubPopout .AppHubItem:focus
+{
+	pre-transform-scale2d: 0.9;
+	animation-name: none;
+}
+
+.AppHubPopout .AppHubItem:focus
+{
+	pre-transform-scale2d: 1.0;
+}
+
+.AppHubItem:focus,
+.AppHubItem:hover
+{
+	z-index: 3;
+	opacity: 1.0;
+	desaturation: 0.0;
+	animation-name: main-button-glow-movement-no-fill;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+
+	background-image: url( "file://{images}/systemmenu/capsule_01.jpg" );
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.Workshop .AppHubCardType,
+.Workshop .AppHubCardTitlePanel
+{
+	opacity: 0.0;
+}
+
+.BehindMessageBox .AppHubItem:focus .AppHubCardTitlePanel
+{
+	opacity: 0.0;
+}
+
+.Video:focus .AppHubCardTitlePanel,
+.Video:hover .AppHubCardTitlePanel,
+.Screenshot:focus .AppHubCardTitlePanel,
+.Screenshot:hover .AppHubCardTitlePanel,
+.Artwork:focus .AppHubCardTitlePanel,
+.Artwork:hover .AppHubCardTitlePanel
+{
+	background-color: #000000C0;
+	opacity: 1.0;
+	max-height: 75px;
+}
+
+.Video .AppHubCardTitlePanel,
+.Screenshot .AppHubCardTitlePanel,
+.Artwork .AppHubCardTitlePanel,
+.Broadcast .AppHubCardTitlePanel
+{
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+.Screenshot .AppHubCardTitlePanel Label,
+.Video .AppHubCardTitlePanel Label,
+.Artwork .AppHubCardTitlePanel Label,
+.Broadcast .AppHubCardTitlePanel Label
+{
+	color: #72899e;
+	font-size: 22px;
+	line-height: 22px;
+}
+
+
+.Broadcast .AppHubCardContent
+{
+	flow-children: none;
+}
+
+.Broadcast .AppHubCardTextPanel
+{
+	flow-children: down;
+
+	background-color: #000000F0;
+	max-height: 75px;
+
+	transform: translatey( 34px );
+	transition-property: opacity, transform;
+	transition-duration: shortmedduration;
+}
+
+.Broadcast:focus .AppHubCardTextPanel
+{
+	transform: translatey( 0px );
+}
+
+.AppHubCardViewersIcon
+{
+	vertical-align: center;
+	padding-right: 3px;
+}
+
+.Broadcast .AppHubCardTextPanel .AppHubCardTitlePanel,
+.Broadcast .AppHubCardTextPanel .AppHubCardTitle
+{
+	max-height: 41px;
+}
+
+.Broadcast .AppHubCardTitle
+{
+	padding-left: 20px;
+}
+
+.Broadcast .AppHubCardBroadcasterPanel
+{
+	width: 100%;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	flow-children: right;
+	height: 34px;
+}
+
+.Broadcast .AppHubCardAvatar
+{
+	height: 28px;
+	width: 28px;
+	border-width: 2px;
+	border-style: solid;
+}
+
+.online .AppHubCardAvatar
+{
+	border-color: friendsonline_solid;
+}
+
+.offline .AppHubCardAvatar
+{
+	border-color: friendsoffline_solid;
+}
+
+.in-game .AppHubCardAvatar
+{
+	border-color: friendsingame_solid;
+}
+
+.Broadcast .AppHubCardBroadcasterPanel Label
+{
+	padding-left: 10px;
+	vertical-align: center;
+	padding-right: 20px;
+	width: 100%;
+}
+
+.online .AppHubCardBroadcaster
+{
+	color: friendsonline_darkbg;
+}
+
+.offline .AppHubCardBroadcaster
+{
+	color: friendsoffline_darkbg;
+}
+
+.in-game .AppHubCardBroadcaster
+{
+	color: friendsingame_darkbg;
+}
+
+
+
+.AppHubCardThumb
+{
+	height: 20px;
+	width: 20px;
+	margin-left: 5px;
+	margin-right: 5px;
+	opacity: 1.0;
+}
+
+.AppHubCardThumbSelected
+{
+	opacity: 0.0;
+}
+
+.VoteUp .AppHubCardThumb
+{
+	opacity: 0.0;
+}
+
+.VoteUp .AppHubCardThumbSelected
+{
+	opacity: 1.0;
+}
+
+
+//
+// Search panel
+//
+#AppHubSearchPanel
+{
+	flow-children: down;
+	margin-top: 7px;
+	height: 528px;
+	width: 300px;
+	background-color: transparent;
+}
+
+#AppHubSearchPanel Button
+{
+	flow-children: right;
+	width: 100%;
+	height: 73px;
+	padding: 4px 3px 4px 3px;
+	margin: 2px 0px;
+	margin-right: 8px;
+
+	background-color: transparent_module;
+	border-style: solid;
+	border-width: 5px;
+	border-color: #3d414200;
+	box-shadow: box_shadow_off_color -4.5px -4.5px 18px 9px;
+
+	font-family: platformfont;
+	font-size: 24px;
+	color: white;
+	font-weight: thin;
+}
+
+#AppHubSearchPanel Button:focus
+{
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
+	border-width: 5px;
+	border-style: solid;
+	border-color: #fdfefef0;
+	box-shadow: box_shadow_on_color -4.5px -4.5px 18px 9px;
+	transform: translatex(0px);
+
+	font-family: platformfont;
+	color: black;
+	font-size: 24px;
+	color: black;
+	font-weight: thin;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#AppHubSearchPanel Button:focus .AppHubSearchGameName
+{
+	color: #000000ff;
+}
+
+#AppHubSearchPanel Image
+{
+	margin-right: 10px;
+	vertical-align: center;
+}
+
+#AppHubSearchPanel #AppHubSearchButton
+{
+	height: 103px;
+	padding-left: 10px;
+}
+
+#AppHubSearchButton #IconWrapper
+{
+	vertical-align: center;
+}
+
+#AppHubSearchButton Image
+{
+	height: 24px;
+	padding-top: 4px;
+}
+
+#AppHubSearchButton Label
+{
+	vertical-align: center;
+}
+
+#SearchIconFocused,
+#AppHubSearchButton:focus #SearchIconUnfocused
+{
+	opacity: 0.0;
+}
+
+#SearchIconUnfocused,
+#AppHubSearchButton:focus #SearchIconFocused
+{
+	opacity: 1.0;
+}
+
+#AppHubSearchButton Label
+{
+	
+	
+}
+
+#AppHubSearchButton Label:focus
+{
+	
+}
+
+#AppHubSearchPanel .AppHubSearchDivider
+{
+	color: #72899e;
+	font-size: 22px;
+	margin-bottom: 10px;
+	padding-top: 20px;
+}
+
+#AppHubSearchPanel .AppHubSearchGameName
+{
+	color: white;
+	font-size: 20px;
+	vertical-align: center;
+}
+
+
+//
+// Guide and item cards
+//
+.Guide .AppHubCardContent,
+.WorkshopItem .AppHubCardContent {
+
+}
+.AppHubItemWide.Guide .AppHubCardContent,
+.AppHubItemWide.WorkshopItem .AppHubCardContent {
+	flow-children: down;
+}
+
+.WorkshopItem .AppHubCardContent
+{
+	background-position: right top;
+}
+
+.Guide.AppHubItem .AppHubCardContent,
+.WorkshopItem.AppHubItem .AppHubCardContent {
+	padding: 10px;
+}
+
+.Guide.AppHubItem Image,
+.WorkshopItem.AppHubItem Image {
+	height: 258px;
+
+	padding-right: 0px;
+	margin-left: -18px;
+	margin-top: -12px;
+	margin-bottom: -10px;
+	vertical-align: top;
+	overflow: clip;
+	opacity: 0.3;
+
+	opacity-mask: url( "file://{images}/community/item_image_mask.png" );
+}
+.WorkshopItem.AppHubItem Image {
+	opacity: 0.9;
+	height: 230px;
+
+}
+.AppHubItemWide.WorkshopItem.AppHubItem Image,
+.AppHubItemUltraWide.WorkshopItem.AppHubItem Image {
+	opacity-mask: url( "file://{images}/community/fade_right.png" );
+}
+
+.AppHubItemWide.Guide.AppHubItem Image
+{
+	opacity-mask: url( "file://{images}/community/fade_right.png" );
+}
+.Guide .AppHubCardTitle {
+	font-size: 34px;
+	max-height: 130px;
+
+}
+
+
+.Guide .AppHubCardTextPanel,
+.WorkshopItem .AppHubCardTextPanel {
+	flow-children: down;
+	padding-left: 0px;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 100%;
+	height: 100%;
+
+}
+.WorkshopItem .AppHubCardTextPanel {
+	margin-left: 0px;
+	margin-right: 10px;
+
+}
+.AppHubItemWide.Guide .AppHubCardTextPanel,
+.AppHubItemWide.WorkshopItem .AppHubCardTextPanel {
+	flow-children: down;
+	width: 100%;
+	margin-left: 12px;
+	margin-bottom: 12px;
+	height: 100%;
+}
+.AppHubCardTitle {
+	/* cap height of title at two lines */
+	max-height: 74px;
+}
+.WorkshopItem.AppHubItem .AppHubCardTitle {
+	width: 100%;
+	text-align: right;
+}
+
+
+.AppHubItemWide.Guide .AppHubCardTextPanel.AppHubCardBottom,
+.AppHubItemWide.WorkshopItem .AppHubCardTextPanel.AppHubCardBottom {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 10px;
+}
+.LibraryDetailsSectionsContainer .AppHubCardAppName,
+.LibraryDetailsSectionsContainer .AppHubCardType {
+	visibility: collapse;
+}
+.LibraryDetailsSectionsContainer .hours {
+	margin-top: 10px;
+}
+
+
+.WorkshopItem .AppHubCardType,
+.WorkshopItem .AppHubCardTitlePanel
+{
+	background-color: transparent;
+	opacity: 1.0;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+.Guide.AppHubItem .AppHubCardTitlePanel,
+.WorkshopItem.AppHubItem .AppHubCardTitlePanel
+{
+	vertical-align: top;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.WorkshopItem.AppHubItemWide .AppHubCardTitle {
+	font-size: 30px;
+	width: 100%;
+	text-align: right;
+}
+
+.Guide .AppHubCardAuthor,
+.WorkshopItem .AppHubCardAuthor {
+	font-size: 22px;
+	padding-bottom: 0px;
+	visibility: collapse;
+}
+.Guide:focus .AppHubCardAuthor,
+.WorkshopItem:focus .AppHubCardAuthor {
+	color: darkblue;
+}
+
+.Guide .AppHubCardType,
+.WorkshopItem .AppHubCardType {
+	opacity: 1.0;
+	vertical-align: bottom;
+	color: #66c0f4;
+	font-size: 26px;
+	margin-bottom: 10px;
+}
+.Guide.AppHubItemWide .AppHubCardType,
+.WorkshopItem.AppHubItemWide .AppHubCardType {
+	margin-bottom: 0px;
+}
+
+.Guide .AppHubImageText,
+.WorkshopItem .AppHubImageText {
+	overflow: clip;
+	width: 100%;
+}
+
+.Guide .AppHubCardBottom,
+.WorkshopItem .AppHubCardBottom,
+.Broadcast .AppHubCardBottom {
+	flow-children: down;
+	width: 100%;
+	vertical-align: bottom;
+}
+
+.AppHubCardAppName {
+	vertical-align: bottom;
+	color: #c6d4df;
+}
+.WorkshopItem .AppHubCardAppName,
+.WorkshopItem .AppHubCardType {
+	width: 100%;
+	text-align: right;
+}
+
+.apphub_CardRating
+{
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	height: 30px;
+	width: 100%;
+}
+
+.AppHubItemTall .apphub_CardRating
+{
+	background-position: 10px;
+}
+
+//
+// User Reviews
+//
+.Recommendation {
+	padding: 10px;
+}
+.AppHubItemWide.Recommendation {
+
+}
+
+.Recommendation .AppHubCardTop
+{
+	flow-children: right;
+	margin-bottom: 10px;
+}
+
+
+
+
+.Recommendation .ReviewCtn.Nx
+{
+	flow-children: none;
+	overflow: clip;
+	height: 100%;
+	width: 100%;
+}
+.Recommendation .ReviewCtn.Nx .AppHubCardImage
+{
+	width: 540px;
+	height: 228px;
+	margin: -10px;
+	overflow: clip;
+	opacity: 0.4;
+	blur: gaussian( 1.0 );
+	desaturation: 0.8;
+	opacity-mask: url( "file://{images}/community/item_image_mask.png" );
+
+	pre-transform-scale2d: 1;
+
+	transition-delay: 0s;
+	transition-duration: supershortduration;
+	transition-timing-function: bigpicture-ease-in-out;
+	transition-property: pre-transform-scale2d;
+}
+.ApplicationPage .Recommendation .ReviewCtn.Nx .AppHubCardImage
+{
+	opacity: 0;
+}
+.Recommendation:focus .ReviewCtn.Nx .AppHubCardImage
+{
+	pre-transform-scale2d: 1.1;
+}
+.Recommendation .ReviewCtn.Nx .AppHubCardContents
+{
+	width: 100%;
+	height: 100%;
+	flow-children: down;
+	padding: 0px;
+	margin: 10px;
+}
+.Recommendation .ReviewCtn.Nx .AppHubCardBottom
+{
+	flow-children: none;
+	vertical-align: top;
+}
+.Recommendation .ReviewCtn.Nx .AppHubCardBottom .AppHubCardReviewText
+{
+	height: 200px;
+	margin-left: 55px;
+	margin-top: 10px;
+	color: #ffffff;
+	font-style: italic;
+}
+.Recommendation .ReviewCtn.Nx .AppHubCardReviewDetails
+{
+	width: 400px;
+	flow-children: down;
+	margin-top: -2px;
+}
+.Recommendation.AppHubItemWide .ReviewCtn.Nx .AppHubCardReviewDetails {
+	width: 780px;
+}
+
+
+
+
+
+
+.Recommendation .AppHubCardBottom
+{
+	flow-children: down;
+	vertical-align: bottom;
+}
+
+.Recommendation .AppHubCardReviewStats
+{
+	flow-children: right;
+	color: #66c0f4;
+	width: 100%;
+}
+
+.Recommendation.AppHubItemTall .AppHubCardReviewStats
+{
+	margin-top: 10px;
+}
+
+.Recommendation .AppHubCardReviewStats Image
+{
+	height: 45px;
+	width: 45px;
+	background-color: #000000;
+}
+
+.Recommendation.AppHubItemTall .AppHubCardReviewStats Image
+{
+	margin-left: 0px;
+}
+
+.Recommendation .AppHubCardReviewStats Label
+{
+	margin-left: 10px;
+	vertical-align: center;
+	font-size: 24px;
+	width: 100%;
+}
+
+.Recommendation .AppHubCardReviewStats .AppHubCardAppName {
+	color: white;
+}
+
+.Recommendation.AppHubItemTall .AppHubCardReviewStats
+{
+	height: 10%;
+	width: 100%;
+}
+
+
+.Recommendation .AppHubCardReviewText {
+	height: 40%;
+}
+.Recommendation:focus .AppHubCardReviewText {
+	color: darkblue;
+}
+
+.Recommendation .AppHubCardType {
+	opacity: 1.0;
+	color: #66c0f4;
+}
+.Recommendation:focus .AppHubCardType {
+	color: darkblue;
+}
+
+
+//
+// Announcements
+//
+.AppHubItem.Announcement
+{
+	overflow: clip;
+}
+.Announcement .AppHubCardContent
+{
+	flow-children: down;
+	padding: 18px 18px 0px 18px;
+	background-position: left top;
+	background-size: 300px 133px;
+}
+
+.Announcement .AppHubCardTitle
+{
+	color: #ffffff;
+	font-size: 32px;
+	margin-top: -5px;
+	margin-bottom: 10px;
+	max-height: 100%;
+}
+
+.Announcement .AppHubCardAnnouncement
+{
+	color: #9fc3e0;
+	font-size: 24px;
+	width: 100%;
+	opacity-mask: url( "file://{images}/masks/mask_fade_bottom.png" );
+
+}
+.Announcement:focus .AppHubCardAnnouncement {
+	color: white;
+}
+.Announcement .AppHubCardAnnouncement .InlineImage
+{
+	width: 100%;
+	height: 100%;
+}
+
+
+//
+// News
+//
+.News
+{
+	padding: 10px;
+}
+
+.AppHubNewsImage
+{
+	width: 100%;
+	height: 20%;
+
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	margin-bottom: 5px;
+	
+}
+
+.AppHubNewsTitle
+{
+	color: white;
+	margin-bottom: 10px;
+	font-size: 26px;
+}
+
+.AppHubNewsText {
+	color: #72899e;
+	font-size: 22px;
+}
+.AppHubItem.News:focus .AppHubNewsText {
+	color: white;
+}
+.AppHubNewsText .InlineImage {
+	visibility: collapse;
+}
+
+
+//
+// Popup for screenshots/artwork
+//
+#CommunityAppHubPopup,
+#CommunityAppHubPopup.Destructing:descendantfocus,
+#CommunityAppHubPopupInner
+{
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+
+	transition-property: pre-transform-scale2d, transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+}
+
+#CommunityAppHubPopup:descendantfocus
+{
+	pre-transform-scale2d: 1.0;
+	transform: translatex( 0px );
+}
+
+#CommunityAppHubPopup #ContentFrameHeader
+{
+	z-index: 100;
+	background-image: none;
+}
+
+#CommunityAppHubPopup .ContentHomeButton,
+.VR #CommunityAppHubPopup .ContentHomeButton,
+.VR #CommunityAppHubPopup .ContentMouseBackButton
+{
+	opacity: 0.0;
+}
+
+.CursorVisible #CommunityAppHubPopup .ContentHomeButton,
+.VR .CursorVisible #CommunityAppHubPopup .ContentHomeButton,
+.VR .CursorVisible #CommunityAppHubPopup .ContentMouseBackButton
+{
+	opacity: 1.0;
+}
+
+#CommunityAppHubPopupBottomBar
+{
+	vertical-align: bottom;
+	height: 327px;
+	width: 100%;
+	flow-children: down;
+	z-index: 2;
+
+	transform: translatey( 327px );
+	transition-property: transform;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;
+}
+
+#CommunityAppHubPopupBottomBar.Show
+{
+	transform: translatey( 0px );
+}
+
+#CommunityAppHubPopupBottomBar .Title
+{
+	font-size: 55px;
+	color: #72899e;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+
+.CommunityAppHubPopupRatings
+{
+	flow-children: right;
+	width: 100%;
+	margin-left: 100px;
+}
+
+.CommunityAppHubPopupRatings Label
+{
+	font-size: 24px;
+	color: #5c96be;
+	margin-right: 20px;
+	vertical-align: center;
+}
+
+.CommunityAppHubPopupRatings .UpVotes,
+.CommunityAppHubPopupRatings .Comments
+{
+	margin-left: 10px;
+}
+
+.CommunityAppHubPopupRatings .AppHubCardThumb
+{
+	margin-top: 5px;
+	height: 30px;
+	width: 30px;
+}
+
+.CommunityAppHubScreenshotPopup Button
+{
+	width: 100%;
+	height: 100%;
+	pre-transform-scale2d: 0.0;
+
+	transition-property: pre-transform-scale2d, transform;
+	transition-duration: shortduration;
+	transition-timing-function: ease-in-out;
+
+}
+
+#CommunityAppHubPopupBackground
+{
+	width: 100%;
+	height: 100%;
+	desaturation: 0.5;
+	blur: gaussian(3, 3, 3);
+	wash-color: #000000d0;
+	z-index: 0;
+}
+
+#CommunityAppHubPopupImage
+{
+	background-color: transparent;
+
+	horizontal-align: center;
+	vertical-align: center;
+
+	max-width: 100%;
+	max-height: 100%;
+	min-width: 50%;
+	min-height: 50%;
+	z-index: 1;
+}
+
+#CommunityAppHubPopupVideoBrowser
+{
+	horizontal-align: center;
+	vertical-align: center;
+
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+#AppHubSearchPopout
+{
+	height: 400px;
+	width: 500px;
+	horizontal-align: center;
+	vertical-align: center;
+	flow-children: down;
+	padding: 20px 30px 20px 30px;
+}
+
+#AppHubSearchPopout Label
+{
+	font-size: 22px;
+	color: white;
+	margin-right: 10px;
+	vertical-align: center;
+	horizontal-align: center;
+	margin-bottom: 10px;
+}
+
+#AppHubSearchPopout TextEntry
+{
+	font-size: 22px;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+#AppHubSearchResults
+{
+	flow-children: down;
+	overflow: squish scroll;
+	width: 100%;
+
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	opacity: 0.9999;
+}
+
+#AppHubSearchResults Image
+{
+	margin-right: 5px;
+}
+
+#AppHubSearchResults Label
+{
+	color: white;
+	font-size: 20px;
+	vertical-align: center;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.AppHubSearchResult
+{
+	flow-children: right;
+	width: 100%;
+	margin-bottom: 5px;
+	margin-right: 15px;
+	margin-left: 5px;
+	padding: 5px;
+
+	transition-property: border, background-color, color, box-shadow, wash-color;
+	transition-timing-function: ease-out;
+}
+
+.AppHubSearchResult:focus
+{
+	transition-duration: 0.25s;
+	background-color: gradient( linear, 0% 0%, 100% 100%, from( #fdfdfdee ), to( #adafafe0 ) );
+	
+	z-index: 3;
+	opacity: 1.0;
+	desaturation: 0.0;
+
+	animation-name: main-button-glow-movement;
+	animation-duration: 1.7s;
+	animation-delay: 0.0s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+}
+
+#AppHubSearchResults .AppHubSearchResult:focus Label
+{
+	color: black;
+}
+
+
+
+#AppHubItems .EdgeScrollButton
+{
+	x: -275px;
+}
+
+#AppHubItems #MaxButton
+{
+	margin-bottom: 95px;
+}
+
+
+
+.AppHubAppItem .AppHubCardContent
+{
+	background-size: cover;
+}
+
+.AppHubAppItem .AppHubGameTitle
+{
+	width: 100%;
+	text-align: center;
+	vertical-align: center;
+	color: white;
+	background-color: #383635bb;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+.AppHubSection
+{
+	flow-children: down;
+	width: 100%;
+	background-color: gradient( linear, 0% 0%, 3% 80%, from( #051c2dff ), to( #051c2d00 ) );
+	padding-top: 20px;
+	padding-left: 10px;
+}
+
+.AppHubSectionHeader
+{
+	color: white;
+	font-size: 28px;
+	padding-left: 14px;
+	padding-bottom: 10px;
+}
+
+#SuggestionsSection
+{
+	margin-bottom: 20px;
+}
+
+.AppHubItemRow.SuggestionsRow {
+	height: 225px;
+}
+.AppHubItemRow.SuggestionsRow .AppHubAppItem
+{
+	background-color: #00000000;
+	box-shadow: none;
+	height: 205px;
+	border-radius: 3px;
+	padding: 5px;
+}
+.AppHubItemRow.SuggestionsRow .AppHubAppItem:focus,
+.AppHubItemRow.SuggestionsRow .AppHubAppItem:hover
+{
+	background-color: #b6e1fa;
+	background-image: none;
+}
+.AppHubItemRow.SuggestionsRow .AppHubAppItem .AppHubGameTitle {
+	visibility: collapse;
+}
+.AppHubItemRow.SuggestionsRow .AppHubItem .AppHubCardContent
+{
+	border-radius: 3px;
+	box-shadow: module_shadow;
+}
+.AppHubItemRow.SuggestionsRow .AppHubItem:hover .AppHubCardContent,
+.AppHubItemRow.SuggestionsRow .AppHubItem:focus .AppHubCardContent
+{
+	border-radius: 3px;
+	box-shadow: none;
+}
