@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5857006";
+var CLSTAMP = "5857313";
 !(function(e) {
   function t(t) {
     for (
@@ -72487,7 +72487,8 @@ var CLSTAMP = "5857006";
                   (n = o.friends_list_window))
                 ) {
                   if (n instanceof an)
-                    (r = n.GetWindow()).SteamClient.Window.SetMinSize(i.h, i.f),
+                    (r = n.GetWindow()).SteamClient.Window.SetMinSize &&
+                      r.SteamClient.Window.SetMinSize(i.h, i.f),
                       r.SteamClient.Window.ResizeTo(1280, r.innerHeight);
                 } else
                   this.ShowPopupFriendsList(t, !1, !0, !0, { width: 1280 });
@@ -72497,7 +72498,8 @@ var CLSTAMP = "5857006";
               ) {
                 var r;
                 if (n instanceof an)
-                  (r = n.GetWindow()).SteamClient.Window.SetMinSize(i.g, i.f),
+                  (r = n.GetWindow()).SteamClient.Window.SetMinSize &&
+                    r.SteamClient.Window.SetMinSize(i.g, i.f),
                     r.SteamClient.Window.ResizeTo(
                       mn.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
                       r.innerHeight
@@ -84065,6 +84067,7 @@ and limitations under the License.
               r = a.f.UIStore.GetDefaultTabSetForContext(o);
             (this.m_browserContext = o),
               a.f.UIStore.BIsFriendsListSingleWindow(o) &&
+                e.SteamClient.Window.SetMinSize &&
                 e.SteamClient.Window.SetMinSize(P, N),
               g.render(
                 p.createElement(F, {
