@@ -149,3 +149,54 @@ background: -webkit-linear-gradient( top, #384416 5%, #272f0f 95%);
 #widget .game_purchase_action_bg {
     background: transparent;
 }
+
+
+#wishlistwidget {
+		font-family: "Motiva Sans", Sans-serif;
+		font-weight: 300; /* light */
+
+		    background-color: #ffffff;
+    /*width: 614px;*/
+    min-height: 50px;
+    height: 100vh;
+    max-height: 146px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#wishlistwidget .AppName {
+    display: none;
+}
+#wishlistwidget .btn_ctn {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+#wishlistwidget .btn {
+    font-size: 18px;
+    color: #000000;
+    padding-left: 10px;
+    box-sizing: border-box;
+    min-height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#wishlistwidget .btn .logo {
+    opacity: 0.7;
+    height: 80%;
+    width: auto;
+    align-self: center;
+    margin-right: 11px;
+}
+#wishlistwidget .btn:hover .logo {
+    opacity: 1;
+}
+#wishlistwidget .btn:hover .BtnText {
+    display: none;
+}
+#wishlistwidget .btn:hover .AppName {
+    display: block;
+}

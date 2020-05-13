@@ -705,16 +705,16 @@ LocalizationReady("shared", "english", {
   RSSManager_CreateFeed_Review:
     "Please review the following requirement before continuing:",
   RSSManager_PostEvent_CreateFeed_DuringPost:
-    "The RSS feed being preview doesn't match current setting. We need to update to this as a current feed to psot the event. By default the RSS feed automation will be disabled. This can be changed later.",
+    "The RSS feed being previewed doesn't match the current setting. Before we can create this new event, we need to first update the feed to the RSS URL used for the preview.  By default the RSS feed automation will be disabled. This can be changed later.",
   RSSManager_PostEvent_CreateFeed_Desc:
     "Create/Update feed to this RSS URL?: '%1$s'",
   RSSManager_PostEvent_Failure:
     "Failed to complete the feed creation/update and/or news posting action",
   RSSManager_PostEvent_CreatePost: "Would you like to post this item to Steam?",
   RSSManager_PostEvent_CreatePost_Draft:
-    "Save as a draft? - Instead of posting immediately, this will create an announcement as hidden an unpublished. You may then make changes before publishing in your Announcements Dashboard.",
+    "Save as a draft? - Instead of posting immediately, this will create a hidden and unpublished announcement. You may then make changes before publishing in your Announcements Dashboard.",
   RSSManager_PostEvent_UpdatePost:
-    "This event already exists in Steam. Would you like to updates its content from the RSS item? Useful if RSS item content has changed. This will remove any customization done using the editor",
+    "This event already exists in Steam. Would you like to update its content from the RSS item? Useful if RSS item content has changed. This will remove any customization done using the editor.",
   RSSManager_PostEvent_InFlight:
     "Please wait for Steam server to complete action.",
   RSSManager_PostEvent_Success_feed: "RSS Feed has been successfully updated",
@@ -735,6 +735,7 @@ LocalizationReady("shared", "english", {
   RSSManager_PostEvent_ViewEvent: "View Event",
   RSSManager_PostEvent_EditEvent: "Edit Event",
   RSSManager_PostEvent_UpdateEvent: "Update Event from RSS",
+  RSSManager_SeeReview: "See Curation",
   RSSManager_PostEvent_Draft: "Saved as a draft",
   RSSManager_PostEvent_Staged:
     "Saved as a draft, staged to automatically publish %1$s",
@@ -1104,6 +1105,7 @@ LocalizationReady("shared", "english", {
   Sale_ShowLess: "Show less",
   Sale_OnWishlist: "On Wishlist",
   Sale_InLibrary: "In Library",
+  Sale_PlayDemo: "Play Demo",
   Sale_HiddenItems: "%1$s items are hidden due to %2$s",
   Sale_HiddenItem_Single: "%1$s item is hidden due to %2$s",
   Sale_StorePreferences: "your store preferences",
@@ -1112,12 +1114,14 @@ LocalizationReady("shared", "english", {
   Sale_RemoveFromWishlist: "Remove From Wishlist",
   Sale_AddToLibrary: "+ Add to Library",
   Sale_PlayNow: "Play Now",
+  Sale_EventSchedule: "Event Schedule",
   Sale_Preferences: "Preferences",
   Sale_PlaceHolder:
-    "Preview Mode: This section has no capsules. Will not appear on user page if it is empty",
+    "Preview Mode: This section has no capsules. Will not appear on user page if it is empty.",
   Sale_SmartPlaceHolder:
     "Preview Mode: This smart section has no apps for you. This would not appear on user page if it is empty.",
   Sale_default_label: "(no title)",
+  Sale_default_label_custom: "(custom title)",
   Sale_default_label_OnSale: "On Sale",
   Sale_default_label_TopSellers: "Top Sellers",
   Sale_default_label_FreeToPlay: "Free to Play",
@@ -1150,6 +1154,36 @@ LocalizationReady("shared", "english", {
   Sale_default_label_PlayForFree: "Play for Free!",
   Sale_defautl_label_FreeToKeep:
     "For a limited time, install now and keep it forever",
+
+  Sale_default_label_1: "On Sale",
+  Sale_default_label_2: "Top Sellers",
+  Sale_default_label_3: "Free to Play",
+  Sale_default_label_4: "Horror Games",
+  Sale_default_label_5: "Horror VR",
+  Sale_default_label_6: "Horror Free to Play",
+  Sale_default_label_7: "Halloween Events in Horror Games",
+  Sale_default_label_8: "Halloween Events in Non-Horror Games",
+  Sale_default_label_9: "More Halloween Events",
+  Sale_default_label_10: "More Halloween Events in Non-Horror Games",
+  Sale_default_label_11: "New and Upcoming Horror",
+  Sale_default_label_12: "Play Together – With Remote Friends",
+  Sale_default_label_13: "Play Anywhere - On your Phone",
+  Sale_default_label_14: "Play Anywhere - On your Tablet",
+  Sale_default_label_15: "Play Anywhere - On your TV",
+  Sale_default_label_16: "On Your Wishlist",
+  Sale_default_label_17: "Recommended For You",
+  Sale_default_label_18: "Coming Soon",
+  Sale_default_label_19: "Just Announced",
+  Sale_default_label_20: "Just Updated",
+  Sale_default_label_21: "Free Weekend",
+  Sale_default_label_22: "Free Week",
+  Sale_default_label_23: "Pre-Purchase Now",
+  Sale_default_label_24: "New Releases",
+  Sale_default_label_25: "Just Released",
+  Sale_default_label_26: "Highlighted Deals",
+  Sale_default_label_27: "Back Catalogue",
+  Sale_default_label_28: "Play for Free!",
+  Sale_defautl_label_29: "For a limited time, install now and keep it forever",
 
   SalePage_LoginPrompt:
     "Sign in to view additional items selected just for you.",

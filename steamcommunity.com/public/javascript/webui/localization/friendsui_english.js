@@ -1071,6 +1071,8 @@ LocalizationReady("friendsui", "english", {
   FriendSettings_Notification_ChatRoomNotificationDesc:
     "Disable all push notifications from group chats",
   FriendSettings_DisableRoomEffects: "Disable animated room effects",
+  FriendSettings_AnimatedAvatars:
+    "Enable Animated Avatars in your Friends List and Chat",
 
   FriendSettings_ChatFontSize: "Chat Font Size",
   FriendSetting_ChatFontSmall: "Small",

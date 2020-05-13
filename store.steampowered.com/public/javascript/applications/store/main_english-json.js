@@ -9,6 +9,8 @@
         CuratorAdmin_RSSFeed_title: "Manage my RSS Feeds",
         CuratorAdmin_RSSFeed_desc:
           "Setting up RSS feeds allows you to automate the Steam Events and Announcement creation from your existing content management platform. Your content from your site will automatically surface to Steam customers who follow you as News. ",
+        CuratorAdmin_RSSFeed_lang:
+          "The language is set on the group to '%1$s'. If this is not correct, you can edit the group profile and then re-setup this feed.",
         CuratorAdmin_RSSFeed_english: "English RSS Feed URL",
         CuratorAdmin_RSSFeed_english_desc:
           "Enter the URL to your English RSS feed. At this time we are limited to English only, however, we will soon open up other language support.",
@@ -26,6 +28,7 @@
         CuratorAdmin_RSSFeed_col_title: "Title",
         CuratorAdmin_RSSFeed_col_preview_event: "Preview This Item",
         CuratorAdmin_RSSFeed_col_create_event: "Post This Item",
+        CuratorAdmin_RSSFeed_edit_group_profile: "Edit Group Profile",
         Events_ViewAll: "View all",
         Events_RecentUpdates: "Recent Updates",
         Events_SpecialEvents: "Special Events",

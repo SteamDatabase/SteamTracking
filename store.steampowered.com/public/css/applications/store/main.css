@@ -800,7 +800,12 @@ body.v6.rewards {
   .awardmodal_ShellHeader_3m25u .awardmodal_ShellHeaderBrandLink_itOdT {
     display: flex;
     align-items: center;
-    flex-direction: row; }
+    flex-direction: row;
+    min-width: 200px; }
+  .awardmodal_ShellHeader_3m25u .awardmodal_ShellHeaderBrandName_UW7hm {
+    font-size: 1.6em;
+    text-transform: uppercase;
+    color: #4A9CE7; }
   .awardmodal_ShellHeader_3m25u .awardmodal_PointsContainer_EuLJV {
     margin-right: 25px;
     margin-left: auto;
@@ -843,6 +848,8 @@ body.v6.rewards {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   color: #C5CBD8;
   letter-spacing: 0.1em; }
+  .awardmodal_Shell_23JPv a {
+    color: #C5CBD8; }
   .awardmodal_Shell_23JPv a:hover {
     color: inherit; }
   .awardmodal_Shell_23JPv .awardmodal_ShellScrollParent_2wYh2 {
@@ -871,6 +878,10 @@ body.v6.rewards {
     color: white; }
   .awardmodal_ActionButton_25lJz:focus {
     color: white; }
+
+.awardmodal_Icon_1a-6l {
+  width: 32px;
+  height: 32px; }
 
 .awardmodal_GrantAwardModal_1-d1n {
   font-size: 14px;

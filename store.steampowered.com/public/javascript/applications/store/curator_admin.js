@@ -6,106 +6,106 @@
     "3rT3": function(e, t, n) {
       "use strict";
       n.r(t);
-      var o,
-        r,
-        l = n("mrSG"),
-        s = n("q1tI"),
-        d = n.n(s),
-        a = n("Ty5D"),
-        i = n("r64O"),
-        c = n("vDqi"),
-        u = n.n(c),
-        p = n("2vnA"),
-        g = n("lkRc"),
-        _ = n("WBba"),
-        v = n("bxBv"),
-        h = n("hRO2"),
-        f = (function(n) {
+      var d = n("mrSG"),
+        r = n("q1tI"),
+        c = n.n(r),
+        s = n("Ty5D"),
+        a = n("r64O"),
+        i = n("vDqi"),
+        l = n.n(i),
+        o = n("2vnA"),
+        u = n("lkRc"),
+        p = n("WBba"),
+        g = n("bxBv"),
+        _ = n("hRO2");
+      var v,
+        m,
+        h = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, [5], null), t;
+            return _.Message.initialize(t, e, 0, -1, [5], null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.gid = function() {
-              return h.Message.getField(this, 1);
+              return _.Message.getField(this, 1);
             }),
             (r.prototype.set_gid = function(e) {
-              h.Message.setField(this, 1, e);
+              _.Message.setField(this, 1, e);
             }),
             (r.prototype.name = function() {
-              return h.Message.getField(this, 2);
+              return _.Message.getField(this, 2);
             }),
             (r.prototype.set_name = function(e) {
-              h.Message.setField(this, 2, e);
+              _.Message.setField(this, 2, e);
             }),
             (r.prototype.type = function() {
-              return h.Message.getFieldWithDefault(this, 3, 0);
+              return _.Message.getFieldWithDefault(this, 3, 0);
             }),
             (r.prototype.set_type = function(e) {
-              h.Message.setField(this, 3, e);
+              _.Message.setField(this, 3, e);
             }),
             (r.prototype.url = function() {
-              return h.Message.getField(this, 4);
+              return _.Message.getField(this, 4);
             }),
             (r.prototype.set_url = function(e) {
-              h.Message.setField(this, 4, e);
+              _.Message.setField(this, 4, e);
             }),
             (r.prototype.associated_apps = function() {
-              return h.Message.getField(this, 5);
+              return _.Message.getField(this, 5);
             }),
             (r.prototype.set_associated_apps = function(e) {
-              h.Message.setField(this, 5, e);
+              _.Message.setField(this, 5, e);
             }),
             (r.prototype.add_associated_apps = function(e, t) {
-              h.Message.addToRepeatedField(this, 5, e, t);
+              _.Message.addToRepeatedField(this, 5, e, t);
             }),
             (r.prototype.poll_interval = function() {
-              return h.Message.getFieldWithDefault(this, 6, 300);
+              return _.Message.getFieldWithDefault(this, 6, 300);
             }),
             (r.prototype.set_poll_interval = function(e) {
-              h.Message.setField(this, 6, e);
+              _.Message.setField(this, 6, e);
             }),
             (r.prototype.kv_description = function() {
-              return h.Message.getField(this, 7);
+              return _.Message.getField(this, 7);
             }),
             (r.prototype.set_kv_description = function(e) {
-              h.Message.setField(this, 7, e);
+              _.Message.setField(this, 7, e);
             }),
             (r.prototype.kv_filter = function() {
-              return h.Message.getField(this, 8);
+              return _.Message.getField(this, 8);
             }),
             (r.prototype.set_kv_filter = function(e) {
-              h.Message.setField(this, 8, e);
+              _.Message.setField(this, 8, e);
             }),
             (r.prototype.publish_to_clan_account_id = function() {
-              return h.Message.getField(this, 9);
+              return _.Message.getField(this, 9);
             }),
             (r.prototype.set_publish_to_clan_account_id = function(e) {
-              h.Message.setField(this, 9, e);
+              _.Message.setField(this, 9, e);
             }),
             (r.prototype.language = function() {
-              return h.Message.getField(this, 10);
+              return _.Message.getField(this, 10);
             }),
             (r.prototype.set_language = function(e) {
-              h.Message.setField(this, 10, e);
+              _.Message.setField(this, 10, e);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var n = {
-                gid: h.Message.getField(t, 1),
-                name: h.Message.getField(t, 2),
-                type: h.Message.getFieldWithDefault(t, 3, 0),
-                url: h.Message.getField(t, 4),
-                associated_apps: h.Message.getField(t, 5),
-                poll_interval: h.Message.getFieldWithDefault(t, 6, 300),
-                kv_description: h.Message.getField(t, 7),
-                kv_filter: h.Message.getField(t, 8),
-                publish_to_clan_account_id: h.Message.getField(t, 9),
-                language: h.Message.getField(t, 10)
+                gid: _.Message.getField(t, 1),
+                name: _.Message.getField(t, 2),
+                type: _.Message.getFieldWithDefault(t, 3, 0),
+                url: _.Message.getField(t, 4),
+                associated_apps: _.Message.getField(t, 5),
+                poll_interval: _.Message.getFieldWithDefault(t, 6, 300),
+                kv_description: _.Message.getField(t, 7),
+                kv_filter: _.Message.getField(t, 8),
+                publish_to_clan_account_id: _.Message.getField(t, 9),
+                language: _.Message.getField(t, 10)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -126,7 +126,7 @@
               );
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -170,30 +170,30 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
-              void 0 !== (n = h.Message.getField(e, 1)) &&
+              void 0 !== (n = _.Message.getField(e, 1)) &&
                 t.writeFixed64String(1, n),
-                void 0 !== (n = h.Message.getField(e, 2)) &&
+                void 0 !== (n = _.Message.getField(e, 2)) &&
                   t.writeString(2, n),
-                void 0 !== (n = h.Message.getField(e, 3)) &&
+                void 0 !== (n = _.Message.getField(e, 3)) &&
                   t.writeUint32(3, n),
-                void 0 !== (n = h.Message.getField(e, 4)) &&
+                void 0 !== (n = _.Message.getField(e, 4)) &&
                   t.writeString(4, n),
-                void 0 !== (n = h.Message.getField(e, 5)) &&
+                void 0 !== (n = _.Message.getField(e, 5)) &&
                   t.writeRepeatedUint32(5, n),
-                void 0 !== (n = h.Message.getField(e, 6)) &&
+                void 0 !== (n = _.Message.getField(e, 6)) &&
                   t.writeUint32(6, n),
-                void 0 !== (n = h.Message.getField(e, 7)) &&
+                void 0 !== (n = _.Message.getField(e, 7)) &&
                   t.writeString(7, n),
-                void 0 !== (n = h.Message.getField(e, 8)) &&
+                void 0 !== (n = _.Message.getField(e, 8)) &&
                   t.writeString(8, n),
-                void 0 !== (n = h.Message.getField(e, 9)) &&
+                void 0 !== (n = _.Message.getField(e, 9)) &&
                   t.writeUint32(9, n),
-                void 0 !== (n = h.Message.getField(e, 10)) &&
+                void 0 !== (n = _.Message.getField(e, 10)) &&
                   t.writeUint32(10, n);
             }),
             (r.prototype.getClassName = function() {
@@ -201,100 +201,128 @@
             }),
             r
           );
-        })(h.Message),
-        m = (function(n) {
+        })(_.Message),
+        f = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, [11], null), t;
+            return _.Message.initialize(t, e, 0, -1, [11], null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.gid = function() {
-              return h.Message.getField(this, 1);
+              return _.Message.getField(this, 1);
             }),
             (r.prototype.set_gid = function(e) {
-              h.Message.setField(this, 1, e);
+              _.Message.setField(this, 1, e);
             }),
             (r.prototype.news_feed_gid = function() {
-              return h.Message.getField(this, 2);
+              return _.Message.getField(this, 2);
             }),
             (r.prototype.set_news_feed_gid = function(e) {
-              h.Message.setField(this, 2, e);
+              _.Message.setField(this, 2, e);
             }),
             (r.prototype.title = function() {
-              return h.Message.getField(this, 3);
+              return _.Message.getField(this, 3);
             }),
             (r.prototype.set_title = function(e) {
-              h.Message.setField(this, 3, e);
+              _.Message.setField(this, 3, e);
             }),
             (r.prototype.url = function() {
-              return h.Message.getField(this, 4);
+              return _.Message.getField(this, 4);
             }),
             (r.prototype.set_url = function(e) {
-              h.Message.setField(this, 4, e);
+              _.Message.setField(this, 4, e);
             }),
             (r.prototype.author = function() {
-              return h.Message.getField(this, 5);
+              return _.Message.getField(this, 5);
             }),
             (r.prototype.set_author = function(e) {
-              h.Message.setField(this, 5, e);
+              _.Message.setField(this, 5, e);
             }),
             (r.prototype.rtime_date = function() {
-              return h.Message.getField(this, 6);
+              return _.Message.getField(this, 6);
             }),
             (r.prototype.set_rtime_date = function(e) {
-              h.Message.setField(this, 6, e);
+              _.Message.setField(this, 6, e);
             }),
             (r.prototype.contents = function() {
-              return h.Message.getField(this, 7);
+              return _.Message.getField(this, 7);
             }),
             (r.prototype.set_contents = function(e) {
-              h.Message.setField(this, 7, e);
+              _.Message.setField(this, 7, e);
             }),
             (r.prototype.commited = function() {
-              return h.Message.getField(this, 8);
+              return _.Message.getField(this, 8);
             }),
             (r.prototype.set_commited = function(e) {
-              h.Message.setField(this, 8, e);
+              _.Message.setField(this, 8, e);
             }),
             (r.prototype.deleted = function() {
-              return h.Message.getField(this, 9);
+              return _.Message.getField(this, 9);
             }),
             (r.prototype.set_deleted = function(e) {
-              h.Message.setField(this, 9, e);
+              _.Message.setField(this, 9, e);
             }),
             (r.prototype.tags = function() {
-              return h.Message.getField(this, 10);
+              return _.Message.getField(this, 10);
             }),
             (r.prototype.set_tags = function(e) {
-              h.Message.setField(this, 10, e);
+              _.Message.setField(this, 10, e);
             }),
             (r.prototype.appids = function() {
-              return h.Message.getField(this, 11);
+              return _.Message.getField(this, 11);
             }),
             (r.prototype.set_appids = function(e) {
-              h.Message.setField(this, 11, e);
+              _.Message.setField(this, 11, e);
             }),
             (r.prototype.add_appids = function(e, t) {
-              h.Message.addToRepeatedField(this, 11, e, t);
+              _.Message.addToRepeatedField(this, 11, e, t);
+            }),
+            (r.prototype.recommendation_state = function() {
+              return _.Message.getField(this, 12);
+            }),
+            (r.prototype.set_recommendation_state = function(e) {
+              _.Message.setField(this, 12, e);
+            }),
+            (r.prototype.received_compensation = function() {
+              return _.Message.getField(this, 13);
+            }),
+            (r.prototype.set_received_compensation = function(e) {
+              _.Message.setField(this, 13, e);
+            }),
+            (r.prototype.received_for_free = function() {
+              return _.Message.getField(this, 14);
+            }),
+            (r.prototype.set_received_for_free = function(e) {
+              _.Message.setField(this, 14, e);
+            }),
+            (r.prototype.blurb = function() {
+              return _.Message.getField(this, 15);
+            }),
+            (r.prototype.set_blurb = function(e) {
+              _.Message.setField(this, 15, e);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var n = {
-                gid: h.Message.getField(t, 1),
-                news_feed_gid: h.Message.getField(t, 2),
-                title: h.Message.getField(t, 3),
-                url: h.Message.getField(t, 4),
-                author: h.Message.getField(t, 5),
-                rtime_date: h.Message.getField(t, 6),
-                contents: h.Message.getField(t, 7),
-                commited: h.Message.getField(t, 8),
-                deleted: h.Message.getField(t, 9),
-                tags: h.Message.getField(t, 10),
-                appids: h.Message.getField(t, 11)
+                gid: _.Message.getField(t, 1),
+                news_feed_gid: _.Message.getField(t, 2),
+                title: _.Message.getField(t, 3),
+                url: _.Message.getField(t, 4),
+                author: _.Message.getField(t, 5),
+                rtime_date: _.Message.getField(t, 6),
+                contents: _.Message.getField(t, 7),
+                commited: _.Message.getField(t, 8),
+                deleted: _.Message.getField(t, 9),
+                tags: _.Message.getField(t, 10),
+                appids: _.Message.getField(t, 11),
+                recommendation_state: _.Message.getField(t, 12),
+                received_compensation: _.Message.getField(t, 13),
+                received_for_free: _.Message.getField(t, 14),
+                blurb: _.Message.getField(t, 15)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -312,11 +340,15 @@
                 t.set_deleted(e.deleted),
                 t.set_tags(e.tags),
                 t.set_appids(e.appids),
+                t.set_recommendation_state(e.recommendation_state),
+                t.set_received_compensation(e.received_compensation),
+                t.set_received_for_free(e.received_for_free),
+                t.set_blurb(e.blurb),
                 t
               );
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -356,6 +388,18 @@
                   case 11:
                     e.add_appids(t.readUint32());
                     break;
+                  case 12:
+                    e.set_recommendation_state(t.readEnum());
+                    break;
+                  case 13:
+                    e.set_received_compensation(t.readBool());
+                    break;
+                  case 14:
+                    e.set_received_for_free(t.readBool());
+                    break;
+                  case 15:
+                    e.set_blurb(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -363,66 +407,74 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
-              void 0 !== (n = h.Message.getField(e, 1)) &&
+              void 0 !== (n = _.Message.getField(e, 1)) &&
                 t.writeFixed64String(1, n),
-                void 0 !== (n = h.Message.getField(e, 2)) &&
+                void 0 !== (n = _.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, n),
-                void 0 !== (n = h.Message.getField(e, 3)) &&
+                void 0 !== (n = _.Message.getField(e, 3)) &&
                   t.writeString(3, n),
-                void 0 !== (n = h.Message.getField(e, 4)) &&
+                void 0 !== (n = _.Message.getField(e, 4)) &&
                   t.writeString(4, n),
-                void 0 !== (n = h.Message.getField(e, 5)) &&
+                void 0 !== (n = _.Message.getField(e, 5)) &&
                   t.writeString(5, n),
-                void 0 !== (n = h.Message.getField(e, 6)) &&
+                void 0 !== (n = _.Message.getField(e, 6)) &&
                   t.writeUint32(6, n),
-                void 0 !== (n = h.Message.getField(e, 7)) &&
+                void 0 !== (n = _.Message.getField(e, 7)) &&
                   t.writeString(7, n),
-                void 0 !== (n = h.Message.getField(e, 8)) && t.writeBool(8, n),
-                void 0 !== (n = h.Message.getField(e, 9)) && t.writeBool(9, n),
-                void 0 !== (n = h.Message.getField(e, 10)) &&
+                void 0 !== (n = _.Message.getField(e, 8)) && t.writeBool(8, n),
+                void 0 !== (n = _.Message.getField(e, 9)) && t.writeBool(9, n),
+                void 0 !== (n = _.Message.getField(e, 10)) &&
                   t.writeString(10, n),
-                void 0 !== (n = h.Message.getField(e, 11)) &&
-                  t.writeRepeatedUint32(11, n);
+                void 0 !== (n = _.Message.getField(e, 11)) &&
+                  t.writeRepeatedUint32(11, n),
+                void 0 !== (n = _.Message.getField(e, 12)) &&
+                  t.writeEnum(12, n),
+                void 0 !== (n = _.Message.getField(e, 13)) &&
+                  t.writeBool(13, n),
+                void 0 !== (n = _.Message.getField(e, 14)) &&
+                  t.writeBool(14, n),
+                void 0 !== (n = _.Message.getField(e, 15)) &&
+                  t.writeString(15, n);
             }),
             (r.prototype.getClassName = function() {
               return "CNewsFeedPostDef";
             }),
             r
           );
-        })(h.Message),
-        b = (h.Message,
+        })(_.Message),
+        b = (_.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, void 0, null), t;
+            return _.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.converted_content = function() {
-              return h.Message.getField(this, 1);
+              return _.Message.getField(this, 1);
             }),
             (r.prototype.set_converted_content = function(e) {
-              h.Message.setField(this, 1, e);
+              _.Message.setField(this, 1, e);
             }),
             (r.prototype.found_html = function() {
-              return h.Message.getField(this, 2);
+              return _.Message.getField(this, 2);
             }),
             (r.prototype.set_found_html = function(e) {
-              h.Message.setField(this, 2, e);
+              _.Message.setField(this, 2, e);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var n = {
-                converted_content: h.Message.getField(t, 1),
-                found_html: h.Message.getField(t, 2)
+                converted_content: _.Message.getField(t, 1),
+                found_html: _.Message.getField(t, 2)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -435,7 +487,7 @@
               );
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -455,66 +507,66 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
-              void 0 !== (n = h.Message.getField(e, 1)) && t.writeString(1, n),
-                void 0 !== (n = h.Message.getField(e, 2)) && t.writeBool(2, n);
+              void 0 !== (n = _.Message.getField(e, 1)) && t.writeString(1, n),
+                void 0 !== (n = _.Message.getField(e, 2)) && t.writeBool(2, n);
             }),
             (r.prototype.getClassName = function() {
               return "CNews_ConvertHTMLToBBCode_Response";
             }),
             r
           );
-        })(h.Message)),
+        })(_.Message)),
         S = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, void 0, null), t;
+            return _.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.rss_message = function() {
-              return h.Message.getField(this, 1);
+              return _.Message.getField(this, 1);
             }),
             (r.prototype.set_rss_message = function(e) {
-              h.Message.setField(this, 1, e);
+              _.Message.setField(this, 1, e);
             }),
             (r.prototype.unique_id = function() {
-              return h.Message.getField(this, 2);
+              return _.Message.getField(this, 2);
             }),
             (r.prototype.set_unique_id = function(e) {
-              h.Message.setField(this, 2, e);
+              _.Message.setField(this, 2, e);
             }),
             (r.prototype.title = function() {
-              return h.Message.getField(this, 3);
+              return _.Message.getField(this, 3);
             }),
             (r.prototype.set_title = function(e) {
-              h.Message.setField(this, 3, e);
+              _.Message.setField(this, 3, e);
             }),
             (r.prototype.desc = function() {
-              return h.Message.getField(this, 4);
+              return _.Message.getField(this, 4);
             }),
             (r.prototype.set_desc = function(e) {
-              h.Message.setField(this, 4, e);
+              _.Message.setField(this, 4, e);
             }),
             (r.prototype.jsondata = function() {
-              return h.Message.getField(this, 5);
+              return _.Message.getField(this, 5);
             }),
             (r.prototype.set_jsondata = function(e) {
-              h.Message.setField(this, 5, e);
+              _.Message.setField(this, 5, e);
             }),
             (r.prototype.post = function(e) {
               return (
                 void 0 === e && (e = !0),
-                h.Message.getWrapperField(this, m, 6, e ? 1 : 0)
+                _.Message.getWrapperField(this, f, 6, e ? 1 : 0)
               );
             }),
             (r.prototype.set_post = function(e) {
-              h.Message.setWrapperField(this, 6, e);
+              _.Message.setWrapperField(this, 6, e);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -522,12 +574,12 @@
             (r.toObject = function(e, t) {
               var n,
                 r = {
-                  rss_message: h.Message.getField(t, 1),
-                  unique_id: h.Message.getField(t, 2),
-                  title: h.Message.getField(t, 3),
-                  desc: h.Message.getField(t, 4),
-                  jsondata: h.Message.getField(t, 5),
-                  post: (n = t.post(!1)) && m.toObject(e, n)
+                  rss_message: _.Message.getField(t, 1),
+                  unique_id: _.Message.getField(t, 2),
+                  title: _.Message.getField(t, 3),
+                  desc: _.Message.getField(t, 4),
+                  jsondata: _.Message.getField(t, 5),
+                  post: (n = t.post(!1)) && f.toObject(e, n)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
@@ -539,12 +591,12 @@
                 t.set_title(e.title),
                 t.set_desc(e.desc),
                 t.set_jsondata(e.jsondata),
-                t.set_post(m.fromObject(e.post)),
+                t.set_post(f.fromObject(e.post)),
                 t
               );
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -567,8 +619,8 @@
                     e.set_jsondata(t.readString());
                     break;
                   case 6:
-                    var n = new m();
-                    t.readMessage(n, m.deserializeBinaryFromReader),
+                    var n = new f();
+                    t.readMessage(n, f.deserializeBinaryFromReader),
                       e.set_post(n);
                     break;
                   default:
@@ -578,56 +630,56 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
-              void 0 !== (n = h.Message.getField(e, 1)) && t.writeString(1, n),
-                void 0 !== (n = h.Message.getField(e, 2)) &&
+              void 0 !== (n = _.Message.getField(e, 1)) && t.writeString(1, n),
+                void 0 !== (n = _.Message.getField(e, 2)) &&
                   t.writeString(2, n),
-                void 0 !== (n = h.Message.getField(e, 3)) &&
+                void 0 !== (n = _.Message.getField(e, 3)) &&
                   t.writeString(3, n),
-                void 0 !== (n = h.Message.getField(e, 4)) &&
+                void 0 !== (n = _.Message.getField(e, 4)) &&
                   t.writeString(4, n),
-                void 0 !== (n = h.Message.getField(e, 5)) &&
+                void 0 !== (n = _.Message.getField(e, 5)) &&
                   t.writeString(5, n),
                 null != (n = e.post(!1)) &&
-                  t.writeMessage(6, n, m.serializeBinaryToWriter);
+                  t.writeMessage(6, n, f.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CNewsPartnerEventPreview";
             }),
             r
           );
-        })(h.Message),
+        })(_.Message),
         y = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, void 0, null), t;
+            return _.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.rss_url = function() {
-              return h.Message.getField(this, 1);
+              return _.Message.getField(this, 1);
             }),
             (r.prototype.set_rss_url = function(e) {
-              h.Message.setField(this, 1, e);
+              _.Message.setField(this, 1, e);
             }),
             (r.prototype.lang = function() {
-              return h.Message.getField(this, 2);
+              return _.Message.getField(this, 2);
             }),
             (r.prototype.set_lang = function(e) {
-              h.Message.setField(this, 2, e);
+              _.Message.setField(this, 2, e);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var n = {
-                rss_url: h.Message.getField(t, 1),
-                lang: h.Message.getField(t, 2)
+                rss_url: _.Message.getField(t, 1),
+                lang: _.Message.getField(t, 2)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -636,7 +688,7 @@
               return t.set_rss_url(e.rss_url), t.set_lang(e.lang), t;
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -656,13 +708,13 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
-              void 0 !== (n = h.Message.getField(e, 1)) && t.writeString(1, n),
-                void 0 !== (n = h.Message.getField(e, 2)) &&
+              void 0 !== (n = _.Message.getField(e, 1)) && t.writeString(1, n),
+                void 0 !== (n = _.Message.getField(e, 2)) &&
                   t.writeUint32(2, n);
             }),
             (r.prototype.getClassName = function() {
@@ -670,37 +722,44 @@
             }),
             r
           );
-        })(h.Message),
-        w = (function(n) {
+        })(_.Message),
+        F = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, [2], null), t;
+            return _.Message.initialize(t, e, 0, -1, [2], null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.rss_url = function() {
-              return h.Message.getField(this, 1);
+              return _.Message.getField(this, 1);
             }),
             (r.prototype.set_rss_url = function(e) {
-              h.Message.setField(this, 1, e);
+              _.Message.setField(this, 1, e);
             }),
             (r.prototype.results = function() {
-              return h.Message.getRepeatedWrapperField(this, S, 2);
+              return _.Message.getRepeatedWrapperField(this, S, 2);
             }),
             (r.prototype.set_results = function(e) {
-              h.Message.setRepeatedWrapperField(this, 2, e);
+              _.Message.setRepeatedWrapperField(this, 2, e);
             }),
             (r.prototype.add_results = function(e, t) {
-              return h.Message.addToRepeatedWrapperField(this, 2, e, S, t);
+              return _.Message.addToRepeatedWrapperField(this, 2, e, S, t);
+            }),
+            (r.prototype.error_msg = function() {
+              return _.Message.getField(this, 3);
+            }),
+            (r.prototype.set_error_msg = function(e) {
+              _.Message.setField(this, 3, e);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var n = {
-                rss_url: h.Message.getField(t, 1),
-                results: h.Message.toObjectList(t.results(), S.toObject, e)
+                rss_url: _.Message.getField(t, 1),
+                results: _.Message.toObjectList(t.results(), S.toObject, e),
+                error_msg: _.Message.getField(t, 3)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -713,11 +772,12 @@
                     return S.fromObject(e);
                   })
                 ),
+                t.set_error_msg(e.error_msg),
                 t
               );
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -732,6 +792,9 @@
                     t.readMessage(n, S.deserializeBinaryFromReader),
                       e.add_results(n);
                     break;
+                  case 3:
+                    e.set_error_msg(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -739,45 +802,47 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
-              void 0 !== (n = h.Message.getField(e, 1)) && t.writeString(1, n),
+              void 0 !== (n = _.Message.getField(e, 1)) && t.writeString(1, n),
                 0 < (n = e.results()).length &&
-                  t.writeRepeatedMessage(2, n, S.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(2, n, S.serializeBinaryToWriter),
+                void 0 !== (n = _.Message.getField(e, 3)) &&
+                  t.writeString(3, n);
             }),
             (r.prototype.getClassName = function() {
               return "CNews_PreviewPartnerEvents_Response";
             }),
             r
           );
-        })(h.Message),
-        F = (h.Message,
+        })(_.Message),
+        w = (_.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, [1], null), t;
+            return _.Message.initialize(t, e, 0, -1, [1], null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.feeds = function() {
-              return h.Message.getRepeatedWrapperField(this, f, 1);
+              return _.Message.getRepeatedWrapperField(this, h, 1);
             }),
             (r.prototype.set_feeds = function(e) {
-              h.Message.setRepeatedWrapperField(this, 1, e);
+              _.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_feeds = function(e, t) {
-              return h.Message.addToRepeatedWrapperField(this, 1, e, f, t);
+              return _.Message.addToRepeatedWrapperField(this, 1, e, h, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var n = {
-                feeds: h.Message.toObjectList(t.feeds(), f.toObject, e)
+                feeds: _.Message.toObjectList(t.feeds(), h.toObject, e)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -786,14 +851,14 @@
               return (
                 t.set_feeds(
                   (Array.isArray(e.feeds) ? e.feeds : []).map(function(e) {
-                    return f.fromObject(e);
+                    return h.fromObject(e);
                   })
                 ),
                 t
               );
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -801,8 +866,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var n = new f();
-                    t.readMessage(n, f.deserializeBinaryFromReader),
+                    var n = new h();
+                    t.readMessage(n, h.deserializeBinaryFromReader),
                       e.add_feeds(n);
                     break;
                   default:
@@ -812,42 +877,42 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
               0 < (n = e.feeds()).length &&
-                t.writeRepeatedMessage(1, n, f.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, n, h.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CNews_GetNewsFeedByRepublishClan_Response";
             }),
             r
           );
-        })(h.Message)),
+        })(_.Message)),
         M = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, void 0, null), t;
+            return _.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.post = function(e) {
               return (
                 void 0 === e && (e = !0),
-                h.Message.getWrapperField(this, m, 1, e ? 1 : 0)
+                _.Message.getWrapperField(this, f, 1, e ? 1 : 0)
               );
             }),
             (r.prototype.set_post = function(e) {
-              h.Message.setWrapperField(this, 1, e);
+              _.Message.setWrapperField(this, 1, e);
             }),
             (r.prototype.draft = function() {
-              return h.Message.getField(this, 2);
+              return _.Message.getField(this, 2);
             }),
             (r.prototype.set_draft = function(e) {
-              h.Message.setField(this, 2, e);
+              _.Message.setField(this, 2, e);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -855,17 +920,17 @@
             (r.toObject = function(e, t) {
               var n,
                 r = {
-                  post: (n = t.post(!1)) && m.toObject(e, n),
-                  draft: h.Message.getField(t, 2)
+                  post: (n = t.post(!1)) && f.toObject(e, n),
+                  draft: _.Message.getField(t, 2)
                 };
               return e && (r.$jspbMessageInstance = t), r;
             }),
             (r.fromObject = function(e) {
               var t = new r();
-              return t.set_post(m.fromObject(e.post)), t.set_draft(e.draft), t;
+              return t.set_post(f.fromObject(e.post)), t.set_draft(e.draft), t;
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -873,8 +938,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var n = new m();
-                    t.readMessage(n, m.deserializeBinaryFromReader),
+                    var n = new f();
+                    t.readMessage(n, f.deserializeBinaryFromReader),
                       e.set_post(n);
                     break;
                   case 2:
@@ -887,48 +952,48 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
               null != (n = e.post(!1)) &&
-                t.writeMessage(1, n, m.serializeBinaryToWriter),
-                void 0 !== (n = h.Message.getField(e, 2)) && t.writeBool(2, n);
+                t.writeMessage(1, n, f.serializeBinaryToWriter),
+                void 0 !== (n = _.Message.getField(e, 2)) && t.writeBool(2, n);
             }),
             (r.prototype.getClassName = function() {
               return "CNews_PublishPartnerEvent_Request";
             }),
             r
           );
-        })(h.Message),
+        })(_.Message),
         R = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, void 0, null), t;
+            return _.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.clan_event_gid = function() {
-              return h.Message.getField(this, 1);
+              return _.Message.getField(this, 1);
             }),
             (r.prototype.set_clan_event_gid = function(e) {
-              h.Message.setField(this, 1, e);
+              _.Message.setField(this, 1, e);
             }),
             (r.prototype.news_post_gid = function() {
-              return h.Message.getField(this, 2);
+              return _.Message.getField(this, 2);
             }),
             (r.prototype.set_news_post_gid = function(e) {
-              h.Message.setField(this, 2, e);
+              _.Message.setField(this, 2, e);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var n = {
-                clan_event_gid: h.Message.getField(t, 1),
-                news_post_gid: h.Message.getField(t, 2)
+                clan_event_gid: _.Message.getField(t, 1),
+                news_post_gid: _.Message.getField(t, 2)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -941,7 +1006,7 @@
               );
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -961,14 +1026,14 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
-              void 0 !== (n = h.Message.getField(e, 1)) &&
+              void 0 !== (n = _.Message.getField(e, 1)) &&
                 t.writeFixed64String(1, n),
-                void 0 !== (n = h.Message.getField(e, 2)) &&
+                void 0 !== (n = _.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, n);
             }),
             (r.prototype.getClassName = function() {
@@ -976,41 +1041,41 @@
             }),
             r
           );
-        })(h.Message),
+        })(_.Message),
         O = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, void 0, null), t;
+            return _.Message.initialize(t, e, 0, -1, void 0, null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.news_feed_gid = function() {
-              return h.Message.getField(this, 1);
+              return _.Message.getField(this, 1);
             }),
             (r.prototype.set_news_feed_gid = function(e) {
-              h.Message.setField(this, 1, e);
+              _.Message.setField(this, 1, e);
             }),
             (r.prototype.start_index = function() {
-              return h.Message.getFieldWithDefault(this, 2, 0);
+              return _.Message.getFieldWithDefault(this, 2, 0);
             }),
             (r.prototype.set_start_index = function(e) {
-              h.Message.setField(this, 2, e);
+              _.Message.setField(this, 2, e);
             }),
             (r.prototype.amount = function() {
-              return h.Message.getFieldWithDefault(this, 3, 100);
+              return _.Message.getFieldWithDefault(this, 3, 100);
             }),
             (r.prototype.set_amount = function(e) {
-              h.Message.setField(this, 3, e);
+              _.Message.setField(this, 3, e);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var n = {
-                news_feed_gid: h.Message.getField(t, 1),
-                start_index: h.Message.getFieldWithDefault(t, 2, 0),
-                amount: h.Message.getFieldWithDefault(t, 3, 100)
+                news_feed_gid: _.Message.getField(t, 1),
+                start_index: _.Message.getFieldWithDefault(t, 2, 0),
+                amount: _.Message.getFieldWithDefault(t, 3, 100)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -1024,7 +1089,7 @@
               );
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -1047,16 +1112,16 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
-              void 0 !== (n = h.Message.getField(e, 1)) &&
+              void 0 !== (n = _.Message.getField(e, 1)) &&
                 t.writeFixed64String(1, n),
-                void 0 !== (n = h.Message.getField(e, 2)) &&
+                void 0 !== (n = _.Message.getField(e, 2)) &&
                   t.writeUint32(2, n),
-                void 0 !== (n = h.Message.getField(e, 3)) &&
+                void 0 !== (n = _.Message.getField(e, 3)) &&
                   t.writeUint32(3, n);
             }),
             (r.prototype.getClassName = function() {
@@ -1064,64 +1129,64 @@
             }),
             r
           );
-        })(h.Message),
+        })(_.Message),
         E = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
-            return h.Message.initialize(t, e, 0, -1, [3, 4, 5], null), t;
+            return _.Message.initialize(t, e, 0, -1, [3, 4, 5], null), t;
           }
           return (
-            Object(l.d)(r, n),
+            Object(d.d)(r, n),
             (r.prototype.clan_account_id = function() {
-              return h.Message.getField(this, 1);
+              return _.Message.getField(this, 1);
             }),
             (r.prototype.set_clan_account_id = function(e) {
-              h.Message.setField(this, 1, e);
+              _.Message.setField(this, 1, e);
             }),
             (r.prototype.news_feed_gid = function() {
-              return h.Message.getField(this, 2);
+              return _.Message.getField(this, 2);
             }),
             (r.prototype.set_news_feed_gid = function(e) {
-              h.Message.setField(this, 2, e);
+              _.Message.setField(this, 2, e);
             }),
             (r.prototype.clan_event_gid = function() {
-              return h.Message.getField(this, 3);
+              return _.Message.getField(this, 3);
             }),
             (r.prototype.set_clan_event_gid = function(e) {
-              h.Message.setField(this, 3, e);
+              _.Message.setField(this, 3, e);
             }),
             (r.prototype.add_clan_event_gid = function(e, t) {
-              h.Message.addToRepeatedField(this, 3, e, t);
+              _.Message.addToRepeatedField(this, 3, e, t);
             }),
             (r.prototype.news_post_gid = function() {
-              return h.Message.getField(this, 4);
+              return _.Message.getField(this, 4);
             }),
             (r.prototype.set_news_post_gid = function(e) {
-              h.Message.setField(this, 4, e);
+              _.Message.setField(this, 4, e);
             }),
             (r.prototype.add_news_post_gid = function(e, t) {
-              h.Message.addToRepeatedField(this, 4, e, t);
+              _.Message.addToRepeatedField(this, 4, e, t);
             }),
             (r.prototype.news_url = function() {
-              return h.Message.getField(this, 5);
+              return _.Message.getField(this, 5);
             }),
             (r.prototype.set_news_url = function(e) {
-              h.Message.setField(this, 5, e);
+              _.Message.setField(this, 5, e);
             }),
             (r.prototype.add_news_url = function(e, t) {
-              h.Message.addToRepeatedField(this, 5, e, t);
+              _.Message.addToRepeatedField(this, 5, e, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var n = {
-                clan_account_id: h.Message.getField(t, 1),
-                news_feed_gid: h.Message.getField(t, 2),
-                clan_event_gid: h.Message.getField(t, 3),
-                news_post_gid: h.Message.getField(t, 4),
-                news_url: h.Message.getField(t, 5)
+                clan_account_id: _.Message.getField(t, 1),
+                news_feed_gid: _.Message.getField(t, 2),
+                clan_event_gid: _.Message.getField(t, 3),
+                news_post_gid: _.Message.getField(t, 4),
+                news_url: _.Message.getField(t, 5)
               };
               return e && (n.$jspbMessageInstance = t), n;
             }),
@@ -1137,7 +1202,7 @@
               );
             }),
             (r.deserializeBinary = function(e) {
-              var t = new h.BinaryReader(e),
+              var t = new _.BinaryReader(e),
                 n = new r();
               return r.deserializeBinaryFromReader(n, t);
             }),
@@ -1166,19 +1231,19 @@
               return e;
             }),
             (r.prototype.serializeBinary = function() {
-              var e = new h.BinaryWriter();
+              var e = new _.BinaryWriter();
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
-              void 0 !== (n = h.Message.getField(e, 1)) && t.writeUint32(1, n),
-                void 0 !== (n = h.Message.getField(e, 2)) &&
+              void 0 !== (n = _.Message.getField(e, 1)) && t.writeUint32(1, n),
+                void 0 !== (n = _.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, n),
-                void 0 !== (n = h.Message.getField(e, 3)) &&
+                void 0 !== (n = _.Message.getField(e, 3)) &&
                   t.writeRepeatedFixed64String(3, n),
-                void 0 !== (n = h.Message.getField(e, 4)) &&
+                void 0 !== (n = _.Message.getField(e, 4)) &&
                   t.writeRepeatedFixed64String(4, n),
-                void 0 !== (n = h.Message.getField(e, 5)) &&
+                void 0 !== (n = _.Message.getField(e, 5)) &&
                   t.writeRepeatedString(5, n);
             }),
             (r.prototype.getClassName = function() {
@@ -1186,33 +1251,34 @@
             }),
             r
           );
-        })(h.Message);
-      ((r = o || (o = {})).ConvertHTMLToBBCode = function(e, t) {
+        })(_.Message);
+      ((m = v || (v = {})).ConvertHTMLToBBCode = function(e, t) {
         return e.SendMsg("News.ConvertHTMLToBBCode#1", t, b, {
           bConstMethod: !0
         });
       }),
-        (r.PreviewPartnerEvents = function(e, t) {
-          return e.SendMsg("News.PreviewPartnerEvents#1", t, w, {
+        (m.PreviewPartnerEvents = function(e, t) {
+          return e.SendMsg("News.PreviewPartnerEvents#1", t, F, {
             bConstMethod: !0
           });
         }),
-        (r.GetNewsFeedByRepublishClan = function(e, t) {
-          return e.SendMsg("News.GetNewsFeedByRepublishClan#1", t, F, {
+        (m.GetNewsFeedByRepublishClan = function(e, t) {
+          return e.SendMsg("News.GetNewsFeedByRepublishClan#1", t, w, {
             bConstMethod: !0
           });
         }),
-        (r.PublishPartnerEvent = function(e, t) {
+        (m.PublishPartnerEvent = function(e, t) {
           return e.SendMsg("News.PublishPartnerEvent#1", t, R, {});
         }),
-        (r.GetBatchPublishedPartnerEvent = function(e, t) {
+        (m.GetBatchPublishedPartnerEvent = function(e, t) {
           return e.SendMsg("News.GetBatchPublishedPartnerEvent#1", t, E, {
             bConstMethod: !0
           });
         });
       var j = n("kLLr"),
         B = n("6oCP"),
-        C = (function() {
+        C = n("NtSG"),
+        P = (function() {
           function e() {
             this.m_mapURLToPosted = new Map();
           }
@@ -1227,23 +1293,32 @@
             }),
             (e.prototype.Init = function() {
               var e = this,
-                t = Object(g.f)("curatoradmin", "application_config");
+                t = Object(u.f)("curatoradmin", "application_config");
               this.ValidateStoreDefault(t)
-                ? ((this.m_transport = new _.a(
-                    g.c.WEBAPI_BASE_URL,
+                ? ((this.m_transport = new p.a(
+                    u.c.WEBAPI_BASE_URL,
                     t.webapi_token
                   ).GetServiceTransport()),
                   (this.m_clanAccountID = t.clanid),
                   (this.m_clanSteamID = j.a.InitFromClanID(
                     this.m_clanAccountID
                   )),
-                  Object(p.runInAction)(function() {
+                  Object(o.runInAction)(function() {
                     (e.m_strRSSFeedURL = t.rss_feed_url),
                       (e.m_strRSSGID = t.rss_feed_gid),
+                      (e.m_eRSSFeedLanguage = t.rss_feed_language),
                       (e.m_rtimeRSSLastChecked = t.rss_feed_last_checked),
-                      (e.m_nPollIntervalSeconds = t.poll_interval);
+                      (e.m_nPollIntervalSeconds = t.poll_interval),
+                      (e.m_eCuratorLanguage = t.curation_language);
                   }))
                 : console.error("Failed to CCuratorAdminStore", t);
+            }),
+            (e.prototype.GetCuratorLangaugeHandleUnset = function() {
+              return -1 == this.m_eRSSFeedLanguage
+                ? -1 == this.m_eCuratorLanguage
+                  ? 0
+                  : this.m_eCuratorLanguage
+                : this.m_eRSSFeedLanguage;
             }),
             (e.prototype.ValidateStoreDefault = function(e) {
               var t = e;
@@ -1277,78 +1352,80 @@
             (e.prototype.BHasFeedGID = function() {
               return Boolean(this.m_strRSSGID);
             }),
-            (e.prototype.PreviewPartnerEventsFromRSSFeed = function(r, s) {
-              return (
-                void 0 === s && (s = 0),
-                Object(l.b)(this, void 0, void 0, function() {
-                  var t, n;
-                  return Object(l.e)(this, function(e) {
-                    switch (e.label) {
-                      case 0:
-                        return this.BIsLoggedIn()
-                          ? ((t = v.a.Init(y)).Body().set_rss_url(r),
-                            t.Body().set_lang(s),
-                            [4, o.PreviewPartnerEvents(this.m_transport, t)])
-                          : (console.error(
-                              "PreviewPartnerEventsFromRSSFeed: User not logged in"
-                            ),
-                            [2, null]);
-                      case 1:
-                        return 1 != (n = e.sent()).GetEResult()
-                          ? (console.error(
-                              "PreviewPartnerEventsFromRSSFeed error: " +
-                                n.GetEMsg() +
-                                " " +
-                                n.GetEResult()
-                            ),
-                            [2, null])
-                          : [2, n.Body().toObject()];
-                    }
-                  });
-                })
-              );
+            (e.prototype.PreviewPartnerEventsFromRSSFeed = function(r) {
+              return Object(d.b)(this, void 0, void 0, function() {
+                var t, n;
+                return Object(d.e)(this, function(e) {
+                  switch (e.label) {
+                    case 0:
+                      return this.BIsLoggedIn()
+                        ? ((t = g.a.Init(y)).Body().set_rss_url(r),
+                          t
+                            .Body()
+                            .set_lang(this.GetCuratorLangaugeHandleUnset()),
+                          [4, v.PreviewPartnerEvents(this.m_transport, t)])
+                        : (console.error(
+                            "PreviewPartnerEventsFromRSSFeed: User not logged in"
+                          ),
+                          [2, null]);
+                    case 1:
+                      return (
+                        1 != (n = e.sent()).GetEResult() &&
+                          console.error(
+                            "PreviewPartnerEventsFromRSSFeed error: " +
+                              n.GetEMsg() +
+                              " " +
+                              n.GetEResult()
+                          ),
+                        [2, n]
+                      );
+                  }
+                });
+              });
             }),
             (e.prototype.FetchPublishedEvents = function(s) {
               return (
                 void 0 === s && (s = 100),
-                Object(l.b)(this, void 0, void 0, function() {
+                Object(d.b)(this, void 0, void 0, function() {
                   var t,
                     n,
                     r = this;
-                  return Object(l.e)(this, function(e) {
+                  return Object(d.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
                         return this.BIsLoggedIn()
                           ? this.m_strRSSGID
-                            ? ((t = v.a.Init(O))
+                            ? ((t = g.a.Init(O))
                                 .Body()
                                 .set_news_feed_gid(this.m_strRSSGID),
                               t.Body().set_amount(s),
                               [
                                 4,
-                                o.GetBatchPublishedPartnerEvent(
+                                v.GetBatchPublishedPartnerEvent(
                                   this.m_transport,
                                   t
                                 )
                               ])
                             : (console.error(
-                                "CreatePartnerFromPreviewPost: Need to create a news feed first"
+                                "FetchPublishedEvents: Need to create a news feed first"
                               ),
                               [2, null])
                           : (console.error(
-                              "PreviewPartnerEventsFromRSSFeed: User not logged in"
+                              "FetchPublishedEvents: User not logged in"
                             ),
                             [2, null]);
                       case 1:
                         return (
                           1 != (n = e.sent()).GetEResult()
                             ? console.error(
-                                "CreatePost error: " +
-                                  n.GetEMsg() +
-                                  " " +
-                                  n.GetEResult()
+                                "FetchPublishedEvents error: EMsg:" +
+                                  Object(C.a)(n.GetEMsg()) +
+                                  " EResult:" +
+                                  n.GetEResult() +
+                                  " msg:" +
+                                  n.Hdr().error_message()
                               )
-                            : Object(p.runInAction)(function() {
+                            : Object(o.runInAction)(function() {
                                 for (
                                   var e = 0;
                                   e < n.Body().clan_event_gid().length;
@@ -1376,39 +1453,42 @@
               if (t) return t.clan_event_gid;
             }),
             (e.prototype.BIsLoggedIn = function() {
-              return g.i.logged_in;
+              return u.i.logged_in;
             }),
             (e.prototype.CreateOrUpdateRSSNewFeed = function(a, i) {
               return (
                 void 0 === i && (i = 0),
-                Object(l.b)(this, void 0, void 0, function() {
+                Object(d.b)(this, void 0, void 0, function() {
                   var t,
                     n,
                     r,
                     s = this;
-                  return Object(l.e)(this, function(e) {
+                  return Object(d.e)(this, function(e) {
                     switch (e.label) {
                       case 0:
                         return (
                           (t = new FormData()).append(
                             "sessionid",
-                            g.c.SESSIONID
+                            u.c.SESSIONID
                           ),
                           t.append("gid", this.m_strRSSGID),
-                          t.append("lang", "0"),
+                          t.append(
+                            "lang",
+                            "" + this.GetCuratorLangaugeHandleUnset()
+                          ),
                           t.append("rss_url", a),
                           t.append("polling_interval", "" + i),
                           (n =
-                            g.c.STORE_BASE_URL +
+                            u.c.STORE_BASE_URL +
                             "curator/" +
                             this.m_clanAccountID +
                             "/admin/ajaxmanagerssfeed"),
-                          [4, u.a.post(n, t, { withCredentials: !0 })]
+                          [4, l.a.post(n, t, { withCredentials: !0 })]
                         );
                       case 1:
                         return (
                           1 == (r = e.sent()).data.success &&
-                            Object(p.runInAction)(function() {
+                            Object(o.runInAction)(function() {
                               (s.m_strRSSGID = r.data.gid),
                                 (s.m_strRSSFeedURL = a),
                                 (s.m_nPollIntervalSeconds = i);
@@ -1421,8 +1501,8 @@
               );
             }),
             (e.prototype.UpdateAutomation = function(t) {
-              return Object(l.b)(this, void 0, void 0, function() {
-                return Object(l.e)(this, function(e) {
+              return Object(d.b)(this, void 0, void 0, function() {
+                return Object(d.e)(this, function(e) {
                   return [
                     2,
                     this.CreateOrUpdateRSSNewFeed(
@@ -1434,23 +1514,23 @@
               });
             }),
             (e.prototype.CheckForNewUpdate = function() {
-              return Object(l.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t, n;
-                return Object(l.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return this.m_strRSSGID
                         ? ((t = new FormData()).append(
                             "sessionid",
-                            g.c.SESSIONID
+                            u.c.SESSIONID
                           ),
                           t.append("gid", this.m_strRSSGID),
                           (n =
-                            g.c.STORE_BASE_URL +
+                            u.c.STORE_BASE_URL +
                             "curator/" +
                             this.m_clanAccountID +
                             "/admin/ajaxcheckfornews"),
-                          [4, u.a.post(n, t, { withCredentials: !0 })])
+                          [4, l.a.post(n, t, { withCredentials: !0 })])
                         : [3, 2];
                     case 1:
                       e.sent(), (e.label = 2);
@@ -1461,17 +1541,17 @@
               });
             }),
             (e.prototype.CreatePost = function(a, i) {
-              return Object(l.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t,
                   n,
                   r,
                   s = this;
-                return Object(l.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return this.BIsLoggedIn()
                         ? this.m_strRSSGID
-                          ? ((t = new m()).set_gid(a.post.gid),
+                          ? ((t = new f()).set_gid(a.post.gid),
                             t.set_news_feed_gid(this.m_strRSSGID),
                             t.set_title(a.post.title),
                             t.set_url(a.post.url),
@@ -1482,9 +1562,17 @@
                             t.set_deleted(a.post.deleted),
                             t.set_tags(a.post.tags),
                             t.set_appids(a.post.appids),
-                            (n = v.a.Init(M)).Body().set_post(t),
+                            t.set_recommendation_state(
+                              a.post.recommendation_state
+                            ),
+                            t.set_received_for_free(a.post.received_for_free),
+                            t.set_received_compensation(
+                              a.post.received_compensation
+                            ),
+                            t.set_blurb(a.post.blurb),
+                            (n = g.a.Init(M)).Body().set_post(t),
                             n.Body().set_draft(i),
-                            [4, o.PublishPartnerEvent(this.m_transport, n)])
+                            [4, v.PublishPartnerEvent(this.m_transport, n)])
                           : (console.error(
                               "CreatePartnerFromPreviewPost: Need to create a news feed first"
                             ),
@@ -1502,7 +1590,7 @@
                                 " " +
                                 r.GetEResult()
                             )
-                          : (Object(p.runInAction)(function() {
+                          : (Object(o.runInAction)(function() {
                               var e = {
                                 url: a.post.url,
                                 clan_event_gid: r.Body().clan_event_gid(),
@@ -1521,22 +1609,34 @@
                 });
               });
             }),
-            Object(l.c)([p.observable], e.prototype, "m_strRSSFeedURL", void 0),
-            Object(l.c)([p.observable], e.prototype, "m_strRSSGID", void 0),
-            Object(l.c)(
-              [p.observable],
+            Object(d.c)([o.observable], e.prototype, "m_strRSSFeedURL", void 0),
+            Object(d.c)([o.observable], e.prototype, "m_strRSSGID", void 0),
+            Object(d.c)(
+              [o.observable],
               e.prototype,
               "m_rtimeRSSLastChecked",
               void 0
             ),
-            Object(l.c)(
-              [p.observable],
+            Object(d.c)(
+              [o.observable],
               e.prototype,
               "m_nPollIntervalSeconds",
               void 0
             ),
-            Object(l.c)(
-              [p.observable],
+            Object(d.c)(
+              [o.observable],
+              e.prototype,
+              "m_eRSSFeedLanguage",
+              void 0
+            ),
+            Object(d.c)(
+              [o.observable],
+              e.prototype,
+              "m_eCuratorLanguage",
+              void 0
+            ),
+            Object(d.c)(
+              [o.observable],
               e.prototype,
               "m_mapURLToPosted",
               void 0
@@ -1544,43 +1644,124 @@
             e
           );
         })(),
-        P = n("TyAF"),
-        D = n("mgoM"),
+        D = (function() {
+          function e() {
+            this.m_mapClanToRecommendation = new Map();
+          }
+          return (
+            (e.Get = function() {
+              return (
+                e.s_CuratorStore ||
+                  ((e.s_CuratorStore = new e()).Init(),
+                  (window.g_CuratorRecommendationStore = e.s_CuratorStore)),
+                e.s_CuratorStore
+              );
+            }),
+            (e.prototype.Init = function() {}),
+            (e.prototype.GetReviewForApp = function(e, t) {
+              if (this.m_mapClanToRecommendation.has(e.GetAccountID()))
+                return this.m_mapClanToRecommendation
+                  .get(e.GetAccountID())
+                  .get(t);
+            }),
+            (e.prototype.BHasReviewForApp = function(e, t) {
+              return Boolean(this.GetReviewForApp(e, t));
+            }),
+            (e.prototype.BHasReviewForAppByClanAccount = function(e, t) {
+              var n = j.a.InitFromClanID(e);
+              return Boolean(this.GetReviewForApp(n, t));
+            }),
+            (e.prototype.LoadAppRecommendation = function(i, o) {
+              return Object(d.b)(this, void 0, void 0, function() {
+                var t, n, r, s, a;
+                return Object(d.e)(this, function(e) {
+                  switch (e.label) {
+                    case 0:
+                      return (
+                        this.m_mapClanToRecommendation.has(i.GetAccountID()) ||
+                          this.m_mapClanToRecommendation.set(
+                            i.GetAccountID(),
+                            new Map()
+                          ),
+                        (t = this.m_mapClanToRecommendation.get(
+                          i.GetAccountID()
+                        )),
+                        (n = []),
+                        o.forEach(function(e) {
+                          t.has(e) || n.push(e);
+                        }),
+                        0 < n.length
+                          ? ((r =
+                              u.c.STORE_BASE_URL +
+                              "curator/" +
+                              i.GetAccountID() +
+                              "/admin/ajaxgetrecbyapps"),
+                            [
+                              4,
+                              l.a.get(r, {
+                                params: {
+                                  appids: n,
+                                  cc: u.c.COUNTRY || "US",
+                                  l: u.c.LANGUAGE
+                                }
+                              })
+                            ])
+                          : [3, 2]
+                      );
+                    case 1:
+                      (s = e.sent()),
+                        (a = s && s.data) &&
+                          a.rec_app &&
+                          a.rec_app.forEach(function(e) {
+                            t.set(Number(e.appid), e);
+                          }),
+                        (e.label = 2);
+                    case 2:
+                      return [2];
+                  }
+                });
+              });
+            }),
+            e
+          );
+        })(),
+        A = n("TyAF"),
+        G = n("mgoM"),
         U = n("3+zv"),
-        G = n("Mgs7"),
-        L = n("T27q"),
-        A = n("fpVW"),
-        I = n.n(A),
-        k = n("r+ba"),
-        N = n("Jqb/"),
-        T = n("ka0M"),
-        z = n("0OaU"),
-        W = n("+d9t"),
-        x = n("exH9"),
-        H = n("X3Ds"),
-        V = n("TLQK"),
-        q = n("bDQf"),
-        $ = n("bxiW"),
-        Q = n("A2AY"),
-        Y = (function(t) {
+        L = n("Mgs7"),
+        I = n("T27q"),
+        k = n("fpVW"),
+        T = n.n(k),
+        N = n("r+ba"),
+        z = n("Jqb/"),
+        W = n("ka0M"),
+        x = n("0OaU"),
+        H = n("+d9t"),
+        V = n("exH9"),
+        q = n("X3Ds"),
+        $ = n("TLQK"),
+        Y = n("bDQf"),
+        Q = n("bxiW"),
+        J = n("A2AY"),
+        K = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
-              (e.state = { strRssURL: C.Get().GetRSSUrl() }),
-              (e.m_Admin = C.Get()),
+              (e.state = { strRssURL: P.Get().GetRSSUrl() }),
+              (e.m_Admin = P.Get()),
               e
             );
           }
           return (
-            Object(l.d)(e, t),
+            Object(d.d)(e, t),
             (e.prototype.OnChangeActualRSSURL = function(e) {
               this.setState({ strRssURL: e.target.value });
             }),
             (e.prototype.OnCreateOrSaveFeed = function(e) {
               e.preventDefault(),
-                Object(T.d)(
-                  d.a.createElement(Z, { strRSSUrl: this.state.strRssURL }),
-                  Object(H.m)(e)
+                Object(W.d)(
+                  c.a.createElement(te, { strRSSUrl: this.state.strRssURL }),
+                  Object(q.m)(e)
                 );
             }),
             (e.prototype.OnRevert = function(e) {
@@ -1593,116 +1774,142 @@
               );
               return void 0 !== window.Prototype
                 ? (window.location.reload(), null)
-                : d.a.createElement(
+                : c.a.createElement(
                     "div",
-                    { className: Object(x.a)(Q.Ctn) },
-                    d.a.createElement(
+                    { className: Object(V.a)(J.Ctn) },
+                    c.a.createElement(
                       "div",
                       { className: "titleframe" },
-                      d.a.createElement(
+                      c.a.createElement(
                         "h4",
                         null,
-                        Object(V.d)("#CuratorAdmin_RSSFeed_title")
+                        Object($.d)("#CuratorAdmin_RSSFeed_title")
                       ),
-                      d.a.createElement(
+                      c.a.createElement(
                         "p",
                         { className: "subtitle" },
-                        Object(V.d)("#CuratorAdmin_RSSFeed_desc")
+                        Object($.d)("#CuratorAdmin_RSSFeed_desc")
                       ),
-                      d.a.createElement(
+                      c.a.createElement(
                         "p",
                         null,
-                        Object(V.j)(
+                        Object($.d)(
+                          "#CuratorAdmin_RSSFeed_lang",
+                          Object(G.c)(
+                            this.m_Admin.GetCuratorLangaugeHandleUnset()
+                          )
+                        ),
+                        c.a.createElement(
+                          "a",
+                          {
+                            href:
+                              u.c.COMMUNITY_BASE_URL +
+                              "gid/" +
+                              this.m_Admin
+                                .GetClanSteamID()
+                                .ConvertTo64BitString() +
+                              "/edit ",
+                            target: "_blank"
+                          },
+                          Object($.d)(
+                            "#CuratorAdmin_RSSFeed_edit_group_profile"
+                          )
+                        )
+                      ),
+                      c.a.createElement(
+                        "p",
+                        null,
+                        Object($.j)(
                           "#CuratorAdmin_RSSFeed_doc_link",
-                          d.a.createElement(
+                          c.a.createElement(
                             "a",
                             {
                               href:
                                 "https://partner.steamgames.com/doc/store/news/rss",
                               target: "_blank"
                             },
-                            Object(V.d)("#CuratorAdmin_RSSFeed_doc_link_text")
+                            Object($.d)("#CuratorAdmin_RSSFeed_doc_link_text")
                           )
                         )
                       ),
-                      d.a.createElement(
+                      c.a.createElement(
                         "p",
-                        { className: Q.DashboardBtn },
-                        d.a.createElement(
-                          W.a,
+                        { className: J.DashboardBtn },
+                        c.a.createElement(
+                          H.a,
                           {
                             href:
-                              g.c.COMMUNITY_BASE_URL +
+                              u.c.COMMUNITY_BASE_URL +
                               "gid/" +
                               this.m_Admin
                                 .GetClanSteamID()
                                 .ConvertTo64BitString() +
                               "/partnerevents/",
-                            className: Object(x.a)(I.a.Button, I.a.Primary)
+                            className: Object(V.a)(T.a.Button, T.a.Primary)
                           },
-                          Object(V.d)("#RSSManager_EventDashBoard")
+                          Object($.d)("#RSSManager_EventDashBoard")
                         )
                       )
                     ),
-                    d.a.createElement(
+                    c.a.createElement(
                       "div",
                       { className: "darkframe" },
-                      d.a.createElement(
+                      c.a.createElement(
                         "div",
                         {
-                          className: Object(x.a)(
-                            I.a.FlexRowContainer,
-                            Q.UrlSettingCtn
+                          className: Object(V.a)(
+                            T.a.FlexRowContainer,
+                            J.UrlSettingCtn
                           )
                         },
-                        d.a.createElement(G.j, {
-                          className: Q.RssInpu,
+                        c.a.createElement(L.j, {
+                          className: J.RssInpu,
                           type: "text",
                           name: "link_url",
                           id: "link_url",
                           value: this.state.strRssURL,
-                          label: Object(V.d)("#CuratorAdmin_RSSFeed_english"),
-                          placeholder: Object(V.d)(
+                          label: Object($.d)("#CuratorAdmin_RSSFeed_english"),
+                          placeholder: Object($.d)(
                             "#CuratorAdmin_RSSFeed_placeholder"
                           ),
                           onChange: this.OnChangeActualRSSURL,
                           mustBeURL: !0
                         }),
-                        d.a.createElement(
+                        c.a.createElement(
                           "a",
                           {
                             className: "btn_green_white_innerfade btn_medium",
                             onClick: this.OnCreateOrSaveFeed
                           },
-                          d.a.createElement(
+                          c.a.createElement(
                             "span",
                             null,
-                            Object(V.d)(e ? "#Button_Saved" : "#Button_Save")
+                            Object($.d)(e ? "#Button_Saved" : "#Button_Save")
                           )
                         ),
                         !e &&
-                          d.a.createElement(
+                          c.a.createElement(
                             "a",
                             {
                               onClick: this.OnRevert,
                               className: "btn_grey_white_innerfade btn_medium"
                             },
-                            Object(V.d)("#Button_Revert")
+                            Object($.d)("#Button_Revert")
                           )
                       ),
-                      d.a.createElement(K, null),
-                      d.a.createElement("br", null),
-                      d.a.createElement(J, { strRssURL: this.state.strRssURL })
+                      c.a.createElement(Z, null),
+                      c.a.createElement("br", null),
+                      c.a.createElement(X, { strRssURL: this.state.strRssURL })
                     )
                   );
             }),
-            Object(l.c)([$.a], e.prototype, "OnChangeActualRSSURL", null),
-            Object(l.c)([$.a], e.prototype, "OnCreateOrSaveFeed", null),
-            Object(l.c)([$.a], e.prototype, "OnRevert", null),
-            (e = Object(l.c)([P.observer], e))
+            Object(d.c)([Q.a], e.prototype, "OnChangeActualRSSURL", null),
+            Object(d.c)([Q.a], e.prototype, "OnCreateOrSaveFeed", null),
+            Object(d.c)([Q.a], e.prototype, "OnRevert", null),
+            (e = Object(d.c)([A.observer], e))
           );
-        })(d.a.Component),
-        J = (function(t) {
+        })(c.a.Component),
+        X = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -1710,14 +1917,14 @@
                 strParseRssURL: e.props.strRssURL,
                 bLoadingPreview: !1
               }),
-              (e.m_cancelSignal = u.a.CancelToken.source()),
+              (e.m_cancelSignal = l.a.CancelToken.source()),
               e
             );
           }
           return (
-            Object(l.d)(e, t),
+            Object(d.d)(e, t),
             (e.prototype.componentDidMount = function() {
-              var e = C.Get();
+              var e = P.Get();
               e.BHasFeedGID() &&
                 e.BHasSavedRSSURL() &&
                 e.GetRSSUrl() == this.props.strRssURL &&
@@ -1730,7 +1937,7 @@
             }),
             (e.prototype.RenderPreviews = function() {
               var t = this,
-                i = C.Get(),
+                i = P.Get(),
                 n = new Array();
               if (this.state.previews) {
                 var e = this.state.previews;
@@ -1748,7 +1955,7 @@
                     : t.post.rtime_date - e.post.rtime_date;
                 })).forEach(function(e) {
                   n.push(
-                    d.a.createElement(X, {
+                    c.a.createElement(ee, {
                       newsData: e,
                       key: "id: " + e.unique_id,
                       clanSteamID: i.GetClanSteamID(),
@@ -1767,58 +1974,68 @@
                 {
                   bLoadingPreview: !0,
                   previews: void 0,
-                  strPreviewURL: this.props.strRssURL
+                  strPreviewURL: this.props.strRssURL,
+                  strPreviewErrorMsg: void 0
                 },
                 this.DoLoadPreview
               );
             }),
             (e.prototype.DoLoadPreview = function() {
-              return Object(l.b)(this, void 0, void 0, function() {
-                var r,
+              return Object(d.b)(this, void 0, void 0, function() {
+                var s,
                   t,
+                  a,
                   n = this;
-                return Object(l.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return [
                         4,
-                        (r = C.Get()).PreviewPartnerEventsFromRSSFeed(
+                        (s = P.Get()).PreviewPartnerEventsFromRSSFeed(
                           this.props.strRssURL
                         )
                       ];
                     case 1:
                       return (
-                        (t = e.sent())
-                          ? this.setState(
+                        (t = e.sent()) && 1 == t.GetEResult()
+                          ? ((a = t.Body().toObject()),
+                            this.setState(
                               {
-                                strParseRssURL: t.rss_url,
+                                strParseRssURL: a.rss_url,
                                 bLoadingPreview: !0
                               },
                               function() {
-                                return Object(l.b)(
+                                return Object(d.b)(
                                   n,
                                   void 0,
                                   void 0,
                                   function() {
-                                    var n;
-                                    return Object(l.e)(this, function(e) {
+                                    var n, r, t;
+                                    return Object(d.e)(this, function(e) {
                                       switch (e.label) {
                                         case 0:
                                           return [
                                             4,
-                                            r.FetchPublishedEvents(
-                                              Math.max(100, t.results.length)
+                                            s.FetchPublishedEvents(
+                                              Math.max(100, a.results.length)
                                             )
                                           ];
                                         case 1:
                                           return (
                                             e.sent(),
                                             (n = new Array()),
-                                            t.results.forEach(function(e) {
-                                              var t = r.MapArticleURLToClanEventGID(
+                                            (r = new Array()),
+                                            a.results.forEach(function(e) {
+                                              var t = s.MapArticleURLToClanEventGID(
                                                 e.post.url
                                               );
-                                              t && n.push(t);
+                                              t && n.push(t),
+                                                e.post.appids &&
+                                                  1 === e.post.appids.length &&
+                                                  0 !==
+                                                    e.post
+                                                      .recommendation_state &&
+                                                  r.push(e.post.appids[0]);
                                             }),
                                             0 < n.length
                                               ? [
@@ -1834,9 +2051,22 @@
                                         case 2:
                                           e.sent(), (e.label = 3);
                                         case 3:
+                                          return 0 < r.length
+                                            ? ((t = s.GetClanSteamID()),
+                                              [
+                                                4,
+                                                D.Get().LoadAppRecommendation(
+                                                  t,
+                                                  r
+                                                )
+                                              ])
+                                            : [3, 5];
+                                        case 4:
+                                          e.sent(), (e.label = 5);
+                                        case 5:
                                           return (
                                             this.setState({
-                                              previews: t.results,
+                                              previews: a.results,
                                               bLoadingPreview: void 0
                                             }),
                                             [2]
@@ -1846,8 +2076,15 @@
                                   }
                                 );
                               }
-                            )
-                          : this.setState({ bLoadingPreview: void 0 }),
+                            ))
+                          : this.setState({
+                              bLoadingPreview: void 0,
+                              strPreviewErrorMsg: Object($.d)(
+                                "#Error_Description",
+                                t.GetEResult(),
+                                t.Hdr().error_message()
+                              )
+                            }),
                         [2]
                       );
                   }
@@ -1856,86 +2093,92 @@
             }),
             (e.prototype.render = function() {
               var e = this.RenderPreviews();
-              return d.a.createElement(
+              return c.a.createElement(
                 "div",
                 null,
                 Boolean(
                   !this.state.bLoadingPreview &&
                     this.state.strPreviewURL !== this.props.strRssURL
                 ) &&
-                  d.a.createElement(
+                  c.a.createElement(
                     "div",
-                    { className: Q.PreviewListBtn },
-                    d.a.createElement(
-                      G.c,
+                    { className: J.PreviewListBtn },
+                    c.a.createElement(
+                      L.c,
                       {
-                        disabled: !G.j.validateUrl(this.props.strRssURL),
+                        disabled: !L.j.validateUrl(this.props.strRssURL),
                         onClick: this.OnLoadPreview
                       },
-                      Object(V.d)("#CuratorAdmin_RSSFeed_preview")
+                      Object($.d)("#CuratorAdmin_RSSFeed_preview")
                     )
                   ),
                 this.state.bLoadingPreview &&
-                  d.a.createElement(z.a, {
-                    string: Object(V.d)("#Loading"),
+                  c.a.createElement(x.a, {
+                    string: Object($.d)("#Loading"),
                     size: "medium",
                     position: "center"
                   }),
+                this.state.strPreviewErrorMsg &&
+                  c.a.createElement(
+                    "div",
+                    { className: T.a.ErrorMsg },
+                    this.state.strPreviewErrorMsg
+                  ),
                 Boolean(0 < e.length) &&
-                  d.a.createElement(
+                  c.a.createElement(
                     "div",
                     null,
-                    d.a.createElement(
+                    c.a.createElement(
                       "p",
                       null,
-                      Object(V.d)(
+                      Object($.d)(
                         "#RSSManager_PreviewInfo",
                         this.state.strPreviewURL
                       )
                     ),
-                    d.a.createElement(
+                    c.a.createElement(
                       "div",
-                      { className: Q.PreviewListCtn },
+                      { className: J.PreviewListCtn },
                       e
                     ),
-                    d.a.createElement(
+                    c.a.createElement(
                       "p",
-                      { className: Q.DashboardBtn },
-                      d.a.createElement(
-                        W.a,
+                      { className: J.DashboardBtn },
+                      c.a.createElement(
+                        H.a,
                         {
                           href:
-                            g.c.COMMUNITY_BASE_URL +
+                            u.c.COMMUNITY_BASE_URL +
                             "gid/" +
-                            C.Get()
+                            P.Get()
                               .GetClanSteamID()
                               .ConvertTo64BitString() +
                             "/partnerevents/",
-                          className: Object(x.a)(I.a.Button, I.a.Primary)
+                          className: Object(V.a)(T.a.Button, T.a.Primary)
                         },
-                        Object(V.d)("#RSSManager_EventDashBoard")
+                        Object($.d)("#RSSManager_EventDashBoard")
                       )
                     )
                   )
               );
             }),
-            Object(l.c)([$.a], e.prototype, "GetRSSPreviewURL", null),
-            Object(l.c)([$.a], e.prototype, "OnLoadPreview", null),
-            (e = Object(l.c)([P.observer], e))
+            Object(d.c)([Q.a], e.prototype, "GetRSSPreviewURL", null),
+            Object(d.c)([Q.a], e.prototype, "OnLoadPreview", null),
+            (e = Object(d.c)([A.observer], e))
           );
-        })(d.a.Component),
-        K = (function(t) {
+        })(c.a.Component),
+        Z = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
-            return (e.state = {}), (e.m_Admin = C.Get()), e;
+            return (e.state = {}), (e.m_Admin = P.Get()), e;
           }
           return (
-            Object(l.d)(e, t),
+            Object(d.d)(e, t),
             (e.prototype.OnToggleChannelAutomation = function(e) {
               e
                 ? (this.setState({ strErrorMessage: void 0 }),
-                  Object(T.d)(
-                    d.a.createElement(Z, {
+                  Object(W.d)(
+                    c.a.createElement(te, {
                       strRSSUrl: this.m_Admin.GetRSSUrl(),
                       bActivatePooling: !0
                     }),
@@ -1944,21 +2187,21 @@
                 : this.setState(
                     {
                       strErrorMessage: void 0,
-                      strReasonWaiting: Object(V.d)("#Saving")
+                      strReasonWaiting: Object($.d)("#Saving")
                     },
                     this.BDisableAutomation
                   );
             }),
             (e.prototype.BDisableAutomation = function() {
-              return Object(l.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t = this;
-                return Object(l.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   return (
                     this.m_Admin
                       .UpdateAutomation(!1)
                       .catch(function() {
                         return t.setState({
-                          strErrorMessage: Object(V.d)(
+                          strErrorMessage: Object($.d)(
                             "#RSSManager_Status_Automation_DisableFailed"
                           )
                         });
@@ -1972,12 +2215,12 @@
               });
             }),
             (e.prototype.OnQueueScan = function(n) {
-              return Object(l.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t = this;
-                return Object(l.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   return (
                     this.setState({
-                      strReasonWaiting: Object(V.d)(
+                      strReasonWaiting: Object($.d)(
                         "#CuratorAdmin_RSSFeed_scannow"
                       )
                     }),
@@ -1985,13 +2228,13 @@
                       .CheckForNewUpdate()
                       .then(function() {
                         return Object(
-                          T.d
-                        )(d.a.createElement(N.c, { strTitle: Object(V.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(V.d)("#CuratorAdmin_RSSFeed_queued") }), Object(H.m)(n));
+                          W.d
+                        )(c.a.createElement(z.c, { strTitle: Object($.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object($.d)("#CuratorAdmin_RSSFeed_queued") }), Object(q.m)(n));
                       })
                       .catch(function(e) {
                         return Object(
-                          T.d
-                        )(d.a.createElement(N.e, { strTitle: Object(V.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(q.a)(e) }), Object(H.m)(n));
+                          W.d
+                        )(c.a.createElement(z.e, { strTitle: Object($.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(Y.a)(e) }), Object(q.m)(n));
                       })
                       .finally(function() {
                         return t.setState({ strReasonWaiting: void 0 });
@@ -2003,83 +2246,83 @@
             }),
             (e.prototype.render = function() {
               return this.m_Admin.BHasSavedRSSURL()
-                ? d.a.createElement(
+                ? c.a.createElement(
                     "div",
                     null,
                     Boolean(this.state.strReasonWaiting) &&
-                      d.a.createElement(z.a, {
+                      c.a.createElement(x.a, {
                         size: "medium",
                         string: this.state.strReasonWaiting
                       }),
                     Boolean(this.state.strErrorMessage) &&
-                      d.a.createElement(
+                      c.a.createElement(
                         "div",
-                        { className: Q.Error },
+                        { className: J.Error },
                         this.state.strErrorMessage
                       ),
-                    d.a.createElement(G.n, {
+                    c.a.createElement(L.n, {
                       onChange: this.OnToggleChannelAutomation,
-                      label: Object(V.d)("#RSSManager_Status_Automation_Desc"),
+                      label: Object($.d)("#RSSManager_Status_Automation_Desc"),
                       checked: this.m_Admin.BIsAutomationEnabled(),
                       description: ""
                     }),
                     this.m_Admin.BIsAutomationEnabled() &&
-                      d.a.createElement(
+                      c.a.createElement(
                         "p",
                         null,
-                        Object(V.d)("#CuratorAdmin_RSSFeed_lastscanned"),
+                        Object($.d)("#CuratorAdmin_RSSFeed_lastscanned"),
                         " ",
-                        Object(V.h)(this.m_Admin.GetRSSLastRtimeChecked(), !1),
+                        Object($.h)(this.m_Admin.GetRSSLastRtimeChecked(), !1),
                         "  @ ",
-                        Object(V.i)(this.m_Admin.GetRSSLastRtimeChecked()),
+                        Object($.i)(this.m_Admin.GetRSSLastRtimeChecked()),
                         " ",
-                        d.a.createElement(
+                        c.a.createElement(
                           "a",
                           { onClick: this.OnQueueScan },
-                          d.a.createElement(
+                          c.a.createElement(
                             "span",
                             null,
-                            Object(V.d)("#CuratorAdmin_RSSFeed_scannow")
+                            Object($.d)("#CuratorAdmin_RSSFeed_scannow")
                           )
                         )
                       )
                   )
                 : null;
             }),
-            Object(l.c)([$.a], e.prototype, "OnToggleChannelAutomation", null),
-            Object(l.c)([$.a], e.prototype, "OnQueueScan", null),
-            (e = Object(l.c)([P.observer], e))
+            Object(d.c)([Q.a], e.prototype, "OnToggleChannelAutomation", null),
+            Object(d.c)([Q.a], e.prototype, "OnQueueScan", null),
+            (e = Object(d.c)([A.observer], e))
           );
-        })(d.a.Component),
-        X = (function(t) {
+        })(c.a.Component),
+        ee = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
               (e.state = {
-                clan_event_gid: C.Get().MapArticleURLToClanEventGID(
+                clan_event_gid: P.Get().MapArticleURLToClanEventGID(
                   e.props.newsData.post.url
                 ),
                 bLoadingPartnerEvent: Boolean(
-                  C.Get().MapArticleURLToClanEventGID(e.props.newsData.post.url)
+                  P.Get().MapArticleURLToClanEventGID(e.props.newsData.post.url)
                 )
               }),
-              (e.m_refParent = d.a.createRef()),
+              (e.m_refParent = c.a.createRef()),
               e
             );
           }
           return (
-            Object(l.d)(e, t),
+            Object(d.d)(e, t),
             (e.prototype.componentDidMount = function() {
               this.DoPartnerEventLoad();
             }),
             (e.prototype.DoPartnerEventLoad = function() {
-              return Object(l.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t, n;
-                return Object(l.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return this.state.clan_event_gid
-                        ? ((t = C.Get().GetClanSteamID()),
+                        ? ((t = P.Get().GetClanSteamID()),
                           [
                             4,
                             B.c.LoadPartnerEventFromClanEventGIDAndClanSteamID(
@@ -2108,11 +2351,10 @@
                 r = t.clanSteamID,
                 s = new U.n();
               (s.GID = "PreviewPartnerEventRow_0"),
-                (s.GID = "PreviewPartnerEventRow_0"),
                 (s.clanSteamID = r),
                 (s.postTime = Date.now() / 1e3),
                 (s.startTime = Date.now() / 1e3),
-                (s.type = D.a.k_ENewsEvent),
+                (s.type = G.a.k_ENewsEvent),
                 s.vecTags.push("auto_rssfeed"),
                 s.vecTags.push("curator"),
                 s.vecTags.push("curator_public"),
@@ -2143,27 +2385,27 @@
               var t = this.props,
                 n = t.newsData,
                 r = t.fnGetRSSUrl;
-              Object(T.d)(
-                d.a.createElement(Z, {
+              Object(W.d)(
+                c.a.createElement(te, {
                   newsData: n,
                   strRSSUrl: r(),
                   fnClanEventGID: this.OnClanEventCreateSuccess
                 }),
-                Object(H.m)(e)
+                Object(q.m)(e)
               );
             }),
             (e.prototype.OnUpdateNewsEvent = function(e) {
               var t = this.props,
                 n = t.newsData,
                 r = t.fnGetRSSUrl;
-              Object(T.d)(
-                d.a.createElement(Z, {
+              Object(W.d)(
+                c.a.createElement(te, {
                   newsData: n,
                   strRSSUrl: r(),
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                   bUpdatePost: !0
                 }),
-                Object(H.m)(e)
+                Object(q.m)(e)
               );
             }),
             (e.prototype.HideModalEvent = function() {
@@ -2176,20 +2418,20 @@
               );
             }),
             (e.prototype.OnShowRawRSS = function(e) {
-              Object(T.d)(
-                d.a.createElement(
-                  N.c,
+              Object(W.d)(
+                c.a.createElement(
+                  z.c,
                   {
                     bAlertDialog: !0,
-                    strTitle: Object(V.d)("#RSSManager_PostEvent_ViewRaw")
+                    strTitle: Object($.d)("#RSSManager_PostEvent_ViewRaw")
                   },
-                  d.a.createElement("textarea", {
-                    className: Q.RawRSS,
+                  c.a.createElement("textarea", {
+                    className: J.RawRSS,
                     value: this.props.newsData.rss_message,
                     disabled: !0
                   })
                 ),
-                Object(H.m)(e)
+                Object(q.m)(e)
               );
             }),
             (e.prototype.render = function() {
@@ -2198,135 +2440,158 @@
                 n = t.clan_event_gid,
                 r = t.existingEventModel,
                 s = t.bLoadingPartnerEvent,
-                a = r && r.BIsStagedEvent(),
-                i = C.Get();
-              return d.a.createElement(
+                a = P.Get(),
+                i = a.GetClanSteamID(),
+                o = r && r.BIsStagedEvent(),
+                d =
+                  e.post.appids &&
+                  1 == e.post.appids.length &&
+                  e.post.appids[0],
+                l =
+                  0 !== e.post.recommendation_state &&
+                  d &&
+                  D.Get().BHasReviewForApp(i, d);
+              return c.a.createElement(
                 "div",
                 {
-                  className: Object(x.a)(
-                    Q.PostCtn,
-                    Boolean(n) ? Q.ActivePost : ""
+                  className: Object(V.a)(
+                    J.PostCtn,
+                    Boolean(n) ? J.ActivePost : ""
                   )
                 },
-                d.a.createElement("span", { className: Q.PostTitle }, e.title),
-                d.a.createElement("br", null),
+                c.a.createElement("span", { className: J.PostTitle }, e.title),
+                c.a.createElement("br", null),
                 Boolean(r) &&
-                  d.a.createElement(
-                    d.a.Fragment,
+                  c.a.createElement(
+                    c.a.Fragment,
                     null,
                     Boolean(r.BIsVisibleEvent()) &&
-                      d.a.createElement(
+                      c.a.createElement(
                         "span",
-                        { className: Q.PostDate },
-                        Object(V.j)(
+                        { className: J.PostDate },
+                        Object($.j)(
                           "#RSSManager_PostEvent_PostedDate",
-                          Object(V.k)(r.GetPostTimeAndDateUnixSeconds()) +
+                          Object($.k)(r.GetPostTimeAndDateUnixSeconds()) +
                             " @ " +
-                            Object(V.i)(r.GetPostTimeAndDateUnixSeconds())
+                            Object($.i)(r.GetPostTimeAndDateUnixSeconds())
                         )
                       ),
                     Boolean(!r.BIsVisibleEvent()) &&
-                      d.a.createElement(
+                      c.a.createElement(
                         "span",
                         {
-                          className: Object(x.a)(
-                            Q.PostDraft,
-                            a ? Q.PostStaged : ""
+                          className: Object(V.a)(
+                            J.PostDraft,
+                            o ? J.PostStaged : ""
                           )
                         },
-                        Object(V.d)(
-                          a
+                        Object($.d)(
+                          o
                             ? "#RSSManager_PostEvent_Staged"
                             : "#RSSManager_PostEvent_Draft",
-                          a
-                            ? Object(V.k)(
+                          o
+                            ? Object($.k)(
                                 r.GetVisibilityStartTimeAndDateUnixSeconds()
                               ) +
                                 " @ " +
-                                Object(V.i)(
+                                Object($.i)(
                                   r.GetVisibilityStartTimeAndDateUnixSeconds()
                                 )
                             : ""
                         )
                       )
                   ),
-                d.a.createElement(
+                c.a.createElement(
                   "div",
-                  { className: Q.ButtonCtn },
+                  { className: J.ButtonCtn },
                   Boolean(n)
-                    ? d.a.createElement(
-                        d.a.Fragment,
+                    ? c.a.createElement(
+                        c.a.Fragment,
                         null,
                         Boolean(s)
-                          ? d.a.createElement(z.a, {
-                              string: Object(V.d)("#Loading"),
+                          ? c.a.createElement(x.a, {
+                              string: Object($.d)("#Loading"),
                               size: "small",
                               position: "center"
                             })
-                          : d.a.createElement(
+                          : c.a.createElement(
                               "div",
                               {
                                 onClick: this.OnViewEvent,
-                                className: Object(x.a)(I.a.Button, Q.PreviewBtn)
+                                className: Object(V.a)(T.a.Button, J.PreviewBtn)
                               },
-                              Object(V.d)("#RSSManager_PostEvent_ViewEvent")
+                              Object($.d)("#RSSManager_PostEvent_ViewEvent")
                             ),
-                        d.a.createElement(
+                        c.a.createElement(
                           "a",
                           {
-                            className: Object(x.a)(I.a.Button, Q.PreviewBtn),
+                            className: Object(V.a)(T.a.Button, J.PreviewBtn),
                             href:
-                              g.c.COMMUNITY_BASE_URL +
+                              u.c.COMMUNITY_BASE_URL +
                               "gid/" +
-                              i.GetClanSteamID().ConvertTo64BitString() +
+                              a.GetClanSteamID().ConvertTo64BitString() +
                               "/partnerevents/edit/" +
                               this.state.clan_event_gid
                           },
-                          Object(V.d)("#RSSManager_PostEvent_EditEvent")
+                          Object($.d)("#RSSManager_PostEvent_EditEvent")
                         ),
-                        d.a.createElement(
+                        c.a.createElement(
                           "div",
                           {
                             onClick: this.OnUpdateNewsEvent,
-                            className: Object(x.a)(I.a.Button, Q.PreviewBtn)
+                            className: Object(V.a)(T.a.Button, J.PreviewBtn)
                           },
-                          Object(V.d)("#RSSManager_PostEvent_UpdateEvent")
-                        )
+                          Object($.d)("#RSSManager_PostEvent_UpdateEvent")
+                        ),
+                        l &&
+                          c.a.createElement(
+                            "a",
+                            {
+                              className: Object(V.a)(T.a.Button, J.PreviewBtn),
+                              href:
+                                u.c.STORE_BASE_URL +
+                                "app/" +
+                                e.post.appids[0] +
+                                "/?curator_clanid=" +
+                                i.GetAccountID()
+                            },
+                            Object($.d)("#RSSManager_SeeReview")
+                          )
                       )
-                    : d.a.createElement(
-                        d.a.Fragment,
+                    : c.a.createElement(
+                        c.a.Fragment,
                         null,
-                        d.a.createElement(
+                        c.a.createElement(
                           "div",
                           {
                             onClick: this.OnOpenPreviewAsPartnerEvent,
-                            className: Object(x.a)(I.a.Button, Q.PreviewBtn)
+                            className: Object(V.a)(T.a.Button, J.PreviewBtn)
                           },
-                          Object(V.d)("#CuratorAdmin_RSSFeed_col_preview_event")
+                          Object($.d)("#CuratorAdmin_RSSFeed_col_preview_event")
                         ),
-                        d.a.createElement(
+                        c.a.createElement(
                           "div",
                           {
                             onClick: this.OnPostNewsEvent,
-                            className: Object(x.a)(I.a.Button, Q.PreviewBtn)
+                            className: Object(V.a)(T.a.Button, J.PreviewBtn)
                           },
-                          Object(V.d)("#CuratorAdmin_RSSFeed_col_create_event")
+                          Object($.d)("#CuratorAdmin_RSSFeed_col_create_event")
                         )
                       ),
                   Boolean(e.rss_message && 0 < e.rss_message.length) &&
-                    d.a.createElement(
+                    c.a.createElement(
                       "div",
-                      { onClick: this.OnShowRawRSS, className: Q.ViewRaw },
-                      Object(V.d)("#RSSManager_PostEvent_ViewRaw")
+                      { onClick: this.OnShowRawRSS, className: J.ViewRaw },
+                      Object($.d)("#RSSManager_PostEvent_ViewRaw")
                     ),
                   Boolean(this.state.eventModelForPreviewNow) &&
-                    d.a.createElement(
-                      N.h,
-                      { className: k.StoreHeaderAdjust },
-                      d.a.createElement(
+                    c.a.createElement(
+                      z.h,
+                      { className: N.StoreHeaderAdjust },
+                      c.a.createElement(
                         "div",
                         null,
-                        d.a.createElement(L.a, {
+                        c.a.createElement(I.a, {
                           event: this.state.eventModelForPreviewNow,
                           fnClose: this.HideModalEvent
                         })
@@ -2335,23 +2600,23 @@
                 )
               );
             }),
-            Object(l.c)([$.a], e.prototype, "DoPartnerEventLoad", null),
-            Object(l.c)(
-              [$.a],
+            Object(d.c)([Q.a], e.prototype, "DoPartnerEventLoad", null),
+            Object(d.c)(
+              [Q.a],
               e.prototype,
               "OnOpenPreviewAsPartnerEvent",
               null
             ),
-            Object(l.c)([$.a], e.prototype, "OnViewEvent", null),
-            Object(l.c)([$.a], e.prototype, "OnPostNewsEvent", null),
-            Object(l.c)([$.a], e.prototype, "OnUpdateNewsEvent", null),
-            Object(l.c)([$.a], e.prototype, "HideModalEvent", null),
-            Object(l.c)([$.a], e.prototype, "OnClanEventCreateSuccess", null),
-            Object(l.c)([$.a], e.prototype, "OnShowRawRSS", null),
-            (e = Object(l.c)([P.observer], e))
+            Object(d.c)([Q.a], e.prototype, "OnViewEvent", null),
+            Object(d.c)([Q.a], e.prototype, "OnPostNewsEvent", null),
+            Object(d.c)([Q.a], e.prototype, "OnUpdateNewsEvent", null),
+            Object(d.c)([Q.a], e.prototype, "HideModalEvent", null),
+            Object(d.c)([Q.a], e.prototype, "OnClanEventCreateSuccess", null),
+            Object(d.c)([Q.a], e.prototype, "OnShowRawRSS", null),
+            (e = Object(d.c)([A.observer], e))
           );
-        })(d.a.Component),
-        Z = (function(t) {
+        })(c.a.Component),
+        te = (function(t) {
           function n() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (
@@ -2360,21 +2625,21 @@
                 step: n.DetermineStartState(e.props),
                 bDraftMode: !0
               }),
-              (e.m_Admin = C.Get()),
+              (e.m_Admin = P.Get()),
               e
             );
           }
           return (
-            Object(l.d)(n, t),
+            Object(d.d)(n, t),
             (n.DetermineStartState = function(e) {
-              var t = C.Get().BHasSetupFeed(e.strRSSUrl);
+              var t = P.Get().BHasSetupFeed(e.strRSSUrl);
               return e.newsData && t
                 ? e.bUpdatePost
                   ? "update_post"
                   : "create_post"
                 : e.bActivatePooling
                 ? "activate_feed"
-                : C.Get().BHasSavedRSSURL()
+                : P.Get().BHasSavedRSSURL()
                 ? "update_feed"
                 : "feed_missing";
             }),
@@ -2382,9 +2647,9 @@
               this.setState({ step: "creating_feed" }, this.DoCreateNewsFeed);
             }),
             (n.prototype.DoCreateNewsFeed = function() {
-              return Object(l.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t;
-                return Object(l.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return [
@@ -2400,7 +2665,7 @@
                           ? this.setState({
                               step: "failure",
                               eResult: t.success,
-                              strErrorMessage: Object(V.d)(
+                              strErrorMessage: Object($.d)(
                                 "#RSSManager_PostEvent_Failure"
                               )
                             })
@@ -2419,9 +2684,9 @@
               this.setState({ step: "waiting_post" }, this.DoCreatePost);
             }),
             (n.prototype.DoCreatePost = function() {
-              return Object(l.b)(this, void 0, void 0, function() {
+              return Object(d.b)(this, void 0, void 0, function() {
                 var t;
-                return Object(l.e)(this, function(e) {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       return [
@@ -2437,7 +2702,7 @@
                           ? this.setState({
                               step: "failure",
                               eResult: t.GetEResult(),
-                              strErrorMessage: Object(V.d)(
+                              strErrorMessage: Object($.d)(
                                 "#RSSManager_PostEvent_Failure"
                               )
                             })
@@ -2466,19 +2731,19 @@
             }),
             (n.prototype.GetStrTitle = function() {
               if (this.props.newsData)
-                return Object(V.d)(
+                return Object($.d)(
                   this.props.bUpdatePost
                     ? "#RSSManager_PostEvent_UpdateEvent"
                     : "#RSSManager_PostEvent_Tilte"
                 );
               switch (this.state.initialState) {
                 case "feed_missing":
-                  return Object(V.d)("#RSSManager_PostEvent_CreateFeedTitle");
+                  return Object($.d)("#RSSManager_PostEvent_CreateFeedTitle");
                 default:
                 case "update_feed":
-                  return Object(V.d)("#RSSManager_PostEvent_UpdateFeedTitle");
+                  return Object($.d)("#RSSManager_PostEvent_UpdateFeedTitle");
                 case "activate_feed":
-                  return Object(V.d)("#RSSManager_Status_Automation_Activate");
+                  return Object($.d)("#RSSManager_Status_Automation_Activate");
               }
             }),
             (n.prototype.render = function() {
@@ -2488,70 +2753,70 @@
                 case "activate_feed":
                 case "update_feed":
                 default:
-                  return d.a.createElement(
-                    N.d,
+                  return c.a.createElement(
+                    z.d,
                     null,
-                    d.a.createElement(G.i, null, " ", this.GetStrTitle(), " "),
-                    d.a.createElement(
-                      G.a,
+                    c.a.createElement(L.i, null, " ", this.GetStrTitle(), " "),
+                    c.a.createElement(
+                      L.a,
                       null,
-                      d.a.createElement(
-                        G.b,
+                      c.a.createElement(
+                        L.b,
                         null,
                         this.props.newsData &&
-                          d.a.createElement(
+                          c.a.createElement(
                             "div",
                             null,
-                            Object(V.d)(
+                            Object($.d)(
                               "#RSSManager_PostEvent_CreateFeed_DuringPost"
                             )
                           ),
                         Boolean("activate_feed" !== this.state.step) &&
-                          d.a.createElement(
+                          c.a.createElement(
                             "div",
                             null,
-                            Object(V.d)(
+                            Object($.d)(
                               "#RSSManager_PostEvent_CreateFeed_Desc",
                               e
                             )
                           ),
-                        d.a.createElement(
+                        c.a.createElement(
                           "div",
                           null,
-                          Object(V.d)("#RSSManager_CreateFeed_Review")
+                          Object($.d)("#RSSManager_CreateFeed_Review")
                         ),
-                        d.a.createElement(
+                        c.a.createElement(
                           "div",
                           null,
-                          d.a.createElement(G.d, {
-                            label: Object(V.d)(
+                          c.a.createElement(L.d, {
+                            label: Object($.d)(
                               "#RSSManager_CreateFeed_Permissions_v1"
                             ),
                             onChange: this.OnChangePermissionsCreateFeed,
                             checked: Boolean(this.state.bPermissions)
                           })
                         ),
-                        d.a.createElement(
+                        c.a.createElement(
                           "div",
                           null,
-                          d.a.createElement(G.d, {
-                            label: Object(V.d)(
+                          c.a.createElement(L.d, {
+                            label: Object($.d)(
                               "#RSSManager_CreateFeed_Conduct_v1"
                             ),
                             onChange: this.OnChangeConductCreateFeed,
                             checked: Boolean(this.state.bConduct)
                           }),
-                          d.a.createElement(
-                            W.a,
-                            { href: g.c.STORE_BASE_URL + "online_conduct/" },
-                            Object(V.d)("#RSSManager_CreateFeed_Conduct_Link")
+                          c.a.createElement(
+                            H.a,
+                            { href: u.c.STORE_BASE_URL + "online_conduct/" },
+                            Object($.d)("#RSSManager_CreateFeed_Conduct_Link")
                           )
                         )
                       ),
-                      d.a.createElement(
-                        G.h,
+                      c.a.createElement(
+                        L.h,
                         null,
-                        d.a.createElement(G.l, {
+                        c.a.createElement(L.l, {
                           bOKDisabled: !Boolean(
                             this.state.bPermissions && this.state.bConduct
                           ),
@@ -2562,18 +2827,18 @@
                     )
                   );
                 case "failure":
-                  return d.a.createElement(
-                    N.e,
+                  return c.a.createElement(
+                    z.e,
                     {
-                      strDescription: Object(V.d)(
+                      strDescription: Object($.d)(
                         "#RSSManager_PostEvent_Failure"
                       ),
                       closeModal: this.props.closeModal
                     },
-                    d.a.createElement(
+                    c.a.createElement(
                       "div",
                       null,
-                      Object(V.d)(
+                      Object($.d)(
                         "#Error_Description",
                         this.state.eResult,
                         this.state.strErrorMessage
@@ -2582,47 +2847,47 @@
                   );
                 case "creating_feed":
                 case "waiting_post":
-                  return d.a.createElement(
-                    N.c,
+                  return c.a.createElement(
+                    z.c,
                     {
                       strTitle: this.GetStrTitle(),
-                      strDescription: Object(V.d)(
+                      strDescription: Object($.d)(
                         "#RSSManager_PostEvent_InFlight"
                       ),
                       closeModal: this.props.closeModal
                     },
-                    d.a.createElement(z.a, { position: "center" })
+                    c.a.createElement(x.a, { position: "center" })
                   );
                 case "create_post":
-                  return d.a.createElement(
-                    N.d,
+                  return c.a.createElement(
+                    z.d,
                     null,
-                    d.a.createElement(G.i, null, " ", this.GetStrTitle(), " "),
-                    d.a.createElement(
-                      G.a,
+                    c.a.createElement(L.i, null, " ", this.GetStrTitle(), " "),
+                    c.a.createElement(
+                      L.a,
                       null,
-                      d.a.createElement(
-                        G.b,
+                      c.a.createElement(
+                        L.b,
                         null,
-                        d.a.createElement(
+                        c.a.createElement(
                           "div",
                           null,
-                          d.a.createElement(
+                          c.a.createElement(
                             "div",
                             null,
-                            Object(V.d)("#RSSManager_PostEvent_CreatePost")
+                            Object($.d)("#RSSManager_PostEvent_CreatePost")
                           ),
-                          d.a.createElement(
+                          c.a.createElement(
                             "div",
-                            { className: Q.DialogPostTitle },
+                            { className: J.DialogPostTitle },
                             this.props.newsData.title
                           ),
-                          d.a.createElement("br", null),
-                          d.a.createElement(
+                          c.a.createElement("br", null),
+                          c.a.createElement(
                             "div",
                             null,
-                            d.a.createElement(G.d, {
-                              label: Object(V.d)(
+                            c.a.createElement(L.d, {
+                              label: Object($.d)(
                                 "#RSSManager_PostEvent_CreatePost_Draft"
                               ),
                               onChange: this.OnChangeDraftMode,
@@ -2631,10 +2896,10 @@
                           )
                         )
                       ),
-                      d.a.createElement(
-                        G.h,
+                      c.a.createElement(
+                        L.h,
                         null,
-                        d.a.createElement(G.l, {
+                        c.a.createElement(L.l, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal
                         })
@@ -2642,37 +2907,37 @@
                     )
                   );
                 case "update_post":
-                  return d.a.createElement(
-                    N.d,
+                  return c.a.createElement(
+                    z.d,
                     null,
-                    d.a.createElement(G.i, null, " ", this.GetStrTitle(), " "),
-                    d.a.createElement(
-                      G.a,
+                    c.a.createElement(L.i, null, " ", this.GetStrTitle(), " "),
+                    c.a.createElement(
+                      L.a,
                       null,
-                      d.a.createElement(
-                        G.b,
+                      c.a.createElement(
+                        L.b,
                         null,
-                        d.a.createElement(
+                        c.a.createElement(
                           "div",
                           null,
-                          d.a.createElement(
+                          c.a.createElement(
                             "div",
                             null,
-                            Object(V.d)("#RSSManager_PostEvent_UpdatePost")
+                            Object($.d)("#RSSManager_PostEvent_UpdatePost")
                           ),
-                          d.a.createElement("br", null),
-                          d.a.createElement(
+                          c.a.createElement("br", null),
+                          c.a.createElement(
                             "div",
-                            { className: Q.DialogPostTitle },
+                            { className: J.DialogPostTitle },
                             this.props.newsData.title
                           ),
-                          d.a.createElement("br", null)
+                          c.a.createElement("br", null)
                         )
                       ),
-                      d.a.createElement(
-                        G.h,
+                      c.a.createElement(
+                        L.h,
                         null,
-                        d.a.createElement(G.l, {
+                        c.a.createElement(L.l, {
                           onOK: this.OnCreatePost,
                           onCancel: this.props.closeModal
                         })
@@ -2680,11 +2945,11 @@
                     )
                   );
                 case "success":
-                  return d.a.createElement(
-                    N.c,
+                  return c.a.createElement(
+                    z.c,
                     {
                       strTitle: this.GetStrTitle(),
-                      strDescription: Object(V.d)(
+                      strDescription: Object($.d)(
                         this.props.newsData
                           ? "#RSSManager_PostEvent_Success"
                           : "#RSSManager_PostEvent_Success_feed"
@@ -2693,11 +2958,11 @@
                       bAlertDialog: !0
                     },
                     Boolean(this.state.eventGID) &&
-                      d.a.createElement(
+                      c.a.createElement(
                         "a",
                         {
                           href:
-                            g.c.COMMUNITY_BASE_URL +
+                            u.c.COMMUNITY_BASE_URL +
                             "gid/" +
                             this.m_Admin
                               .GetClanSteamID()
@@ -2705,42 +2970,42 @@
                             "/partnerevents/edit/" +
                             this.state.eventGID
                         },
-                        Object(V.d)("#RSSManager_PostEvent_EventLink")
+                        Object($.d)("#RSSManager_PostEvent_EventLink")
                       )
                   );
               }
             }),
-            Object(l.c)([$.a], n.prototype, "OnCreateNewsFeed", null),
-            Object(l.c)([$.a], n.prototype, "DoCreateNewsFeed", null),
-            Object(l.c)([$.a], n.prototype, "OnCreatePost", null),
-            Object(l.c)([$.a], n.prototype, "DoCreatePost", null),
-            Object(l.c)([$.a], n.prototype, "OnChangeDraftMode", null),
-            Object(l.c)(
-              [$.a],
+            Object(d.c)([Q.a], n.prototype, "OnCreateNewsFeed", null),
+            Object(d.c)([Q.a], n.prototype, "DoCreateNewsFeed", null),
+            Object(d.c)([Q.a], n.prototype, "OnCreatePost", null),
+            Object(d.c)([Q.a], n.prototype, "DoCreatePost", null),
+            Object(d.c)([Q.a], n.prototype, "OnChangeDraftMode", null),
+            Object(d.c)(
+              [Q.a],
               n.prototype,
               "OnChangePermissionsCreateFeed",
               null
             ),
-            Object(l.c)([$.a], n.prototype, "OnChangeConductCreateFeed", null),
-            Object(l.c)([$.a], n.prototype, "GetStrTitle", null),
+            Object(d.c)([Q.a], n.prototype, "OnChangeConductCreateFeed", null),
+            Object(d.c)([Q.a], n.prototype, "GetStrTitle", null),
             n
           );
-        })(d.a.Component),
-        ee = n("IjL/"),
-        te = n("9w6b"),
-        ne = (function(t) {
+        })(c.a.Component),
+        ne = n("IjL/"),
+        re = n("9w6b"),
+        se = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { bIsLoading: !0 }), e;
           }
           return (
-            Object(l.d)(e, t),
+            Object(d.d)(e, t),
             (e.prototype.componentDidMount = function() {
-              return Object(l.b)(this, void 0, void 0, function() {
-                return Object(l.e)(this, function(e) {
+              return Object(d.b)(this, void 0, void 0, function() {
+                return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return C.Get(), [4, te.a.InitGlobal()];
+                      return P.Get(), [4, re.a.InitGlobal()];
                     case 1:
                       return e.sent(), this.setState({ bIsLoading: !1 }), [2];
                   }
@@ -2749,33 +3014,33 @@
             }),
             (e.prototype.render = function() {
               return (
-                Object(i.a)(
+                Object(a.a)(
                   null == window.Prototype,
                   "Should not include prototypejs."
                 ),
                 this.state.bIsLoading
                   ? null
-                  : d.a.createElement(
-                      ee.a,
+                  : c.a.createElement(
+                      ne.a,
                       null,
-                      d.a.createElement(
-                        a.d,
+                      c.a.createElement(
+                        s.d,
                         null,
-                        d.a.createElement(a.b, {
+                        c.a.createElement(s.b, {
                           exact: !0,
                           path:
                             "/(curator|pub|publisher|dev|developer|franchise)/:curator_vanity/admin/manage_rss",
-                          component: Y
+                          component: K
                         }),
-                        d.a.createElement(a.b, null, !1)
+                        c.a.createElement(s.b, null, !1)
                       )
                     )
               );
             }),
             e
           );
-        })(d.a.Component);
-      t.default = ne;
+        })(c.a.Component);
+      t.default = se;
     },
     A2AY: function(e, t, n) {
       e.exports = {

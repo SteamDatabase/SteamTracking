@@ -151,6 +151,45 @@
                     "optional": false
                 }
             ]
+        },
+        {
+            "name": "SetAppChatRoomConfig",
+            "version": 1,
+            "httpmethod": "POST",
+            "description": "Update the display and rules properties for an app-created chat room",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "chat_group_id",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false
+                },
+                {
+                    "name": "name",
+                    "type": "string",
+                    "optional": false
+                },
+                {
+                    "name": "avatar_ugc_id",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "allow_user_invites",
+                    "type": "bool",
+                    "optional": false
+                }
+            ]
         }
     ]
 }

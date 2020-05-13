@@ -26,6 +26,17 @@ div.profile_page.has_profile_background {
 	background-repeat: no-repeat;
 }
 
+div.profile_page.has_profile_background.full_width_background {
+	background-size: 100%;
+}
+
+@media ( max-width: 1920px )
+{
+	div.profile_page.has_profile_background {
+		background-size: auto;
+	}
+}
+
 body.profile_page.has_profile_background {
 	background-color: #000000;
 }
@@ -43,6 +54,18 @@ body.profile_page.has_profile_background {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
+	width: 1920px;
+}
+
+div.profile_page.has_profile_background.full_width_background .profile_animated_background > video {
+	width: 100%;
+}
+
+@media ( max-width: 1920px )
+{
+	div.profile_page.has_profile_background.full_width_background .profile_animated_background > video {
+		width: 1920px;
+	}
 }
 
 body.profile_page.flat_page #footer_spacer {
