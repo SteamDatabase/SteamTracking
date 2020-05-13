@@ -370,6 +370,7 @@
 	"AppDetails_SectionTitle_SignIn": "%1$s to see friend activity",
 	"AppDetails_SectionTitle_OpenFriends": "Open Friends List",
 	"AppDetails_SectionTitle_OfflineMode": "Offline Mode",
+	"AppDetails_SectionTitle_IncludedWith": "Included With",
 
 	"AppDetails_Broadcast_ViewOnWeb": "View in web browser",
 
