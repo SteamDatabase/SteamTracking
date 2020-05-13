@@ -375,7 +375,7 @@
 "[english]Steam_Settings_Ingame_ShowFPS_LeftBottom"	"Bottom-left"
 "Steam_Settings_Ingame_ShowFPS_HightContrast"	"Suurikontrastiset värit"
 "[english]Steam_Settings_Ingame_ShowFPS_HightContrast"	"High contrast color"
-"Overlay_MicroTxnAuth_RefundPeriod"	"Steam tarjoaa hyvityksiä näille tuotteille 48 tunnin sisällä niiden ostamisesta, kunhan niitä ei olla käytetty niille sallitun kerran, muokattu, tai siirretty toiselle tilille. <a href=http://store.steampowered.com/steam_refunds>Lue lisää</a>"
+"Overlay_MicroTxnAuth_RefundPeriod"	"Steam tarjoaa hyvityksiä näille tuotteille 48 tunnin sisällä niiden ostamisesta, kunhan niitä ei olla käytetty, muokattu, tai siirretty toiselle tilille. <a href=http://store.steampowered.com/steam_refunds>Lisätietoja</a>"
 "[english]Overlay_MicroTxnAuth_RefundPeriod"	"Steam offers refunds for these items within 48 hours of purchase if they have not been consumed, modified, or transferred. <a href=http://store.steampowered.com/steam_refunds>Learn More</a>"
 "Overlay_MicroTxnAuth_NotRefundable"	"Näille tuotteille ei voi tarjota hyvitystä. <a href=http://store.steampowered.com/steam_refunds>Lue lisää</a>"
 "[english]Overlay_MicroTxnAuth_NotRefundable"	"These items are not eligible for a refund. <a href=http://store.steampowered.com/steam_refunds>Learn More</a>"

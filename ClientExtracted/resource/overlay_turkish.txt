@@ -447,5 +447,13 @@
 "[english]Steam_Settings_Library_IconInGameList_Title"	"Show game icons in the left column"
 "SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Players under 18 can't play this game between 10PM\nand 8AM the following day. Please take a break."
 "[english]SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Players under 18 can't play this game between 10PM\nand 8AM the following day. Please take a break."
+"Overlay_MicroTxnAuth_ConnectionError"	"Bağlantı Hatası"
+"[english]Overlay_MicroTxnAuth_ConnectionError"	"Connection Error"
+"Overlay_MicroTxnAuth_ConnectionError_Info"	"Steam ile yaşanan bir iletişim sorunundan ötürü işleminiz tamamlanamadı."
+"[english]Overlay_MicroTxnAuth_ConnectionError_Info"	"Your transaction could not be completed because was a problem communication with Steam."
+"Overlay_MicroTxnAuth_Insufficient_Funds"	"Yetersiz Bakiye"
+"[english]Overlay_MicroTxnAuth_Insufficient_Funds"	"Insufficient Funds"
+"Overlay_MicroTxnAuth_Insufficient_Funds_Info"	"Steam Cüzdanı'nızda satın alımınızı tamamlayacak kadar yeterli bakiye yok. Devam etmek için bakiye eklemek ister misiniz?"
+"[english]Overlay_MicroTxnAuth_Insufficient_Funds_Info"	"You do not have enough funds in your Steam Wallet to complete your purchase.  Would you like to add more funds to continue?"
 }
 }

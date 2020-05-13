@@ -1984,7 +1984,7 @@ NSt3__115basic_stringbufIwNS_11char_traitsIwEENS_9allocatorIwEEEE
 -nofriendsui
 -no-browser
 unconditionally disables CEF
-Assertion Failed: GetCPUInformation().m_bSSE2
+Assertion Failed: IsARM() || GetCPUInformation().m_bSSE2
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 GetBootstrapperVersion
 Assertion Failed: !bSuccess || bufOutput.TellPut() == width*height*3
@@ -3614,8 +3614,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-May  8 2020
-16:23:47
+May 12 2020
+14:14:48
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -7279,7 +7279,7 @@ p
 v#
 "
 dH
-@#
+~#
 #
 #
 #
@@ -7297,10 +7297,7 @@ p
 K
 ;"
 6"
-L"
-:"
-7"
-<"
+R"
 o>
 2
 2
@@ -7331,7 +7328,6 @@ d
 
 
 
-r
 p
 0
 0
@@ -7344,6 +7340,7 @@ p
 p
 0
 0
+n
 p
 0
 p
@@ -7366,7 +7363,6 @@ p
 0
 @
 =
-#
 
 0
 >
@@ -7626,7 +7622,9 @@ E,
 V'
 %
 !
+k
 
+e
 
 
 ,

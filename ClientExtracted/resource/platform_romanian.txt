@@ -59,7 +59,7 @@
 "[english]Steam_ErrorLoginFailed"	"Login to Steam failed.\nEither the specified account does not exist, or the password was wrong.\nPlease check your account name and password and try again."
 "Steam_Login_RememberPassword"	"Ținte minte parola mea"
 "[english]Steam_Login_RememberPassword"	"Remember my password"
-"Steam_Login_Btn"	"Autentificare"
+"Steam_Login_Btn"	"Conectare"
 "[english]Steam_Login_Btn"	"Login"
 "Steam_Login_Password"	"Parolă"
 "[english]Steam_Login_Password"	"Password"

@@ -1344,7 +1344,7 @@
 "[english]Friends_SteamInputControllerPlayerNumberChanged"	"is Now Player %player_number%"
 "RemotePlayTogether_Notification_AvailableToInvite_Title"	"Remote Play Together"
 "[english]RemotePlayTogether_Notification_AvailableToInvite_Title"	"Remote Play Together"
-"RemotePlayTogether_Notification_AvailableToInvite"	"Kliknij PPM na kimś z listy znajomych, by zaprosić go do gry."
+"RemotePlayTogether_Notification_AvailableToInvite"	"Kliknij PPM na kimś z listy znajomych, by zaprosić go do gry."
 "[english]RemotePlayTogether_Notification_AvailableToInvite"	"Right-click anyone in your Friends list to invite them to play."
 }
 }

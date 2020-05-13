@@ -817,7 +817,7 @@ forces usage of 32-bit steamwebhelper when available
 -clientui
 -no-browser
 unconditionally disables CEF
-Assertion Failed: GetCPUInformation().m_bSSE2
+Assertion Failed: IsARM() || GetCPUInformation().m_bSSE2
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/html/chrome_ipc_client.cpp
 Assertion Failed: !"Failed to kill existing helper process"
 Assertion Failed: m_hCEFHandle == INVALID_PROCESS_HANDLE
@@ -1756,6 +1756,7 @@ D
 "
 0
 $
+)
 Hi
 `
 
@@ -1771,7 +1772,7 @@ $
 A
 Hc
 =
-
+L95(x
 Hc
 ?
 ?

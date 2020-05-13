@@ -445,7 +445,7 @@
 "[english]Steam_Settings_Library_DisableCommunityContent_Disabled_Desc"	"Enabled by Low Bandwidth Mode.\n\nPrevents the automatic load of community content when viewing game details."
 "Steam_Settings_Library_IconInGameList_Title"	"Mostrar los íconos de los juegos en la columna izquierda"
 "[english]Steam_Settings_Library_IconInGameList_Title"	"Show game icons in the left column"
-"SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Los menores de 18 años no pueden jugar a este juego entre\nlas 10 p. m. y las 8 a. m. del día siguiente. Haz un descanso."
+"SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Los menores de 18 años no pueden jugar a este juego entre\nlas 10 p. m. y las 8 a. m. del día siguiente. Toma un descanso."
 "[english]SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Players under 18 can't play this game between 10PM\nand 8AM the following day. Please take a break."
 "Overlay_MicroTxnAuth_ConnectionError"	"Error de conexión"
 "[english]Overlay_MicroTxnAuth_ConnectionError"	"Connection Error"

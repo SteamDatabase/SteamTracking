@@ -786,7 +786,7 @@
 "[english]Checkout_Confirmation_ReturnToStore"	"Return to the store"
 "Library_RecentlyPlayed"	"ZULETZT GESPIELT"
 "[english]Library_RecentlyPlayed"	"RECENTLY PLAYED"
-"Library_ViewAll"	"ZEIGE ALLE"
+"Library_ViewAll"	"ALLE ANZEIGEN"
 "[english]Library_ViewAll"	"VIEW ALL"
 "Library_Games"	"SPIELE"
 "[english]Library_Games"	"GAMES"

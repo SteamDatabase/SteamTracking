@@ -753,6 +753,9 @@
 	"AppBox_TotalPlayTime_Hours": "Total: %1$s hrs",
 	"AppBox_TotalPlayTime_Minutes": "Total: %1$s min",
 
+	"AppBox_PlayNextMostPopular": "Most popular",
+	"AppBox_PlayNextMostPopularSub": "among players like you",
+
 	"AppActivity_Achieved":	" achieved",
 	"AppActivity_PostedScreenshot": " shared a screenshot",
 	"AppActivity_PostedScreenshot_Plural": " shared %1$s screenshots",
@@ -1032,6 +1035,12 @@
 
 	"Demo_SpotlightIntro": "Check out the full game",
 	"Demo_VisitStorePage": "Visit Store Page",
+
+	"WhatsNew_Title": "What's New?",
+	"WhatsNew_ReadMore": "Read More",
+
+	"WhatsNew_PlayNext_Title": "Play Next",
+	"WhatsNew_PlayNext_Description": "Now available on your library home screen, the new Play Next shelf uses technology developed in Steam Labs to recommend unplayed games from your library to try next.",
 
 	"SteamReviewScore_9": "Overwhelmingly Positive",
 	"SteamReviewScore_8": "Very Positive",

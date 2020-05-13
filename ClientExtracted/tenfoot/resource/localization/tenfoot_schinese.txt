@@ -718,7 +718,7 @@
 "[english]Checkout_BillingInfo_Address1"	"Billing address"
 "Checkout_BillingInfo_Address2"	"账单地址行 2"
 "[english]Checkout_BillingInfo_Address2"	"Billing address, line 2"
-"Checkout_BillingInfo_Country"	"国家"
+"Checkout_BillingInfo_Country"	"国家/地区"
 "[english]Checkout_BillingInfo_Country"	"Country"
 "Checkout_BillingInfo_LiveInCountry"	"选择您正在居住的国家"
 "[english]Checkout_BillingInfo_LiveInCountry"	"I currently live in the country selected above"

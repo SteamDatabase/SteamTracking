@@ -11292,6 +11292,30 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
   .appportrait_PlaytimeDetails_3bkuo.appportrait_PlayedTotal_ma8y_, .appportrait_PlaytimeDetails_3bkuo.appportrait_PlayedRecent_3JWBB {
     color: rgba(255, 255, 255, 0.51); }
 
+.appportrait_PortraitMessage_3gwMk {
+  box-sizing: border-box;
+  padding-left: 42px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  font-size: 12px;
+  padding-top: 6px;
+  line-height: 12px;
+  transition-property: opacity;
+  transition-duration: .4s;
+  transition-timing-function: cubic-bezier(0, 0.7, 0.8, 1); }
+  .appportrait_Short_yGeS6 .appportrait_PortraitMessage_3gwMk {
+    padding-top: 6px;
+    padding-left: 32px; }
+  .appportrait_PortraitMessage_3gwMk.appportrait_Message_3CRLA {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+    .appportrait_PortraitMessage_3gwMk.appportrait_Message_3CRLA.appportrait_Short_yGeS6 {
+      display: none; }
+  .appportrait_PortraitMessage_3gwMk.appportrait_SubMessage_3DR9f {
+    color: rgba(255, 255, 255, 0.51); }
+
 .appportrait_FriendsBar_3dncO {
   display: flex;
   flex-direction: row;
@@ -17381,6 +17405,26 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
     opacity: 0;
     transform: scale(0.75);
     filter: saturate(0); }
+
+.librarywhatsnew_Item_3Lept {
+  margin: 12px 0px;
+  font-size: 14px;
+  font-weight: 400;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column; }
+  .librarywhatsnew_Item_3Lept .librarywhatsnew_Title_LwlYs {
+    font-size: 20px;
+    color: #4297f8;
+    margin-bottom: 10px; }
+  .librarywhatsnew_Item_3Lept .librarywhatsnew_Description_3jGaQ {
+    margin-bottom: 10px; }
+  .librarywhatsnew_Item_3Lept .librarywhatsnew_ReadMore_1sXDN {
+    margin-bottom: 10px;
+    color: #4297f8; }
+  .librarywhatsnew_Item_3Lept .librarywhatsnew_Screenshot_3MyVU {
+    width: 100%;
+    overflow: hidden; }
 
 body {
   color: #969696;

@@ -6579,7 +6579,7 @@ rate
 -nofriendsui
 -no-browser
 unconditionally disables CEF
-Assertion Failed: GetCPUInformation().m_bSSE2
+Assertion Failed: IsARM() || GetCPUInformation().m_bSSE2
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 GetBootstrapperVersion
 SteamHIDPipeToRemote_%u
@@ -13938,9 +13938,9 @@ ShowLegalInformation
 SettingsPanel_About
 file://{resources}/layout/settings/settings_about.xml
 build_date
-May  8 2020
+May 12 2020
 build_time
-16:28:53
+14:17:55
 package_version
 local
 SteamClient020
@@ -21176,9 +21176,9 @@ not_installed
 uninstalling
 stopping
 installing
-verifying
+verifying update
 starting
-validating
+verifying install
 preallocating
 preloading
 downloading
@@ -21778,7 +21778,7 @@ ChatInvitationNotification
 GameInviteNotification
 TradeInviteNotification
 steam/cached/aboutdialog.res
-16:31:05
+14:19:44
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -27053,7 +27053,7 @@ Reconfiguring
 AddingFiles
 Staging
 Committing
-Verifying
+VerifyingUpdate
 Stopping
 Running
 No Error
@@ -31265,8 +31265,6 @@ q
 @
 @
 @
-q~
-P~
 @
 @
 @
@@ -31293,6 +31291,7 @@ P~
 @
 @
 @
+1~
 @
 @
 @
@@ -31373,6 +31372,7 @@ p
 @
 @
 @
+>
 @
 @
 @
@@ -31434,10 +31434,12 @@ o
 @
 @
 @
+[|
 @
 @
 @
 @
++~
 4n
 /n
 @
@@ -31529,7 +31531,6 @@ jm
 @
 @
 @
-,}
 (z
 Km
 @
@@ -31600,7 +31601,6 @@ Km
 @
 @
 }l
-Nz
 @
 @
 @
@@ -31615,6 +31615,7 @@ l
 /l
 @
 @
+"|
 
 l
 @
@@ -31627,6 +31628,7 @@ m
 p
 0
 0
+v{
 @
 @
 @
@@ -31664,6 +31666,7 @@ k
 @
 @
 p
+;x
 0
 p
 @
@@ -31722,7 +31725,6 @@ p
 @
 @
 @
-Oz
 %
 @
 @
@@ -31798,7 +31800,6 @@ j
 @
 @
 @
-~y
 bg
 @
 @
@@ -31815,6 +31816,7 @@ Hc
 @
 @
 i
+Ay
 D
 y
 y
@@ -31826,6 +31828,7 @@ f
 @
 @
 @
+2v
 @
 @
 @
@@ -31914,6 +31917,7 @@ h
 @
 @
 @
+;x
 g
 @
 @
@@ -31981,18 +31985,20 @@ Eg
 @
 @
 @
+Dw
 @
 @
 @
 @
 @
-:w
+7w
 @
 @
 @
 @
 @
 @
+2w
 @
 @
 @
@@ -32037,19 +32043,16 @@ t
 \J
 f
 f
-Iz
 0
 p
 p
 0
 b
 J
-Nv
-Iv
 0
 p
-(v
-v
+Br
+'|
 J
 J
 @
@@ -32080,7 +32083,6 @@ e
 0H
 @
 @
--u
 ed
 @
 @
@@ -32088,6 +32090,7 @@ ed
 @
 @
 @
+"u
 u
 @
 @
@@ -32111,6 +32114,7 @@ p
 @
 @
 @
+=t
 +U
 @
 @
@@ -32175,8 +32179,6 @@ c
 @
 @
 @
--r
-+r
 @
 @
 @
@@ -32187,16 +32189,18 @@ p
 0
 0
 0
-8s
 `
 
 b
 s
 s
 s
-s
 C
 x
+%q
+0r
+.r
+.r
 @
 @
 @
@@ -32346,7 +32350,6 @@ H^
 `
 `
 `
-m
 2
 @
 @
@@ -32396,7 +32399,7 @@ _
 @
 @
 B
-cu
+Sm
 @
 @
 @
@@ -32459,7 +32462,6 @@ cu
 @
 @
 @
-Do
 @
 @
 @
@@ -32570,7 +32572,7 @@ j
 @
 @
 @
-0i
+Tm
 @
 @
 @
@@ -32579,6 +32581,7 @@ j
 @
 @
 L
+-m
 @
 @
 @
@@ -32668,6 +32671,7 @@ rY
 b:
 0
 p
+4l
 
 =
 @t*=
@@ -32708,8 +32712,10 @@ Y
 @
 @
 @
+sj
 =
-Zf
+)j
+)j
 {X
 xX
 sX
@@ -32737,11 +32743,9 @@ W
 W
 =
 =
+Gk
 {
-2g
-qh
 3V
-)h
 6
 6
 V
@@ -32760,14 +32764,17 @@ J4
 S5
 
 9
+af
+Xf
 T
->f
+Cf
 T
 I
 f
 f
 0
 p
+0`
 l
 .
 S
@@ -32778,6 +32785,7 @@ S
 IcE
 g
 2
+Ka
 lR
 d
 d
@@ -32786,8 +32794,8 @@ d
 3
 2
 2
-bd
-Vd
+fd
+,d
 d
 d
 Y1
@@ -32811,6 +32819,7 @@ I#E
 I#E
 A#u
 I#E
+*h
 5
 2
 2
@@ -32830,13 +32839,12 @@ P
 0
 P
 P
+tb
 *
 4
 4
 4
 4
-b
-Ja
 O
 O
 O
@@ -32846,10 +32854,10 @@ O
 D.
 \
 c
+7a
 (
 1)
 a
-.[
 N
 N
 N
@@ -32877,6 +32885,7 @@ p
 p
 0
 p
+?`
 dM
 VM
 
@@ -32899,12 +32908,14 @@ Hc
 @
 =
 @
+{c
 h0
 d
 '
 M0
 2
 zK
+s^
 F0
 H=
 H=
@@ -32914,10 +32925,11 @@ i
 p
 0
 p
+E^
 X
 0
-S\
 K
+^
 ^
 ^
 ^
@@ -32951,14 +32963,14 @@ p
 p
 ]
 ]
+1^
 0
 p
 -
-z\
 ((
-x[
+wV
 P(
-[
+E\
 I
 I
 I
@@ -32976,8 +32988,6 @@ p
 0
 H
 X
-Q[
-5U
 w
 t
 [
@@ -33004,10 +33014,7 @@ t
 [
 [
 [
-[
-[
-[
-[
+\
 [
 @
 @
@@ -33035,11 +33042,11 @@ I
 
 0
 p
+QZ
 0
 p
 +
 +
-)Z
 p
 0
 0
@@ -33049,9 +33056,10 @@ F
 F
 F
 *
-\R
 Y
+#X
 yD
+X
 X
 X
 0
@@ -33072,6 +33080,7 @@ U
 @
 C
 ;
+QU
 
 p
 0
@@ -33082,11 +33091,11 @@ p
 4
 "
 V
+{V
 W
 0
 p
 @
-hV
 NB
 @
 @
@@ -33098,6 +33107,7 @@ I
 Q
 I
 d&
+vU
 @
 0
 p
@@ -33105,6 +33115,7 @@ p
 p
 p
 0
+HU
 0
 p
 0
@@ -33116,6 +33127,7 @@ p
 I
 A
 A
+-Q
 t
 0
 p
@@ -33144,10 +33156,12 @@ L
 @
 @
 @
+^T
 0
 p
 M
 Y
+nS
 @
 @
 =
@@ -33161,6 +33175,7 @@ R
 R
 =
 N
+W
 [=
 :=
 =
@@ -33168,17 +33183,16 @@ N
 =
 =
 =
-wV
 T<
 S<
-P
+tP
+L95
 P
 P
 P
 P
 Hc
 ;
-O
 O
 O
 N
@@ -33209,11 +33223,10 @@ H=
 9
 9
 9
+\
 
 
 
-jO
-iO
 
 
 `
@@ -33227,7 +33240,6 @@ r7
 H
 l7
 
-Q
 Q
 Q
 (
@@ -33404,7 +33416,6 @@ B
 @
 d
 d
-(y
 @
 D
 D
@@ -33428,6 +33439,7 @@ x
 
 =
 @
+SL
 $
 $
 $
@@ -33442,7 +33454,6 @@ I
 x
 =
 x
-SH
 8
 }
 H
@@ -33673,7 +33684,6 @@ R+
 +
 +
 +
-8
 *
 *
 *
@@ -33683,12 +33693,13 @@ R+
 (
 (
 5
-:<
 d
 ~&
+3
 
 
 [
+7
 0
 
 2
@@ -33696,7 +33707,6 @@ d
 &
 &
 $
-8
 t=
 =
 =
@@ -33707,6 +33717,7 @@ U0
 uV%
 
 
+u6
 E
 V!
 6
@@ -33722,15 +33733,16 @@ V!
 .
 .
 .
+.
 
 
+65
 
 )
 5
 .
 @
-v4
-u4
+n4
 \
 @
 @
@@ -33751,6 +33763,7 @@ u4
 =
 
 
+E3
 @
 @
 @
@@ -33758,7 +33771,6 @@ u4
 3
 @
 @
-Z0
 @
 @
 @
@@ -33781,8 +33793,7 @@ Z0
 .
 d
 d
-]4
-E2
+|2
 *
 *
 2
@@ -33798,13 +33809,11 @@ d
 =
 =
 @
-51
 =
 @
 @
 @
 j
-b
 P
 P
 @
@@ -33813,9 +33822,6 @@ P
 @
 @
 @
-o0
-|(
-)0
 &
 6
 =
@@ -33828,12 +33834,12 @@ o0
 0
 0
 0
-0
 E
-//
+L/
 '
 '
 '
+R.
 @
 `
 0
@@ -33893,8 +33899,6 @@ i
 @
 @
 @
-*
-1
 1
 @
 @
@@ -33908,12 +33912,14 @@ i
 [
 @
 @
+{w
 @
 @
 @
 @
 @
 @
+rx
 @
 @
 @
@@ -33928,7 +33934,6 @@ i
 @
 @
 x
-x
 @
 @
 @
@@ -33950,6 +33955,7 @@ x
 @
 @
 @
+3!
 )
 @
 @
@@ -33964,14 +33970,12 @@ x
 @
 @
 @
-mv
 @
 @
 @
 @
 @
 @
-u
 @
 @
 @
@@ -34006,7 +34010,6 @@ u
 @
 @
 '
-I(
 (
 %
 @
@@ -34149,7 +34152,6 @@ L
 
 
 
-dS
 @
 @
 @
@@ -34203,14 +34205,17 @@ dS
 @
 @
 @
+Kn
 !
 !
+!
 @
 @
 @
 @
 @
 @
+Q
 Q
 Q
 Q
@@ -34244,7 +34249,7 @@ $
 @
 @
 k
-:j
+Sb
 @
 @
 @
@@ -34257,17 +34262,17 @@ k
 @
 @
 @
-6
-L95f
+|
+L95v
 
 N
 x
 ~
-J
-l}
+m}
 @
 @
 @
+4}
 
 @
 @
@@ -34295,7 +34300,6 @@ l}
 @
 @
 @
-g{
 @
 @
 @
@@ -34318,13 +34322,14 @@ g{
 @
 @
 @
+|
 @
 @
 @
 @
 @
 @
-Xz
+)~
 @
 @
 @
@@ -34545,7 +34550,6 @@ Xz
 @
 @
 @
-{G
 @
 @
 @
@@ -34614,16 +34618,6 @@ e
 @
 @
 @
-e
-@
-@
-@
-@
-@
-@
-@
-@
-GG
 @
 @
 @
@@ -34657,7 +34651,17 @@ GG
 @
 @
 @
+@
+@
+@
+@
+@
+@
+@
+@
+]y
 p
+Hz
 @
 @
 @
