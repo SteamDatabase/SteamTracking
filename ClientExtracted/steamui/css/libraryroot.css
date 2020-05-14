@@ -17420,8 +17420,9 @@ div.ShortRightPanel .libraryhomeshowcases_AddShowcase_2aw5a {
   .librarywhatsnew_Item_3Lept .librarywhatsnew_Description_3jGaQ {
     margin-bottom: 10px; }
   .librarywhatsnew_Item_3Lept .librarywhatsnew_ReadMore_1sXDN {
-    margin-bottom: 10px;
-    color: #4297f8; }
+    margin-bottom: 10px; }
+    .librarywhatsnew_Item_3Lept .librarywhatsnew_ReadMore_1sXDN a {
+      color: #4297f8; }
   .librarywhatsnew_Item_3Lept .librarywhatsnew_Screenshot_3MyVU {
     width: 100%;
     overflow: hidden; }
