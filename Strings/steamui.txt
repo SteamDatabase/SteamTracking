@@ -13940,7 +13940,7 @@ file://{resources}/layout/settings/settings_about.xml
 build_date
 May 14 2020
 build_time
-15:16:37
+20:11:55
 package_version
 local
 SteamClient020
@@ -21176,9 +21176,9 @@ not_installed
 uninstalling
 stopping
 installing
-verifying update
+verifying
 starting
-verifying install
+validating
 preallocating
 preloading
 downloading
@@ -21778,7 +21778,7 @@ ChatInvitationNotification
 GameInviteNotification
 TradeInviteNotification
 steam/cached/aboutdialog.res
-15:18:39
+20:13:51
 CAboutDialog
 ValveSurveySummarizeData
 #steam_systeminfo_title
@@ -27053,7 +27053,7 @@ Reconfiguring
 AddingFiles
 Staging
 Committing
-VerifyingUpdate
+Verifying
 Stopping
 Running
 No Error
@@ -32043,6 +32043,7 @@ t
 \J
 f
 f
+Iz
 0
 p
 p
@@ -32052,7 +32053,6 @@ J
 0
 p
 Br
-'|
 J
 J
 @
@@ -32400,6 +32400,7 @@ _
 @
 B
 Sm
+cu
 @
 @
 @
@@ -32743,7 +32744,6 @@ W
 W
 =
 =
-Gk
 {
 3V
 6
@@ -32819,7 +32819,6 @@ I#E
 I#E
 A#u
 I#E
-*h
 5
 2
 2
@@ -32908,7 +32907,6 @@ Hc
 @
 =
 @
-{c
 h0
 d
 '
@@ -32929,7 +32927,6 @@ E^
 X
 0
 K
-^
 ^
 ^
 ^
@@ -32963,14 +32960,12 @@ p
 p
 ]
 ]
-1^
 0
 p
 -
 ((
 wV
 P(
-E\
 I
 I
 I
@@ -33014,7 +33009,10 @@ t
 [
 [
 [
-\
+[
+[
+[
+[
 [
 @
 @
@@ -33042,7 +33040,6 @@ I
 
 0
 p
-QZ
 0
 p
 +
@@ -33057,7 +33054,6 @@ F
 F
 *
 Y
-#X
 yD
 X
 X
@@ -33091,11 +33087,11 @@ p
 4
 "
 V
-{V
 W
 0
 p
 @
+0V
 NB
 @
 @
@@ -33107,7 +33103,6 @@ I
 Q
 I
 d&
-vU
 @
 0
 p
@@ -33115,7 +33110,6 @@ p
 p
 p
 0
-HU
 0
 p
 0
@@ -33156,12 +33150,11 @@ L
 @
 @
 @
-^T
 0
 p
 M
+xS
 Y
-nS
 @
 @
 =
@@ -33175,7 +33168,6 @@ R
 R
 =
 N
-W
 [=
 :=
 =
@@ -33183,16 +33175,17 @@ W
 =
 =
 =
+wV
 T<
 S<
-tP
-L95
+P
 P
 P
 P
 P
 Hc
 ;
+O
 O
 O
 N
@@ -33224,10 +33217,11 @@ H=
 9
 9
 9
-\
 
 
 
+jO
+iO
 
 
 `
@@ -33241,6 +33235,7 @@ r7
 H
 l7
 
+Q
 Q
 Q
 (
@@ -33417,6 +33412,7 @@ B
 @
 d
 d
+(y
 @
 D
 D
@@ -33440,7 +33436,6 @@ x
 
 =
 @
-SL
 $
 $
 $
@@ -33455,6 +33450,7 @@ I
 x
 =
 x
+SH
 8
 }
 H
@@ -33694,6 +33690,7 @@ R+
 (
 (
 5
+:<
 d
 ~&
 3
@@ -33708,6 +33705,7 @@ d
 &
 &
 $
+8
 t=
 =
 =
@@ -33718,7 +33716,6 @@ U0
 uV%
 
 
-u6
 E
 V!
 6
@@ -33737,13 +33734,13 @@ V!
 .
 
 
-65
 
 )
 5
 .
 @
-n4
+v4
+u4
 \
 @
 @
@@ -33764,7 +33761,6 @@ n4
 =
 
 
-E3
 @
 @
 @
@@ -33794,7 +33790,8 @@ E3
 .
 d
 d
-|2
+]4
+E2
 *
 *
 2
@@ -33810,11 +33807,13 @@ d
 =
 =
 @
+51
 =
 @
 @
 @
 j
+b
 P
 P
 @
@@ -33823,6 +33822,8 @@ P
 @
 @
 @
+o0
+)0
 &
 6
 =
@@ -33835,12 +33836,12 @@ P
 0
 0
 0
+0
 E
-L/
+//
 '
 '
 '
-R.
 @
 `
 0
@@ -33900,6 +33901,8 @@ i
 @
 @
 @
+*
+1
 1
 @
 @
@@ -33913,14 +33916,6 @@ i
 [
 @
 @
-{w
-@
-@
-@
-@
-@
-@
-rx
 @
 @
 @
@@ -33934,6 +33929,13 @@ rx
 @
 @
 @
+@
+@
+@
+@
+@
+@
+x
 x
 @
 @
@@ -33971,12 +33973,14 @@ x
 @
 @
 @
+mv
 @
 @
 @
 @
 @
 @
+u
 @
 @
 @
@@ -34011,6 +34015,7 @@ x
 @
 @
 '
+I(
 (
 %
 @
@@ -34153,6 +34158,7 @@ L
 
 
 
+dS
 @
 @
 @
@@ -34206,17 +34212,14 @@ L
 @
 @
 @
-Kn
 !
 !
-!
 @
 @
 @
 @
 @
 @
-Q
 Q
 Q
 Q
@@ -34250,7 +34253,7 @@ $
 @
 @
 k
-Sb
+:j
 @
 @
 @
@@ -34263,17 +34266,17 @@ Sb
 @
 @
 @
-|
-L95v
+6
+L95f
 
 N
 x
 ~
-m}
+J
+l}
 @
 @
 @
-4}
 
 @
 @
@@ -34301,6 +34304,7 @@ m}
 @
 @
 @
+g{
 @
 @
 @
@@ -34323,14 +34327,13 @@ m}
 @
 @
 @
-|
 @
 @
 @
 @
 @
 @
-)~
+Xz
 @
 @
 @
@@ -34551,6 +34554,7 @@ m}
 @
 @
 @
+{G
 @
 @
 @
@@ -34619,6 +34623,16 @@ e
 @
 @
 @
+e
+@
+@
+@
+@
+@
+@
+@
+@
+GG
 @
 @
 @
@@ -34652,17 +34666,7 @@ e
 @
 @
 @
-@
-@
-@
-@
-@
-@
-@
-@
-]y
 p
-Hz
 @
 @
 @
