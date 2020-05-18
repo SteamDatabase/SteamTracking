@@ -1983,9 +1983,7 @@
             }),
             (e.prototype.GetStoreInitializationTimestamp = function() {
               return (
-                this.m_dtInitTime ||
-                  ((this.m_dtInitTime = new Date()),
-                  this.m_dtInitTime.setDate(this.m_dtInitTime.getDate() + 5)),
+                this.m_dtInitTime || (this.m_dtInitTime = new Date()),
                 this.m_dtInitTime
               );
             }),
