@@ -279,7 +279,8 @@ preallocating
 downloading
 staging
 committing
-validating
+verifying install
+verifying update
 running
 unknown
 Update state (0x%X) : Timed out waiting for update to start, bailing.
@@ -1171,7 +1172,6 @@ U
 
 =
 @
-
 a
 @
 @
