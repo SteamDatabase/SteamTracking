@@ -1795,7 +1795,7 @@
                         null,
                         Object($.d)(
                           "#CuratorAdmin_RSSFeed_lang",
-                          Object(G.c)(
+                          Object(G.b)(
                             this.m_Admin.GetCuratorLangaugeHandleUnset()
                           )
                         ),
@@ -2229,12 +2229,12 @@
                       .then(function() {
                         return Object(
                           W.d
-                        )(c.a.createElement(z.c, { strTitle: Object($.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object($.d)("#CuratorAdmin_RSSFeed_queued") }), Object(q.m)(n));
+                        )(c.a.createElement(z.b, { strTitle: Object($.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object($.d)("#CuratorAdmin_RSSFeed_queued") }), Object(q.m)(n));
                       })
                       .catch(function(e) {
                         return Object(
                           W.d
-                        )(c.a.createElement(z.e, { strTitle: Object($.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(Y.a)(e) }), Object(q.m)(n));
+                        )(c.a.createElement(z.d, { strTitle: Object($.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(Y.a)(e) }), Object(q.m)(n));
                       })
                       .finally(function() {
                         return t.setState({ strReasonWaiting: void 0 });
@@ -2354,7 +2354,7 @@
                 (s.clanSteamID = r),
                 (s.postTime = Date.now() / 1e3),
                 (s.startTime = Date.now() / 1e3),
-                (s.type = G.a.k_ENewsEvent),
+                (s.type = 28),
                 s.vecTags.push("auto_rssfeed"),
                 s.vecTags.push("curator"),
                 s.vecTags.push("curator_public"),
@@ -2362,6 +2362,8 @@
                 s.description.set(0, n.desc),
                 this.ValidateJSONDefault(n.jsondata) &&
                   (s.jsondata = n.jsondata),
+                s.jsondata.read_more_link ||
+                  (s.jsondata.read_more_link = n.unique_id),
                 this.ShowModalEvent(s);
             }),
             (e.prototype.OnViewEvent = function() {
@@ -2420,7 +2422,7 @@
             (e.prototype.OnShowRawRSS = function(e) {
               Object(W.d)(
                 c.a.createElement(
-                  z.c,
+                  z.b,
                   {
                     bAlertDialog: !0,
                     strTitle: Object($.d)("#RSSManager_PostEvent_ViewRaw")
@@ -2586,7 +2588,7 @@
                     ),
                   Boolean(this.state.eventModelForPreviewNow) &&
                     c.a.createElement(
-                      z.h,
+                      z.g,
                       { className: N.StoreHeaderAdjust },
                       c.a.createElement(
                         "div",
@@ -2754,7 +2756,7 @@
                 case "update_feed":
                 default:
                   return c.a.createElement(
-                    z.d,
+                    z.c,
                     null,
                     c.a.createElement(L.i, null, " ", this.GetStrTitle(), " "),
                     c.a.createElement(
@@ -2828,7 +2830,7 @@
                   );
                 case "failure":
                   return c.a.createElement(
-                    z.e,
+                    z.d,
                     {
                       strDescription: Object($.d)(
                         "#RSSManager_PostEvent_Failure"
@@ -2848,7 +2850,7 @@
                 case "creating_feed":
                 case "waiting_post":
                   return c.a.createElement(
-                    z.c,
+                    z.b,
                     {
                       strTitle: this.GetStrTitle(),
                       strDescription: Object($.d)(
@@ -2860,7 +2862,7 @@
                   );
                 case "create_post":
                   return c.a.createElement(
-                    z.d,
+                    z.c,
                     null,
                     c.a.createElement(L.i, null, " ", this.GetStrTitle(), " "),
                     c.a.createElement(
@@ -2908,7 +2910,7 @@
                   );
                 case "update_post":
                   return c.a.createElement(
-                    z.d,
+                    z.c,
                     null,
                     c.a.createElement(L.i, null, " ", this.GetStrTitle(), " "),
                     c.a.createElement(
@@ -2946,7 +2948,7 @@
                   );
                 case "success":
                   return c.a.createElement(
-                    z.c,
+                    z.b,
                     {
                       strTitle: this.GetStrTitle(),
                       strDescription: Object($.d)(

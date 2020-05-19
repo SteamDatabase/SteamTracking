@@ -113,6 +113,20 @@
 	border: none;
 }
 
+.playerAvatar .profile_avatar_frame {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	pointer-events: none;
+}
+.playerAvatar .profile_avatar_frame > img {
+	transform: scale(1.23);
+	width: 32px;
+	height: 32px;
+	background: none;
+}
+
 .playerAvatar.medium {
 	width: 66px;
 	height: 66px;
@@ -122,6 +136,12 @@
 	width: 64px;
 	height: 64px;
 }
+.playerAvatar.medium .profile_avatar_frame > img {
+	width: 64px;
+	height: 64px;
+	transform: scale(1.225);
+}
+
 
 .playerAvatar.full {
 	width: 186px;

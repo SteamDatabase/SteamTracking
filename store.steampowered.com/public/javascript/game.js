@@ -426,6 +426,7 @@ function OnRecommendationVotedTag( recommendationid, tagID, bRateUp )
 	}
 }
 
+
 function RequestCurrentUserRecommendationVotes( recommendationIDs )
 {
 	if ( recommendationIDs.length == 0 )

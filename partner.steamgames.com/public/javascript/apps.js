@@ -3561,22 +3561,46 @@ function ReleaseGame(appid, data)
 	});
 }
 
+function AddToDedicatedServerPackage( appid, bAdd )
+{
+	$J.ajax({
+		type: "POST",
+		url: "https://partner.steamgames.com/apps/ajaxaddtodedicatedserverpackage/"+appid,
+		dataType: "json",
+		data: {
+			'add' : bAdd,
+			'sessionid' : g_sessionID,
+		},
+		success: function( response )
+		{
+			if ( response.success != 1 )
+			{
+				ShowAlertDialog( 'Failed to update Dedicated Server package', response.messages );
+			}
+		},
+		error: function ( response )
+		{
+			ShowAlertDialog( 'Failed to update Dedicated Server package', response.messages );
+		}
+	});
+}
+
 function CreateDemo( parentId, demoName )
 {
 	CreateNewAppHelper( 0, parentId, demoName, 'Demo', false, 10, true );
 }
 
-function CreateTool( parentId, strName, bAddToFreeSub )
+function CreateTool( parentId, strName )
 {
-	CreateNewAppHelper( 0, parentId, strName, 'Tool', false, 10, true, bAddToFreeSub );
+	CreateNewAppHelper( 0, parentId, strName, 'Tool', false, 10, true );
 }
 
 function CreateNewApp( pubId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText )
 {
-	CreateNewAppHelper( pubId, 0, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, false, bF2PText );
+	CreateNewAppHelper( pubId, 0, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText );
 }
 
-function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bAddToFreeSub, bF2PText )
+function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText )
 {
 	var progressDialog = ShowProgressDialog( 'Create New App', 'Creating New App' );
 	progressDialog.done( function() { top.location.reload(); } );
@@ -3594,7 +3618,6 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 			'publisherid' : pubId,
 			'parentid' : parentId,
 			'f2p' : bF2P ? 1 : 0,
-			'add_to_free_sub' : bAddToFreeSub ? 1 : 0,
 			'f2ptext' : bF2PText,
 			'sessionid' : g_sessionID
 		}

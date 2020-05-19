@@ -1490,6 +1490,11 @@ html.touch .similar_grid_item .buttons {
 	margin-bottom: 4px;
 }
 
+.vote_button_ctn {
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
 @media screen and (max-width: 500px)
 {
 	html.responsive .review_controls_right {

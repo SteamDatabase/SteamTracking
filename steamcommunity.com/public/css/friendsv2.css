@@ -31,27 +31,40 @@ body.v6 {
     font-size: 26px;
 }
 .friends_header_ctn {
-    display:flex;
-    margin-left: 32px;
-    margin-top: 30px;
+	display:flex;
+	margin-left: 32px;
+	margin-top: 30px;
+}
+.friends_header_avatar {
+	position: relative;
+	display: inline-block;
+	float: left;
 }
 .friends_header_avatar img {
-    height: 64px;
-    width: 64px;
-    box-shadow: 0 0 5px rgba( 0, 0, 0, 0.25 );
+	height: 64px;
+	width: 64px;
+	box-shadow: 0 0 5px rgba( 0, 0, 0, 0.25 );
 }
-.friends_header_avatar, .friends_header_name {
-    display: inline-block;
-    float: left;
+.friends_header_avatar .profile_avatar_frame {
+	position: absolute;
+	z-index: 1;
+	transform: scale(1.2);
+	pointer-events: none;
+}
+.friends_header_avatar .profile_avatar_frame > img {
+	width: 100%;
+	height: 100%;
 }
 .friends_header_name_ctn {
-    display:flex;
-    flex-direction: column;
+	display:flex;
+	flex-direction: column;
 }
 .friends_header_name {
-    padding-top: 8px;
-    padding-left: 20px;
-    color: #fff;
+	padding-top: 8px;
+	padding-left: 20px;
+	color: #fff;
+	display: inline-block;
+	float: left;
 }
 
 .friends_header_owner {

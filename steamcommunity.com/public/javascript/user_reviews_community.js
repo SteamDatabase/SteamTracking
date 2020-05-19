@@ -68,3 +68,8 @@ function UserReviewVoteTag( id, tagID, elemID )
 		}
 	);
 }
+
+function OnUserReviewAward( id, reaction )
+{
+	top.location.reload();
+}

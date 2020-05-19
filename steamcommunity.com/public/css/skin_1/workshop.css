@@ -431,7 +431,7 @@ a.general_btn:hover {
 #mainContents
 {
 	background-repeat: no-repeat;
-	width:950px;
+	max-width: 950px;
 	margin:0;
 	padding:0;
 	text-align:left;
@@ -1824,10 +1824,9 @@ textarea {
 }
 
 #highlight_player_area {
-
 	position: relative;
 	margin: 0;
-	width: 635px;
+	max-width: 635px;
 }
 
 .highlight_player_item {
@@ -2083,8 +2082,9 @@ textarea {
 {
 	cursor: pointer;
 	display:block;
-	height:358px;
-	max-width:638px;
+	max-height: 358px;
+	max-width: 638px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;

@@ -2,182 +2,181 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5857313";
-!(function(e) {
-  function t(t) {
+var CLSTAMP = "5874123";
+!(function(t) {
+  function e(e) {
     for (
-      var r, a, c = t[0], u = t[1], s = t[2], _ = 0, h = [];
-      _ < c.length;
-      _++
+      var r, c, a = e[0], s = e[1], u = e[2], p = 0, h = [];
+      p < a.length;
+      p++
     )
-      (a = c[_]), o[a] && h.push(o[a][0]), (o[a] = 0);
-    for (r in u) Object.prototype.hasOwnProperty.call(u, r) && (e[r] = u[r]);
-    for (l && l(t); h.length; ) h.shift()();
-    return i.push.apply(i, s || []), n();
+      (c = a[p]), i[c] && h.push(i[c][0]), (i[c] = 0);
+    for (r in s) Object.prototype.hasOwnProperty.call(s, r) && (t[r] = s[r]);
+    for (l && l(e); h.length; ) h.shift()();
+    return o.push.apply(o, u || []), n();
   }
   function n() {
-    for (var e, t = 0; t < i.length; t++) {
-      for (var n = i[t], r = !0, c = 1; c < n.length; c++) {
-        var u = n[c];
-        0 !== o[u] && (r = !1);
+    for (var t, e = 0; e < o.length; e++) {
+      for (var n = o[e], r = !0, a = 1; a < n.length; a++) {
+        var s = n[a];
+        0 !== i[s] && (r = !1);
       }
-      r && (i.splice(t--, 1), (e = a((a.s = n[0]))));
+      r && (o.splice(e--, 1), (t = c((c.s = n[0]))));
     }
-    return e;
+    return t;
   }
   var r = {},
-    o = { 3: 0 },
-    i = [];
-  function a(t) {
-    if (r[t]) return r[t].exports;
-    var n = (r[t] = { i: t, l: !1, exports: {} });
-    return e[t].call(n.exports, n, n.exports, a), (n.l = !0), n.exports;
+    i = { 3: 0 },
+    o = [];
+  function c(e) {
+    if (r[e]) return r[e].exports;
+    var n = (r[e] = { i: e, l: !1, exports: {} });
+    return t[e].call(n.exports, n, n.exports, c), (n.l = !0), n.exports;
   }
-  (a.m = e),
-    (a.c = r),
-    (a.d = function(e, t, n) {
-      a.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: n });
+  (c.m = t),
+    (c.c = r),
+    (c.d = function(t, e, n) {
+      c.o(t, e) || Object.defineProperty(t, e, { enumerable: !0, get: n });
     }),
-    (a.r = function(e) {
+    (c.r = function(t) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
-        Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-        Object.defineProperty(e, "__esModule", { value: !0 });
+        Object.defineProperty(t, Symbol.toStringTag, { value: "Module" }),
+        Object.defineProperty(t, "__esModule", { value: !0 });
     }),
-    (a.t = function(e, t) {
-      if ((1 & t && (e = a(e)), 8 & t)) return e;
-      if (4 & t && "object" == typeof e && e && e.__esModule) return e;
+    (c.t = function(t, e) {
+      if ((1 & e && (t = c(t)), 8 & e)) return t;
+      if (4 & e && "object" == typeof t && t && t.__esModule) return t;
       var n = Object.create(null);
       if (
-        (a.r(n),
-        Object.defineProperty(n, "default", { enumerable: !0, value: e }),
-        2 & t && "string" != typeof e)
+        (c.r(n),
+        Object.defineProperty(n, "default", { enumerable: !0, value: t }),
+        2 & e && "string" != typeof t)
       )
-        for (var r in e)
-          a.d(
+        for (var r in t)
+          c.d(
             n,
             r,
-            function(t) {
-              return e[t];
+            function(e) {
+              return t[e];
             }.bind(null, r)
           );
       return n;
     }),
-    (a.n = function(e) {
-      var t =
-        e && e.__esModule
+    (c.n = function(t) {
+      var e =
+        t && t.__esModule
           ? function() {
-              return e.default;
+              return t.default;
             }
           : function() {
-              return e;
+              return t;
             };
-      return a.d(t, "a", t), t;
+      return c.d(e, "a", e), e;
     }),
-    (a.o = function(e, t) {
-      return Object.prototype.hasOwnProperty.call(e, t);
+    (c.o = function(t, e) {
+      return Object.prototype.hasOwnProperty.call(t, e);
     }),
-    (a.p = "");
-  var c = (window.webpackJsonp = window.webpackJsonp || []),
-    u = c.push.bind(c);
-  (c.push = t), (c = c.slice());
-  for (var s = 0; s < c.length; s++) t(c[s]);
-  var l = u;
-  i.push(["qM/t", 0]), n();
+    (c.p = "");
+  var a = (window.webpackJsonp = window.webpackJsonp || []),
+    s = a.push.bind(a);
+  (a.push = e), (a = a.slice());
+  for (var u = 0; u < a.length; u++) e(a[u]);
+  var l = s;
+  o.push(["qM/t", 0]), n();
 })({
-  "/7KC": function(e, t, n) {
+  "/7KC": function(t, e, n) {
     "use strict";
-    function r(e, t) {
+    function r(t, e) {
       return (
-        (e = Math.ceil(e)),
-        (t = Math.floor(t)),
-        Math.floor(Math.random() * (t - e + 1)) + e
+        (t = Math.ceil(t)),
+        (e = Math.floor(e)),
+        Math.floor(Math.random() * (e - t + 1)) + t
       );
     }
-    function o(e, t, n) {
-      return Math.max(t, Math.min(n, e));
+    function i(t, e, n) {
+      return Math.max(e, Math.min(n, t));
     }
-    function i(e, t, n, r, o) {
-      return r + ((o - r) * (e - t)) / (n - t);
+    function o(t, e, n, r, i) {
+      return r + ((i - r) * (t - e)) / (n - e);
     }
-    n.d(t, "b", function() {
+    n.d(e, "b", function() {
       return r;
     }),
-      n.d(t, "a", function() {
-        return o;
-      }),
-      n.d(t, "c", function() {
+      n.d(e, "a", function() {
         return i;
+      }),
+      n.d(e, "c", function() {
+        return o;
       });
   },
-  "0N1H": function(e, t, n) {
+  "0N1H": function(t, e, n) {
     "use strict";
-    function r(e) {
-      return 3 == e || 6 == e;
+    function r(t) {
+      return 3 == t || 6 == t;
     }
-    function o(e) {
-      return 5 == e || 6 == e;
+    function i(t) {
+      return 5 == t || 6 == t;
     }
-    n.d(t, "b", function() {
+    n.d(e, "b", function() {
       return r;
     }),
-      n.d(t, "a", function() {
+      n.d(e, "a", function() {
+        return i;
+      }),
+      n.d(e, "n", function() {
         return o;
       }),
-      n.d(t, "n", function() {
-        return a;
-      }),
-      n.d(t, "o", function() {
+      n.d(e, "o", function() {
         return c;
       }),
-      n.d(t, "g", function() {
-        return u;
+      n.d(e, "g", function() {
+        return a;
       }),
-      n.d(t, "h", function() {
+      n.d(e, "h", function() {
         return s;
       }),
-      n.d(t, "m", function() {
+      n.d(e, "m", function() {
+        return u;
+      }),
+      n.d(e, "i", function() {
         return l;
       }),
-      n.d(t, "i", function() {
-        return _;
-      }),
-      n.d(t, "j", function() {
-        return h;
-      }),
-      n.d(t, "l", function() {
+      n.d(e, "j", function() {
         return p;
       }),
-      n.d(t, "k", function() {
-        return m;
+      n.d(e, "l", function() {
+        return h;
       }),
-      n.d(t, "d", function() {
+      n.d(e, "k", function() {
         return f;
       }),
-      n.d(t, "f", function() {
+      n.d(e, "d", function() {
+        return m;
+      }),
+      n.d(e, "f", function() {
         return d;
       }),
-      n.d(t, "e", function() {
-        return E;
+      n.d(e, "e", function() {
+        return _;
       }),
-      n.d(t, "c", function() {
+      n.d(e, "c", function() {
         return v;
       });
-    var i,
-      a = 1,
+    var o = 1,
       c = 4,
-      u = 750,
+      a = 750,
       s = 799,
-      l = 7,
-      _ = 250820,
-      h = 330050,
-      p = 358510,
-      m = 366490,
-      f = "18446744073709551615",
+      u = 7,
+      l = 250820,
+      p = 330050,
+      h = 358510,
+      f = 366490,
+      m = "18446744073709551615",
       d = 0,
-      E = 2147483647;
-    function v(e, t) {
-      switch ((void 0 === t && (t = 0), e)) {
+      _ = 2147483647;
+    function v(t, e) {
+      switch ((void 0 === e && (e = 0), t)) {
         case "english":
           return 0;
         case "german":
@@ -238,196 +237,67 @@ var CLSTAMP = "5857313";
         case "vietnamese":
           return 28;
         default:
-          return t;
+          return e;
       }
     }
-    !(function(e) {
-      (e[(e.k_EOtherEvent = 1)] = "k_EOtherEvent"),
-        (e[(e.k_EGameEvent = 2)] = "k_EGameEvent"),
-        (e[(e.k_EPartyEvent = 3)] = "k_EPartyEvent"),
-        (e[(e.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
-        (e[(e.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
-        (e[(e.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
-        (e[(e.k_ESportsEvent = 7)] = "k_ESportsEvent"),
-        (e[(e.k_ETripEvent = 8)] = "k_ETripEvent"),
-        (e[(e.k_EChatEvent = 9)] = "k_EChatEvent"),
-        (e[(e.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
-        (e[(e.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent"),
-        (e[(e.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
-        (e[(e.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
-        (e[(e.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
-        (e[(e.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
-        (e[(e.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
-        (e[(e.k_EESportTournamentStreamEvent = 17)] =
-          "k_EESportTournamentStreamEvent"),
-        (e[(e.k_EDevStreamEvent = 18)] = "k_EDevStreamEvent"),
-        (e[(e.k_EFamousStreamEvent = 19)] = "k_EFamousStreamEvent"),
-        (e[(e.k_EGameSalesEvent = 20)] = "k_EGameSalesEvent"),
-        (e[(e.k_EGameItemSalesEvent = 21)] = "k_EGameItemSalesEvent"),
-        (e[(e.k_EInGameBonusXPEvent = 22)] = "k_EInGameBonusXPEvent"),
-        (e[(e.k_EInGameLootEvent = 23)] = "k_EInGameLootEvent"),
-        (e[(e.k_EInGamePerksEvent = 24)] = "k_EInGamePerksEvent"),
-        (e[(e.k_EInGameChallengeEvent = 25)] = "k_EInGameChallengeEvent"),
-        (e[(e.k_EInGameContestEvent = 26)] = "k_EInGameContestEvent"),
-        (e[(e.k_EIRLEvent = 27)] = "k_EIRLEvent"),
-        (e[(e.k_ENewsEvent = 28)] = "k_ENewsEvent"),
-        (e[(e.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
-        (e[(e.k_EFreeTrial = 31)] = "k_EFreeTrial"),
-        (e[(e.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-        (e[(e.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
-        (e[(e.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral");
-    })(i || (i = {}));
-    var b;
-    i.k_EOtherEvent,
-      i.k_EGameEvent,
-      i.k_EPartyEvent,
-      i.k_EMeetingEvent,
-      i.k_ESpecialCauseEvent,
-      i.k_EMusicAndArtsEvent,
-      i.k_ESportsEvent,
-      i.k_ETripEvent,
-      i.k_EChatEvent,
-      i.k_EGameReleaseEvent,
-      i.k_EBroadcastEvent,
-      i.k_ESmallUpdateEvent,
-      i.k_ERegularUpdateEvent,
-      i.k_EMajorUpdateEvent,
-      i.k_EDLCReleaseEvent,
-      i.k_EFutureReleaseEvent,
-      i.k_EESportTournamentStreamEvent,
-      i.k_EDevStreamEvent,
-      i.k_EFamousStreamEvent,
-      i.k_EGameSalesEvent,
-      i.k_EGameItemSalesEvent,
-      i.k_EInGameBonusXPEvent,
-      i.k_EInGameLootEvent,
-      i.k_EInGamePerksEvent,
-      i.k_EInGameChallengeEvent,
-      i.k_EInGameContestEvent,
-      i.k_EIRLEvent,
-      i.k_ENewsEvent,
-      i.k_EBetaReleaseEvent,
-      i.k_EFreeTrial,
-      i.k_ESeasonRelease,
-      i.k_ECrosspostEvent,
-      i.k_EInGameEventGeneral;
-    !(function(e) {
-      (e[(e.k_ELaunchSource_None = 0)] = "k_ELaunchSource_None"),
-        (e[(e.k_ELaunchSource_2ftLibraryDetails = 100)] =
-          "k_ELaunchSource_2ftLibraryDetails"),
-        (e[(e.k_ELaunchSource_2ftLibraryListView = 101)] =
-          "k_ELaunchSource_2ftLibraryListView"),
-        (e[(e.k_ELaunchSource_2ftLibraryGrid = 103)] =
-          "k_ELaunchSource_2ftLibraryGrid"),
-        (e[(e.k_ELaunchSource_InstallSubComplete = 104)] =
-          "k_ELaunchSource_InstallSubComplete"),
-        (e[(e.k_ELaunchSource_DownloadsPage = 105)] =
-          "k_ELaunchSource_DownloadsPage"),
-        (e[(e.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
-          "k_ELaunchSource_RemoteClientStartStreaming"),
-        (e[(e.k_ELaunchSource_2ftMiniModeList = 107)] =
-          "k_ELaunchSource_2ftMiniModeList"),
-        (e[(e.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-        (e[(e.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
-          "k_ELaunchSource_DashAppLaunchCmdLine"),
-        (e[(e.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
-          "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-        (e[(e.k_ELaunchSource_RunByGameDir = 302)] =
-          "k_ELaunchSource_RunByGameDir"),
-        (e[(e.k_ELaunchSource_SubCmdRunDashGame = 303)] =
-          "k_ELaunchSource_SubCmdRunDashGame"),
-        (e[(e.k_ELaunchSource_SteamURL_Launch = 400)] =
-          "k_ELaunchSource_SteamURL_Launch"),
-        (e[(e.k_ELaunchSource_SteamURL_Run = 401)] =
-          "k_ELaunchSource_SteamURL_Run"),
-        (e[(e.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
-          "k_ELaunchSource_SteamURL_JoinLobby"),
-        (e[(e.k_ELaunchSource_SteamURL_RunGame = 403)] =
-          "k_ELaunchSource_SteamURL_RunGame"),
-        (e[(e.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
-          "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-        (e[(e.k_ELaunchSource_SteamURL_RunSafe = 405)] =
-          "k_ELaunchSource_SteamURL_RunSafe"),
-        (e[(e.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
-        (e[(e.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
-          "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-        (e[(e.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
-          "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-        (e[(e.k_ELaunchSource_Dota2Launcher = 700)] =
-          "k_ELaunchSource_Dota2Launcher"),
-        (e[(e.k_ELaunchSource_IRunGameEngine = 800)] =
-          "k_ELaunchSource_IRunGameEngine"),
-        (e[(e.k_ELaunchSource_DRMFailureResponse = 801)] =
-          "k_ELaunchSource_DRMFailureResponse"),
-        (e[(e.k_ELaunchSource_DRMDataRequest = 802)] =
-          "k_ELaunchSource_DRMDataRequest"),
-        (e[(e.k_ELaunchSource_CloudFilePanel = 803)] =
-          "k_ELaunchSource_CloudFilePanel"),
-        (e[(e.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
-          "k_ELaunchSource_DiscoveredAlreadyRunning"),
-        (e[(e.k_ELaunchSource_GameActionJoinParty = 900)] =
-          "k_ELaunchSource_GameActionJoinParty"),
-        (e[(e.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
-          "k_ELaunchSource_AppPortraitContextMenu");
-    })(b || (b = {}));
   },
-  "1VtQ": function(e, t, n) {
+  "1VtQ": function(t, e, n) {
     "use strict";
-    function r(e, t, n) {
+    function r(t, e, n) {
       return {
         get: function() {
-          var e = n.value.bind(this);
+          var t = n.value.bind(this);
           return (
-            this.hasOwnProperty(t) ||
-              Object.defineProperty(this, t, { value: e }),
-            e
+            this.hasOwnProperty(e) ||
+              Object.defineProperty(this, e, { value: t }),
+            t
           );
         }
       };
     }
-    function o(e, t, n) {
-      return [e, t, n];
+    function i(t, e, n) {
+      return [t, e, n];
     }
-    n.d(t, "a", function() {
+    n.d(e, "a", function() {
       return r;
     }),
-      n.d(t, "b", function() {
-        return o;
+      n.d(e, "b", function() {
+        return i;
       });
   },
-  "1n9R": function(e, t, n) {
+  "1n9R": function(t, e, n) {
     "use strict";
     n("mrSG");
     var r = n("/7KC");
-    function o() {
+    function i() {
       return !!window.document;
     }
-    n.d(t, "b", function() {
-      return a;
+    n.d(e, "b", function() {
+      return c;
     }),
-      n.d(t, "h", function() {
-        return c;
+      n.d(e, "h", function() {
+        return a;
       }),
-      n.d(t, "a", function() {
-        return u;
+      n.d(e, "a", function() {
+        return s;
       }),
-      n.d(t, "e", function() {
-        return _;
-      }),
-      n.d(t, "g", function() {
-        return h;
-      }),
-      n.d(t, "f", function() {
+      n.d(e, "e", function() {
         return p;
       }),
-      n.d(t, "c", function() {
+      n.d(e, "g", function() {
+        return h;
+      }),
+      n.d(e, "f", function() {
+        return f;
+      }),
+      n.d(e, "c", function() {
         return m;
       }),
-      n.d(t, "d", function() {
-        return f;
+      n.d(e, "d", function() {
+        return d;
       });
-    var i,
-      a = {
+    var o,
+      c = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
         LANGUAGE: "english",
@@ -454,6 +324,7 @@ var CLSTAMP = "5857313";
         IN_TENFOOT: !1,
         PLATFORM: "",
         SNR: "",
+        LAUNCHER_TYPE: 0,
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
@@ -461,14 +332,14 @@ var CLSTAMP = "5857313";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!o()) return i || (i = _()), i;
-            var e = (function(e) {
-              if (!o() || !window.document.cookie) return null;
-              var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
-              return t && t[2] ? decodeURIComponent(t[2]) : null;
+            if (!i()) return o || (o = p()), o;
+            var t = (function(t) {
+              if (!i() || !window.document.cookie) return null;
+              var e = document.cookie.match("(^|; )" + t + "=([^;]*)");
+              return e && e[2] ? decodeURIComponent(e[2]) : null;
             })("sessionid");
-            e || (e = _());
-            return e;
+            t || (t = p());
+            return t;
           })();
         },
         FRIENDSUI_BETA: !1,
@@ -476,7 +347,7 @@ var CLSTAMP = "5857313";
         DEV_MODE: !1,
         OFFLINE_MODE: !1
       },
-      c = {
+      a = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -490,8 +361,8 @@ var CLSTAMP = "5857313";
         short_url: "",
         country_code: ""
       },
-      u = { steamid: "", clanid: 0, listid: 0 },
-      s = {
+      s = { steamid: "", clanid: 0, listid: 0 },
+      u = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
         ANNOUNCEMENT_GID: "",
@@ -508,205 +379,205 @@ var CLSTAMP = "5857313";
         HAS_ADULT_CONTENT_VIOLENCE: !1
       },
       l = "webui_config";
-    function _() {
-      var e = (function() {
-        for (var e = "", t = 0; t < 24; t++)
-          e += Object(r.b)(0, 35).toString(36);
-        return e;
+    function p() {
+      var t = (function() {
+        for (var t = "", e = 0; e < 24; e++)
+          t += Object(r.b)(0, 35).toString(36);
+        return t;
       })();
       return (
-        (function(e, t, n, r) {
-          if (o()) {
+        (function(t, e, n, r) {
+          if (i()) {
             r || (r = "/");
-            var i = "";
+            var o = "";
             if (void 0 !== n && n) {
-              var a = new Date();
-              a.setTime(a.getTime() + 864e5 * n),
-                (i = "; expires=" + a.toUTCString());
+              var c = new Date();
+              c.setTime(c.getTime() + 864e5 * n),
+                (o = "; expires=" + c.toUTCString());
             }
             document.cookie =
-              encodeURIComponent(e) +
-              "=" +
               encodeURIComponent(t) +
-              i +
+              "=" +
+              encodeURIComponent(e) +
+              o +
               ";path=" +
               r;
           }
-        })("sessionid", e, 0),
-        e
+        })("sessionid", t, 0),
+        t
       );
     }
-    function h(e) {
-      void 0 === e && (e = l);
-      var t = {},
-        n = p("config", e);
-      n && (delete n.SESSIONID, Object.assign(a, n), (t.config = !0));
-      var r = p("userinfo", e);
-      r && (Object.assign(c, r), (t.userConfig = !0));
-      var o = p("broadcast", e);
-      o && (Object.assign(u, o), (t.broadcastConfig = !0));
-      var i = p("community", e);
-      return i && (Object.assign(s, i), (t.communityConfig = !0)), t;
+    function h(t) {
+      void 0 === t && (t = l);
+      var e = {},
+        n = f("config", t);
+      n && (delete n.SESSIONID, Object.assign(c, n), (e.config = !0));
+      var r = f("userinfo", t);
+      r && (Object.assign(a, r), (e.userConfig = !0));
+      var i = f("broadcast", t);
+      i && (Object.assign(s, i), (e.broadcastConfig = !0));
+      var o = f("community", t);
+      return o && (Object.assign(u, o), (e.communityConfig = !0)), e;
     }
-    function p(e, t) {
+    function f(t, e) {
       var n;
       if (
-        (void 0 === t && (t = l),
-        (n = "string" == typeof t ? document.getElementById(t) : t))
+        (void 0 === e && (e = l),
+        (n = "string" == typeof e ? document.getElementById(e) : e))
       )
         try {
-          return n.hasAttribute("data-" + e)
-            ? JSON.parse(n.getAttribute("data-" + e))
+          return n.hasAttribute("data-" + t)
+            ? JSON.parse(n.getAttribute("data-" + t))
             : null;
-        } catch (e) {
-          console.error("Failed to parse config", e);
+        } catch (t) {
+          console.error("Failed to parse config", t);
         }
-      else console.error("Missing config element #", t);
+      else console.error("Missing config element #", e);
     }
     function m() {
-      var e = window.location.href;
-      return e.startsWith(a.STORE_BASE_URL)
-        ? a.STORE_BASE_URL
-        : e.startsWith(a.COMMUNITY_BASE_URL)
-        ? a.COMMUNITY_BASE_URL
-        : e.startsWith(a.PARTNER_BASE_URL)
-        ? a.PARTNER_BASE_URL
-        : e.startsWith(a.HELP_BASE_URL)
-        ? a.HELP_BASE_URL
-        : e.startsWith(a.STEAMTV_BASE_URL)
-        ? a.STEAMTV_BASE_URL
+      var t = window.location.href;
+      return t.startsWith(c.STORE_BASE_URL)
+        ? c.STORE_BASE_URL
+        : t.startsWith(c.COMMUNITY_BASE_URL)
+        ? c.COMMUNITY_BASE_URL
+        : t.startsWith(c.PARTNER_BASE_URL)
+        ? c.PARTNER_BASE_URL
+        : t.startsWith(c.HELP_BASE_URL)
+        ? c.HELP_BASE_URL
+        : t.startsWith(c.STEAMTV_BASE_URL)
+        ? c.STEAMTV_BASE_URL
         : "";
     }
-    function f() {
-      var e = window.location.href;
-      return e.startsWith(a.STORE_BASE_URL)
+    function d() {
+      var t = window.location.href;
+      return t.startsWith(c.STORE_BASE_URL)
         ? "store"
-        : e.startsWith(a.COMMUNITY_BASE_URL)
+        : t.startsWith(c.COMMUNITY_BASE_URL)
         ? "community"
-        : e.startsWith(a.PARTNER_BASE_URL)
+        : t.startsWith(c.PARTNER_BASE_URL)
         ? "partnerweb"
-        : e.startsWith(a.HELP_BASE_URL)
+        : t.startsWith(c.HELP_BASE_URL)
         ? "help"
-        : e.startsWith(a.STEAMTV_BASE_URL)
+        : t.startsWith(c.STEAMTV_BASE_URL)
         ? "steamtv"
         : "";
     }
   },
-  Ezvv: function(e, t, n) {
+  Ezvv: function(t, e, n) {
     "use strict";
-    n.d(t, "a", function() {
-      return i;
+    n.d(e, "a", function() {
+      return o;
     }),
-      n.d(t, "b", function() {
-        return c;
+      n.d(e, "b", function() {
+        return a;
       });
     var r = n("1n9R"),
-      o = { success: !0, result: 1 },
-      i = (function() {
-        function e() {
-          (this.m_connection = new a()),
+      i = { success: !0, result: 1 },
+      o = (function() {
+        function t() {
+          (this.m_connection = new c()),
             (this.m_bAllowAccountMismatch = !1),
             (this.m_mapCacheSubscribedApp = new Map());
         }
         return (
-          (e.prototype.FailureResult = function(e) {
-            void 0 === e && (e = 2);
-            var t = { success: !1, result: e };
+          (t.prototype.FailureResult = function(t) {
+            void 0 === t && (t = 2);
+            var e = { success: !1, result: t };
             return (
               this.m_connection &&
                 !this.m_connection.browser_supported &&
-                (t.browser_unsupported = !0),
+                (e.browser_unsupported = !0),
               this.m_connection &&
                 !this.m_connection.connected_to_client &&
-                (t.connect_failed = !0),
-              7 == e && (t.call_unsupported = !0),
-              t
+                (e.connect_failed = !0),
+              7 == t && (e.call_unsupported = !0),
+              e
             );
           }),
-          (e.prototype.SetAllowAccountMismatch = function(e) {
-            this.m_bAllowAccountMismatch = e;
+          (t.prototype.SetAllowAccountMismatch = function(t) {
+            this.m_bAllowAccountMismatch = t;
           }),
-          (e.prototype.BClientConnected = function() {
-            var e = this;
+          (t.prototype.BClientConnected = function() {
+            var t = this;
             return this.m_connection.Connect().then(
               function() {
-                return o;
+                return i;
               },
               function() {
-                return e.FailureResult();
+                return t.FailureResult();
               }
             );
           }),
-          (e.prototype.BClientSupportsMessage = function(e) {
+          (t.prototype.BClientSupportsMessage = function(t) {
             return (
               !(
                 !this.m_connection.connected_to_client ||
                 !this.m_connection.ready
               ) &&
-              -1 !== this.m_connection.ClientInfo.rgSupportedMessages.indexOf(e)
+              -1 !== this.m_connection.ClientInfo.rgSupportedMessages.indexOf(t)
             );
           }),
-          (e.prototype.OpenFriendChatDialog = function(e) {
-            var t = { message: "ShowFriendChatDialog", steamid: e };
-            return this.GenericEResultCall(t);
+          (t.prototype.OpenFriendChatDialog = function(t) {
+            var e = { message: "ShowFriendChatDialog", steamid: t };
+            return this.GenericEResultCall(e);
           }),
-          (e.prototype.OpenChatRoomGroupDialog = function(e, t) {
-            var n = { message: "ShowChatRoomGroupDialog", chat_group_id: e };
-            return t && (n.chat_room_id = t), this.GenericEResultCall(n);
+          (t.prototype.OpenChatRoomGroupDialog = function(t, e) {
+            var n = { message: "ShowChatRoomGroupDialog", chat_group_id: t };
+            return e && (n.chat_room_id = e), this.GenericEResultCall(n);
           }),
-          (e.prototype.ShowChatRoomGroupInvite = function(e) {
-            var t = { message: "ShowChatRoomGroupInvite", invite_code: e };
-            return this.GenericEResultCall(t);
+          (t.prototype.ShowChatRoomGroupInvite = function(t) {
+            var e = { message: "ShowChatRoomGroupInvite", invite_code: t };
+            return this.GenericEResultCall(e);
           }),
-          (e.prototype.OpenJoinGameDialog = function(e) {
-            var t = { message: "ShowJoinGameDialog", friend_id: e };
-            return this.GenericEResultCall(t);
+          (t.prototype.OpenJoinGameDialog = function(t) {
+            var e = { message: "ShowJoinGameDialog", friend_id: t };
+            return this.GenericEResultCall(e);
           }),
-          (e.prototype.BIsSubscribedApp = function(e) {
-            var t = this;
-            if (this.m_mapCacheSubscribedApp.has(e))
-              return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
-            var n = { message: "IsSubscribedApp", appid: e };
+          (t.prototype.BIsSubscribedApp = function(t) {
+            var e = this;
+            if (this.m_mapCacheSubscribedApp.has(t))
+              return Promise.resolve(this.m_mapCacheSubscribedApp.get(t));
+            var n = { message: "IsSubscribedApp", appid: t };
             return this.GenericEResultCall(n).then(function(n) {
               if (!n.connect_failed) {
                 var r = 1 == n.result;
-                return t.m_mapCacheSubscribedApp.set(e, r), r;
+                return e.m_mapCacheSubscribedApp.set(t, r), r;
               }
             });
           }),
-          (e.prototype.ViewGameInfoForSteamID = function(e) {
-            var t = { message: "ViewGameInfoForSteamID", steamid: e };
-            return this.GenericEResultCall(t);
+          (t.prototype.ViewGameInfoForSteamID = function(t) {
+            var e = { message: "ViewGameInfoForSteamID", steamid: t };
+            return this.GenericEResultCall(e);
           }),
-          (e.prototype.OpenFriendsDialog = function() {
+          (t.prototype.OpenFriendsDialog = function() {
             return this.GenericEResultCall({ message: "OpenFriendsDialog" });
           }),
-          (e.prototype.BClientAccountMatches = function() {
+          (t.prototype.BClientAccountMatches = function() {
             return (
               !r.h.logged_in ||
               r.h.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }),
-          (e.prototype.GenericEResultCall = function(e) {
-            var t = this;
+          (t.prototype.GenericEResultCall = function(t) {
+            var e = this;
             return this.m_connection
               .Connect()
               .then(function() {
-                return t.m_bAllowAccountMismatch || t.BClientAccountMatches()
-                  ? t.m_connection.SendMsgAndAwaitResponse(e).then(function(e) {
-                      return 1 === e.success ? o : t.FailureResult(e.success);
+                return e.m_bAllowAccountMismatch || e.BClientAccountMatches()
+                  ? e.m_connection.SendMsgAndAwaitResponse(t).then(function(t) {
+                      return 1 === t.success ? i : e.FailureResult(t.success);
                     })
                   : { success: !1, result: 19, account_mismatch: !0 };
               })
               .catch(function() {
-                return t.FailureResult();
+                return e.FailureResult();
               });
           }),
-          e
+          t
         );
       })(),
-      a = (function() {
-        function e() {
+      c = (function() {
+        function t() {
           (this.m_mapWaitingCallbacks = new Map()),
             (this.m_iCallSeq = 1),
             (this.m_bReady = !1),
@@ -720,28 +591,28 @@ var CLSTAMP = "5857313";
             });
         }
         return (
-          Object.defineProperty(e.prototype, "ClientInfo", {
+          Object.defineProperty(t.prototype, "ClientInfo", {
             get: function() {
               return this.m_ClientInfo;
             },
             enumerable: !0,
             configurable: !0
           }),
-          Object.defineProperty(e.prototype, "ready", {
+          Object.defineProperty(t.prototype, "ready", {
             get: function() {
               return this.m_bReady;
             },
             enumerable: !0,
             configurable: !0
           }),
-          Object.defineProperty(e.prototype, "browser_supported", {
+          Object.defineProperty(t.prototype, "browser_supported", {
             get: function() {
               return !this.m_bSecurityException;
             },
             enumerable: !0,
             configurable: !0
           }),
-          Object.defineProperty(e.prototype, "connected_to_client", {
+          Object.defineProperty(t.prototype, "connected_to_client", {
             get: function() {
               return (
                 this.m_socket && this.m_socket.readyState == WebSocket.OPEN
@@ -750,226 +621,226 @@ var CLSTAMP = "5857313";
             enumerable: !0,
             configurable: !0
           }),
-          (e.prototype.SendMsgAndAwaitResponse = function(e) {
-            var t = this;
+          (t.prototype.SendMsgAndAwaitResponse = function(t) {
+            var e = this;
             return new Promise(function(n, r) {
-              var o = t.m_iCallSeq++;
-              t.BSendMsg(e, o)
-                ? t.m_mapWaitingCallbacks.set(o, {
-                    iSeq: o,
+              var i = e.m_iCallSeq++;
+              e.BSendMsg(t, i)
+                ? e.m_mapWaitingCallbacks.set(i, {
+                    iSeq: i,
                     fnCallback: n,
                     fnError: r
                   })
                 : r();
             });
           }),
-          (e.prototype.BSendMsg = function(e, t) {
+          (t.prototype.BSendMsg = function(t, e) {
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
-            var n = Object.assign({}, e, {
+            var n = Object.assign({}, t, {
               universe: r.b.EUNIVERSE,
               accountid: r.h.accountid
             });
-            void 0 !== t && (n.sequenceid = t);
+            void 0 !== e && (n.sequenceid = e);
             try {
               return this.m_socket.send(JSON.stringify(n)), !0;
-            } catch (e) {
+            } catch (t) {
               return !1;
             }
           }),
-          (e.prototype.OnSocketMessage = function(e) {
+          (t.prototype.OnSocketMessage = function(t) {
             try {
-              var t = JSON.parse(e.data);
-              if (t.sequenceid) {
-                var n = this.m_mapWaitingCallbacks.get(t.sequenceid);
+              var e = JSON.parse(t.data);
+              if (e.sequenceid) {
+                var n = this.m_mapWaitingCallbacks.get(e.sequenceid);
                 if (n)
                   return (
-                    this.m_mapWaitingCallbacks.delete(t.sequenceid),
-                    void n.fnCallback(t)
+                    this.m_mapWaitingCallbacks.delete(e.sequenceid),
+                    void n.fnCallback(e)
                   );
               }
-            } catch (e) {
-              console.error("exception parsing response", e);
+            } catch (t) {
+              console.error("exception parsing response", t);
             }
           }),
-          (e.prototype.Connect = function() {
-            var e = this;
+          (t.prototype.Connect = function() {
+            var t = this;
             if (this.m_bReady && this.m_socket.readyState == WebSocket.OPEN)
               return Promise.resolve();
             if (this.m_promiseConnect) return this.m_promiseConnect;
-            var t = new Promise(function(t, n) {
+            var e = new Promise(function(e, n) {
               try {
-                e.m_socket = new WebSocket(
+                t.m_socket = new WebSocket(
                   "ws://127.0.0.1:27060/clientsocket/"
                 );
-              } catch (t) {
-                return (e.m_bSecurityException = !0), void n(t);
+              } catch (e) {
+                return (t.m_bSecurityException = !0), void n(e);
               }
-              (e.m_socket.onerror = function(e) {
+              (t.m_socket.onerror = function(t) {
                 n();
               }),
-                (e.m_socket.onmessage = e.OnSocketMessage.bind(e)),
-                (e.m_socket.onopen = function(r) {
-                  e.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
+                (t.m_socket.onmessage = t.OnSocketMessage.bind(t)),
+                (t.m_socket.onopen = function(r) {
+                  t.SendMsgAndAwaitResponse({ message: "GetClientInfo" })
                     .then(function(r) {
                       1 == r.success
-                        ? ((e.m_ClientInfo.ulVersion = r.clientversion),
-                          (e.m_ClientInfo.bFriendsUIEnabled = !!r.friendsui),
-                          (e.m_ClientInfo.unAccountID = r.accountid),
+                        ? ((t.m_ClientInfo.ulVersion = r.clientversion),
+                          (t.m_ClientInfo.bFriendsUIEnabled = !!r.friendsui),
+                          (t.m_ClientInfo.unAccountID = r.accountid),
                           r.supported_messages &&
-                            (e.m_ClientInfo.rgSupportedMessages =
+                            (t.m_ClientInfo.rgSupportedMessages =
                               r.supported_messages),
-                          t())
+                          e())
                         : n();
                     })
                     .catch(n);
                 });
             });
             return (
-              (this.m_promiseConnect = t),
+              (this.m_promiseConnect = e),
               this.m_promiseConnect
                 .then(function() {
-                  (e.m_bReady = !0), (e.m_promiseConnect = void 0);
+                  (t.m_bReady = !0), (t.m_promiseConnect = void 0);
                 })
                 .catch(function() {
-                  (e.m_bClientConnectionFailed = !0),
-                    (e.m_promiseConnect = void 0);
+                  (t.m_bClientConnectionFailed = !0),
+                    (t.m_promiseConnect = void 0);
                 }),
               this.m_promiseConnect
             );
           }),
-          e
+          t
         );
       })(),
-      c = new i();
-    window.ClientConnectionAPI = c;
+      a = new o();
+    window.ClientConnectionAPI = a;
   },
-  J0bI: function(e, t, n) {
+  J0bI: function(t, e, n) {
     "use strict";
-    n.d(t, "b", function() {
-      return c;
+    n.d(e, "b", function() {
+      return a;
     }),
-      n.d(t, "a", function() {
-        return u;
+      n.d(e, "a", function() {
+        return s;
       });
     var r = n("mrSG"),
-      o = n("2vnA"),
-      i = n("0N1H"),
-      a = n("tkkQ"),
-      c = (function() {
-        function e(e) {
+      i = n("2vnA"),
+      o = n("0N1H"),
+      c = n("tkkQ"),
+      a = (function() {
+        function t(t) {
           (this.m_bReady = !1),
             (this.m_bValid = !1),
-            (this.m_strInviteCode = e);
+            (this.m_strInviteCode = t);
         }
         return (
-          (e.prototype.BIsReady = function() {
+          (t.prototype.BIsReady = function() {
             return this.m_bReady;
           }),
-          (e.prototype.BIsValid = function() {
+          (t.prototype.BIsValid = function() {
             return this.m_bValid;
           }),
-          (e.prototype.BIsInviteLink = function() {
+          (t.prototype.BIsInviteLink = function() {
             return !!this.m_strInviteCode;
           }),
-          (e.prototype.GetInviteCode = function() {
+          (t.prototype.GetInviteCode = function() {
             return this.m_strInviteCode;
           }),
-          (e.prototype.BNeverExpires = function() {
-            return this.m_rtTimeExpires == i.e;
+          (t.prototype.BNeverExpires = function() {
+            return this.m_rtTimeExpires == o.e;
           }),
-          (e.prototype.GetChatRoomGroupID = function() {
+          (t.prototype.GetChatRoomGroupID = function() {
             return this.m_ulChatRoomGroupID;
           }),
-          (e.prototype.BIsVoiceChatInvite = function() {
+          (t.prototype.BIsVoiceChatInvite = function() {
             return !!this.m_ulChatID;
           }),
-          (e.prototype.GetChatID = function() {
+          (t.prototype.GetChatID = function() {
             return this.m_ulChatID;
           }),
-          (e.prototype.GetURL = function() {
-            return this.m_strInviteCode ? u(this.m_strInviteCode) : null;
+          (t.prototype.GetURL = function() {
+            return this.m_strInviteCode ? s(this.m_strInviteCode) : null;
           }),
-          (e.prototype.BIsUserBanned = function() {
+          (t.prototype.BIsUserBanned = function() {
             return this.m_bIsBanned;
           }),
-          (e.prototype.GetTimeKickExpires = function() {
+          (t.prototype.GetTimeKickExpires = function() {
             return this.m_rtKickExpires;
           }),
-          Object.defineProperty(e.prototype, "time_expires", {
+          Object.defineProperty(t.prototype, "time_expires", {
             get: function() {
               return this.m_rtTimeExpires;
             },
             enumerable: !0,
             configurable: !0
           }),
-          (e.prototype.InitInvalid = function() {
+          (t.prototype.InitInvalid = function() {
             (this.m_bValid = !1), (this.m_bReady = !0);
           }),
-          (e.prototype.InitDirectInvite = function(e, t, n, r) {
+          (t.prototype.InitDirectInvite = function(t, e, n, r) {
             void 0 === n && (n = !1),
               void 0 === r && (r = void 0),
-              (this.m_ulChatRoomGroupID = e),
-              (this.m_ulChatID = t),
+              (this.m_ulChatRoomGroupID = t),
+              (this.m_ulChatID = e),
               (this.m_bIsBanned = n),
               (this.m_rtKickExpires = r),
-              (this.m_rtTimeExpires = i.e),
+              (this.m_rtTimeExpires = o.e),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(r.c)([o.x], e.prototype, "m_bReady", void 0),
-          Object(r.c)([o.g], e.prototype, "InitInvalid", null),
-          Object(r.c)([o.g], e.prototype, "InitDirectInvite", null),
-          e
+          Object(r.c)([i.x], t.prototype, "m_bReady", void 0),
+          Object(r.c)([i.g], t.prototype, "InitInvalid", null),
+          Object(r.c)([i.g], t.prototype, "InitDirectInvite", null),
+          t
         );
       })();
-    function u(e) {
-      return "public" == a.a.WEB_UNIVERSE
-        ? "https://s.team/chat/" + e
-        : a.a.COMMUNITY_BASE_URL + "chat/invite/" + e;
+    function s(t) {
+      return "public" == c.a.WEB_UNIVERSE
+        ? "https://s.team/chat/" + t
+        : c.a.COMMUNITY_BASE_URL + "chat/invite/" + t;
     }
   },
-  XaMz: function(e, t, n) {
+  XaMz: function(t, e, n) {
     "use strict";
-    n.d(t, "a", function() {
-      return o;
+    n.d(e, "a", function() {
+      return i;
     });
     var r = n("mrSG");
-    function o(e, t) {
-      for (var n = [], o = 2; o < arguments.length; o++)
-        n[o - 2] = arguments[o];
+    function i(t, e) {
+      for (var n = [], i = 2; i < arguments.length; i++)
+        n[i - 2] = arguments[i];
       console.assert
         ? 0 == n.length
-          ? console.assert(!!e, t)
-          : console.assert.apply(console, Object(r.g)([!!e, t], n))
-        : e || console.warn.apply(console, Object(r.g)([t], n));
+          ? console.assert(!!t, e)
+          : console.assert.apply(console, Object(r.g)([!!t, e], n))
+        : t || console.warn.apply(console, Object(r.g)([e], n));
     }
   },
-  Y3TG: function(e, t, n) {
+  Y3TG: function(t, e, n) {
     "use strict";
     n("vDqi");
   },
-  mrSG: function(e, t, n) {
+  mrSG: function(t, e, n) {
     "use strict";
-    n.d(t, "d", function() {
-      return o;
+    n.d(e, "d", function() {
+      return i;
     }),
-      n.d(t, "a", function() {
-        return i;
+      n.d(e, "a", function() {
+        return o;
       }),
-      n.d(t, "f", function() {
-        return a;
-      }),
-      n.d(t, "c", function() {
+      n.d(e, "f", function() {
         return c;
       }),
-      n.d(t, "b", function() {
-        return u;
+      n.d(e, "c", function() {
+        return a;
       }),
-      n.d(t, "e", function() {
+      n.d(e, "b", function() {
         return s;
       }),
-      n.d(t, "g", function() {
+      n.d(e, "e", function() {
+        return u;
+      }),
+      n.d(e, "g", function() {
         return l;
       });
     /*! *****************************************************************************
@@ -986,292 +857,292 @@ MERCHANTABLITY OR NON-INFRINGEMENT.
 See the Apache Version 2.0 License for specific language governing permissions
 and limitations under the License.
 ***************************************************************************** */
-    var r = function(e, t) {
+    var r = function(t, e) {
       return (r =
         Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array &&
-          function(e, t) {
-            e.__proto__ = t;
+          function(t, e) {
+            t.__proto__ = e;
           }) ||
-        function(e, t) {
-          for (var n in t) t.hasOwnProperty(n) && (e[n] = t[n]);
-        })(e, t);
+        function(t, e) {
+          for (var n in e) e.hasOwnProperty(n) && (t[n] = e[n]);
+        })(t, e);
     };
-    function o(e, t) {
+    function i(t, e) {
       function n() {
-        this.constructor = e;
+        this.constructor = t;
       }
-      r(e, t),
-        (e.prototype =
-          null === t
-            ? Object.create(t)
-            : ((n.prototype = t.prototype), new n()));
+      r(t, e),
+        (t.prototype =
+          null === e
+            ? Object.create(e)
+            : ((n.prototype = e.prototype), new n()));
     }
-    var i = function() {
-      return (i =
+    var o = function() {
+      return (o =
         Object.assign ||
-        function(e) {
-          for (var t, n = 1, r = arguments.length; n < r; n++)
-            for (var o in (t = arguments[n]))
-              Object.prototype.hasOwnProperty.call(t, o) && (e[o] = t[o]);
-          return e;
+        function(t) {
+          for (var e, n = 1, r = arguments.length; n < r; n++)
+            for (var i in (e = arguments[n]))
+              Object.prototype.hasOwnProperty.call(e, i) && (t[i] = e[i]);
+          return t;
         }).apply(this, arguments);
     };
-    function a(e, t) {
+    function c(t, e) {
       var n = {};
-      for (var r in e)
-        Object.prototype.hasOwnProperty.call(e, r) &&
-          t.indexOf(r) < 0 &&
-          (n[r] = e[r]);
-      if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
-        var o = 0;
-        for (r = Object.getOwnPropertySymbols(e); o < r.length; o++)
-          t.indexOf(r[o]) < 0 &&
-            Object.prototype.propertyIsEnumerable.call(e, r[o]) &&
-            (n[r[o]] = e[r[o]]);
+      for (var r in t)
+        Object.prototype.hasOwnProperty.call(t, r) &&
+          e.indexOf(r) < 0 &&
+          (n[r] = t[r]);
+      if (null != t && "function" == typeof Object.getOwnPropertySymbols) {
+        var i = 0;
+        for (r = Object.getOwnPropertySymbols(t); i < r.length; i++)
+          e.indexOf(r[i]) < 0 &&
+            Object.prototype.propertyIsEnumerable.call(t, r[i]) &&
+            (n[r[i]] = t[r[i]]);
       }
       return n;
     }
-    function c(e, t, n, r) {
-      var o,
-        i = arguments.length,
-        a =
-          i < 3
-            ? t
+    function a(t, e, n, r) {
+      var i,
+        o = arguments.length,
+        c =
+          o < 3
+            ? e
             : null === r
-            ? (r = Object.getOwnPropertyDescriptor(t, n))
+            ? (r = Object.getOwnPropertyDescriptor(e, n))
             : r;
       if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
-        a = Reflect.decorate(e, t, n, r);
+        c = Reflect.decorate(t, e, n, r);
       else
-        for (var c = e.length - 1; c >= 0; c--)
-          (o = e[c]) &&
-            (a = (i < 3 ? o(a) : i > 3 ? o(t, n, a) : o(t, n)) || a);
-      return i > 3 && a && Object.defineProperty(t, n, a), a;
+        for (var a = t.length - 1; a >= 0; a--)
+          (i = t[a]) &&
+            (c = (o < 3 ? i(c) : o > 3 ? i(e, n, c) : i(e, n)) || c);
+      return o > 3 && c && Object.defineProperty(e, n, c), c;
     }
-    function u(e, t, n, r) {
-      return new (n || (n = Promise))(function(o, i) {
-        function a(e) {
+    function s(t, e, n, r) {
+      return new (n || (n = Promise))(function(i, o) {
+        function c(t) {
           try {
-            u(r.next(e));
-          } catch (e) {
-            i(e);
+            s(r.next(t));
+          } catch (t) {
+            o(t);
           }
         }
-        function c(e) {
+        function a(t) {
           try {
-            u(r.throw(e));
-          } catch (e) {
-            i(e);
+            s(r.throw(t));
+          } catch (t) {
+            o(t);
           }
         }
-        function u(e) {
-          e.done
-            ? o(e.value)
-            : new n(function(t) {
-                t(e.value);
-              }).then(a, c);
+        function s(t) {
+          t.done
+            ? i(t.value)
+            : new n(function(e) {
+                e(t.value);
+              }).then(c, a);
         }
-        u((r = r.apply(e, t || [])).next());
+        s((r = r.apply(t, e || [])).next());
       });
     }
-    function s(e, t) {
+    function u(t, e) {
       var n,
         r,
-        o,
         i,
-        a = {
+        o,
+        c = {
           label: 0,
           sent: function() {
-            if (1 & o[0]) throw o[1];
-            return o[1];
+            if (1 & i[0]) throw i[1];
+            return i[1];
           },
           trys: [],
           ops: []
         };
       return (
-        (i = { next: c(0), throw: c(1), return: c(2) }),
+        (o = { next: a(0), throw: a(1), return: a(2) }),
         "function" == typeof Symbol &&
-          (i[Symbol.iterator] = function() {
+          (o[Symbol.iterator] = function() {
             return this;
           }),
-        i
+        o
       );
-      function c(i) {
-        return function(c) {
-          return (function(i) {
+      function a(o) {
+        return function(a) {
+          return (function(o) {
             if (n) throw new TypeError("Generator is already executing.");
-            for (; a; )
+            for (; c; )
               try {
                 if (
                   ((n = 1),
                   r &&
-                    (o =
-                      2 & i[0]
+                    (i =
+                      2 & o[0]
                         ? r.return
-                        : i[0]
-                        ? r.throw || ((o = r.return) && o.call(r), 0)
+                        : o[0]
+                        ? r.throw || ((i = r.return) && i.call(r), 0)
                         : r.next) &&
-                    !(o = o.call(r, i[1])).done)
+                    !(i = i.call(r, o[1])).done)
                 )
-                  return o;
-                switch (((r = 0), o && (i = [2 & i[0], o.value]), i[0])) {
+                  return i;
+                switch (((r = 0), i && (o = [2 & o[0], i.value]), o[0])) {
                   case 0:
                   case 1:
-                    o = i;
+                    i = o;
                     break;
                   case 4:
-                    return a.label++, { value: i[1], done: !1 };
+                    return c.label++, { value: o[1], done: !1 };
                   case 5:
-                    a.label++, (r = i[1]), (i = [0]);
+                    c.label++, (r = o[1]), (o = [0]);
                     continue;
                   case 7:
-                    (i = a.ops.pop()), a.trys.pop();
+                    (o = c.ops.pop()), c.trys.pop();
                     continue;
                   default:
                     if (
-                      !(o = (o = a.trys).length > 0 && o[o.length - 1]) &&
-                      (6 === i[0] || 2 === i[0])
+                      !(i = (i = c.trys).length > 0 && i[i.length - 1]) &&
+                      (6 === o[0] || 2 === o[0])
                     ) {
-                      a = 0;
+                      c = 0;
                       continue;
                     }
-                    if (3 === i[0] && (!o || (i[1] > o[0] && i[1] < o[3]))) {
-                      a.label = i[1];
+                    if (3 === o[0] && (!i || (o[1] > i[0] && o[1] < i[3]))) {
+                      c.label = o[1];
                       break;
                     }
-                    if (6 === i[0] && a.label < o[1]) {
-                      (a.label = o[1]), (o = i);
+                    if (6 === o[0] && c.label < i[1]) {
+                      (c.label = i[1]), (i = o);
                       break;
                     }
-                    if (o && a.label < o[2]) {
-                      (a.label = o[2]), a.ops.push(i);
+                    if (i && c.label < i[2]) {
+                      (c.label = i[2]), c.ops.push(o);
                       break;
                     }
-                    o[2] && a.ops.pop(), a.trys.pop();
+                    i[2] && c.ops.pop(), c.trys.pop();
                     continue;
                 }
-                i = t.call(e, a);
-              } catch (e) {
-                (i = [6, e]), (r = 0);
+                o = e.call(t, c);
+              } catch (t) {
+                (o = [6, t]), (r = 0);
               } finally {
-                n = o = 0;
+                n = i = 0;
               }
-            if (5 & i[0]) throw i[1];
-            return { value: i[0] ? i[1] : void 0, done: !0 };
-          })([i, c]);
+            if (5 & o[0]) throw o[1];
+            return { value: o[0] ? o[1] : void 0, done: !0 };
+          })([o, a]);
         };
       }
     }
     function l() {
-      for (var e = 0, t = 0, n = arguments.length; t < n; t++)
-        e += arguments[t].length;
-      var r = Array(e),
-        o = 0;
-      for (t = 0; t < n; t++)
-        for (var i = arguments[t], a = 0, c = i.length; a < c; a++, o++)
-          r[o] = i[a];
+      for (var t = 0, e = 0, n = arguments.length; e < n; e++)
+        t += arguments[e].length;
+      var r = Array(t),
+        i = 0;
+      for (e = 0; e < n; e++)
+        for (var o = arguments[e], c = 0, a = o.length; c < a; c++, i++)
+          r[i] = o[c];
       return r;
     }
   },
-  oh5H: function(e, t, n) {
+  oh5H: function(t, e, n) {
     "use strict";
     var r = n("mrSG"),
-      o = n("q1tI"),
-      i = n("0N1H"),
-      a = n("1n9R"),
-      c = (n("XaMz"), n("ujHl"));
+      i = n("q1tI"),
+      o = n("0N1H"),
+      c = n("1n9R"),
+      a = (n("XaMz"), n("ujHl"));
     n("Gp1o");
-    function u(e, t) {
-      void 0 === t && (t = !1);
-      var n = t ? "#TimeInterval_" : "#TimeSince_";
-      return e >= 2 * c.b.PerYear
-        ? s(n + "XYears", Math.floor(e / c.b.PerYear))
-        : e >= c.b.PerYear
-        ? (e -= c.b.PerYear) >= 2 * c.b.PerMonth
-          ? s(n + "1YearXMonths", Math.floor(e / c.b.PerMonth))
-          : s(n + "1Year")
-        : e >= 2 * c.b.PerMonth
-        ? s(n + "XMonths", Math.floor(e / c.b.PerMonth))
-        : e >= 2 * c.b.PerWeek
-        ? s(n + "XWeeks", Math.floor(e / c.b.PerWeek))
-        : e >= c.b.PerWeek
-        ? s(n + "1Week", Math.floor(e / c.b.PerWeek))
-        : e >= 2 * c.b.PerDay
-        ? s(n + "XDays", Math.floor(e / c.b.PerDay))
-        : e >= c.b.PerDay
-        ? (e -= c.b.PerDay) >= 2 * c.b.PerHour
-          ? s(n + "1DayXHours", Math.floor(e / c.b.PerHour))
-          : s(n + "1Day")
-        : e >= 2 * c.b.PerHour
-        ? s(n + "XHours", Math.floor(e / c.b.PerHour))
-        : e >= c.b.PerHour
-        ? (e -= c.b.PerHour) >= 2 * c.b.PerMinute
-          ? s(n + "1HourXMinutes", Math.floor(e / c.b.PerMinute))
-          : s(n + "1Hour")
-        : e >= 2 * c.b.PerMinute
-        ? s(n + "XMinutes", Math.floor(e / c.b.PerMinute))
-        : e >= c.b.PerMinute
-        ? s(n + "1Minute")
-        : s(n + "LessThanAMinute");
+    function s(t, e) {
+      void 0 === e && (e = !1);
+      var n = e ? "#TimeInterval_" : "#TimeSince_";
+      return t >= 2 * a.b.PerYear
+        ? u(n + "XYears", Math.floor(t / a.b.PerYear))
+        : t >= a.b.PerYear
+        ? (t -= a.b.PerYear) >= 2 * a.b.PerMonth
+          ? u(n + "1YearXMonths", Math.floor(t / a.b.PerMonth))
+          : u(n + "1Year")
+        : t >= 2 * a.b.PerMonth
+        ? u(n + "XMonths", Math.floor(t / a.b.PerMonth))
+        : t >= 2 * a.b.PerWeek
+        ? u(n + "XWeeks", Math.floor(t / a.b.PerWeek))
+        : t >= a.b.PerWeek
+        ? u(n + "1Week", Math.floor(t / a.b.PerWeek))
+        : t >= 2 * a.b.PerDay
+        ? u(n + "XDays", Math.floor(t / a.b.PerDay))
+        : t >= a.b.PerDay
+        ? (t -= a.b.PerDay) >= 2 * a.b.PerHour
+          ? u(n + "1DayXHours", Math.floor(t / a.b.PerHour))
+          : u(n + "1Day")
+        : t >= 2 * a.b.PerHour
+        ? u(n + "XHours", Math.floor(t / a.b.PerHour))
+        : t >= a.b.PerHour
+        ? (t -= a.b.PerHour) >= 2 * a.b.PerMinute
+          ? u(n + "1HourXMinutes", Math.floor(t / a.b.PerMinute))
+          : u(n + "1Hour")
+        : t >= 2 * a.b.PerMinute
+        ? u(n + "XMinutes", Math.floor(t / a.b.PerMinute))
+        : t >= a.b.PerMinute
+        ? u(n + "1Minute")
+        : u(n + "LessThanAMinute");
     }
     new Map(), new Map();
     new Map(), new Map(), new Map(), new Map();
-    function s(e) {
-      for (var t = [], n = 1; n < arguments.length; n++)
-        t[n - 1] = arguments[n];
-      var r = p.LocalizeString(e);
+    function u(t) {
+      for (var e = [], n = 1; n < arguments.length; n++)
+        e[n - 1] = arguments[n];
+      var r = f.LocalizeString(t);
       return r
-        ? (t.length > 0 &&
-            (r = r.replace(/%(?:(\d+)\$)?s/g, function(e, n) {
-              if (n <= t.length && n >= 1) {
-                var r = t[n - 1];
+        ? (e.length > 0 &&
+            (r = r.replace(/%(?:(\d+)\$)?s/g, function(t, n) {
+              if (n <= e.length && n >= 1) {
+                var r = e[n - 1];
                 return String(null == r ? "" : r);
               }
-              return e;
+              return t;
             })),
           r)
-        : e;
+        : t;
     }
-    function l(e) {
-      for (var t = [], n = 1; n < arguments.length; n++)
-        t[n - 1] = arguments[n];
-      var i = p.LocalizeString(e);
-      if (!i) return e;
-      for (var a, c = [], u = /(.*?)%(\d+)\$s/g, s = 0; (a = u.exec(i)); ) {
-        (s += a[0].length), c.push(a[1]);
-        var l = parseInt(a[2]);
-        l >= 1 && l <= t.length && c.push(t[l - 1]);
+    function l(t) {
+      for (var e = [], n = 1; n < arguments.length; n++)
+        e[n - 1] = arguments[n];
+      var o = f.LocalizeString(t);
+      if (!o) return t;
+      for (var c, a = [], s = /(.*?)%(\d+)\$s/g, u = 0; (c = s.exec(o)); ) {
+        (u += c[0].length), a.push(c[1]);
+        var l = parseInt(c[2]);
+        l >= 1 && l <= e.length && a.push(e[l - 1]);
       }
       return (
-        c.push(i.substr(s)),
-        o.createElement.apply(o, Object(r.g)([o.Fragment, null], c))
+        a.push(o.substr(u)),
+        i.createElement.apply(i, Object(r.g)([i.Fragment, null], a))
       );
     }
-    function _(e, t) {
-      for (var n = [], o = 2; o < arguments.length; o++)
-        n[o - 2] = arguments[o];
-      return 1 === t || "1" === t
-        ? s.apply(void 0, Object(r.g)([e, t], n))
-        : s.apply(void 0, Object(r.g)([e + "_Plural", t], n));
+    function p(t, e) {
+      for (var n = [], i = 2; i < arguments.length; i++)
+        n[i - 2] = arguments[i];
+      return 1 === e || "1" === e
+        ? u.apply(void 0, Object(r.g)([t, e], n))
+        : u.apply(void 0, Object(r.g)([t + "_Plural", e], n));
     }
-    n.d(t, "c", function() {
-      return s;
+    n.d(e, "c", function() {
+      return u;
     }),
-      n.d(t, "e", function() {
+      n.d(e, "e", function() {
         return l;
       }),
-      n.d(t, "d", function() {
-        return _;
-      }),
-      n.d(t, "a", function() {
-        return h;
-      }),
-      n.d(t, "b", function() {
+      n.d(e, "d", function() {
         return p;
       }),
-      n.d(t, "f", function() {
-        return u;
+      n.d(e, "a", function() {
+        return h;
+      }),
+      n.d(e, "b", function() {
+        return f;
+      }),
+      n.d(e, "f", function() {
+        return s;
       });
     var h = {
       english: "en",
@@ -1304,238 +1175,238 @@ and limitations under the License.
       ukrainian: "uk",
       vietnamese: "vn"
     };
-    var p = new ((function() {
-      function e() {
+    var f = new ((function() {
+      function t() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
       return (
-        (e.prototype.InitFromObjects = function(e, t, n, o, i) {
-          i || this.m_mapTokens.clear();
-          var a = Object(r.a)(Object(r.a)({}, n || {}), e),
-            c = Object(r.a)(Object(r.a)({}, o || {}), t || {});
-          this.AddTokens(a, c);
+        (t.prototype.InitFromObjects = function(t, e, n, i, o) {
+          o || this.m_mapTokens.clear();
+          var c = Object(r.a)(Object(r.a)({}, n || {}), t),
+            a = Object(r.a)(Object(r.a)({}, i || {}), e || {});
+          this.AddTokens(c, a);
         }),
-        (e.prototype.InitDirect = function(e, t) {
+        (t.prototype.InitDirect = function(t, e) {
           this.m_mapTokens.clear(),
             this.m_mapFallbackTokens.clear(),
-            this.AddTokens(e, t);
+            this.AddTokens(t, e);
         }),
-        (e.prototype.AddTokens = function(e, t) {
+        (t.prototype.AddTokens = function(t, e) {
           var n = this;
-          Object.keys(e).forEach(function(t) {
-            n.m_mapTokens.set(t, e[t]);
+          Object.keys(t).forEach(function(e) {
+            n.m_mapTokens.set(e, t[e]);
           }),
-            t &&
-              Object.keys(t).forEach(function(e) {
-                n.m_mapTokens.has(e) || n.m_mapTokens.set(e, t[e]),
-                  n.m_mapFallbackTokens.set(e, t[e]);
+            e &&
+              Object.keys(e).forEach(function(t) {
+                n.m_mapTokens.has(t) || n.m_mapTokens.set(t, e[t]),
+                  n.m_mapFallbackTokens.set(t, e[t]);
               });
         }),
-        (e.prototype.GetPreferredLocales = function() {
+        (t.prototype.GetPreferredLocales = function() {
           return this.m_rgLocalesToUse
             ? this.m_rgLocalesToUse
             : navigator && navigator.languages
             ? navigator.languages
             : ["en-US"];
         }),
-        (e.prototype.GetELanguageFallbackOrder = function() {
-          var e = new Array();
+        (t.prototype.GetELanguageFallbackOrder = function() {
+          var t = new Array();
           return (
-            e.push(Object(i.c)(a.b.LANGUAGE)),
-            (a.b.SUPPORTED_LANGUAGES || []).forEach(function(t) {
-              t.value != a.b.LANGUAGE && e.push(Object(i.c)(t.value));
+            t.push(Object(o.c)(c.b.LANGUAGE)),
+            (c.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+              e.value != c.b.LANGUAGE && t.push(Object(o.c)(e.value));
             }),
-            e
+            t
           );
         }),
-        (e.prototype.SetPreferredLocales = function(e) {
-          this.m_rgLocalesToUse = e;
+        (t.prototype.SetPreferredLocales = function(t) {
+          this.m_rgLocalesToUse = t;
         }),
-        (e.prototype.LocalizeString = function(e) {
-          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-          var t = this.m_mapTokens.get(e.substring(1));
-          return void 0 === t ? "" : t;
+        (t.prototype.LocalizeString = function(t) {
+          if (!t || 0 == t.length || "#" != t.charAt(0)) return "";
+          var e = this.m_mapTokens.get(t.substring(1));
+          return void 0 === e ? "" : e;
         }),
-        (e.prototype.LocalizeStringFromFallback = function(e) {
-          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-          var t = this.m_mapFallbackTokens.get(e.substring(1));
-          return void 0 === t ? "" : t;
+        (t.prototype.LocalizeStringFromFallback = function(t) {
+          if (!t || 0 == t.length || "#" != t.charAt(0)) return "";
+          var e = this.m_mapFallbackTokens.get(t.substring(1));
+          return void 0 === e ? "" : e;
         }),
-        e
+        t
       );
     })())();
-    window.LocalizationManager = p;
+    window.LocalizationManager = f;
   },
-  "qM/t": function(e, t, n) {
+  "qM/t": function(t, e, n) {
     "use strict";
-    n.r(t);
+    n.r(e);
     var r = n("q1tI"),
-      o = n("i8i4"),
-      i = n("tkkQ"),
-      a = n("Ezvv"),
-      c = (n("Y3TG"), n("oh5H")),
-      u = n("XaMz"),
-      s = n("mrSG"),
+      i = n("i8i4"),
+      o = n("tkkQ"),
+      c = n("Ezvv"),
+      a = (n("Y3TG"), n("oh5H")),
+      s = n("XaMz"),
+      u = n("mrSG"),
       l = n("2vnA"),
-      _ = n("okNM"),
+      p = n("okNM"),
       h = n("J0bI"),
-      p = n("s+DT");
+      f = n("s+DT");
     var m = n("1VtQ"),
-      f = n("K4CH"),
-      d = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
+      d = n("K4CH"),
+      _ = (function(t) {
+        function e() {
+          return (null !== t && t.apply(this, arguments)) || this;
         }
         return (
-          Object(s.d)(t, e),
-          (t.prototype.BIsExpired = function() {
-            return E.sm_rtTimeCur >= this.m_rtTimeExpires;
+          Object(u.d)(e, t),
+          (e.prototype.BIsExpired = function() {
+            return v.sm_rtTimeCur >= this.m_rtTimeExpires;
           }),
-          (t.prototype.InitFromPHPInviteLinkInfo = function(e) {
-            this.m_ulChatID = e.chat_id;
-            var t = new p.a(e.steamid_sender);
-            t.BIsIndividualAccount() &&
-              (this.m_unAccountIDInviter = t.GetAccountID()),
-              (this.m_rtTimeExpires = e.time_expires),
-              (this.m_bIsBanned = e.banned),
-              (this.m_rtKickExpires = e.time_kick_expire),
-              e.group_summary &&
-                (this.m_ulChatRoomGroupID = e.group_summary.chat_group_id),
+          (e.prototype.InitFromPHPInviteLinkInfo = function(t) {
+            this.m_ulChatID = t.chat_id;
+            var e = new f.a(t.steamid_sender);
+            e.BIsIndividualAccount() &&
+              (this.m_unAccountIDInviter = e.GetAccountID()),
+              (this.m_rtTimeExpires = t.time_expires),
+              (this.m_bIsBanned = t.banned),
+              (this.m_rtKickExpires = t.time_kick_expire),
+              t.group_summary &&
+                (this.m_ulChatRoomGroupID = t.group_summary.chat_group_id),
               (this.m_bValid = !0),
               (this.m_bReady = !0);
           }),
-          Object(s.c)([l.g], t.prototype, "InitFromPHPInviteLinkInfo", null),
-          t
+          Object(u.c)([l.g], e.prototype, "InitFromPHPInviteLinkInfo", null),
+          e
         );
       })(h.b),
-      E = (function() {
-        function e(e) {
+      v = (function() {
+        function t(t) {
           (this.m_bConnectingToClient = !1),
-            (this.m_invite = new d(e.strInviteCode)),
-            e.Invite
-              ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
+            (this.m_invite = new _(t.strInviteCode)),
+            t.Invite
+              ? this.m_invite.InitFromPHPInviteLinkInfo(t.Invite)
               : this.m_invite.InitInvalid(),
-            (this.m_htmlPreRendered = e.render),
+            (this.m_htmlPreRendered = t.render),
             this.SendInviteToClient();
         }
         return (
-          (e.prototype.BIsInviteValid = function() {
+          (t.prototype.BIsInviteValid = function() {
             return this.m_invite.BIsValid() && !this.m_invite.BIsExpired();
           }),
-          (e.prototype.GetInvite = function() {
+          (t.prototype.GetInvite = function() {
             return this.m_invite;
           }),
-          (e.prototype.BIsConnectingToClient = function() {
+          (t.prototype.BIsConnectingToClient = function() {
             return this.m_bConnectingToClient;
           }),
-          (e.prototype.GetConnectResults = function() {
+          (t.prototype.GetConnectResults = function() {
             return this.m_connectResult;
           }),
-          (e.prototype.GetPreRenderedHTML = function() {
+          (t.prototype.GetPreRenderedHTML = function() {
             return this.m_htmlPreRendered;
           }),
-          (e.prototype.LaunchWebChat = function() {
-            !(function(e) {
-              var t = window.open("", "SteamWebChat", "");
-              if (t) {
+          (t.prototype.LaunchWebChat = function() {
+            !(function(t) {
+              var e = window.open("", "SteamWebChat", "");
+              if (e) {
                 var n = !1;
                 try {
-                  n = "about:blank" == t.location.href;
-                } catch (e) {
+                  n = "about:blank" == e.location.href;
+                } catch (t) {
                   !0;
                 }
                 if (n) {
-                  if (e) {
+                  if (t) {
                     var r = function(n) {
-                      var o = i.a.COMMUNITY_BASE_URL.replace(
+                      var i = o.a.COMMUNITY_BASE_URL.replace(
                         /(https?:\/\/[^/]*).*$/,
                         "$1"
                       );
-                      n.source == t &&
+                      n.source == e &&
                         "FriendsUIReady" == n.data &&
-                        n.origin == o &&
-                        (t.postMessage(e, i.a.COMMUNITY_BASE_URL),
+                        n.origin == i &&
+                        (e.postMessage(t, o.a.COMMUNITY_BASE_URL),
                         window.removeEventListener("message", r));
                     };
                     window.addEventListener("message", r);
                   }
-                  t.location.href = i.a.COMMUNITY_BASE_URL + "chat/";
-                } else e && t.postMessage(e, i.a.COMMUNITY_BASE_URL);
-                t.focus();
+                  e.location.href = o.a.COMMUNITY_BASE_URL + "chat/";
+                } else t && e.postMessage(t, o.a.COMMUNITY_BASE_URL);
+                e.focus();
               }
             })({
               command: "ShowChatRoomGroupInvite",
               invite_code: this.m_invite.GetInviteCode()
             });
           }),
-          (e.prototype.LaunchSteamIgnoreAccount = function() {
-            a.b.SetAllowAccountMismatch(!0), this.SendInviteToClient();
+          (t.prototype.LaunchSteamIgnoreAccount = function() {
+            c.b.SetAllowAccountMismatch(!0), this.SendInviteToClient();
           }),
-          (e.prototype.ForceLaunchSteamClient = function() {
+          (t.prototype.ForceLaunchSteamClient = function() {
             window.location.href =
               "steam://friends/ShowChatRoomGroupInvite/" +
               this.m_invite.GetInviteCode();
           }),
-          (e.prototype.SendInviteToClient = function() {
-            var e = this;
+          (t.prototype.SendInviteToClient = function() {
+            var t = this;
             this.m_invite.BIsValid() &&
               !this.m_invite.BIsExpired() &&
               ((this.m_bConnectingToClient = !0),
-              a.b
+              c.b
                 .ShowChatRoomGroupInvite(this.m_invite.GetInviteCode())
-                .then(function(t) {
+                .then(function(e) {
                   Object(l.A)(function() {
-                    (e.m_bConnectingToClient = !1),
-                      (e.m_connectResult = t),
-                      console.log(t);
+                    (t.m_bConnectingToClient = !1),
+                      (t.m_connectResult = e),
+                      console.log(e);
                   });
                 }));
           }),
-          Object(s.c)([l.x], e.prototype, "m_bConnectingToClient", void 0),
-          Object(s.c)([l.x], e.prototype, "m_connectResult", void 0),
-          e
+          Object(u.c)([l.x], t.prototype, "m_bConnectingToClient", void 0),
+          Object(u.c)([l.x], t.prototype, "m_connectResult", void 0),
+          t
         );
       })(),
-      v = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
+      b = (function(t) {
+        function e() {
+          return (null !== t && t.apply(this, arguments)) || this;
         }
         return (
-          Object(s.d)(t, e),
-          (t.prototype.render = function() {
+          Object(u.d)(e, t),
+          (e.prototype.render = function() {
             return r.createElement(
               "div",
               { className: "InviteLandingRoot" },
               this.props.controller.BIsInviteValid()
-                ? r.createElement(b, { controller: this.props.controller })
-                : r.createElement(S, { controller: this.props.controller })
+                ? r.createElement(I, { controller: this.props.controller })
+                : r.createElement(g, { controller: this.props.controller })
             );
           }),
-          (t = Object(s.c)([_.a], t))
+          (e = Object(u.c)([p.a], e))
         );
       })(r.Component),
-      b = (function(e) {
-        function t() {
-          var t = (null !== e && e.apply(this, arguments)) || this;
-          return (t.m_bTriedToLaunchSteam = !1), t;
+      I = (function(t) {
+        function e() {
+          var e = (null !== t && t.apply(this, arguments)) || this;
+          return (e.m_bTriedToLaunchSteam = !1), e;
         }
         return (
-          Object(s.d)(t, e),
-          (t.prototype.LaunchWebChat = function() {
+          Object(u.d)(e, t),
+          (e.prototype.LaunchWebChat = function() {
             this.props.controller.LaunchWebChat();
           }),
-          (t.prototype.OpenInSteamIgnoreAccount = function() {
+          (e.prototype.OpenInSteamIgnoreAccount = function() {
             this.props.controller.LaunchSteamIgnoreAccount();
           }),
-          (t.prototype.LaunchSteamClient = function() {
-            var e = this;
+          (e.prototype.LaunchSteamClient = function() {
+            var t = this;
             this.props.controller.ForceLaunchSteamClient(),
               window.setTimeout(function() {
-                e.m_bTriedToLaunchSteam = !0;
+                t.m_bTriedToLaunchSteam = !0;
               }, 1e3);
           }),
-          (t.prototype.IsMobileDevice = function() {
-            switch (new f.UAParser(navigator.userAgent).getResult().os.name) {
+          (e.prototype.IsMobileDevice = function() {
+            switch (new d.UAParser(navigator.userAgent).getResult().os.name) {
               case "iOS":
               case "Android":
               case "BlackBerry":
@@ -1543,7 +1414,7 @@ and limitations under the License.
             }
             return !1;
           }),
-          (t.prototype.render = function() {
+          (e.prototype.render = function() {
             if (this.props.controller.BIsConnectingToClient())
               return r.createElement(
                 "div",
@@ -1551,28 +1422,28 @@ and limitations under the License.
                 r.createElement(
                   "div",
                   { className: "postedExpiredInvite" },
-                  Object(c.c)("#bbcode_invite_requesting_info")
+                  Object(a.c)("#bbcode_invite_requesting_info")
                 )
               );
-            var e = this.props.controller.GetConnectResults(),
-              t = this.props.controller.GetInvite(),
-              n = (i.a.COMMUNITY_BASE_URL, this.IsMobileDevice()),
-              o = "inviteButton inviteButtonJoinChat";
+            var t = this.props.controller.GetConnectResults(),
+              e = this.props.controller.GetInvite(),
+              n = (o.a.COMMUNITY_BASE_URL, this.IsMobileDevice()),
+              i = "inviteButton inviteButtonJoinChat";
             return (
-              t.BIsVoiceChatInvite() && (o += " inviteButtonJoinVoice"),
-              e.success
+              e.BIsVoiceChatInvite() && (i += " inviteButtonJoinVoice"),
+              t.success
                 ? r.createElement(
                     "div",
                     { className: "ChatMessageInvite NoColumns" },
                     r.createElement(
                       "div",
                       { className: "groupName" },
-                      Object(c.c)("#InviteLanding_SentToSteam")
+                      Object(a.c)("#InviteLanding_SentToSteam")
                     ),
                     r.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(c.e)(
+                      Object(a.e)(
                         "#InviteLanding_SentToSteam_Desc",
                         r.createElement(
                           "a",
@@ -1580,21 +1451,21 @@ and limitations under the License.
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat
                           },
-                          Object(c.c)(
+                          Object(a.c)(
                             "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
                           )
                         )
                       )
                     )
                   )
-                : e.account_mismatch
+                : t.account_mismatch
                 ? r.createElement(
-                    I,
+                    y,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     r.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(c.c)("#InviteLanding_AccountMismatch")
+                      Object(a.c)("#InviteLanding_AccountMismatch")
                     ),
                     r.createElement(
                       "div",
@@ -1602,36 +1473,36 @@ and limitations under the License.
                       r.createElement(
                         "button",
                         {
-                          className: o,
+                          className: i,
                           type: "button",
                           onClick: this.OpenInSteamIgnoreAccount
                         },
-                        Object(c.c)("#InviteLanding_OpenInSteam")
+                        Object(a.c)("#InviteLanding_OpenInSteam")
                       ),
                       r.createElement(
                         "button",
                         {
-                          className: o,
+                          className: i,
                           type: "button",
                           onClick: this.LaunchWebChat
                         },
-                        Object(c.c)("#InviteLanding_OpenInWebChat")
+                        Object(a.c)("#InviteLanding_OpenInWebChat")
                       )
                     )
                   )
-                : e.call_unsupported
+                : t.call_unsupported
                 ? r.createElement(
                     "div",
                     { className: "ChatMessageInvite" },
                     r.createElement(
                       "div",
                       { className: "groupName" },
-                      Object(c.c)("#InviteLanding_SentToSteam")
+                      Object(a.c)("#InviteLanding_SentToSteam")
                     ),
                     r.createElement(
                       "div",
                       { className: "inviteLabel" },
-                      Object(c.e)(
+                      Object(a.e)(
                         "#InviteLanding_SentToSteam_Desc",
                         r.createElement(
                           "a",
@@ -1639,7 +1510,7 @@ and limitations under the License.
                             href: "javascript:void(0);",
                             onClick: this.LaunchWebChat
                           },
-                          Object(c.c)(
+                          Object(a.c)(
                             "#InviteLanding_SentToSteam_Desc_LaunchWebChat"
                           )
                         )
@@ -1647,7 +1518,7 @@ and limitations under the License.
                     )
                   )
                 : r.createElement(
-                    I,
+                    y,
                     { render: this.props.controller.GetPreRenderedHTML() },
                     r.createElement(
                       "div",
@@ -1656,65 +1527,65 @@ and limitations under the License.
                         r.createElement(
                           "button",
                           {
-                            className: o,
+                            className: i,
                             type: "button",
                             onClick: this.LaunchSteamClient
                           },
-                          Object(c.c)("#InviteLanding_OpenInSteam")
+                          Object(a.c)("#InviteLanding_OpenInSteam")
                         ),
                       r.createElement(
                         "button",
                         {
-                          className: o,
+                          className: i,
                           type: "button",
                           onClick: this.LaunchWebChat
                         },
-                        Object(c.c)("#InviteLanding_OpenInWebChat")
+                        Object(a.c)("#InviteLanding_OpenInWebChat")
                       )
                     ),
                     this.m_bTriedToLaunchSteam &&
                       r.createElement(
                         "div",
                         { className: "inviteLabel inviteLabelLaunchPrompt" },
-                        Object(c.c)("#InviteLanding_OpenInSteam_Help")
+                        Object(a.c)("#InviteLanding_OpenInSteam_Help")
                       )
                   )
             );
           }),
-          Object(s.c)([l.x], t.prototype, "m_bTriedToLaunchSteam", void 0),
-          Object(s.c)([m.a], t.prototype, "LaunchWebChat", null),
-          Object(s.c)([m.a], t.prototype, "OpenInSteamIgnoreAccount", null),
-          Object(s.c)([m.a], t.prototype, "LaunchSteamClient", null),
-          (t = Object(s.c)([_.a], t))
+          Object(u.c)([l.x], e.prototype, "m_bTriedToLaunchSteam", void 0),
+          Object(u.c)([m.a], e.prototype, "LaunchWebChat", null),
+          Object(u.c)([m.a], e.prototype, "OpenInSteamIgnoreAccount", null),
+          Object(u.c)([m.a], e.prototype, "LaunchSteamClient", null),
+          (e = Object(u.c)([p.a], e))
         );
       })(r.Component),
-      S = (function(e) {
-        function t() {
-          return (null !== e && e.apply(this, arguments)) || this;
+      g = (function(t) {
+        function e() {
+          return (null !== t && t.apply(this, arguments)) || this;
         }
         return (
-          Object(s.d)(t, e),
-          (t.prototype.render = function() {
+          Object(u.d)(e, t),
+          (e.prototype.render = function() {
             return r.createElement(
               "div",
               { className: "ChatMessageInvite" },
               r.createElement(
                 "div",
                 { className: "postedExpiredInvite" },
-                Object(c.c)("#InviteLanding_ExpiredOrInvalid")
+                Object(a.c)("#InviteLanding_ExpiredOrInvalid")
               )
             );
           }),
-          t
+          e
         );
       })(r.Component);
-    function I(e) {
+    function y(t) {
       return r.createElement(
         "div",
         { className: "ChatMessageInvite" },
         r.createElement("div", {
           className: "leftInviteContainer",
-          dangerouslySetInnerHTML: { __html: e.render.strAvatarHTML }
+          dangerouslySetInnerHTML: { __html: t.render.strAvatarHTML }
         }),
         r.createElement(
           "div",
@@ -1722,11 +1593,11 @@ and limitations under the License.
           r.createElement(
             "div",
             { className: "inviteLabel" },
-            Object(c.e)(
+            Object(a.e)(
               "#bbcode_invite_description",
               r.createElement("span", {
                 dangerouslySetInnerHTML: {
-                  __html: e.render.strInviterNameLinkHTML
+                  __html: t.render.strInviterNameLinkHTML
                 }
               })
             )
@@ -1734,108 +1605,108 @@ and limitations under the License.
           r.createElement(
             "div",
             { className: "groupName" },
-            e.render.strChatRoomGroupName
+            t.render.strChatRoomGroupName
           ),
-          e.children
+          t.children
         )
       );
     }
-    window.AssertMsg = u.a;
-    var k,
-      g,
-      L,
-      C = new a.a();
-    function y(e) {
-      var t;
+    window.AssertMsg = s.a;
+    var S,
+      C,
+      E,
+      A = new c.a();
+    function O(t) {
+      var e;
       try {
-        t = JSON.parse(e.getAttribute("data-inviteinfo"));
-      } catch (e) {}
-      E.sm_rtTimeCur = t.rtTimeCur;
-      var n = new E(t);
-      o.render(r.createElement(v, { controller: n }), e);
+        e = JSON.parse(t.getAttribute("data-inviteinfo"));
+      } catch (t) {}
+      v.sm_rtTimeCur = e.rtTimeCur;
+      var n = new v(e);
+      i.render(r.createElement(b, { controller: n }), t);
     }
-    (window.ClientConnectionAPI = C),
+    (window.ClientConnectionAPI = A),
       document.addEventListener("DOMContentLoaded", function() {
-        Object(i.c)(),
+        Object(o.c)(),
           (function() {
             for (
-              var e = document.querySelectorAll(".ChatReactRoot"), t = 0;
-              t < e.length;
-              t++
+              var t = document.querySelectorAll(".ChatReactRoot"), e = 0;
+              e < t.length;
+              e++
             ) {
-              var n = e[t],
+              var n = t[e],
                 r = n.getAttribute("data-component");
               switch (r) {
                 case "ChatInvite":
-                  y(n);
+                  O(n);
                   break;
                 default:
-                  Object(u.a)(!1, 'unknown component: "' + r + '"');
+                  Object(s.a)(!1, 'unknown component: "' + r + '"');
               }
             }
           })();
       }),
-      (window.LocalizationReady = function(e, t, n) {
-        if ("english" !== t)
-          "friendsui" == e ? (k = n) : "shared" == e && (g = n);
-        else if ("shared" == e) L = n;
+      (window.LocalizationReady = function(t, e, n) {
+        if ("english" !== e)
+          "friendsui" == t ? (S = n) : "shared" == t && (C = n);
+        else if ("shared" == t) E = n;
         else {
           var r = void 0,
-            o = null,
-            i = void 0,
-            a = null;
-          void 0 !== k ? ((r = k), (o = n)) : (r = n),
-            void 0 !== g ? ((i = g), (a = L)) : (i = L),
-            c.b.InitFromObjects(r, o, i, a),
-            (k = void 0),
-            (g = void 0),
-            (L = void 0);
+            i = null,
+            o = void 0,
+            c = null;
+          void 0 !== S ? ((r = S), (i = n)) : (r = n),
+            void 0 !== C ? ((o = C), (c = E)) : (o = E),
+            a.b.InitFromObjects(r, i, o, c),
+            (S = void 0),
+            (C = void 0),
+            (E = void 0);
         }
       });
   },
-  "s+DT": function(e, t, n) {
+  "s+DT": function(t, e, n) {
     "use strict";
-    n.d(t, "a", function() {
-      return c;
+    n.d(e, "a", function() {
+      return a;
     });
     var r = n("2lpH"),
-      o = n.n(r),
-      i = n("0N1H"),
-      a = n("1n9R"),
-      c = (function() {
-        function e(t, n, r, i) {
-          void 0 === t && (t = 0),
-            t instanceof e
-              ? (this.m_ulSteamID = t.m_ulSteamID)
-              : "string" == typeof t
-              ? (this.m_ulSteamID = o.a.fromString(t, !0))
-              : n && r && void 0 !== i
-              ? this.SetFromComponents(t, i, r, n)
-              : (this.m_ulSteamID = t ? o.a.fromNumber(t, !0) : o.a.UZERO);
+      i = n.n(r),
+      o = n("0N1H"),
+      c = n("1n9R"),
+      a = (function() {
+        function t(e, n, r, o) {
+          void 0 === e && (e = 0),
+            e instanceof t
+              ? (this.m_ulSteamID = e.m_ulSteamID)
+              : "string" == typeof e
+              ? (this.m_ulSteamID = i.a.fromString(e, !0))
+              : n && r && void 0 !== o
+              ? this.SetFromComponents(e, o, r, n)
+              : (this.m_ulSteamID = e ? i.a.fromNumber(e, !0) : i.a.UZERO);
         }
         return (
-          (e.InitFromAccountID = function(t) {
-            return new e(Number(t), a.b.EUNIVERSE, 1, i.n);
+          (t.InitFromAccountID = function(e) {
+            return new t(Number(e), c.b.EUNIVERSE, 1, o.n);
           }),
-          (e.InitFromClanID = function(t) {
-            return new e(Number(t), a.b.EUNIVERSE, 7, 0);
+          (t.InitFromClanID = function(e) {
+            return new t(Number(e), c.b.EUNIVERSE, 7, 0);
           }),
-          (e.prototype.GetAccountID = function() {
+          (t.prototype.GetAccountID = function() {
             return this.m_ulSteamID.getLowBitsUnsigned();
           }),
-          (e.prototype.GetInstance = function() {
+          (t.prototype.GetInstance = function() {
             return 1048575 & this.m_ulSteamID.getHighBitsUnsigned();
           }),
-          (e.prototype.GetAccountType = function() {
+          (t.prototype.GetAccountType = function() {
             return (this.m_ulSteamID.getHighBitsUnsigned() >> 20) & 15;
           }),
-          (e.prototype.GetUniverse = function() {
+          (t.prototype.GetUniverse = function() {
             return (this.m_ulSteamID.getHighBitsUnsigned() >> 24) & 255;
           }),
-          (e.prototype.ConvertTo64BitString = function() {
+          (t.prototype.ConvertTo64BitString = function() {
             return this.m_ulSteamID.toString();
           }),
-          (e.prototype.Render = function() {
+          (t.prototype.Render = function() {
             switch (this.GetAccountType()) {
               case 0:
                 return (
@@ -1883,92 +1754,92 @@ and limitations under the License.
                 );
             }
           }),
-          (e.prototype.BIsValid = function() {
-            var e = this.GetAccountType();
-            if (e <= 0 || e >= 11) return !1;
-            var t = this.GetUniverse();
-            if (t <= 0 || t >= 5) return !1;
-            if (1 == e) {
-              if (0 == this.GetAccountID() || this.GetInstance() > i.o)
+          (t.prototype.BIsValid = function() {
+            var t = this.GetAccountType();
+            if (t <= 0 || t >= 11) return !1;
+            var e = this.GetUniverse();
+            if (e <= 0 || e >= 5) return !1;
+            if (1 == t) {
+              if (0 == this.GetAccountID() || this.GetInstance() > o.o)
                 return !1;
-            } else if (7 == e) {
+            } else if (7 == t) {
               if (0 == this.GetAccountID() || 0 != this.GetInstance())
                 return !1;
-            } else if (3 == e && 0 == this.GetAccountID()) return !1;
+            } else if (3 == t && 0 == this.GetAccountID()) return !1;
             return !0;
           }),
-          (e.prototype.BIsIndividualAccount = function() {
+          (t.prototype.BIsIndividualAccount = function() {
             return 1 == this.GetAccountType();
           }),
-          (e.prototype.BIsClanAccount = function() {
+          (t.prototype.BIsClanAccount = function() {
             return 7 == this.GetAccountType();
           }),
-          (e.prototype.SetAccountID = function(e) {
-            this.m_ulSteamID = new o.a(
-              e,
+          (t.prototype.SetAccountID = function(t) {
+            this.m_ulSteamID = new i.a(
+              t,
               this.m_ulSteamID.getHighBitsUnsigned(),
               !0
             );
           }),
-          (e.prototype.SetInstance = function(e) {
+          (t.prototype.SetInstance = function(t) {
             this.SetFromComponents(
               this.GetAccountID(),
-              e,
+              t,
               this.GetAccountType(),
               this.GetUniverse()
             );
           }),
-          (e.prototype.SetAccountType = function(e) {
+          (t.prototype.SetAccountType = function(t) {
             this.SetFromComponents(
               this.GetAccountID(),
               this.GetInstance(),
-              e,
+              t,
               this.GetUniverse()
             );
           }),
-          (e.prototype.SetUniverse = function(e) {
+          (t.prototype.SetUniverse = function(t) {
             this.SetFromComponents(
               this.GetAccountID(),
               this.GetInstance(),
               this.GetAccountType(),
-              e
+              t
             );
           }),
-          (e.prototype.SetFromComponents = function(e, t, n, r) {
-            var i = ((255 & r) << 24) + ((15 & n) << 20) + (1048575 & t),
-              a = 4294967295 & e;
-            this.m_ulSteamID = new o.a(a, i, !0);
+          (t.prototype.SetFromComponents = function(t, e, n, r) {
+            var o = ((255 & r) << 24) + ((15 & n) << 20) + (1048575 & e),
+              c = 4294967295 & t;
+            this.m_ulSteamID = new i.a(c, o, !0);
           }),
-          e
+          t
         );
       })();
   },
-  tkkQ: function(e, t, n) {
+  tkkQ: function(t, e, n) {
     "use strict";
     var r = n("1n9R");
-    n.d(t, "a", function() {
+    n.d(e, "a", function() {
       return r.b;
     }),
-      n.d(t, "d", function() {
+      n.d(e, "d", function() {
         return r.h;
       }),
-      n.d(t, "c", function() {
+      n.d(e, "c", function() {
         return r.g;
       }),
-      n.d(t, "b", function() {
+      n.d(e, "b", function() {
         return r.f;
       });
   },
-  ujHl: function(e, t, n) {
+  ujHl: function(t, e, n) {
     "use strict";
-    n.d(t, "b", function() {
+    n.d(e, "b", function() {
       return r;
     }),
-      n.d(t, "a", function() {
-        return o;
-      }),
-      n.d(t, "c", function() {
+      n.d(e, "a", function() {
         return i;
+      }),
+      n.d(e, "c", function() {
+        return o;
       });
     var r = {
       PerYear: 31536e3,
@@ -1978,12 +1849,12 @@ and limitations under the License.
       PerHour: 3600,
       PerMinute: 60
     };
-    function o(e) {
-      return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
+    function i(t) {
+      return new Date(t.getFullYear(), t.getMonth(), 1, 0, 0, 0, 0);
     }
-    function i(e) {
-      return new Promise(function(t) {
-        return setTimeout(t, e);
+    function o(t) {
+      return new Promise(function(e) {
+        return setTimeout(e, t);
       });
     }
   }

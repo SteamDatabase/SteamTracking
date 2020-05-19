@@ -57,6 +57,19 @@
             ]
         },
         {
+            "name": "GetUserVoteSummary",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get user vote summary",
+            "parameters": [
+                {
+                    "name": "publishedfileids",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "QueryFiles",
             "version": 1,
             "httpmethod": "GET",
@@ -271,6 +284,12 @@
                     "type": "{enum}",
                     "optional": true,
                     "description": "Return the data for the specified revision."
+                },
+                {
+                    "name": "return_reactions",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "If true, then reactions to items will be returned."
                 }
             ]
         },
@@ -475,6 +494,12 @@
                     "type": "{enum}",
                     "optional": true,
                     "description": "Return the data for the specified revision."
+                },
+                {
+                    "name": "includereactions",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "If true, then reactions to items will be returned."
                 }
             ]
         },
@@ -657,6 +682,12 @@
                     "type": "bool",
                     "optional": false,
                     "description": "Strips BBCode from descriptions."
+                },
+                {
+                    "name": "return_reactions",
+                    "type": "bool",
+                    "optional": true,
+                    "description": "If true, then reactions to items will be returned."
                 },
                 {
                     "name": "desired_revision",

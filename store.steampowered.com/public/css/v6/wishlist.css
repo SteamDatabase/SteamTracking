@@ -1,7 +1,8 @@
 
 .wishlist_header {
+	position: relative;
 	display: flex;
-    align-items: center;
+	align-items: center;
 	margin: 15px 0 25px 0;
 }
 
@@ -9,7 +10,7 @@ body.v6 .wishlist_header h2 {
 	color: #fff;
 	font-size: 26px;
 	margin-left: 15px;
-    margin-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 #wishlist_ctn {
@@ -19,6 +20,18 @@ body.v6 .wishlist_header h2 {
 .wishlist_header img {
 	width: 67px;
 	height: 67px;
+}
+
+
+.wishlist_header .profile_avatar_frame {
+	position: absolute;
+	z-index: 1;
+	width: 67px;
+	height: 67px;
+	pointer-events: none;
+}
+.wishlist_header .profile_avatar_frame > img {
+	transform: scale(1.22);
 }
 
 .wishlist_row {

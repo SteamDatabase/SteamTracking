@@ -217,7 +217,7 @@
 
 .highlight_overflow {
 	overflow: hidden;
-	width: 636px;
+	max-width: 636px;
 	position: relative;
 	margin-top: 5px;
 
@@ -449,6 +449,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	position: relative;
 	padding: 6px 0;
 	line-height: 40px;
+	display: flex;
 }
 .collectionControls .workshopItemControls {
 	background: rgba( 42, 60, 83, 0.8 );
@@ -457,16 +458,21 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 }
 
 .workshopItemControls .general_btn {
-	float: left;
 	height: 20px;
 	line-height: 20px;
+	font-size: 12px;
+	white-space: nowrap;
+}
+.workshopItemControls .general_btn:hover {
+	text-decoration: none;
+	background-color: rgba( 102, 192, 244, 0.4 );
+	color: #ffffff;
 }
 
 .workshopItemControls .vertical_divider_container
 {
 	position: relative;
 	display: inline-block;
-	padding: 8px;
 	padding-left: 20px;
 }
 
@@ -515,13 +521,12 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 }
 
 .workshopItemControlCtn {
-	white-space: nowrap;
-	display: inline-block;
-	vertical-align: top;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .workshopItemControlCtn.right {
-	float: right;
+	margin-left: auto;
 }
 
 .rateUpCount
@@ -536,15 +541,35 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .workshopItemControls .workshopItemControlCtn .general_btn,
 .workshopItemControls .workshopItemControlCtn .share_controls,
 .workshopItemControls .workshopItemControlCtn .settings_controls {
-	float: none;
 	display: inline-block;
-	vertical-align: middle;
 }
 
 .rateUpCount img
 {
 	vertical-align: middle;
 	padding-right: 5px;
+}
+
+#application_root {
+	white-space: normal;
+	line-height: normal;
+}
+
+.review_award_ctn {
+	display: flex;
+}
+
+.review_award {
+	margin-left: 5px;
+}
+
+.review_award_icon {
+	width: 20px;
+	height: 20px;
+}
+
+.review_award_count {
+	font-weight: bold;
 }
 
 .shareItemInlineLink
@@ -714,12 +739,6 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	position: relative;
 	float: right;
-}
-
-.share_controls
-{
-	position: relative;
-	float: left;
 }
 
 #settings_popup
@@ -3419,10 +3438,11 @@ iframe.sharedFilePreviewYouTubeVideo.floatLeft, iframe.sharedFilePreviewYouTubeV
 
 
 	box-shadow: 0px 0px 3px 0px rgba(20,20,20,0.75);
+	display: flex;
 }
 
 	.workshop_item_header .col_right {
-		float: right;
+		margin-left: auto;
 		width: 268px;
 	}
 	.workshop_item_header .hr {
@@ -3435,8 +3455,8 @@ iframe.sharedFilePreviewYouTubeVideo.floatLeft, iframe.sharedFilePreviewYouTubeV
 		}
 
 .highlight_ctn {
-	width: 638px;
-	float: left;
+	max-width: 638px;
+	width: 100%;
 }
 
 .sectionTabsHR
@@ -3455,7 +3475,7 @@ iframe.sharedFilePreviewYouTubeVideo.floatLeft, iframe.sharedFilePreviewYouTubeV
 
 .workshopItemPreviewArea.accent {
 	background: url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/ig/GreenlightActionGlow.png') bottom center no-repeat;
-	width: 950px;
+	width: 100%;
 	padding: 0 75px;
 	margin-left: -75px;
 }
