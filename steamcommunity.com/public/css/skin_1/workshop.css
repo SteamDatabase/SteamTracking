@@ -1825,14 +1825,22 @@ textarea {
 
 #highlight_player_area {
 	position: relative;
-	margin: 0;
 	max-width: 635px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .highlight_player_item {
 	position: absolute;
 	left: 0px;
 	top: 0px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .user_action_history_icon.subscribed
@@ -2083,8 +2091,7 @@ textarea {
 	cursor: pointer;
 	display:block;
 	max-height: 358px;
-	max-width: 638px;
-	width: 100%;
+	max-width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;

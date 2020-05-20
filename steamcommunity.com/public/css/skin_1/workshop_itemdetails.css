@@ -450,6 +450,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	padding: 6px 0;
 	line-height: 40px;
 	display: flex;
+	flex-wrap: wrap;
 }
 .collectionControls .workshopItemControls {
 	background: rgba( 42, 60, 83, 0.8 );
@@ -473,7 +474,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	position: relative;
 	display: inline-block;
-	padding-left: 20px;
+	padding-left: 10px;
 }
 
 .workshopItemControls .vertical_divider
@@ -557,6 +558,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .review_award_ctn {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .review_award {
