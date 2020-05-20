@@ -14397,7 +14397,7 @@
                 var n =
                   "section_" +
                   Object(V.a)(
-                    t.unique_id.toString() || JSON.stringify(t)
+                    t.unique_id ? t.unique_id.toString() : JSON.stringify(t)
                   ).toString();
                 if (window.sessionStorage) {
                   var o = window.sessionStorage.getItem(n);
@@ -14852,10 +14852,10 @@
                 p = i.links,
                 u = i.events,
                 m = i.bScreenIsWide,
-                h = i.nMaxCapsulesPerRow,
-                v = this.GetSectionForSession();
+                h = i.nMaxCapsulesPerRow;
               if (!s) return null;
-              var _ = (function(e) {
+              var v = this.GetSectionForSession(),
+                _ = (function(e) {
                   var t = e.event,
                     r = e.section,
                     a = e.capsules,

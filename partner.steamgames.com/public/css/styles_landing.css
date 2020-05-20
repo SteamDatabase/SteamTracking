@@ -3134,3 +3134,13 @@ div .cdkey_request_details_row
 .jsTooltip {
 	white-space: pre-line;
 }
+
+.healthcheck_table {
+    font-size: 13px;
+    border-spacing: 0;
+}
+.healthcheck_table td {
+    padding: 10px 16px 10px 16px;
+    background: #4a4a4a;
+    border-bottom: 1px solid black;
+}
