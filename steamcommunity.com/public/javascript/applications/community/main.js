@@ -7362,6 +7362,7 @@
           VANITY_ID: "",
           IS_CREATOR_HOME: !1,
           IS_CURATOR: !1,
+          IS_OGG: !1,
           CAN_UPLOAD_IMAGES: !1,
           HEADER_IMAGE: "",
           APP_NAME: "",
