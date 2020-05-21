@@ -555,31 +555,33 @@
             ((n = e).prototype.componentDidMount = function() {
               var r = this,
                 e = this.props,
-                t = e.id,
-                n = e.type;
+                n = e.id,
+                t = e.type;
               (this.m_bIsMounted = !0), T.a.HintLoad();
-              var o = { id: t, type: n || "game" },
-                i = $(o),
-                a = ee(o.type);
-              i && a
-                ? this.setState({ info: i, hoverType: a })
-                : console.warn("Unsupported item:", o.type, t),
-                Object(J.b)(o).then(function(e) {
-                  if (r.m_bIsMounted) {
-                    var t = 1 == e.length ? w.a.GetAppLinkInfo(e[0]) : null;
-                    if (t) {
-                      var n = A.a.Get();
-                      n.LoadShortDesc(t.appid).then(function(e) {
-                        e &&
-                          r.m_bIsMounted &&
-                          r.setState({
-                            strAppShortDescription: n.GetShortDesc(t.appid)
-                          });
-                      });
+              var o = { id: n, type: t || "game" };
+              Object(J.d)([o]).then(function() {
+                var e = $(o),
+                  t = ee(o.type);
+                e && t
+                  ? r.setState({ info: e, hoverType: t })
+                  : console.warn("Unsupported item:", o.type, n),
+                  Object(J.b)(o).then(function(e) {
+                    if (r.m_bIsMounted) {
+                      var t = 1 == e.length ? w.a.GetAppLinkInfo(e[0]) : null;
+                      if (t) {
+                        var n = A.a.Get();
+                        n.LoadShortDesc(t.appid).then(function(e) {
+                          e &&
+                            r.m_bIsMounted &&
+                            r.setState({
+                              strAppShortDescription: n.GetShortDesc(t.appid)
+                            });
+                        });
+                      }
+                      r.setState({ rgAppIDs: e, appInfo: t });
                     }
-                    r.setState({ rgAppIDs: e, appInfo: t });
-                  }
-                });
+                  });
+              });
             }),
             (e.prototype.componentWillUnmount = function() {
               this.m_bIsMounted = !1;
