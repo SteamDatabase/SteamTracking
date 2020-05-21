@@ -141,16 +141,16 @@
           return j;
         }),
         n.d(t, "y", function() {
-          return B;
-        }),
-        n.d(t, "v", function() {
           return D;
         }),
+        n.d(t, "v", function() {
+          return B;
+        }),
         n.d(t, "w", function() {
-          return I;
+          return R;
         }),
         n.d(t, "l", function() {
-          return R;
+          return I;
         }),
         n.d(t, "j", function() {
           return x;
@@ -1214,7 +1214,7 @@
           })
         );
       }
-      function B() {
+      function D() {
         return r.createElement(
           "svg",
           {
@@ -1235,7 +1235,7 @@
           )
         );
       }
-      function D() {
+      function B() {
         return r.createElement(
           "svg",
           {
@@ -1272,7 +1272,7 @@
           )
         );
       }
-      function I() {
+      function R() {
         return r.createElement(
           "svg",
           {
@@ -1300,7 +1300,7 @@
           })
         );
       }
-      function R() {
+      function I() {
         return r.createElement(
           "svg",
           {
@@ -2883,7 +2883,7 @@
             (e = Object(y.c)([h.observer], e))
           );
         })(g.a.Component),
-        B = (function(t) {
+        D = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { ready_to_run: !1 }), e;
@@ -2940,7 +2940,7 @@
             e
           );
         })(g.a.Component);
-      t.default = B;
+      t.default = D;
     },
     "IjL/": function(e, t, n) {
       "use strict";
@@ -6175,7 +6175,7 @@
             r
           );
         })(o.Message),
-        B = (o.Message,
+        D = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6217,7 +6217,7 @@
             r
           );
         })(o.Message)),
-        D = (function(n) {
+        B = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -6290,7 +6290,7 @@
             r
           );
         })(o.Message),
-        I = (o.Message,
+        R = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6300,13 +6300,13 @@
           return (
             Object(i.d)(r, n),
             (r.prototype.priorities = function() {
-              return o.Message.getRepeatedWrapperField(this, D, 1);
+              return o.Message.getRepeatedWrapperField(this, B, 1);
             }),
             (r.prototype.set_priorities = function(e) {
               o.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_priorities = function(e, t) {
-              return o.Message.addToRepeatedWrapperField(this, 1, e, D, t);
+              return o.Message.addToRepeatedWrapperField(this, 1, e, B, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -6315,7 +6315,7 @@
               var n = {
                 priorities: o.Message.toObjectList(
                   t.priorities(),
-                  D.toObject,
+                  B.toObject,
                   e
                 )
               };
@@ -6327,7 +6327,7 @@
                 t.set_priorities(
                   (Array.isArray(e.priorities) ? e.priorities : []).map(
                     function(e) {
-                      return D.fromObject(e);
+                      return B.fromObject(e);
                     }
                   )
                 ),
@@ -6343,8 +6343,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var n = new D();
-                    t.readMessage(n, D.deserializeBinaryFromReader),
+                    var n = new B();
+                    t.readMessage(n, B.deserializeBinaryFromReader),
                       e.add_priorities(n);
                     break;
                   default:
@@ -6360,7 +6360,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var n;
               0 < (n = e.priorities()).length &&
-                t.writeRepeatedMessage(1, n, D.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, n, B.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CCommunity_GetUserPartnerEventsAppPriorities_Response";
@@ -6368,7 +6368,7 @@
             r
           );
         })(o.Message)),
-        R = (o.Message,
+        I = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6959,7 +6959,7 @@
           return e.SendMsg(
             "Community.ClearUserPartnerEventsAppPriorities#1",
             t,
-            B,
+            D,
             {}
           );
         }),
@@ -6967,7 +6967,7 @@
           return e.SendMsg(
             "Community.GetUserPartnerEventsAppPriorities#1",
             t,
-            I,
+            R,
             {}
           );
         }),
@@ -6975,7 +6975,7 @@
           return e.SendMsg(
             "Community.ClearSinglePartnerEventsAppPriority#1",
             t,
-            R,
+            I,
             {}
           );
         });
@@ -7016,16 +7016,16 @@
             })
           );
         },
-        l = D("DialogHeader"),
-        u = (D("DialogSubHeader"), D("DialogFooter")),
-        p = D("DialogLabel _DialogLayout"),
-        d = D("DialogBodyText"),
-        m = D("DialogBody"),
-        v = (D("DialogInnerBody"), D("DialogBodyNotificationBar")),
-        b = D("DialogTwoColLayout _DialogColLayout"),
-        y = D("DialogThreeColLayout _DialogColLayout");
-      D("DialogTwoThirdColLayout _DialogColLayout"),
-        D("DialogColumn _DialogLayout");
+        l = B("DialogHeader"),
+        u = (B("DialogSubHeader"), B("DialogFooter")),
+        p = B("DialogLabel _DialogLayout"),
+        d = B("DialogBodyText"),
+        m = B("DialogBody"),
+        v = (B("DialogInnerBody"), B("DialogBodyNotificationBar")),
+        b = B("DialogTwoColLayout _DialogColLayout"),
+        y = B("DialogThreeColLayout _DialogColLayout");
+      B("DialogTwoThirdColLayout _DialogColLayout"),
+        B("DialogColumn _DialogLayout");
       function M(e) {
         var t = e.children,
           n = e.bCenterVertically,
@@ -7262,7 +7262,7 @@
             t
           );
         })(k),
-        B = (function(e) {
+        D = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -7354,14 +7354,14 @@
             t
           );
         })(k);
-      function D(n) {
+      function B(n) {
         return function(e) {
           var t = n + (e.className ? " " + e.className : "");
           return f.createElement("div", Object(h.a)({}, e, { className: t }));
         };
       }
-      var I = n("hJxo"),
-        R = n("r64O"),
+      var R = n("hJxo"),
+        I = n("r64O"),
         x = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
@@ -7450,7 +7450,7 @@
                     this.m_CopiedAnimation && this.m_CopiedAnimation.Cancel();
                   this.setState({ m_bCompletedCopiedAnimation: !1 }),
                     this.setState({ m_CopiedYPos: -4 }, function() {
-                      (t.m_CopiedAnimation = new I.b(
+                      (t.m_CopiedAnimation = new R.b(
                         t,
                         { m_CopiedYPos: -24 },
                         {
@@ -7478,7 +7478,7 @@
                 ));
             }),
             (e.prototype.CheckProps = function(e) {
-              Object(R.a)(
+              Object(I.a)(
                 !(e.bShowClearAction || e.bAlwaysShowClearAction) || e.onChange,
                 "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input."
               );
@@ -8307,7 +8307,7 @@
           return j;
         }),
         n.d(t, "n", function() {
-          return B;
+          return D;
         }),
         n.d(t, "j", function() {
           return x;
@@ -10321,7 +10321,7 @@
         u = n("exH9"),
         i = n("bxiW"),
         T = { x: "y", y: "x" };
-      function D(e, t) {
+      function B(e, t) {
         return e.x * t.x + e.y * t.y;
       }
       function L(e, t) {
@@ -10339,7 +10339,7 @@
       function z(e, t) {
         return !(e.max < t.min || t.max < e.min);
       }
-      var I = n("Kw0F"),
+      var R = n("Kw0F"),
         U = n("X3Ds");
       n.d(t, "a", function() {
         return F;
@@ -10572,12 +10572,12 @@
               t
             );
           }
-          var B;
+          var D;
           return (
             Object(c.d)(e, n),
-            ((B = e).FocusWithin = function(e) {
+            ((D = e).FocusWithin = function(e) {
               if (b.IsNavEnabled) {
-                var t = B.sm_navAreaStack;
+                var t = D.sm_navAreaStack;
                 if (0 !== t.length) {
                   var n = t[t.length - 1],
                     r = n.m_navAreaDivRef.current;
@@ -10604,7 +10604,7 @@
               } else this.GetFocusController().Focus(e);
             }),
             (e.prototype.UpdateFocus = function(e, t) {
-              var n = B.FindAnchorElement(e);
+              var n = D.FindAnchorElement(e);
               if (n) {
                 var r = V(n);
                 this.m_focusPosOffsetFromAnchorElement = L(r, t);
@@ -10627,7 +10627,7 @@
                 t = this.m_lastFocusedHtmlElement,
                 n = this.m_focusPosOffsetFromAnchorElement;
               if (e && t && e.contains(t) && n) {
-                var r = B.FindAnchorElement(t);
+                var r = D.FindAnchorElement(t);
                 if (r) return N(V(r), n);
               }
               return this.m_focusPos;
@@ -10667,7 +10667,7 @@
                 return W(e);
               });
               if (!u || 0 === u.length) return null;
-              var p = B.sm_navAreaStack;
+              var p = D.sm_navAreaStack;
               if (p.length < 1) return null;
               var d = p[p.length - 1];
               if (
@@ -10691,7 +10691,7 @@
                 if (null !== h) return { htmlElement: h, pos: V(h) };
               }
               var b,
-                y = Object(I.d)(p, function(e) {
+                y = Object(R.d)(p, function(e) {
                   return null !== e.m_focusPos;
                 });
               if (y) {
@@ -10706,7 +10706,7 @@
                 ) {
                   var S,
                     C = V((S = E[F])),
-                    k = (void 0, (b = L(M, C)), Math.sqrt(D(b, b)));
+                    k = (void 0, (b = L(M, C)), Math.sqrt(B(b, b)));
                   k < w && ((w = k), (O = S));
                 }
                 if (O) return { htmlElement: O, pos: V(O) };
@@ -10778,13 +10778,13 @@
                     var k = { x: 0, y: 0 };
                     (k[u] = M[u][o]), (k[i] = F + C);
                     var j = L(h, k),
-                      B = (O * O + C * C) / Math.abs(j[u]);
-                    B < _ && ((_ = B), (g = x)),
-                      v.push({ score: B, element: x });
+                      D = (O * O + C * C) / Math.abs(j[u]);
+                    D < _ && ((_ = D), (g = x)),
+                      v.push({ score: D, element: x });
                   }
                 }
               }
-              var D = function(e, t) {
+              var B = function(e, t) {
                 void 0 === t && (t = !1);
                 var n = e.getAttribute("data-nav");
                 if (n === G.Stop) {
@@ -10812,17 +10812,17 @@
                 }
                 return null;
               };
-              if (f && (I = D(f, !0))) return I;
+              if (f && (R = B(f, !0))) return R;
               if (g) {
-                var I;
-                if ((I = D(g))) return I;
+                var R;
+                if ((R = B(g))) return R;
                 v.sort(function(e, t) {
                   return e.score - t.score;
                 });
-                for (var R = 0; R < v.length; ++R) {
+                for (var I = 0; I < v.length; ++I) {
                   var x;
-                  if ((x = v[R].element) !== g) {
-                    var A = D(x);
+                  if ((x = v[I].element) !== g) {
+                    var A = B(x);
                     if (A) return A;
                   }
                 }
@@ -10909,7 +10909,7 @@
               if (b.IsNavEnabled) {
                 var t = this.m_navAreaDivRef.current;
                 if (t) {
-                  var n = B.k_KeyNavigationDirections[e.key];
+                  var n = D.k_KeyNavigationDirections[e.key];
                   if (n) {
                     var r = n[0],
                       i = n[1],
@@ -10934,12 +10934,12 @@
             }),
             (e.HandleDocumentKeyDown = function(e) {
               if (b.IsNavEnabled) {
-                var t = B.sm_navAreaStack;
+                var t = D.sm_navAreaStack;
                 if (0 !== t.length) {
                   var n = t[t.length - 1],
                     r = n.m_navAreaDivRef.current;
                   if (r) {
-                    var i = B.k_KeyNavigationDirections[e.key];
+                    var i = D.k_KeyNavigationDirections[e.key];
                     if (i) {
                       var o = r.ownerDocument;
                       if (o && o === n.m_document) {
@@ -11025,27 +11025,27 @@
                   ((this.m_document = e),
                   this.m_htmlDomFocusController &&
                     this.m_htmlDomFocusController.Initialize(e)),
-                  0 === B.sm_navAreaStack.length &&
+                  0 === D.sm_navAreaStack.length &&
                     (e.addEventListener("scroll", this.HandleScrollCapture, !0),
                     this.props.focusController ||
                       e.addEventListener(
                         "keydown",
-                        B.HandleDocumentKeyDown,
+                        D.HandleDocumentKeyDown,
                         !1
                       ));
               }
-              this.props.focusController || B.sm_navAreaStack.push(this);
+              this.props.focusController || D.sm_navAreaStack.push(this);
             }),
             (e.prototype.componentWillUnmount = function() {
               if (
-                ((B.sm_navAreaStack = Object(I.a)(B.sm_navAreaStack, this)),
-                0 === B.sm_navAreaStack.length)
+                ((D.sm_navAreaStack = Object(R.a)(D.sm_navAreaStack, this)),
+                0 === D.sm_navAreaStack.length)
               ) {
                 if (!this.m_navAreaDivRef.current) return;
                 var e = this.m_document;
                 if (!e) return;
                 e.removeEventListener("scroll", this.HandleScrollCapture, !0),
-                  e.removeEventListener("keydown", B.HandleDocumentKeyDown, !1);
+                  e.removeEventListener("keydown", D.HandleDocumentKeyDown, !1);
               }
             }),
             (e.prototype.render = function() {
@@ -11131,7 +11131,7 @@
             Object(c.c)([i.a], e.prototype, "HandleMouseDownCapture", null),
             Object(c.c)([i.a], e.prototype, "HandleClickCapture", null),
             Object(c.c)([i.a], e, "HandleDocumentKeyDown", null),
-            (e = B = Object(c.c)([r.observer], e))
+            (e = D = Object(c.c)([r.observer], e))
           );
         })(l.Component));
     },
@@ -11201,7 +11201,9 @@
                         (t = p.a.Init(a, 147)),
                         n.headers &&
                           (n.headers["x-eresult"] &&
-                            t.Hdr().set_eresult(n.headers["x-eresult"]),
+                            t
+                              .Hdr()
+                              .set_eresult(parseInt(n.headers["x-eresult"])),
                           n.headers["x-error_message"] &&
                             t
                               .Hdr()
@@ -12254,13 +12256,13 @@
       "use strict";
       c.r(t);
       var l = c("mrSG"),
-        n = c("i8i4"),
-        r = c.n(n),
-        o = c("q1tI"),
-        s = c.n(o),
-        i = c("lkRc"),
-        a = c("vDqi"),
-        u = c.n(a);
+        o = c("i8i4"),
+        n = c.n(o),
+        s = c("q1tI"),
+        a = c.n(s),
+        r = c("lkRc"),
+        i = c("vDqi"),
+        u = c.n(i);
       var p = c("TLQK");
       c("mgoM");
       var d = c("55Ip"),
@@ -12407,27 +12409,27 @@
           return (
             Object(l.d)(t, e),
             (t.prototype.render = function() {
-              if ("dev" !== i.c.WEB_UNIVERSE) return null;
+              if ("dev" !== r.c.WEB_UNIVERSE) return null;
               var t = document.getElementById(this.props.strConfigID);
               if (!t) return null;
               var n = new Array();
               return (
                 t.getAttributeNames().forEach(function(e) {
                   e.toLocaleLowerCase().startsWith("data-") &&
-                    (n.push(o.createElement("h1", { key: "header-" + e }, e)),
+                    (n.push(s.createElement("h1", { key: "header-" + e }, e)),
                     n.push(
-                      o.createElement(M, {
+                      s.createElement(M, {
                         key: "body-" + e,
                         data: JSON.parse(t.getAttribute(e))
                       })
                     ));
                 }),
-                o.createElement("div", null, n)
+                s.createElement("div", null, n)
               );
             }),
             t
           );
-        })(o.Component),
+        })(s.Component),
         M = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -12435,10 +12437,10 @@
           return (
             Object(l.d)(t, e),
             (t.prototype.render = function() {
-              return o.createElement(
+              return s.createElement(
                 "div",
                 null,
-                o.createElement(
+                s.createElement(
                   "pre",
                   null,
                   JSON.stringify(this.props.data, null, 2)
@@ -12447,12 +12449,12 @@
             }),
             t
           );
-        })(o.Component),
+        })(s.Component),
         w = c("Jqb/"),
         O = c("r64O");
       function F(i) {
         return function(t) {
-          var e = Object(o.useState)(null),
+          var e = Object(s.useState)(null),
             n = e[0],
             r = e[1];
           return (
@@ -12460,7 +12462,7 @@
             (Promise.all([c.e(0), c.e(1), c.e(5), c.e(2), c.e(8)])
               .then(c.bind(null, "Wym2"))
               .then(function(e) {
-                r(s.a.createElement(e[i], t));
+                r(a.a.createElement(e[i], t));
               }),
             null)
           );
@@ -12471,13 +12473,13 @@
         C = F("EventSaleDisplay"),
         k = F("EventCalendar"),
         j = F("EventDetailView"),
-        B = F("Events"),
-        D = c("kLLr"),
-        I = function() {
-          return s.a.createElement(
+        D = F("Events"),
+        B = c("kLLr"),
+        R = function() {
+          return a.a.createElement(
             m.d,
             null,
-            s.a.createElement(m.b, {
+            a.a.createElement(m.b, {
               exact: !0,
               path: v.EventViewByApp(
                 ":appid(\\d+)",
@@ -12485,7 +12487,7 @@
                 ":vanity?"
               ),
               render: function(e) {
-                return s.a.createElement(
+                return a.a.createElement(
                   j,
                   Object(l.a)(
                     { key: "detailview_" + e.match.params.event_gid },
@@ -12499,7 +12501,7 @@
                 );
               }
             }),
-            s.a.createElement(m.b, {
+            a.a.createElement(m.b, {
               exact: !0,
               path: v.EventViewByGroup(
                 ":groupid(\\d+)",
@@ -12507,13 +12509,13 @@
                 ":vanity?"
               ),
               render: function(e) {
-                return s.a.createElement(
+                return a.a.createElement(
                   j,
                   Object(l.a)(
                     { key: "detailview_" + e.match.params.event_gid },
                     e,
                     {
-                      clansteamid: new D.a(e.match.params.groupid),
+                      clansteamid: new B.a(e.match.params.groupid),
                       event_gid: e.match.params.event_gid,
                       bInfiniteScroll: "inline" == e.match.params.viewtype
                     }
@@ -12521,7 +12523,7 @@
                 );
               }
             }),
-            s.a.createElement(m.b, {
+            a.a.createElement(m.b, {
               exact: !0,
               path: v.OldAnnouncementViewByApp(
                 ":appid(\\d+)",
@@ -12529,7 +12531,7 @@
                 ":vanity?"
               ),
               render: function(e) {
-                return s.a.createElement(
+                return a.a.createElement(
                   j,
                   Object(l.a)(
                     { key: "detailoldview_" + e.match.params.announcement_gid },
@@ -12543,7 +12545,7 @@
                 );
               }
             }),
-            s.a.createElement(m.b, {
+            a.a.createElement(m.b, {
               exact: !0,
               path: v.OldAnnouncementViewByGroup(
                 ":groupid(\\d+)",
@@ -12551,13 +12553,13 @@
                 ":vanity?"
               ),
               render: function(e) {
-                return s.a.createElement(
+                return a.a.createElement(
                   j,
                   Object(l.a)(
                     { key: "detailoldview_" + e.match.params.announcement_gid },
                     e,
                     {
-                      clansteamid: new D.a(e.match.params.groupid),
+                      clansteamid: new B.a(e.match.params.groupid),
                       announcement_gid: e.match.params.announcement_gid,
                       bInfiniteScroll: "old_inline" == e.match.params.viewtype
                     }
@@ -12565,11 +12567,11 @@
                 );
               }
             }),
-            s.a.createElement(m.b, {
+            a.a.createElement(m.b, {
               exact: !0,
               path: v.NewsHubApp(":appid(\\d+)", ":vanity?"),
               render: function(e) {
-                return s.a.createElement(
+                return a.a.createElement(
                   k,
                   Object(l.a)({ key: e.match.params.appid }, e, {
                     filter_to_appids: [Number(e.match.params.appid)]
@@ -12577,11 +12579,11 @@
                 );
               }
             }),
-            s.a.createElement(m.b, {
+            a.a.createElement(m.b, {
               exact: !0,
               path: v.NewsHubGroup(":groupid(\\d+)", ":vanity?"),
               render: function(e) {
-                return s.a.createElement(
+                return a.a.createElement(
                   k,
                   Object(l.a)({ key: e.match.params.groupid }, e, {
                     filter_to_clanids: [Number(e.match.params.groupid)]
@@ -12589,11 +12591,11 @@
                 );
               }
             }),
-            s.a.createElement(m.b, {
+            a.a.createElement(m.b, {
               exact: !0,
               path: v.NewsHubCollection(":collectionid", ":vanity?"),
               render: function(e) {
-                return s.a.createElement(
+                return a.a.createElement(
                   k,
                   Object(l.a)({ key: e.match.params.collectionid }, e, {
                     filter_to_collection: e.match.params.collectionid
@@ -12601,30 +12603,30 @@
                 );
               }
             }),
-            s.a.createElement(m.b, {
+            a.a.createElement(m.b, {
               exact: !0,
               path: v.NewsHub(),
               render: function(e) {
-                return s.a.createElement(k, Object(l.a)({ key: "global" }, e));
+                return a.a.createElement(k, Object(l.a)({ key: "global" }, e));
               }
             })
           );
         },
-        R = function() {
-          return s.a.createElement(
+        I = function() {
+          return a.a.createElement(
             m.d,
             null,
-            s.a.createElement(m.b, {
+            a.a.createElement(m.b, {
               exact: !0,
               path: v.EventBackfill(),
               render: function(e) {
-                return s.a.createElement(S, Object(l.a)({}, e));
+                return a.a.createElement(S, Object(l.a)({}, e));
               }
             }),
-            s.a.createElement(m.b, {
+            a.a.createElement(m.b, {
               path: v.EventModeration(),
               render: function(e) {
-                return s.a.createElement(
+                return a.a.createElement(
                   E,
                   Object(l.a)({}, e, { appid: e.match.params.appid })
                 );
@@ -12633,28 +12635,61 @@
           );
         },
         x = c("Hny+"),
-        A = (s.a.lazy(function() {
-          return c.e(67).then(c.bind(null, "jHcm"));
-        }),
-        s.a.lazy(function() {
+        A = function(e) {
+          var i = e.config;
+          return a.a.createElement(
+            a.a.Fragment,
+            null,
+            Object.keys(i || {}).map(function(r) {
+              var e = document.querySelectorAll("[data-featuretarget=" + r);
+              return e.length
+                ? Array.from(e).map(function(e, t) {
+                    var n = (function(e, t) {
+                      if (!e) return {};
+                      try {
+                        var n = JSON.parse(e);
+                        if (!n || "object" != typeof n || Array.isArray(n))
+                          throw new Error();
+                        return n;
+                      } catch (e) {
+                        return (
+                          console.error(
+                            'There was a problem parsing props for feature target "' +
+                              t +
+                              '"'
+                          ),
+                          {}
+                        );
+                      }
+                    })(e.getAttribute("data-props"), r);
+                    return Object(o.createPortal)(i[r](n), e, "" + r + t);
+                  })
+                : null;
+            })
+          );
+        };
+      a.a.lazy(function() {
+        return c.e(67).then(c.bind(null, "jHcm"));
+      });
+      var T = a.a.lazy(function() {
           return Promise.all([c.e(0), c.e(1), c.e(9)]).then(
             c.bind(null, "3WEt")
           );
-        })),
-        T = function() {
-          return s.a.createElement("div", null);
+        }),
+        L = function() {
+          return a.a.createElement("div", null);
         },
-        L = s.a.lazy(function() {
+        N = a.a.lazy(function() {
           return Promise.all([c.e(0), c.e(1), c.e(6)]).then(
             c.bind(null, "NIbt")
           );
         }),
-        N = s.a.lazy(function() {
+        P = a.a.lazy(function() {
           return Promise.all([c.e(0), c.e(1), c.e(5), c.e(2), c.e(7)]).then(
             c.bind(null, "3rT3")
           );
         }),
-        P = (s.a.lazy(function() {
+        z = (a.a.lazy(function() {
           return Promise.resolve().then(c.bind(null, "Hny+"));
         }),
         (function(e) {
@@ -12671,37 +12706,36 @@
                 h.locale(e));
             }),
             (t.prototype.render = function() {
-              var t = this;
               return (
                 Object(O.a)(
                   null == window.Prototype,
                   "Should not include prototypejs."
                 ),
-                s.a.createElement(
+                a.a.createElement(
                   d.a,
                   {
                     basename: (function() {
                       var e = document.createElement("a");
-                      e.href = i.c.STORE_BASE_URL;
+                      e.href = r.c.STORE_BASE_URL;
                       var t = e.pathname;
                       return t.endsWith("/") || (t += "/"), t;
                     })()
                   },
-                  s.a.createElement(
+                  a.a.createElement(
                     "div",
                     { className: g.a.App },
                     !1,
-                    s.a.createElement(
-                      s.a.Suspense,
-                      { fallback: s.a.createElement("div", null) },
-                      s.a.createElement(
+                    a.a.createElement(
+                      a.a.Suspense,
+                      { fallback: a.a.createElement("div", null) },
+                      a.a.createElement(
                         m.d,
                         null,
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.DiagData(),
                           render: function(e) {
-                            return s.a.createElement(
+                            return a.a.createElement(
                               y,
                               Object(l.a)({}, e, {
                                 key: "diab_data_" + e.match.params.gid,
@@ -12710,189 +12744,200 @@
                             );
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.AppStorePage(),
                           render: function(e) {
-                            return t.props.bEventsMode
-                              ? s.a.createElement(B, {
-                                  key: "appeventrow" + e.match.params.appid,
-                                  appid: e.match.params.appid
-                                })
-                              : t.props.bAwardMode
-                              ? s.a.createElement(T, {
-                                  key: "appawardmodal" + e.match.params.appid
-                                })
-                              : s.a.createElement(
-                                  L,
-                                  Object(l.a)(
-                                    {
-                                      key:
-                                        "appbroadcastcast_" +
-                                        e.match.params.appid
-                                    },
-                                    e,
-                                    { appid: e.match.params.appid }
-                                  )
-                                );
+                            var t = e.match.params.appid;
+                            return a.a.createElement(A, {
+                              config: {
+                                "events-row": function() {
+                                  return a.a.createElement(D, {
+                                    key: "appeventrow" + t,
+                                    appid: t
+                                  });
+                                },
+                                "review-award": function() {
+                                  return a.a.createElement(L, {
+                                    key: "appawardmodal" + t
+                                  });
+                                },
+                                "broadcast-embed": function() {
+                                  return a.a.createElement(
+                                    N,
+                                    Object(l.a)(
+                                      { key: "appbroadcastcast_" + t },
+                                      e,
+                                      { appid: t }
+                                    )
+                                  );
+                                }
+                              }
+                            });
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.SaleLandingPage(),
                           render: function(e) {
-                            return t.props.bSaleMode
-                              ? s.a.createElement(C, {
-                                  key: "sale_" + e.match.params.salePageName,
-                                  promotionname:
-                                    "sale_" + e.match.params.salePageName,
-                                  language: Object(b.e)(i.c.LANGUAGE)
-                                })
-                              : s.a.createElement(
-                                  L,
-                                  Object(l.a)(
-                                    {
-                                      key:
-                                        "broadcastsale_" +
-                                        e.match.params.salePageName
-                                    },
-                                    e,
-                                    {
-                                      promotionname:
-                                        "sale_" + e.match.params.salePageName
-                                    }
-                                  )
-                                );
+                            var t = e.match.params.salePagename;
+                            return a.a.createElement(A, {
+                              config: {
+                                "sale-display": function() {
+                                  return a.a.createElement(C, {
+                                    key: "sale_" + t,
+                                    promotionName: "sale_" + t,
+                                    language: Object(b.e)(r.c.LANGUAGE)
+                                  });
+                                },
+                                "broadcast-embed": function() {
+                                  return a.a.createElement(
+                                    N,
+                                    Object(l.a)(
+                                      { key: "broadcastsale_" + t },
+                                      e,
+                                      { promotionName: t }
+                                    )
+                                  );
+                                }
+                              }
+                            });
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           path:
                             "/(curator|pub|publisher|dev|developer|franchise)/:curator_vanity/admin",
-                          component: N
+                          component: P
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.CreatorSaleLandingPage(),
                           render: function(e) {
-                            return s.a.createElement(C, {
-                              key:
-                                "salecreator_" +
-                                e.match.params.creatorPageName +
-                                "_" +
-                                e.match.params.salePageName,
-                              promotionname:
-                                "sale_" + e.match.params.salePageName,
-                              language: Object(b.e)(i.c.LANGUAGE)
+                            return a.a.createElement(A, {
+                              config: {
+                                "sale-display": function() {
+                                  return a.a.createElement(C, {
+                                    key:
+                                      "salecreator_" +
+                                      e.match.params.creatorPageName +
+                                      "_" +
+                                      e.match.params.salePageName,
+                                    promotionName:
+                                      "sale_" + e.match.params.salePageName,
+                                    language: Object(b.e)(r.c.LANGUAGE)
+                                  });
+                                }
+                              }
                             });
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           path: v.RemotePlay(),
                           render: function(e) {
-                            return s.a.createElement(C, {
+                            return a.a.createElement(C, {
                               key: "sale_remoteplaylanding",
-                              promotionname: "remoteplaylanding",
-                              language: Object(b.e)(i.c.LANGUAGE)
+                              promotionName: "remoteplaylanding",
+                              language: Object(b.e)(r.c.LANGUAGE)
                             });
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           path: v.RemotePlayTogether(),
                           render: function(e) {
-                            return s.a.createElement(C, {
+                            return a.a.createElement(C, {
                               key: "sale_together",
-                              promotionname: "sale_together",
-                              language: Object(b.e)(i.c.LANGUAGE)
+                              promotionName: "sale_together",
+                              language: Object(b.e)(r.c.LANGUAGE)
                             });
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.CuratorPage(),
                           render: function(e) {
-                            return s.a.createElement(
-                              L,
+                            return a.a.createElement(
+                              N,
                               Object(l.a)(
                                 {
                                   key:
                                     "curatorbroadcast_" +
-                                    i.a.clanid +
+                                    r.a.clanid +
                                     "_" +
-                                    i.a.listid
+                                    r.a.listid
                                 },
                                 e,
-                                { clanid: i.a.clanid, listid: i.a.listid }
+                                { clanid: r.a.clanid, listid: r.a.listid }
                               )
                             );
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.CreatorPage(),
                           render: function(e) {
-                            return s.a.createElement(
-                              L,
+                            return a.a.createElement(
+                              N,
                               Object(l.a)(
                                 {
                                   key:
                                     "creatorbroadcast_" +
-                                    i.a.clanid +
+                                    r.a.clanid +
                                     "_" +
-                                    i.a.listid
+                                    r.a.listid
                                 },
                                 e,
-                                { clanid: i.a.clanid, listid: i.a.listid }
+                                { clanid: r.a.clanid, listid: r.a.listid }
                               )
                             );
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.PackageStorePage(),
                           render: function(e) {
-                            return s.a.createElement(L, {
+                            return a.a.createElement(N, {
                               key: "packagebroadcast_" + e.match.params.subid,
                               subid: e.match.params.subid
                             });
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.BundleStorePage(),
                           render: function(e) {
-                            return s.a.createElement(L, {
+                            return a.a.createElement(N, {
                               key: "bundlebroadcast_" + e.match.params.bundleid,
                               bundleid: e.match.params.bundleid
                             });
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           path: v.NewsHub(),
                           render: function(e) {
-                            return s.a.createElement(I, null);
+                            return a.a.createElement(R, null);
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           path: v.EventAdmin(),
                           render: function(e) {
-                            return s.a.createElement(R, null);
+                            return a.a.createElement(I, null);
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.InteractiveRecommender(),
                           render: function(e) {
-                            return s.a.createElement(A, null);
+                            return a.a.createElement(T, null);
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.LabsSandbox(),
                           render: function(e) {
-                            return s.a.createElement(x.default, null);
+                            return a.a.createElement(x.default, null);
                           }
                         }),
-                        s.a.createElement(m.b, {
+                        a.a.createElement(m.b, {
                           exact: !0,
                           path: v.TopSellers(),
                           render: function(e) {
@@ -12900,10 +12945,10 @@
                           }
                         }),
                         !1,
-                        s.a.createElement(m.b, null, !1)
+                        a.a.createElement(m.b, null, !1)
                       )
                     ),
-                    s.a.createElement(w.a, {
+                    a.a.createElement(w.a, {
                       ModalManager: Object(w.e)(window)
                     })
                   )
@@ -12912,19 +12957,19 @@
             }),
             t
           );
-        })(s.a.Component)),
-        z = c("X3Ds");
+        })(a.a.Component)),
+        U = c("X3Ds");
       c("xnZ7"), c("idvb"), c("M1X1");
-      z.o(function() {
+      U.o(function() {
         return Object(l.b)(this, void 0, void 0, function() {
           return Object(l.e)(this, function(e) {
             switch (e.label) {
               case 0:
-                return Object(i.g)("application_config").userConfig
+                return Object(r.g)("application_config").userConfig
                   ? [3, 2]
                   : [
                       4,
-                      Object(i.h)(u.a, i.c.STORE_BASE_URL + "actions/", {
+                      Object(r.h)(u.a, r.c.STORE_BASE_URL + "actions/", {
                         userConfig: !0
                       })
                     ];
@@ -12933,7 +12978,7 @@
               case 2:
                 return (
                   (c.p =
-                    i.c.STORE_CDN_URL +
+                    r.c.STORE_CDN_URL +
                     "public/javascript/applications/store/"),
                   [
                     4,
@@ -12979,32 +13024,20 @@
                           }
                         });
                       });
-                    })(i.c.LANGUAGE)
+                    })(r.c.LANGUAGE)
                   ]
                 );
               case 3:
                 return (
                   e.sent(),
-                  document.getElementById("application_root") &&
-                    r.a.render(
-                      s.a.createElement(P, {}),
-                      document.getElementById("application_root")
-                    ),
-                  document.getElementById("events_root") &&
-                    r.a.render(
-                      s.a.createElement(P, { bEventsMode: !0 }),
-                      document.getElementById("events_root")
-                    ),
-                  document.getElementById("sale_root") &&
-                    r.a.render(
-                      s.a.createElement(P, { bSaleMode: !0 }),
-                      document.getElementById("sale_root")
-                    ),
-                  document.getElementById("award_root") &&
-                    r.a.render(
-                      s.a.createElement(P, { bAwardMode: !0 }),
-                      document.getElementById("award_root")
-                    ),
+                  document.getElementById("application_root")
+                    ? n.a.render(
+                        a.a.createElement(z),
+                        document.getElementById("application_root")
+                      )
+                    : console.error(
+                        'No "application_root" was found to target'
+                      ),
                   [2]
                 );
             }
@@ -13562,6 +13595,7 @@
           VANITY_ID: "",
           IS_CREATOR_HOME: !1,
           IS_CURATOR: !1,
+          IS_OGG: !1,
           CAN_UPLOAD_IMAGES: !1,
           HEADER_IMAGE: "",
           APP_NAME: "",
@@ -14972,7 +15006,7 @@
         c = n("i8i4"),
         l = n("TtDX"),
         u = n("JMS6"),
-        I = n("X3Ds"),
+        R = n("X3Ds"),
         i = n("bxiW"),
         o = n("6Y59"),
         p = n("D4wO"),
@@ -15142,7 +15176,7 @@
               this.PositionMenu();
             }),
             (e.prototype.OnBlur = function(e) {
-              (e.relatedTarget && I.c(e.currentTarget, e.relatedTarget)) ||
+              (e.relatedTarget && R.c(e.currentTarget, e.relatedTarget)) ||
                 (e.relatedTarget &&
                   this.props.instance.BIsElementInMenuHierarchy(
                     e.relatedTarget
@@ -15173,7 +15207,7 @@
                 this.state.ready &&
                 this.props.instance.visible &&
                 (this.props.popup ||
-                  !I.c(
+                  !R.c(
                     this.m_elMenu,
                     this.m_elMenu.ownerDocument.activeElement
                   ))
@@ -15209,7 +15243,7 @@
                 if (o) {
                   this.props.options.bScreenCoordinates ||
                     ((c += n.screenLeft), (l += n.screenTop)),
-                    (r = I.g(n, r));
+                    (r = R.g(n, r));
                   var d = n.screen,
                     m = 0,
                     h = 0;
@@ -15245,21 +15279,21 @@
                   C = 0 < S,
                   k = p - (s.bOverlapVertical ? O : F) - E,
                   j = 0 < k,
-                  B = (s.bPreferPopTop || !j) && C && !s.bDisablePopTop;
+                  D = (s.bPreferPopTop || !j) && C && !s.bDisablePopTop;
                 if (!C && !j) {
-                  var D =
+                  var B =
                     void 0 !== s.bShiftToFitWindow
                       ? s.bShiftToFitWindow
                       : s.bFitToWindow && !s.bOverlapHorizontal;
-                  (B = k < S && !s.bDisablePopTop),
-                    D && (B ? (a.menuTop = 4) : (a.menuBottom = 4)),
+                  (D = k < S && !s.bDisablePopTop),
+                    B && (D ? (a.menuTop = 4) : (a.menuBottom = 4)),
                     s.bFitToWindow &&
-                      (D ? (E = Math.min(E, p - 8)) : (E += B ? S : k),
+                      (B ? (E = Math.min(E, p - 8)) : (E += D ? S : k),
                       (a.menuHeight = E - 8));
                 }
                 void 0 === a.menuBottom &&
                   void 0 === a.menuTop &&
-                  (B
+                  (D
                     ? (a.menuBottom = p - (s.bOverlapVertical ? F : O))
                     : (a.menuTop = s.bOverlapVertical ? O : F)),
                   o
@@ -15401,7 +15435,7 @@
                   height: 1
                 };
               else {
-                var t = I.g(
+                var t = R.g(
                   this.m_menuProps.element.ownerDocument.defaultView,
                   this.m_menuProps.element.getBoundingClientRect()
                 );
@@ -15444,7 +15478,7 @@
       }
       function O(e) {
         var t = [],
-          n = I.m(e),
+          n = R.m(e),
           r = n.getSelection(),
           i = r && 0 < r.rangeCount && 0 < r.toString().length,
           o = e.target,
