@@ -292,7 +292,7 @@ CWishlistController.prototype.BuildElements = function()
 			var strPurchaseArea = '<div class="purchase_area">' + ( rgAppInfo['subs'][0] ? rgAppInfo['subs'][0]['discount_block'] : '' );
 			var strInCartLabel = ( GDynamicStore.s_rgAppsInCart[ wishlist.appid ] ) ? "In Cart" : "Add to Cart";
 
-			if( rgAppInfo['subs'] && rgAppInfo['subs'].length == 1 && rgAppInfo['subs'][0].price > 0 )
+			if( rgAppInfo['subs'] && rgAppInfo['subs'].length == 1 && ( rgAppInfo['subs'][0].price > 0 || rgAppInfo['free_promo'] ) )
 			{
 				strPurchaseArea += "<form name=\"add_to_cart_%1$s\" action=\"https:\/\/store.steampowered.com\/cart\/\" method=\"POST\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"sessionid\" value=\"%2$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"subid\" value=\"%1$s\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"action\" value=\"add_to_cart\">\r\n\t\t\t\t\t<input type=\"hidden\" name=\"snr\" value=\"%3$s\">\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium noicon\" href=\"javascript:addToCart(%1$s);\"><span>%4$s<\/span><\/a>\r\n\t\t\t\t\t<a class=\"btnv6_green_white_innerfade btn_medium icon\" href=\"javascript:addToCart(%1$s);\"><span><img class=\"ico_cart\" src=\"https:\/\/steamstore-a.akamaihd.net\/public\/images\/v6\/ico\/wishlist\/ico_cart.png\"><\/span><\/a>\r\n\t\t\t\t<\/form><\/div>"			.replace(/%1\$s/g,rgAppInfo.subs[0].id)
 				.replace(/%2\$s/g,g_sessionID)
