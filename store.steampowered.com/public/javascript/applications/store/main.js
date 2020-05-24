@@ -12834,20 +12834,32 @@
                         a.a.createElement(m.b, {
                           path: v.RemotePlay(),
                           render: function(e) {
-                            return a.a.createElement(C, {
-                              key: "sale_remoteplaylanding",
-                              promotionName: "remoteplaylanding",
-                              language: Object(b.e)(r.c.LANGUAGE)
+                            return a.a.createElement(A, {
+                              config: {
+                                "sale-display": function() {
+                                  return a.a.createElement(C, {
+                                    key: "sale_remoteplaylanding",
+                                    promotionName: "remoteplaylanding",
+                                    language: Object(b.e)(r.c.LANGUAGE)
+                                  });
+                                }
+                              }
                             });
                           }
                         }),
                         a.a.createElement(m.b, {
                           path: v.RemotePlayTogether(),
                           render: function(e) {
-                            return a.a.createElement(C, {
-                              key: "sale_together",
-                              promotionName: "sale_together",
-                              language: Object(b.e)(r.c.LANGUAGE)
+                            return a.a.createElement(A, {
+                              config: {
+                                "sale-display": function() {
+                                  return a.a.createElement(C, {
+                                    key: "sale_together",
+                                    promotionName: "sale_together",
+                                    language: Object(b.e)(r.c.LANGUAGE)
+                                  });
+                                }
+                              }
                             });
                           }
                         }),
