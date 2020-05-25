@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Последний запуск",
 	"AppDetails_SectionTitle_LastLaunched": "Последний запуск",
 	"AppDetails_SectionTitle_PlayTime": "Вы играли",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Осталось игрового времени",
 	"AppDetails_SectionTitle_UsageTime": "Время использования",
 	"AppDetails_SectionTitle_Workshop": "Мастерская Steam",
 	"AppDetails_SectionTitle_Community": "Контент сообщества",

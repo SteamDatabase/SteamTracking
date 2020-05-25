@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "最後執行時間",
 	"AppDetails_SectionTitle_LastLaunched": "上次啟動",
 	"AppDetails_SectionTitle_PlayTime": "遊戲時數",
+	"AppDetails_SectionTitle_PlayTimeLeft": "剩餘遊戲時數",
 	"AppDetails_SectionTitle_UsageTime": "使用時數",
 	"AppDetails_SectionTitle_Workshop": "Steam 工作坊",
 	"AppDetails_SectionTitle_Community": "社群內容",

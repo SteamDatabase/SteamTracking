@@ -7,7 +7,8 @@
 	<SettingsPanel_RemoteClients_AdvancedClient class="SettingsModal" defaultfocus="BandwidthLimitKBit" tabindex="auto" selectionpos="auto">
 		<Panel class="SettingsBottomPanel">
 			<Panel class="SettingsContent FlowDown">
-				<Label text="#Settings_RemoteClients_AdvancedClientOptions_Description" />
+				<Label id="DescriptionLocal" text="#Settings_RemoteClients_AdvancedClientOptions_DescriptionLocal" />
+        <Label id="DescriptionRemote" text="#Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote" />
         <Panel class="FlowRight">
 				  <Panel class="SettingsColumnarContent FlowDown">
             <Panel class="VertContainer">

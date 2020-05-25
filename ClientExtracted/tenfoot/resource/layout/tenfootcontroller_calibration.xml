@@ -46,7 +46,7 @@
           <Slider id="ControllerCalibration_Right_Deadzone" direction="horizontal" />
         </Panel>
         <Button id="LockJoystickButton" class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CalibrationLockJoysticks()">
-          <Label id="CalibrationStatusText" class="CalibrationButtonText" text="#ControllerCalibration_LockSticks" />
+          <Label class="CalibrationButtonText" text="#ControllerCalibration_LockSticks" />
         </Button>
         <Button class="Button CalibrationButton" tabindex="auto" selectionpos="auto" onactivate="CalibrationStart()">
           <Label id="CalibrationStatusText" class="CalibrationButtonText" text="#ControllerCalibration_Start" />

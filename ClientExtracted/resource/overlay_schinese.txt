@@ -437,6 +437,7 @@
 "[english]SteamChina_Overlay_DurationControl_ExitSoon_3h"	"You have reached your limit of online time for today.\nPlease take a break and try tomorrow after 8AM."
 "SteamChina_Overlay_DurationControl_ExitSoon_5h"	"您本日累计游戏时间已达上限，\n请您休息调整，在次日8点后重新登录。"
 "[english]SteamChina_Overlay_DurationControl_ExitSoon_5h"	"You have reached your limit of online time for today.\nPlease take a break and try tomorrow after 8AM."
+"SteamChina_Overlay_DurationControl_ExitSoon_Night"	"未满18周岁的用户在22点到次日8点\n无法进入游戏，请您注意休息。"
 "Steam_Settings_Library_DisableCommunityContent_Title"	"禁用社区内容"
 "[english]Steam_Settings_Library_DisableCommunityContent_Title"	"Disable Community Content"
 "Steam_Settings_Library_DisableCommunityContent_Desc"	"防止在查看游戏详情时自动载入社区内容。"

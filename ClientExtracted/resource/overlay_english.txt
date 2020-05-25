@@ -258,7 +258,8 @@
 "SteamChina_Overlay_DurationControl_MessageB"		"You've been playing for three hours.\nConsider taking a break."
 "SteamChina_Overlay_DurationControl_MessageC"		"You've been playing for over three hours.\nYour XP / progress has been reduced by half."
 "SteamChina_Overlay_DurationControl_MessageD"		"You've been playing for over five hours.\nYour XP / progress has been reduced to zero."
-"SteamChina_Overlay_DurationControl_ExitSoon_3h"	"You have accumulated 3 hours of online time.\nPlease take a break of at least 5 hours.\nEngage in physical activity."
+"SteamChina_Overlay_DurationControl_ExitSoon_3h"	"You have reached your limit of online time for today.\nPlease take a break and try tomorrow after 8AM."
 "SteamChina_Overlay_DurationControl_ExitSoon_5h"	"You have reached your limit of online time for today.\nPlease take a break and try tomorrow after 8AM."
+"SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Players under 18 can't play this game between 10PM\nand 8AM the following day. Please take a break."
 }
 }  

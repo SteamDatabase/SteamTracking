@@ -906,6 +906,7 @@
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>
  R typeinfo name for CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>
+ R typeinfo name for CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
@@ -967,6 +968,7 @@
  R typeinfo name for CUtlVector<CUtlDelegate<void ()>, CUtlMemory<CUtlDelegate<void ()> > >
  R typeinfo name for CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CHTTPClient::ProxyCacheEntry_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t> >
+ R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
@@ -1907,7 +1909,7 @@
  T CIMsgNetPacketAutoRelease::~CIMsgNetPacketAutoRelease()
  T CIPAddress::BConvertIPv4ToMapped()
  T CIPAddress::BConvertMappedToIPv4()
- T CIPAddress::BlockingResolveAndSetFromString(StringView, bool, unsigned short*)
+ T CIPAddress::BlockingResolveAndSetFromString(StringView, EDNSFamilyOptions, unsigned short*)
  T CIPAddress::HasIP() const
  T CIPAddress::IsLoopback() const
  T CIPAddress::IsMappedIPv4() const
@@ -1925,8 +1927,8 @@
  T CIPRangeList::CIPRangeList()
  T CIPRangeList::Validate(CValidator&, char const*)
  T CIPRangeList::~CIPRangeList()
- T CJob::BYieldingWaitForWorkItem(char const*, char const*)
- T CJob::BYieldingWaitForWorkItemAcks(char const*, int, char const*)
+ T CJob::BYieldingWaitForWorkItem(char const*, char const*, unsigned long long)
+ T CJob::BYieldingWaitForWorkItemAcks(char const*, int, char const*, unsigned long long)
  T CJob::Continue()
  T CJob::Pause(EJobPauseReason)
  T CJob::SetYieldInfo(char const*, char const*)
@@ -2030,12 +2032,16 @@
  T CMessageList::TallySendMessage(MessageInfo_t*, unsigned int)
  T CMessageList::~CMessageList()
  T CMetrics::CMetrics(CMetricsSymbol, CMetricsSymbol, CMetricsSymbol, double, unsigned int)
+ T CMetrics::Dimension(CMetricsSymbol, bool)
  T CMetrics::Dimension(CMetricsSymbol, char const*)
+ T CMetrics::Dimension(CMetricsSymbol, unsigned int)
  T CMetrics::IncrementInt(CMetricsSymbol, long long)
+ T CMetrics::SetMeasurement(CMetricsSymbol, unsigned long long)
  T CMetrics::Validate(CValidator&, char const*)
  T CMetrics::~CMetrics()
  T CMetricsString::~CMetricsString()
  T CMetricsSymbol::CMetricsSymbol(char const*)
+ T CMetricsTimer::CMetricsTimer<char const (&) [10]>(char const (&) [10], CMetrics&)
  T CMetricsTimer::Stop()
  T CMetricsTimer::Validate(CValidator&, char const*)
  T CMetricsTimer::~CMetricsTimer()
@@ -3260,6 +3266,10 @@
  T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::UnlinkNodeFromBucket(int, int)
  T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::Validate(CValidator&, char const*)
  T CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::~CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::Purge()
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::RecursiveValidate(CValidator&, char const*)
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::~CUtlHashMap()
  T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::AllocNode()
  T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::CUtlHashMap()
  T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::EnsureCapacity(int)
@@ -3764,6 +3774,8 @@
  T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t, CUtlMemory<CUtlHashMap<CIPAndPort, CUtlHashMapLRU<CIPAndPort, CSmartPtr<COpenSSLCachedSession>, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort> >::ElementBucket_t, CDefEquals<CIPAndPort>, HashFunctor<CIPAndPort>, CIPAndPort>::HashBucket_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::GrowVector(int)
  T CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::InsertMultipleBefore(int, int, CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t const*)
  T CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
@@ -4165,6 +4177,7 @@
  T CWebSocketConnectionDelayedCloseConnectionWorkItem::GetWorkItemName() const
  T CWebSocketConnectionDelayedCloseConnectionWorkItem::ThreadProcess(CWorkThread*)
  T CWebSocketConnectionDelayedCloseConnectionWorkItem::~CWebSocketConnectionDelayedCloseConnectionWorkItem()
+ T CWorkItem::BNotifyOnCompletion() const
  T CWorkItem::CWorkItem()
  T CWorkItem::CWorkItem(unsigned long long)
  T CWorkItem::DispatchCompletedWorkItem(CJobMgr*)
@@ -5663,7 +5676,7 @@
  T bn_sqrx8x_internal
  T bn_sub_part_words
  T bn_sub_words
- T bool BResolveHostString<CIPAddress>(char const*, bool, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
+ T bool BResolveHostString<CIPAddress>(char const*, EDNSFamilyOptions, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&, CUDPConnection::ConnectPingResults_t*>(CUDPConnection::ConnectPingResults_t*, CUDPConnection::ConnectPingResults_t*, CUtlVector<CUDPConnection::ConnectPingResults_t, CUtlMemory<CUDPConnection::ConnectPingResults_t> >::Sort(int (*)(CUDPConnection::ConnectPingResults_t const*, CUDPConnection::ConnectPingResults_t const*))::{lambda(CUDPConnection::ConnectPingResults_t const&, CUDPConnection::ConnectPingResults_t const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&, VideoRepresentation_t**>(VideoRepresentation_t**, VideoRepresentation_t**, CUtlVector<VideoRepresentation_t*, CUtlMemory<VideoRepresentation_t*> >::Sort(bool (*)(VideoRepresentation_t* const&, VideoRepresentation_t* const&))::{lambda(VideoRepresentation_t* const&, VideoRepresentation_t* const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)
@@ -6797,7 +6810,7 @@
  b OPENSSL_init.done
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
- b OneTimeCryptoInitOpenSSL()::threadonce_324_42
+ b OneTimeCryptoInitOpenSSL()::threadonce_324_43
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b SHA1.m
  b SYS_str_reasons
@@ -8031,7 +8044,7 @@
  t _GLOBAL__sub_I_workthreadpool.cpp
  t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
- t __cxx_global_var_init15
+ t __cxx_global_var_init27
  t _aesni_decrypt2
  t _aesni_decrypt3
  t _aesni_decrypt4

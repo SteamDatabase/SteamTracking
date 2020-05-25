@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Lần cuối chơi",
 	"AppDetails_SectionTitle_LastLaunched": "Lần khởi chạy cuối",
 	"AppDetails_SectionTitle_PlayTime": "Thời gian chơi",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Thời gian chơi còn lại",
 	"AppDetails_SectionTitle_UsageTime": "Thời gian dùng",
 	"AppDetails_SectionTitle_Workshop": "Steam Workshop",
 	"AppDetails_SectionTitle_Community": "Nội dung cộng đồng",

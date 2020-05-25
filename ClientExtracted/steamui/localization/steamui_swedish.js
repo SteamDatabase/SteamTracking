@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Senast spelat",
 	"AppDetails_SectionTitle_LastLaunched": "Senast startat",
 	"AppDetails_SectionTitle_PlayTime": "Speltid",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Play Time Left",
 	"AppDetails_SectionTitle_UsageTime": "Användningstid",
 	"AppDetails_SectionTitle_Workshop": "Steam Workshop",
 	"AppDetails_SectionTitle_Community": "Gemenskapsinnehåll",

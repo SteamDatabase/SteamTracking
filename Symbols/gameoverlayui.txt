@@ -875,6 +875,11 @@
  D CSteamInputControllerConfigNotification::GetMessageMap()::s_pMap
  D CSteamInputControllerConfigNotification::KB_ChainToMap()::chained
  D CSteamInputControllerConfigNotification::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()::bAdded
+ D CTimedTrialNotification::ChainToAnimationMap()::chained
+ D CTimedTrialNotification::ChainToMap()::chained
+ D CTimedTrialNotification::GetKBMap()::s_pMap
+ D CTimedTrialNotification::GetMessageMap()::s_pMap
+ D CTimedTrialNotification::KB_ChainToMap()::chained
  D CTrackItemPanel::ChainToAnimationMap()::chained
  D CTrackItemPanel::ChainToMap()::chained
  D CTrackItemPanel::GetKBMap()::s_pMap
@@ -1016,6 +1021,7 @@
  D VTT for CSteamAuthedHTML
  D VTT for CSteamAuthedHTMLPopup
  D VTT for CSteamInputControllerConfigNotification
+ D VTT for CTimedTrialNotification
  D VTT for CTrackItemPanel
  D VTT for CTrackLabel
  D VTT for CTradeDialog
@@ -1240,6 +1246,7 @@
  D construction vtable for vgui::EditablePanel-in-CSoundSystemSelect
  D construction vtable for vgui::EditablePanel-in-CSteamAuthedHTMLPopup
  D construction vtable for vgui::EditablePanel-in-CSteamInputControllerConfigNotification
+ D construction vtable for vgui::EditablePanel-in-CTimedTrialNotification
  D construction vtable for vgui::EditablePanel-in-CTrackItemPanel
  D construction vtable for vgui::EditablePanel-in-CTradeDialog
  D construction vtable for vgui::EditablePanel-in-CreateDirectoryDialog
@@ -1365,6 +1372,7 @@
  D construction vtable for vgui::NotificationFrame-in-CRemotePlayTogetherAvailableToInvite
  D construction vtable for vgui::NotificationFrame-in-CScreenshotNotification
  D construction vtable for vgui::NotificationFrame-in-CSteamInputControllerConfigNotification
+ D construction vtable for vgui::NotificationFrame-in-CTimedTrialNotification
  D construction vtable for vgui::NotificationFrame-in-vgui::EasyNotification
  D construction vtable for vgui::Panel-in-AppModalQueryBox
  D construction vtable for vgui::Panel-in-CAchievementImagePanel
@@ -1448,6 +1456,7 @@
  D construction vtable for vgui::Panel-in-CSteamAuthedHTML
  D construction vtable for vgui::Panel-in-CSteamAuthedHTMLPopup
  D construction vtable for vgui::Panel-in-CSteamInputControllerConfigNotification
+ D construction vtable for vgui::Panel-in-CTimedTrialNotification
  D construction vtable for vgui::Panel-in-CTrackItemPanel
  D construction vtable for vgui::Panel-in-CTrackLabel
  D construction vtable for vgui::Panel-in-CTradeDialog
@@ -1721,6 +1730,8 @@
  D guard variable for CSteamAuthedHTMLPopup::GetMessageMap()::s_pMap
  D guard variable for CSteamInputControllerConfigNotification::GetKBMap()::s_pMap
  D guard variable for CSteamInputControllerConfigNotification::GetMessageMap()::s_pMap
+ D guard variable for CTimedTrialNotification::GetKBMap()::s_pMap
+ D guard variable for CTimedTrialNotification::GetMessageMap()::s_pMap
  D guard variable for CTrackItemPanel::GetKBMap()::s_pMap
  D guard variable for CTrackItemPanel::GetMessageMap()::s_pMap
  D guard variable for CTrackLabel::GetKBMap()::s_pMap
@@ -1952,6 +1963,7 @@
  D typeinfo for CBasePanel::CCallback_OnPersonaStateChange
  D typeinfo for CBasePanel::CCallback_OnPublishedFileUpdated
  D typeinfo for CBasePanel::CCallback_OnScreenshotWritten
+ D typeinfo for CBasePanel::CCallback_OnTimedTrialStatus
  D typeinfo for CBoolProperty
  D typeinfo for CBroadcastAvailableToWatch
  D typeinfo for CBroadcastChatBanner
@@ -1990,6 +2002,7 @@
  D typeinfo for CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>
  D typeinfo for CCallback<CBasePanel, ScreenshotWritten_t, false>
  D typeinfo for CCallback<CBasePanel, SteamServersDisconnected_t, false>
+ D typeinfo for CCallback<CBasePanel, TimedTrialStatus_t, false>
  D typeinfo for CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>
  D typeinfo for CCallback<CBroadcastLiveBanner, BroadcastMicrophoneStatus_t, false>
  D typeinfo for CCallback<CBroadcastLiveBanner, BroadcastSettingsLoaded_t, false>
@@ -2459,6 +2472,7 @@
  D typeinfo for CSteamInputControllerConfigNotification
  D typeinfo for CStringProperty
  D typeinfo for CTextureIdProperty
+ D typeinfo for CTimedTrialNotification
  D typeinfo for CTrackItemPanel
  D typeinfo for CTrackLabel
  D typeinfo for CTradeDialog
@@ -3252,6 +3266,7 @@
  D vtable for CBasePanel::CCallback_OnPersonaStateChange
  D vtable for CBasePanel::CCallback_OnPublishedFileUpdated
  D vtable for CBasePanel::CCallback_OnScreenshotWritten
+ D vtable for CBasePanel::CCallback_OnTimedTrialStatus
  D vtable for CBoolProperty
  D vtable for CBroadcastAvailableToWatch
  D vtable for CBroadcastChatBanner
@@ -3290,6 +3305,7 @@
  D vtable for CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>
  D vtable for CCallback<CBasePanel, ScreenshotWritten_t, false>
  D vtable for CCallback<CBasePanel, SteamServersDisconnected_t, false>
+ D vtable for CCallback<CBasePanel, TimedTrialStatus_t, false>
  D vtable for CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>
  D vtable for CCallback<CBroadcastLiveBanner, BroadcastMicrophoneStatus_t, false>
  D vtable for CCallback<CBroadcastLiveBanner, BroadcastSettingsLoaded_t, false>
@@ -3755,6 +3771,7 @@
  D vtable for CSteamInputControllerConfigNotification
  D vtable for CStringProperty
  D vtable for CTextureIdProperty
+ D vtable for CTimedTrialNotification
  D vtable for CTrackItemPanel
  D vtable for CTrackLabel
  D vtable for CTradeDialog
@@ -3977,6 +3994,7 @@
  R typeinfo name for CBasePanel::CCallback_OnPersonaStateChange
  R typeinfo name for CBasePanel::CCallback_OnPublishedFileUpdated
  R typeinfo name for CBasePanel::CCallback_OnScreenshotWritten
+ R typeinfo name for CBasePanel::CCallback_OnTimedTrialStatus
  R typeinfo name for CBoolProperty
  R typeinfo name for CBroadcastAvailableToWatch
  R typeinfo name for CBroadcastChatBanner
@@ -4015,6 +4033,7 @@
  R typeinfo name for CCallback<CBasePanel, RemoteStorageUpdatePublishedFileResult_t, false>
  R typeinfo name for CCallback<CBasePanel, ScreenshotWritten_t, false>
  R typeinfo name for CCallback<CBasePanel, SteamServersDisconnected_t, false>
+ R typeinfo name for CCallback<CBasePanel, TimedTrialStatus_t, false>
  R typeinfo name for CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>
  R typeinfo name for CCallback<CBroadcastLiveBanner, BroadcastMicrophoneStatus_t, false>
  R typeinfo name for CCallback<CBroadcastLiveBanner, BroadcastSettingsLoaded_t, false>
@@ -4484,6 +4503,7 @@
  R typeinfo name for CSteamInputControllerConfigNotification
  R typeinfo name for CStringProperty
  R typeinfo name for CTextureIdProperty
+ R typeinfo name for CTimedTrialNotification
  R typeinfo name for CTrackItemPanel
  R typeinfo name for CTrackLabel
  R typeinfo name for CTradeDialog
@@ -4904,6 +4924,8 @@
  T CBasePanel::CCallback_OnPublishedFileUpdated::~CCallback_OnPublishedFileUpdated()
  T CBasePanel::CCallback_OnScreenshotWritten::Run(void*)
  T CBasePanel::CCallback_OnScreenshotWritten::~CCallback_OnScreenshotWritten()
+ T CBasePanel::CCallback_OnTimedTrialStatus::Run(void*)
+ T CBasePanel::CCallback_OnTimedTrialStatus::~CCallback_OnTimedTrialStatus()
  T CBasePanel::ChainToAnimationMap()
  T CBasePanel::ChainToMap()
  T CBasePanel::Close()
@@ -4953,6 +4975,7 @@
  T CBasePanel::OnPublishedFileUpdated(RemoteStorageUpdatePublishedFileResult_t*)
  T CBasePanel::OnScreenshotHotKeyChanged()
  T CBasePanel::OnScreenshotWritten(ScreenshotWritten_t*)
+ T CBasePanel::OnTimedTrialStatus(TimedTrialStatus_t*)
  T CBasePanel::OnViewGuide()
  T CBasePanel::OnWebSteamURL(char const*, char const*)
  T CBasePanel::OpenBroadcastChatDialog()
@@ -5011,6 +5034,7 @@
  T CBasePanel::ShowParentalUnlockDialog(std::__1::function<void ()>, std::__1::function<void ()>, std::__1::function<void ()>)
  T CBasePanel::ShowRemotePlayTogetherAvailableNotification()
  T CBasePanel::ShowSplash()
+ T CBasePanel::ShowTimedTrialNotification()
  T CBasePanel::UpdatePlaytimeStats()
  T CBasePanel::ViewAchievements()
  T CBasePanel::ViewNews()
@@ -5235,6 +5259,10 @@
  T CCallback<CBasePanel, SteamServersDisconnected_t, false>::Register(CBasePanel*, void (CBasePanel::*)(SteamServersDisconnected_t*))
  T CCallback<CBasePanel, SteamServersDisconnected_t, false>::Run(void*)
  T CCallback<CBasePanel, SteamServersDisconnected_t, false>::~CCallback()
+ T CCallback<CBasePanel, TimedTrialStatus_t, false>::CCallback(CBasePanel*, void (CBasePanel::*)(TimedTrialStatus_t*))
+ T CCallback<CBasePanel, TimedTrialStatus_t, false>::Register(CBasePanel*, void (CBasePanel::*)(TimedTrialStatus_t*))
+ T CCallback<CBasePanel, TimedTrialStatus_t, false>::Run(void*)
+ T CCallback<CBasePanel, TimedTrialStatus_t, false>::~CCallback()
  T CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>::CCallback(CBroadcastChatBanner*, void (CBroadcastChatBanner::*)(BroadcastChatMessage_t*))
  T CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>::Register(CBroadcastChatBanner*, void (CBroadcastChatBanner::*)(BroadcastChatMessage_t*))
  T CCallback<CBroadcastChatBanner, BroadcastChatMessage_t, false>::Run(void*)
@@ -5906,7 +5934,7 @@
  T CHintLabel::PerformLayout()
  T CHintLabel::~CHintLabel()
  T CHostOfflineMode::IsOfflineMode()
- T CIPAddress::BlockingResolveAndSetFromString(StringView, bool, unsigned short*)
+ T CIPAddress::BlockingResolveAndSetFromString(StringView, EDNSFamilyOptions, unsigned short*)
  T CIPAddress::HasIP() const
  T CIPAddress::SetFromSockadr(void const*, unsigned long, unsigned short*)
  T CIPAddress::SetFromString(StringView, unsigned short*)
@@ -9474,6 +9502,17 @@
  T CTextureIdProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CTextureIdProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CTextureIdProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
+ T CTimedTrialNotification::CTimedTrialNotification(vgui::Panel*, unsigned int, bool, int)
+ T CTimedTrialNotification::ChainToAnimationMap()
+ T CTimedTrialNotification::ChainToMap()
+ T CTimedTrialNotification::GetAnimMap()
+ T CTimedTrialNotification::GetClassSize() const
+ T CTimedTrialNotification::GetKBMap()
+ T CTimedTrialNotification::GetMessageMap()
+ T CTimedTrialNotification::GetPanelClassName()
+ T CTimedTrialNotification::GetPanelTopClassName() const
+ T CTimedTrialNotification::KB_ChainToMap()
+ T CTimedTrialNotification::~CTimedTrialNotification()
  T CTrackItemPanel::CTrackItemPanel(vgui::Panel*, char const*)
  T CTrackItemPanel::ChainToAnimationMap()
  T CTrackItemPanel::ChainToMap()
@@ -10783,7 +10822,7 @@
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
  T SteamVProf::CVProfManager::CleanupUnusedProfiles()
- T SteamVProf::CVProfManager::DumpAllThreadProfiles()
+ T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  T SteamVProf::CVProfManager::StartProfilingAllThreads()
  T SteamVProf::CVProfManager::StopProfilingAllThreads()
  T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
@@ -10856,7 +10895,7 @@
  T _pcre_was_newline
  T _pcre_xclass
  T bool BConvertMsgJSValue<CSmartPtr<CJSCallbackFunc> >(IHTMLJS*, CMsgJSValue const*, CSmartPtr<CJSCallbackFunc>*)
- T bool BResolveHostString<CIPAddress>(char const*, bool, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
+ T bool BResolveHostString<CIPAddress>(char const*, EDNSFamilyOptions, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&, CScreenshotGameSelector::NameSort_t*>(CScreenshotGameSelector::NameSort_t*, CScreenshotGameSelector::NameSort_t*, CUtlVector<CScreenshotGameSelector::NameSort_t, CUtlMemory<CScreenshotGameSelector::NameSort_t> >::Sort(int (*)(CScreenshotGameSelector::NameSort_t const*, CScreenshotGameSelector::NameSort_t const*))::{lambda(CScreenshotGameSelector::NameSort_t const&, CScreenshotGameSelector::NameSort_t const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&, int*>(int*, int*, CUtlVector<int, CUtlMemory<int> >::Sort(bool (*)(int const&, int const&))::{lambda(int const&, int const&)#1}&)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&, unsigned int*>(unsigned int*, unsigned int*, CUtlVector<unsigned int, CUtlMemory<unsigned int> >::Sort(int (*)(unsigned int const*, unsigned int const*))::{lambda(unsigned int const&, unsigned int const&)#1}&)

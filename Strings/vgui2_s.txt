@@ -1,8 +1,6 @@
 __TEXT
 __text
 __TEXT
-Pk
-Pk
 __stubs
 __TEXT
 __stub_helper
@@ -15,7 +13,6 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-Q
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -34,7 +31,6 @@ __mod_init_func
 __DATA
 __const
 __DATA
-h0
 __cfstring
 __DATA
 __objc_classlist__DATA
@@ -56,14 +52,19 @@ __bss
 __DATA
 __common
 __DATA
-`<
 H
 __LINKEDIT
+
 
 8
 @loader_path/vgui2_s.dylib
 "
+
+x-
+0.
+(N
 p
+(Z
 P
 
 8
@@ -112,8 +113,7 @@ h
 &
 )
 H
-R
-@5
+P5
 10CUtlString
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
@@ -287,6 +287,9 @@ N4vgui8ISurfaceE
 14CUtlLinkedListIN4vgui16TextColorRange_tEiE
 11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS0_E
 10CUtlVectorIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tE10CUtlMemoryIS8_EE
+7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessIyEE
+10CUtlRBTreeIN7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessIyEE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+10CUtlVectorIN12CBaseSurface17ChildWindowZPos_tE10CUtlMemoryIS1_EE
 10CUtlRBTreeIN4vgui7TextureEi8CDefLessIS1_E25CDefRBTreeBalanceListenerIiES1_E
 10CUtlVectorIN4vgui16TextColorRange_tE10CUtlMemoryIS1_EE
 10CUtlVectorIN12CBaseSurface16TraversalEntry_tE10CUtlMemoryIS1_EE
@@ -404,6 +407,7 @@ Assertion Failed: !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() +
 Assertion Failed: count >= 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
+Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 Assertion Failed: !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 Assertion Failed: (elem == Count()) || IsValidIndex(elem)
 m_Tree
@@ -947,9 +951,15 @@ Valve Steam Client
 Valve Steam Client/%s
 -nofasthtml
 Disables new fast child hwnd direct in vgui hwnd rendering path
+-linuxfasthtml
+Enable fast child html for Linux
+ReparentChildPlatformWindow - not implemented
+SetPlatformWindowVisibility - not implemented
 CBaseSurface
 _popupList
 m_FileTypeImages
+m_mapChildWindowZOrder
+(m_mapChildWindowZOrder[i])->m_pVector
 ChromeController
 m_CustomFontFileNames
 m_VGuiSurfaceTextures
@@ -1787,13 +1797,13 @@ Seconds
 @
 @
 @
-7
+5
 =
 0
 
 9
+
 =
-9
 M
 8
 <
@@ -1832,15 +1842,11 @@ P
 
 =
 @
-G
-@
-@
-w
-v
 @
 @
 @
 @
 @
 @
-.
+@
+@

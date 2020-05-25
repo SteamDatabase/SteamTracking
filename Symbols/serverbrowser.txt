@@ -233,6 +233,7 @@
  B vgui::ToolWindow::s_ToolWindows
  B vgui::g_ButtonSoundNames
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  CFArrayCreate
  CFBooleanGetTypeID
@@ -3047,7 +3048,7 @@
  T CHistoryGames::ServerResponded(void*, int)
  T CHistoryGames::SupportsItem(IGameList::InterfaceItem_e)
  T CHistoryGames::~CHistoryGames()
- T CIPAddress::BlockingResolveAndSetFromString(StringView, bool, unsigned short*)
+ T CIPAddress::BlockingResolveAndSetFromString(StringView, EDNSFamilyOptions, unsigned short*)
  T CIPAddress::HasIP() const
  T CIPAddress::SetFromSockadr(void const*, unsigned long, unsigned short*)
  T CIPAddress::SetFromString(StringView, unsigned short*)
@@ -5898,7 +5899,7 @@
  T SteamAPI_RegisterCallback
  T SteamAPI_UnregisterCallback
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
- T SteamVProf::CVProfManager::DumpAllThreadProfiles()
+ T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  T SteamVProf::CVProfManager::StartProfilingAllThreads()
  T SteamVProf::CVProfManager::StopProfilingAllThreads()
  T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
@@ -5915,7 +5916,7 @@
  T __clang_call_terminate
  T _findfirst(char const*, _finddata_t*)
  T _findnext(long long, _finddata_t*)
- T bool BResolveHostString<CIPAddress>(char const*, bool, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
+ T bool BResolveHostString<CIPAddress>(char const*, EDNSFamilyOptions, CUtlVector<CIPAddress, CUtlMemory<CIPAddress> >*, CIPAddress*)
  T bool std::__1::__insertion_sort_incomplete<CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&, CModList::mod_t*>(CModList::mod_t*, CModList::mod_t*, CUtlVector<CModList::mod_t, CUtlMemory<CModList::mod_t> >::Sort(int (*)(CModList::mod_t const*, CModList::mod_t const*))::{lambda(CModList::mod_t const&, CModList::mod_t const&)#1}&)
  T int CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::FindOrInsert_Internal<CUtlString, vgui::HTML::JSMethodRegistration_t>(CUtlString&&, vgui::HTML::JSMethodRegistration_t&&, CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::ReplaceExisting)
  T int CUtlHashMap<CUtlString, vgui::HTML::JSMethodRegistration_t, CDefEquals<CUtlString>, HashFunctor<CUtlString>, StringView>::InsertUnconstructed<CUtlString>(CUtlString&&, int*, bool)

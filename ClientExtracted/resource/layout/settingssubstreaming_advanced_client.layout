@@ -2,12 +2,19 @@
 {
 	controls
 	{
-		"DescriptionLabel"
+		"DescriptionLabelLocal"
 		{
 			ControlName="Label"
-			fieldName="DescriptionLabel"
+			fieldName="DescriptionLabelLocal"
 			wrap=1
-			labelText="#Steam_Settings_Streaming_AdvancedClientOptions_Description"
+			labelText="#Steam_Settings_Streaming_AdvancedClientOptions_DescriptionLocal"
+		}
+		"DescriptionLabelRemote"
+		{
+			ControlName="Label"
+			fieldName="DescriptionLabelRemote"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_AdvancedClientOptions_DescriptionRemote"
 		}
 		
 		"BandwidthLabel" { ControlName="Label" associate="BandwidthLimit" labelText="#Steam_Settings_Streaming_Bandwidth" }
@@ -48,7 +55,11 @@
 	{
 		region { name="buttons" width=max height=36 align="bottom" }
 
-		place { control="DescriptionLabel"
+		place { control="DescriptionLabelLocal"
+				margin-left=20 margin-right=20 margin-top=40 width=max
+				margin-bottom=2 }
+
+		place { control="DescriptionLabelRemote"
 				margin-left=20 margin-right=20 margin-top=40 width=max
 				margin-bottom=2 }
 

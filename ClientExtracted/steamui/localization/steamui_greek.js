@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Τελευταίο παιχνίδι",
 	"AppDetails_SectionTitle_LastLaunched": "Τελευταία εκκίνηση",
 	"AppDetails_SectionTitle_PlayTime": "Ώρα παιχνιδιού",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Εναπομείνουσα ώρα παιχνιδιού",
 	"AppDetails_SectionTitle_UsageTime": "Χρόνος χρήσης",
 	"AppDetails_SectionTitle_Workshop": "Εργαστήρι Steam",
 	"AppDetails_SectionTitle_Community": "Περιεχόμενο κοινότητας",

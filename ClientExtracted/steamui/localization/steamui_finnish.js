@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Pelattu viimeksi",
 	"AppDetails_SectionTitle_LastLaunched": "Viimeksi käynnistetty",
 	"AppDetails_SectionTitle_PlayTime": "Peliaika",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Peliaikaa jäljellä",
 	"AppDetails_SectionTitle_UsageTime": "Käyttöaika",
 	"AppDetails_SectionTitle_Workshop": "Steam Workshop",
 	"AppDetails_SectionTitle_Community": "Yhteisösisältö",

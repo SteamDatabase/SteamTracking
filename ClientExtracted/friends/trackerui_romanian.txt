@@ -143,7 +143,7 @@
 "[english]Friends_NoFriendsInList"	"Why not invite someone to be your Friend?"
 "Friends_GoOnline"	"Conectează-te"
 "[english]Friends_GoOnline"	"Sign in"
-"Friends_SignIn_RefreshPassword"	"Autentifică-te..."
+"Friends_SignIn_RefreshPassword"	"Se conectează..."
 "[english]Friends_SignIn_RefreshPassword"	"Sign in..."
 "Friends_SignIn_ActivateFriends"	"Conectează-te la versiunea Beta a serviciului Prieteni..."
 "[english]Friends_SignIn_ActivateFriends"	"Join Friends Beta..."

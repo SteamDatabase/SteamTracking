@@ -22,4 +22,5 @@ typedef enum EAppOwnershipFlags
     k_EAppOwnershipFlagsSiteLicense = 262144, // Site License
     k_EAppOwnershipFlagsLegacyFreeSub = 524288, // Legacy Free Sub
     k_EAppOwnershipFlagsInvalidOSType = 1048576, // Invalid OS Type
+    k_EAppOwnershipFlagsTimedTrial = 2097152, // Timed Trial
 } EAppOwnershipFlags;

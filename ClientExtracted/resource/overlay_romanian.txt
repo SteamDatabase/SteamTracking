@@ -443,6 +443,8 @@
 "[english]Steam_Settings_Library_DisableCommunityContent_Desc"	"Prevents the automatic load of community content when viewing game details."
 "Steam_Settings_Library_DisableCommunityContent_Disabled_Desc"	"Activat de modul pentru lățime de bandă scăzută.\n\nPrevine încărcarea automată a conținutului comunitar atunci când sunt vizualizate informațiile jocului."
 "[english]Steam_Settings_Library_DisableCommunityContent_Disabled_Desc"	"Enabled by Low Bandwidth Mode.\n\nPrevents the automatic load of community content when viewing game details."
+"Steam_Settings_Library_IconInGameList_Title"	"Afișează pictogramele jocurilor în coloana stângă"
+"[english]Steam_Settings_Library_IconInGameList_Title"	"Show game icons in the left column"
 "SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Utilizatorii sub 18 ani nu pot juca acest titlu între orele 22:00 \nși 8:00 ziua următoare. Te rugăm să faci o pauză."
 "[english]SteamChina_Overlay_DurationControl_ExitSoon_Night"	"Players under 18 can't play this game between 10PM\nand 8AM the following day. Please take a break."
 "Overlay_MicroTxnAuth_ConnectionError"	"Eroare de conectare"

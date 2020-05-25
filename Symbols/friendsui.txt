@@ -1,9 +1,41 @@
  AssertMsgImplementation
+ B CAudioFormat::default_instance_
+ B CAuthenticationRequestMsg::default_instance_
+ B CAuthenticationResponseMsg::default_instance_
  B CChatRoomDlg::m_ulLinkID
+ B CClientHandshakeMsg::default_instance_
  B CCookie::default_instance_
+ B CDebugDumpMsg::default_instance_
+ B CDeleteCursorMsg::default_instance_
+ B CDisableHighResCaptureMsg::default_instance_
+ B CDiscoveryPingRequest::default_instance_
+ B CDiscoveryPingResponse::default_instance_
+ B CEnableHighResCaptureMsg::default_instance_
+ B CFrameEvent::default_instance_
+ B CFrameStatAccumulatedValue::default_instance_
+ B CFrameStats::default_instance_
+ B CFrameStatsListMsg::default_instance_
+ B CGetCursorImageMsg::default_instance_
+ B CGetTouchConfigDataMsg::default_instance_
+ B CGetTouchIconDataMsg::default_instance_
  B CHTMLHeader::default_instance_
  B CHTMLPageSecurityInfo::default_instance_
+ B CHideCursorMsg::default_instance_
+ B CInputKeyDownMsg::default_instance_
+ B CInputKeyUpMsg::default_instance_
+ B CInputLatencyTestMsg::default_instance_
+ B CInputMouseDownMsg::default_instance_
+ B CInputMouseMotionMsg::default_instance_
+ B CInputMouseUpMsg::default_instance_
+ B CInputMouseWheelMsg::default_instance_
+ B CInputTextMsg::default_instance_
+ B CInputTouchFingerDownMsg::default_instance_
+ B CInputTouchFingerMotionMsg::default_instance_
+ B CInputTouchFingerUpMsg::default_instance_
  B CJSMethodArgument::default_instance_
+ B CKeepAliveMsg::default_instance_
+ B CLogMsg::default_instance_
+ B CLogUploadMsg::default_instance_
  B CMSgJumpListMRUApp::default_instance_
  B CMemoryPool::g_ReportFunc
  B CMsgAckPIDShuttingDown::default_instance_
@@ -152,12 +184,74 @@
  B CMsgZoomToElementAtPosition::default_instance_
  B CMsgZoomToElementAtPositionResponse::default_instance_
  B CMsgZoomToFocusedElement::default_instance_
+ B CNegotiatedConfig::default_instance_
+ B CNegotiationCompleteMsg::default_instance_
+ B CNegotiationInitMsg::default_instance_
+ B CNegotiationSetConfigMsg::default_instance_
  B COpenSSLWrapper::m_nInstances
  B COpenSSLWrapper::s_nConnectionDataIndex
  B COpenSSLWrapper::s_nContextDataIndex
  B COpenSSLWrapper::s_pMutexArray
  B COpenSSLWrapper::s_uOpenSSLMemoryUsage
+ B COverlayEnabledMsg::default_instance_
+ B CPauseMsg::default_instance_
+ B CQuitRequest::default_instance_
+ B CRecordedInput::default_instance_
+ B CRecordedInputStream::default_instance_
+ B CRemoteHIDMsg::default_instance_
+ B CResumeMsg::default_instance_
+ B CSaveTouchConfigLayoutMsg::default_instance_
+ B CServerHandshakeMsg::default_instance_
+ B CSetActivityMsg::default_instance_
+ B CSetCapslockMsg::default_instance_
+ B CSetCaptureSizeMsg::default_instance_
+ B CSetCursorImageMsg::default_instance_
+ B CSetCursorMsg::default_instance_
+ B CSetFlashStateMsg::default_instance_
+ B CSetGammaRampMsg::default_instance_
+ B CSetIconMsg::default_instance_
+ B CSetKeymapMsg::default_instance_
+ B CSetQoSMsg::default_instance_
+ B CSetSpectatorModeMsg::default_instance_
+ B CSetStreamingClientConfig::default_instance_
+ B CSetTargetBitrateMsg::default_instance_
+ B CSetTargetFramerateMsg::default_instance_
+ B CSetTitleMsg::default_instance_
+ B CSetTouchConfigDataMsg::default_instance_
+ B CSetTouchIconDataMsg::default_instance_
+ B CShowCursorMsg::default_instance_
+ B CStartAudioDataMsg::default_instance_
+ B CStartNetworkTestMsg::default_instance_
+ B CStartVideoDataMsg::default_instance_
+ B CStopAudioDataMsg::default_instance_
+ B CStopRequest::default_instance_
+ B CStopVideoDataMsg::default_instance_
+ B CStreamDataLostMsg::default_instance_
+ B CStreamVideoMode::default_instance_
+ B CStreamingClientCaps::default_instance_
+ B CStreamingClientConfig::default_instance_
+ B CStreamingClientHandshakeInfo::default_instance_
+ B CStreamingKeymap::default_instance_
+ B CStreamingKeymapEntry::default_instance_
+ B CStreamingServerConfig::default_instance_
+ B CStreamingServerHandshakeInfo::default_instance_
+ B CStreamingSessionStats::default_instance_
+ B CSystemSuspendMsg::default_instance_
+ B CToggleMagnificationMsg::default_instance_
+ B CTouchActionSetActiveMsg::default_instance_
+ B CTouchActionSetLayerAddedMsg::default_instance_
+ B CTouchActionSetLayerRemovedMsg::default_instance_
+ B CTouchConfigActiveMsg::default_instance_
+ B CTransportSignalMsg::default_instance_
+ B CTransportSignalMsg_WebRTCMessage::default_instance_
+ B CTransportSignalMsg_WebRTCMessage_Candidate::default_instance_
  B CUtlSymbol::s_pSymbolTable
+ B CVideoDecoderInfoMsg::default_instance_
+ B CVideoEncoderInfoMsg::default_instance_
+ B CVideoFormat::default_instance_
+ B CVirtualHereReadyMsg::default_instance_
+ B CVirtualHereRequestMsg::default_instance_
+ B CVirtualHereShareDeviceMsg::default_instance_
  B ConCommandBase::s_pAccessor
  B ConCommandBase::s_pConCommandBases
  B ConCommandBaseMgr::g_bReplicatedReadOnly
@@ -273,6 +367,7 @@
  B vrapi::g_VRSteamPrivate
  B vrapi::g_VRSystem
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  CFArrayCreate
  CFBooleanGetTypeID
@@ -1764,6 +1859,9 @@
  D typeinfo for CAppDownloadNotificationManager::CCallback_OnAppEventStateChange
  D typeinfo for CAppDownloadNotificationManager::CCallback_OnDlcInstalled
  D typeinfo for CAppDownloadedNotification
+ D typeinfo for CAudioFormat
+ D typeinfo for CAuthenticationRequestMsg
+ D typeinfo for CAuthenticationResponseMsg
  D typeinfo for CAvatarOverlayImage
  D typeinfo for CBoolProperty
  D typeinfo for CBroadcastApproveBar
@@ -1938,13 +2036,19 @@
  D typeinfo for CClanEventNotification
  D typeinfo for CClanInvitationNotification
  D typeinfo for CClanPanel
+ D typeinfo for CClientHandshakeMsg
  D typeinfo for CColorProperty
  D typeinfo for CCookie
  D typeinfo for CCryptoKeyBase
  D typeinfo for CCryptoKeyBase_RawBuffer
  D typeinfo for CDLLValidate
+ D typeinfo for CDebugDumpMsg
+ D typeinfo for CDeleteCursorMsg
  D typeinfo for CDirContentsWatcher
  D typeinfo for CDirWatcher
+ D typeinfo for CDisableHighResCaptureMsg
+ D typeinfo for CDiscoveryPingRequest
+ D typeinfo for CDiscoveryPingResponse
  D typeinfo for CDynamicFunc<bool (*)()>
  D typeinfo for CDynamicFunc<char const* (*)(vr::EVRInitError)>
  D typeinfo for CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>
@@ -1956,7 +2060,12 @@
  D typeinfo for CEditFriendsGroupsPage::CCallback_OnGroupCreated
  D typeinfo for CEmoticonButton
  D typeinfo for CEmptySectionHeader
+ D typeinfo for CEnableHighResCaptureMsg
  D typeinfo for CFloatProperty
+ D typeinfo for CFrameEvent
+ D typeinfo for CFrameStatAccumulatedValue
+ D typeinfo for CFrameStats
+ D typeinfo for CFrameStatsListMsg
  D typeinfo for CFriendAliasesDialog
  D typeinfo for CFriendAliasesDialog::CCallback_OnPersonaStateChange
  D typeinfo for CFriendGameInviteDialog
@@ -2050,6 +2159,9 @@
  D typeinfo for CFriendsWebChatVguiFrame
  D typeinfo for CGameInviteBar
  D typeinfo for CGameInviteNotification
+ D typeinfo for CGetCursorImageMsg
+ D typeinfo for CGetTouchConfigDataMsg
+ D typeinfo for CGetTouchIconDataMsg
  D typeinfo for CGiftReceivedNotification
  D typeinfo for CHFontProperty
  D typeinfo for CHTMLBaseProtoBufMsg
@@ -2109,7 +2221,19 @@
  D typeinfo for CHTMLWindowController
  D typeinfo for CHTMLWindowController::CCallbackInternal_OnPostLogonState
  D typeinfo for CHTTPImage
+ D typeinfo for CHideCursorMsg
  D typeinfo for CHintLabel
+ D typeinfo for CInputKeyDownMsg
+ D typeinfo for CInputKeyUpMsg
+ D typeinfo for CInputLatencyTestMsg
+ D typeinfo for CInputMouseDownMsg
+ D typeinfo for CInputMouseMotionMsg
+ D typeinfo for CInputMouseUpMsg
+ D typeinfo for CInputMouseWheelMsg
+ D typeinfo for CInputTextMsg
+ D typeinfo for CInputTouchFingerDownMsg
+ D typeinfo for CInputTouchFingerMotionMsg
+ D typeinfo for CInputTouchFingerUpMsg
  D typeinfo for CIntProperty
  D typeinfo for CItemImageManager
  D typeinfo for CItemReceivedNotification
@@ -2157,7 +2281,10 @@
  D typeinfo for CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
  D typeinfo for CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ D typeinfo for CKeepAliveMsg
  D typeinfo for CLimitedUserDialog
+ D typeinfo for CLogMsg
+ D typeinfo for CLogUploadMsg
  D typeinfo for CMSgJumpListMRUApp
  D typeinfo for CMsgAckPIDShuttingDown
  D typeinfo for CMsgAckSharedPaintBuffers
@@ -2307,22 +2434,32 @@
  D typeinfo for CMsgZoomToFocusedElement
  D typeinfo for CMultipleCallResults<CAppDownloadNotificationManager, HTTPRequestCompleted_t>
  D typeinfo for CMultipleCallResults<CChatRoomDlg, HTTPRequestCompleted_t>
+ D typeinfo for CNegotiatedConfig
+ D typeinfo for CNegotiationCompleteMsg
+ D typeinfo for CNegotiationInitMsg
+ D typeinfo for CNegotiationSetConfigMsg
  D typeinfo for CNewTurnsNotification
+ D typeinfo for COverlayEnabledMsg
  D typeinfo for CPanelAnimationDictionary
  D typeinfo for CPanelMessageMapDictionary
  D typeinfo for CParentalCache
  D typeinfo for CParentalCache::CCallback_OnParentalLockChangeBegin
  D typeinfo for CPathString
+ D typeinfo for CPauseMsg
  D typeinfo for CPlayersDialog
  D typeinfo for CPlayersSubCurrentPlayers
  D typeinfo for CPlayersSubRecentPlayers
  D typeinfo for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  D typeinfo for CProportionalFloatProperty
  D typeinfo for CProportionalIntProperty
+ D typeinfo for CQuitRequest
  D typeinfo for CRSAKeyBase
  D typeinfo for CRSAPublicKey
+ D typeinfo for CRecordedInput
+ D typeinfo for CRecordedInputStream
  D typeinfo for CRefCountServiceBase<true, CRefMT>
  D typeinfo for CRefCounted<CRefCountServiceBase<true, CRefMT> >
+ D typeinfo for CRemoteHIDMsg
  D typeinfo for CRemotePlayController
  D typeinfo for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
@@ -2335,7 +2472,27 @@
  D typeinfo for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft
  D typeinfo for CRemotePlayController::CCallbackInternal_OnStreamingClientConnected
  D typeinfo for CRemotePlayController::CCallbackInternal_OnStreamingClientUsedInput
+ D typeinfo for CResumeMsg
+ D typeinfo for CSaveTouchConfigLayoutMsg
+ D typeinfo for CServerHandshakeMsg
+ D typeinfo for CSetActivityMsg
+ D typeinfo for CSetCapslockMsg
+ D typeinfo for CSetCaptureSizeMsg
+ D typeinfo for CSetCursorImageMsg
+ D typeinfo for CSetCursorMsg
+ D typeinfo for CSetFlashStateMsg
+ D typeinfo for CSetGammaRampMsg
+ D typeinfo for CSetIconMsg
+ D typeinfo for CSetKeymapMsg
  D typeinfo for CSetNicknameDialog
+ D typeinfo for CSetQoSMsg
+ D typeinfo for CSetSpectatorModeMsg
+ D typeinfo for CSetStreamingClientConfig
+ D typeinfo for CSetTargetBitrateMsg
+ D typeinfo for CSetTargetFramerateMsg
+ D typeinfo for CSetTitleMsg
+ D typeinfo for CSetTouchConfigDataMsg
+ D typeinfo for CSetTouchIconDataMsg
  D typeinfo for CSharedConnectionController
  D typeinfo for CSharedConnectionController::CCallback_OnMessageReady
  D typeinfo for CSharedConnectionController::CCallback_OnServersConnected
@@ -2345,6 +2502,10 @@
  D typeinfo for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
  D typeinfo for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
  D typeinfo for CSharedLibraryNotifications::CCallback_OnStopPlaying
+ D typeinfo for CShowCursorMsg
+ D typeinfo for CStartAudioDataMsg
+ D typeinfo for CStartNetworkTestMsg
+ D typeinfo for CStartVideoDataMsg
  D typeinfo for CSteamInputControllerConnectedNotification
  D typeinfo for CSteamInputNotificationManager
  D typeinfo for CSteamInputNotificationManager::CCallback_OnReceivedControllerPersonalization
@@ -2357,15 +2518,43 @@
  D typeinfo for CSteamUIMessagingController
  D typeinfo for CSteamUIMessagingController::CCallbackInternal_OnClientPostMessage
  D typeinfo for CSteamUIStorageController
+ D typeinfo for CStopAudioDataMsg
+ D typeinfo for CStopRequest
+ D typeinfo for CStopVideoDataMsg
+ D typeinfo for CStreamDataLostMsg
+ D typeinfo for CStreamVideoMode
+ D typeinfo for CStreamingClientCaps
+ D typeinfo for CStreamingClientConfig
+ D typeinfo for CStreamingClientHandshakeInfo
+ D typeinfo for CStreamingKeymap
+ D typeinfo for CStreamingKeymapEntry
+ D typeinfo for CStreamingServerConfig
+ D typeinfo for CStreamingServerHandshakeInfo
+ D typeinfo for CStreamingSessionStats
  D typeinfo for CStringProperty
+ D typeinfo for CSystemSuspendMsg
  D typeinfo for CTextureIdProperty
+ D typeinfo for CToggleMagnificationMsg
+ D typeinfo for CTouchActionSetActiveMsg
+ D typeinfo for CTouchActionSetLayerAddedMsg
+ D typeinfo for CTouchActionSetLayerRemovedMsg
+ D typeinfo for CTouchConfigActiveMsg
  D typeinfo for CTradeInviteBar
  D typeinfo for CTradeInviteBar::CCallback_OnTradeInviteCanceled
  D typeinfo for CTradeInviteBar::CCallback_OnTradeStartSession
+ D typeinfo for CTransportSignalMsg
+ D typeinfo for CTransportSignalMsg_WebRTCMessage
+ D typeinfo for CTransportSignalMsg_WebRTCMessage_Candidate
  D typeinfo for CUtlCStringConversion
  D typeinfo for CUtlCharConversion
  D typeinfo for CUtlHandleTable<vgui::BuildGroup, 20>
  D typeinfo for CUtlNoEscConversion
+ D typeinfo for CVideoDecoderInfoMsg
+ D typeinfo for CVideoEncoderInfoMsg
+ D typeinfo for CVideoFormat
+ D typeinfo for CVirtualHereReadyMsg
+ D typeinfo for CVirtualHereRequestMsg
+ D typeinfo for CVirtualHereShareDeviceMsg
  D typeinfo for CVoiceBar
  D typeinfo for CVoiceBar::CCallback_OnGameUsingVoice
  D typeinfo for CVoiceBar::CCallback_OnVoiceEnabledStateChanged
@@ -3142,6 +3331,9 @@
  D vtable for CAppDownloadNotificationManager::CCallback_OnAppEventStateChange
  D vtable for CAppDownloadNotificationManager::CCallback_OnDlcInstalled
  D vtable for CAppDownloadedNotification
+ D vtable for CAudioFormat
+ D vtable for CAuthenticationRequestMsg
+ D vtable for CAuthenticationResponseMsg
  D vtable for CAvatarOverlayImage
  D vtable for CBoolProperty
  D vtable for CBroadcastApproveBar
@@ -3315,12 +3507,18 @@
  D vtable for CClanEventNotification
  D vtable for CClanInvitationNotification
  D vtable for CClanPanel
+ D vtable for CClientHandshakeMsg
  D vtable for CColorProperty
  D vtable for CCookie
  D vtable for CCryptoKeyBase_RawBuffer
  D vtable for CDLLValidate
+ D vtable for CDebugDumpMsg
+ D vtable for CDeleteCursorMsg
  D vtable for CDirContentsWatcher
  D vtable for CDirWatcher
+ D vtable for CDisableHighResCaptureMsg
+ D vtable for CDiscoveryPingRequest
+ D vtable for CDiscoveryPingResponse
  D vtable for CDynamicFunc<bool (*)()>
  D vtable for CDynamicFunc<char const* (*)(vr::EVRInitError)>
  D vtable for CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>
@@ -3332,7 +3530,12 @@
  D vtable for CEditFriendsGroupsPage::CCallback_OnGroupCreated
  D vtable for CEmoticonButton
  D vtable for CEmptySectionHeader
+ D vtable for CEnableHighResCaptureMsg
  D vtable for CFloatProperty
+ D vtable for CFrameEvent
+ D vtable for CFrameStatAccumulatedValue
+ D vtable for CFrameStats
+ D vtable for CFrameStatsListMsg
  D vtable for CFriendAliasesDialog
  D vtable for CFriendAliasesDialog::CCallback_OnPersonaStateChange
  D vtable for CFriendGameInviteDialog
@@ -3426,6 +3629,9 @@
  D vtable for CFriendsWebChatVguiFrame
  D vtable for CGameInviteBar
  D vtable for CGameInviteNotification
+ D vtable for CGetCursorImageMsg
+ D vtable for CGetTouchConfigDataMsg
+ D vtable for CGetTouchIconDataMsg
  D vtable for CGiftReceivedNotification
  D vtable for CHFontProperty
  D vtable for CHTMLHeader
@@ -3484,7 +3690,19 @@
  D vtable for CHTMLWindowController
  D vtable for CHTMLWindowController::CCallbackInternal_OnPostLogonState
  D vtable for CHTTPImage
+ D vtable for CHideCursorMsg
  D vtable for CHintLabel
+ D vtable for CInputKeyDownMsg
+ D vtable for CInputKeyUpMsg
+ D vtable for CInputLatencyTestMsg
+ D vtable for CInputMouseDownMsg
+ D vtable for CInputMouseMotionMsg
+ D vtable for CInputMouseUpMsg
+ D vtable for CInputMouseWheelMsg
+ D vtable for CInputTextMsg
+ D vtable for CInputTouchFingerDownMsg
+ D vtable for CInputTouchFingerMotionMsg
+ D vtable for CInputTouchFingerUpMsg
  D vtable for CIntProperty
  D vtable for CItemImageManager
  D vtable for CItemReceivedNotification
@@ -3532,7 +3750,10 @@
  D vtable for CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
  D vtable for CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ D vtable for CKeepAliveMsg
  D vtable for CLimitedUserDialog
+ D vtable for CLogMsg
+ D vtable for CLogUploadMsg
  D vtable for CMSgJumpListMRUApp
  D vtable for CMsgAckPIDShuttingDown
  D vtable for CMsgAckSharedPaintBuffers
@@ -3682,19 +3903,29 @@
  D vtable for CMsgZoomToFocusedElement
  D vtable for CMultipleCallResults<CAppDownloadNotificationManager, HTTPRequestCompleted_t>
  D vtable for CMultipleCallResults<CChatRoomDlg, HTTPRequestCompleted_t>
+ D vtable for CNegotiatedConfig
+ D vtable for CNegotiationCompleteMsg
+ D vtable for CNegotiationInitMsg
+ D vtable for CNegotiationSetConfigMsg
  D vtable for CNewTurnsNotification
+ D vtable for COverlayEnabledMsg
  D vtable for CPanelAnimationDictionary
  D vtable for CPanelMessageMapDictionary
  D vtable for CParentalCache
  D vtable for CParentalCache::CCallback_OnParentalLockChangeBegin
  D vtable for CPathString
+ D vtable for CPauseMsg
  D vtable for CPlayersDialog
  D vtable for CPlayersSubCurrentPlayers
  D vtable for CPlayersSubRecentPlayers
  D vtable for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  D vtable for CProportionalFloatProperty
  D vtable for CProportionalIntProperty
+ D vtable for CQuitRequest
  D vtable for CRSAPublicKey
+ D vtable for CRecordedInput
+ D vtable for CRecordedInputStream
+ D vtable for CRemoteHIDMsg
  D vtable for CRemotePlayController
  D vtable for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  D vtable for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
@@ -3707,7 +3938,27 @@
  D vtable for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft
  D vtable for CRemotePlayController::CCallbackInternal_OnStreamingClientConnected
  D vtable for CRemotePlayController::CCallbackInternal_OnStreamingClientUsedInput
+ D vtable for CResumeMsg
+ D vtable for CSaveTouchConfigLayoutMsg
+ D vtable for CServerHandshakeMsg
+ D vtable for CSetActivityMsg
+ D vtable for CSetCapslockMsg
+ D vtable for CSetCaptureSizeMsg
+ D vtable for CSetCursorImageMsg
+ D vtable for CSetCursorMsg
+ D vtable for CSetFlashStateMsg
+ D vtable for CSetGammaRampMsg
+ D vtable for CSetIconMsg
+ D vtable for CSetKeymapMsg
  D vtable for CSetNicknameDialog
+ D vtable for CSetQoSMsg
+ D vtable for CSetSpectatorModeMsg
+ D vtable for CSetStreamingClientConfig
+ D vtable for CSetTargetBitrateMsg
+ D vtable for CSetTargetFramerateMsg
+ D vtable for CSetTitleMsg
+ D vtable for CSetTouchConfigDataMsg
+ D vtable for CSetTouchIconDataMsg
  D vtable for CSharedConnectionController
  D vtable for CSharedConnectionController::CCallback_OnMessageReady
  D vtable for CSharedConnectionController::CCallback_OnServersConnected
@@ -3717,6 +3968,10 @@
  D vtable for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
  D vtable for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
  D vtable for CSharedLibraryNotifications::CCallback_OnStopPlaying
+ D vtable for CShowCursorMsg
+ D vtable for CStartAudioDataMsg
+ D vtable for CStartNetworkTestMsg
+ D vtable for CStartVideoDataMsg
  D vtable for CSteamInputControllerConnectedNotification
  D vtable for CSteamInputNotificationManager
  D vtable for CSteamInputNotificationManager::CCallback_OnReceivedControllerPersonalization
@@ -3729,15 +3984,43 @@
  D vtable for CSteamUIMessagingController
  D vtable for CSteamUIMessagingController::CCallbackInternal_OnClientPostMessage
  D vtable for CSteamUIStorageController
+ D vtable for CStopAudioDataMsg
+ D vtable for CStopRequest
+ D vtable for CStopVideoDataMsg
+ D vtable for CStreamDataLostMsg
+ D vtable for CStreamVideoMode
+ D vtable for CStreamingClientCaps
+ D vtable for CStreamingClientConfig
+ D vtable for CStreamingClientHandshakeInfo
+ D vtable for CStreamingKeymap
+ D vtable for CStreamingKeymapEntry
+ D vtable for CStreamingServerConfig
+ D vtable for CStreamingServerHandshakeInfo
+ D vtable for CStreamingSessionStats
  D vtable for CStringProperty
+ D vtable for CSystemSuspendMsg
  D vtable for CTextureIdProperty
+ D vtable for CToggleMagnificationMsg
+ D vtable for CTouchActionSetActiveMsg
+ D vtable for CTouchActionSetLayerAddedMsg
+ D vtable for CTouchActionSetLayerRemovedMsg
+ D vtable for CTouchConfigActiveMsg
  D vtable for CTradeInviteBar
  D vtable for CTradeInviteBar::CCallback_OnTradeInviteCanceled
  D vtable for CTradeInviteBar::CCallback_OnTradeStartSession
+ D vtable for CTransportSignalMsg
+ D vtable for CTransportSignalMsg_WebRTCMessage
+ D vtable for CTransportSignalMsg_WebRTCMessage_Candidate
  D vtable for CUtlCStringConversion
  D vtable for CUtlCharConversion
  D vtable for CUtlHandleTable<vgui::BuildGroup, 20>
  D vtable for CUtlNoEscConversion
+ D vtable for CVideoDecoderInfoMsg
+ D vtable for CVideoEncoderInfoMsg
+ D vtable for CVideoFormat
+ D vtable for CVirtualHereReadyMsg
+ D vtable for CVirtualHereRequestMsg
+ D vtable for CVirtualHereShareDeviceMsg
  D vtable for CVoiceBar
  D vtable for CVoiceBar::CCallback_OnGameUsingVoice
  D vtable for CVoiceBar::CCallback_OnVoiceEnabledStateChanged
@@ -3899,6 +4182,9 @@
  R typeinfo name for CAppDownloadNotificationManager::CCallback_OnAppEventStateChange
  R typeinfo name for CAppDownloadNotificationManager::CCallback_OnDlcInstalled
  R typeinfo name for CAppDownloadedNotification
+ R typeinfo name for CAudioFormat
+ R typeinfo name for CAuthenticationRequestMsg
+ R typeinfo name for CAuthenticationResponseMsg
  R typeinfo name for CAutoRelease<CJSCallbackFunc>
  R typeinfo name for CAvatarOverlayImage
  R typeinfo name for CBoolProperty
@@ -4074,13 +4360,19 @@
  R typeinfo name for CClanEventNotification
  R typeinfo name for CClanInvitationNotification
  R typeinfo name for CClanPanel
+ R typeinfo name for CClientHandshakeMsg
  R typeinfo name for CColorProperty
  R typeinfo name for CCookie
  R typeinfo name for CCryptoKeyBase
  R typeinfo name for CCryptoKeyBase_RawBuffer
  R typeinfo name for CDLLValidate
+ R typeinfo name for CDebugDumpMsg
+ R typeinfo name for CDeleteCursorMsg
  R typeinfo name for CDirContentsWatcher
  R typeinfo name for CDirWatcher
+ R typeinfo name for CDisableHighResCaptureMsg
+ R typeinfo name for CDiscoveryPingRequest
+ R typeinfo name for CDiscoveryPingResponse
  R typeinfo name for CDynamicFunc<bool (*)()>
  R typeinfo name for CDynamicFunc<char const* (*)(vr::EVRInitError)>
  R typeinfo name for CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>
@@ -4092,7 +4384,12 @@
  R typeinfo name for CEditFriendsGroupsPage::CCallback_OnGroupCreated
  R typeinfo name for CEmoticonButton
  R typeinfo name for CEmptySectionHeader
+ R typeinfo name for CEnableHighResCaptureMsg
  R typeinfo name for CFloatProperty
+ R typeinfo name for CFrameEvent
+ R typeinfo name for CFrameStatAccumulatedValue
+ R typeinfo name for CFrameStats
+ R typeinfo name for CFrameStatsListMsg
  R typeinfo name for CFriendAliasesDialog
  R typeinfo name for CFriendAliasesDialog::CCallback_OnPersonaStateChange
  R typeinfo name for CFriendGameInviteDialog
@@ -4186,6 +4483,9 @@
  R typeinfo name for CFriendsWebChatVguiFrame
  R typeinfo name for CGameInviteBar
  R typeinfo name for CGameInviteNotification
+ R typeinfo name for CGetCursorImageMsg
+ R typeinfo name for CGetTouchConfigDataMsg
+ R typeinfo name for CGetTouchIconDataMsg
  R typeinfo name for CGiftReceivedNotification
  R typeinfo name for CHFontProperty
  R typeinfo name for CHTMLBaseProtoBufMsg
@@ -4245,7 +4545,19 @@
  R typeinfo name for CHTMLWindowController
  R typeinfo name for CHTMLWindowController::CCallbackInternal_OnPostLogonState
  R typeinfo name for CHTTPImage
+ R typeinfo name for CHideCursorMsg
  R typeinfo name for CHintLabel
+ R typeinfo name for CInputKeyDownMsg
+ R typeinfo name for CInputKeyUpMsg
+ R typeinfo name for CInputLatencyTestMsg
+ R typeinfo name for CInputMouseDownMsg
+ R typeinfo name for CInputMouseMotionMsg
+ R typeinfo name for CInputMouseUpMsg
+ R typeinfo name for CInputMouseWheelMsg
+ R typeinfo name for CInputTextMsg
+ R typeinfo name for CInputTouchFingerDownMsg
+ R typeinfo name for CInputTouchFingerMotionMsg
+ R typeinfo name for CInputTouchFingerUpMsg
  R typeinfo name for CIntProperty
  R typeinfo name for CItemImageManager
  R typeinfo name for CItemReceivedNotification
@@ -4293,7 +4605,10 @@
  R typeinfo name for CJSMethodCallHandler<CSteamUIStorageController, char const*, CMsgJSValue const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CSteamUIStorageController, char const*, CSmartPtr<CJSCallbackPromise> >
  R typeinfo name for CJSMethodCallHandler<CSteamUIStorageController, char const*, char const*, CSmartPtr<CJSCallbackPromise> >
+ R typeinfo name for CKeepAliveMsg
  R typeinfo name for CLimitedUserDialog
+ R typeinfo name for CLogMsg
+ R typeinfo name for CLogUploadMsg
  R typeinfo name for CMSgJumpListMRUApp
  R typeinfo name for CMsgAckPIDShuttingDown
  R typeinfo name for CMsgAckSharedPaintBuffers
@@ -4443,12 +4758,18 @@
  R typeinfo name for CMsgZoomToFocusedElement
  R typeinfo name for CMultipleCallResults<CAppDownloadNotificationManager, HTTPRequestCompleted_t>
  R typeinfo name for CMultipleCallResults<CChatRoomDlg, HTTPRequestCompleted_t>
+ R typeinfo name for CNegotiatedConfig
+ R typeinfo name for CNegotiationCompleteMsg
+ R typeinfo name for CNegotiationInitMsg
+ R typeinfo name for CNegotiationSetConfigMsg
  R typeinfo name for CNewTurnsNotification
+ R typeinfo name for COverlayEnabledMsg
  R typeinfo name for CPanelAnimationDictionary
  R typeinfo name for CPanelMessageMapDictionary
  R typeinfo name for CParentalCache
  R typeinfo name for CParentalCache::CCallback_OnParentalLockChangeBegin
  R typeinfo name for CPathString
+ R typeinfo name for CPauseMsg
  R typeinfo name for CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >
  R typeinfo name for CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >
  R typeinfo name for CPlayersDialog
@@ -4457,10 +4778,14 @@
  R typeinfo name for CPlayersSubRecentPlayers::CCallback_OnPersonaStateChange
  R typeinfo name for CProportionalFloatProperty
  R typeinfo name for CProportionalIntProperty
+ R typeinfo name for CQuitRequest
  R typeinfo name for CRSAKeyBase
  R typeinfo name for CRSAPublicKey
+ R typeinfo name for CRecordedInput
+ R typeinfo name for CRecordedInputStream
  R typeinfo name for CRefCountServiceBase<true, CRefMT>
  R typeinfo name for CRefCounted<CRefCountServiceBase<true, CRefMT> >
+ R typeinfo name for CRemoteHIDMsg
  R typeinfo name for CRemotePlayController
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnPlaceholderStateChange
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemoteClientInputSettingsChange
@@ -4473,7 +4798,27 @@
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnRemotePlayTogetherPlayerLeft
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnStreamingClientConnected
  R typeinfo name for CRemotePlayController::CCallbackInternal_OnStreamingClientUsedInput
+ R typeinfo name for CResumeMsg
+ R typeinfo name for CSaveTouchConfigLayoutMsg
+ R typeinfo name for CServerHandshakeMsg
+ R typeinfo name for CSetActivityMsg
+ R typeinfo name for CSetCapslockMsg
+ R typeinfo name for CSetCaptureSizeMsg
+ R typeinfo name for CSetCursorImageMsg
+ R typeinfo name for CSetCursorMsg
+ R typeinfo name for CSetFlashStateMsg
+ R typeinfo name for CSetGammaRampMsg
+ R typeinfo name for CSetIconMsg
+ R typeinfo name for CSetKeymapMsg
  R typeinfo name for CSetNicknameDialog
+ R typeinfo name for CSetQoSMsg
+ R typeinfo name for CSetSpectatorModeMsg
+ R typeinfo name for CSetStreamingClientConfig
+ R typeinfo name for CSetTargetBitrateMsg
+ R typeinfo name for CSetTargetFramerateMsg
+ R typeinfo name for CSetTitleMsg
+ R typeinfo name for CSetTouchConfigDataMsg
+ R typeinfo name for CSetTouchIconDataMsg
  R typeinfo name for CSharedConnectionController
  R typeinfo name for CSharedConnectionController::CCallback_OnMessageReady
  R typeinfo name for CSharedConnectionController::CCallback_OnServersConnected
@@ -4483,6 +4828,10 @@
  R typeinfo name for CSharedLibraryNotifications::CCallback_OnDeauthorizeDevice
  R typeinfo name for CSharedLibraryNotifications::CCallback_OnSharedLibraryChanged
  R typeinfo name for CSharedLibraryNotifications::CCallback_OnStopPlaying
+ R typeinfo name for CShowCursorMsg
+ R typeinfo name for CStartAudioDataMsg
+ R typeinfo name for CStartNetworkTestMsg
+ R typeinfo name for CStartVideoDataMsg
  R typeinfo name for CSteamInputControllerConnectedNotification
  R typeinfo name for CSteamInputNotificationManager
  R typeinfo name for CSteamInputNotificationManager::CCallback_OnReceivedControllerPersonalization
@@ -4495,11 +4844,33 @@
  R typeinfo name for CSteamUIMessagingController
  R typeinfo name for CSteamUIMessagingController::CCallbackInternal_OnClientPostMessage
  R typeinfo name for CSteamUIStorageController
+ R typeinfo name for CStopAudioDataMsg
+ R typeinfo name for CStopRequest
+ R typeinfo name for CStopVideoDataMsg
+ R typeinfo name for CStreamDataLostMsg
+ R typeinfo name for CStreamVideoMode
+ R typeinfo name for CStreamingClientCaps
+ R typeinfo name for CStreamingClientConfig
+ R typeinfo name for CStreamingClientHandshakeInfo
+ R typeinfo name for CStreamingKeymap
+ R typeinfo name for CStreamingKeymapEntry
+ R typeinfo name for CStreamingServerConfig
+ R typeinfo name for CStreamingServerHandshakeInfo
+ R typeinfo name for CStreamingSessionStats
  R typeinfo name for CStringProperty
+ R typeinfo name for CSystemSuspendMsg
  R typeinfo name for CTextureIdProperty
+ R typeinfo name for CToggleMagnificationMsg
+ R typeinfo name for CTouchActionSetActiveMsg
+ R typeinfo name for CTouchActionSetLayerAddedMsg
+ R typeinfo name for CTouchActionSetLayerRemovedMsg
+ R typeinfo name for CTouchConfigActiveMsg
  R typeinfo name for CTradeInviteBar
  R typeinfo name for CTradeInviteBar::CCallback_OnTradeInviteCanceled
  R typeinfo name for CTradeInviteBar::CCallback_OnTradeStartSession
+ R typeinfo name for CTransportSignalMsg
+ R typeinfo name for CTransportSignalMsg_WebRTCMessage
+ R typeinfo name for CTransportSignalMsg_WebRTCMessage_Candidate
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
  R typeinfo name for CUtlHandleTable<vgui::BuildGroup, 20>
@@ -4625,6 +4996,12 @@
  R typeinfo name for CUtlVector<vgui::layoutcmd_t, CUtlMemory<vgui::layoutcmd_t> >
  R typeinfo name for CUtlVector<wchar_t*, CUtlMemory<wchar_t*> >
  R typeinfo name for CUtlVector<wchar_t, CUtlMemory<wchar_t> >
+ R typeinfo name for CVideoDecoderInfoMsg
+ R typeinfo name for CVideoEncoderInfoMsg
+ R typeinfo name for CVideoFormat
+ R typeinfo name for CVirtualHereReadyMsg
+ R typeinfo name for CVirtualHereRequestMsg
+ R typeinfo name for CVirtualHereShareDeviceMsg
  R typeinfo name for CVoiceBar
  R typeinfo name for CVoiceBar::CCallback_OnGameUsingVoice
  R typeinfo name for CVoiceBar::CCallback_OnVoiceEnabledStateChanged
@@ -5034,6 +5411,43 @@
  T CAppDownloadedNotification::PanelMessageFunc_OnNotificationClickPanelClicked::InitVar()
  T CAppDownloadedNotification::PerformLayout()
  T CAppDownloadedNotification::~CAppDownloadedNotification()
+ T CAudioFormat::ByteSize() const
+ T CAudioFormat::CAudioFormat()
+ T CAudioFormat::Clear()
+ T CAudioFormat::GetCachedSize() const
+ T CAudioFormat::GetMetadata() const
+ T CAudioFormat::IsInitialized() const
+ T CAudioFormat::MergeFrom(CAudioFormat const&)
+ T CAudioFormat::New() const
+ T CAudioFormat::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CAudioFormat::SetCachedSize(int) const
+ T CAudioFormat::~CAudioFormat()
+ T CAuthenticationRequestMsg::ByteSize() const
+ T CAuthenticationRequestMsg::CAuthenticationRequestMsg()
+ T CAuthenticationRequestMsg::Clear()
+ T CAuthenticationRequestMsg::GetCachedSize() const
+ T CAuthenticationRequestMsg::GetMetadata() const
+ T CAuthenticationRequestMsg::IsInitialized() const
+ T CAuthenticationRequestMsg::MergeFrom(CAuthenticationRequestMsg const&)
+ T CAuthenticationRequestMsg::New() const
+ T CAuthenticationRequestMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CAuthenticationRequestMsg::SetCachedSize(int) const
+ T CAuthenticationRequestMsg::SharedCtor()
+ T CAuthenticationRequestMsg::SharedDtor()
+ T CAuthenticationRequestMsg::mutable_token()
+ T CAuthenticationRequestMsg::set_token(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CAuthenticationRequestMsg::~CAuthenticationRequestMsg()
+ T CAuthenticationResponseMsg::ByteSize() const
+ T CAuthenticationResponseMsg::CAuthenticationResponseMsg()
+ T CAuthenticationResponseMsg::Clear()
+ T CAuthenticationResponseMsg::GetCachedSize() const
+ T CAuthenticationResponseMsg::GetMetadata() const
+ T CAuthenticationResponseMsg::IsInitialized() const
+ T CAuthenticationResponseMsg::MergeFrom(CAuthenticationResponseMsg const&)
+ T CAuthenticationResponseMsg::New() const
+ T CAuthenticationResponseMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CAuthenticationResponseMsg::SetCachedSize(int) const
+ T CAuthenticationResponseMsg::~CAuthenticationResponseMsg()
  T CAutoRelease<CJSCallbackFunc>::RecursiveValidate(CValidator&, char const*)
  T CAutoRelease<CJSCallbackFunc>::Reset(CJSCallbackFunc*)
  T CAutoRelease<CJSCallbackFunc>::~CAutoRelease()
@@ -6037,6 +6451,18 @@
  T CClanPanel::~CClanPanel()
  T CClassMemoryPool<PanelAnimationMap>::Alloc()
  T CCleanupUtlSymbolTable::~CCleanupUtlSymbolTable()
+ T CClientHandshakeMsg::ByteSize() const
+ T CClientHandshakeMsg::CClientHandshakeMsg()
+ T CClientHandshakeMsg::Clear()
+ T CClientHandshakeMsg::GetCachedSize() const
+ T CClientHandshakeMsg::GetMetadata() const
+ T CClientHandshakeMsg::IsInitialized() const
+ T CClientHandshakeMsg::MergeFrom(CClientHandshakeMsg const&)
+ T CClientHandshakeMsg::New() const
+ T CClientHandshakeMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CClientHandshakeMsg::SetCachedSize(int) const
+ T CClientHandshakeMsg::mutable_info()
+ T CClientHandshakeMsg::~CClientHandshakeMsg()
  T CColorProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CColorProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CColorProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -6088,6 +6514,32 @@
  T CCryptoKeyBase_RawBuffer::~CCryptoKeyBase_RawBuffer()
  T CDLLValidate::Validate(CValidator&)
  T CDbgFmtMsg::CDbgFmtMsg(char const*, ...)
+ T CDebugDumpMsg::ByteSize() const
+ T CDebugDumpMsg::CDebugDumpMsg()
+ T CDebugDumpMsg::Clear()
+ T CDebugDumpMsg::GetCachedSize() const
+ T CDebugDumpMsg::GetMetadata() const
+ T CDebugDumpMsg::IsInitialized() const
+ T CDebugDumpMsg::MergeFrom(CDebugDumpMsg const&)
+ T CDebugDumpMsg::New() const
+ T CDebugDumpMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CDebugDumpMsg::SetCachedSize(int) const
+ T CDebugDumpMsg::SharedCtor()
+ T CDebugDumpMsg::SharedDtor()
+ T CDebugDumpMsg::mutable_screenshot()
+ T CDebugDumpMsg::set_screenshot(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CDebugDumpMsg::~CDebugDumpMsg()
+ T CDeleteCursorMsg::ByteSize() const
+ T CDeleteCursorMsg::CDeleteCursorMsg()
+ T CDeleteCursorMsg::Clear()
+ T CDeleteCursorMsg::GetCachedSize() const
+ T CDeleteCursorMsg::GetMetadata() const
+ T CDeleteCursorMsg::IsInitialized() const
+ T CDeleteCursorMsg::MergeFrom(CDeleteCursorMsg const&)
+ T CDeleteCursorMsg::New() const
+ T CDeleteCursorMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CDeleteCursorMsg::SetCachedSize(int) const
+ T CDeleteCursorMsg::~CDeleteCursorMsg()
  T CDirContentsWatcher::AddFileToChangeList(char const*)
  T CDirContentsWatcher::PopulateFileWatchData(char const*)
  T CDirContentsWatcher::SetDirToWatch(char const*)
@@ -6111,6 +6563,39 @@
  T CDirWatcher::SetDirToWatch(char const*)
  T CDirWatcher::Validate(CValidator&, char const*)
  T CDirWatcher::~CDirWatcher()
+ T CDisableHighResCaptureMsg::ByteSize() const
+ T CDisableHighResCaptureMsg::CDisableHighResCaptureMsg()
+ T CDisableHighResCaptureMsg::Clear()
+ T CDisableHighResCaptureMsg::GetCachedSize() const
+ T CDisableHighResCaptureMsg::GetMetadata() const
+ T CDisableHighResCaptureMsg::IsInitialized() const
+ T CDisableHighResCaptureMsg::MergeFrom(CDisableHighResCaptureMsg const&)
+ T CDisableHighResCaptureMsg::New() const
+ T CDisableHighResCaptureMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CDisableHighResCaptureMsg::SetCachedSize(int) const
+ T CDisableHighResCaptureMsg::~CDisableHighResCaptureMsg()
+ T CDiscoveryPingRequest::ByteSize() const
+ T CDiscoveryPingRequest::CDiscoveryPingRequest()
+ T CDiscoveryPingRequest::Clear()
+ T CDiscoveryPingRequest::GetCachedSize() const
+ T CDiscoveryPingRequest::GetMetadata() const
+ T CDiscoveryPingRequest::IsInitialized() const
+ T CDiscoveryPingRequest::MergeFrom(CDiscoveryPingRequest const&)
+ T CDiscoveryPingRequest::New() const
+ T CDiscoveryPingRequest::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CDiscoveryPingRequest::SetCachedSize(int) const
+ T CDiscoveryPingRequest::~CDiscoveryPingRequest()
+ T CDiscoveryPingResponse::ByteSize() const
+ T CDiscoveryPingResponse::CDiscoveryPingResponse()
+ T CDiscoveryPingResponse::Clear()
+ T CDiscoveryPingResponse::GetCachedSize() const
+ T CDiscoveryPingResponse::GetMetadata() const
+ T CDiscoveryPingResponse::IsInitialized() const
+ T CDiscoveryPingResponse::MergeFrom(CDiscoveryPingResponse const&)
+ T CDiscoveryPingResponse::New() const
+ T CDiscoveryPingResponse::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CDiscoveryPingResponse::SetCachedSize(int) const
+ T CDiscoveryPingResponse::~CDiscoveryPingResponse()
  T CDynamicFunc<bool (*)()>::GetNextPointer()
  T CDynamicFunc<bool (*)()>::Init(CSysModule*)
  T CDynamicFunc<bool (*)()>::Release()
@@ -6197,6 +6682,17 @@
  T CEmptySectionHeader::KB_ChainToMap()
  T CEmptySectionHeader::SetColor(Color)
  T CEmptySectionHeader::~CEmptySectionHeader()
+ T CEnableHighResCaptureMsg::ByteSize() const
+ T CEnableHighResCaptureMsg::CEnableHighResCaptureMsg()
+ T CEnableHighResCaptureMsg::Clear()
+ T CEnableHighResCaptureMsg::GetCachedSize() const
+ T CEnableHighResCaptureMsg::GetMetadata() const
+ T CEnableHighResCaptureMsg::IsInitialized() const
+ T CEnableHighResCaptureMsg::MergeFrom(CEnableHighResCaptureMsg const&)
+ T CEnableHighResCaptureMsg::New() const
+ T CEnableHighResCaptureMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CEnableHighResCaptureMsg::SetCachedSize(int) const
+ T CEnableHighResCaptureMsg::~CEnableHighResCaptureMsg()
  T CFileReader::BOpenFile(StringView, EFioModifiers)
  T CFileReader::CFileReader(bool, unsigned int)
  T CFileReader::Read(void*, unsigned int, unsigned int*)
@@ -6209,6 +6705,50 @@
  T CFmtStrN<256, true, true>::CFmtStrN(char const*, ...)
  T CFmtStrN<256, true, true>::Format(char const*, ...)
  T CFmtStrN<8192, true, false>::CFmtStrN(char const*, ...)
+ T CFrameEvent::ByteSize() const
+ T CFrameEvent::CFrameEvent()
+ T CFrameEvent::Clear()
+ T CFrameEvent::GetCachedSize() const
+ T CFrameEvent::GetMetadata() const
+ T CFrameEvent::IsInitialized() const
+ T CFrameEvent::MergeFrom(CFrameEvent const&)
+ T CFrameEvent::New() const
+ T CFrameEvent::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CFrameEvent::SetCachedSize(int) const
+ T CFrameEvent::~CFrameEvent()
+ T CFrameStatAccumulatedValue::ByteSize() const
+ T CFrameStatAccumulatedValue::CFrameStatAccumulatedValue()
+ T CFrameStatAccumulatedValue::Clear()
+ T CFrameStatAccumulatedValue::GetCachedSize() const
+ T CFrameStatAccumulatedValue::GetMetadata() const
+ T CFrameStatAccumulatedValue::IsInitialized() const
+ T CFrameStatAccumulatedValue::MergeFrom(CFrameStatAccumulatedValue const&)
+ T CFrameStatAccumulatedValue::New() const
+ T CFrameStatAccumulatedValue::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CFrameStatAccumulatedValue::SetCachedSize(int) const
+ T CFrameStatAccumulatedValue::~CFrameStatAccumulatedValue()
+ T CFrameStats::ByteSize() const
+ T CFrameStats::CFrameStats()
+ T CFrameStats::Clear()
+ T CFrameStats::GetCachedSize() const
+ T CFrameStats::GetMetadata() const
+ T CFrameStats::IsInitialized() const
+ T CFrameStats::MergeFrom(CFrameStats const&)
+ T CFrameStats::New() const
+ T CFrameStats::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CFrameStats::SetCachedSize(int) const
+ T CFrameStats::~CFrameStats()
+ T CFrameStatsListMsg::ByteSize() const
+ T CFrameStatsListMsg::CFrameStatsListMsg()
+ T CFrameStatsListMsg::Clear()
+ T CFrameStatsListMsg::GetCachedSize() const
+ T CFrameStatsListMsg::GetMetadata() const
+ T CFrameStatsListMsg::IsInitialized() const
+ T CFrameStatsListMsg::MergeFrom(CFrameStatsListMsg const&)
+ T CFrameStatsListMsg::New() const
+ T CFrameStatsListMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CFrameStatsListMsg::SetCachedSize(int) const
+ T CFrameStatsListMsg::~CFrameStatsListMsg()
  T CFriendAliasesDialog::CCallback_OnPersonaStateChange::Run(void*)
  T CFriendAliasesDialog::CCallback_OnPersonaStateChange::~CCallback_OnPersonaStateChange()
  T CFriendAliasesDialog::CFriendAliasesDialog(vgui::Panel*, CSteamID)
@@ -7177,6 +7717,43 @@
  T CGameInviteNotification::GetPanelTopClassName() const
  T CGameInviteNotification::KB_ChainToMap()
  T CGameInviteNotification::~CGameInviteNotification()
+ T CGetCursorImageMsg::ByteSize() const
+ T CGetCursorImageMsg::CGetCursorImageMsg()
+ T CGetCursorImageMsg::Clear()
+ T CGetCursorImageMsg::GetCachedSize() const
+ T CGetCursorImageMsg::GetMetadata() const
+ T CGetCursorImageMsg::IsInitialized() const
+ T CGetCursorImageMsg::MergeFrom(CGetCursorImageMsg const&)
+ T CGetCursorImageMsg::New() const
+ T CGetCursorImageMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CGetCursorImageMsg::SetCachedSize(int) const
+ T CGetCursorImageMsg::~CGetCursorImageMsg()
+ T CGetTouchConfigDataMsg::ByteSize() const
+ T CGetTouchConfigDataMsg::CGetTouchConfigDataMsg()
+ T CGetTouchConfigDataMsg::Clear()
+ T CGetTouchConfigDataMsg::GetCachedSize() const
+ T CGetTouchConfigDataMsg::GetMetadata() const
+ T CGetTouchConfigDataMsg::IsInitialized() const
+ T CGetTouchConfigDataMsg::MergeFrom(CGetTouchConfigDataMsg const&)
+ T CGetTouchConfigDataMsg::New() const
+ T CGetTouchConfigDataMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CGetTouchConfigDataMsg::SetCachedSize(int) const
+ T CGetTouchConfigDataMsg::~CGetTouchConfigDataMsg()
+ T CGetTouchIconDataMsg::ByteSize() const
+ T CGetTouchIconDataMsg::CGetTouchIconDataMsg()
+ T CGetTouchIconDataMsg::Clear()
+ T CGetTouchIconDataMsg::GetCachedSize() const
+ T CGetTouchIconDataMsg::GetMetadata() const
+ T CGetTouchIconDataMsg::IsInitialized() const
+ T CGetTouchIconDataMsg::MergeFrom(CGetTouchIconDataMsg const&)
+ T CGetTouchIconDataMsg::New() const
+ T CGetTouchIconDataMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CGetTouchIconDataMsg::SetCachedSize(int) const
+ T CGetTouchIconDataMsg::SharedCtor()
+ T CGetTouchIconDataMsg::SharedDtor()
+ T CGetTouchIconDataMsg::mutable_icon()
+ T CGetTouchIconDataMsg::set_icon(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CGetTouchIconDataMsg::~CGetTouchIconDataMsg()
  T CGiftReceivedNotification::CGiftReceivedNotification(vgui::Panel*, char const*, vgui::Panel*, char const*)
  T CGiftReceivedNotification::ChainToAnimationMap()
  T CGiftReceivedNotification::ChainToMap()
@@ -7458,6 +8035,17 @@
  T CHTTPImage::CHTTPImage(char const*)
  T CHTTPImage::OnHTTPRequestCompleted(HTTPRequestCompleted_t*, bool)
  T CHTTPImage::~CHTTPImage()
+ T CHideCursorMsg::ByteSize() const
+ T CHideCursorMsg::CHideCursorMsg()
+ T CHideCursorMsg::Clear()
+ T CHideCursorMsg::GetCachedSize() const
+ T CHideCursorMsg::GetMetadata() const
+ T CHideCursorMsg::IsInitialized() const
+ T CHideCursorMsg::MergeFrom(CHideCursorMsg const&)
+ T CHideCursorMsg::New() const
+ T CHideCursorMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CHideCursorMsg::SetCachedSize(int) const
+ T CHideCursorMsg::~CHideCursorMsg()
  T CHintLabel::CHintLabel(vgui::Panel*, char const*, char const*)
  T CHintLabel::GetAppearance()
  T CHintLabel::GetStyleFlags()
@@ -7472,6 +8060,131 @@
  T CIPCToolMachClient::DoKillCommand(char const*)
  T CIPCToolMachClient::GetSteamPath(char*, unsigned long, int*)
  T CIPCToolMachClient::Init()
+ T CInputKeyDownMsg::ByteSize() const
+ T CInputKeyDownMsg::CInputKeyDownMsg()
+ T CInputKeyDownMsg::Clear()
+ T CInputKeyDownMsg::GetCachedSize() const
+ T CInputKeyDownMsg::GetMetadata() const
+ T CInputKeyDownMsg::IsInitialized() const
+ T CInputKeyDownMsg::MergeFrom(CInputKeyDownMsg const&)
+ T CInputKeyDownMsg::New() const
+ T CInputKeyDownMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputKeyDownMsg::SetCachedSize(int) const
+ T CInputKeyDownMsg::~CInputKeyDownMsg()
+ T CInputKeyUpMsg::ByteSize() const
+ T CInputKeyUpMsg::CInputKeyUpMsg()
+ T CInputKeyUpMsg::Clear()
+ T CInputKeyUpMsg::GetCachedSize() const
+ T CInputKeyUpMsg::GetMetadata() const
+ T CInputKeyUpMsg::IsInitialized() const
+ T CInputKeyUpMsg::MergeFrom(CInputKeyUpMsg const&)
+ T CInputKeyUpMsg::New() const
+ T CInputKeyUpMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputKeyUpMsg::SetCachedSize(int) const
+ T CInputKeyUpMsg::~CInputKeyUpMsg()
+ T CInputLatencyTestMsg::ByteSize() const
+ T CInputLatencyTestMsg::CInputLatencyTestMsg()
+ T CInputLatencyTestMsg::Clear()
+ T CInputLatencyTestMsg::GetCachedSize() const
+ T CInputLatencyTestMsg::GetMetadata() const
+ T CInputLatencyTestMsg::IsInitialized() const
+ T CInputLatencyTestMsg::MergeFrom(CInputLatencyTestMsg const&)
+ T CInputLatencyTestMsg::New() const
+ T CInputLatencyTestMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputLatencyTestMsg::SetCachedSize(int) const
+ T CInputLatencyTestMsg::~CInputLatencyTestMsg()
+ T CInputMouseDownMsg::ByteSize() const
+ T CInputMouseDownMsg::CInputMouseDownMsg()
+ T CInputMouseDownMsg::Clear()
+ T CInputMouseDownMsg::GetCachedSize() const
+ T CInputMouseDownMsg::GetMetadata() const
+ T CInputMouseDownMsg::IsInitialized() const
+ T CInputMouseDownMsg::MergeFrom(CInputMouseDownMsg const&)
+ T CInputMouseDownMsg::New() const
+ T CInputMouseDownMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputMouseDownMsg::SetCachedSize(int) const
+ T CInputMouseDownMsg::~CInputMouseDownMsg()
+ T CInputMouseMotionMsg::ByteSize() const
+ T CInputMouseMotionMsg::CInputMouseMotionMsg()
+ T CInputMouseMotionMsg::Clear()
+ T CInputMouseMotionMsg::GetCachedSize() const
+ T CInputMouseMotionMsg::GetMetadata() const
+ T CInputMouseMotionMsg::IsInitialized() const
+ T CInputMouseMotionMsg::MergeFrom(CInputMouseMotionMsg const&)
+ T CInputMouseMotionMsg::New() const
+ T CInputMouseMotionMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputMouseMotionMsg::SetCachedSize(int) const
+ T CInputMouseMotionMsg::~CInputMouseMotionMsg()
+ T CInputMouseUpMsg::ByteSize() const
+ T CInputMouseUpMsg::CInputMouseUpMsg()
+ T CInputMouseUpMsg::Clear()
+ T CInputMouseUpMsg::GetCachedSize() const
+ T CInputMouseUpMsg::GetMetadata() const
+ T CInputMouseUpMsg::IsInitialized() const
+ T CInputMouseUpMsg::MergeFrom(CInputMouseUpMsg const&)
+ T CInputMouseUpMsg::New() const
+ T CInputMouseUpMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputMouseUpMsg::SetCachedSize(int) const
+ T CInputMouseUpMsg::~CInputMouseUpMsg()
+ T CInputMouseWheelMsg::ByteSize() const
+ T CInputMouseWheelMsg::CInputMouseWheelMsg()
+ T CInputMouseWheelMsg::Clear()
+ T CInputMouseWheelMsg::GetCachedSize() const
+ T CInputMouseWheelMsg::GetMetadata() const
+ T CInputMouseWheelMsg::IsInitialized() const
+ T CInputMouseWheelMsg::MergeFrom(CInputMouseWheelMsg const&)
+ T CInputMouseWheelMsg::New() const
+ T CInputMouseWheelMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputMouseWheelMsg::SetCachedSize(int) const
+ T CInputMouseWheelMsg::~CInputMouseWheelMsg()
+ T CInputTextMsg::ByteSize() const
+ T CInputTextMsg::CInputTextMsg()
+ T CInputTextMsg::Clear()
+ T CInputTextMsg::GetCachedSize() const
+ T CInputTextMsg::GetMetadata() const
+ T CInputTextMsg::IsInitialized() const
+ T CInputTextMsg::MergeFrom(CInputTextMsg const&)
+ T CInputTextMsg::New() const
+ T CInputTextMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputTextMsg::SetCachedSize(int) const
+ T CInputTextMsg::SharedCtor()
+ T CInputTextMsg::SharedDtor()
+ T CInputTextMsg::mutable_text_utf8()
+ T CInputTextMsg::set_text_utf8(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CInputTextMsg::~CInputTextMsg()
+ T CInputTouchFingerDownMsg::ByteSize() const
+ T CInputTouchFingerDownMsg::CInputTouchFingerDownMsg()
+ T CInputTouchFingerDownMsg::Clear()
+ T CInputTouchFingerDownMsg::GetCachedSize() const
+ T CInputTouchFingerDownMsg::GetMetadata() const
+ T CInputTouchFingerDownMsg::IsInitialized() const
+ T CInputTouchFingerDownMsg::MergeFrom(CInputTouchFingerDownMsg const&)
+ T CInputTouchFingerDownMsg::New() const
+ T CInputTouchFingerDownMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputTouchFingerDownMsg::SetCachedSize(int) const
+ T CInputTouchFingerDownMsg::~CInputTouchFingerDownMsg()
+ T CInputTouchFingerMotionMsg::ByteSize() const
+ T CInputTouchFingerMotionMsg::CInputTouchFingerMotionMsg()
+ T CInputTouchFingerMotionMsg::Clear()
+ T CInputTouchFingerMotionMsg::GetCachedSize() const
+ T CInputTouchFingerMotionMsg::GetMetadata() const
+ T CInputTouchFingerMotionMsg::IsInitialized() const
+ T CInputTouchFingerMotionMsg::MergeFrom(CInputTouchFingerMotionMsg const&)
+ T CInputTouchFingerMotionMsg::New() const
+ T CInputTouchFingerMotionMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputTouchFingerMotionMsg::SetCachedSize(int) const
+ T CInputTouchFingerMotionMsg::~CInputTouchFingerMotionMsg()
+ T CInputTouchFingerUpMsg::ByteSize() const
+ T CInputTouchFingerUpMsg::CInputTouchFingerUpMsg()
+ T CInputTouchFingerUpMsg::Clear()
+ T CInputTouchFingerUpMsg::GetCachedSize() const
+ T CInputTouchFingerUpMsg::GetMetadata() const
+ T CInputTouchFingerUpMsg::IsInitialized() const
+ T CInputTouchFingerUpMsg::MergeFrom(CInputTouchFingerUpMsg const&)
+ T CInputTouchFingerUpMsg::New() const
+ T CInputTouchFingerUpMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CInputTouchFingerUpMsg::SetCachedSize(int) const
+ T CInputTouchFingerUpMsg::~CInputTouchFingerUpMsg()
  T CIntProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CIntProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CIntProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
@@ -7588,6 +8301,17 @@
  T CJpegSourceMgr::imp_resync_to_restart(jpeg_decompress_struct*, int)
  T CJpegSourceMgr::imp_skip_input_data(jpeg_decompress_struct*, long)
  T CJpegSourceMgr::imp_term_source(jpeg_decompress_struct*)
+ T CKeepAliveMsg::ByteSize() const
+ T CKeepAliveMsg::CKeepAliveMsg()
+ T CKeepAliveMsg::Clear()
+ T CKeepAliveMsg::GetCachedSize() const
+ T CKeepAliveMsg::GetMetadata() const
+ T CKeepAliveMsg::IsInitialized() const
+ T CKeepAliveMsg::MergeFrom(CKeepAliveMsg const&)
+ T CKeepAliveMsg::New() const
+ T CKeepAliveMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CKeepAliveMsg::SetCachedSize(int) const
+ T CKeepAliveMsg::~CKeepAliveMsg()
  T CKeyBindingsMgr::AddPanelToContext(vgui::KeyBindingContextHandle_t, vgui::Panel*)
  T CKeyBindingsMgr::Find(vgui::KeyBindingContextHandle_t)
  T CKeyBindingsMgr::GetKeyBindingsFile(vgui::KeyBindingContextHandle_t)
@@ -7607,6 +8331,36 @@
  T CLimitedUserDialog::GetPanelTopClassName() const
  T CLimitedUserDialog::KB_ChainToMap()
  T CLimitedUserDialog::~CLimitedUserDialog()
+ T CLogMsg::ByteSize() const
+ T CLogMsg::CLogMsg()
+ T CLogMsg::Clear()
+ T CLogMsg::GetCachedSize() const
+ T CLogMsg::GetMetadata() const
+ T CLogMsg::IsInitialized() const
+ T CLogMsg::MergeFrom(CLogMsg const&)
+ T CLogMsg::New() const
+ T CLogMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CLogMsg::SetCachedSize(int) const
+ T CLogMsg::SharedCtor()
+ T CLogMsg::SharedDtor()
+ T CLogMsg::mutable_message()
+ T CLogMsg::set_message(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CLogMsg::~CLogMsg()
+ T CLogUploadMsg::ByteSize() const
+ T CLogUploadMsg::CLogUploadMsg()
+ T CLogUploadMsg::Clear()
+ T CLogUploadMsg::GetCachedSize() const
+ T CLogUploadMsg::GetMetadata() const
+ T CLogUploadMsg::IsInitialized() const
+ T CLogUploadMsg::MergeFrom(CLogUploadMsg const&)
+ T CLogUploadMsg::New() const
+ T CLogUploadMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CLogUploadMsg::SetCachedSize(int) const
+ T CLogUploadMsg::SharedCtor()
+ T CLogUploadMsg::SharedDtor()
+ T CLogUploadMsg::mutable_data()
+ T CLogUploadMsg::set_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CLogUploadMsg::~CLogUploadMsg()
  T CMAC_CTX_copy
  T CMAC_CTX_free
  T CMAC_CTX_new
@@ -9544,6 +10298,54 @@
  T CMultipleCallResults<CChatRoomDlg, HTTPRequestCompleted_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CChatRoomDlg, HTTPRequestCompleted_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CChatRoomDlg, HTTPRequestCompleted_t>::~CMultipleCallResults()
+ T CNegotiatedConfig::ByteSize() const
+ T CNegotiatedConfig::CNegotiatedConfig()
+ T CNegotiatedConfig::Clear()
+ T CNegotiatedConfig::GetCachedSize() const
+ T CNegotiatedConfig::GetMetadata() const
+ T CNegotiatedConfig::IsInitialized() const
+ T CNegotiatedConfig::MergeFrom(CNegotiatedConfig const&)
+ T CNegotiatedConfig::New() const
+ T CNegotiatedConfig::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CNegotiatedConfig::SetCachedSize(int) const
+ T CNegotiatedConfig::~CNegotiatedConfig()
+ T CNegotiationCompleteMsg::ByteSize() const
+ T CNegotiationCompleteMsg::CNegotiationCompleteMsg()
+ T CNegotiationCompleteMsg::Clear()
+ T CNegotiationCompleteMsg::GetCachedSize() const
+ T CNegotiationCompleteMsg::GetMetadata() const
+ T CNegotiationCompleteMsg::IsInitialized() const
+ T CNegotiationCompleteMsg::MergeFrom(CNegotiationCompleteMsg const&)
+ T CNegotiationCompleteMsg::New() const
+ T CNegotiationCompleteMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CNegotiationCompleteMsg::SetCachedSize(int) const
+ T CNegotiationCompleteMsg::~CNegotiationCompleteMsg()
+ T CNegotiationInitMsg::ByteSize() const
+ T CNegotiationInitMsg::CNegotiationInitMsg()
+ T CNegotiationInitMsg::Clear()
+ T CNegotiationInitMsg::GetCachedSize() const
+ T CNegotiationInitMsg::GetMetadata() const
+ T CNegotiationInitMsg::IsInitialized() const
+ T CNegotiationInitMsg::MergeFrom(CNegotiationInitMsg const&)
+ T CNegotiationInitMsg::New() const
+ T CNegotiationInitMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CNegotiationInitMsg::SetCachedSize(int) const
+ T CNegotiationInitMsg::~CNegotiationInitMsg()
+ T CNegotiationSetConfigMsg::ByteSize() const
+ T CNegotiationSetConfigMsg::CNegotiationSetConfigMsg()
+ T CNegotiationSetConfigMsg::Clear()
+ T CNegotiationSetConfigMsg::GetCachedSize() const
+ T CNegotiationSetConfigMsg::GetMetadata() const
+ T CNegotiationSetConfigMsg::IsInitialized() const
+ T CNegotiationSetConfigMsg::MergeFrom(CNegotiationSetConfigMsg const&)
+ T CNegotiationSetConfigMsg::New() const
+ T CNegotiationSetConfigMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CNegotiationSetConfigMsg::SetCachedSize(int) const
+ T CNegotiationSetConfigMsg::SharedDtor()
+ T CNegotiationSetConfigMsg::mutable_config()
+ T CNegotiationSetConfigMsg::mutable_streaming_client_caps()
+ T CNegotiationSetConfigMsg::mutable_streaming_client_config()
+ T CNegotiationSetConfigMsg::~CNegotiationSetConfigMsg()
  T CNewTurnsNotification::CNewTurnsNotification(vgui::Panel*, char const*, vgui::Panel*, int)
  T CNewTurnsNotification::ChainToAnimationMap()
  T CNewTurnsNotification::ChainToMap()
@@ -9564,6 +10366,17 @@
  T COpenSSLWrapper::OpenSSLLockingCallback(int, int, char const*, int)
  T COpenSSLWrapper::OpenSSLThreadIDCallback()
  T COpenSSLWrapper::Shutdown()
+ T COverlayEnabledMsg::ByteSize() const
+ T COverlayEnabledMsg::COverlayEnabledMsg()
+ T COverlayEnabledMsg::Clear()
+ T COverlayEnabledMsg::GetCachedSize() const
+ T COverlayEnabledMsg::GetMetadata() const
+ T COverlayEnabledMsg::IsInitialized() const
+ T COverlayEnabledMsg::MergeFrom(COverlayEnabledMsg const&)
+ T COverlayEnabledMsg::New() const
+ T COverlayEnabledMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T COverlayEnabledMsg::SetCachedSize(int) const
+ T COverlayEnabledMsg::~COverlayEnabledMsg()
  T CPanelAnimationDictionary::CPanelAnimationDictionary()
  T CPanelAnimationDictionary::FindOrAddPanelAnimationMap(char const*)
  T CPanelAnimationDictionary::FindPanelAnimationMap(char const*)
@@ -9613,6 +10426,17 @@
  T CPathString::GetUTF8Path() const
  T CPathString::Validate(CValidator&, char const*)
  T CPathString::~CPathString()
+ T CPauseMsg::ByteSize() const
+ T CPauseMsg::CPauseMsg()
+ T CPauseMsg::Clear()
+ T CPauseMsg::GetCachedSize() const
+ T CPauseMsg::GetMetadata() const
+ T CPauseMsg::IsInitialized() const
+ T CPauseMsg::MergeFrom(CPauseMsg const&)
+ T CPauseMsg::New() const
+ T CPauseMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CPauseMsg::SetCachedSize(int) const
+ T CPauseMsg::~CPauseMsg()
  T CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >::Delete()
  T CPlainAutoPtr<CUtlMap<CUtlString, bool, int, CDefLess<CUtlString> > >::RecursiveValidate(CValidator&, char const*)
  T CPlainAutoPtr<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> > >::Delete()
@@ -9670,6 +10494,17 @@
  T CProportionalIntProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CProportionalIntProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
+ T CQuitRequest::ByteSize() const
+ T CQuitRequest::CQuitRequest()
+ T CQuitRequest::Clear()
+ T CQuitRequest::GetCachedSize() const
+ T CQuitRequest::GetMetadata() const
+ T CQuitRequest::IsInitialized() const
+ T CQuitRequest::MergeFrom(CQuitRequest const&)
+ T CQuitRequest::New() const
+ T CQuitRequest::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CQuitRequest::SetCachedSize(int) const
+ T CQuitRequest::~CQuitRequest()
  T CRSAKeyBase::LoadFromAndWipeBuffer(void*, unsigned long)
  T CRSAKeyBase::ParsePEM(char const*, unsigned long)
  T CRSAPublicKey::~CRSAPublicKey()
@@ -9729,9 +10564,59 @@
  T CRYPTO_set_locking_callback
  T CRYPTO_set_mem_ex_functions
  T CRYPTO_xts128_encrypt
+ T CRecordedInput::ByteSize() const
+ T CRecordedInput::CRecordedInput()
+ T CRecordedInput::Clear()
+ T CRecordedInput::GetCachedSize() const
+ T CRecordedInput::GetMetadata() const
+ T CRecordedInput::InitAsDefaultInstance()
+ T CRecordedInput::IsInitialized() const
+ T CRecordedInput::MergeFrom(CRecordedInput const&)
+ T CRecordedInput::New() const
+ T CRecordedInput::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CRecordedInput::SetCachedSize(int) const
+ T CRecordedInput::clear_data()
+ T CRecordedInput::mutable_finger_down()
+ T CRecordedInput::mutable_finger_motion()
+ T CRecordedInput::mutable_finger_up()
+ T CRecordedInput::mutable_hid()
+ T CRecordedInput::mutable_key_down()
+ T CRecordedInput::mutable_key_up()
+ T CRecordedInput::mutable_mouse_down()
+ T CRecordedInput::mutable_mouse_motion()
+ T CRecordedInput::mutable_mouse_up()
+ T CRecordedInput::mutable_mouse_wheel()
+ T CRecordedInput::mutable_text()
+ T CRecordedInput::~CRecordedInput()
+ T CRecordedInputStream::ByteSize() const
+ T CRecordedInputStream::CRecordedInputStream()
+ T CRecordedInputStream::Clear()
+ T CRecordedInputStream::GetCachedSize() const
+ T CRecordedInputStream::GetMetadata() const
+ T CRecordedInputStream::IsInitialized() const
+ T CRecordedInputStream::MergeFrom(CRecordedInputStream const&)
+ T CRecordedInputStream::New() const
+ T CRecordedInputStream::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CRecordedInputStream::SetCachedSize(int) const
+ T CRecordedInputStream::~CRecordedInputStream()
  T CRefCountServiceBase<true, CRefMT>::DoAddRef() const
  T CRefCountServiceBase<true, CRefMT>::DoRelease() const
  T CRefCountServiceBase<true, CRefMT>::OnFinalRelease()
+ T CRemoteHIDMsg::ByteSize() const
+ T CRemoteHIDMsg::CRemoteHIDMsg()
+ T CRemoteHIDMsg::Clear()
+ T CRemoteHIDMsg::GetCachedSize() const
+ T CRemoteHIDMsg::GetMetadata() const
+ T CRemoteHIDMsg::IsInitialized() const
+ T CRemoteHIDMsg::MergeFrom(CRemoteHIDMsg const&)
+ T CRemoteHIDMsg::New() const
+ T CRemoteHIDMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CRemoteHIDMsg::SetCachedSize(int) const
+ T CRemoteHIDMsg::SharedCtor()
+ T CRemoteHIDMsg::SharedDtor()
+ T CRemoteHIDMsg::mutable_data()
+ T CRemoteHIDMsg::set_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CRemoteHIDMsg::~CRemoteHIDMsg()
  T CRemotePlayController::BCanAcceptInviteForGame(char const*, char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::BCanCreateInviteForGame(char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::BCanHostIsolatedGameAudio(CSmartPtr<CJSCallbackPromise>)
@@ -9772,8 +10657,10 @@
  T CRemotePlayController::CRemotePlayController()
  T CRemotePlayController::CancelInviteAndSession(char const*, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::CreateInviteAndSession(char const*, char const*, CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::GetClientStreamingQuality(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetGameSystemVolume(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::GetPerUserInputSettings(char const*, CSmartPtr<CJSCallbackPromise>)
+ T CRemotePlayController::GetStreamingClientConfig(CStreamingClientConfig*)
  T CRemotePlayController::IdentifyController(int)
  T CRemotePlayController::Initialize()
  T CRemotePlayController::MoveControllerToSlot(int, int)
@@ -9802,6 +10689,8 @@
  T CRemotePlayController::RegisterJSMethods(IHTMLWindow*)
  T CRemotePlayController::RegisterJSMethods(vgui::HTML*)
  T CRemotePlayController::RunFrame()
+ T CRemotePlayController::SaveStreamingClientConfig(CStreamingClientConfig const&)
+ T CRemotePlayController::SetClientStreamingQuality(int)
  T CRemotePlayController::SetGameSystemVolume(int)
  T CRemotePlayController::SetPerUserControllerInputEnabled(char const*, bool, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::SetPerUserKeyboardInputEnabled(char const*, bool, CSmartPtr<CJSCallbackPromise>)
@@ -9809,10 +10698,160 @@
  T CRemotePlayController::SetStreamingDesktopToRemotePlayTogetherEnabled(bool, CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::StopStreamingClient(CSmartPtr<CJSCallbackPromise>)
  T CRemotePlayController::Validate(CValidator&, char const*)
+ T CResumeMsg::ByteSize() const
+ T CResumeMsg::CResumeMsg()
+ T CResumeMsg::Clear()
+ T CResumeMsg::GetCachedSize() const
+ T CResumeMsg::GetMetadata() const
+ T CResumeMsg::IsInitialized() const
+ T CResumeMsg::MergeFrom(CResumeMsg const&)
+ T CResumeMsg::New() const
+ T CResumeMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CResumeMsg::SetCachedSize(int) const
+ T CResumeMsg::~CResumeMsg()
  T CSHA1::Final()
  T CSHA1::HashFile(char const*, bool)
  T CSHA1::Transform(unsigned int*, unsigned char const*)
  T CSHA1::Update(unsigned char const*, unsigned int)
+ T CSaveTouchConfigLayoutMsg::ByteSize() const
+ T CSaveTouchConfigLayoutMsg::CSaveTouchConfigLayoutMsg()
+ T CSaveTouchConfigLayoutMsg::Clear()
+ T CSaveTouchConfigLayoutMsg::GetCachedSize() const
+ T CSaveTouchConfigLayoutMsg::GetMetadata() const
+ T CSaveTouchConfigLayoutMsg::IsInitialized() const
+ T CSaveTouchConfigLayoutMsg::MergeFrom(CSaveTouchConfigLayoutMsg const&)
+ T CSaveTouchConfigLayoutMsg::New() const
+ T CSaveTouchConfigLayoutMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSaveTouchConfigLayoutMsg::SetCachedSize(int) const
+ T CSaveTouchConfigLayoutMsg::SharedCtor()
+ T CSaveTouchConfigLayoutMsg::SharedDtor()
+ T CSaveTouchConfigLayoutMsg::mutable_layout()
+ T CSaveTouchConfigLayoutMsg::set_layout(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CSaveTouchConfigLayoutMsg::~CSaveTouchConfigLayoutMsg()
+ T CServerHandshakeMsg::ByteSize() const
+ T CServerHandshakeMsg::CServerHandshakeMsg()
+ T CServerHandshakeMsg::Clear()
+ T CServerHandshakeMsg::GetCachedSize() const
+ T CServerHandshakeMsg::GetMetadata() const
+ T CServerHandshakeMsg::IsInitialized() const
+ T CServerHandshakeMsg::MergeFrom(CServerHandshakeMsg const&)
+ T CServerHandshakeMsg::New() const
+ T CServerHandshakeMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CServerHandshakeMsg::SetCachedSize(int) const
+ T CServerHandshakeMsg::mutable_info()
+ T CServerHandshakeMsg::~CServerHandshakeMsg()
+ T CSetActivityMsg::ByteSize() const
+ T CSetActivityMsg::CSetActivityMsg()
+ T CSetActivityMsg::Clear()
+ T CSetActivityMsg::GetCachedSize() const
+ T CSetActivityMsg::GetMetadata() const
+ T CSetActivityMsg::IsInitialized() const
+ T CSetActivityMsg::MergeFrom(CSetActivityMsg const&)
+ T CSetActivityMsg::New() const
+ T CSetActivityMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetActivityMsg::SetCachedSize(int) const
+ T CSetActivityMsg::~CSetActivityMsg()
+ T CSetCapslockMsg::ByteSize() const
+ T CSetCapslockMsg::CSetCapslockMsg()
+ T CSetCapslockMsg::Clear()
+ T CSetCapslockMsg::GetCachedSize() const
+ T CSetCapslockMsg::GetMetadata() const
+ T CSetCapslockMsg::IsInitialized() const
+ T CSetCapslockMsg::MergeFrom(CSetCapslockMsg const&)
+ T CSetCapslockMsg::New() const
+ T CSetCapslockMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetCapslockMsg::SetCachedSize(int) const
+ T CSetCapslockMsg::~CSetCapslockMsg()
+ T CSetCaptureSizeMsg::ByteSize() const
+ T CSetCaptureSizeMsg::CSetCaptureSizeMsg()
+ T CSetCaptureSizeMsg::Clear()
+ T CSetCaptureSizeMsg::GetCachedSize() const
+ T CSetCaptureSizeMsg::GetMetadata() const
+ T CSetCaptureSizeMsg::IsInitialized() const
+ T CSetCaptureSizeMsg::MergeFrom(CSetCaptureSizeMsg const&)
+ T CSetCaptureSizeMsg::New() const
+ T CSetCaptureSizeMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetCaptureSizeMsg::SetCachedSize(int) const
+ T CSetCaptureSizeMsg::~CSetCaptureSizeMsg()
+ T CSetCursorImageMsg::ByteSize() const
+ T CSetCursorImageMsg::CSetCursorImageMsg()
+ T CSetCursorImageMsg::Clear()
+ T CSetCursorImageMsg::GetCachedSize() const
+ T CSetCursorImageMsg::GetMetadata() const
+ T CSetCursorImageMsg::IsInitialized() const
+ T CSetCursorImageMsg::MergeFrom(CSetCursorImageMsg const&)
+ T CSetCursorImageMsg::New() const
+ T CSetCursorImageMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetCursorImageMsg::SetCachedSize(int) const
+ T CSetCursorImageMsg::SharedCtor()
+ T CSetCursorImageMsg::SharedDtor()
+ T CSetCursorImageMsg::mutable_image()
+ T CSetCursorImageMsg::set_image(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CSetCursorImageMsg::~CSetCursorImageMsg()
+ T CSetCursorMsg::ByteSize() const
+ T CSetCursorMsg::CSetCursorMsg()
+ T CSetCursorMsg::Clear()
+ T CSetCursorMsg::GetCachedSize() const
+ T CSetCursorMsg::GetMetadata() const
+ T CSetCursorMsg::IsInitialized() const
+ T CSetCursorMsg::MergeFrom(CSetCursorMsg const&)
+ T CSetCursorMsg::New() const
+ T CSetCursorMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetCursorMsg::SetCachedSize(int) const
+ T CSetCursorMsg::~CSetCursorMsg()
+ T CSetFlashStateMsg::ByteSize() const
+ T CSetFlashStateMsg::CSetFlashStateMsg()
+ T CSetFlashStateMsg::Clear()
+ T CSetFlashStateMsg::GetCachedSize() const
+ T CSetFlashStateMsg::GetMetadata() const
+ T CSetFlashStateMsg::IsInitialized() const
+ T CSetFlashStateMsg::MergeFrom(CSetFlashStateMsg const&)
+ T CSetFlashStateMsg::New() const
+ T CSetFlashStateMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetFlashStateMsg::SetCachedSize(int) const
+ T CSetFlashStateMsg::~CSetFlashStateMsg()
+ T CSetGammaRampMsg::ByteSize() const
+ T CSetGammaRampMsg::CSetGammaRampMsg()
+ T CSetGammaRampMsg::Clear()
+ T CSetGammaRampMsg::GetCachedSize() const
+ T CSetGammaRampMsg::GetMetadata() const
+ T CSetGammaRampMsg::IsInitialized() const
+ T CSetGammaRampMsg::MergeFrom(CSetGammaRampMsg const&)
+ T CSetGammaRampMsg::New() const
+ T CSetGammaRampMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetGammaRampMsg::SetCachedSize(int) const
+ T CSetGammaRampMsg::SharedCtor()
+ T CSetGammaRampMsg::SharedDtor()
+ T CSetGammaRampMsg::mutable_gamma_ramp()
+ T CSetGammaRampMsg::set_gamma_ramp(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CSetGammaRampMsg::~CSetGammaRampMsg()
+ T CSetIconMsg::ByteSize() const
+ T CSetIconMsg::CSetIconMsg()
+ T CSetIconMsg::Clear()
+ T CSetIconMsg::GetCachedSize() const
+ T CSetIconMsg::GetMetadata() const
+ T CSetIconMsg::IsInitialized() const
+ T CSetIconMsg::MergeFrom(CSetIconMsg const&)
+ T CSetIconMsg::New() const
+ T CSetIconMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetIconMsg::SetCachedSize(int) const
+ T CSetIconMsg::SharedCtor()
+ T CSetIconMsg::SharedDtor()
+ T CSetIconMsg::mutable_image()
+ T CSetIconMsg::set_image(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CSetIconMsg::~CSetIconMsg()
+ T CSetKeymapMsg::ByteSize() const
+ T CSetKeymapMsg::CSetKeymapMsg()
+ T CSetKeymapMsg::Clear()
+ T CSetKeymapMsg::GetCachedSize() const
+ T CSetKeymapMsg::GetMetadata() const
+ T CSetKeymapMsg::IsInitialized() const
+ T CSetKeymapMsg::MergeFrom(CSetKeymapMsg const&)
+ T CSetKeymapMsg::New() const
+ T CSetKeymapMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetKeymapMsg::SetCachedSize(int) const
+ T CSetKeymapMsg::mutable_keymap()
+ T CSetKeymapMsg::~CSetKeymapMsg()
  T CSetNicknameDialog::CSetNicknameDialog(vgui::Panel*, CSteamID)
  T CSetNicknameDialog::ChainToAnimationMap()
  T CSetNicknameDialog::ChainToMap()
@@ -9828,6 +10867,111 @@
  T CSetNicknameDialog::PanelMessageFunc_OnApply::InitVar()
  T CSetNicknameDialog::PanelMessageFunc_OnCancel::InitVar()
  T CSetNicknameDialog::~CSetNicknameDialog()
+ T CSetQoSMsg::ByteSize() const
+ T CSetQoSMsg::CSetQoSMsg()
+ T CSetQoSMsg::Clear()
+ T CSetQoSMsg::GetCachedSize() const
+ T CSetQoSMsg::GetMetadata() const
+ T CSetQoSMsg::IsInitialized() const
+ T CSetQoSMsg::MergeFrom(CSetQoSMsg const&)
+ T CSetQoSMsg::New() const
+ T CSetQoSMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetQoSMsg::SetCachedSize(int) const
+ T CSetQoSMsg::~CSetQoSMsg()
+ T CSetSpectatorModeMsg::ByteSize() const
+ T CSetSpectatorModeMsg::CSetSpectatorModeMsg()
+ T CSetSpectatorModeMsg::Clear()
+ T CSetSpectatorModeMsg::GetCachedSize() const
+ T CSetSpectatorModeMsg::GetMetadata() const
+ T CSetSpectatorModeMsg::IsInitialized() const
+ T CSetSpectatorModeMsg::MergeFrom(CSetSpectatorModeMsg const&)
+ T CSetSpectatorModeMsg::New() const
+ T CSetSpectatorModeMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetSpectatorModeMsg::SetCachedSize(int) const
+ T CSetSpectatorModeMsg::~CSetSpectatorModeMsg()
+ T CSetStreamingClientConfig::ByteSize() const
+ T CSetStreamingClientConfig::CSetStreamingClientConfig()
+ T CSetStreamingClientConfig::Clear()
+ T CSetStreamingClientConfig::GetCachedSize() const
+ T CSetStreamingClientConfig::GetMetadata() const
+ T CSetStreamingClientConfig::IsInitialized() const
+ T CSetStreamingClientConfig::MergeFrom(CSetStreamingClientConfig const&)
+ T CSetStreamingClientConfig::New() const
+ T CSetStreamingClientConfig::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetStreamingClientConfig::SetCachedSize(int) const
+ T CSetStreamingClientConfig::mutable_config()
+ T CSetStreamingClientConfig::~CSetStreamingClientConfig()
+ T CSetTargetBitrateMsg::ByteSize() const
+ T CSetTargetBitrateMsg::CSetTargetBitrateMsg()
+ T CSetTargetBitrateMsg::Clear()
+ T CSetTargetBitrateMsg::GetCachedSize() const
+ T CSetTargetBitrateMsg::GetMetadata() const
+ T CSetTargetBitrateMsg::IsInitialized() const
+ T CSetTargetBitrateMsg::MergeFrom(CSetTargetBitrateMsg const&)
+ T CSetTargetBitrateMsg::New() const
+ T CSetTargetBitrateMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetTargetBitrateMsg::SetCachedSize(int) const
+ T CSetTargetBitrateMsg::~CSetTargetBitrateMsg()
+ T CSetTargetFramerateMsg::ByteSize() const
+ T CSetTargetFramerateMsg::CSetTargetFramerateMsg()
+ T CSetTargetFramerateMsg::Clear()
+ T CSetTargetFramerateMsg::GetCachedSize() const
+ T CSetTargetFramerateMsg::GetMetadata() const
+ T CSetTargetFramerateMsg::IsInitialized() const
+ T CSetTargetFramerateMsg::MergeFrom(CSetTargetFramerateMsg const&)
+ T CSetTargetFramerateMsg::New() const
+ T CSetTargetFramerateMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetTargetFramerateMsg::SetCachedSize(int) const
+ T CSetTargetFramerateMsg::~CSetTargetFramerateMsg()
+ T CSetTitleMsg::ByteSize() const
+ T CSetTitleMsg::CSetTitleMsg()
+ T CSetTitleMsg::Clear()
+ T CSetTitleMsg::GetCachedSize() const
+ T CSetTitleMsg::GetMetadata() const
+ T CSetTitleMsg::IsInitialized() const
+ T CSetTitleMsg::MergeFrom(CSetTitleMsg const&)
+ T CSetTitleMsg::New() const
+ T CSetTitleMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetTitleMsg::SetCachedSize(int) const
+ T CSetTitleMsg::SharedCtor()
+ T CSetTitleMsg::SharedDtor()
+ T CSetTitleMsg::mutable_text()
+ T CSetTitleMsg::set_text(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CSetTitleMsg::~CSetTitleMsg()
+ T CSetTouchConfigDataMsg::ByteSize() const
+ T CSetTouchConfigDataMsg::CSetTouchConfigDataMsg()
+ T CSetTouchConfigDataMsg::Clear()
+ T CSetTouchConfigDataMsg::GetCachedSize() const
+ T CSetTouchConfigDataMsg::GetMetadata() const
+ T CSetTouchConfigDataMsg::IsInitialized() const
+ T CSetTouchConfigDataMsg::MergeFrom(CSetTouchConfigDataMsg const&)
+ T CSetTouchConfigDataMsg::New() const
+ T CSetTouchConfigDataMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetTouchConfigDataMsg::SetCachedSize(int) const
+ T CSetTouchConfigDataMsg::SharedCtor()
+ T CSetTouchConfigDataMsg::SharedDtor()
+ T CSetTouchConfigDataMsg::mutable_data()
+ T CSetTouchConfigDataMsg::mutable_layout()
+ T CSetTouchConfigDataMsg::set_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CSetTouchConfigDataMsg::set_layout(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CSetTouchConfigDataMsg::~CSetTouchConfigDataMsg()
+ T CSetTouchIconDataMsg::ByteSize() const
+ T CSetTouchIconDataMsg::CSetTouchIconDataMsg()
+ T CSetTouchIconDataMsg::Clear()
+ T CSetTouchIconDataMsg::GetCachedSize() const
+ T CSetTouchIconDataMsg::GetMetadata() const
+ T CSetTouchIconDataMsg::IsInitialized() const
+ T CSetTouchIconDataMsg::MergeFrom(CSetTouchIconDataMsg const&)
+ T CSetTouchIconDataMsg::New() const
+ T CSetTouchIconDataMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSetTouchIconDataMsg::SetCachedSize(int) const
+ T CSetTouchIconDataMsg::SharedCtor()
+ T CSetTouchIconDataMsg::SharedDtor()
+ T CSetTouchIconDataMsg::mutable_data()
+ T CSetTouchIconDataMsg::mutable_icon()
+ T CSetTouchIconDataMsg::set_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CSetTouchIconDataMsg::set_icon(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CSetTouchIconDataMsg::~CSetTouchIconDataMsg()
  T CSharedConnectionController::CCallback_OnMessageReady::Run(void*)
  T CSharedConnectionController::CCallback_OnMessageReady::~CCallback_OnMessageReady()
  T CSharedConnectionController::CCallback_OnServersConnected::Run(void*)
@@ -9871,6 +11015,17 @@
  T CSharedLibraryNotifications::OnStopPlaying(StopPlayingBorrowedApp_t*)
  T CSharedLibraryNotifications::Validate(CValidator&, char const*)
  T CSharedLibraryNotifications::~CSharedLibraryNotifications()
+ T CShowCursorMsg::ByteSize() const
+ T CShowCursorMsg::CShowCursorMsg()
+ T CShowCursorMsg::Clear()
+ T CShowCursorMsg::GetCachedSize() const
+ T CShowCursorMsg::GetMetadata() const
+ T CShowCursorMsg::IsInitialized() const
+ T CShowCursorMsg::MergeFrom(CShowCursorMsg const&)
+ T CShowCursorMsg::New() const
+ T CShowCursorMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CShowCursorMsg::SetCachedSize(int) const
+ T CShowCursorMsg::~CShowCursorMsg()
  T CSimpleMachClient::DoVersionCommand()
  T CSimpleMachClient::Init(char const*, unsigned int, bool)
  T CSimpleMachClient::Send(mach_msg_header_t*, unsigned int, int*)
@@ -9880,6 +11035,47 @@
  T CSmartPtr<CJSCallbackFunc>::operator=(CSmartPtr<CJSCallbackFunc> const&)
  T CSmartPtr<CJSCallbackPromise>::CSmartPtr(CSmartPtr<CJSCallbackPromise> const&)
  T CSmartPtr<CJSCallbackPromise>::operator=(CSmartPtr<CJSCallbackPromise> const&)
+ T CStartAudioDataMsg::ByteSize() const
+ T CStartAudioDataMsg::CStartAudioDataMsg()
+ T CStartAudioDataMsg::Clear()
+ T CStartAudioDataMsg::GetCachedSize() const
+ T CStartAudioDataMsg::GetMetadata() const
+ T CStartAudioDataMsg::IsInitialized() const
+ T CStartAudioDataMsg::MergeFrom(CStartAudioDataMsg const&)
+ T CStartAudioDataMsg::New() const
+ T CStartAudioDataMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStartAudioDataMsg::SetCachedSize(int) const
+ T CStartAudioDataMsg::SharedCtor()
+ T CStartAudioDataMsg::SharedDtor()
+ T CStartAudioDataMsg::mutable_codec_data()
+ T CStartAudioDataMsg::set_codec_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CStartAudioDataMsg::~CStartAudioDataMsg()
+ T CStartNetworkTestMsg::ByteSize() const
+ T CStartNetworkTestMsg::CStartNetworkTestMsg()
+ T CStartNetworkTestMsg::Clear()
+ T CStartNetworkTestMsg::GetCachedSize() const
+ T CStartNetworkTestMsg::GetMetadata() const
+ T CStartNetworkTestMsg::IsInitialized() const
+ T CStartNetworkTestMsg::MergeFrom(CStartNetworkTestMsg const&)
+ T CStartNetworkTestMsg::New() const
+ T CStartNetworkTestMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStartNetworkTestMsg::SetCachedSize(int) const
+ T CStartNetworkTestMsg::~CStartNetworkTestMsg()
+ T CStartVideoDataMsg::ByteSize() const
+ T CStartVideoDataMsg::CStartVideoDataMsg()
+ T CStartVideoDataMsg::Clear()
+ T CStartVideoDataMsg::GetCachedSize() const
+ T CStartVideoDataMsg::GetMetadata() const
+ T CStartVideoDataMsg::IsInitialized() const
+ T CStartVideoDataMsg::MergeFrom(CStartVideoDataMsg const&)
+ T CStartVideoDataMsg::New() const
+ T CStartVideoDataMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStartVideoDataMsg::SetCachedSize(int) const
+ T CStartVideoDataMsg::SharedCtor()
+ T CStartVideoDataMsg::SharedDtor()
+ T CStartVideoDataMsg::mutable_codec_data()
+ T CStartVideoDataMsg::set_codec_data(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CStartVideoDataMsg::~CStartVideoDataMsg()
  T CSteamID::SetFromStringStrict(char const*, EUniverse)
  T CSteamInputControllerConnectedNotification::CSteamInputControllerConnectedNotification(ControllerPersonalizationUpdated_t*)
  T CSteamInputControllerConnectedNotification::ChainToAnimationMap()
@@ -9969,16 +11165,233 @@
  T CSteamUIStorageController::SetStringHelper(EConfigStore, char const*, char const*, char const*, CSmartPtr<CJSCallbackPromise>)
  T CSteamUIStorageController::Validate(CValidator&, char const*)
  T CSteamUIStorageController::~CSteamUIStorageController()
+ T CStopAudioDataMsg::ByteSize() const
+ T CStopAudioDataMsg::CStopAudioDataMsg()
+ T CStopAudioDataMsg::Clear()
+ T CStopAudioDataMsg::GetCachedSize() const
+ T CStopAudioDataMsg::GetMetadata() const
+ T CStopAudioDataMsg::IsInitialized() const
+ T CStopAudioDataMsg::MergeFrom(CStopAudioDataMsg const&)
+ T CStopAudioDataMsg::New() const
+ T CStopAudioDataMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStopAudioDataMsg::SetCachedSize(int) const
+ T CStopAudioDataMsg::~CStopAudioDataMsg()
+ T CStopRequest::ByteSize() const
+ T CStopRequest::CStopRequest()
+ T CStopRequest::Clear()
+ T CStopRequest::GetCachedSize() const
+ T CStopRequest::GetMetadata() const
+ T CStopRequest::IsInitialized() const
+ T CStopRequest::MergeFrom(CStopRequest const&)
+ T CStopRequest::New() const
+ T CStopRequest::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStopRequest::SetCachedSize(int) const
+ T CStopRequest::~CStopRequest()
+ T CStopVideoDataMsg::ByteSize() const
+ T CStopVideoDataMsg::CStopVideoDataMsg()
+ T CStopVideoDataMsg::Clear()
+ T CStopVideoDataMsg::GetCachedSize() const
+ T CStopVideoDataMsg::GetMetadata() const
+ T CStopVideoDataMsg::IsInitialized() const
+ T CStopVideoDataMsg::MergeFrom(CStopVideoDataMsg const&)
+ T CStopVideoDataMsg::New() const
+ T CStopVideoDataMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStopVideoDataMsg::SetCachedSize(int) const
+ T CStopVideoDataMsg::~CStopVideoDataMsg()
  T CStrAutoEncode::Clear()
  T CStrAutoEncode::ToUTF16()
  T CStrAutoEncode::ToUTF32()
  T CStrAutoEncode::ToUTF8()
+ T CStreamDataLostMsg::ByteSize() const
+ T CStreamDataLostMsg::CStreamDataLostMsg()
+ T CStreamDataLostMsg::Clear()
+ T CStreamDataLostMsg::GetCachedSize() const
+ T CStreamDataLostMsg::GetMetadata() const
+ T CStreamDataLostMsg::IsInitialized() const
+ T CStreamDataLostMsg::MergeFrom(CStreamDataLostMsg const&)
+ T CStreamDataLostMsg::New() const
+ T CStreamDataLostMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStreamDataLostMsg::SetCachedSize(int) const
+ T CStreamDataLostMsg::~CStreamDataLostMsg()
+ T CStreamVideoMode::ByteSize() const
+ T CStreamVideoMode::CStreamVideoMode()
+ T CStreamVideoMode::Clear()
+ T CStreamVideoMode::GetCachedSize() const
+ T CStreamVideoMode::GetMetadata() const
+ T CStreamVideoMode::IsInitialized() const
+ T CStreamVideoMode::MergeFrom(CStreamVideoMode const&)
+ T CStreamVideoMode::New() const
+ T CStreamVideoMode::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStreamVideoMode::SetCachedSize(int) const
+ T CStreamVideoMode::~CStreamVideoMode()
+ T CStreamingClientCaps::ByteSize() const
+ T CStreamingClientCaps::CStreamingClientCaps()
+ T CStreamingClientCaps::Clear()
+ T CStreamingClientCaps::GetCachedSize() const
+ T CStreamingClientCaps::GetMetadata() const
+ T CStreamingClientCaps::IsInitialized() const
+ T CStreamingClientCaps::MergeFrom(CStreamingClientCaps const&)
+ T CStreamingClientCaps::New() const
+ T CStreamingClientCaps::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStreamingClientCaps::SetCachedSize(int) const
+ T CStreamingClientCaps::SharedCtor()
+ T CStreamingClientCaps::SharedDtor()
+ T CStreamingClientCaps::mutable_system_info()
+ T CStreamingClientCaps::set_system_info(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CStreamingClientCaps::~CStreamingClientCaps()
+ T CStreamingClientConfig::ByteSize() const
+ T CStreamingClientConfig::CStreamingClientConfig()
+ T CStreamingClientConfig::Clear()
+ T CStreamingClientConfig::GetCachedSize() const
+ T CStreamingClientConfig::GetMetadata() const
+ T CStreamingClientConfig::IsInitialized() const
+ T CStreamingClientConfig::MergeFrom(CStreamingClientConfig const&)
+ T CStreamingClientConfig::New() const
+ T CStreamingClientConfig::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStreamingClientConfig::SetCachedSize(int) const
+ T CStreamingClientConfig::SharedCtor()
+ T CStreamingClientConfig::SharedDtor()
+ T CStreamingClientConfig::mutable_controller_overlay_hotkey()
+ T CStreamingClientConfig::set_controller_overlay_hotkey(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CStreamingClientConfig::~CStreamingClientConfig()
+ T CStreamingClientHandshakeInfo::ByteSize() const
+ T CStreamingClientHandshakeInfo::CStreamingClientHandshakeInfo()
+ T CStreamingClientHandshakeInfo::Clear()
+ T CStreamingClientHandshakeInfo::GetCachedSize() const
+ T CStreamingClientHandshakeInfo::GetMetadata() const
+ T CStreamingClientHandshakeInfo::IsInitialized() const
+ T CStreamingClientHandshakeInfo::MergeFrom(CStreamingClientHandshakeInfo const&)
+ T CStreamingClientHandshakeInfo::New() const
+ T CStreamingClientHandshakeInfo::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStreamingClientHandshakeInfo::SetCachedSize(int) const
+ T CStreamingClientHandshakeInfo::~CStreamingClientHandshakeInfo()
+ T CStreamingKeymap::ByteSize() const
+ T CStreamingKeymap::CStreamingKeymap()
+ T CStreamingKeymap::Clear()
+ T CStreamingKeymap::GetCachedSize() const
+ T CStreamingKeymap::GetMetadata() const
+ T CStreamingKeymap::IsInitialized() const
+ T CStreamingKeymap::MergeFrom(CStreamingKeymap const&)
+ T CStreamingKeymap::New() const
+ T CStreamingKeymap::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStreamingKeymap::SetCachedSize(int) const
+ T CStreamingKeymap::~CStreamingKeymap()
+ T CStreamingKeymapEntry::ByteSize() const
+ T CStreamingKeymapEntry::CStreamingKeymapEntry()
+ T CStreamingKeymapEntry::Clear()
+ T CStreamingKeymapEntry::GetCachedSize() const
+ T CStreamingKeymapEntry::GetMetadata() const
+ T CStreamingKeymapEntry::IsInitialized() const
+ T CStreamingKeymapEntry::MergeFrom(CStreamingKeymapEntry const&)
+ T CStreamingKeymapEntry::New() const
+ T CStreamingKeymapEntry::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStreamingKeymapEntry::SetCachedSize(int) const
+ T CStreamingKeymapEntry::~CStreamingKeymapEntry()
+ T CStreamingServerConfig::ByteSize() const
+ T CStreamingServerConfig::CStreamingServerConfig()
+ T CStreamingServerConfig::Clear()
+ T CStreamingServerConfig::GetCachedSize() const
+ T CStreamingServerConfig::GetMetadata() const
+ T CStreamingServerConfig::IsInitialized() const
+ T CStreamingServerConfig::MergeFrom(CStreamingServerConfig const&)
+ T CStreamingServerConfig::New() const
+ T CStreamingServerConfig::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStreamingServerConfig::SetCachedSize(int) const
+ T CStreamingServerConfig::~CStreamingServerConfig()
+ T CStreamingServerHandshakeInfo::ByteSize() const
+ T CStreamingServerHandshakeInfo::CStreamingServerHandshakeInfo()
+ T CStreamingServerHandshakeInfo::Clear()
+ T CStreamingServerHandshakeInfo::GetCachedSize() const
+ T CStreamingServerHandshakeInfo::GetMetadata() const
+ T CStreamingServerHandshakeInfo::IsInitialized() const
+ T CStreamingServerHandshakeInfo::MergeFrom(CStreamingServerHandshakeInfo const&)
+ T CStreamingServerHandshakeInfo::New() const
+ T CStreamingServerHandshakeInfo::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStreamingServerHandshakeInfo::SetCachedSize(int) const
+ T CStreamingServerHandshakeInfo::~CStreamingServerHandshakeInfo()
+ T CStreamingSessionStats::ByteSize() const
+ T CStreamingSessionStats::CStreamingSessionStats()
+ T CStreamingSessionStats::Clear()
+ T CStreamingSessionStats::GetCachedSize() const
+ T CStreamingSessionStats::GetMetadata() const
+ T CStreamingSessionStats::IsInitialized() const
+ T CStreamingSessionStats::MergeFrom(CStreamingSessionStats const&)
+ T CStreamingSessionStats::New() const
+ T CStreamingSessionStats::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CStreamingSessionStats::SetCachedSize(int) const
+ T CStreamingSessionStats::~CStreamingSessionStats()
  T CStringProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CStringProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CStringProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
+ T CSystemSuspendMsg::ByteSize() const
+ T CSystemSuspendMsg::CSystemSuspendMsg()
+ T CSystemSuspendMsg::Clear()
+ T CSystemSuspendMsg::GetCachedSize() const
+ T CSystemSuspendMsg::GetMetadata() const
+ T CSystemSuspendMsg::IsInitialized() const
+ T CSystemSuspendMsg::MergeFrom(CSystemSuspendMsg const&)
+ T CSystemSuspendMsg::New() const
+ T CSystemSuspendMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CSystemSuspendMsg::SetCachedSize(int) const
+ T CSystemSuspendMsg::~CSystemSuspendMsg()
  T CTextureIdProperty::GetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
  T CTextureIdProperty::InitFromDefault(vgui::Panel*, PanelAnimationMapEntry*)
  T CTextureIdProperty::SetData(vgui::Panel*, KeyValues*, PanelAnimationMapEntry*)
+ T CToggleMagnificationMsg::ByteSize() const
+ T CToggleMagnificationMsg::CToggleMagnificationMsg()
+ T CToggleMagnificationMsg::Clear()
+ T CToggleMagnificationMsg::GetCachedSize() const
+ T CToggleMagnificationMsg::GetMetadata() const
+ T CToggleMagnificationMsg::IsInitialized() const
+ T CToggleMagnificationMsg::MergeFrom(CToggleMagnificationMsg const&)
+ T CToggleMagnificationMsg::New() const
+ T CToggleMagnificationMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CToggleMagnificationMsg::SetCachedSize(int) const
+ T CToggleMagnificationMsg::~CToggleMagnificationMsg()
+ T CTouchActionSetActiveMsg::ByteSize() const
+ T CTouchActionSetActiveMsg::CTouchActionSetActiveMsg()
+ T CTouchActionSetActiveMsg::Clear()
+ T CTouchActionSetActiveMsg::GetCachedSize() const
+ T CTouchActionSetActiveMsg::GetMetadata() const
+ T CTouchActionSetActiveMsg::IsInitialized() const
+ T CTouchActionSetActiveMsg::MergeFrom(CTouchActionSetActiveMsg const&)
+ T CTouchActionSetActiveMsg::New() const
+ T CTouchActionSetActiveMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CTouchActionSetActiveMsg::SetCachedSize(int) const
+ T CTouchActionSetActiveMsg::~CTouchActionSetActiveMsg()
+ T CTouchActionSetLayerAddedMsg::ByteSize() const
+ T CTouchActionSetLayerAddedMsg::CTouchActionSetLayerAddedMsg()
+ T CTouchActionSetLayerAddedMsg::Clear()
+ T CTouchActionSetLayerAddedMsg::GetCachedSize() const
+ T CTouchActionSetLayerAddedMsg::GetMetadata() const
+ T CTouchActionSetLayerAddedMsg::IsInitialized() const
+ T CTouchActionSetLayerAddedMsg::MergeFrom(CTouchActionSetLayerAddedMsg const&)
+ T CTouchActionSetLayerAddedMsg::New() const
+ T CTouchActionSetLayerAddedMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CTouchActionSetLayerAddedMsg::SetCachedSize(int) const
+ T CTouchActionSetLayerAddedMsg::~CTouchActionSetLayerAddedMsg()
+ T CTouchActionSetLayerRemovedMsg::ByteSize() const
+ T CTouchActionSetLayerRemovedMsg::CTouchActionSetLayerRemovedMsg()
+ T CTouchActionSetLayerRemovedMsg::Clear()
+ T CTouchActionSetLayerRemovedMsg::GetCachedSize() const
+ T CTouchActionSetLayerRemovedMsg::GetMetadata() const
+ T CTouchActionSetLayerRemovedMsg::IsInitialized() const
+ T CTouchActionSetLayerRemovedMsg::MergeFrom(CTouchActionSetLayerRemovedMsg const&)
+ T CTouchActionSetLayerRemovedMsg::New() const
+ T CTouchActionSetLayerRemovedMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CTouchActionSetLayerRemovedMsg::SetCachedSize(int) const
+ T CTouchActionSetLayerRemovedMsg::~CTouchActionSetLayerRemovedMsg()
+ T CTouchConfigActiveMsg::ByteSize() const
+ T CTouchConfigActiveMsg::CTouchConfigActiveMsg()
+ T CTouchConfigActiveMsg::Clear()
+ T CTouchConfigActiveMsg::GetCachedSize() const
+ T CTouchConfigActiveMsg::GetMetadata() const
+ T CTouchConfigActiveMsg::IsInitialized() const
+ T CTouchConfigActiveMsg::MergeFrom(CTouchConfigActiveMsg const&)
+ T CTouchConfigActiveMsg::New() const
+ T CTouchConfigActiveMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CTouchConfigActiveMsg::SetCachedSize(int) const
+ T CTouchConfigActiveMsg::~CTouchConfigActiveMsg()
  T CTradeInviteBar::ActiveInviteSend(CSteamID)
  T CTradeInviteBar::CCallback_OnTradeInviteCanceled::Run(void*)
  T CTradeInviteBar::CCallback_OnTradeInviteCanceled::~CCallback_OnTradeInviteCanceled()
@@ -10001,6 +11414,54 @@
  T CTradeInviteBar::OnTradeStartSession(TradeStartSession_t*)
  T CTradeInviteBar::PanelMessageFunc_Close::InitVar()
  T CTradeInviteBar::~CTradeInviteBar()
+ T CTransportSignalMsg::ByteSize() const
+ T CTransportSignalMsg::CTransportSignalMsg()
+ T CTransportSignalMsg::Clear()
+ T CTransportSignalMsg::GetCachedSize() const
+ T CTransportSignalMsg::GetMetadata() const
+ T CTransportSignalMsg::IsInitialized() const
+ T CTransportSignalMsg::MergeFrom(CTransportSignalMsg const&)
+ T CTransportSignalMsg::New() const
+ T CTransportSignalMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CTransportSignalMsg::SetCachedSize(int) const
+ T CTransportSignalMsg::SharedCtor()
+ T CTransportSignalMsg::mutable_webrtc()
+ T CTransportSignalMsg::~CTransportSignalMsg()
+ T CTransportSignalMsg_WebRTCMessage::ByteSize() const
+ T CTransportSignalMsg_WebRTCMessage::CTransportSignalMsg_WebRTCMessage()
+ T CTransportSignalMsg_WebRTCMessage::Clear()
+ T CTransportSignalMsg_WebRTCMessage::GetCachedSize() const
+ T CTransportSignalMsg_WebRTCMessage::GetMetadata() const
+ T CTransportSignalMsg_WebRTCMessage::IsInitialized() const
+ T CTransportSignalMsg_WebRTCMessage::MergeFrom(CTransportSignalMsg_WebRTCMessage const&)
+ T CTransportSignalMsg_WebRTCMessage::New() const
+ T CTransportSignalMsg_WebRTCMessage::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CTransportSignalMsg_WebRTCMessage::SetCachedSize(int) const
+ T CTransportSignalMsg_WebRTCMessage::SharedCtor()
+ T CTransportSignalMsg_WebRTCMessage::clear_msg()
+ T CTransportSignalMsg_WebRTCMessage::mutable_answer()
+ T CTransportSignalMsg_WebRTCMessage::mutable_candidate()
+ T CTransportSignalMsg_WebRTCMessage::mutable_offer()
+ T CTransportSignalMsg_WebRTCMessage::set_answer(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CTransportSignalMsg_WebRTCMessage::set_offer(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CTransportSignalMsg_WebRTCMessage::~CTransportSignalMsg_WebRTCMessage()
+ T CTransportSignalMsg_WebRTCMessage_Candidate::ByteSize() const
+ T CTransportSignalMsg_WebRTCMessage_Candidate::CTransportSignalMsg_WebRTCMessage_Candidate()
+ T CTransportSignalMsg_WebRTCMessage_Candidate::Clear()
+ T CTransportSignalMsg_WebRTCMessage_Candidate::GetCachedSize() const
+ T CTransportSignalMsg_WebRTCMessage_Candidate::GetMetadata() const
+ T CTransportSignalMsg_WebRTCMessage_Candidate::IsInitialized() const
+ T CTransportSignalMsg_WebRTCMessage_Candidate::MergeFrom(CTransportSignalMsg_WebRTCMessage_Candidate const&)
+ T CTransportSignalMsg_WebRTCMessage_Candidate::New() const
+ T CTransportSignalMsg_WebRTCMessage_Candidate::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CTransportSignalMsg_WebRTCMessage_Candidate::SetCachedSize(int) const
+ T CTransportSignalMsg_WebRTCMessage_Candidate::SharedCtor()
+ T CTransportSignalMsg_WebRTCMessage_Candidate::SharedDtor()
+ T CTransportSignalMsg_WebRTCMessage_Candidate::mutable_candidate()
+ T CTransportSignalMsg_WebRTCMessage_Candidate::mutable_sdp_mid()
+ T CTransportSignalMsg_WebRTCMessage_Candidate::set_candidate(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CTransportSignalMsg_WebRTCMessage_Candidate::set_sdp_mid(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CTransportSignalMsg_WebRTCMessage_Candidate::~CTransportSignalMsg_WebRTCMessage_Candidate()
  T CURLHelper::BIsTrustedURL(char const*)
  T CUtlBuffer::AddNullTermination()
  T CUtlBuffer::CUtlBuffer(int, int, int)
@@ -10859,6 +12320,88 @@
  T CVariableBitStringBase::ReallocInts(int)
  T CVariableBitStringBase::Resize(int)
  T CVariableBitStringBase::Validate(CValidator&, char const*)
+ T CVideoDecoderInfoMsg::ByteSize() const
+ T CVideoDecoderInfoMsg::CVideoDecoderInfoMsg()
+ T CVideoDecoderInfoMsg::Clear()
+ T CVideoDecoderInfoMsg::GetCachedSize() const
+ T CVideoDecoderInfoMsg::GetMetadata() const
+ T CVideoDecoderInfoMsg::IsInitialized() const
+ T CVideoDecoderInfoMsg::MergeFrom(CVideoDecoderInfoMsg const&)
+ T CVideoDecoderInfoMsg::New() const
+ T CVideoDecoderInfoMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CVideoDecoderInfoMsg::SetCachedSize(int) const
+ T CVideoDecoderInfoMsg::SharedCtor()
+ T CVideoDecoderInfoMsg::SharedDtor()
+ T CVideoDecoderInfoMsg::mutable_info()
+ T CVideoDecoderInfoMsg::set_info(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CVideoDecoderInfoMsg::~CVideoDecoderInfoMsg()
+ T CVideoEncoderInfoMsg::ByteSize() const
+ T CVideoEncoderInfoMsg::CVideoEncoderInfoMsg()
+ T CVideoEncoderInfoMsg::Clear()
+ T CVideoEncoderInfoMsg::GetCachedSize() const
+ T CVideoEncoderInfoMsg::GetMetadata() const
+ T CVideoEncoderInfoMsg::IsInitialized() const
+ T CVideoEncoderInfoMsg::MergeFrom(CVideoEncoderInfoMsg const&)
+ T CVideoEncoderInfoMsg::New() const
+ T CVideoEncoderInfoMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CVideoEncoderInfoMsg::SetCachedSize(int) const
+ T CVideoEncoderInfoMsg::SharedCtor()
+ T CVideoEncoderInfoMsg::SharedDtor()
+ T CVideoEncoderInfoMsg::mutable_info()
+ T CVideoEncoderInfoMsg::set_info(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CVideoEncoderInfoMsg::~CVideoEncoderInfoMsg()
+ T CVideoFormat::ByteSize() const
+ T CVideoFormat::CVideoFormat()
+ T CVideoFormat::Clear()
+ T CVideoFormat::GetCachedSize() const
+ T CVideoFormat::GetMetadata() const
+ T CVideoFormat::IsInitialized() const
+ T CVideoFormat::MergeFrom(CVideoFormat const&)
+ T CVideoFormat::New() const
+ T CVideoFormat::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CVideoFormat::SetCachedSize(int) const
+ T CVideoFormat::~CVideoFormat()
+ T CVirtualHereReadyMsg::ByteSize() const
+ T CVirtualHereReadyMsg::CVirtualHereReadyMsg()
+ T CVirtualHereReadyMsg::Clear()
+ T CVirtualHereReadyMsg::GetCachedSize() const
+ T CVirtualHereReadyMsg::GetMetadata() const
+ T CVirtualHereReadyMsg::IsInitialized() const
+ T CVirtualHereReadyMsg::MergeFrom(CVirtualHereReadyMsg const&)
+ T CVirtualHereReadyMsg::New() const
+ T CVirtualHereReadyMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CVirtualHereReadyMsg::SetCachedSize(int) const
+ T CVirtualHereReadyMsg::~CVirtualHereReadyMsg()
+ T CVirtualHereRequestMsg::ByteSize() const
+ T CVirtualHereRequestMsg::CVirtualHereRequestMsg()
+ T CVirtualHereRequestMsg::Clear()
+ T CVirtualHereRequestMsg::GetCachedSize() const
+ T CVirtualHereRequestMsg::GetMetadata() const
+ T CVirtualHereRequestMsg::IsInitialized() const
+ T CVirtualHereRequestMsg::MergeFrom(CVirtualHereRequestMsg const&)
+ T CVirtualHereRequestMsg::New() const
+ T CVirtualHereRequestMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CVirtualHereRequestMsg::SetCachedSize(int) const
+ T CVirtualHereRequestMsg::SharedCtor()
+ T CVirtualHereRequestMsg::SharedDtor()
+ T CVirtualHereRequestMsg::mutable_hostname()
+ T CVirtualHereRequestMsg::set_hostname(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CVirtualHereRequestMsg::~CVirtualHereRequestMsg()
+ T CVirtualHereShareDeviceMsg::ByteSize() const
+ T CVirtualHereShareDeviceMsg::CVirtualHereShareDeviceMsg()
+ T CVirtualHereShareDeviceMsg::Clear()
+ T CVirtualHereShareDeviceMsg::GetCachedSize() const
+ T CVirtualHereShareDeviceMsg::GetMetadata() const
+ T CVirtualHereShareDeviceMsg::IsInitialized() const
+ T CVirtualHereShareDeviceMsg::MergeFrom(CVirtualHereShareDeviceMsg const&)
+ T CVirtualHereShareDeviceMsg::New() const
+ T CVirtualHereShareDeviceMsg::SerializeWithCachedSizesToArray(unsigned char*) const
+ T CVirtualHereShareDeviceMsg::SetCachedSize(int) const
+ T CVirtualHereShareDeviceMsg::SharedCtor()
+ T CVirtualHereShareDeviceMsg::SharedDtor()
+ T CVirtualHereShareDeviceMsg::mutable_device_address()
+ T CVirtualHereShareDeviceMsg::set_device_address(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
+ T CVirtualHereShareDeviceMsg::~CVirtualHereShareDeviceMsg()
  T CVoiceBar::ApplySchemeSettings(vgui::IScheme*)
  T CVoiceBar::CCallback_OnGameUsingVoice::Run(void*)
  T CVoiceBar::CCallback_OnGameUsingVoice::~CCallback_OnGameUsingVoice()
@@ -11190,6 +12733,8 @@
  T ERR_peek_last_error
  T ERR_put_error
  T ERR_remove_state
+ T EStreamAudioCodec_IsValid(int)
+ T EStreamVideoCodec_IsValid(int)
  T EVP_CIPHER_CTX_block_size
  T EVP_CIPHER_CTX_cipher
  T EVP_CIPHER_CTX_cleanup
@@ -11698,7 +13243,7 @@
  T SteamAPI_UnregisterCallResult
  T SteamAPI_UnregisterCallback
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
- T SteamVProf::CVProfManager::DumpAllThreadProfiles()
+ T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  T SteamVProf::CVProfManager::StartProfilingAllThreads()
  T SteamVProf::CVProfManager::StopProfilingAllThreads()
  T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
@@ -12538,8 +14083,11 @@
  T private_Camellia_set_key
  T private_RC4_set_key
  T protobuf_AddDesc_htmlmessages_2eproto()
+ T protobuf_AddDesc_stream_2eproto()
  T protobuf_AssignDesc_htmlmessages_2eproto()
+ T protobuf_AssignDesc_stream_2eproto()
  T protobuf_ShutdownFile_htmlmessages_2eproto()
+ T protobuf_ShutdownFile_stream_2eproto()
  T rsaz_1024_gather5_avx2
  T rsaz_1024_mul_avx2
  T rsaz_1024_norm2red_avx2
@@ -16124,7 +17672,6 @@
  T void CUtlRBTree<void*, int, CDefLess<void*>, CDefRBTreeBalanceListener<int>, void*>::FindInsertionPosition<void*>(void* const&, bool, int&, bool&, bool&)
  T void Destruct<CHTMLWindow::AdditionalRoute_t>(CHTMLWindow::AdditionalRoute_t*)
  T void Destruct<CItemImageManager::ImagesToDownload_t>(CItemImageManager::ImagesToDownload_t*)
- T void Destruct<CUtlString>(CUtlString*)
  T void Destruct<FriendAlias_t>(FriendAlias_t*)
  T void Destruct<vgui::HTML::AdditionalRoute_t>(vgui::HTML::AdditionalRoute_t*)
  T void JSMethodCallTuple_Helper<CBroadcastController, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >, CSmartPtr<CJSCallbackFunc>, 0>(CBroadcastController*, void (CBroadcastController::*)(CSmartPtr<CJSCallbackFunc>), index_tuple<0>, std::__1::tuple<CSmartPtr<CJSCallbackFunc> >&)
@@ -16284,14 +17831,79 @@
  atexit
  atoi
  atoll
+ b (anonymous namespace)::CAudioFormat_descriptor_
+ b (anonymous namespace)::CAudioFormat_reflection_
+ b (anonymous namespace)::CAuthenticationRequestMsg_descriptor_
+ b (anonymous namespace)::CAuthenticationRequestMsg_reflection_
+ b (anonymous namespace)::CAuthenticationResponseMsg_AuthenticationResult_descriptor_
+ b (anonymous namespace)::CAuthenticationResponseMsg_descriptor_
+ b (anonymous namespace)::CAuthenticationResponseMsg_reflection_
+ b (anonymous namespace)::CClientHandshakeMsg_descriptor_
+ b (anonymous namespace)::CClientHandshakeMsg_reflection_
  b (anonymous namespace)::CCookie_descriptor_
  b (anonymous namespace)::CCookie_reflection_
+ b (anonymous namespace)::CDebugDumpMsg_descriptor_
+ b (anonymous namespace)::CDebugDumpMsg_reflection_
+ b (anonymous namespace)::CDeleteCursorMsg_descriptor_
+ b (anonymous namespace)::CDeleteCursorMsg_reflection_
+ b (anonymous namespace)::CDisableHighResCaptureMsg_descriptor_
+ b (anonymous namespace)::CDisableHighResCaptureMsg_reflection_
+ b (anonymous namespace)::CDiscoveryPingRequest_descriptor_
+ b (anonymous namespace)::CDiscoveryPingRequest_reflection_
+ b (anonymous namespace)::CDiscoveryPingResponse_descriptor_
+ b (anonymous namespace)::CDiscoveryPingResponse_reflection_
+ b (anonymous namespace)::CEnableHighResCaptureMsg_descriptor_
+ b (anonymous namespace)::CEnableHighResCaptureMsg_reflection_
+ b (anonymous namespace)::CFrameEvent_descriptor_
+ b (anonymous namespace)::CFrameEvent_reflection_
+ b (anonymous namespace)::CFrameStatAccumulatedValue_descriptor_
+ b (anonymous namespace)::CFrameStatAccumulatedValue_reflection_
+ b (anonymous namespace)::CFrameStatsListMsg_descriptor_
+ b (anonymous namespace)::CFrameStatsListMsg_reflection_
+ b (anonymous namespace)::CFrameStats_descriptor_
+ b (anonymous namespace)::CFrameStats_reflection_
+ b (anonymous namespace)::CGetCursorImageMsg_descriptor_
+ b (anonymous namespace)::CGetCursorImageMsg_reflection_
+ b (anonymous namespace)::CGetTouchConfigDataMsg_descriptor_
+ b (anonymous namespace)::CGetTouchConfigDataMsg_reflection_
+ b (anonymous namespace)::CGetTouchIconDataMsg_descriptor_
+ b (anonymous namespace)::CGetTouchIconDataMsg_reflection_
  b (anonymous namespace)::CHTMLHeader_descriptor_
  b (anonymous namespace)::CHTMLHeader_reflection_
  b (anonymous namespace)::CHTMLPageSecurityInfo_descriptor_
  b (anonymous namespace)::CHTMLPageSecurityInfo_reflection_
+ b (anonymous namespace)::CHideCursorMsg_descriptor_
+ b (anonymous namespace)::CHideCursorMsg_reflection_
+ b (anonymous namespace)::CInputKeyDownMsg_descriptor_
+ b (anonymous namespace)::CInputKeyDownMsg_reflection_
+ b (anonymous namespace)::CInputKeyUpMsg_descriptor_
+ b (anonymous namespace)::CInputKeyUpMsg_reflection_
+ b (anonymous namespace)::CInputLatencyTestMsg_descriptor_
+ b (anonymous namespace)::CInputLatencyTestMsg_reflection_
+ b (anonymous namespace)::CInputMouseDownMsg_descriptor_
+ b (anonymous namespace)::CInputMouseDownMsg_reflection_
+ b (anonymous namespace)::CInputMouseMotionMsg_descriptor_
+ b (anonymous namespace)::CInputMouseMotionMsg_reflection_
+ b (anonymous namespace)::CInputMouseUpMsg_descriptor_
+ b (anonymous namespace)::CInputMouseUpMsg_reflection_
+ b (anonymous namespace)::CInputMouseWheelMsg_descriptor_
+ b (anonymous namespace)::CInputMouseWheelMsg_reflection_
+ b (anonymous namespace)::CInputTextMsg_descriptor_
+ b (anonymous namespace)::CInputTextMsg_reflection_
+ b (anonymous namespace)::CInputTouchFingerDownMsg_descriptor_
+ b (anonymous namespace)::CInputTouchFingerDownMsg_reflection_
+ b (anonymous namespace)::CInputTouchFingerMotionMsg_descriptor_
+ b (anonymous namespace)::CInputTouchFingerMotionMsg_reflection_
+ b (anonymous namespace)::CInputTouchFingerUpMsg_descriptor_
+ b (anonymous namespace)::CInputTouchFingerUpMsg_reflection_
  b (anonymous namespace)::CJSMethodArgument_descriptor_
  b (anonymous namespace)::CJSMethodArgument_reflection_
+ b (anonymous namespace)::CKeepAliveMsg_descriptor_
+ b (anonymous namespace)::CKeepAliveMsg_reflection_
+ b (anonymous namespace)::CLogMsg_descriptor_
+ b (anonymous namespace)::CLogMsg_reflection_
+ b (anonymous namespace)::CLogUploadMsg_descriptor_
+ b (anonymous namespace)::CLogUploadMsg_reflection_
  b (anonymous namespace)::CMSgJumpListMRUApp_descriptor_
  b (anonymous namespace)::CMSgJumpListMRUApp_reflection_
  b (anonymous namespace)::CMsgAckPIDShuttingDown_descriptor_
@@ -16586,7 +18198,156 @@
  b (anonymous namespace)::CMsgZoomToElementAtPosition_reflection_
  b (anonymous namespace)::CMsgZoomToFocusedElement_descriptor_
  b (anonymous namespace)::CMsgZoomToFocusedElement_reflection_
+ b (anonymous namespace)::CNegotiatedConfig_descriptor_
+ b (anonymous namespace)::CNegotiatedConfig_reflection_
+ b (anonymous namespace)::CNegotiationCompleteMsg_descriptor_
+ b (anonymous namespace)::CNegotiationCompleteMsg_reflection_
+ b (anonymous namespace)::CNegotiationInitMsg_descriptor_
+ b (anonymous namespace)::CNegotiationInitMsg_reflection_
+ b (anonymous namespace)::CNegotiationSetConfigMsg_descriptor_
+ b (anonymous namespace)::CNegotiationSetConfigMsg_reflection_
+ b (anonymous namespace)::COverlayEnabledMsg_descriptor_
+ b (anonymous namespace)::COverlayEnabledMsg_reflection_
+ b (anonymous namespace)::CPauseMsg_descriptor_
+ b (anonymous namespace)::CPauseMsg_reflection_
+ b (anonymous namespace)::CQuitRequest_descriptor_
+ b (anonymous namespace)::CQuitRequest_reflection_
+ b (anonymous namespace)::CRecordedInputStream_descriptor_
+ b (anonymous namespace)::CRecordedInputStream_reflection_
+ b (anonymous namespace)::CRecordedInput_default_oneof_instance_
+ b (anonymous namespace)::CRecordedInput_descriptor_
+ b (anonymous namespace)::CRecordedInput_reflection_
+ b (anonymous namespace)::CRemoteHIDMsg_descriptor_
+ b (anonymous namespace)::CRemoteHIDMsg_reflection_
+ b (anonymous namespace)::CResumeMsg_descriptor_
+ b (anonymous namespace)::CResumeMsg_reflection_
+ b (anonymous namespace)::CSaveTouchConfigLayoutMsg_descriptor_
+ b (anonymous namespace)::CSaveTouchConfigLayoutMsg_reflection_
+ b (anonymous namespace)::CServerHandshakeMsg_descriptor_
+ b (anonymous namespace)::CServerHandshakeMsg_reflection_
+ b (anonymous namespace)::CSetActivityMsg_descriptor_
+ b (anonymous namespace)::CSetActivityMsg_reflection_
+ b (anonymous namespace)::CSetCapslockMsg_descriptor_
+ b (anonymous namespace)::CSetCapslockMsg_reflection_
+ b (anonymous namespace)::CSetCaptureSizeMsg_descriptor_
+ b (anonymous namespace)::CSetCaptureSizeMsg_reflection_
+ b (anonymous namespace)::CSetCursorImageMsg_descriptor_
+ b (anonymous namespace)::CSetCursorImageMsg_reflection_
+ b (anonymous namespace)::CSetCursorMsg_descriptor_
+ b (anonymous namespace)::CSetCursorMsg_reflection_
+ b (anonymous namespace)::CSetFlashStateMsg_descriptor_
+ b (anonymous namespace)::CSetFlashStateMsg_reflection_
+ b (anonymous namespace)::CSetGammaRampMsg_descriptor_
+ b (anonymous namespace)::CSetGammaRampMsg_reflection_
+ b (anonymous namespace)::CSetIconMsg_descriptor_
+ b (anonymous namespace)::CSetIconMsg_reflection_
+ b (anonymous namespace)::CSetKeymapMsg_descriptor_
+ b (anonymous namespace)::CSetKeymapMsg_reflection_
+ b (anonymous namespace)::CSetQoSMsg_descriptor_
+ b (anonymous namespace)::CSetQoSMsg_reflection_
+ b (anonymous namespace)::CSetSpectatorModeMsg_descriptor_
+ b (anonymous namespace)::CSetSpectatorModeMsg_reflection_
+ b (anonymous namespace)::CSetStreamingClientConfig_descriptor_
+ b (anonymous namespace)::CSetStreamingClientConfig_reflection_
+ b (anonymous namespace)::CSetTargetBitrateMsg_descriptor_
+ b (anonymous namespace)::CSetTargetBitrateMsg_reflection_
+ b (anonymous namespace)::CSetTargetFramerateMsg_descriptor_
+ b (anonymous namespace)::CSetTargetFramerateMsg_reflection_
+ b (anonymous namespace)::CSetTitleMsg_descriptor_
+ b (anonymous namespace)::CSetTitleMsg_reflection_
+ b (anonymous namespace)::CSetTouchConfigDataMsg_descriptor_
+ b (anonymous namespace)::CSetTouchConfigDataMsg_reflection_
+ b (anonymous namespace)::CSetTouchIconDataMsg_descriptor_
+ b (anonymous namespace)::CSetTouchIconDataMsg_reflection_
+ b (anonymous namespace)::CShowCursorMsg_descriptor_
+ b (anonymous namespace)::CShowCursorMsg_reflection_
+ b (anonymous namespace)::CStartAudioDataMsg_descriptor_
+ b (anonymous namespace)::CStartAudioDataMsg_reflection_
+ b (anonymous namespace)::CStartNetworkTestMsg_descriptor_
+ b (anonymous namespace)::CStartNetworkTestMsg_reflection_
+ b (anonymous namespace)::CStartVideoDataMsg_descriptor_
+ b (anonymous namespace)::CStartVideoDataMsg_reflection_
+ b (anonymous namespace)::CStopAudioDataMsg_descriptor_
+ b (anonymous namespace)::CStopAudioDataMsg_reflection_
+ b (anonymous namespace)::CStopRequest_descriptor_
+ b (anonymous namespace)::CStopRequest_reflection_
+ b (anonymous namespace)::CStopVideoDataMsg_descriptor_
+ b (anonymous namespace)::CStopVideoDataMsg_reflection_
+ b (anonymous namespace)::CStreamDataLostMsg_descriptor_
+ b (anonymous namespace)::CStreamDataLostMsg_reflection_
+ b (anonymous namespace)::CStreamVideoMode_descriptor_
+ b (anonymous namespace)::CStreamVideoMode_reflection_
+ b (anonymous namespace)::CStreamingClientCaps_descriptor_
+ b (anonymous namespace)::CStreamingClientCaps_reflection_
+ b (anonymous namespace)::CStreamingClientConfig_descriptor_
+ b (anonymous namespace)::CStreamingClientConfig_reflection_
+ b (anonymous namespace)::CStreamingClientHandshakeInfo_descriptor_
+ b (anonymous namespace)::CStreamingClientHandshakeInfo_reflection_
+ b (anonymous namespace)::CStreamingKeymapEntry_descriptor_
+ b (anonymous namespace)::CStreamingKeymapEntry_reflection_
+ b (anonymous namespace)::CStreamingKeymap_descriptor_
+ b (anonymous namespace)::CStreamingKeymap_reflection_
+ b (anonymous namespace)::CStreamingServerConfig_descriptor_
+ b (anonymous namespace)::CStreamingServerConfig_reflection_
+ b (anonymous namespace)::CStreamingServerHandshakeInfo_descriptor_
+ b (anonymous namespace)::CStreamingServerHandshakeInfo_reflection_
+ b (anonymous namespace)::CStreamingSessionStats_descriptor_
+ b (anonymous namespace)::CStreamingSessionStats_reflection_
+ b (anonymous namespace)::CSystemSuspendMsg_descriptor_
+ b (anonymous namespace)::CSystemSuspendMsg_reflection_
+ b (anonymous namespace)::CToggleMagnificationMsg_descriptor_
+ b (anonymous namespace)::CToggleMagnificationMsg_reflection_
+ b (anonymous namespace)::CTouchActionSetActiveMsg_descriptor_
+ b (anonymous namespace)::CTouchActionSetActiveMsg_reflection_
+ b (anonymous namespace)::CTouchActionSetLayerAddedMsg_descriptor_
+ b (anonymous namespace)::CTouchActionSetLayerAddedMsg_reflection_
+ b (anonymous namespace)::CTouchActionSetLayerRemovedMsg_descriptor_
+ b (anonymous namespace)::CTouchActionSetLayerRemovedMsg_reflection_
+ b (anonymous namespace)::CTouchConfigActiveMsg_descriptor_
+ b (anonymous namespace)::CTouchConfigActiveMsg_reflection_
+ b (anonymous namespace)::CTransportSignalMsg_WebRTCMessage_Candidate_descriptor_
+ b (anonymous namespace)::CTransportSignalMsg_WebRTCMessage_Candidate_reflection_
+ b (anonymous namespace)::CTransportSignalMsg_WebRTCMessage_default_oneof_instance_
+ b (anonymous namespace)::CTransportSignalMsg_WebRTCMessage_descriptor_
+ b (anonymous namespace)::CTransportSignalMsg_WebRTCMessage_reflection_
+ b (anonymous namespace)::CTransportSignalMsg_descriptor_
+ b (anonymous namespace)::CTransportSignalMsg_reflection_
+ b (anonymous namespace)::CVideoDecoderInfoMsg_descriptor_
+ b (anonymous namespace)::CVideoDecoderInfoMsg_reflection_
+ b (anonymous namespace)::CVideoEncoderInfoMsg_descriptor_
+ b (anonymous namespace)::CVideoEncoderInfoMsg_reflection_
+ b (anonymous namespace)::CVideoFormat_descriptor_
+ b (anonymous namespace)::CVideoFormat_reflection_
+ b (anonymous namespace)::CVirtualHereReadyMsg_descriptor_
+ b (anonymous namespace)::CVirtualHereReadyMsg_reflection_
+ b (anonymous namespace)::CVirtualHereRequestMsg_descriptor_
+ b (anonymous namespace)::CVirtualHereRequestMsg_reflection_
+ b (anonymous namespace)::CVirtualHereShareDeviceMsg_descriptor_
+ b (anonymous namespace)::CVirtualHereShareDeviceMsg_reflection_
+ b (anonymous namespace)::EAudioFormat_descriptor_
+ b (anonymous namespace)::EFrameAccumulatedStat_descriptor_
  b (anonymous namespace)::EJSRegisterMethodType_descriptor_
+ b (anonymous namespace)::ELogFileType_descriptor_
+ b (anonymous namespace)::EStreamActivity_descriptor_
+ b (anonymous namespace)::EStreamAudioCodec_descriptor_
+ b (anonymous namespace)::EStreamBitrate_descriptor_
+ b (anonymous namespace)::EStreamChannel_descriptor_
+ b (anonymous namespace)::EStreamControlMessage_descriptor_
+ b (anonymous namespace)::EStreamDataMessage_descriptor_
+ b (anonymous namespace)::EStreamDiscoveryMessage_descriptor_
+ b (anonymous namespace)::EStreamFrameEvent_descriptor_
+ b (anonymous namespace)::EStreamFrameResult_descriptor_
+ b (anonymous namespace)::EStreamFramerateLimiter_descriptor_
+ b (anonymous namespace)::EStreamHostPlayAudioPreference_descriptor_
+ b (anonymous namespace)::EStreamMouseButton_descriptor_
+ b (anonymous namespace)::EStreamMouseWheelDirection_descriptor_
+ b (anonymous namespace)::EStreamP2PScope_descriptor_
+ b (anonymous namespace)::EStreamQualityPreference_descriptor_
+ b (anonymous namespace)::EStreamStatsMessage_descriptor_
+ b (anonymous namespace)::EStreamVersion_descriptor_
+ b (anonymous namespace)::EStreamVideoCodec_descriptor_
+ b (anonymous namespace)::EStreamingDataType_descriptor_
+ b (anonymous namespace)::EVideoFormat_descriptor_
  b (anonymous namespace)::ScrollBarButton::ChainToAnimationMap()::chained
  b (anonymous namespace)::ScrollBarButton::ChainToMap()::chained
  b (anonymous namespace)::ScrollBarButton::GetKBMap()::s_pMap
@@ -16607,7 +18368,7 @@
  b CMAC_Init.zero_iv
  b CUtlSymbol::Initialize()::symbolsInitialized
  b ClientUIHTMLController()::s_ClientUIHTMLController
- b CommonKeyCode::InitKeyTranslation()::threadonce_538_42
+ b CommonKeyCode::InitKeyTranslation()::threadonce_538_43
  b CommonKeyCode::s_pKeyCodeToVirtualKey
  b CommonKeyCode::s_pKeyCodeToWindowsVirtualKey
  b CommonKeyCode::s_pVirtualKeyToKeyCode
@@ -16628,7 +18389,7 @@
  b KeyValues::ReadAsBinary(CUtlBuffer&, int, bool)::fAsserted
  b OPENSSL_cpuid_setup.trigger
  b OPENSSL_init.done
- b OneTimeCryptoInitOpenSSL()::threadonce_324_42
+ b OneTimeCryptoInitOpenSSL()::threadonce_324_43
  b SHA1.m
  b SYS_str_reasons
  b add_lock_callback
@@ -16752,6 +18513,8 @@
  b guard variable for GetPanelKeyBindingMapDictionary()::dictionary
  b guard variable for GetPanelMessageMapDictionary()::dictionary
  b guard variable for IsLocalizedUserTag(char const*)::pstrLocalizedNames
+ b guard variable for protobuf_AssignDesc_stream_2eproto()::CRecordedInput_offsets_
+ b guard variable for protobuf_AssignDesc_stream_2eproto()::CTransportSignalMsg_WebRTCMessage_offsets_
  b guard variable for vgui::Frame::ApplySingleSetting(KeyValues*)::hKeyCloseOnEscape
  b guard variable for vgui::Frame::ApplySingleSetting(KeyValues*)::hKeyMaximizeButtonVisible
  b guard variable for vgui::Frame::ApplySingleSetting(KeyValues*)::hKeySizeable
@@ -16796,6 +18559,9 @@
  b num_disable
  b pbe_algs
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
+ b protobuf_AddDesc_stream_2eproto()::already_here
+ b protobuf_AssignDesc_stream_2eproto()::CRecordedInput_offsets_
+ b protobuf_AssignDesc_stream_2eproto()::CTransportSignalMsg_WebRTCMessage_offsets_
  b realloc_debug_func
  b s_BlankImage
  b s_BuildGroupFileCache
@@ -17576,6 +19342,98 @@
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToElementAtPositionResponse_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToElementAtPosition_offsets_
  r protobuf_AssignDesc_htmlmessages_2eproto()::CMsgZoomToFocusedElement_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CAudioFormat_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CAuthenticationRequestMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CAuthenticationResponseMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CClientHandshakeMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CDebugDumpMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CDeleteCursorMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CDisableHighResCaptureMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CDiscoveryPingRequest_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CDiscoveryPingResponse_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CEnableHighResCaptureMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CFrameEvent_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CFrameStatAccumulatedValue_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CFrameStatsListMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CFrameStats_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CGetCursorImageMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CGetTouchConfigDataMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CGetTouchIconDataMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CHideCursorMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputKeyDownMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputKeyUpMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputLatencyTestMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputMouseDownMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputMouseMotionMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputMouseUpMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputMouseWheelMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputTextMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputTouchFingerDownMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputTouchFingerMotionMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CInputTouchFingerUpMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CKeepAliveMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CLogMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CLogUploadMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CNegotiatedConfig_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CNegotiationCompleteMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CNegotiationInitMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CNegotiationSetConfigMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::COverlayEnabledMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CPauseMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CQuitRequest_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CRecordedInputStream_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CRemoteHIDMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CResumeMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSaveTouchConfigLayoutMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CServerHandshakeMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetActivityMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetCapslockMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetCaptureSizeMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetCursorImageMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetCursorMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetFlashStateMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetGammaRampMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetIconMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetKeymapMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetQoSMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetSpectatorModeMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetStreamingClientConfig_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetTargetBitrateMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetTargetFramerateMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetTitleMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetTouchConfigDataMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSetTouchIconDataMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CShowCursorMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStartAudioDataMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStartNetworkTestMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStartVideoDataMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStopAudioDataMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStopRequest_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStopVideoDataMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStreamDataLostMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStreamVideoMode_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStreamingClientCaps_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStreamingClientConfig_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStreamingClientHandshakeInfo_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStreamingKeymapEntry_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStreamingKeymap_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStreamingServerConfig_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStreamingServerHandshakeInfo_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CStreamingSessionStats_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CSystemSuspendMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CToggleMagnificationMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CTouchActionSetActiveMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CTouchActionSetLayerAddedMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CTouchActionSetLayerRemovedMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CTouchConfigActiveMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CTransportSignalMsg_WebRTCMessage_Candidate_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CTransportSignalMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CVideoDecoderInfoMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CVideoEncoderInfoMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CVideoFormat_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CVirtualHereReadyMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CVirtualHereRequestMsg_offsets_
+ r protobuf_AssignDesc_stream_2eproto()::CVirtualHereShareDeviceMsg_offsets_
  r s_szSignature2Name
  r s_szSignatureName
  r select_ncolors.RGB_order
@@ -17862,6 +19720,7 @@
  t _GLOBAL__sub_I_steamparentalcontroller.cpp
  t _GLOBAL__sub_I_steamuimessagingcontroller.cpp
  t _GLOBAL__sub_I_steamuistoragecontroller.cpp
+ t _GLOBAL__sub_I_stream.pb.cc
  t _GLOBAL__sub_I_string_misc.cpp
  t _GLOBAL__sub_I_typingjump.cpp
  t _GLOBAL__sub_I_urlhelper.cpp

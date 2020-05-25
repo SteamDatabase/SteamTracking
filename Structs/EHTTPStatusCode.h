@@ -37,6 +37,7 @@ typedef enum EHTTPStatusCode
     k_EHTTPStatusCodeExpectationFailed, // Expectation Failed
     k_EHTTPStatusCodeUnknownHTTP4xx, // Unknown HTTP 4xx
     k_EHTTPStatusCodeTooManyRequests = 429, // Too Many Requests
+    k_EHTTPStatusCodeConnectionClosed = 444, // Connection closed
     k_EHTTPStatusCodeInternalServerError = 500, // Internal Server Error
     k_EHTTPStatusCodeNotImplemented, // Not Implemented
     k_EHTTPStatusCodeBadGateway, // Bad Gateway

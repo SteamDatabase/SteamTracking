@@ -652,6 +652,7 @@
  OSMemoryBarrier
  Plat_AbsoluteTime
  Plat_CommandLineParamExists
+ Plat_CommandLineParamValue
  Plat_FloatTime
  Plat_GetExecutablePathUTF8
  Plat_IsInDebugSession
@@ -3220,11 +3221,13 @@
  T CUtlString::Format(char const*, ...)
  T CUtlString::SetValue(char const*)
  T CUtlString::VFormat(char const*, __va_list_tag*)
+ T CUtlStringBuilder::AppendFormat(char const*, ...)
  T CUtlStringBuilder::Data::MoveToHeap()
  T CUtlStringBuilder::Data::SetError(bool)
  T CUtlStringBuilder::Data::SetLength(unsigned long)
  T CUtlStringBuilder::InternalPrepareBuffer(unsigned long, bool, unsigned long)
  T CUtlStringBuilder::PrepareBuffer(unsigned long, bool, unsigned long)
+ T CUtlStringBuilder::VAppendFormat(char const*, __va_list_tag*)
  T CUtlStringBuilder::VFormat(char const*, __va_list_tag*)
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::RemoveAll()
  T CUtlVector<CUtlString, CUtlMemory<CUtlString> >::~CUtlVector()
@@ -3745,13 +3748,19 @@
  b guard variable for CChromeIPCClient::BIsBrowserEnabled()::s_CmdLineParamDisableBrowser
  b k_InvalidClientID
  b protobuf_AddDesc_htmlmessages_2eproto()::already_here
+ b s_CmdLineParamCefDisableBreakpad
+ b s_CmdLineParamCefDisableD3D11
  b s_CmdLineParamCefForce32Bit
+ b s_CmdLineParamCefFullMemoryCrashReport
+ b s_CmdLineParamCefInProcessGPU
+ b s_CmdLineParamCefSingleProcess
  b s_CmdLineParamCefVerboseLogging
  b s_CmdLineParamClientUI
  b s_CmdLineParamCommunityURL
  b s_CmdLineParamDev
  b s_CmdLineParamDisableHighDPI
  b s_CmdLineParamDisableSandbox
+ b s_CmdLineParamDisableSandboxAlt
  b s_CmdLineParamDisableWinH264
  b s_CmdLineParamEnableKeyring
  b s_CmdLineParamStoreURL

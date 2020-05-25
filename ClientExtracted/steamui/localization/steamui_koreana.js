@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "마지막 플레이",
 	"AppDetails_SectionTitle_LastLaunched": "마지막 실행",
 	"AppDetails_SectionTitle_PlayTime": "플레이 시간",
+	"AppDetails_SectionTitle_PlayTimeLeft": "남은 플레이 시간",
 	"AppDetails_SectionTitle_UsageTime": "사용 시간",
 	"AppDetails_SectionTitle_Workshop": "Steam 창작마당",
 	"AppDetails_SectionTitle_Community": "커뮤니티 콘텐츠",

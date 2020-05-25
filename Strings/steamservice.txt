@@ -3,8 +3,8 @@ __TEXT
 %
 __text
 __TEXT
-@
-@
+6
+6
 __stubs
 __TEXT
 __stub_helper
@@ -16,11 +16,9 @@ __const
 __TEXT
 __unwind_info
 __TEXT
-Hk
+\m
 __eh_frame
 __TEXT
-h>!
-h>!
 __DATA
 %
 %
@@ -62,12 +60,10 @@ __LINKEDIT
 '
 P:'
 (;'
-H|'
-e"
+P|'
+u"
 P
 g
-u!
-$
 
 `
 h
@@ -90,10 +86,11 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
-p`
+&
+&
 Hi
 H=
-L
+$
 10CUtlString
 N10CIPCServer13CThreadClientE
 10CIPCServer
@@ -803,6 +800,8 @@ kvsign2
 11CUtlHashMapI14CMetricsSymbol9CSmartPtrI14CMetricsStringE10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 10CUtlVectorIN11CUtlHashMapI14CMetricsSymbol9CSmartPtrI14CMetricsStringE10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryISA_EE
 12CAutoReleaseI14CMetricsStringE
+11CUtlHashMapI14CMetricsSymbolS0_10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
+10CUtlVectorIN11CUtlHashMapI14CMetricsSymbolS1_10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
 11CUtlHashMapI14CMetricsSymbolx10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
 10CUtlVectorIN11CUtlHashMapI14CMetricsSymbolx10CDefEqualsIS1_E11HashFunctorIS1_ES1_E12HashBucket_tE10CUtlMemoryIS7_EE
 11CUtlHashMapI14CMetricsSymbold10CDefEqualsIS0_E11HashFunctorIS0_ES0_E
@@ -842,6 +841,7 @@ P
 $
 %
 &
+'
 $
 %
 (
@@ -1299,7 +1299,6 @@ strings::Substitute format string invalid: asked for "$
 args were given.  Full format string was: "
 Invalid strings::Substitute() format string: "
 CHECK failed: (target - output->data()) == (output->size()):
-double
 float
 int64
 uint64
@@ -6121,8 +6120,8 @@ crashhandler002
 crashhandler.dylib
 CreateInterface
 1.0
-May 15 2020
-11:18:18
+May 23 2020
+14:14:13
 Jan
 Feb
 Mar
@@ -6384,9 +6383,10 @@ accept-charset
 user-agent
 Transfer-Encoding
 Set-Cookie
-/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
+Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 m_pObj
 m_vecpHTTPClients
 Unexpected thread race for CIOPollingHelper construction
@@ -6471,12 +6471,15 @@ Persistent Logfiles created which have no cleanup limit specified!
 CLogInstance::EmitEventNow
 Last Message Repeated %d times.%s
 Assertion Failed: (unsigned)elem <= (unsigned)m_Size
+totaltime
 m_nullMetrics
 m_totalTime
 m_stringDimensions
+m_symbolDimensions
 m_intDimensions
 m_doubleMeasurements
 m_intMeasurements
+double
 @bMetricsEnabled
 Enabling allows jobs to collect and report metrics through IMetricsReporters.
 @metricsEnabledCatalogs
@@ -6495,16 +6498,18 @@ Comma separated list of Operation names that predate preaggregated job metrics.
 null catalog
 null program
 null operation
-totaltime
+Assertion Failed: m_pNRefs
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/tsmempool.h
+Assertion Failed: *m_pNRefs > 0
 @bMsgErrorDump
 @nSpewThrottlePeriodMs
+1000
 @nSpewThrottleTriggerThreshold
 10
 @nSpewThrottleResumeThreshold
 3
 @nSpewThrottleUnconditionalTriggerCount
 @nSpewThrottleUnconditionalResumeMs
-5000
 @nSpewThrottleNagFrequencyMs
 @nTCPLargeSendBufSizeMB
 16
@@ -6610,7 +6615,7 @@ steammessages_clientserver_login.proto
 @net_backlog_bytes_allowed
 12000000
 @MaxOutstandingSendThreadItem
-1000
+5000
 client/TCPConnection/SentBytes
 client/TCPConnection/RecvBytes
 WSASend
@@ -6654,8 +6659,11 @@ Work Item (%s) for Work Pool %s completed but job no longer existed to notify
 CWorkThreadPool::BTryDeleteExitedWorkerThreads
 Work thread is marked exited, but we could not immediately join prior to deleting -- proceeding without join
 CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
+&
+&
 Hi
 H=
+$
 @
 @
 =
@@ -6664,13 +6672,16 @@ H=
 ?
 ?
 A
-d"
 Hc
+L"
 =
 N
-!
-!
-L95Ce$
+T!
+L95HH$
+($
+$
+$
+$
 Hc
 ?
 ?
@@ -6997,12 +7008,13 @@ AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
 =
 
-
-
 3
 3
-m
+~
 IcE
+
+
+
 I;E
 ,
 H
@@ -7035,6 +7047,7 @@ H=
 @
 Hi
 E
+y
 $
 (
 0
@@ -7069,11 +7082,9 @@ i
 @
 @
 @
-
 @
 @
 @
 @
 @
-5
 Hi

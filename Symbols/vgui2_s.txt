@@ -67,6 +67,7 @@
  B s_NoEscConversion
  B s_StringCharConversion
  B s_cmdChildHWNDHTML
+ B s_cmdLinuxChildHWNDHTML
  B vgui::__g_CreateVGUISetupIVGuiSetup_reg
  B vgui::g_VGuiSetup
  B vgui::g_pFileSystem
@@ -314,6 +315,7 @@
  OBJC_METACLASS_$_NSObject
  OBJC_METACLASS_$_NSView
  OBJC_METACLASS_$_NSWindow
+ OSIsCompatible
  PasteboardClear
  PasteboardCopyItemFlavorData
  PasteboardCreate
@@ -366,6 +368,7 @@
  R typeinfo name for CUtlMap<char const*, bool, int, CDefStringLessFilename>
  R typeinfo name for CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>
  R typeinfo name for CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >
+ R typeinfo name for CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >
  R typeinfo name for CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >
@@ -388,6 +391,7 @@
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, bool, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, bool, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>
  R typeinfo name for CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>
+ R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Node_t, short, CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned long long>
  R typeinfo name for CUtlRBTree<CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>
@@ -396,6 +400,7 @@
  R typeinfo name for CUtlRBTree<unsigned int, int, CDefLess<unsigned int>, CDefRBTreeBalanceListener<int>, unsigned int>
  R typeinfo name for CUtlRBTree<vgui::Texture, int, CDefLess<vgui::Texture>, CDefRBTreeBalanceListener<int>, vgui::Texture>
  R typeinfo name for CUtlString
+ R typeinfo name for CUtlVector<CBaseSurface::ChildWindowZPos_t, CUtlMemory<CBaseSurface::ChildWindowZPos_t> >
  R typeinfo name for CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >
  R typeinfo name for CUtlVector<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*, CUtlMemory<CBaseUtlSymbolTable<CUtlSymbol>::StringPool_t*> >
  R typeinfo name for CUtlVector<CFontAmalgam, CUtlMemory<CFontAmalgam> >
@@ -495,6 +500,8 @@
  T CBaseSurface::CPanelPaintScope::CPanelPaintScope(CBaseSurface*, unsigned long long, unsigned long long, bool)
  T CBaseSurface::CPanelPaintScope::~CPanelPaintScope()
  T CBaseSurface::CalculateMouseVisible()
+ T CBaseSurface::ChildWindowVector_t::ChildWindowVector_t()
+ T CBaseSurface::ChildWindowVector_t::~ChildWindowVector_t()
  T CBaseSurface::ClearAllCookies()
  T CBaseSurface::ClearTextColorRangeValues()
  T CBaseSurface::Connect(vgui::IVGuiSetup*)
@@ -557,7 +564,8 @@
  T CBaseSurface::GetModalPanel()
  T CBaseSurface::GetNotifyPanel()
  T CBaseSurface::GetOverlayInterface()
- T CBaseSurface::GetPlatformWindowHandleForPanel(unsigned long long)
+ T CBaseSurface::GetPlatformWindowHandleForPanel(unsigned long long, bool)
+ T CBaseSurface::GetPlatformWindowParent(unsigned long long)
  T CBaseSurface::GetPopup(int)
  T CBaseSurface::GetPopupCount()
  T CBaseSurface::GetProportionalBase(int&, int&)
@@ -618,6 +626,7 @@
  T CBaseSurface::RemoveBrowser(unsigned long long, IHTMLResponses*, unsigned long long)
  T CBaseSurface::RemoveChildPlatformWindow(unsigned long long, unsigned long long)
  T CBaseSurface::RemoveTrackedMenu(unsigned long long)
+ T CBaseSurface::ReparentChildPlatformWindow(unsigned long long, unsigned long long)
  T CBaseSurface::RestrictPaintToSinglePanel(unsigned long long)
  T CBaseSurface::SetChildPlatformWindowZPos(unsigned long long, unsigned long long, int)
  T CBaseSurface::SetChildPlatformWindowZPosDirty(unsigned long long, unsigned long long)
@@ -632,6 +641,8 @@
  T CBaseSurface::SetMemStreams(IMemStream*, IMemStream*)
  T CBaseSurface::SetModalPanel(unsigned long long)
  T CBaseSurface::SetNotificationCount(unsigned long long, int)
+ T CBaseSurface::SetPlatformWindowParent(unsigned long long, unsigned long long)
+ T CBaseSurface::SetPlatformWindowVisibility(unsigned long long, bool)
  T CBaseSurface::SetPrimaryPopupParent(unsigned long long)
  T CBaseSurface::SetResizable(unsigned long long, bool)
  T CBaseSurface::SetScreenSizeChanged(bool)
@@ -651,6 +662,7 @@
  T CBaseSurface::Shutdown()
  T CBaseSurface::SkipNextFrame()
  T CBaseSurface::SolveTraverse(unsigned long long, bool)
+ T CBaseSurface::SortChildWindow(CBaseSurface::ChildWindowZPos_t const&, CBaseSurface::ChildWindowZPos_t const&, void*)
  T CBaseSurface::StartDragDropText(unsigned long long, char const*)
  T CBaseSurface::SubdividePaintRegion(CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> > const&, short (&) [5][4])
  T CBaseSurface::SupportsFeature(vgui::ISurface::SurfaceFeature_e)
@@ -1371,6 +1383,7 @@
  T CUtlMap<char const*, bool, int, CDefStringLessFilename>::Validate(CValidator&, char const*)
  T CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Validate(CValidator&, char const*)
  T CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::RecursiveValidate(CValidator&, char const*)
  T CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Validate(CValidator&, char const*)
  T CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Validate(CValidator&, char const*)
@@ -1462,6 +1475,11 @@
  T CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::NewNode(bool)
  T CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::RecursiveValidate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Find(unsigned long long const&) const
+ T CUtlRBTree<CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::NewNode(bool)
+ T CUtlRBTree<CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RemoveAll()
+ T CUtlRBTree<CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RemoveAt(int)
+ T CUtlRBTree<CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Validate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, bool, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::RecursiveValidate(CValidator&, char const*)
  T CUtlRBTree<CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t, int, CUtlMap<unsigned long long, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Find(unsigned long long const&) const
  T CUtlRBTree<CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t, int, CUtlMap<unsigned long long, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::NewNode(bool)
@@ -1525,6 +1543,7 @@
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateLeft(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_RotateRight(unsigned short, unsigned long, void*)
  T CUtlRBTreeBase<unsigned short, CDefRBTreeBalanceListener<unsigned short> >::_Unlink(unsigned short, unsigned long, void*)
+ T CUtlSortVector<CBaseSurface::ChildWindowZPos_t>::Insert(CBaseSurface::ChildWindowZPos_t const&)
  T CUtlString::AssertStringTooLong()
  T CUtlString::Format(char const*, ...)
  T CUtlString::SetValue(char const*)
@@ -1542,6 +1561,11 @@
  T CUtlSymbol::String() const
  T CUtlSymbol::ValidateGlobals(CValidator&, char const*)
  T CUtlSymbolTableMT<CUtlSymbol>::CUtlSymbolTableMT(int, int, bool)
+ T CUtlVector<CBaseSurface::ChildWindowZPos_t, CUtlMemory<CBaseSurface::ChildWindowZPos_t> >::GrowVector(int)
+ T CUtlVector<CBaseSurface::ChildWindowZPos_t, CUtlMemory<CBaseSurface::ChildWindowZPos_t> >::Remove(int)
+ T CUtlVector<CBaseSurface::ChildWindowZPos_t, CUtlMemory<CBaseSurface::ChildWindowZPos_t> >::SortedFindLessOrEqual(CBaseSurface::ChildWindowZPos_t const&, bool (*)(CBaseSurface::ChildWindowZPos_t const&, CBaseSurface::ChildWindowZPos_t const&, void*), void*, int, int) const
+ T CUtlVector<CBaseSurface::ChildWindowZPos_t, CUtlMemory<CBaseSurface::ChildWindowZPos_t> >::Validate(CValidator&, char const*)
+ T CUtlVector<CBaseSurface::ChildWindowZPos_t, CUtlMemory<CBaseSurface::ChildWindowZPos_t> >::~CUtlVector()
  T CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >::GrowVector(int)
  T CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >::Validate(CValidator&, char const*)
  T CUtlVector<CBaseSurface::TraversalEntry_t, CUtlMemory<CBaseSurface::TraversalEntry_t> >::~CUtlVector()
@@ -2007,6 +2031,7 @@
  T int CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::Insert_Internal<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t>(CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t&&, bool)
  T int CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::Insert_Internal<CUtlMap<int, int, int, CDefLess<int> >::Node_t>(CUtlMap<int, int, int, CDefLess<int> >::Node_t&&, bool)
  T int CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::Insert_Internal<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t&&, bool)
+ T int CUtlRBTree<CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Insert_Internal<CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t>(CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t&&, bool)
  T int CUtlRBTree<CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t, int, CUtlMap<unsigned long long, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Insert_Internal<CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t>(CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t&&, bool)
  T int CUtlRBTree<CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::Insert_Internal<CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t>(CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t&&, bool)
  T int CUtlRBTree<CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::Node_t, int, CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned short>::Insert_Internal<CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::Node_t>(CUtlMap<unsigned short, CFontManager::CFontDataFile, int, CDefLess<unsigned short> >::Node_t&&, bool)
@@ -2351,6 +2376,7 @@
  T void CUtlRBTree<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t, int, CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::CKeyLess, CDefRBTreeBalanceListener<int>, char const*>::FindInsertionPosition<CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t>(CUtlMap<char const*, vgui::Bitmap*, int, CDefStringLessFilename>::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<int, int, int, CDefLess<int> >::Node_t, int, CUtlMap<int, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, int>::FindInsertionPosition<CUtlMap<int, int, int, CDefLess<int> >::Node_t>(CUtlMap<int, int, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t, int, CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned int>::FindInsertionPosition<CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t>(CUtlMap<unsigned int, CUtlVector<style_t, CUtlMemory<style_t> >*, int, CDefLess<unsigned int> >::Node_t const&, bool, int&, bool&, bool&)
+ T void CUtlRBTree<CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::FindInsertionPosition<CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t>(CUtlMap<unsigned long long, CBaseSurface::ChildWindowVector_t*, int, CDefLess<unsigned long long> >::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t, int, CUtlMap<unsigned long long, int, int, CDefLess<int> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::FindInsertionPosition<CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t>(CUtlMap<unsigned long long, int, int, CDefLess<int> >::Node_t const&, bool, int&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Node_t, short, CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<short>, unsigned long long>::FindInsertionPosition<CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Node_t>(CUtlMap<unsigned long long, short, short, CDefLess<unsigned long long> >::Node_t const&, bool, short&, bool&, bool&)
  T void CUtlRBTree<CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t, int, CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::CKeyLess, CDefRBTreeBalanceListener<int>, unsigned long long>::FindInsertionPosition<CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t>(CUtlMap<unsigned long long, vgui::Size_t, int, CDefLess<unsigned long long> >::Node_t const&, bool, int&, bool&, bool&)
@@ -2533,7 +2559,7 @@
  b vec2_invalid
  b vec2_origin
  b vgui::COSXSurface::DrawPrintText(wchar_t const*, int, vgui::FontDrawType_t)::fAsserted
- b vgui::InitKeyTranslation()::threadonce_587_17
+ b vgui::InitKeyTranslation()::threadonce_587_18
  ceilf
  close
  closedir

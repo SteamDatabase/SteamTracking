@@ -404,6 +404,7 @@
  T KeyValuesSystemSteam
  T LoadFileIntoBuffer(StringView, CUtlBuffer&, bool, EFioModifiers)
  T MurmurHash3_32(void const*, unsigned long, unsigned int, bool)
+ T OSIsCompatible
  T OSTypesAreCompatible
  T ReplaceBadFilenameCharacters(char*, char, char const*)
  T SteamStdLib::CCommandLine::AppendParm(SteamStdLib::OpaqueHParamType*, char const*)
@@ -695,11 +696,11 @@
  __tolower
  __toupper
  b CFileReader::Read(void*, unsigned int, unsigned int*)::fAsserted
- b CStringNormalization::Initialize()::threadonce_1176_26
+ b CStringNormalization::Initialize()::threadonce_1176_27
  b CStringNormalization::Normalize(bool, char const*, char*, int)::fAsserted
  b CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)::fAsserted
  b CStringNormalization::Test_BValidateStructures()::fAsserted
- b CURLUtils::IsTLD(char const*)::threadonce_119_22
+ b CURLUtils::IsTLD(char const*)::threadonce_119_23
  b DebugStatsSystem::g_DebugStatsSystem
  b GetNetAdrResolveCacheMutex()::mutex
  b KeyValuesSystem()::s_KeyValuesSystem

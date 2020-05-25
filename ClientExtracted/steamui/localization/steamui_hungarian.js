@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Legutóbb játszva",
 	"AppDetails_SectionTitle_LastLaunched": "Legutóbb indítva:",
 	"AppDetails_SectionTitle_PlayTime": "Játékidő",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Play Time Left",
 	"AppDetails_SectionTitle_UsageTime": "Használati idő",
 	"AppDetails_SectionTitle_Workshop": "Steam Műhely",
 	"AppDetails_SectionTitle_Community": "Közösségi tartalom",

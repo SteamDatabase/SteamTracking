@@ -30,7 +30,7 @@
 			wrap=1
 			labelText="#Steam_Settings_Streaming_SoftwareEncodingThreads_Description"
 		}
-		"SoftwareEncodingThreads" { ControlName="ComboBox" fieldName="SoftwareEncodingThreads" style="ResolutionLimit" editable="0" }
+		"SoftwareEncodingThreads" { ControlName="ComboBox" fieldName="SoftwareEncodingThreads" editable="0" }
 
 		"EnableTrafficPriorityLabel"
 		{
@@ -91,17 +91,17 @@
 			margin-left=20
 			margin-right=20
 			margin-top=315
-			spacing=0
+			spacing=2
 		}
 		place
 		{
+			start="SoftwareEncodingThreads"
 			control="EnableTrafficPriorityLabel,EnableTrafficPriority"
 			dir=down
 			align=top
 			width=max
-			margin-left=20
 			margin-right=20
-			margin-top=375
+			margin-top=10
 			spacing=0
 		}
 		

@@ -555,6 +555,7 @@
  R typeinfo name for CUniformRandomStream
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
+ R typeinfo name for CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
@@ -570,6 +571,7 @@
  R typeinfo name for CUtlString
  R typeinfo name for CUtlVector<CHTTPClient*, CUtlMemory<CHTTPClient*> >
  R typeinfo name for CUtlVector<CNetMask, CUtlMemory<CNetMask> >
+ R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
@@ -1251,6 +1253,7 @@
  T CMetrics::Validate(CValidator&, char const*)
  T CMetrics::~CMetrics()
  T CMetricsSymbol::CMetricsSymbol(char const*)
+ T CMetricsTimer::CMetricsTimer<char const (&) [10]>(char const (&) [10], CMetrics&)
  T CMetricsTimer::Stop()
  T CMetricsTimer::Validate(CValidator&, char const*)
  T CMetricsTimer::~CMetricsTimer()
@@ -1990,6 +1993,10 @@
  T CUtlCharConversion::CUtlCharConversion(char, StringView, int, CUtlCharConversion::ConversionArray_t*)
  T CUtlCharConversion::FindConversion(StringView, int*)
  T CUtlFmtString::CUtlFmtString(char const*, ...)
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::Purge()
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::RecursiveValidate(CValidator&, char const*)
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::~CUtlHashMap()
  T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::CUtlHashMap()
  T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::Purge()
  T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::RecursiveValidate(CValidator&, char const*)
@@ -2307,6 +2314,8 @@
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::AddToTail(CThreadSafeMemoryPool::BlockSet_t const&)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::GrowVector(int)
  T CUtlVector<CThreadSafeMemoryPool::BlockSet_t, CUtlMemory<CThreadSafeMemoryPool::BlockSet_t> >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
@@ -2416,6 +2425,7 @@
  T CWSASendThread::~CWSASendThread()
  T CWatchingLog::BMeetsMyCriteria(CLogWatchParam const&) const
  T CWatchingLog::~CWatchingLog()
+ T CWorkItem::BNotifyOnCompletion() const
  T CWorkItem::CWorkItem()
  T CWorkItem::DispatchCompletedWorkItem(CJobMgr*)
  T CWorkItem::Validate(CValidator&, char const*)
@@ -4039,7 +4049,7 @@
  b OPENSSL_init.done
  b OSXHelpers::s_bUseLibDispatch
  b OSXHelpers::s_pPollingHelperSingleton
- b OneTimeCryptoInitOpenSSL()::threadonce_324_42
+ b OneTimeCryptoInitOpenSSL()::threadonce_324_43
  b PchGetRegPath(ERegKeyRoot, char const*, StringView)::szRegLocation
  b RTANoteAlloc(void*, unsigned long, bool, char const*, int, int, int)::g_FilenamesCache
  b RegistryEmulatorManager()::s_PosixRegMgr
@@ -4976,7 +4986,7 @@
  t _GLOBAL__sub_I_workthreadpool.cpp
  t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
- t __cxx_global_var_init15
+ t __cxx_global_var_init27
  t _aesni_set_encrypt_key
  t _bn_post4x_internal
  t _bn_postx4x_internal

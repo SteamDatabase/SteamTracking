@@ -1248,7 +1248,7 @@
 "[english]Steam_Settings_Broadcast_EncoderPerformance"	"Best Performance"
 "Steam_Settings_Browser"	"İnternet Tarayıcısı"
 "[english]Steam_Settings_Browser"	"Web Browser"
-"Overlay_SettingsBrowserDesc"	"Bu ayarlar, Steam İstemcisi ve Steam Oyun İçi Arayüzünde kullanılan internet tarayıcısına uygulanacaktır."
+"Overlay_SettingsBrowserDesc"	"Buradaki ayarlar, Steam istemcisi ve Steam oyun içi arayüzünde kullanılan internet tarayıcısına uygulanacaktır."
 "[english]Overlay_SettingsBrowserDesc"	"The following settings apply to the web browser used inside the Steam Client and the Steam In-Game Overlay."
 "Steam_SettingsBrowserClearAllCookies"	"Bütün Tarayıcı Çerezlerini Sil"
 "[english]Steam_SettingsBrowserClearAllCookies"	"Delete All Browser Cookies"

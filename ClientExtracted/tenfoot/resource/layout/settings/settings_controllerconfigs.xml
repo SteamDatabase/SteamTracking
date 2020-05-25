@@ -10,7 +10,7 @@
 		  <!-- main panel -->
 		  <Panel class="SettingsContent" tabindex="auto" selectionpos="auto">
 
-				<Panel class="VertContainer">	
+				<Panel id="VertContainer" class="VertContainer">	
 					<Label text="#SettingsControllerCfg_Intro" />
 
 

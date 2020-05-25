@@ -40,6 +40,7 @@
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/netadr.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/refcount.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+/Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/tsmempool.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h

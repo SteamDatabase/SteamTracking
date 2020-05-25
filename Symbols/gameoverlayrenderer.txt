@@ -250,6 +250,7 @@
  T AlignPitch16(unsigned int)
  T AutoNSCursor::~AutoNSCursor()
  T BOverlayNeedsPresent
+ T BVideoCaptureDisablesVSync()
  T CBaseInputHandler::AllHotKeysPressedBase()
  T CBaseInputHandler::AllMovieHotKeysPressedBase()
  T CBaseInputHandler::AllScreenshotHotKeysPressedBase()

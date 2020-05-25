@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "最後にプレイ",
 	"AppDetails_SectionTitle_LastLaunched": "最後に起動",
 	"AppDetails_SectionTitle_PlayTime": "プレイ時間",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Play Time Left",
 	"AppDetails_SectionTitle_UsageTime": "使用時間",
 	"AppDetails_SectionTitle_Workshop": "Steamワークショップ",
 	"AppDetails_SectionTitle_Community": "コミュニティコンテンツ",

@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Востаннє зіграно",
 	"AppDetails_SectionTitle_LastLaunched": "Останнє із запущеного",
 	"AppDetails_SectionTitle_PlayTime": "Час гри",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Лишилося часу гри",
 	"AppDetails_SectionTitle_UsageTime": "Час використання",
 	"AppDetails_SectionTitle_Workshop": "Майстерня Steam",
 	"AppDetails_SectionTitle_Community": "Вміст від спільноти",

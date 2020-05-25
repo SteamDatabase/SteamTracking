@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Sist spilt",
 	"AppDetails_SectionTitle_LastLaunched": "Sist startet",
 	"AppDetails_SectionTitle_PlayTime": "Spilletid",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Spilletid igjen",
 	"AppDetails_SectionTitle_UsageTime": "Brukstid",
 	"AppDetails_SectionTitle_Workshop": "Steam Workshop",
 	"AppDetails_SectionTitle_Community": "Samfunnsinnhold",

@@ -204,6 +204,7 @@ This should take less than a minute."
 "SteamUI_JoinDialog_Cancel_Btn"		"Cancel"
 "SteamUI_JoinDialog_OverrideThrottle"	"Override current bandwidth limit"
 "SteamUI_JoinDialog_SkipUpdateInfo" "Skip the update and play now"
+"SteamUI_JoinDialog_SkipShaderProcessing" "Skip"
 
 "SteamUI_JoinDialog_UpdateAvailable_Title"				"Update Available"
 "SteamUI_JoinDialog_UpdateAvailable_Text"					"An update for %game% is available. Would you like to launch it now,\n or download the update first?"
@@ -229,6 +230,8 @@ This should take less than a minute."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Failed to start %game% in VR. (Error: %error%)"
 "SteamUI_JoinDialog_OpenVRWaitingForQuit" "Waiting for %quitting_game% to exit..."
+
+"SteamUI_JoinDialog_ProcessingShaderCache" "Processing Vulkan shaders..."
 
 "SteamUI_SetCustomImage_Title" "%gamename% - Set Custom Image"
 "SteamUI_SetCustomImage_ChooseImage" "Choose an image to represent %gamename% in Steam's grid view."
@@ -2821,9 +2824,9 @@ Make one now by emailing a gift to someone you know."
 
 "SteamUI_DurationControl_PlaytimeExceeded_Title"		"Playtime Exceeded"
 
-"SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"You have accumulated 3 hours of online time. Please take a break of at least 5 hours. Engage in physical activity."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_ThreeHours"	"You have reached your limit of online time for today. Please take a break and try tomorrow after 8AM."
 "SteamUI_DurationControl_PlaytimeExceeded_Body_FiveHours"	"You have reached your limit of online time for today. Please take a break and try tomorrow after 8AM."
-"SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"You can't play this game between 10PM and 8AM the following day. Please take a break."
+"SteamUI_DurationControl_PlaytimeExceeded_Body_Night"		"Players under 18 can't play this game between 10PM and 8AM the following day. Please take a break."
 
 
 
@@ -4220,6 +4223,13 @@ Set a category for these games to help you find them quickly and organize your L
 
 "Steam_DeviceAuth_Shared_Library_Now_Available" "Hooray, %owner%'s shared games are now available for you to play..."
 
+"Steam_TimedTrial_EndSoon" "Your trial will end soon"
+"Steam_TimedTrial_MinutesLeft" "The game will close in %minutes% minutes"
+"Steam_TimedTrial_Over" "Your trial is over now"
+"Steam_TimedTrial_CloseNow" "The game will close now"
+"Steam_TimedTrial_Title" "Enjoy your trial"
+"Steam_TimedTrial_Info" "You have %minutes% minutes of playtime remaining"
+
 "steam_inbox_tradeoffer"	"1 pending trade offer"
 "steam_inbox_tradeoffers"	"%count% pending trade offers"
 
@@ -4475,6 +4485,8 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_ShaderCache"			"Shader Pre-Caching"
 "Steam_Settings_ShaderCache_Info"		"Shader Pre-Caching allows Steam to download pre-compiled GPU shaders matching your system configuration. This allows Vulkan and OpenGL games to load faster and improves framerate stability during gameplay.\n\nIf enabled, Steam will collect shaders from your system when needed. Enabling this feature may slightly increase disk and bandwidth usage."
 "Steam_Settings_ShaderCache_Enable"		"Enable Shader Pre-Caching (%shaderdiskusagemb% MB pre-cached)"
+"Steam_Settings_ShaderCache_BGProcessing_Enable"		"Allow background processing of Vulkan shaders"
+"Steam_Settings_ShaderCache_CurrentlyProcessing"		"Processing %shaderapp%... (%shaderpercent%%)"
 
 
 "SteamPlay_Warning_Title"                   "Steam Play"
@@ -4514,7 +4526,8 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_UnsupportedPlatform" "Hosting is not currently supported on this platform"
 "Steam_Settings_Streaming_HostLabel" "Host options:"
 "Steam_Settings_Streaming_HostPlayAudioAlways" "Play audio on host"
-"Steam_Settings_Streaming_ClientLabel" "Client options:"
+"Steam_Settings_Streaming_ClientLabelLocal" "Client options streaming to this computer:"
+"Steam_Settings_Streaming_ClientLabelRemote" "Client options streaming to %streamingclient%:"
 "Steam_Settings_Streaming_QualityFast" "Fast"
 "Steam_Settings_Streaming_QualityBalanced" "Balanced"
 "Steam_Settings_Streaming_QualityBeautiful" "Beautiful"
@@ -4523,7 +4536,8 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_AdvancedHostOptions_Description" "To improve performance streaming from this computer, try reducing your game's resolution or adjusting the following settings."
 "Steam_Settings_Streaming_AdvancedClientOptions" "Advanced Client Options"
 "Steam_Settings_Streaming_AdvancedClientOptions_Title" "Advanced Client Options"
-"Steam_Settings_Streaming_AdvancedClientOptions_Description" "To improve performance streaming to this computer, try reducing your game's resolution or adjusting the following settings."
+"Steam_Settings_Streaming_AdvancedClientOptions_DescriptionLocal" "To improve performance streaming to this computer, try reducing your game's resolution or adjusting the following settings."
+"Steam_Settings_Streaming_AdvancedClientOptions_DescriptionRemote" "To improve performance streaming to %streamingclient%, try reducing your game's resolution or adjusting the following settings."
 "Steam_Settings_Streaming_EnableCaptureNVFBC" "Use NVFBC capture on NVIDIA GPU"
 "Steam_Settings_Streaming_EnableHardwareEncoding" "Enable hardware encoding"
 "Steam_Settings_Streaming_EnableHardwareEncodingNVIDIA" "Enable hardware encoding on NVIDIA GPU"
@@ -4565,6 +4579,10 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_Settings_Streaming_SoftwareEncodingThreads_6"	"6"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_7"	"7"
 "Steam_Settings_Streaming_SoftwareEncodingThreads_8"	"8"
+"Steam_Settings_Streaming_P2PScope_Description"	"Allow Direct Connection (IP sharing)"
+"Steam_Settings_Streaming_P2PScopeDisabled"	"Disabled"
+"Steam_Settings_Streaming_P2PScopeOnlyMe" "My Devices"
+"Steam_Settings_Streaming_P2PScopeEveryone" "All Devices"
 "Steam_Settings_Streaming_ChangeDesktopResolution" "Change desktop resolution to match streaming client"
 "Steam_Settings_Streaming_DynamicallyAdjustResolution" "Dynamically adjust capture resolution to improve performance"
 "Steam_Settings_Streaming_AudioChannelSelect" "Speaker configuration"

@@ -49,6 +49,20 @@
 					  <Button class="Button" id="AdvancedHostOptions" onactivate="ShowAdvancedHostOptions();" >
 						  <Label class="LongDesc" text="#Settings_RemoteClients_AdvancedHostOptions" />
 					  </Button>
+
+					  <Panel class="Spacer" />
+					  <Panel class="Spacer" />
+					  <Panel class="Spacer" />
+					  <Panel class="Spacer" />
+					  <Panel class="Spacer" />
+					  <Panel class="Spacer" />
+					  <Panel class="Spacer" />
+					  <Label class="SettingsLabel" text="#Settings_RemoteClients_P2PScope" />
+					  <DropDown id="P2PScope" class="Filter" tabindex="auto">
+						  <Label id="1" text="#Settings_RemoteClients_P2PScope_Disabled" />
+						  <Label id="2" text="#Settings_RemoteClients_P2PScope_OnlyMe" />
+						  <Label id="4" text="#Settings_RemoteClients_P2PScope_Everyone" />
+					  </DropDown>
 				  </Panel>
 	
 				  <Panel class="SettingsContent SettingsColumnarContent">

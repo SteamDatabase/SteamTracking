@@ -601,7 +601,19 @@ CSGOAccountLinkPage
 
 CSGOAccountIDVerifyPage
 {
-	url			"%applauncher%/join/pwlink_csgo/?l=%language%&method=verify"
+	url			"https://members.csgo.com.cn/steam/indulge2?ticket=%p1%"
+	method		"internal"
+}
+
+DOTAAccountLinkPage
+{
+	url			"http://store.dota2.com.cn/accountlink/perfectworld/?ticket=%p1%"
+	method		"internal"
+}
+
+DOTAIDVerifyPage
+{
+	url			"https://members.csgo.com.cn/steam/indulge2?ticket=%p1%"
 	method		"internal"
 }
 

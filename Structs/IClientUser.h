@@ -20,6 +20,8 @@ public:
     virtual unknown_ret GetConfigString(EConfigSubTree, char const*, char*, int) = 0;
     virtual unknown_ret SetConfigInt(EConfigSubTree, char const*, int) = 0;
     virtual unknown_ret GetConfigInt(EConfigSubTree, char const*, int*) = 0;
+    virtual unknown_ret SetConfigBinaryBlob(EConfigSubTree, char const*, CUtlBuffer*) = 0;
+    virtual unknown_ret GetConfigBinaryBlob(EConfigSubTree, char const*, CUtlBuffer*) = 0;
     virtual unknown_ret DeleteConfigKey(EConfigSubTree, char const*) = 0;
     virtual unknown_ret GetConfigStoreKeyName(EConfigSubTree, char const*, char*, int) = 0;
     virtual unknown_ret InitiateGameConnection(void*, int, CSteamID, CGameID, unsigned int, unsigned short, bool) = 0;
@@ -104,7 +106,7 @@ public:
     virtual unknown_ret RunInstallScript(unsigned int, char const*, bool) = 0;
     virtual unknown_ret IsInstallScriptRunning() = 0;
     virtual unknown_ret GetInstallScriptState(char*, unsigned int, unsigned int*, unsigned int*) = 0;
-    virtual unknown_ret SpawnProcess(char const*, char const*, unsigned int, char const*, CGameID, char const*, unsigned int, unsigned int, unsigned int) = 0;
+    virtual unknown_ret SpawnProcess(char const*, char const*, char const*, CGameID, char const*, unsigned int, unsigned int, unsigned int) = 0;
     virtual unknown_ret GetAppOwnershipTicketLength(unsigned int) = 0;
     virtual unknown_ret GetAppOwnershipTicketData(unsigned int, void*, unsigned int) = 0;
     virtual unknown_ret GetAppOwnershipTicketExtendedData(unsigned int, void*, unsigned int, unsigned int*, unsigned int*, unsigned int*, unsigned int*) = 0;
@@ -115,6 +117,7 @@ public:
     virtual unknown_ret EndAuthSession(CSteamID) = 0;
     virtual unknown_ret CancelAuthTicket(unsigned int) = 0;
     virtual unknown_ret IsUserSubscribedAppInTicket(CSteamID, unsigned int) = 0;
+    virtual unknown_ret GetAuthSessionTicketForGameID(void*, int, unsigned int*, CGameID) = 0;
     virtual unknown_ret AdvertiseGame(CGameID, CSteamID, unsigned int, unsigned short) = 0;
     virtual unknown_ret RequestEncryptedAppTicket(void*, int) = 0;
     virtual unknown_ret GetEncryptedAppTicket(void*, int, unsigned int*) = 0;
@@ -247,4 +250,6 @@ public:
     virtual unknown_ret OnNewGroupChatMsgAdded(unsigned long long, unsigned long long, unsigned int, unsigned int, unsigned int, char const*) = 0;
     virtual unknown_ret OnGroupChatUserStateChange(unsigned long long, unsigned int, int) = 0;
     virtual unknown_ret OnReceivedGroupChatSubscriptionResponse(unsigned long long, unsigned long long, bool) = 0;
+    virtual unknown_ret GetTimedTrialStatus(unsigned int, unsigned int*, unsigned int*) = 0;
+    virtual unknown_ret RequestTimedTrialStatus(unsigned int) = 0;
 };

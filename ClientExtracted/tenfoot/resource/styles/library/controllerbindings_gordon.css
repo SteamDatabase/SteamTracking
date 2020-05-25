@@ -2247,11 +2247,13 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
     background-image: url("file://{images}/library/controller/api/switch_button_b.png");
 }
 
-#ModeContainer #ABXYButtonA
+#ModeContainer #ABXYButtonA,
+.controller_ps4.UpperGrips #ModeContainer #ABXYButtonA
 {
 	background-image: url("file://{images}/library/controller/api/button_a.png");
 }
-#ModeContainer #ABXYButtonA Label
+#ModeContainer #ABXYButtonA Label,
+.controller_ps4.UpperGrips #ModeContainer #ABXYButtonA Label
 {
 	color: #42ff00;
 	margin-left: 65px;
@@ -2276,11 +2278,13 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
     background-image: url("file://{images}/library/controller/api/ps4_button_circle.png");
 }
 
-#ModeContainer #ABXYButtonB
+#ModeContainer #ABXYButtonB,
+.controller_ps4.UpperGrips #ModeContainer #ABXYButtonB
 {
 	background-image: url("file://{images}/library/controller/api/button_b.png");
 }
-#ModeContainer #ABXYButtonB Label
+#ModeContainer #ABXYButtonB Label,
+.controller_ps4.UpperGrips #ModeContainer #ABXYButtonB Label,
 {
 	color: #ff0000;
 	margin-left: 65px;
@@ -2291,7 +2295,6 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
 {
 	color: #f87382ee;
 }
-
 
 .controller_ps4 #ModeContainer #ABXYButtonX,
 .controller_ps3 #ModeContainer #ABXYButtonX
@@ -2306,11 +2309,14 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
     background-image: url("file://{images}/library/controller/api/switch_button_y.png");
 }
 
-#ModeContainer #ABXYButtonX
+#ModeContainer #ABXYButtonX,
+.controller_ps4.UpperGrips #ModeContainer #ABXYButtonX
 {
-	background-image: url("file://{images}/library/controller/api/button_x.png");
+    background-image: url("file://{images}/library/controller/api/button_x.png");
 }
-#ModeContainer #ABXYButtonX Label
+
+#ModeContainer #ABXYButtonX Label,
+.controller_ps4.UpperGrips #ModeContainer #ABXYButtonX Label
 {
 	color: #01c4f5;
 	margin-left: 65px;
@@ -2335,11 +2341,13 @@ ControllerSourceModeABXY.ControllerMode ControllerBindingButton
     background-image: url("file://{images}/library/controller/api/switch_button_x.png");
 }
 
-#ModeContainer #ABXYButtonY
+#ModeContainer #ABXYButtonY,
+.controller_ps4.UpperGrips #ModeContainer #ABXYButtonY
 {
 	background-image: url("file://{images}/library/controller/api/button_y.png");
 }
-#ModeContainer #ABXYButtonY Label
+#ModeContainer #ABXYButtonY Label,
+.controller_ps4.UpperGrips #ModeContainer #ABXYButtonY Label
 {
 	color: #ffde00;
 	margin-left: 65px;

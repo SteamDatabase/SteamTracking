@@ -3,8 +3,6 @@ __TEXT
 "
 __text
 __TEXT
-pD
-pD
 __stubs
 __TEXT
 __stub_helper
@@ -61,13 +59,13 @@ __LINKEDIT
 "
 @,
 pV,
-hv,
 @
-P|0
+@
 P
 i;
 i;
 k;
+(s0
 
 8
 @loader_path/libtier0_s.dylib
@@ -986,6 +984,7 @@ ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSTARInternal returned NULL.
 ClientAPI_Init: InternalAPI_Init_Internal failed.
+ClientAPI_Init: Cannot create pipe.  Steam not running?
 ClientAPI_Init(GlobalInstance): GetIClientRemotePlay returned NULL.
 ClientAPI_RunCallbacks
 g_pClientController
@@ -1991,6 +1990,7 @@ m_PanelAnimationMapPool
 CUtlDict
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
+Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utldict.h
 CUtlSymbolTable
 m_StringPools
@@ -3208,6 +3208,7 @@ Assertion Failed: m_usType == k_EIPTypeV6 && netadr.m_usType == k_EIPTypeV6
 Assertion Failed: m_usType == k_EIPTypeV6
 Assertion Failed: pvecAddressesOut != nullptr || pSingleOutput != nullptr
 about to perform blocking dns call from the main thread.  consider refactoring.
+BResolveHostString - unexpected DNS lookup flag '%d'
 Assertion Failed: info.m_pReplacementString == 0
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 Expected %lld but got %lld!
@@ -3256,8 +3257,6 @@ Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
-,
-,
 0
 p
 0
@@ -3274,9 +3273,10 @@ p
 p
 0
 p
-X'
 0
 p
+'
+'
 $
 @
 @
@@ -3288,10 +3288,8 @@ $
 A
 Hc
 =
-L95?{'
-L95*\'
-L95p@'
-'
+L95Zb'
+L9557'
 Hc
 ?
 ?
@@ -3308,10 +3306,10 @@ Hc
 ?
 ?
 ?
-)$
-@$
+&$
 "
 3
+-$
 $
 $
 $
@@ -3319,19 +3317,42 @@ $
 $
 $
 D
-y#
+$
+$
+$
+$
+$
+$
+$
+$
+$
+$
 @
-Y#
+F#
+#
+#
+#
+#
+#
 
-"
-"
-L95f'"
-d
 
 
+
+L95>-"
+Y!
 !
+!
+Y
 
-3
+
+
+'
+d
+:
+!
+V
+
+*
 
 &
 &
@@ -3339,6 +3360,9 @@ d
 =
 =
 @
+
+
+
 uV%
 
 
@@ -3394,9 +3418,10 @@ d
 @
 =
 @
+r
 @
 @
-W
+N
 @
 @
 @

@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Naposledy hráno",
 	"AppDetails_SectionTitle_LastLaunched": "Naposledy spuštěno",
 	"AppDetails_SectionTitle_PlayTime": "Odehraný čas",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Zbývající čas",
 	"AppDetails_SectionTitle_UsageTime": "Čas používání",
 	"AppDetails_SectionTitle_Workshop": "Steam Workshop",
 	"AppDetails_SectionTitle_Community": "Komunitní obsah",

@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Jucat ultima dată",
 	"AppDetails_SectionTitle_LastLaunched": "Ultima lansare",
 	"AppDetails_SectionTitle_PlayTime": "Timp petrecut",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Play Time Left",
 	"AppDetails_SectionTitle_UsageTime": "Timp de utilizare",
 	"AppDetails_SectionTitle_Workshop": "Atelier Steam",
 	"AppDetails_SectionTitle_Community": "Conținut comunitar",

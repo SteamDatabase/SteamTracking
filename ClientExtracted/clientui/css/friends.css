@@ -516,7 +516,6 @@ button.DialogButton::-moz-focus-inner {
   flex-grow: 1; }
 
 .PopupFullWindow .ModalPosition_Content > div:not(.ModalPosition_TopBar):not(.ModalPosition_Dismiss) {
-  min-height: initial;
   flex: 1; }
 
 .DialogContent,
@@ -586,6 +585,7 @@ button.DialogButton::-moz-focus-inner {
 .DialogContent_InnerWidth > form {
   display: flex;
   flex-direction: column;
+  min-height: 0;
   flex: 1; }
 
 .ModalPosition_TopBar {
@@ -1139,7 +1139,8 @@ button.TextButton:focus {
 
 .DialogMenuPosition {
   position: absolute;
-  z-index: 1600; }
+  z-index: 1600;
+  overflow: auto; }
 
 .DialogMenuPosition:not(.visible) {
   opacity: 0;

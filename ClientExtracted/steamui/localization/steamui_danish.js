@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Sidst spillet",
 	"AppDetails_SectionTitle_LastLaunched": "Sidst startet",
 	"AppDetails_SectionTitle_PlayTime": "Spilletid",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Play Time Left",
 	"AppDetails_SectionTitle_UsageTime": "Forbrugstid",
 	"AppDetails_SectionTitle_Workshop": "Steam-værksted",
 	"AppDetails_SectionTitle_Community": "Fællesskabsindhold",

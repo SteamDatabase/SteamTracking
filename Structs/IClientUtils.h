@@ -87,4 +87,5 @@ public:
     virtual unknown_ret BGetMacAddresses(unsigned long long*, unsigned int, unsigned int*) = 0;
     virtual unknown_ret BGetDiskSerialNumber(char*, int) = 0;
     virtual unknown_ret TestHTTP(char const*) = 0;
+    virtual unknown_ret DumpJobs(char const*) = 0;
 };

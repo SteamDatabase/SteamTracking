@@ -12,6 +12,7 @@ __cstring
 __TEXT
 __unwind_info
 __TEXT
+\v
 __eh_frame
 __TEXT
 __DATA
@@ -66,7 +67,7 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
-J
+0J
 N3IPC15BinarySemaphoreE
 N3IPC10PosixMutexE
 N3IPC6IMutexE
@@ -801,6 +802,7 @@ CUtlBuffer
 m_Memory
 -no-cef-sandbox
 disables sandboxing in CEF
+-cef-disable-sandbox
 -disable-winh264
 disables loading winh264.dll
 -disablehighdpi
@@ -810,6 +812,16 @@ disables high-DPI support in CEF
 enables verbose logging from CEF
 -enable-keyring
 enables CEF usage of the Chromium keyring
+-cef-single-process
+runs CEF processes in single process
+-cef-in-process-gpu
+runs CEF GPU processing as thread of browser process
+-cef-disable-d3d11
+disable D3D11 usage in CEF
+-cef-full-memory-crash-report
+enables full crash dumps
+-cef-disable-breakpad
+disables breakpad in crash dumps
 -cef-force-32bit
 forces usage of 32-bit steamwebhelper when available
 -store
@@ -823,7 +835,6 @@ Assertion Failed: !"Failed to kill existing helper process"
 Assertion Failed: m_hCEFHandle == INVALID_PROCESS_HANDLE
 wt
 [Config]# Product information.ProductName=cefwebhelperProductVersion=%u
-# Required to enable crash dump upload.ServerURL=http://crash.steampowered.com/submit# Disable rate limiting so that all crashes are uploaded.RateLimitEnabled=trueMaxUploadsPerDay=5[CrashKeys]Vendor=smallUserID=smallBuildID=smallSteamUniverse=small
 -lang=%s
 -cachedir=%s
 -steampid=%u
@@ -842,7 +853,12 @@ clientui
 --enable-blink-features=ResizeObserver,Worklet,AudioWorklet
 --enable-media-stream
 -opendevtools
---remote-debugging-port=8080
+-devtools-address
+127.0.0.1
+-devtools-port
+8080
+--remote-debugging-port=%s
+--remote-debugging-address=%s
 --enable-smooth-scrolling
 --disable-smooth-scrolling
 --enable-experimental-web-platform-features
@@ -852,11 +868,16 @@ clientui
 --no-sandbox
 --disable-winh264
 -dev
+--single-process
+--in-process-gpu
+--disable-d3d11
 --enable-logging
 --v=%s
 --v=1
 --log-file=%s
 BREAKPAD_DUMP_LOCATION
+--full-memory-crash-report
+--disable-breakpad
 Assertion Failed: bValidHandle == true
 Failed to connect to master html process, created shared memory (spawn time %0.2f)
 %s_%u_%u
@@ -1736,31 +1757,28 @@ vi
 
 
 
-f
+s
 "
 3
 D
-3
-,
+B
+9
+2
 @
-t
-w
+
+
+
 
 
 H
 D
 
-
 3
+
 !
 "
-0
-$
-)
 Hi
 `
-
-
 $
 @
 @
@@ -1772,7 +1790,11 @@ $
 A
 Hc
 =
-L95(x
+L95mn
+
+
+
+
 Hc
 ?
 ?
@@ -1789,7 +1811,6 @@ Hc
 ?
 ?
 ?
-9
 
 @
 @

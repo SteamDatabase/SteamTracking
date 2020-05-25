@@ -362,6 +362,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Last Played",
 	"AppDetails_SectionTitle_LastLaunched": "Last Launched",
 	"AppDetails_SectionTitle_PlayTime": "Play Time",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Play Time Left",
 	"AppDetails_SectionTitle_UsageTime": "Usage Time",
 	"AppDetails_SectionTitle_Workshop": "Steam Workshop",
 	"AppDetails_SectionTitle_Community": "Community Content",
@@ -384,7 +385,7 @@
 
 	"Bbcode_Originally_Posted_By": "Originally posted by",
 
-	"AppDetails_InOfflineMode": "Steam is currently in Offline Mode.  In Offline Mode, many features of your Steam library, such as Activity and Friends, will be unavailable. Go online to view this content.",
+	"AppDetails_InOfflineMode": "Steam is currently in Offline Mode. In Offline Mode, many features of your Steam library, such as Activity and Friends, will be unavailable. Go online to view this content.",
 	"AppDetails_GoOnline": "Go Online",
 
 	"AppDetails_PartnerEventFailedLoad": "Failed to load this event",
@@ -917,7 +918,7 @@
 	"UninstallDialog_UnknownError": "An unexpected error occurred while uninstalling this application.",
 	"UninstallDialog_AppUpdateError": "Uninstall error - %1$s",
 	"UninstallDialog_Confirmation_Single": "Would you like to uninstall %1$s from this computer? It will remain in your Games Library, but to play it in the future, you will need to first redownload all of its content.",
-	"UninstallDialog_Confirmation_Multiple": "Would you like to uninstall these selected titles from your computer? These titles will remain in your Games Library, but to play it in the future, you will need to first redownload their content.",
+	"UninstallDialog_Confirmation_Multiple": "Would you like to uninstall these selected titles from your computer? These titles will remain in your Games Library, but to play them in the future, you will need to first redownload their content.",
 	"UninstallingDialog_Uninstalling": "Uninstalling",
 	"UninstallingDialog_UninstallingApp": "Uninstalling %1$s",
 	"UninstallingDialog_WaitingForPassword": "Waiting for password",

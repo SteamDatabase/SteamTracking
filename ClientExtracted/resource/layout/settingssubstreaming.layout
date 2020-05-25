@@ -16,6 +16,15 @@
 			tall=140
 		}
 		"EnableStreaming" { ControlName="CheckButton" fieldName="EnableStreaming" labelText="#Steam_Settings_Streaming_EnableStreaming" }
+		
+		"P2PScopeLabel"
+		{
+			ControlName="Label"
+			fieldName="P2PScopeLabel"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_P2PScope_Description"
+		}
+		"P2PScope" { ControlName="ComboBox" fieldName="P2PScope" editable="0" }
 
 		"Pair" { ControlName="Button" fieldName="Pair" command="Pair" labelText="#Steam_Settings_Streaming_Pair" }
 
@@ -43,12 +52,19 @@
 		"AdvancedHostOptions" { ControlName="Button" fieldName="AdvancedHostOptions" command="AdvancedHostOptions" labelText="#Steam_Settings_Streaming_AdvancedHostOptions" }
 
 		"ClientDivider" { ControlName="divider" }
-		"ClientLabel"
+		"ClientLabelLocal"
 		{
 			ControlName="Label"
-			fieldName="ClientLabel"
+			fieldName="ClientLabelLocal"
 			wrap=1
-			labelText="#Steam_Settings_Streaming_ClientLabel"
+			labelText="#Steam_Settings_Streaming_ClientLabelLocal"
+		}
+		"ClientLabelRemote"
+		{
+			ControlName="Label"
+			fieldName="ClientLabelRemote"
+			wrap=1
+			labelText="#Steam_Settings_Streaming_ClientLabelRemote"
 		}
 		
 		"QualityFast" { ControlName="RadioButton" fieldName="QualityFast" labelText="#Steam_Settings_Streaming_QualityFast" }
@@ -56,7 +72,7 @@
 		"QualityBeautiful" { ControlName="RadioButton" fieldName="QualityBeautiful" labelText="#Steam_Settings_Streaming_QualityBeautiful" }
 		
 		"AdvancedClientOptions" { ControlName="Button" fieldName="AdvancedClientOptions" command="AdvancedClientOptions" labelText="#Steam_Settings_Streaming_AdvancedClientOptions" }
-		
+
 		"SupportInformationLabel"
 		{
 			ControlName="URLLabel"
@@ -87,18 +103,37 @@
 		place { start="RemoteClientList" control="Pair" dir=down margin-top=10 width=155 }
 		place { start="Pair" control="Unpair" dir=right margin-left=15 width=155 }
 		place { start="Unpair" control="SetPIN" dir=right margin-left=15 width=155 }
+
+		place
+		{
+			start="Pair"
+			control="P2PScopeLabel"
+			dir=down
+			width=400
+			margin-top=15
+		}
+		place
+		{
+			start="P2PScopeLabel"
+			control="P2PScope"
+			dir=down
+			width=max
+			margin-right=20
+			margin-top=4
+		}
 		
-		place { start="Pair" control="HostDivider" dir=down margin-top=15 width=475 }
+		place { start="P2PScope" control="HostDivider" dir=down margin-top=15 width=475 }
 		place { start="HostDivider" control="HostLabel" dir=down margin-top=10 width=max }
 		place { start="HostLabel" control="UnsupportedPlatform" dir=down margin-top=10 width=max }
 		place { start="HostLabel" control="AdvancedHostOptions" dir=down margin-top=10 }
 		
 		place { start="HostDivider" control="ClientDivider" dir=down margin-top=70 width=475 }
-		place { start="ClientDivider" control="ClientLabel" dir=down margin-top=10 width=max }
-		place { start="ClientLabel" control="QualityFast" dir=down margin-top=10 width=100 }
+		place { start="ClientDivider" control="ClientLabelLocal" dir=down margin-top=10 width=max }
+		place { start="ClientDivider" control="ClientLabelRemote" dir=down margin-top=10 width=max }
+		place { start="ClientDivider" control="QualityFast" dir=down margin-top=30 width=100 }
 		place { start="QualityFast" control="QualityBalanced" dir=right margin-left=10 width=100 }
 		place { start="QualityBalanced" control="QualityBeautiful" dir=right margin-left=10 width=100 }
 		place { start="QualityFast" control="AdvancedClientOptions" dir=down margin-top=10 }
-		place { start="AdvancedClientOptions" control="SupportInformationLabel" dir=down margin-top=20 }
+		place { start="AdvancedClientOptions" control="SupportInformationLabel" dir=right align=right margin-top=20 margin-right=20 }
 	}
 }

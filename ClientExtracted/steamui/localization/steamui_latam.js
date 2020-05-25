@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Jugado por última vez",
 	"AppDetails_SectionTitle_LastLaunched": "Iniciado por última vez",
 	"AppDetails_SectionTitle_PlayTime": "Tiempo de juego",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Tiempo de juego restante",
 	"AppDetails_SectionTitle_UsageTime": "Tiempo de uso",
 	"AppDetails_SectionTitle_Workshop": "Steam Workshop",
 	"AppDetails_SectionTitle_Community": "Contenido de la Comunidad",

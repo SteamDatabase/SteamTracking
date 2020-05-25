@@ -2009,6 +2009,50 @@ iframe.steamTVLogin {
   right: 0;
   pointer-events: none; }
 
+.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 155px;
+  background: #000; }
+  .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp .broadcastwidgets_Action_2Xpw9,
+  .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp .broadcastwidgets_WishList_3mTSE {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 24px;
+    line-height: 9px;
+    font-size: 11px;
+    margin-top: 2px; }
+  @media screen and (max-width: 620px) {
+    .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
+      max-width: unset;
+      flex-direction: row; } }
+
+.broadcastwidgets_StoreSaleWidgetImage_mini_yvW2h {
+  cursor: pointer;
+  max-width: 155px; }
+
+.broadcastwidgets_StoreSaleImage_mini_1zSsm {
+  cursor: pointer;
+  width: 155px;
+  display: block; }
+
+.broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
+  max-height: 103px;
+  overflow-y: scroll;
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
+  padding-bottom: 8px;
+  overflow: hidden;
+  letter-spacing: 0px;
+  line-height: 13px;
+  font-size: 11px; }
+  @media screen and (max-width: 620px) {
+    .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
+      display: none; } }
+
 .broadcast_embeddable_bordered_container_3zXpF {
   padding: 15px;
   text-align: left; }

@@ -1,38 +1,38 @@
 /* Third-party software licenses can be found at licenses.txt */
-!(function(l) {
+!(function(a) {
   function e(e) {
     for (
-      var t, r, n = e[0], c = e[1], o = e[2], i = 0, a = [];
+      var t, r, n = e[0], c = e[1], o = e[2], i = 0, l = [];
       i < n.length;
       i++
     )
       (r = n[i]),
-        Object.prototype.hasOwnProperty.call(m, r) && m[r] && a.push(m[r][0]),
-        (m[r] = 0);
-    for (t in c) Object.prototype.hasOwnProperty.call(c, t) && (l[t] = c[t]);
-    for (p && p(e); a.length; ) a.shift()();
+        Object.prototype.hasOwnProperty.call(f, r) && f[r] && l.push(f[r][0]),
+        (f[r] = 0);
+    for (t in c) Object.prototype.hasOwnProperty.call(c, t) && (a[t] = c[t]);
+    for (d && d(e); l.length; ) l.shift()();
     return u.push.apply(u, o || []), s();
   }
   function s() {
     for (var e, t = 0; t < u.length; t++) {
       for (var r = u[t], n = !0, c = 1; c < r.length; c++) {
         var o = r[c];
-        0 !== m[o] && (n = !1);
+        0 !== f[o] && (n = !1);
       }
-      n && (u.splice(t--, 1), (e = f((f.s = r[0]))));
+      n && (u.splice(t--, 1), (e = m((m.s = r[0]))));
     }
     return e;
   }
   var r = {},
     h = { 3: 0 },
-    m = { 3: 0 },
+    f = { 3: 0 },
     u = [];
-  function f(e) {
+  function m(e) {
     if (r[e]) return r[e].exports;
     var t = (r[e] = { i: e, l: !1, exports: {} });
-    return l[e].call(t.exports, t, t.exports, f), (t.l = !0), t.exports;
+    return a[e].call(t.exports, t, t.exports, m), (t.l = !0), t.exports;
   }
-  (f.e = function(u) {
+  (m.e = function(u) {
     var e = [];
     h[u]
       ? e.push(h[u])
@@ -49,20 +49,20 @@
                     4: "libraryroot"
                   }[u] || u) +
                   ".css",
-                c = f.p + t,
+                c = m.p + t,
                 r = document.getElementsByTagName("link"),
                 o = 0;
               o < r.length;
               o++
             ) {
               var i =
-                (l = r[o]).getAttribute("data-href") || l.getAttribute("href");
-              if ("stylesheet" === l.rel && (i === t || i === c)) return e();
+                (a = r[o]).getAttribute("data-href") || a.getAttribute("href");
+              if ("stylesheet" === a.rel && (i === t || i === c)) return e();
             }
-            var a = document.getElementsByTagName("style");
-            for (o = 0; o < a.length; o++) {
-              var l;
-              if ((i = (l = a[o]).getAttribute("data-href")) === t || i === c)
+            var l = document.getElementsByTagName("style");
+            for (o = 0; o < l.length; o++) {
+              var a;
+              if ((i = (a = l[o]).getAttribute("data-href")) === t || i === c)
                 return e();
             }
             var s = document.createElement("link");
@@ -86,22 +86,22 @@
             h[u] = 0;
           }))
         );
-    var r = m[u];
+    var r = f[u];
     if (0 !== r)
       if (r) e.push(r[2]);
       else {
         var t = new Promise(function(e, t) {
-          r = m[u] = [e, t];
+          r = f[u] = [e, t];
         });
         e.push((r[2] = t));
         var n,
           c = document.createElement("script");
         (c.charset = "utf-8"),
           (c.timeout = 120),
-          f.nc && c.setAttribute("nonce", f.nc),
+          m.nc && c.setAttribute("nonce", m.nc),
           (c.src = (function(e) {
             return (
-              f.p +
+              m.p +
               "" +
               ({
                 1: "broadcast",
@@ -114,7 +114,7 @@
         var o = new Error();
         n = function(e) {
           (c.onerror = c.onload = null), clearTimeout(i);
-          var t = m[u];
+          var t = f[u];
           if (0 !== t) {
             if (t) {
               var r = e && ("load" === e.type ? "missing" : e.type),
@@ -126,7 +126,7 @@
                 (o.request = n),
                 t[1](o);
             }
-            m[u] = void 0;
+            f[u] = void 0;
           }
         };
         var i = setTimeout(function() {
@@ -136,28 +136,28 @@
       }
     return Promise.all(e);
   }),
-    (f.m = l),
-    (f.c = r),
-    (f.d = function(e, t, r) {
-      f.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
+    (m.m = a),
+    (m.c = r),
+    (m.d = function(e, t, r) {
+      m.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r });
     }),
-    (f.r = function(e) {
+    (m.r = function(e) {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (f.t = function(t, e) {
-      if ((1 & e && (t = f(t)), 8 & e)) return t;
+    (m.t = function(t, e) {
+      if ((1 & e && (t = m(t)), 8 & e)) return t;
       if (4 & e && "object" == typeof t && t && t.__esModule) return t;
       var r = Object.create(null);
       if (
-        (f.r(r),
+        (m.r(r),
         Object.defineProperty(r, "default", { enumerable: !0, value: t }),
         2 & e && "string" != typeof t)
       )
         for (var n in t)
-          f.d(
+          m.d(
             r,
             n,
             function(e) {
@@ -166,7 +166,7 @@
           );
       return r;
     }),
-    (f.n = function(e) {
+    (m.n = function(e) {
       var t =
         e && e.__esModule
           ? function() {
@@ -175,20 +175,20 @@
           : function() {
               return e;
             };
-      return f.d(t, "a", t), t;
+      return m.d(t, "a", t), t;
     }),
-    (f.o = function(e, t) {
+    (m.o = function(e, t) {
       return Object.prototype.hasOwnProperty.call(e, t);
     }),
-    (f.p = ""),
-    (f.oe = function(e) {
+    (m.p = ""),
+    (m.oe = function(e) {
       throw (console.error(e), e);
     });
   var t = (window.webpackJsonp = window.webpackJsonp || []),
     n = t.push.bind(t);
   (t.push = e), (t = t.slice());
   for (var c = 0; c < t.length; c++) e(t[c]);
-  var p = n;
+  var d = n;
   u.push(["tVvj", 0]), s();
 })({
   "0OaU": function(e, t, r) {
@@ -200,8 +200,8 @@
       c = r("q1tI"),
       o = r.n(c),
       i = r("6Y59"),
-      a = r("2i24"),
-      l = r.n(a),
+      l = r("2i24"),
+      a = r.n(l),
       s = (function(t) {
         function e(e) {
           return t.call(this, e) || this;
@@ -210,29 +210,29 @@
           Object(n.d)(e, t),
           (e.prototype.AddSizeClass = function(e) {
             "small" == this.props.size
-              ? e.push(l.a.throbber_small)
+              ? e.push(a.a.throbber_small)
               : "medium" == this.props.size
-              ? e.push(l.a.throbber_medium)
+              ? e.push(a.a.throbber_medium)
               : "xlarge" == this.props.size
-              ? e.push(l.a.throbber_xlarge)
+              ? e.push(a.a.throbber_xlarge)
               : "xxlarge" == this.props.size
-              ? e.push(l.a.throbber_xxlarge)
-              : e.push(l.a.throbber_large);
+              ? e.push(a.a.throbber_xxlarge)
+              : e.push(a.a.throbber_large);
           }),
           (e.prototype.render = function() {
-            var e = [l.a.LoadingWrapper, "SteamLogoThrobber"];
+            var e = [a.a.LoadingWrapper, "SteamLogoThrobber"];
             this.AddSizeClass(e),
-              void 0 === this.props.string && e.push(l.a.noString),
+              void 0 === this.props.string && e.push(a.a.noString),
               this.props.className && e.push(this.props.className),
-              this.props.static && e.push(l.a.Static);
+              this.props.static && e.push(a.a.Static);
             var t = o.a.createElement(
               "div",
               { className: e.join(" ") },
               o.a.createElement(
                 "div",
-                { className: l.a.Throbber },
-                o.a.createElement(i.fb, { className: l.a.base }),
-                o.a.createElement(i.fb, { className: l.a.blur })
+                { className: a.a.Throbber },
+                o.a.createElement(i.fb, { className: a.a.base }),
+                o.a.createElement(i.fb, { className: a.a.blur })
               )
             );
             return o.a.createElement(
@@ -240,14 +240,14 @@
               {
                 className:
                   "center" == this.props.position
-                    ? l.a.throbber_center_wrapper
+                    ? a.a.throbber_center_wrapper
                     : ""
               },
               t,
               Boolean(this.props.string) &&
                 o.a.createElement(
                   "div",
-                  { className: l.a.ThrobberText },
+                  { className: a.a.ThrobberText },
                   this.props.string
                 )
             );
@@ -311,106 +311,106 @@
         return h;
       }),
       r.d(t, "i", function() {
-        return m;
-      }),
-      r.d(t, "t", function() {
         return f;
       }),
-      r.d(t, "eb", function() {
-        return p;
+      r.d(t, "t", function() {
+        return m;
       }),
-      r.d(t, "qb", function() {
+      r.d(t, "eb", function() {
         return d;
       }),
+      r.d(t, "qb", function() {
+        return p;
+      }),
       r.d(t, "rb", function() {
-        return E;
+        return g;
       }),
       r.d(t, "nb", function() {
-        return _;
+        return x;
       }),
       r.d(t, "Q", function() {
-        return g;
+        return w;
       }),
       r.d(t, "L", function() {
         return v;
       }),
       r.d(t, "ob", function() {
-        return k;
-      }),
-      r.d(t, "O", function() {
-        return x;
-      }),
-      r.d(t, "N", function() {
-        return w;
-      }),
-      r.d(t, "ab", function() {
         return b;
       }),
+      r.d(t, "O", function() {
+        return _;
+      }),
+      r.d(t, "N", function() {
+        return E;
+      }),
+      r.d(t, "ab", function() {
+        return k;
+      }),
       r.d(t, "h", function() {
-        return L;
+        return y;
       }),
       r.d(t, "m", function() {
-        return S;
-      }),
-      r.d(t, "E", function() {
         return M;
       }),
+      r.d(t, "E", function() {
+        return L;
+      }),
       r.d(t, "fb", function() {
-        return y;
+        return S;
       }),
       r.d(t, "d", function() {
         return N;
       }),
       r.d(t, "o", function() {
-        return C;
-      }),
-      r.d(t, "G", function() {
-        return I;
-      }),
-      r.d(t, "J", function() {
-        return G;
-      }),
-      r.d(t, "U", function() {
-        return B;
-      }),
-      r.d(t, "T", function() {
         return T;
       }),
-      r.d(t, "ib", function() {
+      r.d(t, "G", function() {
+        return B;
+      }),
+      r.d(t, "J", function() {
+        return C;
+      }),
+      r.d(t, "U", function() {
+        return I;
+      }),
+      r.d(t, "T", function() {
         return V;
+      }),
+      r.d(t, "ib", function() {
+        return G;
       }),
       r.d(t, "w", function() {
         return z;
       }),
       r.d(t, "x", function() {
-        return D;
+        return O;
       }),
       r.d(t, "n", function() {
-        return R;
+        return A;
       }),
       r.d(t, "H", function() {
-        return A;
+        return W;
       }),
       r.d(t, "cb", function() {
         return F;
       }),
       r.d(t, "mb", function() {
-        return O;
+        return D;
       }),
       r.d(t, "y", function() {
-        return W;
-      }),
-      r.d(t, "W", function() {
         return P;
       }),
-      r.d(t, "X", function() {
+      r.d(t, "W", function() {
         return j;
       }),
+      r.d(t, "X", function() {
+        return H;
+      }),
       r.d(t, "e", function() {
-        return U;
+        return R;
       }),
       r.d(t, "K", function() {
-        return H;
+        return U;
       }),
       r.d(t, "lb", function() {
         return Y;
@@ -422,13 +422,13 @@
         return q;
       }),
       r.d(t, "v", function() {
-        return J;
-      }),
-      r.d(t, "kb", function() {
         return K;
       }),
-      r.d(t, "sb", function() {
+      r.d(t, "kb", function() {
         return Z;
+      }),
+      r.d(t, "sb", function() {
+        return J;
       }),
       r.d(t, "jb", function() {
         return Q;
@@ -458,10 +458,10 @@
         return ie;
       }),
       r.d(t, "S", function() {
-        return ae;
+        return le;
       }),
       r.d(t, "s", function() {
-        return le;
+        return ae;
       }),
       r.d(t, "A", function() {
         return se;
@@ -473,53 +473,53 @@
         return he;
       }),
       r.d(t, "M", function() {
-        return me;
-      }),
-      r.d(t, "c", function() {
         return fe;
       }),
-      r.d(t, "D", function() {
-        return pe;
+      r.d(t, "c", function() {
+        return me;
       }),
-      r.d(t, "b", function() {
+      r.d(t, "D", function() {
         return de;
       }),
+      r.d(t, "b", function() {
+        return pe;
+      }),
       r.d(t, "db", function() {
-        return Ee;
+        return ge;
       }),
       r.d(t, "I", function() {
-        return _e;
+        return xe;
       }),
       r.d(t, "B", function() {
-        return ge;
+        return we;
       }),
       r.d(t, "k", function() {
         return ve;
       }),
       r.d(t, "l", function() {
-        return ke;
-      }),
-      r.d(t, "hb", function() {
-        return xe;
-      }),
-      r.d(t, "gb", function() {
-        return we;
-      }),
-      r.d(t, "V", function() {
         return be;
       }),
+      r.d(t, "hb", function() {
+        return _e;
+      }),
+      r.d(t, "gb", function() {
+        return Ee;
+      }),
+      r.d(t, "V", function() {
+        return ke;
+      }),
       r.d(t, "pb", function() {
-        return Le;
+        return ye;
       }),
       r.d(t, "f", function() {
-        return Se;
+        return Me;
       });
     var n = r("mrSG"),
       o = r("q1tI"),
       c = r("2i24"),
       i = r.n(c),
-      a = r("exH9"),
-      l = r("YyVH");
+      l = r("exH9"),
+      a = r("YyVH");
     r("Z7Ow");
     function s() {
       return o.createElement(
@@ -591,7 +591,7 @@
         )
       );
     }
-    function m() {
+    function f() {
       return o.createElement(
         "svg",
         {
@@ -609,7 +609,7 @@
         })
       );
     }
-    function f() {
+    function m() {
       return o.createElement(
         "svg",
         {
@@ -665,7 +665,7 @@
         })
       );
     }
-    function p() {
+    function d() {
       return o.createElement(
         "svg",
         {
@@ -694,7 +694,7 @@
         )
       );
     }
-    function d(e) {
+    function p(e) {
       return o.createElement(
         "svg",
         Object(n.a)(
@@ -719,7 +719,7 @@
         )
       );
     }
-    function E() {
+    function g() {
       return o.createElement(
         "svg",
         {
@@ -755,7 +755,7 @@
         })
       );
     }
-    function _(e) {
+    function x(e) {
       return o.createElement(
         "svg",
         {
@@ -847,7 +847,7 @@
           )
       );
     }
-    function g(e) {
+    function w(e) {
       return o.createElement(
         "svg",
         {
@@ -918,7 +918,7 @@
         })
       );
     }
-    function k(e) {
+    function b(e) {
       return o.createElement(
         "svg",
         {
@@ -990,7 +990,7 @@
         )
       );
     }
-    function x() {
+    function _() {
       return o.createElement(
         "svg",
         {
@@ -1011,7 +1011,7 @@
         })
       );
     }
-    function w() {
+    function E() {
       return o.createElement(
         "svg",
         {
@@ -1035,7 +1035,7 @@
         })
       );
     }
-    function b(e) {
+    function k(e) {
       return o.createElement(
         "svg",
         {
@@ -1123,7 +1123,7 @@
         )
       );
     }
-    function L() {
+    function y() {
       return o.createElement(
         "svg",
         {
@@ -1148,7 +1148,7 @@
         })
       );
     }
-    function S(e) {
+    function M(e) {
       var t = e.highlightColor || "#00ccff",
         r = e.color || "#2d73ff";
       return o.createElement(
@@ -1228,7 +1228,7 @@
         })
       );
     }
-    function M() {
+    function L() {
       return o.createElement(
         "svg",
         {
@@ -1258,7 +1258,7 @@
         })
       );
     }
-    function y(e) {
+    function S(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -1537,7 +1537,7 @@
         })
       );
     }
-    function C(e) {
+    function T(e) {
       return o.createElement(
         "svg",
         {
@@ -1573,7 +1573,7 @@
           })
       );
     }
-    function I() {
+    function B() {
       return o.createElement(
         "svg",
         {
@@ -1609,7 +1609,7 @@
         })
       );
     }
-    function G() {
+    function C() {
       return o.createElement(
         "svg",
         {
@@ -1635,7 +1635,7 @@
         })
       );
     }
-    function B() {
+    function I() {
       return o.createElement(
         "svg",
         {
@@ -1668,7 +1668,7 @@
         })
       );
     }
-    function T() {
+    function V() {
       return o.createElement(
         "svg",
         {
@@ -1696,7 +1696,7 @@
         })
       );
     }
-    function V() {
+    function G() {
       return o.createElement(
         "svg",
         {
@@ -1796,7 +1796,7 @@
         })
       );
     }
-    function D(e) {
+    function O(e) {
       return o.createElement(
         "svg",
         {
@@ -1860,7 +1860,7 @@
         )
       );
     }
-    function R() {
+    function A() {
       return o.createElement(
         "svg",
         {
@@ -1895,7 +1895,7 @@
         })
       );
     }
-    function A(e) {
+    function W(e) {
       return o.createElement(
         "svg",
         {
@@ -1934,7 +1934,7 @@
       );
     }
     function F(e) {
-      var t = Object(a.a)(
+      var t = Object(l.a)(
         "SVGIcon_Button",
         "SVGIcon_SteamLogo",
         e && e.className
@@ -1967,7 +1967,7 @@
         })
       );
     }
-    function O() {
+    function D() {
       return o.createElement(
         "svg",
         {
@@ -1995,7 +1995,7 @@
         })
       );
     }
-    function W() {
+    function P() {
       return o.createElement(
         "svg",
         {
@@ -2017,7 +2017,7 @@
         )
       );
     }
-    function P() {
+    function j() {
       return o.createElement(
         "svg",
         {
@@ -2054,7 +2054,7 @@
         )
       );
     }
-    function j() {
+    function H() {
       return o.createElement(
         "svg",
         {
@@ -2082,7 +2082,7 @@
         })
       );
     }
-    function U() {
+    function R() {
       return o.createElement(
         "svg",
         {
@@ -2103,7 +2103,7 @@
         })
       );
     }
-    function H() {
+    function U() {
       return o.createElement(
         "svg",
         {
@@ -2230,7 +2230,7 @@
         })
       );
     }
-    function J() {
+    function K() {
       return o.createElement(
         "svg",
         {
@@ -2250,7 +2250,7 @@
         })
       );
     }
-    function K() {
+    function Z() {
       return o.createElement(
         "svg",
         {
@@ -2270,7 +2270,7 @@
         })
       );
     }
-    function Z() {
+    function J() {
       return o.createElement(
         "svg",
         {
@@ -2437,7 +2437,7 @@
       );
     }
     function re(e) {
-      var t = Object(a.a)(
+      var t = Object(l.a)(
         "SVGIcon_Button",
         e.filled ? "SVGIcon_Star_Filled" : "SVGIcon_Star_Unfilled"
       );
@@ -2633,7 +2633,7 @@
       );
     }
     function ie(e) {
-      var t = l.c(e.percentComplete, 0, 100, 800, 0);
+      var t = a.c(e.percentComplete, 0, 100, 800, 0);
       return o.createElement(
         "svg",
         {
@@ -2660,7 +2660,7 @@
         })
       );
     }
-    function ae() {
+    function le() {
       return o.createElement(
         "svg",
         {
@@ -2688,7 +2688,7 @@
         })
       );
     }
-    function le() {
+    function ae() {
       return o.createElement(
         "svg",
         {
@@ -2828,7 +2828,7 @@
         })
       );
     }
-    function me() {
+    function fe() {
       return o.createElement(
         "svg",
         {
@@ -2856,7 +2856,7 @@
         })
       );
     }
-    function fe() {
+    function me() {
       return o.createElement(
         "svg",
         {
@@ -2880,7 +2880,7 @@
         })
       );
     }
-    function pe() {
+    function de() {
       return o.createElement(
         "svg",
         {
@@ -2903,7 +2903,7 @@
         })
       );
     }
-    function de() {
+    function pe() {
       return o.createElement(
         "svg",
         {
@@ -2933,7 +2933,7 @@
         )
       );
     }
-    function Ee() {
+    function ge() {
       return o.createElement(
         "svg",
         {
@@ -2954,7 +2954,7 @@
         )
       );
     }
-    function _e() {
+    function xe() {
       return o.createElement(
         "svg",
         {
@@ -2970,7 +2970,7 @@
         o.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" })
       );
     }
-    function ge() {
+    function we() {
       return o.createElement(
         "svg",
         {
@@ -3010,7 +3010,7 @@
         })
       );
     }
-    function ke(e) {
+    function be(e) {
       return o.createElement(
         "svg",
         {
@@ -3030,7 +3030,7 @@
         })
       );
     }
-    function xe(e) {
+    function _e(e) {
       return o.createElement(
         "svg",
         {
@@ -3050,7 +3050,7 @@
         })
       );
     }
-    function we(e) {
+    function Ee(e) {
       return o.createElement(
         "svg",
         {
@@ -3071,7 +3071,7 @@
         })
       );
     }
-    function be(e) {
+    function ke(e) {
       return o.createElement(
         "svg",
         {
@@ -3096,7 +3096,7 @@
         })
       );
     }
-    function Le(e) {
+    function ye(e) {
       return o.createElement(
         "svg",
         {
@@ -3121,7 +3121,7 @@
         })
       );
     }
-    function Se(e) {
+    function Me(e) {
       return o.createElement(
         "svg",
         { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -3151,27 +3151,50 @@
   },
   BNtT: function(e, t, r) {
     "use strict";
-    r.d(t, "c", function() {
-      return c;
-    }),
-      r.d(t, "b", function() {
-        return i;
-      }),
-      r.d(t, "a", function() {
-        return l;
-      });
-    var f = r("mrSG"),
+    var l = r("mrSG"),
       a = r("TLQK"),
-      n = r("vDqi"),
-      p = r.n(n),
-      d = r("mgoM");
-    function E(e, t) {
+      s = r("mgoM");
+    function u(e) {
+      var t = {},
+        r = {},
+        n = window.document.createElement("canvas");
+      (n.style.position = "absolute"),
+        (n.style.visibility = "hidden"),
+        window.document.body.appendChild(n);
+      for (var c = n.getContext("2d"), o = 0, i = e; o < i.length; o++)
+        for (var l = i[o], a = 0, s = Object.keys(l); a < s.length; a++) {
+          var u = s[a],
+            h = c.measureText(l[u]).width;
+          (u in t && !(r[u] < h)) || ((t[u] = l[u]), (r[u] = h));
+        }
+      return window.document.body.removeChild(n), t;
+    }
+    function o(i) {
+      return Object(l.b)(this, void 0, void 0, function() {
+        var t, r, n, c, o;
+        return Object(l.e)(this, function(e) {
+          switch (e.label) {
+            case 0:
+              for (t = [], r = 0; r < 29; r++)
+                (n = Object(s.d)(r)),
+                  (c = "korean" == n ? "koreana" : n),
+                  t.push(i(c));
+              return (o = u), [4, Promise.all(t)];
+            case 1:
+              return [2, o.apply(void 0, [e.sent()])];
+          }
+        });
+      });
+    }
+    var n = r("vDqi"),
+      c = r.n(n);
+    function p(e, t) {
       var r = document.createElement("link");
       (r.href = e), (r.type = "text/css"), (r.rel = "stylesheet");
       var n = t.parentElement;
       n.insertBefore(r, t), n.removeChild(t);
     }
-    function c() {
+    function i() {
       SteamClient._internal.RegisterForStyleChanges(function(e) {
         for (
           var t = "https://steamloopback.host/",
@@ -3183,138 +3206,118 @@
         ) {
           var o = n[c],
             i = o.href,
-            a = "";
-          i.startsWith(t) && (a = i.substr(t.length));
-          var l = a.indexOf("?");
-          0 <= l && (a = a.substr(0, l));
+            l = "";
+          i.startsWith(t) && (l = i.substr(t.length));
+          var a = l.indexOf("?");
+          0 <= a && (l = l.substr(0, a));
           for (var s = 0, u = e; s < u.length; s++) {
             var h = u[s];
-            if (a == h) {
+            if (l == h) {
               r.push({ sheet: o, newRelative: h });
               break;
             }
           }
         }
-        for (var m = 0, f = r; m < f.length; m++) {
-          var p = f[m];
-          E(p.newRelative, p.sheet);
+        for (var f = 0, m = r; f < m.length; f++) {
+          var d = m[f];
+          p(d.newRelative, d.sheet);
         }
       });
     }
-    function o(h, m) {
-      return Object(f.b)(this, void 0, void 0, function() {
-        var r, n, c, o, i, a, l, s, u;
-        return Object(f.e)(this, function(e) {
+    function h(t, r) {
+      return Object(l.b)(this, void 0, void 0, function() {
+        return Object(l.e)(this, function(e) {
           switch (e.label) {
             case 0:
-              (r = {}), (n = {}), (c = 0), (e.label = 1);
+              return [
+                4,
+                c.a.get(
+                  "https://steamloopback.host/localization/" +
+                    t +
+                    "_" +
+                    r +
+                    ".js"
+                )
+              ];
             case 1:
-              return c < 29
-                ? ("korean" == (o = Object(d.d)(c)) && (o = "koreana"),
-                  [
-                    4,
-                    (function(t, r) {
-                      return Object(f.b)(this, void 0, void 0, function() {
-                        return Object(f.e)(this, function(e) {
-                          switch (e.label) {
-                            case 0:
-                              return [
-                                4,
-                                p.a.get(
-                                  "https://steamloopback.host/localization/" +
-                                    t +
-                                    "_" +
-                                    r +
-                                    ".js"
-                                )
-                              ];
-                            case 1:
-                              return [2, e.sent().data];
-                          }
-                        });
-                      });
-                    })(h, o)
-                  ])
-                : [3, 4];
-            case 2:
-              for (i = e.sent(), a = 0, l = Object.keys(i); a < l.length; a++)
-                (s = l[a]),
-                  (t = i[s]),
-                  (u = document
-                    .getElementById("loc-string-measurer")
-                    .getContext("2d")
-                    .measureText(t).width),
-                  (s in r && !(n[s] < u)) || ((r[s] = i[s]), (n[s] = u));
-              e.label = 3;
-            case 3:
-              return c++, [3, 1];
-            case 4:
-              return m(r), [2];
+              return [2, e.sent().data];
           }
-          var t;
         });
       });
     }
-    function i() {
-      var t,
-        r,
-        e = [];
-      return (
-        e.push(
-          o("steamui", function(e) {
-            t = e;
-          })
-        ),
-        e.push(
-          o("shared", function(e) {
-            r = e;
-          })
-        ),
-        Promise.all(e).then(function() {
-          a.c.InitFromObjects(t, null, r, null);
-        })
-      );
+    function f() {
+      return Object(l.b)(this, void 0, void 0, function() {
+        return Object(l.e)(this, function(e) {
+          return (
+            (function(n, c) {
+              Object(l.b)(this, void 0, void 0, function() {
+                var t, r;
+                return Object(l.e)(this, function(e) {
+                  switch (e.label) {
+                    case 0:
+                      return [4, o(n)];
+                    case 1:
+                      return (t = e.sent()), c ? [4, o(c)] : [3, 3];
+                    case 2:
+                      (r = e.sent()),
+                        (t = Object(l.a)(Object(l.a)({}, r), t)),
+                        (e.label = 3);
+                    case 3:
+                      return a.c.AddTokens(t), [2];
+                  }
+                });
+              });
+            })(
+              function(e) {
+                return h("steamui", e);
+              },
+              function(e) {
+                return h("shared", e);
+              }
+            ),
+            [2]
+          );
+        });
+      });
     }
-    function l(e) {
-      function t(e, t, r) {
-        return p.a
-          .get("https://steamloopback.host/localization/" + e + "_" + t + ".js")
-          .then(function(e) {
-            r(e.data);
-          });
-      }
-      var r,
-        n,
-        c,
-        o,
-        i = [];
-      return (
-        i.push(
-          t("steamui", e, function(e) {
-            r = e;
-          })
-        ),
-        i.push(
-          t("shared", e, function(e) {
-            c = e;
-          })
-        ),
-        "english" != e &&
-          (i.push(
-            t("steamui", "english", function(e) {
-              n = e;
-            })
-          ),
-          i.push(
-            t("shared", "english", function(e) {
-              o = e;
-            })
-          )),
-        Promise.all(i).then(function() {
-          a.c.InitFromObjects(r, n, c, o);
-        })
-      );
+    function m(i) {
+      return Object(l.b)(this, void 0, void 0, function() {
+        var t, r, n, c, o;
+        return Object(l.e)(this, function(e) {
+          switch (e.label) {
+            case 0:
+              return [
+                4,
+                Promise.all([
+                  h("steamui", i),
+                  "english" == i ? null : h("steamui", "english"),
+                  h("shared", i),
+                  "english" == i ? null : h("shared", "english")
+                ])
+              ];
+            case 1:
+              return (
+                (t = e.sent()),
+                (r = t[0]),
+                (n = t[1]),
+                (c = t[2]),
+                (o = t[3]),
+                a.c.InitFromObjects(r, n, c, o),
+                [2]
+              );
+          }
+        });
+      });
     }
+    r.d(t, "c", function() {
+      return i;
+    }),
+      r.d(t, "b", function() {
+        return f;
+      }),
+      r.d(t, "a", function() {
+        return m;
+      });
   },
   CdLH: function(e, t, r) {
     "use strict";
@@ -3331,10 +3334,10 @@
         return i;
       }),
       r.d(t, "f", function() {
-        return a;
+        return l;
       }),
       r.d(t, "a", function() {
-        return l;
+        return a;
       }),
       r.d(t, "g", function() {
         return s;
@@ -3360,12 +3363,12 @@
     function i(e) {
       return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
     }
-    function a(t) {
+    function l(t) {
       return new Promise(function(e) {
         return setTimeout(e, t);
       });
     }
-    function l() {
+    function a() {
       return Math.floor(Date.now() / 1e3);
     }
     function s(e) {
@@ -3374,119 +3377,178 @@
   },
   TLQK: function(e, t, r) {
     "use strict";
-    r.d(t, "d", function() {
-      return h;
-    }),
-      r.d(t, "k", function() {
-        return a;
-      }),
-      r.d(t, "i", function() {
-        return m;
-      }),
-      r.d(t, "n", function() {
-        return f;
-      }),
-      r.d(t, "h", function() {
-        return p;
-      }),
-      r.d(t, "l", function() {
-        return d;
-      }),
-      r.d(t, "j", function() {
-        return E;
-      }),
-      r.d(t, "m", function() {
-        return v;
-      }),
-      r.d(t, "e", function() {
-        return k;
-      }),
-      r.d(t, "f", function() {
-        return x;
-      }),
-      r.d(t, "g", function() {
-        return M;
-      }),
-      r.d(t, "a", function() {
-        return R;
-      }),
-      r.d(t, "b", function() {
-        return A;
-      }),
-      r.d(t, "c", function() {
-        return F;
-      });
     var s = r("mrSG"),
       u = r("q1tI"),
-      l = r("Gp1o"),
-      i = (r("r64O"), r("CdLH")),
       n = r("mgoM"),
       c = r("lkRc"),
-      o = (function() {
-        function e() {
-          (this.m_mapTokens = new Map()),
-            (this.m_mapFallbackTokens = new Map());
-        }
-        return (
-          (e.prototype.InitFromObjects = function(e, t, r, n, c) {
-            c || this.m_mapTokens.clear();
-            var o = Object(s.a)(Object(s.a)({}, r || {}), e),
-              i = Object(s.a)(Object(s.a)({}, n || {}), t || {});
-            this.AddTokens(o, i);
-          }),
-          (e.prototype.InitDirect = function(e, t) {
-            this.m_mapTokens.clear(),
-              this.m_mapFallbackTokens.clear(),
-              this.AddTokens(e, t);
-          }),
-          (e.prototype.AddTokens = function(t, r) {
-            var n = this;
-            Object.keys(t).forEach(function(e) {
-              n.m_mapTokens.set(e, t[e]);
-            }),
-              r &&
-                Object.keys(r).forEach(function(e) {
-                  n.m_mapTokens.has(e) || n.m_mapTokens.set(e, r[e]),
-                    n.m_mapFallbackTokens.set(e, r[e]);
-                });
-          }),
-          (e.prototype.GetPreferredLocales = function() {
-            return this.m_rgLocalesToUse
-              ? this.m_rgLocalesToUse
-              : navigator && navigator.languages
-              ? navigator.languages
-              : ["en-US"];
-          }),
-          (e.prototype.GetELanguageFallbackOrder = function() {
-            var t = new Array();
-            return (
-              t.push(Object(n.f)(c.b.LANGUAGE)),
-              (c.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
-                e.value != c.b.LANGUAGE && t.push(Object(n.f)(e.value));
-              }),
-              t
-            );
-          }),
-          (e.prototype.SetPreferredLocales = function(e) {
-            this.m_rgLocalesToUse = e;
-          }),
-          (e.prototype.LocalizeString = function(e) {
-            if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-            var t = this.m_mapTokens.get(e.substring(1));
-            return void 0 === t ? "" : t;
-          }),
-          (e.prototype.LocalizeStringFromFallback = function(e) {
-            if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
-            var t = this.m_mapFallbackTokens.get(e.substring(1));
-            return void 0 === t ? "" : t;
-          }),
-          e
-        );
-      })();
+      i = (r("r64O"), r("CdLH")),
+      a = r("Gp1o");
+    function o(e, t) {
+      void 0 === t && (t = !1);
+      var r = t ? "#TimeInterval_" : "#TimeSince_";
+      return e >= 2 * i.e.PerYear
+        ? y(r + "XYears", Math.floor(e / i.e.PerYear))
+        : e >= i.e.PerYear
+        ? (e -= i.e.PerYear) >= 2 * i.e.PerMonth
+          ? y(r + "1YearXMonths", Math.floor(e / i.e.PerMonth))
+          : y(r + "1Year")
+        : e >= 2 * i.e.PerMonth
+        ? y(r + "XMonths", Math.floor(e / i.e.PerMonth))
+        : e >= 2 * i.e.PerWeek
+        ? y(r + "XWeeks", Math.floor(e / i.e.PerWeek))
+        : e >= i.e.PerWeek
+        ? y(r + "1Week", Math.floor(e / i.e.PerWeek))
+        : e >= 2 * i.e.PerDay
+        ? y(r + "XDays", Math.floor(e / i.e.PerDay))
+        : e >= i.e.PerDay
+        ? (e -= i.e.PerDay) >= 2 * i.e.PerHour
+          ? y(r + "1DayXHours", Math.floor(e / i.e.PerHour))
+          : y(r + "1Day")
+        : e >= 2 * i.e.PerHour
+        ? y(r + "XHours", Math.floor(e / i.e.PerHour))
+        : e >= i.e.PerHour
+        ? (e -= i.e.PerHour) >= 2 * i.e.PerMinute
+          ? y(r + "1HourXMinutes", Math.floor(e / i.e.PerMinute))
+          : y(r + "1Hour")
+        : e >= 2 * i.e.PerMinute
+        ? y(r + "XMinutes", Math.floor(e / i.e.PerMinute))
+        : e >= i.e.PerMinute
+        ? y(r + "1Minute")
+        : y(r + "LessThanAMinute");
+    }
+    function l(e, t) {
+      var r = {
+        weekday: "short",
+        month: "long",
+        day: "numeric",
+        year: t ? void 0 : "numeric"
+      };
+      return new Date(1e3 * e).toLocaleDateString(T.GetPreferredLocales(), r);
+    }
     function h(e) {
+      var t = new Date(1e3 * e),
+        r = t.setHours(0, 0, 0, 0),
+        n = m.get(r);
+      if (n) return n;
+      return (
+        (n = t.toLocaleDateString(T.GetPreferredLocales(), {
+          year: "numeric",
+          month: "short",
+          day: "numeric"
+        })),
+        m.set(r, n),
+        n
+      );
+    }
+    function f(e) {
+      return new Date(1e3 * e).toLocaleTimeString(T.GetPreferredLocales(), {
+        hour: "numeric",
+        minute: "numeric"
+      });
+    }
+    var m = new Map(),
+      d = new Map();
+    function p(e, t) {
+      var r = new Date(),
+        n = new Date(1e3 * e);
+      if (n.getFullYear() != r.getFullYear()) return h(e);
+      a.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
+      var c = new Date();
+      if ((c.setHours(0, 0, 0, 0), c <= n)) {
+        if ((c.setDate(c.getDate() + 1), n < c)) return y("#Time_Today");
+        if ((c.setDate(c.getDate() + 1), n < c)) return y("#Time_Tomorrow");
+      } else if ((c.setDate(c.getDate() - 1), c <= n))
+        return y("#Time_Yesterday");
+      var o = { month: t ? "long" : "short", day: "numeric" },
+        i = n.setHours(0, 0, 0, 0) + o.month,
+        l = d.get(i);
+      return (
+        l ||
+        ((l = n.toLocaleDateString(T.GetPreferredLocales(), o)), d.set(i, l), l)
+      );
+    }
+    function g(e) {
+      var t = new Date(1e3 * e),
+        r = new Date();
+      if (r < t)
+        return (
+          a.b(t.getTime() - r.getTime()),
+          t.getFullYear() == r.getFullYear() ? _(t) : k(t)
+        );
+      a.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
+      var n = new Date();
+      if ((n.setHours(0, 0, 0, 0), n <= t)) return y("#Time_Today");
+      if ((n.setDate(n.getDate() - 1), n <= t)) return y("#Time_Yesterday");
+      if ((n.setDate(n.getDate() - 5), n <= t)) return y("#TimeSince_ThisWeek");
+      var c = new Date(n);
+      if (
+        (n.setDate(n.getDate() - 21),
+        n <= t ||
+          (t.getMonth() == r.getMonth() && t.getFullYear() == r.getFullYear()))
+      ) {
+        var o =
+          Math.floor((c.valueOf() - t.valueOf()) / (1e3 * i.e.PerWeek)) + 1;
+        return 1 == o ? y("#TimeSince_1Week") : y("#TimeSince_XWeeks", o);
+      }
+      return t.getFullYear() == r.getFullYear() ? _(t) : k(t);
+    }
+    function x(e) {
+      var t = new Date(1e3 * e),
+        r = new Date();
+      a.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
+      var n = new Date();
+      return (
+        n.getDate() < 15 && n.setMonth(n.getMonth() - 1),
+        (n = Object(i.d)(n)) <= t
+          ? y("#Time_Recent")
+          : t.getFullYear() == r.getFullYear()
+          ? _(t)
+          : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
+          ? k(t)
+          : E(t)
+      );
+    }
+    new Map();
+    var w = new Map(),
+      v = new Map(),
+      b = new Map();
+    function _(e) {
+      var t = w.get(e.getMonth());
+      return (
+        t ||
+        ((t = e.toLocaleDateString(T.GetPreferredLocales(), { month: "long" })),
+        w.set(e.getMonth(), t),
+        t)
+      );
+    }
+    function E(e) {
+      var t = v.get(e.getFullYear());
+      return (
+        t ||
+        ((t = e.toLocaleDateString(T.GetPreferredLocales(), {
+          year: "numeric"
+        })),
+        v.set(e.getFullYear(), t),
+        t)
+      );
+    }
+    function k(e) {
+      var t = e.getMonth() + 12 * e.getFullYear(),
+        r = b.get(t);
+      return (
+        r ||
+        ((r = e.toLocaleDateString(T.GetPreferredLocales(), {
+          month: "long",
+          year: "numeric"
+        })),
+        b.set(t, r),
+        r)
+      );
+    }
+    function y(e) {
       for (var n = [], t = 1; t < arguments.length; t++)
         n[t - 1] = arguments[t];
-      var r = F.LocalizeString(e);
+      var r = T.LocalizeString(e);
       return r
         ? (0 < n.length &&
             (r = r.replace(/%(?:(\d+)\$)?s/g, function(e, t) {
@@ -3499,395 +3561,169 @@
           r)
         : e;
     }
-    function a(e) {
+    function M(e) {
       for (var t = [], r = 1; r < arguments.length; r++)
         t[r - 1] = arguments[r];
-      var n = F.LocalizeString(e);
+      var n = T.LocalizeString(e);
       if (!n) return e;
-      for (var c, o = [], i = /(.*?)%(\d+)\$s/g, a = 0; (c = i.exec(n)); ) {
-        (a += c[0].length), o.push(c[1]);
-        var l = parseInt(c[2]);
-        1 <= l && l <= t.length && o.push(t[l - 1]);
+      for (var c, o = [], i = /(.*?)%(\d+)\$s/g, l = 0; (c = i.exec(n)); ) {
+        (l += c[0].length), o.push(c[1]);
+        var a = parseInt(c[2]);
+        1 <= a && a <= t.length && o.push(t[a - 1]);
       }
       return (
-        o.push(n.substr(a)),
+        o.push(n.substr(l)),
         u.createElement.apply(u, Object(s.g)([u.Fragment, null], o))
       );
     }
-    function m(e, t) {
+    function L(e, t) {
       for (var r = [], n = 2; n < arguments.length; n++)
         r[n - 2] = arguments[n];
-      return h.apply(
+      return y.apply(
         void 0,
         1 === t || "1" === t
           ? Object(s.g)([e, t], r)
           : Object(s.g)([e + "_Plural", t], r)
       );
     }
-    function f(e, t) {
-      void 0 === t && (t = !1);
-      var r = t ? "#TimeInterval_" : "#TimeSince_";
-      return e >= 2 * i.e.PerYear
-        ? h(r + "XYears", Math.floor(e / i.e.PerYear))
-        : e >= i.e.PerYear
-        ? (e -= i.e.PerYear) >= 2 * i.e.PerMonth
-          ? h(r + "1YearXMonths", Math.floor(e / i.e.PerMonth))
-          : h(r + "1Year")
-        : e >= 2 * i.e.PerMonth
-        ? h(r + "XMonths", Math.floor(e / i.e.PerMonth))
-        : e >= 2 * i.e.PerWeek
-        ? h(r + "XWeeks", Math.floor(e / i.e.PerWeek))
-        : e >= i.e.PerWeek
-        ? h(r + "1Week", Math.floor(e / i.e.PerWeek))
-        : e >= 2 * i.e.PerDay
-        ? h(r + "XDays", Math.floor(e / i.e.PerDay))
-        : e >= i.e.PerDay
-        ? (e -= i.e.PerDay) >= 2 * i.e.PerHour
-          ? h(r + "1DayXHours", Math.floor(e / i.e.PerHour))
-          : h(r + "1Day")
-        : e >= 2 * i.e.PerHour
-        ? h(r + "XHours", Math.floor(e / i.e.PerHour))
-        : e >= i.e.PerHour
-        ? (e -= i.e.PerHour) >= 2 * i.e.PerMinute
-          ? h(r + "1HourXMinutes", Math.floor(e / i.e.PerMinute))
-          : h(r + "1Hour")
-        : e >= 2 * i.e.PerMinute
-        ? h(r + "XMinutes", Math.floor(e / i.e.PerMinute))
-        : e >= i.e.PerMinute
-        ? h(r + "1Minute")
-        : h(r + "LessThanAMinute");
-    }
-    function p(e, t) {
-      var r = {
-        weekday: "short",
-        month: "long",
-        day: "numeric",
-        year: t ? void 0 : "numeric"
-      };
-      return new Date(1e3 * e).toLocaleDateString(F.GetPreferredLocales(), r);
-    }
-    function d(e) {
-      var t = new Date(1e3 * e),
-        r = t.setHours(0, 0, 0, 0),
-        n = _.get(r);
-      if (n) return n;
-      return (
-        (n = t.toLocaleDateString(F.GetPreferredLocales(), {
-          year: "numeric",
-          month: "short",
-          day: "numeric"
-        })),
-        _.set(r, n),
-        n
-      );
-    }
-    function E(e) {
-      return new Date(1e3 * e).toLocaleTimeString(F.GetPreferredLocales(), {
-        hour: "numeric",
-        minute: "numeric"
+    r.d(t, "d", function() {
+      return y;
+    }),
+      r.d(t, "k", function() {
+        return M;
+      }),
+      r.d(t, "i", function() {
+        return L;
+      }),
+      r.d(t, "b", function() {
+        return S;
+      }),
+      r.d(t, "a", function() {
+        return N;
+      }),
+      r.d(t, "c", function() {
+        return T;
+      }),
+      r.d(t, "e", function() {
+        return g;
+      }),
+      r.d(t, "f", function() {
+        return x;
+      }),
+      r.d(t, "g", function() {
+        return E;
+      }),
+      r.d(t, "h", function() {
+        return l;
+      }),
+      r.d(t, "j", function() {
+        return f;
+      }),
+      r.d(t, "l", function() {
+        return h;
+      }),
+      r.d(t, "m", function() {
+        return p;
+      }),
+      r.d(t, "n", function() {
+        return o;
       });
+    var S = {
+      english: "en",
+      german: "de",
+      french: "fr",
+      italian: "it",
+      korean: "ko",
+      latam: "es-419",
+      spanish: "es",
+      schinese: "zh-cn",
+      tchinese: "zh-tw",
+      russian: "ru",
+      thai: "th",
+      japanese: "ja",
+      brazilian: "pt-br",
+      portuguese: "pt",
+      polish: "pl",
+      danish: "da",
+      dutch: "nl",
+      finnish: "fi",
+      norwegian: "no",
+      swedish: "sv",
+      hungarian: "hu",
+      czech: "cs",
+      romanian: "ro",
+      turkish: "tr",
+      arabic: "ar",
+      bulgarian: "bg",
+      greek: "el",
+      ukrainian: "uk",
+      vietnamese: "vn"
+    };
+    function N() {
+      var e = "koreana" == c.b.LANGUAGE ? "korean" : c.b.LANGUAGE;
+      return S[e] || null;
     }
-    var _ = new Map(),
-      g = new Map();
-    function v(e, t) {
-      var r = new Date(),
-        n = new Date(1e3 * e);
-      if (n.getFullYear() != r.getFullYear()) return d(e);
-      l.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
-      var c = new Date();
-      if ((c.setHours(0, 0, 0, 0), c <= n)) {
-        if ((c.setDate(c.getDate() + 1), n < c)) return h("#Time_Today");
-        if ((c.setDate(c.getDate() + 1), n < c)) return h("#Time_Tomorrow");
-      } else if ((c.setDate(c.getDate() - 1), c <= n))
-        return h("#Time_Yesterday");
-      var o = { month: t ? "long" : "short", day: "numeric" },
-        i = n.setHours(0, 0, 0, 0) + o.month,
-        a = g.get(i);
-      return (
-        a ||
-        ((a = n.toLocaleDateString(F.GetPreferredLocales(), o)), g.set(i, a), a)
-      );
-    }
-    function k(e) {
-      var t = new Date(1e3 * e),
-        r = new Date();
-      if (r < t) return l.b(t.getTime() - r.getTime()), y(t);
-      l.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
-      var n = new Date();
-      if ((n.setHours(0, 0, 0, 0), n <= t)) return h("#Time_Today");
-      if ((n.setDate(n.getDate() - 1), n <= t)) return h("#Time_Yesterday");
-      if ((n.setDate(n.getDate() - 5), n <= t)) return h("#TimeSince_ThisWeek");
-      var c = new Date(n);
-      if (
-        (n.setDate(n.getDate() - 21),
-        n <= t ||
-          (t.getMonth() == r.getMonth() && t.getFullYear() == r.getFullYear()))
-      ) {
-        var o =
-          Math.floor((c.valueOf() - t.valueOf()) / (1e3 * i.e.PerWeek)) + 1;
-        return 1 == o ? h("#TimeSince_1Week") : h("#TimeSince_XWeeks", o);
+    var T = new ((function() {
+      function e() {
+        (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
       }
-      return t.getFullYear() == r.getFullYear() ? S(t) : y(t);
-    }
-    function x(e) {
-      var t = new Date(1e3 * e),
-        r = new Date();
-      l.b(new Date().setHours(24, 0, 0, 0) - r.getTime());
-      var n = new Date();
       return (
-        n.getDate() < 15 && n.setMonth(n.getMonth() - 1),
-        (n = Object(i.d)(n)) <= t
-          ? h("#Time_Recent")
-          : t.getFullYear() == r.getFullYear()
-          ? S(t)
-          : r.getMonth() < 6 && t.getFullYear() == r.getFullYear() - 1
-          ? y(t)
-          : M(t)
+        (e.prototype.InitFromObjects = function(e, t, r, n, c) {
+          c || this.m_mapTokens.clear();
+          var o = Object(s.a)(Object(s.a)({}, r || {}), e),
+            i = Object(s.a)(Object(s.a)({}, n || {}), t || {});
+          this.AddTokens(o, i);
+        }),
+        (e.prototype.InitDirect = function(e, t) {
+          this.m_mapTokens.clear(),
+            this.m_mapFallbackTokens.clear(),
+            this.AddTokens(e, t);
+        }),
+        (e.prototype.AddTokens = function(t, r) {
+          var n = this;
+          Object.keys(t).forEach(function(e) {
+            n.m_mapTokens.set(e, t[e]);
+          }),
+            r &&
+              Object.keys(r).forEach(function(e) {
+                n.m_mapTokens.has(e) || n.m_mapTokens.set(e, r[e]),
+                  n.m_mapFallbackTokens.set(e, r[e]);
+              });
+        }),
+        (e.prototype.GetPreferredLocales = function() {
+          return this.m_rgLocalesToUse
+            ? this.m_rgLocalesToUse
+            : navigator && navigator.languages
+            ? navigator.languages
+            : ["en-US"];
+        }),
+        (e.prototype.GetELanguageFallbackOrder = function() {
+          var t = new Array();
+          return (
+            t.push(Object(n.e)(c.b.LANGUAGE)),
+            (c.b.SUPPORTED_LANGUAGES || []).forEach(function(e) {
+              e.value != c.b.LANGUAGE && t.push(Object(n.e)(e.value));
+            }),
+            t
+          );
+        }),
+        (e.prototype.SetPreferredLocales = function(e) {
+          this.m_rgLocalesToUse = e;
+        }),
+        (e.prototype.LocalizeString = function(e) {
+          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
+          var t = this.m_mapTokens.get(e.substring(1));
+          return void 0 === t ? "" : t;
+        }),
+        (e.prototype.LocalizeStringFromFallback = function(e) {
+          if (!e || 0 == e.length || "#" != e.charAt(0)) return "";
+          var t = this.m_mapFallbackTokens.get(e.substring(1));
+          return void 0 === t ? "" : t;
+        }),
+        e
       );
-    }
-    new Map();
-    var w = new Map(),
-      b = new Map(),
-      L = new Map();
-    function S(e) {
-      var t = w.get(e.getMonth());
-      return (
-        t ||
-        ((t = e.toLocaleDateString(F.GetPreferredLocales(), { month: "long" })),
-        w.set(e.getMonth(), t),
-        t)
-      );
-    }
-    function M(e) {
-      var t = b.get(e.getFullYear());
-      return (
-        t ||
-        ((t = e.toLocaleDateString(F.GetPreferredLocales(), {
-          year: "numeric"
-        })),
-        b.set(e.getFullYear(), t),
-        t)
-      );
-    }
-    function y(e) {
-      var t = e.getMonth() + 12 * e.getFullYear(),
-        r = L.get(t);
-      return (
-        r ||
-        ((r = e.toLocaleDateString(F.GetPreferredLocales(), {
-          month: "long",
-          year: "numeric"
-        })),
-        L.set(t, r),
-        r)
-      );
-    }
-    var N = 44032,
-      C = 55203,
-      I = 588,
-      G = 28,
-      B = 12592,
-      T = [
-        12593,
-        12594,
-        12596,
-        12599,
-        12600,
-        12601,
-        12609,
-        12610,
-        12611,
-        12613,
-        12614,
-        12615,
-        12616,
-        12617,
-        12618,
-        12619,
-        12620,
-        12621,
-        12622
-      ],
-      V = [
-        0,
-        0,
-        0,
-        1,
-        0,
-        4,
-        4,
-        0,
-        0,
-        8,
-        8,
-        8,
-        8,
-        8,
-        8,
-        8,
-        0,
-        0,
-        17,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-      ],
-      z = [
-        -1,
-        0,
-        1,
-        9,
-        2,
-        12,
-        18,
-        3,
-        5,
-        0,
-        6,
-        7,
-        9,
-        16,
-        17,
-        18,
-        6,
-        7,
-        9,
-        9,
-        10,
-        11,
-        12,
-        14,
-        15,
-        16,
-        17,
-        18
-      ],
-      D = [
-        -1,
-        0,
-        1,
-        -1,
-        2,
-        -1,
-        -1,
-        3,
-        4,
-        5,
-        -1,
-        -1,
-        -1,
-        -1,
-        -1,
-        -1,
-        -1,
-        6,
-        7,
-        8,
-        -1,
-        9,
-        10,
-        11,
-        12,
-        13,
-        14,
-        15,
-        16,
-        17,
-        18,
-        -1
-      ];
-    function R(e, t) {
-      if (0 === e.length) return -1;
-      var r = t.charCodeAt(t.length - 1),
-        n = (function(e) {
-          return e < T[0] || e > T[T.length - 1] ? -1 : D[e - B];
-        })(r);
-      if (!((N <= r && r <= C) || 0 <= n)) return -1;
-      var c = t.slice(0, t.length - 1),
-        o = 0 < c.length ? e.indexOf(c) : 0;
-      if (-1 === o) return -1;
-      for (
-        var i = o, a = e.slice(o, e.length), l = (r - N) % G, s = N + n * I;
-        0 <= o;
-
-      ) {
-        if (a.length < c.length + 1) return -1;
-        var u = a.charCodeAt(c.length),
-          h = !1;
-        if (0 <= n) h = s <= u && u < s + I;
-        else if (r <= u)
-          switch (l) {
-            case 0:
-              h = u - r < G;
-              break;
-            case 1:
-              h = u - r == 2;
-              break;
-            case 4:
-              h = u - r < 3;
-              break;
-            case 8:
-              h = u - r < 8;
-              break;
-            case 17:
-              h = u - r < 2;
-          }
-        else if (a.length >= c.length + 2)
-          if (r - u < G)
-            if ((u - N) % G === V[l]) {
-              var m = z[l];
-              if (0 <= m) {
-                var f = N + m * I,
-                  p = a.charCodeAt(c.length + 1);
-                h = f <= p && p < f + I;
-              }
-            }
-        if (h) return i;
-        if (0 === (a = a.slice(1, a.length)).length) return -1;
-        if (-1 === (o = 0 < c.length ? a.indexOf(c) : 0)) return -1;
-        (i += o + 1), (a = a.slice(o, a.length));
-      }
-      return -1;
-    }
-    var A = {
-        english: "en",
-        german: "de",
-        french: "fr",
-        italian: "it",
-        korean: "ko",
-        latam: "es-419",
-        spanish: "es",
-        schinese: "zh-cn",
-        tchinese: "zh-tw",
-        russian: "ru",
-        thai: "th",
-        japanese: "ja",
-        brazilian: "pt-br",
-        portuguese: "pt",
-        polish: "pl",
-        danish: "da",
-        dutch: "nl",
-        finnish: "fi",
-        norwegian: "no",
-        swedish: "sv",
-        hungarian: "hu",
-        czech: "cs",
-        romanian: "ro",
-        turkish: "tr",
-        arabic: "ar",
-        bulgarian: "bg",
-        greek: "el",
-        ukrainian: "uk",
-        vietnamese: "vn"
-      },
-      F = new o();
-    window.LocalizationManager = F;
+    })())();
+    window.LocalizationManager = T;
   },
   YyVH: function(e, t, r) {
     "use strict";
@@ -3956,19 +3792,19 @@
       return o;
     }),
       r.d(t, "f", function() {
-        return a;
+        return l;
       }),
       r.d(t, "a", function() {
-        return l;
+        return a;
       }),
       r.d(t, "e", function() {
         return h;
       }),
       r.d(t, "c", function() {
-        return m;
+        return f;
       }),
       r.d(t, "d", function() {
-        return f;
+        return m;
       });
     var c,
       o = {
@@ -3998,6 +3834,7 @@
         IN_TENFOOT: !1,
         PLATFORM: "",
         SNR: "",
+        LAUNCHER_TYPE: 0,
         LOCAL_HOSTNAME: "",
         WEBAPI_BASE_URL: "",
         TOKEN_URL: "",
@@ -4020,7 +3857,7 @@
         DEV_MODE: !1,
         OFFLINE_MODE: !1
       },
-      a = {
+      l = {
         logged_in: !1,
         steamid: "",
         accountid: 0,
@@ -4034,7 +3871,7 @@
         short_url: "",
         country_code: ""
       },
-      l = {
+      a = {
         CLANSTEAMID: "",
         CLANACCOUNTID: 0,
         ANNOUNCEMENT_GID: "",
@@ -4042,6 +3879,9 @@
         APPID: 0,
         VANITY_ID: "",
         IS_CREATOR_HOME: !1,
+        IS_CURATOR: !1,
+        IS_OGG: !1,
+        CAN_UPLOAD_IMAGES: !1,
         HEADER_IMAGE: "",
         APP_NAME: "",
         HAS_ADULT_CONTENT: !1,
@@ -4092,7 +3932,7 @@
         }
       else console.error("Missing config element #", t);
     }
-    function m() {
+    function f() {
       var e = window.location.href;
       return e.startsWith(o.STORE_BASE_URL)
         ? o.STORE_BASE_URL
@@ -4106,7 +3946,7 @@
         ? o.STEAMTV_BASE_URL
         : "";
     }
-    function f() {
+    function m() {
       var e = window.location.href;
       return e.startsWith(o.STORE_BASE_URL)
         ? "store"
@@ -4135,69 +3975,64 @@
       r.d(t, "a", function() {
         return c;
       }),
-      r.d(t, "q", function() {
-        return a;
+      r.d(t, "p", function() {
+        return o;
       }),
-      r.d(t, "r", function() {
+      r.d(t, "q", function() {
+        return i;
+      }),
+      r.d(t, "h", function() {
         return l;
       }),
       r.d(t, "i", function() {
+        return a;
+      }),
+      r.d(t, "o", function() {
         return s;
       }),
       r.d(t, "j", function() {
         return u;
       }),
-      r.d(t, "p", function() {
-        return h;
-      }),
       r.d(t, "k", function() {
-        return m;
+        return h;
       }),
       r.d(t, "l", function() {
         return f;
       }),
-      r.d(t, "m", function() {
-        return p;
+      r.d(t, "n", function() {
+        return m;
       }),
-      r.d(t, "o", function() {
+      r.d(t, "m", function() {
         return d;
       }),
-      r.d(t, "n", function() {
-        return E;
+      r.d(t, "f", function() {
+        return p;
       }),
       r.d(t, "g", function() {
-        return _;
-      }),
-      r.d(t, "h", function() {
         return g;
       }),
       r.d(t, "d", function() {
-        return v;
-      }),
-      r.d(t, "f", function() {
-        return k;
-      }),
-      r.d(t, "c", function() {
-        return o;
+        return x;
       }),
       r.d(t, "e", function() {
-        return x;
+        return w;
+      }),
+      r.d(t, "c", function() {
+        return v;
       });
-    var o,
-      i,
-      a = 1,
-      l = 4,
-      s = 750,
-      u = 799,
-      h = 7,
-      m = 753,
-      f = 250820,
-      p = 330050,
-      d = 358510,
-      E = 366490,
-      _ = "18446744073709551615",
+    var o = 1,
+      i = 4,
+      l = 750,
+      a = 799,
+      s = 7,
+      u = 753,
+      h = 250820,
+      f = 330050,
+      m = 358510,
+      d = 366490,
+      p = "18446744073709551615",
       g = 0;
-    function v(e, t) {
+    function x(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";
@@ -4261,7 +4096,7 @@
           return t;
       }
     }
-    function k(e, t) {
+    function w(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -4326,131 +4161,17 @@
           return t;
       }
     }
-    ((i = o = o || {})[(i.k_EOtherEvent = 1)] = "k_EOtherEvent"),
-      (i[(i.k_EGameEvent = 2)] = "k_EGameEvent"),
-      (i[(i.k_EPartyEvent = 3)] = "k_EPartyEvent"),
-      (i[(i.k_EMeetingEvent = 4)] = "k_EMeetingEvent"),
-      (i[(i.k_ESpecialCauseEvent = 5)] = "k_ESpecialCauseEvent"),
-      (i[(i.k_EMusicAndArtsEvent = 6)] = "k_EMusicAndArtsEvent"),
-      (i[(i.k_ESportsEvent = 7)] = "k_ESportsEvent"),
-      (i[(i.k_ETripEvent = 8)] = "k_ETripEvent"),
-      (i[(i.k_EChatEvent = 9)] = "k_EChatEvent"),
-      (i[(i.k_EGameReleaseEvent = 10)] = "k_EGameReleaseEvent"),
-      (i[(i.k_EBroadcastEvent = 11)] = "k_EBroadcastEvent"),
-      (i[(i.k_ESmallUpdateEvent = 12)] = "k_ESmallUpdateEvent"),
-      (i[(i.k_ERegularUpdateEvent = 13)] = "k_ERegularUpdateEvent"),
-      (i[(i.k_EMajorUpdateEvent = 14)] = "k_EMajorUpdateEvent"),
-      (i[(i.k_EDLCReleaseEvent = 15)] = "k_EDLCReleaseEvent"),
-      (i[(i.k_EFutureReleaseEvent = 16)] = "k_EFutureReleaseEvent"),
-      (i[(i.k_EESportTournamentStreamEvent = 17)] =
-        "k_EESportTournamentStreamEvent"),
-      (i[(i.k_EDevStreamEvent = 18)] = "k_EDevStreamEvent"),
-      (i[(i.k_EFamousStreamEvent = 19)] = "k_EFamousStreamEvent"),
-      (i[(i.k_EGameSalesEvent = 20)] = "k_EGameSalesEvent"),
-      (i[(i.k_EGameItemSalesEvent = 21)] = "k_EGameItemSalesEvent"),
-      (i[(i.k_EInGameBonusXPEvent = 22)] = "k_EInGameBonusXPEvent"),
-      (i[(i.k_EInGameLootEvent = 23)] = "k_EInGameLootEvent"),
-      (i[(i.k_EInGamePerksEvent = 24)] = "k_EInGamePerksEvent"),
-      (i[(i.k_EInGameChallengeEvent = 25)] = "k_EInGameChallengeEvent"),
-      (i[(i.k_EInGameContestEvent = 26)] = "k_EInGameContestEvent"),
-      (i[(i.k_EIRLEvent = 27)] = "k_EIRLEvent"),
-      (i[(i.k_ENewsEvent = 28)] = "k_ENewsEvent"),
-      (i[(i.k_EBetaReleaseEvent = 29)] = "k_EBetaReleaseEvent"),
-      (i[(i.k_EFreeTrial = 31)] = "k_EFreeTrial"),
-      (i[(i.k_ESeasonRelease = 32)] = "k_ESeasonRelease"),
-      (i[(i.k_ECrosspostEvent = 34)] = "k_ECrosspostEvent"),
-      (i[(i.k_EInGameEventGeneral = 35)] = "k_EInGameEventGeneral");
-    var x, w;
-    o.k_EOtherEvent,
-      o.k_EGameEvent,
-      o.k_EPartyEvent,
-      o.k_EMeetingEvent,
-      o.k_ESpecialCauseEvent,
-      o.k_EMusicAndArtsEvent,
-      o.k_ESportsEvent,
-      o.k_ETripEvent,
-      o.k_EChatEvent,
-      o.k_EGameReleaseEvent,
-      o.k_EBroadcastEvent,
-      o.k_ESmallUpdateEvent,
-      o.k_ERegularUpdateEvent,
-      o.k_EMajorUpdateEvent,
-      o.k_EDLCReleaseEvent,
-      o.k_EFutureReleaseEvent,
-      o.k_EESportTournamentStreamEvent,
-      o.k_EDevStreamEvent,
-      o.k_EFamousStreamEvent,
-      o.k_EGameSalesEvent,
-      o.k_EGameItemSalesEvent,
-      o.k_EInGameBonusXPEvent,
-      o.k_EInGameLootEvent,
-      o.k_EInGamePerksEvent,
-      o.k_EInGameChallengeEvent,
-      o.k_EInGameContestEvent,
-      o.k_EIRLEvent,
-      o.k_ENewsEvent,
-      o.k_EBetaReleaseEvent,
-      o.k_EFreeTrial,
-      o.k_ESeasonRelease,
-      o.k_ECrosspostEvent,
-      o.k_EInGameEventGeneral;
-    ((w = x = x || {})[(w.k_ELaunchSource_None = 0)] = "k_ELaunchSource_None"),
-      (w[(w.k_ELaunchSource_2ftLibraryDetails = 100)] =
-        "k_ELaunchSource_2ftLibraryDetails"),
-      (w[(w.k_ELaunchSource_2ftLibraryListView = 101)] =
-        "k_ELaunchSource_2ftLibraryListView"),
-      (w[(w.k_ELaunchSource_2ftLibraryGrid = 103)] =
-        "k_ELaunchSource_2ftLibraryGrid"),
-      (w[(w.k_ELaunchSource_InstallSubComplete = 104)] =
-        "k_ELaunchSource_InstallSubComplete"),
-      (w[(w.k_ELaunchSource_DownloadsPage = 105)] =
-        "k_ELaunchSource_DownloadsPage"),
-      (w[(w.k_ELaunchSource_RemoteClientStartStreaming = 106)] =
-        "k_ELaunchSource_RemoteClientStartStreaming"),
-      (w[(w.k_ELaunchSource_2ftMiniModeList = 107)] =
-        "k_ELaunchSource_2ftMiniModeList"),
-      (w[(w.k_ELaunchSource_10ft = 200)] = "k_ELaunchSource_10ft"),
-      (w[(w.k_ELaunchSource_DashAppLaunchCmdLine = 300)] =
-        "k_ELaunchSource_DashAppLaunchCmdLine"),
-      (w[(w.k_ELaunchSource_DashGameIdLaunchCmdLine = 301)] =
-        "k_ELaunchSource_DashGameIdLaunchCmdLine"),
-      (w[(w.k_ELaunchSource_RunByGameDir = 302)] =
-        "k_ELaunchSource_RunByGameDir"),
-      (w[(w.k_ELaunchSource_SubCmdRunDashGame = 303)] =
-        "k_ELaunchSource_SubCmdRunDashGame"),
-      (w[(w.k_ELaunchSource_SteamURL_Launch = 400)] =
-        "k_ELaunchSource_SteamURL_Launch"),
-      (w[(w.k_ELaunchSource_SteamURL_Run = 401)] =
-        "k_ELaunchSource_SteamURL_Run"),
-      (w[(w.k_ELaunchSource_SteamURL_JoinLobby = 402)] =
-        "k_ELaunchSource_SteamURL_JoinLobby"),
-      (w[(w.k_ELaunchSource_SteamURL_RunGame = 403)] =
-        "k_ELaunchSource_SteamURL_RunGame"),
-      (w[(w.k_ELaunchSource_SteamURL_RunGameIdOrJumplist = 404)] =
-        "k_ELaunchSource_SteamURL_RunGameIdOrJumplist"),
-      (w[(w.k_ELaunchSource_SteamURL_RunSafe = 405)] =
-        "k_ELaunchSource_SteamURL_RunSafe"),
-      (w[(w.k_ELaunchSource_TrayIcon = 500)] = "k_ELaunchSource_TrayIcon"),
-      (w[(w.k_ELaunchSource_LibraryLeftColumnContextMenu = 600)] =
-        "k_ELaunchSource_LibraryLeftColumnContextMenu"),
-      (w[(w.k_ELaunchSource_LibraryLeftColumnDoubleClick = 601)] =
-        "k_ELaunchSource_LibraryLeftColumnDoubleClick"),
-      (w[(w.k_ELaunchSource_Dota2Launcher = 700)] =
-        "k_ELaunchSource_Dota2Launcher"),
-      (w[(w.k_ELaunchSource_IRunGameEngine = 800)] =
-        "k_ELaunchSource_IRunGameEngine"),
-      (w[(w.k_ELaunchSource_DRMFailureResponse = 801)] =
-        "k_ELaunchSource_DRMFailureResponse"),
-      (w[(w.k_ELaunchSource_DRMDataRequest = 802)] =
-        "k_ELaunchSource_DRMDataRequest"),
-      (w[(w.k_ELaunchSource_CloudFilePanel = 803)] =
-        "k_ELaunchSource_CloudFilePanel"),
-      (w[(w.k_ELaunchSource_DiscoveredAlreadyRunning = 804)] =
-        "k_ELaunchSource_DiscoveredAlreadyRunning"),
-      (w[(w.k_ELaunchSource_GameActionJoinParty = 900)] =
-        "k_ELaunchSource_GameActionJoinParty"),
-      (w[(w.k_ELaunchSource_AppPortraitContextMenu = 1e3)] =
-        "k_ELaunchSource_AppPortraitContextMenu");
+    function v(e) {
+      switch (e) {
+        default:
+          break;
+        case 4:
+        case 1:
+        case 8:
+          return !0;
+      }
+      return !1;
+    }
   },
   miow: function(e, t, r) {
     e.exports = {
@@ -4487,17 +4208,17 @@
       c = r("q1tI"),
       o = r("i8i4"),
       i = r("exH9"),
-      a = r("BNtT"),
-      l = r("miow"),
-      s = r.n(l),
+      l = r("BNtT"),
+      a = r("miow"),
+      s = r.n(a),
       u = r("0OaU"),
       h = c.lazy(function() {
         return Promise.all([r.e(2), r.e(0), r.e(4)]).then(r.bind(null, "KKYZ"));
       }),
-      m = document.getElementById("root");
-    Object(a.c)();
-    var f,
-      p = (function(e) {
+      f = document.getElementById("root");
+    Object(l.c)();
+    var m,
+      d = (function(e) {
         function t() {
           return (null !== e && e.apply(this, arguments)) || this;
         }
@@ -4531,7 +4252,7 @@
           t
         );
       })(c.Component);
-    (f = p), o.render(c.createElement(f, null), m);
+    (m = d), o.render(c.createElement(m, null), f);
   }
 });
 //# sourceMappingURL=library.js.map

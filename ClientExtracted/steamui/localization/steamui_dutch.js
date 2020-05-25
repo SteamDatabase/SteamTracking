@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "Laatst gespeeld",
 	"AppDetails_SectionTitle_LastLaunched": "Laatst gestart",
 	"AppDetails_SectionTitle_PlayTime": "Speeltijd",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Resterende speeltijd",
 	"AppDetails_SectionTitle_UsageTime": "Gebruikstijd",
 	"AppDetails_SectionTitle_Workshop": "Steam Workshop",
 	"AppDetails_SectionTitle_Community": "Communityinhoud",

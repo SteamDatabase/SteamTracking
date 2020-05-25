@@ -1259,7 +1259,9 @@
  D typeinfo for CCuratorPreferences
  D typeinfo for CDirWatcher
  D typeinfo for CDragStartCallbacks
+ D typeinfo for CDynamicFunc<SDL_bool (*)(char const*, char const*)>
  D typeinfo for CDynamicFunc<bool (*)()>
+ D typeinfo for CDynamicFunc<char const* (*)(char const*)>
  D typeinfo for CDynamicFunc<char const* (*)(vr::EVRInitError)>
  D typeinfo for CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>
  D typeinfo for CDynamicFunc<void (*)()>
@@ -1973,7 +1975,9 @@
  D vtable for CCuratorPreferences
  D vtable for CDirWatcher
  D vtable for CDragStartCallbacks
+ D vtable for CDynamicFunc<SDL_bool (*)(char const*, char const*)>
  D vtable for CDynamicFunc<bool (*)()>
+ D vtable for CDynamicFunc<char const* (*)(char const*)>
  D vtable for CDynamicFunc<char const* (*)(vr::EVRInitError)>
  D vtable for CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>
  D vtable for CDynamicFunc<void (*)()>
@@ -2687,7 +2691,9 @@
  R typeinfo name for CCuratorPreferences
  R typeinfo name for CDirWatcher
  R typeinfo name for CDragStartCallbacks
+ R typeinfo name for CDynamicFunc<SDL_bool (*)(char const*, char const*)>
  R typeinfo name for CDynamicFunc<bool (*)()>
+ R typeinfo name for CDynamicFunc<char const* (*)(char const*)>
  R typeinfo name for CDynamicFunc<char const* (*)(vr::EVRInitError)>
  R typeinfo name for CDynamicFunc<unsigned int (*)(vr::EVRInitError*, vr::EVRApplicationType)>
  R typeinfo name for CDynamicFunc<void (*)()>
@@ -2998,6 +3004,7 @@
  R typeinfo name for CUIFontPackage
  R typeinfo name for CUtlCStringConversion
  R typeinfo name for CUtlCharConversion
+ R typeinfo name for CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
  R typeinfo name for CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>
@@ -3165,6 +3172,7 @@
  R typeinfo name for CUtlVector<CUtlAbstractDelegate, CUtlMemory<CUtlAbstractDelegate> >
  R typeinfo name for CUtlVector<CUtlDelegate<void (EVideoPlayerEvent)>, CUtlMemory<CUtlDelegate<void (EVideoPlayerEvent)> > >
  R typeinfo name for CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >
+ R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, double, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
  R typeinfo name for CUtlVector<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, long long, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >
@@ -4209,10 +4217,18 @@
  T CDragStartCallbacks::SetOffsetY(int)
  T CDragStartCallbacks::SetRemovePositionBeforeDrop(bool)
  T CDragStartCallbacks::ShouldRemovePositionBeforeDrop() const
+ T CDynamicFunc<SDL_bool (*)(char const*, char const*)>::GetNextPointer()
+ T CDynamicFunc<SDL_bool (*)(char const*, char const*)>::Init(CSysModule*)
+ T CDynamicFunc<SDL_bool (*)(char const*, char const*)>::Release()
+ T CDynamicFunc<SDL_bool (*)(char const*, char const*)>::SetNextPointer(IDynamicFunction*)
  T CDynamicFunc<bool (*)()>::GetNextPointer()
  T CDynamicFunc<bool (*)()>::Init(CSysModule*)
  T CDynamicFunc<bool (*)()>::Release()
  T CDynamicFunc<bool (*)()>::SetNextPointer(IDynamicFunction*)
+ T CDynamicFunc<char const* (*)(char const*)>::GetNextPointer()
+ T CDynamicFunc<char const* (*)(char const*)>::Init(CSysModule*)
+ T CDynamicFunc<char const* (*)(char const*)>::Release()
+ T CDynamicFunc<char const* (*)(char const*)>::SetNextPointer(IDynamicFunction*)
  T CDynamicFunc<char const* (*)(vr::EVRInitError)>::GetNextPointer()
  T CDynamicFunc<char const* (*)(vr::EVRInitError)>::Init(CSysModule*)
  T CDynamicFunc<char const* (*)(vr::EVRInitError)>::Release()
@@ -4394,6 +4410,7 @@
  T CMetrics::Validate(CValidator&, char const*)
  T CMetrics::~CMetrics()
  T CMetricsSymbol::CMetricsSymbol(char const*)
+ T CMetricsTimer::CMetricsTimer<char const (&) [10]>(char const (&) [10], CMetrics&)
  T CMetricsTimer::Stop()
  T CMetricsTimer::Validate(CValidator&, char const*)
  T CMetricsTimer::~CMetricsTimer()
@@ -8047,6 +8064,8 @@
  T CScheduler::CScheduler(unsigned long long)
  T CScheduler::Validate(CValidator&, char const*)
  T CScheduler::~CScheduler()
+ T CScopedSDLHint::CScopedSDLHint(char const*, char const*)
+ T CScopedSDLHint::~CScopedSDLHint()
  T CSharedMemStream::BWaitForDataToGet(bool, unsigned int)
  T CSharedMemStream::CSharedMemStream(char const*, unsigned int, unsigned int, unsigned int, bool)
  T CSharedMemStream::Clear(unsigned int)
@@ -8485,6 +8504,10 @@
  T CUtlDict<panorama::CStyleDefine, CDefCaselessStringLess, short>::Validate(CValidator&, char const*)
  T CUtlDict<panorama::CStyleDefine, CDefCaselessStringLess, short>::~CUtlDict()
  T CUtlFmtString::CUtlFmtString(char const*, ...)
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::CUtlHashMap()
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::Purge()
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::RecursiveValidate(CValidator&, char const*)
+ T CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::~CUtlHashMap()
  T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::CUtlHashMap()
  T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::Purge()
  T CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::RecursiveValidate(CValidator&, char const*)
@@ -9534,6 +9557,8 @@
  T CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >::GrowVector(int)
  T CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >::Validate(CValidator&, char const*)
  T CUtlVector<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)>, CUtlMemory<CUtlDelegate<void (panorama::IUIPanel const*, panorama::IUIPanel*)> > >::~CUtlVector()
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
+ T CUtlVector<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CMetricsSymbol, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::RecursiveValidate(CValidator&, char const*)
  T CUtlVector<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, CSmartPtr<CMetricsString>, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
  T CUtlVector<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t, CUtlMemory<CUtlHashMap<CMetricsSymbol, bool, CDefEquals<CMetricsSymbol>, HashFunctor<CMetricsSymbol>, CMetricsSymbol>::HashBucket_t> >::~CUtlVector()
@@ -16254,6 +16279,7 @@
  T void DeleteHelper<panorama::CUIEngine::DirWatchers_t*>(panorama::CUIEngine::DirWatchers_t*)
  T void DeleteHelper<panorama::PanelDescription_t*>(panorama::PanelDescription_t*)
  T void DeleteHelper<panorama::StyleFromFile_t*>(panorama::StyleFromFile_t*)
+ T void Destruct<CUtlString>(CUtlString*)
  T void Destruct<LayoutIncludeFile_t>(LayoutIncludeFile_t*)
  T void Destruct<panorama::CLocalization::LocEntry_t>(panorama::CLocalization::LocEntry_t*)
  T void Destruct<panorama::CUIEngine::ScheduledItem_t>(panorama::CUIEngine::ScheduledItem_t*)
@@ -17299,6 +17325,7 @@
  b CSteamID::Render() const::rgchBuf
  b CUtlSymbol::Initialize()::symbolsInitialized
  b EmptyStr
+ b EnsureSDLLoaded()::once
  b FindOrCreateStack(CStack*)::autoMutex__
  b GCallbackMgr()::s_CallbackMgr
  b GetMapLocalPanel2DFactory()::s_mapPanel2DFactory
@@ -17321,6 +17348,8 @@
  b V_pretifymem(float, int, bool)::output
  b conVarRecordHostnameDimension
  b dump_panorama_css_properties_command
+ b dynamic_SDL_GetHint
+ b dynamic_SDL_SetHint
  b g_AllLanguagesCmdLine
  b g_BreakSet
  b g_BreakSetIncludingColons
@@ -17834,6 +17863,7 @@
  b s_objNullSendOp
  b s_unKeyCodeToKey
  b s_unVirtualKeyToKeyCode
+ b sdlFuncs
  b texturetolinear
  b v8::base::(anonymous namespace)::g_hard_abort
  b v8::base::TimeTicks::HighResolutionNow()::info
@@ -18789,6 +18819,7 @@
  t _GLOBAL__sub_I_rtime.cpp
  t _GLOBAL__sub_I_scheduledfunction.cpp
  t _GLOBAL__sub_I_scheduler.cpp
+ t _GLOBAL__sub_I_sdlhelpers.cpp
  t _GLOBAL__sub_I_sdlopenglsurface.cpp
  t _GLOBAL__sub_I_sseconst.cpp
  t _GLOBAL__sub_I_stat.cpp
@@ -18850,7 +18881,7 @@
  t _GLOBAL__sub_I_workthreadpool.cpp
  t _GLOBAL__sub_I_zip_helpers.cpp
  t __cxx_global_array_dtor
- t __cxx_global_var_init15
+ t __cxx_global_var_init27
  t access_virt_barray
  t access_virt_sarray
  t alloc_barray

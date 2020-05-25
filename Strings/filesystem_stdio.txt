@@ -19,14 +19,14 @@ __DATA
 
 __nl_symbol_ptr
 __DATA
-d
+e
 __got
 __DATA
 H
-f
+g
 __la_symbol_ptr
 __DATA
-o
+p
 __
 15CBaseFileSystem
 11IFileSystem
@@ -211,6 +211,7 @@ Assertion Failed: static_cast<_in>( ret ) == i
 Assertion Failed: ( i < 0 ) == ( ret < 0 )
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 Assertion Failed: pPool->m_SpaceUsed < 0xFFFF
+Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 Assertion Failed: IsValidIndex(elem)
 Assertion Failed: (elem == Count()) || IsValidIndex(elem)
@@ -275,8 +276,9 @@ s_pSymbolTable
 @
 @
 
-r
-
+O
+m
+l
 =
 @
 =

@@ -55,6 +55,8 @@ public:
     virtual unknown_ret BIsStreamClientRunning() = 0;
     virtual unknown_ret BIsStreamClientRunning(CGameID) = 0;
     virtual unknown_ret BIsStreamClientRunningConnectedToClient(CGameID, unsigned long long) = 0;
+    virtual unknown_ret BGetStreamingClientConfig(CUtlBuffer*) = 0;
+    virtual unknown_ret BSetStreamingClientConfig(CUtlBuffer*) = 0;
     virtual unknown_ret RequestControllerConfig(unsigned long long, unsigned int, unsigned int) = 0;
     virtual unknown_ret PostControllerConfig(unsigned long long, unsigned char const*, unsigned int) = 0;
     virtual unknown_ret GetControllerConfig(unsigned long long, unsigned char*, unsigned int) = 0;
@@ -83,5 +85,6 @@ public:
     virtual unknown_ret UpdateRemotePlayTogetherSession() = 0;
     virtual unknown_ret OnRemotePlayUIMovedController() = 0;
     virtual unknown_ret OnSendRemotePlayTogetherInvite(CSteamID, unsigned int) = 0;
+    virtual unknown_ret GetCloudGameTimeRemaining(CGameID, unsigned long long) = 0;
     virtual unknown_ret ShutdownStreamClients(bool) = 0;
 };

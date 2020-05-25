@@ -9,6 +9,7 @@
  B s_StringCharConversion
  B s_pAudioController
  CDbgFmtSafeImplT<false>::CDbgFmtSafeImplT(char const*, ...)
+ CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(DbgFmtFatalMsgTag_t*, StringView)
  CDbgFmtSafeImplT<true>::CDbgFmtSafeImplT(StringView)
  CValidator::ClaimArrayMemory(void*)
  CValidator::ClaimMemory(void*)

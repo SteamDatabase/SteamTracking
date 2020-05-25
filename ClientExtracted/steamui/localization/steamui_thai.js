@@ -325,6 +325,7 @@
 	"AppDetails_SectionTitle_LastPlayed": "เล่นล่าสุด",
 	"AppDetails_SectionTitle_LastLaunched": "เปิดใช้ล่าสุด",
 	"AppDetails_SectionTitle_PlayTime": "เวลาที่เล่น",
+	"AppDetails_SectionTitle_PlayTimeLeft": "Play Time Left",
 	"AppDetails_SectionTitle_UsageTime": "เวลาใช้งาน",
 	"AppDetails_SectionTitle_Workshop": "เวิร์กชอปบน Steam",
 	"AppDetails_SectionTitle_Community": "เนื้อหาชุมชน",

@@ -33,8 +33,6 @@
     z-index: 3; }
   .friendsnooze_SnoozeContainer_1Dsum.online .friendsnooze_SnoozeZ_2n0Ei {
     color: #4c91ac; }
-  .friendsnooze_SnoozeContainer_1Dsum.golden .friendsnooze_SnoozeZ_2n0Ei {
-    color: #d5bf6a; }
   .friendsnooze_SnoozeContainer_1Dsum.watchingbroadcast .friendsnooze_SnoozeZ_2n0Ei {
     color: #c9bdf7; }
   .friendsnooze_SnoozeContainer_1Dsum.in-game .friendsnooze_SnoozeZ_2n0Ei {
@@ -58,6 +56,7 @@
 
 .steamavatar_avatarHolder_nibod {
   height: 36px;
+  width: 36px;
   display: flex;
   margin: 0px 0px;
   transform: scale(0.86, 0.86) translateX(0px);
@@ -78,15 +77,15 @@
   .steamavatar_avatarHolder_nibod.X-Large {
     height: 92px;
     width: 92px; }
+  .steamavatar_avatarHolder_nibod.FillArea {
+    height: 100%;
+    width: 100%; }
 
 .ingame .steamavatar_avatarStatus_3xUpb {
   background: linear-gradient(to bottom, #8cd61d 0%, #a1f410 30%, #a1f410 70%, #8cd61d 100%); }
 
 .ingame .X-Large .steamavatar_avatarStatus_3xUpb {
   background: #bff02b; }
-
-.golden .steamavatar_avatarStatus_3xUpb {
-  background: linear-gradient(to bottom, #d5bf6a 0%, #ffe2a9 40%, #ba995c 52%, #ba995c 61%, #d5bf6a 85%); }
 
 .watchingbroadcast .steamavatar_avatarStatus_3xUpb {
   background: linear-gradient(to bottom, #9c8fd4 0%, #9c8fd4 30%, #9c8fd4 70%, #9c8fd4 100%); }
@@ -126,11 +125,19 @@
 .steamavatar_avatar_3h-QR {
   border: 1px solid #383c43;
   height: calc( 100% - 2px);
+  width: calc( 100% - 2px);
   box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.3);
   transition: filter .24s ease-in-out; }
 
-.steamavatar_friendavatar_xXwx9 {
-  display: block; }
+.steamavatar_avatarFrame_X_mJE {
+  position: absolute;
+  top: 0; }
+  .steamavatar_avatarFrame_X_mJE .steamavatar_avatarFrameImg_3fM0F {
+    width: 100%;
+    height: 100%; }
+
+.steamavatar_avatarHolder_nibod .steamavatar_avatarFrame_X_mJE {
+  transform: scale(1.2); }
 
 .personastatusicons_PersonaStatusIcon_KxAI_ {
   width: 16px;
@@ -160,7 +167,10 @@
 
 .miniprofile_miniProfileContent_1xTAT {
   width: 328px;
-  position: relative; }
+  position: relative;
+  /* we have children with z-indexes, including negative index, so we need to establish our own
+	 	z-index context or we could potentially have elements appear behind the background */
+  z-index: 0; }
 
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileHeader_3CZcH {
   height: 62px;
@@ -256,6 +266,12 @@
   box-shadow: 1px 3px 14px rgba(0, 0, 0, 0.65);
   transform: scale(1);
   z-index: 1; }
+  .miniprofile_miniProfileContent_1xTAT .miniprofile_playerAvatar_36eQg .miniprofile_Frame_2nPON {
+    position: absolute;
+    left: -9px;
+    top: -9px;
+    width: calc( 100% + 18px);
+    height: calc( 100% + 18px); }
 
 .miniprofile_miniProfileContent_1xTAT .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
   width: 100%;
@@ -264,9 +280,6 @@
 
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.online .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
   background: #6dcff6; }
-
-.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.golden .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
-  background: #e4ca63; }
 
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.in-game .miniprofile_avatarStatus_1YdpX.miniprofile_miniProfileAvatarStatus_1k5Yk {
   background: #bff02b; }
@@ -285,10 +298,6 @@
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.in-game .miniprofile_personaName_qiP8a:not(.miniprofile_hasNickname_2TAWS) .miniprofile_personaNameLabel_2VUw8,
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.in-game .miniprofile_personaName_qiP8a.miniprofile_nickName_h_So5 .miniprofile_personaNameLabel_2VUw8 {
   color: #e3ffc2; }
-
-.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.golden .miniprofile_personaName_qiP8a:not(.miniprofile_hasNickname_2TAWS) .miniprofile_personaNameLabel_2VUw8,
-.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.golden .miniprofile_personaName_qiP8a.miniprofile_nickName_h_So5 .miniprofile_personaNameLabel_2VUw8 {
-  color: #e4ca63; }
 
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast .miniprofile_personaName_qiP8a:not(.miniprofile_hasNickname_2TAWS) .miniprofile_personaNameLabel_2VUw8,
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast .miniprofile_personaName_qiP8a.miniprofile_nickName_h_So5 .miniprofile_personaNameLabel_2VUw8 {
@@ -378,12 +387,6 @@
   font-size: 12px;
   color: #62813b; }
 
-.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileGameContainer_7-U6j .miniprofile_golden_3tS2l .miniprofile_gameState_3Hxc3 {
-  color: #e4ca63; }
-
-.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileGameContainer_7-U6j .miniprofile_golden_3tS2l .miniprofile_richPresence_39T3E {
-  color: #e4ca63; }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfileGameContainer_7-U6j .miniprofile_watchingbroadcast_3hSAG .miniprofile_gameState_3Hxc3 {
   padding-top: 6px;
   font-size: 12px;
@@ -449,9 +452,6 @@
   color: #6b6a6a;
   font-size: 12px; }
 
-.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.golden .miniprofile_playerContent_2-pwJ .miniprofile_awayStatusLabel_1FgWI {
-  color: #e4ca63; }
-
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast .miniprofile_playerContent_2-pwJ .miniprofile_awayStatusLabel_1FgWI {
   color: #c9bdf7; }
 
@@ -461,9 +461,6 @@
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.offline .miniprofile_playerContent_2-pwJ .miniprofile_awayStatusLabel_1FgWI {
   font-size: 10px;
   letter-spacing: 0; }
-
-.miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.golden .miniprofile_playerContent_2-pwJ .miniprofile_awayStatusLabel_1FgWI {
-  color: #e4ca63; }
 
 .miniprofile_miniProfileContent_1xTAT .miniprofile_miniProfilePlayer_2jZ0A.watchingbroadcast .miniprofile_playerContent_2-pwJ .miniprofile_awayStatusLabel_1FgWI {
   color: #8277b1; }
@@ -958,7 +955,8 @@ body.modals_BodyNoScrollDialog_105OB {
   vertical-align: middle;
   display: inline-block;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  padding-top: .25em; }
 
 .durationcontroldialog_InfoContainer_1rF2O {
   width: 50%;
@@ -2798,7 +2796,7 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   flex-direction: row;
   line-height: 12px;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  overflow: hidden;
   font-size: 10px;
   margin-top: -1px;
   -webkit-mask: linear-gradient(to right, black calc( 100% - 8px), rgba(0, 0, 0, 0.15) 100%);
@@ -2864,16 +2862,6 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
 .ingame .SVGIcon_DoNotDisturb circle,
 .ingame .SVGIcon_DoNotDisturb line {
   stroke: #cf7f67; }
-
-.golden .personanameandstatus_playerName_nOdcT {
-  color: #e4ca63; }
-
-.golden .personanameandstatus_richPresenceLabel_2Ri00,
-.golden .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 a,
-.golden .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 a:hover,
-.golden .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 a:active,
-.golden .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 a:visited {
-  color: #e4ca63; }
 
 .watchingbroadcast .personanameandstatus_playerName_nOdcT {
   color: #c9bdf7; }
@@ -2963,7 +2951,6 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
   display: flex;
   flex-direction: row;
   margin-bottom: -4px;
-  margin-right: 10px;
   -webkit-app-region: no-drag; }
 
 .currentUserContainer .personanameandstatus_gameName_1cB0q.personanameandstatus_richPresenceLabel_2Ri00 {
@@ -3042,7 +3029,6 @@ button.appdetailsheader_ExitEditModeButton_i7jBC.appdetailsheader_ExitEditModeBu
 
 .singlewindow .currentUserContainer .personanameandstatus_twoLine_1BbOe .personanameandstatus_statusAndName_4ZTzG,
 .singlewindow .currentUserContainer .personanameandstatus_twoLine_1BbOe {
-  margin-right: 10px;
   width: 100%; }
 
 .needsUpdate .currentUserContainer .personanameandstatus_twoLine_1BbOe .personanameandstatus_statusAndName_4ZTzG {
@@ -6567,6 +6553,12 @@ div.sharescreenshotupload_Spoiler_tmUAv {
   margin: 0 auto;
   padding: 12px; }
 
+.partnereventshared_SupportedGroupLabel_APmJN {
+  color: #FFF;
+  background-color: black;
+  text-transform: uppercase;
+  text-align: center; }
+
 .partnereventshared_LangaugeWithContent_16xEW {
   color: #a3cf06; }
 
@@ -6723,8 +6715,8 @@ b {
   background-repeat: no-repeat;
   background-position: 6px center;
   background-size: 32px 32px;
-  padding: 10px 16px 0px 51px;
   height: 28px;
+  padding: 6px 20px;
   border-radius: 3px; }
   .partnereventshared_EventBarBack_s3r9b:hover {
     background-color: #32373f;
@@ -6913,7 +6905,7 @@ b {
   justify-content: space-between; }
 
 .partnereventshared_LeftCol_3PPz- {
-  width: 640px; }
+  width: 706px; }
   @media screen and (max-width: 910px) {
     .partnereventshared_LeftCol_3PPz- {
       width: auto;
@@ -6942,6 +6934,9 @@ b {
 
 .partnereventshared_CloseSectionTools_1d0D9 {
   float: right; }
+  .partnereventshared_CloseSectionTools_1d0D9 .DialogButton {
+    margin-left: 4px;
+    width: 40px; }
   .partnereventshared_CloseSectionTools_1d0D9 .SVGIcon_Button rect, .partnereventshared_CloseSectionTools_1d0D9 .SVGIcon_Button line {
     stroke: white; }
 
@@ -6966,12 +6961,13 @@ span.partnereventshared_tooltip_Ctn_3nqxI {
   margin-left: 10px; }
 
 .partnereventshared_SaleSectionHeader_2WMiQ {
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.05em;
   font-size: 18px;
   color: #FFFFFF;
   margin-bottom: 10px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
   .partnereventshared_SaleSectionHeader_2WMiQ img {
     max-width: 100%; }
 
@@ -10288,6 +10284,11 @@ span.suggestdialog_mentionSearchMatch_2_0t_ {
     text-decoration: underline;
     cursor: pointer; }
 
+.appdetailsmastersubincluded_IncludedBanner_dV5DL {
+  width: auto;
+  height: auto;
+  max-width: 100%; }
+
 /* stylelint-disable */
 
 /* stylelint-enable */
@@ -12871,6 +12872,421 @@ div.appgrid_CoverSizeSlider_U4J9B {
   width: calc(100% - 20px);
   height: 200px; }
 
+.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 10px 0px 10px 0px;
+  cursor: pointer;
+  overflow: hidden;
+  background: -webkit-linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%);
+  background: linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%); }
+  .eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF .eventbbcodeyoutubeembed_DynamicLink_Preview_3Z5cW {
+    float: left;
+    margin-right: 14px;
+    max-height: 88px;
+    max-width: 75%; }
+
+a.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
+  display: block;
+  text-decoration: none !important;
+  border-bottom: none; }
+  a.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF:hover {
+    border-bottom: none; }
+
+.eventbbcodeyoutubeembed_DynamicLink_Author_xG6te {
+  height: 16px;
+  font-size: 12px;
+  color: #95a6b2;
+  margin-bottom: 4px; }
+  .eventbbcodeyoutubeembed_DynamicLink_Author_xG6te span {
+    color: #809fb7; }
+
+.eventbbcodeyoutubeembed_DynamicLink_Description_2Nwb8 {
+  padding-bottom: 10px; }
+
+.eventbbcodeyoutubeembed_DynamicLink_Content_10QvP {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: silver;
+  text-shadow: 0 0 16px black;
+  font-size: 13px;
+  line-height: normal;
+  text-align: left;
+  display: flow-root; }
+
+.eventbbcodeyoutubeembed_DynamicLink_Name_Ef9WZ {
+  font-size: 15px;
+  color: #aad8ec;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
+  padding-bottom: 0px;
+  display: inline-block;
+  margin-bottom: 6px; }
+
+.eventbbcodeyoutubeembed_DynamicLink_YoutubeViews_1EXif {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #bfbfbf; }
+
+.eventbbcodeyoutubeembed_Dynamiclink_Content_SmLh- {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: silver;
+  text-shadow: 0 0 16px black;
+  font-size: 13px;
+  line-height: 15px;
+  margin-bottom: 9px;
+  text-align: left;
+  display: flow-root; }
+
+.eventbbcodeyoutubeembed_DynamicLink_URL_3zVTF a,
+.eventbbcodeyoutubeembed_DynamicLink_AuthorName_2scjl {
+  color: #ffffff; }
+
+.eventbbcodeyoutubeembed_DynamicLink_Date_2hEHb {
+  float: right; }
+
+/* YouTube Videos */
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC {
+  /* recommended YouTube diemnsion is 640x385 for 16:9 content */
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden; }
+
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC img {
+  width: 100%;
+  display: block; }
+
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC iframe {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* size */
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_sizeThumb_3olWW {
+  width: 311px;
+  height: 187px; }
+
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_sizeFull_126sP {
+  width: 100%;
+  margin-bottom: 6px;
+  margin-top: 4px; }
+
+/* alignment */
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatLeft_1-UTh {
+  float: left;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px; }
+
+.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatRight_IHcwx {
+  float: right;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px; }
+
+iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatLeft_1-UTh, iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatRight_IHcwx {
+  float: none;
+  padding: 0px; }
+
+.image_ErrorDiv_2FXME {
+  background-color: hotpink;
+  border: 1px solid;
+  padding: 10px; }
+
+.eventbbcodeparser_BlockQuote_2cY7b {
+  border: 1px solid #56707f;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
+  font-size: 92%;
+  display: table;
+  word-break: break-word; }
+
+.eventbbcodeparser_BlockQuoteAuthor_Jyzed {
+  font-size: 92%;
+  font-style: italic; }
+
+.eventbbcodeparser_PullQuote_UZBJN {
+  width: 33%;
+  min-width: 200px;
+  float: right;
+  border-radius: 3px;
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+  display: table;
+  word-break: break-word;
+  line-height: 28px;
+  padding: 10px; }
+
+.eventbbcodeparser_Code_1zoQP {
+  border: 1px solid #535354;
+  border-radius: 3px;
+  padding: 12px;
+  margin: 8px;
+  font-size: 11px;
+  font-family: Consolas,monospace;
+  white-space: pre;
+  white-space: pre-wrap;
+  overflow-x: auto; }
+
+.eventbbcodeparser_Header1_SPYFj {
+  color: #ffffff;
+  margin-bottom: 6px;
+  margin-top: 8px;
+  font-size: 32px;
+  line-height: 33px;
+  font-weight: 500;
+  clear: both; }
+
+.eventbbcodeparser_Header2_QuKtT {
+  color: #ffffff;
+  margin-bottom: 6px;
+  margin-top: 8px;
+  font-size: 26px;
+  line-height: 29px;
+  font-weight: 400;
+  clear: both; }
+
+.eventbbcodeparser_Header3_3s7cU {
+  color: #ffffff;
+  margin-bottom: 6px;
+  margin-top: 8px;
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 300;
+  clear: both; }
+
+.eventbbcodeparser_HR_2IENn {
+  border: none;
+  height: 1px;
+  color: #6e7577;
+  background-color: #6e7577; }
+
+.eventbbcodeparser_Link_29bMZ {
+  color: #969696;
+  text-decoration: underline; }
+  .eventbbcodeparser_Link_29bMZ:hover {
+    color: #ffffff; }
+
+.eventbbcodeparser_LinkHost_16eO9 {
+  font-size: 10px;
+  color: #7e8391;
+  padding: 4px;
+  top: -1px; }
+
+a.eventbbcodeparser_LinkButton_2HnDg {
+  background-color: #2681da;
+  font-size: 14px;
+  padding: 6px 20px;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 4px 0px; }
+  a.eventbbcodeparser_LinkButton_2HnDg span {
+    color: white;
+    padding-bottom: 6px; }
+
+.eventbbcodeparser_LinkButton_2HnDg:hover {
+  background-color: #3691fa;
+  color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); }
+
+.eventbbcodeparser_Strike_1tIBv {
+  text-decoration: line-through; }
+
+.eventbbcodeparser_Spoiler_3QcA9 {
+  color: #000000;
+  background-color: #000000;
+  padding: 0px 8px; }
+
+.eventbbcodeparser_Spoiler_3QcA9:hover {
+  color: #ffffff; }
+
+.eventbbcodeparser_Spoiler_3QcA9 > span {
+  visibility: hidden; }
+
+.eventbbcodeparser_Spoiler_3QcA9:hover > span {
+  visibility: visible; }
+
+.eventbbcodeparser_UnorderList_3995Y {
+  list-style-type: disc;
+  list-style-position: inside;
+  line-height: 21px;
+  padding-left: 1em;
+  padding-inline-start: 40px;
+  margin-top: 14px;
+  margin-bottom: 0px; }
+
+.eventbbcodeparser_UnorderList_3995Y > li {
+  list-style-position: outside; }
+
+ol {
+  padding-left: 3em;
+  margin-top: 14px;
+  margin-bottom: 14px; }
+
+.eventbbcodeparser_Table_3sT80 {
+  display: table;
+  border-collapse: collapse;
+  font-size: 12px; }
+
+.eventbbcodeparser_TableHeader_3WcB- {
+  display: table-cell;
+  font-weight: bold;
+  padding: 4px;
+  border-right: 1px solid #77797e; }
+  .eventbbcodeparser_TableHeader_3WcB-:first-of-type {
+    border-left: 1px solid #77797e; }
+
+.eventbbcodeparser_TableHeader_3WcB- img.eventbbcodeparser_sharedFilePreviewImage_2bwhK,
+.eventbbcodeparser_TableData_1skQk img.eventbbcodeparser_sharedFilePreviewImage_2bwhK {
+  margin: 0px; }
+
+.eventbbcodeparser_TableRow_sc_Sn {
+  display: table-row;
+  border-bottom: 1px solid #77797e; }
+  .eventbbcodeparser_TableRow_sc_Sn:first-of-type {
+    border-top: 1px solid #77797e; }
+
+.eventbbcodeparser_TableData_1skQk {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 4px;
+  border-right: 1px solid #77797e; }
+  .eventbbcodeparser_TableData_1skQk:first-of-type {
+    border-left: 1px solid #77797e; }
+
+iframe.eventbbcodeparser_StoreWidget_36Y-l {
+  height: 190px;
+  width: 100%; }
+
+iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
+  height: 360px;
+  width: 100%; }
+
+.eventbbcodeparser_AppSummaryWidgetCtn_3DfY9 {
+  flex-grow: 2;
+  flex-basis: 0;
+  margin-right: 16px;
+  padding: 16px;
+  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 4px; }
+
+/* special styling for Game Awards 2019. To replace with scaleable solution after Game Awards has run */
+.eventbbcodeparser_SaleSectionCtn_39HWX {
+  color: #C3C4D9;
+  font-size: 14px; }
+  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_ReminderCtn_25AZk {
+    width: 300px;
+    margin: 6px 0; }
+  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_BlockQuote_2cY7b {
+    border: none;
+    width: 60%;
+    max-width: 640px;
+    margin: 0 auto; }
+  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80 {
+    font-size: 18px; }
+    .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80.eventbbcodeparser_NoBorder_1ZU5y {
+      position: relative; }
+      .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80.eventbbcodeparser_NoBorder_1ZU5y .eventbbcodeparser_TableRow_sc_Sn,
+      .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80.eventbbcodeparser_NoBorder_1ZU5y .eventbbcodeparser_TableData_1skQk {
+        border: none; }
+  .eventbbcodeparser_SaleSectionCtn_39HWX img {
+    max-width: 100%;
+    height: auto; }
+
+@media screen and (max-width: 800px) {
+  body .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_BlockQuote_2cY7b {
+    width: 100%; } }
+
+/* end Game Awards styling hacks */
+
+.eventbbcodesketchfab_sketchfab_play_overlay_image_j_bDC {
+  position: absolute;
+  left: 83px;
+  margin-left: -25px;
+  top: 50%;
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  background-image: url(<?=IMG_SHARED_URL?>sharedfiles/sketchfab_play.png);
+  background-size: 100%;
+  background-position-y: 0px;
+  background-repeat: no-repeat; }
+
+.eventbbcodesketchfab_sketchfabmodelembedded_1hkVJ {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  margin-bottom: 20px; }
+
+.eventbbcodesketchfab_sketchfabmodelembedded_1hkVJ iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.eventbbcodesketchfab_dynamiclink_box_2OrAL {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  background: -webkit-linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%);
+  background: linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%);
+  border-radius: 6px;
+  padding: 8px;
+  margin: 10px 0px 10px 0px;
+  cursor: pointer;
+  overflow: hidden; }
+
+.eventbbcodesketchfab_dynamiclink_preview_3__9J {
+  float: left;
+  margin-right: 14px;
+  max-height: 88px;
+  max-width: 75%; }
+
+.eventbbcodesketchfab_dynamiclink_content_2ocug {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  color: silver;
+  text-shadow: 0 0 16px black;
+  font-size: 13px;
+  line-height: normal;
+  text-align: left;
+  display: flow-root; }
+
+.eventbbcodesketchfab_dynamiclink_name_3a1nw {
+  font-size: 15px;
+  color: #aad8ec;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
+  padding-bottom: 0px;
+  display: inline-block;
+  margin-bottom: 6px; }
+
+.eventbbcodesketchfab_dynamiclink_type_31hqF {
+  color: #c6d4df; }
+
+.eventbbcodesketchfab_dynamiclink_author_13lYj {
+  height: 16px;
+  font-size: 12px;
+  color: #95a6b2;
+  margin-bottom: 4px; }
+
 .login_LoginDialog_2Hj3a {
   background-color: #101114;
   background-image: linear-gradient(to bottom, #101114, #1f2127);
@@ -13166,6 +13582,343 @@ textarea:-webkit-autofill:focus,
   align-items: center;
   justify-content: center; }
 
+.localdateandtime_DateAndTime_2V6GL, .localdateandtime_DateAndTimeInline_HZ6b2 {
+  display: flex;
+  white-space: nowrap; }
+  .localdateandtime_DateAndTime_2V6GL span.localdateandtime_At_Fn5EU, .localdateandtime_DateAndTimeInline_HZ6b2 span.localdateandtime_At_Fn5EU {
+    margin: 0px 4px;
+    color: #6c767f; }
+
+.localdateandtime_DateAndTimeInline_HZ6b2 {
+  display: inline-flex; }
+
+.localdateandtime_ActiveEvent_rT7Ek {
+  color: #a3cf06;
+  display: flex; }
+  .localdateandtime_ActiveEvent_rT7Ek .localdateandtime_ActiveEventCallOut_2pJft {
+    background: #a3cf06;
+    font-size: 11px;
+    color: #222222;
+    padding: 0px 5px;
+    border-radius: 2px;
+    display: table;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-right: 4px;
+    margin-top: 1px; }
+
+.localdateandtime_RightSideTitles_4LAnP {
+  font-size: 12px;
+  font-weight: 200;
+  color: #b1b4b9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px; }
+
+.localdateandtime_DateToolTip_2E5LH {
+  z-index: 2000;
+  padding: 3px 8px;
+  border-radius: 2px;
+  background-color: #5e6068;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3); }
+
+.localdateandtime_ShortDateAndTime_MBkkh {
+  margin: 0px 4px;
+  text-transform: initial;
+  color: #868f98;
+  letter-spacing: normal; }
+
+.localdateandtime_ShortDateRange_3CN6I {
+  display: flex; }
+  @media screen and (max-width: 500px) {
+    .localdateandtime_ShortDateRange_3CN6I {
+      flex-direction: column; } }
+  .localdateandtime_ShortDateRange_3CN6I .localdateandtime_RightSideTitles_4LAnP {
+    display: flex;
+    flex-wrap: wrap; }
+
+.eventreminder_FlexColumnContainer_15ufN {
+  display: flex;
+  flex-direction: column; }
+
+.eventreminder_FullStartTime_1YLHW {
+  color: #a4d5ff;
+  padding: 8px 10px;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.eventreminder_ReminderDialog_3YUEY.eventreminder_ReminderOptions_1Tp8K {
+  width: 300px;
+  padding: 0px;
+  background: transparent;
+  border-left: none; }
+
+.eventreminder_ReminderBackground_TNf9_ {
+  position: relative;
+  background: #2f2f33;
+  padding: 0px;
+  border-radius: 2px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+  width: max-content;
+  min-width: 100%; }
+  .eventreminder_ReminderBackground_TNf9_.eventreminder_ReminderExpandsLeft_38Xly {
+    position: absolute;
+    right: 0; }
+
+.eventreminder_ReminderOption_26nnh, a.eventreminder_ReminderOption_26nnh {
+  padding: 4px;
+  margin: 0px 8px 2px 8px;
+  background: #444850;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center; }
+  .eventreminder_ReminderOption_26nnh:not(.eventreminder_Unverified_1dcmA):hover, a.eventreminder_ReminderOption_26nnh:not(.eventreminder_Unverified_1dcmA):hover {
+    background-color: rgba(255, 255, 255, 0.2); }
+  .eventreminder_ReminderOption_26nnh.eventreminder_Unverified_1dcmA, a.eventreminder_ReminderOption_26nnh.eventreminder_Unverified_1dcmA {
+    color: #777777; }
+  .eventreminder_ReminderOption_26nnh a, a.eventreminder_ReminderOption_26nnh a {
+    color: #a4d5ff;
+    padding: 0 4px; }
+    .eventreminder_ReminderOption_26nnh a:hover, a.eventreminder_ReminderOption_26nnh a:hover {
+      text-decoration: underline; }
+  .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE {
+    flex: 1; }
+    .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container {
+      margin-bottom: 0px;
+      padding: 0 8px 0 0; }
+      .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox {
+        margin: 3px;
+        width: 16px;
+        height: 16px; }
+        .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox .SVGIcon_DialogCheck, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox .SVGIcon_DialogCheck {
+          margin: 0 0 2px 0;
+          width: 16px;
+          height: 16px; }
+      .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogToggle_Label, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogToggle_Label {
+        margin-left: 28px; }
+
+.eventreminder_ReminderOptionTooltip_2SNqE {
+  z-index: 2000; }
+
+.eventreminder_ReminderCheckBox_vPo2j {
+  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%);
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  border-radius: 3px; }
+  .eventreminder_ReminderCheckBox_vPo2j:hover {
+    cursor: pointer;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
+    .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderDefault_19p2Q, .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderOptions_1Tp8K, .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderCheck_3fMhC, .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderOpennedOptions_vBuhk {
+      background-color: rgba(57, 154, 236, 0.5); }
+
+.eventreminder_ReminderDefault_19p2Q {
+  padding: 6px 12px;
+  color: #ffffff;
+  flex: 1;
+  flex-grow: 100;
+  border-right: 1px solid rgba(0, 0, 0, 0.5); }
+
+.eventreminder_ReminderCheckBox_vPo2j
+.eventreminder_ReminderOptions_1Tp8K,
+.eventreminder_ReminderOpennedOptions_vBuhk {
+  flex: 1;
+  flex-basis: 32px;
+  background-repeat: no-repeat;
+  background-position: 9px 10px;
+  width: 35px;
+  height: 32px;
+  border-left: 1px solid rgba(255, 255, 255, 0.15); }
+
+.eventreminder_ReminderOptions_1Tp8K {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0M1MEE4RDkxREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0M1MEE4REExREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQzUwQThENzFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQzUwQThEODFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkFcBtEAAADkSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAgIiIAIgAACizAyMgpABf8wICsBAYAAYsQQAGIeIGaB8j+Aybdv3/6HGYoBAAIIwwx0ADYL6AwRoDGvkSWEhYVFgdQbdGeJoNtF0AqAACKogImBAGCEOpQHi9wXoOl/wAqAPviNLgv0BStIAciKPyAOuiQ45NHDBBqksHBmIOQBsAIWQqoAAoxgOBACTAwUAlhkcwA9+J1YTcBQ4gRSP8DpFZpoYYYJoKcaLCnoAyyI0Q1AdhWKQegaUaIBTyCCDOJAjjds0TTwsQAAEO5yLEGNvDIAAAAASUVORK5CYII=); }
+
+.eventreminder_ReminderOpennedOptions_vBuhk {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjA2NkUxRjYzNDdEMTFFOUI5MzlCM0IwNDk1OTEzMjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjA2NkUxRjczNDdEMTFFOUI5MzlCM0IwNDk1OTEzMjAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MDY2RTFGNDM0N0QxMUU5QjkzOUIzQjA0OTU5MTMyMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MDY2RTFGNTM0N0QxMUU5QjkzOUIzQjA0OTU5MTMyMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Puj4W0sAAADSSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAjD27dvQSwWgABigIuAOEDAiCQABgABhCGAohwkCWKwAA38DdOBoQUggHCaAQfIzgC5De4+qBzYBJAXsGkWEhJiJGgFQAARVMDEQCLgwOEBMBCB+kAEWQETkuRraDS8RlbECDIWKPgd3S5hYWFOoAk/KPcFQIARjgsCgImBUoDDBSxowcaCTR88MTAyMiJrFIAFKVqoiQKpD0D8B9limAE4NeIyCKjvD7oBHNicigWANP5AMWBAYwEAUl+ORKnWwrgAAAAASUVORK5CYII=); }
+
+.eventreminder_ReminderOptionsHeader_2oOZC {
+  color: #b1b4b9;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 8px 10px 4px; }
+
+.eventreminder_ReminderCalendarOptions_VO6FS {
+  padding: 0px 8px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+.eventreminder_ReminderSettings_2Pn59 {
+  margin-top: 12px;
+  border-top: 1px solid #5b616b;
+  padding: 8px; }
+
+.eventreminder_ReminderCalendarOptions_VO6FS .eventreminder_ReminderOption_26nnh {
+  padding: 4px 8px;
+  margin: 0 2px 0;
+  flex-basis: 25%;
+  display: inline;
+  text-align: center; }
+
+.eventreminder_ReminderNotes_3qE0w {
+  padding: 8px;
+  color: #e1c48a;
+  font-size: 12px; }
+
+.eventreminder_RemindCheck_2qaPr {
+  width: 26px;
+  height: 26px;
+  padding-top: 5px;
+  padding-left: 4px; }
+
+.eventreminder_RpcThrobber_3F3aB {
+  position: absolute;
+  z-index: 3000;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.giveawaynextdraw_countdownCtn_GWWac {
+  background: radial-gradient(100% 80% at 64% 95%, rgba(108, 119, 134, 0.4) 40%, rgba(83, 104, 104, 0.4) 100%);
+  padding: 16px;
+  border-radius: 4px; }
+
+.giveawaynextdraw_Closed_ATX_x {
+  position: relative; }
+
+.giveawaynextdraw_CountDownCtn_11RwP {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 11px;
+  padding-bottom: 8px;
+  margin-bottom: 8px; }
+  .giveawaynextdraw_CountDownCtn_11RwP .giveawaynextdraw_CountDownTime_eh0pM {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    width: 62px;
+    padding-left: 14px;
+    border-radius: 2px; }
+  .giveawaynextdraw_CountDownCtn_11RwP .giveawaynextdraw_CountDownText_3VKQ3 {
+    font-size: 16px;
+    display: inline;
+    margin-left: 8px; }
+
+.giveawaynextdraw_LearnMore_1q98m {
+  position: relative; }
+
+.giveawaynextdraw_Throbber_bEkRt {
+  display: flex;
+  color: #80caff;
+  line-height: 37px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 12px;
+  padding-bottom: 8px;
+  margin-bottom: 8px; }
+
+.giveawaynextdraw_WinnerInfo_2LTFl {
+  display: inline;
+  margin-right: 8px; }
+  .giveawaynextdraw_WinnerInfo_2LTFl .giveawaynextdraw_WinnerCount_Z7ScP {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    width: 62px;
+    padding-left: 14px;
+    border-radius: 2px; }
+  .giveawaynextdraw_WinnerInfo_2LTFl .giveawaynextdraw_WinnerText_chkuq {
+    display: inline;
+    margin-left: 8px; }
+
+.packagepricewidget_StoreSalePriceWidget_NIRD8 {
+  margin-left: auto;
+  display: flex; }
+
+.packagepricewidget_StoreSaleDiscountedPriceCtn_2M2uu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 5px; }
+  .packagepricewidget_StoreSaleDiscountedPriceCtn_2M2uu .packagepricewidget_StoreSalePriceBox_pk-Lo {
+    padding: 0px;
+    line-height: 16px; }
+
+.packagepricewidget_StoreSaleDiscountBox_XMxka {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 3px 5px;
+  background-color: #4C6B22;
+  color: #A4D007;
+  display: flex;
+  align-items: center;
+  margin-right: 3px; }
+
+.packagepricewidget_StoreOrignalPrice_3TcPB {
+  text-decoration: line-through;
+  color: #626366;
+  font-size: 11px;
+  line-height: 11px;
+  margin-top: 2px; }
+
+.packagepricewidget_StoreSalePriceBox_pk-Lo {
+  background: black;
+  padding: 3px 5px; }
+
+.packagepricewidget_StoreSalePriceBox_pk-Lo {
+  font-size: 14px;
+  padding: 5px;
+  background-color: black;
+  align-items: center;
+  display: flex; }
+
+.gameactions_GotSteamDialog_2Qusm .gameactions_DownloadSteamUrl_10lP7 {
+  color: white; }
+  .gameactions_GotSteamDialog_2Qusm .gameactions_DownloadSteamUrl_10lP7:hover {
+    text-decoration: underline; }
+
+.gameactions_GotSteamDialog_2Qusm .gameactions_GameName_1_uzw {
+  font-weight: bold; }
+
+.gameactions_GotSteamDialog_2Qusm .gameactions_Buttons_2_Obm {
+  display: flex;
+  justify-content: space-between; }
+  .gameactions_GotSteamDialog_2Qusm .gameactions_Buttons_2_Obm .gameactions_Button_2nVaF {
+    padding: 12px;
+    background: linear-gradient(to bottom, rgba(102, 192, 244, 0.2) 5%, rgba(47, 137, 188, 0.2) 95%);
+    flex: 1 1 50%;
+    margin-left: 6px; }
+    .gameactions_GotSteamDialog_2Qusm .gameactions_Buttons_2_Obm .gameactions_Button_2nVaF.gameactions_LeftButton_3WYyu {
+      margin-left: 0;
+      margin-right: 6px; }
+    .gameactions_GotSteamDialog_2Qusm .gameactions_Buttons_2_Obm .gameactions_Button_2nVaF .gameactions_AnswerText_hCqVo {
+      font-size: 22px; }
+    .gameactions_GotSteamDialog_2Qusm .gameactions_Buttons_2_Obm .gameactions_Button_2nVaF .gameactions_ActionText_2s5Ns {
+      font-size: 13px; }
+    .gameactions_GotSteamDialog_2Qusm .gameactions_Buttons_2_Obm .gameactions_Button_2nVaF:hover {
+      background: linear-gradient(to bottom, #66c0f4 5%, #2f89bc 95%); }
+      .gameactions_GotSteamDialog_2Qusm .gameactions_Buttons_2_Obm .gameactions_Button_2nVaF:hover .gameactions_AnswerText_hCqVo, .gameactions_GotSteamDialog_2Qusm .gameactions_Buttons_2_Obm .gameactions_Button_2nVaF:hover .gameactions_ActionText_2s5Ns {
+        color: white; }
+
+.gameactions_GotSteamDialog_2Qusm .gameactions_Footer_3OKQs {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 16px 0 0;
+  font-size: 13px; }
+  .gameactions_GotSteamDialog_2Qusm .gameactions_Footer_3OKQs .gameactions_Logo_2AEA_ {
+    width: 32px;
+    height: 32px;
+    margin-right: 8px; }
+
 /* Other events, shown at the bottom of event page */
 .eventrow_OtherEventsCtn_9H6b5 {
   margin-top: 8vw; }
@@ -13215,7 +13968,6 @@ textarea:-webkit-autofill:focus,
 .eventrow_OtherEvents_MainImageCtn_2qyLP {
   width: 100%;
   height: auto;
-  max-height: 171px;
   position: relative;
   overflow: hidden; }
 
@@ -13356,12 +14108,18 @@ textarea:-webkit-autofill:focus,
   left: 10px;
   width: calc(100% - 20px); }
 
+.eventrow_AppCapsuleImageHover_IeC3X {
+  flex-shrink: 0;
+  margin-right: -2px;
+  z-index: 1; }
+
 .eventrow_AppCapsulePrice_2-l2M {
   background: black;
   display: flex;
-  position: absolute;
-  right: 0;
-  top: 15px; }
+  margin: 0 10px 0 auto;
+  flex-shrink: 1; }
+  .eventrow_AppCapsulePrice_2-l2M span {
+    font-size: 12px; }
 
 .partnersaledisplay_SaleHeaderContainer_W4mvn {
   display: flex;
@@ -13382,7 +14140,7 @@ textarea:-webkit-autofill:focus,
   position: relative;
   z-index: 2; }
   .partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_CarouselDisplay_mntHD {
-    max-width: 1020px; }
+    max-width: 940px; }
   .partnersaledisplay_SaleSection_1cOoC .partnersaledisplay_SaleViewAll_1bsBz {
     display: flex;
     justify-content: flex-end;
@@ -13437,6 +14195,9 @@ textarea:-webkit-autofill:focus,
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
   border-radius: 4px; }
 
+.carousel .partnersaledisplay_AppSummaryWidgetCtn_2H8Bm {
+  height: 100%; }
+
 .partnersaledisplay_SaleBroadcastCtn_1SFMh {
   z-index: 3;
   position: relative;
@@ -13450,9 +14211,9 @@ textarea:-webkit-autofill:focus,
   @media screen and (max-width: 1110px) {
     .partnersaledisplay_SaleOuterContainer_150kd.partnersaledisplay_CustomStyle_together_1lAyg {
       margin-top: 36vw !important; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 940px) {
     .partnersaledisplay_SaleOuterContainer_150kd {
-      margin-top: 48vw !important; } }
+      margin-top: 60vw !important; } }
 
 .partnersaledisplay_SaleBackground_2N8Se {
   background-position: center top;
@@ -13464,26 +14225,34 @@ textarea:-webkit-autofill:focus,
   @media screen and (max-width: 768px) {
     .partnersaledisplay_SaleBackground_2N8Se.partnersaledisplay_CustomStyle_together_1lAyg {
       background-size: 230vw; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 940px) {
     .partnersaledisplay_SaleBackground_2N8Se {
-      background-size: 180%; } }
+      background-size: var(--background-scale, 166%); } }
 
 .partnersaledisplay_SaleSectionSubtext_17Fnl {
   margin-bottom: 10px; }
 
-.partnersaledisplay_ShowContentsButton_2EjTW {
-  border-radius: 2px;
-  border: none;
-  padding: 10px;
-  display: inline-block;
-  cursor: pointer;
-  color: #285b9a;
-  background: rgba(103, 193, 245, 0.9); }
-  .partnersaledisplay_ShowContentsButton_2EjTW:hover {
-    color: #fff;
-    background: #417a9b;
-    background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
-    background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%); }
+.partnersaledisplay_SaleSectionContainer_W9_WA {
+  display: grid;
+  grid-gap: 16px; }
+
+.partnersaledisplay_ShowContentsContainer_CBMVC {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px; }
+  .partnersaledisplay_ShowContentsContainer_CBMVC .partnersaledisplay_ShowContentsButton_2EjTW {
+    border-radius: 2px;
+    border: none;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    color: #285b9a;
+    background: rgba(103, 193, 245, 0.9); }
+    .partnersaledisplay_ShowContentsContainer_CBMVC .partnersaledisplay_ShowContentsButton_2EjTW:hover {
+      color: #fff;
+      background: #417a9b;
+      background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
+      background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%); }
 
 span.partnersaledisplay_vr_supported_1BDSJ,
 span.partnersaledisplay_vr_required_1P__h {
@@ -13526,68 +14295,82 @@ span.partnersaledisplay_vr_required_1P__h {
     .partnersaledisplay_SalePageBroadcastContextHover_hbVdl .partnersaledisplay_AlbumTitle_keaMw:hover {
       text-decoration: underline; }
 
-.broadcastwidgets_StoreSaleWidgetContainer_2RL6D {
+.partnersaledisplay_PreviewSalesPageContainer_16oMm .partnersaledisplay_SaleSectionTabs_1FPIV {
+  top: 90px; }
+
+.partnersaledisplay_SaleSectionTabs_1FPIV {
+  top: 0px;
+  position: sticky;
+  z-index: 10;
+  left: 0px;
+  right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  max-width: 100%; }
+  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleSectionTabsTab_3BgHm {
+    background-color: black;
+    padding: 8px;
+    color: #888;
+    font-size: 18px;
+    margin: 4px;
+    min-width: 200px;
+    padding: auto 0px auto 0px;
+    cursor: pointer; }
+  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleSectionTabsCarousel_1XZy7 {
+    margin-left: 40px;
+    margin-right: 40px; }
+  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleSectionTabsList_4IDJX {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll; }
+  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleTab_gc-rq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px; }
+  .partnersaledisplay_SaleSectionTabs_1FPIV .partnersaledisplay_SaleTabLabel_2mYMQ {
+    text-align: center; }
+
+.partnersaledisplay_SaleSectionTabListContainer_2VZtq {
+  position: relative; }
+
+.partnersaledisplay_TabContentsContainer_2xJbu {
+  display: flex;
+  flex-flow: column; }
+
+.salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
   display: flex;
   flex-direction: row;
   max-width: 880px;
   z-index: 1; }
-  .broadcastwidgets_StoreSaleWidgetContainer_2RL6D.broadcastwidgets_Bundle_3wMcs {
+  .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO.salepreviewwidgets_Bundle_2GbhL {
     max-height: initial; }
-  @media screen and (max-width: 630px) {
-    .broadcastwidgets_StoreSaleWidgetContainer_2RL6D {
+  @media screen and (max-width: 620px) {
+    .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
       flex-direction: column; } }
-  .broadcastwidgets_StoreSaleWidgetContainer_2RL6D .broadcastwidgets_WishList_3mTSE,
-  .broadcastwidgets_StoreSaleWidgetContainer_2RL6D .broadcastwidgets_Action_2Xpw9 {
+  .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_WishList_1djkd,
+  .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO .salepreviewwidgets_Action_2zssE {
     margin-right: 5px;
     margin-top: 6px;
     width: auto;
     min-width: unset;
     padding: 9px 20px; }
 
-.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; }
-
-.broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
-  max-width: 155px;
-  background: #000; }
-  .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp .broadcastwidgets_Action_2Xpw9,
-  .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp .broadcastwidgets_WishList_3mTSE {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 24px;
-    line-height: 9px;
-    font-size: 11px;
-    margin-top: 2px; }
-  @media screen and (max-width: 620px) {
-    .broadcastwidgets_StoreSaleWidgetContainer_mini_nacWp {
-      max-width: unset;
-      flex-direction: row; } }
-
-.broadcastwidgets_StoreSaleWidgetImage_2T_Na {
+.salepreviewwidgets_StoreSaleWidgetImage_yvqq8 {
   padding-right: 16px;
   cursor: pointer; }
-  .broadcastwidgets_StoreSaleWidgetImage_2T_Na.broadcastwidgets_StoreSaleWidgetImageCtn_1JUFq {
+  .salepreviewwidgets_StoreSaleWidgetImage_yvqq8.salepreviewwidgets_StoreSaleWidgetImageCtn_1NnBn {
     display: block; }
 
-.broadcastwidgets_StoreSaleWidgetImage_mini_yvW2h {
-  cursor: pointer;
-  max-width: 155px; }
-
-.broadcastwidgets_StoreSaleImage_2LocI {
+.salepreviewwidgets_StoreSaleImage_17bKG {
   width: 100%;
   cursor: pointer;
   display: block; }
 
-.broadcastwidgets_StoreSaleImage_mini_1zSsm {
-  cursor: pointer;
-  width: 155px;
-  display: block; }
-
-.broadcastwidgets_StoreSaleVideo_2D7lp {
+.salepreviewwidgets_StoreSaleVideo_1gjSJ {
   position: absolute;
   top: 0;
   left: 0;
@@ -13601,40 +14384,44 @@ span.partnersaledisplay_vr_required_1P__h {
   background: black; }
 
 /* Override the EventDetailsBody img style in partnereventdisplay.scss */
-.broadcastwidgets_StoreSaleImage_2LocI.broadcastwidgets_StoreSaleImage_2LocI {
-  max-width: initial; }
+.salepreviewwidgets_StoreSaleImage_17bKG.salepreviewwidgets_StoreSaleImage_17bKG {
+  max-width: initial;
+  height: auto; }
 
-.broadcastwidgets_StoreSaleWidgetTitle_38YoU {
+.salepreviewwidgets_StoreSaleWidgetTitle_2ekpT {
   cursor: pointer;
   font-size: 18px;
-  line-height: 17px;
+  line-height: 21px;
   width: fit-content;
   color: #e5e5e5;
   flex-shrink: 0;
-  margin-top: 2px; }
+  margin-top: 2px;
+  text-align: left; }
 
-.broadcastwidgets_StoreSaleWidgetTitle_38YoU:hover {
+.salepreviewwidgets_StoreSaleWidgetTitle_2ekpT:hover {
   color: #AAA; }
 
-.broadcastwidgets_StoreSaleWidgetRelease_3yCCs {
+.salepreviewwidgets_StoreSaleWidgetRelease_1qvTF {
   font-size: 10px;
   color: #919fb1;
   margin-bottom: 8px;
-  margin-top: 0px; }
+  margin-top: 0px;
+  text-align: left; }
   @media screen and (max-width: 620px) {
-    .broadcastwidgets_StoreSaleWidgetRelease_3yCCs {
+    .salepreviewwidgets_StoreSaleWidgetRelease_1qvTF {
       display: none; } }
 
-.broadcastwidgets_StoreSaleWidgetTags_26_Kk {
+.salepreviewwidgets_StoreSaleWidgetTags_2bkP- {
   height: 25px;
   overflow: hidden;
-  margin-top: 4px; }
+  margin-top: 4px;
+  text-align: left; }
 
-.broadcastwidgets_StoreSaleWidgetScreenshots_3mnba {
+.salepreviewwidgets_StoreSaleWidgetScreenshots_1lWbL {
   margin-top: 4px;
   display: none; }
 
-.broadcastwidgets_AppTag_2pNqf {
+.salepreviewwidgets_AppTag_3FJnZ {
   display: inline-block;
   line-height: 19px;
   padding: 0 7px;
@@ -13649,61 +14436,60 @@ span.partnersaledisplay_vr_required_1P__h {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 10px; }
-  .broadcastwidgets_AppTag_2pNqf:hover {
+  .salepreviewwidgets_AppTag_3FJnZ:hover {
     text-decoration: none;
     cursor: default;
     background-color: rgba(112, 129, 137, 0.15); }
-  .broadcastwidgets_AppTag_2pNqf:nth-child(n+6) {
+  .salepreviewwidgets_AppTag_3FJnZ:nth-child(n+6) {
     display: none; }
 
-.broadcastwidgets_StoreSaleWidgetShortDesc_2by8B {
+.salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
   font-size: 12px;
   line-height: 15px;
   max-height: 93px;
-  overflow: hidden; }
-
-.broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
-  max-height: 103px;
-  overflow-y: scroll;
-  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, black 16px);
-  padding-bottom: 8px;
   overflow: hidden;
-  letter-spacing: 0px;
-  line-height: 13px;
-  font-size: 11px; }
-  @media screen and (max-width: 620px) {
-    .broadcastwidgets_StoreSaleWidgetShortDesc_mini_2ZkfU {
-      display: none; } }
+  text-align: left; }
 
-.broadcastwidgets_StoreSaleWidgetLeft_20n87 {
+.salepreviewwidgets_StoreSaleWidgetLeft_3DkfN {
   padding: 0px;
   flex-basis: 30%; }
 
-.broadcastwidgets_StoreSaleWidgetRight_1MzBO {
+.salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
   padding: 0px 4px 4px 4px;
   flex-basis: 70%; }
-  .broadcastwidgets_StoreSaleWidgetRight_1MzBO .broadcastwidgets_TitleCtn_X6LtM {
+  .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_TitleCtn_3rrH9 {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
 
-.broadcastwidgets_StoreActionWidgetContainer_2MF6Y .broadcastwidgets_StoreSalePriceActionWidgetContainer_2teqY {
-  display: flex;
-  flex-direction: row;
-  padding: 0px;
-  margin-top: 6px; }
+.carousel .salepreviewwidgets_TitleCtn_3rrH9 {
+  flex-direction: column; }
+  .carousel .salepreviewwidgets_TitleCtn_3rrH9 .salepreviewwidgets_CapsulePlatform_2bCf9 {
+    padding-left: 0px; }
 
-.broadcastwidgets_StoreSaleDiscountedPriceCtn_38zNE {
+.carousel .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
+  max-height: unset;
+  padding-bottom: 8px; }
+
+.salepreviewwidgets_StoreActionWidgetContainer_kW6m4 {
+  display: flex;
+  flex-wrap: wrap; }
+  .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_StoreSalePriceActionWidgetContainer_1JuIp {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+    margin-top: 6px; }
+
+.salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   padding-right: 5px; }
-  .broadcastwidgets_StoreSaleDiscountedPriceCtn_38zNE .broadcastwidgets_StoreSalePriceBox_2A_NW {
+  .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu .salepreviewwidgets_StoreSalePriceBox_3j4dI {
     padding: 0px;
     line-height: 16px; }
 
-.broadcastwidgets_StoreSaleDiscountBox_3uiyX {
+.salepreviewwidgets_StoreSaleDiscountBox_cnkoF {
   font-size: 16px;
   font-weight: 500;
   padding: 3px 5px;
@@ -13713,25 +14499,29 @@ span.partnersaledisplay_vr_required_1P__h {
   align-items: center;
   margin-right: 3px; }
 
-.broadcastwidgets_StoreOrignalPrice_1fpRU {
+.salepreviewwidgets_StoreOrignalPrice_18ANC {
   text-decoration: line-through;
   color: #626366;
   font-size: 11px;
   line-height: 11px;
   margin-top: 2px; }
 
-.broadcastwidgets_StoreSalePriceBox_2A_NW {
+.salepreviewwidgets_StoreSalePriceBox_3j4dI {
   background: black;
-  padding: 3px 5px; }
-
-.broadcastwidgets_StoreSalePriceBox_2A_NW {
+  padding: 3px 5px;
   font-size: 14px;
-  padding: 5px;
+  padding: 5px 8px;
   background-color: black;
   align-items: center;
-  display: flex; }
+  display: flex;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px; }
 
-.broadcastwidgets_StoreSalePriceButton_3lydG {
+.salepreviewwidgets_Discounted_1g0B- .salepreviewwidgets_StoreSalePriceBox_3j4dI {
+  border-radius: unset;
+  padding-left: 5px; }
+
+.salepreviewwidgets_StoreSalePriceButton_1BejQ {
   border-radius: 2px;
   border: none;
   padding: 1px;
@@ -13746,31 +14536,44 @@ span.partnersaledisplay_vr_required_1P__h {
   font-size: 15px;
   line-height: 30px; }
 
-.broadcastwidgets_StoreSalePriceButton_3lydG:hover {
+.salepreviewwidgets_StoreSalePriceButton_1BejQ:hover {
   text-decoration: none !important;
   color: #ffffff !important;
   background: #a4d007;
   background: -webkit-linear-gradient(top, #a4d007 5%, #6b8705 95%);
   background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%); }
 
-.broadcastwidgets_CapsuleContainer_1gET8 {
+.salepreviewwidgets_CapsuleContainer_22Acx {
   display: flex;
   flex-direction: column;
-  border-radius: 2px;
+  border-radius: 3px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-  background: #1F2126;
   transition: all 0.2s ease-out; }
-  .broadcastwidgets_CapsuleContainer_1gET8:hover {
+  .salepreviewwidgets_CapsuleContainer_22Acx .salepreviewwidgets_CapsuleImageContainer_t0lY6 {
+    display: relative; }
+  .salepreviewwidgets_CapsuleContainer_22Acx .salepreviewwidgets_CapsuleImage_2eQ4m {
+    display: block; }
+  .salepreviewwidgets_CapsuleContainer_22Acx .salepreviewwidgets_CapsuleMicroTrailer_1M7n5 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: block;
+    pointer-events: none; }
+  .salepreviewwidgets_CapsuleContainer_22Acx:hover {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
-  .broadcastwidgets_CapsuleContainer_1gET8.broadcastwidgets_InCarouselWidget_17Zd1 {
+  .salepreviewwidgets_CapsuleContainer_22Acx.salepreviewwidgets_InCarouselWidget_z5kQ3 {
     margin: 9px; }
 
-.broadcastwidgets_Muted_2ksIf {
+.salepreviewwidgets_Muted_1HVwz {
   opacity: 0.3; }
 
-.broadcastwidgets_CapsuleBottomBar_2ygf4 {
+.salepreviewwidgets_CapsuleBottomBar_3lmdE {
   background-color: black;
   display: flex;
   align-items: center;
@@ -13778,16 +14581,31 @@ span.partnersaledisplay_vr_required_1P__h {
   height: 30px;
   box-sizing: border-box;
   z-index: 2; }
+  .salepreviewwidgets_CapsuleBottomBar_3lmdE .salepreviewwidgets_BottomBarPriceInfo_1X3j2 {
+    margin-left: auto;
+    display: flex; }
+  .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_PlayNowButton_38ePa, .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_AddToLibraryButton_1DrDh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    border-radius: 2px; }
+  .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_PlayNowButton_38ePa {
+    background-color: #85a805; }
+  .salepreviewwidgets_CapsuleBottomBar_3lmdE.salepreviewwidgets_AddToLibraryButton_1DrDh {
+    background-color: gray; }
 
-.broadcastwidgets_CapsulePlatform_1YzDv {
+.salepreviewwidgets_CapsulePlatform_2bCf9 {
   padding: 0px 4px;
-  height: 20px; }
+  height: 20px;
+  display: flex;
+  flex-direction: row; }
 
-.broadcastwidgets_CapsuleImage_XI8fY {
+.salepreviewwidgets_CapsuleImage_2eQ4m {
   width: 100%;
   display: block; }
 
-.broadcastwidgets_CapsuleTitle_2eIiB {
+.salepreviewwidgets_CapsuleTitle_E_751 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -13797,7 +14615,12 @@ span.partnersaledisplay_vr_required_1P__h {
   margin-right: 5px;
   max-width: 60vw; }
 
-.broadcastwidgets_Action_2Xpw9 {
+.salepreviewwidgets_CapsuleParentInfo_2erfW {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.salepreviewwidgets_Action_2zssE {
   min-width: 50%;
   flex-direction: row;
   background-image: radial-gradient(circle at top left, #85a805 10%, #6a8704 80%);
@@ -13837,13 +14660,13 @@ span.partnersaledisplay_vr_required_1P__h {
 		background: linear-gradient(to bottom, #a4d007 5%, #6b8705 95%);
 	}
 	*/ }
-  .broadcastwidgets_Action_2Xpw9:hover {
+  .salepreviewwidgets_Action_2zssE:hover {
     color: white;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
     background-image: radial-gradient(circle at top left, #a3cf06 0%, #6a8704 120%);
     cursor: pointer; }
 
-.broadcastwidgets_WishList_3mTSE {
+.salepreviewwidgets_WishList_1djkd {
   width: 100%;
   display: flex;
   align-items: center;
@@ -13858,36 +14681,40 @@ span.partnersaledisplay_vr_required_1P__h {
   text-align: center;
   border-radius: 2px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); }
-  .broadcastwidgets_WishList_3mTSE:hover {
+  .salepreviewwidgets_WishList_1djkd:hover {
     color: white;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
     background-image: radial-gradient(circle at top left, #0675cf 0%, #046287 120%);
     cursor: pointer; }
 
-.broadcastwidgets_Banner_3ikQa {
+.salepreviewwidgets_Banner_2gxv9 {
   position: absolute;
   left: 0;
   top: 14px;
-  font-size: 10px;
+  font-size: 11px;
   color: #111111;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  box-sizing: border-box;
+  padding: 3px 14px 3px 10px;
   height: 18px;
-  line-height: 19px;
-  padding-left: 14px;
-  padding-right: 14px;
+  display: flex;
+  align-items: center;
   white-space: nowrap;
   z-index: 5;
   text-transform: uppercase;
   background-color: #d3deea; }
-  .broadcastwidgets_Banner_3ikQa.broadcastwidgets_Blue_3hfTG {
+  .salepreviewwidgets_Banner_2gxv9.salepreviewwidgets_Blue_2o-5t {
     background-color: #66c0f4; }
+  .salepreviewwidgets_Banner_2gxv9 .salepreviewwidgets_LinesImg_3LecB {
+    height: 10px;
+    margin-right: 4px; }
 
-.broadcastwidgets_LiveIcon_1iKjC {
+.salepreviewwidgets_LiveIcon_1ZIpI {
   position: absolute;
   left: 0;
   top: 36px; }
 
-.broadcastwidgets_CapsuleMenuButton_2hdaQ {
+.salepreviewwidgets_CapsuleMenuButton_niVR8 {
   position: absolute;
   right: 4px;
   top: 4px;
@@ -13899,13 +14726,19 @@ span.partnersaledisplay_vr_required_1P__h {
   background: white;
   display: flex;
   border: 1px solid black;
-  z-index: 3; }
-  .broadcastwidgets_CapsuleMenuButton_2hdaQ:hover {
+  z-index: 3;
+  visibility: hidden; }
+  .salepreviewwidgets_CapsuleContainer_22Acx:hover .salepreviewwidgets_CapsuleMenuButton_niVR8 {
+    visibility: visible; }
+  html.touch .salepreviewwidgets_CapsuleMenuButton_niVR8 {
+    /* stylelint-disable-line */
+    visibility: visible; }
+  .salepreviewwidgets_CapsuleMenuButton_niVR8:hover {
     background: #67c1f5; }
-  .broadcastwidgets_CapsuleMenuButton_2hdaQ > img {
-    width: 100%; }
+  .salepreviewwidgets_CapsuleMenuButton_niVR8 polyline {
+    stroke: #67c1f5; }
 
-.broadcastwidgets_BundleContentsCtn_1p28h {
+.salepreviewwidgets_BundleContentsCtn_34acu {
   background: rgba(0, 0, 0, 0.2);
   margin-left: -16px;
   margin-right: -16px;
@@ -13913,36 +14746,160 @@ span.partnersaledisplay_vr_required_1P__h {
   padding: 16px 16px 16px 16px;
   margin-top: 12px; }
 
-.broadcastwidgets_BundleContentItem_1VQWA {
+.salepreviewwidgets_BundleContentItem_2sdNO {
   margin-bottom: 4px; }
-  .broadcastwidgets_BundleContentItem_1VQWA .broadcastwidgets_StoreSaleWidgetTags_26_Kk,
-  .broadcastwidgets_BundleContentItem_1VQWA .broadcastwidgets_StoreSaleWidgetShortDesc_2by8B {
+  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetContainer_2hhNO {
+    background: -webkit-linear-gradient(-10deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0) 95%);
+    background: linear-gradient(-10deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0) 95%);
+    border-radius: 3px; }
+  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetTags_2bkP-,
+  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
     display: none; }
-  .broadcastwidgets_BundleContentItem_1VQWA .broadcastwidgets_StoreSaleWidgetLeft_20n87 {
+  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetLeft_3DkfN {
     flex-basis: 23%; }
-  .broadcastwidgets_BundleContentItem_1VQWA .broadcastwidgets_StoreSaleWidgetRight_1MzBO {
+  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
     flex-basis: 77%;
     padding-right: 0px; }
-  .broadcastwidgets_BundleContentItem_1VQWA:hover {
-    background: rgba(255, 255, 255, 0.1); }
-  .broadcastwidgets_BundleContentItem_1VQWA .broadcastwidgets_TitleCtn_X6LtM {
+  .salepreviewwidgets_BundleContentItem_2sdNO .salepreviewwidgets_TitleCtn_3rrH9 {
     margin-top: 10px; }
+  .salepreviewwidgets_BundleContentItem_2sdNO .packageItem .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .salepreviewwidgets_BundleContentItem_2sdNO .packageItem .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_ExpandPackageButtonCtn_2quyD {
+      position: relative;
+      margin-top: 5px; }
 
-.broadcastwidgets_ShowContentsButton_1cu3o {
+.salepreviewwidgets_ExpandedPackageItems_3WUOP {
+  padding-left: 20px;
+  margin-top: 8px; }
+  .salepreviewwidgets_ExpandedPackageItems_3WUOP .salepreviewwidgets_BundleContentItem_2sdNO:last-child {
+    margin-bottom: 40px; }
+  .salepreviewwidgets_ExpandedPackageItems_3WUOP .salepreviewwidgets_BundleContentItem_2sdNO:hover .salepreviewwidgets_Action_2zssE,
+  .salepreviewwidgets_ExpandedPackageItems_3WUOP .salepreviewwidgets_BundleContentItem_2sdNO:hover .salepreviewwidgets_WishList_1djkd {
+    display: inline-block; }
+  .salepreviewwidgets_ExpandedPackageItems_3WUOP .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_Action_2zssE {
+    display: none; }
+  .salepreviewwidgets_ExpandedPackageItems_3WUOP .salepreviewwidgets_StoreActionWidgetContainer_kW6m4 .salepreviewwidgets_WishList_1djkd {
+    display: none; }
+
+.salepreviewwidgets_BundleLargeCtn_1Wbr3 {
+  justify-content: space-between; }
+  .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_BundleImage_3D54h {
+    width: 60%;
+    box-sizing: border-box; }
+    @media screen and (max-width: 620px) {
+      .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_BundleImage_3D54h {
+        max-width: unset;
+        width: 100%; }
+        .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_BundleImage_3D54h .salepreviewwidgets_StoreSaleWidgetImage_yvqq8 {
+          padding: 0; } }
+  .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_StoreSaleWidgetTitle_2ekpT {
+      font-size: 24px;
+      line-height: 28px;
+      margin: 0; }
+    .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_BundleContentPreview_jQ5Ga {
+      margin: 0; }
+    @media screen and (max-width: 620px) {
+      .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg {
+        max-width: unset;
+        width: 100%; }
+        .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetRight_v9uRg .salepreviewwidgets_StoreSaleWidgetTitle_2ekpT {
+          margin-top: 6px; } }
+  .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_StoreSaleWidgetShortDesc_3AsE5 {
+    padding-top: 5px; }
+  .salepreviewwidgets_BundleLargeCtn_1Wbr3 .salepreviewwidgets_CapsulePlatform_2bCf9 {
+    margin-right: auto;
+    align-self: center; }
+
+.salepreviewwidgets_BundleBuyButtons_2puKN {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap; }
+  .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleBuyButton_1Q0r5 {
+    width: 150px;
+    height: 42px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color: black;
+    font-size: 15px; }
+    .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleBuyButton_1Q0r5 a {
+      min-width: 150px;
+      height: 100%;
+      padding: 4px 0;
+      box-sizing: border-box; }
+    .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleBuyButton_1Q0r5 .salepreviewwidgets_Action_2zssE {
+      margin-top: 0px;
+      margin-right: 0px; }
+  .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleDiscounts_1JRvn {
+    margin: 0 0 0 4px;
+    display: flex;
+    align-items: center;
+    background-color: black; }
+    .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleDiscounts_1JRvn .salepreviewwidgets_BaseDiscount_3mInD {
+      padding: 6px;
+      font-size: 18px;
+      text-decoration: line-through; }
+    .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleDiscounts_1JRvn .salepreviewwidgets_StoreSaleDiscountBox_cnkoF {
+      font-size: 25px;
+      padding: 2px 5px 4px; }
+    .salepreviewwidgets_BundleBuyButtons_2puKN .salepreviewwidgets_BundleDiscounts_1JRvn .salepreviewwidgets_StoreSaleDiscountedPriceCtn_3NhLu {
+      padding: 4px; }
+
+.salepreviewwidgets_BundleContentPreview_jQ5Ga {
+  padding: 6px;
+  margin: 8px -6px 0 -6px;
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 550px;
+  margin-bottom: 10px; }
+  .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewCtn_1NM53 {
+    position: relative;
+    height: 45px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex; }
+  .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewItem_2yhQb {
+    display: inline-block;
+    box-shadow: 2px 0 5px 0px #000000;
+    margin-left: -30px; }
+  .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewItem_2yhQb:first-child {
+    position: relative;
+    margin-left: 0px; }
+  .salepreviewwidgets_BundleContentPreview_jQ5Ga .salepreviewwidgets_PreviewImg_1jx70 {
+    display: block;
+    max-width: 120px; }
+
+.salepreviewwidgets_BundleShowButton_2Vu78 {
+  padding: 12px 0 0 0;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid black;
+  margin-top: 12px; }
+
+.salepreviewwidgets_ShowContentsButton_-VlK4 {
   border-radius: 2px;
   border: none;
-  padding: 4px;
+  padding: 4px 20px;
   display: inline-block;
   cursor: pointer;
-  color: #285b9a;
-  background: rgba(103, 193, 245, 0.9); }
-  .broadcastwidgets_ShowContentsButton_1cu3o:hover {
+  color: rgba(255, 255, 255, 0.5);
+  background: -webkit-linear-gradient(150deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0.3) 95%);
+  background: linear-gradient(-60deg, rgba(255, 255, 255, 0.2) 5%, rgba(255, 255, 255, 0.3) 95%); }
+  .salepreviewwidgets_ShowContentsButton_-VlK4:hover {
     color: #fff;
     background: #417a9b;
     background: -webkit-linear-gradient(150deg, #417a9b 5%, #67c1f5 95%);
-    background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%); }
+    background: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); }
 
-.broadcastwidgets_bordered_live_stream_icon_2dA9j {
+.salepreviewwidgets_bordered_live_stream_icon_2E28o {
   position: relative;
   display: inline-block;
   top: auto;
@@ -13969,697 +14926,6 @@ span.partnersaledisplay_vr_required_1P__h {
   box-shadow: 0 0 7px #a94847;
   border-radius: 9px;
   z-index: 2; }
-
-.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
-  position: relative;
-  font-family: Helvetica, Arial, sans-serif;
-  border-radius: 6px;
-  padding: 8px;
-  margin: 10px 0px 10px 0px;
-  cursor: pointer;
-  overflow: hidden;
-  background: -webkit-linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%);
-  background: linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%); }
-  .eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF .eventbbcodeyoutubeembed_DynamicLink_Preview_3Z5cW {
-    float: left;
-    margin-right: 14px;
-    max-height: 88px;
-    max-width: 75%; }
-
-a.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF {
-  display: block;
-  text-decoration: none !important;
-  border-bottom: none; }
-  a.eventbbcodeyoutubeembed_DynamicLinkBox_1zmYF:hover {
-    border-bottom: none; }
-
-.eventbbcodeyoutubeembed_DynamicLink_Author_xG6te {
-  height: 16px;
-  font-size: 12px;
-  color: #95a6b2;
-  margin-bottom: 4px; }
-  .eventbbcodeyoutubeembed_DynamicLink_Author_xG6te span {
-    color: #809fb7; }
-
-.eventbbcodeyoutubeembed_DynamicLink_Description_2Nwb8 {
-  padding-bottom: 10px; }
-
-.eventbbcodeyoutubeembed_DynamicLink_Content_10QvP {
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  color: silver;
-  text-shadow: 0 0 16px black;
-  font-size: 13px;
-  line-height: normal;
-  text-align: left;
-  display: flow-root; }
-
-.eventbbcodeyoutubeembed_DynamicLink_Name_Ef9WZ {
-  font-size: 15px;
-  color: #aad8ec;
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
-  padding-bottom: 0px;
-  display: inline-block;
-  margin-bottom: 6px; }
-
-.eventbbcodeyoutubeembed_DynamicLink_YoutubeViews_1EXif {
-  padding-top: 4px;
-  padding-bottom: 4px;
-  color: #bfbfbf; }
-
-.eventbbcodeyoutubeembed_Dynamiclink_Content_SmLh- {
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  color: silver;
-  text-shadow: 0 0 16px black;
-  font-size: 13px;
-  line-height: 15px;
-  margin-bottom: 9px;
-  text-align: left;
-  display: flow-root; }
-
-.eventbbcodeyoutubeembed_DynamicLink_URL_3zVTF a,
-.eventbbcodeyoutubeembed_DynamicLink_AuthorName_2scjl {
-  color: #ffffff; }
-
-.eventbbcodeyoutubeembed_DynamicLink_Date_2hEHb {
-  float: right; }
-
-/* YouTube Videos */
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC {
-  /* recommended YouTube diemnsion is 640x385 for 16:9 content */
-  display: block;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  overflow: hidden; }
-
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC img {
-  width: 100%;
-  display: block; }
-
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC iframe {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-/* size */
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_sizeThumb_3olWW {
-  width: 311px;
-  height: 187px; }
-
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_sizeFull_126sP {
-  width: 100%;
-  margin-bottom: 6px;
-  margin-top: 4px; }
-
-/* alignment */
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatLeft_1-UTh {
-  float: left;
-  padding-right: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px; }
-
-.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatRight_IHcwx {
-  float: right;
-  padding-left: 8px;
-  padding-top: 4px;
-  padding-bottom: 4px; }
-
-iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatLeft_1-UTh, iframe.eventbbcodeyoutubeembed_PreviewYouTubeVideo_2sJoC.eventbbcodeyoutubeembed_floatRight_IHcwx {
-  float: none;
-  padding: 0px; }
-
-.image_ErrorDiv_2FXME {
-  background-color: hotpink;
-  border: 1px solid;
-  padding: 10px; }
-
-.eventbbcodeparser_BlockQuote_2cY7b {
-  border: 1px solid #56707f;
-  border-radius: 3px;
-  padding: 12px;
-  margin: 8px;
-  font-size: 92%;
-  display: table;
-  word-break: break-word; }
-
-.eventbbcodeparser_BlockQuoteAuthor_Jyzed {
-  font-size: 92%;
-  font-style: italic; }
-
-.eventbbcodeparser_PullQuote_UZBJN {
-  width: 33%;
-  min-width: 200px;
-  float: right;
-  border-radius: 3px;
-  font-size: 22px;
-  font-weight: 500;
-  color: white;
-  display: table;
-  word-break: break-word;
-  line-height: 28px;
-  padding: 10px; }
-
-.eventbbcodeparser_Code_1zoQP {
-  border: 1px solid #535354;
-  border-radius: 3px;
-  padding: 12px;
-  margin: 8px;
-  font-size: 11px;
-  font-family: Consolas,monospace;
-  white-space: pre;
-  white-space: pre-wrap;
-  overflow-x: auto; }
-
-.eventbbcodeparser_Header1_SPYFj {
-  color: #ffffff;
-  margin-bottom: 6px;
-  margin-top: 8px;
-  font-size: 32px;
-  line-height: 33px;
-  font-weight: 500;
-  clear: both; }
-
-.eventbbcodeparser_Header2_QuKtT {
-  color: #ffffff;
-  margin-bottom: 6px;
-  margin-top: 8px;
-  font-size: 26px;
-  line-height: 29px;
-  font-weight: 400;
-  clear: both; }
-
-.eventbbcodeparser_Header3_3s7cU {
-  color: #ffffff;
-  margin-bottom: 6px;
-  margin-top: 8px;
-  font-size: 19px;
-  line-height: 22px;
-  font-weight: 300;
-  clear: both; }
-
-.eventbbcodeparser_HR_2IENn {
-  border: none;
-  height: 1px;
-  color: #6e7577;
-  background-color: #6e7577; }
-
-.eventbbcodeparser_Link_29bMZ {
-  color: #969696;
-  text-decoration: underline; }
-  .eventbbcodeparser_Link_29bMZ:hover {
-    color: #ffffff; }
-
-.eventbbcodeparser_LinkHost_16eO9 {
-  font-size: 10px;
-  color: #7e8391;
-  padding: 4px;
-  top: -1px; }
-
-.eventbbcodeparser_Strike_1tIBv {
-  text-decoration: line-through; }
-
-.eventbbcodeparser_Spoiler_3QcA9 {
-  color: #000000;
-  background-color: #000000;
-  padding: 0px 8px; }
-
-.eventbbcodeparser_Spoiler_3QcA9:hover {
-  color: #ffffff; }
-
-.eventbbcodeparser_Spoiler_3QcA9 > span {
-  visibility: hidden; }
-
-.eventbbcodeparser_Spoiler_3QcA9:hover > span {
-  visibility: visible; }
-
-.eventbbcodeparser_UnorderList_3995Y {
-  list-style-type: disc;
-  list-style-position: inside;
-  line-height: 21px;
-  padding-left: 1em;
-  padding-inline-start: 40px;
-  margin-top: 14px;
-  margin-bottom: 0px; }
-
-.eventbbcodeparser_UnorderList_3995Y > li {
-  list-style-position: outside; }
-
-ol {
-  padding-left: 3em;
-  margin-top: 14px;
-  margin-bottom: 14px; }
-
-.eventbbcodeparser_Table_3sT80 {
-  display: table;
-  border-collapse: collapse;
-  font-size: 12px; }
-
-.eventbbcodeparser_TableHeader_3WcB- {
-  display: table-cell;
-  font-weight: bold;
-  padding: 4px;
-  border-right: 1px solid #77797e; }
-  .eventbbcodeparser_TableHeader_3WcB-:first-of-type {
-    border-left: 1px solid #77797e; }
-
-.eventbbcodeparser_TableHeader_3WcB- img.eventbbcodeparser_sharedFilePreviewImage_2bwhK,
-.eventbbcodeparser_TableData_1skQk img.eventbbcodeparser_sharedFilePreviewImage_2bwhK {
-  margin: 0px; }
-
-.eventbbcodeparser_TableRow_sc_Sn {
-  display: table-row;
-  border-bottom: 1px solid #77797e; }
-  .eventbbcodeparser_TableRow_sc_Sn:first-of-type {
-    border-top: 1px solid #77797e; }
-
-.eventbbcodeparser_TableData_1skQk {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 4px;
-  border-right: 1px solid #77797e; }
-  .eventbbcodeparser_TableData_1skQk:first-of-type {
-    border-left: 1px solid #77797e; }
-
-iframe.eventbbcodeparser_StoreWidget_36Y-l {
-  height: 190px;
-  width: 100%; }
-
-iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
-  height: 360px;
-  width: 100%; }
-
-.eventbbcodeparser_AppSummaryWidgetCtn_3DfY9 {
-  flex-grow: 2;
-  flex-basis: 0;
-  margin-right: 16px;
-  padding: 16px;
-  background-image: radial-gradient(ellipse at top left, #42454c, #25282e);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 4px; }
-
-/* special styling for Game Awards 2019. To replace with scaleable solution after Game Awards has run */
-.eventbbcodeparser_SaleSectionCtn_39HWX {
-  color: #C3C4D9;
-  font-size: 14px; }
-  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_ReminderCtn_25AZk {
-    width: 300px;
-    margin: 0 auto; }
-  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_BlockQuote_2cY7b {
-    border: none;
-    width: 60%;
-    max-width: 640px;
-    margin: 0 auto; }
-  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_Table_3sT80 {
-    font-size: 14px; }
-  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_TableRow_sc_Sn,
-  .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_TableData_1skQk {
-    border: none; }
-  .eventbbcodeparser_SaleSectionCtn_39HWX img {
-    max-width: 100%; }
-
-@media screen and (max-width: 800px) {
-  body .eventbbcodeparser_SaleSectionCtn_39HWX .eventbbcodeparser_BlockQuote_2cY7b {
-    width: 100%; } }
-
-/* end Game Awards styling hacks */
-
-.localdateandtime_DateAndTime_2V6GL, .localdateandtime_DateAndTimeInline_HZ6b2 {
-  display: flex;
-  white-space: nowrap; }
-  .localdateandtime_DateAndTime_2V6GL span.localdateandtime_At_Fn5EU, .localdateandtime_DateAndTimeInline_HZ6b2 span.localdateandtime_At_Fn5EU {
-    margin: 0px 4px;
-    color: #6c767f; }
-
-.localdateandtime_DateAndTimeInline_HZ6b2 {
-  display: inline-flex; }
-
-.localdateandtime_ActiveEvent_rT7Ek {
-  color: #a3cf06;
-  display: flex; }
-  .localdateandtime_ActiveEvent_rT7Ek .localdateandtime_ActiveEventCallOut_2pJft {
-    background: #a3cf06;
-    font-size: 11px;
-    color: #222222;
-    padding: 0px 5px;
-    border-radius: 2px;
-    display: table;
-    position: relative;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin-right: 4px;
-    margin-top: 1px; }
-
-.localdateandtime_RightSideTitles_4LAnP {
-  font-size: 12px;
-  font-weight: 200;
-  color: #b1b4b9;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 4px; }
-
-.localdateandtime_DateToolTip_2E5LH {
-  z-index: 2000;
-  padding: 3px 8px;
-  border-radius: 2px;
-  background-color: #5e6068;
-  color: white;
-  text-transform: uppercase;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3); }
-
-.localdateandtime_ShortDateAndTime_MBkkh {
-  margin: 0px 4px;
-  text-transform: initial;
-  color: #868f98;
-  letter-spacing: normal; }
-
-.localdateandtime_ShortDateRange_3CN6I {
-  display: flex; }
-  @media screen and (max-width: 500px) {
-    .localdateandtime_ShortDateRange_3CN6I {
-      flex-direction: column; } }
-  .localdateandtime_ShortDateRange_3CN6I .localdateandtime_RightSideTitles_4LAnP {
-    display: flex;
-    flex-wrap: wrap; }
-
-.eventreminder_FlexColumnContainer_15ufN {
-  display: flex;
-  flex-direction: column; }
-
-.eventreminder_FullStartTime_1YLHW {
-  color: #a4d5ff;
-  padding: 8px 10px;
-  background-color: rgba(0, 0, 0, 0.3); }
-
-.eventreminder_ReminderDialog_3YUEY.eventreminder_ReminderOptions_1Tp8K {
-  width: 300px;
-  padding: 0px;
-  background: transparent;
-  border-left: none; }
-
-.eventreminder_ReminderBackground_TNf9_ {
-  position: relative;
-  background: #2f2f33;
-  padding: 0px;
-  border-radius: 2px;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
-  width: max-content; }
-  .eventreminder_ReminderBackground_TNf9_.eventreminder_ReminderExpandsLeft_38Xly {
-    position: absolute;
-    right: 0; }
-
-.eventreminder_ReminderOption_26nnh, a.eventreminder_ReminderOption_26nnh {
-  padding: 4px;
-  margin: 0px 8px 2px 8px;
-  background: #444850;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 22px;
-  display: flex;
-  align-items: center; }
-  .eventreminder_ReminderOption_26nnh:not(.eventreminder_Unverified_1dcmA):hover, a.eventreminder_ReminderOption_26nnh:not(.eventreminder_Unverified_1dcmA):hover {
-    background-color: rgba(255, 255, 255, 0.2); }
-  .eventreminder_ReminderOption_26nnh.eventreminder_Unverified_1dcmA, a.eventreminder_ReminderOption_26nnh.eventreminder_Unverified_1dcmA {
-    color: #777777; }
-  .eventreminder_ReminderOption_26nnh a, a.eventreminder_ReminderOption_26nnh a {
-    color: #a4d5ff;
-    padding: 0 4px; }
-    .eventreminder_ReminderOption_26nnh a:hover, a.eventreminder_ReminderOption_26nnh a:hover {
-      text-decoration: underline; }
-  .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE {
-    flex: 1; }
-    .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container {
-      margin-bottom: 0px;
-      padding: 0 8px 0 0; }
-      .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox {
-        margin: 3px;
-        width: 16px;
-        height: 16px; }
-        .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox .SVGIcon_DialogCheck, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogCheckbox .SVGIcon_DialogCheck {
-          margin: 0 0 2px 0;
-          width: 16px;
-          height: 16px; }
-      .eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogToggle_Label, a.eventreminder_ReminderOption_26nnh .eventreminder_CheckboxWrapper_1xuKE .DialogCheckbox_Container .DialogToggle_Label {
-        margin-left: 28px; }
-
-.eventreminder_ReminderOptionTooltip_2SNqE {
-  z-index: 2000; }
-
-.eventreminder_ReminderCheckBox_vPo2j {
-  background-image: radial-gradient(circle at top left, #399aec 10%, #225dce 80%);
-  display: flex;
-  flex-direction: row;
-  font-size: 14px; }
-  .eventreminder_ReminderCheckBox_vPo2j:hover {
-    cursor: pointer;
-    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); }
-    .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderDefault_19p2Q, .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderOptions_1Tp8K, .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderCheck_3fMhC, .eventreminder_ReminderCheckBox_vPo2j:hover .eventreminder_ReminderOpennedOptions_vBuhk {
-      background-color: rgba(57, 154, 236, 0.5); }
-
-.eventreminder_ReminderDefault_19p2Q {
-  padding: 6px;
-  color: #ffffff;
-  flex: 1;
-  flex-grow: 100;
-  border-right: 1px solid rgba(0, 0, 0, 0.5); }
-
-.eventreminder_ReminderCheckBox_vPo2j
-.eventreminder_ReminderOptions_1Tp8K,
-.eventreminder_ReminderOpennedOptions_vBuhk {
-  flex: 1;
-  flex-basis: 32px;
-  background-repeat: no-repeat;
-  background-position: 9px 10px;
-  width: 35px;
-  height: 32px;
-  border-left: 1px solid rgba(255, 255, 255, 0.15); }
-
-.eventreminder_ReminderOptions_1Tp8K {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0M1MEE4RDkxREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0M1MEE4REExREYwMTFFOUJGNjhDQjk4QzYxOUI2RUEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQzUwQThENzFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQzUwQThEODFERjAxMUU5QkY2OENCOThDNjE5QjZFQSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkFcBtEAAADkSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAgIiIAIgAACizAyMgpABf8wICsBAYAAYsQQAGIeIGaB8j+Aybdv3/6HGYoBAAIIwwx0ADYL6AwRoDGvkSWEhYVFgdQbdGeJoNtF0AqAACKogImBAGCEOpQHi9wXoOl/wAqAPviNLgv0BStIAciKPyAOuiQ45NHDBBqksHBmIOQBsAIWQqoAAoxgOBACTAwUAlhkcwA9+J1YTcBQ4gRSP8DpFZpoYYYJoKcaLCnoAyyI0Q1AdhWKQegaUaIBTyCCDOJAjjds0TTwsQAAEO5yLEGNvDIAAAAASUVORK5CYII=); }
-
-.eventreminder_ReminderOpennedOptions_vBuhk {
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAFo9M/3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjA2NkUxRjYzNDdEMTFFOUI5MzlCM0IwNDk1OTEzMjAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjA2NkUxRjczNDdEMTFFOUI5MzlCM0IwNDk1OTEzMjAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2MDY2RTFGNDM0N0QxMUU5QjkzOUIzQjA0OTU5MTMyMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2MDY2RTFGNTM0N0QxMUU5QjkzOUIzQjA0OTU5MTMyMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Puj4W0sAAADSSURBVHjaYvz//z8DCDCBiHfv3v0HCCBGmAjD27dvQSwWgABigIuAOEDAiCQABgABhCGAohwkCWKwAA38DdOBoQUggHCaAQfIzgC5De4+qBzYBJAXsGkWEhJiJGgFQAARVMDEQCLgwOEBMBCB+kAEWQETkuRraDS8RlbECDIWKPgd3S5hYWFOoAk/KPcFQIARjgsCgImBUoDDBSxowcaCTR88MTAyMiJrFIAFKVqoiQKpD0D8B9limAE4NeIyCKjvD7oBHNicigWANP5AMWBAYwEAUl+ORKnWwrgAAAAASUVORK5CYII=); }
-
-.eventreminder_ReminderOptionsHeader_2oOZC {
-  color: #b1b4b9;
-  font-size: 11px;
-  text-transform: uppercase;
-  padding: 8px 10px 4px; }
-
-.eventreminder_ReminderCalendarOptions_VO6FS {
-  padding: 0px 8px 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; }
-
-.eventreminder_ReminderSettings_2Pn59 {
-  margin-top: 12px;
-  border-top: 1px solid #5b616b;
-  padding: 8px; }
-
-.eventreminder_ReminderCalendarOptions_VO6FS .eventreminder_ReminderOption_26nnh {
-  padding: 4px 8px;
-  margin: 0 2px 0;
-  flex-basis: 25%;
-  display: inline;
-  text-align: center; }
-
-.eventreminder_ReminderNotes_3qE0w {
-  padding: 8px;
-  color: #e1c48a;
-  font-size: 12px; }
-
-.eventreminder_RemindCheck_2qaPr {
-  width: 26px;
-  height: 26px;
-  padding-top: 5px;
-  padding-left: 4px; }
-
-.eventreminder_RpcThrobber_3F3aB {
-  position: absolute;
-  z-index: 3000;
-  background: rgba(0, 0, 0, 0.4);
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.giveawaynextdraw_countdownCtn_GWWac {
-  background: radial-gradient(100% 80% at 64% 95%, rgba(108, 119, 134, 0.4) 40%, rgba(83, 104, 104, 0.4) 100%);
-  padding: 16px;
-  border-radius: 4px; }
-
-.giveawaynextdraw_Closed_ATX_x {
-  position: relative; }
-
-.giveawaynextdraw_CountDownCtn_11RwP {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 11px;
-  padding-bottom: 8px;
-  margin-bottom: 8px; }
-  .giveawaynextdraw_CountDownCtn_11RwP .giveawaynextdraw_CountDownTime_eh0pM {
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.1);
-    width: 62px;
-    padding-left: 14px;
-    border-radius: 2px; }
-  .giveawaynextdraw_CountDownCtn_11RwP .giveawaynextdraw_CountDownText_3VKQ3 {
-    font-size: 16px;
-    display: inline;
-    margin-left: 8px; }
-
-.giveawaynextdraw_LearnMore_1q98m {
-  position: relative; }
-
-.giveawaynextdraw_Throbber_bEkRt {
-  display: flex;
-  color: #80caff;
-  line-height: 37px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  padding-bottom: 12px;
-  padding-bottom: 8px;
-  margin-bottom: 8px; }
-
-.giveawaynextdraw_WinnerInfo_2LTFl {
-  display: inline;
-  margin-right: 8px; }
-  .giveawaynextdraw_WinnerInfo_2LTFl .giveawaynextdraw_WinnerCount_Z7ScP {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.1);
-    width: 62px;
-    padding-left: 14px;
-    border-radius: 2px; }
-  .giveawaynextdraw_WinnerInfo_2LTFl .giveawaynextdraw_WinnerText_chkuq {
-    display: inline;
-    margin-left: 8px; }
-
-.eventbbcodesketchfab_sketchfab_play_overlay_image_j_bDC {
-  position: absolute;
-  left: 83px;
-  margin-left: -25px;
-  top: 50%;
-  margin-top: -25px;
-  width: 50px;
-  height: 50px;
-  background-image: url(<?=IMG_SHARED_URL?>sharedfiles/sketchfab_play.png);
-  background-size: 100%;
-  background-position-y: 0px;
-  background-repeat: no-repeat; }
-
-.eventbbcodesketchfab_sketchfabmodelembedded_1hkVJ {
-  position: relative;
-  padding-bottom: 56.25%;
-  /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-  margin-bottom: 20px; }
-
-.eventbbcodesketchfab_sketchfabmodelembedded_1hkVJ iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; }
-
-.eventbbcodesketchfab_dynamiclink_box_2OrAL {
-  position: relative;
-  font-family: Helvetica, Arial, sans-serif;
-  background: -webkit-linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%);
-  background: linear-gradient(60deg, rgba(87, 92, 104, 0.3) 5%, rgba(255, 255, 255, 0.05) 95%);
-  border-radius: 6px;
-  padding: 8px;
-  margin: 10px 0px 10px 0px;
-  cursor: pointer;
-  overflow: hidden; }
-
-.eventbbcodesketchfab_dynamiclink_preview_3__9J {
-  float: left;
-  margin-right: 14px;
-  max-height: 88px;
-  max-width: 75%; }
-
-.eventbbcodesketchfab_dynamiclink_content_2ocug {
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  color: silver;
-  text-shadow: 0 0 16px black;
-  font-size: 13px;
-  line-height: normal;
-  text-align: left;
-  display: flow-root; }
-
-.eventbbcodesketchfab_dynamiclink_name_3a1nw {
-  font-size: 15px;
-  color: #aad8ec;
-  font-family: "Motiva Sans", Sans-serif;
-  font-weight: 300;
-  border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
-  padding-bottom: 0px;
-  display: inline-block;
-  margin-bottom: 6px; }
-
-.eventbbcodesketchfab_dynamiclink_type_31hqF {
-  color: #c6d4df; }
-
-.eventbbcodesketchfab_dynamiclink_author_13lYj {
-  height: 16px;
-  font-size: 12px;
-  color: #95a6b2;
-  margin-bottom: 4px; }
-
-.packagepricewidget_StoreSalePriceWidget_NIRD8 {
-  margin-left: auto;
-  display: flex; }
-
-.packagepricewidget_StoreSaleDiscountedPriceCtn_2M2uu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding-right: 5px; }
-  .packagepricewidget_StoreSaleDiscountedPriceCtn_2M2uu .packagepricewidget_StoreSalePriceBox_pk-Lo {
-    padding: 0px;
-    line-height: 16px; }
-
-.packagepricewidget_StoreSaleDiscountBox_XMxka {
-  font-size: 16px;
-  font-weight: 500;
-  padding: 3px 5px;
-  background-color: #4C6B22;
-  color: #A4D007;
-  display: flex;
-  align-items: center;
-  margin-right: 3px; }
-
-.packagepricewidget_StoreOrignalPrice_3TcPB {
-  text-decoration: line-through;
-  color: #626366;
-  font-size: 11px;
-  line-height: 11px;
-  margin-top: 2px; }
-
-.packagepricewidget_StoreSalePriceBox_pk-Lo {
-  background: black;
-  padding: 3px 5px; }
-
-.packagepricewidget_StoreSalePriceBox_pk-Lo {
-  font-size: 14px;
-  padding: 5px;
-  background-color: black;
-  align-items: center;
-  display: flex; }
 
 .partnereventdisplay_EventDetailsPageContainer_2Ptra {
   display: flex;
@@ -14717,6 +14983,8 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   @media screen and (min-width: 1920px) {
     .partnereventdisplay_EventBody_3aht- {
       margin-top: -113px; } }
+  .partnereventdisplay_NoTitleArtwork_3Y40J .partnereventdisplay_EventBody_3aht- {
+    margin-top: -12vw; }
   .partnereventdisplay_EventBody_3aht- .partnereventdisplay_EventBackgroundBlur_stsss {
     position: absolute;
     z-index: 0;
@@ -14742,10 +15010,6 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   max-height: 510px;
   width: 100%;
   position: relative; }
-
-.partnereventdisplay_no_title_artwork_1_wDF .partnereventdisplay_EventCoverImageCtn_FZiaq {
-  height: 12vw;
-  min-height: auto; }
 
 .partnereventdisplay_EventCoverImage_17G2y,
 .partnereventdisplay_EventCoverImageBackground_2-Iyg {
@@ -14800,7 +15064,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
   .partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImageFuzz_2EWL0 {
     display: none; }
 
-.partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImage_17G2y.partnereventdisplay_no_title_artwork_1_wDF {
+.partnereventdisplay_InLibraryView_3_SEi .partnereventdisplay_EventCoverImage_17G2y.partnereventdisplay_NoTitleArtwork_3Y40J {
   height: 100%;
   opacity: 0.4;
   position: absolute;
@@ -14961,7 +15225,7 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 .partnereventdisplay_EventDetailsBody_A_A2B img {
   max-width: 100%; }
 
-.partnereventdisplay_EventDetailsBody_A_A2B a {
+.partnereventdisplay_EventDetailsBody_A_A2B a:not(.LinkButton) {
   color: #80bcd2;
   text-decoration: none;
   padding-bottom: 0px; }
@@ -15496,6 +15760,31 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
 .nominationandvote_SteamAwardModalGameTitle_15lc0 {
   color: white; }
 
+html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
+  margin-top: 104px; }
+  @media screen and (max-width: 910px) {
+    html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBanner_1HRiM {
+      margin-top: 60px; } }
+
+@media screen and (max-width: 910px) {
+  html:not(.client) .partner_events .responsive_page_frame.with_header div.responsive_page_content {
+    padding-top: 0px; } }
+
+@media screen and (max-width: 500px) {
+  html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLinks_D1bMm {
+    margin: unset;
+    grid-column-start: 2;
+    grid-column-end: 2; } }
+
+html:not(.client) .partner_events .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoGameLink_2GfPe {
+  margin-top: 160px; }
+
+html:not(.client) .partner_events .apppartnereventspage_AppPartnerEventsBody_1XLRr {
+  margin-top: 0px; }
+
+.partner_events .apppartnereventspage_ControlSection_2pA5C.apppartnereventspage_NoGameLink_2GfPe {
+  margin-top: 60px; }
+
 .apppartnereventspage_AppPartnerEventsPage_3CJsg {
   transition: all 0.32s ease-in-out;
   position: absolute;
@@ -15556,6 +15845,8 @@ iframe.eventbbcodeparser_MedalTVWidget_1j2vi {
     grid-template-columns: 134px 1fr;
     grid-template-rows: 42px 24px;
     grid-column-gap: 15px; }
+    .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerGroup_qexk-.apppartnereventspage_ClanBanner_161DW {
+      grid-template-columns: 66px 1fr; }
   .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppTitleGroup_2ttnb {
     align-self: center; }
   .apppartnereventspage_AppPartnerEventsBanner_1HRiM .apppartnereventspage_AppBannerLinks_D1bMm {
@@ -15748,6 +16039,9 @@ div.apppartnereventspage_EventDetailsBody_3NW5v {
   .apppartnereventspage_EventTypeAndTimeRow_3bWTO .apppartnereventspage_ReminderContainer_3Vf2M {
     margin-left: auto;
     flex: none; }
+
+.apppartnereventspage_ReadMoreCnt_1Ymai {
+  padding-top: 20px; }
 
 /* stylelint-disable */
 
@@ -16896,13 +17190,16 @@ div.NarrowRightPanel .libraryhomefriendsactivity_LibraryAutomatic_3AWBh .library
   line-height: 14px;
   letter-spacing: 1px; }
 
-.libraryhomeplaynext_PlayNextNoResults_2mfXm {
-  text-overflow: ellipsis;
-  font-size: 12px;
-  font-weight: 100;
-  color: #fff6;
-  line-height: 14px;
-  letter-spacing: 1px; }
+.libraryhomeplaynext_PlayNextNoResultsContainer_1Zqz_ {
+  justify-content: center;
+  display: flex; }
+  .libraryhomeplaynext_PlayNextNoResultsContainer_1Zqz_ .libraryhomeplaynext_Message_2GTdf {
+    text-align: center;
+    width: 50%;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 200;
+    margin: auto; }
 
 .libraryhomeplaynext_PlayNextSuggestions_3iXvg {
   box-sizing: border-box;
@@ -17188,10 +17485,11 @@ div.NarrowRightPanel .libraryhomefriendsactivity_LibraryAutomatic_3AWBh .library
       .libraryhomeshowcases_CollectionDropDown_1YdRd ._DialogInputContainer .DialogDropDown_Arrow svg {
         fill: #969696; }
 
-.libraryhomeshowcases_CollectionDropDownContainer_2Sj4- {
+.libraryhomeshowcases_CollectionDropDownContainer_2Sj4-.libraryhomeshowcases_CollectionDropDownContainer_2Sj4- {
   margin-left: -12px;
+  overflow: hidden;
   /* stylelint-disable */ }
-  .libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer {
+  .libraryhomeshowcases_CollectionDropDownContainer_2Sj4-.libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer {
     overflow: hidden auto;
     box-sizing: border-box;
     padding: 8px 0;
@@ -17205,18 +17503,18 @@ div.NarrowRightPanel .libraryhomefriendsactivity_LibraryAutomatic_3AWBh .library
     height: 100%;
     margin-bottom: 8px;
     /* stylelint-enable */ }
-    .libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer::-webkit-scrollbar {
+    .libraryhomeshowcases_CollectionDropDownContainer_2Sj4-.libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer::-webkit-scrollbar {
       width: 12px; }
-    .libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer::-webkit-scrollbar-thumb {
+    .libraryhomeshowcases_CollectionDropDownContainer_2Sj4-.libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer::-webkit-scrollbar-thumb {
       width: 4px;
       border: 4px solid transparent;
       background-image: none; }
-      .libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer::-webkit-scrollbar-thumb:hover {
+      .libraryhomeshowcases_CollectionDropDownContainer_2Sj4-.libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer::-webkit-scrollbar-thumb:hover {
         background-color: #606774;
         background-clip: padding-box; }
-    .libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer::-webkit-scrollbar-track, .libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer::-webkit-scrollbar-button {
+    .libraryhomeshowcases_CollectionDropDownContainer_2Sj4-.libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer::-webkit-scrollbar-track, .libraryhomeshowcases_CollectionDropDownContainer_2Sj4-.libraryhomeshowcases_CollectionDropDownContainer_2Sj4- ._DialogInputContainer::-webkit-scrollbar-button {
       display: none; }
-  .libraryhomeshowcases_CollectionDropDownContainer_2Sj4- .libraryhomeshowcases_DropDownItems_lYnGt {
+  .libraryhomeshowcases_CollectionDropDownContainer_2Sj4-.libraryhomeshowcases_CollectionDropDownContainer_2Sj4- .libraryhomeshowcases_DropDownItems_lYnGt {
     box-sizing: border-box;
     padding: 3px 12px;
     line-height: initial;
@@ -17228,7 +17526,7 @@ div.NarrowRightPanel .libraryhomefriendsactivity_LibraryAutomatic_3AWBh .library
     margin-left: 1px;
     overflow: hidden;
     text-overflow: ellipsis; }
-    .libraryhomeshowcases_CollectionDropDownContainer_2Sj4- .libraryhomeshowcases_DropDownItems_lYnGt:hover {
+    .libraryhomeshowcases_CollectionDropDownContainer_2Sj4-.libraryhomeshowcases_CollectionDropDownContainer_2Sj4- .libraryhomeshowcases_DropDownItems_lYnGt:hover {
       background-color: #9899a1; }
 
 .libraryhomeshowcases_AddShowcaseRow_3SkuN {
@@ -17734,7 +18032,6 @@ button.DialogButton::-moz-focus-inner {
   flex-grow: 1; }
 
 .PopupFullWindow .ModalPosition_Content > div:not(.ModalPosition_TopBar):not(.ModalPosition_Dismiss) {
-  min-height: initial;
   flex: 1; }
 
 .DialogContent,
@@ -17804,6 +18101,7 @@ button.DialogButton::-moz-focus-inner {
 .DialogContent_InnerWidth > form {
   display: flex;
   flex-direction: column;
+  min-height: 0;
   flex: 1; }
 
 .ModalPosition_TopBar {
@@ -18357,7 +18655,8 @@ button.TextButton:focus {
 
 .DialogMenuPosition {
   position: absolute;
-  z-index: 1600; }
+  z-index: 1600;
+  overflow: auto; }
 
 .DialogMenuPosition:not(.visible) {
   opacity: 0;
