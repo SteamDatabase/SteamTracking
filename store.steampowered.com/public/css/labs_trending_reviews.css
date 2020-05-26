@@ -87,6 +87,7 @@ div.advanced_controls_toggle_icon.down {
 .trending_reviews_controls {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 	padding: 0 10px 0 10px;
 	font-size: 14px;
 	color: #fff;
@@ -102,11 +103,9 @@ div.advanced_controls_toggle_icon.down {
 }
 .trending_reviews_controls > div {
 	flex-grow: 1;
-	margin-right: 10px;
 	width: 32%;
-}
-.trending_reviews_controls > div:nth-child(3) {
-	margin-right: 0px;
+	min-width: 140px;
+	padding: 5px;
 }
 
 .trending_reviews_control_header {
@@ -254,8 +253,9 @@ div.advanced_controls_toggle_icon.down {
 	background-color: #000;
 }
 .reviewed_app .reviewed_app_image {
-	width: 616px;
-	height: 353px;
+	max-width: 616px;
+	max-height: 353px;
+	width: 100%;
 	position: relative;
 	opacity: 1;
 	transition: opacity 0.5s;
@@ -435,6 +435,10 @@ div.advanced_controls_toggle_icon.down {
 .tag_filter_controls .trending_reviews_control_header {
 	margin-bottom: 5px;
 }
+.tag_filter_controls input[type="text"] {
+	width: 100%;
+}
+
 
 .tag_filter {
 	margin: 2px 2px;
@@ -474,4 +478,23 @@ div.advanced_controls_toggle_icon.down {
 	vertical-align: top;
 	background-image: url( '/public/images/v6/delete_search_term.png' );
 	margin-left: 5px;
+}
+
+@media screen and (max-width: 910px)
+{
+	html.responsive .reviewed_app {
+		flex-direction: column;
+	}
+
+	html.responsive .reviewed_app .reviews {
+		width: auto;
+		height: 180px;
+	}
+
+	html.responsive .review_box .content {
+		font-size: 12px;
+		height: 80px;
+	}
+
+
 }

@@ -271,6 +271,40 @@ function VoteDown(item_id)
 	return false;
 }
 
+function PublishedFileAward( id, fileType )
+{
+	function callbackFunc( id, award )
+	{
+		var rewardsCtn = $J.find( ".review_award_ctn" );
+		if ( rewardsCtn.length != 0 )
+		{
+			rewardsCtn = $J( rewardsCtn[0] );
+			var bFoundExisting = false;
+			var rewards = rewardsCtn.find( ".review_award" );
+			for ( var j = 0; j < rewards.length; ++j )
+			{
+				var reward = $J( rewards[j] );
+				if ( reward.data( "reaction" ) == award )
+				{
+					bFoundExisting = true;
+					break;
+				}
+			}
+
+			if ( !bFoundExisting )
+			{
+				var reward = $J( "<span>", { class: "review_award" } );
+				var img = $J( "<img>", { class: "review_award_icon tooltip", src: "https://steamstore-a.akamaihd.net/public/images/loyalty/reactions/225px/" + award + ".png" } );
+				reward.append( img );
+				reward.data( "reaction", award );
+				rewardsCtn.append( reward );
+			}
+		}
+	};
+
+	fnLoyalty_ShowAwardModal( id, callbackFunc, fileType );
+}
+
 function ToggleItemState(item_id, app_id, buttonType, activate, deactivate) {
     const buttons = FindVoteButtons(item_id);
 

@@ -278,6 +278,7 @@ LocalizationReady("shared", "english", {
   EventDisplay_CallToAction_PlayNow: "Play Now",
   EventDisplay_CallToAction_ComingSoon: "Coming Soon",
   EventDisplay_CallToAction_FreeToPlay: "Free To Play",
+  EventDisplay_CallToAction_PlayNowForFree: "Play for Free!",
 
   EventDisplay_Events: "Admin Dashboard",
   EventDisplay_SeeOldVersion: "View Current Customer Version",
@@ -406,6 +407,11 @@ LocalizationReady("shared", "english", {
   EventEmail_Subject_SpecialOffer: "%1$s Special Offer",
   EventEmail_Subject_Tournament_Now: "%1$s Tournament, Tune in Now",
   EventEmail_Subject_LiveStream_Now: "%1$s Live Stream, Tune in Now",
+  EventEmail_Subject_NewDLC: "%1$s, New DLC Available",
+  EventEmail_Subject_NewExpansion: "%1$s, New Expansion Available",
+  EventEmail_Subject_NewChapter: "%1$s, New Chapter Available",
+  EventEmail_Subject_NewBattlePass: "%1$s, New Battle Pass Available",
+  EventEmail_Subject_NewSeason: "%1$s, New Season Available",
   Email_Wishlist_NewReleaseEA_Subject:
     "%1$s is now available in Early Access on Steam!",
   EventEmail_Button_ClickForMoreDetails: "Read More",
@@ -521,6 +527,8 @@ LocalizationReady("shared", "english", {
   TimeSince_LessThanAMinute: "less than a minute ago",
   TimeSince_ThisWeek: "This week",
 
+  Time_Now: "Live Now",
+  Time_UpNext: "Up Next",
   Time_Today: "Today",
   Time_Tomorrow: "Tomorrow",
   Time_Yesterday: "Yesterday",
@@ -1102,6 +1110,9 @@ LocalizationReady("shared", "english", {
   Sale_PackageSave: "Includes %1$s items.",
   Sale_ShowContents: "Show contents",
   Sale_ShowBundleContent: "Show all %1$s items in bundle",
+  Sale_BundleContents_Title: "Contains these %1$s items:",
+  Sale_SeeAllUpcomingEvents: "See all upcoming events",
+  Sale_TypePackage: "Multi-Item Package",
   Sale_ShowMore: "Show more",
   Sale_ShowLess: "Show less",
   Sale_OnWishlist: "On Wishlist",
@@ -1118,6 +1129,9 @@ LocalizationReady("shared", "english", {
   Sale_SeeEventDetails: "See Event Details",
   Sale_PlayNow: "Play Now",
   Sale_EventSchedule: "Event Schedule",
+  Sale_EventSchedule_NoUpcomingEvents: "No upcoming events",
+  Sale_EventSchedule_NoEventsScheduled:
+    "No events scheduled yet in this section",
   Sale_MeetDev: "Meet the Developers",
   Sale_Preferences: "Preferences",
   Sale_PlaceHolder:
@@ -1408,6 +1422,8 @@ LocalizationReady("shared", "english", {
   GrantAward_PromptTooltip: "Please select an award",
   GrantAward_SubmitTooltip: "Spend Steam Community Points and give the award",
   GrantAward_SelectAward: "Select Award",
+  GrantAward_CantAfford: "You need %1$s more points",
+  GrantAward_HowToGetPoints: "How To Get Points",
   GrantAward_Next: "Next",
   GrantAward_Back: "Back",
   GrantAward_Confirm:
@@ -1434,6 +1450,8 @@ LocalizationReady("shared", "english", {
   RewardsReaction_4: "Hot Take",
   RewardsReaction_5: "Poetry",
   RewardsReaction_6: "Extra Helpful",
+  RewardsReaction_7: "Gotta Have It",
+  RewardsReaction_8: "Michelangelo",
 
   AppType_game: "game",
   AppType_software: "software",

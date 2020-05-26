@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5875712";
+var CLSTAMP = "5894429";
 !(function(e) {
   function t(t) {
     for (
@@ -1118,10 +1118,9 @@ var CLSTAMP = "5875712";
                 this.context.contextMenuInstance.options.bUseWebStyles
                   ? "popup_menu popup_body"
                   : v.a.contextMenuContents;
-            return (
-              n && (c += " " + n),
-              i.createElement("div", Object(r.a)({}, o, { className: c }), t)
-            );
+            n && (c += " " + n);
+            var a = this.props.renderMenuContainer || "div";
+            return i.createElement(a, Object(r.a)({}, o, { className: c }), t);
           }),
           (t.contextTypes = {
             contextMenuInstance: function() {
@@ -1155,22 +1154,21 @@ var CLSTAMP = "5875712";
               e.bInteractableItem,
               Object(r.f)(e, ["onSelected", "bInteractableItem"])),
               n = [];
-            return (
-              this.context.contextMenuInstance &&
-              this.context.contextMenuInstance.options.bUseWebStyles
-                ? n.push("popup_menu_item")
-                : n.push(v.a.contextMenuItem, "contextMenuItem"),
+            this.context.contextMenuInstance &&
+            this.context.contextMenuInstance.options.bUseWebStyles
+              ? n.push("popup_menu_item")
+              : n.push(v.a.contextMenuItem, "contextMenuItem"),
               this.props.className && n.push(this.props.className),
-              this.props.disabled && n.push("disabled"),
-              i.createElement(
-                "div",
-                Object(r.a)({ onMouseEnter: this.OnMouseEnter }, t, {
-                  onClick: this.OnClick,
-                  unselectable: this.props.unselectable,
-                  className: _.a.apply(void 0, n)
-                }),
-                this.props.children
-              )
+              this.props.disabled && n.push("disabled");
+            var o = this.props.renderMenuItem || "div";
+            return i.createElement(
+              o,
+              Object(r.a)({ onMouseEnter: this.OnMouseEnter }, t, {
+                onClick: this.OnClick,
+                unselectable: this.props.unselectable,
+                className: _.a.apply(void 0, n)
+              }),
+              this.props.children
             );
           }),
           (t.contextTypes = {
@@ -7122,7 +7120,7 @@ and limitations under the License.
         : l(n + "LessThanAMinute");
     }
     new Map(), new Map();
-    new Map(), new Map(), new Map(), new Map();
+    new Map(), new Map(), new Map(), new Map(), new Map();
     function l(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];

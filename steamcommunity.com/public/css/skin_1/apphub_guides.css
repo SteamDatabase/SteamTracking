@@ -1,7 +1,8 @@
 
 .apphub_ContentGuides
 {
-	width: 638px;
+	max-width: 638px;
+	width: 100%;
 	margin: 0;
 	float: left;
 	padding-bottom: 7px;
@@ -71,7 +72,7 @@
 
 .apphub_ContentGuides .workshopItemCollection
 {
-	display: block;
+	display: flex;
 	background-color: rgba( 50, 77, 107, 0.8);
 	margin-bottom: 0px;
 }
@@ -106,7 +107,8 @@
 
 .apphub_ContentGuides .workshopItemCollection .workshopItemDetails
 {
-	margin-left: 84px;
+	margin-left: 10px;
+	width: 100%;
 }
 
 .apphub_ContentGuides .workshopItemCollection .workshopItemTitle
@@ -344,7 +346,8 @@
 	margin-top: 12px;
 	margin-left: -2px;
 	left: -5px;
-	width: 275px;
+	max-width: 275px;
+	width: 100%;
 	height: 112px;
 	background-repeat:no-repeat;
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/Guides_moreinfo.png');

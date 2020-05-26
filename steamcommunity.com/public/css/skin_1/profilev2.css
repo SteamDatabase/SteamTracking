@@ -19,6 +19,7 @@ div.profile_page.private_profile {
 	background-image: none;
 }
 
+body.profile_page.has_profile_background,
 div.profile_page.has_profile_background {
 	background-image: none;
 	background-color: #000000;

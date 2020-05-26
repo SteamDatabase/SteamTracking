@@ -1359,19 +1359,18 @@ textarea {
 	background-repeat:no-repeat;
 }
 
-.workshopBrowseRow {
-	min-height: 200px;
-	position: relative;
+.workshopBrowseItems {
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
 }
 
 .workshopItem {
 	position: relative;
-	float: left;
 	min-height: 200px;
 	margin-bottom: 10px;
 	width: 200px;
 	max-width: 31%;
-	margin-right: 2%;
 }
 
 .workshopItem.right
@@ -1738,6 +1737,7 @@ textarea {
 
 	html.responsive .workshopItemPreviewImage {
 		width: 100%;
+		min-width: 100px;
 		height: auto;
 	}
 
@@ -1827,6 +1827,7 @@ textarea {
 	padding:  4px;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
+	display: flex;
 }
 
 .workshopBrowsePaging
@@ -1834,11 +1835,12 @@ textarea {
 	font-size: 12px;
 	line-height: 24px;
 	margin-bottom: 10px;
+	display: flex;
 }
 
 .workshopBrowsePagingControls
 {
-	float: right;
+	margin-left: auto;
 }
 
 .workshopBrowsePagingInfo
@@ -2000,11 +2002,6 @@ a.buynowbtn, a.buynowbtn:hover, a.buynowbtn.middle, a.buynowbtn.middle:hover
 
 .commentsTab.active {
 	background-color: #4E4E4D;
-}
-
-#commentsTabsFade {
-	margin-left: 10px;
-	position: relative;
 }
 
 #commentsTabFade img

@@ -646,6 +646,16 @@ img.game_header_image_full {
 	z-index: 1;
 }
 
+.game_area_purchase_game.game_area_purchase_game_dropdown_subscription {
+	position: relative;
+}
+
+.game_area_purchase_game_dropdown_banner {
+	position: absolute;
+	top: -15px;
+	left: 0;
+}
+
 .game_area_purchase_game.free_weekend {
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#acdbf5+0,ffffff+100&0.5+0,0.5+100 */
 	background: -moz-linear-gradient(-45deg,  rgba(172,219,245,0.5) 0%, rgba(255,255,255,0.5) 100%); /* FF3.6-15 */

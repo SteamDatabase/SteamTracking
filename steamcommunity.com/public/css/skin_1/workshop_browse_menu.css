@@ -1,7 +1,7 @@
 
 .workshop_header
 {
-	width: 948px;
+	max-width: 948px;
 	height: 203px;
 	background-repeat: no-repeat;
 	position: relative;
@@ -19,7 +19,8 @@
 	display: block;
 	position: absolute;
 	top: 0;
-	width: 500px;
+	max-width: 500px;
+	width: 100%;
 	height: 158px;
 }
 
@@ -179,6 +180,7 @@
 	position: absolute;
 	top: 6px;
 	height: 32px;
+	width: 290px;
 	right: 5px;
 	padding: 0px 7px 0px 0px;
 	background-color: rgba( 0, 0, 0, 0.6 );
@@ -196,8 +198,9 @@ input.search_text
 	padding-left: 4px;
 	margin: 0;
 	border: none;
-	width: 250px;
-	height: 25px;
+	max-width: 250px;
+	width: 100%;
+	height: 31px;
 	background: transparent;
 	box-shadow: none;
 }
@@ -207,7 +210,8 @@ input.search_text.default_text {
 }
 .search_text_submit_img
 {
-	position: relative;
+	position: absolute;
+	right: 5px;
 	top: 7px;
 	width: 23px;
 	height: 18px;
@@ -281,4 +285,20 @@ a.dropdown.hover, a.dropdown:hover
 	color: transparent;
 	height: 1px;
 	border-style: none;
+}
+
+@media screen and (max-width: 910px)
+{
+	.browseAppDetails {
+		width: 100%;
+	}
+	html.responsive .customBrowseDesc {
+		float: none;
+		width: auto;
+	}
+
+	html.responsive .workshop_browse_search {
+		position: relative;
+		width: auto;
+	}
 }

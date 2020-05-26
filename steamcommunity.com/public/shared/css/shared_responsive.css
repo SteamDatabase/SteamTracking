@@ -543,12 +543,17 @@ html.responsive body {
 	html.responsive .responsive_hidden {
 		display: none;
 	}
+
+    html.responsive div.responsive_tab_baseline {
+        display: none;
+    }
 }
 
 .responsive_tab_control select {
 	color: #ffffff;
 	background: rgba(0,0,0,0.3);
 	/*background: #3a6d8b;*/
+    padding: unset;
 	border: none;
 	font-size: 16px;
 	height: 24px;

@@ -405,6 +405,7 @@ function PublishedFileVoteDown( id )
 	}
 }
 
+
 function PublishedFileBan( id, appid )
 {
 	var options = {

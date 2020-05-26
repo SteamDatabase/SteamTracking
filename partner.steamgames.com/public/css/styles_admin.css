@@ -597,9 +597,16 @@ pre.results {
 	margin: 4px;
 	background-color: black;
 }
+.screenshot_thumb:hover {
+    background-color: #111;
+}
 
 .screenshot_link {
 	display: inline-block;
+}
+
+.screenshot_link:hover {
+    cursor: grab;
 }
 
 .screenshot_thumb .imagelanguagelist {
@@ -609,6 +616,7 @@ pre.results {
 
 #screenshots .imagerow {
 	height: 10px;
+    background-color: unset;
 }
 
 .screenshot_actual.drag_over {
@@ -2367,6 +2375,9 @@ html, body { height:100%; }
 	padding-right: 10px;
 	min-width: 131px;
 }
+.instructions em {
+    color: #ffa558;
+}
 #page_background {
     max-width: 100%;
 }
@@ -2827,6 +2838,7 @@ html, body { height:100%; }
 	position: absolute;
 }
 
+#AdminThrobber,
 #AdminLoading
 {
 	background-color: #333333;
@@ -2841,10 +2853,22 @@ html, body { height:100%; }
 	top: 200px;
 }
 
+#AdminThrobber div,
 #AdminLoading div
 {
 	margin-top: 4px;
 	margin-right: 20px;
+}
+
+#AdminThrobberBG
+{
+	z-index: 900;
+	background-color: #000000;
+	filter: alpha(opacity=60);
+	opacity: 0.8;
+	width: 100%;
+	height: 100%;
+	position: fixed;
 }
 
 .launchOptionArea {

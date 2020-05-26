@@ -68,104 +68,107 @@
     },
     "6Y59": function(e, t, n) {
       "use strict";
-      n.d(t, "y", function() {
+      n.d(t, "z", function() {
         return s;
       }),
-        n.d(t, "h", function() {
+        n.d(t, "i", function() {
           return c;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "o", function() {
           return l;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "j", function() {
           return u;
         }),
-        n.d(t, "A", function() {
+        n.d(t, "B", function() {
           return p;
         }),
-        n.d(t, "G", function() {
+        n.d(t, "H", function() {
           return m;
         }),
-        n.d(t, "E", function() {
+        n.d(t, "F", function() {
           return h;
         }),
-        n.d(t, "s", function() {
+        n.d(t, "t", function() {
           return d;
         }),
-        n.d(t, "F", function() {
+        n.d(t, "G", function() {
           return f;
         }),
-        n.d(t, "u", function() {
+        n.d(t, "f", function() {
           return v;
         }),
-        n.d(t, "t", function() {
+        n.d(t, "v", function() {
           return g;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "u", function() {
           return _;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "d", function() {
           return b;
         }),
-        n.d(t, "m", function() {
+        n.d(t, "g", function() {
           return y;
         }),
-        n.d(t, "B", function() {
+        n.d(t, "n", function() {
           return E;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "C", function() {
           return O;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "a", function() {
           return w;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "h", function() {
           return D;
         }),
-        n.d(t, "q", function() {
+        n.d(t, "p", function() {
           return C;
         }),
-        n.d(t, "v", function() {
+        n.d(t, "r", function() {
           return S;
         }),
-        n.d(t, "k", function() {
+        n.d(t, "w", function() {
           return M;
         }),
-        n.d(t, "p", function() {
+        n.d(t, "l", function() {
           return x;
         }),
-        n.d(t, "z", function() {
+        n.d(t, "q", function() {
           return k;
         }),
-        n.d(t, "D", function() {
+        n.d(t, "A", function() {
           return I;
         }),
-        n.d(t, "w", function() {
+        n.d(t, "E", function() {
           return T;
         }),
         n.d(t, "x", function() {
           return L;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "y", function() {
           return N;
         }),
-        n.d(t, "r", function() {
+        n.d(t, "b", function() {
           return R;
         }),
-        n.d(t, "C", function() {
+        n.d(t, "s", function() {
           return j;
         }),
-        n.d(t, "l", function() {
+        n.d(t, "D", function() {
           return A;
         }),
-        n.d(t, "j", function() {
+        n.d(t, "m", function() {
           return B;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "k", function() {
           return P;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "c", function() {
           return F;
+        }),
+        n.d(t, "e", function() {
+          return H;
         });
       n("mrSG");
       var r = n("q1tI"),
@@ -559,6 +562,30 @@
             version: "1.1",
             id: "Layer_1",
             xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_Crown",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256"
+          },
+          r.createElement(
+            "g",
+            null,
+            r.createElement("path", {
+              d:
+                "M239.874,94.963l-31.115,21.325c-18.18,12.586-43.351,5.594-52.44-14.333l-23.772-50.692c-2.099-4.194-8.041-4.194-9.789,0 l-23.074,50.343c-9.439,20.627-35.31,27.27-53.49,13.983L16.128,93.565c-4.195-3.147-10.139,1.049-8.391,6.293l31.464,106.628 c0.35,1.049,1.398,1.397,2.098,1.397h173.752c1.049,0,1.749-0.698,2.098-1.397l31.115-104.53 C250.012,96.36,244.068,91.816,239.874,94.963z"
+            })
+          )
+        );
+      }
+      function g() {
+        return r.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
             className: "SVGIcon_Button SVGIcon_Play",
             x: "0px",
             y: "0px",
@@ -573,7 +600,7 @@
           })
         );
       }
-      function g() {
+      function _() {
         return r.createElement(
           "svg",
           {
@@ -597,7 +624,7 @@
           })
         );
       }
-      function _() {
+      function b() {
         return r.createElement(
           "svg",
           {
@@ -622,7 +649,7 @@
           })
         );
       }
-      function b(e) {
+      function y(e) {
         var t = e.highlightColor || "#00ccff",
           n = e.color || "#2d73ff";
         return r.createElement(
@@ -702,7 +729,7 @@
           })
         );
       }
-      function y() {
+      function E() {
         return r.createElement(
           "svg",
           {
@@ -732,7 +759,7 @@
           })
         );
       }
-      function E(e) {
+      function O(e) {
         var t = "SVGIcon_Button SVGIcon_Throbber ";
         return (
           e.className && (t += e.className),
@@ -976,7 +1003,7 @@
           )
         );
       }
-      function O(e) {
+      function w(e) {
         return r.createElement(
           "svg",
           {
@@ -1011,7 +1038,7 @@
           })
         );
       }
-      function w(e) {
+      function D(e) {
         return r.createElement(
           "svg",
           {
@@ -1047,7 +1074,7 @@
             })
         );
       }
-      function D() {
+      function C() {
         return r.createElement(
           "svg",
           {
@@ -1083,7 +1110,7 @@
           })
         );
       }
-      function C() {
+      function S() {
         return r.createElement(
           "svg",
           {
@@ -1109,7 +1136,7 @@
           })
         );
       }
-      function S() {
+      function M() {
         return r.createElement(
           "svg",
           {
@@ -1142,7 +1169,7 @@
           })
         );
       }
-      function M(e) {
+      function x(e) {
         return r.createElement(
           "svg",
           {
@@ -1163,7 +1190,7 @@
           })
         );
       }
-      function x(e) {
+      function k(e) {
         return r.createElement(
           "svg",
           {
@@ -1203,7 +1230,7 @@
           })
         );
       }
-      function k(e) {
+      function I(e) {
         var t = Object(a.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -1237,7 +1264,7 @@
           })
         );
       }
-      function I() {
+      function T() {
         return r.createElement(
           "svg",
           {
@@ -1265,7 +1292,7 @@
           })
         );
       }
-      function T() {
+      function L() {
         return r.createElement(
           "svg",
           {
@@ -1302,7 +1329,7 @@
           )
         );
       }
-      function L() {
+      function N() {
         return r.createElement(
           "svg",
           {
@@ -1330,7 +1357,7 @@
           })
         );
       }
-      function N() {
+      function R() {
         return r.createElement(
           "svg",
           {
@@ -1351,7 +1378,7 @@
           })
         );
       }
-      function R() {
+      function j() {
         return r.createElement(
           "svg",
           {
@@ -1371,7 +1398,7 @@
           })
         );
       }
-      function j() {
+      function A() {
         return r.createElement(
           "svg",
           {
@@ -1395,7 +1422,7 @@
           })
         );
       }
-      function A() {
+      function B() {
         return r.createElement(
           "svg",
           {
@@ -1445,7 +1472,7 @@
           })
         );
       }
-      function B() {
+      function P() {
         return r.createElement(
           "svg",
           {
@@ -1478,7 +1505,7 @@
           })
         );
       }
-      function P() {
+      function F() {
         return r.createElement(
           "svg",
           {
@@ -1500,7 +1527,7 @@
           })
         );
       }
-      function F() {
+      function H() {
         return r.createElement(
           "svg",
           {
@@ -2442,7 +2469,7 @@
                   u.createElement(
                     "div",
                     { className: "closeButton", onClick: t.onEscKeypress },
-                    u.createElement(a.G, null)
+                    u.createElement(a.H, null)
                   )
                 ),
               u.createElement(i.a, null, t.children)
@@ -2561,7 +2588,8 @@
                   onEscKeypress: this.Cancel,
                   bDestructiveWarning: this.props.bDestructiveWarning,
                   bDisableBackgroundDismiss: this.props
-                    .bDisableBackgroundDismiss
+                    .bDisableBackgroundDismiss,
+                  bHideCloseIcon: this.props.bHideCloseIcon
                 },
                 u.createElement(
                   m.g,
@@ -3092,7 +3120,7 @@
                       f.createElement(
                         "div",
                         { className: e },
-                        f.createElement(v.f, {
+                        f.createElement(v.g, {
                           color: this.props.color,
                           highlightColor: this.props.highlightColor
                         })
@@ -3119,7 +3147,7 @@
                   : f.createElement(
                       "div",
                       Object(d.a)({ className: e }, this.GetElementProps()),
-                      f.createElement(v.f, null)
+                      f.createElement(v.g, null)
                     )
               );
             }),
@@ -3465,7 +3493,7 @@
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      f.createElement(v.G, null)
+                      f.createElement(v.H, null)
                     )
                 ),
                 m
@@ -3912,7 +3940,7 @@
                   f.createElement(
                     "div",
                     { className: "DialogDropDown_Arrow" },
-                    f.createElement(v.h, null)
+                    f.createElement(v.i, null)
                   ),
                 this.props.postOptionElement,
                 f.createElement(
@@ -4869,10 +4897,10 @@
       n.d(t, "d", function() {
         return a;
       }),
-        n.d(t, "j", function() {
+        n.d(t, "k", function() {
           return s;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "i", function() {
           return c;
         }),
         n.d(t, "b", function() {
@@ -4936,20 +4964,23 @@
         n.d(t, "f", function() {
           return i.b;
         }),
-        n.d(t, "g", function() {
-          return i.c;
-        }),
-        n.d(t, "i", function() {
+        n.d(t, "h", function() {
           return i.d;
         }),
-        n.d(t, "k", function() {
-          return i.f;
+        n.d(t, "j", function() {
+          return i.e;
         }),
         n.d(t, "l", function() {
           return i.g;
         }),
         n.d(t, "m", function() {
           return i.h;
+        }),
+        n.d(t, "n", function() {
+          return i.i;
+        }),
+        n.d(t, "g", function() {
+          return i.c;
         });
       var p = {
         english: "en",
@@ -6403,29 +6434,32 @@
     },
     Z1oF: function(e, t, n) {
       "use strict";
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return r;
       }),
-        n.d(t, "c", function() {
+        n.d(t, "d", function() {
           return o;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "g", function() {
           return u;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "e", function() {
           return i;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "f", function() {
           return s;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "h", function() {
           return h;
         }),
         n.d(t, "a", function() {
           return d;
         }),
+        n.d(t, "c", function() {
+          return b;
+        }),
         n.d(t, "b", function() {
-          return _;
+          return y;
         });
       var c = n("TLQK"),
         a = n("CdLH"),
@@ -6508,7 +6542,7 @@
         var n = new Date(),
           r = new Date(1e3 * e);
         if (r.getFullYear() != n.getFullYear()) return u(e);
-        l.a(new Date().setHours(24, 0, 0, 0) - n.getTime());
+        l.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
         var o = new Date();
         if ((o.setHours(0, 0, 0, 0), o <= r)) {
           if ((o.setDate(o.getDate() + 1), r < o))
@@ -6532,10 +6566,10 @@
           n = new Date();
         if (n < t)
           return (
-            l.a(t.getTime() - n.getTime()),
-            t.getFullYear() == n.getFullYear() ? b(t) : y(t)
+            l.b(t.getTime() - n.getTime()),
+            t.getFullYear() == n.getFullYear() ? E(t) : O(t)
           );
-        l.a(new Date().setHours(24, 0, 0, 0) - n.getTime());
+        l.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
         var r = new Date();
         if ((r.setHours(0, 0, 0, 0), r <= t)) return Object(c.d)("#Time_Today");
         if ((r.setDate(r.getDate() - 1), r <= t))
@@ -6555,12 +6589,28 @@
             ? Object(c.d)("#TimeSince_1Week")
             : Object(c.d)("#TimeSince_XWeeks", i);
         }
-        return t.getFullYear() == n.getFullYear() ? b(t) : y(t);
+        return t.getFullYear() == n.getFullYear() ? E(t) : O(t);
       }
       var f = new Map(),
         v = new Map(),
-        g = (new Map(), new Map());
-      function _(e) {
+        g = (new Map(), new Map()),
+        _ = new Map();
+      function b(e, t) {
+        void 0 === t && (t = !1);
+        var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
+          r = _.get(n);
+        return (
+          r ||
+          ((r = e.toLocaleDateString(c.c.GetPreferredLocales(), {
+            weekday: "long",
+            day: "numeric",
+            month: t ? "long" : "short"
+          })),
+          _.set(n, r),
+          r)
+        );
+      }
+      function y(e) {
         var t = f.get(e.getDay());
         return (
           t ||
@@ -6571,7 +6621,7 @@
           t)
         );
       }
-      function b(e) {
+      function E(e) {
         var t = v.get(e.getMonth());
         return (
           t ||
@@ -6582,7 +6632,7 @@
           t)
         );
       }
-      function y(e) {
+      function O(e) {
         var t = e.getMonth() + 12 * e.getFullYear(),
           n = g.get(t);
         return (
@@ -6714,92 +6764,130 @@
     gfbn: function(e, t, p) {
       "use strict";
       p.r(t);
-      var n,
-        m = p("mrSG"),
-        r = p("q1tI"),
-        o = p.n(r),
-        i = p("55Ip"),
-        a = p("Ty5D"),
-        s = p("eDP5"),
-        c = p("Jqb/"),
-        l = p("lkRc"),
-        u = p("sUmc"),
-        h = o.a.lazy(function() {
+      var m = p("mrSG"),
+        n = p("q1tI"),
+        r = p.n(n),
+        o = p("55Ip"),
+        i = p("Ty5D"),
+        a = p("eDP5"),
+        s = p("Jqb/"),
+        c = p("lkRc"),
+        l = p("sUmc"),
+        u = p("i8i4"),
+        h = p.n(u),
+        d = function(e) {
+          var o = e.config;
+          return r.a.createElement(
+            r.a.Fragment,
+            null,
+            Object.keys(o || {}).map(function(r) {
+              var e = document.querySelectorAll("[data-featuretarget=" + r);
+              return e.length
+                ? Array.from(e).map(function(e, t) {
+                    var n = (function(e, t) {
+                      if (!e) return {};
+                      try {
+                        var n = JSON.parse(e);
+                        if (!n || "object" != typeof n || Array.isArray(n))
+                          throw new Error();
+                        return n;
+                      } catch (e) {
+                        return (
+                          console.error(
+                            'There was a problem parsing props for feature target "' +
+                              t +
+                              '"'
+                          ),
+                          {}
+                        );
+                      }
+                    })(e.getAttribute("data-props"), r);
+                    return Object(u.createPortal)(o[r](n), e, "" + r + t);
+                  })
+                : null;
+            })
+          );
+        };
+      var f,
+        v = r.a.lazy(function() {
           return Promise.all([p.e(0), p.e(2), p.e(92)]).then(
             p.bind(null, "GEPe")
           );
         }),
-        d = o.a.lazy(function() {
+        g = r.a.lazy(function() {
           return Promise.all([p.e(0), p.e(93), p.e(2), p.e(7)]).then(
             p.bind(null, "IY+y")
           );
         }),
-        f = function() {
-          return l.a.IS_CREATOR_HOME || l.a.IS_CURATOR ? "groups" : "games";
+        _ = function() {
+          return c.a.IS_CREATOR_HOME || c.a.IS_CURATOR ? "groups" : "games";
         },
-        v = function() {
-          return "/" + f() + "/:anything*/diagdata";
-        },
-        g = function(e) {
-          return "/" + f() + "/" + e + "/(partnerevents|events|announcements)";
-        },
-        _ = function(e) {
-          return "/app/" + e + "(/workshop/)?";
-        },
-        b = function(e) {
-          return "/groups/" + e + "/";
+        b = function() {
+          return "/" + _() + "/:anything*/diagdata";
         },
         y = function(e) {
-          return "/id/" + e + "/";
+          return "/" + _() + "/" + e + "/(partnerevents|events|announcements)";
         },
         E = function(e) {
+          return "/app/" + e + "(/workshop/)?";
+        },
+        O = function(e) {
+          return "/groups/" + e + "/";
+        },
+        w = function(e) {
+          return "/id/" + e + "/";
+        },
+        D = function(e) {
           return "/profiles/" + e + "/";
         },
-        O = function() {
+        C = function() {
           return "/:anything/filedetails";
         },
-        w = function() {
+        S = function() {
           return "/id/:vanity_url/recommended/:appid/";
         },
-        D = function() {
+        M = function() {
           return "/profiles/:steamid/recommended/:appid/";
         },
-        C = (function(e) {
+        x = function() {
+          return "/";
+        },
+        k = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
           return (
             Object(m.d)(t, e),
             (t.prototype.componentDidMount = function() {
-              n ||
-                (n = Object(u.b)(document)).Show(
-                  o.a.createElement(c.b, { ModalManager: Object(c.f)(window) })
+              f ||
+                (f = Object(l.b)(document)).Show(
+                  r.a.createElement(s.b, { ModalManager: Object(s.f)(window) })
                 );
             }),
             (t.prototype.render = function() {
-              return o.a.createElement(
-                i.a,
+              return r.a.createElement(
+                o.a,
                 {
                   basename: (function() {
                     var e = document.createElement("a");
-                    e.href = l.b.COMMUNITY_BASE_URL;
+                    e.href = c.b.COMMUNITY_BASE_URL;
                     var t = e.pathname;
                     t.endsWith("/") || (t += "/");
                     return t;
                   })()
                 },
-                o.a.createElement(
-                  o.a.Suspense,
-                  { fallback: o.a.createElement("div", null) },
-                  o.a.createElement(
-                    a.e,
+                r.a.createElement(
+                  r.a.Suspense,
+                  { fallback: r.a.createElement("div", null) },
+                  r.a.createElement(
+                    i.e,
                     null,
-                    o.a.createElement(a.c, {
+                    r.a.createElement(i.c, {
                       exact: !0,
-                      path: v(),
+                      path: b(),
                       render: function(e) {
-                        return o.a.createElement(
-                          s.a,
+                        return r.a.createElement(
+                          a.a,
                           Object(m.a)({}, e, {
                             key: e.match.params.gid,
                             strConfigID: "application_config"
@@ -6807,70 +6895,93 @@
                         );
                       }
                     }),
-                    o.a.createElement(a.c, {
-                      path: g(":appid_or_vanity_str"),
+                    r.a.createElement(i.c, {
+                      path: y(":appid_or_vanity_str"),
                       render: function(e) {
-                        return o.a.createElement(d, null);
+                        return r.a.createElement(g, null);
                       }
                     }),
-                    o.a.createElement(a.c, {
-                      path: _(":appid"),
+                    r.a.createElement(i.c, {
+                      path: E(":appid"),
                       render: function(e) {
-                        return o.a.createElement(d, null);
+                        return r.a.createElement(d, {
+                          config: {
+                            "apphub-events": function() {
+                              return r.a.createElement(g, null);
+                            },
+                            "apphub-ugcrewards": function() {
+                              return !1;
+                            }
+                          }
+                        });
                       }
                     }),
-                    o.a.createElement(a.c, {
-                      path: b(":groupid_or_vanity_str"),
+                    r.a.createElement(i.c, {
+                      path: O(":groupid_or_vanity_str"),
                       render: function(e) {
-                        return o.a.createElement(d, null);
+                        return r.a.createElement(g, null);
                       }
                     }),
-                    o.a.createElement(a.c, {
-                      path: w(),
-                      render: function(e) {
-                        return !1;
-                      }
-                    }),
-                    o.a.createElement(a.c, {
-                      path: D(),
-                      render: function(e) {
-                        return !1;
-                      }
-                    }),
-                    o.a.createElement(a.c, {
-                      path: y(":vanity_url"),
-                      render: function(e) {
-                        return o.a.createElement(h, Object(m.a)({}, e));
-                      }
-                    }),
-                    o.a.createElement(a.c, {
-                      path: E(":steamid"),
-                      render: function(e) {
-                        return o.a.createElement(h, Object(m.a)({}, e));
-                      }
-                    }),
-                    o.a.createElement(a.c, {
-                      path: O(),
+                    r.a.createElement(i.c, {
+                      path: S(),
                       render: function(e) {
                         return !1;
                       }
                     }),
-                    o.a.createElement(a.c, { component: S })
+                    r.a.createElement(i.c, {
+                      path: M(),
+                      render: function(e) {
+                        return !1;
+                      }
+                    }),
+                    r.a.createElement(i.c, {
+                      path: w(":vanity_url"),
+                      render: function(e) {
+                        return r.a.createElement(v, Object(m.a)({}, e));
+                      }
+                    }),
+                    r.a.createElement(i.c, {
+                      path: D(":steamid"),
+                      render: function(e) {
+                        return r.a.createElement(v, Object(m.a)({}, e));
+                      }
+                    }),
+                    r.a.createElement(i.c, {
+                      path: C(),
+                      render: function(e) {
+                        return !1;
+                      }
+                    }),
+                    r.a.createElement(i.c, {
+                      path: x(),
+                      render: function(e) {
+                        return r.a.createElement(d, {
+                          config: {
+                            "apphub-events": function() {
+                              return r.a.createElement(g, null);
+                            },
+                            "apphub-ugcrewards": function() {
+                              return !1;
+                            }
+                          }
+                        });
+                      }
+                    }),
+                    r.a.createElement(i.c, { component: I })
                   )
                 )
               );
             }),
             t
           );
-        })(o.a.Component);
-      function S(e) {
-        return o.a.createElement(a.b, { push: !0, to: l.b.COMMUNITY_BASE_URL });
+        })(r.a.Component);
+      function I(e) {
+        return r.a.createElement(i.b, { push: !0, to: c.b.COMMUNITY_BASE_URL });
       }
-      var M = p("i8i4"),
-        x = p.n(M),
-        k = (p("mRR+"), p("TLQK"));
+      p("mRR+");
+      var T = p("TLQK");
       p("mgoM");
-      var I = p("r64O");
+      var L = p("r64O");
       p("xnZ7"), p("idvb");
       document.addEventListener("DOMContentLoaded", function() {
         return Object(m.b)(this, void 0, void 0, function() {
@@ -6879,11 +6990,9 @@
               case 0:
                 return (
                   document.getElementById("application_config")
-                    ? Object(l.f)("application_config")
-                    : Object(l.f)(),
-                  (p.p =
-                    l.b.COMMUNITY_CDN_URL +
-                    "public/javascript/applications/community/"),
+                    ? Object(c.f)("application_config")
+                    : Object(c.f)(),
+                  (p.p = c.b.COMMUNITY_CDN_URL + "public/"),
                   [
                     4,
                     (function(u) {
@@ -6936,24 +7045,24 @@
                                 (o = n[1]),
                                 (i = n[2]),
                                 (a = n[3]),
-                                k.c.InitFromObjects(o, a, r, i),
+                                T.c.InitFromObjects(o, a, r, i),
                                 (e.label = 4);
                             case 4:
-                              for (s = 0, c = T; s < c.length; s++)
-                                (l = c[s]), k.c.AddTokens(l);
-                              return (T = void 0), [2];
+                              for (s = 0, c = N; s < c.length; s++)
+                                (l = c[s]), T.c.AddTokens(l);
+                              return (N = void 0), [2];
                           }
                         });
                       });
-                    })(l.b.LANGUAGE)
+                    })(c.b.LANGUAGE)
                   ]
                 );
               case 1:
                 return (
                   e.sent(),
                   document.getElementById("application_root") &&
-                    x.a.render(
-                      o.a.createElement(C, {}),
+                    h.a.render(
+                      r.a.createElement(k, {}),
                       document.getElementById("application_root")
                     ),
                   [2]
@@ -6962,10 +7071,10 @@
           });
         });
       });
-      var T = [];
+      var N = [];
       window.LocalizationManifestReady = function(e, t, n) {
-        Object(I.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
-          void 0 !== T ? T.push(n) : k.c.AddTokens(n);
+        Object(L.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
+          void 0 !== N ? N.push(n) : T.c.AddTokens(n);
       };
     },
     hJxo: function(e, t, n) {
@@ -7864,6 +7973,7 @@
     },
     xnZ7: function(e, t, n) {
       e.exports = {
+        v6: "shared_common_v6_2Lxgd",
         SubText: "shared_common_SubText_vg0EO",
         AvatarImageContainer: "shared_common_AvatarImageContainer_33hdF",
         GameImageContainer: "shared_common_GameImageContainer_2OYAD",
@@ -7934,9 +8044,12 @@
                   this.context.contextMenuInstance.options.bUseWebStyles
                     ? "popup_menu popup_body"
                     : f.a.contextMenuContents;
-              return (
-                n && (o += " " + n),
-                s.createElement("div", Object(a.a)({}, r, { className: o }), t)
+              n && (o += " " + n);
+              var i = this.props.renderMenuContainer || "div";
+              return s.createElement(
+                i,
+                Object(a.a)({}, r, { className: o }),
+                t
               );
             }),
             (t.contextTypes = {
@@ -7971,22 +8084,21 @@
                 e.bInteractableItem,
                 Object(a.f)(e, ["onSelected", "bInteractableItem"])),
                 n = [];
-              return (
-                this.context.contextMenuInstance &&
-                this.context.contextMenuInstance.options.bUseWebStyles
-                  ? n.push("popup_menu_item")
-                  : n.push(f.a.contextMenuItem, "contextMenuItem"),
+              this.context.contextMenuInstance &&
+              this.context.contextMenuInstance.options.bUseWebStyles
+                ? n.push("popup_menu_item")
+                : n.push(f.a.contextMenuItem, "contextMenuItem"),
                 this.props.className && n.push(this.props.className),
-                this.props.disabled && n.push("disabled"),
-                s.createElement(
-                  "div",
-                  Object(a.a)({ onMouseEnter: this.OnMouseEnter }, t, {
-                    onClick: this.OnClick,
-                    unselectable: this.props.unselectable,
-                    className: v.a.apply(void 0, n)
-                  }),
-                  this.props.children
-                )
+                this.props.disabled && n.push("disabled");
+              var r = this.props.renderMenuItem || "div";
+              return s.createElement(
+                r,
+                Object(a.a)({ onMouseEnter: this.OnMouseEnter }, t, {
+                  onClick: this.OnClick,
+                  unselectable: this.props.unselectable,
+                  className: v.a.apply(void 0, n)
+                }),
+                this.props.children
               );
             }),
             (t.contextTypes = {

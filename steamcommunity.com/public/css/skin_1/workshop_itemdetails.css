@@ -831,6 +831,9 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	color: #3C3D3E;
 }
 
+#SubscribeItemBtn {
+	position: relative;
+}
 #SubscribeItemBtn:hover .subscribeIcon
 {
 	background-position: 0px -30px;
@@ -2764,6 +2767,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 }
 .game_area_purchase_game
 {
+	display: flex;
 	position: relative;
 	padding: 16px;
 	margin-bottom: 5px;
@@ -3932,15 +3936,6 @@ span.change_log_edit
 	top: 13px;
 	right: 10px;
 }
-
-.creatorsBlock2 .tinyGreyArrow {
-	display: inline-block;
-	vertical-align: text-top;
-	top: 6px;
-	left: 7px;
-
-}
-
 
 .tooltipPopupMenu {
 	background-color: #3b3938;

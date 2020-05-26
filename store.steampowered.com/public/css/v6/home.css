@@ -2601,7 +2601,7 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 
 .community_recommendations_by_steam_labs_ctn .carousel_container {
 	margin-bottom: 10px;
-	}
+}
 
 .recommended_by_steam_labs_ctn .btn_uppercase > span {
 			font-family: "Motiva Sans", Sans-serif;
@@ -2668,13 +2668,17 @@ body.v6 .recommended_by_steam_labs_ctn h2 {
 }
 .focus > .community_recommendation_app {
 	display: flex;
+	width: 100%;
 }
 .community_recommendation_app > .community_recommendation_capsule {
 	position: relative;
 	margin-right: 5px;
 }
 .community_recommendation_app > .community_recommendation_capsule > .capsule {
-	height: 356px;
+	max-height: 356px;
+}
+.community_recommendation_app > .community_recommendation_capsule > .capsule > img {
+	width: 100%;
 }
 
 .community_recommendation_app .microtrailer_video {
@@ -4239,9 +4243,41 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
     html.responsive .carousel_container .carousel_items > *.focus {
         width: auto;
     }
-    html.responsive .labs_cluster.home_ctn {
-        display: none;
-    }
+
+	html.responsive .community_recommendations_by_steam_labs_ctn h1 {
+		font-size: 18px;
+		line-height: 21px;
+		margin: 0px;
+	}
+	html.responsive .community_recommendations_by_steam_labs_ctn h2 > span.right {
+		float: none;
+		top: 0px;
+	}
+	html.responsive .community_recommendations_by_steam_labs_ctn #community_recommendations_preferences_last_updated {
+		font-size: 10px;
+	}
+	html.responsive .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items > *,
+	html.responsive .community_recommendations_by_steam_labs_ctn .carousel_container .carousel_items .community_recommendation_app {
+		width: 100%;
+	}
+	html.responsive .community_recommendation_app {
+		display: flex;
+		flex-direction: column;
+	}
+	html.responsive .community_recommendation_app .community_recommendations_block {
+		width: auto;
+		height: 170px;
+	}
+	html.responsive .community_recommendation_app .review_box .content {
+		font-size: 12px;
+		height: 80px;
+	}
+	html.response .community_recommendations_block > .review_box {
+		padding: 5px;
+	}
+	html.responsive .community_recommendation_app > .right_col {
+		height: 215px;
+	}
 
 	html.responsive body.v6 .friends_recently_purchased h2,
 	html.responsive body.v6 .discovery_queue_ctn h2,

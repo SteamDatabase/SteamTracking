@@ -18,6 +18,12 @@ div#footer {
 	height: 3400px;
 }
 
+body.v6 {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
 body.v6 h2.pageheader {
 	margin-top: 0px;
     margin-bottom: 0px;

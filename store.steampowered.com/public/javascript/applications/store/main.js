@@ -66,6 +66,75 @@
         throbber_xxlarge: "throbber_throbber_xxlarge_3j-p4"
       };
     },
+    "5izx": function(e, t, n) {
+      "use strict";
+      n.d(t, "a", function() {
+        return c;
+      });
+      var r = n("wd/R"),
+        i = n.n(r),
+        o = n("s4NR"),
+        s = n.n(o),
+        a = n("lkRc"),
+        c = new ((function() {
+          function e() {
+            (this.bOpenEventLandingPage = !1),
+              (this.bIncludeFeaturedAsGameSource = !0),
+              (this.nOverrideDateNow = void 0);
+          }
+          return (
+            Object.defineProperty(e.prototype, "bEnableSteamGameFestival", {
+              get: function() {
+                return "dev" == a.c.WEB_UNIVERSE || "beta" == a.c.WEB_UNIVERSE;
+              },
+              enumerable: !0,
+              configurable: !0
+            }),
+            Object.defineProperty(e.prototype, "bEnableNewsHubMayUpdate", {
+              get: function() {
+                return "dev" == a.c.WEB_UNIVERSE || "beta" == a.c.WEB_UNIVERSE;
+              },
+              enumerable: !0,
+              configurable: !0
+            }),
+            (e.prototype.GetTimeNowWithOverride = function() {
+              return this.nOverrideDateNow
+                ? this.nOverrideDateNow
+                : Date.now() / 1e3;
+            }),
+            (e.prototype.GetTimeNowWithOverrideAsDate = function() {
+              return this.nOverrideDateNow
+                ? new Date(1e3 * this.nOverrideDateNow)
+                : new Date();
+            }),
+            (e.prototype.BHasTimeOverride = function() {
+              return Boolean(this.nOverrideDateNow);
+            }),
+            (e.prototype.ParseDevOverrides = function(e) {
+              if (e && 0 != e.length) {
+                var t = s.a.parse("?" == e[0] ? e.substring(1) : e);
+                if (
+                  "string" == typeof t.t &&
+                  ("dev" == a.c.WEB_UNIVERSE || "beta" == a.c.WEB_UNIVERSE)
+                ) {
+                  var n = /^\d+$/.test(t.t)
+                    ? i.a.unix(Number.parseInt(t.t))
+                    : i()(t.t);
+                  (this.nOverrideDateNow = Math.floor(n.unix())),
+                    console.log(
+                      "CEventCalendarDevFeatures overriding partner event time: " +
+                        this.nOverrideDateNow +
+                        " " +
+                        n.format()
+                    );
+                }
+              }
+            }),
+            e
+          );
+        })())();
+      window.g_EventCalendarDevFeatures = c;
+    },
     "6TF7": function(e, t, n) {
       e.exports = { App: "app_App_2uHYt" };
     },
@@ -147,10 +216,10 @@
           return B;
         }),
         n.d(t, "w", function() {
-          return R;
+          return I;
         }),
         n.d(t, "l", function() {
-          return I;
+          return R;
         }),
         n.d(t, "j", function() {
           return x;
@@ -1272,7 +1341,7 @@
           )
         );
       }
-      function R() {
+      function I() {
         return r.createElement(
           "svg",
           {
@@ -1300,7 +1369,7 @@
           })
         );
       }
-      function I() {
+      function R() {
         return r.createElement(
           "svg",
           {
@@ -3831,7 +3900,8 @@
                   onEscKeypress: this.Cancel,
                   bDestructiveWarning: this.props.bDestructiveWarning,
                   bDisableBackgroundDismiss: this.props
-                    .bDisableBackgroundDismiss
+                    .bDisableBackgroundDismiss,
+                  bHideCloseIcon: this.props.bHideCloseIcon
                 },
                 u.createElement(
                   d.f,
@@ -6290,7 +6360,7 @@
             r
           );
         })(o.Message),
-        R = (o.Message,
+        I = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6368,7 +6438,7 @@
             r
           );
         })(o.Message)),
-        I = (o.Message,
+        R = (o.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -6967,7 +7037,7 @@
           return e.SendMsg(
             "Community.GetUserPartnerEventsAppPriorities#1",
             t,
-            R,
+            I,
             {}
           );
         }),
@@ -6975,7 +7045,7 @@
           return e.SendMsg(
             "Community.ClearSinglePartnerEventsAppPriority#1",
             t,
-            I,
+            R,
             {}
           );
         });
@@ -7360,8 +7430,8 @@
           return f.createElement("div", Object(h.a)({}, e, { className: t }));
         };
       }
-      var R = n("hJxo"),
-        I = n("r64O"),
+      var I = n("hJxo"),
+        R = n("r64O"),
         x = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
@@ -7450,7 +7520,7 @@
                     this.m_CopiedAnimation && this.m_CopiedAnimation.Cancel();
                   this.setState({ m_bCompletedCopiedAnimation: !1 }),
                     this.setState({ m_CopiedYPos: -4 }, function() {
-                      (t.m_CopiedAnimation = new R.b(
+                      (t.m_CopiedAnimation = new I.b(
                         t,
                         { m_CopiedYPos: -24 },
                         {
@@ -7478,7 +7548,7 @@
                 ));
             }),
             (e.prototype.CheckProps = function(e) {
-              Object(I.a)(
+              Object(R.a)(
                 !(e.bShowClearAction || e.bAlwaysShowClearAction) || e.onChange,
                 "In order for bShowClearAction to work correctly, you should be handling onChange and passing value to the Dialog.Input."
               );
@@ -9870,7 +9940,7 @@
       n.d(t, "d", function() {
         return s;
       }),
-        n.d(t, "j", function() {
+        n.d(t, "k", function() {
           return a;
         }),
         n.d(t, "b", function() {
@@ -9924,23 +9994,26 @@
         n.d(t, "f", function() {
           return o.b;
         }),
-        n.d(t, "g", function() {
-          return o.c;
-        }),
         n.d(t, "h", function() {
           return o.d;
         }),
         n.d(t, "i", function() {
           return o.e;
         }),
-        n.d(t, "k", function() {
-          return o.g;
+        n.d(t, "j", function() {
+          return o.f;
         }),
         n.d(t, "l", function() {
           return o.h;
         }),
         n.d(t, "m", function() {
           return o.i;
+        }),
+        n.d(t, "n", function() {
+          return o.j;
+        }),
+        n.d(t, "g", function() {
+          return o.c;
         });
       var c = {
         english: "en",
@@ -10339,7 +10412,7 @@
       function z(e, t) {
         return !(e.max < t.min || t.max < e.min);
       }
-      var R = n("Kw0F"),
+      var I = n("Kw0F"),
         U = n("X3Ds");
       n.d(t, "a", function() {
         return F;
@@ -10691,7 +10764,7 @@
                 if (null !== h) return { htmlElement: h, pos: V(h) };
               }
               var b,
-                y = Object(R.d)(p, function(e) {
+                y = Object(I.d)(p, function(e) {
                   return null !== e.m_focusPos;
                 });
               if (y) {
@@ -10812,16 +10885,16 @@
                 }
                 return null;
               };
-              if (f && (R = B(f, !0))) return R;
+              if (f && (I = B(f, !0))) return I;
               if (g) {
-                var R;
-                if ((R = B(g))) return R;
+                var I;
+                if ((I = B(g))) return I;
                 v.sort(function(e, t) {
                   return e.score - t.score;
                 });
-                for (var I = 0; I < v.length; ++I) {
+                for (var R = 0; R < v.length; ++R) {
                   var x;
-                  if ((x = v[I].element) !== g) {
+                  if ((x = v[R].element) !== g) {
                     var A = B(x);
                     if (A) return A;
                   }
@@ -11038,7 +11111,7 @@
             }),
             (e.prototype.componentWillUnmount = function() {
               if (
-                ((D.sm_navAreaStack = Object(R.a)(D.sm_navAreaStack, this)),
+                ((D.sm_navAreaStack = Object(I.a)(D.sm_navAreaStack, this)),
                 0 === D.sm_navAreaStack.length)
               ) {
                 if (!this.m_navAreaDivRef.current) return;
@@ -11560,32 +11633,35 @@
     },
     Z1oF: function(e, t, n) {
       "use strict";
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return r;
       }),
-        n.d(t, "d", function() {
+        n.d(t, "e", function() {
           return i;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "h", function() {
           return u;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "f", function() {
           return o;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "g", function() {
           return a;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "i", function() {
           return m;
         }),
         n.d(t, "a", function() {
           return h;
         }),
-        n.d(t, "b", function() {
-          return b;
-        }),
         n.d(t, "c", function() {
+          return y;
+        }),
+        n.d(t, "b", function() {
           return M;
+        }),
+        n.d(t, "d", function() {
+          return O;
         });
       var c = n("TLQK"),
         s = n("CdLH"),
@@ -11693,7 +11769,7 @@
         if (n < t)
           return (
             l.b(t.getTime() - n.getTime()),
-            t.getFullYear() == n.getFullYear() ? y(t) : w(t)
+            t.getFullYear() == n.getFullYear() ? w(t) : F(t)
           );
         l.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
         var r = new Date();
@@ -11715,13 +11791,29 @@
             ? Object(c.d)("#TimeSince_1Week")
             : Object(c.d)("#TimeSince_XWeeks", o);
         }
-        return t.getFullYear() == n.getFullYear() ? y(t) : w(t);
+        return t.getFullYear() == n.getFullYear() ? w(t) : F(t);
       }
       var f = new Map(),
         g = new Map(),
         _ = new Map(),
-        v = new Map();
-      function b(e) {
+        v = new Map(),
+        b = new Map();
+      function y(e, t) {
+        void 0 === t && (t = !1);
+        var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
+          r = b.get(n);
+        return (
+          r ||
+          ((r = e.toLocaleDateString(c.c.GetPreferredLocales(), {
+            weekday: "long",
+            day: "numeric",
+            month: t ? "long" : "short"
+          })),
+          b.set(n, r),
+          r)
+        );
+      }
+      function M(e) {
         var t = f.get(e.getDay());
         return (
           t ||
@@ -11732,7 +11824,7 @@
           t)
         );
       }
-      function y(e) {
+      function w(e) {
         var t = g.get(e.getMonth());
         return (
           t ||
@@ -11743,7 +11835,7 @@
           t)
         );
       }
-      function M(e) {
+      function O(e) {
         var t = _.get(e.getFullYear());
         return (
           t ||
@@ -11754,7 +11846,7 @@
           t)
         );
       }
-      function w(e) {
+      function F(e) {
         var t = e.getMonth() + 12 * e.getFullYear(),
           n = v.get(t);
         return (
@@ -12260,7 +12352,7 @@
         n = c.n(o),
         s = c("q1tI"),
         a = c.n(s),
-        r = c("lkRc"),
+        r = (c("5izx"), c("lkRc")),
         i = c("vDqi"),
         u = c.n(i);
       var p = c("TLQK");
@@ -12475,7 +12567,7 @@
         j = F("EventDetailView"),
         D = F("Events"),
         B = c("kLLr"),
-        R = function() {
+        I = function() {
           return a.a.createElement(
             m.d,
             null,
@@ -12612,7 +12704,7 @@
             })
           );
         },
-        I = function() {
+        R = function() {
           return a.a.createElement(
             m.d,
             null,
@@ -12926,13 +13018,13 @@
                         a.a.createElement(m.b, {
                           path: v.NewsHub(),
                           render: function(e) {
-                            return a.a.createElement(R, null);
+                            return a.a.createElement(I, null);
                           }
                         }),
                         a.a.createElement(m.b, {
                           path: v.EventAdmin(),
                           render: function(e) {
-                            return a.a.createElement(I, null);
+                            return a.a.createElement(R, null);
                           }
                         }),
                         a.a.createElement(m.b, {
@@ -14325,6 +14417,9 @@
               );
             this.m_fnCallbackOnAppInfoLoaded.Register(e);
           }),
+          (e.prototype.IsLoadingAppID = function(e) {
+            return this.m_setPendingAppInfo.has(e);
+          }),
           (e.prototype.GetAppInfo = function(e) {
             if (
               (Object(l.a)(
@@ -14973,6 +15068,7 @@
     },
     xnZ7: function(e, t, n) {
       e.exports = {
+        v6: "shared_common_v6_2Lxgd",
         SubText: "shared_common_SubText_vg0EO",
         AvatarImageContainer: "shared_common_AvatarImageContainer_33hdF",
         GameImageContainer: "shared_common_GameImageContainer_2OYAD",
@@ -15018,7 +15114,7 @@
         c = n("i8i4"),
         l = n("TtDX"),
         u = n("JMS6"),
-        R = n("X3Ds"),
+        I = n("X3Ds"),
         i = n("bxiW"),
         o = n("6Y59"),
         p = n("D4wO"),
@@ -15043,9 +15139,12 @@
                   this.context.contextMenuInstance.options.bUseWebStyles
                     ? "popup_menu popup_body"
                     : f.a.contextMenuContents;
-              return (
-                n && (i += " " + n),
-                a.createElement("div", Object(s.a)({}, r, { className: i }), t)
+              n && (i += " " + n);
+              var o = this.props.renderMenuContainer || "div";
+              return a.createElement(
+                o,
+                Object(s.a)({}, r, { className: i }),
+                t
               );
             }),
             (t.contextTypes = {
@@ -15080,22 +15179,21 @@
                 e.bInteractableItem,
                 Object(s.f)(e, ["onSelected", "bInteractableItem"])),
                 n = [];
-              return (
-                this.context.contextMenuInstance &&
-                this.context.contextMenuInstance.options.bUseWebStyles
-                  ? n.push("popup_menu_item")
-                  : n.push(f.a.contextMenuItem, "contextMenuItem"),
+              this.context.contextMenuInstance &&
+              this.context.contextMenuInstance.options.bUseWebStyles
+                ? n.push("popup_menu_item")
+                : n.push(f.a.contextMenuItem, "contextMenuItem"),
                 this.props.className && n.push(this.props.className),
-                this.props.disabled && n.push("disabled"),
-                a.createElement(
-                  "div",
-                  Object(s.a)({ onMouseEnter: this.OnMouseEnter }, t, {
-                    onClick: this.OnClick,
-                    unselectable: this.props.unselectable,
-                    className: g.a.apply(void 0, n)
-                  }),
-                  this.props.children
-                )
+                this.props.disabled && n.push("disabled");
+              var r = this.props.renderMenuItem || "div";
+              return a.createElement(
+                r,
+                Object(s.a)({ onMouseEnter: this.OnMouseEnter }, t, {
+                  onClick: this.OnClick,
+                  unselectable: this.props.unselectable,
+                  className: g.a.apply(void 0, n)
+                }),
+                this.props.children
               );
             }),
             (t.contextTypes = {
@@ -15188,7 +15286,7 @@
               this.PositionMenu();
             }),
             (e.prototype.OnBlur = function(e) {
-              (e.relatedTarget && R.c(e.currentTarget, e.relatedTarget)) ||
+              (e.relatedTarget && I.c(e.currentTarget, e.relatedTarget)) ||
                 (e.relatedTarget &&
                   this.props.instance.BIsElementInMenuHierarchy(
                     e.relatedTarget
@@ -15219,7 +15317,7 @@
                 this.state.ready &&
                 this.props.instance.visible &&
                 (this.props.popup ||
-                  !R.c(
+                  !I.c(
                     this.m_elMenu,
                     this.m_elMenu.ownerDocument.activeElement
                   ))
@@ -15255,7 +15353,7 @@
                 if (o) {
                   this.props.options.bScreenCoordinates ||
                     ((c += n.screenLeft), (l += n.screenTop)),
-                    (r = R.g(n, r));
+                    (r = I.g(n, r));
                   var d = n.screen,
                     m = 0,
                     h = 0;
@@ -15447,7 +15545,7 @@
                   height: 1
                 };
               else {
-                var t = R.g(
+                var t = I.g(
                   this.m_menuProps.element.ownerDocument.defaultView,
                   this.m_menuProps.element.getBoundingClientRect()
                 );
@@ -15490,7 +15588,7 @@
       }
       function O(e) {
         var t = [],
-          n = R.m(e),
+          n = I.m(e),
           r = n.getSelection(),
           i = r && 0 < r.rangeCount && 0 < r.toString().length,
           o = e.target,

@@ -784,7 +784,8 @@ body.modals_BodyNoScrollDialog_105OB {
         font-size: 20px;
         margin: 20px; }
 
-body {
+body,
+body.shared_common_v6_2Lxgd {
   color: #969696;
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif; }
 
@@ -986,6 +987,10 @@ button.DialogButton::-moz-focus-inner {
   width: initial;
   max-width: 88vw;
   max-height: 90vh; }
+
+@media screen and (max-height: 640px) {
+  .FullModalOverlay .ModalPosition_Content {
+    max-height: 95vh; } }
 
 .ModalOverlayContent {
   position: fixed;
