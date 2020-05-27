@@ -5059,16 +5059,16 @@
           "partnersaledisplay_PreviewSalesPageContainer_16oMm",
         SaleSectionTabs: "partnersaledisplay_SaleSectionTabs_1FPIV",
         SaleSectionTabsTab: "partnersaledisplay_SaleSectionTabsTab_3BgHm",
-        SaleSectionTabsCarousel:
-          "partnersaledisplay_SaleSectionTabsCarousel_1XZy7",
-        SaleSectionTabsHasArrows:
-          "partnersaledisplay_SaleSectionTabsHasArrows_2SNzj",
-        SaleSectionTabsList: "partnersaledisplay_SaleSectionTabsList_4IDJX",
+        SaleSectionTabContainer:
+          "partnersaledisplay_SaleSectionTabContainer_1Svj0",
+        SaleSectionTabsRow: "partnersaledisplay_SaleSectionTabsRow_30oGT",
         SaleTab: "partnersaledisplay_SaleTab_gc-rq",
         SaleTabLabel: "partnersaledisplay_SaleTabLabel_2mYMQ",
         SaleSectionTabListContainer:
           "partnersaledisplay_SaleSectionTabListContainer_2VZtq",
-        TabContentsContainer: "partnersaledisplay_TabContentsContainer_2xJbu"
+        TabContentsContainer: "partnersaledisplay_TabContentsContainer_2xJbu",
+        HorizontalScrollInDragForceCursor:
+          "partnersaledisplay_HorizontalScrollInDragForceCursor_nemO6"
       };
     },
     a5LV: function(e, t, n) {

@@ -85,7 +85,7 @@
           return (
             Object.defineProperty(e.prototype, "bEnableSteamGameFestival", {
               get: function() {
-                return "dev" == a.c.WEB_UNIVERSE || "beta" == a.c.WEB_UNIVERSE;
+                return !0;
               },
               enumerable: !0,
               configurable: !0
