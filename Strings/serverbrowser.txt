@@ -1,8 +1,8 @@
 __TEXT
-"
-"
 __text
 __TEXT
+0O
+0O
 __stubs
 __TEXT
 __stub_helper
@@ -17,21 +17,13 @@ __TEXT
 __eh_frame
 __TEXT
 __DATA
-"
-"
 @
 __nl_symbol_ptr
 __DATA
-"
-"
 __got
 __DATA
-"
-"
 __la_symbol_ptr
 __DATA
-"
-"
 __mod_init_func
 __DATA
 __const
@@ -44,28 +36,27 @@ __thread_vars
 __DATA
 __thread_bss
 __DATA
-@4,
+@D,
 __bss
 __DATA
-@8,
+@H,
 __common
 __DATA
 H
 __LINKEDIT
-@,
+P,
 
 @
 @loader_path/serverbrowser.dylib
 "
-@,
-pV,
+P,
+pf,
 @
 @
 P
 i;
 i;
 k;
-(s0
 
 8
 @loader_path/libtier0_s.dylib
@@ -95,7 +86,7 @@ h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
 &
 )
-Po
+`o
 15CCallbackManualI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 9CCallbackI12CCallbackMgr23SteamAPICallCompleted_tLb0EE
 13CCallbackImplILi16EE
@@ -457,6 +448,8 @@ $
 (
 $
 (
+,
+0
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -2363,6 +2356,8 @@ BrowserResizeGripChanged
 BrowserSetWindowPosition
 width
 height
+minWidth
+minHeight
 BrowserHideWindow
 BrowserShowWindow
 BrowserBringWindowToFront
@@ -3257,6 +3252,8 @@ Assertion Failed: !pszString || pszString[nChars] == '\0'
 Assertion Failed: s_bAllowStaticSymbolTable
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_pSymbolTable
+(
+(
 0
 p
 0
@@ -3273,10 +3270,15 @@ p
 p
 0
 p
+Hc5
+"
+"
+"
+"
+"
+"
 0
 p
-'
-'
 $
 @
 @
@@ -3288,8 +3290,7 @@ $
 A
 Hc
 =
-L95Zb'
-L9557'
+L95`I'
 Hc
 ?
 ?
@@ -3306,16 +3307,9 @@ Hc
 ?
 ?
 ?
-&$
 "
+=$
 3
--$
-$
-$
-$
-$
-$
-$
 D
 $
 $
@@ -3327,28 +3321,33 @@ $
 $
 $
 $
+$
+$
+$
+$
+$
+$
 @
-F#
-#
-#
-#
-#
-#
+O#
++
+b"
 
 
 
 
-L95>-"
-Y!
+
+e
 !
 !
-Y
+C
+6
+n
 
 
 
-'
 d
 :
+
 !
 V
 
@@ -3356,10 +3355,12 @@ V
 
 &
 &
+p
 t=
 =
 =
 @
+
 
 
 

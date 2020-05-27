@@ -835,6 +835,8 @@ message CMsgSetWindowPosition {
 	optional int32 y = 3;
 	optional int32 width = 4;
 	optional int32 height = 5;
+	optional int32 min_width = 6;
+	optional int32 min_height = 7;
 }
 
 message CMsgShowWindow {

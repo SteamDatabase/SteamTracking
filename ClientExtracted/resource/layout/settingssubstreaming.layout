@@ -118,6 +118,7 @@
 			control="P2PScope"
 			dir=down
 			width=max
+			height=24
 			margin-right=20
 			margin-top=4
 		}

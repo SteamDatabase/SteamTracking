@@ -609,7 +609,7 @@
 "[english]Friends_NoCurrentlyPlayedWithUsers"	"No Steam users reported by game server."
 "Friends_PlayerName"	"暱稱"
 "[english]Friends_PlayerName"	"Profile name"
-"Friends_SteamIDURLHeader"	"Steam 個人簡介"
+"Friends_SteamIDURLHeader"	"Steam 個人檔案"
 "[english]Friends_SteamIDURLHeader"	"Steam Profile"
 "Friends_PlayerRelationship"	"關係"
 "[english]Friends_PlayerRelationship"	"Relationship"

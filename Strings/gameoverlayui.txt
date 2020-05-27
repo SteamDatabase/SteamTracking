@@ -4,6 +4,9 @@ __TEXT
 5
 __text
 __TEXT
+t
+4#$
+t
 __stubs
 __TEXT
 __stub_helper
@@ -1279,6 +1282,8 @@ $
 (
 $
 (
+,
+0
 9CMsgKeyUp
 11CMsgKeyDown
 11CMsgKeyChar
@@ -3633,8 +3638,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-May 23 2020
-14:18:27
+May 26 2020
+14:19:01
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -5725,6 +5730,8 @@ BrowserResizeGripChanged
 BrowserSetWindowPosition
 width
 height
+minWidth
+minHeight
 BrowserHideWindow
 BrowserShowWindow
 BrowserBringWindowToFront
@@ -7280,75 +7287,51 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-n/&
-#
-#
-*"
+Y3&
+./&
+F/&
+r3&
+0I
+$#
 $
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-$
-I
-I
-I
-I
-I
 0
 p
 p
 0
 @
+e#
+P#
+l#
+#
+#
+<#
 #
 #
 #
 #
 #
-]3
 #
-H
 0
 p
-!
-!
-P"
-?
-?
-?
-?
-?
-?
-?
-?
-'"
+3
 "
+S"
+>
 "
-t
-x!
-J>
-P>
-g
-:!
-!
->
-!
+i!
+d!
 !
 >
 >
-!
+>
+>
+>
+>
+r!
 !
 !
 !
 d
->
-p
 
 
 
@@ -7392,15 +7375,21 @@ p
 0
 0
 h
-I>
+(3
+n>
+T=
+p=
+?
 ?
 Hi
-?
 0
 p
 I
 I
-"
+i>
+3
+kB
+K3
 $
 @
 @
@@ -7412,12 +7401,10 @@ $
 A
 Hc
 =
-B?
-{?
-L95Sj?
-L95W ?
 ?
 Hc
+.
+.
 ?
 ?
 ?
@@ -7434,11 +7421,11 @@ Hc
 ?
 ?
 SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
-=&
 i[
 i[
 Mc}
 Hc]
+&
 HcU
 
 
@@ -7552,6 +7539,7 @@ p
 p
 P
 =
+#
 @
 @
 ?
@@ -7590,32 +7578,37 @@ P
 @
 |
 |
-6
 "
+t6
 3
-e6
+b6
 D
-[6
-6
-z6
-36
-.6
-'
+~6
+76
+26
+-6
+Y6
+&'
 @
-{5
++
 5
-h%
+Y&
+5
+5
+5
+C4
+e
+q%
 %
-%
-u3
-E$
-J
-\2
-+2
+$
+$
+b2
 #
 2
 2
+2
 d
+1
 1
 
 
@@ -7623,17 +7616,15 @@ d
 
 
 
-u,
 s
-d,
-'
+a,
+P,
 !
+K
+e/
 
 
 
-
-
-,
 ,
 
 &
@@ -7643,7 +7634,7 @@ d,
 =
 =
 @
-:+
+!
 !
 
 
@@ -7657,8 +7648,7 @@ uV%
 !
 
 E
-*
-*
+T*
 *
 *
 *
@@ -7689,6 +7679,8 @@ E
 @
 @
 =
+-)
+)
 
 
 @
@@ -7718,10 +7710,11 @@ E
 .
 .
 d
+?(
 d
 d
 =
-HcK6'
+g'
 
 =
 @
@@ -7736,7 +7729,9 @@ HcK6'
 @
 @
 0
+M&
 E
+Hc5)5&
 b
 _
 O

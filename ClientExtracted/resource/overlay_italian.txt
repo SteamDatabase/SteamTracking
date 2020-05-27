@@ -299,7 +299,7 @@
 "[english]Overlay_SetScreenshotFolder_NoDriveRoot"	"You may not select the root of a drive"
 "Overlay_SetScreenshotFolder_InvalidFolder"	"Devi selezionare una cartella per gli screenshot valida"
 "[english]Overlay_SetScreenshotFolder_InvalidFolder"	"You must select a valid screenshots folder"
-"Overlay_FriendChangeConfirmation_Title"	"Conferma modifica dell'amicizia"
+"Overlay_FriendChangeConfirmation_Title"	"Conferma relativa all'amicizia"
 "[english]Overlay_FriendChangeConfirmation_Title"	"Friend Change Confirmation"
 "Overlay_FriendChangeConfirmation_Confirm"	"Conferma modifica"
 "[english]Overlay_FriendChangeConfirmation_Confirm"	"Confirm Change"

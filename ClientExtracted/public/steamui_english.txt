@@ -3391,6 +3391,7 @@ Make a new Friend on Steam by emailing a gift to someone you know."
 "SteamUI_JoinDialog_Title"		"%game% - Steam"
 "SteamUI_JoinDialog_Updating_Title" 	"Updating %game%"
 "SteamUI_JoinDialog_Ready_Title"	"Ready - %game%"
+"SteamUI_JoinDialog_NoName_Title" 	"Steam"
 "SteamUI_JoinDialog_InstallScriptInfo"	"Performing first time setup...\n\nInstalling: %stepname% (step %step% of %steptotal%)"
 
 

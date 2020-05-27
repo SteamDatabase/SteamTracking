@@ -42,6 +42,7 @@
 						</Panel>
 					</Panel>
 
+				<Panel class="SettingsColumnarContent FlowDown">
 	  				<Label class="SettingsLabel" text="#Settings_RemoteClients_EnableTrafficPriority_Description" />
 	  				<ToggleButton class="CheckBox" id="EnableTrafficPriority" onactivate="ToggleTrafficPriority()" text="#Settings_RemoteClients_EnableTrafficPriority" />
 	  			</Panel>
