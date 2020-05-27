@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5894429";
+var CLSTAMP = "5896596";
 !(function(e) {
   function t(t) {
     for (
@@ -70149,7 +70149,7 @@ var CLSTAMP = "5894429";
           }),
           (e.prototype.OverlayBrowserCreated = function(e, t, n) {
             r.f.UIStore.OnOverlayBrowserCreated(e, t, n),
-              In.ShowPopupFriendsList(e, !1, !1),
+              En.ShowPopupFriendsList(e, !1, !1),
               r.f.SetDefaultPopupContext(e);
           }),
           (e.prototype.OverlayBrowserClosed = function(e) {
@@ -71355,7 +71355,7 @@ var CLSTAMP = "5894429";
                 r.f.FriendStore.self.persona.m_gameid,
                 this.props.browserContext
               ),
-              In.DragDropManager.SetDropConsumed()),
+              En.DragDropManager.SetDropConsumed()),
               this.setState({ dragOver: !1 });
           }),
           (t.prototype.render = function() {
@@ -71798,7 +71798,7 @@ var CLSTAMP = "5894429";
             );
           }),
           (t.prototype.OnDragStart = function(e) {
-            In.DragDropManager.StartDrag({
+            En.DragDropManager.StartDrag({
               type: "rptcontroller",
               controllerID: this.props.controllerID
             }),
@@ -71809,7 +71809,7 @@ var CLSTAMP = "5894429";
                 );
           }),
           (t.prototype.OnDragEnd = function(e) {
-            In.DragDropManager.EndDrag();
+            En.DragDropManager.EndDrag();
           }),
           (t.prototype.OnDragEnter = function(e) {
             return (
@@ -71852,7 +71852,7 @@ var CLSTAMP = "5894429";
                 SteamClient.RemotePlay.IdentifyController(
                   this.props.controllerID
                 )),
-              In.DragDropManager.SetDropConsumed()),
+              En.DragDropManager.SetDropConsumed()),
               this.setState({ dragOver: !1 });
           }),
           (t.prototype.render = function() {
@@ -72053,27 +72053,30 @@ var CLSTAMP = "5894429";
       cn = function(e, t) {
         return sn.push({ error: e, cCallsitesToIgnore: t });
       },
-      ln = console.assert;
-    console.assert = function(e, t) {
-      for (var n = [], r = 2; r < arguments.length; r++)
-        n[r - 2] = arguments[r];
-      e || cn(new Error(mn.apply(void 0, Object(o.g)([t], n))), 2),
-        ln.apply(console, Object(o.g)([e, t], n));
-    };
-    var pn = console.error;
-    (console.error = function(e) {
-      for (var t = [], n = 1; n < arguments.length; n++)
-        t[n - 1] = arguments[n];
-      cn(new Error(mn.apply(void 0, Object(o.g)([e], t))), 1),
-        pn.apply(console, Object(o.g)([e], t));
-    }),
-      window.addEventListener("error", function(e) {
-        cn(e.error, 0);
+      ln = !0;
+    if (ln) {
+      var pn = console.assert;
+      console.assert = function(e, t) {
+        for (var n = [], r = 2; r < arguments.length; r++)
+          n[r - 2] = arguments[r];
+        e || cn(new Error(dn.apply(void 0, Object(o.g)([t], n))), 2),
+          pn.apply(console, Object(o.g)([e, t], n));
+      };
+      var un = console.error;
+      (console.error = function(e) {
+        for (var t = [], n = 1; n < arguments.length; n++)
+          t[n - 1] = arguments[n];
+        cn(new Error(dn.apply(void 0, Object(o.g)([e], t))), 1),
+          un.apply(console, Object(o.g)([e], t));
       }),
-      (Yt = window.setTimeout(function() {
-        (sn = []), (cn = function() {});
-      }, 3e4));
-    var un = (function() {
+        window.addEventListener("error", function(e) {
+          cn(e.error, 0);
+        }),
+        (Yt = window.setTimeout(function() {
+          (sn = []), (cn = function() {});
+        }, 3e4));
+    }
+    var mn = (function() {
       function e(e) {
         var t = this;
         void 0 === e && (e = !0),
@@ -72081,18 +72084,19 @@ var CLSTAMP = "5894429";
           (this.m_rgErrorQueue = []),
           (this.m_bEnabled = !0),
           (this.m_bInitialized = !1),
-          e
-            ? (sn.forEach(function(e) {
-                var n = e.error,
-                  o = e.cCallsitesToIgnore;
-                return t.ReportError(n, o);
-              }),
-              (cn = function(e, n) {
-                return t.ReportError(e, n);
-              }))
-            : (cn = function() {}),
-          (sn = []),
-          clearTimeout(Yt),
+          ln &&
+            (e
+              ? (sn.forEach(function(e) {
+                  var n = e.error,
+                    o = e.cCallsitesToIgnore;
+                  return t.ReportError(n, o);
+                }),
+                (cn = function(e, n) {
+                  return t.ReportError(e, n);
+                }))
+              : (cn = function() {}),
+            (sn = []),
+            clearTimeout(Yt)),
           window.setTimeout(function() {
             t.m_bInitialized || ((t.m_bEnabled = !1), (t.m_rgErrorQueue = []));
           }, 3e4);
@@ -72113,23 +72117,46 @@ var CLSTAMP = "5894429";
               (this.m_rgErrorQueue = []));
         }),
         (e.prototype.ReportError = function(e, t) {
-          if ((void 0 === t && (t = 0), this.m_bEnabled)) {
-            0;
+          if ((void 0 === t && (t = 0), this.m_bEnabled && ln)) {
             var n = (function(e, t) {
               void 0 === t && (t = 0);
               try {
-                return e.stack && e.stack.match(hn)
+                return e.stack && e.stack.match(fn)
                   ? (function(e, t) {
                       void 0 === t && (t = 0);
-                      var n = e.stack.split("\n").filter(function(e) {
-                          return !!e.match(hn);
-                        })[t],
-                        o = n.lastIndexOf("?");
-                      if (-1 === o) return n;
-                      var r = n.indexOf(":", o);
-                      return -1 === r ? n : n.slice(0, o) + n.slice(r);
+                      var n = e.stack.split("\n"),
+                        o = (function(e) {
+                          var t = e.lastIndexOf("?");
+                          if (-1 === t) return e;
+                          var n = e.indexOf(":", t);
+                          return -1 === n ? e : e.slice(0, t) + e.slice(n);
+                        })(
+                          n.filter(function(e) {
+                            return !!e.match(fn);
+                          })[t]
+                        ),
+                        r = n
+                          .map(function(e) {
+                            var t = e.match(/(.*)\((.*):(\d+):(\d+)\)/);
+                            if (!t) return e;
+                            if (5 === t.length) {
+                              t[0];
+                              var n = t[1],
+                                o = t[2],
+                                r = t[3],
+                                i = t[4],
+                                a = parseInt(r),
+                                s = parseInt(i);
+                              if (!isNaN(a) && !isNaN(s)) return [n, o, a, s];
+                            }
+                            return e;
+                          })
+                          .filter(function(e) {
+                            return !!e;
+                          });
+                      return { identifier: o, message: r };
                     })(e, t)
-                  : e.stack && e.stack.match(fn)
+                  : e.stack && e.stack.match(_n)
                   ? (function(e, t) {
                       void 0 === t && (t = 0);
                       return null;
@@ -72141,10 +72168,7 @@ var CLSTAMP = "5894429";
                 );
               }
             })(e, t);
-            if (n) {
-              var o = { identifier: n, message: e.stack };
-              this.SendErrorReport(o);
-            }
+            n && this.SendErrorReport(n);
           }
         }),
         (e.prototype.SendErrorReport = function(e) {
@@ -72171,7 +72195,7 @@ var CLSTAMP = "5894429";
                 return (
                   i.set_count(r),
                   i.set_identifier(o.identifier),
-                  i.set_message(o.message),
+                  i.set_message(JSON.stringify(o.message)),
                   i
                 );
               });
@@ -72184,7 +72208,7 @@ var CLSTAMP = "5894429";
         e
       );
     })();
-    function mn(e) {
+    function dn(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
       return "string" == typeof e && 0 === t.length
@@ -72199,23 +72223,23 @@ var CLSTAMP = "5894429";
             })
             .join(", ");
     }
-    var dn,
-      hn = /^\s*at .*(\S+:\d+|\(native\))/m,
-      fn = /(^|@)\S+:\d+/;
-    var _n = function(e) {
-      (dn = e), an.a.InstallErrorReportingStore(dn);
+    var hn,
+      fn = /^\s*at .*(\S+:\d+|\(native\))/m,
+      _n = /(^|@)\S+:\d+/;
+    var gn = function(e) {
+      (hn = e), an.a.InstallErrorReportingStore(hn);
     };
     n.d(t, "b", function() {
-      return bn;
+      return vn;
     }),
       n.d(t, "c", function() {
-        return Cn;
-      }),
-      n.d(t, "d", function() {
         return On;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "d", function() {
         return In;
+      }),
+      n.d(t, "h", function() {
+        return En;
       }),
       n.d(t, "g", function() {
         return Ft;
@@ -72229,7 +72253,7 @@ var CLSTAMP = "5894429";
       n.d(t, "a", function() {
         return Lt.a;
       });
-    var gn = (function(e) {
+    var bn = (function(e) {
         function t(t, n, o) {
           var r =
             e.call(this, "", {
@@ -72251,7 +72275,7 @@ var CLSTAMP = "5894429";
           t
         );
       })(ft.a),
-      bn = (function(e) {
+      vn = (function(e) {
         function t(t) {
           var n = e.call(this) || this;
           return (n.m_window = t), n;
@@ -72315,7 +72339,7 @@ var CLSTAMP = "5894429";
           t
         );
       })(r.c),
-      vn = (function(e) {
+      yn = (function(e) {
         function t(t) {
           var n = e.call(this) || this;
           return (n.m_popup = t), n;
@@ -72327,7 +72351,7 @@ var CLSTAMP = "5894429";
               return (
                 !this.m_container &&
                   this.m_popup.window &&
-                  (this.m_container = new bn(this.m_popup.window)),
+                  (this.m_container = new vn(this.m_popup.window)),
                 this.m_container
               );
             },
@@ -72357,7 +72381,7 @@ var CLSTAMP = "5894429";
           t
         );
       })(r.e),
-      yn = {
+      Sn = {
         nChatRoomListHeightPx: 224,
         bChatRoomListCollapsed: !1,
         bDontShowVoiceAlert: !1,
@@ -72365,7 +72389,7 @@ var CLSTAMP = "5894429";
         bFavoritesHintDismissed: !1,
         nChangeLogDismissed: 0
       },
-      Sn = (function() {
+      Cn = (function() {
         function e(e, t) {
           var n = this;
           (this.m_FriendHoverStore = new _t.c()),
@@ -72375,7 +72399,7 @@ var CLSTAMP = "5894429";
               this.FillInChatUsabilityMetrics.bind(this)
             )),
             (this.m_mapFriendsListPopups = new Map()),
-            (this.m_UIDisplayPrefs = yn),
+            (this.m_UIDisplayPrefs = Sn),
             (this.m_bUpdatedBuildAvailable = !1),
             (this.m_nSecondsOutOfDate = 0),
             (this.m_strLoaderWindowRestoreDetails = void 0),
@@ -72465,7 +72489,7 @@ var CLSTAMP = "5894429";
                 this.m_FriendsUIApp.FriendStore.self.steamid.GetAccountID()
               )
                 return void this.OnCloseFakeContextMenu(i.steamid);
-              var s = new gn(i.x, i.y, function(e, t) {
+              var s = new bn(i.x, i.y, function(e, t) {
                 var n = r.f.FriendStore.GetFriend(a.GetAccountID());
                 n
                   ? ((o.m_LibraryFriendContextMenu = Object(Rt.b)(
@@ -72649,7 +72673,7 @@ var CLSTAMP = "5894429";
               r = [],
               i = this.m_FriendsUIApp.SettingsStore.GetObjectFromLocalStorageWhenReady(
                 "UIDisplayPrefs",
-                yn
+                Sn
               ).then(function(e) {
                 Object(ht.A)(function() {
                   o.m_UIDisplayPrefs = e;
@@ -72659,7 +72683,7 @@ var CLSTAMP = "5894429";
               (r.push(i),
               e.RunWhenLoggedOn(function() {
                 ft.d.SetCurrentLoggedInAccountID(e.steamid.GetAccountID()),
-                  (dn || _n(new un()), dn).Init(
+                  (hn || gn(new mn()), hn).Init(
                     "Chat",
                     CLSTAMP,
                     e.GetServiceTransport()
@@ -72777,7 +72801,7 @@ var CLSTAMP = "5894429";
                 )),
                   this.m_mapFriendsListPopups.set(e.m_unPID, a),
                   a.Show(!t && n, o);
-                var s = new vn(a),
+                var s = new yn(a),
                   c = this.m_FriendsUIApp.UIStore.GetPerContextChatData(e);
                 c.SetFriendsListWindow(s.container),
                   this.m_FriendsUIApp.UIStore.SerializePopupState(),
@@ -72818,7 +72842,7 @@ var CLSTAMP = "5894429";
                 this.m_FriendsUIApp.UIStore.ConvertDefaultTabSetToEmbedded(t),
                   this.m_FriendsUIApp.UIStore.MergeTabSets(t),
                   (n = o.friends_list_window)
-                    ? n instanceof bn &&
+                    ? n instanceof vn &&
                       ((r = n.GetWindow()).SteamClient.Window.SetMinSize &&
                         r.SteamClient.Window.SetMinSize(i.h, i.f),
                       r.SteamClient.Window.ResizeTo(1280, r.innerHeight))
@@ -72828,15 +72852,15 @@ var CLSTAMP = "5894429";
                 (n = o.friends_list_window))
               ) {
                 var r;
-                if (n instanceof bn)
+                if (n instanceof vn)
                   (r = n.GetWindow()).SteamClient.Window.SetMinSize &&
                     r.SteamClient.Window.SetMinSize(i.g, i.f),
                     r.SteamClient.Window.ResizeTo(
-                      In.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
+                      En.UIDisplayPrefs.nFriendsListSingleWindowWidthPx,
                       r.innerHeight
                     );
               } else {
-                var a = In.UIDisplayPrefs.nFriendsListSingleWindowWidthPx;
+                var a = En.UIDisplayPrefs.nFriendsListSingleWindowWidthPx;
                 this.ShowPopupFriendsList(t, !1, !0, !0, { width: a });
               }
           }),
@@ -72847,7 +72871,7 @@ var CLSTAMP = "5894429";
             var t = this.m_FriendsUIApp.UIStore.GetPerContextChatData(Lt.a),
               n = t.friends_list_window;
             n &&
-              n instanceof bn &&
+              n instanceof vn &&
               (e.ui_state().set_friends_list_width(n.GetWindow().outerWidth),
               e.ui_state().set_friends_list_height(n.GetWindow().outerHeight));
             for (
@@ -72932,7 +72956,7 @@ var CLSTAMP = "5894429";
           e
         );
       })(),
-      Cn = (function(e) {
+      On = (function(e) {
         function t() {
           var t =
             e.call(
@@ -72944,7 +72968,7 @@ var CLSTAMP = "5894429";
           return (
             (t.m_AudioPlaybackManager = new Ct()),
             (t.m_IdleTracker = D.a.IN_CLIENT ? new wt() : new Et()),
-            (t.m_DesktopApp = In = new Sn(t, !1)),
+            (t.m_DesktopApp = En = new Cn(t, !1)),
             (t.m_ChatRoomBBCodeParser = new ee.d(
               Object.assign(Se(), { mention: at }),
               ee.c
@@ -72984,7 +73008,7 @@ var CLSTAMP = "5894429";
                   return t.RemoteClientLaunchResult(e, n, o, r);
                 }
               ),
-            (In = t.m_DesktopApp),
+            (En = t.m_DesktopApp),
             Object(Dt.a)(
               !D.a.IN_MOBILE,
               "DesktopApp initialized in mobile context"
@@ -73071,17 +73095,17 @@ var CLSTAMP = "5894429";
           }),
           (t.prototype.CreateChatPopup = function(e, t, n, o, r, a) {
             var s = new i.a(e, t, n, this.m_ChatStore, o, r, a),
-              c = new vn(s);
+              c = new yn(s);
             return new gt.a(c, s);
           }),
           (t.prototype.ShowPopupFriendsListAtStartup = function(e) {
             var t = e;
             if (
-              (void 0 !== In.m_bShowFriendsListOnLoadFromLoader &&
-                (t = In.m_bShowFriendsListOnLoadFromLoader),
+              (void 0 !== En.m_bShowFriendsListOnLoadFromLoader &&
+                (t = En.m_bShowFriendsListOnLoadFromLoader),
               t)
             ) {
-              var n = !0 === In.m_bShowFriendsListOnLoadFromLoader;
+              var n = !0 === En.m_bShowFriendsListOnLoadFromLoader;
               r.f.GetDefaultBrowserContext() != Lt.a &&
                 (console.log(
                   "Blocked taking focus in root context during ShowPopupFriendsList, because other context is primary"
@@ -73203,10 +73227,10 @@ var CLSTAMP = "5894429";
           t
         );
       })(r.d);
-    function On() {
-      return (In = new Sn(new Cn(), !1));
+    function In() {
+      return (En = new Cn(new On(), !1));
     }
-    var In = void 0;
+    var En = void 0;
   },
   ha6C: function(e, t, n) {
     "use strict";
