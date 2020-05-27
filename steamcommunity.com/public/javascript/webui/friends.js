@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5896596";
+var CLSTAMP = "5896948";
 !(function(e) {
   function t(t) {
     for (
@@ -12250,16 +12250,16 @@ var CLSTAMP = "5896596";
         "partnersaledisplay_PreviewSalesPageContainer_1yb13",
       SaleSectionTabs: "partnersaledisplay_SaleSectionTabs_1bxYK",
       SaleSectionTabsTab: "partnersaledisplay_SaleSectionTabsTab_2MHb9",
-      SaleSectionTabsCarousel:
-        "partnersaledisplay_SaleSectionTabsCarousel_1HVXY",
-      SaleSectionTabsHasArrows:
-        "partnersaledisplay_SaleSectionTabsHasArrows_1iZX-",
-      SaleSectionTabsList: "partnersaledisplay_SaleSectionTabsList_14OOd",
+      SaleSectionTabContainer:
+        "partnersaledisplay_SaleSectionTabContainer_3Q5Mn",
+      SaleSectionTabsRow: "partnersaledisplay_SaleSectionTabsRow_2OwQW",
       SaleTab: "partnersaledisplay_SaleTab_3QG1w",
       SaleTabLabel: "partnersaledisplay_SaleTabLabel_3NVTW",
       SaleSectionTabListContainer:
         "partnersaledisplay_SaleSectionTabListContainer_1FE1U",
-      TabContentsContainer: "partnersaledisplay_TabContentsContainer_38dpV"
+      TabContentsContainer: "partnersaledisplay_TabContentsContainer_38dpV",
+      HorizontalScrollInDragForceCursor:
+        "partnersaledisplay_HorizontalScrollInDragForceCursor_lNSkD"
     };
   },
   Cebd: function(e, t, n) {

@@ -1043,7 +1043,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 #mainContentsCollectionTop {
 	background-repeat: no-repeat;
-	width:948px;
+	width: 100%;
 	text-align:left;
 	position: relative;
 	margin: 10px auto 0px auto;
@@ -1051,7 +1051,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 #mainContentsCollection {
 	background-repeat: no-repeat;
-	width:948px;
+	width: 100%;
 	margin: 0px 0px 0px 1px;
 	padding:0;
 	text-align:left;
@@ -1081,16 +1081,15 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .collectionBackgroundImageContainer
 {
 	position: absolute;
-	width: 948px;
-	height: 470px;
+	max-width: 948px;
+	max-height: 470px;
 	overflow: hidden;
 	left: 0px;
 }
 
 .collectionBackgroundImage
 {
-	width: 948px;
-	min-height: 470px;
+	width: 100%;
 }
 
 .collectionTopContents
@@ -1111,7 +1110,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	background: rgba(27,27,27,.8);
 	min-height: 68px;
 	padding-bottom: 4px;
-	width: 948px;
+	width: 100%;
 }
 
 .collectionHeaderContent
@@ -1406,6 +1405,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	position: relative;
 	background-color: rgba( 84, 133, 183, 0.2);
 	margin-top: 2px;
+	display: flex;
 }
 
 .collectionItem .workshopItem
@@ -1437,7 +1437,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .collectionItemDetails
 {
-	margin-left: 110px;
+	margin-left: 10px;
 	margin-right: 10px;
 }
 
@@ -1469,16 +1469,16 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .collectionItem .subscriptionControls
 {
-	float: right;
 	margin-top: 33px;
 	margin-right: 10px;
+	margin-left: auto;
 }
 
 .collectionItem .votingControls
 {
-	float: right;
 	margin-top: 22px;
 	margin-right: 10px;
+	margin-left: auto;
 }
 
 .collectionItem .admin_stats
@@ -2523,7 +2523,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	margin: 5px 0;
 	color: #e0e0e0;
 	font-size: 17px;
-	height: 100px;
+	min-height: 100px;
 }
 
 .greenlight_controls > p {
@@ -3358,6 +3358,16 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	/* don't let the floating guys cram text into a small corner */
 	html.responsive .sharedFilePreviewImage.floatLeft, html.responsive .sharedFilePreviewImage.floatRight {
 		max-width: 60%;
+	}
+
+	html.responsive .collectionItemDetails .workshopItemShortDesc {
+		display: none;
+	}
+
+	html.responsive .collectionTop
+	{
+		position: relative;
+		height: 207px;
 	}
 }
 

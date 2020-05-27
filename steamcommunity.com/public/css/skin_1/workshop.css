@@ -3986,12 +3986,6 @@ html.responsive #ig_bottom {
 	background: transparent;
 }
 
-#ig_bottom:not(.item) .sectionTabs {
-	top: -42px;
-	position: absolute;
-	margin-left: 10px;
-}
-
 #ig_bottom:not(.item) .sectionTabsHR {
 	position: relative;
 	top: -8px;
@@ -5053,6 +5047,7 @@ a.readmore_link
 {
 	html.responsive .workshopItemPreviewImage {
 		width: 100%;
+		min-width: 64px;
 		height: auto;
 	}
 
