@@ -92,7 +92,7 @@
             }),
             Object.defineProperty(e.prototype, "bEnableNewsHubMayUpdate", {
               get: function() {
-                return "dev" == a.c.WEB_UNIVERSE || "beta" == a.c.WEB_UNIVERSE;
+                return !0;
               },
               enumerable: !0,
               configurable: !0
@@ -3710,26 +3710,29 @@
     },
     "Jqb/": function(e, t, n) {
       "use strict";
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return g;
       }),
-        n.d(t, "g", function() {
+        n.d(t, "h", function() {
           return _;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "c", function() {
           return v;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "d", function() {
           return b;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "a", function() {
           return y;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "e", function() {
           return M;
         }),
-        n.d(t, "e", function() {
-          return O;
+        n.d(t, "b", function() {
+          return w;
+        }),
+        n.d(t, "f", function() {
+          return F;
         });
       var l = n("mrSG"),
         u = n("q1tI"),
@@ -3923,7 +3926,20 @@
             (t = Object(l.c)([a.observer], t))
           );
         })(u.Component),
-        y = (function(e) {
+        y = function(e) {
+          return u.createElement(
+            g,
+            {
+              onEscKeypress: function() {
+                return e.closeModal && e.closeModal();
+              },
+              hideTopBar: !0,
+              bHideCloseIcon: !0
+            },
+            e.children
+          );
+        },
+        M = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -3948,7 +3964,7 @@
             (t = Object(l.c)([a.observer], t))
           );
         })(u.Component),
-        M = (function(e) {
+        w = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -4003,7 +4019,7 @@
             t
           );
         })(u.Component),
-        w = (function() {
+        O = (function() {
           function e() {
             (this.m_bUsePopups = !0),
               (this.m_rgModals = []),
@@ -4071,11 +4087,11 @@
             e
           );
         })();
-      function O(e) {
-        var t = F.get(e);
-        return t || ((t = new w()), F.set(e, t)), t;
+      function F(e) {
+        var t = E.get(e);
+        return t || ((t = new O()), E.set(e, t)), t;
       }
-      var F = new WeakMap();
+      var E = new WeakMap();
     },
     Kw0F: function(e, t, n) {
       "use strict";
@@ -11646,22 +11662,22 @@
           return o;
         }),
         n.d(t, "g", function() {
-          return a;
+          return p;
         }),
         n.d(t, "i", function() {
-          return m;
-        }),
-        n.d(t, "a", function() {
           return h;
         }),
-        n.d(t, "c", function() {
-          return y;
+        n.d(t, "a", function() {
+          return f;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "c", function() {
           return M;
         }),
+        n.d(t, "b", function() {
+          return w;
+        }),
         n.d(t, "d", function() {
-          return O;
+          return F;
         });
       var c = n("TLQK"),
         s = n("CdLH"),
@@ -11714,7 +11730,7 @@
       function u(e) {
         var t = new Date(1e3 * e),
           n = t.setHours(0, 0, 0, 0),
-          r = p.get(n);
+          r = d.get(n);
         if (r) return r;
         return (
           (r = t.toLocaleDateString(c.c.GetPreferredLocales(), {
@@ -11722,7 +11738,7 @@
             month: "short",
             day: "numeric"
           })),
-          p.set(n, r),
+          d.set(n, r),
           r
         );
       }
@@ -11732,15 +11748,34 @@
           minute: "numeric"
         });
       }
-      function a(e) {
-        return new Date(1e3 * e).toLocaleTimeString(c.c.GetPreferredLocales(), {
-          hour: "numeric",
-          hour12: !0
-        });
+      var a = new Map();
+      function p(e) {
+        var t = new Date(1e3 * e),
+          n = c.c.GetPreferredLocales(),
+          r = (function(e) {
+            var t = a.get(e);
+            if (!0 === t || !1 === t) return t;
+            var n = new Date();
+            n.setHours(15);
+            var r = n.toLocaleTimeString(e, { hour: "numeric" }),
+              i = n.toLocaleTimeString(e, { hour: "numeric", hour12: !1 });
+            return (
+              (t = r == i),
+              console.log("Locale:", e, "def:", r, "24h:", i, "uses 24?", t),
+              a.set(e, t),
+              t
+            );
+          })(n[0]);
+        return t.toLocaleTimeString(
+          n,
+          r
+            ? { hour: "numeric", minute: "numeric" }
+            : { hour: "numeric", hour12: !0 }
+        );
       }
-      var p = new Map(),
-        d = new Map();
-      function m(e, t) {
+      var d = new Map(),
+        m = new Map();
+      function h(e, t) {
         var n = new Date(),
           r = new Date(1e3 * e);
         if (r.getFullYear() != n.getFullYear()) return u(e);
@@ -11755,21 +11790,21 @@
           return Object(c.d)("#Time_Yesterday");
         var o = { month: t ? "long" : "short", day: "numeric" },
           s = r.setHours(0, 0, 0, 0) + o.month,
-          a = d.get(s);
+          a = m.get(s);
         return (
           a ||
           ((a = r.toLocaleDateString(c.c.GetPreferredLocales(), o)),
-          d.set(s, a),
+          m.set(s, a),
           a)
         );
       }
-      function h(e) {
+      function f(e) {
         var t = new Date(1e3 * e),
           n = new Date();
         if (n < t)
           return (
             l.b(t.getTime() - n.getTime()),
-            t.getFullYear() == n.getFullYear() ? w(t) : F(t)
+            t.getFullYear() == n.getFullYear() ? O(t) : E(t)
           );
         l.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
         var r = new Date();
@@ -11791,17 +11826,17 @@
             ? Object(c.d)("#TimeSince_1Week")
             : Object(c.d)("#TimeSince_XWeeks", o);
         }
-        return t.getFullYear() == n.getFullYear() ? w(t) : F(t);
+        return t.getFullYear() == n.getFullYear() ? O(t) : E(t);
       }
-      var f = new Map(),
-        g = new Map(),
+      var g = new Map(),
         _ = new Map(),
         v = new Map(),
-        b = new Map();
-      function y(e, t) {
+        b = new Map(),
+        y = new Map();
+      function M(e, t) {
         void 0 === t && (t = !1);
         var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
-          r = b.get(n);
+          r = y.get(n);
         return (
           r ||
           ((r = e.toLocaleDateString(c.c.GetPreferredLocales(), {
@@ -11809,53 +11844,53 @@
             day: "numeric",
             month: t ? "long" : "short"
           })),
-          b.set(n, r),
+          y.set(n, r),
           r)
         );
       }
-      function M(e) {
-        var t = f.get(e.getDay());
+      function w(e) {
+        var t = g.get(e.getDay());
         return (
           t ||
           ((t = e.toLocaleDateString(c.c.GetPreferredLocales(), {
             weekday: "long"
           })),
-          f.set(e.getDay(), t),
+          g.set(e.getDay(), t),
           t)
         );
       }
-      function w(e) {
-        var t = g.get(e.getMonth());
+      function O(e) {
+        var t = _.get(e.getMonth());
         return (
           t ||
           ((t = e.toLocaleDateString(c.c.GetPreferredLocales(), {
             month: "long"
           })),
-          g.set(e.getMonth(), t),
+          _.set(e.getMonth(), t),
           t)
         );
       }
-      function O(e) {
-        var t = _.get(e.getFullYear());
+      function F(e) {
+        var t = v.get(e.getFullYear());
         return (
           t ||
           ((t = e.toLocaleDateString(c.c.GetPreferredLocales(), {
             year: "numeric"
           })),
-          _.set(e.getFullYear(), t),
+          v.set(e.getFullYear(), t),
           t)
         );
       }
-      function F(e) {
+      function E(e) {
         var t = e.getMonth() + 12 * e.getFullYear(),
-          n = v.get(t);
+          n = b.get(t);
         return (
           n ||
           ((n = e.toLocaleDateString(c.c.GetPreferredLocales(), {
             month: "long",
             year: "numeric"
           })),
-          v.set(t, n),
+          b.set(t, n),
           n)
         );
       }
@@ -13052,8 +13087,8 @@
                         a.a.createElement(m.b, null, !1)
                       )
                     ),
-                    a.a.createElement(w.a, {
-                      ModalManager: Object(w.e)(window)
+                    a.a.createElement(w.b, {
+                      ModalManager: Object(w.f)(window)
                     })
                   )
                 )

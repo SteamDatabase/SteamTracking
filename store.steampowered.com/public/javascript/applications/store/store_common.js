@@ -1357,7 +1357,7 @@
             (e.prototype.DisplayWishlistUpdateErrors = function(e) {
               Object(M.d)(
                 S.createElement(
-                  B.d,
+                  B.e,
                   {
                     strTitle: Object(H.d)("#Wishlist_Error"),
                     strDescription: Object(H.d)("#Wishlist_Error_Desc")
@@ -4022,7 +4022,7 @@
           return e.closeModal && e.closeModal();
         };
         return a.createElement(
-          o.f,
+          o.g,
           { onEscKeypress: t, className: h.a.GotSteamDialog },
           a.createElement(
             r.e,
@@ -6355,11 +6355,11 @@
             a && a.Close(), s && s.Close(), c && c();
           },
           l = h.cloneElement(e, { closeModal: p }),
-          u = Object(f.e)(t);
+          u = Object(f.f)(t);
         if (u.BUsePopups() && _.c.USE_POPUPS && r && n) {
           if (r.bHideMainWindowForPopups) {
             var d = h.createElement(
-              f.f,
+              f.g,
               {
                 className: "Hidden",
                 onEscKeypress: !l.props.bDisableBackgroundDismiss && p
@@ -6383,7 +6383,7 @@
           return m;
         }),
         n.d(t, "a", function() {
-          return f.f;
+          return f.g;
         });
       var b = (function(s) {
         function e(e, t, n, r, o, i) {
@@ -6458,7 +6458,7 @@
                     hideActions: n,
                     style: r
                   }),
-                  h.createElement(f.a, { ModalManager: Object(f.e)(e) }),
+                  h.createElement(f.b, { ModalManager: Object(f.f)(e) }),
                   this.m_modalElement
                 ),
                 t
