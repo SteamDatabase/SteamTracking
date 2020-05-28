@@ -10,6 +10,7 @@ https://partner.steamgames.com/public/css/styles_global.css?__TIME__
 https://partner.steamgames.com/public/css/styles_landing.css?__TIME__
 https://partner.steamgames.com/public/css/styles_marketing.css?__TIME__
 https://partner.steamgames.com/public/css/styles_packages.css?__TIME__
+https://partner.steamgames.com/public/css/taxonomy_survey.css?__TIME__
 https://steamcommunity.com/public/css/applications/community/main.css?__TIME__
 https://steamcommunity.com/public/css/bigpicture/apphub.css?__TIME__
 https://steamcommunity.com/public/css/bigpicture/comments.css?__TIME__
@@ -242,6 +243,7 @@ https://partner.steamgames.com/public/javascript/playtesting.js?__TIME__&l=engli
 https://partner.steamgames.com/public/javascript/publishers.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/storeadmin.js?__TIME__&l=english
 https://partner.steamgames.com/public/javascript/useradmin.js?__TIME__&l=english
+https://partner.steamgames.com/public/javascript/taxonomy_survey.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/apphub_home.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/apphub_workshop.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/main.js?__TIME__&l=english
