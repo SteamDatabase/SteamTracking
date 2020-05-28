@@ -1493,7 +1493,7 @@ textarea {
 
 .workshopItemCollection
 {
-	display: block;
+	display: flex;
 	position: relative;
 	background-color: #273b52;
 	margin-bottom: 4px;
@@ -1537,7 +1537,7 @@ textarea {
 .workshopItemCollection .workshopItemDetails
 {
 	padding-top: 5px;
-	margin-left: 110px;
+	margin-left: 10px;
 }
 
 .workshopItemCollection .fileRating

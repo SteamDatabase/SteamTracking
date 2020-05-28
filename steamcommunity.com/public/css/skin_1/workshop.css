@@ -5051,6 +5051,10 @@ a.readmore_link
 		height: auto;
 	}
 
+	html.responsive .collectionItem .workshopItemPreviewImage {
+		min-width: 100px;
+	}
+
 	html.responsive .workshopItemPreviewHolder {
 		width: 100%;
 		height: auto;
