@@ -1166,9 +1166,9 @@ Assertion Failed: (unsigned)elem <= (unsigned)m_Size
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/common/string_misc.cpp
 E
 @
+"
 @
 @
-U
 
 =
 @

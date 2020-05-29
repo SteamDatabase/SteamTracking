@@ -1116,7 +1116,7 @@
  T SteamThreadTools::CThreadLocalStackCounter<long long>::~CThreadLocalStackCounter()
  T SteamThreadTools::CThreadSpinLock::~CThreadSpinLock()
  T SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, _opaque_pthread_t*)
- T SteamVProf::CVProfManager::DumpAllThreadProfiles()
+ T SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
  T SteamVProf::CVProfManager::StartProfilingAllThreads()
  T SteamVProf::CVProfManager::StopProfilingAllThreads()
  T SteamVProf::CVProfScope::CVProfScope(char const*, int, EVProfBugdetGroup, bool, int)
