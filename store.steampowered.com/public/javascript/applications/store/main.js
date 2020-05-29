@@ -11756,12 +11756,11 @@
             var t = a.get(e);
             if (!0 === t || !1 === t) return t;
             var n = new Date();
-            n.setHours(15);
-            var r = n.toLocaleTimeString(e, { hour: "numeric" }),
-              i = n.toLocaleTimeString(e, { hour: "numeric", hour12: !1 });
             return (
-              (t = r == i),
-              console.log("Locale:", e, "def:", r, "24h:", i, "uses 24?", t),
+              n.setHours(15),
+              (t =
+                n.toLocaleTimeString(e, { hour: "numeric" }) ==
+                n.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })),
               a.set(e, t),
               t
             );

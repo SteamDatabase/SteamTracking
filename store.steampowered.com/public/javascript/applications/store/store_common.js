@@ -555,12 +555,12 @@
               var i = this;
               void 0 === t && (t = "game");
               var n = { id: e, type: t };
-              Object(J.d)([n]).then(function() {
+              Object(J.e)([n]).then(function() {
                 var t = $(n),
                   o = ee(n.type);
                 t && o
                   ? (i.setState({ info: t, hoverType: o }),
-                    Object(J.b)(n).then(function(e) {
+                    Object(J.c)(n).then(function(e) {
                       if (i.m_bIsMounted)
                         if (1 == e.length) {
                           var n = w.a.GetAppLinkInfo(e[0]);
@@ -965,13 +965,13 @@
                 r = this.props.capsule;
               (this.m_bIsMounted = !0),
                 T.a.HintLoad(),
-                Object(J.d)([r]).then(function() {
+                Object(J.e)([r]).then(function() {
                   var e = $(r),
                     t = ee(r.type);
                   e && t
                     ? n.setState({ info: e, hoverType: t })
                     : console.warn("Unsupported item:", r.type, r.id),
-                    Object(J.b)(n.props.capsule).then(function(e) {
+                    Object(J.c)(n.props.capsule).then(function(e) {
                       if (n.m_bIsMounted) {
                         var t = 1 == e.length ? w.a.GetAppLinkInfo(e[0]) : null;
                         n.setState({ rgAppIDs: e, appInfo: t });
@@ -5816,14 +5816,17 @@
     },
     gyoR: function(e, t, n) {
       "use strict";
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return o;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "c", function() {
           return u;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "d", function() {
           return i;
+        }),
+        n.d(t, "b", function() {
+          return d;
         }),
         n.d(t, "a", function() {
           return a;
@@ -5948,6 +5951,7 @@
       }
       function d(e) {
         return (
+          !e ||
           r.a.BExcludesContentDescriptor(e.content_descriptors) ||
           r.a.BExcludesTag(e.tags) ||
           r.a.BIsGameIgnored(e.appid)
