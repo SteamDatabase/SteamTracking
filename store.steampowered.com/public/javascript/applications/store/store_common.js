@@ -5068,7 +5068,8 @@
           "partnersaledisplay_SaleSectionTabListContainer_2VZtq",
         TabContentsContainer: "partnersaledisplay_TabContentsContainer_2xJbu",
         HorizontalScrollInDragForceCursor:
-          "partnersaledisplay_HorizontalScrollInDragForceCursor_nemO6"
+          "partnersaledisplay_HorizontalScrollInDragForceCursor_nemO6",
+        SaleBroadcastSection: "partnersaledisplay_SaleBroadcastSection_1u0IZ"
       };
     },
     a5LV: function(e, t, n) {

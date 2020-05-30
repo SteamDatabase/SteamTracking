@@ -2351,29 +2351,32 @@
     },
     "Jqb/": function(e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "b", function() {
         return g;
       }),
-        n.d(t, "g", function() {
+        n.d(t, "h", function() {
           return _;
         }),
-        n.d(t, "h", function() {
+        n.d(t, "i", function() {
           return b;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "d", function() {
           return y;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "e", function() {
           return E;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "a", function() {
           return O;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "f", function() {
           return w;
         }),
-        n.d(t, "f", function() {
-          return C;
+        n.d(t, "c", function() {
+          return D;
+        }),
+        n.d(t, "g", function() {
+          return S;
         });
       var l = n("mrSG"),
         u = n("q1tI"),
@@ -2409,7 +2412,7 @@
                 t
                   ? this.m_ModalHandle
                     ? this.m_ModalHandle.Update(n)
-                    : (this.m_ModalHandle = C(window).ShowModal(n))
+                    : (this.m_ModalHandle = S(window).ShowModal(n))
                   : this.HideModal(),
                 null
               );
@@ -2611,7 +2614,20 @@
             (t = Object(l.c)([s.a], t))
           );
         })(u.Component),
-        O = (function(e) {
+        O = function(e) {
+          return u.createElement(
+            _,
+            {
+              onEscKeypress: function() {
+                return e.closeModal && e.closeModal();
+              },
+              hideTopBar: !0,
+              bHideCloseIcon: !0
+            },
+            e.children
+          );
+        },
+        w = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -2636,7 +2652,7 @@
             (t = Object(l.c)([s.a], t))
           );
         })(u.Component),
-        w = (function(e) {
+        D = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -2691,7 +2707,7 @@
             t
           );
         })(u.Component),
-        D = (function() {
+        C = (function() {
           function e() {
             (this.m_bUsePopups = !0),
               (this.m_rgModals = []),
@@ -2759,11 +2775,11 @@
             e
           );
         })();
-      function C(e) {
-        var t = S.get(e);
-        return t || ((t = new D()), S.set(e, t)), t;
+      function S(e) {
+        var t = M.get(e);
+        return t || ((t = new C()), M.set(e, t)), t;
       }
-      var S = new WeakMap();
+      var M = new WeakMap();
     },
     Kw0F: function(e, t, n) {
       "use strict";
@@ -6447,19 +6463,19 @@
           return i;
         }),
         n.d(t, "f", function() {
-          return s;
+          return p;
         }),
         n.d(t, "h", function() {
-          return h;
-        }),
-        n.d(t, "a", function() {
           return d;
         }),
+        n.d(t, "a", function() {
+          return f;
+        }),
         n.d(t, "c", function() {
-          return b;
+          return y;
         }),
         n.d(t, "b", function() {
-          return y;
+          return E;
         });
       var c = n("TLQK"),
         a = n("CdLH"),
@@ -6512,7 +6528,7 @@
       function u(e) {
         var t = new Date(1e3 * e),
           n = t.setHours(0, 0, 0, 0),
-          r = p.get(n);
+          r = m.get(n);
         if (r) return r;
         return (
           (r = t.toLocaleDateString(c.c.GetPreferredLocales(), {
@@ -6520,7 +6536,7 @@
             month: "short",
             day: "numeric"
           })),
-          p.set(n, r),
+          m.set(n, r),
           r
         );
       }
@@ -6530,15 +6546,33 @@
           minute: "numeric"
         });
       }
-      function s(e) {
-        return new Date(1e3 * e).toLocaleTimeString(c.c.GetPreferredLocales(), {
-          hour: "numeric",
-          hour12: !0
-        });
+      var s = new Map();
+      function p(e) {
+        var t = new Date(1e3 * e),
+          n = c.c.GetPreferredLocales(),
+          r = (function(e) {
+            var t = s.get(e);
+            if (!0 === t || !1 === t) return t;
+            var n = new Date();
+            return (
+              n.setHours(15),
+              (t =
+                n.toLocaleTimeString(e, { hour: "numeric" }) ==
+                n.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })),
+              s.set(e, t),
+              t
+            );
+          })(n[0]);
+        return t.toLocaleTimeString(
+          n,
+          r
+            ? { hour: "numeric", minute: "numeric" }
+            : { hour: "numeric", hour12: !0 }
+        );
       }
-      var p = new Map(),
-        m = new Map();
-      function h(e, t) {
+      var m = new Map(),
+        h = new Map();
+      function d(e, t) {
         var n = new Date(),
           r = new Date(1e3 * e);
         if (r.getFullYear() != n.getFullYear()) return u(e);
@@ -6553,21 +6587,21 @@
           return Object(c.d)("#Time_Yesterday");
         var i = { month: t ? "long" : "short", day: "numeric" },
           a = r.setHours(0, 0, 0, 0) + i.month,
-          s = m.get(a);
+          s = h.get(a);
         return (
           s ||
           ((s = r.toLocaleDateString(c.c.GetPreferredLocales(), i)),
-          m.set(a, s),
+          h.set(a, s),
           s)
         );
       }
-      function d(e) {
+      function f(e) {
         var t = new Date(1e3 * e),
           n = new Date();
         if (n < t)
           return (
             l.b(t.getTime() - n.getTime()),
-            t.getFullYear() == n.getFullYear() ? E(t) : O(t)
+            t.getFullYear() == n.getFullYear() ? O(t) : w(t)
           );
         l.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
         var r = new Date();
@@ -6589,16 +6623,16 @@
             ? Object(c.d)("#TimeSince_1Week")
             : Object(c.d)("#TimeSince_XWeeks", i);
         }
-        return t.getFullYear() == n.getFullYear() ? E(t) : O(t);
+        return t.getFullYear() == n.getFullYear() ? O(t) : w(t);
       }
-      var f = new Map(),
-        v = new Map(),
-        g = (new Map(), new Map()),
-        _ = new Map();
-      function b(e, t) {
+      var v = new Map(),
+        g = new Map(),
+        _ = (new Map(), new Map()),
+        b = new Map();
+      function y(e, t) {
         void 0 === t && (t = !1);
         var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
-          r = _.get(n);
+          r = b.get(n);
         return (
           r ||
           ((r = e.toLocaleDateString(c.c.GetPreferredLocales(), {
@@ -6606,42 +6640,42 @@
             day: "numeric",
             month: t ? "long" : "short"
           })),
-          _.set(n, r),
+          b.set(n, r),
           r)
         );
       }
-      function y(e) {
-        var t = f.get(e.getDay());
+      function E(e) {
+        var t = v.get(e.getDay());
         return (
           t ||
           ((t = e.toLocaleDateString(c.c.GetPreferredLocales(), {
             weekday: "long"
           })),
-          f.set(e.getDay(), t),
+          v.set(e.getDay(), t),
           t)
         );
       }
-      function E(e) {
-        var t = v.get(e.getMonth());
+      function O(e) {
+        var t = g.get(e.getMonth());
         return (
           t ||
           ((t = e.toLocaleDateString(c.c.GetPreferredLocales(), {
             month: "long"
           })),
-          v.set(e.getMonth(), t),
+          g.set(e.getMonth(), t),
           t)
         );
       }
-      function O(e) {
+      function w(e) {
         var t = e.getMonth() + 12 * e.getFullYear(),
-          n = g.get(t);
+          n = _.get(t);
         return (
           n ||
           ((n = e.toLocaleDateString(c.c.GetPreferredLocales(), {
             month: "long",
             year: "numeric"
           })),
-          g.set(t, n),
+          _.set(t, n),
           n)
         );
       }
@@ -6861,7 +6895,7 @@
             (t.prototype.componentDidMount = function() {
               f ||
                 (f = Object(l.b)(document)).Show(
-                  r.a.createElement(s.b, { ModalManager: Object(s.f)(window) })
+                  r.a.createElement(s.c, { ModalManager: Object(s.g)(window) })
                 );
             }),
             (t.prototype.render = function() {

@@ -483,6 +483,11 @@ img.game_header_image_full {
     background: linear-gradient(135deg, rgba(15, 28, 36, 0.4) 10%,rgba(0, 0, 0, 0.4) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f1c2466', endColorstr='#00000066',GradientType=1 );
 }
+
+.wishlist_add_reminder a > span {
+    white-space: nowrap;
+}
+
 .wishlist_note {
     line-height: 15px;
 }
