@@ -870,11 +870,6 @@
         "posted_in": "CClientJobReceiveFriendMessageHistory::BYieldingRunClientJob(IMsgNetPacket*)"
     },
     {
-        "id": 964,
-        "size": 16,
-        "posted_in": "CClientTimedTrialManager::SendStatusCallback(TimedTrialApp_s const*)"
-    },
-    {
         "id": 965,
         "size": 256,
         "posted_in": "CClientJobVanityURLChangedNotification::BYieldingRunClientJob(IMsgNetPacket*)"
@@ -962,7 +957,7 @@
     {
         "id": 988,
         "size": 16,
-        "posted_in": "void CBaseAPIJob::PostAPIResult<RequestAccountLinkInfo_t>(RequestAccountLinkInfo_t*)"
+        "posted_in": "CAPIJobRequestAccountLinkInfo::BYieldingRunAPIJob()"
     },
     {
         "id": 989,
@@ -1133,6 +1128,11 @@
         "id": 1029,
         "size": 24,
         "posted_in": "void CSteamEngine::PostCallbackToAllUsers<AppLaunchClientUIOverlay_t>(AppLaunchClientUIOverlay_t*)"
+    },
+    {
+        "id": 1030,
+        "size": 16,
+        "posted_in": "CClientTimedTrialManager::SendStatusCallback(TimedTrialApp_s const*)"
     },
     {
         "id": 1101,

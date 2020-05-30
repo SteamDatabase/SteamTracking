@@ -29,4 +29,5 @@ public:
     virtual unknown_ret GetFileDetails(char const*) = 0;
     virtual unknown_ret GetLaunchCommandLine(char*, int) = 0;
     virtual unknown_ret BIsSubscribedFromFamilySharing() = 0;
+    virtual unknown_ret BIsTimedTrial(unsigned int*, unsigned int*) = 0;
 };
