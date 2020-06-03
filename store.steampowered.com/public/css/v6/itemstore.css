@@ -32,14 +32,15 @@ div.rightcol {
 	width: 286px;
 }
 .game.item .columns .rightcol {
-    width: unset;
+	width: unset;
 }
 .game.item .columns .leftcol {
-    width: 512px;
+	max-width: 512px;
+	width: 100%;
 }
 
 .item_store_home div.leftcol {
-	width: 640px;
+	max-width: 640px;
 }
 
 .breadcrumbs
@@ -55,7 +56,7 @@ div.rightcol {
 }
 body.v6 .item .page_content_ctn .page_content
 {
-	width: 916px;
+	max-width: 916px;
 }
 body.v6 .game.item .columns {
     display: flex;
@@ -94,7 +95,8 @@ body.v6 h2.pageheader.itemtitle
 .search_bar
 {
 	position: relative;
-	width: 928px;
+	width: calc( 100% - 12px );
+	max-width: 928px;
 	margin: 0 auto;
 	margin-bottom: 10px;
 	padding: 6px 0px 0px 12px;
@@ -203,20 +205,17 @@ a#store_search_link img:hover {
 	color: #7ea64b;
 }
 
-.item_store_home .item_def_grid_item:nth-child(3n)
-{
-	margin-right: 0px;
+.item_store_home .item_def_rows.grid {
+	grid-template-columns: 1fr 1fr 1fr;
 }
-.item_store_home .item_def_grid_item
-{
-	margin-right: 10px;
-    margin-left: unset;
-}
+
 .item_store_home .item_def_grid_item .item_def_icon
 {
 	width: 202px;
 	height: 202px;
-    display: block;
+	width: 100%;
+	height: 100%;
+	display: block;
 }
 
 .item_def_row_item.small .item_def_icon
@@ -252,7 +251,7 @@ a#store_search_link img:hover {
 {
 	position: relative;
 	line-height: 25px;
-	height: 25px;
+	min-height: 25px;
 	background-color: rgba(0,0,0,0.3);
 	border-radius: 2px;
 	padding: 0px 8px;
@@ -308,30 +307,32 @@ a#store_search_link img:hover {
 	padding-right: 20px;
 }
 
-.item_def_rows
-{
-	min-height: 735px;
-	display: flex;
-	flex-wrap: wrap;
-	align-content: flex-start;
-	margin-right: -14px;
+.item_def_rows {
 	padding: 0;
+}
+.item_def_rows.grid
+{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 20px;
 }
 
 .item_def_row_item
 {
-    width: 100%;
+	width: calc( 100% - 10px );
 	position: relative;
 	background: rgba(30,30,30,0.3);
 	margin-bottom: 5px;
 	border: 1px solid rgba(0,0,0,0);
 	padding: 5px;
+	display: flex;
 }
 .item_def_row_item:hover {
-    border: 1px solid #e5e5e5;
+	border: 1px solid #e5e5e5;
 }
 .item_def_row_item:hover .item_def_price {
-    color: white;
+	color: white;
 }
 
 .item_def_row .item_def_details
@@ -341,8 +342,6 @@ a#store_search_link img:hover {
 
 .item_def_grid_item
 {
-	margin-right: 14px;
-	margin-bottom: 20px;
 }
 
 .item_def_icon_container
@@ -365,7 +364,6 @@ a#store_search_link img:hover {
 }
 .item_def_row_item .item_def_icon_container
 {
-	float: left;
 }
 .item_def_row_item .item_def_icon
 {
@@ -374,7 +372,6 @@ a#store_search_link img:hover {
 }
 .item_def_details
 {
-	float: left;
 }
 .item_def_name
 {
@@ -415,6 +412,7 @@ a#store_search_link img:hover {
 	font-size: 20px;
 	line-height: 20px;
 	position: absolute;
+	display: inline-block;
 	right: 12px;
 	top: 12px;
 }
@@ -443,7 +441,7 @@ a#store_search_link img:hover {
 	position: absolute;
 	top: 40px;
 	right: 5px;
-	display: block;
+	display: inline-block;
 }
 .item_def_row_item:hover .browse_add_to_cart.discounted
 {
@@ -459,9 +457,11 @@ a#store_search_link img:hover {
 	background: linear-gradient( -25deg, rgba(0,0,0,1) 0%,rgba(4,31,45,1) 100%);
 	text-align: center;
 	box-shadow: 0 0 5px 0 #000000;
-	height: 512px;
-    width: 512px;
-    margin-bottom: 10px;
+	max-height: 512px;
+	max-width: 512px;
+	width: 100%;
+	min-height: 336px;
+	margin-bottom: 10px;
 }
 .item_def_image_helper {
 	display: inline-block;
@@ -470,8 +470,9 @@ a#store_search_link img:hover {
 }
 .item_def_image
 {
-	width: 512px;
+	max-width: 512px;
 	max-height: 512px;
+	width: 100%;
 	vertical-align: middle;
 }
 .item_def_name
@@ -627,4 +628,51 @@ a#store_search_link img:hover {
 .dselect_container .discount_block .discount_final_price {
     margin-left: 2px;
     color: white;
+}
+
+@media screen and (max-width: 910px )
+{
+	html.responsive .item_def_grid_item .item_def_name,
+	html.responsive .item_def_grid_item .item_def_price {
+		max-width: 82px;
+		font-size: 10px;
+	}
+
+	html.responsive .item_store_home .item_def_grid_item .item_def_name,
+	html.responsive .item_store_home .item_def_grid_item .item_def_price {
+		max-width: 100px;
+	}
+
+	html.responsive .item_store_home .item_def_grid_item .item_def_icon {
+		max-width: 100%;
+		height: auto;
+	}
+
+	html.responsive .item_def_row_item .item_def_icon {
+		max-width: 64px;
+	}
+
+	html.responsive .item_def_row_item .item_def_details .item_def_price {
+		position: relative;
+		right: 0px;
+		top: 0px;
+		margin-top: 12px;
+		margin-left: 12px;
+	}
+	html.responsive .item_def_row_item .item_def_details .browse_add_to_cart  {
+		position: relative;
+		right: 0px;
+		top: 0px;
+		margin-top: 12px;
+		margin-left: 12px;
+		display: inline-block;
+	}
+
+	html.responsive #cart_status_data {
+		margin-right: 5px;
+	}
+
+	html.responsive .game.item .columns {
+		flex-direction: column-reverse;
+	}
 }

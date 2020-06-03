@@ -1,4 +1,32 @@
 
+body.DefaultTheme {
+	--gradient-right: rgba(109, 38, 44, 0.301); 
+	--gradient-left: rgba(50, 255, 193, 0.103);
+	--gradient-background: rgba(34, 35, 48, 0.93);
+	--gradient-background-right: rgba(109, 38, 44, 0.164); 
+	--gradient-background-left: rgba(50, 255, 193, 0.103);
+	--color-showcase-header: rgba(43, 45, 68, 0.93);
+	--gradient-showcase-header-left: rgba(115, 173, 184, 0.247);
+	--btn-background:rgba(43, 52, 68, 1); 
+	--btn-background-hover:rgba(48, 57, 73, 1);
+	--btn-outline:rgb(73, 87, 110);
+ }
+
+ body.CosmicTheme {
+	--gradient-right: rgba(248, 70, 180, 0.301); 
+	--gradient-left: rgba(9, 243, 99, 0.247);
+	--gradient-background: rgba(38, 23, 65, 0.93);
+	--gradient-background-right: rgba(248, 70, 180, 0.164);
+	--gradient-background-left: rgba(9, 243, 99, 0.13);
+	--color-showcase-header: rgba(50, 32, 61, 0.93);
+	--gradient-showcase-header-left: rgba(20, 60, 68, 0.93);
+	--btn-background:rgba(100, 38, 102, 1); 
+	--btn-background-hover:rgba(128, 50, 131, 1);
+	--btn-outline:rgba(175, 71, 179, 1);
+
+ }
+
+
 div.profile_page {
 	position: relative;
 
@@ -80,6 +108,8 @@ body.profile_page.flat_page #footer_spacer {
 	}
 }
 
+
+
 .profile_header_bg {
 	position: relative;
 	max-width: 1018px;
@@ -95,23 +125,19 @@ body.profile_page.flat_page #footer_spacer {
 	max-width: 976px;
 	min-height: 224px;
 	margin: 0 auto;
-	background: 
-    radial-gradient(
-      farthest-side at bottom right,
-      rgba(109, 38, 44, 0.301), 
-      transparent 500px
-    ),
-    radial-gradient(
-      farthest-corner at bottom left,
-      rgba(50, 255, 193, 0.103), 
-      transparent 400px
-	);
-	background-color: rgba(34, 35, 48, 0.93);
-	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/2020/bg_frame_top.png' );*/
+	background: radial-gradient(
+		farthest-side at bottom right,
+		var(--gradient-right), 
+		transparent 500px
+	  ),
+	  radial-gradient(
+		farthest-corner at bottom left,
+		var(--gradient-left), 
+		transparent 600px
+	  );
+	  background-color: var(--gradient-background);
 	background-repeat: no-repeat;
 	background-position: center;
-
-	/*box-shadow: 0 0 11px 2px black;*/
 }
 
 
@@ -402,7 +428,8 @@ body.profile_page.flat_page #footer_spacer {
 	text-decoration: none;
 	cursor: pointer;
 	/*border: 1px solid #212121;*/
-	background-color: rgba(43, 52, 68, 0.98);
+	background-color: var(--btn-background);
+	transition: 0.2s;
 	/*background: #373f4f; /* Old browsers */
 	/*background: -webkit-linear-gradient( top, #7a8494 5%, #282f3d 95%);
 	background: linear-gradient( to bottom, #7a8494 5%, #282f3d 95%);
@@ -412,7 +439,7 @@ body.profile_page.flat_page #footer_spacer {
 
 	border-radius: 2px;
 	display: block;
-	background-color: rgba(43, 52, 68, 0.93);
+	background-color: var(--btn-background);
 	/*background: #2e394c; /* Old browsers */
 	/*background: -webkit-linear-gradient( top, #33425a 5%, #282f3d 95%);
 	background: linear-gradient( to bottom, #33425a 5%, #282f3d 95%);
@@ -420,15 +447,18 @@ body.profile_page.flat_page #footer_spacer {
 }
 .btn_profile_action:hover, .btn_profile_action.focus {
 	text-decoration: none;
-	background-color: rgba(48, 57, 73, 0.93);
-	background: #688bb1 ; /* Old browsers */
+	background-color: var(--btn-background-hover);
+	/*background: #688bb1 ;*/ /* Old browsers */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transition: 0.2s;
 /*background: -webkit-linear-gradient( top, #9ba9bf 5%, #282f3d 95%);
 	background: linear-gradient( to bottom, #9ba9bf 5%, #282f3d 95%);
 */
 }
 .btn_profile_action:hover > span, .btn_profile_action.focus > span {
-	background: #526d95; /* Old browsers */
-	background-color: rgba(48, 57, 73, 0.93);
+	/*background: #526d95;*/ /* Old browsers */
+	background-color: var(--btn-background-hover);
+	/*outline: var(--btn-outline) solid 0.5px;*/
 /*background: -webkit-linear-gradient( top, #3c597b 5%, #282f3d 95%);
 	background: linear-gradient( to bottom, #3c597b 5%, #282f3d 95%);
 */
@@ -468,17 +498,25 @@ body.profile_page.flat_page #footer_spacer {
 	background: 
     radial-gradient(
       farthest-side at top right,
-      rgba(109, 38, 44, 0.301), 
+	  var(--gradient-right), 
       transparent 500px
     ),
     radial-gradient(
       farthest-corner at top left,
-      rgba(50, 255, 193, 0.103), 
-      transparent 400px
+      var(--gradient-left), 
+      transparent 600px
+	),
+	radial-gradient(
+      farthest-corner at bottom right,
+      var(--gradient-background-right), 
+      transparent 500px
+	),
+	radial-gradient(
+	  farthest-corner at bottom left,
+	  var(--gradient-background-left), 
+	  transparent 600px
 	);
-	background-color: rgba(34, 35, 48, 0.93);
-	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/2020/bg_frame_bottom.png' );*/
-	/*background-position: center;*/
+	background-color: var(--gradient-background);
 	background-repeat: no-repeat;
 	padding: 12px 12px 64px 12px;
 	width: 952px;
@@ -497,19 +535,28 @@ body.profile_page.flat_page #footer_spacer {
 
 .profile_content.has_profile_background
 {
-	/*background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/2020/bg_frame_bottom.png' );*/
 	background: 
     radial-gradient(
       farthest-side at top right,
-      rgba(109, 38, 44, 0.301), 
+	  var(--gradient-right), 
       transparent 500px
     ),
     radial-gradient(
       farthest-corner at top left,
-      rgba(50, 255, 193, 0.103), 
-      transparent 400px
+      var(--gradient-left), 
+      transparent 600px
+	),
+	radial-gradient(
+      farthest-corner at bottom right,
+      var(--gradient-background-right), 
+      transparent 500px
+	),
+	radial-gradient(
+      farthest-corner at bottom left,
+      var(--gradient-background-left), 
+      transparent 600px
 	);
-	background-color: rgba(34, 35, 48, 0.93);
+	background-color: var(--gradient-background);
 	margin-top: 0px;
 	overflow: hidden;
 	padding-top: 16px;
@@ -593,7 +640,7 @@ body.profile_page.flat_page #footer_spacer {
 
 .profile_customization:hover .profile_customization_editlink {
 	display: block;
-	background-color: rgba( 43, 52, 68, 0.93);
+	background-color: var(--color-showcase-header);
 	filter: none;
 	padding: 5px;
 }
@@ -606,8 +653,9 @@ body.profile_page.flat_page #footer_spacer {
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
-			
-	background-color: rgba( 43, 52, 68, 0.93);
+			/*background-color: var(--color-showcase-header);*/
+	background: var(--color-showcase-header);
+	background: linear-gradient(90deg, var(--gradient-showcase-header-left) 0%, var(--color-showcase-header) 90%);
 	padding: 5px 10px 5px 10px;
 	color: #ffffff;
 	font-size: 16px;

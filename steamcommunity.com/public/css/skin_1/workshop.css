@@ -1749,18 +1749,22 @@ textarea {
 }
 
 .workshopBrowseItems {
-	display: flex;
+	display: grid;
 	justify-content: space-between;
-	flex-flow: row wrap;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 10px;
 }
 
 .workshopItem {
 	position: relative;
-	width: 200px;
-	max-width: 31%;
+	width: 100%;
 	min-height: 200px;
-	margin-right: 0px;
 	margin-bottom: 10px;
+}
+
+.workshopItem > a {
+	display: block;
 }
 
 .workshopItem .workshopItemAuthorName
@@ -3768,28 +3772,6 @@ div.hover {
 	display: inline;
 }
 
-.sectionTabsHR
-{
-
-	top: 38px;
-	left: 0px;
-	background-color:#4d4d4e;
-	height:1px;
-	margin:0;
-	padding:0;
-	margin-bottom:8px;
-}
-
-	#ig_bottom	.sectionTabsHR.stats {
-		background-color: #ac966a;
-	}
-
-#profileBlock .sectionTabsHR
-{
-    top: 114px;
-}
-
-
 .general_btn.createCollection
 {
 	position: relative;
@@ -3986,19 +3968,9 @@ html.responsive #ig_bottom {
 	background: transparent;
 }
 
-#ig_bottom:not(.item) .sectionTabsHR {
-	position: relative;
-	top: -8px;
-	left: 0px;
+#ig_bottom .responsive_tab_baseline.stats {
+	background-color: #ac966a;
 }
-
-#ig_bottom .sectionTabsHR {
-	background-color: #417B9C;
-	height: 5px;
-	left: 0px;
-	width: 950px;
-}
-
 
 #ig_bottom div.dayselect #dayselect_activeday
 {
@@ -4359,7 +4331,7 @@ html.responsive #ig_bottom {
 }
 
 #ig_bottom .forum_discussion_profileBlock#profileBlock {
-	width: 645px;
+	max-width: 645px;
 	padding-left: 0px;
 }
 
@@ -5063,6 +5035,15 @@ a.readmore_link
 	html.responsive .workshopBrowseRow,
 	html.responsive .workshopItem {
 		min-height: 0;
+	}
+
+	html.responsive .workshopItem .workshopItemTitle {
+		max-width: 100px;
+		font-size: 12px;
+	}
+
+	html.responsive .fileRating {
+		max-width: 60px;
 	}
 
 	html.responsive .guide_category_tags {

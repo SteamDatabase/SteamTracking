@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [7],
+  [5],
   {
     "3rT3": function(e, t, n) {
       "use strict";
@@ -723,7 +723,7 @@
             r
           );
         })(_.Message),
-        F = (function(n) {
+        w = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
             var t = n.call(this) || this;
@@ -819,7 +819,7 @@
             r
           );
         })(_.Message),
-        w = (_.Message,
+        F = (_.Message,
         (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -1258,12 +1258,12 @@
         });
       }),
         (m.PreviewPartnerEvents = function(e, t) {
-          return e.SendMsg("News.PreviewPartnerEvents#1", t, F, {
+          return e.SendMsg("News.PreviewPartnerEvents#1", t, w, {
             bConstMethod: !0
           });
         }),
         (m.GetNewsFeedByRepublishClan = function(e, t) {
-          return e.SendMsg("News.GetNewsFeedByRepublishClan#1", t, w, {
+          return e.SendMsg("News.GetNewsFeedByRepublishClan#1", t, F, {
             bConstMethod: !0
           });
         }),
@@ -1741,8 +1741,8 @@
         q = n("X3Ds"),
         $ = n("TLQK"),
         Y = n("bDQf"),
-        Q = n("bxiW"),
-        J = n("A2AY"),
+        J = n("bxiW"),
+        Q = n("A2AY"),
         K = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
@@ -1776,7 +1776,7 @@
                 ? (window.location.reload(), null)
                 : c.a.createElement(
                     "div",
-                    { className: Object(V.a)(J.Ctn) },
+                    { className: Object(V.a)(Q.Ctn) },
                     c.a.createElement(
                       "div",
                       { className: "titleframe" },
@@ -1834,7 +1834,7 @@
                       ),
                       c.a.createElement(
                         "p",
-                        { className: J.DashboardBtn },
+                        { className: Q.DashboardBtn },
                         c.a.createElement(
                           H.a,
                           {
@@ -1859,11 +1859,11 @@
                         {
                           className: Object(V.a)(
                             T.a.FlexRowContainer,
-                            J.UrlSettingCtn
+                            Q.UrlSettingCtn
                           )
                         },
                         c.a.createElement(L.j, {
-                          className: J.RssInpu,
+                          className: Q.RssInpu,
                           type: "text",
                           name: "link_url",
                           id: "link_url",
@@ -1903,9 +1903,9 @@
                     )
                   );
             }),
-            Object(d.c)([Q.a], e.prototype, "OnChangeActualRSSURL", null),
-            Object(d.c)([Q.a], e.prototype, "OnCreateOrSaveFeed", null),
-            Object(d.c)([Q.a], e.prototype, "OnRevert", null),
+            Object(d.c)([J.a], e.prototype, "OnChangeActualRSSURL", null),
+            Object(d.c)([J.a], e.prototype, "OnCreateOrSaveFeed", null),
+            Object(d.c)([J.a], e.prototype, "OnRevert", null),
             (e = Object(d.c)([A.observer], e))
           );
         })(c.a.Component),
@@ -2102,7 +2102,7 @@
                 ) &&
                   c.a.createElement(
                     "div",
-                    { className: J.PreviewListBtn },
+                    { className: Q.PreviewListBtn },
                     c.a.createElement(
                       L.c,
                       {
@@ -2138,12 +2138,12 @@
                     ),
                     c.a.createElement(
                       "div",
-                      { className: J.PreviewListCtn },
+                      { className: Q.PreviewListCtn },
                       e
                     ),
                     c.a.createElement(
                       "p",
-                      { className: J.DashboardBtn },
+                      { className: Q.DashboardBtn },
                       c.a.createElement(
                         H.a,
                         {
@@ -2162,8 +2162,8 @@
                   )
               );
             }),
-            Object(d.c)([Q.a], e.prototype, "GetRSSPreviewURL", null),
-            Object(d.c)([Q.a], e.prototype, "OnLoadPreview", null),
+            Object(d.c)([J.a], e.prototype, "GetRSSPreviewURL", null),
+            Object(d.c)([J.a], e.prototype, "OnLoadPreview", null),
             (e = Object(d.c)([A.observer], e))
           );
         })(c.a.Component),
@@ -2257,7 +2257,7 @@
                     Boolean(this.state.strErrorMessage) &&
                       c.a.createElement(
                         "div",
-                        { className: J.Error },
+                        { className: Q.Error },
                         this.state.strErrorMessage
                       ),
                     c.a.createElement(L.n, {
@@ -2289,8 +2289,8 @@
                   )
                 : null;
             }),
-            Object(d.c)([Q.a], e.prototype, "OnToggleChannelAutomation", null),
-            Object(d.c)([Q.a], e.prototype, "OnQueueScan", null),
+            Object(d.c)([J.a], e.prototype, "OnToggleChannelAutomation", null),
+            Object(d.c)([J.a], e.prototype, "OnQueueScan", null),
             (e = Object(d.c)([A.observer], e))
           );
         })(c.a.Component),
@@ -2428,7 +2428,7 @@
                     strTitle: Object($.d)("#RSSManager_PostEvent_ViewRaw")
                   },
                   c.a.createElement("textarea", {
-                    className: J.RawRSS,
+                    className: Q.RawRSS,
                     value: this.props.newsData.rss_message,
                     disabled: !0
                   })
@@ -2457,11 +2457,11 @@
                 "div",
                 {
                   className: Object(V.a)(
-                    J.PostCtn,
-                    Boolean(n) ? J.ActivePost : ""
+                    Q.PostCtn,
+                    Boolean(n) ? Q.ActivePost : ""
                   )
                 },
-                c.a.createElement("span", { className: J.PostTitle }, e.title),
+                c.a.createElement("span", { className: Q.PostTitle }, e.title),
                 c.a.createElement("br", null),
                 Boolean(r) &&
                   c.a.createElement(
@@ -2470,7 +2470,7 @@
                     Boolean(r.BIsVisibleEvent()) &&
                       c.a.createElement(
                         "span",
-                        { className: J.PostDate },
+                        { className: Q.PostDate },
                         Object($.k)(
                           "#RSSManager_PostEvent_PostedDate",
                           Object($.l)(r.GetPostTimeAndDateUnixSeconds()) +
@@ -2483,8 +2483,8 @@
                         "span",
                         {
                           className: Object(V.a)(
-                            J.PostDraft,
-                            o ? J.PostStaged : ""
+                            Q.PostDraft,
+                            o ? Q.PostStaged : ""
                           )
                         },
                         Object($.d)(
@@ -2505,7 +2505,7 @@
                   ),
                 c.a.createElement(
                   "div",
-                  { className: J.ButtonCtn },
+                  { className: Q.ButtonCtn },
                   Boolean(n)
                     ? c.a.createElement(
                         c.a.Fragment,
@@ -2520,14 +2520,14 @@
                               "div",
                               {
                                 onClick: this.OnViewEvent,
-                                className: Object(V.a)(T.a.Button, J.PreviewBtn)
+                                className: Object(V.a)(T.a.Button, Q.PreviewBtn)
                               },
                               Object($.d)("#RSSManager_PostEvent_ViewEvent")
                             ),
                         c.a.createElement(
                           "a",
                           {
-                            className: Object(V.a)(T.a.Button, J.PreviewBtn),
+                            className: Object(V.a)(T.a.Button, Q.PreviewBtn),
                             href:
                               u.c.COMMUNITY_BASE_URL +
                               "gid/" +
@@ -2541,7 +2541,7 @@
                           "div",
                           {
                             onClick: this.OnUpdateNewsEvent,
-                            className: Object(V.a)(T.a.Button, J.PreviewBtn)
+                            className: Object(V.a)(T.a.Button, Q.PreviewBtn)
                           },
                           Object($.d)("#RSSManager_PostEvent_UpdateEvent")
                         ),
@@ -2549,7 +2549,7 @@
                           c.a.createElement(
                             "a",
                             {
-                              className: Object(V.a)(T.a.Button, J.PreviewBtn),
+                              className: Object(V.a)(T.a.Button, Q.PreviewBtn),
                               href:
                                 u.c.STORE_BASE_URL +
                                 "app/" +
@@ -2567,7 +2567,7 @@
                           "div",
                           {
                             onClick: this.OnOpenPreviewAsPartnerEvent,
-                            className: Object(V.a)(T.a.Button, J.PreviewBtn)
+                            className: Object(V.a)(T.a.Button, Q.PreviewBtn)
                           },
                           Object($.d)("#CuratorAdmin_RSSFeed_col_preview_event")
                         ),
@@ -2575,7 +2575,7 @@
                           "div",
                           {
                             onClick: this.OnPostNewsEvent,
-                            className: Object(V.a)(T.a.Button, J.PreviewBtn)
+                            className: Object(V.a)(T.a.Button, Q.PreviewBtn)
                           },
                           Object($.d)("#CuratorAdmin_RSSFeed_col_create_event")
                         )
@@ -2583,7 +2583,7 @@
                   Boolean(e.rss_message && 0 < e.rss_message.length) &&
                     c.a.createElement(
                       "div",
-                      { onClick: this.OnShowRawRSS, className: J.ViewRaw },
+                      { onClick: this.OnShowRawRSS, className: Q.ViewRaw },
                       Object($.d)("#RSSManager_PostEvent_ViewRaw")
                     ),
                   Boolean(this.state.eventModelForPreviewNow) &&
@@ -2602,19 +2602,19 @@
                 )
               );
             }),
-            Object(d.c)([Q.a], e.prototype, "DoPartnerEventLoad", null),
+            Object(d.c)([J.a], e.prototype, "DoPartnerEventLoad", null),
             Object(d.c)(
-              [Q.a],
+              [J.a],
               e.prototype,
               "OnOpenPreviewAsPartnerEvent",
               null
             ),
-            Object(d.c)([Q.a], e.prototype, "OnViewEvent", null),
-            Object(d.c)([Q.a], e.prototype, "OnPostNewsEvent", null),
-            Object(d.c)([Q.a], e.prototype, "OnUpdateNewsEvent", null),
-            Object(d.c)([Q.a], e.prototype, "HideModalEvent", null),
-            Object(d.c)([Q.a], e.prototype, "OnClanEventCreateSuccess", null),
-            Object(d.c)([Q.a], e.prototype, "OnShowRawRSS", null),
+            Object(d.c)([J.a], e.prototype, "OnViewEvent", null),
+            Object(d.c)([J.a], e.prototype, "OnPostNewsEvent", null),
+            Object(d.c)([J.a], e.prototype, "OnUpdateNewsEvent", null),
+            Object(d.c)([J.a], e.prototype, "HideModalEvent", null),
+            Object(d.c)([J.a], e.prototype, "OnClanEventCreateSuccess", null),
+            Object(d.c)([J.a], e.prototype, "OnShowRawRSS", null),
             (e = Object(d.c)([A.observer], e))
           );
         })(c.a.Component),
@@ -2881,7 +2881,7 @@
                           ),
                           c.a.createElement(
                             "div",
-                            { className: J.DialogPostTitle },
+                            { className: Q.DialogPostTitle },
                             this.props.newsData.title
                           ),
                           c.a.createElement("br", null),
@@ -2930,7 +2930,7 @@
                           c.a.createElement("br", null),
                           c.a.createElement(
                             "div",
-                            { className: J.DialogPostTitle },
+                            { className: Q.DialogPostTitle },
                             this.props.newsData.title
                           ),
                           c.a.createElement("br", null)
@@ -2977,19 +2977,19 @@
                   );
               }
             }),
-            Object(d.c)([Q.a], n.prototype, "OnCreateNewsFeed", null),
-            Object(d.c)([Q.a], n.prototype, "DoCreateNewsFeed", null),
-            Object(d.c)([Q.a], n.prototype, "OnCreatePost", null),
-            Object(d.c)([Q.a], n.prototype, "DoCreatePost", null),
-            Object(d.c)([Q.a], n.prototype, "OnChangeDraftMode", null),
+            Object(d.c)([J.a], n.prototype, "OnCreateNewsFeed", null),
+            Object(d.c)([J.a], n.prototype, "DoCreateNewsFeed", null),
+            Object(d.c)([J.a], n.prototype, "OnCreatePost", null),
+            Object(d.c)([J.a], n.prototype, "DoCreatePost", null),
+            Object(d.c)([J.a], n.prototype, "OnChangeDraftMode", null),
             Object(d.c)(
-              [Q.a],
+              [J.a],
               n.prototype,
               "OnChangePermissionsCreateFeed",
               null
             ),
-            Object(d.c)([Q.a], n.prototype, "OnChangeConductCreateFeed", null),
-            Object(d.c)([Q.a], n.prototype, "GetStrTitle", null),
+            Object(d.c)([J.a], n.prototype, "OnChangeConductCreateFeed", null),
+            Object(d.c)([J.a], n.prototype, "GetStrTitle", null),
             n
           );
         })(c.a.Component),
@@ -3065,6 +3065,15 @@
         ButtonCtn: "managerss_ButtonCtn_13jSB",
         PreviewBtn: "managerss_PreviewBtn_3HssD",
         ViewRaw: "managerss_ViewRaw_2jvHr"
+      };
+    },
+    "r+ba": function(e, t, n) {
+      e.exports = {
+        Container: "partnereventwebrowembed_Container_2Jd3M",
+        StoreHeaderAdjust: "partnereventwebrowembed_StoreHeaderAdjust_3YyCp",
+        SectionButtonCtn: "partnereventwebrowembed_SectionButtonCtn_1HP0y",
+        SectionButton: "partnereventwebrowembed_SectionButton_3n8sw",
+        EventsSummariesCtn: "partnereventwebrowembed_EventsSummariesCtn_1snIw"
       };
     }
   }

@@ -543,6 +543,27 @@ function Forum_PurgeTopic( gidTopic )
 	});
 }
 
+
+function Forum_ClearContentCheckResult( gidTopic )
+{
+	ShowConfirmDialog('Clear Bannable Content Flag ',
+		'Are you sure you want to clear the bannable content flag on this topic?  This cannot be undone.',
+		'Clear Bannable Content Flag'
+	).done( function() {
+		Forum_SetTopicFlag( gidTopic, 'clearcontentcheckresult', true );
+	});
+}
+
+function Forum_MarkSpam( gidTopic )
+{
+	ShowConfirmDialog('Mark Spam ',
+		'This will delete the selected threads and ban the authors from the forum.  Are you sure this is what you want to do?',
+		'Delete Spam'
+	).done( function() {
+		Forum_SetTopicFlag( gidTopic, 'markspam', true );
+	});
+}
+
 function Forum_SetTopicFlag( gidTopic, flag, value )
 {
 	if ( g_rgForumTopics[ gidTopic ] )

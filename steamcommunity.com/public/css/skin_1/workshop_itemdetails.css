@@ -3353,7 +3353,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	margin-bottom: 4px;
 }
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: 910px)
 {
 	/* don't let the floating guys cram text into a small corner */
 	html.responsive .sharedFilePreviewImage.floatLeft, html.responsive .sharedFilePreviewImage.floatRight {
@@ -3615,9 +3615,15 @@ h2.stats {
 		position: absolute;
 		bottom: 15px;
 		right: 45px;
-		width: 500px;
+		max-width: 500px;
+		width: calc( 100% - 10px);
 		padding: 5px;
 		border-radius: 3px;
+	}
+	@media screen and (max-width: 910px) {
+		html.responsive .statsBox .graphNotice {
+			position: unset;
+		}
 	}
 
 	.statsBox .graphNotice p {

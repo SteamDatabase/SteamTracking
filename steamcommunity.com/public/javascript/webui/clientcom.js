@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5902157";
+var CLSTAMP = "5906847";
 !(function(t) {
   var e = {};
   function n(r) {
@@ -89,28 +89,31 @@ var CLSTAMP = "5902157";
     function o() {
       return !!window.document;
     }
-    n.d(e, "b", function() {
+    n.d(e, "c", function() {
       return c;
     }),
-      n.d(e, "h", function() {
+      n.d(e, "i", function() {
         return u;
       }),
       n.d(e, "a", function() {
         return s;
       }),
-      n.d(e, "e", function() {
-        return f;
-      }),
-      n.d(e, "g", function() {
-        return _;
+      n.d(e, "b", function() {
+        return a;
       }),
       n.d(e, "f", function() {
+        return f;
+      }),
+      n.d(e, "h", function() {
+        return _;
+      }),
+      n.d(e, "g", function() {
         return p;
       }),
-      n.d(e, "c", function() {
+      n.d(e, "d", function() {
         return d;
       }),
-      n.d(e, "d", function() {
+      n.d(e, "e", function() {
         return m;
       });
     var i,
@@ -372,8 +375,8 @@ var CLSTAMP = "5902157";
           }),
           (t.prototype.BClientAccountMatches = function() {
             return (
-              !r.h.logged_in ||
-              r.h.accountid == this.m_connection.ClientInfo.unAccountID
+              !r.i.logged_in ||
+              r.i.accountid == this.m_connection.ClientInfo.unAccountID
             );
           }),
           (t.prototype.GenericEResultCall = function(t) {
@@ -456,8 +459,8 @@ var CLSTAMP = "5902157";
             if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
               return !1;
             var n = Object.assign({}, t, {
-              universe: r.b.EUNIVERSE,
-              accountid: r.h.accountid
+              universe: r.c.EUNIVERSE,
+              accountid: r.i.accountid
             });
             void 0 !== e && (n.sequenceid = e);
             try {
@@ -762,16 +765,16 @@ and limitations under the License.
     "use strict";
     var r = n("1n9R");
     n.d(e, "a", function() {
-      return r.b;
+      return r.c;
     }),
       n.d(e, "d", function() {
-        return r.h;
+        return r.i;
       }),
       n.d(e, "c", function() {
-        return r.g;
+        return r.h;
       }),
       n.d(e, "b", function() {
-        return r.f;
+        return r.g;
       });
   },
   x0hG: function(t, e, n) {

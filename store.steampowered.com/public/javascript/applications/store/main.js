@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [10],
+  [8],
   {
     "+jbA": function(e, t, n) {
       e.exports = {
@@ -93,6 +93,13 @@
             Object.defineProperty(e.prototype, "bEnableNewsHubMayUpdate", {
               get: function() {
                 return !0;
+              },
+              enumerable: !0,
+              configurable: !0
+            }),
+            Object.defineProperty(e.prototype, "bForceReadArtistStateents", {
+              get: function() {
+                return "dev" == a.c.WEB_UNIVERSE || "beta" == a.c.WEB_UNIVERSE;
               },
               enumerable: !0,
               configurable: !0
@@ -1628,34 +1635,34 @@
     },
     AvbV: function(e, t, r) {
       var i = {
-        "./main_brazilian.json": ["TFAN", 11],
-        "./main_bulgarian.json": ["c2SO", 12],
-        "./main_czech.json": ["peP3", 13],
-        "./main_danish.json": ["0bnV", 14],
-        "./main_dutch.json": ["wcLc", 15],
-        "./main_english.json": ["/rNK", 3],
-        "./main_finnish.json": ["iywU", 16],
-        "./main_french.json": ["Xnpc", 17],
-        "./main_german.json": ["pmKi", 18],
-        "./main_greek.json": ["mTRv", 19],
-        "./main_hungarian.json": ["WkHb", 20],
-        "./main_italian.json": ["Jz5U", 21],
-        "./main_japanese.json": ["3Dk9", 22],
-        "./main_koreana.json": ["neQD", 23],
-        "./main_latam.json": ["6oHD", 24],
-        "./main_norwegian.json": ["2OvS", 25],
-        "./main_polish.json": ["3pwE", 26],
-        "./main_portuguese.json": ["hY40", 27],
-        "./main_romanian.json": ["Q95+", 28],
-        "./main_russian.json": ["bsPT", 29],
-        "./main_schinese.json": ["B/Zz", 30],
-        "./main_spanish.json": ["U6iL", 31],
-        "./main_swedish.json": ["4uPU", 32],
-        "./main_tchinese.json": ["rgC9", 33],
-        "./main_thai.json": ["87dp", 34],
-        "./main_turkish.json": ["yMpO", 35],
-        "./main_ukrainian.json": ["zTWm", 36],
-        "./main_vietnamese.json": ["wqiy", 37]
+        "./main_brazilian.json": ["TFAN", 9],
+        "./main_bulgarian.json": ["c2SO", 10],
+        "./main_czech.json": ["peP3", 11],
+        "./main_danish.json": ["0bnV", 12],
+        "./main_dutch.json": ["wcLc", 13],
+        "./main_english.json": ["/rNK", 2],
+        "./main_finnish.json": ["iywU", 14],
+        "./main_french.json": ["Xnpc", 15],
+        "./main_german.json": ["pmKi", 16],
+        "./main_greek.json": ["mTRv", 17],
+        "./main_hungarian.json": ["WkHb", 18],
+        "./main_italian.json": ["Jz5U", 19],
+        "./main_japanese.json": ["3Dk9", 20],
+        "./main_koreana.json": ["neQD", 21],
+        "./main_latam.json": ["6oHD", 22],
+        "./main_norwegian.json": ["2OvS", 23],
+        "./main_polish.json": ["3pwE", 24],
+        "./main_portuguese.json": ["hY40", 25],
+        "./main_romanian.json": ["Q95+", 26],
+        "./main_russian.json": ["bsPT", 27],
+        "./main_schinese.json": ["B/Zz", 28],
+        "./main_spanish.json": ["U6iL", 29],
+        "./main_swedish.json": ["4uPU", 30],
+        "./main_tchinese.json": ["rgC9", 31],
+        "./main_thai.json": ["87dp", 32],
+        "./main_turkish.json": ["yMpO", 33],
+        "./main_ukrainian.json": ["zTWm", 34],
+        "./main_vietnamese.json": ["wqiy", 35]
       };
       function n(t) {
         var n = i[t];
@@ -12585,7 +12592,7 @@
             r = e[1];
           return (
             n ||
-            (Promise.all([c.e(0), c.e(1), c.e(5), c.e(2), c.e(8)])
+            (Promise.all([c.e(0), c.e(1), c.e(6)])
               .then(c.bind(null, "Wym2"))
               .then(function(e) {
                 r(a.a.createElement(e[i], t));
@@ -12795,10 +12802,10 @@
           );
         };
       a.a.lazy(function() {
-        return c.e(67).then(c.bind(null, "jHcm"));
+        return c.e(65).then(c.bind(null, "jHcm"));
       });
       var T = a.a.lazy(function() {
-          return Promise.all([c.e(0), c.e(1), c.e(9)]).then(
+          return Promise.all([c.e(0), c.e(1), c.e(7)]).then(
             c.bind(null, "3WEt")
           );
         }),
@@ -12806,12 +12813,12 @@
           return a.a.createElement("div", null);
         },
         N = a.a.lazy(function() {
-          return Promise.all([c.e(0), c.e(1), c.e(6)]).then(
+          return Promise.all([c.e(0), c.e(1), c.e(4)]).then(
             c.bind(null, "NIbt")
           );
         }),
         P = a.a.lazy(function() {
-          return Promise.all([c.e(0), c.e(1), c.e(5), c.e(2), c.e(7)]).then(
+          return Promise.all([c.e(0), c.e(1), c.e(5)]).then(
             c.bind(null, "3rT3")
           );
         }),
@@ -13139,10 +13146,10 @@
                                     c("AvbV")("./main_" + a + ".json"),
                                     t
                                       ? {}
-                                      : c.e(4).then(c.t.bind(null, "TYjx", 3)),
+                                      : c.e(3).then(c.t.bind(null, "TYjx", 3)),
                                     t
                                       ? {}
-                                      : c.e(3).then(c.t.bind(null, "/rNK", 3))
+                                      : c.e(2).then(c.t.bind(null, "/rNK", 3))
                                   ])
                                 ]
                               );
@@ -14932,35 +14939,35 @@
     },
     rCDf: function(e, t, r) {
       var i = {
-        "./shared_arabic.json": ["d1TB", 39],
-        "./shared_brazilian.json": ["Pg9r", 40],
-        "./shared_bulgarian.json": ["ENge", 41],
-        "./shared_czech.json": ["Ts6V", 42],
-        "./shared_danish.json": ["9oiU", 43],
-        "./shared_dutch.json": ["nxN4", 44],
-        "./shared_english.json": ["TYjx", 4],
-        "./shared_finnish.json": ["NuB8", 45],
-        "./shared_french.json": ["bOPj", 46],
-        "./shared_german.json": ["svuF", 47],
-        "./shared_greek.json": ["eJKB", 48],
-        "./shared_hungarian.json": ["T7i2", 49],
-        "./shared_italian.json": ["w96W", 50],
-        "./shared_japanese.json": ["XQ4S", 51],
-        "./shared_koreana.json": ["4hyI", 52],
-        "./shared_latam.json": ["3qrw", 53],
-        "./shared_norwegian.json": ["XA4Q", 54],
-        "./shared_polish.json": ["TpXn", 55],
-        "./shared_portuguese.json": ["Q8UV", 56],
-        "./shared_romanian.json": ["Eme1", 57],
-        "./shared_russian.json": ["BUiO", 58],
-        "./shared_schinese.json": ["3UpY", 59],
-        "./shared_spanish.json": ["4Fxc", 60],
-        "./shared_swedish.json": ["0JhB", 61],
-        "./shared_tchinese.json": ["OYRc", 62],
-        "./shared_thai.json": ["lhAZ", 63],
-        "./shared_turkish.json": ["RSoU", 64],
-        "./shared_ukrainian.json": ["lNXI", 65],
-        "./shared_vietnamese.json": ["RSmC", 66]
+        "./shared_arabic.json": ["d1TB", 37],
+        "./shared_brazilian.json": ["Pg9r", 38],
+        "./shared_bulgarian.json": ["ENge", 39],
+        "./shared_czech.json": ["Ts6V", 40],
+        "./shared_danish.json": ["9oiU", 41],
+        "./shared_dutch.json": ["nxN4", 42],
+        "./shared_english.json": ["TYjx", 3],
+        "./shared_finnish.json": ["NuB8", 43],
+        "./shared_french.json": ["bOPj", 44],
+        "./shared_german.json": ["svuF", 45],
+        "./shared_greek.json": ["eJKB", 46],
+        "./shared_hungarian.json": ["T7i2", 47],
+        "./shared_italian.json": ["w96W", 48],
+        "./shared_japanese.json": ["XQ4S", 49],
+        "./shared_koreana.json": ["4hyI", 50],
+        "./shared_latam.json": ["3qrw", 51],
+        "./shared_norwegian.json": ["XA4Q", 52],
+        "./shared_polish.json": ["TpXn", 53],
+        "./shared_portuguese.json": ["Q8UV", 54],
+        "./shared_romanian.json": ["Eme1", 55],
+        "./shared_russian.json": ["BUiO", 56],
+        "./shared_schinese.json": ["3UpY", 57],
+        "./shared_spanish.json": ["4Fxc", 58],
+        "./shared_swedish.json": ["0JhB", 59],
+        "./shared_tchinese.json": ["OYRc", 60],
+        "./shared_thai.json": ["lhAZ", 61],
+        "./shared_turkish.json": ["RSoU", 62],
+        "./shared_ukrainian.json": ["lNXI", 63],
+        "./shared_vietnamese.json": ["RSmC", 64]
       };
       function n(t) {
         var n = i[t];
@@ -15681,5 +15688,5 @@
       }
     }
   },
-  [["gfbn", 38, 0]]
+  [["gfbn", 36, 0]]
 ]);

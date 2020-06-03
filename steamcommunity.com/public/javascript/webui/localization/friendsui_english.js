@@ -1212,6 +1212,7 @@ LocalizationReady("friendsui", "english", {
   ChatRoom_GameInvite_YouInvited: "You invited %1$s to play %2$s%3$s",
   ChatRoom_GameInvite_Accepted: "You accepted an invitation to play %1$s%2$s",
   ChatRoom_GameInvite_AcceptOnPC: "You can accept this invite from your PC.",
+  ChatRoom_GameInvite_UnreleasedGame: "Unreleased Game",
 
   ChatRoom_GameInviteRemotePlay_Invite:
     "%1$s invited you using Remote Play Together",

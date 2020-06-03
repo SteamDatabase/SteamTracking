@@ -169,6 +169,14 @@ textarea.forumtopic_reply_textarea {
 	background-image: none;
 }
 
+.forum_topic.needs_content_check {
+	background-image: none;
+	background-color: rgba( 23, 34, 48, 0.7);
+}
+.forum_topic.failed_content_check {
+	background-image: none;
+	background-color: rgba(165, 91, 19, 0.25);
+}
 .forum_topic.deleted {
 	background-image: none;
 	background-color: rgba( 23, 34, 48, 0.7);
@@ -1302,7 +1310,9 @@ input.discussionSearchText:-moz-placeholder {
 .forum_topic_deleted_notice,
 .forum_topic_locked_notice,
 .forum_topic_pinned_notice,
-.forum_topic_reported_notice {
+.forum_topic_reported_notice,
+.forum_topic_needs_content_check_notice,
+.forum_topic_failed_content_check_notice {
 	margin-bottom: 12px;
 	padding: 14px 11px;
 	margin-top: 4px;
@@ -1318,6 +1328,11 @@ input.discussionSearchText:-moz-placeholder {
 .forum_topic_reported_notice {
 	color: #c38a4c;
 	background-color: #4A3E2E;
+}
+
+.forum_topic_needs_content_check_notice > img,
+.forum_topic_failed_content_check_notice > img {
+	width: 12px;
 }
 
 table.forum_auditlog {

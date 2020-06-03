@@ -1347,6 +1347,7 @@ textarea {
 	font-size:30px;
 	padding-top: 2px;
 	word-wrap:break-word;
+	max-width: 200px;
 }
 
 .workshopItemTitle .integratedGuideIcon
@@ -1360,17 +1361,19 @@ textarea {
 }
 
 .workshopBrowseItems {
-	display: flex;
+	display: grid;
 	justify-content: space-between;
-	flex-flow: row wrap;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 10px;
 }
 
 .workshopItem {
 	position: relative;
 	min-height: 200px;
 	margin-bottom: 10px;
-	width: 200px;
-	max-width: 31%;
+	width: 100%;
+
 }
 
 .workshopItem.right
@@ -3331,5 +3334,10 @@ div.hover {
 	html.responsive #leftContents {
 		width: auto;
 		float: none;
+	}
+
+	html.responsive .workshopItem .workshopItemTitle {
+		max-width: 100px;
+		font-size: 12px;
 	}
 }

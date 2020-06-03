@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5902157";
+var CLSTAMP = "5906847";
 !(function(e) {
   function t(t) {
     for (
@@ -26,7 +26,7 @@ var CLSTAMP = "5902157";
     return e;
   }
   var r = {},
-    o = { 7: 0 },
+    o = { 8: 0 },
     i = [];
   function c(t) {
     if (r[t]) return r[t].exports;
@@ -124,44 +124,47 @@ var CLSTAMP = "5902157";
       n.d(t, "a", function() {
         return a;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return s;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return l;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "q", function() {
         return u;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return m;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return p;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return h;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "o", function() {
         return d;
       }),
       n.d(t, "b", function() {
         return f;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "r", function() {
         return v;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return _;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return y;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "f", function() {
         return b;
       }),
       n.d(t, "l", function() {
         return g;
+      }),
+      n.d(t, "m", function() {
+        return w;
       });
     var r = n("UqDm");
     n("XaMz");
@@ -388,12 +391,20 @@ var CLSTAMP = "5902157";
         e
       );
     })();
-    function b(e, t, n) {
+    function b(e, t) {
+      var n = e;
+      return (
+        (n.lastModifiedDate = new Date()),
+        (n.name = t || Date.now().toString()),
+        e
+      );
+    }
+    function g(e, t, n) {
       for (var r = t.parentElement; r && r !== e && !r.hasAttribute(n); )
         r = r.parentElement;
       return r || e;
     }
-    function g(e, t) {
+    function w(e, t) {
       for (var n = [], r = [e]; r.length > 0; )
         for (var o = r.pop().children, i = 0; i < o.length; ++i) {
           var c = o[i];
@@ -416,44 +427,47 @@ var CLSTAMP = "5902157";
       n.d(t, "a", function() {
         return o;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "o", function() {
         return i;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return c;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return a;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return s;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return l;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return u;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return m;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "m", function() {
         return p;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "l", function() {
         return h;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return d;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return f;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return v;
       }),
       n.d(t, "c", function() {
         return _;
+      }),
+      n.d(t, "d", function() {
+        return y;
       });
     var i = 1,
       c = 4,
@@ -468,6 +482,70 @@ var CLSTAMP = "5902157";
       f = 0,
       v = 2147483647;
     function _(e, t) {
+      switch ((void 0 === t && (t = ""), e)) {
+        case 0:
+          return "english";
+        case 1:
+          return "german";
+        case 2:
+          return "french";
+        case 3:
+          return "italian";
+        case 4:
+          return "korean";
+        case 5:
+          return "spanish";
+        case 6:
+          return "schinese";
+        case 7:
+          return "tchinese";
+        case 8:
+          return "russian";
+        case 9:
+          return "thai";
+        case 10:
+          return "japanese";
+        case 11:
+          return "portuguese";
+        case 12:
+          return "polish";
+        case 13:
+          return "danish";
+        case 14:
+          return "dutch";
+        case 15:
+          return "finnish";
+        case 16:
+          return "norwegian";
+        case 17:
+          return "swedish";
+        case 18:
+          return "hungarian";
+        case 19:
+          return "czech";
+        case 20:
+          return "romanian";
+        case 21:
+          return "turkish";
+        case 25:
+          return "arabic";
+        case 22:
+          return "brazilian";
+        case 23:
+          return "bulgarian";
+        case 24:
+          return "greek";
+        case 26:
+          return "ukrainian";
+        case 27:
+          return "latam";
+        case 28:
+          return "vietnamese";
+        default:
+          return t;
+      }
+    }
+    function y(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -564,28 +642,31 @@ var CLSTAMP = "5902157";
     function o() {
       return !!window.document;
     }
-    n.d(t, "b", function() {
+    n.d(t, "c", function() {
       return c;
     }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return a;
       }),
       n.d(t, "a", function() {
         return s;
       }),
-      n.d(t, "e", function() {
-        return m;
-      }),
-      n.d(t, "g", function() {
-        return p;
+      n.d(t, "b", function() {
+        return l;
       }),
       n.d(t, "f", function() {
+        return m;
+      }),
+      n.d(t, "h", function() {
+        return p;
+      }),
+      n.d(t, "g", function() {
         return h;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return d;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "e", function() {
         return f;
       });
     var i,
@@ -1396,7 +1477,7 @@ var CLSTAMP = "5902157";
               if (i) {
                 this.props.options.bScreenCoordinates ||
                   ((s += n.screenLeft), (u += n.screenTop)),
-                  (r = l.h(n, r));
+                  (r = l.i(n, r));
                 var h = n.screen,
                   d = 0,
                   f = 0;
@@ -1586,7 +1667,7 @@ var CLSTAMP = "5902157";
                 height: 1
               };
             else {
-              var t = l.h(
+              var t = l.i(
                 this.m_menuProps.element.ownerDocument.defaultView,
                 this.m_menuProps.element.getBoundingClientRect()
               );
@@ -1627,7 +1708,7 @@ var CLSTAMP = "5902157";
     }
     function k(e) {
       var t = [],
-        n = l.p(e),
+        n = l.q(e),
         r = n.getSelection(),
         o = r && r.rangeCount > 0 && r.toString().length > 0,
         c = e.target,
@@ -1646,7 +1727,7 @@ var CLSTAMP = "5902157";
                   n.document.execCommand("cut");
                 }
               },
-              Object(h.c)("#ContextMenu_Cut")
+              Object(h.d)("#ContextMenu_Cut")
             )
           ),
         (document.queryCommandEnabled("copy") || o) &&
@@ -1659,10 +1740,10 @@ var CLSTAMP = "5902157";
                   n.document.execCommand("copy");
                 }
               },
-              Object(h.c)("#ContextMenu_Copy")
+              Object(h.d)("#ContextMenu_Copy")
             )
           ),
-        d.b.IN_CLIENT &&
+        d.c.IN_CLIENT &&
           s &&
           t.push(
             i.createElement(
@@ -1673,7 +1754,7 @@ var CLSTAMP = "5902157";
                   c.focus(), n.SteamClient._internal.Paste();
                 }
               },
-              Object(h.c)("#ContextMenu_Paste")
+              Object(h.d)("#ContextMenu_Paste")
             )
           ),
         t.length)
@@ -1941,10 +2022,10 @@ var CLSTAMP = "5902157";
                   c.addEventListener("drop", this.OnDrop),
                   c.addEventListener("dragover", this.OnDragOver),
                   c.addEventListener("message", this.OnMessage),
-                  p.b.LANGUAGE)
+                  p.c.LANGUAGE)
                 ) {
-                  var l = "koreana" == p.b.LANGUAGE ? "korean" : p.b.LANGUAGE;
-                  c.document.documentElement.setAttribute("lang", m.a[l]);
+                  var l = "koreana" == p.c.LANGUAGE ? "korean" : p.c.LANGUAGE;
+                  c.document.documentElement.setAttribute("lang", m.b[l]);
                 }
                 (this.m_popup = c),
                   (this.m_element = a),
@@ -2427,6 +2508,231 @@ var CLSTAMP = "5902157";
       _ = new v();
     window.g_PopupManager = _;
   },
+  Kcgk: function(e, t, n) {
+    "use strict";
+    n.d(t, "h", function() {
+      return c;
+    }),
+      n.d(t, "d", function() {
+        return a;
+      }),
+      n.d(t, "e", function() {
+        return s;
+      }),
+      n.d(t, "f", function() {
+        return u;
+      }),
+      n.d(t, "g", function() {
+        return h;
+      }),
+      n.d(t, "a", function() {
+        return d;
+      }),
+      n.d(t, "c", function() {
+        return b;
+      }),
+      n.d(t, "b", function() {
+        return g;
+      });
+    var r = n("oh5H"),
+      o = n("ujHl"),
+      i = n("Gp1o");
+    function c(e, t) {
+      void 0 === t && (t = !1);
+      var n = t ? "#TimeInterval_" : "#TimeSince_";
+      return e >= 2 * o.d.PerYear
+        ? Object(r.d)(n + "XYears", Math.floor(e / o.d.PerYear))
+        : e >= o.d.PerYear
+        ? (e -= o.d.PerYear) >= 2 * o.d.PerMonth
+          ? Object(r.d)(n + "1YearXMonths", Math.floor(e / o.d.PerMonth))
+          : Object(r.d)(n + "1Year")
+        : e >= 2 * o.d.PerMonth
+        ? Object(r.d)(n + "XMonths", Math.floor(e / o.d.PerMonth))
+        : e >= 2 * o.d.PerWeek
+        ? Object(r.d)(n + "XWeeks", Math.floor(e / o.d.PerWeek))
+        : e >= o.d.PerWeek
+        ? Object(r.d)(n + "1Week", Math.floor(e / o.d.PerWeek))
+        : e >= 2 * o.d.PerDay
+        ? Object(r.d)(n + "XDays", Math.floor(e / o.d.PerDay))
+        : e >= o.d.PerDay
+        ? (e -= o.d.PerDay) >= 2 * o.d.PerHour
+          ? Object(r.d)(n + "1DayXHours", Math.floor(e / o.d.PerHour))
+          : Object(r.d)(n + "1Day")
+        : e >= 2 * o.d.PerHour
+        ? Object(r.d)(n + "XHours", Math.floor(e / o.d.PerHour))
+        : e >= o.d.PerHour
+        ? (e -= o.d.PerHour) >= 2 * o.d.PerMinute
+          ? Object(r.d)(n + "1HourXMinutes", Math.floor(e / o.d.PerMinute))
+          : Object(r.d)(n + "1Hour")
+        : e >= 2 * o.d.PerMinute
+        ? Object(r.d)(n + "XMinutes", Math.floor(e / o.d.PerMinute))
+        : e >= o.d.PerMinute
+        ? Object(r.d)(n + "1Minute")
+        : Object(r.d)(n + "LessThanAMinute");
+    }
+    function a(e, t) {
+      var n = {
+        weekday: "short",
+        month: "long",
+        day: "numeric",
+        year: t ? void 0 : "numeric"
+      };
+      return new Date(1e3 * e).toLocaleDateString(r.c.GetPreferredLocales(), n);
+    }
+    function s(e) {
+      return new Date(1e3 * e).toLocaleTimeString(r.c.GetPreferredLocales(), {
+        hour: "numeric",
+        minute: "numeric"
+      });
+    }
+    var l = new Map();
+    function u(e) {
+      var t = new Date(1e3 * e),
+        n = r.c.GetPreferredLocales(),
+        o = (function(e) {
+          var t = l.get(e);
+          if (!0 === t || !1 === t) return t;
+          var n = new Date();
+          return (
+            n.setHours(15),
+            (t =
+              n.toLocaleTimeString(e, { hour: "numeric" }) ==
+              n.toLocaleTimeString(e, { hour: "numeric", hour12: !1 })),
+            l.set(e, t),
+            t
+          );
+        })(n[0]);
+      return t.toLocaleTimeString(
+        n,
+        o
+          ? { hour: "numeric", minute: "numeric" }
+          : { hour: "numeric", hour12: !0 }
+      );
+    }
+    var m = new Map(),
+      p = new Map();
+    function h(e, t) {
+      var n = new Date(),
+        o = new Date(1e3 * e);
+      if (o.getFullYear() != n.getFullYear())
+        return (function(e) {
+          var t = new Date(1e3 * e),
+            n = t.setHours(0, 0, 0, 0),
+            o = m.get(n);
+          return (
+            o ||
+            ((o = t.toLocaleDateString(r.c.GetPreferredLocales(), {
+              year: "numeric",
+              month: "short",
+              day: "numeric"
+            })),
+            m.set(n, o),
+            o)
+          );
+        })(e);
+      i.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
+      var c = new Date();
+      if ((c.setHours(0, 0, 0, 0), o >= c)) {
+        if ((c.setDate(c.getDate() + 1), o < c))
+          return Object(r.d)("#Time_Today");
+        if ((c.setDate(c.getDate() + 1), o < c))
+          return Object(r.d)("#Time_Tomorrow");
+      } else if ((c.setDate(c.getDate() - 1), o >= c))
+        return Object(r.d)("#Time_Yesterday");
+      var a = { month: t ? "long" : "short", day: "numeric" },
+        s = o.setHours(0, 0, 0, 0) + a.month,
+        l = p.get(s);
+      return (
+        l ||
+        ((l = o.toLocaleDateString(r.c.GetPreferredLocales(), a)),
+        p.set(s, l),
+        l)
+      );
+    }
+    function d(e) {
+      var t = new Date(1e3 * e),
+        n = new Date();
+      if (t > n)
+        return (
+          i.b(t.getTime() - n.getTime()),
+          t.getFullYear() == n.getFullYear() ? w(t) : E(t)
+        );
+      i.b(new Date().setHours(24, 0, 0, 0) - n.getTime());
+      var c = new Date();
+      if ((c.setHours(0, 0, 0, 0), t >= c)) return Object(r.d)("#Time_Today");
+      if ((c.setDate(c.getDate() - 1), t >= c))
+        return Object(r.d)("#Time_Yesterday");
+      if ((c.setDate(c.getDate() - 5), t >= c))
+        return Object(r.d)("#TimeSince_ThisWeek");
+      var a = new Date(c);
+      if (
+        (c.setDate(c.getDate() - 21),
+        t >= c ||
+          (t.getMonth() == n.getMonth() && t.getFullYear() == n.getFullYear()))
+      ) {
+        var s =
+          Math.floor((a.valueOf() - t.valueOf()) / (1e3 * o.d.PerWeek)) + 1;
+        return 1 == s
+          ? Object(r.d)("#TimeSince_1Week")
+          : Object(r.d)("#TimeSince_XWeeks", s);
+      }
+      return t.getFullYear() == n.getFullYear() ? w(t) : E(t);
+    }
+    var f = new Map(),
+      v = new Map(),
+      _ = (new Map(), new Map()),
+      y = new Map();
+    function b(e, t) {
+      void 0 === t && (t = !1);
+      var n = e.getDate() + 31 * (e.getMonth() + 12 * e.getFullYear()),
+        o = y.get(n);
+      return (
+        o ||
+        ((o = e.toLocaleDateString(r.c.GetPreferredLocales(), {
+          weekday: "long",
+          day: "numeric",
+          month: t ? "long" : "short"
+        })),
+        y.set(n, o),
+        o)
+      );
+    }
+    function g(e) {
+      var t = f.get(e.getDay());
+      return (
+        t ||
+        ((t = e.toLocaleDateString(r.c.GetPreferredLocales(), {
+          weekday: "long"
+        })),
+        f.set(e.getDay(), t),
+        t)
+      );
+    }
+    function w(e) {
+      var t = v.get(e.getMonth());
+      return (
+        t ||
+        ((t = e.toLocaleDateString(r.c.GetPreferredLocales(), {
+          month: "long"
+        })),
+        v.set(e.getMonth(), t),
+        t)
+      );
+    }
+    function E(e) {
+      var t = e.getMonth() + 12 * e.getFullYear(),
+        n = _.get(t);
+      return (
+        n ||
+        ((n = e.toLocaleDateString(r.c.GetPreferredLocales(), {
+          month: "long",
+          year: "numeric"
+        })),
+        _.set(t, n),
+        n)
+      );
+    }
+  },
   QHER: function(e, t, n) {
     "use strict";
     function r(e) {
@@ -2453,7 +2759,7 @@ var CLSTAMP = "5902157";
   },
   UqDm: function(e, t, n) {
     "use strict";
-    n.d(t, "g", function() {
+    n.d(t, "h", function() {
       return r;
     }),
       n.d(t, "f", function() {
@@ -2471,14 +2777,17 @@ var CLSTAMP = "5902157";
       n.d(t, "a", function() {
         return s;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return l;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return u;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "g", function() {
         return m;
+      }),
+      n.d(t, "e", function() {
+        return p;
       });
     n("XaMz");
     function r(e) {
@@ -2530,7 +2839,16 @@ var CLSTAMP = "5902157";
       var r = l(e, t, n);
       e.splice(r + 1, 0, t);
     }
-    function m(e, t) {
+    function m(e, t, n) {
+      return (
+        e ||
+          console.error(
+            "array should be defined for us to fill in the missing indexes"
+          ),
+        e.length < t ? e.concat(Array(t - e.length).fill(n)) : e
+      );
+    }
+    function p(e, t) {
       if (t)
         for (var n = e.length - 1; n >= 0; --n) {
           var r = e[n];
@@ -2554,11 +2872,11 @@ var CLSTAMP = "5902157";
     function h(e) {
       switch (e) {
         case 1:
-          return Object(c.c)("#Privacy_Private");
+          return Object(c.d)("#Privacy_Private");
         case 2:
-          return Object(c.c)("#Privacy_FriendsOnly");
+          return Object(c.d)("#Privacy_FriendsOnly");
         case 3:
-          return Object(c.c)("#Privacy_Public");
+          return Object(c.d)("#Privacy_Public");
         default:
           return "";
       }
@@ -2661,8 +2979,8 @@ var CLSTAMP = "5902157";
                   if (1 != n.success)
                     return (
                       ShowAlertDialog(
-                        Object(c.c)("#Error_Error"),
-                        Object(c.c)("#Error_CommentEditFailed")
+                        Object(c.d)("#Error_Error"),
+                        Object(c.d)("#Error_CommentEditFailed")
                       ),
                       !1
                     );
@@ -2681,8 +2999,8 @@ var CLSTAMP = "5902157";
                 .catch(function(e) {
                   return (
                     ShowAlertDialog(
-                      Object(c.c)("#Error_Error"),
-                      Object(c.c)("#Error_CommentEditFailed")
+                      Object(c.d)("#Error_Error"),
+                      Object(c.d)("#Error_CommentEditFailed")
                     ),
                     !1
                   );
@@ -2715,28 +3033,28 @@ var CLSTAMP = "5902157";
                 w,
                 {
                   PrivacyStore: e,
-                  strLabel: Object(c.c)("#ProfilePrivacy_BasicDetails"),
+                  strLabel: Object(c.d)("#ProfilePrivacy_BasicDetails"),
                   strReadOnlySetting: h(3)
                 },
-                Object(c.c)("#ProfilePrivacy_BasicDetails_Desc")
+                Object(c.d)("#ProfilePrivacy_BasicDetails_Desc")
               ),
               r.createElement("div", { className: "ProfilePrivacyHR" }),
               r.createElement(
                 w,
                 {
                   PrivacyStore: e,
-                  strLabel: Object(c.c)("#ProfilePrivacy_Profile"),
+                  strLabel: Object(c.d)("#ProfilePrivacy_Profile"),
                   PrivacyKey: "PrivacyProfile"
                 },
                 r.createElement(
                   "p",
                   null,
-                  Object(c.c)("#ProfilePrivacy_Profile_Desc")
+                  Object(c.d)("#ProfilePrivacy_Profile_Desc")
                 ),
                 r.createElement(
                   "p",
                   null,
-                  Object(c.c)("#ProfilePrivacy_Profile_Desc2")
+                  Object(c.d)("#ProfilePrivacy_Profile_Desc2")
                 )
               ),
               r.createElement(
@@ -2746,11 +3064,11 @@ var CLSTAMP = "5902157";
                   w,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(c.c)("#ProfilePrivacy_GameLibrary"),
+                    strLabel: Object(c.d)("#ProfilePrivacy_GameLibrary"),
                     PrivacyKey: "PrivacyOwnedGames",
                     LimitPrivacyKey: "PrivacyProfile"
                   },
-                  Object(c.c)("#ProfilePrivacy_GameLibrary_Desc"),
+                  Object(c.d)("#ProfilePrivacy_GameLibrary_Desc"),
                   1 != e.GetPrivacySetting("PrivacyOwnedGames") &&
                     r.createElement(
                       M,
@@ -2759,7 +3077,7 @@ var CLSTAMP = "5902157";
                         PrivacyKey: "PrivacyPlaytime",
                         LimitPrivacyKey: "PrivacyOwnedGames"
                       },
-                      Object(c.c)("#ProfilePrivacy_Playtime")
+                      Object(c.d)("#ProfilePrivacy_Playtime")
                     )
                 ),
                 r.createElement("div", { className: "ProfilePrivacyHR" }),
@@ -2767,32 +3085,32 @@ var CLSTAMP = "5902157";
                   w,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(c.c)("#ProfilePrivacy_FriendsList"),
+                    strLabel: Object(c.d)("#ProfilePrivacy_FriendsList"),
                     PrivacyKey: "PrivacyFriendsList",
                     LimitPrivacyKey: "PrivacyProfile"
                   },
-                  Object(c.c)("#ProfilePrivacy_FriendsList_Desc")
+                  Object(c.d)("#ProfilePrivacy_FriendsList_Desc")
                 ),
                 r.createElement("div", { className: "ProfilePrivacyHR" }),
                 r.createElement(
                   w,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(c.c)("#ProfilePrivacy_Inventory"),
+                    strLabel: Object(c.d)("#ProfilePrivacy_Inventory"),
                     PrivacyKey: "PrivacyInventory",
                     LimitPrivacyKey: "PrivacyProfile"
                   },
-                  Object(c.e)(
+                  Object(c.k)(
                     "#ProfilePrivacy_Inventory_Desc",
                     r.createElement(
                       "a",
                       { href: p.ProfileURL + "inventory/" },
-                      Object(c.c)("#ProfilePrivacy_Inventory_Inventory")
+                      Object(c.d)("#ProfilePrivacy_Inventory_Inventory")
                     ),
                     r.createElement(
                       "a",
                       { href: p.ProfileURL + "inventory/#753_6" },
-                      Object(c.c)("#ProfilePrivacy_Inventory_TradingCards")
+                      Object(c.d)("#ProfilePrivacy_Inventory_TradingCards")
                     )
                   ),
                   1 != e.GetPrivacySetting("PrivacyInventory") &&
@@ -2803,14 +3121,14 @@ var CLSTAMP = "5902157";
                         PrivacyKey: "PrivacyInventoryGifts",
                         LimitPrivacyKey: "PrivacyInventory"
                       },
-                      Object(c.c)("#ProfilePrivacy_Gifts")
+                      Object(c.d)("#ProfilePrivacy_Gifts")
                     )
                 ),
                 r.createElement("div", { className: "ProfilePrivacyHR" }),
                 r.createElement(
                   E,
                   null,
-                  Object(c.c)("#ProfilePrivacy_Comments"),
+                  Object(c.d)("#ProfilePrivacy_Comments"),
                   ":",
                   r.createElement(C, { PrivacyStore: e })
                 ),
@@ -2819,20 +3137,20 @@ var CLSTAMP = "5902157";
                   w,
                   {
                     PrivacyStore: e,
-                    strLabel: Object(c.c)("#ProfilePrivacy_UGC"),
-                    strReadOnlySetting: Object(c.c)("#Privacy_PerItem")
+                    strLabel: Object(c.d)("#ProfilePrivacy_UGC"),
+                    strReadOnlySetting: Object(c.d)("#Privacy_PerItem")
                   },
-                  Object(c.e)(
+                  Object(c.k)(
                     "#ProfilePrivacy_UGC_Desc",
                     r.createElement(
                       "a",
                       { href: p.ProfileURL + "screenshots/" },
-                      Object(c.c)("#ProfilePrivacy_UGC_Desc_Screenshots")
+                      Object(c.d)("#ProfilePrivacy_UGC_Desc_Screenshots")
                     ),
                     r.createElement(
                       "a",
                       { href: p.ProfileURL + "myworkshopfiles/" },
-                      Object(c.c)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
+                      Object(c.d)("#ProfilePrivacy_UGC_Desc_WorkshopItems")
                     )
                   )
                 )
@@ -2942,19 +3260,19 @@ var CLSTAMP = "5902157";
           return r.createElement(
             "div",
             { className: "PrivacySaveNotice Saving" },
-            Object(c.c)("#Shared_Saving")
+            Object(c.d)("#Shared_Saving")
           );
         case 3:
           return r.createElement(
             "div",
             { className: "PrivacySaveNotice Error" },
-            Object(c.c)("#Error_Error")
+            Object(c.d)("#Error_Error")
           );
         case 2:
           return r.createElement(
             "div",
             { className: "PrivacySaveNotice Saved" },
-            Object(c.c)("#Shared_Saved")
+            Object(c.d)("#Shared_Saved")
           );
         case 0:
         default:
@@ -3035,11 +3353,11 @@ var CLSTAMP = "5902157";
               a = (function(e) {
                 switch (e) {
                   case 0:
-                    return Object(c.c)("#Privacy_FriendsOnly");
+                    return Object(c.d)("#Privacy_FriendsOnly");
                   case 1:
-                    return Object(c.c)("#Privacy_Public");
+                    return Object(c.d)("#Privacy_Public");
                   case 2:
-                    return Object(c.c)("#Privacy_Private");
+                    return Object(c.d)("#Privacy_Private");
                   default:
                     return "";
                 }
@@ -3095,7 +3413,7 @@ var CLSTAMP = "5902157";
                       return e.props.OnChange(3);
                     }
                   },
-                  Object(c.c)("#Privacy_Public")
+                  Object(c.d)("#Privacy_Public")
                 ),
               (!t || t >= 2) &&
                 r.createElement(
@@ -3105,7 +3423,7 @@ var CLSTAMP = "5902157";
                       return e.props.OnChange(2);
                     }
                   },
-                  Object(c.c)("#Privacy_FriendsOnly")
+                  Object(c.d)("#Privacy_FriendsOnly")
                 ),
               r.createElement(
                 y.d,
@@ -3114,7 +3432,7 @@ var CLSTAMP = "5902157";
                     return e.props.OnChange(1);
                   }
                 },
-                Object(c.c)("#Privacy_Private")
+                Object(c.d)("#Privacy_Private")
               )
             );
           }),
@@ -3140,9 +3458,9 @@ var CLSTAMP = "5902157";
                     onSelected: function() {
                       return e.props.OnChange(1);
                     },
-                    title: Object(c.c)("#Profile_CommentPermission_Public_Desc")
+                    title: Object(c.d)("#Profile_CommentPermission_Public_Desc")
                   },
-                  Object(c.c)("#Privacy_Public")
+                  Object(c.d)("#Privacy_Public")
                 ),
               (!t || t >= 2) &&
                 r.createElement(
@@ -3151,11 +3469,11 @@ var CLSTAMP = "5902157";
                     onSelected: function() {
                       return e.props.OnChange(0);
                     },
-                    title: Object(c.c)(
+                    title: Object(c.d)(
                       "#Profile_CommentPermission_FriendsOnly_Desc"
                     )
                   },
-                  Object(c.c)("#Privacy_FriendsOnly")
+                  Object(c.d)("#Privacy_FriendsOnly")
                 ),
               r.createElement(
                 y.d,
@@ -3163,9 +3481,9 @@ var CLSTAMP = "5902157";
                   onSelected: function() {
                     return e.props.OnChange(2);
                   },
-                  title: Object(c.c)("#Profile_CommentPermission_Private_Desc")
+                  title: Object(c.d)("#Profile_CommentPermission_Private_Desc")
                 },
-                Object(c.c)("#Privacy_Private")
+                Object(c.d)("#Privacy_Private")
               )
             );
           }),
@@ -3206,7 +3524,7 @@ var CLSTAMP = "5902157";
       }),
       (window.LocalizationManifestReady = function(e, t, n) {
         Object(a.a)("manifest" === t, 'Expected manifest not "' + t + '"'),
-          c.b.InitDirect(n);
+          c.c.InitDirect(n);
       });
   },
   WpBz: function(e, t, n) {
@@ -3336,37 +3654,37 @@ var CLSTAMP = "5902157";
         return N;
       }),
       n.d(t, "ob", function() {
-        return B;
-      }),
-      n.d(t, "M", function() {
         return T;
       }),
-      n.d(t, "l", function() {
-        return R;
+      n.d(t, "M", function() {
+        return B;
       }),
-      n.d(t, "Q", function() {
+      n.d(t, "l", function() {
         return D;
       }),
+      n.d(t, "Q", function() {
+        return R;
+      }),
       n.d(t, "O", function() {
-        return V;
+        return G;
       }),
       n.d(t, "bb", function() {
-        return G;
+        return V;
       }),
       n.d(t, "h", function() {
         return W;
       }),
       n.d(t, "m", function() {
-        return H;
+        return j;
       }),
       n.d(t, "f", function() {
-        return z;
+        return H;
       }),
       n.d(t, "F", function() {
         return F;
       }),
       n.d(t, "hb", function() {
-        return j;
+        return z;
       }),
       n.d(t, "lb", function() {
         return A;
@@ -4566,7 +4884,7 @@ var CLSTAMP = "5902157";
         })
       );
     }
-    function B(e) {
+    function T(e) {
       return o.createElement(
         "svg",
         {
@@ -4638,7 +4956,7 @@ var CLSTAMP = "5902157";
         )
       );
     }
-    function T() {
+    function B() {
       return o.createElement(
         "svg",
         {
@@ -4676,7 +4994,7 @@ var CLSTAMP = "5902157";
         })
       );
     }
-    function R() {
+    function D() {
       return o.createElement(
         "svg",
         {
@@ -4700,7 +5018,7 @@ var CLSTAMP = "5902157";
         )
       );
     }
-    function D() {
+    function R() {
       return o.createElement(
         "svg",
         {
@@ -4721,7 +5039,7 @@ var CLSTAMP = "5902157";
         })
       );
     }
-    function V() {
+    function G() {
       return o.createElement(
         "svg",
         {
@@ -4745,7 +5063,7 @@ var CLSTAMP = "5902157";
         })
       );
     }
-    function G(e) {
+    function V(e) {
       return o.createElement(
         "svg",
         {
@@ -4858,7 +5176,7 @@ var CLSTAMP = "5902157";
         })
       );
     }
-    function H(e) {
+    function j(e) {
       var t = e.highlightColor || "#00ccff",
         n = e.color || "#2d73ff";
       return o.createElement(
@@ -4938,7 +5256,7 @@ var CLSTAMP = "5902157";
         })
       );
     }
-    function z(e) {
+    function H(e) {
       var t = e.color || "#020202";
       return o.createElement(
         "svg",
@@ -5027,7 +5345,7 @@ var CLSTAMP = "5902157";
         })
       );
     }
-    function j(e) {
+    function z(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -6632,7 +6950,7 @@ var CLSTAMP = "5902157";
     var r = n("mrSG"),
       o = n("0N1H");
     n.d(t, "m", function() {
-      return o.c;
+      return o.d;
     });
     var i = n("2vnA"),
       c = (function() {
@@ -7080,49 +7398,30 @@ and limitations under the License.
   },
   oh5H: function(e, t, n) {
     "use strict";
+    n.d(t, "d", function() {
+      return s;
+    }),
+      n.d(t, "k", function() {
+        return l;
+      }),
+      n.d(t, "i", function() {
+        return u;
+      }),
+      n.d(t, "b", function() {
+        return m;
+      }),
+      n.d(t, "a", function() {
+        return p;
+      }),
+      n.d(t, "c", function() {
+        return h;
+      });
     var r = n("mrSG"),
       o = n("q1tI"),
       i = n("0N1H"),
       c = n("1n9R"),
-      a = (n("XaMz"), n("ujHl"));
-    n("Gp1o");
-    function s(e, t) {
-      void 0 === t && (t = !1);
-      var n = t ? "#TimeInterval_" : "#TimeSince_";
-      return e >= 2 * a.b.PerYear
-        ? l(n + "XYears", Math.floor(e / a.b.PerYear))
-        : e >= a.b.PerYear
-        ? (e -= a.b.PerYear) >= 2 * a.b.PerMonth
-          ? l(n + "1YearXMonths", Math.floor(e / a.b.PerMonth))
-          : l(n + "1Year")
-        : e >= 2 * a.b.PerMonth
-        ? l(n + "XMonths", Math.floor(e / a.b.PerMonth))
-        : e >= 2 * a.b.PerWeek
-        ? l(n + "XWeeks", Math.floor(e / a.b.PerWeek))
-        : e >= a.b.PerWeek
-        ? l(n + "1Week", Math.floor(e / a.b.PerWeek))
-        : e >= 2 * a.b.PerDay
-        ? l(n + "XDays", Math.floor(e / a.b.PerDay))
-        : e >= a.b.PerDay
-        ? (e -= a.b.PerDay) >= 2 * a.b.PerHour
-          ? l(n + "1DayXHours", Math.floor(e / a.b.PerHour))
-          : l(n + "1Day")
-        : e >= 2 * a.b.PerHour
-        ? l(n + "XHours", Math.floor(e / a.b.PerHour))
-        : e >= a.b.PerHour
-        ? (e -= a.b.PerHour) >= 2 * a.b.PerMinute
-          ? l(n + "1HourXMinutes", Math.floor(e / a.b.PerMinute))
-          : l(n + "1Hour")
-        : e >= 2 * a.b.PerMinute
-        ? l(n + "XMinutes", Math.floor(e / a.b.PerMinute))
-        : e >= a.b.PerMinute
-        ? l(n + "1Minute")
-        : l(n + "LessThanAMinute");
-    }
-    new Map();
-    new Map(), new Map();
-    new Map(), new Map(), new Map(), new Map(), new Map();
-    function l(e) {
+      a = (n("XaMz"), n("Kcgk"));
+    function s(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
       var r = h.LocalizeString(e);
@@ -7138,7 +7437,7 @@ and limitations under the License.
           r)
         : e;
     }
-    function u(e) {
+    function l(e) {
       for (var t = [], n = 1; n < arguments.length; n++)
         t[n - 1] = arguments[n];
       var i = h.LocalizeString(e);
@@ -7153,32 +7452,35 @@ and limitations under the License.
         o.createElement.apply(o, Object(r.g)([o.Fragment, null], a))
       );
     }
-    function m(e, t) {
+    function u(e, t) {
       for (var n = [], o = 2; o < arguments.length; o++)
         n[o - 2] = arguments[o];
       return 1 === t || "1" === t
-        ? l.apply(void 0, Object(r.g)([e, t], n))
-        : l.apply(void 0, Object(r.g)([e + "_Plural", t], n));
+        ? s.apply(void 0, Object(r.g)([e, t], n))
+        : s.apply(void 0, Object(r.g)([e + "_Plural", t], n));
     }
-    n.d(t, "c", function() {
-      return l;
+    n.d(t, "e", function() {
+      return a.a;
     }),
-      n.d(t, "e", function() {
-        return u;
-      }),
-      n.d(t, "d", function() {
-        return m;
-      }),
-      n.d(t, "a", function() {
-        return p;
-      }),
-      n.d(t, "b", function() {
-        return h;
-      }),
       n.d(t, "f", function() {
-        return s;
+        return a.b;
+      }),
+      n.d(t, "h", function() {
+        return a.d;
+      }),
+      n.d(t, "j", function() {
+        return a.e;
+      }),
+      n.d(t, "l", function() {
+        return a.g;
+      }),
+      n.d(t, "m", function() {
+        return a.h;
+      }),
+      n.d(t, "g", function() {
+        return a.c;
       });
-    var p = {
+    var m = {
       english: "en",
       german: "de",
       french: "fr",
@@ -7209,6 +7511,10 @@ and limitations under the License.
       ukrainian: "uk",
       vietnamese: "vn"
     };
+    function p() {
+      var e = "koreana" == c.c.LANGUAGE ? "korean" : c.c.LANGUAGE;
+      return m[e] || null;
+    }
     var h = new ((function() {
       function e() {
         (this.m_mapTokens = new Map()), (this.m_mapFallbackTokens = new Map());
@@ -7246,9 +7552,9 @@ and limitations under the License.
         (e.prototype.GetELanguageFallbackOrder = function() {
           var e = new Array();
           return (
-            e.push(Object(i.c)(c.b.LANGUAGE)),
-            (c.b.SUPPORTED_LANGUAGES || []).forEach(function(t) {
-              t.value != c.b.LANGUAGE && e.push(Object(i.c)(t.value));
+            e.push(Object(i.d)(c.c.LANGUAGE)),
+            (c.c.SUPPORTED_LANGUAGES || []).forEach(function(t) {
+              t.value != c.c.LANGUAGE && e.push(Object(i.d)(t.value));
             }),
             e
           );
@@ -7276,16 +7582,16 @@ and limitations under the License.
     "use strict";
     var r = n("1n9R");
     n.d(t, "a", function() {
-      return r.b;
+      return r.c;
     }),
       n.d(t, "d", function() {
-        return r.h;
+        return r.i;
       }),
       n.d(t, "c", function() {
-        return r.g;
+        return r.h;
       }),
       n.d(t, "b", function() {
-        return r.f;
+        return r.g;
       });
   },
   twdX: function(e, t, n) {
@@ -7333,14 +7639,20 @@ and limitations under the License.
   },
   ujHl: function(e, t, n) {
     "use strict";
-    n.d(t, "b", function() {
+    n.d(t, "d", function() {
       return r;
     }),
       n.d(t, "a", function() {
         return o;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "b", function() {
         return i;
+      }),
+      n.d(t, "c", function() {
+        return c;
+      }),
+      n.d(t, "e", function() {
+        return a;
       });
     var r = {
       PerYear: 31536e3,
@@ -7350,10 +7662,20 @@ and limitations under the License.
       PerHour: 3600,
       PerMinute: 60
     };
-    function o(e) {
+    function o(e, t) {
+      return (
+        e.getFullYear() == t.getFullYear() &&
+        e.getMonth() == t.getMonth() &&
+        e.getDate() == t.getDate()
+      );
+    }
+    function i(e, t) {
+      return e.getFullYear() == t.getFullYear();
+    }
+    function c(e) {
       return new Date(e.getFullYear(), e.getMonth(), 1, 0, 0, 0, 0);
     }
-    function i(e) {
+    function a(e) {
       return new Promise(function(t) {
         return setTimeout(t, e);
       });

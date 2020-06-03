@@ -108,7 +108,8 @@ GHomepage = {
 
 		InitHorizontalAutoSliders();
 
-		new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this) );
+		if ( $J( '#load_addtl_scroll_target' ).length )
+			new CScrollOffsetWatcher( '#load_addtl_scroll_target', GHomepage.OnHomeActivate.bind(this) );
 
 		if ( window.Responsive_ReparentItemsInResponsiveMode )
 		{
@@ -1189,6 +1190,12 @@ GHomepage = {
 		if(focusedAppID < 0) return;
 		
 		var $DeepDive =  $J('.deep_dive_block' );
+
+		if ( $DeepDive.length == 0 )
+		{
+			return;
+		}
+
 		var $RecommendedByDeepDiveTitle = $J('.recommended_by_deep_dive_title');
 		
 		var rgOptions = $J.extend({

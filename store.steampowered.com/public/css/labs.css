@@ -611,3 +611,17 @@ a.ultracast_now_playing_link:hover .ds_options {
 	background-color: #08eaf4;
 	box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.35);
 }
+
+.internal_header
+{
+	color: red;
+	font-weight: bold;
+}
+
+.internal_links
+{
+	background-color:#28429B;
+	font-weight:bold;
+	padding:5px;
+	color: #07d1da;
+}
