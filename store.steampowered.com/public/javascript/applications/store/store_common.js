@@ -300,8 +300,8 @@
                 r.a.createElement(
                   "div",
                   { className: s.a.Throbber },
-                  r.a.createElement(i.B, { className: s.a.base }),
-                  r.a.createElement(i.B, { className: s.a.blur })
+                  r.a.createElement(i.C, { className: s.a.base }),
+                  r.a.createElement(i.C, { className: s.a.blur })
                 )
               );
               return r.a.createElement(
@@ -430,7 +430,7 @@
                         disabled: t,
                         "data-tooltip-text": o
                       },
-                      this.props.buttonIcon || c.a.createElement(l.i, null),
+                      this.props.buttonIcon || c.a.createElement(l.j, null),
                       i && c.a.createElement(p.c, null)
                     ))
               );
@@ -5063,7 +5063,7 @@
                       onClick: this.OnOpenContextMenu
                     },
                     " ",
-                    E.createElement(q.g, { angle: -90 }),
+                    E.createElement(q.h, { angle: -90 }),
                     " "
                   )
                 : null;
@@ -8625,7 +8625,7 @@
                 i.a.createElement(
                   "div",
                   { className: d.a.LoginPanelBackground },
-                  i.a.createElement(s.z, null)
+                  i.a.createElement(s.A, null)
                 ),
                 i.a.createElement(
                   "div",
@@ -8891,7 +8891,7 @@
                 case v.TwoFactorCode:
                   (n = t.GetTwoFactorCode()),
                     (o = Object(z.d)("#Login_Enter2FA")),
-                    (e = i.a.createElement(s.l, null)),
+                    (e = i.a.createElement(s.m, null)),
                     (a = Object(z.d)("#Login_Enter2FAHelp"));
                   break;
                 case v.EmailCode:
@@ -8906,7 +8906,7 @@
                       )
                     )),
                     (a = Object(z.d)("#Login_EnterSteamguard")),
-                    (e = i.a.createElement(s.j, null));
+                    (e = i.a.createElement(s.k, null));
               }
               return i.a.createElement(
                 "div",
@@ -11455,7 +11455,7 @@
               i.createElement(
                 "div",
                 { className: b.a.Footer },
-                i.createElement(s.z, { className: b.a.Logo }),
+                i.createElement(s.A, { className: b.a.Logo }),
                 Object(l.d)("#GotSteam_Blurb")
               )
             )
@@ -14972,7 +14972,7 @@
                           c.a.createElement(
                             "div",
                             { className: y.a.DownArrow },
-                            c.a.createElement(M.k, { angle: 180 })
+                            c.a.createElement(M.l, { angle: 180 })
                           )
                         ),
                         c.a.createElement(
@@ -16797,9 +16797,9 @@
         MiniMode: "salesectioneventschedule_MiniMode__L0SI",
         AppTitle: "salesectioneventschedule_AppTitle_3q715",
         Icon: "salesectioneventschedule_Icon_26VBx",
-        Time: "salesectioneventschedule_Time_3qoMb",
         DetailsCtn: "salesectioneventschedule_DetailsCtn_3deMj",
         EventTitle: "salesectioneventschedule_EventTitle_109s-",
+        Time: "salesectioneventschedule_Time_3qoMb",
         SchedRowSelected: "salesectioneventschedule_SchedRowSelected_3GxYn",
         WideHeader: "salesectioneventschedule_WideHeader_wI_4v",
         WideDetailCtn: "salesectioneventschedule_WideDetailCtn_2UUN8",
@@ -19791,7 +19791,11 @@
         DemoThrobber: "demoappcapsule_DemoThrobber_2kwXN",
         DemoCapsuleEventReference:
           "demoappcapsule_DemoCapsuleEventReference_2gIpe",
+        DemoCapsuleReleaseAndPlatform:
+          "demoappcapsule_DemoCapsuleReleaseAndPlatform_20lpw",
         DemoCapsuleRelease: "demoappcapsule_DemoCapsuleRelease_3oE75",
+        DemoCapsuleReleasePrefix:
+          "demoappcapsule_DemoCapsuleReleasePrefix_1-dne",
         DemoCapsuleActionCtn: "demoappcapsule_DemoCapsuleActionCtn_2FQWe",
         DemoButton: "demoappcapsule_DemoButton_Pohdr",
         DisabledButton: "demoappcapsule_DisabledButton_3SqOM",
@@ -20051,7 +20055,7 @@
                             e && e.close();
                           }
                         },
-                        b.createElement(r.H, null)
+                        b.createElement(r.I, null)
                       ),
                       !this.props.hideMinMax &&
                         b.createElement(
@@ -20062,8 +20066,8 @@
                               e.SteamClient.Window.ToggleMaximize();
                             }
                           },
-                          this.state.maximized && b.createElement(r.u, null),
-                          !this.state.maximized && b.createElement(r.n, null)
+                          this.state.maximized && b.createElement(r.v, null),
+                          !this.state.maximized && b.createElement(r.o, null)
                         ),
                       !this.props.hideMinMax &&
                         b.createElement(
@@ -20074,7 +20078,7 @@
                               e.SteamClient.Window.Minimize();
                             }
                           },
-                          b.createElement(r.p, null)
+                          b.createElement(r.q, null)
                         )
                     )
                 )
@@ -22554,7 +22558,7 @@
                               p.createElement(
                                 "div",
                                 { className: V.a.VideoPlayButton },
-                                p.createElement(L.t, null)
+                                p.createElement(L.u, null)
                               )
                             )
                           : p.createElement("img", {
@@ -22594,7 +22598,7 @@
                     p.createElement(
                       "div",
                       { onClick: this.TogglePlayTrailer },
-                      p.createElement(L.H, null)
+                      p.createElement(L.I, null)
                     )
                   )
                 )
@@ -24777,7 +24781,7 @@
                               ),
                               onClick: this.Close
                             },
-                            g.createElement(d.H, null)
+                            g.createElement(d.I, null)
                           ),
                         g.createElement(
                           "div",
@@ -24789,7 +24793,7 @@
                             ),
                             onClick: this.ScrollToPrevEvent
                           },
-                          g.createElement(d.k, { angle: 0 })
+                          g.createElement(d.l, { angle: 0 })
                         ),
                         g.createElement(
                           "div",
@@ -24801,7 +24805,7 @@
                             ),
                             onClick: this.ScrollToNextEvent
                           },
-                          g.createElement(d.k, { angle: 180 })
+                          g.createElement(d.l, { angle: 180 })
                         ),
                         this.props.onAppIconClick &&
                           g.createElement(

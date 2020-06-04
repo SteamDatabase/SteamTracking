@@ -147,107 +147,110 @@
     },
     "6Y59": function(e, t, n) {
       "use strict";
-      n.d(t, "x", function() {
+      n.d(t, "y", function() {
         return a;
       }),
-        n.d(t, "h", function() {
+        n.d(t, "i", function() {
           return c;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "j", function() {
           return l;
         }),
-        n.d(t, "A", function() {
+        n.d(t, "B", function() {
           return u;
         }),
-        n.d(t, "H", function() {
+        n.d(t, "I", function() {
           return p;
         }),
-        n.d(t, "F", function() {
+        n.d(t, "G", function() {
           return d;
         }),
-        n.d(t, "q", function() {
+        n.d(t, "r", function() {
           return m;
         }),
-        n.d(t, "G", function() {
+        n.d(t, "H", function() {
           return h;
         }),
-        n.d(t, "D", function() {
+        n.d(t, "E", function() {
           return f;
         }),
-        n.d(t, "t", function() {
+        n.d(t, "u", function() {
           return g;
         }),
-        n.d(t, "s", function() {
+        n.d(t, "t", function() {
           return _;
         }),
         n.d(t, "c", function() {
           return v;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "g", function() {
           return b;
         }),
-        n.d(t, "m", function() {
+        n.d(t, "n", function() {
           return y;
         }),
-        n.d(t, "B", function() {
+        n.d(t, "C", function() {
           return M;
         }),
-        n.d(t, "g", function() {
+        n.d(t, "f", function() {
           return w;
         }),
-        n.d(t, "n", function() {
+        n.d(t, "h", function() {
           return O;
         }),
-        n.d(t, "p", function() {
+        n.d(t, "o", function() {
           return F;
         }),
-        n.d(t, "u", function() {
+        n.d(t, "q", function() {
           return E;
         }),
-        n.d(t, "k", function() {
+        n.d(t, "v", function() {
           return S;
         }),
-        n.d(t, "o", function() {
+        n.d(t, "l", function() {
           return C;
         }),
-        n.d(t, "z", function() {
+        n.d(t, "p", function() {
           return k;
         }),
-        n.d(t, "E", function() {
+        n.d(t, "A", function() {
           return j;
         }),
-        n.d(t, "y", function() {
+        n.d(t, "F", function() {
           return D;
         }),
-        n.d(t, "v", function() {
+        n.d(t, "z", function() {
           return B;
         }),
         n.d(t, "w", function() {
           return I;
         }),
-        n.d(t, "l", function() {
+        n.d(t, "x", function() {
           return R;
         }),
-        n.d(t, "j", function() {
+        n.d(t, "m", function() {
           return x;
         }),
-        n.d(t, "b", function() {
+        n.d(t, "k", function() {
           return A;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "b", function() {
           return T;
         }),
-        n.d(t, "r", function() {
+        n.d(t, "d", function() {
           return L;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "s", function() {
           return N;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "a", function() {
           return P;
         }),
-        n.d(t, "C", function() {
+        n.d(t, "e", function() {
           return z;
+        }),
+        n.d(t, "D", function() {
+          return U;
         });
       n("mrSG");
       var r = n("q1tI"),
@@ -1036,7 +1039,27 @@
           )
         );
       }
-      function w(e) {
+      function w() {
+        return r.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_1",
+            xmlns: "http://www.w3.org/2000/svg",
+            x: "0px",
+            y: "0px",
+            width: "50px",
+            height: "100px",
+            viewBox: "0 0 50 100"
+          },
+          r.createElement("polygon", {
+            fill: "#ffffff",
+            points:
+              "0,0.093 0,25.702 24.323,50.026 0,74.349 0,99.955 49.929,50.026 "
+          })
+        );
+      }
+      function O(e) {
         return r.createElement(
           "svg",
           {
@@ -1072,7 +1095,7 @@
             })
         );
       }
-      function O() {
+      function F() {
         return r.createElement(
           "svg",
           {
@@ -1108,7 +1131,7 @@
           })
         );
       }
-      function F() {
+      function E() {
         return r.createElement(
           "svg",
           {
@@ -1134,7 +1157,7 @@
           })
         );
       }
-      function E() {
+      function S() {
         return r.createElement(
           "svg",
           {
@@ -1167,7 +1190,7 @@
           })
         );
       }
-      function S(e) {
+      function C(e) {
         return r.createElement(
           "svg",
           {
@@ -1188,7 +1211,7 @@
           })
         );
       }
-      function C(e) {
+      function k(e) {
         return r.createElement(
           "svg",
           {
@@ -1228,7 +1251,7 @@
           })
         );
       }
-      function k(e) {
+      function j(e) {
         var t = Object(s.a)(
           "SVGIcon_Button",
           "SVGIcon_SteamLogo",
@@ -1262,7 +1285,7 @@
           })
         );
       }
-      function j() {
+      function D() {
         return r.createElement(
           "svg",
           {
@@ -1290,7 +1313,7 @@
           })
         );
       }
-      function D() {
+      function B() {
         return r.createElement(
           "svg",
           {
@@ -1311,7 +1334,7 @@
           )
         );
       }
-      function B() {
+      function I() {
         return r.createElement(
           "svg",
           {
@@ -1348,7 +1371,7 @@
           )
         );
       }
-      function I() {
+      function R() {
         return r.createElement(
           "svg",
           {
@@ -1376,7 +1399,7 @@
           })
         );
       }
-      function R() {
+      function x() {
         return r.createElement(
           "svg",
           {
@@ -1426,7 +1449,7 @@
           })
         );
       }
-      function x() {
+      function A() {
         return r.createElement(
           "svg",
           {
@@ -1459,7 +1482,7 @@
           })
         );
       }
-      function A() {
+      function T() {
         return r.createElement(
           "svg",
           {
@@ -1481,7 +1504,7 @@
           })
         );
       }
-      function T() {
+      function L() {
         return r.createElement(
           "svg",
           {
@@ -1515,7 +1538,7 @@
           })
         );
       }
-      function L() {
+      function N() {
         return r.createElement(
           "svg",
           {
@@ -1543,7 +1566,7 @@
           })
         );
       }
-      function N() {
+      function P() {
         return r.createElement(
           "svg",
           {
@@ -1573,7 +1596,7 @@
           )
         );
       }
-      function P(e) {
+      function z(e) {
         return r.createElement(
           "svg",
           {
@@ -1593,7 +1616,7 @@
           })
         );
       }
-      function z(e) {
+      function U(e) {
         return r.createElement(
           "svg",
           {
@@ -3791,7 +3814,7 @@
                   u.createElement(
                     "div",
                     { className: "closeButton", onClick: t.onEscKeypress },
-                    u.createElement(s.H, null)
+                    u.createElement(s.I, null)
                   )
                 ),
               u.createElement(o.a, null, t.children)
@@ -7321,7 +7344,7 @@
                       f.createElement(
                         "div",
                         { className: e },
-                        f.createElement(g.f, {
+                        f.createElement(g.g, {
                           color: this.props.color,
                           highlightColor: this.props.highlightColor
                         })
@@ -7348,7 +7371,7 @@
                   : f.createElement(
                       "div",
                       Object(h.a)({ className: e }, this.GetElementProps()),
-                      f.createElement(g.f, null)
+                      f.createElement(g.g, null)
                     )
               );
             }),
@@ -7664,7 +7687,7 @@
                         className: "DialogInput_ClearAction",
                         onClick: this.OnClearClick
                       },
-                      f.createElement(g.H, null)
+                      f.createElement(g.I, null)
                     )
                 ),
                 d
@@ -12077,7 +12100,7 @@
                   o.createElement(
                     "div",
                     { className: "DialogDropDown_Arrow" },
-                    o.createElement(s.h, null)
+                    o.createElement(s.i, null)
                   ),
                 this.props.postOptionElement,
                 o.createElement(
