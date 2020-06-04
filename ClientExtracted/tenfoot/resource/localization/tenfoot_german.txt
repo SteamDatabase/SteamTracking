@@ -14763,7 +14763,7 @@ Mit dem mausähnlichen Analogstick können Sie mit dem Gamepad spielen und dabei
 "Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote"	"Um die Streaming-Leistung zu {s:streamingclient} zu verbessern, können Sie versuchen, die Auflösung des Spiels zu reduzieren oder die folgenden Einstellungen anzupassen."
 "[english]Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote"	"To improve performance streaming to {s:streamingclient}, try reducing your game's resolution or adjusting the following settings."
 "Settings_RemoteClients_P2PScope"	"Direkte Verbindung (NAT-Traversierung)"
-"[english]Settings_RemoteClients_P2PScope"	"Direct Connection (traversing NAT)"
+"[english]Settings_RemoteClients_P2PScope"	"Allow Direct Connection (IP sharing)"
 "Settings_RemoteClients_P2PScope_Disabled"	"Deaktiviert"
 "[english]Settings_RemoteClients_P2PScope_Disabled"	"Disabled"
 "Settings_RemoteClients_P2PScope_OnlyMe"	"Meine Geräte"

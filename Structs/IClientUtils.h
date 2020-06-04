@@ -77,6 +77,7 @@ public:
     virtual unknown_ret DispatchClientSettingsChanged() = 0;
     virtual unknown_ret DispatchClientPostMessage(char const*, char const*, char const*) = 0;
     virtual unknown_ret IsSteamChinaLauncher() = 0;
+    virtual unknown_ret NeedsSteamChinaWorkshop() = 0;
     virtual unknown_ret InitFilterText(unsigned int) = 0;
     virtual unknown_ret FilterText(unsigned int, char*, unsigned int, char const*, bool) = 0;
     virtual unknown_ret GetIPv6ConnectivityState(ESteamIPv6ConnectivityProtocol) = 0;

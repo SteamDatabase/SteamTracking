@@ -4,9 +4,9 @@ __TEXT
 5
 __text
 __TEXT
-t
+@t
 4#$
-t
+@t
 __stubs
 __TEXT
 __stub_helper
@@ -22,8 +22,8 @@ __unwind_info
 __TEXT
 __eh_frame
 __TEXT
-`+,
-`+,
+h+,
+h+,
 __DATA
 5
 5
@@ -3411,7 +3411,6 @@ BroadcastPublicStateNotification
 #RemotePlayTogether_Notification_AvailableToInvite
 SteamInputControllerConnectedNotification
 OverlaySplashScreen
-#SteamChina_Overlay_DurationControl_MessageA
 #SteamChina_Overlay_DurationControl_ExitSoon_3h
 #SteamChina_Overlay_DurationControl_ExitSoon_Night
 -longtoast
@@ -3638,8 +3637,8 @@ developer
 Steam pid that launched us
 VGUI_Application_001
 OK
-Jun  1 2020
-13:26:42
+Jun  3 2020
+22:55:40
 crashhandler003
 gameoverlayui
 /Users/buildbot/buildslave/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -7287,12 +7286,13 @@ Nov
 Dec
 %02d:%02d:%02d
 %04d%02d%02d%02d%02d%02d
-Y3&
-./&
-F/&
-r3&
-0I
+i3&
+>/&
+V/&
+>I
+<I
 $#
+m4
 $
 0
 p
@@ -7314,13 +7314,18 @@ l#
 0
 p
 3
+/?
+?
 "
+s2
 S"
 >
 "
 i!
 d!
+)>
 !
+>
 >
 >
 >
@@ -7332,12 +7337,14 @@ r!
 !
 !
 d
+`E
 
 
 
 
 
 
+g0
 p
 0
 0
@@ -7372,24 +7379,24 @@ p
 0
 @
 =
-0
+p
+(
 0
 h
-(3
-n>
-T=
-p=
+Q>
 ?
 ?
 Hi
+VC
 0
 p
 I
 I
-i>
+p>
 3
-kB
-K3
+;>
+3B
+ZB
 $
 @
 @
@@ -7401,9 +7408,10 @@ $
 A
 Hc
 =
-?
+E?
+L95x>?
+0
 Hc
-.
 .
 ?
 ?
@@ -7425,7 +7433,6 @@ i[
 i[
 Mc}
 Hc]
-&
 HcU
 
 
@@ -7579,37 +7586,35 @@ P
 |
 |
 "
-t6
+o6
 3
-b6
 D
-~6
-76
-26
--6
-Y6
-&'
+}6
+66
+16
+S6
+M6
+6'
 @
 +
-5
-Y&
-5
+|5
 5
 5
-C4
 e
-q%
 %
+#3
+~2
 $
-$
-b2
+L95<R2
 #
 2
 2
 2
+^1
+L
 d
 1
-1
+
 
 
 
@@ -7617,25 +7622,23 @@ d
 
 
 s
-a,
-P,
 !
 K
-e/
 
 
 
 ,
+,
 
 &
 &
-,
+H
 t=
 =
 =
 @
-!
-!
+:+
+
 
 
 
@@ -7648,7 +7651,7 @@ uV%
 !
 
 E
-T*
+*
 *
 *
 *
@@ -7656,6 +7659,7 @@ T*
 
 
 
+)
 )
 )
 )
@@ -7679,7 +7683,6 @@ T*
 @
 @
 =
--)
 )
 
 
@@ -7703,6 +7706,7 @@ T*
 @
 @
 @
+q(
 .
 .
 .
@@ -7710,11 +7714,11 @@ T*
 .
 .
 d
-?(
 d
 d
+H'
 =
-g'
+Hc+6'
 
 =
 @
@@ -7731,7 +7735,6 @@ g'
 0
 M&
 E
-Hc5)5&
 b
 _
 O

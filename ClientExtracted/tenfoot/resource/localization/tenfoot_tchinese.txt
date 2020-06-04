@@ -14776,4 +14776,8 @@ Playing now will send {s:user} a notice that it's time to quit."
 "[english]ControllerBinding_LongPress_ActivateStickOrTrackpad_RightTrackpad"	"Activate Right Trackpad"
 "ControllerBinding_LongPress_ActivateStickOrTrackpad_RightTrackpad_Description"	"按住此按鍵時，同一根手指也會控制虛擬右觸控板。"
 "[english]ControllerBinding_LongPress_ActivateStickOrTrackpad_RightTrackpad_Description"	"While this button is held the same finger will also control the right virtual trackpad."
+"Settings_RemoteClients_AdvancedClientOptions_DescriptionLocal"	"要改善串流到這台電腦的效能，請試著降低遊戲解析度或調整以下設定。"
+"[english]Settings_RemoteClients_AdvancedClientOptions_DescriptionLocal"	"To improve performance streaming to this computer, try reducing your game's resolution or adjusting the following settings."
+"Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote"	"要改善串流到 {s:streamingclient} 的效能，請試著降低遊戲解析度或調整以下設定。"
+"[english]Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote"	"To improve performance streaming to {s:streamingclient}, try reducing your game's resolution or adjusting the following settings."
 }

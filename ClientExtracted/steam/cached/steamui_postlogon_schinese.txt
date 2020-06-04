@@ -3,7 +3,7 @@
 "Language"	"schinese"
 "Tokens"
 {
-"Steam_TellTale_EmailPrompt"	"%subscription% 的发行商 Telltale 希望与您保持联系。 请在下面输入您的电子邮件地址以订阅 Telltale 的新闻简报，它包括新游戏通知、开发过程的幕后揭秘、滑稽片断、烹饪和读者问答专栏以及临时性的特别服务。 您绝不会为自己的选择感到失望！"
+"Steam_TellTale_EmailPrompt"	"%subscription% 的发行商 Telltale 希望与您保持联系。 请在下面输入您的电子邮件地址以订阅 Telltale 的新闻简报，其中包括新游戏公告、开发过程幕后揭秘、漫画、烹饪和读者问答专栏以及临时性的特别服务。 您绝不会为自己的选择感到失望！"
 "[english]Steam_TellTale_EmailPrompt"	"Telltale, the publisher of %subscription%, would like to stay in touch with you. Please enter your email address below to sign up for Telltale's newsletter, which includes new game announcements, behind-the-scenes peeks into the development process, comics, cooking and advice columns, and the occasional special offer. You'll be glad you did!"
 "Steam_Football2K9_EmailPrompt"	"%subscription% 的发行商 SEGA 为您提供了 Subside Sports 特别折扣，以此感谢您的购买。请在下面输入您的电子邮件地址以接收 10% 折扣礼券，它对 Subside Sports 网上商店中提供的所有产品均适用。"
 "[english]Steam_Football2K9_EmailPrompt"	"SEGA, the publisher of %subscription%, would like to offer you a special discount at Subside Sports as thanks for your purchase. Please enter your email address below to receive your 10% off voucher good towards any product available at Subside Sports' online store."

@@ -8186,4 +8186,6 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]Steam_Settings_Streaming_P2PScopeOnlyMe"	"My Devices"
 "Steam_Settings_Streaming_P2PScopeEveryone"	"모든 장치"
 "[english]Steam_Settings_Streaming_P2PScopeEveryone"	"All Devices"
+"SteamUI_JoinDialog_NoName_Title"	"Steam"
+"[english]SteamUI_JoinDialog_NoName_Title"	"Steam"
 }

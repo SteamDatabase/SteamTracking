@@ -14760,7 +14760,7 @@ Fare Benzeri Kumanda Kolu ile oyun kumandası girdisi ile oynayarak fare hassasi
 "Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote"	"{s:streamingclient} istemcisine yapılan yayın performansını artırmak için, oyununuzun çözünürlüğünü düşürmeyi veya aşağıdaki ayarları değiştirmeyi deneyin."
 "[english]Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote"	"To improve performance streaming to {s:streamingclient}, try reducing your game's resolution or adjusting the following settings."
 "Settings_RemoteClients_P2PScope"	"Doğrudan Bağlantı (NAT geçişi)"
-"[english]Settings_RemoteClients_P2PScope"	"Direct Connection (traversing NAT)"
+"[english]Settings_RemoteClients_P2PScope"	"Allow Direct Connection (IP sharing)"
 "Settings_RemoteClients_P2PScope_Disabled"	"Devre Dışı"
 "[english]Settings_RemoteClients_P2PScope_Disabled"	"Disabled"
 "Settings_RemoteClients_P2PScope_OnlyMe"	"Aygıtlarım"

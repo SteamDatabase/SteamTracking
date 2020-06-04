@@ -14754,4 +14754,8 @@ Por favor, inténtalo de nuevo más tarde."
 "[english]ControllerBinding_LongPress_ActivateStickOrTrackpad_RightTrackpad"	"Activate Right Trackpad"
 "ControllerBinding_LongPress_ActivateStickOrTrackpad_RightTrackpad_Description"	"Mientras se mantenga pulsado este botón, el mismo dedo también controlará el trackpad virtual derecho."
 "[english]ControllerBinding_LongPress_ActivateStickOrTrackpad_RightTrackpad_Description"	"While this button is held the same finger will also control the right virtual trackpad."
+"Settings_RemoteClients_P2PScope"	"Conexión directa (atravesando la NAT)"
+"[english]Settings_RemoteClients_P2PScope"	"Allow Direct Connection (IP sharing)"
+"StreamingOverlay_FooterButton"	"VER ESTADO DE REMOTE PLAY"
+"[english]StreamingOverlay_FooterButton"	"VIEW REMOTE PLAY STATUS"
 }

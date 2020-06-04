@@ -613,7 +613,7 @@ DOTAAccountLinkPage
 
 DOTAIDVerifyPage
 {
-	url			"https://members.csgo.com.cn/steam/indulge2?ticket=%p1%"
+	url			"https://members.dota2.com.cn/steam/indulge2?ticket=%p1%"
 	method		"internal"
 }
 
