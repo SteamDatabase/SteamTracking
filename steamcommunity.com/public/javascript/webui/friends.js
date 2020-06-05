@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5912812";
+var CLSTAMP = "5912990";
 !(function(e) {
   function t(t) {
     for (
@@ -38243,7 +38243,7 @@ var CLSTAMP = "5912812";
                       Object(p.d)("#Friend_Menu_InviteToLobby")
                     )
                   );
-                else if (r.f.FriendStore.self.persona.has_joinable_game_flag) {
+                else if (r.f.FriendStore.self.persona.connect_string) {
                   var N = r.f.FriendStore.self.persona.connect_string;
                   M.push(
                     c.createElement(
@@ -38793,16 +38793,16 @@ var CLSTAMP = "5912812";
           (t.prototype.JoinGame = function(e) {
             var t = this,
               n = this.props.friend;
-            n.persona.has_joinable_game_flag || n.persona.has_server_ip
-              ? N.b
+            n.persona.is_in_valid_lobby
+              ? this.JoinLobby(n, e)
+              : N.b
                   .OpenJoinGameDialog(n.steamid64)
                   .then(function(o) {
                     o.success || t.JoinLobby(n, e);
                   })
                   .catch(function() {
                     t.JoinLobby(n, e);
-                  })
-              : this.JoinLobby(n, e);
+                  });
           }),
           (t.prototype.ViewGameInfo = function(e) {
             var t = this.props.friend;
