@@ -72,6 +72,19 @@
             ]
         },
         {
+            "name": "GetItemWorkshopPublishedFileIDs",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "itemdef",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "The item definition to get published file ids for."
+                }
+            ]
+        },
+        {
             "name": "GetRarities",
             "version": 1,
             "httpmethod": "GET",
