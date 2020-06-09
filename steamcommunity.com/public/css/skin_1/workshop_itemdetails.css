@@ -1081,6 +1081,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .collectionBackgroundImageContainer
 {
 	position: absolute;
+	width: 100%;
 	max-width: 948px;
 	max-height: 470px;
 	overflow: hidden;
@@ -1154,11 +1155,10 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .collectionHighlightVideoEdit .general_btn
 {
 	position: relative;
-	float: left;
 	color: black;
 	background-color: white;
-	margin-left: 160px;
-	margin-top: 160px;
+	margin-left: 145px;
+	margin-top: 130px;
 }
 
 .collectionHighlightVideoEdit .existingMovie
@@ -1183,16 +1183,14 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 
 .collectionEditCancel
 {
-	position: absolute;
-	top: 20px;
-	width: 908px;
+	width: 100%;
 	height: 50px;
-	margin-right: 21px;
 	background-color: #5c94d3;
 	border: 1px solid #5c94d3;
 	border-radius: 2px;
 	-moz-border-radius: 2px;
 	text-align: center;
+	padding-bottom: 10px;
 }
 
 .collectionEditCancel .general_btn
@@ -1439,6 +1437,8 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 {
 	margin-left: 10px;
 	margin-right: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .workshopItemAuthor
@@ -3364,10 +3364,13 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 		display: none;
 	}
 
-	html.responsive .collectionTop
-	{
+	html.responsive .collectionTop {
 		position: relative;
 		height: 207px;
+	}
+
+	html.responsive .collectionHighlightVideo {
+		display: none;
 	}
 }
 
