@@ -630,7 +630,7 @@ body.steamawards_page, .steamawards_page {
 	background-position: center;
 }
 
-.steamawards_app_banner_ctn {
+#AwardsDefault .steamawards_app_banner_ctn {
 	background: url('/public/images/promo/steamawards2018/StoreBanner-plain.jpg');
 	border: 2px solid #3c3c4f;
 	display: flex;
@@ -638,6 +638,9 @@ body.steamawards_page, .steamawards_page {
 	padding: 20px;
 	margin-bottom: 20px;
 	max-width: calc( 616px - 40px );
+	user-select: none;
+	height: auto;
+	float: none;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -678,8 +681,7 @@ body.steamawards_page, .steamawards_page {
 	font-weight: 900;
 	font-size: 16px;
 	line-height: 15px;
-	margin-left: 20px;
-	width: 200px;
+	margin-left: auto;
 }
 
 .steamawards_app_banner_right img {
@@ -709,6 +711,11 @@ body.steamawards_page, .steamawards_page {
 @media screen and (max-width: 910px) {
 	html.responsive .steamawards_shortcuts_ctn {
 		justify-content: center;
+	}
+
+	html.responsive #AwardsDefault .steamawards_app_banner_right img {
+		height: 100px;
+		width: auto;
 	}
 
 	html.responsive .steamawards_header_trophy {

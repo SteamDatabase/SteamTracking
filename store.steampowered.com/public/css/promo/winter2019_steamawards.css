@@ -674,8 +674,8 @@
 	font-weight: 900;
 	font-size: 16px;
 	line-height: 15px;
-	margin-left: 20px;
-	width: 200px;
+	margin-left: auto;
+	text-align: center;
 }
 
 .steamawards_app_banner_right img {
@@ -730,8 +730,23 @@ APP PAGE BANNER SECTION
 
 		}
 
+#AwardsDefault .steamawards2019_app_square_ctn {
+	background: url('https://steamcdn-a.akamaihd.net/store/promo/steamawards2019/StoreBanner-plain2019.jpg') center no-repeat;
+	border: 2px solid rgba( 95,120,117, 0.5);
+	padding: 20px;
+	margin-bottom: 20px;
+	user-select: none;
+	float: none;
+	display: block;
+	height: auto;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+		}
+
 .steamawards2019_app_banner_left {
 	max-width: 70%;
+	z-index: 100;
 }
 
 .steamawards2019_app_banner_year {
@@ -764,6 +779,11 @@ APP PAGE BANNER SECTION
 @media screen and (max-width: 910px) {
 	html.responsive .steamawards_shortcuts_ctn {
 		justify-content: center;
+	}
+
+	html.responsive #AwardsDefault .steamawards_app_banner_right img {
+		height: 100px;
+		width: auto;
 	}
 
 	html.responsive .steamawards_header_trophy {

@@ -2768,6 +2768,9 @@ body.v6 .game_area_already_owned.page_content.master_sub {
 
 .already_owned_description {
 	padding-top: 12px;
+	line-height: 18px;
+	font-size: 13px;
+	font-family: "Motiva Sans", sans-serif;
 }
 
 .game_area_play_stats {
@@ -2826,7 +2829,11 @@ body.v6 .game_area_already_owned.page_content.master_sub {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1e4f9', endColorstr='#94b7ca',GradientType=0 ); /* IE6-9 */
 }
 
-
+.game_area_already_owned_time_remaining {
+	line-height: 36px;
+	color: white;
+	font-size: 20px;
+}
 
 
 .game_purchase_area_friends_want {

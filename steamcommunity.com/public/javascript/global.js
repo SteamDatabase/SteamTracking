@@ -1665,6 +1665,57 @@ var CCommentThread = Class.create( {
 		} );
 	},
 
+	MarkSpam: function( gidComment, authorAccountID, fnOnSuccess )
+	{
+		if ( this.m_bLoading )
+			return;
+
+		var params = this.ParametersWithDefaults( {
+			gidcomment: gidComment,
+			author_accountid: authorAccountID,
+			start: this.m_cPageSize * this.m_iCurrentPage
+		} );
+
+		var thread = this;
+
+		var dialog = ShowConfirmDialog( 'Mark Spam', 'This will give a community ban to the author, add this comment as training data so we can flag these kinds of comments automatically, and clear out all the author\'s comments.  Are you sure this is what you want to do?', 'Mark Spam' );
+		dialog.done( function() {
+			thread.m_bLoading = true;
+			new Ajax.Request( thread.GetActionURL( 'markspam' ), {
+				method: 'post',
+				parameters: params,
+				onSuccess: fnOnSuccess ? fnOnSuccess : thread.OnResponseDeleteComment.bind( thread, ++thread.m_nRenderAjaxSequenceNumber ),
+				onFailure: thread.OnFailureDisplayError.bind( thread ),
+				onComplete: thread.OnAJAXComplete.bind( thread )
+			} );
+		} );
+	},
+
+	ClearContentCheckFlag: function( gidComment, fnOnSuccess )
+	{
+		if ( this.m_bLoading )
+			return;
+
+		var params = this.ParametersWithDefaults( {
+			gidcomment: gidComment,
+			start: this.m_cPageSize * this.m_iCurrentPage
+		} );
+
+		var thread = this;
+
+		var dialog = ShowConfirmDialog( 'Clear Bannable Content Flag', 'This will clear the bannable content check flag on this comment and cannot be undone. Are you sure this is what you want to do?', 'Clear Bannable Content Flag' );
+		dialog.done( function() {
+			thread.m_bLoading = true;
+			new Ajax.Request( thread.GetActionURL( 'clearcontentcheckflag' ), {
+				method: 'post',
+				parameters: params,
+				onSuccess: fnOnSuccess ? fnOnSuccess : thread.OnResponseDeleteComment.bind( thread, ++thread.m_nRenderAjaxSequenceNumber ),
+				onFailure: thread.OnFailureDisplayError.bind( thread ),
+				onComplete: thread.OnAJAXComplete.bind( thread )
+			} );
+		} );
+	},
+
 	HideAndReport: function( gidComment, bHide, fnOnSuccess )
 	{
 		if ( this.m_bLoading )
@@ -2371,6 +2422,16 @@ CCommentThread.UnDeleteComment = function( id, gidcomment )
 {
 	if ( g_rgCommentThreads[id] )
 		g_rgCommentThreads[id].DeleteComment( gidcomment, true );
+};
+CCommentThread.MarkSpam = function( id, gidcomment, authorAccountID )
+{
+	if ( g_rgCommentThreads[id] )
+		g_rgCommentThreads[id].MarkSpam( gidcomment, authorAccountID );
+};
+CCommentThread.ClearContentCheckFlag = function( id, gidcomment )
+{
+	if ( g_rgCommentThreads[id] )
+		g_rgCommentThreads[id].ClearContentCheckFlag( gidcomment );
 };
 // static accessor
 CCommentThread.EditComment = function( id, gidcomment )

@@ -554,6 +554,16 @@ function Forum_ClearContentCheckResult( gidTopic )
 	});
 }
 
+function Forum_BanCommenters( gidTopic )
+{
+	ShowConfirmDialog('Ban Commenters ',
+	'Are you sure you want to ban the users who have commented over 5 times in this topic? This will be hard to undo.',
+	'Ban Commenters'
+).done( function() {
+	Forum_SetTopicFlag( gidTopic, 'bancommenters', true );
+});
+}
+
 function Forum_MarkSpam( gidTopic )
 {
 	ShowConfirmDialog('Mark Spam ',
@@ -1612,6 +1622,7 @@ function InitializeForumBulkActions( strName )
 	var $BtnDelete = $J('#forum_' + strName + '_bulk_delete');
 	var $BtnUnDelete = $J('#forum_' + strName + '_bulk_undelete');
 	var $BtnMarkSpam = $J('#forum_' + strName + '_bulk_markspam');
+	var $BtnBanCommenters = $J('#forum_' + strName + '_bulk_bancommenters');
 
 	var $BtnLock = $J('#forum_' + strName + '_bulk_lock');
 	var $BtnUnLock = $J('#forum_' + strName + '_bulk_unlock');
@@ -1632,7 +1643,7 @@ function InitializeForumBulkActions( strName )
 	var rgAllSelectedTopics = {};
 	var cTopicsCheckedOnOtherPages = 0;
 
-	var $BtnShowDefault = $J().add( $BtnDelete ).add( $BtnLock ).add( $BtnMove ).add( $BtnMerge ).add( $BtnMarkSpam );
+	var $BtnShowDefault = $J().add( $BtnDelete ).add( $BtnLock ).add( $BtnMove ).add( $BtnMerge ).add( $BtnMarkSpam ).add( $BtnBanCommenters );
 	var $BtnHideDefault = $J().add( $BtnUnDelete ).add( $BtnUnLock ).add( $BtnPurge );
 
 	var fnShowControlsIfCheckboxChecked = function ()
@@ -1695,6 +1706,7 @@ function InitializeForumBulkActions( strName )
 					$BtnUnDelete.show();
 					$BtnDelete.hide();
 					$BtnMarkSpam.hide();
+					$BtnBanCommenters.hide();
 				}
 
 				if ( cDeletedTopics > 0 )
@@ -1823,6 +1835,7 @@ function InitializeForumBulkActions( strName )
 	$BtnDelete.click( function() { ForumBulkDelete( strName, V_Keys( rgAllSelectedTopics ) ); } );
 	$BtnUnDelete.click( function() { ForumBulkDelete( strName, V_Keys( rgAllSelectedTopics ), true ); } );
 	$BtnMarkSpam.click( function() { ForumBulkSpam( strName, V_Keys( rgAllSelectedTopics ) ); } );
+	$BtnBanCommenters.click( function() { ForumBulkBanCommenters( strName, V_Keys( rgAllSelectedTopics ) ); } );
 
 	$BtnLock.click( function() { ForumBulkLock( strName, V_Keys( rgAllSelectedTopics ) ); } );
 	$BtnUnLock.click( function() { ForumBulkLock( strName, V_Keys( rgAllSelectedTopics ), true ); } );
@@ -1919,6 +1932,19 @@ function ForumBulkSpam( strName, rgForumTopicGIDs )
 	BulkModerate( strName, rgForumTopicGIDs, 'markspam', true )
 		.done( function( data ) {
 			ShowAlertDialog( 'Mark Spam', 'The selected topics have been deleted and the creators banned.' );
+		});
+});
+}
+
+function ForumBulkBanCommenters( strName, rgForumTopicGIDs )
+{
+	ShowConfirmDialog('Ban Commenters ',
+	'This will give a community ban (or mark as hijacked) the users who have commented on the selected threads more than a certain number of times.  Are you sure this is what you want to do?',
+	'Ban Commenters'
+).done ( function() {
+	BulkModerate( strName, rgForumTopicGIDs, 'bancommenters', true )
+		.done( function( data ) {
+			ShowAlertDialog( 'Ban Commenters', 'The users who have commented above the threshhold on the selected topics have been banned.' );
 		});
 });
 }

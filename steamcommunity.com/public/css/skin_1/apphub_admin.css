@@ -111,8 +111,8 @@ P {
 	padding: 15px;
 	padding-bottom: 20px;
 	margin-top: 20px;
-	font-size: 13px;
-	line-height: 17px;
+    font-size: 14px;
+    line-height: 19px;
 	background-color: rgba( 0, 0, 0, 0.2 );
 }
 
@@ -120,7 +120,9 @@ P {
 {
 	padding-bottom: 10px;
 	font-size: 17px;
-    font-color: #636363;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
 }
 
 .faq_sub_title

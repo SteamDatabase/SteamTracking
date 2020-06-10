@@ -3019,14 +3019,14 @@ function RegisterFlyout( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	});
 }
 
-function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
+function FlyoutMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlternateAlignTo )
 {
 	var $Link = $JFromIDOrElement(elemLink);
 	var $Popup = $JFromIDOrElement(elemPopup);
 
 	if ( !$Popup.is(':visible') || $Popup.css('opacity') < 1.0 )
 	{
-		AlignMenu( $Link, $Popup, align, valign, bLinkHasBorder );
+		AlignMenu( $Link, $Popup, align, valign, bLinkHasBorder, elemAlternateAlignTo || null );
 
 		if ( $Popup.hasClass( 'responsive_slidedown') && window.UseSmallScreenMode && window.UseSmallScreenMode() )
 			$Popup.stop().slideDown();
@@ -3062,11 +3062,16 @@ function HideFlyoutMenu( event, elemLink, elemPopup )
 	$Link.removeClass('focus');
 }
 
-function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
+function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder, elemAlternateAlignTo )
 {
 	var align = align ? align : 'left';
 	var $Link = $JFromIDOrElement(elemLink);
 	var $Popup = $JFromIDOrElement(elemPopup);
+
+	if( elemAlternateAlignTo != null )
+	{
+		$Link = $JFromIDOrElement(elemAlternateAlignTo);
+	}
 
 	var offsetLink = $Link.offset();
 	var nWindowScrollTop = $J(window).scrollTop();
@@ -3101,6 +3106,7 @@ function AlignMenu( elemLink, elemPopup, align, valign, bLinkHasBorder )
 	var borderpx = bLinkHasBorder ? 1 : 0;
 	var shadowpx = $Popup.hasClass( 'popup_block_new' ) ? 0 : 12;
 	var offsetLeft = 0;
+	
 	if ( align == 'left' )
 	{
 		//elemPopup.style.left = ( elemLink.positionedOffset()[0] - 12 ) + 'px';
@@ -3199,7 +3205,7 @@ function BindAutoFlyoutEvents()
 		}
 
 
-		FlyoutMenu( $Tab, $Content, $Tab.data('flyout-align'), $Tab.data('flyout-valign') );
+		FlyoutMenu( $Tab, $Content, $Tab.data('flyout-align'), $Tab.data('flyout-valign'), false, $Tab.data('flyout-align-to-element' ) );
 
 		if ( window.UseTouchFriendlyMode && window.UseTouchFriendlyMode() )
 		{

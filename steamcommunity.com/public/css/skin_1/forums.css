@@ -573,6 +573,37 @@ textarea.forumtopic_reply_textarea {
 	overflow-y: visible;
 }
 
+.forumtopic_comments .commentthread_comment_text .content_check_warning,
+.forumtopic_comments .commentthread_comment_text .needs_content_check {
+	opacity: 0.5;
+	font-style: italic;
+}
+
+.forumtopic_comments .commentthread_comment_text .content_check_moderator {
+	margin-top: 5px;
+	color: #c38a4c;
+	font-style: italic;
+}
+.forumtopic_comments .commentthread_comment_text .failed_content {
+	color: #acb2b8;
+	padding: 5px;
+	margin-top: 5px;
+	background: rgba( 21, 31, 44, 0.7 );
+	border: 1px solid #c38a4c;
+	display: flex;
+}
+
+.forumtopic_comments .commentthread_comment_text .failed_content .actual_content {
+	max-width: 75%;
+}
+
+.forumtopic_comments .commentthread_comment_text .failed_content .content_check_controls {
+	margin-left: auto;
+}
+.forumtopic_comments .commentthread_comment_text .failed_content .content_check_controls > a {
+	text-decoration: none;
+}
+
 .forumtopic_comments .commentthread_comment_text a {
 	color: #cccccc;
 }

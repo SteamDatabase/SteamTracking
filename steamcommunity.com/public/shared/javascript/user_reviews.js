@@ -308,7 +308,7 @@ function UserReview_ShowContentCheckResultsDialog( recommendationID, baseURL )
 			{
 				var r = data.results[i];
 				var reportDiv = $J('<div/>', {'class': 'review_report' } );
-					var divProvider = $J('<div/>', {'class': 'review_report_data' } ).append( r.provider == k_EUserReviewContentCheckProvider_Google ? 'Google' : 'Unknown' );
+					var divProvider = $J('<div/>', {'class': 'review_report_data' } ).append( r.provider == 1 ? 'Google' : 'Unknown' );
 					reportDiv.append( divProvider );
 					var divResult = $J('<div/>', {'class': 'review_report_data' } ).append( r.ban_check_result_string );
 					reportDiv.append( divResult );

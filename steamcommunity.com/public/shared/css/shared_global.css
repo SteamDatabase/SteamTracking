@@ -542,14 +542,20 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	display: block;
 	padding: 5px 12px;
 	color: #b8b6b4;
-
 	text-transform: none;
 	font-family: Motiva Sans, Arial, Helvectica, Verdana, sans-serif;
-	font-size: 13px;
+	font-size: 12px;
 	font-weight: normal;
 	line-height: normal;
 	text-align: left;
 	cursor: pointer;
+}
+
+
+#genre_flyout .popup_menu .popup_menu_item {
+	font-size: 13px;
+	font-weight: 400;
+	padding: 5px 14px;
 }
 
 @media screen and (max-width: 910px)

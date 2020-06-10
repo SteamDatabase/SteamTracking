@@ -4267,6 +4267,14 @@ body.v6 .store_nav .popup_menu .hr, body.v6 #footer_nav .popup_menu .hr {
 	margin: 5px 10px 5px 10px;
 	background-color: #fff;
 }
+body.v6 .spacer {
+    height: 8px;
+    width; 100%;
+    content: ' ';
+}
+
+
+
 body.v6 .store_nav .popup_menu_subheader, body.v6 #footer_nav .popup_menu_subheader {
 	color: #4f94bc;
 }
@@ -4276,7 +4284,7 @@ body.v6 .store_nav .popup_menu_subheader, body.v6 #footer_nav .popup_menu_subhea
 	flex-direction: row;
 }
 
-.popup_menu_twocol > .popup_menu:not(:first-child)
+.popup_menu_twocol > .popup_menu:not(:first-child):not(:nth-child(3)):not(:nth-child(4))
 {
 	margin-left: 5px;
 	border-left: 1px solid #ffffff;
