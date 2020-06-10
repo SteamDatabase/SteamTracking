@@ -207,9 +207,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              void 0 !== (n = g.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, n),
+              var n = g.Message.getField(e, 1);
+              void 0 !== n && t.writeFixed64String(1, n),
                 void 0 !== (n = g.Message.getField(e, 2)) &&
                   t.writeString(2, n),
                 void 0 !== (n = g.Message.getField(e, 3)) &&
@@ -472,9 +471,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              void 0 !== (n = g.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, n),
+              var n = g.Message.getField(e, 1);
+              void 0 !== n && t.writeFixed64String(1, n),
                 void 0 !== (n = g.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, n),
                 void 0 !== (n = g.Message.getField(e, 3)) &&
@@ -576,8 +574,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              void 0 !== (n = g.Message.getField(e, 1)) && t.writeString(1, n),
+              var n = g.Message.getField(e, 1);
+              void 0 !== n && t.writeString(1, n),
                 void 0 !== (n = g.Message.getField(e, 2)) && t.writeBool(2, n);
             }),
             (r.prototype.getClassName = function() {
@@ -699,8 +697,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              void 0 !== (n = g.Message.getField(e, 1)) && t.writeString(1, n),
+              var n = g.Message.getField(e, 1);
+              void 0 !== n && t.writeString(1, n),
                 void 0 !== (n = g.Message.getField(e, 2)) &&
                   t.writeString(2, n),
                 void 0 !== (n = g.Message.getField(e, 3)) &&
@@ -777,8 +775,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              void 0 !== (n = g.Message.getField(e, 1)) && t.writeString(1, n),
+              var n = g.Message.getField(e, 1);
+              void 0 !== n && t.writeString(1, n),
                 void 0 !== (n = g.Message.getField(e, 2)) &&
                   t.writeUint32(2, n);
             }),
@@ -871,8 +869,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              void 0 !== (n = g.Message.getField(e, 1)) && t.writeString(1, n),
+              var n = g.Message.getField(e, 1);
+              void 0 !== n && t.writeString(1, n),
                 0 < (n = e.results()).length &&
                   t.writeRepeatedMessage(2, n, S.serializeBinaryToWriter),
                 void 0 !== (n = g.Message.getField(e, 3)) &&
@@ -946,8 +944,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              0 < (n = e.feeds()).length &&
+              var n = e.feeds();
+              0 < n.length &&
                 t.writeRepeatedMessage(1, n, h.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
@@ -1021,9 +1019,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              null != (n = e.post(!1)) &&
-                t.writeMessage(1, n, f.serializeBinaryToWriter),
+              var n = e.post(!1);
+              null != n && t.writeMessage(1, n, f.serializeBinaryToWriter),
                 void 0 !== (n = g.Message.getField(e, 2)) && t.writeBool(2, n);
             }),
             (r.prototype.getClassName = function() {
@@ -1095,9 +1092,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              void 0 !== (n = g.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, n),
+              var n = g.Message.getField(e, 1);
+              void 0 !== n && t.writeFixed64String(1, n),
                 void 0 !== (n = g.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, n);
             }),
@@ -1181,9 +1177,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              void 0 !== (n = g.Message.getField(e, 1)) &&
-                t.writeFixed64String(1, n),
+              var n = g.Message.getField(e, 1);
+              void 0 !== n && t.writeFixed64String(1, n),
                 void 0 !== (n = g.Message.getField(e, 2)) &&
                   t.writeUint32(2, n),
                 void 0 !== (n = g.Message.getField(e, 3)) &&
@@ -1300,8 +1295,8 @@
               return r.serializeBinaryToWriter(this, e), e.getResultBuffer();
             }),
             (r.serializeBinaryToWriter = function(e, t) {
-              var n;
-              void 0 !== (n = g.Message.getField(e, 1)) && t.writeUint32(1, n),
+              var n = g.Message.getField(e, 1);
+              void 0 !== n && t.writeUint32(1, n),
                 void 0 !== (n = g.Message.getField(e, 2)) &&
                   t.writeFixed64String(2, n),
                 void 0 !== (n = g.Message.getField(e, 3)) &&
@@ -1317,7 +1312,7 @@
             r
           );
         })(g.Message);
-      ((m = v || (v = {})).ConvertHTMLToBBCode = function(e, t) {
+      ((m = v = v || {}).ConvertHTMLToBBCode = function(e, t) {
         return e.SendMsg("News.ConvertHTMLToBBCode#1", t, b, {
           bConstMethod: !0
         });
@@ -1386,11 +1381,10 @@
                 : this.m_eRSSFeedLanguage;
             }),
             (e.prototype.ValidateStoreDefault = function(e) {
-              var t = e;
               return (
-                "object" == typeof t &&
-                "number" == typeof t.clanid &&
-                "string" == typeof t.webapi_token
+                "object" == typeof e &&
+                "number" == typeof e.clanid &&
+                "string" == typeof e.webapi_token
               );
             }),
             (e.prototype.BHasSavedRSSURL = function() {
@@ -1742,37 +1736,37 @@
                 return Object(d.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return (
-                        this.m_mapClanToRecommendation.has(i.GetAccountID()) ||
-                          this.m_mapClanToRecommendation.set(
-                            i.GetAccountID(),
-                            new Map()
-                          ),
-                        (t = this.m_mapClanToRecommendation.get(
-                          i.GetAccountID()
-                        )),
-                        (n = []),
-                        o.forEach(function(e) {
-                          t.has(e) || n.push(e);
-                        }),
-                        0 < n.length
-                          ? ((r =
-                              u.c.STORE_BASE_URL +
-                              "curator/" +
-                              i.GetAccountID() +
-                              "/admin/ajaxgetrecbyapps"),
-                            [
-                              4,
-                              l.a.get(r, {
-                                params: {
-                                  appids: n,
-                                  cc: u.c.COUNTRY || "US",
-                                  l: u.c.LANGUAGE
-                                }
-                              })
-                            ])
-                          : [3, 2]
-                      );
+                      return (this.m_mapClanToRecommendation.has(
+                        i.GetAccountID()
+                      ) ||
+                        this.m_mapClanToRecommendation.set(
+                          i.GetAccountID(),
+                          new Map()
+                        ),
+                      (t = this.m_mapClanToRecommendation.get(
+                        i.GetAccountID()
+                      )),
+                      (n = []),
+                      o.forEach(function(e) {
+                        t.has(e) || n.push(e);
+                      }),
+                      0 < n.length)
+                        ? ((r =
+                            u.c.STORE_BASE_URL +
+                            "curator/" +
+                            i.GetAccountID() +
+                            "/admin/ajaxgetrecbyapps"),
+                          [
+                            4,
+                            l.a.get(r, {
+                              params: {
+                                appids: n,
+                                cc: u.c.COUNTRY || "US",
+                                l: u.c.LANGUAGE
+                              }
+                            })
+                          ])
+                        : [3, 2];
                     case 1:
                       (s = e.sent()),
                         (a = s && s.data) &&
@@ -2005,32 +1999,34 @@
               var t = this,
                 i = P.Get(),
                 n = new Array();
-              if (this.state.previews) {
-                var e = this.state.previews;
-                (e = e.sort(function(e, t) {
-                  var n = i.MapArticleURLToClanEventGID(e.post.url),
-                    r = i.MapArticleURLToClanEventGID(t.post.url),
-                    s = n ? B.c.GetClanEventModel(n) : null,
-                    a = r ? B.c.GetClanEventModel(r) : null;
-                  return s && a
-                    ? a.postTime - s.postTime
-                    : s
-                    ? -1
-                    : a
-                    ? 1
-                    : t.post.rtime_date - e.post.rtime_date;
-                })).forEach(function(e) {
-                  n.push(
-                    c.a.createElement(te, {
-                      newsData: e,
-                      key: "id: " + e.unique_id,
-                      clanSteamID: i.GetClanSteamID(),
-                      fnGetRSSUrl: t.GetRSSPreviewURL
+              return (
+                this.state.previews &&
+                  this.state.previews
+                    .sort(function(e, t) {
+                      var n = i.MapArticleURLToClanEventGID(e.post.url),
+                        r = i.MapArticleURLToClanEventGID(t.post.url),
+                        s = n ? B.c.GetClanEventModel(n) : null,
+                        a = r ? B.c.GetClanEventModel(r) : null;
+                      return s && a
+                        ? a.postTime - s.postTime
+                        : s
+                        ? -1
+                        : a
+                        ? 1
+                        : t.post.rtime_date - e.post.rtime_date;
                     })
-                  );
-                });
-              }
-              return n;
+                    .forEach(function(e) {
+                      n.push(
+                        c.a.createElement(te, {
+                          newsData: e,
+                          key: "id: " + e.unique_id,
+                          clanSteamID: i.GetClanSteamID(),
+                          fnGetRSSUrl: t.GetRSSPreviewURL
+                        })
+                      );
+                    }),
+                n
+              );
             }),
             (e.prototype.GetRSSPreviewURL = function() {
               return this.state.strParseRssURL;
