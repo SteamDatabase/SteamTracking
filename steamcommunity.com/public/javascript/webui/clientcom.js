@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5912990";
+var CLSTAMP = "5919917";
 !(function(t) {
   var e = {};
   function n(r) {
@@ -84,11 +84,6 @@ var CLSTAMP = "5912990";
   },
   "1n9R": function(t, e, n) {
     "use strict";
-    n("mrSG");
-    var r = n("/7KC");
-    function o() {
-      return !!window.document;
-    }
     n.d(e, "c", function() {
       return c;
     }),
@@ -105,18 +100,21 @@ var CLSTAMP = "5912990";
         return f;
       }),
       n.d(e, "h", function() {
-        return _;
+        return l;
       }),
       n.d(e, "g", function() {
-        return p;
+        return _;
       }),
       n.d(e, "d", function() {
-        return d;
+        return p;
       }),
       n.d(e, "e", function() {
-        return m;
+        return d;
       });
-    var i,
+    n("mrSG");
+    var r,
+      o = n("/7KC"),
+      i = n("YlSc"),
       c = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
@@ -152,12 +150,8 @@ var CLSTAMP = "5912990";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!o()) return i || (i = f()), i;
-            var t = (function(t) {
-              if (!o() || !window.document.cookie) return null;
-              var e = document.cookie.match("(^|; )" + t + "=([^;]*)");
-              return e && e[2] ? decodeURIComponent(e[2]) : null;
-            })("sessionid");
+            if (!Object(i.a)()) return r || (r = f()), r;
+            var t = Object(i.b)("sessionid");
             t || (t = f());
             return t;
           })();
@@ -198,52 +192,31 @@ var CLSTAMP = "5912990";
         HAS_ADULT_CONTENT: !1,
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1
-      },
-      l = "webui_config";
+      };
     function f() {
       var t = (function() {
         for (var t = "", e = 0; e < 24; e++)
-          t += Object(r.b)(0, 35).toString(36);
+          t += Object(o.b)(0, 35).toString(36);
         return t;
       })();
-      return (
-        (function(t, e, n, r) {
-          if (o()) {
-            r || (r = "/");
-            var i = "";
-            if (void 0 !== n && n) {
-              var c = new Date();
-              c.setTime(c.getTime() + 864e5 * n),
-                (i = "; expires=" + c.toUTCString());
-            }
-            document.cookie =
-              encodeURIComponent(t) +
-              "=" +
-              encodeURIComponent(e) +
-              i +
-              ";path=" +
-              r;
-          }
-        })("sessionid", t, 0),
-        t
-      );
+      return Object(i.c)("sessionid", t, 0), t;
     }
-    function _(t) {
-      void 0 === t && (t = l);
+    function l(t) {
+      void 0 === t && (t = "webui_config");
       var e = {},
-        n = p("config", t);
+        n = _("config", t);
       n && (delete n.SESSIONID, Object.assign(c, n), (e.config = !0));
-      var r = p("userinfo", t);
+      var r = _("userinfo", t);
       r && (Object.assign(u, r), (e.userConfig = !0));
-      var o = p("broadcast", t);
+      var o = _("broadcast", t);
       o && (Object.assign(s, o), (e.broadcastConfig = !0));
-      var i = p("community", t);
+      var i = _("community", t);
       return i && (Object.assign(a, i), (e.communityConfig = !0)), e;
     }
-    function p(t, e) {
+    function _(t, e) {
       var n;
       if (
-        (void 0 === e && (e = l),
+        (void 0 === e && (e = "webui_config"),
         (n = "string" == typeof e ? document.getElementById(e) : e))
       )
         try {
@@ -255,7 +228,7 @@ var CLSTAMP = "5912990";
         }
       else console.error("Missing config element #", e);
     }
-    function d() {
+    function p() {
       var t = window.location.href;
       return t.startsWith(c.STORE_BASE_URL)
         ? c.STORE_BASE_URL
@@ -269,7 +242,7 @@ var CLSTAMP = "5912990";
         ? c.STEAMTV_BASE_URL
         : "";
     }
-    function m() {
+    function d() {
       var t = window.location.href;
       return t.startsWith(c.STORE_BASE_URL)
         ? "store"
@@ -416,21 +389,21 @@ var CLSTAMP = "5912990";
             get: function() {
               return this.m_ClientInfo;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           Object.defineProperty(t.prototype, "ready", {
             get: function() {
               return this.m_bReady;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           Object.defineProperty(t.prototype, "browser_supported", {
             get: function() {
               return !this.m_bSecurityException;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           Object.defineProperty(t.prototype, "connected_to_client", {
@@ -439,7 +412,7 @@ var CLSTAMP = "5912990";
                 this.m_socket && this.m_socket.readyState == WebSocket.OPEN
               );
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           (t.prototype.SendMsgAndAwaitResponse = function(t) {
@@ -536,6 +509,44 @@ var CLSTAMP = "5912990";
       u = new i();
     window.ClientConnectionAPI = u;
   },
+  YlSc: function(t, e, n) {
+    "use strict";
+    function r(t) {
+      if (!i() || !window.document.cookie) return null;
+      var e = document.cookie.match("(^|; )" + t + "=([^;]*)");
+      return e && e[2] ? decodeURIComponent(e[2]) : null;
+    }
+    function o(t, e, n, r) {
+      if (i()) {
+        r || (r = "/");
+        var o = "";
+        if (void 0 !== n && n) {
+          var c = new Date();
+          c.setTime(c.getTime() + 864e5 * n),
+            (o = "; expires=" + c.toUTCString());
+        }
+        document.cookie =
+          encodeURIComponent(t) +
+          "=" +
+          encodeURIComponent(e) +
+          o +
+          ";path=" +
+          r;
+      }
+    }
+    function i() {
+      return !!window.document;
+    }
+    n.d(e, "b", function() {
+      return r;
+    }),
+      n.d(e, "c", function() {
+        return o;
+      }),
+      n.d(e, "a", function() {
+        return i;
+      });
+  },
   mrSG: function(t, e, n) {
     "use strict";
     n.d(e, "d", function() {
@@ -557,21 +568,21 @@ var CLSTAMP = "5912990";
         return a;
       }),
       n.d(e, "g", function() {
-        return l;
+        return f;
       });
     /*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
+Copyright (c) Microsoft Corporation.
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
 
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
     var r = function(t, e) {
       return (r =
@@ -653,11 +664,15 @@ and limitations under the License.
           }
         }
         function s(t) {
+          var e;
           t.done
             ? o(t.value)
-            : new n(function(e) {
-                e(t.value);
-              }).then(c, u);
+            : ((e = t.value),
+              e instanceof n
+                ? e
+                : new n(function(t) {
+                    t(e);
+                  })).then(c, u);
         }
         s((r = r.apply(t, e || [])).next());
       });
@@ -717,8 +732,9 @@ and limitations under the License.
                     continue;
                   default:
                     if (
-                      !(o = (o = c.trys).length > 0 && o[o.length - 1]) &&
-                      (6 === i[0] || 2 === i[0])
+                      !((o = c.trys),
+                      (o = o.length > 0 && o[o.length - 1]) ||
+                        (6 !== i[0] && 2 !== i[0]))
                     ) {
                       c = 0;
                       continue;
@@ -750,7 +766,7 @@ and limitations under the License.
         };
       }
     }
-    function l() {
+    function f() {
       for (var t = 0, e = 0, n = arguments.length; e < n; e++)
         t += arguments[e].length;
       var r = Array(t),

@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5912990";
+var CLSTAMP = "5919917";
 !(function(e) {
   function t(t) {
     for (
@@ -10,7 +10,9 @@ var CLSTAMP = "5912990";
       m < a.length;
       m++
     )
-      (c = a[m]), o[c] && p.push(o[c][0]), (o[c] = 0);
+      (c = a[m]),
+        Object.prototype.hasOwnProperty.call(o, c) && o[c] && p.push(o[c][0]),
+        (o[c] = 0);
     for (r in s) Object.prototype.hasOwnProperty.call(s, r) && (e[r] = s[r]);
     for (u && u(t); p.length; ) p.shift()();
     return i.push.apply(i, l || []), n();
@@ -124,16 +126,16 @@ var CLSTAMP = "5912990";
       n.d(t, "a", function() {
         return a;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "o", function() {
         return s;
       }),
       n.d(t, "i", function() {
         return l;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "r", function() {
         return u;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "q", function() {
         return m;
       }),
       n.d(t, "j", function() {
@@ -142,13 +144,13 @@ var CLSTAMP = "5912990";
       n.d(t, "k", function() {
         return h;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return d;
       }),
       n.d(t, "b", function() {
         return f;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "s", function() {
         return v;
       }),
       n.d(t, "h", function() {
@@ -163,8 +165,11 @@ var CLSTAMP = "5912990";
       n.d(t, "l", function() {
         return g;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return w;
+      }),
+      n.d(t, "m", function() {
+        return E;
       });
     var r = n("UqDm");
     n("XaMz");
@@ -273,13 +278,10 @@ var CLSTAMP = "5912990";
     }
     function d(e) {
       return e
-        ? 0 == e.clipboardData.files.length
-          ? null
-          : e.clipboardData.types.some(function(e) {
-              return (
-                ("text" == e || e.startsWith("text/")) && "text/html" !== e
-              );
-            })
+        ? 0 == e.clipboardData.files.length ||
+          e.clipboardData.types.some(function(e) {
+            return ("text" == e || e.startsWith("text/")) && "text/html" !== e;
+          })
           ? null
           : e.clipboardData.files[0]
         : null;
@@ -412,6 +414,12 @@ var CLSTAMP = "5912990";
         }
       return n;
     }
+    function E(e, t) {
+      for (; e; ) {
+        if (t(e)) return e;
+        e = e.parentElement;
+      }
+    }
   },
   "0N1H": function(e, t, n) {
     "use strict";
@@ -427,47 +435,50 @@ var CLSTAMP = "5912990";
       n.d(t, "a", function() {
         return o;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return i;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "q", function() {
         return c;
       }),
-      n.d(t, "h", function() {
+      n.d(t, "i", function() {
         return a;
       }),
-      n.d(t, "i", function() {
+      n.d(t, "j", function() {
         return s;
       }),
-      n.d(t, "n", function() {
+      n.d(t, "o", function() {
         return l;
       }),
-      n.d(t, "j", function() {
+      n.d(t, "k", function() {
         return u;
       }),
-      n.d(t, "k", function() {
+      n.d(t, "l", function() {
         return m;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "n", function() {
         return p;
       }),
-      n.d(t, "l", function() {
+      n.d(t, "m", function() {
         return h;
       }),
-      n.d(t, "e", function() {
+      n.d(t, "f", function() {
         return d;
       }),
-      n.d(t, "g", function() {
+      n.d(t, "h", function() {
         return f;
       }),
-      n.d(t, "f", function() {
+      n.d(t, "g", function() {
         return v;
       }),
-      n.d(t, "c", function() {
+      n.d(t, "d", function() {
         return _;
       }),
-      n.d(t, "d", function() {
+      n.d(t, "c", function() {
         return y;
+      }),
+      n.d(t, "e", function() {
+        return b;
       });
     var i = 1,
       c = 4,
@@ -482,6 +493,70 @@ var CLSTAMP = "5912990";
       f = 0,
       v = 2147483647;
     function _(e, t) {
+      switch ((void 0 === t && (t = "en"), e)) {
+        case 0:
+          return "en";
+        case 1:
+          return "de";
+        case 2:
+          return "fr";
+        case 3:
+          return "it";
+        case 4:
+          return "ko";
+        case 5:
+          return "es";
+        case 6:
+          return "zn-cn";
+        case 7:
+          return "zn-tw";
+        case 8:
+          return "ru";
+        case 9:
+          return "th";
+        case 10:
+          return "ja";
+        case 11:
+          return "pt";
+        case 12:
+          return "pl";
+        case 13:
+          return "da";
+        case 14:
+          return "nl";
+        case 15:
+          return "fi";
+        case 16:
+          return "no";
+        case 17:
+          return "sv";
+        case 18:
+          return "hu";
+        case 19:
+          return "cs";
+        case 20:
+          return "ro";
+        case 21:
+          return "tr";
+        case 25:
+          return "ar";
+        case 22:
+          return "pt-br";
+        case 23:
+          return "bg";
+        case 24:
+          return "el";
+        case 26:
+          return "uk";
+        case 27:
+          return "es-419";
+        case 28:
+          return "vn";
+        default:
+          return t;
+      }
+    }
+    function y(e, t) {
       switch ((void 0 === t && (t = ""), e)) {
         case 0:
           return "english";
@@ -545,7 +620,7 @@ var CLSTAMP = "5912990";
           return t;
       }
     }
-    function y(e, t) {
+    function b(e, t) {
       switch ((void 0 === t && (t = 0), e)) {
         case "english":
           return 0;
@@ -637,11 +712,6 @@ var CLSTAMP = "5912990";
   },
   "1n9R": function(e, t, n) {
     "use strict";
-    n("mrSG");
-    var r = n("/7KC");
-    function o() {
-      return !!window.document;
-    }
     n.d(t, "c", function() {
       return c;
     }),
@@ -655,21 +725,24 @@ var CLSTAMP = "5912990";
         return l;
       }),
       n.d(t, "f", function() {
-        return m;
+        return u;
       }),
       n.d(t, "h", function() {
-        return p;
+        return m;
       }),
       n.d(t, "g", function() {
-        return h;
+        return p;
       }),
       n.d(t, "d", function() {
-        return d;
+        return h;
       }),
       n.d(t, "e", function() {
-        return f;
+        return d;
       });
-    var i,
+    n("mrSG");
+    var r,
+      o = n("/7KC"),
+      i = n("YlSc"),
       c = {
         EUNIVERSE: 0,
         WEB_UNIVERSE: "",
@@ -705,13 +778,9 @@ var CLSTAMP = "5912990";
         PAGE_TIMESTAMP: 0,
         get SESSIONID() {
           return (function() {
-            if (!o()) return i || (i = m()), i;
-            var e = (function(e) {
-              if (!o() || !window.document.cookie) return null;
-              var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
-              return t && t[2] ? decodeURIComponent(t[2]) : null;
-            })("sessionid");
-            e || (e = m());
+            if (!Object(i.a)()) return r || (r = u()), r;
+            var e = Object(i.b)("sessionid");
+            e || (e = u());
             return e;
           })();
         },
@@ -751,52 +820,31 @@ var CLSTAMP = "5912990";
         HAS_ADULT_CONTENT: !1,
         HAS_ADULT_CONTENT_SEX: !1,
         HAS_ADULT_CONTENT_VIOLENCE: !1
-      },
-      u = "webui_config";
-    function m() {
+      };
+    function u() {
       var e = (function() {
         for (var e = "", t = 0; t < 24; t++)
-          e += Object(r.b)(0, 35).toString(36);
+          e += Object(o.b)(0, 35).toString(36);
         return e;
       })();
-      return (
-        (function(e, t, n, r) {
-          if (o()) {
-            r || (r = "/");
-            var i = "";
-            if (void 0 !== n && n) {
-              var c = new Date();
-              c.setTime(c.getTime() + 864e5 * n),
-                (i = "; expires=" + c.toUTCString());
-            }
-            document.cookie =
-              encodeURIComponent(e) +
-              "=" +
-              encodeURIComponent(t) +
-              i +
-              ";path=" +
-              r;
-          }
-        })("sessionid", e, 0),
-        e
-      );
+      return Object(i.c)("sessionid", e, 0), e;
     }
-    function p(e) {
-      void 0 === e && (e = u);
+    function m(e) {
+      void 0 === e && (e = "webui_config");
       var t = {},
-        n = h("config", e);
+        n = p("config", e);
       n && (delete n.SESSIONID, Object.assign(c, n), (t.config = !0));
-      var r = h("userinfo", e);
+      var r = p("userinfo", e);
       r && (Object.assign(a, r), (t.userConfig = !0));
-      var o = h("broadcast", e);
+      var o = p("broadcast", e);
       o && (Object.assign(s, o), (t.broadcastConfig = !0));
-      var i = h("community", e);
+      var i = p("community", e);
       return i && (Object.assign(l, i), (t.communityConfig = !0)), t;
     }
-    function h(e, t) {
+    function p(e, t) {
       var n;
       if (
-        (void 0 === t && (t = u),
+        (void 0 === t && (t = "webui_config"),
         (n = "string" == typeof t ? document.getElementById(t) : t))
       )
         try {
@@ -808,7 +856,7 @@ var CLSTAMP = "5912990";
         }
       else console.error("Missing config element #", t);
     }
-    function d() {
+    function h() {
       var e = window.location.href;
       return e.startsWith(c.STORE_BASE_URL)
         ? c.STORE_BASE_URL
@@ -822,7 +870,7 @@ var CLSTAMP = "5912990";
         ? c.STEAMTV_BASE_URL
         : "";
     }
-    function f() {
+    function d() {
       var e = window.location.href;
       return e.startsWith(c.STORE_BASE_URL)
         ? "store"
@@ -960,21 +1008,21 @@ var CLSTAMP = "5912990";
             get: function() {
               return this.m_bVisible;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           Object.defineProperty(t.prototype, "options", {
             get: function() {
               return this.m_options;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           Object.defineProperty(t.prototype, "owner_window", {
             get: function() {
               return this.m_ownerWindow;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           (t.prototype.ShowSubMenu = function(e, t) {
@@ -1057,7 +1105,7 @@ var CLSTAMP = "5912990";
           (t.prototype.BIsSubMenuVisible = function() {
             return !!this.m_submenu;
           }),
-          Object(r.c)([s.x], t.prototype, "m_bVisible", void 0),
+          Object(r.c)([s.z], t.prototype, "m_bVisible", void 0),
           t
         );
       })(l),
@@ -1163,10 +1211,10 @@ var CLSTAMP = "5912990";
         return k;
       }),
       n.d(t, "h", function() {
-        return C;
+        return M;
       }),
       n.d(t, "j", function() {
-        return P;
+        return C;
       });
     var r = n("mrSG"),
       o = n("okNM"),
@@ -1193,15 +1241,20 @@ var CLSTAMP = "5912990";
             var e = this.props,
               t = e.children,
               n = e.className,
-              o = Object(r.f)(e, ["children", "className"]),
-              c =
+              o = e.renderMenuContainer,
+              c = Object(r.f)(e, [
+                "children",
+                "className",
+                "renderMenuContainer"
+              ]),
+              a =
                 this.context.contextMenuInstance &&
                 this.context.contextMenuInstance.options.bUseWebStyles
                   ? "popup_menu popup_body"
                   : v.a.contextMenuContents;
-            n && (c += " " + n);
-            var a = this.props.renderMenuContainer || "div";
-            return i.createElement(a, Object(r.a)({}, o, { className: c }), t);
+            n && (a += " " + n);
+            var s = o || "div";
+            return i.createElement(s, Object(r.a)({}, c, { className: a }), t);
           }),
           (t.contextTypes = {
             contextMenuInstance: function() {
@@ -1231,23 +1284,26 @@ var CLSTAMP = "5912990";
           }),
           (t.prototype.render = function() {
             var e = this.props,
-              t = (e.onSelected,
-              e.bInteractableItem,
-              Object(r.f)(e, ["onSelected", "bInteractableItem"])),
-              n = [];
+              t = (e.onSelected, e.bInteractableItem, e.renderMenuItem),
+              n = Object(r.f)(e, [
+                "onSelected",
+                "bInteractableItem",
+                "renderMenuItem"
+              ]),
+              o = [];
             this.context.contextMenuInstance &&
             this.context.contextMenuInstance.options.bUseWebStyles
-              ? n.push("popup_menu_item")
-              : n.push(v.a.contextMenuItem, "contextMenuItem"),
-              this.props.className && n.push(this.props.className),
-              this.props.disabled && n.push("disabled");
-            var o = this.props.renderMenuItem || "div";
+              ? o.push("popup_menu_item")
+              : o.push(v.a.contextMenuItem, "contextMenuItem"),
+              this.props.className && o.push(this.props.className),
+              this.props.disabled && o.push("disabled");
+            var c = t || "div";
             return i.createElement(
-              o,
-              Object(r.a)({ onMouseEnter: this.OnMouseEnter }, t, {
+              c,
+              Object(r.a)({ onMouseEnter: this.OnMouseEnter }, n, {
                 onClick: this.OnClick,
                 unselectable: this.props.unselectable,
-                className: _.a.apply(void 0, n)
+                className: _.a.apply(void 0, o)
               }),
               this.props.children
             );
@@ -1708,7 +1764,7 @@ var CLSTAMP = "5912990";
     }
     function k(e) {
       var t = [],
-        n = l.q(e),
+        n = l.r(e),
         r = n.getSelection(),
         o = r && r.rangeCount > 0 && r.toString().length > 0,
         c = e.target,
@@ -1765,16 +1821,16 @@ var CLSTAMP = "5912990";
         e.preventDefault(), e.stopPropagation();
       }
     }
-    var M = "DEBUG_StickyContextMenus";
-    function C() {
+    function M() {
       return (
-        window.sessionStorage && "true" == window.sessionStorage.getItem(M)
+        window.sessionStorage &&
+        "true" == window.sessionStorage.getItem("DEBUG_StickyContextMenus")
       );
     }
-    function P(e) {
+    function C(e) {
       e
-        ? window.sessionStorage.setItem(M, "true")
-        : window.sessionStorage.removeItem(M);
+        ? window.sessionStorage.setItem("DEBUG_StickyContextMenus", "true")
+        : window.sessionStorage.removeItem("DEBUG_StickyContextMenus");
     }
   },
   "G+3Z": function(e, t, n) {
@@ -2080,21 +2136,21 @@ var CLSTAMP = "5912990";
             get: function() {
               return this.m_rgParams.target_browser;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           Object.defineProperty(e.prototype, "window", {
             get: function() {
               return this.m_popup;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           Object.defineProperty(e.prototype, "root_element", {
             get: function() {
               return this.m_element;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           Object.defineProperty(e.prototype, "title", {
@@ -2105,7 +2161,7 @@ var CLSTAMP = "5912990";
               (this.m_strTitle = e),
                 this.m_popup && (this.m_popup.document.title = this.m_strTitle);
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           (e.prototype.Focus = function(e) {
@@ -2150,7 +2206,7 @@ var CLSTAMP = "5912990";
             get: function() {
               return this.m_bFocused;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           (e.prototype.GetWindowRestoreDetails = function() {
@@ -2187,7 +2243,7 @@ var CLSTAMP = "5912990";
           (e.prototype.OnBeforeUnload = function() {}),
           (e.prototype.OnFocus = function() {}),
           (e.prototype.OnBlur = function() {}),
-          Object(o.c)([i.x], e.prototype, "m_bFocused", void 0),
+          Object(o.c)([i.z], e.prototype, "m_bFocused", void 0),
           Object(o.c)([l.a], e.prototype, "OnMessage", null),
           Object(o.c)([l.a], e.prototype, "OnResizeEvent", null),
           Object(o.c)([l.a], e.prototype, "OnBeforeUnloadEvent", null),
@@ -2924,7 +2980,7 @@ var CLSTAMP = "5912990";
             get: function() {
               return this.m_eCommentPermission;
             },
-            enumerable: !0,
+            enumerable: !1,
             configurable: !0
           }),
           (e.prototype.GetSaveState = function(e) {
@@ -2989,7 +3045,7 @@ var CLSTAMP = "5912990";
                     r &&
                       r.PrivacySettings &&
                       r.eCommentPermission &&
-                      Object(l.A)(function() {
+                      Object(l.D)(function() {
                         (e.m_PrivacySettings = r.PrivacySettings),
                           (e.m_eCommentPermission = r.eCommentPermission);
                       }),
@@ -3007,10 +3063,10 @@ var CLSTAMP = "5912990";
                 })
             );
           }),
-          Object(s.c)([l.x], e.prototype, "m_PrivacySettings", void 0),
-          Object(s.c)([l.x], e.prototype, "m_eCommentPermission", void 0),
-          Object(s.c)([l.x], e.prototype, "m_eSaveStateByKey", void 0),
-          Object(s.c)([l.x], e.prototype, "m_eCommentSaveState", void 0),
+          Object(s.c)([l.z], e.prototype, "m_PrivacySettings", void 0),
+          Object(s.c)([l.z], e.prototype, "m_eCommentPermission", void 0),
+          Object(s.c)([l.z], e.prototype, "m_eSaveStateByKey", void 0),
+          Object(s.c)([l.z], e.prototype, "m_eCommentSaveState", void 0),
           e
         );
       })(),
@@ -3576,6 +3632,44 @@ var CLSTAMP = "5912990";
     "use strict";
     n("vDqi");
   },
+  YlSc: function(e, t, n) {
+    "use strict";
+    function r(e) {
+      if (!i() || !window.document.cookie) return null;
+      var t = document.cookie.match("(^|; )" + e + "=([^;]*)");
+      return t && t[2] ? decodeURIComponent(t[2]) : null;
+    }
+    function o(e, t, n, r) {
+      if (i()) {
+        r || (r = "/");
+        var o = "";
+        if (void 0 !== n && n) {
+          var c = new Date();
+          c.setTime(c.getTime() + 864e5 * n),
+            (o = "; expires=" + c.toUTCString());
+        }
+        document.cookie =
+          encodeURIComponent(e) +
+          "=" +
+          encodeURIComponent(t) +
+          o +
+          ";path=" +
+          r;
+      }
+    }
+    function i() {
+      return !!window.document;
+    }
+    n.d(t, "b", function() {
+      return r;
+    }),
+      n.d(t, "c", function() {
+        return o;
+      }),
+      n.d(t, "a", function() {
+        return i;
+      });
+  },
   e2SU: function(e, t, n) {
     "use strict";
     n.d(t, "B", function() {
@@ -3678,13 +3772,13 @@ var CLSTAMP = "5912990";
         return j;
       }),
       n.d(t, "f", function() {
-        return H;
+        return z;
       }),
       n.d(t, "F", function() {
-        return F;
+        return H;
       }),
       n.d(t, "hb", function() {
-        return z;
+        return F;
       }),
       n.d(t, "lb", function() {
         return A;
@@ -5256,7 +5350,7 @@ var CLSTAMP = "5912990";
         })
       );
     }
-    function H(e) {
+    function z(e) {
       var t = e.color || "#020202";
       return o.createElement(
         "svg",
@@ -5315,7 +5409,7 @@ var CLSTAMP = "5912990";
         )
       );
     }
-    function F() {
+    function H() {
       return o.createElement(
         "svg",
         {
@@ -5345,7 +5439,7 @@ var CLSTAMP = "5912990";
         })
       );
     }
-    function z(e) {
+    function F(e) {
       var t = "SVGIcon_Button SVGIcon_Throbber ";
       return (
         e.className && (t += e.className),
@@ -6950,7 +7044,7 @@ var CLSTAMP = "5912990";
     var r = n("mrSG"),
       o = n("0N1H");
     n.d(t, "m", function() {
-      return o.d;
+      return o.e;
     });
     var i = n("2vnA"),
       c = (function() {
@@ -6963,12 +7057,12 @@ var CLSTAMP = "5912990";
             (this.customlist = void 0);
         }
         return (
-          Object(r.c)([i.x], e.prototype, "enabled", void 0),
-          Object(r.c)([i.x], e.prototype, "locked", void 0),
-          Object(r.c)([i.x], e.prototype, "features", void 0),
-          Object(r.c)([i.x], e.prototype, "allowallapps", void 0),
-          Object(r.c)([i.x], e.prototype, "baselist", void 0),
-          Object(r.c)([i.x], e.prototype, "customlist", void 0),
+          Object(r.c)([i.z], e.prototype, "enabled", void 0),
+          Object(r.c)([i.z], e.prototype, "locked", void 0),
+          Object(r.c)([i.z], e.prototype, "features", void 0),
+          Object(r.c)([i.z], e.prototype, "allowallapps", void 0),
+          Object(r.c)([i.z], e.prototype, "baselist", void 0),
+          Object(r.c)([i.z], e.prototype, "customlist", void 0),
           e
         );
       })(),
@@ -7195,18 +7289,18 @@ var CLSTAMP = "5912990";
         return u;
       });
     /*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
+Copyright (c) Microsoft Corporation.
 
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
 
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
     var r = function(e, t) {
       return (r =
@@ -7288,11 +7382,15 @@ and limitations under the License.
           }
         }
         function s(e) {
+          var t;
           e.done
             ? o(e.value)
-            : new n(function(t) {
-                t(e.value);
-              }).then(c, a);
+            : ((t = e.value),
+              t instanceof n
+                ? t
+                : new n(function(e) {
+                    e(t);
+                  })).then(c, a);
         }
         s((r = r.apply(e, t || [])).next());
       });
@@ -7352,8 +7450,9 @@ and limitations under the License.
                     continue;
                   default:
                     if (
-                      !(o = (o = c.trys).length > 0 && o[o.length - 1]) &&
-                      (6 === i[0] || 2 === i[0])
+                      !((o = c.trys),
+                      (o = o.length > 0 && o[o.length - 1]) ||
+                        (6 !== i[0] && 2 !== i[0]))
                     ) {
                       c = 0;
                       continue;
@@ -7552,9 +7651,9 @@ and limitations under the License.
         (e.prototype.GetELanguageFallbackOrder = function() {
           var e = new Array();
           return (
-            e.push(Object(i.d)(c.c.LANGUAGE)),
+            e.push(Object(i.e)(c.c.LANGUAGE)),
             (c.c.SUPPORTED_LANGUAGES || []).forEach(function(t) {
-              t.value != c.c.LANGUAGE && e.push(Object(i.d)(t.value));
+              t.value != c.c.LANGUAGE && e.push(Object(i.e)(t.value));
             }),
             e
           );

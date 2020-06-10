@@ -25,6 +25,8 @@
     line-height: 9px;
     font-size: 11px;
     margin-top: 2px; }
+  .broadcastwidgets_StoreSaleWidgetContainer_mini_1ROIM .StoreSaleWidgetTitle {
+    font-size: 16px; }
   @media screen and (max-width: 620px) {
     .broadcastwidgets_StoreSaleWidgetContainer_mini_1ROIM {
       max-width: unset;

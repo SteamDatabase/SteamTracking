@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5912990";
+var CLSTAMP = "5919917";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -12751,6 +12751,24 @@ var CLSTAMP = "5912990";
     },
     BpBa: function(e, t, i) {
       "use strict";
+      i.d(t, "e", function() {
+        return M;
+      }),
+        i.d(t, "d", function() {
+          return h;
+        }),
+        i.d(t, "f", function() {
+          return B;
+        }),
+        i.d(t, "a", function() {
+          return K;
+        }),
+        i.d(t, "b", function() {
+          return Y;
+        }),
+        i.d(t, "c", function() {
+          return ee;
+        });
       var r = i("mrSG"),
         s = i("hRO2"),
         n = i("/511"),
@@ -12868,24 +12886,6 @@ var CLSTAMP = "5912990";
             t
           );
         })(s.Message);
-      i.d(t, "e", function() {
-        return M;
-      }),
-        i.d(t, "d", function() {
-          return h;
-        }),
-        i.d(t, "f", function() {
-          return B;
-        }),
-        i.d(t, "a", function() {
-          return K;
-        }),
-        i.d(t, "b", function() {
-          return Y;
-        }),
-        i.d(t, "c", function() {
-          return ee;
-        });
       s.Message,
         s.Message,
         s.Message,
