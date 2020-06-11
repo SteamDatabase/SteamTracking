@@ -323,6 +323,13 @@ a.group_tab:hover {
 .announcement_body img {
 	max-width: 100%;
 }
+.announcement_body .sharedFilePreviewYouTubeVideo.sizeFull iframe {
+    width: 588px;
+    height: 330px;
+}
+.announcement_body img.sharedFilePreviewYouTubeVideo.sizeFull {
+    display: none;
+}
 #group_tab_content_announcements .group_content h2 {
 	padding-top: 10px;
 }
