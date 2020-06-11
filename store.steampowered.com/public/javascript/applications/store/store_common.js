@@ -4614,7 +4614,7 @@
                         J.i.logged_in && L.createElement(Me, { appInfo: p }),
                         L.createElement(R.a, {
                           loading: "lazy",
-                          alt: d,
+                          alt: Object(Y.b)(d),
                           className: ie.a.StoreSaleImage,
                           rgSources: h
                         }),
@@ -4637,7 +4637,7 @@
                         L.createElement(
                           "div",
                           { className: ie.a.StoreSaleWidgetTitle },
-                          d
+                          Object(Y.b)(d)
                         )
                       ),
                       L.createElement(ve, { item: r })
@@ -4906,7 +4906,7 @@
                           src: n,
                           className: ie.a.PreviewImg,
                           loading: "lazy",
-                          alt: i
+                          alt: Object(Y.b)(i)
                         })
                       )
                     : null;
@@ -5035,7 +5035,7 @@
                         A && ie.a.Muted
                       ),
                       src: m,
-                      alt: u
+                      alt: Object(Y.b)(u)
                     })
                   ),
                   s && !a && L.createElement(ge, { appInfo: l }),
