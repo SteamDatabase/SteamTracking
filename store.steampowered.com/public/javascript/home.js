@@ -182,6 +182,11 @@ GHomepage = {
 				}
 			}
 
+			if ( !rgParams.bShowTakeunder )
+			{
+				$J( '#home_takeunder_ctn' ).hide();
+			}
+
 			GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
 			GHomepage.rgUserNewsFriendsPurchased = rgParams.rgUserNewsFriendsPurchased || {};
 			GHomepage.rgFriendRecommendations = v_shuffle(rgParams.rgFriendRecommendations) || [];
