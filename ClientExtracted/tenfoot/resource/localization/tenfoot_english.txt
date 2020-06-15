@@ -2181,6 +2181,11 @@
 	"Library_Details_ControllerAction_Quit_Application"		"EXIT APPLICATION"
 	"Library_Details_ControllerAction_Change_Player_Number"	"CHANGE PLAYER NUMBER"
 	"Library_Details_ControllerAction_Change_Player_Number_To"	"CHANGE PLAYER NUMBER TO"
+	"Library_Details_ControllerAction_MouseDelta"	"MOUSE DELTA"
+	"Controller_SetMouseDelta_Title"				"SET MOUSE DELTA BINDING"
+	"Controller_SetMouseDelta_Description"			"Select the vaules for this binding"
+	"ControllerConfig_MouseDeltaX"					"X Axis"
+	"ControllerConfig_MouseDeltaY"					"Y Axis"
 
 	"Library_Details_FieldLabel_InputStyle"			"Style of Input"
 	"Library_Details_FieldLabel_ModeShifting"		"Mode Shifting"

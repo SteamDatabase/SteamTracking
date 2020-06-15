@@ -4501,6 +4501,14 @@ ChooseBinding #mouse_forward_button
 	position: 160px 191px 0px;
 }
 
+ChooseBinding #mouse_delta
+{
+	width: 80px;
+	height: 80px;
+	position: 75px 250px 0px;
+}
+
+
 #GamepadRowWrapper
 {
 	flow-children: down;

@@ -136,20 +136,53 @@ DropDownMenu.DropDownMenuVisible
 
 #GuideBrightnessSlider, #LEDColorSlider, #LEDSaturationSlider
 {
-	horizontal-align: right;
-	width: 100%;
-	height: 16px;
-	margin-right: 10px;
-	margin-left: 30px;
-	vertical-align: middle;
+    horizontal-align: right;
+    width: 100%;
+    height: 16px;
+    margin-right: 10px;
+    margin-left: 30px;
+    vertical-align: middle;
 }
 
-#GuideBrightnessSlider:focus, #LEDSaturationSlider:focus
+#YDeltaContainer,
+#XDeltaContainer
 {
-	background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) );
-	box-shadow: box_shadow_on_color -2.5px -2.5px 8px 5px;
-	border: 2px solid #fdfefef0;
-	border-radius: 2px;
+    flow-children: down;
+    width: 480px;
+    height: fit-children;
+}
+
+.DeltaLabel
+{
+    font-size: 26px;
+    font-family: platformfont;
+    color: #c6d4df;
+    margin-bottom: 20px;
+}
+
+#MouseDeltaXSlider, #MouseDeltaYSlider {
+    horizontal-align: right;
+    width: 100%;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-bottom: 16px;
+}
+
+#MouseDeltaXTextEntry,
+#MouseDeltaYTextEntry {
+    width: 130px;
+    white-space: nowrap;
+    height: 60px;
+    margin-bottom: 16px;
+}
+
+
+#GuideBrightnessSlider:focus, #LEDSaturationSlider:focus {
+    background-color: gradient( linear, -0% 0%, 0% 100%, from( #f0f0f0 ), to( #c2c2c2 ) );
+    box-shadow: box_shadow_on_color -2.5px -2.5px 8px 5px;
+    border: 2px solid #fdfefef0;
+    border-radius: 2px;
 }
 
 .DefaultLight.SupportsLEDColor #GuideBrightnessContainer, .DefaultLight.SupportsLEDColor #LEDSaturationContainer,

@@ -64,23 +64,26 @@
         <Button id="mouse_left_button" selectionpos="200,1" onmoveup="DoNothing();" onmovedown="SetInputFocus( mouse_back_button );" onactivate="SetBinding( mouse_button, left );" onmoveleft="SetInputFocus( button_b );" >
           <Label text="#ChooseBinding_LeftMouseInitial" />
         </Button>
-        <Button id="mouse_scroll_up" selectionpos="201,0" onactivate="SetBinding( mouse_button, scroll_up );">
+        <Button id="mouse_scroll_up" selectionpos="201,0" onactivate="SetBinding( mouse_button, scroll_up );" onmoveup="SetInputFocus( mouse_delta )">
           <Label text="^" />
         </Button>
         <Button id="mouse_middle_button" selectionpos="201,1" onactivate="SetBinding( mouse_button, middle );">
           <Label text="#ChooseBinding_MiddleMouseInitial" />
         </Button>
-        <Button id="mouse_scroll_down" selectionpos="201,2" onmoveright="SetInputFocus( mouse_right_button );" onmoveleft="SetInputFocus( mouse_left_button );" onmovedown="DoNothing();" onactivate="SetBinding( mouse_button, scroll_down );">
+        <Button id="mouse_scroll_down" selectionpos="201,2" onmoveright="SetInputFocus( mouse_right_button );" onmoveleft="SetInputFocus( mouse_left_button );" onmovedown="SetInputFocus( mouse_delta );" onactivate="SetBinding( mouse_button, scroll_down );">
           <Label text="^" />
         </Button>
         <Button id="mouse_right_button" selectionpos="202,1" onmoveright="SetInputFocus( kb_key_esc );" onmoveup="DoNothing();" onmovedown="SetInputFocus( mouse_forward_button );" onactivate="SetBinding( mouse_button, right );">
           <Label text="#ChooseBinding_RightMouseInitial" />
         </Button>
-        <Button id="mouse_back_button" selectionpos="200,3" onmoveup="SetInputFocus( mouse_left_button );" onactivate="SetBinding( mouse_button, back );" onmoveright="SetInputFocus( mouse_forward_button );" onmoveleft="SetInputFocus( button_b );">
+        <Button id="mouse_back_button" selectionpos="200,3" onmoveup="SetInputFocus( mouse_left_button );" onactivate="SetBinding( mouse_button, back );" onmoveright="SetInputFocus( mouse_forward_button );" onmoveleft="SetInputFocus( button_b );" onmovedown="SetInputFocus( mouse_delta );">
           <Label text="4" />
         </Button>
-        <Button id="mouse_forward_button" selectionpos="202,3" onmoveup="SetInputFocus( mouse_right_button );" onmoveright="SetInputFocus( kb_key_tab );" onactivate="SetBinding( mouse_button, forward );" onmoveleft="SetInputFocus( mouse_back_button );">
+        <Button id="mouse_forward_button" selectionpos="202,3" onmoveup="SetInputFocus( mouse_right_button );" onmoveright="SetInputFocus( kb_key_tab );" onactivate="SetBinding( mouse_button, forward );" onmoveleft="SetInputFocus( mouse_back_button );" onmovedown="SetInputFocus( mouse_delta );">
           <Label text="5" />
+        </Button>
+        <Button id="mouse_delta" selectionpos="300,1" onmoveup="SetInputFocus( mouse_forward_button );" onmoveright="SetInputFocus( kb_key_tab );" onactivate="ShowMouseDeltaSelector();" onmoveleft="SetInputFocus( button_b);" onmovedown="SetInputFocus( mouse_scroll_up);">
+          <Image class="ChooseBindingIconImage" src="file://{images}/library/controller/binding_icons/ghost_080_input_0140.png" />
         </Button>
       </Panel>
 

@@ -2924,6 +2924,7 @@ Make one now by emailing a gift to someone you know."
 "steam_ClientUpdateAvailableDownloadedInfo"		"Would you like to restart Steam now to apply the update?"
 "Steam_NoClientUpdateAvailable"					"Your Steam client is already up-to-date."
 "Steam_NotEnoughDiskSpaceCheckingForUpdates"		"Steam needs more free disk space to check for and apply updates."
+"Steam_ClientUpdateSuppressed"						"Steam client updates have been disabled by a command line switch or config file. Please remove the block, restart the client, and try again."
 
 "steam_menu_updatevendorgraphicscard"			"Update %graphics_vendor% Video Drivers..."
 "steam_menu_checkforvideodriverupdates"			"Check for Video Driver Updates..."

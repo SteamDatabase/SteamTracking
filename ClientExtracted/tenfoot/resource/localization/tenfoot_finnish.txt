@@ -14760,7 +14760,7 @@ Peli tarvitsee vähintään {s:requiredwidth}m x {s:requireddepth}m kokoisen pel
 "[english]Settings_RemoteClients_AdvancedClientOptions_DescriptionLocal"	"To improve performance streaming to this computer, try reducing your game's resolution or adjusting the following settings."
 "Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote"	"Voit parantaa kohteelle {s:streamingclient} tehtävän lähetyksen suorituskykyä pienentämällä pelin resoluutiota tai muuttamalla seuraavia asetuksia."
 "[english]Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote"	"To improve performance streaming to {s:streamingclient}, try reducing your game's resolution or adjusting the following settings."
-"Settings_RemoteClients_P2PScope"	"Suora yhteys (ohittaa NAT:n)"
+"Settings_RemoteClients_P2PScope"	"Salli suora yhteys (IP:n jakaminen)"
 "[english]Settings_RemoteClients_P2PScope"	"Allow Direct Connection (IP sharing)"
 "Settings_RemoteClients_P2PScope_Disabled"	"Pois päältä"
 "[english]Settings_RemoteClients_P2PScope_Disabled"	"Disabled"

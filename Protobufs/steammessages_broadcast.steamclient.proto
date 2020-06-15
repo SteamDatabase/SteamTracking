@@ -34,6 +34,7 @@ message CBroadcast_BeginBroadcastSession_Request {
 	optional bool thumbnail_upload = 7;
 	optional string client_beta = 8;
 	optional uint32 sysid = 9;
+	optional bool allow_webrtc = 10;
 }
 
 message CBroadcast_BeginBroadcastSession_Response {

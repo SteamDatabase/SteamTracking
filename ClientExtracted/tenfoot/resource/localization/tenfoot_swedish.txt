@@ -14762,7 +14762,7 @@ Justera detta värde uppåt tills långsamma rörelser varken stannar eller hack
 "[english]Settings_RemoteClients_AdvancedClientOptions_DescriptionLocal"	"To improve performance streaming to this computer, try reducing your game's resolution or adjusting the following settings."
 "Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote"	"För att förbättra prestandan när du streamar till {s:streamingclient}, kan du minska spelets upplösning eller justera följande inställningar."
 "[english]Settings_RemoteClients_AdvancedClientOptions_DescriptionRemote"	"To improve performance streaming to {s:streamingclient}, try reducing your game's resolution or adjusting the following settings."
-"Settings_RemoteClients_P2PScope"	"Direkt anslutning (NAT traversal)"
+"Settings_RemoteClients_P2PScope"	"Tillåt direkt anslutning (IP-delning)"
 "[english]Settings_RemoteClients_P2PScope"	"Allow Direct Connection (IP sharing)"
 "Settings_RemoteClients_P2PScope_Disabled"	"Inaktiverat"
 "[english]Settings_RemoteClients_P2PScope_Disabled"	"Disabled"
