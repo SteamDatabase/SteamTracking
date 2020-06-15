@@ -14,36 +14,6 @@
     "IjIIARIgaMVHur3UExsppAQNmlq0lEm4VJJ2R+HAu3V2JFKxV8FFkPT3XU2QW7phULLKNCk+rXySL4rc/DJAbLtp6gz5mlfS38tyySVkSdouS/KjLsODT7aJBeWIp0qkzeS75qm7LhRS84MLrF8Ng15o7DTrPpM+yLWYUo5yBA=="
   ],
   "pops": {
-    "aae1": {
-      "desc": "AWS ap-east-1 (Hong Kong)",
-      "groups": [
-        "cloud-test"
-      ],
-      "relay_addresses": [
-        "18.162.88.34:27015-27019"
-      ],
-      "relays": [
-        {
-          "ipv4": "18.162.88.34",
-          "port_range": [ 27015, 27019 ]
-        }
-      ]
-    },
-    "aec1": {
-      "desc": "AWS eu-central-1 (Frankfurt)",
-      "groups": [
-        "cloud-test"
-      ],
-      "relay_addresses": [
-        "3.120.105.51:27015-27019"
-      ],
-      "relays": [
-        {
-          "ipv4": "3.120.105.51",
-          "port_range": [ 27015, 27019 ]
-        }
-      ]
-    },
     "ams": {
       "desc": "Amsterdam",
       "geo": [ 4.9, 52.37 ],
@@ -91,21 +61,6 @@
       ],
       "service_address_ranges": [
         "155.133.234.0/24"
-      ]
-    },
-    "auw2": {
-      "desc": "AWS us-west-2 (Oregon)",
-      "groups": [
-        "cloud-test"
-      ],
-      "relay_addresses": [
-        "34.212.218.15:27015-27019"
-      ],
-      "relays": [
-        {
-          "ipv4": "34.212.218.15",
-          "port_range": [ 27015, 27019 ]
-        }
       ]
     },
     "bom": {
@@ -378,33 +333,6 @@
         }
       ]
     },
-    "gnrt": {
-      "desc": "Tokyo (gnrt)",
-      "geo": [ 139.68, 35.68 ],
-      "partners": -1,
-      "relay_addresses": [
-        "34.85.47.228:27015-27022",
-        "34.85.12.153:27015-27022",
-        "34.85.40.62:27015-27022"
-      ],
-      "relays": [
-        {
-          "ipv4": "34.85.47.228",
-          "port_range": [ 27015, 27022 ]
-        },
-        {
-          "ipv4": "34.85.12.153",
-          "port_range": [ 27015, 27022 ]
-        },
-        {
-          "ipv4": "34.85.40.62",
-          "port_range": [ 27015, 27022 ]
-        }
-      ],
-      "service_address_ranges": [
-        "10.254.96.0/24"
-      ]
-    },
     "gru": {
       "desc": "Sao Paulo",
       "geo": [ -46.64, -23.53 ],
@@ -537,7 +465,7 @@
         "162.254.192.69:27015-27060",
         "162.254.192.70:27015-27060",
         "162.254.192.83:27015-27052",
-        "162.254.192.86:27015-27045",
+        "162.254.192.86:27015-27044",
         "162.254.192.99:27015-27068"
       ],
       "relays": [
@@ -563,7 +491,7 @@
         },
         {
           "ipv4": "162.254.192.86",
-          "port_range": [ 27015, 27045 ]
+          "port_range": [ 27015, 27044 ]
         },
         {
           "ipv4": "162.254.192.99",
@@ -1066,7 +994,7 @@
       "relay_addresses": [
         "205.196.6.66:27015-27052",
         "205.196.6.74:27015-27068",
-        "205.196.6.148:27015-27045"
+        "205.196.6.148:27015-27044"
       ],
       "relays": [
         {
@@ -1079,7 +1007,7 @@
         },
         {
           "ipv4": "205.196.6.148",
-          "port_range": [ 27015, 27045 ]
+          "port_range": [ 27015, 27044 ]
         }
       ]
     },
@@ -1734,7 +1662,7 @@
     }
   },
   "relay_public_key": "5AC884C1045BA0FF44142AC8DCA51B8A98C8F1CB4FEE36284AFBE92FCF594932",
-  "revision": 275,
+  "revision": 276,
   "revoked_keys": [
     "123456789"
   ]

@@ -1445,6 +1445,18 @@ function ReplaceDynamicLink( id, strHTML )
 	}
 }
 
+function ShowBannedDynamicLink( el )
+{
+	el = $J( el );
+	if ( el.length > 0 )
+	{
+		var bannedContentURL = el.data( 'bannedurl' );
+		var link = $J( "<a>", { href: bannedContentURL, text: bannedContentURL } );
+		el.html( link );
+		el.attr( 'onclick', '' );
+	}
+}
+
 
 
 function CScrollOffsetWatcher( el, fnCallback )
