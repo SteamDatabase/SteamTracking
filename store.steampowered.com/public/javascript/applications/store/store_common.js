@@ -4578,7 +4578,7 @@
                     (d = l),
                     (_ =
                       (u = p && (p.full_game_appid || p.appid)) &&
-                      I.c.BIsAppStreaming(u)))
+                      I.d.BIsAppStreaming(u)))
                   : (d = b
                       ? Object(P.d)(
                           "#Sale_BundleSave_WithDiscount",
@@ -4998,7 +4998,7 @@
                 g = l.some(function(e) {
                   var t = N.a.GetAppLinkInfo(e),
                     n = t && (t.full_game_appid || t.appid);
-                  return n && I.c.BIsAppStreaming(n);
+                  return n && I.d.BIsAppStreaming(n);
                 }),
                 O =
                   n &&
@@ -5782,8 +5782,7 @@
                         !r.length)
                       )
                         return [3, 3];
-                      console.trace("AppLinkStore.Load ajax", r.length, r),
-                        r.sort(),
+                      r.sort(),
                         (n = function() {
                           var t, i, n, o, a;
                           return Object(s.e)(this, function(e) {
@@ -15790,29 +15789,31 @@
                       return t.m_rgFutureSections.push(e);
                     });
             }),
-            (e.prototype.RegisterCalendarEventsAndModels = function(t) {
+            (e.prototype.RegisterCalendarEventsAndModels = function(n) {
               return Object(h.b)(this, void 0, void 0, function() {
+                var t = this;
                 return Object(h.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return (
-                        this.RegisterCalendarApps(t.apps),
-                        this.RegisterCalendarClans(t.clans),
-                        [4, this.RegisterCalendarEvents(t.documents)]
-                      );
+                      return [4, d.a.HintLoad()];
                     case 1:
                       return (
                         e.sent(),
-                        a.c.RegisterClanEvents(t.events),
-                        this.RegisterReadEvents(t.events_read),
-                        this.RegisterEventVotes(t.event_votes),
-                        t.forwardComplete &&
-                          (this.m_bFinishedSearchingForward = !0),
-                        t.backwardComplete &&
-                          (this.m_bFinishedSearchingBackward = !0),
-                        this.InitCalendarSections(),
-                        A.a.bEnableNewsHubMayUpdate &&
-                          this.InitFutureCalendarSections(),
+                        Object(i.z)(function() {
+                          t.RegisterCalendarApps(n.apps),
+                            t.RegisterCalendarClans(n.clans),
+                            t.RegisterCalendarEvents(n.documents),
+                            a.c.RegisterClanEvents(n.events),
+                            t.RegisterReadEvents(n.events_read),
+                            t.RegisterEventVotes(n.event_votes),
+                            n.forwardComplete &&
+                              (t.m_bFinishedSearchingForward = !0),
+                            n.backwardComplete &&
+                              (t.m_bFinishedSearchingBackward = !0),
+                            t.InitCalendarSections(),
+                            A.a.bEnableNewsHubMayUpdate &&
+                              t.InitFutureCalendarSections();
+                        }),
                         [2]
                       );
                   }
@@ -15859,33 +15860,18 @@
                   t.SetVote(a.id, r);
                 }
             }),
-            (e.prototype.RegisterCalendarEvents = function(r) {
-              return Object(h.b)(this, void 0, void 0, function() {
-                var a = this;
-                return Object(h.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      return r ? [4, d.a.HintLoad()] : [3, 2];
-                    case 1:
-                      e.sent(),
-                        Object(i.z)(function() {
-                          for (var e = !1, t = 0, n = r; t < n.length; t++) {
-                            var o = n[t];
-                            (o.appid &&
-                              !a.BIsSingleAppCalendar() &&
-                              (m.a.BIsMutedAppID(o.appid) ||
-                                d.a.BIsGameIgnored(o.appid))) ||
-                              (a.InternalInsertCalendarEventItem(o) &&
-                                (e = !0));
-                          }
-                          e && a.RebuildSortedCalendarEventList();
-                        }),
-                        (e.label = 2);
-                    case 2:
-                      return [2];
-                  }
-                });
-              });
+            (e.prototype.RegisterCalendarEvents = function(e) {
+              if (e) {
+                for (var t = !1, n = 0, o = e; n < o.length; n++) {
+                  var a = o[n];
+                  (a.appid &&
+                    !this.BIsSingleAppCalendar() &&
+                    (m.a.BIsMutedAppID(a.appid) ||
+                      d.a.BIsGameIgnored(a.appid))) ||
+                    (this.InternalInsertCalendarEventItem(a) && (t = !0));
+                }
+                t && this.RebuildSortedCalendarEventList();
+              }
             }),
             (e.prototype.BHitEventHorizon = function(e) {
               return "forward" == e
@@ -16001,47 +15987,45 @@
                             cancelToken: d ? d.token : void 0
                           })),
                           (t = s
-                            .then(function(n) {
+                            .then(function(t) {
                               return Object(h.b)(p, void 0, void 0, function() {
-                                var t;
                                 return Object(h.e)(this, function(e) {
                                   switch (e.label) {
                                     case 0:
-                                      return 1 != n.data.success
-                                        ? [3, 2]
-                                        : [
-                                            4,
-                                            this.RegisterCalendarEventsAndModels(
-                                              n.data
-                                            )
-                                          ];
+                                      return (
+                                        this.SetRequestInFlight(l, null),
+                                        1 != t.data.success
+                                          ? [3, 2]
+                                          : [
+                                              4,
+                                              this.RegisterCalendarEventsAndModels(
+                                                t.data
+                                              )
+                                            ]
+                                      );
                                     case 1:
                                       return (
                                         e.sent(),
                                         this.UpdateStuckCounters(l, i)
-                                          ? ((t = this.BIsSingleAppCalendar()),
-                                            [
+                                          ? [
                                               2,
                                               this.LoadAdditionalEvents(
                                                 l,
                                                 d,
-                                                t,
-                                                !1
+                                                u,
+                                                m
                                               )
-                                            ])
+                                            ]
                                           : [3, 3]
                                       );
                                     case 2:
                                       console.error(
                                         "LoadAdditionalEvents was not successful: Msg" +
-                                          n.data.msg
+                                          t.data.msg
                                       ),
                                         (e.label = 3);
                                     case 3:
-                                      return (
-                                        this.SetRequestInFlight(l, null),
-                                        [2, n.data.success]
-                                      );
+                                      return [2, t.data.success];
                                   }
                                 });
                               });
@@ -19104,7 +19088,7 @@
           function e(e) {
             (this.appid = e.appid),
               (this.demo_appid = e.demo_appid),
-              (this.demo_package = e.appid),
+              (this.demo_package_id = 0),
               (this.ogg_clanid = e.ogg_clanid),
               (this.info_clan_event_gid = e.info_clan_event_gid),
               (this.upcoming_clan_event_gid = e.upcoming_clan_event_gid),
@@ -19166,7 +19150,7 @@
                   "object" == typeof t[0]
                 ) &&
                 ("number" == typeof t[0].appid &&
-                  "number" == typeof t[0].demo_package)
+                  "number" == typeof t[0].demo_package_id)
               );
             }),
             (e.prototype.LoadAppIDsBatch = function(i, c, s) {
@@ -20384,10 +20368,10 @@
     },
     nWbB: function(e, t, n) {
       "use strict";
-      n.d(t, "a", function() {
+      n.d(t, "b", function() {
         return d;
       }),
-        n.d(t, "b", function() {
+        n.d(t, "a", function() {
           return u;
         }),
         n.d(t, "c", function() {
@@ -20395,6 +20379,9 @@
         }),
         n.d(t, "d", function() {
           return h;
+        }),
+        n.d(t, "e", function() {
+          return b;
         });
       var i = n("mrSG"),
         a = n("kLLr"),
@@ -20403,350 +20390,353 @@
         s = n("lkRc"),
         r = n("2vnA"),
         p = n("bDQf"),
-        l = n("UWWC"),
-        d = (function() {
-          function o() {
-            (this.m_chatVisibility = "hide"),
-              (this.m_bHideBroadcast = void 0),
-              (this.m_setStreamsLoadedListeners = new Set()),
-              (this.m_bHasStartedVideo = !1),
-              (this.m_bUseFakeData = !1),
-              (this.m_bAllowStreamAutoPlay = !0);
-          }
-          return (
-            (o.prototype.BHasStreams = function() {
-              return this.m_streams && 0 < this.m_streams.length;
-            }),
-            (o.prototype.GetPlayReadyStream = function() {
-              return this.m_playReadyStream;
-            }),
-            (o.prototype.AddStreamsLoadedListener = function(e) {
-              this.m_setStreamsLoadedListeners.add(e);
-            }),
-            (o.prototype.RemoveStreamsLoadedListener = function(e) {
-              this.m_setStreamsLoadedListeners.delete(e);
-            }),
-            (o.prototype.NotifyStreamsLoadedListeners = function() {
-              this.m_setStreamsLoadedListeners.forEach(function(e) {
-                return e();
+        l = n("UWWC");
+      function d(e) {
+        return Boolean(e && e.thumbnail_http_address);
+      }
+      var u = (function() {
+        function o() {
+          (this.m_chatVisibility = "hide"),
+            (this.m_bHideBroadcast = void 0),
+            (this.m_setStreamsLoadedListeners = new Set()),
+            (this.m_bHasStartedVideo = !1),
+            (this.m_bUseFakeData = !1),
+            (this.m_bAllowStreamAutoPlay = !0);
+        }
+        return (
+          (o.prototype.BHasStreams = function() {
+            return this.m_streams && 0 < this.m_streams.length;
+          }),
+          (o.prototype.GetPlayReadyStream = function() {
+            return this.m_playReadyStream;
+          }),
+          (o.prototype.AddStreamsLoadedListener = function(e) {
+            this.m_setStreamsLoadedListeners.add(e);
+          }),
+          (o.prototype.RemoveStreamsLoadedListener = function(e) {
+            this.m_setStreamsLoadedListeners.delete(e);
+          }),
+          (o.prototype.NotifyStreamsLoadedListeners = function() {
+            this.m_setStreamsLoadedListeners.forEach(function(e) {
+              return e();
+            });
+          }),
+          (o.prototype.LoadBIsEmbeddedBroadcastHidden = function(r) {
+            return Object(i.b)(this, void 0, void 0, function() {
+              var t, n, o, a;
+              return Object(i.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    if (void 0 !== this.m_bHideBroadcast) return [3, 5];
+                    if (
+                      (t = Object(s.f)("broadcastuser", "application_config"))
+                    )
+                      return [3, 4];
+                    e.label = 1;
+                  case 1:
+                    return (
+                      e.trys.push([1, 3, , 4]),
+                      (n =
+                        s.c.STORE_BASE_URL +
+                        "broadcast/ajaxgetuserbroadcastpreferences"),
+                      [4, c.a.get(n, { params: {}, cancelToken: r.token })]
+                    );
+                  case 2:
+                    return (o = e.sent()), (t = o.data), [3, 4];
+                  case 3:
+                    return (
+                      (a = e.sent()),
+                      console.log(
+                        "LoadBIsEmbeddedBroadcastHidden: " +
+                          Object(p.a)(a).strErrorMsg
+                      ),
+                      (t = { bHideStoreBroadcast: !1 }),
+                      [3, 4]
+                    );
+                  case 4:
+                    (this.m_bHideBroadcast = t.bHideStoreBroadcast),
+                      (e.label = 5);
+                  case 5:
+                    return [2, this.m_bHideBroadcast];
+                }
               });
-            }),
-            (o.prototype.LoadBIsEmbeddedBroadcastHidden = function(r) {
-              return Object(i.b)(this, void 0, void 0, function() {
-                var t, n, o, a;
-                return Object(i.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      if (void 0 !== this.m_bHideBroadcast) return [3, 5];
-                      if (
-                        (t = Object(s.f)("broadcastuser", "application_config"))
-                      )
-                        return [3, 4];
-                      e.label = 1;
-                    case 1:
-                      return (
-                        e.trys.push([1, 3, , 4]),
-                        (n =
+            });
+          }),
+          (o.prototype.BIsEmbeddedBroadcastHidden = function() {
+            return Boolean(this.m_bHideBroadcast);
+          }),
+          (o.prototype.GetSettings = function() {
+            return this.m_settings;
+          }),
+          (o.prototype.GetConcurrentStreams = function() {
+            return this.m_streams ? this.m_streams.length : 0;
+          }),
+          (o.prototype.GetChatVisibility = function() {
+            return this.m_chatVisibility;
+          }),
+          (o.prototype.ToggleChatVisibility = function() {
+            "remove" !== this.m_chatVisibility &&
+              (this.m_chatVisibility =
+                "hide" === this.GetChatVisibility() ? "show" : "hide");
+          }),
+          (o.prototype.HintLoadEmbeddablePreviewStreams = function(a) {
+            return Object(i.b)(this, void 0, void 0, function() {
+              var t, n, o;
+              return Object(i.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    (this.m_settings = a),
+                      (t = null),
+                      (n = {
+                        eventid: a.event ? a.event.GID : void 0,
+                        previewAccounts: Boolean(a.bIsPreview && a.accountIDs)
+                          ? a.accountIDs.join(",")
+                          : void 0
+                      }),
+                      (e.label = 1);
+                  case 1:
+                    return (
+                      e.trys.push([1, 3, , 4]),
+                      [
+                        4,
+                        c.a.get(
                           s.c.STORE_BASE_URL +
-                          "broadcast/ajaxgetuserbroadcastpreferences"),
-                        [4, c.a.get(n, { params: {}, cancelToken: r.token })]
-                      );
-                    case 2:
-                      return (o = e.sent()), (t = o.data), [3, 4];
-                    case 3:
-                      return (
-                        (a = e.sent()),
-                        console.log(
-                          "LoadBIsEmbeddedBroadcastHidden: " +
-                            Object(p.a)(a).strErrorMsg
-                        ),
-                        (t = { bHideStoreBroadcast: !1 }),
-                        [3, 4]
-                      );
-                    case 4:
-                      (this.m_bHideBroadcast = t.bHideStoreBroadcast),
-                        (e.label = 5);
-                    case 5:
-                      return [2, this.m_bHideBroadcast];
-                  }
-                });
+                            "broadcast/ajaxgetstreamersforpreview",
+                          { params: n }
+                        )
+                      ]
+                    );
+                  case 2:
+                    return (t = e.sent()), [3, 4];
+                  case 3:
+                    return (o = e.sent()), console.error(o), [3, 4];
+                  case 4:
+                    return [2, this.HandleHintLoadBroadcastResponse(t)];
+                }
               });
-            }),
-            (o.prototype.BIsEmbeddedBroadcastHidden = function() {
-              return Boolean(this.m_bHideBroadcast);
-            }),
-            (o.prototype.GetSettings = function() {
-              return this.m_settings;
-            }),
-            (o.prototype.GetConcurrentStreams = function() {
-              return this.m_streams ? this.m_streams.length : 0;
-            }),
-            (o.prototype.GetChatVisibility = function() {
-              return this.m_chatVisibility;
-            }),
-            (o.prototype.ToggleChatVisibility = function() {
-              "remove" !== this.m_chatVisibility &&
-                (this.m_chatVisibility =
-                  "hide" === this.GetChatVisibility() ? "show" : "hide");
-            }),
-            (o.prototype.HintLoadEmbeddablePreviewStreams = function(a) {
-              return Object(i.b)(this, void 0, void 0, function() {
-                var t, n, o;
-                return Object(i.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      (this.m_settings = a),
-                        (t = null),
-                        (n = {
-                          eventid: a.event ? a.event.GID : void 0,
-                          previewAccounts: Boolean(a.bIsPreview && a.accountIDs)
-                            ? a.accountIDs.join(",")
-                            : void 0
-                        }),
-                        (e.label = 1);
-                    case 1:
-                      return (
-                        e.trys.push([1, 3, , 4]),
-                        [
-                          4,
-                          c.a.get(
-                            s.c.STORE_BASE_URL +
-                              "broadcast/ajaxgetstreamersforpreview",
-                            { params: n }
-                          )
-                        ]
-                      );
-                    case 2:
-                      return (t = e.sent()), [3, 4];
-                    case 3:
-                      return (o = e.sent()), console.error(o), [3, 4];
-                    case 4:
-                      return [2, this.HandleHintLoadBroadcastResponse(t)];
-                  }
-                });
+            });
+          }),
+          (o.prototype.HintLoadEmbeddableStreams = function(a) {
+            return Object(i.b)(this, void 0, void 0, function() {
+              var t, n, o;
+              return Object(i.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    (this.m_settings = a),
+                      (t = null),
+                      (n = {
+                        appid: a.appid,
+                        promotionName: a.bIsPreview
+                          ? "preview"
+                          : a.promotionName,
+                        clanid: a.clanid
+                          ? a.clanid
+                          : a.event
+                          ? a.event.clanSteamID.GetAccountID()
+                          : void 0,
+                        listid: a.listid,
+                        subid: a.subid,
+                        bundleid: a.bundleid,
+                        eventid: a.event ? a.event.GID : void 0,
+                        previewAccounts: Boolean(a.bIsPreview && a.accountIDs)
+                          ? a.accountIDs.join(",")
+                          : void 0,
+                        test: !1,
+                        cc: s.c.COUNTRY,
+                        l: s.c.LANGUAGE
+                      }),
+                      (e.label = 1);
+                  case 1:
+                    return (
+                      e.trys.push([1, 3, , 4]),
+                      [
+                        4,
+                        c.a.get(
+                          s.c.STORE_BASE_URL +
+                            "broadcast/ajaxgetstreamersforpage",
+                          { params: n }
+                        )
+                      ]
+                    );
+                  case 2:
+                    return (t = e.sent()), [3, 4];
+                  case 3:
+                    return (o = e.sent()), console.error(o), [3, 4];
+                  case 4:
+                    return [2, this.HandleHintLoadBroadcastResponse(t)];
+                }
               });
-            }),
-            (o.prototype.HintLoadEmbeddableStreams = function(a) {
-              return Object(i.b)(this, void 0, void 0, function() {
-                var t, n, o;
-                return Object(i.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      (this.m_settings = a),
-                        (t = null),
-                        (n = {
-                          appid: a.appid,
-                          promotionName: a.bIsPreview
-                            ? "preview"
-                            : a.promotionName,
-                          clanid: a.clanid
-                            ? a.clanid
-                            : a.event
-                            ? a.event.clanSteamID.GetAccountID()
-                            : void 0,
-                          listid: a.listid,
-                          subid: a.subid,
-                          bundleid: a.bundleid,
-                          eventid: a.event ? a.event.GID : void 0,
-                          previewAccounts: Boolean(a.bIsPreview && a.accountIDs)
-                            ? a.accountIDs.join(",")
-                            : void 0,
-                          test: !1,
-                          cc: s.c.COUNTRY,
-                          l: s.c.LANGUAGE
-                        }),
-                        (e.label = 1);
-                    case 1:
-                      return (
-                        e.trys.push([1, 3, , 4]),
-                        [
-                          4,
-                          c.a.get(
-                            s.c.STORE_BASE_URL +
-                              "broadcast/ajaxgetstreamersforpage",
-                            { params: n }
-                          )
-                        ]
-                      );
-                    case 2:
-                      return (t = e.sent()), [3, 4];
-                    case 3:
-                      return (o = e.sent()), console.error(o), [3, 4];
-                    case 4:
-                      return [2, this.HandleHintLoadBroadcastResponse(t)];
-                  }
-                });
+            });
+          }),
+          (o.prototype.HandleHintLoadBroadcastResponse = function(t) {
+            return Object(i.b)(this, void 0, void 0, function() {
+              return Object(i.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return t
+                      ? ((this.m_mapDynamicStoreData = t.data.rgAppData),
+                        (this.m_bUseFakeData = !1),
+                        (t &&
+                          t.data &&
+                          t.data.filtered &&
+                          t.data.filtered.length) ||
+                          !this.m_settings.bIsPreview ||
+                          ((t.data = {
+                            filtered: [{}],
+                            success: 1,
+                            total_count: 1,
+                            err_msg: "",
+                            broadcast_chat_visibility: "hide",
+                            rgAppData: null
+                          }),
+                          (this.m_bUseFakeData = !0)),
+                        (this.m_streams = t.data.filtered),
+                        t.data.broadcast_chat_visibility &&
+                          (this.m_chatVisibility =
+                            t.data.broadcast_chat_visibility),
+                        this.NotifyStreamsLoadedListeners(),
+                        this.m_bAllowStreamAutoPlay
+                          ? [4, this.AutoStartVideoStream()]
+                          : [3, 2])
+                      : [2, null];
+                  case 1:
+                    return [2, e.sent()];
+                  case 2:
+                    return [2, null];
+                }
               });
-            }),
-            (o.prototype.HandleHintLoadBroadcastResponse = function(t) {
-              return Object(i.b)(this, void 0, void 0, function() {
-                return Object(i.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      return t
-                        ? ((this.m_mapDynamicStoreData = t.data.rgAppData),
-                          (this.m_bUseFakeData = !1),
-                          (t &&
-                            t.data &&
-                            t.data.filtered &&
-                            t.data.filtered.length) ||
-                            !this.m_settings.bIsPreview ||
-                            ((t.data = {
-                              filtered: [{}],
-                              success: 1,
-                              total_count: 1,
-                              err_msg: "",
-                              broadcast_chat_visibility: "hide",
-                              rgAppData: null
-                            }),
-                            (this.m_bUseFakeData = !0)),
-                          (this.m_streams = t.data.filtered),
-                          t.data.broadcast_chat_visibility &&
-                            (this.m_chatVisibility =
-                              t.data.broadcast_chat_visibility),
-                          this.NotifyStreamsLoadedListeners(),
-                          this.m_bAllowStreamAutoPlay
-                            ? [4, this.AutoStartVideoStream()]
-                            : [3, 2])
-                        : [2, null];
-                    case 1:
-                      return [2, e.sent()];
-                    case 2:
-                      return [2, null];
-                  }
-                });
+            });
+          }),
+          (o.prototype.AutoStartVideoStream = function(n) {
+            return Object(i.b)(this, void 0, void 0, function() {
+              var t;
+              return Object(i.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    return this.m_bHasStartedVideo
+                      ? [2, null]
+                      : (t = n || o.GetAutoStartStream(this.m_streams))
+                      ? this.m_bUseFakeData
+                        ? (this.m_playReadyStream ||
+                            (this.m_playReadyStream = t),
+                          [3, 3])
+                        : [3, 1]
+                      : [3, 3];
+                  case 1:
+                    return [4, this.AttemptToPlayStream(t)];
+                  case 2:
+                    e.sent(), (e.label = 3);
+                  case 3:
+                    return [2, t];
+                }
               });
-            }),
-            (o.prototype.AutoStartVideoStream = function(n) {
-              return Object(i.b)(this, void 0, void 0, function() {
-                var t;
-                return Object(i.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      return this.m_bHasStartedVideo
-                        ? [2, null]
-                        : (t = n || o.GetAutoStartStream(this.m_streams))
-                        ? this.m_bUseFakeData
-                          ? (this.m_playReadyStream ||
-                              (this.m_playReadyStream = t),
-                            [3, 3])
-                          : [3, 1]
-                        : [3, 3];
-                    case 1:
-                      return [4, this.AttemptToPlayStream(t)];
-                    case 2:
-                      e.sent(), (e.label = 3);
-                    case 3:
-                      return [2, t];
-                  }
-                });
+            });
+          }),
+          (o.prototype.DisableAutoPlay = function() {
+            this.m_bAllowStreamAutoPlay = !1;
+          }),
+          (o.prototype.EnableAutoPlay = function(e) {
+            this.m_bAllowStreamAutoPlay ||
+              ((this.m_bAllowStreamAutoPlay = !0),
+              this.AutoStartVideoStream(e));
+          }),
+          (o.prototype.AttemptToPlayStream = function(r) {
+            return Object(i.b)(this, void 0, void 0, function() {
+              var t, n, o, a;
+              return Object(i.e)(this, function(e) {
+                switch (e.label) {
+                  case 0:
+                    (t = null), (this.m_bHasStartedVideo = !0), (e.label = 1);
+                  case 1:
+                    return (
+                      e.trys.push([1, 3, , 4]),
+                      (n = s.c.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
+                      (o = { broadcastaccountid: r.accountid }),
+                      [4, c.a.get(n, { params: o })]
+                    );
+                  case 2:
+                    return (t = e.sent()), [3, 4];
+                  case 3:
+                    return (a = e.sent()), console.error(a), [3, 4];
+                  case 4:
+                    return (
+                      1 == t.data.success &&
+                        ((r.steamid = t.data.steamid),
+                        (this.m_playReadyStream = r),
+                        (this.m_settings.appid || this.m_settings.event) &&
+                          "remove" !== this.m_chatVisibility &&
+                          (1 < this.GetConcurrentStreams()
+                            ? (this.m_chatVisibility = "hide")
+                            : (this.m_chatVisibility = r.chat_visibility)),
+                        m(r.appid, 1, r.snr)),
+                      [2, r]
+                    );
+                }
               });
-            }),
-            (o.prototype.DisableAutoPlay = function() {
-              this.m_bAllowStreamAutoPlay = !1;
-            }),
-            (o.prototype.EnableAutoPlay = function(e) {
-              this.m_bAllowStreamAutoPlay ||
-                ((this.m_bAllowStreamAutoPlay = !0),
-                this.AutoStartVideoStream(e));
-            }),
-            (o.prototype.AttemptToPlayStream = function(r) {
-              return Object(i.b)(this, void 0, void 0, function() {
-                var t, n, o, a;
-                return Object(i.e)(this, function(e) {
-                  switch (e.label) {
-                    case 0:
-                      (t = null), (this.m_bHasStartedVideo = !0), (e.label = 1);
-                    case 1:
-                      return (
-                        e.trys.push([1, 3, , 4]),
-                        (n =
-                          s.c.STORE_BASE_URL + "broadcast/ajaxcheckbroadcast"),
-                        (o = { broadcastaccountid: r.accountid }),
-                        [4, c.a.get(n, { params: o })]
-                      );
-                    case 2:
-                      return (t = e.sent()), [3, 4];
-                    case 3:
-                      return (a = e.sent()), console.error(a), [3, 4];
-                    case 4:
-                      return (
-                        1 == t.data.success &&
-                          ((r.steamid = t.data.steamid),
-                          (this.m_playReadyStream = r),
-                          (this.m_settings.appid || this.m_settings.event) &&
-                            "remove" !== this.m_chatVisibility &&
-                            (1 < this.GetConcurrentStreams()
-                              ? (this.m_chatVisibility = "hide")
-                              : (this.m_chatVisibility = r.chat_visibility)),
-                          u(r.appid, 1, r.snr)),
-                        [2, r]
-                      );
-                  }
-                });
-              });
-            }),
-            (o.SelectRandomStream = function(e) {
-              return 0 === e.length
-                ? null
-                : e[Math.floor(Math.random() * e.length)];
-            }),
-            (o.GetAutoStartStream = function(e) {
-              if (!e) return null;
-              var t = o.SelectRandomStream(
+            });
+          }),
+          (o.SelectRandomStream = function(e) {
+            var t = e.filter(d);
+            return 0 === t.length
+              ? null
+              : t[Math.floor(Math.random() * t.length)];
+          }),
+          (o.GetAutoStartStream = function(e) {
+            if (!e) return null;
+            var t = o.SelectRandomStream(
+              e.filter(function(e) {
+                return e.is_primary_stream;
+              })
+            );
+            return (t =
+              t ||
+              ((t = o.SelectRandomStream(
                 e.filter(function(e) {
-                  return e.is_primary_stream;
+                  return e.is_featured;
                 })
-              );
-              return (t =
-                t ||
-                ((t = o.SelectRandomStream(
-                  e.filter(function(e) {
-                    return e.is_featured;
-                  })
-                )) ||
-                  o.SelectRandomStream(e)));
-            }),
-            (o.prototype.GetStreams = function() {
-              return this.m_streams;
-            }),
-            (o.prototype.GetBroadcastURL = function(e) {
-              var t = null,
-                t = e.steamid
-                  ? new a.a(e.steamid)
-                  : a.a.InitFromAccountID(e.accountid);
-              return (
-                s.c.COMMUNITY_BASE_URL +
-                "broadcast/watch/" +
-                t.ConvertTo64BitString()
-              );
-            }),
-            (o.prototype.BIsAppStreaming = function(t) {
-              return (
-                Boolean(this.m_streams) &&
-                this.m_streams.some(function(e) {
-                  return Number(e.appid) === t;
-                })
-              );
-            }),
-            Object(i.c)([r.x], o.prototype, "m_mapDynamicStoreData", void 0),
-            Object(i.c)([r.x], o.prototype, "m_streams", void 0),
-            Object(i.c)([r.x], o.prototype, "m_playReadyStream", void 0),
-            Object(i.c)([r.x], o.prototype, "m_settings", void 0),
-            Object(i.c)([r.x], o.prototype, "m_chatVisibility", void 0),
-            Object(i.c)([r.x], o.prototype, "m_bHideBroadcast", void 0),
-            Object(i.c)(
-              [r.h],
-              o.prototype,
-              "HintLoadEmbeddablePreviewStreams",
-              null
-            ),
-            Object(i.c)([r.h], o.prototype, "HintLoadEmbeddableStreams", null),
-            Object(i.c)([r.h], o.prototype, "AttemptToPlayStream", null),
-            o
-          );
-        })();
-      function u(n, o, a) {
+              )) ||
+                o.SelectRandomStream(e)));
+          }),
+          (o.prototype.GetStreams = function() {
+            return this.m_streams;
+          }),
+          (o.prototype.GetBroadcastURL = function(e) {
+            var t = null,
+              t = e.steamid
+                ? new a.a(e.steamid)
+                : a.a.InitFromAccountID(e.accountid);
+            return (
+              s.c.COMMUNITY_BASE_URL +
+              "broadcast/watch/" +
+              t.ConvertTo64BitString()
+            );
+          }),
+          (o.prototype.BIsAppStreaming = function(t) {
+            return (
+              Boolean(this.m_streams) &&
+              this.m_streams.some(function(e) {
+                return Number(e.appid) === t;
+              })
+            );
+          }),
+          Object(i.c)([r.x], o.prototype, "m_mapDynamicStoreData", void 0),
+          Object(i.c)([r.x], o.prototype, "m_streams", void 0),
+          Object(i.c)([r.x], o.prototype, "m_playReadyStream", void 0),
+          Object(i.c)([r.x], o.prototype, "m_settings", void 0),
+          Object(i.c)([r.x], o.prototype, "m_chatVisibility", void 0),
+          Object(i.c)([r.x], o.prototype, "m_bHideBroadcast", void 0),
+          Object(i.c)(
+            [r.h],
+            o.prototype,
+            "HintLoadEmbeddablePreviewStreams",
+            null
+          ),
+          Object(i.c)([r.h], o.prototype, "HintLoadEmbeddableStreams", null),
+          Object(i.c)([r.h], o.prototype, "AttemptToPlayStream", null),
+          o
+        );
+      })();
+      function m(n, o, a) {
         return Object(i.b)(this, void 0, void 0, function() {
           var t;
           return Object(i.e)(this, function(e) {
@@ -20765,8 +20755,8 @@
           });
         });
       }
-      var m = new d(),
-        h = new l.a();
+      var h = new u(),
+        b = new l.a();
     },
     nrKv: function(e, t, n) {
       "use strict";
@@ -21212,7 +21202,7 @@
           return (
             Object(i.d)(e, t),
             ((a = e).prototype.componentWillUnmount = function() {
-              M.c.RemoveStreamsLoadedListener(this.OnBroadcastStreamsLoaded),
+              M.d.RemoveStreamsLoadedListener(this.OnBroadcastStreamsLoaded),
                 this.m_cancelSignal.cancel(
                   "SaleSectionEventScheduleInner to unload"
                 ),
@@ -21260,7 +21250,7 @@
                 return Object(i.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
-                      return (M.c.AddStreamsLoadedListener(
+                      return (M.d.AddStreamsLoadedListener(
                         this.OnBroadcastStreamsLoaded
                       ),
                       (t = this.GetScheduleCalendarStore()).SetFilteredView(
@@ -21315,14 +21305,14 @@
             }),
             (e.prototype.ApplyScheduleToBroadcasts = function() {
               var t = this;
-              if (this.state.bLoaded && M.c.BHasStreams()) {
+              if (this.state.bLoaded && M.d.BHasStreams()) {
                 for (
                   var e = this.GetScheduleCalendarStore(),
                     n = v.a.GetTimeNowWithOverride(),
                     o = 3600 * Math.floor(n / 3600),
                     a = e.GetCalendarItemsInTimeRange(o, 3599 + o),
                     r = 0,
-                    i = M.c.GetStreams();
+                    i = M.d.GetStreams();
                   r < i.length;
                   r++
                 ) {
@@ -21333,10 +21323,10 @@
                     e != t.is_featured && (t.is_featured = e);
                   })(i[r]);
                 }
-                var c = M.c.GetStreams().filter(function(e) {
+                var c = M.d.GetStreams().filter(function(e) {
                   return t.BShouldShowOnTab(e.appid);
                 });
-                M.c.EnableAutoPlay(M.a.GetAutoStartStream(c)),
+                M.d.EnableAutoPlay(M.a.GetAutoStartStream(c)),
                   this.m_scheduledUpdate.IsScheduled() ||
                     this.m_scheduledUpdate.Schedule(18e4, function() {
                       return t.ApplyScheduleToBroadcasts();
