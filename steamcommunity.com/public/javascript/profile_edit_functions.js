@@ -92,6 +92,9 @@ function InitShowcaseEditor( strSelectID, iSlot )
 	var $Previews = $J( strSelectID + '_previews' );
 	var $PreviewsNone = $J( strSelectID + '_previews_none' );
 
+	if ( !$Select.length )
+		return;
+
 	var fnOnSelectChange = function() { OnSelectChange( $Previews, $PreviewsNone, $StyleCtn, $Select, iSlot ); };
 	$Select.change( fnOnSelectChange );
 	$PrevButton.click( function( event ) {

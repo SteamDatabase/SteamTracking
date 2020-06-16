@@ -402,6 +402,7 @@
 	margin-bottom: 5px;
 	cursor: move;
 	cursor: -moz-grab;
+	display: flex;
 }
 
 .managedCollectionItem:hover
@@ -472,7 +473,7 @@
 
 .collectionItemDetails
 {
-	margin-left: 70px;
+	margin-left: 5px;
 }
 
 .workshopItemTitle

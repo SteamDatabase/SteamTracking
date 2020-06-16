@@ -1364,8 +1364,8 @@ textarea {
 	display: grid;
 	justify-content: space-between;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 10px;
+	grid-column-gap: 22px;
+	grid-row-gap: 5px;
 }
 
 .workshopItem {

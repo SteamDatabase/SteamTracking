@@ -9,7 +9,7 @@
 
 
 
-var CLSTAMP='5931866';
+var CLSTAMP='5932811';
 body.events_hub.v6 {
   /* stylelint-disable-line selector-class-pattern */
   background-color: #171a21;
@@ -2027,13 +2027,21 @@ button.TextButton:focus {
   justify-content: center;
   transition: background-color .08s ease-in-out; }
 
-.DialogRoundCheckbox_Control:focus {
+.DialogRoundCheckbox_Container {
+  cursor: pointer; }
+
+.DialogRoundCheckbox_Container:focus {
   outline: none; }
 
-.DialogRoundCheckbox_OuterCircle:hover {
-  outline: none;
-  background-color: #1e1f23;
-  cursor: pointer; }
+.DialogRoundCheckbox_Container:hover .DialogRoundCheckbox_OuterCircle {
+  background-color: #1e1f23; }
+
+.DialogRoundCheckbox_Container.WithLabel .DialogRoundCheckbox {
+  float: left;
+  margin-right: 6px; }
+
+.DialogRoundCheckbox_Container .DialogToggle_Label {
+  overflow: hidden; }
 
 .DialogRoundCheckbox_Control .DialogRoundCheckbox_InnerCircle {
   width: 50%;

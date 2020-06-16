@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5928749";
+var CLSTAMP = "5932799";
 !(function(e) {
   function t(t) {
     for (
@@ -126,16 +126,16 @@ var CLSTAMP = "5928749";
       n.d(t, "a", function() {
         return a;
       }),
-      n.d(t, "o", function() {
+      n.d(t, "p", function() {
         return s;
       }),
       n.d(t, "i", function() {
         return l;
       }),
-      n.d(t, "r", function() {
+      n.d(t, "s", function() {
         return u;
       }),
-      n.d(t, "q", function() {
+      n.d(t, "r", function() {
         return m;
       }),
       n.d(t, "j", function() {
@@ -144,13 +144,13 @@ var CLSTAMP = "5928749";
       n.d(t, "k", function() {
         return h;
       }),
-      n.d(t, "p", function() {
+      n.d(t, "q", function() {
         return d;
       }),
       n.d(t, "b", function() {
         return f;
       }),
-      n.d(t, "s", function() {
+      n.d(t, "t", function() {
         return v;
       }),
       n.d(t, "h", function() {
@@ -168,8 +168,11 @@ var CLSTAMP = "5928749";
       n.d(t, "n", function() {
         return w;
       }),
-      n.d(t, "m", function() {
+      n.d(t, "o", function() {
         return E;
+      }),
+      n.d(t, "m", function() {
+        return x;
       });
     var r = n("UqDm");
     n("XaMz");
@@ -407,14 +410,27 @@ var CLSTAMP = "5928749";
       return r || e;
     }
     function w(e, t) {
-      for (var n = [], r = [e]; r.length > 0; )
-        for (var o = r.pop().children, i = 0; i < o.length; ++i) {
-          var c = o[i];
-          c.hasAttribute(t) ? n.push(c) : r.push(c);
-        }
+      for (
+        var n = [], r = Array.prototype.slice.call(e.children).reverse();
+        r.length > 0;
+
+      ) {
+        var o = r.pop();
+        o.hasAttribute(t)
+          ? n.push(o)
+          : r.push.apply(r, Array.prototype.slice.call(o.children).reverse());
+      }
       return n;
     }
-    function E(e, t) {
+    function E(e) {
+      for (var t = e.parentElement; t; ) {
+        var n = window.getComputedStyle(t).overflowY;
+        if ("scroll" == n || "auto" == n) break;
+        t = t.parentElement;
+      }
+      return t;
+    }
+    function x(e, t) {
       for (; e; ) {
         if (t(e)) return e;
         e = e.parentElement;
@@ -1764,7 +1780,7 @@ var CLSTAMP = "5928749";
     }
     function k(e) {
       var t = [],
-        n = l.r(e),
+        n = l.s(e),
         r = n.getSelection(),
         o = r && r.rangeCount > 0 && r.toString().length > 0,
         c = e.target,
@@ -7166,7 +7182,13 @@ var CLSTAMP = "5928749";
         (e[(e.k_ERejected = 2)] = "k_ERejected");
     })(h || (h = {}));
     function f(e) {
-      return "game" === e || "dlc" === e || "software" === e || "music" == e;
+      return (
+        "game" === e ||
+        "dlc" === e ||
+        "software" === e ||
+        "music" === e ||
+        "application" === e
+      );
     }
     var v, _;
     !(function(e) {

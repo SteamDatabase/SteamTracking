@@ -228,6 +228,8 @@ var bDiagnostics = false;
 
 var numChoicesPreselected = -1;
 
+var nScroll = 0;
+
 /**
  * Load parameters from the URL (if there are any) and then start the survey
  * When this is moved to the partner site we will draw this information from the
@@ -309,13 +311,18 @@ function startSurvey()
 		hasDevTagsOnly = true;
 	}
 	
+	/*
 	if(doTest || numInitialResponses > 0)
 	{
 		setCurrentQuestion(questions.length-1);
-		displayEndpage();
+		displayEndPage();
 		return;
 	}
-	nextQuestion();
+	*/
+	setCurrentQuestion(-1);
+	displayStartPage();
+	
+	//nextQuestion();
 }
 
 function checkTest()
@@ -434,14 +441,32 @@ function getInitialResponses()
  *
  *************************************/
  
+function onScroll()
+{
+	var choices = document.getElementById("choices");
+	if(choices != null)
+	{
+		nScroll = choices.scrollTop;
+	}
+	else
+	{
+		nScroll = 0;
+	}
+}
+ 
 /**
  * Save responses whenever the user clicks
  */
 function onChange()
 {
 	saveResponse(function(){
-		displayCurrentQuestion(false);
+		hilightAssociations();
 	});
+	var choices = document.getElementById("choices");
+	if(choices != null)
+	{
+		choices.scrollTop = nScroll;
+	}
 }
  
 /**
@@ -466,6 +491,7 @@ function onClickChoice(i, isRadio)
 			}
 		}
 	}
+	hilightAssociations();
 }
 
 function removeResponse(tagid)
@@ -587,6 +613,12 @@ function onClickSection(qid)
 	{
 		qid = "q_tags_from_desc";
 	}
+	if(qid == "q_summary")
+	{
+		setCurrentQuestion(questions.length-1);
+		displayEndPage();
+		return;
+	}
 	setCurrentQuestion(getQuestionIndex(qid));
 	displayCurrentQuestion();
 }
@@ -643,13 +675,13 @@ function getManuallySortedTagListFromHTML()
 function onClickRevertTags()
 {
 	rgManualTagidRanking = tagsToTagids(getNaturalTagProfile())
-	displayEndpage(false);
+	displayEndPage(false);
 }
 
 function onClickOptimizeTags()
 {
 	rgManualTagidRanking = [];
-	displayEndpage(true);
+	displayEndPage(true);
 }
 
 function updateSortButtons()
@@ -686,18 +718,12 @@ function updateSortButtons()
 		//Tags are already in their natural order, so disable revert:
 		addClass(revDiv,"disabled");
 		revBtn.setAttribute("onclick",'');
-		addClass(canDiv,"disabled");
-		canBtn.setAttribute("onclick",'');
-		addClass(pubDiv,"disabled");
 	}
 	else
 	{
 		//Tags aren't in their natural order, so enable revert:
 		removeClass(revDiv,"disabled");
 		revBtn.setAttribute("onclick",'onClickRevertTags()');
-		removeClass(canDiv,"disabled");
-		canBtn.setAttribute("onclick",'onClickCancelSurvey()');
-		removeClass(pubDiv,"disabled");
 	}
 }
 
@@ -881,7 +907,7 @@ function nextQuestion(direction)
 			currentQuestion += direction;
 			if(currentQuestion >= questions.length)
 			{
-				displayEndpage();
+				displayEndPage();
 			}
 			else
 			{
@@ -893,7 +919,7 @@ function nextQuestion(direction)
 	}
 	else
 	{
-		displayEndpage();
+		displayEndPage();
 	}
 }
 
@@ -972,6 +998,7 @@ function saveResponse(callback)
 		}
 	}
 	rgResponses[currentQuestion] = currResponses;
+	displayCurrentQuestionSummary();
 	
 	//Update tag associations based on current tag choices
 	getTagAssociations(callback);
@@ -1197,12 +1224,16 @@ function getStepText(step,max)
 function getQText(id)
 {
 	switch(id){
+		case "start_text":
+			return 'The tags associated with your title help users discover it on Steam.<br><br>In this wizard, you will select Steam tags to associate with your title. Then you will prioritize this list. The top fifteen tags will help Steam determine where to surface your game to customers across browse veiws, search results, and recommendations.<br><br>Let\'s begin!<br><br>' + getBanTagsText();
+			break;
 		case "end_text":
-			return 'The tags associated with your title help users discover it on Steam.<BR><BR>' + " " + 'In this wizard, you will select Steam tags to associate with your title. Then you will prioritize this list. The top fifteen tags will help Steam determine where to surface your game to customers across browse views, search results, and recommendations.<br><br>Let\'s begin!<br><br>' + ''.replace('%d',maxTags) + getBanTagsText();
+			return 'As a last step, please prioritize your tags using Drag & Drop.<BR><BR>\nThe top 15 tags are used to determine where your title is displayed throughout Steam. Tags at the top of your list are weighted most heavily when displaying or recommending your title. <BR><BR>\nWe suggest prioritization which places sub-genres and other tags which are both meaningful and specific near the top. <BR><BR>\nWhen you\'re happy with your work, click Publish. Please note that any unfinished changes will be lost.' 
 			break;
 		case "end_text_devtags":
 			return 
 			break;
+		case "q_software_genre":    return 'Looks like this is a software application. Choose one or two software genres to categorize your title.';    break;
 		case "q_super_genre":    return 'To begin, choose one or two top-level genres to categorize your title.';    break;
 		case "q_genre":          return 'Select one or two genres to describe your title.<BR><BR>The <strong>brighter ones</strong> in this list are common among titles with top-level genres similar to yours, and may be more relevant than others.';         break;
 		case "q_sub_genre":      return 'Select up to three sub-genres to describe your title.<BR><BR>The <strong>brighter ones</strong> in this list are common among titles with genres similar to yours, and may be more relevant than others.';      break;
@@ -1215,6 +1246,7 @@ function getQText(id)
 		case "q_tags_from_users":
 			return 'These additional tags have been applied to your title by the Steam community of users.<br><br>We suggest keeping these in place unless any are explicitly inaccurate.<br><br>' + getBanTagsText();
 		break;
+		case "q_summary":        return '#App_Taxonomy_Survey_QSummaryText';
 		case "none_defined"    : return 'None defined';       
 		case "top_tags"        : return 'Top 15 Tags, by weight—Drag & Drop to reorder';
 		break;
@@ -1237,7 +1269,9 @@ function getBanTagsText()
 function getQTitle(id)
 {
 	switch(id){
+		case "start_title":      return 'Your Tags';
 		case "end_title":        return 'Your Tags';           break;
+		case "q_software_genre": return 'Software Genres';    break;
 		case "q_super_genre":    return 'Top-Level Genres';    break;
 		case "q_genre":          return 'Genres';         break;
 		case "q_sub_genre":      return 'Sub-Genres';      break;
@@ -1246,6 +1280,8 @@ function getQTitle(id)
 		case "q_features":       return 'Features';      break;
 		case "q_players":        return 'Players';       break;
 		case "q_other":          return 'Other';         break;
+		case "q_summary":        return 'Review';
+		         break;
 		case "q_tags_from_desc": return 'What Else?';  break;
 		case "q_tags_from_users":return 'User Tags'; break;
 	}
@@ -1863,6 +1899,8 @@ function scoreTagProfile(allTags)
 				//like half the steam catalog is "action", "adventure", etc
 				case "supergenre": weights.push(weight); subWeights.push(subWeight);  break;
 				
+				case "software_genre": weights.push(weight); subWeights.push(subWeight); break;
+				
 				//turn-based vs real-time (just those two tags)
 				case "basic_timeflow": weights.push(weight); subWeights.push(subWeight);  break;
 				
@@ -2073,6 +2111,7 @@ function calculateTagLikelihoodGivenCurrentResponses(candidateTagid)
 {
 	var totalScore = 0;
 	var tagids = getTagIdList();
+	if(tagids.length == 0) return 0;
 	for(var i = 0; i < tagAssociations.length; i++)
 	{
 		var association = tagAssociations[i];
@@ -2113,8 +2152,8 @@ function sortCount(a,b)
  */
 function sortLabel(a, b)
 {
-	if(a.label < b.label) return -1;
-	if(a.label > b.label) return  1;
+	if(a.label.toLowerCase() < b.label.toLowerCase()) return -1;
+	if(a.label.toLowerCase() > b.label.toLowerCase()) return  1;
 	return 0;
 }
 
@@ -2136,6 +2175,56 @@ function sortMarked(bits, marked)
 	}
 	bits.sort(sortCount);
 	return bits;
+}
+
+
+function hilightAssociations(bits, response)
+{
+	var els = document.getElementsByClassName("choice");
+	
+	var bits = [];
+	var allZero = true;
+	for(var i = 0; i < els.length; i++)
+	{
+		var el = els[i];
+		if(el != null)
+		{
+			var tagid = el.getAttribute("value");
+			var id = el.getAttribute("id");
+			var score = calculateTagLikelihoodGivenCurrentResponses(tagid);
+			bits.push({id:id,count:score});
+			if(score != 0)
+			{
+				allZero = false;
+			}
+		}
+	}
+	
+	bits.sort(sortCount);
+	
+	var numHilights = allZero ? 0 : Math.floor(els.length*0.25);
+	for(var i = 0; i < els.length; i++)
+	{
+		var bit = bits[i];
+		var id = bit.id;
+		var el = document.getElementById(id);
+		if(el != null)
+		{
+			if(i < numHilights)
+			{
+				if(hasClass(el,"lowlighted"))
+				{
+					removeClass(el, "lowlighted");
+				}
+				addClass(el, "hilighted");
+			}
+			else if(hasClass(el, "hilighted"))
+			{
+				removeClass(el, "hilighted");
+				addClass(el, "lowlighted");
+			}
+		}
+	}
 }
 
 /**
@@ -2260,6 +2349,18 @@ function removeClass(el, str)
 	}
 }
 
+function hasClass(el, str)
+{
+	if(el == null) return false;
+	var classStr = el.getAttribute("class");
+	if(classStr != null)
+	{
+		classArr = classStr.split(" ");
+		return classArr.includes(str);
+	}
+	return false;
+}
+
 /**
  * Adds a class to an HTML element
  * @param {HTMLElement} el the element you want to add a class to
@@ -2305,9 +2406,27 @@ function removeEnumeratedClass(element, stub, index, min, max)
 }
 
 /**
+ * Show the start page with the tag summary but no drag and drop interface
+ */
+function displayStartPage()
+{
+	//Calculate the simplified tag profile
+	getSimpleTagProfile(function(data){
+		simpleTagProfile = data != null && data.rgTagids != null ? data.rgTagids : [];
+		
+		var content = document.getElementById("survey_content_section");
+		
+		//Draw the actual end page
+		var html = renderStartPage();
+		content.innerHTML = html;
+		
+	});
+}
+
+/**
  * Show the end page with the tag summary & drag and drop interface
  */
-function displayEndpage(bForceOptimized)
+function displayEndPage(bForceOptimized)
 {
 	//Set up the sort observer to watch the drag & drop list
 	if(sortObserver != null)
@@ -2325,6 +2444,7 @@ function displayEndpage(bForceOptimized)
 			//time so that they use the right styles for their position in the
 			//list
 			removeEnumeratedClass(summaryItems[i], "summary_item_", i, 0, summaryItems.length+1);
+			removeClass(summaryItems[i], "summary_item_disabled");
 			
 			var classInfo = summaryItems[i].getAttribute("class");
 			if(classInfo.indexOf("ui-sortable-helper") == -1)
@@ -2335,9 +2455,8 @@ function displayEndpage(bForceOptimized)
 			suffix = j;
 			if(suffix > maxTags)
 			{
-				suffix = 6;
+				suffix = "disabled";
 			}
-			else if(suffix > 5) suffix = 5;
 			var className = "summary_item_"+suffix;
 			addClass(summaryItems[i], className);
 			updateSortButtons();
@@ -2381,8 +2500,22 @@ function displayEndpage(bForceOptimized)
 /**
  * Render and display the current question
  */
+function displayCurrentQuestionSummary()
+{
+	//Get the current question and render it to the DOM
+	var question = questions[currentQuestion];
+	var html = renderSummary(question);
+	var content = document.getElementById("summary");
+	content.innerHTML = html;
+}
+
+/**
+ * Render and display the current question
+ */
 function displayCurrentQuestion()
 {
+	nScroll = 0;
+	
 	//Get the current question and render it to the DOM
 	var question = questions[currentQuestion];
 	var html = renderQuestion(question);
@@ -2435,6 +2568,8 @@ function displayCurrentQuestion()
 			inputs[i].checked = true;
 		}
 	}
+	
+	hilightAssociations();
 	
 	if(inputs.length == 0)
 	{
@@ -2537,12 +2672,13 @@ function renderSummary()
 	{
 		stuff.push({id:"q_other"      , html:otherStuff});
 	}
+	stuff.push({id:"q_summary"    , html:""});
 	
 	var html = "";
 	for(var i = 0; i < stuff.length; i++)
 	{
 		var thing = stuff[i];
-		if(thing.html != "")
+		if(thing.html != "" || thing.id == "q_summary")
 		{
 			html += sectionLine(thing.id, thing.html);
 		}
@@ -2581,13 +2717,13 @@ function cullTagProfile(rgTags, num)
  */
 function renderEndpage(bForceOptimized=false)
 {
-	var strBegin =    'Begin';
 	var strFinish =   'Publish';
 	var strCancel =   'Cancel';
 	var strOptimize = 'Suggest Prioritization';
 	var strRevert =   'Revert Prioritization';
+	var strPrevious = 'Previous';
 	
-	var onClickBegin = 'onclick="backToSurvey()"';
+	var onClickPrevious = 'onclick="onClickPrevious()"';
 	var onClickOptimize = 'onclick="onClickOptimizeTags()"';
 	var onClickRevert   = 'onclick="onClickRevertTags()"';
 	var onClickFinish   = 'onclick="onClickConfirmApplyTags()"';
@@ -2642,36 +2778,82 @@ function renderEndpage(bForceOptimized=false)
 	var stepText = "";
 	
 	var disabledBegin = "";
-	var disabledFinish = disabledRevert;
+	var disabledFinish = "";
 	var disabledCancel = "";
 	
 	var buttons = '<div id="buttons" class="nav_buttons">';
 	buttons += '<div class="nav_button nav_button_optimize '+disabledOptimize+'"><button '+onClickOptimize+'>'+strOptimize+'</button></div>';
 	buttons += '<div class="nav_button nav_button_revert '+disabledRevert+'"><button '+onClickRevert+'>'+strRevert+'</button></div>';
-	buttons += '<div class="nav_button nav_button_begin '+disabledBegin+'"><button '+onClickBegin+'>'+strBegin+'</button></div>';
+	buttons += '<div class="nav_button nav_button_previous"><button onclick="onClickPrevious()">'+strPrevious+'</button></div>';
 	buttons += '<div class="nav_button nav_button_publish '+disabledFinish+'"><button '+onClickFinish+'>'+strFinish+'</button></div>';
 	buttons += '<div class="nav_button nav_button_cancel '+disabledCancel+'"><button '+onClickCancel+'>'+strCancel+'</button></div>';
 	buttons += '<div id="error" class="error"></div>';
 	buttons += '</div>';
 	
 	return '\
-	<div id="final_page" class="final_page">\
+	<div id="bookend_page" class="bookend_page">\
 		<div id="steps" class="steps">'+stepText+'</div>\
 		<h3 id="question_title" class="question_title">'+title+'</h3>\
 		<div>\
 			<p id="question_text" class="question_text">'+text+'</p>\
 			<div class="top_tags">'+topTagsText+'</div>\
-			<div class="choices">\
+			<div id="choices" class="choices" onscroll="onScroll();">\
 				<ul id="sortable">'+
 				choiceHTML+
 				'</ul>'+
 			'</div>'+
-			'<div class="summary">'+
+			'<div id="summary" class="summary">'+
 			summaryHTML+
 			'</div>\
 		</div>\
 		<br>\
 	</div>'+buttons;
+}
+
+
+/**
+ * Renders the HTML for the initial summary page
+ */
+function renderStartPage()
+{
+	var strBegin =    'Begin';
+	var strCancel =   'Cancel';
+	
+	var onClickBegin = 'onclick="backToSurvey()"';
+	var onClickCancel   = 'onclick="onClickCancelSurvey()"';
+	
+	var text = getQText("start_text");
+	var title = getQTitle("start_title");
+	
+	var opTagProfile = getNaturalTagProfile();
+	rgRankedTagProfile = opTagProfile;
+	
+	var choiceHTML = renderSummaryItems(rgRankedTagProfile);
+	var summaryHTML = renderSummary();
+	
+	rgRankedTagProfile = finalizeTagProfileCounts(rgRankedTagProfile);
+	
+	var buttons = '<div id="buttons" class="nav_buttons">';
+	buttons += '<div class="nav_button nav_button_begin"><button '+onClickBegin+'>'+strBegin+'</button></div>';
+	buttons += '<div class="nav_button nav_button_cancel"><button '+onClickCancel+'>'+strCancel+'</button></div>';
+	buttons += '</div>';
+	
+	return '\
+	<div id="bookend_page" class="bookend_page">\
+		<h3 id="question_title" class="question_title">'+title+'</h3>\
+		<div>\
+			<p id="question_text" class="question_text">'+text+'</p>\
+			<div id="choices" class="choices">'+
+			'</div>'+
+			'<div id="summary" class="summary">'+
+			summaryHTML+
+			'</div>\
+		</div>\
+		<br>\
+	</div>'+buttons;
+	
+	
+				
 }
 
 /**
@@ -2681,9 +2863,9 @@ function renderEndpage(bForceOptimized=false)
  */
 function renderQuestion(q)
 {
-	var strNext = 'Next';
+	var strNext     = 'Next';
 	var strPrevious = 'Previous';
-	var strCancel = 'Cancel';
+	var strCancel   = 'Cancel';
 	
 	var buttons = '<div id="buttons" class="nav_buttons">';
 	if(currentQuestion > 0)
@@ -2724,10 +2906,10 @@ function renderQuestion(q)
 		<h3 id="question_title" class="question_title">'+title+'</h3>\
 		<div>\
 			<p id="question_text" class="question_text">'+text+'</p>\
-			<div class="choices">'+
+			<div id="choices" class="choices" onscroll="onScroll();">'+
 			choiceHTML+
 			'</div>'+
-			'<div class="summary">'+
+			'<div id="summary" class="summary">'+
 			summaryHTML+
 			'</div>\
 		</div>\
@@ -2835,11 +3017,12 @@ function renderChoices(q)
 	
 	switch(sort)
 	{
-		case "alpha":
-			htmlBits.sort(sortLabel);
+		case "association":
+			htmlBits = sortHtmlBits(htmlBits, getResponse(q.id));
 			break;
 		default:
-			htmlBits = sortHtmlBits(htmlBits, getResponse(q.id));
+			//alphabetical
+			htmlBits.sort(sortLabel);
 			break;
 	}
 	
@@ -2880,8 +3063,7 @@ function renderSummaryItems(choices)
 	{
 		var theHtml = htmlBits[i].html;
 		var suffix = i;
-		if(i >= maxTags) suffix = 6;
-		else if(suffix > 5) suffix = 5;
+		if(i >= maxTags) suffix = "disabled";
 		var className = "summary_item_"+suffix;
 		theHtml = theHtml.replace("insert_class", className);
 		html += theHtml;

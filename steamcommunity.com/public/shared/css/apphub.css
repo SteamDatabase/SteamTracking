@@ -720,14 +720,17 @@ a.apphub_more_friends_who_play:hover
 	right: 0px;
 	height: 40px;
 	padding-top: 5px;
-    font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+	font-family: Motiva Sans, Arial, Helvetica, sans-serif;
+}
+
+.apphub_CardControls {
+	display: flex;
 }
 
 .apphub_CardRating
 {
 	margin-left: 5px;
-	min-width: 79px;
-	height: 13px;
+	min-height: 13px;
 	padding-left: 85px;
 	background-repeat: no-repeat;
 	color: #424242;
@@ -743,14 +746,12 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardRating.rateUpHide
 {
+	display: none;
 	background: transparent;
 }
 
 .apphub_CardRating.withRateButtons
 {
-	float: left;
-	margin-top: 3px;
-	min-width: 61px;
 }
 
 .apphub_CardRating.withRateButtons.starRating
@@ -760,7 +761,6 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_CardRating.news
 {
-	float: right;
 	min-width: 0px;
 	margin-right: 10px;
 }
@@ -775,21 +775,62 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardRatingButtons
 {
 	height: 22px;
-	float: left;
 	padding-left: 5px;
 }
 
-.apphub_CardMetaData .review_award_ctn {
+.apphub_CardMetaData .reward_btn_icon {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+
+.apphub_CardMetaData .review_award_aggregated,
+.apphub_UserReviewCardContent .review_award_aggregated {
+	display: inline-block;
+	color: #7cc5fb;
+	font-size: 14px;
+	padding-left: 5px;
+}
+.apphub_UserReviewCardContent .review_award_aggregated {
+	padding-left: 10px;
+}
+.apphub_CardMetaData .review_award_aggregated > img,
+.apphub_UserReviewCardContent .review_award_aggregated > img {
+	height: 16px;
+	margin-top: -3px;
+}
+.apphub_UserReviewCardContent .review_award_aggregated > img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+.community_tooltip.review_reward_tooltip {
+	background: #141c27;
+	color: #7cc5fb;
+}
+
+.review_award_ctn_hover {
 	display: inline-block;
 }
-
-.apphub_CardMetaData .review_award_icon {
+.review_award_ctn_hover .review_award {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.05);
+	border-radius: 5px;
+	padding: 3px;
+	margin: 1px;
+}
+.review_award_ctn_hover .review_award_icon {
 	width: 16px;
 	height: 16px;
+	vertical-align: middle;
 }
-
-.apphub_CardMetaData .review_award_count {
+.review_award_ctn_hover .review_award_count {
+	color: #66c0f4;
+	font-size: 12px;
+	vertical-align: middle;
 	font-weight: bold;
+}
+.review_award_ctn_hover .review_award_count.hidden {
+	display: none;
 }
 
 .apphub_CardTitle
@@ -1020,14 +1061,19 @@ a.apphub_more_friends_who_play:hover
 	color: #898989;
 }
 
+.apphub_CardRightData {
+	display: flex;
+	margin-left: auto;
+}
+
 .apphub_CardCommentCount
 {
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/shared/images/comment_quoteicon.png' );
 	background-repeat: no-repeat;
 	background-position: left center;
-	padding-left: 24px;
+	padding-left: 20px;
 	padding-right: 5px;
-	float: right;
+	margin-left: 5px;
 }
 
 .apphub_CardCommentCount.alignIcon
@@ -1048,7 +1094,7 @@ a.apphub_more_friends_who_play:hover
 .apphub_CardCommentCount.alignNews
 {
 	position: relative;
-	float: right;
+	margin-left: auto;
 }
 
 .apphub_CardCommentCount.alignUserReviews
@@ -1244,6 +1290,7 @@ a.apphub_more_friends_who_play:hover
 
 .apphub_NewsCardStats
 {
+	display: flex;
 	position: absolute;
 	bottom: 15px;
 	right: 0px;
@@ -1312,6 +1359,7 @@ a.apphub_more_friends_who_play:hover
 .apphub_UserReviewCardStats
 {
 	padding-top: 7px;
+	display: flex;
 }
 
 .apphub_CardContentMain .UserReviewCardContent_Footer {

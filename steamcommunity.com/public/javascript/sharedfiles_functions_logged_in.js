@@ -271,7 +271,7 @@ function VoteDown(item_id)
 	return false;
 }
 
-function PublishedFileAward( id, fileType )
+function PublishedFileAward( id, fileType, currentSelection )
 {
 	function callbackFunc( id, award )
 	{
@@ -287,6 +287,13 @@ function PublishedFileAward( id, fileType )
 				if ( reward.data( "reaction" ) == award )
 				{
 					bFoundExisting = true;
+
+					var count = parseInt( reward.data( "reactioncount" ) );
+					var countElem = reward.find( ".review_award_count" );
+					countElem.text( count + 1 );
+					countElem.removeClass( "hidden" );
+
+					reward.data( "reactioncount", count + 1 );
 					break;
 				}
 			}
@@ -296,13 +303,17 @@ function PublishedFileAward( id, fileType )
 				var reward = $J( "<span>", { class: "review_award" } );
 				var img = $J( "<img>", { class: "review_award_icon tooltip", src: "https://steamstore-a.akamaihd.net/public/images/loyalty/reactions/225px/" + award + ".png" } );
 				reward.append( img );
+
+				var countElem = $J( "<span>", { class: "review_award_count hidden", text: "1" } );
+				reward.append( countElem );
 				reward.data( "reaction", award );
+				reward.data( "reactioncount", 1 );
 				rewardsCtn.append( reward );
 			}
 		}
 	};
 
-	fnLoyalty_ShowAwardModal( id, callbackFunc, fileType );
+	fnLoyalty_ShowAwardModal( id, callbackFunc, fileType, currentSelection );
 }
 
 function ToggleItemState(item_id, app_id, buttonType, activate, deactivate) {

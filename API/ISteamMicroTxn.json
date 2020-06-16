@@ -220,6 +220,37 @@
             ]
         },
         {
+            "name": "GetReport",
+            "version": 5,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "type",
+                    "type": "string",
+                    "optional": true,
+                    "description": "Report type (GAMESALES, STEAMSTORE, SETTLEMENT)"
+                },
+                {
+                    "name": "time",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Beginning time to start report from (RFC 3339 UTC format)"
+                },
+                {
+                    "name": "maxresults",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Max number of results to return (up to 1000)"
+                }
+            ]
+        },
+        {
             "name": "GetUserAgreementInfo",
             "version": 1,
             "httpmethod": "GET",
@@ -818,6 +849,31 @@
         {
             "name": "QueryTxn",
             "version": 2,
+            "httpmethod": "GET",
+            "parameters": [
+                {
+                    "name": "appid",
+                    "type": "uint32",
+                    "optional": false,
+                    "description": "AppID of game this transaction is for"
+                },
+                {
+                    "name": "orderid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "3rd party ID for transaction"
+                },
+                {
+                    "name": "transid",
+                    "type": "uint64",
+                    "optional": true,
+                    "description": "Steam transaction ID"
+                }
+            ]
+        },
+        {
+            "name": "QueryTxn",
+            "version": 3,
             "httpmethod": "GET",
             "parameters": [
                 {

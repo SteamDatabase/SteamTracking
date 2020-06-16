@@ -1775,16 +1775,16 @@
         x = a("6oCP"),
         b = a("IjL/"),
         S = a("55Ip"),
-        d = a("5bld"),
+        d = a("kyHq"),
+        p = a("5bld"),
         f = a("Dhs6"),
-        p = a("Mgs7"),
+        u = a("Mgs7"),
         j = a("6Y59"),
-        u = a("5E+2"),
+        h = a("5E+2"),
         O = a("+d9t"),
         B = a("exH9"),
         R = a("TLQK"),
         P = a("lkRc"),
-        h = a("kyHq"),
         F = a("ee7K"),
         v = a("bxiW"),
         C = a("bS9Q"),
@@ -1825,7 +1825,7 @@
                                     (t = {
                                       cc: P.c.COUNTRY,
                                       l: P.c.LANGUAGE,
-                                      realm: h.d.k_ESteamRealmGlobal,
+                                      realm: d.d.k_ESteamRealmGlobal,
                                       f: "jsonfull",
                                       term: l.replace(" ", "+"),
                                       require_type: this.props
@@ -1921,7 +1921,7 @@
               return N.createElement(
                 "div",
                 { className: T.a.SuggestContainer },
-                N.createElement(p.j, {
+                N.createElement(u.j, {
                   type: "text",
                   label: this.props.strLabel,
                   onChange: this.UpdateAppSuggestions,
@@ -2116,14 +2116,14 @@
               var a = this,
                 e = E.c.BIsEventTypeGroupAllowed(t);
               return N.createElement(
-                u.a,
+                h.a,
                 {
                   toolTipContent: Object(R.d)(
                     "#EventCalendar_EventTypeGroup_ttip_" + t
                   ),
                   direction: "top"
                 },
-                N.createElement(p.d, {
+                N.createElement(u.d, {
                   key: "group-" + t,
                   label: Object(R.d)("#EventCalendar_EventTypeGroup_" + t),
                   checked: e,
@@ -2140,14 +2140,14 @@
               var a = this,
                 n = E.c.BIsGameSourceAllowed(t);
               return N.createElement(
-                u.a,
+                h.a,
                 {
                   direction: "top",
                   toolTipContent: e
                     ? Object(R.d)("#EventCalendar_DisabledFilter_LoginPrompt")
                     : Object(R.d)("#EventCalendar_GameSource_ttip_" + t)
                 },
-                N.createElement(p.d, {
+                N.createElement(u.d, {
                   key: "gs-" + t,
                   label: Object(R.d)("#EventCalendar_GameSource_" + t),
                   checked: n,
@@ -2161,8 +2161,8 @@
             (t.prototype.GetCalendarTitle = function(e) {
               if (e.BIsSingleSourceCalendar()) {
                 var t = e.BIsSingleAppCalendar()
-                  ? d.d.GetEntityNameForID(e.GetSingleAppID(), void 0)
-                  : d.d.GetEntityNameForID(
+                  ? p.d.GetEntityNameForID(e.GetSingleAppID(), void 0)
+                  : p.d.GetEntityNameForID(
                       void 0,
                       Number(e.GetSingleGroupID())
                     );
@@ -2178,7 +2178,7 @@
               );
             }),
             (t.prototype.DecorateSearchSuggestion = function(e, t) {
-              return e && e.id && ("software" == e.type || "game" == e.type)
+              return e && e.id && Object(d.a)(e.type)
                 ? N.createElement(
                     S.b,
                     {
@@ -2835,7 +2835,7 @@
                 l = Object(A.a)();
               l.BIsGlobalCalendar() &&
                 (o &&
-                  o & d.a.k_eLibrary &&
+                  o & p.a.k_eLibrary &&
                   (E.c.BIsGameSourceAllowed(E.b.k_ERecent) && n.appInfo
                     ? (r.push(
                         N.createElement(
@@ -2857,19 +2857,19 @@
                       this.AddContextMenuForSource(r, E.b.k_ERecent, i, !1))
                     : this.AddContextMenuForSource(r, E.b.k_ELibrary, i)),
                 o &&
-                  o & d.a.k_eWishlist &&
+                  o & p.a.k_eWishlist &&
                   this.AddContextMenuForSource(r, E.b.k_EWishist, i),
                 o &&
-                  o & d.a.k_eFollowing &&
+                  o & p.a.k_eFollowing &&
                   this.AddContextMenuForSource(r, E.b.k_EFollowing, i),
                 o &&
-                  o & d.a.k_eRecommended &&
+                  o & p.a.k_eRecommended &&
                   this.AddContextMenuForSource(r, E.b.k_ERecommended, i),
                 o &&
-                  o & d.a.k_eSteam &&
+                  o & p.a.k_eSteam &&
                   this.AddContextMenuForSource(r, E.b.k_ESteam, i),
                 o &&
-                  o & d.a.k_eFeatured &&
+                  o & p.a.k_eFeatured &&
                   this.AddContextMenuForSource(r, E.b.k_EFeatured, i)),
                 r.push(
                   N.createElement(
@@ -2897,7 +2897,7 @@
                             onSelected: this.OnUnMuteButton
                           },
                           N.createElement(
-                            u.a,
+                            h.a,
                             {
                               toolTipContent: Object(R.d)(
                                 "#EventCalendar_UnMuteApp_ttip"
@@ -2918,7 +2918,7 @@
                             onSelected: this.OnMuteButton
                           },
                           N.createElement(
-                            u.a,
+                            h.a,
                             {
                               toolTipContent: Object(R.d)(
                                 "#EventCalendar_MuteApp_ttip"
@@ -2954,7 +2954,7 @@
                               onSelected: this.IgnoreAppButton
                             },
                             N.createElement(
-                              u.a,
+                              h.a,
                               {
                                 toolTipContent: Object(R.d)(
                                   "#EventCalendar_IgnoreApp_ttip"
@@ -3332,7 +3332,7 @@
             "div",
             { className: _e.a.TileTextHeader },
             l,
-            n.GetSource() === d.a.k_eRecommended &&
+            n.GetSource() === p.a.k_eRecommended &&
               N.createElement(
                 "div",
                 { className: _e.a.SourceRecommended },
@@ -4434,7 +4434,7 @@
                   ref: this.m_ref,
                   className: o
                 });
-              c && (v = v.reverse());
+              v.length && c && (v = v.slice().reverse());
               var b = s && d,
                 g = N.createElement(
                   "div",
@@ -5095,7 +5095,7 @@
             }),
             (e.prototype.render = function() {
               var e = this.RenderTiles(),
-                t = h.c.map(function(e) {
+                t = d.c.map(function(e) {
                   return { value: e, label: Object(me.b)(e) };
                 }),
                 a = ct.a.map(function(e) {
@@ -5423,7 +5423,7 @@
               var e = this.props.solrData,
                 t = e.unique_id,
                 a = Number(e.appid),
-                n = Object(h.e)(P.c.LANGUAGE),
+                n = Object(d.e)(P.c.LANGUAGE),
                 r = x.c.GetClanEventModel(t);
               if (r) {
                 if (this.state.bShowAsModal)
@@ -6169,7 +6169,7 @@
                 t = this.props,
                 a = t.eventModel,
                 n = t.closeModal,
-                r = h.c
+                r = d.c
                   .filter(function(e) {
                     return 1 == e || 4 == e || 9 <= e;
                   })
@@ -8684,7 +8684,7 @@
                       Boolean(
                         void 0 !== this.state.nMaxSaleDayIndex && 0 < c.length
                       ) &&
-                        N.createElement(p.g, {
+                        N.createElement(u.g, {
                           strDropDownClassName: _t.DropDownScroll,
                           rgOptions: c,
                           selectedOption: Math.min(

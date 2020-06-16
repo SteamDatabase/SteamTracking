@@ -101,12 +101,27 @@ select {
 	padding: 4px 6px 4px 6px;
 	border-top: 1px solid rgba(85, 125, 171, 0.6);
 	margin-bottom: 8px;
+	line-height: 20px;
+	display: flex;
 }
 
 .ratingSummaryBlock img {
 	margin-right: 10px;
 	width:44px;
 	height:44px;
+}
+
+.ratingBar .review_award_ctn {
+	margin-left: 10px;
+}
+.ratingBar .review_award {
+	height: auto;
+	line-height: initial;
+	background-color: rgba( 255, 255, 255, 0.1 );
+	cursor: pointer;
+}
+.ratingBar .review_award:hover {
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .ratingSummary {

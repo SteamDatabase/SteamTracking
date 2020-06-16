@@ -40,6 +40,8 @@ LocalizationReady("shared", "english", {
   Button_Accept: "Accept",
   Button_Reject: "Reject",
 
+  Error_Generic_Label: "Error:",
+
   ToolTip_CopyLinkToClipboard: "Copy link to clipboard",
 
   Input_Error_NumberTooSmall: "Number too small.",
@@ -1117,6 +1119,7 @@ LocalizationReady("shared", "english", {
   Sale_Released_Shorter: "Released:",
   Sale_ShowMore: "Show more",
   Sale_ShowLess: "Show less",
+  Sale_EmptySearchResultsOrLoadFailure: "No matches found",
   Sale_OnWishlist: "On Wishlist",
   Sale_InLibrary: "In Library",
   Sale_PlayDemo: "Play Demo",
@@ -1459,13 +1462,13 @@ LocalizationReady("shared", "english", {
 
   GrantAwardTitle: "Give an Award",
   GrantAwardDescription_Review:
-    "Use your Steam Community Points to emphasize this review and grant the reviewer %1$s bonus points!",
+    "Use your Steam Points to emphasize this review and grant the reviewer %1$s bonus points!",
   GrantAwardDescription_UGC:
-    "Use your Steam Community Points to grant this item a special award and grant the author %1$s bonus points!",
+    "Use your Steam Points to grant this item a special award and grant the author %1$s bonus points!",
   GrantAwardNowButton: "Give Award",
-  GrantAward_PointsLink: "What are Steam Community Points?",
+  GrantAward_PointsLink: "What are Steam Points?",
   GrantAward_PromptTooltip: "Please select an award",
-  GrantAward_SubmitTooltip: "Spend Steam Community Points and give the award",
+  GrantAward_SubmitTooltip: "Spend Steam Points and give the award",
   GrantAward_SelectAward: "Select Award",
   GrantAward_CantAfford: "You need %1$s more points",
   GrantAward_HowToGetPoints: "How To Get Points",
@@ -1485,7 +1488,7 @@ LocalizationReady("shared", "english", {
     "You cannot give an award to something you created.",
   GrantAwardError_NoMatch: "The item could not be found.",
   GrantAwardError_InsufficientFunds:
-    "You do not have enough Steam Community Points to grant the selected award.",
+    "You do not have enough Steam Points to grant the selected award.",
   GrantAwardError_Fail:
     "There was a problem granting this reward.  Please try again later.",
   YourBalance: "Your Balance",
@@ -1497,6 +1500,8 @@ LocalizationReady("shared", "english", {
   RewardsReaction_6: "Extra Helpful",
   RewardsReaction_7: "Gotta Have It",
   RewardsReaction_8: "Michelangelo",
+  RewardsReaction_Tooltip: "%1$s person marked this item as '%2$s'",
+  RewardsReaction_Tooltip_Plural: "%1$s people marked this item as '%2$s'",
 
   AppType_game: "game",
   AppType_software: "software",

@@ -384,11 +384,7 @@ a.general_btn:hover {
 	line-height: 20px;
 }
 
-#BG_top_workshop a.general_btn:hover
-{
-	background-color: rgba( 102, 192, 244, 0.4 );
-}
-
+#BG_top_workshop a.general_btn:hover,
 #BG_top_workshop_small a.general_btn:hover
 {
 	background-color: rgba( 102, 192, 244, 0.4 );

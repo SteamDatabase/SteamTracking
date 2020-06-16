@@ -44,3 +44,8 @@ function ShowAddToCollection( id, appID )
 	showModal( 'NotLoggedInWarning', true );
 }
 
+function PublishedFileAward( id, fileType, currentSelection )
+{
+	showModal( 'NotLoggedInWarning', true );
+}
+

@@ -145,7 +145,6 @@ p a {
 .survey_content_section .nav_button_cancel button{
 	float: right;
 	position: absolute;
-	right: 440px;
 }
 
 .survey_content_section .nav_button_publish button{
@@ -195,7 +194,7 @@ p a {
 }
 
 
-.survey_content_section .final_page	.choices {
+.survey_content_section .bookend_page	.choices {
 	height: 470px;
 }
 
@@ -274,6 +273,46 @@ li.summary_item_5 {
 }
 
 li.summary_item_6 {
+	color:#ffffff;
+}
+
+li.summary_item_7 {
+	color:#ffffff;
+}
+
+li.summary_item_8 {
+	color:#ffffff;
+}
+
+li.summary_item_9 {
+	color:#ffffff;
+}
+
+li.summary_item_10 {
+	color:#ffffff;
+}
+
+li.summary_item_11 {
+	color:#ffffff;
+}
+
+li.summary_item_12 {
+	color:#ffffff;
+}
+
+li.summary_item_13 {
+	color:#ffffff;
+}
+
+li.summary_item_14 {
+	color:#ffffff;
+}
+
+li.summary_item_15 {
+	color:#ffffff;
+}
+
+li.summary_item_disabled {
 	color:#535353;
 	background-color:black;
 }
@@ -319,10 +358,27 @@ li.ui-sortable-helper {
 }
 
 .survey_content_section .choice {
-	color:white;
+	color:0xa0a0a0;
 	margin:2px 0px;
+	font-weight:400;
 	display:block;
 	overflow:hidden;
+}
+
+.survey_content_section .choice.lowlighted{
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	color: #a0a0a0;
+	font-weight: 400;
+}
+
+.survey_content_section .choice.hilighted{
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	color: #FFFFFF;
+	font-weight: 600;
 }
 
 .survey_content_section .question_text {
@@ -339,7 +395,8 @@ li.ui-sortable-helper {
 }
 
 .survey_content_section .question_text strong {
-	color: #70C3FF;
+	color: white;
+	font-weight: 600;
 }
 
 .survey_content_section .choice label {
@@ -417,7 +474,7 @@ li.ui-sortable-helper {
 	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.survey_content_section .final_page .neighborhood h3 {
+.survey_content_section .bookend_page .neighborhood h3 {
 	color: #5D9CCA;
 	letter-spacing: normal;
 	font-size: 14px;
@@ -437,7 +494,7 @@ li.ui-sortable-helper {
 	display:inline-block;
 }
 
-.survey_content_section .final_page{
+.survey_content_section .bookend_page{
 	width:100%;
 }
 

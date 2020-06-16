@@ -469,6 +469,11 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	background-color: rgba( 102, 192, 244, 0.4 );
 	color: #ffffff;
 }
+#modalMediaRightScroll .general_btn:hover {
+	text-decoration: none;
+	background-color: rgba( 102, 192, 244, 0.4 );
+	color: #ffffff;
+}
 
 .workshopItemControls .vertical_divider_container
 {
@@ -484,6 +489,12 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	height: 50px;
 	width: 2px;
 	background: none;
+}
+
+.workshopItemControls .workshopItemRatings {
+	float: none;
+	width: 100%;
+	padding-bottom: 5px;
 }
 
 .rightSectionHolder.share
@@ -556,22 +567,43 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	line-height: normal;
 }
 
+.reward_btn_icon {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
 .review_award_ctn {
 	display: flex;
 	flex-wrap: wrap;
 }
 
 .review_award {
-	margin-left: 5px;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	padding: 0px 2px 0px 2px;
+	margin: 0 2px;
+	line-height: 30px;
+	height: 30px;
+	cursor: pointer;
+}
+.review_award:hover {
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .review_award_icon {
 	width: 20px;
 	height: 20px;
+	vertical-align: middle;
 }
 
 .review_award_count {
+	color: #66c0f4;
+	font-size: 12px;
+	vertical-align: middle;
 	font-weight: bold;
+}
+.review_award_count.hidden {
+	display: none;
 }
 
 .shareItemInlineLink
@@ -1626,6 +1658,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 		background-color: #1f2126;
 		height: 100%;
 		padding: 0 5px 0 5px;
+		font-size: 12px;
 	}
 
 	.mediaTop.withRightCol .actualmediactn {

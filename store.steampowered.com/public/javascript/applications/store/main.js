@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5931866";
+var CLSTAMP = "5932811";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [8],
   {
@@ -249,10 +249,10 @@ var CLSTAMP = "5931866";
           return z;
         }),
         n.d(t, "e", function() {
-          return U;
+          return G;
         }),
         n.d(t, "D", function() {
-          return G;
+          return U;
         });
       n("mrSG");
       var r = n("q1tI"),
@@ -1622,7 +1622,7 @@ var CLSTAMP = "5931866";
           )
         );
       }
-      function U(e) {
+      function G(e) {
         return r.createElement(
           "svg",
           {
@@ -1642,7 +1642,7 @@ var CLSTAMP = "5931866";
           })
         );
       }
-      function G(e) {
+      function U(e) {
         return r.createElement(
           "svg",
           {
@@ -7811,12 +7811,12 @@ var CLSTAMP = "5931866";
         P = n("YyVH"),
         z = n("UPxs");
       f.Component;
-      function U(e, t, n, r) {
+      function G(e, t, n, r) {
         return r
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
-      var G = (function() {
+      var U = (function() {
           function e() {
             (this.m_embeddedElement = new L.a("DragGhosts")),
               (this.m_rgDropRegions = []),
@@ -7954,12 +7954,12 @@ var CLSTAMP = "5931866";
                     (l || u) &&
                     ((r = t + l),
                     (i = n + u),
-                    U(
+                    G(
                       t,
                       n,
                       (o = e.GetDragDocument().body.getBoundingClientRect())
                     ) &&
-                      !U(r, i, o, !0) &&
+                      !G(r, i, o, !0) &&
                       ((s = P.c(
                         r,
                         o.left,
@@ -8377,7 +8377,7 @@ var CLSTAMP = "5931866";
                 );
               }),
               (e.prototype.BDraggableInRegion = function(e, t, n) {
-                return U(e, t, this.GetClientRect());
+                return G(e, t, this.GetClientRect());
               }),
               (e.prototype.GetElement = function() {
                 return this.m_divRef.current;
@@ -10455,61 +10455,61 @@ var CLSTAMP = "5931866";
     UPxs: function(e, t, n) {
       "use strict";
       n.d(t, "a", function() {
-        return E;
+        return S;
       });
       var l = n("mrSG"),
         u = n("q1tI"),
         r = n("TyAF"),
         p = n("exH9"),
         i = n("bxiW"),
-        N = { x: "y", y: "x" };
-      function P() {
+        H = { x: "y", y: "x" };
+      function V() {
         return { x: 0, y: 0 };
       }
-      function B(e, t) {
+      function x(e, t) {
         return e.x * t.x + e.y * t.y;
       }
-      function z(e, t) {
+      function Y(e, t) {
         return { x: t.x - e.x, y: t.y - e.y };
       }
-      function U(e, t) {
+      function K(e, t) {
         return { x: e.x + t.x, y: e.y + t.y };
       }
-      function G(e, t) {
+      function q(e, t) {
         return { x: e.x * t, y: e.y * t };
       }
       function o(e) {
         return (e.min + e.max) / 2;
       }
-      function W(e, t) {
+      function X(e, t) {
         return !(e.max < t.min || t.max < e.min);
       }
       var m,
         s,
         h,
         a,
-        H,
+        J,
         c,
-        R = n("Kw0F"),
-        V = n("X3Ds"),
+        A = n("Kw0F"),
+        Q = n("X3Ds"),
         d = "Focusable",
         f = "FocusGroup",
         g = "NavArea";
       function _() {
         for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
       }
-      function Y(e) {
+      function Z(e) {
         return null != e && void 0 !== e.focus;
       }
-      function K(e) {
+      function $(e) {
         return {
           x: { min: (t = e.getBoundingClientRect()).left, max: t.right },
           y: { min: t.top, max: t.bottom }
         };
         var t;
       }
-      function q(e) {
-        return { x: o((t = K(e)).x), y: o(t.y) };
+      function ee(e) {
+        return { x: o((t = $(e)).x), y: o(t.y) };
         var t;
       }
       function v(e, t) {
@@ -10544,11 +10544,13 @@ var CLSTAMP = "5931866";
         ((a = h = h || {}).X = "x"),
         (a.Y = "y"),
         (a.XY = "xy"),
-        ((c = H = H || {}).Area = "area"),
+        ((c = J = J || {}).Area = "area"),
         (c.Group = "group"),
         (c.Stop = "stop"),
         (c.Click = "click");
-      var y = (function() {
+      var te,
+        y,
+        M = (function() {
           function t() {}
           return (
             Object.defineProperty(t, "IsNavEnabled", {
@@ -10572,8 +10574,8 @@ var CLSTAMP = "5931866";
             t
           );
         })(),
-        M = u.createContext(null),
-        w = (function() {
+        w = u.createContext(null),
+        O = (function() {
           function e() {
             this.m_listeners = new Map();
           }
@@ -10583,14 +10585,14 @@ var CLSTAMP = "5931866";
             }),
             (e.prototype.GetFocus = function() {
               return void 0 !== this.m_document &&
-                Y(this.m_document.activeElement)
+                Z(this.m_document.activeElement)
                 ? this.m_document.activeElement
                 : null;
             }),
             (e.prototype.Focus = function(e, t) {
               null != e
                 ? (_("HDFC Focus", e), e.focus(t))
-                : Y(this.m_document.activeElement) &&
+                : Z(this.m_document.activeElement) &&
                   (_("HDFC Focus IsHTMLElement e.blur()", e),
                   this.m_document.activeElement.blur());
             }),
@@ -10600,7 +10602,7 @@ var CLSTAMP = "5931866";
             (e.prototype.FocusableElementAttributes = function(e) {
               var t = {};
               return (
-                y.IsNavEnabled && e.navStop && (t.tabIndex = -2),
+                M.IsNavEnabled && e.navStop && (t.tabIndex = -2),
                 "number" == typeof e.tabStop && (t.tabIndex = e.tabStop),
                 !0 === e.tabStop && (t.tabIndex = 0),
                 t
@@ -10609,7 +10611,7 @@ var CLSTAMP = "5931866";
             (e.prototype.AddBlurListener = function(t) {
               _("CHtmlDomFocusController AddBlurListener");
               function e(e) {
-                return Y(e.target) && t(e.target);
+                return Z(e.target) && t(e.target);
               }
               this.m_listeners.set(t, e),
                 this.m_document.addEventListener("blur", e, !0);
@@ -10623,15 +10625,15 @@ var CLSTAMP = "5931866";
             e
           );
         })(),
-        O = (function() {
+        F = (function() {
           function e() {}
           return (
             (e.Attributes = function(e, t) {
               var n = {};
               if (
-                (y.IsNavEnabled &&
-                  (e.navClick && (n["data-nav"] = H.Click),
-                  !e.navClick && e.navStop && (n["data-nav"] = H.Stop),
+                (M.IsNavEnabled &&
+                  (e.navClick && (n["data-nav"] = J.Click),
+                  !e.navClick && e.navStop && (n["data-nav"] = J.Stop),
                   !e.navClick &&
                     e.preferredNavStop &&
                     (n["data-nav-preferred"] = "true"),
@@ -10645,7 +10647,7 @@ var CLSTAMP = "5931866";
             }),
             Object.defineProperty(e, "navStopClass", {
               get: function() {
-                return y.IsNavEnabled ? d : void 0;
+                return M.IsNavEnabled ? d : void 0;
               },
               enumerable: !1,
               configurable: !0
@@ -10653,7 +10655,7 @@ var CLSTAMP = "5931866";
             e
           );
         })(),
-        F = (function(e) {
+        E = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -10686,12 +10688,12 @@ var CLSTAMP = "5931866";
                   "className",
                   "children"
                 ]));
-              return null != this.context && y.IsNavEnabled
+              return null != this.context && M.IsNavEnabled
                 ? Object(l.a)(
                     Object(l.a)(
-                      Object(l.a)({}, O.Attributes(this.props, this.context)),
+                      Object(l.a)({}, F.Attributes(this.props, this.context)),
                       {
-                        className: Object(p.a)(O.navStopClass, r),
+                        className: Object(p.a)(F.navStopClass, r),
                         ref: t ? this.SetRef : n
                       }
                     ),
@@ -10712,725 +10714,732 @@ var CLSTAMP = "5931866";
                 this.props.children
               );
             }),
-            (t.contextType = M),
+            (t.contextType = w),
             (t.defaultProps = { navStop: !1, tabStop: !1 }),
             Object(l.c)([i.a], t.prototype, "SetRef", null),
             t
           );
         })(u.Component),
-        E = (function(t) {
+        S = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.m_elementType = "div"), e;
           }
           return Object(l.d)(e, t), (e = Object(l.c)([r.a], e));
-        })(F),
-        S = (u.Component,
-        (function(n) {
-          function e(e) {
-            var t = n.call(this, e) || this;
-            return (
-              (t.m_navAreaDivRef = u.createRef()),
-              (t.m_inFocusCallType = null),
-              (t.m_lastFocusedHtmlElement = null),
-              (t.m_focusPos = null),
-              (t.m_focusPosOffsetFromAnchorElement = null),
-              (t.m_focusPosPointerRef = u.createRef()),
-              void 0 !== e && (t.m_htmlDomFocusController = new w()),
-              t
-            );
-          }
-          var D;
+        })(E);
+      ((y = te = te || {}).Geometry = "Geometry"),
+        (y.DomOrder = "DomOrder"),
+        (y.ReverseDomOrder = "ReverseDomOrder");
+      u.Component;
+      var C = (function(n) {
+        function e(e) {
+          var t = n.call(this, e) || this;
           return (
-            Object(l.d)(e, n),
-            ((D = e).GetActiveNavArea = function() {
-              var e = D.sm_navAreaStack;
-              return 0 === e.length ? null : e[e.length - 1];
-            }),
-            (e.GetActiveNavAreaElement = function() {
-              var e = D.GetActiveNavArea();
-              return (e && e.m_navAreaDivRef.current) || null;
-            }),
-            (e.FocusWithin = function(e) {
-              var t, n, r, i;
-              _("KFNA.FocusWithin", e),
-                !y.IsNavEnabled ||
-                  ((t = D.GetActiveNavAreaElement()) &&
-                    (((n = Object(V.k)(e, function(e) {
-                      return e.getAttribute("data-nav") === H.Area;
-                    })) !== t &&
-                      "true" !== n.getAttribute("data-nav-area-awfw")) ||
-                      (void 0 !== (r = D.sm_inactiveNavAreaMap.get(n)) &&
-                        (n !== t &&
-                          (_(
-                            "KFNA.FocusWithin: KFNA '" +
-                              t.id +
-                              "' active, but FG in '" +
-                              n.id +
-                              "'; activating."
-                          ),
-                          r.Activate()),
-                        (i = r.FindBestNavStopFocus(e)) &&
-                          r.SetFocus(i.htmlElement, i.pos)))));
-            }),
-            (e.prototype.GetFocusController = function() {
-              return (
-                this.props.focusController || this.m_htmlDomFocusController
-              );
-            }),
-            (e.prototype.SetFocus = function(e, t) {
-              var n,
-                r,
-                i,
-                o,
-                s = this.GetFocusController();
-              e.getAttribute("data-nav") !== H.Click
-                ? ((n = this.m_inFocusCallType),
-                  (this.m_inFocusCallType = "focus"),
-                  _(
-                    "KFNA '" + this.m_navAreaDivRef.current.id + "' SetFocus",
-                    e
-                  ),
-                  (r = e.getAttribute("data-nav-scroll-x")),
-                  (i = e.getAttribute("data-nav-scroll-y")),
-                  r || i
-                    ? (this.GetFocusController().Focus(e, {
-                        preventScroll: !0
-                      }),
-                      (o = { behavior: "auto" }),
-                      r && (o.inline = r),
-                      i && (o.block = i),
-                      e.scrollIntoView(o))
-                    : s.Focus(e),
-                  s.GetFocus() === e
-                    ? this.UpdateFocus(e, t)
-                    : _(
-                        "KFNA '" +
-                          this.m_navAreaDivRef.current.id +
-                          " SetFocus rejected",
-                        e
-                      ),
-                  (this.m_inFocusCallType = n))
-                : s.Click(e);
-            }),
-            (e.prototype.UpdateFocus = function(e, t) {
-              _(
-                "KFNA id='" +
-                  this.m_navAreaDivRef.current.id +
-                  "' UpdateFocus (" +
-                  t.x +
-                  ", " +
-                  t.y +
-                  ")",
-                e
-              );
-              var n,
-                r = D.FindAnchorElement(e);
-              r
-                ? ((n = q(r)),
-                  (this.m_focusPosOffsetFromAnchorElement = z(n, t)))
-                : (this.m_focusPosOffsetFromAnchorElement = null),
-                (this.m_focusPos = t),
-                (this.m_lastFocusedHtmlElement = e),
-                this.UpdatePointer();
-            }),
-            (e.prototype.UpdatePointer = function() {
-              var e = this.m_focusPos,
-                t = this.m_focusPosPointerRef.current,
-                n = this.m_navAreaDivRef.current;
-              e &&
-                t &&
-                n &&
-                ((t.style.left = e.x + "px"), (t.style.top = e.y + "px"));
-            }),
-            (e.prototype.GetFocusPos = function() {
-              var e = this.m_navAreaDivRef.current,
-                t = this.m_lastFocusedHtmlElement,
-                n = this.m_focusPosOffsetFromAnchorElement;
-              if (e && t && e.contains(t) && n) {
-                var r = D.FindAnchorElement(t);
-                if (r) return U(q(r), n);
+            (t.m_navAreaDivRef = u.createRef()),
+            (t.m_inFocusCallType = null),
+            (t.m_lastFocusedHtmlElement = null),
+            (t.m_focusPos = null),
+            (t.m_focusPosOffsetFromAnchorElement = null),
+            (t.m_focusPosPointerRef = u.createRef()),
+            void 0 !== e && (t.m_htmlDomFocusController = new O()),
+            t
+          );
+        }
+        var I;
+        return (
+          Object(l.d)(e, n),
+          ((I = e).GetActiveNavArea = function() {
+            var e = I.sm_navAreaStack;
+            return 0 === e.length ? null : e[e.length - 1];
+          }),
+          (e.GetActiveNavAreaElement = function() {
+            var e = I.GetActiveNavArea();
+            return (e && e.m_navAreaDivRef.current) || null;
+          }),
+          (e.FocusWithin = function(e) {
+            var t, n, r, i;
+            _("KFNA.FocusWithin", e),
+              !M.IsNavEnabled ||
+                ((t = I.GetActiveNavAreaElement()) &&
+                  (((n = Object(Q.k)(e, function(e) {
+                    return e.getAttribute("data-nav") === J.Area;
+                  })) !== t &&
+                    "true" !== n.getAttribute("data-nav-area-awfw")) ||
+                    (void 0 !== (r = I.sm_inactiveNavAreaMap.get(n)) &&
+                      (n !== t &&
+                        (_(
+                          "KFNA.FocusWithin: KFNA '" +
+                            t.id +
+                            "' active, but FG in '" +
+                            n.id +
+                            "'; activating."
+                        ),
+                        r.Activate()),
+                      (i = r.FindBestNavStopFocus(e)) &&
+                        r.SetFocus(i.htmlElement, i.pos)))));
+          }),
+          (e.prototype.GetFocusController = function() {
+            return this.props.focusController || this.m_htmlDomFocusController;
+          }),
+          (e.prototype.SetFocus = function(e, t) {
+            var n,
+              r,
+              i,
+              o,
+              s = this.GetFocusController();
+            e.getAttribute("data-nav") !== J.Click
+              ? ((n = this.m_inFocusCallType),
+                (this.m_inFocusCallType = "focus"),
+                _(
+                  "KFNA '" +
+                    this.m_navAreaDivRef.current.id +
+                    "' SetFocus (" +
+                    t.x +
+                    ", " +
+                    t.y +
+                    ")",
+                  e
+                ),
+                (r = e.getAttribute("data-nav-scroll-x")),
+                (i = e.getAttribute("data-nav-scroll-y")),
+                r || i
+                  ? (this.GetFocusController().Focus(e, { preventScroll: !0 }),
+                    (o = { behavior: "auto" }),
+                    r && (o.inline = r),
+                    i && (o.block = i),
+                    e.scrollIntoView(o))
+                  : s.Focus(e),
+                s.GetFocus() === e
+                  ? this.UpdateFocus(e, t)
+                  : _(
+                      "KFNA '" +
+                        this.m_navAreaDivRef.current.id +
+                        " SetFocus rejected",
+                      e
+                    ),
+                (this.m_inFocusCallType = n))
+              : s.Click(e);
+          }),
+          (e.prototype.UpdateFocus = function(e, t) {
+            _(
+              "KFNA id='" +
+                this.m_navAreaDivRef.current.id +
+                "' UpdateFocus (" +
+                t.x +
+                ", " +
+                t.y +
+                ")",
+              e
+            );
+            var n,
+              r = I.FindAnchorElement(e);
+            r
+              ? ((n = ee(r)),
+                (this.m_focusPosOffsetFromAnchorElement = Y(n, t)))
+              : (this.m_focusPosOffsetFromAnchorElement = null),
+              (this.m_focusPos = t),
+              (this.m_lastFocusedHtmlElement = e),
+              this.UpdatePointer();
+          }),
+          (e.prototype.UpdatePointer = function() {
+            var e = this.m_focusPos,
+              t = this.m_focusPosPointerRef.current,
+              n = this.m_navAreaDivRef.current;
+            e &&
+              t &&
+              n &&
+              ((t.style.left = e.x + "px"), (t.style.top = e.y + "px"));
+          }),
+          (e.prototype.GetFocusPos = function() {
+            var e = this.m_navAreaDivRef.current,
+              t = this.m_lastFocusedHtmlElement,
+              n = this.m_focusPosOffsetFromAnchorElement;
+            if (e && t && e.contains(t) && n) {
+              var r = I.FindAnchorElement(t);
+              if (r) return K(ee(r), n);
+            }
+            return this.m_focusPos;
+          }),
+          (e.FindAnchorElement = function(e) {
+            return e;
+          }),
+          (e.prototype.FindBestNavStopFocus = function(e, t, n) {
+            if (!e) return null;
+            var r = e.ownerDocument;
+            if (!r) return null;
+            var i = this.m_lastFocusedHtmlElement,
+              o = this.GetFocusPos();
+            if (
+              i &&
+              r.contains(i) &&
+              e.contains(i) &&
+              i.getAttribute("data-nav") === J.Stop
+            )
+              return { htmlElement: i, pos: o || ee(i) };
+            var s = Object(Q.l)(e, "data-nav").filter(function(e) {
+              return Z(e) && "true" === e.getAttribute("data-nav-preferred");
+            });
+            if (0 < s.length) {
+              var a = s[0],
+                c = a.getAttribute("data-nav");
+              if (c === J.Group) {
+                var l = this.FindBestNavStopFocus(a, t, n);
+                if (l) return l;
+              } else if (c === J.Stop) {
+                return { htmlElement: a, pos: ee(a) };
               }
-              return this.m_focusPos;
-            }),
-            (e.FindAnchorElement = function(e) {
-              return e;
-            }),
-            (e.prototype.FindBestNavStopFocus = function(e, t, n) {
-              if (!e) return null;
-              var r = e.ownerDocument;
-              if (!r) return null;
-              var i = this.m_lastFocusedHtmlElement,
-                o = this.GetFocusPos();
-              if (
-                i &&
-                r.contains(i) &&
-                e.contains(i) &&
-                i.getAttribute("data-nav") === H.Stop
+            }
+            var u = Array.from(
+              e.querySelectorAll(
+                "[data-nav='" + J.Stop + "'],[data-nav='" + J.Click + "]"
               )
-                return { htmlElement: i, pos: o || q(i) };
-              var s = Object(V.l)(e, "data-nav").filter(function(e) {
-                return Y(e) && "true" === e.getAttribute("data-nav-preferred");
-              });
-              if (0 < s.length) {
-                var a = s[0],
-                  c = a.getAttribute("data-nav");
-                if (c === H.Group) {
-                  var l = this.FindBestNavStopFocus(a, t, n);
-                  if (l) return l;
-                } else if (c === H.Stop) {
-                  return { htmlElement: a, pos: q(a) };
-                }
+            ).filter(Z);
+            if (!u || 0 === u.length) return null;
+            var p = I.GetActiveNavArea();
+            if (null == p) return null;
+            if (null == p.m_navAreaDivRef.current) return null;
+            if (p.props.initFromBoundary && void 0 !== t && void 0 !== n) {
+              var d =
+                  "x" === t
+                    ? "data-nav-xorder"
+                    : "y" === t
+                    ? "data-nav-yorder"
+                    : void 0,
+                m = e.getAttribute(d);
+              if (!(m === te.Geometry || null == m)) {
+                var h =
+                  (m === te.ReverseDomOrder) != (-1 === n)
+                    ? u[u.length - 1]
+                    : u[0];
+                return { htmlElement: h, pos: ee(h) };
               }
-              var u = Array.from(
-                e.querySelectorAll(
-                  "[data-nav='" + H.Stop + "'],[data-nav='" + H.Click + "]"
-                )
-              ).filter(Y);
-              if (!u || 0 === u.length) return null;
-              var p = D.GetActiveNavArea();
-              if (null == p) return null;
-              if (null == p.m_navAreaDivRef.current) return null;
-              if (p.props.initFromBoundary && void 0 !== t && void 0 !== n) {
-                for (
-                  var d = -1 === n ? "max" : "min",
-                    m = null,
-                    h = 1 / 0,
-                    f = 0,
-                    g = u;
-                  f < g.length;
-                  f++
-                ) {
-                  var _ = n * K((S = g[f]))[t][d];
-                  _ < h && ((h = _), (m = S));
-                }
-                if (null !== m) return { htmlElement: m, pos: q(m) };
-              }
-              var v,
-                b = D.sm_navAreaStack,
-                y = Object(R.d)(b, function(e) {
-                  return null !== e.m_focusPos;
-                });
-              if (y) {
-                for (
-                  var M = y.m_focusPos,
-                    w = Number.POSITIVE_INFINITY,
-                    O = null,
-                    F = 0,
-                    E = u;
-                  F < E.length;
-                  F++
-                ) {
-                  var S,
-                    C = q((S = E[F])),
-                    k = ((v = z(M, C)), Math.sqrt(B(v, v)));
-                  k < w && ((w = k), (O = S));
-                }
-                if (O) return { htmlElement: O, pos: q(O) };
-              }
-              var j = u[0];
-              return j ? { htmlElement: j, pos: q(j) } : null;
-            }),
-            (e.prototype.GetScrollOffset = function(e, t, n) {
-              var r = e,
-                i = r.getAttribute("data-nav-enter-as-scrolled-axes");
-              if (i === h.XY || i === t) return null;
-              var o = null != r.getAttribute("data-nav"),
-                s = o ? r.getAttribute("data-nav-scroll-axes") : void 0;
-              return o && s !== h.XY && s !== t
-                ? null
-                : "x" === t
-                ? { x: r.scrollLeft, y: 0 }
-                : { x: 0, y: r.scrollTop };
-            }),
-            (e.prototype.FindNextNavStopInContainer = function(
-              c,
-              e,
-              l,
-              u,
-              p,
-              t,
-              n
-            ) {
               for (
-                var r,
-                  i,
-                  d = this,
-                  m = n ? this.GetScrollOffset(c, u, p) : null,
-                  o = m ? G(m, -1) : null,
-                  h = o ? U(l, o) : l,
-                  s = N[u],
-                  a = -1 === (P()[u] = p) ? "max" : "min",
-                  f = { min: h[s], max: h[s] },
-                  g =
-                    t && Y(e)
-                      ? ((r = f),
-                        (i = K(e)[s]),
-                        {
-                          min: r.min < i.min ? r.min : i.min,
-                          max: r.max > i.max ? r.max : i.max
-                        })
-                      : f,
-                  _ = null,
-                  v = null,
-                  b = 1 / 0,
-                  y = [],
-                  M = 0,
-                  w = Object(V.l)(c, "data-nav");
-                M < w.length;
-                M++
+                var f = -1 === n ? "max" : "min",
+                  g = null,
+                  _ = 1 / 0,
+                  v = 0,
+                  b = u;
+                v < b.length;
+                v++
               ) {
-                if ((A = w[M]) !== e && A.getAttribute("data-nav") !== H.Area) {
-                  n &&
-                    null === _ &&
-                    "true" === A.getAttribute("data-nav-preferred") &&
-                    (_ = A);
-                  var O = K(A),
-                    F = h[u],
-                    E = p * (O[u][a] - F);
-                  if (!(E < 0)) {
-                    var S = h[s],
-                      C = O[s].min,
-                      k = O[s].max,
-                      j = S < C ? S - C : k < S ? S - k : 0;
-                    if (t) if (!W(g, { min: C, max: k })) continue;
-                    var D = { x: 0, y: 0 };
-                    (D[u] = O[u][a]), (D[s] = S + j);
-                    var B = z(h, D),
-                      R = (E * E + j * j) / Math.abs(B[u]);
-                    R < b && ((b = R), (v = A)),
-                      y.push({ score: R, element: A });
-                  }
-                }
+                var y = n * $((j = b[v]))[t][f];
+                y < _ && ((_ = y), (g = j));
               }
-              function I(e, t) {
-                void 0 === t && (t = !1);
-                var n = e.getAttribute("data-nav");
-                if (n === H.Stop || n === H.Click) {
-                  if (Y(e)) {
-                    var r = e,
-                      i = q(r),
-                      o = !l || t ? i : { x: l.x, y: l.y };
-                    o[u] = i[u];
-                    var s = { htmlElement: r, pos: o };
-                    return m && (s.onscreenTestElement = c), s;
+              if (null !== g) return { htmlElement: g, pos: ee(g) };
+            }
+            var M,
+              w = I.sm_navAreaStack,
+              O = Object(A.d)(w, function(e) {
+                return null !== e.m_focusPos;
+              });
+            if (O) {
+              for (
+                var F = O.m_focusPos,
+                  E = Number.POSITIVE_INFINITY,
+                  S = null,
+                  C = 0,
+                  k = u;
+                C < k.length;
+                C++
+              ) {
+                var j,
+                  D = ee((j = k[C])),
+                  B = ((M = Y(F, D)), Math.sqrt(x(M, M)));
+                B < E && ((E = B), (S = j));
+              }
+              if (S) return { htmlElement: S, pos: ee(S) };
+            }
+            var R = u[0];
+            return R ? { htmlElement: R, pos: ee(R) } : null;
+          }),
+          (e.prototype.GetScrollOffset = function(e, t, n) {
+            var r = e,
+              i = r.getAttribute("data-nav-enter-as-scrolled-axes");
+            if (i === h.XY || i === t) return null;
+            var o = null != r.getAttribute("data-nav"),
+              s = o ? r.getAttribute("data-nav-scroll-axes") : void 0;
+            return o && s !== h.XY && s !== t
+              ? null
+              : "x" === t
+              ? { x: r.scrollLeft, y: 0 }
+              : { x: 0, y: r.scrollTop };
+          }),
+          (e.prototype.FindNextNavStopInContainer = function(
+            c,
+            e,
+            l,
+            u,
+            p,
+            t,
+            n
+          ) {
+            var r,
+              i,
+              d = this,
+              o =
+                "x" === u
+                  ? "data-nav-xorder"
+                  : "y" === u
+                  ? "data-nav-yorder"
+                  : void 0,
+              s = c.getAttribute(o),
+              a = s === te.Geometry || null == s,
+              m = s === te.ReverseDomOrder,
+              h = n ? this.GetScrollOffset(c, u, p) : null,
+              f = h ? q(h, -1) : null,
+              g = f ? K(l, f) : l,
+              _ = H[u],
+              v = -1 === (V()[u] = p) ? "max" : "min",
+              b = { min: g[_], max: g[_] },
+              y =
+                t && Z(e)
+                  ? ((r = b),
+                    (i = $(e)[_]),
+                    {
+                      min: r.min < i.min ? r.min : i.min,
+                      max: r.max > i.max ? r.max : i.max
+                    })
+                  : b,
+              M = null,
+              w = null,
+              O = 1 / 0,
+              F = Object(Q.l)(c, "data-nav");
+            m != (-1 === p) && F.reverse();
+            for (
+              var E = [], S = null == e ? 0 : null, C = 0, k = F;
+              C < k.length;
+              C++
+            ) {
+              if ((G = k[C]) !== e) {
+                if (
+                  (null !== S && ++S, G.getAttribute("data-nav") !== J.Area)
+                ) {
+                  n &&
+                    null === M &&
+                    "true" === G.getAttribute("data-nav-preferred") &&
+                    (M = G);
+                  var j = 0;
+                  if (a) {
+                    var D = $(G),
+                      B = g[u],
+                      R = p * (D[u][v] - B);
+                    if (R < 0) continue;
+                    var I = g[_],
+                      x = D[_].min,
+                      A = D[_].max,
+                      T = I < x ? I - x : A < I ? I - A : 0;
+                    if (t) if (!X(y, { min: x, max: A })) continue;
+                    var L = { x: 0, y: 0 };
+                    (L[u] = D[u][v]), (L[_] = I + T);
+                    var N = Y(g, L),
+                      j = (R * R + T * T) / Math.abs(N[u]);
+                  } else {
+                    if (null == S) continue;
+                    j = S;
                   }
-                  return null;
+                  j < O && ((O = j), (w = G)), E.push({ score: j, element: G });
                 }
-                if (n === H.Group) {
-                  var a = d.FindNextNavStopInContainer(
-                    e,
-                    null,
-                    h,
-                    u,
-                    p,
-                    !1,
-                    !0
-                  );
-                  if (a) return a;
+              } else S = 0;
+            }
+            function P(e, t) {
+              void 0 === t && (t = !1);
+              var n = e.getAttribute("data-nav");
+              if (n === J.Stop || n === J.Click) {
+                if (Z(e)) {
+                  var r = e,
+                    i = ee(r),
+                    o = !l || t ? i : { x: l.x, y: l.y };
+                  o[u] = i[u];
+                  var s = { htmlElement: r, pos: o };
+                  return h && (s.onscreenTestElement = c), s;
                 }
                 return null;
               }
-              var x;
-              if (_ && (x = I(_, !0))) return x;
-              if (v) {
-                if ((x = I(v))) return x;
-                y.sort(function(e, t) {
-                  return e.score - t.score;
-                });
-                for (var A, T = 0; T < y.length; ++T) {
-                  if ((A = y[T].element) !== v) {
-                    var L = I(A);
-                    if (L) return L;
-                  }
-                }
+              if (n === J.Group) {
+                var a = d.FindNextNavStopInContainer(e, null, g, u, p, !1, !0);
+                if (a) return a;
               }
               return null;
-            }),
-            (e.prototype.FindNextNavStopWithinAndAcrossContainers = function(
-              e,
-              t,
-              n,
-              r,
-              i
-            ) {
-              for (var o = t; ; ) {
-                var s = Object(V.j)(e, o, "data-nav"),
-                  a = this.FindNextNavStopInContainer(s, o, n, r, i, !0, !1);
-                if (null !== a) return a;
-                if (s === e) return null;
-                for (var c = o.parentElement; c && c !== s; ) {
-                  if (b(c, r, i) === m.Scrollable) return null;
-                  c = c.parentElement;
+            }
+            var z;
+            if (M && (z = P(M, !0))) return z;
+            if (w) {
+              if ((z = P(w))) return z;
+              E.sort(function(e, t) {
+                return e.score - t.score;
+              });
+              for (var G, U = 0; U < E.length; ++U) {
+                if ((G = E[U].element) !== w) {
+                  var W = P(G);
+                  if (W) return W;
                 }
-                if (!c) return null;
-                if (c === s && b(c, r, i) === m.Scrollable) return null;
-                o = s;
               }
-            }),
-            (e.prototype.FindNextNavStop = function(e, t) {
-              var n = this.m_navAreaDivRef.current;
-              if (!n) return null;
-              var r = n.ownerDocument;
-              if (!r || r !== this.m_document) return null;
-              var i,
-                o,
-                s,
-                a,
-                c,
-                l = null,
-                u = this.GetFocusController().GetFocus();
-              if (
-                (Y(u) && u !== n && n.contains(u)
-                  ? ((i =
-                      (null !== this.m_focusPos &&
-                        this.m_lastFocusedHtmlElement === u &&
-                        this.GetFocusPos()) ||
-                      q(u)),
+            }
+            return null;
+          }),
+          (e.prototype.FindNextNavStopWithinAndAcrossContainers = function(
+            e,
+            t,
+            n,
+            r,
+            i
+          ) {
+            for (var o = t; ; ) {
+              var s = Object(Q.j)(e, o, "data-nav"),
+                a = this.FindNextNavStopInContainer(s, o, n, r, i, !0, !1);
+              if (null !== a) return a;
+              if (s === e) return null;
+              for (var c = o.parentElement; c && c !== s; ) {
+                if (b(c, r, i) === m.Scrollable) return null;
+                c = c.parentElement;
+              }
+              if (!c) return null;
+              if (c === s && b(c, r, i) === m.Scrollable) return null;
+              o = s;
+            }
+          }),
+          (e.prototype.FindNextNavStop = function(e, t) {
+            var n = this.m_navAreaDivRef.current;
+            if (!n) return null;
+            var r = n.ownerDocument;
+            if (!r || r !== this.m_document) return null;
+            var i,
+              o,
+              s,
+              a,
+              c,
+              l = null,
+              u = this.GetFocusController().GetFocus();
+            if (
+              (Z(u) && u !== n && n.contains(u)
+                ? ((i =
+                    (null !== this.m_focusPos &&
+                      this.m_lastFocusedHtmlElement === u &&
+                      this.GetFocusPos()) ||
+                    ee(u)),
+                  (s = this.FindNextNavStopWithinAndAcrossContainers(
+                    n,
+                    u,
+                    i,
+                    e,
+                    t
+                  )) ||
+                    ((o = ee(u)),
                     (s = this.FindNextNavStopWithinAndAcrossContainers(
                       n,
                       u,
-                      i,
+                      o,
                       e,
                       t
-                    )) ||
-                      ((o = q(u)),
-                      (s = this.FindNextNavStopWithinAndAcrossContainers(
-                        n,
-                        u,
-                        o,
-                        e,
-                        t
-                      ))),
-                    s && (l = s))
-                  : (l = this.FindBestNavStopFocus(
-                      this.m_navAreaDivRef.current,
-                      e,
-                      t
-                    )),
-                null !== l)
-              ) {
-                var p = r.defaultView;
-                if (!p) return null;
-                var d = {
-                    x: { min: -40, max: p.innerWidth + 40 },
-                    y: { min: -40, max: p.innerHeight + 40 }
-                  },
-                  m = K(l.onscreenTestElement || l.htmlElement);
-                if (W((a = d).x, (c = m).x) && W(a.y, c.y)) return l;
+                    ))),
+                  s && (l = s))
+                : (l = this.FindBestNavStopFocus(
+                    this.m_navAreaDivRef.current,
+                    e,
+                    t
+                  )),
+              null !== l)
+            ) {
+              var p = r.defaultView;
+              if (!p) return null;
+              var d = {
+                  x: { min: -40, max: p.innerWidth + 40 },
+                  y: { min: -40, max: p.innerHeight + 40 }
+                },
+                m = $(l.onscreenTestElement || l.htmlElement);
+              if (X((a = d).x, (c = m).x) && X(a.y, c.y)) return l;
+            }
+            return null;
+          }),
+          (e.prototype.HandleKeyDown = function(e) {
+            if (M.IsNavEnabled) {
+              var t = this.m_navAreaDivRef.current;
+              if (t) {
+                var n = I.GetActiveNavAreaElement();
+                if (null != n && n === t) {
+                  var r = I.k_KeyNavigationDirections[e.key];
+                  if (r) {
+                    var i = r[0],
+                      o = r[1],
+                      s = this.FindNextNavStop(i, o);
+                    s &&
+                      (this.SetFocus(s.htmlElement, s.pos),
+                      e.stopPropagation(),
+                      e.preventDefault());
+                  } else if ("Enter" === e.key) {
+                    var a = t.ownerDocument;
+                    if (!a || a !== this.m_document) return;
+                    var c = this.GetFocusController().GetFocus();
+                    c &&
+                      c.getAttribute("data-nav") === J.Stop &&
+                      Z(c) &&
+                      (this.GetFocusController().Click(c),
+                      e.preventDefault(),
+                      e.stopPropagation());
+                  }
+                }
               }
-              return null;
-            }),
-            (e.prototype.HandleKeyDown = function(e) {
-              if (y.IsNavEnabled) {
-                var t = this.m_navAreaDivRef.current;
-                if (t) {
-                  var n = D.GetActiveNavAreaElement();
-                  if (null != n && n === t) {
-                    var r = D.k_KeyNavigationDirections[e.key];
-                    if (r) {
-                      var i = r[0],
-                        o = r[1],
-                        s = this.FindNextNavStop(i, o);
-                      s &&
-                        (this.SetFocus(s.htmlElement, s.pos),
+            }
+          }),
+          (e.HandleDocumentKeyDown = function(e) {
+            if (M.IsNavEnabled) {
+              var t = I.GetActiveNavArea();
+              if (null != t) {
+                var n = t.m_navAreaDivRef.current;
+                if (n) {
+                  var r = I.k_KeyNavigationDirections[e.key];
+                  if (r) {
+                    var i = n.ownerDocument;
+                    if (i && i === t.m_document) {
+                      var o = t.GetFocusController().GetFocus();
+                      if (o) {
+                        var s = t.m_navAreaDivRef.current;
+                        if (!s || s.contains(o)) return;
+                      }
+                      var a = r[0],
+                        c = r[1],
+                        l = t.FindNextNavStop(a, c);
+                      l &&
+                        (t.SetFocus(l.htmlElement, l.pos),
                         e.stopPropagation(),
                         e.preventDefault());
-                    } else if ("Enter" === e.key) {
-                      var a = t.ownerDocument;
-                      if (!a || a !== this.m_document) return;
-                      var c = this.GetFocusController().GetFocus();
-                      c &&
-                        c.getAttribute("data-nav") === H.Stop &&
-                        Y(c) &&
-                        (this.GetFocusController().Click(c),
-                        e.preventDefault(),
-                        e.stopPropagation());
                     }
-                  }
+                  } else
+                    "Escape" === e.key
+                      ? t.props.onGoBack &&
+                        (_("KFNA Back Key id='" + n.id + "'"),
+                        t.props.onGoBack(),
+                        e.stopPropagation(),
+                        e.preventDefault())
+                      : "`" === e.key &&
+                        t.props.onHome &&
+                        (_("KFNA Home Key id='" + n.id + "'"),
+                        t.props.onHome(),
+                        e.stopPropagation(),
+                        e.preventDefault());
                 }
               }
-            }),
-            (e.HandleDocumentKeyDown = function(e) {
-              if (y.IsNavEnabled) {
-                var t = D.GetActiveNavArea();
-                if (null != t) {
-                  var n = t.m_navAreaDivRef.current;
-                  if (n) {
-                    var r = D.k_KeyNavigationDirections[e.key];
-                    if (r) {
-                      var i = n.ownerDocument;
-                      if (i && i === t.m_document) {
-                        var o = t.GetFocusController().GetFocus();
-                        if (o) {
-                          var s = t.m_navAreaDivRef.current;
-                          if (!s || s.contains(o)) return;
-                        }
-                        var a = r[0],
-                          c = r[1],
-                          l = t.FindNextNavStop(a, c);
-                        l &&
-                          (t.SetFocus(l.htmlElement, l.pos),
-                          e.stopPropagation(),
-                          e.preventDefault());
-                      }
-                    } else
-                      "Escape" === e.key
-                        ? t.props.onGoBack &&
-                          (_("KFNA Back Key id='" + n.id + "'"),
-                          t.props.onGoBack(),
-                          e.stopPropagation(),
-                          e.preventDefault())
-                        : "`" === e.key &&
-                          t.props.onHome &&
-                          (_("KFNA Home Key id='" + n.id + "'"),
-                          t.props.onHome(),
-                          e.stopPropagation(),
-                          e.preventDefault());
-                  }
-                }
-              }
-            }),
-            (e.prototype.HandleFocusCapture = function(e) {}),
-            (e.prototype.HandleScrollCapture = function() {
-              var e = this.m_focusPos,
-                t = this.GetFocusPos();
-              e !== t && ((this.m_focusPos = t), this.UpdatePointer());
-            }),
-            (e.prototype.HandleMouseDownCapture = function(e) {
-              this.props.focusController &&
-                this.props.focusController.HandleNavStopClick &&
-                Y(e.target) &&
-                e.preventDefault();
-            }),
-            (e.prototype.HandleClickCapture = function(e) {
-              _(
-                "Nav Area '" +
-                  this.m_navAreaDivRef.current.id +
-                  "': handle click capture: ",
-                e.target
-              );
-              var t,
-                n,
-                r =
-                  this.props.focusController &&
-                  this.props.focusController.HandleNavStopClick;
-              r &&
-                (!Y((t = e.target)) ||
-                  ((n = t).getAttribute("data-nav") === H.Stop && r(e, n)));
-            }),
-            (e.prototype.HandleFocusControllerOnBlur = function(e) {
-              var t, n;
-              _(
-                "KFNA '" +
-                  this.m_navAreaDivRef.current.id +
-                  "' HandleFocusControllerOnBlur in=" +
-                  (this.m_inFocusCallType || "none"),
-                e
+            }
+          }),
+          (e.prototype.HandleFocusCapture = function(e) {}),
+          (e.prototype.HandleScrollCapture = function() {
+            var e = this.m_focusPos,
+              t = this.GetFocusPos();
+            e !== t && ((this.m_focusPos = t), this.UpdatePointer());
+          }),
+          (e.prototype.HandleMouseDownCapture = function(e) {
+            this.props.focusController &&
+              this.props.focusController.HandleNavStopClick &&
+              Z(e.target) &&
+              e.preventDefault();
+          }),
+          (e.prototype.HandleClickCapture = function(e) {
+            _(
+              "Nav Area '" +
+                this.m_navAreaDivRef.current.id +
+                "': handle click capture: ",
+              e.target
+            );
+            var t,
+              n,
+              r =
+                this.props.focusController &&
+                this.props.focusController.HandleNavStopClick;
+            r &&
+              (!Z((t = e.target)) ||
+                ((n = t).getAttribute("data-nav") === J.Stop && r(e, n)));
+          }),
+          (e.prototype.HandleFocusControllerOnBlur = function(e) {
+            var t, n;
+            _(
+              "KFNA '" +
+                this.m_navAreaDivRef.current.id +
+                "' HandleFocusControllerOnBlur in=" +
+                (this.m_inFocusCallType || "none"),
+              e
+            ),
+              "focus" !== this.m_inFocusCallType &&
+                (null == (t = I.GetActiveNavArea()) ||
+                  t !== this ||
+                  ((n = t.m_navAreaDivRef.current) &&
+                    "true" === n.getAttribute("data-nav-area-awfw") &&
+                    n.contains(e) &&
+                    (_('KFNA " HandleFocusControllerOnBlur AWFW Deactivate', e),
+                    t.Deactivate())));
+          }),
+          (e.prototype.ClickFocusedElement = function() {
+            this.m_lastFocusedHtmlElement &&
+              this.GetFocusController().Click(this.m_lastFocusedHtmlElement);
+          }),
+          (e.prototype.Blur = function() {
+            var e = this.m_inFocusCallType;
+            (this.m_inFocusCallType = "blur"),
+              _("KFNA '" + this.m_navAreaDivRef.current.id + "' Blur"),
+              (this.m_lastFocusedHtmlElement = null),
+              (this.m_focusPos = null),
+              (this.m_focusPosOffsetFromAnchorElement = null);
+            var t,
+              n = this.m_navAreaDivRef.current;
+            !n ||
+              ((t = n.ownerDocument) &&
+                t === this.m_document &&
+                (_('KFNA " Blur GFC Focus null'),
+                this.GetFocusController().Focus(null))),
+              (this.m_inFocusCallType = e);
+          }),
+          (e.prototype.Activate = function() {
+            if (
+              (_(
+                "KFNA activate '" +
+                  this.props.id +
+                  "' " +
+                  (this.props.activeWhenFocusWithin ? "awfw" : "")
               ),
-                "focus" !== this.m_inFocusCallType &&
-                  (null == (t = D.GetActiveNavArea()) ||
-                    t !== this ||
-                    ((n = t.m_navAreaDivRef.current) &&
-                      "true" === n.getAttribute("data-nav-area-awfw") &&
-                      n.contains(e) &&
-                      (_(
-                        'KFNA " HandleFocusControllerOnBlur AWFW Deactivate',
-                        e
-                      ),
-                      t.Deactivate())));
-            }),
-            (e.prototype.ClickFocusedElement = function() {
-              this.m_lastFocusedHtmlElement &&
-                this.GetFocusController().Click(this.m_lastFocusedHtmlElement);
-            }),
-            (e.prototype.Blur = function() {
-              var e = this.m_inFocusCallType;
-              (this.m_inFocusCallType = "blur"),
-                _("KFNA '" + this.m_navAreaDivRef.current.id + "' Blur"),
-                (this.m_lastFocusedHtmlElement = null),
-                (this.m_focusPos = null),
-                (this.m_focusPosOffsetFromAnchorElement = null);
-              var t,
-                n = this.m_navAreaDivRef.current;
-              !n ||
-                ((t = n.ownerDocument) &&
-                  t === this.m_document &&
-                  (_('KFNA " Blur GFC Focus null'),
-                  this.GetFocusController().Focus(null))),
-                (this.m_inFocusCallType = e);
-            }),
-            (e.prototype.Activate = function() {
-              if (
-                (_(
-                  "KFNA activate '" +
-                    this.props.id +
-                    "' " +
-                    (this.props.activeWhenFocusWithin ? "awfw" : "")
-                ),
-                y.IsNavEnabled)
-              ) {
-                if (!this.m_navAreaDivRef.current) return;
-                var e = this.m_navAreaDivRef.current.ownerDocument;
-                if (!e) return;
-                (this.m_document && this.m_document === e) ||
-                  ((this.m_document = e),
-                  this.m_htmlDomFocusController &&
-                    this.m_htmlDomFocusController.Initialize(e)),
-                  0 === D.sm_navAreaStack.length &&
-                    (e.addEventListener("scroll", this.HandleScrollCapture, !0),
-                    this.props.focusController ||
-                      e.addEventListener(
-                        "keydown",
-                        D.HandleDocumentKeyDown,
-                        !1
-                      )),
-                  this.GetFocusController().AddBlurListener(
-                    this.HandleFocusControllerOnBlur
-                  );
-              }
-              this.props.focusController ||
-                ((D.sm_navAreaStack = Object(R.a)(D.sm_navAreaStack, this)),
-                this.m_navAreaDivRef.current.setAttribute(
-                  "data-nav-area-active",
-                  "true"
-                ),
-                D.sm_navAreaStack.push(this));
-            }),
-            (e.prototype.Deactivate = function() {
-              if (
-                (_(
-                  "KFNA deactivate '" +
-                    this.props.id +
-                    "' " +
-                    (this.props.activeWhenFocusWithin ? "awfw" : "")
-                ),
-                this.m_navAreaDivRef.current.setAttribute(
-                  "data-nav-area-active",
-                  "false"
-                ),
-                (D.sm_navAreaStack = Object(R.a)(D.sm_navAreaStack, this)),
-                0 === D.sm_navAreaStack.length)
-              ) {
-                if (!this.m_navAreaDivRef.current) return;
-                var e = this.m_document;
-                if (!e) return;
-                e.removeEventListener("scroll", this.HandleScrollCapture, !0),
-                  e.removeEventListener("keydown", D.HandleDocumentKeyDown, !1);
-              }
-              this.GetFocusController().RemoveBlurListener(
-                this.HandleFocusControllerOnBlur
-              );
-            }),
-            (e.prototype.componentDidMount = function() {
-              this.props.activeWhenFocusWithin
-                ? D.sm_inactiveNavAreaMap.set(
-                    this.m_navAreaDivRef.current,
-                    this
-                  )
-                : this.Activate();
-            }),
-            (e.prototype.componentWillUnmount = function() {
-              this.Deactivate(),
-                D.sm_inactiveNavAreaMap.delete(this.m_navAreaDivRef.current);
-            }),
-            (e.prototype.render = function() {
-              var e = this.props,
-                t = e.className,
-                n = e.children,
-                r = (e.initFromBoundary,
-                e.onGoBack,
-                e.onHome,
-                e.focusController),
-                i = e.activeWhenFocusWithin,
-                o = Object(l.f)(e, [
-                  "className",
-                  "children",
-                  "initFromBoundary",
-                  "onGoBack",
-                  "onHome",
-                  "focusController",
-                  "activeWhenFocusWithin"
-                ]),
-                s = y.IsNavEnabled,
-                a = y.IsPointerVisible,
-                c = s
-                  ? {
-                      onKeyDown: this.HandleKeyDown,
-                      onFocusCapture: this.HandleFocusCapture
-                    }
-                  : {};
-              return (
-                r &&
-                  r.HandleNavStopClick &&
-                  ((c.onMouseDownCapture = this.HandleMouseDownCapture),
-                  (c.onClickCapture = this.HandleClickCapture)),
-                s
-                  ? u.createElement(
-                      M.Provider,
-                      { value: r || this.m_htmlDomFocusController || null },
-                      u.createElement(
-                        "div",
-                        Object(l.a)(
-                          {
-                            "data-nav": H.Area,
-                            "data-nav-area-active": "false",
-                            "data-nav-area-awfw": i ? "true" : void 0,
-                            ref: this.m_navAreaDivRef,
-                            className: Object(p.a)(g, t)
-                          },
-                          o,
-                          c
-                        ),
-                        s &&
-                          a &&
-                          u.createElement("div", {
-                            ref: this.m_focusPosPointerRef,
-                            style: {
-                              position: "fixed",
-                              background:
-                                "linear-gradient( -45deg, rgba( 0, 0, 0, 0 ) 0%, rgba( 0, 0, 0, 0 ) 50%, rgba( 255, 64, 0, 0.75 ) 100% )",
-                              width: "20px",
-                              height: "20px",
-                              zIndex: 1e3
-                            }
-                          }),
-                        n
-                      )
-                    )
-                  : u.createElement(
+              M.IsNavEnabled)
+            ) {
+              if (!this.m_navAreaDivRef.current) return;
+              var e = this.m_navAreaDivRef.current.ownerDocument;
+              if (!e) return;
+              (this.m_document && this.m_document === e) ||
+                ((this.m_document = e),
+                this.m_htmlDomFocusController &&
+                  this.m_htmlDomFocusController.Initialize(e)),
+                0 === I.sm_navAreaStack.length &&
+                  (e.addEventListener("scroll", this.HandleScrollCapture, !0),
+                  this.props.focusController ||
+                    e.addEventListener("keydown", I.HandleDocumentKeyDown, !1)),
+                this.GetFocusController().AddBlurListener(
+                  this.HandleFocusControllerOnBlur
+                );
+            }
+            this.props.focusController ||
+              ((I.sm_navAreaStack = Object(A.a)(I.sm_navAreaStack, this)),
+              this.m_navAreaDivRef.current.setAttribute(
+                "data-nav-area-active",
+                "true"
+              ),
+              I.sm_navAreaStack.push(this));
+          }),
+          (e.prototype.Deactivate = function() {
+            if (
+              (_(
+                "KFNA deactivate '" +
+                  this.props.id +
+                  "' " +
+                  (this.props.activeWhenFocusWithin ? "awfw" : "")
+              ),
+              this.m_navAreaDivRef.current.setAttribute(
+                "data-nav-area-active",
+                "false"
+              ),
+              (I.sm_navAreaStack = Object(A.a)(I.sm_navAreaStack, this)),
+              0 === I.sm_navAreaStack.length)
+            ) {
+              if (!this.m_navAreaDivRef.current) return;
+              var e = this.m_document;
+              if (!e) return;
+              e.removeEventListener("scroll", this.HandleScrollCapture, !0),
+                e.removeEventListener("keydown", I.HandleDocumentKeyDown, !1);
+            }
+            this.GetFocusController().RemoveBlurListener(
+              this.HandleFocusControllerOnBlur
+            );
+          }),
+          (e.prototype.componentDidMount = function() {
+            this.props.activeWhenFocusWithin
+              ? I.sm_inactiveNavAreaMap.set(this.m_navAreaDivRef.current, this)
+              : this.Activate();
+          }),
+          (e.prototype.componentWillUnmount = function() {
+            this.Deactivate(),
+              I.sm_inactiveNavAreaMap.delete(this.m_navAreaDivRef.current);
+          }),
+          (e.prototype.render = function() {
+            var e = this.props,
+              t = e.className,
+              n = e.children,
+              r = (e.initFromBoundary, e.onGoBack, e.onHome, e.focusController),
+              i = e.activeWhenFocusWithin,
+              o = Object(l.f)(e, [
+                "className",
+                "children",
+                "initFromBoundary",
+                "onGoBack",
+                "onHome",
+                "focusController",
+                "activeWhenFocusWithin"
+              ]),
+              s = M.IsNavEnabled,
+              a = M.IsPointerVisible,
+              c = s
+                ? {
+                    onKeyDown: this.HandleKeyDown,
+                    onFocusCapture: this.HandleFocusCapture
+                  }
+                : {};
+            return (
+              r &&
+                r.HandleNavStopClick &&
+                ((c.onMouseDownCapture = this.HandleMouseDownCapture),
+                (c.onClickCapture = this.HandleClickCapture)),
+              s
+                ? u.createElement(
+                    w.Provider,
+                    { value: r || this.m_htmlDomFocusController || null },
+                    u.createElement(
                       "div",
                       Object(l.a)(
-                        { ref: this.m_navAreaDivRef, className: t },
-                        o
+                        {
+                          "data-nav": J.Area,
+                          "data-nav-area-active": "false",
+                          "data-nav-area-awfw": i ? "true" : void 0,
+                          ref: this.m_navAreaDivRef,
+                          className: Object(p.a)(g, t)
+                        },
+                        o,
+                        c
                       ),
+                      s &&
+                        a &&
+                        u.createElement("div", {
+                          ref: this.m_focusPosPointerRef,
+                          style: {
+                            position: "fixed",
+                            background:
+                              "linear-gradient( -45deg, rgba( 0, 0, 0, 0 ) 0%, rgba( 0, 0, 0, 0 ) 50%, rgba( 255, 64, 0, 0.75 ) 100% )",
+                            width: "20px",
+                            height: "20px",
+                            zIndex: 1e3
+                          }
+                        }),
                       n
                     )
-              );
-            }),
-            (e.sm_navAreaStack = []),
-            (e.sm_inactiveNavAreaMap = new Map()),
-            (e.k_KeyNavigationDirections = {
-              ArrowLeft: ["x", -1],
-              ArrowRight: ["x", 1],
-              ArrowUp: ["y", -1],
-              ArrowDown: ["y", 1]
-            }),
-            Object(l.c)([i.a], e.prototype, "HandleKeyDown", null),
-            Object(l.c)([i.a], e.prototype, "HandleFocusCapture", null),
-            Object(l.c)([i.a], e.prototype, "HandleScrollCapture", null),
-            Object(l.c)([i.a], e.prototype, "HandleMouseDownCapture", null),
-            Object(l.c)([i.a], e.prototype, "HandleClickCapture", null),
-            Object(l.c)(
-              [i.a],
-              e.prototype,
-              "HandleFocusControllerOnBlur",
-              null
-            ),
-            Object(l.c)([i.a], e, "HandleDocumentKeyDown", null),
-            (e = D = Object(l.c)([r.a], e))
-          );
-        })(u.Component));
+                  )
+                : u.createElement(
+                    "div",
+                    Object(l.a)({ ref: this.m_navAreaDivRef, className: t }, o),
+                    n
+                  )
+            );
+          }),
+          (e.sm_navAreaStack = []),
+          (e.sm_inactiveNavAreaMap = new Map()),
+          (e.k_KeyNavigationDirections = {
+            ArrowLeft: ["x", -1],
+            ArrowRight: ["x", 1],
+            ArrowUp: ["y", -1],
+            ArrowDown: ["y", 1]
+          }),
+          Object(l.c)([i.a], e.prototype, "HandleKeyDown", null),
+          Object(l.c)([i.a], e.prototype, "HandleFocusCapture", null),
+          Object(l.c)([i.a], e.prototype, "HandleScrollCapture", null),
+          Object(l.c)([i.a], e.prototype, "HandleMouseDownCapture", null),
+          Object(l.c)([i.a], e.prototype, "HandleClickCapture", null),
+          Object(l.c)([i.a], e.prototype, "HandleFocusControllerOnBlur", null),
+          Object(l.c)([i.a], e, "HandleDocumentKeyDown", null),
+          (e = I = Object(l.c)([r.a], e))
+        );
+      })(u.Component);
     },
     WBba: function(e, t, n) {
       "use strict";
@@ -11828,11 +11837,16 @@ var CLSTAMP = "5931866";
         return r || e;
       }
       function v(e, t) {
-        for (var n = [], r = [e]; 0 < r.length; )
-          for (var i = r.pop().children, o = 0; o < i.length; ++o) {
-            var s = i[o];
-            s.hasAttribute(t) ? n.push(s) : r.push(s);
-          }
+        for (
+          var n = [], r = Array.prototype.slice.call(e.children).reverse();
+          0 < r.length;
+
+        ) {
+          var i = r.pop();
+          i.hasAttribute(t)
+            ? n.push(i)
+            : r.push.apply(r, Array.prototype.slice.call(i.children).reverse());
+        }
         return n;
       }
       function b(e) {
@@ -13315,9 +13329,9 @@ var CLSTAMP = "5931866";
             t
           );
         })(a.a.Component)),
-        U = c("X3Ds");
+        G = c("X3Ds");
       c("xnZ7"), c("idvb"), c("M1X1");
-      U.q(function() {
+      G.q(function() {
         return Object(l.b)(this, void 0, void 0, function() {
           return Object(l.e)(this, function(e) {
             switch (e.label) {
@@ -13759,7 +13773,13 @@ var CLSTAMP = "5931866";
         (p[(p.k_EAccepted = 1)] = "k_EAccepted"),
         (p[(p.k_ERejected = 2)] = "k_ERejected");
       function d(e) {
-        return "game" === e || "dlc" === e || "software" === e || "music" == e;
+        return (
+          "game" === e ||
+          "dlc" === e ||
+          "software" === e ||
+          "music" === e ||
+          "application" === e
+        );
       }
       var m, h, f, g;
       ((h = m = m || {})[(h.k_EClientUsedInputTypeKeyboard = 0)] =

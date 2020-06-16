@@ -4845,6 +4845,7 @@ function HandleFinalizeTransactionFailure( ePaymentType, eErrorDetail, bShowBRSp
 								error_text = 'Your computer is either currently unable to reach the Steam servers, or the service may be temporarily disabled. Please try again later.';
 								break;
 							case 0:
+							case 86:
 								error_text = 'Your purchase has not been completed. Your credit card information has been declined by your credit card company.<br><br>Note that in some cases, your credit card company may put a \'hold\' on funds in your account, but you will not be charged. After correcting any errors in the information displayed below, please try your purchase again.';
 								break;
 							case 2:
@@ -5418,6 +5419,7 @@ function PollForTransactionStatus( txnid, retries, timeout )
 			      	   	}
 			      	   	else if ( bNeedsAuthentication )
 			      	   	{
+			      	   		g_eLastAuthenticationStep = false;
 			      	   		DisplayCreditCardAuthentication( result.authenticationdetails, txnid, retries-1 );
 			      	   		return;
 			      	   	}
@@ -5526,13 +5528,22 @@ function FinalizeTransaction()
 		
 		// Create this here, so its not nested within the onSuccess closure	
 		var StatusPollFunc = NewPollForTransactionStatusClosure( g_LastFinalizedTransactionID, 60, 5 );
-		
+
+		var browserInfo  =  {
+			language: navigator.language,
+			javaEnabled: navigator.javaEnabled() ? 'true' : 'false',
+			colorDepth: screen.colorDepth,
+			screenHeight: screen.height,
+			screenWidth: screen.width
+		};
+
 		new Ajax.Request('https://store.steampowered.com/checkout/finalizetransaction/',
 		{
 		    method:'post',
 		    parameters: { 
 								'transid' : g_LastFinalizedTransactionID,
-				'CardCVV2' : ( BIsStoredCreditCard() ? $('security_code_cached').value : $('security_code').value )
+				'CardCVV2' : ( BIsStoredCreditCard() ? $('security_code_cached').value : $('security_code').value ),
+				'browserInfo' : JSON.stringify( browserInfo )
 			},
 		    onSuccess: function(transport){
 				if ( transport.responseText ){
