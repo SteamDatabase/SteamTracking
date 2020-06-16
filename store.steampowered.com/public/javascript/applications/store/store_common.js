@@ -4571,12 +4571,13 @@
                 b = r.discount_percent,
                 M = o && p && O.a.Get().GetDemoEventInfo(p.appid),
                 f = "" + Q.c.STORE_BASE_URL + i + "/" + n,
-                _ = !1;
+                _ = h,
+                A = !1;
               return (
                 p
-                  ? ([h].unshift(p.main_capsule),
+                  ? ((_ = p.main_capsule),
                     (d = l),
-                    (_ =
+                    (A =
                       (u = p && (p.full_game_appid || p.appid)) &&
                       I.d.BIsAppStreaming(u)))
                   : (d = b
@@ -4607,7 +4608,7 @@
                           "div",
                           { className: oe.a.StoreSaleWidgetImage },
                           Q.i.logged_in && S.createElement(me, { appInfo: p }),
-                          _ &&
+                          A &&
                             S.createElement(
                               "div",
                               { className: oe.a.CapsuleDecorators },
@@ -4621,7 +4622,7 @@
                               width: oe.a.mainCapsuleImgWidth,
                               height: oe.a.mainCapsuleImgHeight,
                               className: Object(X.a)(oe.a.CapsuleImage),
-                              src: p.main_capsule,
+                              src: _,
                               alt: m
                             })
                           ),
@@ -21473,7 +21474,7 @@
                         key: e.strSectionLabel,
                         placeholderHeight: 600,
                         rootMargin: "0px 0px 100px 0px",
-                        mode: "LoadAndUnload"
+                        mode: "JustLoad"
                       },
                       p.createElement(ee, {
                         strSectionLabel: e.strSectionLabel,
