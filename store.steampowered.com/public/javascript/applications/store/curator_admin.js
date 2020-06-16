@@ -18,8 +18,8 @@
         p = n("WBba"),
         _ = n("bxBv"),
         g = n("hRO2");
-      var v,
-        m,
+      var m,
+        v,
         h = (function(n) {
           function r(e) {
             void 0 === e && (e = null);
@@ -1312,25 +1312,25 @@
             r
           );
         })(g.Message);
-      ((m = v = v || {}).ConvertHTMLToBBCode = function(e, t) {
+      ((v = m = m || {}).ConvertHTMLToBBCode = function(e, t) {
         return e.SendMsg("News.ConvertHTMLToBBCode#1", t, b, {
           bConstMethod: !0
         });
       }),
-        (m.PreviewPartnerEvents = function(e, t) {
+        (v.PreviewPartnerEvents = function(e, t) {
           return e.SendMsg("News.PreviewPartnerEvents#1", t, F, {
             bConstMethod: !0
           });
         }),
-        (m.GetNewsFeedByRepublishClan = function(e, t) {
+        (v.GetNewsFeedByRepublishClan = function(e, t) {
           return e.SendMsg("News.GetNewsFeedByRepublishClan#1", t, w, {
             bConstMethod: !0
           });
         }),
-        (m.PublishPartnerEvent = function(e, t) {
+        (v.PublishPartnerEvent = function(e, t) {
           return e.SendMsg("News.PublishPartnerEvent#1", t, R, {});
         }),
-        (m.GetBatchPublishedPartnerEvent = function(e, t) {
+        (v.GetBatchPublishedPartnerEvent = function(e, t) {
           return e.SendMsg("News.GetBatchPublishedPartnerEvent#1", t, E, {
             bConstMethod: !0
           });
@@ -1363,7 +1363,7 @@
                   (this.m_clanSteamID = j.a.InitFromClanID(
                     this.m_clanAccountID
                   )),
-                  Object(o.runInAction)(function() {
+                  Object(o.z)(function() {
                     (e.m_strRSSFeedURL = t.rss_feed_url),
                       (e.m_strRSSGID = t.rss_feed_gid),
                       (e.m_eRSSFeedLanguage = t.rss_feed_language),
@@ -1422,7 +1422,7 @@
                           t
                             .Body()
                             .set_lang(this.GetCuratorLangaugeHandleUnset()),
-                          [4, v.PreviewPartnerEvents(this.m_transport, t)])
+                          [4, m.PreviewPartnerEvents(this.m_transport, t)])
                         : (console.error(
                             "PreviewPartnerEventsFromRSSFeed: User not logged in"
                           ),
@@ -1460,7 +1460,7 @@
                               t.Body().set_amount(s),
                               [
                                 4,
-                                v.GetBatchPublishedPartnerEvent(
+                                m.GetBatchPublishedPartnerEvent(
                                   this.m_transport,
                                   t
                                 )
@@ -1484,7 +1484,7 @@
                                   " msg:" +
                                   n.Hdr().error_message()
                               )
-                            : Object(o.runInAction)(function() {
+                            : Object(o.z)(function() {
                                 for (
                                   var e = 0;
                                   e < n.Body().clan_event_gid().length;
@@ -1547,7 +1547,7 @@
                       case 1:
                         return (
                           1 == (r = e.sent()).data.success &&
-                            Object(o.runInAction)(function() {
+                            Object(o.z)(function() {
                               (s.m_strRSSGID = r.data.gid),
                                 (s.m_strRSSFeedURL = a),
                                 (s.m_nPollIntervalSeconds = i);
@@ -1631,7 +1631,7 @@
                             t.set_blurb(a.post.blurb),
                             (n = _.a.Init(M)).Body().set_post(t),
                             n.Body().set_draft(i),
-                            [4, v.PublishPartnerEvent(this.m_transport, n)])
+                            [4, m.PublishPartnerEvent(this.m_transport, n)])
                           : (console.error(
                               "CreatePartnerFromPreviewPost: Need to create a news feed first"
                             ),
@@ -1649,7 +1649,7 @@
                                 " " +
                                 r.GetEResult()
                             )
-                          : (Object(o.runInAction)(function() {
+                          : (Object(o.z)(function() {
                               var e = {
                                 url: a.post.url,
                                 clan_event_gid: r.Body().clan_event_gid(),
@@ -1668,38 +1668,13 @@
                 });
               });
             }),
-            Object(d.c)([o.observable], e.prototype, "m_strRSSFeedURL", void 0),
-            Object(d.c)([o.observable], e.prototype, "m_strRSSGID", void 0),
-            Object(d.c)(
-              [o.observable],
-              e.prototype,
-              "m_rtimeRSSLastChecked",
-              void 0
-            ),
-            Object(d.c)(
-              [o.observable],
-              e.prototype,
-              "m_nPollIntervalSeconds",
-              void 0
-            ),
-            Object(d.c)(
-              [o.observable],
-              e.prototype,
-              "m_eRSSFeedLanguage",
-              void 0
-            ),
-            Object(d.c)(
-              [o.observable],
-              e.prototype,
-              "m_eCuratorLanguage",
-              void 0
-            ),
-            Object(d.c)(
-              [o.observable],
-              e.prototype,
-              "m_mapURLToPosted",
-              void 0
-            ),
+            Object(d.c)([o.x], e.prototype, "m_strRSSFeedURL", void 0),
+            Object(d.c)([o.x], e.prototype, "m_strRSSGID", void 0),
+            Object(d.c)([o.x], e.prototype, "m_rtimeRSSLastChecked", void 0),
+            Object(d.c)([o.x], e.prototype, "m_nPollIntervalSeconds", void 0),
+            Object(d.c)([o.x], e.prototype, "m_eRSSFeedLanguage", void 0),
+            Object(d.c)([o.x], e.prototype, "m_eCuratorLanguage", void 0),
+            Object(d.c)([o.x], e.prototype, "m_mapURLToPosted", void 0),
             e
           );
         })(),
@@ -1785,8 +1760,8 @@
           );
         })(),
         U = n("TyAF"),
-        A = n("mgoM"),
-        G = n("3+zv"),
+        G = n("mgoM"),
+        A = n("3+zv"),
         L = n("Mgs7"),
         k = n("T27q"),
         I = n("fpVW"),
@@ -1821,7 +1796,7 @@
               e.preventDefault(),
                 Object(W.d)(
                   c.a.createElement(ne, { strRSSUrl: this.state.strRssURL }),
-                  Object(q.n)(e)
+                  Object(q.o)(e)
                 );
             }),
             (e.prototype.OnRevert = function(e) {
@@ -1855,7 +1830,7 @@
                         null,
                         Object($.d)(
                           "#CuratorAdmin_RSSFeed_lang",
-                          Object(A.b)(
+                          Object(G.b)(
                             this.m_Admin.GetCuratorLangaugeHandleUnset()
                           )
                         ),
@@ -1966,7 +1941,7 @@
             Object(d.c)([J.a], e.prototype, "OnChangeActualRSSURL", null),
             Object(d.c)([J.a], e.prototype, "OnCreateOrSaveFeed", null),
             Object(d.c)([J.a], e.prototype, "OnRevert", null),
-            (e = Object(d.c)([U.observer], e))
+            (e = Object(d.c)([U.a], e))
           );
         })(c.a.Component),
         Z = (function(t) {
@@ -2226,7 +2201,7 @@
             }),
             Object(d.c)([J.a], e.prototype, "GetRSSPreviewURL", null),
             Object(d.c)([J.a], e.prototype, "OnLoadPreview", null),
-            (e = Object(d.c)([U.observer], e))
+            (e = Object(d.c)([U.a], e))
           );
         })(c.a.Component),
         ee = (function(t) {
@@ -2291,12 +2266,12 @@
                       .then(function() {
                         return Object(
                           W.d
-                        )(c.a.createElement(z.c, { strTitle: Object($.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object($.d)("#CuratorAdmin_RSSFeed_queued") }), Object(q.n)(n));
+                        )(c.a.createElement(z.c, { strTitle: Object($.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object($.d)("#CuratorAdmin_RSSFeed_queued") }), Object(q.o)(n));
                       })
                       .catch(function(e) {
                         return Object(
                           W.d
-                        )(c.a.createElement(z.e, { strTitle: Object($.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(Y.a)(e) }), Object(q.n)(n));
+                        )(c.a.createElement(z.e, { strTitle: Object($.d)("#CuratorAdmin_RSSFeed_scannow"), strDescription: Object(Y.a)(e) }), Object(q.o)(n));
                       })
                       .finally(function() {
                         return t.setState({ strReasonWaiting: void 0 });
@@ -2353,7 +2328,7 @@
             }),
             Object(d.c)([J.a], e.prototype, "OnToggleChannelAutomation", null),
             Object(d.c)([J.a], e.prototype, "OnQueueScan", null),
-            (e = Object(d.c)([U.observer], e))
+            (e = Object(d.c)([U.a], e))
           );
         })(c.a.Component),
         te = (function(t) {
@@ -2411,7 +2386,7 @@
               var t = this.props,
                 n = t.newsData,
                 r = t.clanSteamID,
-                s = new G.o();
+                s = new A.o();
               (s.GID = "PreviewPartnerEventRow_0"),
                 (s.clanSteamID = r),
                 (s.postTime = Date.now() / 1e3),
@@ -2476,7 +2451,7 @@
                   strRSSUrl: r(),
                   fnClanEventGID: this.OnClanEventCreateSuccess
                 }),
-                Object(q.n)(e)
+                Object(q.o)(e)
               );
             }),
             (e.prototype.OnUpdateNewsEvent = function(e) {
@@ -2490,7 +2465,7 @@
                   fnClanEventGID: this.OnClanEventCreateSuccess,
                   bUpdatePost: !0
                 }),
-                Object(q.n)(e)
+                Object(q.o)(e)
               );
             }),
             (e.prototype.HideModalEvent = function() {
@@ -2516,7 +2491,7 @@
                     disabled: !0
                   })
                 ),
-                Object(q.n)(e)
+                Object(q.o)(e)
               );
             }),
             (e.prototype.render = function() {
@@ -2698,7 +2673,7 @@
             Object(d.c)([J.a], e.prototype, "HideModalEvent", null),
             Object(d.c)([J.a], e.prototype, "OnClanEventCreateSuccess", null),
             Object(d.c)([J.a], e.prototype, "OnShowRawRSS", null),
-            (e = Object(d.c)([U.observer], e))
+            (e = Object(d.c)([U.a], e))
           );
         })(c.a.Component),
         ne = (function(t) {

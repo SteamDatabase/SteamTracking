@@ -704,7 +704,7 @@ function updateSortButtons()
 function onClickConfirmApplyTags()
 {
 	var strTitle = 'Publish these tags?';
-	var strBody  = 'Your game\'s tag profile will look like this:';
+	var strBody  = 'Your title\'s tag profile will look like this:';
 	var strYes   = 'Publish';
 	var strNo    = 'Cancel';
 	
@@ -1198,25 +1198,25 @@ function getQText(id)
 {
 	switch(id){
 		case "end_text":
-			return 'The tags associated with your title help users discover it on Steam.<BR><BR>	' + " " + 'In this survey, you will select Steam tags to associate with your title. Then you will prioritize this list. The top fifteen tags will help Steam determine where to surface your game to customers across browse views, search results, and recommendations.<br><br>Once you\'re happy with your work, Publish it to the Steam Store below. Please note that any unpublished changes will be lost.<br><br>' + ''.replace('%d',maxTags) + getBanTagsText();
+			return 'The tags associated with your title help users discover it on Steam.<BR><BR>' + " " + 'In this wizard, you will select Steam tags to associate with your title. Then you will prioritize this list. The top fifteen tags will help Steam determine where to surface your game to customers across browse views, search results, and recommendations.<br><br>Let\'s begin!<br><br>' + ''.replace('%d',maxTags) + getBanTagsText();
 			break;
 		case "end_text_devtags":
 			return 
 			break;
-		case "q_super_genre":    return 'To begin, choose one or two super-genres to categorize your title.';    break;
-		case "q_genre":          return 'The genre tags at the top of this list are most commonly associated with other titles in the same super-genres as yours.<br><br>Choose one or two genres to describe your title.';         break;
-		case "q_sub_genre":      return 'The sub-genres at the top of this list are most commonly associated with other titles in the same genres as yours.<br><br>Choose up to three sub-genres to describe your title.';      break;
-		case "q_visuals":        return 'The visuals and viewpoint tags at the top of this list are most commonly associated with other titles titles tagged similarly to yours.<br><br>Choose some to describe your title.';       break;
-		case "q_theme_mood":     return 'The theme and mood tags at the top of this list are most commonly associated with titles tagged similarly to yours.<br><br>Choose some themes and/or moods to describe your title.';     break;
-		case "q_features":       return 'The feature tags at the top of this list are most commonly associated with titles tagged similarly to yours.<br><br>Choose any relevant features to describe your title.';      break;
-		case "q_players":        return 'The player tags at the top of this list are most commonly associated with titles tagged similarly to yours.<br><br>Choose any relevant player tags to describe your title.';       break;
+		case "q_super_genre":    return 'To begin, choose one or two top-level genres to categorize your title.';    break;
+		case "q_genre":          return 'Select one or two genres to describe your title.<BR><BR>The <strong>brighter ones</strong> in this list are common among titles with top-level genres similar to yours, and may be more relevant than others.';         break;
+		case "q_sub_genre":      return 'Select up to three sub-genres to describe your title.<BR><BR>The <strong>brighter ones</strong> in this list are common among titles with genres similar to yours, and may be more relevant than others.';      break;
+		case "q_visuals":        return 'Select any relevant visuals and viewpoint tags to describe your title.<br><br>The <strong>brighter ones</strong> in this list are common among titles with tags similar to yours, and may be more relevant than others.';       break;
+		case "q_theme_mood":     return 'Select any relevant theme and/or mood tags to describe your title.<br><br>The <strong>brighter ones</strong> in this list are common among titles with tags similar to yours, and may be more relevant than others.';     break;
+		case "q_features":       return 'Select any relevant feature tags to describe your title.<BR><BR>The <strong>brighter ones</strong> in this list are common among titles with tags similar to yours, and may be more relevant than others.';      break;
+		case "q_players":        return 'Select any relevant player tags to describe your title.<BR><BR>The <strong>brighter ones</strong> in this list are common among titles with tags similar to yours, and may be more relevant than others.';       break;
 		case "q_other":          return 'Any other tags.';         break;
 		case "q_tags_from_desc": return 'The tags in this list were found in your title\'s store description.<br><br>Select the ones you feel are additive in describing your title to customers, or simply skip to the next step.';  break;
 		case "q_tags_from_users":
 			return 'These additional tags have been applied to your title by the Steam community of users.<br><br>We suggest keeping these in place unless any are explicitly inaccurate.<br><br>' + getBanTagsText();
 		break;
 		case "none_defined"    : return 'None defined';       
-		case "top_tags"        : return 'Top 15 Tags, by Priority—Drag & Drop to reorder';
+		case "top_tags"        : return 'Top 15 Tags, by weight—Drag & Drop to reorder';
 		break;
 	}
 	return "";
@@ -1238,7 +1238,7 @@ function getQTitle(id)
 {
 	switch(id){
 		case "end_title":        return 'Your Tags';           break;
-		case "q_super_genre":    return 'Super-Genres';    break;
+		case "q_super_genre":    return 'Top-Level Genres';    break;
 		case "q_genre":          return 'Genres';         break;
 		case "q_sub_genre":      return 'Sub-Genres';      break;
 		case "q_visuals":        return 'Visuals & Viewpoint';       break;

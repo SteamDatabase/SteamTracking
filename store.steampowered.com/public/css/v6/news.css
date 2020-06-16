@@ -384,6 +384,7 @@ div#news_search {
     margin-top: 8px;
 	border-style: none;
 	max-width: 670px;
+    height: auto;
 }
 .steam_community_announcements .body img {
 	float: none;
