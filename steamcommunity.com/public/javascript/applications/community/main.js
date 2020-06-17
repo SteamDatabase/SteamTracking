@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5932799";
+var CLSTAMP = "5934084";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [90],
   {
@@ -2381,32 +2381,29 @@ var CLSTAMP = "5932799";
     },
     "Jqb/": function(e, t, n) {
       "use strict";
-      n.d(t, "b", function() {
+      n.d(t, "a", function() {
         return g;
       }),
-        n.d(t, "h", function() {
+        n.d(t, "g", function() {
           return _;
         }),
-        n.d(t, "i", function() {
+        n.d(t, "h", function() {
           return b;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "c", function() {
           return y;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "d", function() {
           return E;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "e", function() {
           return O;
         }),
-        n.d(t, "f", function() {
+        n.d(t, "b", function() {
           return w;
         }),
-        n.d(t, "c", function() {
-          return D;
-        }),
-        n.d(t, "g", function() {
-          return S;
+        n.d(t, "f", function() {
+          return C;
         });
       var l = n("mrSG"),
         u = n("q1tI"),
@@ -2442,7 +2439,7 @@ var CLSTAMP = "5932799";
                 t
                   ? this.m_ModalHandle
                     ? this.m_ModalHandle.Update(n)
-                    : (this.m_ModalHandle = S(window).ShowModal(n))
+                    : (this.m_ModalHandle = C(window).ShowModal(n))
                   : this.HideModal(),
                 null
               );
@@ -2644,20 +2641,7 @@ var CLSTAMP = "5932799";
             (t = Object(l.c)([s.a], t))
           );
         })(u.Component),
-        O = function(e) {
-          return u.createElement(
-            _,
-            {
-              onEscKeypress: function() {
-                return e.closeModal && e.closeModal();
-              },
-              hideTopBar: !0,
-              bHideCloseIcon: !0
-            },
-            e.children
-          );
-        },
-        w = (function(e) {
+        O = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -2682,7 +2666,7 @@ var CLSTAMP = "5932799";
             (t = Object(l.c)([s.a], t))
           );
         })(u.Component),
-        D = (function(e) {
+        w = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -2735,7 +2719,7 @@ var CLSTAMP = "5932799";
             t
           );
         })(u.Component),
-        C = (function() {
+        D = (function() {
           function e() {
             (this.m_bUsePopups = !0),
               (this.m_rgModals = []),
@@ -2803,11 +2787,11 @@ var CLSTAMP = "5932799";
             e
           );
         })();
-      function S(e) {
-        var t = M.get(e);
-        return t || ((t = new C()), M.set(e, t)), t;
+      function C(e) {
+        var t = S.get(e);
+        return t || ((t = new D()), S.set(e, t)), t;
       }
-      var M = new WeakMap();
+      var S = new WeakMap();
     },
     Kw0F: function(e, t, n) {
       "use strict";
@@ -7140,7 +7124,7 @@ var CLSTAMP = "5932799";
             (t.prototype.componentDidMount = function() {
               v ||
                 (v = Object(u.b)(document)).Show(
-                  i.a.createElement(c.c, { ModalManager: Object(c.g)(window) })
+                  i.a.createElement(c.b, { ModalManager: Object(c.f)(window) })
                 );
             }),
             (t.prototype.render = function() {

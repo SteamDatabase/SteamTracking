@@ -45,6 +45,28 @@ function BanItem( id )
 	);
 }
 
+function VoteBanUsers( id )
+{
+	var item = gItems[id];
+	var appid = item['consumer_appid'];
+	var title = V_EscapeHTML( item['title'] );
+	var options = {
+		method: 'post',
+		postBody: 'id=' + id + '&sessionid=' + g_sessionID,
+		onComplete: (function(id){
+			return function(transport)
+			{
+				ShowWithFade( $( 'banned_voters_' + id ) );
+				$J( '#item_' + id ).addClass( 'vote_banned' );
+			}
+		}(id))
+	};
+	new Ajax.Request(
+		'https://steamcommunity.com/sharedfiles/banupvoters',
+	options
+);
+}
+
 function MarkIncompatible( id )
 {
 	var item = gItems[id];
@@ -150,6 +172,11 @@ function SelectedItems_Blur()
 function SelectedItems_Ban()
 {
 	ApplyFuncOnSelectedItems( BanItem );
+}
+
+function SelectedItems_VoteBanUsers()
+{
+	ApplyFuncOnSelectedItems( VoteBanUsers );
 }
 
 function SelectedItems_MarkIncompatible()
