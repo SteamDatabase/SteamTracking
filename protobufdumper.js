@@ -1,12 +1,33 @@
 const path = require('path');
 const fs = require('fs');
 
-getKnownProtobufMessages("Protobufs", function(knownMessages, knownServices) {
+getKnownProtobufMessages("Protobufs", function(knownMessages) {
 	const protos = handleFile(fs.readFileSync(process.argv[2]).toString());
 	const imports = new Set();
 	imports.add(knownMessages.get("NoResponse"));
 
 	const filteredProtos = protos.messages.filter((proto) => !knownMessages.has(proto.name));
+	const filteredServices = [];
+
+	protos.services.forEach((methods, service) => {
+		methods = methods.filter((method) => {
+			let request = method.request;
+
+			// Hack
+			if (request === "NotImplemented") {
+				request = method.response.replace( '_Response', '_Request' );
+			}
+
+			return !knownMessages.has(request);
+		});
+
+		if (methods.length > 0) {
+			filteredServices.push({
+				service,
+				methods
+			});
+		}
+	});
 
 	filteredProtos.forEach((proto) => {
 		proto.fields.forEach((field) => {
@@ -22,14 +43,12 @@ getKnownProtobufMessages("Protobufs", function(knownMessages, knownServices) {
 
 	outputImports(imports);
 	outputProtos(filteredProtos);
-	outputServices(Array.from(protos.services).filter((service) => !knownServices.has(service[0])));
+	outputServices(filteredServices);
 });
 
 function getKnownProtobufMessages(dirName, callback) {
 	const msgRegex = /([ \t]*)message (\w+) \{/g;
-	const svcRegex = /service (\w+) \{/g;
 	const knownMessages = new Map();
-	const knownServices = new Map();
 	let MsgAndLevel = [];
 
 	fs.readdir(dirName, function(err, files) {
@@ -54,13 +73,9 @@ function getKnownProtobufMessages(dirName, callback) {
 				MsgAndLevel.unshift({ "name": msgName, "level": currLevel });
 				knownMessages.set(msgName, fileName);
 			}
-
-			while (matches = svcRegex.exec(file)) {
-				knownServices.set(matches[1], fileName);
-			}
 		});
 
-		callback(knownMessages, knownServices);
+		callback(knownMessages);
 	});
 }
 
@@ -263,9 +278,9 @@ function outputImports(imports) {
 
 function outputServices(services) {
 	for (const service of services) {
-		console.log(`service ${service[0]} {`);
+		console.log(`service ${service.service} {`);
 
-		for (const method of service[1]) {
+		for (const method of service.methods) {
 			console.log(`\trpc ${method.name} (.${method.request}) returns (.${method.response});`);
 		}
 
