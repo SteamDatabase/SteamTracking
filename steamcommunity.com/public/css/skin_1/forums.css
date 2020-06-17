@@ -678,6 +678,13 @@ textarea.forumtopic_reply_textarea {
 	color: #a0d0ec;
 }
 
+.forumtopic_answer .needs_content_check {
+	opacity: 0.5;
+	font-style: italic;
+	padding: 15px 15px 15px  50px;
+	background-color: rgba( 23, 34, 48, 0.7);
+}
+
 .forumtopic_answer.answer_body {
 	padding: 15px 15px 15px  50px;
 }
