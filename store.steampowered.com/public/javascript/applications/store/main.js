@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5933114";
+var CLSTAMP = "5934230";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [8],
   {
@@ -3737,29 +3737,26 @@ var CLSTAMP = "5933114";
     },
     "Jqb/": function(e, t, n) {
       "use strict";
-      n.d(t, "g", function() {
+      n.d(t, "f", function() {
         return g;
       }),
-        n.d(t, "h", function() {
+        n.d(t, "g", function() {
           return _;
         }),
-        n.d(t, "c", function() {
+        n.d(t, "b", function() {
           return v;
         }),
-        n.d(t, "d", function() {
+        n.d(t, "c", function() {
           return b;
         }),
-        n.d(t, "a", function() {
+        n.d(t, "d", function() {
           return y;
         }),
-        n.d(t, "e", function() {
+        n.d(t, "a", function() {
           return M;
         }),
-        n.d(t, "b", function() {
-          return w;
-        }),
-        n.d(t, "f", function() {
-          return F;
+        n.d(t, "e", function() {
+          return O;
         });
       var l = n("mrSG"),
         u = n("q1tI"),
@@ -3953,20 +3950,7 @@ var CLSTAMP = "5933114";
             (t = Object(l.c)([a.a], t))
           );
         })(u.Component),
-        y = function(e) {
-          return u.createElement(
-            g,
-            {
-              onEscKeypress: function() {
-                return e.closeModal && e.closeModal();
-              },
-              hideTopBar: !0,
-              bHideCloseIcon: !0
-            },
-            e.children
-          );
-        },
-        M = (function(e) {
+        y = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -3991,7 +3975,7 @@ var CLSTAMP = "5933114";
             (t = Object(l.c)([a.a], t))
           );
         })(u.Component),
-        w = (function(e) {
+        M = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -4044,7 +4028,7 @@ var CLSTAMP = "5933114";
             t
           );
         })(u.Component),
-        O = (function() {
+        w = (function() {
           function e() {
             (this.m_bUsePopups = !0),
               (this.m_rgModals = []),
@@ -4112,11 +4096,11 @@ var CLSTAMP = "5933114";
             e
           );
         })();
-      function F(e) {
-        var t = E.get(e);
-        return t || ((t = new O()), E.set(e, t)), t;
+      function O(e) {
+        var t = F.get(e);
+        return t || ((t = new w()), F.set(e, t)), t;
       }
-      var E = new WeakMap();
+      var F = new WeakMap();
     },
     Kw0F: function(e, t, n) {
       "use strict";
@@ -12737,6 +12721,9 @@ var CLSTAMP = "5933114";
                 EventBackfill: function() {
                   return "/events_admin/backfill/";
                 },
+                EventGameFestivalDebug: function() {
+                  return "/events_admin/gamefestival/:clanacountid(\\d+)/:claneventgid(\\d+)";
+                },
                 InteractiveRecommender: function() {
                   return "/recommender/:steamid(\\d+)?/";
                 },
@@ -13004,6 +12991,18 @@ var CLSTAMP = "5933114";
           b.d,
           null,
           a.a.createElement(b.b, {
+            path: m.EventGameFestivalDebug(),
+            render: function(e) {
+              return a.a.createElement(
+                T,
+                Object(l.a)({}, e, {
+                  clanAccountID: e.match.params.clanacountid,
+                  clanEventGID: e.match.params.claneventgid
+                })
+              );
+            }
+          }),
+          a.a.createElement(b.b, {
             exact: !0,
             path: m.EventBackfill(),
             render: function(e) {
@@ -13030,8 +13029,9 @@ var CLSTAMP = "5933114";
         I = S("EventCalendar"),
         x = S("EventDetailView"),
         A = S("Events"),
-        T = c("Hny+"),
-        L = (a.a.lazy(function() {
+        T = S("EventSteamGameFestivalDebug"),
+        L = c("Hny+"),
+        N = (a.a.lazy(function() {
           return c.e(65).then(c.bind(null, "jHcm"));
         }),
         a.a.lazy(function() {
@@ -13039,17 +13039,17 @@ var CLSTAMP = "5933114";
             c.bind(null, "3WEt")
           );
         })),
-        N = a.a.lazy(function() {
+        P = a.a.lazy(function() {
           return Promise.all([c.e(0), c.e(1), c.e(4)]).then(
             c.bind(null, "NIbt")
           );
         }),
-        P = a.a.lazy(function() {
+        z = a.a.lazy(function() {
           return Promise.all([c.e(0), c.e(1), c.e(5)]).then(
             c.bind(null, "3rT3")
           );
         }),
-        z = (a.a.lazy(function() {
+        G = (a.a.lazy(function() {
           return Promise.resolve().then(c.bind(null, "Hny+"));
         }),
         (function(e) {
@@ -13123,7 +13123,7 @@ var CLSTAMP = "5933114";
                                 },
                                 "broadcast-embed": function() {
                                   return a.a.createElement(
-                                    N,
+                                    P,
                                     Object(l.a)(
                                       { key: "appbroadcastcast_" + t },
                                       e,
@@ -13151,7 +13151,7 @@ var CLSTAMP = "5933114";
                                 },
                                 "broadcast-embed": function() {
                                   return a.a.createElement(
-                                    N,
+                                    P,
                                     Object(l.a)(
                                       { key: "broadcastsale_" + t },
                                       e,
@@ -13166,7 +13166,7 @@ var CLSTAMP = "5933114";
                         a.a.createElement(b.b, {
                           path:
                             "/(curator|pub|publisher|dev|developer|franchise)/:curator_vanity/admin",
-                          component: P
+                          component: z
                         }),
                         a.a.createElement(b.b, {
                           exact: !0,
@@ -13227,7 +13227,7 @@ var CLSTAMP = "5933114";
                           path: m.CuratorPage(),
                           render: function(e) {
                             return a.a.createElement(
-                              N,
+                              P,
                               Object(l.a)(
                                 {
                                   key:
@@ -13247,7 +13247,7 @@ var CLSTAMP = "5933114";
                           path: m.CreatorPage(),
                           render: function(e) {
                             return a.a.createElement(
-                              N,
+                              P,
                               Object(l.a)(
                                 {
                                   key:
@@ -13266,7 +13266,7 @@ var CLSTAMP = "5933114";
                           exact: !0,
                           path: m.PackageStorePage(),
                           render: function(e) {
-                            return a.a.createElement(N, {
+                            return a.a.createElement(P, {
                               key: "packagebroadcast_" + e.match.params.subid,
                               subid: e.match.params.subid
                             });
@@ -13276,7 +13276,7 @@ var CLSTAMP = "5933114";
                           exact: !0,
                           path: m.BundleStorePage(),
                           render: function(e) {
-                            return a.a.createElement(N, {
+                            return a.a.createElement(P, {
                               key: "bundlebroadcast_" + e.match.params.bundleid,
                               bundleid: e.match.params.bundleid
                             });
@@ -13298,14 +13298,14 @@ var CLSTAMP = "5933114";
                           exact: !0,
                           path: m.InteractiveRecommender(),
                           render: function(e) {
-                            return a.a.createElement(L, null);
+                            return a.a.createElement(N, null);
                           }
                         }),
                         a.a.createElement(b.b, {
                           exact: !0,
                           path: m.LabsSandbox(),
                           render: function(e) {
-                            return a.a.createElement(T.default, null);
+                            return a.a.createElement(L.default, null);
                           }
                         }),
                         a.a.createElement(b.b, {
@@ -13319,8 +13319,8 @@ var CLSTAMP = "5933114";
                         a.a.createElement(b.b, null, !1)
                       )
                     ),
-                    a.a.createElement(O.b, {
-                      ModalManager: Object(O.f)(window)
+                    a.a.createElement(O.a, {
+                      ModalManager: Object(O.e)(window)
                     })
                   )
                 )
@@ -13329,9 +13329,9 @@ var CLSTAMP = "5933114";
             t
           );
         })(a.a.Component)),
-        G = c("X3Ds");
+        U = c("X3Ds");
       c("xnZ7"), c("idvb"), c("M1X1");
-      G.q(function() {
+      U.q(function() {
         return Object(l.b)(this, void 0, void 0, function() {
           return Object(l.e)(this, function(e) {
             switch (e.label) {
@@ -13403,7 +13403,7 @@ var CLSTAMP = "5933114";
                   e.sent(),
                   document.getElementById("application_root")
                     ? n.a.render(
-                        a.a.createElement(z),
+                        a.a.createElement(G),
                         document.getElementById("application_root")
                       )
                     : console.error(
