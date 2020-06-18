@@ -4755,8 +4755,8 @@
                         { className: oe.a.StoreSaleDiscountBox },
                         "-" + r + "%"
                       ),
-                    Boolean(
-                      !a && c && r && i
+                    Boolean(!a && c) &&
+                      (r && i
                         ? S.createElement(
                             "div",
                             { className: oe.a.StoreSaleDiscountedPriceCtn },
@@ -4775,8 +4775,7 @@
                             "div",
                             { className: oe.a.StoreSalePriceBox },
                             c
-                          )
-                    )
+                          ))
                   ),
                   Boolean(n && Object(M.a)(o))
                     ? S.createElement(K.b, {
