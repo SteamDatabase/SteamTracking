@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5934084";
+var CLSTAMP = "5937095";
 !(function(e) {
   function t(t) {
     for (
@@ -11345,6 +11345,7 @@ var CLSTAMP = "5934084";
               (this.support_vrhmd = e.support_vrhmd),
               (this.support_vrhmd_only = e.support_vrhmd_only),
               (this.languages = e.languages),
+              (this.associated_demo_appids = e.associated_demo_appids),
               (this.creator_list = new Array());
             var t = e.creator_list;
             if (t)
@@ -11359,6 +11360,12 @@ var CLSTAMP = "5934084";
                 var c = s[a];
                 this.social.push(c);
               }
+          }),
+          (t.prototype.BHasDemoAppID = function() {
+            return (
+              this.associated_demo_appids &&
+              this.associated_demo_appids.length > 0
+            );
           }),
           Object(o.c)([a.z], t.prototype, "success", void 0),
           Object(o.c)([a.z], t.prototype, "release", void 0),
@@ -11384,6 +11391,7 @@ var CLSTAMP = "5934084";
           Object(o.c)([a.z], t.prototype, "support_vrhmd", void 0),
           Object(o.c)([a.z], t.prototype, "support_vrhmd_only", void 0),
           Object(o.c)([a.z], t.prototype, "languages", void 0),
+          Object(o.c)([a.z], t.prototype, "associated_demo_appids", void 0),
           Object(o.c)([a.i], t.prototype, "InitializeFrom", null),
           t
         );
@@ -13040,68 +13048,74 @@ var CLSTAMP = "5934084";
               },
               c = this.m_dictComponents,
               l = this.m_renderingLanguage,
-              p = function(e, n, s) {
+              p = !1,
+              u = function(e, n, s) {
                 if (e && e.node.tag === n.text && c.get(e.node.tag)) {
-                  var p = c.get(e.node.tag),
-                    u = a.map(function(e) {
+                  var u = c.get(e.node.tag),
+                    m = a.map(function(e) {
                       return e.node.tag;
                     }),
-                    m = {
+                    d = {
                       context: t,
-                      parentTags: u,
+                      parentTags: m,
                       tagname: e.node.tag,
                       args: e.node.args,
                       language: l,
                       key: e.node.tag + "_" + s
                     },
-                    d = r.createElement.apply(
+                    h = r.createElement.apply(
                       r,
-                      Object(o.g)([p.Constructor, m], i.GetElements())
+                      Object(o.g)([u.Constructor, d], i.GetElements())
                     );
-                  (i = e.accumulator).AppendNode(d);
+                  (i = e.accumulator).AppendNode(h),
+                    (p = u.skipFollowingNewline);
                 } else if (e) {
-                  var h = e.accumulator;
-                  h.AppendText("[" + e.node.text + "]", !1),
+                  var f = e.accumulator;
+                  f.AppendText("[" + e.node.text + "]", !1),
                     i.GetElements().forEach(function(e) {
-                      return h.AppendNode(e);
+                      return f.AppendNode(e);
                     }),
-                    h.AppendText("[/" + n.text + "]", !1),
-                    (i = h);
+                    f.AppendText("[/" + n.text + "]", !1),
+                    (i = f);
                 }
               };
             e.forEach(function(e, t) {
-              if (1 == e.type) i.AppendText(e.text, 0 == a.length);
-              else if (2 != e.type || c.get(e.tag)) {
-                if (2 == e.type) {
-                  var o = s();
-                  if (void 0 !== o) {
-                    var r = c.get(o.node.tag);
-                    r &&
-                      r.autocloses &&
-                      e.tag === o.node.tag &&
-                      p(a.pop(), o.node, t);
+              if (1 == e.type) {
+                var o = p ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                i.AppendText(o, 0 == a.length), (p = !1);
+              } else if (2 == e.type) {
+                var r = c.get(e.tag);
+                if (r) {
+                  var l = s();
+                  if (void 0 !== l) {
+                    var m = c.get(l.node.tag);
+                    m &&
+                      m.autocloses &&
+                      e.tag === l.node.tag &&
+                      u(a.pop(), l.node, t);
                   }
                   a.push({ accumulator: i, node: e }),
-                    (i = n.m_fnAccumulatorFactory(e));
-                } else if (3 == e.type) {
-                  for (
-                    ;
-                    s() &&
-                    s().node.tag !== e.text &&
-                    c.get(s().node.tag) &&
-                    c.get(s().node.tag).autocloses;
+                    (i = n.m_fnAccumulatorFactory(e)),
+                    (p = r.skipInternalNewline);
+                } else i.AppendText("[" + e.text + "]", 0 == a.length);
+              } else if (3 == e.type) {
+                for (
+                  ;
+                  s() &&
+                  s().node.tag !== e.text &&
+                  c.get(s().node.tag) &&
+                  c.get(s().node.tag).autocloses;
 
-                  ) {
-                    var l = a.pop();
-                    p(l, l.node, t);
-                  }
-                  var u = a.pop();
-                  p(u, e, t);
+                ) {
+                  var d = a.pop();
+                  u(d, d.node, t);
                 }
-              } else i.AppendText("[" + e.text + "]", 0 == a.length);
+                var h = a.pop();
+                u(h, e, t);
+              }
             });
             for (
-              var u = function() {
+              var m = function() {
                 var e = a.pop(),
                   t = e.accumulator;
                 t.AppendText("[" + e.node.text + "]", !1),
@@ -13113,12 +13127,12 @@ var CLSTAMP = "5934084";
               a.length > 0;
 
             )
-              u();
-            var m = i.GetElements();
-            return m.length > 1
-              ? r.createElement.apply(r, Object(o.g)([r.Fragment, null], m))
-              : 1 == m.length
-              ? m[0]
+              m();
+            var d = i.GetElements();
+            return d.length > 1
+              ? r.createElement.apply(r, Object(o.g)([r.Fragment, null], d))
+              : 1 == d.length
+              ? d[0]
               : null;
           }),
           e
@@ -20514,9 +20528,19 @@ var CLSTAMP = "5934084";
         function e() {
           (this.m_mapAppIDToInfo = new Map()),
             (this.m_mapAppIDToDLCs = new Map()),
+            (this.m_mapAppMissings = new Map()),
             (this.m_bLoadedFromConfig = !1);
         }
         return (
+          (e.prototype.GetNumAppLinkLoaded = function() {
+            return this.m_mapAppIDToInfo.size;
+          }),
+          (e.prototype.GetAllAppInfos = function() {
+            return this.m_mapAppIDToInfo;
+          }),
+          (e.prototype.GetMissingAppIDs = function() {
+            return this.m_mapAppMissings;
+          }),
           (e.prototype.LazyInit = function() {
             var e = this;
             if (!this.m_bLoadedFromConfig) {
@@ -20580,7 +20604,8 @@ var CLSTAMP = "5934084";
                             : [3, 2])
                     );
                   case 1:
-                    n.sent(), (n.label = 2);
+                    n.sent().BIsLoaded() || this.m_mapAppMissings.set(e, !0),
+                      (n.label = 2);
                   case 2:
                     return [2, this.m_mapAppIDToInfo.get(e)];
                 }
@@ -20661,8 +20686,58 @@ var CLSTAMP = "5934084";
               });
             });
           }),
+          (e.prototype.BatchLoadAppCapsules = function(e) {
+            return Object(o.b)(this, void 0, void 0, function() {
+              var t,
+                n,
+                r = this;
+              return Object(o.e)(this, function(i) {
+                switch (i.label) {
+                  case 0:
+                    e.sort(),
+                      (t = []),
+                      0,
+                      e.forEach(function(e) {
+                        r.m_mapAppIDToInfo.has(e) ||
+                          0 == e ||
+                          r.m_mapAppMissings.has(e) ||
+                          t.push(e);
+                      }),
+                      (n = function() {
+                        var e, n, i;
+                        return Object(o.e)(this, function(o) {
+                          switch (o.label) {
+                            case 0:
+                              return (
+                                20,
+                                (e = Math.min(20, t.length)),
+                                (n = t.slice(0, e)),
+                                (t = t.slice(e)),
+                                (i = new Array()),
+                                n.forEach(function(e) {
+                                  i.push(r.EnsureStoreCapsuleInfoLoaded(e));
+                                }),
+                                [4, Promise.all(i)]
+                              );
+                            case 1:
+                              return o.sent(), [2];
+                          }
+                        });
+                      }),
+                      (i.label = 1);
+                  case 1:
+                    return t.length > 0 ? [5, n()] : [3, 3];
+                  case 2:
+                    return i.sent(), [3, 1];
+                  case 3:
+                    return [2];
+                }
+              });
+            });
+          }),
           Object(o.c)([w.z], e.prototype, "m_mapAppIDToInfo", void 0),
           Object(o.c)([w.z], e.prototype, "m_mapAppIDToDLCs", void 0),
+          Object(o.c)([w.z], e.prototype, "m_mapAppMissings", void 0),
           e
         );
       })())();
@@ -24864,6 +24939,9 @@ var CLSTAMP = "5934084";
           }),
           (e.prototype.GetDemoEventInfo = function(e) {
             return this.m_mapAppToDemoInfo.get(e);
+          }),
+          (e.prototype.GetAllDemoInfo = function() {
+            return this.m_mapAppToDemoInfo;
           }),
           (e.prototype.BHasAboutDemo = function(e) {
             var t = this.m_mapAppToDemoInfo.get(e);
@@ -29848,7 +29926,7 @@ var CLSTAMP = "5934084";
           (t.prototype.ElementAccumulator = function(e) {
             return new on(
               new nn(
-                new tn(new $t.c(new $t.b(), 1, !0), e, t.BBCodeURLComponent, {
+                new tn(new $t.c(new $t.b(), 0, !0), e, t.BBCodeURLComponent, {
                   partnerEventStore: this.props.partnerEventStore,
                   event: this.props.event
                 })
@@ -29868,9 +29946,18 @@ var CLSTAMP = "5934084";
           (t.BBCodeDictionary = new Map([
             ["b", { Constructor: po, autocloses: !1 }],
             ["i", { Constructor: uo, autocloses: !1 }],
-            ["h1", { Constructor: mo, autocloses: !1 }],
-            ["h2", { Constructor: ho, autocloses: !1 }],
-            ["h3", { Constructor: fo, autocloses: !1 }],
+            [
+              "h1",
+              { Constructor: mo, autocloses: !1, skipFollowingNewline: !0 }
+            ],
+            [
+              "h2",
+              { Constructor: ho, autocloses: !1, skipFollowingNewline: !0 }
+            ],
+            [
+              "h3",
+              { Constructor: fo, autocloses: !1, skipFollowingNewline: !0 }
+            ],
             ["u", { Constructor: _o, autocloses: !1 }],
             ["hr", { Constructor: go, autocloses: !1 }],
             ["strike", { Constructor: bo, autocloses: !1 }],
@@ -29881,9 +29968,15 @@ var CLSTAMP = "5934084";
             ["pullquote", { Constructor: Io, autocloses: !1 }],
             ["code", { Constructor: Eo, autocloses: !1 }],
             ["img", { Constructor: wo, autocloses: !1 }],
-            ["list", { Constructor: Do, autocloses: !1 }],
-            ["olist", { Constructor: Ao, autocloses: !1 }],
-            ["*", { Constructor: To, autocloses: !0 }],
+            [
+              "list",
+              { Constructor: Do, autocloses: !1, skipInternalNewline: !0 }
+            ],
+            [
+              "olist",
+              { Constructor: Ao, autocloses: !1, skipInternalNewline: !0 }
+            ],
+            ["*", { Constructor: To, autocloses: !0, skipInternalNewline: !0 }],
             ["table", { Constructor: Mo, autocloses: !1 }],
             ["tr", { Constructor: jo, autocloses: !1 }],
             ["th", { Constructor: Lo, autocloses: !1 }],
@@ -30138,29 +30231,25 @@ var CLSTAMP = "5934084";
     }
     function ko(e, t, n, o) {
       if (!e.rgVideoSources || !e.rgVideoSources.length) return null;
-      var r = (function(e) {
-          return (
-            !!Ro(e.sPoster) &&
-            ((!e.rgVideoSources ||
-              !e.rgVideoSources.some(function(e) {
+      !(function(e) {
+        !!Ro(e.sPoster) &&
+          ((!e.rgVideoSources ||
+            !e.rgVideoSources.some(function(e) {
+              return !Ro(e.sURL);
+            })) &&
+            (!e.rgVideoTracks ||
+              e.rgVideoTracks.some(function(e) {
                 return !Ro(e.sURL);
-              })) &&
-              (!e.rgVideoTracks ||
-                !e.rgVideoTracks.some(function(e) {
-                  return !Ro(e.sURL);
-                })))
-          );
-        })(e)
-          ? void 0
-          : "anonymous",
-        a = e.rgVideoSources.map(function(e) {
+              })));
+      })(e);
+      var r = e.rgVideoSources.map(function(e) {
           return i.createElement("source", {
             key: e.sURL,
             src: e.sURL,
             type: e.sFormat
           });
         }),
-        s = e.rgVideoTracks.map(function(e) {
+        a = e.rgVideoTracks.map(function(e) {
           return i.createElement("track", {
             key: e.sURL + e.eLanguage,
             src: e.sURL,
@@ -30172,22 +30261,22 @@ var CLSTAMP = "5934084";
             )
           });
         }),
-        c = t;
+        s = t;
       return i.createElement(
         "video",
         {
           width: "100%",
           height: "auto",
           autoPlay: t,
-          muted: c,
+          muted: s,
           playsInline: !0,
           controls: n,
           poster: e.sPoster,
           loop: o,
-          crossOrigin: r
+          crossOrigin: "anonymous"
         },
-        a,
-        s
+        r,
+        a
       );
     }
     function Bo(e) {
@@ -35840,7 +35929,7 @@ var CLSTAMP = "5934084";
                     "div",
                     {
                       className: li.a.MoreActionsMenuItem,
-                      onClick: this.AddToWishlist
+                      onClick: A.i.logged_in ? this.AddToWishlist : Lt
                     },
                     Object(k.d)("#Sale_AddToWishlist")
                   ),
@@ -36218,19 +36307,7 @@ var CLSTAMP = "5934084";
                       if (1 == e.length) {
                         var o = O.a.GetAppLinkInfo(e[0]);
                         if (o) {
-                          n.setState({ appInfo: o }),
-                            lt.Get().BHasDemoEventInfo(o.appid) ||
-                              lt
-                                .Get()
-                                .LoadAppIDsBatch([o.appid], !0)
-                                .then(function(e) {
-                                  return (
-                                    e &&
-                                    lt
-                                      .Get()
-                                      .EnsurePartnerEventLoadedForDemo(o.appid)
-                                  );
-                                });
+                          n.setState({ appInfo: o });
                           var i = Y.a.Get();
                           i.LoadShortDesc(o.appid).then(function(e) {
                             if (e && n.m_bIsMounted) {
@@ -36279,7 +36356,7 @@ var CLSTAMP = "5934084";
               d = a.name,
               h = a.header_image_url,
               f = a.discount_percent,
-              _ = o && p && lt.Get().GetDemoEventInfo(p.appid),
+              _ = o && p ? p.appid : null,
               g = "" + A.c.STORE_BASE_URL + s + "/" + n,
               b = h,
               v = !1;
@@ -36387,7 +36464,7 @@ var CLSTAMP = "5934084";
                       m
                     ),
                   l && i.createElement(ca, { rgInfo: l }),
-                  i.createElement(aa, { info: p || a, demoInfo: _ })
+                  i.createElement(aa, { info: p || a, demoAppID: _ })
                 )
               ),
               l && l.length > 0 && i.createElement(sa, { rgInfo: l })
@@ -36404,26 +36481,39 @@ var CLSTAMP = "5934084";
         }
         return (
           Object(o.d)(t, e),
+          (t.prototype.componentDidMount = function() {
+            var e = this.props.demoAppID;
+            e &&
+              (lt.Get().BHasDemoEventInfo(e) ||
+                lt
+                  .Get()
+                  .LoadAppIDsBatch([e], !0)
+                  .then(function(t) {
+                    return t && lt.Get().EnsurePartnerEventLoadedForDemo(e);
+                  }));
+          }),
           (t.prototype.ShowQuickPitch = function(e) {
-            var t = this.props.demoInfo;
-            t &&
-              t.info_clan_event_gid &&
-              si(st.GetClanEventModel(t.info_clan_event_gid), ee.s(e));
+            var t = this.props.demoAppID,
+              n = t ? lt.Get().GetDemoEventInfo(t) : null,
+              o = n ? st.GetClanEventModel(n.info_clan_event_gid) : null;
+            o && si(o, ee.s(e));
           }),
           (t.prototype.render = function() {
             var e = this.props,
               t = e.info,
-              n = e.demoInfo,
+              n = e.demoAppID,
               o = t.type,
               r = t.is_free,
               a = t.discount_percent,
               s = t.formatted_orig_price,
               c = t.formatted_final_price,
-              l = "bundle" == o && t.bundle_base_discount;
+              l = "bundle" == o && t.bundle_base_discount,
+              p = n ? lt.Get().GetDemoEventInfo(n) : null,
+              u = p ? st.GetClanEventModel(p.info_clan_event_gid) : null;
             return i.createElement(
               "div",
               { className: ui.a.StoreActionWidgetContainer },
-              Boolean(!!n && !!n.info_clan_event_gid) &&
+              Boolean(u) &&
                 i.createElement(
                   "div",
                   {
@@ -36436,28 +36526,28 @@ var CLSTAMP = "5934084";
               i.createElement(
                 "div",
                 { className: ui.a.StoreSalePriceActionWidgetContainer },
-                i.createElement(
-                  "div",
-                  {
-                    className: Object(R.a)(
-                      ui.a.StoreSalePriceWidgetContainer,
-                      a && ui.a.Discounted
-                    )
-                  },
-                  Boolean(l && a && a > l) &&
-                    i.createElement(
-                      "span",
-                      { className: Object(R.a)(ui.a.BaseDiscount) },
-                      "-" + l + "%"
-                    ),
-                  Boolean(!r && a) &&
-                    i.createElement(
-                      "div",
-                      { className: ui.a.StoreSaleDiscountBox },
-                      "-" + a + "%"
-                    ),
-                  Boolean(
-                    !r && c && a && s
+                Boolean(!r && c) &&
+                  i.createElement(
+                    "div",
+                    {
+                      className: Object(R.a)(
+                        ui.a.StoreSalePriceWidgetContainer,
+                        a && ui.a.Discounted
+                      )
+                    },
+                    Boolean(l && a && a > l) &&
+                      i.createElement(
+                        "span",
+                        { className: Object(R.a)(ui.a.BaseDiscount) },
+                        "-" + l + "%"
+                      ),
+                    Boolean(a) &&
+                      i.createElement(
+                        "div",
+                        { className: ui.a.StoreSaleDiscountBox },
+                        "-" + a + "%"
+                      ),
+                    a && s
                       ? i.createElement(
                           "div",
                           { className: ui.a.StoreSaleDiscountedPriceCtn },
@@ -36477,9 +36567,8 @@ var CLSTAMP = "5934084";
                           { className: ui.a.StoreSalePriceBox },
                           c
                         )
-                  )
-                ),
-                Boolean(n && Object(S.a)(o))
+                  ),
+                Boolean(p && Object(S.a)(o))
                   ? i.createElement(Ji, {
                       appLinkInfo: t,
                       className: ui.a.Action
@@ -37193,7 +37282,8 @@ var CLSTAMP = "5934084";
                 className: ui.a.CapsuleMicroTrailer,
                 loop: !0,
                 muted: !0,
-                autoPlay: !0
+                autoPlay: !0,
+                key: "mtv-" + e.appInfo.microtrailer
               },
               i.createElement("source", {
                 src: e.appInfo.microtrailer,
@@ -69700,16 +69790,21 @@ var CLSTAMP = "5934084";
       StoreSaleWidgetLeft: "salepreviewwidgets_StoreSaleWidgetLeft_1DJ_u",
       StoreSaleWidgetRight: "salepreviewwidgets_StoreSaleWidgetRight_2VpEJ",
       TitleCtn: "salepreviewwidgets_TitleCtn_1udTD",
+      StoreSaleBroadcastWidgetRight:
+        "salepreviewwidgets_StoreSaleBroadcastWidgetRight_3h_wS",
       StoreActionWidgetContainer:
         "salepreviewwidgets_StoreActionWidgetContainer_1a_67",
       StoreSalePriceActionWidgetContainer:
         "salepreviewwidgets_StoreSalePriceActionWidgetContainer_2VvuA",
+      StoreSaleDiscountBox: "salepreviewwidgets_StoreSaleDiscountBox_boV43",
+      WishList: "salepreviewwidgets_WishList_6OtTM",
+      QuickPitch: "salepreviewwidgets_QuickPitch_2TfUa",
+      Action: "salepreviewwidgets_Action_BPPzB",
       StoreSalePriceWidgetContainer:
         "salepreviewwidgets_StoreSalePriceWidgetContainer_2xaGj",
       StoreSaleDiscountedPriceCtn:
         "salepreviewwidgets_StoreSaleDiscountedPriceCtn_NbkIm",
       StoreSalePriceBox: "salepreviewwidgets_StoreSalePriceBox_3KLhJ",
-      StoreSaleDiscountBox: "salepreviewwidgets_StoreSaleDiscountBox_boV43",
       StoreOrignalPrice: "salepreviewwidgets_StoreOrignalPrice_3YJIx",
       Discounted: "salepreviewwidgets_Discounted_2UfPK",
       BaseDiscount: "salepreviewwidgets_BaseDiscount_2cWMh",
@@ -69730,9 +69825,6 @@ var CLSTAMP = "5934084";
       CapsuleImage: "salepreviewwidgets_CapsuleImage_2KYnO",
       LinkCapsuleImage: "salepreviewwidgets_LinkCapsuleImage_VbkN-",
       CapsuleParentInfo: "salepreviewwidgets_CapsuleParentInfo_30fWu",
-      Action: "salepreviewwidgets_Action_BPPzB",
-      QuickPitch: "salepreviewwidgets_QuickPitch_2TfUa",
-      WishList: "salepreviewwidgets_WishList_6OtTM",
       Banner: "salepreviewwidgets_Banner_16Gp1",
       Blue: "salepreviewwidgets_Blue_2nCZ0",
       LinesImg: "salepreviewwidgets_LinesImg_gUdEf",
