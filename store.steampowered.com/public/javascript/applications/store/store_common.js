@@ -13003,7 +13003,7 @@
             (o.prototype.ElementAccumulator = function(e) {
               return new u(
                 new l(
-                  new p(new r.c(new r.b(), 1, !0), e, o.BBCodeURLComponent, {
+                  new p(new r.c(new r.b(), 0, !0), e, o.BBCodeURLComponent, {
                     partnerEventStore: this.props.partnerEventStore,
                     event: this.props.event
                   })
@@ -13025,9 +13025,18 @@
             (o.BBCodeDictionary = new Map([
               ["b", { Constructor: ce, autocloses: !1 }],
               ["i", { Constructor: se, autocloses: !1 }],
-              ["h1", { Constructor: pe, autocloses: !1 }],
-              ["h2", { Constructor: le, autocloses: !1 }],
-              ["h3", { Constructor: de, autocloses: !1 }],
+              [
+                "h1",
+                { Constructor: pe, autocloses: !1, skipFollowingNewline: !0 }
+              ],
+              [
+                "h2",
+                { Constructor: le, autocloses: !1, skipFollowingNewline: !0 }
+              ],
+              [
+                "h3",
+                { Constructor: de, autocloses: !1, skipFollowingNewline: !0 }
+              ],
               ["u", { Constructor: ue, autocloses: !1 }],
               ["hr", { Constructor: me, autocloses: !1 }],
               ["strike", { Constructor: he, autocloses: !1 }],
@@ -13038,9 +13047,18 @@
               ["pullquote", { Constructor: Ae, autocloses: !1 }],
               ["code", { Constructor: ve, autocloses: !1 }],
               ["img", { Constructor: ge, autocloses: !1 }],
-              ["list", { Constructor: Oe, autocloses: !1 }],
-              ["olist", { Constructor: Ee, autocloses: !1 }],
-              ["*", { Constructor: ye, autocloses: !0 }],
+              [
+                "list",
+                { Constructor: Oe, autocloses: !1, skipInternalNewline: !0 }
+              ],
+              [
+                "olist",
+                { Constructor: Ee, autocloses: !1, skipInternalNewline: !0 }
+              ],
+              [
+                "*",
+                { Constructor: ye, autocloses: !0, skipInternalNewline: !0 }
+              ],
               ["table", { Constructor: Le, autocloses: !1 }],
               ["tr", { Constructor: ze, autocloses: !1 }],
               ["th", { Constructor: Se, autocloses: !1 }],
@@ -15128,19 +15146,6 @@
                 });
               });
             }),
-            (e.prototype.ShowQuickPitch = function(e) {
-              var t,
-                n = d.a.Get().GetDemoEventInfo(this.props.appCapsule.appid);
-              n &&
-                n.info_clan_event_gid &&
-                ((t = m.c.GetClanEventModel(n.info_clan_event_gid)),
-                Object(E.a)(t, _.o(e))),
-                this.HideMenu();
-            }),
-            (e.prototype.AddToWishlist = function() {
-              u.a.UpdateGameWishlist(this.props.appCapsule.appid, !0),
-                this.HideMenu();
-            }),
             (e.prototype.OnOtherActionsMenuClick = function() {
               this.m_bIsMoreActionsMenuOpen ? this.HideMenu() : this.ShowMenu();
             }),
@@ -15157,66 +15162,16 @@
                 (this.Close(), e.preventDefault(), e.stopPropagation());
             }),
             (e.prototype.ShowMenu = function() {
-              var e, t, n, o;
+              var e, t, n;
               (this.m_bIsMoreActionsMenuOpen = !0),
                 this.m_moreActionsMenu
                   ? this.m_moreActionsMenu.Show()
-                  : ((t = !!(
-                      (e = d.a
-                        .Get()
-                        .GetDemoEventInfo(this.props.appCapsule.appid)) &&
-                      e.info_clan_event_gid &&
-                      m.c.GetClanEventModel(e.info_clan_event_gid)
-                    )),
-                    (n = p.a.createElement(
-                      "div",
-                      null,
-                      t &&
-                        p.a.createElement(
-                          "div",
-                          {
-                            className: L.a.MoreActionsMenuItem,
-                            onClick: this.ShowQuickPitch
-                          },
-                          Object(A.d)("#Sale_ReadDemoBlurb")
-                        ),
-                      p.a.createElement(
-                        "a",
-                        {
-                          className: L.a.MoreActionsMenuItem,
-                          onClick: this.HideMenu,
-                          href:
-                            O.c.STORE_BASE_URL +
-                            "newshub/app/" +
-                            this.props.appCapsule.appid +
-                            "?upcoming=true",
-                          target: "_blank"
-                        },
-                        Object(A.d)("#Sale_SeeUpcomingEvents")
-                      ),
-                      p.a.createElement(
-                        "div",
-                        {
-                          className: L.a.MoreActionsMenuItem,
-                          onClick: O.i.logged_in ? this.AddToWishlist : z.a
-                        },
-                        Object(A.d)("#Sale_AddToWishlist")
-                      ),
-                      p.a.createElement(
-                        "a",
-                        {
-                          className: L.a.MoreActionsMenuItem,
-                          onClick: this.HideMenu,
-                          href:
-                            O.c.STORE_BASE_URL +
-                            "app/" +
-                            this.props.appCapsule.appid,
-                          target: "_blank"
-                        },
-                        Object(A.d)("#Sale_VisitStorePage")
-                      )
-                    )),
-                    (o = {
+                  : ((e = this.props.appCapsule.appid),
+                    (t = p.a.createElement(D, {
+                      appid: e,
+                      fnCloseMenu: this.HideMenu
+                    })),
+                    (n = {
                       bOverlapHorizontal: !0,
                       bMatchWidth: !0,
                       strClassName: Object(f.a)(
@@ -15225,9 +15180,9 @@
                       )
                     }),
                     (this.m_moreActionsMenu = Object(s.a)(
-                      n,
+                      t,
                       this.m_refMoreActionsButton.current,
-                      o
+                      n
                     )),
                     this.m_moreActionsMenu.SetOnHideCallback(this.HideMenu)),
                 this.setState({ bIsMoreActionsMenuOpen: !0 });
@@ -15326,8 +15281,6 @@
                 )
               );
             }),
-            Object(o.c)([v.a], e.prototype, "ShowQuickPitch", null),
-            Object(o.c)([v.a], e.prototype, "AddToWishlist", null),
             Object(o.c)([v.a], e.prototype, "OnOtherActionsMenuClick", null),
             Object(o.c)([v.a], e.prototype, "Close", null),
             Object(o.c)([v.a], e.prototype, "OnBlur", null),
@@ -15387,6 +15340,114 @@
               );
             }),
             (e = Object(o.c)([i.a], e))
+          );
+        })(p.a.Component),
+        D = (function(e) {
+          function t() {
+            return (null !== e && e.apply(this, arguments)) || this;
+          }
+          return (
+            Object(o.d)(t, e),
+            (t.prototype.ShowQuickPitch = function(e) {
+              var t,
+                n = this.props,
+                o = n.appid,
+                a = n.fnCloseMenu,
+                r = d.a.Get().GetDemoEventInfo(o);
+              r &&
+                r.info_clan_event_gid &&
+                ((t = m.c.GetClanEventModel(r.info_clan_event_gid)),
+                Object(E.a)(t, _.o(e))),
+                a();
+            }),
+            (t.prototype.ToggleWishlist = function() {
+              var e = this.props,
+                t = e.appid,
+                n = e.fnCloseMenu,
+                o = !u.a.BIsGameWishlisted(t);
+              u.a.UpdateGameWishlist(t, o), n();
+            }),
+            (t.prototype.ToggleFollowed = function() {
+              var e = this.props,
+                t = e.appid,
+                n = e.fnCloseMenu,
+                o = !u.a.BFollowsApp(t);
+              u.a.UpdateFollowingApp(t, o), n();
+            }),
+            (t.prototype.render = function() {
+              var e = this.props,
+                t = e.appid,
+                n = e.fnCloseMenu,
+                o = d.a.Get().GetDemoEventInfo(t),
+                a = !!(
+                  o &&
+                  o.info_clan_event_gid &&
+                  m.c.GetClanEventModel(o.info_clan_event_gid)
+                ),
+                r = u.a.BIsGameWishlisted(t),
+                i = u.a.BFollowsApp(t);
+              return p.a.createElement(
+                "div",
+                null,
+                a &&
+                  p.a.createElement(
+                    "div",
+                    {
+                      className: L.a.MoreActionsMenuItem,
+                      onClick: this.ShowQuickPitch
+                    },
+                    Object(A.d)("#Sale_ReadDemoBlurb")
+                  ),
+                p.a.createElement(
+                  "a",
+                  {
+                    className: L.a.MoreActionsMenuItem,
+                    onClick: n,
+                    href:
+                      O.c.STORE_BASE_URL +
+                      "newshub/app/" +
+                      t +
+                      "?upcoming=true",
+                    target: "_blank"
+                  },
+                  Object(A.d)("#Sale_SeeUpcomingEvents")
+                ),
+                p.a.createElement(
+                  "div",
+                  {
+                    className: L.a.MoreActionsMenuItem,
+                    onClick: O.i.logged_in ? this.ToggleWishlist : z.a
+                  },
+                  Object(A.d)(
+                    r ? "#Sale_RemoveFromWishlist" : "#Sale_AddToWishlist"
+                  )
+                ),
+                p.a.createElement(
+                  "div",
+                  {
+                    className: L.a.MoreActionsMenuItem,
+                    onClick: O.i.logged_in ? this.ToggleFollowed : z.a
+                  },
+                  Object(A.d)(
+                    i ? "#Sale_StopFollowingGame" : "#Sale_FollowGame"
+                  )
+                ),
+                p.a.createElement(
+                  "a",
+                  {
+                    className: L.a.MoreActionsMenuItem,
+                    onClick: n,
+                    href: O.c.STORE_BASE_URL + "app/" + t,
+                    target: "_blank"
+                  },
+                  Object(A.d)("#Sale_VisitStorePage")
+                )
+              );
+            }),
+            Object(o.c)([v.a], t.prototype, "ShowQuickPitch", null),
+            Object(o.c)([v.a], t.prototype, "ToggleWishlist", null),
+            Object(o.c)([v.a], t.prototype, "ToggleFollowed", null),
+            (t = Object(o.c)([i.a], t))
           );
         })(p.a.Component);
     },
@@ -15601,6 +15662,12 @@
                 ? n.GetCalendarItemsInTimeRange(e, t)
                 : (console.error("calendar view not yet initialized"),
                   { rgCalendarItems: [], bIsComplete: !1 });
+            }),
+            (e.prototype.GetCurrentlyLoadedEventCount = function(e, t) {
+              var n;
+              return null === (n = this.m_currentView.get()) || void 0 === n
+                ? void 0
+                : n.GetCurrentlyLoadedEventCount(e, t);
             }),
             (e.prototype.GetCurrentlyLoadedItemsForStats = function() {
               var e;
@@ -16262,7 +16329,7 @@
                 }),
                 o = this.m_fnBIsCompleteThroughTime("forward", n);
               o || this.m_fnLoadAdditionalEvents("forward");
-              var a = this.m_fnBIsCompleteThroughTime("backward", n);
+              var a = this.m_fnBIsCompleteThroughTime("backward", t);
               return (
                 a || this.m_fnLoadAdditionalEvents("backward"),
                 { rgCalendarItems: e, bIsComplete: o && a }
@@ -16270,6 +16337,14 @@
             }),
             (e.prototype.GetCurrentlyLoadedEvents = function() {
               return this.filteredAndCheckedEvents;
+            }),
+            (e.prototype.GetCurrentlyLoadedEventCount = function(t, n) {
+              var e = this.filteredAndCheckedEvents.filter(function(e) {
+                  return e.start_time >= t && (!n || e.start_time < n);
+                }),
+                o = this.m_fnBIsCompleteThroughTime("forward", n),
+                a = this.m_fnBIsCompleteThroughTime("backward", t);
+              return { nCount: e.length, bIsComplete: o && a };
             }),
             (e.prototype.BIsViewEmpty = function() {
               return 0 < this.filteredAndCheckedEvents.length;
@@ -16517,6 +16592,7 @@
                 (this.support_vrhmd = e.support_vrhmd),
                 (this.support_vrhmd_only = e.support_vrhmd_only),
                 (this.languages = e.languages),
+                (this.associated_demo_appids = e.associated_demo_appids),
                 (this.creator_list = new Array());
               var t = e.creator_list;
               if (t)
@@ -16531,6 +16607,12 @@
                   var s = c[i];
                   this.social.push(s);
                 }
+            }),
+            (e.prototype.BHasDemoAppID = function() {
+              return (
+                this.associated_demo_appids &&
+                0 < this.associated_demo_appids.length
+              );
             }),
             Object(c.c)([a.x], e.prototype, "success", void 0),
             Object(c.c)([a.x], e.prototype, "release", void 0),
@@ -16556,6 +16638,7 @@
             Object(c.c)([a.x], e.prototype, "support_vrhmd", void 0),
             Object(c.c)([a.x], e.prototype, "support_vrhmd_only", void 0),
             Object(c.c)([a.x], e.prototype, "languages", void 0),
+            Object(c.c)([a.x], e.prototype, "associated_demo_appids", void 0),
             Object(c.c)([a.h], e.prototype, "InitializeFrom", null),
             e
           );
@@ -17212,8 +17295,8 @@
         n.d(t, "a", function() {
           return u;
         });
-      var h = n("mrSG"),
-        b = n("q1tI"),
+      var f = n("mrSG"),
+        _ = n("q1tI"),
         o = n("nrKv"),
         a = n("mgoM"),
         r = n("lkRc"),
@@ -17405,14 +17488,14 @@
               return this.Parse_BuildReactComponents(n, t);
             }),
             (e.prototype.Parse_BuildReactComponents = function(e, s) {
-              function i() {
-                return d.length < 1 ? void 0 : d[d.length - 1];
+              function p() {
+                return m.length < 1 ? void 0 : m[m.length - 1];
               }
-              function c(e, t, n) {
+              function l(e, t, n) {
                 var o, a, r, i, c;
-                e && e.node.tag === t.text && u.get(e.node.tag)
-                  ? ((o = u.get(e.node.tag)),
-                    (a = d.map(function(e) {
+                e && e.node.tag === t.text && h.get(e.node.tag)
+                  ? ((o = h.get(e.node.tag)),
+                    (a = m.map(function(e) {
                       return e.node.tag;
                     })),
                     (r = {
@@ -17420,73 +17503,79 @@
                       parentTags: a,
                       tagname: e.node.tag,
                       args: e.node.args,
-                      language: m,
+                      language: b,
                       key: e.node.tag + "_" + n
                     }),
-                    (i = b.createElement.apply(
-                      b,
-                      Object(h.g)([o.Constructor, r], l.GetElements())
+                    (i = _.createElement.apply(
+                      _,
+                      Object(f.g)([o.Constructor, r], u.GetElements())
                     )),
-                    (l = e.accumulator).AppendNode(i))
+                    (u = e.accumulator).AppendNode(i),
+                    (M = o.skipFollowingNewline))
                   : e &&
                     ((c = e.accumulator).AppendText(
                       "[" + e.node.text + "]",
                       !1
                     ),
-                    l.GetElements().forEach(function(e) {
+                    u.GetElements().forEach(function(e) {
                       return c.AppendNode(e);
                     }),
                     c.AppendText("[/" + t.text + "]", !1),
-                    (l = c));
+                    (u = c));
               }
-              var p = this,
-                l = this.m_fnAccumulatorFactory(void 0),
-                d = [],
-                u = this.m_dictComponents,
-                m = this.m_renderingLanguage;
+              var d = this,
+                u = this.m_fnAccumulatorFactory(void 0),
+                m = [],
+                h = this.m_dictComponents,
+                b = this.m_renderingLanguage,
+                M = !1;
               e.forEach(function(e, t) {
-                if (1 == e.type) l.AppendText(e.text, 0 == d.length);
-                else if (2 != e.type || u.get(e.tag)) {
-                  if (2 == e.type) {
-                    var n,
-                      o = i();
-                    void 0 === o ||
-                      ((n = u.get(o.node.tag)) &&
-                        n.autocloses &&
-                        e.tag === o.node.tag &&
-                        c(d.pop(), o.node, t)),
-                      d.push({ accumulator: l, node: e }),
-                      (l = p.m_fnAccumulatorFactory(e));
-                  } else if (3 == e.type) {
-                    for (
-                      ;
-                      i() &&
-                      i().node.tag !== e.text &&
-                      u.get(i().node.tag) &&
-                      u.get(i().node.tag).autocloses;
+                if (1 == e.type) {
+                  var n = M ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                  u.AppendText(n, 0 == m.length), (M = !1);
+                } else if (2 == e.type) {
+                  var o,
+                    a,
+                    r = h.get(e.tag);
+                  r
+                    ? (void 0 === (o = p()) ||
+                        ((a = h.get(o.node.tag)) &&
+                          a.autocloses &&
+                          e.tag === o.node.tag &&
+                          l(m.pop(), o.node, t)),
+                      m.push({ accumulator: u, node: e }),
+                      (u = d.m_fnAccumulatorFactory(e)),
+                      (M = r.skipInternalNewline))
+                    : u.AppendText("[" + e.text + "]", 0 == m.length);
+                } else if (3 == e.type) {
+                  for (
+                    ;
+                    p() &&
+                    p().node.tag !== e.text &&
+                    h.get(p().node.tag) &&
+                    h.get(p().node.tag).autocloses;
 
-                    ) {
-                      var a = d.pop();
-                      c(a, a.node, t);
-                    }
-                    var r = d.pop();
-                    c(r, e, t);
+                  ) {
+                    var i = m.pop();
+                    l(i, i.node, t);
                   }
-                } else l.AppendText("[" + e.text + "]", 0 == d.length);
+                  var c = m.pop();
+                  l(c, e, t);
+                }
               });
-              for (; 0 < d.length; )
+              for (; 0 < m.length; )
                 !(function() {
-                  var e = d.pop(),
+                  var e = m.pop(),
                     t = e.accumulator;
                   t.AppendText("[" + e.node.text + "]", !1),
-                    l.GetElements().forEach(function(e) {
+                    u.GetElements().forEach(function(e) {
                       return t.AppendNode(e);
                     }),
-                    (l = t);
+                    (u = t);
                 })();
-              var t = l.GetElements();
+              var t = u.GetElements();
               return 1 < t.length
-                ? b.createElement.apply(b, Object(h.g)([b.Fragment, null], t))
+                ? _.createElement.apply(_, Object(f.g)([_.Fragment, null], t))
                 : 1 == t.length
                 ? t[0]
                 : null;
@@ -17688,7 +17777,11 @@
       function r(e) {
         if (a.a.isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
-        if (void 0 !== e.response && "object" == typeof e.response.data) {
+        if (
+          void 0 !== e.response &&
+          e.response.data &&
+          "object" == typeof e.response.data
+        ) {
           if ("msg" in e.response.data)
             return {
               strErrorMsg: e.response.data.msg,
@@ -18547,15 +18640,16 @@
         i = "unUserdataVersion",
         a = new ((function() {
           function e() {
-            (this.m_rgWishList = new Array()),
-              (this.m_rgOwnedPackages = []),
-              (this.m_rgOwnedApps = []),
-              (this.m_excludedTags = []),
-              (this.m_excludedContentDescriptors = []),
-              (this.m_rgRecommendedApps = new Array()),
-              (this.m_rgIgnoredApps = new Map()),
-              (this.m_rgCreatorsFollowed = new Array()),
-              (this.m_rgCreatorsIgnored = new Array()),
+            (this.m_mapWishList = new Map()),
+              (this.m_mapOwnedPackages = new Map()),
+              (this.m_mapOwnedApps = new Map()),
+              (this.m_mapFollowedApps = new Map()),
+              (this.m_mapExcludedTagsIds = new Map()),
+              (this.m_mapExcludedContentDescriptors = new Map()),
+              (this.m_mapRecommendedApps = new Map()),
+              (this.m_mapIgnoredApps = new Map()),
+              (this.m_mapCreatorsFollowed = new Map()),
+              (this.m_mapCreatorsIgnored = new Map()),
               (this.m_bIsLoaded = !1);
           }
           return (
@@ -18563,82 +18657,52 @@
               return this.m_bIsLoaded;
             }),
             (e.prototype.GetCreatorsFollowed = function() {
-              return this.m_rgCreatorsFollowed;
+              return Array.from(this.m_mapCreatorsFollowed.keys());
             }),
             (e.prototype.GetCreatorsIgnored = function() {
-              return this.m_rgCreatorsIgnored;
+              return Array.from(this.m_mapCreatorsIgnored.keys());
             }),
-            (e.prototype.BIsFollowingCreator = function(t) {
-              return (
-                0 <=
-                this.m_rgCreatorsFollowed.findIndex(function(e) {
-                  return e == t.GetAccountID();
-                })
-              );
+            (e.prototype.BIsFollowingCreator = function(e) {
+              return this.m_mapCreatorsFollowed.has(e.GetAccountID());
             }),
-            (e.prototype.BIsIgnoringCreator = function(t) {
-              return (
-                0 <=
-                this.m_rgCreatorsIgnored.findIndex(function(e) {
-                  return e == t.GetAccountID();
-                })
-              );
+            (e.prototype.BIsIgnoringCreator = function(e) {
+              return this.m_mapCreatorsIgnored.has(e.GetAccountID());
             }),
             (e.prototype.GetExcludedContentDescriptor = function() {
-              return this.m_excludedContentDescriptors;
+              return Array.from(this.m_mapExcludedContentDescriptors.keys());
             }),
-            (e.prototype.BExcludesTag = function(t) {
-              return (
-                !!t &&
-                Boolean(
-                  this.m_excludedTags.filter(function(e) {
-                    return (
-                      -1 !==
-                      t
-                        .map(function(e) {
-                          return e.tagid;
-                        })
-                        .indexOf(e)
-                    );
-                  }).length
-                )
-              );
+            (e.prototype.BExcludesTag = function(e) {
+              var t = this;
+              return e.some(function(e) {
+                return t.m_mapExcludedTagsIds.has(Number(e.tagid));
+              });
             }),
             (e.prototype.GetExcludedTagsSortedByID = function() {
-              return this.m_excludedTags.slice().sort();
+              return Array.from(this.m_mapExcludedTagsIds.keys()).sort();
             }),
-            (e.prototype.BExcludesContentDescriptor = function(t) {
-              return (
-                !!t &&
-                Boolean(
-                  this.m_excludedContentDescriptors.filter(function(e) {
-                    return -1 !== t.indexOf(e);
-                  }).length
-                )
-              );
-            }),
-            (e.prototype.BIsGameWishlisted = function(t) {
-              return this.m_rgWishList.some(function(e) {
-                return Number(e) === Number(t);
+            (e.prototype.BExcludesContentDescriptor = function(e) {
+              var t = this;
+              return e.some(function(e) {
+                return t.m_mapExcludedContentDescriptors.has(e);
               });
             }),
-            (e.prototype.BIsGameRecommended = function(t) {
-              return this.m_rgRecommendedApps.some(function(e) {
-                return Number(e) === Number(t);
-              });
+            (e.prototype.BIsGameWishlisted = function(e) {
+              return this.m_mapWishList.has(Number(e));
+            }),
+            (e.prototype.BIsGameRecommended = function(e) {
+              return this.m_mapRecommendedApps.has(Number(e));
             }),
             (e.prototype.BIsGameIgnored = function(e) {
-              return this.m_rgIgnoredApps && this.m_rgIgnoredApps.has(e);
+              return this.m_mapIgnoredApps && this.m_mapIgnoredApps.has(e);
             }),
-            (e.prototype.BOwnsApp = function(t) {
-              return this.m_rgOwnedApps.some(function(e) {
-                return e === t;
-              });
+            (e.prototype.BOwnsApp = function(e) {
+              return this.m_mapOwnedApps.has(Number(e));
             }),
-            (e.prototype.BOwnsPackage = function(t) {
-              return this.m_rgOwnedPackages.some(function(e) {
-                return e === t;
-              });
+            (e.prototype.BFollowsApp = function(e) {
+              return this.m_mapFollowedApps.has(Number(e));
+            }),
+            (e.prototype.BOwnsPackage = function(e) {
+              return this.m_mapOwnedPackages.has(Number(e));
             }),
             (e.prototype.HintLoad = function() {
               return Object(l.b)(this, void 0, void 0, function() {
@@ -18673,43 +18737,68 @@
                           Object(p.z)(function() {
                             if (
                               ((r.m_bIsLoaded = !0),
-                              (r.m_rgCreatorsFollowed.length = 0),
-                              (r.m_rgCreatorsIgnored.length = 0),
-                              (r.m_rgWishList.length = 0),
                               a.data.rgCreatorsFollowed &&
-                                a.data.rgCreatorsFollowed.forEach(function(e) {
-                                  return r.m_rgCreatorsFollowed.push(e);
-                                }),
+                                (r.m_mapCreatorsFollowed = new Map(
+                                  a.data.rgCreatorsFollowed.map(function(e) {
+                                    return [Number(e), !0];
+                                  })
+                                )),
                               a.data.rgCreatorsIgnored &&
-                                a.data.rgCreatorsIgnored.forEach(function(e) {
-                                  return r.m_rgCreatorsIgnored.push(e);
-                                }),
+                                (r.m_mapCreatorsIgnored = new Map(
+                                  a.data.rgCreatorsIgnored.map(function(e) {
+                                    return [Number(e), !0];
+                                  })
+                                )),
                               a.data.rgWishlist &&
-                                a.data.rgWishlist.forEach(function(e) {
-                                  return r.m_rgWishList.push(e);
-                                }),
+                                (r.m_mapWishList = new Map(
+                                  a.data.rgWishlist.map(function(e) {
+                                    return [Number(e), !0];
+                                  })
+                                )),
+                              a.data.rgFollowedApps &&
+                                (r.m_mapFollowedApps = new Map(
+                                  a.data.rgFollowedApps.map(function(e) {
+                                    return [Number(e), !0];
+                                  })
+                                )),
                               a.data.rgOwnedApps &&
-                                (r.m_rgOwnedApps = a.data.rgOwnedApps),
+                                (r.m_mapOwnedApps = new Map(
+                                  a.data.rgOwnedApps.map(function(e) {
+                                    return [Number(e), !0];
+                                  })
+                                )),
                               a.data.rgOwnedPackages &&
-                                (r.m_rgOwnedPackages = a.data.rgOwnedPackages),
+                                (r.m_mapOwnedPackages = new Map(
+                                  a.data.rgOwnedPackages.map(function(e) {
+                                    return [Number(e), !0];
+                                  })
+                                )),
                               a.data.rgIgnoredApps)
                             ) {
                               var e = a.data.rgIgnoredApps;
                               for (var t in e)
-                                r.m_rgIgnoredApps.set(Number(t), Number(e[t]));
+                                r.m_mapIgnoredApps.set(Number(t), Number(e[t]));
                             }
                             a.data.rgExcludedTags &&
-                              (r.m_excludedTags = a.data.rgExcludedTags.map(
-                                function(e) {
-                                  return e.tagid;
-                                }
+                              (r.m_mapExcludedTagsIds = new Map(
+                                a.data.rgExcludedTags.map(function(e) {
+                                  return [Number(e.tagid), !0];
+                                })
                               )),
                               a.data.rgExcludedContentDescriptorIDs &&
-                                (r.m_excludedContentDescriptors =
-                                  a.data.rgExcludedContentDescriptorIDs),
+                                (r.m_mapExcludedContentDescriptors = new Map(
+                                  a.data.rgExcludedContentDescriptorIDs.map(
+                                    function(e) {
+                                      return [e, !0];
+                                    }
+                                  )
+                                )),
                               a.data.rgRecommendedApps &&
-                                (r.m_rgRecommendedApps =
-                                  a.data.rgRecommendedApps);
+                                (r.m_mapRecommendedApps = new Map(
+                                  a.data.rgRecommendedApps.map(function(e) {
+                                    return [Number(e), !0];
+                                  })
+                                ));
                           }),
                         [2, this]
                       );
@@ -18728,30 +18817,26 @@
                           d.c.STORE_BASE_URL +
                           "curators/" +
                           (c ? "ajaxfollow/" : "ajaxignore/")),
-                        (n = new FormData()).append(
+                        (n = i.GetAccountID()),
+                        (o = new FormData()).append(
                           "authwgtoken",
                           d.i.authwgtoken
                         ),
-                        n.append("clanid", "" + i.GetAccountID()),
-                        n.append("sessionid", d.c.SESSIONID),
-                        n.append(c ? "follow" : "ignore", s ? "1" : "0"),
-                        [4, u.a.post(t, n, { withCredentials: !0 })]
+                        o.append("clanid", "" + n),
+                        o.append("sessionid", d.c.SESSIONID),
+                        o.append(c ? "follow" : "ignore", s ? "1" : "0"),
+                        [4, u.a.post(t, o, { withCredentials: !0 })]
                       );
                     case 1:
                       return (
-                        (o = e.sent()) &&
-                          200 == o.status &&
+                        (a = e.sent()) &&
+                          200 == a.status &&
                           (this.InvalidateCache(),
-                          (a = c
-                            ? this.m_rgCreatorsFollowed
-                            : this.m_rgCreatorsIgnored),
-                          s
-                            ? a.push(i.GetAccountID())
-                            : 0 <=
-                                (r = a.findIndex(function(e) {
-                                  return e == i.GetAccountID();
-                                })) && a.splice(r, 1)),
-                        [2, o.data]
+                          (r = c
+                            ? this.m_mapCreatorsFollowed
+                            : this.m_mapCreatorsIgnored),
+                          s ? r.set(n, !0) : r.delete(n)),
+                        [2, a.data]
                       );
                   }
                 });
@@ -18793,8 +18878,8 @@
                             Object(p.z)(function() {
                               r.InvalidateCache(),
                                 c
-                                  ? r.m_rgIgnoredApps.set(i, s)
-                                  : r.m_rgIgnoredApps.delete(i);
+                                  ? r.m_mapIgnoredApps.set(i, s)
+                                  : r.m_mapIgnoredApps.delete(i);
                             }),
                           [2, o.data]
                         );
@@ -18811,9 +18896,9 @@
                 })
               );
             }),
-            (e.prototype.UpdateGameWishlist = function(r, i) {
+            (e.prototype.UpdateGameWishlist = function(a, r) {
               return Object(l.b)(this, void 0, void 0, function() {
-                var t, n, o, a;
+                var t, n, o;
                 return Object(l.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
@@ -18821,8 +18906,8 @@
                         (t =
                           d.c.STORE_BASE_URL +
                           "api/" +
-                          (i ? "addtowishlist" : "removefromwishlist")),
-                        (n = new FormData()).append("appid", "" + r),
+                          (r ? "addtowishlist" : "removefromwishlist")),
+                        (n = new FormData()).append("appid", "" + a),
                         n.append("sessionid", d.c.SESSIONID),
                         [4, u.a.post(t, n, { withCredentials: !0 })]
                       );
@@ -18832,12 +18917,9 @@
                           1 == o.data.success ? 1 : 2),
                         1 == o.data.success &&
                           (this.InvalidateCache(),
-                          i
-                            ? this.m_rgWishList.push(r)
-                            : 0 <=
-                                (a = this.m_rgWishList.findIndex(function(e) {
-                                  return e == r;
-                                })) && this.m_rgWishList.splice(a, 1)),
+                          r
+                            ? this.m_mapWishList.set(Number(a), !0)
+                            : this.m_mapWishList.delete(Number(a))),
                         [2, o.data]
                       );
                   }
@@ -18908,7 +18990,7 @@
                       );
                     case 2:
                       return (o = e.sent()).data.success && 1 === o.data.success
-                        ? (this.m_rgOwnedApps.push(r), [3, 4])
+                        ? (this.m_mapOwnedApps.set(Number(r), !0), [3, 4])
                         : [2, o.data.success ? o.data.success : 2];
                     case 3:
                       return (
@@ -18925,6 +19007,40 @@
                 });
               });
             }),
+            (e.prototype.UpdateFollowingApp = function(a, r) {
+              return Object(l.b)(this, void 0, void 0, function() {
+                var t, n, o;
+                return Object(l.e)(this, function(e) {
+                  switch (e.label) {
+                    case 0:
+                      return (
+                        e.trys.push([0, 2, , 3]),
+                        (t = d.c.STORE_BASE_URL + "explore/followgame"),
+                        (n = new FormData()).append("appid", "" + a),
+                        n.append("sessionid", d.c.SESSIONID),
+                        r || n.append("unfollow", "1"),
+                        [4, u.a.post(t, n, { withCredentials: !0 })]
+                      );
+                    case 1:
+                      return ((o = e.sent()), o.data)
+                        ? (this.InvalidateCache(),
+                          r
+                            ? this.m_mapFollowedApps.set(Number(a), !0)
+                            : this.m_mapFollowedApps.delete(Number(a)),
+                          [3, 3])
+                        : [2, 2];
+                    case 2:
+                      return (
+                        e.sent(),
+                        console.log("Follow game request failed"),
+                        [2, 2]
+                      );
+                    case 3:
+                      return [2, 1];
+                  }
+                });
+              });
+            }),
             (e.prototype.InvalidateCache = function() {
               sessionStorage.setItem(
                 i,
@@ -18933,20 +19049,21 @@
                 ).toString()
               );
             }),
-            Object(l.c)([p.x], e.prototype, "m_rgWishList", void 0),
-            Object(l.c)([p.x], e.prototype, "m_rgOwnedPackages", void 0),
-            Object(l.c)([p.x], e.prototype, "m_rgOwnedApps", void 0),
-            Object(l.c)([p.x], e.prototype, "m_excludedTags", void 0),
+            Object(l.c)([p.x], e.prototype, "m_mapWishList", void 0),
+            Object(l.c)([p.x], e.prototype, "m_mapOwnedPackages", void 0),
+            Object(l.c)([p.x], e.prototype, "m_mapOwnedApps", void 0),
+            Object(l.c)([p.x], e.prototype, "m_mapFollowedApps", void 0),
+            Object(l.c)([p.x], e.prototype, "m_mapExcludedTagsIds", void 0),
             Object(l.c)(
               [p.x],
               e.prototype,
-              "m_excludedContentDescriptors",
+              "m_mapExcludedContentDescriptors",
               void 0
             ),
-            Object(l.c)([p.x], e.prototype, "m_rgRecommendedApps", void 0),
-            Object(l.c)([p.x], e.prototype, "m_rgIgnoredApps", void 0),
-            Object(l.c)([p.x], e.prototype, "m_rgCreatorsFollowed", void 0),
-            Object(l.c)([p.x], e.prototype, "m_rgCreatorsIgnored", void 0),
+            Object(l.c)([p.x], e.prototype, "m_mapRecommendedApps", void 0),
+            Object(l.c)([p.x], e.prototype, "m_mapIgnoredApps", void 0),
+            Object(l.c)([p.x], e.prototype, "m_mapCreatorsFollowed", void 0),
+            Object(l.c)([p.x], e.prototype, "m_mapCreatorsIgnored", void 0),
             Object(l.c)([p.h], e.prototype, "UpdateAppIgnore", null),
             e
           );
@@ -19126,6 +19243,9 @@
             }),
             (e.prototype.GetDemoEventInfo = function(e) {
               return this.m_mapAppToDemoInfo.get(e);
+            }),
+            (e.prototype.GetAllDemoInfo = function() {
+              return this.m_mapAppToDemoInfo;
             }),
             (e.prototype.BHasAboutDemo = function(e) {
               var t = this.m_mapAppToDemoInfo.get(e);
@@ -19602,9 +19722,19 @@
           function e() {
             (this.m_mapAppIDToInfo = new Map()),
               (this.m_mapAppIDToDLCs = new Map()),
+              (this.m_mapAppMissings = new Map()),
               (this.m_bLoadedFromConfig = !1);
           }
           return (
+            (e.prototype.GetNumAppLinkLoaded = function() {
+              return this.m_mapAppIDToInfo.size;
+            }),
+            (e.prototype.GetAllAppInfos = function() {
+              return this.m_mapAppIDToInfo;
+            }),
+            (e.prototype.GetMissingAppIDs = function() {
+              return this.m_mapAppMissings;
+            }),
             (e.prototype.LazyInit = function() {
               var e,
                 t = this;
@@ -19659,7 +19789,8 @@
                               ]
                             : [3, 2]);
                     case 1:
-                      e.sent(), (e.label = 2);
+                      e.sent().BIsLoaded() || this.m_mapAppMissings.set(n, !0),
+                        (e.label = 2);
                     case 2:
                       return [2, this.m_mapAppIDToInfo.get(n)];
                   }
@@ -19741,8 +19872,56 @@
                 });
               });
             }),
+            (e.prototype.BatchLoadAppCapsules = function(n) {
+              return Object(s.b)(this, void 0, void 0, function() {
+                var a,
+                  t,
+                  r = this;
+                return Object(s.e)(this, function(e) {
+                  switch (e.label) {
+                    case 0:
+                      n.sort(),
+                        (a = []),
+                        n.forEach(function(e) {
+                          r.m_mapAppIDToInfo.has(e) ||
+                            0 == e ||
+                            r.m_mapAppMissings.has(e) ||
+                            a.push(e);
+                        }),
+                        (t = function() {
+                          var t, n, o;
+                          return Object(s.e)(this, function(e) {
+                            switch (e.label) {
+                              case 0:
+                                return (
+                                  (t = Math.min(20, a.length)),
+                                  (n = a.slice(0, t)),
+                                  (a = a.slice(t)),
+                                  (o = new Array()),
+                                  n.forEach(function(e) {
+                                    o.push(r.EnsureStoreCapsuleInfoLoaded(e));
+                                  }),
+                                  [4, Promise.all(o)]
+                                );
+                              case 1:
+                                return e.sent(), [2];
+                            }
+                          });
+                        }),
+                        (e.label = 1);
+                    case 1:
+                      return 0 < a.length ? [5, t()] : [3, 3];
+                    case 2:
+                      return e.sent(), [3, 1];
+                    case 3:
+                      return [2];
+                  }
+                });
+              });
+            }),
             Object(s.c)([a.x], e.prototype, "m_mapAppIDToInfo", void 0),
             Object(s.c)([a.x], e.prototype, "m_mapAppIDToDLCs", void 0),
+            Object(s.c)([a.x], e.prototype, "m_mapAppMissings", void 0),
             e
           );
         })())();
