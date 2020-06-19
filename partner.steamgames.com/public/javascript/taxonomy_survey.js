@@ -128,7 +128,7 @@ var params = [];
 var doTest = false;
 
 /**
- * The appid of the app you want to pretend that you're tagging. If supplied,
+ * The appid of the app you're tagging. If supplied,
  * the survey will fetch its details, display its title, and scan its store
  * description for tags
  * @type {number}
@@ -207,7 +207,7 @@ var hasDevTagsOnly = false;
 /**
  * Number of tags that are indexed in search
  */
-var maxTags = 15;
+var maxTags = 20;
 
 /**
  * Can we count on query expansion being available?
@@ -230,6 +230,8 @@ var numChoicesPreselected = -1;
 
 var nScroll = 0;
 
+var genreHierarchy;
+
 /**
  * Load parameters from the URL (if there are any) and then start the survey
  * When this is moved to the partner site we will draw this information from the
@@ -249,6 +251,7 @@ function initSurvey(data)
 	devTags = data.devTags;
 	communityTags = data.communityTags;
 	manageBansLink = data.manageBansLink;
+	genreHierarchy = data.genreHierarchy;
 	
 	tagsFromMetaGenres = data.tagsFromMetaGenres;
 	tagsFromStoreCategories = data.tagsFromStoreCategories;
@@ -684,9 +687,11 @@ function onClickOptimizeTags()
 	displayEndPage(true);
 }
 
+var lastProfile = "";
 function updateSortButtons()
 {
 	var tagProfile = getManuallySortedTagListFromHTML();
+	
 	
 	var optDiv = document.getElementsByClassName("nav_button_optimize")[0];
 	var optBtn = optDiv.childNodes[0];
@@ -725,6 +730,14 @@ function updateSortButtons()
 		removeClass(revDiv,"disabled");
 		revBtn.setAttribute("onclick",'onClickRevertTags()');
 	}
+	
+	if(JSON.stringify(tagProfile) != lastProfile)
+	{
+		getSimilarGames(function(data){
+			renderNeighbors(data.data);
+		});
+	}
+	lastProfile = JSON.stringify(tagProfile);
 }
 
 function onClickConfirmApplyTags()
@@ -2122,7 +2135,43 @@ function calculateTagLikelihoodGivenCurrentResponses(candidateTagid)
 			break;
 		}
 	}
+	
 	return totalScore;
+}
+
+function calculateTagGenreParentsGivenCurrentResponses(candidateTagid)
+{
+	var totalScore = 0;
+	var tagids = getTagIdList();
+	if(tagids.length == 0) return 0;
+	
+	var score = 0;
+	for(var i = 0; i < 3; i++)
+	{
+		var genresToParents = genreHierarchy[i].m_rgGenresToParents;
+		
+		if(genresToParents != null)
+		{
+			var parents = genresToParents[candidateTagid];
+			if(parents == null) continue;
+			console.log(getTagName(candidateTagid));
+			console.log(getTagNames(parents));
+			for(var j = 0; j < parents.length; j++)
+			{
+				var key = parents[j];
+				for(var k = 0; k < tagids.length; k++)
+				{
+					var tagid = tagids[k];
+					if(valueIsInArray(tagid, parents))
+					{
+						score += 1;
+					}
+				}
+			}
+		}
+	}
+	
+	return score;
 }
 
 /********************************************
@@ -2192,7 +2241,7 @@ function hilightAssociations(bits, response)
 			var tagid = el.getAttribute("value");
 			var id = el.getAttribute("id");
 			var score = calculateTagLikelihoodGivenCurrentResponses(tagid);
-			bits.push({id:id,count:score});
+			bits.push({id:id,count:score,tagid:tagid});
 			if(score != 0)
 			{
 				allZero = false;
@@ -2207,10 +2256,12 @@ function hilightAssociations(bits, response)
 	{
 		var bit = bits[i];
 		var id = bit.id;
+		var tagid = bit.tagid;
 		var el = document.getElementById(id);
+		
 		if(el != null)
 		{
-			if(i < numHilights)
+			if(i < numHilights || calculateTagGenreParentsGivenCurrentResponses(tagid) > 0)
 			{
 				if(hasClass(el,"lowlighted"))
 				{
@@ -2796,6 +2847,22 @@ function renderEndpage(bForceOptimized=false)
 		<h3 id="question_title" class="question_title">'+title+'</h3>\
 		<div>\
 			<p id="question_text" class="question_text">'+text+'</p>\
+			<div id="neighborhood" class="neighborhood">\
+				<div>\
+				<h3 id="neighborhood_title"/>Similarly Tagged Games</h3>\
+				<img id="neighborhood_hourglass" class="hourglass" src="https://partner.steamgames.com/public/images/hourglass.png"/>\
+				</div>\
+				<div id="neighbor_0" class="neighbor"></div>\
+				<div id="neighbor_1" class="neighbor"></div>\
+				<div id="neighbor_2" class="neighbor"></div>\
+				<div id="neighbor_3" class="neighbor"></div>\
+				<div id="neighbor_4" class="neighbor"></div>\
+				<div id="neighbor_5" class="neighbor"></div>\
+				<div id="neighbor_6" class="neighbor"></div>\
+				<div id="neighbor_7" class="neighbor"></div>\
+				<div id="neighbor_8" class="neighbor"></div>\
+				<div id="neighbor_9" class="neighbor"></div>\
+			</div>\
 			<div class="top_tags">'+topTagsText+'</div>\
 			<div id="choices" class="choices" onscroll="onScroll();">\
 				<ul id="sortable">'+
@@ -2955,6 +3022,17 @@ function getQuestionChoices(q)
 		}
 	}
 	return allChoices;
+}
+
+function renderNeighbors(neighborData)
+{
+	for(var i = 0; i < 8; i++)
+	{
+		var data = neighborData[i];
+		if(data == null) break;
+		var el = document.getElementById("neighbor_"+i);
+		el.innerHTML = "<a href='" + data.url + "' target='_blank'><img src='" + data.image + "' alt='" + data.title + "' title='"+data.title+"' /></a>";
+	}
 }
 
 /**
@@ -3168,6 +3246,59 @@ function getParams()
 		}
 	}
 	return valueMap;
+}
+
+
+
+/**
+ * Get games similar to the current tag choices
+ * @param {DataCallback} callback
+ */
+function getSimilarGames(callback)
+{
+	//Get all the elements in the drag and drop list
+	var tags = getManuallySortedTagListFromHTML();
+	
+	//Apply a nice gradient of weights to the list
+	tags = finalizeTagProfileCounts(tags);
+	
+	var method = "tags";
+	
+	//Formulate the tag application POST request
+	var rgParams = {
+		tags: JSON.stringify(tags),
+		sessionid: g_sessionID,
+		method: method,
+		ignore_appid: appid
+	};
+	
+	showElement("neighborhood_hourglass",true);
+	
+	//Send the request
+	
+	$J.post( 'https://store.steampowered.com/labs/mlttagwizard', rgParams ).done(function ( response )
+		{
+			if ( response.success == 1 )
+			{
+				showElement("neighborhood_hourglass",false);
+				callback(response);
+			}
+			else
+			{
+				callback(null);
+			}
+		}
+	);
+}
+
+function showElement(id, bShow)
+{
+	var el = document.getElementById(id);
+	if(el != null)
+	{
+		if(bShow) el.style.display = "block";
+		else el.style.display = "none";
+	}
 }
 
 /**

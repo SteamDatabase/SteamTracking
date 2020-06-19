@@ -104,8 +104,9 @@ p a {
 
 .survey_content_section .nav_button_previous button{
 	float:left;
-	margin-right:20px;
+	margin-right:10px;
 	position: relative;
+	width:145px;
 }
 
 .survey_content_section .nav_button_optimize button{
@@ -145,6 +146,8 @@ p a {
 .survey_content_section .nav_button_cancel button{
 	float: right;
 	position: absolute;
+	width:145px;
+	margin-right:10px;
 }
 
 .survey_content_section .nav_button_publish button{
@@ -199,8 +202,8 @@ p a {
 }
 
 .survey_content_section	.ui-sortable {
-	-webkit-mask-image: linear-gradient(to bottom, black 400px, rgba(0,0,0,25%)  100%);
-	mask-image: linear-gradient(to bottom, black 400px, rgba(0,0,0,25%)  100%);
+	-webkit-mask-image: linear-gradient(to bottom, black 475px, rgba(0,0,0,25%)  100%);
+	mask-image: linear-gradient(to bottom, black 475px, rgba(0,0,0,25%)  100%);
 }
 
 .survey_content_section .top_tags {
@@ -460,10 +463,6 @@ li.ui-sortable-helper {
 	font-weight:bold;
 }
 
-.survey_content_section .neighborhood {
-	width:400px;
-}
-
 .survey_content_section h3 {
 	font-family: Motiva Sans;
 	font-style: normal;
@@ -474,24 +473,55 @@ li.ui-sortable-helper {
 	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.survey_content_section .bookend_page .neighborhood .hourglass {
+	position: relative;
+	float: right;
+	right: 75px;
+	top: -22px;
+	animation-name: spin;
+	animation-duration: 2000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	transform: rotate(3deg);
+	display:none;
+}
+
+@keyframes spin {
+	from {
+		transform:rotate(0deg);
+	}
+	to {
+		transform:rotate(360deg);
+	}
+}
+
+.survey_content_section .bookend_page .neighborhood {
+	width: 700px;
+	height: 127px;
+	position: absolute;
+	left: 70px;
+	top: 535px;
+}
+
 .survey_content_section .bookend_page .neighborhood h3 {
 	color: #5D9CCA;
 	letter-spacing: normal;
 	font-size: 14px;
 	font-weight: bold;
 	text-transform:uppercase;
-
+	position: relative;
+	left: 5px;
 }
 
 .survey_content_section .neighbor {
-	width:154px;
 	margin:5px;
 	display:inline-block;
+	background-color:white;
 }
 
 .survey_content_section .neighbor img{
-	width:154px;
 	display:inline-block;
+	width:145px;
 }
 
 .survey_content_section .bookend_page{
