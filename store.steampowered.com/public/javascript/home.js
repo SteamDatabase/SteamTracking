@@ -48,7 +48,7 @@ GHomepage = {
 	bLoadedActiveData: false,
 	bInitialRenderComplete: false,
 
-	bAddTopSellersToMainCap: false,
+	bUseNewMainCapZip: false,
 
 	MainCapCluster: null,
 	usabilityTracker: null,
@@ -145,7 +145,7 @@ GHomepage = {
 			GHomepage.bMergeRecommendationsToHighlights = rgParams.bMergeRecommendationsToHighlights || false;
 			GHomepage.bNewRecommendations = rgParams.bNewRecommendations || false;
 			GHomepage.bIsLimitedUser = rgParams.bIsLimitedUser || false;
-			GHomepage.bAddTopSellersToMainCap = rgParams.bAddTopSellersToMainCap || false;
+			GHomepage.bUseNewMainCapZip = rgParams.bUseNewMainCapZip || false;
 
 			if (g_AccountID == 0) {
 				$J('#home_recommended_spotlight_notloggedin').show();
@@ -510,7 +510,40 @@ GHomepage = {
 			return;
 		}
 
-		if ( g_AccountID == 0 )
+		var oMainCapFilterOpts = { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true };
+		var fnPreFilterList = function( list, shuffle ) {
+			if ( shuffle )
+				list = v_shuffle( list.slice() );
+			return GHomepage.FilterItemsForDisplay( list, 'home', 0, 12, oMainCapFilterOpts );
+		};
+
+
+		if ( GHomepage.bUseNewMainCapZip )
+		{
+			var itemPrimary = null;
+
+			var rgFeatured = fnPreFilterList( GHomepage.oDisplayLists.main_cluster, true );
+			if ( rgFeatured.length >= 4 )
+				itemPrimary = rgFeatured.shift(); // set one aside; there are a lot of force-featured items so we'll try to put two up front
+
+			var rgRecommended = GHomepage.rgRecommendedGames;
+			var rgOtherRecs = fnPreFilterList( GHomepage.ZipLists(
+				GHomepage.rgRecentAppsByCreator, true,
+				GHomepage.rgCuratedAppsData.apps, true,
+				GHomepage.rgFriendRecommendations, true
+			) );
+
+			rgDisplayListCombined = GHomepage.ZipLists(
+				rgFeatured, false,
+				fnPreFilterList( GHomepage.oDisplayLists.top_sellers ), true,
+				GHomepage.rgRecommendedGames, true,
+				rgOtherRecs, false
+			);
+
+			if ( itemPrimary )
+				rgDisplayListCombined.unshift( itemPrimary );
+		}
+		else if ( g_AccountID == 0 )
 		{
 			rgDisplayListCombined = GHomepage.ZipLists(
 				GHomepage.oDisplayLists.main_cluster_legacy, true, // legacy
@@ -522,14 +555,6 @@ GHomepage = {
 		}
 		else
 		{
-			/*rgDisplayListCombined = GHomepage.InterleaveLists(
-				GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.main_cluster_legacy, 'home', 0, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false } ),
-				GHomepage.FilterItemsForDisplay( GHomepage.rgFriendRecommendations, 'home', 0, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false } ),
-				GHomepage.FilterItemsForDisplay( GHomepage.rgRecommendedGames, 'home', 0, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false } ),
-				GHomepage.FilterItemsForDisplay( GHomepage.rgCuratedAppsData.apps, 'home', 0, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false } ),
-				GHomepage.FilterItemsForDisplay( GHomepage.oDisplayLists.main_cluster, 'home', 0, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false } )
-			);*/
-			
 			if ( GHomepage.bAutumnSaleMainCap )
 			{
 				rgDisplayListCombined = GHomepage.ZipLists(
@@ -538,12 +563,8 @@ GHomepage = {
 			}
 			else
 			{
-				var rgFeatured = GHomepage.oDisplayLists.main_cluster;
 
-				if ( GHomepage.bAddTopSellersToMainCap )
-				{
-					rgFeatured = GHomepage.MergeLists( GHomepage.oDisplayLists.main_cluster, false, GHomepage.oDisplayLists.top_sellers, true );
-				}
+				var rgFeatured = GHomepage.MergeLists( GHomepage.oDisplayLists.main_cluster, false, GHomepage.oDisplayLists.top_sellers, true );
 
 				rgDisplayListCombined = GHomepage.ZipLists(
 					GHomepage.oDisplayLists.main_cluster_legacy, false, // legacy
@@ -557,7 +578,7 @@ GHomepage = {
 		}
 
 		rgDisplayListCombined = GHomepage.FilterItemsForDisplay(
-			rgDisplayListCombined, 'home', 6, 15, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+			rgDisplayListCombined, 'home', 6, 15, oMainCapFilterOpts
 		);
 
 		var rgMainCaps = rgDisplayListCombined.slice( 0, GHomepage.bAutumnSaleMainCap ? 8 : 12 );
