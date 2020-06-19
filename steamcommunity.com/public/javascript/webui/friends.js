@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5937095";
+var CLSTAMP = "5938223";
 !(function(e) {
   function t(t) {
     for (
@@ -30231,28 +30231,33 @@ var CLSTAMP = "5937095";
     }
     function ko(e, t, n, o) {
       if (!e.rgVideoSources || !e.rgVideoSources.length) return null;
-      !(function(e) {
-        !!Ro(e.sPoster) &&
-          ((!e.rgVideoSources ||
-            !e.rgVideoSources.some(function(e) {
-              return !Ro(e.sURL);
-            })) &&
-            (!e.rgVideoTracks ||
-              e.rgVideoTracks.some(function(e) {
+      var r = (function(e) {
+          return (
+            !!Ro(e.sPoster) &&
+            ((!e.rgVideoSources ||
+              !e.rgVideoSources.some(function(e) {
                 return !Ro(e.sURL);
-              })));
-      })(e);
-      var r = e.rgVideoSources.map(function(e) {
+              })) &&
+              (!e.rgVideoTracks ||
+                !e.rgVideoTracks.some(function(e) {
+                  return !Ro(e.sURL);
+                })))
+          );
+        })(e)
+          ? void 0
+          : "anonymous",
+        a = "?origin=" + Object(A.d)(),
+        s = e.rgVideoSources.map(function(e) {
           return i.createElement("source", {
             key: e.sURL,
-            src: e.sURL,
+            src: e.sURL + a,
             type: e.sFormat
           });
         }),
-        a = e.rgVideoTracks.map(function(e) {
+        c = e.rgVideoTracks.map(function(e) {
           return i.createElement("track", {
             key: e.sURL + e.eLanguage,
-            src: e.sURL,
+            src: e.sURL + a,
             kind: e.sKind,
             default: e.bDefault,
             srcLang: Object(Z.d)(e.eLanguage),
@@ -30261,22 +30266,23 @@ var CLSTAMP = "5937095";
             )
           });
         }),
-        s = t;
+        l = t,
+        p = e.sPoster ? e.sPoster + a : "";
       return i.createElement(
         "video",
         {
           width: "100%",
           height: "auto",
           autoPlay: t,
-          muted: s,
+          muted: l,
           playsInline: !0,
           controls: n,
-          poster: e.sPoster,
+          poster: p,
           loop: o,
-          crossOrigin: "anonymous"
+          crossOrigin: r
         },
-        r,
-        a
+        s,
+        c
       );
     }
     function Bo(e) {
