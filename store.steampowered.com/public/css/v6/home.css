@@ -1547,11 +1547,9 @@ a.recommended_spotlight.wishlist_recommendation .ds_flag.ds_wishlist_flag {
 	font-size: 24px;
 	color: #67c1f5;
 	text-align: center;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAeCAYAAAARgF8NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVQoz2NkYGD4z4AHMDEQAKMKhpACFvuyaXgVMI6mh2GkAACV3gOGBNW82QAAAABJRU5ErkJggg==);
-	background-repeat: repeat-x;
 }
 .home_page_content .more_content_title span {
-	background: #000000;
+
 	padding: 0px 10px;
 }
 .home_page_content .more_content_desc {
@@ -4170,7 +4168,21 @@ body.v6 .discovery_queue_ctn h2 {
 
 
 #content_callout {
-	margin-top: 50px;
+
+	margin-top: 0px;
+	padding-top: 100px;
+
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0.5))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0.3) 0%,rgba(0,0,0,0.5) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */	 
+	background-image: url( '/public/images/v6/home/logo_steam_piston.png' );
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-position-y: 10px;
 }
 
 .home_page_content.takeover_mini .takeover_mini_ctn {
