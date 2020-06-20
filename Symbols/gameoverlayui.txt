@@ -2336,6 +2336,7 @@
  D typeinfo for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  D typeinfo for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
  D typeinfo for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
+ D typeinfo for CMultipleCallResults<CTimedTrialNotification, HTTPRequestCompleted_t>
  D typeinfo for CMusicLibraryPanel
  D typeinfo for CMusicPage_Details_Album
  D typeinfo for CMusicPage_Details_Album::CCallback_OnAlbumCoverLoaded
@@ -3637,6 +3638,7 @@
  D vtable for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  D vtable for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
  D vtable for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
+ D vtable for CMultipleCallResults<CTimedTrialNotification, HTTPRequestCompleted_t>
  D vtable for CMusicLibraryPanel
  D vtable for CMusicPage_Details_Album
  D vtable for CMusicPage_Details_Album::CCallback_OnAlbumCoverLoaded
@@ -4367,6 +4369,7 @@
  R typeinfo name for CMultipleCallResults<COverlayVRState, GameStatsSessionIssued_t>
  R typeinfo name for CMultipleCallResults<COverlay_Details_Achievements, GlobalAchievementPercentagesReady_t>
  R typeinfo name for CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>
+ R typeinfo name for CMultipleCallResults<CTimedTrialNotification, HTTPRequestCompleted_t>
  R typeinfo name for CMusicLibraryPanel
  R typeinfo name for CMusicPage_Details_Album
  R typeinfo name for CMusicPage_Details_Album::CCallback_OnAlbumCoverLoaded
@@ -8088,6 +8091,11 @@
  T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::Run(void*, bool, unsigned long long)
  T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::Validate(CValidator&, char const*)
  T CMultipleCallResults<CSteamAuthedHTML, SupportSystemReportReady_t>::~CMultipleCallResults()
+ T CMultipleCallResults<CTimedTrialNotification, HTTPRequestCompleted_t>::GetCallbackSizeBytes()
+ T CMultipleCallResults<CTimedTrialNotification, HTTPRequestCompleted_t>::Run(void*)
+ T CMultipleCallResults<CTimedTrialNotification, HTTPRequestCompleted_t>::Run(void*, bool, unsigned long long)
+ T CMultipleCallResults<CTimedTrialNotification, HTTPRequestCompleted_t>::Validate(CValidator&, char const*)
+ T CMultipleCallResults<CTimedTrialNotification, HTTPRequestCompleted_t>::~CMultipleCallResults()
  T CMusicHelper::BGetFilenameFromTrackURI(char const*, char*, int)
  T CMusicHelper::GetIndexForDefaultCover(char const*, char const*)
  T CMusicHelper::MillisecondsToString(int)
@@ -9512,6 +9520,7 @@
  T CTimedTrialNotification::GetPanelClassName()
  T CTimedTrialNotification::GetPanelTopClassName() const
  T CTimedTrialNotification::KB_ChainToMap()
+ T CTimedTrialNotification::OnHTTPRequestCompleted(HTTPRequestCompleted_t*, bool)
  T CTimedTrialNotification::~CTimedTrialNotification()
  T CTrackItemPanel::CTrackItemPanel(vgui::Panel*, char const*)
  T CTrackItemPanel::ChainToAnimationMap()
@@ -10528,6 +10537,7 @@
  T GetChatBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
  T GetCommunityBaseURLForUniverse(EUniverse, CUtlString&, ELauncherType)
  T GetCommunityCDNURLForUniverse(EUniverse, CUtlString&)
+ T GetCommunityImagesURLForUniverse(EUniverse)
  T GetFileSHA(char const*, unsigned char (&) [20])
  T GetFileTimestampString(long long)
  T GetGameOverlayUIBasePanel()
@@ -10544,6 +10554,7 @@
  T GetPchTempTextBuffer_Harmful()
  T GetServerBrowserPingRate(int)
  T GetShowFPSCornerOption(int)
+ T GetStoreCDNURLForUniverse(EUniverse, CUtlString&)
  T GetTGADimensions(int, char*, int*, int*)
  T GridMenu::PerformLayout()
  T GridMenu::~GridMenu()

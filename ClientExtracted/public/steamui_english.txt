@@ -233,6 +233,8 @@ This should take less than a minute."
 
 "SteamUI_JoinDialog_ProcessingShaderCache" "Processing Vulkan shaders..."
 
+"SteamUI_JoinDialog_TimedTrial_Error" "Failed to start %game% as limited trial. (Error: %error%)"
+
 "SteamUI_SetCustomImage_Title" "%gamename% - Set Custom Image"
 "SteamUI_SetCustomImage_ChooseImage" "Choose an image to represent %gamename% in Steam's grid view."
 "SteamUI_SetCustomImage_ImagePrescription" "This file should be a JPEG, PNG, or TGA image approximately 460x215 pixels in size."
@@ -4226,11 +4228,12 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_DeviceAuth_Shared_Library_Now_Available" "Hooray, %owner%'s shared games are now available for you to play..."
 
 "Steam_TimedTrial_EndSoon" "Your trial will end soon"
-"Steam_TimedTrial_MinutesLeft" "The game will close in %minutes% minutes"
+"Steam_TimedTrial_CloseSoon" "The game will close in %minutes% minutes"
 "Steam_TimedTrial_Over" "Your trial is over now"
 "Steam_TimedTrial_CloseNow" "The game will close now"
-"Steam_TimedTrial_Title" "Enjoy your trial"
-"Steam_TimedTrial_Info" "You have %minutes% minutes of playtime remaining"
+"Steam_TimedTrial_Enjoy" "Enjoy your trial"
+"Steam_TimedTrial_Minutes" "%minutes% minutes playtime remaining"
+"Steam_TimedTrial_Hours" "%hours% hours and %minutes% minutes playtime remaining"
 
 "steam_inbox_tradeoffer"	"1 pending trade offer"
 "steam_inbox_tradeoffers"	"%count% pending trade offers"

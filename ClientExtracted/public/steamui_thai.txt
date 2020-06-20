@@ -8255,4 +8255,6 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]Steam_Settings_Streaming_P2PScopeEveryone"	"All Devices"
 "SteamUI_JoinDialog_NoName_Title"	"Steam"
 "[english]SteamUI_JoinDialog_NoName_Title"	"Steam"
+"Steam_ClientUpdateSuppressed"	"อัปเดตไคลเอนต์ Steam ได้ถูกปิดการใช้งานตามการสลับบรรทัดคำสั่งหรือไฟล์การกำหนดค่า กรุณาลบการบล็อค รีสตาร์ทไคลเอนต์ และลองใหม่อีกครั้ง"
+"[english]Steam_ClientUpdateSuppressed"	"Steam client updates have been disabled by a command line switch or config file. Please remove the block, restart the client, and try again."
 }

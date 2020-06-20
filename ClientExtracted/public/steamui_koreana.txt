@@ -8188,4 +8188,6 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]Steam_Settings_Streaming_P2PScopeEveryone"	"All Devices"
 "SteamUI_JoinDialog_NoName_Title"	"Steam"
 "[english]SteamUI_JoinDialog_NoName_Title"	"Steam"
+"Steam_ClientUpdateSuppressed"	"Steam 클라이언트 업데이트가 명령줄 스위치 또는 구성 파일에 의해 비활성화되었습니다. 차단을 제거하고 클라이언트를 다시 시작한 후 다시 시도하세요."
+"[english]Steam_ClientUpdateSuppressed"	"Steam client updates have been disabled by a command line switch or config file. Please remove the block, restart the client, and try again."
 }

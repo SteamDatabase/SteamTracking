@@ -14769,4 +14769,10 @@ Com a alavanca similar a mouse, você poderá combinar a configuração padrão 
 "[english]Settings_RemoteClients_P2PScope_Everyone"	"All Devices"
 "StreamingOverlay_FooterButton"	"VER SITUAÇÃO DO REMOTE PLAY"
 "[english]StreamingOverlay_FooterButton"	"VIEW REMOTE PLAY STATUS"
+"Controller_SetMouseDelta_Description"	"Selecione os valores para este comando"
+"[english]Controller_SetMouseDelta_Description"	"Select the vaules for this binding"
+"ControllerConfig_MouseDeltaX"	"Eixo X"
+"[english]ControllerConfig_MouseDeltaX"	"X Axis"
+"ControllerConfig_MouseDeltaY"	"Eixo Y"
+"[english]ControllerConfig_MouseDeltaY"	"Y Axis"
 }

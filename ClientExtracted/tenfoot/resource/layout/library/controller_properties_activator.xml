@@ -193,6 +193,10 @@
 					<Label class="FieldLabel" text="#Library_Details_FieldLabel_StartDelay" />
 					<Slider id="SoftPress_StartDelay" direction="horizontal" />
 				</Panel>
+        <Panel class="FieldWrapper" activators="softpress">
+          <Label class="FieldLabel" text="#Library_Details_FieldLabel_Invert" />
+          <DropDown id="SoftPress_Invert" />
+        </Panel>
         <!-- Chord -->
         <Panel class="FieldWrapper" activators="chord">
           <Label class="FieldLabel" text="#Library_Details_FieldLabel_Toggle" />

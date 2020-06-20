@@ -8260,4 +8260,6 @@ upgrade to Mac OS X version 10.7 or higher."
 "[english]Steam_Settings_Streaming_P2PScopeEveryone"	"All Devices"
 "SteamUI_JoinDialog_NoName_Title"	"Steam"
 "[english]SteamUI_JoinDialog_NoName_Title"	"Steam"
+"Steam_ClientUpdateSuppressed"	"Steam istemcisi güncellemeleri bir komut satırı değiştirmesi veya yapılandırma dosyasıyla devre dışı bırakılmış. Lütfen engeli kaldırın, istemciyi yeniden başlatın ve tekrar deneyin."
+"[english]Steam_ClientUpdateSuppressed"	"Steam client updates have been disabled by a command line switch or config file. Please remove the block, restart the client, and try again."
 }

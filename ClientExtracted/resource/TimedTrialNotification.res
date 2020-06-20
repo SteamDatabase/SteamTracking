@@ -57,5 +57,23 @@
 		"labelText"			"Test"
 		"textAlignment"		"north-west"
 		"wrap"				"1"
+	}
+
+	"GameImage"
+	{
+		"ControlName"		"ImagePanel"
+		"fieldName"		"GameImage"
+		"xpos"		"6"
+		"ypos"		"6"
+		"wide"		"52"
+		"tall"		"52"
+		"AutoResize"		"0"
+		"PinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"0"
+		"paintbackground"		"1"
+		"gradientVertical"		"0"
+		"scaleImage"		"1"
 	}	
 }
