@@ -534,6 +534,7 @@ GHomepage = {
 			) );
 
 			rgDisplayListCombined = GHomepage.ZipLists(
+				GHomepage.oDisplayLists.main_cluster_legacy, true, // legacy
 				rgFeatured, false,
 				fnPreFilterList( GHomepage.oDisplayLists.top_sellers ), true,
 				GHomepage.rgRecommendedGames, true,
@@ -1998,10 +1999,11 @@ GHomepage = {
 			Settings = jQuery.extend({}, Settings, rgAdditionalSettings);
 
 			// Ensure our feature is turned on as an applicable setting
+			var ApplicableSettingsOverride = {};
 			for( var strKey in rgAdditionalSettings )
-				rgAdditionalSettings[strKey] = true;
+				ApplicableSettingsOverride[strKey] = true;
 
-			ApplicableSettings = jQuery.extend({}, ApplicableSettings, rgAdditionalSettings);
+			ApplicableSettings = jQuery.extend( {}, ApplicableSettings, ApplicableSettingsOverride );
 
 		}
 
