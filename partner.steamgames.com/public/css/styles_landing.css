@@ -1012,7 +1012,8 @@ h2.incomplete {
 
 
 .modal {
-	background-color: #333333;
+    background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+    border-top: 1px solid #00ccff;
 	box-shadow: 0 0 10px #000;
 	padding: 8px;
 	color: #b2b2b2;
@@ -1021,14 +1022,23 @@ h2.incomplete {
 	width: 500px;
 	z-index: 1000;
 
-	border-radius: 3px;
 }
 
 	.modal h1, .modal h2 {
-		color: #fff;
-		font-weight: normal;
+        font-weight: 300;
+        font-size: 32px;
+        line-height: 36px;
+        letter-spacing: 2px;
+        color: #ffffff;
+        text-transform: uppercase;
 		margin: 0 0 10px 0;
 	}
+
+    .modal p,
+    .modal li {
+        font-size: 14px;
+        color: #acb2b8;
+    }
 
 	.modal .hr {
 		background-color: #4c4c4c;
