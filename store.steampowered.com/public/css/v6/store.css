@@ -1908,6 +1908,189 @@ a#store_search_link img {
 
 }
 
+.placeHolder_summerSale2020_promotionDetailsBar {
+	background-color:#CE4C0E;
+	width: 100%;
+	height: 103px;
+	z-index: 400;
+
+	position: sticky;
+	top: 0;
+
+	background: #CE4C0E; /* Old browsers */
+	background: -moz-linear-gradient(left, rgb(100, 13, 12) 0%, rgb(208,5,1) 45%, rgb(208,5,1) 55%, rgb(100, 13, 12) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgb(100, 13, 12) 0%,rgb(208,5,1) 45%,rgb(208,5,1) 55%,rgb(100, 13, 12) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgb(100, 13, 12) 0%,rgb(208,5,1) 45%,rgb(208,5,1) 55%,rgb(100, 13, 12) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#640D0C', endColorstr='#640D0C',GradientType=1 ); /* IE6-9 */
+
+	background-image: url(/public/images/v6/events/summersale_2020/coupon_banner.png?v=2);
+	background-repeat-y: no-repeat;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.summerSale2020_contentContainer {
+	max-width: 940px;
+	height: 100%;
+
+	display: flex;
+	flex-direction: row;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	justify-content: center;
+}
+
+.summersale2020_supersavings_title
+{
+	flex: 1;
+	min-width: 225px;
+	font-family: Yellowtail, cursive;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 52px;
+	line-height: 130.2%;
+	color: #FBF6F0;
+	text-shadow: 2px 3px 0px #D35110;
+	padding-top: 10px;
+}
+
+.summersale2020_supersavings_label
+{
+	width: fit-content;
+	min-width: fit-content;
+	font-family: Yellowtail, cursive;
+	word-spacing: .25em;
+	font-size: 15px;
+	padding-top: 22px;
+}
+
+.summersale2020_supersavings_label .highlight
+{
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 130.2%;
+	color: #F8F7F2;
+	text-shadow: 2px 3px 0px #D35110;
+}
+
+.summersale2020_supersavings_label .subtitle
+{
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
+	line-height: 130.2%;
+	color: #F8F7F2;
+	text-shadow: 2px 3px 0px #D35110;
+	text-align: right;
+}
+
+
+.cart_promo_banner_ctn {
+	padding-bottom: 26px;
+}
+
+.cart_promo_banner_position {
+	position: relative;
+	overflow: visible;
+	height: 145px;
+}
+
+.cart_promo_banner {
+	background-repeat:no-repeat;
+	background-position: top left;
+	position: absolute;
+	top: -34px;
+	bottom: -6px;
+	left: 0;
+	height: 189px;
+	width: 947px;
+}
+
+.cart_promo_banner_content {
+	position: relative;
+	padding-left: 4%;
+	padding-right: 4%;
+	max-width: 564px;
+
+	height: 145px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.cart_promo_banner_content .header {
+	font-family: Yellowtail, cursive;	
+	font-style: normal;
+	font-weight: normal;
+	font-size: 34px;
+	line-height: 130.2%;
+	letter-spacing: 0.02em;
+	color: #e35e23;
+	text-shadow: 1px 1px 0px #681A15;
+	align-self: center;
+}
+
+.cart_promo_banner_content .desc {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
+	line-height: 130.2%;
+	letter-spacing: 0.02em;
+	color: #E45A1F;
+	text-shadow: 1px 1px 0px #681A15, 1px 1px 0px #681A15, 1px 1px 0px #681A15;
+	margin-top: 10px;
+	align-self: center;
+}
+
+.cart_promo_banner_content .pointscallout {
+	text-align: right;
+	margin-top: 20px;
+}
+
+.cart_promo_banner_content .promo_detail_link
+{
+	text-decoration: underline;
+	cursor: pointer;
+	color: #cb9b4f;
+}
+
+.cart_promo_banner_content .promo_detail_link:hover
+{
+	color: #f5c551;
+}
+
+.cart_promo_gradient_text {
+	color:	#D5AD6D; /*if no support for background-clip*/
+	background: -webkit-linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	background: linear-gradient(top, #8f6B29, #FDE08D, #DF9F28);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+
+@media screen and ( max-width: 910px )
+{
+	html.responsive .cart_promo_banner_ctn {
+		overflow: hidden;
+	}
+}
+
+.cart_item_cart_discount_header
+{
+	font-family: Yellowtail, cursive;	
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 130.2%;
+	letter-spacing: 0.02em;
+	color: #E35E23;
+	padding-left: 10px;
+}
+
 .sale_page_n_section_block.lunar2019 .promo_item_list .item {
 	overflow: visible;
 }

@@ -219,6 +219,7 @@ div.advanced_controls_toggle_icon.down {
 	overflow: hidden;
 	transition: transform 0.2s;
 	transform: scale(0);
+	width: 100%;
 }
 .reviewed_app.visible {
 	transform: scale(.97);
@@ -297,6 +298,7 @@ div.advanced_controls_toggle_icon.down {
 	background: -webkit-linear-gradient( top, #506c86 5%, #101431 66%);
 	background: linear-gradient( to bottom, #506c86 5%, #101431 66%);
 	border-radius: 3px;
+	margin-left: auto;
 }
 
 .reviewed_app:hover .right_col {

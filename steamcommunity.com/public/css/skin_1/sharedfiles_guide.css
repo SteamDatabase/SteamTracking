@@ -723,7 +723,7 @@ input[type=text].editGuideSubSectionTitleField
 	border-top-left-radius: 0px;
 	border-top-right-radius: 0px;
 	padding: 6px;
-	height: 624px;
+	height: 590px;
 }
 
 .editGuideSubSectionMediaSelections
@@ -743,13 +743,13 @@ input[type=text].editGuideSubSectionTitleField
 	padding-top: 2px;
 	padding-bottom: 2px;
 	background-color: rgba( 255, 255, 255, 0.1);
-	height: 600px;
+	height: 565px;
 	overflow-y: auto;
 }
 
 #PreviewImages
 {
-	height: 540px;
+	height: 510px;
 	margin-bottom: 5px;
 }
 

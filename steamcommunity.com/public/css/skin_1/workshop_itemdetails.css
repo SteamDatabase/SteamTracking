@@ -448,7 +448,6 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 .workshopItemControls {
 	position: relative;
 	padding: 6px 0;
-	line-height: 40px;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -475,20 +474,14 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	color: #ffffff;
 }
 
-.workshopItemControls .vertical_divider_container
+.workshopItemControls .vertical_divider
 {
 	position: relative;
 	display: inline-block;
-	padding-left: 10px;
-}
-
-.workshopItemControls .vertical_divider
-{
-	position: absolute;
-	top: -10px;
-	height: 50px;
-	width: 2px;
-	background: none;
+	margin: 0px 5px 0px 0px;
+	width: 1px;
+	height: 30px;
+	background-color: #252D37;
 }
 
 .workshopItemControls .workshopItemRatings {
@@ -541,6 +534,14 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	margin-left: auto;
 }
 
+#action_wait {
+	height: 30px;
+}
+#action_wait > img {
+	height: 30px;
+}
+
+
 .rateUpCount
 {
 	float: left;
@@ -578,6 +579,7 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 }
 
 .review_award {
+	position: relative;
 	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
 	padding: 0px 2px 0px 2px;
@@ -617,7 +619,6 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	height: 30px;
 	padding: 0px;
 	padding-left: 32px;
-	padding-right: 12px;
 	background-image:url('https://steamcommunity-a.akamaihd.net/public/images/sharedfiles/rate_ico_up_tiled.png?v=1');
 	background-position: 8px 0px;
 	background-repeat: no-repeat;
@@ -750,7 +751,6 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	height: 30px;
 	display: inline-block;
 	line-height: 30px;
-	margin-right: 5px;
 	position: relative;
 }
 
@@ -1684,11 +1684,6 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 		max-width: 640px;
 		margin-left: 8px;
 	}
-
-		.mediaTop .workshopItemControls .vertical_divider_container
-		{
-			visibility: hidden;
-		}
 
 .mediaBody
 {

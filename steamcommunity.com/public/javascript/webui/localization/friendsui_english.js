@@ -109,6 +109,7 @@ LocalizationReady("friendsui", "english", {
   VoiceChatConnecting: "Connecting...",
   VoiceChatConnectingHelp: "Get help with Voice Chat connection issues",
   VoiceChatReconnecting: "Reconnecting...",
+  VoiceChatParterConnecting: "Waiting on %1$s to connect...",
   CopyVoiceChatLogs: "Copy Voice Logs To Clipboard",
   ToggleVoiceConsoleLog: "Toggle Voice Log To Console",
   ToggleLocalMicEcho: "Toggle Local Mic Echo",

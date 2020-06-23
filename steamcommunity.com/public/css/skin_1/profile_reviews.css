@@ -50,6 +50,45 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	color: #8f98a0;
 	border-bottom: 1px solid rgba(226, 230, 234, 0.1);
 	background: rgba(0, 0, 0, 0.1);
+	display: flex;
+}
+
+.review_box .header .review_award_ctn {
+	margin-left: 10px;
+	display: flex;
+}
+.review_box .header .review_award {
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	padding: 5px;
+	margin: 0 2px;
+	cursor: pointer;
+}
+.review_box .header .review_award:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.review_box .header .review_award_icon {
+	width: 20px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+.review_box .header .review_award_count {
+	color: #66c0f4;
+	font-size: 13px;
+	vertical-align: middle;
+	font-weight: bold;
+	padding: 3px;
+}
+.review_box .header .review_award_count.hidden {
+	display: none;
+}
+
+.review_box .reward_btn_icon {
+	vertical-align: middle;
+	height: 16px;
+	margin-right: 2px;
 }
 
 .review_box .leftcol {
@@ -66,6 +105,7 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 .review_box .rightcol {
 	overflow: hidden;
 	position: relative;
+	display: block;
 }
 
 .review_box .vote_header {

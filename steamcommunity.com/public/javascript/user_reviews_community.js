@@ -27,8 +27,17 @@ function RequestCurrentUserRecommendationVotes( recommendationIDs )
 		} );
 }
 
-function UserReviewVoteUp( id )
+function UserReviewVoteUp( bLoggedIn, strLoginURL, id )
 {
+	if ( !bLoggedIn )
+	{
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		dialog.done( function() {
+			top.location.href = strLoginURL;
+		} );
+		return;
+	}
+
 	UserReview_Rate( id, true, 'https://steamcommunity.com',
 		function( rgResults ) {
 			$J( "#RecommendationVoteUpBtn" + id ).addClass( "btn_active" );
@@ -38,8 +47,17 @@ function UserReviewVoteUp( id )
 	);
 }
 
-function UserReviewVoteDown( id )
+function UserReviewVoteDown( bLoggedIn, strLoginURL, id )
 {
+	if ( !bLoggedIn )
+	{
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		dialog.done( function() {
+			top.location.href = strLoginURL;
+		} );
+		return;
+	}
+
 	UserReview_Rate( id, false, 'https://steamcommunity.com',
 		function( rgResults ) {
 			$J( "#RecommendationVoteUpBtn" + id ).removeClass( "btn_active" );
@@ -49,8 +67,17 @@ function UserReviewVoteDown( id )
 	);
 }
 
-function UserReviewVoteTag( id, tagID, elemID )
+function UserReviewVoteTag( bLoggedIn, strLoginURL, id, tagID, elemID )
 {
+	if ( !bLoggedIn )
+	{
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		dialog.done( function() {
+			top.location.href = strLoginURL;
+		} );
+		return;
+	}
+
 	var elem = $J( "#" + elemID );
 	var bRateUp = !elem.hasClass( "btn_active" );
 	UserReview_VoteTag( id, tagID, bRateUp, 'https://steamcommunity.com',

@@ -461,8 +461,17 @@ function RequestCurrentUserRecommendationVotes( recommendationIDs )
 		} );
 }
 
-function UserReviewVoteUp( id )
+function UserReviewVoteUp( bLoggedIn, strLoginURL, id )
 {
+	if ( !bLoggedIn )
+	{
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		dialog.done( function() {
+			top.location.href = strLoginURL;
+		} );
+		return;
+	}
+
 	UserReview_Rate( id, true, 'https://store.steampowered.com/',
 		function( rgResults ) {
 			if ( rgResults.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark a Review as Helpful ... or not');}
@@ -471,8 +480,17 @@ function UserReviewVoteUp( id )
 	);
 }
 
-function UserReviewVoteDown( id )
+function UserReviewVoteDown( bLoggedIn, strLoginURL, id )
 {
+	if ( !bLoggedIn )
+	{
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		dialog.done( function() {
+			top.location.href = strLoginURL;
+		} );
+		return;
+	}
+
 	UserReview_Rate( id, false, 'https://store.steampowered.com/',
 		function( rgResults ) {
 			if ( rgResults.nSaleTaskCompleted ) { NewStickerPackModal( 'Mark a Review as Helpful ... or not');}
@@ -481,8 +499,17 @@ function UserReviewVoteDown( id )
 	);
 }
 
-function UserReviewVoteTag( id, tagID, elemID )
+function UserReviewVoteTag( bLoggedIn, strLoginURL, id, tagID, elemID )
 {
+	if ( !bLoggedIn )
+	{
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		dialog.done( function() {
+			top.location.href = strLoginURL;
+		} );
+		return;
+	}
+
 	var elem = $J( '#' + elemID );
 	var bRateUp = !elem.hasClass( 'btn_active' );
 	UserReview_VoteTag( id, tagID, bRateUp, 'https://store.steampowered.com/',

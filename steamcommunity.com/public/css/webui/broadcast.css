@@ -27,7 +27,8 @@
     font-size: 11px;
     margin-top: 2px; }
   .broadcastwidgets_StoreSaleWidgetContainer_mini_1ROIM .StoreSaleWidgetTitle {
-    font-size: 16px; }
+    font-size: 16px;
+    line-height: 18px; }
   @media screen and (max-width: 620px) {
     .broadcastwidgets_StoreSaleWidgetContainer_mini_1ROIM {
       max-width: unset;
@@ -258,6 +259,15 @@
   border-bottom-right-radius: 3px;
   margin: 0px; }
 
+.broadcast_embeddable_stream_icon_container_3fd82 .broadcast_embeddable_stream_icon_show_on_hover_3QUot {
+  display: none; }
+
+.broadcast_embeddable_stream_icon_container_3fd82:hover .broadcast_embeddable_stream_icon_hide_on_hover_2CYwN {
+  display: none; }
+
+.broadcast_embeddable_stream_icon_container_3fd82:hover .broadcast_embeddable_stream_icon_show_on_hover_3QUot {
+  display: block; }
+
 .broadcast_embeddable_stream_icon_container_3fd82 {
   display: flex;
   flex-direction: row;
@@ -357,6 +367,7 @@
   margin-left: 8px;
   display: flex;
   align-items: center;
+  margin: 6px 0px 6px 8px;
   color: #ffffff; }
 
 .broadcast_embeddable_PopOutVideoCloseButton_3YKUp {

@@ -9,7 +9,7 @@
 
 
 
-var CLSTAMP='5940321';
+var CLSTAMP='5946375';
 body.events_hub.v6 {
   /* stylelint-disable-line selector-class-pattern */
   background-color: #171a21;
@@ -36,6 +36,14 @@ body.events_hub.v6 {
       /* stylelint-disable-line selector-class-pattern */
       margin-left: 48px; }
   body.events_hub.v6 .app_App_2uHYt {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; }
+
+body.rewards {
+  /* stylelint-disable-line selector-class-pattern */ }
+  body.rewards .app_App_2uHYt {
     flex: 1;
     display: flex;
     flex-direction: column;

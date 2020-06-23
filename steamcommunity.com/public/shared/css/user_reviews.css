@@ -115,8 +115,7 @@ select {
 	margin-left: 10px;
 }
 .ratingBar .review_award {
-	height: auto;
-	line-height: initial;
+	position: relative;
 	background-color: rgba( 255, 255, 255, 0.1 );
 	cursor: pointer;
 }
@@ -447,4 +446,8 @@ select {
 	padding: 16px;
 	margin-top: 40px;
 	color: #61686d;
+}
+
+.ico16 {
+	vertical-align: middle;
 }

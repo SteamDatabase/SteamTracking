@@ -156,6 +156,7 @@ LocalizationReady("shared", "english", {
   EventCalendar_FutureEventsHint: "Scroll up to see what's coming next",
   EventCalendar_FutureEventsLink: "See all upcoming",
   EventCalendar_FutureEventsHeader: "Coming soon",
+  EventCalendar_PastEventsLink: "See earlier posts",
   EventCalendar_LiveAndRecentEventsHeader: "Live and recent",
   EventCalendar_LiveNow: "live now",
   EventCalendar_TimeLeft: "ends in %1$s",
@@ -1138,6 +1139,8 @@ LocalizationReady("shared", "english", {
   Sale_ReadDemoBlurb: "Read quick pitch",
   Sale_SeeUpcomingEvents: "See upcoming events",
   Sale_AddToWishlist: "Add to wishlist",
+  Sale_FollowGame: "Follow game",
+  Sale_StopFollowingGame: "Stop following",
   Sale_VisitStorePage: "Visit Store page",
   Sale_Wishlisted: "Wishlisted",
   Sale_RemoveFromWishlist: "Remove From Wishlist",
@@ -1299,11 +1302,26 @@ LocalizationReady("shared", "english", {
   SalePage_Tabs_AllContents: "This tab will show all products",
 
   Sale_BrowserSortOption_TopWishlisted: "Most Wishlisted",
+  Sale_BrowserSortOption_TopWishlisted_ttip:
+    "Games sorted by total wishlist counts",
   Sale_BrowserSortOption_TrendingWishlisted: "Trending Now",
+  Sale_BrowserSortOption_TrendingWishlisted_ttip:
+    "Games sorted by recent wishlist counts",
   Sale_BrowserSortOption_PopularComingSoon: "Launching Soon",
+  Sale_BrowserSortOption_PopularComingSoon_ttip:
+    "Highly-wishlisted games, sorted by release date",
+  Sale_BrowserSortOption_PopularUpcoming: "Popular Upcoming",
+  Sale_BrowserSortOption_PopularUpcoming_ttip:
+    "Highly-wishlisted games, sorted by release date",
   Sale_BrowserSortOption_MostPlayedDemo: "Most Downloaded",
+  Sale_BrowserSortOption_MostPlayedDemo_ttip:
+    "Games sorted by all-time peak user count",
   Sale_BrowserSortOption_DailyActiveUserDemo: "Active Users",
+  Sale_BrowserSortOption_DailyActiveUserDemo_ttip:
+    "Games sorted by daily user count",
   Sale_BrowserSortOption_PlayedNowDemo: "Playing Now",
+  Sale_BrowserSortOption_PlayedNowDemo_ttip:
+    "Games sorted by current online user count",
   SalePage_WatchForDrop_Minutes_Developer:
     "Watch the stream for %1$s minutes and get item drops from the developer when the event is over!",
   SalePage_WatchForDrop_Minutes_CreatorNamed:

@@ -1,4 +1,19 @@
 
+function UserReview_Award( bLoggedIn, loginURL, recommendationID, callbackFunc, selectedAward )
+{
+	if ( bLoggedIn )
+	{
+		fnLoyalty_ShowAwardModal( recommendationID, callbackFunc, undefined, selectedAward );
+	}
+	else
+	{
+		var dialog = ShowConfirmDialog( 'Error', 'You must be logged in to perform that action.', 'Sign in' );
+		dialog.done( function() {
+			top.location.href = loginURL;
+		} );
+	}
+}
+
 function UserReview_Rate( recommendationID, bRateUp, baseURL, callback )
 {
 	$J.post( baseURL + '/userreviews/rate/' + recommendationID,{

@@ -610,7 +610,7 @@ function PresentBackgroundSelectDialog()
 			{
 				g_rgBackgroundData = rgResults.data.profilebackgroundsowned;
 				g_rgBackgroundAppNames = rgResults.data.backgroundappnames;
-				g_rgBackgroundData.unshift( { name: 'Default blank background', is_blank_background: true } );
+				g_rgBackgroundData.unshift( { name: 'Default', is_blank_background: true } );
 
 				RenderProfileBackgroundSelectDialog();
 			}
@@ -687,7 +687,7 @@ function RenderProfileBackgroundSelectDialog()
 		$Row.append( $J('<div/>', {style: 'clear: both;' } ) );
 	}
 
-	Modal = ShowDialog( 'Choose profile background', $Content );
+	Modal = ShowDialog( 'Profile Background', $Content );
 }
 
 function SelectBackground( Modal, Background )

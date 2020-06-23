@@ -1,87 +1,95 @@
 
 body.DefaultTheme {
-	--gradient-right: rgba(109, 38, 44, 0.301); 
+	--gradient-right: rgba(109, 38, 44, 0.301);
 	--gradient-left: rgba(50, 255, 193, 0.103);
 	--gradient-background: rgba(34, 35, 48, 0.93);
-	--gradient-background-right: rgba(109, 38, 44, 0); 
+	--gradient-background-right: rgba(109, 38, 44, 0);
 	--gradient-background-left: rgba(50, 255, 193, 0.103);
 	--color-showcase-header: rgba(43, 45, 68, 0.93);
 	--gradient-showcase-header-left: rgba(115, 173, 184, 0.247);
-	--btn-background:rgba(43, 52, 68, 1); 
+	--btn-background:rgba(43, 52, 68, 1);
 	--btn-background-hover:rgb(68, 78, 100);
 	--btn-outline:rgb(73, 87, 110);
- }
+}
 
- body.CosmicTheme {
-	--gradient-right: rgba(248, 70, 180, 0.301); 
+body.CosmicTheme {
+	--gradient-right: rgba(248, 70, 180, 0.301);
 	--gradient-left: rgba(9, 243, 99, 0.247);
 	--gradient-background: rgba(46, 13, 36, 0.93);
 	--gradient-background-right: rgba(70, 227, 248, 0);
 	--gradient-background-left: rgba(239, 243, 9, 0.13);
 	--color-showcase-header: rgba(57, 24, 61, 0.93);
 	--gradient-showcase-header-left: rgba(20, 60, 68, 0.93);
-	--btn-background:rgb(90, 40, 92); 
+	--btn-background:rgb(90, 40, 92);
 	--btn-background-hover:rgb(112, 51, 114);
 	--btn-outline:rgba(175, 71, 179, 1);
+}
 
- }
-
- body.SummerTheme {
-	--gradient-right: rgba(252, 197, 16, 0.301); 
+body.SummerTheme {
+	--gradient-right: rgba(252, 197, 16, 0.301);
 	--gradient-left: rgba(9, 243, 153, 0.247);
 	--gradient-background: rgba(51, 27, 16, 0.93);
 	--gradient-background-right: rgba(252, 197, 16, 0);
 	--gradient-background-left: rgba(48, 243, 9, 0.13);
 	--color-showcase-header: rgba(70, 53, 31, 0.93);
 	--gradient-showcase-header-left: rgba(33, 78, 76, 0.93);
-	--btn-background:rgb(95, 76, 39); 
+	--btn-background:rgb(95, 76, 39);
 	--btn-background-hover:rgb(122, 103, 50);
 	--btn-outline:rgb(179, 168, 71);
+}
 
- }
-
- body.MidnightTheme {
-	--gradient-right: rgba(51, 54, 253, 0.233); 
+body.MidnightTheme {
+	--gradient-right: rgba(51, 54, 253, 0.233);
 	--gradient-left: rgba(12, 85, 241, 0.37);
 	--gradient-background: rgba(10, 14, 32, 0.93);
 	--gradient-background-right: rgba(51, 54, 253, 0);
 	--gradient-background-left: rgba(12, 85, 241, 0.13);
 	--color-showcase-header: rgba(34, 32, 61, 0.93);
 	--gradient-showcase-header-left: rgba(20, 33, 68, 0.93);
-	--btn-background:rgb(38, 36, 68); 
+	--btn-background:rgb(38, 36, 68);
 	--btn-background-hover:rgb(53, 53, 90);
 	--btn-outline:rgb(71, 82, 179);
+}
 
- }
-
- body.DarkModeTheme {
-	--gradient-right: rgba(49, 49, 49, 0.233); 
+body.DarkModeTheme {
+	--gradient-right: rgba(49, 49, 49, 0.233);
 	--gradient-left: rgba(51, 51, 51, 0.37);
 	--gradient-background: rgba(24, 24, 24, 0.93);
 	--gradient-background-right: rgba(34, 34, 34, 0);
 	--gradient-background-left: rgba(32, 32, 32, 0.13);
 	--color-showcase-header: rgba(0, 0, 0, 0.5);
 	--gradient-showcase-header-left: rgba(0, 0, 0, 0.5);
-	--btn-background:rgba(0, 0, 0, 0.5); 
+	--btn-background:rgba(0, 0, 0, 0.5);
 	--btn-background-hover:rgba(40, 40, 40, 1);
 	--btn-outline:rgb(20, 20, 20);
 
- }
+}
 
- body.SteelTheme {
-	--gradient-right: rgba(70, 106, 128, 0.233); 
+body.SteelTheme {
+	--gradient-right: rgba(70, 106, 128, 0.233);
 	--gradient-left: rgba(86, 120, 134, 0.37);
 	--gradient-background: rgba(41, 46, 51, 0.93);
 	--gradient-background-right: rgba(17, 24, 29, 0);
 	--gradient-background-left: rgba(19, 27, 31, 0);
 	--color-showcase-header: rgba(55, 62, 76, 0.93);
-    --gradient-showcase-header-left: rgba(68, 83, 93, 0.93);
-	--btn-background:rgb(66, 76, 92); 
+	--gradient-showcase-header-left: rgba(68, 83, 93, 0.93);
+	--btn-background:rgb(66, 76, 92);
 	--btn-background-hover:rgb(82, 95, 112);
 	--btn-outline:rgb(104, 119, 143);
+}
 
- }
-
+body.GoldenProfileDebutTheme {
+	--gradient-right: rgba(95, 69, 17, 0.301);
+    --gradient-left: rgba(255, 188, 0, 0.247);
+    --gradient-background: rgb(81, 65, 27, 0.93);
+    --gradient-background-right: rgba(252, 197, 16, 0);
+    --gradient-background-left: rgba(243, 200, 9, 0.13);
+    --color-showcase-header: rgba(139, 113, 55, 0);
+    --gradient-showcase-header-left: rgba(78, 65, 33, 0.93);
+    --btn-background: rgb(114, 88, 32);
+    --btn-background-hover: rgb(122, 103, 50);
+    --btn-outline: rgb(180, 134, 41);
+}
 
 div.profile_page {
 	position: relative;
@@ -606,7 +614,7 @@ body.profile_page.flat_page #footer_spacer {
 .profile_rightcol {
 	background-color: #101214;
 	background-color: rgba( 0, 0, 0, 0.3 );
-	/*box-shadow: 1px 1px 0 #343944;*/
+	backdrop-filter: blur(20px);
 	padding: 10px;
 	border-radius: 0px;
 	width: 268px;
@@ -648,15 +656,16 @@ body.profile_page.flat_page #footer_spacer {
 }
 
 .profile_customization_editlink {
-	float: right;
 	display: none;
-
-	line-height: 30px;
+    line-height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+	
 }
 
 .profile_customization:hover .profile_customization_editlink {
 	display: block;
-	background-color: var(--color-showcase-header);
 	filter: none;
 	padding: 5px;
 }
@@ -1553,7 +1562,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 
 .recent_game {
-	background-color: #101214;
+	backdrop-filter: blur(20px);
 	background-color: rgba( 0, 0, 0, 0.3 );
 	border-radius: 0px;
 	margin-bottom: 21px;
@@ -1618,7 +1627,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .recent_game .game_info_stats, .favoritegame_showcase .game_info_stats {
 	padding: 9px 11px 10px;
-	background-color:  rgba( 90, 90, 90, 0.15);
+	background-color:  var(--gradient-background);
 	border-radius: 3px;
 	/*border-top: 1px solid #48515f;*/
 
@@ -2207,7 +2216,7 @@ body.migrated_profile_page #BG_bottom.maincontent {
 	padding: 6px 10px;
 	line-height: 26px;
 	border-radius: 0px;
-	background-color: #101214;
+	backdrop-filter: blur(20px);
 	background-color: rgba( 0, 0, 0, 0.3 );
 }
 

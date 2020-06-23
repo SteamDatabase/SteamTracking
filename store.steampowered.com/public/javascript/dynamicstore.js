@@ -218,14 +218,24 @@ GDynamicStore = {
 				GDynamicStore.s_nTotalCartDiscount = data.nTotalCartDiscount ? data.nTotalCartDiscount : 0;
 				GDynamicStore.s_rgRecommendedApps = data.rgRecommendedApps || [];
 
+				GDynamicStore.s_nPromotionalDiscount = data.nPromotionalDiscount ? data.nPromotionalDiscount : 0;
+				GDynamicStore.s_nPromotionalDiscountMinCartAmount = data.nPromotionalDiscountMinCartAmount ? data.nPromotionalDiscountMinCartAmount : 0;
+				GDynamicStore.s_nPromotionalDiscountAvailableUseCount = data.nPromotionalDiscountAvailableUseCount ? data.nPromotionalDiscountAvailableUseCount : 0;
+
 			}).always( function() { $J(fnRunOnLoadCallbacks); } );
 		}
 		else
 		{
 			GDynamicStore.s_rgExcludedDescIDs[3] = 3;
 
-			// no data to load, just run the callbacks now
-			$J( fnRunOnLoadCallbacks );
+			var url = 'https://store.steampowered.com/dynamicstore/saledata/';
+
+			$J.get( url ).done( function( data ) {
+				GDynamicStore.s_nPromotionalDiscount = data.nPromotionalDiscount ? data.nPromotionalDiscount : 0;
+				GDynamicStore.s_nPromotionalDiscountMinCartAmount = data.nPromotionalDiscountMinCartAmount ? data.nPromotionalDiscountMinCartAmount : 0;
+				GDynamicStore.s_nPromotionalDiscountAvailableUseCount = data.nPromotionalDiscountAvailableUseCount ? data.nPromotionalDiscountAvailableUseCount : 0;
+
+			}).always( function() { $J(fnRunOnLoadCallbacks); } );
 		}
 	},
 
@@ -493,9 +503,15 @@ GDynamicStore = {
 			UpdatePricesForAdditionalCartDiscount($Selector, GDynamicStore.s_nRemainingCartDiscount);
 		}
 		
+		var bBannerShown = false;
 		if ( GDynamicStore.s_nTotalCartDiscount != 'undefined ')
 		{
-			UpdateStoreBannerForAdditionalCartDiscount( GDynamicStore.s_nTotalCartDiscount );
+			bBannerShown = UpdateStoreBannerForAdditionalCartDiscount( GDynamicStore.s_nTotalCartDiscount );
+		}
+
+		if ( !bBannerShown && GDynamicStore.s_nPromotionalDiscount != 'undefined' )
+		{
+			bBannerShown = UpdateStoreBannerForPromotionalDiscount( GDynamicStore.s_nPromotionalDiscount, GDynamicStore.s_nPromotionalDiscountMinCartAmount, GDynamicStore.s_nPromotionalDiscountAvailableUseCount );
 		}
 
 		var $DynamicElements;
@@ -2392,7 +2408,7 @@ function UpdatePricesForAdditionalCartDiscount( $Selector, nCartDiscount )
 function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 {
 	if ( !nCartDiscount )
-		return;
+		return false;
 
 	var strTemplate = ' \
 	<div class="placeHolder_lunarSale2019_giftActiveBar">	\
@@ -2433,6 +2449,56 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 		$element = $J( $Elements[i] );
 		$element.replaceWith( $J( strTemplate ) );
 	}
+
+	return true;
+}
+
+function UpdateStoreBannerForPromotionalDiscount( nDiscount, nMinCartAmount, nAvailableUseCount )
+{
+	if ( !nDiscount )
+		return false;
+
+	if ( !nAvailableUseCount )
+		return false;
+
+	var strTemplate = ' \
+	<div class="placeHolder_summerSale2020_promotionDetailsBar">	\
+		<div class="summerSale2020_contentContainer"> \
+		<div class="summersale2020_supersavings_title">%title%</div> \
+		<div class="summersale2020_supersavings_label"><div class="highlight">%header%</div><div class="subtitle">%discount%</div></div> \
+		</div> \
+		</div> \
+	</div> \
+	';
+
+
+	var strAmount = GStoreItemData.fnFormatCurrency( nDiscount );
+	if ( strAmount.indexOf( ".00", strAmount.length - 3 ) !== -1 || strAmount.indexOf( ".00", strAmount.length - 3 ) !== -1 )
+	{
+		strAmount = strAmount.substring( 0, strAmount.length - 3 );
+	}
+	
+	var strMinAmount = GStoreItemData.fnFormatCurrency( nMinCartAmount );
+	if ( strMinAmount.indexOf( ".00", strMinAmount.length - 3 ) !== -1 || strMinAmount.indexOf( ".00", strMinAmount.length - 3 ) !== -1 )
+	{
+		strMinAmount = strMinAmount.substring( 0, strMinAmount.length - 3 );
+	}
+
+	var strTitle = 'Road Trip Special';
+	var strHeader = 'Save an additional %amount% on a purchase of %min_amount%'.replace( '%amount%', strAmount ).replace( '%min_amount%', strMinAmount );
+	var strDiscount = 'Discount applied at checkout';
+	strTemplate = strTemplate.replace( '%title%', strTitle );
+	strTemplate = strTemplate.replace( '%header%', strHeader );
+	strTemplate = strTemplate.replace( '%discount%', strDiscount );
+
+	$Elements = $J( '[data-cart-banner-spot]' );
+	for ( var i = 0; i < $Elements.length; i++ )
+	{
+		$element = $J( $Elements[i] );
+		$element.replaceWith( $J( strTemplate ) );
+	}
+
+	return true;
 }
 
 

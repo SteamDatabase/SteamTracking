@@ -24528,7 +24528,7 @@
                 return -1;
               for (
                 var e = this.m_refContent.current.children,
-                  t = Math.ceil(this.m_refScroll.current.scrollTop + 50),
+                  t = Math.ceil(this.m_refScroll.current.scrollTop + 160),
                   n = 0;
                 n < e.length;
                 n++
@@ -24547,7 +24547,8 @@
                 (e < 0 ||
                   e >= n.children.length ||
                   this.m_scrollAnimation ||
-                  ((t = n.children[e].offsetTop - 50), this.ScrollToOffset(t)));
+                  ((t = n.children[e].offsetTop - 160),
+                  this.ScrollToOffset(t)));
             }),
             (e.prototype.ScrollToOffset = function(e) {
               var t,
@@ -24585,7 +24586,7 @@
                 ? this.ScrollToOffset(0)
                 : ((e = this.m_refContent.current) &&
                     ((o = (n = (t = e.children[r]).offsetTop) + t.clientHeight),
-                    (a = Math.ceil(this.m_refScroll.current.scrollTop + 50)),
+                    (a = Math.ceil(this.m_refScroll.current.scrollTop + 160)),
                     n <= (a -= 0.3 * (o - n)) && (i = r)),
                   this.ScrollToEvent(i));
             }),
@@ -24649,13 +24650,13 @@
                   this.m_refScroll.current.clientHeight;
               (!n || o || (0 < t && a)) && e.cancelable && e.preventDefault();
             }),
-            (e.prototype.SetGlobalHeaderVisible = function(e) {
+            (e.prototype.SetGlobalHeaderHidden = function(e) {
               var t = document.getElementsByClassName("responsive_header");
               Object(f.a)(
                 t.length <= 1,
                 "Must have at most one responsive_header"
               ),
-                1 <= t.length && (t[0].style.display = e ? "block" : "none");
+                1 <= t.length && (t[0].style.display = e ? "none" : null);
             }),
             (e.prototype.componentDidMount = function() {
               var e = this.m_refScroll.current;
@@ -24667,7 +24668,7 @@
                   passive: !1
                 }),
                 t.addEventListener("wheel", this.OnWheel, { passive: !1 })),
-                this.SetGlobalHeaderVisible(!1);
+                this.props.showAppHeader && this.SetGlobalHeaderHidden(!0);
             }),
             (e.prototype.componentDidUpdate = function(e, t, n) {
               var o, a;
@@ -24685,7 +24686,7 @@
                 (e.removeEventListener("touchstart", this.OnTouchStart),
                 e.removeEventListener("touchmove", this.OnTouchMove),
                 e.removeEventListener("wheel", this.OnWheel)),
-                this.SetGlobalHeaderVisible(!0);
+                this.props.showAppHeader && this.SetGlobalHeaderHidden(!1);
             }),
             (e.prototype.render = function() {
               for (

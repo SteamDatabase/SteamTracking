@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5938223";
+var CLSTAMP = "5946367";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [2],
   {
@@ -5496,6 +5496,18 @@ var CLSTAMP = "5938223";
             (t.prototype.set_movie_mp4 = function(e) {
               s.Message.setField(this, 11, e);
             }),
+            (t.prototype.movie_webm_small = function() {
+              return s.Message.getField(this, 13);
+            }),
+            (t.prototype.set_movie_webm_small = function(e) {
+              s.Message.setField(this, 13, e);
+            }),
+            (t.prototype.movie_mp4_small = function() {
+              return s.Message.getField(this, 14);
+            }),
+            (t.prototype.set_movie_mp4_small = function(e) {
+              s.Message.setField(this, 14, e);
+            }),
             (t.prototype.equipped_flags = function() {
               return s.Message.getField(this, 12);
             }),
@@ -5518,6 +5530,8 @@ var CLSTAMP = "5938223";
                 item_class: s.Message.getField(t, 9),
                 movie_webm: s.Message.getField(t, 10),
                 movie_mp4: s.Message.getField(t, 11),
+                movie_webm_small: s.Message.getField(t, 13),
+                movie_mp4_small: s.Message.getField(t, 14),
                 equipped_flags: s.Message.getField(t, 12)
               };
               return e && (i.$jspbMessageInstance = t), i;
@@ -5536,6 +5550,8 @@ var CLSTAMP = "5938223";
                 i.set_item_class(e.item_class),
                 i.set_movie_webm(e.movie_webm),
                 i.set_movie_mp4(e.movie_mp4),
+                i.set_movie_webm_small(e.movie_webm_small),
+                i.set_movie_mp4_small(e.movie_mp4_small),
                 i.set_equipped_flags(e.equipped_flags),
                 i
               );
@@ -5581,6 +5597,12 @@ var CLSTAMP = "5938223";
                   case 11:
                     e.set_movie_mp4(t.readString());
                     break;
+                  case 13:
+                    e.set_movie_webm_small(t.readString());
+                    break;
+                  case 14:
+                    e.set_movie_mp4_small(t.readString());
+                    break;
                   case 12:
                     e.set_equipped_flags(t.readUint32());
                     break;
@@ -5618,6 +5640,10 @@ var CLSTAMP = "5938223";
                   t.writeString(10, i),
                 void 0 !== (i = s.Message.getField(e, 11)) &&
                   t.writeString(11, i),
+                void 0 !== (i = s.Message.getField(e, 13)) &&
+                  t.writeString(13, i),
+                void 0 !== (i = s.Message.getField(e, 14)) &&
+                  t.writeString(14, i),
                 void 0 !== (i = s.Message.getField(e, 12)) &&
                   t.writeUint32(12, i);
             }),

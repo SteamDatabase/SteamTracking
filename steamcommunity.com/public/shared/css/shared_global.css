@@ -2480,6 +2480,43 @@ body.v6 #footer_nav .popup_menu .hr{
 	line-height: 14px;
 }
 
+.reaction_award_hover {
+	font-family: "Motiva Sans", sans-serif;
+	width: 150px;
+	background: #DADEE0;
+}
+.community_tooltip.reaction_award_hover,
+.store_tooltip.reaction_award_hover {
+	padding: 0px;
+}
+.reaction_award_hover .reaction_award_icon {
+	background-color: #474C52;
+	border-radius: 3px 3px 0 0;
+	padding-top: 5px;
+	text-align: center;
+}
+.reaction_award_hover .reaction_award_icon > img {
+	height: 100px;
+}
+.reaction_award_hover .reaction_award_info {
+	padding: 10px;
+	text-align: center;
+}
+.reaction_award_hover .reaction_award_name {
+	font-weight: bold;
+	font-size: 12px;
+	color: #0A212E;
+}
+.reaction_award_hover .reaction_award_count {
+	font-size: 10px;
+	color: #0A212E;
+}
+.reaction_award_hover .reaction_award_points {
+	padding-top: 5px;
+	font-size: 10px;
+	color: #737678;
+}
+
 @media screen and (max-width: 910px)
 {
 	html.responsive .newmodal {

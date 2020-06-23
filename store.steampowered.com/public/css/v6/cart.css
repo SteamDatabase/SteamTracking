@@ -1184,15 +1184,10 @@ div.game_hover {
 	flex: 1;
 }
 
-.cart_item_cart_discount_header
+.cart_item_cart_discount_header.summer2020
 {
-    color: #3E8ED6;
-    font-size: 13px;
-	line-height: normal;
-    		font-family: "Motiva Sans", Sans-serif;
-		font-weight: bold; /* bold */
-
-		}
+	padding-right: 15px;
+}
 
 .cart_item_cart_discount_special * .cart_item_cart_discount_header
 {

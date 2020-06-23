@@ -13964,7 +13964,7 @@
                                 openNewWindow: !0,
                                 appInfo: Nt.a.GetAppLinkInfo(t.appid),
                                 onClick: function(e) {
-                                  B.a.Get().RecordEventShown(t, 8),
+                                  B.a.Get().RecordEventRead(t, 8),
                                     Object(ht.a)(t, Se.o(e)),
                                     e.stopPropagation(),
                                     e.preventDefault();
@@ -14275,20 +14275,20 @@
         return (
           e.background_image &&
             (a +=
-              "url(" +
+              ",url(" +
               ne.a.GenerateArtworkURLFromHashAndExtensions(
                 t.clanSteamID,
                 e.background_image
               ) +
-              "),"),
+              ")"),
           {
             background:
-              a +
-              ("linear-gradient(0deg, " +
-                (e.background_gradient_bottom || "transparent") +
-                " 0%, " +
-                (e.background_gradient_top || "transparent")) +
-              " 100%)"
+              "linear-gradient(0deg, " +
+              (e.background_gradient_bottom || "transparent") +
+              " 0%, " +
+              (e.background_gradient_top || "transparent") +
+              " 100%)" +
+              a
           }
         );
       }

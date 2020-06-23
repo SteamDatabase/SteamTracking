@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5938223";
+var CLSTAMP = "5946367";
 !(function(e) {
   function t(t) {
     for (
@@ -455,6 +455,7 @@ var CLSTAMP = "5938223";
         STEAMTV_BASE_URL: "",
         HELP_BASE_URL: "",
         PARTNER_BASE_URL: "",
+        BASE_URL_STORE_CDN_ASSETS: "",
         IN_CLIENT: !1,
         USE_POPUPS: !1,
         IN_MOBILE: !1,
@@ -1984,8 +1985,8 @@ PERFORMANCE OF THIS SOFTWARE.
     window.AssertMsg = u.a;
     var S,
       C,
-      O,
-      E = new c.a();
+      E,
+      O = new c.a();
     function A(e) {
       var t;
       try {
@@ -1995,7 +1996,7 @@ PERFORMANCE OF THIS SOFTWARE.
       var n = new v(t);
       i.render(r.createElement(g, { controller: n }), e);
     }
-    (window.ClientConnectionAPI = E),
+    (window.ClientConnectionAPI = O),
       document.addEventListener("DOMContentLoaded", function() {
         Object(o.c)(),
           (function() {
@@ -2019,18 +2020,18 @@ PERFORMANCE OF THIS SOFTWARE.
       (window.LocalizationReady = function(e, t, n) {
         if ("english" !== t)
           "friendsui" == e ? (S = n) : "shared" == e && (C = n);
-        else if ("shared" == e) O = n;
+        else if ("shared" == e) E = n;
         else {
           var r = void 0,
             i = null,
             o = void 0,
             c = null;
           void 0 !== S ? ((r = S), (i = n)) : (r = n),
-            void 0 !== C ? ((o = C), (c = O)) : (o = O),
+            void 0 !== C ? ((o = C), (c = E)) : (o = E),
             a.c.InitFromObjects(r, i, o, c),
             (S = void 0),
             (C = void 0),
-            (O = void 0);
+            (E = void 0);
         }
       });
   },
