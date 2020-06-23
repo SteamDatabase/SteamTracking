@@ -613,6 +613,7 @@ function InitializeTransaction()
 	var gift_signature = '';
 	var gift_scheduled_send = 0;
 	var bIsGift = false;
+	g_eLastAuthenticationStep = false;
 	
 		$('is_external_finalize_transaction').value = 0;
 	
@@ -5419,7 +5420,6 @@ function PollForTransactionStatus( txnid, retries, timeout )
 			      	   	}
 			      	   	else if ( bNeedsAuthentication )
 			      	   	{
-			      	   		g_eLastAuthenticationStep = false;
 			      	   		DisplayCreditCardAuthentication( result.authenticationdetails, txnid, retries-1 );
 			      	   		return;
 			      	   	}
