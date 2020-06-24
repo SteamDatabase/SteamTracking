@@ -1238,10 +1238,10 @@ function getQText(id)
 {
 	switch(id){
 		case "start_text":
-			return 'The tags associated with your title help users discover it on Steam.<br><br>In this wizard, you will select Steam tags to associate with your title. Then you will prioritize this list. The top fifteen tags will help Steam determine where to surface your game to customers across browse veiws, search results, and recommendations.<br><br>Let\'s begin!<br><br>' + getBanTagsText();
+			return 'The tags associated with your title help users discover it on Steam.<br><br>In this wizard, you will select Steam tags to associate with your title. Then you will prioritize this list. The top twenty tags will help Steam determine where to surface your game to customers across browse veiws, search results, and recommendations.<br><br>Let\'s begin!<br><br>' + getBanTagsText();
 			break;
 		case "end_text":
-			return 'As a last step, please prioritize your tags using Drag & Drop.<BR><BR>\nThe top 15 tags are used to determine where your title is displayed throughout Steam. Tags at the top of your list are weighted most heavily when displaying or recommending your title. <BR><BR>\nWe suggest prioritization which places sub-genres and other tags which are both meaningful and specific near the top. <BR><BR>\nWhen you\'re happy with your work, click Publish. Please note that any unfinished changes will be lost.' 
+			return 'As a last step, please prioritize your tags using Drag & Drop.<BR><BR>\nThe top 20 tags are used to determine where your title is displayed throughout Steam. Tags at the top of your list are weighted most heavily when displaying or recommending your title. <BR><BR>\nWe suggest prioritization which places sub-genres and other tags which are both meaningful and specific near the top. <BR><BR>\nWhen you\'re happy with your work, click Publish. Please note that any unfinished changes will be lost.' 
 			break;
 		case "end_text_devtags":
 			return 
@@ -1261,7 +1261,7 @@ function getQText(id)
 		break;
 		case "q_summary":        return '#App_Taxonomy_Survey_QSummaryText';
 		case "none_defined"    : return 'None defined';       
-		case "top_tags"        : return 'Top 15 Tags, by weight—Drag & Drop to reorder';
+		case "top_tags"        : return 'Top 20 Tags, by weight—Drag & Drop to reorder';
 		break;
 	}
 	return "";
