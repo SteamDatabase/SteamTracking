@@ -735,6 +735,8 @@ function updateSortButtons()
 	{
 		getSimilarGames(function(data){
 			renderNeighbors(data.data);
+			var similarCount = (data.similarCount);
+			showElement("canarypixel", parseInt(similarCount) < 8);
 		});
 	}
 	lastProfile = JSON.stringify(tagProfile);
@@ -2850,6 +2852,7 @@ function renderEndpage(bForceOptimized=false)
 			<div id="neighborhood" class="neighborhood">\
 				<div>\
 				<h3 id="neighborhood_title"/>Similarly Tagged Games</h3>\
+				<div id="canarypixel" class="canarypixel">.</div>\
 				<img id="neighborhood_hourglass" class="hourglass" src="https://partner.steamgames.com/public/images/hourglass.png"/>\
 				</div>\
 				<div id="neighbor_0" class="neighbor"></div>\
@@ -2974,6 +2977,7 @@ function renderQuestion(q)
 		<div>\
 			<p id="question_text" class="question_text">'+text+'</p>\
 			<div id="choices" class="choices" onscroll="onScroll();">'+
+			renderSearch()+
 			choiceHTML+
 			'</div>'+
 			'<div id="summary" class="summary">'+
@@ -3180,6 +3184,17 @@ function renderChoice(i,type,label,value)
 		<input onchange="'+onChange+'" onclick="'+onClick+'" type="'+type+'" class="input_choice" id="input_choice_'+i+'" name="input_choice_'+i+'" value="'+value+'">\
 		<label for="input_choice_'+i+'"><span>'+label+'</span></label>\
 	</div>';
+}
+
+function renderSearch()
+{
+	return "";
+	/*
+	return '\
+	<div id="choice_search" class="choice_search">\
+		<input></input>\
+	</div>';
+	*/
 }
 
 /**

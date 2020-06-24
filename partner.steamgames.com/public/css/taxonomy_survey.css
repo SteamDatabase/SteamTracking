@@ -412,6 +412,13 @@ li.ui-sortable-helper {
 	border: 1px solid rgb(0, 0, 0, 0.5);
 }
 
+.survey_content_section .choice_search input {
+	width: 228px;
+	border-radius: 3px;
+	background-image:url('https://partner.steamgames.com/public/images/magnifyingglass.png');
+	background-repeat: no-repeat;
+}
+
 .survey_content_section .choice label span {
 	text-align:left;
 	cursor:pointer;
@@ -473,10 +480,16 @@ li.ui-sortable-helper {
 	text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.survey_content_section .canarypixel {
+	position: absolute;
+	top: -5px;
+	color: #606060;
+}
+
 .survey_content_section .bookend_page .neighborhood .hourglass {
-	position: relative;
-	right: 18px;
-	top: -18px;
+	position: absolute;
+	left: -18px;
+	top: -3px;
 	animation-name: spin;
 	animation-duration: 2000ms;
 	animation-iteration-count: infinite;
