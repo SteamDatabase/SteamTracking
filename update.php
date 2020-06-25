@@ -315,8 +315,11 @@
 				[
 					'steamcommunity.com/public/javascript/webui/steammessages.js' => 'friends',
 					'steamcommunity.com/public/javascript/applications/community/main.js' => 'community',
+					'steamcommunity.com/public/javascript/applications/community/events~profile.js' => 'community_events_profile',
 					'store.steampowered.com/public/javascript/applications/store/main.js' => 'store',
 					'store.steampowered.com/public/javascript/applications/store/curator_admin.js' => 'curator_admin',
+					'store.steampowered.com/public/javascript/applications/store/loyaltystore.js' => 'loyaltystore',
+					'store.steampowered.com/public/javascript/applications/store/loyaltystore~reviewaward.js' => 'loyaltystore_reviewaward',
 				];
 
 				if( isset( $WebProtobufs[ $OriginalFile ] ) )
