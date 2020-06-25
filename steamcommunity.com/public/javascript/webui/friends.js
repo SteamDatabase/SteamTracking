@@ -2,7 +2,7 @@
 
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5946367";
+var CLSTAMP = "5949994";
 !(function(e) {
   function t(t) {
     for (
@@ -1178,15 +1178,29 @@ var CLSTAMP = "5946367";
             return (
               void 0 === e && (e = !1),
               Object(o.b)(this, void 0, void 0, function() {
-                var e;
-                return Object(o.e)(this, function(t) {
-                  switch (t.label) {
+                var t, n;
+                return Object(o.e)(this, function(o) {
+                  switch (o.label) {
                     case 0:
-                      return [2];
+                      return this.m_bLoadedEquippedProfileItems && !e
+                        ? [2]
+                        : ((this.m_bLoadedEquippedProfileItems = !0),
+                          (t = i.b.Init(v.g))
+                            .Body()
+                            .set_steamid(
+                              this.m_persona.m_steamid.ConvertTo64BitString()
+                            ),
+                          [
+                            4,
+                            v.m.GetProfileItemsEquipped(
+                              C.f.CMInterface.GetServiceTransport(),
+                              t
+                            )
+                          ]);
                     case 1:
                       return (
-                        1 == (e = t.sent()).GetEResult() &&
-                          ((this.m_equippedProfileItems = e.Body().toObject()),
+                        1 == (n = o.sent()).GetEResult() &&
+                          ((this.m_equippedProfileItems = n.Body().toObject()),
                           this.m_persona.is_golden &&
                             ((this.m_equippedProfileItems.avatar_frame
                               .image_small &&
@@ -65055,55 +65069,61 @@ var CLSTAMP = "5946367";
             { className: "ChatUnreadMessageIndicator" },
             v.createElement("div", { className: "chatUnreadCircle" })
           ));
-        var u =
-          l.f.SettingsStore.FriendsSettings.bAnimatedAvatars &&
-          t.persona.is_online;
-        return v.createElement(
-          je,
-          {
-            friend: t,
-            key: t.accountid,
-            className: e.className,
-            context: e.friendRenderContext,
-            bFriendsListEntry: !0,
-            bSingleClickActivate: !0
-          },
+        var u = null,
+          m = null,
+          d =
+            l.f.SettingsStore.FriendsSettings.bAnimatedAvatars &&
+            t.persona.is_online,
+          h = t.GetEquippedProfileItems();
+        return (
+          h && ((u = h.animated_avatar), (m = h.avatar_frame)),
           v.createElement(
-            "div",
-            null,
+            je,
+            {
+              friend: t,
+              key: t.accountid,
+              className: e.className,
+              context: e.friendRenderContext,
+              bFriendsListEntry: !0,
+              bSingleClickActivate: !0
+            },
             v.createElement(
-              E.b,
-              {
-                key: t.persona.GetAccountID() + "_" + t.persona.is_online,
-                loopDuration: u ? "Medium" : "None",
-                persona: t.persona,
-                animatedAvatar: null,
-                avatarFrame: null,
-                size: "Medium"
-              },
-              r,
-              o
-            ),
-            !n &&
+              "div",
+              null,
               v.createElement(
-                "div",
-                { className: "playerNameQuickAccessContainer" },
+                E.b,
+                {
+                  key: t.persona.GetAccountID() + "_" + t.persona.is_online,
+                  loopDuration: d ? "Medium" : "None",
+                  persona: t.persona,
+                  animatedAvatar: u,
+                  avatarFrame: m,
+                  size: "Medium"
+                },
+                r,
+                o
+              ),
+              !n &&
                 v.createElement(
                   "div",
-                  { className: "playerName" },
-                  t.display_name
-                ),
-                t.is_display_name_nickname &&
+                  { className: "playerNameQuickAccessContainer" },
                   v.createElement(
-                    "span",
-                    {
-                      className: "playerNicknameBracket",
-                      title: Object(C.d)("#isNickname")
-                    },
-                    "*"
-                  )
-              ),
-            p
+                    "div",
+                    { className: "playerName" },
+                    t.display_name
+                  ),
+                  t.is_display_name_nickname &&
+                    v.createElement(
+                      "span",
+                      {
+                        className: "playerNicknameBracket",
+                        title: Object(C.d)("#isNickname")
+                      },
+                      "*"
+                    )
+                ),
+              p
+            )
           )
         );
       }),
@@ -67245,19 +67265,23 @@ var CLSTAMP = "5946367";
             var r =
                 e.persona.is_ingame &&
                 1 == l.f.UserStore.PrivacySettings.privacy_state_ownedgames,
-              i = l.f.SettingsStore.FriendsSettings.bAnimatedAvatars,
-              a = v.createElement(
-                "div",
-                { className: "currentUserAvatar" },
-                v.createElement(E.b, {
-                  loopDuration: i ? "Infinite" : "None",
-                  size: "Medium",
-                  persona: e.persona,
-                  animatedAvatar: null,
-                  avatarFrame: null,
-                  onClick: this.ShowCurrentUserProfile
-                })
-              );
+              i = null,
+              a = null,
+              s = l.f.SettingsStore.FriendsSettings.bAnimatedAvatars,
+              p = e.GetEquippedProfileItems();
+            p && ((i = p.animated_avatar), (a = p.avatar_frame));
+            var u = v.createElement(
+              "div",
+              { className: "currentUserAvatar" },
+              v.createElement(E.b, {
+                loopDuration: s ? "Infinite" : "None",
+                size: "Medium",
+                persona: e.persona,
+                animatedAvatar: i,
+                avatarFrame: a,
+                onClick: this.ShowCurrentUserProfile
+              })
+            );
             return v.createElement(
               "div",
               { className: t },
@@ -67313,7 +67337,7 @@ var CLSTAMP = "5946367";
                     context: { chatContext: "friendslist" },
                     onContextMenu: this.OnShowContextMenu
                   },
-                  a
+                  u
                 ),
                 v.createElement(se.a, {
                   className: "labelHolder",
@@ -69278,25 +69302,31 @@ var CLSTAMP = "5946367";
                 this.state.bActive &&
                   (a.className += " Friend_ContextMenuActive");
               var b = l.f.VoiceStore.GetPerUserMuting(e.accountid),
-                y =
+                y = null,
+                S = null,
+                O =
                   l.f.SettingsStore.FriendsSettings.bAnimatedAvatars &&
-                  e.persona.is_online,
-                S = this.props.avatarSize || "Medium",
-                O = v.createElement(
+                  e.persona.is_online;
+              if (e.BLoadedEquippedItems()) {
+                var I = e.GetEquippedProfileItems();
+                I && ((y = I.animated_avatar), (S = I.avatar_frame));
+              }
+              var w = this.props.avatarSize || "Medium",
+                D = v.createElement(
                   E.b,
                   {
                     key: e.persona.GetAccountID() + "_" + e.persona.is_online,
-                    loopDuration: y ? "Medium" : "None",
+                    loopDuration: O ? "Medium" : "None",
                     persona: e.persona,
-                    animatedAvatar: null,
-                    avatarFrame: null,
-                    size: S,
+                    animatedAvatar: y,
+                    avatarFrame: S,
+                    size: w,
                     statusStyle: h
                   },
                   this.props.bInVoiceList && b && v.createElement(k.ob, null)
                 );
               this.props.noActions ||
-                (O = v.createElement(
+                (D = v.createElement(
                   Me,
                   {
                     friend: e,
@@ -69304,24 +69334,24 @@ var CLSTAMP = "5946367";
                     disableContextMenu: this.props.disableContextMenu,
                     onContextMenuShown: this.OnContextMenuShown
                   },
-                  O
+                  D
                 ));
-              var I =
+              var A =
                   this.props.context &&
                   "chatmemberlist" == this.props.context.chatContext,
-                w = "";
-              if (2 == e.efriendrelationship && !I) {
-                var D,
-                  A,
-                  T = l.f.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
+                T = "";
+              if (2 == e.efriendrelationship && !A) {
+                var M,
+                  j,
+                  L = l.f.FriendStore.FriendGroupStore.incoming_invites_group.map_steamid_to_mutual_friends.get(
                     e.steamid64
                   );
-                void 0 === T
+                void 0 === L
                   ? (l.f.FriendStore.FriendGroupStore.EnsureMutualFriendsForIncomingInvites(),
-                    (A = Object(C.d)("#FriendGroup_NoMutualFriends")),
-                    (w = "noMutualFriends"))
-                  : ((A = Object(C.i)("#FriendGroup_YesMutualFriends", T.size)),
-                    (D = T.size)),
+                    (j = Object(C.d)("#FriendGroup_NoMutualFriends")),
+                    (T = "noMutualFriends"))
+                  : ((j = Object(C.i)("#FriendGroup_YesMutualFriends", L.size)),
+                    (M = L.size)),
                   (n = function() {
                     return v.createElement(
                       "span",
@@ -69329,19 +69359,19 @@ var CLSTAMP = "5946367";
                       v.createElement(
                         "span",
                         { className: "mutualFriendNumber" },
-                        D && D + " "
+                        M && M + " "
                       ),
-                      A
+                      j
                     );
                   });
               }
-              var M = null;
+              var G = null;
               e.persona.HasCurrentGameRichPresence()
-                ? (M = function() {
+                ? (G = function() {
                     return e.persona.GetCurrentGameRichPresence();
                   })
                 : e.persona.m_broadcastAccountId &&
-                  (M = function() {
+                  (G = function() {
                     return e.GetBroadcastDescription();
                   }),
                 (i = v.createElement(
@@ -69353,10 +69383,10 @@ var CLSTAMP = "5946367";
                     }),
                   this.props.bInVoiceList && v.createElement(Le, { friend: e }),
                   this.props.listStatusIndicatorLeft,
-                  O,
+                  D,
                   !this.props.bHideStatusInfo &&
                     v.createElement(se.a, {
-                      className: Object(ce.a)("labelHolder", w),
+                      className: Object(ce.a)("labelHolder", T),
                       persona: e.persona,
                       eFriendRelationship: e.efriendrelationship,
                       bIsSelf: l.f.FriendStore.self == e,
@@ -69365,7 +69395,7 @@ var CLSTAMP = "5946367";
                         l.f.SettingsStore.CommunityPreferences
                           .bParenthesizeNicknames,
                       renderStatus: n,
-                      renderRichPresence: M,
+                      renderRichPresence: G,
                       bHideGameName: this.props.bHideGameName,
                       bHideEnhancedRichPresenceLabel: this.props
                         .bHideEnhancedRichPresenceLabel,
@@ -70513,10 +70543,22 @@ var CLSTAMP = "5946367";
                     )));
             } else o = "";
             e = "speakerName " + this.GetChatRoomSpeakerClass(n);
-            var s =
+            var s = "avatar speakerAvatar",
+              c = null,
+              p = null;
+            if (n.BLoadedEquippedItems()) {
+              var m = n.GetEquippedProfileItems();
+              m &&
+                ((c = m.animated_avatar),
+                (p = m.avatar_frame) &&
+                  p.image_small &&
+                  p.image_small.length > 0 &&
+                  (s += " hasAvatarFrame"));
+            }
+            var d =
                 _.f.SettingsStore.FriendsSettings.bAnimatedAvatars &&
                 n.persona.is_online,
-              c = _.f.GetServerRTime32() - this.props.msg.rtTimestamp < 60;
+              h = _.f.GetServerRTime32() - this.props.msg.rtTimestamp < 60;
             return r.createElement(
               H.b,
               {
@@ -70550,11 +70592,11 @@ var CLSTAMP = "5946367";
                       { className: "speakerHoverArea " + o },
                       t,
                       r.createElement(K.b, {
-                        loopDuration: s && c ? "Medium" : "None",
-                        className: "avatar speakerAvatar",
+                        loopDuration: d && h ? "Medium" : "None",
+                        className: s,
                         persona: n.persona,
-                        animatedAvatar: null,
-                        avatarFrame: null,
+                        animatedAvatar: c,
+                        avatarFrame: p,
                         size: "Small"
                       }),
                       r.createElement("div", { className: "speakerStatus" }),
@@ -80549,13 +80591,23 @@ var CLSTAMP = "5946367";
       },
       w = function(e) {
         var t = e.persona,
-          n = (e.community_data,
-          {
+          n = e.community_data,
+          i =
+            n &&
+            n.avatar_frame &&
+            r.createElement("img", {
+              src: n.avatar_frame,
+              className: g.a.Frame
+            }),
+          a = n && n.animated_avatar,
+          s = {
             size: "X-Large",
             statusPosition: "bottom",
             className: g.a.playerAvatar
-          });
-        return r.createElement(d.c, Object(o.a)({ persona: t }, n), !1);
+          };
+        return a
+          ? r.createElement(d.a, Object(o.a)({ strAvatarURL: a }, s), i)
+          : r.createElement(d.c, Object(o.a)({ persona: t }, s), i);
       };
   },
   eeM7: function(e, t, n) {
@@ -97580,7 +97632,10 @@ var CLSTAMP = "5946367";
                     strName: "bSignIntoFriends",
                     strLabel: Object(p.d)("#FriendSettings_SignInToFriends")
                   }),
-                !1
+                i.createElement(e, {
+                  strName: "bAnimatedAvatars",
+                  strLabel: Object(p.d)("#FriendSettings_AnimatedAvatars")
+                })
               )
             );
           }),
