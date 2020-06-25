@@ -700,7 +700,7 @@ body.profile_page.flat_page #footer_spacer {
 	text-overflow: ellipsis;
 }
 
-.myart .profile_customization_header {
+.profile_customization.myart .profile_customization_header {
 	display:none;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
@@ -714,6 +714,11 @@ body.profile_page.flat_page #footer_spacer {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
+}
+
+.profile_customization.myart .profile_customization_editlink
+{
+    display: none;
 }
 
 
@@ -1507,8 +1512,9 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 
 .screenshot_showcase_primary {
 	width: 508px;
-	max-width: 83%;
+	max-width: calc( 83% - 7px );
 	float: left;
+    margin-right: 7px;
 }
 
 .screenshot_showcase_screenshot {
@@ -1536,7 +1542,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 }
 
 .screenshot_showcase_rightcol {
-	float: right;
+	overflow: hidden;
 	max-width: 17%;
 	width: 102px;
 	text-align: center;
