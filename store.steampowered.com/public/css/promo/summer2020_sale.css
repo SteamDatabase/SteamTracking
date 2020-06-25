@@ -655,8 +655,8 @@ body.v6 .sale_capsule {
 
 @media screen and (max-width: 1800px )
 {
-	body.responsive_page .fullscreen-bg__video {
-		width: 77vw;
+	body .responsive_page_frame .fullscreen-bg__video {
+		width: 78vw;
 	}
 }
 
