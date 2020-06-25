@@ -250,6 +250,7 @@ https://steamcommunity.com/public/javascript/apphub_home.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/apphub_workshop.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/events~profile.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/main.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/applications/community/ugcrewards~userreviewrewards.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/auction.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/badges.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/bigpicture/apphub_bigpicture.js?__TIME__&l=english
