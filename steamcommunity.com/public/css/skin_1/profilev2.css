@@ -7,9 +7,9 @@ body.DefaultTheme {
 	--gradient-background-left: rgba(50, 255, 193, 0.103);
 	--color-showcase-header: rgba(43, 45, 68, 0.93);
 	--gradient-showcase-header-left: rgba(115, 173, 184, 0.247);
-	--btn-background:rgba(43, 52, 68, 1);
-	--btn-background-hover:rgb(68, 78, 100);
-	--btn-outline:rgb(73, 87, 110);
+	--btn-background:rgba(43, 52, 68);
+	--btn-background-hover:rgb(53, 62, 78);
+	--btn-outline:rgb(93, 102, 118);
 }
 
 body.CosmicTheme {
@@ -21,8 +21,8 @@ body.CosmicTheme {
 	--color-showcase-header: rgba(57, 24, 61, 0.93);
 	--gradient-showcase-header-left: rgba(20, 60, 68, 0.93);
 	--btn-background:rgb(90, 40, 92);
-	--btn-background-hover:rgb(112, 51, 114);
-	--btn-outline:rgba(175, 71, 179, 1);
+	--btn-background-hover:rgb(100, 50, 102);
+	--btn-outline:rgba(140, 90, 142);
 }
 
 body.SummerTheme {
@@ -34,8 +34,8 @@ body.SummerTheme {
 	--color-showcase-header: rgba(70, 53, 31, 0.93);
 	--gradient-showcase-header-left: rgba(33, 78, 76, 0.93);
 	--btn-background:rgb(95, 76, 39);
-	--btn-background-hover:rgb(122, 103, 50);
-	--btn-outline:rgb(179, 168, 71);
+	--btn-background-hover:rgb(105, 86, 49);
+	--btn-outline:rgb(145, 126, 89);
 }
 
 body.MidnightTheme {
@@ -47,8 +47,8 @@ body.MidnightTheme {
 	--color-showcase-header: rgba(34, 32, 61, 0.93);
 	--gradient-showcase-header-left: rgba(20, 33, 68, 0.93);
 	--btn-background:rgb(38, 36, 68);
-	--btn-background-hover:rgb(53, 53, 90);
-	--btn-outline:rgb(71, 82, 179);
+	--btn-background-hover:rgb(48, 46, 78);
+	--btn-outline:rgb(88, 86, 108);
 }
 
 body.DarkModeTheme {
@@ -74,21 +74,21 @@ body.SteelTheme {
 	--color-showcase-header: rgba(55, 62, 76, 0.93);
 	--gradient-showcase-header-left: rgba(68, 83, 93, 0.93);
 	--btn-background:rgb(66, 76, 92);
-	--btn-background-hover:rgb(82, 95, 112);
-	--btn-outline:rgb(104, 119, 143);
+	--btn-background-hover:rgb(76, 86, 102);
+	--btn-outline:rgb(106, 126, 142);
 }
 
 body.GoldenProfileDebutTheme {
-	--gradient-right: rgba(95, 69, 17, 0.301);
-    --gradient-left: rgba(255, 188, 0, 0.247);
-    --gradient-background: rgb(81, 65, 27, 0.93);
-    --gradient-background-right: rgba(252, 197, 16, 0);
+    --gradient-right: rgba(156, 66, 17, 0.18);
+    --gradient-left: rgba(213, 172, 81, 0.62);
+	--gradient-background: rgba(61, 47, 20, 0.6);
+    --gradient-background-right: rgba(0, 0, 0, 0);
     --gradient-background-left: rgba(243, 200, 9, 0.13);
-    --color-showcase-header: rgba(139, 113, 55, 0);
-    --gradient-showcase-header-left: rgba(78, 65, 33, 0.93);
-    --btn-background: rgb(114, 88, 32);
-    --btn-background-hover: rgb(122, 103, 50);
-    --btn-outline: rgb(180, 134, 41);
+    --color-showcase-header: rgba(95, 72, 33, 0.82);
+    --gradient-showcase-header-left: rgba(155, 122, 54, 0.9);
+    --btn-background: rgb(125, 98, 44);
+    --btn-background-hover: rgb(135, 108, 54);
+    --btn-outline: rgb(175, 148, 94);
 }
 
 div.profile_page {
@@ -477,7 +477,7 @@ body.profile_page.flat_page #footer_spacer {
 
 .btn_profile_action {
 	border-radius: 2px;
-	color: #fff !important;
+	color: lightgray !important;
 	padding: 1px;
 	display: inline-block;
 	text-decoration: none;
@@ -493,15 +493,14 @@ body.profile_page.flat_page #footer_spacer {
 }
 .btn_profile_action:hover, .btn_profile_action.focus {
 	text-decoration: none;
-	/*background-color: var(--btn-background-hover);*/
-	-webkit-transform: scale(1.02);
-	-ms-transform: scale(1.02);
-	transform: scale(1.02);
-	filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.35)) brightness(125%);
+	color: #fff;
+	background-color: var(--btn-background-hover);
+	filter: drop-shadow(1px 5px 10px rgba(0, 0, 0, 0.25));
 
 }
 .btn_profile_action:hover > span, .btn_profile_action.focus > span {
-	/*background-color: var(--btn-background-hover);*/
+	background-color: var(--btn-background-hover);
+	color: #fff;
 }
 .btn_profile_action_disabled {
 	opacity: 0.5;
@@ -646,6 +645,7 @@ body.profile_page.flat_page #footer_spacer {
 	overflow: hidden;
 }
 
+
 .profile_customization_block {
 	position: relative;
 	border-radius: 5px;
@@ -654,6 +654,16 @@ body.profile_page.flat_page #footer_spacer {
 	font-size: 13px;
 	overflow: hidden;
 }
+
+.myart .profile_customization_block {
+	position: relative;
+	border-radius: 5px;
+	padding: 15px 10px 11px 10px;
+	margin-bottom: 0px;
+	font-size: 13px;
+	overflow: hidden;
+}
+
 
 .profile_customization_editlink {
 	display: none;
@@ -675,6 +685,23 @@ body.profile_page.flat_page #footer_spacer {
 }
 
 .profile_customization_header {
+	
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: 200; /* thin */
+
+			background: var(--color-showcase-header);
+	background: linear-gradient(90deg, var(--gradient-showcase-header-left) 0%, var(--color-showcase-header) 90%);
+	padding: 5px 10px 5px 10px;
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 30px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.myart .profile_customization_header {
+	display:none;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: 200; /* thin */
 
@@ -690,6 +717,11 @@ body.profile_page.flat_page #footer_spacer {
 }
 
 
+.customization_edit_instructions_text
+{
+    padding: 5px 10px;
+    line-height: 20px;
+}
 
 .showcase_content_bg {
 	background-color: #101214;

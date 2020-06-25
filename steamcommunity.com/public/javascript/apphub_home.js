@@ -405,6 +405,14 @@ function PublishedFileVoteDown( id )
 	}
 }
 
+function PublishedFileAward( id, fileType, currentSelection )
+{
+	function callbackFunc( id, award )
+	{
+	};
+
+	fnLoyalty_ShowAwardModal( id, callbackFunc, fileType, currentSelection );
+}
 
 function PublishedFileBan( id, appid )
 {

@@ -4658,6 +4658,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 {
 	position: relative;
 	margin-bottom: 16px;
+    margin-top: 16px;
 }
 
 .top_new_releases_banner_click

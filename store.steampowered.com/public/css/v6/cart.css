@@ -369,6 +369,118 @@ a.webmoney_prompt_link:hover .webmoney_prompt_ctn {
 }
 
 
+.checkout_steam_rewards_banner
+{
+	border: 1px solid;
+	border-color: #30538A;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 6px;
+	height: 58px;
+	display: flex;
+	align-items: center;	
+	flex-direction: row;
+	padding-left: 16px;
+	padding-right: 16px;
+	vertical-align: middle;
+	background-image: url( /public/images/v6/cart/steam_rewards_checkout_banner.png );
+	background-image: url( /public/images/v6/cart/steam_rewards_checkout_banner.png ), linear-gradient(90deg, rgba(184, 221, 255, 0.88) 5.38%, rgba(43, 118, 237, 0) 100%);
+}
+
+#checkout_receipt_steam_rewards .checkout_steam_rewards_banner
+{
+	height: 88px;
+}
+
+.checkout_steam_rewards_banner div
+{
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 13px;
+	color: #74A2B8;
+}
+
+.checkout_steam_rewards_banner div div.congratulations
+{
+	background: -webkit-linear-gradient(180deg, rgb(60,141,214), rgb(125,176,215));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-size: 15px;
+	box-shadow: none;
+}
+
+.checkout_steam_rewards_banner:hover {
+	box-shadow: inset 0px 0px 120px rgba(46, 107, 211, 0.5);
+}
+
+.checkout_steam_rewards_banner div div.link
+{	
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-size: 13px;
+}
+
+.checkout_steam_rewards_banner div.left 
+{
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
+	line-height: 130.2%;
+	letter-spacing: 0.02em;
+	color: #bbD2e4;	
+}
+
+.checkout_steam_rewards_banner div.right
+{
+	text-align: right;
+	flex: 1;
+}
+
+.checkout_steam_rewards_banner div.points_with_balance
+{
+}
+
+.checkout_steam_rewards_banner div.points_with_balance div.balance
+{
+}
+
+.checkout_steam_rewards_banner div.right div.logo
+{
+	padding-top: 0px;
+}
+
+.checkout_steam_rewards_banner div.right div.points
+{
+	float: right;
+	padding-left: 5px;
+}
+
+.checkout_steam_rewards_banner .balance
+{
+	color: #76A3D3;
+}
+
+.checkout_steam_rewards_banner .balance span
+{
+	font-weight: bold;
+}
+
+.checkout_steam_rewards_banner div.right div.points div
+{
+	background: -webkit-linear-gradient(180deg, rgb(60,141,214), rgb(125,176,215));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: bold; /* bold */
+
+			font-size: 16px;	
+}
 
 .checkout_pending_purchase_payment_method_notes {
 	padding-top: 20px;
@@ -2607,6 +2719,124 @@ body.checkout .block .block_content {
 	border: none;
 }
 
+.cart_steam_rewards_points_balance_box
+{
+	background: linear-gradient(45.73deg, #2B5190 -10.06%, #2B5190 15.11%, rgba(62, 98, 156, 0) 22.27%, #2B5190 37.18%, rgba(68, 108, 175, 0.03) 71.29%, #2B5190 87.29%, #2B5190 97.3%), #2B5190;
+	border-radius: 2px;	
+}
+
+.cart_rewards_banner_box {
+	background: #1B2838;
+	padding-top: 3px;
+	padding-bottom: 6px;
+}
+
+.cart_rewards_banner_box_content
+{
+	padding: 10px 2.5% 10px 2.5%;
+	padding-top: 10px;
+	background-image: url( /public/images/v6/cart/steam_rewards_banner.png );
+	box-shadow: inset 0px 0px 120px rgba(46, 107, 211, 0.5);
+	border: 1px solid;
+	border-image-slice: 1;
+	border-width: 1px;	
+	border-color: #30538A;
+
+}
+
+.cart_rewards_banner_box_content .rule {
+
+	margin: 5px 0px;
+}
+
+.cart_rewards
+{
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+.cart_rewards_row
+{
+	display: flex;
+	align-items: flex-start;
+	padding-bottom: 15px;
+	padding-top: 15x;	
+}
+
+.cart_rewards_row.disabled
+{
+	color: #758e9d;
+	text-decoration: line-through;
+}
+
+.cart_rewards_row_left_column
+{
+	width: 400px;
+}
+
+.cart_rewards_row_right_column
+{
+	flex: 1;
+	text-align: right;
+}
+
+.cart_rewards_row_header .cart_rewards_row_right_column
+{
+	color: #4B99E1;
+	font-size: 13px;
+}
+
+.cart_rewards_points_balance
+{
+	text-align: right;	
+	padding-top: 5px;
+}
+
+.cart_steam_rewards_points_balance_box
+{
+	background: linear-gradient(51.62deg, #2B5190 -10.06%, #2B5190 15.11%, rgba(62, 98, 156, 0) 22.27%, #2B5190 37.18%, rgba(68, 108, 175, 0.03) 71.29%, #2B5190 87.29%, #2B5190 97.3%), #2B5190;
+	border-radius: 2px;	
+	display: inline-block;
+	padding: 3px 15px 1px 15px;
+	min-width: 60px;
+}
+
+.cart_steam_rewards_points_balance_box div
+{
+	float: right;
+	padding-left: 5px;
+}
+
+.cart_rewards_title
+{
+	display: flex;
+	align-items: flex-start;
+}
+
+.cart_primary_body_copy {
+	font-size: 13px;	
+}
+
+.steam_rewards_title
+{
+	font-size: 18px;
+	font-weight: regular;	
+	text-transform: uppercase;	
+}
+
+.steam_rewards_title span
+{
+	background: -webkit-linear-gradient(0deg, rgb(60,141,214), rgb(125,176,215));
+	font-weight: bold;	
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.steam_rewards_possible_savings
+{
+	flex: 1;
+	text-align: right;	
+}
 
 @media screen and (max-width: 910px)
 {

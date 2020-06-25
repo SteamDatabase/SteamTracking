@@ -426,6 +426,50 @@ function OnRecommendationVotedTag( recommendationid, tagID, bRateUp )
 	}
 }
 
+function OnRecommendationAward( recommendationid, award )
+{
+	for ( var i = 0; i < g_recommendationContents.length; ++i )
+	{
+		var review = $J( "#ReviewContent" + g_recommendationContents[i] + recommendationid );
+		var rewardsCtn = review.find( ".review_award_ctn" );
+		if ( rewardsCtn.length != 0 )
+		{
+			var bFoundExisting = false;
+			var rewards = rewardsCtn.find( ".review_award" );
+			for ( var j = 0; j < rewards.length; ++j )
+			{
+				var reward = $J( rewards[j] );
+				if ( reward.data( "reaction" ) == award )
+				{
+					bFoundExisting = true;
+
+					var count = parseInt( reward.data( "reactioncount" ) );
+					var countElem = reward.find( ".review_award_count" );
+					countElem.text( count + 1 );
+
+					reward.data( "reactioncount", count + 1 );
+					break;
+				}
+			}
+
+			if ( !bFoundExisting )
+			{
+				var reward = $J( "<div>", { class: "review_award" } );
+				var img = $J( "<img>", { class: "review_award_icon tooltip", src: "https://steamstore-a.akamaihd.net/public/images/loyalty/reactions/still/" + award + ".png" } );
+				reward.append( img );
+
+				var countElem = $J( "<span>", { class: "review_award_count", text: "1" } );
+				reward.append( countElem );
+
+				reward.data( "reaction", award );
+				reward.data( "reactioncount", 1 );
+
+				rewardsCtn.append( reward );
+				review.find( ".vote_info" ).show();
+			}
+		}
+	}
+}
 
 function RequestCurrentUserRecommendationVotes( recommendationIDs )
 {

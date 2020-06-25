@@ -1207,8 +1207,6 @@ LocalizationReady("shared", "english", {
   Sale_default_label_13: "Play Anywhere - On your Phone",
   Sale_default_label_14: "Play Anywhere - On your Tablet",
   Sale_default_label_15: "Play Anywhere - On your TV",
-  Sale_default_label_16: "On Your Wishlist",
-  Sale_default_label_17: "Recommended For You",
   Sale_default_label_18: "Coming Soon",
   Sale_default_label_19: "Just Announced",
   Sale_default_label_20: "Just Updated",

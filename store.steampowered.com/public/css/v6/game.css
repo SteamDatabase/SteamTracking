@@ -678,10 +678,10 @@ img.game_header_image_full {
 .game_area_purchase_game.demo_above_purchase {
 	margin-bottom: 50px;
 
-background: -webkit-linear-gradient( 30deg, rgba(217, 245, 173,0.5) 5%,rgba(255,255,255,0.5) 95%);
-	background: linear-gradient( 60deg, rgba(217, 245, 173,0.5) 5%,rgba(255,255,255,0.5) 95%);
-	border-top: 1px solid rgba(255,255,255,0.2);
-	border-left: 1px solid rgba(255,255,255,0.2);
+background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 138, 27, 0.6) 95%);
+	background: linear-gradient( 60deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 138, 27, 0.6) 95%);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+    border-radius: 4px;
 }
 
 .game_area_purchase_game_wrapper.bundle_hidden_by_preferences {

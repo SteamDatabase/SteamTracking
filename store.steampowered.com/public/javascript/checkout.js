@@ -4524,6 +4524,19 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				$('review_subtotal_value').innerHTML = price_data.formattedSubTotal;
 			else
 				$('review_subtotal_value').innerHTML = '';
+			
+			if ( price_data.totalloyaltypoints > 0 )
+			{
+				$('checkout_steam_rewards_banner_to_earn').show();
+				$('checkout_receipt_steam_rewards').show();
+				$('reward_points_to_earn').innerHTML = price_data.formattedTotalLoyaltyPoints;
+				$('reward_points_earned').innerHTML = price_data.formattedTotalLoyaltyPoints;				
+			}
+			else
+			{
+				$('checkout_steam_rewards_banner_to_earn').hide();
+				$('checkout_receipt_steam_rewards').hide();
+			}
 			// deal with promotion elements
 			var promotionNodes = document.getElementsByClassName('cart_total_row_promotion');
 
@@ -4532,7 +4545,8 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				promotionNodes[i].parentNode.removeChild(element);
 			}
 
-			if ( price_data.promotions )
+			
+			if ( price_data.promotions || price_data.nRewardDiscountAmount > 0 )
 			{
 				var oldElements = document.getElementsByClassName('cart_row_promotion');
 
@@ -4542,6 +4556,25 @@ function UpdateReviewPageBillingInfoWithCurrentValues( price_data )
 				}
 
 				var insertNode = $( 'cart_price_summary' );
+				
+				if ( price_data.nRewardDiscountAmount > 0 )
+				{
+					var newElement = document.createElement('div');
+					newElement.className = 'cart_total_row cart_row_promotion';
+					newElement.setAttribute( 'id', 'cart_price_summary_text' );
+					
+					var newPrice = document.createElement('div');
+					newPrice.className = 'price';
+					newPrice.innerHTML = price_data.strRewardDiscountAmount;
+					newElement.appendChild(newPrice);
+					
+					var newDescription = document.createElement('div');
+					newDescription.innerHTML =  'Steam Rewards Discount:';
+					newElement.appendChild( newDescription);
+					insertNode.parentNode.insertBefore( newElement, insertNode.nextSibling );
+					
+					insertNode = newElement;
+				}
 				for ( var i = 0; i < price_data.promotions.length; i++ )
 				{
 					var newElement = document.createElement('div');
@@ -4988,6 +5021,8 @@ function OnPurchaseSuccess( result )
 		$('receipt_total_price').innerHTML = result.purchasereceipt.formattedTotal;
 		$('receipt_confirmation_code').innerHTML = result.purchasereceipt.transactionid;
 		$('receipt_track_img').innerHTML = result.strReceiptPageHTML;
+					
+		$('reward_points_balance').innerHTML = result.purchasereceipt.rewardPointsBalance;
 				if ( result.purchasereceipt.points_earned )
 		{
 			$('lny_tokens').style.display = 'block';

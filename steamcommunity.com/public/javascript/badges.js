@@ -944,6 +944,10 @@ CGameGooExchangeDialog = {
 		});
 	}
 
+	function EquipOnSteamProfile()
+	{
+		top.location.href = g_strProfileURL + "/edit/";
+	}
 
 
 CBoosterCreatorPage = {

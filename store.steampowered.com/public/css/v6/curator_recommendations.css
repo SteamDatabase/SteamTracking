@@ -133,8 +133,8 @@ background: -webkit-linear-gradient( 0deg, rgba(27, 40, 56, 1) 0%,rgba(27, 40, 5
 
 .follow_btn .following span,
 .ignore_btn .following span {
-	border: 1px solid #4e600b;
-	color: #89ad05;
+	border: 1px solid #000000;
+	color: #c7f816;
 }
 .follow_btn .following img,
 .ignore_btn .ignoring img {

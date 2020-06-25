@@ -58,13 +58,22 @@ function TagBlockComparator( TagA, TagB )
 	return ( TagB.flUserScore + TagB.flTagScore ) - ( TagA.flUserScore + TagA.flTagScore );
 }
 
-function GenerateTagBlocks( rgTagData, rgTier1, rgTier2 )
+function BItemNotDisplayedElsewhere( item )
+{
+	return item.appid && GDynamicStore.s_rgDisplayedApps.indexOf( item.appid ) !== -1;
+}
+
+function GenerateTagBlocks( rgTagData, rgTier1Unfiltered, rgTier2Unfiltered )
 {
 	var rgTagBlocks = [];
 	var cTagBlocksToShow = 2;
 	var rgTagDataShown = [];
 
 	var rgTagDataWithItems = rgTagData.filter( function ( TagData ) { return TagData.items && TagData.items.length; } );
+
+	// remove games we've already displayed
+	var rgTier1 = rgTier1Unfiltered.filter( BItemNotDisplayedElsewhere );
+	var rgTier2 = rgTier2Unfiltered.filter( BItemNotDisplayedElsewhere );
 
 	for ( var iTagBlock = 0; iTagBlock < cTagBlocksToShow; iTagBlock++ )
 	{
@@ -183,18 +192,12 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	if ( !g_bIsEncore )
 		HomeSaleFilterHeroes( $J('.hero_parent_ctn') );
 
-	// process tag sections first, pulling in featured items into the tag blocks we display
-	var $TagBlock = $J('#sale_tag_categories');
-	if ( $TagBlock.length )
-	{
-		var rgPersonalizedTagData = GenerateTagBlocks( rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
-	}
 
-	var k_nTier1ItemsMin = 11;
-	var k_nTier1ItemsMax = 11;
+	var k_nTier1ItemsMin = 14;
+	var k_nTier1ItemsMax = 14;
 
-	var k_nTier2ItemsMin = 11;
-	var k_nTier2ItemsMax = 11;
+	var k_nTier2ItemsMin = 14;
+	var k_nTier2ItemsMax = 14;
 
 	if ( rgDisplayLists.steam_award_winners )
 	{
@@ -219,16 +222,6 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 	var $Tier2 = $J('#tier2_target' );
 	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2,$Tier2  ); } );
 
-	if ( $TagBlock.length )
-	{
-		new CScrollOffsetWatcher( $TagBlock, function() {
-			for ( var iTag = 0; iTag < rgPersonalizedTagData.length; iTag++ )
-			{
-				SaleTagBlock( $TagBlock, rgPersonalizedTagData[iTag] );
-			}
-		});
-	}
-
 	var $FranchiseBlock = $J('#franchise_target' );
 	new CScrollOffsetWatcher( $FranchiseBlock, function() {
 		SaleFranchiseBlock( $FranchiseBlock, rgFranchiseData );
@@ -239,6 +232,19 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData )
 		SaleRenderDiscountsArea( rgDisplayLists.under10, rgDisplayLists.sale_deals );
 		$DiscountsArea.css('height', '' );
 	} );
+
+	// process tag sections first, pulling in featured items into the tag blocks we display
+	var $TagBlock = $J('#sale_tag_categories');
+	if ( $TagBlock.length )
+	{
+		new CScrollOffsetWatcher( $TagBlock, function() {
+			var rgPersonalizedTagData = GenerateTagBlocks( rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
+			for ( var iTag = 0; iTag < rgPersonalizedTagData.length; iTag++ )
+			{
+				SaleTagBlock( $TagBlock, rgPersonalizedTagData[iTag] );
+			}
+		});
+	}
 
 	// NOTE: If we are already using home.js, then we don't need this. Found we were doubling up the streams
 	// GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
@@ -469,13 +475,13 @@ function AddMicrotrailersToStaticCaps( $Parent )
 function TagBoxTopDecoration()
 {
 	var imgStr = '<div class="home_category_top_decoration"><img src="https://steamcdn-a.akamaihd.net/store/promo/winter2019/snow_ceiling.png"/></div>';
-	return imgStr;
+	return '';
 }
 
 function SaleTagTexture( suffix )
 {
-	var strStyle = 'background-image: url("https://steamcdn-a.akamaihd.net/store/promo/winter2019/textures/PAPER_TILE_'+suffix+'.png"); background-repeat: repeat;';
-	return strStyle;
+	var strStyle = 'background-image: url("https://steamcdn-a.akamaihd.net/store/promo/summer2020/wave_tile.png"); background-repeat: repeat;';
+	return '';
 }
 
 function SaleTagGradient( colorsIn )
@@ -499,7 +505,8 @@ function SaleTagBackground( colors )
 	var r = Number.parseInt( hex[1] + hex[2], 16 );
 	var g = Number.parseInt( hex[3] + hex[4], 16 );
 	var b = Number.parseInt( hex[5] + hex[6], 16 );
-	return 'background: rgba( ' + r + ', ' + g + ', ' + b + ', 0.3 );';
+	// return 'background: rgba( ' + r + ', ' + g + ', ' + b + ', 0.3 );';
+	return 'background: #102839';
 }
 
 function SaleTagBlock( $Parent, rgPersonalizedTagData )
@@ -592,8 +599,8 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 
 	if ( $FeatureName == "sale_tag_bucket" )
 	    $Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'See More' ) );
-	else
-        $Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'See more in Steam Labs' ) );
+	else if ( $FeatureName == "sale_recommended_by_steam_labs" )
+        $Ctn.append( $J('<a/>', {'class': 'see_more_link', 'href': rgTagData.url } ).text( 'See more via the Interactive Recommender' ) );
 
 	$Parent.append( $Ctn ).css('height','');
 	GDynamicStore.DecorateDynamicItems( $Parent );
