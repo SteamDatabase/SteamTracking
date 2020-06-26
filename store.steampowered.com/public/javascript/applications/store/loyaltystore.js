@@ -8450,6 +8450,10 @@
               var i = { country_code: h.Message.getField(t, 1) };
               return e && (i.$jspbMessageInstance = t), i;
             }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return t.set_country_code(e.country_code), t;
+            }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
                 i = new r();
@@ -8510,6 +8514,19 @@
                 )
               };
               return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_promotions(
+                  (Array.isArray(e.promotions) ? e.promotions : []).map(
+                    function(e) {
+                      return yt.fromObject(e);
+                    }
+                  )
+                ),
+                t
+              );
             }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
@@ -8638,6 +8655,25 @@
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_promotionid(e.promotionid),
+                t.set_promotion_description(e.promotion_description),
+                t.set_minimum_cart_amount(e.minimum_cart_amount),
+                t.set_minimum_cart_amount_for_display(
+                  e.minimum_cart_amount_for_display
+                ),
+                t.set_discount_amount(e.discount_amount),
+                t.set_currency_code(e.currency_code),
+                t.set_available_use_count(e.available_use_count),
+                t.set_promotional_discount_type(e.promotional_discount_type),
+                t.set_loyalty_reward_id(e.loyalty_reward_id),
+                t.set_localized_name_token(e.localized_name_token),
+                t.set_max_use_count(e.max_use_count),
+                t
+              );
+            }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
                 i = new r();
@@ -8736,15 +8772,31 @@
             (r.prototype.set_identity_verification = function(e) {
               h.Message.setField(this, 2, e);
             }),
+            (r.prototype.performed_age_verification = function() {
+              return h.Message.getField(this, 3);
+            }),
+            (r.prototype.set_performed_age_verification = function(e) {
+              h.Message.setField(this, 3, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
                 pwid: h.Message.getField(t, 1),
-                identity_verification: h.Message.getField(t, 2)
+                identity_verification: h.Message.getField(t, 2),
+                performed_age_verification: h.Message.getField(t, 3)
               };
               return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_pwid(e.pwid),
+                t.set_identity_verification(e.identity_verification),
+                t.set_performed_age_verification(e.performed_age_verification),
+                t
+              );
             }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
@@ -8760,6 +8812,9 @@
                   case 2:
                     e.set_identity_verification(t.readUint32());
                     break;
+                  case 3:
+                    e.set_performed_age_verification(t.readBool());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -8774,7 +8829,8 @@
               var i = h.Message.getField(e, 1);
               void 0 !== i && t.writeUint32(1, i),
                 void 0 !== (i = h.Message.getField(e, 2)) &&
-                  t.writeUint32(2, i);
+                  t.writeUint32(2, i),
+                void 0 !== (i = h.Message.getField(e, 3)) && t.writeBool(3, i);
             }),
             (r.prototype.getClassName = function() {
               return "CUserAccount_GetAccountLinkStatus_Response";
@@ -8797,6 +8853,9 @@
             (r.toObject = function(e, t) {
               var i = {};
               return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.fromObject = function(e) {
+              return new r();
             }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
@@ -8872,6 +8931,17 @@
                 valid: h.Message.getField(t, 5)
               };
               return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_invite_token(e.invite_token),
+                t.set_invite_limit(e.invite_limit),
+                t.set_invite_duration(e.invite_duration),
+                t.set_time_created(e.time_created),
+                t.set_valid(e.valid),
+                t
+              );
             }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
@@ -8950,6 +9020,17 @@
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_tokens(
+                  (Array.isArray(e.tokens) ? e.tokens : []).map(function(e) {
+                    return vt.fromObject(e);
+                  })
+                ),
+                t
+              );
+            }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
                 i = new r();
@@ -9022,6 +9103,15 @@
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_valid(e.valid),
+                t.set_steamid(e.steamid),
+                t.set_invite_duration(e.invite_duration),
+                t
+              );
+            }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
                 i = new r();
@@ -9079,6 +9169,9 @@
               var i = {};
               return e && (i.$jspbMessageInstance = t), i;
             }),
+            (r.fromObject = function(e) {
+              return new r();
+            }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
                 i = new r();
@@ -9118,6 +9211,9 @@
               var i = {};
               return e && (i.$jspbMessageInstance = t), i;
             }),
+            (r.fromObject = function(e) {
+              return new r();
+            }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
                 i = new r();
@@ -9156,6 +9252,9 @@
             (r.toObject = function(e, t) {
               var i = {};
               return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.fromObject = function(e) {
+              return new r();
             }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
@@ -9210,6 +9309,20 @@
                 )
               };
               return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_external_accounts(
+                  (Array.isArray(e.external_accounts)
+                    ? e.external_accounts
+                    : []
+                  ).map(function(e) {
+                    return jt.fromObject(e);
+                  })
+                ),
+                t
+              );
             }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
@@ -9309,6 +9422,19 @@
                 is_valid: h.Message.getField(t, 7)
               };
               return e && (i.$jspbMessageInstance = t), i;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_external_type(e.external_type),
+                t.set_external_id(e.external_id),
+                t.set_external_user_name(e.external_user_name),
+                t.set_external_url(e.external_url),
+                t.set_access_token(e.access_token),
+                t.set_access_token_secret(e.access_token_secret),
+                t.set_is_valid(e.is_valid),
+                t
+              );
             }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
@@ -9414,6 +9540,16 @@
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_steamid(e.steamid),
+                t.set_client_token(e.client_token),
+                t.set_expiry(e.expiry),
+                t.set_deviceid(e.deviceid),
+                t
+              );
+            }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
                 i = new r();
@@ -9492,6 +9628,12 @@
                   token: (i = t.token(!1)) && St.toObject(e, i)
                 };
               return e && (r.$jspbMessageInstance = t), r;
+            }),
+            (r.fromObject = function(e) {
+              var t = new r();
+              return (
+                t.set_result(e.result), t.set_token(St.fromObject(e.token)), t
+              );
             }),
             (r.deserializeBinary = function(e) {
               var t = new h.BinaryReader(e),
@@ -16975,7 +17117,12 @@
               t,
               E.createElement("div", null, s),
               e.children,
-              c
+              c,
+              E.createElement(
+                "div",
+                { className: zr.Small },
+                Object(k.d)("#Redeem_RefundWarning")
+              )
             )
           );
         },
@@ -17786,7 +17933,7 @@
                     I.a.createElement(
                       "div",
                       { className: qa.SummerSubHeader },
-                      Object(k.d)("#SummerSale_FreeDesc")
+                      Object(k.d)("#SummerSale_FreeDesc_2")
                     ),
                     !c &&
                       I.a.createElement(
@@ -21196,6 +21343,7 @@
         Bold: "redeempointsmodal_Bold_3-Dc-",
         Opacity: "redeempointsmodal_Opacity_2eif5",
         NeedAppOwnership: "redeempointsmodal_NeedAppOwnership_35ATU",
+        Small: "redeempointsmodal_Small_9eRgY",
         CurrentlyEquippedAvatarAndFrame:
           "redeempointsmodal_CurrentlyEquippedAvatarAndFrame_1n654",
         CurrentlyEquippedAvatarAndFrameDesc:

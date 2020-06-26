@@ -64,7 +64,7 @@ GDynamicStore = {
 
 	s_ImpressionTracker: false,
 
-	Init: function( accountid, bForceRefresh, strOS, preferences )
+	Init: function( accountid, bForceRefresh, strOS, preferences, strCC )
 	{
 
 		var rgDesiredOSTypes = strOS ? strOS.split(',') : 'any';
@@ -157,7 +157,7 @@ GDynamicStore = {
 			if ( bForceRefresh )
 				GDynamicStore.InvalidateCache();
 
-			var url = 'https://store.steampowered.com/dynamicstore/userdata/?id=' + accountid;
+			var url = 'https://store.steampowered.com/dynamicstore/userdata/?id=' + accountid + '&cc=' + strCC;
 
 			var unUserdataVersion = WebStorage.GetLocal( 'unUserdataVersion', true );
 			if ( unUserdataVersion )
@@ -228,7 +228,7 @@ GDynamicStore = {
 		{
 			GDynamicStore.s_rgExcludedDescIDs[3] = 3;
 
-			var url = 'https://store.steampowered.com/dynamicstore/saledata/';
+			var url = 'https://store.steampowered.com/dynamicstore/saledata/?cc=' + strCC;
 
 			$J.get( url ).done( function( data ) {
 				GDynamicStore.s_nPromotionalDiscount = data.nPromotionalDiscount ? data.nPromotionalDiscount : 0;
