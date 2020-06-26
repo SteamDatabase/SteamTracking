@@ -1494,7 +1494,7 @@ LocalizationReady("shared", "english", {
     "Please confirm you would like to use %1$s to give this item the %2$s award.",
   GrantAward_Confirm_Details:
     "The award will show up immediately and the recipient will receive %1$s bonus points after %2$s",
-  GrantAward_Confirm_DetailsTimePeriod: "30 days.",
+  GrantAward_Confirm_DetailsTimePeriod: "14 days.",
   GrantAward_Success: "The award has successfully been granted.",
   GrantAwardError_Busy:
     "Our servers are busy right now.  Please try again later.",

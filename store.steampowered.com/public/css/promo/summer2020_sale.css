@@ -126,8 +126,7 @@ body.v6.summer2020_sale_home .home_ctn.discovery_queue_ctn, body.v6.summer2020_s
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.home_sticker_ctn {
-	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2020/sticker_banner.png?v=2') no-repeat center top;
+.summer_banner_ctn {
 	background-size: cover;
 	display: flex;
 	box-shadow: 0 0 10px rgba(0,0,0,1);
@@ -139,6 +138,25 @@ body.v6.summer2020_sale_home .home_ctn.discovery_queue_ctn, body.v6.summer2020_s
 
 		}
 
+
+.home_sticker_ctn {
+	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2020/sticker_banner.png?v=2') no-repeat center top;
+
+}
+
+.home_giftcard_ctn img {
+	max-width: 400px;
+	position: absolute;
+	right: 0;
+	top: -10px;
+}
+
+.home_giftcard_ctn {
+	background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2020/coupon_bg_games.png?v=2') no-repeat center top;
+	overflow: hidden;
+	min-height: 200px;
+	position: relative;
+}
 
 .home_sticker_col {
 	display: flex;
@@ -166,7 +184,7 @@ body.v6.summer2020_sale_home .home_ctn.discovery_queue_ctn, body.v6.summer2020_s
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.home_sticker_ctn:hover {
+.summer_banner_ctn:hover {
 	box-shadow: 0 0 10px #66c0f4;
 }
 
@@ -856,8 +874,11 @@ body.v6 .sale_capsule {
 	}
 
 	html.responsive .home_sticker_ctn {
-		justify-content: center;
 		background: url('https://steamcdn-a.akamaihd.net/store/promo/summer2020/sticker_banner_mobile.png?v=1') no-repeat center top;
+	}
+
+	html.responsive .summer_banner_ctn {
+		justify-content: center;
 	}
 
 	html.responsive .home_sticker_desc {
@@ -866,6 +887,11 @@ body.v6 .sale_capsule {
 
 				margin-top: 10px;
 		font-size: 20px;
+	}
+
+	html.responsive .home_giftcard_ctn img {
+		position: initial;
+		max-width: 200px;
 	}
 
 	html.responsive .home_sticker_ctn img {

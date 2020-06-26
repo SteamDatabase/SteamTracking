@@ -2462,7 +2462,7 @@ function UpdateStoreBannerForPromotionalDiscount( nDiscount, nMinCartAmount, nAv
 		return false;
 
 	var strTemplate = ' \
-	<div class="placeHolder_summerSale2020_promotionDetailsBar">	\
+	<div id="promo_header_banner" class="placeHolder_summerSale2020_promotionDetailsBar" style="display:none;">	\
 		<div class="summerSale2020_contentContainer"> \
 		<div class="summersale2020_supersavings_title">%title%</div> \
 		<div class="summersale2020_supersavings_label"><div class="highlight">%header%</div><div class="subtitle">%discount%</div></div> \
@@ -2487,6 +2487,7 @@ function UpdateStoreBannerForPromotionalDiscount( nDiscount, nMinCartAmount, nAv
 	{
 		$element = $J( $Elements[i] );
 		$element.replaceWith( $J( strTemplate ) );
+		$J( '#promo_header_banner' ).slideDown( 500 );
 	}
 
 	return true;
