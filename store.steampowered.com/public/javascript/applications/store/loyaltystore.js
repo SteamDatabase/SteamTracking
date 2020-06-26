@@ -17777,7 +17777,7 @@
                         p.c.BASE_URL_STORE_CDN_ASSETS +
                         "promo/summer2020/points_sale_text/points_shop_header_text_" +
                         d +
-                        ".png?v=1"
+                        ".png?v=2"
                     })
                   ),
                   I.a.createElement(

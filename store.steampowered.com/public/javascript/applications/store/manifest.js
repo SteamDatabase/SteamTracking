@@ -1,47 +1,47 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5952795";
+var CLSTAMP = "5953625";
 !(function(t) {
   function e(e) {
     for (
-      var a, n, d = e[0], c = e[1], s = e[2], o = 0, r = [];
+      var a, n, d = e[0], s = e[1], c = e[2], o = 0, r = [];
       o < d.length;
       o++
     )
       (n = d[o]),
         Object.prototype.hasOwnProperty.call(l, n) && l[n] && r.push(l[n][0]),
         (l[n] = 0);
-    for (a in c) Object.prototype.hasOwnProperty.call(c, a) && (t[a] = c[a]);
+    for (a in s) Object.prototype.hasOwnProperty.call(s, a) && (t[a] = s[a]);
     for (_ && _(e); r.length; ) r.shift()();
-    return b.push.apply(b, s || []), i();
+    return i.push.apply(i, c || []), f();
   }
-  function i() {
-    for (var e, a = 0; a < b.length; a++) {
-      for (var n = b[a], d = !0, c = 1; c < n.length; c++) {
-        var s = n[c];
-        0 !== l[s] && (d = !1);
+  function f() {
+    for (var e, a = 0; a < i.length; a++) {
+      for (var n = i[a], d = !0, s = 1; s < n.length; s++) {
+        var c = n[s];
+        0 !== l[c] && (d = !1);
       }
-      d && (b.splice(a--, 1), (e = j((j.s = n[0]))));
+      d && (i.splice(a--, 1), (e = j((j.s = n[0]))));
     }
     return e;
   }
   var n = {},
-    f = { 66: 0 },
+    b = { 66: 0 },
     l = { 66: 0 },
-    b = [];
+    i = [];
   function j(e) {
     if (n[e]) return n[e].exports;
     var a = (n[e] = { i: e, l: !1, exports: {} });
     return t[e].call(a.exports, a, a.exports, j), (a.l = !0), a.exports;
   }
-  (j.e = function(b) {
+  (j.e = function(i) {
     var e = [];
-    f[b]
-      ? e.push(f[b])
-      : 0 !== f[b] &&
-        { 1: 1, 3: 1, 6: 1, 7: 1, 8: 1, 9: 1, 37: 1, 67: 1 }[b] &&
+    b[i]
+      ? e.push(b[i])
+      : 0 !== b[i] &&
+        { 1: 1, 3: 1, 6: 1, 7: 1, 8: 1, 9: 1, 37: 1, 67: 1 }[i] &&
         e.push(
-          (f[b] = new Promise(function(e, d) {
+          (b[i] = new Promise(function(e, d) {
             for (
               var a =
                   "..\\..\\..\\css\\applications\\store\\" +
@@ -140,7 +140,7 @@ var CLSTAMP = "5952795";
                     94: "shared_ukrainian-json",
                     95: "shared_vietnamese-json",
                     96: "topsellers"
-                  }[b] || b) +
+                  }[i] || i) +
                   ".css?contenthash=" +
                   {
                     1: "a9bf736feff9b48c184e",
@@ -150,7 +150,7 @@ var CLSTAMP = "5952795";
                     5: "31d6cfe0d16ae931b73c",
                     6: "a3d4df6d34690bf09a63",
                     7: "2dcd377b784aba51cd5e",
-                    8: "28b83100721c714171aa",
+                    8: "a1ec48d42a7e28fb3662",
                     9: "ec433dd8cfb12ab117d0",
                     10: "31d6cfe0d16ae931b73c",
                     11: "31d6cfe0d16ae931b73c",
@@ -179,7 +179,7 @@ var CLSTAMP = "5952795";
                     34: "31d6cfe0d16ae931b73c",
                     35: "31d6cfe0d16ae931b73c",
                     36: "31d6cfe0d16ae931b73c",
-                    37: "0fd88876f3e6ab280200",
+                    37: "ad0ef1b3a09db61a5ec5",
                     39: "31d6cfe0d16ae931b73c",
                     40: "31d6cfe0d16ae931b73c",
                     41: "31d6cfe0d16ae931b73c",
@@ -237,65 +237,65 @@ var CLSTAMP = "5952795";
                     94: "31d6cfe0d16ae931b73c",
                     95: "31d6cfe0d16ae931b73c",
                     96: "31d6cfe0d16ae931b73c"
-                  }[b],
-                c = j.p + a,
+                  }[i],
+                s = j.p + a,
                 n = document.getElementsByTagName("link"),
-                s = 0;
-              s < n.length;
-              s++
+                c = 0;
+              c < n.length;
+              c++
             ) {
               var o =
-                (r = n[s]).getAttribute("data-href") || r.getAttribute("href");
-              if ("stylesheet" === r.rel && (o === a || o === c)) return e();
+                (r = n[c]).getAttribute("data-href") || r.getAttribute("href");
+              if ("stylesheet" === r.rel && (o === a || o === s)) return e();
             }
             for (
-              var r, t = document.getElementsByTagName("style"), s = 0;
-              s < t.length;
-              s++
+              var r, t = document.getElementsByTagName("style"), c = 0;
+              c < t.length;
+              c++
             ) {
-              if ((o = (r = t[s]).getAttribute("data-href")) === a || o === c)
+              if ((o = (r = t[c]).getAttribute("data-href")) === a || o === s)
                 return e();
             }
-            var i = document.createElement("link");
-            (i.rel = "stylesheet"),
-              (i.type = "text/css"),
-              (i.onload = e),
-              (i.onerror = function(e) {
-                var a = (e && e.target && e.target.src) || c,
+            var f = document.createElement("link");
+            (f.rel = "stylesheet"),
+              (f.type = "text/css"),
+              (f.onload = e),
+              (f.onerror = function(e) {
+                var a = (e && e.target && e.target.src) || s,
                   n = new Error(
-                    "Loading CSS chunk " + b + " failed.\n(" + a + ")"
+                    "Loading CSS chunk " + i + " failed.\n(" + a + ")"
                   );
                 (n.code = "CSS_CHUNK_LOAD_FAILED"),
                   (n.request = a),
-                  delete f[b],
-                  i.parentNode.removeChild(i),
+                  delete b[i],
+                  f.parentNode.removeChild(f),
                   d(n);
               }),
-              (i.href = c),
-              document.getElementsByTagName("head")[0].appendChild(i);
+              (f.href = s),
+              document.getElementsByTagName("head")[0].appendChild(f);
           }).then(function() {
-            f[b] = 0;
+            b[i] = 0;
           }))
         );
     var a,
-      c,
       s,
+      c,
       n,
       o,
       d,
-      r = l[b];
+      r = l[i];
     return (
       0 !== r &&
         (r
           ? e.push(r[2])
           : ((a = new Promise(function(e, a) {
-              r = l[b] = [e, a];
+              r = l[i] = [e, a];
             })),
             e.push((r[2] = a)),
-            ((c = document.createElement("script")).charset = "utf-8"),
-            (c.timeout = 120),
-            j.nc && c.setAttribute("nonce", j.nc),
-            (c.src =
+            ((s = document.createElement("script")).charset = "utf-8"),
+            (s.timeout = 120),
+            j.nc && s.setAttribute("nonce", j.nc),
+            (s.src =
               j.p +
               "" +
               ({
@@ -393,7 +393,7 @@ var CLSTAMP = "5952795";
                 94: "shared_ukrainian-json",
                 95: "shared_vietnamese-json",
                 96: "topsellers"
-              }[(d = b)] || d) +
+              }[(d = i)] || d) +
               ".js?contenthash=" +
               {
                 1: "c774c3346d7534e9a6c1",
@@ -405,34 +405,34 @@ var CLSTAMP = "5952795";
                 7: "a6cd7a7a1177ff558a6b",
                 8: "82b1f078c96862877b8a",
                 9: "bc1b458e7bbb092e4c2e",
-                10: "15341353f4a0b15c202f",
-                11: "769ec45c5f663b14695a",
-                12: "bc23ebf510ec9f254602",
-                13: "6433573fda7fb9d0530b",
-                14: "392c602287c1be25d0e3",
-                15: "dffc882ac2b8afb0fbf6",
-                16: "9f8c6d0c1d7b2ab95544",
-                17: "d55f7a0ca72e5245b45c",
-                18: "670c41470aeb0637e66c",
-                19: "9b4a034784467d365e44",
-                20: "76631b7ca879f9d1613c",
-                21: "914a1893444929e6e09b",
-                22: "d930a06adb636abc6d50",
-                23: "04104e539aa8500c60d8",
-                24: "5242ad3c9b7747194cb3",
-                25: "bcf11ac63584b1a8b75f",
-                26: "9b234b23a668a2bbb76d",
-                27: "9988a3263288639136a8",
-                28: "82cf1376be4dbb574e27",
-                29: "dc42faf495b90fd49822",
-                30: "f5cda68185b46dbc4940",
-                31: "db246afe15d98e75ac36",
-                32: "523d1137b063e0140d38",
-                33: "9b7d21c6e9067af9264b",
-                34: "55d185be9eb0b3676d68",
-                35: "27793cbc6b17d6480956",
-                36: "f145616981fd8ab329e2",
-                37: "11d83867807210cdb6bf",
+                10: "fbeb02f646ce4132d079",
+                11: "17cc4f609fbc6e90b469",
+                12: "69cbd131669d7c3a8ed4",
+                13: "e931c5c353a8f21795cb",
+                14: "1d3784281e91dd9ce47b",
+                15: "3de58854c6e14ecd821d",
+                16: "2552a585f83f586681d7",
+                17: "4bcadbed2b2ce5d92ff7",
+                18: "c2facbf27bf24418d10c",
+                19: "6fbff889f00ace392d03",
+                20: "d0b3c203608d5d32432b",
+                21: "d8789443d3bb37bcb54d",
+                22: "232a78a8dee2fe630d5f",
+                23: "151300378eaeba9355b2",
+                24: "02d1dc8975b22c84659a",
+                25: "d103d8b333f394965591",
+                26: "e194ab8d6bf54fa3cf77",
+                27: "57da7aaa374286f9883e",
+                28: "282652d48b1971252626",
+                29: "8045f3dc4a9e4fe9c6d3",
+                30: "056fab818be804ebb019",
+                31: "975683e5fd46ae8fd69e",
+                32: "a8158b095144e89a6511",
+                33: "9e268249354cfd5da8b2",
+                34: "a5ebdf441e4f9eb466f8",
+                35: "53addbf9c11faca0307a",
+                36: "dffae6809428c2c29560",
+                37: "9bc82237dc290c9bb362",
                 39: "50715e0e5b43e45c4d11",
                 40: "73e3a99271e4db1174ab",
                 41: "c28585c1ceca26c117db",
@@ -462,58 +462,58 @@ var CLSTAMP = "5952795";
                 65: "82f1e391fa54790b2d71",
                 67: "df6630c45fd11bf6cd5c",
                 68: "65d5b6a3413fb8a79a80",
-                69: "e799f0f1f4807320e654",
-                70: "618459b9083aeceabb1c",
-                71: "33b3f7b4014d5916fc0c",
-                72: "f8d295bc1a264e78c904",
-                73: "3bf0edefed56053b782f",
-                74: "171682ed89dbd3f2acde",
-                75: "779f9556a544543630e5",
-                76: "74f759c87405c24780a0",
-                77: "5dfde859a7dc08db99d0",
-                78: "05b69cfcc1639e965d68",
-                79: "6d7ff002623c2d6f0e7e",
-                80: "b5cd1a87fc40c65a3232",
-                81: "b3760bb2cc348a2afdf5",
-                82: "5c5028c1cde6a35bf8ac",
-                83: "5e22accd4fdbdc56a7af",
-                84: "829af15c8da62b2d048c",
-                85: "60bce6105f1e138bbbeb",
-                86: "914b02def79ad2668201",
-                87: "4bc2e6b698cd09c983e4",
-                88: "a39d2c0d536f60991cfb",
-                89: "543ef38c15a004c765d7",
-                90: "a648691d0d7c418f7f27",
-                91: "c5554c7b0bb460814e96",
-                92: "1ecc237c323e39a275b0",
-                93: "24f6b94147e51721b4c2",
-                94: "64a77e8e69e73debfb45",
-                95: "b8f1d3a7f35c56709601",
+                69: "38ccae66d2ba82f06f4d",
+                70: "d311b585073f509b7102",
+                71: "adfaf2a2dfa7280f15c2",
+                72: "b9ae391f49f0d7c506a8",
+                73: "14ce3362748b9b099527",
+                74: "b9824dcfac2ad0fe35df",
+                75: "aa55e507d7bd13d35f9a",
+                76: "21a37a01d39b03655209",
+                77: "ea662341d2eda744831b",
+                78: "d0cfd71247d6253db7e6",
+                79: "71529fad24860e2f3e2a",
+                80: "aec6c5dfdaaa495949dd",
+                81: "04141902667654e290f4",
+                82: "300d805db102f41d4a18",
+                83: "f4ff31e5fd2ef5613ae5",
+                84: "ddfca5d10283f2597327",
+                85: "5fdcaaeda2fd9274d626",
+                86: "e64f298433930941373c",
+                87: "64492f376467caa6f444",
+                88: "448d0d353bdc2b5c4151",
+                89: "d54b6780e29f905be86a",
+                90: "34e06f12e5edda3597eb",
+                91: "ee4da40efe29c1ba7e6b",
+                92: "c61c1712276afc9b2cc2",
+                93: "8139af443f05807cfbb6",
+                94: "da4a66f445f2ebc09923",
+                95: "1e5217c7eccc5d0424aa",
                 96: "2947249c924ae12e64b8"
               }[d]),
-            (s = new Error()),
+            (c = new Error()),
             (n = function(e) {
-              (c.onerror = c.onload = null), clearTimeout(o);
+              (s.onerror = s.onload = null), clearTimeout(o);
               var a,
                 n,
-                d = l[b];
+                d = l[i];
               0 !== d &&
                 (d &&
                   ((a = e && ("load" === e.type ? "missing" : e.type)),
                   (n = e && e.target && e.target.src),
-                  (s.message =
-                    "Loading chunk " + b + " failed.\n(" + a + ": " + n + ")"),
-                  (s.name = "ChunkLoadError"),
-                  (s.type = a),
-                  (s.request = n),
-                  d[1](s)),
-                (l[b] = void 0));
+                  (c.message =
+                    "Loading chunk " + i + " failed.\n(" + a + ": " + n + ")"),
+                  (c.name = "ChunkLoadError"),
+                  (c.type = a),
+                  (c.request = n),
+                  d[1](c)),
+                (l[i] = void 0));
             }),
             (o = setTimeout(function() {
-              n({ type: "timeout", target: c });
+              n({ type: "timeout", target: s });
             }, 12e4)),
-            (c.onerror = c.onload = n),
-            document.head.appendChild(c))),
+            (s.onerror = s.onload = n),
+            document.head.appendChild(s))),
       Promise.all(e)
     );
   }),
@@ -568,7 +568,7 @@ var CLSTAMP = "5952795";
   var a = (window.webpackJsonp = window.webpackJsonp || []),
     d = a.push.bind(a);
   (a.push = e), (a = a.slice());
-  for (var c = 0; c < a.length; c++) e(a[c]);
+  for (var s = 0; s < a.length; s++) e(a[s]);
   var _ = d;
-  i();
+  f();
 })([]);

@@ -530,7 +530,7 @@
         O = i("exH9"),
         _ = i("WonJ"),
         y = i.n(_),
-        B = (function(e) {
+        w = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
           }
@@ -608,7 +608,7 @@
           );
         })(b.Component),
         v = i("WeG9"),
-        w = i.n(v),
+        B = i.n(v),
         P = (function(e) {
           function t() {
             return (null !== e && e.apply(this, arguments)) || this;
@@ -636,7 +636,7 @@
                 Object(h.a)(
                   {
                     className: Object(O.a)(
-                      w.a.avatarHolder,
+                      B.a.avatarHolder,
                       "avatarHolder",
                       "no-drag",
                       i || "Medium",
@@ -646,11 +646,11 @@
                   o
                 ),
                 b.createElement("div", {
-                  className: Object(O.a)(w.a.avatarStatus, "avatarStatus", a),
+                  className: Object(O.a)(B.a.avatarStatus, "avatarStatus", a),
                   style: n
                 }),
                 b.createElement("img", {
-                  className: Object(O.a)(w.a.avatar, "avatar"),
+                  className: Object(O.a)(B.a.avatar, "avatar"),
                   src: t,
                   draggable: !1
                 }),
@@ -728,10 +728,10 @@
           return b.createElement(
             "div",
             Object(h.a)(
-              { className: Object(O.a)(w.a.avatarFrame, i, "avatarFrame") },
+              { className: Object(O.a)(B.a.avatarFrame, i, "avatarFrame") },
               r
             ),
-            b.createElement("img", { className: w.a.avatarFrameImg, src: n })
+            b.createElement("img", { className: B.a.avatarFrameImg, src: n })
           );
         }),
         E = (b.Component, i("6Y59")),
@@ -1259,7 +1259,7 @@
                             community_data: c
                           }),
                           y &&
-                            b.createElement(B, {
+                            b.createElement(w, {
                               persona: t,
                               animating: !0,
                               className: A.a.SnoozeContainer,
@@ -3590,7 +3590,7 @@
             r
           );
         })(Y.Message),
-        Be = (function(i) {
+        we = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -3735,7 +3735,7 @@
             r
           );
         })(Y.Message),
-        we = (function(i) {
+        Be = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8199,7 +8199,7 @@
           });
         }),
         (Z.GetProfileItemsEquipped = function(e, t) {
-          return e.SendMsg("Player.GetProfileItemsEquipped#1", t, Be, {
+          return e.SendMsg("Player.GetProfileItemsEquipped#1", t, we, {
             bConstMethod: !0
           });
         }),
@@ -8333,7 +8333,7 @@
         Ft,
         Mt,
         Ot,
-        Bt = (function(i) {
+        wt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8366,13 +8366,13 @@
               Y.Message.setField(this, 4, e);
             }),
             (r.prototype.attributes = function() {
-              return Y.Message.getRepeatedWrapperField(this, wt, 5);
+              return Y.Message.getRepeatedWrapperField(this, Bt, 5);
             }),
             (r.prototype.set_attributes = function(e) {
               Y.Message.setRepeatedWrapperField(this, 5, e);
             }),
             (r.prototype.add_attributes = function(e, t) {
-              return Y.Message.addToRepeatedWrapperField(this, 5, e, wt, t);
+              return Y.Message.addToRepeatedWrapperField(this, 5, e, Bt, t);
             }),
             (r.prototype.used = function() {
               return Y.Message.getField(this, 6);
@@ -8403,7 +8403,7 @@
                 owner: Y.Message.getField(t, 4),
                 attributes: Y.Message.toObjectList(
                   t.attributes(),
-                  wt.toObject,
+                  Bt.toObject,
                   e
                 ),
                 used: Y.Message.getField(t, 6),
@@ -8422,7 +8422,7 @@
                 t.set_attributes(
                   (Array.isArray(e.attributes) ? e.attributes : []).map(
                     function(e) {
-                      return wt.fromObject(e);
+                      return Bt.fromObject(e);
                     }
                   )
                 ),
@@ -8453,8 +8453,8 @@
                     e.set_owner(t.readUint32());
                     break;
                   case 5:
-                    var i = new wt();
-                    t.readMessage(i, wt.deserializeBinaryFromReader),
+                    var i = new Bt();
+                    t.readMessage(i, Bt.deserializeBinaryFromReader),
                       e.add_attributes(i);
                     break;
                   case 6:
@@ -8486,7 +8486,7 @@
                 void 0 !== (i = Y.Message.getField(e, 4)) &&
                   t.writeUint32(4, i),
                 0 < (i = e.attributes()).length &&
-                  t.writeRepeatedMessage(5, i, wt.serializeBinaryToWriter),
+                  t.writeRepeatedMessage(5, i, Bt.serializeBinaryToWriter),
                 void 0 !== (i = Y.Message.getField(e, 6)) && t.writeBool(6, i),
                 void 0 !== (i = Y.Message.getField(e, 7)) &&
                   t.writeUint32(7, i),
@@ -8499,7 +8499,7 @@
             r
           );
         })(Y.Message),
-        wt = (function(i) {
+        Bt = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -8579,20 +8579,20 @@
           return (
             Object(h.d)(r, i),
             (r.prototype.items = function() {
-              return Y.Message.getRepeatedWrapperField(this, Bt, 1);
+              return Y.Message.getRepeatedWrapperField(this, wt, 1);
             }),
             (r.prototype.set_items = function(e) {
               Y.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_items = function(e, t) {
-              return Y.Message.addToRepeatedWrapperField(this, 1, e, Bt, t);
+              return Y.Message.addToRepeatedWrapperField(this, 1, e, wt, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                items: Y.Message.toObjectList(t.items(), Bt.toObject, e)
+                items: Y.Message.toObjectList(t.items(), wt.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -8601,7 +8601,7 @@
               return (
                 t.set_items(
                   (Array.isArray(e.items) ? e.items : []).map(function(e) {
-                    return Bt.fromObject(e);
+                    return wt.fromObject(e);
                   })
                 ),
                 t
@@ -8616,8 +8616,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new Bt();
-                    t.readMessage(i, Bt.deserializeBinaryFromReader),
+                    var i = new wt();
+                    t.readMessage(i, wt.deserializeBinaryFromReader),
                       e.add_items(i);
                     break;
                   default:
@@ -8633,7 +8633,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i = e.items();
               0 < i.length &&
-                t.writeRepeatedMessage(1, i, Bt.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, wt.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CQuest_GetCommunityInventory_Response";
@@ -8842,6 +8842,18 @@
             (r.prototype.set_item_movie_mp4 = function(e) {
               Y.Message.setField(this, 19, e);
             }),
+            (r.prototype.item_movie_webm_small = function() {
+              return Y.Message.getField(this, 20);
+            }),
+            (r.prototype.set_item_movie_webm_small = function(e) {
+              Y.Message.setField(this, 20, e);
+            }),
+            (r.prototype.item_movie_mp4_small = function() {
+              return Y.Message.getField(this, 21);
+            }),
+            (r.prototype.set_item_movie_mp4_small = function(e) {
+              Y.Message.setField(this, 21, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
@@ -8865,7 +8877,9 @@
                 item_last_changed: Y.Message.getField(t, 16),
                 broadcast_channel_id: Y.Message.getField(t, 17),
                 item_movie_webm: Y.Message.getField(t, 18),
-                item_movie_mp4: Y.Message.getField(t, 19)
+                item_movie_mp4: Y.Message.getField(t, 19),
+                item_movie_webm_small: Y.Message.getField(t, 20),
+                item_movie_mp4_small: Y.Message.getField(t, 21)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -8891,6 +8905,8 @@
                 t.set_broadcast_channel_id(e.broadcast_channel_id),
                 t.set_item_movie_webm(e.item_movie_webm),
                 t.set_item_movie_mp4(e.item_movie_mp4),
+                t.set_item_movie_webm_small(e.item_movie_webm_small),
+                t.set_item_movie_mp4_small(e.item_movie_mp4_small),
                 t
               );
             }),
@@ -8959,6 +8975,12 @@
                   case 19:
                     e.set_item_movie_mp4(t.readString());
                     break;
+                  case 20:
+                    e.set_item_movie_webm_small(t.readString());
+                    break;
+                  case 21:
+                    e.set_item_movie_mp4_small(t.readString());
+                    break;
                   default:
                     t.skipField();
                 }
@@ -9007,7 +9029,11 @@
                 void 0 !== (i = Y.Message.getField(e, 18)) &&
                   t.writeString(18, i),
                 void 0 !== (i = Y.Message.getField(e, 19)) &&
-                  t.writeString(19, i);
+                  t.writeString(19, i),
+                void 0 !== (i = Y.Message.getField(e, 20)) &&
+                  t.writeString(20, i),
+                void 0 !== (i = Y.Message.getField(e, 21)) &&
+                  t.writeString(21, i);
             }),
             (r.prototype.getClassName = function() {
               return "CQuest_GetCommunityItemDefinitions_Response_ItemDefinition";
@@ -9296,16 +9322,77 @@
             (r.prototype.set_can_claim = function(e) {
               Y.Message.setField(this, 1, e);
             }),
+            (r.prototype.item_name = function() {
+              return Y.Message.getField(this, 2);
+            }),
+            (r.prototype.set_item_name = function(e) {
+              Y.Message.setField(this, 2, e);
+            }),
+            (r.prototype.item_title = function() {
+              return Y.Message.getField(this, 3);
+            }),
+            (r.prototype.set_item_title = function(e) {
+              Y.Message.setField(this, 3, e);
+            }),
+            (r.prototype.item_description = function() {
+              return Y.Message.getField(this, 4);
+            }),
+            (r.prototype.set_item_description = function(e) {
+              Y.Message.setField(this, 4, e);
+            }),
+            (r.prototype.item_image_small = function() {
+              return Y.Message.getField(this, 5);
+            }),
+            (r.prototype.set_item_image_small = function(e) {
+              Y.Message.setField(this, 5, e);
+            }),
+            (r.prototype.item_image_large = function() {
+              return Y.Message.getField(this, 6);
+            }),
+            (r.prototype.set_item_image_large = function(e) {
+              Y.Message.setField(this, 6, e);
+            }),
+            (r.prototype.animated = function() {
+              return Y.Message.getField(this, 7);
+            }),
+            (r.prototype.set_animated = function(e) {
+              Y.Message.setField(this, 7, e);
+            }),
+            (r.prototype.communityitemid = function() {
+              return Y.Message.getField(this, 8);
+            }),
+            (r.prototype.set_communityitemid = function(e) {
+              Y.Message.setField(this, 8, e);
+            }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
-              var i = { can_claim: Y.Message.getField(t, 1) };
+              var i = {
+                can_claim: Y.Message.getField(t, 1),
+                item_name: Y.Message.getField(t, 2),
+                item_title: Y.Message.getField(t, 3),
+                item_description: Y.Message.getField(t, 4),
+                item_image_small: Y.Message.getField(t, 5),
+                item_image_large: Y.Message.getField(t, 6),
+                animated: Y.Message.getField(t, 7),
+                communityitemid: Y.Message.getField(t, 8)
+              };
               return e && (i.$jspbMessageInstance = t), i;
             }),
             (r.fromObject = function(e) {
               var t = new r();
-              return t.set_can_claim(e.can_claim), t;
+              return (
+                t.set_can_claim(e.can_claim),
+                t.set_item_name(e.item_name),
+                t.set_item_title(e.item_title),
+                t.set_item_description(e.item_description),
+                t.set_item_image_small(e.item_image_small),
+                t.set_item_image_large(e.item_image_large),
+                t.set_animated(e.animated),
+                t.set_communityitemid(e.communityitemid),
+                t
+              );
             }),
             (r.deserializeBinary = function(e) {
               var t = new Y.BinaryReader(e),
@@ -9317,6 +9404,27 @@
                 switch (t.getFieldNumber()) {
                   case 1:
                     e.set_can_claim(t.readBool());
+                    break;
+                  case 2:
+                    e.set_item_name(t.readString());
+                    break;
+                  case 3:
+                    e.set_item_title(t.readString());
+                    break;
+                  case 4:
+                    e.set_item_description(t.readString());
+                    break;
+                  case 5:
+                    e.set_item_image_small(t.readString());
+                    break;
+                  case 6:
+                    e.set_item_image_large(t.readString());
+                    break;
+                  case 7:
+                    e.set_animated(t.readBool());
+                    break;
+                  case 8:
+                    e.set_communityitemid(t.readUint64String());
                     break;
                   default:
                     t.skipField();
@@ -9330,7 +9438,20 @@
             }),
             (r.serializeBinaryToWriter = function(e, t) {
               var i = Y.Message.getField(e, 1);
-              void 0 !== i && t.writeBool(1, i);
+              void 0 !== i && t.writeBool(1, i),
+                void 0 !== (i = Y.Message.getField(e, 2)) &&
+                  t.writeString(2, i),
+                void 0 !== (i = Y.Message.getField(e, 3)) &&
+                  t.writeString(3, i),
+                void 0 !== (i = Y.Message.getField(e, 4)) &&
+                  t.writeString(4, i),
+                void 0 !== (i = Y.Message.getField(e, 5)) &&
+                  t.writeString(5, i),
+                void 0 !== (i = Y.Message.getField(e, 6)) &&
+                  t.writeString(6, i),
+                void 0 !== (i = Y.Message.getField(e, 7)) && t.writeBool(7, i),
+                void 0 !== (i = Y.Message.getField(e, 8)) &&
+                  t.writeUint64String(8, i);
             }),
             (r.prototype.getClassName = function() {
               return "CSummerSale2020_CanClaimItem_Response";
@@ -9525,7 +9646,7 @@
                         ? [2, i.GetEResult()]
                         : this.m_Backgrounds.m_EquippedItem &&
                           this.m_Backgrounds.m_EquippedItem.communityitemid
-                        ? ((t = V.a.Init(we))
+                        ? ((t = V.a.Init(Be))
                             .Body()
                             .set_communityitemid(
                               this.m_Backgrounds.m_EquippedItem.communityitemid
@@ -12099,7 +12220,7 @@
                         pi.ThreeColumns
                       )
                     },
-                    b.createElement(wi, {
+                    b.createElement(Bi, {
                       onSelected: this.SelectFrame,
                       large: !0,
                       ProfileItems: r
@@ -12108,7 +12229,7 @@
                       Mi.a,
                       null,
                       a.map(function(e) {
-                        return b.createElement(Bi, {
+                        return b.createElement(wi, {
                           key: e.communityitemid,
                           frame: e,
                           onSelected: t.SelectFrame,
@@ -12134,7 +12255,7 @@
             e
           );
         })(b.Component),
-        Bi = (function(t) {
+        wi = (function(t) {
           function e() {
             var e = (null !== t && t.apply(this, arguments)) || this;
             return (e.state = { bHovered: !1 }), e;
@@ -12172,7 +12293,7 @@
             e
           );
         })(b.Component),
-        wi = Object(c.a)(function(e) {
+        Bi = Object(c.a)(function(e) {
           var t = e.onSelected,
             i = e.ProfileItems,
             r = e.large,
@@ -12224,9 +12345,9 @@
             b.createElement(
               "div",
               { className: pi.CollectionGroupAvatars },
-              b.createElement(wi, { onSelected: r, ProfileItems: i }),
+              b.createElement(Bi, { onSelected: r, ProfileItems: i }),
               t.map(function(e) {
-                return b.createElement(Bi, {
+                return b.createElement(wi, {
                   key: e.communityitemid,
                   frame: e,
                   onSelected: r
@@ -13719,7 +13840,7 @@
               viewBox: "0 0 401 399",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg",
-              className: Object(O.a)(t, wr.ProfilePreview, Pr[n])
+              className: Object(O.a)(t, Br.ProfilePreview, Pr[n])
             },
             b.createElement("rect", {
               y: "13",
@@ -14024,21 +14145,21 @@
               height: "382",
               fill: "var(--gradient-background)",
               fillOpacity: "0.23",
-              className: wr.ThemeBackground
+              className: Br.ThemeBackground
             }),
             b.createElement("rect", {
               y: "13",
               width: "401",
               height: "382",
               fill: "url(#paint0_radial)",
-              className: wr.PaintRadial0
+              className: Br.PaintRadial0
             }),
             b.createElement("rect", {
               y: "13",
               width: "401",
               height: "382",
               fill: "url(#paint1_radial)",
-              className: wr.PaintRadial1
+              className: Br.PaintRadial1
             }),
             b.createElement(
               "defs",
@@ -14093,7 +14214,7 @@
           n = e.onSelect;
         return b.createElement(
           "div",
-          { className: Br.ProfileBackgroundEquipOption },
+          { className: wr.ProfileBackgroundEquipOption },
           b.createElement(ci.r, {
             checked: i == r,
             disabled: i == r,
@@ -14109,18 +14230,18 @@
           i = e.children;
         return b.createElement(
           "div",
-          { className: Br.Details },
+          { className: wr.Details },
           b.createElement(
             "div",
             null,
             b.createElement(
               "div",
-              { className: Br.Title },
+              { className: wr.Title },
               t
                 ? t.item_title
                 : Object(F.d)("#Profile_Edit_DefaultBlankBackground")
             ),
-            b.createElement("div", { className: Br.App }, t && t.app_name)
+            b.createElement("div", { className: wr.App }, t && t.app_name)
           ),
           i
         );
@@ -14334,8 +14455,8 @@
                 )
               );
         },
-        Br = i("YtMT"),
-        wr = i("gCuR"),
+        wr = i("YtMT"),
+        Br = i("gCuR"),
         Pr = i("l8s2"),
         jr = Object(c.a)(function(e) {
           var t = e.ProfileItems,
@@ -14347,25 +14468,25 @@
             s = i && 1 == t.GetEquippedBackgroundFlags();
           return b.createElement(
             "div",
-            { className: wr.ProfilePagePreviewCtn },
+            { className: Br.ProfilePagePreviewCtn },
             b.createElement(
               "div",
-              { className: wr.BackgroundPosition },
+              { className: Br.BackgroundPosition },
               b.createElement(
                 "div",
-                { className: Object(O.a)(wr.Background, s && wr.FullScreen) },
+                { className: Object(O.a)(Br.Background, s && Br.FullScreen) },
                 !n && b.createElement("img", { src: a }),
                 n && b.createElement(Wi, { Background: i, className: "" })
               )
             ),
             b.createElement(
               "div",
-              { className: wr.ProfilePreviewPosition },
+              { className: Br.ProfilePreviewPosition },
               b.createElement(
                 "div",
-                { className: wr.ProfilePreviewCtn },
+                { className: Br.ProfilePreviewCtn },
                 b.createElement(gr, {
-                  className: wr.ProfilePreview,
+                  className: Br.ProfilePreview,
                   width: "50%",
                   height: "auto",
                   theme: r
@@ -14428,7 +14549,7 @@
                   Object(F.d)("#Profile_Edit_Background_Instructions")
                 ),
                 b.createElement(Ei, {
-                  className: Br.BackgroundPickerPage,
+                  className: wr.BackgroundPickerPage,
                   getSearchFields: mr,
                   getItems: function() {
                     return t.GetOwnedBackgrounds();
@@ -14495,8 +14616,8 @@
                 "div",
                 {
                   className: Object(O.a)(
-                    Br.ProfileBackgroundEquipOptions,
-                    !t && Br.HideEquipOptions
+                    wr.ProfileBackgroundEquipOptions,
+                    !t && wr.HideEquipOptions
                   )
                 },
                 r,
@@ -14533,20 +14654,20 @@
             "div",
             {
               className: Object(O.a)(
-                Br.BackgroundOption,
-                a && Br.WithVideo,
-                r && Br.Active
+                wr.BackgroundOption,
+                a && wr.WithVideo,
+                r && wr.Active
               ),
               onClick: i,
               onMouseEnter: a ? pr : void 0
             },
             b.createElement(
               "div",
-              { className: Br.Preview },
+              { className: wr.Preview },
               b.createElement("img", { src: Nt(t), loading: "lazy" }),
               b.createElement(Wi, {
                 Background: t,
-                className: Br.PreviewVideo,
+                className: wr.PreviewVideo,
                 small: !0
               })
             ),
@@ -14563,12 +14684,12 @@
             : b.createElement(
                 "div",
                 {
-                  className: Object(O.a)(Br.BackgroundOption, r && Br.Active),
+                  className: Object(O.a)(wr.BackgroundOption, r && wr.Active),
                   onClick: t
                 },
                 b.createElement(
                   "div",
-                  { className: Br.Preview },
+                  { className: wr.Preview },
                   b.createElement("img", { src: Nt(null) })
                 ),
                 b.createElement(yr, { Background: null }, n)

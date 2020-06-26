@@ -104,9 +104,15 @@ div.profile_page {
 	background-color: #000000;
 }
 
-body.profile_page.private_profile,
+body.profile_page.private_profile {
+	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/2020/bg_dots.png' );
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-color: #000000;
+}
+
 div.profile_page.private_profile {
-	background-image: none;
+	background: transparent;
 }
 
 body.profile_page.has_profile_background,
@@ -201,6 +207,16 @@ body.profile_page.flat_page #footer_spacer {
 	background-repeat: no-repeat;
 	background-position: center;
 	
+}
+
+.private_profile .profile_header_bg_texture {
+    background-image: linear-gradient( rgba(28, 40, 43, 0.95) 30%, rgba(29, 57, 60, 0.87) 85%, rgba(31, 74, 78, 0.82) 100%);
+    max-width: 976px;
+    min-height: 224px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, .3);
 }
 
 .profile_header {
@@ -565,7 +581,7 @@ body.profile_page.flat_page #footer_spacer {
 }
 
 .private_profile .profile_content {
-
+	display: none;
 	padding-bottom: 120px;
 	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_content_bg_fade.png' ), url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_content_bg.png' );
 	background-position: center bottom, center;
@@ -1976,7 +1992,7 @@ html.responsive .showcase_gamecollector_games .showcase_gamecollector_game:first
 .profile_private_info {
 
 	padding: 12px 0;
-	color: #a94847;
+	color: #39838d;;
 	font-size: 17px;
 }
 

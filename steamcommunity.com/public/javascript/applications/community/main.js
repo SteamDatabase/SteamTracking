@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "5952370";
+var CLSTAMP = "5953604";
 (window.webpackJsonp = window.webpackJsonp || []).push([
   [91],
   {
@@ -157,10 +157,10 @@ var CLSTAMP = "5952370";
           return N;
         }),
         n.d(t, "E", function() {
-          return j;
+          return A;
         }),
         n.d(t, "m", function() {
-          return A;
+          return j;
         }),
         n.d(t, "k", function() {
           return P;
@@ -1398,7 +1398,7 @@ var CLSTAMP = "5952370";
           })
         );
       }
-      function j() {
+      function A() {
         return i.createElement(
           "svg",
           {
@@ -1422,7 +1422,7 @@ var CLSTAMP = "5952370";
           })
         );
       }
-      function A() {
+      function j() {
         return i.createElement(
           "svg",
           {
@@ -3513,7 +3513,7 @@ var CLSTAMP = "5952370";
       }
       var L = n("hJxo"),
         N = n("r64O"),
-        j = (function(n) {
+        A = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (
@@ -3807,7 +3807,7 @@ var CLSTAMP = "5952370";
             e
           );
         })(f.PureComponent),
-        A = (function(n) {
+        j = (function(n) {
           function e(e) {
             var t = n.call(this, e) || this;
             return (t.state = { value: t.ClampValue(e.value) }), t;
@@ -5122,10 +5122,10 @@ var CLSTAMP = "5952370";
           return R;
         }),
         n.d(t, "l", function() {
-          return j;
+          return A;
         }),
         n.d(t, "s", function() {
-          return A;
+          return j;
         }),
         n.d(t, "h", function() {
           return U;
@@ -7441,10 +7441,10 @@ var CLSTAMP = "5952370";
                       L = x[_].max,
                       N = R < B ? R - B : L < R ? R - L : 0;
                     if (t) if (!q(y, { min: B, max: L })) continue;
-                    var j = { x: 0, y: 0 };
-                    (j[u] = x[u][v]), (j[_] = R + N);
-                    var A = Y(g, j),
-                      k = (T * T + N * N) / Math.abs(A[u]);
+                    var A = { x: 0, y: 0 };
+                    (A[u] = x[u][v]), (A[_] = R + N);
+                    var j = Y(g, A),
+                      k = (T * T + N * N) / Math.abs(j[u]);
                   } else {
                     if (null == S) continue;
                     k = S;
@@ -7861,14 +7861,14 @@ var CLSTAMP = "5952370";
       n.d(t, "a", function() {
         return s;
       });
-      var l = n("mrSG"),
-        c = n("H7XF"),
-        u = n("hRO2"),
-        p = n("bxBv"),
+      var u = n("mrSG"),
+        l = n("H7XF"),
+        p = n("hRO2"),
+        d = n("bxBv"),
         r = n("bxiW"),
         i = n("vDqi"),
-        d = n.n(i),
-        m = n("mC9v"),
+        m = n.n(i),
+        h = n("mC9v"),
         o = n("kLLr"),
         s = (function() {
           function e(e, t, n) {
@@ -7900,26 +7900,43 @@ var CLSTAMP = "5952370";
             (e.prototype.GetServiceTransport = function() {
               return this.m_ServiceTransport;
             }),
-            (e.prototype.ConstructServiceTransport = function() {
-              this.m_ServiceTransport = {
-                SendMsg: this.SendMsgAndAwaitResponse,
-                SendNotification: this.SendNotification
-              };
+            (e.prototype.GetAnonymousServiceTransport = function() {
+              return this.m_AnonymousServiceTransport;
             }),
-            (e.prototype.SendMsgAndAwaitResponse = function(o, s, a, c) {
-              return Object(l.b)(this, void 0, void 0, function() {
+            (e.prototype.ConstructServiceTransport = function() {
+              (this.m_ServiceTransport = {
+                SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+                  bSendAuth: !0
+                }),
+                SendNotification: this.SendNotification.bind(this, {
+                  bSendAuth: !0
+                })
+              }),
+                (this.m_AnonymousServiceTransport = {
+                  SendMsg: this.SendMsgAndAwaitResponse.bind(this, {
+                    bSendAuth: !1
+                  }),
+                  SendNotification: this.SendNotification.bind(this, {
+                    bSendAuth: !1
+                  })
+                });
+            }),
+            (e.prototype.SendMsgAndAwaitResponse = function(o, s, a, c, l) {
+              return Object(u.b)(this, void 0, void 0, function() {
                 var t, n, r, i;
-                return Object(l.e)(this, function(e) {
+                return Object(u.e)(this, function(e) {
                   switch (e.label) {
                     case 0:
                       (t = null), (e.label = 1);
                     case 1:
-                      return e.trys.push([1, 3, , 4]), [4, this.Send(o, s, c)];
+                      return (
+                        e.trys.push([1, 3, , 4]), [4, this.Send(o, s, a, l)]
+                      );
                     case 2:
                       if (200 != (n = e.sent()).status || !n.data)
                         throw new Error("Request Error");
                       return (
-                        (t = p.a.Init(a, 147)),
+                        (t = d.a.Init(c, 147)),
                         n.headers &&
                           (n.headers["x-eresult"] &&
                             t
@@ -7931,19 +7948,19 @@ var CLSTAMP = "5952370";
                               .set_error_message(n.headers["x-error_message"])),
                         this.m_bJsonMode
                           ? t.SetBodyJSON(n.data.response)
-                          : ((r = new m.a(n.data)),
-                            (i = new u.BinaryReader(
+                          : ((r = new h.a(n.data)),
+                            (i = new p.BinaryReader(
                               r.GetPacket(),
                               r.TellGet(),
                               r.GetCountBytesRemaining()
                             )),
-                            a.deserializeBinaryFromReader(t.Body(), i)),
+                            c.deserializeBinaryFromReader(t.Body(), i)),
                         [3, 4]
                       );
                     case 3:
                       return (
                         e.sent(),
-                        (t = this.CreateFailedMsgProtobuf(a, 3, null)),
+                        (t = this.CreateFailedMsgProtobuf(c, 3, null)),
                         [3, 4]
                       );
                     case 4:
@@ -7952,38 +7969,39 @@ var CLSTAMP = "5952370";
                 });
               });
             }),
-            (e.prototype.SendNotification = function(e, t) {
-              return this.Send(e, t), !0;
+            (e.prototype.SendNotification = function(e, t, n) {
+              return this.Send(e, t, n), !0;
             }),
-            (e.prototype.Send = function(e, t, n) {
-              var r = this.CreateWebAPIURL(e),
-                i = t.SerializeBody(),
-                o = c.fromByteArray(i),
-                s = {
+            (e.prototype.Send = function(e, t, n, r) {
+              var i = this.CreateWebAPIURL(t),
+                o = n.SerializeBody(),
+                s = l.fromByteArray(o),
+                a = {
                   responseType: this.m_bJsonMode ? "json" : "arraybuffer",
                   params: {}
                 };
               if (
                 (this.m_webApiAccessToken &&
-                  (s.params.access_token = this.m_webApiAccessToken),
-                n && n.bConstMethod)
+                  e.bSendAuth &&
+                  (a.params.access_token = this.m_webApiAccessToken),
+                r && r.bConstMethod)
               )
                 return (
                   this.m_bJsonMode
-                    ? (s.params = Object(l.a)(Object(l.a)({}, s.params), {
-                        input_json: JSON.stringify(t.Body().toObject())
+                    ? (a.params = Object(u.a)(Object(u.a)({}, a.params), {
+                        input_json: JSON.stringify(n.Body().toObject())
                       }))
-                    : (s.params = Object(l.a)(Object(l.a)({}, s.params), {
-                        input_protobuf_encoded: o
+                    : (a.params = Object(u.a)(Object(u.a)({}, a.params), {
+                        input_protobuf_encoded: s
                       })),
-                  d.a.get(r, s)
+                  m.a.get(i, a)
                 );
-              var a = new FormData();
+              var c = new FormData();
               return (
                 this.m_bJsonMode
-                  ? a.append("input_json", JSON.stringify(t.Body().toObject()))
-                  : a.append("input_protobuf_encoded", o),
-                d.a.post(r, a, s)
+                  ? c.append("input_json", JSON.stringify(n.Body().toObject()))
+                  : c.append("input_protobuf_encoded", s),
+                m.a.post(i, c, a)
               );
             }),
             (e.prototype.CreateWebAPIURL = function(e) {
@@ -7999,7 +8017,7 @@ var CLSTAMP = "5952370";
                 : null;
             }),
             (e.prototype.CreateFailedMsgProtobuf = function(e, t, n) {
-              var r = p.a.Init(e);
+              var r = d.a.Init(e);
               return (
                 r.Hdr().set_eresult(2),
                 r.Hdr().set_transport_error(t),
@@ -8007,9 +8025,9 @@ var CLSTAMP = "5952370";
                 r
               );
             }),
-            Object(l.c)([r.a], e.prototype, "SendMsgAndAwaitResponse", null),
-            Object(l.c)([r.a], e.prototype, "SendNotification", null),
-            Object(l.c)([r.a], e.prototype, "Send", null),
+            Object(u.c)([r.a], e.prototype, "SendMsgAndAwaitResponse", null),
+            Object(u.c)([r.a], e.prototype, "SendNotification", null),
+            Object(u.c)([r.a], e.prototype, "Send", null),
             e
           );
         })();
@@ -9043,8 +9061,8 @@ var CLSTAMP = "5952370";
       var L = p("TLQK");
       p("mgoM");
       var N = p("r64O"),
-        j = p("WBba"),
-        A = p("bxBv"),
+        A = p("WBba"),
+        j = p("bxBv"),
         P = p("hRO2");
       var U,
         G,
@@ -9765,7 +9783,7 @@ var CLSTAMP = "5952370";
             var t, o, n;
             e &&
               e.length &&
-              ((t = A.a.Init(V)),
+              ((t = j.a.Init(V)),
               (o = e.reduce(function(e, t) {
                 return (
                   e[t.identifier]
@@ -9830,7 +9848,7 @@ var CLSTAMP = "5952370";
                   ne.Init(
                     "Community",
                     CLSTAMP,
-                    new j.a(l.b.WEBAPI_BASE_URL).GetServiceTransport()
+                    new A.a(l.b.WEBAPI_BASE_URL).GetServiceTransport()
                   ),
                   [
                     4,

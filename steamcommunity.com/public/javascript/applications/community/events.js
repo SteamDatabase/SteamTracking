@@ -11266,11 +11266,11 @@
         NoGameLink: "apppartnereventspage_NoGameLink_2GfPe",
         AppPartnerEventsBody: "apppartnereventspage_AppPartnerEventsBody_1XLRr",
         AppPartnerEventsPage: "apppartnereventspage_AppPartnerEventsPage_3CJsg",
+        AppBannerGroup: "apppartnereventspage_AppBannerGroup_qexk-",
+        ClanBanner: "apppartnereventspage_ClanBanner_161DW",
         AppBannerTitle: "apppartnereventspage_AppBannerTitle_1iqjH",
         AppBannerLogoCtn: "apppartnereventspage_AppBannerLogoCtn_2EV_W",
         AppBannerLogo: "apppartnereventspage_AppBannerLogo_dGGTg",
-        AppBannerGroup: "apppartnereventspage_AppBannerGroup_qexk-",
-        ClanBanner: "apppartnereventspage_ClanBanner_161DW",
         AppTitleGroup: "apppartnereventspage_AppTitleGroup_2ttnb",
         AppBannerLink: "apppartnereventspage_AppBannerLink_3Yoms",
         AppPartnerEventsContainer:
@@ -59712,7 +59712,7 @@
                   "div",
                   { className: H.a.AppPartnerEventsPage, ref: this.m_refPage },
                   this.props.showAppHeader &&
-                    y.createElement(q, {
+                    y.createElement(K, {
                       appInfoStore: this.props.appInfoStore,
                       appId: e,
                       clanId: t
@@ -60291,106 +60291,103 @@
           );
         })(),
         q = Object(r.a)(function(e) {
-          var t,
-            n,
-            a,
-            r = x.b.IN_CLIENT && _.a.BOwnsApp(e.appId),
+          var t = x.b.IN_CLIENT && _.a.BOwnsApp(e.appId),
+            n = null,
+            a = null,
+            r = null,
             o = null,
             i = null,
             s = null,
             l = null,
-            c = null,
-            p = null,
-            d = null,
-            u = Boolean(e.appId !== m.z);
-          return (
-            e.appId
-              ? ((t = e.appInfoStore.GetAppInfo(e.appId)) &&
-                  ((i = t.header_image_url), (s = t.name)),
-                r &&
-                  (o = y.createElement(
-                    "a",
-                    {
-                      className: H.a.AppBannerLink,
-                      href: "steam://nav/games/details/" + e.appId
-                    },
-                    Object(B.d)("#EventDisplay_ViewInLibrary")
-                  )),
-                (p = e.appId),
-                (l = x.b.STORE_BASE_URL + "app/" + e.appId + "/"),
-                (c = x.b.COMMUNITY_BASE_URL + "app/" + e.appId))
-              : e.clanId &&
-                ((n = A.a.GetClanInfoByClanAccountID(e.clanId)) &&
-                  ((i = n.avatar_full_url), (s = n.group_name)),
-                (p = e.clanId),
-                (a = h.a.InitFromClanID(p)),
-                (l = x.b.STORE_BASE_URL + "curator/" + e.clanId + "/"),
-                (c =
-                  x.b.COMMUNITY_BASE_URL + "gid/" + a.ConvertTo64BitString()),
-                (d = H.a.ClanBanner)),
+            c = Boolean(e.appId !== m.z);
+          if (e.appId) {
+            var p = e.appInfoStore.GetAppInfo(e.appId);
+            if (!p || !p.is_valid) return null;
+            (a = p.header_image_url),
+              (r = p.name),
+              t &&
+                (n = y.createElement(
+                  "a",
+                  {
+                    className: H.a.AppBannerLink,
+                    href: "steam://nav/games/details/" + e.appId
+                  },
+                  Object(B.d)("#EventDisplay_ViewInLibrary")
+                )),
+              (s = e.appId),
+              (o = x.b.STORE_BASE_URL + "app/" + e.appId + "/"),
+              (i = x.b.COMMUNITY_BASE_URL + "app/" + e.appId);
+          } else if (e.clanId) {
+            var d = A.a.GetClanInfoByClanAccountID(e.clanId);
+            if (!d) return null;
+            (a = d.avatar_full_url), (r = d.group_name), (s = e.clanId);
+            var u = h.a.InitFromClanID(s),
+              o = x.b.STORE_BASE_URL + "curator/" + e.clanId + "/",
+              i = x.b.COMMUNITY_BASE_URL + "gid/" + u.ConvertTo64BitString(),
+              l = H.a.ClanBanner;
+          }
+          return y.createElement(
+            "div",
+            { className: Object(M.a)(H.a.AppBannerGroup, l) },
+            y.createElement(
+              V.a,
+              {
+                className: H.a.AppBannerLogoCtn,
+                type: e.appId ? "app" : "clan",
+                strURL: o,
+                id: s
+              },
+              y.createElement("img", { className: H.a.AppBannerLogo, src: a })
+            ),
             y.createElement(
               "div",
-              { className: H.a.AppPartnerEventsBanner },
+              { className: H.a.AppTitleGroup },
+              y.createElement(
+                "a",
+                {
+                  href: Object(R.d)(
+                    (x.b.IN_CLIENT ? "steam://openurl/" : "") + o
+                  ),
+                  className: H.a.AppBannerTitle
+                },
+                r
+              )
+            ),
+            c &&
               y.createElement(
                 "div",
-                { className: Object(M.a)(H.a.AppBannerGroup, d) },
+                { className: H.a.AppBannerLinks },
+                n,
                 y.createElement(
-                  V.a,
+                  "a",
                   {
-                    className: H.a.AppBannerLogoCtn,
-                    type: e.appId ? "app" : "clan",
-                    strURL: l,
-                    id: p
+                    className: H.a.AppBannerLink,
+                    href: Object(R.d)(
+                      (x.b.IN_CLIENT ? "steam://openurl/" : "") + o
+                    ),
+                    target: x.b.IN_CLIENT ? void 0 : "_blank"
                   },
-                  y.createElement("img", {
-                    className: H.a.AppBannerLogo,
-                    src: i
-                  })
+                  Object(B.d)("#EventDisplay_ViewStorePage")
                 ),
                 y.createElement(
-                  "div",
-                  { className: H.a.AppTitleGroup },
-                  y.createElement(
-                    "a",
-                    {
-                      href: Object(R.d)(
-                        (x.b.IN_CLIENT ? "steam://openurl/" : "") + l
-                      ),
-                      className: H.a.AppBannerTitle
-                    },
-                    s
-                  )
-                ),
-                u &&
-                  y.createElement(
-                    "div",
-                    { className: H.a.AppBannerLinks },
-                    o,
-                    y.createElement(
-                      "a",
-                      {
-                        className: H.a.AppBannerLink,
-                        href: Object(R.d)(
-                          (x.b.IN_CLIENT ? "steam://openurl/" : "") + l
-                        ),
-                        target: x.b.IN_CLIENT ? void 0 : "_blank"
-                      },
-                      Object(B.d)("#EventDisplay_ViewStorePage")
+                  "a",
+                  {
+                    className: H.a.AppBannerLink,
+                    href: Object(R.d)(
+                      (x.b.IN_CLIENT ? "steam://openurl/" : "") + i
                     ),
-                    y.createElement(
-                      "a",
-                      {
-                        className: H.a.AppBannerLink,
-                        href: Object(R.d)(
-                          (x.b.IN_CLIENT ? "steam://openurl/" : "") + c
-                        ),
-                        target: x.b.IN_CLIENT ? void 0 : "_blank"
-                      },
-                      Object(B.d)("#EventDisplay_ViewCommunityPage")
-                    )
-                  )
+                    target: x.b.IN_CLIENT ? void 0 : "_blank"
+                  },
+                  Object(B.d)("#EventDisplay_ViewCommunityPage")
+                )
               )
-            )
+          );
+        }),
+        K = Object(r.a)(function(e) {
+          return y.createElement(
+            "div",
+            { className: H.a.AppPartnerEventsBanner },
+            y.createElement(q, Object(s.a)({}, e))
           );
         });
     },

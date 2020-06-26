@@ -2461,6 +2461,9 @@ function UpdateStoreBannerForPromotionalDiscount( nDiscount, nMinCartAmount, nAv
 	if ( !nAvailableUseCount )
 		return false;
 
+	if ( $J( 'body.events_hub' ).length )
+		return false;
+
 	var strTemplate = ' \
 	<div id="promo_header_banner" class="placeHolder_summerSale2020_promotionDetailsBar" style="display:none;">	\
 		<div class="summerSale2020_contentContainer"> \
