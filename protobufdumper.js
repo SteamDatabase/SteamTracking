@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs');
 
-getKnownProtobufMessages("Protobufs", function(knownMessages) {
+getKnownProtobufMessages("Protobufs", function(knownMessages, knownServices) {
 	const protos = handleFile(fs.readFileSync(process.argv[2]).toString());
 	const imports = new Set();
 	imports.add(knownMessages.get("NoResponse"));
@@ -10,16 +10,11 @@ getKnownProtobufMessages("Protobufs", function(knownMessages) {
 	const filteredServices = [];
 
 	protos.services.forEach((methods, service) => {
-		methods = methods.filter((method) => {
-			let request = method.request;
-
-			// Hack
-			if (request === "NotImplemented") {
-				request = method.response.replace( '_Response', '_Request' );
-			}
-
-			return !knownMessages.has(request);
-		});
+		if (knownServices.has(service)) {
+			methods = methods.filter((method) => {
+				return !knownServices.get(service).includes(method.name);
+			});
+		}
 
 		if (methods.length > 0) {
 			filteredServices.push({
@@ -48,7 +43,9 @@ getKnownProtobufMessages("Protobufs", function(knownMessages) {
 
 function getKnownProtobufMessages(dirName, callback) {
 	const msgRegex = /([ \t]*)message (\w+) \{/g;
+	const svcRegex = /service (\w+) \{|rpc (\w+) \(/g;
 	const knownMessages = new Map();
+	const knownServices = new Map();
 	let MsgAndLevel = [];
 
 	fs.readdir(dirName, function(err, files) {
@@ -73,9 +70,20 @@ function getKnownProtobufMessages(dirName, callback) {
 				MsgAndLevel.unshift({ "name": msgName, "level": currLevel });
 				knownMessages.set(msgName, fileName);
 			}
+
+			let methods;
+			while (matches = svcRegex.exec(file)) {
+				if (matches[1]) {
+					// service name
+					knownServices.set(matches[1], methods = []);
+				} else {
+					// method name
+					methods.push(matches[2]);
+				}
+			}
 		});
 
-		callback(knownMessages);
+		callback(knownMessages, knownServices);
 	});
 }
 
@@ -192,11 +200,12 @@ function handleFile(file) {
 				} else if (field.type.indexOf('.') != -1) {
 					let [moduleVarName, typeShortNameAlias] = field.type.split('.');
 					let match = module.match(new RegExp(moduleVarName + '=[a-z]\\("([\\w\\+\\/]{4})"\\)'));
-					if (match) {
+					if (match && protoShortNamesToLongNames[match[1]] && protoShortNamesAliases[match[1]]) {
 						field.type = '.' + protoShortNamesToLongNames[match[1]][
 							protoShortNamesAliases[match[1]][typeShortNameAlias]
 						];
 					} else {
+						// external dependency?
 						field.type = 'UNKNOWN2';
 					}
 				}

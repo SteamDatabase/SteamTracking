@@ -142,6 +142,7 @@ https://store.steampowered.com/public/css/bigpicture/store.css?__TIME__
 https://store.steampowered.com/public/css/bigpicture/subscription.css?__TIME__
 https://store.steampowered.com/public/css/labs.css?__TIME__
 https://store.steampowered.com/public/css/labs/divingbell.css?__TIME__
+https://store.steampowered.com/public/css/labs/spring_cleaning.css?__TIME__
 https://store.steampowered.com/public/css/labs_trending_reviews.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2016.css?__TIME__
 https://store.steampowered.com/public/css/promo/autumn2017.css?__TIME__
@@ -154,10 +155,11 @@ https://store.steampowered.com/public/css/promo/lunar2020.css?__TIME__
 https://store.steampowered.com/public/css/promo/newstore2016.css?__TIME__
 https://store.steampowered.com/public/css/promo/remote_play_together.css?__TIME__
 https://store.steampowered.com/public/css/promo/spring2019.css?__TIME__
+https://store.steampowered.com/public/css/promo/spring2020.css?__TIME__
 https://store.steampowered.com/public/css/promo/storev6.css?__TIME__
 https://store.steampowered.com/public/css/promo/styles_earlyaccess.css?__TIME__
 https://store.steampowered.com/public/css/promo/styles_streaming.css?__TIME__
-https://store.steampowered.com/public/css/promo/summer2019.css?__TIME__
+https://store.steampowered.com/public/css/promo/summer2018.css?__TIME__
 https://store.steampowered.com/public/css/promo/summer2019_grandprix.css?__TIME__
 https://store.steampowered.com/public/css/promo/summer2020_sale.css?__TIME__
 https://store.steampowered.com/public/css/promo/winter2018.css?__TIME__
@@ -210,6 +212,7 @@ https://store.steampowered.com/public/css/v6/recommended.css?__TIME__
 https://store.steampowered.com/public/css/v6/sale.css?__TIME__
 https://store.steampowered.com/public/css/v6/search.css?__TIME__
 https://store.steampowered.com/public/css/v6/steamaccount.css?__TIME__
+https://store.steampowered.com/public/css/v6/steamaccount_sale_tokens.css?__TIME__
 https://store.steampowered.com/public/css/v6/steamlink_about.css?__TIME__
 https://store.steampowered.com/public/css/v6/store.css?__TIME__
 https://store.steampowered.com/public/css/v6/store_rewards_header.css?__TIME__
@@ -248,9 +251,14 @@ https://partner.steamgames.com/public/javascript/taxonomy_survey.js?__TIME__&l=e
 https://partner.steamgames.com/public/javascript/useradmin.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/apphub_home.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/apphub_workshop.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/applications/community/events.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/events~profile.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/main.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/applications/community/manifest.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/applications/community/profile.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/applications/community/ugcrewards.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/applications/community/ugcrewards~userreviewrewards.js?__TIME__&l=english
+https://steamcommunity.com/public/javascript/applications/community/userreviewrewards.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/auction.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/badges.js?__TIME__&l=english
 https://steamcommunity.com/public/javascript/bigpicture/apphub_bigpicture.js?__TIME__&l=english
@@ -380,6 +388,7 @@ https://steamcommunity.com/public/shared/javascript/account_linking.js?__TIME__&
 https://steamcommunity.com/public/shared/javascript/apphub.js?__TIME__&l=english
 https://steamcommunity.com/public/shared/javascript/bigpicture/base.js?__TIME__&l=english
 https://steamcommunity.com/public/shared/javascript/bigpicture/slideshow.js?__TIME__&l=english
+https://steamcommunity.com/public/shared/javascript/billingaddress.js?__TIME__&l=english
 https://steamcommunity.com/public/shared/javascript/dash_player.js?__TIME__&l=english
 https://steamcommunity.com/public/shared/javascript/joinsteam.js?__TIME__&l=english
 https://steamcommunity.com/public/shared/javascript/login.js?__TIME__&l=english
@@ -394,10 +403,13 @@ https://store.steampowered.com/public/javascript/app_tagging.js?__TIME__&l=engli
 https://store.steampowered.com/public/javascript/applications/interactive_recommender/main.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/curator_admin.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/eventcomponents.js?__TIME__&l=english
-https://store.steampowered.com/public/javascript/applications/store/loyaltystore.js?contenthash=104d4b0b8db0caa80639
+https://store.steampowered.com/public/javascript/applications/store/interactiverecommender.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/applications/store/loyaltystore.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/loyaltystore~reviewaward.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/main.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/main_english-json.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/applications/store/manifest.js?__TIME__&l=english
+https://store.steampowered.com/public/javascript/applications/store/reviewaward.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/applications/store/store_common.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/bigpicture/home.js?__TIME__&l=english
 https://store.steampowered.com/public/javascript/broadcast_carousel.js?__TIME__&l=english
