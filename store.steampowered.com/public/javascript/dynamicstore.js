@@ -1419,7 +1419,7 @@ GStoreItemData = {
 	rgPersonalizedBundleData: {},
 	rgAccountData: [],
 	rgNavParams: {},
-	fnFormatCurrency: function( nValueInCents ) { return v_numberformat( nValueInCents / 100 ); },
+	fnFormatCurrency: function( nValueInCents, bWholeNumbersOnly = false ) { return v_numberformat( nValueInCents / 100, bWholeNumbersOnly ); },
 	nCurrencyMinPriceIncrement : 1,
 
 	AddStoreItemDataSet: function( rgStoreItemData )
@@ -2472,17 +2472,8 @@ function UpdateStoreBannerForPromotionalDiscount( nDiscount, nMinCartAmount, nAv
 	';
 
 
-	var strAmount = GStoreItemData.fnFormatCurrency( nDiscount );
-	if ( strAmount.indexOf( ".00", strAmount.length - 3 ) !== -1 || strAmount.indexOf( ".00", strAmount.length - 3 ) !== -1 )
-	{
-		strAmount = strAmount.substring( 0, strAmount.length - 3 );
-	}
-	
-	var strMinAmount = GStoreItemData.fnFormatCurrency( nMinCartAmount );
-	if ( strMinAmount.indexOf( ".00", strMinAmount.length - 3 ) !== -1 || strMinAmount.indexOf( ".00", strMinAmount.length - 3 ) !== -1 )
-	{
-		strMinAmount = strMinAmount.substring( 0, strMinAmount.length - 3 );
-	}
+	var strAmount = GStoreItemData.fnFormatCurrency( nDiscount, true );
+	var strMinAmount = GStoreItemData.fnFormatCurrency( nMinCartAmount, true );
 
 	var strTitle = 'Road Trip Special';
 	var strHeader = 'Save an additional %amount% on a purchase of %min_amount%'.replace( '%amount%', strAmount ).replace( '%min_amount%', strMinAmount );
