@@ -149,11 +149,6 @@ function handleFile(file) {
 				msgRequestName = protoShortNamesToLongNames[currentModuleName][matches[3]];
 			} else if (matches[4]) { // response
 				msgResponseName = protoShortNamesToLongNames[currentModuleName][matches[4]];
-				msgRequestName = msgResponseName.replace(/_Response$/, "_Request");
-
-				if (!Object.values(protoShortNamesToLongNames[currentModuleName]).includes(msgRequestName)) {
-					msgRequestName = null;
-				}
 			} else { // C->S notification
 				// try to fix it below
 			}
@@ -167,6 +162,17 @@ function handleFile(file) {
 					}
 					return false;
 				});
+
+				if (!msgRequestName && msgResponseName) {
+					// because reasons!
+					currentModuleProtos.some((proto) => {
+						if (proto.name === msgResponseName.replace(/_Response$/, "_Request")) {
+							msgRequestName = proto.name;
+							return true;
+						}
+						return false;
+					});
+				}
 
 				if (!msgRequestName) {
 					msgRequestName = "NotImplemented";
