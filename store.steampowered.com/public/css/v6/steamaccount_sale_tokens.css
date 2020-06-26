@@ -1,0 +1,166 @@
+
+/* token summary */
+.rewards_token_summary_desc {
+	font-size: 18px;
+	padding: 15px;
+	color: #E8AC25;
+}
+
+.rewards_token_summary {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 3em 0;
+	padding: 0;
+}
+.rewards_token_summary > .cell,
+.rewards_token_summary > .cell {
+	box-sizing: border-box;
+	flex-grow: 1;
+	width: 100%;
+	padding: 0.8em 1.2em;
+	overflow: hidden;
+	list-style: none;
+	border: 3px solid rgba( 0, 0, 0, 0.5 );
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	text-transform: uppercase;
+}
+
+.rewards_token_summary > .cell.view_details > span {
+	text-transform: unset;
+	cursor: pointer;
+}
+
+.rewards_token_summary > .cell.total_points {
+	font-weight: 700;
+	color: #ffffff;
+}
+.rewards_token_summary > .cell.total_spent {
+	margin-top: 50px;
+	font-weight: 700;
+	color: #cf3a22;
+}
+.rewards_token_summary > .cell.total_current {
+	font-weight: 700;
+	color: #E8AC25;
+}
+
+.rewards_token_summary--2cols > .cell  { width: 50%; }
+.rewards_token_summary--3cols > .cell  { width: 33.33%; }
+
+/* token history */
+.rewards_token_history_ctn {
+}
+.rewards_token_history_desc {
+	font-size: 18px;
+	padding: 15px;
+	color: #E8AC25;
+}
+
+.rewards_token_history {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 0 3em 0;
+	padding: 0;
+}
+.rewards_token_history > .cell,
+.rewards_token_history > .cell {
+	box-sizing: border-box;
+	flex-grow: 1;
+	width: 100%;
+	padding: 0.8em 1.2em;
+	overflow: hidden;
+	list-style: none;
+	border: 1px solid rgba( 0, 0, 0, 0.5 );
+	border-top: none;
+	border-right: none;
+}
+.rewards_token_history > .th.cell {
+	color: #0a98c4;
+	border: 1px solid rgba( 0, 0, 0, 0.5 );
+	border-top: 1px solid rgba( 0, 0, 0, 0.5 );;
+	font-weight: 900;
+	vertical-align: text-bottom;
+}
+.rewards_token_history > .th.cell > img.emoticon {
+
+}
+.rewards_token_history > .th.cell > img.background {
+
+}
+.rewards_token_history > .td.cell.total {
+	font-weight: 700;
+	color: #ffffff;
+}
+
+.rewards_token_history--4cols > .cell  { width: 25%; }
+.rewards_token_history--4cols > .cell:nth-child(4n)  { border-right: 1px solid rgba( 0, 0, 0, 0.5 ); }
+
+/* audit history */
+
+.history_desc {
+	padding-bottom: 10px;
+}
+
+.history_paging {
+	display: flex;
+	padding-bottom: 10px;
+}
+.history_paging > * {
+	margin-right: 10px;
+}
+
+.audit_history_table {
+	border-spacing: 0;
+	border: solid 1px #2c405b;
+	width: 100%;
+}
+
+.audit_history_table th {
+	background-color: #0197cf;
+	text-align: left;
+	padding: 10px;
+}
+
+.audit_history_table tr:nth-child(even) {
+}
+
+.audit_history_table tr:nth-child(odd) {
+	background-color: rgba( 0, 0, 0, 0.2);
+}
+
+.audit_history_table tr:hover {
+	background-color: rgba( 255, 255, 255, 0.2);
+}
+
+.audit_history_table td {
+	padding: 10px;
+}
+
+.audit_history_table td img.background {
+
+}
+.audit_history_table td img.emoticon {
+
+}
+.audit_history_table td img.sticker {
+	max-height: 32px;
+}
+.audit_history_table td img.chat_effect {
+	max-height: 32px;
+}
+.audit_history_table td img.animated_avatar {
+	max-height: 32px;
+}
+.audit_history_table td img.avatar_frame {
+	max-height: 32px;
+}
+.audit_history_table td img.reaction {
+	max-height: 32px;
+}
+
+.audit_history_row.total {
+	font-weight: bold;
+	color: #fff;
+}

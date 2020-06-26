@@ -1,0 +1,591 @@
+
+ body.v6.spring2020 {
+	 background-color: #1B2838;
+ }
+
+.spring_cleaning_header_ctn {
+	height: 1050px;
+	width: 100%;
+	background-color: rgb( 217,147,105 );
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+.spring_cleaner_header_content {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-content: center;
+	height: 100%;
+	position: relative;
+}
+
+.spring_cleaning_divider {
+	width: 100%;
+	height: 10px;
+	background-color: rgb( 115,72,52 );
+}
+
+.spring_cleaning_header_txt {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+	top: 0;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 100;
+}
+
+.spring_cleaner_header_bg {
+	margin: 0 auto;
+	max-width: 1600px;
+	width: 100%;
+	height: 699px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/spring_cleaning_library_above_ground_background.png?v=2' );
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	align-content: center;
+	position: relative;
+}
+
+.spring_cleaning_house {
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/spring_cleaning_library_main_house_off.png?v=2' );
+	height: 475px;
+	position: relative;
+}
+
+.spring_cleaning_house.on {
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/spring_cleaning_library_main_house_on.png?v=2' );
+	cursor: default;
+}
+
+.house_dewey_img {
+	width: 80px;
+	position: absolute;
+	bottom: 28%;
+	left: calc( 50% - 309px );
+}
+
+.spring_cleaning_tasks_ctn {
+	max-width: 1100px;
+	margin: 0 auto;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.spring_cleaning_body {
+	background-color: rgb( 53,25,18 );
+}
+
+.spring_cleaning_body_bg {
+	margin:0 auto;
+	max-width: 1920px;
+	width: 100%;
+	background-position: center;
+	background: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/spring_cleaning_library_underground_background.png?v=2' ) rgb( 53,25,18 ) repeat-y;
+}
+
+.spring_cleaning_task_ctn {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: relative;
+	height: 430px;
+	width: 100%;
+	user-select: none;
+}
+
+.spring_cleaning_task_ctn.enabled {
+	cursor: pointer;
+}
+
+.spring_cleaning_task_ctn:nth-child( 1 )
+{
+	z-index: 10;
+	height: 325px;
+}
+
+.spring_cleaning_task_ctn:nth-child( 2 )
+{
+	z-index: 9;
+	transform: translateY( -105px );
+}
+
+.spring_cleaning_task_ctn:nth-child( 3 )
+{
+	z-index: 8;
+	transform: translateY( -210px );
+}
+
+.spring_cleaning_task_ctn:nth-child( 4 )
+{
+	z-index: 7;
+	transform: translateY( -315px );
+}
+
+.spring_cleaning_task_ctn:nth-child( 5 )
+{
+	z-index: 6;
+	transform: translateY( -420px );
+}
+
+.spring_cleaning_task_ctn:nth-child( 6 )
+{
+	z-index: 5;
+	transform: translateY( -525px );
+}
+
+.spring_cleaning_task_ctn:nth-child( 7 )
+{
+	z-index: 4;
+	transform: translateY( -625px );
+}
+
+.badge_progress_ctn {
+	max-width: 500px;
+	z-index: 10;
+	position: absolute;
+	bottom: 45%;
+	left: 10%;
+	margin: 0 auto;
+	text-transform: uppercase;
+}
+
+.badge_triange_img {
+	position: absolute;
+	left: calc( 50% - 319px );
+	bottom: 28%;
+	z-index: 9;
+}
+
+.badge_dialog_row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.spring_cleaning_dialog {
+	border-style: solid;
+	border-width: 28px;
+	color: rgb( 92, 129, 102 );
+	line-height: 1.4;
+	font-size: 12px;
+	font-family: 'Press Start 2P', cursive;
+	-moz-border-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/modal_border.png' ) 28 repeat;
+	-webkit-border-image:  url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/modal_border.png' ) 28 repeat;
+	-o-border-image:  url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/modal_border.png' ) 28 repeat;
+	border-image:  url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/modal_border.png' ) 28 fill repeat;
+}
+
+.welcome_dialog_ctn {
+	display: flex;
+	max-width: 500px;
+	align-items: center;
+}
+
+.welcome_dialog_dewey {
+	width: 200px;
+	height: 100px;
+}
+
+.badge_progress_title {
+	color: #000;
+	background-color: rgb( 92, 129, 102 );
+	display: inline-block;
+	padding: 5px;
+	margin: 10px 0;
+}
+
+.badge_progress_meter {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 65px;
+	display: block;
+}
+
+.task_dialog_ctn {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 700px;
+	flex-grow: 1;
+}
+
+.task_dialog_dewey {
+	width: 200px;
+	height: 200px;
+	align-self: center;
+}
+
+.task_dialog_desc {
+	text-transform: uppercase;
+}
+
+.task_dialog_desc span {
+	font-weight: bold;
+
+}
+
+.task_dialog_column {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: space-evenly;
+}
+
+.task_dialog_row {
+	display: flex;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.task_dialog_title {
+	font-size: 30px;
+	/*letter-spacing: 0.12em;*/
+	text-transform: uppercase;
+}
+
+.trask_dialog_desc {
+	font-size: 12px;
+}
+
+.task_app_image_ctn {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 140px;
+	position: relative;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/defaultappimage.png?v=2' );
+}
+
+.task_app_image {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	position: relative;
+}
+
+.task_app_title {
+	font-size: 8px;
+	position: absolute;
+	top: 20%;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	text-align: center;
+	color: #FFF;
+}
+
+.task_app_completed {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-image: url( 'https://steamcdn-a.akamaihd.net/store/promo/spring2020/select_game_overlay.png?v=2' );
+	width: 160px;
+	display: flex;
+	height: 225px;
+	justify-content: center;
+	position: relative;
+}
+
+.task_games_ctn {
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	justify-content: space-evenly;
+}
+
+.dewey_task_img {
+	width: 8%;
+	position: absolute;
+}
+
+#dewey_task_530 {
+	top: 14%;
+	left: 10.8%;
+}
+
+#dewey_task_531 {
+	top: 37%;
+	left: 5.8%;
+}
+
+#dewey_task_532 {
+	top: 37.5%;
+	left: 21.3%;
+}
+
+#dewey_task_533 {
+	top: 38%;
+	right: 28.2%;
+}
+
+#dewey_task_534 {
+	top: 36%;
+	right: 31.8%;
+}
+
+#dewey_task_535 {
+	top: 34.5%;
+	right: 28.1%;
+}
+
+#dewey_task_536 {
+	top: 35%;
+	left: 22.8%;
+}
+
+#completed_app_530 {
+	top: 14%;
+	right: 46.2%;
+	height: 40%;
+}
+
+#completed_app_535 {
+	top: 35%;
+	left: 13%;
+}
+
+#completed_app_534 {
+	top: 33%;
+	left: 3.2%;
+}
+
+#completed_app_532 {
+	top: 33.5%;
+	right: 32%;
+}
+
+#completed_app_533 {
+	top: 35.5%;
+	left: 13.4%;
+}
+
+#completed_app_536 {
+	right: 41%;
+	top: 32.5%;
+}
+
+#completed_app_531 {
+	top: 34%;
+	left: 17.6%;
+}
+
+.task_completed_app {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 8%;
+	height: 30%;
+	position: absolute;
+}
+
+.welcome_dialog_text {
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+.btn_welcome_sc2020 {
+	border-radius: 2px;
+    border: none;
+    padding: 0 15px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none !important;
+    color: #151515 !important;
+    background: #5c8166;
+    font-size: 12px;
+	font-family: 'Press Start 2P', cursive;
+	text-transform: uppercase;
+	line-height: 30px;
+}
+
+.btn_welcome_sc2020:hover, .btn_playnow:hover {
+	background: #81b48f
+}
+
+.btn_playnow {
+	border-radius: 2px;
+	border: none;
+	cursor: pointer;
+	text-decoration: none !important;
+	color: #151515 !important;
+	background: #5c8166;
+	font-size: 12px;
+	text-transform: uppercase;
+	line-height: 25px;
+	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+	display: block;
+	width: 80%;
+	margin: 10px auto 0 auto;
+}
+
+@media screen and ( max-width: 910px ) {
+
+	html.responsive .badge_triange_img {
+		display: none;
+	}
+
+	html.responsive .spring_cleaning_task_ctn {
+		height: 220px;
+	}
+
+	html.responsive .spring_cleaning_header_txt {
+		position: unset;
+	}
+
+	html.responsive .spring_cleaner_header_bg {
+		height: auto;
+		background-size: contain;
+	}
+
+	html.responsive .spring_cleaning_house {
+		height: 260px;
+		background-size: contain;
+	}
+
+	html.responsive .spring_cleaning_header_ctn {
+		height: auto;
+	}
+
+	html.responsive .badge_progress_ctn {
+		position: unset;
+		margin: 30px auto;
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 1 ) {
+		height: 163px;
+	}
+
+	html.responsive .spring_cleaner_header_content {
+		height: auto;
+	}
+
+	html.responsive .spring_cleaning_tasks_ctn {
+		max-width: 550px;
+	}
+
+	html.responsive .badge_dialog_row, html.responsive .welcome_dialog_ctn {
+		flex-wrap: wrap;
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 2 ) {
+		transform: translateY( -55px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 3 ) {
+		transform: translateY( -110px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 4 ) {
+		transform: translateY( -165px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 5 ) {
+		transform: translateY( -220px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 6 ) {
+		transform: translateY( -275px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 7 ) {
+		transform: translateY( -330px );
+	}
+
+	html.responsive .house_dewey_img {
+		display: none;
+	}
+}
+
+@media screen and ( max-width: 420px ) {
+
+	html.responsive .spring_cleaning_house {
+		height: 145px;
+	}
+
+	html.responsive .spring_cleaner_header_bg {
+		height: auto;
+		background-position: bottom;
+		background-size: contain;
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 1 ) {
+		height: 123px;
+	}
+	html.responsive .spring_cleaning_task_ctn:nth-child( 2 ) {
+		transform: translateY( -70px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 3 ) {
+		transform: translateY( -165px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 4 ) {
+		transform: translateY( -260px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 5 ) {
+		transform: translateY( -355px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 6 ) {
+		transform: translateY( -455px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn:nth-child( 7 ) {
+		transform: translateY( -550px );
+	}
+
+	html.responsive .spring_cleaning_task_ctn {
+		height: 210px;
+	}
+
+	html.responsive #dewey_task_530 {
+		top: 17%;
+	}
+
+	html.responsive #dewey_task_531 {
+		top: 40%;
+	}
+
+	html.responsive #dewey_task_532 {
+		top: 40.5%;
+	}
+
+	html.responsive #dewey_task_533 {
+		top: 41%;
+	}
+
+	html.responsive #dewey_task_534 {
+		top: 39%;
+	}
+
+	html.responsive #dewey_task_535 {
+		top: 37.5%;
+	}
+
+	html.responsive #dewey_task_536 {
+		top: 39%;
+	}
+}
+

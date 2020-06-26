@@ -1,0 +1,253 @@
+
+.page_content_ctn {
+	background: linear-gradient(#2A465D, #1B2838 400px, #1B2838 100%);
+}
+
+.redirect_to_login_area {
+  	text-align: center;
+    line-height: 55px;
+    font-size: 22px;
+    color: #DDD;
+    padding: 20px 0;
+}
+
+#LoadingThrobber {
+    transition: height 0.25s, opacity 0.25s;
+    opacity: 0;
+    height: 0;
+}
+
+#LoadingThrobber.visible {
+    opacity: 1;
+    height: 133px;
+}
+
+
+.experiment_title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 40px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.experiment_details {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #DBDBDB;
+    margin-bottom: 8px;
+}
+
+.show_more_container {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 3px;
+}
+
+.show_more_button {
+    height: 0;
+    opacity: 0;
+    font-size: 18px;
+}
+
+.show_more_button.visible {
+    height: auto;
+    padding: 0 15px;
+    font-size: 18px;
+    line-height: 32px;
+    opacity: 1;
+    color: rgba(255, 255, 255, 0.7);
+    background: radial-gradient(63.69% 63.69% at 50% 36.31%, #31ABE2 0%, #1977A0 100%);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.show_more_button.visible:hover {
+    background: radial-gradient(63.69% 63.69% at 50% 36.31%, #41BBF2 0%, #31ABE2 100%);
+}
+
+.suggested_apps_content {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.suggested_app {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: 0;
+    opacity: 0;
+    background: linear-gradient(180deg, #3D3D3D 0%, #181818 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.suggested_app.visible {
+    display: flex;
+    margin-bottom: 8px;
+    overflow: hidden;
+    height: auto;
+    opacity: 1;
+    transition: transform 0.2s;
+    transform: scale(1.0);
+}
+
+.suggested_app.visible:hover {
+    transform: scale(1.03);
+}
+
+.suggested_app > .ds_options {
+    right: 317px;
+}
+.suggested_app:hover > .ds_options {
+    right: 323px;
+}
+
+.suggested_app .suggested_app_details {
+    position: relative;
+    width: 627px;
+    margin: 8px;
+    border-radius: 3px;
+}
+
+.suggested_app .suggested_app_media {
+    position: relative;
+    max-height: 353px;
+    background-color: #000;
+    border-radius: 5px;
+}
+.suggested_app .suggested_app_image {
+    width: 627px;
+    height: 353px;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.5s;
+    border-radius: 5px;
+}
+.suggested_app .suggested_app_image.header_image_fallback {
+    height: 288px;
+}
+
+.suggested_app .microtrailer_video {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.5s;
+    border-radius: 5px;
+}
+.suggested_app:hover .microtrailer_video {
+    display: block;
+    top: 50%;
+    opacity: 1;
+    transform: translateY(-50%);
+}
+.suggested_app.has_microtrailer:hover .suggested_app_image {
+    opacity: 0;
+}
+
+.suggested_app_small_image {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.suggested_app.has_microtrailer:hover .suggested_app_small_image {
+    opacity: 1;
+}
+
+.suggested_app .right_col {
+    padding: 4px;
+    flex-grow: 1;
+}
+
+.suggested_app:hover .right_col {
+}
+
+.suggested_app_name {
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #eeeeee;
+}
+
+.play_now_container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #3D3D3D;
+}
+
+.play_now_button {
+    background: linear-gradient(180deg, #D5D5D5 0%, #A3A3A3 100%);
+    border-radius: 3px;
+    text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #3D3D3D;
+}
+
+.similar_apps_list {
+    padding-top: 5px;
+}
+
+.similar_reason {
+    color: rgba(242, 242, 242, 0.4);
+    font-size 12px;
+}
+
+.similar_app_divider {
+    height: 0px;
+    width: 90%;
+    margin: 2px;
+    border: 1px solid rgba(242, 242, 242, 0.3);
+}
+
+.similar_app_container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+    margin-bottom: 6px;
+}
+
+.similar_app_right_col {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 4px;
+}
+
+.similar_app_name {
+    font-size: 10px;
+    color: #f2f2f2;
+}
+
+.similar_app_image {
+    width: 40%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.similar_app_playtime {
+    font-size: 10px;
+    color: rgba(242, 242, 242, 0.4);
+}
+
+.similar_app_score {
+    font-size: 10px;
+    color: rgba(242, 242, 242, 0.4);
+}
