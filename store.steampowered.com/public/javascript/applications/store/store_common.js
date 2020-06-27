@@ -19998,36 +19998,39 @@
               case 0:
                 return [
                   4,
-                  (function(r, i, c) {
+                  (function(i, c, s) {
                     return Object(d.b)(this, void 0, void 0, function() {
-                      var t, n, o, a;
+                      var t, n, o, a, r;
                       return Object(d.e)(this, function(e) {
                         switch (e.label) {
                           case 0:
                             return (
-                              ((t = i.document.createElement(
+                              ((t = c.document.createElement(
                                 "div"
                               )).style.position = "absolute"),
                               (t.style.visibility = "hidden"),
-                              i.document.body.appendChild(t),
-                              u.render(r, t),
-                              [
-                                4,
-                                Promise.all([
-                                  c,
-                                  document.fonts && document.fonts.ready
-                                ])
-                              ]
+                              c.document.body.appendChild(t),
+                              u.render(i, t),
+                              [4, s]
                             );
                           case 1:
                             return (
                               e.sent(),
-                              (n = t.getBoundingClientRect()),
-                              (o = Math.ceil(n.height)),
-                              (a = Math.ceil(n.width)),
+                              (n = document),
+                              M.c.IN_LIBRARY && n.fonts
+                                ? [4, n.fonts.ready]
+                                : [3, 3]
+                            );
+                          case 2:
+                            e.sent(), (e.label = 3);
+                          case 3:
+                            return (
+                              (o = t.getBoundingClientRect()),
+                              (a = Math.ceil(o.height)),
+                              (r = Math.ceil(o.width)),
                               u.unmountComponentAtNode(t),
-                              i.document.body.removeChild(t),
-                              [2, { height: o, width: a }]
+                              c.document.body.removeChild(t),
+                              [2, { height: a, width: r }]
                             );
                         }
                       });
