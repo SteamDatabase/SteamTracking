@@ -8,6 +8,7 @@
 		private $CurrentTime;
 		private $UseCache = true;
 		private $ExtractClientArchives = false;
+		private $SyncProtobufs = false;
 		private $ETags = [];
 		private $Requests = [];
 		private $URLsToFetch = [];
@@ -21,7 +22,6 @@
 			CURLOPT_FOLLOWLOCATION => 0,
 			CURLOPT_TIMEOUT        => 30,
 			CURLOPT_CONNECTTIMEOUT => 10,
-			CURLOPT_BINARYTRANSFER => 1,
 			CURLOPT_SSL_VERIFYPEER => 0,
 			CURLOPT_SSL_VERIFYHOST => 0,
 		);
@@ -81,9 +81,17 @@
 			if( $this->ExtractClientArchives )
 			{
 				$this->Log( '{lightblue}Extracting client archives and doing voodoo magic' );
+				$this->SyncProtobufs = true;
 
 				// Let's break all kinds of things! :(
 				System( 'bash ' . __DIR__ . '/extract_client.sh' );
+			}
+
+			if( $this->SyncProtobufs )
+			{
+				$this->Log( '{lightblue}Syncing protobufs' );
+
+				system( '../ValveProtobufs/update.sh' );
 			}
 
 			$this->Log( '{lightblue}Done' );
@@ -326,14 +334,19 @@
 
 				if( isset( $WebProtobufs[ $OriginalFile ] ) )
 				{
-					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > ' . escapeshellarg( '../ValveProtobufs/webui/' . $WebProtobufs[ $OriginalFile ] . '.proto' ) . ' && ../ValveProtobufs/update.sh' );
+					$this->SyncProtobufs = true;
+
+					system( 'node protobufdumper.js ' . escapeshellarg( $OriginalFile ) . ' > ' . escapeshellarg( '../ValveProtobufs/webui/' . $WebProtobufs[ $OriginalFile ] . '.proto' ) );
+					
 				}
 				else if( $OriginalFile === 'Scripts/WebUI/steammobile_android.js' )
 				{
+					$this->SyncProtobufs = true;
+
 					system(
 						'node friendsuiprotodumper.js ' . escapeshellarg( $OriginalFile ) .
 						' --Oenum=Structs/enums.steamd --Oproto=../ValveProtobufs/webui/friends_mobile.proto' .
-						' --filter-known-protos && ../ValveProtobufs/update.sh'
+						' --filter-known-protos'
 					);
 				}
 

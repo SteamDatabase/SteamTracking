@@ -47,8 +47,6 @@ dotnet ~/ProtobufDumper/ProtobufDumper.dll bins/steamclient.dylib "$DIR/Protobuf
 node ../protobufdumper.js "$DIR/ClientExtracted/steamui/libraryroot.js" > ~/ValveProtobufs/webui/steamui_libraryroot.proto
 node ../protobufdumper.js "$DIR/ClientExtracted/steamui/broadcast.js" > ~/ValveProtobufs/webui/steamui_broadcast.proto
 
-~/ValveProtobufs/update.sh
-
 # https://github.com/m4dEngi/steamworks_dumper
 echo Dumping structs
 ./MachoDumper/swdumper bins/steamclient.dylib "$DIR/Structs/"
