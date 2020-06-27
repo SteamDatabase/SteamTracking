@@ -269,11 +269,9 @@ body.profile_page.flat_page #footer_spacer {
 }
 
 .playerAvatar.profile_header_size .playerAvatarAutoSizeInner .profile_avatar_frame {
-	width: 166px;
-	height: 166px;
 }
 .playerAvatar.profile_header_size .playerAvatarAutoSizeInner .profile_avatar_frame > img {
-	EnableProfileModifier	transform: scale(1.2);
+	transform: scale(1.22);
 }
 
 
@@ -367,14 +365,6 @@ body.profile_page.flat_page #footer_spacer {
 		max-width: none;
 		width: 125px;
 		height: 125px;
-	}
-
-	html.responsive .profile_header .playerAvatar .profile_avatar_frame {
-		max-width: none;
-		width: 149px;
-		height: 149px;
-		left: -12px;
-		top: -12px;
 	}
 }
 
@@ -581,11 +571,16 @@ body.profile_page.flat_page #footer_spacer {
 }
 
 .private_profile .profile_content {
-	display: none;
 	padding-bottom: 120px;
-	background-image: url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_content_bg_fade.png' ), url( 'https://steamcommunity-a.akamaihd.net/public/images/profile/profile_content_bg.png' );
+	background-image: transparent;
 	background-position: center bottom, center;
 	background-repeat: no-repeat, repeat-y;
+}
+
+.private_profile .profile_rightcol {
+
+background-color: transparent;
+
 }
 
 .profile_content.has_profile_background
