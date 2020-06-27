@@ -10274,7 +10274,7 @@
                                 .Body()
                                 .summary()
                                 .points(),
-                              !0
+                              !1
                             ))
                           : console.error(
                               "Error when calling LoyaltyRewardsService.GetSummary: EResult=${msgResponse.GetEResult()}"
@@ -10303,19 +10303,13 @@
                               .can_claim()),
                             this.m_bCanClaimSummerItem ||
                               (this.SetClaimTimer(),
-                              (this.m_claimedItemData = {
-                                item_name: i.Body().item_name(),
-                                item_title: i.Body().item_title(),
-                                item_description: i.Body().item_description(),
-                                item_image_small: i.Body().item_image_small(),
-                                item_image_large: i.Body().item_image_large(),
-                                item_movie_webm: void 0,
-                                item_movie_mp4: void 0,
-                                item_movie_webm_small: void 0,
-                                item_movie_mp4_small: void 0,
-                                animated: !0,
-                                badge_data: void 0
-                              })))
+                              this.FillInClaimedItemData(
+                                i.Body().item_name(),
+                                i.Body().item_title(),
+                                i.Body().item_description(),
+                                i.Body().item_image_small(),
+                                i.Body().item_image_large()
+                              )))
                           : console.error(
                               "Error when calling SummerSale2020Service.CanClaimItem: EResult=${msgResponse.GetEResult()}"
                             ),
@@ -10324,6 +10318,21 @@
                   }
                 });
               });
+            }),
+            (h.prototype.FillInClaimedItemData = function(e, t, i, r, n) {
+              this.m_claimedItemData = {
+                item_name: e,
+                item_title: t,
+                item_description: i,
+                item_image_small: r,
+                item_image_large: n,
+                item_movie_webm: void 0,
+                item_movie_mp4: void 0,
+                item_movie_webm_small: void 0,
+                item_movie_mp4_small: void 0,
+                animated: !0,
+                badge_data: void 0
+              };
             }),
             (h.prototype.GetNextClaimTime = function() {
               var e = "T17:00:00.000Z",
@@ -10438,6 +10447,13 @@
             }),
             (h.prototype.GetVirtualItemRewardDefinitions = function(e, t, i) {
               return this.GetLoyaltyRewardDefinitions(e, t, i, [1]);
+            }),
+            (h.prototype.EResultToErrorMessage = function(e) {
+              switch (e) {
+                case 15:
+                  return Object(k.d)("#Redeem_Error_AccessDenied");
+              }
+              return "";
             }),
             (h.prototype.GetLoyaltyRewardDefinitions = function(e, t, i, r) {
               var o = this,
@@ -11072,10 +11088,13 @@
                         1 == r.GetEResult()
                           ? (this.GetCommunityItemInventory(a),
                             this.GetLoyaltyRewardsSummary())
-                          : console.error(
+                          : ((t.strMessage = this.EResultToErrorMessage(
+                              r.GetEResult()
+                            )),
+                            console.error(
                               "Error when calling LoyaltyRewardsService.RedeemPoints: EResult=" +
                                 r.GetEResult()
-                            ),
+                            )),
                         [2, t]
                       );
                   }
@@ -11105,6 +11124,13 @@
                               this.GetSummerSaleAppID()
                             ),
                             (t.msgResponse = r.Body().toObject()),
+                            this.FillInClaimedItemData(
+                              r.Body().item_name(),
+                              r.Body().item_title(),
+                              r.Body().item_description(),
+                              r.Body().item_image_small(),
+                              r.Body().item_image_large()
+                            ),
                             (this.m_bCanClaimSummerItem = !1),
                             this.SetClaimTimer())
                           : (10 == r.GetEResult() &&
@@ -11146,10 +11172,13 @@
                         1 == r.GetEResult()
                           ? (this.GetCommunityItemInventory(Vt),
                             this.GetLoyaltyRewardsSummary())
-                          : console.error(
+                          : ((t.strMessage = this.EResultToErrorMessage(
+                              r.GetEResult()
+                            )),
+                            console.error(
                               "Error when calling LoyaltyRewardsService.RedeemPointsForBadgeLevel: EResult=" +
                                 r.GetEResult()
-                            ),
+                            )),
                         [2, t]
                       );
                   }
@@ -13024,30 +13053,20 @@
           Object(R.a)(
             {
               className: t,
-              width: "48",
-              height: "48",
-              viewBox: "0 0 48 48",
+              width: "64",
+              height: "64",
+              viewBox: "0 0 64 64",
               fill: "none",
               xmlns: "http://www.w3.org/2000/svg"
             },
             i
           ),
           I.a.createElement("path", {
+            fillRule: "evenodd",
+            clipRule: "evenodd",
             d:
-              "M30.0357 16.0885C30.6198 13.7522 32.7437 12 35.2393 12C38.2128 12 40.6553 14.4425 40.6553 17.416C40.6553 20.3895 38.2128 22.832 35.2393 22.832C32.7437 22.832 30.6198 21.0797 30.0357 18.7434H8.0001V16.0885H30.0357ZM35.2393 20.1771C36.726 20.1771 38.0004 18.9558 38.0004 17.416C38.0004 15.8761 36.7791 14.6549 35.2393 14.6549C33.7526 14.6549 32.4782 15.8761 32.4782 17.416C32.4782 18.9558 33.7526 20.1771 35.2393 20.1771Z",
+              "M8 1.5H56C59.5899 1.5 62.5 4.41015 62.5 8V56C62.5 59.5899 59.5899 62.5 56 62.5H8C4.41015 62.5 1.5 59.5899 1.5 56V8C1.5 4.41015 4.41015 1.5 8 1.5ZM0 8C0 3.58172 3.58172 0 8 0H56C60.4183 0 64 3.58172 64 8V56C64 60.4183 60.4183 64 56 64H8C3.58172 64 0 60.4183 0 56V8ZM49.6909 30.0352C45.9397 30.0352 42.8486 27.2093 42.4301 23.5703H7.5V21.8809H42.4302C42.8491 18.2423 45.94 15.417 49.6909 15.417C53.7277 15.417 57 18.6894 57 22.7261C57 26.7628 53.7277 30.0352 49.6909 30.0352ZM29.9517 40.75H57V42.4395H29.9518C29.5332 46.0785 26.4421 48.9043 22.6909 48.9043C18.9398 48.9043 15.8486 46.0785 15.4301 42.4395H8.31592V40.75H15.4302C15.8492 37.1115 18.9401 34.2861 22.6909 34.2861C26.4417 34.2861 29.5327 37.1115 29.9517 40.75ZM49.6909 28.0352C52.623 28.0352 55 25.6582 55 22.7261C55 19.7939 52.623 17.417 49.6909 17.417C46.7588 17.417 44.3818 19.7939 44.3818 22.7261C44.3818 25.6582 46.7588 28.0352 49.6909 28.0352ZM28 41.5952C28 44.5273 25.623 46.9043 22.6909 46.9043C19.7588 46.9043 17.3818 44.5273 17.3818 41.5952C17.3818 38.6631 19.7588 36.2861 22.6909 36.2861C25.623 36.2861 28 38.6631 28 41.5952Z",
             fill: ""
-          }),
-          I.a.createElement("path", {
-            d:
-              "M17.6111 25.168C15.1155 25.168 12.9916 26.9203 12.4075 29.2566H8.37207V31.9115H12.3544C12.9385 34.2478 15.0624 36 17.558 36C20.0536 36 22.1775 34.2478 22.7616 31.9115H40.5494V29.2566H22.8147C22.2306 26.9203 20.1067 25.168 17.6111 25.168ZM17.6111 33.3451C16.1244 33.3451 14.85 32.1238 14.85 30.584C14.85 29.0442 16.0713 27.8229 17.6111 27.8229C19.1509 27.8229 20.3722 29.0442 20.3722 30.584C20.3722 32.1238 19.0978 33.3451 17.6111 33.3451Z",
-            fill: ""
-          }),
-          I.a.createElement("rect", {
-            width: "48",
-            height: "48",
-            rx: "4",
-            fill: "#C4C4C4",
-            fillOpacity: "0.0"
           })
         );
       }
@@ -13679,10 +13698,7 @@
         (cr[8] = function(e) {
           return I.a.createElement(
             br,
-            Object(R.a)({}, mr(e), {
-              iconComponent: Qi,
-              desc: "Golden Profile"
-            })
+            Object(R.a)({}, mr(e), { iconComponent: Qi, desc: Zt(8) })
           );
         }),
         (cr[14] = function(l) {
@@ -15592,16 +15608,7 @@
                         .ClaimFreeSaleItem()
                         .then(function(e) {
                           1 == e.eResult
-                            ? ((t.m_mutableObjDefintion.community_item_data.item_name =
-                                e.msgResponse.item_name),
-                              (t.m_mutableObjDefintion.community_item_data.item_title =
-                                e.msgResponse.item_title),
-                              (t.m_mutableObjDefintion.community_item_data.item_description =
-                                e.msgResponse.item_description),
-                              (t.m_mutableObjDefintion.community_item_data.item_image_small =
-                                e.msgResponse.item_image_small),
-                              (t.m_mutableObjDefintion.community_item_data.item_image_large =
-                                e.msgResponse.item_image_large),
+                            ? ((t.m_mutableObjDefintion.community_item_data = Qt.Get().GetClaimedFreeItemDef()),
                               t.setState({
                                 step: "equip",
                                 requestInProgress: !1
@@ -15623,6 +15630,8 @@
                                 step: "equip",
                                 requestInProgress: !1
                               })
+                            : e.strMessage.length
+                            ? t.ShowError(e.strMessage)
                             : t.ShowGenericError();
                         })
                         .catch(this.ShowGenericError)
@@ -15652,6 +15661,8 @@
                                 step: "equip",
                                 requestInProgress: !1
                               })
+                            : e.strMessage.length
+                            ? t.ShowError(e.strMessage)
                             : t.ShowGenericError();
                         })
                         .catch(this.ShowGenericError));
@@ -17896,7 +17907,7 @@
                 "images/items/" +
                 Qt.Get().GetCurrentSeasonalAppID() +
                 "/" +
-                t.item_image_large)));
+                t.item_image_small)));
           var d = p.c.LANGUAGE;
           return (
             ("greek" != d && "bulgarian" != d) || (d = "english"),

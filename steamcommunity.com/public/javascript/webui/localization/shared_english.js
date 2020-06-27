@@ -1507,6 +1507,8 @@ LocalizationReady("shared", "english", {
     "You do not have enough Steam Points to grant the selected award.",
   GrantAwardError_Fail:
     "There was a problem granting this reward.  Please try again later.",
+  GrantAwardError_AccessDenied:
+    "You cannot redeem points for an award due to the restrictions placed on your account.",
   YourBalance: "Your Balance",
   RewardsReaction_1: "Deep Thoughts",
   RewardsReaction_2: "Heartwarming",

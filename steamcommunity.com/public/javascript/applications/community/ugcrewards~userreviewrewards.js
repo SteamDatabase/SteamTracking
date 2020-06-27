@@ -1370,13 +1370,13 @@
               u.Message.setField(this, 8, e);
             }),
             (r.prototype.badge_data = function() {
-              return u.Message.getRepeatedWrapperField(this, N, 9);
+              return u.Message.getRepeatedWrapperField(this, A, 9);
             }),
             (r.prototype.set_badge_data = function(e) {
               u.Message.setRepeatedWrapperField(this, 9, e);
             }),
             (r.prototype.add_badge_data = function(e, t) {
-              return u.Message.addToRepeatedWrapperField(this, 9, e, N, t);
+              return u.Message.addToRepeatedWrapperField(this, 9, e, A, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
@@ -1395,7 +1395,7 @@
                 animated: u.Message.getField(t, 8),
                 badge_data: u.Message.toObjectList(
                   t.badge_data(),
-                  N.toObject,
+                  A.toObject,
                   e
                 )
               };
@@ -1417,7 +1417,7 @@
                 t.set_badge_data(
                   (Array.isArray(e.badge_data) ? e.badge_data : []).map(
                     function(e) {
-                      return N.fromObject(e);
+                      return A.fromObject(e);
                     }
                   )
                 ),
@@ -1463,8 +1463,8 @@
                     e.set_animated(t.readBool());
                     break;
                   case 9:
-                    var i = new N();
-                    t.readMessage(i, N.deserializeBinaryFromReader),
+                    var i = new A();
+                    t.readMessage(i, A.deserializeBinaryFromReader),
                       e.add_badge_data(i);
                     break;
                   default:
@@ -1498,7 +1498,7 @@
                   t.writeString(11, i),
                 void 0 !== (i = u.Message.getField(e, 8)) && t.writeBool(8, i),
                 0 < (i = e.badge_data()).length &&
-                  t.writeRepeatedMessage(9, i, N.serializeBinaryToWriter);
+                  t.writeRepeatedMessage(9, i, A.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "LoyaltyRewardDefinition_CommunityItemData";
@@ -1506,7 +1506,7 @@
             r
           );
         })(u.Message),
-        N = (function(i) {
+        A = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1576,7 +1576,7 @@
             r
           );
         })(u.Message),
-        A = (function(i) {
+        N = (function(i) {
           function r(e) {
             void 0 === e && (e = null);
             var t = i.call(this) || this;
@@ -1723,20 +1723,20 @@
           return (
             Object(s.d)(r, i),
             (r.prototype.bonuses = function() {
-              return u.Message.getRepeatedWrapperField(this, A, 1);
+              return u.Message.getRepeatedWrapperField(this, N, 1);
             }),
             (r.prototype.set_bonuses = function(e) {
               u.Message.setRepeatedWrapperField(this, 1, e);
             }),
             (r.prototype.add_bonuses = function(e, t) {
-              return u.Message.addToRepeatedWrapperField(this, 1, e, A, t);
+              return u.Message.addToRepeatedWrapperField(this, 1, e, N, t);
             }),
             (r.prototype.toObject = function(e) {
               return void 0 === e && (e = !1), r.toObject(e, this);
             }),
             (r.toObject = function(e, t) {
               var i = {
-                bonuses: u.Message.toObjectList(t.bonuses(), A.toObject, e)
+                bonuses: u.Message.toObjectList(t.bonuses(), N.toObject, e)
               };
               return e && (i.$jspbMessageInstance = t), i;
             }),
@@ -1745,7 +1745,7 @@
               return (
                 t.set_bonuses(
                   (Array.isArray(e.bonuses) ? e.bonuses : []).map(function(e) {
-                    return A.fromObject(e);
+                    return N.fromObject(e);
                   })
                 ),
                 t
@@ -1760,8 +1760,8 @@
               for (; t.nextField() && !t.isEndGroup(); ) {
                 switch (t.getFieldNumber()) {
                   case 1:
-                    var i = new A();
-                    t.readMessage(i, A.deserializeBinaryFromReader),
+                    var i = new N();
+                    t.readMessage(i, N.deserializeBinaryFromReader),
                       e.add_bonuses(i);
                     break;
                   default:
@@ -1777,7 +1777,7 @@
             (r.serializeBinaryToWriter = function(e, t) {
               var i = e.bonuses();
               0 < i.length &&
-                t.writeRepeatedMessage(1, i, A.serializeBinaryToWriter);
+                t.writeRepeatedMessage(1, i, N.serializeBinaryToWriter);
             }),
             (r.prototype.getClassName = function() {
               return "CLoyaltyRewards_GetActivePurchaseBonuses_Response";
@@ -3435,6 +3435,9 @@
                       break;
                     case 107:
                       M = Object(B.d)("#GrantAwardError_InsufficientFunds");
+                      break;
+                    case 15:
+                      M = Object(B.d)("#GrantAwardError_AccessDenied");
                       break;
                     default:
                       M = Object(B.d)("#GrantAwardError_Fail");
