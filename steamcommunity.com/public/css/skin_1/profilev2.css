@@ -568,6 +568,8 @@ body.profile_page.flat_page #footer_spacer {
 	margin: 0 auto;
 
 	font-size: 13px;
+
+	min-height: calc( 100vh - 511px );
 }
 
 .private_profile .profile_content {
