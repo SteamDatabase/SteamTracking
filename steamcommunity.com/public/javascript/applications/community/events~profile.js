@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [2],
+  [3],
   {
     "0QoN": function(e, t, r) {
       "use strict";
@@ -844,14 +844,7 @@
                   },
                   title: Object(m.d)(t.buttonToken)
                 },
-                t.renderEffectIcon(),
-                u.createElement(
-                  "span",
-                  { className: h.a.CountBadge },
-                  this.props.effect.name.startsWith("lny2020_")
-                    ? "∞"
-                    : this.props.effect.count
-                )
+                t.renderEffectIcon()
               );
             }),
             t
@@ -4852,7 +4845,6 @@
         RoomEffectButton: "emoticon_RoomEffectButton_2v2oP",
         TopDivider: "emoticon_TopDivider_2A8Fl",
         BottomDivider: "emoticon_BottomDivider_2IZ1K",
-        CountBadge: "emoticon_CountBadge_3lf1T",
         StickerButton: "emoticon_StickerButton_3Wc3j"
       };
     },

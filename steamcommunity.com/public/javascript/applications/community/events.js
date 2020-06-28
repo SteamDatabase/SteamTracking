@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (window.webpackJsonp = window.webpackJsonp || []).push([
-  [8],
+  [9],
   {
     "+ZmX": function(e, t, n) {
       "use strict";
@@ -20241,7 +20241,7 @@
         Sn = n("BpzF"),
         On = n("5L1o"),
         Cn = fe.lazy(function() {
-          return n.e(7).then(n.bind(null, "NIbt"));
+          return n.e(8).then(n.bind(null, "NIbt"));
         }),
         An = (function(t) {
           function e() {
@@ -23705,7 +23705,7 @@
           );
         })(fe.Component),
         Za = fe.lazy(function() {
-          return n.e(7).then(n.bind(null, "NIbt"));
+          return n.e(8).then(n.bind(null, "NIbt"));
         });
       var Qa = (function(n) {
           function e(e) {
@@ -59467,7 +59467,7 @@
         z = n("cGQe"),
         V = n("RQmk"),
         W = y.lazy(function() {
-          return n.e(7).then(n.bind(null, "NIbt"));
+          return n.e(8).then(n.bind(null, "NIbt"));
         }),
         Y = (function(n) {
           function e(e) {
