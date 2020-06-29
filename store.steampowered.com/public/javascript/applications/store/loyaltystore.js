@@ -300,7 +300,7 @@
       "use strict";
       n.r(t);
       var R = n("mrSG"),
-        E = (n("Wr5T"), n("q1tI")),
+        E = n("q1tI"),
         I = n.n(E),
         o = n("Ty5D"),
         u = n("1fPh"),
@@ -11352,7 +11352,7 @@
                         })
                       ));
                     var n = i.filter(function(e) {
-                        return s.m_mapEligibleApps.has(e);
+                        return r.includes(e) && s.m_mapEligibleApps.has(e);
                       }),
                       a = r.filter(function(e) {
                         return 0 == n.includes(e) && s.m_mapEligibleApps.has(e);

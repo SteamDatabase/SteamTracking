@@ -5150,7 +5150,7 @@ function DisplayPendingReceiptPage()
 		case 'baloto':
 		case 'pagoefectivo':
 			$('pending_purchase_summary_payment_method_description').innerHTML = 'Your purchase is in progress.  We are currently waiting for confirmation from your bank or payment processor.  This process can take a few days for confirmation.';
-			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Steam will send an email receipt to you when payment is received for this purchase. For questions regarding your payment processing status, please contact <a href="https://go4gold.uol.com.br/pt-br/categoria-faq/STEAM">BoaCompra</a>.';
+			$('pending_purchase_summary_payment_method_notes_text').innerHTML = 'Steam will send an email receipt to you when payment is received for this purchase. For questions regarding your payment processing status, please contact <a href="https://customer.boacompra.com/en">BoaCompra</a>.';
 			break;
 
 		case 'molpoints':
