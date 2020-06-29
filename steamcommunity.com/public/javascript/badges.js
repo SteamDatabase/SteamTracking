@@ -913,9 +913,9 @@ CGameGooExchangeDialog = {
 
 		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
 				if ( enabled )
-					ShowAlertDialog( 'Enable Profile Modifier', 'This item has been applied to your profile.' );
+					ShowAlertDialog( 'Enable Profile Modifier', 'ProfileModifier_Enabled' );
 				else
-					ShowAlertDialog( 'Disable Profile Modifier', 'This item has been removed from your profile.' );
+					ShowAlertDialog( 'ProfileModifier_DisabledTitle', 'ProfileModifier_Disabled' );
 
 				ReloadCommunityInventory();
 			}).fail( function() {
@@ -934,9 +934,9 @@ CGameGooExchangeDialog = {
 
 		$J.post( strActionURL, rgAJAXParams).done( function( data ) {
 			if ( enabled )
-				ShowAlertDialog( 'Enabled Mini Profile Background', 'This item has been set as your mini profile hover background.' );
+				ShowAlertDialog( 'MiniProfileBackground_EnabledTitle', 'MiniProfileBackground_Enabled' );
 			else
-				ShowAlertDialog( 'Disabled Mini Profile Background', 'This item has been removed as your mini profile background.' );
+				ShowAlertDialog( 'MiniProfileBackground_DisabledTitle', 'MiniProfileBackground_Disabled' );
 
 			ReloadCommunityInventory();
 		}).fail( function() {

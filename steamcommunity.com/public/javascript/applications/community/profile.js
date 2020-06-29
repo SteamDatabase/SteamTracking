@@ -12947,7 +12947,13 @@
           ? null
           : b.createElement(
               "video",
-              { loop: !0, preload: "none", muted: !0, autoPlay: !0 },
+              {
+                loop: !0,
+                preload: "none",
+                muted: !0,
+                autoPlay: !0,
+                playsInline: !0
+              },
               Object.keys(t).map(function(e) {
                 return b.createElement("source", {
                   key: e,
